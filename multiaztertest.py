@@ -916,7 +916,7 @@ class Main(object):
 
     def start(self):
         language="basque"
-        model="cube"
+        model="stanford"
         cargador = NLPCharger(language, model)
         cargador.download_model()
         cargador.load_model()
