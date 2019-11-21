@@ -11,7 +11,8 @@ import numpy as np
 from collections import defaultdict
 import re
 from nltk.tokenize import sent_tokenize, word_tokenize
-
+from nltk.corpus import wordnet as wn
+import numpy as np
 
 class ModelAdapter:
 
@@ -123,9 +124,7 @@ class Document:
         self._paragraph_list = value
 
     def get_indicators(self):
-        self.indicators['num_sentences'] = self.calculate_num_sentences()
-        self.indicators['num_words'] = self.calculate_num_words()
-        self.indicators['num_paragraphs'] = self.calculate_num_paragraphs()
+
         self.calculate_all_numbers()
         self.calculate_all_means()
         self.calculate_all_std_deviations()
@@ -149,8 +148,7 @@ class Document:
                 self.aux_lists['sentences_length_mean'].append(sum)
         return num_words
 
-    def calculate_num_paragraphs(self):
-        return len(self._paragraph_list)
+
 
     def calculate_num_sentences(self):
         num_sentences = 0
@@ -158,6 +156,101 @@ class Document:
             for sentence in paragraph.sentence_list:
                 num_sentences += 1
         return num_sentences
+
+
+    def calculate_simple_ttr(self, p_diff_forms=None, p_num_words=None):
+        if (p_diff_forms and p_num_words) is not None:
+            return (len(p_diff_forms)) / p_num_words
+        else:
+            self.i['simple_ttr'] = round(self.i['num_different_forms'] / self.i['num_words'], 4)
+
+    def calculate_nttr(self):
+        if self.i['num_noun'] > 0:
+            self.i['nttr'] = round(len(self.aux_lists['different_nouns']) / self.i['num_noun'], 4)
+
+
+    def calculate_vttr(self):
+        if self.i['num_verb'] > 0:
+            self.i['vttr'] = round(len(self.aux_lists['different_verbs']) / self.i['num_verb'], 4)
+
+
+    def calculate_adj_ttr(self):
+        if self.i['num_adj'] > 0:
+            self.i['adj_ttr'] = round(len(self.aux_lists['different_adjs']) / self.i['num_adj'], 4)
+
+    def calculate_adv_ttr(self):
+        if self.i['num_adv'] > 0:
+            self.i['adv_ttr'] = round(len(self.aux_lists['different_advs']) / self.i['num_adv'], 4)
+
+    def calculate_content_ttr(self):
+        nttr = self.i['nttr']
+        vttr = self.i['vttr']
+        adj_ttr = self.i['adj_ttr']
+        adv_ttr = self.i['adv_ttr']
+        self.i['content_ttr'] = round((nttr + vttr + adj_ttr + adv_ttr) / 4, 4)
+
+    def calculate_all_ttr(self):
+        self.calculate_simple_ttr()
+        self.calculate_nttr()
+        self.calculate_vttr()
+        self.calculate_adj_ttr()
+        self.calculate_adv_ttr()
+        self.calculate_content_ttr()
+
+    def calculate_lemma_ttr(self):
+        self.i['lemma_ttr'] = round(len(self.aux_lists['different_lemmas']) / self.i['num_words'], 4)
+
+    def calculate_lemma_nttr(self):
+        if self.i['num_noun'] > 0:
+            self.i['lemma_nttr'] = round(len(self.aux_lists['different_lemma_nouns']) / self.i['num_noun'], 4)
+
+    def calculate_lemma_vttr(self):
+        if self.i['num_verb'] > 0:
+            self.i['lemma_vttr'] = round(len(self.aux_lists['different_lemma_verbs']) / self.i['num_verb'], 4)
+
+    def calculate_lemma_adj_ttr(self):
+        if self.i['num_adj'] > 0:
+            self.i['lemma_adj_ttr'] = round(len(self.aux_lists['different_lemma_adjs']) / self.i['num_adj'], 4)
+
+    def calculate_lemma_adv_ttr(self):
+        if self.i['num_adv'] > 0:
+            self.i['lemma_adv_ttr'] = round(len(self.aux_lists['different_lemma_advs']) / self.i['num_adv'], 4)
+
+    def calculate_lemma_content_ttr(self):
+        lnttr = self.i['lemma_nttr']
+        lvttr = self.i['lemma_vttr']
+        ladj_ttr = self.i['lemma_adj_ttr']
+        ladv_ttr = self.i['lemma_adv_ttr']
+        self.i['lemma_content_ttr'] = round((lnttr + lvttr + ladj_ttr + ladv_ttr) / 4, 4)
+
+    def calculate_all_lemma_ttr(self):
+        self.calculate_lemma_ttr()
+        self.calculate_lemma_nttr()
+        self.calculate_lemma_vttr()
+        self.calculate_lemma_adj_ttr()
+        self.calculate_lemma_adv_ttr()
+        self.calculate_lemma_content_ttr()
+
+
+
+    def get_ambiguity_level(self, word, FLAG):
+        if FLAG == 'NOUN':
+            ambiguity_level = len(wn.synsets(word, pos='n'))
+        elif FLAG == 'ADJ':
+            ambiguity_level = len(wn.synsets(word, pos='a'))
+        elif FLAG == 'ADV':
+            ambiguity_level = len(wn.synsets(word, pos='r'))
+        else:
+            ambiguity_level = len(wn.synsets(word, pos='v'))
+        return ambiguity_level
+
+    def get_abstraction_level(self, word, FLAG):
+        abstraction_level = 0
+        if len(wn.synsets(word, pos=FLAG)) > 0:
+            abstraction_level = len(wn.synsets(word, pos=FLAG)[0].hypernym_paths()[0])
+        return abstraction_level
+
+
 
     def calculate_left_embeddedness(self, sequences):
         list_left_embeddedness = []
@@ -228,16 +321,14 @@ class Document:
 
     def calculate_all_numbers(self):
         i = self.indicators
-        # num_np_list = []
-        # decendents_total = 0
+        i['num_paragraphs']=len(self._paragraph_list)
+        # self.indicators['num_sentences'] = self.calculate_num_sentences()
+        # self.indicators['num_words'] = self.calculate_num_words()
         subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
-
+        not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
         for p in self.paragraph_list:
             self.calculate_left_embeddedness(p.sentence_list)
             for s in p.sentence_list:
-                # vp_indexes = self.count_np_in_sentence(s)
-                # num_np_list.append(len(vp_indexes))
-                # decendents_total += self.count_decendents(s, vp_indexes)
                 i['prop'] = 0
                 numPunct = 0
                 for w in s.word_list:
@@ -297,6 +388,18 @@ class Document:
         i['lemmas_length_mean'] = round(float(np.mean(self.aux_lists['lemmas_length_list'])), 4)
         i['mean_propositions_per_sentence'] = round(float(np.mean(self.aux_lists['prop_per_sentence'])), 4)
         i['num_punct_marks_per_sentence'] = round(float(np.mean(self.aux_lists['punct_per_sentence'])), 4)
+        i['polysemic_index'] = round(float(np.mean(self.aux_lists['pambiguity_content_words_list'])), 4)
+
+
+            if FLAG == 'VN':
+                i['hypernymy_index'] = round(float(np.mean(ambiguity_content_words_list)), 4)
+
+        i['hypernymy_verbs_index'] = round(float(np.mean(self.aux_lists['pverb_abstraction_list'])), 4)
+        i['hypernymy_nouns_index'] = round(float(np.mean(self.aux_lists['pnoun_abstraction_list'],), 4)
+
+        self.calculate_hypernymy_index(self.aux_lists['pnoun_verb_abstraction_list'])
+        self.calculate_hypernymy_index(self.aux_lists['], 'V')
+        self.calculate_hypernymy_index(self.aux_lists['pnoun_abstraction_list'], 'N')
 
     def calculate_all_std_deviations(self):
         i = self.indicators
@@ -331,6 +434,8 @@ class Document:
         i['verb_density'] = round(i['num_verb'] / i['num_words'], 4)
         i['adj_density'] = round(i['num_adj'] / i['num_words'], 4)
         i['adv_density'] = round(i['num_adv'] / i['num_words'], 4)
+        self.calculate_all_ttr()
+        self.calculate_all_lemma_ttr()
 
 
 class Paragraph:
