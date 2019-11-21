@@ -2,10 +2,10 @@
 # coding: utf-8
 
 # In[29]:
-
-
 import stanfordnlp
-from cube.api import Cube       # import the Cube object
+
+
+from cube.api import Cube
 
 import numpy as np
 from collections import defaultdict
@@ -126,7 +126,7 @@ class Document:
         self.indicators['num_sentences'] = self.calculate_num_sentences()
         self.indicators['num_words'] = self.calculate_num_words()
         self.indicators['num_paragraphs'] = self.calculate_num_paragraphs()
-        self.analyze()
+        self.calculate_all_numbers()
         self.calculate_all_means()
         self.calculate_all_std_deviations()
         self.calculate_all_incidence()
@@ -169,7 +169,7 @@ class Document:
             for word in sequence.word_list:
                 if not len(word.text) == 1 or word.text.isalpha():
                     if not main_verb_found and word.governor < len(sequence.word_list):
-                        if self.is_verb(word, sequence):
+                        if word.is_verb(sequence):
                             verb_index += 1
                             if (word.upos == 'VERB' and word.dependency_relation == 'root') or (
                                     word.upos == 'AUX' and sequence.word_list[word.governor].dependency_relation == 'root'
@@ -194,11 +194,7 @@ class Document:
                         list_np_indexes.append(word.index)
         return list_np_indexes
 
-    def is_verb(self, word, sequence):
-        return word.upos == 'VERB' or (word.upos == 'AUX' and sequence.word_list[word.governor - 1].upos != 'VERB')
 
-    def is_lexic_word(self, entry, sequence):
-        return self.is_verb(entry, sequence) or entry.upos == 'NOUN' or entry.upos == 'ADJ' or entry.upos == 'ADV'
 
     def count_decendents(self, sentence, list_np_indexes):
         num_modifiers = 0
@@ -230,7 +226,7 @@ class Document:
         v = len(self.aux_lists['different_forms'])
         self.indicators['maas'] = round((np.log10(n) - np.log10(v)) / (np.log10(v) ** 2), 4)
 
-    def analyze(self):
+    def calculate_all_numbers(self):
         i = self.indicators
         # num_np_list = []
         # decendents_total = 0
@@ -245,7 +241,7 @@ class Document:
                 i['prop'] = 0
                 numPunct = 0
                 for w in s.word_list:
-                    if self.is_lexic_word(w, s):
+                    if w.is_lexic_word(s):
                         i['num_lexic_words'] += 1
                     if w.upos == 'NOUN':
                         i['num_noun'] += 1
@@ -253,7 +249,7 @@ class Document:
                         i['num_adj'] += 1
                     if w.upos == 'ADV':
                         i['num_adv'] += 1
-                    if self.is_verb(w, s):
+                    if w.is_verb(s):
                         i['num_verb'] += 1
                     if w.text.lower() not in self.aux_lists['different_forms']:
                         self.aux_lists['different_forms'].append(w.text.lower())
@@ -489,6 +485,33 @@ class Word:
         # nominal head may be associated with different types of modifiers and function words
         return True if self.dependency_relation in ['nmod', 'nmod:poss', 'appos', 'amod', 'nummod', 'acl', 'acl:relcl', 'det', 'clf',
                                        'case'] else False
+
+
+    def is_lexic_word(self, sequence):
+        return self.is_verb(sequence) or self.upos == 'NOUN' or self.upos == 'ADJ' or self.upos == 'ADV'
+
+    def is_verb(self, frase):
+        # if not self.upos == 'NOUN': print(self.upos)
+        return self.upos == 'VERB' or (self.upos == 'AUX' and frase.word_list[self.governor - 1].upos != 'VERB')
+
+    def is_past(self):
+        atributos = self.feats.split('|')
+        return True if 'Tense=Past' in atributos else False
+
+    def is_present(self):
+        atributos = self.feats.split('|')
+        return True if 'Tense=Pres' in atributos else False
+
+    def is_indicative(self):
+        atributos = self.feats.split('|')
+        return True if 'Mood=Ind' in atributos else False
+
+    def is_imperative(self):
+        atributos = self.feats.split('|')
+        return True if 'Mood=Imp' in atributos else False
+
+    def is_future(self, frase):
+        return self.upos == 'AUX' and self.lemma in ['will', 'shall'] and frase.word_list[int(self.governor) - 1].xpos == 'VB'
 
     def __repr__(self):
         features = ['index', 'text', 'lemma', 'upos', 'xpos', 'feats', 'governor', 'dependency_relation']
