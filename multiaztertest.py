@@ -4,13 +4,14 @@
 # In[29]:
 import stanfordnlp
 
-
 from cube.api import Cube
 
 import numpy as np
 from collections import defaultdict
 import re
 from nltk.tokenize import sent_tokenize, word_tokenize
+from nltk.corpus import wordnet as wn
+import numpy as np
 
 
 class ModelAdapter:
@@ -20,13 +21,13 @@ class ModelAdapter:
         self.model = model
         # model_name
         self.lib = lib
-   
+
     def model_analysis(self, text):
-        d = Document(text) #->data = []
+        d = Document(text)  # ->data = []
         if self.lib.lower() == "stanford":
             lines = text.split('@')
-            for line in lines:  #paragraph
-                p = Paragraph() #-> paragraph = []
+            for line in lines:  # paragraph
+                p = Paragraph()  # -> paragraph = []
                 if not line.strip() == '':
                     doc = self.model(line)
                     for sent in doc.sentences:
@@ -35,7 +36,7 @@ class ModelAdapter:
                         print(sequence)
                         s.text = sequence
                         for word in sent.words:
-                            #Por cada palabra de cada sentencia, creamos un objeto Word que contendra los attrs
+                            # Por cada palabra de cada sentencia, creamos un objeto Word que contendra los attrs
                             w = Word()
                             w.index = str(word.index)
                             w.text = word.text
@@ -50,14 +51,14 @@ class ModelAdapter:
                                 w.index) + "\t" + w.text + "\t" + w.lemma + "\t" + w.upos + "\t" +
                                   w.xpos + "\t" + w.feats + "\t" + str(w.governor) + "\t" + str(w.dependency_relation) +
                                   "\t")
-                        p.sentence_list.append(s) #->paragraph.append(s)
-                    d.paragraph_list.append(p) #->data.append(paragraph)
+                        p.sentence_list.append(s)  # ->paragraph.append(s)
+                    d.paragraph_list.append(p)  # ->data.append(paragraph)
 
         elif self.lib.lower() == "cube":
-            d = Document(text) #->data = []
+            d = Document(text)  # ->data = []
             lines = text.split('@')
             for line in lines:
-                p = Paragraph() #-> paragraph = []
+                p = Paragraph()  # -> paragraph = []
                 sequences = self.model(line)
                 for seq in sequences:
                     s = Sentence()
@@ -75,10 +76,9 @@ class ModelAdapter:
                         w.governor = str(entry.head)
                         w.dependency_relation = str(entry.label)
                         s.word_list.append(w)
-                    p.sentence_list.append(s) #->paragraph.append(s)
-                d.paragraph_list.append(p) #->data.append(paragraph)
+                    p.sentence_list.append(s)  # ->paragraph.append(s)
+                d.paragraph_list.append(p)  # ->data.append(paragraph)
         return d
-    
 
     def sent2sequenceStanford(self, sent):
         conllword = ""
@@ -159,6 +159,99 @@ class Document:
                 num_sentences += 1
         return num_sentences
 
+    def calculate_simple_ttr(self, p_diff_forms=None, p_num_words=None):
+        if (p_diff_forms and p_num_words) is not None:
+            return (len(p_diff_forms)) / p_num_words
+        else:
+            self.indicators['simple_ttr'] = round(self.indicators['num_different_forms'] / self.indicators['num_words'],
+                                                  4)
+
+    def calculate_nttr(self):
+        if self.indicators['num_noun'] > 0:
+            self.indicators['nttr'] = round(len(self.aux_lists['different_nouns']) / self.indicators['num_noun'], 4)
+
+    def calculate_vttr(self):
+        if self.indicators['num_verb'] > 0:
+            self.indicators['vttr'] = round(len(self.aux_lists['different_verbs']) / self.indicators['num_verb'], 4)
+
+    def calculate_adj_ttr(self):
+        if self.indicators['num_adj'] > 0:
+            self.indicators['adj_ttr'] = round(len(self.aux_lists['different_adjs']) / self.indicators['num_adj'], 4)
+
+    def calculate_adv_ttr(self):
+        if self.indicators['num_adv'] > 0:
+            self.indicators['adv_ttr'] = round(len(self.aux_lists['different_advs']) / self.indicators['num_adv'], 4)
+
+    def calculate_content_ttr(self):
+        nttr = self.indicators['nttr']
+        vttr = self.indicators['vttr']
+        adj_ttr = self.indicators['adj_ttr']
+        adv_ttr = self.indicators['adv_ttr']
+        self.indicators['content_ttr'] = round((nttr + vttr + adj_ttr + adv_ttr) / 4, 4)
+
+    def calculate_all_ttr(self):
+        self.calculate_simple_ttr()
+        self.calculate_nttr()
+        self.calculate_vttr()
+        self.calculate_adj_ttr()
+        self.calculate_adv_ttr()
+        self.calculate_content_ttr()
+
+    def calculate_lemma_ttr(self):
+        self.indicators['lemma_ttr'] = round(len(self.aux_lists['different_lemmas']) / self.indicators['num_words'], 4)
+
+    def calculate_lemma_nttr(self):
+        if self.indicators['num_noun'] > 0:
+            self.indicators['lemma_nttr'] = round(
+                len(self.aux_lists['different_lemma_nouns']) / self.indicators['num_noun'], 4)
+
+    def calculate_lemma_vttr(self):
+        if self.indicators['num_verb'] > 0:
+            self.indicators['lemma_vttr'] = round(
+                len(self.aux_lists['different_lemma_verbs']) / self.indicators['num_verb'], 4)
+
+    def calculate_lemma_adj_ttr(self):
+        if self.indicators['num_adj'] > 0:
+            self.indicators['lemma_adj_ttr'] = round(
+                len(self.aux_lists['different_lemma_adjs']) / self.indicators['num_adj'], 4)
+
+    def calculate_lemma_adv_ttr(self):
+        if self.indicators['num_adv'] > 0:
+            self.indicators['lemma_adv_ttr'] = round(
+                len(self.aux_lists['different_lemma_advs']) / self.indicators['num_adv'], 4)
+
+    def calculate_lemma_content_ttr(self):
+        lnttr = self.indicators['lemma_nttr']
+        lvttr = self.indicators['lemma_vttr']
+        ladj_ttr = self.indicators['lemma_adj_ttr']
+        ladv_ttr = self.indicators['lemma_adv_ttr']
+        self.indicators['lemma_content_ttr'] = round((lnttr + lvttr + ladj_ttr + ladv_ttr) / 4, 4)
+
+    def calculate_all_lemma_ttr(self):
+        self.calculate_lemma_ttr()
+        self.calculate_lemma_nttr()
+        self.calculate_lemma_vttr()
+        self.calculate_lemma_adj_ttr()
+        self.calculate_lemma_adv_ttr()
+        self.calculate_lemma_content_ttr()
+
+    def get_ambiguity_level(self, word, FLAG):
+        if FLAG == 'NOUN':
+            ambiguity_level = len(wn.synsets(word, pos='n'))
+        elif FLAG == 'ADJ':
+            ambiguity_level = len(wn.synsets(word, pos='a'))
+        elif FLAG == 'ADV':
+            ambiguity_level = len(wn.synsets(word, pos='r'))
+        else:
+            ambiguity_level = len(wn.synsets(word, pos='v'))
+        return ambiguity_level
+
+    def get_abstraction_level(self, word, FLAG):
+        abstraction_level = 0
+        if len(wn.synsets(word, pos=FLAG)) > 0:
+            abstraction_level = len(wn.synsets(word, pos=FLAG)[0].hypernym_paths()[0])
+        return abstraction_level
+
     def calculate_left_embeddedness(self, sequences):
         list_left_embeddedness = []
         for sequence in sequences:
@@ -172,7 +265,8 @@ class Document:
                         if word.is_verb(sequence):
                             verb_index += 1
                             if (word.upos == 'VERB' and word.dependency_relation == 'root') or (
-                                    word.upos == 'AUX' and sequence.word_list[word.governor].dependency_relation == 'root'
+                                    word.upos == 'AUX' and sequence.word_list[
+                                word.governor].dependency_relation == 'root'
                                     and sequence.word_list[word.governor].upos == 'VERB'):
                                 main_verb_found = True
                                 left_embeddedness = num_words
@@ -191,10 +285,19 @@ class Document:
                         list_np_indexes.append(word.governor)
                 else:
                     if word.index not in list_np_indexes:
-                        list_np_indexes.append(word.index)
+                        ind = int(word.index)
+                        list_np_indexes.append(ind)
         return list_np_indexes
 
-
+    def count_modifiers(self, sentence, list_np_indexes):
+        num_modifiers_per_np = []
+        for index in list_np_indexes:
+            num_modifiers = 0
+            for entry in sentence.word_list:
+                if int(entry.governor) == int(index) and entry.has_modifier():
+                    num_modifiers += 1
+            num_modifiers_per_np.append(num_modifiers)
+        return num_modifiers_per_np
 
     def count_decendents(self, sentence, list_np_indexes):
         num_modifiers = 0
@@ -207,6 +310,13 @@ class Document:
                     new_list_indexes.append(entry.index)
                     num_modifiers += 1
             return num_modifiers + self.count_decendents(sentence, new_list_indexes)
+
+    def count_vp_in_sentence(self, sentence):
+        num_np = 0
+        for entry in sentence.word_list:
+            if entry.is_verb(sentence):
+                num_np += 1
+        return num_np
 
     def get_num_hapax_legomena(self):
         num_hapax_legonema = 0
@@ -228,29 +338,60 @@ class Document:
 
     def calculate_all_numbers(self):
         i = self.indicators
-        # num_np_list = []
-        # decendents_total = 0
+        i['num_paragraphs'] = len(self._paragraph_list)
+        self.indicators['num_words'] = self.calculate_num_words()
+        num_np_list = []
+        num_vp_list = []
+        modifiers_per_np = []
         subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
+        not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
+        decendents_total = 0
 
         for p in self.paragraph_list:
             self.calculate_left_embeddedness(p.sentence_list)
             for s in p.sentence_list:
-                # vp_indexes = self.count_np_in_sentence(s)
-                # num_np_list.append(len(vp_indexes))
-                # decendents_total += self.count_decendents(s, vp_indexes)
+                vp_indexes = self.count_np_in_sentence(s)
+                num_np_list.append(len(vp_indexes))
+                num_vp_list.append(self.count_vp_in_sentence(s))
+                decendents_total += self.count_decendents(s, vp_indexes)
+                modifiers_per_np += self.count_modifiers(s, vp_indexes)
                 i['prop'] = 0
                 numPunct = 0
                 for w in s.word_list:
+                    i['num_words_with_punct'] += 1
                     if w.is_lexic_word(s):
                         i['num_lexic_words'] += 1
                     if w.upos == 'NOUN':
                         i['num_noun'] += 1
+                        if w.text.lower() not in self.aux_lists['different_nouns']:
+                            self.aux_lists['different_nouns'].append(w.text.lower())
+                        if w.lemma not in self.aux_lists['different_lemma_nouns']:
+                            self.aux_lists['different_lemma_nouns'].append(w.lemma)
                     if w.upos == 'ADJ':
                         i['num_adj'] += 1
+                        if w.text.lower() not in self.aux_lists['different_adjs']:
+                            self.aux_lists['different_adjs'].append(w.text.lower())
+                        if w.lemma not in self.aux_lists['different_lemma_adjs']:
+                            self.aux_lists['different_lemma_adjs'].append(w.lemma)
                     if w.upos == 'ADV':
                         i['num_adv'] += 1
+                        if w.text.lower() not in self.aux_lists['different_advs']:
+                            self.aux_lists['different_advs'].append(w.text.lower())
+                        if w.lemma not in self.aux_lists['different_lemma_advs']:
+                            self.aux_lists['different_lemma_advs'].append(w.lemma)
                     if w.is_verb(s):
                         i['num_verb'] += 1
+                        if w.text.lower() not in self.aux_lists['different_verbs']:
+                            self.aux_lists['different_verbs'].append(w.text.lower())
+                        if w.lemma not in self.aux_lists['different_lemma_verbs']:
+                            self.aux_lists['different_lemma_verbs'].append(w.lemma)
+                        if 'VerbForm=Past' in atributos:
+                            i['num_past'] += 1
+                        if 'VerbForm=Pres' in atributos:
+                            i['num_pres'] += 1
+                        if 'VerbForm=Ind' in atributos:
+                            i['num_indic'] += 1
+
                     if w.text.lower() not in self.aux_lists['different_forms']:
                         self.aux_lists['different_forms'].append(w.text.lower())
                     if w.text.lower() not in self.words_freq:
@@ -281,6 +422,21 @@ class Document:
                                 i['num_first_pers_sing_pron'] += 1
                         elif 'Person=3' in atributos:
                             i['num_third_pers_pron'] += 1
+                    if (not len(w.text) == 1 or w.text.isalpha()) and w.upos != "NUM":
+                        if (w.is_lexic_word(s)):
+                            if wn.synsets(w.text):
+                                if w.upos == 'NOUN':
+                                    self.aux_lists['noun_abstraction_list'].append(
+                                        self.get_abstraction_level(w.text, 'n'))
+                                    self.aux_lists['noun_verb_abstraction_list'].append(
+                                        self.get_abstraction_level(w.text, 'n'))
+                                elif w.is_verb(s):
+                                    self.aux_lists['verb_abstraction_list'].append(
+                                        self.get_abstraction_level(w.text, 'v'))
+                                    self.aux_lists['noun_verb_abstraction_list'].append(
+                                        self.get_abstraction_level(w.text, 'v'))
+                                self.aux_lists['ambiguity_content_words_list'].append(
+                                    self.get_ambiguity_level(w.text, w.upos))
                 i['num_total_prop'] = i['num_total_prop'] + i['prop']
                 self.aux_lists['prop_per_sentence'].append(i['prop'])
                 self.aux_lists['punct_per_sentence'].append(numPunct)
@@ -288,6 +444,9 @@ class Document:
         i['num_different_forms'] = len(self.aux_lists['different_forms'])
         self.calculate_honore()
         self.calculate_maas()
+        i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
+        i['num_modifiers_noun_phrase'] = round(float(np.mean(modifiers_per_np)), 4)
+        self.calculate_phrases(num_vp_list, num_np_list)
 
     def calculate_all_means(self):
         i = self.indicators
@@ -297,6 +456,10 @@ class Document:
         i['lemmas_length_mean'] = round(float(np.mean(self.aux_lists['lemmas_length_list'])), 4)
         i['mean_propositions_per_sentence'] = round(float(np.mean(self.aux_lists['prop_per_sentence'])), 4)
         i['num_punct_marks_per_sentence'] = round(float(np.mean(self.aux_lists['punct_per_sentence'])), 4)
+        i['polysemic_index'] = round(float(np.mean(self.aux_lists['ambiguity_content_words_list'])), 4)
+        i['hypernymy_index'] = round(float(np.mean(self.aux_lists['noun_verb_abstraction_list'])), 4)
+        i['hypernymy_verbs_index'] = round(float(np.mean(self.aux_lists['verb_abstraction_list'])), 4)
+        i['hypernymy_nouns_index'] = round(float(np.mean(self.aux_lists['noun_abstraction_list'])), 4)
 
     def calculate_all_std_deviations(self):
         i = self.indicators
@@ -323,6 +486,14 @@ class Document:
         i['infinitive_density_incidence'] = self.get_incidence(i['num_inf'], n)
         i['num_subord_incidence'] = self.get_incidence(i['num_subord'], n)
         i['num_rel_subord_incidence'] = self.get_incidence(i['num_rel_subord'], n)
+        i['num_past_incidence'] = self.get_incidence(i['num_past'], n)
+        i['num_pres_incidence'] = self.get_incidence(i['num_pres'], n)
+        i['num_future_incidence'] = self.get_incidence(i['um_future'], n)
+        i['num_indic_incidence'] = self.get_incidence(i['num_indic'], n)
+        i['num_verb_incidence'] = self.get_incidence(i['num_verb'], n)
+        i['num_noun_incidence'] = self.get_incidence(i['num_noun'], n)
+        i['num_adj_incidence'] = self.get_incidence(i['num_adj'], n)
+        i['num_adv_incidence'] = self.get_incidence(i['num_adv'], n)
 
     def calculate_density(self):
         i = self.indicators
@@ -331,7 +502,15 @@ class Document:
         i['verb_density'] = round(i['num_verb'] / i['num_words'], 4)
         i['adj_density'] = round(i['num_adj'] / i['num_words'], 4)
         i['adv_density'] = round(i['num_adv'] / i['num_words'], 4)
+        self.calculate_all_ttr()
+        self.calculate_all_lemma_ttr()
 
+    def calculate_phrases(self, num_vp_list, num_np_list):
+        i = self.indicators
+        i['mean_vp_per_sentence'] = round(float(np.mean(num_vp_list)), 4)
+        i['mean_np_per_sentence'] = round(float(np.mean(num_np_list)), 4)
+        i['noun_phrase_density_incidence'] = self.get_incidence(sum(num_np_list), i['num_words'])
+        i['verb_phrase_density_incidence'] = self.get_incidence(sum(num_vp_list), i['num_words'])
 
 class Paragraph:
 
@@ -483,9 +662,9 @@ class Word:
 
     def has_modifier(self):
         # nominal head may be associated with different types of modifiers and function words
-        return True if self.dependency_relation in ['nmod', 'nmod:poss', 'appos', 'amod', 'nummod', 'acl', 'acl:relcl', 'det', 'clf',
-                                       'case'] else False
-
+        return True if self.dependency_relation in ['nmod', 'nmod:poss', 'appos', 'amod', 'nummod', 'acl', 'acl:relcl',
+                                                    'det', 'clf',
+                                                    'case'] else False
 
     def is_lexic_word(self, sequence):
         return self.is_verb(sequence) or self.upos == 'NOUN' or self.upos == 'ADJ' or self.upos == 'ADV'
@@ -494,31 +673,15 @@ class Word:
         # if not self.upos == 'NOUN': print(self.upos)
         return self.upos == 'VERB' or (self.upos == 'AUX' and frase.word_list[self.governor - 1].upos != 'VERB')
 
-    def is_past(self):
-        atributos = self.feats.split('|')
-        return True if 'Tense=Past' in atributos else False
-
-    def is_present(self):
-        atributos = self.feats.split('|')
-        return True if 'Tense=Pres' in atributos else False
-
-    def is_indicative(self):
-        atributos = self.feats.split('|')
-        return True if 'Mood=Ind' in atributos else False
-
-    def is_imperative(self):
-        atributos = self.feats.split('|')
-        return True if 'Mood=Imp' in atributos else False
-
     def is_future(self, frase):
-        return self.upos == 'AUX' and self.lemma in ['will', 'shall'] and frase.word_list[int(self.governor) - 1].xpos == 'VB'
+        return self.upos == 'AUX' and self.lemma in ['will', 'shall'] and frase.word_list[
+            int(self.governor) - 1].xpos == 'VB'
 
     def __repr__(self):
         features = ['index', 'text', 'lemma', 'upos', 'xpos', 'feats', 'governor', 'dependency_relation']
         feature_str = ";".join(["{}={}".format(k, getattr(self, k)) for k in features if getattr(self, k) is not None])
 
         return f"<{self.__class__.__name__} {feature_str}>"
-
 
 
 import os
@@ -788,6 +951,7 @@ class Printer:
         print('Temporal connectives (incidence per 1000 words):  ' + str(i['temporal_connectives_incidence']))
         print('Conditional connectives (incidence per 1000 words): ' + str(i['conditional_connectives_incidence']))
 
+
 '''
 The aim of this class is the charge of the model with the specific language and nlp library.
 In addition, it is going to create a unified data structure to obtain the indicators independent of the library 
@@ -807,22 +971,25 @@ class NLPCharger:
     '''
     Download the respective model depending of the library and language. 
     '''
+
     def download_model(self):
         if self.lib.lower() == "stanford":
             print("-----------You are going to use Stanford library-----------")
             if self.lang.lower() == "basque":
                 print("-------------You are going to use Basque model-------------")
-                MODELS_DIR = '/home/kepa/eu'
+                # MODELS_DIR = '/home/ibon/eu'
+                # MODELS_DIR = '/home/kepa/eu'
+                MODELS_DIR = 'J:\TextSimilarity\eu'
                 stanfordnlp.download('eu', MODELS_DIR)  # Download the Basque models
             elif self.lang.lower() == "english":
                 print("-------------You are going to use English model-------------")
-                MODELS_DIR = '/home/kepa/en'
+                MODELS_DIR = '/home/ibon/en'
                 print("-------------Downloading Stanford Basque model-------------")
                 stanfordnlp.download('en', MODELS_DIR)  # Download the Basque models
             elif self.lang.lower() == "spanish":
                 print("-------------You are going to use Spanish model-------------")
-                MODELS_DIR = '/home/kepa/es'
-                stanfordnlp.download('es', MODELS_DIR) # Download the English models
+                MODELS_DIR = '/home/ibon/es'
+                stanfordnlp.download('es', MODELS_DIR)  # Download the English models
             else:
                 print("........You cannot use this language...........")
         elif self.lib.lower() == "cube":
@@ -830,52 +997,63 @@ class NLPCharger:
         else:
             print("You cannot use this library. Introduce a valid library (Cube or Stanford)")
 
-            
-            
     '''
     load model in parser object 
     '''
+
     def load_model(self):
         if self.lib.lower() == "stanford":
             print("-----------You are going to use Stanford library-----------")
             if self.lang.lower() == "basque":
-                print("-------------You are going to use Basque model-------------")
+                # print("-------------You are going to use Basque model-------------")
+                # config = {'processors': 'tokenize,pos,lemma,depparse',  # Comma-separated list of processors to use
+                #           'lang': 'eu',  # Language code for the language to build the Pipeline in
+                #           'tokenize_model_path': '/home/ibon/eu/eu_bdt_models/eu_bdt_tokenizer.pt',
+                #           # Processor-specific arguments are set with keys "{processor_name}_{argument_name}"
+                #           'pos_model_path': '/home/ibon/eu/eu_bdt_models/eu_bdt_tagger.pt',
+                #           'pos_pretrain_path': '/home/ibon/eu/eu_bdt_models/eu_bdt.pretrain.pt',
+                #           'lemma_model_path': '/home/ibon/eu/eu_bdt_models/eu_bdt_lemmatizer.pt',
+                #           'depparse_model_path': '/home/ibon/eu/eu_bdt_models/eu_bdt_parser.pt',
+                #           'depparse_pretrain_path': '/home/ibon/eu/eu_bdt_models/eu_bdt.pretrain.pt'
+                #           }
                 config = {'processors': 'tokenize,pos,lemma,depparse',  # Comma-separated list of processors to use
-                           'lang': 'eu',  # Language code for the language to build the Pipeline in
-                           'tokenize_model_path': '/home/kepa/eu/eu_bdt_models/eu_bdt_tokenizer.pt',
-                           # Processor-specific arguments are set with keys "{processor_name}_{argument_name}"
-                           'pos_model_path': '/home/kepa/eu/eu_bdt_models/eu_bdt_tagger.pt',
-                           'pos_pretrain_path': '/home/kepa/eu/eu_bdt_models/eu_bdt.pretrain.pt',
-                           'lemma_model_path': '/home/kepa/eu/eu_bdt_models/eu_bdt_lemmatizer.pt',
-                           'depparse_model_path': '/home/kepa/eu/eu_bdt_models/eu_bdt_parser.pt',
-                           'depparse_pretrain_path': '/home/kepa/eu/eu_bdt_models/eu_bdt.pretrain.pt'
-                           }
+                          'lang': 'eu',  # Language code for the language to build the Pipeline in
+                          'tokenize_model_path': 'J:\TextSimilarity\eu\eu_bdt_models\eu_bdt_tokenizer.pt',
+                          # Processor-specific arguments are set with keys "{processor_name}_{argument_name}"
+                          'pos_model_path': 'J:\TextSimilarity\eu\eu_bdt_models\eu_bdt_tagger.pt',
+                          'pos_pretrain_path': 'J:\TextSimilarity\eu\eu_bdt_models\eu_bdt.pretrain.pt',
+                          'lemma_model_path': 'J:\TextSimilarity\eu\eu_bdt_models\eu_bdt_lemmatizer.pt',
+                          'depparse_model_path': 'J:\TextSimilarity\eu\eu_bdt_models\eu_bdt_parser.pt',
+                          'depparse_pretrain_path': 'J:\TextSimilarity\eu\eu_bdt_models\eu_bdt.pretrain.pt'
+                          }
                 self.parser = stanfordnlp.Pipeline(**config)
-                
+
             elif self.lang.lower() == "english":
                 print("-------------You are going to use English model-------------")
-                config = {'processors': 'tokenize,mwt,pos,lemma,depparse', # Comma-separated list of processors to use
-                            'lang': 'en', # Language code for the language to build the Pipeline in
-                            'tokenize_model_path': '/home/kepa/en/en_ewt_models/en_ewt_tokenizer.pt', # Processor-specific arguments are set with keys "{processor_name}_{argument_name}"
-                            #'mwt_model_path': './fr_gsd_models/fr_gsd_mwt_expander.pt',
-                            'pos_model_path': '/home/kepa/en/en_ewt_models/en_ewt_tagger.pt',
-                            'pos_pretrain_path': '/home/kepa/en/en_ewt_models/en_ewt.pretrain.pt',
-                            'lemma_model_path': '/home/kepa/en/en_ewt_models/en_ewt_lemmatizer.pt',
-                            'depparse_model_path': '/home/kepa/en/en_ewt_models/en_ewt_parser.pt',
-                            'depparse_pretrain_path': '/home/kepa/en/en_ewt_models/en_ewt.pretrain.pt'
-                            }
+                config = {'processors': 'tokenize,mwt,pos,lemma,depparse',  # Comma-separated list of processors to use
+                          'lang': 'en',  # Language code for the language to build the Pipeline in
+                          'tokenize_model_path': '/home/ibon/en/en_ewt_models/en_ewt_tokenizer.pt',
+                          # Processor-specific arguments are set with keys "{processor_name}_{argument_name}"
+                          # 'mwt_model_path': './fr_gsd_models/fr_gsd_mwt_expander.pt',
+                          'pos_model_path': '/home/ibon/en/en_ewt_models/en_ewt_tagger.pt',
+                          'pos_pretrain_path': '/home/ibon/en/en_ewt_models/en_ewt.pretrain.pt',
+                          'lemma_model_path': '/home/ibon/en/en_ewt_models/en_ewt_lemmatizer.pt',
+                          'depparse_model_path': '/home/ibon/en/en_ewt_models/en_ewt_parser.pt',
+                          'depparse_pretrain_path': '/home/ibon/en/en_ewt_models/en_ewt.pretrain.pt'
+                          }
                 self.parser = stanfordnlp.Pipeline(**config)
             elif self.lang.lower() == "spanish":
                 print("-------------You are going to use Spanish model-------------")
-                config = {'processors': 'tokenize,pos,lemma,depparse', # Comma-separated list of processors to use
-                            'lang': 'es', # Language code for the language to build the Pipeline in
-                            'tokenize_model_path': '/home/kepa/es/es_ancora_models/es_ancora_tokenizer.pt', # Processor-specific arguments are set with keys "{processor_name}_{argument_name}"
-                            'pos_model_path': '/home/kepa/es/es_ancora_models/es_ancora_tagger.pt',
-                            'pos_pretrain_path': '/home/kepa/es/es_ancora_models/es_ancora.pretrain.pt',
-                            'lemma_model_path': '/home/kepa/es/es_ancora_models/es_ancora_lemmatizer.pt',
-                            'depparse_model_path': '/home/kepa/es/es_ancora_models/es_ancora_parser.pt',
-                            'depparse_pretrain_path': '/home/kepa/es/es_ancora_models/es_ancora.pretrain.pt'
-                            }
+                config = {'processors': 'tokenize,pos,lemma,depparse',  # Comma-separated list of processors to use
+                          'lang': 'es',  # Language code for the language to build the Pipeline in
+                          'tokenize_model_path': '/home/ibon/es/es_ancora_models/es_ancora_tokenizer.pt',
+                          # Processor-specific arguments are set with keys "{processor_name}_{argument_name}"
+                          'pos_model_path': '/home/ibon/es/es_ancora_models/es_ancora_tagger.pt',
+                          'pos_pretrain_path': '/home/ibon/es/es_ancora_models/es_ancora.pretrain.pt',
+                          'lemma_model_path': '/home/ibon/es/es_ancora_models/es_ancora_lemmatizer.pt',
+                          'depparse_model_path': '/home/ibon/es/es_ancora_models/es_ancora_parser.pt',
+                          'depparse_pretrain_path': '/home/ibon/es/es_ancora_models/es_ancora.pretrain.pt'
+                          }
                 self.parser = stanfordnlp.Pipeline(**config)
             else:
                 print("........You cannot use this language...........")
@@ -884,18 +1062,18 @@ class NLPCharger:
             if self.lang.lower() == "basque":
                 # initialize it
                 cube = Cube(verbose=True)
-                #load(self, language_code, version="latest",local_models_repository=None, 
-                #local_embeddings_file=None, tokenization=True, compound_word_expanding=False, 
-                #tagging=True, lemmatization=True, parsing=True).
-                #Ejemplo:load("es",tokenization=False, parsing=False)
+                # load(self, language_code, version="latest",local_models_repository=None,
+                # local_embeddings_file=None, tokenization=True, compound_word_expanding=False,
+                # tagging=True, lemmatization=True, parsing=True).
+                # Ejemplo:load("es",tokenization=False, parsing=False)
                 ## select the desired language (it will auto-download the model on first run)
-                cube.load("eu","latest")
+                cube.load("eu", "latest")
             elif self.lang.lower() == "english":
                 cube = Cube(verbose=True)
-                cube.load("en","latest")
+                cube.load("en", "latest")
             elif self.lang.lower() == "spanish":
-                cube=Cube(verbose=True)
-                cube.load("es","latest")
+                cube = Cube(verbose=True)
+                cube.load("es", "latest")
             else:
                 print("........You cannot use this language...........")
         else:
@@ -909,12 +1087,12 @@ class NLPCharger:
     '''
     Transform data into a unified structure.
     '''
-    
+
     def get_estructure(self, text):
         self.text = text
-        #Loading a text with paragraphs
+        # Loading a text with paragraphs
         self.textwithparagraphs = self.process_text(self.text)
-        #Getting a unified structure [ [sentences], [sentences], ...]
+        # Getting a unified structure [ [sentences], [sentences], ...]
         return self.adapt_nlp_model()
 
     def adapt_nlp_model(self):
@@ -922,14 +1100,13 @@ class NLPCharger:
         return ma.model_analysis(self.textwithparagraphs)
 
 
-
 "This is a Singleton class which is going to start necessary classes and methods."
 
-#from packageDev.Charger import NLPCharger
-#import re
+
+# from packageDev.Charger import NLPCharger
+# import re
 
 class Main(object):
-
     __instance = None
 
     def __new__(cls):
@@ -938,18 +1115,18 @@ class Main(object):
         return Main.__instance
 
     def start(self):
-        language="basque"
-        model="stanford"
+        language = "basque"
+        model = "stanford"
         cargador = NLPCharger(language, model)
         cargador.download_model()
         cargador.load_model()
-        if language=="basque":
-            text = "Kepa hondartzan egon da. Eguraldi oso ona egin zuen.\nHurrengo astean mendira joango da. "                "\n\nBere lagunak saskibaloi partidu bat antolatu dute 18etan, baina berak ez du jolastuko. \n "                "Etor zaitez etxera.\n Nik egin beharko nuke lan hori. \n Gizonak liburua galdu du. \n Irten hortik!"                    "\n Emadazu ur botila! \n Zu beti adarra jotzen."
-        if language=="english":
-            text = "Kepa is going to the beach. I am Kepa. \n"                 "Eder is going too. He is Eder."
-        if language=="spanish":
-            text = "Kepa va ir a la playa. Yo soy Kepa. \n"                 "Ibon tambien va a ir. El es Ibon."
-        
+        if language == "basque":
+            text = "ibon hondartzan egon da. Eguraldi oso ona egin zuen.\nHurrengo astean mendira joango da. "                "\n\nBere lagunak saskibaloi partidu bat antolatu dute 18etan, baina berak ez du jolastuko. \n "                "Etor zaitez etxera.\n Nik egin beharko nuke lan hori. \n Gizonak liburua galdu du. \n Irten hortik!"                    "\n Emadazu ur botila! \n Zu beti adarra jotzen."
+        if language == "english":
+            text = "ibon is going to the beach. I am ibon. \n"                 "Eder is going too. He is Eder."
+        if language == "spanish":
+            text = "ibon va ir a la playa. Yo soy ibon. \n"                 "Ibon tambien va a ir. El es Ibon."
+
         document = cargador.get_estructure(text)
         indicators = document.get_indicators()
         printer = Printer(indicators)
@@ -958,7 +1135,6 @@ class Main(object):
 
 main = Main()
 main.start()
-
 
 # In[ ]:
 
