@@ -1115,7 +1115,7 @@ class Main(object):
         return Main.__instance
 
     def start(self):
-        language = "basque"
+        language ="english"
         model = "stanford"
         cargador = NLPCharger(language, model)
         cargador.download_model()
