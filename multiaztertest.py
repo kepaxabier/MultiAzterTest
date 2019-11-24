@@ -9,9 +9,9 @@ from cube.api import Cube
 import numpy as np
 from collections import defaultdict
 import re
+from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import wordnet as wn
-import numpy as np
 
 
 class ModelAdapter:
@@ -123,9 +123,6 @@ class Document:
         self._paragraph_list = value
 
     def get_indicators(self):
-        self.indicators['num_sentences'] = self.calculate_num_sentences()
-        self.indicators['num_words'] = self.calculate_num_words()
-        self.indicators['num_paragraphs'] = self.calculate_num_paragraphs()
         self.calculate_all_numbers()
         self.calculate_all_means()
         self.calculate_all_std_deviations()
@@ -133,31 +130,33 @@ class Document:
         self.calculate_density()
         return self.indicators
 
-    def calculate_num_words(self):
-        num_words = 0
-        not_punctuation = lambda w: not (len(w.text) == 1 and (not w.text.isalpha()))
-        for paragraph in self._paragraph_list:
-            self.aux_lists['sentences_per_paragraph'].append(len(paragraph.sentence_list))  # [1,2,1,...]
-            for sentence in paragraph.sentence_list:
-                filterwords = filter(not_punctuation, sentence.word_list)
-                sum = 0
-                for word in filterwords:
-                    num_words += 1
-                    self.aux_lists['words_length_list'].append(len(word.text))
-                    self.aux_lists['lemmas_length_list'].append(len(word.lemma))
-                    sum += 1
-                self.aux_lists['sentences_length_mean'].append(sum)
-        return num_words
+    # self.indicators['num_words'] = self.calculate_num_words()
+    #     def calculate_num_words(self):
+    #         num_words = 0
+    #         not_punctuation = lambda w: not (len(w.text) == 1 and (not w.text.isalpha()))
+    #         for paragraph in self._paragraph_list:
+    #             self.aux_lists['sentences_per_paragraph'].append(len(paragraph.sentence_list))  # [1,2,1,...]
+    #             for sentence in paragraph.sentence_list:
+    #                 filterwords = filter(not_punctuation, sentence.word_list)
+    #                 sum = 0
+    #                 for word in filterwords:
+    #                     num_words += 1
+    #                     self.aux_lists['words_length_list'].append(len(word.text))
+    #                     self.aux_lists['lemmas_length_list'].append(len(word.lemma))
+    #                     sum += 1
+    #                 self.aux_lists['sentences_length_mean'].append(sum)
+    #         return num_words
 
-    def calculate_num_paragraphs(self):
-        return len(self._paragraph_list)
-
-    def calculate_num_sentences(self):
-        num_sentences = 0
-        for paragraph in self._paragraph_list:
-            for sentence in paragraph.sentence_list:
-                num_sentences += 1
-        return num_sentences
+    #     def calculate_num_paragraphs(self):
+    #         return len(self._paragraph_list)
+    #    self.indicators['num_sentences'] = self.calculate_num_sentences()
+    #    self.indicators['num_paragraphs'] = self.calculate_num_paragraphs()
+    #     def calculate_num_sentences(self):
+    #         num_sentences = 0
+    #         for paragraph in self._paragraph_list:
+    #             for sentence in paragraph.sentence_list:
+    #                 num_sentences += 1
+    #         return num_sentences
 
     def calculate_simple_ttr(self, p_diff_forms=None, p_num_words=None):
         if (p_diff_forms and p_num_words) is not None:
@@ -339,17 +338,22 @@ class Document:
     def calculate_all_numbers(self):
         i = self.indicators
         i['num_paragraphs'] = len(self._paragraph_list)
-        self.indicators['num_words'] = self.calculate_num_words()
+        i['num_words'] = 0
+        i['num_sentences'] = 0
         num_np_list = []
         num_vp_list = []
         modifiers_per_np = []
         subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
-        not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
+        not_punctuation = lambda w: not (len(w.text) == 1 and (not w.text.isalpha()))
         decendents_total = 0
-
         for p in self.paragraph_list:
+            self.aux_lists['sentences_per_paragraph'].append(len(p.sentence_list))  # [1,2,1,...]
             self.calculate_left_embeddedness(p.sentence_list)
             for s in p.sentence_list:
+                num_words_in_sentence_without_stopwords = 0
+                i['num_sentences'] += 1
+                filterwords = filter(not_punctuation, s.word_list)
+                sum = 0
                 vp_indexes = self.count_np_in_sentence(s)
                 num_np_list.append(len(vp_indexes))
                 num_vp_list.append(self.count_vp_in_sentence(s))
@@ -358,7 +362,17 @@ class Document:
                 i['prop'] = 0
                 numPunct = 0
                 for w in s.word_list:
+                    # words without punc
+                    if w in filterwords:
+                        i['num_words'] += 1
+                        self.aux_lists['words_length_list'].append(len(w.text))
+                        self.aux_lists['lemmas_length_list'].append(len(w.lemma))
+                        sum += 1
+                    # words with punc
                     i['num_words_with_punct'] += 1
+                    # words not in stopwords
+                    if w.text.lower() not in Stopwords.stop_words:
+                        num_words_in_sentence_without_stopwords += 1
                     if w.is_lexic_word(s):
                         i['num_lexic_words'] += 1
                     if w.upos == 'NOUN':
@@ -440,12 +454,14 @@ class Document:
                 i['num_total_prop'] = i['num_total_prop'] + i['prop']
                 self.aux_lists['prop_per_sentence'].append(i['prop'])
                 self.aux_lists['punct_per_sentence'].append(numPunct)
+                self.aux_lists['sentences_length_mean'].append(sum)
+                self.aux_lists['sentences_length_no_stopwords_list'].append(num_words_in_sentence_without_stopwords)
         # i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
         i['num_different_forms'] = len(self.aux_lists['different_forms'])
         self.calculate_honore()
         self.calculate_maas()
-        i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
-        i['num_modifiers_noun_phrase'] = round(float(np.mean(modifiers_per_np)), 4)
+        # i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
+        # i['num_modifiers_noun_phrase'] = round(float(np.mean(modifiers_per_np)), 4)
         self.calculate_phrases(num_vp_list, num_np_list)
 
     def calculate_all_means(self):
@@ -460,6 +476,8 @@ class Document:
         i['hypernymy_index'] = round(float(np.mean(self.aux_lists['noun_verb_abstraction_list'])), 4)
         i['hypernymy_verbs_index'] = round(float(np.mean(self.aux_lists['verb_abstraction_list'])), 4)
         i['hypernymy_nouns_index'] = round(float(np.mean(self.aux_lists['noun_abstraction_list'])), 4)
+        i['sentences_length_no_stopwords_mean'] = round(
+            float(np.mean(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
 
     def calculate_all_std_deviations(self):
         i = self.indicators
@@ -467,6 +485,8 @@ class Document:
         i['sentences_length_std'] = round(float(np.std(self.aux_lists['sentences_length_mean'])), 4)
         i['words_length_std'] = round(float(np.std(self.aux_lists['words_length_list'])), 4)
         i['lemmas_length_std'] = round(float(np.std(self.aux_lists['lemmas_length_list'])), 4)
+        i['sentences_length_no_stopwords_std'] = round(
+            float(np.std(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
 
     @staticmethod
     def get_incidence(indicador, num_words):
@@ -511,6 +531,7 @@ class Document:
         i['mean_np_per_sentence'] = round(float(np.mean(num_np_list)), 4)
         i['noun_phrase_density_incidence'] = self.get_incidence(sum(num_np_list), i['num_words'])
         i['verb_phrase_density_incidence'] = self.get_incidence(sum(num_vp_list), i['num_words'])
+
 
 class Paragraph:
 
@@ -959,6 +980,24 @@ and language.
 '''
 
 
+class Stopwords:
+    stop_words = []
+
+    def __init__(self, language):
+        self.lang = language
+
+    def print(self):
+        for stopword in Stopwords.stop_words:
+            print(stopword)
+
+    def download(self):
+        nltk.download('stopwords')
+
+    def load(self):
+        if self.lang.lower() == "english":
+            Stopwords.stop_words = stopwords.words('english')
+
+
 class NLPCharger:
 
     def __init__(self, language, library):
@@ -983,7 +1022,7 @@ class NLPCharger:
                 stanfordnlp.download('eu', MODELS_DIR)  # Download the Basque models
             elif self.lang.lower() == "english":
                 print("-------------You are going to use English model-------------")
-                MODELS_DIR = '/home/ibon/en'
+                MODELS_DIR = '/home/kepa/en'
                 print("-------------Downloading Stanford Basque model-------------")
                 stanfordnlp.download('en', MODELS_DIR)  # Download the Basque models
             elif self.lang.lower() == "spanish":
@@ -1005,54 +1044,45 @@ class NLPCharger:
         if self.lib.lower() == "stanford":
             print("-----------You are going to use Stanford library-----------")
             if self.lang.lower() == "basque":
-                # print("-------------You are going to use Basque model-------------")
-                # config = {'processors': 'tokenize,pos,lemma,depparse',  # Comma-separated list of processors to use
-                #           'lang': 'eu',  # Language code for the language to build the Pipeline in
-                #           'tokenize_model_path': '/home/ibon/eu/eu_bdt_models/eu_bdt_tokenizer.pt',
-                #           # Processor-specific arguments are set with keys "{processor_name}_{argument_name}"
-                #           'pos_model_path': '/home/ibon/eu/eu_bdt_models/eu_bdt_tagger.pt',
-                #           'pos_pretrain_path': '/home/ibon/eu/eu_bdt_models/eu_bdt.pretrain.pt',
-                #           'lemma_model_path': '/home/ibon/eu/eu_bdt_models/eu_bdt_lemmatizer.pt',
-                #           'depparse_model_path': '/home/ibon/eu/eu_bdt_models/eu_bdt_parser.pt',
-                #           'depparse_pretrain_path': '/home/ibon/eu/eu_bdt_models/eu_bdt.pretrain.pt'
-                #           }
+                print("-------------You are going to use Basque model-------------")
+                MODELS_DIR = 'J:\TextSimilarity\eu'
                 config = {'processors': 'tokenize,pos,lemma,depparse',  # Comma-separated list of processors to use
                           'lang': 'eu',  # Language code for the language to build the Pipeline in
-                          'tokenize_model_path': 'J:\TextSimilarity\eu\eu_bdt_models\eu_bdt_tokenizer.pt',
+                          'tokenize_model_path': MODELS_DIR + '\eu_bdt_models\eu_bdt_tokenizer.pt',
                           # Processor-specific arguments are set with keys "{processor_name}_{argument_name}"
-                          'pos_model_path': 'J:\TextSimilarity\eu\eu_bdt_models\eu_bdt_tagger.pt',
-                          'pos_pretrain_path': 'J:\TextSimilarity\eu\eu_bdt_models\eu_bdt.pretrain.pt',
-                          'lemma_model_path': 'J:\TextSimilarity\eu\eu_bdt_models\eu_bdt_lemmatizer.pt',
-                          'depparse_model_path': 'J:\TextSimilarity\eu\eu_bdt_models\eu_bdt_parser.pt',
-                          'depparse_pretrain_path': 'J:\TextSimilarity\eu\eu_bdt_models\eu_bdt.pretrain.pt'
+                          'pos_model_path': MODELS_DIR + '\eu_bdt_models\eu_bdt_tagger.pt',
+                          'pos_pretrain_path': MODELS_DIR + '\eu_bdt_models\eu_bdt.pretrain.pt',
+                          'lemma_model_path': MODELS_DIR + '\eu_bdt_models\eu_bdt_lemmatizer.pt',
+                          'depparse_model_path': MODELS_DIR + '\eu_bdt_models\eu_bdt_parser.pt',
+                          'depparse_pretrain_path': MODELS_DIR + '\eu_bdt_models\eu_bdt.pretrain.pt'
                           }
                 self.parser = stanfordnlp.Pipeline(**config)
 
             elif self.lang.lower() == "english":
                 print("-------------You are going to use English model-------------")
+                MODELS_DIR = '/home/kepa/en'
                 config = {'processors': 'tokenize,mwt,pos,lemma,depparse',  # Comma-separated list of processors to use
                           'lang': 'en',  # Language code for the language to build the Pipeline in
-                          'tokenize_model_path': '/home/ibon/en/en_ewt_models/en_ewt_tokenizer.pt',
-                          # Processor-specific arguments are set with keys "{processor_name}_{argument_name}"
-                          # 'mwt_model_path': './fr_gsd_models/fr_gsd_mwt_expander.pt',
-                          'pos_model_path': '/home/ibon/en/en_ewt_models/en_ewt_tagger.pt',
-                          'pos_pretrain_path': '/home/ibon/en/en_ewt_models/en_ewt.pretrain.pt',
-                          'lemma_model_path': '/home/ibon/en/en_ewt_models/en_ewt_lemmatizer.pt',
-                          'depparse_model_path': '/home/ibon/en/en_ewt_models/en_ewt_parser.pt',
-                          'depparse_pretrain_path': '/home/ibon/en/en_ewt_models/en_ewt.pretrain.pt'
+                          'tokenize_model_path': MODELS_DIR + '/en_ewt_models/en_ewt_tokenizer.pt',
+                          'pos_model_path': MODELS_DIR + '/en_ewt_models/en_ewt_tagger.pt',
+                          'pos_pretrain_path': MODELS_DIR + '/en_ewt_models/en_ewt.pretrain.pt',
+                          'lemma_model_path': MODELS_DIR + '/en_ewt_models/en_ewt_lemmatizer.pt',
+                          'depparse_model_path': MODELS_DIR + '/en_ewt_models/en_ewt_parser.pt',
+                          'depparse_pretrain_path': MODELS_DIR + '/en_ewt_models/en_ewt.pretrain.pt'
                           }
                 self.parser = stanfordnlp.Pipeline(**config)
             elif self.lang.lower() == "spanish":
                 print("-------------You are going to use Spanish model-------------")
+                MODELS_DIR = '/home/ibon/es'
                 config = {'processors': 'tokenize,pos,lemma,depparse',  # Comma-separated list of processors to use
                           'lang': 'es',  # Language code for the language to build the Pipeline in
-                          'tokenize_model_path': '/home/ibon/es/es_ancora_models/es_ancora_tokenizer.pt',
+                          'tokenize_model_path': MODELS_DIR + '/es_ancora_models/es_ancora_tokenizer.pt',
                           # Processor-specific arguments are set with keys "{processor_name}_{argument_name}"
-                          'pos_model_path': '/home/ibon/es/es_ancora_models/es_ancora_tagger.pt',
-                          'pos_pretrain_path': '/home/ibon/es/es_ancora_models/es_ancora.pretrain.pt',
-                          'lemma_model_path': '/home/ibon/es/es_ancora_models/es_ancora_lemmatizer.pt',
-                          'depparse_model_path': '/home/ibon/es/es_ancora_models/es_ancora_parser.pt',
-                          'depparse_pretrain_path': '/home/ibon/es/es_ancora_models/es_ancora.pretrain.pt'
+                          'pos_model_path': MODELS_DIR + '/es_ancora_models/es_ancora_tagger.pt',
+                          'pos_pretrain_path': MODELS_DIR + '/es_ancora_models/es_ancora.pretrain.pt',
+                          'lemma_model_path': MODELS_DIR + '/es_ancora_models/es_ancora_lemmatizer.pt',
+                          'depparse_model_path': MODELS_DIR + '/es_ancora_models/es_ancora_parser.pt',
+                          'depparse_pretrain_path': MODELS_DIR + '/es_ancora_models/es_ancora.pretrain.pt'
                           }
                 self.parser = stanfordnlp.Pipeline(**config)
             else:
@@ -1115,8 +1145,13 @@ class Main(object):
         return Main.__instance
 
     def start(self):
-        language ="english"
+        language = "english"
         model = "stanford"
+
+        stopw = Stopwords(language)
+        stopw.download()
+        stopw.load()
+
         cargador = NLPCharger(language, model)
         cargador.download_model()
         cargador.load_model()
@@ -1127,6 +1162,7 @@ class Main(object):
         if language == "spanish":
             text = "ibon va ir a la playa. Yo soy ibon. \n"                 "Ibon tambien va a ir. El es Ibon."
 
+        # for input in Filefiles.files:
         document = cargador.get_estructure(text)
         indicators = document.get_indicators()
         printer = Printer(indicators)
