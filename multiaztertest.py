@@ -12,6 +12,8 @@ import re
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import wordnet as wn
 import numpy as np
+import tensorflow_hub as hub
+import tensorflow as tf
 
 
 class ModelAdapter:
@@ -252,71 +254,54 @@ class Document:
             abstraction_level = len(wn.synsets(word, pos=FLAG)[0].hypernym_paths()[0])
         return abstraction_level
 
-    def calculate_left_embeddedness(self, sequences):
-        list_left_embeddedness = []
-        for sequence in sequences:
-            verb_index = 0
-            main_verb_found = False
-            left_embeddedness = 0
-            num_words = 0
-            for word in sequence.word_list:
-                if not len(word.text) == 1 or word.text.isalpha():
-                    if not main_verb_found and word.governor < len(sequence.word_list):
-                        if word.is_verb(sequence):
-                            verb_index += 1
-                            if (word.upos == 'VERB' and word.dependency_relation == 'root') or (
-                                    word.upos == 'AUX' and sequence.word_list[
-                                word.governor].dependency_relation == 'root'
-                                    and sequence.word_list[word.governor].upos == 'VERB'):
-                                main_verb_found = True
-                                left_embeddedness = num_words
-                            if verb_index == 1:
-                                left_embeddedness = num_words
-                    num_words += 1
-            list_left_embeddedness.append(left_embeddedness)
-        self.indicators['left_embeddedness'] = round(float(np.mean(list_left_embeddedness)), 4)
+    def calculate_mean_depth_per_sentence(self, depth_list):
+        i = self.indicators
+        i['mean_depth_per_sentence'] = round(float(np.mean(depth_list)), 4)
 
-    def count_np_in_sentence(self, sentence):
-        list_np_indexes = []
-        for word in sentence.word_list:
-            if word.upos == 'NOUN' or word.upos == 'PRON' or word.upos == 'PROPN':
-                if word.dependency_relation in ['fixed', 'flat', 'compound']:
-                    if word.governor not in list_np_indexes:
-                        list_np_indexes.append(word.governor)
-                else:
-                    if word.index not in list_np_indexes:
-                        ind = int(word.index)
-                        list_np_indexes.append(ind)
-        return list_np_indexes
-
-    def count_modifiers(self, sentence, list_np_indexes):
-        num_modifiers_per_np = []
-        for index in list_np_indexes:
-            num_modifiers = 0
-            for entry in sentence.word_list:
-                if int(entry.governor) == int(index) and entry.has_modifier():
-                    num_modifiers += 1
-            num_modifiers_per_np.append(num_modifiers)
-        return num_modifiers_per_np
-
-    def count_decendents(self, sentence, list_np_indexes):
-        num_modifiers = 0
-        if len(list_np_indexes) == 0:
-            return num_modifiers
+    def tree_depth(self, tree, root):
+        if not tree[root]:
+            return 1
         else:
-            new_list_indexes = []
-            for entry in sentence.word_list:
-                if entry.governor in list_np_indexes and entry.has_modifier():
-                    new_list_indexes.append(entry.index)
-                    num_modifiers += 1
-            return num_modifiers + self.count_decendents(sentence, new_list_indexes)
+            return 1 + max(self.tree_depth(tree, x) for x in tree[root])
 
-    def count_vp_in_sentence(self, sentence):
-        num_np = 0
-        for entry in sentence.word_list:
-            if entry.is_verb(sentence):
-                num_np += 1
-        return num_np
+    def mtld(self, filtered_words):
+        ttr_threshold = 0.72
+        ttr = 1.0
+        word_count = 0
+        fragments = 0.0
+        dif_words = []
+
+        for i, word in enumerate(filtered_words):
+            word = word.lower()
+            word_count += 1
+            if word not in dif_words:
+                dif_words.append(word)
+            ttr = self.calculate_simple_ttr(dif_words, word_count)
+            if ttr <= ttr_threshold:
+                # Se suma un fragmento y se deja preparado para comenzar otro
+                fragments += 1
+                word_count = 0
+                dif_words.clear()
+                ttr = 1.0
+            elif i == len(filtered_words) - 1:
+                # Si al final del texto queda un segmento sin alcanzar la TTR umbral este segmento no se desprecia sino
+                # que se obtiene un número residual menor que uno (calculado proporcionalmente a la cantidad que le falta
+                # a la TTR de este segmento para llegar a uno) que se suma al número de segmentos completos
+                residual = (1.0 - ttr) / (1.0 - ttr_threshold)
+                fragments += residual
+
+        if fragments != 0:
+            return len(filtered_words) / fragments
+        else:
+            return 0
+
+    def calculate_mtld(self):
+        # Quitamos las marcas de puntuacion
+        not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
+        filtered_words = list(filter(not_punctuation, word_tokenize(self.text)))
+        # El valor definitivo de MTLD se calcula haciendo la media de los dos valores obtenidos al repetir el
+        # proceso de calculo dos veces, uno en sentido directo siguiendo el orden de lectura y otro en sentido inverso
+        self.indicators['mtld'] = round((self.mtld(filtered_words) + self.mtld(filtered_words[::-1])) / 2, 4)
 
     def get_num_hapax_legomena(self):
         num_hapax_legonema = 0
@@ -343,21 +328,42 @@ class Document:
         num_np_list = []
         num_vp_list = []
         modifiers_per_np = []
+        depth_list = []
         subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
         not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
         decendents_total = 0
 
         for p in self.paragraph_list:
-            self.calculate_left_embeddedness(p.sentence_list)
+            # Preparar Google Universal Sentence Encoder
+            # module_url = "https://tfhub.dev/google/universal-sentence-encoder-large/2"
+            # embed = hub.Module(module_url)
+            # similarity_input_placeholder = tf.placeholder(tf.string, shape=(None))
+            # similarity_sentences_encodings = embed(similarity_input_placeholder)
+            # with tf.Session() as session:
+            #     session.run(tf.global_variables_initializer())
+            #     session.run(tf.tables_initializer())
             for s in p.sentence_list:
-                vp_indexes = self.count_np_in_sentence(s)
+                #left embeddednes
+                self.aux_lists['left_embeddedness'].append(s.calculate_left_embeddedness())
+                # if not s.strip() == '':
+                #     sentences_embeddings = session.run(similarity_sentences_encodings, feed_dict={
+                #         similarity_input_placeholder: sent_tokenize(s.text)})
+                #     self.aux_lists['sentences_in_paragraph_token_list'].append(sentences_embeddings)
+                # self.aux_lists['paragraph_token_list'] = session.run(similarity_sentences_encodings, feed_dict={
+                #     similarity_input_placeholder: p})
+
+                dependency_tree = defaultdict(list)
+                vp_indexes = s.count_np_in_sentence()
                 num_np_list.append(len(vp_indexes))
-                num_vp_list.append(self.count_vp_in_sentence(s))
-                decendents_total += self.count_decendents(s, vp_indexes)
-                modifiers_per_np += self.count_modifiers(s, vp_indexes)
+                num_vp_list.append(s.count_vp_in_sentence())
+                decendents_total += s.count_decendents(vp_indexes)
+                modifiers_per_np += s.count_modifiers(vp_indexes)
                 i['prop'] = 0
                 numPunct = 0
                 for w in s.word_list:
+                    if w.governor == 0:
+                        root = w.index
+                    dependency_tree[w.governor].append(w.index)
                     i['num_words_with_punct'] += 1
                     if w.is_lexic_word(s):
                         i['num_lexic_words'] += 1
@@ -440,13 +446,17 @@ class Document:
                 i['num_total_prop'] = i['num_total_prop'] + i['prop']
                 self.aux_lists['prop_per_sentence'].append(i['prop'])
                 self.aux_lists['punct_per_sentence'].append(numPunct)
+                depth_list.append(self.tree_depth(dependency_tree, root))
         # i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
         i['num_different_forms'] = len(self.aux_lists['different_forms'])
+        self.indicators['left_embeddedness'] = round(float(np.mean(self.aux_lists['left_embeddedness'])), 4)
         self.calculate_honore()
         self.calculate_maas()
         i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
         i['num_modifiers_noun_phrase'] = round(float(np.mean(modifiers_per_np)), 4)
         self.calculate_phrases(num_vp_list, num_np_list)
+        self.calculate_mean_depth_per_sentence(depth_list)
+        self.calculate_mtld()
 
     def calculate_all_means(self):
         i = self.indicators
@@ -512,6 +522,20 @@ class Document:
         i['noun_phrase_density_incidence'] = self.get_incidence(sum(num_np_list), i['num_words'])
         i['verb_phrase_density_incidence'] = self.get_incidence(sum(num_vp_list), i['num_words'])
 
+    # def calculate_similarity_adjacent_sentences(self):
+    #     i = self.indicators
+    #     adjacent_similarity_list = []
+    #     for sentence in self.aux_lists['sentences_in_paragraph_token_list']:
+    #         if len(sentence) > 1:
+    #             for x, y in zip(range(0, len(sentence) - 1), range(1, len(sentence))):
+    #                 adjacent_similarity_list.append(self.calculate_similarity(sentence[x], sentence[y]))
+    #         else:
+    #             adjacent_similarity_list.append(0)
+    #     if len(adjacent_similarity_list) > 0:
+    #         i['similarity_adjacent_mean'] = round(float(np.mean(adjacent_similarity_list)), 4)
+    #         i['similarity_adjacent_std'] = round(float(np.std(adjacent_similarity_list)), 4)
+
+
 class Paragraph:
 
     def __init__(self):
@@ -543,6 +567,62 @@ class Sentence:
     def word_list(self, value):
         """ Set the list of words for this sentence. """
         self._word_list = value
+
+    def calculate_left_embeddedness(self):
+        verb_index = 0
+        main_verb_found = False
+        left_embeddedness = 0
+        num_words = 0
+        for word in self.word_list:
+            if not len(word.text) == 1 or word.text.isalpha():
+                if not main_verb_found and word.governor < len(self.word_list):
+                    if word.is_verb(self.text):
+                        verb_index += 1
+                        if (word.upos == 'VERB' and word.dependency_relation == 'root') or (
+                                word.upos == 'AUX' and self.word_list[
+                            word.governor].dependency_relation == 'root'
+                                and self.word_list[word.governor].upos == 'VERB'):
+                            main_verb_found = True
+                            left_embeddedness = num_words
+                        if verb_index == 1:
+                            left_embeddedness = num_words
+                num_words += 1
+        return left_embeddedness
+
+    def count_np_in_sentence(self):
+        list_np_indexes = []
+        for word in self.word_list:
+            list_np_indexes = word.is_np(list_np_indexes)
+        return list_np_indexes
+
+    def count_vp_in_sentence(self):
+        num_np = 0
+        for entry in self.word_list:
+            if entry.is_verb(self):
+                num_np += 1
+        return num_np
+
+    def count_modifiers(self, list_np_indexes):
+        num_modifiers_per_np = []
+        for index in list_np_indexes:
+            num_modifiers = 0
+            for entry in self.word_list:
+                if int(entry.governor) == int(index) and entry.has_modifier():
+                    num_modifiers += 1
+            num_modifiers_per_np.append(num_modifiers)
+        return num_modifiers_per_np
+
+    def count_decendents(self, list_np_indexes):
+        num_modifiers = 0
+        if len(list_np_indexes) == 0:
+            return num_modifiers
+        else:
+            new_list_indexes = []
+            for entry in self.word_list:
+                if entry.governor in list_np_indexes and entry.has_modifier():
+                    new_list_indexes.append(entry.index)
+                    num_modifiers += 1
+            return num_modifiers + self.count_decendents(new_list_indexes)
 
     def print(self):
         for words in self.word_list:
@@ -676,6 +756,17 @@ class Word:
     def is_future(self, frase):
         return self.upos == 'AUX' and self.lemma in ['will', 'shall'] and frase.word_list[
             int(self.governor) - 1].xpos == 'VB'
+
+    def is_np(self, list_np_indexes):
+        if self.upos == 'NOUN' or self.upos == 'PRON' or self.upos == 'PROPN':
+            if self.dependency_relation in ['fixed', 'flat', 'compound']:
+                if self.governor not in list_np_indexes:
+                    list_np_indexes.append(self.governor)
+            else:
+                if self.index not in list_np_indexes:
+                    ind = int(self.index)
+                    list_np_indexes.append(ind)
+        return list_np_indexes
 
     def __repr__(self):
         features = ['index', 'text', 'lemma', 'upos', 'xpos', 'feats', 'governor', 'dependency_relation']
@@ -1121,7 +1212,8 @@ class Main(object):
         cargador.download_model()
         cargador.load_model()
         if language == "basque":
-            text = "ibon hondartzan egon da. Eguraldi oso ona egin zuen.\nHurrengo astean mendira joango da. "                "\n\nBere lagunak saskibaloi partidu bat antolatu dute 18etan, baina berak ez du jolastuko. \n "                "Etor zaitez etxera.\n Nik egin beharko nuke lan hori. \n Gizonak liburua galdu du. \n Irten hortik!"                    "\n Emadazu ur botila! \n Zu beti adarra jotzen."
+            text = "ibon hondartzan egon da. Eguraldi oso ona egin zuen.\nHurrengo astean mendira joango da. "                "\n\nBere lagunak saskibaloi partidu bat antolatu dute 18etan, baina berak ez du jolastuko. \n "                "Etor zaitez etxera.\n Nik egin beharko nuke lan hori. \n Gizonak liburua galdu du. \n Irten hortik!"                    "\n Emadazu ur botila! \n Zu beti adarra jotzen. \n " \
+                   "Ea egiten duzun lan hori laster."
         if language == "english":
             text = "ibon is going to the beach. I am ibon. \n"                 "Eder is going too. He is Eder."
         if language == "spanish":
