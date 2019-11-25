@@ -2,13 +2,16 @@
 # coding: utf-8
 
 # In[29]:
+import os
+import sys
+from pathlib import Path
+import csv
 import stanfordnlp
-
 from cube.api import Cube
-
 import numpy as np
 from collections import defaultdict
 import re
+import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import wordnet as wn
@@ -705,12 +708,6 @@ class Word:
         return f"<{self.__class__.__name__} {feature_str}>"
 
 
-import os
-import sys
-from pathlib import Path
-import csv
-
-
 class Printer:
 
     def __init__(self, indicators):
@@ -996,6 +993,11 @@ class Stopwords:
     def load(self):
         if self.lang.lower() == "english":
             Stopwords.stop_words = stopwords.words('english')
+        if self.lang.lower() == "spanish":
+            Stopwords.stop_words = stopwords.words('spanish')
+        if self.lang.lower() == "basque":
+            Stopwords.stop_words = set(line.strip() for line in open('data/eu/stopwords_formaketakonektoreak.txt'))
+            # Stopwords.stop_words.add("gero")
 
 
 class NLPCharger:
@@ -1018,7 +1020,8 @@ class NLPCharger:
                 print("-------------You are going to use Basque model-------------")
                 # MODELS_DIR = '/home/ibon/eu'
                 # MODELS_DIR = '/home/kepa/eu'
-                MODELS_DIR = 'J:\TextSimilarity\eu'
+                # MODELS_DIR = 'J:\TextSimilarity\eu'
+                MODELS_DIR = '/home/kepa/eu'
                 stanfordnlp.download('eu', MODELS_DIR)  # Download the Basque models
             elif self.lang.lower() == "english":
                 print("-------------You are going to use English model-------------")
@@ -1027,7 +1030,7 @@ class NLPCharger:
                 stanfordnlp.download('en', MODELS_DIR)  # Download the Basque models
             elif self.lang.lower() == "spanish":
                 print("-------------You are going to use Spanish model-------------")
-                MODELS_DIR = '/home/ibon/es'
+                MODELS_DIR = '/home/kepa/es'
                 stanfordnlp.download('es', MODELS_DIR)  # Download the English models
             else:
                 print("........You cannot use this language...........")
@@ -1045,16 +1048,27 @@ class NLPCharger:
             print("-----------You are going to use Stanford library-----------")
             if self.lang.lower() == "basque":
                 print("-------------You are going to use Basque model-------------")
-                MODELS_DIR = 'J:\TextSimilarity\eu'
+                # MODELS_DIR = 'J:\TextSimilarity\eu'
+                MODELS_DIR = '/home/kepa/eu'
+                #               config = {'processors': 'tokenize,pos,lemma,depparse',  # Comma-separated list of processors to use
+                #                           'lang': 'eu',  # Language code for the language to build the Pipeline in
+                #                           'tokenize_model_path': MODELS_DIR + '\eu_bdt_models\eu_bdt_tokenizer.pt',
+                #                           # Processor-specific arguments are set with keys "{processor_name}_{argument_name}"
+                #                           'pos_model_path': MODELS_DIR + '\eu_bdt_models\eu_bdt_tagger.pt',
+                #                           'pos_pretrain_path': MODELS_DIR + '\eu_bdt_models\eu_bdt.pretrain.pt',
+                #                           'lemma_model_path': MODELS_DIR + '\eu_bdt_models\eu_bdt_lemmatizer.pt',
+                #                           'depparse_model_path': MODELS_DIR + '\eu_bdt_models\eu_bdt_parser.pt',
+                #                           'depparse_pretrain_path': MODELS_DIR + '\eu_bdt_models\eu_bdt.pretrain.pt'
+                #                          }
                 config = {'processors': 'tokenize,pos,lemma,depparse',  # Comma-separated list of processors to use
                           'lang': 'eu',  # Language code for the language to build the Pipeline in
-                          'tokenize_model_path': MODELS_DIR + '\eu_bdt_models\eu_bdt_tokenizer.pt',
+                          'tokenize_model_path': MODELS_DIR + '/eu_bdt_models/eu_bdt_tokenizer.pt',
                           # Processor-specific arguments are set with keys "{processor_name}_{argument_name}"
-                          'pos_model_path': MODELS_DIR + '\eu_bdt_models\eu_bdt_tagger.pt',
-                          'pos_pretrain_path': MODELS_DIR + '\eu_bdt_models\eu_bdt.pretrain.pt',
-                          'lemma_model_path': MODELS_DIR + '\eu_bdt_models\eu_bdt_lemmatizer.pt',
-                          'depparse_model_path': MODELS_DIR + '\eu_bdt_models\eu_bdt_parser.pt',
-                          'depparse_pretrain_path': MODELS_DIR + '\eu_bdt_models\eu_bdt.pretrain.pt'
+                          'pos_model_path': MODELS_DIR + '/eu_bdt_models/eu_bdt_tagger.pt',
+                          'pos_pretrain_path': MODELS_DIR + '/eu_bdt_models/eu_bdt.pretrain.pt',
+                          'lemma_model_path': MODELS_DIR + '/eu_bdt_models/eu_bdt_lemmatizer.pt',
+                          'depparse_model_path': MODELS_DIR + '/eu_bdt_models/eu_bdt_parser.pt',
+                          'depparse_pretrain_path': MODELS_DIR + '/eu_bdt_models/eu_bdt.pretrain.pt'
                           }
                 self.parser = stanfordnlp.Pipeline(**config)
 
@@ -1073,7 +1087,7 @@ class NLPCharger:
                 self.parser = stanfordnlp.Pipeline(**config)
             elif self.lang.lower() == "spanish":
                 print("-------------You are going to use Spanish model-------------")
-                MODELS_DIR = '/home/ibon/es'
+                MODELS_DIR = '/home/kepa/es'
                 config = {'processors': 'tokenize,pos,lemma,depparse',  # Comma-separated list of processors to use
                           'lang': 'es',  # Language code for the language to build the Pipeline in
                           'tokenize_model_path': MODELS_DIR + '/es_ancora_models/es_ancora_tokenizer.pt',
@@ -1145,24 +1159,26 @@ class Main(object):
         return Main.__instance
 
     def start(self):
-        language = "english"
+        language = "basque"
         model = "stanford"
-
-        stopw = Stopwords(language)
-        stopw.download()
-        stopw.load()
-
-        cargador = NLPCharger(language, model)
-        cargador.download_model()
-        cargador.load_model()
         if language == "basque":
             text = "ibon hondartzan egon da. Eguraldi oso ona egin zuen.\nHurrengo astean mendira joango da. "                "\n\nBere lagunak saskibaloi partidu bat antolatu dute 18etan, baina berak ez du jolastuko. \n "                "Etor zaitez etxera.\n Nik egin beharko nuke lan hori. \n Gizonak liburua galdu du. \n Irten hortik!"                    "\n Emadazu ur botila! \n Zu beti adarra jotzen."
         if language == "english":
             text = "ibon is going to the beach. I am ibon. \n"                 "Eder is going too. He is Eder."
         if language == "spanish":
             text = "ibon va ir a la playa. Yo soy ibon. \n"                 "Ibon tambien va a ir. El es Ibon."
+        # Carga StopWords
+        stopw = Stopwords(language)
+        stopw.download()
+        stopw.load()
+        stopw.print()
 
-        # for input in Filefiles.files:
+        # Carga del modelo Stanford/NLPCube
+        cargador = NLPCharger(language, model)
+        cargador.download_model()
+        cargador.load_model()
+
+        # Get indicators
         document = cargador.get_estructure(text)
         indicators = document.get_indicators()
         printer = Printer(indicators)
@@ -1173,3 +1189,4 @@ main = Main()
 main.start()
 
 # In[ ]:
+
