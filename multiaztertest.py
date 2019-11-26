@@ -321,14 +321,14 @@ class Document:
         i = self.indicators
         adjacent_noun_overlap_list = []
         # paragraph_list es una lista de doc.sentences donde doc.sentences es una "lista de obj sentencias" de un parrafo=[doc.sentence1,...]
-        for paragraph in self.aux_lists['paragraphs_list']:
+        for paragraph in self.paragraph_list:
             # Por cada parrafo:paragraph es "lista de obj sentencias" de un parrafo=[doc.sentence1,...]
-            if len(paragraph) > 1:
+            if len(paragraph.sentence_list) > 1:
                 # zip Python zip function takes iterable elements as input, and returns iterator que es un flujo de datos que
                 # puede ser recorrido por for o map.
                 # Si paragraph = [[sentence1], [sentence2], [sentence3]]
                 # paragraph[1:] = [[sentence2], [sentence3]]
-                test = zip(paragraph, paragraph[1:])  # zip the values
+                test = zip(paragraph.sentence_list, paragraph.sentence_list[1:])  # zip the values
                 # print(test) #-><zip object at 0x7eff7b354c08>=?[([sentence1],[sentence2]),([sentence2],[sentence3]),...]
                 # for values in test:
                 # print(values)  # print each tuples
@@ -337,7 +337,6 @@ class Document:
                 # map aplica la función list a todos los elementos de zip y como resultado se devuelve un iterable de tipo map
                 # funcion list=The list() constructor returns a mutable (the object can be modified) sequence list of elements.
                 # Por cada valor de test genera una lista
-                testlist = map(list, test)
                 # print(testlist) #<map object at 0x7eff7b3701d0>=?[[([sentence1],[sentence2])],[([sentence2],[sentence3])]]
                 adjacents = list(map(list, test))
                 # print(type(adjacents))
@@ -345,14 +344,14 @@ class Document:
                 for x in adjacents:
                     sentence1 = []
                     sentence2 = []
-                    for entry1 in x[0]:
-                        values1 = entry1.split("\t")
-                        if values1[3] == 'NOUN':
-                            sentence1.append(values1[1].lower())
-                    for entry2 in x[1]:
-                        values2 = entry2.split("\t")
-                        if values2[3] == 'NOUN':
-                            sentence2.append(values2[1].lower())
+                    for entry1 in x[0].word_list:
+                        #values1 = entry1.split("\t")
+                        if entry1.upos == 'NOUN':
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in x[1].word_list:
+                        #values2 = entry2.split("\t")
+                        if entry2.upos == 'NOUN':
+                            sentence2.append(entry2.text.lower())
                     # nombres en comun entre sentence1 y sentence2
                     in_common = list(set(sentence1).intersection(sentence2))
                     # si hay nombre en comun añado 1
@@ -369,22 +368,22 @@ class Document:
     def calculate_noun_overlap_all(self):
         i = self.indicators
         all_noun_overlap_list = []
-        for paragraph in self.aux_lists['paragraphs_list']:
-            for index in range(len(paragraph)):
-                similarity_tmp = paragraph[index + 1:]
-                x = paragraph[index]
+        for paragraph in self.paragraph_list:
+            for index in range(len(paragraph.sentence_list)):
+                similarity_tmp = paragraph.sentence_list[index + 1:]
+                x = paragraph.sentence_list[index]
                 for index2 in range(len(similarity_tmp)):
                     y = similarity_tmp[index2]
                     sentence1 = []
                     sentence2 = []
-                    for entry1 in x:
-                        values1 = entry1.split("\t")
-                        if values1[3] == 'NOUN':
-                            sentence1.append(values1[1].lower())
-                    for entry2 in y:
-                        values2 = entry2.split("\t")
-                        if values2[3] == 'NOUN':
-                            sentence2.append(values2[1].lower())
+                    for entry1 in x.word_list:
+                        #values1 = entry1.split("\t")
+                        if entry1.upos == 'NOUN':
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in y.word_list:
+                        #values2 = entry2.split("\t")
+                        if entry2.upos == 'NOUN':
+                            sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
                     if len(in_common) > 0:
                         all_noun_overlap_list.append(1)
@@ -393,13 +392,6 @@ class Document:
         if len(all_noun_overlap_list) > 0:
             i['noun_overlap_all'] = round(float(np.mean(all_noun_overlap_list)), 4)
 
-    def is_personal_pronoun(self, word):
-        values = word.split("\t")
-        atributos = values[5].split('|')
-        if "PronType=Prs" in atributos:
-            return True
-        else:
-            return False
 
     # Argument overlap measure is binary (there either is or is not any overlap between a pair of adjacent
     # sentences in a text ). Argument overlap measures the proportion of sentences in a text for which there are overlapping the
@@ -407,20 +399,19 @@ class Document:
     def calculate_argument_overlap_adjacent(self):
         i = self.indicators
         adjacent_argument_overlap_list = []
-        for paragraph in self.aux_lists['paragraphs_list']:
-            if len(paragraph) > 1:
-                adjacents = list(map(list, zip(paragraph, paragraph[1:])))
+        for paragraph in self.paragraph_list:
+            if len(paragraph.sentence_list) > 1:
+                adjacents = list(map(list, zip(paragraph.sentence_list, paragraph.sentence_list[1:])))
                 for x in adjacents:
                     sentence1 = []
                     sentence2 = []
-                    for entry1 in x[0]:
-                        values1 = entry1.split("\t")
-                        if self.is_personal_pronoun(entry1) or values1[3] == 'NOUN':
-                            sentence1.append(values1[2].lower())
-                    for entry2 in x[1]:
-                        values2 = entry2.split("\t")
-                        if self.is_personal_pronoun(entry2) or values2[3] == 'NOUN':
-                            sentence2.append(values2[2].lower())
+                    for entry1 in x[0].word_list:
+                        print(entry1)
+                        if entry1.is_personal_pronoun or entry1.upos == 'NOUN':
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in x[1].word_list:
+                        if entry2.is_personal_pronoun or entry2.upos == 'NOUN':
+                            sentence2.append(entry1.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
                     if len(in_common) > 0:
                         adjacent_argument_overlap_list.append(1)
@@ -434,22 +425,20 @@ class Document:
     def calculate_argument_overlap_all(self):
         i = self.indicators
         all_argument_overlap_list = []
-        for paragraph in self.aux_lists['paragraphs_list']:
-            for index in range(len(paragraph)):
-                similarity_tmp = paragraph[index + 1:]
-                x = paragraph[index]
+        for paragraph in self.paragraph_list:
+            for index in range(len(paragraph.sentence_list)):
+                similarity_tmp = paragraph.sentence_list[index + 1:]
+                x = paragraph.sentence_list[index]
                 for index2 in range(len(similarity_tmp)):
                     y = similarity_tmp[index2]
                     sentence1 = []
                     sentence2 = []
-                    for entry1 in x:
-                        values1 = entry1.split("\t")
-                        if self.is_personal_pronoun(entry1) or values1[3] == 'NOUN':
-                            sentence1.append(values1[2].lower())
-                    for entry2 in y:
-                        values2 = entry2.split("\t")
-                        if self.is_personal_pronoun(entry2) or values2[3] == 'NOUN':
-                            sentence2.append(values2[2].lower())
+                    for entry1 in x.word_list:
+                        if entry1.is_personal_pronoun or entry1.upos == 'NOUN':
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in y.word_list:
+                        if entry2.is_personal_pronoun or entry2.upos == 'NOUN':
+                            sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
                     if len(in_common) > 0:
                         all_argument_overlap_list.append(1)
@@ -465,20 +454,18 @@ class Document:
     def calculate_stem_overlap_adjacent(self):
         i = self.indicators
         adjacent_stem_overlap_list = []
-        for paragraph in self.aux_lists['paragraphs_list']:
-            if len(paragraph) > 1:
-                adjacents = list(map(list, zip(paragraph, paragraph[1:])))
+        for paragraph in self.paragraph_list:
+            if len(paragraph.sentence_list) > 1:
+                adjacents = list(map(list, zip(paragraph.sentence_list, paragraph.sentence_list[1:])))
                 for x in adjacents:
                     sentence1 = []
                     sentence2 = []
-                    for entry1 in x[0]:
-                        values1 = entry1.split("\t")
-                        if self.is_lexic_word(values1[3], values1[6], x[0]):
-                            sentence1.append(values1[2].lower())
-                    for entry2 in x[1]:
-                        values2 = entry2.split("\t")
-                        if values2[3] == 'NOUN':
-                            sentence2.append(values2[2].lower())
+                    for entry1 in x[0].word_list:
+                        if entry1.is_lexic_word(x[0]):
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in x[1].word_list:
+                        if entry2.upos == 'NOUN':
+                            sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
                     if len(in_common) > 0:
                         adjacent_stem_overlap_list.append(1)
@@ -494,22 +481,20 @@ class Document:
     def calculate_stem_overlap_all(self):
         i = self.indicators
         all_stem_overlap_list = []
-        for paragraph in self.aux_lists['paragraphs_list']:
-            for index in range(len(paragraph)):
-                similarity_tmp = paragraph[index + 1:]
-                x = paragraph[index]
+        for paragraph in self.paragraph_list:
+            for index in range(len(paragraph.sentence_list)):
+                similarity_tmp = paragraph.sentence_list[index + 1:]
+                x = paragraph.sentence_list[index]
                 for index2 in range(len(similarity_tmp)):
                     y = similarity_tmp[index2]
                     sentence1 = []
                     sentence2 = []
-                    for entry1 in x:
-                        values1 = entry1.split("\t")
-                        if self.is_lexic_word(values1[3], values1[6], x):
-                            sentence1.append(values1[2].lower())
-                    for entry2 in y:
-                        values2 = entry2.split("\t")
-                        if values2[3] == 'NOUN':
-                            sentence2.append(values2[2].lower())
+                    for entry1 in x.word_list:
+                        if entry1.is_lexic_word(x):
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in y.word_list:
+                        if entry2.upos == 'NOUN':
+                            sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
                     if len(in_common) > 0:
                         all_stem_overlap_list.append(1)
@@ -517,16 +502,6 @@ class Document:
                         all_stem_overlap_list.append(0)
         if len(all_stem_overlap_list) > 0:
             i['stem_overlap_all'] = round(float(np.mean(all_stem_overlap_list)), 4)
-
-    # Metodo que calcula el numero de palabras de contenido en una frase. Counts number of content words in a sentence.
-    def count_content_words_in(self, sent):
-        num_words = 0
-        for entry in sent:
-            values = entry.split("\t")
-            if self.is_verb(values[3], values[6], sent) or values[3] == 'NOUN' or values[3] == 'ADJ' or values[
-                3] == 'ADV':
-                num_words += 1
-        return num_words
 
     # Content word overlap adjacent sentences proporcional mean refers to the proportion of content words
     # (nouns, verbs,adverbs,adjectives, pronouns) that shared Between pairs of sentences.For example, if
@@ -536,23 +511,21 @@ class Document:
     def calculate_content_overlap_adjacent(self):
         i = self.indicators
         adjacent_content_overlap_list = []
-        for paragraph in self.aux_lists['paragraphs_list']:
-            if len(paragraph) > 1:
-                adjacents = list(map(list, zip(paragraph, paragraph[1:])))
+        for paragraph in self.paragraph_list:
+            if len(paragraph.sentence_list) > 1:
+                adjacents = list(map(list, zip(paragraph.sentence_list, paragraph.sentence_list[1:])))
                 for x in adjacents:
                     sentence1 = []
                     sentence2 = []
-                    for entry1 in x[0]:
-                        values1 = entry1.split("\t")
-                        if self.is_lexic_word(values1[3], values1[6], x[0]):
-                            sentence1.append(values1[1].lower())
-                    for entry2 in x[1]:
-                        values2 = entry2.split("\t")
-                        if self.is_lexic_word(values2[3], values2[6], x[1]):
-                            sentence2.append(values2[1].lower())
+                    for entry1 in x[0].word_list:
+                        if entry1.is_lexic_word(x[0]):
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in x[1].word_list:
+                        if entry2.is_lexic_word(x[1]):
+                            sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
-                    n1 = self.count_content_words_in(x[0])
-                    n2 = self.count_content_words_in(x[1])
+                    n1 = x[0].count_content_words_in()
+                    n2 = x[1].count_content_words_in()
                     if n1 + n2 > 0:
                         adjacent_content_overlap_list.append(len(in_common) / (n1 + n2))
                     else:
@@ -569,25 +542,23 @@ class Document:
     def calculate_content_overlap_all(self):
         i = self.indicators
         all_content_overlap_list = []
-        for paragraph in self.aux_lists['paragraphs_list']:
-            for index in range(len(paragraph)):
-                similarity_tmp = paragraph[index + 1:]
-                x = paragraph[index]
+        for paragraph in self.paragraph_list:
+            for index in range(len(paragraph.sentence_list)):
+                similarity_tmp = paragraph.sentence_list[index + 1:]
+                x = paragraph.sentence_list[index]
                 for index2 in range(len(similarity_tmp)):
                     y = similarity_tmp[index2]
                     sentence1 = []
                     sentence2 = []
-                    for entry1 in x:
-                        values1 = entry1.split("\t")
-                        if self.is_lexic_word(values1[3], values1[6], x):
-                            sentence1.append(values1[1].lower())
-                    for entry2 in y:
-                        values2 = entry2.split("\t")
-                        if self.is_lexic_word(values2[3], values2[6], y):
-                            sentence2.append(values2[2].lower())
+                    for entry1 in x.word_list:
+                        if entry1.is_lexic_word(x):
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in y.word_list:
+                        if entry2.is_lexic_word(y):
+                            sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
-                    n1 = self.count_content_words_in(x)
-                    n2 = self.count_content_words_in(y)
+                    n1 = x.count_content_words_in()
+                    n2 = y.count_content_words_in()
                     if n1 + n2 > 0:
                         all_content_overlap_list.append(len(in_common) / (n1 + n2))
                     else:
@@ -907,6 +878,14 @@ class Sentence:
                     num_modifiers += 1
             return num_modifiers + self.count_decendents(new_list_indexes)
 
+    # Metodo que calcula el numero de palabras de contenido en una frase. Counts number of content words in a sentence.
+    def count_content_words_in(self):
+        num_words = 0
+        for entry in self.word_list:
+            if entry.is_verb(self) or entry.upos == 'NOUN' or entry.upos == 'ADJ' or entry.upos == 'ADV':
+                num_words += 1
+        return num_words
+
     def print(self):
         for words in self.word_list:
             print(words.text)
@@ -1028,6 +1007,12 @@ class Word:
         return True if self.dependency_relation in ['nmod', 'nmod:poss', 'appos', 'amod', 'nummod', 'acl', 'acl:relcl',
                                                     'det', 'clf',
                                                     'case'] else False
+    def is_personal_pronoun(self):
+        atributos =self.xpos.split('|')
+        if "PronType=Prs" in atributos:
+            return True
+        else:
+            return False
 
     def is_lexic_word(self, sequence):
         return self.is_verb(sequence) or self.upos == 'NOUN' or self.upos == 'ADJ' or self.upos == 'ADV'
@@ -1514,7 +1499,7 @@ class Main(object):
         if language == "basque":
             text = "ibon hondartzan egon da. Eguraldi oso ona egin zuen.\nHurrengo astean mendira joango da. "                "\n\nBere lagunak saskibaloi partidu bat antolatu dute 18etan, baina berak ez du jolastuko. \n "                "Etor zaitez etxera.\n Nik egin beharko nuke lan hori. \n Gizonak liburua galdu du. \n Irten hortik!"                    "\n Emadazu ur botila! \n Zu beti adarra jotzen."
         if language == "english":
-            text = "ibon is going to the beach. I am ibon. \n"                 "Eder is going too. He is Eder."
+            text = "ibon is going to the beach. I am beach ibon. \n"                 "Eder is going too. He is Eder."
         if language == "spanish":
             text = "ibon va ir a la playa. Yo soy ibon. \n"                 "Ibon tambien va a ir. El es Ibon."
         # Carga StopWords
