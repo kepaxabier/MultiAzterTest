@@ -15,6 +15,9 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import wordnet as wn
+from nltk.corpus import cmudict
+#####Argumentos##################################
+from argparse import ArgumentParser
 
 
 class ModelAdapter:
@@ -131,6 +134,7 @@ class Document:
         self.calculate_all_std_deviations()
         self.calculate_all_incidence()
         self.calculate_density()
+        self.calculate_all_overlaps()
         return self.indicators
 
     # self.indicators['num_words'] = self.calculate_num_words()
@@ -312,6 +316,271 @@ class Document:
         v = len(self.aux_lists['different_forms'])
         self.indicators['maas'] = round((np.log10(n) - np.log10(v)) / (np.log10(v) ** 2), 4)
 
+    # Noun overlap measure is binary (there either is or is not any overlap between a pair of adjacent sentences in a text ).
+    # Noun overlap measures the proportion of sentences in a text for which there are overlapping nouns,
+    # With no deviation in the morphological forms (e.g., table/tables)
+    # (número pares de sentencias adjacentes que tienen al menos algún nombre en común)/(Número de pares de sentencias adjacentes)
+    def calculate_noun_overlap_adjacent(self):
+        i = self.indicators
+        adjacent_noun_overlap_list = []
+        # paragraph_list es una lista de doc.sentences donde doc.sentences es una "lista de obj sentencias" de un parrafo=[doc.sentence1,...]
+        for paragraph in self.paragraph_list:
+            # Por cada parrafo:paragraph es "lista de obj sentencias" de un parrafo=[doc.sentence1,...]
+            if len(paragraph.sentence_list) > 1:
+                # zip Python zip function takes iterable elements as input, and returns iterator que es un flujo de datos que
+                # puede ser recorrido por for o map.
+                # Si paragraph = [[sentence1], [sentence2], [sentence3]]
+                # paragraph[1:] = [[sentence2], [sentence3]]
+                test = zip(paragraph.sentence_list, paragraph.sentence_list[1:])  # zip the values
+                # print(test) #-><zip object at 0x7eff7b354c08>=?[([sentence1],[sentence2]),([sentence2],[sentence3]),...]
+                # for values in test:
+                # print(values)  # print each tuples
+                # ([sentence1],[sentence2])
+                # ([sentence2],[sentence3])
+                # map aplica la función list a todos los elementos de zip y como resultado se devuelve un iterable de tipo map
+                # funcion list=The list() constructor returns a mutable (the object can be modified) sequence list of elements.
+                # Por cada valor de test genera una lista
+                # print(testlist) #<map object at 0x7eff7b3701d0>=?[[([sentence1],[sentence2])],[([sentence2],[sentence3])]]
+                adjacents = list(map(list, test))
+                # print(type(adjacents))
+                # print(adjacents) ##Ejm: Parrafo1:[[[sent1], [sent2]], [[sent2], [sent3]]] donde sentenceX es conllword1,conllword2,...
+                for x in adjacents:
+                    sentence1 = []
+                    sentence2 = []
+                    for entry1 in x[0].word_list:
+                        #values1 = entry1.split("\t")
+                        if entry1.upos == 'NOUN':
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in x[1].word_list:
+                        #values2 = entry2.split("\t")
+                        if entry2.upos == 'NOUN':
+                            sentence2.append(entry2.text.lower())
+                    # nombres en comun entre sentence1 y sentence2
+                    in_common = list(set(sentence1).intersection(sentence2))
+                    # si hay nombre en comun añado 1
+                    if len(in_common) > 0:
+                        adjacent_noun_overlap_list.append(1)
+                    else:
+                        adjacent_noun_overlap_list.append(0)
+        if len(adjacent_noun_overlap_list) > 0:
+            i['noun_overlap_adjacent'] = round(float(np.mean(adjacent_noun_overlap_list)), 4)
+
+    # Noun overlap measures which is the average overlap between all pairs of sentences in the text for which there are overlapping nouns,
+    # With no deviation in the morphological forms (e.g., table/tables)
+    # (Sumatorio de todos pares de sentencias del texto que tienen alguna coincidencia en algún nombre)/(todos los pares de sentencias del texto)
+    def calculate_noun_overlap_all(self):
+        i = self.indicators
+        all_noun_overlap_list = []
+        for paragraph in self.paragraph_list:
+            for index in range(len(paragraph.sentence_list)):
+                similarity_tmp = paragraph.sentence_list[index + 1:]
+                x = paragraph.sentence_list[index]
+                for index2 in range(len(similarity_tmp)):
+                    y = similarity_tmp[index2]
+                    sentence1 = []
+                    sentence2 = []
+                    for entry1 in x.word_list:
+                        #values1 = entry1.split("\t")
+                        if entry1.upos == 'NOUN':
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in y.word_list:
+                        #values2 = entry2.split("\t")
+                        if entry2.upos == 'NOUN':
+                            sentence2.append(entry2.text.lower())
+                    in_common = list(set(sentence1).intersection(sentence2))
+                    if len(in_common) > 0:
+                        all_noun_overlap_list.append(1)
+                    else:
+                        all_noun_overlap_list.append(0)
+        if len(all_noun_overlap_list) > 0:
+            i['noun_overlap_all'] = round(float(np.mean(all_noun_overlap_list)), 4)
+
+
+    # Argument overlap measure is binary (there either is or is not any overlap between a pair of adjacent
+    # sentences in a text ). Argument overlap measures the proportion of sentences in a text for which there are overlapping the
+    # between nouns (stem, e.g., “table”/”tables”) and personal pronouns (“he”/”he”)
+    def calculate_argument_overlap_adjacent(self):
+        i = self.indicators
+        adjacent_argument_overlap_list = []
+        for paragraph in self.paragraph_list:
+            if len(paragraph.sentence_list) > 1:
+                adjacents = list(map(list, zip(paragraph.sentence_list, paragraph.sentence_list[1:])))
+                for x in adjacents:
+                    sentence1 = []
+                    sentence2 = []
+                    for entry1 in x[0].word_list:
+                        if entry1.is_personal_pronoun or entry1.upos == 'NOUN':
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in x[1].word_list:
+                        if entry2.is_personal_pronoun or entry2.upos == 'NOUN':
+                            sentence2.append(entry1.text.lower())
+                    in_common = list(set(sentence1).intersection(sentence2))
+                    if len(in_common) > 0:
+                        adjacent_argument_overlap_list.append(1)
+                    else:
+                        adjacent_argument_overlap_list.append(0)
+        if len(adjacent_argument_overlap_list) > 0:
+            i['argument_overlap_adjacent'] = round(float(np.mean(adjacent_argument_overlap_list)), 4)
+
+    # Argument overlap measures which is the average overlap between all pairs of sentences in the
+    # text for which there are overlapping stem nouns and personal pronouns.
+    def calculate_argument_overlap_all(self):
+        i = self.indicators
+        all_argument_overlap_list = []
+        for paragraph in self.paragraph_list:
+            for index in range(len(paragraph.sentence_list)):
+                similarity_tmp = paragraph.sentence_list[index + 1:]
+                x = paragraph.sentence_list[index]
+                for index2 in range(len(similarity_tmp)):
+                    y = similarity_tmp[index2]
+                    sentence1 = []
+                    sentence2 = []
+                    for entry1 in x.word_list:
+                        if entry1.is_personal_pronoun or entry1.upos == 'NOUN':
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in y.word_list:
+                        if entry2.is_personal_pronoun or entry2.upos == 'NOUN':
+                            sentence2.append(entry2.text.lower())
+                    in_common = list(set(sentence1).intersection(sentence2))
+                    if len(in_common) > 0:
+                        all_argument_overlap_list.append(1)
+                    else:
+                        all_argument_overlap_list.append(0)
+        if len(all_argument_overlap_list) > 0:
+            i['argument_overlap_all'] = round(float(np.mean(all_argument_overlap_list)), 4)
+
+    # Stem overlap measure is binary (there either is or is not any overlap between a pair of adjacent sentences in a text ).
+    # Stem overlap measures the proportion of sentences in a text for which there are overlapping between a noun in one
+    # sentence and a content word (i['e.,'] nouns,verbs, adjectives, adverbs) in a previous sentence
+    # that shares a common lemma (e.g., “tree”/”treed”;”mouse”/”mousey”).
+    def calculate_stem_overlap_adjacent(self):
+        i = self.indicators
+        adjacent_stem_overlap_list = []
+        for paragraph in self.paragraph_list:
+            if len(paragraph.sentence_list) > 1:
+                adjacents = list(map(list, zip(paragraph.sentence_list, paragraph.sentence_list[1:])))
+                for x in adjacents:
+                    sentence1 = []
+                    sentence2 = []
+                    for entry1 in x[0].word_list:
+                        if entry1.is_lexic_word(x[0]):
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in x[1].word_list:
+                        if entry2.upos == 'NOUN':
+                            sentence2.append(entry2.text.lower())
+                    in_common = list(set(sentence1).intersection(sentence2))
+                    if len(in_common) > 0:
+                        adjacent_stem_overlap_list.append(1)
+                    else:
+                        adjacent_stem_overlap_list.append(0)
+        if len(adjacent_stem_overlap_list) > 0:
+            i['stem_overlap_adjacent'] = round(float(np.mean(adjacent_stem_overlap_list)), 4)
+
+    # Global Stem overlap measures which is the average overlap between all pairs of sentences in
+    # the text for which there are overlapping Between a noun in one sentence and a content word
+    # (i['e.,'] nouns,verbs, adjectives, adverbs) in a previous sentence that shares a common
+    # lemma (e.g., “tree”/”treed”;”mouse”/”mousey”).
+    def calculate_stem_overlap_all(self):
+        i = self.indicators
+        all_stem_overlap_list = []
+        for paragraph in self.paragraph_list:
+            for index in range(len(paragraph.sentence_list)):
+                similarity_tmp = paragraph.sentence_list[index + 1:]
+                x = paragraph.sentence_list[index]
+                for index2 in range(len(similarity_tmp)):
+                    y = similarity_tmp[index2]
+                    sentence1 = []
+                    sentence2 = []
+                    for entry1 in x.word_list:
+                        if entry1.is_lexic_word(x):
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in y.word_list:
+                        if entry2.upos == 'NOUN':
+                            sentence2.append(entry2.text.lower())
+                    in_common = list(set(sentence1).intersection(sentence2))
+                    if len(in_common) > 0:
+                        all_stem_overlap_list.append(1)
+                    else:
+                        all_stem_overlap_list.append(0)
+        if len(all_stem_overlap_list) > 0:
+            i['stem_overlap_all'] = round(float(np.mean(all_stem_overlap_list)), 4)
+
+    # Content word overlap adjacent sentences proporcional mean refers to the proportion of content words
+    # (nouns, verbs,adverbs,adjectives, pronouns) that shared Between pairs of sentences.For example, if
+    # a sentence pair has fewer words and two words overlap, The proportion is greater than if a pair has
+    # many words and two words overlap. This measure may be particulaly useful when the lenghts of the
+    # sentences in the text are principal concern.
+    def calculate_content_overlap_adjacent(self):
+        i = self.indicators
+        adjacent_content_overlap_list = []
+        for paragraph in self.paragraph_list:
+            if len(paragraph.sentence_list) > 1:
+                adjacents = list(map(list, zip(paragraph.sentence_list, paragraph.sentence_list[1:])))
+                for x in adjacents:
+                    sentence1 = []
+                    sentence2 = []
+                    for entry1 in x[0].word_list:
+                        if entry1.is_lexic_word(x[0]):
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in x[1].word_list:
+                        if entry2.is_lexic_word(x[1]):
+                            sentence2.append(entry2.text.lower())
+                    in_common = list(set(sentence1).intersection(sentence2))
+                    n1 = x[0].count_content_words_in()
+                    n2 = x[1].count_content_words_in()
+                    if n1 + n2 > 0:
+                        adjacent_content_overlap_list.append(len(in_common) / (n1 + n2))
+                    else:
+                        adjacent_content_overlap_list.append(0)
+        if len(adjacent_content_overlap_list) > 0:
+            i['content_overlap_adjacent_mean'] = round(float(np.mean(adjacent_content_overlap_list)), 4)
+            i['content_overlap_adjacent_std'] = round(float(np.std(adjacent_content_overlap_list)), 4)
+
+    # Content word overlap adjacent sentences proporcional mean refers to the proportion of content words
+    # (nouns, verbs,adverbs,adjectives, pronouns) that shared Between pairs of sentences.For example, if
+    # a sentence pair has fewer words and two words overlap, The proportion is greater than if a pair has
+    # many words and two words overlap. This measure may be particulaly useful when the lenghts of the
+    # sentences in the text are principal concern.
+    def calculate_content_overlap_all(self):
+        i = self.indicators
+        all_content_overlap_list = []
+        for paragraph in self.paragraph_list:
+            for index in range(len(paragraph.sentence_list)):
+                similarity_tmp = paragraph.sentence_list[index + 1:]
+                x = paragraph.sentence_list[index]
+                for index2 in range(len(similarity_tmp)):
+                    y = similarity_tmp[index2]
+                    sentence1 = []
+                    sentence2 = []
+                    for entry1 in x.word_list:
+                        if entry1.is_lexic_word(x):
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in y.word_list:
+                        if entry2.is_lexic_word(y):
+                            sentence2.append(entry2.text.lower())
+                    in_common = list(set(sentence1).intersection(sentence2))
+                    n1 = x.count_content_words_in()
+                    n2 = y.count_content_words_in()
+                    if n1 + n2 > 0:
+                        all_content_overlap_list.append(len(in_common) / (n1 + n2))
+                    else:
+                        all_content_overlap_list.append(0)
+        if len(all_content_overlap_list) > 0:
+            i['content_overlap_all_mean'] = round(float(np.mean(all_content_overlap_list)), 4)
+            i['content_overlap_all_std'] = round(float(np.std(all_content_overlap_list)), 4)
+
+    def calculate_all_overlaps(self):
+        self.calculate_noun_overlap_adjacent()
+        self.calculate_noun_overlap_all()
+        self.calculate_argument_overlap_adjacent()
+        self.calculate_argument_overlap_all()
+        self.calculate_stem_overlap_adjacent()
+        self.calculate_stem_overlap_all()
+        self.calculate_content_overlap_adjacent()
+        self.calculate_content_overlap_all()
+
+
+
     def calculate_all_numbers(self):
         i = self.indicators
         i['num_paragraphs'] = len(self._paragraph_list)
@@ -327,112 +596,116 @@ class Document:
         for p in self.paragraph_list:
             self.aux_lists['sentences_per_paragraph'].append(len(p.sentence_list))  # [1,2,1,...]
             for s in p.sentence_list:
-                num_words_in_sentence_without_stopwords = 0
-                i['num_sentences'] += 1
-                filterwords = filter(not_punctuation, s.word_list)
-                sum = 0
-                dependency_tree = defaultdict(list)
-                vp_indexes = s.count_np_in_sentence()
-                num_np_list.append(len(vp_indexes))
-                num_vp_list.append(s.count_vp_in_sentence())
-                decendents_total += s.count_decendents(vp_indexes)
-                modifiers_per_np += s.count_modifiers(vp_indexes)
-                self.aux_lists['left_embeddedness'].append(s.calculate_left_embeddedness())
-                i['prop'] = 0
-                numPunct = 0
-                for w in s.word_list:
-                    if w.governor == 0:
-                        root = w.index
-                    dependency_tree[w.governor].append(w.index)
-                    # words without punc
-                    if w in filterwords:
-                        i['num_words'] += 1
-                        self.aux_lists['words_length_list'].append(len(w.text))
-                        self.aux_lists['lemmas_length_list'].append(len(w.lemma))
-                        sum += 1
-                    # words with punc
-                    i['num_words_with_punct'] += 1
-                    # words not in stopwords
-                    if w.text.lower() not in Stopwords.stop_words:
-                        num_words_in_sentence_without_stopwords += 1
-                    if w.is_lexic_word(s):
-                        i['num_lexic_words'] += 1
-                    if w.upos == 'NOUN':
-                        i['num_noun'] += 1
-                        if w.text.lower() not in self.aux_lists['different_nouns']:
-                            self.aux_lists['different_nouns'].append(w.text.lower())
-                        if w.lemma not in self.aux_lists['different_lemma_nouns']:
-                            self.aux_lists['different_lemma_nouns'].append(w.lemma)
-                    if w.upos == 'ADJ':
-                        i['num_adj'] += 1
-                        if w.text.lower() not in self.aux_lists['different_adjs']:
-                            self.aux_lists['different_adjs'].append(w.text.lower())
-                        if w.lemma not in self.aux_lists['different_lemma_adjs']:
-                            self.aux_lists['different_lemma_adjs'].append(w.lemma)
-                    if w.upos == 'ADV':
-                        i['num_adv'] += 1
-                        if w.text.lower() not in self.aux_lists['different_advs']:
-                            self.aux_lists['different_advs'].append(w.text.lower())
-                        if w.lemma not in self.aux_lists['different_lemma_advs']:
-                            self.aux_lists['different_lemma_advs'].append(w.lemma)
-                    if w.is_verb(s):
-                        i['num_verb'] += 1
-                        if w.text.lower() not in self.aux_lists['different_verbs']:
-                            self.aux_lists['different_verbs'].append(w.text.lower())
-                        if w.lemma not in self.aux_lists['different_lemma_verbs']:
-                            self.aux_lists['different_lemma_verbs'].append(w.lemma)
-                        if 'VerbForm=Past' in atributos:
-                            i['num_past'] += 1
-                        if 'VerbForm=Pres' in atributos:
-                            i['num_pres'] += 1
-                        if 'VerbForm=Ind' in atributos:
-                            i['num_indic'] += 1
-
-                    if w.text.lower() not in self.aux_lists['different_forms']:
-                        self.aux_lists['different_forms'].append(w.text.lower())
-                    if w.text.lower() not in self.words_freq:
-                        self.words_freq[w.text.lower()] = 1
-                    else:
-                        self.words_freq[w.text.lower()] = self.words_freq.get(w.text.lower()) + 1
-                    if w.dependency_relation in subordinadas_labels:
-                        i['num_subord'] += 1
-                        # Numero de sentencias subordinadas relativas
-                        if w.dependency_relation == 'acl:relcl':
-                            i['num_rel_subord'] += 1
-                    if w.upos == 'PUNCT':
-                        numPunct += 1
-                    if w.dependency_relation == 'conj' or w.dependency_relation == 'csubj' or w.dependency_relation == 'csubj:pass' or w.dependency_relation == 'ccomp' or w.dependency_relation == 'xcomp' or w.dependency_relation == 'advcl' or w.dependency_relation == 'acl' or w.dependency_relation == 'acl:relcl':
-                        i['prop'] += 1
-                    atributos = w.feats.split('|')
-                    if 'VerbForm=Ger' in atributos:
-                        i['num_ger'] += 1
-                    if 'VerbForm=Inf' in atributos:
-                        i['num_inf'] += 1
-                    if 'Mood=Imp' in atributos:
-                        i['num_impera'] += 1
-                    if 'PronType=Prs' in atributos:
-                        i['num_personal_pronouns'] += 1
-                        if 'Person=1' in atributos:
-                            i['num_first_pers_pron'] += 1
-                            if 'Number=Sing' in atributos:
-                                i['num_first_pers_sing_pron'] += 1
-                        elif 'Person=3' in atributos:
-                            i['num_third_pers_pron'] += 1
-                    if (not len(w.text) == 1 or w.text.isalpha()) and w.upos != "NUM":
-                        if (w.is_lexic_word(s)):
-                            if wn.synsets(w.text):
-                                if w.upos == 'NOUN':
-                                    self.aux_lists['noun_abstraction_list'].append(
-                                        self.get_abstraction_level(w.text, 'n'))
-                                    self.aux_lists['noun_verb_abstraction_list'].append(
-                                        self.get_abstraction_level(w.text, 'n'))
-                                elif w.is_verb(s):
-                                    self.aux_lists['verb_abstraction_list'].append(
-                                        self.get_abstraction_level(w.text, 'v'))
-                                    self.aux_lists['noun_verb_abstraction_list'].append(
-                                        self.get_abstraction_level(w.text, 'v'))
-                                self.aux_lists['ambiguity_content_words_list'].append(
-                                    self.get_ambiguity_level(w.text, w.upos))
+                if not s.text == "":
+                    num_words_in_sentence_without_stopwords = 0
+                    i['num_sentences'] += 1
+                    filterwords = filter(not_punctuation, s.word_list)
+                    sum = 0
+                    dependency_tree = defaultdict(list)
+                    vp_indexes = s.count_np_in_sentence()
+                    num_np_list.append(len(vp_indexes))
+                    num_vp_list.append(s.count_vp_in_sentence())
+                    decendents_total += s.count_decendents(vp_indexes)
+                    modifiers_per_np += s.count_modifiers(vp_indexes)
+                    self.aux_lists['left_embeddedness'].append(s.calculate_left_embeddedness())
+                    i['prop'] = 0
+                    numPunct = 0
+                    for w in s.word_list:
+                        if w.governor == 0:
+                            root = w.index
+                        dependency_tree[w.governor].append(w.index)
+                        # words without punc
+                        if w in filterwords:
+                            i['num_words'] += 1
+                            self.aux_lists['words_length_list'].append(len(w.text))
+                            self.aux_lists['lemmas_length_list'].append(len(w.lemma))
+                            sum += 1
+                        # words with punc
+                        i['num_words_with_punct'] += 1
+                        # words not in stopwords
+                        if w.text.lower() not in Stopwords.stop_words:
+                            num_words_in_sentence_without_stopwords += 1
+                        if w.is_lexic_word(s):
+                            i['num_lexic_words'] += 1
+                        if w.upos == 'NOUN':
+                            i['num_noun'] += 1
+                            if w.text.lower() not in self.aux_lists['different_nouns']:
+                                self.aux_lists['different_nouns'].append(w.text.lower())
+                            if w.lemma not in self.aux_lists['different_lemma_nouns']:
+                                self.aux_lists['different_lemma_nouns'].append(w.lemma)
+                        if w.upos == 'ADJ':
+                            i['num_adj'] += 1
+                            if w.text.lower() not in self.aux_lists['different_adjs']:
+                                self.aux_lists['different_adjs'].append(w.text.lower())
+                            if w.lemma not in self.aux_lists['different_lemma_adjs']:
+                                self.aux_lists['different_lemma_adjs'].append(w.lemma)
+                        if w.upos == 'ADV':
+                            i['num_adv'] += 1
+                            if w.text.lower() not in self.aux_lists['different_advs']:
+                                self.aux_lists['different_advs'].append(w.text.lower())
+                            if w.lemma not in self.aux_lists['different_lemma_advs']:
+                                self.aux_lists['different_lemma_advs'].append(w.lemma)
+                        if w.is_verb(s):
+                            i['num_verb'] += 1
+                            if w.text.lower() not in self.aux_lists['different_verbs']:
+                                self.aux_lists['different_verbs'].append(w.text.lower())
+                            if w.lemma not in self.aux_lists['different_lemma_verbs']:
+                                self.aux_lists['different_lemma_verbs'].append(w.lemma)
+                            if w.is_past():
+                                i['num_past'] += 1
+                                if w.is_irregular():
+                                    i['num_past_irregular'] += 1
+                            if w.is_present():
+                                i['num_pres'] += 1
+                            if w.is_indicative():
+                                i['num_indic'] += 1
+                            if w.is_gerund():
+                                i['num_ger'] += 1
+                            if w.is_infinitive():
+                                i['num_inf'] += 1
+                            if w.is_imperative():
+                                i['num_impera'] += 1
+                        if w.is_personal_pronoun():
+                            i['num_personal_pronouns'] += 1
+                            if w.is_first_person_pronoun():
+                                i['num_first_pers_pron'] += 1
+                                if w.is_first_personal_pronoun_sing():
+                                    i['num_first_pers_sing_pron'] += 1
+                            if w.is_third_personal_pronoun():
+                                i['num_third_pers_pron'] += 1
+                        if w.text.lower() not in self.aux_lists['different_forms']:
+                            self.aux_lists['different_forms'].append(w.text.lower())
+                        if w.text.lower() not in self.words_freq:
+                            self.words_freq[w.text.lower()] = 1
+                        else:
+                            self.words_freq[w.text.lower()] = self.words_freq.get(w.text.lower()) + 1
+                        if w.is_subordinate():
+                            i['num_subord'] += 1
+                            # Numero de sentencias subordinadas relativas
+                            if w.is_subordinate_relative():
+                                i['num_rel_subord'] += 1
+                        if w.upos == 'PUNCT':
+                            numPunct += 1
+                        if w.is_proposition():
+                           i['prop'] += 1
+                        if (not len(w.text) == 1 or w.text.isalpha()) and w.upos != "NUM":
+                            if (w.is_lexic_word(s)):
+                                i['num_lexic_words'] += 1
+                                if wn.synsets(w.text):
+                                    if w.upos == 'NOUN':
+                                        self.aux_lists['noun_abstraction_list'].append(
+                                            self.get_abstraction_level(w.text, 'n'))
+                                        self.aux_lists['noun_verb_abstraction_list'].append(
+                                            self.get_abstraction_level(w.text, 'n'))
+                                    elif w.is_verb(s):
+                                        self.aux_lists['verb_abstraction_list'].append(
+                                            self.get_abstraction_level(w.text, 'v'))
+                                        self.aux_lists['noun_verb_abstraction_list'].append(
+                                            self.get_abstraction_level(w.text, 'v'))
+                                    self.aux_lists['ambiguity_content_words_list'].append(
+                                        self.get_ambiguity_level(w.text, w.upos))
+                            if w.lemma not in self.aux_lists['different_lemmas']:
+                                self.aux_lists['different_lemmas'].append(w.text.lower())
                 i['num_total_prop'] = i['num_total_prop'] + i['prop']
                 self.aux_lists['prop_per_sentence'].append(i['prop'])
                 self.aux_lists['punct_per_sentence'].append(numPunct)
@@ -500,6 +773,7 @@ class Document:
         i['num_noun_incidence'] = self.get_incidence(i['num_noun'], n)
         i['num_adj_incidence'] = self.get_incidence(i['num_adj'], n)
         i['num_adv_incidence'] = self.get_incidence(i['num_adv'], n)
+        i['num_lexic_words_incidence'] = self.get_incidence(i['num_lexic_words'], n)
 
     def calculate_density(self):
         i = self.indicators
@@ -559,7 +833,7 @@ class Sentence:
         for word in self.word_list:
             if not len(word.text) == 1 or word.text.isalpha():
                 if not main_verb_found and word.governor < len(self.word_list):
-                    if word.is_verb(self.text):
+                    if word.is_verb(self):
                         verb_index += 1
                         if (word.upos == 'VERB' and word.dependency_relation == 'root') or (
                                 word.upos == 'AUX' and self.word_list[
@@ -606,6 +880,14 @@ class Sentence:
                     new_list_indexes.append(entry.index)
                     num_modifiers += 1
             return num_modifiers + self.count_decendents(new_list_indexes)
+
+    # Metodo que calcula el numero de palabras de contenido en una frase. Counts number of content words in a sentence.
+    def count_content_words_in(self):
+        num_words = 0
+        for entry in self.word_list:
+            if entry.is_verb(self) or entry.upos == 'NOUN' or entry.upos == 'ADJ' or entry.upos == 'ADV':
+                num_words += 1
+        return num_words
 
     def print(self):
         for words in self.word_list:
@@ -729,16 +1011,125 @@ class Word:
                                                     'det', 'clf',
                                                     'case'] else False
 
+    def is_personal_pronoun(self):
+        atributos =self.feats.split('|')
+        if "PronType=Prs" in atributos:
+            return True
+        else:
+            return False
+
+    def is_first_person_pronoun(self):
+        atributos = self.feats.split('|')
+        if 'PronType=Prs' in atributos and 'Person=1' in atributos:
+            return True
+        else:
+            return False
+
+    def is_third_personal_pronoun(self):
+        atributos = self.feats.split('|')
+        if 'PronType=Prs' in atributos and 'Person=3' in atributos:
+            return True
+        else:
+            return False
+
+    def is_first_personal_pronoun_sing(self):
+        atributos = self.feats.split('|')
+        if 'PronType=Prs' in atributos and 'Person=1' in atributos and 'Number=Sing' in atributos:
+            return True
+        else:
+            return False
+
+    def num_syllables(self):
+        list = []
+        max = 0
+        for x in Pronouncing.prondict[self.text.lower()]:
+            tmp_list = []
+            tmp_max = 0
+            for y in x:
+                if y[-1].isdigit():
+                    tmp_max += 1
+                    tmp_list.append(y)
+            list.append(tmp_list)
+            if tmp_max > max:
+                max = tmp_max
+        return max
+
+    def syllables(self):
+        """
+        Calculate syllables of a word using a less accurate algorithm.
+        Parse through the sentence, using common syllabic identifiers to count
+        syllables.
+
+        ADAPTED FROM:
+        [http://stackoverflow.com/questions/14541303/count-the-number-of-syllables-in-a-word]
+        """
+        # initialize count
+        count = 0
+        # vowel list
+        vowels = 'aeiouy'
+        # take out punctuation
+        word = self.text.lower()  # word.lower().strip(".:;?!")
+        # various signifiers of syllabic up or down count
+        if word[0] in vowels:
+            count += 1
+        for index in range(1, len(word)):
+            if word[index] in vowels and word[index - 1] not in vowels:
+                count += 1
+        if word.endswith('e'):
+            count -= 1
+        if word.endswith('le') or word.endswith('a'):
+            count += 1
+        if count == 0:
+            count += 1
+        if "ooo" in word or "mm" in word:
+            count = 1
+        if word == 'll':
+            count = 0
+        if (word.startswith('x') and len(word) >= 2) and word[1].isdigit():
+            count = 0
+        if word == 'lmfao':
+            count = 5
+        if len(word) < 2 and word not in ['a', 'i', 'y', 'o']:
+            count = 0
+        return count
+
+    def allnum_syllables(self):
+        try:
+            return self.num_syllables()
+        except KeyError:
+            # if word not found in cmudict
+            return self.syllables()
+
     def is_lexic_word(self, sequence):
         return self.is_verb(sequence) or self.upos == 'NOUN' or self.upos == 'ADJ' or self.upos == 'ADV'
 
     def is_verb(self, frase):
-        # if not self.upos == 'NOUN': print(self.upos)
         return self.upos == 'VERB' or (self.upos == 'AUX' and frase.word_list[self.governor - 1].upos != 'VERB')
 
     def is_future(self, frase):
         return self.upos == 'AUX' and self.lemma in ['will', 'shall'] and frase.word_list[
             int(self.governor) - 1].xpos == 'VB'
+
+    def is_past(self):
+        atributos = self.xpos.split('|')
+        if "Tense=Past" in atributos:
+            return True
+        else:
+            return False
+
+    def is_present(self):
+        atributos = self.xpos.split('|')
+        if "Tense=Pres" in atributos:
+            return True
+        else:
+            return False
+
+    def is_indicative(self):
+        atributos = self.xpos.split('|')
+        if "Mood=Ind" in atributos:
+            return True
+        else:
+            return False
 
     def is_np(self, list_np_indexes):
         if self.upos == 'NOUN' or self.upos == 'PRON' or self.upos == 'PROPN':
@@ -751,11 +1142,69 @@ class Word:
                     list_np_indexes.append(ind)
         return list_np_indexes
 
+    def is_gerund(self):
+        atributos = self.feats.split('|')
+        if 'VerbForm=Ger' in atributos:
+            return True
+        else:
+            return False
+
+    def is_infinitive(self):
+        atributos = self.feats.split('|')
+        if 'VerbForm=Inf' in atributos:
+            return True
+        else:
+            return False
+
+    def is_imperative(self):
+        atributos = self.feats.split('|')
+        if 'Mood=Imp' in atributos:
+            return True
+        else:
+            return False
+
+    def is_proposition(self):
+        if self.dependency_relation == 'conj' or self.dependency_relation == 'csubj' or self.dependency_relation == 'csubj:pass' or\
+                self.dependency_relation == 'ccomp' or self.dependency_relation == 'xcomp' or self.dependency_relation == 'advcl' or self.dependency_relation == 'acl' or self.dependency_relation == 'acl:relcl':
+            return True
+        else:
+            return False
+
+    def is_subordinate(self):
+        subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp',
+                                   'advcl', 'acl', 'acl:relcl']
+        return True if self.dependency_relation in subordinadas_labels else False
+
+    def is_subordinate_relative(self):
+        subordinate_relative_labels = ['acl:relcl']
+
+        return True if self.dependency_relation in subordinate_relative_labels else False
+
+    def is_stopword(self):
+        return True if self.text.lower() in Stopwords.stop_words else False
+
     def __repr__(self):
         features = ['index', 'text', 'lemma', 'upos', 'xpos', 'feats', 'governor', 'dependency_relation']
         feature_str = ";".join(["{}={}".format(k, getattr(self, k)) for k in features if getattr(self, k) is not None])
 
         return f"<{self.__class__.__name__} {feature_str}>"
+
+    def is_irregular(self):
+        return True if self.lemma in Irregularverbs.irregular_verbs else False
+
+
+class Irregularverbs:
+
+    irregular_verbs = []
+
+    def load(self):
+        f = open('data/en/IrregularVerbs.txt', 'r')
+        lineas = f.readlines()
+        for linea in lineas:
+            if not linea.startswith("//"):
+                #carga el verbo en presente, dejando pasado y preterito
+                Irregularverbs.irregular_verbs.append(linea.split()[0])
+        f.close()
 
 
 class Printer:
@@ -1076,13 +1525,13 @@ class NLPCharger:
                 stanfordnlp.download('eu', MODELS_DIR)  # Download the Basque models
             elif self.lang.lower() == "english":
                 print("-------------You are going to use English model-------------")
-                MODELS_DIR = '/home/kepa/en'
+                MODELS_DIR = '/home/ibon/en'
                 print("-------------Downloading Stanford Basque model-------------")
-                stanfordnlp.download('en', MODELS_DIR)  # Download the Basque models
+                stanfordnlp.download('en', MODELS_DIR)  # Download the English models
             elif self.lang.lower() == "spanish":
                 print("-------------You are going to use Spanish model-------------")
                 MODELS_DIR = '/home/kepa/es'
-                stanfordnlp.download('es', MODELS_DIR)  # Download the English models
+                stanfordnlp.download('es', MODELS_DIR)  # Download the Spanish models
             else:
                 print("........You cannot use this language...........")
         elif self.lib.lower() == "cube":
@@ -1125,7 +1574,7 @@ class NLPCharger:
 
             elif self.lang.lower() == "english":
                 print("-------------You are going to use English model-------------")
-                MODELS_DIR = '/home/kepa/en'
+                MODELS_DIR = '/home/ibon/en'
                 config = {'processors': 'tokenize,mwt,pos,lemma,depparse',  # Comma-separated list of processors to use
                           'lang': 'en',  # Language code for the language to build the Pipeline in
                           'tokenize_model_path': MODELS_DIR + '/en_ewt_models/en_ewt_tokenizer.pt',
@@ -1195,6 +1644,28 @@ class NLPCharger:
         return ma.model_analysis(self.textwithparagraphs)
 
 
+
+class Pronouncing:
+    # Pronunciador(the Carnegie Mellon Pronouncing Dictionary)- Utilizado para obtener silabas: pip install cmudict
+        # cmudict is a pronouncing dictionary for north american english words.
+        # it splits words into phonemes, which are shorter than syllables.
+        # (e.g. the word 'cat' is split into three phonemes: K - AE - T).
+        # but vowels also have a "stress marker":
+        # either 0, 1, or 2, depending on the pronunciation of the word (so AE in 'cat' becomes AE1).
+        # the code in the answer counts the stress markers and therefore the number of the vowels -
+        # which effectively gives the number of syllables (notice how in OP's examples each syllable has exactly one vowel)
+        #from nltk.corpus import cmudict
+        #pronunciation dictionary
+        #prondict = cmudict.dict()
+    prondict = {}
+
+    def __init__(self, language):
+        self.lang = language
+
+    def load(self):
+        if self.lang.lower() == "english":
+            Pronouncing.prondict = cmudict.dict()
+
 "This is a Singleton class which is going to start necessary classes and methods."
 
 
@@ -1209,31 +1680,70 @@ class Main(object):
             Main.__instance = object.__new__(cls)
         return Main.__instance
 
+    def extract_text_from_file(self, input):
+        # Si el fichero de entrada no tiene extension .txt
+        if ".txt" not in input:
+            # textract extrae el texto de todo tipo de formatos (odt, docx, doc ..)
+            pre_text = textract.process(input)
+            # decode(encoding='UTF-8',errors='strict') convierte a utf8 y si no puede lanza un error
+            text = pre_text.decode()
+        else:
+            # Si extensión .txt convierte texto a utf-8
+            with open(input, encoding='utf-8') as f:
+                text = f.read()
+        return text
+
     def start(self):
+        #####Argumentos##################################
+        from argparse import ArgumentParser
+        # ArgumentParser con una descripción de la aplicación
+        p = ArgumentParser(description="python3 ./main.py -f \"laginak/*.doc.txt\" ")
+        # Grupo de argumentos requeridos
+        required = p.add_argument_group('required arguments')
+        required.add_argument('-f', '--files', nargs='+', help='Files to analyze (in .txt, .odt, .doc or .docx format)')
+        # Grupo de argumentos opcionales
+        optional = p.add_argument_group('optional arguments')
+        optional.add_argument('-a', '--all', action='store_true', help="Generate a CSV file with all the results")
+        optional.add_argument('-s', '--similarity', action='store_true', help="Calculate similarity (max. 5 files)")
+        # Por último parsear los argumentos
+        opts = p.parse_args()
+
         language = "basque"
         model = "stanford"
-        if language == "basque":
-            text = "ibon hondartzan egon da. Eguraldi oso ona egin zuen.\nHurrengo astean mendira joango da. "                "\n\nBere lagunak saskibaloi partidu bat antolatu dute 18etan, baina berak ez du jolastuko. \n "                "Etor zaitez etxera.\n Nik egin beharko nuke lan hori. \n Gizonak liburua galdu du. \n Irten hortik!"                    "\n Emadazu ur botila! \n Zu beti adarra jotzen."
-        if language == "english":
-            text = "ibon is going to the beach. I am ibon. \n"                 "Eder is going too. He is Eder."
-        if language == "spanish":
-            text = "ibon va ir a la playa. Yo soy ibon. \n"                 "Ibon tambien va a ir. El es Ibon."
+
         # Carga StopWords
         stopw = Stopwords(language)
         stopw.download()
         stopw.load()
-        stopw.print()
+        # stopw.print()
+
+        # Load Pronouncing Dictionary
+        prondic = Pronouncing(language)
+        prondic.load()
 
         # Carga del modelo Stanford/NLPCube
         cargador = NLPCharger(language, model)
         cargador.download_model()
         cargador.load_model()
 
-        # Get indicators
-        document = cargador.get_estructure(text)
-        indicators = document.get_indicators()
-        printer = Printer(indicators)
-        printer.print_info()
+        files = opts.files
+        files = ["kk.txt", "kk.txt"]
+        for input in files:
+            # texto directamente de text
+            if language == "basque":
+                text = "ibon hondartzan egon da. Eguraldi oso ona egin zuen.\nHurrengo astean mendira joango da. "                "\n\nBere lagunak saskibaloi partidu bat antolatu dute 18etan, baina berak ez du jolastuko. \n "                "Etor zaitez etxera.\n Nik egin beharko nuke lan hori. \n Gizonak liburua galdu du. \n Irten hortik!"                    "\n Emadazu ur botila! \n Zu beti adarra jotzen."
+            if language == "english":
+                text = "ibon is going to the beach. I am ibon. \n"                 "Eder is going too. He is Eder."
+            if language == "spanish":
+                text = "ibon va ir a la playa. Yo soy ibon. \n"                 "Ibon tambien va a ir. El es Ibon."
+            # texto directamente de fichero
+            text = self.extract_text_from_file(input)
+
+            # Get indicators
+            document = cargador.get_estructure(text)
+            indicators = document.get_indicators()
+            printer = Printer(indicators)
+            printer.print_info()
 
 
 main = Main()
