@@ -596,6 +596,7 @@ class Document:
         for p in self.paragraph_list:
             self.aux_lists['sentences_per_paragraph'].append(len(p.sentence_list))  # [1,2,1,...]
             for s in p.sentence_list:
+<<<<<<< HEAD
                 if not s.text == "":
                     num_words_in_sentence_without_stopwords = 0
                     i['num_sentences'] += 1
@@ -706,6 +707,117 @@ class Document:
                                         self.get_ambiguity_level(w.text, w.upos))
                             if w.lemma not in self.aux_lists['different_lemmas']:
                                 self.aux_lists['different_lemmas'].append(w.text.lower())
+=======
+                num_words_in_sentence_without_stopwords = 0
+                i['num_sentences'] += 1
+                filterwords = filter(not_punctuation, s.word_list)
+                sum = 0
+                dependency_tree = defaultdict(list)
+                vp_indexes = s.count_np_in_sentence()
+                num_np_list.append(len(vp_indexes))
+                num_vp_list.append(s.count_vp_in_sentence())
+                decendents_total += s.count_decendents(vp_indexes)
+                modifiers_per_np += s.count_modifiers(vp_indexes)
+                self.aux_lists['left_embeddedness'].append(s.calculate_left_embeddedness())
+                i['prop'] = 0
+                numPunct = 0
+                for w in s.word_list:
+                    if w.governor == 0:
+                        root = w.index
+                    dependency_tree[w.governor].append(w.index)
+                    # words without punc
+                    if w in filterwords:
+                        i['num_words'] += 1
+                        self.aux_lists['words_length_list'].append(len(w.text))
+                        self.aux_lists['lemmas_length_list'].append(len(w.lemma))
+                        sum += 1
+                    # words with punc
+                    i['num_words_with_punct'] += 1
+                    # words not in stopwords
+                    if w.text.lower() not in Stopwords.stop_words:
+                        num_words_in_sentence_without_stopwords += 1
+                    if w.is_lexic_word(s):
+                        i['num_lexic_words'] += 1
+                    if w.upos == 'NOUN':
+                        i['num_noun'] += 1
+                        if w.text.lower() not in self.aux_lists['different_nouns']:
+                            self.aux_lists['different_nouns'].append(w.text.lower())
+                        if w.lemma not in self.aux_lists['different_lemma_nouns']:
+                            self.aux_lists['different_lemma_nouns'].append(w.lemma)
+                    if w.upos == 'ADJ':
+                        i['num_adj'] += 1
+                        if w.text.lower() not in self.aux_lists['different_adjs']:
+                            self.aux_lists['different_adjs'].append(w.text.lower())
+                        if w.lemma not in self.aux_lists['different_lemma_adjs']:
+                            self.aux_lists['different_lemma_adjs'].append(w.lemma)
+                    if w.upos == 'ADV':
+                        i['num_adv'] += 1
+                        if w.text.lower() not in self.aux_lists['different_advs']:
+                            self.aux_lists['different_advs'].append(w.text.lower())
+                        if w.lemma not in self.aux_lists['different_lemma_advs']:
+                            self.aux_lists['different_lemma_advs'].append(w.lemma)
+                    if w.is_verb(s):
+                        i['num_verb'] += 1
+                        if w.text.lower() not in self.aux_lists['different_verbs']:
+                            self.aux_lists['different_verbs'].append(w.text.lower())
+                        if w.lemma not in self.aux_lists['different_lemma_verbs']:
+                            self.aux_lists['different_lemma_verbs'].append(w.lemma)
+                        if 'VerbForm=Past' in atributos:
+                            i['num_past'] += 1
+                        if 'VerbForm=Pres' in atributos:
+                            i['num_pres'] += 1
+                        if 'VerbForm=Ind' in atributos:
+                            i['num_indic'] += 1
+
+                    if w.text.lower() not in self.aux_lists['different_forms']:
+                        self.aux_lists['different_forms'].append(w.text.lower())
+                    if w.text.lower() not in self.words_freq:
+                        self.words_freq[w.text.lower()] = 1
+                    else:
+                        self.words_freq[w.text.lower()] = self.words_freq.get(w.text.lower()) + 1
+                    if w.dependency_relation in subordinadas_labels:
+                        i['num_subord'] += 1
+                        # Numero de sentencias subordinadas relativas
+                        if w.dependency_relation == 'acl:relcl':
+                            i['num_rel_subord'] += 1
+                    if w.upos == 'PUNCT':
+                        numPunct += 1
+                    if w.dependency_relation == 'conj' or w.dependency_relation == 'csubj' or w.dependency_relation == 'csubj:pass' or w.dependency_relation == 'ccomp' or w.dependency_relation == 'xcomp' or w.dependency_relation == 'advcl' or w.dependency_relation == 'acl' or w.dependency_relation == 'acl:relcl':
+                        i['prop'] += 1
+                    atributos = w.feats.split('|')
+                    if 'VerbForm=Ger' in atributos:
+                        i['num_ger'] += 1
+                    if 'VerbForm=Inf' in atributos:
+                        i['num_inf'] += 1
+                    if 'Mood=Imp' in atributos:
+                        i['num_impera'] += 1
+                    if 'PronType=Prs' in atributos:
+                        i['num_personal_pronouns'] += 1
+                        if 'Person=1' in atributos:
+                            i['num_first_pers_pron'] += 1
+                            if 'Number=Sing' in atributos:
+                                i['num_first_pers_sing_pron'] += 1
+                        elif 'Person=3' in atributos:
+                            i['num_third_pers_pron'] += 1
+                    if (not len(w.text) == 1 or w.text.isalpha()) and w.upos != "NUM":
+                        if (w.is_lexic_word(s)):
+                            i['num_lexic_words'] += 1
+                            if wn.synsets(w.text):
+                                if w.upos == 'NOUN':
+                                    self.aux_lists['noun_abstraction_list'].append(
+                                        self.get_abstraction_level(w.text, 'n'))
+                                    self.aux_lists['noun_verb_abstraction_list'].append(
+                                        self.get_abstraction_level(w.text, 'n'))
+                                elif w.is_verb(s):
+                                    self.aux_lists['verb_abstraction_list'].append(
+                                        self.get_abstraction_level(w.text, 'v'))
+                                    self.aux_lists['noun_verb_abstraction_list'].append(
+                                        self.get_abstraction_level(w.text, 'v'))
+                                self.aux_lists['ambiguity_content_words_list'].append(
+                                    self.get_ambiguity_level(w.text, w.upos))
+                        if w.lemma not in self.aux_lists['different_lemmas']:
+                            self.aux_lists['different_lemmas'].append(w.text.lower())
+>>>>>>> e9d1c33f2edd9f82a6ab9509b04eb30591fe94ee
                 i['num_total_prop'] = i['num_total_prop'] + i['prop']
                 self.aux_lists['prop_per_sentence'].append(i['prop'])
                 self.aux_lists['punct_per_sentence'].append(numPunct)
@@ -1010,6 +1122,12 @@ class Word:
         return True if self.dependency_relation in ['nmod', 'nmod:poss', 'appos', 'amod', 'nummod', 'acl', 'acl:relcl',
                                                     'det', 'clf',
                                                     'case'] else False
+    def is_personal_pronoun(self):
+        atributos =self.xpos.split('|')
+        if "PronType=Prs" in atributos:
+            return True
+        else:
+            return False
 
     def is_personal_pronoun(self):
         atributos =self.feats.split('|')
@@ -1694,6 +1812,7 @@ class Main(object):
         return text
 
     def start(self):
+<<<<<<< HEAD
         #####Argumentos##################################
         from argparse import ArgumentParser
         # ArgumentParser con una descripción de la aplicación
@@ -1711,6 +1830,16 @@ class Main(object):
         language = "basque"
         model = "stanford"
 
+=======
+        language = "english"
+        model = "stanford"
+        if language == "basque":
+            text = "ibon hondartzan egon da. Eguraldi oso ona egin zuen.\nHurrengo astean mendira joango da. "                "\n\nBere lagunak saskibaloi partidu bat antolatu dute 18etan, baina berak ez du jolastuko. \n "                "Etor zaitez etxera.\n Nik egin beharko nuke lan hori. \n Gizonak liburua galdu du. \n Irten hortik!"                    "\n Emadazu ur botila! \n Zu beti adarra jotzen."
+        if language == "english":
+            text = "ibon is going to the beach. I am beach ibon. \n"                 "Eder is going too. He is Eder."
+        if language == "spanish":
+            text = "ibon va ir a la playa. Yo soy ibon. \n"                 "Ibon tambien va a ir. El es Ibon."
+>>>>>>> e9d1c33f2edd9f82a6ab9509b04eb30591fe94ee
         # Carga StopWords
         stopw = Stopwords(language)
         stopw.download()
