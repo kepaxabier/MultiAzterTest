@@ -131,6 +131,7 @@ class Document:
         self.calculate_all_std_deviations()
         self.calculate_all_incidence()
         self.calculate_density()
+        self.calculate_all_overlaps()
         return self.indicators
 
     # self.indicators['num_words'] = self.calculate_num_words()
@@ -312,6 +313,271 @@ class Document:
         v = len(self.aux_lists['different_forms'])
         self.indicators['maas'] = round((np.log10(n) - np.log10(v)) / (np.log10(v) ** 2), 4)
 
+    # Noun overlap measure is binary (there either is or is not any overlap between a pair of adjacent sentences in a text ).
+    # Noun overlap measures the proportion of sentences in a text for which there are overlapping nouns,
+    # With no deviation in the morphological forms (e.g., table/tables)
+    # (número pares de sentencias adjacentes que tienen al menos algún nombre en común)/(Número de pares de sentencias adjacentes)
+    def calculate_noun_overlap_adjacent(self):
+        i = self.indicators
+        adjacent_noun_overlap_list = []
+        # paragraph_list es una lista de doc.sentences donde doc.sentences es una "lista de obj sentencias" de un parrafo=[doc.sentence1,...]
+        for paragraph in self.paragraph_list:
+            # Por cada parrafo:paragraph es "lista de obj sentencias" de un parrafo=[doc.sentence1,...]
+            if len(paragraph.sentence_list) > 1:
+                # zip Python zip function takes iterable elements as input, and returns iterator que es un flujo de datos que
+                # puede ser recorrido por for o map.
+                # Si paragraph = [[sentence1], [sentence2], [sentence3]]
+                # paragraph[1:] = [[sentence2], [sentence3]]
+                test = zip(paragraph.sentence_list, paragraph.sentence_list[1:])  # zip the values
+                # print(test) #-><zip object at 0x7eff7b354c08>=?[([sentence1],[sentence2]),([sentence2],[sentence3]),...]
+                # for values in test:
+                # print(values)  # print each tuples
+                # ([sentence1],[sentence2])
+                # ([sentence2],[sentence3])
+                # map aplica la función list a todos los elementos de zip y como resultado se devuelve un iterable de tipo map
+                # funcion list=The list() constructor returns a mutable (the object can be modified) sequence list of elements.
+                # Por cada valor de test genera una lista
+                # print(testlist) #<map object at 0x7eff7b3701d0>=?[[([sentence1],[sentence2])],[([sentence2],[sentence3])]]
+                adjacents = list(map(list, test))
+                # print(type(adjacents))
+                # print(adjacents) ##Ejm: Parrafo1:[[[sent1], [sent2]], [[sent2], [sent3]]] donde sentenceX es conllword1,conllword2,...
+                for x in adjacents:
+                    sentence1 = []
+                    sentence2 = []
+                    for entry1 in x[0].word_list:
+                        #values1 = entry1.split("\t")
+                        if entry1.upos == 'NOUN':
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in x[1].word_list:
+                        #values2 = entry2.split("\t")
+                        if entry2.upos == 'NOUN':
+                            sentence2.append(entry2.text.lower())
+                    # nombres en comun entre sentence1 y sentence2
+                    in_common = list(set(sentence1).intersection(sentence2))
+                    # si hay nombre en comun añado 1
+                    if len(in_common) > 0:
+                        adjacent_noun_overlap_list.append(1)
+                    else:
+                        adjacent_noun_overlap_list.append(0)
+        if len(adjacent_noun_overlap_list) > 0:
+            i['noun_overlap_adjacent'] = round(float(np.mean(adjacent_noun_overlap_list)), 4)
+
+    # Noun overlap measures which is the average overlap between all pairs of sentences in the text for which there are overlapping nouns,
+    # With no deviation in the morphological forms (e.g., table/tables)
+    # (Sumatorio de todos pares de sentencias del texto que tienen alguna coincidencia en algún nombre)/(todos los pares de sentencias del texto)
+    def calculate_noun_overlap_all(self):
+        i = self.indicators
+        all_noun_overlap_list = []
+        for paragraph in self.paragraph_list:
+            for index in range(len(paragraph.sentence_list)):
+                similarity_tmp = paragraph.sentence_list[index + 1:]
+                x = paragraph.sentence_list[index]
+                for index2 in range(len(similarity_tmp)):
+                    y = similarity_tmp[index2]
+                    sentence1 = []
+                    sentence2 = []
+                    for entry1 in x.word_list:
+                        #values1 = entry1.split("\t")
+                        if entry1.upos == 'NOUN':
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in y.word_list:
+                        #values2 = entry2.split("\t")
+                        if entry2.upos == 'NOUN':
+                            sentence2.append(entry2.text.lower())
+                    in_common = list(set(sentence1).intersection(sentence2))
+                    if len(in_common) > 0:
+                        all_noun_overlap_list.append(1)
+                    else:
+                        all_noun_overlap_list.append(0)
+        if len(all_noun_overlap_list) > 0:
+            i['noun_overlap_all'] = round(float(np.mean(all_noun_overlap_list)), 4)
+
+
+    # Argument overlap measure is binary (there either is or is not any overlap between a pair of adjacent
+    # sentences in a text ). Argument overlap measures the proportion of sentences in a text for which there are overlapping the
+    # between nouns (stem, e.g., “table”/”tables”) and personal pronouns (“he”/”he”)
+    def calculate_argument_overlap_adjacent(self):
+        i = self.indicators
+        adjacent_argument_overlap_list = []
+        for paragraph in self.paragraph_list:
+            if len(paragraph.sentence_list) > 1:
+                adjacents = list(map(list, zip(paragraph.sentence_list, paragraph.sentence_list[1:])))
+                for x in adjacents:
+                    sentence1 = []
+                    sentence2 = []
+                    for entry1 in x[0].word_list:
+                        if entry1.is_personal_pronoun or entry1.upos == 'NOUN':
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in x[1].word_list:
+                        if entry2.is_personal_pronoun or entry2.upos == 'NOUN':
+                            sentence2.append(entry1.text.lower())
+                    in_common = list(set(sentence1).intersection(sentence2))
+                    if len(in_common) > 0:
+                        adjacent_argument_overlap_list.append(1)
+                    else:
+                        adjacent_argument_overlap_list.append(0)
+        if len(adjacent_argument_overlap_list) > 0:
+            i['argument_overlap_adjacent'] = round(float(np.mean(adjacent_argument_overlap_list)), 4)
+
+    # Argument overlap measures which is the average overlap between all pairs of sentences in the
+    # text for which there are overlapping stem nouns and personal pronouns.
+    def calculate_argument_overlap_all(self):
+        i = self.indicators
+        all_argument_overlap_list = []
+        for paragraph in self.paragraph_list:
+            for index in range(len(paragraph.sentence_list)):
+                similarity_tmp = paragraph.sentence_list[index + 1:]
+                x = paragraph.sentence_list[index]
+                for index2 in range(len(similarity_tmp)):
+                    y = similarity_tmp[index2]
+                    sentence1 = []
+                    sentence2 = []
+                    for entry1 in x.word_list:
+                        if entry1.is_personal_pronoun or entry1.upos == 'NOUN':
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in y.word_list:
+                        if entry2.is_personal_pronoun or entry2.upos == 'NOUN':
+                            sentence2.append(entry2.text.lower())
+                    in_common = list(set(sentence1).intersection(sentence2))
+                    if len(in_common) > 0:
+                        all_argument_overlap_list.append(1)
+                    else:
+                        all_argument_overlap_list.append(0)
+        if len(all_argument_overlap_list) > 0:
+            i['argument_overlap_all'] = round(float(np.mean(all_argument_overlap_list)), 4)
+
+    # Stem overlap measure is binary (there either is or is not any overlap between a pair of adjacent sentences in a text ).
+    # Stem overlap measures the proportion of sentences in a text for which there are overlapping between a noun in one
+    # sentence and a content word (i['e.,'] nouns,verbs, adjectives, adverbs) in a previous sentence
+    # that shares a common lemma (e.g., “tree”/”treed”;”mouse”/”mousey”).
+    def calculate_stem_overlap_adjacent(self):
+        i = self.indicators
+        adjacent_stem_overlap_list = []
+        for paragraph in self.paragraph_list:
+            if len(paragraph.sentence_list) > 1:
+                adjacents = list(map(list, zip(paragraph.sentence_list, paragraph.sentence_list[1:])))
+                for x in adjacents:
+                    sentence1 = []
+                    sentence2 = []
+                    for entry1 in x[0].word_list:
+                        if entry1.is_lexic_word(x[0]):
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in x[1].word_list:
+                        if entry2.upos == 'NOUN':
+                            sentence2.append(entry2.text.lower())
+                    in_common = list(set(sentence1).intersection(sentence2))
+                    if len(in_common) > 0:
+                        adjacent_stem_overlap_list.append(1)
+                    else:
+                        adjacent_stem_overlap_list.append(0)
+        if len(adjacent_stem_overlap_list) > 0:
+            i['stem_overlap_adjacent'] = round(float(np.mean(adjacent_stem_overlap_list)), 4)
+
+    # Global Stem overlap measures which is the average overlap between all pairs of sentences in
+    # the text for which there are overlapping Between a noun in one sentence and a content word
+    # (i['e.,'] nouns,verbs, adjectives, adverbs) in a previous sentence that shares a common
+    # lemma (e.g., “tree”/”treed”;”mouse”/”mousey”).
+    def calculate_stem_overlap_all(self):
+        i = self.indicators
+        all_stem_overlap_list = []
+        for paragraph in self.paragraph_list:
+            for index in range(len(paragraph.sentence_list)):
+                similarity_tmp = paragraph.sentence_list[index + 1:]
+                x = paragraph.sentence_list[index]
+                for index2 in range(len(similarity_tmp)):
+                    y = similarity_tmp[index2]
+                    sentence1 = []
+                    sentence2 = []
+                    for entry1 in x.word_list:
+                        if entry1.is_lexic_word(x):
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in y.word_list:
+                        if entry2.upos == 'NOUN':
+                            sentence2.append(entry2.text.lower())
+                    in_common = list(set(sentence1).intersection(sentence2))
+                    if len(in_common) > 0:
+                        all_stem_overlap_list.append(1)
+                    else:
+                        all_stem_overlap_list.append(0)
+        if len(all_stem_overlap_list) > 0:
+            i['stem_overlap_all'] = round(float(np.mean(all_stem_overlap_list)), 4)
+
+    # Content word overlap adjacent sentences proporcional mean refers to the proportion of content words
+    # (nouns, verbs,adverbs,adjectives, pronouns) that shared Between pairs of sentences.For example, if
+    # a sentence pair has fewer words and two words overlap, The proportion is greater than if a pair has
+    # many words and two words overlap. This measure may be particulaly useful when the lenghts of the
+    # sentences in the text are principal concern.
+    def calculate_content_overlap_adjacent(self):
+        i = self.indicators
+        adjacent_content_overlap_list = []
+        for paragraph in self.paragraph_list:
+            if len(paragraph.sentence_list) > 1:
+                adjacents = list(map(list, zip(paragraph.sentence_list, paragraph.sentence_list[1:])))
+                for x in adjacents:
+                    sentence1 = []
+                    sentence2 = []
+                    for entry1 in x[0].word_list:
+                        if entry1.is_lexic_word(x[0]):
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in x[1].word_list:
+                        if entry2.is_lexic_word(x[1]):
+                            sentence2.append(entry2.text.lower())
+                    in_common = list(set(sentence1).intersection(sentence2))
+                    n1 = x[0].count_content_words_in()
+                    n2 = x[1].count_content_words_in()
+                    if n1 + n2 > 0:
+                        adjacent_content_overlap_list.append(len(in_common) / (n1 + n2))
+                    else:
+                        adjacent_content_overlap_list.append(0)
+        if len(adjacent_content_overlap_list) > 0:
+            i['content_overlap_adjacent_mean'] = round(float(np.mean(adjacent_content_overlap_list)), 4)
+            i['content_overlap_adjacent_std'] = round(float(np.std(adjacent_content_overlap_list)), 4)
+
+    # Content word overlap adjacent sentences proporcional mean refers to the proportion of content words
+    # (nouns, verbs,adverbs,adjectives, pronouns) that shared Between pairs of sentences.For example, if
+    # a sentence pair has fewer words and two words overlap, The proportion is greater than if a pair has
+    # many words and two words overlap. This measure may be particulaly useful when the lenghts of the
+    # sentences in the text are principal concern.
+    def calculate_content_overlap_all(self):
+        i = self.indicators
+        all_content_overlap_list = []
+        for paragraph in self.paragraph_list:
+            for index in range(len(paragraph.sentence_list)):
+                similarity_tmp = paragraph.sentence_list[index + 1:]
+                x = paragraph.sentence_list[index]
+                for index2 in range(len(similarity_tmp)):
+                    y = similarity_tmp[index2]
+                    sentence1 = []
+                    sentence2 = []
+                    for entry1 in x.word_list:
+                        if entry1.is_lexic_word(x):
+                            sentence1.append(entry1.text.lower())
+                    for entry2 in y.word_list:
+                        if entry2.is_lexic_word(y):
+                            sentence2.append(entry2.text.lower())
+                    in_common = list(set(sentence1).intersection(sentence2))
+                    n1 = x.count_content_words_in()
+                    n2 = y.count_content_words_in()
+                    if n1 + n2 > 0:
+                        all_content_overlap_list.append(len(in_common) / (n1 + n2))
+                    else:
+                        all_content_overlap_list.append(0)
+        if len(all_content_overlap_list) > 0:
+            i['content_overlap_all_mean'] = round(float(np.mean(all_content_overlap_list)), 4)
+            i['content_overlap_all_std'] = round(float(np.std(all_content_overlap_list)), 4)
+
+    def calculate_all_overlaps(self):
+        self.calculate_noun_overlap_adjacent()
+        self.calculate_noun_overlap_all()
+        self.calculate_argument_overlap_adjacent()
+        self.calculate_argument_overlap_all()
+        self.calculate_stem_overlap_adjacent()
+        self.calculate_stem_overlap_all()
+        self.calculate_content_overlap_adjacent()
+        self.calculate_content_overlap_all()
+
+
+
     def calculate_all_numbers(self):
         i = self.indicators
         i['num_paragraphs'] = len(self._paragraph_list)
@@ -420,6 +686,7 @@ class Document:
                             i['num_third_pers_pron'] += 1
                     if (not len(w.text) == 1 or w.text.isalpha()) and w.upos != "NUM":
                         if (w.is_lexic_word(s)):
+                            i['num_lexic_words'] += 1
                             if wn.synsets(w.text):
                                 if w.upos == 'NOUN':
                                     self.aux_lists['noun_abstraction_list'].append(
@@ -433,6 +700,8 @@ class Document:
                                         self.get_abstraction_level(w.text, 'v'))
                                 self.aux_lists['ambiguity_content_words_list'].append(
                                     self.get_ambiguity_level(w.text, w.upos))
+                        if w.lemma not in self.aux_lists['different_lemmas']:
+                            self.aux_lists['different_lemmas'].append(w.text.lower())
                 i['num_total_prop'] = i['num_total_prop'] + i['prop']
                 self.aux_lists['prop_per_sentence'].append(i['prop'])
                 self.aux_lists['punct_per_sentence'].append(numPunct)
@@ -500,6 +769,7 @@ class Document:
         i['num_noun_incidence'] = self.get_incidence(i['num_noun'], n)
         i['num_adj_incidence'] = self.get_incidence(i['num_adj'], n)
         i['num_adv_incidence'] = self.get_incidence(i['num_adv'], n)
+        i['num_lexic_words_incidence'] = self.get_incidence(i['num_lexic_words'], n)
 
     def calculate_density(self):
         i = self.indicators
@@ -559,7 +829,7 @@ class Sentence:
         for word in self.word_list:
             if not len(word.text) == 1 or word.text.isalpha():
                 if not main_verb_found and word.governor < len(self.word_list):
-                    if word.is_verb(self.text):
+                    if word.is_verb(self):
                         verb_index += 1
                         if (word.upos == 'VERB' and word.dependency_relation == 'root') or (
                                 word.upos == 'AUX' and self.word_list[
@@ -606,6 +876,14 @@ class Sentence:
                     new_list_indexes.append(entry.index)
                     num_modifiers += 1
             return num_modifiers + self.count_decendents(new_list_indexes)
+
+    # Metodo que calcula el numero de palabras de contenido en una frase. Counts number of content words in a sentence.
+    def count_content_words_in(self):
+        num_words = 0
+        for entry in self.word_list:
+            if entry.is_verb(self) or entry.upos == 'NOUN' or entry.upos == 'ADJ' or entry.upos == 'ADV':
+                num_words += 1
+        return num_words
 
     def print(self):
         for words in self.word_list:
@@ -728,12 +1006,17 @@ class Word:
         return True if self.dependency_relation in ['nmod', 'nmod:poss', 'appos', 'amod', 'nummod', 'acl', 'acl:relcl',
                                                     'det', 'clf',
                                                     'case'] else False
+    def is_personal_pronoun(self):
+        atributos =self.xpos.split('|')
+        if "PronType=Prs" in atributos:
+            return True
+        else:
+            return False
 
     def is_lexic_word(self, sequence):
         return self.is_verb(sequence) or self.upos == 'NOUN' or self.upos == 'ADJ' or self.upos == 'ADV'
 
     def is_verb(self, frase):
-        # if not self.upos == 'NOUN': print(self.upos)
         return self.upos == 'VERB' or (self.upos == 'AUX' and frase.word_list[self.governor - 1].upos != 'VERB')
 
     def is_future(self, frase):
@@ -1076,13 +1359,13 @@ class NLPCharger:
                 stanfordnlp.download('eu', MODELS_DIR)  # Download the Basque models
             elif self.lang.lower() == "english":
                 print("-------------You are going to use English model-------------")
-                MODELS_DIR = '/home/kepa/en'
+                MODELS_DIR = '/home/ibon/en'
                 print("-------------Downloading Stanford Basque model-------------")
-                stanfordnlp.download('en', MODELS_DIR)  # Download the Basque models
+                stanfordnlp.download('en', MODELS_DIR)  # Download the English models
             elif self.lang.lower() == "spanish":
                 print("-------------You are going to use Spanish model-------------")
                 MODELS_DIR = '/home/kepa/es'
-                stanfordnlp.download('es', MODELS_DIR)  # Download the English models
+                stanfordnlp.download('es', MODELS_DIR)  # Download the Spanish models
             else:
                 print("........You cannot use this language...........")
         elif self.lib.lower() == "cube":
@@ -1125,7 +1408,7 @@ class NLPCharger:
 
             elif self.lang.lower() == "english":
                 print("-------------You are going to use English model-------------")
-                MODELS_DIR = '/home/kepa/en'
+                MODELS_DIR = '/home/ibon/en'
                 config = {'processors': 'tokenize,mwt,pos,lemma,depparse',  # Comma-separated list of processors to use
                           'lang': 'en',  # Language code for the language to build the Pipeline in
                           'tokenize_model_path': MODELS_DIR + '/en_ewt_models/en_ewt_tokenizer.pt',
@@ -1210,12 +1493,12 @@ class Main(object):
         return Main.__instance
 
     def start(self):
-        language = "basque"
+        language = "english"
         model = "stanford"
         if language == "basque":
             text = "ibon hondartzan egon da. Eguraldi oso ona egin zuen.\nHurrengo astean mendira joango da. "                "\n\nBere lagunak saskibaloi partidu bat antolatu dute 18etan, baina berak ez du jolastuko. \n "                "Etor zaitez etxera.\n Nik egin beharko nuke lan hori. \n Gizonak liburua galdu du. \n Irten hortik!"                    "\n Emadazu ur botila! \n Zu beti adarra jotzen."
         if language == "english":
-            text = "ibon is going to the beach. I am ibon. \n"                 "Eder is going too. He is Eder."
+            text = "ibon is going to the beach. I am beach ibon. \n"                 "Eder is going too. He is Eder."
         if language == "spanish":
             text = "ibon va ir a la playa. Yo soy ibon. \n"                 "Ibon tambien va a ir. El es Ibon."
         # Carga StopWords
