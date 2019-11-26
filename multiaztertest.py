@@ -406,7 +406,6 @@ class Document:
                     sentence1 = []
                     sentence2 = []
                     for entry1 in x[0].word_list:
-                        print(entry1)
                         if entry1.is_personal_pronoun or entry1.upos == 'NOUN':
                             sentence1.append(entry1.text.lower())
                     for entry2 in x[1].word_list:
