@@ -584,14 +584,14 @@ class Document:
     def calculate_all_numbers(self):
         i = self.indicators
         i['num_paragraphs'] = len(self._paragraph_list)
-        i['num_words'] = 0
-        i['num_sentences'] = 0
+        #i['num_words'] = 0
+        #i['num_sentences'] = 0
         num_np_list = []
         num_vp_list = []
         modifiers_per_np = []
         depth_list = []
-        subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
-        not_punctuation = lambda w: not (len(w.text) == 1 and (not w.text.isalpha()))
+        #subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
+        #not_punctuation = lambda w: not (len(w.text) == 1 and (not w.text.isalpha()))
         decendents_total = 0
         for p in self.paragraph_list:
             self.aux_lists['sentences_per_paragraph'].append(len(p.sentence_list))  # [1,2,1,...]
@@ -621,23 +621,23 @@ class Document:
                             self.aux_lists['lemmas_length_list'].append(len(w.lemma))
                             sum += 1
                         # words not in stopwords
-                        if w.text.lower() not in Stopwords.stop_words:
+                        if not w.is_stopword():
                             num_words_in_sentence_without_stopwords += 1
                         if w.is_lexic_word(s):
                             i['num_lexic_words'] += 1
-                        if w.upos == 'NOUN':
+                        if w.is_noun():
                             i['num_noun'] += 1
                             if w.text.lower() not in self.aux_lists['different_nouns']:
                                 self.aux_lists['different_nouns'].append(w.text.lower())
                             if w.lemma not in self.aux_lists['different_lemma_nouns']:
                                 self.aux_lists['different_lemma_nouns'].append(w.lemma)
-                        if w.upos == 'ADJ':
+                        if w.is_adjective():
                             i['num_adj'] += 1
                             if w.text.lower() not in self.aux_lists['different_adjs']:
                                 self.aux_lists['different_adjs'].append(w.text.lower())
                             if w.lemma not in self.aux_lists['different_lemma_adjs']:
                                 self.aux_lists['different_lemma_adjs'].append(w.lemma)
-                        if w.upos == 'ADV':
+                        if w.is_adverb():
                             i['num_adv'] += 1
                             if w.text.lower() not in self.aux_lists['different_advs']:
                                 self.aux_lists['different_advs'].append(w.text.lower())
@@ -690,7 +690,7 @@ class Document:
                             if (w.is_lexic_word(s)):
                                 i['num_lexic_words'] += 1
                                 if wn.synsets(w.text):
-                                    if w.upos == 'NOUN':
+                                    if w.is_noun():
                                         self.aux_lists['noun_abstraction_list'].append(
                                             self.get_abstraction_level(w.text, 'n'))
                                         self.aux_lists['noun_verb_abstraction_list'].append(
@@ -1008,12 +1008,7 @@ class Word:
         return True if self.dependency_relation in ['nmod', 'nmod:poss', 'appos', 'amod', 'nummod', 'acl', 'acl:relcl',
                                                     'det', 'clf',
                                                     'case'] else False
-    def is_personal_pronoun(self):
-        atributos =self.xpos.split('|')
-        if "PronType=Prs" in atributos:
-            return True
-        else:
-            return False
+
 
     def is_personal_pronoun(self):
         atributos =self.feats.split('|')
@@ -1198,6 +1193,24 @@ class Word:
         feature_str = ";".join(["{}={}".format(k, getattr(self, k)) for k in features if getattr(self, k) is not None])
 
         return f"<{self.__class__.__name__} {feature_str}>"
+
+    def is_noun(self):
+        if w.upos == 'NOUN':
+            return True
+        else:
+            return False
+
+    def is_adjective(self):
+        if w.upos == 'ADJ':
+            return True
+        else:
+            return False
+
+    def is_adverb(self):
+        if w.upos == 'ADV':
+            return True
+        else:
+            return False
 
     def is_irregular(self):
         return True if self.lemma in Irregularverbs.irregular_verbs else False
@@ -1511,12 +1524,12 @@ class Stopwords:
             # Stopwords.stop_words.add("gero")
             print("n")
 
-
 class NLPCharger:
 
-    def __init__(self, language, library):
+    def __init__(self, language, library,directory):
         self.lang = language
         self.lib = library
+        self.dir= directory
         self.text = None
         self.textwithparagraphs = None
         self.parser = None
@@ -1530,19 +1543,16 @@ class NLPCharger:
             print("-----------You are going to use Stanford library-----------")
             if self.lang.lower() == "basque":
                 print("-------------You are going to use Basque model-------------")
-                # MODELS_DIR = '/home/ibon/eu'
-                # MODELS_DIR = '/home/kepa/eu'
-                MODELS_DIR = 'J:\TextSimilarity\eu'
-                # MODELS_DIR = '/home/kepa/eu'
+                MODELS_DIR = self.dir+'/eu'
                 stanfordnlp.download('eu', MODELS_DIR)  # Download the Basque models
             elif self.lang.lower() == "english":
                 print("-------------You are going to use English model-------------")
-                MODELS_DIR = '/home/ibon/en'
+                MODELS_DIR = self.dir+'/en'
                 print("-------------Downloading Stanford Basque model-------------")
                 stanfordnlp.download('en', MODELS_DIR)  # Download the English models
             elif self.lang.lower() == "spanish":
                 print("-------------You are going to use Spanish model-------------")
-                MODELS_DIR = '/home/kepa/es'
+                MODELS_DIR = self.dir+'/es'
                 stanfordnlp.download('es', MODELS_DIR)  # Download the Spanish models
             else:
                 print("........You cannot use this language...........")
@@ -1560,8 +1570,8 @@ class NLPCharger:
             print("-----------You are going to use Stanford library-----------")
             if self.lang.lower() == "basque":
                 print("-------------You are going to use Basque model-------------")
-                MODELS_DIR = 'J:\TextSimilarity\eu'
-                # MODELS_DIR = '/home/kepa/eu'
+                #MODELS_DIR = 'J:\TextSimilarity\eu'
+                MODELS_DIR = self.dir+'/eu'
                 #               config = {'processors': 'tokenize,pos,lemma,depparse',  # Comma-separated list of processors to use
                 #                           'lang': 'eu',  # Language code for the language to build the Pipeline in
                 #                           'tokenize_model_path': MODELS_DIR + '\eu_bdt_models\eu_bdt_tokenizer.pt',
@@ -1586,7 +1596,7 @@ class NLPCharger:
 
             elif self.lang.lower() == "english":
                 print("-------------You are going to use English model-------------")
-                MODELS_DIR = '/home/ibon/en'
+                MODELS_DIR = self.dir+'/en'
                 config = {'processors': 'tokenize,mwt,pos,lemma,depparse',  # Comma-separated list of processors to use
                           'lang': 'en',  # Language code for the language to build the Pipeline in
                           'tokenize_model_path': MODELS_DIR + '/en_ewt_models/en_ewt_tokenizer.pt',
@@ -1599,7 +1609,7 @@ class NLPCharger:
                 self.parser = stanfordnlp.Pipeline(**config)
             elif self.lang.lower() == "spanish":
                 print("-------------You are going to use Spanish model-------------")
-                MODELS_DIR = '/home/kepa/es'
+                MODELS_DIR = self.dir+'/es'
                 config = {'processors': 'tokenize,pos,lemma,depparse',  # Comma-separated list of processors to use
                           'lang': 'es',  # Language code for the language to build the Pipeline in
                           'tokenize_model_path': MODELS_DIR + '/es_ancora_models/es_ancora_tokenizer.pt',
@@ -1654,6 +1664,7 @@ class NLPCharger:
     def adapt_nlp_model(self):
         ma = ModelAdapter(self.parser, self.lib)
         return ma.model_analysis(self.textwithparagraphs)
+
 
 
 
@@ -1723,6 +1734,7 @@ class Main(object):
 
         language = "basque"
         model = "stanford"
+        directory="/home/kepa"
 
         # Carga StopWords
         stopw = Stopwords(language)
@@ -1735,7 +1747,7 @@ class Main(object):
         prondic.load()
 
         # Carga del modelo Stanford/NLPCube
-        cargador = NLPCharger(language, model)
+        cargador = NLPCharger(language, model,directory)
         cargador.download_model()
         cargador.load_model()
 
