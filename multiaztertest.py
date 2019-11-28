@@ -584,18 +584,19 @@ class Document:
     def calculate_all_numbers(self):
         i = self.indicators
         i['num_paragraphs'] = len(self._paragraph_list)
-        i['num_words'] = 0
-        i['num_sentences'] = 0
+        #i['num_words'] = 0
+        #i['num_sentences'] = 0
         num_np_list = []
         num_vp_list = []
         modifiers_per_np = []
         depth_list = []
-        subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
-        not_punctuation = lambda w: not (len(w.text) == 1 and (not w.text.isalpha()))
+        #subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
+        #not_punctuation = lambda w: not (len(w.text) == 1 and (not w.text.isalpha()))
         decendents_total = 0
         for p in self.paragraph_list:
             self.aux_lists['sentences_per_paragraph'].append(len(p.sentence_list))  # [1,2,1,...]
             for s in p.sentence_list:
+
                 if not s.text == "":
                     num_words_in_sentence_without_stopwords = 0
                     i['num_sentences'] += 1
@@ -1015,6 +1016,7 @@ class Word:
         else:
             return False
 
+
     def is_personal_pronoun(self):
         atributos =self.feats.split('|')
         if "PronType=Prs" in atributos:
@@ -1063,7 +1065,6 @@ class Word:
         Calculate syllables of a word using a less accurate algorithm.
         Parse through the sentence, using common syllabic identifiers to count
         syllables.
-
         ADAPTED FROM:
         [http://stackoverflow.com/questions/14541303/count-the-number-of-syllables-in-a-word]
         """
@@ -1200,9 +1201,34 @@ class Word:
 
         return f"<{self.__class__.__name__} {feature_str}>"
 
+    def is_noun(self):
+        if w.upos == 'NOUN':
+            return True
+        else:
+            return False
+
+
+    def is_adjective(self):
+        if w.upos == 'ADJ':
+            return True
+        else:
+            return False
+    def is_adverb(self):
+        if w.upos == 'ADV':
+            return True
+        else:
+            return False
     def is_irregular(self):
         return True if self.lemma in Irregularverbs.irregular_verbs else False
 
+    def has_more_than_three_syllables(self):
+        return True if self.allnum_syllables() > 3 else False
+
+
+import os
+import sys
+from pathlib import Path
+import csv
 
 class Irregularverbs:
 
@@ -1510,12 +1536,12 @@ class Stopwords:
             # Stopwords.stop_words.add("gero")
             print("n")
 
-
 class NLPCharger:
 
-    def __init__(self, language, library):
+    def __init__(self, language, library,directory):
         self.lang = language
         self.lib = library
+        self.dir= directory
         self.text = None
         self.textwithparagraphs = None
         self.parser = None
@@ -1529,19 +1555,17 @@ class NLPCharger:
             print("-----------You are going to use Stanford library-----------")
             if self.lang.lower() == "basque":
                 print("-------------You are going to use Basque model-------------")
-                # MODELS_DIR = '/home/ibon/eu'
-                # MODELS_DIR = '/home/kepa/eu'
-                MODELS_DIR = 'J:\TextSimilarity\eu'
+                MODELS_DIR = self.dir+'/eu'
                 # MODELS_DIR = '/home/kepa/eu'
                 stanfordnlp.download('eu', MODELS_DIR)  # Download the Basque models
             elif self.lang.lower() == "english":
                 print("-------------You are going to use English model-------------")
-                MODELS_DIR = '/home/ibon/en'
+                MODELS_DIR = self.dir+'/en'
                 print("-------------Downloading Stanford Basque model-------------")
                 stanfordnlp.download('en', MODELS_DIR)  # Download the English models
             elif self.lang.lower() == "spanish":
                 print("-------------You are going to use Spanish model-------------")
-                MODELS_DIR = '/home/kepa/es'
+                MODELS_DIR = self.dir+'/es'
                 stanfordnlp.download('es', MODELS_DIR)  # Download the Spanish models
             else:
                 print("........You cannot use this language...........")
@@ -1559,8 +1583,8 @@ class NLPCharger:
             print("-----------You are going to use Stanford library-----------")
             if self.lang.lower() == "basque":
                 print("-------------You are going to use Basque model-------------")
-                MODELS_DIR = 'J:\TextSimilarity\eu'
-                # MODELS_DIR = '/home/kepa/eu'
+                #MODELS_DIR = 'J:\TextSimilarity\eu'
+                MODELS_DIR = self.dir+'/eu'
                 #               config = {'processors': 'tokenize,pos,lemma,depparse',  # Comma-separated list of processors to use
                 #                           'lang': 'eu',  # Language code for the language to build the Pipeline in
                 #                           'tokenize_model_path': MODELS_DIR + '\eu_bdt_models\eu_bdt_tokenizer.pt',
@@ -1585,7 +1609,7 @@ class NLPCharger:
 
             elif self.lang.lower() == "english":
                 print("-------------You are going to use English model-------------")
-                MODELS_DIR = '/home/ibon/en'
+                MODELS_DIR = self.dir+'/en'
                 config = {'processors': 'tokenize,mwt,pos,lemma,depparse',  # Comma-separated list of processors to use
                           'lang': 'en',  # Language code for the language to build the Pipeline in
                           'tokenize_model_path': MODELS_DIR + '/en_ewt_models/en_ewt_tokenizer.pt',
@@ -1598,7 +1622,7 @@ class NLPCharger:
                 self.parser = stanfordnlp.Pipeline(**config)
             elif self.lang.lower() == "spanish":
                 print("-------------You are going to use Spanish model-------------")
-                MODELS_DIR = '/home/kepa/es'
+                MODELS_DIR = self.dir+'/es'
                 config = {'processors': 'tokenize,pos,lemma,depparse',  # Comma-separated list of processors to use
                           'lang': 'es',  # Language code for the language to build the Pipeline in
                           'tokenize_model_path': MODELS_DIR + '/es_ancora_models/es_ancora_tokenizer.pt',
@@ -1653,6 +1677,7 @@ class NLPCharger:
     def adapt_nlp_model(self):
         ma = ModelAdapter(self.parser, self.lib)
         return ma.model_analysis(self.textwithparagraphs)
+
 
 
 
@@ -1722,6 +1747,7 @@ class Main(object):
 
         language = "basque"
         model = "stanford"
+        directory="/home/kepa"
 
         # Carga StopWords
         stopw = Stopwords(language)
@@ -1734,7 +1760,7 @@ class Main(object):
         prondic.load()
 
         # Carga del modelo Stanford/NLPCube
-        cargador = NLPCharger(language, model)
+        cargador = NLPCharger(language, model,directory)
         cargador.download_model()
         cargador.load_model()
 
@@ -1760,6 +1786,4 @@ class Main(object):
 
 main = Main()
 main.start()
-
-# In[ ]:
 
