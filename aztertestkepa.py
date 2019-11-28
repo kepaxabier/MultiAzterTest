@@ -218,15 +218,13 @@ class Analyzer:
         self.aux_lists['syllabes_list'] = list
 
     def flesch(self):
-        flesch_formula = lambda word_count, sent_count,
-                                syllable_count: 206.835 - 1.015 * word_count / sent_count - 84.6 * syllable_count / word_count
+        flesch_formula = lambda word_count, sent_count, syllable_count: 206.835 - 1.015 * word_count / sent_count - 84.6 * syllable_count / word_count
         word_count, sent_count, syllable_count = self.text_statistics()
         flesch = flesch_formula(word_count, sent_count, syllable_count)
         if flesch >= 0: self.indicators['flesch'] = round(flesch, 4)
 
     def flesch_kincaid(self):
-        fk_formula = lambda word_count, sent_count,
-                            syllable_count: 0.39 * word_count / sent_count + 11.8 * syllable_count / word_count - 15.59
+        fk_formula = lambda word_count, sent_count, syllable_count: 0.39 * word_count / sent_count + 11.8 * syllable_count / word_count - 15.59
         word_count, sent_count, syllable_count = self.text_statistics()
         fk = fk_formula(word_count, sent_count, syllable_count)
         if fk >= 0: self.indicators['flesch_kincaid'] = round(fk, 4)
@@ -1276,7 +1274,7 @@ class Analyzer:
         i = self.indicators
         text = self.text
         self.calculate_num_words()
-        # self.calculate_sentences_per_paragraph(similarity)
+        self.calculate_sentences_per_paragraph(similarity)
         doc = self.standford(text)
         subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
         ambiguity_content_words_list = []
@@ -2088,7 +2086,7 @@ def start():
     path = Printer.create_directory(FileLoader.files[0])
     file_num = 0
     total = len(FileLoader.files)
-    FileLoader.files = ["kk.txt"]
+    FileLoader.files = ["Loterry-adv.txt"]
     for input in FileLoader.files:
         texto = Analyzer.process_text(input=input)
         # Analizar

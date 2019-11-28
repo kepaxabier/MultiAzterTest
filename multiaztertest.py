@@ -349,11 +349,11 @@ class Document:
                     sentence2 = []
                     for entry1 in x[0].word_list:
                         #values1 = entry1.split("\t")
-                        if entry1.upos == 'NOUN':
+                        if entry1.is_noun():
                             sentence1.append(entry1.text.lower())
                     for entry2 in x[1].word_list:
                         #values2 = entry2.split("\t")
-                        if entry2.upos == 'NOUN':
+                        if entry2.is_noun():
                             sentence2.append(entry2.text.lower())
                     # nombres en comun entre sentence1 y sentence2
                     in_common = list(set(sentence1).intersection(sentence2))
@@ -381,11 +381,11 @@ class Document:
                     sentence2 = []
                     for entry1 in x.word_list:
                         #values1 = entry1.split("\t")
-                        if entry1.upos == 'NOUN':
+                        if entry1.is_noun():
                             sentence1.append(entry1.text.lower())
                     for entry2 in y.word_list:
                         #values2 = entry2.split("\t")
-                        if entry2.upos == 'NOUN':
+                        if entry2.is_noun():
                             sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
                     if len(in_common) > 0:
@@ -409,10 +409,10 @@ class Document:
                     sentence1 = []
                     sentence2 = []
                     for entry1 in x[0].word_list:
-                        if entry1.is_personal_pronoun or entry1.upos == 'NOUN':
+                        if entry1.is_personal_pronoun or entry1.is_noun():
                             sentence1.append(entry1.text.lower())
                     for entry2 in x[1].word_list:
-                        if entry2.is_personal_pronoun or entry2.upos == 'NOUN':
+                        if entry2.is_personal_pronoun or entry2.is_noun():
                             sentence2.append(entry1.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
                     if len(in_common) > 0:
@@ -436,10 +436,10 @@ class Document:
                     sentence1 = []
                     sentence2 = []
                     for entry1 in x.word_list:
-                        if entry1.is_personal_pronoun or entry1.upos == 'NOUN':
+                        if entry1.is_personal_pronoun or entry1.is_noun():
                             sentence1.append(entry1.text.lower())
                     for entry2 in y.word_list:
-                        if entry2.is_personal_pronoun or entry2.upos == 'NOUN':
+                        if entry2.is_personal_pronoun or entry2.is_noun():
                             sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
                     if len(in_common) > 0:
@@ -466,7 +466,7 @@ class Document:
                         if entry1.is_lexic_word(x[0]):
                             sentence1.append(entry1.text.lower())
                     for entry2 in x[1].word_list:
-                        if entry2.upos == 'NOUN':
+                        if entry2.is_noun():
                             sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
                     if len(in_common) > 0:
@@ -495,7 +495,7 @@ class Document:
                         if entry1.is_lexic_word(x):
                             sentence1.append(entry1.text.lower())
                     for entry2 in y.word_list:
-                        if entry2.upos == 'NOUN':
+                        if entry2.is_noun():
                             sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
                     if len(in_common) > 0:
@@ -591,7 +591,7 @@ class Document:
         modifiers_per_np = []
         depth_list = []
         #subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
-        #not_punctuation = lambda w: not (len(w.text) == 1 and (not w.text.isalpha()))
+        not_punctuation = lambda w: not (len(w.text) == 1 and (not w.text.isalpha()))
         decendents_total = 0
         for p in self.paragraph_list:
             self.aux_lists['sentences_per_paragraph'].append(len(p.sentence_list))  # [1,2,1,...]
@@ -617,14 +617,10 @@ class Document:
                         # words without punc
                         if w in filterwords:
                             i['num_words'] += 1
-                            self.aux_lists['words_length_list'].append(len(w.text))
-                            self.aux_lists['lemmas_length_list'].append(len(w.lemma))
                             sum += 1
                         # words not in stopwords
                         if not w.is_stopword():
                             num_words_in_sentence_without_stopwords += 1
-                        if w.is_lexic_word(s):
-                            i['num_lexic_words'] += 1
                         if w.is_noun():
                             i['num_noun'] += 1
                             if w.text.lower() not in self.aux_lists['different_nouns']:
@@ -671,8 +667,6 @@ class Document:
                                     i['num_first_pers_sing_pron'] += 1
                             if w.is_third_personal_pronoun():
                                 i['num_third_pers_pron'] += 1
-                        if w.text.lower() not in self.aux_lists['different_forms']:
-                            self.aux_lists['different_forms'].append(w.text.lower())
                         if w.text.lower() not in self.words_freq:
                             self.words_freq[w.text.lower()] = 1
                         else:
@@ -682,8 +676,8 @@ class Document:
                             # Numero de sentencias subordinadas relativas
                             if w.is_subordinate_relative():
                                 i['num_rel_subord'] += 1
-                        if w.is_punctuation():
-                            i['num_words_with_punct'] += 1
+                        #if w.is_punctuation():
+                        i['num_words_with_punct'] += 1
                         if w.is_proposition():
                            i['prop'] += 1
                         if (not len(w.text) == 1 or w.text.isalpha()) and w.upos != "NUM":
@@ -702,8 +696,12 @@ class Document:
                                             self.get_abstraction_level(w.text, 'v'))
                                     self.aux_lists['ambiguity_content_words_list'].append(
                                         self.get_ambiguity_level(w.text, w.upos))
+                            if w.text.lower() not in self.aux_lists['different_forms']:
+                                self.aux_lists['different_forms'].append(w.text.lower())
                             if w.lemma not in self.aux_lists['different_lemmas']:
                                 self.aux_lists['different_lemmas'].append(w.text.lower())
+                            self.aux_lists['words_length_list'].append(len(w.text))                                    
+                            self.aux_lists['lemmas_length_list'].append(len(w.lemma))                              
                 i['num_total_prop'] = i['num_total_prop'] + i['prop']
                 self.aux_lists['prop_per_sentence'].append(i['prop'])
                 self.aux_lists['punct_per_sentence'].append(i['num_words_with_punct'])
@@ -883,7 +881,7 @@ class Sentence:
     def count_content_words_in(self):
         num_words = 0
         for entry in self.word_list:
-            if entry.is_verb(self) or entry.upos == 'NOUN' or entry.upos == 'ADJ' or entry.upos == 'ADV':
+            if entry.is_verb(self) or entry.is_noun() or entry.is_adjective() or entry.is_adverb():
                 num_words += 1
         return num_words
 
@@ -1109,21 +1107,22 @@ class Word:
             int(self.governor) - 1].xpos == 'VB'
 
     def is_past(self):
-        atributos = self.xpos.split('|')
-        if "Tense=Past" in atributos:
+        atributos = self.feats.split('|')
+        if 'Tense=Past' in atributos:
             return True
         else:
             return False
 
+
     def is_present(self):
-        atributos = self.xpos.split('|')
+        atributos = self.feats.split('|')
         if "Tense=Pres" in atributos:
             return True
         else:
             return False
 
     def is_indicative(self):
-        atributos = self.xpos.split('|')
+        atributos = self.feats.split('|')
         if "Mood=Ind" in atributos:
             return True
         else:
@@ -1195,19 +1194,19 @@ class Word:
         return f"<{self.__class__.__name__} {feature_str}>"
 
     def is_noun(self):
-        if w.upos == 'NOUN':
+        if self.upos == 'NOUN':
             return True
         else:
             return False
 
     def is_adjective(self):
-        if w.upos == 'ADJ':
+        if self.upos == 'ADJ':
             return True
         else:
             return False
 
     def is_adverb(self):
-        if w.upos == 'ADV':
+        if self.upos == 'ADV':
             return True
         else:
             return False
@@ -1732,9 +1731,9 @@ class Main(object):
         # Por último parsear los argumentos
         opts = p.parse_args()
 
-        language = "basque"
+        language = "english"
         model = "stanford"
-        directory="/home/kepa"
+        directory="/home/ibon"
 
         # Carga StopWords
         stopw = Stopwords(language)
@@ -1752,7 +1751,7 @@ class Main(object):
         cargador.load_model()
 
         files = opts.files
-        files = ["kk.txt", "kk.txt"]
+        files = ["Loterry-adv.txt", "Loterry-adv.txt"]
         for input in files:
             # texto directamente de text
             if language == "basque":
