@@ -65,25 +65,26 @@ class ModelAdapter:
             lines = text.split('@')
             for line in lines:
                 p = Paragraph()  # -> paragraph = []
-                sequences = self.model(line)
-                for seq in sequences:
-                    s = Sentence()
-                    sequence = self.sent2sequenceCube(seq)
-                    s.text = sequence
-                    for entry in seq:
-                        # Por cada palabra de cada sentencia, creamos un objeto Word que contendra los attrs
-                        w = Word()
-                        w.index = str(entry.index)
-                        w.text = entry.word
-                        w.lemma = entry.lemma
-                        w.upos = entry.upos
-                        w.xpos = entry.xpos
-                        w.feats = entry.attrs
-                        w.governor = int(entry.head)
-                        w.dependency_relation = str(entry.label)
-                        s.word_list.append(w)
-                    p.sentence_list.append(s)  # ->paragraph.append(s)
-                d.paragraph_list.append(p)  # ->data.append(paragraph)
+                if not line.strip() == '':
+                    sequences = self.model(line)
+                    for seq in sequences:
+                        s = Sentence()
+                        sequence = self.sent2sequenceCube(seq)
+                        s.text = sequence
+                        for entry in seq:
+                            # Por cada palabra de cada sentencia, creamos un objeto Word que contendra los attrs
+                            w = Word()
+                            w.index = str(entry.index)
+                            w.text = entry.word
+                            w.lemma = entry.lemma
+                            w.upos = entry.upos
+                            w.xpos = entry.xpos
+                            w.feats = entry.attrs
+                            w.governor = int(entry.head)
+                            w.dependency_relation = str(entry.label)
+                            s.word_list.append(w)
+                        p.sentence_list.append(s)  # ->paragraph.append(s)
+                    d.paragraph_list.append(p)  # ->data.append(paragraph)
         return d
 
     def sent2sequenceStanford(self, sent):
@@ -1736,7 +1737,7 @@ class Main(object):
         opts = p.parse_args()
 
         language = "english"
-        model = "stanford"
+        model = "cube"
         directory="J:\TextSimilarity"
 
         # Carga StopWords
