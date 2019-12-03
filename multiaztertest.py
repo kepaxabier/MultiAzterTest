@@ -13,7 +13,7 @@ from collections import defaultdict
 import re
 import nltk
 from nltk.corpus import stopwords
-from nltk.tokenize import sent_tokenize, word_tokenize
+#from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import wordnet as wn
 from nltk.corpus import cmudict
 #####Argumentos##################################
@@ -39,7 +39,7 @@ class ModelAdapter:
                     for sent in doc.sentences:
                         s = Sentence()
                         sequence = self.sent2sequenceStanford(sent)
-                        print(sequence)
+                        #print(sequence)
                         s.text = sequence
                         for word in sent.words:
                             # Por cada palabra de cada sentencia, creamos un objeto Word que contendra los attrs
@@ -53,10 +53,7 @@ class ModelAdapter:
                             w.governor = word.governor
                             w.dependency_relation = word.dependency_relation
                             s.word_list.append(w)
-                            print(str(
-                                w.index) + "\t" + w.text + "\t" + w.lemma + "\t" + w.upos + "\t" +
-                                  w.xpos + "\t" + w.feats + "\t" + str(w.governor) + "\t" + str(w.dependency_relation) +
-                                  "\t")
+                            #print(str(w.index) + "\t" + w.text + "\t" + w.lemma + "\t" + w.upos + "\t" + w.xpos + "\t" + w.feats + "\t" + str(w.governor) + "\t" + str(w.dependency_relation) +"\t")
                         p.sentence_list.append(s)  # ->paragraph.append(s)
                     d.paragraph_list.append(p)  # ->data.append(paragraph)
 
@@ -267,37 +264,37 @@ class Document:
         if not tree[root]:
             return 1
 
-    def mtld(self, filtered_words):
-        ttr_threshold = 0.72
-        ttr = 1.0
-        word_count = 0
-        fragments = 0.0
-        dif_words = []
+    #def mtld(self, filtered_words):
+    #    ttr_threshold = 0.72
+    #    ttr = 1.0
+    #    word_count = 0
+    #    fragments = 0.0
+    #    dif_words = []
 
-        for i, word in enumerate(filtered_words):
-            word = word.lower()
-            word_count += 1
-            if word not in dif_words:
-                dif_words.append(word)
-            ttr = self.calculate_simple_ttr(dif_words, word_count)
-            if ttr <= ttr_threshold:
-                fragments += 1
-                word_count = 0
-                dif_words.clear()
-                ttr = 1.0
-            elif i == len(filtered_words) - 1:
-                residual = (1.0 - ttr) / (1.0 - ttr_threshold)
-                fragments += residual
+    #    for i, word in enumerate(filtered_words):
+    #        word = word.lower()
+    #        word_count += 1
+    #        if word not in dif_words:
+    #            dif_words.append(word)
+    #        ttr = self.calculate_simple_ttr(dif_words, word_count)
+    #        if ttr <= ttr_threshold:
+    #            fragments += 1
+    #            word_count = 0
+    #            dif_words.clear()
+    #            ttr = 1.0
+    #        elif i == len(filtered_words) - 1:
+    #            residual = (1.0 - ttr) / (1.0 - ttr_threshold)
+    #            fragments += residual
 
-        if fragments != 0:
-            return len(filtered_words) / fragments
-        else:
-            return 0
+    #    if fragments != 0:
+    #        return len(filtered_words) / fragments
+    #    else:
+    #        return 0
 
-    def calculate_mtld(self):
-        not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
-        filtered_words = list(filter(not_punctuation, word_tokenize(self.text)))
-        self.indicators['mtld'] = round((self.mtld(filtered_words) + self.mtld(filtered_words[::-1])) / 2, 4)
+    #def calculate_mtld(self):
+    #    not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
+    #    filtered_words = list(filter(not_punctuation, word_tokenize(self.text)))
+    #    self.indicators['mtld'] = round((self.mtld(filtered_words) + self.mtld(filtered_words[::-1])) / 2, 4)
 
     def get_num_hapax_legomena(self):
         num_hapax_legonema = 0
@@ -592,8 +589,8 @@ class Document:
         modifiers_per_np = []
         depth_list = []
         #subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
-        not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
-        filterwords = filter(not_punctuation, word_tokenize(self.text))
+        #not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
+        #filterwords = filter(not_punctuation, word_tokenize(self.text))
         decendents_total = 0
         for p in self.paragraph_list:
             self.aux_lists['sentences_per_paragraph'].append(len(p.sentence_list))  # [1,2,1,...]
@@ -611,10 +608,19 @@ class Document:
                     i['prop'] = 0
                     sum_s = 0
                     numPunct = 0
-                    for w in filterwords:
-                        i['num_words'] += 1
-                        sum_s += 1
+
+                    #for w in filterwords:
+                        #print(w)
+                        #i['num_words'] += 1
+                        #sum_s += 1
+                        #self.aux_lists['syllabes_list'].append(w.allnum_syllables())
+
                     for w in s.word_list:
+                        if not w.is_punctuation():
+                            i['num_words'] += 1
+                            sum_s += 1
+                            self.aux_lists['syllabes_list'].append(w.allnum_syllables())
+
                         if w.governor == 0:
                             root = w.index
                         dependency_tree[w.governor].append(w.index)
@@ -677,7 +683,7 @@ class Document:
                             # Numero de sentencias subordinadas relativas
                             if w.is_subordinate_relative():
                                 i['num_rel_subord'] += 1
-                        #if w.is_punctuation():
+
                         i['num_words_with_punct'] += 1
                         if w.is_proposition():
                            i['prop'] += 1
@@ -721,7 +727,16 @@ class Document:
         print(i['num_words'])
         self.calculate_phrases(num_vp_list, num_np_list)
         self.calculate_mean_depth_per_sentence(depth_list)
-        self.calculate_mtld()
+        #self.calculate_mtld()
+        #self.get_syllable_list()
+
+    # List of syllables of each word. This will be used to calculate mean/std dev of syllables.
+    #def get_syllable_list(self):
+    #    filterwords = filter(self.not_punctuation, word_tokenize(self.text))
+    #    list = []
+    #    for word in filterwords:
+    #        list.append(self.allnum_syllables(word))
+    #    self.aux_lists['syllabes_list'] = list
 
     def calculate_all_means(self):
         i = self.indicators
@@ -738,7 +753,7 @@ class Document:
         i['sentences_length_no_stopwords_mean'] = round(
             float(np.mean(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_mean'] = round(float(np.mean(self.aux_lists['words_length_no_stopwords_list'])), 4)
-
+        i['num_syllables_words_mean'] = round(float(np.mean(self.aux_lists['syllabes_list'])), 4)
 
     def calculate_all_std_deviations(self):
         i = self.indicators
@@ -749,7 +764,7 @@ class Document:
         i['sentences_length_no_stopwords_std'] = round(
             float(np.std(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_std'] = round(float(np.std(self.aux_lists['words_length_no_stopwords_list'])), 4)
-
+        i['num_syllables_words_std'] = round(float(np.std(self.aux_lists['syllabes_list'])), 4)
     @staticmethod
     def get_incidence(indicador, num_words):
         return round(((1000 * indicador) / num_words), 4)
