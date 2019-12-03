@@ -682,6 +682,8 @@ class Document:
                         if w.is_proposition():
                            i['prop'] += 1
                         if (not len(w.text) == 1 or w.text.isalpha()) and w.upos != "NUM":
+                            if not w.is_stopword():
+                                self.aux_lists['words_length_no_stopwords_list'].append(len(w.text))
                             if (w.is_lexic_word(s)):
                                 i['num_lexic_words'] += 1
                                 if wn.synsets(w.text):
@@ -735,6 +737,8 @@ class Document:
         i['hypernymy_nouns_index'] = round(float(np.mean(self.aux_lists['noun_abstraction_list'])), 4)
         i['sentences_length_no_stopwords_mean'] = round(
             float(np.mean(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
+        i['words_length_no_stopwords_mean'] = round(float(np.mean(self.aux_lists['words_length_no_stopwords_list'])), 4)
+
 
     def calculate_all_std_deviations(self):
         i = self.indicators
@@ -744,6 +748,7 @@ class Document:
         i['lemmas_length_std'] = round(float(np.std(self.aux_lists['lemmas_length_list'])), 4)
         i['sentences_length_no_stopwords_std'] = round(
             float(np.std(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
+        i['words_length_no_stopwords_std'] = round(float(np.std(self.aux_lists['words_length_no_stopwords_list'])), 4)
 
     @staticmethod
     def get_incidence(indicador, num_words):
@@ -1737,8 +1742,8 @@ class Main(object):
         opts = p.parse_args()
 
         language = "english"
-        model = "cube"
-        directory="J:\TextSimilarity"
+        model = "stanford"
+        directory="/home/kepa"
 
         # Carga StopWords
         stopw = Stopwords(language)
@@ -1756,7 +1761,7 @@ class Main(object):
         cargador.load_model()
 
         files = opts.files
-        files = ["Loterry-adv.txt", "Loterry-adv.txt"]
+        files = ["Loterry-adv.txt"]
         for input in files:
             # texto directamente de text
             if language == "basque":
