@@ -65,25 +65,26 @@ class ModelAdapter:
             lines = text.split('@')
             for line in lines:
                 p = Paragraph()  # -> paragraph = []
-                sequences = self.model(line)
-                for seq in sequences:
-                    s = Sentence()
-                    sequence = self.sent2sequenceCube(seq)
-                    s.text = sequence
-                    for entry in seq:
-                        # Por cada palabra de cada sentencia, creamos un objeto Word que contendra los attrs
-                        w = Word()
-                        w.index = str(entry.index)
-                        w.text = entry.word
-                        w.lemma = entry.lemma
-                        w.upos = entry.upos
-                        w.xpos = entry.xpos
-                        w.feats = entry.attrs
-                        w.governor = str(entry.head)
-                        w.dependency_relation = str(entry.label)
-                        s.word_list.append(w)
-                    p.sentence_list.append(s)  # ->paragraph.append(s)
-                d.paragraph_list.append(p)  # ->data.append(paragraph)
+                if not line.strip() == '':
+                    sequences = self.model(line)
+                    for seq in sequences:
+                        s = Sentence()
+                        sequence = self.sent2sequenceCube(seq)
+                        s.text = sequence
+                        for entry in seq:
+                            # Por cada palabra de cada sentencia, creamos un objeto Word que contendra los attrs
+                            w = Word()
+                            w.index = str(entry.index)
+                            w.text = entry.word
+                            w.lemma = entry.lemma
+                            w.upos = entry.upos
+                            w.xpos = entry.xpos
+                            w.feats = entry.attrs
+                            w.governor = int(entry.head)
+                            w.dependency_relation = str(entry.label)
+                            s.word_list.append(w)
+                        p.sentence_list.append(s)  # ->paragraph.append(s)
+                    d.paragraph_list.append(p)  # ->data.append(paragraph)
         return d
 
     def sent2sequenceStanford(self, sent):
@@ -591,7 +592,8 @@ class Document:
         modifiers_per_np = []
         depth_list = []
         #subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
-        not_punctuation = lambda w: not (len(w.text) == 1 and (not w.text.isalpha()))
+        not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
+        filterwords = filter(not_punctuation, word_tokenize(self.text))
         decendents_total = 0
         for p in self.paragraph_list:
             self.aux_lists['sentences_per_paragraph'].append(len(p.sentence_list))  # [1,2,1,...]
@@ -599,8 +601,6 @@ class Document:
                 if not s.text == "":
                     num_words_in_sentence_without_stopwords = 0
                     i['num_sentences'] += 1
-                    filterwords = filter(not_punctuation, s.word_list)
-                    sum = 0
                     dependency_tree = defaultdict(list)
                     vp_indexes = s.count_np_in_sentence()
                     num_np_list.append(len(vp_indexes))
@@ -609,15 +609,16 @@ class Document:
                     modifiers_per_np += s.count_modifiers(vp_indexes)
                     self.aux_lists['left_embeddedness'].append(s.calculate_left_embeddedness())
                     i['prop'] = 0
+                    sum_s = 0
                     numPunct = 0
+                    for w in filterwords:
+                        i['num_words'] += 1
+                        sum_s += 1
                     for w in s.word_list:
                         if w.governor == 0:
                             root = w.index
                         dependency_tree[w.governor].append(w.index)
                         # words without punc
-                        if w in filterwords:
-                            i['num_words'] += 1
-                            sum += 1
                         # words not in stopwords
                         if not w.is_stopword():
                             num_words_in_sentence_without_stopwords += 1
@@ -681,6 +682,8 @@ class Document:
                         if w.is_proposition():
                            i['prop'] += 1
                         if (not len(w.text) == 1 or w.text.isalpha()) and w.upos != "NUM":
+                            if not w.is_stopword():
+                                self.aux_lists['words_length_no_stopwords_list'].append(len(w.text))
                             if (w.is_lexic_word(s)):
                                 i['num_lexic_words'] += 1
                                 if wn.synsets(w.text):
@@ -700,21 +703,22 @@ class Document:
                                 self.aux_lists['different_forms'].append(w.text.lower())
                             if w.lemma not in self.aux_lists['different_lemmas']:
                                 self.aux_lists['different_lemmas'].append(w.text.lower())
-                            self.aux_lists['words_length_list'].append(len(w.text))                                    
-                            self.aux_lists['lemmas_length_list'].append(len(w.lemma))                              
+                            self.aux_lists['words_length_list'].append(len(w.text))
+                            self.aux_lists['lemmas_length_list'].append(len(w.lemma))
                 i['num_total_prop'] = i['num_total_prop'] + i['prop']
                 self.aux_lists['prop_per_sentence'].append(i['prop'])
                 self.aux_lists['punct_per_sentence'].append(i['num_words_with_punct'])
-                self.aux_lists['sentences_length_mean'].append(sum)
+                self.aux_lists['sentences_length_mean'].append(sum_s)
                 self.aux_lists['sentences_length_no_stopwords_list'].append(num_words_in_sentence_without_stopwords)
                 depth_list.append(self.tree_depth(dependency_tree, root))
-        # i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
+        i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
         i['num_different_forms'] = len(self.aux_lists['different_forms'])
         self.indicators['left_embeddedness'] = round(float(np.mean(self.aux_lists['left_embeddedness'])), 4)
         self.calculate_honore()
         self.calculate_maas()
-        # i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
-        # i['num_modifiers_noun_phrase'] = round(float(np.mean(modifiers_per_np)), 4)
+        i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
+        i['num_modifiers_noun_phrase'] = round(float(np.mean(modifiers_per_np)), 4)
+        print(i['num_words'])
         self.calculate_phrases(num_vp_list, num_np_list)
         self.calculate_mean_depth_per_sentence(depth_list)
         self.calculate_mtld()
@@ -733,6 +737,8 @@ class Document:
         i['hypernymy_nouns_index'] = round(float(np.mean(self.aux_lists['noun_abstraction_list'])), 4)
         i['sentences_length_no_stopwords_mean'] = round(
             float(np.mean(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
+        i['words_length_no_stopwords_mean'] = round(float(np.mean(self.aux_lists['words_length_no_stopwords_list'])), 4)
+
 
     def calculate_all_std_deviations(self):
         i = self.indicators
@@ -742,6 +748,7 @@ class Document:
         i['lemmas_length_std'] = round(float(np.std(self.aux_lists['lemmas_length_list'])), 4)
         i['sentences_length_no_stopwords_std'] = round(
             float(np.std(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
+        i['words_length_no_stopwords_std'] = round(float(np.std(self.aux_lists['words_length_no_stopwords_list'])), 4)
 
     @staticmethod
     def get_incidence(indicador, num_words):
@@ -1633,12 +1640,15 @@ class NLPCharger:
                 # Ejemplo:load("es",tokenization=False, parsing=False)
                 ## select the desired language (it will auto-download the model on first run)
                 cube.load("eu", "latest")
+                self.parser = cube
             elif self.lang.lower() == "english":
                 cube = Cube(verbose=True)
                 cube.load("en", "latest")
+                self.parser = cube
             elif self.lang.lower() == "spanish":
                 cube = Cube(verbose=True)
                 cube.load("es", "latest")
+                self.parser = cube
             else:
                 print("........You cannot use this language...........")
         else:
@@ -1751,7 +1761,7 @@ class Main(object):
         cargador.load_model()
 
         files = opts.files
-        files = ["Loterry-adv.txt", "Loterry-adv.txt"]
+        files = ["Loterry-adv.txt"]
         for input in files:
             # texto directamente de text
             if language == "basque":

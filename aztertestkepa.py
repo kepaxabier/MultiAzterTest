@@ -162,7 +162,6 @@ class Analyzer:
         Calculate syllables of a word using a less accurate algorithm.
         Parse through the sentence, using common syllabic identifiers to count
         syllables.
-
         ADAPTED FROM:
         [http://stackoverflow.com/questions/14541303/count-the-number-of-syllables-in-a-word]
         """
