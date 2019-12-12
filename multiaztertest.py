@@ -618,14 +618,14 @@ class Document:
         self.flesch_kincaid()
 
 
-    def calculate_connectives_for(self, text, connective):
+    def calculate_connectives_for(self, sentence, connectives):
         i = self.indicators
-        list = FileLoader.connectives.get(connective)
         list_a = []
         list_b = []
         num_a = 0
         num_b = 0
-        for x in list:
+        text = sentence.text
+        for x in connectives:
             if "*" in x:
                 list_a.append(x)
             else:
@@ -637,40 +637,34 @@ class Document:
         for b in list_b:
             matches_b = re.findall(r'\b%s\b' % b, text)
             num_b += len(matches_b)
-        i['causal_connectives'] += self.calculate_connectives_for(s, 'causal')
-        i['logical_connectives'] += self.calculate_connectives_for(s, 'logical')
-        i['adversative_connectives'] += self.calculate_connectives_for(s, 'adversative')
-        i['temporal_connectives'] += self.calculate_connectives_for(s, 'temporal')
-        i['conditional_connectives'] += self.calculate_connectives_for(s, 'conditional')
         return num_a + num_b
 
     def calculate_connectives(self):
-        aux = self.aux_lists
+        i = self.indicators
         for p in self.paragraph_list:
             for s in p.sentence_list:
                 if Connectives.lang == 'english':
-                    aux['causal_connectives'] += self.calculate_connectives_for(s, 'causal')
-                    aux['logical_connectives'] += self.calculate_connectives_for(s, 'logical')
-                    aux['adversative_connectives'] += self.calculate_connectives_for(s, 'adversative')
-                    aux['temporal_connectives'] += self.calculate_connectives_for(s, 'temporal')
-                    aux['conditional_connectives'] += self.calculate_connectives_for(s, 'conditional')
+                    i['causal_connectives'] += self.calculate_connectives_for(s, Connectives.causal)
+                    i['logical_connectives'] += self.calculate_connectives_for(s, Connectives.logical)
+                    i['adversative_connectives'] += self.calculate_connectives_for(s, Connectives.adversative)
+                    i['temporal_connectives'] += self.calculate_connectives_for(s, Connectives.temporal)
+                    i['conditional_connectives'] += self.calculate_connectives_for(s, Connectives.conditional)
                 if Connectives.lang == 'spanish':
-                    aux['causal_connectives'] += self.calculate_connectives_for(s, 'causal')
-                    aux['temporal_connectives'] += self.calculate_connectives_for(s, 'temporal')
-                    aux['conditional_connectives'] += self.calculate_connectives_for(s, 'conditional')
-
-                    aux['adicion_connectives'] += self.calculate_connectives_for(s, 'adicion')
-                    aux['consecuencia_connectives'] += self.calculate_connectives_for(s, 'consecuencia')
-                    aux['finalidad_connectives'] += self.calculate_connectives_for(s, 'finalidad')
-                    aux['ilustracion_connectives'] += self.calculate_connectives_for(s, 'ilustracion')
-                    aux['oposicion_connectives'] += self.calculate_connectives_for(s, 'oposicion')
-                    aux['orden_connectives'] += self.calculate_connectives_for(s, 'orden')
-                    aux['referencia_connectives'] += self.calculate_connectives_for(s, 'referencia')
-                    aux['resumen_connectives'] += self.calculate_connectives_for(s, 'resumen')
+                    i['causal_connectives'] += self.calculate_connectives_for(s, Connectives.causal)
+                    i['temporal_connectives'] += self.calculate_connectives_for(s, Connectives.temporal)
+                    i['conditional_connectives'] += self.calculate_connectives_for(s, Connectives.conditional)
+                    i['adicion_connectives'] += self.calculate_connectives_for(s, Connectives.adicion)
+                    i['consecuencia_connectives'] += self.calculate_connectives_for(s, Connectives.consecuencia)
+                    i['finalidad_connectives'] += self.calculate_connectives_for(s, Connectives.finalidad)
+                    i['ilustracion_connectives'] += self.calculate_connectives_for(s, Connectives.ilustracion)
+                    i['oposicion_connectives'] += self.calculate_connectives_for(s, Connectives.oposicion)
+                    i['orden_connectives'] += self.calculate_connectives_for(s, Connectives.orden)
+                    i['referencia_connectives'] += self.calculate_connectives_for(s, Connectives.referencia)
+                    i['resumen_connectives'] += self.calculate_connectives_for(s, Connectives.resumen)
         if Connectives.lang == 'spanish':
-            aux['all_connectives'] = aux['causal_connectives'] + aux['temporal_connectives'] + aux['conditional_connectives'] + aux['adicion_connectives'] + aux['consecuencia_connectives'] + aux['finalidad_connectives'] + aux['ilustracion_connectives'] + aux['oposicion_connectives'] + aux['orden_connectives'] + aux['referencia_connectives'] + aux['resumen_connectives']
+            i['all_connectives'] = i['causal_connectives'] + i['temporal_connectives'] + i['conditional_connectives'] + i['adicion_connectives'] + i['consecuencia_connectives'] + i['finalidad_connectives'] + i['ilustracion_connectives'] + i['oposicion_connectives'] + i['orden_connectives'] + i['referencia_connectives'] + i['resumen_connectives']
         if Connectives.lang == 'english':
-            aux['all_connectives'] = aux['causal_connectives'] + aux['temporal_connectives'] + aux['conditional_connectives'] + aux['logical_connectives'] + aux['adversative_connectives']
+            i['all_connectives'] = i['causal_connectives'] + i['temporal_connectives'] + i['conditional_connectives'] + i['logical_connectives'] + i['adversative_connectives']
 
 
     def calculate_all_numbers(self):
@@ -852,7 +846,6 @@ class Document:
 
     def calculate_all_incidence(self):
         i = self.indicators
-        aux = self.aux_lists
         n = i['num_words']
         i['num_sentences_incidence'] = self.get_incidence(i['num_sentences'], n)
         i['num_paragraphs_incidence'] = self.get_incidence(i['num_paragraphs'], n)
@@ -875,12 +868,12 @@ class Document:
         i['num_adj_incidence'] = self.get_incidence(i['num_adj'], n)
         i['num_adv_incidence'] = self.get_incidence(i['num_adv'], n)
         i['num_lexic_words_incidence'] = self.get_incidence(i['num_lexic_words'], n)
-        i['all_connectives_incidence'] = self.get_incidence(aux['all_connectives'], n)
-        i['causal_connectives_incidence'] = self.get_incidence(aux['causal_connectives'], n)
-        i['logical_connectives_incidence'] = self.get_incidence(aux['logical_connectives'], n)
-        i['adversative_connectives_incidence'] = self.get_incidence(aux['adversative_connectives'], n)
-        i['temporal_connectives_incidence'] = self.get_incidence(aux['temporal_connectives'], n)
-        i['conditional_connectives_incidence'] = self.get_incidence(aux['conditional_connectives'], n)
+        i['all_connectives_incidence'] = self.get_incidence(i['all_connectives'], n)
+        i['causal_connectives_incidence'] = self.get_incidence(i['causal_connectives'], n)
+        i['logical_connectives_incidence'] = self.get_incidence(i['logical_connectives'], n)
+        i['adversative_connectives_incidence'] = self.get_incidence(i['adversative_connectives'], n)
+        i['temporal_connectives_incidence'] = self.get_incidence(i['temporal_connectives'], n)
+        i['conditional_connectives_incidence'] = self.get_incidence(i['conditional_connectives'], n)
 
     def calculate_density(self):
         i = self.indicators
