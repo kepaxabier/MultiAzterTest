@@ -580,7 +580,42 @@ class Document:
         self.calculate_content_overlap_adjacent()
         self.calculate_content_overlap_all()
 
+    def get_syllable_list(self):
+        filterwords = filter(self.not_punctuation, word_tokenize(self.text))
+        list = []
+        for word in filterwords:
+            list.append(self.allnum_syllables(word))
+        self.aux_lists['syllabes_list'] = list
 
+    def flesch(self):
+        sentences = float(self.indicators['num_sentences'])
+        syllables = float(len(self.aux_lists['syllabes_list']))
+        words = float(self.indicators['num_words'])
+        flesch = 206.835 - 1.015 * (words/sentences) - 84.6 * (syllables/words)
+        if flesch >= 0: self.indicators['flesch'] = round(flesch, 4)
+
+    def flesch_kincaid(self):
+        sentences = float(self.indicators['num_sentences'])
+        syllables = float(len(self.aux_lists['syllabes_list']))
+        words = float(self.indicators['num_words'])
+        fk = 0.39 * words / sentences + 11.8 * syllables / words - 15.59
+        if fk >= 0: self.indicators['flesch_kincaid'] = round(fk, 4)
+
+    def calculate_dale_chall(self):
+        sentences = self.indicators['num_sentences']
+        complex_words = self.indicators['num_complex_words']
+        words = self.indicators['num_words']
+        percentage = (complex_words/words) * 100
+        if percentage >= 5.0:
+            self.indicators['dale_chall'] = round(0.1579 * percentage + 0.0496 * (words / sentences) + 3.6365, 4)
+        else:
+            self.indicators['dale_chall'] = round(0.1579 * percentage + 0.0496 * (words / sentences), 4)
+
+    def calculate_readability(self):
+        #self.get_syllable_list()
+        self.calculate_dale_chall()
+        self.flesch()
+        self.flesch_kincaid()
 
     def calculate_all_numbers(self):
         i = self.indicators
@@ -591,6 +626,7 @@ class Document:
         num_vp_list = []
         modifiers_per_np = []
         depth_list = []
+        auxWord = Word()
         #subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
         not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
         filterwords = filter(not_punctuation, word_tokenize(self.text))
@@ -614,6 +650,8 @@ class Document:
                     for w in filterwords:
                         i['num_words'] += 1
                         sum_s += 1
+                        auxWord.text = w
+                        self.aux_lists['syllabes_list'].append(auxWord.allnum_syllables())
                     for w in s.word_list:
                         if w.governor == 0:
                             root = w.index
@@ -718,10 +756,10 @@ class Document:
         self.calculate_maas()
         i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
         i['num_modifiers_noun_phrase'] = round(float(np.mean(modifiers_per_np)), 4)
-        print(i['num_words'])
         self.calculate_phrases(num_vp_list, num_np_list)
         self.calculate_mean_depth_per_sentence(depth_list)
         self.calculate_mtld()
+        self.calculate_readability()
 
     def calculate_all_means(self):
         i = self.indicators
@@ -738,6 +776,7 @@ class Document:
         i['sentences_length_no_stopwords_mean'] = round(
             float(np.mean(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_mean'] = round(float(np.mean(self.aux_lists['words_length_no_stopwords_list'])), 4)
+        i['num_past_irregular_mean'] = round(((i['num_past_irregular']) / i['num_past']), 4) if i['num_past'] != 0 else 0
 
 
     def calculate_all_std_deviations(self):
@@ -760,6 +799,7 @@ class Document:
         i['num_sentences_incidence'] = self.get_incidence(i['num_sentences'], n)
         i['num_paragraphs_incidence'] = self.get_incidence(i['num_paragraphs'], n)
         i['num_impera_incidence'] = self.get_incidence(i['num_impera'], n)
+        i['num_past_irregular_incidence'] = self.get_incidence(i['num_past_irregular'], n)
         i['num_personal_pronouns_incidence'] = self.get_incidence(i['num_personal_pronouns'], n)
         i['num_first_pers_pron_incidence'] = self.get_incidence(i['num_first_pers_pron'], n)
         i['num_first_pers_sing_pron_incidence'] = self.get_incidence(i['num_first_pers_sing_pron'], n)
@@ -1219,23 +1259,35 @@ class Word:
             return False
 
     def is_irregular(self):
+        print(Irregularverbs.irregular_verbs)
         return True if self.lemma in Irregularverbs.irregular_verbs else False
 
     def has_more_than_three_syllables(self):
         return True if self.allnum_syllables() > 3 else False
 
-class Irregularverbs:
+class Irregularverbs():
 
     irregular_verbs = []
+    def __init__(self, language):
+        self.lang = language
 
     def load(self):
-        f = open('data/en/IrregularVerbs.txt', 'r')
-        lineas = f.readlines()
-        for linea in lineas:
-            if not linea.startswith("//"):
-                #carga el verbo en presente, dejando pasado y preterito
-                Irregularverbs.irregular_verbs.append(linea.split()[0])
-        f.close()
+        if self.lang.lower() == "spanish":
+            f = open('data/es/irregularverbs.txt', 'r')
+            lineas = f.readlines()
+            for linea in lineas:
+                if not linea.startswith("//"):
+                    # carga el verbo en presente, dejando pasado y preterito
+                    Irregularverbs.irregular_verbs.append(linea.rstrip('\n'))
+            f.close()
+        if self.lang.lower() == "english":
+            f = open('data/en/IrregularVerbs.txt', 'r')
+            lineas = f.readlines()
+            for linea in lineas:
+                if not linea.startswith("//"):
+                    #carga el verbo en presente, dejando pasado y preterito
+                    Irregularverbs.irregular_verbs.append(linea.split()[0])
+            f.close()
 
 
 class Printer:
@@ -1741,7 +1793,7 @@ class Main(object):
         # Por último parsear los argumentos
         opts = p.parse_args()
 
-        language = "english"
+        language = "spanish"
         model = "stanford"
         directory="/home/ibon"
 
@@ -1750,6 +1802,10 @@ class Main(object):
         stopw.download()
         stopw.load()
         # stopw.print()
+
+        irregular = Irregularverbs(language)
+        irregular.load()
+        print(Irregularverbs.irregular_verbs)
 
         # Load Pronouncing Dictionary
         prondic = Pronouncing(language)
@@ -1761,7 +1817,7 @@ class Main(object):
         cargador.load_model()
 
         files = opts.files
-        files = ["Loterry-adv.txt"]
+        files = ["vlad.txt"]
         for input in files:
             # texto directamente de text
             if language == "basque":
@@ -1784,3 +1840,4 @@ main = Main()
 main.start()
 
 # In[ ]:
+#To do Connectives, syllables, vocabulary levels, rare words
