@@ -1350,58 +1350,41 @@ class Connectives():
     def load(self):
         if Connectives.lang.lower() == "spanish":
             f = open('data/es/conectores.txt', 'r')
-            lineas = f.readlines()
-            aux = self.temporal
-            for linea in lineas:
-                if linea.startswith("//Adición"):
-                    aux = self.adicion
-                elif linea.startswith("//Causa"):
-                    aux = self.causal
-                elif linea.startswith("//Condición"):
-                    aux = self.conditional
-                elif linea.startswith("//Consecuencia"):
-                    aux = self.consecuencia
-                elif linea.startswith("//Finalidad"):
-                    aux = self.finalidad
-                elif linea.startswith("//Ilustración"):
-                    aux = self.ilustracion
-                elif linea.startswith("//Oposición"):
-                    aux = self.oposicion
-                elif linea.startswith("//Orden"):
-                    aux = self.orden
-                elif linea.startswith("//Referencia"):
-                    aux = self.referencia
-                elif linea.startswith("//Resumen"):
-                    aux = self.resumen
-                elif linea.startswith("//Temporalidad"):
-                    aux = self.temporal
-                else:
-                    aux.append(linea.rstrip('\n'))
-                    Connectives.connectives.append(linea.rstrip('\n'))
-            f.close()
         if Connectives.lang.lower() == "english":
             f = open('data/en/connectives.txt', 'r')
-            lineas = f.readlines()
-            aux = self.temporal
-            for linea in lineas:
-                if linea.startswith("//causal"):
-                    aux = self.causal
-                elif linea.startswith("//logical"):
-                    aux = self.logical
-                elif linea.startswith("//adversative"):
-                    aux = self.adversative
-                elif linea.startswith("//temporal"):
-                    aux = self.temporal
-                elif linea.startswith("//conditional"):
-                    aux = self.conditional
-                else:
-                    aux.append(linea.rstrip('\n'))
-                    Connectives.connectives.append(linea.rstrip('\n'))
-            f.close()
-
-        print(self.connectives)
-        print(self.causal)
-        print(self.conditional)
+        lineas = f.readlines()
+        aux = self.temporal
+        for linea in lineas:
+            if linea.startswith("//adición"):
+                aux = self.adicion
+            elif linea.startswith("//causal"):
+                aux = self.causal
+            elif linea.startswith("//conditional"):
+                aux = self.conditional
+            elif linea.startswith("//consecuencia"):
+                aux = self.consecuencia
+            elif linea.startswith("//finalidad"):
+                aux = self.finalidad
+            elif linea.startswith("//ilustración"):
+                aux = self.ilustracion
+            elif linea.startswith("//oposición"):
+                aux = self.oposicion
+            elif linea.startswith("//orden"):
+                aux = self.orden
+            elif linea.startswith("//referencia"):
+                aux = self.referencia
+            elif linea.startswith("//resumen"):
+                aux = self.resumen
+            elif linea.startswith("//temporal"):
+                aux = self.temporal
+            elif linea.startswith("//logical"):
+                aux = self.logical
+            elif linea.startswith("//adversative"):
+                aux = self.adversative
+            else:
+                aux.append(linea.rstrip('\n'))
+                Connectives.connectives.append(linea.rstrip('\n'))
+        f.close()
 
 
 class Irregularverbs():
