@@ -617,23 +617,24 @@ class Document:
                         dependency_tree[w.governor].append(w.index)
                         #word frequency
                         if (not len(w.text) == 1 or w.text.isalpha()) and not w.is_num():
-                            wordfrequency = zipf_frequency(w.text, 'en')    #Poner en euskera -- 32
-                            wordfreq_list.append(wordfrequency)
-                            if w.is_lexic_word(s):
-                                if wordfrequency <= 4:
-                                    i['num_rare_words_4'] += 1
-                                    if w.is_noun():
-                                        i['num_rare_nouns_4'] += 1
-                                    elif w.is_adjective():
-                                        i['num_rare_adj_4'] += 1
-                                    elif w.is_adverb():
-                                        i['num_rare_advb_4'] += 1
-                                    elif w.is_verb(s):
-                                        i['num_rare_verbs_4'] += 1
-                                if w.text.lower() not in self.aux_lists['different_lexic_words']:
-                                    self.aux_lists['different_lexic_words'].append(w.text.lower())
-                                    if wordfrequency <= 4:
-                                        i['num_dif_rare_words_4'] += 1
+                            if w.text in Maiztasuna.freq_list:
+                                wordfrequency = Maiztasuna.freq_list[w.text]
+                                wordfreq_list.append(int(wordfrequency))
+                                if w.is_lexic_word(s):
+                                    if int(wordfrequency) <= 34:
+                                        i['num_rare_words_34'] += 1
+                                        if w.is_noun():
+                                            i['num_rare_nouns_34'] += 1
+                                        elif w.is_adjective():
+                                            i['num_rare_adj_34'] += 1
+                                        elif w.is_adverb():
+                                            i['num_rare_advb_34'] += 1
+                                        elif w.is_verb(s):
+                                            i['num_rare_verbs_34'] += 1
+                                    if w.text.lower() not in self.aux_lists['different_lexic_words']:
+                                        self.aux_lists['different_lexic_words'].append(w.text.lower())
+                                        if int(wordfrequency) <= 34:
+                                            i['num_dif_rare_words_34'] += 1
                         # words not in stopwords
                         if not w.is_stopword():
                             num_words_in_sentence_without_stopwords += 1
@@ -766,8 +767,8 @@ class Document:
         i['sentences_length_no_stopwords_mean'] = round(
             float(np.mean(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_mean'] = round(float(np.mean(self.aux_lists['words_length_no_stopwords_list'])), 4)
-        i['mean_rare_4'] = round(((100 * i['num_rare_words_4']) / i['num_lexic_words']), 4)
-        i['mean_distinct_rare_4'] = round((100 * i['num_dif_rare_words_4']) / len(self.aux_lists['different_lexic_words']), 4)
+        i['mean_rare_34'] = round(((100 * i['num_rare_words_34']) / i['num_lexic_words']), 4)
+        i['mean_distinct_rare_34'] = round((100 * i['num_dif_rare_words_34']) / len(self.aux_lists['different_lexic_words']), 4)
 
     def calculate_all_std_deviations(self):
         i = self.indicators
@@ -806,12 +807,12 @@ class Document:
         i['num_adj_incidence'] = self.get_incidence(i['num_adj'], n)
         i['num_adv_incidence'] = self.get_incidence(i['num_adv'], n)
         i['num_lexic_words_incidence'] = self.get_incidence(i['num_lexic_words'], n)
-        i['num_rare_nouns_4_incidence'] = self.get_incidence(i['num_rare_nouns_4'], n)
-        i['num_rare_adj_4_incidence'] = self.get_incidence(i['num_rare_adj_4'], n)
-        i['num_rare_verbs_4_incidence'] = self.get_incidence(i['num_rare_verbs_4'], n)
-        i['num_rare_advb_4_incidence'] = self.get_incidence(i['num_rare_advb_4'], n)
-        i['num_rare_words_4_incidence'] = self.get_incidence(i['num_rare_words_4'], n)
-        i['num_dif_rare_words_4_incidence'] = self.get_incidence(i['num_dif_rare_words_4'], n)
+        i['num_rare_nouns_34_incidence'] = self.get_incidence(i['num_rare_nouns_34'], n)
+        i['num_rare_adj_34_incidence'] = self.get_incidence(i['num_rare_adj_34'], n)
+        i['num_rare_verbs_34_incidence'] = self.get_incidence(i['num_rare_verbs_34'], n)
+        i['num_rare_advb_34_incidence'] = self.get_incidence(i['num_rare_advb_34'], n)
+        i['num_rare_words_34_incidence'] = self.get_incidence(i['num_rare_words_34'], n)
+        i['num_dif_rare_words_34_incidence'] = self.get_incidence(i['num_dif_rare_words_34'], n)
 
     def calculate_density(self):
         i = self.indicators
@@ -1415,28 +1416,28 @@ class Printer:
             "Incidence score of pronouns in third person (per 1000 words): " + str(i['num_third_pers_pron_incidence']))
 
         print('Minimum word frequency per sentence (mean): ' + str(i['min_wf_per_sentence']))
-        print('Number of rare nouns (wordfrecuency<=4): ' + str(i['num_rare_nouns_4']))
-        print('Number of rare nouns (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-            i['num_rare_nouns_4_incidence']))
-        print('Number of rare adjectives (wordfrecuency<=4): ' + str(i['num_rare_adj_4']))
-        print('Number of rare adjectives (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-            i['num_rare_adj_4_incidence']))
-        print('Number of rare verbs (wordfrecuency<=4): ' + str(i['num_rare_verbs_4']))
-        print('Number of rare verbs (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-            i['num_rare_verbs_4_incidence']))
-        print('Number of rare adverbs (wordfrecuency<=4): ' + str(i['num_rare_advb_4']))
-        print('Number of rare adverbs (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-            i['num_rare_advb_4_incidence']))
-        print('Number of rare content words (wordfrecuency<=4): ' + str(i['num_rare_words_4']))
-        print('Number of rare content words (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-            i['num_rare_words_4_incidence']))
-        print('Number of distinct rare content words (wordfrecuency<=4): ' + str(i['num_dif_rare_words_4']))
-        print('Number of distinct rare content words (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-            i['num_dif_rare_words_4_incidence']))
+        print('Number of rare nouns (wordfrecuency<=34): ' + str(i['num_rare_nouns_34']))
+        print('Number of rare nouns (wordfrecuency<=34) (incidence per 1000 words): ' + str(
+            i['num_rare_nouns_34_incidence']))
+        print('Number of rare adjectives (wordfrecuency<=34): ' + str(i['num_rare_adj_34']))
+        print('Number of rare adjectives (wordfrecuency<=34) (incidence per 1000 words): ' + str(
+            i['num_rare_adj_34_incidence']))
+        print('Number of rare verbs (wordfrecuency<=34): ' + str(i['num_rare_verbs_34']))
+        print('Number of rare verbs (wordfrecuency<=34) (incidence per 1000 words): ' + str(
+            i['num_rare_verbs_34_incidence']))
+        print('Number of rare adverbs (wordfrecuency<=34): ' + str(i['num_rare_advb_34']))
+        print('Number of rare adverbs (wordfrecuency<=34) (incidence per 1000 words): ' + str(
+            i['num_rare_advb_34_incidence']))
+        print('Number of rare content words (wordfrecuency<=34): ' + str(i['num_rare_words_34']))
+        print('Number of rare content words (wordfrecuency<=34) (incidence per 1000 words): ' + str(
+            i['num_rare_words_34_incidence']))
+        print('Number of distinct rare content words (wordfrecuency<=34): ' + str(i['num_dif_rare_words_34']))
+        print('Number of distinct rare content words (wordfrecuency<=34) (incidence per 1000 words): ' + str(
+            i['num_dif_rare_words_34_incidence']))
         # The average of rare lexical words (whose word frequency value is less than 4) with respect to the total of lexical words
-        print('Mean of rare lexical words (word frequency <= 4): ' + str(i['mean_rare_4']))
+        print('Mean of rare lexical words (word frequency <= 34): ' + str(i['mean_rare_34']))
         # The average of distinct rare lexical words (whose word frequency value is less than 4) with respect to the total of distinct lexical words
-        print('Mean of distinct rare lexical words (word frequency <= 4): ' + str(i['mean_distinct_rare_4']))
+        print('Mean of distinct rare lexical words (word frequency <= 34): ' + str(i['mean_distinct_rare_34']))
 
         print('Number of A1 vocabulary in the text: ' + str(i['num_a1_words']))
         print('Incidence score of A1 vocabulary  (per 1000 words): ' + str(i['num_a1_words_incidence']))
@@ -1546,6 +1547,19 @@ The aim of this class is the charge of the model with the specific language and 
 In addition, it is going to create a unified data structure to obtain the indicators independent of the library 
 and language.
 '''
+
+
+class Maiztasuna:
+    freq_list = {}
+
+    def __init__(self, path):
+        self.path = path
+
+    def load(self):
+        with open(self.path) as csv_file:
+            csv_reader = csv.reader(csv_file, delimiter=',')
+            for row in csv_reader:
+                Maiztasuna.freq_list[row[1].strip()] = row[0]
 
 
 class Stopwords:
@@ -1783,6 +1797,10 @@ class Main(object):
         language = "basque"
         model = "stanford"
         directory = "J:\TextSimilarity"
+
+        # Carga wordfrequency euskara
+        maiztasuna = Maiztasuna("LB2014Maiztasunak_zenbakiakKenduta.csv")
+        maiztasuna.load()
 
         # Carga StopWords
         stopw = Stopwords(language)
