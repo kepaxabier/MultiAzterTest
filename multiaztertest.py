@@ -16,6 +16,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import wordnet as wn
 from nltk.corpus import cmudict
+from wordfreq import zipf_frequency
 #####Argumentos##################################
 from argparse import ArgumentParser
 
@@ -39,7 +40,7 @@ class ModelAdapter:
                     for sent in doc.sentences:
                         s = Sentence()
                         sequence = self.sent2sequenceStanford(sent)
-                        print(sequence)
+                        #print(sequence)
                         s.text = sequence
                         for word in sent.words:
                             # Por cada palabra de cada sentencia, creamos un objeto Word que contendra los attrs
@@ -53,10 +54,7 @@ class ModelAdapter:
                             w.governor = word.governor
                             w.dependency_relation = word.dependency_relation
                             s.word_list.append(w)
-                            print(str(
-                                w.index) + "\t" + w.text + "\t" + w.lemma + "\t" + w.upos + "\t" +
-                                  w.xpos + "\t" + w.feats + "\t" + str(w.governor) + "\t" + str(w.dependency_relation) +
-                                  "\t")
+                            #print(str(w.index) + "\t" + w.text + "\t" + w.lemma + "\t" + w.upos + "\t" + w.xpos + "\t" + w.feats + "\t" + str(w.governor) + "\t" + str(w.dependency_relation) +"\t")
                         p.sentence_list.append(s)  # ->paragraph.append(s)
                     d.paragraph_list.append(p)  # ->data.append(paragraph)
 
@@ -65,25 +63,26 @@ class ModelAdapter:
             lines = text.split('@')
             for line in lines:
                 p = Paragraph()  # -> paragraph = []
-                sequences = self.model(line)
-                for seq in sequences:
-                    s = Sentence()
-                    sequence = self.sent2sequenceCube(seq)
-                    s.text = sequence
-                    for entry in seq:
-                        # Por cada palabra de cada sentencia, creamos un objeto Word que contendra los attrs
-                        w = Word()
-                        w.index = str(entry.index)
-                        w.text = entry.word
-                        w.lemma = entry.lemma
-                        w.upos = entry.upos
-                        w.xpos = entry.xpos
-                        w.feats = entry.attrs
-                        w.governor = str(entry.head)
-                        w.dependency_relation = str(entry.label)
-                        s.word_list.append(w)
-                    p.sentence_list.append(s)  # ->paragraph.append(s)
-                d.paragraph_list.append(p)  # ->data.append(paragraph)
+                if not line.strip() == '':
+                    sequences = self.model(line)
+                    for seq in sequences:
+                        s = Sentence()
+                        sequence = self.sent2sequenceCube(seq)
+                        s.text = sequence
+                        for entry in seq:
+                            # Por cada palabra de cada sentencia, creamos un objeto Word que contendra los attrs
+                            w = Word()
+                            w.index = str(entry.index)
+                            w.text = entry.word
+                            w.lemma = entry.lemma
+                            w.upos = entry.upos
+                            w.xpos = entry.xpos
+                            w.feats = entry.attrs
+                            w.governor = int(entry.head)
+                            w.dependency_relation = str(entry.label)
+                            s.word_list.append(w)
+                        p.sentence_list.append(s)  # ->paragraph.append(s)
+                    d.paragraph_list.append(p)  # ->data.append(paragraph)
         return d
 
     def sent2sequenceStanford(self, sent):
@@ -260,44 +259,43 @@ class Document:
 
     def calculate_mean_depth_per_sentence(self, depth_list):
         i = self.indicators
-        print(depth_list)
         i['mean_depth_per_sentence'] = round(float(np.mean(depth_list)), 4)
 
     def tree_depth(self, tree, root):
         if not tree[root]:
             return 1
 
-    def mtld(self, filtered_words):
-        ttr_threshold = 0.72
-        ttr = 1.0
-        word_count = 0
-        fragments = 0.0
-        dif_words = []
-
-        for i, word in enumerate(filtered_words):
-            word = word.lower()
-            word_count += 1
-            if word not in dif_words:
-                dif_words.append(word)
-            ttr = self.calculate_simple_ttr(dif_words, word_count)
-            if ttr <= ttr_threshold:
-                fragments += 1
-                word_count = 0
-                dif_words.clear()
-                ttr = 1.0
-            elif i == len(filtered_words) - 1:
-                residual = (1.0 - ttr) / (1.0 - ttr_threshold)
-                fragments += residual
-
-        if fragments != 0:
-            return len(filtered_words) / fragments
-        else:
-            return 0
-
-    def calculate_mtld(self):
-        not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
-        filtered_words = list(filter(not_punctuation, word_tokenize(self.text)))
-        self.indicators['mtld'] = round((self.mtld(filtered_words) + self.mtld(filtered_words[::-1])) / 2, 4)
+    # def mtld(self, filtered_words):
+    #     ttr_threshold = 0.72
+    #     ttr = 1.0
+    #     word_count = 0
+    #     fragments = 0.0
+    #     dif_words = []
+    #
+    #     for i, word in enumerate(filtered_words):
+    #         word = word.lower()
+    #         word_count += 1
+    #         if word not in dif_words:
+    #             dif_words.append(word)
+    #         ttr = self.calculate_simple_ttr(dif_words, word_count)
+    #         if ttr <= ttr_threshold:
+    #             fragments += 1
+    #             word_count = 0
+    #             dif_words.clear()
+    #             ttr = 1.0
+    #         elif i == len(filtered_words) - 1:
+    #             residual = (1.0 - ttr) / (1.0 - ttr_threshold)
+    #             fragments += residual
+    #
+    #     if fragments != 0:
+    #         return len(filtered_words) / fragments
+    #     else:
+    #         return 0
+    #
+    # def calculate_mtld(self):
+    #     not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
+    #     filtered_words = list(filter(not_punctuation, word_tokenize(self.text)))
+    #     self.indicators['mtld'] = round((self.mtld(filtered_words) + self.mtld(filtered_words[::-1])) / 2, 4)
 
     def get_num_hapax_legomena(self):
         num_hapax_legonema = 0
@@ -350,11 +348,11 @@ class Document:
                     sentence2 = []
                     for entry1 in x[0].word_list:
                         #values1 = entry1.split("\t")
-                        if entry1.upos == 'NOUN':
+                        if entry1.is_noun():
                             sentence1.append(entry1.text.lower())
                     for entry2 in x[1].word_list:
                         #values2 = entry2.split("\t")
-                        if entry2.upos == 'NOUN':
+                        if entry2.is_noun():
                             sentence2.append(entry2.text.lower())
                     # nombres en comun entre sentence1 y sentence2
                     in_common = list(set(sentence1).intersection(sentence2))
@@ -382,11 +380,11 @@ class Document:
                     sentence2 = []
                     for entry1 in x.word_list:
                         #values1 = entry1.split("\t")
-                        if entry1.upos == 'NOUN':
+                        if entry1.is_noun():
                             sentence1.append(entry1.text.lower())
                     for entry2 in y.word_list:
                         #values2 = entry2.split("\t")
-                        if entry2.upos == 'NOUN':
+                        if entry2.is_noun():
                             sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
                     if len(in_common) > 0:
@@ -410,10 +408,10 @@ class Document:
                     sentence1 = []
                     sentence2 = []
                     for entry1 in x[0].word_list:
-                        if entry1.is_personal_pronoun or entry1.upos == 'NOUN':
+                        if entry1.is_personal_pronoun or entry1.is_noun():
                             sentence1.append(entry1.text.lower())
                     for entry2 in x[1].word_list:
-                        if entry2.is_personal_pronoun or entry2.upos == 'NOUN':
+                        if entry2.is_personal_pronoun or entry2.is_noun():
                             sentence2.append(entry1.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
                     if len(in_common) > 0:
@@ -437,10 +435,10 @@ class Document:
                     sentence1 = []
                     sentence2 = []
                     for entry1 in x.word_list:
-                        if entry1.is_personal_pronoun or entry1.upos == 'NOUN':
+                        if entry1.is_personal_pronoun or entry1.is_noun():
                             sentence1.append(entry1.text.lower())
                     for entry2 in y.word_list:
-                        if entry2.is_personal_pronoun or entry2.upos == 'NOUN':
+                        if entry2.is_personal_pronoun or entry2.is_noun():
                             sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
                     if len(in_common) > 0:
@@ -467,7 +465,7 @@ class Document:
                         if entry1.is_lexic_word(x[0]):
                             sentence1.append(entry1.text.lower())
                     for entry2 in x[1].word_list:
-                        if entry2.upos == 'NOUN':
+                        if entry2.is_noun():
                             sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
                     if len(in_common) > 0:
@@ -496,7 +494,7 @@ class Document:
                         if entry1.is_lexic_word(x):
                             sentence1.append(entry1.text.lower())
                     for entry2 in y.word_list:
-                        if entry2.upos == 'NOUN':
+                        if entry2.is_noun():
                             sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
                     if len(in_common) > 0:
@@ -591,8 +589,8 @@ class Document:
         num_vp_list = []
         modifiers_per_np = []
         depth_list = []
+        min_wordfreq_list = []
         #subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
-        not_punctuation = lambda w: not (len(w.text) == 1 and (not w.text.isalpha()))
         decendents_total = 0
         for p in self.paragraph_list:
             self.aux_lists['sentences_per_paragraph'].append(len(p.sentence_list))  # [1,2,1,...]
@@ -600,8 +598,6 @@ class Document:
                 if not s.text == "":
                     num_words_in_sentence_without_stopwords = 0
                     i['num_sentences'] += 1
-                    filterwords = filter(not_punctuation, s.word_list)
-                    sum = 0
                     dependency_tree = defaultdict(list)
                     vp_indexes = s.count_np_in_sentence()
                     num_np_list.append(len(vp_indexes))
@@ -610,22 +606,37 @@ class Document:
                     modifiers_per_np += s.count_modifiers(vp_indexes)
                     self.aux_lists['left_embeddedness'].append(s.calculate_left_embeddedness())
                     i['prop'] = 0
-                    numPunct = 0
+                    wordfreq_list = []
+                    sum_s = 0
                     for w in s.word_list:
-                        if int(w.governor) == 0:
-                            root = w.index
-                        dependency_tree[int(w.governor)].append(w.index)
-                        # words without punc
-                        if w in filterwords:
+                        if not w.is_punctuation():
                             i['num_words'] += 1
-                            self.aux_lists['words_length_list'].append(len(w.text))
-                            self.aux_lists['lemmas_length_list'].append(len(w.lemma))
-                            sum += 1
+                            sum_s += 1
+                        if w.governor == 0:
+                            root = w.index
+                        dependency_tree[w.governor].append(w.index)
+                        #word frequency
+                        if (not len(w.text) == 1 or w.text.isalpha()) and not w.is_num():
+                            wordfrequency = zipf_frequency(w.text, 'en')    #Poner en euskera -- 32
+                            wordfreq_list.append(wordfrequency)
+                            if w.is_lexic_word(s):
+                                if wordfrequency <= 4:
+                                    i['num_rare_words_4'] += 1
+                                    if w.is_noun():
+                                        i['num_rare_nouns_4'] += 1
+                                    elif w.is_adjective():
+                                        i['num_rare_adj_4'] += 1
+                                    elif w.is_adverb():
+                                        i['num_rare_advb_4'] += 1
+                                    elif w.is_verb(s):
+                                        i['num_rare_verbs_4'] += 1
+                                if w.text.lower() not in self.aux_lists['different_lexic_words']:
+                                    self.aux_lists['different_lexic_words'].append(w.text.lower())
+                                    if wordfrequency <= 4:
+                                        i['num_dif_rare_words_4'] += 1
                         # words not in stopwords
                         if not w.is_stopword():
                             num_words_in_sentence_without_stopwords += 1
-                        if w.is_lexic_word(s):
-                            i['num_lexic_words'] += 1
                         if w.is_noun():
                             i['num_noun'] += 1
                             if w.text.lower() not in self.aux_lists['different_nouns']:
@@ -672,8 +683,6 @@ class Document:
                                     i['num_first_pers_sing_pron'] += 1
                             if w.is_third_personal_pronoun():
                                 i['num_third_pers_pron'] += 1
-                        if w.text.lower() not in self.aux_lists['different_forms']:
-                            self.aux_lists['different_forms'].append(w.text.lower())
                         if w.text.lower() not in self.words_freq:
                             self.words_freq[w.text.lower()] = 1
                         else:
@@ -683,11 +692,12 @@ class Document:
                             # Numero de sentencias subordinadas relativas
                             if w.is_subordinate_relative():
                                 i['num_rel_subord'] += 1
-                        if w.is_punctuation():
-                            i['num_words_with_punct'] += 1
+                        i['num_words_with_punct'] += 1
                         if w.is_proposition():
                            i['prop'] += 1
                         if (not len(w.text) == 1 or w.text.isalpha()) and w.upos != "NUM":
+                            if not w.is_stopword():
+                                self.aux_lists['words_length_no_stopwords_list'].append(len(w.text))
                             if (w.is_lexic_word(s)):
                                 i['num_lexic_words'] += 1
                                 if wn.synsets(w.text):
@@ -703,24 +713,43 @@ class Document:
                                             self.get_abstraction_level(w.text, 'v'))
                                     self.aux_lists['ambiguity_content_words_list'].append(
                                         self.get_ambiguity_level(w.text, w.upos))
+                            if w.text.lower() not in self.aux_lists['different_forms']:
+                                self.aux_lists['different_forms'].append(w.text.lower())
                             if w.lemma not in self.aux_lists['different_lemmas']:
                                 self.aux_lists['different_lemmas'].append(w.text.lower())
+                            self.aux_lists['words_length_list'].append(len(w.text))
+                            self.aux_lists['lemmas_length_list'].append(len(w.lemma))
+                if len(wordfreq_list) > 0:
+                    min_wordfreq_list.append(min(wordfreq_list))
+                else:
+                    min_wordfreq_list.append(0)
                 i['num_total_prop'] = i['num_total_prop'] + i['prop']
                 self.aux_lists['prop_per_sentence'].append(i['prop'])
                 self.aux_lists['punct_per_sentence'].append(i['num_words_with_punct'])
-                self.aux_lists['sentences_length_mean'].append(sum)
+                self.aux_lists['sentences_length_mean'].append(sum_s)
                 self.aux_lists['sentences_length_no_stopwords_list'].append(num_words_in_sentence_without_stopwords)
                 depth_list.append(self.tree_depth(dependency_tree, root))
-        # i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
+        i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
         i['num_different_forms'] = len(self.aux_lists['different_forms'])
         self.indicators['left_embeddedness'] = round(float(np.mean(self.aux_lists['left_embeddedness'])), 4)
         self.calculate_honore()
         self.calculate_maas()
-        # i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
-        # i['num_modifiers_noun_phrase'] = round(float(np.mean(modifiers_per_np)), 4)
+        i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
+        i['num_modifiers_noun_phrase'] = round(float(np.mean(modifiers_per_np)), 4)
+        print(i['num_words'])
         self.calculate_phrases(num_vp_list, num_np_list)
         self.calculate_mean_depth_per_sentence(depth_list)
-        self.calculate_mtld()
+        # self.calculate_mtld()
+        # self.get_syllable_list()
+        i['min_wf_per_sentence'] = round(float(np.mean(min_wordfreq_list)), 4)
+
+    # List of syllables of each word. This will be used to calculate mean/std dev of syllables.
+    # def get_syllable_list(self):
+    #    filterwords = filter(self.not_punctuation, word_tokenize(self.text))
+    #    list = []
+    #    for word in filterwords:
+    #        list.append(self.allnum_syllables(word))
+    #    self.aux_lists['syllabes_list'] = list
 
     def calculate_all_means(self):
         i = self.indicators
@@ -736,6 +765,9 @@ class Document:
         i['hypernymy_nouns_index'] = round(float(np.mean(self.aux_lists['noun_abstraction_list'])), 4)
         i['sentences_length_no_stopwords_mean'] = round(
             float(np.mean(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
+        i['words_length_no_stopwords_mean'] = round(float(np.mean(self.aux_lists['words_length_no_stopwords_list'])), 4)
+        i['mean_rare_4'] = round(((100 * i['num_rare_words_4']) / i['num_lexic_words']), 4)
+        i['mean_distinct_rare_4'] = round((100 * i['num_dif_rare_words_4']) / len(self.aux_lists['different_lexic_words']), 4)
 
     def calculate_all_std_deviations(self):
         i = self.indicators
@@ -745,6 +777,7 @@ class Document:
         i['lemmas_length_std'] = round(float(np.std(self.aux_lists['lemmas_length_list'])), 4)
         i['sentences_length_no_stopwords_std'] = round(
             float(np.std(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
+        i['words_length_no_stopwords_std'] = round(float(np.std(self.aux_lists['words_length_no_stopwords_list'])), 4)
 
     @staticmethod
     def get_incidence(indicador, num_words):
@@ -773,6 +806,12 @@ class Document:
         i['num_adj_incidence'] = self.get_incidence(i['num_adj'], n)
         i['num_adv_incidence'] = self.get_incidence(i['num_adv'], n)
         i['num_lexic_words_incidence'] = self.get_incidence(i['num_lexic_words'], n)
+        i['num_rare_nouns_4_incidence'] = self.get_incidence(i['num_rare_nouns_4'], n)
+        i['num_rare_adj_4_incidence'] = self.get_incidence(i['num_rare_adj_4'], n)
+        i['num_rare_verbs_4_incidence'] = self.get_incidence(i['num_rare_verbs_4'], n)
+        i['num_rare_advb_4_incidence'] = self.get_incidence(i['num_rare_advb_4'], n)
+        i['num_rare_words_4_incidence'] = self.get_incidence(i['num_rare_words_4'], n)
+        i['num_dif_rare_words_4_incidence'] = self.get_incidence(i['num_dif_rare_words_4'], n)
 
     def calculate_density(self):
         i = self.indicators
@@ -831,12 +870,12 @@ class Sentence:
         num_words = 0
         for word in self.word_list:
             if not len(word.text) == 1 or word.text.isalpha():
-                if not main_verb_found and int(word.governor) < len(self.word_list):
+                if not main_verb_found and word.governor < len(self.word_list):
                     if word.is_verb(self):
                         verb_index += 1
                         if (word.upos == 'VERB' and word.dependency_relation == 'root') or (
                                 word.upos == 'AUX' and self.word_list[
-                                                       int(word.governor)].dependency_relation == 'root'
+                            word.governor].dependency_relation == 'root'
                                 and self.word_list[word.governor].upos == 'VERB'):
                             main_verb_found = True
                             left_embeddedness = num_words
@@ -884,7 +923,7 @@ class Sentence:
     def count_content_words_in(self):
         num_words = 0
         for entry in self.word_list:
-            if entry.is_verb(self) or entry.upos == 'NOUN' or entry.upos == 'ADJ' or entry.upos == 'ADV':
+            if entry.is_verb(self) or entry.is_noun() or entry.is_adjective() or entry.is_adverb():
                 num_words += 1
         return num_words
 
@@ -1103,28 +1142,29 @@ class Word:
         return self.is_verb(sequence) or self.upos == 'NOUN' or self.upos == 'ADJ' or self.upos == 'ADV'
 
     def is_verb(self, frase):
-        return self.upos == 'VERB' or (self.upos == 'AUX' and frase.word_list[int(self.governor) - 1].upos != 'VERB')
+        return self.upos == 'VERB' or (self.upos == 'AUX' and frase.word_list[self.governor - 1].upos != 'VERB')
 
     def is_future(self, frase):
         return self.upos == 'AUX' and self.lemma in ['will', 'shall'] and frase.word_list[
             int(self.governor) - 1].xpos == 'VB'
 
     def is_past(self):
-        atributos = self.xpos.split('|')
-        if "Tense=Past" in atributos:
+        atributos = self.feats.split('|')
+        if 'Tense=Past' in atributos:
             return True
         else:
             return False
 
+
     def is_present(self):
-        atributos = self.xpos.split('|')
+        atributos = self.feats.split('|')
         if "Tense=Pres" in atributos:
             return True
         else:
             return False
 
     def is_indicative(self):
-        atributos = self.xpos.split('|')
+        atributos = self.feats.split('|')
         if "Mood=Ind" in atributos:
             return True
         else:
@@ -1195,6 +1235,12 @@ class Word:
 
         return f"<{self.__class__.__name__} {feature_str}>"
 
+    def is_num(self):
+        if self.upos == 'NUM':
+            return True
+        else:
+            return False
+        
     def is_noun(self):
         if self.upos == 'NOUN':
             return True
@@ -1521,9 +1567,7 @@ class Stopwords:
         if self.lang.lower() == "spanish":
             Stopwords.stop_words = stopwords.words('spanish')
         if self.lang.lower() == "basque":
-            # Stopwords.stop_words = set(line.strip() for line in open('data/eu/stopwords_formaketakonektoreak.txt'))
-            # Stopwords.stop_words.add("gero")
-            print("n")
+            Stopwords.stop_words = set(line.strip() for line in open('data/eu/stopwords_formaketakonektoreak.txt'))
 
 class NLPCharger:
 
@@ -1736,9 +1780,9 @@ class Main(object):
         # Por último parsear los argumentos
         opts = p.parse_args()
 
-        language = "english"
-        model = "cube"
-        directory="J:\multilanguageaztertest"
+        language = "basque"
+        model = "stanford"
+        directory = "J:\TextSimilarity"
 
         # Carga StopWords
         stopw = Stopwords(language)
@@ -1752,11 +1796,11 @@ class Main(object):
 
         # Carga del modelo Stanford/NLPCube
         cargador = NLPCharger(language, model,directory)
-        # cargador.download_model()
+        cargador.download_model()
         cargador.load_model()
 
         files = opts.files
-        files = ["kk.txt", "kk.txt"]
+        files = ["euskaratestua.txt"] #Loterry-adv.txt
         for input in files:
             # texto directamente de text
             if language == "basque":
