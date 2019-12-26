@@ -1816,7 +1816,9 @@ class Printer:
         df_new = pd.DataFrame([indicators_dict], columns=indicators_dict.keys())
         #print(df_new)->  num_words  num_paragraphs  num_sentences
                    #0        100             1            13
-        #dataframe=dataframe+newdataframe
+        #Replace all NaN elements with 0s.
+        df_new.fillna(0)
+        # dataframe=dataframe+newdataframe
         df = pd.concat([df, df_new], sort=False)
         return df
     @staticmethod
