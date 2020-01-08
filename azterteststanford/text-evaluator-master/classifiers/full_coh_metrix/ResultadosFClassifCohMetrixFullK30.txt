@@ -1,0 +1,46 @@
+The 30 best features are: 
+   Feat_names    F_Scores
+0       DESWC  181.515567
+29       RDL2  176.398040
+2      DESSLd  142.829632
+1       DESSL  131.535966
+28     RDFKGL  120.251318
+24    WRDFRQc  106.042101
+14   CRFCWOad   90.786523
+18     LDMTLD   78.518823
+27      RDFRE   76.675712
+22  SYNSTRUTt   63.642740
+20      SYNLE   61.427038
+8      PCSYNp   59.160383
+26    WRDFAMc   58.954780
+6    DESWLltd   58.285243
+7      PCSYNz   57.720302
+12   CRFCWO1d   52.848110
+16     LSAGNd   52.371406
+21  SYNSTRUTa   51.016960
+17     LDTTRc   47.600922
+13    CRFCWOa   43.998294
+9      PCREFz   42.955592
+10     PCREFp   42.064084
+23   DRGERUND   41.957034
+19     LDVOCD   41.132481
+25    WRDFRQa   39.496426
+11    CRFCWO1   38.557271
+15    LSASS1d   36.795620
+4    DESWLsyd   35.248033
+3     DESWLsy   32.475824
+5     DESWLlt   31.304136
+Best parameters found:: {'estimator': GradientBoostingClassifier(criterion='friedman_mse', init=None,
+                           learning_rate=0.001, loss='deviance', max_depth=8,
+                           max_features='sqrt', max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_impurity_split=None,
+                           min_samples_leaf=1, min_samples_split=2,
+                           min_weight_fraction_leaf=0.0, n_estimators=100,
+                           n_iter_no_change=None, presort='auto',
+                           random_state=None, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False), 'estimator__learning_rate': 0.001, 'estimator__max_depth': 8, 'estimator__max_features': 'sqrt', 'estimator__n_estimators': 100} 
+
+The best accuracy achieved after parameter tuning via grid search is: 0.7719298245614035 
+
+Accuracy achieve with the TEST SET: 83.78378378378379 

@@ -1,0 +1,46 @@
+The 30 best features are: 
+                             Feat_names      F_Scores
+11                    lemma_content_ttr  16061.293345
+13         sentences_per_paragraph_mean  14889.964791
+12                                 mtld   9745.887835
+0                             num_words   9319.660315
+19        noun_phrase_density_incidence   6184.541876
+18                    left_embeddedness   4121.437079
+25                   num_noun_incidence   2184.059290
+5               content_overlap_all_std   1937.136278
+6             all_connectives_incidence   1429.158251
+4              content_overlap_all_mean   1332.017874
+29   num_first_pers_sing_pron_incidence    997.953722
+26                    num_adj_incidence    876.871375
+14                sentences_length_mean    858.084425
+24                hypernymy_nouns_index    653.593622
+7     adversative_connectives_incidence    638.145353
+3          content_overlap_adjacent_std    579.516782
+21  agentless_passive_density_incidence    377.245974
+20        verb_phrase_density_incidence    361.742239
+8                        flesch_kincaid    358.224026
+28      num_personal_pronouns_incidence    336.199451
+15             num_syllables_words_mean    258.216065
+1                 noun_overlap_adjacent    194.606397
+10                           simple_ttr    191.141677
+23                      polysemic_index    189.217690
+16                    words_length_mean    175.089683
+9                                flesch    167.918733
+27                   num_verb_incidence    150.236831
+2         content_overlap_adjacent_mean    130.623231
+17              num_syllables_words_std    128.497340
+22            num_modifiers_noun_phrase    114.243970
+Best parameters found:: {'estimator': GradientBoostingClassifier(criterion='friedman_mse', init=None,
+                           learning_rate=0.15, loss='deviance', max_depth=3,
+                           max_features='log2', max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_impurity_split=None,
+                           min_samples_leaf=1, min_samples_split=2,
+                           min_weight_fraction_leaf=0.0, n_estimators=100,
+                           n_iter_no_change=None, presort='auto',
+                           random_state=None, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False), 'estimator__learning_rate': 0.15, 'estimator__max_depth': 3, 'estimator__max_features': 'log2', 'estimator__n_estimators': 100} 
+
+The best accuracy achieved after parameter tuning via grid search is: 0.7697368421052632 
+
+Accuracy achieve with the TEST SET: 75.67567567567568 

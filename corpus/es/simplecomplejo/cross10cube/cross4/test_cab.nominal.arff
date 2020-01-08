@@ -1,0 +1,125 @@
+@relation test_cab-weka.filters.unsupervised.attribute.NumericToNominal-Rlast
+
+@attribute num_decendents_noun_phrase numeric
+@attribute left_embeddedness numeric
+@attribute num_modifiers_noun_phrase numeric
+@attribute sentences_per_paragraph_mean numeric
+@attribute sentences_length_mean numeric
+@attribute words_length_mean numeric
+@attribute lemmas_length_mean numeric
+@attribute mean_propositions_per_sentence numeric
+@attribute num_punct_marks_per_sentence numeric
+@attribute polysemic_index numeric
+@attribute hypernymy_index numeric
+@attribute hypernymy_verbs_index numeric
+@attribute hypernymy_nouns_index numeric
+@attribute sentences_length_no_stopwords_mean numeric
+@attribute words_length_no_stopwords_mean numeric
+@attribute sentences_per_paragraph_std numeric
+@attribute sentences_length_std numeric
+@attribute words_length_std numeric
+@attribute lemmas_length_std numeric
+@attribute sentences_length_no_stopwords_std numeric
+@attribute words_length_no_stopwords_std numeric
+@attribute noun_overlap_adjacent numeric
+@attribute noun_overlap_all numeric
+@attribute argument_overlap_adjacent numeric
+@attribute argument_overlap_all numeric
+@attribute stem_overlap_adjacent numeric
+@attribute stem_overlap_all numeric
+@attribute content_overlap_adjacent_mean numeric
+@attribute content_overlap_adjacent_std numeric
+@attribute content_overlap_all_mean numeric
+@attribute content_overlap_all_std numeric
+@attribute num_paragraphs_incidence numeric
+@attribute num_sentences_incidence numeric
+@attribute num_syllables_words_mean numeric
+@attribute num_syllables_words_std numeric
+@attribute lexical_density numeric
+@attribute noun_density numeric
+@attribute verb_density numeric
+@attribute adj_density numeric
+@attribute adv_density numeric
+@attribute simple_ttr numeric
+@attribute content_ttr numeric
+@attribute nttr numeric
+@attribute vttr numeric
+@attribute adj_ttr numeric
+@attribute adv_ttr numeric
+@attribute lemma_ttr numeric
+@attribute lemma_content_ttr numeric
+@attribute lemma_nttr numeric
+@attribute lemma_vttr numeric
+@attribute lemma_adj_ttr numeric
+@attribute lemma_adv_ttr numeric
+@attribute honore numeric
+@attribute maas numeric
+@attribute mtld numeric
+@attribute flesch_kincaid numeric
+@attribute flesch numeric
+@attribute dale_chall numeric
+@attribute smog numeric
+@attribute num_past_incidence numeric
+@attribute num_pres_incidence numeric
+@attribute num_future_incidence numeric
+@attribute num_indic_incidence numeric
+@attribute num_impera_incidence numeric
+@attribute num_past_irregular_mean numeric
+@attribute num_personal_pronouns_incidence numeric
+@attribute num_first_pers_pron_incidence numeric
+@attribute num_first_pers_sing_pron_incidence numeric
+@attribute num_third_pers_pron_incidence numeric
+@attribute min_wf_per_sentence numeric
+@attribute num_rare_nouns_4_incidence numeric
+@attribute num_rare_adj_4_incidence numeric
+@attribute num_rare_verbs_4_incidence numeric
+@attribute num_rare_advb_4_incidence numeric
+@attribute mean_rare_4 numeric
+@attribute mean_distinct_rare_4 numeric
+@attribute num_a1_words_incidence numeric
+@attribute num_a2_words_incidence numeric
+@attribute num_b1_words_incidence numeric
+@attribute num_b2_words_incidence numeric
+@attribute num_c1_words_incidence numeric
+@attribute num_content_words_not_a1_c1_words_incidence numeric
+@attribute num_lexic_words_incidence numeric
+@attribute num_noun_incidence numeric
+@attribute num_adj_incidence numeric
+@attribute num_adv_incidence numeric
+@attribute num_verb_incidence numeric
+@attribute mean_depth_per_sentence numeric
+@attribute num_subord_incidence numeric
+@attribute num_rel_subord_incidence numeric
+@attribute mean_vp_per_sentence numeric
+@attribute mean_np_per_sentence numeric
+@attribute num_pass_mean numeric
+@attribute agentless_passive_density_incidence numeric
+@attribute negation_density_incidence numeric
+@attribute gerund_density_incidence numeric
+@attribute infinitive_density_incidence numeric
+@attribute all_connectives_incidence numeric
+@attribute causal_connectives_incidence numeric
+@attribute logical_connectives_incidence numeric
+@attribute adversative_connectives_incidence numeric
+@attribute temporal_connectives_incidence numeric
+@attribute conditional_connectives_incidence numeric
+@attribute similarity_adjacent_mean numeric
+@attribute similarity_pairs_par_mean numeric
+@attribute similarity_adjacent_par_mean numeric
+@attribute similarity_adjacent_std numeric
+@attribute similarity_pairs_par_std numeric
+@attribute similarity_adjacent_par_std numeric
+@attribute level {0,1}
+
+@data
+
+0.7586,2.7083,0.7586,2.4,12.8333,4.3531,4.2762,1.875,182.1667,1.6667,2.6875,0.4444,5.5714,14.5833,4.3531,1.6852,61.5465,2.6147,2.5207,9.7507,2.6147,0.1429,0.129,1,0.871,0.1429,0.129,0.0166,0.0334,0.018,0.0343,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0.75,3.4167,0.75,6,18.4167,4.6268,4.4689,2.3333,117.75,1.5455,3.1667,1,7.5,19.25,4.6268,1,61.0812,2.9807,2.9623,8.0532,2.9807,0.4,0.2903,1,1,0.4,0.2903,0.0268,0.0361,0.0266,0.0375,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0.7877,2.2222,0.7877,3.8571,18.7778,4.1653,4.0887,2.5556,291.6667,2.4783,4.2963,0.6429,8.2308,20.3704,4.1653,1.3553,95.7483,2.3402,2.2207,8.3761,2.3402,0.15,0.1556,1,1,0.15,0.1556,0.0501,0.062,0.0406,0.0503,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0.9091,4.1429,0.9091,3.5,21.4286,4.7664,4.6131,3.4286,81.7143,1,0,0,0,22,4.7664,0.5,52.4891,3.1444,3.0763,8.3152,3.1444,0.2,0.1111,1,1,0.2,0.1111,0.0369,0.0406,0.0369,0.0409,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0.8167,3.7917,0.8167,6,16.625,4.5493,4.24,2.25,222.4583,1.8571,1.8,0,9,18.0833,4.5493,1.4142,79.7307,2.788,2.6222,10.8086,2.788,0.2,0.1094,1,0.9219,0.2,0.1094,0.0422,0.0551,0.0185,0.0386,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0.9811,3.4118,0.9811,2.4286,22.5882,4.3639,4.356,3.4118,213,1.2083,4.3333,0,7.2222,24.7647,4.3639,0.9035,90.3529,2.6755,2.5875,10.4967,2.6755,0.6,0.4667,1,1,0.6,0.4667,0.0502,0.0373,0.0412,0.0425,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+0.9412,4.1905,0.9412,1.9091,12.4762,4.3938,4.1931,1.3333,174,1.5217,4.8824,0,7.5455,15.0476,4.3938,0.668,55.7952,2.7197,2.5698,8.5048,2.7197,0.2,0.1667,1,0.8333,0.2,0.1667,0.0238,0.0369,0.0198,0.0348,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+1.1935,4.1111,1.1935,3,13.3333,4.2542,4.2373,1.2222,84.6667,1.375,6.3333,0,7.6,15.4444,4.2542,2.1602,37.7124,2.5251,2.4656,5.3148,2.5251,0,0.125,1,1,0,0.125,0,0,0.0091,0.0244,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+0.9579,2.0536,0.9579,3.2941,12,4.3439,4.2821,1.3929,437.2143,2.8367,4.5,0,7.2857,14.3571,4.3439,3.967,88.9944,2.5935,2.4844,15.6587,2.5935,0.1282,0.1162,1,0.8788,0.1282,0.1162,0.0355,0.0677,0.0196,0.0467,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+0.9869,3.1807,0.9869,5.1875,14.8916,4.3514,4.1876,1.7831,754.5783,1.2118,3.766,0,7.08,16.8795,4.3514,3.6438,134.8489,2.6761,2.5798,9.3762,2.6761,0.1045,0.1036,1,0.9036,0.1045,0.1036,0.018,0.0332,0.0179,0.0384,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1

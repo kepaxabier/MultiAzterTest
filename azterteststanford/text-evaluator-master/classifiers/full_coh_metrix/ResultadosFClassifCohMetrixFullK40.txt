@@ -1,0 +1,56 @@
+The 40 best features are: 
+   Feat_names    F_Scores
+1       DESWC  181.515567
+39       RDL2  176.398040
+3      DESSLd  142.829632
+2       DESSL  131.535966
+38     RDFKGL  120.251318
+34    WRDFRQc  106.042101
+17   CRFCWOad   90.786523
+23     LDMTLD   78.518823
+37      RDFRE   76.675712
+31  SYNSTRUTt   63.642740
+28      SYNLE   61.427038
+9      PCSYNp   59.160383
+36    WRDFAMc   58.954780
+7    DESWLltd   58.285243
+8      PCSYNz   57.720302
+15   CRFCWO1d   52.848110
+21     LSAGNd   52.371406
+30  SYNSTRUTa   51.016960
+22     LDTTRc   47.600922
+16    CRFCWOa   43.998294
+10     PCREFz   42.955592
+11     PCREFp   42.064084
+33   DRGERUND   41.957034
+24     LDVOCD   41.132481
+35    WRDFRQa   39.496426
+14    CRFCWO1   38.557271
+18    LSASS1d   36.795620
+5    DESWLsyd   35.248033
+4     DESWLsy   32.475824
+6     DESWLlt   31.304136
+12    PCVERBz   28.938228
+26    SMINTEp   28.719193
+19    LSASSpd   27.913605
+32       DRPP   27.550378
+13    PCVERBp   27.277321
+20      LSAGN   21.415965
+29      SYNNP   19.665162
+0       DESSC   18.501602
+25   SMCAUSvp   17.890261
+27  SMCAUSlsa   16.723869
+Best parameters found:: {'estimator': GradientBoostingClassifier(criterion='friedman_mse', init=None,
+                           learning_rate=0.01, loss='deviance', max_depth=3,
+                           max_features='sqrt', max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_impurity_split=None,
+                           min_samples_leaf=1, min_samples_split=2,
+                           min_weight_fraction_leaf=0.0, n_estimators=100,
+                           n_iter_no_change=None, presort='auto',
+                           random_state=None, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False), 'estimator__learning_rate': 0.01, 'estimator__max_depth': 3, 'estimator__max_features': 'sqrt', 'estimator__n_estimators': 100} 
+
+The best accuracy achieved after parameter tuning via grid search is: 0.7631578947368421 
+
+Accuracy achieve with the TEST SET: 80.18018018018019 

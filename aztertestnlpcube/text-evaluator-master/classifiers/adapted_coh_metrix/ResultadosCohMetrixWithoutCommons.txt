@@ -1,0 +1,7 @@
+
+Best parameters found:: {'estimator': AdaBoostClassifier(algorithm='SAMME.R', base_estimator=None, learning_rate=0.1,
+                   n_estimators=500, random_state=None), 'estimator__learning_rate': 0.1, 'estimator__n_estimators': 500} 
+
+The best accuracy achieved after parameter tuning via grid search is: 0.6447368421052632 
+
+Accuracy achieve with the TEST SET: 74.77477477477478 

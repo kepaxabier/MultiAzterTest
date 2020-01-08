@@ -1,0 +1,111 @@
+
+Options: -C 1.0 -L 0.001 -P 1.02e-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0e-8 -M -1 -num-decimal-places 4" 
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: 0, 1
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.916  * (normalized) num_decendents_noun_phrase
+ +       0.0155 * (normalized) left_embeddedness
+ +       0.916  * (normalized) num_modifiers_noun_phrase
+ +      -0.8099 * (normalized) sentences_per_paragraph_mean
+ +      -0.9028 * (normalized) sentences_length_mean
+ +       0.0997 * (normalized) words_length_mean
+ +       1.4966 * (normalized) lemmas_length_mean
+ +      -0.8598 * (normalized) mean_propositions_per_sentence
+ +       2.2088 * (normalized) num_punct_marks_per_sentence
+ +      -0.3647 * (normalized) polysemic_index
+ +       0.9512 * (normalized) hypernymy_index
+ +       1.1185 * (normalized) hypernymy_verbs_index
+ +      -1.1044 * (normalized) hypernymy_nouns_index
+ +      -0.7316 * (normalized) sentences_length_no_stopwords_mean
+ +       0.0997 * (normalized) words_length_no_stopwords_mean
+ +      -0.0237 * (normalized) sentences_per_paragraph_std
+ +       0.5599 * (normalized) sentences_length_std
+ +      -0.5516 * (normalized) words_length_std
+ +      -0.6768 * (normalized) lemmas_length_std
+ +      -0.2424 * (normalized) sentences_length_no_stopwords_std
+ +      -0.5516 * (normalized) words_length_no_stopwords_std
+ +      -0.4426 * (normalized) noun_overlap_adjacent
+ +      -0.0564 * (normalized) noun_overlap_all
+ +      -1.2027 * (normalized) argument_overlap_all
+ +      -0.4115 * (normalized) stem_overlap_adjacent
+ +      -0.0686 * (normalized) stem_overlap_all
+ +      -0.0074 * (normalized) content_overlap_adjacent_mean
+ +       0.1718 * (normalized) content_overlap_adjacent_std
+ +       0.7104 * (normalized) content_overlap_all_mean
+ +       1.0425 * (normalized) content_overlap_all_std
+ -       0.9017
+
+Number of kernel evaluations: 1569 (80.237% cached)
+
+
+
+Time taken to build model: 0.23 seconds
+
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances          78               86.6667 %
+Incorrectly Classified Instances        12               13.3333 %
+Kappa statistic                          0.7333
+Mean absolute error                      0.1333
+Root mean squared error                  0.3651
+Relative absolute error                 26.6667 %
+Root relative squared error             73.0297 %
+Total Number of Instances               90     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,911    0,178    0,837      0,911    0,872      0,736    0,867     0,807     0
+                 0,822    0,089    0,902      0,822    0,860      0,736    0,867     0,831     1
+Weighted Avg.    0,867    0,133    0,870      0,867    0,866      0,736    0,867     0,819     
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 41  4 |  a = 0
+  8 37 |  b = 1
+
+Time taken to perform cross-validation: 0.14 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances          67               74.4444 %
+Incorrectly Classified Instances        23               25.5556 %
+Kappa statistic                          0.4889
+Mean absolute error                      0.2556
+Root mean squared error                  0.5055
+Relative absolute error                 51.0428 %
+Root relative squared error            100.9626 %
+Total Number of Instances               90     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,822    0,333    0,712      0,822    0,763      0,495    0,744     0,674     0
+                 0,667    0,178    0,789      0,667    0,723      0,495    0,744     0,693     1
+Weighted Avg.    0,744    0,256    0,751      0,744    0,743      0,495    0,744     0,683     
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 37  8 |  a = 0
+ 15 30 |  b = 1
+
