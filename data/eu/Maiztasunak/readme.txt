@@ -20,7 +20,7 @@ En euskara, se obtuvo una lista de frecuencias por lema  del corpus  ``Lexikoare
 
 En función de frecuencia de los lemas. 3 niveles:
 
-Palabras de nivel alto $<=$ 12 lemas por 41.773.391 palabras son raras
+Palabras de nivel alto $<=$ 6 lemas por 41.773.391 palabras son raras
 
 No son son raras:
 Palabras de nivel medio $<=$ 34 lemas por 41.773.391 palabras

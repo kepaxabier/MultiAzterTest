@@ -31,8 +31,8 @@ class ModelAdapter:
         # model_name
         self.lib = lib
 
-    def model_analysis(self, text):
-        d = Document(text)  # ->data = []
+    def model_analysis(self, text,language):
+        d = Document(text,language)  # ->data = []
         if self.lib == "stanford":
             lines = text.split('@')
             for line in lines:  # paragraph
@@ -104,8 +104,9 @@ class ModelAdapter:
 
 
 class Document:
-    def __init__(self, text):
+    def __init__(self, text,language):
         self._text = text
+        self.language = language
         self._paragraph_list = []
         self.words_freq = {}
         # Indicadores
@@ -140,6 +141,7 @@ class Document:
         self.calculate_all_std_deviations()
         #self.calculate_all_incidence()
         #self.calculate_density()
+        self.calculate_readability()
         self.calculate_all_overlaps()
         return self.indicators
 
@@ -311,6 +313,58 @@ class Document:
             return len(filtered_words) / fragments
         else:
             return 0
+
+    def flesch(self):
+        sentences = float(self.indicators['num_sentences'])
+        syllables = float(len(self.aux_lists['syllabes_list']))
+        words = float(self.indicators['num_words'])
+        #ranking scale of 0-100
+        #For most business writing, a score of 65 is a good target, and scores between 60 and 80 should generally
+        # be understood by 12 to 15 year olds.
+        if self.language == "english":
+            #formula= 206.835 - 1.015 x (words/sentences) - 84.6 x (syllables/words)
+            flesch = 206.835 - 1.015 * (words / sentences) - 84.6 * (syllables / words)
+        if self.language == "spanish":
+            # Flesh=206.84 -60 * P - 1,02 F donde  P, el promedio de sílabas por palabra; F, la media de palabras por frase.
+            flesch = 206.84 - 1.02 * (words / sentences) - 60 * (syllables / words)
+        if flesch >= 0: self.indicators['flesch'] = round(flesch, 4)
+
+    def flesch_kincaid(self):
+        sentences = float(self.indicators['num_sentences'])
+        syllables = float(len(self.aux_lists['syllabes_list']))
+        words = float(self.indicators['num_words'])
+        #Flesch-Kincaid grade level formula = 0.39 x (words/sentences) + 11.8 x (syllables/words) - 15.59.
+        #Years:American School Grade:European School Grade
+        #6-7:1:LH1
+        #7-8:2:LH2
+        #8-9:3:LH3
+        #9-10:4:LH4
+        #10-11:5:LH5
+        #11-12:6:LH6
+        #12-13:7:DBH1
+        #13-14:8:DBH2
+        #14-15:9:DBH3
+        #15-16:10:DBH4
+        #16-17:11:bachiller1
+        #17-18:12:bachiller2
+        fk = 0.39 * words / sentences + 11.8 * syllables / words - 15.59
+        if fk >= 0: self.indicators['flesch_kincaid'] = round(fk, 4)
+
+    def calculate_dale_chall(self):
+        sentences = self.indicators['num_sentences']
+        complex_words = self.indicators['num_complex_words']
+        words = self.indicators['num_words']
+        percentage = (complex_words / words) * 100
+        if percentage >= 5.0:
+            self.indicators['dale_chall'] = round(0.1579 * percentage + 0.0496 * (words / sentences) + 3.6365, 4)
+        else:
+            self.indicators['dale_chall'] = round(0.1579 * percentage + 0.0496 * (words / sentences), 4)
+
+    def calculate_readability(self):
+        # self.get_syllable_list()
+        self.calculate_dale_chall()
+        self.flesch()
+        self.flesch_kincaid()
 
     def calculate_mtld(self):
         not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
@@ -2053,7 +2107,7 @@ class NLPCharger:
 
     def adapt_nlp_model(self):
         ma = ModelAdapter(self.parser, self.lib)
-        return ma.model_analysis(self.textwithparagraphs)
+        return ma.model_analysis(self.textwithparagraphs,self.lang)
 
 
 
