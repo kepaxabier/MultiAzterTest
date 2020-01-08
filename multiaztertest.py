@@ -816,6 +816,23 @@ class Document:
                                 self.aux_lists['different_lemmas'].append(w.text.lower())
                             self.aux_lists['words_length_list'].append(len(w.text))
                             self.aux_lists['lemmas_length_list'].append(len(w.lemma))
+                        if w.text.lower() in Oxford.a1:
+                            if w.upos in Oxford.a1[w.text.lower()]:
+                                i['num_a1_words'] += 1
+                        elif w.text.lower() in Oxford.a2:
+                            if w.upos in Oxford.a2[w.text.lower()]:
+                                i['num_a2_words'] += 1
+                        elif w.text.lower() in Oxford.b1:
+                            if w.upos in Oxford.b1[w.text.lower()]:
+                                i['num_b1_words'] += 1
+                        elif w.text.lower() in Oxford.b2:
+                            if w.upos in Oxford.b2[w.text.lower()]:
+                                i['num_b2_words'] += 1
+                        elif w.text.lower() in Oxford.c1:
+                            if w.upos in Oxford.c1[w.text.lower()]:
+                                i['num_c1_words'] += 1
+                        elif w.is_lexic_word(s):
+                            i['num_content_words_not_a1_c1_words'] += 1
                 i['num_total_prop'] = i['num_total_prop'] + i['prop']
                 self.aux_lists['prop_per_sentence'].append(i['prop'])
                 self.aux_lists['punct_per_sentence'].append(i['num_words_with_punct'])
@@ -851,6 +868,9 @@ class Document:
             float(np.mean(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_mean'] = round(float(np.mean(self.aux_lists['words_length_no_stopwords_list'])), 4)
         i['num_past_irregular_mean'] = round(((i['num_past_irregular']) / i['num_past']), 4) if i['num_past'] != 0 else 0
+        i['mean_rare_4'] = round(((100 * i['num_rare_words_4']) / i['num_lexic_words']), 4)
+        i['mean_distinct_rare_4'] = round(
+            (100 * i['num_dif_rare_words_4']) / len(self.aux_lists['different_lexic_words']), 4)
 
 
     def calculate_all_std_deviations(self):
@@ -911,8 +931,13 @@ class Document:
         i['num_rare_advb_4_incidence'] = self.get_incidence(i['num_rare_advb_4'], n)
         i['num_rare_words_4_incidence'] = self.get_incidence(i['num_rare_words_4'], n)
         i['num_dif_rare_words_4_incidence'] = self.get_incidence(i['num_dif_rare_words_4'], n)
-        i['mean_rare_4_incidence'] = self.get_incidence(i['mean_rare_4'], n)
-        i['mean_distinct_rare_4_incidence'] = self.get_incidence(i['mean_distinct_rare_4'], n)
+        i['num_a1_words_incidence'] = self.get_incidence(i['num_a1_words'], n)
+        i['num_a2_words_incidence'] = self.get_incidence(i['num_a2_words'], n)
+        i['num_b1_words_incidence'] = self.get_incidence(i['num_b1_words'], n)
+        i['num_b2_words_incidence'] = self.get_incidence(i['num_b2_words'], n)
+        i['num_c1_words_incidence'] = self.get_incidence(i['num_c1_words'], n)
+        i['num_content_words_not_a1_c1_words_incidence'] = self.get_incidence(i['num_content_words_not_a1_c1_words'], n)
+
 
     def calculate_density(self):
         i = self.indicators
@@ -1359,6 +1384,41 @@ class Word:
 
     def has_more_than_three_syllables(self):
         return True if self.allnum_syllables() > 3 else False
+
+class Oxford():
+
+    lang = ""
+    a1 = defaultdict(dict)
+    a2 = defaultdict(dict)
+    b1 = defaultdict(dict)
+    b2 = defaultdict(dict)
+    c1 = defaultdict(dict)
+
+
+    def __init__(self, language):
+        Oxford.lang = language
+
+    def load(self):
+        if Oxford.lang.lower() == "spanish":
+            f = open('data/en/OxfordWordListByLevel.txt', 'r')
+        if Oxford.lang.lower() == "english":
+            f = open('data/en/OxfordWordListByLevel.txt', 'r')
+        lineas = f.readlines()
+        aux = self.a1
+        for linea in lineas:
+            if linea.startswith("//A1"):
+                aux = self.a1
+            elif linea.startswith("//A2"):
+                aux = self.a2
+            elif linea.startswith("//B1"):
+                aux = self.b1
+            elif linea.startswith("//B2"):
+                aux = self.b2
+            elif linea.startswith("//C1"):
+                aux = self.c1
+            else:
+                aux[linea.split()[0]] = linea.split()[1].rstrip('\n')
+        f.close()
 
 
 class Connectives():
@@ -1990,6 +2050,9 @@ class Main(object):
         conn = Connectives(language)
         conn.load()
 
+        # Carga Niveles Oxford
+        ox = Oxford(language)
+        ox.load()
 
         irregular = Irregularverbs(language)
         irregular.load()
@@ -2028,4 +2091,4 @@ main.start()
 
 # In[ ]:
 
-#To do Connectives(done), syllables(on hold), vocabulary levels(must start,on hold), rare words(lexical)
+#To do Connectives(done), syllables(on hold), vocabulary levels(must start,on hold), rare words(done)
