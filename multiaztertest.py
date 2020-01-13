@@ -681,10 +681,10 @@ class Document:
                 i['causal_connectives'] += self.calculate_connectives_for(s, Connectives.causal)
                 i['temporal_connectives'] += self.calculate_connectives_for(s, Connectives.temporal)
                 i['conditional_connectives'] += self.calculate_connectives_for(s, Connectives.conditional)
-                if Connectives.lang == 'english' or Connectives.lang == 'basque':
+                if self.language == "english" or self.language == 'basque':
                     i['logical_connectives'] += self.calculate_connectives_for(s, Connectives.logical)
                     i['adversative_connectives'] += self.calculate_connectives_for(s, Connectives.adversative)
-                if Connectives.lang == 'spanish':
+                if self.language == 'spanish':
                     i['addition_connectives'] += self.calculate_connectives_for(s, Connectives.addition)
                     i['consequence_connectives'] += self.calculate_connectives_for(s, Connectives.consequence)
                     i['purpose_connectives'] += self.calculate_connectives_for(s, Connectives.purpose)
@@ -693,12 +693,12 @@ class Document:
                     i['order_connectives'] += self.calculate_connectives_for(s, Connectives.order)
                     i['reference_connectives'] += self.calculate_connectives_for(s, Connectives.reference)
                     i['summary_connectives'] += self.calculate_connectives_for(s, Connectives.summary)
-        if Connectives.lang == 'spanish':
+        if self.language == 'spanish':
             i['all_connectives'] = i['causal_connectives'] + i['temporal_connectives'] + i['conditional_connectives'] + \
                                    i['addition_connectives'] + i['consequence_connectives'] + i['purpose_connectives'] + \
                                    i['illustration_connectives'] + i['opposition_connectives'] + i[
                                        'order_connectives'] + i['reference_connectives'] + i['summary_connectives']
-        if Connectives.lang == 'english' or Connectives.lang == 'basque':
+        if self.language == 'english' or self.language == 'basque':
             i['all_connectives'] = i['causal_connectives'] + i['temporal_connectives'] + i['conditional_connectives'] + \
                                    i['logical_connectives'] + i['adversative_connectives']
 
@@ -853,7 +853,7 @@ class Document:
                                         i['num_first_pers_sing_pron'] += 1
                                 if w.is_third_personal_pronoun():
                                     i['num_third_pers_pron'] += 1
-                            if w.is_negative():
+                            if w.is_negative(self.language):
                                 i['num_neg'] += 1
                             if w.text.lower() not in self.words_freq:
                                 self.words_freq[w.text.lower()] = 1
@@ -1497,10 +1497,9 @@ class Word:
         else:
             return False
 
-    def is_negative(self):
-        if Connectives.lang == "english":
+    def is_negative(self, lang):
+        if lang == "english":
             if self.lemma == 'not':
-                print(self.text)
                 return True
             else:
                 return False
@@ -1580,7 +1579,7 @@ class Connectives():
 
 
     def __init__(self, language):
-        Connectives.lang = language
+        self.lang = language
 
     def load(self):
         if self.lang == "spanish":
