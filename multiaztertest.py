@@ -21,6 +21,14 @@ from wordfreq import zipf_frequency
 #####Argumentos##################################
 from argparse import ArgumentParser
 import pandas as pd
+import pickle
+from sklearn.externals import joblib
+####Google Universal Encoder utiliza Tensorflow
+## Importar tensorflow
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
+## Desactivar mensajes de tensorflow
+import tensorflow_hub as hub
 
 
 class ModelAdapter:
@@ -31,8 +39,8 @@ class ModelAdapter:
         # model_name
         self.lib = lib
 
-    def model_analysis(self, text):
-        d = Document(text)  # ->data = []
+    def model_analysis(self, text, language):
+        d = Document(text, language)  # ->data = []
         if self.lib == "stanford":
             lines = text.split('@')
             for line in lines:  # paragraph
@@ -61,7 +69,7 @@ class ModelAdapter:
                     d.paragraph_list.append(p)  # ->data.append(paragraph)
 
         elif self.lib == "cube":
-            d = Document(text)  # ->data = []
+            d = Document(text, language)  # ->data = []
             lines = text.split('@')
             for line in lines:
                 p = Paragraph()  # -> paragraph = []
@@ -104,8 +112,9 @@ class ModelAdapter:
 
 
 class Document:
-    def __init__(self, text):
+    def __init__(self, text, language):
         self._text = text
+        self.language = language
         self._paragraph_list = []
         self.words_freq = {}
         # Indicadores
@@ -132,14 +141,24 @@ class Document:
         """ Set the list of tokens for this document. """
         self._paragraph_list = value
 
-    def get_indicators(self):
-        self.calculate_all_numbers()
+    def get_indicators(self, similarity):
+        self.calculate_all_numbers(similarity)
         self.calculate_all_means()
         self.calculate_all_std_deviations()
         self.calculate_all_incidence()
         self.calculate_density()
         self.calculate_all_overlaps()
         return self.indicators
+
+
+    def create_dataframe(self):
+        i = self.indicators
+        indicators_dict = {}
+        headers = []
+        for key, value in i.items():
+            indicators_dict[key] = i.get(key)
+            headers.append(key)
+        return pd.DataFrame(indicators_dict, columns=headers, index=[0])
 
     # self.indicators['num_words'] = self.calculate_num_words()
     #     def calculate_num_words(self):
@@ -683,7 +702,7 @@ class Document:
             i['all_connectives'] = i['causal_connectives'] + i['temporal_connectives'] + i['conditional_connectives'] + \
                                    i['logical_connectives'] + i['adversative_connectives']
 
-    def calculate_all_numbers(self):
+    def calculate_all_numbers(self, similarity):
         i = self.indicators
         i['num_paragraphs'] = len(self._paragraph_list)
         #i['num_words'] = 0
@@ -696,6 +715,24 @@ class Document:
         #subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
         decendents_total = 0
         text_without_punctuation = []
+        if similarity:
+            print("similarity")
+            # Preparar Google Universal Sentence Encoder
+            module_url = "https://tfhub.dev/google/universal-sentence-encoder-large/5"
+            embed = hub.load(module_url)  #Utilizar KerasLayer o Module para TF2
+            similarity_input_placeholder = tf.placeholder(tf.string, shape=(None))
+            similarity_sentences_encodings = embed(similarity_input_placeholder)
+            with tf.Session() as session:
+                session.run(tf.global_variables_initializer())
+                session.run(tf.tables_initializer())
+                for p in self.paragraph_list:
+                    for s in p.sentence_list:
+                        if not s.text == "":
+                            sentences_embeddings = session.run(similarity_sentences_encodings,
+                                                               feed_dict={similarity_input_placeholder: sent_tokenize(s.text)})
+                            self.aux_lists['sentences_in_paragraph_token_list'].append(sentences_embeddings)
+                        # self.aux_lists['paragraph_token_list'] = session.run(similarity_sentences_encodings, feed_dict={
+                        #     similarity_input_placeholder: paragraphs})
         for p in self.paragraph_list:
             self.aux_lists['sentences_per_paragraph'].append(len(p.sentence_list))  # [1,2,1,...]
             for s in p.sentence_list:
@@ -724,8 +761,8 @@ class Document:
                         dependency_tree[w.governor].append(w.index)
                         #word frequency
                         if (not len(w.text) == 1 or w.text.isalpha()) and not w.is_num():
-                            if Connectives.lang.lower() == "spanish" or Connectives.lang.lower() == "english":
-                                if Connectives.lang.lower() == "spanish":
+                            if self.language == "spanish" or self.language == "english":
+                                if self.language == "spanish":
                                     wordfrequency = zipf_frequency(w.text, 'es')
                                 else:
                                     wordfrequency = zipf_frequency(w.text, 'en')
@@ -747,7 +784,7 @@ class Document:
                                         self.aux_lists['different_lexic_words'].append(w.text.lower())
                                         if wordfrequency <= 4:
                                             i['num_dif_rare_words_4'] += 1
-                            elif Connectives.lang.lower() == "basque":
+                            elif self.language == "basque":
                                 if w.text in Maiztasuna.freq_list:
                                     wordfrequency = Maiztasuna.freq_list[w.text]
                                     wordfreq_list.append(int(wordfrequency))
@@ -930,7 +967,7 @@ class Document:
         i['sentences_length_no_stopwords_mean'] = round(
             float(np.mean(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_mean'] = round(float(np.mean(self.aux_lists['words_length_no_stopwords_list'])), 4)
-        if Connectives.lang.lower() == "basque":
+        if self.language == "basque":
             i['mean_rare_34'] = round(((100 * i['num_rare_words_34']) / i['num_lexic_words']), 4)
             i['mean_distinct_rare_34'] = round((100 * i['num_dif_rare_words_34']) / len(self.aux_lists['different_lexic_words']), 4)
         else:
@@ -988,7 +1025,7 @@ class Document:
         i['order_connectives_incidence'] = self.get_incidence(i['order_connectives'], n)
         i['reference_connectives_incidence'] = self.get_incidence(i['reference_connectives'], n)
         i['summary_connectives_incidence'] = self.get_incidence(i['summary_connectives'], n)
-        if Connectives.lang.lower() == "basque":
+        if self.language == "basque":
             i['num_rare_nouns_34_incidence'] = self.get_incidence(i['num_rare_nouns_34'], n)
             i['num_rare_adj_34_incidence'] = self.get_incidence(i['num_rare_adj_34'], n)
             i['num_rare_verbs_34_incidence'] = self.get_incidence(i['num_rare_verbs_34'], n)
@@ -1546,11 +1583,11 @@ class Connectives():
         Connectives.lang = language
 
     def load(self):
-        if Connectives.lang.lower() == "spanish":
+        if self.lang == "spanish":
             f = open('data/es/conectores.txt', 'r')
-        if Connectives.lang.lower() == "english":
+        if self.lang == "english":
             f = open('data/en/connectives.txt', 'r')
-        if Connectives.lang.lower() == "basque":
+        if self.lang == "basque":
             f = open('data/eu/connectives_eu.txt', 'r')
         lineas = f.readlines()
         aux = self.temporal
@@ -1603,8 +1640,9 @@ class Irregularverbs:
 
 class Printer:
 
-    def __init__(self, indicators):
+    def __init__(self, indicators, language):
         self.indicators = indicators
+        self.language = language
 
     def print_info(self):
         i = self.indicators
@@ -1737,7 +1775,7 @@ class Printer:
             "Incidence score of pronouns in third person (per 1000 words): " + str(i['num_third_pers_pron_incidence']))
 
         print('Minimum word frequency per sentence (mean): ' + str(i['min_wf_per_sentence']))
-        if Connectives.lang.lower() == "basque":
+        if self.language == "basque":
             print('Number of rare nouns (wordfrecuency<=34): ' + str(i['num_rare_nouns_34']))
             print('Number of rare nouns (wordfrecuency<=34) (incidence per 1000 words): ' + str(
                 i['num_rare_nouns_34_incidence']))
@@ -1886,13 +1924,13 @@ class Printer:
         print('Temporal connectives (incidence per 1000 words):  ' + str(i['temporal_connectives_incidence']))
         print('Conditional connectives: ' + str(i['conditional_connectives']))
         print('Conditional connectives (incidence per 1000 words): ' + str(i['conditional_connectives_incidence']))
-        if Connectives.lang.lower() == "english" or Connectives.lang.lower() == "basque":
+        if self.language == "english" or self.language == "basque":
             print('Logical connectives:  ' + str(i['logical_connectives']))
             print('Logical connectives (incidence per 1000 words):  ' + str(i['logical_connectives_incidence']))
             print('Adversative/contrastive connectives: ' + str(i['adversative_connectives']))
             print('Adversative/contrastive connectives (incidence per 1000 words): ' + str(
                 i['adversative_connectives_incidence']))
-        if Connectives.lang.lower() == "spanish":
+        if self.language == "spanish":
             print('Adition connectives:  ' + str(i['addition_connectives']))
             print('Adition connectives (incidence per 1000 words):  ' + str(i['addition_connectives_incidence']))
             print('Consequence connectives: ' + str(i['consequence_connectives']))
@@ -2218,7 +2256,9 @@ class Printer:
         df_new = pd.DataFrame([indicators_dict], columns=indicators_dict.keys())
         #print(df_new)->  num_words  num_paragraphs  num_sentences
                    #0        100             1            13
-        #dataframe=dataframe+newdataframe
+        #Replace all NaN elements with 0s.
+        df_new.fillna(0)
+        # dataframe=dataframe+newdataframe
         df = pd.concat([df, df_new], sort=False)
         return df
     @staticmethod
@@ -2262,6 +2302,28 @@ class Stopwords:
             Stopwords.stop_words = stopwords.words('spanish')
         if self.lang == "basque":
             Stopwords.stop_words = set(line.strip() for line in open('data/eu/stopwords_formaketakonektoreak.txt'))
+
+
+class Predictor:
+    def __init__(self, language):
+        self.lang = language
+        self.clf = None
+        self.selector = None
+    def load(self):
+        if self.lang == "english":
+            # Para cargarlo, simplemente hacer lo siguiente:
+            self.clf = joblib.load('./corpus/en/dataset_aztertest_full/classifier_aztertest_best.pkl')
+            with open("./corpus/en/dataset_aztertest_full/selectorAztertestFullBest.pickle", "rb") as f:
+                self.selector = pickle.load(f)
+    def predict_dificulty(self,data):
+        feature_names = data.columns.tolist()
+        X_test = data[feature_names]
+        # Para cargarlo, simplemente hacer lo siguiente:
+        # se aplica el selector de atributos a los datos mediante el método transform()
+        X_test_new = self.selector.transform(X_test)
+        # y se realiza la predicción utilizando el método predict()
+        return self.clf.predict(X_test_new)
+
 
 class NLPCharger:
 
@@ -2422,7 +2484,7 @@ class NLPCharger:
 
     def adapt_nlp_model(self):
         ma = ModelAdapter(self.parser, self.lib)
-        return ma.model_analysis(self.textwithparagraphs)
+        return ma.model_analysis(self.textwithparagraphs, self.lang)
 
 
 
@@ -2528,7 +2590,8 @@ class Main(object):
         #model = opts.model
         model = "stanford"
         print("model:", str(model))
-        similarity = opts.similarity
+        #similarity = opts.similarity
+        similarity = False
         print("similarity:", str(similarity))
         csv = opts.csv
         print("csv:", str(csv))
@@ -2556,13 +2619,17 @@ class Main(object):
 
         # Load Pronouncing Dictionary
         prondic = Pronouncing(language)
-        if not language.lower() == "english":
+        if not language == "english":
             prondic.load("")
 
         # Carga del modelo Stanford/NLPCube
-        cargador = NLPCharger(language, model,directory)
+        cargador = NLPCharger(language, model, directory)
         cargador.download_model()
         cargador.load_model()
+
+        # Predictor
+        predictor = Predictor(language)
+        predictor.load()
 
         files = opts.files
 
@@ -2591,10 +2658,11 @@ class Main(object):
 
             # Get indicators
             document = cargador.get_estructure(text)
-            indicators = document.get_indicators()
-            printer = Printer(indicators)
+            indicators = document.get_indicators(similarity)
+            df = document.create_dataframe()
+            # level = predictor.predict_dificulty(df)
+            printer = Printer(indicators, language)
             printer.print_info()
-
             #printer.generate_csv(path, input, similarity)  # path, prediction, opts.similarity)
         #     if csv:
         #         df_row = printer.write_in_full_csv(df_row, similarity, language, ratios)
