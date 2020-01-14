@@ -64,7 +64,7 @@ class ModelAdapter:
                             w.governor = word.governor
                             w.dependency_relation = word.dependency_relation
                             s.word_list.append(w)
-                            #print(str(w.index) + "\t" + w.text + "\t" + w.lemma + "\t" + w.upos + "\t" + w.xpos + "\t" + w.feats + "\t" + str(w.governor) + "\t" + str(w.dependency_relation) +"\t")
+                            print(str(w.index) + "\t" + w.text + "\t" + w.lemma + "\t" + w.upos + "\t" + w.xpos + "\t" + w.feats + "\t" + str(w.governor) + "\t" + str(w.dependency_relation) +"\t")
                         p.sentence_list.append(s)  # ->paragraph.append(s)
                     d.paragraph_list.append(p)  # ->data.append(paragraph)
 
@@ -289,37 +289,44 @@ class Document:
         if not tree[root]:
             return 1
 
-    # def mtld(self, filtered_words):
-    #     ttr_threshold = 0.72
-    #     ttr = 1.0
-    #     word_count = 0
-    #     fragments = 0.0
-    #     dif_words = []
-    #
-    #     for i, word in enumerate(filtered_words):
-    #         word = word.lower()
-    #         word_count += 1
-    #         if word not in dif_words:
-    #             dif_words.append(word)
-    #         ttr = self.calculate_simple_ttr(dif_words, word_count)
-    #         if ttr <= ttr_threshold:
-    #             fragments += 1
-    #             word_count = 0
-    #             dif_words.clear()
-    #             ttr = 1.0
-    #         elif i == len(filtered_words) - 1:
-    #             residual = (1.0 - ttr) / (1.0 - ttr_threshold)
-    #             fragments += residual
-    #
-    #     if fragments != 0:
-    #         return len(filtered_words) / fragments
-    #     else:
-    #         return 0
-    #
-    # def calculate_mtld(self):
-    #     not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
-    #     filtered_words = list(filter(not_punctuation, word_tokenize(self.text)))
-    #     self.indicators['mtld'] = round((self.mtld(filtered_words) + self.mtld(filtered_words[::-1])) / 2, 4)
+    def mtld(self, filtered_words):
+        ttr_threshold = 0.72
+        ttr = 1.0
+        word_count = 0
+        fragments = 0.0
+        dif_words = []
+
+        for i, word in enumerate(filtered_words):
+            word = word.lower()
+            word_count += 1
+            if word not in dif_words:
+                dif_words.append(word)
+            ttr = self.calculate_simple_ttr(dif_words, word_count)
+            if ttr <= ttr_threshold:
+                fragments += 1
+                word_count = 0
+                dif_words.clear()
+                ttr = 1.0
+            elif i == len(filtered_words) - 1:
+                residual = (1.0 - ttr) / (1.0 - ttr_threshold)
+                fragments += residual
+
+        if fragments != 0:
+            return len(filtered_words) / fragments
+        else:
+            return 0
+
+    def calculate_mtld(self):
+        not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
+        filtered_words = list(filter(not_punctuation, word_tokenize(self.text)))
+        self.indicators['mtld'] = round((self.mtld(filtered_words) + self.mtld(filtered_words[::-1])) / 2, 4)
+
+    # SMOG=1,0430*SQRT(30*totalcomplex/totalsentences)+3,1291 (total polysyllables --> con mas de 3 silabas)
+    def calculate_smog(self):
+        i = self.indicators
+        ts = i['num_sentences']
+        tps = i['num_words_more_3_syl']
+        self.indicators['smog'] = round(1.0430 * math.sqrt(30 * tps / ts) + 3.1291, 4)
 
     def get_num_hapax_legomena(self):
         num_hapax_legonema = 0
@@ -837,6 +844,8 @@ class Document:
                                         i['num_past_irregular'] += 1
                                 if w.is_present():
                                     i['num_pres'] += 1
+                                if w.is_future(s):
+                                    i['num_future'] += 1
                                 if w.is_indicative():
                                     i['num_indic'] += 1
                                 if w.is_gerund():
@@ -867,6 +876,8 @@ class Document:
                             i['num_words_with_punct'] += 1
                             if w.is_proposition():
                                i['prop'] += 1
+                            if w.has_more_than_three_syllables():
+                                i['num_words_more_3_syl'] += 1
                             if (w.is_lexic_word(s)):
                                 i['num_lexic_words'] += 1
                                 if wn.synsets(w.text):
@@ -931,7 +942,7 @@ class Document:
         i['num_modifiers_noun_phrase'] = round(float(np.mean(modifiers_per_np)), 4)
         self.calculate_phrases(num_vp_list, num_np_list)
         self.calculate_mean_depth_per_sentence(depth_list)
-        #self.calculate_mtld()
+        self.calculate_mtld()
         self.calculate_readability()
         self.calculate_connectives()
         # self.get_syllable_list()
@@ -2627,8 +2638,8 @@ class Main(object):
         cargador.load_model()
 
         # Predictor
-        predictor = Predictor(language)
-        predictor.load()
+        # predictor = Predictor(language)
+        # predictor.load()
 
         files = opts.files
 
