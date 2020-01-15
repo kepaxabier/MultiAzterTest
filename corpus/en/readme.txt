@@ -16,5 +16,5 @@ Poder comparar con otros sistemas, no dependiendo de la aleatoriedad.
 cleaned_and_withoutfirstrow-> Train- El resto 152 ficheros siguientes en Train.
                               Test -para que metas en Test los 37 primeros ficheros alfabéticos de los 3 niveles=los primeros 111 ficheros en orden alfabético 
 
-De corpus/en/cleaned_and_withoutfirstrow/[Test|Train]/*.txt se copian a corpus/en/[Test|Train]/[Adv-Txt|Ele-Txt|Int-Txt]/*.txt 
+De corpus/en/3levels/cleaned_and_withoutfirstrow/[Test|Train]/*.txt se copian a corpus/en/3levels/[Test|Train]/[Adv-Txt|Ele-Txt|Int-Txt]/*.txt 
 
