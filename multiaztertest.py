@@ -2645,7 +2645,7 @@ class Main(object):
         print("csv:", str(csv))
         ratios = opts.ratios
         print("ratios:", str(ratios))
-        directory = "J:\TextSimilarity"
+        directory = "/home/edercarbajo"
         # directory = "J:\TextSimilarity"
 
         # Carga wordfrequency euskara
@@ -2669,8 +2669,7 @@ class Main(object):
 
         # Load Pronouncing Dictionary
         prondic = Pronouncing(language)
-        if not language == "english":
-            prondic.load("")
+        prondic.load("")
 
         # Carga del modelo Stanford/NLPCube
         cargador = NLPCharger(language, model, directory)
@@ -2688,7 +2687,7 @@ class Main(object):
         #    FileLoader.files = args
         #    print("Parametros: " + str(FileLoader.files))
 
-        files = ["euskaratestua.txt"] #euskaratestua
+        files = ["euskaratestua.txt"] #euskaratestua Loterry-adv
         print("Files:" + str(files))
         ### Files will be created in this folder
         path = Printer.create_directory(files[0])
