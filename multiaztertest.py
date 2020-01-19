@@ -25,7 +25,8 @@ import pickle
 from sklearn.externals import joblib
 ####Google Universal Encoder utiliza Tensorflow
 ## Importar tensorflow
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 ## Desactivar mensajes de tensorflow
 import tensorflow_hub as hub
 #import tensorflow_text
@@ -944,9 +945,8 @@ class Document:
         self.calculate_mtld()
         self.calculate_readability()
         self.calculate_connectives()
-        # self.get_syllable_list()
         i['min_wf_per_sentence'] = round(float(np.mean(min_wordfreq_list)), 4)
-        # self.get_syllable_list(text_without_punctuation)
+        self.get_syllable_list(text_without_punctuation)
         if similarity:
             self.calculate_similarity_adjacent_sentences()
 
@@ -986,6 +986,7 @@ class Document:
         i['sentences_length_mean'] = round(float(np.mean(self.aux_lists['sentences_length_mean'])), 4)
         i['words_length_mean'] = round(float(np.mean(self.aux_lists['words_length_list'])), 4)
         i['lemmas_length_mean'] = round(float(np.mean(self.aux_lists['lemmas_length_list'])), 4)
+        i['num_syllables_words_mean'] = round(float(np.mean(self.aux_lists['syllables_list'])), 4)
         i['mean_propositions_per_sentence'] = round(float(np.mean(self.aux_lists['prop_per_sentence'])), 4)
         i['num_punct_marks_per_sentence'] = round(float(np.mean(self.aux_lists['punct_per_sentence'])), 4)
         i['polysemic_index'] = round(float(np.mean(self.aux_lists['ambiguity_content_words_list'])), 4)
@@ -1010,6 +1011,7 @@ class Document:
         i['sentences_length_std'] = round(float(np.std(self.aux_lists['sentences_length_mean'])), 4)
         i['words_length_std'] = round(float(np.std(self.aux_lists['words_length_list'])), 4)
         i['lemmas_length_std'] = round(float(np.std(self.aux_lists['lemmas_length_list'])), 4)
+        i['num_syllables_words_std'] = round(float(np.std(self.aux_lists['syllables_list'])), 4)
         i['sentences_length_no_stopwords_std'] = round(
             float(np.std(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_std'] = round(float(np.std(self.aux_lists['words_length_no_stopwords_list'])), 4)
@@ -1349,7 +1351,13 @@ class Word:
     def num_syllables(self):
         list = []
         max = 0
-        for x in Pronouncing.prondict[self.text.lower()]:
+        if Connectives.lang == "basque":
+            txt = self.text
+        else:
+            txt = self.text.lower()
+        for x in Pronouncing.prondict[txt]:
+            if Connectives.lang == "basque":
+                return int(x)
             tmp_list = []
             tmp_max = 0
             for y in x:
@@ -2563,15 +2571,15 @@ class Pronouncing:
 
             # Tratamos el fichero y guardamos en un diccionario cada palabra
             with open("docSilabas.txt", mode="r", encoding="utf-8") as f:
-                indice = 0
                 for linea in f:
-                    if not linea == "\n":
-                        s = linea.rstrip('\n')
-                        palabra_sin_puntos = s.replace('.', '')
+                    if not linea == '\n':
+                        str = linea.rstrip('\n')
+                        palabra_sin_puntos_rep = str.replace('.', '')     #[txakurra txakurra, ... , ...]
+                        line = palabra_sin_puntos_rep.split('\t')    #[ [txakurra, txakurra], [..,..], ...]
+                        palabra = line[0]
                         num_sil = []  # se crea para utilizar la misma estructura que cmudict.dict()
-                        num_sil.append(len(s.split('.')))
-                        Pronouncing.prondict[palabra_sin_puntos] = num_sil  # [txakurra] = 3
-                        indice += 1
+                        num_sil.append(len(str.split('.')))
+                        Pronouncing.prondict[palabra] = num_sil  # [txakurra] = 3
 
 
 "This is a Singleton class which is going to start necessary classes and methods."
@@ -2623,7 +2631,7 @@ class Main(object):
 
         languagelist = opts.language
         #language = languagelist[0]
-        language = "english"
+        language = "basque"
         print("language:", str(language))
         # language = "english"
         modellist = opts.model
@@ -2631,7 +2639,7 @@ class Main(object):
         model = "stanford"
         print("model:", str(model))
         #similarity = opts.similarity
-        similarity = True
+        similarity = False
         print("similarity:", str(similarity))
         csv = opts.csv
         print("csv:", str(csv))
@@ -2680,7 +2688,7 @@ class Main(object):
         #    FileLoader.files = args
         #    print("Parametros: " + str(FileLoader.files))
 
-        files = ["Loterry-adv.txt"] #euskaratestua
+        files = ["euskaratestua.txt"] #euskaratestua
         print("Files:" + str(files))
         ### Files will be created in this folder
         path = Printer.create_directory(files[0])
