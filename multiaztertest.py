@@ -25,11 +25,10 @@ import pickle
 from sklearn.externals import joblib
 ####Google Universal Encoder utiliza Tensorflow
 ## Importar tensorflow
-import tensorflow.compat.v1 as tf
-
-tf.disable_v2_behavior()
+import tensorflow as tf
 ## Desactivar mensajes de tensorflow
 import tensorflow_hub as hub
+#import tensorflow_text
 
 
 class ModelAdapter:
@@ -46,6 +45,7 @@ class ModelAdapter:
             lines = text.split('@')
             for line in lines:  # paragraph
                 p = Paragraph()  # -> paragraph = []
+                p.text = line
                 if not line.strip() == '':
                     doc = self.model(line)
                     for sent in doc.sentences:
@@ -74,6 +74,7 @@ class ModelAdapter:
             lines = text.split('@')
             for line in lines:
                 p = Paragraph()  # -> paragraph = []
+                p.text = line
                 if not line.strip() == '':
                     sequences = self.model(line)
                     for seq in sequences:
@@ -723,7 +724,7 @@ class Document:
         if similarity:
             print("similarity")
             # Preparar Google Universal Sentence Encoder
-            module_url = "https://tfhub.dev/google/universal-sentence-encoder-large/5"
+            module_url = "https://tfhub.dev/google/universal-sentence-encoder-multilingual/3"
             embed = hub.load(module_url)  # Utilizar KerasLayer o Module para TF2
             similarity_input_placeholder = tf.placeholder(tf.string, shape=(None))
             similarity_sentences_encodings = embed(similarity_input_placeholder)
@@ -737,8 +738,7 @@ class Document:
                                                                feed_dict={
                                                                    similarity_input_placeholder: sent_tokenize(s.text)})
                             self.aux_lists['sentences_in_paragraph_token_list'].append(sentences_embeddings)
-                        # self.aux_lists['paragraph_token_list'] = session.run(similarity_sentences_encodings, feed_dict={
-                        #     similarity_input_placeholder: paragraphs})
+                    self.aux_lists['paragraph_token_list'] = session.run(similarity_sentences_encodings, feed_dict={similarity_input_placeholder: sent_tokenize(p.text)})
         for p in self.paragraph_list:
             self.aux_lists['sentences_per_paragraph'].append(len(p.sentence_list))  # [1,2,1,...]
             for s in p.sentence_list:
@@ -946,8 +946,26 @@ class Document:
         self.calculate_connectives()
         # self.get_syllable_list()
         i['min_wf_per_sentence'] = round(float(np.mean(min_wordfreq_list)), 4)
-
         # self.get_syllable_list(text_without_punctuation)
+        if similarity:
+            self.calculate_similarity_adjacent_sentences()
+
+    def calculate_similarity_adjacent_sentences(self):
+        i = self.indicators
+        adjacent_similarity_list = []
+        for sentence in self.aux_lists['sentences_in_paragraph_token_list']:
+            if len(sentence) > 1:
+                for x, y in zip(range(0, len(sentence) - 1), range(1, len(sentence))):
+                    adjacent_similarity_list.append(self.calculate_similarity(sentence[x], sentence[y]))
+            else:
+                adjacent_similarity_list.append(0)
+        if len(adjacent_similarity_list) > 0:
+            i['similarity_adjacent_mean'] = round(float(np.mean(adjacent_similarity_list)), 4)
+            i['similarity_adjacent_std'] = round(float(np.std(adjacent_similarity_list)), 4)
+
+    # Este metodo devuelve la similitud calculada mediante Google Sentence Encoder
+    def calculate_similarity(self, sentence1, sentence2):
+        return np.inner(sentence1, sentence2)
 
     # List of syllables of each word. This will be used to calculate mean/std dev of syllables.
     def get_syllable_list(self, text_without_punctuation):
@@ -1085,6 +1103,7 @@ class Paragraph:
 
     def __init__(self):
         self._sentence_list = []
+        self.text = None
 
     @property
     def sentence_list(self):
@@ -1644,9 +1663,10 @@ class Irregularverbs:
 
 class Printer:
 
-    def __init__(self, indicators, language):
+    def __init__(self, indicators, language, similarity):
         self.indicators = indicators
         self.language = language
+        self.similarity = similarity
 
     def print_info(self):
         i = self.indicators
@@ -1952,6 +1972,14 @@ class Printer:
             print('Reference connectives (incidence per 1000 words):  ' + str(i['reference_connectives_incidence']))
             print('Summary connectives: ' + str(i['summary_connectives']))
             print('Summary connectives (incidence per 1000 words): ' + str(i['summary_connectives_incidence']))
+        if self.similarity:
+            print('Semantic Similarity between adjacent sentences (mean): ' + str(i['similarity_adjacent_mean']))
+            print('Semantic Similarity between all possible pairs of sentences in a paragraph (mean): ' + str(i['similarity_pairs_par_mean']))
+            print('Semantic Similarity between adjacent paragraphs (mean): ' + str(i['similarity_adjacent_par_mean']))
+            print('Semantic Similarity between adjacent sentences (standard deviation): ' + str(i['similarity_adjacent_std']))
+            print('Semantic Similarity between all possible pairs of sentences in a paragraph (standard deviation): ' + str(i['similarity_pairs_par_std']))
+            print('Semantic Similarity between adjacent paragraphs (standard deviation): ' + str(i['similarity_adjacent_par_std']))
+
 
     # genera el fichero X.out.csv, MERECE LA PENA POR IDIOMA
     def generate_csv(self, csv_path, input, similarity):  # , csv_path, prediction, similarity):
@@ -2595,14 +2623,15 @@ class Main(object):
 
         languagelist = opts.language
         #language = languagelist[0]
-        language = "basque"
+        language = "english"
         print("language:", str(language))
         # language = "english"
         modellist = opts.model
         #model = modellist[0]
         model = "stanford"
         print("model:", str(model))
-        similarity = opts.similarity
+        #similarity = opts.similarity
+        similarity = True
         print("similarity:", str(similarity))
         csv = opts.csv
         print("csv:", str(csv))
@@ -2641,8 +2670,8 @@ class Main(object):
         cargador.load_model()
 
         # Predictor
-        predictor = Predictor(language)
-        predictor.load()
+        #predictor = Predictor(language)
+        #predictor.load()
 
         files = opts.files
 
@@ -2651,7 +2680,7 @@ class Main(object):
         #    FileLoader.files = args
         #    print("Parametros: " + str(FileLoader.files))
 
-        files = ["euskaratestua.txt"] #euskaratestua
+        files = ["Loterry-adv.txt"] #euskaratestua
         print("Files:" + str(files))
         ### Files will be created in this folder
         path = Printer.create_directory(files[0])
@@ -2671,7 +2700,7 @@ class Main(object):
             # Get indicators
             document = cargador.get_estructure(text)
             indicators = document.get_indicators(similarity)
-            printer = Printer(indicators, language)
+            printer = Printer(indicators, language, similarity)
             printer.print_info()
             printer.generate_csv(path, input, similarity)  # path, prediction, opts.similarity)
             if csv:
