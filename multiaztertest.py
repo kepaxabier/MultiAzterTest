@@ -2,6 +2,7 @@
 # coding: utf-8
 
 # In[29]:
+import math
 import os
 import subprocess
 import sys
@@ -618,10 +619,11 @@ class Document:
 
     def flesch_kincaid(self):
         sentences = float(self.indicators['num_sentences'])
-        syllables = float(len(self.aux_lists['syllabes_list']))
+        syllables = float(len(self.aux_lists['syllables_list']))
         words = float(self.indicators['num_words'])
         fk = 0.39 * words / sentences + 11.8 * syllables / words - 15.59
-        if fk >= 0: self.indicators['flesch_kincaid'] = round(fk, 4)
+        if fk >= 0:
+            self.indicators['flesch_kincaid'] = round(fk, 4)
 
     def calculate_dale_chall(self):
         sentences = self.indicators['num_sentences']
@@ -934,6 +936,7 @@ class Document:
             i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
         except ZeroDivisionError:
             i['num_decendents_noun_phrase'] = 0
+        self.get_syllable_list(text_without_punctuation)
         i['num_different_forms'] = len(self.aux_lists['different_forms'])
         self.indicators['left_embeddedness'] = round(float(np.mean(self.aux_lists['left_embeddedness'])), 4)
         self.calculate_honore()
@@ -943,10 +946,10 @@ class Document:
         self.calculate_phrases(num_vp_list, num_np_list)
         self.calculate_mean_depth_per_sentence(depth_list)
         self.calculate_mtld()
+        self.calculate_smog()
         self.calculate_readability()
         self.calculate_connectives()
         i['min_wf_per_sentence'] = round(float(np.mean(min_wordfreq_list)), 4)
-        self.get_syllable_list(text_without_punctuation)
         if similarity:
             self.calculate_similarity_adjacent_sentences()
 
