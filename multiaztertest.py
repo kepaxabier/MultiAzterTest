@@ -2,6 +2,7 @@
 # coding: utf-8
 
 # In[29]:
+import math
 import os
 import subprocess
 import sys
@@ -29,6 +30,7 @@ import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 ## Desactivar mensajes de tensorflow
 import tensorflow_hub as hub
+#import tensorflow_text
 
 
 class ModelAdapter:
@@ -45,12 +47,13 @@ class ModelAdapter:
             lines = text.split('@')
             for line in lines:  # paragraph
                 p = Paragraph()  # -> paragraph = []
+                p.text = line
                 if not line.strip() == '':
                     doc = self.model(line)
                     for sent in doc.sentences:
                         s = Sentence()
                         sequence = self.sent2sequenceStanford(sent)
-                        #print(sequence)
+                        # print(sequence)
                         s.text = sequence
                         for word in sent.words:
                             # Por cada palabra de cada sentencia, creamos un objeto Word que contendra los attrs
@@ -64,7 +67,7 @@ class ModelAdapter:
                             w.governor = word.governor
                             w.dependency_relation = word.dependency_relation
                             s.word_list.append(w)
-                            #print(str(w.index) + "\t" + w.text + "\t" + w.lemma + "\t" + w.upos + "\t" + w.xpos + "\t" + w.feats + "\t" + str(w.governor) + "\t" + str(w.dependency_relation) +"\t")
+                            # print(str(w.index) + "\t" + w.text + "\t" + w.lemma + "\t" + w.upos + "\t" + w.xpos + "\t" + w.feats + "\t" + str(w.governor) + "\t" + str(w.dependency_relation) +"\t")
                         p.sentence_list.append(s)  # ->paragraph.append(s)
                     d.paragraph_list.append(p)  # ->data.append(paragraph)
 
@@ -73,6 +76,7 @@ class ModelAdapter:
             lines = text.split('@')
             for line in lines:
                 p = Paragraph()  # -> paragraph = []
+                p.text = line
                 if not line.strip() == '':
                     sequences = self.model(line)
                     for seq in sequences:
@@ -149,7 +153,6 @@ class Document:
         self.calculate_density()
         self.calculate_all_overlaps()
         return self.indicators
-
 
     def create_dataframe(self):
         i = self.indicators
@@ -314,10 +317,11 @@ class Document:
             return len(filtered_words) / fragments
         else:
             return 0
+
     def calculate_mtld(self):
-         not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
-         filtered_words = list(filter(not_punctuation, word_tokenize(self.text)))
-         self.indicators['mtld'] = round((self.mtld(filtered_words) + self.mtld(filtered_words[::-1])) / 2, 4)
+        not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
+        filtered_words = list(filter(not_punctuation, word_tokenize(self.text)))
+        self.indicators['mtld'] = round((self.mtld(filtered_words) + self.mtld(filtered_words[::-1])) / 2, 4)
 
     # SMOG=1,0430*SQRT(30*totalcomplex/totalsentences)+3,1291 (total polysyllables --> con mas de 3 silabas)
     def calculate_smog(self):
@@ -376,11 +380,11 @@ class Document:
                     sentence1 = []
                     sentence2 = []
                     for entry1 in x[0].word_list:
-                        #values1 = entry1.split("\t")
+                        # values1 = entry1.split("\t")
                         if entry1.is_noun():
                             sentence1.append(entry1.text.lower())
                     for entry2 in x[1].word_list:
-                        #values2 = entry2.split("\t")
+                        # values2 = entry2.split("\t")
                         if entry2.is_noun():
                             sentence2.append(entry2.text.lower())
                     # nombres en comun entre sentence1 y sentence2
@@ -408,11 +412,11 @@ class Document:
                     sentence1 = []
                     sentence2 = []
                     for entry1 in x.word_list:
-                        #values1 = entry1.split("\t")
+                        # values1 = entry1.split("\t")
                         if entry1.is_noun():
                             sentence1.append(entry1.text.lower())
                     for entry2 in y.word_list:
-                        #values2 = entry2.split("\t")
+                        # values2 = entry2.split("\t")
                         if entry2.is_noun():
                             sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
@@ -422,7 +426,6 @@ class Document:
                         all_noun_overlap_list.append(0)
         if len(all_noun_overlap_list) > 0:
             i['noun_overlap_all'] = round(float(np.mean(all_noun_overlap_list)), 4)
-
 
     # Argument overlap measure is binary (there either is or is not any overlap between a pair of adjacent
     # sentences in a text ). Argument overlap measures the proportion of sentences in a text for which there are overlapping the
@@ -611,15 +614,38 @@ class Document:
         sentences = float(self.indicators['num_sentences'])
         syllables = float(len(self.aux_lists['syllabes_list']))
         words = float(self.indicators['num_words'])
-        flesch = 206.835 - 1.015 * (words / sentences) - 84.6 * (syllables / words)
+        # ranking scale of 0-100
+        # For most business writing, a score of 65 is a good target, and scores between 60 and 80 should generally
+        # be understood by 12 to 15 year olds.
+        if self.language == "english":
+            # formula= 206.835 - 1.015 x (words/sentences) - 84.6 x (syllables/words)
+            flesch = 206.835 - 1.015 * (words / sentences) - 84.6 * (syllables / words)
+        if self.language == "spanish":
+            # Flesh=206.84 -60 * P - 1,02 F donde  P, el promedio de sílabas por palabra; F, la media de palabras por frase.
+            flesch = 206.84 - 1.02 * (words / sentences) - 60 * (syllables / words)
         if flesch >= 0: self.indicators['flesch'] = round(flesch, 4)
 
     def flesch_kincaid(self):
         sentences = float(self.indicators['num_sentences'])
         syllables = float(len(self.aux_lists['syllabes_list']))
         words = float(self.indicators['num_words'])
+        # Flesch-Kincaid grade level formula = 0.39 x (words/sentences) + 11.8 x (syllables/words) - 15.59.
+        # Years:American School Grade:European School Grade
+        # 6-7:1:LH1
+        # 7-8:2:LH2
+        # 8-9:3:LH3
+        # 9-10:4:LH4
+        # 10-11:5:LH5
+        # 11-12:6:LH6
+        # 12-13:7:DBH1
+        # 13-14:8:DBH2
+        # 14-15:9:DBH3
+        # 15-16:10:DBH4
+        # 16-17:11:bachiller1
+        # 17-18:12:bachiller2
         fk = 0.39 * words / sentences + 11.8 * syllables / words - 15.59
-        if fk >= 0: self.indicators['flesch_kincaid'] = round(fk, 4)
+        if fk >= 0:
+            self.indicators['flesch_kincaid'] = round(fk, 4)
 
     def calculate_dale_chall(self):
         sentences = self.indicators['num_sentences']
@@ -710,21 +736,21 @@ class Document:
     def calculate_all_numbers(self, similarity):
         i = self.indicators
         i['num_paragraphs'] = len(self._paragraph_list)
-        #i['num_words'] = 0
-        #i['num_sentences'] = 0
+        # i['num_words'] = 0
+        # i['num_sentences'] = 0
         num_np_list = []
         num_vp_list = []
         modifiers_per_np = []
         depth_list = []
         min_wordfreq_list = []
-        #subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
+        # subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
         decendents_total = 0
         text_without_punctuation = []
         if similarity:
             print("similarity")
             # Preparar Google Universal Sentence Encoder
-            module_url = "https://tfhub.dev/google/universal-sentence-encoder-large/5"
-            embed = hub.load(module_url)  #Utilizar KerasLayer o Module para TF2
+            module_url = "https://tfhub.dev/google/universal-sentence-encoder-multilingual/3"
+            embed = hub.load(module_url)  # Utilizar KerasLayer o Module para TF2
             similarity_input_placeholder = tf.placeholder(tf.string, shape=(None))
             similarity_sentences_encodings = embed(similarity_input_placeholder)
             with tf.Session() as session:
@@ -734,10 +760,10 @@ class Document:
                     for s in p.sentence_list:
                         if not s.text == "":
                             sentences_embeddings = session.run(similarity_sentences_encodings,
-                                                               feed_dict={similarity_input_placeholder: sent_tokenize(s.text)})
+                                                               feed_dict={
+                                                                   similarity_input_placeholder: sent_tokenize(s.text)})
                             self.aux_lists['sentences_in_paragraph_token_list'].append(sentences_embeddings)
-                        # self.aux_lists['paragraph_token_list'] = session.run(similarity_sentences_encodings, feed_dict={
-                        #     similarity_input_placeholder: paragraphs})
+                    self.aux_lists['paragraph_token_list'] = session.run(similarity_sentences_encodings, feed_dict={similarity_input_placeholder: sent_tokenize(p.text)})
         for p in self.paragraph_list:
             self.aux_lists['sentences_per_paragraph'].append(len(p.sentence_list))  # [1,2,1,...]
             for s in p.sentence_list:
@@ -759,12 +785,12 @@ class Document:
                         if not w.is_punctuation():
                             i['num_words'] += 1
                             sum_s += 1
-                            #Obtenemos el numero de silabas de cada palabra
+                            # Obtenemos el numero de silabas de cada palabra
                             text_without_punctuation.append(w)
                         if w.governor == 0:
                             root = w.index
                         dependency_tree[w.governor].append(w.index)
-                        #word frequency
+                        # word frequency
                         if (not len(w.text) == 1 or w.text.isalpha()) and not w.is_num():
                             if self.language == "spanish" or self.language == "english":
                                 if self.language == "spanish":
@@ -873,7 +899,7 @@ class Document:
                                     i['num_rel_subord'] += 1
                             i['num_words_with_punct'] += 1
                             if w.is_proposition():
-                               i['prop'] += 1
+                                i['prop'] += 1
                             if w.has_more_than_three_syllables():
                                 i['num_words_more_3_syl'] += 1
                             if (w.is_lexic_word(s)):
@@ -932,6 +958,7 @@ class Document:
             i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
         except ZeroDivisionError:
             i['num_decendents_noun_phrase'] = 0
+        self.get_syllable_list(text_without_punctuation)
         i['num_different_forms'] = len(self.aux_lists['different_forms'])
         self.indicators['left_embeddedness'] = round(float(np.mean(self.aux_lists['left_embeddedness'])), 4)
         self.calculate_honore()
@@ -941,21 +968,38 @@ class Document:
         self.calculate_phrases(num_vp_list, num_np_list)
         self.calculate_mean_depth_per_sentence(depth_list)
         self.calculate_mtld()
+        self.calculate_smog()
         self.calculate_readability()
         self.calculate_connectives()
-        # self.get_syllable_list()
         i['min_wf_per_sentence'] = round(float(np.mean(min_wordfreq_list)), 4)
+        if similarity:
+            self.calculate_similarity_adjacent_sentences()
 
-        #self.get_syllable_list(text_without_punctuation)
+    def calculate_similarity_adjacent_sentences(self):
+        i = self.indicators
+        adjacent_similarity_list = []
+        for sentence in self.aux_lists['sentences_in_paragraph_token_list']:
+            if len(sentence) > 1:
+                for x, y in zip(range(0, len(sentence) - 1), range(1, len(sentence))):
+                    adjacent_similarity_list.append(self.calculate_similarity(sentence[x], sentence[y]))
+            else:
+                adjacent_similarity_list.append(0)
+        if len(adjacent_similarity_list) > 0:
+            i['similarity_adjacent_mean'] = round(float(np.mean(adjacent_similarity_list)), 4)
+            i['similarity_adjacent_std'] = round(float(np.std(adjacent_similarity_list)), 4)
 
-    #List of syllables of each word. This will be used to calculate mean/std dev of syllables.
+    # Este metodo devuelve la similitud calculada mediante Google Sentence Encoder
+    def calculate_similarity(self, sentence1, sentence2):
+        return np.inner(sentence1, sentence2)
+
+    # List of syllables of each word. This will be used to calculate mean/std dev of syllables.
     def get_syllable_list(self, text_without_punctuation):
-        #Si tiene contenido, significara que el lenguaje utilizado sera el ingles, si no, euskera
+        # Si tiene contenido, significara que el lenguaje utilizado sera el ingles, si no, euskera
         if len(Pronouncing.prondict) == 0:
             prondic = Pronouncing("basque")
             prondic.load(text_without_punctuation)
 
-        #Una vez cargado prondict, podemos realizar el proceso de obtener la lista de silabas
+        # Una vez cargado prondict, podemos realizar el proceso de obtener la lista de silabas
         list = []
         for word in text_without_punctuation:
             list.append(word.allnum_syllables())
@@ -967,6 +1011,7 @@ class Document:
         i['sentences_length_mean'] = round(float(np.mean(self.aux_lists['sentences_length_mean'])), 4)
         i['words_length_mean'] = round(float(np.mean(self.aux_lists['words_length_list'])), 4)
         i['lemmas_length_mean'] = round(float(np.mean(self.aux_lists['lemmas_length_list'])), 4)
+        i['num_syllables_words_mean'] = round(float(np.mean(self.aux_lists['syllables_list'])), 4)
         i['mean_propositions_per_sentence'] = round(float(np.mean(self.aux_lists['prop_per_sentence'])), 4)
         i['num_punct_marks_per_sentence'] = round(float(np.mean(self.aux_lists['punct_per_sentence'])), 4)
         i['polysemic_index'] = round(float(np.mean(self.aux_lists['ambiguity_content_words_list'])), 4)
@@ -978,10 +1023,12 @@ class Document:
         i['words_length_no_stopwords_mean'] = round(float(np.mean(self.aux_lists['words_length_no_stopwords_list'])), 4)
         if self.language == "basque":
             i['mean_rare_34'] = round(((100 * i['num_rare_words_34']) / i['num_lexic_words']), 4)
-            i['mean_distinct_rare_34'] = round((100 * i['num_dif_rare_words_34']) / len(self.aux_lists['different_lexic_words']), 4)
+            i['mean_distinct_rare_34'] = round(
+                (100 * i['num_dif_rare_words_34']) / len(self.aux_lists['different_lexic_words']), 4)
         else:
             i['mean_rare_4'] = round(((100 * i['num_rare_words_4']) / i['num_lexic_words']), 4)
-            i['mean_distinct_rare_4'] = round((100 * i['num_dif_rare_words_4']) / len(self.aux_lists['different_lexic_words']), 4)
+            i['mean_distinct_rare_4'] = round(
+                (100 * i['num_dif_rare_words_4']) / len(self.aux_lists['different_lexic_words']), 4)
 
     def calculate_all_std_deviations(self):
         i = self.indicators
@@ -989,6 +1036,7 @@ class Document:
         i['sentences_length_std'] = round(float(np.std(self.aux_lists['sentences_length_mean'])), 4)
         i['words_length_std'] = round(float(np.std(self.aux_lists['words_length_list'])), 4)
         i['lemmas_length_std'] = round(float(np.std(self.aux_lists['lemmas_length_list'])), 4)
+        i['num_syllables_words_std'] = round(float(np.std(self.aux_lists['syllables_list'])), 4)
         i['sentences_length_no_stopwords_std'] = round(
             float(np.std(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_std'] = round(float(np.std(self.aux_lists['words_length_no_stopwords_list'])), 4)
@@ -1082,6 +1130,7 @@ class Paragraph:
 
     def __init__(self):
         self._sentence_list = []
+        self.text = None
 
     @property
     def sentence_list(self):
@@ -1296,9 +1345,8 @@ class Word:
                                                     'det', 'clf',
                                                     'case'] else False
 
-
     def is_personal_pronoun(self):
-        atributos =self.feats.split('|')
+        atributos = self.feats.split('|')
         if "PronType=Prs" in atributos:
             return True
         else:
@@ -1328,7 +1376,13 @@ class Word:
     def num_syllables(self):
         list = []
         max = 0
-        for x in Pronouncing.prondict[self.text.lower()]:
+        if Connectives.lang == "basque":
+            txt = self.text
+        else:
+            txt = self.text.lower()
+        for x in Pronouncing.prondict[txt]:
+            if Connectives.lang == "basque":
+                return int(x)
             tmp_list = []
             tmp_max = 0
             for y in x:
@@ -1402,7 +1456,6 @@ class Word:
         else:
             return False
 
-
     def is_present(self):
         atributos = self.feats.split('|')
         if "Tense=Pres" in atributos:
@@ -1450,7 +1503,7 @@ class Word:
             return False
 
     def is_proposition(self):
-        if self.dependency_relation == 'conj' or self.dependency_relation == 'csubj' or self.dependency_relation == 'csubj:pass' or\
+        if self.dependency_relation == 'conj' or self.dependency_relation == 'csubj' or self.dependency_relation == 'csubj:pass' or \
                 self.dependency_relation == 'ccomp' or self.dependency_relation == 'xcomp' or self.dependency_relation == 'advcl' or self.dependency_relation == 'acl' or self.dependency_relation == 'acl:relcl':
             return True
         else:
@@ -1458,7 +1511,7 @@ class Word:
 
     def is_subordinate(self):
         subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp',
-                                   'advcl', 'acl', 'acl:relcl']
+                               'advcl', 'acl', 'acl:relcl']
         return True if self.dependency_relation in subordinadas_labels else False
 
     def is_subordinate_relative(self):
@@ -1470,7 +1523,7 @@ class Word:
         return True if self.text.lower() in Stopwords.stop_words else False
 
     def is_punctuation(self):
-    # Punctuation marks are non-alphabetical characters and character groups used in many languages to delimit linguistic units in printed text.
+        # Punctuation marks are non-alphabetical characters and character groups used in many languages to delimit linguistic units in printed text.
         if self.upos == 'PUNCT':
             return True
         else:
@@ -1487,7 +1540,7 @@ class Word:
             return True
         else:
             return False
-        
+
     def is_noun(self):
         if self.upos == 'NOUN':
             return True
@@ -1527,14 +1580,12 @@ class Word:
 
 
 class Oxford():
-
     lang = ""
     a1 = defaultdict(dict)
     a2 = defaultdict(dict)
     b1 = defaultdict(dict)
     b2 = defaultdict(dict)
     c1 = defaultdict(dict)
-
 
     def __init__(self, language):
         Oxford.lang = language
@@ -1566,17 +1617,16 @@ class Oxford():
 
 
 class Connectives():
-
     connectives = []
     lang = ""
-    #en
+    # en
     logical = []
     adversative = []
-    #both
+    # both
     temporal = []
     causal = []
     conditional = []
-    #es
+    # es
     addition = []
     consequence = []
     purpose = []
@@ -1585,7 +1635,6 @@ class Connectives():
     order = []
     reference = []
     summary = []
-
 
     def __init__(self, language):
         Connectives.lang = language
@@ -1633,7 +1682,6 @@ class Connectives():
 
 
 class Irregularverbs:
-
     irregular_verbs = []
 
     def load(self):
@@ -1641,16 +1689,17 @@ class Irregularverbs:
         lineas = f.readlines()
         for linea in lineas:
             if not linea.startswith("//"):
-                #carga el verbo en presente, dejando pasado y preterito
+                # carga el verbo en presente, dejando pasado y preterito
                 Irregularverbs.irregular_verbs.append(linea.split()[0])
         f.close()
 
 
 class Printer:
 
-    def __init__(self, indicators, language):
+    def __init__(self, indicators, language, similarity):
         self.indicators = indicators
         self.language = language
+        self.similarity = similarity
 
     def print_info(self):
         i = self.indicators
@@ -1956,9 +2005,17 @@ class Printer:
             print('Reference connectives (incidence per 1000 words):  ' + str(i['reference_connectives_incidence']))
             print('Summary connectives: ' + str(i['summary_connectives']))
             print('Summary connectives (incidence per 1000 words): ' + str(i['summary_connectives_incidence']))
+        if self.similarity:
+            print('Semantic Similarity between adjacent sentences (mean): ' + str(i['similarity_adjacent_mean']))
+            print('Semantic Similarity between all possible pairs of sentences in a paragraph (mean): ' + str(i['similarity_pairs_par_mean']))
+            print('Semantic Similarity between adjacent paragraphs (mean): ' + str(i['similarity_adjacent_par_mean']))
+            print('Semantic Similarity between adjacent sentences (standard deviation): ' + str(i['similarity_adjacent_std']))
+            print('Semantic Similarity between all possible pairs of sentences in a paragraph (standard deviation): ' + str(i['similarity_pairs_par_std']))
+            print('Semantic Similarity between adjacent paragraphs (standard deviation): ' + str(i['similarity_adjacent_par_std']))
 
-# genera el fichero X.out.csv, MERECE LA PENA POR IDIOMA
-    def generate_csv(self,csv_path,input,similarity): #, csv_path, prediction, similarity):
+
+    # genera el fichero X.out.csv, MERECE LA PENA POR IDIOMA
+    def generate_csv(self, csv_path, input, similarity):  # , csv_path, prediction, similarity):
         i = self.indicators
         # kk=prediction
         # estadisticos
@@ -2213,39 +2270,43 @@ class Printer:
     # fichero csv para el aprendizaje automatico
     # ignore_list dauden ezaugarriak ez dira kontuan hartzen
     # concatena df=df+dfnew
-    def write_in_full_csv(self, df, similarity, language,ratios):
-        #Dictionaries (or dict in Python) are a way of storing elements
+    def write_in_full_csv(self, df, similarity, language, ratios):
+        # Dictionaries (or dict in Python) are a way of storing elements
         # in a Python list using its index:my_list = ['p','r','o','b','e'] Output: 'p' using index my_list[0]
         # in a Python dict using a fixed key:a = {'apple': 'fruit', 'cake': 'dessert'}; a['doughnut'] = 'snack';print(a['apple'])
-        #Keys must be unique, immutable objects, and are typically strings. The values in a dictionary can be anything. For many applications the values are simple types such as integers and strings.
-        #the values in a dictionary are collections (lists, dicts, etc.) In this case, the value (an empty list or dict) must be initialized the first time a given key is used. While this is relatively easy to do manually, the defaultdict type automates and simplifies these kinds of operations.
-        #from collections import defaultdict
-        #self.indicators=defaultdict(float) ## default value of float is 0.0
-        #self.indicators.items() ->
+        # Keys must be unique, immutable objects, and are typically strings. The values in a dictionary can be anything. For many applications the values are simple types such as integers and strings.
+        # the values in a dictionary are collections (lists, dicts, etc.) In this case, the value (an empty list or dict) must be initialized the first time a given key is used. While this is relatively easy to do manually, the defaultdict type automates and simplifies these kinds of operations.
+        # from collections import defaultdict
+        # self.indicators=defaultdict(float) ## default value of float is 0.0
+        # self.indicators.items() ->
         i = self.indicators
         indicators_dict = {}
         headers = []
-        #Anade en estas listas las que no quieras mostrar para todos los casos
+        # Anade en estas listas las que no quieras mostrar para todos los casos
         ignore_list = []
         # ignore language specific features
         ignore_list_eu = []
         ignore_list_es = []
         ignore_list_en = []
-        #ignore counters: only incidence, ratios, mean and std
+        # ignore counters: only incidence, ratios, mean and std
         ignore_list_counters = ['prop', 'num_complex_words', 'num_words_more_3_syl', 'num_words', 'num_different_forms',
-                       'num_words_with_punct', 'num_paragraphs', 'num_sentences', 'num_past', 'num_pres', 'num_future',
-                       'num_indic', 'num_impera', 'num_past_irregular', 'num_past_irregular_incidence',
-                       'num_personal_pronouns', 'num_first_pers_pron', 'num_first_pers_sing_pron',
-                       'num_third_pers_pron', 'num_rare_nouns_4', 'num_rare_adj_4', 'num_rare_verbs_4',
-                       'num_rare_advb_4', 'num_rare_words_4', 'num_rare_words_4_incidence', 'num_dif_rare_words_4',
-                       'num_dif_rare_words_4_incidence', 'num_a1_words', 'num_a2_words', 'num_b1_words', 'num_b2_words',
-                       'num_c1_words', 'num_content_words_not_a1_c1_words', 'num_lexic_words', 'num_noun', 'num_adj',
-                       'num_adv', 'num_verb', 'num_subord', 'num_rel_subord', 'num_total_prop',
-                       'noun_phrase_density_incidence', 'verb_phrase_density_incidence', 'num_pass',
-                       'num_pass_incidence', 'num_agentless', 'num_neg', 'num_ger', 'num_inf']
+                                'num_words_with_punct', 'num_paragraphs', 'num_sentences', 'num_past', 'num_pres',
+                                'num_future',
+                                'num_indic', 'num_impera', 'num_past_irregular', 'num_past_irregular_incidence',
+                                'num_personal_pronouns', 'num_first_pers_pron', 'num_first_pers_sing_pron',
+                                'num_third_pers_pron', 'num_rare_nouns_4', 'num_rare_adj_4', 'num_rare_verbs_4',
+                                'num_rare_advb_4', 'num_rare_words_4', 'num_rare_words_4_incidence',
+                                'num_dif_rare_words_4',
+                                'num_dif_rare_words_4_incidence', 'num_a1_words', 'num_a2_words', 'num_b1_words',
+                                'num_b2_words',
+                                'num_c1_words', 'num_content_words_not_a1_c1_words', 'num_lexic_words', 'num_noun',
+                                'num_adj',
+                                'num_adv', 'num_verb', 'num_subord', 'num_rel_subord', 'num_total_prop',
+                                'noun_phrase_density_incidence', 'verb_phrase_density_incidence', 'num_pass',
+                                'num_pass_incidence', 'num_agentless', 'num_neg', 'num_ger', 'num_inf']
         similarity_list = ["similarity_adjacent_mean", "similarity_pairs_par_mean", "similarity_adjacent_par_mean",
                            "similarity_adjacent_std", "similarity_pairs_par_std", "similarity_adjacent_par_std"]
-        if not(similarity):
+        if not (similarity):
             ignore_list.extend(similarity_list)
         if ratios:
             ignore_list.extend(ignore_list_counters)
@@ -2258,17 +2319,18 @@ class Printer:
 
         for key, value in i.items():
             if key not in ignore_list:
-                 indicators_dict[key] = i.get(key)
-                 headers.append(key)
-        #construct a new pandas dataframe from a dictionary: df = pd.DataFrame(data=[indicators_dict],columns=indicators_dict.keys()) columns: the column labels of the DataFrame.
+                indicators_dict[key] = i.get(key)
+                headers.append(key)
+        # construct a new pandas dataframe from a dictionary: df = pd.DataFrame(data=[indicators_dict],columns=indicators_dict.keys()) columns: the column labels of the DataFrame.
         df_new = pd.DataFrame([indicators_dict], columns=indicators_dict.keys())
-        #print(df_new)->  num_words  num_paragraphs  num_sentences
-                   #0        100             1            13
-        #Replace all NaN elements with 0s.
+        # print(df_new)->  num_words  num_paragraphs  num_sentences
+        # 0        100             1            13
+        # Replace all NaN elements with 0s.
         df_new.fillna(0)
         # dataframe=dataframe+newdataframe
         df = pd.concat([df, df_new], sort=False)
         return df
+
     @staticmethod
     def create_directory(path):
         newPath = os.path.normpath(str(Path(path).parent.absolute()) + "/results")
@@ -2307,9 +2369,10 @@ class Stopwords:
         if self.lang == "english":
             Stopwords.stop_words = stopwords.words('english')
         if self.lang == "spanish":
-            Stopwords.stop_words = stopwords.words('spanish')
+            #Stopwords.stop_words = stopwords.words('spanish')
+            Stopwords.stop_words = set(line.strip() for line in open('data/es/StopWords/stopwords.txt'))
         if self.lang == "basque":
-            Stopwords.stop_words = set(line.strip() for line in open('data/eu/stopwords_formaketakonektoreak.txt'))
+            Stopwords.stop_words = set(line.strip() for line in open('data/eu/stopwords/stopwords.txt'))
 
 
 class Predictor:
@@ -2317,13 +2380,15 @@ class Predictor:
         self.lang = language
         self.clf = None
         self.selector = None
+
     def load(self):
         if self.lang == "english":
             # Para cargarlo, simplemente hacer lo siguiente:
             self.clf = joblib.load('./corpus/en/dataset_aztertest_full/classifier_aztertest_best.pkl')
             with open("./corpus/en/dataset_aztertest_full/selectorAztertestFullBest.pickle", "rb") as f:
                 self.selector = pickle.load(f)
-    def predict_dificulty(self,data):
+
+    def predict_dificulty(self, data):
         feature_names = data.columns.tolist()
         X_test = data[feature_names]
         # Para cargarlo, simplemente hacer lo siguiente:
@@ -2354,16 +2419,16 @@ class NLPCharger:
             print("-----------You are going to use Stanford library-----------")
             if self.lang == "basque":
                 print("-------------You are going to use Basque model-------------")
-                MODELS_DIR = self.dir+'/eu'
+                MODELS_DIR = self.dir + '/eu'
                 stanfordnlp.download('eu', MODELS_DIR)  # Download the Basque models
             elif self.lang == "english":
                 print("-------------You are going to use English model-------------")
-                MODELS_DIR = self.dir+'/en'
+                MODELS_DIR = self.dir + '/en'
                 print("-------------Downloading Stanford Basque model-------------")
                 stanfordnlp.download('en', MODELS_DIR)  # Download the English models
             elif self.lang == "spanish":
                 print("-------------You are going to use Spanish model-------------")
-                MODELS_DIR = self.dir+'/es'
+                MODELS_DIR = self.dir + '/es'
                 stanfordnlp.download('es', MODELS_DIR)  # Download the Spanish models
             else:
                 print("........You cannot use this language...........")
@@ -2381,8 +2446,8 @@ class NLPCharger:
             print("-----------You are going to use Stanford library-----------")
             if self.lang == "basque":
                 print("-------------You are going to use Basque model-------------")
-                #MODELS_DIR = 'J:\TextSimilarity\eu'
-                MODELS_DIR = self.dir+'/eu'
+                # MODELS_DIR = 'J:\TextSimilarity\eu'
+                MODELS_DIR = self.dir + '/eu'
                 #               config = {'processors': 'tokenize,pos,lemma,depparse',  # Comma-separated list of processors to use
                 #                           'lang': 'eu',  # Language code for the language to build the Pipeline in
                 #                           'tokenize_model_path': MODELS_DIR + '\eu_bdt_models\eu_bdt_tokenizer.pt',
@@ -2407,7 +2472,7 @@ class NLPCharger:
 
             elif self.lang == "english":
                 print("-------------You are going to use English model-------------")
-                MODELS_DIR = self.dir+'/en'
+                MODELS_DIR = self.dir + '/en'
                 config = {'processors': 'tokenize,mwt,pos,lemma,depparse',  # Comma-separated list of processors to use
                           'lang': 'en',  # Language code for the language to build the Pipeline in
                           'tokenize_model_path': MODELS_DIR + '/en_ewt_models/en_ewt_tokenizer.pt',
@@ -2420,7 +2485,7 @@ class NLPCharger:
                 self.parser = stanfordnlp.Pipeline(**config)
             elif self.lang == "spanish":
                 print("-------------You are going to use Spanish model-------------")
-                MODELS_DIR = self.dir+'/es'
+                MODELS_DIR = self.dir + '/es'
                 config = {'processors': 'tokenize,pos,lemma,depparse',  # Comma-separated list of processors to use
                           'lang': 'es',  # Language code for the language to build the Pipeline in
                           'tokenize_model_path': MODELS_DIR + '/es_ancora_models/es_ancora_tokenizer.pt',
@@ -2495,20 +2560,18 @@ class NLPCharger:
         return ma.model_analysis(self.textwithparagraphs, self.lang)
 
 
-
-
 class Pronouncing:
     # Pronunciador(the Carnegie Mellon Pronouncing Dictionary)- Utilizado para obtener silabas: pip install cmudict
-        # cmudict is a pronouncing dictionary for north american english words.
-        # it splits words into phonemes, which are shorter than syllables.
-        # (e.g. the word 'cat' is split into three phonemes: K - AE - T).
-        # but vowels also have a "stress marker":
-        # either 0, 1, or 2, depending on the pronunciation of the word (so AE in 'cat' becomes AE1).
-        # the code in the answer counts the stress markers and therefore the number of the vowels -
-        # which effectively gives the number of syllables (notice how in OP's examples each syllable has exactly one vowel)
-        #from nltk.corpus import cmudict
-        #pronunciation dictionary
-        #prondict = cmudict.dict()
+    # cmudict is a pronouncing dictionary for north american english words.
+    # it splits words into phonemes, which are shorter than syllables.
+    # (e.g. the word 'cat' is split into three phonemes: K - AE - T).
+    # but vowels also have a "stress marker":
+    # either 0, 1, or 2, depending on the pronunciation of the word (so AE in 'cat' becomes AE1).
+    # the code in the answer counts the stress markers and therefore the number of the vowels -
+    # which effectively gives the number of syllables (notice how in OP's examples each syllable has exactly one vowel)
+    # from nltk.corpus import cmudict
+    # pronunciation dictionary
+    # prondict = cmudict.dict()
     prondict = {}
 
     def __init__(self, language):
@@ -2526,23 +2589,23 @@ class Pronouncing:
             # command_02 = "source silabaEus.script"
             # os.system(command_02)
 
-            #Creamos un fichero con las palabras divididas en silabas por puntos
+            # Creamos un fichero con las palabras divididas en silabas por puntos
             with open("docSilabas.txt", "w") as f:
                 for word in text_without_punctuation:
                     command = "echo " + word.text + " | flookup -ib silabaEus.fst"
                     subprocess.run(command, shell=True, stdout=f)
 
-            #Tratamos el fichero y guardamos en un diccionario cada palabra
+            # Tratamos el fichero y guardamos en un diccionario cada palabra
             with open("docSilabas.txt", mode="r", encoding="utf-8") as f:
-                indice = 0
                 for linea in f:
-                    if not linea == "\n":
-                        s = linea.rstrip('\n')
-                        palabra_sin_puntos = s.replace('.','')
-                        num_sil = []    #se crea para utilizar la misma estructura que cmudict.dict()
-                        num_sil.append(len(s.split('.')))
-                        Pronouncing.prondict[palabra_sin_puntos] = num_sil #[txakurra] = 3
-                        indice += 1
+                    if not linea == '\n':
+                        str = linea.rstrip('\n')
+                        palabra_sin_puntos_rep = str.replace('.', '')     #[txakurra txakurra, ... , ...]
+                        line = palabra_sin_puntos_rep.split('\t')    #[ [txakurra, txakurra], [..,..], ...]
+                        palabra = line[0]
+                        num_sil = []  # se crea para utilizar la misma estructura que cmudict.dict()
+                        num_sil.append(len(str.split('.')))
+                        Pronouncing.prondict[palabra] = num_sil  # [txakurra] = 3
 
 
 "This is a Singleton class which is going to start necessary classes and methods."
@@ -2574,109 +2637,111 @@ class Main(object):
 
     def start(self):
 
-            #####Argumentos##################################
-            from argparse import ArgumentParser
-            # ArgumentParser con una descripción de la aplicación
-            p = ArgumentParser(description="python3 ./main.py -f \"laginak/*.doc.txt\" ")
-            # Grupo de argumentos requeridos
-            required = p.add_argument_group('required arguments')
-            required.add_argument('-f', '--files', nargs='+',
-                                  help='Files to analyze (in .txt, .odt, .doc or .docx format)')
-            required.add_argument('-l', '--language', nargs='+', help='Language to analyze (english, spanish, basque)')
-            required.add_argument('-m', '--model', nargs='+', help='Model selected to analyze (stanford, cube)')
-            # Grupo de argumentos opcionales
-            optional = p.add_argument_group('optional arguments')
-            optional.add_argument('-c', '--csv', action='store_true', help="Generate a CSV file")
-            optional.add_argument('-r', '--ratios', action='store_true', help="Generate a CSV file only with ratios")
-            optional.add_argument('-s', '--similarity', action='store_true', help="Calculate similarity (max. 5 files)")
-            # Por último parsear los argumentos
-            opts = p.parse_args()
+        #####Argumentos##################################
+        from argparse import ArgumentParser
+        # ArgumentParser con una descripción de la aplicación
+        p = ArgumentParser(description="python3 ./main.py -f \"laginak/*.doc.txt\" ")
+        # Grupo de argumentos requeridos
+        required = p.add_argument_group('required arguments')
+        required.add_argument('-f', '--files', nargs='+',
+                              help='Files to analyze (in .txt, .odt, .doc or .docx format)')
+        required.add_argument('-l', '--language', nargs='+', help='Language to analyze (english, spanish, basque)')
+        required.add_argument('-m', '--model', nargs='+', help='Model selected to analyze (stanford, cube)')
+        # Grupo de argumentos opcionales
+        optional = p.add_argument_group('optional arguments')
+        optional.add_argument('-c', '--csv', action='store_true', help="Generate a CSV file")
+        optional.add_argument('-r', '--ratios', action='store_true', help="Generate a CSV file only with ratios")
+        optional.add_argument('-s', '--similarity', action='store_true', help="Calculate similarity (max. 5 files)")
+        # Por último parsear los argumentos
+        opts = p.parse_args()
 
-            languagelist = opts.language
-            language=languagelist[0]
-            # language = "basque"
-            print("language:", str(language))
-            # language = "english"
-            modellist = opts.model
-            model=modellist[0]
-            # model = "stanford"
-            print("model:", str(model))
-            similarity = opts.similarity
-            print("similarity:", str(similarity))
-            csv = opts.csv
-            print("csv:", str(csv))
-            ratios = opts.ratios
-            print("ratios:", str(ratios))
-            directory = "/home/kepa"
-            # directory = "J:\TextSimilarity"
 
-            # Carga wordfrequency euskara
-            if language == "basque":
-                maiztasuna = Maiztasuna("LB2014Maiztasunak_zenbakiakKenduta.csv")
-                maiztasuna.load()
+        languagelist = opts.language
+        language = languagelist[0]
+        #language = "basque" # language = "english"
+        print("language:", str(language))
+        modellist = opts.model
+        model = modellist[0]
+        #model = "stanford"
+        print("model:", str(model))
+        similarity = opts.similarity
+        similarity = False
+        print("similarity:", str(similarity))
+        csv = opts.csv
+        print("csv:", str(csv))
+        ratios = opts.ratios
+        print("ratios:", str(ratios))
+        directory = "/home/kepa"
+        # directory = "J:\TextSimilarity"
 
-            # Connectives
-            conn = Connectives(language)
-            conn.load()
+        # Carga wordfrequency euskara
+        if language == "basque":
+            maiztasuna = Maiztasuna("LB2014Maiztasunak_zenbakiakKenduta.csv")
+            maiztasuna.load()
 
-            # Carga Niveles Oxford
-            ox = Oxford(language)
-            ox.load()
+        # Connectives
+        conn = Connectives(language)
+        conn.load()
 
-            # Carga StopWords
-            stopw = Stopwords(language)
-            stopw.download()
-            stopw.load()
-            # stopw.print()
+        # Carga Niveles Oxford
+        ox = Oxford(language)
+        #ox.load()
 
-            # Load Pronouncing Dictionary
-            prondic = Pronouncing(language)
-            if not language == "english":
-                prondic.load("")
+        # Carga StopWords
+        stopw = Stopwords(language)
+        stopw.download()
+        stopw.load()
+        # stopw.print()
 
-            # Carga del modelo Stanford/NLPCube
-            cargador = NLPCharger(language, model, directory)
-            cargador.download_model()
-            cargador.load_model()
+        # Load Pronouncing Dictionary
+        prondic = Pronouncing(language)
+        if not language == "english":
+            prondic.load("")
 
-            # Predictor
-            predictor = Predictor(language)
-            predictor.load()
+        # Carga del modelo Stanford/NLPCube
+        cargador = NLPCharger(language, model, directory)
+        cargador.download_model()
+        cargador.load_model()
 
-            files = opts.files
+        # Predictor
+        predictor = Predictor(language)
+        predictor.load()
 
-            # @staticmethod
-            # def load_files(args):
-            #    FileLoader.files = args
-            #    print("Parametros: " + str(FileLoader.files))
+        files = opts.files
 
-            # files = ["euskaratestua.txt"] #euskaratestua
-            print("Files:" + str(files))
-            ### Files will be created in this folder
-            path = Printer.create_directory(files[0])
-            print("Path:" + str(path))
-            df_row = None
-            for input in files:
-                # # texto directamente de text
-                # if language == "basque":
-                #     text = "ibon hondartzan egon da. Eguraldi oso ona egin zuen.\nHurrengo astean mendira joango da. "                "\n\nBere lagunak saskibaloi partidu bat antolatu dute 18etan, baina berak ez du jolastuko. \n "                "Etor zaitez etxera.\n Nik egin beharko nuke lan hori. \n Gizonak liburua galdu du. \n Irten hortik!"                    "\n Emadazu ur botila! \n Zu beti adarra jotzen."
-                # if language == "english":
-                #     text = "ibon is going to the beach. I am ibon. \n"                 "Eder is going too. He is Eder."
-                # if language == "spanish":
-                #     text = "ibon va ir a la playa. Yo soy ibon. \n"                 "Ibon tambien va a ir. El es Ibon."
-                # texto directamente de fichero
-                text = self.extract_text_from_file(input)
+        # @staticmethod
+        # def load_files(args):
+        #    FileLoader.files = args
+        #    print("Parametros: " + str(FileLoader.files))
 
-                # Get indicators
-                document = cargador.get_estructure(text)
-                indicators = document.get_indicators(similarity)
-                printer = Printer(indicators, language)
-                printer.print_info()
-                printer.generate_csv(path, input, similarity)  # path, prediction, opts.similarity)
-                if csv:
-                    df_row = printer.write_in_full_csv(df_row, similarity, language, ratios)
+        #files = ["euskaratestua.txt"] #euskaratestua Loterry-adv
+        print("Files:" + str(files))
+        ### Files will be created in this folder
+        path = Printer.create_directory(files[0])
+        print("Path:" + str(path))
+        df_row = None
+        for input in files:
+            # # texto directamente de text
+            # if language == "basque":
+            #     text = "ibon hondartzan egon da. Eguraldi oso ona egin zuen.\nHurrengo astean mendira joango da. "                "\n\nBere lagunak saskibaloi partidu bat antolatu dute 18etan, baina berak ez du jolastuko. \n "                "Etor zaitez etxera.\n Nik egin beharko nuke lan hori. \n Gizonak liburua galdu du. \n Irten hortik!"                    "\n Emadazu ur botila! \n Zu beti adarra jotzen."
+            # if language == "english":
+            #     text = "ibon is going to the beach. I am ibon. \n"                 "Eder is going too. He is Eder."
+            # if language == "spanish":
+            #     text = "ibon va ir a la playa. Yo soy ibon. \n"                 "Ibon tambien va a ir. El es Ibon."
+            # texto directamente de fichero
+            text = self.extract_text_from_file(input)
+
+            # Get indicators
+            document = cargador.get_estructure(text)
+            indicators = document.get_indicators(similarity)
+            printer = Printer(indicators, language, similarity)
+            printer.print_info()
+            printer.generate_csv(path, input, similarity)  # path, prediction, opts.similarity)
             if csv:
-                df_row.to_csv(os.path.join(path, "full_results_aztertest.csv"), encoding='utf-8', index=False)
+                df_row = printer.write_in_full_csv(df_row, similarity, language, ratios)
+        if csv:
+            df_row.to_csv(os.path.join(path, "full_results_aztertest.csv"), encoding='utf-8', index=False)
+
 
 main = Main()
 main.start()

@@ -4,12 +4,9 @@
     <list default="true" id="11afe74d-90dd-4be5-a2fb-37d54421a58a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Indicadores.ods" beforeDir="false" afterPath="$PROJECT_DIR$/Indicadores.ods" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/corpus/en/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/corpus/en/readme.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/en/en/IrregularVerbs.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/en/en/OxfordWordListByLevel.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/en/en/connectives.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/en/en/dale-chall.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/eu/syllablesplitter/silabaEus.fst" beforeDir="false" afterPath="$PROJECT_DIR$/data/eu/syllablesplitter/silabaEus.fst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/eu/Stopwords/LABURTZAPENAK.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/eu/Stopwords/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/eu/Stopwords/stopwords_formaketakonektoreak.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/multiaztertest.py" beforeDir="false" afterPath="$PROJECT_DIR$/multiaztertest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/Loterry-adv.txt.out.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/Loterry-adv.txt.out.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/full_results_aztertest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/full_results_aztertest.csv" afterDir="false" />
@@ -35,6 +32,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
@@ -189,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578493984028</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Incluido lo Eder, Kepa e Ibon&#10;Para que funcione con parámetros">
+      <created>1579091493195</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1579091493195</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,31 +226,31 @@
     <option name="LAST_COMMIT_MESSAGE" value="Incluido lo Eder, Kepa e Ibon&#10;Para que funcione con parámetros" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="258" y="27" width="1020" height="741" key="CommitChangelistDialog2" timestamp="1579091490251">
-      <screen x="67" y="27" width="1853" height="1173" />
+    <state x="201" y="27" width="1020" height="741" key="CommitChangelistDialog2" timestamp="1579796589263">
+      <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="201" y="27" width="1020" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1578493974682" />
+    <state x="201" y="27" width="1020" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1579796589263" />
     <state x="258" y="27" key="CommitChangelistDialog2/67.27.1853.1173@67.27.1853.1173" timestamp="1579091490251" />
-    <state width="913" height="115" key="GridCell.Tab.0.bottom" timestamp="1578499681702">
+    <state width="1807" height="219" key="GridCell.Tab.0.bottom" timestamp="1579712287040">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="913" height="115" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1578493830236" />
-    <state width="913" height="115" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1578499681702" />
-    <state width="913" height="115" key="GridCell.Tab.0.center" timestamp="1578499681702">
+    <state width="1807" height="219" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1579712287040" />
+    <state width="1807" height="219" key="GridCell.Tab.0.center" timestamp="1579712287040">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="913" height="115" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1578493830235" />
-    <state width="913" height="115" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1578499681702" />
-    <state width="913" height="115" key="GridCell.Tab.0.left" timestamp="1578499681702">
+    <state width="1807" height="219" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1579712287040" />
+    <state width="1807" height="219" key="GridCell.Tab.0.left" timestamp="1579712287039">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="913" height="115" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1578493830235" />
-    <state width="913" height="115" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1578499681702" />
-    <state width="913" height="115" key="GridCell.Tab.0.right" timestamp="1578499681702">
+    <state width="1807" height="219" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1579712287039" />
+    <state width="1807" height="219" key="GridCell.Tab.0.right" timestamp="1579712287040">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="913" height="115" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1578493830236" />
-    <state width="913" height="115" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1578499681702" />
+    <state width="1807" height="219" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1579712287040" />
     <state x="187" y="85" width="1039" height="622" key="MergeDialog" timestamp="1578054773571">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -254,16 +259,17 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="421" y="114" width="580" height="564" key="MultipleFileMergeDialog/67.27.1299.741@67.27.1299.741" timestamp="1578054773587" />
-    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1578493998825">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="415" y="193" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579091531398">
+      <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1578493998825" />
-    <state x="502" y="340" key="com.intellij.ide.util.TipDialog" timestamp="1579083182533">
+    <state x="415" y="193" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1579091531398" />
+    <state x="502" y="340" key="com.intellij.ide.util.TipDialog" timestamp="1579768981656">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="372" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741/1366.0.1920.1200@67.27.1299.741" timestamp="1576829786602" />
     <state x="372" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1578492054367" />
-    <state x="502" y="340" key="com.intellij.ide.util.TipDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1579083182533" />
+    <state x="502" y="340" key="com.intellij.ide.util.TipDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1579768981656" />
     <state x="379" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1576597790261">
       <screen x="67" y="27" width="1299" height="741" />
     </state>

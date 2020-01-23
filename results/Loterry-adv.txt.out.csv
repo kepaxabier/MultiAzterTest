@@ -13,8 +13,8 @@ Number of words (length) in sentences (mean): 21.2069
 Number of words (length) in sentences (standard deviation): 9.4482
 Number of words (length) of sentences without stopwords (mean): 9.5172
 Number of words (length) of sentences without stopwords (standard deviation): 3.8022
-Mean number of syllables (length) in words: 0.0
-Standard deviation of the mean number of syllables in words: 0.0
+Mean number of syllables (length) in words: 1.4569
+Standard deviation of the mean number of syllables in words: 0.9022
 Mean number of letters (length) in words: 4.6711
 Standard deviation of number of letters in words: 2.4865
 Mean number of letters (length) in words without stopwords: 6.3225
@@ -41,12 +41,12 @@ LAdjTTR (Lemma Adj Type-Token Ratio): 0.8333
 LAdvTTR (Lemma Adv Type-Token Ratio): 0.7826
 Honore Lexical Density: 978.0165
 Maas Lexical Density: 0.0656
-Measure of Textual Lexical Diversity (MTLD): 0.0
+Measure of Textual Lexical Diversity (MTLD): 96.2373
 Readability/Text Dimension/Grade Level
-Flesch-Kincaid Grade level: 0.0
+Flesch-Kincaid Grade level: 4.4807
 Flesch readability ease: 185.31
 Dale-Chall readability formula: 1.0519
-Simple Measure Of Gobbledygook (SMOG) grade: 0.0
+Simple Measure Of Gobbledygook (SMOG) grade: 8.3261
 Morphological features
 Number of verbs in past tense: 41.0
 Number of verbs in past tense (incidence per 1000 words): 66.6667
@@ -86,18 +86,18 @@ Number of distinct rare content words (wordfrecuency<=4) (incidence per 1000 wor
 Mean of rare lexical words (word frequency <= 4): 11.032
 Mean of distinct rare lexical words (word frequency <= 4): 14.0704
 Vocabulary Knowledge
-Number of A1 vocabulary in the text: 175.0
-Incidence score of A1 vocabulary  (per 1000 words): 284.5528
-Number of A2 vocabulary in the text: 21.0
-Incidence score of A2 vocabulary  (per 1000 words): 34.1463
-Number of B1 vocabulary in the text: 16.0
-Incidence score of B1 vocabulary  (per 1000 words): 26.0163
-Number of B2 vocabulary in the text: 16.0
-Incidence score of B2 vocabulary  (per 1000 words): 26.0163
-Number of C1 vocabulary in the text: 2.0
-Incidence score of C1 vocabulary  (per 1000 words): 3.252
-Number of content words not in A1-C1 vocabulary: 131.0
-Incidence score of content words not in A1-C1 vocabulary (per 1000 words): 213.0081
+Number of A1 vocabulary in the text: 0.0
+Incidence score of A1 vocabulary  (per 1000 words): 0.0
+Number of A2 vocabulary in the text: 0.0
+Incidence score of A2 vocabulary  (per 1000 words): 0.0
+Number of B1 vocabulary in the text: 0.0
+Incidence score of B1 vocabulary  (per 1000 words): 0.0
+Number of B2 vocabulary in the text: 0.0
+Incidence score of B2 vocabulary  (per 1000 words): 0.0
+Number of C1 vocabulary in the text: 0.0
+Incidence score of C1 vocabulary  (per 1000 words): 0.0
+Number of content words not in A1-C1 vocabulary: 281.0
+Incidence score of content words not in A1-C1 vocabulary (per 1000 words): 456.9106
 Syntactic Features / POS ratios
 Number of content words: 281.0
 Number of content words (incidence per 1000 words): 456.9106
@@ -151,13 +151,6 @@ Content word overlap, adjacent sentences, proportional, mean (CRFCWO1): 0.0619
 Content word overlap, adjacent sentences, proportional, standard deviation (CRFCWO1d): 0.0471
 Content word overlap, all of the sentences in a paragraph or text, proportional, mean (CRFCWOa): 0.0511
 Content word overlap, all of the sentences in a paragraph or text, proportional, standard deviation (CRFCWOad): 0.0484
-Semantic overlap
-Semantic Similarity between adjacent sentences (mean): 0.0
-Semantic Similarity between all possible pairs of sentences in a paragraph (mean): 0.0
-Semantic Similarity between adjacent paragraphs (mean): 0.0
-Semantic Similarity between adjacent sentences (standard deviation): 0.0
-Semantic Similarity between all possible pairs of sentences in a paragraph (standard deviation): 0.0
-Semantic Similarity between adjacent paragraphs (standard deviation): 0.0
 Connectives
 Number of connectives (incidence per 1000 words): 63.4146
 Causal connectives (incidence per 1000 words): 3.252
