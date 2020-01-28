@@ -1,0 +1,8968 @@
+
+
+
+3.
+K a p itu lu a
+Aldagai e rre ale k o fu n tz io e rre alak
+49
+
+50
+3.
+K AP IT U L U A AL D AG AI E R R E AL E K O
+F U N T Z IO
+E R R E AL AK
+UEP D o n o stia
+M ate m atik a A p lik atu a S aila
+
+3.1.
+ARAZOAREN AURKEZPENA
+51
+3.1
+A ra z o a re n a u rk e z p e n a
+3 .1 Iru d ia : a ra z oa re n a u rk e z p e n a
+E re d u ba te n la g u n tz a z a ld a g a i ba t be ste ba te n bid e z a d ie ra z i a h a lk o d u g u , h a u d a fu n tz io
+ba t e d u k ik o d u g u : x = f (y), y = g(x), x = h(t), t = s(x)
+f, g, h, s
+:
+ bi a ld a g a ie n a rte a n z e in e rla z io d a g oe n a d ie ra z te n d u te
+Au rre k o g a ia n 
+(se g id a k ), ik u si g e n u e n z e in e ra g in z u e n a ld a g a i ba te k , n, be ste a re n g a n , a.
+Ad ibid e z : a
+n
+= n
++1
+n
+, n ≥
+1
+Ad ie ra z p e n h a u be ste m od u h on e ta n e re id a tz d e z a k e g u :
+a
+(n) = n
++1
+n
+, n
+= 1, 2, 3, . . . (n a ld a g a i a rru n ta d a )
+O ra in , ord e a , y = f 
+(x) m od u k o e rla z ioa k in te re sa tz e n z a iz k ig u , n on x ∈ R d e n . P la n te a tz e n
+z a ig u n a ra z oa se g id e ta n g e n e u k a n a re n be rbe ra d a :
+ tre sn e ria m a te m a tik o e g ok ia g a ra tz e a
+e d oz e in y = f 
+(x) fu n tz iore n p rop ie ta te a k a z te rtu a h a l iz a te k o.
+3.2
+Fu n tz io e n p ro p ie ta te a k
+S e g id e ta n a z te rtu g e n itu e n p rop ie ta te a k ora in e re in te re sg a rria k iz a n g o d ira 
+(ik u s 3 .2 ta u la n
+d a u d e n a d ie ra z p e n a k ). G og ora tu :
+• g ora k orta su n a / be h e ra k orta su n a
+• born a k e ta
+• a ld a g a i in d e p e n d e n te a re n jok a e ra ∞-ra n tz d oa n e a n
+Matematika Aplikatua Saila
+UEP Donostia
+
+52
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+a
+n
+segida beherakorra eta y = f (x) funtzio beherakorra
+a
+n
+segida bornatua eta y = f (x) funtzio bornatua
+n, ∞
+-rantz doanean eta x, ∞-rantz doanean
+3.1 Taula: funtzioen propietateak
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.2.
+FUNTZIOEN PROPIETATEAK
+53
+B aina orain interesatzen zaizkigun propietate berri gehiago ere badago. Adibidez:
+• Aldagai bakoitza deﬁ nituta dagoen eremua xn segidetarako, n beti izan daiteke edozein
+zenbaki arrunt. y = f (x) funtzioetarako, aldiz, posible da x aldagaiak R-
+ko balio
+guztiak hartu ahal ez izatea: f (x) = 1
+x ,
+h
+(x) =
+1
+(x−1)(x+2) ,
+g
+(x) =
+(x − 1)(x + 2)
+funtzioak hartuta:
+f
+(x) :
+x
+∈ R | x = 0
+h
+(x) :
+∀x ∈ R | x = 1, −2
+g
+(x) :
+(x − 1)(x + 2) ≥ 0
+x
+− 1 ≥ 0 ∧ x + 2 ≥ 0 (1)
+x
+− 1 ≤ 0 ∧ x + 2 ≤ 0 (2)
+(1) x ≥ 1 eta x ≥ −2 ⇒ [1, ∞)
+(2) x ≤ 1 eta x ≤ −2 ⇒ (−∞, −2]
+B eraz: (−∞, −2] ∪ [1, ∞)
+3 .1 . Deﬁ niz ioa
+y
+= f (x) funtzioare n e re m ua funtzio bate n e re m ua x ald ag aia d e ﬁ -
+nituta d ag oe n R-ko gunea d a.
+3 .2 . Deﬁ niz ioa
+y
+= f (x) funtzioare n h e ina y ald ag aia d e ﬁ nituta d ag oe n R-ko gunea
+d a.
+Adibidez, y = x2 funtziorako:
+D
+= (−∞, ∞) ⇒ R = [0, ∞)
+D
+= (−1, 3] ⇒ R = [0, 9 ]
+R
+= [0, ∞)
+R
+= [0, 9 ]
+3.2 Taula: eremuak
+• y aldagaiaren portaera x x0 balio batera hurbiltzen doanean 
+(segidetan aztertu deza-
+kegun bakarra x
+n
+-ren jokaera da n −→ ∞ denean)
+Matematika Aplikatua Saila
+UEP Donostia
+
+54
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+x x0-rantz eskuinetik hurbiltzen den heinean
+(x > x0) y aldagaia gero eta handiagoa egiten
+da.
+3.2 Irudia: x x0-rantz eskuinetik hurbiltzean, y aldagaia gero eta handiagoa da
+x x0-rantz ezkerretik hurbiltzen doan heinean
+(x < x0), y d-rantz gerturatzen da, eta, x x0-
+rantz eskuinetik hurbiltzean, aldiz, y c-ra ger-
+turatzen da.
+3.3 Irudia: x x0-rantz ezkerretik edo eskuinetik hurbiltzean y-
+k portaera ezberdina du
+x
+aldagaia x0-tik pasatzen denean, y aldagaia-
+ren portaera aldatzen da, parabolikotik linea-
+lera
+3.4 Irudia: x x0-tik pasatzean y-ren portaera aldatzen da
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.2.
+FUNTZIOEN PROPIETATEAK
+55
+• y = f (x) funtzio batek deﬁnitutako beste parametroak
+Eremu lau baten azalera(a)
+K urba baten luzera eta grabitate-zentroa(b)
+Biraketa-gorputz baten bolumena edo gainazalaren azalera(c )
+y
+-ren batezbesteko balioa(d)
+3.5 Irudia: y = f (x) funtzio batek deﬁnitutako beste parametroak
+Matematika Aplikatua Saila
+UEP Donostia
+
+56
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+3.3
+Funtzioen kontzeptua: ad ierazpen ezb erd inak
+3.6 Irudia: y = f (x) funtzio baten adierazpen ezberdinak
+3.1. Ariketa
+a) Analitikoa: A(α) =
+H 2
+sin α c o s α
+2
+=
+H 2
+4 sin 2α , α ∈ 0,
+π
+2
+, A
+∈
+H 2
+4
+izanik.
+3.7 Irudia: A(α) funtzioaren adierazpen ezberdinak
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.3.
+FUNTZIOEN KONTZEPTUA: ADIERAZPEN EZB ERDINAK
+57
+Taula:
+α
+A
+0
+0
+π/8
+0.18H2
+π/4
+0.25H2
+3π/8
+0.18H2
+π/2
+0
+R
+2-ko multzoa:
+α,
+H 2
+4 sin 2α
+| α ∈ 0,
+π
+2
+b) Analitikoa: H(L) =
+√
+L2 + 4, L ∈ [0, ∞) eta H ∈ [2, ∞) izanik.
+Ikus dezakegunez, L hazten doan heinean H L-
+ra gerturatzen da. Graﬁkoa begiratuz,
+logikoa da gertatzen dena, H = L funtzioaren asintota delako.
+3.8 Irudia: H(L)-ren graﬁkoa
+Taula:
+L
+H
+0
+2
+0.3
+2.02
+0.7
+2.12
+6
+6.32
+15
+15.13
+30
+30.07
+R
+2-ko multzoa: {(L,
+√
+L2 + 4 | L ∈ [0, ∞}
+d ) Analitikoa: L(H) =
+√
+H2 − 25, H ∈ [5, ∞) eta L ∈ [0, ∞) izanik.
+Ikus dezakegunez, H ∞-rantz doanean L(H) H-
+ra gerturatzen da, baina kasu honetan
+L(H) < H (L = H asintota).
+Taula:
+H
+L
+5
+0
+7.3
+5.32
+12.1
+11.02
+36.8
+36.46
+150
+149.9
+R
+2-ko multzoa: {(H,
+√
+H2 − 25) | H ≥ 5}
+Matematika Aplikatua Saila
+UEP Donostia
+
+58
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+3.9 Irudia: L(H)-ren graﬁkoa
+e) Ezagutzen ditugun datuak:
+L inealtasuna: F = mc + n
+Taula:
+c
+F
+0
+32
+100
+210
+Eta beraz, 32 = n denez:
+210 = 100m + 32 ⇒ m = 1.8
+Ondorioz, F = 1.8c + 32, c ∈ (−273, ∞) eta F ∈ (−459.4, ∞) izanik.
+−273 0 absolutuaren tenperatura da; gasek 0 bolumena beteko lukete, ﬁsikoki lortu
+ezin dena. 1995-ean bi zientzilari amerikarrek gas bat 0 absolututik 10−9-
+ra hoztea
+lortu zuten.
+R
+2-ko multzoa: {(c, 1.8c + 32) | c ∈ (−273, ∞)}
+3.10 Irudia: e ariketako graﬁkoa
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.3.
+FUNTZIOEN KONTZEPTUA: ADIERAZPEN EZBERDINAK
+59
+f ) y =max {x, 1 − x}
+Analitikoa: y =
+x
+x ≥ 1 − x bada
+1 − x x < 1 − x bada
+⇔
+x
+x ≥ 1/2 bada
+1 − x x < 1/2 bada
+Taula:
+x
+y
+0
+max{0, 1} = 1
+0.2
+max{0.2, 0.8} = 0.8
+0.4
+max{0.4, 0.6} = 0.6
+0.5
+max{0.5, 0.5} = 0.5
+0.7
+max{0.7, 0.3} = 0.7
+R
+2-ko multzoa: {(x, y) | y = x, ∀x ≥ 1/2, y = 1 − x, ∀x < 1/2}
+3.11 Irudia: y funtzioaren graﬁkoa
+g ) Analitikoa: A(α) = α
+R2
+2 , L(α) = αR non α ∈ [0, 2π], A ∈ [0, πR
+2] eta L ∈ [0, 2πR].
+3.12 Irudia: A(α) eta L(α)
+Matematika Aplikatua Saila
+UEP Donostia
+
+60
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+Taula:
+α
+A
+L
+0
+0
+0
+π/2
+πR2/4
+πR/2
+π
+πR2/2
+πR
+2π
+πR2
+2πR
+3.13 Irudia: A(α) eta L(α) funtzioen graﬁkoak R-ren balioen arabera
+Eztabaida:
+A(α) > L(α) ⇔ α
+R2
+2
+> αR ⇔ R > 2
+A(α) = L(α) ⇔ α = 0, R = 2, ∀R ∈ R
+A(α) < L(α) ⇔ R < 2
+Z ein da A(α) eta L(α)-ren arteko distantzia?
+D(R) = |A(R) − L(R)| = α
+R2
+2
+− αR = αR
+R
+2
+− 1 =
+
+
+
+αR
+R
+2 − 1
+R > 2
+0
+R = 2
+αR 1 −
+R
+2
+R < 2
+α ∈ (0, 2π] eta D(R) ∈ (0, ∞) izanik.
+3.14 Irudia: A(α) eta L(α)-ren arteko distantzia
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.4.
+ALDERANTZIZKO FUNTZIOA
+61
+3.4
+Alderantzizko funtzioa
+y = f (x) funtzioa emanda, batzutan x = h
+(y) funtzioa lortzea interesgarria izan daiteke.
+Kasu horretan, x menpeko aldagai bihurtzen da, eta y berriz, aldagai aske.
+3.1. Adibidea
+Pelota bat goruntz jaurtitzen da.
+h(t) = −g
+t
+2
+2 + v0t
+t ∈ 0,
+2g
+v0 , h ∈ [0, H ], H =
+v
+2
+0
+2g
+Orain, interesgarria izan daiteke h al-
+tuera lortzen duen t momentua kal-
+kulatzea, h bakoitzerako
+3.15 Irudia: h(t) funtzioa
+t =
+v0 ±
+v20 − 2gh
+g
+= t1, t2
+Kasu honetan, t bakarra da, h altuera maximoa baldin bada, H; orduan t = v0/
+g. Baina,
+orokorrean, t-ren bi balio posible existituko dira.
+3.16 Irudia: t-ren bi balio posibleak
+Egoera honen enuntziatu orokorra ondorengoa da:
+y = f (x), x ∈ D, y ∈ R
+Matematika Aplikatua Saila
+UEP Donostia
+
+62
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+f (x) funtz ioa d a : ∀x ∈ D ∃Iy ∈ R | f(x) = y
+ba ina e z d a e x istitz e n a ld e ra ntz iz k o funtz ioa 
+(funtz ioa iz a te k o, a ld a g a i ind e pe nd e nte a re n
+ba lio ba k oitz e ra k o m e npe k o a ld a g a ia re n ba lio B AK AR R A d a g ok io):
+∃y ∈ R | ∃x1, x2 ∈ D eta f(x1) = f(x2) = y
+Pa re k ota sun ba t:
+ D e m a g un bid e e z be rd ina k d a ud e la a uk e ra n. B id e ba k oitz e tik h e lm ug a
+ba te ra iriste n d a 
+(m od u ba k a r ba te a n). B a ina bola h e lm ug a ba te a n ba d a g o 
+(a ld a g a i ind e -
+pe nd e nte a re n ba lioa ) e z in d a ja k in a uk e ra tuta k o bid e a z e in iz a n z e n 
+(m e npe k o a ld a g a ia re n
+ba lioa ).
+B ola 1 ,2 ,3 e d o 4 bid e a n e rortz e n uz te n d a :
+3 .1 7 Irud ia : bola e rortz e n uz te n d a
+1 ,2 ,3 ,4 a uk e ra ba k oitz e ra k o A e d o B -
+ra iriste n d a bola , m od u ba k a rre a n. Funtz io ba t d a ,
+be ra z :
+- Iz a te e re m ua : 1, 2, 3, 4
+- H e ina : A , B
+B a ina h e ina re n ba lioa e z a g utz e n ba d a soilik ,
+e z in d a be ti z iurta tu a bia puntua z e in iz a n z e n:
+3 .1 8 Irud ia : z e in bid e tik e torri d a bola ?
+Proble m a h a u (bola re n a bia puntua a z te rtz e a A-
+n d a g oe la ja k inik ) z oria a z te rtz e n d ue n
+te oria m a te m a tik oa re n 
+(proba bilita te te oria ) bid e z e ba tz i d a ite k e . G a ra tz e n a ri g a re n te oria n
+UEP D o n o stia
+M ate m atik a A p lik atu a S aila
+
+3.4.
+AL D E R AN T Z IZ K O
+F U N T Z IO A
+63
+(kalkulu inﬁ nitesimala) modu hontako egoerak aztertzen dira:
+ x aldagai independentearen
+balio bakoitzari, y menpeko aldagaiaren balio bakarra dagokio. y bakoitzari x bakarra
+dagokion kasuetan, alderantzizko funtzioa existitzen dela esango dugu eta f −1
+(y) izendatuko
+dugu.
+(funtzio injektiboa)
+3.19 Irudia: Alderantzizko funtzioa
+Baina zein dira baldintza nahikoak alderantzizko funtzioaren existentzia ziurtatzeko?
+3.20 Irudia: funtzio gorakorrak eta beherakorrak
+3.2. Ariketa
+Izan bedi funtzio bat zatika gorakorra/
+ beherakorra; adibidez gora botatako pelotaren fun-
+tzioa. N ola eraiki daiteke alderantzizkoa duen funtzio bat? x-
+en eremua murriztu behar da.
+D
+= [a , b] eremua
+R
+= [c, d] heina
+3.21 Irudia: hasierako funtzioa
+Matematika Aplikatua Saila
+UEP Donostia
+
+64
+3.
+KAP ITULUA ALDAG AI ERREALEKO FUNTZIO ERREALAK
+3.3. Ariketa
+Aurreko funtziotik abiatuta eraiki alderantzikoa duten hainbat funtzio.
+D
+= [q, b]
+R
+= [r, t]
+D
+= [a, p]
+R
+= [c, d]
+D
+= [a, s] ∪ [q, b]
+R
+= [c, r] ∪ [r, t]
+3.22 Irudia: Adibide batzuk
+FU NT Z IO ARRU NT BAT Z U RE N AL DE RANT Z IZ KO FU NT Z IO AK:
+1. y = ex ⇒ x = ln y
+non x ∈ (−∞, ∞) eta y ∈ (0 , ∞) diren.
+3.23 Irudia: y = ex funtzioaren eta bere alderantzizko funtzioaren graﬁkoak
+2. y = sin x funtzioak ez du alderantzizkorik D = R eremu osoan, baina, adibidez,
+x
+∈ [− π
+2
+, π
+2 ] puntuetan badu alderantzizko funtzioa. Beraz:
+∀y ∈ [− π
+2
+,
+π
+2 ] ∃!
+x
+∈ [−1, 1] non sin x = y ⇔ x = a rc sin y
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.4.
+ALDERANTZIZKO FUNTZIOA
+65
+3.24 Irudia: y = sin x funtzioaren eta x = arcsin y funtzioaren graﬁkoak
+3. y = co s x funtzioak ez du alderantzizkorik D = R eremuan, baina bai 
+[0, π] tarteko
+puntuetan. Beraz:
+∀y ∈ [−1, 1], ∃!x ∈ [0, π] non co s x = y ⇔ x = arcco s y
+3.25 Irudia: y = co s x funtzioaren eta x = arcco s y funtzioaren graﬁkoak
+4. y = tan x funtzioak ez du alderantzizkorik R-n, baina bai − π
+2
+, π
+2
+tarteko puntuetan.
+Beraz:
+∀y ∈ (−∞, ∞) ∃!x ∈ − π
+2
+, π
+2
+non tan x = y ⇔ x = arctan y
+Matematika Aplikatua Saila
+UEP Donostia
+
+66
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+3.26 Irudia: y = tan x funtzioaren eta x = arctan y funtzioaren graﬁkoak
+3.5
+Fu n tz io e n ko n p o sa ke ta
+3.2. Ad ib id ea
+Demagun bare dagoen urmael batera harri bat erortzen uzten dugula, uhin zirkular zentro-
+kideak sortuko direlarik. Uhin baten erradioa r bada, zein da bere azalera?
+A
+(r) = πr2
+3.27 Irudia: uhin zirkularraren azalera
+Baina r erradioaren balioa denborarekin aldatzen da, hau da, beste funtzio bat daukagu:
+r= r(t)
+Nola idatz dezakegu A azaleraren balioa t-ren menpean?
+Demagun r(t) = 0.6t dela.Orduan:
+A
+(r) = πr2 ∧ r(t) = 0.6t ⇒ A(t) = π(0.6t)2 = 0.36πt2
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.5.
+FUNTZIOEN KONPOS AKETA
+67
+3.28 Irudia: A(r), r(t) eta A(t) funtzioen graﬁkoak
+Beraz, A(t) funtzioa bi ”urratsetan” deﬁnituta dago:
+- Lehenengo, t aldagai independentearen balio bat har-
+tuko dugu.
+- r menpeko aldagaiaren balio bat lortzen da:
+r
+(t) = 0.6t.
+- r-ren balio hori aldagai independentearen baliotzat
+hartzen da eta menpeko aldagaiaren balio berria kalku-
+latzen da:
+A
+(r) = πr2
+3.29 Irudia: funtzio baten konposaketa
+A
+funtzioaren bi urratseko deﬁnizio honi ”konposaketa” deitzen zaio.
+r
+(t) = 0.6t eta A(r) = πr2 ⇒ A(r(t)) = π(0.6t)
+3.3. Adibidea
+Auto baten gurpilaren biraketa azter dezagun.
+Matematika Aplikatua Saila
+UEP Donostia
+
+68
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+x
+= αR non
+α
+∈ 0,
+3π
+2
+x
+∈ 0,
+3πR
+2
+3.30 Irudia: gurpilaren biraketa
+Demagun motorrak segundoko erreboluzio bat eragiten duela: α
+(t) = 2πt, t segundoak
+izanik.Orduan:
+x
+(t) = α(t)R = 2πtR metro
+x
+(α(t)) = x(t) funtzioen arteko konposaketa da.
+3.31 Irudia: x(α(t)) funtzio konposatua
+0 ≤ α ≤
+3π
+2
+⇔ 0 ≤ 2πt ≤
+3π
+2
+⇔ 0 ≤ t ≤
+3
+4
+= 0.7 5 segundo
+M otorrak biraketa abiadura ezberdinak eragin ditzake:
+α
+(t) = 2πt
+2 edo α(t) = 2πe
+t adibidez.
+3.4. Ariketa
+x
+(t)-ren adierazpena eman kasu hauetan, t aldagaiaren eremua zehaztuz.
+3.4. Adibidea
+Batzutan funtzioen konposaketak funtzio baten adierazpena sinpliﬁkatu dezake.
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.5.
+FUNTZIOEN KONPOSAKETA
+69
+y
+(1.3) = 2.23
+y
+(2.6) = 2.9 9
+heina= [2.23, 2.9 9 ]
+3.32 Irudia: y(x) funtzioaren graﬁkoa
+y
+=
+√
+x
++ 3
+√
+x
+, non x ∈ [1.3, 2.6] eremua izanik.
+x
+= z
+6 hartzen badugu, z3 = ±x1/2 izango da, eta beraz, zeinu positiboa hartuz:
+y
+(z) = z
+3 + z2 = z2(z + 1)
+Ondorioz:
+6
+√
+1.3 = 1.04 eta
+6
+√
+2.6 = 1.17 ⇒ z ∈ [1.04, 1.17]
+3.33 Irudia: x(z) eta y(z) funtzioen graﬁkoak
+Matematika Aplikatua Saila
+UEP Donostia
+
+70
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+3.34 Irudia: funtzio konposatua
+3.5. Ariketa
+Egin aurrekoa baina x
+1
+/2 = −z3 hartuta. Lortu y(z) eta x(z) adierazpenak.
+3.6
+y
+(x) funtzio b aten jarreraren azterketa x = a-ren ing uru-
+nean (lim iteak)
+S egiden kasuan, ez du zentzurik an-
+ren portaeraren azterketa egiteak n n0 batetik gertu
+dagoenean: ez dira existitzen n ∈ N balioak ez (n − 1, n) tartean, ezta 
+(n,n+ 1)-en ere.
+3.35 Irudia: an ez dago deﬁnituta (n − 1, n) eta (n, n + 1) tarteetan
+Baina aldagaia erreala bada, beti existitzen dira R-
+ko balioak x = a puntutik nahi bezain
+hurbil daudenak.
+3.36 Irudia: (x, a) eta (a, x + 1) tarteetan ∞ balio erreal daude
+Ondorioz, (a, b) tartean R guztian dauden ADINA zenbaki erreal dago!!
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.6.
+FUNTZIOEN LIM ITEAK
+71
+3.5. Adibidea
+y
+= x
+2 + 1
+D
+= R
+R
+= [1, ∞)
+3.37 Irudia: y = x
+2 + 1 funtzioaren graﬁkoa
+Ikus dezagun y-ren jarrera nolakoa den x-
+en balioak x = 2 puntutik hurbil daudenean.
+x
+y
+±1.9
+4.61
+±1.99
+4.9601
+±1.999 4.9960
+x
+2-ra hurbiltzen doan heinean, y 5-ra gerturatzen da;
+baina kontuz, y-
+ren portaeraren azterketa egiten ari gara, aurretik ezarri dugun modua era-
+biliz. Nola froga dezakegu, x 2-
+ra hurbiltzen den modua kontutan hartu gabe, y BETI 5-era
+gerturatzen dela?
+Hurrengo baliokidetasuna betetzen dela pentsa dezakegu: ”2-
+rako hurbilketa modu arbitra-
+rioa” ⇔ ”segida konbergentea x = 2-ra”
+Adibidez, xn = 2 +
+1
+n ⇒ y(xn) =
+2 +
+1
+n
+2
++ 1 = 5 +
+4
+n +
+1
+n
+2
+Beraz,
+lim
+n→∞
+5 +
+4
+n
++
+1
+n
+2
+= 5
+Kasu konkretu BATEAN frogatu dugu bakarrik xn = 2 +
+1
+n denean
+Baina nola egin dezakegu orokorrean?
+Izan bedi xn non
+lim
+n→∞
+xn = 2
+Matematika Aplikatua Saila
+UEP Donostia
+
+72
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+limn
+→∞
+y(xn) = 5 ?
+y(xn) = (xn)
+2 + 1 ⇒ lim
+n→∞
+(xn)
+2 + 1 =
+lim
+n→∞
+xn
+lim
+n→∞
+xn + lim
+n→∞
+1 = 2 · 2 + 1 = 5
+3.6. Adibidea
+y =
+x
+2 − 1
+x − 1
+, D = R − {1}
+Demagun xn-ren limitea 1 dela. limn
+→∞
+(xn + 1) = 2 al da?
+Adibide honek erakusten digu EZIN dela edozein segida erabili. y(xn)-
+k zentzua izan dezan,
+ez da nahikoa limn
+→∞
+xn = a betetzea, xn, funtzioaren eremuan ere egon behar da. Izan
+ere, posible da a /
+∈ D betetzea, hau da, f(a) ez existitzea.
+Bestalde:
+y =
+x
+2 − 1
+x − 1
+=
+(x + 1)(x − 1)
+x − 1
+= x + 1
+Zein da y = x
+2
+−
+1
+x−1 eta y = x + 1 funtzioen arteko ezberdintasuna? Lehenengo funtzioan x − 1
+sinpliﬁka daiteke x = 1 denean soilik:
+y =
+x
+2 − 1
+x − 1
+, D = R − {1}
+y = x + 1
+Bi funtzioak berberak dira x = 1 puntuetan:
+3.38 Irudia: y = x + 1 eta y = x
+2
+−
+1
+x−1 funtzioen graﬁkoak
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.6.
+FUNTZIOEN LIMITEAK
+73
+3.3. Deﬁ niz ioa
+x aldagaia a p u n tu ra gertu ratzen den m o du a edo zein izan da ere, y aldagaia B E T I balio
+berberera h u rbiltzen da. B alio h o rri lim itea deitu k o dio gu .
+H au da:
+∀xn | lim
+n→∞
+xn = a ∧ xn ∈ D, lim n
+→∞
+y(xn) = l
+Labu rbildu z:
+lim x
+→∞
+f (x) = l
+Baina nola froga daiteke y(x) funtzio jakin baterako limx
+→
+a f (x) ez dela existitzen?
+∃ lim
+n→→∞
+y(xn) ⇔ ∃xn, zn(xn, zn ∈ D) | lim
+n→∞
+xn = lim
+n→∞
+zn = a ∧ lim
+n→∞
+y(xn) = lim
+n→∞
+y(zn)
+3.7 . Adibidea
+y(x) =
+x
+2 + 1 x < 0
+2 − x
+x >
+0
+D
+= R − {0}
+∃ lim
+x→
+0
+y
+(x)?
+Ad ibid e z , x
+n
+=
+1
+n ,
+z
+n
+= n
++ 1
+n2
++ 1 ha rtu ta ,
+lim
+n→∞
+x
+n
+= lim
+n→∞
+z
+n
+= 0
+x
+n
+= 0 = z
+n
+⇒ x
+n
+, z
+n
+∈ D
+lim
+n→∞
+y
+(x
+n
+) = lim
+n→∞
+2 −
+1
+n
+= 2
+lim
+n→∞
+y
+(z
+n
+) = lim
+n→∞
+2 −
+n
++ 1
+n2
++ 1
+= 2
+B a in a horre k E Z d u frog a tz e n lim ite a e x istitz e n d e n a la e z .
+w
+n
+= −
+1
+n
+<
+0 fu n tz ioa ha rtu ta , a ld iz :
+lim
+n→∞
+y
+(w
+n
+) = lim
+n→∞
+−
+1
+n
++ 1
+= lim
+n→∞
+1
+n2
++ 1
+= 1
+B e ra z , y g e rtu ra tz e n d e n ba lio hori, x
+= 0-ra hu rbiltz e k o e ra bili be ha r d e n bid e a re n M E N -
+P E K O A d a , e ta on d orioz e z d a e x istitz e n
+lim
+x→
+0 y
+(x).
+Matematika A p likatu a S aila
+U E P D o n o stia
+
+74
+3.
+K AP IT U L U A AL D AG AI E R R E AL E K O
+F U N T Z IO
+E R R E AL AK
+• xn
+→
+n
+→ ∞ 0 bada, xn > 0 izanik ⇒
+limn
+→∞
+y
+(xn) = 2
+limx
+→
+0+ y(xn) = 2 moduan idatziko du-
+gu.
+• xn
+→
+n
+→ ∞ 0 bada, xn < 0 izanik ⇒
+limn
+→∞
+y
+(xn) = 1
+limx
+→
+0− y(xn) = 1 moduan idatziko du-
+gu.
+3 .3 9 Irudia: y = x
+2 + 1 funtzioaren graﬁ koa
+3.6. Ariketa
+D eﬁ nitu formalki:
+lim
+x→a+
+y,
+lim
+x→a−
+y
+3.7
+R
+(h) m a g n itu d e b a te n lim ite a re n ka lku lu a
+y
+aldagai baten limitea (limx
+→x0 y) existitzeak, x0 inguruko y-ren portaerari buruzko infor-
+mazio ugari ematen digu, berehala ikusiko dugun bezala. Baina atal honetan aztertuko dugu
+nola bihurtzen den limh
+→
+0 R
+(h) = T moduko kalkulu erraz bat jarraian datorren Kalkulu
+Inﬁ nitesimalaren Teoria guztiaren OINAR R I. Teoria guztia R magnitude bat 
+(h aldagai
+independentea 0-
+rantz doanean) gerturatzen den balioaren kalkuluan datza. H au da:
+1 . L ehendabizi, kalkulatu nahi dugun T magnitudea zehazten da 
+(eremu lau baten aza-
+lera, kurba baten luzera, kurba baten malda, bolumen bat...)
+3 .40 Irudia: magnitudeen adibideak
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.7.
+R
+(H) M AGNITUDE B ATEN LIM ITEAREN KALKULUA
+75
+T
+= A , L , m, B kalkulatu beharreko balioak izango dira.
+2 . R
+(h) funtzio bat eraikitzen da, non zenbat eta h txikiagoa hartu orduan eta hurbilago
+egongo den (R(h)) T -tik.
+3. R(h) ez da h = 0-n deﬁnituta egongo (hau da, ∃R(0)), baina R(h) T -
+ra gerturatzen
+da h 0-rantz doanean:
+Ez da existitzen R(0) baina
+T
+= lim
+h→
+0
+R
+(h)
+3.41 Irudia: R(h) funtzioaren graﬁkoa
+Aurrerago ikusiko dugu nola aplikatzen den teknika hau kasu bakoitzean. Orain kasu ba-
+tzuren eskema txiki bat aurreratuko dugu:
+3.7.1
+P u n tu b a te ko m a ld a r e n ka lku lu a
+1. Kalkulatu nahi dugun balioa:
+m
+: x = a puntuan kurba bati ukitzailea den zuzenaren malda
+3.42 Irudia: kurba bati ukitzailea den zuzenaren malda
+2 . Zuzen sekantearen malda kalkulatzea erraza da:
+f
+(a+h)−f (a)
+h
+Beraz, R(h) =
+f
+(a+h)−f (a)
+h
+funtzioak m-ren hurbilketa bat ematen digu.
+Matematika Aplikatua Saila
+UEP Donostia
+
+76
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+3.43 Irudia: zuzen sekantearen malda
+Zenbat eta h txikiagoa izan orduan eta hurbilketa hobea lortuko da. R ez dago h = 0
+puntuan deﬁnituta:
+R
+(0) =
+f
+(a) − f (a)
+0
+=
+0
+0
+? ?
+Baina posible da hurrengoa existitzea:
+lim
+h→
+0
+R
+(h) =
+sekanteen maldak hurbiltzen
+diren balioak
+3.44 Irudia: limh
+→
+0 R(h)
+Eta kasu horretan, bilatzen ari ginen balioa:
+m
+= lim
+h→
+0
+R
+(h) = lim
+h→
+0
+f
+(a + h) − f (a)
+h
+f
+(a + h) − f (a)
+h
+≈ m baina lim
+h→
+0
+f
+(a + h) − f (a)
+h
+= m
+3.7.2
+E remu lau baten az aleraren kalkulua
+1. Kalkulatu nahi dugun balioa = A = OX ardatzak eta y = f (x) kurbak x ∈ 
+[a, b]
+tartean mugatzen duten azalera.
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.7.
+R
+(H) MAGNITUDE BATEN LIMITEAREN KALKULUA
+77
+3.45 Irudia: y = f 
+(x) funtzioak eta OX ardatzak mugatzen duten eremuaren azalera
+2. R(h) hurbilketa-funtzioa eraikitzen dugu:
+[a, b] tartea lau tartetan zatitzen da, h = b−a
+4
+R
+(h) = hf (a)+hf (a+h)+hf (a+2h)+f (a+3h) =
+h
+(f (a) + f (a + h) + f (a + 2h) + f (a + 3h))
+3.46 Irudia: R(h) hurbilketa funtzioa
+Tarte gehiago hartzen badira, h = b−a
+n :
+R
+(h) = h(f (a) + f (a + h) + . . . + f (a + (n − 1)h))
+R
+(h) ez dago deﬁnituta h = 0-n ( ∃h(0), h = 0 ⇔ b = a delako). Baina f (x)-ek
+baldintza jakin batzuk betetzen baditu, h 0-
+tik zenbat eta hurbilago egon orduan eta
+hurbilketa hobea lortuko da, A ≈ R(h), hau da:
+A
+= lim
+h→
+0
+R
+(h)
+3.7.3
+K urba baten luzeraren kalkulua
+1. L : y = f (x) kurbaren arku-luzera x ∈ [a, b] tartean.
+Matematika Aplikatua Saila
+UEP Donostia
+
+78
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+3.47 Irudia: arku luzera
+2. Kurba zatitzen dugu;
+zati bakoitzaren luzera, kurbari sekantea den
+segmentuaren luzeraren bidez hurbiltzen da:
+3.48 Irudia: kurbaren luzeraren hurbilketa sekanteen bidez
+Adibidez:
+R
+(h) =
+n
+k
+=1
+h2
++ (f (a + kh) − f (a + (k − 1)h)2
+n
+=
+b
+− a
+h
+3.49 Irudia: kurba zatiaren luzeraren hurbilketa
+3. R(h) ez dago h = 0-
+n deﬁnituta, baina baldintza nahikoak betetzen badira, h → 0
+doan heinean, R(h) ≈ L hurbilketa hobea da. Azkenik:
+L
+= lim
+h→
+0
+R
+(h)
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.7.
+R
+(H) MAGNITUDE BATEN LIMITEAREN KALKULUA
+79
+Aplikazioen adibide hauek arazo batzuk iradokitzen dizkigute
+(T = balio zehatza, R(h)=T -
+ra hurbilketa):
+• Lehen esan dugunez, ” f (x)-ek baldintza nahikoak betetzen baditu, limh→0 R
+(h) = T ”.
+Baina zein dira baldintza horiek?
+• R(h)-ren adierazpena korapilatsua da kasu askotan.
+* 3.7.1:
+f
+(x) =
+√
+x
++ 1
+xc o s x
+bada ⇒ R(h) =
+√
+a
++h+1
+(a+h)c o s (a+h) −
+√
+a
++1
+ac o s a
+h
+⇒ lim
+h→0
+R
+(h) = ??
+* 3.7.2 eta 3.7.3:
+Ohartu batugaien kopurua ∞-rantz doala h → 0 denean: h =
+b−a
+n
+Arazo hauen erantzuna Kalkulu Inﬁnitesimalaren teoria aurkitzen dugu:
+• Kasu bakoitzerako (A, L, B, m etb.) badago teoremaren bat f (x)-
+ek bete behar dituen
+baldintzak zehazten dituena limh→0 R(h) = T bete dadin.
+Adibidez, 3.7.2 (azalera) kasuan, ziurtatu dezakegu
+lim
+h→0
+R
+(h) = A
+dela, hurrengoa betetzen bada:
+- f (x) [a, b]-n deﬁnituta dago.
+- f (x) jarraia da [a, b]-n.
+• limh→0 R(h)-
+ren kalkulu zuzenaren zailtasunari dagokionez, badaukagu teorema bat
+”laburbide” bat erakusten diguna; ”laburbide” honen bidez ez da beharrezkoa R
+(h)-
+ren adierazpena lortzea, ezta limh→0 R(h)-
+ren kalkulu zehatza egitea ere. G utxitan
+kalkulatu beharko ditugu R(h) eta limh→0 R(h), parametro garrantzitsu guztiak 
+(lu-
+zera, azalera, inertzi momentua...) bakoitzari dagokion ”laburbidea” erabiliz lortu
+baitaitezke.
+3.7.1 arazoan erabili beharreko ”laburbidea” f 
+(x) funtzio deribatua da. 3.7.2 eta 3.7.3
+arazoetan ”laburbidea” integrazioa da.
+Matematika Aplikatua Saila
+UEP Donostia
+
+80
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+3.50 Irudia: eskema
+Kalkulu zuzenaren prozedura garrantzitsuenak aztertzen joango gara aurrerantzean.
+Ikus dezagun orain R(h) eta limh→0 R(h) = T -
+ren kalkulua zein zaila izan daitekeen
+erakutsiko digun adibide bat:
+Adibidea: Hiruki baten azalera
+h
+=
+b
+− 0
+n
+=
+b
+n
+, h
+= 0
+3.51 Irudia: hiruki baten azalera
+R
+(h) = h(y(0) + y(h) + y(2h) + · · · + y((n − 1)h)) =
+= h a + a 1 −
+h
+b
++ a 1 −
+2h
+b
++ · · · + a 1 −
+(n − 1)h
+b
+=
+= ah 1 + 1 −
+h
+b
++ 1 −
+2h
+b
++ · · · + 1 −
+(n − 1)h
+b
+=
+= ah n −
+h
+b
+(1 + 2 + · · · + (n − 1)) = ah n −
+h
+b
+n
+(n − 1)
+2
+=
+= ah
+b
+h
+−
+h
+b
+b
+h
+b
+h − 1
+2
+=
+ab
+2
++
+a
+2
+h
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.8.
+LIMITEAREN EX IS TENTZIAREN
+− δ KARAKTERIZAZIOA
+81
+Beraz:
+A
+= lim
+h→0
+ab
+2
++
+a
+2
+h
+=
+ab
+2
+3.52 Irudia: limh→0 R(h)
+Oharra:
+Zergatik 1 + 2 + 3 + · · · + (n − 1) =
+n
+(n−1)
+2
+?
+1
++
+2
++
+3
++ · · · + (n − 1)
+(n − 1) + (n − 2) + (n − 3) + · · · + 1
+n
++
+n
++
+n
++ · · · + n
+⇒ 1 + 2 + 3 + · · · + (n − 1) =
+n
+(n − 1)
+2
+3.8
+L imitearen ex istentz iaren
+−
+δ ka r a kte r iz a z io a
+Ad ibid e a :
+D e m a g u n m a kin a ba t V te n tsio ba te ra lotu ta d a g oe la ; te n tsio h orre ta tik I in te n tsita te ba t
+d oa . V -ri ba lioa k e m a n e z I-
+re n ba lio e z be rd in a k lortu ko d ira , h a u d a , I = I(V ).
+L a n a re n te n tsioa V = 3 5 0V d a . H a la e re , V -k g o-
+ra be h e ra (ﬂ u ktu a z ioa k) tx ikia k d itu , e ta h orre g a tik,
+V ∈
+(3 5 0 − δ, 3 5 0 + δ) n on δ > 0 z e n ba ki tx iki e ta
+e z e z a g u n a d e n .
+3 .5 3 Iru d ia : V e ta I-re n ﬂ u ktu a z ioa k
+G u re a ra z oa z e ra d a , V -re n g ora be h e ra ba te k I-
+re n g ora be h e ra ba te ra g a ra m a tz a la , e ta
+h orre k g u re ta ld e a re n tz a t ka lte g a rria d a . Ad ibid e z , d e m a g u n I
+(3 5 0) = 1 2 A in te n tsita te
+on e n a d e la . B a in a be re z , I ∈ (1 2 − , 1 2 + ) be te tz e n d a ,
+>
+0 δ-re n m e n p e koa d e n ba lio
+Matematika A p likatu a S aila
+U E P D o n o stia
+
+82
+3.
+K AP IT U L U A AL D AG AI E R R E AL E K O
+F U N T Z IO
+E R R E AL AK
+bat izanik. Demagun gure makina I hurrengo tartean dagoenean bakarrik dabilela martxan:
+12 ± 10% = (12 − 1.2, 12 + 1.2) = (10.8, 13.2) ( = 1.2)
+Beraz, zein V oszilazio onar dezakegu I 
+(10.8, 13.2) tartean egon dadin? Hau da, emanda
+oszilazio bat I = 12-ren inguruan, aurkitu al dezakegu δ oszilazio bat V = 350-
+en inguruan
+non V ∈ (350 − δ, 350 + δ) izanda I ∈ (12 − , 12 + ) bada? E mandako
+>
+0 baterako,
+existituko al da δ hori? Beti? N oiz ziurtatu dezakegu?
+Adibidearen graﬁ koan dirudi posible dela:
+3.54 Irudia:
+= 1.2 kasua
+M akinak
+= 1.2-ko I-ren oszilazioa onartzen badu (I ∈ (12 − 1.2, 12 + 1.2)), orduan
+graﬁ koki determinatu dezakegu, V ∈ (350 − δ, 350 + δ) izanda I ∈ 
+(12 − 1.2, 12 + 1.2) beteko
+duen δ balio bat zehazki neurtuz. δ balio horrek balio digo, eta baita BE S T E E DO Z E IN
+T X IK IAGO ere, noski.
+E ta zer gertatzen da tolerantzia txikiagoa bada? Adibidez:
+12 ± 5% = (12 − 0.6, 12 + 0.6) = (11.4, 12.6) ( = 0.6)
+3.55 Irudia:
+= 0.6 kasua
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.8.
+LIM ITEAREN EX IS TENTZIAREN
+− δ KARAKTERIZAZIOA
+83
+Lehengoko δ balioa beharbada handiegia da, baina existitzen da δ berri bat baliozkoa
+dena:
+∃v ∈ (350 − δ, 350 + δ) | I /
+∈ (11.4, 12.6)
+baina δ berri bat aurkitzen dugu:
+∃δ > 0 | v ∈ (350 − δ , 350 + δ ) ⇒ I ∈ (11.4, 12.6)
+Arazo berdineko beste hainbat egoera praktiko ere badago:
+- T = galdara baten tenperatura, erregulagarria.
+- P = presioa, T -ren menpekoa, P = P (T ).
+- Lanaren presioa = 40kg/cm 2, T = 150oC.
+P -k (40 − , 40 + ) tarteko balioak har baditzake, aurki
+al dezakegu T -ren (150 − δ, 150 + δ) tarte bat non
+∀T ∈ (150 − δ, 150 + δ) ⇒ P ∈ (40 − , 40 + )?
+3.56 Irudia: P (T ) funtzioa
+3.7. Ariketa
+Bilatu arazo bereko egoera gehiago.
+3.8 . Ariketa
+Aztertu ondoko egoera:
+> 0 baterako aztertu δ aurkitzea posible den ala ez:
+lim
+x
+→a
++
+y = l1
+lim
+x
+→a−
+y = l2
+(l1 = l2)
+3.57 Irudia: P (T ) funtzioa
+Matematika Aplikatua Saila
+UEP Donostia
+
+84
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+Kasu honetan ez da existitzen eta δ arteko elkarlotura hori.
+> 0 txiki bat aurki deza-
+kegu non edozein (a − δ, a + δ) tartek modu hontako x puntuak dituen: f (x) /
+∈ (l1 − , l1 + )
+eta f (x) /
+∈ (l2 − , l2 + ). Formalki:
+∃ > 0 | ∀δ > 0 ∃x ∈ (a − δ, a + δ) | f (x) /
+∈ (l1 − , l1 + ) eta f (x) /
+∈ (l2 − , l2 + )
+Dirudienez erlazionatuta daude limitearen existentzia eta δ > 0-
+ren existentzia > 0 bakoi-
+tzerako.
+3.1. Teorema Bi p ro p ie tatee k g au za be ra e sate n d u te . H au d a:
+∀ > 0 ∃δ > 0 | x ∈ (a − δ, a + δ), x = a ⇒ f (x) ∈ (l − , l + )
+o n d o k o are n balio k id ea d a:
+lim
+x→a
+f (x) = l
+Bi propietateen artean ez dago inongo ezberdintasunik.
+− δ korrespondentzia hori
+existitzen bada, orduan f (x)-
+ek limitea baduela ziurta dezakegu. Eta alderantziz, limitea
+existitzen bada, − δ korrespondentzia existitzen dela ere ziurta dezakegu.
+Aurreko bi adibidetara itzuliz, ikus dezakegu bietan ziurtatuta dagoela edozein
+positi-
+botarako ∃δ > 0|x ∈ (a − δ, a + δ) ⇒ f (x) ∈ (l − , l + ).
+3.58 Irudia: limV →3 5 0 I = 12A eta limT
+→
+15 0
+P = 40Kg/cm
+2
+3.1 teoremaren frog apena
+Hurrengoa ulertu behar da:
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.8.
+LIMITEAREN EXISTENTZIAREN
+− δ KARAKTERIZAZIOA
+85
+1 . Frogapena edozein funtziotarako egin behar da. Kasu zehatzak hartzen badira, y = x
+2
+edo y = e
+x adibidez, ez gara ezer frogatzen ariko, soilik adibideak ematen ariko gara.
+2. Baliokidetasun bat frogatu behar denez, bi inplikazioak frogatu behar dira:
+lim
+x→a
+f (x) = l ⇔ − δ baldintza
+Hau da frogatu behar dena:
+⇒) lim
+x→a
+f (x) = l ⇒ − δ baldintza
+⇐) − δ baldintza ⇒ lim
+x→a
+f (x) = l
+⇒ frogapena, absurdura eramanez:
+Demagun limx→a f (x) = l dela, baina − δ baldintza ez dela betezen:
+∃ > 0 | ∀δ > 0, ∃x ∈ (a − δ, a + δ) | f (x) /
+∈ (l − , l + )
+Estrategiak hurrengo baldintzak beteko dituen xn segida bat ”eraikitzean” datza:
+lim
+n→∞
+xn = a baina lim
+n→∞
+f (xn) = l
+eta hori absurdua da, limitea existitzen baita.
+δ = 1 hartzen dugu ⇒ ∃x1 ∈ (a − δ, a + δ) | f (x1) /
+∈ (l − , l + )
+δ = 1/2 hartzen dugu ⇒ ∃x2 ∈ (a − δ, a + δ) | f (x2) /
+∈ (l − , l + )
+Orokorrean:
+δ =
+1
+n ⇒ ∃xn ∈ (a −
+1
+n , a +
+1
+n ) | f (xn) /
+∈ (l − , l + )
+Beraz, lim
+n→∞
+xn = a
+3.59 Irudia: xn-ren limitea a da
+Bestalde f (xn) /
+∈ (l − , l + ), ∀n ∈ N eta, beraz, lim
+n→∞
+f (xn) = l
+Baina hori ezinezkoa da, absurdua!
+Matematika Aplikatua Saila
+UEP Donostia
+
+86
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+3.60 Irudia: ez dago f (xn) baliorik (l + , l − ) tartean
+3.9
+L im itearen b akartasu n a
+3.9. Ariketa
+Frogatu limitea existitzekotan bakarra dela (segiden limitearen bakartasuna
+frogatzeko erabilitako antzeko prozedura erabili).
+3.1 0
+L im iteen p rop ietateak
+3.10 . Ariketa
+Enuntziatu funtzioen arteko batuketa/ biderkaketa/ zatiketaren limitearen
+existentzia-propietateak (segidetan egindako modu berean).
+3.1 1
+L im ite in ﬁ n itu a
+Funtzio batek x = a puntuan limitea izateak portaera bornatua duela adierazten du, hau
+da, aurki dezakegula (a − δ, a + δ) tarte txiki bat f (x) beti 
+(l − , l + ) tartean egotera
+behartuko duena.
+Ikusi ditugu f (x) bornatzea garrantzitsua zen hainbat egoera, zeren f (x)-
+ek balio handiegiak
+hartzeak ondorio okerrak eragiten zituen.
+Nahiz eta x = a puntuan limiterik ez existitu, batzutan f 
+(x) funtzioa bornatua egon daiteke.
+Adibidez:
+lim
+x→a+
+y = lim
+x→a−
+y ⇒ ∃ lim
+x→a
+y
+Baina: ∃δ > 0 | ∀x ∈ (a − δ, a + δ) ⇒ f (x) ∈ [m, M ] ⇒
+f (x) bornatua (a − δ, a + δ) tartean
+3.61 Irudia: ez da existitzen limitea a-n, baina funtzio bornatua da
+Hala ere, limx→a y existitzen ez bada, beti ezin da y bornatu. Ikus dezagun ondorengo
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.11.
+LIMITE INFINITUA
+87
+adibidea:
+Kasu honetan, lim
+x→a+
+y = l
+y ESKU INETIK bornatua dagoen (a, a + δ) tarte bat
+aurki dezakegu. Hala ere, y-ren portaera a-ren ezkerre-
+tik oso bestelakoa da. y-ren balioak edozein M ”muga”
+gainditzen du; horretarako nahikoa da x = a puntura
+nahi bezainbeste hurbiltzea ezkerretik.
+3.62 Irudia: ez da existitzen limitea a-n, eta ez da funtzio bornatua
+3.11. Ariketa
+Idatzi formalki aurreko egoera
+Ikus dezagun:
+∀M ∈ R ∃δ > 0 | ∀x ∈ (a, a + δ) ⇒ f (x) > M
+Laburtuz:
+lim
+x→a+
+f (x) = ∞
+Modu berean:
+lim
+x→a+
+y = +∞ eta lim
+x→a−
+y = −∞
+∀M ∈ R ∃δ > 0 | x ∈ (a − δ, a) ⇒ f (x) < M
+M ”lurra” nahi bezain behean jarrita ere, nahikoa da
+x = a puntura ezkerretik hurbiltzen joatea y balioa M
+baino beherago geratzeko.
+3.63 Irudia: funtzioa ez dago bornatuta
+Bi kasuetan y-k x = a asintota bertikala duela esango dugu.
+Matematika Aplikatua Saila
+UEP Donostia
+
+88
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+Adibidez, y =
+1
+1−x
+a = 1 puntuan
+lim
+x→1+
+y = −∞ (1 − x < 0 delako)
+lim
+x→1−
+y = +∞ (1 − x > 0 delako)
+Gainera, lim
+x→±
+∞
+y = 0 ⇒ y = 0 asintota horizontala.
+Zenbat hurbildu behar dugu x = 1
+puntura y > M = 1000 izan dadin?
+3.64 Irudia: y =
+1
+1−x funtzioa
+1
+1 − x
+> 1000 ⇔ 1 − x <
+1
+1000
+= 10
+−3
+⇔ x > 1 − 10
+−3
+Orduan:
+x ∈ (1 − 10
+−3, 1) ⇒ y > 1000 = M
+Zenbat hurbildu behar dugu a = 1 puntuaren eskuinetik y < M betetzeko, M < 0 edozein
+kota zehatz izanik?
+1
+1 − x
+< M ⇔ 1 − x >
+1
+M
+⇒ x < 1 −
+1
+M
+Adibidez:
+M = −5000 ⇒ x ∈
+1, 1 +
+1
+5000
+= (1, 1 + 2 · 10
+−4) ⇒ y < −5000 = M
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.12.
+J ARRAITUTASUNA
+89
+3.12
+J arraitutasuna
+3.12.1
+Fu n tz io ja rra itu a k
+J arraitua hitzak kalkuluan eta hizkuntza arruntean esan nahi berbera du. y magnitudea
+x magnitudearekiko , x = a puntuan era jarraituan aldatzen dela esatea, y
+(x) funtzioaren
+adierazpen graﬁkoak, x = a puntuaren inguruan hutsunerik edo tarterik ez duela esatea da.
+Hainbat prozesu arrunt, funtzio jarraituren bidez adierazten dira. Adibidez, 
+(3.65) adie-
+razpen graﬁkoak bi prozesu hauek adieraz ditzake:
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+x0
+x
+y
+x
+f
+(x0)
+3.65 Iru d ia : Abia d u ra ? p resioa ? Z er a d iera z ten d u ?
+• x = d en bora bez a la eta
+y
+= a bia d u ra bez a la ha rtu z ,
+g ra ﬁ koa k a d iera z d ez a ke g orp u tz ba ten a bia d u ra . H a siera n in d a r ba ten era g in ez , a bia -
+d u ra ha n d itz en d oa , eta x0 u n ea n in d a rra eg itea ri u z ten d ieg u eta a bia d u ra , m a rru ska -
+d u ra ren era g in ez , m oteltz en d oa . y a ld a g a ia ren a ld a keta ja rra itu a d a , ha u d a ez d u g u
+hu tsu n erik.
+• x = d en bora bez a la eta
+y
+= p resioa bez a la ha rtu z ,
+g ra ﬁ koa k a d iera z d ez a ke g a ld a ra ba ten d u g u n p resioa . x0 u n ea n g a ld a ra ren ba lbu la
+ireki d u g u la ko p resioa tx ikitz en d oa . K a su hon eta n ere a ld a keta ja rra itu a d a .
+B este ka su ba tz u eta n y a ld a g a ia k " sa lto" ed o " eten g u n ea " d u x
+= a u n ea n .
+Ad ibid ez a d iera z p en g ra ﬁ ko ha u eta n iku sten d u g u eten g u n e d itu z ten ku rba k.
+Matematika A p likatu a S aila
+U E P D o n o stia
+
+90
+3.
+K AP IT U L U A AL D AG AI E R R E AL E K O
+F U N T Z IO
+E R R E AL AK
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+◦
+◦
+◦
+1
+2 t(µ s )
+y
+(m V )
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+1
+2
+t
+(µ s )
+y
+(m V )
+Kasu biek zirkuitu baten tentsioa m V adieraz dezakete.
+(3.66) irudian dugun adierazpena telefono deien prezioa izan daiteke. L ehenengo mi-
+nutuan 0.5e ordaintzen dugu. Hortik aurrera denboraren arabera linealki handitzen da
+ordainsaria 1e-tik abiatuta. x = 1−-tik x = 1
++-era etengunea dugu.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+◦
+◦
+•
+1
+2
+x
+(m in )
+y
+(e)
+0
+0, 5
+1
+3
+3.66 Irudia:
+Etengune m o ta ez b erd ina k
+y
+aldagaia x = c puntuan jarraitua ez den hiru kasu ditugu.
+• f (c) ez du existitzen.
+f
+(x)-ren balioa deﬁnitzeke dugu x = c denean, baina bada
+lim
+x→c f (x) = l (Ikus (3.67 ) irudia.)
+• f (c) existitzen da. f (x)-
+ren balioa deﬁnitu dugu x = c denean, baina ez lim x→c f (x)
+(Ikus (3.68 ) irudia.)
+• f (c) existitzen da. f (x)-
+ren balioa deﬁnitu dugu x = c denean, bada lim x→c f (x) = l
+baina l = f (c) (Ikus (3.69) irudia.)
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.12.
+J ARRAITUTAS UNA
+91
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+◦
+c
+l
+3.67 Irudia: E tentasuna 1. mota
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+◦
+•
+c
+y
+(c)
+3.68 Irudia: etentasuna 2 . mota
+Beraz,
+3.4. Deﬁ niz ioa
+f
+(x) funtzioa jarraitua d a x = c p untuan bald intza h aue k be te tze n d ire nean:
+1 . f
+(c) balioa d e ﬁ niturik d ag o,
+2 . e x istitze n d a
+lim
+x→c f (x) = l,
+3 .
+lim
+x→c f (x) = l = f (c).
+3.8 . Ad ib id ea
+f
+(x) = x
+2
+−1
+x−1
+funtzioa D = R−{1} eremuan jarraitua da. Ikus (3.70) irudia.
+f
+(x) =
+(x − 1)(x + 1)
+x
+− 1
+= x + 1
+betetzen da x ∈ D denean. f (1) deﬁnitu gabe dago baina lim
+x→1 f (x) = 2 da. E tengunea
+dugu x = 1 denean.
+Matematika Aplikatua Saila
+UEP Donostia
+
+92
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+•
+◦
+c
+y
+(c)
+l
+3.69 Irudia: etentasuna 3. mota
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+◦
+1
+2
+3.70 Irudia:
+Etenaldi hori “gaindi” dezakegu funtzioa era honetan deﬁnituz, (ikus 
+(3.71) irudia)
+f
+(x) =
+x
++ 1 x = 1 denean
+2
+x
+= 1 denean
+Zergatik esaten dugu etengune mota honetakoa etengune gaindigarriak direla?
+3.9. Adibidea
+f
+(x) funtzioaren jarraitutasuna aztertu x = 2 puntuan.
+f
+(x) =
+x
+2 − 1 x < 2 denean
+ax
++ b x ≥ 2 denean
+a, b
+∈ R
+lim
+x→2
++
+f
+(x) = 2a + b;
+lim
+x→2− f (x) = 3;
+f
+(2) = 3 betetzen dira. Ikus (3.72) irudia
+Funtzioa jarraitua da x = 2 puntuan⇐⇒ 2a + b = 3 den. a eta b-
+rentzak ez dugu balio
+bakarrak aurkitzen, 2a + b = 3 baldintza betetzen duten balio birentzat funtzioa jarraitua
+da.
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.12.
+JARRAITUTASUNA
+93
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+1
+2
+3.71 Irudia:
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+◦
+•
+2
+3
+2a + b
+3.72 Irudia:
+J arraituak diren funtzio sorta era honetan deﬁni dezakegu. Ikus (3.73) irudia.
+f
+(x) =
+x
+2 − 1
+x <
+2 denean
+ax
++ 3 − 2a x ≥ 2 denean
+∀a ∈ R
+3.12.2
+J arraitutasunaren deﬁ nizioak
+Limiteentzat ikasi dugun guztia jarraitasuna aztertzerakoan ere erabilgarria da. J arraituta-
+sunak, bakarrik baldintza berri bat eskatzen du:
+lim
+x→c
+f
+(x) = f (c)
+J arraitutasunaren baldintza era hauetan adieraz dezakegu, segiden bidez:
+3.5. Deﬁnizioa
+f
+(x) funtzioa jarraitua de x = c puntuan baldin (ikus (3.7 4 ) irudia)
+∀{x
+n
+} | x
+n
+∈ D eta lim
+n→∞
+x
+n
+= c =⇒ lim
+x
+n →∞
+f
+(x
+n
+) = f (c)
+Matematika Aplikatua Saila
+UEP Donostia
+
+94
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+•
+3
+2
+3.73 Irudia:
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+c xn
+f
+(c)
+f
+(xn)
+3.74 Irudia: segidaren bidez
+eta − δ baldintzaren bidez:
+3.6. Deﬁnizioa
+f
+(x) funtzioa jarraitua de x = c puntuan baldin (ikus (3.75 ) irudia)
+∀ > 0∃δ > 0 | x ∈ (c − δ, c + δ) =⇒ f (x) ∈ (f (c) − , f (c) + )
+3.12.3
+Jarraitutasuna tarte itx itan
+D emagun f (x) D = 
+[a, b] tartean deﬁnitutako funtzioa dela. c tartearen barneko puntua
+baldin bada, hau da c ∈ (a, b) (ikus (3.76) irudia), c-
+ren eskuinean eta ezkerrean f (x)
+deﬁnituta dagonez, lor dezakegu limitea x = c denean.
+Baina, zer gertatzen da c = a edo c = b denean? Ezin dugu limx
+→a− f
+(x) edo limx
+→b+ f
+(x)
+(ikus (3.77) irudia) lortu.
+O rduan, nola deﬁnitzen dugu jarraitutasuna [a, b] tartean?
+3.7 . Deﬁnizioa
+f
+(x) funtzioa jarraitua da [a, b] tartean, (a, b) tartean jarraitua denean eta
+limx
+→a+ f
+(x) = f (a) eta limx
+→b− f
+(x) = f (b) betetzen direnean
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.12.
+JARRAITUTAS UN A
+95
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+c − δ c
+f
+(c) −
+f
+(c) +
+f
+(c)
+c
++ δ
+3 .7 5 Iru d ia : ( − δ, + δ)
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+a
+c
+b
+3 .7 6 Iru d ia : ta rte itx ia
+Z e rg a tik a rd u ra tz e n g a ra ja rra itu ta su n a 
+[a, b] itx u ra ko e re mu ta n a z te rtz e n ? B e ste ta rte
+mota h a u e k,D = (a, b); D = (a, ∞); D = 
+(a, b] e ra d a u d e . Z e rg a tik [a, b] itx u ra ko e re -
+mu a k? Fu n tz io ja rra itu a ta rte itx ia e ta mu g a tu a re kin e lka rtz e n d u g u n e a n p rop ie ta te be rri
+e ta in te re sg a rria k a g e rtz e n d ire la ko!
+3.10. Ad ib id e a
+A z te r d itz a g u n 
+(3 .1 2 .3 ) ta u la re n e sku in e a n d itu g u n fu n tz io ja rra itu a k,
+e z ke rre a n d itu g u n fu n tz ioe kin kon p a ra tu z . Z e in tz u k d ira e z be rd in ta su n a k? Z e r n ola ko p ro-
+p ie ta te a k be te tz e n d itu z te ba tz u k e ta e z be ste a k?
+1.a
+Fu n tz ioa ja rra itu a d a , d e ﬁ n iz io e re mu a 
+(a, b) mota ko ta rte a d a . Fu n tz ioa e z d a g o mu -
+g a tu a , (a, b) ta rte ko p u n tu ba te n d e u se z ta tz e n d a .
+1.b
+Fu n tz ioa ja rra itu a e ta mu g a tu a d a , 
+[a, b] ta rte a n d e ﬁ n itu ta . [a, b] ta rte a n ba lio ma x imoa
+e ta min imoa d itu .
+M ate m atik a Ap lik atu a S aila
+U E P D o n o stia
+
+96
+3.
+K AP ITUL UA AL D AG AI E RRE AL E K O
+F UNTZ IO
+E RRE AL AK
+1.a
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+a
+b
+(
+)
+1.b
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+•
+•
+a
+b
+[
+]
+f
+(a)
+f
+(b)
+2.a
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+•
+◦
+•
+•
+f
+(a)
+f
+(b)
+a
+b
+[
+]
+2.b
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+•
+•
+a
+b
+[
+]
+f
+(a)
+f
+(b)
+3.a
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+•
+◦
+•
+•
+f
+(a)
+f
+(b)
+a
+b
+[
+]
+R−
+1.b
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+•
+•
+a
+b
+[
+]
+f
+(a)
+f
+(b)
+M
+m
+R
+3.3 Taula: (3.10 ) Adibidea
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.12.
+JARRAITUTASUNA
+97
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+a
+b
+f
+(a)
+f
+(b)
+f
+(b+) ez dago
+f
+(a−) ez dago
+3.77 Irudia: tarte itxien mugetan limiterik ez
+2.a
+Funtzioa ez da jarraitua, eremua [a, b] motako tartea da. Funtzio mugatua, f 
+(a) eta
+f
+(b)k aurkako zeinuak dituzte, [a, b] tartean ez da deuseztatzen.
+2.b
+Funtzioa jarraitua eta mugatua da [a, b] tartean deﬁnitua. f (a) eta f 
+(b) aurkako zeinuak
+dituzte, [a, b] tartean deuseztatzen da.
+3.a
+Funtzioa ez da jarraitua, deﬁnizio eremua 
+[a, b] motako tartea da. Funtzioa mugatua
+da. ∃z ∈ [a, b] | f (z) = R
+3.b
+Funtzioa jarraitua eta mugatua da [a, b] tartean.∃z ∈ [a, b] | f (z) = R
+∀R ∈ [m, M ],
+m f
+(x)-ren balio txikiena eta M balio handiena izanik.
+Aurkitu d itug un p ro p ie ta te a k h a ue k d ira :
+P1
+f
+(x) funtzioa mugatuta dago D eremuan.
+∃m, M ∈ [a, b] | m ≤ f (x) ≤ M ∀x ∈ D
+P2
+f
+(x) funtzioa D eremuko puntu baten deuseztatzen da.
+∃z ∈ D | f (x) = 0
+P3
+f
+(x) funtzioaren balio txikiena eta handiaren arteko balio guztiak hartzen ditu.
+m
+= m in
+x∈D
+f
+(x), M = m a x
+x∈D
+f
+(x) eta m ≤ R ≤ M =⇒ ∃z ∈ D | f (z) = R)
+Baina,
+Matematika Aplikatua Saila
+UEP Donostia
+
+98
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+• Funtzio batek hiru propietate horiek bete ditzan, beh ar r ez koa al da jarraitua izatea
+eta deﬁnizio eremua D = [a, b] motakoa izatea?
+• Funtzio batek hiru propietate horiek bete ditzan, nah ikoa al da jarraitua izatea eta
+deﬁnizio eremua D = 
+[a, b] motakoa izatea? N ahikoa al da bi baldintza hauetatik
+bakar bat betetzea?
+Azter dezagun (3.78) irudia, funtzioa mugatua da ∀x ∈ (a, b), m ≤ f 
+(x) ≤ M betetzen
+delako. J arraitua ez da eta deﬁnizio eremua D = (a, b) erakoa da
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+◦
+•
+◦
+◦
+m
+M
+a
+b
+(
+)
+3.78 Irudia: P 1 propietatea
+3.12. Ariketa
+Frogatu baldintza bi horiek, banaka, ez direla beharrezkoak (aurkako adi-
+bideak erabili) beste bi propietateak, P 2 eta P 3, bete daitezen.
+Baldintzak banaka beharrezkoak ez direla jakinik, baldintzaren bat nahikoa izango al da
+P 1, P 2, eta P 3 propietateak ziurtatzeko?
+Azter dezagun (3.79) irudian dugun adierazpen graﬁkoa, funtzioa D = 
+[a, b] eremuan
+deﬁnituta dago, [a, b] eremuan jarraitua ez da, eta ez dago mugaturik.
+lim
+x→a+
+f
+(x) = ∞,
+lim
+x→b−
+f
+(x) = −∞
+E remua D = [a, b] motakoa da, f (x) funtzioa ez da jarraitua 
+[a, b] eremuan, eta ez dago
+mugatua
+∀M > 0∃x ∈ [a, b] | f (x) > M
+eta
+∀m < 0∃x ∈ [a, b] | f (x) < m
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.12.
+JARRAITUTASUNA
+99
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+a
+b
+[
+]
+m
+M
+3.79 Irudia: P1 propietatea ez da betetzen
+betetzen direlako.
+Beraz, deﬁnizio eremua D = 
+[a, b] motako izateak ez du ziurtatzen P1 propietatea, hau
+da, funtzioa mugatua izatea deﬁnizio eremuan.
+Azter dezagun (3.80) irudian adierazten den funtzioa, deﬁnizio eremua D = 
+(a, b) mota-
+koa da, funtzioa jarraitua da, baina funtzioa D eremuan mugatua ez dago.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+•
+•
+a
+b
+(
+)
+m
+M
+3.80 Irudia: P1 propietatea ez da betetzen
+Beraz, Dn jarraitua izateak ez du ziurtatzen P1 beteko denik, hau da, mugatua izango
+denik.
+3.13. Ariketa
+Frogatu baldintza bi horiek, banaka, ez direla nahikoak (aurkako adibideak
+erabili) beste bi propietateak, P2 eta P3, bete daitezen.
+Matematika Aplikatua Saila
+UEP Donostia
+
+100
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+Laburpena
+D
+⊂ R eremuan deﬁnitutako f
+(x) funtzioak P1, P2 eta P3 propietateak bete ditzan, deﬁnizio
+eremua ez da 
+[a, b] motakoa izan behar, eta funtzioa ez da jarraitua izan behar. Bi baldintza
+horietatik bakar batek ez du ziurtatzen P1, P2 edo P3 betetzen direnik. Baina, baldintza
+biak betetzen direnean, beti betetzen dira hiru propietateak.
+3.2. Teorema
+[We ie rstrass-e n teo re m a] f (x) fu n tzio a jarraitu a bald in bad a D = 
+[a, b] e re -
+m u an , o rd u an , f (x) fu n tzio are n m ax im o a 
+(balio h an d ie n a) e ta m in im o a (balio tx ik ie n a) [a, b]
+tartean lo rtze n d ira.
+H au da, M , f (x) funtzioak 
+[a, b] tartean duen balio maximoa eta m minimoa baldin
+badira, orduan badira x1, x2 ∈ [a, b] non f(x1) = m eta f
+(x2) = M betetzen diren.
+Azter ditzag un adierazpen g raﬁ ko hauek
+• (3.81) irudian adierazten den funtzioan, f (x1) = m, x2 = b
+f
+(x2) = M betetzen
+dira, x1, x2 ∈ [a, b] direlarik.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+a
+b
+[
+]
+f
+(a)
+f
+(b)
+M
+m
+3.81 Irudia: maximoa tartearen goi mugan
+• (3.82) irudian adierazten den funtzioan, x1 = a,
+f
+(x1) = m; x2 = b f(x2) = M
+betetzen dira, x1, x2 ∈ [a, b] direlarik.
+• (3.83) irudian adierazten den funtzioan, f (x1) = m, f 
+(x2) = M betetzen dira, x1, x2 ∈
+(a, b) ⊂ [a, b] direlarik.
+3.3. Teorema
+[B o lzan o re n teo re m a] f (x) fu n tzio a 
+[a, b] tartean jarraitu a bald in bad a, e ta
+f
+(a) e ta f (b) balio ak au rk ak o ze in u ak bad itu zte , o rd u an , f 
+(x) fu n tzio ak (a, b) tartean g u tx ie -
+n e z be h in 0 balio a h artze n d u .
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.12.
+JARRAITUTASUNA
+101
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+a
+b
+m
+M
+3.82 Irudia: minimoa eta maximoa tartearen mugetan
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+a
+b
+[
+]
+f
+(a)
+f
+(b)
+m
+M
+x1
+x2
+3.83 Irudia: minimoa eta maximoa tartearen barnean
+Beste era baten adierazten dugu teorema hau:
+Hipotesiak:
+Tesia: Hipotesiak betetzen direnean,
+Bete behar diren baldintzak
+beteko den propietatea
+H1
+f
+(x) [a, b] tartean deﬁnitua,
+H2
+[a, b] tartean jarraitua,
+=⇒
+∃z ∈ (a, b) | f (z) = 0
+H3
+f
+(a) · f (b) < 0.
+3.14. Ariketa
+Frogatu, hipotesiren bat betetzen ez bada tesia ez dela bete behar.
+Adibidez, H1 hipotesia ez, H2 eta H3 bai eta tesia betetzen duten funtzioren bat aurkitu.
+H1 hipotesia ez, H2 eta H3 bai eta tesia betetzen ez duen beste funtzioren bat aurkitu.
+Errepikatu gauza bera beste hipotesientzat.
+3.15 . Ariketa
+D emagun f (x) funtzioak Bolzanoren teoremaren hipotesiak betetzen ditue-
+la. Beraz, ∃z ∈ (a, b) | f 
+(z) = 0. z puntu hori bakarra al da? Zer gehiago eskatu behar zaio
+funtzioari, z ∈ (a, b) | f (z) = 0 bakarra izan dadin?
+Matematika Aplikatua Saila
+UEP Donostia
+
+102
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+Bolzanoren teorem aren b idez funtzioen erroak aurki ditzakegu
+S arritan, y = f (x) funtzioaren erroak aurkitu behar ditugu, hau da, f 
+(x) = 0 ekuazioaren
+soluzioak. y = f 
+(x) funtzioaren bidez, zirkuitu baten intentsitatea, edo ibilgailu baten
+abiadura adieraz daiteke. K asu bietan, interesgarria izan daiteke funtzioa zero noiz egiten
+den jakitzea.
+t
+i
+Beste batzutan f (x) eta g
+(x) funtzioak balio berdinak hartzen dituzten x balioa eza-
+gutzea interesatzen zaigu. Adibidez, f (x) eta g
+(x) funtzioak bi makinen etekina adieraz
+dezakete, baldintza ezberdinetan lan egiten duenean. x aldagaiak tentsioa, minutuko bira-
+keta, makinak lanean jardun duen ordu kopurua eta abar adieraz dezake. Interesgarria izan
+daiteke, etekin berdina noiz duten, edo bata bestearen bikoitza noiz den, edo . . . , jakitzea.
+Problema berdina dugu f (x) = g(x) ⇔ f (x) − g
+(x) = 0, hau da, funtzio baten erroak
+bilatzea.
+x
+x
+1
+2
+f(x)
+g (x)
+E
+x
+3.84 Irudia: ∃x | f (x) = g(x)?
+f
+(x) = 0 ekuazioaren soluzioak aurkitzea ez da beti ekuazio lineak edo bigarren mailako
+ekuazioak ebaztea bezain erraza. Bolzanoren teorema erabil dezakegu, bere barne erroren
+bat duen [a, b] tartea aurkitzeko, tarte hori bi azpitartetan zatitzen dugu z =
+a+b
+2
+puntua
+aukeratuz, eta Bolzanoren teoremaren baldintzak betetzen duen azpitartearekin jarraitzen
+dugu lanean. Tartearen zatiketa bakoitza egiten den pausuari iterazio deitzen zaio. Iterazio
+bakoitzean zi puntua aurkitzen dugunez z1, z2, z2 . . . segida lortzen dugu eta segida honen
+limitea funtzioaren erroa da.
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.12.
+JARRAITUTASUNA
+103
+x
+a
+b
+z
+3.85 Irudia: ∃x | f (x) = g(x)?
+3.16. Ariketa
+Bolzanoren teorema oinarri bezala duen metodoa erabili problema hau
+ebazteko: Ibilgailu baten motorrak sortzen duen T indar-
+parea eredu honen bidez hurbiltzen
+da
+T
+= 0.8 08 x
+3 − 1 7 .9 7 4 x2 + 7 1 .2 4 8 x + 1 1 0.8 4 3
+x
+rpm motorraren abiadura da, Indar-parea T = 1 5 0 zein x-
+entzat lortzen da, x ∈ [1 , 5 ]
+izanik?
+3.12.4
+D arboux -en teorema
+Ikus dezagun jarraitu eta tarte itxian deﬁnitutako funtzioei buruzko beste teorema bat.
+3.4. Teorema
+[Darboux] f (x) funtzioa [a, b] tartean jarraitua izanik eta m = min{f (x) |
+x
+∈ [a, b]} eta M = max{f (x) | x ∈ 
+[a, b]}, orduan, f funtzioak m eta M balioen artean
+dauden balio guztiak hartzen ditu gutxienez behin. H au da:
+∀R ∈ [m, M ] ∃x ∈ [a, b] | f (x) = R
+Frogapena
+Demagun m = f (z1), z1 ∈ [a, b] eta M = f (z2), z2 ∈ 
+[a, b] betetzen direla eta z1 < z2
+direla.
+Funtzio hau deﬁnitzen dugu g(x) = f (x)−R, ∀x ∈ [z1, z2]. g jarraitua da 
+[z1, z2] tartean,
+f
+funtzioa eta y = R funtzio konstantea jarraituak direlako.
+Bolzano-ren teorema erabil dezakegu,
+g
+(z1) = f (z1) − R = m − R < 0
+g
+(z2) = f (z2) − R = M − R > 0
+=⇒ ∃z ∈ (z1, z2) non g(z) = 0
+Matematika Aplikatua Saila
+UEP Donostia
+
+104
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+beraz
+=⇒ g(z) = f (z) − R = 0 =⇒ f (z) = R
+m
+R
+x
+x
+a
+b
+M
+x
+1
+3
+ 2
+3.86 Iru d ia : D a rb ou x -e n te ore m a re n a d ie ra z p e n a
+∀R ∈ [m , M ] ∃x ∈ [a , b] | f (x) = R, 
+(3.86) iru d iko ka su a n h iru b a lio d itu g u , f (x1) =
+f
+(x2) = f (x3) = R
+Oharra
+E ra iki d u g u n g fu n tz ioa re n a d ie ra z p e n g ra ﬁ koa , f fu n tz ioa re n a d ie ra z p e n g ra ﬁ koa tra n sla z io
+b a t e g in a z lortz e n d u g u .
+R
+M
+m
+z
+z
+1
+z
+2
+f
+(x) fu n tz ioa re n a d ie ra z p e n g ra ﬁ koa
+∃z ∈ (z1, z2) | f (z) = R
+R
+M
+m
+m− R
+M− R
+z
+z
+1
+z
+2
+g
+(x) fu n tz ioa re n a d ie ra z p e n g ra ﬁ koa
+∃z ∈ (z1, z2) | g(z) = 0
+3.11. Ad ib id e a
+L a b e a itz a ltz e n d u g u 2 5 0◦ te n p e ra tu ra d u e n e a n , 2 0◦-
+ra ja itsi b a in o le h e -
+n a g o 1 7 0◦ te n p e ra tu ra tik p a sa ko a l d a ?
+U E P D o n o stia
+M ate m atik a Ap lik atu a S aila
+
+3.12.
+J A R R A IT U T A S U N A
+105
+250
+20
+17 0
+t
+b
+T
+t
+0
+3.87 Irudia: (3.11) adibideari dagokion adierazpena
+∃t0 ∈ [0, b] | T (t0) = 170
+250
+20
+17 0
+t
+b
+T
+t
+0
+3.88 Irudia: (3.11) adibideari dagokion adierazpena
+Tenperaturak ezin du (3.88) irudian ikusten den bezala aldatu.
+3.12. Adibidea
+Larunbat goizean mendi bat igotzen hasten zara goizeko 8tan eta gailurrera
+10tan heltzen zara. Igandean goizeko 8tan jaisten hasten zara eta ordu eta erdi behar duzu.
+G orantz eta beherantz joaterakoan ordu berdinean leku berdinean zaudela frogatu.
+i
+(t)-k igoeran eta j(t)-k jaisterakoan t unean zauden puntua adierazten dute.
+Deﬁni dezagun h(t) = i(t) − j(t) funtzioa. h(0) = 0 − g < 0 eta h
+(2) = g − 0 < 0,
+0 ∈ [−g, g] denez, t0 uneren baten h(t0) = 0 bete behar da eta une horretan i
+(t0) = j(t0)
+betetzen da.
+3.17 . Ariketa
+H onako egoeraren adierazpen graﬁkoa egin. Demagun jaisterakoan sua
+itzaltzea ahaztu egin zaizula konturatu zarela. B erriz gora zoaz, sua ondo itzalita dagoela
+Matematika Aplikatua Saila
+UEP Donostia
+
+106
+3.
+K AP ITUL UA AL D AG AI E RRE AL E K O
+F UNTZ IO
+E RRE AL AK
+8
+10
+8
+9 :30
+la ru n ba ta
+ig a n d e a
+3.89 Irudia: (3.12) adibideari dagokion adierazpena
+G
+P
+1.5
+2
+1
+i(t)
+j(t)
+3.9 0 Irudia: (3.12) adibideari dagokion adierazpena
+ziurtatzen zara eta berriro beherantz abiatzen zara. Guztira 2 ordu eta erdi behar duzu.
+A urreko kasuan bezala uneren baten leku berdinean egongo zara?
+3.18. Ariketa
+A urreko kasuan bezala, baina, sua itzali eta gero gorago joateko beste bide
+bat dagoela ikusiz bidea hartzen duzu eta apur bat ibili eta gero beherantz itzultzen zara,
+guztira 3 ordu erabiliz. Ba al dago kasu honetan ere, leku berdinean zauden unerik?
+3.19 . Ariketa
+Gai honetan funtzioaren analisiari buruz ikusi dugunaren laburpena egin.
+• Ebazten ari garen problema.
+• Limitearen esan nahia.
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.12.
+JARRAITUTASUNA
+107
+• Limiteak / segidak/
+- δ irizpidea.
+• J arraitasuna, esan nahia.
+• J arraitasuna [a, b] tartean.
+Matematika Aplikatua Saila
+UEP Donostia
+
+108
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+3.13
+D e rib a g a rrita su n a .
+3.13.1
+S arre ra.
+Gogora ezazu y
+(x) funtzioaren portaera aztertzeko tresna matematikoa garatu nahian gaude-
+la. Lan horretan piska bat aurreratu dugu eta ondoren agertzen diren portaera desberdinak
+sailka ditzakegu. Ikusi 3.91 irudia.
+3.91 Irudia:
+Hala ere, orain arte garatutako tresna matematikoa ez da nahikoa izango y
+(x) funtzioaren
+beste motako portaerak aztertzeko. Ikusi adibidez 3.92 irudia
+Jarraitasunaren ikuspuntutik ez dago desberdintasunik 3.2 irudian agertzen diren funtzioen
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.13.
+DERIB AGARRITASUNA.
+109
+3.92 Irudia:
+artean. Z er adierazten dute aurreko irudiek? N ola bereiztu beraien graﬁkoak?. Graﬁko ho-
+riek adierazten badute adibidez, motorra baten prestazioak, salmenten eboluzioa, zirkuitu
+batetik higitzen den intentsitatea, kontrolatutako prozesu kimikoa, etb. Z ertan datza lau
+portaera horien desberdintasuna?.
+K asu honetan ere, ez dago di adibide hauek desberdintzerik jarraitasunaren ikuspuntutik.
+Hala ere, y = f (x) funtzioak z-ren inguruan portaera berezia du. z-
+tik pasatzean y-ren
+izugarrizko aldaketa nabaritzen da. Ez dago aldaketa hau, jarraitasunarekin bakarrik neur-
+tzerik ezta itxura honetako puntuak identiﬁkatzerik ere. Ikusten duzunez, gure analisirako
+tresna lantzen jarraitu behar dugu.
+3.13.2
+y -ren x -rek ik o ald ak u n tz a ab iad u ra.
+Aztertu behar dugun ideia hauxe da:
+y
+(x) funtzioa izanik, x = a puntuan ebaluatzen dut, f 
+(a) balioa lortzen dudalarik. O rain,
+aldagaia (a + h)-raino mugitzen badut zer aldaketa jasaten du y(x)-ek?
+3.13. Adibidea
+Izan bedi y = x + 1 x ≥ 0 izanik.
+Matematika Aplikatua Saila
+UEP Donostia
+
+110
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+3.93 Irudia:
+y
+-k jasotako aldakuntza ondorengoa da:
+∆y = y(1 + h) − y(1) = 2 + h − 2 = h
+Hautazko x = a puntuan ebaluatzen badugu:
+∆y = y(a + h) − y(a) = a + h + 1 − a − 1 = h
+Beraz, funtzio honen propietate bat aurkitu dugu, ondorengoa hain zuzen ere:
+x
+aldagai independentea x = a-tik, x = (a+h)-
+raino mugitzen bada y aldagaiaren aldakuntza
+h
+-
+ren berdina da. Aldaketa hau ez dago kalkulua egiten dugun x = a puntuaren menpe.
+Bai portaera bitxia hemen agertutakoa. Gauza bera gertatuko da funtzio guztiekin?
+3.14. Adibidea
+Izan bedi y = x
+2. Egin dezagun kalkulu berbera: Ikusi 3.94 irudia
+
+
+
+y
+(a)
+=
+a
+2
+y
+(a + h)
+=
+(a + h)
+2 = a2 + h2 + 2ah
+∆y
+=
+y
+(a + h) − y(a) = h
+2 + 2ah
+Aurkitu dugu beraz, funtzio hau eta aurreko adibidean agertzen den funtzioaren arteko
+desberdintasuna eta honela adieraz dezakegu:
+y
+-ren aldakuntza, x a-tik, (a + h)-ra pasatzen denean h-
+ren menpe ez ezik a puntuaren
+menpe ere dago.
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.13.
+DERIBAGARRITASUNA.
+111
+3.94 Irudia: 3.2 adibidea
+3.20. Ariketa
+y
+-ren gehikuntza batzuk kalkulatu ondoko taula osatuz:
+a
+a+ h
+y (a)
+y (a+ h)
+∆y
+h
+-
+ren edozein balio hartu, adibidez, h = 2.5. Nola aldatzen da ∆y gehikuntza x = a
+puntuaren arabera?. y = x
+3 funtzioarentzat azterketa berdina egin. Azaldu zein den y = x,
+y
+= x
+2 eta y = x3 funtzioen portaeraren arteko desberdintasuna. Azterketa y = xn , n ∈ N
+funtzioarako orokortu.
+Orokorrean, ez da oso baliagarria ∆y-ren balioa ezagutzea x-
+ren gehikuntza, ∆x = h
+ezagutzen ez badugu. Adibidez:
+Izan bedi y = x non a = 1 den. Orduan:
+∆y = 8 ⇔ y(1 + h) − y(1) = 8 ⇔ 1 + h − 1 = 8 ⇔ h = 8
+Hau da, y aldagaiaren gehikuntza ∆y = 8 izan dadin beharrezkoa da h = 8 izatea.
+y
+= x
+2 bada
+∆y = 8 ⇔ (1 + h)
+2 − 1 = 8 ⇔ h2 + 2h − 8 = 0 ⇔ h = 2, −4
+Matematika Aplikatua Saila
+UEP Donostia
+
+112
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+Beraz, funtzio honek gehikuntza askoz txikiagoa behar du ∆y = 8 lortzeko. Ikusi 3.95 eta
+3.96 irudiak.
+Hau dela eta, ∆y-ren kalkulua x aldagaiarekiko idazten da:
+3.95 Irudia:
+3.96 Irudia:
+∆y
+∆x
+=
+y
+(a + h) − y(a)
+h
+y
+-ren batezbesteko balioa x ∈ [a, a + h] edo x ∈ [a + h, a] h < 0 denean.
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.13.
+DERIBAGARRITASUNA.
+113
+3.15. Adibidea
+Demagun t-k denbora adierazten duela eta y-k higikari baten posizioa.
+Ikusi 3.97 irudia.
+t
+= 1 eta t = 4 denboren arteko batezbesteko abiadura hauxe da:
+3.97 Irudia: 3.3 adibidea
+∆y
+∆x
+∗
+=
+y
+(1 + 3) − y(1)
+3
+=
+6 + 1
+3
+=
+7
+3
+m/s
+(∗)h = 3
+Ondorengo irudian
+∆y
+∆x -ren adierazpen geometrikoa ikusiko dugu. Ikusi 3.98 irudia.
+3.98 Irudia:
+∆y
+∆x
+= ta n α =
+7
+3
+Beraz,
+∆y
+∆x -ek ondorengo bi adierazpenak ditu:
+1. y-ren batezbesteko balioa x ∈ [a, a + h] tartean da.
+2. (a, y(a)) eta (a + h, y
+(a + h)) puntutik pasatzen den zuzen sekantearen malda da.
+Matematika Aplikatua Saila
+UEP Donostia
+
+114
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+Zuzen sekante honen ekuazioa hauxe izango da:
+y
+− y(a) = m(x − a) ⇔ y − y(1) =
+7
+3
+(x − 1) ⇔ y =
+7
+3
+x
+−
+10
+3
+Abiadura zer tartetan da negatiboa? Eta positiboa?
+v <
+0 ⇔ posizioa beherakorra bada⇔ t < 1, t ∈ (2, 3)
+v >
+0 ⇔ posizioa gorakorra bada⇔ t > 3, t ∈ (1, 2)
+Ikus dezagun beste adibide bat:
+3.16. Adibidea
+Ikusi 3.99 irudia.
+Ohar zaitez z eta y aldagaien batezbesteko abiadura 
+[a, a + h] tartean berdina dela. Hala
+3.99 Irudia: 3.4 adibidea
+ere, bi funtzio horien portaera [a, a + h] tartean askoz desberdina da.
+Beraz,
+∆y
+∆x batezbesteko abiadurak ez du oso ondo adierazten y(x) funtzioaren aldakuntza
+[a, a + h] tartean. Pentsa dezakegu ∆x gehikuntzaren tamaina gutxitzearekin konponduko
+dela. Ikusi 3.100 irudia.
+Honek ez du problema konpontzen; beti aurki dezakegu z(x)-
+ren oso desberdina den y(x)
+funtzio bat zeinak [a, a + h] tartean z(x)-ren abiadura berdina izango duen.
+3.21. Ariketa
+Demagun y(x) funtzioa ez dela lineala, hots, ez dela y = mx + n itxurakoa
+eta y(a), y(a + h), h eta a ezagunak direla. z(x) funtzioa aurkitu
+∆z
+∆y =
+∆y
+∆x bete dadin.
+Ikusi dugunez, batezbesteko abiadura ez da y funtzioaren portaeraren adierazgarria
+[a, a + h] tartean. Dirudienez, problemaren zailtasuna y-
+ren ezaugarri bat tarte batean
+neurtzen ari garelakoan dago. Eta 
+[a, a + h] tartean batezbesteko abiadura neurtu beha-
+rrean x = a puntuan aldiuneko abiadura neurtzen badugu?. Gogora ezazu horretarako
+beharrezkoa den tresna matematikoa, hau da, limitea h = 0 denean, 7. atalan ikusi genuela.
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.13.
+DERIBAGARRITASUNA.
+115
+3.100 Irudia: 3.4 adibidea
+1. Kalkulatu beharreko T magnitudea identiﬁkatzen dut. Kasu honetan T y(x)-
+ren al-
+diuneko abiadura x = a puntuan da.
+2. R(h) funtzio bat eraikitzen dut ondorengo baldintza bete dezan: h, 0-
+tik gero eta
+hurbilago dagoenean R(h) T -tik hurbilago dago. Kasu honetan:
+R
+(h) =
+∆y
+∆x
+=
+y
+(a + h) − y(a)
+h
+Ikusi 3.101 irudia.
+3.101 Irudia:
+3. R(0) =
+0
+0 ⇒ R(h) ez dago deﬁnitua h = 0 denean, baina agian existitzen da.
+lim
+h→0
+R
+(h) = lim
+h→0
+y
+(a + h) − y(a)
+h
+Matematika Aplikatua Saila
+UEP Donostia
+
+116
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+Aurreko limitea, y(x) kontreku batentzak x = a puntuan badago, limite horrek y
+(x)-
+ren aldiuneko abiadura x = a puntuan adierazten du. Beraz, hau ez da funtzioaren
+ezaugarri bat tarte batean baizik eta ezaugarri bat x = a puntuan.
+3.17. Adibidea
+Izan bitez y(x) = x
+2
+eta a = 2. Kalkula dezagun R(h)
+R
+(h) =
+y
+(2 + h) − y(2)
+h
+=
+(2 + h)
+2 − 22
+h
+=
+h
+2 + 4h
+h
+∗
+= h + 4 ⇒ lim
+h→0
+(h + 4) = 4
+(∗)h = 0
+Beraz, kasu honetan
+∃ lim
+h→0
+∆y
+∆x
+= 4
+x
+= 2 puntuan.
+y
+(x) funtzioaren aldiuneko abiadura x = 2 puntuan 4-ren berdina da eta
+lim
+h→0
+∆y
+∆x
+graﬁkoki adieraz dezakegu. Ikusi 3.102 irudia.
+tan α =
+∆y
+∆x , (a, f (a)) eta (a, f 
+(a + h)) puntuetatik pasatzen den zuzen sekantearen malda
+3.102 Irudia: 3.5 adibidea
+da. Orduan:
+lim
+h→0
+∆y
+∆x
+= tan β
+zuzen ukitzailearen malda x = a puntuan da. Limite hau existitzen bada y-
+ren deribatua
+x
+= a puntuan izango da eta y (a) eran adieraziko dugu. Horrez gain, y (x)-
+ren balioa
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.13.
+DERIBAGARRITASUNA.
+117
+edozein x-rentzat lor dezekegu. Gure kasuan y = x2 denez
+y
+(x) =
+lim
+h→
+0
+y
+(x + h) − y(x)
+h
+= lim
+h→
+0
+(x + h)2 − x2
+h
+= lim
+h→
+0
+x2
++ h2 + 2xh − x2
+h
+∗
+=
+=
+lim
+h→
+0
+(h + 2x) = 2x
+(∗)h = 0
+Beraz, y = 2x da. y 
+(x) adierazpena funtzio bat da zeinari deribatu funtzioa deritzona hain
+zuzen ere.
+Deribazio erregelek lagunduko digute funtzio elementalen funtzio deribatuak lortzen. Hau
+da:
+d
+dx
+(sin x) = c o s x,
+d
+dx
+(x
+n) = nx(n−1) etb.
+3.22. Ariketa
+y
+= ex izanik, frogatu y = ex dela. Laguntza: ex-ren garapena erabili:
+e
+x =
+∞
+k
+= 0
+xk
+k
+!
+= 1 + x +
+x2
+2
++
+x3
+3!
++ · · ·
+3.13.3
+Z er g ertatzen da y = z bada?.
+y-ren a ld iu neko a bia d u ra ri bu ru z ,
+[a, a + h] ta rtea n, h itz eg in g enu enea n, iku si g enu en ∆
+y
+∆x
+ez z ela y-ren porta era ren a d iera z g a rria
+[a, a + h] ta rtea n. na h iz eta y(x) eta z(x) fu ntz ioa k
+ba tez besteko a bia d u ra berd ina iz a n
+[a, a + h] ta rtea n, ta rte h orreta n porta era oso d esberd i-
+na k iz a n z itekeen. Iku si 3 .1 0 3 iru d ia .
+y
+(a) = z(a) ba d a ord u a n y(a + h) = z(a + h) d a , bera z ,
+∆y
+∆x
+=
+∆z
+∆x
+A u rreko ka su a n lortu ta koa y
+(x)-ren propieta te ba t ta rte ba tea n z en. O ra ing oa n berriz ,
+y
+(x)-ren ba lioa y(x)-ren propieta te ba t d a x ba koitz a ra ko.
+y
+(x) = z (x) ∀x betetz en ba d a , y(x) eta z
+(x) oso d esbernina k iz a n d a itez ke? . Iku si 3 .1 0 4
+iru d ia . B a a l d a g o y
+(x) = z (x) ∀x ∈ (a, b) betetz erik? . E z . G og ora ez a z u y (x) x pu ntu
+ba koitz eko z u z en u kitz a ilea ren m a ld a ere a d iera z ten d u ela . O rd u a n, y
+(x) = z (x) ∀x
+betetz en ba d a z u z en u kitz a ilea k pa ra leloa k d ira x pu ntu g u z tieta n. Iku si 3 .1 0 5 iru d ia . Iru d i
+Matematika A p likatu a S aila
+U E P D o n o stia
+
+118
+3.
+K AP IT U L U A AL D AG AI E R R E AL E K O
+F U N T Z IO
+E R R E AL AK
+3.103 Irudia:
+3.104 Irudia:
+honetan agertzen diren
+x0 puntuako zuzen ukitzaileak ez dira paraleloak . Orduan, nolakoak
+izan behar dute
+y(x) eta z(x) funtzioak y (x) = z (x) berdintza bete dadin?. Ikusi 3.106
+irudia.
+H emen ditugu hiru funtzio
+y(x), v(x) eta z(x) non y (x) = v (x) = z (x) ∀x betetzen den.
+H iru horietako edozein funtzio lortzen da beste baten translazio bertikala eginez.
+∃
+k1/ y = k1 + v
+∃
+k2/ y = k2 + z
+∃
+k3/ y = k3 + z
+Ez dira oso desberdinak. Bere diferentzia konstante bakar batean datza.
+3.18. Ad ib id ea
+D emagun
+y (x) = 3x
+2 − 1 dela. Aurkitu aurreko baldintza betetzen duen
+funtzio familia. H orietako zenbat funtzio pasatzen dira
+(0 , 7 ) puntutik?. Ikusi 3.107 irudia.
+y
+= 3x
+2 − 1
+y
+= x
+3 − x + c c ∈ R
+y
+= x(x + 1)(x − 1) + c
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.13.
+DERIB AGARRITAS UNA.
+119
+3.105 Irudia:
+3.106 Irudia:
+y(0) = 7 bada ⇒ k = 7
+Beraz, funtzio bakarra dago
+(0, 7) puntutik pasatzen dena eta bere ekuazioa y(x) = x
+3 −x+7
+da.
+3.23. Ariketa
+y(x) funtzioa izanik y (x) deribatua duten funtzioen multzoa
+I = {z(x) = y(x) + c/c ∈ R} deﬁ nitzen da.
+1.
+I funtzio multzoa graﬁ koki adierazi.
+2 . Frogatu badagoela funtzio bakar bat
+(x0, y0) puntutik pasatzen dena.
+3.13.4
+E ta y
+(a) e z badag o ?.
+Azter dezagun ondorengo funtzioa:
+y(x) =
+x
+2
+x ≤ 1
+x
+3
+x > 1
+Matematika Aplikatua Saila
+UEP Donostia
+
+120
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+3.107 Irudia: 3.6 adibidea
+Orduan:
+x < 1
+bada
+⇒ y = 2x y = x
+2
+baita
+x > 1
+bada
+⇒ y = 3x
+2
+y = x
+3
+baita
+Z er gertatzen da
+x = 1 denean?. P untu horretan funtzioaren adierazpen algebraikoa aldatzen
+denez ez dago deribazio erregelak erabiltzerik
+y (1) kalkulatzeko. Hau dela eta, deﬁnizioa
+aplikatu beharko da:
+y (1) = lim
+h→0
+y(h + 1) − y(1)
+h
+Funtzioaren deﬁnizioa bi adierazpen desberdinen bidez ematen denez alboko limiteak kalku-
+latu behar dira.
+h > 0 bada ⇒ y(h + 1) = (1 + h)
+3
+h < 0 bada ⇒ y(h + 1) = (1 + h)
+2
+y (1
++) =
+lim
+h→0
++
+(1 + h)
+3 − 1
+h
+∗
+= lim
+h→0
+(3h + 3 + h
+2) = 3
+y (1−) =
+lim
+h→0−
+(1 + h)
+2 − 1
+h
+∗
+= lim
+h→0
+(2 + h) = 2h
+h = 0
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.13.
+DERIBAGARRITASUNA.
+121
+Alboko limiteak desberdinak direnez ez dago deribaturik. Beraz, funtzioa ez da deribagarria
+x = 1 puntuan. Bere funtzio deribatua ondorengoa da:
+y (x) =
+
+
+
+2x x < 1
+bada
+∃ x = 1
+bada
+3x
+2
+x > 1
+bada
+y 
+(x) funtzioa ez dago deﬁniturik x = 1 puntuan. Bere adierazpen graﬁkoa ondorengoa
+izango da: Ikusi 3.108 irudia.
+3.108 Irudia:
+y -ren adierazpen graﬁkoa
+y
+(x) funtzioa ere marraztuko dugu. Ikusi 3.109 irudia. Ikus dezakegunez funtzioa x = 1
+puntuan jarraia izan arren puntu horretan izugarrizko aldaketa jasatzen du.
+y (1
++) = 3 denez ukitzaileen maldek 3-
+rantz jotzen dute eskuinetik hurbiltzen garenean.
+Ezkerretik hurbiltzen garenean berriz,
+2-ra jotzen dute ukitzaile horien maldek y (1−) = 2
+baita. Ikus dezagun beste hiru egoera non
+x = a puntuan deribaturik ez dagoen. Ikusi 3.110
+irudia.
+L ehenengo graﬁkoan
+C(t) agertzen da non t denbora eta C kondentsadore baten karga diren.
+t = t0 denean korrontea eten egiten da.
+Bigarren graﬁkoan berriz,
+V (t) adierazi da non t denbora eta V mugikor baten abiadura
+diren.
+t = t0 unean azelerazio handigoa aplikatzen dugu.
+Azkeneko graﬁkoan
+B(t) marraztu da non t denbora eta B artikulu baten salmenta mozkina
+diren.
+t = t0 unean aurkako enpresak antzeko artikulua baina prezio erdian merkaratzen du.
+Matematika Aplikatua Saila
+UEP Donostia
+
+122
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+3.109 Irudia:
+y-ren adierazpen graﬁkoa
+3.110 Irudia:
+3.13.5
+D eribatu a hu rbilk etzat: diferen tziala.
+Zuzen ukitzailearen deﬁnizioaren arabera ukitzailea puntuaren inguruan
+y(x) funtzioatik
+hurbil dago. Orduan zergatik ez dugu erabiltzen funtzio hau funtzioa hurbiltzeko?. Ikusi
+3.111 irudia.
+y: hurbildu behar den aldagaia. z: zuzen ukitzailearen ordenatua x = a puntuan.
+z(x) = y(a) + y (a)(x − a) =⇒ z(a + h) = y(a) + y (a)h
+h tx ikia bada z(a + h) ≈ y(a + h). Hau da:
+y(a + h) ≈ y(a) + hy (a).
+Ikusi 3.112 irudia.
+hy (a) balioari y(x)-
+ren diferentziala x = a puntuan deritzo eta honela adierazten da:
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.13.
+DERIBAGARRITASUNA.
+123
+3.111 Irudia:
+3.112 Irudia:
+y-ren diferentziala x = a puntuan
+d y(a) = hy (a)
+3.24. Ariketa
+y(x) = ex funtzioaren diferentziala a = 0 puntuan erabiliz e(0.2) balioa
+hurbildu. Ikusi 3.113 irudia.
+Ebaz pena
+y (x) = e
+x ⇒ y (0) = 1
+Orduan hurbilketa ondorengo eran adieraz daiteke:
+e(0+
+h
+) ≈ e0 + h ⇔ eh ≈ 1 + h
+Matematika Aplikatua Saila
+UEP Donostia
+
+124
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+3.113 Irudia:
+ex-ren diferentziala x = 0 puntuan
+h = 0.2 hartuz:
+e(0
+.
+2) ≈ 1 + 0.2 = 1.2
+3.25. Ariketa
+h-ren gero eta balio txikiagoak hartu 0.1, 0.01 etb. Kalkulagailua erabiliz eh
+balioztatu. Konprobatu diferentzialaren bidez lortutako hurbilketa gero eta hobeagoa dela
+h 0-tik hurbilago dagoenean.
+Azken ﬁnean,
+y = ex funtzioa z = 1 + x funtzioaren bidez hurbiltzen ari gera. Gogoratzen
+al duzu
+ex-ren seriezko garapena?
+e
+x =
+∞
+n
+= 0
+xn
+n!
+= 1 + x +
+x2
+2
++
+x3
+3!
++ · · ·
+Zer deritzozu?. Diferentzialaren bidez egindako hurbilketa
+ex-ren garapenaren lehenengo bi
+batugaik hartuz lortzen da.
+3.26 . Ariketa
+Difrentzialaren kontzeptua erabiliz
+a = 0 denean y = c o s x eta y = sin x
+funtzioak hurbildu. Lortutako hurbilketak bakoitzari dagokion seriezko garapenarekin erla-
+zionatu.
+sin 0.3 eta c o s 0.1 balioak hurbildu.
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.13.
+DERIBAGARRITASUNA.
+125
+3.114 Irudia:
+Deribatua gure lehenengo bitxi matematikoa da. Kontzeptu hau ikuspuntu desberdine-
+tatik begiratzen badugu ematen du lortutako emaitzak erlazio gabekoak direla. Ikusi 3.114
+irudia. Hots:
+y (a) zuzen ukitzailearen malda x = a puntuan denez, y (a)-ren bidez y(x)-
+ren zuzen uki-
+tzailea lor daiteke. Beste aldetik;
+y (a)-ren bidez y-ren x-rekiko aldakuntza abiadura x = a
+puntuan neurtzen du. Horrez gain;
+y (a) balioa erabiliz y(x)-ren hurbilketa x = a puntuan
+kalkula daiteke, hurbilketa hau
+y(a + h) ≈ y(a) + hy (a) formula erabilita egiten delarik.
+3.13.6
+Funtzio konp osatuaren deribatua: katearen erregela.
+Demagun erikuntza baten zabaltzara esku-
+eskailera bat igo nahi dugula. Eskailerak lurra
+du euskarri eta bere goi muturrean soka bat lotzen dugu. S okari
+0.2m /s -ko abiaduraz tira
+egiten diogu. Zer abiduraz hurbiktzen da
+p hormara?. Ikusi 3.115 irudia.
+3.115 Irudia:
+L: eskaileraren luzera da. p, q eta l-ren arteko erlazioa p2 + q2 = l2
+(1) ekuazioaren bidez
+Matematika Aplikatua Saila
+UEP Donostia
+
+126
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+emana dago.
+q-ren desplazamendu abiadura 0.2m/s da.
+(1) ekuazioatik p(q) askatuz ondorengoa lortzen da:
+p(q) =
+l2 − q2 q ∈ [0, L]
+p (q) kalkulatzen badugu p-ren q-
+rekiko abiadura izango dugu. Ikusi 3.116 irudia.
+3.116 Irudia:
+dp
+dq
+= p (q) =
+−q
+L2 − q2
+Erro zailak ez ateratzeko
+(1) ekuazioa era inplizituan deribatuko dugu. Hau da:
+d
+dq
+p2 + q2 =
+d
+dq
+L2
+∗
+= 0
+L = ktea
+Ohar zaitez
+p ez dela konstantea baizik eta q-ren funtzioa dela. Orduan:
+d
+dq
+p2 + q2 = 0
+⇔ 2p
+dp
+dq
++ 2q
+dq
+dq
+= 0 ⇔ p
+dp
+dq
++ q
+dq
+dq
+= 0 ⇔
+dp
+dq
+=
+−q
+p
+Adibidez
+q-k l-ren erdia igo badu, hau da q = l
+2 bada, ondorengoa geratzen zaigu:
+p =
+L2 −
+l
+2
+2
+= L
+√
+3
+2
+⇒
+dp
+dq
+=
+−L
+2
+L
+√
+3
+2
+=
+−1
+√
+3
+Oharra:
+1. Abiadura hau negatiboa da,
+p txikiagotu egiten delako.
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.13.
+DERIBAGARRITASUNA.
+127
+2. Abiadura hau metrotan neurtzen da, non p-ren desplazamendua q-
+ren desplazamendu
+metro bakoitzeko neurtzen den.
+Hala ere, enuntziatuan ematen den q-
+ren abiadura, denboraren menpe dagoen datua da.
+Beraz,
+dq
+dt = 2m/s da eta
+dp
+dq lortu dugu. Baina, nola kalkulatuko dugu
+dp
+dt ?.
+p eta q, t-ren funtzioak direnez (1) ekuazioa (p(t))2 + (q
+(t))2 = L2 eran geratzen da. Azke-
+neko ekuazio honetan t-rekiko deribatuz ondorengoa lortuko da:
+d
+dt
+p2 + q2 =
+d
+dt
+L2 = 0 ⇔
+d
+dt
+p2 +
+d
+dt
+q2 = 0
+⇔ 2p
+dp
+dt
++ 2q
+dq
+dt
+= 0 ⇔
+dp
+dt
+=
+−q
+dq
+dt
+p
+⇔
+dp
+dt
+∗
+=
+−2q
+p
+(∗)
+dq
+dt
+= 2
+Adibidez:
+q =
+L
+2
+bada ⇒
+dp
+dt
+=
+−2
+√
+3
+m/ s
+Ohar zaitez funtzioen konposaketa erabiltzea beharrezkoa izan dela. Beraz, ondorengo la-
+burpena egin dezakegu:
+1. t erabili gabe:
+q −→ p(q)
+2. t erabiliz:
+Konposaketa: t −→ q(t) −→ p(q(t))
+Ikusi 3.117 irudia.
+3.117 Irudia: konposaketa
+Matematika Aplikatua Saila
+UEP Donostia
+
+128
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+Gure kasuan:
+dp
+dq
+=
+−q
+p
+;
+dq
+dt
+= 2 direnez
+Orduan:
+dp
+dt
+=
+dp
+dq
+dq
+dt
+=
+−2q
+p
+Idatz dezagun orokorrean funtzio konposatuak deribatzeko erabilitzen den formula hau:
+ Ikusi
+3.118 irudia.
+3.118 Irudia: w(v(u)) konposaketa
+dw
+du
+=
+dw
+dv
+dv
+du
+Formula honi " Katearen Erregela" deritzo. Ikus ditzagun ondorengo adibideak:
+3.19. Adibidea
+d
+dx
+x3 = 3x2.
+Beraz:
+d
+dt
+x3 =
+d
+dx
+x3
+dx
+dt
+= 3x2
+dx
+dt
+3.20 . Adibidea
+p(y) = ey
+y = x3
+⇒
+dp
+dy
+= e
+y
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.13.
+DERIBAGARRITASUNA.
+129
+Beraz:
+dp
+dx
+=
+dp
+dy
+dy
+dx
+= e
+y 3x2
+3.21. Adibidea
+p(y) = cos y
+y(x) = ex
+x(t)
+= t3
+
+
+
+⇒
+dp
+dt
+=
+dp
+dy
+dy
+dt
+=
+dp
+dy
+dy
+dx
+dx
+dt
+= − sin y e
+x 3t2 = − sin et
+3
+e
+t3 3t
+Edo beste era batean:
+p = cos(y) = cos (e
+x) = cos et
+3
+dp
+dt
+= − sin e
+t3
+e
+t3 3t2
+3.22. Adibidea
+u (v (w(t))) ⇒
+du
+dt
+=
+du
+dv
+dv
+dt
+=
+du
+dv
+dv
+dw
+dw
+dt
+3.27 . Ariketa
+Eskalieraren problema ebatzi baina orain suposatuz 2rad/s-ko abiaduraz
+biratzen den tornua dugula. Hau da, θ biraketa angelua bada, orduan θ
+(t) = 2πRt izango
+da. Zer abiaduraz desplazatzen dira p eta q
+q = L
+2 denean?. Azkeneko hau t-ren zer unetan
+gertatzen da?. p(t) graﬁkoki adierazi.
+dp
+dθ eta
+dq
+dθ kalkulatu.
+3.13.7
+A lderantzizko funtzioaren deribatua.
+Ikusi 3.119 irudia.
+Ikus ezazu 3.28 irudian agertzen den sekzio karratuko tutueria. U reztaketa ubide bat izan
+zitekeen. Edozein unetan neurtu daiteke likidoa iristen den h altueraren balioa. Era berean,
+ubideara isurtzen dugun uraren V bolumena lor dezakegu. Beraz, V (t) eta h
+(t) non t den-
+bora den ezagutzen ditugu. Orduan, V eta h-ren abiadurak, hots, dV
+dt eta
+dh
+dt t-rekiko neurtu
+ditzakegu.
+Demagun bi abiadura horiek konstanteak direla, adibidez:
+dV
+dt
+= 35 l/s eta
+dh
+dt
+= 0.25 m/min
+Matematika Aplikatua Saila
+UEP Donostia
+
+130
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+3.119 Irudia: Sekzio karratuko tutueria
+Orain interesatzen zaiguna V -ren abiadura h-rekiko kalkulatzea da. Beraz, V -
+ren aldakuntza
+abiadura galga iristen den altuerarekiko, dV
+dh , da kalkulatu nahi duguna. Katearen erregela
+aplikatuz:
+dV
+dh
+=
+dV
+dt
+dt
+dh
+= 35
+dt
+dh
+Zenbat balio du dt
+dh ?.
+dh
+dt = 0.25 ezaguna da,
+dt
+dh berriz, ezezaguna da.
+Interesgarria izan
+daiteke ere, dh
+dV kalkulatzea.
+dh
+dV
+=
+dh
+dt
+dt
+dV
+= 0.25
+dt
+dV
+Kasu honetan ere dt
+dV ezezaguna da. Problema hau orokorrean enuntziatuko dugu.
+y(x) funtzio deribagarria eta
+dy
+dx izanik, x(y) alderantzizkoa kalkulatzen dugu. Kalkula de-
+zagun dx
+dy .
+Beraz, x
+(y) alderantzizko funtzioaren deribatua kalkulatu behar da. Agian, 4. atalan ikusi-
+takoa birpasatu beharko duzu.
+Har dezagun berriro 13.6 atalan ikusitako eskaileraren problema.
+Gogoratu p2 + q2 = L2
+(L ktea.) z ela. p-rekiko d erib atu z : Iku si 3 .1 2 0 iru d ia.
+3 .1 2 0 Iru d ia:
+UEP D o n o stia
+M ate m atik a A p lik atu a S aila
+
+3.13.
+D E R IB A G A R R IT A S U N A .
+131
+2p + 2q
+d q
+d p
+= 0 ⇒
+d q
+d p
+=
+−p
+q
+q
+-rekiko deribatuz
+2p
+d p
+d q
++ 2q = 0 ⇒
+d p
+d q
+=
+−q
+p
+B eraz on doron g o em aitza bitx ia lortu dug u:
+d p
+d q
+=
+1
+dq
+dp
+edo
+d q
+d p
+=
+1
+dp
+dq
+E m aitza h au ez da betetzen kasu h on etan bakarrik. O rokorrean :
+D em ag un y(x) fun tzioa deribag arria dela n on
+dy
+dx
+= 0 den . O rduan x(y) alderan tzizko
+fun tzioa baldin badag o deribag arria ere izan g o da. D eribatu h au, dx
+dy , erraz lortzen da
+dy
+dx
+adierazp en atik abiatzen bag ara.
+d x
+d y
+=
+1
+dy
+dx
+U lertzen duzu zerg atik beh arrezkoa zen
+dy
+dx
+= 0 izatea? O rain ubidearen p roblem a erraz
+ebazten da:
+dh
+dt = 0.25 m / m in ⇒
+dt
+dh =
+1
+0
+.25 m in / m
+dV
+dt = 3 5 l/ s ⇒
+dt
+dV
+=
+1
+3 5 m in / m
+B eraz:
+dV
+dh
+= 3 5
+1
+0
+.25 = 14 0 l/ m
+dh
+dt = 0
+dh
+dV
+=
+1
+dV
+dh
+=
+1
+14 0 m / l
+dV
+dh
+= 0
+3.23. Ad ib id ea y
+= x
+2-ren alderan tzizkoa kalkulatu. A lderan tzizkoaren deribatua em an .
+y
+= x
+2 ez du alderan tzizkoa on artzen deﬁ n izio erem ua D = R bada. Ikusi 3.121 irudia.
+y >
+0 izan ik x
+2 = y betetzen da x = ±√y den ean . H ala ere, alderan tzizkoa on artuko da
+R
++ deﬁ n izio erem utzat h artzen badug u. Ikusi 3.122 irudia.
+Matematika Aplikatua Saila
+UEP Donostia
+
+132
+3.
+K AP ITUL UA AL DAGAI ERREAL EK O
+F UNTZ IO
+ERREAL AK
+3.121 Irudia: y = x
+2-ren adierazpen graﬁkoa D = R bada
+3.122 Irudia: y = x
+2-ren adierazpen graﬁkoa D = R+ bada
+∀y ≥ 0 ∃x ≥ 0/ x
+2 = y
+(x = +
+√
+y)
+Beraz, alderantzizko funtzioa hauxe da:
+x(y) =
+√
+y
+K alkula dezagun dx
+dy . Horretarako bi bide ditugu:
+1.bidea:
+dx
+dy
+=
+d
+dy
+(
+√
+y) =
+1
+2√y
+Hau deribazio erregelak zuzenean aplikatuta lortu dugu. Adi:
+ y = 0 bada ez dago deribatu-
+rik.
+dx
+dy
+= 0,
+x = 0 bada.
+2.bidea
+dx
+dy
+=
+1
+dy
+dx
+=
+1
+2x
+=
+1
+2√y
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.13.
+DERIBAGARRITASUNA.
+133
+Azkeneko hau alderantzizko funtzioaren deribatuari buruz ikasi duguna erabiliz lortu dugu.
+3.24. Adibidea
+Aurreko adibidean egindakoa errepikatu y = ta n x funtzioarentzat. Ikusi
+3.123 irudia.
+3.123 Irudia:
+y(x)-ek alderantzizko funtzioa onartzen du x ∈ ( −
+π
+2 ,
+π
+2 ) bada. Orduan:
+dy
+dx
+= 1 + ta n
+2 x
+∀y ∈ R ∃x ∈ (
+−π
+2
+,
+π
+2
+)/ ta n x = y
+(x = a rc ta n y)
+Beraz:
+dx
+dy
+=
+1
+dy
+dx
+=
+1
+1 + ta n 2 x
+=
+1
+1 + y2
+Beraz:
+d
+dy
+(a rc ta n y) =
+1
+1 + y2
+Aldagai independentearen izena edozein izan daiteke, hau da;
+d
+du
+(a rc ta n u) =
+1
+1 + u2
+;
+d
+dx
+(a rc ta n x) =
+1
+1 + x2
+Matematika Aplikatua Saila
+UEP Donostia
+
+134
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+3.28. Ariketa
+Aurreko metodoa erabiliz, ondorengo funtzioen alderantzizko funtzioen de-
+ribatuak kalkulatu:
+y = sin x; y = co s x; y = e
+x
+3.13.8
+E ra p a ra m e trik oa n e m a n d a k o k u rb e n d e rib a tu a .
+Aurreko atalan era inplizituan emandako funtzio baten deribatuari buruz hitz egin dugu.
+Hau da y(x) funtzioa genuen non y, x-rekiko askatu gabe agertzen zen. x edo y-
+rekiko
+deﬁnituta dagoen funtzio inplizitua emanez, x(y) edo y
+(x) aska daitezke edo agian ez dago
+ez bata ez bestea askatzerik. Adibidez:
+1.
+xy
+2 + y + x = 0 era inplizituan
+⇒ y =
+−x ±
+√
+1 − 4x
+2
+2x
+era esplizituan
+2.
+e
+y + x = 1 era inplizituan
+⇒ y = ln (1 − x)
+era esplizituan
+3.
+uv = 2 era inplizituan
+⇒ u =
+2
+v
+era esplizituan
+4.
+ye
+xy + sin(x + y) = 0 era inplizituan
+⇒ ez dago era esplizituan idazterik
+Era esplizitua eta era inplizitua dira orain arte ikusi ditugun bi erak funtzioa adierazteko.
+Badago hirugarren era bat: funtzioaren adierazpena koordenatu parametrikoetan.
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.13.
+DERIBAGARRITASUNA.
+135
+3.25. Adibidea
+Izan bedi (x − a)
+2 + (y − b)2 = R2 zirkunfrentzia. Har ditzagun:
+x = a + R cos t
+y = b + R sin t
+t ∈ [0, 2π] (1)
+Ohar zaitez
+(x − a)
+2 + (y − b)2 = R2 cos2 t + sin2 t = R2
+(1)-ean agertzen diren x(t) eta y
+(t) zirkunferentziaren ekuazio parametrikoak dira.
+3.29 . Ariketa
+Frogatu era esplizituan emandako edozein kurba era parametrikoan idatz
+daitekela.
+x(t) eta y(t) izanik
+dy
+dx kalkulatzeko:
+dy
+dx
+=
+dy
+dt
+dt
+dx
+=
+dy
+dt
+dx
+dt
+=
+y (t)
+x (t)
+3.30 . Ariketa
+(x−a)2
+A2
++
+(y−b)2
+B2
+= 1 elipsea izanik:
+1. y (x) era inplizituan lortu.
+2. x(t), y(t) parametrizazio bat aurkitu.
+3.
+dy
+dx era parametrikoan lortu.
+4. N oiz ez dago
+dy
+dx ? Z er gertatzen da puntu horietan?
+3.13.9
+G oi ordenako deribatuak.
+Dakizunez erorketa askean dagoen objektu baten s posizioa ondorengo funtzioaren bidez
+adieraz daiteke:
+s(t) =
+1
+2
+gt2 + v0t + s0 (1)
+non g = 9.8: grabitatearen azelerazioa, t: denbora, v0:
+ t = 0 uneko abiadura eta s0: t = 0
+unean ibilitako bidea diren.
+Matematika Aplikatua Saila
+UEP Donostia
+
+136
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+G ogora ezazu 
+(1) gertaera erreal baten eredu matematikoa dela non marruskadura edo hai-
+zea ez ditugun kontutan hartu. Badakigu nola kalkulatzen den objektu horren abiadura:
+v(t) =
+ds
+dt
+=
+d
+dt
+1
+2
+gt2 + v0t + s0 = gt + v0 (2)
+Zein izango da objektuaren azelerazioa?g-
+ren berdina izango da, grabitatearen eragina beste-
+rik jasotzen ez duelako. Hala ere, azelarazioa "abiaduraren abiadura da", beraz 
+(2) deribatua
+deribatuz lor daiteke.
+a =
+d
+dt
+d
+dt
+(s(t))
+=
+d
+dt
+(gt + v0) = g
+Beraz, "y(x)deribatuaren deribatuarentzat"ondorengo adierazpena aurkitu dugu:
+d
+dx
+dy
+dx
+=
+d2y
+dx2
+= y (x): y-ren x-rekiko azelarazioa
+3.26. Adibidea
+y = x2 eta z = x3-ren azelerazioak konparatu. Ikusi 3.124 irudia.
+3.124 Irudia:
+y = 2x;
+y = 2 azelerazio konstantea
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.13.
+DERIBAGARRITASUNA.
+137
+z = 3x2;
+z = 6x
+Bi azelerazioen balioa berdina da x = 1
+3 puntuan.
+z > y
+1
+3 , ∞ tartean
+z < y
+−∞,
+1
+3
+tartean
+Antzeko eran kalkula daitezke 3.ordena, 4.ordenako deribatuak etb.
+y (x) = d
+dx
+d
+2 y
+dx
+2
+: y-ren azelerazioaren abiadura
+y v(x) = d
+dx
+d
+3 y
+dx
+3
+: y-ren azelerazioaren azelerazioa
+Deribatu hauek baliagarriak izan daitezke? Bai. Hurrengo gaian ikusiko dugu ondorengo
+portaerak desberdintzeko eta ulertzeko erabil daitezkela. Ikusi 3.125 irudia.
+3.125 Irudia:
+3.31. Ariketa
+Badakigu dx
+dy =
+1
+dy
+dx
+. Orduan d
+2 x
+dy
+2
+= 1
+d
+2 y
+dx
+2
+betetzen al da?
+Ikus dezagun nola aplika dezakegun katearen erregela bigarren ordenako deribatuak kal-
+kulatzeko. Ikusi 3.126 irudia.
+z(y(t)) izanik funtzio konposatua honela geratzen da:
+3.126 Irudia:
+Katearen erregela gogoratuz:
+dz
+dt
+=
+dz
+dy
+dy
+dt
+;
+Matematika Aplikatua Saila
+UEP Donostia
+
+138
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+d2z
+dt2
+=
+d
+dt
+dz
+dy
+dy
+dt
+=∗
+d
+dt
+dz
+dy
+dy
+dt
++
+dz
+dy
+d
+dt
+dy
+dt
+=
+d
+dy
+dz
+dy
+dy
+dt
+dy
+dt
++
+dz
+dy
+d2y
+dt2
+=
+d2z
+dy2
+dy
+dt
+2
++
+dz
+dy
+d2y
+dt2
+(* )biderkaketaren deribatua
+3.32. Ariketa
+Bateria baten ateratze P potentzia P (I) = V I − RI
+2 da non V tentsioa eta
+R erresistentzia konstanteak diren. Demagun I intentsitatea sinuidala dela, 50zizlo /
+segkoa,
+hau da, I(t) = A sin(100πt). Kalkulatu: P -ren I-rekiko azelerazioa.
+P -ren t-rekiko azelerazioa. L ehendabiziko P 
+(t) kalkulatuz eta bigarren eran katearen erre-
+gela aplikatuz.
+3.13.10
+A lderdi konputaz ionalak.
+Z enbakiz ko deribaz ioa.
+Batzuetan, y (a) ebaluatu behar denean ez dugu y 
+(x). Hau gerta daiteke adibidez, y(x)-ren
+balio batzuk, saiakuntza batean lorturikoak taula batean agertzen direnean.
+x
+y
+1
+0.841
+1.1
+0.89 1
+1.2
+0.9 9 3
+1.3
+1.000
+Bestetan y(x) ezaguna izan arren zaila da y (x) kalkulatzea. Kasu hauetan, y 
+(a) balio
+hurbilduaren kalkulua edo zenbakizko deribazioa baliogarria izan daiteke.
+y (a) = lim
+h→0
+y(a + h) − y(a)
+h
+h 0-tik hurbil badago
+y (a) ≈
+y(a + h) − y(a)
+h
+Ondoren agertzen direnak hiru hurbilketa eskema dira:
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.13.
+DERIBAGARRITASUNA.
+139
+1. Diferentzia progresiboaren formula.
+h > 0 izanik y (a) ≈
+y(a + h) − y(a)
+h
+2. Diferentzia erregresiboaren formula.
+h > 0 izanik y (a) ≈
+y(a − h) − y(a)
+−h
+=
+y(a) − y(a − h)
+h
+3. Diferentzia zentraleko formula.
+y (a) ≈
+y(a + h) − y(a − h)
+2h
+Hau azkeneko bi formulen batura eginez lortu da.
+Noiz erabili behar dugu eskema bakoitza?. Orokorrean, diferentzia zentralak hurbilketa one-
+na ematen du. Hala ere, y
+(x) funtzioaren informazioaren arabera aukeratuko dugu bata edo
+bestea.
+y(x), (y(a), y(a + h), y(a − h))-
+ren ezagututako datuen arabera zenbakizko eskema bat edo
+bestea erabiliko dugu. Ideia hauek erabil daitezke y (a), y 
+(a) etb. ebaluatzeko. Ikusi 3.127
+irudia.
+3.127 Irudia:
+y (a) ≈
+y(a + h) − y(a)
+h
+≈
+y
+(a+2h)−y(a+h)
+h
+−
+y
+(a+h)−y(a)
+h
+h
+=
+=
+y(a + 2h) − 2y(a + h) + y(a)
+h2
+diferentzia progresiboak
+Matematika Aplikatua Saila
+UEP Donostia
+
+140
+3.
+KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+3.33. Ariketa
+Diferentzia rpogresiboak,erregresiboak eta zentralak erabiliz y (a) kalkulatu.
+Hiru eskemak erabilita y (a) lortu.
+3.34. Ariketa
+Izan bedi y(x) = xex. y (x), y (x) eta y (x) kalkulatu balio zehatzak
+lortzeko eta h-
+ren balio desberdinak erabili hurbilketak ebaluatzeko. Hiru eskemen bidez
+lortutako y (a), y (a) eta y (a)-ren hurbilketak konparatu.
+N ew ton-en metodoa.
+12.2 atalan f 
+(x) = 0 itxurako ekuazioen erroak bilaketaren problemari buruz hitz egin ge-
+nuen. 
+[a, b] tartean deﬁnitutako funtzio jarraien erroen balio hurbilduak lortzeko, Bolzanoren
+teoreman oinarritzen den erdibiketa metodoa aurkitu genuen. Deribatuan oinarritzen den
+New ton-
+en metodoa berriz, ordezko aukera bat da. M etodo hau ondorengoan datza:
+z erroatik hurbil dagoen x1 puntu batetik abiatzen gara. x1 puntutik pasatzen den ukitzai-
+lea kalkulatzen dugu eta OX ardatzarekin ebakitzen dugu. Hau da:
+ Ikusi 3.127 irudia.
+3.128 Irudia:
+y − y1 = y (x1)(x − x1) y = 0 bada
+⇒ x = x1 −
+y(x1)
+y (x1)
+Hau da gure hurbilketa berria:
+x2 = x1 −
+y(x1)
+y (x1)
+P rozesua errepikatuz xn segida lortzen da:
+xn+1 = xn −
+y(xn)
+y (xn)
+n = 1, 2, 3 . . .
+UEP Donostia
+Matematika Aplikatua Saila
+
+3.14. L’H Ô PITAL-EN ERREGELA.
+141
+3.35. Ariketa
+Newtonen metodoa erabiliz, x1 = 1 puntutik abiatuz eta 3 iterazio aplikatuz
+x2 − 2 = 0 ekuazioaren erro positiboa hurbildu.
+Zeintzu dira metodo honen abantailak erdibiketaren metodoarekin konparatuta?
+Abantailak:
+S ortutako xn segida konbergentea bada, orduan Newtonen metodoaren konbergentzia, er-
+dibiketaren metodoaren konbergentzia baino azkarragoa da. Honek esan nahi du iterazio
+kopuru txikiagoarekin hurbilketa hobea lortzen dugula. Eragozpenak:
+1.-y(x)-ek z erroa duen 
+(a, b) tarte batean deribagarria izan behar du. Beraz baldintza hau
+zorrotzagoa da.
+2.-Metodoak huts egiten du y (xn) = 0 bada n-ren batentzat.
+3.-Eta okerrena:
+ nahiz eta z erroatik hurbil dagoen x1 abiapuntua hartu baliteke xn segida
+konbergentea ez izatea.
+3.36. Ariketa
+Newtonen metodoa aplikatu 3x + sin x − e
+x = 0 ekuazioaren 0-tik hurbil
+dagoen erro bat aurkitzeko. Kalkuluak borobildu emaitza bost zifra esangarriarekin emateko
+eta iteratu |xn − xn+1| ≤ 0.001 izan dadin.
+3.14
+L ’H ô p ita l-e n e rre g e la .
+L’Hô pital-en erregela 0
+0 eta
+∞
+∞ itxurako indeterminazioak ebazteko baliogarria izan daitekeen
+teorema bat da.
+3.37 . Ariketa
+Frogatu 0
+0 eta
+∞
+∞ indeterminazioak direla.
+L’Hô pitalen erregelak ondorengoa dio:
+Demagun ondorengo egoeran gaudela:
+lim
+h→c
+f (x) = lim
+h→c
+g(x) = 0
+⇒
+lim
+h→c
+f (x)
+g(x)
+=
+0
+0
+INDET ER MINAZIOA
+Izan bitez f (x) eta g(x) 
+(a, b) tarte batean deribagarriak diren funtzioak c ∈ (a, b) izanik;
+baliteke funtio hauek x = c puntuan deribagarriak ez izatea. Demagun g 
+(x) = 0 dela (a, b)
+tartean; baliteke g (c) = 0 izatea. Orduan
+∃ l = lim
+h→c
+f (x)
+g (x)
+⇒
+∃ lim
+h→c
+f (x)
+g(x)
+eta
+lim
+h→c
+f (x)
+g(x)
+= l
+da.
+Emaitza honek
+±
+∞
+±
+∞ indeterminazioaren kasuan ere balio du.
+Matematika Aplikatua Saila
+UEP Donostia
+
+142
+3. KAPITULUA ALDAGAI ERREALEKO FUNTZIO ERREALAK
+3.38. Ariketa
+Demagun f (x) eta g(x) -ek ∞-rantz jotzen dutela oradena berdinarekin.
+Hau da:
+lim
+h→∞
+f (x)
+g(x)
+=
+±∞
+±∞
+= l
+0 < l < ∞
+f (x) eta g(x) -
+ek bete behar dituzten baldintza guztiak ezarriz gero, L’Hôpitalen erregela
+erabiliz
+lim
+h→∞
+ln f (x)
+g(x)
+kalkulatu.∞-rantz jotzen duen f(x) funtzio bati ln(f
+(x)) aplikatzearen ondorioa azaldu.
+Aurkitu adibide bat eta f (x), g(x) eta ln(f (x)) graﬁkoki adierazi.
+UEP Donostia
+Matematika Aplikatua Saila

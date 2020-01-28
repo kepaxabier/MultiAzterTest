@@ -1,0 +1,461 @@
+
+
+
+DERIBATU PARTZIALETAKO EKUAZIOAK
+Sailkapena eta karakteristiken metodoa
+1.- Sailkapena
+Fisikako ekuaziorik garrantzitsuenetarikoen artean, bigarren ordenako ekuazio kuasilinealak aurkitzen
+ditugu:
+Aij ({xk}, u, {∂ku}) ∂i∂ju = F ({xk}, u, {∂ku}) ,
+non ∂k = ∂/∂xk den (k = 1, 2 . . . n): linealak orden altueneko deribatuetan.
+Sailkapena: A koeﬁziente matrizearen balio propioen arabera (oharra:
+ A matrizea simetrikoa da),{λn}
+multzoaren arabera:
+1.- Hiperbolikoa: λk > 0, k = 1, 2, . . . n − 1, eta λn < 0. Adibidez: uhin-
+ekuazioa:
+c
+2
+2u − ∂2
+t u = 0 ,
+A =
+
+
+
+1
+0
+0
+0
+0
+1
+0
+0
+0
+0
+1
+0
+0
+0
+0
+−1
+
+
+
+.
+2.- Parabolikoa: λk > 0, k = 1, 2, . . . n − 1, eta λn = 0. Adibidez: bero-
+eroalpen ekuazioa:
+c
+2
+2u − ∂
+tu = 0 ,
+A =
+
+
+
+1
+0
+0
+0
+0
+1
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+
+
+
+.
+3.- Eliptikoa: λk > 0, ∀k. Adibidez: Laplace-ren ekuazioa:
+2u = 0 ,
+A =
+
+
+1
+0
+0
+0
+1
+0
+0
+0
+1
+
+
+.
+4.- Bestelakoak: bestela...
+1. oharra:
+ −A matrizeari dagokion ekuazioa hiperbolikoa, eliptikoa edo parabolikoa bada, esaten dugu
+A matrizeari dagokion ekuazioa modu berean sailkatzen dela (adibidez:
+ − 2u = 0 ekuazioa parabolikoa da)
+2. oharra:
+ ekuazio baten sailkapena ezberdina izan daiteke xi aldagai independenteek eta u menpeko
+aldagaiak osatutako espazioko eremu ezberdinetan. Adibidez: Tricomi-
+ren ekuazioa xuxx + uyy = 0 (jario
+supersonikoa eta azpisonikoa adierazten du, x = 0 lerroan soinu langa izanik). Edo uuxx = utt:
+ u = 0
+gainazalean ekuazio mota aldatzen da.
+1
+
+2.- Mugalde baldintzak
+Mugalde baldintza egokiak motaz mota aldatzen dira:
+1.- hiperbolikoak: hastapen baldintzak. [Cauchy-ren datuak, muga irekia];
+2.- parabolikoak: hastapen + mugalde baldintzak [Dirichlet-en edo Neumann-
+en datuak, muga irekia];
+3.- eliptikoak: mugalde baldintzapeko problemak [Dirichlet-en edo Neumann-
+en datuak, muga itxia].
+• Dirichlet: u|R.
+• Neumann: ni∂iu|R (oharra: denborarekiko deribatua ager daiteke).
+• Robin αu|R + βni∂iu|R.
+• Cauchy u|R eta ni∂iu|R.
+Zergaitik? Cauchy-ren datuak aztertuko ditugu.
+Γ kurba forma parametrikoan idazten dugu: x = X(s), y = Y 
+(s), non s kurbaren parametroa den.
+Ondorioz, bektore tangentea eta bektore normala hauexek dira:
+ˆ
+τ =
+dX
+ds
+,
+dY
+ds
+;
+ˆ
+n =
+−
+dY
+ds
+,
+dX
+ds
+;
+s parametroa ondo aukeratuz gero, unitarioak dira biak; hau da,
+dX
+ds
+2
++
+dY
+ds
+2
+= 1 .
+Orain,
+A(x, y, u, ux, uy)uxx + 2B(x, y, u, ux, uy)uxy + C(x, y, u, ux, uy)uyy = F 
+(x, y, u, ux, uy)
+ekuazioa aztertu nahi dugu,
+u|Γ = u(X(s), Y (s)) = f (s)
+eta
+ˆ
+n ·
+u|Γ = −
+dY
+ds
+ux(X(s), Y (s)) +
+dX
+ds
+uy(X(s), Y (s)) = g(s)
+baldintzen pean (datuak f eta g funtzioak dira).
+Datu hauekin u
+(x, y) funtzioa lortu nahi dugu, gutxienez Γ kurbaren inguruan. Horretarako, u-
+ren
+Taylor-
+en garapena erabiliko dugu. Baina hori lortzeko, funtzioaren deribatu guztiak zehaztu behar ditugu
+kurbaren gainean.
+Kontutan hartu behar dugu ekuazioaren soluzioak 
+(x, y, u) espazioko gainazala zehazten duela. Cauchy-
+ren datuak emanez gero, lerro baten gainean ematen ditugu, eta soluzio gainazala lerro horretatik pasatu
+behar da. Hau da, soluzio gainazalaren banda ukitzailea, hastapen lerroa zentratuta, zehaztu behar dugu
+hasteko: horretarako ux eta uy zehaztu behar ditugu lerroan zehar.
+2
+
+Lehenengo baldintza s guztietan betetzen da, beraz,
+f (s) =
+d
+ds
+(u(X(s), Y (s))) = ux(X(s), Y (s))
+dX
+ds
++ uy(X(s), Y (s))
+dY
+ds
+ondorioztatzen dugu. Azken adierazpen hau eta g funtzioari dagokiona erabiliz, ondokoa lortzen dugu:
+ux(X(s), Y (s)) = h1(s) = −g(s)
+dY
+ds
++ f (s)
+dX
+ds
+,
+uy(X(s), Y (s)) = h2(s) = g(s)
+dX
+ds
++ f (s)
+dY
+ds
+.
+(Egiazta ezazu aurreko emaitza)
+Hau da, datuen bidez u funtzioaren lehenengo deribatu partzialen balioak zehaztu ditugu datu-
+kurban
+zehar. Horretarako ez dugu ekuazioa erabili. Hurrengo pausuan ere ez dugu oraindik erabiliko:
+d
+ds
+ux|Γ = uxx(X(s), Y (s))
+dX
+ds
++ uyx(X(s), Y (s))
+dY
+ds
+= h
+1(s) .
+d
+ds
+uy|Γ = uxy(X(s), Y (s))
+dX
+ds
++ uyy(X(s), Y (s))
+dY
+ds
+= h
+2(s) .
+h1 eta h2 funtzioak ezagutzen ditugu, datuen bidez lortu ditugu eta. Honela ez ditugu bigarren ordenako
+deribatuak kurbaren gainean zehaztu: bi ekuazio (h
+1 eta h2) eta hiru ezezagun (uxx, uxy = uyx eta uyy )
+baitaukagu. Orain bai, ekuazio diferentziala bera erabiliko dugu, kurbaren gainean honako hau betetzen
+dela esateko:
+A(s)uxx(X(s), Y (s))+2B(s)uxy(X(s), Y (s)) + C(s)uyy(X(s), Y (s)) = F (s) , non
+A(s) = A(X(s), Y (s), f (s), h1(s), h2(s)) ,
+B(s) = B(X(s), Y (s), f (s), h1(s), h2(s)) ,
+C(s) = C(X(s), Y (s), f (s), h1(s), h2(s)) , eta
+F (s) = F (X(s), Y (s), f (s), h1(s), h2(s)) diren .
+Hiru ekuazio hauek linealak dira, ezezagunak uxx(X(s), Y (s)), uxy(X(s), Y 
+(s)) = uyx(X(s), Y (s)) eta
+uyy(X(s), Y 
+(s)) izanik, eta gain inhomogeneoa ez da nulua. Beraz, soluzioa izateko, determinantea ezin
+da nulua izan:
+dX
+ds
+dY
+ds
+0
+0
+dX
+ds
+dY
+ds
+A(s)
+2B(s)
+C(s)
+= A(s)
+dY
+ds
+2
+− 2B(s)
+dY
+ds
+dX
+ds
++ C(s)
+dX
+ds
+2
+= 0 .
+3.- Karakteristikak
+Lerro karakteristiken ekuazioa:
+A(s)
+dY
+ds
+2
+− 2B(s)
+dY
+ds
+dX
+ds
++ C(s)
+dX
+ds
+2
+= 0 .
+Ekuazio honen soluzioak kurbak dira, lerro karakteristikak hain zuzen ere.
+[Oharra:
+ ekuazio hau zehazteko, A, B, eta C funtzioak deﬁnitu behar ditugu, eta ekuazioa lineala ez
+bada, f eta g funtzioak ere bai. Beste modu batean esanda, aztertu nahi dugun ekuazio diferentziala lineala
+ez bada, karakteristikak alda daitezke hasierako balioak aldatuz. Kasu hori ez dugu berriro kontsideratuko.]
+Lerro karakteristiken ekuazioaren diskriminantea:
+∆ = B
+2 − AC .
+3
+
+- ∆ > 0 bada, bi soluzio erreal izango ditu ekuazioak (kasu hiperbolikoa);
+- ∆ = 0 bada, soluzio erreal bakar bat existituko da (kasu parabolikoa);
+- ∆ < 0 bada, ekuazioak ez du soluzio errealik (kasu eliptikoa).
+Kasu hiperbolikoan, Cauchy-
+ren datuak emateko erabili dugun lerroa inon karakteristiken tangentea
+ez bada, soluzio lokala existituko da. Baina Cauchy lerroa eta karakteristika bat puntu batean tangenteak
+izango balira, arazoak sortuko lirateke.
+4.- Adibideak
+Uhin ekuazioa
+c
+2u
+xx − utt = 0 ,
+A = c
+2 ;
+B = 0 ;
+C = −1 ; ∆ = B
+2 − AC = c2 > 0 ;
+karakteristiken ekuazioa : c
+2
+dt
+ds
+2
+−
+dx
+ds
+2
+= 0 ;
+karakteristikak : x − ct = ξ ,
+x + ct = η .
+ekuazioa, aldagai berrietan : uξη = 0 ,
+soluzio orokorra : u(x, t) = f+(x − ct) + f−(x + ct) .
+x
+2u
+xx − utt = 0 ,
+A = x
+2 ;
+B = 0 ;
+C = −1 ; ∆ = B
+2 − AC = x2 > 0 (x = 0 lerroan izan ezik) ;
+karakteristiken ekuazioa : x
+2
+dt
+ds
+2
+−
+dx
+ds
+2
+= 0 ;
+karakteristikak : ln x − t = ξ ,
+ln x + t = η .
+ekuazioa, aldagai berrietan : uξη =
+1
+4
+(uξ + uη) .
+4
+
+5.- Ekuazio hiperbolikoak: karakteristikak
+Informazioa edo singularitateak karakteristiketan zehar abiatzen dira.
+Menpekotasunaren eremua:
+Tentsiopeko soka: mugalde baldintzak, u(0, t) = u
+(l, t) = 0; hemendik, islapen osoa:
+5
+
+6.- Lehenengo ordenako ekuazioak
+Adibidez:
+ux + uy = 0 .
+Karakteristikak ondoko sistema endakatua izateko baldintzetik datozkigu:
+ux + uy = 0 ,
+du = uxdx + uydy = 0 .
+Kasu honetan:
+1
+1
+dx
+dy
+= dy − dx = 0 .
+Ondorioz 
+(kasu honetan), du = 0 karakteristiken gainean, eta u ez da aldatzen karakteristiketan. Karakter-
+istiken ekuazioa: ξ = x − t. Soluzioa: u(x, t) = f (x − t).
+Orokorrean:
+Ekuazioa : A(x, y, u)ux + B(x, y, u)uy = C(x, y, u) ;
+aldaketa : uxdx + uydy = du ;
+endakapen baldintza :
+A
+B
+dx
+dy
+= Ady − Bdx = 0 ;
+ondoriokoa :
+dx
+A
+=
+dy
+B
+=
+du
+C
+.
+Adibidea:
+Ekuazioa : ux + uy = 1 ;
+aldaketa : uxdx + uydy = du ;
+endakapen baldintza :
+1
+1
+dx
+dy
+= dy − dx = 0 ;
+ondoriokoa : dx = dy = du ,
+soluzioa : Φ(x − y, u − x) = 0 ⇔ u(x, y) = x + f (x − y) .
+Problema:
+Ekuazioa : yux − xuy = 0 ;
+baldintza : soluzioa x = 0 , u = y
+2 lerrotik pasatzen da ;
+aldaketa : uxdx + uydy = du ;
+endakapen baldintza :
+y
+−x
+dx
+dy
+= ydy + xdx = 0 ;
+ondoriokoa :
+dx
+y
+=
+dy
+x
+=
+du
+0
+,
+ek. soluzioa : Φ(x
+2 + y2, u) = 0 ⇔ u(x, y) = f(x2 + y2) ;
+problemaren soluzioa : u(x, y) = x
+2 + y2 .
+6
+
+7.- Eremu bektorialak
+F(x, y, z) eremu bektorialaren eremu lerroak edo lerro bektorialak:
+ puntu bakoitzean paraleloak.
+F = Aˆi + Bˆj + Cˆj bektore eremuaren eremu lerroak Azx + Bzy = C ekuazioaren lerro karakteristikoak
+dira.
+Gainazal bektoriala: lerro bektorialek osatutako gainazala. Deﬁnizio orokorra:
+ normala eta F orto-
+gonalak dira. Beraz, ek. diferentzialaren soluzioa.
+Adibidez:
+xzx − yzy = z ,
+eta soluzioaren gainazalean y = 1, z = 3x lerroa dago. Karakteristikak:
+dx
+x
+= −
+dy
+y
+=
+dz
+z
+.
+Soluzioak: xy = c1, zy = c2. Soluzio orokorra: Φ(xy, yz) = 0 ⇔ z(x, y) = φ(xy)/
+y. Dagokiona:
+y = 1
+z = 3x
+⇒
+x = s
+y = 1
+z = 3s
+→
+xy = c1 → c1 = s
+zy = c2 → c2 = 3s
+→ c2 = 3c1 → yz = 3xy → z(x, y) = 3x .
+Bibliograﬁa: Elsgoltz
+7

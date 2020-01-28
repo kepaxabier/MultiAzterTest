@@ -1,0 +1,3096 @@
+
+
+
+1
+Aljebra trukakorraren oinarriak
+1.1. Eraztunak eta gorputzak
+Geometria aljebraikoa ikasten hasi aurretik, hainbat egitura aljebraiko ezagutu
+behar ditu irakurleak:
+ espazio bektorialak, taldeak, gorputzak, eraztunak. Kapitu-
+lu honetan kontzeptu horiek berrikusiko ditugu eta aljebra izena daraman “supe-
+regitura” berria sartuko dugu, betiere ondoren beharko ditugun puntuetan enfasi
+berezia jarriz. Lehenengo ataletan, gai ezagunak jorratuko ditugu gehienbat; hori
+dela eta, emaitza batzuk frogarik gabe emango ditugu.
+Goian aipatutako egituretatik sinpleena taldearena da, eragiketa bakar bat
+behar baitu. Has gaitezen talde bat zer den gogoraraziz.
+1.1.
+Deﬁnizioa. Izan bitez G multzoa eta · G-ren gainean deﬁniturik dagoen
+eragiketa. Orduan, 
+(G, ·) taldea dela diogu hiru baldintza hauek betetzen badira:
+(i) · elkarkorra da: (xy)z = x(yz) dugu x, y, z ∈ G guztietarako.
+(ii) · -ek neutroa du: existitzen da e ∈ G, non xe = ex = x baita x ∈ G
+guztietarako.
+(iii) Elementu guztiek alderantzizkoa dute: x ∈ G guztietarako, existitzen da
+y ∈ G, non xy = yx = e baita.
+Horrez gain · trukakorra bada, hau da, xy = yx badugu x, y ∈ G guztietarako,
+orduan G talde trukakorra (edo abeldarra) dela diogu.
+1.2. Adibideak. 1) (Z, +), (Q, +), (R, +) eta 
+(C, +) talde trukakorrak dira, baina
+(N, +) ez da taldea, ez baitu elementu neutrorik. 
+(Ohartu ez dugula 0 zenbakia N-
+ren barruan sartzen; sartuko bagenu ere, berriro ere 
+(N, +) ez litzateke taldea, 0
+izan ezik gainerako elementuek ez baitute alderantzizkorik +-ekiko.)
+2) Izan bedi n ∈ N. Orduan, {1, . . . , n} multzoaren permutazioek talde bat
+osatzen dute konposizioarekiko. Horri n mailako talde simetriko deritzo eta Sn
+ikurraren bidez adierazten dugu.
+Talde hori n = 1 edo 2 denean baino ez da
+abeldarra.
+3) GLn(R) = {A ∈ Mn(R) | det A = 0} matrizeen multzoa taldea da biderke-
+tarekiko, eta ez da trukakorra, n ≥ 2 bada.
+2
+
+1.1. ERAZTUNAK ETA GORPUTZAK
+3
+Aljebra trukakorra izeneko alorra eraztunaren kontzeptuaren inguruan antola-
+turik dago. Eraztunek bi eragiketa behar badituzte ere, ezin da esan taldeak baino
+konplikatuagoak direnik. Izan ere, eraztunek bete behar dituzten propietateak guz-
+tiz ezagun zaizkigu, txikitatik zenbakiekin erabili ditugun berberak baitira.
+1.3. Deﬁnizioa. Izan bitez A multzoa eta + eta · A-ren gainean deﬁniturik dau-
+den bi eragiketa. Orduan, 
+(A, +, ·) eraztuna dela diogu propietate hauek betetzen
+badira:
+(i) (A, +) talde trukakorra da.
+(ii) Biderketa elkarkorra da, neutroa du eta trukakorra da.
+(iii) Banatze-propietatea betetzen da: a
+(b + c) = ab + ac dugu a, b, c ∈ A guztie-
+tarako.
+Baldin eta a ∈ A elementuak alderantzizkoa badu · -
+ekiko, a unitatea dela diogu.
+Eraztun batean, batuketarekiko eta biderketarekiko neutroak bakarrak dira,
+eta 0 eta 1 ikurren bitartez adierazten ditugu, hurrenez hurren. Berez, 0 = 1
+gerta liteke baina, beranduago ikusiko dugunez, eraztun gehienetan 0 = 1 dugu.
+Ohikoa da 1 elementua A-ren identitatea dela esatea. Bestalde, a ∈ A elementu
+baten alderantzizkoa batuketarekiko bakarra da eta −a deitzen diogu. Era berean,
+a unitatea bada, orduan biderketarekiko duen alderantzizkoa bakarra da, eta a−1
+gisa idazten dugu.
+1.4. Adibideak. 1) Z, Q, R eta C eraztunak dira ohiko batuketarekiko eta bider-
+ketarekiko.
+2) Izan bedi n ∈ N zenbaki ﬁnkoa. Orduan, Z/nZ = {a | a ∈ Z} eraztuna da,
+a + b = a + b
+eta
+a · b = a · b
+eragiketekiko. Gogoratu a = b dela baldin eta soilik baldin a ≡ b (mod n) bada.
+Bereziki, a = 0 dugu zehatz-mehatz a n-ren multiploa denean. Gainera, Z/nZ =
+{0, 1, . . . , n − 1} dugu, errepikapenik gabe.
+3) Matrizeen biderketa ez denez trukakorra, Mn(R) ez da eraztuna deﬁnizio
+horrekin (bai, ordea, beste deﬁnizio batzuen arabera).
+4) Izan bitez A eraztuna eta X indeterminatua.
+Orduan, koeﬁzienteak A-
+ren gainean dituzten polinomioen multzoa A[X] ikurraren bidez adierazten dugu.
+Erraz ikusten da A
+[X] berriro ere eraztuna dela. Orokorkiago, X1, . . . , Xn inde-
+terminatuak badira, A
+[X1, . . . , Xn] da indeterminatu horiek erabiltzen dituzten eta
+koeﬁzienteak A-n dituzten polinomioen eraztuna.
+5) Izan bitez A eta B eraztunak. Orduan, A × B biderkadura cartesiarra ere
+eraztuna da, batuketa eta biderketa osagaiz osagai deﬁnitzen baditugu. Adibidez,
+identitatea (1, 1) bikotea da (hor, lehenengo 1-ak A-
+ren identitatea adierazten du
+eta bigarrenak, berriz, B-rena).
+Ohartu a · 0 = 0 betetzen dela eraztun guztietan. Hala ere, a · b = 0 baldintzatik
+ezin da ondorioztatu a = 0 edo b = 0 denik. Adibidez, Z/6Z-
+n 2 · 3 = 0 dugu, baina
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.1. ERAZTUNAK ETA GORPUTZAK
+4
+2 = 0 eta 3 = 0. Betetzen bada a · b = 0 eta a, b = 0, orduan a eta b zeroren
+zatitzaileak direla esaten dugu.
+Eraztunik sinpleena A = {0} multzoa da, eraztun tribial deitutakoa. Eraztuna
+tribiala ez bada, orduan 1 = 0 dugu.
+Izan ere, 1 = 0 balitz, orduan a ∈ A
+guztietarako a = a · 1 = a · 0 = 0 izango genuke, eta hori kontraesan bat da. Ohartu
+eraztun ez-
+tribial batean 0 elementua ezin dela unitatea izan, a · 0 = 0 = 1 betetzen
+baita a ∈ A guztietarako.
+1.5.
+Teorema. Demagun A eraztuna dela. Orduan, A-ren unitateek talde bat
+osatzen dute biderketarekiko. Hori adierazteko A× edo U (A) idatziko dugu.
+Froga. Hasteko, ohartu A
+×-en biderketa eragiketa bat dela. Izan ere, a, b ∈ A×
+bada, orduan existitzen dira x, y ∈ A, non ax = by = 1 baita. Ondorioz, (ab)
+(yx) =
+1 eta ab ∈ A×, nahi bezala. Orain, eraztun baten biderketa elkarkorra denez,
+bakarrik frogatu behar dugu A×-en neutroa dagoela biderketarekiko eta a ∈ A×
+elementu baten alderantzizkoa berriro ere A×-en dagoela. Bi propietate horiek
+begi-bistakoak dira.
+Adibidez, Z
+× = {1, −1} eta R× = R {0} dugu.
+1.6. Deﬁnizioa. Izan bitez B eraztuna eta A ⊆ B. Betetzen bada A ere eraztuna
+dela B-ren eragiketekiko, eta A-ren identitatea B-
+ren identitatearekin bat badator,
+orduan A B-ren azpieraztuna dela esango dugu.
+Adibidez, Z Q-ren azpieraztuna da, eta Q, berriz, C-ren azpieraztuna da. Gai-
+nera, A eraztuna edozein izanik, A A[X]-ren azpieraztuna da. Bestetik, A × 
+{0} ez
+da A × A-ren azpieraztuna, nahiz eta eraztuna izan A × A-
+ren eragiketekiko. Arra-
+zoia da A × {0}-ren identitatea (1, 0) dela, eta hori (1, 1) A × A-
+ren identitatearen
+desberdina dela.
+1.7. Deﬁnizioa. Izan bedi A eraztuna. Orduan:
+(i) A integritate-domeinua dela diogu 
+(laburkiago I.D.), ez bada eraztun tribiala
+eta zeroren zatitzailerik ez badu: ab = 0 bada, orduan nahitaez a = 0 edo
+b = 0.
+(ii) A gorputza dela diogu, ez bada eraztun tribiala eta A× = A
+{0} bada.
+Integritate-domeinuek oso ezaugarri interesgarri bat dute: elementu bat ez bada
+0, sinpliﬁkagarria da biderketarekiko. Izan ere, a = 0 bada:
+ab = ac =⇒ ab − ac = 0 =⇒ a(b − c) = 0
+a=0
+=⇒ b − c = 0 =⇒ b = c.
+Gorputz batean, biderketak eragiketa bati normalean eskatzen zaizkion bal-
+dintza guztiak betetzen ditu, 0-k alderantzizkoa izatekoa kenduta:
+ elkarkorra eta
+trukakorra da, neutroa du eta a = 0 guztiek alderantzizkoa dute. Beraz, gorputzak
+“eraztunik hoberenak” direla esan dezakegu. Ohartu gorputzak integritate domei-
+nuak direla bereziki: ab = 0 badugu eta a = 0 bada, orduan a−1 biderkatuz b = 0
+lortzen dugu.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.1. ERAZTUNAK ETA GORPUTZAK
+5
+1.8. Adibideak. 1) Z I.D. da, baina ez gorputza. Beste alde batetik, Q, Q(i), R
+eta C gorputzak dira.
+2) A I.D. bada, orduan {a/b | a, b ∈ A, b = 0} multzoa gorputza da. Gorputz
+horri A-ren zatikien gorputz deitzen zaio. Adibidez, Q Z-
+ren zatikien gorputza da.
+Ondo ulertu behar da zatikien gorputzaren eraikuntza guztiz formala dela, bi puntu
+hauetan oinarriturik:
+(i) Alde batetik, a/b elementu bat zer den argitzea baino garrantzitsuagoa da
+horrelako bi elementu noiz diren berdinak/desberdinak ulertzea. Erregela
+zatiki arrazionalekin erabiltzen den berbera da:
+a
+b
+=
+c
+d
+⇐⇒ ad = bc.
+(1.1)
+Behin jakinda hori betetzea nahi dugula, ez da hain zaila a/b elementuari
+izaera bat ematea. Azkenean, a/b baliokidetasun klase bat izango da A ×
+(A
+{0}) multzoaren gainean, baliokidetasun-erlazioaren deﬁnizioa (1.1)
+formulatik harturik.
+(ii) Bestetik, a/b eta c/d bi elementu nola batu eta nola biderkatu jakin behar
+dugu. Hemen, berriro ere zenbaki arrazionalen ereduari jarraitzen diogu:
+a
+b
++
+c
+d
+=
+ad + bc
+bd
+eta
+a
+b
+·
+c
+d
+=
+ac
+bd
+.
+3) p zenbaki lehena bada, Fp = Z/pZ gorputza da. Bestalde, n konposatua
+bada, Z/
+nZ ez da I.D. Izan ere, n = r · s bada, 1 < r, s < n izanik, orduan r · s = 0
+dugu, baina r, s = 0.
+4) K gorputza bada, K[X] I.D. da baina ez da gorputza, K[X]× = K
+{0}
+(polinomio konstante ez-nuluak) baitugu.
+Dagokion zatikien gorputzari funtzio
+arrazionalen gorputz deitzen zaio eta K(X) gisa idazten dugu. Beraz,
+K(X) =
+f (X)
+g(X)
+| f (X), g(X) ∈ K[X], g(X) = 0 .
+Zenbaki errealen gorputzean, 2 = 0 dugu, hau da, 1 + 1 = 0. Oro har, n ∈ N
+bada, orduan 1 +
+n
+· · · + 1 = 0. Bestalde, Z/2Z-n 1 + 1 = 0 dugu eta Z/3Z-n,
+berriz, 1 + 1 = 0, baina 1 + 1 + 1 = 0. Dakusagunez, identitatea bere buruarekin
+behin eta berriz batzean, eraztun batzuetan 0 lor dezakegu 
+(batugaien kopuruaren
+arabera), eta beste eraztun batzuetan, berriz, ez dugu inoiz 0 lortuko. Hori ikusita,
+ondorengo kontzeptua sartzen dugu.
+1.9.
+Deﬁnizioa. Izan bedi A eraztuna. Existitzen bada n ∈ N, halakoa non
+1 +
+n
+· · · + 1 = 0 betetzen baita A eraztunean, orduan balio horien arteko txikienari
+A-ren karakteristika deitzen diogu. Horrelako n-rik ez badago, A-
+ren karakteristika
+0 dela esango dugu. Edozein kasutan, A-
+ren karakteristika char A ikurraren bidez
+adieraziko dugu.
+Adibidez, char Z = char Q = char R = char C = 0 eta char Z/nZ = n dugu.
+Bestetik, A B-ren azpieraztuna bada, orduan char A = char B dugu, A-ren eta
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.1. ERAZTUNAK ETA GORPUTZAK
+6
+B-ren identitateak bat datoz eta. Bereziki, char A[X] = char A dugu, A eraztun
+guztietarako. Gainera, K gorputza bada, char K(X) = char K betetzen da.
+Une honetan, komenigarria da ondorengo notazioa ﬁnkatzea. Ohartu bat da-
+torrela zenbakiekin lan egiterakoan normalean erabiltzen dugun notazioarekin.
+1.10. Notazioa. Izan bitez A eraztuna eta a ∈ A. Orduan:
+(i) n ∈ Z bada, na ∈ A elementua honela deﬁnitzen dugu:
+na =
+
+
+
+
+
+
+
+a +
+n
+· · · + a,
+n > 0 bada,
+0,
+n = 0 bada,
+(−a) +
+−n
+· · · + (−a),
+n < 0 bada.
+(ii) n ∈ N ∪ {0} bada, a
+n ∈ A elementua honela deﬁnitzen dugu:
+a
+n =
+a n
+. . . a,
+n > 0 bada,
+1,
+n = 0 bada.
+(iii) a A-ren unitatea bada, orduan an berretura n ∈ Z negatiboa denean ere
+deﬁnitzen da, honako modu honetan:
+a
+n = (a−1) −n
+. . . (a
+−1).
+Notazio horrek ohiko formula guztiak betetzen ditu. Adibidez:
+(i) ma + na = (m + n)a, m(na) = (mn)a, n(a + b) = na + nb eta n(ab) =
+(na)b = a(nb) dugu, m, n ∈ Z eta a, b ∈ A guztietarako.
+(ii) aman = am+n, (am)n = amn eta (ab)n = anbn dugu, m, n ∈ N ∪ {0} eta
+a, b ∈ A guztietarako.
+(iii) Newtonen binomioaren formula betetzen da, hots,
+(a + b)
+n =
+n
+i=0
+n
+i
+a
+n−ibi
+dugu, n ∈ N eta a, b ∈ A guztietarako.
+Kontuan izan na ez dela ulertu behar, oro har, n-ren eta a-
+ren biderkadura balitz
+!
+bezala, A eraztunaren barruan. Izan ere, n zenbaki osoa da, eta Z-k (ezta Z-ren
+kopia batek ere) ez du zertan A-ren barruan egon.
+Aurreko notazioa erabiliz, A eraztunaren karakteristika n > 0 bada, n1 = 0
+dugu bereziki. Jarraian, hori bera A-
+ko elementu guztiekin gertatzen dela ikusten
+dugu.
+1.11.
+Proposizioa. Izan bedi A eraztuna, eta demagun n = char A > 0 dela.
+Orduan, m n-ren multiploa bada, ma = 0 dugu a ∈ A guztietarako. Bereziki,
+na = 0 dugu.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.1. ERAZTUNAK ETA GORPUTZAK
+7
+Froga. Idatzi m = dn, d ∈ Z izanik. Orduan, aurretik ikusitako propietateenga-
+tik, ma = d(na) eta na = n(1 · a) = (n1) · a = 0 · a = 0 dugu. Horrela, ma = 0
+lortzen dugu, nahi bezala.
+Aurretik esan dugun bezala, char Z/nZ = n dugu n ∈ N guztietarako. Beraz,
+eraztun baten karakteristika edozein zenbaki positibo izan daiteke. Jarraian ikusten
+dugunez, ez da gauza bera gertatzen integritate-domeinuetara murriztuz gero.
+1.12. Teorema. Izan bedi A integritate-domeinua. Orduan, A-ren karakteristika
+0 edo zenbaki lehen bat da.
+Froga. Demagun n = char K > 0 dela, eta ikus dezagun n zenbaki lehena dela.
+Absurdora eramanez, jar dezagun n = k , 1 < k,
+< n izanik. Orduan, 0 = n1 =
+(k )1 = (k1) · ( 1) dugu eta, A I.D. denez, k1 = 0 edo 1 = 0 izan behar du.
+Edozein kasutan, A-
+ren karakteristika n baino txikiagoa dela lortzen dugu, eta hori
+kontraesan bat da.
+Matematikan larri ibiltzen diren ikasleen artean, ohikoak izaten dira 
+(x + y)2 =
+x2 + y2 bezalako akatsak. Harrigarria bada ere, batzuetan horrelako berdintzak
+egiazkoak izan daitezke eraztun batean, karakteristika 0-ren desberdina bada.
+1.13. Teorema. Izan bedi A eraztuna, eta demagun p = char A zenbaki lehena
+dela. Orduan,
+(a + b)
+p
+n
+= a
+p
+n
++ b
+p
+n
+dugu, a, b ∈ A eta n ∈ N guztietarako.
+Froga. Nahikoa da (a+b)
+p = ap+bp dela ikustea. Behin hori frogatuta, teoremako
+emaitza zuzenean ondorioztatzen da, n-ren gaineko indukzioa erabiliz. Newtonen
+binomioaren arabera,
+(a + b)
+p =
+p
+i=0
+p
+i
+a
+p−ibi
+dugu. Orain, p lehena denez, ezaguna da
+p
+i
+koeﬁziente binomiala p-ren multiploa
+dela 1 ≤ i ≤ p − 1 guztietarako. Kontuan izanik p = char A > 0 dela, orduan 1.11
+proposizioa erabiliz,
+p
+i
+a
+p−ibi = 0 dugu i-ren balio horietarako. Horrenbestez,
+(a + b)p = ap + bp lortzen dugu.
+Azken propietate hori interesgarria da berretura batzuk arin egiteko 
+(berretzai-
+lea egokia denean), baina kontrako norabidean ere erabil daiteke eta, esate baterako,
+polinomioak azkar faktorizatzeko ere balio izaten du batzuetan. Adibidez, F2[X]
+polinomioen eraztunaren karakteristika 2 denez, X8 + X4 + 1 = (X2 + X + 1)4
+dugu.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.2. IDEALAK ETA ZATIDURA-ERAZTUNAK
+8
+1.2. Idealak eta zatidura-eraztunak
+Geldi gaitezen une batez pentsatzeko nola eraikitzen diren Z/nZ eraztunak (in-
+ﬁnitu eraztun desberdin) Z eraztun bakarretik. Horretarako, behin n ∈ N ﬁnkatu-
+rik, n moduluarekiko kongruentzia hartzen dugu, zeina Z-
+ren gainean baliokidetasun-
+erlazioa baita. Erlazio horrekiko a ∈ Z elementu baten baliokidetasun-klasea a
+bada, orduan baliokidetasun-klase desberdinen multzoa Z/
+nZ ikurraren bidez adie-
+razten dugu eta klaseen arteko eragiketak ordezkariak erabiliz deﬁnitzen dira. Atal
+honetan ikusiko dugunez, ideia hori eraztun guztietara eraman daiteke, idealaren
+kontzeptua erabiliz.
+1.14. Deﬁnizioa. Izan bitez A eraztuna eta a A-ren azpimultzo ez-hutsa. Orduan,
+a
+A-ren ideala dela esaten dugu, baldintza hauek betetzen badira:
+(i) a, b ∈ a bada, orduan a + b ∈ a.
+(ii) a ∈ a eta x ∈ A bada, orduan xa ∈ a.
+Demagun a A-ren ideala dela. Orduan, x ∈ A bada, x-ren koklasea
+x + a = {x + a | a ∈ a}
+multzoa da. Garbi badago a zein den, x idatziko dugu koklasea sinpleago adieraz-
+teko.
+1.15. Teorema. Izan bitez A eraztuna eta a A-ren ideala. Orduan:
+(i) Deﬁnitzen badugu ∼ erlazioa A-ren gainean erregela honen bitartez:
+x ∼ y ⇐⇒ x − y ∈ a,
+orduan ∼ baliokidetasun-erlazioa da.
+(ii) Aurreko ataleko erlazioarekiko, x ∈ A elementu baten baliokidetasun-klasea
+x koklasea da. Beraz, x = y dugu baldin eta soilik baldin x − y ∈ a bada.
+Bereziki, x = 0 dugu, hain zuzen ere, x ∈ a denean.
+(iii) A/a = {x | x ∈ A} koklaseen multzoa eraztuna da x+y = x + y eta x·y = xy
+eragiketekiko. Hori A-ren zatidura-eraztun bat dela esaten dugu.
+Batzuetan, A/a zatidura-eraztunean x = y betetzen dela adierazteko, x ≡ y
+(mod a) idatziko dugu. Beraz,
+x ≡ y
+(mod a) ⇐⇒ x − y ∈ a.
+Orduan, A/a eraztunaren batuketa eta biderketa ondo deﬁnituta egoteagatik, era
+horretako kongruentziak batu eta biderka daitezke 
+(zenbaki osoen arteko kongruen-
+tziekin egiten dugun modura):
+x ≡ y
+(mod a), z ≡ t
+(mod a) =⇒ x + y ≡ z + t
+(mod a), xy ≡ zt
+(mod a).
+1.16. Adibideak. 1) A eraztuna bada, {0} eta A idealak dira, eta horiek dira A-
+k
+dituen ideal bakarrak baldin eta soilik baldin A gorputza bada (A = 
+{0} harturik).
+Ohartu A/A = {0} dela, hau da, eraztun tribiala.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.2. IDEALAK ETA ZATIDURA-ERAZTUNAK
+9
+2) nZ = {λn | λ ∈ Z} Z-ren ideala da eta dagokion zatidura Z/nZ da, kon-
+gruentzien bitartez eraiki genuen eraztun bera.
+Eraztun baten idealak azpimultzoak direnez, eragiketa natural batzuk ditugu
+idealei aplikatzeko. Jarraian ikusten dugun bezala, batzuetan idealak lortzen ditugu
+berriro eta, horrela ez denean, konponbide erraza dugu ideal bat lortzeko.
+1.17. Teorema. Izan bitez A eraztuna eta a, b A-ren bi ideal. Orduan:
+(i) a ∩ b ere A-ren ideala da. 
+(Orokorkiago, ideal kopuru orokor baten ebakidura
+ideala da berriro.)
+(ii) a ∪ b ideala da baldin eta soilik baldin a ⊆ b edo b ⊆ a bada. 
+(Kasu horietan
+a
+∪ b bi idealetatik handiena baino ez da.)
+(iii) a eta b (hau da, a ∪ b) barruan dituen idealik txikiena
+a
++ b = {a + b | a ∈ a, b ∈ b}
+multzoa da. (Orokorkiago, a1, . . . , an ideal kopuru ﬁnitu bat emanda, ideal
+horiek barruan dituen A-ren idealik txikiena a1 + · · · + an batura da, hots,
+ideal horietan elementu bana harturik eta batuz lortzen dugun azpimultzoa.)
+(iv) a-ko eta b-ko elementuen arteko biderkadura guztiak barruan dituen A-ren
+idealik txikiena, ab gisa idazten duguna, honako hau da:
+ab
+=
+k
+i=1
+aibi | ai ∈ a, bi ∈ b, k ∈ N ,
+hau da, biderkadura horien batura guztien multzoa. (Antzera gertatzen da
+ideal kopuru ﬁnitu batekin.)
+Partekotasun hauek betetzen dira:
+a
+a
++ b
+b
+a
+∩ b
+ab
+Aurrerago ikusiko dugunez, diagrama horretan agertzen diren partekotasun guztiak
+hertsiak izan daitezke.
+1.18. Oharra. Ideal kopuru inﬁnitu baten batura ere deﬁni daiteke. Zehazkiago,
+{ai}i∈I A-ren idealen familia bat bada, orduan
+i∈I ai baturako elementuak ideal
+horietako elementuen batura ﬁnitu guztiak dira, hau da,
+ai
+1 + · · · + ain
+bezalako baturak, non aj ∈ Aj, i1, . . . , in ∈ I eta n ∈ N. Erraz egiaztatzen da
+i∈I ai A-
+ren ideala dela, eta hori dela ∪i∈I ai bildura barruan duen idealik txi-
+kiena.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.2. IDEALAK ETA ZATIDURA-ERAZTUNAK
+10
+Aurreko teoremaren atal batzuetan, A-ren azpimultzo berezi batzuen kasuan,
+hori barruan duen idealik txikiena identiﬁkatu dugu. Zein da azpimultzo orokor
+bat barruan duen idealik txikiena? Galdera horrek erantzun erraza du, hurrengo
+teoreman ikusiko dugun bezala. Lehenago, kontzeptu hori formalizatuko dugu.
+1.19. Deﬁnizioa. Izan bitez A eraztuna eta S A-ren azpimultzoa. Orduan, S-k
+sortutako ideala S barruan duten A-
+ren ideal guztien ebakidura da. Bestela esanda,
+S barruan duen A-ren idealik txikiena da. Ideal hori 
+(S) ikurraren bidez adieraziko
+dugu.
+1.20.
+Deﬁnizioa. Ideal bat ﬁnituki sortua dela esango dugu elementu kopuru
+ﬁnitu baten bidez sor badaiteke, eta nagusia dela, berriz, elementu bakar baten
+bidez sor badaiteke.
+Aurreko deﬁnizioan, “sor badaiteke” hori azpimarratu nahi dugu. Izan ere,
+ideal bat nagusia izan daiteke, sortzaile batekin baino gehiagorekin emanda ba-
+dago ere, eta ﬁnituki sortua izan daiteke, inﬁnitu sortzailerekin emanda ikusten
+badugu ere. Adibidez, Z-n (4, 6) ideala nagusia da, (4, 6) = (2) delako. 
+(Hurrengo
+teoremaren ondoren justiﬁkatuko dugu berdintza hori.)
+1.21. Teorema. Izan bitez A eraztuna eta S A-ren azpimultzoa. Orduan,
+(S) = {x1a1 + · · · + xkak | x1, . . . , xk ∈ A, a1, . . . , ak ∈ S, k ∈ N}
+berdintza dugu. Bestela esanda, S-k sortzen duen ideala S-ko elementuekin egin
+ditzakegun konbinazio guztiek osatzen dute, konbinazio horien “koeﬁzienteak” A
+eraztunean izanik. Bi kasu berezi hauek azpimarratu nahi ditugu:
+(i) S = {a1, . . . , an} ﬁnitua bada, konbinazio horietan S-ko elementu guztiak
+agertzen direla pentsa dezakegu (elementu bat agertzen ez bada, beti uler
+dezakegu 0 koeﬁzientearekin agertzen dela); ondorioz,
+(a1, . . . , an) = {x1a1 + · · · + xnan | x1, . . . , xn ∈ A}.
+(ii) S = {a} elementu bakar batek sortzen duen ideala a-ren multiplo guztien
+multzoa da, hau da,
+(a) = {xa | x ∈ A}.
+1.22. Adibideak. 1) n ∈ Z bada, (n) = nZ dugu.
+2) Z-n (4, 6) = (2) dugu. Izan ere,
+(4, 6) = {4x + 6y | x, y ∈ Z} = {2z | z ∈ Z} = (2).
+Erdiko berdintzan ⊆ partekotasuna nabaria da eta ⊇ B´
+ezouten identitatearen on-
+dorioa da, 2-a delako 4aren eta 6aren zatitzaile komunetako handiena.
+3) A eraztun guztietarako A = (1) dugu eta, oro har, A = (a) betetzen da
+baldin eta soilik baldin a A-ren unitatea bada.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.2. IDEALAK ETA ZATIDURA-ERAZTUNAK
+11
+Elementu batzuek sortutako ideala elementu horien konbinazioek osatzen dutela
+!
+esaten dugunean, ez ditugu adierazi nahi elementu horien konbinazio linealak, hau
+da, elementu horien multiploen baturak eskalarrez biderkatzen ditugunean, baizik
+eta elementu horien multiploen batura A eraztuneko elementuez biderkatzen ditu-
+gunean. Eraztun orokor baten kasuan ez dago posibilitate handirik akats horretan
+erortzeko; azken batean, zein gorputzen gainean hartuko genituzke eskalarrak? Hala
+ere, K[X]-ren kasuan (edo polinomioen eraztun orokorragoen kasuan) arrisku hori
+badago, K gorputza tartean delako. Beraz, argi izan: (f1(X), . . . , fn
+(X)) idealeko
+elementuak ez dira f1(X), . . . , fn(X) polinomioen konbinazio linealak 
+(K gorpu-
+tzaren gainean), baizik eta polinomio horien multiploen baturak beste polinomio
+batzuekin biderkatzen ditugunean.
+Aurreko adibide batean ikusi dugu (4, 6) = (2) berdintza betetzen dela Z-n.
+Oro har, bi ideal sortzaileren bidez emanda badaude, nola jakin dezakegu berdinak
+diren edo ez? Horretarako, nahikoa da jakitea ideal horietariko bakoitza bestearen
+parte den edo ez. Hurrengo teoremak ematen digu erantzuna.
+1.23. Teorema. Izan bitez A eraztuna eta a = (S) eta b = (T ) A-ren bi ideal.
+Orduan, a ⊆ b dugu baldin eta soilik baldin S ⊆ b bada, hau da, S-ko elementu
+guztiak T -ko elementuen konbinazioak badira.
+Froga. Nabaria da a ⊆ b baldintzak S ⊆ b dakarrela. Alderantzizkoa ere garbi
+dago: deﬁnizioz, a = (S) ideala S barruan duten A-
+ren ideal guztietatik txikiena
+denez, S ⊆ b betetzen bada orduan a ⊆ b ere bai.
+1.24. Korolarioa. Izan bitez A eraztuna eta a = (a1, . . . , an) A-
+ren ideala. Or-
+duan, i ∈ {1, . . . , n} indize bakoitzeko:
+(i) ai-ren ordez uai jartzen badugu, u ∈ A
+× izanik, a ideala ez da aldatzen.
+(ii) ai-ren ordez ai +
+j=i xj aj jartzen badugu, xj ∈ A izanik j = i guztietarako,
+a
+ez da aldatzen.
+Froga. Aurreko teoremaren ondorio berehalakoa da.
+Adibidez, (X2 + Y 2, X2 − Y 2) = (X2 + Y 2, 2X2) = (X2 + Y 2, X2) = (Y 2, X2)
+dugu Q[X, Y ]-n. Berdin litzateke F2[X, Y ]-n?
+1.25. Korolarioa. Izan bitez A eraztuna eta a = (a, S) A-ren ideala. Orduan,
+a ≡ b (mod (S)) bada, a = 
+(b, S) ere badugu. Bestela esanda, a ideal baten sistema
+sortzaile batean, beti jar dezakegu a elementu baten ordez b beste elementu bat, a
+eta b beste sortzaileek sortzen duten idealarekiko kongruenteak badira.
+Froga. Frogatzen badugu (a, S) ⊆ (b, S) partekotasuna, orduan, simetriagatik,
+berdintza izango dugu. Kontuan izanik 1.23 teorema, nahikoa da a ∈ 
+(b, S) froga-
+tzea. Baina, a ≡ b (mod (S)) izateagatik, x = a − b elementua (S) idealean dago
+eta, ondorioz, a = b + x ∈ (b, S) lortzen dugu.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.2. IDEALAK ETA ZATIDURA-ERAZTUNAK
+12
+1.26. Adibidea. Izan bedi a = (Y − X2, Z2 − X3, Y 3 + Y Z2 − Z4). Orduan,
+azken sortzailearen ordez, X bakarrik erabiltzen duen polinomio bat jar dezakegu.
+Izan ere, jarri b = 
+(Y − X2, Z2 − X3), beste bi polinomioek sortzen duten ideala.
+Nabaria da Y ≡ X2 (mod b) eta Z2 ≡ X3 (mod b) betetzen dela. Beraz,
+Y
+3 + Y Z2 + Z4 ≡ X6 + X2X3 − X6 ≡ X5 (mod b)
+dugu eta, azken korolarioa aplikatuz, a = (Y − X2, Z2 − X3, X5) dugu. Hori 1.24
+korolarioa erabiliz ere lor genezake, baina lan gehiago eskatuko luke pentsatzeak
+Y −X2 eta Z2 −X3 polinomioen zein multiplo batu behar dizkiogun Y 3 +Y Z2 −Z4-
+ri X5 baino ez gelditzeko.
+Ondoren ikusten dugunez, 1.24 korolarioaren (i) atalaren alderantzizkoa egiaz-
+koa da integritate-domeinuetan.
+1.27. Teorema. Izan bedi A I.D. Orduan, (a) = (b) dugu baldin eta soilik baldin
+existitzen bada u ∈ A×, non b = ua baita.
+Froga. Ezkerralderako norabidean emaitza ezaguna da. Ikus dezagun, beraz, al-
+derantzizko inplikazioa. Lehenengo eta behin, a eta b elementuetako bat 0 bada,
+garbi dago besteak ere 0 izan behar duela (0 baita 
+{0} idealaren sortzaile bakarra)
+eta emaitza bete egiten da. Demagun hemendik aurrera a = 0 eta b = 0 dela.
+Ohartu, (a) = (b) baldintza betetzeagatik, a b-ren multiploa dela eta b a-
+ren mul-
+tiploa dela. Beraz, a = xb eta b = ya dugu x, y ∈ A izanik eta, bi berdintza horiek
+konbinatuz, a = xya lortzen dugu. Hortik, a = 0 eta A I.D. izateagatik, 1 = xy on-
+dorioztatzen dugu eta y ∈ A×. Orain, b = ya dela gogoratuz, nahi genuen emaitza
+frogaturik gelditzen da.
+Azkenik, ikus dezagun nola lor ditzakegun a eta b bi idealen baturaren eta
+biderkaduraren sortzaileak, a-ren eta b-ren sortzaileak ezagutuz gero.
+1.28. Teorema. Izan bitez a = (S) eta b = (T ) A-ren bi ideal. Orduan:
+(i) a + b = (S ∪ T ) = (s, t | s ∈ S, t ∈ T ).
+(ii) ab = (ab | a ∈ S, b ∈ T ).
+Bereziki, a = (a1, . . . , am) eta b = 
+(b1, . . . , bn) ﬁnituki sortuak badira, orduan
+a
++ b = (a1, . . . , am, b1, . . . , bn)
+eta
+ab
+= (aibj | i = 1, . . . , m, j = 1, . . . , n)
+dugu.
+Froga. Bi ataletan, garbi dago ⊇ partekotasuna betetzen dela; beraz, bakarrik
+arduratuko gara ⊆ frogatzeaz. Izan bitez x ∈ a eta y ∈ b. Orduan,
+x = x1a1 + · · · + xkak
+eta
+y = y1b1 + · · · + y b
+(1.2)
+dugu, xi, yi ∈ A, ai ∈ S eta bi ∈ T izanik.
+(i) Bakarrik ikusi behar dugu x + y ∈ 
+(S ∪ T ) betetzen dela, eta hori garbi dago
+(1.2)-ko bi berdintzak batuz gero.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.3. IDEAL NAGUSIETAKO ETA FAKTORIZAZIO BAKARREKO DOMEINUAK
+13
+(ii) Biderkatzen baditugu (1.2)-ko bi berdintzak, garbi dago xy ∈ (ab | a ∈
+S, b ∈ T ) betetzen dela. Orain, kontuan hartzen badugu ab biderkaduraren deﬁni-
+zioa, konturatzen gara 
+{xy | x ∈ a, y ∈ b} ideal horren sistema sortzaile bat dela.
+Horrenbestez, ab ⊆ (ab | a ∈ S, b ∈ T ) lortzen dugu, 1.23 teorema erabiliz.
+Oso zaila izan daiteke, ordea, a ∩ b ebakiduraren sortzaileak ematea.
+!
+1.3. Ideal nagusietako domeinuak eta faktorizazio bakarreko
+domeinuak
+Atal honetan integritate-domeinuen bi klase nagusiak sartzen ditugu, ideal na-
+gusietako domeinuak eta faktorizazio bakarreko domeinuak. Bi eraztun mota horiek
+oso propietate onak betetzen dituzte, eraztun orokorragoekin konparatuta, eta ho-
+rregatik bereziki interesgarria da horiekin lan egitea.
+1.29. Deﬁnizioa. Eraztun bat ideal nagusietako domeinua (laburkiago I.N.D.)
+dela esaten dugu integritate-
+domeinua bada eta bere ideal guztiak nagusiak badira.
+1.30. Adibideak. 1) Z I.N.D. da. Aurretik ikusi dugu (4, 6) = (2) betetzen dela
+eta, oro har, a = (S) Z-ren ideala bada, orduan a = (d) dugu, d S-ko zenbaki
+guztien zatitzaile komunetako handiena izanik.
+2) Era berean, K gorputza bada, K[X] I.N.D. da. Z-ren kasuko metodo bera
+erabil dezakegu ideal baten sortzaile bat lortzeko:
+ emandako sortzaileen zatitzaile
+komunetako handienak balio du.
+3) Aitzitik, K[X, Y ] ez da I.N.D. Ikus dezagun (X, Y ) ideala ez dela nagusia.
+Absurdora eramanez, demagun (X, Y ) = (f (X, Y )) dela f polinomio baterako.
+Jakina, f = 0 bete behar da. Ohartu, gainera, f ezin dela konstantea izan, kasu
+horretan (X, Y ) = K[X, Y ] bailitzateke, eta hori faltsua da (azken batean, 
+(X, Y )-
+ko elementuak gai askerik gabeko polinomioak dira). Bestalde, (X, Y ) = (f 
+(X, Y ))
+betetzeagatik, existitzen dira bi polinomio p, q ∈ K[X, Y ], non
+X = p(X, Y )f (X, Y )
+eta
+Y = q(X, Y )f (X, Y )
+baita. Orain, bi polinomioren biderkadura X baino ez bada, posibilitate bakarra da
+polinomio horietako bat λ konstante ez-
+nulu bat izatea eta beste polinomioa λ−1X
+izatea. Beraz, X = p(X, Y )f (X, Y ) berdintza erabiliz, f -
+k konstante bat bider
+X izan behar duela lortzen dugu. Baina Y = q(X, Y )f (X, Y ) faktorizazioarekin
+argudiatzen badugu, f -
+k konstante bat bider Y ere izan behar luke. Hori kontraesan
+bat da eta, ondorioz, (X, Y ) ideala ez da nagusia.
+Era berean, K[X1, . . . , Xn]
+polinomioen eraztunean, bi edozein indeterminatuk (edo gehiagok) sortzen duten
+ideala ez da nagusia.
+4) Antzera ikus daiteke Z[X] ez dela I.N.D.: p lehena bada, (p, X) ideala ez da
+nagusia.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.3. IDEAL NAGUSIETAKO ETA FAKTORIZAZIO BAKARREKO DOMEINUAK
+14
+Aritmetikaren Oinarrizko Teoremak esaten du Z-ko edozein zenbaki positibo
+zenbaki lehenen biderkadura gisa deskonposa daitekeela eta faktorizazio hori baka-
+rra dela faktoreen ordena ez badugu kontuan hartzen. Zenbaki negatiboak lortzeko,
+nahikoa da zenbaki positiboak −1-ez biderkatzea; ohartu −1 unitatea dela Z-
+n. Ja-
+rraian ematen ditugun deﬁnizioek Z-
+ren ezaugarri hori hartzen dute motibazio gisa.
+1.31. Deﬁnizioa. Izan bitez A eraztuna eta a ∈ A. Elementu hori irreduziblea
+dela diogu bi baldintza hauek betetzen badira:
+(i) a ez da A-ren unitatea.
+(ii) a ezin da faktorizatu unitaterik erabili gabe.
+Hau da, a = xy badugu,
+x, y ∈ A izanik, orduan x ∈ A× edo y ∈ A×.
+Ohartu 0 ez dela inoiz elementu irreduziblea A eraztun batean: A eraztun tri-
+biala bada, 0 unitatea delako; eta A ez bada tribiala, 0 = 0 · 0 delako, 0 unitatea
+izan gabe. Bestalde, Z-
+ko elementu irreduzibleak zenbaki lehenak dira eta zenbaki
+lehenen negatiboak. Azkenik, K[X]-ko elementu irreduzibleak polinomio irreduzi-
+bleekin bat datoz.
+1.32.
+Deﬁnizioa. Izan bedi A integritate-domeinua.
+Orduan, A faktorizazio
+bakarreko domeinua 
+(laburkiago F.B.D.) dela esaten dugu a ∈ A bakoitza, a = 0 eta
+a ez-
+unitatea izanik, irreduzibleen biderkadura gisa jar badaiteke, funtsean modu
+bakar batean. Zehazkiago,
+a = p1 . . . pm = q1 . . . qn
+badugu, pi eta qj guztiak irreduzibleak izanik, orduan m = n eta, elementuak
+berrordenatuz, pi = uiqi dugu, ui ∈ A
+× izanik.
+Integritate-domeinu guztiak ez dira faktorizazio bakarreko domeinuak. Adibi-
+dez, Z[
+√
+−5] = {a + b
+√
+−5 | a, b ∈ Z} I.D. da, baina ez F.B.D. Ohartu 6 = 2 · 3 =
+(1 +
+√
+−5)(1 −
+√
+−5) dela eta faktore guztiak irreduzibleak direla Z[
+√
+−5]-en. (Ho-
+ri ez da zaila frogatzen Z[
+√
+−5]-eko normaren propietate biderkakorra erabiltzen
+badugu; a + b
+√
+−5 elementuaren norma a2 + 5b2 da.) Zatidura-aljebrak deﬁni-
+tu eta gero, erraz lortuko dugu adibide gehiago. Bestalde, faktorizazio bakarreko
+domeinuen adibide tipikoak Z eta K[X] dira. Oro har, honako emaitza hau dugu.
+1.33. Teorema. Ideal nagusietako domeinu guztiak faktorizazio bakarreko domei-
+nuak dira.
+Horren alderantzizkoa ez da egiazkoa. Adibidez, hurrengo teoremak ziurtatzen
+du K
+[X1, . . . , Xn] moduko eraztunak faktorizazio bakarreko domeinuak direla, bai-
+na, hala ere, ez dira ideal nagusietako domeinuak, n ≥ 2 bada. 
+(Kontuan izan 1.30
+adibideetako hirugarren atala.)
+1.34. Teorema. Izan bitez A faktorizazio bakarreko domeinua eta X indetermi-
+natua. Orduan, A[X] ere faktorizazio bakarreko domeinua da.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.3. IDEAL NAGUSIETAKO ETA FAKTORIZAZIO BAKARREKO DOMEINUAK
+15
+Orain ez gara luzatuko bi teorema horien frogak ematen.
+Jarraian ikusiko dugunez, faktorizazio bakarreko domeinuetan zatitzaile komu-
+netako handiena eta multiplo komunetako txikiena deﬁni ditzakegu, Z-n edo K[X]-
+n egiten den modura. Deﬁnizio horiek eman baino lehen, ohartu F.B.D. batean a
+eta b bi elementu beti faktoriza daitezkeela irreduzible berberak erabiliz, hau da,
+a = p
+m1
+1
+. . . pmr
+r
+eta b = p
+n1
+1
+. . . pnr
+r
+moduan, pi guztiak irreduzibleak izanik. Jakina,
+mi eta nj berretzaileetako batzuk 0 izateko aukera onartu behar dugu horretarako.
+1.35. Deﬁnizioa. Izan bedi A F.B.D. eta demagun a, b ∈ A elementuak honela
+faktorizatzen direla irreduzibleen biderkadura gisa:
+a = p
+m1
+1
+. . . p
+mr
+r
+eta
+b = p
+n1
+1
+. . . p
+nr
+r .
+(1.3)
+Orduan:
+(i) a-ren eta b-ren zatitzaile komunetako handiena, zkh(a, b) edo 
+(a, b) gisa idaz-
+ten dena, A-ren honako elementu hau da:
+zkh(a, b) = p
+min{m1,n1}
+1
+. . . p
+min{mr,nr}
+r
+.
+(1.4)
+(ii) a-ren eta b-ren multiplo komunetako txikiena, mkt(a, b) edo 
+[a, b] gisa idazten
+dena, A-ren honako elementu hau da:
+mkt(a, b) = p
+max{m1,n1}
+1
+. . . p
+max{mr,nr}
+r
+.
+(1.5)
+Eman dugun deﬁnizioarekin zatitzaile komunetako handiena eta multiplo komune-
+!
+tako txikiena ez dira bakarrak. Izan ere, (1.3)-
+ko faktorizazioetan pi irreduzibleak
+ez dira bakarrak, irreduzible horiek unitate batzuez biderkatuz beste faktorizazio
+batzuk lor baititzakegu. Horrek esan nahi du (1.4) eta (1.5) formuletan ematen
+ditugun balioak ere ez direla bakarrak eta unitate batez biderkaturik ager dai-
+tezkeela. Esate baterako, Z-n unitateak 1 eta −1 direnez, zatitzaile komunetako
+handiena d zenbakia bada, −d dela esatea ere zuzena da. Beraz, zkh
+(4, 6) = 2 edo
+zkh(4, 6) = −2 idatz dezakegu. Era berean, K[X1, . . . , Xn]-
+n unitateak konstan-
+te ez-nuluak direnez, horietaz biderkatuz zatitzaile komunetako handienaren ba-
+lio posible guztiak lortuko ditugu. Adibidez, (2X2 − 2, 2X − 2) = 2X − 2 zein
+(2X2 − 2, 2X − 2) = X − 1 idatz dezakegu. Hala ere, eraztun horietan baditugu
+irizpideak zatitzaile komunetako handien guztien artean bakar bat hobesteko: Z-
+n
+positiboa den bakarra nahiago izaten dugu eta K[X1, . . . , Xn]-
+n, berriz, monikoa
+den polinomio bakarra (hau da, koeﬁziente nagusia 1 duena).
+Ondorengo teoremak argitzen du zergatik erabiltzen diren zatitzaile komuneta-
+ko handienaren eta multiplo komunetako txikienaren izenak. Froga deﬁnizioen eta
+faktorizazioaren bakartasunaren ondorio berehalakoa da.
+1.36. Teorema. Izan bitez A F.B.D. eta a, b ∈ A. Orduan, zkh(a, b) a-ren eta
+b-ren zatitzaile bat da eta mkt(a, b) a-ren eta b-
+ren multiplo bat da. Gainera, x ∈ A
+edozein elementutarako:
+(i) x-k a eta b zatitzen ditu baldin eta soilik baldin zkh(a, b) zatitzen badu.
+(ii) x a-ren eta b-ren multiploa da baldin eta soilik baldin mkt(a, b)-
+ren multiploa
+bada.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.4. IDEAL MAXIMALAK, LEHENAK ETA ERRADIKALAK
+16
+Adibidez, orain badaukagu modu azkarrago bat ikusteko (X, Y ) ideala ez dela
+nagusia. Izan ere, (X, Y ) = (f (X, Y )) balitz, orduan f -
+k X eta Y zatituko lituzke.
+Beraz, f -k zkh
+(X, Y ) = 1 ere zatituko luke eta, nahitaez, unitate bat izan behar
+luke. Orduan, (X, Y ) = (f (X, Y )) = K
+[X, Y ] lortuko genuke, baina hori faltsua
+da.
+1.37. Teorema. Izan bitez a = (a) eta b = (b) A eraztunaren bi ideal nagusi.
+Orduan:
+(i) ab = (ab) dugu.
+(ii) A F.B.D. bada, a ∩ b = (mkt(a, b)) dugu.
+(iii) A I.N.D. bada, a + b = (zkh(a, b)) dugu.
+Froga. (i) Hori 1.28 teoreman ikusi genuen.
+(ii) Ohartu x ∈ (a) ∩ (b) dela baldin eta soilik baldin x a-ren eta b-ren mul-
+tiploa bada aldi berean. Aurreko teoremagatik, hori gertatzen da x mkt(a, b)-
+ren
+multiploa denean, hau da, x ∈ (mkt(a, b)) denean. Hortik, (a) ∩ (b) = (mkt
+(a, b))
+berdintza lortzen dugu.
+(iii) A I.N.D. denez, badakigu badagoela d elementu bat, non (a, b) = 
+(d) baita.
+Orduan, d-k a eta b zatitzen ditu eta, beraz, zkh
+(a, b) ere bai. Beste alde batetik, d ∈
+(a, b) izateagatik, d = ax + by idatz dezakegu, x, y ∈ A izanik. Ondorioz, zkh
+(a, b)-
+k d zatitzen du, a eta b zatitzen baititu. Beraz, d eta zkh
+(a, b) elementuek elkar
+zatitzen dute eta, horrenbestez, (d) = (zkh(a, b)) berdintza dugu, nahi bezala.
+Oro har, ezin da baieztatu a+b = (zkh
+(a, b)) formula betetzen denik F.B.D. batean,
+!
+ez bada I.N.D. Adibidez, K[X, Y ]-n, (X) + (Y ) ideala ez da nagusia.
+1.38. Adibideak. 1) Izan bitez a = 10Z eta b = 15Z, Z-ren idealak. Orduan,
+a
++ b = 5Z, a ∩ b = 30Z eta ab = 150Z dugu.
+2) Izan bitez a = (X2 − 1) eta b = (X2 − X), Q[X]-ren idealak. Orduan,
+a
++ b = (X − 1), a ∩ b = (X3 − X) eta ab = (X4 − X3 − X2 + X) dugu.
+3) Izan bitez a = (XY ) eta b = (XZ), Q[X, Y, Z]-ren idealak. Orduan, ab =
+(X2Y Z) eta a ∩ b = (XY Z) dugu. Hala ere, ikus daiteke a + b = 
+(XY, XZ) ez dela
+nagusia.
+1.4. Ideal maximalak, lehenak eta erradikalak
+Atal honetan hiru ideal mota garrantzitsu ikusiko ditugu, ideal maximalak,
+lehenak eta erradikalak, alegia.
+1.39. Deﬁnizioa. Izan bitez A eraztuna eta a A-ren ideala. Orduan:
+(i) a A-ren ideal maximala dela diogu propioa bada eta ezin bada sartu beste
+ideal propio handiago batean. Sinbolikoki jarrita:
+a
+⊆ b ⊆ A
+=⇒
+b
+= a edo b = A.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.4. IDEAL MAXIMALAK, LEHENAK ETA ERRADIKALAK
+17
+(ii) a A-ren ideal lehena dela diogu propioa bada eta honako propietate hau
+betetzen badu:
+xy ∈ a
+=⇒
+x ∈ a edo y ∈ a.
+(iii) a ideal erradikala dela diogu honako propietate hau betetzen badu:
+x
+n ∈ a,
+n ∈ N izanik
+=⇒
+x ∈ a.
+Ohartu ideal erradikalaren deﬁnizioan ez dela eskatzen propioa izatea.
+!
+Hurrengo emaitza Zorn-en Lemaren ondorio erraza da.
+1.40. Teorema. Izan bitez A eraztuna eta a A-ren ideal propioa. Orduan, a ideal
+maximal baten barruan sar daiteke.
+Hurrengo teoreman ikusten dugun bezala, a ideala maximala, lehena edo erra-
+dikala den jakiteko, A/a zatidura erabil dezakegu.
+1.41. Teorema. Izan bitez A eraztuna eta a A-ren ideala. Orduan:
+(i) a A-ren ideal maximala da baldin eta soilik baldin A/a gorputza bada.
+(ii) a A-ren ideal lehena da baldin eta soilik baldin A/a I.D. bada.
+(iii) a A-ren ideal erradikala da baldin eta soilik baldin A/a-
+k ez badu elementu
+nilpotenterik, 0 izan ezik. (Eraztun batean, a elementua nilpotentea da a-ren
+berreturaren bat 0 bada.)
+Froga. Teorema hori frogatzeko, bakarrik gogoratu behar dugu A/a zatidura-
+eraztunean a = 0 dugula baldin eta soilik baldin a ∈ a bada.
+(i) Baliokidetasun hauek ditugu:
+A/a gorputza
+⇐⇒
+A/a = {0}
+x = 0 ⇒ ∃ a : a · x = 1
+⇐⇒
+a
+= A
+x ∈ a ⇒ ∃ a : 1 − ax ∈ a
+⇐⇒
+a
+= A
+x ∈ a ⇒ ∃ a ∈ A, ∃ y ∈ a : 1 = ax + y
+⇐⇒
+a
+= A
+x ∈ a ⇒ (x) + a = A.
+Orain, demagun A/a gorputza dela eta frogatu dezagun a A-ren ideal maximala
+dela. Aurrekoagatik, badakigu a A-ren ideal propioa dela. Har dezagun b beste
+ideal bat, non a
+b
+⊆ A baita, eta ikus dezagun b = A dela. Horretarako, aukeratu
+elementu bat x ∈ b
+a
+. Goian ikusi bezala, (x) + a = A dugu. Baina (x) eta a
+idealak b-ren barruan daude, eta hortik b = A dela ondorioztatzen dugu.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.4. IDEAL MAXIMALAK, LEHENAK ETA ERRADIKALAK
+18
+Alderantziz, a A-ren ideal maximala bada, frogatu dezagun A/a gorputza dela.
+Aurreko baliokidetasunen arabera, bakarrik ikusi behar dugu (x) + a = A bete-
+tzen dela x ∈ a guztietarako. Hori berehalakoa da ideal maximalaren deﬁnizioan
+oinarrituz, (x) + a A-ren ideala baita eta a
+(x) + a baita, x ∈ a izateagatik.
+(ii) Kasu honetan,
+A/a I.D.
+⇐⇒
+A/a = {0}
+x · y = 0 ⇒ x = 0 edo y = 0
+⇐⇒
+a
+= A
+xy ∈ a ⇒ x ∈ a edo y ∈ a
+⇐⇒
+a
+A-ren ideal lehena.
+(iii) Aurreko kasuan bezala argudiatuz lortzen da.
+1.42. Korolarioa. Ideal maximalak lehenak dira eta ideal lehenak erradikalak dira.
+1.43. Korolarioa. Izan bedi A eraztuna. Orduan, {0} ideal lehena da baldin eta
+soilik baldin A I.D. bada.
+Badago modu garbiago bat 1.41 teoremaren (i) ataleko baliokidetasuna zergatik
+betetzen den ulertzeko. Horretarako zatidura baten idealak nolakoak diren ezagutu
+behar dugu. Emaitza hori oso maiz erabiltzen da, eta jarraian enuntziatuko dugu.
+1.44. Teorema (Korrespondentziaren teorema). Izan bitez A eraztuna eta a A-ren
+ideala. Orduan:
+(i) b A-ren ideala bada, a ⊆ b izanik, badugu
+b
+a
+= {x + a | x ∈ b}
+multzoa A/a-ren ideala dela eta horrela agertzen dira A/a-ren ideal guztiak.
+Zehazkiago,
+{b | b A-ren ideala eta a ⊆ b}
+−→
+{A/a-ren idealak}
+b
+−→
+b
+/a
+aplikazioa bijektiboa da.
+(ii) Aurreko atalaren baldintzetan,
+A/a
+b
+/a
+∼
+= A/b
+isomorﬁsmoa dugu.
+(iii) b/a A/a-ren ideal maximala 
+(lehena, erradikala) da baldin eta soilik baldin
+b
+A-ren ideal maximala (lehena, erradikala) bada.
+Izan bedi a A-ren ideala. Hartzen badugu b A-ren beste ideal bat, a ⊆ b izanik,
+!
+egia da oraindik ere
+I = {x + a | x ∈ b}
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.4. IDEAL MAXIMALAK, LEHENAK ETA ERRADIKALAK
+19
+multzoa A/a zatiduraren ideala dela. Ohiko akatsa da orduan I = b/a moduan
+idaztea, konturatu gabe a ez dagoela b-
+ren barruan. Ideal hori zatidura gisa idaz-
+teko modu zuzena
+I =
+a
++ b
+a
+da. (Ohartu a + x = x dela a ∈ a bada.)
+1.45.
+Adibideak. 1) Hauek dira Z/6Z-ren idealak: Z/6Z, 2Z/6Z = {0, 2, 4},
+3Z/6Z = {0, 3} eta 6Z/6Z = {0}, denak erradikalak. Horietatik, 2Z/6Z eta 3Z/6Z
+maximalak dira.
+2) Hauek dira K[X]/(Xn)-ren idealak: (Xm)/(Xn), non 0 ≤ m ≤ n. Ez dira
+erradikalak m ≥ 2 bada, eta (X)/(Xn), ordea, maximala da.
+Hurrengo teoreman ikusten dugunez, faktorizazio bakarreko domeinu batean
+erraz ikus daiteke ideal nagusi bat lehena edo erradikala den, sortzaile baten fak-
+torizazioari begiratuta. Bereziki, ideal nagusietako domeinu baten ideal guztiei
+aplikatzen zaie. Lema bat behar dugu aurretik.
+1.46. Lema. Izan bitez A F.B.D. eta a ∈ A elementu irreduzible bat. Orduan, a-k
+biderkadura bat zatitzen badu, faktoreetako bat zatitu behar du.
+Froga. Demagun a-
+k x1 . . . xn zatitzen duela. Orduan, x1 . . . xn = ay dugu y ∈ A
+elementuren baterako. Berdintza horretan x1, . . . , xn, y elementuen ordez beren
+irreduzibleetako faktorizazioak idazten baditugu, eta a dagoen bezala uzten badugu
+(a irreduziblea da), orduan bi aldeetan faktorizazio bera ikusi behar dugu. Horrek
+esan nahi du a elementu irreduzibleak xi elementu baten faktorizazioan agertu
+behar duela. Ondorioz, a-k xi zatitzen duela baiezta dezakegu, nahi bezala.
+1.47. Teorema. Izan bitez A F.B.D. eta a ∈ A, a = 0.
+(i) (a) A-ren ideal lehena da baldin eta soilik baldin a irreduziblea bada.
+(ii) (a) A-
+ren ideal erradikala da baldin eta soilik baldin a karratugabea bada,
+hau da, irreduzibleetako bere faktorizazioan ez bada karraturik agertzen.
+Froga. (i) Demagun lehenengo (a) ideal lehena dela. Orduan, (a) = A dugu
+eta a ez da unitatea. Bestetik, a = xy faktorizazio bat badugu, ikus dezagun x
+edo y unitatea dela. Ohartu xy ∈ (a) dugula eta, beraz, x ∈ (a) edo y ∈ (a)
+dela. Simetriagatik, x ∈ (a) dela pentsa dezakegu. Orduan x = az dugu, z ∈ A
+izanik, eta hortik a = azy. Orain, A I.D. dela eta a = 0 dela erabiliz, 1 = zy dela
+ondorioztatzen dugu eta y unitatea da A-n.
+Alderantziz, demagun a irreduziblea dela. Orduan, a ez da unitatea eta, ondo-
+rioz, (a) = A. Orain, demagun xy ∈ (a) dela. Horrek esan nahi du a-
+k xy zatitzen
+duela eta, aurreko lema erabiliz, a-k x edo y zatitu behar du. Hortaz, x ∈ 
+(a) edo
+y ∈ (a) dugu eta (a) A-ren ideal lehena da.
+(ii) Antzera ikus daiteke.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.5. LOKALIZATUAK
+20
+Eraztun gehienetan, ideal nagusi bat ezin da maximala izan. Bai, jakina, A
+I.N.D. batean. Jarraian frogatuko dugunez, kasu horretan ideal maximalak eta
+ideal lehenak bat datoz, 
+{0} ideal tribialaren salbuespenarekin. Hori ideal lehena
+da, baina A gorputza denean baino ez da maximala.
+1.48. Teorema. Izan bitez A I.N.D. eta a ∈ A, a = 0. Orduan, (a) maximala da
+baldin eta soilik baldin lehena bada.
+Froga. Nahikoa da frogatzea, (a) lehena den baldintzapean, (a) maximala dela.
+Aurreko teoremaren arabera, badakigu a irreduziblea dela. Demagun orain (a)
+b
+⊆ A dela, b A-ren ideala izanik, eta ikus dezagun b = A dela. Hipotesiagatik,
+A I.N.D. da eta, beraz, b = (b) idatz dezakegu. Orduan, (a) ⊆ (b) izateagatik,
+a = bc dugu c elementuren baterako. Orain, a irreduziblea denez, b edo c unitatea
+da. Lehenengo kasuan, 
+(b) = A lortzen dugu, nahi bezala. Ordea, c unitatea balitz,
+orduan b = ac−1 izango genuke eta, hortik, b ∈ (a). Orduan (a) = (b) lortuko
+genuke, eta hori kontraesan bat da.
+1.49. Adibideak. 1) Z-n, 3Z maximala da eta 15Z erradikala da, baina ez lehena.
+2) (X3 + X + 1) maximala da Q[X]-n, baina ez R[X]-n ezta C[X]-n, orduan
+erradikala baino ez da. (Ohartu 
+(X3 + X + 1) multzoa desberdina dela hiru eraztun
+horietan.)
+3) (X2 + 1) maximala da R[X]-n, baina ez C[X]-n.
+4) (f (X)) maximala da C[X]-n baldin eta soilik baldin f (X) lehenengo maila-
+koa bada. Ondorioz,
+{(X − a) | a ∈ C}
+multzoan C[X]-
+ren ideal maximal guztiak agertzen dira, errepikapenik gabe. Emai-
+tza hori, C-
+rekin ez ezik, edozein gorputz aljebraikoki itxirekin ere betetzen da.
+5) K edozein gorputz izanik, (X + Y ) ideal lehena da K[X, Y ]-n, baina ez
+maximala. Adibidez, (X + Y )
+(X, Y )
+K[X, Y ] dugu.
+6) K edozein gorputz izanik, (X, Y ) ideal maximala da K[X, Y ]-n (eta ez nagu-
+sia). Izan ere, 
+(X, Y ) multzoa gai askerik gabeko polinomioek osatzen dute. Orain,
+(X, Y )
+b
+⊆ K[X, Y ] bada, aukeratu polinomio bat f ∈ b
+(X, Y ). Orduan,
+f -ren gai askea ez da zero eta f = λ + g idatz dezakegu, λ ∈ K× eta g ∈ 
+(X, Y )
+izanik. Hortik λ ∈ b lortzen dugu eta, λ K[X, Y ]-ren unitatea denez, b = K
+[X, Y ]
+ondorioztatzen dugu.
+7) Oro har, (X1, . . . , Xn) maximala da K[X1, . . . , Xn]-n. 
+(Aurreko adibideko
+argudio berak balio du.)
+Nolakoa izan behar du f (X) polinomioak (f (X)) maximala izateko R[X]-n?
+?
+1.5. Lokalizatuak
+A integritate-domeinua bada, ikusi dugu K gorputz baten barruan sar daite-
+keela, zatikien gorputz deitutakoa. Eskuarki, eraztun asko topa daitezke A-
+ren eta
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.5. LOKALIZATUAK
+21
+K-ren artean. Adibidez, Z-ren eta Q-
+ren artean eraztun familia inﬁnitu bat lortzen
+dugu, p zenbaki lehen bakoitzeko
+a
+b
+| a, b ∈ Z, b ez da p-ren multiploa
+hartuz. Eraztun horien eraikuntza A edozein eraztunen kasura orokortu nahi dugu
+atal honetan, eta lortzen diren eraztun berrien propietate nagusiak estudiatu.
+1.50. Deﬁnizioa. Izan bitez A I.D. eta p A-ren ideal lehena. Orduan,
+Ap =
+a
+b
+| a, b ∈ A, b ∈ p
+multzoa deﬁnitzen dugu, A-ren zatikien gorputzaren barruan. Hori p idealarekiko
+A-ren lokalizatua dela esaten dugu.
+Ap-ren deﬁnizioan, jakiteko a/b zatiki bat multzo horren barruan dagoen edo ez,
+!
+zatikiaren b izendatzaileari begiratzen diogu, p ideal lehenetik kanpo egoteko eska-
+tuz. Dakigunez, zatiki baten adierazpena ez da bakarra, eta horregatik pentsatu
+beharko genuke zatiki horren beraren beste adierazpen bat, adibidez x/y, hartuz
+gero, ea y ere p-tik kanpo egongo den. Hau da, a/b = x/
+y bada, b ∈ p izanik, izan
+behar du y ∈ p? Laster konturatzen gara propietate hori ez dela egiazkoa. Adibi-
+dez, Z-n (2) ideal lehena hartuz gero, orduan 1/3 = 2/6 dugu eta 3 ∈ (2), baina
+hala ere 6 ∈ (2). Orduan, zer egin behar dugu: 1/3 elementua Z(2) lokalizatuan
+sartu behar dugu edo ez? Edo Z
+(2) ondo deﬁniturik ez dagoela esan beharko genuke
+besterik gabe? Problema horri soluzioa emateko, zehaztu behar dugu nola ulertzen
+dugun Ap lokalizatuaren deﬁnizioa: zatiki bat Ap-
+n dagoela esango dugu existitzen
+bada elementu horren adierazpen bat, a/b, non b ∈ p den. Beraz, 1/3 ∈ Z(2) dela
+esan dezakegu.
+A F.B.D. izanez gero, orduan A-ren zatikien gorputzeko edozein elementuk a/b
+moduko adierazpen laburtezin bakar bat du, hau da, zkh
+(a, b) = 1 izanik. Orduan,
+erraz egiazta daiteke adierazpen horrek erabakitzen duela elementua Ap-n dagoen
+edo ez: elementu horren zatiki moduko adierazpen baten izendatzailea p-
+tik kanpo
+egongo da baldin eta soilik baldin b ∈ p bada.
+1.51. Teorema. Izan bitez A I.D. eta p A-ren ideal lehena. Orduan, Ap multzoa
+A-ren zatikien gorputzaren azpieraztuna da. Gainera, A ⊆ Ap partekotasuna dugu,
+ohikoa den bezala a ∈ A elementu bakoitza a/
+1 zatikiarekin identiﬁkatzen badugu.
+Froga. Bakarrik frogatu behar dugu, a/b eta c/d Ap-n egonez gero, a/b + c/d
+eta a/b · c/d ere Ap-
+n daudela. Hori berehalakoa da, b, d ∈ p baldintzatik bd ∈ p
+ondorioztatzen baitugu, p A-ren ideal lehena izateagatik.
+Eraztun baten lokalizatu bat ideal lehen batekiko hartu behar da beti, eta ez ideal
+!
+orokor batekiko, aurreko frogak argi erakusten duen bezala.
+Pasatzen garenean Z-tik Q-ra, helburua da zenbaki oso ez-nulu guztiak unita-
+te bihurtzea. Zein zenbaki oso bihurtzen dira unitate, adibidez, Z
+(2) lokalizatura
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.5. LOKALIZATUAK
+22
+pasatzean? Badugunez
+Z(2) =
+a
+b
+| a, b ∈ Z, b bakoitia
+dela, Z-ko zenbaki bakoiti guztiak unitate bihurtzen dira Z(2)-
+n, eta horiek baino
+ez. Ondorioz, 3-ak Z(2) osoa sortzen du, nahiz eta Z-n 3-
+ak ez duen eraztun osoa
+sortzen. Oro har, hori da lokalizatuaren ideia: p-tik kanpoko elementu guztiak
+unitate bihurtzen dira A-tik Ap-ra pasatzean 
+(eta beraz Ap osoa sortzen dute), eta
+horiek baino ez.
+Z(2)-ren adibidearekin jarraituta, zein da (a/b) ideal nagusi orokor bat? Hori
+ikusteko, idatzi a = 2nc moduan, c bakoitia izanik. Zenbaki bakoitiak unitateak
+direnez Z(2)-n, (a/b) = (2
+nc/b) = (2n) dugu. Beraz, ideal guztiak (2)-ren barruan
+daude eta (2) da Z(2)-ren ideal maximal bakarra. Hurrengo teoremetan ikusiko
+dugunez, Z(2)-ren propietate horiek ez dira kasualitateak.
+1.52. Teorema. Izan bitez A eraztuna eta p A-ren ideal lehena. Orduan:
+(i) a A-ren ideala bada,
+a
+Ap =
+a
+b
+| a ∈ a, b ∈ p
+Ap-ren ideala da. Zehazkiago, hau da a-k Ap-n sortzen duen ideala.
+(ii) Alderantziz, A Ap-ren ideala bada eta a = A ∩ A deﬁnitzen badugu, orduan
+A
+= aAp dugu. Beraz, Ap lokalizatuaren ideal guztiak (i) atalekoak bezala-
+koak dira.
+(iii) a/b ∈ Ap unitatea da baldin eta soilik baldin a ∈ p bada.
+(iv) aAp = Ap desberdintza dugu baldin eta soilik baldin a ⊆ p bada.
+Froga. (i) Berehalakoa da aAp Ap-ren ideala dela,
+a
+b
++
+c
+d
+=
+ad + bc
+bd
+eta
+a
+b
+·
+c
+d
+=
+ac
+bd
+formuletan oinarrituz. Bestalde, a-ko elementuekin konbinazioak egiten baditu-
+gu Ap-ko elementuekin biderkaturik, garbi dago aAp lortzen dela, a A-ren ideala
+izateagatik. Hortaz, aAp a-k Ap-n sortzen duen ideala da.
+(ii) Oro har, A ⊆ B bi eraztun badira eta b B-ren ideala bada, argi dago b ∩ A
+A-ren ideala dela. Beraz, gure kasuan, a = A ∩ A A-ren ideala da. Orain, a A-
+ren barruan dago, eta azken hori Ap-ren ideala da. Beraz, a-k Ap-n sortzen duen
+ideala, aAp alegia, A-
+ren barruan dago. Ikus dezagun alderantzizko partekotasuna
+ere betetzen dela. Horretarako, hartu a/b elementu orokor bat A-n. Orduan, b-z
+biderkatuz, a ∈ A lortzen dugu eta, ondorioz, a ∈ a. Beraz a/
+b ∈ aAp lortzen dugu,
+nahi bezala.
+(iii) Demagun, lehenengo eta behin, a/b Ap-ren unitatea dela. Orduan, existi-
+tzen da x/y ∈ Ap non a/b · x/y = 1 den, hau da, ax = by. Gorago aipatu dugun
+bezala, a/b, x/
+y ∈ Ap izateagatik eta p ideal lehena izateagatik, by ∈ p dugu. Beraz,
+ax ∈ p dugu eta, p A-ren ideala denez, a ∈ p ondorioztatzen dugu. Alderantziz,
+a ∈ p bada, orduan b/a zatikia Ap-n dago eta, ondorioz, a/b Ap-ren unitatea da.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.5. LOKALIZATUAK
+23
+(iv) Hori aurreko atalaren ondorioa da: kontuan izan ideal bat eraztun osoaren
+berdina dela baldin eta soilik baldin eraztunaren unitate bat badu.
+Ohartu aAp-ren deﬁnizioa ere ondo ulertu behar dugula: elementu bat aAp-n dago
+!
+hori adierazteko balio duen a/b zatikiren batek 
+(ez guztiek) betetzen badu a ∈ a,
+b ∈ p. Beraz, x/y ∈ aAp izateagatik ezin dugu besterik gabe esan x ∈ a izango
+denik, baizik eta existitzen dela a/b non x/y = a/
+b eta a ∈ a, b ∈ p den. Adibidez,
+Z-n p = 2Z eta a = 3Z hartzen baditugu, orduan 1/5 ∈ 3Z(2) dugu, nahiz eta
+1 ∈ 3Z. Izan ere, 1/5 = 3/15 dugu, 3 ∈ 3Z eta 15 ∈ 2Z izanik. (Edo bestela,
+gogoratu 3Z(2) = Z(2) dela, 3-a Z(2)-
+n unitatea izateagatik.) Hala eta guztiz ere,
+hurrengo teoreman ikusiko dugun bezala, a ⊆ p ideal lehena bada, orduan egia da
+a/b ∈ aAp izatetik a ∈ a ondorioztatzen dela.
+Aurreko teoremaren arabera, Ap-ren ideal propioak ezagutu nahi baditugu,
+nahikoa da p-ren barruan A-
+ren idealak bilatzea. Hortik dator lokalizatuaren izena
+eraztun horretarako. Hain zuzen ere, A-tik Ap-ra pasatzean p-
+tik kanpoko elementu
+guztiak unitate bihurtzen dira eta, idealei dagokienez, bakarrik du garrantzia p-
+ren barruan gertatzen denak: eraztunaren estudioa p-
+ren barruan lokalizatu egiten
+dugu.
+Orain honako galdera hau azaltzen zaigu: aAp idealak dira, a ⊆ p izanik, Ap-ren
+ideal propio guztiak bai, baina ba al dira desberdinak A-
+ren ideal desberdinetatik
+abiatzen bagara? Erraz ikus dezakegu hori ez dela horrela. Adibidez, (2) eta 
+(6)
+Z-ren idealak (2) ideal lehenaren barruan daude eta desberdinak dira, baina Z
+(2)-n
+sortzen dituzten idealak berdinak dira, 6 = 2 · 3 delako eta 3-a Z(2)-
+ren unitatea
+delako. Oro har, 2Z(2) = 2 · 3
+n
+Z(2) berdintza dugu n ≥ 0 guztietarako. Hala ere,
+ondorengo teoreman ikusten dugun bezala, problema hori desagertu egiten da p-
+ren
+barruan ideal lehenetara mugatzen bagara. Teorema horren froga ez dugu hemen
+azalduko.
+1.53. Teorema. Izan bitez A eraztuna eta p A-ren ideal lehena. Orduan:
+(i) q A-ren ideal lehena bada, q ⊆ p izanik, orduan a/b ∈ qAp dugu baldin eta
+soilik baldin a ∈ q bada.
+(ii) Badugu bikjekzio bat
+{q | q A-ren ideal lehena eta q ⊆ p}
+−→
+{Ap-ren ideal lehenak}
+q
+−→
+q
+Ap.
+(iii) Ap lokalizatuak ideal maximal bakarra du, pAp, alegia.
+Adibidez, p ∈ Z lehena bada, Z(p) lokalizatuak bi ideal lehen baino ez ditu, 
+{0}
+eta pZ(p), eta azken hori maximala da. Antzera gertatzen da K[X](p(X))-n, p(X)
+polinomio irreduziblea bada.
+Demagun aAp Ap-ren ideal lehena dela, a ⊆ p izanik. Orduan, azken teoremak ez
+!
+dio a-k A-ren ideal lehena izan behar duenik, baizik eta badagoela b A-
+ren ideal
+lehena, halakoa non bAp = aAp baita. Adibidez, 18Z(2) = 2Z(2) ideal lehena da
+Z(2)-n, baina 18Z ez da lehena Z-n.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.6. POLINOMIOAK
+24
+Zer esan dezakegu Ap lokalizatuaren ideal erradikalei buruz? Ez da zaila frogatzen,
+!
+a
+A-ren ideal erradikala izanez gero, aAp Ap-ren ideal erradikala dela. Gainera,
+modu horretan Ap-ren ideal erradikal guztiak lor daitezke. Hala ere, p-
+ren barruan
+dauden bi ideal erradikal desberdinek Ap-ren ideal bera eman diezagukete: 2Z
+(2) =
+6Z(2) dugu, nahiz eta 2Z = 6Z izan.
+1.6. Polinomioak
+Orain arte polinomioen eraztunak behin baino gehiagotan agertu bazaizkigu
+ere, gehienbat koeﬁzienteak gorputz batean izanik, atal honetan polinomioen teo-
+riaren garapen sistematikoago bat egingo dugu, oinarrizko kontzeptu guztiak deﬁ-
+nituz.
+1.54. Deﬁnizioa. Izan bitez A eraztuna eta X1, . . . , Xn indeterminatuak.
+(i) Monomio bat X
+i1
+1 . . . X
+in
+n
+moduko adierazpen bat da, ij ≥ 0 zenbaki osoak
+izanik. (Hor, ij berretzaile guztiak 0 badira, monomioa 1 dela ulertzen da.)
+Monomioaren maila osoa i1 + · · · + in batura da eta Xj-rekiko maila ij
+berretzailea da.
+(ii) Polinomio bat A-ren gainean, monomio kopuru ﬁnitu baten konbinazio lineal
+bat da, koeﬁzienteak A-n izanik. Baldin eta f polinomioak X1, . . . , Xn in-
+determinatuak erabiltzen baditu, askotan f (X1, . . . , Xn) idatziko dugu hori
+adierazteko. Deﬁnizioaren arabera, hau da polinomio orokor baten itxura:
+f (X1, . . . , Xn) =
+i1,...,in≥0
+ai
+1 ,...,in X
+i1
+1 . . . X
+in
+n ,
+ai
+1 ,...,in
+∈ A koeﬁzienteen artean bakarrik kopuru ﬁnitu bat izanik zeroren
+desberdina.
+(iii) f polinomioa ez bada 0, orduan f -
+ren maila osoa, deg f ikurraren bidez adie-
+raziko duguna, koeﬁziente ez-nulua duten monomioen maila osorik handiena
+da. Koeﬁziente guztiak zero badira, hau da, 0 polinomio konstantearen ka-
+suan, honela deﬁnitzen dugu maila osoa: deg 0 = −∞. Antzera deﬁnitzen
+da f -ren maila Xj indeterminatuarekiko, degX
+j
+f .
+(iv) A[X1, . . . , Xn] koeﬁzienteak A-
+n dituzten eta X1, . . . , Xn indeterminatuak
+erabiltzen dituzten polinomio guztien multzoa da.
+Adibidez, f (X, Y ) = X3+X2Y 2+Y 3 polinomioaren kasuan, deg
+X f = degY f =
+3 eta deg f = 4 dugu.
+Era natural batean, A[X1, . . . , Xn] polinomioen multzoari eraztun-
+egitura eman
+diezaiokegu, bi eragiketa hauek kontuan hartuz:
+(i) Batuketa: Bi polinomioren batura lortzeko, batu monomio bakoitzaren koe-
+ﬁzienteak bi polinomioetan.
+(ii) Biderketa: Bi monomio biderkatzeko berretzaileak batzen ditugu, hau da,
+X
+i1
+1 . . . X
+in
+n
+· X
+j1
+1 . . . X
+jn
+n
+= X
+i1+j1
+1
+. . . X
+in+jn
+n
+,
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.6. POLINOMIOAK
+25
+eta horretan oinarrituz bi polinomioren biderkadura deﬁnitzen dugu, pro-
+pietate banakorra bete dadin eskatuz.
+Ohartu A[X1, . . . , Xn] eta A[X1, . . . , Xn−1]
+[Xn] eraztunak identiﬁka daitezkee-
+la. Adibidez K[X, Y ] eraztuna, komenigarria bada, K[X][Y ] edo K[Y ][X] gisa
+ikus dezakegu. Hiru ikuspuntu horien arteko diferentzia indeterminatu bakoitza-
+ri ematen diogun garrantzian datza. Lehenengo aukeran, K[X, Y ]-ren kasuan, X
+eta Y indeterminatuak berdin ikusten ditugu; K[X][Y ]-ren kasuan, berriz, Y in-
+determinatuari ematen diogu rol nagusia eta X konstantetzat hartzen dugu; eta
+K[Y ][X]-ren kasuan, alderantziz egiten dugu.
+Hurrengo teoremaren froga berehalakoa da.
+1.55.
+Teorema. Izan bitez A eraztuna eta f, g ∈ A[X1, . . . , Xn] bi polinomio.
+Orduan:
+(i) deg(f + g) ≤ max{deg f, deg g} dugu eta, gainera, deg f eta deg g desberdi-
+nak badira, berdintza dugu.
+(ii) deg(f g) ≤ deg f + deg g dugu eta, gainera, A I.D. bada, orduan berdintza
+dugu.
+Emaitza berak betetzen dira deg
+Xj erabiltzen badugu deg maila osoaren ordez.
+A ez bada I.D., ezin da beti ziurtatu deg
+(f g) = deg f +deg g izango denik. Izan ere,
+!
+A I.D. ez izateagatik, badaude ab = 0 betetzen duten bi elementu ez-nulu, a eta
+b. Orain, hartzen baditugu f eta g bi polinomio A[X]-n, f -
+ren koeﬁziente nagusia
+a eta g-rena b izanik, orduan deg(f g) < deg f + deg g dugu. Adibidez, f (X) =
+g(X) = 2X har ditzakegu Z/4Z[X]-n. Kasu horretan bi polinomioen biderkadura
+0 da, polinomioak 0 izan gabe; horrek erakusten du, bide batez, Z/4Z[X] ez dela
+I.D.
+Baldin badakigu A eraztuna zein motatakoa den, zer esan dezakegu A
+[X1, . . . , Xn]
+eraztunari buruz? Honako propietate hauek ditugu:
+(i) A I.D. bada, orduan A[X1, . . . , Xn] ere I.D. da.
+(ii) A F.B.D. bada, orduan A[X1, . . . , Xn] ere F.B.D. da. 
+(Hau 1.34 teoremaren
+ondorioa da.)
+(iii) A I.N.D. bada, A[X]-k ez du zertan I.N.D. izan: hartu adibidez A = Z edo
+K[Y ].
+(iv) K gorputza bada, K[X] ez da gorputza, bere unitateak konstante ez-nuluak
+baino ez baitira. Hala ere, K[X]-ko zatiketaren algoritmoari esker, K[X]
+I.N.D. dela frogatu daiteke. Zehazkiago, a = {0} K[X]-ren ideala bada,
+orduan a-ren sortzaile bat lortzeko nahikoa da maila txikieneko polinomio
+ez-nulu bat hartzea a-ren barruan.
+Ondoren, polinomioen eraztun baten unitateak zein diren determinatzen dugu,
+koeﬁzienteak integritate-domeinu baten gainean badaude.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.6. POLINOMIOAK
+26
+1.56. Teorema. Izan bedi A I.D. Orduan, A[X1, . . . , Xn]-ren unitateak A-
+ren uni-
+tateekin bat datoz. Bereziki, K gorputza bada, orduan K[X1, . . . , Xn]-
+ren unitateak
+konstante ez-nuluak dira.
+Froga. Hori biderkaduraren maila mailen batura izateagatik gertatzen da. Izan
+ere, f, g ∈ A[X1, . . . , Xn] eta f g = 1 bada, orduan deg f + deg g = deg
+(f g) =
+deg 1 = 0 eta, halabeharrez, deg f = deg g = 0 izan behar du. Beraz, f g = 1
+betetzen bada, orduan f eta g konstanteak dira, hau da, A-n daude. Horrek esan
+nahi du A[X1, . . . , Xn]-ren unitateak A-ren unitateak direla.
+Aurreko teorema ez da betetzen A eraztun guztietarako. Adibidez, A = Z/4Z
+!
+bada, orduan (2X + 1)2 = 4X2 + 4X + 1 = 1 dugu eta, ondorioz, 2X + 1 unitatea
+da Z/4Z[X]-n. Hala ere, horrek ez gaitu kezkatu behar, guk erabiliko ditugun
+polinomio guztiek koeﬁzienteak integritate-domeinu batean izango baitituzte.
+Polinomioen eraztunen propietate garrantzitsuenetako bat Hilbert-en oinarria-
+ren teorema da. Horren enuntziatua emateko, Noether-en eraztunaren kontzeptua
+behar dugu.
+1.57. Deﬁnizioa. Izan bedi A eraztuna. Orduan, A Noether-en eraztuna dela
+esaten dugu A-ren ideal guztiak ﬁnituki sortuak badira, hau da, elementu kopuru
+ﬁnitu baten bidez sor badaitezke.
+Adibidez, ideal nagusietako domeinuak (bereziki, gorputzak) Noetherren eraz-
+tunak dira. Oso emaitza garrantzitsua da Noetherren eraztunak kate-baldintza
+baten bidez karakteriza daitezkeela.
+1.58. Teorema. Izan bedi A eraztuna. Orduan, baliokideak dira:
+(i) A Noetherren eraztuna da.
+(ii) Ezin da eraiki A-
+ren idealen kate hertsiki gorakor inﬁniturik. Bestela esanda,
+a1 ⊆ a2 ⊆ · · · ⊆ ai ⊆ · · ·
+A-ren idealen kate gorakor inﬁnitu bat bada, orduan gelditzen da, hau da,
+existitzen da m ∈ N, non ai = am baita i ≥ m guztietarako.
+1.59. Teorema (Hilberten oinarriaren teorema). Izan bedi A Noetherren eraztuna.
+Orduan, A[X] ere Noetherren eraztuna da.
+1.60. Korolarioa. Izan bitez K gorputza eta n ∈ N. Orduan, K[X1, . . . , Xn]-
+ren
+ideal guztiak ﬁnituki sortuak dira.
+Geometria aljebraikoko ikastaro honetan, askotan ebatzi beharko dugu hona-
+ko problema hau: K[X1, . . . , Xn]-
+ren a ideal bat emanda, erabakitzea ideal lehena
+den edo ez. Teorian behintzat, kasurik errazena da a = 
+(f ) ideal nagusia denean.
+Orduan, 1.47 teoremaren arabera, f polinomioaren irreduzibilitatea aztertu behar
+dugu. Orain arte, irreduzibilitaterako ezagutzen ditugun irizpide guztiek f ∈ K
+[X]
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.6. POLINOMIOAK
+27
+polinomio baterako balio dute, hau da, gorputz baten gainean eta indeterminatu ba-
+kar baten kasurako, baina oraingo honetan f ∈ K
+[X1, . . . , Xn] dugu. Irtenbide bat
+indeterminatuetako bati rol nagusia ematea izan daiteke, adibidez Xn-ri. Horrek
+esan nahi du K[X1, . . . , Xn] eraztuna K[X1, . . . , Xn−1]
+[Xn] gisa ikusten ari gare-
+la, hau da, Xn balitz bezala indeterminatu bakarra eta polinomioen koeﬁzienteak
+K[X1, . . . , Xn−1]-eko polinomioak balira bezala. Bestela esanda, f ∈ A
+[X] idatz
+dezakegu, X = Xn eta A = K
+[X1, . . . , Xn−1] izanik. Baina orain konturatzen gara
+A ez dela gorputza eta ez dakigula K[X]-n ezagutzen genituen metodoek A[X]-n
+ere balio izango duten. Edonola ere, A F.B.D. denez, “eraztun ona” dela pentsa
+dezakegu, eta beharbada A[X]-
+n irreduzibilitatearen azterketa ez dela oso desber-
+dina izango, K[X]-ren kasuarekin alderatuta. Horregatik guztiagatik, ondorengo
+problema orokor hau estudiatuko dugu atal honetako gainerako zatian.
+1.61. Problema. A F.B.D. bada, zein puntutaraino balio dute A[X]-n gorputz
+baten gaineko koeﬁzienteen kasuan ezagutzen ditugun irreduzibilitaterako irizpi-
+deek?
+Lehenengo eta behin, gogora ditzagun oinarrizko emaitza batzuk, koeﬁzienteak
+gorputz batean daudenean balio dutenak. Izan bitez K gorputza eta f ∈ K[X].
+Orduan:
+(P1) deg f = 1 bada, f irreduziblea da K[X]-n.
+(P2) deg f ≥ 2 bada eta f -k erro bat badu K-n, f ez da irreduziblea K[X]-n.
+(P3) deg f = 2 edo 3 bada eta f -k ez badu errorik K-n, f irreduziblea da K[X]-
+n.
+Ikus dezagun, adibide batzuen bitartez, zer gertatzen den gorputz baten ordez
+faktorizazio bakarreko domeinu bat jarriz gero.
+1.62. Adibideak. 1) f (X) = 2X+2 ez da irreduziblea Z[X]-n, lehenengo mailakoa
+den arren. Izan ere, f (X) = 2(X + 1) dugu, eta ez 2 ez X + 1 ez dira unitateak
+Z[X]-n. Jakina, faktorizazio horrek ez du gezurtatzen f (X)-
+ren irreduzibilitatea
+Q-ren gainean,
+∗ 2-a unitatea baita Q[X]-n.
+2) Izan bedi f (X, Y ) = XY + Y ∈ K[X, Y ]. Ikusten badugu K[X, Y ] eraztuna
+K[Y ][X] gisa, hau da, polinomioak X-rekiko bakarrik ikusiz, orduan f lehenengo
+mailakoa da, baina ez da irreduziblea. Izan ere, f (X, Y ) = Y 
+(X + 1) dugu eta Y
+ez da unitatea K[Y ][X]-n. Hala ere, f (X, Y ) irreduziblea da K[Y ][X]-
+ren ordez
+K(Y )[X] erabiltzen badugu. Kasu horretan, koeﬁzienteak K(Y ) gorputzean har-
+tzen ditugu, eta horretan Y unitatea da. Beraz, f (X, Y ) = Y 
+(X + 1) faktorizazioa
+ez dugu kontuan hartu behar beste kasu horretan, faktoreetako bat unitatea baita.
+Aurreko adibideek erakusten duten bezala, (P1) propietatea ez da betetzen A
+F.B.D. bada. Gainera, K A-ren zatikien gorputza bada, orduan f (X) ∈ A[X]
+polinomio batek portaera desberdinak izan ditzake A[X]-n eta K[X]-n irreduzibi-
+litateari dagokionez. Garbi dago nondik datorren diferentzia hori: f -k A-
+n dagoen
+∗Oharra terminologiaren aldetik: f A[X]-
+n irreduziblea dela adierazteko beste modu bat
+f A-
+ren gainean irreduziblea dela esatea da. Ez nahasi bi aukera horiek eta ez esan mesedez
+polinomio bat A[X]-ren gainean edo A-n irreduziblea denik.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.6. POLINOMIOAK
+28
+faktore konstante bat izan dezake, A-n unitatea ez dena, baina jakina K-
+n unitatea
+izango dena edonola ere.
+Azter dezagun orain zer gertatzen den (P2) propietatearekin. Demagun f ∈
+A[X] polinomioak a erroa duela A-n. Zatiketaren algoritmoa erabiltzen badugu
+f (X) X − a-z zatitzeko, orduan f (X) = q(X)
+(X − a) + r lortzen dugu, r konstantea
+izanik. Berdintza horretan X = a ordezkapena eginez, r = f 
+(a) = 0 lortzen dugu.
+Beraz, f (X) = q(X)(X − a) dugu eta f ez da irreduziblea. Horrek erakusten du
+(P2) propietatea edozein eraztunen gainean balio duela (ez dugu behar A F.B.D.
+ezta I.D. izaterik).
+Zatiketaren algoritmoak, berez, K[X]-n funtzionatzen du, K gorputza izanik. A
+!
+ez bada gorputza ezin dira zatiketa guztiak A[X]-
+n egin, baina batzuk bai, zehaz-
+kiago f (X) g(X)-z zatitu dezakegu g-ren koeﬁziente nagusia A-ren unitatea ba-
+da. Horren zergatia ikusteko, bakarrik gogoratu behar dugu zein prozedura era-
+biltzen den zatiketaren algoritmoan gorputz baten gainean: zatitu nahi badugu
+f (X) = anX
+n + · · · + a0 polinomioa g(X) = bmXm + · · · + b0 beste polinomio ba-
+tez, orduan anb
+−1
+m X
+n−m monomioaz biderkatzen dugu g(X) eta lortutako emaitza
+f (X)-ri kentzen diogu. Gero kendurarekin errepikatzen dugu prozedura. Ikusten
+dugunez, bm-
+ren alderantzizkoa behar dugu eta, horregatik, zatiketaren algoritmoa
+aplikatu ahal izango dugu gorputza ez den beste eraztun baten gainean, g-
+ren koeﬁ-
+ziente nagusia unitatea den bitartean. Bereziki, f 
+(X) edozein polinomio beti zatitu
+daiteke X − a moduko polinomio batez eta, beraz, aurreko paragrafoan egindako
+zatiketa ondo justiﬁkaturik dago. Baina, adibidez, Z[X]-n ezin da X
+3 + 1 2X + 1-ez
+zatitu, 2-a ez bada unitatea Z-n. Oraindik ere, zatiketa Q[X]-ren barruan egin
+dezakegu baina, orduan, zatidura eta hondarra Q[X]-
+n egongo dira eta ez derrigo-
+rrean Z[X]-n. Era berean, K[X, Y ] = K[Y ][X] hartuz, ezin da X
+3 +Y 3 Y X2 +Y 2-z
+zatitu, Y ez baita unitatea K[Y ]-n. Bai egin daiteke, ordea, K(Y )[X]-
+n. Ohartu,
+baita ere, badagoela X3 + Y 3 Y X2 + Y 2-z zatitzea K[X, Y ] = K[X]
+[Y ] ikusiz gero,
+kasu horretan koeﬁziente nagusia 1 delako.
+Aipa dezagun, azkenik, (P3) propietatea ere faltsua dela F.B.D. baten gainean.
+Adibidez, f (X) = 2X2 +2 = 2(X2 +1) ez da irreduziblea Z[X]-
+n, nahiz eta bigarren
+mailakoa izan eta Z-n errorik ez izan. Baina, 
+(P3) propietateagatik, f irreduziblea
+da Q[X]-n. Era berean, f (X, Y ) = Y X
+2 + Y = Y (X2 + 1) ez da irreduziblea
+R[Y ][X]-n, R(Y )[X]-n bada ere. Ohartu, X-
+rekiko polinomio gisa begiratuta, f -k
+ez duela errorik R(Y )-n (eta, beraz, are gutxiago R[Y ]-
+n). Hori egiaztatzeko, X-ren
+ordez R(Y )-ko elementu orokor bat jarri behar dugu, hau da, g(Y )/h(Y ) moduko
+zatiki bat, eta ikusi behar dugu emaitza ezin dela 0 izan. Baina
+Y
+g(Y )
+h(Y )
+2
++ Y = 0
+⇐⇒
+Y
+g(Y )2
+h(Y )2
++ 1
+= 0
+⇐⇒
+g(Y )
+2 + h(Y )2 = 0
+dugu, eta hori ezinezkoa da g-k eta h-
+k koeﬁziente errealak dituztelako eta h = 0
+delako. Berriro ere, kontradibideak unitatea ez den konstante bat erabiliz eman
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.6. POLINOMIOAK
+29
+ditugu. Ondorengo teoreman ikusiko dugunez, hori da horrelako adibideak lortzeko
+modu bakarra.
+1.63. Deﬁnizioa. Izan bitez A F.B.D. eta f ∈ A[X]. Orduan, f jatorrizkoa dela
+esango dugu bere koeﬁzienteen zatitzaile komunetako handiena 1 bada.
+1.64. Lema (Gaussen Lema). Jatorrizko polinomioen biderkadura jatorrizkoa da.
+Gaussen Lema aplikatuz, funtsezko emaitza hau frogatu daiteke, polinomio
+baten irreduzibilitatea F.B.D. baten gainean eta bere zatikien gorputzaren gainean
+erlazionatzen dituena.
+1.65. Teorema. Izan bitez A F.B.D., K A-ren zatikien gorputza eta f ∈ A[X].
+Orduan, baliokideak dira:
+(i) f irreduziblea da A[X]-n.
+(ii) f irreduziblea da K[X]-n eta jatorrizkoa da.
+Ondorioz, (P1) eta (P3) propietateak konpontzeko modua lortzen dugu.
+1.66. Korolarioa. Izan bitez A F.B.D. eta f ∈ A[X] jatorrizkoa. Orduan:
+(i) deg f = 1 bada, f irreduziblea da A[X]-n.
+(ii) deg f = 2 edo 3 bada eta f -k ez badu errorik A-ren zatikien gorputzean,
+orduan f irreduziblea da A[X]-n.
+Oso inportantea da, aurreko korolarioaren (ii) atalean, f -
+k ez duela errorik izan
+!
+behar A-ren zatikien gorputzean, eta ez bakarrik A-n. Adibidez, f 
+(X) = 4X2 − 1 ∈
+Z[X] polinomioa jatorrizkoa da eta ez du errorik Z-n, baina faktorizatu egiten
+da: f (X) = (2X + 1)(2X − 1). Arazoa da ez duela errorik Z-n, baina bai Q-
+n. Antzeko adibide bat eman dezakegu bi indeterminaturekin. Jarri f (X, Y ) =
+Y 2X2 − 1 ∈ K[Y ][X], jatorrizkoa dena. Ohartu f -k, X-
+rekiko begiratuta, ez duela
+errorik K[Y ]-n; bestela, existituko litzateke g(Y ) ∈ K[Y ] non Y 2g
+(Y )2 = 1 den,
+eta hori ezinezkoa da. Hala ere, f (X, Y ) = (Y X + 1)
+(Y X − 1) faktorizatu egiten
+da. Problema dator f -k K(Y )-n erroak dituelako, ±1/Y alegia.
+Ondoren datozen bi emaitzak ezagunak ditugu dagoeneko Z-ren gainean, baina
+kasu horretan ez ezik, faktorizazio bakarreko domeinu guztietarako ere balio dute.
+1.67. Teorema. Izan bitez A F.B.D., K A-ren zatikien gorputza eta f ∈ A[X].
+Orduan:
+(i) a/b ∈ K f -ren erroa bada, orduan a-k f -ren gai askea zatitzen du eta b-k,
+berriz, f -ren koeﬁziente nagusia zatitzen du.
+(ii) f monikoa bada (hau da, f -ren koeﬁziente nagusia 1 bada), orduan f -k K-n
+dituen erro guztiak A-n daude.
+Teorema horretako (i) atalak f polinomioaren K-ren gaineko balizko erroak
+mugatu egiten ditu. Adibidez, f (X) = 4X7 + X + 1 ∈ Z[X] hartuz gero, bere erro
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.6. POLINOMIOAK
+30
+arrazional posibleak ±1, ±1/2 eta ±1/4 balioetara mugatzen ditu. Horiekin proba
+eginez, ikusten dugu ez direla f -
+ren erroak eta, horrenbestez, baiezta dezakegu f -k
+ez duela erro arrazionalik. Argudio horrek berak erakusten du nola lor ditzakegun
+f ∈ Z[X] polinomio orokor baten erro arrazional guztiak. (Beste problema bat da
+erro konplexu guztiak ematea, ez dena oro har posible.) Bestetik, 
+(ii) atala oso
+interesgarria da 1.66 korolarioaren 
+(ii) atalarekin batera erabiltzeko. Hain zuzen
+ere, bi emaitza horiek konbinaturik, honako hau lortzen dugu.
+1.68. Korolarioa. Izan bitez A F.B.D. eta f ∈ A[X] monikoa, deg f = 2 edo 3
+izanik. Orduan, f -k ez badu errorik A-n, irreduziblea da A-ren gainean.
+Ondorengo teorema honek polinomio berezi batzuen irreduzibilitatea ziurtatzen
+du F.B.D. baten gainean.
+1.69. Teorema (Eisenstein-en irizpidea). Izan bitez A F.B.D. eta f (X) = anX
+n +
+· · · + a0 ∈ A
+[X]. Demagun badagoela p ∈ A irreduziblea, baldintza hauek betetzen
+dituena:
+(i) p | a0, p
+2
+a0.
+(ii) p | a1, . . . , p | ar−1, p ar, non r ≤ n baita.
+Orduan, A-ren gaineko f -ren faktorizazioan badago r maila edo handiagoa duen
+faktore irreduzible bat.
+Bereziki, r = n bada eta f jatorrizkoa bada, orduan f
+irreduziblea da A[X]-n.
+Eisensteinen irizpidea aplikatzean, kontuan izan ohar sinple hau: edozein ele-
+mentuk 0 zatitzen duenez, konprobatzen dugunean p irreduzibleak polinomioaren
+zein koeﬁziente zatitzen dituen, bakarrik erreparatu behar diegu 0 ez diren koeﬁ-
+zienteei (hau da, polinomioa idaztean agertzen diren koeﬁzienteei).
+1.70. Adibideak. 1) Izan bedi f (X) = X4 + 2X3 + 4X + 2 ∈ Z[X]. Eisenstei-
+nen irizpidea erabiltzen badugu, p = 2 hartuta, f Z-
+ren gainean irreduziblea dela
+ondorioztatzen dugu. Ez da gauza bera gertatzen g(X) = 3X5 + 6X2 + 12X + 30
+polinomioarekin, nahiz eta p = 2 zenbaki lehenarekin Eisensteinen irizpidearen
+baldintza guztiak bete. Baiezta dezakegu g-k Z[X]-n bosgarren mailako faktore
+irreduzible bat duela, baina horrek ez du esan nahi g Z-
+ren gainean irreduziblea
+denik, g ez baita jatorrizkoa. Izan ere, g(X) = 3(X5 + 2X2 + 4X + 10) da g-
+ren fak-
+torizazioa Z-ren gainean 
+(ohartu bosgarren mailako faktorea dugula, Eisensteinen
+irizpideak ziurtatzen duen bezala). Bestalde, g irreduziblea da Q-ren gainean.
+2) Izan bedi f (X, Y ) = X5Y + X5 + Y 5 + Y ∈ K[X, Y ]. Polinomio hori X-
+rekiko ikusten badugu, hau da, koeﬁzienteak K[Y ]-n hartuz, orduan f (X, Y ) =
+(Y + 1)X5 + Y 5 + Y ∈ K[Y ][X] idazten dugu. Eisensteinen irizpidea aplikatu
+nahi badugu, Y 5 + Y gai askearen zatitzaile irreduzible bat behar dugu 
+(irredu-
+ziblea K[Y ]-
+n, jakina), karratura jasorik Y 5 + Y zatitzen ez duena. Aukera bat
+Y indeterminatua bera hartzea da. Orduan, f -k K[Y ][X] = K[X, Y ]-n X-rekiko
+bosgarren mailakoa den faktore irreduzible bat duela ondorioztatzen dugu. Hori
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.6. POLINOMIOAK
+31
+dela eta, f K[X, Y ]-n irreduziblea den edo ez jakiteko, K[Y ][X]-
+n jatorrizkoa den
+aztertu behar dugu. Horretarako, zkh
+(Y + 1, Y 5 + Y ) kalkulatu behar dugu. Hori
+Y + 1 izango da Y + 1-ek g
+(Y ) = Y 5 + Y zatitzen badu, eta 1 bestela. Badakigunez,
+Y + 1-ek g(Y ) zatitzen du baldin eta soilik baldin g
+(−1) = 0 bada. Kasu honetan
+g(−1) = −2 denez,
+g(−1) = 0,
+char K = 2 bada;
+g(−1) = 0,
+char K = 2 bada.
+Ondorioz,
+zkh(Y + 1, Y
+5 + Y ) =
+Y + 1,
+char K = 2 bada;
+1,
+char K = 2 bada.
+Horrela, bi kasu hauek ditugu:
+(i) char K = 2 bada, f jatorrizkoa da K[Y ][X]-n eta, hortaz, irreduziblea
+K[X, Y ]-n.
+(ii) char K = 2 bada, orduan f ez da jatorrizkoa K[Y ][X]-n eta, beraz, ez da
+irreduziblea K[X, Y ]-n. Kasu honetan Y 5 + Y = Y (Y 4 + 1) = Y (Y + 1)4
+dugu eta honako hau da f -ren faktorizazioa K[X, Y ]-ren irreduzibleetan:
+f (X, Y ) = (Y + 1)(X
+5 + Y (Y + 1)3).
+3) Azter dezagun f (X) = X4 − X3 + 2X + 2 polinomioaren irreduzibilitatea
+Z-ren gainean. Eisensteinen irizpidea aplikatzen badugu p = 2 hartuta, badakigu
+f -k hirugarren mailako edo maila altuagoko faktore irreduzible bat duela Z[X]-
+n.
+Bestalde, f jatorrizkoa denez, ez du faktore konstanterik 
+(unitateez aparte). Beraz,
+bi aukera baino ez daude:
+(i) f (X) irreduziblea da Z-ren gainean.
+(ii) f (X) = g(X)h(X), non g(X), h(X) ∈ Z[X], deg g = 1 eta deg h = 3 baita.
+Azken kasua beteko balitz, f -k Q-
+n erro bat izango luke. Orain, 1.67 teoremaren
+arabera, f -k Q-
+n izan ditzakeen erro bakarrak ±1 eta ±2 dira. Horiekin probatuz,
+ikusten dugu ez direla f -ren erroak eta, horrenbestez, f Z-
+ren gainean irreduziblea
+dela ondorioztatzen dugu.
+Beste batzuetan, A-ren gaineko irreduzibilitatea lortzeko, koeﬁzienteak A-ren
+zatidura batera pasatzen ditugu, hurrengo teorema hau erabiliz.
+1.71. Teorema (Koeﬁzienteen laburketa ideal batekiko). Izan bitez A F.B.D. eta
+a
+A-ren ideala. Baldin eta f (X) = anX
+n + · · · + a0 ∈ A[X] bada, idatz dezagun
+f (X) = anX
+n + · · · + a0 ∈ A/a[X]. Demagun bi baldintza hauek betetzen direla:
+(i) f jatorrizkoa da.
+(ii) deg f = deg f .
+Orduan, f irreduzible bada A/a[X]-n, halabeharrez f irreduziblea da A[X]-n.
+Oro har, teorema hori m ideal maximal batekin erabiliko dugu, orduan A/m
+gorputza baita eta, beraz, A-
+ren gainean irreduzibilitatea aztertzeko, gorputz baten
+gaineko kasura pasa gaitezke.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.6. POLINOMIOAK
+32
+1.72. Oharra. Azken teoremaren baldintzak beharrezkoak dira, erraz ikus deza-
+kegun bezala. Adibideak A = Z eta a = 2Z hartuz emango ditugu. Alde batetik,
+f (X) = 3X + 3 ez da irreduziblea Z[X]-n, nahiz eta f (X) = X + 1 ∈ Z/2Z
+[X] irre-
+duziblea den eta deg f = deg f den. Beraz, polinomioa jatorrizkoa izateko baldintza
+ezinbestekoa da. Bestetik, g(X) = 2X2 + X polinomio jatorrizkoa ez da irredu-
+ziblea Z[X]-n, nahiz eta g(X) = X irreduziblea den Z/2Z[X]-n. Kasu horretan,
+arazoa da deg g < deg g dugula.
+1.73. Adibidea. Izan bedi f (X) = X4 − X + 1 ∈ Z[X]. Polinomio hori modulo
+2 laburtzen badugu, orduan f (X) = X4 + X + 1 ∈ F2[X] lortzen dugu. Azken
+polinomio hori irreduziblea da F2 gorputzaren gainean. Izan ere, f -
+k ez du errorik
+F2 = 
+{0, 1} multzoan eta, ondorioz, faktorizatuko balitz, bigarren mailako bi irre-
+duzibleren biderkadura litzateke. Orain, erraz ikusten da F2[X]-
+n bigarren mailako
+irreduzible bakarra dagoela, X2 + X + 1 alegia. Beraz, f faktorizatuko balitz,
+f (X) = (X
+2 + X + 1)2 = X4 + X2 + 1
+izango genuke, eta hori ez da egia. Horrela, f irreduziblea da, eta 1.71 teoremaren
+baldintzak betetzen direnez, f irreduziblea da Z-ren gainean.
+Hurrengo atalean, polinomioen eraztunen arteko isomorﬁsmoak lortzeko meto-
+doak hobeto ezagutzen ditugunean, 1.71 teorema indeterminatu bat baino gehiago-
+ko polinomioei ere aplikatuko diegu.
+Polinomioen irreduzibilitateari eskainitako zati hau bukatzeko, emaitza negati-
+bo bat emango dugu, polinomio berezi batzuk beti faktorizatzen direla ziurtatzen
+baitu. Enuntziatua eman baino lehen, polinomio homogeneoak deﬁnitu behar di-
+tugu. Polinomio horiek oso rol garrantzitsua izango dute, geometria aljebraikoa
+espazio proiektiboaren gainean garatu nahi dugunean.
+1.74. Deﬁnizioa. Polinomio bat homogeneoa dela diogu bere monomio guztien
+maila osoa berdina bada.
+Adibidez, f (X, Y ) = X2 + 3XY + 2Y 2 homogeneoa da eta g(X, Y ) = X2 +
+3X2Y 2 + 2Y 2 ez da homogeneoa. Ikus dezagun f 
+(X, Y ) faktore linealetan deskon-
+posatzen dela. Izan ere,
+f (X, Y ) = X
+2 + 3XY + 2Y 2 = Y 2
+X
+Y
+2
++ 3
+X
+Y
++ 2
+= Y
+2h
+X
+Y
+dugu, h(T ) = T 2 + 3T + 2 izanik. (Ohartu h(T ) = f (T, 1) dela.) Orain, h
+(T ) poli-
+nomioak T = −1 eta T = −2 erroak dituenez, h(T ) = (T + 1)(T + 2) faktorizazioa
+dugu. Beraz,
+f (X, Y ) = Y
+2
+X
+Y
++ 1
+X
+Y
++ 2
+= (X + Y )(X + 2Y )
+deskonposizioa lortzen dugu. Era berean argudiatuz, ondorengo teorema frogatu
+daiteke. Gogoratu h(T ) ∈ K[T ] polinomio bat K-
+ren gainean banatzen dela esaten
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.6. POLINOMIOAK
+33
+dugula faktore linealen biderkadura gisa deskonposatzen bada. Bestela esanda,
+deg h = n bada, h K-ren gainean banatzen da baldin eta soilik baldin h-k n erro
+baditu K gorputzean, erro bakoitza bere anizkoiztasuna beste aldiz kontatuz gero.
+1.75. Teorema. Izan bedi f (X, Y ) ∈ K[X, Y ] polinomio homogeneoa eta jarri
+h(T ) = f (T, 1) ∈ K[T ]. Orduan:
+(i) f (X, Y ) K-ren gainean faktorizatzen da baldin eta soilik baldin h(T ) K-
+ren
+gainean faktorizatzen bada.
+(ii) f (X, Y ) faktore linealen biderkadura gisa deskonposatzen da K-
+ren gainean
+baldin eta soilik baldin h(T ) K-ren gainean banatzen bada. Hala bada, eta
+h-ren erroak K-n λ1, . . . , λn badira 
+(bakoitza bere anizkoiztasuna beste aldiz
+errepikaturik), orduan
+f (X, Y ) = (X − λ1Y ) . . . (X − λnY )
+dugu. (Ohartu faktore guztiak homogeneoak direla.)
+Teorema hori ez da egiazkoa polinomioek hiru edo indeterminatu gehiago erabiltzen
+!
+badituzte. Adibidez, char K = 2 bada, f 
+(X, Y, Z) = X2 + Y 2 + Z2 irreduziblea da
+(1.11 ariketan ikusiko dugu hori) eta, beraz, ezin da faktore linealetan deskonposatu.
+Gogoratu K gorputza aljebraikoki itxia dela polinomio ez-konstante guztiek
+erroren bat badute K-n. Horren ondorioz, K[X]-ko polinomio guztiak faktore li-
+nealetan deskonposatzen dira (hau da, K-
+ren gainean banatzen dira) eta lehenengo
+mailako polinomioak dira K[X]-ko irreduzible bakarrak.
+Aljebraren Oinarrizko
+Teorema delakoak baieztatzen du C, zenbaki konplexuen gorputza, aljebraikoki
+itxia dela.
+1.76. Korolarioa. K gorputz aljebraikoki itxia bada, orduan K[X, Y ]-ko polino-
+mio homogeneo guztiak faktore linealetan deskonposatzen dira, horiek ere homoge-
+neoak izanik.
+Emaitza hori ez da betetzen polinomioa ez bada homogeneoa. Adibidez, f 
+(X, Y ) =
+!
+X3 + Y 2 + 1 irreduziblea da K[X, Y ]-
+n, K edozein gorputz izanik, eta beraz ezin
+da faktore linealetan deskonposatu.
+Nola faktorizatzen da Xn − Y n polinomio homogeneoa? Ikusita 1.75 teoremako
+emaitza, erantzuna h(T ) = T n − 1 polinomioaren deskonposizioak emango digu.
+Polinomio horren erroak, hau da, ζn = 1 betetzen duten ζ elementuak, unitatearen
+n. erroak dira. Erraz egiazta daiteke unitatearen erroek talde bat osatzen dutela
+biderketarekiko. Talde hori, ﬁnitua denez, ziklikoa da. 
+(Oro har, K gorputza bada,
+K×-ren azpitalde ﬁnitu guztiak ziklikoak dira.) Horrek esan nahi du unitatearen
+erro guztiak erro bakar baten berretura gisa jar daitezkeela.
+Oro har, ez dago garbi unitatearen zenbat n. erro izango dituen gorputz batek.
+Adibidez, R-
+k unitatearen bi erro karratu ditu, 1 eta −1, baina unitatearen erro
+kubiko bakarra, 1 erro tribiala. Orokorkiago, n bikoitia bada, R-
+k unitatearen bi n.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.6. POLINOMIOAK
+34
+erro ditu eta, n bakoitia bada, bakar bat. Bestalde, K gorputzaren karakteristika p
+zenbaki lehena bada, orduan n = pm p-ren berretura bada, K-n dagoen unitatearen
+n. erro bakarra 1 da,
+T
+n − 1 = T p
+m
+− 1 = (T − 1)p
+m
+baitugu.
+Unitatearen erro ez-tribialak egotea ziurtatu nahi badugu, K gorputza alje-
+braikoki itxia har dezakegu, eta horrela egingo dugu hemendik aurrera. Orduan,
+unitatearen n erro daude K-n, anizkoiztasunak kontuan hartuz gero. Horrez gain
+char K
+n baldintza badugu (adibidez, char K = 0 bada), orduan erro horiek guz-
+tiak desberdinak dira. Kasu horretan, ζ unitatearen n. erroen taldearen sortzailea
+bada, ζ unitatearen jatorrizko n. erroa dela esaten dugu.∗ Orduan, unitatearen
+erro guztiak 1, ζ, . . . , ζn−1 dira eta
+T
+n − 1 = (T − 1)(T − ζ) . . . (T − ζn−1)
+dugu. Beraz, 1.75 teoremaren arabera, honako hau da Xn − Y n polinomioaren
+faktorizazioa:
+X
+n − Y n = (X − Y )(X − ζY ) . . . (X − ζn−1Y ).
+Hori da faktorizazioa, adibidez, C-ren gainean. Kasu horretan,
+ζ = e
+2πi/n = cos
+2π
+n
++ i sin
+2π
+n
+unitatearen jatorrizko n. erroa har dezakegu. Adibidez, ω = −1/2 + i
+√
+3/2 unita-
+tearen jatorrizko erro kubikoa da eta i, jatorrizko laugarren erroa. Ondorioz,
+X
+3 − Y 3 = (X − Y )(X − ωY )(X − ω2Y )
+= (X − Y )
+X −
+−
+1
+2
++ i
+√
+3
+2
+Y
+X −
+−
+1
+2
+− i
+√
+3
+2
+Y
+eta
+X
+4 − Y 4 = (X − Y )(X + Y )(X − iY )(X + iY )
+faktorizazioak ditugu C-ren gainean.
+Zer gertatzen da K aljebraikoki itxia eta char K | n bada? Orduan, hala-
+beharrez, char K = p zenbaki lehena da. Idatz dezagun n = mpt, p
+m izanik.
+Orduan,
+T
+n − 1 = T mp
+t
+− 1 = (T m − 1)p
+t
+dugu. Kontuan izanik K-ren karakteristikak ez duela m zatitzen, orduan aurreko
+atalaren arabera, K-
+k badu unitatearen jatorrizko m. erro bat, dei diezaiogun ζ,
+eta hori erabiliz, badakigu nola faktorizatzen den T m − 1 polinomioa. Beraz, kasu
+horretan,
+T
+n − 1 = (T − 1)p
+t
+(T − ζ)
+p
+t
+. . . (T − ζ
+m−1)p
+t
+∗K gorputza aljebraikoki itxia bada eta char K n bada, K-k unitatearen ϕ
+(n) jatorrizko n.
+erro ditu, n ordenako talde zikliko batek ϕ(n) sortzaile baititu. Hor ϕ
+(n) Eulerren funtzioa da.
+Zehazkiago, ζ jatorrizko n. erroa bada, orduan gainerako jatorrizko erro guztiak ζk modukoak
+dira, 1 ≤ k ≤ n eta zkh(k, n) = 1 izanik.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.7. K-ALJEBRAK
+35
+dugu eta, ondorioz,
+X
+n − Y n = (X − Y )p
+t
+(X − ζY )
+p
+t
+. . . (X − ζ
+m−1Y )p
+t
+.
+Horrela, guztiz erabakita gelditzen da Xn −Y n polinomioaren faktorizazioa gorputz
+aljebraikoki itxi baten gainean.
+1.7. K-aljebrak
+Atal honetan zehar, K gorputza izango da beti.
+1.77. Deﬁnizioa. A K-aljebra dela esaten dugu (edo aljebra K-ren gainean) aldi
+berean eraztuna eta K-espazio bektoriala bada, bi propietate hauek betez:
+(i) Eraztunaren eta espazio bektorialaren batuketak bat bera dira.
+(ii) Eraztunaren biderketa eta espazio bektorialaren eskalarrezko biderketa ba-
+teragarriak dira, honako zentzu honetan:
+λ(ab) = (λa)b = a(λb),
+λ ∈ K eta a, b ∈ A guztietarako.
+1.78. Adibideak. 1) K-aljebrarik garrantzizkoenak K[X1, . . . , Xn] polinomioen
+aljebrak dira.
+2) K(X1, . . . , Xn) funtzio arrazionalen gorputza ere K-aljebra da.
+3) K gorputza bera K-aljebra da. Oro har, K ⊆ F gorputz-hedadura bat
+badugu, orduan F K-aljebra da. Adibidez, Q(
+√
+2) Q-aljebra da eta C R-aljebra da.
+(Baina R ez da C-
+aljebra eragiketa naturalekin, zenbaki erreal bat zenbaki konplexu
+batez biderkatzean ez baitugu lortzen beti zenbaki erreal bat.)
+4) X multzoa bada, F (X, K) = {f : X → K aplikazioa} K-aljebra da. Oro-
+korkiago, A K-aljebra bada, F (X, A) K-aljebra da.
+1.79. Deﬁnizioa. Izan bedi A K-aljebra. Orduan:
+(i) B ⊆ A A-ren azpialjebra da azpieraztuna eta azpiespazioa bada aldi berean,
+hau da, propietate hauek betetzen baditu:
+1 ∈ B,
+x, y ∈ B ⇒ x + y, xy ∈ B,
+λ ∈ K, x ∈ B ⇒ λx ∈ B.
+(ii) a ⊆ A A-ren ideala da eraztunaren ideala bada eta azpiespazioa bada aldi
+berean, hau da, propietate hauek betetzen baditu:
+x, y ∈ a ⇒ x + y ∈ a,
+x ∈ a, a ∈ A ⇒ ax ∈ a,
+λ ∈ K, x ∈ a ⇒ λx ∈ a.
+Aljebra baten idealak deﬁnitzean eman dugun hirugarren baldintza ez da beha-
+rrezkoa, beste bietatik ondorioztatzen baita. Izan ere,
+λx = λ(1 · x) = (λ · 1)x ∈ a
+dugu, λ · 1 ∈ A eta x ∈ a baita. Ondorioz, aljebra baten barruan, “ideala aljebraren
+egiturarekiko” eta “ideala eraztunaren egiturarekiko” gauza bera dira. Hori dela
+eta, eraztunen idealetarako eman ditugun emaitzek (besteak beste, korresponden-
+tziaren teorema) aljebren idealetarako ere balio dute.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.7. K-ALJEBRAK
+36
+1.80. Teorema. Izan bitez A aljebra eta a A-ren ideala. Orduan, A/a = {x + a |
+x ∈ A} aljebra bat da.
+1.81. Deﬁnizioa. Izan bedi f : A −→ B aplikazioa, A eta B K-aljebrak izanik
+(biak K gorputz beraren gainean). Orduan, f aljebra-homomorﬁsmoa dela diogu
+aldi berean eraztun-homomorﬁsmoa eta aplikazio lineala bada, hau da, baldintza
+hauek betetzen baditu:
+(i) f (x + y) = f (x) + f (y) eta f (xy) = f (x)f (y), x, y ∈ A guztietarako.
+(ii) f (1) = 1.
+(iii) f (λx) = λf (x), λ ∈ K eta x ∈ A guztietarako.
+Horrez gain f bijektiboa bada, orduan f isomorﬁsmoa dela eta A eta B isomorfoak
+direla esaten dugu, eta A ∼
+= B idatziko dugu.
+Hurrengo teoreman ikusten dugunez, edozein homomorﬁsmotatik isomorﬁsmo
+bat lor daiteke.
+1.82. Teorema (Isomorﬁaren lehenengo teorema). Izan bedi f : A −→ B aljebra-
+homomorﬁsmoa. Orduan:
+(i) im f = {f (a) | a ∈ A} B-ren azpialjebra da, f -
+ren irudia deitutakoa, eta f
+supraiektiboa da baldin eta soilik baldin im f = B bada.
+(ii) ker f = {a ∈ A | f (a) = 0} A-ren ideala da, f -
+ren nukleoa deitutakoa, eta f
+injektiboa da baldin eta soilik baldin ker f = {0} bada.
+(iii) A/ ker f ∼
+= im f isomorﬁsmoa dugu, x → f (x) erregelaren bitartez.
+Zergatik dira hain interesgarriak isomorﬁsmoak? Erantzuna da bi aljebra iso-
+morfok egitura bera dutela, eta alde batean ditugun propietate aljebraikoak beste
+aldean islaturik ikusiko ditugula. Adibidez, honako emaitza hau dugu.
+1.83. Teorema. Izan bedi ϕ : A −→ B aljebra isomorﬁsmoa. Orduan:
+(i) a A-ren unitatea da baldin eta soilik baldin ϕ(a) B-ren unitatea bada.
+(ii) a A-ko elementu irreduziblea da baldin eta soilik baldin ϕ(a) B-
+ko irreduziblea
+bada.
+(iii) a A-ren ideal erradikala, lehena edo maximala da baldin eta soilik baldin
+ϕ(a) B-ren tipo bereko ideala bada.
+Isomorﬁsmoen garrantziaren beste arrazoietako bat ondorengoa da: batzuetan,
+itxuraz konplikatua den aljebra bat beste aljebra sinpleago edo ezagunago batekin
+identiﬁkatzeko erabil ditzakegu. Ikus dezagun horren adibide bat.
+1.84. Adibidea. Badakigu (X −a) K[X]-ren ideal maximala dela, X −a sortzailea
+irreduziblea baita. Ondorioz, K[X]/(X − a) gorputza da. Ikus dezagun gorputz
+hori K-ren isomorfoa dela. Horretarako, deﬁnitu honako aplikazio hau:
+ϕ
+:
+K[X]
+−→
+K
+f (X)
+−→
+f (a).
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.7. K-ALJEBRAK
+37
+Erraz ikus daiteke ϕ aljebra-homomorﬁsmoa dela. Isomorﬁaren lehenengo teorema
+aplikatzeko asmoz, azter dezagun zein diren ϕ-
+ren irudia eta nukleoa. Alde batetik,
+ϕ(λ) = ϕ(λ · 1) = λϕ(1) = λ · 1 = λ∗
+denez λ ∈ K guztietarako, im f = K dugu. Ikus dezagun orain ker ϕ = (X − a)
+dela. Lehenengo eta behin, ϕ(X − a) = 0 denez, X − a ∈ ker ϕ dugu. Kontuan
+hartuz ker ϕ K[X]-ren ideala dela, (X − a) ⊆ ker ϕ lortzen dugu. Alderantzizko
+partekotasuna frogatzeko, har dezagun f (X) ∈ ker ϕ. Orduan f (a) = 0 dugu eta,
+ondorioz, X − a polinomioak f (X) zatitzen du. (Gogoan izan hori zatiketaren
+algoritmoaren ondorioa dela.) Bestela esanda, f (X) X − a-ren multiploa da eta
+f (X) ∈ (X − a) lortzen dugu, nahi bezala. Bukatzeko, isomorﬁaren lehenengo
+teoremaren arabera K[X]/ ker ϕ ∼
+= im ϕ dugunez, isomorﬁsmo hau lortzen dugu:
+K[X]
+(X − a)
+∼
+= K.
+Ikus dezagun aurreko adibideko isomorﬁsmoaren aplikazio bat, polinomio baten
+irreduzibilitatea frogatzeko.
+1.85. Adibidea. Izan bedi f (X, Y ) = X4 + X3Y 4 + 3X3 + Y 2 + 2Y + 1. Ba al da
+lehena (f (X, Y )) ideala Q[X, Y ]-n? Hau da, ba al da irreduziblea f (X, Y ) Q
+[X, Y ]-
+n? Eman diezaiogun X-ri rol nagusia. Orduan, f (X, Y ) = X4 + (Y 4 + 3)X3 + 
+(Y +
+1)2 X-rekiko polinomio gisa idazten dugu, koeﬁzienteak Q[Y ]-n izanik. Horrela
+ikusita, polinomioa jatorrizkoa da. Ohartu f -
+ri ezin diezaiokegula Eisensteinen
+irizpidea aplikatu, 
+(Y +1)2 gai askea karratu bat delako. Saia gaitezen 1.71 teorema
+erabiltzen, f polinomioaren koeﬁzienteen laburketa 
+(Y ) idealarekiko eginez. Ohartu
+(Y ) Q[Y ]-ren (hau da, koeﬁzienteen eraztunaren) ideal lehena dela. Orduan, f
+polinomio bat lortzen dugu, X indeterminatua erabiltzen duena eta koeﬁzienteak
+Q[Y ]/(Y )-n dituena. Kontuan izanik Y = 0 dela Q[Y ]/(Y ) zatiduran,
+f (X) = X
+4 + 3X3 + 1
+dela ondorioztatzen dugu. Ikusita deg f = deg f dela, f irreduziblea bada orduan
+f ere irreduziblea dela frogaturik geldituko da. Horretarako isomorﬁsmoen indarra
+erabiltzeko aukera dugu. Aurreko adibidearen arabera, Q[Y ]/(Y ) ∼
+= Q dugu eta,
+ondorioz, Q[Y ]/(Y )[X] ∼
+= Q[X]. Horrek esan nahi du f polinomioa Q-ren gainean
+deﬁnituta balego bezala ikus dezakegula. Zehazkiago, g(X) = X4 +3X3 +1 ∈ Q[X]
+bada, orduan 1.83 teoremaren arabera, f irreduziblea da baldin eta soilik baldin g
+irreduziblea bada Q-ren gainean.
+Orain, g-ren koeﬁzienteak osoak direnez, berriro ere koeﬁzienteen laburketa
+aplikatuko dugu, oraingo honetan 2 moduluarekiko. Horrela, g(X) = X4 +X3 +1 ∈
+F2[X] polinomioa lortzen dugu. Erraz ikus dezakegu polinomio hori irreduziblea
+∗Oro har, A = {0} K-aljebra bada, orduan K · 1 = {λ · 1 | λ ∈ K} multzoa A-
+ren azpialjebra
+da, eta K-
+ren isomorfoa da λ · 1 → λ aplikazioaren bitartez. Hori dela eta, eskuarki K · 1 eta K
+identiﬁkatu egingo ditugu, eta K A-
+ren barruan dagoela ulertuko dugu. Orduan, K gorputzeko
+elementuak ﬁnko gelditzen dira ϕ : A → B edozein aljebra-
+homomorﬁsmoren bitartez: ϕ(λ) = λ
+dugu, λ ∈ K guztietarako.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.7. K-ALJEBRAK
+38
+dela, 1.73 adibidean bezala argudiatuz. Hortaz, g irreduziblea da Z-ren gainean
+eta, ondorioz, Q-ren gainean ere bai. Horregatik guztiagatik, f (X, Y ) Q
+[X, Y ]-n
+irreduziblea dela ziurta dezakegu.
+Isomorﬁaren lehenengo teoremaren arabera, homomorﬁsmo batetik isomorﬁs-
+mo bat lor dezakegu, eta horregatik ondorengo galdera naturalki azaltzen da:
+ nola
+deﬁni dezakegu aljebra-homomorﬁsmo bat? Aukera bat erregela bat edo “formu-
+la” bat ematea da.
+Adibidez, deﬁnitzen baditugu ϕ, ψ : A −→ A aplikazioak
+ϕ(a) = −a eta ψ(a) = a2 formulen bidez, ba al dira homomorﬁsmoak? Erraz ikus
+daiteke ϕ aplikazioa char K = 2 denean baino ez dela homomorﬁsmoa eta ψ, be-
+rriz, K = F2 denean baino ez. Jakina, formula bat ematen digutenean, beti ikus
+dezakegu, lan gehiagorekin edo gutxiagorekin, homomorﬁsmo bat deﬁnitzen duen.
+Askoz ere interesgarriagoa litzateke, hala ere, aldez aurretik jakitea zein formulek
+emango dizkiguten homomorﬁsmoak. Zoritxarrez, hori ez dago batere garbi.
+Beste ikuspegi bat espazio bektorialen teoriatik har dezakegu. Izan bitez V
+eta W bi K-espazio bektorial, V dimentsio ﬁnitukoa izanik, eta har dezagun B =
+{v1, . . . , vn} V -ren oinarri bat. Lehenengo eta behin, demagun badugula ϕ :
+ V −→
+W aplikazio lineal bat eta ezagutzen ditugula B-
+ko bektoreen irudiak; jar dezagun
+wi = ϕ
+(vi), i = 1, . . . , n guztietarako. Orduan, informazio hori nahikoa da v ∈ V
+bektore orokor baten irudia emateko. Egin behar dugun guztia da v bektorea B
+oinarriarekiko deskonposatzea,
+v = λ1v1 + · · · + λnvn,
+λi ∈ K izanik,
+eta ϕ aplikatzea, kontuan izanik ϕ lineala dela:
+ϕ(v) = λ1ϕ(v1) + · · · + λnϕ(vn).
+Azkenik, ϕ(vi) bakoitzaren ordez wi jarriz, v-ren irudia lortzen dugu:
+ϕ(v) = λ1w1 + · · · + λnwn.
+(1.6)
+Orain, interesgarriena da argudio horri buelta eman diezaiokegula eta erabil deza-
+kegula, ez emandako aplikazio lineal baten irudiak kalkulatzeko, baizik eta aplikazio
+lineal berriak eraikitzeko. Izan ere, V -tik W -
+ra aplikazio lineal bat deﬁnitu nahi ba-
+dugu, nahikoa da vi ∈ B bakoitzaren irudia nahi dugun moduan aukeratzea W -ren
+barruan. Irudi horri wi deitzen badiogu, orduan 
+(1.6) erregelaren bitartez deﬁni-
+tzen den ϕ :
+ V −→ W aplikazioa beti da lineala, ez dugu inolako egiaztapenik egin
+behar. 
+(Hobeto esanda, teorema batek ziurtatzen du horrela izango dela beti, eta
+horren frogan emandako argudio orokorrak kasuz kasu egiaztatuz joatea aurrezten
+digu.) Ideia horrek askatasun handia ematen digu aplikazio linealak deﬁnitzeko
+orduan. Jarraian ikusten dugunez, ϕ : A −→ B aljebra-homomorﬁsmo bat deﬁni-
+tzeko, antzeko zerbait egin dezakegu A = K[X1, . . . , Xn] den kasu berezian.
+1.86. Teorema (K[X1, . . . , Xn]-ren propietate unibertsala). Izan bedi B K-
+aljebra.
+Orduan:
+(i) ϕ : K[X1, . . . , Xn] −→ B aljebra-homomorﬁsmo bat guztiz zehazturik geldi-
+tzen da X1, . . . , Xn indeterminatuen irudiak ezagututa. Zehazkiago, ϕ(Xi) =
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.7. K-ALJEBRAK
+39
+bi bada i = 1, . . . , n denean, orduan honako hau da polinomio orokor baten
+irudia:
+ϕ
+i1,...,in≥0
+λi
+1 ,...,in X
+i1
+1 . . . X
+in
+n
+=
+i1,...,in≥0
+λi
+1 ,...,in b
+i1
+1 . . . b
+in
+n .
+(1.7)
+(ii) Alderantziz, ϕ : K[X1, . . . , Xn] −→ B aljebra-homomorﬁsmo bat deﬁnitze-
+ko, nahikoa da X1, . . . , Xn indeterminatuen irudiak, b1, . . . , bn ∈ B nahi
+dugun moduan aukeratzea. Orduan, ϕ (1.7) formularen bitartez deﬁnitzen
+da edozein polinomioren gainean.
+Aurreko teoremaren frogan, (i) atalerako behar dugun guztia da edozein poli-
+nomio indeterminatuak konbinatuz idazten dela, baturak, biderkadurak eta eska-
+larrezko biderkadurak erabiliz. Bigarren atalerako, ordea, zerbait gehiago behar
+dugu: deskonposizio hori bakarra dela. Hori da arrazoia 
+(ii) ez izateko egiazkoa
+K[X1, . . . , Xn]-
+ren ordez aljebra orokor bat jarriz gero. Aurrerago emango dugu
+propietate horrek huts egiten duen adibide bat.
+1.87. Adibideak. 1) Aurreko teoremaren arabera,
+ϕ
+:
+K[X, Y ]
+−→
+K[X, Y ]
+X
+−→
+X − 1
+Y
+−→
+Y + 2
+esleipenak aljebra-homomorﬁsmo bat deﬁnitzen du. Orduan, f (X, Y ) polinomio
+orokor baten irudia f (X − 1, Y + 2) da. Adibidez,
+ϕ(X
+2 + Y + 1) = (X − 1)2 + (Y + 2) + 1 = X2 − 2X + Y + 4.
+Ikus dezagun ϕ isomorﬁsmoa dela. Horretarako, 1.82 teoremaren arabera, nahikoa
+litzateke im ϕ = K[X, Y ] eta ker ϕ = {0} dela ikustea. Oraingoan beste modu
+batean ikusiko dugu, ϕ-
+ren alderantzizko aplikazioa esplizituki emanez. Izan bedi
+ψ
+:
+K[X, Y ]
+−→
+K[X, Y ]
+X
+−→
+X + 1
+Y
+−→
+Y − 2.
+Orduan, (ψ ◦ ϕ)(X) = (ϕ ◦ ψ)(X) = X eta (ψ ◦ ϕ)(Y ) = (ϕ ◦ ψ)(Y ) = Y denez,
+(ψ ◦ϕ)(f (X, Y )) = (ϕ◦ψ)(f (X, Y )) = f (X, Y ) dela ondorioztatzen dugu f 
+(X, Y ) ∈
+K
+[X, Y ] guztietarako. Horrek esan nahi du ψ ◦ϕ eta ϕ◦ψ identitate aplikazioarekin
+bat datozela eta, hortaz, ϕ bijektiboa dela.
+Emaitza horren aplikazio modura,
+kontuan izanik (X, Y ) K[X, Y ]-ren ideal maximala dela eta 1.83 teorema, (X −
+1, Y + 2) ere K[X, Y ]-ren ideal maximala dela ondorioztatzen dugu.∗
+2) Aurreko adibidean emandako argudio bera erabiliz, orokorkiago frogatu de-
+zakegu (X − a, Y − b) ideala maximala dela K[X, Y ]-n a, b ∈ K guztietarako.
+∗Hor, inplizituki, emaitza hau erabiltzen ari gara, 1.2 ariketan frogatuko duguna:
+ ϕ : A −→ B
+aljebra-homomorﬁsmo supraiektiboa bada eta a = (a1, . . . , ar) A-
+ren ideala bada, orduan ϕ(A)
+B-ren ideala da eta ϕ(A) = (ϕ(a1), . . . , ϕ
+(ar)) dugu. Emaitza hori ez da oro har betetzen ϕ ez
+bada supraiektiboa.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.7. K-ALJEBRAK
+40
+Orain emaitza horren froga alternatibo bat emango dugu, esango diguna gaine-
+ra K[X, Y ]/(X − a, Y − b) zatidura K gorputzaren isomorfoa dela. Horretarako,
+deﬁnitu
+ϕ
+:
+K[X, Y ]
+−→
+K
+X
+−→
+a
+Y
+−→
+b
+aljebra-homomorﬁsmoa. Lehenengo eta behin, ohartu im ϕ = K dugula, 1.84 adi-
+bidean bezala argudiatuz. Ikus dezagun orain ker ϕ = (X − a, Y − b) dela. Alde
+batetik,
+ϕ(X − a) = ϕ(X) − ϕ(a) = a − a = 0
+eta
+ϕ(Y − b) = ϕ(Y ) − ϕ(b) = b − b = 0
+denez, X − a eta Y − b ϕ-ren nukleoan daude eta, ker ϕ ideala denez, 
+(X − a, Y −
+b) ⊆ ker ϕ lortzen dugu. Alderantzizko partekotasuna ikusteko, har dezagun f ∈
+ker ϕ eta frogatu dezagun f ∈ (X − a, Y − b) dela. Horretarako, zatitu dezagun
+f polinomioa X − a-z, X indeterminatuarekiko. (Zatiketa hori K[Y ][X]-n egiten
+dugu. Ohartu zatiketaren algoritmoa erabil daitekeela, X − a monikoa delako.)
+Orduan, f -ren deskonposizio hau dugu:
+f = q(X − a) + r,
+r ∈ K[X, Y ] eta deg
+X r < 1 izanik.
+(1.8)
+Beraz, r-k ez du X-rik, eta r ∈ K
+[Y ] dela ondorioztatzen dugu. Orain, r polino-
+mioa Y − b-z zatitzen dugu K[Y ]-n (Y -
+rekiko, jakina, kasu honetan ez dago beste
+aukerarik). Horren ondorioz,
+r = q
+∗(Y − b) + r∗,
+r
+∗ ∈ K[Y ] eta deg r∗ < 1 izanik,
+(1.9)
+lortzen dugu.
+Orduan, r∗ hondarrak K gorputzeko konstantea izan behar du.
+Laburbilduz, f -ren beste deskonposizio hau lortzen dugu:
+f = q(X − a) + q
+∗(Y − b) + r∗,
+q, q
+∗ ∈ K[X, Y ] eta r∗ ∈ K izanik.
+(1.10)
+Orain, berdintza horri ϕ aplikatzen badiogu, f , X − a eta Y − b ϕ-ren nukleoan
+daudela kontuan hartuz,
+0 = ϕ(f ) = ϕ(q)ϕ(X − a) + ϕ(q
+∗)ϕ(Y − b) + ϕ(r∗) = ϕ(r∗)
+dugu. Baina, r∗ konstantea denez, ϕ
+(r∗) = r∗ dugu eta, hortaz, r∗ = 0. Bukatzeko,
+balio hori (1.10)-era eramanez, f = q(X − a) + q∗(Y − b) ∈ (X − a, Y − b) dugu,
+nahi bezala.
+3) Azken adibideko argudioa errepikatuz, ondorengo isomorﬁsmo hau frogatu
+dezakegu:
+K[X1, . . . , Xn]
+(X1 − a1, . . . , Xn − an)
+∼
+= K,
+a1, . . . , an ∈ K guztietarako.
+Ondorioz, (X1 − a1, . . . , Xn − an) K[X1, . . . , Xn]-ren ideal maximala da.
+4) Beste alde batetik, (X1 − a1) ideala lehena da K[X1, . . . , Xn] eraztunean,
+X1 −a1 polinomioa irreduziblea baita. Ondorioz, K[X1, . . . , Xn]/
+(X1 −a1) zatidura
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.7. K-ALJEBRAK
+41
+I.D. da. Ba al da ezagutzen dugun I.D. baten isomorfoa? Ikus dezagun baietz.
+Deﬁnitu
+ϕ
+:
+K[X1, . . . , Xn]
+−→
+K[X2, . . . , Xn]
+X1
+−→
+a1
+X2
+−→
+X2
+..
+.
+..
+.
+..
+.
+Xn
+−→
+Xn.
+Ikusten badugu ϕ supraiektiboa dela eta ker ϕ = (X1 − a1) dela, orduan
+K[X1, . . . , Xn]
+(X1 − a1)
+∼
+= K[X2, . . . , Xn]
+isomorﬁsmoa ondorioztatuko dugu.
+Alde batetik, X2, . . . , Xn ∈ im ϕ dugu eta
+K ⊆ im ϕ ere bai (gogoratu, aurretik ikusi dugun bezala, konstante baten irudia
+konstante hori bera dela). Orain, im ϕ azpialjebra denez, elementu horiekin egin
+ditzakegun batura eta biderkadura guztiak ere im ϕ-n daude eta, beraz, im ϕ =
+K[X2, . . . , Xn] da. Bestetik, nabaria da X1 − a1 ∈ ker ϕ dela. Alderantzizko
+partekotasuna lortzeko, hartu f ∈ ker ϕ eta zatitu X1 − a1 polinomioaz X1-
+ekiko.
+Orduan,
+f = q(X1 − a1) + r,
+deg
+X1 r < 1 izanik,
+deskonposizioa dugu, hau da, r ∈ K
+[X2, . . . , Xn] izanik. Berdintza horri ϕ aplika-
+tuz,
+0 = ϕ(f ) = ϕ(q)ϕ(X1 − a1) + ϕ(r) = r
+lortzen dugu eta, beraz, f = q(X1 − a1) ∈ (X1 − a1). Horrek ker ϕ = (X1 − a1)
+dela frogatzen du.
+5) Azken adibideetako ideiak konbinatuz, isomorﬁsmo hau frogatu dezakegu:
+K[X1, . . . , Xn]
+(X1 − a1, . . . , Xr − ar)
+∼
+= K[Xr+1, . . . , Xn],
+a1, . . . , ar ∈ K guztietarako.
+Ondorioz, (X1 − a1, . . . , Xr − ar) K[X1, . . . , Xn]-ren ideal lehena da.
+6) Azter dezagun orain (X2 + 1, Y ) ideala R[X, Y ]-n lehena den edo ez. Lehe-
+nengo eta behin, (Y ) ⊆ 
+(X2 + 1, Y ) partekotasuna izateagatik, korrespondentziaren
+teoremak ondokoa ziurtatzen du:
+(X
+2 + 1, Y ) lehena R[X, Y ]-n ⇐⇒
+(X2 + 1, Y )
+(Y )
+lehena
+R[X, Y ]
+(Y )
+-n
+Orain, aurreko adibide baten arabera, R[X, Y ]/(Y ) eta R
+[X] isomorfoak dira. Ohar-
+tu, gainera, isomorﬁsmo esplizitu bat ezagutzen dugula bi aljebra horien artean,
+isomorﬁaren lehenengo teoremak dioen bezala. Izan ere, isomorﬁsmoa X → X,
+Y → 0 esleipenen bidez emanda dagoen homomorﬁsmotik datorrenez, karakteri-
+zaturik gelditzen da X → X eta Y → 0 erregelen bitartez. Orduan, eskema hau
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.7. K-ALJEBRAK
+42
+irudika dezakegu:
+R[X, Y ]
+−→
+R[X, Y ]
+(Y )
+−→
+R[X]
+(X2 + 1, Y )
+−→
+(X2 + 1, Y )
+(Y )
+−→
+(X2 + 1)
+(Y )
+−→
+(Y )
+(Y )
+= {0}
+−→
+{0}
+Hor, lehenengo geziak epimorﬁsmo kanonikoa adierazten du eta bigarrena, berriz,
+aipatutako isomorﬁsmoa da. Aljebra bakoitzaren azpian agertzen den ideala be-
+re irudiarekin lotuta dago. Aurretik argudiatu dugu 
+(X2 + 1, Y ) ideal lehena dela
+R[X, Y ]-n baldin eta soilik baldin (X
+2 +1, Y )/(Y ) lehena bada R[X, Y ]/(Y )-n. Bes-
+talde, 1.83 teoremaren arabera, isomorﬁsmo batek gorde egiten ditu ideal lehenak
+eta, beraz, azken ideal hori lehena da baldin eta soilik baldin 
+(X2 + 1) lehena bada
+R[X]-n. Orain, X
+2 + 1 irreduziblea denez R-ren gainean, (X2 + 1) ideal lehena
+da R[X]-n eta, beraz, (X
+2 + 1, Y ) R[X, Y ]-n lehena dela baiezta dezakegu. Are
+gehiago, (X2 + 1) R[X]-n maximala izateagatik, era berean ondorioztatzen dugu
+(X2 + 1, Y ) R[X, Y ]-n maximala dela.
+Dakusagunez, kasu honetan, nagusia ez zen ideal bat lehena den edo ez azter-
+tzeko orduan, erabili dugun prozedura ideal nagusi baten kasura eramatea izan da,
+baina beste aljebra batean.
+7) Guztiz era berean ikus dezakegu (X2 + 1, Y ) ideala ez dela maximala ezta
+lehena ere C[X, Y ]-n. Arrazoia da ideal horren azterketa C[X]-n (X
+2 + 1) ideala
+estudiatzera eramango dugula, eta azken ideal hori ez dela lehena, X2 + 1 = 
+(X −
+i)(X + i) faktorizatzen baita C-ren gainean.
+Izan bitez f, g ∈ K[X1, . . . , Xn]. Badakigu 
+(f ) ideal lehena dela baldin eta soilik
+!
+baldin f irreduziblea bada, baina ez da pentsatu behar (f, g) moduko ideal bat
+lehena dela baldin eta soilik baldin f eta g irreduzibleak badira.
+Alde batetik, a = (X2 + 1, Y 2 + 1) ideala ez da lehena R[X, Y ]-n, nahiz eta
+emandako bi sortzaileak irreduzibleak izan. Demagun, absurdora eramanez, a ideal
+lehena dela. Orduan,
+(X − Y )(X + Y ) = X
+2 − Y 2 = (X2 + 1) − (Y 2 + 1) ∈ a
+izateagatik, X − Y ∈ a edo X + Y ∈ a izango genuke. Ikus dezagun X − Y ez
+dagoela a-n. Egongo balitz, idatzi ahal izango genuke
+X − Y = f (X, Y )(X
+2 + 1) + g(X, Y )(Y 2 + 1).
+Hor X = i eta Y = −i ordezkatuz, 2i = 0 kontraesana lortzen dugu. Antzera
+frogatzen da X + Y ez dagoela a-n eta bilatzen ari ginen absurdoa lortu dugu.
+Beste alde batetik, azken adibidean ikusi dugun bezala, 
+(X2 +1, Y ) ideal lehena
+da R[X, Y ]-
+n. Orain, erraz alda dezakegu ideal horren sortzaileetako bat irreduzi-
+blea ez izateko. Adibidez,
+(X
+2 + 1, Y ) = (X2 + 1, Y − (X2 + 1)Y ) = (X2 + 1, −X2Y ) = (X2 + 1, X2Y )
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.7. K-ALJEBRAK
+43
+dugu. Beraz, sortzaileetako bat irreduziblea ez bada ere, ideala lehena izan daiteke.
+Izan bitez A K-
+aljebra bat eta a1, . . . , an ∈ A. Orduan, 1.86 teoremaren arabe-
+ra, X1 → a1, . . . , Xn → an erregelek K[X1, . . . , Xn] −→ A aljebra-
+homomorﬁsmo
+bat deﬁnitzen dute, ebaluazio homomorﬁsmo deitutakoa. Homomorﬁsmo horren
+bitartez, f (X1, . . . , Xn) polinomio baten irudia f 
+(a1, . . . , an) ikurraren bidez adie-
+razten dugu, eta balio hori a1, . . . , an elementuen konbinazio polinomiko bat dela
+esaten dugu. Polinomioa f (X1, . . . , Xn) =
+i1,...,in≥0 λi1,...,in X
+i1
+1 . . . X
+in
+n
+bada,
+orduan
+f (a1, . . . , an) =
+i1,...,in≥0
+λi
+1 ,...,in a
+i1
+1 . . . a
+in
+n
+(1.11)
+dugu. Jarraian ikusten dugunez, konbinazio polinomikoek azpimultzo batek sortzen
+duen azpialjebrarekin lotura zuzena dute.
+1.88. Teorema. Izan bitez A K-aljebra eta S ⊆ A. Orduan, S-ko elementuen
+konbinazio polinomikoek A-
+ren azpialjebra bat osatzen dute, eta hori da S barruan
+duen A-ren azpialjebrarik txikiena. Horri S-
+k sortutako azpialjebra deitzen diogu
+eta K[S] ikurraren bidez adierazten dugu. Beraz,
+K[S] = {f (a1, . . . , an) | a1, . . . , an ∈ S, f ∈ K[X1, . . . , Xn], n ∈ N}.
+Baldin eta S = {a1, . . . , an} ﬁnitua bada, orduan K
+[a1, . . . , an] idatziko dugu
+sinpleago K[{a1, . . . , an}]-ren ordez.
+1.89. Adibideak. 1) Polinomioen aljebra orokor bat adierazteko erabiltzen du-
+gun notazioa, K
+[X1, . . . , Xn], bat dator azken teoreman sartu dugun notazioarekin.
+Izan ere, polinomioen aljebra X1, . . . , Xn indeterminatuek sortzen dute; azken ba-
+tean, polinomioak X1, . . . , Xn indeterminatuen konbinazio polinomikoak dira.
+2) Sortutako azpialjebraren deﬁnizioa aplikatuz, garbi dago X2-k K[X]-ren
+barruan sortzen duen azpialjebra honako hau dela:
+K[X
+2] =
+i
+aiX
+i | a
+i = 0 da i bakoiti guztietarako
+.
+3) Zein da X2 eta X3 elementuek K[X]-n sortzen duten azpialjebra, K[X2, X3]?
+Azpialjebra hori osatzen duten elementuak f (X2, X3) modukoak dira, f ∈ K
+[X, Y ]
+izanik. Orain, (1.11) formularen arabera, honelako polinomioak lortzen ditugu:
+i,j≥0
+λi,jX
+2iX3j =
+i,j≥0
+λi,jX
+2i+3j ,
+λi,j ∈ K izanik.
+Erraz ikusten da 2i + 3j berretzaileek, i, j ≥ 0 izanez gero, zero eta zenbaki arrunt
+guztiak estaltzen dituztela, 1aren salbuespenarekin. Beraz,
+K[X
+2, X3] = {λ
+0 + λ2X
+2 + λ
+3X
+3 + · · · + λ
+nX
+n | λ
+i ∈ K, n ∈
+N ∪ {0}},
+X monomioa ez duten polinomioen multzoa da.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.7. K-ALJEBRAK
+44
+4) Izan bedi K ⊆ L gorputz-hedadura. Orduan, u ∈ L bada, Galoisen teorian
+K[u] eta K(u) azpimultzoak deﬁnitzen dira honako modu honetan:
+K[u] = {f (u) | f ∈ K[X]}
+eta
+K(u) =
+f (u)
+g(u)
+| f, g ∈ K[X], g(u) = 0 .
+Ohartu K[u] u-
+k sortzen duen azpialjebra dela eta, beraz, notazio aldetik ez dagoela
+nahasteko posibilitaterik. Bestalde, K(u) K[u]-
+ren zatikien gorputza da, eta hori
+da K eta u barruan dituen L-ren azpigorputzik txikiena. Bestela esanda, K(u) da
+u elementuak K ⊆ L hedaduran sortzen duen tarteko gorputza.
+Nabaria da K[u] ⊆ K(u) dugula eta K[u] gorputza dela baldin eta soilik bal-
+din K[u] = K(u) bada. Ezaguna da K[u] = K(u) dela zehatz-mehatz u aljebraikoa
+denean K-ren gainean, hau da, existitzen bada f ∈ K[X], f = 0, non f (u) = 0
+baita. Garbi dago f monikoa har dezakegula nahi izanez gero. Orduan, badago
+polinomio moniko horien artean maila txikieneko bakar bat, irreduziblea dena gai-
+nera. Polinomio hori adierazteko Irr(u, K) idazten dugu eta orduan isomorﬁsmo
+hau dugu:
+K[u] ∼
+=
+K[X]
+(Irr(u, K))
+.
+(1.12)
+Ez bada aljebraikoa, u K-ren gainean transzendentea dela esaten dugu. Orduan,
+K[u] = K(u) dugu eta bi isomorﬁsmo hauek betetzen dira:
+K[u] ∼
+= K[X]
+eta
+K(u) ∼
+= K(X).
+(1.13)
+Ohartu (1.12) eta (1.13) isomorﬁsmoak 1.86 teoremaren ondorioz lor daitezkeela,
+K[X]-tik K[u]-ra homomorﬁsmo bat deﬁnituz X → u erregelaren bitartez, eta
+isomorﬁaren lehenengo teorema erabiliz.
+Azken adibidean ikusi dugun (1.12) isomorﬁsmoa erraz orokortu daiteke beste
+aljebra askotarako. Horretarako, kontzeptu hau behar dugu.
+1.90. Deﬁnizioa. Izan bedi A K-aljebra. Orduan, A ﬁnituki sortua dela esaten
+dugu existitzen badira a1, . . . , an ∈ A, non A = K[a1, . . . , an] baita.
+1.91. Teorema. Izan bedi A = K[a1, . . . , an] K-
+aljebra ﬁnituki sortua. Orduan,
+existitzen da K[X1, . . . , Xn]-ren ideal bat, a, halakoa non
+A ∼
+=
+K[X1, . . . , Xn]
+a
+baita.
+Froga. Polinomioen aljebren propietate unibertsalaren arabera, X1 → a1, . . . ,
+Xn → an erregelek ϕ : K[X1, . . . , Xn] −→ A homomorﬁsmo bat deﬁnitzen dute.
+Orduan, im ϕ irudia a1, . . . , an elementuen konbinazio polinomikoek osatzen dute.
+Hau da, im ϕ = K
+[a1, . . . , an] = A dugu. Orain, a = ker ϕ hartuz gero, isomorﬁaren
+lehenengo teoremak erakusten du K[X1, . . . , Xn]/a ∼
+= A dela.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.8. POLINOMIOEN ALJEBREN IDEAL MAXIMALAK
+45
+Bestela esanda, K-aljebra ﬁnituki sortuak polinomioen aljebren zatidurak bai-
+no ez dira. Horregatik baieztatu dugu lehenago aljebrarik garrantzizkoenak polino-
+mioen aljebrak direla.
+Polinomioen aljebren propietate unibertsala ikusita, pentsa genezake hori aljebra
+!
+guztietara orokortzea honako modu honetan: A-
+ren S sistema sortzaile bat hartzen
+badugu, orduan ϕ : A = K[S] −→ B aljebra-homomorﬁsmo bat deﬁnitzeko, nahi-
+koa da S-ko elementuen irudiak nahi dugun moduan aukeratzea. Hori faltsua da,
+hurrengo adibidean erakusten dugun bezala. Egia da, behin ϕ homomorﬁsmo bat
+izanda, S-ko elementuen irudiak jakitea nahikoa dela A-ko elementu orokor baten
+irudia ezagutzeko. Azken batean, A = K[S] izateagatik, A-ko elementuak S-ko
+elementuen konbinazio polinomikoak dira eta nahikoa dugu erabiltzea ϕ-
+k baturak,
+biderkadurak eta eskalarrezko biderkadurak gordetzen dituela. Hau da, propietate
+unibertsalaren (i) atala bete egiten da. Huts egiten duena 
+(ii) atala da, homomor-
+ﬁsmoak eraikitzeko balio duena 
+(eta bi ataletatik inportanteena dena). Arazoa da
+a ∈ A elementu baten adierazpena, S-ko elementuen konbinazio polinomiko mo-
+dura, ez dela oro har bakarra; a-ren irudia kalkulatzean adierazpen desberdinak
+erabiliz gero, emaitza desberdinak lor genitzake. Bestela esanda, S-
+ko elementuen
+irudiak emanez deﬁnitu nahi dugun homomorﬁsmoa ez dago oro har ondo deﬁnitu-
+ta.
+1.92. Adibidea. Izan bedi A = K[X, Y ]/(X3 − Y 2) zatidura. Garbi dago A-
+ko edozein elementu X eta Y elementuen konbinazio polinomikoa dela eta, beraz,
+A = K[X, Y ] dela. Saia gaitezen ϕ : A −→ K aljebra-homomorﬁsmo bat deﬁnitzen
+ϕ(X) = 1 eta ϕ(Y ) = 0 erregelen bidez. Orduan,
+ϕ(X
+2
+) = ϕ(X)
+2 = 1
+dugu baina, beste alde batetik, X
+2
+= Y
+3
+denez zatidura horretan,
+ϕ(X
+2
+) = ϕ(Y
+3
+) = ϕ(Y )
+3 = 0.
+Kontraesan horrek ϕ ez dagoela ondo deﬁniturik frogatzen du. Ez dago problema-
+rik, hala ere, ϕ : K[X, Y ] −→ K deﬁnitzeko ϕ(X) = 1 eta ϕ(Y ) = 0 esleipenen
+bitartez.
+1.8. Polinomioen aljebren ideal maximalak
+Aurreko atalean ikusi dugunez, K gorputza bada eta a1, . . . , an ∈ K ele-
+mentuak edozein modutan aukeratzen baditugu, orduan (X1 − a1, . . . , Xn − an)
+K[X1, . . . , Xn]-
+ren ideal maximala da. Gai honetako azken zati honetan, gure hel-
+burua alderantzizko partzial hau frogatzea da.
+1.93. Teorema. Izan bedi m K[X1, . . . , Xn]-
+ren ideal maximala, K gorputz alje-
+braikoki itxia izanik. Orduan, existitzen dira a1, . . . , an ∈ K, halakoak non m =
+(X1 − a1, . . . , Xn − an) baita.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.8. POLINOMIOEN ALJEBREN IDEAL MAXIMALAK
+46
+Horrenbestez, K aljebraikoki itxia bada, guztiz determinaturik gelditzen dira
+K[X1, . . . , Xn]-ren ideal maximalak.
+Aurreko teorema ez da inola ere egiazkoa K ez bada aljebraikoki itxia, eta inde-
+!
+terminatu bakar batekin huts egiten du jadanik. Izan ere, K aljebraikoki itxia ez
+izateagatik, badago p(X) ∈ K[X] polinomio irreduzible bat deg p(X) ≥ 2 izanik.
+Orduan, (p(X)) K[X]-ren ideal maximala da eta ezin da (X − a) moduan jarri,
+X − a ezin baita izan p(X)-ren multiploa. Adibideak indeterminatu gehiagorekin
+eman nahi izanez gero, hartu m = (p
+(X1), X2, . . . , Xn) ideala. Erabiltzen badugu
+K[X1, . . . , Xn]
+(X2, . . . , Xn)
+∼
+= K[X1]
+isomorﬁsmoa, m K[X1, . . . , Xn]-
+ren ideal maximala dela ondorioztatzen da. Hala
+ere, m ezin da idatzi (X1−a1, . . . , Xn−an) moduan. 
+(Hori ere goiko isomorﬁsmoaren
+ondorio berehalakoa da.)
+Azken teoremaren froga beste emaitza honetan oinarritzen da.
+1.94.
+Teorema (Zariskiren lema). Izan bitez K ⊆ L gorputz-hedadura eta
+u1, . . . , un ∈ L. Orduan, K
+[u1, . . . , un] gorputza da baldin eta soilik baldin u1, . . . , un
+aljebraikoak badira K-ren gainean.
+Ohartu Zariskiren lemak lehenago aipatutako emaitza honen orokorpena dela,
+elementu baten baino gehiagoren kasura: K
+[u] gorputza da baldin eta soilik baldin
+u aljebraikoa bada K-ren gainean.
+1.93 teoremaren froga Zariskiren leman oinarrituz. Izan
+bedi
+L
+=
+K[X1, . . . , Xn]/m eta erabil dezagun marren notazioa L-ko elementuak adieraz-
+teko. Ohartu L gorputza dela, m K[X1, . . . , Xn]-
+ren ideal maximala izateagatik.
+Izan bedi E = {λ | λ ∈ K} ⊆ L. Erraz egiaztatzen da λ → λ aplikazioa isomorﬁs-
+mo bat dela K-ren eta E-
+ren artean. Bereziki, E aljebraikoki itxia da. Beste alde
+batetik,
+L =
+f (X1, . . . , Xn) | f ∈ K[X1, . . . , Xn]
+=
+i1,...,in≥0
+λi
+1 ,...,in X
+i1
+1 . . . X
+in
+n | λi1,...,in ∈ K
+= E[X1, . . . , Xn]
+dugu. Horrela, E ⊆ L hedadura dugu eta L = E
+[X1, . . . , Xn] gorputza da. Zaris-
+kiren lema erabiliz, X1, . . . , Xn E-
+ren gainean aljebraikoak direla ondorioztatzen
+dugu. Orain, E aljebraikoki itxia dela kontuan hartuz, X1, . . . , Xn ∈ E lortzen du-
+gu. Horrela, existitzen dira a1, . . . , an ∈ K, halakoak non X1 = a1, . . . , Xn = an
+baita. Ondorioz, X1 − a1, . . . , Xn − an ∈ m dugu eta, m ideala eta propioa izatea-
+gatik,
+(X1 − a1, . . . , Xn − an) ⊆ m
+K[X1, . . . , Xn]
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.8. POLINOMIOEN ALJEBREN IDEAL MAXIMALAK
+47
+partekotasunak ditugu. Badakigunez (X1 − a1, . . . , Xn − an) K
+[X1, . . . , Xn]-ren
+ideal maximala dela, hortik m = 
+(X1 − a1, . . . , Xn − an) berdintza ondorioztatzen
+da.
+Zariskiren lemaren frogan, funtsezkoa da elementu osoaren kontzeptua, jarraian
+deﬁnitzen duguna.
+1.95.
+Deﬁnizioa. Izan bitez A ⊆ B eraztun-hedadura eta b ∈ B. Orduan, b
+A-ren gainean elementu osoa dela esaten dugu existitzen bada f ∈ A[X] polinomio
+moniko bat, non f (b) = 0 baita.
+Ikusten dugunez, deﬁnizio hori eta elementu aljebraikoarena oso antzekoak dira.
+Diferentzia bakarrak hauek dira:
+(i) Elementu aljebraikoaren deﬁnizioa gorputz-hedadura baten kasuan ematen
+da, eta ez eraztun orokorren hedaduretarako.
+(ii) Elementu osoa izateko, f (b) = 0 betetzen duen f polinomioari monikoa
+izateko eskatzen zaio eta elementu aljebraikoa izateko, berriz, ez.
+Hala ere, K ⊆ L gorputz-hedadura batean, elementu osoak eta aljebraikoak gauza
+bera dira. Izan ere, u ∈ L aljebraikoa bada, orduan badago g ∈ K[X], g = 0,
+non g(u) = 0 baita. Orain, g-ren koeﬁziente nagusia λ bada, f = λ−1g polinomioa
+monikoa da eta f (u) = 0 dugu. Hortaz, u elementu osoa ere bada. Horrek esan
+nahi du elementu osoaren kontzeptua elementu aljebraikoaren luzapena besterik ez
+dela, gorputz-hedaduretatik eraztun-hedaduretara pasatzeko.
+1.96. Adibideak. 1) Nabaria da A eraztun bateko elementu guztiak A-ren gainean
+osoak direla. Azken batean, a ∈ A elementua X − a ∈ A[X] polinomioaren erroa
+da.
+2) Z ⊆ C hedaduran,
+√
+2,
+3
+√
+2 eta i elementu osoak dira.
+3) Z ⊆ Q hedaduran 1/2 ez da osoa, nahiz eta f (X) = 2X − 1 ∈ Z[X] poli-
+nomioaren erroa izan. Kontua da ezin dela izan koeﬁziente osoak dituen polinomio
+moniko baten erroa, hurrengo teoreman frogatzen dugun bezala. Horrek erakusten
+du, gorputzen kasuan ez bezala, eraztun-hedaduren kasuan polinomioa monikoa
+izateko baldintza funtsezkoa dela elementu bat osoa den edo ez erabakitzeko.
+1.97. Teorema. Izan bitez A F.B.D. eta K A-ren zatikien gorputza. Orduan,
+A ⊆ K hedadurako elementu oso bakarrak A-koak dira.
+Froga. Nahikoa da 1.67 teoremaren (ii) atala irakurtzea. Horren arabera, f ∈
+A[X] polinomio moniko batek K-n dituen erroak A-n daude.
+Beraz, azken adibidean ikusitakoa ez da kasualitatea, eta Z ⊆ Q hedaduran ele-
+mentu oso bakarrak Z-
+koak dira. Zariskiren lemaren frogarako, aurreko teoremaren
+kasu berezi hau interesatuko zaigu.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.8. POLINOMIOEN ALJEBREN IDEAL MAXIMALAK
+48
+1.98. Korolarioa. Izan bedi K gorputza. Orduan, K[X] ⊆ K(X) hedadurako
+elementu oso bakarrak K[X]-koak dira. Hau da, polinomioen zatiki bat osoa bada
+K[X]-ren gainean, orduan zatiki hori polinomio bat da benetan.
+Galoisen teorian frogatzen da elementu aljebraikoen batura, biderkadura eta
+zatidura berriro ere aljebraikoak direla. Hori dela eta, K ⊆ L hedadura batean,
+elementu aljebraikoek tarteko gorputz bat osatzen dute. Elementu osoekin antzeko
+zerbait gertatzen da.
+1.99. Teorema. Izan bedi A ⊆ B eraztun-hedadura. Orduan, hedadura horretako
+elementu osoen batura eta biderkadura elementu osoak dira berriro ere. Ondorioz,
+elementu osoek R eraztun bat osatzen dute, A ⊆ R ⊆ B betetzen duena.
+Gorputz-hedadura bat, K ⊆ L, aljebraikoa dela esaten dugu L-ko elementu
+guztiak aljebraikoak badira K-ren gainean. Hurrengo teoreman hedadura aljebrai-
+koen oinarrizko propietate pare bat ematen ditugu.
+1.100. Teorema. (i) Izan bitez K ⊆ E eta E ⊆ L bi hedadura aljebraiko. Orduan,
+K ⊆ L hedadura ere aljebraikoa da. (Hedadura aljebraikoen propietate iraganko-
+rra.)
+(ii) Izan bedi K ⊆ L gorputz-
+hedadura eta demagun u1, . . . , un ∈ L aljebraikoak
+direla K-ren gainean. Orduan, K ⊆ K(u1, . . . , un) hedadura aljebraikoa da.
+Antzera deﬁnitzen dira eraztun-hedadura osoak. Kasu horretan ere propietate
+iragankorra dugu eta, bestetik, A ⊆ B hedadura batean b1, . . . , bn elementuak
+osoak badira A-ren gainean, orduan A ⊆ A[b1, . . . , bn] hedadura osoa da. 
+(Hor,
+nahiz eta A gorputza ez izan, A[b1, . . . , bn]-
+ren esanahia aljebren kasukoa bezalakoa
+da:
+ b1, . . . , bn elementuekin egin daitezkeen konbinazio polinomiko guztiak dira,
+koeﬁzienteak A-n izanik.)
+Zariskiren lemaren froga. Bi inplikazioak n-ren gaineko indukzioa erabiliz
+egingo ditugu (bakoitza bere aldetik). Ohartu n = 1 den kasua ezaguna dela.
+Beraz, n ≥ 2 hartuko dugu hemendik aurrera.
+⇐) Demagun u1, . . . , un aljebraikoak direla K gorputzaren gainean. Indukzio-
+hipotesiaren arabera, L = K[u1, . . . , un−1] gorputza da. Orain, un L-
+ren gainean
+aljebraikoa denez (K-ren gainean aljebraikoa delako eta K ⊆ L delako), L[un]
+gorputza da. Kontuan izanik L[un] = K
+[u1, . . . , un] dela, inplikazio hori frogaturik
+gelditzen da.
+⇒) Demagun orain F = K[u1, . . . , un] gorputza dela. Izan bedi E = K(u1).
+Orduan, F gorputza denez, E ⊆ F dugu eta, u2, . . . , un ∈ F denez, E
+[u2, . . . , un] ⊆
+F ere bai. Alderantzizko partekotasuna nabaria da eta, hortaz, F = E
+[u2, . . . , un]
+berdintza lortzen dugu. Horrela, kate hau dugu:
+K ⊆ K[u1] ⊆ E = K(u1) ⊆ F = E[u2, . . . , un].
+Berriro ere kontuan hartuz F gorputza dela, indukzio-hipotesiak ziurtatzen du
+u2, . . . , un aljebraikoak direla E-
+ren gainean. Beraz, 1.100 teoremagatik, E ⊆ F
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.8. POLINOMIOEN ALJEBREN IDEAL MAXIMALAK
+49
+hedadura aljebraikoa da. Lortzen badugu frogatzea u1 aljebraikoa dela K-
+ren gai-
+nean, orduan K ⊆ E ere hedadura aljebraikoa da. Hedadura aljebraikoen propie-
+tate iragankorraga erabiliz, K ⊆ F hedadura aljebraikoa dela ondorioztatzen dugu
+eta, bereziki, u1, . . . , un elementu guztiak aljebraikoak dira K-
+ren gainean, nahi
+bezala.
+Demagun orduan, absurdora eramanez, u1 transzendentea dela K-ren gainean.
+Izan bedi u edozein elementu u2, . . . , un-
+ren artean aukeratuta. Orduan, u aljebrai-
+koa da E-ren gainean eta, beraz, existitzen da α(X) = Xk + ak−1X
+k−1 + · · · + a0 ∈
+E[X], non α(u) = 0 baita. Orain, E = K(u1) dela kontuan hartuz, α-ren koeﬁzien-
+te bakoitza ai = gi(u1)/hi(u1) modukoa da, gi, hi ∈ K[X] eta hi(u1) = 0 izanik.
+Beraz, honako berdintza hau dugu:
+u
+k +
+gk−1(u1)
+hk−1(u1)
+u
+k−1 + · · · +
+g1(u1)
+h1(u1)
+u +
+g0(u1)
+h0(u1)
+= 0.
+Biderkatzen badugu hk−1(u1) . . . h0
+(u1) biderkaduraz izendatzaileak eliminatzeko,
+orduan
+fk(u1)u
+k + f
+k−1(u1)u
+k−1 + · · · + f
+1(u1)u + f0(u1) = 0
+lortzen dugu, fi ∈ K
+[X] izanik i guztietarako. Bestela esanda, azken erlazio horre-
+tako koeﬁziente guztiak K[u1]-n daude. Horrek ez du esan nahi u elementua osoa
+denik K[u1] eraztunaren gainean, azken berdintza horretan u
+k -ren koeﬁzienteak ez
+duelako zertan 1 izan. Hala ere, berdintza horretatik badago elementu oso bat ate-
+ratzea. Horretarako, fk(u1)
+k−1 elementuaz biderkatzen dugu, honako adierazpen
+hau lortuz:
+(fk(u1)u)
+k + f
+k−1(u1)(fk (u1)u)
+k−1 + · · · + f
+1(u1)fk (u1)
+k−2(f
+k (u1)u)
++ f0(u1)fk(u1)
+k−1 = 0.
+Hortik, fk(u1)u elementua K[u1]-en gainean osoa dela ondorioztatzen dugu.
+Aurreko argudioan, u gisa u2, . . . , un elementuetako edozein har dezakegu.
+Beraz, existitzen dira m2, . . . , mn ∈ K[X], halakoak non mi(u1)ui biderkadura
+elementu osoa baita K[u1]-
+en gainean i = 2, . . . , n guztietarako. Izan bedi m =
+m2 . . . mn ∈ K[X]. Kontuan hartzen badugu elementu osoen biderkadura osoa
+dela eta K[u1]-eko elementuak osoak direla K[u1]-
+en gainean, ondorioztatzen dugu
+m(u1)ui osoa dela K[u1]-
+en gainean i = 2, . . . , n guztietarako. Jakina, u1 bera osoa
+denez K[u1]-en gainean, propietate hori i = 1 den kasurako ere betetzen da.
+Orain, baieztatzen dugu v ∈ F = K
+[u1, . . . , un] edozein izanda, badagoela t be-
+rretzaile bat (v-ren menpekoa izango dena) non m(u1)
+tv osoa den K[u1]-en gainean.
+Hori frogatzeko, idatzi v elementua u1, . . . , un-
+ren konbinazio polinomiko modura,
+koeﬁzienteak K-n izanik. Hau da, idatzi v = q(u1, . . . , un), q ∈ K
+[X1, . . . , Xn]
+izanik. Orduan, q polinomioaren maila osoa t bada, ikus dezagun m(u1)
+tv elemen-
+tu osoa dela K[u1]-en gainean. Ohartu m(u1)
+tv honelako gaien konbinazio lineala
+dela, K gorputzeko koeﬁzienteekin:
+m(u1)
+tui1
+1 u
+i2
+2 . . . u
+in
+n ,
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+1.8. POLINOMIOEN ALJEBREN IDEAL MAXIMALAK
+50
+X
+i1
+1 X
+i2
+2 . . . X
+in
+n
+q-n agertzen den monomio bat izanik. Jarri s = i1 + i2 + · · · + in.
+Maila osoaren deﬁnizioagatik, s ≤ t dugu. Orduan,
+m(u1)
+tui1
+1 u
+i2
+2 . . . u
+in
+n = m(u1)
+t−s(m(u
+1)u1)
+i1 (m(u
+1)u2)
+i2 . . . (m(u
+1)un)
+in
+dugu, eta idazkera horrek erakusten du elementu hori osoa dela K[u1]-
+en gainean.
+Beraz, m(u1)
+tv ere, horien konbinazio lineala izateagatik, osoa da K[u1]-en gainean.
+Propietate hori v ∈ F guztietarako betetzen denez, bereziki beteko dute K(u1)-
+eko
+elementu guztiek.
+Kontraesana lortzeko eta, beraz, teoremaren froga bukatutzat emateko, baka-
+rrik falta zaigu azken propietatearen “itzulpen” bat egitea. Gogoratu u1 K-ren
+gainean transzendentea den baldintzapean ari garela. Orduan, K(u1) ∼
+= K(X)
+dugu eta isomorﬁsmo horren bitartez, K[u1] ∼
+= K[X] ere badugu. Beraz, azken
+paragrafoko propietatea honela eman daiteke: existitzen da m(X) polinomio ﬁnko
+bat non, v(X) ∈ K(X) edozein funtzio arrazional harturik, m(X)tv(X) osoa baita
+K[X]-ren gainean t berretzaile egoki baterako (v(X)-ren menpekoa izango dena).
+Baina, 1.98 teoremaren arabera, badakigu hori bakarrik dela posible m(X)tv(X)
+polinomio bat bada. Horrela, esaten ari gara badagoela m(X) polinomio ﬁnko bat
+propietate hau betetzen duena: edozein funtzio arrazional harturik, m(X)-
+ren be-
+rretura egoki batez biderkaturik polinomio bat lor dezakegu, hau da, izendatzailea
+elimina dezakegu. Erraz ikus dezakegu, hala ere, hori faltsua dela. Nahikoa da
+p(X) ∈ K[X] polinomio irreduzible bat aukeratzea, ez dena m(X)-ren faktoriza-
+zioan agertzen∗, eta v(X) = 1/p
+(X) funtzio arrazionala hartzea. Orduan, ezinezkoa
+da v(X)-ren izendatzailea eliminatzea m(X)-ren berretura batez biderkatuz.
+∗Hori beti egin daiteke, K
+[X] polinomioen eraztunean polinomio irreduzibleen kopurua inﬁ-
+nitua baita. Hori ikusteko, nahikoa da inﬁnitu zenbaki lehen daudela frogatzen duen Euklidesen
+argudioa errepikatzea. Ohartu, bide batez, polinomio irreduzibleen inﬁnitutasunak beste ondorio
+hau duela:
+ gorputz aljebraikoki itxi guztiak inﬁnituak dira. Izan ere, nahikoa da gogoratzea gor-
+putz aljebraikoki itxi baten gainean polinomio irreduzibleak lehenengo mailakoak baino ez direla.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU

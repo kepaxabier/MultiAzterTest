@@ -1,0 +1,9080 @@
+
+
+
+Estatistika
+Estatistikako apunteak, berrikusteko
+2009
+
+
+c 2009 Mondragon Goi Eskola Politeknikoa.
+
+
+Gaien Aurkibidea
+Gaien Aurkibidea
+iii
+1 Estatistika deskribatzailea
+1
+1.1
+Oinarrizko Kontzeptuak . . . . . . . . . . . . . . . . . . . . . .
+1
+1.2
+Deﬁnizioak eta taula estatistikoak
+. . . . . . . . . . . . . . . .
+2
+1.2.1
+Aldagai diskretoren maiztasun taula . . . . . . . . . . .
+4
+1.2.2
+Aldagai jarraituen maiztasun taula . . . . . . . . . . . .
+4
+1.3
+Karaktere kuantitatiboen adierazpen graﬁkoak . . . . . . . . .
+5
+1.4
+Karaktere kualitatiboen errepresentazio graﬁkoak . . . . . . . .
+9
+1.5
+Zentralizazio neurriak . . . . . . . . . . . . . . . . . . . . . . .
+11
+1.6
+Sakabanatze neurriak
+. . . . . . . . . . . . . . . . . . . . . . .
+14
+1.7
+Beste parametro estatistiko batzuk . . . . . . . . . . . . . . . .
+16
+2 Konbinatoria
+23
+2.1
+Multzo baten kardinala . . . . . . . . . . . . . . . . . . . . . .
+23
+2.2
+Permutazioak, Pn . . . . . . . . . . . . . . . . . . . . . . . . . .
+24
+2.3
+Aldakuntzak, V n
+m . . . . . . . . . . . . . . . . . . . . . . . . . .
+24
+2.4
+Konbinaketak, Cn
+m
+. . . . . . . . . . . . . . . . . . . . . . . . .
+25
+
+iv
+GAIEN AURKIBIDEA
+2.5
+Errepikaturiko Permutazioak, P Rn
+1,n2,...,np
+. . . . . . . . . . .
+27
+2.6
+Errepikaturiko Aldakuntzak, V Rnm . . . . . . . . . . . . . . . .
+27
+2.7
+Errepikaturiko Konbinaketak, CRnm . . . . . . . . . . . . . . . . 28
+3 Probabilitatea
+37
+3.1
+Esperimentuak, Gertaerak . . . . . . . . . . . . . . . . . . . . .
+37
+3.2
+Gertakizunen algebra . . . . . . . . . . . . . . . . . . . . . . . .
+38
+3.3
+Probabilitatearen deﬁnizioa . . . . . . . . . . . . . . . . . . . .
+39
+3.4
+Probabilitatearen deﬁnizio axiomatikoa
+. . . . . . . . . . . . .
+40
+3.5
+Baldintzatutako Probabilitatea . . . . . . . . . . . . . . . . . .
+44
+3.6
+Gertaera independienteak . . . . . . . . . . . . . . . . . . . . .
+44
+3.7
+Probabilitate totala . . . . . . . . . . . . . . . . . . . . . . . . .
+46
+3.8
+Bayes-en teorema . . . . . . . . . . . . . . . . . . . . . . . . . .
+47
+4 Ausazko aldagaiak
+51
+4.1
+Ausazko aldagaia . . . . . . . . . . . . . . . . . . . . . . . . . .
+51
+4.2
+Probabilitate, dentsitate funtzioa . . . . . . . . . . . . . . . . .
+52
+4.3
+Probabilitate banaketaren funtzioa . . . . . . . . . . . . . . . .
+53
+4.4
+Dentsitate funtzioa . . . . . . . . . . . . . . . . . . . . . . . . .
+54
+4.5
+Banaketa funtzioa . . . . . . . . . . . . . . . . . . . . . . . . .
+54
+4.6
+Ausazko aldagai baten itxaropena eta bariantza . . . . . . . . .
+55
+4.7
+Momentuen funtzio sortzaileak . . . . . . . . . . . . . . . . . .
+56
+4.7.1
+Jatorriarekiko momentuak . . . . . . . . . . . . . . . . .
+56
+4.7.2
+Momentu zentralak . . . . . . . . . . . . . . . . . . . . .
+57
+5 Banaketa diskretuak
+61
+5.1
+Banaketa uniforme diskretua . . . . . . . . . . . . . . . . . . .
+61
+5.2
+Bernouilli-ren banaketa, B(p) . . . . . . . . . . . . . . . . . . .
+62
+5.3
+Banaketa binomiala, B (n, p) . . . . . . . . . . . . . . . . . . .
+63
+5.4
+Pascalen banaketa edo geometrikoa . . . . . . . . . . . . . . . .
+65
+5.5
+Banaketa binomial negatiboa . . . . . . . . . . . . . . . . . . .
+65
+5.6
+Banaketa hipergeometrikoa H(N, n, k) . . . . . . . . . . . . . .
+66
+5.6.1
+Banaketa hipergeometrikoa eta binomialaren arteko er-
+lazioa . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+67
+
+Gaien Aurkibidea
+v
+5.7
+Poisson-en banaketa P (λ) . . . . . . . . . . . . . . . . . . . . .
+68
+5.8
+Konbergentzia: Binomialetik Poisson-era . . . . . . . . . . . . .
+69
+6 Banaketa jarraituak
+75
+6.1
+Banaketa uniformea U (a, b) . . . . . . . . . . . . . . . . . . . .
+75
+6.2
+Banaketa esponentziala . . . . . . . . . . . . . . . . . . . . . .
+77
+6.3
+Banaketa normala, N(µ, σ)
+. . . . . . . . . . . . . . . . . . . .
+80
+6.3.1
+N (µ, σ) eta N (0, 1) arteko erlazioa . . . . . . . . . . . .
+81
+6.3.2
+Propietateak . . . . . . . . . . . . . . . . . . . . . . . .
+84
+6.3.3
+Banaketa binomiala, Poisson eta normalaren arteko er-
+lazioa . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+84
+7 Zenbatespenak eta laginen tamainuak
+97
+7.1
+Sarrera . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+97
+7.2
+Populazio baten proportzio baten zenbatespena . . . . . . . . .
+97
+7.3
+Populazio baten µren zenbatespena: σ ezaguna . . . . . . . . .
+99
+7.4
+Populazio baten µren zenbatespena: σ ezezaguna . . . . . . . . 100
+A Banaketa normal tipiﬁkatua N(0,1)
+103
+B Banaketa binomiala
+107
+C Student, t banaketa
+113
+D χ2 banaketa
+115
+Bibliograﬁa
+117
+
+
+1
+Estatistika deskribatzailea
+Torture numbers, and they’ll
+confess to anything
+Greg Easterbrook
+Deﬁnizio zehatzik ez egon arren, estadistika deskribatzailea datuen bilketa,
+sailkapena, laburketa eta aurkezpena dela esan daiteke, gehienetan metodo
+graﬁkoak, taulak la zenbakizko zerrendak erabiliz, kapitulo honetan datuak
+nola adierazten diren eta nola erakusten diren aurkeztuko da.
+1.1
+Oinarrizko Kontzeptuak
+Estatitiska deskriptiboaren lehengaiak datuak dira, hauek behaketaren ondo-
+rioak direla.
+Deﬁnizioa 1. Ikerketa estatistiko batean aztergai diren elementu guztiez osa-
+turiko multzoari populazioa deitzen zaio.
+Populazioak ﬁnituak ala inﬁnituak izan daitezke, elementu kopuruaren ara-
+bera.
+
+2
+Estatistika deskribatzailea
+Deﬁnizioa 2. Populazioko banako bakoitzari dagozkion datuen bilduma errol-
+da deritzo.
+Deﬁnizioa 3. Populazio estadistikoaren elementuak unitate estadistikoak
+edo gizabanakoak deitzen dira.
+Deﬁnizioa 4. Populazio batetik aukeratutako hainbat elementuren azpimul-
+tzoa lagina deitzen da. Laginaren elementu kopurua, tamaina izango da.
+Gizabanakoaren behaketak karaktere bat ala gehiago erabiliz deskribatzen
+dira.
+Karaktere batzuk kuantitatiboak dira, adib: adina, pisua eta gizakiaren
+altuera, baina beste batzuk ez, adib: begien kolorea, sexua, eta abar, hauek
+kualitatiboak deitzen dira.
+Deﬁnizioa 5. Karaktere kuantitatiboak hartutako zebakizko balioak aldagai
+estadistikoak deitzen dira.
+Aldagai estadistikoak hurrengo eran sailka daitezke:
+a) Aldagai diskretoak. Datuen kopurua ﬁnitua bada, edo bestela zenbaka-
+rriak.
+b) Aldagai jarraituak. Tarte jarraiki batekoak direnean, ondorioz, beren
+kopurua ez denean ﬁnitua, ezta balioak berak zenbakarriak ere.
+1.2
+Deﬁnizioak eta taula estatistikoak
+Populazio edo lagin bat aztertzerakoan lortutako informazioa, hau da datuak,
+antolatu eta ordenatuko dira taulen bidez.
+Aldagai estatistiko X batek balio desberdinak x1, x2, . . . , xk, har ditzake, bai-
+na hauetariko bakoitza behin baino gehiagotan agertu daiteke.
+Deﬁnizioa 6. Behaketa multzoan, X ausazko aldagaiaren xi balioaren ager-
+keta kopurua maiztasun absolutua (ni) deituko dugu.
+
+1.2. Deﬁnizioak eta taula estatistikoak
+3
+Deﬁnizioa 7. Behaketa multzoan, X ausazko aldagaiaren xi balioaren ager-
+keta kopurua eta egindako behaketa guztien, (N ), arteko zatidura maiztasun
+erlatiboa , fi, deituko dugu.
+fi =
+ni
+N
+Deﬁnizioa 8. X ausazko aldagaiaren xi balioaren maiztasun absolutu me-
+tatua (Ni), xi balioa baino txikiago ala berdinak diren balioen maiztasun ab-
+solutu guztien batura izango da.
+Ni =
+i
+1
+ni
+Balioak, xi, ordenatuta egongo dira, orden hau gorakorra izanez.
+Azkeneko balioaren maiztasun absolutua N izango da. Hau da:
+Nk = N
+Deﬁnizioa 9. X ausazko aldagaiaren xi balioaren maiztasun erlatibo me-
+tatua, (Fi), xi balioa baino txikiago ala berdinak diren balioen maiztasun ab-
+solutuen batura N balioarekiko proportzioa.
+Fi =
+Ni
+N
+=
+i
+j=1
+nj
+N
+=
+i
+j=1
+nj
+N
+=
+i
+j=1
+fj
+Maiztasunaren Propietateak
+Biz N egindako behaketen kopuru totala. Hurrengo propietateak azpimarratu
+daitezke:
+a) n1 + n2 +
+· · · + nk = N
+k
+i=1
+ni = N
+b) f1 + f2 +
+· · · + fk =
+n1
+N +
+n2
+N + · · · +
+nk
+N = 1
+c) Nk = N
+d) Fk = 1
+e) 0
+≤ ni ≤ N
+
+4
+Estatistika deskribatzailea
+f) 0
+≤ fi ≤ 1
+g) xi balioaren ehunekoa (%), maiztasun erlatiboa bider 100 eginez lortzen
+da.
+(%)x
+i
+= fi
+· 100
+1.2.1
+Aldagai diskretoren maiztasun taula
+Aldagai diskreto baten maiztasun taula lortzeko balioak minimotik maximorai-
+no ordenatuko dira, eta lortutako maiztasun balioak idatziko dira ni, nf , Ni, Fi
+xi
+ni
+fi
+Ni
+Fi
+x1
+n1
+f1
+N1
+F1
+x2
+n2
+f2
+N2
+F2
+..
+.
+..
+.
+..
+.
+..
+.
+..
+.
+xk
+nk
+fk
+Nk
+Fk
+1.2.2
+Aldagai jarraituen maiztasun taula
+Demagun hirurogei lagunen altuerak neurtu eta hurrengo emaitzak lortu direla
+(metrotan) :
+1, 62
+1, 71
+1, 57
+1, 61
+1, 80
+1, 91
+1, 58
+1, 63
+1, 62
+1, 70
+1, 75
+1, 68
+1, 54
+1, 79
+1, 72
+1, 68
+1, 90
+1, 69
+1, 73
+1, 85
+1, 60
+1, 60
+1, 62
+1, 77
+1, 71
+1, 89
+1, 92
+1, 65
+1, 99
+2, 05
+1, 41
+1, 67
+1, 93
+1, 55
+2, 04
+1, 73
+1, 80
+1, 83
+1, 75
+1, 66
+1, 93
+1, 85
+1, 84
+1, 68
+1, 63
+1, 75
+1, 77
+1, 84
+1, 85
+1, 90
+2, 00
+1, 83
+2, 01
+1, 82
+1, 65
+1, 72
+1, 68
+1, 73
+1, 54
+1, 65
+Holako kasuan, datuak tartetan biltzea izango da egokiena, klase-tartetan
+banatzen direla esaten da, eta kalkulatu zenbat diren tarte bakoitzean dauden
+elementuak.
+Altuerak
+1, 40
+− 1, 60 1, 60 − 1, 70 1, 70 − 1, 80 1, 80 − 2, 00 2, 00 − 2, 10
+Tarteak aztertuko direnez, zalantzarik gabe lana sinpleagoa izango da, bai-
+na zoritxarrez informazioa ere galduko da. Ikuspuntu bi hauek orekatuko dira
+tartekatzeko metodoa aukeratzerakoan.
+
+1.3. Karaktere kuantitatiboen adierazpen graﬁkoak
+5
+Goi-muturra eta behe-muturraren arteko diferentzia tartearen zabaltasuna
+edo anplitudea izango da.
+Deﬁnizioa 10. Tarte bakoitzaren erdiko balioa klase-ordezkari deitzen da.
+Balio honekin tartearen balio guztiak ordezkatzen dira.
+Datuak klase-tartetan biltzen direnean, arduratzen gaituena ez da izan-
+go nola banatzen diren datuak tartean zenbat diren baizik. Tarteko datuen
+banaketa homogeneoa suposatzen da, hau da informazio galeraren arrazoia.
+Tarte hauen aukeraketa, bai kopurua eta bai zabaltasuna, guztiz subjek-
+tiboa da, ikertzaileak aukeratuko du nola egin, az dago derrigorrezko araurik
+eta arazo bakoitza desberdina da.
+Tartetan bildutako aldagai baten maiztasun taula
+Tarteak
+Klase-marka xi
+ni
+fi
+Ni
+Fi
+a0
+− a1
+x1
+n1
+f1
+N1
+F1
+a1
+− a2
+x2
+n2
+f2
+N2
+F2
+a2
+− a3
+x3
+n3
+f3
+N3
+F3
+..
+.
+..
+.
+..
+.
+..
+.
+..
+.
+..
+.
+al−1
+− al
+xl
+nl
+fl
+Nl
+Fl
+1.3
+Karaktere kuantitatiboen adierazpen graﬁkoak
+• Barra-diagramak
+Diagrama hau aldagai diskreto baten errpresentazioa egiteko erabiltzen
+da.
+Abzisa ardatzan aldagai baten balioak ipintzen dira eta balio bakoitzean
+lerro bertikala eraikitzen da, altuera balioaren maiztasuna (absolutua
+ala erlatiboa) dela. Honela barra bertikal guzti hauen luzeraren batura
+N ala 1 izango da, errepresentatutako datuen arabera. (Irudia 1.1)
+
+6
+Estatistika deskribatzailea
+x i
+f
+x i
+x
+x
+n
+i
+Fr.absoluta
+Fr.relativa
+i
+Irudia 1.1: Barra-diagrama
+• Histograma
+Klase-tartetan bildutako aldagaientzako maiztasuna azaleraren bidez erre-
+presentatzen da. (Irudia 1.2)
+ni
+ci
+Intervalos
+h=
+n
+c
+ci
+Intervalos
+h
+i
+h= c
+f
+f
+i
+h
+i
+Irudia 1.2: Histograma
+Graﬁko hau lortzeko tartearen zabalera oinarria izanez errektangelu bat
+egiten da, altuera kalkulatzen da azalera totala maiztasunaren berdina
+izateko.
+• Maiztasun Poligonoa
+– Aldagaia diskretoa eta barra-diagramak erabiltzen direnean, maiztasun-
+poligonoa barraren goiko muturrak lotuz lortzen da, (Irudia 1.3).
+
+1.3. Karaktere kuantitatiboen adierazpen graﬁkoak
+7
+x
+n
+Irudia 1.3: Maiztasun-poligonoa
+– Aldagaia tartetan bilduta badago, histogramaren errektangelu ba-
+koitzaren erdiko goiko puntuen arteko latura eginez lortzen da (Iru-
+dia 1.4)
+Intervalos
+h
+Irudia 1.4: Histograma baten maiztasun-poligonoa
+Maiztasun metatuaren-diagrama
+Abzisa-ardatzan aldagaiaren balioak errepresentatzen dira, balio bakoi-
+tzean marra bertikala eraikitzen da, bere luzera balioari dagokion maiz-
+tasun metatua (absolutua ala erlatiboa) dela. Hau da, xi abzisaren or-
+denatua Ni izango da. Honela lortzen den barra-diagrama gorakorra
+izango da. Barra bakoitzaren muturretik eskuinean dagoen hurrengo ma-
+rra horizontaleraino marra horizontala marraztuz maiztasun metatuaren-
+diagrama lortzen da. (Irudia 1.5)
+
+8
+Estatistika deskribatzailea
+Variable
+Fr.acumuladas
+N
+i
+xi
+Irudia 1.5: Maiztasun metatuen histograma
+Maiztasun metatuen-pol´ıgonoa
+Graﬁko hau tartetan bildutako aldagientzako dira.
+Abzisa-ardatzan
+klase-tarteak ipintzen dira, tartearen baliorik handiena hartuko da ba-
+rra bertikala eraikitzeko, altuera maiztasun metatuaren (absolutua ala
+erlatiboa) baliokidea izango da. Honela gorakorra den barra-diagrama
+lortzen da, eta muturrak lotu ondoren maiztasun metatuaren-poligonoa.
+Poligonoa sortzeko maiztasun absolutuak erabiltzen badira altuera ma-
+ximoa azkeneko baliorekin lortzen da eta bere balioa N izango da.
+Maiztasun erlattiboak erabiltzen badira lartutako altuera maximoa uni-
+tatea izango da, (Irudia 1.6).
+ni
+Intervalos
+Fr.acumulada
+a
+i-1
+a i
+Irudia 1.6: Maiztasun metatutaren-poligonoa
+• Kutxa eta biboten-diagramak, box and whisker plot.
+
+1.4. Karaktere kualitatiboen errepresentazio graﬁkoak
+9
+Ikusitako graﬁkoez gain beste diagrama mota bat, lagin baten propie-
+tateak adierazteko, batez ere dispertsioa eta ezohiko datuak, kutxa-
+diagrama da. [2][1]
+Kutxa diagraman azpiko ertza lehenengo koartilean (25. perzentila) aur-
+kitzen da, goikoa hirugarren koartilean (75. perzentila) eta beste lerro
+bat bigarren koartilean edo medianan, honek errektangelua bitan za-
+titzen du. Koartilarteko tarteerdia lehenengo eta hirugarren koartilen
+arteko distantzia da, hau da 25. eta 75. perzentilen arteko diferentzia.
+Kutxa balio maximoetaraino luzatzen da lerro batekin, biboteak, datuak
+hirugarren koartila eta 1.5 aldiz koartilarteko tarteerdian daudela, 1.5 eta
+3 aldiz koartilarteko tarteerdian dauden datuak ikur batekin (puntua, as-
+teriskoa), adierazten dira datu hauek ezohiko balioak deitzen dira, balio
+minimoak aztertzeko tratamendua antzekoa da. Datuak 3 aldiz koarti-
+larteko tarteerdia baino handiagoak (ala txikiagoak) badira muturreko
+ezohiko balioak deitzen dira,eta beste ikurbatekin adierazten dira.
+Hurrengo taulan adierazitako 40 zigarroen nikotina kantitatea 1.7 iru-
+dian errepresentatzen da:
+1.09 1.92 2.31 1.79 2.28 1.74 1.47 1.97 0.85 1.24
+1.58 2.03 1.70 2.17 2.55 2.11 1.86 1.90 1.68 1.51
+1.64 0.72 1.69 1.85 1.82 1.79 2.46 1.88 2.08 1.67
+1.37 1.93 1.40 1.64 2.09 1.75 1.63 2.37 1.75 1.69
+1.4
+Karaktere kualitatiboen errepresentazio graﬁ-
+koak
+• Errektangelu-diagrama
+Abzisa-ardatzan karaktere kualitatiboak adierazten dira eta hauen gai-
+nean arrektangeluak marrazten dira, hauen oinarriak berdinak dira eta
+ez dira derrigorrez gainjarriak egongo, altuera maiztasunaren proportzio-
+nala izango da.
+
+10
+Estatistika deskribatzailea
+1
+1.5
+2
+2.5
+–0.4
+–0.2
+0
+0.2
+0.4
+Irudia 1.7: Kutxa-diagrama
+Adibidez, Unibertsitate batean fakultate bakoitzeko ikasle kopuruaren
+kontaketa egin da, datuak hurrengo taulan daude: (Irudia 1.8)
+Fakultatea
+Ikasle kopurua
+Matematika
+2136
+Filosoﬁa
+3870
+Zuzenbidea
+1830
+Ekonomia
+4328
+Kimikak
+2060
+• Sektore-diagrama
+Zirkulu batean, karaktere kualitatibo bakoitzari sektore bat dagokio, sek-
+torearen zabalera maiztasunarekiko proportzionala izanez. Hau, maizta-
+sun guztien batura 360◦ eginez lortzen da (N ) eta maiztasuna honekiko
+proportzionala eginez lortzen da. (Irudia 1.9)
+Aurreko adibidearen datuak erabiliz hurrengo graﬁkoa lortzen da.
+
+1.5. Zentralizazio neurriak
+11
+M
+F
+D
+E
+Q
+1.830
+2.060
+3.870
+4.328
+2.136
+Irudia 1.8: Errektangelu-diagrama
+Matematika
+. . . . . .
+2136
+Ikasleak
+. . . . . .
+51, 06
+Filosoﬁa
+. . . . . .
+3870
+Ikasleak
+. . . . . .
+97, 9
+Zuzenbidea
+. . . . . .
+1830
+Ikasleak
+. . . . . .
+46, 3
+Ekonomia
+. . . . . .
+4328
+Ikasleak
+. . . . . .
+109, 5
+Kimikak
+. . . . . .
+2060
+Ikasleak
+. . . . . .
+52, 1
+E
+Q
+M
+F
+D
+Irudia 1.9: Sektore-diagrama
+1.5
+Zentralizazio neurriak
+Gehienetan lortutako datuak asko dira eta informazioa datu bakar batera edo
+balio gutxitara murriztea komenigarria da, honela lagin desberdinen arteko
+
+12
+Estatistika deskribatzailea
+konparaketa errazten da. Balio hauek, nolabait informazioa zentralizatzen
+dutenak, joera zentralaren neurriak deitzen dira.
+Ematen diren deﬁnizioa guztietan suposatuko dugu X aldagai estadisti-
+koak x1, x2 . . . , xk balioak hartzen dituela n1, n2, . . . nk, maiztasunarekin hu-
+rrenez hurren.
+Deﬁnizioa 11. Batez besteko aritmetikoa,
+−
+x, hurrengo modura deﬁnitzen
+da:
+−
+x =
+x1n1 + x2n2 +
+· · · + xknk
+N
+=
+k
+i=1
+xini
+N
+=
+k
+i=1
+xifi
+Aldagaiaren balioak, x1, x2, . . . , xk, behin besterik ez badira agertzen, izen-
+datzailea k izango da
+−
+x =
+k
+i=1
+xi
+k
+Maiztasun erlatiboak masak bezala kontsideratzen badira, batez besteko
+aritmetikoak grabitate-zentrua ﬁnkatuko du. Hau da, barra baten gainean
+eta x1, x2, ...xm puntuetan maiztasunak bezalako pisuak kokatzen baditugu
+sistemaren grabitate-zentrua
+−
+x puntuan dago.
+Propietateak
+• bere maiztasunaz biderkatuz,batez bestekoarekiko desbideratzeen batu-
+karia zero da.
+n
+i=1
+xi
+−
+−
+x ni = 0
+• aldagai baten balio guztiak h parametroaz biderkatzen badira, batez
+besteko aritmetikoa ere h-z biderkatuta geratuko da.
+• aldagai bi edo gehiagoren batura den aldagai baten batez besteko arit-
+metikoa, batez besteko aritmetikoen batura da.
+t = x + y + z bada
+−
+t =
+−
+x +
+−
+y +
+−
+z
+
+1.5. Zentralizazio neurriak
+13
+Deﬁnizioa 12. Batez besteko geometrikoa
+−
+xG hurrengo erara deﬁnitzen
+da:
+−
+xG =
+N xn1
+1
+· x
+n2
+2
+· · · · · x
+nk
+k
+Aldagai baten progresioa geometrikoa denean, gehikuntza tasak, eta mota
+guztietako indizeak ehunekotan emanda badaude, batez bestekoa lortzeko era-
+biltzen da, era berean beste batez besteko eta hauen aplikazioak aztertzeko,
+ikus adibidez [3].
+Propietateak
+Batez besteko geometrikoa balio guztietan oinarritzen da, baina oso han-
+diak diren balioen pisua batezbesteko aritmetikoan baino txikiagoa da.
+Batez besteko geometrikoa 0 izango da balioren bat 0 bada eta irudikaria
+bihurtu dauteke balioak negatiboak badira.
+Deﬁnizioa 13. Mediana (Me) neurri zentral bat da. Aldagaiaren balioak
+gorantza ordenatuta suposatzen badira, medianak behaketa kopuru bera uzten
+du bere balioaren azpitik eta balioaren gainetik.1
+Adibidez, X =
+{1, 3, 7, 10, 15, 22, 36} bada, medianaren balioa 10 da.
+Balio kopurua bikoitia bada, adibidez, X =
+{1, 3, 5, 10, 21, 27, 36, 42}, me-
+dianaren balioa erdiko balioen batez bestekoa izango da
+Me =
+10 + 21
+2
+= 15, 5
+Deﬁnizioa 14. Moda (Mo) maiztasun maximoa duen aldagaiaren balioa.
+Modaren balioa ez da derrigorrez bakarra; honela, modaren balioak bi
+badira, banaketa bimodala (modabikoa) deitzen da, hiru badira trimodala,
+etab.
+Aldagaia klase-tartetan bilduta dagoenean, moda tarteak deitzen dira. Hau,
+oinarri-unitateko azalera handienaren lauki zuzena izango da. (Irudia 1.10)
+1zehatzagoak izanez:
+ listako balioa zein gutxienez balioen %50 bera baino txikiagoak edo
+berdinak eta %50 handiagoak edo berdinak diren, baldintza hau betetzeko balio bi aurkitzen
+badira bien arteko batez bestekoa hartzen da.
+
+14
+Estatistika deskribatzailea
+Frecuencias
+area=frecuencia
+Md
+Variable
+Intervalo modal
+Irudia 1.10: Moda eta moda tartearen determinazio graﬁkoa
+Deﬁnizioa 15. Koartilak behaketak lau zati berdinetan banatzen dituzten al-
+dagaiaren hiru balio dira
+2, (Irudia 1.11)
+P
+1/4
+P
+2/4
+P
+3/4
+Irudia 1.11: Koartilak
+1.6
+Sakabanatze neurriak
+Joera zentraleko neurriek laginaren informazioa kontzentratzen dute balio ba-
+kar batean, baina, batzutan, balio hau balio errealetik beste batzutan baino
+hurbilago egongo da, adibidez demagun X eta Y aldagaiak eta dagokien maiz-
+tasunak (Irudia 1.12)
+X
+ni
+0
+1
+500
+1
+1000
+1
+Y
+ni
+499
+1
+501
+1
+2mediana deﬁnetzeko ideia aplikatzen da koartilak deﬁnitzeko, adib lehenengo koartila
+deﬁnitzen denean datuen %25 eta %75 egongo da alde bietan, balio guztiak kontutan hartuta.
+[2]
+
+1.6. Sakabanatze neurriak
+15
+−
+x = 0+500+1000
+3
+= 500
+−
+y = 499+501
+2
+= 500
+0
+500
+1000
+499
+501
+x
+y
+Irudia 1.12:
+Bietan batez besteko aritmetikoa 500 da; baina X aldagaia Y baino azkoz
+hedatuta dago, beraz
+−
+y balioa
+−
+x-ena baino askoz adierazgarriagoa da.
+Sakabanatze neurriek, kontzentrazio neurrien adierazgarritasuna kuantiﬁkatu-
+ko dute.
+Deﬁnizioa 16. Ibiltartea edo heina aldagaiaren balio maximo eta minimoen
+arteko diferentzia deritzo.
+R = m´
+ax(x)
+− m´ın(x)
+Deﬁnizioa 17. Demagun
+{X1, X2, X3, ..., Xn} aldagaiaren N tamainako au-
+sazko lagina dela, halakoan laginaren bariantza hurrengo erara deﬁnitzen
+da 3
+S2 =
+N
+i=1(Xi −
+¯
+X)2
+N
+(1.1)
+Batzutan [9], [8], izendatzailean (1.1), N ren ordez N
+− 1 idazten da, N
+handia denean desberdintasun hau arbuiagarria da. Kasu hauetan N
+−1 auke-
+ratzen da bariantzaren estimatzaile ez alboratuta delako, baina geure kasuan
+bariantzaren deﬁnizioaren berdina delako.
+Garbi dago S2ren balioak positiboak izango direla karratuen batura iza-
+nez. Baldin eta S2 = 0 bada xi balio guztiak batez bestekoaren
+−
+x berdinak
+izango dira,hau da, behaketa guztiak puntu berean kontzentratuta daude, eta
+sakabanaketa minimoa (nulua).
+3[6], [7]
+
+16
+Estatistika deskribatzailea
+Deﬁnizioa 18. Laginaren desbiderapen estandarra edo desbiderapen
+tipikoa (S) laginaren bariantzaren erro positiboari deritzo
+S = +
+√
+S2 =
+i (xi − ¯
+x)
+2 ni
+N
+Deﬁnizioa 19. Deﬁnitzen da Pearsonen aldakuntza-koeﬁzientea hurren-
+go moduan:
+C.V. =
+S
+¯
+x
+¯
+x = 0
+Beste sakabanatze neurri bat, aurrekoa baino gutxiago erabiltzen dena,
+hurrengoa da
+Deﬁnizioa 20. Batez besteko desbiderapena edo laginaren desbiderapen
+estandarra
+DM =
+N
+i=1 |Xi −
+¯
+X
+|
+N
+(1.2)
+1.7
+Beste parametro estatistiko batzuk
+Momentuak
+Deﬁnizioa 21. Deﬁnitzen da c paramettroarekiko r ordenako momentua,
+hurrengo erara
+Mr(c) =
+i
+(xi
+− c)
+r ni
+N
+Bereziki, hurrengo kasuak dira garrantzitsuenak:
+• Jatorriarekiko momentuak
+c = 0 denean jatorriarekiko momentuak lortzen dira
+ar =
+i
+(xi
+− 0)
+r ni
+N
+=
+i
+xrini
+N
+• Batez bestekoarekiko momentuak
+c =
+−
+x denean batez bestekoarekiko momentuak edo momentu zentralak
+lortzen dira
+mr =
+i
+xi
+−
+−
+x
+r
+ni
+N
+
+1.7. Beste parametro estatistiko batzuk
+17
+Adibide batzuk:
+a0 =
+i
+x0
+i ni
+N
+= 1
+m0 =
+i
+xi−
+−
+x
+0
+ni
+N
+= 1
+a1 =
+i
+xini
+N
+=
+−
+x
+m1 =
+i
+xi−
+−
+x ni
+N
+= 0
+1 = 0
+a2 =
+i
+x2
+i ni
+N
+m2 =
+i
+xi−
+−
+x
+2
+ni
+N
+= S2
+(1.3)
+Asimetria eta zorroztasunaren neurriak
+Deﬁnizioa 22. Maiztasun-banaketa bat simetrikoa izango da balio zentral
+batetik distantziakide diren balioen maiztasunak berdinak direnean.
+Kasu honetan
+−
+x = Md = Me betetzen dela azpimarratuko behar da. (Iru-
+dia 1.13)
+Histograma
+Diagrama de barras
+Irudia 1.13: Banaketa simetrikoa
+Deﬁnizioa 23. Banaketa bat asimetrikoa deitzen da simetrikoa ez bada.
+Banaketa ezkerretik ala eskuinetik izan daiteke asimetrikoa.
+• Asimetria positiboa edo eskuineko asimetria
+Maiztasunen graﬁkoa desplazatuta dago, datuen jeitsieraren malda txi-
+kiagoa eskuinetik ezkerretik baino.
+
+18
+Estatistika deskribatzailea
+Kasu honetan
+−
+x
+≥ Me ≥ Md betezten da. (Irudia 1.14)
+Histograma
+Diagrama de barras
+Irudia 1.14: Banaketa asimetrikoa, positiboa
+• Asimetria negatiboa edo ezkerreko asimetria
+Datuen jeitsieraren malda txikiagoa ezkerretik eskuinetik baino.
+Honela
+−
+x
+≤ Me ≤ Md betetzen da. (Irudia 1.15)
+Histograma
+Diagrama de barras
+Irudia 1.15: Banaketa asimetrikoa, negatiboa
+Banaketaren simetria ala asimetria adierazteko asimetria-koeﬁzienteak era-
+biltzen dira.
+
+1.7. Beste parametro estatistiko batzuk
+19
+Deﬁnizioa 24. Pearson-en asimetria-koeﬁzientea hurrengo modura de-
+ﬁitzen da:
+Ap =
+−
+x−Md
+σ
+
+
+
+
+
+
+
+Ap > 0 Asimetria positiboa ala eskuinekoa
+Ap = 0 Simetrikoa
+Ap < 0 Asimetria negatiboa ala ezkerrekoa
+Deﬁnizioa 25. Fisher-en asimetria-koeﬁzientea ondorengo modura deﬁ-
+nitzen da:
+AF =
+m3
+σ3
+
+
+
+
+
+
+
+AF > 0 Asimetria positiboa ala eskuinekoa
+AF = 0 Simetrikoa
+AF < 0 Asimetria negatiboa ala ezkerrekoa
+Hiru, X, Y , Z, banaketa hauen graﬁkoa, (Irudia:1.16), aztertzen bada
+nabaria da zorroztasuna desberdina dela naiz eta mugaturiko azalera bedina
+izan, unitatea.
+Orokorrean “zorroztasun txikia
+⇐⇒ zapaltze handia”
+Irudia 1.16: Zorroztasun desberdinen graﬁkoak
+Deﬁnizioa 26. Zorroztasun koeﬁzientea edo kurtosia koeﬁziente honek
+banaketaren itxura adierazten du, banaketa normalarekin (Gauss-en kanpaia)
+konparatuz.
+g2 =
+m4
+σ4
+itxuraren arabera sailkapena hurrengoa da:
+g2 > 3
+Normala baino zorroztasun handiagoa: leptokurtikoa
+g2 = 3
+Normalaren zorroztasun bera: mesokurtikoa
+g2 < 3
+Normala baino zorroztasun txikiagoa: platikurtikoa.
+
+20
+Estatistika deskribatzailea
+Ariketak
+1.1 Journal 0f Aircraft (1988) aldizkari bateko artikulu batek NASA
+0012 azalera aerodinamikorako arraste-koeﬁzienteen kalkulua des-
+kribatzen du. Horretarako Moo = 0.7-rekin algoritmo konputazio-
+nal desberdinak erabiltzen dira, ondoko emaitzak lortuz:
+79, 100, 74, 83, 81, 85, 82, 80 eta 84.
+Kalkulatu:
+a) Laginaren batezbestekoa.
+b) Mediana.
+c) Beste zentralizazio eta sakabanatze adierazle guztiak.
+1.2 Hurrengo neurketak erdieroaleen ekoizpen prozesu baten lote des-
+berdinetan lortutako labe bateko tenperaturak dira (unitateak ◦F-
+tan dira)
+953, 950, 948, 955, 951, 949, 957, 954, 955.
+Kalkulatu:
+a) Laginaren batezbestekoa.
+b) Mediana.
+c) Beste zentralizazio eta sakabanatze adierazle guztiak.
+1.3 Silizio pastillaren kontaminazioak era garrantzitsu baten baldintza-
+tu dezake zirkuitu integratuen ekoizpena. 10 pastillako lagin batetik
+ondorengo oxigeno kontzentrazioak lortzen dira:
+3.15, 2.68, 4.31, 2.09, 3.82, 2.94, 3.47, 3.39, 2.81, 3.61
+Kalkulatu:
+a) Laginaren bariantza.
+b) Laginaren desbiderapen estandarra.
+c) Laginaren ibiltartea.
+1.4 Sei erresistoreko lagin bat hartzen da beraien erresistentzia (Ω-etan)
+neurturik. Emaitzak ondokoak dira:
+X1 = 45, X2 = 38, X3 = 47, X4 = 41, X5 = 35 eta X6 = 43.
+
+ariketak
+21
+a) Laginaren bariantza.
+b) Laginaren desbiderapen estandarra.
+
+
+2
+Konbinatoria
+2.1
+Multzo baten kardinala
+Multzo batean eragiketarik sinpleena zenbat elementu dauden jakitea da. Kon-
+tatzeko, multzoa eta zenbaki arrunten azpimultzo baten arteko aplikazio bi-
+jektiboa ezarriko da.
+Multzo baten elementu-kopurua kardinala deitzen da.
+Ariketak
+2.1 Zenbat zenbaki daude A =
+{87, . . . , 127} multzoan?
+2.2 Zenbat elementu daude A =
+{m, m + 1, m + 2, . . . , n}?
+2.3 Xake txapelketa batean partida bat jokatu ondoren galtzailea kan-
+poratuta geratzen da eta ez du berriz jokatzen, hasierako jokalariak
+2n badira, zenbat partida jokatuko dira?
+
+24
+Konbinatoria
+2.2
+Permutazioak, Pn
+Deﬁnizioa 27. Edozein bijekzioa f : A
+→ A, A multzoaren permutazioa
+deitzen da.
+Permutazio-multzoaren kardinala, A multzoko elementu kopuruaren depen-
+dientea da, kard (A) = n.
+Zenbat modutan ordena daiteke n elementuko desberdineko multzoa?, hau
+da erantzun behar den galdera.
+n = 0 denean permutazio bakarra dago eta kard (τA) = 1 = 0!
+n = 1 denean permutazio bakarra dago eta kard (τA) = 1 = 1!
+n > 1 denean permutazioak kard (τA) = n! dira.
+idatziko dugu
+Pn = n!
+(2.1)
+Ariketak
+2.4 Zenbat modutan kokatu daitezke 8 lagun ilaran?
+2.5 A =
+{1, 2, 3, 4, 5} multzoko zifrak erabiliz 5 zifrako zenbat zenbaki
+idatz daitezke zifrak ez badira errepikatzen?
+2.3
+Aldakuntzak, V n
+m
+Aldakuntzen kopurua kalkulatzeko, kontutan hartu behar da aplikazio injek-
+tiboak desberdinak direla elementuak edo ordena desberdinak direnean.
+B
+A
+1
+8
+2
+6
+7
+1
+5
+2
+3
+4
+5
+3
+4
+
+2.4. Konbinaketak, Cn
+m
+25
+Ikusten denez kard(A) = n
+≤ kard(B) = m, bestela, ezin da aplikazio
+injektiborik sortu.
+B
+A
+1
+8
+2
+6
+7
+1
+5
+2
+3
+4
+5
+3
+4
+B
+A
+1
+8
+2
+6
+7
+1
+5
+2
+3
+4
+5
+3
+4
+Aldakuntza posibleak:
+{1, 2, 3, 4, 5}, {1, 2, 3, 5, 4}, {1, 2, 5, 3, 4}, . . . , 
+{5, 4, 3, 2, 1}, . . . , {8, 7, 6, 5, 4}
+Idazten da V n
+m eta m elementuen n-ka hartutako aldakuntzak irakurri. Balioa
+Vm,n =
+m!
+(m
+− n)!
+(2.2)
+izango da.
+m = 0 eta n = 0 denean aplikazio injektibo bakarra egin daiteke, beraz
+V0,0 =
+0!
+0! = 1
+Ariketak
+2.6 F-1eko lasterketan 20 parte-hartzaileak daude. Zenbat modutan
+bana daitezke lehenengo, bigarren eta hirugarren postuak?
+2.7 N =
+{1, 3, 5, 7, 9} multzoko elementuak errepikatu barik erabiliz
+• Zenbat zenbaki daude hiru zifraz osaturik?
+• Zenbat dira bosten multiploak?
+2.4
+Konbinaketak, Cnm
+Aldakuntzak aztertzen direnean
+{1, 2, 3, 4, 5} eta {1, 2, 3, 5, 4} ez dira berdinak,
+kontutan hartu behin aukeratuz gero elementu hauek P5 = 5! modutan anto-
+
+26
+Konbinatoria
+latzen direla. Aplikazio injektibo guztien artean hertsiki gorakorrak direnak
+aukeratuko dira, hau da, aplikazioak non elementuren bat desberdina den.
+Deﬁnizioa 28. Multzo bat m elementu desberdinez osatuta badago, n elemen-
+tuko konbinaketak egin daitezken azpimultzoak izango dira, esaten da n-ka
+hartuta m elementuen konbinaketak, ordena ez da garrantzizkoa.
+Multzo bat hutsik badago azpimultzo bakarra bera izango da eta
+C00 =
+0
+0
+= 1
+Multzo bateko elementuak m badira eta hutsik dauden azpimultzoak kal-
+kulatzen badira C0m =
+m
+0
+=
+m!
+(m−0)! 0!=1
+Cm,n-ren balioa lortzeko aldakuntzak erabiliko dira, aldakuntza batean ele-
+mentuak ordenatzen dira eta Pn = n
+| aldiz kontatzen dira, behin kontatzeko,
+V n
+m
+n!
+=
+m!
+(m
+− n)! n!
+= Cn
+m
+Konbinaketa kopurua da:
+Cn
+m =
+m
+n
+=
+m!
+(m
+− n)! n!
+(2.3)
+Zenbaki konbinatorioen propietateak
+•
+m
+n
+=
+m
+m
+− n
+•
+m
+n
++
+m
+n + 1
+=
+m + 1
+n + 1
+Ariketak
+2.8 Multzo baten kardinala 10 bada, hiru elementuko, zenbat azpimul-
+tzo egin daitezke?
+2.9 Ospitale batean 30 erizain daude, txanda batean 4 erizain egon
+behar dira, zenbat modu daude txandak antolatzeko?
+
+2.5. Errepikaturiko Permutazioak, P Rn
+1,n2,...,np
+27
+2.5
+Errepikaturiko Permutazioak, P Rn
+1
+,n2,...,n
+p
+Lista bateko elementu desberdin guztiak ordenatzen direnean permutazioak
+lortzen dira, elementu bat bitan badago bi elementu hauek lekuz trukatzeaga-
+tik ez dugu beste permutazio berri bat lortzen, honela permutazioak
+Pn
+2!
+izango dira, pentsaera hedatuz lista bateko elementuak n1, n2, . . . , np aldiz
+errepikatzen badira hurrenez hurren, eta n = n1 + n2 +
+· · · + np bada
+P Rn
+1,n2,...,np =
+n!
+n1! n2! . . . np!
+=
+n!
+i ni!
+(2.4)
+errepikaturiko permutazioak izango dira.
+Ariketak
+2.10 Zenbat zenbaki idatz daitezke 111446 zenbakiaren zifrak erabiliz?
+Zenbat hasiko dira 61-ekin?
+2.6
+Errepikaturiko Aldakuntzak, V Rnm
+Aldakuntzak m elementuen artean n aukeratzeko aukera ematen dute baina
+elementuak ezin dira errepikatu, aukera hau ematen bada hurrengo listak onar-
+tzen dira:
+(1, 1, 1, . . . , 1, 1) , (1, 1, 1, . . . , 1, 2) , 
+(1, 1, 1, . . . , 2, 1) , . . . , (m, m, m, . . . , m, m)
+Lehenengo elementua m elementuen artean aukera daiteke, era berean bi-
+garrena eta n.garrena.
+V Rnm = m
+n
+Ariketak
+
+28
+Konbinatoria
+2.11 Sei zifrako zenbat zenbaki idatz daitezke 3 eta 6 zifrak erabiliz?
+2.12 2, 5 eta 8 zifrak erabiliz 5 zifrako zenbat zenbaki idatz daitezke?
+zenbat dira 60000 baino txikiagoak? Eta zenbat bikoitiak?
+2.7
+Errepikaturiko Konbinaketak, CRnm
+Deﬁnizioa 29. Errepikaturiko konbinaketak n elementuen bildumak dira, ber-
+dinak ala desberdinak, bilduma hauek desberdinak izateko gutxienez elementu
+batean desberdinduko dira.
+Adibidea 2.1
+Aspaldiko baserrian otsain batek asteroko soldata kobratzeko, base-
+rrian dauden oilasko, untxi eta indioilarren artean 4 har zezakeen, zen-
+bat modutan har daitezke 4 animali hauek?
+Balioa lortu baino lehenago hurrengo arazoak aztertuko ditugu:
+• Zenbat modu daude 3 zenbakia hiru batugai positiboetan banatzeko?
+• Zenbat modutan banatu daitezke 3 e hiru lagunen artean?
+• Zenbat modu daude 3 bola berdinak 3 kutxetan sartzeko?
+Erantzuna : 10 modu daude hau egiteko.
+(3, 0, 0) , (2, 0, 1) , (1, 1, 1)
+(0, 3, 0) , (2, 1, 0)
+(0, 0, 3) , (1, 2, 0)
+(0, 2, 1)
+(1, 0, 2)
+(0, 1, 2)
+
+2.7. Errepikaturiko Konbinaketak, CRnm
+29
+Erantzuna orokorrean lortzeko azkeneko galdera aztertuko da, zenbat mo-
+dutan sartzen dira 3 bola 3 kutxetan.
+graﬁkoa sinpliﬁkatzen bada
+hau da 3 bola eta barra bi geratzen dira, eta
+λ1 + λ2 + λ3 = 3
+non λi
+≥ 0 ,λi igarren kutxan dagoen bola-kopurua, erlazioa betetzen da,
+hauen arteko antolamendu guztiak lortuko dira, P R3,2 kalkulatuz.
+Orokorrean
+λ1 + λ2 +
+· · · + λm = n λi ≥ 0
+(2.5)
+CRnm =
+m
+− 1 + n
+n
+=
+m
+− 1 + n
+m
+− 1
+=
+(m
+− 1 + n)!
+(m
+− 1)! n!
+(2.6)
+Ikusita nola planteatu den argumentazioa, nabaria da
+CRnm = P Rm−1,n
+dela, kontuz! hau multzo honen kardinala besterik ez da!
+Ariketak
+2.13 Zenbat modutan bana daitezke 20 gozoki berdinak 12 mutilen ar-
+tean? Eta gehienez gozoki bat ematen bazaio mutil bati?
+2.14 Zenbat zenbaki daude 1000 baino txikiagoak zifren arteko batura
+9 izan dadin? Eta batura 10 bada?
+
+30
+K
+on
+b
+in
+at
+or
+ia
+Irudia 2.1: Konbinatoriaren laburpena.
+
+ariketak
+31
+Ariketak
+2.15 5000 metroko lasterketa batean 12 korrikalarik parte hartzen dute.
+Zenbat modutan bana ditzakete urrezko, zilarrezko eta brontzezko
+dominak?
+2.16 A =
+{0, 1, 3, 5, 7, 9} multzoko digituekin:
+• Hiru zifra desberdineko zenbat zenbaki era daitezke? (0 ezin
+da lehenengoa izan)
+• Zenbat izango dira bosten multiploak?
+2.17 3 eta 6 digituekin, lau zifrako zenbat zenbaki desberdin era daitez-
+ke? Zenbat izango dira 5000 baino handiagoak?
+2.18 2, 4, 6 eta 8 digituekin, bi zifrako zenbat zenbaki era daitezke?
+Horietako zenbatek edukiko dituzte bi zifra desberdin? Azken ho-
+rietako zenbat izango dira 30 baino handiagoak?
+2.19 14 hautagai daudela jakinik, zenbat modu desberdinetan bete dai-
+tezke kirol elkarte bateko lehendakari, lehendakariorde, idazkari eta
+diruzainaren postuak?
+2.20 A =
+{3, 5, 8} multzoko digituekin, bost zifrako zenbat zenbaki era
+daitezke? Zenbat dira 60000 baino txikiagoak? Zenbat dira bikoi-
+tiak?
+2.21 Zine bateko hamabi eserlekuko ilara batean, zenbat modu desber-
+dinetan eser daitezke hamabi pertsona, horietako bik muturretan
+eseri behar badute beti.
+2.22 Zenbat modutan sar daitezke sei postal desberdin kolore desber-
+dinetako sei gutunazaletan, kontuan izanik gutunazal bakoitzean
+postal bakarra sartu ahal dela?
+2.23 Zenbat zenbaki desberdin idatz daitezke 111446 zenbakiko zifra
+guztiak erabiliz? Zenbat hasiko dira 61ez?
+2.24 Zenbat kiniela ezberdin egin daitezke, partida bakoitzean ikur ba-
+karra ipini (1, X ala 2) eta guztira 15 partida badira?
+1. eta 14 aldiz “ 1” eta bariante (X, 2), bakarra ipintzen badira?
+
+32
+Konbinatoria
+2. eta bariante bi (X, 2) ipiniz?
+2.25 Zenbat era ezberdinetan bete daiteke loto jokuaren apostu bat, 49
+zenbakietatik 6 aukeratu behar direla jakinik?
+2.26 Zenbat hitz desberdin era daitezke, esanahirik ez badute ere, ez-
+kondu hitzeko letrekin? Zenbat hasiko dira bokalez?
+2.27 Iduneko bat egiteko 30 ale dauzkagu. Jakinik 12 gorriak direla, 14
+beltzak, 2 zuriak eta beste 2 horiak, zenbat iduneko desberdin egin
+ahal izango ditugu 30 ale horiek hari batean sartuz? Eta ale zuriak
+muturretan geratzea nahi badugu?
+2.28 Heptagono baten 5 erpin lotuz gero, zenbat pentagono aterako di-
+tugu?
+2.29 Batxilergoaren amaiera ospatzeko, 30 ikasleko talde batek euren ar-
+teko zazpi kideko antolaketa-batzorde bat izendatzea erabaki dute.
+Zenbat batzorde desberdin era ditzakete?
+2.30 Plano batean 15 puntu jarri dira, hiru puntu elkarrekin lerrokaturik
+geratuko ez diren eran. Zenbat marra egin daitezke?
+2.31 Zenbat modu desberdinetan bana daitezke 15 gozoki 20 umeren
+artean, bakoitzari gehienez gozoki bana emanez? eta edozein mo-
+dutan bana badaitezke?
+2.32 Azterketa bateko hamabi galderetatik, lehendabiziko laurak derri-
+gorrezkoak badira, eta guztira zortzi erantzun beharra badago, zen-
+bat modutan erantzun ditzakegu azterketako zortzi galderak?
+2.33 Zenbat diagonal daude hexagono batean?
+2.34 Autobus enpresa batek 25 geltoki dauzka. Geltoki guztietako txar-
+teldegietan bertatik beste edozein geltokirako txartelak eduki behar
+dituzte, argi ageri dutenak zein diren irteera eta iristeko puntuak.
+Zenbat txartel desberdin egin behar ditu enpresa horrek?
+2.35 Hamaika lagun jatetxe batera joan dira ikasturtearen amaiera os-
+patzera. Prestaturik duten mahai biribilean esertzerakoan, zer or-
+denatan jezarriko ote diren eztabaidatzen hasi dira. Zerbitzariak
+esan die edozein ordenatan jazartzeko, eta hurrengo egunean berriz
+
+ariketak
+33
+etorri eta beste ordena batean jezartzeko; orden erlatiboa errepika-
+tu arte horrela egiten segitzen badute, zerbitzariak berak gonbida-
+tuko ditu bazkaltzera egun horretatik aurrera. Noiz izango dute
+dohainik bazkaltzeko aukera?
+2.36 Futbol talde bat osatzeko 11 jokalari behar ditugu eta 22 dauzkagu.
+1. Zenbat modutan aukera ditzakegu 11 jokalari horiek, betetzen
+duten postuaz arduratzen ez bagara?
+2. Horietako bi atezain baino ez badabiltza, zenbat modu desber-
+dinetan aukeratu ahal izango ditugu taldeak orduan?
+2.37 Zazpi bateko, bost ekiseko eta hiru biko dituen zenbat kiniela des-
+berdin egin daitezke?
+2.38 A eta B jokalarien arteko pilota partidoa 22
+−14 bukatu da, zenbat
+modu daude emaitza hau lortzeko? Sol=2319959400
+2.39 Kodigo bitar baten hitzak 8 bit (0 edo 1) erabiliz eratzen dira.
+(adib: 01101100)
+a) Zenbat hitz desberdin daude?
+b) Zenbatetan agertzen dira 2 zero?
+c) Zenbat hasten dira zero batekin?
+d) N biteko kodigo bitarra erlazio konstantekoa esaten da hitz ba-
+koitzean N biteko M “1” badira eta beste guztiak “0”. Zenbat
+hitz desberdin eratu daitezke N = 8 eta M = 3 badira?PM,N
+−M =
+CM,N
+2.40 Lau zifrako zenbat zenbaki idatz daitezke 1, 2, 3, 4, 5, 6 zifrak era-
+biliz, ezin dira errepikatu. Kalkulatu zenbaki guzti hauen batura.
+Sol:1399860
+2.41 Kalkulatu 2, 5, 7 zifrak erabiliz idatz daitezken sei zifrako zenbaki
+guztien batura, zenbaki batean behin 2, hiru aldiz 5 eta bitan 7
+agertzen badira. Sol=34444410
+2.42 Ordenagailuz osaturiko sare errektageluarra kontsidera dezakegu
+9
+× 6 nodo daukala, mezu bat bidali nahi da lehenengo nodotik
+(1,1) azkeneraino (9,6). Zenbat bide daude sarean ibilbide minimoa
+eginez? Sol=1287
+
+34
+Konbinatoria
+2.43 Demagun balantza bat et a17 pisu desberdinak ditugula. Pisu ba-
+koitzeko ale bat dago. Balantza-platertxo bietan pisuak jarriz gero
+pisuen arteko diferentzia erabil daiteke zerbaiten pisua kalkulatzeko.
+Zenbat pisu desberdinak kalkulatu daitezke?
+2.44 Zenbat modu daude
+{1, 2, 3, 4, 5, 6, 7, 8} zenbakiak idazteko
+1.goa+8.ena=2.ena +7.ena =3.ena +6.ena =4.ena +5.ena posizioen
+baturak konstanteak izateko.
+2.45 Zenbat modu daude 35 gozoki banatzeko A,B eta C mutilen artean,
+hurrengo baldintzak kontutan harturik:
+1. gozoki guztiak berdinak dira eta mutil bakoitzak 4 hartuko ditu
+gutxienez.
+2. gozokiak 3 motatakoak dira Limoizkoak :15, Marrubizkoak : 11
+eta Txokolatezkoak : 9
+3. gozoki guztiak desberdinak dira, eta hurrengo moduan bana-
+tzen dira, A:20 gozoki, B:4 gozoki eta C:11 gozoki
+2.46 Suposa dezagun seinale kode bat osatzeari ekin diogula. Hiru ikur
+mota erabiliko ditugu: bokalak (5), kontsonanteak (22) eta zenba-
+kiak (10). Seinaleak 9 ikur izango ditu: 2 bokal, 4 kontsonante eta 3
+zifra (denak errepika daitezke). Esaterako, 8abboceob, k2kk63kiu,
+5s4tdglao,...Zenbat seinal ezberdin osa daiteke? Elementu berberak
+baina ordena ezberdinean dituzten seinaleak ezberdinak dira.
+E.: 7379064000000
+2.47 Demagun 17 bola ditugula, berdinak kolorea izan ezik, 3 gorriak
+(G), 5 berdeak (B) eta 9 oriak (O).
+Kalkulatu zenbat ilara dauden hurrengo baldintzak betetzen dire-
+nean:
+1. bola berde guztiak jarraian daude.
+2. 4 edo 5 bola berde jarraian daude.
+3. 3 bola berde baino gehiago ez daude jarraian.
+4. bola berde 2 (edo gehiago) ez daude jarraian.
+5. bola berdeak jarraian eta bola gorriak jarraian.
+
+ariketak
+35
+6. bai bola berdeak bai bola gorriak jarraian.
+7. kolore bereko bolak jarraian.
+2.48 Karta espainolak P40 = 40! modutan ordenatzen dira.
+Kalkulatu zenbat modu daude kartak ordenatzeko hurrengo baldin-
+tzak betetzen badira:
+1. Lehenengo karta kopakoa da.
+2. Lehenengo eta bigarren karta palo desberdinekoak dira.
+3. Errege guztiak jarraian daude.
+4. Palo bereko kartak jarraian daude (palo guztiak).
+5. Errege bi ala gehiago ez daude jarraian.
+6. kopako karta guztiak ezpata guztien aurretik daude.
+7. Lehenengo urrezko karta lehenengo ezpataren aurretik dago eta
+hau lehenengo koparen aurretik.
+8. Lehenengo 8 karta artean:
+(a) ez dago urrezko kartarik
+(b) urrezko karta bakarra dago
+(c) urrezko karta bi daude (solik bi)
+(d) urrezko karta bi baino gehiago daude.
+9. Kopako bata eta urrezko bataren artean basto bi (soilik bi)
+daude beste paloko edozer egon daitekela.
+
+
+3
+Probabilitatea
+3.1
+Esperimentuak, Gertaerak
+Behaketa lortzeko prozesua esperimentua da, hauek bitan sailkatzen dira.
+Esperimentu determinista baldintza berdinak erabiltzen direnean lortutako
+emaitza berdina da, fenomenoa errepikatzen da.
+Zorizko esperimentua ezin da esan zein izango den emaitza, baina emaitza
+posibleak ezagunak dira.
+Deﬁnizioa 30. Zorizko esperimentua egiterakoan, posible diren oinarrizko
+emaitzen bilduma lagin espazioa, Ω, deitzen da. Hau da, edozein gertaera,
+lagin espazioaren azpimultzo bat bezala kontsidera daiteke.
+Esperimentu baten emaitza zorizko gertaera edo sinpleago gertaera deitzen
+da.
+Gertaera sinpleak, esperimentuaren emaitza sinpleak, lagin espazioan idaz-
+ten diren elementuak.
+Gertaera segurua, Ω, oinarrizko gertaera guztien bilduma.
+Ezinezko gertaera,
+∅, elementurik ez duena.
+
+38
+Probabilitatea
+3.2
+Gertakizunen algebra
+A multzoan, A, B ⊂ A, deﬁnitzen dira:
+• Bilketa. A ∪ B x elementuen bilketa, A-n edo B-n dagoela, hau da,
+A
+∪ B = {x, x ∈ A edo x ∈ B}.
+• Ebaketa. A ∩ B, A-n eta B-n dauden elementuen bilduma, A ∩ B =
+{x, x ∈ A and x ∈ B}.
+• Gertaera osagarria, ¯
+A. A-n ez dauden elementuen multzoa, x
+∈ ¯
+A
+→
+x /
+∈ A.
+• A, B gertaerak disjuntuak direla esaten da baldin eta soilik baldin A ∩
+B =
+∅
+• Partekotasuna. A ⊂ B = x, x ∈ A → x ∈ B, hau da A gertazen denean
+B betetzen da
+• Diferentzia
+• Diferentzia simetrikoa
+Propietateak
+• ¯
+Ω =
+∅, ¯∅ = Ω,
+¯
+A = A
+• Ω ∪ A = Ω, ∅ ∪ A = A, A ∪ ¯
+A = Ω
+• Ω ∩ A = A, ∅ ∩ A = ∅, A ∩ ¯
+A =
+∅
+• Propietate idenpotentea, A ∪ A = A, A ∩ A = A.
+• Banakorra
+(A
+∪ B) ∩ C = (A ∩ C) ∪ (B ∩ C)
+(A
+∩ B) ∪ C = (A ∪ C) ∩ (B ∪ C)
+• Trukakorra (A ∩ B) = (B ∩ A), (A ∪ B) = (B ∪ A)
+
+3.3. Probabilitatearen deﬁnizioa
+39
+• “de Morgan”-en legean
+A
+∪ B = ¯
+A
+∩ ¯
+B
+(3.1)
+A
+∩ B = ¯
+A
+∪ ¯
+B
+(3.2)
+3.3
+Probabilitatearen deﬁnizioa
+Probabilitatea zihurgabetasunaren neurketa kontsidera daiteke.
+Probabilitatea P :
+P(Ω) → [0, 1] aplikazioa da, P(Ω),Ω multzoaren parteen
+multzoa dela.
+Aplikazio hau deﬁnitzeko hainbat modu daude:
+• Maiztasun-probabilitatea.
+Zorizko saiakuntza bat gertatzen da, eta biz A edozein gertaera. Errepi-
+katzen badugu n bider baldintza berdinetan zorizko saiakuntza:
+fn =
+A gertatzeko posibilitateak
+n
+=
+fi(maiztasun absolutua)
+n
+P (A) = lim
+n→ ∞
+fi
+n
+• Subjetiboa,sineskeran oinarritua. Hainbat saiakuntza ezin dira errepika-
+tu baldintza berdinetan eta pertsona batek gertaera bati buruz ematen
+duen balioa, dituen balioen arabera probabilitate subjektiboa da.
+• Laplacena (s.XVIII-XIX), deﬁnizio klasikoa, gertakizun batekin loturiko
+probabilitatea aldeko kasuen eta kasu totalen arteko zatidura da, azter-
+tzen diren kasuak ekiprobableak badira.
+• Probabilitate geometrikoa: B ⊂ A ⇒ P (B) =
+S(B)
+S(A)
+Ariketak
+3.1 “Loteria primitiva” irabaztearen probabilitatea.
+3.2 Mus partidan 3 errege eta batekoa eskuratzearen probabilitatea,
+kartak lehenengo aldiz banatzen direnean.
+
+40
+Probabilitatea
+1. 4 erregekin jokatzen bada.
+2. 8 erregekin jokatzen bada.
+C.P. = C40,4 C.F:= C4,3 · C4,1 P =
+16
+91390
+3.3 Lagun bi elkar geratu dira, 12h 13h, ordubeteko tartean, baina
+lehena iristen dena 20 min bakarrik itxaroten geratuko da.
+Zein da aurkitzearen probabilitatea?
+Sol:
+xi Ai iritsi den ordua bada,orduan ⇒
+|x1 − x2| ≤ 20
+0 ≥ xi ≥ 60
+x2 ≤ x1 + 20
+x2 ≥ x1 − 20
+P (B) =
+200
+360
+=
+5
+9
+3.4 Zirkulu batean karratu bat inskribatzen da, puntu bat ausaz auke-
+ratzen bada, zein izango da puntua karratuaren barruan egotearen
+probabilitatea?. E: 2
+π
+3.4
+Probabilitatearen deﬁnizio axiomatikoa
+Andrei Nikolaevici Kolmogorov (1933).
+Ω multzoaren multzo familia,
+P(Ω) ﬁnitua, inﬁnitua zenbakarri ala ez,
+σ-algebra izango da baldin eta solilik baldin hurrengo baldintzak betetzen
+baditu:
+i
+∅ ∈ P(Ω)
+ii Si A
+∈ P(Ω) ⇒ ¯
+A
+∈ P(Ω)
+iii
+P(Ω)-ko multzoen edozein segida zenbakarriarentzako A1, A2, ... ⇒
+i
+Ai
+∈ P(Ω)
+
+3.4. Probabilitatearen deﬁnizio axiomatikoa
+41
+i-tik eta ii-tik Ω
+∈ P(Ω) frogatzen da.
+ii-tik eta iii-tik
+P(Ω), ( i Ai ∈ P(Ω)) azpimultzoen arteko ebakiduraren
+iterazio zenbakarriarekiko σ-algebra itxia dela frogatzen da.
+Lagin espazioa Ω, n elementuz osaturik badago,
+P(Ω) multzoak 2n elemen-
+tu izango du gehienez.
+Card(
+P(Ω)) =
+n
+i=0
+Cn,i = (1 + 1)
+n
+Ariketak
+3.5 Ω =
+{a, e, i, o, u} multzoa erabili, egiaztatu:
+1. Hurrengo multzoa:
+A = {∅, (e), (a, i), (o, u), (a, e, i, o, u), (a, i, o, u), (e, o, u), 
+(a, e, i)}
+σ-algebra dela.
+2.
+B σ-algebra ez dela.
+B = {∅, (e), (a, i), (o, u), (a, e, i, o, u), (e, o, u), (a, e, i)}
+Deﬁnizioa 31. (Ω,
+P(Ω)) bikotea, non Ω posibleak diren emaitzen multzoa,
+eta
+P(Ω) Ω gaineko σ-algebra diren, espazio neurgarri (inglesez measurable)
+esaten zaio, edo espazio probabiligarria.
+Deﬁnizioa 32.
+P(Ω) σ-algebra emana,P : P(Ω) → [0, 1] funtzioa probabilita-
+tea da betetzen bada:
+1
+∀ω ∈ P(Ω) P (ω) ≥ 0
+2 P (Ω) = 1
+3 Baldin A1, A2, ... gertaera elkar-ukatzailen multzoa izanez, orduan
+P
+i
+Ai =
+i
+P (Ai)
+
+42
+Probabilitatea
+Propietateak:
+• P (∅) = 0
+• P ( ¯
+A) = 1
+− P (A)
+• baldin A ⊂ B ⇒ P (A) ≤ P (B)
+• P (∪iAi) ≤
+i P (Ai), bereziki
+P (A
+∪ B) = P (A) + P (B) − P (A ∩ B)
+P (A)-ri balioa esleitzeko gehienetan Laplacen kriterio jarraitzen da,hau da,
+Ω multzoa oinarrizko n gertaeraz osaturik badago,eta ekiprobableak suposa-
+tzen badira P (Ai) =
+1
+n
+Ariketak
+3.6 Txanpon bat bi aldiz botatzen da. Zein da gutxienez aurpegi bat
+lortzearen probabilitatea? P (A) = 3
+4
+3.7 Zentral telefoniko baten deiak hurrengo modutan sailkatzen dira
+(H) norbaitek hitz egiten badu, (D) datuak bidaltzen badira, mo-
+dem, fax. Luzeraren arabera (L),luzeak 3 minutu baino luzeagoak,
+(C) laburrak badira. Telefono-konpainiak hurrengo datuak ditu:
+P (H) = 0.7, P (L) = 0.6, P (HL) = 0.35. Kalkulatu:
+P (DL); P (D
+∪ L); P (HC); P (H ∪ L); P (H ∪ D); P (LC)
+0.25, 0.65, 0.35, 0.95, 1, 0
+3.8 Kutxa batean 8 bola beltz, (B), eta 7 bola zuri (Z) daude.
+1. Zoriz bola bat kanporatzen bada, Zein da zuria izatearen pro-
+babilitatea?
+2. Zoriz bola bi kanporatzen badira, Zein da biak zuriak izatearen
+probabilitatea?
+3. Zoriz bola bi kanporatzen badira, Zein da gutxienez bat zuria
+izatearen probabilitatea?
+
+3.4. Probabilitatearen deﬁnizio axiomatikoa
+43
+4. Zoriz bola bi birjarpenarekin kanporatzen badira, Zein da biak
+zuriak izatearen probabilitatea?
+7
+15 ,
+C7
+,
+2
+C15
+,
+2
+, 1 − P ( ¯
+A) = 1 −
+C8
+,
+2
+C15
+,
+2
+,
+V R8
+,
+2
+V R15
+,
+2
+3.9 Dado bi botatzen dira.
+1. Zein da biak batekoak izatearen probabilitatea?
+2. Zein da batekoa eta bikoa lortzearen probabilitatea?
+3. Zein da emaitzen batura bikoita izatearen probabilitatea?
+4. Emaitzen batura bikoitia izanez, zein da batura 8 izatearen
+probabilitatea?
+1
+V R6
+,
+2
+,
+2
+V R6
+,
+2
+, 1
+2 ,
+5
+18
+3.10 Bi burtsen edukiera berdina da, 4 bola zuri (Z) eta 6 bola beltz
+(B). Burtsa bakiotzetik zoriz 3 bola kanporatzen dira, lehenegotik
+birjarpenarekin eta bigarrenetik birjarpenik gabe.
+Kalkulatu burtsaren batean 2 bola zuri eta bola beltz bat lortzearen
+probabilitatea.
+P (2b1n con reposici´
+on = A) =
+P R2
+,
+1
+V R4
+,
+2
+V6
+,
+1
+V R10
+,
+3
+= 3 4
+10
+4
+10
+6
+10 .
+Birjarpenik gabeko kasuan:
+P (2b1n sin reposici´
+on = B) =
+P R2
+,
+1
+V4
+,
+2
+V6
+,
+1
+V10
+,
+3
+= 3 4
+10
+3
+9
+6
+8 =
+C4
+,
+2
+C6
+,
+1
+C10
+,
+3
+= 3
+10 .
+P (A ∪ B) = P (A) + P (B) − P (A ∩ B) = P (A) + P (B) − P (A)P (B) = 627
+1250
+3.11 Kutxa batean 2 bola beltz (B) eta bola zuri bat daude, eta joku
+batean bola bat zoriz kanporatzen da birjarpenarekin, jokua buka-
+tzen da bola zuri bat kanporatzen denean. Bola beltza kanporatzen
+den bakoitzean beste bola beltz bat sartzen da kutxan.
+Kalkulatu bola ziria kanporatzearen probabilitatea n.garren saia-
+kuntzan.
+P (1N ∩ 2N ∩ · · · ∩ (n − 1)N ∩ nB) =
+2
+(n+1)(n+2)
+3.12 Kalkulatu 10 lagunen artean gutxienez bi lagunen urtebetetzea
+egun berean izatearen probabilitatea. Eta lagunak N badira?
+Kalkulatu N-ren balioa probabilitatea P = 0.5 izateko.
+N = 10 ⇒ P = 0.117
+N = 40 ⇒ P = 0.891
+
+44
+Probabilitatea
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+y
+20
+40
+60
+80
+x
+Irudia 3.1: probabilitatea N-ren baliokekiko
+3.5
+Baldintzatutako Probabilitatea
+Lagin espazioan, Ω gertaera bat suertatu dela ezagutzen da (B), eta beste ger-
+taera baten probabilitatea kalkulatu nahi da (A), honen probabilitatea lehe-
+nengo gertaerak aldatuko du ala ez du aldatuko.
+Deﬁnizioa 33. Esaten da A gertaeraren probabilitatea B gertaeraz baldin-
+tzatua, P (B) > 0, hurrengo balioari:
+P (A/B) =
+P (A
+∩ B)
+P (B)
+(3.3)
+Adibidea 3.1
+Dado bat botatzen da
+1. Zein da 6 lortzearen probabilitatea?
+2. Zein da 6 lortzearen probabilitatea jakinez emaitza bikoitia izan
+dela?
+3.6
+Gertaera independienteak
+Ikusi denez gertaera batek beste baten probabilitatea alda dezake. Gertaera
+batek,P (B) > 0, aldeko eragina du beste gertaera batean, (A), baldin eta (B)
+
+3.6. Gertaera independienteak
+45
+betetzen denean (A)-ren probalitatea handitzen bada P (A/B) > P (A) eta
+kontrako eragina P (A/B) < P (A) betetzen bada.
+Zer gertatuko da ez badu inolako eraginik?, P (A/B) = P (A) eta
+P (A/B) =
+P (A
+∩ B)
+P (B)
+= P (A)
+denez,
+P (A
+∩ B) = P (A) · P (B)
+Deﬁnizioa 34. Gertaera bi A eta B independienteak dira baldin eta
+P (A
+∩ B) = P (A) · P (B)
+Adibidea 3.2
+Telefono konpainia batek hartutako hirunaka azterzen dira, eta sailka-
+tzeko hurrengo kriterioa erabiltzen da, (H) norbaitek hitz egiten badu,
+(D) datuak bidaltzen badira,(modem, fax). Multzo bat (HHH) ala
+(HDH) izango da, datuen arabera P (HHH) = P (DDD) = 0.2 eta
+beste aukera guztiak ekiprobableak dira.
+Deﬁnitzen da (N = i,
+i = 1 . . . 3) hitzegindako deiak multzo batean.
+Kalkulatu
+1. P (HDH)
+2. P (N = 2)
+3. P (N
+≥ 1)
+4. P (HHD/N = 2)
+5. independienteak al dira N = 2 eta N
+≥ 1
+0.1, 0.3, 0.8, 1
+3
+Deﬁnizioa 35.
+{Ai}, nuluak ez diren gertaera disjuntuen bilduma, Ω-ren
+partiketa izango baldin eta
+∪iAi = Ω.
+
+46
+Probabilitatea
+3.7
+Probabilitate totala
+{Ai} gertaera disjuntuen bilduma emana, non
+P (Ai) = 0
+eta
+B
+⊂ ∪iAi
+Orduan
+P (B) =
+n
+i=1
+P (B/Ai)P (Ai)
+B
+Ω
+A1
+A2
+A3
+A4
+A5
+A6
+A7
+Ariketak
+3.13 Muntaketa-katean hiru makina A1, A2, A3 erabiltzen dira produk-
+tu bera,H, fabrikatzeko, 64, 56, 40 pieza orduko egiten dituztelarik
+hurrenez hurren. A1-ko %80a, A2-ko %90a eta A3 makinak eginda-
+ko piezen %96a ondo betetzen dute saiakuntza-bankuaren analisia.
+Lanaldia bukatzen denean zoriz pieza bat hartzen da, zein da ona
+izatearen probabilitatea?
+Sol: P (A1) = 0.4 P (A2) = 0.35 P (A3) = 0.25
+P (S) =
+3
+i=1 P (S/Ai)P (Ai) = 0.875
+3.14 Kutxa bi daude, V eta W , V -n 5 bola zuri, (Z), eta 3 bola beltz,
+(B), daude,W -ean 3 bola zuri, (Z), eta 4 bola beltz, (B), daude.
+V tik bola bat kanporatzen da eta kolorea idatzi ondoren W -n sar-
+tzen da. Gero beste bola bat kanporatzen da, baina orain V tik
+
+3.8. Bayes-en teorema
+47
+kanporatutako lehenengo bola beltza izan bada, ala W -tik lehenen-
+goa zuria izan bada. Zein da kanporatutako bigarren bola zuria
+izatearen probabilitatea?
+Sol: P (2Z) = P (2Z/1Z)P (1Z) + P (2Z/1B)P (1B) = 223
+448
+3.15 Kutxa bi ditugu, V eta W , V -n 9 bola zuri, (Z), daude eta bola
+beltz, (B), bakarra, W -n 8 bola zuri, (Z), daude. Eragiketa bi
+egiten dira lehenengoan, zoriz, 4 bola kanporatzen dira V tik eta W -
+n sartzen dira, bigarrenean W tik 4 bola kanporatu eta V -n sartzen
+dira. Zein da, bigarren operazio hau egin ondoren bola beltza V -n
+egotearen probabilitatea? Sol: P = 11
+15
+3.8
+Bayes-en teorema
+Dada una colecci´
+on
+{Ai} de sucesos disjuntos arbitrarios tales que
+P (Ai) = 0
+y
+B
+⊂ ∪iAi
+Entonces
+P (Ai/B) =
+P (B/Ai)P (Ai)
+n
+i=1 P (B/Ai)P (Ai)
+=
+P (B/Ai)P (Ai)
+P (B)
+Ariketak
+3.16 3.13 ariketaren datuak erabili kalkulatzeko zein den H produktua
+akastuna izanez A1 makinak egina izatearen probabilitatea.
+Sol: 0.64
+3.17 Hiri bateko biztanleak hurrengo moduan banatzen dira: %70 zu-
+riak, %25 beltzak, eta %5 ekialdekoak. Zurien %70, beltzen %60
+eta ekialdekoen %10 katolikoak. Kalkulatu:
+a) biztanlegoaren pertsona bat zoriz aukeratua katolikoa izatearen
+probabilitatea.
+b) katolikoa den bat zuria izatearen probabilitatea.
+
+48
+Probabilitatea
+Sol: a)0.645 b)0.7597
+3.18 Konpainia batek 3 garraio-linea betetzen ditu, kamioien %50a,
+%30a eta %20a, 1go, 2.en eta 3.en linean egiten dute hurrenez hu-
+rren. Kamioi bat matxuratuta egotearen probabilitatea %3-koa da
+lehenengo linean, %4-a bigarrenean eta %1koa hirugarrenean. Kal-
+kulatu:
+a) kamioi bat matxuratuta egotearen probabilitatea.
+b) Jakinez kamioia matxuratuata dagoela bigarren lineakoa iza-
+tearen probabilitatea.
+Sol: a)0.029 b) 0.4138
+3.19 Fabrikatzaile batek 1000 teleikuslen artean galdeketa bat egin du,
+emaitzak hurrengoak direla: iragarkia ikusi dutenak, I = 200, ira-
+garkia ikusi eta produktua erosi dutenak, E = 50, iragarkia ikusi
+barik produktua erosi dutenak, C = 20.
+Zein da iragarkia ikusi duen norbaitek produktua erostearen proba-
+bilitatea?
+Zein da produktua erosi duen batek iragarkia ikusi izatearen pro-
+babilitatea?
+Sol: P (E/I) = 1
+4 , P (I /E) =
+10
+14
+3.20 Zein probabilitate dago 2 dado n aldiz jaurti eta gutxienez behin
+bietan 6 ateratzeko? E.: 1 − 35
+36
+n
+Biz p probabilitate hori. Zenbat aldiz jaurti behar dira p = 1/2
+izateko? E.: 25
+3.21 Halako ausazko jokoan, J1, J2 eta J3 jokalariek a1, a2 eta a3 e
+postura egin dute hurrenez hurren. Bakarrak irabaziko du, eta diru
+guztia patrikaratuko, alegia, a1 + a2 + a3 e. Demagun p1 = 0.26
+dela J1ek irabazteko probabilitatea, p2 = 0.34 J2rena, eta J3k 700
+e
+jokatu duela. Zein kantitate behar dute izan a1ek, a2k eta a3k
+jokoa berdinkidea izateko? E.: a1 = 455, a2 = 595
+3.22 Dado bat bi aldiz bota da eta gertatutako emaitzen batura 5 baino
+handiagoa da. Zein probabilitate dago batura 7 baino handiagoa
+izateko? E.: 15/26
+
+3.8. Bayes-en teorema
+49
+3.23 Hiru jokalari daukagu, J1, J2 eta J3. Dado bat jaurtiko dute: lehe-
+nengo J1ek, gero J2k, ondoren J3k, berriz J1ek,...Jokoa bukatuko
+da beraietako batek 6a ateratzen duenean. Kalkulatu beraietako
+bakoitzak zein probabilitate duen irabazteko. E.: 36/91, 30/91,
+25/91
+3.24 12. Ausazko joko batean, kubo berezi bat daukagu, bi aurpegi zuri
+eta lau berde dituena. Bi jokalari daukagu. Batari zuria dagokio;
+besteari berdea. Jaurtialdi erronda bakoitzean, bi egingo ditu zuria
+dagokionak eta bat berdea dagokionak. Zuria dagokionak irabazi-
+ko du zuri gehiago ateratzen baditu berdea dagokionak berdeak
+baino,eta alderantziz.
+Erronda bat burututakoan hainbana bukatzen badute, beste erron-
+da bati ekitzen zaio. Zein da zuria dagokionak irabazteko probabi-
+litatea? E.: 7/15
+3.25 Loteria bat n zenbakiz osaturik dago, eta m dira saririk edukiko
+dutenak.
+Kalkulatu k boletu dituen pertsona bati saririk tokatzeko probabi-
+litatea. E.: 1
+−
+(
+n−m
+k
+)
+(
+n
+k)
+
+
+4
+Ausazko aldagaiak
+Edozein esperimentuan ezaugarri ugari daude aztertzeko eta neurtzeko,
+esperimentatzaileak fenomenoa ikuspegi konkretu batetik aztertuko du.
+Orokorki esperimentu baten emaitza zenbakizko balio batekin elkartuko
+da arau bat erabiliz, adibidez hegazkin bateko bidaiarien ekipajearen pisua.
+Arau hau, esperimentua eta balioa lotzeko erabilitakoa, ausazko aldagaia
+deituko dugu.
+4.1
+Ausazko aldagaia
+Deﬁnizioa 36. Ω-n deﬁnitutako funtzioa
+X : Ω
+→ R
+ω
+→ X(ω) = x
+ausazko aldagaia izango da1 baldin
+• {X ≤ x} multzoa gertaera bat da edozein dela x-en balioa:
+∀x ∈ R ∃ A = {ω ∈ Ω|X(ω) ≤ x} ∈ P(Ω)
+1Ikusi adibidez [4], [5]
+
+52
+Ausazko aldagaiak
+• {X = ∞} eta {X = −∞} gertaeraren probabilitatea 0 da.
+Bigarren baldintzak ez du esaten X balioa ezin dela
+∞ ala −∞ izan, esaten
+du balio hauek hartzearen probabilitatea nulua dela.
+Adibideak
+• Enpresa batek 48 telefono-linea ditu, aldagai posible bat, X, zenbat dau-
+den okupatuta izango litzateke. Tartea=[0. . . 48]
+• Txanpon bat hiru aldiz botatzen da, deﬁnitzen da, X, ausazko aldagaia
+“lortutako aurpegi kopurua”. Tartea = [0 . . . 3]
+• Ausazko aldagai batek kalkulu konkretu bat egiteko behar diren erloju
+zikloak neurtzen ditu. Tartea = [1. . .
+∞)
+Ausazko aldagai baten balio posibleak
+{0, 1} badira Bernoulliren aldagaiak
+deitzen dira.
+4.2
+Probabilitate, dentsitate funtzioa
+Deﬁnizioa 37. Ausazko aldagai bat diskretoa da, har dezakeen balioak diskre-
+toak badira, hau da, balioak Sx =
+{x1, x2, ...xn, ...} dira ﬁnituak ala inﬁnituak
+zenbakarriak.
+X aldagaiaren balio bakoitzari ω-ren gertaera bat dagokio eta X a.a.ren
+probabilitate funtzioak esaten du nola banatzen den probalitatea gertaera guz-
+tien artean, hau da X a.a.ren balioen artean.
+Adibidea 4.1
+Osagai elektronikoen 10 lote daude erosleari bidaltzeko prest, osagai
+akastunen banaketa hurrengoa da:
+lotea
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+osagai akastunak
+0
+2
+0
+1
+2
+0
+0
+0
+1
+2
+
+4.3. Probabilitate banaketaren funtzioa
+53
+zoriz lote bat aukeratzen da, biz X a.a. osagai akastunen kopurua.
+Xen balioak Sx =
+{0, 1, 2} dira, p(0) X = 0 izateraren probabilitatea
+izanez, hurrengoa idatz daiteke:
+p(0) = P (X = 0) = p(1, 3, 6, 7, 8 loteak bidali) =
+5
+10
+=
+1
+2
+p(1) = P (X = 1) = p(4, 9 loteak bidali) =
+2
+10
+=
+1
+5
+p(2) = P (X = 2) = p(2, 5, 10 loteak bidali) =
+3
+10
+Ausazko aldagaiaren balioak eta probabilitatearen banaketak probabilita-
+te ( dentsitate ) funtzioa, zehazten dute.
+Ausazko aldagai diskretoaren probabilitate funtzioa, probabilitate ba-
+naketa edo masa funtzioa (pmf: probability mass function) pX(xk) = P [X =
+xk,
+∀xk ∈ Sx] probabilitateen multzoa da.
+Propietateak
+• 0 ≤ p(xi) ≤ 1
+•
+i p(xi) = 1
+4.3
+Probabilitate banaketaren funtzioa
+Probabilitate funtzioa deﬁnitu dugunez, edozein gertakizunari A probabilita-
+te balio bat dagokio modu honetan X < xk gertaera guztien probabilitate
+metatuaren multzoa probabilitate banaketa esaten zaio.
+X a.a. diskretoaren probabilitate funtzioa p(x) bada, banaketa funtzio
+metatua F (x) hurrengo modura deﬁnitzen da:
+F (x) = P (X
+≤ xk) =
+xi≤xk
+xk∈Sx
+p(xi)
+Banaketa diskretoaren kasuan lortutako funtzioak mailakatuak dira.
+
+54
+Ausazko aldagaiak
+4.4
+Dentsitate funtzioa
+Deﬁnizioa 38. Ausazko aldagai bat jarraia dela esaten da, har dezakeen ba-
+lioen multzoa inﬁnitu ez-zenbakarria bada.
+Biz X ausazko aldagai jarraia, f (x) dentsitate funtzioa dela esaten da bal-
+din eta ondoko baldintzak betetzen baditu :
+• f(x) ≥ 0
+− ∞ < x < +∞
+•
+−∞
++∞ f (x)dx = 1
+X a.a. jarraia bada, p(X = a) = 0
+4.5
+Banaketa funtzioa
+Deﬁnizioa 39. X a.a. jarraiaren dentsitate funtzioa f (x) bada, banaketa
+funtzio metatua F (x) honela deﬁnitzen da:
+F (x) = P (X
+≤ x) =
+x
+−∞
+f (x)dx
+Dentsitate funtzioa, banaketa funtziotik lor daiteke:
+dF (x)
+dx
+= f (x).
+P (a
+≤ X ≤ b) =
+b
+a
+f (x)dx = F (b)
+− F (a)
+Adibidea 4.2
+Botika baten ontziaren bizitza baliagarria hurrengo dentsitate funtzioa
+duen ausazko aldagaia da:
+f (x) =
+
+
+
+20000
+(x+100)3
+x > 0
+0
+beste kasuetan
+
+4.6. Ausazko aldagai baten itxaropena eta bariantza
+55
+Aurkitu:
+1. botika honen ontziaren bizitza baliagarria gutxienez 200 eguneta-
+koa izateko probabilitatea.
+2. botika honen ontziaren bizitza baliagarria 50 eta 200 egun artekoa
+izateko probabilitatea.
+3. Kalkulatu bere banaketa funtzioa.
+soluzioa:
+a) 1
+9 b)
+1
+3 c) F (x) =
+x(x+200)
+(x+100)
+2
+x > 0;
+4.6
+Ausazko aldagai baten itxaropena eta bariantza
+Deﬁnizioa 40. Biz X a.a.bere dentsitate funtzioa f (x) izanik, X-en itxaro-
+pen matematikoa edo batezbestekoa honela deﬁnitzen da:
+• X diskretua bada:
+µ = E(x) =
+x
+xf (x)
+• X jarraia bada:
+µ = E(x) =
+∞
+−∞
+xf (x)dx
+Orokortuz,
+Deﬁnizioa 41. g(X) funtzioaren batezbestekoa edo itxarotako balioa honela
+deﬁnitzen da:
+• X diskretua bada: E(g(X)) =
+i f (xi)g(xi)
+• X jarraia bada: E(g(X)) =
+∞
+−∞ g(x)f (x)dx
+Hurrengoa frogatzen da:
+E(aX + b) = aE(X) + b
+
+56
+Ausazko aldagaiak
+Deﬁnizioa 42. Biz X a.a. bere dentsitate funtzioa f (x) eta batezbestekoa µ
+izanik X-en bariantza honela deﬁnitzen da:
+• X diskretua bada:
+σ2 = E((x
+− µ)
+2) =
+x
+(x
+− µ)
+2f(x)
+• X jarraia bada:
+σ2 = E((x
+− µ)
+2) =
+∞
+−∞
+(x
+− µ)
+2f(x)dx
+Propietateak:
+• σ2 = E(x2) − µ2.
+• σ2aX+b = a
+2σ2
+σ desbidazio tipikoa deitzen da da.
+4.7
+Momentuen funtzio sortzaileak
+Momentuen kalkulua egiteko modu bat momentuen funtzio sortzailearen itxa-
+ropena erabiltzea da.
+4.7.1
+Jatorriarekiko momentuak
+Deﬁnizioa 43. etX funtzioaren itxaropena momentuen funtzio sortzailea
+deitzen da, eta mX(t) adierazten da, itxaropena existitzen bada edozein dela
+tren balioa
+−c < t < c tartean c balio positiboa dela.
+mX(t) = E[etX] =
+x
+etx p(x)
+X diskretoa
+mX(t) = E[etX] =
+∞
+∞
+etx f (x) dx X jarraitua
+
+4.7. Momentuen funtzio sortzaileak
+57
+Momentuen funtzio sortzailea existitzen bada
+−c < t < c tartean, deribatuak
+deﬁnituta daude t = 0 denean eta ez da inolako arazorik egongo jatorriaren
+inguruko momentuen kalkulua egiteko.
+Adibidea 4.3
+d
+dt
+E etX
+t=0
+=
+= E
+d
+dt
+etX =
+= E X etX
+t=0
+=
+= E(x) = µX
+Ariketak
+4.1 Kalkulatu jatorriarekiko bigarren ordenako momentua.
+Lortutako emaitza bera lortzen da funtzio esponentzialaren hedapena era-
+biltzen bada,
+E etX = E 1 + tX +
+t2 X2
+2!
++
+· · · +
+tr Xr
+r!
++ . . .
+eta deribatuak t = 0 puntuan ebaluatzen badira.
+4.7.2
+Momentu zentralak
+Deﬁnizioa 44. et(X−µ) funtzioaren itxaropena momentuen funtzio-sortzaile
+zentrala deitzen da, eta mX−µ(t) adierazten da, itxaropena existitzen bada
+edozein dela tren balioa
+−c < t < c tartean c balio positiboa dela.
+mX−µ(t) = E[et(X−µ)] =
+x
+et(x−µ) p(x)
+X diskretoa
+mX−µ(t) = E[et(X−µ)] =
+∞
+∞
+et(x−µ) f (x) dx X jarraitua
+
+58
+Ausazko aldagaiak
+Teorema 4.1. Markov-en Teorema
+Biz X a.a. ez-negatiboa eta biz µ bere batezbestekoa, orduan,
+∀k > 0
+P (X
+≥ k) ≤
+µ
+k
+Teorema 4.2. Tchebyshev-en Teorema
+Biz X a.a. bere batezbestekoa E[X] = µ eta bariantza ﬁnitua V ar[X] = σ2
+izanik. Orduan,
+∀k > 0
+P (
+|X − µ| ≥ kσ) ≤
+1
+k2
+Ariketak
+4.2 Dispositibo batek 3 osagai independentez osaturik dago. Lehenen-
+go osagaia akasduna izateko probabilitatea 0′1 da, bigarrena akas-
+duna izateko probabilitatea 0′2 eta hirugarrena akasduna izateko
+probabilitatea 0′1 da. Biz X dispositiboak duen osagai akasdunen
+kopurua.
+a) Zeintzuk dira X-en balioak?
+b) Kalkulatu X-en probabilitate funtzioa eta adierazi graﬁkoki.
+c) Kalkulatu gutxienez osagai akasdun bat izateko probabilitatea.
+d) Kalkulatu 2 osagai akasdun baino gutxiago izateko probabili-
+tatea.
+e) Kalkulatu batezbesteko osagai akasdun kopurua eta desbidera-
+pen tipikoa.
+4.3 Telefonogune batean ahots-deiak eta datu-deiak jasotzen dira pro-
+babilitate berarekin, goiz batean 3 dei jaso dira,. X-ek ahots deiak
+adierazten du, Y -k datu-deiak eta R = XY
+a) Adierazi lagin espazioa.
+b) Adierazi 3 aldagaien heina.
+c) Kalkulatu aldagai bakoitzaren dentsitate funtzioa eta banaketa
+funtzioa.
+4.4 X ausazko aldagaiak hurrengo probabilitate funtzioa dauka:
+
+ariketak
+59
+p(x) =
+
+
+
+
+
+k
+xi
+xi = 1, 2, 3
+0
+beste kasuetan
+a) Kalkulatu k-ren balioa f probabilitate funtzioa izateko.
+b) P (x = 1)
+c) P (x
+≥ 2)
+d) P (x > 3)
+4.5 Biz X laborategi batean erreakzio-tenperaturaren errorea adieraz-
+ten duen a.a., bere dentsitate funtzioa hurrengoa delarik:
+f (x) =
+
+
+
+
+
+x2
+k
+− 1 ≤ x ≤ 2
+0
+beste kasuetan
+a) Kalkulatu k
+b) Kalkulatu F (x)
+c) Kalkulatu P (0 < x
+≤ 1)
+4.6 Biz f (x), X ausazko aldagaiaren dentsitate funtzioa bere heina
+H = [0′5, b] delarik, b > 0′5 eta f (x) = λ(2x2
+− 5x − 12)
+∀x ∈
+H/λ
+≡ ktea den.
+a) Nolako baldintzak bete behar dituzte b eta λ parametroek?
+b) Kalkulatu X-en banaketa funtzioa.
+4.7 Dado bat airera botatzen da eta biz X jaurtiketa bakoitzean lortzen
+den puntuazioa.
+a) Kalkulatu probabilitate funtzioa
+a) Kalkulatu 4 puntu baino gutxiago lortzeko probabilitatea jaki-
+nik 2 baino gehiago lortu direla.
+4.8 Pertsona batek kasinoan zoriz hurrengo multzotik 2 ﬁtxa aukera-
+tzen ditu: 1eko 3 ﬁtxa, 10eko 2 ﬁtxa eta 20eko 3 ﬁtxa. Biz X
+aukeratutako euroak adierazten duen a.a.
+a) Kalkulatu bere probabilitate funtzioa.
+b) Kalkulatu hartutako batezbesteko euro kopurua.
+
+60
+Ausazko aldagaiak
+4.9 Torloju jakin batzuen luzera zentimetrotan hurrengo dentsitate fun-
+tzioaren bidez adierazten da.
+f (x) =
+
+
+
+3
+4
+(1
+− x)(3 − x)
+x
+∈ [1, 3]
+0
+beste kasuetan
+a) Kalkulatu batezbesteko luzera eta desbiderapen tipikoa.
+b) Torloju bat onargarria da bere luzera 1′7 eta 2′4 artean badago.
+Kalkulatu torloju bat onargarria izateko probabilitatea.
+4.10 Hilabetean marka jakin baten kotxe kopuruaren salmeten seriea
+behatuz, hilabetean saldutako kotxeen batezbestekoa 120 dela eta
+desbiderapen tipikoa 10 dela ikusi da; baina ez da ezagutzen hilero-
+ko salmenten probabilitate-banaketa. Lortu:
+a) Hileroko salmentak 100 eta 140 kotxe artean egoteko probabi-
+litatea.
+b) Tarterik txikiena gutxienez hilabeteko salmenten %95-a tarte
+horretan egoteko.
+4.11 Langile baten urteko diru-sarreren batezbestekoa 3 milioi m.u.-koa
+da eta desbiderapen tipikoa 0′2-koa.
+a) Lortu ‘bere diru-sarrerak 2′4 eta 3′6 milioi artean aurkitzen dira’
+gertaeraren probabilitatearen behe-bornea.
+b) Lortu ‘bere diru-sarrerak 4 milioi m.u. gaindituko du’ gertaeraren
+probabilitatearen goi-bornea.
+4.12 Alakanteko herri jakin bateko fabrika batean egunean batezbesteko
+150 zapata-pare ekoizten dira 10 pareko desbiderapen tipikoarekin.
+Lortu produkzioa 135 zapata-pare baino gehiago baina 165 baino
+gutxiago den egunen proportzio minimoa.
+4.13 Osagai elektroniko baten batezbesteko bizia 70 ordukoa bada eta
+desbiderapen tipikoa 5 ordutakoa, zein da zoriz aukeratutako pieza
+batek 60 ordu baino gehiago eta 80 ordu baino gutxiago irauteko
+probabilitatea?
+
+5
+Banaketa diskretuak
+Ausazko aldagaia diskretua esaten da aldagaiaren balioen multzoa diskre-
+tua bada, aldagaiaren balio ﬁnituak eta zenbakarriak dira.
+Deﬁnizioari dagokionez, oro har, aldagai aleatorio diskretu bat f (xi) apli-
+kazio bat da, non honako hau betetzen baita:
+f (xi) = P (X = xi) = pi
+5.1
+Banaketa uniforme diskretua
+X zorizko aldagaiak banaketa uniforme diskretua jarraitzen duela esaten da
+baldin eta berak hartzen dituen n balioek, x = x1, x2, ..., xn, probabilitate bera
+badute, hau da,
+p(x, n) =
+1
+n
+,
+x = x1, x2, ..., xn
+(5.1)
+µ =
+n
+i=1 xi
+n
+σ2 =
+n
+i=1(xi − µ)
+2
+n
+(5.2)
+Ariketak
+
+62
+Banaketa diskretuak
+5.1 Demagun pertsona batek autobusa hartzeko itxaron behar duen
+denbora, T, 1 eta 20 minutu artekoa dela, demagun T-k banaketa
+uniforme diskretua jarraitzen duela.
+1. Kalkulatu bere probabilitate funtzioa.
+2. Kalkulatu itxaron behar duen batezbesteko denbora eta barian-
+tza.
+3. Kalkulatu 15 minutu edo gehiago itxaroteko probabilitatea.
+4. Kalkulatu x denbora itxaroteko probabilitatea jakinik autobusa
+8 minutu baino gehiago atzeratzen dela.
+soluzioa:
+a.- fT (t) =
+1
+20 x = 1, 2, . . . , 20
+b.- µ = 21
+2 σ
+2 = 65
+8
+c.- F (15 ≤ x ≤ 20) = 3
+4
+d.- P (x|t > 8) =
+1/20
+12/20 x = 9, 10, . . . , 20
+5.2
+Bernouilli-ren banaketa, B(p)
+Bi emaitza posible dituen esperimentu batetik abiatzen gara. Emaitza bati
+arrakasta deituko diogu eta besteari porrota. Hurrengo eskematik Bernoulli-
+ren banaketa deﬁnituko dugu: X
+∈ B(p) non p arrakasta izateko probabilita-
+tea den.
+esperimentua
+→
+arrakasta
+→ {x = 1} p(arrakasta) = p(x = 1) = p
+porrota
+→ {x = 0}
+p(porrota) = p(x = 0) = 1
+− p = q
+• Probabilitate funtzioa
+p(x) =
+1
+− p x = 0
+p
+x = 1
+⇐⇒ p(x) = px(1 − p)1−x;
+x = 0, 1
+• Batezbestekoa edo itxaropena eta bariantza
+mx = α1 = E(x) =
+xp(x) = 0(1
+− p) + 1p = p
+α2 = E(x2) =
+x2p(x) = 02(1
+− p) + 12p = p
+σ2x = α2 − α
+2
+1 = p − p
+2 = p(1 − p) = pq
+
+5.3. Banaketa binomiala, B (n, p)
+63
+• Momentuen funtzio sortzailea
+ϕx(t) =
+etxip(xi) = et·0(1
+− p) + etlp = (1 − p) + pet
+5.3
+Banaketa binomiala, B (n, p)
+• Eraiketa
+– Bernouilli-ren eskematik abiatzen gara
+– Esperimentua n aldiz errepikatzen dugu era independentean
+– Esperimentu bakoitzak p parametro berdina izango du, esperi-
+mentu berdina errepikatzen gaudelako. Ez dugu esaten esperimen-
+tu guztien emaitza berdina denik baizik eta esperimentu honetan
+arrakasta izateko probabilitatea berdina dela.
+X1
+∈ B(p)
+X2
+∈ B(p)
+..
+.
+..
+.
+Xn
+∈ B(p)
+
+
+
+
+
+
+
+
+
+
+
+
+
+indep. Xi
+∈ B(p)bakoitza −→
+
+
+
+
+
+
+
+E(Xi) = p
+V ar(Xi) = p(1
+− p) = pq
+ϕX
+i (u) = (1 − p) + pe
+iu = q + peiu
+Esperimentu bakoitzean, emaitza arrakastatsua bada 1 balioa har-
+tuko du eta porrota baldin bada 0 balioa. Beraz, arrakasta kopurua
+zenbatzeko nahikoa dugu 1-en kopurua zenbatzea. Gainera, zeroak
+eta batekoak batzen badira, emaitza batekoen kopurua izango da.
+Orduan, p parametrodun banaketa binomiala deﬁnitzen da
+n Bernouilli-ren batura modura.
+X = X1 + X2 + . . . + Xn
+−→ X ∈ B(n, p)
+• Probabilitate funtzioa
+p(x) =
+n
+x
+px(1
+− p)n−x x = 0, 1, . . . , n; non
+n
+x
+=
+n!
+x!(n
+− x)!
+n
+0
+= 1;
+n
+1
+= n;
+n
+n
+= 1
+
+64
+Banaketa diskretuak
+• Batezbestekoa edo itxaropena eta bariantza
+E(X) = E(X1 + X2 + . . . + Xn) = E(X1) + E(X2) + . . . + E(Xn) =
+= p + p + . . . + p = np
+σ2x = V ar(X) = V ar(X1 + X2 + . . . + Xn) =
+= V ar(X1) + V ar(X2) + . . . + V ar(Xn) =
+= p(1
+− p) + p(1 − p) + . . . + p(1 − p) = np(1 − p) = npq
+• Momentuen funtzio sortzailea
+ϕx(u) = ϕx
+1 (u)
+·ϕx
+2 (u) . . . ϕxn (u) =
+(1
+− p) + peiu . . . (1 − p) + peiu =
+= (1
+− p) + peiu
+n
+• Batukortasun propietatea
+Izan bitez X1, X2, p parametro berdineko binomial independenteak,
+orduan, beraien batura p parametroko banaketa binomiala da.
+X1
+∈ B(n1, p)
+X2
+∈ B(n2, p)
+−→ X1 + X2 ∈ B(n1 + n2, p)
+• Simetri propietatea
+X
+∈ B(n, p) → X a.a: arrakasta kopurua
+Y
+∈ B(n, 1 − p) → Y a.a: porrot kopurua
+X + Y = n
+• Bernoulliren banaketa binomiala da, n = 1 denean.
+• Banaketa binomiala kontrol prozesuetan erabiltzen da.
+Ariketak
+5.2 Kontsezionario batean saltzen den kotxeen %40ak diesel motorra du.
+Lortu saldutako 4 kotxetatik diesel motorra duten kotxe kopuruaren
+probabilitate funtzioa . soluzioa: a.- B(x; 4, 0.4)
+
+5.4. Pascalen banaketa edo geometrikoa
+65
+5.3 Enpresa baten 12 zerbitzariak batezbeste 10 egunetik behin honda-
+tzen dira.
+1. Zein da egun batean 3 zerbitzari baino gehiago hondatzeko pro-
+babilitatea?
+2. Zein da hondatutako zerbitzarien batezbesteko kopurua?
+soluzioa:
+a)1 −
+3
+x=0 B(x; 12, 0.1) = 0.0256, b) µ = 1.2
+5.4 Kutxa batean 9 bola berdin daude 1etik 9ra zebakituak, bola bat
+atera zenbakia idatzi eta itzuli egiten dugu. Zenbat bola atera behar
+dira 7a duen bolaren bat ateratzeko gutxienez 0’9ko probabilitatea-
+rekin? soluzioa: a)1 − P (0) ≥ 0.9 → 1 − ( 8
+9 )
+n ≥ 0.9 → n ≥ 19.55 → n = 20
+5.4
+Pascalen banaketa edo geometrikoa
+Binomialaren baldintzak kontutan hartuz, azter dezagun hurrengo ausazko
+aldagaia: X =porroten kopurua lehenengo arrakasta lortu arte.
+Honela deﬁnituriko aldagaiaren banaketa geometrikoa da.
+• Probabilitate funtzioa
+P (X = x) = qx p
+x = 0, 1, 2, 3, . . .
+• Batezbestekoa edo itxaropena eta bariantza
+E(X) =
+q
+p
+σ2x = V ar(X) =
+q
+p2
+5.5
+Banaketa binomial negatiboa
+Binomialaren baldintzak kontutan hartuz, Pascalen banaketa orokorragoa egin-
+go da, X =porroten kopurua arrakastak n izan arte.
+Honela deﬁnituriko aldagaiaren, n eta p parametroen banaketa binomial
+negatiboa da, BN (n, p).
+
+66
+Banaketa diskretuak
+• Probabilitate funtzioa
+P (X = x) =
+n+x−1
+x
+qxpn
+x = 0, 1, 2, 3, . . .
+• Batezbestekoa edo itxaropena eta bariantza
+E(X) =
+nq
+p
+σ2x = V ar(X) =
+nq
+p2
+5.6
+Banaketa hipergeometrikoa H(N, n, k)
+Banaketa binomialean arrakasta izateko probabilitateak konstante irauten du
+saiakuntzaren n errepikapenetan eta banaketa hipergeometrikoan aldiz arra-
+kasta izateko probabilitatea aldatu egiten da saiakuntzaren errepikapenetan.
+Orduan, laginaren elementuen aukeraketa itzulera gabe egiten bada arrakasta
+izateko probabilitatea ez da konstantea.
+• Kontsidera dezagun N tamainako populazioa k eta N −k tamaina duten
+bi azpipopulazio disjuntutan banatuak.
+Itzulera gabeko n tamainako lagin aleatorioa aukeratzen da, n
+≤ N.
+X aldagai aleatorio hipergeometrikoa azpipopulazio bati dagokion ele-
+mentu kopurua bezala deﬁnitzen da, populazio osotik itzulera gabeko n
+tamainako lagin aleatorio bat kontsideratzen dugunean.
+• Probabilitate funtzioa
+X-en probabilitate-funtzioa kalkulatzeko Laplace-ren erregela erabiliko
+dugu.
+Kasu posibleak: CN,n =
+N
+n
+Aldeko kasuak:
+k
+x
+N
+− k
+n
+− x
+
+5.6. Banaketa hipergeometrikoa H(N, n, k)
+67
+P (X = x) =
+k
+x
+N
+− k
+n
+− x
+N
+n
+non:
+* x
+≤ n, x ≤ k ⇒ x ≤ Min(n, k)
+* x
+≥ 0, n − x ≤ N − k ⇒ x ≥ Max(0, n − N + k)
+• Batezbestekoa
+E[X] = n
+· p
+• Bariantza
+V AR(X) = n
+· p · q ·
+N
+− n
+N
+− 1
+• Oharra. Banaketa hipergeometrikoa serieko fabrikazio baten kalitate
+kontrol estatistikoan erabiltzen da. Kontrolpean dagoen loteak k ele-
+mentu on baditu eta N
+− k akasdunak, itzulera gabeko n tamainako
+lagina kontsideratzerakoan, lagin horretan agertutako elementu onen ko-
+purua jakin nahi dugu fabrikazio prozesuko kalitatea adierazteko. Baita
+iritzi inkestetan ere erabiltzen da.
+5.6.1
+Banaketa hipergeometrikoa eta binomialaren arteko er-
+lazioa
+Binomiala
+Hipergeometrikoa
+Batezbestekoa
+np
+np
+Bariantza
+npq
+npq
+N
+− n
+N
+− 1
+batezbesteko berdinak eta antzeko bariantzak
+N
+− n
+N
+− 1
+≈ 1 ⇒ bariantza berdinak.
+
+68
+Banaketa diskretuak
+Biz X : H(N, n, k), N oso handia bada n-rekin konparatuz,
+⇒ H(N, n, k) ≈
+N →∞
+B(n, p)
+praktikan: N
+≥ 50
+n
+≤ 0′1 · N
+5.7
+Poisson-en banaketa P (λ)
+Era aleatorio eta guztiz independentean ematen diren gertaera aztertzeko era-
+biltzen da. λ batezbestekodun Poisson-en banaketa deritzo. Adibidez, su-
+permerkatuko ilaran itxaron beharreko denbora zehazteko edo internet-era
+sartzeko tardatzen den denbora zehazteko erabiltzen da.
+• Probabilitate funtzioa
+p(x) = e−λ
+λx
+x!
+;
+x = 0, 1, 2 . . . ;
+λ > 0
+• Batezbestekoa edo itxaropena eta bariantza
+mx = α1 = λ
+α2 = λ2 + λ
+V ar(x) = α2
+− α21 = λ
+• Momentuen funtzio sortzailea
+ϕx(u) = eλ(e
+iu−1)
+• Batukortasun propietatea
+Poisson-en banaketen batura egin ahal izateko, baldintza bakarra inde-
+pendienteak izatea da.
+X1
+∈ P (λ1)
+X2
+∈ P (λ2)
+indep.
+−→ X1 + X2 ∈ P (λ = λ1 + λ2)
+
+5.8. Konbergentzia: Binomialetik Poisson-era
+69
+5.8
+Konbergentzia: Binomialetik Poisson-era
+X
+∈ B(n, p)
+n
+≥ 30
+p
+≤ 0′1
+X
+∈ B(n, p) ∼
+= P (λ = np)
+pbinomial(x = x0)
+≈ pPoisson(x = x0)
+Ariketak
+5.5 Zerbitzari batean konektatzen den internauta kopurua orduko 40koa
+da.
+1. Kalkulatu ordu batean 60 konektatzeko probabilitatea.
+2. Kalkulatu 10 minututan 10 erabiltzaile konektatzeko probabi-
+litatea.
+soluzioa: a.- P (X = 60) = e−404060/60! = 6.79 · 10−4, b.- λ = 40/60 ∗ 10 P
+(X =10) =
+0.06
+5.6 Bizi-aseguru agente batek, bizi-aseguruak kontratatzeko bezero po-
+sibleei bisita egiten die. Bisiten % 60ak arrakasta du eta asegurua
+kontratatzen du. Deﬁnitu ausazko saiakuntza honi elkartutako al-
+dagai aleatorioa eta kalkulatu batezbestekoa eta bariantza.
+5.7 X aldagai aleatorioa n=15 eta p=0,3 parametroko banaketa bino-
+mialaren arabera banatzen da. Lortu:
+1. P( X = 2 )
+2. P( X
+≤ 2 )
+3. Batezbestekoa eta bariantza.
+5.8 Ordezkari batek egunean 5 bisita egiten ditu bere arloko dendetan,
+eta aurreko bisiten ondorioz bisita bakoitzean eskaera bat egiteko
+probabilitatea 0, 4 dela badaki. Lortu:
+1. Eguneko eskaera kopuruaren banaketa.
+2. Probabilitate funtzioaren adierazpen graﬁkoa.
+3. Eguneko eskaera kopuruaren batezbestekoa.
+
+70
+Banaketa diskretuak
+4. Bariantza.
+5. Egun batean egindako eskaera kopurua 1 eta 3 artean egoteko
+probabilitatea.
+6. Gutxienez bi eskaera egiteko probabilitatea.
+5.9 Hitzaldi batetara joateko 20 gonbidapen bidali zaizkie ikasleen or-
+dezkariei. Esperientziagatik gonbidapena onartzeko probabilitatea
+0, 8 dela ezagutzen da. Gonbidapen hauek onartzeko erabakiak in-
+dependenteak badira, kalkulatu gehienez 17 ikaslek gonbidapenak
+onartzeko probabilitatea.
+5.10 Enpresa eraikitzaile batean batezbesteko istripu kopurua hilean 3-
+koa da. Kalkulatu:
+1. Hilabete batean istripu bat ere ez gertatzeko probabilitatea.
+2. Hilabete batean 5 istripu baino gutxiago gertatzeko probabili-
+tatea.
+3. Hilabete batean 3 istripu baino gehiago gertatzeko probabilita-
+tea.
+4. Hilabete batean 3 istripu gertatzeko probabilitatea.
+5.11 Ospitale batetako larrialdi-zerbitzu batek orduko 5 gaixo jasotzen
+ditu. Kalkulatu:
+1. Zoriz aukeratutako ordu batean 3 gaixo jasotzeko probabilita-
+tea.
+2. Zoriz aukeratutako ordu batean 3 gaixo baino gutxiago jasotze-
+ko probabilitatea.
+5.12 Denda batean batezbesteko 2 pertsona sartzen dira 5 minuturo, eta
+5 minuturo dendan sartzen den pertsona kopurua X aldagai aleato-
+rioa da eta Poisson-en banaketaren arabera banatzen da. Lortu:
+1. X aldagaiaren probabilitate banaketa.
+2. 5 minututan pertsona bat ere ez, pertsona bat bakarrik eta 2
+pertsona sartzeko probabilitateak.
+3. 2 pertsona baino gehiago sartzeko probabilitatea.
+
+5.8. Konbergentzia: Binomialetik Poisson-era
+71
+5.13 Kalkulagailu batean, lan-ordu bakoitzean batezbesteko 2 transisto-
+rek huts egiten dute. Huts egiten duen transistore kopurua Poisson-
+en banaketaren arabera banatzen dela ezagutzen da. Kalkulagailua
+ez dabil 6 transistorek edo gehiagok huts egiten badute. Kalkulatu
+3 ordutan transistore batek ere ez huts ez egiteko probabilitatea.
+5.14 Fakultateko lehen klasera heltzen den mutil ikasle kopurua Poisson-
+en banaketaren arabera banatzen da, batezbestekoa minutuko 2
+ikasletakoa izanik. Klase berdinera heltzen den neska ikasle kopu-
+rua ere Poisson-en banaketaren arabera banatzen da, batezbestekoa
+minutuko 3 ikasletakoa izanik. Demagun heltze biak independen-
+teak direla, lortu: minutu batean 4 ikasle baino gutxiago heltzeko
+probabilitatea.
+5.15 Herrialde jakin batetik inportatutako artikuluen % 1a akasduna
+da. 30 artikulu dituen lagin bat aukeratzen badugu, kalkulatu be-
+raietako hiru edo gehiago akasdunak izateko probabilitatea.
+5.16 Herrialde jakin batean ospatutako ezkontzen %85a, katolikoa da.
+Egun batean 20 ezkontza ospatzen badira, kalkulatu:
+1. Ezkontza katoliko kopuruaren banaketa.
+2. Egun horretan itxarotako ezkontza katoliko kopurua.
+3. Egun horretan 3 ezkontza ez-katoliko baino gutxiago egoteko.
+4. Herrialde horretan ezkontza bat zibila bakarrik izateko proba-
+bilitatea 0,05ekoa da. Zein da, 160 ezkontzen artean, 11 edo
+gutxiago zibilak izateko probabilitatea? probabilitatea.
+5.17 Bi langilek dituzten batezbesteko telefono-deiak 5 eta 4 dira eta
+baten eta bestearen deiak independenteak dira. Kalkulatu:
+1. Bi langileen eguneko telefono-dei kopuruaren banaketa.
+2. Aurreko banaketaren itxaropena eta bariantza.
+3. Egun batean, bien artean dei bat edo gutxiago izateko proba-
+bilitatea.
+5.18 Mezulari batek gutunak banatzen ditu hiri batean eta igorpenen
+% 20en joan-etorria 500 metro baino gehiagokoa da. Egun batean
+10 gutun ditu banatzeko. Kalkulatu:
+
+72
+Banaketa diskretuak
+1. 2 joan-etorrik 500 metro baino gehiago izateko probabilitatea.
+2. 2 joan-etorrik 500 metro baino gutxiago izateko probabilitatea.
+3. 3 edo 3 joan-etorri baino gutxiagok 500 edo 500 metro baino
+gutxiago izateko probabilitatea.
+4. 500 metro baino gehiago, 500 edo 500 metro baino gutxiago eta
+joan-etorri guztien itxarotako kopurua eta bariantza.
+5.19 Kamioi baten gurpilen zuloen batezbestekoa 0, 3-koa da ibilitako
+50.000 km bakoitzeko. Kamioiak 100.000 km egiten baditu, kalku-
+latu:
+1. Zulorik ez izateko probabilitatea.
+2. 3 zulo baino gutxiago izateko probabilitatea.
+5.20 Hornitzaile batek 80 produktuko loteak bidaltzen ditu. Akasdun
+kopurua %5ekoa bada.
+1. Bidalitako lote batean zein da pieza akasdun bat egoteko pro-
+babilitatea?
+2. Zein da bi pieza akasdun edo gehiago egoteko probabilitatea?
+Lote bat onartzen bada bere pieza akasdun kopurua gehienez
+4 izanik.
+3. Zein da lote bat onartzeko probabilitatea jakinik bere %8a akas-
+duna dela?
+4. Zein da lote bat errefusatzeko probabilitatea bere akasdun ko-
+purua %5ekoa bada?
+soluzioa: a.- B(x = 1; 80, 0.05) = 0.069 hurbilketa erabiliz P (λ = 4)
+(x = 1) = 0.073
+c.- λ = np = 6.4 ⇒ p(x ≤ 4) = 0.24
+d.-λ = np = 4 ⇒ p(x > 4) = 0.35
+5.21 Aireko linea jakin batek hegazkinetan dauden plazak baino txartel
+gehiago saltzen ditu konturatu delako ez dela aurkezten batezbeste
+bidaiarien %1a. 198 plaza duden hegaldi batetarako 200 txartel
+saldu dira. Zein da aurkeztutako bidaiari guztiak plaza izateko
+probabilitatea?
+soluzioa:
+Poisson-en araberaλ = 2 P (X ≥ 2) = 1 − P (X = 0) + P (X = 1) =
+1 − 3e−2 = 0.594. binomialaren arabera P (X ≤ 198) = 1 − P (X > 198) = 1 −
+(200 199)0.991990.011 − (200 200)0.99200 = 0.595
+
+5.8. Konbergentzia: Binomialetik Poisson-era
+73
+
+
+6
+Banaketa jarraituak
+6.1
+Banaketa uniformea U (a, b)
+Beraren p.d.f.a konstantea da [a, b] tartean, alegia, ausazko aldagaia tarteko
+edozein tokitan egotea berdinki probablea da. Banaketa funtzioa hurrengoa
+da:
+f (x; α) =
+
+
+
+1
+b
+− a
+x
+∈ (a, b)
+0
+beste kasu guztietan
+(6.1)
+Froga dezagun f (x) dentsitate funtzioa dela.
+• f(x) ≥ 0
+•
++∞
+−∞
+f (x)dx =
+b
+a
+1
+b
+− a
+dx = 1
+• Banaketa funtzioa
+F (x) = P (X
+≤ x) =
+
+
+
+
+
+
+
+
+
+0
+x < a
+x
+− a
+b
+− a
+a
+≤ x ≤ b
+1
+x > b
+
+76
+Banaketa jarraituak
+• Batezbestekoa edo itxaropena
+E[X] =
+b
+a
+x
+·
+1
+b
+− c
+dx =
+1
+b
+− c
+x2
+2
+b
+c
+=
+1
+2(b
+− a)
+(b2
+− a
+2) =
+b + a
+2
+• Bariantza
+V (X) = E[X2]
+− E[X]2 =
+b2 + a2 + ab
+3
+−
+(b + a)2
+4
+=
+(b
+− a)2
+12
+E[X2] =
+b
+a
+x2
+1
+b
+− c
+dx =
+1
+3(b
+− a)
+x3
+b
+a
+=
+b3
+− a3
+3(b
+− c)
+=
+b2 + a2 + ab
+3
+• Momentuen funtzio sortzailea
+g(t) = E[etx] =
+b
+c
+etx
+·
+1
+b
+− a
+dx =
+1
+b
+− a
+etx
+t
+b
+c
+=
+1
+t(b
+− a)
+(etb
+−e
+tc)
+t =
+0
+Adibidea 6.1
+Ikasle batek 30 m-40 m behar ditu etxetik fakultatera heltzeko. Egu-
+nero heldu behar da klasera 9 : 00-etarako.
+a) Ze ordutan atera behar da etxetik ez heltzeko berandu klasera
+0′8-ko probabilitatearekin?
+b) Klasera joateko behar duen batezbesteko denbora.
+c) Bariantza:
+X :
+U[30, 40]
+f (x) =
+
+
+
+1
+40
+− 30
+=
+1
+10
+30
+≤ x ≤ 40
+0
+beste kasuetan
+a) P (X
+≤ t) = 0′8
+t =?
+P (X
+≤ t) =
+t
+30
+1
+10
+dx =
+1
+10
+(t
+−30) ⇒
+1
+10
+(t
+−30) = 0
+′8 ⇒ t−30 =
+8
+⇒ t = 38
+
+6.2. Banaketa esponentziala
+77
+b) E[X] =
+40 + 30
+2
+=
+70
+2
+= 35
+c) V AR(X) =
+(b
+− a)2
+12
+=
+(40
+− 30)2
+12
+=
+100
+12
+= 8′33min
+Ariketak
+6.1 Autobus baten irtenaldia 8 : 30tan da, bigarren geltokiraino bi-
+daiaren iraupena 15 eta 30 minutuko tartean dago, probabilitate
+berdinarekin iristen da edozein momentutan, bigarren geltokiaren
+irteera 8 : 55tan bada, zein da berandu ibiltzearen probabilitatea?.
+6.2
+Banaketa esponentziala
+Ausaz gertatzen diren jazoerak ditugu, baina bataz besteko tasa konstante
+batez (λ denbora unitateko). A.a. esponentzialak neurtzen du zenbat denbora
+pasako den jazoera bat gertatu denetik hurrengoa gertatu arte.
+Banaketa hau Poissonen banaketarekin erlazionatuta dago. Tarte jakin
+batean gertatutako gertaera kopuruak Poissonen banaketa jarraitzen badu, or-
+duan, gertaeren gertaldien arteko denbora adierazten duen aldagai aleatorioak
+banaketa exponentziala jarraitzen du.
+Banaketa exponentzialaren adibideak:
+- ilada batera elkarren segidako heltzeen ateko denbora
+- ekipo batzuren iraupen denbora
+- zerbitzu baten prestazioren iraupena
+X zorizko aldagai jarraiak λ parametrodun banaketa exponentziala jarrai-
+tzen du baldin eta bere dentsitate funtzioa hurrengoa bada:
+f (x; λ) =
+λ e−λx
+x > 0
+0
+x
+≤ 0
+(6.2)
+f (x) ondo deﬁnituta dagoen dentsitate-funtzioa da.
+
+78
+Banaketa jarraituak
+i) x > 0
+f (x)
+≥ 0
+ii)
++∞
+0
+λ e−λ xdx =
+−e
+−λ x
++∞
+0
+= 1
+• Banaketa funtzioa
+F (X) = P (X
+≤ x) =
+
+
+
+x
+0
+λ e−λ xdx = 1
+− 3
+−λ x
+0
+x
+≤ 0
+Γ(P ) =
++∞
+0
+xp−1
+· e
+−xdx = (p − 1)! p ∈ N
+• Itxaropena
+E[X] =
++∞
+0
+x
+· λ e
+−λ xdx =
+t = λ x
+dx =
+dt
+λ
+=
++∞
+0
+t
+λ
+e−tdt =
+1
+λ
+Γ(2) =
+1
+λ
+• Bariantza
+E[X2] =
++∞
+0
+x2λ e−λ xdx =
+t = λ x
+→ x = t/λ
+dt
+λ
+= dx
+=
+1
+λ 2
++∞
+0
+t2
+· e
+−tdt =
+1
+λ 2
+Γ(3) =
+2
+λ 2
+V AR(X) = E[X2]
+− (E[X])2 =
+2
+λ 2
+−
+1
+λ 2
+=
+1
+λ 2
+• Momentuen funtzio sortzailea
+gx(t) = E[etx] = λ
++∞
+0
+etx
+· e
+−λ xdx = λ
++∞
+0
+ex(t−λ )dx =
+λ
+t
+− λ
+ex(t−λ )
++∞
+0
+=
+−λ
+t
+− λ
+• Bizirapen funtzioa
+X
+≡ ekipo baten iraupen denbora, bere banaketa funtzioa
+F (X) = P (X
+≤ x) =
+1
+− e−λ x
+x > 0
+0
+x
+≤ 0
+Ekipoak x ordu edo x ordu baino gutxiago funtzionatzeko probabilitatea
+ematen digu.
+
+6.2. Banaketa esponentziala
+79
+Aldiz, hurrengo adierazpenak:
+1
+− F (X) = P (X > x) =
+e−λ x
+x > 0
+1
+x
+≤ 0
+bizirapen-funtzioa deitzen da eta ekipoak x ordu baino gehiago funtzio-
+natzeko probabilitatea ematen digu.
+• Ahazte-propietatea edo memoria falta
+Demagun X aldagai aleatorioak ekipo baten iraupen denbora adieraz-
+ten duela eta Exp(a) banaketa jarraitzen duela. Behatu da ekipoa t
+ordutan (t > 0) lan egiten egon dela matxurarik gertatu gabe eta eki-
+poari gelditzen zaion iraupen-denboraren banaketa kalkulatu nahi dugu.
+X′ = X
+− t aldagaiak adierazten du, X > t baldintzaturik. Orduan,
+P (X′
+≤ x/X > t) =P (X − t ≤ x/X > t) =
+=P (X
+≤ x + t/X > t) =
+P (X
+≤ x + t ∩ x > t)
+P (X > t)
+=
+=
+P (t < X < x + t)
+P (X > t)
+=
+t+x
+t
+λ e−λ xdx
++∞
+t
+λ e−cxdx
+=
+=
+e−λ t
+− e−λ (t+x)
+e−λ t
+= 1
+− e
+−λ x,
+x > 0
+X
+→ F (X) =P (X ≤ x) = 1 − e
+−λ x,
+x > 0
+P (X
+− t ≤ x/X > t) =P (X ≤ x) = 1 − e
+−cx,
+x > 0
+Beraz, ekipoari geratzen zaion iraupen-denboraren banaketa ez dago eki-
+poa funtzionatzen egon den denboraren menpe.
+Analogikoki; X : Exp(λ )
+⇒ P (X > x+t/X > t) = P (X > x)
+x, t > 0
+
+80
+Banaketa jarraituak
+6.3
+Banaketa normala, N(µ, σ)
+Biz X aldagai aleatorio jarraia, µ batezbesteko eta σ2 bariantzako banaketa
+normalari jarraitzen zaio, baldin bere dentsitate-funtzioa ondokoa bada:
+f (x) =
+1
+σ
+√
+2π
+e
+−
+(x−µ)2
+2σ2
+− ∞ < x < +∞
+µ, σ
+∈ R
+σ > 0
+f (x) dentsitate-funtzioa da:
+• f(x) ≥ 0
+•
++∞
+−∞
+1
+σ
+√
+2π
+· e
+−
+(x
+− µ)2
+2σ2
+dx =
+1
+√
+2π
++∞
+−∞
+e−
+z2
+2
+dz =
+1
+√
+2π
+·
+√
+2π = 1
+Dentsitate-funtzioak ondoko propietateak betetzen ditu:
+1.- f (x) jarraia da R-n.
+2.- f (x) simetrikoa da x = µ-rekiko f (x
+− µ) = f(x + µ)
+∀x ∈ R
+3.- OX ardatza f -ren asintota horizontala da.
+lim
+x→−∞
+f (x) = 0
+lim
+x→+∞
+f (x) = 0
+4.- f hertsiki gorakorra da x < µ denean:
+f ′(x) =
+−
+(x
+− µ)
+σ2
+·
+1
+σ
+√
+2π
+e
+−
+(x
+− µ)2
+2σ2
+=
+−
+(x
+− µ)
+σ2
+· f(x) > 0
+5.- f ′(x) hertsiki beherakorra da x > µ denean:
+f ′(x) =
+−
+(x
+− µ)
+σ2
+·
+1
+σ
+√
+2π
+· e
+−
+(x
+− µ)2
+2σ2
+=
+−
+(x
+− µ)
+σ2
+f (x) < 0
+
+6.3. Banaketa normala, N(µ, σ)
+81
+6.3.1
+N
+(µ, σ) eta N (0, 1) arteko erlazioa
+• Proposizioa: X : N(µ, σ), orduan z =
+x
+− µ
+σ
+aldagai tipiﬁkatuak, N (0, 1)
+banaketa jarraitzen du.
+Fz(z) = P (Z
+≤ z) = P
+X
+− µ
+σ
+≤ z = P (X ≤ µ + σz) = F x(µ + zσ)
+deribatuz:
+fz(z) = fx(µ + σz)σ =
+1
+√
+2π
+e
+−
+(µ + σz
+− µ)2
+2σ2
+=
+1
+√
+2π
+e−z
+2/2
+N (0, 1) banaketaren dentsitate funtzioa.
+• Proposizioa: Z : N(0, 1) ⇒ X = Zσ + µ
+N (µ, σ)
+F (x) = P (X
+≤ x) = P (σZ + µ ≤ x) = P Z ≤
+x
+− µ
+σ
+= Fz
+X
+− µ
+σ
+deribatuz
+f (x) =
+1
+σ
+fz
+x
+− µ
+σ
+=
+1
+σ
+√
+2π
+e
+−
+(x
+− µ)2
+2σ2
+→ N(µ, σ)-ren d.f.
+Ezaugarriak
+• Banaketa-funtzioa
+F (x) = P (X
+≤ x) =
+1
+σ
+√
+2π
+x
+−∞
+e
+−
+(x
+− µ)2
+2σ2
+dx
+− ∞ < x < +∞
+X : N (µ, σ)
+→ z =
+x
+− µ
+σ
+: N (0, 1)
+• Momentuen funtzio-sortzailea
+Z : N (0, 1)
+gz(t) = E[etz] =
++∞
+−∞
+etz
+1
+√
+2π
+e
+−
+z2
+2 dz = et
+2/2
+X = σz + µ
+gx(t) = E[etx] = E[et[σz+µ]] = etµE[etσz] = etµ
+· e
+1
+2
+t2σ2
+= e
+tµ+
+1
+2
+t2σ2
+• Batezbestekoa
+
+82
+Banaketa jarraituak
+Jatorriarekiko momentuak
+αr = E[Xr]t=0 = g
+r)
+x (0) =
+drgx(t)
+dtr
+t=0
+r = 1 eginez, lehenengo ordenako momentua lortzen da
+dgx(t)
+dt
+t=0
+= (µ + tσ2)
+· e
+tµ+
+1
+2
+t2σ2
+t=0
+= µ
+µ banaketaren batezbestekoa da.
+f (x) simetrikoa da µ-rekiko, hau da, P (X
+≤ µ) = P (x ≥ µ) = 0′5,
+beraz, µ banaketaren mediana izango da.
+x = µ, f -ren maximoa eta f -ren moda da, beraz, N (µ, σ) banaketan,
+batezbestekoa, mediana eta moda bat datoz.
+• Bariantza
+Bigarren ordenako momentua kalkulatuko da, E(X2)
+E[X2] =
+d2gx(t)
+∂t2
+t=0
+= σ2
+· e
+tµ+ 1
+2 t
+2σ2 + (µ + tσ2)2 · etµ+
+1
+2 t
+2σ2
+t=0
+= σ2 +
+µ2
+V AR(X) = E(X2)
+− µ2 = σ2 + µ2 − µ2 = σ2
+Orduan, N (µ, σ) kurbak eta x1 eta x2 balioek mugatzen duten azalera eta
+N (0, 1) kurbak eta z1 eta z2-k mugatzen duten azalera berdinak dira.
+P (x1
+≤ X ≤ x2) = P (z1 ≤ Z ≤ z2)
+X : N (µ, σ)
+Z : N (0, 1)
+Orduan N (0, 1)-en taula erabiliko dugu.
+
+6.3. Banaketa normala, N(µ, σ)
+83
+Taulen erabilera
+N (0, 1)-en taula.
+Banaketa normalaren dentsitate-funtzioa µ = 0 batezbestekoarekiko sime-
+trikoa da.
+F (0) = P (Z
+≤ 0) = 0′5
+F (
+−0′11) = P (Z ≤ −0′11) = 0′4562
+−0′11 ⇒ lehenengo 1a: taularen lehenengo lerroan.
+bigarren 1a: ezkerreko lehenengo zutabean.
+1- F (a) = P (Z
+≤ a)
+a > 0 denean
+2- P (Z
+≥ a) = 1 − P (Z ≤ a) = 1 − F (a)
+3- P (Z
+≤ −a) = F (−a) = 1 − F (a) = P (Z ≥ a)
+4- P (a
+≤ Z ≤ b) = F (b) − F (a)
+X : N (µ, σ), askotan ondoko probabilitateak kalkulatu behar ditugu:
+1- P (µ
+− σ) ≤ X ≤ µ + σ = P (|x − µ| ≤ σ)
+P
+µ
+− σ − µ
+σ
+≤
+X
+− µ
+σ
+≤
+µ + σ
+− µ
+σ
+= P
+−σ
+σ
+≤
+X
+− µ
+σ
+≤
+σ
+σ
+=
+P (
+−1 ≤ Z ≤ 1) = P (Z ≤ 1) − P (Z ≤ −1) = P (Z ≤ 1) − P (1 −
+P (Z
+≤ 1)) =
+2P (Z
+≤ 1) − 1 = 1′6826 − 1 = 0′6826
+2- P (µ
+− 2σ ≤ X ≤ µ + 2σ) = P (|x − µ| ≤ 2σ)
+P
+µ
+− σ + µ
+σ
+≤
+X
+− µ
+σ
+≤
+µ + 2σ
+− µ
+σ
+= P (
+−2 ≤ Z ≤ 2) =
+P (Z
+≤ 2) − P (Z ≤ −2) = P (Z ≤ 2) − (−P (Z ≤ 2) + 1) =
+−1 + 2P (Z ≤ 2) = −1 + 1′9544 = 0′9544
+P (
+|X − µ| > 2σ) = 0′0456
+
+84
+Banaketa jarraituak
+3- P (µ
+− 3σ ≤ X ≤ µ + 3σ) = P (|x − µ| ≤ 3σ)
+P
+µ
+− 3σ − µ
+σ
+≤ X ≤
+µ + 3σ
+− µ
+σ
+= P (
+−3 ≤ X ≤ 3) = P (Z ≤
+3)
+− P (Z ≤ −3) = 2P (Z ≤ 3) − 1 = 0′9974
+P (
+|X − µ| > 3σ) = 0′0026
+6.3.2
+Propietateak
+1- X1, ..., Xn aldagai aleatorio independenteak badira eta N (µi, σi) banake-
+taren arabera banatzen badira
+∀i = 1, ..., n eta a1, ..., an, b ∈ R, orduan,
+y = a1X1 + ... + anXn+b: N a1µ1 + ... + anµn+b, a21σ
+2
+1 + ... + a
+2
+nσ
+2
+n
+2- X1, ..., Xn aldagai aleatorio independenteak n Xi : N (µi, σi)
+∀i = 1...n,
+orduan
+X1 + ... + Xn : N (µ1 + ... + µn, σ21 + ... + σ2n)
+3- X1, ..., xn aldagai aleatorio independenteak eta guztiak banaketa normal
+berdinaren arabera banatzen badira, Xi : N (µ, σ)
+∀i = 1...n, orduan:
+X1 + ... + Xn : N (nµ,
+√
+nσ)
+4- X1, ..., Xn aldagai aleatorio independenteak
+∧ Xi : N(µ, σ)
+∀i = 1...n
+orduan
+X =
+X1 + ... + Xn
+n
+: N µ,
+σ
+√
+n
+6.3.3
+Banaketa binomiala, Poisson eta normalaren arteko
+erlazioa
+Ikusi denez p
+→ 0
+B(n, p)
+≡ P (λ)/λ = np izanik
+n
+→ ∞
+hurbilketa hau erabiltzen da n
+≥ 30 ∧ p ≤ 0′1.
+
+6.3. Banaketa normala, N(µ, σ)
+85
+Banaketa binomialaren hurbilketa banaketa normalera.
+Moiure-ren teorema
+Biz X aldagai aleatorio binomiala B(n, p), bera
+batezbestekoa np eta desbiderazio tipikoa
+√
+npq izanik, orduan n
+→ ∞
+y =
+X
+− np
+√
+npq
+aldagai aleatorio N (0, 1) banaketara hurbiltzen da, hau da:
+y =
+X
+− np
+√
+npq
+−→
+n→∞
+N (0, 1)
+X : B(n, p)
+−→
+n→∞
+N (µ, σ)/µ = np
+∧ σ =
+√
+npq izanik orduan X
+−→
+N (np, √npq).
+P (a
+≤ X ≤ b) = P
+a
+− np
+√
+npq
+≤
+X
+− np
+√
+npq
+≤
+b
+− np
+√
+npq
+= P
+a
+− np
+√
+npq
+≤ Z ≤
+b
+− np
+√
+npq
+=
+F
+b
+− np
+√
+npq
+− F
+a
+− np
+√
+npq
+Z : N (0, 1) izanik.
+1- X : B(n, p)
+−→ N(µ, σ), µ = np ∧ σ =
+√
+npq izanik n handia denean,
+hau da:
+np > 5
+∧ p ≤ 1/2
+nq > 5
+∧ p > 1/2
+2- Banaketa binomiala (diskretua) banaketa normalera hurbiltzen da eta
+banaketa normala jarraia denez aldagaiaren balio zehatz bat hartzeko
+probabilitatea nulua da, beraz, Fisher-en jarraitasun zuzenketa erabili
+beharko da.
+Kasu batzuetan
+X
+n
+aldagaia kontsideratzen da, X : B(n, p) izanik, orduan:
+E
+X
+n
+=
+1
+n
+E[X] =
+1
+n
+· np = p
+
+86
+Banaketa jarraituak
+V AR
+X
+n
+=
+1
+n2
+V AR[X] =
+1
+n2
+V AR[X] =
+1
+n2
+· npq =
+pq
+n
+Moiure-ren teorema aplikatuz,
+y =
+X
+n
+− p
+pq
+n
+=
+X
+− np
+√
+npq
+−→ N(0, 1)
+aukeratzen badugu ˆ
+p = X/n ezaugarri jakin bat aurkezten duten behaketen
+proportzioa, orduan ˆ
+p-ren banaketa, banaketa normala da
+batezbestekoa E[ˆ
+p] = p
+σ[ˆ
+p] =
+pq/n
+orduan, ˆ
+p
+−→ N p,
+pq
+n
+Poissonen banaketaren hurbilketa banaketa normalera:
+X aldagai aleatorioak λ parametroko Poissonen banaketa badu, P (λ), λ
+≥ 10
+izanik, orduan banaketa hau banaketa normalera hurbiltzen da N (µ, σ).
+µ = E[X] = λ
+σ =
+V AR(X) =
+√
+λ
+P (a
+≤ X ≤ b) = P
+a
+− λ
+√
+λ
+≤
+X
+− λ
+√
+λ
+≤
+b
+− λ
+√
+λ
+= P
+a
+− λ
+√
+λ
+≤ Z ≤
+b
+− λ
+√
+λ
+=
+F
+b
+− λ
+√
+λ
+− F
+a
+− λ
+√
+λ
+edo jarraitasun zuzenketa erabiliz,
+P (a
+≤ X ≤ b) = P (a − 1/2 ≤ X ≤ b + 1/2) = P
+
+
+
+a
+−
+1
+2
+− λ
+√
+λ
+≤
+X
+− λ
+√
+λ
+≤
+b +
+1
+2
+− λ
+√
+λ
+
+
+ =
+P
+
+
+
+a
+−
+1
+2
+− λ
+√
+λ
+≤ Z ≤
+b +
+1
+2
+− λ
+√
+λ
+
+
+ = F
+=
+b + 1/2
+− λ
+√
+λ
+−F =
+a
+− 1/2 − λ
+√
+λ
+
+6.3. Banaketa normala, N(µ, σ)
+87
+Limitearen teorema zentrala
+Biz X1, ..., Xn n aldagai aleatorio independente banaketa berdinarekin batez-
+bestekoa µ eta bariantza σ2 izanik (< +
+∞), orduan
+yn =
+Sn
+− E[Sn]
+σ(Sn)
+aldagai aleatorioen seriearen banaketa, N (0, 1) banaketara hurbiltzen da, Sn =
+X1 + ... + Xn izanik, hau da,
+yn =
+Sn
+− E[Sn]
+σ(Sn)
+−→ N(0, 1)
+E[Sn] = E[X1 + ... + Xn] = E[X1] + ... + E[Xn] = nµ
+σ2(Sn) = σ2(X1 + ... + Xn) = σ2(X1) + ... + σ2(Xn) = nσ2
+⇒ yn =
+Sn
+− nµ
+√
+nσ
+−→ N(0, 1)
+edo
+sn
+−→ N(nµ, σ
+√
+n)
+Moiure-ren teorema limitearen teorema zentralaren kasu partikular bat da.
+Xi : B(1, p)
+i = 1, ..., n Xi independenteak izanik
+⇒ Moiure-ren teorema du-
+gu
+Sn = X1 + ... + Xn : B(n, p).
+Teorema
+Bira X1, ..., Xn n aldagai aleatorio independente banaketa berdinarekin, ba-
+tezbestekoa µ eta bariantza σ2 izanik (< +
+∞), orduan {yn} ondoko eran
+deﬁniturik dagoen aldagai aleatorio seriea.
+Yn =
+Sn/n
+− E [Sn/n]
+σ (Sn/n)
+N (0, 1) banaketara hurbiltzen da, Sn = X1 + ... + Xn izanik.
+hau da:
+
+88
+Banaketa jarraituak
+yn =
+Sn
+n
+− E
+Sn
+n
+σ
+Sn
+n
+−→ N(0, 1)
+E
+Sn
+n
+=
+1
+n
+E[Sn] =
+1
+n
+· nµ = µ
+σ2
+Sn
+n
+=
+1
+n2
+σ2(Sn) =
+nσ2
+n2
+=
+σ2
+n
+⇒ yn =
+Sn
+n
+− µ
+σ2/n
+=
+Sn
+− nµ
+σ/
+√
+n
+−→ N(0, 1)
+eta limitearen teorema zentralaren kasuan gaude.
+⇒
+Sn
+n
+−→ N µ,
+σ
+√
+n
+baino
+Sn
+n
+=
+X1 + ... + Xn
+n
+= Xn
+orduan X batezbestekoak n
+→ ∞ ondoko banaketa du.
+N (µ, σ/
+√
+n)
+hau da: Xn
+−→ N(µ, σ/
+√
+n)
+Ariketak
+6.2 Txanpon bat daukagu. Hiru aldiz jaurtitzen dugu. Ateratako aur-
+pegi kopuruaren eta gurutze kopuruaren arteko kendura ausazko
+aldagaia da. Kalkulatu beraren p.m.f.a eta b.f.m.a.
+E.: -3, 0.125; -1, 0.375; 1, 0.375; 3, 0.125
+Kalkulu bera egin, baina suposaturik txanpon berezia dela, eta
+aurpegia ateratzeko probabilitatea bi aldiz handiagoa dela gurutzea
+ateratzekoa baino.
+E.: -3, 0.037; -1, 0.222; 1, 0.444; 3, 0.296
+
+6.3. Banaketa normala, N(µ, σ)
+89
+6.3 Halako zozketan 0 eta 999 bitarteko edozein zenbaki oso atera dai-
+teke. Denek dute probabilitate berbera ateratzeko. Beraz, ausazko
+aldagai diskretu uniforme bat dugu. Lortu:
+1. p.m.f.a
+2. b.f.m.a
+E.: F (x) = 0.001(x + 1)
+3. Batazbesteko, desbiderapen estandarra, bariantza.
+E.: 999/2, 333333/4, 288.67...
+6.4 Biz X a.a. bat adierazten duena A enpresan erabiltzen diren kotxe
+oﬁzialak lanegun batean. Beraren p.m.f.a honela emanda dator:
+X
+1
+2
+3
+P (X)
+0.3
+0.4
+0.3
+Biz Y B enpresan erabiltzen direnak, honako p.m.f.a dagokiolarik:
+X
+0
+1
+2
+3
+4
+P (X)
+0.2
+0.1
+0.3
+0.3
+0.1
+Kalkulatu bion itxarondakoa eta bariantza.
+6.5 Saltoki bateko kotxeen %50ak diesel motorea dute. Saldutako hu-
+rrengo 4 kotxeren arteko diesel kopurua ausazko aldagaia da. Kal-
+kulatu beraren p.m.f.a eta b.f.m.a.
+E.: p(x) =
+4
+x
+0.5x0.54−x
+6.6 Makina batek fabrikatzen dituen piezen %8ak akatsak ditu. Halako
+tartean behin, edo hainbeste egindakoan, pieza bat hartu eta azter-
+tzen da. Biz X azterturiko 50en artean akastun kopurua. Zein da
+Xren p.m.f.a?
+6.7 Bi makinek, Ak eta Bek, pieza bera fabrikatzen dute, erritmo eta
+kalitate ezberdinez. Bren eguneroko ekoizpena Aren %80a da. Al-
+diz, Bek ekoiztutako artikuluen %2a soilik suertatzen da akastun
+eta Aren %3a. Halako T tartean behin pieza aztertzen da, ausazkoa.
+Biz X aldagaia aztertutako 30en arteko akastun kopurua. Eman
+beraren p.m.f.a. Zein da 3 baino gehiago egoteko probabilitatea?
+E.: 0.0069
+
+90
+Banaketa jarraituak
+6.8 Halako sistema elektronikoa paraleloz ezarritako 15 gaiz osatuta
+dago. Sistema baliatzean 0.08ko probabilitatea du bakoitzak huts
+egiteko. Baldin 2k edo gehiagok huts egiten badute, sistema ez da
+ibiliko. Sistema ez dabilenean, biz X huts egindako gai kopurua.
+Eman beraren p.m.f.a eta batazbestekoa.
+E.: 2.43
+6.9 Traﬁko handiko halako gurutzetan kotxe batek istripu bat izateko
+probabilitatea txikia da, hain justu, p=0.0001. Hala ere, egunaren
+16:00etatik 18:00etarako tartean kotxe kopuru handi bat pasatzen
+da gurutzetatik, demagun 1000. Zein probabilitate dago tarte ho-
+rretan 2 edo istripu gehiago gertatzeko?
+E.: 0.0046
+6.10 Halako fabrikazio prozesuan beirazko produktuak ekoizten dira eta
+hainbatetan akatsik edo burbuilarik azaltzen. Produktu horiek ezin
+izaten dira merkaturatu. Bataz beste 1000 produktutan 1 izaten da
+akastuna. Zein probabilitate dago 8000ko ausazko laginean 7 pieza
+akastun baino gutxiago azaltzeko?
+E.: 0.3134
+6.11 Egunen %10ean halako telefono zentralak 3 dei baino gutxiago ja-
+sotzen ditu 08:00etatik 09:00etara. Poisson banaketa erabiliz, eran-
+tzun:
+1. Zein da tarte horretan 3 dei justu jasotzeko probabilitatea?
+E.: 0.124
+2. Eta 4 baino gehiago?
+E.: 0.612
+3. Eta maizen ematen den dei kopurua?
+E.: 5
+6.12 Bataz beste, gainazaleko akats bat egoten da ibilgailuen barrual-
+dean erabiltzen diren 4 m2 plastikozko paneletan. Jo dezagun ibil-
+gailu baten barrualdeak 5 m2 dituela.
+1. Zein probabilitate dago kotxe baten barrualdean gainazaleko
+akatsik ez egoteko? E.: 0.7135
+
+6.3. Banaketa normala, N(µ, σ)
+91
+2. Ibilgailuak alokakatzeko Etxe bati 5 saltzen bazaizkio, zein pro-
+babilitate dago gehienez batek edukitzeko gainazaleko akatsik
+barrualdean? E.: 0.0260
+6.13 Halako gai erradiaktiboak 3.87 α partikula igortzen ditu 7.5 segun-
+duko tarte batetan, bataz beste. Kalkulatu segundu bateko tarte
+batetan gutxienez α partikula bat jaurtitzeko probabilitatea. E.:
+0.4030
+6.14 Dado bat eta hiru lagun dauzkagu honako jolasean aritzeko: bakoi-
+tzak jaurtiko du; zeinek atera beste biek ateratakoen batura baino
+gehiago, harek irabazi; ez badu inork lortu, berriz, eta horrela batek
+lortu arte. Biz X jokatu behar izan den erronda kopurua. Eman
+beraren p.m.f.a.
+6.15 Ausazko X aldagai bat daukagu, [
+−ω, 2ω] tartean uniformeki ba-
+natua, ω > 0 izaki.
+1. Kalkulatu batazbestekoa, desbiderapen estandarra eta barian-
+tza.
+E.: ω/2,
+√
+3ω/2
+2. p(X¡5) probabilitateak zein balio har dezake ωren balioen ara-
+bera eta zein da balio txikiena.
+E.: Baldin 5
+≥ 2ω bada, orduan p(X¡5)=1, bestela
+5+ω
+3ω
+6.16 Neurgailu baten eskala 0tik 10era doa. Esperimentu bateko neu-
+rriak, ausazkoak baitira, hartzeko erabiltzen da. Biz X neurria
+jasoko duen aldagaia. Beraren p.d.f.a honako fomulak ematen di-
+gu:
+f (x) = λx(10
+− x), 0 ≤ x ≤ 10
+Kalkulatu:
+1. Xren b.f.m.a.
+E.: F (x) = 0.002(15x2
+− x3)
+2. P (X < b) = 2P (X > b) betetzen duen b zenbaki erreala.
+E.: b
+≈ 6.13
+
+92
+Banaketa jarraituak
+3. P (
+|X − 4| < 1.5)
+E.: 0.4185
+4. P ( X < 8
+| X > 5)
+E.: 0.792
+6.17 Biz hurrengo funtzioa
+f (x) =
+α 3
+α
+xα+1 ,
+x
+≥ 3
+0,
+x < 3
+(6.3)
+1. Kalkula ezazu αren balioa f (x) probabilitateko dentsitate fun-
+tzio izateko. E.: α > 0
+2. Kalkula ezazu αren balioa ausazko aldagaiaren batazbestekoa
+6 izateko. E.: α = 2
+6.18 Prezisio-tresna baten X iraupena ausazko aldagai jarraiki bat da,
+f (x) = λe−0.2x p.d.f.az [0,10] tartean banatuta dagoelarik. X = 10
+balioari 2500 orduko iraupena dagokio, eta tresna ez da ﬁdagarria
+iraupen hori gaidintutakoan.
+Erreminta bakoitzaren fabrikazio kostua 80 euro da eta salneurria
+130 euro. Erreminta kaltetzen bada 200 ordu pasatu baino lehena-
+go, fabrikatzaileak 130 euroak itzultzen dizkio erosleari, eta 90 euro
+400 ordura iristen ez bada.
+Kalulatu zein izango den fabrikatzaileak itxarondako mozkina.
+6.19 Halako gasolindegira astelehenero dator hornitzailea beraren ka-
+mioiarekin. Bertako gordailua txikiegia balitz, aste askotan gaso-
+lindegiak ezingo luke bezeriaren eskaria zerbitzatu; handiegia izatea
+ere ez litzateke irtenbidea, inbertsio handiegia behar lukeelako. As-
+te bateko eskaria ausazko aldagai bat da, eta neur dezagun 0tik
+1era doan eskala batez. Demagun ere ondoko p.d.f.a dagokiola
+f (x) = 4(x
+− x
+3)
+Zein bolumen minimo behar luke gordailuak asteen %90ean asteko
+eskari osoa zerbitzatu ahal izateko?
+
+6.3. Banaketa normala, N(µ, σ)
+93
+E.: Eskari handienaren %82.69ko bolumenekoa.
+Eta bolumen hori balu, bolumen horren zein parte litzateke asteko
+batazbesteko salmenta?
+E.: Gordailuaren %63.76 E.: 14.65 euro
+6.20 Udaletxe batera hurbiltzen diren pertsonen %40ari iritsi ahala egi-
+ten zaie harrera; gainerakoek ez dute 5 minutu baino gehiago itxaro-
+ten. Halaber, x
+∈ (0, 5) denbora delarik, xrekiko proportzionala da
+dagoen probabilitatea itxaron behar izateko baina x minutu baino
+gutxiago. Biz X itxaroten den denbora ematen duen a.a.a. Kalku-
+latu Xren batazbestekoa eta desbiderapen estandarra.
+E.: 1.5, 1.66
+6.21 Makina batek fabrikaturiko ardatzetako erradioen luzera (X a.a.a,
+metrotan neurtua) ondorengo probabilitateko dentsitate funtzioari
+darraikio
+f (x) =
+k (x
+− 1) (3 − x) 1 ≤ x ≤ 3
+0
+bestela
+(6.4)
+Erradioa 1.20-2.80 tartean badago, ardatza onartu egiten da. Kal-
+kulatu ardatzen zein ehuneko errefusatzen diren. E.: %5.6
+6.22 Halako erakustokira 8 bisitari joaten dira orduro. Biz X pasatzen
+den denbora ireki denetik lehenengo bisitaria etorri arte, Y ireki
+denetik bigarrenera arte. Kalkulatu:
+1. Xren eta Y aren p.d.f.ak eta b.f.m.ak.
+2. Zein probabilitate dago bigarren bisitaria 09:15-09:45 tartean
+pasatzeko?
+E.: 0.3886
+6.23 Aintzinako gauzen erakustoki batera, hamar bisitari orduko etor-
+tzen dira bataz beste. kalkulatu irekitzen den unetik bigarren bi-
+sitaria iritsi arte gutxienez 8 minutu pasatzeko probabilitatea. E.:
+0.6151
+
+94
+Banaketa jarraituak
+6.24 Biz X partikula baten detekzioen arteko denbora Geiger kontagailu
+baten bitartez. Jo dezagun banaketa esponentzialari darraikiola
+Xa, batazbestekoa 1.4 minutu delarik. Kalkulatu:
+1. Kontagailua piztu eta ondorengo 30 segunduko tartean parti-
+kularik detektatzeko probabilitatea. E.: 0.3003
+2. Kontagailua piztu eta ondorengo 3 minutuko tartean ez da par-
+tikularik detektatu. Zein probabilitate dago hurrengo 30 segun-
+duko tartean partikularik detektatzeko? E.: 0.3003
+(2000-09-07)
+6.25 Halako hazaigalu motaren iraupenari banaketa esponentziala ego-
+kitu zaio, batazbestekoa 25000 ordukoa izanik.
+1. Kalkulatu haizagailu batek 20000 ordu gutxienez irauteko pro-
+babilitatea. E.: 0.449
+2. Kalkulatu haizagailu baten bizitzak µ+2σko balioa gainditzeko
+probabilitatea. E.: 0.0497
+6.26 Halako museora 400 pertsona hurreratzen da egunero sartzeko txar-
+tel eske, baina ezin dira hartu Q bisitari baino, eta horrek ekar-
+tzen du egunen %90ean baino ez dela sartzen nahi izan duen oro.
+Poisson-en banaketaren hurbilbide gisa normala erabiliz, Q zenbat
+den atera.
+E.: 426
+6.27 Dado bat 1000 aldiz jaurti da eta X aldagaian apuntatu 1a edo
+2a zenbat aldiz atera den. Ondoren, 2000 aldiz jaurti da eta Y al-
+dagaian apuntatu 5a zenbatetan atera den. Zein da
+|X − Y | > 12
+izateko probabilitatea? Banaketa normala erabili agertuko zaigu-
+naren hurbilbide gisa.
+E.: 0.5754
+6.28 Halako ariketa militarrean pistolazko tiroa lantzen da eta pareta
+batean markaturiko lerro bertikal bat da itua. Balak lerroaren ezke-
+rrean ala eskuinean jo dezake eta neurtuko dugu jopuntutik lerrora
+dagoen distantzia (dm), X. Demagun ausazko aldagai honi bana-
+keta normala dagokiola, desbiderapen estandarra 3 dm delarik. Ti-
+
+6.3. Banaketa normala, N(µ, σ)
+95
+roan erakutsitako trebezia kaliﬁkatzeko ondoko baremoa erabiltzen
+da.
+Distantzia
+Nota
+Gai
+0
+≤ |x| ≤ 1
+4
+Bai
+1
+≤ |x| ≤ 2
+3
+Bai
+2
+≤ |x| ≤ 3
+2
+Bai
+3
+≤ |x| ≤ 4
+1
+Bai
+4
+≤ |x|
+0
+Ez
+Zein litzateke tiroen segida inﬁnitu batean gaitzat hartutako tira-
+tzaileek lorturiko batazbesteko puntuazioa?
+E.: 2.76
+6.29 Makina batek bi pieza hauskor ditu: gurpil bat eta motore bat.
+Bi piezak ibili behar dira ondo makina ondo ibiltzeko. Gurpilaren
+bizitza (ordutan neurtua) N(1000,200) banaketa normalari darrai-
+kio eta motorearena N(1100,400) banaketari. Bi piezen iraupenak
+elkarren independenteak dira.
+1. Biz 6 makinako lagina. Zein da gutxienez 2 makinek 1000 ordu
+baino gehiago irauteko probabilitatea? E.: 0.5784
+2. Biz 60 makinakoa. Zein da gutxienez 20 makinek 1000 ordu
+baino gehiago irauteko probabilitatea?
+6.30 Ondorengo ezaugarriak dituen banaketa normala euli arrunten pi-
+suaren hurbilpen gisa erabil daitekeela onartzen da: batazbestekoa,
+0.350 gr eta desbidarapen estandarra, 0.050 gr. Ausaz, 10 euli au-
+keratu dira. Kalkulatu 0.300-0.325 tartean euli bat baino gehiago
+egoteko probabilitatea. E.: 0.4550
+6.31 Fabrikazio prozesu bateko halako pieza akastun gertatzeko probabi-
+litatea %2 da, baina beronen kalitatea ez da kontrolatzen bezeroak
+eskatutakoa jaso arte. Jo dezagun 800 piezako salmenta. Kalkula-
+tu:
+1. Entregan, gehienez 20 pieza akastun egoteko probabilitatea. E.:
+0.8719
+
+96
+Banaketa jarraituak
+2. Pieza akastunen halako kopurua non ziurtatu ahalko den %98ko
+probabilitatea dagoela delako kopurua ez gainditzeko. E.: 24
+(2000-09-08)
+6.32 Hiri handi bateko biztanleriaren globulu gorri kopuruaren (hainbes-
+te miloi mm3ko) behaketan, ondorioztatu zen N(4.5,0.5) banaketa
+normalari zerraikiola.
+1. Baldin pertsona baten globulu gorrien kopuruak batazbestekoa
+gainditzen badu, zein probabilitate dago 5 miloi baino gehiago
+edukitzeko? E.: 0.3174
+2. Baldin 10 biztanle aukeratu badira ausaz, zein probabilitate
+dago bakarrik bateko edo bik edukitzeko 5 miloi baino gehiago?
+E.: 0.6194
+
+7
+Zenbatespenak eta laginen
+tamainuak
+7.1
+Sarrera
+Inferentzia estatistikoaren aplikazio nagusiak honakoak dira:
+1. Populazioko parametro baten balioa zenbatetsi: proportzio bat, bataz-
+bestekoa, bariantza.
+Parametro horiek zenbatesteko behar diren laginen tamainuak zehazteko
+metodoak estudiatzen dira.
+2. Populazio baten gaineko hipotesi baten egiatasuna aztertu: hipotesi-
+testak.
+7.2
+Populazio baten proportzio baten zenbatespena
+Ondorengoak betetzen direla kontsideratuko dugu:
+1. Lagina ausazkoa eta sinplea da.
+2. Banaketa binomialarentzako baldintzak betetzen dira. Alegia, ekinal-
+di kopuru ﬁnkoa dago, independenteak dira ekinaldiak, emaitzen bi ka-
+
+98
+Zenbatespenak eta laginen tamainuak
+tegoria daude, eta ekinaldi bakoitzarentzako probabilitateak konstante
+irauten du.
+3. Banaketa normala erabil daiteke laginen proportzioen banaketaren hur-
+bilketa gisa, np
+≥ 5 eta nq ≥ 5 betetzen direlako.
+Idazkera proportzioentzat:
+• p: Populazioaren proportzioa.
+• ˆp =
+x
+n : n tamainuko lagineko x arrakasten proportzioa.
+• ˆq = 1 − ˆp: n tamainuko lagineko porroten proportzioa
+Puntu-zenbatespena:
+Balio bakun bat da, populazio bateko parametro
+bat zenbatesteko.
+Lagineko proportzioa, ˆ
+p, populazioko proportzioaren (p) puntu-zenbatespen
+onena da. Alboragabea, alegia, lagineko proportzioen banaketak pren balioa-
+rekiko zentratzera jotzen du.
+Konﬁantza-tarte edo tarte-zenbatespena:
+Balioen ibiltarte bat da, po-
+pulazioaren parametro baten benetako balioa zenbatesteko erabiltzen dena.
+Konﬁantza-maila:
+1
+− α probabilitatea da, hain zuzen, konﬁantza-tarteak
+populazioaren parametroa barne duen ekinaldien proportzioa, kontsideratuz
+zenbateste prozesua askotan errepikatu dela.
+Balio kritikoa:
+Zenbaki bat da, gertagarri diren lagin-estatistikoak eta ger-
+tagaitzak direnak banantzen dituen muga-lerroa ﬁnkatzen duena. zα/2 balio
+kritiko bat da, α/2ko azalerako eskuin-buztana uzten duena banaketa normal
+estandarrean.
+Errore-marjina: Ausazko lagin sinple bateko datuak erabiltzen direnean
+populazio bateko proportzio bat (p) zenbatesteko, errore-marjina, Ez adie-
+razita, behaturiko laginaren proportzioaren (ˆ
+p) eta populazioaren benetako
+
+7.3. Populazio baten µren zenbatespena: σ ezaguna
+99
+proportzioaren (p) arteko diferentzia probable maximoa da (1
+− α probabilita-
+tearekin). E errore-marjinari zenbatespenaren errore maximoa ere esaten zaio,
+eta aurki daiteke balio kritikoa eta lagin proportzioen desbiderapen estandarra
+biderkatuz, ondorengo formulak erakutsi bezala
+E = zα/2
+ˆ
+pˆ
+q
+n
+(7.1)
+Konﬁantza-tartea populazioko proportzioarentzat
+ˆ
+p
+− E < p < ˆp + E, non E = zα/2
+ˆ
+pˆ
+q
+n
+(7.2)
+Honela adieraz daiteke: ˆ
+p
+± E edo (ˆp − E, ˆp + E)
+Laginaren tamainua p proportzioa zenbatesteko
+• Zenbatespen bat, ˆp, ezaguna denean,
+n =
+zα/2
+2
+ˆ
+pˆ
+q
+E2
+(7.3)
+• Ez dagoenean zenbatespenik,
+n =
+zα/2
+2
+0.25
+E2
+(7.4)
+7.3
+Populazio baten µren zenbatespena: σ ezaguna
+Ondorengoak betetzen direla kontsideratuko dugu:
+1. Lagina ausazkoa eta sinplea da.
+2. Populazioaren desbiderapen estandarraren balioa, σ, ezaguna da.
+3. Populazioak banaketa normala du edo n > 30.
+Laginaren batazbestekoa, ¯
+x, da populazioaren batazbestekoaren puntu-
+zenbatespen onena. Zenbatesle alboragabea da.
+
+100
+Zenbatespenak eta laginen tamainuak
+Populazioren batazbestekoaren, µ, konﬁantza-tartearen zenbatespe-
+na (σ ezaguna)
+¯
+x
+− E < µ < ¯x + E non E = zα/2
+σ
+√
+n
+(7.5)
+Laginaren tamainuaren zehaztapena µ zenbatesteko
+n =
+zα/2σ
+E
+2
+(7.6)
+non zα/2 zren balio kritikoa den, nahi den konﬁantza-mailan oinarriturikoa, E
+nahi den errore-marjina, eta σ populazioaren desbiderapen estandarra.
+7.4
+Populazio baten µren zenbatespena: σ ezezagu-
+na
+Ondorengoak betetzen direla kontsideratuko dugu:
+1. Lagina ausazkoa eta sinplea da.
+2. Populazioak banaketa normala du edo n > 30.
+Student banaketa, t
+Baldin populazio baten banaketa esentzialki normala
+bada (gutxi gorabehera kanpai-moldekoa), orduan honakoaren banaketa
+t =
+¯
+x
+− µ
+s/
+√
+n
+(7.7)
+Student banaketa bat da esentzialki n tamainuko lagin guztientzako. Stu-
+dent banaketa edo t banaketa tα/2 balio kritikoak aurkitzeko erabili ohi da.
+Askatasun graduak
+Lagin bat dugularik, bertako balioei hainbat mu-
+rrizketa ezarri eta gero, alda daitezkeen balioen kopurua da laginaren askata-
+sun gradu kopurua, hain zuzen, n
+− 1.
+Errore-marjina, E, µren zenbatespenarentzat (σ ezezaguna)
+E = tα/2
+s
+√
+n
+(7.8)
+non tα/2 n
+− 1 askatasun gradu dituen.
+
+7.4. Populazio baten µren zenbatespena: σ ezezaguna
+101
+Konﬁantza-tartea µren zenbatespenarentzat
+¯
+x
+− E < µ < ¯x + E non E = tα/2
+s
+√
+n
+(7.9)
+Ariketak
+7.1 Produktu elektrikoen fabrika batek egiten dituen bonbilek 1800 or-
+duko bataz besteko bizia dute eta 200 orduko desbiderapen estan-
+darra.
+1. Kalkulatu zein probabilitate duen 100 bonbilako ausazko lagin
+batek 1825 ordu baino batazbesteko handiagoa izateko.
+E.: 0.1056
+2. Kalkulatu zein probabilitate dagoen 100 bonbilako ausazko la-
+gin batek 1775 eta 1760 ordu bitarteko batazbestekoa izateko.
+E.: 0.0828
+7.2 Halako enpresak halako piezak jasotzen ditu. Piezak enpresara sar-
+tu baino lehenago kontrol araudi bat pasatzen die: 36 piezako au-
+sazko lagina hartu eta diametroak neurtu; baldin batazbestekoa ba-
+dago 0.245 eta 0.255 bitartean, ontzat ematen dira; bestela, atzera
+botatzen.
+1. Zein probabilitate dago 0.24 batazbesteko diametroa eta 0.015
+desbiderapen estandarra duen sorta bat ontzat emateko?
+E.: 0.0228
+2. Zein probabilitate dago 0.2515 batazbesteko diametroa eta 0.005
+desbiderapen estandarra duen sorta bat ontzat emateko?
+E.: 1
+7.3 Halako trantsistore fabrikatzaileak iragartzen du 1000 orduko bataz
+besteko bizia dutela. Esandakoa berresteko, 25 trantsistore azter-
+tzen ditu hilero. Baldin zehaztutako tren balioa
+−t0.025 eta t0.025
+badago, asebeterik geratzen da fabrikatzailea. Zein ondorio aterako
+du halako laginean ¯
+x = 1010 eta s = 40 lortzen badu? Suposatu
+banaketa normalak deskribatzen duela trantsistoreen iraupena.
+E.: t=1.25, asebeterik.
+
+102
+Zenbatespenak eta laginen tamainuak
+7.4 Halako makina prestaturik dago 0.05 dm lodierako xaﬂa metalikoak
+ekoizteko. Prozesua ikuskatzeko asmoz, 10 xaﬂa aztertzen dira egu-
+nero. Baldin zehaztutako tren balioa
+−t0.025 eta t0.025 badago, pro-
+zesua zuzen dabilela kontsideratzen da. Gure kasuan batazbestekoa
+0.053 dm bada eta desbiderapen estandarra 0.003 dm zein ondorio
+aterako dugu?
+E.: t=3.16, prozesua ezin da zuzena kontsideratu.
+7.5 Halako industri enpresa handian enplegaturiko 36 pertsonako ausaz-
+ko lagin batek damaigu lanera etortzeari huts egiten dioten bataz
+besteko egunen kopurua ¯
+x = 12 eta s = 4 direla.
+1. 0.95eko esangura-maila harturik, emazue µren zenbatespenera-
+ko konﬁantza-tartea.
+E.: 10.7 < µ < 13.3
+2. 0.99ko maila hartuta, µren zenbatespenerako konﬁantza-tartea.
+E.: 10.3 < µ < 13.7
+7.6 Modelo bereko 25 aleko ausazko lagin bateko ibilgailuak bide ber-
+beretatik eta era berean erabiltzen dira eta kalitate bereko gaia
+erretzen dute. Erregaiaren litro bakoitzeko 9 km ibiltzen dituzte,
+desbiderapen estandarra 1.2 km izanik. Zenbatetsi litroko ibilita-
+ko batazbesteko km kopurua, eta emazue %95eko esangura-mailari
+dagokion konﬁantza-tartea.
+E.: 9.495 > µ > 8.505
+
+A
+Banaketa normal tipiﬁkatua
+N(0,1)
+
+104
+Banaketa normal tipiﬁkatua N(0,1)
+Φ(z) =
+z
+−∞
+1
+√
+2π
+e−
+x2
+2
+dx
+z
+≥ 0
+z
+0’00
+0’01
+0’02
+0’03
+0’04
+0’05
+0’06
+0’07
+0’08
+0’09
+0.0
+0.50000
+0.50399
+0.50798
+0.51197
+0.51595
+0.51994
+0.52392
+0.52790
+0.53188
+0.53586
+0.1
+0.53983
+0.54380
+0.54776
+0.55172
+0.55567
+0.55962
+0.56356
+0.56749
+0.57142
+0.57535
+0.2
+0.57926
+0.58317
+0.58706
+0.59095
+0.59483
+0.59871
+0.60257
+0.60642
+0.61026
+0.61409
+0.3
+0.61791
+0.62172
+0.62552
+0.62930
+0.63307
+0.63683
+0.64058
+0.64431
+0.64803
+0.65173
+0.4
+0.65542
+0.65910
+0.66276
+0.66640
+0.67003
+0.67364
+0.67724
+0.68082
+0.68439
+0.68793
+0.5
+0.69146
+0.69497
+0.69847
+0.70194
+0.70540
+0.70884
+0.71226
+0.71566
+0.71904
+0.72240
+0.6
+0.72575
+0.72907
+0.73237
+0.73565
+0.73891
+0.74215
+0.74537
+0.74857
+0.75175
+0.75490
+0.7
+0.75804
+0.76115
+0.76424
+0.76730
+0.77035
+0.77337
+0.77637
+0.77935
+0.78230
+0.78524
+0.8
+0.78814
+0.79103
+0.79389
+0.79673
+0.79955
+0.80234
+0.80511
+0.80785
+0.81057
+0.81327
+0.9
+0.81594
+0.81859
+0.82121
+0.82381
+0.82639
+0.82894
+0.83147
+0.83398
+0.83646
+0.83891
+1.0
+0.84134
+0.84375
+0.84614
+0.84849
+0.85083
+0.85314
+0.85543
+0.85769
+0.85993
+0.86214
+1.1
+0.86433
+0.86650
+0.86864
+0.87076
+0.87286
+0.87493
+0.87698
+0.87900
+0.88100
+0.88298
+1.2
+0.88493
+0.88686
+0.88877
+0.89065
+0.89251
+0.89435
+0.89617
+0.89796
+0.89973
+0.90147
+1.3
+0.90320
+0.90490
+0.90658
+0.90824
+0.90988
+0.91149
+0.91309
+0.91466
+0.91621
+0.91774
+1.4
+0.91924
+0.92073
+0.92220
+0.92364
+0.92507
+0.92647
+0.92786
+0.92922
+0.93056
+0.93189
+1.5
+0.93319
+0.93448
+0.93574
+0.93699
+0.93822
+0.93943
+0.94062
+0.94179
+0.94295
+0.94408
+1.6
+0.94520
+0.94630
+0.94738
+0.94845
+0.94950
+0.95053
+0.95154
+0.95254
+0.95352
+0.95449
+1.7
+0.95543
+0.95637
+0.95728
+0.95818
+0.95907
+0.95994
+0.96080
+0.96164
+0.96246
+0.96327
+1.8
+0.96407
+0.96485
+0.96562
+0.96637
+0.96712
+0.96784
+0.96856
+0.96926
+0.96995
+0.97062
+1.9
+0.97128
+0.97193
+0.97257
+0.97320
+0.97381
+0.97441
+0.97500
+0.97558
+0.97615
+0.97670
+2.0
+0.97725
+0.97778
+0.97831
+0.97882
+0.97932
+0.97982
+0.98030
+0.98077
+0.98124
+0.98169
+2.1
+0.98214
+0.98257
+0.98300
+0.98341
+0.98382
+0.98422
+0.98461
+0.98500
+0.98537
+0.98574
+2.2
+0.98610
+0.98645
+0.98679
+0.98713
+0.98745
+0.98778
+0.98809
+0.98840
+0.98870
+0.98899
+2.3
+0.98928
+0.98956
+0.98983
+0.99010
+0.99036
+0.99061
+0.99086
+0.99111
+0.99134
+0.99158
+2.4
+0.99180
+0.99202
+0.99224
+0.99245
+0.99266
+0.99286
+0.99305
+0.99324
+0.99343
+0.99361
+2.5
+0.99379
+0.99396
+0.99413
+0.99430
+0.99446
+0.99461
+0.99477
+0.99492
+0.99506
+0.99520
+2.6
+0.99534
+0.99547
+0.99560
+0.99573
+0.99585
+0.99598
+0.99609
+0.99621
+0.99632
+0.99643
+2.7
+0.99653
+0.99664
+0.99674
+0.99683
+0.99693
+0.99702
+0.99711
+0.99720
+0.99728
+0.99736
+2.8
+0.99744
+0.99752
+0.99760
+0.99767
+0.99774
+0.99781
+0.99788
+0.99795
+0.99801
+0.99807
+2.9
+0.99813
+0.99819
+0.99825
+0.99831
+0.99836
+0.99841
+0.99846
+0.99851
+0.99856
+0.99861
+3.0
+0.99865
+0.99869
+0.99874
+0.99878
+0.99882
+0.99886
+0.99889
+0.99893
+0.99897
+0.99900
+3.1
+0.99903
+0.99906
+0.99910
+0.99913
+0.99916
+0.99918
+0.99921
+0.99924
+0.99926
+0.99929
+3.2
+0.99931
+0.99934
+0.99936
+0.99938
+0.99940
+0.99942
+0.99944
+0.99946
+0.99948
+0.99950
+3.3
+0.99952
+0.99953
+0.99955
+0.99957
+0.99958
+0.99960
+0.99961
+0.99962
+0.99964
+0.99965
+3.4
+0.99966
+0.99968
+0.99969
+0.99970
+0.99971
+0.99972
+0.99973
+0.99974
+0.99975
+0.99976
+3.5
+0.99977
+0.99978
+0.99978
+0.99979
+0.99980
+0.99981
+0.99981
+0.99982
+0.99983
+0.99983
+3.6
+0.99984
+0.99985
+0.99985
+0.99986
+0.99986
+0.99987
+0.99987
+0.99988
+0.99988
+0.99989
+3.7
+0.99989
+0.99990
+0.99990
+0.99990
+0.99991
+0.99991
+0.99991
+0.99992
+0.99992
+0.99992
+3.8
+0.99993
+0.99993
+0.99993
+0.99994
+0.99994
+0.99994
+0.99994
+0.99995
+0.99995
+0.99995
+3.9
+0.99995
+0.99995
+0.99996
+0.99996
+0.99996
+0.99996
+0.99996
+0.99996
+0.99997
+0.99997
+4.0
+0.99997
+0.99997
+0.99997
+0.99997
+0.99997
+0.99997
+0.99998
+0.99998
+0.99998
+0.99998
+4.1
+0.99998
+0.99998
+0.99998
+0.99998
+0.99998
+0.99998
+0.99998
+0.99998
+0.99999
+0.99999
+
+105
+1
+− Φ(z) =
+∞
+z
+1
+√
+2π
+e−
+x2
+2
+dx
+z
+≥ 0
+x
+0.00
+0.01
+0.02
+0.03
+0.04
+0.05
+0.06
+0.07
+0.08
+0.09
+0.0
+0.5000
+0.4960
+0.4920
+0.4880
+0.4840
+0.4801
+0.4761
+0.4721
+0.4681
+0.4641
+0.1
+0.4602
+0.4562
+0.4522
+0.4483
+0.4443
+0.4404
+0.4364
+0.4325
+0.4286
+0.4247
+0.2
+0.4207
+0.4168
+0.4129
+0.4090
+0.4052
+0.4013
+0.3974
+0.3936
+0.3897
+0.3859
+0.3
+0.3821
+0.3783
+0.3745
+0.3707
+0.3669
+0.3632
+0.3594
+0.3557
+0.3520
+0.3483
+0.4
+0.3446
+0.3409
+0.3372
+0.3336
+0.3300
+0.3264
+0.3228
+0.3192
+0.3156
+0.3121
+0.5
+0.3085
+0.3050
+0.3015
+0.2981
+0.2946
+0.2912
+0.2877
+0.2843
+0.2810
+0.2776
+0.6
+0.2743
+0.2709
+0.2676
+0.2643
+0.2611
+0.2578
+0.2546
+0.2514
+0.2483
+0.2451
+0.7
+0.2420
+0.2389
+0.2358
+0.2327
+0.2296
+0.2266
+0.2236
+0.2206
+0.2177
+0.2148
+0.8
+0.2119
+0.2090
+0.2061
+0.2033
+0.2005
+0.1977
+0.1949
+0.1922
+0.1894
+0.1867
+0.9
+0.1841
+0.1814
+0.1788
+0.1762
+0.1736
+0.1711
+0.1685
+0.1660
+0.1635
+0.1611
+1.0
+0.1587
+0.1562
+0.1539
+0.1515
+0.1492
+0.1469
+0.1446
+0.1423
+0.1401
+0.1379
+1.1
+0.1357
+0.1335
+0.1314
+0.1292
+0.1271
+0.1251
+0.1230
+0.1210
+0.1190
+0.1170
+1.2
+0.1151
+0.1131
+0.1112
+0.1093
+0.1075
+0.1056
+0.1038
+0.1020
+0.1003
+0.0985
+1.3
+0.0968
+0.0951
+0.0934
+0.0918
+0.0901
+0.0885
+0.0869
+0.0853
+0.0838
+0.0823
+1.4
+0.0808
+0.0793
+0.0778
+0.0764
+0.0749
+0.0735
+0.0721
+0.0708
+0.0694
+0.0681
+1.5
+0.0668
+0.0655
+0.0643
+0.0630
+0.0618
+0.0606
+0.0594
+0.0582
+0.0571
+0.0559
+1.6
+0.0548
+0.0537
+0.0526
+0.0516
+0.0505
+0.0495
+0.0485
+0.0475
+0.0465
+0.0455
+1.7
+0.0446
+0.0436
+0.0427
+0.0418
+0.0409
+0.0401
+0.0392
+0.0384
+0.0375
+0.0367
+1.8
+0.0359
+0.0351
+0.0344
+0.0336
+0.0329
+0.0322
+0.0314
+0.0307
+0.0301
+0.0294
+1.9
+0.0287
+0.0281
+0.0274
+0.0268
+0.0262
+0.0256
+0.0250
+0.0244
+0.0239
+0.0233
+2.0
+0.0228
+0.0222
+0.0217
+0.0212
+0.0207
+0.0202
+0.0197
+0.0192
+0.0188
+0.0183
+2.1
+0.0179
+0.0174
+0.0170
+0.0166
+0.0162
+0.0158
+0.0154
+0.0150
+0.0146
+0.0143
+2.2
+0.0139
+0.0136
+0.0132
+0.0129
+0.0125
+0.0122
+0.0119
+0.0116
+0.0113
+0.0110
+2.3
+0.0107
+0.0104
+0.0102
+0.0099
+0.0096
+0.0094
+0.0091
+0.0089
+0.0087
+0.0084
+2.4
+0.0082
+0.0080
+0.0078
+0.0075
+0.0073
+0.0071
+0.0069
+0.0068
+0.0066
+0.0064
+2.5
+0.0062
+0.0060
+0.0059
+0.0057
+0.0055
+0.0054
+0.0052
+0.0051
+0.0049
+0.0048
+2.6
+0.0047
+0.0045
+0.0044
+0.0043
+0.0041
+0.0040
+0.0039
+0.0038
+0.0037
+0.0036
+2.7
+0.0035
+0.0034
+0.0033
+0.0032
+0.0031
+0.0030
+0.0029
+0.0028
+0.0027
+0.0026
+2.8
+0.0026
+0.0025
+0.0024
+0.0023
+0.0023
+0.0022
+0.0021
+0.0021
+0.0020
+0.0019
+2.9
+0.0019
+0.0018
+0.0018
+0.0017
+0.0016
+0.0016
+0.0015
+0.0015
+0.0014
+0.0014
+3.0
+0.0013
+0.0013
+0.0013
+0.0012
+0.0012
+0.0011
+0.0011
+0.0011
+0.0010
+0.0010
+
+
+B
+Banaketa binomiala
+B(n,p)
+
+108
+Banaketa binomiala
+p
+n
+k
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+0.35
+0.40
+0.45
+0.50
+1
+0
+0.9500
+0.9000
+0.8500
+0.8000
+0.7500
+0.7000
+0.6500
+0.6000
+0.5500
+0.5000
+1
+1
+0.0500
+0.1000
+0.1500
+0.2000
+0.2500
+0.3000
+0.3500
+0.4000
+0.4500
+0.5000
+2
+0
+0.9025
+0.8100
+0.7225
+0.6400
+0.5625
+0.4900
+0.4225
+0.3600
+0.3025
+0.2500
+2
+1
+0.0950
+0.1800
+0.2550
+0.3200
+0.3750
+0.4200
+0.4550
+0.4800
+0.4950
+0.5000
+2
+2
+0.0025
+0.0100
+0.0225
+0.0400
+0.0625
+0.0900
+0.1225
+0.1600
+0.2025
+0.2500
+3
+0
+0.8574
+0.7290
+0.6141
+0.5120
+0.4219
+0.3430
+0.2746
+0.2160
+0.1664
+0.1250
+3
+1
+0.1354
+0.2430
+0.3251
+0.3840
+0.4219
+0.4410
+0.4436
+0.4320
+0.4084
+0.3750
+3
+2
+0.0071
+0.0270
+0.0574
+0.0960
+0.1406
+0.1890
+0.2389
+0.2880
+0.3341
+0.3750
+3
+3
+0.0001
+0.0010
+0.0034
+0.0080
+0.0156
+0.0270
+0.0429
+0.0640
+0.0911
+0.1250
+4
+0
+0.8145
+0.6561
+0.5220
+0.4096
+0.3164
+0.2401
+0.1785
+0.1296
+0.0915
+0.0625
+4
+1
+0.1715
+0.2916
+0.3685
+0.4096
+0.4219
+0.4116
+0.3845
+0.3456
+0.2995
+0.2500
+4
+2
+0.0135
+0.0486
+0.0975
+0.1536
+0.2109
+0.2646
+0.3105
+0.3456
+0.3675
+0.3750
+4
+3
+0.0005
+0.0036
+0.0115
+0.0256
+0.0469
+0.0756
+0.1115
+0.1536
+0.2005
+0.2500
+4
+4
+0.0000
+0.0001
+0.0005
+0.0016
+0.0039
+0.0081
+0.0150
+0.0256
+0.0410
+0.0625
+5
+0
+0.7738
+0.5905
+0.4437
+0.3277
+0.2373
+0.1681
+0.1160
+0.0778
+0.0503
+0.0313
+5
+1
+0.2036
+0.3281
+0.3915
+0.4096
+0.3955
+0.3602
+0.3124
+0.2592
+0.2059
+0.1563
+5
+2
+0.0214
+0.0729
+0.1382
+0.2048
+0.2637
+0.3087
+0.3364
+0.3456
+0.3369
+0.3125
+5
+3
+0.0011
+0.0081
+0.0244
+0.0512
+0.0879
+0.1323
+0.1811
+0.2304
+0.2757
+0.3125
+5
+4
+0.0000
+0.0005
+0.0022
+0.0064
+0.0146
+0.0284
+0.0488
+0.0768
+0.1128
+0.1563
+5
+5
+0.0000
+0.0000
+0.0001
+0.0003
+0.0010
+0.0024
+0.0053
+0.0102
+0.0185
+0.0313
+6
+0
+0.7351
+0.5314
+0.3771
+0.2621
+0.1780
+0.1176
+0.0754
+0.0467
+0.0277
+0.0156
+6
+1
+0.2321
+0.3543
+0.3993
+0.3932
+0.3560
+0.3025
+0.2437
+0.1866
+0.1359
+0.0938
+6
+2
+0.0305
+0.0984
+0.1762
+0.2458
+0.2966
+0.3241
+0.3280
+0.3110
+0.2780
+0.2344
+6
+3
+0.0021
+0.0146
+0.0415
+0.0819
+0.1318
+0.1852
+0.2355
+0.2765
+0.3032
+0.3125
+6
+4
+0.0001
+0.0012
+0.0055
+0.0154
+0.0330
+0.0595
+0.0951
+0.1382
+0.1861
+0.2344
+6
+5
+0.0000
+0.0001
+0.0004
+0.0015
+0.0044
+0.0102
+0.0205
+0.0369
+0.0609
+0.0938
+6
+6
+0.0000
+0.0000
+0.0000
+0.0001
+0.0002
+0.0007
+0.0018
+0.0041
+0.0083
+0.0156
+7
+0
+0.6983
+0.4783
+0.3206
+0.2097
+0.1335
+0.0824
+0.0490
+0.0280
+0.0152
+0.0078
+7
+1
+0.2573
+0.3720
+0.3960
+0.3670
+0.3115
+0.2471
+0.1848
+0.1306
+0.0872
+0.0547
+7
+2
+0.0406
+0.1240
+0.2097
+0.2753
+0.3115
+0.3177
+0.2985
+0.2613
+0.2140
+0.1641
+7
+3
+0.0036
+0.0230
+0.0617
+0.1147
+0.1730
+0.2269
+0.2679
+0.2903
+0.2918
+0.2734
+7
+4
+0.0002
+0.0026
+0.0109
+0.0287
+0.0577
+0.0972
+0.1442
+0.1935
+0.2388
+0.2734
+7
+5
+0.0000
+0.0002
+0.0012
+0.0043
+0.0115
+0.0250
+0.0466
+0.0774
+0.1172
+0.1641
+7
+6
+0.0000
+0.0000
+0.0001
+0.0004
+0.0013
+0.0036
+0.0084
+0.0172
+0.0320
+0.0547
+7
+7
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0002
+0.0006
+0.0016
+0.0037
+0.0078
+8
+0
+0.6634
+0.4305
+0.2725
+0.1678
+0.1001
+0.0576
+0.0319
+0.0168
+0.0084
+0.0039
+8
+1
+0.2793
+0.3826
+0.3847
+0.3355
+0.2670
+0.1977
+0.1373
+0.0896
+0.0548
+0.0313
+8
+2
+0.0515
+0.1488
+0.2376
+0.2936
+0.3115
+0.2965
+0.2587
+0.2090
+0.1569
+0.1094
+8
+3
+0.0054
+0.0331
+0.0839
+0.1468
+0.2076
+0.2541
+0.2786
+0.2787
+0.2568
+0.2188
+8
+4
+0.0004
+0.0046
+0.0185
+0.0459
+0.0865
+0.1361
+0.1875
+0.2322
+0.2627
+0.2734
+8
+5
+0.0000
+0.0004
+0.0026
+0.0092
+0.0231
+0.0467
+0.0808
+0.1239
+0.1719
+0.2188
+8
+6
+0.0000
+0.0000
+0.0002
+0.0011
+0.0038
+0.0100
+0.0217
+0.0413
+0.0703
+0.1094
+8
+7
+0.0000
+0.0000
+0.0000
+0.0001
+0.0004
+0.0012
+0.0033
+0.0079
+0.0164
+0.0313
+8
+8
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0002
+0.0007
+0.0017
+0.0039
+
+109
+p
+n
+k
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+0.35
+0.40
+0.45
+0.50
+9
+0
+0.6302
+0.3874
+0.2316
+0.1342
+0.0751
+0.0404
+0.0207
+0.0101
+0.0046
+0.0020
+9
+1
+0.2985
+0.3874
+0.3679
+0.3020
+0.2253
+0.1556
+0.1004
+0.0605
+0.0339
+0.0176
+9
+2
+0.0629
+0.1722
+0.2597
+0.3020
+0.3003
+0.2668
+0.2162
+0.1612
+0.1110
+0.0703
+9
+3
+0.0077
+0.0446
+0.1069
+0.1762
+0.2336
+0.2668
+0.2716
+0.2508
+0.2119
+0.1641
+9
+4
+0.0006
+0.0074
+0.0283
+0.0661
+0.1168
+0.1715
+0.2194
+0.2508
+0.2600
+0.2461
+9
+5
+0.0000
+0.0008
+0.0050
+0.0165
+0.0389
+0.0735
+0.1181
+0.1672
+0.2128
+0.2461
+9
+6
+0.0000
+0.0001
+0.0006
+0.0028
+0.0087
+0.0210
+0.0424
+0.0743
+0.1160
+0.1641
+9
+7
+0.0000
+0.0000
+0.0000
+0.0003
+0.0012
+0.0039
+0.0098
+0.0212
+0.0407
+0.0703
+9
+8
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0004
+0.0013
+0.0035
+0.0083
+0.0176
+9
+9
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0003
+0.0008
+0.0020
+10
+0
+0.5987
+0.3487
+0.1969
+0.1074
+0.0563
+0.0282
+0.0135
+0.0060
+0.0025
+0.0010
+10
+1
+0.3151
+0.3874
+0.3474
+0.2684
+0.1877
+0.1211
+0.0725
+0.0403
+0.0207
+0.0098
+10
+2
+0.0746
+0.1937
+0.2759
+0.3020
+0.2816
+0.2335
+0.1757
+0.1209
+0.0763
+0.0439
+10
+3
+0.0105
+0.0574
+0.1298
+0.2013
+0.2503
+0.2668
+0.2522
+0.2150
+0.1665
+0.1172
+10
+4
+0.0010
+0.0112
+0.0401
+0.0881
+0.1460
+0.2001
+0.2377
+0.2508
+0.2384
+0.2051
+10
+5
+0.0001
+0.0015
+0.0085
+0.0264
+0.0584
+0.1029
+0.1536
+0.2007
+0.2340
+0.2461
+10
+6
+0.0000
+0.0001
+0.0012
+0.0055
+0.0162
+0.0368
+0.0689
+0.1115
+0.1596
+0.2051
+10
+7
+0.0000
+0.0000
+0.0001
+0.0008
+0.0031
+0.0090
+0.0212
+0.0425
+0.0746
+0.1172
+10
+8
+0.0000
+0.0000
+0.0000
+0.0001
+0.0004
+0.0014
+0.0043
+0.0106
+0.0229
+0.0439
+10
+9
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0005
+0.0016
+0.0042
+0.0098
+10
+10
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0003
+0.0010
+11
+0
+0.5688
+0.3138
+0.1673
+0.0859
+0.0422
+0.0198
+0.0088
+0.0036
+0.0014
+0.0005
+11
+1
+0.3293
+0.3835
+0.3248
+0.2362
+0.1549
+0.0932
+0.0518
+0.0266
+0.0125
+0.0054
+11
+2
+0.0867
+0.2131
+0.2866
+0.2953
+0.2581
+0.1998
+0.1395
+0.0887
+0.0513
+0.0269
+11
+3
+0.0137
+0.0710
+0.1517
+0.2215
+0.2581
+0.2568
+0.2254
+0.1774
+0.1259
+0.0806
+11
+4
+0.0014
+0.0158
+0.0536
+0.1107
+0.1721
+0.2201
+0.2428
+0.2365
+0.2060
+0.1611
+11
+5
+0.0001
+0.0025
+0.0132
+0.0388
+0.0803
+0.1321
+0.1830
+0.2207
+0.2360
+0.2256
+11
+6
+0.0000
+0.0003
+0.0023
+0.0097
+0.0268
+0.0566
+0.0985
+0.1471
+0.1931
+0.2256
+11
+7
+0.0000
+0.0000
+0.0003
+0.0017
+0.0064
+0.0173
+0.0379
+0.0701
+0.1128
+0.1611
+11
+8
+0.0000
+0.0000
+0.0000
+0.0002
+0.0011
+0.0037
+0.0102
+0.0234
+0.0462
+0.0806
+11
+9
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0005
+0.0018
+0.0052
+0.0126
+0.0269
+11
+10
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0002
+0.0007
+0.0021
+0.0054
+11
+11
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0002
+0.0005
+12
+0
+0.5404
+0.2824
+0.1422
+0.0687
+0.0317
+0.0138
+0.0057
+0.0022
+0.0008
+0.0002
+12
+1
+0.3413
+0.3766
+0.3012
+0.2062
+0.1267
+0.0712
+0.0368
+0.0174
+0.0075
+0.0029
+12
+2
+0.0988
+0.2301
+0.2924
+0.2835
+0.2323
+0.1678
+0.1088
+0.0639
+0.0339
+0.0161
+12
+3
+0.0173
+0.0852
+0.1720
+0.2362
+0.2581
+0.2397
+0.1954
+0.1419
+0.0923
+0.0537
+12
+4
+0.0021
+0.0213
+0.0683
+0.1329
+0.1936
+0.2311
+0.2367
+0.2128
+0.1700
+0.1208
+12
+5
+0.0002
+0.0038
+0.0193
+0.0532
+0.1032
+0.1585
+0.2039
+0.2270
+0.2225
+0.1934
+12
+6
+0.0000
+0.0005
+0.0040
+0.0155
+0.0401
+0.0792
+0.1281
+0.1766
+0.2124
+0.2256
+12
+7
+0.0000
+0.0000
+0.0006
+0.0033
+0.0115
+0.0291
+0.0591
+0.1009
+0.1489
+0.1934
+12
+8
+0.0000
+0.0000
+0.0001
+0.0005
+0.0024
+0.0078
+0.0199
+0.0420
+0.0762
+0.1208
+12
+9
+0.0000
+0.0000
+0.0000
+0.0001
+0.0004
+0.0015
+0.0048
+0.0125
+0.0277
+0.0537
+12
+10
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0002
+0.0008
+0.0025
+0.0068
+0.0161
+12
+11
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0003
+0.0010
+0.0029
+12
+12
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0002
+
+110
+Banaketa binomiala
+p
+n
+k
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+0.35
+0.40
+0.45
+0.50
+13
+0
+0.5133
+0.2542
+0.1209
+0.0550
+0.0238
+0.0097
+0.0037
+0.0013
+0.0004
+0.0001
+13
+1
+0.3512
+0.3672
+0.2774
+0.1787
+0.1029
+0.0540
+0.0259
+0.0113
+0.0045
+0.0016
+13
+2
+0.1109
+0.2448
+0.2937
+0.2680
+0.2059
+0.1388
+0.0836
+0.0453
+0.0220
+0.0095
+13
+3
+0.0214
+0.0997
+0.1900
+0.2457
+0.2517
+0.2181
+0.1651
+0.1107
+0.0660
+0.0349
+13
+4
+0.0028
+0.0277
+0.0838
+0.1535
+0.2097
+0.2337
+0.2222
+0.1845
+0.1350
+0.0873
+13
+5
+0.0003
+0.0055
+0.0266
+0.0691
+0.1258
+0.1803
+0.2154
+0.2214
+0.1989
+0.1571
+13
+6
+0.0000
+0.0008
+0.0063
+0.0230
+0.0559
+0.1030
+0.1546
+0.1968
+0.2169
+0.2095
+13
+7
+0.0000
+0.0001
+0.0011
+0.0058
+0.0186
+0.0442
+0.0833
+0.1312
+0.1775
+0.2095
+13
+8
+0.0000
+0.0000
+0.0001
+0.0011
+0.0047
+0.0142
+0.0336
+0.0656
+0.1089
+0.1571
+13
+9
+0.0000
+0.0000
+0.0000
+0.0001
+0.0009
+0.0034
+0.0101
+0.0243
+0.0495
+0.0873
+13
+10
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0006
+0.0022
+0.0065
+0.0162
+0.0349
+13
+11
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0003
+0.0012
+0.0036
+0.0095
+13
+12
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0005
+0.0016
+13
+13
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+14
+0
+0.4877
+0.2288
+0.1028
+0.0440
+0.0178
+0.0068
+0.0024
+0.0008
+0.0002
+0.0001
+14
+1
+0.3593
+0.3559
+0.2539
+0.1539
+0.0832
+0.0407
+0.0181
+0.0073
+0.0027
+0.0009
+14
+2
+0.1229
+0.2570
+0.2912
+0.2501
+0.1802
+0.1134
+0.0634
+0.0317
+0.0141
+0.0056
+14
+3
+0.0259
+0.1142
+0.2056
+0.2501
+0.2402
+0.1943
+0.1366
+0.0845
+0.0462
+0.0222
+14
+4
+0.0037
+0.0349
+0.0998
+0.1720
+0.2202
+0.2290
+0.2022
+0.1549
+0.1040
+0.0611
+14
+5
+0.0004
+0.0078
+0.0352
+0.0860
+0.1468
+0.1963
+0.2178
+0.2066
+0.1701
+0.1222
+14
+6
+0.0000
+0.0013
+0.0093
+0.0322
+0.0734
+0.1262
+0.1759
+0.2066
+0.2088
+0.1833
+14
+7
+0.0000
+0.0002
+0.0019
+0.0092
+0.0280
+0.0618
+0.1082
+0.1574
+0.1952
+0.2095
+14
+8
+0.0000
+0.0000
+0.0003
+0.0020
+0.0082
+0.0232
+0.0510
+0.0918
+0.1398
+0.1833
+14
+9
+0.0000
+0.0000
+0.0000
+0.0003
+0.0018
+0.0066
+0.0183
+0.0408
+0.0762
+0.1222
+14
+10
+0.0000
+0.0000
+0.0000
+0.0000
+0.0003
+0.0014
+0.0049
+0.0136
+0.0312
+0.0611
+14
+11
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0002
+0.0010
+0.0033
+0.0093
+0.0222
+14
+12
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0005
+0.0019
+0.0056
+14
+13
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0002
+0.0009
+14
+14
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+15
+0
+0.4633
+0.2059
+0.0874
+0.0352
+0.0134
+0.0047
+0.0016
+0.0005
+0.0001
+0.0000
+15
+1
+0.3658
+0.3432
+0.2312
+0.1319
+0.0668
+0.0305
+0.0126
+0.0047
+0.0016
+0.0005
+15
+2
+0.1348
+0.2669
+0.2856
+0.2309
+0.1559
+0.0916
+0.0476
+0.0219
+0.0090
+0.0032
+15
+3
+0.0307
+0.1285
+0.2184
+0.2501
+0.2252
+0.1700
+0.1110
+0.0634
+0.0318
+0.0139
+15
+4
+0.0049
+0.0428
+0.1156
+0.1876
+0.2252
+0.2186
+0.1792
+0.1268
+0.0780
+0.0417
+15
+5
+0.0006
+0.0105
+0.0449
+0.1032
+0.1651
+0.2061
+0.2123
+0.1859
+0.1404
+0.0916
+15
+6
+0.0000
+0.0019
+0.0132
+0.0430
+0.0917
+0.1472
+0.1906
+0.2066
+0.1914
+0.1527
+15
+7
+0.0000
+0.0003
+0.0030
+0.0138
+0.0393
+0.0811
+0.1319
+0.1771
+0.2013
+0.1964
+15
+8
+0.0000
+0.0000
+0.0005
+0.0035
+0.0131
+0.0348
+0.0710
+0.1181
+0.1647
+0.1964
+15
+9
+0.0000
+0.0000
+0.0001
+0.0007
+0.0034
+0.0116
+0.0298
+0.0612
+0.1048
+0.1527
+15
+10
+0.0000
+0.0000
+0.0000
+0.0001
+0.0007
+0.0030
+0.0096
+0.0245
+0.0515
+0.0916
+15
+11
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0006
+0.0024
+0.0074
+0.0191
+0.0417
+15
+12
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0004
+0.0016
+0.0052
+0.0139
+15
+13
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0003
+0.0010
+0.0032
+15
+14
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0005
+15
+15
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+
+111
+p
+n
+k
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+0.35
+0.40
+0.45
+0.50
+16
+0
+0.4401
+0.1853
+0.0743
+0.0281
+0.0100
+0.0033
+0.0010
+0.0003
+0.0001
+0.0000
+16
+1
+0.3706
+0.3294
+0.2097
+0.1126
+0.0535
+0.0228
+0.0087
+0.0030
+0.0009
+0.0002
+16
+2
+0.1463
+0.2745
+0.2775
+0.2111
+0.1336
+0.0732
+0.0353
+0.0150
+0.0056
+0.0018
+16
+3
+0.0359
+0.1423
+0.2285
+0.2463
+0.2079
+0.1465
+0.0888
+0.0468
+0.0215
+0.0085
+16
+4
+0.0061
+0.0514
+0.1311
+0.2001
+0.2252
+0.2040
+0.1553
+0.1014
+0.0572
+0.0278
+16
+5
+0.0008
+0.0137
+0.0555
+0.1201
+0.1802
+0.2099
+0.2008
+0.1623
+0.1123
+0.0667
+16
+6
+0.0001
+0.0028
+0.0180
+0.0550
+0.1101
+0.1649
+0.1982
+0.1983
+0.1684
+0.1222
+16
+7
+0.0000
+0.0004
+0.0045
+0.0197
+0.0524
+0.1010
+0.1524
+0.1889
+0.1969
+0.1746
+16
+8
+0.0000
+0.0001
+0.0009
+0.0055
+0.0197
+0.0487
+0.0923
+0.1417
+0.1812
+0.1964
+16
+9
+0.0000
+0.0000
+0.0001
+0.0012
+0.0058
+0.0185
+0.0442
+0.0840
+0.1318
+0.1746
+16
+10
+0.0000
+0.0000
+0.0000
+0.0002
+0.0014
+0.0056
+0.0167
+0.0392
+0.0755
+0.1222
+16
+11
+0.0000
+0.0000
+0.0000
+0.0000
+0.0002
+0.0013
+0.0049
+0.0142
+0.0337
+0.0667
+16
+12
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0002
+0.0011
+0.0040
+0.0115
+0.0278
+16
+13
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0002
+0.0008
+0.0029
+0.0085
+16
+14
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0005
+0.0018
+16
+15
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0002
+16
+16
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+17
+0
+0.4181
+0.1668
+0.0631
+0.0225
+0.0075
+0.0023
+0.0007
+0.0002
+0.0000
+0.0000
+17
+1
+0.3741
+0.3150
+0.1893
+0.0957
+0.0426
+0.0169
+0.0060
+0.0019
+0.0005
+0.0001
+17
+2
+0.1575
+0.2800
+0.2673
+0.1914
+0.1136
+0.0581
+0.0260
+0.0102
+0.0035
+0.0010
+17
+3
+0.0415
+0.1556
+0.2359
+0.2393
+0.1893
+0.1245
+0.0701
+0.0341
+0.0144
+0.0052
+17
+4
+0.0076
+0.0605
+0.1457
+0.2093
+0.2209
+0.1868
+0.1320
+0.0796
+0.0411
+0.0182
+17
+5
+0.0010
+0.0175
+0.0668
+0.1361
+0.1914
+0.2081
+0.1849
+0.1379
+0.0875
+0.0472
+17
+6
+0.0001
+0.0039
+0.0236
+0.0680
+0.1276
+0.1784
+0.1991
+0.1839
+0.1432
+0.0944
+17
+7
+0.0000
+0.0007
+0.0065
+0.0267
+0.0668
+0.1201
+0.1685
+0.1927
+0.1841
+0.1484
+17
+8
+0.0000
+0.0001
+0.0014
+0.0084
+0.0279
+0.0644
+0.1134
+0.1606
+0.1883
+0.1855
+17
+9
+0.0000
+0.0000
+0.0003
+0.0021
+0.0093
+0.0276
+0.0611
+0.1070
+0.1540
+0.1855
+17
+10
+0.0000
+0.0000
+0.0000
+0.0004
+0.0025
+0.0095
+0.0263
+0.0571
+0.1008
+0.1484
+17
+11
+0.0000
+0.0000
+0.0000
+0.0001
+0.0005
+0.0026
+0.0090
+0.0242
+0.0525
+0.0944
+17
+12
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0006
+0.0024
+0.0081
+0.0215
+0.0472
+17
+13
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0005
+0.0021
+0.0068
+0.0182
+17
+14
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0004
+0.0016
+0.0052
+17
+15
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0003
+0.0010
+17
+16
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+17
+17
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+18
+0
+0.3972
+0.1501
+0.0536
+0.0180
+0.0056
+0.0016
+0.0004
+0.0001
+0.0000
+0.0000
+18
+1
+0.3763
+0.3002
+0.1704
+0.0811
+0.0338
+0.0126
+0.0042
+0.0012
+0.0003
+0.0001
+18
+2
+0.1683
+0.2835
+0.2556
+0.1723
+0.0958
+0.0458
+0.0190
+0.0069
+0.0022
+0.0006
+18
+3
+0.0473
+0.1680
+0.2406
+0.2297
+0.1704
+0.1046
+0.0547
+0.0246
+0.0095
+0.0031
+18
+4
+0.0093
+0.0700
+0.1592
+0.2153
+0.2130
+0.1681
+0.1104
+0.0614
+0.0291
+0.0117
+18
+5
+0.0014
+0.0218
+0.0787
+0.1507
+0.1988
+0.2017
+0.1664
+0.1146
+0.0666
+0.0327
+18
+6
+0.0002
+0.0052
+0.0301
+0.0816
+0.1436
+0.1873
+0.1941
+0.1655
+0.1181
+0.0708
+18
+7
+0.0000
+0.0010
+0.0091
+0.0350
+0.0820
+0.1376
+0.1792
+0.1892
+0.1657
+0.1214
+18
+8
+0.0000
+0.0002
+0.0022
+0.0120
+0.0376
+0.0811
+0.1327
+0.1734
+0.1864
+0.1669
+18
+9
+0.0000
+0.0000
+0.0004
+0.0033
+0.0139
+0.0386
+0.0794
+0.1284
+0.1694
+0.1855
+18
+10
+0.0000
+0.0000
+0.0001
+0.0008
+0.0042
+0.0149
+0.0385
+0.0771
+0.1248
+0.1669
+18
+11
+0.0000
+0.0000
+0.0000
+0.0001
+0.0010
+0.0046
+0.0151
+0.0374
+0.0742
+0.1214
+18
+12
+0.0000
+0.0000
+0.0000
+0.0000
+0.0002
+0.0012
+0.0047
+0.0145
+0.0354
+0.0708
+18
+13
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0002
+0.0012
+0.0045
+0.0134
+0.0327
+18
+14
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0002
+0.0011
+0.0039
+0.0117
+18
+15
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0002
+0.0009
+0.0031
+18
+16
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0006
+18
+17
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+18
+18
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+
+112
+Banaketa binomiala
+p
+n
+k
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+0.35
+0.40
+0.45
+0.50
+19
+0
+0.3774
+0.1351
+0.0456
+0.0144
+0.0042
+0.0011
+0.0003
+0.0001
+0.0000
+0.0000
+19
+1
+0.3774
+0.2852
+0.1529
+0.0685
+0.0268
+0.0093
+0.0029
+0.0008
+0.0002
+0.0000
+19
+2
+0.1787
+0.2852
+0.2428
+0.1540
+0.0803
+0.0358
+0.0138
+0.0046
+0.0013
+0.0003
+19
+3
+0.0533
+0.1796
+0.2428
+0.2182
+0.1517
+0.0869
+0.0422
+0.0175
+0.0062
+0.0018
+19
+4
+0.0112
+0.0798
+0.1714
+0.2182
+0.2023
+0.1491
+0.0909
+0.0467
+0.0203
+0.0074
+19
+5
+0.0018
+0.0266
+0.0907
+0.1636
+0.2023
+0.1916
+0.1468
+0.0933
+0.0497
+0.0222
+19
+6
+0.0002
+0.0069
+0.0374
+0.0955
+0.1574
+0.1916
+0.1844
+0.1451
+0.0949
+0.0518
+19
+7
+0.0000
+0.0014
+0.0122
+0.0443
+0.0974
+0.1525
+0.1844
+0.1797
+0.1443
+0.0961
+19
+8
+0.0000
+0.0002
+0.0032
+0.0166
+0.0487
+0.0981
+0.1489
+0.1797
+0.1771
+0.1442
+19
+9
+0.0000
+0.0000
+0.0007
+0.0051
+0.0198
+0.0514
+0.0980
+0.1464
+0.1771
+0.1762
+19
+10
+0.0000
+0.0000
+0.0001
+0.0013
+0.0066
+0.0220
+0.0528
+0.0976
+0.1449
+0.1762
+19
+11
+0.0000
+0.0000
+0.0000
+0.0003
+0.0018
+0.0077
+0.0233
+0.0532
+0.0970
+0.1442
+19
+12
+0.0000
+0.0000
+0.0000
+0.0000
+0.0004
+0.0022
+0.0083
+0.0237
+0.0529
+0.0961
+19
+13
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0005
+0.0024
+0.0085
+0.0233
+0.0518
+19
+14
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0006
+0.0024
+0.0082
+0.0222
+19
+15
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0005
+0.0022
+0.0074
+19
+16
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0005
+0.0018
+19
+17
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0001
+0.0003
+19
+18
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+19
+19
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+20
+0
+0.3585
+0.1216
+0.0388
+0.0115
+0.0032
+0.0008
+0.0002
+0.0000
+0.0000
+0.0000
+20
+1
+0.3774
+0.2702
+0.1368
+0.0576
+0.0211
+0.0068
+0.0020
+0.0005
+0.0001
+0.0000
+20
+2
+0.1887
+0.2852
+0.2293
+0.1369
+0.0669
+0.0278
+0.0100
+0.0031
+0.0008
+0.0002
+20
+3
+0.0596
+0.1901
+0.2428
+0.2054
+0.1339
+0.0716
+0.0323
+0.0123
+0.0040
+0.0011
+20
+4
+0.0133
+0.0898
+0.1821
+0.2182
+0.1897
+0.1304
+0.0738
+0.0350
+0.0139
+0.0046
+20
+5
+0.0022
+0.0319
+0.1028
+0.1746
+0.2023
+0.1789
+0.1272
+0.0746
+0.0365
+0.0148
+20
+6
+0.0003
+0.0089
+0.0454
+0.1091
+0.1686
+0.1916
+0.1712
+0.1244
+0.0746
+0.0370
+20
+7
+0.0000
+0.0020
+0.0160
+0.0545
+0.1124
+0.1643
+0.1844
+0.1659
+0.1221
+0.0739
+20
+8
+0.0000
+0.0004
+0.0046
+0.0222
+0.0609
+0.1144
+0.1614
+0.1797
+0.1623
+0.1201
+20
+9
+0.0000
+0.0001
+0.0011
+0.0074
+0.0271
+0.0654
+0.1158
+0.1597
+0.1771
+0.1602
+20
+10
+0.0000
+0.0000
+0.0002
+0.0020
+0.0099
+0.0308
+0.0686
+0.1171
+0.1593
+0.1762
+20
+11
+0.0000
+0.0000
+0.0000
+0.0005
+0.0030
+0.0120
+0.0336
+0.0710
+0.1185
+0.1602
+20
+12
+0.0000
+0.0000
+0.0000
+0.0001
+0.0008
+0.0039
+0.0136
+0.0355
+0.0727
+0.1201
+20
+13
+0.0000
+0.0000
+0.0000
+0.0000
+0.0002
+0.0010
+0.0045
+0.0146
+0.0366
+0.0739
+20
+14
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0002
+0.0012
+0.0049
+0.0150
+0.0370
+20
+15
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0003
+0.0013
+0.0049
+0.0148
+20
+16
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0003
+0.0013
+0.0046
+20
+17
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0002
+0.0011
+20
+18
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0002
+20
+19
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+20
+20
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+0.0000
+
+C
+Student, t banaketa
+
+114
+Student, t banaketa
+α
+r
+0,25
+0,2
+0,15
+0,1
+0,05
+0,025
+0,01
+0,005
+0,0005
+1
+1,000
+1,376
+1,963
+3,078
+6,314
+12,706
+31,821
+63,656
+636,578
+2
+0,816
+1,061
+1,386
+1,886
+2,920
+4,303
+6,965
+9,925
+31,600
+3
+0,765
+0,978
+1,250
+1,638
+2,353
+3,182
+4,541
+5,841
+12,924
+4
+0,741
+0,941
+1,190
+1,533
+2,132
+2,776
+3,747
+4,604
+8,610
+5
+0,727
+0,920
+1,156
+1,476
+2,015
+2,571
+3,365
+4,032
+6,869
+6
+0,718
+0,906
+1,134
+1,440
+1,943
+2,447
+3,143
+3,707
+5,959
+7
+0,711
+0,896
+1,119
+1,415
+1,895
+2,365
+2,998
+3,499
+5,408
+8
+0,706
+0,889
+1,108
+1,397
+1,860
+2,306
+2,896
+3,355
+5,041
+9
+0,703
+0,883
+1,100
+1,383
+1,833
+2,262
+2,821
+3,250
+4,781
+10
+0,700
+0,879
+1,093
+1,372
+1,812
+2,228
+2,764
+3,169
+4,587
+11
+0,697
+0,876
+1,088
+1,363
+1,796
+2,201
+2,718
+3,106
+4,437
+12
+0,695
+0,873
+1,083
+1,356
+1,782
+2,179
+2,681
+3,055
+4,318
+13
+0,694
+0,870
+1,079
+1,350
+1,771
+2,160
+2,650
+3,012
+4,221
+14
+0,692
+0,868
+1,076
+1,345
+1,761
+2,145
+2,624
+2,977
+4,140
+15
+0,691
+0,866
+1,074
+1,341
+1,753
+2,131
+2,602
+2,947
+4,073
+16
+0,690
+0,865
+1,071
+1,337
+1,746
+2,120
+2,583
+2,921
+4,015
+17
+0,689
+0,863
+1,069
+1,333
+1,740
+2,110
+2,567
+2,898
+3,965
+18
+0,688
+0,862
+1,067
+1,330
+1,734
+2,101
+2,552
+2,878
+3,922
+19
+0,688
+0,861
+1,066
+1,328
+1,729
+2,093
+2,539
+2,861
+3,883
+20
+0,687
+0,860
+1,064
+1,325
+1,725
+2,086
+2,528
+2,845
+3,850
+21
+0,686
+0,859
+1,063
+1,323
+1,721
+2,080
+2,518
+2,831
+3,819
+22
+0,686
+0,858
+1,061
+1,321
+1,717
+2,074
+2,508
+2,819
+3,792
+23
+0,685
+0,858
+1,060
+1,319
+1,714
+2,069
+2,500
+2,807
+3,768
+24
+0,685
+0,857
+1,059
+1,318
+1,711
+2,064
+2,492
+2,797
+3,745
+25
+0,684
+0,856
+1,058
+1,316
+1,708
+2,060
+2,485
+2,787
+3,725
+26
+0,684
+0,856
+1,058
+1,315
+1,706
+2,056
+2,479
+2,779
+3,707
+27
+0,684
+0,855
+1,057
+1,314
+1,703
+2,052
+2,473
+2,771
+3,689
+28
+0,683
+0,855
+1,056
+1,313
+1,701
+2,048
+2,467
+2,763
+3,674
+29
+0,683
+0,854
+1,055
+1,311
+1,699
+2,045
+2,462
+2,756
+3,660
+30
+0,683
+0,854
+1,055
+1,310
+1,697
+2,042
+2,457
+2,750
+3,646
+40
+0,681
+0,851
+1,050
+1,303
+1,684
+2,021
+2,423
+2,704
+3,551
+60
+0,679
+0,848
+1,045
+1,296
+1,671
+2,000
+2,390
+2,660
+3,460
+120 0,677
+0,845
+1,041
+1,289
+1,658
+1,980
+2,358
+2,617
+3,373
+∞
+0,674
+0,842
+1,036
+1,282
+1,645
+1,960
+2,326
+2,576
+3,290
+
+D
+χ2
+banaketa
+
+116
+χ2 banaketa
+α
+n
+0.995
+0.99
+0.975
+0.95
+0.9
+0.75
+0.5
+0.25
+0.1
+0.05
+0.025
+0.01
+1
+3.93 10−
+05
+1.57 10−
+04
+9.82 10−
+04
+3.93 10−
+03
+1.58 10−
+02
+0.102
+0.455
+1.323
+2.71
+3.84
+5.02
+6.63
+2
+1.00 10−
+02
+2.01 10−
+02
+5.06 10−
+02
+0.103
+0.211
+0.575
+1.386
+2.77
+4.61
+5.99
+7.38
+9.21
+
+Bibliograﬁa
+[1] L GONICK and W. SMITH. The Cartoon guide to statistics. New York
+Harper, 1993.
+[2] Duglas C. MONTGOMERY and George C. RUNGER. Probabilidad y
+estd´ıstica aplicadas a la inegenier´ıa. McGraw-Hill, (Mexico, 2000).
+[3] J.L. NARVAIZA, J.P. LAKA, J.A. MADARIAGA, and J.V. UGARTE. Es-
+tad´ıstica aplicada a la gesti´
+on y a alas ciencias sociales. Estad´ıstica Desc-
+riptiva y Probabilidad. dscl´ee de brouwer S.A., 2001.
+[4] Athanasios PAPOULIS. Probability, Random Variables, and Stochastic
+Processes. McGraw-Hill, 1991.
+[5] Z. Peyton PEEBLES. Probability, Random Variables, and Random signal
+Principles. McGraw-Hill, 2001.
+[6] V. QUESADA, A. ISIDORO, and L. A. LOPEZ. Curso y ejercicios de
+estad´ıstica. Alhambra longman, 2000.
+[7] Murray R. SPIEGEL. Estad´ıstica. McGraw-Hill, (Mexico, 1998).
+
+118
+BIBLIOGRAFIA
+[8] A. FZ. DE TROCONIZ. Probabilidades estad´ıstica muestreo. T´ebar Flores,
+S.L., 1993.
+[9] Ronald E. WALPOLE, Raymond H. MYERS, and Sharon L. MYERS.
+Probabilidad y estad´ıstica para ingenieros, 6a. ed. Prentice Hall, (Mexico,
+1999).

@@ -1,0 +1,2989 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>Tema 8: APLICACIONES DE LA  </TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 3.4  (Unix)">
+	<META NAME="AUTHOR" CONTENT="mae">
+	<META NAME="CREATED" CONTENT="20081219;9570000">
+	<META NAME="CHANGEDBY" CONTENT="inma">
+	<META NAME="CHANGED" CONTENT="20081219;9570000">
+	<META NAME="informazioa 1" CONTENT="">
+	<META NAME="informazioa 2" CONTENT="">
+	<META NAME="informazioa 3" CONTENT="">
+	<META NAME="informazioa 4" CONTENT="">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.27in 11.69in; margin-left: 0.79in; margin-right: 0.79in; margin-top: 0.5in; margin-bottom: 0.5in }
+		P { margin-bottom: 0.08in; direction: ltr; color: #000000; widows: 2; orphans: 2 }
+		P.western { font-family: "Times New Roman", serif; font-size: 12pt; so-language: es-ES }
+		P.cjk { font-family: "Times New Roman", serif; font-size: 12pt }
+		P.ctl { font-family: "Times New Roman", serif; font-size: 10pt; so-language: ar-SA }
+		H1 { margin-bottom: 0.04in; direction: ltr; color: #000000; widows: 2; orphans: 2 }
+		H1.western { font-family: "Arial", sans-serif; font-size: 14pt; so-language: es-ES }
+		H1.cjk { font-family: "Times New Roman", serif; font-size: 14pt }
+		H1.ctl { font-family: "Arial", sans-serif; font-size: 10pt; so-language: ar-SA; font-weight: normal }
+		H2 { margin-top: 0.25in; margin-bottom: 0.08in; direction: ltr; color: #000000; widows: 2; orphans: 2 }
+		H2.western { font-family: "Arial", sans-serif; font-size: 12pt; so-language: es-ES; font-style: italic }
+		H2.cjk { font-family: "Times New Roman", serif; font-size: 12pt; font-style: italic }
+		H2.ctl { font-family: "Arial", sans-serif; font-size: 10pt; so-language: ar-SA; font-weight: normal }
+		H3 { margin-bottom: 0.04in; direction: ltr; color: #000000; widows: 2; orphans: 2 }
+		H3.western { font-family: "Arial", sans-serif; font-size: 12pt; so-language: es-ES; font-weight: normal }
+		H3.cjk { font-family: "Times New Roman", serif; font-size: 12pt; font-weight: normal }
+		H3.ctl { font-family: "Arial", sans-serif; font-size: 10pt; so-language: ar-SA; font-weight: normal }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="eu" TEXT="#000000" DIR="LTR">
+<DIV TYPE=HEADER>
+	<P LANG="es-ES" STYLE="margin-bottom: 0.25in; border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding-top: 0in; padding-bottom: 0.01in; padding-left: 0in; padding-right: 0in">
+	<FONT SIZE=2><I>8. gaia 	                                           
+	                                                                    
+	          Ji karratu banaketaren aplikazioak</I></FONT></P>
+</DIV>
+<H1 LANG="es-ES" CLASS="western">8.JI KARRATU BANAKETAREN APLIKAZIOAK</H1>
+<H2 LANG="es-ES" CLASS="western">8.1SARRERA</H2>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Aldagai jarraikietarako behaturiko datuetan oinarriturik
+hipotesi-kontrastea egiteko oinarrizko metodoak azaldu ditugu 4, 5
+eta 6 gaietan. Kontraste bakoitzean, populaziotik ateratako lagin bat
+edo bi genituen, eta laginaren tamainu handia edo populazioaren
+banaketa normala zelako baldintzapean garatu ditugu aipaturiko
+metodoak. Era berean, 7 gaian populazio binomialak erabiliz garatu
+ditugu hipotesi-kontrastea egiteko metodoak.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Hurrengo atal bietan, ondoko ezaugarria duen analisi-mota aztertuko
+dugu: populazioa klase baztertzaile eta exhaustibotan sailkatzen da,
+eta datu-multzoko behaketa bakoitza klase edo gelaxka bakar batean
+dago. Klase bakoitzean dauden behaketa-kopuruan daukagu interesa.
+Arazo estatistikoa, klase bateko maiztasunak aurrefinkaturiko
+hipotesia egiaztatu edo baztertu egiten duen jakitea da.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Orain arte, populazioaren bariantzarako inferentzia egiterakoan
+aipatu da Pearson-en ji karratu banaketa (<FONT FACE="Symbol, serif"></FONT><SUP>2</SUP>).
+Aplikazio estatistikoetan erabilienetarikoa den banaketa honek beste
+erabilpen asko ditu, gai honetan, arruntenak diren ondokoak azaltzen
+direlarik:</P>
+<OL>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	Banaketa bi edo gehiago konparatzako hipotesi-kontrasteak. Praktikan
+	maiz agertzen den arazoa aztertzea baimenduko digu honek, alegia,
+	aldagai diskretu bi arteko menpekotasuna dagoen edo ez erabakitzea.
+	Proba hau ondoko motako galderak erantzuteko erabil daiteke: ba al
+	dago erlaziorik…</P>
+</OL>
+<UL>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	Hipertentsioa eta erretze ohituraren artean?</P>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	Loditasuna eta depresioaren artean?</P>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	Sainarteko drogazaletasuna eta HIES-aren artean?</P>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	Loren kolorea eta usainaren artean?</P>
+</UL>
+<OL START=2>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	Behaturiko maiztasun-banaketak eta maiztasun-banaketa teorikoak
+	elkar komunztatzen duten zehazten duteneko doikuntz egokitasuneko
+	probak.</P>
+</OL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<OL>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	<B>definizioa:</B> <I>r</I><FONT FACE="Symbol, serif"></FONT><I>s</I>
+	klase edo gelaxkaz osoturiko<I> r</I> errenkada eta <I>s</I> zutabe
+	dituen taula, <I><B>r</B></I><FONT FACE="Symbol, serif"></FONT><I><B>s</B></I><B>
+	kontingentzi taula</B> deitzen da.</P>
+</OL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Honelako taulak, aldagai diskretu, edo ezaugarri biren menpean: <I>A</I>
+eta <I>B</I>, sailkatu daitezkeen datuak antolatzeko, eta beraien
+arteko erlazioa edo menpekotasuna aztertzeko era egokia eskeintzen
+digu.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Edonola ezaugarri bat errenkadetan eta bestea zutabeetan egokitzen
+dira, bi faktoreen maila gurutzatuak agertzen direneko maiztasunak
+zenbaturik. Alegia, <I>r</I><FONT FACE="Symbol, serif"></FONT><I>s</I>
+gelaxka bakoitzean maila bien arteko ebakidurari dagokion maiztasun
+absolutua agertzen da. Demagun <I>A</I> ezaugarriari <I>r</I>
+modalitate eta <I>B</I> ezaugarriari <I>s</I> modalitate dagozkiela,
+eta eraiki dezagun kontingentzi taula:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<DL>
+	<DD>
+	<TABLE WIDTH=398 CELLPADDING=5 CELLSPACING=0 FRAME=VOID RULES=NONE>
+		<COL WIDTH=75>
+		<COL WIDTH=37>
+		<COL WIDTH=35>
+		<COL WIDTH=28>
+		<COL WIDTH=35>
+		<COL WIDTH=35>
+		<COL WIDTH=35>
+		<COL WIDTH=36>
+		<TR VALIGN=TOP>
+			<TD COLSPAN=2 WIDTH=122 STYLE="border: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+				</P>
+			</TD>
+			<TD COLSPAN=6 WIDTH=256 STYLE="border: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=CENTER><SPAN LANG="en-GB"><I>B</I></SPAN><SPAN LANG="en-GB">
+				faktorea</SPAN></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=75 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY><BR>
+				</P>
+			</TD>
+			<TD WIDTH=37 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY><BR>
+				</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>1</P>
+			</TD>
+			<TD WIDTH=28 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>2</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>3</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>…</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY><I>s</I></P>
+			</TD>
+			<TD WIDTH=36 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=75 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY><BR>
+				</P>
+			</TD>
+			<TD WIDTH=37 STYLE="border: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=RIGHT>1</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>o</I><SUB>11</SUB></P>
+			</TD>
+			<TD WIDTH=28 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>o</I><SUB>12</SUB></P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>o</I><SUB>13</SUB></P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>…</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>o</I><SUB>1</SUB><SUB><I>s</I></SUB></P>
+			</TD>
+			<TD WIDTH=36 STYLE="border: 1px solid #000000; padding: 0in 0.05in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>f</I><SUB>1·</SUB></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=75 STYLE="border: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+				</P>
+			</TD>
+			<TD WIDTH=37 STYLE="border: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=RIGHT>2</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>o</I><SUB>21</SUB></P>
+			</TD>
+			<TD WIDTH=28 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>o</I><SUB>22</SUB></P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>o</I><SUB>23</SUB></P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>…</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>o</I><SUB>2</SUB><SUB><I>s</I></SUB></P>
+			</TD>
+			<TD WIDTH=36 STYLE="border: 1px solid #000000; padding: 0in 0.05in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>f</I><SUB>2·</SUB></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=75 STYLE="border: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>A</I> faktorea</P>
+			</TD>
+			<TD WIDTH=37 STYLE="border: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=RIGHT STYLE="margin-bottom: 0in">
+				<BR>
+				</P>
+				<P LANG="es-ES" CLASS="western" ALIGN=RIGHT STYLE="margin-bottom: 0in">
+				</P>
+				<P LANG="es-ES" CLASS="western" ALIGN=RIGHT><BR>
+				</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"><BR>
+				</P>
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"></P>
+				<P LANG="es-ES" CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=28 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"><BR>
+				</P>
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"></P>
+				<P LANG="es-ES" CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"><BR>
+				</P>
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"></P>
+				<P LANG="es-ES" CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"><BR>
+				</P>
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"></P>
+				<P LANG="es-ES" CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"><BR>
+				</P>
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"></P>
+				<P LANG="es-ES" CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=36 STYLE="border: 1px solid #000000; padding: 0in 0.05in">
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"><BR>
+				</P>
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"></P>
+				<P LANG="es-ES" CLASS="western"><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=75 STYLE="border: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+				</P>
+			</TD>
+			<TD WIDTH=37 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=RIGHT><I>r</I></P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><SPAN LANG="en-GB"><I>o</I></SPAN><SUB><SPAN LANG="en-GB"><I>r</I></SPAN></SUB><SUB><SPAN LANG="en-GB">1</SPAN></SUB></P>
+			</TD>
+			<TD WIDTH=28 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><SPAN LANG="en-GB"><I>o</I></SPAN><SUB><SPAN LANG="en-GB"><I>r</I></SPAN></SUB><SUB><SPAN LANG="en-GB">2</SPAN></SUB></P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><SPAN LANG="en-GB"><I>o</I></SPAN><SUB><SPAN LANG="en-GB"><I>r</I></SPAN></SUB><SUB><SPAN LANG="en-GB">3</SPAN></SUB></P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>…</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><SPAN LANG="en-GB"><I>o</I></SPAN><SUB><SPAN LANG="en-GB"><I>rs</I></SPAN></SUB></P>
+			</TD>
+			<TD WIDTH=36 STYLE="border: 1px solid #000000; padding: 0in 0.05in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><SPAN LANG="en-GB"><I>f</I></SPAN><SUB><SPAN LANG="en-GB"><I>r</I></SPAN></SUB><SUB><SPAN LANG="en-GB">·</SPAN></SUB></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=75 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY><BR>
+				</P>
+			</TD>
+			<TD WIDTH=37 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=RIGHT><BR>
+				</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>z</I><SUB>·1</SUB></P>
+			</TD>
+			<TD WIDTH=28 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>z</I><SUB>·2</SUB></P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>z</I><SUB>·3</SUB></P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>…</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><SPAN LANG="en-GB"><I>z</I></SPAN><SUB><SPAN LANG="en-GB">·</SPAN></SUB><SUB><SPAN LANG="en-GB"><I>s</I></SPAN></SUB></P>
+			</TD>
+			<TD WIDTH=36 STYLE="border: 1px solid #000000; padding: 0in 0.05in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY><I>n</I></P>
+			</TD>
+		</TR>
+	</TABLE>
+</DL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+<FONT SIZE=2><SPAN LANG="en-GB"><B>8.1. taula:</B></SPAN></FONT><FONT SIZE=2><SPAN LANG="en-GB">
+</SPAN></FONT><FONT SIZE=2><SPAN LANG="en-GB"><I>r</I></SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=2></FONT></FONT><FONT SIZE=2><SPAN LANG="en-GB"><I>s</I></SPAN></FONT><FONT SIZE=2><SPAN LANG="en-GB">
+kontingentzi taularen ohizko adierazpena</SPAN></FONT></P>
+<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+non, 
+</P>
+<UL>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	<SPAN LANG="en-GB"><I>o</I></SPAN><SUB><SPAN LANG="en-GB"><I>ij</I></SPAN></SUB><SPAN LANG="en-GB">
+	: </SPAN><SPAN LANG="en-GB"><I>ij</I></SPAN><SPAN LANG="en-GB">.
+	gelaxkan behaturiko maiztasuna, hau da, </SPAN><SPAN LANG="en-GB"><I>j</I></SPAN><SPAN LANG="en-GB">.
+	zutabeari eta </SPAN><SPAN LANG="en-GB"><I>i</I></SPAN><SPAN LANG="en-GB">.
+	errenkadari dagokion maiztasuna.</SPAN></P>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	<I>z</I><SUB>·1</SUB>, <I>z</I><SUB>·2</SUB>, <I>z</I><SUB>·3</SUB>,…,<I>
+	z</I><SUB>·</SUB><SUB><I>s</I></SUB> : <B>zutabeen total marginalak</B>
+	deitzen dira, 1go, 2., 3.,…, <I>s</I>. zutabeen maiztasun totala
+	adierazten dute, hurrenez hurren. Hau da:</P>
+</UL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+<I>z</I><SUB><I>·j</I></SUB> = <I>o</I><SUB>1</SUB><SUB><I>j</I></SUB>+
+<I>o</I><SUB>2</SUB><SUB><I>j</I></SUB> + <I>o</I><SUB>3</SUB><SUB><I>j</I></SUB>
++…+<I> o</I><SUB><I>rj</I></SUB> 		non <I>j</I> = 1,2,…,<I>s</I></P>
+<UL>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	<I>f</I><SUB>1·</SUB>, <I>f</I><SUB>2·</SUB>, <I>f</I><SUB>3·</SUB>,…,<I>
+	f</I><SUB><I>r·</I></SUB> : <B>errenkaden total marginalak</B>
+	deitzen dira, 1go, 2., 3.,…, <I>r</I>. errenkaden maiztasun totala
+	adierazten dute, hurrenez hurren. <SPAN LANG="en-GB">Hau da:</SPAN></P>
+</UL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+<SPAN LANG="en-GB"><I>f</I></SPAN><SUB><SPAN LANG="en-GB"><I>i</I></SPAN></SUB><SUB><SPAN LANG="en-GB">·</SPAN></SUB><SPAN LANG="en-GB">=
+</SPAN><SPAN LANG="en-GB"><I>o</I></SPAN><SUB><SPAN LANG="en-GB"><I>i</I></SPAN></SUB><SUB><SPAN LANG="en-GB">1</SPAN></SUB><SPAN LANG="en-GB">+
+</SPAN><SPAN LANG="en-GB"><I>o</I></SPAN><SUB><SPAN LANG="en-GB"><I>i</I></SPAN></SUB><SUB><SPAN LANG="en-GB">2</SPAN></SUB><SPAN LANG="en-GB">
++ </SPAN><SPAN LANG="en-GB"><I>o</I></SPAN><SUB><SPAN LANG="en-GB"><I>i</I></SPAN></SUB><SUB><SPAN LANG="en-GB">3</SPAN></SUB><SPAN LANG="en-GB">
++…+</SPAN><SPAN LANG="en-GB"><I> o</I></SPAN><SUB><SPAN LANG="en-GB"><I>is</I></SPAN></SUB><SPAN LANG="en-GB">
+		non </SPAN><SPAN LANG="en-GB"><I>i</I></SPAN><SPAN LANG="en-GB"> =
+1,2,…,</SPAN><SPAN LANG="en-GB"><I>r</I></SPAN></P>
+<UL>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	<SPAN LANG="en-GB"><I>n</I></SPAN><SPAN LANG="en-GB">: behaturiko
+	laginaren tamainua.</SPAN></P>
+</UL>
+<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<OL>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	<SPAN LANG="en-GB"><B>adibidea</B></SPAN><SPAN LANG="en-GB">:
+	Duodenuko ultzera eta odol-taldearen menpekotasuna aztertzeko
+	ikerketa egiten da. 1301 gaixok eta 6313 pertsona osasuntsuk
+	(kontrolak) osoturiko laginak aukeratzen dira, beraien odol-taldea
+	determinatzen delarik. Gaixoen artean, 698 </SPAN><SPAN LANG="en-GB"><I>O</I></SPAN><SPAN LANG="en-GB">
+	taldekoak, 472 </SPAN><SPAN LANG="en-GB"><I>A</I></SPAN><SPAN LANG="en-GB">
+	taldekoak, 102 </SPAN><SPAN LANG="en-GB"><I>B</I></SPAN><SPAN LANG="en-GB">
+	taldekoak eta gaineratikoak </SPAN><SPAN LANG="en-GB"><I>AB</I></SPAN><SPAN LANG="en-GB">
+	taldekoak dira. </SPAN>Kontrolen artean, kopuru hauek 2892, 2625,
+	570 eta 226 dira, hurrenez hurren. Datu hauek 2<FONT FACE="Symbol, serif"></FONT>4
+	kontingentzi taulan (errenkada 2 eta 4 zutabe) ondoko erara
+	antolatzen dira:</P>
+</OL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<DL>
+	<DD>
+	<TABLE WIDTH=576 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES RULES=GROUPS>
+		<COL WIDTH=75>
+		<COL WIDTH=72>
+		<COL WIDTH=66>
+		<COL WIDTH=60>
+		<COL WIDTH=60>
+		<COL WIDTH=183>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=75 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD COLSPAN=4 WIDTH=288 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Odol-taldea</P>
+				</TD>
+				<TD WIDTH=183 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=75 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=72 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER><I>O</I></P>
+				</TD>
+				<TD WIDTH=66 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER><I>A</I></P>
+				</TD>
+				<TD WIDTH=60 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER><I>B</I></P>
+				</TD>
+				<TD WIDTH=60 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER><I>AB</I></P>
+				</TD>
+				<TD WIDTH=183 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=75 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Gaixoak</P>
+				</TD>
+				<TD WIDTH=72 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>o</I><SUB>11 </SUB>=
+					698</P>
+				</TD>
+				<TD WIDTH=66 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>o</I><SUB>12 </SUB>=
+					472</P>
+				</TD>
+				<TD WIDTH=60 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>o</I><SUB>13 </SUB>=
+					102</P>
+				</TD>
+				<TD WIDTH=60 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>o</I><SUB>41 </SUB>=
+					29</P>
+				</TD>
+				<TD WIDTH=183 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>f</I><SUB>1.</SUB>
+					= 1301 (aurrefinkaturik)</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=75 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Kontrolak</P>
+				</TD>
+				<TD WIDTH=72 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>o</I><SUB>21 </SUB>=
+					2892</P>
+				</TD>
+				<TD WIDTH=66 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>o</I><SUB>22 </SUB>=
+					2625</P>
+				</TD>
+				<TD WIDTH=60 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>o</I><SUB>23 </SUB>=
+					570</P>
+				</TD>
+				<TD WIDTH=60 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>o</I><SUB>41 </SUB>=
+					226</P>
+				</TD>
+				<TD WIDTH=183 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>f</I><SUB>2.</SUB>
+					= 6313 (aurrefinkaturik)</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=75 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=72 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>z</I><SUB>.1 </SUB>=
+					3590</P>
+				</TD>
+				<TD WIDTH=66 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>z</I><SUB>.2 </SUB>=
+					3097</P>
+				</TD>
+				<TD WIDTH=60 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>z</I><SUB>.3 </SUB>=
+					672</P>
+				</TD>
+				<TD WIDTH=60 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>z</I><SUB>.4 </SUB>=
+					255</P>
+				</TD>
+				<TD WIDTH=183 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>n</I> = 7614</P>
+				</TD>
+			</TR>
+		</TBODY>
+	</TABLE>
+</DL>
+<OL START=2>
+	<LI><P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"><FONT SIZE=2><B>taula:</B></FONT><FONT SIZE=2>
+	8.1. adibideko datuen antolamendua 2</FONT><FONT FACE="Symbol, serif"><FONT SIZE=2></FONT></FONT><FONT SIZE=2>4
+	kontingentzi taulan.</FONT></P>
+</OL>
+<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<H2 LANG="es-ES" CLASS="western">8.2HOMOGENOTASUN ETA INDEPENDENTZI
+PROBAK</H2>
+<H3 LANG="es-ES" CLASS="western"><B>8.2.1Planteamendu orokorra</B></H3>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<I>r</I><FONT FACE="Symbol, serif"></FONT><I>s</I> kontingentzi
+taula dugunean, kontrastatuko den <B>hipotesi nulua H</B><SUB><B>0</B></SUB>,
+ezaugarri edo klasifikazio aldagaien arteko “menpekotasunik ez
+egotea” da. <B>Hipotesi alternatiboa H</B><SUB><B>1</B></SUB>
+ordea, bien arteko menpekotasuna egotea izango da. Hipotesi nuluaren
+itxura zehatza esperimentuaren diseinuaren menpean dago.
+Diseinu-esperimental mota bi daude:</P>
+<OL>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	Total marginal guztiak zorizkoak dira; hots, ikertzaileak ezin ditu
+	menperatu. Laginketa populazio bakar batean burutzen da. Kasu
+	honetan, menpekotasunik ez egotearen probari <B>independentzi proba</B>
+	deitzen zaio.</P>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	Total marginal batzu (errenkada edo zutabeenak) ikertzaileak
+	menperatzen ditu, besteak zorizkoak direlarik. Laginketa
+	aurrefinkaturiko populazioei dagozkien lagin aske desberdinak
+	aukeraturik burutzen da. Kasu honetan, menpekotasunik ez egotearen
+	probari <B>homogenotasun proba</B> deitzen zaio.</P>
+</OL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<B>8.1. oharra:</B> Gai honetan aztertuko ditugun 2. motako kasuetan
+errenkadak aurrefinkatzen direla suposatuko dugu. Zutabeak finkatzen
+direnean teknika berdina da.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Demagun total marginal guztiak zorizkoak direla, <B>independentzi
+proba</B> burutzen dugu, eta menpekotasun ezaren hipotesi nulua
+ondoko erara adieraz daiteke:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+H<SUB>0</SUB>: <I>A</I> eta <I>B</I> askeak dira.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+H<SUB>1</SUB>: <I>A</I> eta <I>B</I> menpekoak dira.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+H<SUB>0</SUB> egiazkoa bada, hots bi faktoreak askeak badira,
+<I>P</I>(<I>A</I><SUB><I>i</I></SUB><I>B</I><SUB><I>j</I></SUB>) =
+<I>P</I>(<I>A</I><SUB><I>i</I></SUB>)·<I>P</I>(<I>B</I><SUB><I>j</I></SUB>)
+da, eta, beraz ondoko erara kalkula daitezke gelaxka bakoitzerako
+itxarotako maiztasunak:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<I>e</I><SUB><I>ij</I></SUB> = <I>n</I>·<I>P</I>(<I>A</I><SUB><I>i</I></SUB><I>B</I><SUB><I>j</I></SUB>)
+= <I>n</I>·<I> P</I>(<I>A</I><SUB><I>i</I></SUB>)·<I>P</I>(<I>B</I><SUB><I>j</I></SUB>)</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<I>P</I>(<I>A</I><SUB><I>i</I></SUB>) eta <I>P</I>(<I>B</I><SUB><I>j</I></SUB>)
+ezagutzen ez ditugunez, laginaren datuetatik estimatu beharko ditugu;
+hau da:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<I>P</I>(<I>A</I><SUB>i</SUB>)	eta	<I>P</I>(<I>B</I><SUB>j</SUB>)</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Beraz, 
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+8.3. taulan, <I>r</I><FONT FACE="Symbol, serif"></FONT><I>s</I>
+kontingentzi taularen adierazpen teorikoa erakusten da, gelaxka
+bakoitzean, honi dagokion maiztasun teorikoa agertzen delarik.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<DL>
+	<DD>
+	<TABLE WIDTH=398 CELLPADDING=5 CELLSPACING=0 FRAME=VOID RULES=NONE>
+		<COL WIDTH=75>
+		<COL WIDTH=37>
+		<COL WIDTH=35>
+		<COL WIDTH=28>
+		<COL WIDTH=35>
+		<COL WIDTH=35>
+		<COL WIDTH=35>
+		<COL WIDTH=36>
+		<TR VALIGN=TOP>
+			<TD COLSPAN=2 WIDTH=122 STYLE="border: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+				</P>
+			</TD>
+			<TD COLSPAN=6 WIDTH=256 STYLE="border: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=CENTER><SPAN LANG="en-GB"><I>A</I></SPAN><SPAN LANG="en-GB">
+				faktorea</SPAN></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=75 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY><BR>
+				</P>
+			</TD>
+			<TD WIDTH=37 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY><BR>
+				</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>1</P>
+			</TD>
+			<TD WIDTH=28 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>2</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>3</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>…</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY><I>s</I></P>
+			</TD>
+			<TD WIDTH=36 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=75 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY><BR>
+				</P>
+			</TD>
+			<TD WIDTH=37 STYLE="border: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=RIGHT>1</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>e</I><SUB>11</SUB></P>
+			</TD>
+			<TD WIDTH=28 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>e</I><SUB>12</SUB></P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>e</I><SUB>13</SUB></P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>…</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>e</I><SUB>1</SUB><SUB><I>s</I></SUB></P>
+			</TD>
+			<TD WIDTH=36 STYLE="border: 1px solid #000000; padding: 0in 0.05in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>f</I><SUB>1·</SUB></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=75 STYLE="border: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+				</P>
+			</TD>
+			<TD WIDTH=37 STYLE="border: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=RIGHT>2</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>e</I><SUB>21</SUB></P>
+			</TD>
+			<TD WIDTH=28 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>e</I><SUB>22</SUB></P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>e</I><SUB>23</SUB></P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>…</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>e</I><SUB>2</SUB><SUB><I>s</I></SUB></P>
+			</TD>
+			<TD WIDTH=36 STYLE="border: 1px solid #000000; padding: 0in 0.05in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>f</I><SUB>2·</SUB></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=75 STYLE="border: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>B</I> faktorea</P>
+			</TD>
+			<TD WIDTH=37 STYLE="border: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=RIGHT STYLE="margin-bottom: 0in">
+				<BR>
+				</P>
+				<P LANG="es-ES" CLASS="western" ALIGN=RIGHT STYLE="margin-bottom: 0in">
+				</P>
+				<P LANG="es-ES" CLASS="western" ALIGN=RIGHT><BR>
+				</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"><BR>
+				</P>
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"></P>
+				<P LANG="es-ES" CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=28 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"><BR>
+				</P>
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"></P>
+				<P LANG="es-ES" CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"><BR>
+				</P>
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"></P>
+				<P LANG="es-ES" CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"><BR>
+				</P>
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"></P>
+				<P LANG="es-ES" CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"><BR>
+				</P>
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"></P>
+				<P LANG="es-ES" CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=36 STYLE="border: 1px solid #000000; padding: 0in 0.05in">
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"><BR>
+				</P>
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"></P>
+				<P LANG="es-ES" CLASS="western"><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=75 STYLE="border: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+				</P>
+			</TD>
+			<TD WIDTH=37 STYLE="border: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=RIGHT><I>r</I></P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>e</I><SUB><I>r</I></SUB><SUB>1</SUB></P>
+			</TD>
+			<TD WIDTH=28 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>e</I><SUB><I>r</I></SUB><SUB>2</SUB></P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><SPAN LANG="en-GB"><I>e</I></SPAN><SUB><SPAN LANG="en-GB"><I>r</I></SPAN></SUB><SUB><SPAN LANG="en-GB">3</SPAN></SUB></P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>…</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><SPAN LANG="en-GB"><I>e</I></SPAN><SUB><SPAN LANG="en-GB"><I>rs</I></SPAN></SUB></P>
+			</TD>
+			<TD WIDTH=36 STYLE="border: 1px solid #000000; padding: 0in 0.05in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><SPAN LANG="en-GB"><I>f</I></SPAN><SUB><SPAN LANG="en-GB"><I>r</I></SPAN></SUB><SUB><SPAN LANG="en-GB">·</SPAN></SUB></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=75 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY><BR>
+				</P>
+			</TD>
+			<TD WIDTH=37 STYLE="border: none; padding: 0in">
+				<P LANG="en-GB" CLASS="western" ALIGN=RIGHT><BR>
+				</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>z</I><SUB>·1</SUB></P>
+			</TD>
+			<TD WIDTH=28 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>z</I><SUB>·2</SUB></P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>z</I><SUB>·3</SUB></P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>…</P>
+			</TD>
+			<TD WIDTH=35 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>z</I><SUB><I>·s</I></SUB></P>
+			</TD>
+			<TD WIDTH=36 STYLE="border: 1px solid #000000; padding: 0in 0.05in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+				</P>
+			</TD>
+		</TR>
+	</TABLE>
+</DL>
+<OL START=3>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 2.17in; margin-bottom: 0in">
+	<FONT SIZE=2><B>taula:</B></FONT><FONT SIZE=2> </FONT><FONT SIZE=2><I>r</I></FONT><FONT FACE="Symbol, serif"><FONT SIZE=2></FONT></FONT><FONT SIZE=2><I>s</I></FONT><FONT SIZE=2>
+	kontingentzi taularen adierazpen teorikoa, gelaxka bakoitzari
+	dagokion itxarotako maiztasuna erabilirik</FONT></P>
+</OL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Gehien baten, emaitza hauek ez dira beste taula batean jartzen,
+baizik eta, parentesi artean, datu taulan, bakoitzari dagokion
+gelaxkan.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Garrantzizkoa da azpimarratzea <I>e</I><SUB><I>ij</I></SUB> &lt; 5
+deneko kasuetarako, <I>e</I><SUB>ij</SUB> &gt; 5   <I>i</I>, <I>j</I>
+lortu arte, klaseak bildu behar direla.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Hipotesi kontrastea egiteko erabiliko dugun estatistikoa ondokoa da:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+eta bere banaketa (<I>r</I> <FONT FACE="Symbol, serif"></FONT>
+1)·(<I>s</I> <FONT FACE="Symbol, serif"></FONT> 1)
+askatasun-graduko ji karratua da.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Beronen behaturiko balioa, hau da, taularen datuetarako
+proba-estatistikoak hartzen duen balioa kalkulatzen da:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Eta balio honi dagokion <I>p</I>-balioa, <I>p</I> = <I>P</I>() da.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Azkenik, <FONT FACE="Symbol, serif"></FONT>
+adierazgarritasun-maila zehazten da eta ondoko erara arrazonatzen
+dugu:</P>
+<UL>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 0.25in">
+	<I>p</I> <FONT FACE="Symbol, serif"></FONT> <FONT FACE="Symbol, serif"></FONT>
+	 <FONT FACE="Symbol, serif"></FONT>  <I>p</I>-balioa zoriz
+	agertua izateko txikiegia dela uste dugu  <FONT FACE="Symbol, serif"></FONT>
+	<FONT FACE="Symbol, serif"></FONT> adierazgarritasun-mailaz H<SUB>0</SUB>
+	hipotesia errefusatuko dugu. 
+	</P>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 0.25in">
+	<I>p</I> &gt; <FONT FACE="Symbol, serif"></FONT>  <FONT FACE="Symbol, serif"></FONT>
+	 ezberdintasunak zoriz agertuak izan ditzake  <FONT FACE="Symbol, serif"></FONT>
+	 <FONT FACE="Symbol, serif"></FONT> adierazgarritasun-mailaz ez
+	dago H<SUB>0</SUB> errefusatzeko nabaritasunik.</P>
+</UL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Hau da, estatistikoaren behaturiko balioa,  “oso handia” bada,
+behaturiko maiztasunak eta itxarotakoak (faktoreak askeak direla
+suposaturik) oso ezberdinak direla pentsatzea zilegia dirudi; beraz,
+faktoreak menpekoak direla ondorioztatuko da. Baina estatistikoaren
+balio “handiak” <I>p</I>-balioaren balio “txikira” garamatza,
+alegia aurrefinkaturiko <FONT FACE="Symbol, serif"></FONT> baino
+txikiagora.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<OL START=2>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	<B>adibidea:</B> Demagun, psikologoak eskola-umeen pisua eta beraien
+	ikasketetako arrakasta goiztiarrari buruzko menpekotasuna aztertu
+	nahi duela. 500 eskola-umek osoturiko laginean 8.4. taulan
+	adierazten diren datuak lortu ditugu:</P>
+</OL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<DL>
+	<DD>
+	<TABLE WIDTH=473 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES RULES=GROUPS>
+		<COL WIDTH=142>
+		<COL WIDTH=116>
+		<COL WIDTH=116>
+		<COL WIDTH=59>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=142 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD COLSPAN=2 WIDTH=241 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Loditasuna</P>
+				</TD>
+				<TD WIDTH=59 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=142 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Arrakasta
+					goiztiarra</P>
+				</TD>
+				<TD WIDTH=116 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Bai</P>
+				</TD>
+				<TD WIDTH=116 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Ez</P>
+				</TD>
+				<TD WIDTH=59 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=142 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Bai</P>
+				</TD>
+				<TD WIDTH=116 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>162</P>
+				</TD>
+				<TD WIDTH=116 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>263</P>
+				</TD>
+				<TD WIDTH=59 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>425</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=142 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Ez</P>
+				</TD>
+				<TD WIDTH=116 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>38</P>
+				</TD>
+				<TD WIDTH=116 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>37</P>
+				</TD>
+				<TD WIDTH=59 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>75</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=142 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=116 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>200</P>
+				</TD>
+				<TD WIDTH=116 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>300</P>
+				</TD>
+				<TD WIDTH=59 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>500</P>
+				</TD>
+			</TR>
+		</TBODY>
+	</TABLE>
+</DL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+<FONT SIZE=2><B>8.4. taula:</B></FONT><FONT SIZE=2> 8.2. adibideko
+datuen adierazpena.</FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<U>Emaitza</U>: 8.4. taulan agertzen diren datuak: <I>o</I><SUB><I>ij</I></SUB>,
+<I>z</I><SUB><I>.j</I></SUB>, <I>f</I><SUB><I>i.</I></SUB> eta <I>n</I>
+dira. Hipotesi kontrastea ondokoa da:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+H<SUB>0</SUB>: Pisua eta eskolako arrakasta goiztiarra askeak dira.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+H<SUB>1</SUB>: Pisua eta eskolako arrakasta goiztiarra menpekoak
+dira.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Itxarotako maiztasunak kalkulatzen baditugu:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+  	</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Taula berdinean behaturiko <I>o</I><SUB><I>ij</I></SUB> eta
+itxarotako <I>e</I><SUB><I>ij</I></SUB> maiztasunak (azken hauek
+parentesi artean) jartzen baditugu:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<DL>
+	<DD>
+	<TABLE WIDTH=454 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES RULES=GROUPS>
+		<COL WIDTH=142>
+		<COL WIDTH=116>
+		<COL WIDTH=116>
+		<COL WIDTH=41>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=142 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD COLSPAN=2 WIDTH=241 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Loditasuna</P>
+				</TD>
+				<TD WIDTH=41 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=142 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Arrakasta
+					goiztiarra</P>
+				</TD>
+				<TD WIDTH=116 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Bai</P>
+				</TD>
+				<TD WIDTH=116 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Ez</P>
+				</TD>
+				<TD WIDTH=41 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=142 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Bai</P>
+				</TD>
+				<TD WIDTH=116 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>162 (170)</P>
+				</TD>
+				<TD WIDTH=116 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>263 (255)</P>
+				</TD>
+				<TD WIDTH=41 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>425</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=142 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Ez</P>
+				</TD>
+				<TD WIDTH=116 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>38 (30)</P>
+				</TD>
+				<TD WIDTH=116 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>37 (45)</P>
+				</TD>
+				<TD WIDTH=41 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>75</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=142 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=116 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>200</P>
+				</TD>
+				<TD WIDTH=116 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>300</P>
+				</TD>
+				<TD WIDTH=41 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>500</P>
+				</TD>
+			</TR>
+		</TBODY>
+	</TABLE>
+</DL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+<FONT SIZE=2><B>8.5. taula:</B></FONT><FONT SIZE=2> 8.2. adibideko
+itxarotako eta behaturiko maiztasunen adierazpena.</FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Itxarotako maiztasun guztiak 5 baino handiagoak direnez, azaldutako
+teknika erabili dezakegu. Estatistikoaren behaturiko balio hauxe da:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Kasu honetan <I>r</I> = <I>s </I>= 2 da, eta askatasun-gradu kopurua
+(<I>r</I> <FONT FACE="Symbol, serif"></FONT> 1)·(<I>s</I> <FONT FACE="Symbol, serif"></FONT>
+1) = (2 <FONT FACE="Symbol, serif"></FONT> 1)·(2 <FONT FACE="Symbol, serif"></FONT>
+1) = 1 izango da.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Beraz, kontrastearen <I>p</I>-balioa hauxe da: <I>p</I> = <I>P</I>(<FONT FACE="Symbol, serif"></FONT>
+4.18)</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Ji karratu banaketaren taulan <I>P</I>(<FONT FACE="Symbol, serif"></FONT>
+3.84) = 0.05 eta <I>P</I>(<FONT FACE="Symbol, serif"></FONT> 5.02)
+= 0.025 lortzen ditugu, orduan 0.025 &lt; <I>p</I> &lt; 0.05 betetzen
+da. Ondorioz, <FONT FACE="Symbol, serif"></FONT> = 0.05-eko
+adierazgarritasun-mailaz, H<SUB>0</SUB> errefusatu egiten dugu, eta
+loditasuna eta eskolako arrakasta goiztiarra askeak direnik ezin dugu
+esan.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Adibide hau idependentzi proba izan da, zeren eta ez maiztasunak, ez
+eta total marginalak aurretik ez baitziren ezagutzen. 500 tamainuko
+lagin bakar bat aukeratuz, aztertzen ari ginen erizpide bien arabera
+(pisua eta arrakasta) ikasle bakoitza sailkatu dugu.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Independentzi proba burutzerakoan, gelaxka bakoitzerako behaturiko
+elementu-kopurua, lagina atera eta gero kalkulatzen da; eta, beraz,
+total marginalak, ikertzaileak erabil ezin ditzakeen zorizko
+kantitateak (laginaren menpekoak) dira. Kasu hauetan, aukeraturiko
+lagina, populazio bakar batetatik ateratako lagin bakartzat jotzen
+dugu.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Hala ere, esan dugu aurretik, batzutan, total marginalak (errenkada
+eta zutabeenak) menperatzea interesatzen zaiola ikertzaileari. Kasu
+honetan, total hauen multzoa finkatuko du, horretarako, dagozkien
+populazioetatik lagin aske ezberdinak aukeraturik. Honek
+homogenotasun probara garamatza.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Egoera biek, laginketa prozedurak ezberdinak izateaz gain, hipotesi
+nulu ezberdinetara garamatzate.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Kontzeptuari eta laginketa prozedurari dagokionez, nabariak dira
+independentzi eta homogenotasun probaren arteko ezberdintasunak. Hala
+ere, kalkulu matematikoen aldetik, proba biak berdinak dira.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Demagun orain, errenkaden total marginalak aurrefinkaturik daudela,
+<B>homogenotasun proba</B> burutzen dugu, eta menpekotasun ezaren
+hipotesi nulua ondoko erara adieraz daiteke:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+H<SUB>0</SUB>: Laginak populazio berberetik ateratzen dira.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+H<SUB>1</SUB>: Laginak populazio desberdinetatik ateratzen dira.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Kalkulu matematikoak independentzi probarako ikusitakoen berdinak
+direnez, adibide baten bidez aztertuko dugu.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<OL START=3>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	<B>adibidea:</B> 8.1.adibideko datuetan oinarrituko gara. Populazio
+	ezberdin bi daude: gaixoak eta kontrolak, eta hauetatik lagin askeak
+	aukeratzen dira, 1301 eta 6313 tamainuetakoak, hurrenez hurren.
+	Beraz, errenkaden total marginalak ez dira zorizkoak. Ikerketako
+	galdera, odol-taldeak duodenuko ultzera pairatzean eraginik daukan
+	al ez da. Beste era batetara, beraien odol-taldearen arabera,
+	gaixoak eta kontrolak populazio berberetik ateratakoak diren ala ez
+	onartzea izango da helburua.</P>
+</OL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<U>Emaitza</U>: Hipotesi kontrastea hauxe da:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.69in; text-indent: -0.3in; margin-bottom: 0in">
+H<SUB>0</SUB>: Laginak populazio berberetik ateratzen dira; edo
+odol-taldearen arabera, ez dago gaixoen eta kontrolen arteko
+ezberdintasunik.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.69in; text-indent: -0.3in; margin-bottom: 0in">
+H<SUB>1</SUB>: Laginak populazio ezberdinetatik ateratzen dira; edo
+odol-taldearen arabera gaixoak eta kontrolak ezberdinak dira.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Itxarotako maiztasunak kalkulatzen ditugu:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+  			  	  	</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+  	</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Taula berdinean behaturiko <I>o</I><SUB><I>ij</I></SUB> eta
+itxarotako <I>e</I><SUB><I>ij</I></SUB> maiztasunak (azken hauek
+parentesi artean) jartzen ditugu:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<DL>
+	<DD>
+	<TABLE WIDTH=548 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES RULES=GROUPS>
+		<COL WIDTH=100>
+		<COL WIDTH=67>
+		<COL WIDTH=62>
+		<COL WIDTH=56>
+		<COL WIDTH=57>
+		<COL WIDTH=145>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=100 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD COLSPAN=4 WIDTH=273 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Odol-taldea</P>
+				</TD>
+				<TD WIDTH=145 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=100 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=67 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER><I>O</I></P>
+				</TD>
+				<TD WIDTH=62 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER><I>A</I></P>
+				</TD>
+				<TD WIDTH=56 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER><I>B</I></P>
+				</TD>
+				<TD WIDTH=57 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER><I>AB</I></P>
+				</TD>
+				<TD WIDTH=145 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=100 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>Gaixoak</P>
+				</TD>
+				<TD WIDTH=67 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+					698</P>
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>(613.42)</P>
+				</TD>
+				<TD WIDTH=62 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+					472</P>
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>(529.18)</P>
+				</TD>
+				<TD WIDTH=56 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+					102</P>
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>(114.82)</P>
+				</TD>
+				<TD WIDTH=57 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+					29</P>
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>(43.57)</P>
+				</TD>
+				<TD WIDTH=145 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>1301
+					(aurrefinkaturik)</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=100 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>Kontrolak</P>
+				</TD>
+				<TD WIDTH=67 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+					2892</P>
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>(2976.58)</P>
+				</TD>
+				<TD WIDTH=62 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+					2625</P>
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>(2567.82)</P>
+				</TD>
+				<TD WIDTH=56 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+					570</P>
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>(557.18)</P>
+				</TD>
+				<TD WIDTH=57 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+					226</P>
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>(211.43)</P>
+				</TD>
+				<TD WIDTH=145 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>6313
+					(aurrefinkaturik)</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=100 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=67 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>3590</P>
+				</TD>
+				<TD WIDTH=62 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>3097</P>
+				</TD>
+				<TD WIDTH=56 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>672</P>
+				</TD>
+				<TD WIDTH=57 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>255</P>
+				</TD>
+				<TD WIDTH=145 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>7614</P>
+				</TD>
+			</TR>
+		</TBODY>
+	</TABLE>
+</DL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+<FONT SIZE=2><SPAN LANG="en-GB"><B>8.6. taula:</B></SPAN></FONT><FONT SIZE=2><SPAN LANG="en-GB">
+8.3. adibideko behaturiko eta itxarotako maiztasunen adierazpena</SPAN></FONT></P>
+<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<SPAN LANG="en-GB">Itxarotako maiztasun guztiak 5 baino handiagoak
+direnez, azaldutako teknika erabili dezakegu. </SPAN>Estatistikoaren
+behaturiko balio hauxe da:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Kasu honetan <I>r</I> = 2 eta <I>s </I>= 4 dira, eta askatasun-gradu
+kopurua (<I>r</I> <FONT FACE="Symbol, serif"></FONT> 1)·(<I>s</I>
+<FONT FACE="Symbol, serif"></FONT> 1) = (2 <FONT FACE="Symbol, serif"></FONT>
+1)·(4 <FONT FACE="Symbol, serif"></FONT> 1) = 3 izango da.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Beraz, kontrastearen <I>p</I>-balioa hauxe da: <I>p</I> = <I>P</I>(<FONT FACE="Symbol, serif"></FONT>
+29.12)</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Ji karratu banaketaren taulan <I>P</I>(<FONT FACE="Symbol, serif"></FONT>
+11.345) = 0.01 aurkitzen dugu, orduan <I>p</I> &lt; 0.01 betetzen da.
+Ondorioz, %1eko adierazgarritasun-mailaz, H<SUB>0</SUB> errefusatu
+egiten dugu, eta gaixo eta kontroletako odol-taldearen sailkapena
+ezberdina dela, edo lagin biak odol-taldearen araberako populazio
+berdinetik aterata ez daudela esan dezakegu. Honen ondorio zuzena,
+%1eko adierazgarritasun-mailaz odol-taldearen eta duodenuko
+ultzeraren menpekotasuna izango liteke.</P>
+<H3 LANG="es-ES" CLASS="western"><B>8.2.2Yates-en zuzenketa</B></H3>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Batzutan, aztertzen ditugun bi faktoreak, bi klase edo bi mailatan
+sailka daitezke soilik. Datu gurutzatuak sailkatzerakoan, bi
+errenkada eta bi zutabetako kontingentzi taula lortzen da.
+Orokorrean, mota honetako taula “2<FONT FACE="Symbol, serif"></FONT>2
+taula” izenaz ezagutzen da, kasu partikular honetan,
+askatasun-graduen kopurua 1 delarik.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Arazo-mota honetan, banaketa diskretua (zenbaki osoa den maila
+bakoitzaren maiztasuna),  banaketa jarraikiaren bidez hurbiltzen
+dugula kontutan hartu behar dugu. Beraz, jaukitzen dugun errore
+txikia zuzendu beharrekoa da.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Askatasun-graduen kopurua (<I>r</I> <FONT FACE="Symbol, serif"></FONT>
+1)·(<I>s</I> <FONT FACE="Symbol, serif"></FONT> 1) &gt; 1 deneko
+kasuan, zuzenketa ez da beharrezkoa. Baina askatasun-graduen kopurua
+1 denean,  estatistikoaren banaketa  delakoari darraiola
+suposatzerakoan, errore handiegia jaukitzen dugu. Hau dela eta,
+Yates-ek estatistiko berri bat proposatu zuen, eta estatistiko hau 
+banaketarako hurbilketa hobea da. Estatistiko berri honen izena
+<B>Yates-en zuzenketa</B> da, eta hauxe da:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Bere banaketa askatasun-gradu bateko ji karratua delarik. Estatistiko
+honen behaturiko balioa ondokoa izango da:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Eta beronen erabilpena beharrezkoa da  betetzen denean.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<OL START=2>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	<B>oharra:</B> Transformazio egokien bidez, 2<FONT FACE="Symbol, serif"></FONT>2
+	kontingentzi taularako ji karratu estatistiko arrunta eta Yates-en
+	estatistikoaren adierazpenek ondoko erak onartzen dituzte:</P>
+</OL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+			 denean</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+		 denean</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Formula bi hauek 2<FONT FACE="Symbol, serif"></FONT>2 tauletan
+kalkuluak errazten dituzte.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<B>8.4. adibidea:</B> 108 pertsonatatik, tratamendu profilaktikoaren
+menpean egon eta gero, 20 gaixotu egin ziren; kontrasterako plazeboak
+hartu zituzten 237 pertsonetatik 74 gaixotu zirelarik. Medikamendu
+errealaren (tratamendu profilaktikoaren) eta itxurazkoaren
+(kontrasterako plazeboen) arteko aktibitate ezberdintasuna
+adierazgarria al da? (har ezazu <FONT FACE="Symbol, serif"></FONT>
+= 0.05)</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<U>Emaitza</U>: Medikamendu eta plazeboaren arteko aktibitate
+ezberdintasuna adierazgarria izatea, talde bietan gaixotzeko
+probabilitate berdina izatea edo lagin biak populazio berberetik
+ateratakoak izatea da. Beraz, homogenotasun proba burutzen dugu.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<DL>
+	<DD>
+	<TABLE WIDTH=359 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES RULES=GROUPS>
+		<COL WIDTH=132>
+		<COL WIDTH=66>
+		<COL WIDTH=93>
+		<COL WIDTH=28>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=132 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=66 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Gaixoak</P>
+				</TD>
+				<TD WIDTH=93 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Osasuntsuak</P>
+				</TD>
+				<TD WIDTH=28 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=132 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Tratamendua</P>
+				</TD>
+				<TD WIDTH=66 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>20</P>
+				</TD>
+				<TD WIDTH=93 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>88</P>
+				</TD>
+				<TD WIDTH=28 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>108</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=132 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Tratamendurik ez</P>
+				</TD>
+				<TD WIDTH=66 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>74</P>
+				</TD>
+				<TD WIDTH=93 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>163</P>
+				</TD>
+				<TD WIDTH=28 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>237</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=132 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=66 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>94</P>
+				</TD>
+				<TD WIDTH=93 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>251</P>
+				</TD>
+				<TD WIDTH=28 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>345</P>
+				</TD>
+			</TR>
+		</TBODY>
+	</TABLE>
+</DL>
+<P LANG="es-ES" CLASS="western" STYLE="margin-left: 0.39in; margin-bottom: 0in">
+<FONT SIZE=2><B>8.7. taula:</B></FONT><FONT SIZE=2> 8.4. adibideko
+datuen antolamendua 2</FONT><FONT FACE="Symbol, serif"><FONT SIZE=2></FONT></FONT><FONT SIZE=2>2
+taulan.</FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Egin nahi dugun hipotesi-kontrastea ondokoa da:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+H<SUB>0</SUB>: Laginak populazio berberetik ateratzen dira; edo
+tratamenduak gaixotzean ez du eraginik.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+H<SUB>1</SUB>: Laginak populazio ezberdinetatik ateratzen dira; edo
+tratamenduak gaixotzean eragina du.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+=|20·163 <FONT FACE="Symbol, serif"></FONT> 74·88| = 3252 &gt; <I>n</I>
+/ 2 = 172.5</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Beraz, Yates-en zuzenketa erabiltzea derrigorrezkoa da,
+estatistikoaren behaturiko balio eta <I>p</I>-balioa hauxek dira:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+= 	eta 	<I>p</I> = <I>P</I>(<FONT FACE="Symbol, serif"></FONT>
+5.417) 
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Ji karratu banaketaren taulan <I>P</I>(<FONT FACE="Symbol, serif"></FONT>
+5.412) = 0.02 aurkitzen dugu, orduan <I>p</I> &lt; 0.02 betetzen da.
+Ondorioz, %5eko adierazgarritasun-mailaz, H<SUB>0</SUB> errefusatu
+egiten dugu, eta beraz tratamenduaren eta plazeboaren
+eraginkortasunaren ezberdintasuna adierazgarria da.</P>
+<H3 LANG="es-ES" CLASS="western"><B>8.2.3Itxarotako maiztasun txikiak</B></H3>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Bai Independentzi zein homogenotasun proba burutzerakoan, itxarotako
+maiztasunen bat 5 baino txikiagoa baldin bada aurreko metodoa ezin
+dugu erabili, beraz klaseen bildura egin beharko dugu. Prozesu hau
+adibide baten bidez aztertuko dugu.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<B>8.5. adibidea:</B> Urin gastrikoaren azidotasun-maila ezberdinen
+(aklorhidria, hipoklorhidria, normal eta hiperklorhidria) eta
+gaixotasun-motaren (ultzera gastrikoa eta minbizia) arteko
+menpekotasunik dagoen aztertu nahi dugu. Lorturiko emaitzak 8.8.
+taulan adierazten dira. Kontrasta ezazu, azidotasun gastrikoaren eta
+gaixotasun-motaren arteko independentzia, %1eko
+adierazgarritasun-mailaz.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<DL>
+	<DD>
+	<TABLE WIDTH=556 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES RULES=GROUPS>
+		<COL WIDTH=124>
+		<COL WIDTH=86>
+		<COL WIDTH=115>
+		<COL WIDTH=67>
+		<COL WIDTH=115>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=124 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD COLSPAN=4 WIDTH=412 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Azidotasun-maila</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=124 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=86 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Aklorhidria</P>
+				</TD>
+				<TD WIDTH=115 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Hipoklorhidria</P>
+				</TD>
+				<TD WIDTH=67 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Normal</P>
+				</TD>
+				<TD WIDTH=115 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Hiperklorhidria</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=124 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Ultzera gastrikoa</P>
+				</TD>
+				<TD WIDTH=86 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>3 
+					</P>
+				</TD>
+				<TD WIDTH=115 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>7</P>
+				</TD>
+				<TD WIDTH=67 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>35</P>
+				</TD>
+				<TD WIDTH=115 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>9</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=124 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Minbizia</P>
+				</TD>
+				<TD WIDTH=86 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>22</P>
+				</TD>
+				<TD WIDTH=115 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>2</P>
+				</TD>
+				<TD WIDTH=67 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>6</P>
+				</TD>
+				<TD WIDTH=115 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>0</P>
+				</TD>
+			</TR>
+		</TBODY>
+	</TABLE>
+</DL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.3in; margin-bottom: 0in">
+<FONT SIZE=2><B>8.8. taula:</B></FONT><FONT SIZE=2> 8.5. adibideko
+datuen taula.</FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<U>Emaitza</U>: Hipotesi-kontrastea hauxe da:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+H<SUB>0</SUB>: Urin-gastrikoaren azidotasuna gaixotasunarekiko askea
+da</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+H<SUB>1</SUB>: Urin-gastrikoaren azidotasuna gaixotasunarekiko
+menpekoa da.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Itxarotako maiztasunak kalkulatzen ditugu:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+ ,	</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+ ,	</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+ ,	</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+ ,	</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Eta datu guztiak 8.9. taulan adierazten dira.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<DL>
+	<DD>
+	<TABLE WIDTH=614 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES RULES=GROUPS>
+		<COL WIDTH=124>
+		<COL WIDTH=86>
+		<COL WIDTH=115>
+		<COL WIDTH=67>
+		<COL WIDTH=106>
+		<COL WIDTH=56>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=124 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD COLSPAN=4 WIDTH=404 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Azidotasun-maila</P>
+				</TD>
+				<TD WIDTH=56 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER><BR>
+					</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=124 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=86 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Aklorhidria</P>
+				</TD>
+				<TD WIDTH=115 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Hipoklorhidria</P>
+				</TD>
+				<TD WIDTH=67 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Normala</P>
+				</TD>
+				<TD WIDTH=106 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Hiperklorhidria</P>
+				</TD>
+				<TD WIDTH=56 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Totala</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=124 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Ultzera gastrikoa</P>
+				</TD>
+				<TD WIDTH=86 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>3 (16.07)</P>
+				</TD>
+				<TD WIDTH=115 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>7 (5.78)</P>
+				</TD>
+				<TD WIDTH=67 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>35 (26.36)</P>
+				</TD>
+				<TD WIDTH=106 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>9 (5.78)</P>
+				</TD>
+				<TD WIDTH=56 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>54</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=124 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Minbizia</P>
+				</TD>
+				<TD WIDTH=86 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>22 (8.93)</P>
+				</TD>
+				<TD WIDTH=115 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>2 (3.21)</P>
+				</TD>
+				<TD WIDTH=67 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>6 (14.24)</P>
+				</TD>
+				<TD WIDTH=106 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>0 (3.21)</P>
+				</TD>
+				<TD WIDTH=56 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>30</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=124 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Totala</P>
+				</TD>
+				<TD WIDTH=86 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>25</P>
+				</TD>
+				<TD WIDTH=115 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>9</P>
+				</TD>
+				<TD WIDTH=67 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>41</P>
+				</TD>
+				<TD WIDTH=106 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>9</P>
+				</TD>
+				<TD WIDTH=56 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>84</P>
+				</TD>
+			</TR>
+		</TBODY>
+	</TABLE>
+</DL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.3in; margin-bottom: 0in">
+<FONT SIZE=2><B>8.9. taula:</B></FONT><FONT SIZE=2> 8.5. adibideko
+itxarotako eta behaturiko maiztasunen taula.</FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<I>e</I><SUB>22</SUB> eta <I>e</I><SUB>24</SUB> itxarotako
+maiztasunak 5 baino txikiagoak direnez, taula berria eratu behar da.
+Taula berri hau eratzeko, lehenengo zutabea bigarrenarekin eta
+laugarren zutabea hirugarrenarekin bilduko ditugu, 8.10. taulan
+datuen antolamendu berria erakusten delarik.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<DL>
+	<DD>
+	<TABLE WIDTH=529 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES RULES=GROUPS>
+		<COL WIDTH=122>
+		<COL WIDTH=160>
+		<COL WIDTH=132>
+		<COL WIDTH=75>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=122 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD COLSPAN=2 WIDTH=302 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Azidotasun-maila</P>
+				</TD>
+				<TD WIDTH=75 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER><BR>
+					</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=122 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=160 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Aklorhidria edo
+					hipoklorhidria</P>
+				</TD>
+				<TD WIDTH=132 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Normala edo
+					hiperklorhidria</P>
+				</TD>
+				<TD WIDTH=75 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Totala</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=122 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Ultzera gastrikoa</P>
+				</TD>
+				<TD WIDTH=160 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>10 (21.85)</P>
+				</TD>
+				<TD WIDTH=132 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>44 (32.14)</P>
+				</TD>
+				<TD WIDTH=75 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>54</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=122 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Minbizia</P>
+				</TD>
+				<TD WIDTH=160 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>24 (12.14)</P>
+				</TD>
+				<TD WIDTH=132 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>6 (17.85)</P>
+				</TD>
+				<TD WIDTH=75 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>30</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=122 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Totala</P>
+				</TD>
+				<TD WIDTH=160 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>34</P>
+				</TD>
+				<TD WIDTH=132 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>50</P>
+				</TD>
+				<TD WIDTH=75 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>84</P>
+				</TD>
+			</TR>
+		</TBODY>
+	</TABLE>
+</DL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.3in; margin-bottom: 0in">
+<FONT SIZE=2><B>8.10. taula:</B></FONT><FONT SIZE=2> gelak bildu
+ondoren, 8.5. adibideko taularen antolamendu berria.</FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+2<FONT FACE="Symbol, serif"></FONT>2 taula lortu dugunez, Yates-en
+zuzenketa erabiltzeko beharra aztertuko dugu. =|10·6 <FONT FACE="Symbol, serif"></FONT>
+44·24| = 996 &gt; <I>n</I> / 2 = 42</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Beraz, Yates-en zuzenketa erabiltzea derrigorrezkoa da, eta
+estatistikoaren behaturiko balioa eta <I>p</I>-balioa hauxek dira:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+ = </P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<I>p</I> = <I>P</I>(<FONT FACE="Symbol, serif"></FONT> 27.75) 
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Ji karratu banaketaren taulan <I>P</I>(<FONT FACE="Symbol, serif"></FONT>
+6.635) = 0.01 aurkitzen dugu, orduan <I>p</I> &lt; 0.01 betetzen da.
+Ondorioz, %5eko adierazgarritasun-mailaz, H<SUB>0</SUB> errefusatu
+egiten dugu, eta beraz urin-gastrikoaren azidotasun-maila eta
+gaixotasun-mota menpekoak dira.</P>
+<H3 LANG="es-ES" CLASS="western"><B>8.2.4Bi proportzioren konparazioa</B></H3>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+2<FONT FACE="Symbol, serif"></FONT>2 taula daukagunean, bai
+independentzi eta baita homogenotasun proba, bi proportzio
+konparatzea baizik ez dira. Esate baterako, 8.4. adibidea begiratuz;
+homogenotasun-proba egitea eta tratamenduren pean egondakoen eta
+tratamendu gabekoen gaixotuen proportzioen berdintasunerako
+hipotesi-kontrastea egitea baliokideak dira. 7. gaian bi proportzio
+konparatzeko beste metodo bat aipatu dugunez, bi metodo hauen
+baliokidetasuna adibide baten bidez aztertuko dugu.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<B>8.6. adibidea:</B> Estatu Batuetan egindako azterketa soziologiko
+batean hurrengo galdera egiten zen: “Talde erlijioso batzu
+hirietako auzo batzuetan bizitzea debekatu egin beharko luketela
+pentsatzen al duzu?” Erantzunak lurraldez banaturik, 8.11. taulan
+agertzen den maiztasun-banaketa lortu zen. Ekialdeko eta mendebaldeko
+biztanleen erantzunen arteko ezberdintasuna adierazgarria al da? (<FONT FACE="Symbol, serif"></FONT><I>
+</I>= 0.01)</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<DL>
+	<DD>
+	<TABLE WIDTH=315 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES RULES=ROWS>
+		<COL WIDTH=87>
+		<COL WIDTH=85>
+		<COL WIDTH=113>
+		<TR VALIGN=TOP>
+			<TD WIDTH=87 STYLE="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: none; border-right: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=CENTER><BR>
+				</P>
+			</TD>
+			<TD WIDTH=85 STYLE="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: none; border-right: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Ados daudenak</P>
+			</TD>
+			<TD WIDTH=113 STYLE="border-top: 1px solid #808080; border-bottom: 1px solid #808080; border-left: none; border-right: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Ados ez daudenak</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=87 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in">Ekialdea</P>
+				<P LANG="es-ES" CLASS="western">Mendebaldea</P>
+			</TD>
+			<TD WIDTH=85 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+				89</P>
+				<P LANG="es-ES" CLASS="western" ALIGN=CENTER>37</P>
+			</TD>
+			<TD WIDTH=113 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+				297</P>
+				<P LANG="es-ES" CLASS="western" ALIGN=CENTER>197</P>
+			</TD>
+		</TR>
+	</TABLE>
+</DL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+<FONT SIZE=2><B>8.11. taula:</B></FONT><FONT SIZE=2> 8.6. adibideko
+datuen antolamendua.</FONT></P>
+<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"><U>Emaitza</U>:
+Ikusitako metodo biak erabiliko ditugu.</P>
+<OL>
+	<LI><P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0in"><U>Gai
+	honetan azterturiko metodoa</U>: Lagin bakar bat aukeratzen denez
+	independentzi proba burutzen dugu. Hipotesi-kontrastea ondokoa da:</P>
+</OL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+H<SUB>0</SUB>: Lurraldea eritziarekiko askea da</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+H<SUB>1</SUB>: Lurraldea eritziarekiko menpekoa da.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.2in; margin-bottom: 0in">
+=|89·197 <FONT FACE="Symbol, serif"></FONT> 37·297| = 6544 &gt;
+<I>n</I> / 2 = 310</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.2in; margin-bottom: 0in">
+Beraz, Yates-en zuzenketa erabiltzea derrigorrezkoa da, eta
+estatistikoaren behaturiko balioa eta <I>p</I>-balioa hauxek dira:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.2in; margin-bottom: 0in">
+= </P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.2in; margin-bottom: 0in">
+<I>p</I> = <I>P</I>(<FONT FACE="Symbol, serif"></FONT> 4.2857) 
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.2in; margin-bottom: 0in">
+Ji karratu banaketaren taulan <I>P</I>(<FONT FACE="Symbol, serif"></FONT>
+3.842) = 0.05 eta <I>P</I>(<FONT FACE="Symbol, serif"></FONT>
+5.024) = 0.025 aurkitzen ditugu, orduan 0.025 &lt; <I>p</I> &lt;
+0.05, eta beraz <I>p</I> &gt; 0.01 betetzen da. Ondorioz, %1eko
+adierazgarritasun-mailaz, H<SUB>0</SUB> ezin dugu errefusatu, eta
+lurraldea eritziarekiko askea dela ondoriozta dezakegu, hau da
+pertsona baten bizilekuak ez du egindako baieztapenari buruzko bere
+eritziarekin zerikusirik.</P>
+<OL START=2>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	<U>7. gaian azterturiko metodoa</U>: Defini ditzagun <I>p</I><SUB>1</SUB>
+	eta <I>p</I><SUB>2</SUB> ekialdean eta mendebaldean baieztapenarekin
+	adoz daudenen proportzioak, hurrenez hurren. Orduan, ekialdeko eta
+	mendebaldeko biztanleen erantzunen arteko ezberdintasuna
+	adierazgarria izatea <I>p</I><SUB>1</SUB> <FONT FACE="Symbol, serif"></FONT>
+	<I>p</I><SUB>2</SUB> izatea da. Planteaturiko arazoa bi proportzioen
+	arteko aldebiko hipotesi-kontraste bezala azter daiteke:</P>
+</OL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+<SPAN LANG="en-GB">H</SPAN><SUB><SPAN LANG="en-GB">0</SPAN></SUB><SPAN LANG="en-GB">:
+</SPAN><SPAN LANG="en-GB"><I>p</I></SPAN><SUB><SPAN LANG="en-GB">1</SPAN></SUB><SPAN LANG="en-GB">
+= </SPAN><SPAN LANG="en-GB"><I>p</I></SPAN><SUB><SPAN LANG="en-GB">2 </SPAN></SUB>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+<SPAN LANG="en-GB">H</SPAN><SUB><SPAN LANG="en-GB">1</SPAN></SUB><SPAN LANG="en-GB">:
+</SPAN><SPAN LANG="en-GB"><I>p</I></SPAN><SUB><SPAN LANG="en-GB">1</SPAN></SUB><SPAN LANG="en-GB">
+</SPAN><FONT FACE="Symbol, serif"></FONT><SPAN LANG="en-GB"> </SPAN><SPAN LANG="en-GB"><I>p</I></SPAN><SUB><SPAN LANG="en-GB">2</SPAN></SUB></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.2in; margin-bottom: 0in">
+Ekialdean  eta mendebaldean  dira.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.2in; margin-bottom: 0in; line-height: 0.25in">
+H<SUB>0</SUB> egia dela suposatuz, behaturiko estatistikoaren balioa
+ondokoa da:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.2in; margin-bottom: 0in; line-height: 0.25in">
+<SPAN LANG="en-GB">.</SPAN></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.2in; margin-bottom: 0in; line-height: 0.25in">
+<SPAN LANG="en-GB"><I>p</I></SPAN><SPAN LANG="en-GB"> = 2</SPAN><FONT FACE="Symbol, serif"></FONT><SPAN LANG="en-GB"><I>
+</I></SPAN><SPAN LANG="en-GB"><I>P</I></SPAN><SPAN LANG="en-GB">(</SPAN><SPAN LANG="en-GB"><I>Z</I></SPAN><SPAN LANG="en-GB">
+&gt; 2.18) = 0.0146 &gt; 0.01. </SPAN>Beraz, %1eko
+adierazgarritasun-mailaz, H<SUB>0</SUB> ezin dugu errefusatu.
+Ondorioz, ekialdean eta mendebaldean baiztapenarekin ados daudenen
+proportzioak %1eko adierazgarritasun-mailaz ezberdinak direnik ezin
+da esan, hau da pertsona baten bizilekuak ez du egindako
+baieztapenari buruzko bere eritziarekin zerikusirik.</P>
+<H3 LANG="es-ES" CLASS="western"><B>8.2.5Fisher-en proba zehatza</B></H3>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Orain arte gai honetan ikusi ditugun Pearson-en ji karratu
+banaketaren erabilpenetan, laginak handiak izatea beharrezkoa zen.
+Zein handiak? Galdera honen erantzun zuzenik ez egon arren, oro har,
+<I>n</I> handia suposatuko dugu itxarotako maiztasun bat ere 5 baino
+txikiagoa ez denean. Baldintza hau ez bada betetzen, klaseak bildu
+egin behar direla, betetzea lortu arte, aurretik ere aipatu dugu.
+Batzutan konponbide hau ezinezkoa da, esate baterako 2<FONT FACE="Symbol, serif"></FONT>2
+taula dugunean. Lagin txiki hauetan independentzi eta homogenotasun
+proba burutzeko <B>Fisher-en proba zehatza</B> erabiltzen da. 
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Fisher-en proba zehatza banaketa hipergeometrikoan oinarritzen da,
+eta ez dugu hemen garatuko bere zailtasunagaitik. Dena den, egiten
+dugun hipotesi-kontrastea planteamendu orokorrean planteaturikoa da,
+aldatzen diren gauza bakarrak estatistikoa eta honi dagokion banaketa
+eta <I>p</I>-balioa direlarik. Fisher-en proba, behaturikoa baino
+taula “arraroagoa” lortzearen probabilitatea kalkulatzean datza.
+Honetarako, behaturiko maiztasun txikiena baino txikiagoak dituzten
+taula guztiak eraiki, eta bakoitza ateratzeko probabilitatea
+kalkulatzen da; probabilitate guzti hauen batura, honen beste arraroa
+den taula lortzeko probabilitatea izango da. Kalkulaturiko
+probabilitate hau <I>p</I>-balioa da. Gaur egun, ordenagailuen
+erabilpenak <I>p</I>-balioaren kalkulua errazten duenez, hurrengo
+adibidean Fisher-en proba zehatza erabiltzen da, kalkuluak
+ordenagailuaren bidez eginik.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<B>8.7. adibidea:</B> Hilabetean zehar hildako, 50 eta 54 urte
+bitarteko adineko gizonezkoei buruzko azterketa burutzen da.
+Ikertzaileek gaixotasun kardiobaskularraren (GKB) ondorioz hildako
+eta beste gaixotasun batzuren (BGB) ondorioz hildakoen
+pertsona-kopuru berdina biltzen saiatu ziren. GKB-aren ondorioz
+hildako 35 pertsonatatik, 5ek, eta BGB-ren ondorioz hildako 25etik 2k
+soilik, gatz gutxiko dita jarraitzen zuten. Datu hauek 8.7. taulan
+antolatzen dira 2<FONT FACE="Symbol, serif"></FONT>2 kontingentzi
+taula erara.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<DL>
+	<DD>
+	<TABLE WIDTH=444 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES RULES=GROUPS>
+		<COL WIDTH=116>
+		<COL WIDTH=119>
+		<COL WIDTH=113>
+		<COL WIDTH=56>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=116 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD COLSPAN=2 WIDTH=242 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER><B>Dieta-mota</B></P>
+				</TD>
+				<TD WIDTH=56 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER><BR>
+					</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=116 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><B>heriotza-kausa</B></P>
+				</TD>
+				<TD WIDTH=119 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Gatz askokoa</P>
+				</TD>
+				<TD WIDTH=113 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>Gatz gutxikoa</P>
+				</TD>
+				<TD WIDTH=56 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=116 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>BGB</P>
+				</TD>
+				<TD WIDTH=119 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>2</P>
+				</TD>
+				<TD WIDTH=113 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>23</P>
+				</TD>
+				<TD WIDTH=56 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>25</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=116 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>GKB</P>
+				</TD>
+				<TD WIDTH=119 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>5</P>
+				</TD>
+				<TD WIDTH=113 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>30</P>
+				</TD>
+				<TD WIDTH=56 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>35</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=116 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=119 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>7</P>
+				</TD>
+				<TD WIDTH=113 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER>33</P>
+				</TD>
+				<TD WIDTH=56 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>60</P>
+				</TD>
+			</TR>
+		</TBODY>
+	</TABLE>
+</DL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+<FONT SIZE=2><B>8.12. taula:</B></FONT><FONT SIZE=2> 8.7. adibideko
+datuen antolamendua.</FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Dieta-mota eta heriotzaren kausaren arteko menpekotasuna azter ezazu,
+<FONT FACE="Symbol, serif"><I></I></FONT> = 0.05 erabiliz.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<U>Emaitza</U>: Kasu honetan, gaixo bakoitzaren ondorioz hildakoen
+kopurua aurrefinkaturik dago, beraz homogenotasun proba burutzen da.
+Hipotesi-kontrastea ondokoa da:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.69in; text-indent: -0.3in; margin-bottom: 0in">
+H<SUB>0</SUB>: Laginak populazio berberetik ateratzen dira;
+dieta-mota eta heriotzaren kausaren arteko menpekotasunik ez dago.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.69in; text-indent: -0.3in; margin-bottom: 0in">
+H<SUB>1</SUB>: Laginak populazio ezberdinetatik ateratzen dira;
+dieta-mota eta heriotzaren kausaren artean menpekotasuna dago.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+, beraz ezin dugu ji karratu banaketa erabili.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Ordenagailuaren bidez, H<SUB>0</SUB> egiazkoa suposaturik behaturiko
+bezain taula arraroa edo arraroagoa lortzeko probabilitatea 0.75 da.
+0.75 &gt; 0.05 denez, H<SUB>0</SUB> ezin dugu errefusatu eta beraz
+%5eko adierazgarritasun-mailaz, dieta-mota eta heriotzaren kausaren
+arteko menpekotasunik dagoela ezin da esan.</P>
+<H2 LANG="es-ES" CLASS="western">8.3DOIKUNTZ EGOKITASUNERAKO PROBA</H2>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Ondoko kasuetan erabiltzen da: Populazioak banaketa-funtzio
+determinatua daukan edo gertaera posible guztiek probabilitate
+konkretuak dauzkaten hipotesia egiten dugunean, eta populaziotik
+ateratako laginaren bidez, ea hipotesia arrazonagarria den egiaztatu
+nahi dugunean.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Laginean lorturiko balioen banaketa, banaketa teorikoari zein
+puntutaraino egokitzen zaioneko estimazioan datzan prozedura
+erabiltzen dugu.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Demagun  <I>Z</I><SUB>1</SUB>, <I>Z</I><SUB>2</SUB>,…, <I>Z</I><SUB>k</SUB>
+klase baztertzaile eta exhaustibotan sailkaturiko populazioa, klase
+hauen probabilitateak,  betetzen duten <I>p</I><SUB>1</SUB>, <I>p</I><SUB>2</SUB>,…,
+<I>p</I><SUB>k</SUB> direneko hipotesia kontrastatu nahi dugularik.
+Alegia,</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+: <I>k</I> klaseen probabilitateak <I>p</I><SUB>1</SUB>, <I>p</I><SUB>2</SUB>,…,
+<I>p</I><SUB>k</SUB> dira.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+: <I>k</I> klaseen probabilitateak EZ dira <I>p</I><SUB>1</SUB>,
+<I>p</I><SUB>2</SUB>,…, <I>p</I><SUB>k</SUB>.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<I>n</I> elementu askek osoturiko lagina aukeratzen dugu zoriz, klase
+bakoitzerako itxarotako maiztasunak edo maiztasun teorikoak ondokoak
+izanik:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+ <SPAN LANG="en-GB">; </SPAN><SPAN LANG="en-GB"> ; …; </SPAN></P>
+<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+ondoko baldintza beterik,</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Laginean behaturiko maiztasunak, -ren bidez adierazten ditugu, 
+izanik.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Praktikan, hemen azalduko dugun teknika aplikatu ahal izateko, klase
+guztietako itxarotako maiztasunek 5 baino handiagoak izan behar dute
+(<I>e</I><SUB><I>i</I></SUB> &gt; 5   <I>i</I> ). Baldintza hau
+betetzen ez denean, ondoz-ondoko klaseak batzen dira, edozein
+<I>i</I>-tarako <I>e</I><SUB><I>i</I></SUB> &gt; 5 lortu arte.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Orduan, hipotesi-kontrastea egiteko erabiliko dugun estatistikoa  da.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Honen banaketa ji karratua da, eta askatasun-graduak, <I>p</I><SUB>1</SUB>,
+<I>p</I><SUB>2</SUB>,…, <I>p</I><SUB>k</SUB> probabilitateak guztiz
+zehazturik dauden ala ezen menpean daude. Hain zuzen,
+askatasun-graduen kopurua, behaturiko maiztasun askeen kopurutzat
+jotzen da.</P>
+<UL>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	<I><U>p</U></I><SUB><U>1</U></SUB><U>, </U><I><U>p</U></I><SUB><U>2</U></SUB><U>,…,
+	</U><I><U>p</U></I><SUB><U>k</U></SUB><U> probabilitateak zeharo
+	espezifikaturik daudenean</U>: Kasu honetan, <I>k</I> <FONT FACE="Symbol, serif"></FONT>
+	1 maiztasun emanik,  denez, beste maiztasuna determinaturik dago;
+	beraz, ji karratuaren askatasun-graduak <I>k</I> <FONT FACE="Symbol, serif"></FONT>
+	1 dira.</P>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	<I><U>p</U></I><SUB><U>1</U></SUB><U>, </U><I><U>p</U></I><SUB><U>2</U></SUB><U>,…,
+	</U><I><U>p</U></I><SUB><U>k</U></SUB><U> probabilitateak zeharo
+	espezifikatu gabe daudenean</U>: Itxarotako maiztasunak edo
+	maiztasun teorikoak lortzeko <I>l</I> parametro behar baldin badira,
+	parametro bakoitzaren estimazioak, -ren arteko erlazio berri bat (
+	erlazioaz gainera) ezartzen du, eta beraz, estimaturiko parametro
+	bakoitzeko unitate batez gutxitu egiten dira ji karratu banaketaren
+	askatasun-graduak. Kasu honetan, askatasun-graduen kopurua <I>k</I>
+	<FONT FACE="Symbol, serif"></FONT> <I>l</I> <FONT FACE="Symbol, serif"></FONT>
+	1 da, non <I>l</I> estimaturiko parametro-kopurua den.</P>
+</UL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Oro har, estatistiko honen banaketaren askatasun-graduen kopurua <I>k</I>
+<FONT FACE="Symbol, serif"></FONT> <I>l</I> <FONT FACE="Symbol, serif"></FONT>
+1 da, non <I>k</I> batu eta geroko klase-kopurua eta <I>l</I>
+estimaturiko parametro-kopurua diren.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Beronen behaturiko balioa, hau da, lagineko datuetarako
+proba-estatistikoak hartzen duen balioa kalkulatzen da:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+ </P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+ “oso handia” bada, ezberdintasuna adierazgarria dela adierazten
+du; beraz, banaketa teorikoa eta behaturikoa batera datozeneko
+hipotesia errefusatu behar dugu. H<SUB>0</SUB> hipotesia onargarria
+izan dadin, -ren balioa “txikia” izan beharko da.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Balio honi dagokion <I>p</I>-balioa, <I>p</I> = <I>P</I>() da.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Azkenik, <FONT FACE="Symbol, serif"><I></I></FONT>
+adierazgarritasun-maila zehazten da eta ondoko erara arrazonatzen
+dugu:</P>
+<UL>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 0.25in">
+	<I>p</I> <FONT FACE="Symbol, serif"></FONT> <FONT FACE="Symbol, serif"><I></I></FONT>
+	 <FONT FACE="Symbol, serif"></FONT>  <I>p</I>-balioa zoriz
+	agertua izateko txikiegia dela uste dugu  <FONT FACE="Symbol, serif"></FONT>
+	<FONT FACE="Symbol, serif"><I></I></FONT>
+	adierazgarritasun-mailaz H<SUB>0</SUB> hipotesia errefusatuko dugu.
+	Hau da, <I>Z</I><SUB>1</SUB>, <I>Z</I><SUB>2</SUB>,…, <I>Z</I><SUB>k</SUB>
+	klaseen probabilitaeak <I>p</I><SUB>1</SUB>, <I>p</I><SUB>2</SUB>,…,
+	<I>p</I><SUB>k</SUB> direneko hipotesia errefusatzen dugu.</P>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; line-height: 0.25in">
+	<I>p</I> &gt; <FONT FACE="Symbol, serif"><I></I></FONT>  <FONT FACE="Symbol, serif"></FONT>
+	 ezberdintasunak zoriz agertuak izan ditzake  <FONT FACE="Symbol, serif"></FONT>
+	 <FONT FACE="Symbol, serif"><I></I></FONT>
+	adierazgarritasun-mailaz ez dago H<SUB>0</SUB> errefusatzeko
+	nabaritasunik. Hau da, <I>Z</I><SUB>1</SUB>, <I>Z</I><SUB>2</SUB>,…,
+	<I>Z</I><SUB>k</SUB> klaseen probabilitaeak <I>p</I><SUB>1</SUB>,
+	<I>p</I><SUB>2</SUB>,…, <I>p</I><SUB>k</SUB> direneko hipotesia
+	onartzen dugu.</P>
+</UL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<B>8.4. oharra:</B> Proba estatistikoaren kalkulua errazteko, ondoko
+formula baliokide hau erabil daiteke:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+ = </P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<OL START=5>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	<B>oharra:</B> Komenigarria da azpimarratzea, behin-betiko erabaki
+	orokorrak ez direla  testak. Aurrefinkaturiko arriskuz, zenbait
+	hipotesi onartzeko ala errefusatzeko erizpide arrazonagarriak
+	ditugu. Alegia,  testik abiatuz, ezberdintasun adierazgarririk ez
+	dagoela (edo, doikuntz egokia dela) baiezten dugunean, populazioak,
+	suposatu dugun banaketa betetzen duela matematikoki frogatu dugunik
+	ez da adierazten,  testaren erizpidea erabiliz, ez dugula
+	ezberdintasunik ikusi baizik. Honek ez du halabehartzen beste
+	erizpide baten bidez ezberdintasuna aurki dezakegunik; are gehiago,
+	 test berberaz, baina beste lagin ezberdin bat erabiliz,
+	ezberdintasunak ager daitezke.</P>
+</OL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<B>8.8. adibidea:</B>: Mendel-en legeak esperimentalki egiaztatu nahi
+ditugu. Honetarako, 500 landare gurutzatu ziren, eta teoriaren
+arabera, lore gorri, arrosa, hori eta zuriko landere-kopuruak 8,
+12,10 eta 20 zenbakiei proportzionalak izan beharko litezke.
+Lorturiko datuak 8.13. taulan adierazten dira.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<DL>
+	<DD>
+	<TABLE WIDTH=534 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES RULES=ROWS>
+		<COL WIDTH=188>
+		<COL WIDTH=74>
+		<COL WIDTH=74>
+		<COL WIDTH=74>
+		<COL WIDTH=74>
+		<TR VALIGN=TOP>
+			<TD WIDTH=188 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Kolorea</P>
+			</TD>
+			<TD WIDTH=74 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Gorria</P>
+			</TD>
+			<TD WIDTH=74 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Arrosa</P>
+			</TD>
+			<TD WIDTH=74 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Horia</P>
+			</TD>
+			<TD WIDTH=74 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Zuria</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=188 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Behaturiko
+				maiztasunak</P>
+			</TD>
+			<TD WIDTH=74 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>70</P>
+			</TD>
+			<TD WIDTH=74 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>126</P>
+			</TD>
+			<TD WIDTH=74 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>96</P>
+			</TD>
+			<TD WIDTH=74 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>208</P>
+			</TD>
+		</TR>
+	</TABLE>
+</DL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+<FONT SIZE=2><B>8.13. taula:</B></FONT><FONT SIZE=2> 8.8. adibideko
+datuak.</FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<U>Emaitza</U>: Itxarotako maiztasunak 8<FONT FACE="Symbol, serif"></FONT>12<FONT FACE="Symbol, serif"></FONT>10<FONT FACE="Symbol, serif"></FONT>20
+proportzionaltasunak ematen dizkigu. Alegia,</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<SPAN LANG="en-GB"><I>e</I></SPAN><SUB><SPAN LANG="en-GB"><I>G</I></SPAN></SUB><SPAN LANG="en-GB">
+= lore gorrien kopurua = 500·</SPAN><SPAN LANG="en-GB"> = 80</SPAN></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<SPAN LANG="en-GB"><I>e</I></SPAN><SUB><SPAN LANG="en-GB"><I>A</I></SPAN></SUB><SPAN LANG="en-GB">
+= lore arrosen kopurua = 500·</SPAN><SPAN LANG="en-GB"> = 120</SPAN></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<I>e</I><SUB><I>H</I></SUB> = lore horien kopurua = 500· = 100</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<I>e</I><SUB><I>Z</I></SUB> = lore zurien kopurua = 500· = 200</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<DL>
+	<DD>
+	<TABLE WIDTH=534 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES RULES=GROUPS>
+		<COLGROUP>
+			<COL WIDTH=123>
+		</COLGROUP>
+		<COLGROUP>
+			<COL WIDTH=123>
+			<COL WIDTH=123>
+			<COL WIDTH=123>
+		</COLGROUP>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=123 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					<BR>
+					</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Loreen kolorea</P>
+				</TD>
+				<TD WIDTH=123 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+					<BR>
+					</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER><I>o</I><SUB><I>i</I></SUB></P>
+				</TD>
+				<TD WIDTH=123 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">
+					<BR>
+					</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER><I>e</I><SUB><I>i</I></SUB></P>
+				</TD>
+				<TD WIDTH=123 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=CENTER></P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=123 STYLE="border: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>Gorriak</P>
+				</TD>
+				<TD WIDTH=123 STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>70</P>
+				</TD>
+				<TD WIDTH=123 STYLE="border: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>80</P>
+				</TD>
+				<TD WIDTH=123 STYLE="border: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>61.25</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=123 STYLE="border: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>Arrosak</P>
+				</TD>
+				<TD WIDTH=123 STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>126</P>
+				</TD>
+				<TD WIDTH=123 STYLE="border: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>120</P>
+				</TD>
+				<TD WIDTH=123 STYLE="border: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>132.30</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=123 STYLE="border: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>Horiak</P>
+				</TD>
+				<TD WIDTH=123 STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>96</P>
+				</TD>
+				<TD WIDTH=123 STYLE="border: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>100</P>
+				</TD>
+				<TD WIDTH=123 STYLE="border: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>92.16</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=123 STYLE="border: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>Zuriak</P>
+				</TD>
+				<TD WIDTH=123 STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>208</P>
+				</TD>
+				<TD WIDTH=123 STYLE="border: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>200</P>
+				</TD>
+				<TD WIDTH=123 STYLE="border: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>216.32</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=123 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY>Denetariko</P>
+				</TD>
+				<TD WIDTH=123 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>500</P>
+				</TD>
+				<TD WIDTH=123 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>500</P>
+				</TD>
+				<TD WIDTH=123 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="en-GB" CLASS="western" ALIGN=CENTER>502.03</P>
+				</TD>
+			</TR>
+		</TBODY>
+	</TABLE>
+</DL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+<FONT SIZE=2><SPAN LANG="en-GB"><B>8.14. taula:</B></SPAN></FONT><FONT SIZE=2><SPAN LANG="en-GB">
+8.8. adibideko behaturiko eta itxarotako maiztasunak.</SPAN></FONT></P>
+<P LANG="en-GB" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Estatistikoaren behaturiko balioa ondokoa da:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+= 502.03 <FONT FACE="Symbol, serif"></FONT> 500 = 2.03</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Askatasun-graduen kopurua, , <I>k</I> <FONT FACE="Symbol, serif"></FONT>
+<I>l</I> <FONT FACE="Symbol, serif"></FONT> 1 = 4 <FONT FACE="Symbol, serif"></FONT>
+0 <FONT FACE="Symbol, serif"></FONT> 1 = 3 da (<I>e</I><SUB><I>i</I></SUB>
+-ak kalkulatzeko ez da parametrorik estimatzen).</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Eta <I>p</I>-balioa <I>p</I> = <I>P</I>(&gt; 2.03) da.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Taulan <I>P</I>(&gt; 6.251) = 0.1 agertzen da. Baina <I>p</I> = <I>P</I>(&gt;
+2.03) &gt; <I>P</I>(&gt; 6.251) = 0.1 denez, <I>p</I> &gt; 0.1
+lortzen dugu. Ondorioz, %5eko adierazgarritasun-mailaz H<SUB>0</SUB>
+ezin dugu errefusatu; Beraz Mendel-en legea esperimentalki egiaztatu
+da, zeren lore gorri, arrosa, hori eta zuriko landere-kopuruak 8,
+12,10 eta 20 zenbakiei proportzionalak baitira.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<OL START=9>
+	<LI><P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+	<B>adibidea:</B> Kultibo-tanta bat hedatzen denean, plaka
+	koadrikulatuaren erretikulu bakoitzeko bakterio-kopurua, Poisson-en
+	banaketari darraion zorizko aldagaia deneko hipotesia kontrastatu
+	nahi dugu (<FONT FACE="Symbol, serif"></FONT> = 0.05 mailaz).
+	Horretarako, kultiboaren disoluzio-tanta bat, 400 erretikulu
+	txikitako plakan hedatu zen, mikroskopioaren laguntzaz, erretikulu
+	bakoitzeko bakterio-kopuruak zenbatu zirelarik. Lorturiko  emaitzak,
+	8.15. taulan adierazten dira.</P>
+</OL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<U>Emaitza:</U> Itxarotako maiztasunak, determinatu behar dugun <FONT FACE="Symbol, serif"></FONT>
+parametroko Poisson-en banaketari jarraitzen zaizkio; emaitzetatik
+abiatuz, lagin-batezbestekoaren bidez estimatuko dugu <FONT FACE="Symbol, serif"></FONT>,
+hots,</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Kontrastatu nahi dugun hipotesia hauxe da:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.69in; text-indent: -0.3in; margin-bottom: 0in">
+H<SUB>0</SUB>: Plaka koadrikulatuaren erretikulu bakoitzeko
+bakterio-kopurua <FONT FACE="Mathematica5"></FONT>(4.68)
+banaketari darraio.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.69in; text-indent: -0.3in; margin-bottom: 0in">
+H<SUB>1</SUB>: Plaka koadrikulatuaren erretikulu bakoitzeko
+bakterio-kopurua <FONT FACE="Mathematica5"></FONT>(4.68)
+banaketari ez darraio.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+8.15. taulan agertzen dira: behaturiko maiztasunak, Poisson-en
+legearen arabera itxarotako maiztasunak, <I>e</I><SUB><I>i</I></SUB>
+&gt; 5 lortzeko egin behar diren moldaketak, eta estatistikoaren
+kalkulua errazten duen azken zutabea.</P>
+<DL>
+	<DD>
+	<TABLE WIDTH=539 CELLPADDING=5 CELLSPACING=0 FRAME=BELOW RULES=GROUPS>
+		<COL WIDTH=141>
+		<COL WIDTH=84>
+		<COL WIDTH=33>
+		<COL WIDTH=14>
+		<COL WIDTH=50>
+		<COL WIDTH=93>
+		<COL WIDTH=53>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=141 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD COLSPAN=5 WIDTH=314 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>X</I>
+					bakterio-kopurua daukan erretikulu-kopuruak</P>
+				</TD>
+				<TD WIDTH=53 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=141 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><I>X</I>,
+					bakterio-kopurua</P>
+				</TD>
+				<TD COLSPAN=3 WIDTH=151 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><SPAN LANG="en-GB">Behaturikoak
+					(</SPAN><SPAN LANG="en-GB"><I>o</I></SPAN><SUB><SPAN LANG="en-GB"><I>i</I></SPAN></SUB><SPAN LANG="en-GB">)</SPAN></P>
+				</TD>
+				<TD COLSPAN=2 WIDTH=153 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><SPAN LANG="en-GB">Itxarotakoak
+					(</SPAN><SPAN LANG="en-GB"><I>e</I></SPAN><SUB><SPAN LANG="en-GB"><I>i</I></SPAN></SUB><SPAN LANG="en-GB">)</SPAN></P>
+				</TD>
+				<TD WIDTH=53 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY></P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=141 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					0</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>1</P>
+				</TD>
+				<TD WIDTH=84 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					0</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>20</P>
+				</TD>
+				<TD COLSPAN=2 WIDTH=57 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY></P>
+				</TD>
+				<TD WIDTH=50 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					3.71</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>17.37</P>
+				</TD>
+				<TD WIDTH=93 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY></P>
+				</TD>
+				<TD WIDTH=53 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.05in; margin-bottom: 0in">
+					<BR>
+					</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.05in">
+					18.98</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=141 STYLE="; border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>2</P>
+				</TD>
+				<TD WIDTH=84 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>43</P>
+				</TD>
+				<TD COLSPAN=2 WIDTH=57 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=50 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>40.65</P>
+				</TD>
+				<TD WIDTH=93 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=53 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.05in">
+					45.49</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=141 STYLE="; border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>3</P>
+				</TD>
+				<TD WIDTH=84 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>53</P>
+				</TD>
+				<TD COLSPAN=2 WIDTH=57 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=50 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>63.41</P>
+				</TD>
+				<TD WIDTH=93 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=53 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.05in">
+					44.30</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=141 STYLE="; border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>4</P>
+				</TD>
+				<TD WIDTH=84 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>86</P>
+				</TD>
+				<TD COLSPAN=2 WIDTH=57 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=50 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>74.19</P>
+				</TD>
+				<TD WIDTH=93 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=53 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.05in">
+					99.69</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=141 STYLE="; border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>5</P>
+				</TD>
+				<TD WIDTH=84 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>70</P>
+				</TD>
+				<TD COLSPAN=2 WIDTH=57 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=50 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>69.44</P>
+				</TD>
+				<TD WIDTH=93 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=53 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.05in">
+					70.56</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=141 STYLE="; border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>6</P>
+				</TD>
+				<TD WIDTH=84 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>54</P>
+				</TD>
+				<TD COLSPAN=2 WIDTH=57 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=50 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>54.16</P>
+				</TD>
+				<TD WIDTH=93 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=53 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.05in">
+					53.84</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=141 STYLE="; border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>7</P>
+				</TD>
+				<TD WIDTH=84 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>37</P>
+				</TD>
+				<TD COLSPAN=2 WIDTH=57 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=50 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>36.21</P>
+				</TD>
+				<TD WIDTH=93 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=53 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.05in">
+					37.81</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=141 STYLE="; border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>8</P>
+				</TD>
+				<TD WIDTH=84 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>18</P>
+				</TD>
+				<TD COLSPAN=2 WIDTH=57 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=50 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>21.18</P>
+				</TD>
+				<TD WIDTH=93 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=53 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.05in">
+					15.30</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=141 STYLE="; border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>9</P>
+				</TD>
+				<TD WIDTH=84 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>10</P>
+				</TD>
+				<TD COLSPAN=2 WIDTH=57 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=50 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>11.02</P>
+				</TD>
+				<TD WIDTH=93 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=53 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.05in">
+					9.07</P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=141 STYLE="; border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					10</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					11</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					12</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					13</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					14</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					15</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>15 baino gehiago</P>
+				</TD>
+				<TD WIDTH=84 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					5</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					2</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					2</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					0</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					0</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					0</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>0</P>
+				</TD>
+				<TD COLSPAN=2 WIDTH=57 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY></P>
+				</TD>
+				<TD WIDTH=50 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					5.16</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					2.19</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					0.86</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					0.31</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					0.10</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+					0.03</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>0.01</P>
+				</TD>
+				<TD WIDTH=93 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY></P>
+				</TD>
+				<TD WIDTH=53 STYLE="border: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.05in; margin-bottom: 0in">
+					<BR>
+					</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.05in; margin-bottom: 0in">
+					<BR>
+					</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.05in; margin-bottom: 0in">
+					<BR>
+					</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.05in">
+					9.35</P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=141 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>Baturak</P>
+				</TD>
+				<TD WIDTH=84 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>400</P>
+				</TD>
+				<TD WIDTH=33 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD COLSPAN=2 WIDTH=74 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY>400</P>
+				</TD>
+				<TD WIDTH=93 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+					</P>
+				</TD>
+				<TD WIDTH=53 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-right: 0.05in">
+					404.39</P>
+				</TD>
+			</TR>
+		</TBODY>
+	</TABLE>
+</DL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-bottom: 0in">
+<FONT SIZE=2><B>8.15. taula:</B></FONT><FONT SIZE=2> 8.9. adibideko
+datuen antolamendua.</FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+ <I>i e</I><SUB><I>i</I></SUB> &gt; 5 izateko, taulan azaltzen den
+moduan bildu ditugu klaseak, 10 klase lorturik. Beraz,
+askatasun-graduen kopurua, <I>k</I> <FONT FACE="Symbol, serif"></FONT>
+<I>l</I> <FONT FACE="Symbol, serif"></FONT> 1 = 10 <FONT FACE="Symbol, serif"></FONT>
+1 <FONT FACE="Symbol, serif"></FONT> 1 = 8 da.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Itxarotako maiztasunen kalkulua ondoko Poisson-en
+probabilitate-legearen formula erabiliz egin da:</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+<SPAN LANG="en-GB"><I>e</I></SPAN><SUB><SPAN LANG="en-GB"><I>i</I></SPAN></SUB><SPAN LANG="en-GB">
+= </SPAN><SPAN LANG="en-GB"><I>n</I></SPAN><SPAN LANG="en-GB">·</SPAN><SPAN LANG="en-GB"><I>P</I></SPAN><SPAN LANG="en-GB">(</SPAN><SPAN LANG="en-GB"><I>X</I></SPAN><SPAN LANG="en-GB">
+= </SPAN><SPAN LANG="en-GB"><I>i</I></SPAN><SPAN LANG="en-GB">) =
+400·</SPAN></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+non <I>i</I> = 1, 2, 3,…, 15.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Esate baterako, <I>e</I><SUB><I>0</I></SUB> = <I>n</I>·<I>P</I>(<I>X</I>
+= 0) = 400·=400·9.27·10<SUP>-3</SUP> = 3.71</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Orduan, behaturiko estatistikoaren balioa ondokoa da: 
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+= 404.39 <FONT FACE="Symbol, serif"></FONT> 400 = 4.39 eta
+<I>p</I>-balio, <I>p</I> = <I>P</I>(&gt;4.39) da.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in">
+Taulan <I>P</I>(&gt;13.36) = 0.1 agertzen da. Baina <I>p</I> =
+<I>P</I>(&gt;4.39) &gt; <I>P</I>(&gt;13.36) = 0.1 denez, <I>p</I> &gt;
+0.1 lortzen dugu. Ondorioz, %5eko adierazgarritasun-mailaz H<SUB>0</SUB>
+ezin dugu errefusatu; beraz erretikuluko bakterio-kopurua <FONT FACE="Symbol, serif"></FONT>
+= 4.68 parametroko Poisson-en banaketari darraion zorizko aldagaia
+dela onartzen dugu.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0in; page-break-before: always">
+<BR>
+</P>
+<DIV TYPE=FOOTER>
+	<P LANG="es-ES" STYLE="margin-top: 0.25in; margin-bottom: 0in; border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding-top: 0.01in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+	<SPAN ID="Markoa1" DIR="LTR" STYLE="position: absolute; top: 0in; left: 0in; width: 0.24in; height: 0.15in; border: none; padding: 0in; background: #ffffff">
+		<P LANG="es-ES" STYLE="margin-bottom: 0in"><SDFIELD TYPE=PAGE SUBTYPE=RANDOM FORMAT=PAGE>142</SDFIELD></P>
+	</SPAN><FONT SIZE=2><I>I. Arostegui, A. Urkaregi</I></FONT>
+	</P>
+</DIV>
+</BODY>
+</HTML>

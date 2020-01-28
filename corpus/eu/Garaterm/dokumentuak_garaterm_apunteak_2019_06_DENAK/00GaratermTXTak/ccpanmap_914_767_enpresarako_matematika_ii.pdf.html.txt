@@ -1,0 +1,6270 @@
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+EUSKARA ERREKTOREORDETZAREN SARE 
+ARGITALPENA
+
+ 
+ 
+ 
+ 
+1.1.  Topologia…………………………………………………………………………………..       2 
+1.2.  Aldagai anitzeko funtzio errealak. Definizioa. Adierazpen grafikoa………………...        5 
+1.3.  Limitea .……………………………………………………………………………………        6 
+1.4.  Jarraitutasuna……………………………………………………………………………..       9 
+ 
+11
+ 
+ 
+14 
+ 
+2.1.  Lehen mailako deribatu partzialak. Goi-
+mailako deribatu partzialak………………..     15 
+2.2.  Diferentziala. Diferentziagarritasunaren, deribagarritasunaren eta  
+        jarraitutasunaren arteko erlazioak ………………………………………………………    19 
+2.3.  Funtzio konposatuen deribagarritasuna eta diferentziagarritasuna.........................     22 
+ 
+ 
+................................................................................................
+24    
+ 
+!
+29
+ 
+ 
+3.1.  Funtzio baten muturrak. Mutur lokalen existentziarako baldintza beharrezkoak. 
+        Mutur lokalen existentziarako baldintza nahikoak.....................................................   30 
+3.2.  Mutur baldintzatuak. Lagrange-ren metodoa ………………………………………….    33 
+3.3.  Programazio lineala……………………………………………………………………….    35 
+ 
+!
+39  
+ 
+4. 
+44 
+ 
+4.1.   Integral mugatua. Definizioa. Propietateak…………………………………………….    45 
+4.2.   Kalkulu integralaren oinarrizko teorema. Barrow-
+en erregela.………………………     48 
+4.3.   Integral mugagabea. Propietateak. Integralen kalkulua………………………………    50 
+4.4.   Integral inpropioak. Definizioa. Sailkapena…………………………………………….    55 
+4.5.   Integral parametrikoak. Definizioa. Integral parametrikoen bidez definitutako  
+         funtzioen deribagarritasuna……………………………………………………………..     58 
+ 
+"
+...........................................................................................................     62 
+#
+ 
+$
+67
+ 
+ 
+5.1.  Funtzio inplizitua. Definizioa. Funtzio inplizituaren teorema. Funtzio inplizituen 
+ deribazioa…………………………………………………………………………………..    68 
+5.2.  Funtzio homogeneoa. Definizioa. Propietateak. Euler-
+en teorema………………….    70 
+ 
+#
+…………………………………………………………………………….    74 
+ 
+
+1. gaia:
+ Topologia. Aldagai anitzeko funtzio errealen limitea eta jarraitutasuna 
+ 
+ 
+1 
+ 
+1.  gaia: TOPOLOGIA. ALDAGAI ANITZEKO FUNTZIO     
+ERREALEN LIMITEA   ETA  JARRAITUTASUNA 
+ 
+ 
+1.1.   Topologia 
+1.2.   Aldagai anitzeko funtzio errealak. Definizioa.  
+          Adierazpen  grafikoa 
+1.3.   Limitea 
+1.4.   Jarraitutasuna 
+
+1. gaia:
+ Topologia. Aldagai anitzeko funtzio errealen limitea eta jarraitutasuna 
+ 
+ 
+2 
+1.1.  Topologia 
+ 
+Distantzia:  
+Izan bitez  x , y  Rn. Haien arteko distantzia euklidearra honela adierazten da:
+  
+ 
+d(
+x , y ) =    x - y  = 
+2
+n
+n
+2
+2
+2
+2
+1
+1
+)
+y
+x
+(
+...
+)
+y
+x
+(
+)
+y
+x
+(
+−
++
++
+−
++
+−
+ 
+ 
+Propietateak 
+1.    x , y  Rn    d( x , y )   0 
+2.   
+x , y  Rn    d( x , y ) = d( y , x ) 
+3.    x , y  Rn    d( x , y ) = 0    x  =  y  
+ 
+Bola irekia: 
+x  Rn zentroko eta r > 0  erradioko bola irekia honela adierazten da:  
+B( x , r) =  y  Rn /  d( x , y ) <  r   
+ 
+ 
+Barruko puntuak. Kanpoko puntuak. Muga-puntuak 
+A   Rn multzoa izanik, A-ren puntuak honela sailkatuko ditugu: 
+•  Barruko puntuak:  
+x A-ren barruko puntua dela esango dugu, hau egiaztatzen bada:  
+ r  > 0  / B(
+x , r)   A 
+A-ren barruko puntu guztien multzoari A-ren barnealdea esaten zaio eta honela 
+adieraziko dugu: IntA 
+Hau da:  x  int A     r  > 0  / B( x , r)   A 
+ 
+ 
+ 
+ 
+ 
+
+1. gaia:
+ Topologia. Aldagai anitzeko funtzio errealen limitea eta jarraitutasuna 
+ 
+ 
+3 
+•  Kanpoko puntuak:  
+x A-ren kanpoko puntua dela esango dugu hau egiaztatzen bada:  
+ r  > 0  / B( x , r)   AC 
+A-ren  kanpoko  puntu  guztien  multzoari  A-
+ren  kanpoaldea  esaten  zaio  eta 
+honela adieraziko dugu: ExtA. 
+Hau da:  x  Ext A     r  > 0  / B( x , r)   AC 
+ 
+•  Muga-puntuak:  
+x A-ren muga-puntua dela esango dugu, hau egiaztatzen bada:  
+ r > 0  , 
+≠
+∩
+≠
+∩
+φ
+φ
+c
+A
+)
+r
+,
+x
+B(
+ 
+A
+)
+r
+,
+x
+B(
+  
+A-ren  muga-puntu  guztien  multzoari  A-ren  muga  esaten  zaio  eta  honela 
+adieraziko dugu: FrA 
+Hau da: 
+x  Fr A      r > 0  , 
+≠
+∩
+≠
+∩
+φ
+φ
+c
+A
+)
+r
+,
+x
+B(
+ 
+A
+)
+r
+,
+x
+B(
+ 
+ 
+ 
+Multzo irekia. Multzo itxia. Multzo bornatua. Multzo trinkoa 
+Puntuen arabera, multzoak honela sailkatuko ditugu: 
+•  Multzo irekia:  
+A multzo irekia izango da, haren puntu guztiak barruko puntuak badira. 
+A multzo irekia   A = int A 
+ 
+•  Multzo itxia:  
+A multzo itxia izango da, muga-puntu guztiak multzoan badaude. 
+A multzo itxia   frA   A 
+ 
+ 
+ 
+ 
+
+1. gaia:
+ Topologia. Aldagai anitzeko funtzio errealen limitea eta jarraitutasuna 
+ 
+ 
+4 
+•  Multzo bornatua: 
+A multzo bornatua izango da, existitzen bada r  > 0 , non   A   B(
+0 , r) baita. 
+A multzo bornatua 
+ r  > 0  / A   B(
+0 , r) 
+ 
+•  Multzo trinkoa: 
+A trinkoa izango da, itxia eta bornatua bada. 
+
+1. gaia:
+ Topologia. Aldagai anitzeko funtzio errealen limitea eta jarraitutasuna 
+ 
+ 
+5 
+ 
+1.2.  Aldagai anitzeko funtzio errealak. Definizioa. Adierazpen grafikoa 
+ 
+Aldagai anitzeko funtzio erreala honela adierazten da: 
+f: D   Rn   R 
+ 
+          
+x    f( x ) 
+Funtzioaren  eremua:  funtzioa  definituta  dagoen  puntu  guztien  multzoa 
+da. 
+D izendatuko dugu: D = {  x  Rn /   f( x )} 
+ 
+Izan bedi f: D   Rn   R funtzioa, D haren eremua izanik, orduan f-ren 
+grafikoa Rn+1 multzoaren honako azpimultzo honi deituko diogu: 
+ 
+Gf= { ( x , f( x )) /  x  D} 
+ 
+Hots,  f:  D    R 
+  R  aldagai  bateko  funtzioaren  grafikoa  R2  planoan 
+izango  da;  aldagai  biko  funtzioa  badugu,  f:
+  D    R2    R,  haren  grafikoa  R3-n 
+laua izango da. 
+ 
+Aldagai  biko  funtzioen  grafikoa  irudikatzea  ez  da  erraza  izaten. 
+Horregatik,  praktikan maila-kurbak definitzen dira. 
+Izan  bedi  f:D R2 R  funtzioa.  Orduan    balioa  hartzen  duten  eremuko 
+puntu guztien multzoari    maila-kurba esaten zaio, eta honela adierazten da:  
+ 
+K  = {(x, y)  D / f(x, y) =  } 
+ 
+
+1. gaia:
+ Topologia. Aldagai anitzeko funtzio errealen limitea eta jarraitutasuna 
+ 
+ 
+6 
+1.3.  Limitea 
+ 
+Definizioa: 
+Izan bedi f:D  R2 R  funtzioa.  
+0
+x  puntuan f-ren limitea L dela esango dugu, eta 
+L
+)
+x
+(
+f
+lim
+0
+x
+x
+=
+→
+ adieraziko dugu 
+honako hau betetzen bada: 
+ >0   >0  /    
+x  B(
+0
+x ,  )   D\{
+0
+x }  
+L
+)
+x
+(
+f
+−  <   
+edo 
+ >0   >0  /  
+0
+x
+x
+−
+ <      
+L
+)
+x
+(
+f
+−  <   
+Limitearen  definizioak,   
+L
+)
+x
+(
+f
+lim
+0
+x
+x
+=
+→
+  geometrikoki,  honako  hau  esan  nahi  du: 
+0
+x
+zentroko eta   erradioko inguruneko edozein  x punturentzat, 
+)
+x
+(
+f
+-ren balioa 
+L-
+    eta L+   artean dagoela. 
+ 
+Oharra: 
+-  Funtzioak 
+0
+x
+puntuan  ez  du  definiturik  egon  behar,  baina  bai 
+0
+x
+ 
+puntuaren inguruneren batean. 
+-  Limitearen definizioan,  
+x puntua 
+0
+x
+ puntuari nola hurbiltzen zaion ez da 
+esaten;  hau  da,  limitearen  existentziak  ez  dauka  loturarik  x puntua 
+0
+x
+ 
+puntuari  hurbiltzeko  bidearekin.  Edozein  zuzen  edo  kurbaren    bidez 
+hurbildu daiteke. 
+ 
+Aldagai  bateko  kasuan  limitearen  existentzia  aztertzeko  limiteak 
+ezkerretik eta eskuinetik aztertzen genituen.  
+Bi aldagai errealeko funtzioetan kalkulatu beharko genituzke funtzioaren 
+limiteak, 
+0
+x
+= (x0, y0)  puntutik pasatzen diren ibilbide guztiei jarraituz.  
+ 
+ 
+ 
+ 
+ 
+
+1. gaia:
+ Topologia. Aldagai anitzeko funtzio errealen limitea eta jarraitutasuna 
+ 
+ 
+7 
+Norabide-limiteak  
+ 
+f
+-ren limitea 
+0
+x
+ puntuan y= (x) norabidean honela adierazten da:  
+)
+x
+(
+f
+lim
+)
+x
+(
+y
+x
+x
+0
+φ
+→
+→
+ 
+0
+x
+  puntuan  funtzioaren  limitea  existitzeko,  beharrezkoa  da  puntu  horretan 
+edozein norabide-limite existitzea eta denak berdinak izatea, edozein norabide 
+edo  kurbatakoak  izanik. 
+ 
+Adibidez, demagun f:D  R2 R funtzioa dugula. 
+Norabide-limitea,   y – y0 = m(x – x0) zuzena hartuz, honako hau izango dugu: 
+ 
+     
+)
+y
+,
+x
+(
+f
+lim
+)
+x
+x
+(
+m
+y
+y
+)
+y
+,
+x
+(
+)
+y
+,
+x
+(
+0
+0
+0
+0
+−
+=
+−
+→
+  
+ 
+Limite iteratuak 
+ 
+ 
+ 
+Limite  hauetan,  lehendabizi  aldagai  batekiko  hartzen  da  limitea,  eta 
+beste  aldagaia  konstantetzat  hartzen.  Gero,  lortutako  limitearen  limitea 
+kalkulatzen da bigarren aldagaiarekiko. Limite horiei limite iteratu deitzen zaie:
+ 
+ 
+ 
+→
+→
+)
+y
+,
+x
+(
+f
+lim
+lim
+0
+0
+y
+y
+x
+x
+ 
+          
+→
+→
+)
+y
+,
+x
+(
+f
+lim
+lim
+0
+0
+x
+x
+y
+y
+ 
+ 
+Limite horren existentziak ez dakar, berez,  
+)
+y
+,
+x
+(
+f
+lim
+)
+y
+,
+x
+(
+)
+y
+,
+x
+(
+0
+0
+→
+ limitea 
+existituko denik. Bakarrik ziurta dezakegu
+)
+y
+,
+x
+(
+f
+lim
+)
+y
+,
+x
+(
+)
+y
+,
+x
+(
+0
+0
+→
+ ez dela existitzen, 
+limite iteratuak existitu eta desberdinak direnean. Kontuan izan funtzioaren 
+limitea puntu batean existitzen bada, hura bakarra dela. 
+ 
+
+1. gaia:
+ Topologia. Aldagai anitzeko funtzio errealen limitea eta jarraitutasuna 
+ 
+ 
+8 
+ 
+ Propietateak 
+ 
+Demagun 
+)
+x
+(
+f
+Lim
+x
+x
+0
+→
+ eta  
+)
+x
+(
+g
+Lim
+x
+x
+0
+→
+ ditugula:  
+1.  Bi  funtzioren  arteko  baturaren  
+(kenduraren)  limitea  funtzio  bakoitzaren 
+limiteen batura (kendura)  da. 
+ 
+)]
+x
+(
+g
+)
+x
+(
+f
+[
+Lim
+x
+x
+±
+→ 0
+ = 
+)
+x
+(
+f
+Lim
+x
+x
+0
+→
+ ± 
+)
+x
+(
+g
+Lim
+x
+x
+0
+→
+ 
+ 
+2.  Konstante  baten  eta  funtzio  baten  arteko  biderkaduraren  limitea 
+konstantearen eta funtzioaren limitearen biderkadura da. 
+ 
+ 
+∀ k∈R,  
+)
+x
+(
+kf
+Lim
+x
+x
+0
+→
+ = k
+ 
+)
+x
+(
+f
+Lim
+x
+x
+0
+→
+ 
+ 
+3.  Funtzioen  arteko  biderkaduraren  limitea  funtzio  bakoitzaren  limiteen 
+biderkadura da. 
+)]
+x
+(
+g
+)
+x
+(
+f
+[
+Lim
+x
+x
+⋅
+→ 0
+ = 
+)
+x
+(
+f
+Lim
+x
+x
+0
+→
+⋅ 
+)
+x
+(
+g
+Lim
+x
+x
+0
+→
+ 
+ 
+4. Funtzioen arteko zatiduraren limitea funtzio bakoitzaren limiteen zatidura da, 
+izendatzailea zero ez denean. 
+ 
+)]
+x
+(
+g
+/
+)
+x
+(
+f
+[
+Lim
+x
+x
+0
+→
+ = 
+)
+x
+(
+f
+Lim
+x
+x
+0
+→
+/ 
+)
+x
+(
+g
+Lim
+x
+x
+0
+→
+  
+)
+x
+(
+g
+ 0 
+,  
+)
+x
+(
+g
+Lim
+x
+x
+0
+→
+ 0
+ 
+ 
+ 
+ 
+
+1. gaia:
+ Topologia. Aldagai anitzeko funtzio errealen limitea eta jarraitutasuna 
+ 
+ 
+9 
+1.4.  Jarraitutasuna 
+ 
+ f:D
+⊂R2 R  funtzioa jarraitua da 
+0
+x
+∈ D puntuan, baldin eta soilik baldin 
+funtzioaren  balioa  puntu  horretan  eta  puntu  horretako  limitea  berdinak  badira. 
+Hots, f(
+0
+x )
+ = 
+)
+x
+(
+f
+lim
+0
+x
+x
+→
+ 
+Beraz, funtzio bat puntu batean jarraitua izateko honako baldintza hauek bete 
+behar dira: 
+-  Funtzioa puntu horretan definitua egotea. 
+-  Puntu horretan funtzioaren limitea existitzea. 
+-  Funtzioaren  balioa  puntu  horretan  eta  puntu  horretako  limitea 
+berdinak izatea. 
+Aurreko  baldintzetariko  bat  betetzen  ez  denean,  funtzioa  puntu  horretan  ez-
+jarraitua edo etena dela esaten da. 
+Bestalde, funtzioa D multzoan jarraitua dela esaten da multzo horretako puntu 
+guztietan jarraitua denean. 
+ 
+Funtzio jarraituen propietateak 
+ 
+Izan bitez  f eta g funtzioak  jarraituak 
+0
+x
+puntuan: 
+1.  f  eta  g  funtzio  jarraituen  arteko  batura  eta  kendura 
+0
+x
+  puntuan  funtzio 
+jarraitua izango da. 
+(f 
+± g) jarraitua 
+0
+x  
+puntuan 
+ 
+2.  f  funtzio  jarraituaren  eta 
+λ  zenbaki  errealaren  arteko  biderkadura  funtzioa 
+jarraitua izango da. 
+ (
+λ · f) jarraitua 
+0
+x  
+puntuan 
+λ∈R 
+ 
+3.  f  eta  g  funtzio  jarraituen  arteko  biderkadura 
+0
+x
+  puntuan  funtzio  jarraitua 
+izango da. 
+          (f
+⋅ g) jarraitua 
+0
+x  
+puntuan 
+
+1. gaia:
+ Topologia. Aldagai anitzeko funtzio errealen limitea eta jarraitutasuna 
+ 
+ 
+10 
+ 
+4.  f  eta  g  funtzio  jarraituen  arteko  zatidura 
+0
+x
+  puntuan  jarraitua  izango  da, 
+izendatzailea zero denean izan ezik. 
+(f/g) jarraitua x0 puntuan ( g(
+0
+x )   0
+ ) 
+ 
+
+1. gaiko ariketak:
+ Topologia. Aldagai anitzeko funtzio errealen limitea eta jarraitutasuna 
+ 
+11 
+ 
+ 
+ARIKETAK 
+ 
+ 
+TOPOLOGIA. ALDAGAI ANITZEKO FUNTZIO     
+ERREALEN LIMITEA  ETA JARRAITUTASUNA 
+
+1. gaiko ariketak:
+ Topologia. Aldagai anitzeko funtzio errealen limitea eta jarraitutasuna 
+ 
+12 
+ 
+1.  Izan bedi honako funtzio hau: 
+=
+≠
+∀
+−
+−
+=
+)
+4
+,
+2
+(
+)
+y
+,
+x
+(
+2
+)
+4
+,
+2
+(
+)
+y
+,
+x
+(
+y
+x
+y
+8
+x
+4
+)
+y
+,
+x
+(
+f
+2
+ 
+a) Aurkitu f-ren eremua. Eman barruko puntuen multzoa. Eremua trinkoa  al 
+da? Irekia al da? 
+b) Aurkitu: 
+)
+y
+,
+x
+(
+f
+lim
+)
+4
+,
+2
+(
+)
+y
+,
+x
+(
+→
+       
+)
+y
+,
+x
+(
+f
+lim
+)
+0
+,
+1
+(
+)
+y
+,
+x
+(
+→
+ 
+c) Aurkitu 2 maila-kurbaren adierazpen analitikoa. Zein maila-kurbatan dago 
+(0,0)? 
+ Eta  (1,-1)? 
+ 
+2.  Izan bedi honako funtzio hau: 
+=
+≠
+∀
+−
++
+=
+(0,0)
+(x,y)
+k
+(0,0)
+(x,y)
+5y
+x
+y
+x
+f(x,y)
+2
+     
+a) Aurkitu haren eremua. Adierazi eremuaren barnealdea eta muga.  
+b) Aztertu funtzioaren jarraitutasuna.  
+c) Zein maila-kurbatan dago (0,0)? Eta  (5,1)? 
+ 
+3.  Izan bedi honako funtzio hau: 
+=
+≠
++
+=
+)
+0
+,
+0
+(
+)
+y
+,
+x
+(
+0
+)
+0
+,
+0
+(
+)
+y
+,
+x
+(
+y
+x
+xy
+)
+y
+,
+x
+(
+f
+2
+2
+ 
+a) Aurkitu  f-ren eremua. Eremua itxia al da?  Irekia al da?  Bornatua al da?  
+b) Kalkulatu: 
+)
+y
+,
+x
+(
+f
+lim
+)
+0
+,
+0
+(
+)
+y
+,
+x
+(
+→
+        
+)
+y
+,
+x
+(
+f
+lim
+)
+1
+,
+1
+(
+)
+y
+,
+x
+(
+→
+ 
+c) Aztertu  f-ren jarraitutasuna. 
+ 
+ 
+
+1. gaiko ariketak:
+ Topologia. Aldagai anitzeko funtzio errealen limitea eta jarraitutasuna 
+ 
+13 
+ 
+4.  Izan bedi honako funtzio hau: 
+−
+=
+−
+≠
++
+=
+)
+1
+,
+1
+(
+)
+y
+,
+x
+(
+4
+)
+1
+,
+1
+(
+)
+y
+,
+x
+(
+y
+x
+xy
+)
+y
+,
+x
+(
+f
+ 
+a) Aurkitu  f-ren eremua: D. 
+b) Aurkitu D-ren barruko puntuak eta muga. 
+c) Aztertu f-ren jarraitutasuna. 
+d) Aurkitu  0  maila-
+kurbaren  adierazpen  analitikoa  eta  grafikoa.  Zein  maila-
+kurbatan dago  (1,-1)? 
+ 
+5.  Izan bedi honako funtzio hau: 
+=
+≠
+∀
+−
++
+=
+)
+0
+,
+0
+(
+)
+y
+,
+x
+(
+7
+)
+0
+,
+0
+(
+)
+y
+,
+x
+(
+y
+2
+x
+y
+x
+)
+y
+,
+x
+(
+f
+ 
+a) Aurkitu eremua. Adierazi haren barnealdea eta muga.  
+b) Aztertu funtzioaren jarraitutasuna. 
+c) Zein maila-kurbatan dago (0,0)?  Eta (2,1)? 
+ 
+6.  Izan bedi honako funtzio hau: 
+−
+=
+−
+≠
+∀
++
+−
+=
+)
+3
+,
+1
+(
+)
+y
+,
+x
+(
+2
+)
+3
+,
+1
+(
+)
+y
+,
+x
+(
+y
+x
+3
+y
+x
+)
+y
+,
+x
+(
+f
+ 
+a) Aurkitu  f-ren  eremua.  Adierazi  eremuko  kanpoko  puntuen  multzoa  eta 
+muga-puntuak. 
+b) Aztertu funtzioaren jarraitutasuna. Zein maila-kurbatan dago  (0, 0)?   
+     Eta  (1,-3)? 
+ 
+
+2. gaia: Aldagai anitzeko funtzioen kalkulu diferentziala  
+ 
+14 
+ 
+2. gaia: ALDAGAI ANITZEKO FUNTZIOEN KALKULU  
+              DIFERENTZIALA    
+ 
+ 
+2.1.   Lehen mailako deribatu partzialak. Goi-mailako deribatu 
+          partzialak 
+ 
+2.2.   Diferentziala.  
+Diferentziagarritasunaren, deribagarritasunaren  eta     
+jarraitutasunaren arteko erlazioak  
+ 
+2.3.   Funtzio konposatuen deribagarritasuna eta  
+          diferentziagarritasuna 
+
+2. gaia: Aldagai anitzeko funtzioen kalkulu diferentziala  
+ 
+15 
+ 
+2.1. Lehen mailako deribatu partzialak. Goi-mailako deribatu partzialak 
+ 
+2.1.1. Lehen mailako deribatu partzialak 
+ 
+Definizioa 
+ 
+Izan bedi honako funtzio hau: f: D   R2   R  
+                                                        (x,y)  f(x, y) 
+ 
+ 
+x 
+aldagaiarekiko  f    funtzioaren  lehen  mailako  deribatu  partziala  esaten  zaio  
+honako limite honi (existitzen bada):  
+ 
+h
+)
+y
+,
+h
+x
+(
+f
+lim
+0
+h
++
+→
+ 
+eta honako ikurren bidez adieraz daiteke:  fx ,  
+x
+f
+∂
+∂
+,  Dxf(x, y) 
+ 
+Era berean, honako limite honi, existitzen bada, y aldagaiarekiko f  funtzioaren 
+lehen mailako deribatu partziala esaten zaio:  
+h
+)
+h
+y
+,
+x
+(
+f
+lim
+0
+h
++
+→
+ 
+eta ikur hauen bidez adieraz daiteke:  fy ,  
+y
+f
+∂
+∂
+,  Dyf(x, y). 
+ 
+Oro har, bai 
+x
+f
+∂
+∂
+ 
+bai 
+y
+f
+∂
+∂
+ x
+ eta y aldagaien funtzioak dira.  
+(x0,  y0)  puntuan  lehen  mailako  deribatu  partzialak  kalkulatzeko  honela  egingo 
+dugu:  
+ 
+fx(x0, y0)= 
+x
+f
+∂
+∂
+(x0, y0)= 
+h
+)
+y
+,
+x
+(
+f
+)
+y
+,
+h
+x
+(
+f
+lim
+0
+0
+0
+0
+0
+h
+−
++
+→
+ 
+ 
+ 
+fy(x0, y0)= 
+y
+f
+∂
+∂
+(x0, y0)= 
+h
+)
+y
+,
+x
+(
+f
+)
+h
+y
+,
+x
+(
+f
+lim
+0
+0
+0
+0
+0
+h
+−
++
+→
+ 
+ 
+
+2. gaia: Aldagai anitzeko funtzioen kalkulu diferentziala  
+ 
+16 
+ 
+ 
+Aldagai  bakarreko  deribatuen  zeinuak  adierazten  du  funtzioa  gorakorra 
+edo beherakorra den puntuaren ingurune batean. 
+ 
+Aldiz,  deribatu  partzialen  zeinuek  adierazten  dute  nola  ibiltzen  den 
+funtzioa  bi  norabideetan,  ardatzekiko  norabide  paraleloetan.  Hots, 
+x
+f
+∂
+∂
+ 
+deribatuak funtzioaren aldakuntza neurtzen du OX ardatzaren norabidean, eta 
+y
+f
+∂
+∂
+ 
+deribatuak OY ardatzaren norabidean. 
+ 
+Deribatu  partzialaren  kontzeptua  hiru  aldagaiko  edo  gehiagoko 
+funtzioetara zabaldu daiteke. Horretarako, aldagai guztiak bat izan ezik, finkatu 
+behar dira aldagai horrekiko deribatu partzialak lortzeko. 
+ 
+Izan bedi honako funtzio hau: f: D   Rn   R  
+                                                 (x1,x2, …,xi, …, xn, )  f
+(x1,x2, …,xi, …, xn, ) 
+ 
+ 
+Honako  limiteari,  existitzen  bada,  esaten  zaio  xi  aldagaiarekiko  f    funtzioaren 
+lehen mailako deribatu partziala:  
+ 
+ 
+i
+x
+f (x, y) = 
+h
+)
+x
+,...,
+x
+,...,
+x
+,
+x
+(
+f
+)
+x
+,...,
+h
+x
+,...,
+x
+,
+x
+(
+f
+lim
+n
+i
+2
+1
+n
+i
+2
+1
+0
+h
+−
++
+→
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+2. gaia: Aldagai anitzeko funtzioen kalkulu diferentziala  
+ 
+17 
+ 
+Deribazioaren propietateak 
+1. Funtzio deribagarrien arteko batura eta kendura funtzio deribagarria izango 
+da. 
+ 
+2. Funtzio deribagarriaren eta 
+λ zenbaki errealaren arteko biderkadura funtzio 
+deribagarria izango da. 
+ 
+3. Bi funtzio deribagarriren arteko biderkadura funtzio deribagarria izango da. 
+ 
+4.  Funtzio  deribagarrien  arteko  zatidura  deribagarria  izango  da,  izendatzailea 
+zero denean izan ezik. 
+ 
+ 
+2.1.2. Goi-mailako deribatu partzialak 
+ 
+Deribatu  partzialak,  bi  aldagaiko  funtzioak  direnez,  berriro  deriba 
+daitezke,  bai  x-rekiko  bai  y-
+rekiko.  Horrenbestez,  bigarren  mailako  deribatu 
+partzialak lortzen ditugu: 
+  fxx ,  
+x
+x
+f
+2
+∂
+∂
+∂
+,  
+hau da, f-ren bigarren deribatu partziala x-rekiko bi aldiz 
+ 
+( f x-rekiko bi aldiz elkarren segidan deribatu da) 
+  fyy ,  
+y
+y
+f
+2
+∂
+∂
+∂
+,  
+hau da, f-ren bigarren deribatu partziala y-rekiko bi aldiz 
+ 
+( f y-rekiko bi aldiz elkarren segidan deribatu da) 
+ 
+fxy ,  
+y
+x
+f
+2
+∂
+∂
+∂
+,  
+hau da, f-ren bigarren deribatu partziala x-rekiko eta y-rekiko. 
+ 
+( f x
+-rekiko deribatu ondoren, emaitza y-rekiko deribatu da) 
+fyx ,  
+x
+y
+f
+2
+∂
+∂
+∂
+,  
+hau da, f-ren bigarren deribatu partziala y-rekiko eta x-rekiko. 
+ 
+( f y-rekiko deribatu ondoren, emaitza x-rekiko deribatu da) 
+
+2. gaia: Aldagai anitzeko funtzioen kalkulu diferentziala  
+ 
+18 
+ 
+Beraz, funtzio bat deribatzean beste funtzio bat lortzen da. Eta, horrela jarraituz 
+gero,  funtzioak  deribatzen  ahal  diren  neurrian,  f-
+ren  hirugarren,  laugarren,...,  
+mailako deribatu partzialak (hots goi-
+mailako deribatu partzialak) lortzen dira. 
+ 
+ 
+Schwarz-en teorema 
+ 
+Baldin f(x, y) funtzioa eta beraren  fx , fy  , fxy deribatu partzialak 
+(x0, y0) 
+puntuaren  ingurune  batean  definiturik  badaude,  eta  fxy    aurreko  puntuan 
+jarraitua bada, orduan fyx existitzen da eta honako hau betetzen da: 
+fxy(x0, y0)= fyx(x0, y0) 
+ 
+Teorema hori edozein mailatako deribatu partzialetara zabaldu daiteke. 
+ 
+ 
+Definizioa 
+ 
+Izan bedi f: D   Rn   R funtzioa, D 
+⊂ Rn multzo irekia izanik. f funtzioa D 
+multzoan  Cr    motakoa  dela  esaten  da,  existitzen  badira  r  mailaraino  f-
+ren 
+deribatu  partzialak  eta  horiek  jarraituak  badira  D  multzoan.  Honela  adierazten 
+da: f  Cr(D). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+2. gaia: Aldagai anitzeko funtzioen kalkulu diferentziala  
+ 
+19 
+ 
+2.2. Diferentziala. Diferentziagarritasuna, deribagarritasuna eta 
+jarraitutasunaren arteko erlazioak 
+ 
+2.2.1. Diferentziala 
+ 
+ 
+ 
+f(x)
+  aldagai  bakarreko  funtzioaren  diferentziala  x0  puntuan,  honela 
+definitzen  da:  df(x0)  =  f (x0) h    (h:  x-
+ren  aldakuntza).  Diferentziala  izango  da,  f 
+funtzioari ondoen hurbiltzen zaion aplikazio lineala. 
+Diferentziala  erabil  daiteke  h  balioak  txikiak  direnean  x0  puntuaren 
+ingurunean, funtzioaren aldakuntzak hurbiltzeko: 
+ 
+ 
+df(x0)    f(x0+h) – f(x0) 
+ 
+ 
+f
+ diferentziagarria izango da x0-n honako hau betetzen bada: 
+0
+h
+)
+x
+(
+df
+)
+x
+(
+f
+)
+h
+x
+(
+f
+lim
+0
+0
+0
+0
+h
+=
+−
+−
++
+→
+ 
+ 
+ 
+ 
+Bi aldagaiko f(x, y) funtziorako antzeko kontzeptu bat definitzen da. 
+ 
+f
+ diferentziagarria izango da (x0, y0) puntuan honako hau betetzen bada: 
+ 
+0
+h
+)
+k
+,
+h
+)(
+y
+,
+x
+(
+df
+)
+y
+,
+x
+(
+f
+)
+k
+y
+,
+h
+x
+(
+f
+lim
+0
+0
+0
+0
+0
+0
+)
+0
+,
+0
+(
+)
+k
+,
+h
+(
+=
+−
+−
++
++
+→
+ 
+ 
+h: x-
+ren aldakuntza 
+k:
+ y-ren aldakuntza 
+)
+k
+,
+h
+)(
+y
+,
+x
+(
+df
+0
+0
+ 
+funtzioaren diferentziala (x0, y0) puntuan  
+ 
+ 
+)
+k
+,
+h
+)(
+y
+,
+x
+(
+df
+0
+0
+ =  
+fx(x0, y0)h + fy(x0, y0)k 
+Funtzio baten diferentziala puntu batean, existitzen bada, puntu horretan 
+ukitzailea den planoa izango da.  
+
+2. gaia: Aldagai anitzeko funtzioen kalkulu diferentziala  
+ 
+20 
+ 
+Funtzioa diferentziagarria bada puntu batean, eta h eta k txikiak badira, 
+diferentzialak  funtzioak  jasaten  duen  aldakuntza  adierazten  du:
+  hau  da,  puntu 
+batetik  hurbil  dauden  beste  puntuen  funtzioaren  balio  hurbilduak  kalkula 
+daitezke. Hurbilketa lineala izango da, plano ukitzailearen altueraren aldakuntza 
+neurtzen baita, eta hori ekuazio lineal baten bidez adierazten da. 
+ 
+f(x0+h, y0+k) – f(x0, y0)   
+)
+k
+,
+h
+)(
+y
+,
+x
+(
+df
+0
+0
+ =  
+fx(x0, y0)h + fy(x0, y0)k 
+ 
+Era  berean,  funtzioaren  diferentziala  aldagai  gehiagoko  funtzioetara 
+zabaldu daiteke. 
+ 
+ 
+Funtzio bat diferentziagarria da multzo batean, multzoko puntu guztietan 
+diferentziagarria bada. 
+ 
+ 
+ 
+Propietateak 
+1. Funtzio diferentziagarrien arteko batura eta kendura funtzio diferentziagarria 
+izango da. 
+ 
+2.  Funtzio  diferentziagarriaren  eta 
+λ  zenbaki  errealaren  arteko  biderkadura 
+funtzio diferentziagarria izango da. 
+ 
+3.  Bi  funtzio  diferentziagarriren  arteko  biderkadura  funtzio  diferentziagarria 
+izango da. 
+ 
+4.  Funtzio  diferentziagarrien  arteko  zatidura  diferentziagarria  izango  da, 
+izendatzailea zero denean izan ezik. 
+ 
+ 
+ 
+ 
+ 
+
+2. gaia: Aldagai anitzeko funtzioen kalkulu diferentziala  
+ 
+21 
+ 
+2.2.2.  Diferentziagarritasuna,  deribagarritasuna  eta  jarraitutasunaren  arteko 
+erlazioak 
+ 
+ 
+Teorema 
+Izan bedi f: D   Rn   R funtzioa. Funtzio bat diferentziagarria bada puntu 
+batean orduan funtzioa jarraitua izango da puntu horretan. 
+ 
+Aldagai bakarreko funtzioa puntu batean deribagarria bada, nahi eta nahi 
+ez, puntu horretan jarraitua da. Baina puntu batean jarraitua izan daiteke, eta ez 
+deribagarria. Bi aldagaiko funtzioek, berriz, ez dute hori betetzen. Puntu batean, 
+deribatu  partzialen  existentzia  ez  da  nahikoa  puntu  horretan  jarraitutasuna 
+ziurtatzeko. 
+Bi  aldagaiko  funtzioentzat,  funtzioa  diferentziagarria  bada,  orduan 
+jarraitua  da  eta  haren  deribatu  partzialak  existitzen  dira.  Alderantzizkoa  ez  da 
+egia.  Deribatu  partzialen  existentziak  ez  dakar  berez  funtzioaren 
+diferentziagarritasuna. 
+Jarraian, 
+bi 
+aldagaiko 
+funtzio 
+baten 
+diferentziagarritasunerako  baldintza  nahikoa  baina  ez  beharrezkoa  zein  den 
+adieraziko dugu.  
+ 
+Teorema 
+f(x,  y)
+  funtzioa    fx  eta  fy    (x0,  y0)  puntuko  ingurune  batean  jarraituak 
+badira, orduan f diferentziagarria da (x0, y0) puntuan. 
+ 
+
+2. gaia: Aldagai anitzeko funtzioen kalkulu diferentziala  
+ 
+22 
+ 
+2.3. Funtzio konposatuen deribagarritasuna eta diferentziagarritasuna 
+ 
+Teorema 
+Izan bitez f: D   Rm   Rn eta g: E   Rn   Rp funtzioak. f diferentziagarria 
+bada  x   D  puntuan  eta  g  diferentziagarria  bada  f
+( x )   E  puntuan,  orduan 
+funtzio  konposatua  g f:  Rm 
+  Rp
+  diferentziagarria  izango  da  x   puntuan, 
+diferentziala honako hau izanik: 
+d(g f) ( x ) = dg(f( x )) (df( x ))  
+Adierazpen horri katearen erregela deritzo. 
+ 
+Aldagai  bakarreko  funtzioetan  z  =  f(y)  eta  y  =  g(x)  badira,  funtzio 
+konposatua deribatzeko honako hau egiten dugu: 
+f' (y) = f' (g(x))   g' (x) 
+ 
+ 
+Aldagai anitzeko funtzioekin honako kasu hauek ager daitezke: 
+ 
+1. kasua 
+  
+Aldagai  bakarreko  funtzio  baten  deribatua,  non  aldagaia  bi  aldagai 
+independenteren funtzioa baita: z = f(t) eta t = g(x, y) ; orduan, z = f(g
+(x, y)). 
+f
+ deribagarria bada eta g funtzioaren lehen mailako deribatu partzialak x-
+rekiko  eta  y-rekiko  existitzen  badira,  orduan  z-
+ren  deribatu  partzialak  x-rekiko 
+eta y-rekiko existitzen dira eta honako hauek dira:  
+x
+t
+dt
+dz
+x
+z
+∂
+∂
+⋅
+=
+∂
+∂
+   eta   
+y
+t
+dt
+dz
+y
+z
+∂
+∂
+⋅
+=
+∂
+∂
+   
+ 
+ 
+ 
+ 
+ 
+ 
+
+2. gaia: Aldagai anitzeko funtzioen kalkulu diferentziala  
+ 
+23 
+ 
+2. kasua 
+ 
+Aldagai  anitzeko  funtzio  baten  deribatua,  non  aldagai  bakoitza  aldagai 
+independente  bakarreko  funtzioa  baita:  z  =  f(x,  y)  eta  x  =  g
+(t)  eta    y  =  h(t); 
+orduan, z = f[g(t), h(t)]. 
+f 
+diferentziagarria bada eta g eta h t-rekiko deribagarriak badira, orduan z 
+t
+-rekiko deribagarria da eta honako hau betetzen da:  
+dt
+dy
+y
+z
+dt
+dx
+x
+z
+dt
+dz
+⋅
+∂
+∂
++
+⋅
+∂
+∂
+=
+    
+ 
+3. kasua 
+ 
+Aldagai  anitzeko  funtzio  baten  deribatua,  non  aldagai  bakoitza  beste 
+aldagaiaren funtzioa baita: z = f(x, y) eta x = g(s,t) eta  y = h
+(s, t) ; orduan,  
+z = f[g(s, t), h(s, t)].
+ 
+f 
+diferentziagarria  bada  eta  g  eta  h  funtzioen  lehen  mailako  deribatu 
+partzialak existitzen badira, orduan z-
+ren deribatu partzialak s eta t aldagaiekiko 
+existitzen dira eta honako hauek dira:   
+s
+y
+y
+z
+s
+x
+x
+z
+s
+z
+∂
+∂
+⋅
+∂
+∂
++
+∂
+∂
+⋅
+∂
+∂
+=
+∂
+∂
+   eta 
+t
+y
+y
+z
+t
+x
+x
+z
+t
+z
+∂
+∂
+⋅
+∂
+∂
++
+∂
+∂
+⋅
+∂
+∂
+=
+∂
+∂
+    
+
+2. gaiko ariketak: Aldagai anitzeko funtzioen kalkulu diferentziala  
+ 
+24 
+ 
+ 
+ 
+ARIKETAK 
+ 
+ 
+ALDAGAI ANITZEKO FUNTZIOEN  
+KALKULU DIFERENTZIALA      
+
+2. gaiko ariketak: Aldagai anitzeko funtzioen kalkulu diferentziala  
+ 
+25 
+ 
+1.  Izan bedi  
+=
+≠
+−
++
+−
+−
+=
+)
+0
+,
+2
+(
+)
+y
+,
+x
+(
+0
+)
+0
+,
+2
+(
+)
+y
+,
+x
+(
+4
+y
+x
+4
+y
+x
+2
+)
+y
+,
+x
+(
+f
+2
+2
+      funtzioa: 
+a) Aurkitu  f-ren  eremua.  Eman  eremuko  muga  puntuen  multzoa.  Eremua 
+irekia al da?  Itxia al da? 
+b) Aztertu  f-ren jarraitutasuna.  
+c) Aztertu f-ren deribagarritasuna. 
+ 
+2.  Izan bedi 
+=
+≠
++
+=
+)
+0
+,
+0
+(
+)
+y
+,
+x
+(
+)
+0
+,
+0
+(
+)
+y
+,
+x
+(
+y
+x
+4
+xy
+8
+)
+y
+,
+x
+(
+f
+2
+2
+β
+ 
+a) Aurkitu f-ren eremua. Aurkitu haren muga. Eremua  irekia al da? Trinkoa al 
+da? 
+b) Aztertu  f-ren  jarraitutasuna  eta  deribagarritasuna 
+β-ren  balio  erreal 
+guztietarako. 
+c) Eman 0  maila-kurbaren adierazpen analitikoa eta grafikoa. 
+ 
+3.  Izan bedi 
+=
+≠
+−
++
+−
+=
+)
+1
+,
+2
+(
+)
+y
+,
+x
+(
+k
+)
+1
+,
+2
+(
+)
+y
+,
+x
+(
+y
+2
+x
+x
+4
+y
+4
+x
+)
+y
+,
+x
+(
+f
+2
+2
+       ( k 
+∈ R) 
+a)  f  deribagarria (2, 1) puntuan? Eta (2, 2)-n? 
+b)  f  bere eremuan 1 motakoa al da? 
+ 
+ 
+ 
+ 
+
+2. gaiko ariketak: Aldagai anitzeko funtzioen kalkulu diferentziala  
+ 
+26 
+ 
+4.  Izan bedi 
+=
+−
+≠
+−
++
+=
+)
+0
+,
+0
+(
+)
+y
+,
+x
+(
+1
+)
+0
+,
+0
+(
+)
+y
+,
+x
+(
+y
+x
+y
+x
+)
+y
+,
+x
+(
+f
+2
+2
+ 
+a) Aurkitu f-ren eremua eta haren barruko puntuen multzoa. Eremua irekia al 
+da? Itxia al da? 
+b)  f  diferentziagarria da (0,0)-n? Eta  (1,2)-n? 
+c) f(1’1,1’9),  f(1,2)  baino  handiagoa  edo  txikiagoa  al  da?  Arrazoitu, 
+diferentziala erabiliz.  
+d) Aurkitu 0 maila-kurbaren adierazpen analitikoa eta grafikoa. 
+ 
+5.   Izan bedi 
+=
++
+≠
++
+−
++
++
++
+=
+2
+y
+x
+0
+2
+y
+x
+2
+y
+x
+1
+y
+x
+)
+y
+,
+x
+(
+f
+ 
+a)  f  deribagarria da (1,1)-n?  Eta (0, 0)-n? 
+b)  f diferentziagarria da  (1,1)-n? Eta (0, 0)-n? 
+c) Aurkitu f(0´001, 0´020)-ren balio hurbilena diferentziala erabiliz.  
+ 
+6.   Izan bedi 
+=
+≠
+−
++
+=
+)
+0
+,
+2
+(
+)
+y
+,
+x
+(
+1
+)
+0
+,
+2
+(
+)
+y
+,
+x
+(
+2
+y
+x
+x
+)
+y
+,
+x
+(
+f
+2
+ 
+a) Aztertu  f-ren deribagarritasuna. 
+b) Aztertu  f-ren diferentziagarritasuna. 
+c) Aurkitu f(0´003, 0´1)-ren balio hurbilena diferentziala erabiliz.  
+ 
+ 
+
+2. gaiko ariketak: Aldagai anitzeko funtzioen kalkulu diferentziala  
+ 
+27 
+ 
+7.   Izan bedi f(x, y) = xg (x + y) + ey h(x /
+ y). Aurkitu, existitzen badira, f1(1,2) 
+eta f2(1,2), non g(3) = 2; h(1/2) = -2; g’(3) = 4; h’(1/2) = 1; g∈C1(R); h∈ C1
+(R) 
+baitira. 
+ 
+8.    Izan bedi  z = 3f
+[sin (x+y) , ex+y ]  funtzioa, non f ∈ C1 (R2) baita. 
+f1(0, 1) = 3;  f2 (0,1) = -2 badira, kalkulatu: 
+x
+z
+∂
+∂
+ (1, -1)
+   eta   
+y
+z
+∂
+∂
+ (1, -1).  
+ 
+9.   Izan bedi f(x,y)= yg(4x + y2) + ex h(x; y2) funtzioa, non g
+∈C2(R) eta 
+h
+∈ C2(R2) baitira.  
+a) Aurkitu, ahal bada, df. 
+b)  h1 diferentziagarria al da (1,2)-n? 
+ 
+10. Izan  bedi    z  =  x  f(x2,y3)  +  yg(x2y3)  funtzioa,  non  f 
+∈  C1(R2)  eta  g∈  C1(R) 
+baitira. Aurkitu, ahal bada, dz. 
+ 
+11. Izan bedi z = x2 f(2x, xy2)-yg(x + 2y)  funtzioa, non f 
+∈ C1(R2)  eta  g ∈ C1(R) 
+baitira. 
+a) Aurkitu, ahal bada, z-ren lehen mailako deribatu partzialak.   
+b)  z diferentziagarria da? Hala bada, aurkitu  dz. 
+ 
+12. Izan bedi  F(x, y) = 
+y
+2
+ f(y; 3x2) + ex g(x + 2y) 
+funtzioa, non f 
+∈ C1(R2) eta 
+ g 
+∈ C1(R) baitira. f(1, 3) = 2, f1(1, 3) = 1, f2(1, 3) = 7,  g(3) = 3, g’
+(3) = 5 direla 
+jakinik, aurkitu, ahal bada,  dF(1, 1) eta  dF(1, 0).    
+ 
+ 
+
+2. gaiko ariketak: Aldagai anitzeko funtzioen kalkulu diferentziala  
+ 
+28 
+13. Izan bedi z = x f(3x + y)+ 2yg(xy; y2) funtzioa. f
+∈C1(R) eta g∈ C1(R2) direla 
+jakinik,  aurkitu, ahal bada, dz. 
+ 
+14. Izan bedi  z(x,y) = x2y f(x + xy) + 
+y
+x
+g(xy, y3)
+, non  f
+∈ C1(R) eta  g ∈ C1(R2) 
+baitira. 
+a) Aurkitu, existitzen bada, dz. 
+b)  z  bere eremuan 1  motakoa al da? 
+ 
+15. Izan bedi  z = x2f(3x+y) + g(2xy, y2) funtzioa. 
+ f
+∈C1(R), g∈C1(R2) , f(4)=3, f’(4)=1,  g(2,1) = -1, g1(2,1) = 2,   g2(2,1) = -2 
+direla jakinik, aurkitu, ahal bada, z(0’99, 1’002)-ren balio hurbilena. 
+ 
+16. Izan bedi  z = g(x3, 2x+3y) + h(x-y3) funtzioa. 
+g
+∈C1(R2), h∈C1(R), h(0) = 1, h’(0) = 5,  g(1, 5) = 3 , g1(1, 5) = 4, g2
+(1, 5) = -2 
+direla jakinik, z(x,y) diferentziagarria al da 
+(1,1) puntuan? Hala bada, kalkula 
+ezazu dz(1, 1).  
+ 
+17. Izan bedi  h(x, y) = 3yf(x2y, x)+
+x
+1 g(x2 + 2y) funtzioa non  f∈C1(R2), g∈C1(R),   
+f(0, 0)= 0, f1(0, 0) = 1, f2(0, 0) = 2,  f (0, 1)= 1, f1(0, 1) = 0, f2
+(0, 1) = 2,   
+     g(1) = g(2) = 1
+ eta   g
+′(1)= g′(2) = 2 betetzen baitira, aurkitu, ahal bada, h-ren 
+diferentziala (0, 1) puntuan. 
+
+3. gaia: Bi aldagaiko  funtzioak optimizatzea  
+ 
+29 
+3. gaia: BI ALDAGAIKO FUNTZIOAK OPTIMIZATZEA  
+ 
+ 
+3.1.  Funtzio  baten  muturrak.  Mutur  lokalen  existentziarako 
+baldintza  beharrezkoak.  Mutur  lokalen  existentziarako 
+baldintza nahikoak  
+ 
+3.2.  Mutur baldintzatuak. Lagrange-ren metodoa 
+ 
+3.3.  Programazio lineala 
+ 
+
+3. gaia: Bi aldagaiko  funtzioak optimizatzea  
+ 
+30 
+3.1.   Funtzio  baten  muturrak.  Mutur  lokalen  existentziarako  baldintza 
+beharrezkoak. Mutur lokalen existentziarako baldintza nahikoak  
+ 
+3.1.1.  Funtzio baten muturrak 
+ 
+Definizioak 
+ 
+Izan  bedi  f:D
+⊂R2 R    funtzioa,  non  D  funtzioaren  definizio-eremua  eta 
+(x0,y0)∈ D  baitira. 
+f 
+ funtzioak (x0,y0) puntuan maximo lokala lortzen du:  
+∃  ε >0  / f(x0,y0) ≥  f(x,y)  ∀ (x,y)∈ B[(x0,y0), ε] ∩ D   
+f  
+funtzioak (x0,y0) puntuan minimo lokala lortzen du:   
+∃ ε >0  / f(x0,y0) ≤  f(x,y)  ∀ (x,y)∈ B[(x0,y0), ε] ∩ D   
+f 
+ funtzioak (x0,y0) puntuan maximo lokal hertsia lortzen du: 
+∃  ε >0  / f(x0,y0) >  f(x,y)  ∀ (x,y)∈ B[(x0,y0), ε] ∩ D   
+f
+  funtzioak  (x0,y0) puntuan minimo lokal hertsia lortzen du:   
+∃ ε >0  / f(x0,y0) <  f(x,y)  ∀ (x,y)∈ B[(x0,y0), ε] ∩ D   
+f 
+ funtzioak (x0,y0) puntuan maximo globala lortzen du:  
+f
+(x0,y0)  ≥  f(x,y)  ∀ (x,y)∈ D   
+f 
+ funtzioak (x0,y0) puntuan minimo globala lortzen du:  
+f
+(x0,y0) ≤   f(x,y)  ∀ (x,y)∈ D   
+f 
+ funtzioak (x0,y0) puntuan maximo global hertsia lortzen du:  
+f
+(x0,y0)  >   f(x,y)  ∀ (x,y)∈ D   
+f 
+ funtzioak (x0,y0) puntuan minimo global hertsia lortzen du:  
+f
+(x0,y0)  <  f(x,y)  ∀ (x,y)∈ D   
+ 
+ 
+Weierstrass-en teorema 
+ 
+Funtzio  bat  jarraitua  bada  multzo  trinko  batean,  orduan  funtzioak  multzo 
+horretan maximo eta minimo globalak lortzen ditu. 
+ 
+ 
+ 
+ 
+
+3. gaia: Bi aldagaiko  funtzioak optimizatzea  
+ 
+31 
+ 
+ 
+3.1.2.  Mutur lokalen existentziarako baldintza beharrezkoak 
+ 
+ 
+Izan  bedi    f:D
+⊂R2 R    funtzioa  deribagarria  (x0,y0)  puntuan  non  D 
+funtzioaren definizio-eremua eta (x0,y0)∈ int(D)  baitira. 
+f 
+ funtzioak maximo edo minimo lokala lortzeko (x0,y0) puntuan, baldintza 
+beharrezkoa  da  lehen  mailako  deribatu  partzialak  
+(x0,y0)  puntuan  zero  izatea 
+da.  Hots,  f-k  maximo  edo  minimo  lokala  
+(x0,y0)  lortzeko,  ezinbestekoa  da 
+honako hau:  fx(x0,y0)= 0 eta fy(x0,y0)= 0. 
+Baina gerta daiteke  fx(x0,y0)= 0 eta fy(x0,y0)= 0 izatea eta ez egotea ez 
+maximorik  ez  minimorik  
+(x0,y0)  puntuan,  honako  adibide  honetan  ikusten  den 
+bezala: 
+ 
+Adibidea 
+ 
+Izan bedi honako funtzio hau: f(x,y)= xy 
+f-
+ren lehen mailako deribatu partzialak (0,0) puntuan zero dira. Baina funtzioak 
+(0,0)
+  puntuan  ez  du  lortzen  ez  maximorik  ez  minimorik.  Izan  ere,  funtzio  hori 
+zero  da  koordenatu-
+jatorrian,  baina  puntu  horren  inguruan  funtzioak  balio 
+positiboak eta balio negatiboak hartzen ditu. Beraz, 
+(0,0) puntuan funtzioak ez 
+du lortzen ez maximo lokalik ez minimo lokalik. 
+ 
+Funtzioa deribagarria denean, muturren kokapena zehazteko baldintza nahikoa 
+ere aztertu behar dugu. 
+Ezar  ditzagun  bi  aldagaiko  funtzioetan  mutur  lokalak  existitzeko  baldintza 
+nahikoak.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+3. gaia: Bi aldagaiko  funtzioak optimizatzea  
+ 
+32 
+ 
+ 
+ 
+3.1.3.  Mutur lokalen existentziarako baldintza nahikoak 
+ 
+ 
+Izan bedi  f:D
+⊂R2 R  funtzioa, non f  C2[B((x0,y0),  )] baita. 
+   
+ f funtzioaren hessiarra (x0,y0) puntuan esaten zaio honako determinante 
+honi: 
+ 
+)
+y
+,
+x
+(
+f
+)
+y
+,
+x
+(
+f
+)
+y
+,
+x
+(
+f
+)
+y
+,
+x
+(
+f
+)
+y
+,
+x
+(
+H
+0
+0
+yy
+0
+0
+yx
+0
+0
+xy
+0
+0
+xx
+0
+0
+f
+=
+ 
+ 
+f 
+ funtzioak lehen mailako eta bigarren mailako deribatu partzial jarraituak baditu 
+(x0,y0)  puntuaren  ingurune  batean,  non  fx(x0,y0)=  0  eta  fy
+(x0,y0)=  0  baitira, 
+honako hau beteko da:  
+ 
+• 
+)
+y
+,
+x
+(
+H
+0
+0
+f
+>  0  eta 
+)
+y
+,
+x
+(
+f
+0
+0
+xx
+>  0  badira,  orduan  f-k  (x0,y0)  puntuan 
+minimo lokal hertsia lortuko du. 
+ 
+• 
+)
+y
+,
+x
+(
+H
+0
+0
+f
+>0  eta 
+)
+y
+,
+x
+(
+f
+0
+0
+xx
+<  0  badira,  orduan  f-k  (x0,y0)  puntuan 
+maximo lokal hertsia lortuko du. 
+ 
+• 
+)
+y
+,
+x
+(
+H
+0
+0
+f
+< 0 bada, orduan f-k (x0,y0) puntuan ez du muturrik lortuko. 
+ 
+• 
+)
+y
+,
+x
+(
+H
+0
+0
+f
+= 0 bada, ezin da ezer ziurtatu. 
+ 
+
+3. gaia: Bi aldagaiko  funtzioak optimizatzea  
+ 
+33 
+ 
+3.2.  Mutur baldintzatuak. Lagrange-ren metodoa 
+ 
+Funtzio baten maximo eta minimoen aurkikuntzari buruzko problemetan, 
+sarritan funtzioaren aldagaiak ez dira independenteak: aitzitik erlazionatuta 
+egoten dira baldintza batzuen bidez.  
+f(x, y)
+ funtzioaren maximo edo minimo bati mutur baldintzatua esaten zaio, x 
+eta y aldagaiak g(x,y) = 0 ekuazio baten bidez erlazionatuta daudenean. 
+Demagun  f:D
+⊂R2 R  funtzioa dugula non f  C2[B((x0,y0),  )]  eta  
+g  C2[B((x0,y0),  )]  baitira. 
+f
+    funtzioak    g(x,y)  =  0  ekuazioarekiko  mutur  baldintzatua  lortzeko 
+ezinbestekoa da honako hau izatea:  
+ 
+λ   R  /  f1(x0,y0)+ λ g1(x0,y0) = 0 ∧ f2(x0,y0)+ λ g2(x0,y0) = 0 
+ 
+Lagrange-ren biderkatzailearen metodoa 
+L(x,  y, 
+λ)  =  f(x,y)+  λ  g(x,y)  kontuan  hartzen  badugu  (λ  edozein  konstante 
+dela), maximo eta minimoen existentziarako L1(x, y, λ) = 0  eta L2
+(x, y, λ) = 0 
+izatea  beharrezkoa  da.  Eta    g(x,y)  =  0  betetzen  bada,  hasierako 
+baldintzarekin batera, honako sistema hau lortzen da: 
+ 
+=
+=
++
+=
+=
++
+=
+0
+)
+y
+,
+x
+(
+g
+0
+)
+y
+,
+x
+(
+g
+)
+y
+,
+x
+(
+f
+)
+,
+y
+,
+x
+(
+L
+0
+)
+y
+,
+x
+(
+g
+)
+y
+,
+x
+(
+f
+)
+,
+y
+,
+x
+(
+L
+2
+2
+2
+1
+1
+1
+λ
+λ
+λ
+λ
+ 
+L
+ funtzioari Lagrange-ren funtzio deitzen zaio, eta 
+λ konstanteari Lagrange-
+ren biderkatzaile. 
+ 
+Beraz,  aurreko  hiru  ekuazioko  sistema  ebatziz,  baldintza  beharrezkoa 
+betetzen duten puntuak lortzen dira. Eta puntu horietan baldintza nahikoak 
+aztertzen dira. 
+ 
+ 
+
+3. gaia: Bi aldagaiko  funtzioak optimizatzea  
+ 
+34 
+ 
+Mutur  baldintzatuetarako  baldintza  nahikoa  honako  determinante  honen 
+zeinua aztertuz lortzen da: 
+ 
+H (x, y, 
+λ) = 
+0
+)
+y
+,
+x
+(
+g
+)
+y
+,
+x
+(
+g
+)
+y
+,
+x
+(
+g
+)
+,
+y
+,
+x
+(
+L
+)
+,
+y
+,
+x
+(
+L
+)
+y
+,
+x
+(
+g
+)
+,
+y
+,
+x
+(
+L
+)
+,
+y
+,
+x
+(
+L
+2
+1
+2
+22
+21
+1
+12
+11
+λ
+λ
+λ
+λ
+ 
+ 
+Determinante horri hessiar zabaldu deritzo. 
+ 
+ f  C2[B((x0,y0),  )]  eta g  C2[B(
+(x0,y0),  )]  funtzioak direla  eta   λ   R  dela 
+jakinik non  f1(x0,y0)+ λ g1(x0,y0) = 0  eta  f2(x0,y0)+ λ g2
+(x0,y0) = 0 baitira, 
+orduan: 
+ 
+•  H (x0,y0,λ) > 0 bada, f-k (x0,y0) puntuan g(x,y) = 0 ekuazioarekiko maximo 
+lokal baldintzatua lortuko du. 
+ 
+•  H (x0,y0,λ) < 0 bada,  f-k (x0,y0) puntuan g(x,y) = 0 ekuazioarekiko minimo 
+lokal baldintzatua lortuko du. 
+ 
+•  H (x0,y0,λ) = 0  bada, ezin da ezer ziurtatu. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+3. gaia: Bi aldagaiko  funtzioak optimizatzea  
+ 
+35 
+ 
+3.3.  Programazio lineala 
+ 
+Programazio  lineala  oso  metodo  erabilia  da  enpresen  optimizazio-eta- 
+planifikazio-problemak ebazteko. 
+Programazio  lineal  deritzon  teknika  matematikoa  erabiltzen  da  murrizketen 
+mendeko abiatze-aldagai batzuek baldintzatutako soluzio optimoa lortzeko.  
+ 
+Programazio linealeko problemen planteamendu orokorra 
+ 
+Oro har, programazio linealeko problema baten planteamendua honako 
+hau izango da:  
+Aurkitu f(x1, x2, … , xn) =  
+n
+n
+2
+2
+1
+1
+x
+c
+...
+x
+c
+x
+c
+⋅
++
++
+⋅
++
+⋅
+ 
+funtzioaren soluzio 
+optimoa  (maximoa  edo  minimoa),  honako  murrizketa  hauek  baldintzaturik 
+dagoela: 
+ 
+ 
+a11·x1+ a12·x2+ … +a1n·x1   b1 
+          a21·x1+ a22·x2+ … +a2n·x1   b2 
+ 
+……    ……          …… 
+         am1·x1+ am2·x2+ … +amn·xn   bm 
+                                    
+non 
+∈
+ij
+a
+ 
+m
+,...,
+i
+1
+=
+n
+,...,
+j 1
+=
+ 
+       
+∈
+i
+b  
+m
+,...,
+i
+1
+=
+∈
+j
+c
+ 
+n
+,...,
+j 1
+=
+ 
+eta   xj   0
+n
+,...,
+j 1
+=
+ baitira. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+3. gaia: Bi aldagaiko  funtzioak optimizatzea  
+ 
+36 
+ 
+Problemaren planteamenduan funtsezko zenbait kontzeptu erabiltzen dira: 
+ 
+•  Helburu-funtzioa:  f(x1,  x2,  …  ,  xn)  =   
+n
+n
+2
+2
+1
+1
+x
+c
+...
+x
+c
+x
+c
+⋅
++
++
+⋅
++
+⋅
+ 
+Maximizatu edo minimizatu behar da. Lineal motakoa. 
+ 
+•  Murrizketak:  am1·x1+ am2·x2+ … +amn·xn   bm 
+Inekuazioak,  lineal motakoak. 
+ 
+ 
+•  Aldagaiak: xj   0
+n
+,...,
+j 1
+=
+ 
+Aldagai ez-negatiboak. 
+ 
+•  Murrizketa guztiak (hots, ekuazio eta inekuazio guztiak eta koordenatuen 
+ez-negatibotasuna) betetzen dituzten puntuei soluzio egingarriak esaten 
+zaie. 
+ 
+•  Soluzioa murrizketa-inekuazioek zehaztutako azaleran kokatu behar da, 
+azalera horri eskualde egingarri deritzo. 
+ 
+•  Helburu-funtzioari  balio  optimoa  emango  dioten  soluzio  egingarriei, 
+soluzio optimo esaten zaie.   
+ 
+Programazio linealeko problemaren ebazpena 
+ 
+Programazio  linealeko  problema  bat  ebazterakoan,  ez  da  beti  soluziorik 
+egongo. Honako kasu hauek ager daitezke: 
+ 
+•  Soluzio egingarrien multzoa hutsik egotea, eta, beraz, soluzio optimorik 
+ez izatea. 
+ 
+ 
+
+3. gaia: Bi aldagaiko  funtzioak optimizatzea  
+ 
+37 
+ 
+•  Soluzio  egingarrien  multzoa  hutsik  ez  egotea,  baina  multzo  horretan 
+helburu-funtzioa  goi-bornaturik  edo    behe-bornaturik  ez  egotea.  Gerta 
+daiteke maximizazio- edo minimizazio-problema den soluzio optimorik ez 
+izatea. 
+ 
+•  Soluzio  optimoa  egotea.  Kasu  honetan  bakarra  edo  anizkoitza  izan 
+daiteke. 
+ 
+Honako  teorema  hauek  emango  dute  programazio  linealeko  problema  baten 
+soluzioa aurkitzeko erabidea:  
+ 
+Programazio linealeko oinarrizko teoremak 
+ 
+1.  Programazio  linealeko  problema  baten  soluzio  egingarrien  multzoa 
+ganbila da. 
+S
+ ganbila da:     y
+,
+x
+ S   y
+x
+ S 
+y
+x  ,   
+x  
+eta  y  muturreko segmentua honako multzo hau izanik:  
+y
+x  =   
+λ x  + (1-λ) y  / λ [0,1]  
+ 
+2.  Programazio  linealeko  problema  baten  soluzio  optimoen  multzoa 
+ganbila da. 
+ 
+3.  Programazio  linealeko  problema  baten  soluzio  optimorik  badago, 
+horietako bat, gutxienez, problemaren soluzio egingarrien multzoaren 
+erpina izango da. 
+ 
+ 
+ 
+ 
+
+3. gaia: Bi aldagaiko  funtzioak optimizatzea  
+ 
+38 
+Analisi grafikoaren bidezko ebazpena 
+ 
+Aurreko teoremak, programazio linealeko edozein problemetarako baliagarri 
+dira.  Baina  problema  sinpleetarako,  bi  aldagaiko  eta  murrizketa  kopuru 
+txikikoetarako alegia, soluzio optimoa lortzeko analisi grafikoa da erabilgarriena. 
+Beraz, programazio linealeko problema bat irudien bidez ebazteko honako hau 
+egin behar da: 
+ 
+•  Sistemaren  inekuazioak  grafikoki  irudikaturik,  murrizketa-multzoa  edo 
+soluzio egingarrien multzoa lortuko da. 
+ 
+•  Helburu-funtzioa  f(x,y)  =  ax  +  by  bada,  funtzio  horrekiko  zuzen 
+paraleloak  egingo  dira,  ax  +  by  =  k  motakoak  izango  direnak;  hots, 
+funtzioaren  maila-zuzenak.  Zuzen  horiek  murrizketa-multzoko  erpin 
+bakoitzetik pasatu behar dute. 
+ 
+ 
+•  Helburu-funtzioa zein erpinetan egiten den, maximoa edo minimoa ikusi 
+beharko da. 
+
+3. gaiko ariketak: Bi aldagaiko funtzioak optimizatzea  
+ 
+39 
+ 
+ 
+ 
+ 
+ARIKETAK 
+ 
+ 
+BI ALDAGAIKO FUNTZIOAK 
+OPTIMIZATZEA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+3. gaiko ariketak: Bi aldagaiko funtzioak optimizatzea  
+ 
+40 
+1. Izan bedi  honako funtzio hau: f(x, y) = 
+2
+y
+x
+x
+3
++
+ 
+a) Aurkitu f(1´01, 1´003)-ren balio hurbila diferentziala erabiliz.  
+b) Lortzen al du  f-k (1,1) puntuan mutur lokalik? 
+ 
+2. Izan bedi honako funtzio hau: 
+=
+≠
+∀
+−
+−
+=
+)
+1
+,
+1
+(
+)
+y
+,
+x
+(
+4
+)
+1
+,
+1
+(
+)
+y
+,
+x
+(
+y
+x
+y
+5
+x
+3
+)
+y
+,
+x
+(
+f
+2
+  
+  f -k  (0,1) puntuan mutur lokalik lortzen al du? Eta  (0,0) puntuan? 
+ 
+3. Izan bedi honako funtzio hau: 
+=
+≠
++
++
+=
+)
+0
+,
+0
+(
+)
+y
+,
+x
+(
+0
+)
+0
+,
+0
+(
+)
+y
+,
+x
+(
+4
+y
+x
+)
+y
+,
+x
+(
+f
+2
+2
+ 
+a)  f  deribagarria da  (0,0) puntuan? 
+b) Lortzen al du  f-k  muturrik (0,0) puntuan? Eta  (8, 8) puntuan? 
+ 
+4. Izan bedi f: A 
+⊂ R2 → R  funtzioa, non  f ∈ C2(R2),   (x0,y0) ∈ int A ,   
+f1(x0,y0) = f2(x0,y0) = 0,    f11(x0,y0) = f22(x0,y0) = 1 eta  f12
+(x0,y0) = p betetzen 
+baitira. Aztertu  p-ren balio errealetarako  f-ren  mutur lokalen existentzia 
+(x0,y0) puntuan. 
+ 
+5. Izan bedi  f: A 
+⊂ R2 → R funtzioa, non  A irekia , (x0,y0) ∈ A,  f ∈ C2(A) 
+f1(x0,y0) = a ,  f2(x0,y0) = b ,  f11(x0,y0) = (b + 1)2,  f12
+(x0,y0) = b   eta    
+f22(x0,y0)  =  a2  +  2  betetzen  baitira.  Eztabaidatu  a-ren  eta  b-
+ren  balio 
+errealetarako  f-ren  mutur lokalen existentzia (x0,y0) puntuan. 
+ 
+ 
+
+3. gaiko ariketak: Bi aldagaiko funtzioak optimizatzea  
+ 
+41 
+6. Izan bedi  honako funtzioa hau: f(x,y) = ax2 + by2 – 4x + 2y + c. 
+     f-k  (2, -
+1) puntuan minimoa lortzen badu, eta 10 bada,  kalkulatu, a, b eta  c. 
+ 
+7. Izan bedi honako funtzioa hau: f(x,y) = x3 + y3 – 3x – 12y + k. Aurkitu f-
+ren  
+muturrak k-ren  balio guztietarako. 
+ 
+8. Aurkitu  f(x, y) = 2x + y  funtzioaren muturrak honako multzo honekiko:  
+    B = {(x,y) 
+∈ R2   x + y ≤ 4; 2x + y ≥  2; x ≥  0; y ≥  0 } 
+ 
+9. Izan bitez  (1, 2)  eta (3, 6)  programazio lineal bateko soluzio optimoak. 
+    (2, 3) soluzio optimoa al da? Eta (2, 4) puntua? 
+ 
+10. Izan bitez  (1, 2) eta 
+(3, 0)  programazio lineal bateko soluzio optimoak.  
+a)  (2, 3) soluzio optimoa al da? Eta  (2, 1) puntua? 
+b) Aurkitu  helburu-funtzioaren  adierazpena,  horren  balio  optimoa  3  dela 
+jakinik. 
+ 
+11. Izan bedi honako programa lineal hau:  
+Min.  x + 2y 
+ 
+ 
+            x + y 
+≥ 1    
+             2x + 3y 
+≥ 3 
+ 
+ 
+               x, y 
+≥ 0 
+ 
+a) Aurkitu eskualde egingarriko adierazpen grafikoa.  
+b) (1, 1) eskualde egingarriko puntua al da? Eta  (0, 1) puntua? 
+c) Kalkula itzazu soluzio egingarriak. 
+d) Kalkula ezazu funtzioaren soluzio optimoa.  
+ 
+
+3. gaiko ariketak: Bi aldagaiko funtzioak optimizatzea  
+ 
+42 
+ 
+12. Izan bitez  f(x, y) = x + y  funtzioa  eta honako murrizketa-multzo hau: 
+2x + y 
+≤ 4;   
+2y + x 
+≤ 4;    
+2x + y 
+≥ 2;    
+x,  y 
+≥ 0 
+a) Adierazi  grafikoki  eskualde  egingarria.  
+(3,3)  puntua  multzo  horretan  
+dago? 
+b) Aurkitu  f-ren muturrak. 
+ 
+13. Izan bitez f(x, y) = ax2 + bxy - ax - 2by -
+ 2x  funtzioa eta honako multzo hau: 
+A = {(x, y) 
+∈ R2 | x = y}.  
+Aurkitu: 
+a)   a-ren  eta  b-ren  balioak,  A-rekiko  (1,1)  puntuan  mutur  lokalen 
+existentziarako   baldintza beharrezkoa bete dadin.  
+b)  a-ren eta b-ren balioak, f-k A-rekiko 
+(1,1) puntuan maximo lokal hertsia lor 
+dezan.  
+c)  a-ren eta b-ren balioak, f-k A-rekiko 
+(1,1) puntuan minimo lokal hertsia lor 
+dezan.  
+ 
+ 
+14. Izan bitez f:R2 
+→ R funtzioa, non  f ∈ C2 (R2)  baita, eta  honako multzo hau: 
+A = 
+{(x, y) ∈ R2 / x2 + y2 ≤ 4}. 
+Eman dezagun f-k A-rekiko  (0,0) eta (2,0) puntuetan minimo lokalak lortzen 
+dituela.  Erantzun honako galdera hauei:  
+a) Zer esan dezakegu  f1(0,0) eta  f2(2, 0) deribatuen balioez? 
+b)  f11(0,0) = p, f12(0,0) = 0, f22(0,0) = r direla jakinik,  p-ren eta r-
+ren zer balio 
+errealek ziurtatuko dute  (0,0) puntuan minimo lokala existituko dela? 
+ 
+15.  Aurkitu  f(x,y) = x + 2y  funtzioaren muturrak honako multzo honekiko:  
+B = 
+{(x,y) ∈ R2 / x2 + y2  ≤  9}. 
+ 
+
+3. gaiko ariketak: Bi aldagaiko funtzioak optimizatzea  
+ 
+43 
+16.  Aurkitu  f(x, y) = x2 - y  funtzioaren muturrak honako multzo honekiko:   
+ 
+A = 
+{(x, y) ∈ R2 /  y + 2x + 5 ≥ 0 } 
+ 
+17. Aurkitu f(x,y) = x2 + y2 funtzioaren muturrak honako multzo honekiko:  
+ 
+A = 
+{(x,y) ∈ R2 / y ≥ -x}. 
+ 
+18. Izan bedi honako funtzio hau: f(x,y) = x 
+Aurkitu  f-ren muturrak honako multzo hauekiko: 
+a) A = {(x,y) 
+∈ R2   x2 + y2 ≥ 4} 
+b) B honako inekuazio hauen  bidez definitua dagoela jakinik: 
+    y 
+≤ 3 ;    x + y ≤ 4 ;   x - y ≤ 2 ;    x, y ≥ 0 
+ 
+19. Aurkitu  f(x,y) = x2 + 2y  funtzioaren muturrak honako multzo honekiko: 
+      A = {(x,y) 
+∈ R2x2 + y2 ≤ 4}. 
+ 
+20. Aurkitu  f(x,y) = 2x + y + 3  funtzioaren muturrak honako multzo honekiko:
+  
+      B= 
+{(x, y) ∈R2 / x2 + y2 ≤ 5}. 
+ 
+21. Izan bitez f(x, y) = (x - 1)2 + y2  funtzioa eta honako multzo hau:  
+      A = {(x, y) 
+∈ R2   x2 + y2 ≤ 9}.  
+Aurkitu  f-ren muturrak honako multzo hauekiko:   
+a)   A-ren barrualdearekiko.  
+b)  A-ren mugarekiko. 
+c)  A-rekiko. 
+ 
+22. Aurkitu  f(x,y) = xy  funtzioaren muturrak honako multzo honekiko:  
+      A= 
+{(x, y) ∈R2 / x2 + y2 ≤ 8}. 
+
+4. gaia: Integrazioa  
+ 
+44 
+ 
+ 
+4. gaia: INTEGRAZIOA 
+ 
+ 
+ 
+4.1.  Integral mugatua. Definizioa. Propietateak 
+4.2.  Kalkulu integralaren oinarrizko teorema.  
+          Barrow-en erregela 
+4.3.  Integral mugagabea. Propietateak. Integralen kalkulua 
+4.4.  Integral inpropioak. Definizioa. Sailkapena 
+4.5.  Integral parametrikoak. Definizioa. Integral parametrikoen 
+bidez definitutako funtzioen deribagarritasuna 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+4. gaia: Integrazioa  
+ 
+45 
+4.1. Integral mugatua. Definizioa. Propietateak 
+ 
+4.1.1. Integral mugatua. Definizioa 
+ 
+Gai honetan Riemann-en integrala zer den azalduko dugu.  
+Lehendabizi  ikuspuntu  geometrikoa  komentatuko  dugu.  Integral  mugatua 
+kurbek  eta  zuzenek  mugatutako  arloen  balioa  zehazteko  erabiltzen  den 
+kontzeptua da.  a eta b puntuen arteko funtzioaren integral mugatuak honako 
+hau  neurtzen  du:
+    funtzioak,  OX  ardatzak,  eta  x  =  a  eta  x  =  b  ekuazioen 
+zuzenek mugatzen duten azalera.  
+ 
+Izan bedi f: D 
+⊂ R → R funtzioa bornatua [a, b] tartean.  
+ [a, b]
+∈ R tartearen partiketa esaten zaio honako multzo honi:   
+ 
+[ ] {
+}
+b
+t
+,....,
+t
+t
+a
+/
+t
+,....,
+t,
+t
+b
+,
+a
+P
+n
+1
+0
+n
+1
+0
+=
+<
+<
+<
+=
+=
+ 
+ 
+ [a, b]
+∈ R tartearen partiketa guztien multzoa honela adierazten da: ℘ 
+ 
+[a, b]
+∈ R tarteko P partiketarekiko f-ren goi-batura esaten zaio honako balio 
+honi: 
+ 
+[
+]
+=
+−
+−
+∈
+−
+=
+n
+1
+i
+1
+i
+i
+it
+ ,
+1
+it
+ 
+x
+)
+t
+t
+)(
+x
+(
+f
+sup
+ 
+)
+P
+,
+f
+(
+S
+ 
+ 
+ 
+[a, b]
+∈ R tarteko P partiketarekiko f-ren behe-batura esaten zaio honako balio 
+honi:  
+ 
+[
+]
+=
+−
+−
+∈
+−
+=
+n
+1
+i
+1
+i
+i
+it
+ ,
+1
+it
+ 
+x
+)
+t
+t
+)(
+x
+(
+f
+inf
+ 
+)
+P
+,
+f
+(
+I
+ 
+ 
+ 
+f: D 
+⊂ R → R funtzioa [a, b] ⊂ D tartean Riemann-en zentzuan integragarria da, 
+honako hau betetzen bada: 
+ 
+I(f, P) = S(f, P) 
+ 
+ 
+
+4. gaia: Integrazioa  
+ 
+46 
+f
+ integragarria bada, esaten da I(f, P) = S
+(f, P) betetzen duen zenbakia dela, f-
+ren integral mugatua [a, b] tartean, eta honela adierazten da:   
+b
+a
+dx
+)
+x
+(
+f
+ 
+ 
+Funtzio integragarriak 
+•  Funtzioa  [a,  b]  tartean  jarraitua  bada,  orduan  funtzioa  
+[a,  b]  tartean 
+integragarria da. 
+•  Edozein f: [a, b] 
+→ R funtzio monotono integragarria da. 
+•  Funtzioa  bornatua  bada  eta  [a,  b]  tartean  funtzioaren  eten-puntuen 
+kopurua finitua bada, orduan funtzioa [a, b] tartean integragarria da. 
+ 
+ 
+ 
+4.1.2.  Propietateak 
+ 
+1.  [a, b] tartean funtzio bornatuen eta integragarrien batuketa integragarria 
+da. 
++
+b
+a
+g
+f
+= 
+b
+a
+f  +  
+b
+a
+g  
+ 
+2.  f funtzioa bornatua eta integragarria bada [a, b] tartean, kf (konstantea 
+bider funtzioa) [a, b] tartean integragarria izango da. 
+     
+b
+a
+kf  = k 
+b
+a
+f      K  R 
+ 
+3.  Integral baten tarteak permutatzean, integrala zeinuz aldatzen da. 
+       
+b
+a
+f = - 
+a
+b
+f  
+ 
+ 
+ 
+ 
+
+4. gaia: Integrazioa  
+ 
+47 
+4.  Puntu bakarreko [a, a] tartean hedatutako edozein integral zero da. 
+a
+a
+f = 0 
+ 
+5.  f funtzioa bornatua eta integragarria bada [a, b] tartean, orduan 
+[a, c] eta 
+[c, d] 
+tarteetan, c   [a, b] izanik, integragarria izango da eta honako hau 
+betetzen da: 
+    
+b
+a
+f =  
+c
+a
+f  +  
+b
+c
+f  
+ 
+6.  f funtzioaren [a, b] tarteko eten-puntuen kopurua finitua bada, funtzioa  
+     [a, b]
+ tartean integragarria da eta integrala honela adierazten da:  
+b
+a
+f =  
+c
+a
+f  +  
+d
+c
+f +  
+b
+d
+f                     funtzioa c eta d puntuetan etena izanik 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+4. gaia: Integrazioa  
+ 
+48 
+ 
+4.2. Kalkulu integralaren oinarrizko teorema. Barrow-en erregela 
+ 
+4.2.1. Kalkulu integralaren oinarrizko teorema 
+Kalkulu integralaren oinarrizko teoremaren bidez, kalkuluan agertzen diren bi 
+kontzeptu garrantzitsu elkartzen dira: deribazioa eta integrazioa. 
+ 
+Lehenengo azal ditzagun zenbait teorema eta kontzeptu: 
+ 
+Batez besteko balio integralaren teorema 
+ 
+f: R   R 
+ funtzioa [a, b] tartean jarraitua bada, orduan existitzen da x0   [a, b]  
+punturen bat honako hau betetzen duena:  f(x0) = 
+−
+b
+a
+f
+a
+b
+1
+ 
+ 
+Funtzio integrala 
+ 
+f: D  R   R  
+integragarria eta bornatua bada [a, b]  D tartean, funtzio integrala 
+esaten zaio honako funtzio jarraitu honi: 
+f (x)
+ : [a, b]   R 
+             x       F (x)= 
+x
+a
+dt
+)
+t
+(
+f
+ 
+Funtzioa integrazioaren behe-tartearen menpe badago, honela defini daiteke:  
+ 
+F (x)
+ : [a, b]   R 
+             x       F (x)= 
+b
+x
+dt
+)
+t
+(
+f
+ 
+ 
+Gaitz-ulerturik ez sortzeko, aldagai askearen notazioa aldatu da: x-
+ren ordez t 
+erabili da. 
+ 
+ 
+ 
+
+4. gaia: Integrazioa  
+ 
+49 
+ 
+Deribatu eta integral mugatuaren arteko harremana kalkulu integralaren 
+oinarrizko teoremaren bidez ikus daiteke. 
+ 
+Kalkulu integralaren oinarrizko teorema 
+f: D  R   R 
+funtzioa [a, b]  D tartean jarraitua bada, orduan funtzio integrala   
+F (x)= 
+x
+a
+f
+ deribagarria da (a, b) tartean eta honako hau betetzen da:  
+F'(x) =  f(x) 
+ 
+F'(x) =  f(x)
+ egiaztatzen duen F funtzioari f-ren jatorrizko deritzo. 
+ 
+ 
+Teorema horrek ziurtatzen du edozein funtzio jarraituk beti jatorrizko funtzio bat 
+onartzen duela.  
+ 
+Kalkulu integralaren oinarrizko teorema kontuan izanik, [a, b] tartean funtzio 
+baten integral mugatua kalkulatzeko, Barrow-en erregela dugu: 
+ 
+Barrow-en erregela 
+f: D  R   R 
+funtzioa [a, b]  D tartean jarraitua bada eta F  haren jatorrizko bat 
+bada (a, b) tartean, orduan betetzen da honako hau:  
+b
+a
+dx
+)
+x
+(
+f
+ = F(b) – F(a) 
+ 
+
+4. gaia: Integrazioa  
+ 
+50 
+ 
+ 
+4.3. Integral mugagabea. Definizioa. Propietateak. Integralen kalkulua 
+4.3.1. Definizioa  
+ 
+Integral mugagabearen ideia aurrepauso bat izan zen matematika modernoak 
+hasitako abstrakzio-
+bidean. Horri esker, integrala ez zen soilik erabiltzen kurbek 
+eta zuzenek osatutako azalerak zehazteko eta berezko funtzioaren izaera hartu 
+zuen.  Horrela,  ekuazioetan  eta  ereduen  deskribapenetan  agertzen  zen  analisi 
+matematikoaren teorien esparru zabalaren barruan. 
+ 
+Demagun  f:  D   R    R  funtzioa  dugula.  F
+(x)  funtzioa  haren  jatorrizkoa  dela 
+esaten da, honako hau egiaztatzen bada:  
+F'(x) = f(x)
+  
+ 
+Funtzio baten jatorrizkoa lortzeko egin behar den eragiketari integrazio deritzo, 
+eta deribazioaren alderantzizko eragiketa da. 
+F(x)
+ funtzioa f(x) funtzioaren jatorrizko funtzioa bada, G(x) = F(x) + K 
+(K edozein 
+balio konstante dela) erako beste edozein funtzio ere f-
+ren jatorrizko funtzio bat 
+izango da. Hots, f-k infinitu jatorrizko izango ditu.  
+ 
+Definizioa 
+f(x)
+ funtzio baten jatorrizko funtzio guztien multzoari integral mugagabea esaten 
+zaio, eta, oro har, honela adierazten da: 
+ 
+ 
+dx
+)
+x
+(
+f
+ = F(x) + k 
+ 
+Horrenbestez, f(x) = x funtzioak, adibidez, konstante batean bat ez datozen 
+infinitu jatorrizko funtzio izango ditu: 
+F1(x) = 
+2
+x2
+ , F2(x) = 
+2
+x2
++ 1 , F3(x) = 
+2
+x2
++ 2 , … 
+ 
+ 
+ 
+
+4. gaia: Integrazioa  
+ 
+51 
+ 
+4.3.2.  Propietateak 
+ 
+Deribazioaren  propietateak  kontuan  izanik,  integrazioaren  propietate  batzuk 
+zehaztu daitezke.  
+Integral  konposatuak  errazagoak  diren  beste  integral  batzuetan  banatzeko 
+balioko dute honako linealtasun-propietate hauek: 
+ 
+•  Bi  funtzioen  arteko  baturaren  (kenduraren)  integralak  eta  funtzio 
+bakoitzaren integralen baturak (kendurak) emaitza bera izango dute. 
+     
+±
+dx
+)]
+x
+(
+g
+)
+x
+(
+f
+[
+= 
+dx
+)
+x
+(
+f
+± 
+dx
+)
+x
+(
+g
+ 
+ 
+•  Funtzio  bat  eta  zenbaki  errealaren  arteko  biderkaduraren  integrala 
+eta  konstantea  funtzioaren  integralaz  biderkatuz  lortutako 
+biderkadura bera da. 
+    
+dx
+)
+x
+(
+kf
+ =  k
+dx
+)
+x
+(
+f
+      (k R) 
+ 
+Funtzioaren jatorrizkoa ezagutzen bada, funtzio jarraituen muga gabeko 
+integralen kalkulua eginda dago.   
+ 
+Zailena  jatorrizko  funtzioa  lortzea  izaten  da.  Beraz,  hauxe  da  orain 
+ikusiko duguna. Metodo asko daude; ez dago erregela finko bat. 
+ 
+
+4. gaia: Integrazioa  
+ 
+52 
+4.3.3. Integralen kalkulua 
+ 
+Berehalako integralen taula 
+ 
+Honako taula honetan, zenbait funtzioren integrazio-arauak laburbilduta daude. 
+Oro har, berehalako integral esaten zaie taula horretatik eta integrazioaren 
+propietateetatik zuzenean ondorioztatzen direnei. 
+ 
+ 
+dx = x + K 
+dx
+λ = λx + K 
+dx
+xn
+= 
+1
+n
+x 1
+n
++
++
+ + K  (n   -1) 
+                      
+dx
+)
+x
+(
+f
+)
+x
+(
+f
+'
+n
+= 
+1
+n
+)
+x
+(
+f
+1
+n
++
++
+ + K   
+dx
+x
+2
+1
+= 
+x  + K                                             
+dx
+)
+x
+(
+f
+2
+)
+x
+(
+f '
+= 
+)
+x
+(
+f
+ + K   
+dx
+x
+1
+= 
+Ln x + K                                                 
+dx
+)
+x
+(
+f
+)
+x
+(
+f '
+= 
+Ln f(x) + K   
+dx
+ex
+= 
+ex + K                                                    
+=
+ 
+dx
+)
+x
+(
+f
+e
+'
+)
+x
+(
+f
+ ef(x)+ K 
+dx
+ax
+= 
+a
+ln
+ax
+ + K       (a>0)                                
+=
+ 
+dx
+)
+x
+(
+f
+a
+'
+)
+x
+(
+f
+ 
+a
+ln
+a )x
+(
+f
+ + K 
+dx
+x
+cos
+= 
+sin x + K                                         
+dx
+)
+x
+(
+f
+)
+x
+(
+f
+cos
+'
+= 
+sin f(x) + K 
+dx
+x
+sin
+= - 
+cos x + K                                       
+dx
+)
+x
+(
+f
+)
+x
+(
+f
+sin
+'
+= - 
+cos f(x) + K 
+dx
+x
+cos
+1
+2
+= 
+tg x + K                                         
+dx
+)
+x
+(
+f
+cos
+)
+x
+(
+f
+2
+'
+= 
+tg f(x) + K 
++
+dx
+x
+1
+1
+2
+= 
+ark
+ tg x + K                                    
++
+dx
+))
+x
+(
+f
+(
+1
+)
+x
+(
+f
+2
+'
+= 
+ark
+ tg f(x) + K 
+−
+dx
+x
+1
+1
+2
+= 
+ark sin x + K                               
+−
+dx
+))
+x
+(
+f
+(
+1
+)
+x
+(
+f
+2
+'
+= 
+ark sin f(x) + K 
+−
+−
+dx
+x
+1
+1
+2
+= 
+ark cos x + K                              
+−
+−
+dx
+))
+x
+(
+f
+(
+1
+)
+x
+(
+f
+2
+'
+= 
+ark cos f(x) + K 
+ 
+ 
+
+4. gaia: Integrazioa  
+ 
+53 
+ 
+Berehalako integral bihurtzea  
+ 
+Eskuarki,  badirudi  integrazio  baten  integrakizuna  berehalako  integralen  taulan 
+ez dagoen funtzio bat dela. Hala ere, batzuetan integrakizun horretan eragiketa 
+aritmetiko  erraz  batzuk  baino  ez  dira  egin  behar,  berehalako  integral  bat 
+lortzeko  (berreturak  kendu,  formula  trigonometrikoak  aplikatu,  zatikiak 
+arrazionalizatu eta abar). 
+ 
+Funtzioen integrazioa ez da beti erraza. Hori dela eta, zenbait prozedura orokor 
+sortu dira. Metodo horien guztien artean erabilgarrienak honako hauek ditugu: 
+zatikako integrazio metodoa eta aldagai-aldaketaren metodoa. 
+ 
+Zatikako integrazio-metodoa 
+ 
+Zatikako integrazio-
+metodoaren bidez funtzioen arteko biderketa baten integrala 
+lortzen da. 
+Izan bitez u(x) eta v(x) funtzio diferentziagarriak. 
+Honako hau betetzen da:  
+d(u v) = u dv + v du  
+Funtzio  horiek  integraturik  eta  integral  mugagabearen  propietateak  kontuan 
+izanik lortzen da honako hau:  
+u v = 
+⋅
++
+du
+v
+dv
+u
+       
+Honela ere adieraz daiteke:  
+⋅
+−
+⋅
+=
+du
+v
+v
+u
+dv
+u
+       zeina zatikako integrazioaren formula baita.            
+ 
+Zatikako integrazio-metodoa lagungarria da, batez ere 
+du
+v
+⋅
+ integratzea 
+dv
+u
+⋅
+ 
+integratzea baino errazagoa denean. 
+Oro har, erabil daiteke honako integral hauek ebazteko: 
+ 
+dx
+x
+sin
+xn
+                 
+dx
+e
+x x
+n
+                            
+dx
+x
+sin
+ex
+                   
+dx
+x
+ln
+xn
+ 
+ 
+ 
+ 
+ 
+
+4. gaia: Integrazioa  
+ 
+54 
+ 
+ 
+Aldagai-aldaketaren edo ordezkapen-metodoa 
+ 
+Integral korapilatsuagoak kalkulatzeko metodorik hedatuenetako bat da.  
+Honako adierazpen hau erabiltzen da:  
+=
+dt
+)
+t
+(
+u
+))
+t
+(
+u
+(
+f
+dx
+)
+x
+(
+f
+,
+ 
+Metodo hau aplikatzeko honako pauso hauek egin behar dira: 
+ 
+•  x-ren  adierazpenaren  ordez  integratzeko  errazagoa  den  beste 
+aldagai batez (t-z) baliatu.  
+•  t bereziki, eta dx adierazi dt-ren menpe. 
+•  x eta dx adierazpenen ordez t eta dt erabili integrakizunean.  
+•  Integral berria askatu. 
+•  Aldagai-aldaketa desegin. 
+ 
+Adibidez,  
+dx
+x
+cos
+x
+sin4
+  
+kalkulatzeko 
+honako aldaketa hau eginez: t = sinx 
+                                         dt = cos x dx 
+honako integral hau lortzen da: 
+dt
+t4
+   = 
+K
+5
+t5 +  
+Aldagai-aldaketa deseginda, integralaren azkeneko emaitza izango da honako 
+hau: 
+dx
+x
+cos
+x
+sin4
+  =  
+K
+5
+x
+sin5 +  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+4. gaia: Integrazioa  
+ 
+55 
+ 
+ 
+4.4. Integral inpropioak. Definizioa. Sailkapena 
+ 
+Atal honetan, integralen kontzeptua infinitua agertzen den kasuetara zabaltzen 
+da. 
+ 
+4.4.1. Definizioa 
+b
+a
+dx
+)
+x
+(
+f
+ integral inpropioa dela esaten da, (a, b) integrazio-tartea bornatua ez 
+denean, edo f(x) bornatua ez denean [a, b] integrazio-
+tarteko zenbait puntutan. 
+ 
+Definizioaren arabera, egin daiteke honako sailkapen hau: 
+ 
+4.4.2. Sailkapena 
+ 
+1.  Lehen motako integral inpropioak 
+Funtzioa bornatua denean, baina integrazio-tartea bornatua ez denean. 
+∞
+a
+dx
+)
+x
+(
+f
+ ,  
+∞
+−
+b
+dx
+)
+x
+(
+f
+ ,  
+∞
+∞
+−
+dx
+)
+x
+(
+f
+ motakoak izan daitezke. 
+• 
+∞
+a
+dx
+)
+x
+(
+f
+= 
+∞
+→
+b
+a
+b
+f(x)dx
+ 
+lim
+  limitea  existitzen  bada,  lehen  motako 
+integral  inpropio  konbergentea  dela  esaten  da.  Limitea  ez  bada 
+existitzen,  esaten  da  lehen  motako  integral  inpropio  dibergentea 
+edo integrala ez dela existitzen. 
+ 
+• 
+∞
+−
+b
+dx
+)
+x
+(
+f
+= 
+∞
+−
+→
+b
+a
+a
+f(x)dx
+ 
+lim
+  limitea  existitzen  bada,  lehen  motako 
+integral  inpropio  konbergentea  dela  esaten  da.  Limitea  ez  bada 
+existitzen,  esaten  da  lehen  motako  integral  inpropio  dibergentea 
+edo integrala ez dela existitzen. 
+
+4. gaia: Integrazioa  
+ 
+56 
+ 
+ 
+• 
+∞
+∞
+−
+dx
+)
+x
+(
+f
+= 
+∞
+−
+b
+dx
+)
+x
+(
+f
++ 
+∞
+b
+dx
+)
+x
+(
+f
+,     ( b   R ) 
+∞
+∞
+−
+dx
+)
+x
+(
+f
+= 
+∞
+−
+b
+dx
+)
+x
+(
+f
++ 
+∞
+b
+dx
+)
+x
+(
+f
+ =
+∞
+−
+→
+b
+a
+a
+f(x)dx
+ 
+lim
++
+∞
+→
+c
+b
+c
+f(x)dx
+ 
+lim
+ 
+Integral  konbergentea  izango  da  bi  limiteak  existitzen  badira,  eta 
+dibergentea  izango  da  horietako  bat  gutxienez  infinitua  bada. 
+Beste kasuetan, esaten da integrala dibergentea dela edo ez dela 
+existitzen. 
+ 
+2.  Bigarren motako integral inpropioak 
+ 
+Funtzioa bornatua ez denean, (a, b) tarte bornatuan. 
+Eman dezagun f(x) funtzioa (a, b) tarteko zenbait puntutan etena dela. Honako 
+kasu hauek ager daitezke: 
+•  Funtzioa ez-bornatua da integrazioaren behe-tartean: 
++
+b
+a
+dx
+)
+x
+(
+f
+ = 
+>
+→
+b
+t
+a
+t
+a
+t
+f(x)dx
+ 
+lim
+ limitea existitzen bada eta finitua bada, bigarren 
+motako  integral  inpropio  konbergentea  dela  esaten  da.  Limitea  infinitua 
+bada, bigarren motako integral inpropio dibergentea dela esaten da. 
+ 
+•  Funtzioa ez-bornatua da integrazioaren goi-tartean: 
+−
+b
+a
+dx
+)
+x
+(
+f
+ = 
+<
+→
+b
+t
+b
+t
+b
+t
+f(x)dx
+ 
+lim
+ limitea existitzen bada eta finitua bada, bigarren 
+motako  integral  inpropio  konbergentea  dela  esaten  da.  Limitea  infinitua 
+bada, bigarren motako integral inpropio dibergentea dela esaten da. 
+ 
+ 
+ 
+ 
+
+4. gaia: Integrazioa  
+ 
+57 
+•  Funtzioa c (a, b) puntuan etena bada, honako integral inpropio hau 
+definitzen da: 
+b
+a
+dx
+)
+x
+(
+f
+ = 
+<
+→
+-
+c
+a
+c
+t
+c
+t
+f(x)dx
+ 
+lim
++
++
+>
+→
+b
+c
+c
+t
+c
+t
+f(x)dx
+ 
+lim
+ limiteak existitzen badira eta finituak 
+badira,  integral  inpropio  konbergentea  dela  esaten  da.  Limiteren  bat 
+infinitua bada, dibergentea dela esaten da. 
+ 
+ 
+3.  Lehen  eta  bigarren  motako  integral  inpropio  nahasiak  (hirugarren 
+motakoak) 
+ 
+Integrazio-tarte  ez-bornatua  eta  funtzioa  etena  integrazio-
+tarteko  zenbait 
+puntu finitutan. 
+ 
+      
+∞
+∞
+−
+dx
+)
+x
+(
+f
+=  
+∞
+−
+c
+dx
+)
+x
+(
+f
+ +  
+d
+c
+dx
+)
+x
+(
+f
++  
+∞
+d
+)
+x
+(
+f
+                
+ 
+Agertzen diren integralak lehen ikusitakoak dira. Integrala konbergentea   
+da, baldin eta integral inpropio bakoitza konbergentea bada. Integralen bat 
+dibergentea  bada,  orduan  hirugarren  motako  integrala  dibergentea  dela 
+esaten da. 
+ 
+ 
+
+4. gaia: Integrazioa  
+ 
+58 
+4.5. Integral parametrikoak. Definizioa. Integral parametrikoen bidez 
+definitutako funtzioen deribagarritasuna 
+ 
+4.5.1.Definizioa 
+ 
+Integral parametriko deitzen zaie honako integral hauei:  
+ 
+( )
+( )
+( )
+dx
+)
+,
+x
+(
+f
+I
+b
+a
+λ
+λ
+λ
+λ
+=
+ 
+ 
+λ parametroak, konstante jarraitzen du integrazioan. Gerta daiteke a  eta  b 
+parametroaren menpe egotea.  
+ 
+ 
+Honako integral hau ebazten badugu: 
+ 
+3
+)
+(
+)
+1
+(
+3
+)
+x
+(
+dx
+)
+x
+(
+3
+3
+1
+0
+3
+2
+1
+0
+λ
+λ
+λ
+λ
+−
+−
+−
+=
+−
+=
+−
+   
+ 
+Integral horiek, parametroaren menpe dauden funtziotzat harturik, sarritan 
+funtzio horien deribatua lortzea interesatzen zaigu.  
+ 
+Adibidez,  I(
+λ) =
+dx
+)
+x
+(
+2
+1
+0
+λ
+−
+ funtzioa izanik, I´(
+λ) lortu nahi dugu:  
+ 
+Lehenengo, 
+2
+)
+x
+(
+)
+,
+x
+(
+f
+λ
+λ
+−
+=
+ funtzioaren jatorrizkoa kalkula daiteke, eta gero 
+deribatu 
+λ-rekiko:    
+I(
+λ) = 
+3
+)
+(
+3
+)
+1
+(
+3
+)
+x
+(
+3
+3
+1
+0
+3
+λ
+λ
+λ
+−
+−
+−
+=
+−
+  
+I´(
+λ) = 
+1
+2
+−
+λ
+ 
+ 
+ 
+Baina, atal honen helburua da integrala kalkulatu gabe I´(
+λ) kalkulatzea. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+4. gaia: Integrazioa  
+ 
+59 
+ 
+ 
+ 
+4.5.2. Integral parametrikoen bidez definitutako funtzioen deribagarritasuna 
+ 
+ 
+( )
+( )
+( )
+dx
+)
+,
+x
+(
+f
+I
+b
+a
+λ
+λ
+λ
+λ
+=
+ 
+ 
+ 
+λ parametroak konstante jarraitzen duenean integrazioan, honako kasu hauek 
+izan daitezke: 
+ 
+1. Integrazio-tarteak parametroaren menpe daude 
+ 
+ 
+f
+  jarraitua [a, b]-n eta 
+∈
+λ [a, b] 
+ 
+ 
+)
+(
+f
+)
+(
+I
+dx
+)
+x
+(
+f
+)
+(
+I
+0
+λ
+λ
+λ
+λ
+=
+′
+=
+ 
+ 
+ 
+ 
+Adibidea: 
+ 
+ 
+dx
+x
+)
+(
+I
+0
+3
+=
+λ
+λ
+       
+3
+)
+(
+I
+λ
+λ =
+′
+ 
+ 
+ 
+ 
+•  Integrazio-tartea  parametroaren  funtzioan  izanik,  f  [a,b]  tartean 
+jarraitua bada eta 
+  
+)
+(
+b
+λ deribagarria bada  ∈
+λ [a,b] puntuan, honela 
+adierazten da: 
+ 
+ 
+ 
+[
+]
+)
+(
+b
+)
+(
+b
+f
+)
+(
+I
+dx
+)
+x
+(
+f
+)
+(
+I
+)
+(
+b
+a
+λ
+λ
+λ
+λ
+λ
+′
+=
+′
+=
+ 
+ 
+ 
+ 
+ 
+ 
+
+4. gaia: Integrazioa  
+ 
+60 
+Adibidea: 
+ 
+ 
+ 
+=
+λ
+λ
+sin
+0
+x dx
+e
+)
+(
+I
+             
+λ
+λ
+λ cos
+e
+)
+(
+I
+sin
+=
+′
+ 
+ 
+ 
+ 
+•  Integrazio-tartea  parametroaren  funtzioan  izanik,    f  [a,  b]  tartean 
+jarraitua  bada  eta 
+ )
+(
+a
+λ deribagarria  bada  ∈
+λ [a,b]  puntuan,  honela 
+adierazten da: 
+ 
+ 
+[
+]
+)
+(
+a
+)
+(
+a
+f
+)
+(
+I
+dx
+)
+x
+(
+f
+)
+(
+I 
+b
+)
+(
+a
+λ
+λ
+λ
+λ
+λ
+′
+−
+=
+′
+=
+ 
+ 
+ 
+Adibidea: 
+ 
+ 
+=
+1
+sin
+x dx
+e
+)
+(
+I
+λ
+λ
+           
+λ
+λ
+λ cos
+e
+)
+(
+I
+sin
+−
+=
+′
+ 
+ 
+ 
+ 
+ 
+2.  Integratu behar dena parametroaren menpe dago 
+ 
+ 
+)
+(
+I
+dx
+)
+,
+x
+(
+f
+)
+(
+I
+b
+a
+λ
+λ
+λ
+′
+=
+= 
+dx
+)
+,
+x
+(
+f
+b
+a
+λ
+λ
+ 
+ 
+ 
+ 
+Adibidea: 
+ 
+   I(
+λ) =
+dx
+)
+x
+(
+2
+1
+0
+λ
+−
+ 
+ 
+  
+)
+(
+I
+λ
+′
+dx
+)
+x
+(
+2
+1
+0
+λ
+−
+−
+=
+ = 
+1
+0
+2
+2
+)
+x
+(
+2
+λ
+−
+−
+= 
+1
+2
+−
+λ
+ 
+ 
+ 
+
+4. gaia: Integrazioa  
+ 
+61 
+3.  Integratu  behar  dena  eta  integrazio-
+tarteak  parametroaren  menpe  daude 
+(kasu orokorra) 
+ 
+( )
+( )
+( )
+dx
+)
+,
+x
+(
+f
+I
+b
+a
+λ
+λ
+λ
+λ
+=
+ 
+[
+]
+)
+(
+b
+)
+(
+b
+f
+)
+(
+I
+λ
+λ
+λ
+′
+=
+′
+[
+]
+)
+(
+a
+)
+(
+a
+f
+λ
+λ ′
+−
++
+( )
+( )
+dx
+)
+,
+x
+(
+f
+b
+a
+λ
+λ
+λ
+λ
+ 
+ 
+   
+ 
+ 
+ 
+ 
+Adibidea: 
+ 
+ 
+   I(
+λ) = 
+2
+dx
+x
+λ
+λ
+λ
+      
+ 
+ 
+  
+)
+(
+I
+λ
+′
+= 
+2
+4
+2
+3
+2
+5
+λ
+λ −
+
+4. gaiko ariketak: Integrazioa 
+ 
+62 
+ 
+ 
+ 
+ARIKETAK 
+ 
+ 
+INTEGRAZIOA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+4. gaiko ariketak: Integrazioa 
+ 
+63 
+ 
+1. Izan  bitez  f: 
+[a,  b]  →  R  eta    g:  [a,  b]  →  R    bi  funtzio  integragarri    
+[a,  b]  
+tartean eta  F eta G, horien jatorrizkoak hurrenez hurren. Esan baieztapen 
+hauek egiazkoak diren, arrazoiak emanez:  
+a)  
+αF + βG funtzioa, α, β ∈ R izanik, α f + β g  funtzioaren jatorrizkoa da.  
+b)  FG funtzioa fg funtzioaren jatorrizkoa da. 
+c) H  f-ren beste jatorrizko bat bada,   H - F = k  (k 
+∈ R) egiaztatzen da. 
+ 
+2. Kalkulatu honako integral hau: 
+dx
+x
+6
+x
+3
+1
+x
+4
+3
+2
+−
+−
+  
+ 
+3. Kalkulatu, ahal bada, honako integral hau:  
+dx
+3
+x
+6
+x
+18
+x
+6
+3
+1
+2
++
++
++
+  
+ 
+4. Sailkatu eta kalkulatu:  
+dx
+x
+x
+−
+1
+0
+2
+1
+5
+  
+ 
+5. Sailkatu eta kalkulatu, ahal bada, honako integral hauek: 
+ 
+a) 
+dx
+1
+x
+2
+1
+4
+2
++
+ 
+ 
+b) 
+dx
+1
+x
+2
+1
+4
+4
+−
++
+ 
+ 
+ 
+ 
+
+4. gaiko ariketak: Integrazioa 
+ 
+64 
+6. Izan  bedi  f(x)  = 
+3
+x
+1
+  funtzioa.  Sailkatu  eta  kalkulatu,  ahal  bada,  honako 
+integral hau:    
+∞
+−2
+dx
+)
+x
+(
+f
+ 
+ 
+7. Kalkulatu, ahal bada, honako integral hau: 
+∞
++
+1
+x
+2
+x
+dx
+e
+4
+e
+ 
+ 
+8. Izan bedi honako funtzio hau: f(x) = 
+<
+≤
+<
+−
++
+−
+≤
+x
+6
+x
+2
+1
+6
+x
+5
+x
+5
+1
+5
+x
+e
+4
+2
+x
+  
+ 
+Sailkatu eta ebatzi, ahal bada, honako integral hau:   
+∞
+∞
+−
+dx
+)
+x
+(
+f
+ 
+ 
+9. Aztertu honako integral hau: 
+−
+7
+1
+p
+)
+1
+x
+(
+1
+ dx  (p 
+∈R) 
+ 
+10. Kalkulatu  p 
+∈ R balio guztietarako: 
+−
+5
+2
+p
+)
+x
+5
+(
+dx
+ 
+ 
+ 
+11.  Sailkatu eta kalkulatu, ahal bada, honako integral hau: 
+−
+2
+3
+5
+3
+x
+dx
+ 
+ 
+ 
+
+4. gaiko ariketak: Integrazioa 
+ 
+65 
+ 
+12. Sailkatu eta kalkulatu, ahal bada, honako integral hau: 
+∞
+−
++
+3
+dx
+x
+3
+3
+ 
+ 
+13. Sailkatu eta kalkulatu, ahal bada, honako integral hau: 
+∞
+−
++
+2
+2
+x
+4
+dx
+ 
+ 
+14. Aztertu f(x) = 
+dt
+xt
+1
+x
+x
+2
+2
++
+ funtzioaren muturrak. 
+ 
+15. Izan  bedi  f(x,y)  =  xy2  g
+y
+x   + 
+x
+xdt
+sin
+t
+2
+funtzioa  non    g
+∈C1(R)  baita. 
+Aurkitu, existitzen bada,  df. 
+ 
+16.  Aurkitu  f(x) = 
++
+x
+dt
+)
+t
+sin(
+x
+0
+1
+2
+ funtzioaren deribatua. 
+ 
+17.  Izan bedi  f(x, y) = x2 + 
+)
+t
+sin
+y
+(
++
+3
+2
+2
+dt
+. Kalkulatu  f1 (x, y)  eta  f2 (x, y). 
+ 
+18. Izan bedi  f(x, y) = 
+2
+x
+3
+xdt
++
+−
+2
+1
+y
+tdt
+ funtzioa. Kalkulatu, existitzen bada, df.
+ 
+ 
+19. Aztertu  f(x, y) = y2 + 
+−
++
+1
+0
+2
+2
+dt
+)
+t
+1
+x
+(
+ funtzioaren maximoak eta minimoak. 
+ 
+ 
+ 
+ 
+
+4. gaiko ariketak: Integrazioa 
+ 
+66 
+20. Izan bedi F(x) = 
+dt
+xt
+2
+x
+x
+ funtzioa. Aztertu funtzioaren mutur lokalak.  
+ 
+21. Aztertu  f(x,  y)  =  2x2  + 
++
+4
+0
+2
+2
+dt
+)
+t
+sin
+y
+(
+  funtzioaren  muturrak  multzo 
+honekiko:   A = {(x,y) 
+∈ R2   x2 + y2 ≤  9}  
+ 
+22. Izan bedi  f(x, y) =
++
+2
+x
+2
+1
+0
+2 tdt
+y
+tdt
+. 
+Kalkulatu, ahal bada,  f -ren diferentziala  
+(2, 3)
+ puntuan. 
+ 
+23. Izan bedi  f(x,y) = y -1 +
++1
+x
+0
+dt  funtzioa.  
+a) Aztertu f-ren muturrak multzo honekiko: 
+ 
+ 
+ A = 
+{(x,y) ∈R2 / y ≥ x2}. 
+b) Aztertu f-ren muturrak multzo honekiko:  
+               B = 
+{(x,y) ∈R2 / 0 ≤ x ≤ 2;  0 ≤ y ≤ 2 }. 
+ 
+24. Aztertu  f(x,y)  =  3x2  +  2
++
+2
+1
+2
+3 dt
+)
+t
+sin
+y
+(
+  funtzioaren  muturrak  multzo 
+honekiko:   A = 
+{(x,y)∈ R2 /  x2+ y2 ≤  4}. 
+ 
+25. Aztertu f(x, y) = 
+2
+x
+3
+xdt  +
+−
+−
+0
+y 2
+dt
+)
+t
+1
+(
+ funtzioaren mutur lokalak. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+5. gaia: Funtzio inplizituak. Funtzio homogeneoak.  
+ 
+67 
+ 
+ 
+5. gaia:  FUNTZIO INPLIZITUAK. FUNTZIO HOMOGENEOAK 
+ 
+ 
+ 
+5.1.  Funtzio  inplizitua.  Definizioa.  Funtzio  inplizituaren 
+teorema.  Funtzio inplizituen deribazioa 
+ 
+5.2.  Funtzio homogeneoa. Definizioa. Propietateak. Euler-en 
+teorema 
+ 
+ 
+
+5. gaia: Funtzio inplizituak. Funtzio homogeneoak.  
+ 
+68 
+ 
+ 
+5.1. Funtzio inplizitua. Definizioa. Funtzio inplizituaren teorema. Funtzio 
+inplizituen deribazioa 
+ 
+5.1.1. Definizioa 
+ 
+f
+( x )  =  y  erlazioa,    x   Rn  izanik,  funtzioa  esplizitua  da,  y  aldagaia  x -
+ren 
+arabera adierazten baita. 
+Aitzitik, aldagaien arteko erlazioa honela adierazten bada: f(x, y) = 0 edo f
+(x, y) 
+= k ; orduan, y hori x-ren funtzio inplizitua dela esaten da.  
+Ekuazio  inplizituki  bat  era  esplizituan  formulatzeko,  f
+(x,  y)  =  0  ekuazioa  y 
+aldagaiarekiko askatu behar da. Baina hau beti ezin izango da egin. Adibidez, 
+ex + y – x + ln x = 0 ekuazioa ezin da era esplizituan idatzi, ekuazioa ezin baita 
+analitikoki askatu ez x-rekiko, ez y-rekiko. 
+ 
+Izan bedi f : D   R2   R funtzioa. f(x, y) = 0 ekuazioak  (x) :
+ E   R   R funtzioa 
+inplizituki definituko du (globalki), 
+∀ x   R irudi bakar bat existitzen bada, non 
+f(x, y) = 0 baita. 
+Adibidez,  f(x,  y)  =    x2  –  y  =  0  ekuazioak  
+(x)  =  y  =  x2  funtzioa  inplizituki 
+definitzen du. 
+f(x, y) =  x2 + y2-
+ 4 = 0 ekuazioak ez du funtzio bat inplizituki definitzen globalki. 
+Baina, definitu egin dezake lokalki. 
+ 
+Izan bedi f : D   R2   R funtzioa. f(x, y) = 0 ekuazioak  (x) :
+ E   R   R funtzioa 
+inplizituki  definituko  du  
+(x0,  y0)  puntuaren  ingurunean,  honako  hau  betetzen 
+bada: 
+∀ x   B(x0) ∃   y    B(y0),  non f(x, y) = 0 baita. 
+Adibidez, f(x, y) =  x2 + y2-
+ 4 = 0 ekuazioak globalki ez du funtzio bat inplizituki 
+definitzen.  
+Baina,  definitu  egiten  du  (x)  =  y  = 
+2
+x
+4
+−
+  funtzioa  inplizituki,  (1, 3 ) 
+puntuaren ingurunean: 
+∀ x   B(1) ∃   y   B( 3 ),  non f(x, y) = 0  baita. 
+ 
+ 
+ 
+ 
+
+5. gaia: Funtzio inplizituak. Funtzio homogeneoak.  
+ 
+69 
+5.1.2. Funtzio inplizituaren teorema 
+ 
+ 
+Izan bitez  f : D   R2   R  eta (x0, y0)   int(D) 
+i)  f (x0 , y0) = 0 (baldintza beharrezkoa) 
+i )  f (x, y) jarraitua B[(x0 , y0), ]-n   
+i i)  f2 (x, y) jarraitua B[(x0 , y0),   ]-n   
+iv)  f2 (x0 , y0)    0 
+Horiek guztiak betetzen badira, orduan, f(x, y) = 0 ekuazioak y = 
+ϕ(x) funtzioa 
+inplizituki definituko du (x0 , y0) puntuaren ingurunean. 
+ 
+Teorema  honek  baldintza  nahikoa  ematen  du.  Hots,  nahiz  eta  ez  bete,  ezin 
+dugu ziurtatu f
+(x, y) = 0 ekuazioak ez duenik puntu baten ingurunean funtzio bat 
+inplizituki definitzen. 
+Adibidez,  demagun honako funtzio hau dugula: f(x , y) = y3 – x.  fy 
+(0, 0) = 0 da, 
+baina  f(x, y) = 0 ekuazioak (0, 0) puntuaren ingurunean definitu egiten  du  
+y = 
+ϕ(x) funtzioa inplizituki: 
+∀ x   B(0) ∃   y   B(0),  non f(x, y) = 0  baita. 
+Hau da: y = 
+ϕ (x) =  3 x  
+ 
+5.1.3. Funtzio inplizituen deribazioa 
+ 
+ 
+Funtzio  konposatuen  deribazioan  ikasitako  katearen  erregela  kontuan  harturik, 
+ikus dezagun nola deriba daitezkeen era inplizituan definitutako funtzioak. 
+f(x, y) = 0 ekuazioak, x aldagaiarekiko,  y inplizituki definitzen badu, 
+dx
+dy lortzeko 
+aurreko ekuazioa x-rekiko deribatu behar da. Honako hau lortzen da: 
+ 
+dx
+dy
+y
+f
+ 
+x
+f
+⋅
+∂
+∂
++
+∂
+∂
+= 0  
+ 
+dx
+dy
+=  - 
+y
+f
+x
+f
+∂
+∂
+∂
+∂
+ 
+ 
+ 
+ 
+ 
+
+5. gaia: Funtzio inplizituak. Funtzio homogeneoak.  
+ 
+70 
+ 
+ 
+ 
+5.2. Funtzio homogeneoa. Definizioa. Propietateak. Euler-en teorema 
+ 
+5.2.1. Definizioa 
+ 
+Izan bedi K   Rn .  
+K 
+ multzoa konoa izango da, honako hau betetzen bada:  
+  
+∀  x    K    ∀ t >0      t x  K  
+ 
+Izan bedi f : K   Rn   R  funtzioa, non K konoa baita.  
+f 
+funtzioa     R graduko funtzio homogeneoa izango da, honako hau betetzen 
+bada:  f(t x ) = t    f( x )    
+∀  x     K    ∀ t > 0        
+Adibidez:  
+f(x, y) = x2 + 3xy + y2
+  funtzioa  2 graduko funtzio homogeneoa da. 
+f(x, y) = x2 + 3xy + 1  
+funtzioa  ez da funtzio homogeneoa. 
+ 
+ 
+5.2.2. Propietateak 
+ 
+1.  f eta g funtzioak   graduko funtzio homogeneoak badira, (f+ g) funtzioa   
+graduko funtzio homogeneoa izango da. 
+ 
+Froga: 
+f 
+funtzioa   graduko funtzio homogeneoa bada, honako hau beteko da:   
+f(t x )= t  f( x ) 
+∀ x  K ∀ t > 0  
+g 
+funtzioa   graduko funtzio homogeneoa bada, honako hau beteko da:   
+g(t x )= t  g( x ) 
+∀ x  K ∀ t > 0         
+Ondorioz, honako hau beteko da:  
+ (f+g)(t x )= f(t x ) +g(t x )= t  f( x )+t  g( x )=t  [f( x )+g( x )]
+ eta, beraz, 
+ (f+g)(t x )=  t  (f+g)( x ) 
+∀ x  K ∀ t > 0             
+ 
+ 
+ 
+
+5. gaia: Funtzio inplizituak. Funtzio homogeneoak.  
+ 
+71 
+ 
+ 
+ 
+2.  f funtzioa   graduko funtzio homogeneoa bada, ( f) funtzioa    graduko 
+funtzio homogeneoa izango da. 
+ 
+Froga: 
+( f)(t x )=  f(t x ) = (f funtzioa   graduko funtzio homogeneoa denez) =   t  f
+( x ) = 
+           = t  (  f)( x ) 
+∀ x  K ∀ t > 0  
+ 
+ 
+3.  f eta g funtzioak   eta   graduko funtzio homogeneoak badira, hurrenez 
+hurren,  (f g) funtzioa  ( + ) graduko funtzio homogeneoa izango da. 
+ 
+Froga: 
+(f g) )(t x )= f(t x ) g(t x )= 
+(f funtzioa   graduko funtzio homogeneoa denez eta g funtzioa  graduko 
+funtzio homogeneoa denez) 
+= t  f( x )  t  g( x )= t ( + )  [f( x )  g( x )] = t ( + )  (f g)( x ) 
+∀ x  K ∀ t > 0 
+ 
+ 
+4.  f eta g funtzioak   eta   graduko funtzio homogeneoak badira, hurrenez 
+hurren,  g( x ) 0  izanik,  orduan  (f/g)  funtzioa  ( - )  graduko  funtzio 
+homogeneoa izango da. 
+ 
+Froga: 
+(f/g)(t x )= f(t x )/g(t x )= 
+(f funtzioa   graduko funtzio homogeneoa denez eta g funtzioa   graduko 
+funtzio homogeneoa denez) 
+= t  f( x )/ t  g( x )= t ( - )  [f( x )/ g( x )] = t ( - )  (f/g)( x ) 
+∀ x  K ∀ t > 0 
+ 
+ 
+ 
+ 
+ 
+ 
+
+5. gaia: Funtzio inplizituak. Funtzio homogeneoak.  
+ 
+72 
+ 
+ 
+ 
+5.  f  funtzioa    graduko  funtzio  homogeneoa  eta  deribagarria  bada,  haren 
+deribatua   -1  graduko funtzio homogeneoa izango da. 
+ 
+Froga: 
+f 
+funtzioa    graduko  funtzio  homogeneoa  bada  honako  hau  beteko  da:   
+f(t x )= t  f( x ) 
+∀ x  K ∀ t > 0  
+  i. aldagaiarekiko deribatuz honako hau lortzen da: 
+t
+i
+x
+)
+x
+t
+(
+f
+∂
+∂
+= t   
+i
+x
+)
+x
+(
+f
+∂
+∂
+  
+i
+x
+)
+x
+t
+(
+f
+∂
+∂
+= t  -1 
+i
+x
+)
+x
+(
+f
+∂
+∂
+  
+Beraz, 
+i
+x
+)
+x
+(
+f
+∂
+∂
+ funtzioa ( -1) graduko funtzio homogeneoa izango da. 
+ 
+ 
+6.  f eta g funtzioak   eta   graduko funtzio homogeneoak badira, hurrenez 
+hurren,  (g f)  funtzio  konposatua  (
+)
+  graduko  funtzio  homogeneoa 
+izango da. 
+ 
+Froga: 
+(g f)(t x )= g(f(t x )) = (f funtzioa   graduko funtzio homogeneoa denez) 
+= g( t  f( x )) = (g 
+funtzioa   graduko funtzio homogeneoa denez)
+ = ( t   
+)   g(f( x )) =  t   (g f)( x )   
+ 
+ 
+Beraz, (g f) funtzio konposatua (
+)
+ graduko funtzio homogeneoa  da. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+5. gaia: Funtzio inplizituak. Funtzio homogeneoak.  
+ 
+73 
+ 
+ 
+ 
+5.2.3. Euler-en teorema 
+ 
+Izan bitez  f : K   Rn   R  funtzio deribagarria eta K konoa. 
+ 
+f , 
+ graduko funtzio homogeneoa 
+⇔  
+i
+n
+1
+i
+i
+x
+)
+x
+(
+f
+x
+∂
+∂
+=
+ =   f( x ) 
+ 
+Hots,  f : K   R2   R  bada, honako hau dugu: 
+f , 
+ graduko funtzio homogeneoa 
+⇔    f(x, y) = x f1(x, y) + y f2 (x, y)  
+
+5. gaiko ariketak: Funtzio inplizituak. Funtzio homogeneoak 
+ 
+74 
+ 
+ 
+ 
+ 
+ARIKETAK 
+ 
+ 
+FUNTZIO INPLIZITUAK. FUNTZIO HOMOGENOAK 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+5. gaiko ariketak: Funtzio inplizituak. Funtzio homogeneoak 
+ 
+75 
+ 
+ 
+1.  Izan bedi F(x, y) = 2xf(x+2y) funtzioa, non  f 
+∈ C1(R),  f(4) = 0 eta   f’(4) ≠ 0 
+baitira: 
+a)  Definitzen  al  du  F(x,y)  =  0  ekuazioak  y  = 
+ϕ(x)  funtzioa  inplizituki  (2,  1) 
+puntuaren inguruan? 
+b) Kalkulatu, ahal bada, 
+ϕ‘(2). 
+ 
+2.  Izan bedi  F(x, y) = 6yf(x, xy) + xg(x - 2y) funtzioa non  f 
+∈ C1(R2) eta 
+     g 
+∈ C1(R) baitira: 
+a)  f(1,2)  =  1;  f1(1,2)  =  3;  f2(1,2)  =  6;  g(-3)  =  -12;  g’(-
+3)  =  3  direla  jakinik, 
+definitzen  al  du  F(x,y)  =  0  ekuazioak  y  = 
+ϕ(x)  funtzioa  inplizituki  (1,2) 
+puntuaren inguruan?  
+b) Kalkulatu, ahal bada, 
+ϕ‘(1). 
+ 
+3.  Izan bedi honako ekuazio hau: sin x + y2 - 1 = 0 
+a) Definitzen al du y = 
+ϕ (x) funtzioa inplizituki (0, 1) puntuaren inguruan? Eta 
+(0, 0)
+ puntuaren inguruan? 
+b) Hala bada,  aurkitu, ahal izanez gero, 
+ϕ‘(0). 
+ 
+4.  Izan bedi  F(x, y) = 3xf(x2, xy) + yg(x + 5y) funtzioa, non  f  
+∈ C1(R2) eta 
+     g 
+∈ C1(R) baitira: 
+a) f(4,2)  =  1;  f1  (4,2)  =  1/2;  f2(4,  2)  =  0;  g(7)  =  -6;  g’
+(7)  =  -1  direla  jakinik, 
+definitzen  al  du  F(x,y)  =  0  ekuazioak  y  = 
+ϕ(x)  funtzioa  inplizituki  (2,1) 
+puntuaren inguruan? 
+b) Aurkitu, ahal izanez gero, 
+ϕ‘(2). 
+ 
+
+5. gaiko ariketak: Funtzio inplizituak. Funtzio homogeneoak 
+ 
+76 
+5.  Izan bedi  F(x, y) = 6yf(xy, x2) + xg(x + 2y) funtzioa, non  f 
+∈ C1(R2) eta  
+     g 
+∈ C1(R) baitira, 
+a)  f(2,1)  =  1;  f1(2,1)  =  3;  f2(2,1)  =  6;  g(5)  =  -12;  g’
+(5)  =  3  direla  jakinik, 
+definitzen  al  du    F(x,y)  =  0  ekuazioak  y  = 
+ϕ(x)  funtzioa  inplizituki  (1,2) 
+puntuaren ingurunean?  
+b) Kalkulatu, ahal bada, 
+ϕ‘(1). 
+ 
+6.   Izan bedi f(x,y) = 2y + g’(x) funtzioa non  g(x) = 
+x
+2
+2 dt
+x
+baita. Definitzen al du  
+     f(x,y) = 0 ekuazioak y = 
+ϕ(x) funtzioa inplizituki (0,0) puntuaren ingurunean? 
+ 
+7.  Izan bedi   f(x) = 
+−
+x
+1
+dt
+)
+Lt
+1
+(
+ funtzioa. 
+a) Kalkulatu, ahal bada,  f’(x). 
+b) Definitzen al du y + f’(x) = 0 ekuazioak y = 
+ϕ(x) funtzioa inplizituki (1, 0) 
+puntuaren inguruan? Eta (1, -1) puntuaren inguruan? Hala denean, aurkitu 
+ϕ‘(1). 
+ 
+8.  Izan bedi  f(x, y) = yg(x4) funtzioa, non  g 
+∈ C1(R) eta  g(1) = 2 baitira eta  g 
+funtzioa 3 graduko funtzio homogeneoa baita. 
+a) Definitzen  al  du  f(x,  y)  =  0  ekuazioak  y  = 
+ϕ(x)  funtzioa  inplizituki  (1,0) 
+puntuaren inguruan? Aurkitu, ahal bada, 
+ϕ‘(1). 
+b)  f(x,y) funtzioa homogeneoa al da? Hala bada, esan zer gradutako funtzio 
+homogeneoa den.  
+ 
+9.   Izan bedi f(x, y) = xg(x,y) + h
+y
+x 2 + 6x2y2 funtzioa.  g eta  h  funtzioak haien 
+eremuetan 1 motakoak badira, hurrenez hurren, 
+a) Aurkitu df. 
+b)  f  homogeneoa bada, esan g eta h zein gradutako funtzio homogeneoak 
+diren. 
+
+5. gaiko ariketak: Funtzio inplizituak. Funtzio homogeneoak 
+ 
+77 
+ 
+10. Izan  bitez  f,  g:  R2 
+→  R    funtzioak  6  eta  5  graduko  funtzio  homogeneoak 
+hurrenez  hurren.  h(x, y)  =  f(x,y)/g(x,y); f(2, 4)  =  5;  g(1,  2)  =2;  h2
+(4,  8)=  10 
+badira,  kalkulatu h1(4, 8). 
+ 
+11. Izan  bitez  f,  g  :  R2 
+→  R  funtzio  diferentziagarriak  4  eta  7  graduko  funtzio 
+homogeneoak, hurrenez hurren.  
+   h = 
+g
+f
+;  f(4, 8) = 12;
+ g(6, 12) = 10; h2(1, 2) = 8 direla jakinik, kalkulatu h1(1, 2). 
+ 
+12. Izan bedi F(x, y) = xyf(x2 + y2) + x2g(y5) funtzioa, non f , g 
+∈ C2(R) betetzen 
+baita,  eta  f  eta  g  funtzioak  5  eta  2  graduko  funtzio  homogeneoak  baitira, 
+hurrenez hurren.  
+ 
+a)  F(x,y)  homogeneoa  da?  Hala  bada,  aurkitu  F12(x,y)  funtzioaren 
+homogeneotasun-gradua. 
+b)  f(4) = 1  eta  g(3) = 2 badira, aurkitu  F(1, 1). 
+ 
+13. Izan  bitez  f,  g  :  R2 
+→ R funtzioak α  eta β graduko funtzio homogeneoak, 
+hurrenez hurren, eta f, g 
+∈ C1(R2) .  h = f  g , α = 2, β = 1, f(1, 3) = 2,  g(2, 6) 
+= 1
+ eta  h1(1, 3) = 4 direla jakinik, kalkulatu h2(4, 12). 
+ 
+14. Izan bitez  f, g: R2
+→R  funtzio diferentziagarriak eta 3  eta 5 graduko funtzio 
+homogeneoak, hurrenez hurren. h = 
+g
+f ,  f(2,4) = 2,  g(3,6) = 1, h
+2(1,2)  =  4 
+direla jakinik, kalkulatu  h1(1,2). 
+ 
+
+5. gaiko ariketak: Funtzio inplizituak. Funtzio homogeneoak 
+ 
+78 
+15. Izan  bedi  f(x,  y)  = 
+2
+2
+y
+x
+)
+y
+,
+x
+(
+xg
++
+  funtzioa,  g
+∈C1(R2)  eta  g  3  graduko  funtzio 
+homogeneoa izanik.   g(1,3) = 2, g1(2,6) = 4 badira: 
+a) Aurkitu  f2(1,3). 
+b)  (1,1) puntua g-ren zero maila-kurban badago eta   g2(1,1) ≠ 0 bada, 
+definitzen al du  f(x,y) = 0 ekuazioak funtzio bat inplizituki (1,1) puntuaren 
+inguruan? 
+ 
+ 
+16. Izan bedi F(x, y) = x2f(y3) + g
+(x2 + y2) + 5x3y5 funtzioa, F homogeneoa bada, 
+adierazi  f eta  g funtzioen homogeneotasun-gradua. 
+ 
+ 
+17. Izan bedi  f(x, y) = y2 + F’(x)  funtzioa, non  F(x) =  
+2
+x
+dt
+x  baita. 
+a) Definitzen  al du   f(x,y) = 0 ekuazioak  y = 
+ϕ (x) funtzioa inplizituki (3, 2) 
+puntuaren inguruan? 
+b) Kalkulatu, ahal bada, 
+ϕ‘(3). 
+c)  f homogeneoa al da? Hala bada, zer gradutakoa izango da? 
+ 
+ 
+18. Izan  bedi  f(x,y)  =   
+g(x, y)
+x2    funtzioa,  non  g∈C
+1(R2)  baita  eta  g  6  graduko 
+funtzio homogeneoa baita. g1(1, 2) = 4 bada eta (1,2) puntua g-ren 1 maila- 
+kurban dagoela jakinik: 
+a)  Definitzen al du 1 - f(x, y) = 0 ekuazioak y =
+ϕ(x) funtzioa inplizituki (1, 2) 
+puntuaren inguruan?  
+b)  Hala bada, aurkitu 
+ϕ‘(1). 
+ 
+ 
+ 
+
+5. gaiko ariketak: Funtzio inplizituak. Funtzio homogeneoak 
+ 
+79 
+ 
+19. Izan bedi  f(x, y) = 
+2
+2
+x
+y
+y
+xy
+)
+y
+,
+x
+(
+g
+−
++
+ funtzioa, non g
+∈C1(R2) baita eta 1 graduko 
+funtzio  homogeneoa  baita.  (1,1)  puntua  g-ren  2  maila-
+kurban  badago  eta 
+g1(2,2)= 2 bada: 
+ 
+a)   f homogeneoa al da?  Zer gradutakoa? 
+b) Definitzen al du f(x, y) = 0 ekuazioak y =  (x) funtzioa inplizituki  
+(1, 1) 
+puntuaren inguruan? Hala bada, aurkitu  ’(1).  
+ 

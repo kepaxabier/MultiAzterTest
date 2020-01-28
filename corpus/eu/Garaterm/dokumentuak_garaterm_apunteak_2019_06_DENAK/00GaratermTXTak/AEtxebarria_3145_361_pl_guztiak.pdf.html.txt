@@ -1,0 +1,843 @@
+
+
+
+
+1 
+Helburua: Denbora errealeko sistemaren egitura eta softwarea 
+maneiatzea 
+ 
+Erabiliko den hardwarea izango da Host PC bat eta Target PC bat. Target PC-
+an simulink modeloa 
+exekutatuko da. 
+ 
+Matlab-en eskuragarri daukazun laguntza erabil ezazu. 
+Laborategi Praktika. Denbora errealeko (RT) sistemen gestioa Matlab ingurunean 
+
+2 
+TCP/IP 
+Target PC 
+1.- Abiarazi eta xPCTarget-aren kernel-a kargatuta 
+2.- Aplikazioa deskargatzearen zain. 
+Host PC 
+1.- Simulik-en aplikazioa garatu 
+2.- Konpilatu agiten da eskema eta .dlm 
+fitxategia sortzen da target-era bidaltzeko 
+3.- Deskargatu 
+Hardware eskema 
+1.- Konpiladorearen ezaugarriak konfiguratu 
+2.- Target-aren sare-ezaugarriak konfiguratu 
+3.- Boot diskoa sortu 
+4.- Test-a egin 
+5.- Simulink eskema garatu 
+6.- Erabiliko den target-a aukeratu konpilazio 
+egokia burutzeko. 
+7.- Konpilatu 
+8.- xPCtarget-ean exekutatu 
+Eman behar diren urratsak 
+CD-tik abiarazi  
+Laborategi Praktika. Denbora errealeko (RT) sistemen gestioa Matlab ingurunean 
+Laborategian 
+monitore bakarra 
+dago bi PC-ak 
+maneiatzeko 
+
+3 
+>> xpcexplr 
+>> xpctest 
+xPC Target Explorer 
+Urratsak 
+Laborategi Praktika. Denbora errealeko (RT) sistemen gestioa 
+1.- Konpiladorearen ezaugarriak konfiguratu 
+2.- Target-aren sare-ezaugarriak konfiguratu 
+3.- Boot diskoa sortu 
+4.- Test-a egin 
+Eman behar 
+diren 
+urratsak 
+2.- Ezaugarriak konfiguratu 
+3.- Boot diskoa sortu 
+4.- Test-a egin 
+
+4 
+Simulink modeloa (Basic Tutorial. Simulink model) 
+ 
+Aplikazioaren garapena 
+Laborategi Praktika. Denbora errealeko (RT) sistemen gestioa 
+Transferentzia-funtzioa sartu simulink eskeman (10000/s2+70s+10000)  
+Seinale karratua aplika egiozu: Anplitudea 1 eta maiztasuna 5 Hz 
+Sarrera eta irteera seinaleak host scope-an ikusi behar dira. 
+Sarrera eta irteera datuak workspace-ren aldagaietan gorde behar dira 
+Ohar zaitez exekuzio-denboraz. 
+Host-en simulazioa 
+Target-ean exekutatzeko modeloa 
+a.- Target-ean exekutatzeko konfigurazioa 
+b.- Simulink modekia target-ean exekutatzeko 
+5.- Simulink eskema garatu 
+6.- Erabiliko den target-a aukeratu 
+konpilazio egokia burutzeko. 
+7.- Konpilatu 
+8.- xPCtarget-ean exekutatu 
+Urratsak 
+
+5 
+Simulink modeloa (Basic Tutorial. Simulink model) 
+Aplikazioaren garapena 
+Laborategi Praktika. Denbora errealeko (RT) sistemen gestioa 
+a.- Target-ean exekutatzeko konfigurazioa 
+Konpilaziorako ezaugarriak konfigratu: 
+ Simulation>>Configuration parameters>> Real-Time workshop --
+ System Target file>> xpctarget.tlc 
+ 
+ 
+ 
+ 
+ 
+        Xpctarget options >> execute mode – RT 
+eta denborari dagozkion atalak konfiguratu. 
+Solver >> Start time y Stop Time (20 segundu) 
+                  Solver options: Fixed-step.     Solver: ode4 (Runge-kutta)  
+ 
+                       Fixed-step size (fundamental sample time): 0.002 
+5.- Simulink eskema garatu 
+6.- Erabiliko den target-a aukeratu 
+konpilazio egokia burutzeko. 
+7.- Knpilatu 
+ 8.- xPCtarget-ean exekutatu 
+Urratsak 
+Simulazioak 20 s iraun behar du 
+Target-a aukeratu behar da eta denborari dagozkion atalak konfiguratu 
+
+6 
+Laborategi Praktika. Denbora errealeko (RT) sistemen gestioa 
+Simulink modeloa (Basic Tutorial. Simulink model) 
+b.- Target-ean exekutatzeko modeloa 
+Sarrera eta irteera seinaleak target-ean ikusgarrri izango dira. 
+Jarrita dituzun scope-ak xPCScopez ordezkatu behar dituzu.  
+Eskuragarri dituzu: xPCTarget >> Misc liburutegian. 
+Scopearen ezaugarriak konfigura itzazu kontuan izanda hartuko diren laginak 
+(20/0.002) 
+5.- Simulink eskema garatu 
+6.- Erabiliko den target-a aukeratu 
+konpilazio egokia burutzeko. 
+7.- Konpilatu 
+8.-  xPCtarget-ean exekutatu 
+Urratsak 
+
+7 
+Laborategi Praktika. Denbora errealeko (RT) sistemen gestioa 
+Simulink modeloa (Basic Tutorial. Simulink model) 
+5.- Simulink eskema garatu 
+6.- Erabiliko den target-a aukeratu 
+konpilazio egokia burutzeko. 
+7.-  Konpilatu 
+8.- xPCtarget-ean exekutatu 
+Urratsak 
+Tools >> Real-Time Workshop>>Build Model. 
+Adi egon Workspace-en konpilazio akatsik ez daudela 
+Target-ean exekutatu: xpcexplr  
+Target>>Conect to Target 
+Application> start aplication 
+Adi: scope-ak abiarazi behar dira 
+5.- Simulink eskema garatu 
+6.- Erabiliko den target-a aukeratu 
+konpilazio egokia burutzeko. 
+7.-  Konpilatu 
+8.- xPCtarget-ean exekutatu 
+Urratsak 
+
+8 
+Eskumako botoia View scope + start 
+Eskumako botoia start 
+Host scopean, eskumako botoia eta export 
+Aplikazioa exekutatu 
+Laborategi Praktika. Denbora errealeko (RT) sistemen gestioa 
+
+1 
+TCP/IP 
+Sistema 
+Host PC 
+Oroitzeko: 1. praktika: Denbora errealeko (RT) sistemen gestioa 
+2. Praktika. Datu-eskuratze eta datu-sortzea. 1. atala 
+2. praktika 
+Helburua: 
+ Target-instalazioa interakzioa 
+1) DAQ-rekin ohitu 
+2) Seinale analogikoak sortu eta eskuratu 
+Target PC 
+Prozedura: 
+0) Hardwarea testeatu 
+1)Senoidal ziklo baten puntuak sortu 
+2) Puntu horiek target-ak ulertzen duen artxibora 
+bihurtu. Artxibo hori target-ean jarri. 
+3) Senoidala sortzeko eskema egin eta sortu senoidala. 
+4) Senoidala eskuratu eta datuak artxiboan gorde. 
+KONTUZ KONEXIOEKIN 
+
+1 
+Drive: H-Zubia 
+3. Praktika.  
+Helburu_1:
+ Praktikaren helburu bat da digitlaki PWM seinalea sortzea motorearen abiadura aldatzeko. Horretarako, 
+motorea eta irteera digitalaren artean H-
+zubia jartzea derrigorrezkoa izango da.  
+Helburu_2:
+ Motorearen abiadura digitalki aldatzea lortu ondoren, motorearen abiadura ezagutzea ezinbestekoa da. Hala, 
+motorearen ardatzean jarrita dagoen enkoderraren irteerak irakurri eta interpretatu beharko dira. 
+3. praktika. 1. saioa. 
+Helburu_1: PWM seinalea sortu kontadorea eta irteera digitalal erabiliz. 
+Helburu_2:  Kontadorearen irakurketarekin motorearen abiadura ondorioztatuko da
+ rpm unitateetan. Atal hau garatzeko 
+Encoder Simulatzailea erabiliko da.  
+3. Praktika. Datu-eskuratze eta datu-sortzea. 2. atala 
+
+1 
+Drive: H-Zubia 
+3. Praktika.  
+Helburu_1: Praktikaren helburu bat da
+digitalki PWM seinalea sortzea motorearen abiadura aldatzeko. Horretarako, 
+motorea eta irteera digitalaren artean H-zubia jartzea
+derrigorrezkoa izango da.  
+Helburu_2:
+ Motorearen abiadura digitalki aldatzea lortu ondoren, motorearen abiadura ezagutzea ezinbestekoa da. Hala, 
+motorearen ardatzean jarrita dagoen enkoderraren irteerak irakurri eta interpretatu beharko dira. 
+3. praktika. 2. Saioa. (motorearekin). 
+Helburu_1: PWM seinalea sortu kontadorea erabiliz. Motorea kabletatu ezazu eta
+abiadura aldaketa beha ezazu. 
+Helburu_2:
+  Kontadorearen irakurketarekin motorearen abiadura ondoriozta ezazu rpm unitateetan.  
+Helburu_3:  Motorearen abiadura maximoa eta ez-linealtasunak defini itzazu.  
+3. Praktika. Datu-eskuratze eta datu-sortzea. 2. Atala. 2. saioa 
+
+2 
+Jarriatu behar diren urratsak : 
+1.- PWM-a sor ezazu eta osziloskopioan beha ezazu..  
+2.- Motorea PWM-arekin elikazeko H-zubia ezinbestekoa da. Gogora ezazu DIR
+seinaleak parte hartzen 
+duela. DIR hori garatzeko irteera digital bat aukera
+ezazu. Hortaz, simulink eskeman irteera digitala 
+maniatzen duen blokea gehi ezazu. Irteera horren bitartez H-
+zubiak behar duen DIR seinalea bideratuko 
+duzu. 
+2.- PC+H-zubia+motorea sistema garatzeko konexio-
+eskema eskuragarri daukazu. Kablea ezazu sistema eta 
+elikatu aurretik irakasleari erakutsi egiozu, 
+3.-  DIR balioa aukera ezazu eta exekuzioan finko manten ezazu. Duty Ciclea 
+(DC) alda ezazu. Motorea 
+ez ezazu mantentu debora luze biratzen. Exekuzioa geldi ezazu eta DIR
+balioa alda ezazu. Beha ezazu 
+motoreak bira-norantza aldatu duen. DIR
+balio bakoitzari dagokion norantza defini ezazu (rpm + edo -) 
+ 
+3. praktika. 2. Saioa. (motorearekin). 
+Helburu_1: PWM seinalea sortu kontadorea erabiliz. Motorea kabletatu ezazu eta
+abiadura aldaketa beha ezazu. 
+Helburu_2:  Kontadorearen irakurketarekin motorearen abiadura ondoriozta ezazu
+rpm unitateetan.  
+Helburu_3:  Motorearen abiadura maximoa eta ez-linealtasunak defini itzazu. 
+Eskuragarri izan behar den materiala: Puzzle 2.2 
+- PWM-a sortzeko eta enkoderraren irakuketa egiteko Simulink eskemak 
+(3. Praktika, 2. Atala, 1. Saioa) 
+- H-zubia: funtzionamendua eta murrizketak 
+- PC+H-zubia+motorea sistema garatzeko konexio-eskema 
+3. Praktika. Datu-eskuratze eta datu-sortzea. 2. Atala. 2. saioa 
+
+3 
+Jarriatu behar diren urratsak : 
+1.-
+ Motoreak duen zamaren abiadura irakutzeko Simulink eskema exekuta ezazu. Gogora ezazu 1:
+53 
+erreduzitzaile duela eta hori Simulink eskeman adierazi behar da. 
+2.- Kablea ezazu sistema eta elikatu aurretik irakasleari erakutsi egiozu, 
+3.- Sor ezazu PWW-a eta DIR finkoa Helburu_1-
+en programa erabiliz. DIR balioa finko manten ezazu eta 
+Duty Ciclea alda ezazu. Rpm-ak Scopean beha itzazu. 
+5. Praktika. Datu-eskuratze eta datu-sortzea. 2. Atala. 2. saioa 
+5. praktika. 2. Saioa. (motorearekin). 
+Helburu_1: PWM seinalea sortu kontadorea erabiliz. Motorea kabletatu ezazu eta
+abiadura aldaketa beha ezazu. 
+Helburu_2:
+  Kontadorearen irakurketarekin motorearen abiadura ondoriozta ezazu rpm unitateetan.  
+Helburu_3:  Motorearen abiadura maximoa eta ez-linealtasunak defini itzazu. 
+
+4 
+Jarriatu behar diren urratsak : 
+1.-
+ Motorearen abiatzeari dagokion ez linealtasuna definitu. Hori burutzeko, programatikoki aldakorra den 
+Duty Ciclea 
+(DC) garatu behar da. Zehazki, 1Vpp anplitudea duen senoidala erabiliko da, hots, Duty 
+Ciclearen balioa aldatuz joango da
+[0 1] tartean motorearen norantza finko matendu dadin. Senoidalaren 
+puntu bakoitza (positiboa beti), izango da DC-
+ren balioa laginketa aldiune bakoitzeko. Balio hori, izango da 
+2.praktikaren eskemaren sarreran jarri beharko dena, hau da, DC ez da manualki sartuko baizik eta 
+programatikoki. 
+Balio horiek sistemaren  “erreferentzia” izango dira.  
+3. Praktika. Datu-eskuratze eta datu-sortzea. 2. Atala. 2. saioa 
+3. praktika. 2. Saioa. (motorearekin). 
+Helburu_1:
+ PWM seinalea sortu kontadorea erabiliz. Motorea kabletatu ezaz eta abiadura aldaketa beha ezazu. 
+Helburu_2:
+  Kontadorearen irakurketarekin motorearen abiadura ondoriozta ezazu rpm unitateetan.  
+Helburu_3:  Motorearen abiadura maximoa eta ez-linealtasunak defini itzazu. 
+1Hz, 100 puntu/ziklo   
+T
+L=0.01seg  
+100 puntu 
+0 
+0,0627905195293134 
+0,125333233564304 
+0,187381314585725 
+0,248689887164855 
+0,309016994374947 
+0,368124552684678 
+0,425779291565073 
+0,481753674101715 
+0,535826794978997 
+0,587785252292473 
+0,637423989748690 
+0,684547105928689 
+0,728968627421412 
+0,770513242775789 
+0,809016994374948 
+0,844327925502015 
+0,876306680043864 
+0,904827052466020 
+0,929776485888251 
+7. puntua 
+DC= 0.3681 
+DIR=1 
+
+5 
+Jarriatu behar diren urratsak : 
+1.- Motorearen abiatzeari dagokion ez linealtasuna definitu.  
+ 
+1.2.- Scope-host dela  medio beha ezazu erreferentzia 
+(kontsigna) eta sistemaren erantzuna. Emaitz egokiak 
+lortzeko behar beste diren frogak gara itzazu:
+ senoidalaren maiztasuna aldatuz, laginketa periodoa 
+aldatuz,… Lortutako grafikoetan oinarrituz, esan ezazu zein den motorearen abiatzeari dagokion ez 
+linealtasuna.  
+ 
+1.3.- Emandako urrats guztiak errepika itzazu DC-
+a negatiboa izanda, hots, senoidal negatiboa erabiliz. 
+Oraingoan motoreak kontrako norantzarekin mugituko da. 
+1.4.- Sistema osoaren Ez-linealtasuna muga ezazu. 
+1.5.-
+ Aurreko urratzen ostean, zer ondoriozta dezakegu sistemari bidali ahal zaion DC-
+ri buruz? 
+ 
+1.6.-
+ Egindako frogen emaitzetan oinarriturik esan ezazu zein den motorearen abiadura maximoa norantza 
+bakoitzeko.  
+1.7.- Abiadura maximoaren balioa ezagututa 
+(rpm), abiadura normalizatzeko gehi ezazu simulink eskeman 
+behar den funtzioa. Hala, rpm-aren balioa -1 eta 1 tartean egongo da. 
+1.8.-
+ Halaber, eslei ezaiozu DIR balioari motorearen norantza, hau da, erreferentziak balio negatiboak 
+dituenean motoreak norantza bat izango du eta balio positiboekin bestea. 
+3. Praktika. Datu-eskuratze eta datu-sortzea. 2. Atala. 2. saioa 
+3. praktika. 2. Saioa. (motorearekin). 
+Helburu_1:
+ PWM seinalea sortu kontadorea erabiliz. Motorea kabletatu ezaz eta abiadura aldaketa beha ezazu. 
+Helburu_2:
+  Kontadorearen irakurketarekin motorearen abiadura ondoriozta ezazu rpm unitateetan.  
+Helburu_3:  Motorearen abiadura maximoa eta ez-linealtasunak defini itzazu. 
+
+6 
+Jarriatu behar diren urratsak : 
+2.- H-zubiari dagokion ez linealtasuna definitu. H-
+zubiari dagokion eskemaren azterketan ondoriozta 
+genuen norantza aldaketarekin erlazioa zuen egoera bat debekatuta zegoela. 
+ 
+ 
+DC ezberdin zero denean DIR balioa aldatzea debekatuta dagoenez irtenbide bat bilatu behar zaio egoera 
+horri, zehazki irtenbide programatikoa garatuko da H-
+zubia ez izorratzeko helburuarekin. 
+ 
+2.1.-  Adierazi den arriskuari 
+(DIR aldaketa DC ezberdin zero denean) aurre egiteko proposatzen dena da 
+arriskuaren inguruan behar beste handia den zonalde bat definitzea zeinean  Duty Ciclea zero bihurtuko 
+den. DC erreferentzia txikitzen denean esan nahi du motorearen norantza-
+aldaketa gertu gertatuko dela, hau 
+da, H-zubiarentzako arriskutsua den zonaldean gaude eta
+DC=0 egin beharko da eta DIR balioa aldatzea 
+posiblea izango da. Hortaz, DC-
+ren balioa zonalde horretan sartzen bada, DC=0 bihurtuko da, zonaldetik 
+kanpo egonez gero, DC-
+ren balioa mantenduko da. Ariketa hori garatzeko Dead Zone funtzioa erabiltzea 
+ezinbestekoa da. Osa ezazu Simulink eskema. 
+ 
+2.2.-
+  Dead Zone funtzioaren tartea. Aurreko atalan behar beste handia moduan definitu dugu eta oraingoan 
+zehaztuko da tarte hori. Horretarako, DC-
+ren berizmena ezagutu beharra dago, eta hori ondoriozta daiteke 
+laginketa periodoa eta PWM zikloak laginketa periodo bakoitzeko datuekin 
+(hots, PWM-aren maiztasuna 
+eta bere berizmena). 
+Gogora ezazu aurreko atalan beste zonalde hilda mugatu duzula 
+(motorearen abiatzeri dagokiona) 
+3. Praktika. Datu-eskuratze eta datu-sortzea. 2. Atala. 2. saioa 
+3. praktika. 2. Saioa. (motorearekin). 
+Helburu_1:
+ PWM seinalea sortu kontadorea erabiliz. Motorea kabletatu ezaz eta abiadura aldaketa beha ezazu. 
+Helburu_2:
+  Kontadorearen irakurketarekin motorearen abiadura ondoriozta ezazu rpm unitateetan.  
+Helburu_3:  Motorearen abiadura maximoa eta ez-linealtasunak defini itzazu. 
+KONTUZ, DIR ezin da aldatu DC> 0 denean 
+
+7 
+1Hz, 100 puntu/ziklo   Ts=0.01seg  
+100 puntu 
+100 puntu 
+0 
+0,0627905195293134 
+0,125333233564304 
+0,187381314585725 
+0,248689887164855 
+0,309016994374947 
+0,368124552684678 
+0,425779291565073 
+0,481753674101715 
+0,535826794978997 
+0,587785252292473 
+0,637423989748690 
+0,684547105928689 
+0,728968627421412 
+0,770513242775789 
+0,809016994374948 
+0,844327925502015 
+0,876306680043864 
+0,904827052466020 
+0,929776485888251 
+7. puntua 
+DC= 0.3681 
+DIR=1 
+64. puntua 
+DC= 0.7290 
+DIR=0 
+DC > 0 bada DIR 
+ezin da aldatu. 
+Dir alda daiteke 
+DC=0 denean. 
+Oharra: KONTUZ, DIR ezin da aldatu DC> 0 denean 
+3. Praktika. Datu-eskuratze eta datu-sortzea. 2. Atala. 2. saioa 
+Jarriatu behar diren urratsak : 
+2.- H-zubiari dagokion ez linealtasuna definitu.  
+ 
+
+8 
+Jarriatu behar diren urratsak : 
+2.- H-zubiari dagokion ez linealtasuna definitu.  
+ 
+2.3.-  Laburbilduz, garatu behar duzun eskema izango da:  
+ 
+DC erreferentzia izango da  -
+1 eta 1 tartean dagoen balioa. Senoidalaren puntu bakoitzarekin 
+egin behar diren ariketak dira:
+ alde batetik modulua eskuratu eta bestetik zeinua. Hori lortzeko, balio 
+absolutua eta zeroarekin konparaketa garatzea besterik ez da egin behar. 
+ 
+ 
+Moduluaren balioa 3.1
+praktikaren Duty Cicleari eman beharko zaio, hau da, balio hori eskuz 
+jarri beharrean programatikoki egingo da.  
+ 
+Zeinua DIR irteerak sortuko du laginketa une bakoitzeko eta senoidal-
+balioaren ikurraren 
+arabera 
+ 
+3. Praktika. Datu-eskuratze eta datu-sortzea. 2. Atala. 2. saioa 
+3. praktika. 2. Saioa. (motorearekin). 
+Helburu_1:
+ PWM seinalea sortu kontadorea erabiliz. Motorea kabletatu ezaz eta abiadura aldaketa beha ezazu. 
+Helburu_2:
+  Kontadorearen irakurketarekin motorearen abiadura ondoriozta ezazu rpm unitateetan.  
+Helburu_3:  Motorearen abiadura maximoa eta ez-linealtasunak defini itzazu. 
+
+9 
+Jarriatu behar diren urratsak : 
+2.- H-zubiari dagokion ez linealtasuna definitu.  
+ 
+2.4.- RT kotrol-
+programa sor ezazu Simulink eskeman bi ez linealtasunak gehitu ondoren. Galde egiozu 
+irakasleari ondo garatuta dagoen. 
+ 
+2.5.- Oneritzia duzunean, senoidal bipolarra [-
+1 1] den erreferentziari motorrak ematen duen erantzuna 
+ikusteko exekuta ezazu . 
+ 
+Emaitzak azal itzazu eskuragarri dituzun grafikak kontuan izanda:
+ erreferentzia, PWM, RPM 
+(normalizatuta eta normalizatu gabe)  
+ 
+3. Praktika. Datu-eskuratze eta datu-sortzea. 2. Atala. 2. saioa 
+Erreferentzia 
+RPM 
+Normalizatua eta normalizatu gabe 
+
+2 
+Jarriatu behar diren urratsak: 
+1.- “LecturaEncoder.mdl” izena duen Simulik-
+eskema eskuragarri duzu. Eskemaren goikaldean Enkoder 
+baten A eta B
+irteeerak simulatzen duen eskema dago. A seinalea 3. irteera digitalean lortzen da
+eta B 
+seinalea 4. irteeran. Biak 0. portuan daude. Bloquearen “Ten”
+aldagaia dela medio, rpm abiadura bat edo 
+beste simulatzen da. “Ten”
+balioa definitzeko irakur ezazu “LecturaEncoder” eskeman dauden azalpenak. 
+2.- Froga ezazu osziloskopioan A eta B seinaleak. “CambioSentido (1-
+2)” balioa alda ezazu eta bere eragina 
+beha ezazu osziloskopioan. 
+3.- “LecturaEncoder” eskemaren behe
+aldeak, T denbora bakoitzeko enkoderraren irteeren irakurketa egiten 
+du. Horretarako, kontadorearen irakurketa egiten da eta irakurketa hori rpm-
+tan bihurtzen duen algoritmoa 
+garatzen da. Azter ezazu eskema eta azalpenak idatz itzazu. 
+4.-
+ Eskemaren funtzionamendua frogatzeko kablea ezazu sistema. Elikatu aurretik, erakutsi egiozu 
+irakasleari. 
+5.- Funtzionamendua egokia dela frogatzeko gara itzazu  froga ezberdinak. 
+3. Praktika. Datu-eskuratze eta datu-sortzea. 2. atala 
+Eskuragarri izan behar den materiala: Puzzle 2.2 
+- PWM-a sortzeko Simulink eskemak 
+- H-zubia: funtzionamendua eta murrizketak 
+- PC+H-zubia+motorea sistema garatzeko konexio-eskema 
+3. praktika. 1. saioa.(Motorerik gabe) 
+Helburu_1:  Kontadorearen irakurketarekin motorearen abiadura ondorioztatuko da
+ rpm unitateetan. Atal hau garatzeko 
+Encoder Simulatzailea erabiliko da.  
+Helburu_2: PWM seinalea sortu kontadorea eta irteera digitalal erabiliz. 
+ 
+
+3 
+Jarraitu behar diren urratsak 
+1.- Puzzle 2.2 an adituek prestatu dituzten Simulink eskemak azter itzazue.  
+2.- Behar diren azalpenak, eskeman bertan adieraz itzazu. 
+3.- PWM-a sortu eta osziloskopioan froga ezazu. DC alda ezazu. 
+Eskuragarri izan behar den materiala: Puzzle 2.2 
+- PWM-a sortzeko Simulink eskemak 
+- H-zubia: funtzionamendua eta murrizketak 
+- PC+H-zubia+motorea sistema garatzeko konexio-eskema 
+3. praktika. 1. saioa. (Motorerik gabe) 
+Helburu_1:  Kontadorearen irakurketarekin motorearen abiadura ondorioztatuko da
+ rpm unitateetan. Atal hau garatzeko 
+Encoder Simulatzailea erabiliko da.  
+Helburu_2: PWM seinalea sortu kontadorea eta irteera digitalal erabiliz. 
+3. Praktika. Datu-eskuratze eta datu-sortzea. 2. atala 
+
+2 
+Testa 
+Measurement & Automation Explorer 
+, Matlab 
+1.- Irteera analogikoa osziloskopioan azter ezazu: zuzena eta senoidala 
+2.- Sor ezazu senoidala uhin-sortzailearekin (100Hz eta 5V)eta kablea 
+ezazu sarrera analogiko batean
+. 
+DAQ-aren egoera aztertu 
+Osziloskopioa 
+Sortzailea 
+2. Praktika. Datu-eskuratze eta datu-sortzea. 1. atala 
+Target PC-a Windows sistema eragilearekin abiatu.  Instalatuta ez
+badu, abia ezazu host 
+PC-a. 
+KONTUZ KONEXIOEKIN 
+
+3 
+2. Praktika. Datu-eskuratze eta datu-sortzea. 1. atala 
+Prozedura: 
+0) Hardwarea testeatu 
+1)Senoidal ziklo baten puntuak sortu 
+2) Puntu horiek target-ak ulertzen duen artxibora 
+bihurtu. Artxibo hori target-ean jarri. 
+3) Senoidala sortzeko eskema egin eta sortu senoidala. 
+4) Senoidala eskuratu eta datuak artxiboan gorde. 
+Urratsak: 
+Sortu behar da workspace-an u aldagaia zeinak senoidal 
+baten ziklo baten 50 puntu izango dituen 
+1)
+Simulink eskema garatu. 
+2)
+Konfigura ezazu Out1 eta signal generator  50 
+puntu lortzeko. Zein Sample Time jarri behar da? 
+3)
+Konfigura ezazu Configuration Parameters>> Data 
+Import/Export sortzen den aldagaiaren izena u izan 
+dadin  
+4)
+Ezaba ezazu u aldagaitik 0 balioa 50 puntu izateko 
+Kalkuluak: 
+
+4 
+2. Praktika. Datu-eskuratze eta datu-sortzea. 1. atala 
+Prozedura: 
+0) Hardwarea testeatu 
+1)Senoidal ziklo baten puntuak sortu 
+2) Puntu horiek target-ak ulertzen duen artxibora 
+bihurtu. Artxibo hori target-ean jarri. 
+3) Senoidala sortzeko eskema egin eta sortu senoidala. 
+4) Senoidala eskuratu eta datuak artxiboan gorde. 
+Urratsak: 
+1) Matlab-en idatzi: 
+xpcbytes2file('in', u’) 
+f=xpctarget.ftp 
+f.put(‘in'); 
+2) xPCTarget Explorer bitartez, froga ezazu fitxategia 
+targetean dagoela 
+ 
+ 
+Azalpenak 
+Azal ezazu zer egiten duen instrukzio bakoitzak 
+ 
+
+5 
+2. Praktika. Datu-eskuratze eta datu-sortzea. 1. atala 
+Prozedura: 
+0) Hardwarea testeatu 
+1)Senoidal ziklo baten puntuak sortu 
+2) Puntu horiek target-ak ulertzen duen artxibora 
+bihurtu. Artxibo hori target-ean jarri. 
+3) Senoidala sortzeko eskema egin eta sortu senoidala. 
+4) Senoidala eskuratu eta datuak artxiboan gorde. 
+Urratsak: 
+1) Simulink eskema garatu frogatzeko senoidala ondo 
+irakurtzen dela.  
+ 
+Azalpenak 
+Azal ezazu zer egiten duen bloke bakoitzak. 
+Azal itzazu blokearen parametroen balioak 
+Zein maiztasuneko senoidala lortu duzu? 
+ 
+
+6 
+2. Praktika. Datu-eskuratze eta datu-sortzea. 1. atala 
+Prozedura: 
+0) Hardwarea testeatu 
+1)Senoidal ziklo baten puntuak sortu 
+2) Puntu horiek target-ak ulertzen duen artxibora 
+bihurtu. Artxibo hori target-ean jarri. 
+3) Senoidala sortzeko eskema egin eta sortu senoidala. 
+4) Senoidala eskuratu eta datuak artxiboan gorde. 
+Urratsak: 
+2) Simulink eskema garatu eta senoidala osziloskopioan 
+ikusteko doi ezazu osziloskopioa. 
+ 
+Azalpenak 
+Azal ezazu zer egiten duen bloke bakoitzak. 
+Azal itzazu blokearen parametroen balioak 
+ 
+KONTUZ KONEXIOEKIN 
+
+7 
+2. Praktika. Datu-eskuratze eta datu-sortzea. 1. atala 
+Prozedura: 
+0) Hardwarea testeatu 
+1)Senoidal ziklo baten puntuak sortu 
+2) Puntu horiek target-ak ulertzen duen artxibora 
+bihurtu. Artxibo hori target-ean jarri. 
+3) Senoidala sortzeko eskema egin eta sortu senoidala. 
+4) Senoidala eskuratu eta datuak artxiboan gorde host-
+era pasatuz. 
+Urratsak: 
+1)
+Eskuratu behar den seinalea sortu: uhin-
+sorgailuarekin 100 Hz-tako eta 5V anplitudeko 
+seinalea sor ezazu. Osziloskopioan froga ezazu. 
+2)
+Lagindu behar dira seinalearen 5 ziklo eta 100 
+puntu ziklo bakoitzeko. Datuak fitxategi batean 
+entregatu behar dira. 
+Azalpenak eta kalkuluak. 
+Azal itzazu blokearen parametroen balioak. Garrantzi 
+handien duena da jakitea zenbat iraun behar duen  
+simulazioa eta zenbat izan behar den Sample Time. 
+ 
+KONTUZ KONEXIOEKIN 
+
+8 
+2. Praktika. Datu-eskuratze eta datu-sortzea. 1. atala 
+Prozedura: 
+0) Hardwarea testeatu 
+1)Senoidal ziklo baten puntuak sortu 
+2) Puntu horiek target-ak ulertzen duen artxibora 
+bihurtu. Artxibo hori target-ean jarri. 
+3) Senoidala sortzeko eskema egin eta sortu senoidala. 
+4) Senoidala eskuratu eta datuak artxiboan gorde. 
+Urratsak: 
+3) Fitxategi batena entregatu datuak. Hori egin daiteke 
+Host xPCScope batetik eta File xPCScope batetik. 
+ 
+Nola???? 
+Azalpenak eta kalkuluak. 
+. 
+ 
+
+9 
+2. Praktika. Datu-eskuratze eta datu-sortzea. 1. atala 
+Prozedura: 
+0) Hardwarea teesteatu 
+1)Senoidal ziklo baten baten puntuak sortu 
+2) Puntu horiek target-ak ulertzen duen artxibora 
+bihurtu. Artxibo hori target-ean jarri. 
+3) Senoidala sortzeko eskema egin eta sortu senoidala. 
+4) Senoidala eskuratu eta datuak artxiboan gorde host-
+era pasatuz. 
+Prozedura 2: 
+2. PUNTUARI ALTERNATIBA PROPOSATU FROM 
+WORKSPACE ERABILIZ. 
+
+1 
+Drive: H-zubia 
+4. praktika  
+ 
+1. Helburua : PID kontroladorea erabiliz abiadura-kontrolaren inplementazioa 
+2. Helburua:  PID-aren parametroak doitu. 
+4. praktika: Abiadura-kontrolaren begiztaren inplementazioa 
+Eskuragarri izan behar den materiala 
+PID kontroladorea gehitu den Simulink eskema. 
+Praktika aurretik eta simulazioa bitartez lortu diren PIDaren parametroen balioak.  
+
+2 
+ 
+PID
+d
+i
+1
+Gc
+s
+K 1
+T s
+Ts
+
+
+
+
+
+
+
+
+
+Helburua:  SISTEMA  DIGITAL batean kontrol -legea diseinatzea eta ezartzea.
+ Prozedura:  jarraituan  garatu 
+diseinua+diskretizazioa egin+ PAC (xpcTarget) 
+Instalazioa 
+- 
+G(s) 
+Erreferentzia 
++ 
+u(t) 
+y(t) 
+e(t) 
+Diseinua jarraituan (praktika aurretik egin beharreko lana) 
+Diskretizazioa 
+G(s) 
+Instalazioaren Identifikazioa 
+PID kontroladorearen doiketa 
+K, Ti, Td  
+Integrazio-metodoa aukeratu (PID controler-ari buruz Matlab-
+ek dakarren laguntza irakur ezazu) 
+Simulazioan lortutako emaitzak 
+(K, Ti,Td optimizatuta) abiapuntutzat hartuko dira.  
+Ezarpena edo 
+inplementazioa 
+Simulink eskemaren garapena. 
+Laginketa periodoa definitu. 
+PAC: batean ezarri xPCTarget. 
+4. praktika: Abiadura-kontrolaren begiztaren inplementazioa 
+
+3 
+Instalazioa 
+- 
+G(s) 
+Erreferentzia  + 
+u(t) 
+y(t) 
+e(t) 
+Sistema 
+Digitala 
+DAQ 
+Kontadrea 
+u(t) 
+DAQ 
+Kontadorea 
+SISTEMA  DIGITALA 
+Erreferentzia adierazi 
+y(K)=rpm seinalea eskuratu 
+Kontroladorearen kalkuluak (PID) 
+u(K)=DC seinalea sortu 
+PWM 
+Encoderraren seinalea 
+y(t) 
+- 
+G(z) 
++ 
+u[k] 
+y[k] 
+DAQ 
+DAQ 
+u(t) 
+y(t) 
+e[k] 
+4. praktika: Abiadura-kontrolaren begiztaren inplementazioa 
+Diseinua jarraituan 
+Ezarpena edo 
+inplementazioa 
+Erreferentzia 
+
+4 
+PWM 
+- 
+G(z) 
++ 
+u[k] 
+y[k] 
+DAQ 
+DAQ 
+u(t) 
+y(t) 
+e[k] 
+- 
+G(z) 
++ 
+u[k] 
+y[k] 
+DAQ 
+DAQ 
+e[k] 
+Instalazioa 
+Ts = laginketa-periodoa= zenbatero hasten den ziklo baten exekuzioa:
+ instalazioaren erantzuna 
+eskuratu y[k] lortzeko+ kontroladorearen kalkuluak garatu  u
+[k]  lortzeko+ sortu u(t) . 
+Baldin Tm= 0,1 
+k= 0 --- e [0], y[0], u[0]-----t = 0
+ 
+k= 1 --- e[1], y[1], u[1]------t = 0.1 
+k= 2 --- e[2], y[2], u[2] -----t = 0.2 
+….. 
+ 
+u(t) 
+y(t) 
+Erreferentzia 
+Erreferentzia 
+4. praktika: Abiadura-kontrolaren begiztaren inplementazioa 
+Encoderraren seinalea 
+
+5 
+Eman behar diren urratsak: 
+1.-
+ 3. praktikaren, 2. saioaren simulink eskeman PID kontroladorea sar ezazu. Horretarako seinaleen 
+helmugak aldatu beharko dituzu. 
+2.- Simulazioarekin lortu dituzun PID-parametroen balioak jar itzazu PID-
+aren konfigurazioan. 
+3.- PID-arentzako diskretizazio-metodoa aukera ezazu. 
+4.- Defini ezazu ibilbide-erreferentzia. 
+5.- Laginketa-
+periodoa defini ezazu. Exekutatu ezazu eta jarraipena beha ezazu. 
+6.- Integrazio-metodo ezberdinak erabiliz azter ezazu sistemaren portaera. 
+7.- Kontroladorea doi ezazu. 
+4. praktika: Abiadura-kontrolaren begiztaren inplementazioa 
+4. praktika  
+ 
+1. Helburua : PID kontroladorea erabiliz abiadura-kontrolaren inplementazioa 
+2. Helburua:  PID-aren parametroak doitu. 

@@ -1,0 +1,1048 @@
+
+
+
+A Eranskina: Errepasoak
+A.1
+Probabilitatearen errepasoa
+Zorizko saiakuntza baten ondorioz lortutako datuen interpretazioan oinarritzen dira metodo
+ekonometrikoak. Aldagai ekonomikoek zati edo osagai sistematiko bat eta aleatorio bat iza-
+ten dute, bere behaketa eman aurretik ezin baita zehaztasun osoz hartuko dituzten balioak
+aurresan. Atal honetan, kurtsoan zehar aplikatuko ditugun probabilitate kontzeptuak go-
+goratuko ditugu: zorizko aldagaia 
+(aleatorioa edo estokastikoa) eta bere propietateak, baita
+probabilitate banaketa erabilgarrienak ere.
+A.1.1
+Zorizko aldagaia edo aldagai aleatorioa
+Aldagai aleatorio baten 
+(X) balioa ez da ezagutzen bere behaketa eman aurretik eta pro-
+babilitatea, emaitzaren ziurgabetasuna adierazteko baliabide bat da. Bi motatako aldagai
+aleatorioak ezagutzen dira:
+ diskretuak, har ditzaken balio posible guztien multzoa ﬁnitoa edo
+zenbagarria denean eta jarraiak, egite multzoa inﬁnitoki zatigarria denean eta beraz, ez zen-
+bagarria. Adibidez, etxebizitza baten azalera aldagai jarraia da baina komun kopurua berriz,
+diskretua. Orokorrean, kurtso honetan aldagai jarraiekin lan egingo dugu.
+Baldin eta X aldagai diskretua bada, emaitza posible bakoitzari 
+(xi) probabilitate bat ezarri
+diezaiokegu p(xi) = P rob(X = xi). Probabilitate funtzioak p(xi) ≥ 0 ∀xi eta
+i p(xi) = 1
+bete beharko ditu.
+Baldin eta X jarraia bada, puntu zehatz bati dagokion probabilitatea zero da eta X alda-
+gaiaren balioak tarte batean egotearen probabilitateari buruz jardungo dugu, a ≤ X ≤ b.
+Horrela, X aldagai jarrai baten dentsitate funtzioak, f 
+(x), ondorengoa betetzen du:
+P robabilitatea(a ≤ X ≤ b) =
+b
+a
+f (x) dx
+Hau da, a eta b bi puntuen artean funtzioaren azpian gelditzen den azalera, aldagaiak har-
+tuko dituen balioak [a, b] tartean egotearen probabilitatea da 
+(ikusi A.1 graﬁkoko ezkerreko
+panela). Dentsitate funtzioak f (x) ≥ 0 ∀x eta
+∞
+−∞
+f (x)dx = 1 bete beharko du.
+Aldagai aleatorio jarrai baten adibide bat aldagai Normala da. Bere dentsitate funtzioak
+kanpai forma du 
+(ikusi A.1 graﬁkoko ezkerreko panela). Erdiko balio baten inguruan simetri-
+koki banatzen diren aldagaiak egituratzeko praktikan asko erabiltzen den funtzioa da, erdiko
+
+124
+A Eranskina
+balio horren inguruko balioetan probabilitate handiena pilatzen delarik eta gutxi urruneko
+balioetan. A.1 graﬁkoko eskubiko panelak datuen histograma eta dentsitate funtzioaren ar-
+A.1 Irudia: Normalaren dentsitate funtzioa eta histograma.
+teko erlazioa irudikatzen du. Pe˜
+na eta Romo (1997) adierazten duten bezala: “La funci´on de
+densidad constituye una idealizaci´on de los histogramas de frecuencia o un modelo del cual
+suponemos que proceden las observaciones. El histograma representa frecuencias mediante
+´areas; an´alogamente, la funci´on de densidad expresa probabilidades por ´areas. Adem´as, con-
+serva las propiedades b´asicas del histograma:
+ es no negativa y el ´area total que contiene es
+uno. ”.
+Aldagai aleatorio baten banaketa funtzioa, lekuko neurriak 
+(batezbestekoa, mediana eta mo-
+da), sakabanatze neurriak 
+(bariantza, desbideratze tipikoa eta aldakuntz koeﬁzientea) edota
+forma neurriak 
+(asimetria eta kurtosis koeﬁzienteak) erabiliz laburbildu daiteke. Kontzeptu
+hauek, datu multzoen ezaugarriak laburbiltzeko erabilitako neurrien antzera deﬁnitzen dira.
+Jarraian, kurtsoan zehar erabiliko ditugun beste elementuak azalduko ditugu.
+X aldagai baten batezbestekoa edo itxarondako balioa 
+(µ) lekuko neurri bat da. Aldagai
+horrek har ditzaken balio posible guztien batezbesteko ponderatua da, non ponderazioa balio
+bakoitzaren probabilitatea den. Aldagaia jarraia bada:
+µ = E(X) =
+∞
+−∞
+x f (x)dx
+non E, itxaropenaren eragilea den. A.2 graﬁkoko eskubiko panelan ikusi daitekenez, itxa-
+ropen horrek aldagaiaren banaketaren zentrua jasotzen du. Horrela, itxaropena gero eta
+handiagoa bada, saiakuntzaren gauzatutako balioak handiagoak izatea espero da.
+X aldagai aleatorio baten bariantza, bigarren ordenako batezbestekoarekiko momentu zen-
+tratua da. Hau da:
+Bar(X) = σ2X = E[(X − µ)
+2] ≥ 0
+Banaketaren sakabanatze neurri bat da eta bere erro positiboa desbideratze tipikoa edo
+
+Gretl-en bidezko erregresio analisia
+125
+A.2 Irudia: Banaketa normalaren adibideak
+Batezbesteko desberdinak eta σ = 1
+Dispertsio desberdinak eta µ = 6
+desbideratze estandarra bezala ezagutzen da:
+desb(X) = σX =
+Bar(X)
+A.2 graﬁkoko eskubiko panelak adierazten duen bezala, aldagaiaren bariantza gero eta txi-
+kiagoa bada, batezbestekoaren inguruko probabilitatea handiagoa da.
+Normal estandar edo sinplearen banaketa. Banaketa Normala bere batezbesteko eta ba-
+riantzaren balioengatik zehazten da. Baldin eta Z aldagai aleatoria zero batazbestekodun
+eta bat barintzaduneko Normala bada, orduan Z aldagai Normal estandarra dela esaten da
+eta Z ∼ N 
+(0, 1) bezala adierazten da. Badira banaketa honen taulak, non x emaitz posible
+bakoitzari, puntu horretaraino metatutako probabilitatea egokitzen zaion, P rob
+(X ≤ x).
+Orokorki, X aldagai Normala bada, orduan µ batezbestekoarekin eta σ2 bariantzarekin,
+X ∼ N (µ, σ2) bezala adierazten da. Z = (X − µ)/
+σ) eraldaketa Normal estandarra izango
+denez, banaketa Normal honen taularekin P rob
+(X ≤ x) metatutako probabilitatea lortzen
+da.
+A.1.2
+Zorizko bi aldagai edo gehiago
+Ekonometrian aldagai multzo baten propietateak ikertu nahi dira eta zorizko bi aldagai edo
+gehiagoei buruzko galderei erantzuteko, baterako dentsitate funtzioa ezagutu behar da. Bi
+aldagaiak (X eta Y ) diskretuak badira, 
+(xi, yj) emaitza posible bakoitzari probabilitate bat
+egokitu diezaiokegu, p
+(xi, yj). Probabilitate multzoa baterako probabilitate funtzioa da, non
+0 ≤ p(xi, yj) ≤ 1 eta
+i
+j p(xi, yj ) = 1 betetzen den.
+Aldagaiak jarraiak badira, baterako banaketa baterako dentsitate funtzioarekin 
+(f (x, y)) lor-
+tzen da. Bi aldagaiek banaketa Normala jarraitzen badute, baterako densitate funtzioa on-
+dorengo graﬁkoan agertzen da:
+
+126
+A Eranskina
+A.3 Irudia: Aldagai biko banaketa normala.
+Funtzio honen azpiko azalera totala probabilitate masa deitzen da eta bere balioa bat izango
+da, hau da,
+x y f (x, y) dx dy = 1. Gainera, funtzioak ez duenez balio negatiborik hartzen
+(f (x, y) ≥ 0), 
+(a, b) puntuen artean deﬁnitutako laukiak zehazten duen azalerak, X aldagaiak
+a baino balio handiagoak eta Y adagaiak b baino balio txikiagoak hartzeko probabilitatea
+neurtzen du. Hau da:
+P robabilitatea(X ≤ a, Y ≤ b) =
+a
+−∞
+b
+−∞
+f (x, y)dx dy
+Adibide gisa, A.3 graﬁkoan markatutako azaleraren azpian jasotako bolumena, X ≤ −2 eta
+Y ≤ 4.5 izatearen probabilitatea da.
+Hala ere, aldagai bakoitzaren dentsitate funtzio marginala ondorengo integralekin kalku-
+latu daitezke:
+f (x) =
+∞
+−∞
+f (x, y) dy
+f (y) =
+∞
+−∞
+f (x, y) dx
+(A.14)
+Zorizko bi aldagaien baterako banaketa horrela laburbildu daiteke:
+• Aldagai bakoitzaren grabitate zentruak, hau da, µX eta µY , 
+(A.14) banaketa margina-
+letatik lortzen dira.
+• Aldagai bakoitzaren sakabanatzea batezbestekoaren inguruan, adibidez X eta Y -
+ren
+bariantzak (σ2
+X eta σ
+2
+Y ), (A.14) banaketa marginaletik eratortzen dira.
+• Kobariantzaren bitartez bi aldagaien arteko erlazioa jasotzen da:
+Kob(X, Y ) = σXY = E[(X − µX)(Y − µY )]
+(A.15)
+edota aldagaien koerlazio koeﬁzientearen bitartez
+Koer(X, Y ) = ρXY =
+σXY
+σXσY
+∈ [−1, 1]. Kobariantzak eta zorizko aldagaien koerlazioak,
+datuekin egindako antzeko interpretazioa dute. Horrela, σXY = ρXY = 0 bada, X eta
+Y aldagaiak koerlatugabeak direla esaten da.
+
+Gretl-en bidezko erregresio analisia
+127
+Baterako banaketa, batezbesteko bektorean 
+(µ) eta Σ bariantza eta kobariantza matrizean
+laburtzen da:
+µ =
+µX
+µY
+Σ =
+Bar(X)
+Kob(X, Y )
+Kob(X, Y )
+Bar(Y )
+=
+σ2
+X
+σXY
+σXY
+σ2
+Y
+(A.16)
+Baldintzatutako banaketak. Aldagai multzo bat aztertzean, gertaera bat egin ondoren bes-
+te gertaera bat betetzearen posibilitatea ebaluatzea komeni da. Adibidez, zein da ezkondu-
+tako eta seme-
+alabak dituen emakume batek lan merkatuan parte hartzearen probabilita-
+tea? Baldintzatutako probabilitateak horrelako galderei erantzuteko aukera ematen du.
+Aldagaiak diskretuak badira, X aldagaia xi balioa denean, Y aldagaiaren baldintzatutako
+banaketa horrela deﬁnitzen da:
+P rob(Y = yj|X = xi) =
+P rob(Y = yj, X = xi)
+P rob(X = xi)
+=
+p(yj, xi)
+j p(yj , xi)
+non P rob(X = xi) > 0
+Aldagaiak jarraiak badira, X aldagaiak xi balioa hartzen duelarik (f
+(x) > 0 kasuetan) bal-
+dintzatutako Y aldagaiaren dentsitate funtzioa horrela deﬁnitzen da:
+f (y|X = x) =
+f (y, x)
+f (x)
+Era honetan banaketa berri bat lortzen da, jada ikusitako propietateekin. Banaketa honen
+momentu interesgarriak, X = x balioari baldintzatutako Y -
+ren batezbestekoa eta bariantzak
+dira eta E(Y |X = x) eta Bar(Y |X = x) bezala izendatzen dira.
+Independentzia. Bi aldagai aleatorio X eta Y estatatistikoki independenteak dira edo in-
+dependenteki banatuak daude, baldin eta aldagai batek hartzen duen balioa ezaguturik, ez
+badu besteak har dezaken balioaren informaziorik ematen. X eta Y aldagaiak independen-
+teak badira, orduan baterako dentsitate funtzioa atalbanatu daiteke jarraian adierazten den
+bezala:
+f (x, y) = f (x)f (y)
+− ∞ < x, y < ∞
+Gainera, f (y|X = x) = f 
+(y) betetzen da. Bestalde, X eta Y independenteak badira, orduan
+Kob
+(X, Y ) = 0 izango da. Azkenik, X eta Y aldagaiak batera Normalki banatzen badira eta
+Kob(X, Y ) = 0, orduan X eta Y independenteak dira.
+Bi aldagai baino gehiago daudenean, aurreko emaitzak n aldagai aleatorioen multzoari
+orokortu daitezke, hau da, X1, X2, . . . , Xn izanik, bektore batean biltzen dira:
+X =
+
+
+
+
+
+X1
+X2
+..
+.
+Xn
+
+
+
+
+
+.
+
+128
+A Eranskina
+Orokorrean, bere baterako banaketaren momentuak batezbestekoen bektorea
+E(X) = µ =
+
+
+
+
+
+E(X1)
+E(X2)
+..
+.
+E(Xn)
+
+
+
+
+
+=
+
+
+
+
+
+µ1
+µ2
+..
+.
+µn
+
+
+
+
+
+da eta bariantza eta kobariantza matrizea ΣX da:
+ΣX =
+
+
+
+
+
+
+Bar(X1)
+Kob(X1, X2) . . . Kob(X1, Xn)
+Kob(X1, X2)
+Bar(X2)
+. . . Kob(X2, Xn)
+..
+.
+..
+.
+..
+.
+Kob(X1, Xn) Kob(X2, Xn) . . .
+Bar(Xn)
+
+
+
+
+
+
+=
+
+
+
+
+
+
+σ21
+σ1,2 . . . σ1,n
+σ1,2
+σ22
+. . . σ2,n
+..
+.
+..
+.
+..
+.
+σ1,n σ2,n . . .
+σ2n
+
+
+
+
+
+
+non ΣX matrizea, n ordenako matrize karratua eta deﬁnitu ez negatiboa den. Honek, diagonal
+nagusiko elementuak ez negatiboak direla adierazten du, σ2i ≥ 0, ∀i.
+Aldagaiak elkarrekiko independenteak badira, orduan elkarrekiko koerlatugabeak dira, hau
+da, σi,j = 0, ∀i = j, eta hortaz ΣX diagonala izango da:
+ΣX =
+
+
+
+
+
+
+σ21 0 . . . 0
+0
+σ22 . . . 0
+..
+.
+..
+.
+. .. ...
+0
+0
+. . . σ2n
+
+
+
+
+
+
+Gainera, X1, . . . , Xn aldagaiek banaketa berdina jarraitzen badute, batezbesteko eta barian-
+tza berdinekin
+E(X) =
+
+
+
+
+
+µ
+µ
+..
+.
+µ
+
+
+
+
+
+ΣX =
+
+
+
+
+
+
+σ2
+0
+. . .
+0
+0
+σ2 . . .
+0
+..
+.
+..
+.
+. .. ...
+0
+0
+. . . σ2
+
+
+
+
+
+
+= σ2I
+orduan aldagai aleatorioak identikoki eta independenteki banatuta egongo dira µ batezbesteko
+eta σ2 bariantzarekin: Xi ∼ iib(µ, σ2), ∀i = 1, . . . n.
+Azkenik, X1, . . . , Xn zorizko aldagai Normalak badira, X bektoreak Banaketa Normal
+anizkoitza jarraitzen du eta bere batezbesteko bektorea eta bariantza eta kobariantza ma-
+trizeagatik zehazten da, X ∼ N 
+(µ, ΣX). Aldagaiak independenteak badira, batezbesteko eta
+bariantza berdinarekin, Xi ∼ NIB(µ, σ2) idatziko dugu.
+A.1.3
+Zenbait probabilitate banaketa
+Kurtsoan zehar, aipaturiko banaketa Normalaz gain, berekin erlazionaturiko beste banaketa
+batzuk erabiliko ditugu.
+Chi-karratu banaketa. 
+(Z1, . . . , Zn), zero batezbestekoa eta bat bariantzako banaketa
+Normaldun zorizko aldagai independenteak badira, hau da Zi ∼ NIB
+(0, 1), orduan X =
+
+Gretl-en bidezko erregresio analisia
+129
+A.4 Irudia: Chi karratu banaketaren dentsitate funtzioa
+n
+i=1 Z
+2
+i aldagaia, n askatasun graduko chi-
+karratu banaketako zorizko aldagaia da eta X ∼
+χ2(n) adierazten da. Bere dentsitate funtzioak ondoko itxura du:
+X aldagaiaren balio negatiboentzat f 
+(x) = 0 dela ikusten da. Banaketa asimetrikoa da,
+batezbestekoa n da eta bariantza 2n. Badira puntu bateraino metatutako probabilitatea
+(P rob
+(X ≤ x)) jasotzen dituen taulak, hau da, n askatasun graduen funtzioan egindako
+graﬁkoko marraztutako azalera.
+Snedecorren-F banaketa. Izan bitez Z1 ∼ χ2(n1) eta Z2 ∼ χ2
+(n2) independenteki ba-
+natutako aldagaiak, orduan X = (n2/n1)(Z1/
+Z2) aldagaiak, n1 eta n2 askatasun graduko
+Snedecorren F banaketa jarraituko du:
+X =
+Z1/n1
+Z2/n2
+∼ F(n1, n2)
+Hurrengo graﬁkoak, askatasun gradu desberdinekin dentsitate funtzioak jasotzen ditu:
+A.5 Irudia: Snedecorren-F banaketaren dentsitate funtzioa
+Zuzen errealaren alde positiboan 
+(x > 0) metatzen da probabilitatea. Izendatzailearen aska-
+
+130
+A Eranskina
+tasun graduak handitzen diren heinean, n2 → ∞, orduan n1F(n1, n2)-
+ren banaketak χ2(n1)
+banaketara jotzen du.
+Student-t banaketa. Izan bitez Z ∼ N (0, 1) eta Y ∼ χ2
+(n) aldagaiak independenteak,
+orduan X = Z/ Y /n aldagai aleatorioak, n askatasun graduko Student-
+t banaketa izango
+du:
+Y =
+X
+Z/n
+∼ t(n)
+Hurrengo graﬁkoan, Student-
+t banaketaren dentsitate funtzioaren zenbait adibide jasotzen
+dira banaketa normal estandarrakin batera:
+A.6 Irudia: Studenten-t banaketaren dentsitate funtzioa
+Banaketa guztiak zero balioaren inguruan simetrikoki banatzen dira. Banaketaren batez-
+bestekoa zero da n > 1 bada eta n > 2 denean, bere bariantza n/
+(n − 2) da. Student-t
+banaketaren buztanak, Normalarenak baino lodiagoak dira baina askatasun graduak handi-
+tzen diren heinean, Normal estandarrera konbergitzen du.
+A.2
+Inferentzia estatistikoaren errepasoa
+Suposa dezagun lizentziatu berrien batezbesteko soldata aztertu nahi dela. Populazioa edo
+banakoen multzoa zabala denez, lagin bat aukeratzen da, hau da, zoriz aukeratutako lizen-
+tziatu berrien azpimultzo bat. Populazioa ikerketaren helburu diren elementuez osatutako
+multzoa da 
+(herrialde bateko familiak, lizentziatu berriak, herri bateko etxebizitzak, enpresa
+bateko bezeroak, etab.) Datuak ondo erabiliz, posible da susmoen azterketa sakon bat egitea
+eta lagin honetako emaitzak ondorioz, populaziora orokortzea.
+Inferentzia estatistikoaren helburu bat lagin bat aztertuz populazioaren ezaugarriak ezagutzea
+da. Populazioa, aztertu nahi den elementuetaz osatutako eta ondo deﬁnitutako multzoa da.
+
+Gretl-en bidezko erregresio analisia
+131
+Lagina berriz, populazioaren azpimultzo adierazgarri bat da.
+Populazioa zehaztu ondoren, interesatzen zaizkigun ezaugarriak jasotzen dituzten datuentzat
+eredu bat zehaztu behar da. Ekonometrian y1, y2, y3, . . . , yN , Θ parametro ezezagunen men-
+peko baterako banaketako N aldagai aleatorioen gauzatzeak direla suposatzen da. Eredu
+batek, banaketa eta Θ parametro bektorearen ezaugarri nagusiak jasotzen ditu. Adibidez, hiri
+bateko etxebizitza baten metro karratuko batezbesteko prezioa ezagutzea interesatzen bazai-
+gu, suposa dezagun jaso ditugun 50 etxebizitzen metro karratuko prezioak 
+(y1, y2, y3, . . . , y50)
+independenteki eta identikoki banatutako aldagai normalen gauzatzeak direla. Hortaz, da-
+tuentzat zehaztutako eredua honako da:
+Yi ∼ NID(µ, σ2)
+Banaketa zehazten duten parametroak, hau da, metro karratuko prezioaren batezbestekoa eta
+bariantza, (Θ = 
+(µ, σ2)), ezezagunak dira. Gure ikerketan interesatzen zaiguna batezbestekoa
+denez, datuak erabiliz, beregaineko informazioa ondorioztatu nahi izango dugu.
+Horretarako, estatistikako bi erraminta aplikatuko ditugu:
+ estimazioa eta hipotesien kontras-
+teak. Estimazioarekin interesatzen zaigun parametroen balio posibleak kalkulatu ahal izango
+dugu eta hipotesien kontrasteekin berriz, populazioaren hipotesi edo susmo bat ezarri eta
+gero, datuak aztertuz susmo hori egiazkoa den edo ez ondorioztatu ahal izango dugu.
+A.2.1
+Estimazioa
+Orain arte saiakuntza baten ondorioz datuak nola sortzen diren ikusi dugu. Datu hauek
+inferentzian erabiliko ditugu populazioko usteak eta erlazioak aztertzeko. Ekonometrian
+y1, y2, . . . , yN datuak, fΘ(Y1, Y2, . . . , YN )-
+rekin izendatzen dugun Θ parametro desberdinen
+menpeko baterako banaketako N zorizko aldagaien egiteak edo gertaerak direla suposatzen
+da. Datuentzat zehaztutako eredu batek, banaketaren ezaugarri nagusiak jasotzen ditu, Θ
+parametro ezezagunen bektorearekin batera.
+Adibideko 50 etxebizitzen metro karratuko prezioaren datuak 
+(y1, . . . , yN ), independenteki
+banatutako aldagai Normalen egiteak badira, datuentzat zehaztutako eredua
+Yi ∼ NIB(µ, σ2)
+da. Banaketako parametro ezezagunak (batezbestekoa eta bariantza Θ = 
+(µ, σ2)), datuekin
+estimatu daitezke, lagineko datuen batezbesteko aritmetikoa eta lagin bariantza edo disper-
+tsioa (¯
+y eta S2y) erabiliz adibidez.
+Estimazioaren helburua parametro ezezagun multzoaren balioei hurbiltzea da, lagineko be-
+haketen bitartez. Parametro ezezagun bat θ bezala adieraziko dugu eta K parametro ezeza-
+guneko bektorea Θ = (θ1, θ2, . . . , θk) bezala. Estatistiko bat, g
+(y1, . . . , yN ) datuen funtzio
+bat da eta θ-
+ren puntuzko estimatzaile bat. Parametro ezezagunaren hurbilketarentzat
+estatistiko bat, θ adierazten delarik. Adibidez, lagineko batezbesteko aritmetikoa, aldagai
+aleatorioaren batezbestekoaren estimatzailea izan daiteke eta lagineko bariantza berriz, alda-
+gaiaren bariantzaren estimatzailea. Hau da,
+
+132
+A Eranskina
+ˆ
+µ = ¯
+y =
+1
+N
+N
+i=1
+yi
+ˆ
+σ2 = S2y =
+1
+N − 1
+N
+i=1
+(yi − ¯y)2
+Behaketak izan aurretik osatutako funtzioa da estimatzailea eta datuak funtzio horretan
+barneratzerakoan lortzen den balioa estimazioa da. Horrela, gure adibideko etxebizitzen
+metro karratuko batezbesteko prezioaren (Prezioa/
+m2 ) estimazioa ondorengoa izango da:
+ˆ
+µ =
+3, 82 + 5, 246 + . . . + 3, 434 + 4, 20
+50
+= 3, 91 mila euro
+Hau da, etxebizitza baten batazbesteko prezio estimatua 3910 euro metro karratuko ingurukoa
+izango da. Hala ere, emaitza honetan nolako konﬁdantza izan dezakegu? Kantitate berbera
+berdin baloratuko genuke 5 behaketako lagin batekin lortu izan bagenu? Emaitza noski
+EZ da, 50 behaketekin lortutako emaitza ﬁdagarriagoa baita 5ekin lortutako baino. Beraz,
+estimatzaile bat 
+(eta bere estimazioak) zehaztasun edo ﬁdagarritasun neurri batekin batera
+aztertu behar da.
+Estimatzaile bat, Yi, i = 1, . . . , N aldagaien menpeko zorizko aldagaia da. Bere probabilitate
+banaketa lagineko banaketa edo estimatzailearen banaketa enpirikoa bezala ezagutzen da.
+Aurreko adibidean, Yi ∼ NIB(µ, σ2) bada, orduan ˆ
+µ = ¯
+y estimatzailea N aldagai Normal
+independenteen konbinazio lineal bat denez, bere lagineko banaketa hurrengoa da:
+ˆ
+µ = ¯
+y ∼ N (µ, σ2/N )
+(A.17)
+Lagineko batezbestekoa populazioko batezbestekoaren inguruan banatzen da eta laginaren
+tamaina (N) gero eta handiagoa bada (hau da, bariantza txikiagoa), µ-
+ren inguruan proba-
+bilitate handiagoa bilduko da. Hortaz, µ-
+ren hurbileko estimazio bat lortzeko probabilitatea
+handiagoa da 50 behaketekin, 5ekin baino. Kasu honetan, zentzuduna da zehazpenaren in-
+dikatzaile moduan desbideratze tipikoa (σ/
+√
+N ) erabiltzea, desbideratze tipiko txikiagoak
+zehaztasun handiagoa adierazten duelarik. Hala ere, normalean σ ezezaguna izaten denez,
+populazioko balioa laginekoarekin ordezkatuko dugu, hau da Sy. Hortaz, ¯y-
+ren lagineko ba-
+naketaren desbideratze tipikoaren estimazioa honakoa izango da:
+S¯y = Sy/
+√
+N
+¯
+y-
+ren errore tipiko bezala ezagutzen delarik. etxebizitzen prezioen adibidean lortzen den
+estimazioaren errore tipikoa 0, 993341/
+√
+50 = 0, 14 da. Bestalde, erraz froga daiteke 5 beha-
+ketako lagin batekin ¯
+y eta Sy lortuko bagenitu, errore tipikoa hirukoiztu egingo litzatekela:
+S¯y = 0, 993341/
+√
+5 = 0, 44.
+Estimatzaileak konparatzeko irizpideak
+Lehen aipatu bezala, estimatzaileak ugari dira eta noski, batzuk besteak baino hobeagoak.
+Orokorrean, benetako balioei gehien hurbiltzen diren estimatzaileen bila gabiltza. Estimatzai-
+leek, θ eta ˆ
+θ-
+ren arteko distantzian oinarritzen diren zenbait propietate bete ditzaten espero
+
+Gretl-en bidezko erregresio analisia
+133
+dugu. Horrela, lagin ﬁnituetako propietateak, estimatzaileen ezaugarriak lagineko tamaina-
+rekiko independenteki konpara daitezkenak dira. Asintotikoek ordea, portaerak konparatzen
+dituzte baina estimatzaileak kalkulatzen diren behaketa kopurua handia denean. Kurtso
+honetan, estimatzaileen hautaketa lagin ﬁnitu edo txikietako propietateen arabera egingo
+dugu, hau da, alboragabetasuna, eﬁzientzia eta batezbesteko errore kuadratiko minimoaren
+arabera.
+Alboragabetasuna. Estimatzaile bat alboragabea da baldin eta bere lagineko banaketaren
+itxaropena, parametroaren benetako balioa baldin bada, hau da:
+E(ˆ
+θ) = θ
+Inﬁnitu lagin lortuz gero eta lagin bakoitzarekin estimazioa kalkulatuz, estimazio guzti hauen
+batezbestekoa parametroaren benetakoa balioa izango litzateke. Hau da, batezbestekoz, esti-
+mazioaren errorea ( ˆ
+θ − θ) ezereztatzen da. Kontrako kasuan, estimatzailea alboratua izango
+da. Horrela, estimatzaile baten alborapena Alborapena(ˆ
+θ) = (ˆ
+θ)−θ bezala deﬁnitzen da. Adi-
+bide gisa, A.7 graﬁkoaren ezkerreko zatiak θ parametroaren hiru estimatzaileren banaketak
+jasotzen ditu: ˆ
+θ1 estimatzailea alboragabea da; ˆ
+θ2 estimatzaileak alborapen negatiboa du, hau
+da, batezbestekoak parametroaren balioa azpiestimatzen du eta azkenik, ˆ
+θ3 estimatzailearena
+positiboa da, hau da, batezbestekoz, estimatzaileak parametroaren balioa gainestimatzen du.
+A.7 Irudia: Estimatzaileen alborapena
+Eﬁzientzia. Estimatzaile alboragabeetan bakarrik oinarritzen bagara, estimatzaileen artean
+bat aukeratzeko irizpide bat ﬁnkatu behar dugu. Adibidez, A.7 graﬁkoaren eskubiko aldean bi
+estimatzaile alboragabeen banaketak adierazten dira. Garbi ikus daitekeenez, ˆ
+θ1 estimatzailea
+bariantza txikienekoa dela eta hortaz, parametroaren benetako balioaren urruneko balioak
+lortzeko probabilitate txikiagoa du. Horregatik, ˆ
+θ1 estimatzailea ˆ
+θ2 baino eﬁzienteagoa dela
+esango dugu.
+Orokorrean, klase bereko estimatzaileen artean bariantza txikiena duena, klase hortako eﬁ-
+zientea dela esaten da. Horrela, ˆ
+θ estimatzailea, alboragabeen artean eﬁzientea dela esango
+dugu, baldin eta ez badago bariantza txikiagodun beste estimatzaile (˜
+θ) alboragaberen bat.
+Bar(˜
+θ) ≥ Bar(ˆ
+θ)
+∀˜
+θ alboragabea
+
+134
+A Eranskina
+Adibidez, datuen batezbesteko aritmetikoa, aldagai Normal baten populazioko batezbeste-
+koaren (µ) estimatzaile alboragabeen artean, eﬁzientea da. Hau da, Yi ∼ NIB
+(µ, σ2) bada,
+orduan µ-ren estimatzaile alboragabe guztientzat (˜
+µ non E(˜
+µ) = µ) ondorengoa beteko da:
+Bar(¯
+y) =
+σ2
+N
+≤ Bar(˜
+µ)
+Azkenik, K parametrodun multzo bat 
+(Θ) estimatzean, Θ estimatzaile alboragabe bat beste
+estimatzaile alboragabe bat ( ˜
+Θ) baino eﬁzienteagoa dela esango dugu baldin eta [Bar( ˜
+Θ) −
+Bar
+(Θ)] matrizeen diferentzia matrize erdideﬁnitu positiboa bada. Honek Θ bektoreko ele-
+mentu bakoitzaren bariantza, dagokion ˜
+Θ-ko elementuaren bariantza baino txikiagoa dela
+esan nahi du.
+Batezbesteko errore kuadratikoa Alboragabetasuna desiragarria den propietatea izan arren,
+ez du esan nahi beti estimatzaile alboragabe bat, alboratu bat baino nahiago izango dugunik.
+Ondorengo graﬁkoaren arabera, ˆ
+θ1 estimatzaile alboragabea baztertuko genuke ˆ
+θ2 estima-
+tzaile alboratuarekin alderatuz. Lehenak bariantza oso handia duenez, estimazioetan errore
+handiak egiteko probabilitate handiagoa du, bariantza txikiagoko estimatzailearekin 
+(ˆ
+θ2) kon-
+paratuz.
+A.8 Irudia: Estimatzaileen banaketen adibideak
+Honek, estimatzaileen aukeraketa irizpidetzat estimatzailearen errorearen neurri bat erabil-
+tzea iradokitzen du. Jarraian, estimatzaile baten batezbesteko errore kuadratikoa deﬁnituko
+da:
+BEK(ˆ
+θ) = E[(ˆ
+θ − θ)2] = Bar(ˆ
+θ) + [alborapena(ˆ
+θ)]2
+Eta ondoren, estimatzaile multzo batean, batezbesteko errore kuadratiko txikiena duena
+aukeratzen da.
+
+Gretl-en bidezko erregresio analisia
+135
+A.2.2
+Hipotesien kontrasteak
+Aurretik aipatu bezala, Ekonometriaren helburu bat hipotesiak kontrastatzea da. Etxe-
+bizitzen prezioen adibideko datuak 3000 euro/
+m2 batezbesteko banaketa konkretu batekin
+bateragarriak diren aztertzea adibidez 
+(7. ariketa). Ikusi dugunez 6. ariketan, datuen ba-
+tezbesteko aritmetikoa ez da populazioarenaren berdina izango, baina hipotesien kontraste
+batekin bi batezbesteko horien arteko diferentzia 
+(populaziokoa 3000 euro eta laginekoa 3910
+euro) datuen jatorri aleatorioagatik eratorria den edo ez ikusi dezakegu.
+Hipotesien kontraste batek hiru etapa ditu (Ramanathan (2002)): 
+(1) Aurkakoak diren bi
+hipotesi zehaztu; 
+(2) kontrasterako estatistiko bat lortu bere lagineko banaketarekin eta (3)
+planteaturiko bi hipotesietatik bat aukeratzeko irizpidea ezarri.
+Hipotesi bat, aldagai aleatorio bat edo batzuren banaketari buruzko baieztapen bat da. Kon-
+traste batekin, planteatutako hipotesietatik datuei hobekien zein egokitzen den erabaki daite-
+ke. Interesatzen zaigun hipotesia hipotesi hutsa 
+(H0) izango da eta hipotesi alternatiboa
+edo aurkako hipotesiarekiko 
+(Ha) kontrastatzen da. Adibidez, etxebizitzen prezioen adi-
+bidean, Y -ren batezbestekoa 3 
+(mila euro) delaren hipotesi hutsa planteatuko dugu 3-ren
+desberdina delaren hipotesiaren aurka, hau da:
+H0 : µ = 3
+Ha : µ = 3
+Hipotesi hutsean µ-
+ren balio bakar bat zehazten da eta hipotesi bakuna dela esango dugu.
+Alternatiboa berriz, osagarrizko hipotesia izango da, gure kasuan ezberdintasuna, ondorioz,
+alde biko kontrastea da. Kontrastea horrelakoa bada ordea,
+H0 : µ ≥ 3
+Ha : µ < 3
+batezbesteko hiru edo hiru baino handiagoa dela kontrastatu nahi dugu, hiru baino txikiagoa
+delaren aurkako hipotesiaren aurka. Ondorioz, alde bateko kontrastea dela esango dugu.
+Azkenean zein hipotesirekin gelditzen garen kontrasterako estatistikoaren menpean egon-
+go da, hau da, datuen funtzioaren arabera, konkretuki, datu eta H0-
+aren arteko diferentzien
+funtzioan. Batezbestekoaren bi aldetako kontrastean adibidez, ondorengo diferentzia edo
+desberdintasuna deﬁnitzen da:
+¯
+y − 3
+S¯y
+.
+Diferentzia hau kontrasteko estatistiko gisa erabiliko dugu, ez baita neurri unitateen menpe-
+koa eta ¯
+y batezbesteko aritmetikoan laburbiltzen den datu eta H0 hipotesian lortutako ba-
+lioen arteko diferentzia kontuan hartzen den. Gainera, hipotsi hutsa egiazkoa denean aldagai
+aleatorio honek izango duen banaketa ezagutu beharko dugu. Gure adibidean, y1, y2, . . . , yN
+datuak, Yi ∼ NIB
+(µ, σ2) aldagaiaren lagina badira, non µ eta σ2 ezezagunak diren, orduan:
+¯
+y − µ
+S¯y
+∼ t(N−1)
+eta µ = 3 ordezkatuz, H0 hipotesi hutsaren menpean estatistikoaren lagineko banaketa izango
+dugu:
+test =
+¯
+y − 3
+S¯y
+H0
+∼ t(N−1)
+(A.18)
+
+136
+A Eranskina
+Estatistiko hau praktikan asko erabiltzen da eta batezbestekoaren t estatistikoa bezala eza-
+gutzen da.
+Azkenik, erabaki irizpidea zehazteko estatistikoak har ditzaken emaitza multzoa bi eremu-
+tan banatzen da:
+ eskualde kritikoa eta osagarrizkoa. Eskualde horiek kontuan izanik,
+hipotesi hutsa baztertuko dugu baldin eta datuekin lortutako estatistikoaren balioa eskualde
+kritikoko balioa bada. Aurreko kasuan, H0: µ = 3 hipotesi hutsa dugu Ha:
+ µ = 3 hipotesiaren
+aurka eta H0 baztertuko dugu batezbestekoaren estimazioa (¯
+y) eta H0-ren menpean lortutako
+balioaren arteko distantzia handia bada, horrela,
+|test| =
+¯
+y − 3
+S¯y
+> c
+(A.19)
+non c balio kritikoa den eta |¯
+y − 3|/S¯y ≤ c bada, hipotesi hutsa ez dela baztertzen ondoriozta-
+tuko dugu. Bestalde c-
+ren balioa, kontrasteko estatistikoaren banaketaren menpean dago H0
+ematen denean eta baita, jasan nahi izango dugun errorearen menpean. Dena den, kontraste
+batean ondorengo erroreak egiteko posibilitatea izango da:
+• Hipotesi hutsa batertzea egiazkoa denean 
+(I motako errorea). Kontraste baten tamaina
+edo esanguratasun maila:
+ I motako errorea egitearen probabilitatea da eta α izendatzen
+da.
+• Hipotesi hutsa ez baztertu egiazkoa ez denean 
+(II motako errorea). Kontraste baten
+potentzia: II motako errorea ez egitearen probabilitatea da Ha egiazkoa denean.
+Orokorrean, errorerik txikiena egin nahi dugu, baina errealitatean ez da posible izaten goian
+aipaturiko bi motatako errore horiek ezabatzea, hau da tamaina 0 eta potentzia 1 izatea.
+Bestalde, I motako errorea murrizteak, II motakoa handitzea dakar. Adibidez, ez genuke I
+motako errorerik egingo baldin eta irizpide orokortzat hipotesi hutsa ez baztertzea bada; baina
+kasu horretan, kontrastearen potentzia 0 izango litzateke egiazkoa ez den H0 ere baztertuko
+baitugu. Hala ere, I motako erroreari garrantzi gehiago emango diogu, kontrastearen tamaina
+aukeratuz. Gehien erabiltzen direnak honakoak dira:
+0, 10
+0, 05
+eta
+0, 01
+Horrela, tamaina aukeratu ondoren, potentzia handien duen kontrastea erabiltzen saiatuko
+gara.
+Adibidea:
+ banaketa Normalaren batezbestekoaren bi aldetako kontrastea. Suposa deza-
+gun y1, y2, . . . , yN datu multzoa, µ batezbestekoz eta σ2 bariantzaduneko aldagai aleatorio
+Normal batetik eratortzen dela, hau da, Yi ∼ NIB
+(µ, σ2). Demagun batezbestekoa zero den
+edo ez kontrastatzea interesatzen zaigula, horretarako H0:
+ µ = 0 hipotesia planteatuko dugu
+Ha: µ = 0 hipotesiaren aurka.
+Kontrasterako estatistikoa osatzeko, µ-
+ren estimatzaile alboragabe batean oinarrituko gara,
+adibidez, datuen batezbesteko aritmetikoan (¯
+y). Horrela, zentzuduna izango da H0 bazter-
+
+Gretl-en bidezko erregresio analisia
+137
+tzea, lagineko batezbestekoak muga bat gainditzen badu, hau da:
+|¯
+y| > c
+(A.20)
+eta ez baztertzea kontrako kasuan, hau da, −c ≤ ¯
+y ≤ c. Muga hori zehazteko, estima-
+tzailearen banaketa erabiliko dugu:
+¯
+y ∼ N µ,
+σ2
+N
+⇒
+¯
+y − µ
+σ/
+√
+N
+∼ N (0, 1)
+Aldagai honek banaketa ezaguna du baina σ2 bariantza ezezaguna duenez, datuak kontuan
+izanik, ezin izango genuke estatistikoaren egiterik edo gauzatzerik izan. Baina σ2 bariantza
+bere estimatzaile alboragabeagatik ordezka dezakegu, S2, ondorengoa lortuz:
+¯
+y − µ
+S/
+√
+N
+∼ t(N−1)
+Baldin eta H0 : µ = 0 egiazkoa bada, aldagai honen banaketa hau da:
+test =
+¯
+y
+S/
+√
+N
+H0
+∼ t(N−1)
+(A.21)
+eta baita kontrasterako estatistikoa ere. Estatistiko hau batezbestekoaren t estatistikoa bezala
+ezagutzen da. Azaldutako 
+(A.20) irizpidea jarraituz, H0 baztertuko dugu zerotik urruneko
+balioak hartzen dituenean, hau da |test| > c. Kontrasteko tamainaren arabera aukeratzen
+da c balioa, eta α esanguratasun maila izendatzen da. Azken ﬁnean, esanguratasun maila,
+egiazkoa den H0 batertzearen probabilitatea da, hau da:
+α = P rob(|test| > c)
+test ∼ t(N−1) denean
+A.9 Irudia: Alde biko kontrastearen eskualde kritikoak
+c balioa, t
+(N−1) banaketaren jatorria da eta banaketako bi buztanetan α probabilitatea uzten
+du. Adibidez, α = 0, 05 eta N = 50 badira, orduan c = 2, 01. Horrela, H0 baztertuko dugu
+%5eko esangura-mailarekin, baldin eta |test| > 2, 01 bada edota:
+¯
+y > 2, 01
+S
+√
+N
+edota
+¯
+y < −2, 01
+S
+√
+N
+
+138
+A Eranskina
+A.9 graﬁkoko ezkerreko aldeak, estatistikoaren banaketa adierazten du H0 :
+ µ = 0 hipote-
+sia egiazkoa denean. Banaketaren buztanetan adierazitako margotutako eremuak eskualde
+kritikoa osatzen dute, buztan bakoitzean α/
+2 probabilitatea biltzen delarik. Kasu honetan,
+H0 baztertuko dugu, datuekin lortutako t-
+estatistikoaren balioa, µ = 0 batezbestekodun
+banaketan, ia ziur emango ez den balioa baita.
+Adibidea: m2ko prezioaren batezbestekoaren kontrastea Gretlekin.
+Demagun metro karratuko prezioa aldagaiak 
+(pr m2) banaketa Normala jaraitzen duela.
+Kontrasta ezazu H0: µ = 3 hipotesia Ha:
+ µ = 3 hipotesiaren aurka. Jarraitu beharreko
+pausuak honakoak dira:
+1. Ondorengo estatistikoaren lagineko balioa kalkulatu t = (¯
+y − 3)/S¯y, non ¯y, pr m2
+aldagaiaren lagineko batezbestekoa den:
+t =
+√
+50(3, 9144 − 3)/0, 99341 = 6, 51
+Gretleko ondorengo aukera jarraitu dezakegu:
+Tresnak →Kontrasteen estatistikoen kalkulagailua
+Ondorengo lehiatilan batezbestekoa klikatu eta bertan:
+– Erabili datu-multzoko aldagaia klikatu.
+– Hemen pr m2 aldagaia aukeratuz, t kalkulatzeko behar diren estatistiko des-
+kribatzaileak agertuko dira:
+Lagineko batezbestekoa:
+3,9144
+Desb. tipikoa:
+0,99341
+Laginaren tamaina:
+50
+– Kontrastatu nahi den hipotesi hutsa idatzi: H0: batezbestekoa =
+3.
+– Konprobatu Suposatu desbideratze tipikoa populazioko balioa dela aukera ez
+dagoela aktibaturik eta klikatu Ados.
+Emaitza honakoa da:
+Hipotesi hutsa:
+populazio batezbestekoa = 3 Lagin tamaina: n =50
+Lagin batezbestekoa = 3,91439,
+desbideratze tip. = 0,993407
+Estatistikoa: t(49) = (3,91439 - 3)/0,140489 = 6,50864 Alde-biko
+p-balioa = 3,83e-008 (alde-batekoa = 1,915e-008)
+Dagokion graﬁkoa:
+ 0
+ 0.1
+ 0.2
+ 0.3
+ 0.4
+ 0.5
+-6
+-4
+-2
+ 0
+ 2
+ 4
+ 6
+Desbiderazio tipikoak
+t(49) lagin banaketa
+estatistikoa
+
+Gretl-en bidezko erregresio analisia
+139
+A.10 Irudia: Alde bateko kontrastearen eskualde kritikoak
+non estatistikoaren balioa konﬁdantza tartetik kanpo dagoela ikusten den. Bestalde
+ondorengo graﬁkoan
+estatistikoaren banaketa agertzen da hipotesi hutsaren menpean, kasu honetan t
+(49),
+eta baita estatistikoaren lagineko balioa ere 
+(lerro berdea). Ikus dezakegu estatisti-
+koaren lagineko balioa goi buztanean erortzen dela, hau da, H0 egiazkoa izatea ez
+da probablea. Beraz, hipotesi hutsa baztertuko dugu. Dena den, eskualde kritikoa
+kalkulatuko dugu.
+2. Eskualde kritikoa edo baztertze eskualdea. Gretl erabiliz c balio kritikoa aurkitu
+dezakegu, zehazki Tresnak →Estatistika-taulak aukeran.
+Lehiatila berrian t aukeratu behar da eta ag koadrotxoan askatasun graduak idatzi,
+gure kasuan 49, eta baita behar dugun esangura. Emaitza bezala 1,299 balioa
+irtetzen da.
+Balioa interpretatuz, honakoa adierazten du: adibidez X ∼ t(49) bada orduan
+P rob(X > 1, 299) = 0, 10
+Hau da, [1, 299, ∞) tartean duen metatutako probabilitatea 0,1 da. Kontrastea
+bi aldetakoa denez α =% 5 esangura-mailarentzat, eskualde kritikoaren eskubiko
+zatian α/
+2 probabilitatea metatuko da. Beraz, c balio kritikoa lortzeko 49 ag eta
+α/2 = 0, 025 barneratzen dugu. Ematen digun balioa c = 2, 010 da.
+3. Erabaki irizpidea aplikatu, hau da, |6, 51| > 2, 010 denez % 5eko esangura-
+mailarekin,
+batezbesteko prezioa 3000 euro direla hipotesi hutsa baztertzen da. Azkenik, itxi
+itzazu lehiatilak.
+Adibidea:
+ banaketa Normal baten batezbestekoaren alde bateko kontrastea. Askotan
+ikerketa ekonometrikoetan alde bateko kontrasteak burutu behar dira. Adibidez, soldata-
+rekiko bereizketarik dagoen edo ez, aztertzeko eta konkretuki emakumena gizonena baino
+txikiagoa dela kontrastatzeko.
+Suposa ezazu, aurreko kasuan batezbestekoa hiru edo txikiagoa dela kontrastatu nahi dela
+hiru baino handiagoa delaren aurka. Ondorioz, hurrengo hipotesiak planteatuko genituzke:
+H0 : µ ≤ 3
+Ha : µ > 3.
+Kontrastea alde batekoa denez, H0 baztertuko dugu Ha:
+ µ − 3 > 0 hipotesiaren aurka, baldin
+eta ¯
+y − 3 diferentziak balio konkretu bat gainditzen badu, hau da ¯
+y − 3 > c. Hipotesi honen
+
+140
+A Eranskina
+kontrasterako estatistikoa ere ¯
+y estimatzailearen banaketatik ondorioztatzen da. Baldin eta
+H0 : µ = 3 egiazkoa bada, aldagai honen banaketa hurrengoa litzateke:
+test =
+¯
+y − 3
+S/
+√
+N
+H0
+∼ t(N−1)
+(A.22)
+Beraz, H0 baztertuko dugu ¯y−3 diferentzia handia denean, hau da H0 baztertuko dugu test >
+c denean. Jakina da, c balioa ondorengoagatik zehazten dela: α = P rob
+(test > c);
+test ∼
+t
+(N−1) denean. Hortaz, kontrasteko eskualde kritikoa, A.9 graﬁkoko eskubiko aldean agertzen
+den paneleko margotutako eremuak osatuko du. Horrela, H0 ez dugu baztertuko α esangura-
+mailarekin, baldin eta test-ren balioa t
+(N−1) banaketako c balioa baino txikiagoa bada, honek
+α probabilitatea metatzen duelarik.
+Orokorrean, H0 baztertu edo ez baztertu hitzak erabiltzen dira. Kontraste batean H0 man-
+tendu ohi da, kontrakoaren ebidentzia nahiko ez dagoen bitartean. Datuek H0 hipotesi hutsa
+baztertu dezakete baina ezin dute frogatu zuzena edo egiazkoa den eta ondorioz, ez da H0
+onartu esaten. Bestalde, H0 ez baztertzeak, datuekin hipotesiaren faltsukeria ezin dutela
+frogatu esan nahi du.
+Bibliograﬁa
+Pe˜
+na, D. eta J. Romo 
+(1997). Introducci´on a la Estad´ıstica para las Ciencias Sociales.
+Mc-Graw Hill, Madrid.
+Ramanathan, R. 
+(2002). Introductory Econometrics with Applications. South western,
+Ohio.

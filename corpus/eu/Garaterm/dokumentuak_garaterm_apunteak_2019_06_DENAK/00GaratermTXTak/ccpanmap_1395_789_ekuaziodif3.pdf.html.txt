@@ -1,0 +1,2053 @@
+
+
+
+Kapitulua 3
+Lehenengo Ordenako Ekuazio
+Diferentzialak: Teknika
+Kualitatiboak eta Zenbakizkoak
+3.1
+Sarrera
+Aurreko kapituluan ikasi ditugun ekuazio diferentzialen ebazpenerako teknikek pro-
+blema sorta handia askatzeko baimena eman digute. Baina bizitza errealeko proble-
+ma gehienetan agertzen diren ekuazio diferentzialak ez dira ikusitako eredu ezagun
+batean sailkatzen. Beraz, askotan beste tresnak erabili beharko ditugu ekuaziotik
+informazio kualitatiboa lortzeko. Izan ere, ekuazioaren oreka-
+soluzioak, portaera go-
+rakorra edo beherakorra, soluzioen linearizazioa puntu zehatz batetik, etab. Helbu-
+ru hauek betetzeko ekuazioen gaiak, malda-
+diagramak eta beste zenbait ezaugarrien
+azterketa oso erabilgariak izango dira. Ebazpenerako teknika zailak aplikatu gabe
+azterketa hauek informazio garrantsitsua eskeiniko digute. Baita soluzio hurbilduak
+kalkulatzeko zenbakizko metodoen laguntza oso balogarria da.
+Beste aldetik, zalantza bat bururatzen zaigu ekuazioen soluzioaren bakartasu-
+nari buruz. Lehenengo kapituluan ikusi dugunez n. ordenako ekuazioaren soluzio
+bat zehazteko emandako tartearen hasierako puntuan x0-an n hastapen-baldintza
+ezarri behar dira. Baldintza horiek ekuazioaren integrazioan azaltzen diren hau-
+tazko konstanteak ﬁnkatuko dituzte. Inﬁnitu soluzioetatik bakar batek beteko ditu
+ezarritako baldintzak. Orain arte ez dugu eztabaidatu ea soluzio horiek elkar eba-
+ki dezaketen. Beste nolabait esateko, eremuaren puntu batean hastapen-baldintza
+batek ba al ditzake soluzio zehatz bat baino gehiago ondorioztatu? Kapitulu ho-
+netan bakartasuneko funtsezko teoremari esker, baldintza egoki batzuen aginpean,
+hastapen-badintzek soluzio bakar bat ondorioztatuko dutela ikusiko dugu.
+31
+
+3.2
+Soluzioen Existentzia eta Bakartasuna
+3.2.1
+Existentzia
+Ekuazio bat askatu aurretik ea ekuazioak soluzioak dituen jakitea gustatuko litzai-
+guke, kalkulu bukaezinetan denbora alperrik ez galtzeko, noski. Batzuetan
+(3.1)
+y = e−x
+2
+bezelako ekuazio arrunta ikusi ditugun tekniken bitartez ezin da askatu. Kasu ho-
+netan arrazoia sinplea da, f (x) = e−x
+2 funtzioaren jatorrizkoa analitikoki ezin baita
+kalkulatu. Hala ere, traba honek ez du esan nahi 3.1 ekuazioak soluziorik ez duenik.
+Soluzioa egon badago, baina analitikoki ezin da ebatzi.
+Orokorrean oso garrantsitsua da ezagutzea zein baldintzak bete behar dituen
+(3.2)
+y = f (x, y),
+y(x0) = y0.
+ekuazio-
+ereduak beronen soluzioa existitzeko. Zalantza hau erantzungo duen existentzi-
+teorema hemengo hau da.
+Teorema 3.2.1 (Existentzi-teorema) Demagun
+f (x) funtzio jarraia
+R2-ko
+D = {(x, y)| a < x < b, c < y < d} laukizuzenean, orduan edozein D-ren
+(x0, y0) punturako
+> 0 luzera existituko da non [x0− , x0+ ]×[y0− , y0+ ] tartean
+y(x) ondoko hastapen-baldintzetako problemaren soluzioa den,
+(3.3)
+y = f (x, y),
+y(x0) = y0.
+Teorema honek adierazten digu f -ren jarraitasunak hastapen-baldintzetako
+problemaren soluzioaren existentzia ziurtatuko duela. f ezjarraia izanda ere agian
+ekuazioak soluzioa dauka ere, baina teorema honek ezin du ziurtatu. Teoremak f -
+ri
+gutxienez leun pixka bat izatea eskatzen dio. Existentzia-eremuaren tamainua ez
+dago zehaztuta, beraz, batzuetan tarte hori oso estua izan daiteke.
+Adibidez,
+(3.4)
+y = 15(1 + y2),
+y(0) = 0,
+aldagai banatuetako ekuazioa da. Bi aldagaien menpeko terminoak bereizi eta in-
+tegratu ondoren, soluzio orokorra y(x) = tan(15x + k) dela ondorioztatu dugu.
+Hastapen-baldintzak k integrazio-konstantearen balioa ﬁnkatuko du,
+(3.5)
+0 = y(0) = tan(k) ⇒ k = nπ,
+n = 0, 1, 2, ...
+Beraz, k = 0 hartuz, y(x) = tan(15x) da eta funtzio honen existentzi eremua,
+(−π/30, π/30) baino ez da, estua benetan.
+32
+
+Π
+30
+Π
+30
+-10
+-5
+5
+10
+Irudia 3.1: y = 15(1 + y2), y(0) = 0 ekuazioaren soluzioaren existentzi-eremua
+x ∈ (−π/30, π/30) da.
+3.2.2
+Bakartasuna
+Aurreko sailean ekuazio diferentzialen lehenengo ezaugarri garrantsitsua eztabaidatu
+dugu, soluzioaren existentzia hain zuzen. Horretaz gain soluzioak aztertzekotan
+badago beste funtsezko gaia, soluzioaren bakartasuna. Hitz hauekin adierazi nahi
+duguna zera da, ea ekuazio diferentzial baten agindupean dagoen eta hastapen-
+baldintza zehatz bat betetzen duen soluzio bakar bat dagoen. Noski, gurentzat
+interesgarria da jakitea planoaren puntu batetik ea ekuazio diferentzialaren soluzio
+bat edo bat baino gehiago pasatzen diren. Soluzio bat baino gehiago badaude,
+orduan hasierako puntutik ekuazioak deskribatzen duen fenomeno ﬁsikoak portaera
+ezberdin adieraz ditzake eta egoera horrek ziurgabetasun arriskutsua sortuko du.
+Zorionez y = f (x, y) ekuazioaren gaineko zentzuzko baldintza batzuen menpean
+soluzioaren bakartasuna ziurtatzen duen teorema badago.
+Teorema 3.2.2 (Bakartasun-teorema) Baldin f (x, y) eta ∂f /∂y jarraiak ba-
+dira R2-ko D = {(x, y)|a < x < b, c < y < d} laukizuzenean, orduan edozein
+D-ren (x0, y0) punturako baldin y1(x) eta y2(x) ondoko hastapen-baldintzetako
+problemaren soluzioak badira,
+(3.6)
+y = f (x, y),
+y(x0) = y0,
+halabeharrez bi funtzio hauek berdinak izan behar dute eremu osoan, y1(x) = y2
+(x),
+∀(x, y1(x)) ∈ R. Baiezpen honek hastapen-baldintzetako problemaren soluzioaren
+bakartasuna ziurtatzen du.
+33
+
+Adibidez 3.2 irudian dakusagunez (0, 0) puntutik bi soluzio pasatzen dira.
+Noski, ekuazioaren eskubialdeko gaiaren y-rekiko deribatua ez da jarraia puntu
+horretan eta ikusitako teoremak ezin du soluzioaren bakartasuna ziurtatu. Kasu ho-
+rretan Cauchy-ren problema y = (2y/3)(1/3), y(0) = 0 aldagai banatuetakoa da.
+Integrazioaren bitartez badakigu ekuazioa askatzen eta soluzioak y(x) = 0 kons-
+tantea eta y(x) = (4x/9)(3/2) dira. f (x, y) = (2y/3)(1/3) funtzioaren y-rekiko
+deribatuaren puntu kritikoa 
+(0, 0) da, horregatik arazoak izan ditzakegu planoaren
+gune horretan. Hala da, bai, puntu horretan bi soluzioak elkar ikutzen dute eta
+zientzialariontzat arriskutsua den ziurgabetasuna agertuko da.
+1
+2
+0.5
+1
+1.5
+y x
+4 x
+3
+9
+y x
+0
+Irudia 3.2: (0, 0) puntuan elkar ebakitzen duten y(x) = 0 eta y(x) = (4x/9)(3/
+2) fun-
+tzioak y = (2y/3)(1/3), y
+(0) = 0 problemaren soluzioak dira. Bakartasuna ez dago
+ekuazioaren eskubialdeko gaiaren deribatua y-rekin ez baita jarraia (0, 0)-an.
+3.2.3
+Bakartasun-teoremaren aplikazioak
+Bakartasun teoremak ekuazio diferentzialen oreka-
+soluzioekin batera oso informa-
+zio baliogarria ematen digute beste soluzioen portaera argitzeko. Baldin emandako
+eremuan bakartasunerako baldintzak betetzen badira, orduan soluzio ezberdinen
+graﬁkek ez dute elkar ebakiko. Ondorioz oreka-soluzioek Y -ren ardatzean bes-
+te soluzioentzako mugen moduan eragigo dute. Bi oreka-soluzioen artean dagoen
+hastapen-
+baldintzari dagokion soluzioa sekulan ez da irtengo bi balio horiek muga-
+tzen duten eremutik. Adibidez
+(3.7)
+y =
+(y2 − 4)(sin2(y3) + cos(y) − 2)
+2
+,
+y(0) =
+1
+2
+ekuazioaren soluzioa kalkulatzea zaila da, aldagai banatuetakoa izanarren ebazpe-
+nak ondorioztatzen duen integrala oso zaila delako. Baina ebazpen zehatzaren zail-
+34
+
+tasunek ez gaituzte ikaratu behar, batzuetan beste bidetatik ezaugarri garrantsi-
+tsuak eskuratu ditzakegulako. Argi dakusagunez, kasu honetan y(x) = −2 eta
+y(x) = 2 oreka soluzioak dira, beraz y(0) = 1/2 hastapen-
+baldintza betetzen duen
+soluzioa y(x) ∈ [−2, 2] kanaletik ez da irtengo 3.3 irudiak erakusten duenez.
+-1
+1
+-2
+0
+2
+y x
+2
+y x
+2
+Irudia 3.3: y(0) = 1/2 baldintza bete duen y = (y2−4)(sin2(y3)+cos(y)−2)/
+2 ekua-
+zioaren soluzioa y(x) = −2 eta y(x) = 2 oreka-soluzioen artean dabil.
+Ingeniaritza kimikoko problemetan oso ohizkoak dira
+(3.8)
+y = k(na − x)(nb − x)
+motako aldagai banatuetako ekuazioak. Ekuazioaren soluzio explizitoak kalkulatzen
+hasi baino lehen, aurreneko begiradaz y = na eta y = nb oreka soluzioak direla esan
+dezakegu. Tarteko edozein, y(0) = d, na ≤ d ≤ nb , hastapen-
+baldintzari dagokion
+y(x) soluzioa betirako bi balio horien artean mugituko da, na ≤ y
+(x) ≤ nb, ∀x ∈ R.
+3.2.4
+Malda-eremuak
+Atal honetan
+(3.9)
+y = f (x, y)
+ekuazioaren eskubialdeko f gaiak eskeintzen duen informazioa aztertuko dugu. Fun-
+tzio honek XY planoaren (x0, y0) puntu bakoitzean y(x) soluzioaren malda adie-
+raziko du. Planoaren puntu ugari aukeratzen baditugu eta bakoitzean soluzioari
+dagokion maldarekiko zuzentxoa marrazten badugu, orduan soluzioaren portaera-
+ren irudia lortuko dugu. Noski, (x0, y0)-tik pasatzen den marratxoa soluzioaren
+ukitzailea da. Planoan aurkeztutako zuzentxo-sortari malda-eremua esango diogu.
+35
+
+Honelako diagrama eskuz betetzea lan itzela da, baina zorionez badaude oso irudi
+onak eskeintzen dizkiguten ordenagailurako programa lagungarriak.
+Adibidez
+(3.10)
+y = y2 − x
+ekuazioa ez da orain arte ikasitakoen antzekoa eta ez dakigu analitikoki askatzen.
+Berriz, XY planoaren puntu batzuetan 3.4 irudian agertzen den soluzioaren malda-
+eremua marrazten saia gintezke, ordenagailuaren laguntzaz, jakina. Are gehiago,
+aldameneko irudian ikus dezakegunez, ordenagailuak zenbakizko-metodoen bidez
+guk ezarritako hastapen-
+baldintzak beteko dituzten soluzio batzuk hurbildu ditzake.
+Malda-eremuaren marratxoak soluzio hauen ukitzaileak dira.
+-4
+-2
+0
+2
+4
+-4
+-2
+0
+2
+4
+-4
+-2
+0
+2
+4
+-4
+-2
+0
+2
+4
+Irudia 3.4: Ezkerraldean [−4, 4] × [−4, 4] laukizuzenean y = y2 − x ekuazioari
+dagokion malda-eremua. Eskubialdean hastapen-
+baldintza bereziak betetzen dituzten
+soluzio batzuen zenbakizko hurbilketak.
+Bi kasu berezi interesgarriak
+Azpiatal honetan 1.go ordenako bi ekuazio mota berezi ikusiko ditugu. Bi kasu
+hauek malda-eremuen bidez ikertzeko errazenetakoak izango dira,
+(3.11)
+y = f (x)
+eta
+y = f (y).,
+hainzuzen. Lehenengoaren eskubiko aldea soilik x aldagai askearen menpean da-
+goenez, berehala bururatuko zaigu soluzioa aztertzeko modurik zuzenena f 
+(x) in-
+tegratzea dela. Zoritxarrez badaude f (x) = e−x
+2 bezelako funtzio arruntak non
+ezinezkoa den jatorrizko funtzioa aurkitzea. Horregatik malda-
+eremuek eskeintzen
+diguten informazioa ez da ahazteko modukoa.
+36
+
+-2
+-1
+0
+1
+2
+3
+-2
+0
+2
+4
+-4
+-2
+0
+2
+5
+-2
+0
+2
+Irudia 3.5: Ezkerraldean [−3, 3]×
+[−4, 4] laukizuzenean y = 2x2 ekuazioari dagokion
+malda-eremua eta soluzio berezi batzuk. Eskubialdean [−5, 5]×
+[−3, 3] laukizuzenean
+y = e−x
+2 ekuazioari dagokionak malda-eremua.
+y = f (x) kasuan, y-k ez du parte hartzen f deribatuan, beraz, 3.5 irudian
+dakusagunez, x ﬁnko bakoitzerako eta y guztietarako zuzentxoen malda berdina
+izango da. y = 2x2 ekuazioaren soluzio orokorra y(x) = k + x2 da eta k konstan-
+te erberdinei dagozkien soluzioen parabolak paraleloak dira. Honek esan nahi du
+soluzioa x0 hasierako gunearekiko independentea dela.
+Baita analitikoki integratu ezin diren y = e−x
+2 bezelako funtzioak har ditza-
+kegu. Kasu honetan soluzio explizitoa ezagutzen ez badugu ere, 3.5 malda eremuak
+soluzioen paralelotasuna erakusten digu.
+Eraberean y = f (y) moduko ekuazioek y-ren balio ﬁnko bakoitzerako x al-
+dagaian zehar marra paraleloak ekarriko dituzte. 3.6 irudiak y = 4y
+(1 − y) ekua-
+zioari dagokion malda-eremua eta soluzio batzuk erakusten ditu. Hemen y = 0 eta
+y = 1 oreka-soluzioak dira. Integrazio konstantea aldatuz, 0 ≤ y ≤ 1 tartean
+ekuazioaren soluzioak diren X norabidearekiko kurba paraleloak eraikiko ditugu.
+Ekuazio diferentzialaren eskubiko aldea soilik y soluzioaren funtziopekoa denean,
+f (y), ”ekuazio autonomo” baten aurrean gaude.
+Aztertutako ekuazioa aldagai banatuetakoa da eta soluzioa aurkitzeko bidea
+ezagutzen dugu,
+(3.12)
+dy
+dx
+= 4y(1 − y) ⇒
+dy
+y(1 − y)
+=
+4dx ⇒ ln
+y
+1 − y
+= 4x + k.
+37
+
+Are gehiago, soluzioa explizitoki adieraz dezakegu,
+(3.13)
+y
+1 − y
+= e4x+k ⇒ y(x) =
+ke4x
+1 + ke4x
+.
+-2
+-1
+0
+1
+2
+-2
+-1
+0
+1
+2
+-2
+-1
+0
+1
+2
+-2
+-1
+0
+1
+2
+Irudia 3.6: Ezkerraldean [−2, 2] × [−2, 2.5] laukizuzenean y = 4y
+(1 − y) ekuazioari
+dagokion malda-eremua eta eskubialdean soluzio berezi batzuk.
+Hala ere, ez dugu oso urrutira begiratu behar ekuazio autonomo integraezinak
+aurkitzeko, y = ey
+2/10 sin2 y bezelakoa ezin dugu analitikoki integratu. Hemen behin-
+tzat askatzen saiatu baino lehen y = nπ soluzio konstaneak edo oreka-
+soluzioak di-
+rela ohartu gaitezke. Bakartasunaren teoremaren ondorioz soluzio guztiak konstante
+horien artean zabalduko direla baieztatu dezakegu.
+3.2.5
+Fase-diagramak
+Malda-eremuetaz gain, ekuazioen soluzioei buruz oso informazio baliogarria eman
+dezaketen beste interpretazio geometrikoak badaude. Horien artean fase-
+diagramak
+daude. Baliabide hau eredu ﬁsikoetan oso maiz azaltzen diren ekuazio diferentzial
+autonomoei aplikatuko diegu, erakustaldi garbia baimentzen duelako.
+Ikusi dugunez, y = f (y) ekuazioak ondorioztatzen duen malda-eremuaren
+zuzen horizontalen gainean malda berdineko marratxoak daude. Beraz, baldin zuzen
+horizontal osoan zehar soluzioaren malda berdina bada, nahikoa da XY planoaren
+zuzen horizontal bakoitzaren ordez puntu bakar bat adieraztea. Adibidez
+(3.14)
+dy
+dx
+= y(1 − y)
+ekuazioak bi oreka-
+soluzio ditu, y = 0 eta y = 1 hain zuzen. Bi balio horien artean
+∀y ∈ [0, 1] , f (y) = y(1 − y) > 0 funtzioa positiboa da, hau da, y gorakorra.
+38
+
+Berriz y ≤ 0 eta y ≥ 1 inguruetan f (y) < 0 eta y beherakorra da. Orduan
+soluzioaren bilakaera asintotikoa adierazteko, limx→±∞ y
+(x), nahikoa da erreferentzi-
+zuzen bertikala marraztuz eta berorren gainean oreka-
+puntuak eta bitarteko tartetan
+soluzioaren deribatuaren zeinua.
+y 0
+y 1
+Irudia 3.7: y = y(1 − y) ekuazioaren y = 0 eta y = 1 oreka-puntuek fase-
+diagramaren hiru azpieremuak bereizten dituzte, y ≤ 0, 0 ≤ y ≤ 1 eta y > 1.
+y = y0 balioan f-ren zeinuaren arabera, fase-diagramak y = f(y) ekuazio
+autonomoetarako hiru portaera-mota erakutsiko dizkigu, izan ere:
+1. Baldin f (y0) = 0 bada, orduan y(x) = y0 konstantea oreka-soluzioa da.
+2. Baldin f (y0) > 0 bada, orduan y(x) gorakorra da eta ondorioz x → +∞ doa-
+nean y(x) +∞-ra edo aurreneko y1 > y0 oreka-puntura doa. Berriz x →
+−∞ doanean y(x) −∞-ra edo aurreneko y2 < y0 oreka-puntura doa .
+3. Baldin f (y0) < 0 bada, orduan y(x) beherakorra da eta ondorioz x →
++∞ doanean y(x) −∞-ra edo aurreneko y2 < y0 oreka-puntura doa. Berriz
+x → −∞ doanean y(x) +∞-ra edo aurreneko y1 > y0 oreka-puntura doa .
+3.8 irudian aurreko baiezpenak ikus daitezke. Oreka-soluzioak y = 2 eta
+y = kπ 
+(k osoa) dira eta berauek mugatzen dituzten tartetanko portaera hauxe da:
+39
+
+y ∈ (−π, 0), f (y) < 0 ⇒ beherakorra, y ∈ (0, 2), f (y) > 0
+⇒ gorakorra,
+y ∈ (2, π), f (y) < 0
+⇒ beherakorra, y ∈ (π, 2π), f (y) > 0 ⇒ gorakorra.
+-4
+-2
+0
+2
+4
+Π
+2
+Π
+2 Π
+Irudia 3.8: y = (2 − y) sin y ekuazioaren oreka-
+soluzioak y = 2 eta y = kπ dira.
+Berauek mugatutako azpieremuetan y-ren portaera f -ren zeinuaren menpean dago.
+Ikusi dugunez, baldin ekuazio diferentzialaren oreka-punturik handiena y0 ba-
+da eta ∀y > y0, f(y) > 0, orduan azpieremu horretan y(x) gorakorra da eta
+limx→∞ y(x) = ∞ (baliokideki f(y) < 0 kasuan limx→∞ y(x) = −∞). Baina agian
+soluzioak ez dira existitzen x ∈ R guztietarako x = x0 balioan asintota bertikala
+baitago. Portaera asintotiko horrek funtzioaren hazkundea itzela dela esaten digu
+3.9 irudiak erakusten duen moduan.
+Adibidez
+(3.15)
+y = (1 + y)2
+ekuazioak honelako bilakaera aurkezten digu. Aldagai banatuetakoa denez
+(3.16)
+dy
+(1 + y)2
+=
+dx ⇒
+−1
+(1 + y)
+= x + k ⇒ y(x) = −1 −
+1
+(x + k)
+,
+soluzioa da, k hautazko konstantea izanik. Hemen baldin y(0) > −1 bada orduan
+3.15 adierazpenarengatik y gorakorra izango da eta y(x) > −1 ∀x, y = −1 oreka-
+soluzioa delako. Ondorioz soluzioa soilik x + k < 0 ⇔ x < −k eremuan existituko
+da eta x = −k asintota bertikala dela garbi antzematen da.
+Oreka-puntuen sailkapena
+Aurreko sailean ikusi dugunez, ez da beharrezkoa ekuazio diferentzialaren soluzio
+orokorra kalkulatzea soluzioen ezaugarri garrantsitsuak ezagutzeko. y = f 
+(y) ekua-
+40
+
+zio autonomoen kasuan, askotan nahikoa da oreka-soluzioak eta berauek mugatzen
+duten azpieremutan f -ren zeinua ezagutzea limx→±∞ y
+(x) soluzioen portaera asin-
+totikoa erabakitzeko. Baldin y1 < y2 oreka-soluzioak badira eta ∀y ∈ (y1, y2),
+f (y) > 0, orduan tarte horretan y gorakorra izango da eta y(x0) ∈ 
+(y1, y2) hastapen-
+baldintza duten soluzio guztiek limx→∞ y(x) = y2 eta limx→−∞ y(x) = y1 beteko
+dute. Berriz ∀y(x0) ∈ (y1, y2), f(y) < 0 bada, orduan y beherakorra da eta
+limx→∞ y(x) = y1 eta limx→−∞ y(x) = y2 beteko dute.
+-4
+-2
+0
+2
+4
+-4
+-2
+2
+4
+y
+1
+Irudia 3.9: y = (1 + y)2 ekuazioaren oreka-
+soluzioa y = −1 da eta hurrenez hurren
+gainetik +∞-ra eta azpitik −∞-ra asintotikoki doazen soluzioak daude.
+Azaldutakoaren adibide bat y = (y − 1)(y − 3)(y − 4) ekuazioarekin 3.10
+irudiaren f -ren graﬁkan, fase-
+diagraman eta portaera asintotikoan ikus dezakegu.
+Beronen oreka-puntuak 
+{y1 = 1, y2 = 3, y3 = 4} dira eta horien arteko ezberdinta-
+sunak igertzen dira. Adibidez y2 = 3 puntu egonkorra da bere gainetik eta azpitik
+irtetzen diren soluzioak erakartzen dituelako. Berriz, y1 = 1 eta y3 = 4 ezegonkorrak
+dira bere ingurutik irtetzen diren soluzioak kanporatzen dituztelako.
+Puntu egonkorretaz edo erakargarrietaz (zuloak ) eta puntu ezegonkorretaz (itu-
+rriak ) edo kanporatzailetaz aparte badago beste oreka-
+puntu mota, alde batetik so-
+luzioak erakartzen ditu eta bestetik urruntzen dituena. Azken puntu hauek nodoak
+dira eta f funtzioaren erro anizkoitzekin erlazionatutak daude. Adibidez azken
+hauetako bat y = (y − 1)2 ekuazioak erakusten digu y = 1 puntuan f = 0 eta
+df /dy = 0 izango baitira. Oreka-
+puntuaren inguruko soluzioen marrazkiak an 3.11
+irudian c) sailean ikus ditzakegu. Oreka-
+puntuen sailkapena zehazteko ondoko teo-
+rema proposatuko dugu.
+41
+
+1
+2
+3
+4
+y
+-4
+-2
+0
+2
+4
+f y
+a
+1
+3
+4
+b
+0
+1
+2
+x
+1
+3
+4
+y x
+c
+Irudia 3.10: (a) f (y) = (y −1)(y −3)(y −4) funtzioaren graﬁka, (b) y = f 
+(y) ekua-
+zioaren fase-diagrama eta (c) oreka-puntuen arteko soluzioen portaera.
+Teorema 3.2.3 (Oreka-puntuen sailkapena) Demagun y = f (y) ekuazio dife-
+rentziala, y0 oreka-puntua eta f y-
+rekiko diferentziagarria. Ondoko arauen bitartez
+puntuaren izaera zehaztu dazakegu.
+1. Baldin df (y0)/dy < 0 bada, orduan y0 oreka-puntu egonkorra da (zuloa).
+2. Baldin df (y0)/dy > 0 bada, orduan y0 oreka-puntu ezegonkorra da (iturria).
+3. Baldin df (y0)/dy = 0 bada, orduan y0-ren izaera zehazteko informazio gehia-
+go beharko dugu eta ezin dugu ziurtatu zein motakoa den.
+3.3
+Zenbakizko Metodoetarako sarrera
+Orain arte ikusi ditugun ekuazio diferentzial gehienak askatu genitzake, baina bizi-
+tza errealaren problemetan azaltzen direnak gehienetan ezin dira metodo analitikoen
+bidez askatu. Ekuazioetatik informazioa lortzeko, soluzio zehatzetaz aparte, beste
+tresnak aurkeztu ditugu ere. Adibidez oreka-puntuak eta planoaren eremuak non
+soluzioak gorakorrak ala beherakorrak diren aztertu egin ditugu. Baina ezaugarri
+horiek soluzioen portaera asintotikoa (limx→±∞ y
+(x)) baino ez digute adierazten,
+eta askotan (x0, y0) lekugunetik igarotzen den soluzio-
+kurbaren datu zehatzak jakin
+behar ditugu. Atal honetan ekuazio diferentzialen soluzio hurbilduak kalkulatzeko
+42
+
+a
+b
+c
+Irudia 3.11: Oreka-puntuen hiru motak: a) Puntu egonkorra 
+(zuloa), b) puntu eze-
+gonkorra (iturria) eta c) nodoa.
+zenbakizko metodoak ikasiko ditugu. Orokorrean eragiketa ugari burutuz soluzioen
+hurbilketa onargarriak kalkula daitezke. Horretarako y = f 
+(x, y) ekuazio diferen-
+tziala eta y(x0) = y0 hastapen-baldintza baino ez dugu behar. Beno, ekuazioaren
+eskubiko gaiari, f -ri, eta beronen y-rekiko deribatuari, ∂f /∂y-
+ri, jarraiak izatea es-
+katuko diegu, aurretik ikusitako funtsezko teoremak describatzen dituen soluzioaren
+existentzia eta bakartasuna ziurtatzeko. Zorionez, gaur egun ordenagailuek zenba-
+kizko eragiketak oso arin eta zehazki burutzen dituzte eta horregatik soluzio hurbil-
+duak oso tresna eraginkorra bihurtu dira.
+Aurrerantzean edozein liburuan aurkitu dezakegun “Euler” eta “Runge-Kutta”
+bezelako zenbakizko metodoen eraginkortasuna aztertuko dugu.
+3.3.1
+Euler-en metodoa
+Malda eremuak XY planoaren (x0, y0) puntuetan ekuazio diferentzialaren solu-
+zioen ukitzaileak aurkezten dizkigu. Ukitzaileek puntuaren ingurunean soluzioaren
+portaera linealizatua adierazten dute. Horregatik 
+[a, b] ∈ R tartean soluzioaren
+hurbilketa eraiki nahi badugu {x0 = a, x1, ..., xn = b} puntu-multzoa ([a, b]-
+ren
+diskretizazioa) aukeratu dezakegu eta diskretizazioaren 
+(xi, yi) puntu batetik hu-
+rrengora f (xi, yi) maldako zuzenetik mugi gaitezke 
+(xn, yn) guneraino. Funtzioen
+ukitzaileek bilakaeraren zati lineala erakusten digute, hau da, Taylor-
+en garapena-
+ren lehenengo bi terminoak. Soluzioaren ibilbidea kurba okertua denean, hurbilketa
+43
+
+linealak errorea ekarriko du. Baldin soluzioa segmentu linealetaz osatutako poli-
+gonalaz hurbildu nahi badugu, hainbat eta urrats laburragoak hartu orduan eta
+zenbakizko emaitzaren doitasun handiagoa (errore txikiagoa) lortuko dugu.
+Demagun y(x0) = y0 hastapen-baldintza betetzen duen y = f(x, y) ekua-
+zioaren soluzioa, hau da, (x0, y0) puntutik pasatzen dena. X ardatzean h urrats
+laburra hartzen badugu eta x1 = x0 + h puntuan soluzioaren balioa ezagutu nahi
+badugu, orduan batazbesteko balioaren teorema ondoko eraz aplika dezakegu,
+(3.17)
+y(x1) − y(x0) = y (ξ0)(x1 − x0) = hf ξ0, y(ξ0) ,
+non ξ0 ∈ (x0, x1).
+Noski, h urratsa behar bezain txikia bada, orduan f funtzioa (x0, x1) tartean
+gehiegi aldatuko ez delakoan gaude eta ondorioz
+(3.18)
+f ξ0, y(ξ0) ≈ f(x0, y0) ⇒ y(x1) ≈ y0 + hf(x0, y0).
+Emaitz hurbildu hau Taylor-en garapenetik ondoriozta dezakegu ere y(x0)-
+an oina-
+rritutako y(x1)-ren garapenaren soilik lehenengo bi terminoak kontutan hartuz,
+(3.19) y(x1) = y(x0) + y (x0)(x1 − x0) +
+y (x0)
+2
+(x1 − x0)2 + · · · ≈ y0 + hf(x0, y0).
+Azken balio hau y1 izendatuko dugu eta prozesu hau koherentea denez, orduan
+x1, y(x1) benetako soluziotik (x1, y1) puntua oso urruti ez dagoela uste dugu.
+{x0, x1, x2, ...} non xi = x0 + i h diren, diskretizazioaren puntuetan ekuazio di-
+ferentzialaren soluzio hurbildua ezagutu nahi badugu, ikusitako prozesua jarraituz,
+hurrenez-hurren puntu batetik hurrengora hurbilketaren balioa kalkulatuko dugu,
+(3.20)
+yi = yi−1 + hf(xi−1, yi−1).
+{
+(xi, yi)}ni=0 puntuetatik pasatzen den poligonala ordenagailuaren bidez erraz kalkula
+daiteke eta benetako soluzioa hurbilduko du. Hainbat eta urrats laburragoak, orduan
+eta hurbilketa zehatzagoa lortuko dugu 3.12 irudian antzeman dezakegunez. Irudian
+nabari ikusten da h = 0.1 urratsaz eraikitako hurbilketa soluzio zehatzetik askoz
+gertuago dagoela beste biak baino.
+Zenbakizko metodoak konsistentea izan behar du, hau da, soluzioaren y(x1) ba-
+lio bakoitza hurbiltzerakoan hainbat eta h urrats laburragoak hartu, orduan eta
+errore txikiagoa sortuko da eta h → 0 doanean errore hori 0-rantz konbergitu-
+ko du. Adibidez Euler-en metodoaren kasuan, y1 = y(x0) + hf(x0, y
+(x0))), errorea
+Taylor-en formulaz baliozta dezakegu,
+(3.21) y(x1) = y(x0) + hf(x0, y(x0)) +
+h2
+2
+d
+dx
+f (ξ, y(ξ))
+⇒
+y(x1) − y1 = O(h2).
+44
+
+0
+1
+2
+3
+2
+4
+6
+h 0.1
+h 0.5
+h 1.0
+y x
+Irudia 3.12: y(0) = 1.4 hastapen-baldintza betetzen duen y = y − 1 ekuazioaren
+soluzioa eta Euler-en metodoak eraikitako hiru hurbilketak 
+[0, 3] tartean h = 0.1,
+h = 0.5 eta h = 1 urrats-luzera ezberdinetaz.
+Hemen O(h2) adierazpenak urrats batean sortu den errorea h2-ren tamai-
+nukoa dela esan nahi du. Baldin h luzeradun hurratsak emanez x0 = 0 irteera-
+puntutik x = p puntu ﬁnkoraino soluzio hurbildua kalkulatzen badugu, orduan
+urrats kopurua
+k = (p − 0)/h izango da. Urrats batean Euler-en metodoak
+sortutako errorea O(h2) ordenakoa da eta x = p balioa betetzeko behar diren
+k = p/h urrats kopurua biderkatzen badugu, amaieran pilatutako errorea h tamai-
+nukoa edo O
+(h) ordenakoa da. 3.3.1 taulan urrats luzeraren murrizketaren eragina
+argi antzematen da, h = 0.01 hartuz emaitz hurbildua askoz zehatzagoa da urrats
+luzeagoak aukeratuz baino.
+x
+y(x)
+y∗
+0.01
+y∗
+0.1
+y∗
+0.5
+x=0.0 1.4
+1.4
+1.4
+1.4
+x=1.0 2.0873 2.0819 2.0375 1.9
+x=2.0 3.9556 3.9264 3.691
+3.025
+x=3.0 9.0342 8.9154 7.9798 5.5563
+Taula 3.1: y = y − 1, y(0) = 1.4 ekuazioaren soluzio zehatza y
+(x) eta hurbilduak
+y∗
+h Euler-ren metodoaz eta urrats-luzera ezberdinetaz (h=0.01,h=0.1,h=0.5).
+Euler-en metodoa arrunta eta explizitoa da, iterazio bakoitzean behar diren
+datu guztiak ezagunak direlako. Badaude beste metodo askoz zehatzagoak eta era-
+ginkorragoak Euler-ena baino. Adibidez ondoko bi metodoak aldakuntz txiki bat
+45
+
+sartzen dute deribatuaren balioztatze-puntuan eta konbergentzi-
+orden 1 irabasten
+du, hau da, urrtas bat betetzeagatiko errorea O(h3) da.
+Deﬁni dezagun x0-an F1 = f(x0, y(x0)) eta F2 = f(x0 + h, y(x0) + hF1) deri-
+batuaren balioak. Orain ondoko bi metodo explizitoek O(h3) errore-ordena emango
+digute:
+(3.22)
+y1 = y0 + hF1
+(Euler-en metodoa).
+y1 = y0 + hF2
+(Euler-en metodo aldarazia).
+y1 = y0 +
+h
+2
+(F1 + F2)
+(Heun-en metodoa).
+Froga dezagun Heun-en metodoaren errorea O(h3) ordenakoa dela Taylor-en
+garapenaren bidez. Adierazpidea errazteko har dezagun x = x0 eta y = y(x0).
+Baita erabil dezagun deribatuen ondoko hedapenak,
+(3.23)
+y(x1) = y(x) + hy (x) +
+h2
+2
+y (x) +
+h3
+6
+y (x) + · · ·
+y (x) = f (x, y),
+y (x) =
+df (x, y)
+dx
+=
+∂f (x, y)
+∂x
++
+∂f (x, y)
+∂y
+∂y
+∂x
+= fx + ffy,
+y (x) = fxx + ffxy + (fx + ffy)fy + f(fxy + ffyy).
+Beraz,
+(3.24)
+y(x1) = y(x) + hf +
+h2
+2
+(fx + ffy) + O(h3).
+Orain Heun-en metodoaren terminoen Taylor-en garapena idatziko dugu,
+(3.25)
+F1 = f(x, y) = y (x),
+F2 = f(x + h, y + hF1) =
+f (x, y) + hfx + hffy + h
+2
+2 (fxx + f fxy + f
+2fyy) + O(h3) =
+y (x) + hy (x) + O(h2)
+Ondorioz Heun-en metodoaren formularen garapena hauxe da,
+(3.26)
+y1 = y(x) +
+h
+2
+(F1 + F2) = y(x) +
+h
+2
+y (x) + y (x) + hy (x) + O(h2) =
+y(x1) + O(h3) → y1 − y(x1) = O(h3).
+Orokorrean y funtzioaren deribatuak f deribatuen menpean adieraziz eta
+berauek konbinatuz orden altuko metodoak gara daitezke. Metodo hauek Runge-
+Kutta-renak dira. Adibidez ondoko metodoa 4. ordenako Runge-Kutta-ren ohizko
+46
+
+metodoa da,
+y1 = y(x) +
+h
+6
+(F1 + 2F2 + 2F3 + F4)
+non
+(3.27)
+
+
+
+
+
+
+
+F1 = f(x, y),
+F2 = f(x + h/2, y + hF1/2),
+F3 = f(x + h/2, y + hF2/2),
+F4 = f(x + h, y + hF3).
+3.3.1 taulan y = (xy − y2)/x2, x(1) = 1 ekuazioaren zenbakizko soluzioa eta
+ondorioztutako errorea [1, 3] tartean h = 1/128 urrats-luzerarekiko 4. ordenako
+Runge-Kutta-ren metodoaz erakusten da. 10−7-ko doitasuna bikaina da.
+x
+y∗
+y(x) − y∗
+x=1.0 2.0
+0.0
+x=1.5 1.65661 4.77 ∗ 10−7
+x=2.0 1.67624 5.29 ∗ 10−7
+x=2.5 1.76517 7.83 ∗ 10−7
+x=3.0 1.87663 5.96 ∗ 10−7
+Taula 3.2: y = (xy − y2)/x2, x(1) = 1 ekuazioaren 4. ordenako Runge-Kutta-ren
+metodoak emandako soluzio hurbildua eta errorea h = 1/128 urrats luzerarekin.
+Badaude beste motako zenbakizko metodoak, inplizitoak hainzuzen. Metodo
+hauen formuletan oraindik kalkulatu gabe dauden puntuetan y funtzioaren deriba-
+tuaren balioak erabiltzen dira. Adibidez, Euler-
+en formula inplizitoaren adierazpena
+hauxe da,
+(3.28)
+yn+1 = yn + hf(xn+1, yn+1)
+Hemen f (xn+1, yn+1) ezin da zuzenean balioztatu yn + 1 kalkulatzeke dagoelako.
+Formula honen helburua yn+1 zuzena kalkulatzeko yn-tiko bidean y-k eduki behar-
+ko lukeen malda erabiltzea da. Noski, 3.28 formulak urrats bakoitzean yn+1 eze-
+zagunerako ekuazio bat halabehartzen du eta gehienetan ezlinela izango da, beraz
+bisekzio edo Newton-en bezelako metodoa erabili beharko da. Metodo honen emai-
+tza doitasun handikoa izango da baina hori bai, kosto konputazionala garestia da
+erebai.
+47
+
+3.4
+Ingeniaritza kimikorako lehenengo ordenako
+ekuazio diferentzialen aplikazioak
+Ingeniaritza kimikoak ikertzen dituen prozesu ugaritan ekuazio diferentzialak ager-
+tzen dira. Kurtso honetan ohizko ekuazioak identiﬁkatzera, beraietatik informa-
+zio baliogarria eskuratzera eta, ahal denean, askatzera ikasiko dugu. Beste ikasgai
+espeziﬁkoetan agertzen diren ekuazio diferentzialak berezko jatorria eta eraikitze-
+prozesua aztertuko da. Hemen erreakzio kimikoen zinetika edota masa eta energia-
+balantze arruntak aurkeztuko ditugu.
+3.4.1
+Ekuazio diferentzialak zinetika kimikoan
+Erreakzio kimikoa erlazio edo ekuazio estekiometrikoaren bidez adieraz daiteke,
+(3.29) aA + bB + · · · = pP + qQ + · · · ⇔ 0 = −aA − bB − · · · + pP + qQ + · · · ,
+non A, B, ... erreakzioa osatzen duten sustantzia kimikoen 
+(erreaktiboak) formulak
+diren, a, b, ... berauei dagozkien molekula kopuruak eta P, Q, ... erreakzioak ematen
+dituen sustantzia berrien 
+(produktuak) formulen adierazpenak eta p, q, ... berauen
+molekula kopuruak. Hemen −a, −b, ..., p, q, ... zenbaki estekiometrikoak dira.
+Erreakzioaren abiadura kontzentrazioaren denborarekiko aldakuntza (kontzen-
+trazioa = mol-kopurua/bolumena-
+unitatea) zati zenbaki estekiometrikoa. Erreakzio
+orokorretan zenbaki hau berdina da sustantzia guztietarako,
+(3.30)
+v = −
+1
+a
+d[A]
+dt
+= −
+1
+b
+d[B]
+dt
+=
+1
+p
+d[P ]
+dt
+=
+1
+q
+d[Q]
+dt
+= · · ·
+Une bakoitzean erreakzioaren abiadura faktore askoen menpean dago, orduko erreak-
+tibo eta produktuen kantitatea, tenperatura, presioa, hezetasuna,... Hala ere hasiera
+honetan erreakzio motarik bakunena aztertuko dugu, masa-
+ekintzaren legea hain zu-
+zen, erreakzioaren abiadura soilik erreaktiboen kantitatearen araberakoa dagoelarik.
+Kasu hauetan oinarrizko erreakzioen abiadura ondoko gisakoa da,
+(3.31)
+v = k[A]α[B]β,
+non k erreakzioaren abiadura-
+konstantea den eta α, β, ... parametroek erreakzioa-
+ren ordena deﬁnituko duten. Erreakzioa α + β + · · · ordenakoa dela diogu.
+Adibidez bi erreaktiboetako eta bigarren ordenako (A + B → produktua) mo-
+duko erreakzioak ondoko ekuazio diferentzialaz adieraz daiteke,
+(3.32)
+v = −
+d[A]
+dt
+= −
+d[B]
+dt
+= k[A][B].
+48
+
+Baldin x(t) t une arte erreakzionatu den A-ren edo B-ren molekula kopurua bada
+eta hasieran [A](0) = a eta [B](0) = b baziren orduan
+(3.33)
+v = −
+d[A]
+dt
+= −
+d(a − x)
+dt
+=
+dx
+dt
+= k(a − x)(b − x).
+Baldin erreaktore batean garatzen diren bi erreakzio ezberdinetan sortutako pro-
+duktua sustantzia berdina bada, orduan sustantzia honen erreakzio-
+abiadura askeak
+diren bi erreakzioen batura da.
+Adibidea 3.4.1 Demagun erreaktore batean aldiberean gertatzen diren ondoko bi-
+garren ordenako bi erreakzioak,
+A + S
+k1
+−→ X
+X + S
+k2
+−→ Y
+Baldin erreakzioaren hasieran S-ren kontzentrazioa 2 mol eta A-
+rena mol 1 bada eta
+baldin k2/k1 = 2 bada, zenbat da X-
+ren proporzioa sustantzia guztien baturarekiko
+A-ren erdia gastatu denean?
+Soluzioa: [A], [S], [X] eta [Y ] erreakzioetan parte hartzen duten sustantzien
+kontzentrazioak izanik, ondoko lau ekuazio linealen sistema azalduko litzaiguke
+d[A]
+dt
+= −k1[A][S],
+d[Y ]
+dt
+= k2[X][S],
+d[X]
+dt
+= k1[A][S] − k2[X][S],
+d[S]
+dt
+= −k1[A][S] − k2[X][S].
+Problema honen soluzioa oraindik ez dakigu ebazten, hala ere, eskatzen diguten pro-
+porzioa [A] = 1/2 mol denean, ondoko hau da, besterik ez,
+(3.34)
+[X]
+[A] + [S] + [X] + [Y ]
+.
+Ahal baldin badugu (3.34) kantitatea [A] magnitudearen menpean adieraztea
+komeni zaigu, orduan askatzeko gai den ekuazioa eraiki dezakegu. Zorionez 
+[X] eta
+[Y ] magnitudeak [A] eta 
+[S] aldagaien funtziopekoak dira. Katearen araua aplikatuz
+ondoko adierazpena eskura dezakegu,
+(3.35)
+d[X]
+dt
+=
+d[X]
+d[A]
+d[A]
+dt
+⇒
+d[X]
+d[A]
+=
+d[X]/dt
+d[A]/dt
+,
+49
+
+d[A]/dt = 0 denean. Orain (3.34) ekuazioetatik d[X]/d[A]] deribatuaren balioa
+(3.35) adierazpenean ordezkatuz [A] aldagai askearekiko eta 
+[X] menpeko aldagaia-
+rekiko ondoko 1go ordenako ekuazio lineala agertzen zaigu,
+(3.36)
+d[X]
+d[A]
+=
+d[X]/dt
+d[A]/dt
+=
+k1[A][S] − k2[X][S]
+−k1[A][S]
+= −1 +
+k2
+k1
+[X]
+[A]
+= −1 + 2
+[X]
+[A]
+.
+Ebazpena burutzeko aurreko kapituluan ikusitako 1go ordenako ekuazio diferentzial
+linealetarako metodoa aplikatuko dugu [X]-rako ondoko adierazpena aurkituz,
+(3.37)
+[X] = e
+2
+[A] d[A]
+−e−
+[A]
+0
+2
+z dz
+d[A] + K = [A] + K[A]2.
+t = 0 unean hastapen-baldintza [A] = 1 eta [X] = 0 dira hain zuzen, beraz
+integrazio-konstantearen balioa K = −1 da eta [X]-ren balio zehatza hau da
+(3.38)
+[X] = [A] − [A]2.
+Eraberean [Y ]-rako ekuazio diferentziala eraiki daiteke [A] aldagai askearen
+menpean. Oraingo honetan aldagai banatuetako ekuazio bakuna agertzen da,
+(3.39)
+d[Y ]
+d[A]]
+=
+d[Y ]/dt
+d[A]/dt
+=
+k2[X][S]
+−k1[A][S]
+= −2
+[X]
+[A]
+= −2
+[A] − [A]2
+[A]
+= −2 + 2[A].
+Soluzioa erraz kalkulatuko dugu integrazio zuzenaren bidez, [Y ] = −2[A] + 
+[A]2 + K.
+t = 0 unean hastapen-baldintza naturala ezarriz [A] = 1 eta 
+[Y ] = 0, K = 1 da eta
+[Y ]-rako soluzio zehatza hau da,
+(3.40)
+[Y ] = −2[A] + [A]2 + 1.
+Horretaz gain (3.34) sistemaren berdintzak erabiliz ondoko erlazioa lortu deza-
+kegu,
+(3.41)
+0 =
+d[S]
+dt
++
+d[X]
+dt
++ 2
+d[Y ]
+dt
+=
+d [S] + [X] + 2[Y ]
+dt
+.
+Bistakoa denez [S] + [X] + 2[Y ] = k konstantea mantenduko da eta t = 0 unean
+[S] = 2 eta [x] = [Y ] = 0 direnez, k = 2 izan behar du eta [S]-
+ren balioa erraz
+bakanduko dugu,
+(3.42)
+[S] = 2 − [x] − 2[Y ] = 3[A] − [A]2.
+Orain [X]-ren proporzioa edo zatiki-molar-
+a kalkulatzeko osagai guztiak dauzkagu,
+(3.43)
+[X]
+[A] + [S] + [X] + [Y ]
+=
+[A] − [A]2
+3[A] − [A]2 + 1
+[A] = 1/2 denean [X]-ren zatiki-molar-a zalantzarik gabe 1/9 da.
+50
+
+3.4.2
+Masa-balantzeak eta energia-balantzeak
+Naturan masa ez da sortzen ezta deusestatzen ere eta energiarekin gauza bera ger-
+tatzen da. Gehienez energia antzaz alda daiteke 
+(energia zinetikotik potentzialera
+hala alderantziz) baina ezin da deusestatu. Ingeniaritza kimikoan bi lege ﬁsiko hauek
+askotan erabili ohi dira problemak ebazteko oso tresna preziatuak baitira.
+Masa-balantzeen adibideak
+Atal honetan argi-
+izpia piztutzeko asmoz urtegi kutsatuaren bezelako adibide errea-
+la aztertuko dugu. Masa-kontserbaziori esker badakigu produktu kutsatzailearen
+kantitatea hazitzen bada nonbaitetik etorri dela edo barruan dauden sustantzi ba-
+tzuen erreakzioarengatik sortu dela. Gainera, baldin erreakzio batek kutsatzai-
+learen jatorria izan bada orduan beste produktuen kantitatea gutxitu behar izan
+da. Baldin t unean dagoen kutsatzailearen kantitatea ezagutzen badugu eta on-
+dorengo t + ∆t unean bilakatutako kantitatea zehaztu nahi badugu orduan masa-
+kontserbazioaren oinarriaren bidez ondoko balantzea plazaratu dezakegu,
+Kutsatzaile-
+kantitatea
+t+∆t unean
+=
+Kutsatzaile-
+kantitatea
+t unean
++
+[t, t + ∆t]
+bitartean
+sartu
+den
+kutsatzaile-
+kantitatea
+−
+[t, t + ∆t]
+bitartean
+atera
+den
+kutsatzaile-
+kantitatea
++
+[t, t + ∆t]
+bitartean
+bes-
+te
+sustantzien
+erreakzioe-
+taz
+sortu
+den
+kutsatzaile-
+kantitatea
+Goian ikusi dugun bezelako masa-balantze hauek oso erabilgarriak dira neu-
+rri ﬁsikoak denbora tarte ﬁnkoetan ∆t-ro hartzen direnean. Baina ingeniaritza
+kimikoan masa-ﬂuxuek neurri experimentalak nagusitzen dute. Masa ﬂuxuak den-
+bora unitatearekiko masa-kopuruaren aldaketa da. Kontzeptu hau erabat ulertzeko
+aurreko berdintzaren gaiak zati ∆t zatituko ditugu,
+Kutsatzaile-
+kantitatea
+t+∆t unean
+−
+Kutsatzaile-
+kantitatea
+t unean
+∆t
+=
+[t, t + ∆t]
+bitartean
+sartu
+den
+kutsatzaile-
+kantitatea
+∆t
+−
+[t, t + ∆t]
+bitartean
+atera
+den
+kutsatzaile-
+kantitatea
+∆t
++
+[t, t + ∆t]
+bitartean bes-
+te sustantzien
+erreakzioetaz
+sortu
+den
+kutsatzaile-
+kantitatea
+∆t
+51
+
+Baldin berdintzaren ezkerraldeko gaia masaunitatetan neurtutako m materia
+bada, orduan
+m/ t adierazpideaz idatz daiteke eta denbora-apur horiek 0-rantz
+doazenean aldakuntz horren limitea dm/dt da. Deribatu honi masa-pilaketa esan-
+go diogu eta masa-sarrera (ms), masa-irteera (mi) eta erreakzioek sortutako 
+(me)
+masaren aldakuntzaren menpean dago,
+(3.44)
+dm
+dt
+=
+dms
+dt
+−
+dmi
+dt
++
+dme
+dt
+.
+Masa-balantzeko problemetan bi gauz kontutan hartu behar ditugu, izan ere,
+• Erreakzioa eremu mugatu batean betetzen da. Eremua urtegia, depositoa,
+ibaia hala beste ingurunea izan daiteke. Erreakzioa osatzen duten sustantziak
+gehienetan isuria hala gasaren moduan agertzen dira eta materia-bolumen hori
+konstantea hala aldagarria izan daiteke. Batzuetan itur betetik produktu-
+sarrera badago, orduan eremuan dagoen materia-bolumena hazitzen da maila
+zehatz bateraino. Maila hori gainditzen denean zulo batetik ustutzen hasten
+da materia-bolumena maila maximo horretan mantentzeko. Ingurune honi
+bolumen-kontroleko eremua esango diogu.
+• Eremuaren gune ezberdinetan produktu-kutsatzailearen kontzentrazioa ezber-
+dina izan daiteke. Hala ere eredu matematikoa bakuntzeko eremuaren puntu
+guztietan kontzentrazioa berdina dela suposatuko dugu, honek esan nahi du
+eremuaren edukina nahasten ari direla gelditu gabe. Honela lagin experimen-
+talak edozein puntuan neurtu daitezke (CSTR eredua, Continuously Stirred
+Tank Reactor ).
+Ondorengo erreakzioen formulazio matematikoetan CSTR eredua ontzat har-
+tuko dugu, beraz baldin eremuaren puntu guztietan materiaren kontzentrazioa t unean
+c(t) bada eta dagoeneko bolumena B(t) orduan masa-pilaketaren bilakaera hauxe
+da,
+(3.45)
+dm
+dt
+=
+d c(t)B(t)
+dt
+.
+Masa-balantzeko bi problema mota daude. Lehenengoak kontzentrazioa eta
+bolumena konstanteak mantentzen direnekoak, problema iraunkorrak dira hain zu-
+zen eta hemen dm/
+dt = 0. Bigarrenetan sarrerako edo irteerako materiaren kantita-
+tea aldatzen da denbora aurrera doala edo kontzentrazioa aldatzen da edo bolumen-
+kontroleko eremuan bolumena aldatzen da edo materiaren kantitatea denborarekiko
+aldarazten duen, dm/dt = 0, beste arrazoi bat gertatzen da.
+52
+
+Eremuaren ms materia-sarrera (masa/bolumena) unitatetan sartzen da eta be-
+ronen bilakaera t unean Qs(t) sarrera-korrontea (bolumena/denbora) eta cs
+(t) sarrera-
+kontzentrazioaren menpean dago,
+(3.46)
+˙
+ms(t) = Qs(t)cs(t).
+Eraberean CSTR eredupean eremuaren barruan dagoen kontzentrazioa t unean
+gune guztietan c(t) bada eta irteera-korrontea Qi(t) bada, orduan mi materia-
+irteeraren bilakaera beste hau da,
+(3.47)
+˙
+mi(t) = Qi(t)c(t).
+Eremuaren barruan dauden sustantzien erreakzioen ondoriozko produktu kutsatzai-
+learen sorrera positiboa 
+(zoritxarrez sustantziek kutsatzaile kantitate gehiago sortzen
+dute) edo negatiboa 
+(eremuaren barruan produktu kutsatzailea desegiten da) egiten
+da. Produktu kutsatzailearen irabaste edo galera hau ce sortutako kontzentrazioa-
+ren funtziopekoaz neurtzen da
+(3.48)
+˙
+me(t) =
+d ce(t)B(t)
+dt
+.
+Materia-sarrera, materia-irteera eta materia-sorreraren ondorioz masa-
+balantzearen
+bilakaerako ondoko ekuazioa daukagu,
+(3.49)
+d c(t)B(t)
+dt
+= Qs(t)cs(t) − Qi(t)c(t) +
+d ce(t)B(t)
+dt
+.
+Orokorrean sarrera kontzentrazioa eta sarrera eta irteera-korronteak konstan-
+teak dira eta (3.49) ekuazioa beste hau bihurtzen da,
+(3.50)
+d c(t)B(t)
+dt
+= Qscs − Qic(t) +
+d ce(t)B(t)
+dt
+.
+Baita erreakzio-kimikoen menpeko materia-sorrerak eredu ezagun batzuk ja-
+rraitzen ditu. Hona hemen ohizko egoera batzuk,
+• Materia iraunkorra: Erreakzio kimikoen ondorioz materia-sorrerarik ez da-
+go, dme/dt = 0.
+• 0 ordenako galera: Materia-kutsatzailearen galera konstantea da, dce(t)/dt =
+−k, k > 0, beraz dme/dt = −kB.
+• 1 ordenako galera: Materia-kutsatzailearen galera CSTR-an dagoan ma-
+teriaren kopuruarekiko proportzionala da, dce(t)/dt = −kc(t), k > 0, beraz
+dme/dt = −kBc(t).
+53
+
+• Hautazko produkzioa: CSTR ereduan dauden beste sustantzien kontzen-
+trazioen ondoriozko produkzioa.
+Adibidea 3.4.2 (egoera iraunkorra CSTR batean 1 ordenako galerarekin) Lantegi
+batean sortzen den hondar-materiala CSTR-az tratatzen da kutsadura 1.go orde-
+nako zinetikaz deusestatzen duen erreakzioaren bitartez, dce(t)/dt = −kc(t) non
+k = 0.216/egunekoa den. Erreaktorearen bolumena 500m3-koa da, sarrera eta
+irteera-korronteak berdinak dira, 50m3/eguneko, eta sarrera-
+isurkiaren kutsadura-
+kontzentrazioa 100mg/l-koa da. Zenbatekoa da irteera-kotzentrazioa?
+Soluzioa: sarrera eta irteera-korronteak berdinak direnez CSTR-an bolumena-
+ren aldketarik ez dago eta sarrera-
+kontzentrazioan denborarekin ez dago aldaketarik
+ezta ere. Egoera iraunkorra da, dm/
+dt = 0 eta masa balantzerako ekuazioa hau da,
+0 = Qscs − Qic + dme
+dt
+= 50000 l
+egun · 100
+mgr
+l
+− 50000 l
+egun · c
+mgr
+l
+− kBc =
+= 5 · 106 mgr
+egun − 5 · 10
+4
+l
+egun c −
+0.216
+egun 5 · 10
+5lc.
+Orain aurreko berdintzatik c askatuz kontzentrazioa eskuratuko dugu,
+c =
+5 · 106mgr/egun
+(5 · 104 + 0.216 · 5 · 105)l/egun
+= 31.65mgr/l.
+Adibidea 3.4.3 (egoera ez-iraunkorra CSTR batean 1 ordenako galerarekin) Au-
+rreko adibidearen kutsaduren tratamendurako prozesu industrialak gelditu behar du.
+Martxan jartzeko t = 0 unean sarrera-kontzentrazioa 0-an ezartzen da (ur gar-
+bia). Zenbatekoa da denboraren funtziopeko irteera-
+kontzentrazioa? Zenbat denbora
+igaroko da erreaktorearen kontzentrazioa aurreko adibidean kalkulatutako balioaren
+10%-ra iritsi arte?
+Soluzioa: Sarrera-kontzentrazioa aldatzen denez pilaketa dago eta egoera az-
+iraunkorra da,
+dc(t)B(t)
+dt
+= B
+dc(t)
+dt
+,
+Bolumena konstantea delako. Masa-balantzea honela geratuko da
+B
+dc(t)
+dt
+= 0 − Qic(t) − kBc(t) ⇔
+dc(t)
+dt
+= −c(t)
+Qi
+B
++ k .
+Azken problema hau c(0) = 31.65mgr/l hastapen-
+baldintzarekiko aldagai banatueta-
+ko ekuazio diferentziala da . c
+(0) geldiunearen ondorengo erreaktorearen kontzentra-
+zioa da, hain zuzen. Aldagai bakoitzaren terminoak ekuazioaren berdintzaren aldetan
+ezberdinetan banatuz eta integratuz, ondoko soluzio orokorra lortzen dugu,
+ln(31.65) − ln .c(t) =
+Qi
+B
++ k t ⇔ c(t) = 31.65e−(Qi/B+k)t.
+54
+
+Gainera hastapen-baldintzak konstantearen balioa halabehartzen du,
+Qi
+B
++ k =
+50m3/egun
+500m3
++
+0.216
+egun
+=
+0.316
+egun
+⇒ c(t) = 31.65e−(0.316/egun)t.
+Hau da denboraren funtziopeko kontzentrazioaren adierazpena.
+Beste aldetik hasierako kontzentrazioaren 10%-ra, hau da 3.165, igaro arte pasa
+behar duen denbora aurreko adierazpenetik askatuko dugu,
+3.165 = 31.65e−(0.316/egun)t ⇒ −0.316t = ln 0.1 = −2.303 ⇒ t = 7.3 egun.
+Adibidea 3.4.4 
+(sustantzia iraunkorrarekiko eta bolumena konstantearekiko egoera
+ez-iraunkorra CSTR batean) CSTR-ak 1000 l ur garbia ditu eta bere barrualdera 1
+kgr/l kontzentrazioko nahastura gatzaduna 6 l/
+minutuko abiaduraz sartzen da beste
+iturritik eremuaren nahastura orokorra baita 6 l/
+minutuko irtetzen den bitartean.
+Noiz izango da depositoaren kontzentrazioa 1/2 kgr/l?
+Soluzioa: CSTR-an t unean dagoen gatzaren kontzentrazioa c(t) da eta
+hasieran ezer ez dagoenez, c(0) = 0. Ez dago gatz-
+sorrera erreakzioarengatik, beraz,
+masa-balantzea ekuazio garbia ematen digu:
+Pilaketa = sarrera - iteera.
+Pilaketa B · dc(t)/dt da, bolumena B = 1000 l izanik eta hurrenez hurren
+sarrera eta irteera korronteak:
+Sarrera: Qscs = 6l/min · 1kgr/l = 6kgr/min,
+Irteera: Qic(t) = 6l/min · c(t) = 6c(t)kgr/min.
+Gatz-
+kontzentrazioa ondoko hastapen baldintzarekiko ekuazio diferentzialaz agin-
+duta dago,
+dc(t)
+dt
+=
+6 − 6c(t)
+1000
+,
+c(0) = 0.
+Ekuazio hau aldiberean aldagai banatuetakoa da eta homogenoa ere eta ekuazio haue-
+tarako edozein metodoaz aska daiteke ondorengo adierazpena lorturik,
+c(t) = 1 − e−
+3t
+500
+.
+Eskatzen diguten datua hauxe da, zenbat denbora igaro behar duen kontzentrazioa
+1/2kgr/l izan arte,
+1
+2
+= 1 − e−
+3t
+500
+⇒ t =
+500 ln 2
+3
+≈ 115.52min
+erantzuna da.
+55
+
+Energi-balantzeen adibideak
+Energia-
+kontserbazioaren legea fenomeno ﬁsiko ugariaren formulazioaren oinarrian
+dago. Lege horrek dioenez energia ez da sortzen ezta deusestatzen ere. Adibidez
+zentral termikoan elektrizitatea ekoizteko erretzen den ikatzak daukan energia beroa
+bihurtzen da. Beroa beste motako energia da, gero bero hori atmosferara igarotzen
+da eta zentraletan erabiltzen diren produktu batzuen hondakinak ibaietara doaz
+sustantzi kutsatzaileen moduan. Kutsadura horiek eta beroaren moduan inguru-
+menara igarotzen den energiak klimaren aldaketak ondorioztatzen dute. Horregatik
+energia-
+kontsumo arduragabeak ondorio larriak akr ditzake gaur egun eta are gehia-
+go etorkizunean.
+(Ariketa praktikoa: Gelatik irtetzen den azkenekoak argiak itzal ditzala)
+Aurreko atalean masa-balantzeen adibidetan ikusi dugun moduan hemen ere
+energia ”sustantzi” iraunkorra denez beronen mogimenduak eta itxura aldaketak
+ondoko formulaz baliozta ditzakegu. Hau bai, kasu honetan erreakzio kimikoak
+ondorioztatzen dituen terminoak ez dute parte hartzen balantze hauetan,
+Denboraren arabera-
+ko barne eta kanpo-
+ko energiaren alda-
+kuntza
+=
+Denbora unitateare-
+kiko energia sarrera
+−
+Denbora unitateare-
+kiko energia irteera
+Baliokideki ondoko ekuazioaz adieraz daiteke, non ˙
+Es eta ˙
+Ei hurrenez-hurren den-
+boraren unitatearekiko energiaren sarrera eta irtera ﬂuxuak diren,
+(3.51)
+dE
+dt
+= ˙
+Es − ˙
+Ei
+Energia-balantzetan oso eragile conplexuak parte har dezakete, baina guk ener-
+giatzat beroa hartzen duen eredu arrunt batzuk baino ez ditugu aztertuko. m ma-
+sarekiko gorputz bati T1 tenperaturatik T2-ra berotzeko transmititu behar zaion
+bero-kantitatea gorputzaren c bero-kapazitate espeziﬁkoaren funtziopeko formula
+baten menpean dago,
+(3.52)
+Q = mc(T2 − T1).
+Eredua bakuntzeko (T1, T2) tenperatura tartean c magnitudea konstantetzat hartu
+dugu.
+Adibidea 3.4.5 Berogailu elektrikoaz iturri batetik datorren 10oC temperaturako
+uda egokitzeko darabilgu. Berogailua potentzia gorenean martxan dago lagun batzuk,
+56
+
+bat besteraren atzetik, dutxatu egiten diren bitartean. Berogailuak martxa horretan
+5 Kw/segundu erabiltzen ditu eta dutxatik ateratzen den ura kantitatea 8 l/min-
+koa
+da. Berogailuan ondo isolaturik dagoela eta berotzen duen ur osoa beti tenperatura
+berdinean dagoela 
+(egoera geldikorrean dago) suposatuko dugu. Zein da berogailutik
+irtetzen den uraren tenperatura?
+Soluzioa: Bolumen-kontroleko eredua berogailuaren depositoa da. Depositoan
+sartzen den bero-
+energia bi bidetatik dator, izan ere, iturritik sartzen den urarena
+eta berogailuak darabilen elektrizitatearena. Irteera-
+energiaren iturria ateratzen den
+ur berotua da.
+Iturritik sartzen den uraren tenperatura depositoan dagoenarekin konparatzeko,
+berogailuan uraren erreferentzi-
+tenperatura ﬁnkatuko dugu, Ter. Iturritik sartzen den
+uraren tenperatura Ts = 10oC-koa da eta depositoarena handiagoa izango denez,
+iturritik sartzen den urak berogailuari pasatzen dion bero-kantitatea Qs = −mc
+(Ter−
+Ts) da. Beraz sarrera-energiaren ﬂuxua
+˙
+Es = ˙mc(Te − Ter) + 5Kw/s
+da. Hemen
+˙
+m sartzen den masaren ﬂuxua da (masa/denbora) unitatetan eta
+c (4190J/(kgroC) uraren bero-espeziﬁkoa.
+Beste aldetik berogailuak depositoaren urari beroa transmititu ondoren Ts-tik
+Ter-ra igarotzeko, deopositoan tenperatura T da eta ondorioz irteera-energia
+˙
+Ei = ˙mc(T − Ter)
+da. Berogailuan dagoen uraren egoera geldikorra dela suposatuz, dE/
+dt = 0, energia-
+balantzearen ekuazioa honela geratuko da,
+0 = ˙
+mc(Ts − Ter) + 5Kw/s − ˙mc(T − Ter) = ˙mc(Ts − T ) + 5Kw/s.
+Aurreko ekuaziotik T -rako adierazpena eskuratzen dugu,
+T = Ts +
+5
+˙
+mc
+.
+Orain c J/(kgroC) unitatetan daudenez, uraren dentsitatea ρ izanik, unitateen
+bildura honela adieraz daiteke,
+˙
+m = ρQ = 1
+kgr
+l
+· 8
+l
+min
+= 8
+kgr
+min
+c ˙
+m = 4190
+J
+kgr oC
+· 8
+kgr
+min
+= 33520
+J
+min oC
+5
+Kw
+s
+= 5 · 1000
+J
+s
+· 60
+s
+min
+= 3 · 105
+J
+min
+
+
+
+
+
+
+
+
+
+
+
+⇒ T = 10oC
+3 · 105J
+min
+33520J
+min oC
+= 18, 9oC.
+Ohar gaitezkenez erreferentzi tenperatura ariketaren askapenean zehar desagertu egin
+da. Beraz bere balioa ez da esangarria eta soluzioa berorren menpean ez dagoenez
+adibidez T = 0 aukera dezakegu.
+57
+
+Adibidea 3.4.6 CSTR batean H2SO4 azido sulfuriko 4536 l/h hoztu behar dira
+(bero espeziﬁkoa c = 0.36kcal/(kgr oC) ). Azidoa konstanteki 20oC-tan dagoen
+8m2 gainazaleko hodibihurriaz inguratutako depositoan 174oC sartuko dugu. Hodi-
+bihurritik azidorako bero-transmisioko koeﬁzientea 635Kcal/
+(hm2 oC) konstantekoa
+da. Azidoaren depositorako sarrera eta irteera-
+ﬂuxuak berdinak izanik, zenbat da
+t unean ateratzen den azidoaren tenperatura?
+Soluzioa: Adibide honetan hozte-eremua depositoa da. Baldin azidoaren bero-
+kapazitatea konstantea bada, orduan energia-balantzeko ekuazioa daukagu,
+dE
+dt
+= ˙
+Es − ˙
+Ei
+Azido sulfurikoak ematen duen beroarengatiko sarrera-energiaren ﬂuxua,
+˙
+Es = ˙mcTs.
+Azidoaren dentsitate erlatiboa ρ eta sarrera-ﬂuxua q izanik, masa-ﬂuxua (l/
+h uni-
+tatetan) ˙
+m = ρq izango da.
+Bestaldetik irteera-
+energia azido sulfurikoak transmititzen duen beroaz eta nahas-
+tura hozteko hodibihurriak transmititzen duen beroaz menperatuta dago. Newton-
+en
+hoste-legearen ondorioz, azken hau αA(T − Ta) da, non α beroaren transmisio-
+koeﬁtzientea eta A hodibihurriaren ukipen-
+azaleraren area diren. Depositoaren bar-
+neko azidoaren tenperatura T bada, orduan azidoak emandako bero-ﬂuxua ˙
+mcT da.
+˙
+Ei = qρcTs + αA(T − Ta).
+Barruan dagoen azidoaren tenperatura aldatu egiten da hodibiurriarekiko kontaktua-
+ren medioz. Beraz pilaketa dago eta beroaren aldakuntzaren erlazioa dQ = mcdT da,
+eta m = ρB denez,
+dE
+dt
+=
+dQ
+dt
+= mc
+dT
+dt
+= ρBc
+dT
+dt
+.
+Energia-belantzeak ondoko ekuazioa halabeharko du,
+ρBc
+dT
+dt
+= qρc(Ts − T ) − qρcT − αA(T − Ta).
+T berorako ekuazio diferentzial hau 1.go ordenako lineala edo aldagai banatuetakoa da
+eta beronen askapena zailtasun handirik ez digu emango. 
+(3.53) ekuazioan ariketan
+eman diren datu guztiak beraiei dagozkien sinboloetan ordezkatuz, ondoko ekuazio
+arrunta dugu, non T (0) = 174 den
+dT
+dt
+= −2.68T + 207.6 ⇒ T (t) =
+207.6 − 174e−2.68t
+2.68
+.
+Adibidez 1h pasa ondoren azidoaren tenperatura 68.68oC-koa da.
+58
+
+Ariketak
+Ariketa 1. Ondoko ekuazioaren soluzioa analitikoki aurkitu:
+y + y = xy2,
+y(0) = 1
+(1, 0) puntutik pasatzen den soluziorik ba al dago? Baietza ematekotan zehaz-
+tu zein den soluzio hori, bestela esan zergatik ez dagoen horrelako soluziorik.
+Ariketa 2. Demagun y = y/x + x2 ekuazio diferentziala,
+a) 
+(1, 0) puntutik pasatzen den ekuazioaren soluzio bakar bat dagoela ondorioztatu
+existentzi eta bakartasun teoremen laguntzaz.
+b) 
+(0, 0) puntutik pasatzen diren ekuazioaren bi soluzio aurkitu eta komentatu zer-
+gatik emaitz honek ez duen ukatzen bakartasuneko teorema.
+Ariketa 3. Datozen hastapen-baldintzetako problemetarako ondoko galderak eran-
+tzun:
+i) Aurkitu soluzioaren adierazpena.
+ii) Aurkitu existentzi-eremurik handiena.
+iii) Zer gertatzen da x aldagai askea existentzi-eremuaren mugetarantz abiatzen
+denean.
+a) y = y3,
+y(0) = 1
+b) y =
+1
+(y + 1)(x − 2)
+,
+y(0) = 0
+c) y =
+1
+(y + 2)2
+,
+y(0) = 1
+d) y =
+x
+y − 2
+,
+y(−1) = 0
+Ariketa 4. Datozen hastapen-baldintzetako problemetarako ondoko galderak eran-
+tzun:
+i) Aurkitu ekuazioaren soluzio orokorra.
+ii) Frogatu adierazitako hastapen-
+baldintza betetzen duen soluziorik ez dagoela. Az-
+ken hau existentzi-teoremaren aurka al dago?
+(i) xy − y = x2 cos x,
+y(0) = −3
+(ii) xy = 2y − x,
+y(0) = 2
+Ariketa 5. Demagun y = (y − 1) cos(xy), y(0) = 2, hastapen-baldintzetako pro-
+blema,
+a) Frogatu ekuazio honek R2 plano osoan soluzio bakarra daukala .
+59
+
+b) (2, 0) puntutik pasatzen diren ekuazioaren soluziorik existitu al daiteke?
+Ariketa 6. Har dezagun y(x) ondoko hastapen-baldintzetako problemaren solu-
+ziotzat,
+y =
+y3 − y
+1 + x2y2
+,
+y(0) =
+1
+2
+a) Soluzio bakarra al da hau?
+b) Frogatu soluzioa 0 < x(t) < 1 tartean dagoela y(x) existitzen den bitartean.
+Ariketa 7. Frogatu y1(x) = x2 eta y2(x) = x2 + 1 funtzioak
+y = −y2 + y + 2yx2 + 2x − x2 − x4
+ekuazioaren soluzioak direla. Baldin y(x) soluzioa 0 < y(0) < 1 hastapen-
+baldintza betetzen badu halabeharrez ∀x, x2 < y(x) < x2 + 1 beteko duela
+frogatu.
+Ariketa 8. Ondoko galderak erantzun:
+a) Frogatu (0, 2)-tik pasatzen den y = y2−cos2 x−sin x ekuazioaren kurba-
+integral
+bakarra dagoela.
+b) Frogatu y(x) = cos x ekuazioaren soluzioa dela.
+c) Baldin (0, 2)-tik pasatzen den soluzioa y(x) bada, frogatu y
+(x) > cos x beteko
+dela deﬁnizio-eremu osoan.
+60
+
+Ariketa 9. Azpian azaltzen diren ekuazioetarako eta berauen malda-eremuetarako
+ondoko lanak burutu
+a) Malda-marratxoak jarraituz soluzio batzuk marraztu.
+b) Adierazi x(0) = 1/2 hastapen-
+baldintza betetzen duen soluzioaren portaera asin-
+totikoa.
+(a) y = 3y(y − 1)
+−2
+−1.5
+−1
+−0.5
+0.5
+1
+1.5
+2
+−2
+−1.5
+−1
+−0.5
+0.5
+1
+1.5
+2
+x 
+t 
+(b) y = 2y − x
+−2
+−1.5
+−1
+−0.5
+0.5
+1
+1.5
+2
+−2
+−1.5
+−1
+−0.5
+0.5
+1
+1.5
+2
+x 
+t 
+(c) y = y + 1
+2
+(y + x)
+−2
+−1.5
+−1
+−0.5
+0.5
+1
+1.5
+2
+−2
+−1.5
+−1
+−0.5
+0.5
+1
+1.5
+2
+x 
+t 
+(d) y = (x + 1)y
+−2
+−1.5
+−1
+−0.5
+0.5
+1
+1.5
+2
+−2
+−1.5
+−1
+−0.5
+0.5
+1
+1.5
+2
+x 
+t 
+61
+
+Ariketa 10. Ondoan idatzitako 8 ekuazio diferentzialetatik lau aurkeztutako malda-
+eremuekin erlazionatutak daude. Erabaki diagrama bakoitzari dagokion ekua-
+zioa eta esan zergatik.
+(i) y = x − 1 (ii) y = 1 − y2
+(iii) y = y2 − x2 (iv) y = 1 − x
+(v) y = 1 − y (vi) y = x2 − y2 (vii) y = 1 + y
+(viii) y = y2 − 1
+(a)
+−2
+−1.5
+−1
+−0.5
+0.5
+1
+1.5
+2
+−2
+−1.5
+−1
+−0.5
+0.5
+1
+1.5
+2
+x 
+t 
+(b)
+−2
+−1.5
+−1
+−0.5
+0.5
+1
+1.5
+2
+−2
+−1.5
+−1
+−0.5
+0.5
+1
+1.5
+2
+x 
+t 
+(c)
+−2
+−1.5
+−1
+−0.5
+0.5
+1
+1.5
+2
+−2
+−1.5
+−1
+−0.5
+0.5
+1
+1.5
+2
+x 
+t 
+(d)
+−2
+−1.5
+−1
+−0.5
+0.5
+1
+1.5
+2
+−2
+−1.5
+−1
+−0.5
+0.5
+1
+1.5
+2
+x 
+t 
+Ariketa 11. Marraztu eskuz y = y3 − 3y2 + y ekuazio diferentzial autonomoa-
+ren malda-eramua. Gero y(0) = 0, y(0) = 1/2, y(0) = 3/2 eta y(0) =
+−1/2 hastapen-baldintzei dagozkien soluzioen marrazki hurbildua burutzen
+saiatu.
+62
+
+Ariketa 12. Ondoko ekuazio diferentzialen gainean adierazitako lanak burutu
+a) Ekuazio bakoitzaren fase-diagramak marraztu.
+b) Oreka-puntuak eta beraien izaera (iturriak, zuloak edo nodoak) identiﬁkatu.
+c) Emandako hastapen-baldintzak betezen dituzten soluzioen portaera hurbildua
+marrazten saiatu.
+(i) y = 3y(1 − y),
+y(0) = 1, y(2) = −1, y(0) = 1/2, y(0) = 2
+(ii) y = y2 − 6y − 16,
+y(0) = 1, y(1) = 0, y(0) = −10, y(0) = 5
+(iii) y = cos y,
+y(0) = 0, y(−1) = 1, y(0) = −π/2, y(0) = π
+(iv) w = w2 + 2w + 10,
+w(0) = 0, w(1/2) = 1, w(0) = 1
+(v) y = 1
+y−2 ,
+y(0) = 0 y(1) = 3 y(0) = 2
+Ariketa 13. Aipatu y = y2 − 4y + 2 ekuazio diferentzial autonomoari dagozkion
+soluzioen portaera asintotikoa x → ±∞, y(0) = 0, y(0) = 1, y(0) = −1,
+y(0) = −10, y(0) = 10 eta x(3) = 1 hastapen-baldintzetarako.
+Ariketa 14. Lehenbizian y = 1/ (y−2)(y+1) ekuazioari dagokion fase-diagrama
+marraztu eta y(0) = 1/2 baldintzari dagokion soluzioaren portaera aztertu.
+Gero askatu analitikoki aurreko hastapen-baldintzetako problema eta emaitzak
+konparatu. Amaitzeko, problemaren soluzioaren existentzi-eremua zehaztu.
+Ariketa 15. Ondoko irudien soluzioei dagozkien fase-diagramak marraztu.
+(a)
+f(x) 
+x 
+(b)
+x
+f(x)
+(c)
+f(x) 
+x 
+(d)
+f(x) 
+x 
+63
+
+Ariketa 16. Ondoren y = f (y) ekuazio diferentzial autonomoen fase-diagramei
+dagozkien f (x) funtzioaren marrazki hurbilduak marraztu.
+(a)
+(b)
+(c)
+(d)
+Ariketa 17. Adierazitako h urratsaz eta Euler-en metodoaz, ondoko hastapen-
+baldintzetako problemen soluzio hurbildua balioztatu emandako tartean eta
+soluzio hori marraztu. Ahal baldin bada askatu problema analitikoki eta ba-
+lioztatu errorea tertearen amaieran.
+(a) y =
+y
+x
+,
+y(1) = 1; [1, 4] h = 0 5
+(b) y =
+xy
+2
+,
+y(0) = 1; [0, 1] h = 0 1
+(c) y = x2 + y2,
+y(0) = 0; [0, 1] h = 0 1
+(d) y = 1 + xy2,
+y(0) = 0; [0, 1] h = 0 1
+Ariketa 18. Euler-en metoaren bitertez eta h = 0 2-ko urrats-luzera erabiliz 
+(1, 2)-
+tik pasatzen den y = x + y ekuazio diferentzialaren soluzioa balioztatu eta
+marraztu [1, 3] tartean. Soluzioa analitikoki kalkulatu erebai eta y(3)-an
+sortutako errorea balioztatu.
+Ariketa 19. Azpian dauden hastapen-baldintzetako problemetarako hemen adie-
+razten diren lanak burutu 4 digito esangarriekiko aritmetikaz:
+a) Askatu ekuazioa analitikoki eta balioztatu aldagai askearen emandako puntuan.
+b) Euler-en metodoaren bidez eta emandako urrats-
+luzeraz soluzioaren balio hurbil-
+dua kalkulatu. Gero sorterazi den errorea kalulatu puntu horretan.
+c) Hasierako puntua eta emandako puntuaren artean soluzio hurbildua marraztu.
+64
+
+i) y = (x + y − 1)2,
+y(0) = 2, x = 0.5
+h = 0.1
+ii) y =
+2y
+1 + x
+,
+y(0) = 1
+x = 1
+h = 0.25
+iii) y = 1 −
+y
+x
+,
+y(1) = 1,
+x = 2
+h = 0.25
+iv) y = 1 + y2,
+y(0) = 0,
+x = 1
+h = 0.25
+Ariketa 20. Hastapen-baldintzetako y = 2y(4 − y),
+y(0) = 1 problemerako
+ondoko galderak erantzun,
+a) Teknika kualitatiboen laguntzaz soluzioaren ahal den informazio gehiena aurkitu.
+b) h = 0.25-ko urrats-luzerarekiko Euler-
+en metodoaz soluzio hurbildua balioztatu
+x = 3 punturaino. Aurreko atalean ondorioztatutako emaitzekiko antzekotasunak
+oharterazi.
+Ariketa 21. y = −(1/3)y2,
+y(0) = −1 hastapen-baldintzetako problemaren so-
+luzio x = 2 puntuan hurbiltzeko Euler-en metodoa erabili dugu. Ondoko
+taulak erabilitako urrats-luzera, soluzio hurbildua eta errorerako zutabe utsa
+dakartza. Lehenbizian soluzioa analitikoki kalkulatu eta beronen laguntzaz
+adierazitako zutabea bete. Marraztu graﬁka batean eh errorea h urrats-
+luzeraren funtziopekotzat eta erakutsi errorea urratsarekiko proportzionala
+dela (eh ≈ ah). Daukazun datuekin a konstantea estimatu eta kalkulatu
+ze urrats-luzera beharko genuke 0.0001 tamainuko errorea edukitzeko. Urrats
+horrekin zenbat urrats bete beharko lituzke metodoak x = 2 baliora iristeko?
+urrats-luzera h Balio hurbild. (Euler) Errorea eh
+0.050000000
+-2.852603
+0.025000000
+-2.922232
+0.012500000
+-2.959998
+0.006250000
+-2.979705
+0.003125000
+-2.989777
+0.001562500
+-2.994869
+0.000781250
+-2.997430
+0.000390625
+-2.998714
+Taula 3.3:
+Ariketa 22. A sustantzia erreaktore bakartzat daukaten lehenengo eta bigarren or-
+denako erreakzioen A-ren kontzentrazioaren bilakaera nagusitzen duen eredua
+eratu eta askatu [A]0 = a hastapen-baldintzarekin. A-ren kontzentrazioaren
+bilakaeraren graﬁka marraztu.
+65
+
+Ariketa 23. A + 2B → produktuak motako hirugarrean ordenako erreakzioaren
+erreaktoren kontzentrazioaren bilakaera nagusitzen duen k abiadura-
+konstantearekiko
+ekuazio diferentziala x = k(a−x)(b−2x)2 dela frogatu, non a eta b hurrenez
+hurren A eta B sustantzien hasierako kontzentrazioak diren eta x(t) balioa
+t unean emandako produktuaren kontzentrazioa (mol/cm3). Hastapen baldin-
+tzetako problema eraiki, askatu eta A eta B-ren bilakaera marraztu.
+Ariketa 24. Baldin sustantzia bat katalisatzailetzat eragiten badu, erreakzioari au-
+tokatalitikoa esango diogu. Hauetako erreakziorik errazena hauxe da, A+R →
+R + R eta beronen ekuazio zinetikoa dCA(t)/dt = kCACE da, non CA eta
+CE hurrenez-hurren A-ren eta R-ren kontzentrazioak diren. A-ren eta R-ren
+hasierako kontzentrazioak CA(0) = a eta CE(0) = r izanik eta A desagertzen
+doan bitartean, bi sustantzi horien mol-en batura konstantea mantentzen dela
+jakinik, A-ren kontzentrazioa agintzen duen hastapen-baldintzetako problema
+eraiki eta askatu. a ≤ (a + r)/2 jakinik, A-ren eta R-ren kontzentrazioen
+bilakaeraren graﬁka hurbildua marraztu. Baldin a ≥ (a + r)/2 izango balitz,
+nola aldatuko litzateken egoera?
+Ariketa 25. 500 l edukierako ur depositoak hasieran 100 l baino ez dauzka. Une ba-
+tean 50% sustantzi kutsagarria daraman ura depositora 2 l/minutuko sartzen
+hasten da, nahastura osoa depositotik 1 l/minutuko ateratzen doan bitartean.
+Depositoa betetzen denean, zein da sustantzia kutsagarriaren kontzentrazioa?
+Ariketa 26. Deposito batek 12 kg gatza nahastuarekiko 240 l ura dauzka. Honezke-
+ro depositora 0 3 Kg/l gatz-kontzentrazioa daraman ura minutuko 8 l sartzen
+hasten da, aldiberean nahastura homogeneizatuta minutuko 10 l ustutzen den
+bitartean.
+a) Aurkitu depositoan dagoen denboraren funtziopeko gatz-kontzentrazioaren for-
+mula.
+b) Asmatu uraren gatz-kontzentrazioa depositoak 120 l isurkari dauzkanean.
+c) Gatz-
+kontzentraziorik altuena iristen denean zenbat isurkari egongo da deposi-
+toan? Zenbat da kontzentrazio altuen hori? Noiz iristen da? Zenbat gatz-kopurua
+dago depositoan une horretan?
+d) Hasieran 12 kg gatz egon beharrean 72 Kgr egongo balira, Noiz iritsiko litzateke
+gatz-kontzentraziorik altuena? Zenbat izango litzateke kontzentrazio hori?.
+Ariketa 27. Newton-en hozte-legearen bidez (dT /dt = k(T − Ta), non T = tem-
+peratura, Ta = hasierako tenperatura eta k = α/(mc) ingurumenaren men-
+peko konstantea den) ondoko ariketaren soluzioa aurkitu: 20◦ C tenperatura
+konstantean mantentzen den gela batean gorputz bero bat dago eta beronen
+66
+
+tenperatura 20’-tan 100◦ graduetatik 60◦ arte jeisten da. Noiz iritsiko da 30◦
+graduetara?
+Ariketa 28. 95oC tenperaturarekiko 2 cm × 3 cm × 10 cm-ko burnizko palanka
+bat 25oC tenperaturarekiko ur-kupelan sartzen da. Kupela aski handia da be-
+ronen uraren tenperatura ez aldatzeko palanka hozten den bitartean. Burnitik
+urarako bero-transferentzia konstantea α = 0 050 J/(min·cm2·oC) da eta pa-
+lankaren bero-kapazitatea c = 0 460 J/(g·oC). Buriaren dentsitatea ρ = 7’87
+g/cm3 da. Suposatuko dugu bero-transferentziaren prozesuan zhar palankaren
+puntu guztien tenperatura berdina dela.
+a) Palankaren tenperaturaren bilakaera nagusitzen duen hastapen-
+baldintzetako pro-
+blema eratu, Newton-en hozte-legea erabiliz hala palankarako bero-energiaren
+balantzea plazaratuz.
+b) Kalkulatu palankaren oreka-tenperatura, hau da, lim
+t→∞
+T (t). Kalkulatu al daiteke
+balio hori ekuazia diferentzialaren soluzioa aurkitu gabe?
+c) Palankaren tenperatura 30oC izan arte, zenbat denbora igaroko da?.
+Ariketa 29. Hodi bihurrizko berotzailearekiko 2 30 kJ/(kg ◦C) bero-kapazitateko
+CSTR gailuaz disolbatzailea berotzen da. 25◦C-tan dagoen 760 kg disolba-
+tzaileko depositotik CSTR-ra minutuko 12 kg pasatzen hastan da, CSTR-a
+120 ◦C-tan mantentzeko hodibihurritik ur-lurruna ibiltzen hasten den bitar-
+tean. Disolbatzailea berotu denean CSTR-tik irtetzen da sartzeko hainbat
+abiaduraz. Demagun hodibihurritik disolbatzailerako bero-transferentziaren
+koeﬁzientea α dela, A hodibihurriaren gainazalaren area dela eta α · A = 11 5
+KJ/(min·◦C) dela, erantzun ondoko galderak:
+a) Bero-
+energiaren balantzearen bidez depositotik irtetzen den disolbatzailearen ten-
+peratura ﬁnkatzen duen ekuazio diferentziala idatzi.
+b) Zein da disolbatzailearen oreka-tenperatura?
+c) Zenbat denbora pasako da disolbatzailea CSTR-tik 50◦C-tan atera arte?
+d) Disolbatzailearen tenperaturaren bilakaeraren graﬁka hurbildua marraztu
+67

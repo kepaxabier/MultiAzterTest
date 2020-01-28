@@ -1,0 +1,376 @@
+
+
+
+
+PROBABILITATEAREN OINARRIZKO KONTZEPTUAK 
+ 
+Aurkibidea 
+1.  Helburu didaktikoak 
+2.  Sarrera 
+3.  Zorizko esperimentuaren inguruko kontzeptuak  
+4.  Probabilitatearen ikuspuntuak 
+5.  Batuketaren teorema 
+6.  Probabilitate baldintzatua 
+7.  Biderketaren teorema 
+8.  Probabilitate osoaren teorema 
+9.   Bayes-en teorema 
+10. Buruketak  
+11. Erantzunak 
+ 
+1. Helburu didaktikoak 
+ 
+Probabilitatearen  teoriari  buruzko  oinarrizko  sarrera  bat  egin,  axioma 
+garrantzitsuenak ezagutuz.  
+ 
+Gertaera  sinple  eta  konposatuak  adierazten  jakin  eta  probabilitateak 
+kalkulatzen.  
+ 
+Oinarrizko probabilitate-teoremak ezagutu eta aplikatzen jakin.   
+2. Sarrera 
+Gaur  egun,  probabilitatea  analisi  estatistikoan  erabiltzen  da,  gehienbat. 
+Probabilitate-teoriak  garrantzi  handia  izan  zuen  matematika-arloan  (eta 
+zientzian  oro  har),  ziurtasun  absolutuaren  aldeko  erabateko  joera  nolabait 
+orekatu egin zuelako. 
+Lege  deterministei  esker,  iragarri  daiteke  naturako  fenomeno  askoren 
+bilakaera,  gorputz  baten  erorketa  askea  lurrazalean.  Batzuetan,  ordea, 
+fenomenoak  zorizkoak  dira,  beti  egoera  edo  baldintza  berberetan  gertatzen 
+diren  arren,  adibidez:
+  dado  bat  jaurtirik,  zein  zenbaki  aterako  da?  Zorizko 
+gertaerei aleatorio deitzen zaie, eta haien bilakaera probabilitateen kalkuluaren 
+bidez aztertzen dira.  
+
+Probabilitatearen  teoria  Matematikaren  adar  bat  da  eta  gertakari  edo 
+esperimentu  jakin  batek  emaitza  jakin  bat  izateko  duen  posibilitatea 
+kuantitatiboki zehazten du. Probabilitate matematikoa ausazko jokoetan du bere 
+oinarria.  Joku  hauetan  sortzen  ziren  galderei  erantzunak  emateko  sortu  zen. 
+Blaise  Pascal  matematikari  eta  filosofo  frantziarra  (1623-
+622)  probabilitate-
+teoriaren sortzailetako bat izan zen.  
+3. Zorizko esperimentuaren inguruko kontzeptuak  
+Ausaz  gertatzen  diren  fenomenoetan  (esperimentu  aleatorioa  edo 
+zorizko saiakuntza) emaitza posible bakoitzari gertaera 
+(edo gertakizun) deitzen 
+zaio.  Gertaera  bakoitzaren  ziurgabetasuna  neurtzen  duen  balioari  berriz, 
+probabilitatea  deritzogu.  Esperimentu  aleatorioek  emaitza  desberdinak  izan 
+ditzakete,  baldintzak  berberak  izanda  ere.  Saiakuntza  egin  aurretik  ezin  dugu 
+jakin  zein  emaitza  aterako  den  zehazki,  zoriaren  menpe  dagoelako. 
+Esperimentu  aleatorioen  ohiko  adibidea  da  txanpon  edo  dado  bat  gora 
+jaurtitzea.  
+Esperimentu horren ondorioz izan daitezkeen gertaera guztien multzoari 
+lagin-espazioa  esaten  zaio.  Adibidez,  dado  bat  jaurtitzearen  lagin-
+espazioa 
+honakoa da: E = {1, 2, 3, 4, 5, 6}. Beraz lagin-
+espazioaren azpimultzo bakoitzari 
+zorizko gertaera bezala ezagutzen dugu.  
+Honakoak dira gertaera mota horietako batzuk: 
+a)  Gertaera ziurra: beti gertatzen da. Matematikoki, P(A) = 1. Adibidea: 
+Dadoaren adibidean 6 edo zenbaki baxuagoa ateratzea. 
+b)  Gertaera  ezinezkoa:  ez  da  inoiz  gertatzen,  P(A)  =  0.  Adibidiea: 
+Dadoaren adibidean 7 zenbakia ateratzea. 
+c)  Gertaera  baten  osagarria  edo  aurkakoa:  A  gertaera  betetzen  bada, 
+bere  osagarria  dena   
+  ez  da  gertatzen,  eta  alderantziz. 
+Matematikoki:     
+=  E  -  A.  Adibidea:  Zorro  batean  bola  gorriak, 
+beltzak  eta  zuriak  daude.  A  gertaera bola  gorria  izatea  bada,  gorria 
+ez izatea osagarria da. Kasu honetan beltzak eta zuriak.  
+d)  Gertaera bateragarriak izango dira, bi gertaera aldi berean gertatzeko 
+posibilitatea  dagoenean,  eta  ez  badute,  bateraezinak  izango  dira. 
+Bateragarrien adibidea: Pertsona batek ingelesa eta frantsesa jakitea 
+posible  da,  beraz  bateragarriak  dira  gertaera  hauek.  Bateraezinen 
+adibidea: karta-jokoen kasuan karta bat urrea eta kopa izatea.  
+
+e)  Gertaera  askeak.  Ez  dagoenean  inolako  loturarik  gertaeren  artean, 
+hots, gertaera batek ez du eraginik bestean.  
+f)  Menpeko  gertaerak.  Bi  gertaeren  artean  harremana  dagoela. 
+Gertaera batek bestea baldintzatzen duenean.  
+ 
+Gertaera  konposatua  oinarrizko  bi  gertaerak  edo  gehiagok  osatutako 
+gertaera  da.  Hauen  artean  daude  gertaera  bateragarriak  eta  bateraezinak. 
+Dado bat jaurtitzeko esperimentuan, gertakari konposatuen adibideak: 
+a)  A  =  Bikoitia  ateratzea;  B  =  3ren  multiploa  ateratzea;  C  =  2ren 
+berretura ateratzea. 
+b) A eta B bateragarriak dira, eta B eta C berriz bateraezinak. 
+ 
+4. Probabilitatearen ikuspuntuak 
+Probabilitatea kalkulatzeko hiru ikuspuntu ditugu nagusiki: 
+a)  Ikuspuntu  klasikoa,  non  A  gertakizun  baten  probabilitatea  honela 
+kalkulatzen den.  
+p(A)= A-ren aldeko kasuak / kasu posible guztiak 
+“Laplaceren erregla” deitzen zaio  
+Laplaceren  erregla  aplikatzeko,  oinarrizko  gertaerek  ekiprobableak  izan 
+behar  dute,  kasu  posible  guztiak  probabilitate  berekoak  izan  behar  dira  eta 
+lagin-espazioa ezaguna. 
+Adibidez, sei aldeko dado bat botata 
+P(bikoitia)= {2,4,6} / {1,2,3,4,5,6} = 1/6 
+ 
+b) Ikuspuntu enpirikoa, non aztertzen ari garen fenomenoaren emaitzak 
+aldi  askotan  jasotzen  ditugun  
+(esperimentatuz  edo  errealitatetik  zuzenean 
+jasoaz). Probabilitatea A gertakizunaren aldeko kasuen proportzioa izango da. 
+Beste modu batera esanda, infinitu aldiz errepikatuez gero probabilitate teoriko 
+edo  gertaeraren  bere  benetako  probabilitatea  ezagutuko  genuke.  Zenbat  eta 
+gehiagotan  errepikatu  esperimentua,  orduan  eta  gehiago  hurbilduko  da 
+maiztasun  erlatiboa  gertaeraren  benetako  probabilitatera.  Propietate  horri 
+zenbaki  handien  legea  deitzen  zaio.  Adibidez,  seikoaren  emaitza  bikoitia 
+ateratzeko  probabilitatea  emateko,  seikoa  behin  eta  berriz  bota  eta  bikoitia 
+
+atera  deneko  aldien  proportzioa  jasoko  genuke.  Probabilitatea  modu  honetan 
+estimazio edo hurbilketa bat izango da noski.  
+Adibidea: Kalkulatu txanpona jaurti eta aurpegia ateratzeko probabilitatea 
+ 
+Jaurtiketa 
+kopurua 
+Aurpegi 
+kopurua 
+Maiztasun 
+erlatiboa 
+10 
+4 
+0,4 
+100 
+62 
+0,62 
+1.000 
+560 
+0,56 
+10.000 
+5030 
+0,503 
+ 
+Kontuan  hartuta  Laplaceren  erregla  aplikatuta  probabilitatearen  balioa 
+0,5 dela jakinik, 10.000 aldiz jaurtita bere maiztasun erlatiboa gehien hurbiltzen 
+da balio horretara. 
+c)  Ikuspuntu  subjektiboa,  non  gertakizunaren  probabilitatearen 
+zenbatespen  bat  arrazoituz,  aldeko  eta  aurkako  faktoreak  kontutan  hartuz, 
+egiten dena.  
+ 
+4.  Batuketaren teorema 
+    Batzuetan  gertaera  sinpleen  probabilitateak  kalkulatzeko,  gertaeren 
+arteko eragiketak egin behar dira.  
+    Bi gertaeren bilkura horrela adierazten da: A U B. P(A U B) esanahi du, A 
+edo B gertaera suertatzeko probabilitatea.  
+  a)  Gertaera  bateraezinak  direnean  A  edo  B  gertaerak  suertatzeko  dagoen 
+probabilitatea  honela  kalkulatzen  da:  P(AUB)  =  P(A)  +  P(B).  Gertaera 
+bateraezinetan P(A 
+∩ B) = 0 delako. 
+Adibidea:
+ Kutxa batean, 4 bola zuri, gorri bat eta 5 beltz daude, ausaz bola bat 
+ateratzen bada zein da bola gorria edo beltza izateko probabilitatea? 
+P(G U B) = P(G) + P(B) = 1/10 + 5/10 = 6/10 = 0,6 
+  b) Gertaera bateragarriak direnean berriz: P(AUB) = P(A) + P(B) – P(A 
+∩  B) 
+Adibidea:
+  Karta  sorta  batetik  karta  bat  atera  dugu.  Kalkulatu  zazpiko  bat 
+(edozein palotik) edo kopa ateratzeko probabilitatea. 
+P(EUK) = P(E) + P(U) – P(E
+∩ U) = 4/40 + 10/40 – 1/40 = 13/40 = 0,325  
+
+  c)  Gertaera  osagarrietan  edo  aurkakoetan:  P( )  =  1  -  P
+(A).  Bi  gertaera 
+aurkakoen baturak 1 emango du, P( )+P(A) = 1. 
+Adibidea: Talde batean 100 pertsona daude, horien artean 20 beltzaranak dira 
+eta  80  pertsonak  begi  marroiak  dituzte.  Beltzaranen  artean  begi  marroiak 
+dituztenak 10 dira. Zoriz aukeratzen badugu pertsona bat, kalkulatu beltzarana 
+ez izateko probabilitatea. 
+P( ) = 1 - P(A)  
+P( ) = 1 - P(B) = 1 – 20/100 = 0,80 
+ 
+5. Probabilitate baldintzatua 
+  A gertaera gertatu dela jakinik, B gertaera ateratzeko probabilitatea P(B/
+A). 
+Izendatzailean baldintza jartzen da, eta Ak baldintzatutako Bren probabilitatea 
+irakurtzen da.   
+ 
+∩
+=
+  edo    
+∩
+=
+ 
+ 
+  Batzuetan ez da beharrezkoa teorema hau aplikatzea, baizik eta Laplaceren 
+erregla aplikatzearekin nahikoa izan daitekeelako.  
+Adibidea: Ikasgela batean, 8 mutil eta 12 neska daude, 5 mutilek eta 8 neskak 
+egunkaria  irakurtzen  dute.  Ikasle  bat  zoriz  hartuta  eta  neska  dela  jakinda, 
+kalkulatu egunkaria irakurtzeko probabilitatea.  
+    a) 
+=
+=
+ 
+    b) 
+=
+=
+∩
+=
+ 
+ 
+6. Biderketaren teorema 
+Probabilitate  baldintzatuaren  definizioaren  arabera,  menpeko  bi  gertaeren 
+ebaketaren balioa honela kalkulatzen da:  
+P(A
+∩ B)= P(A). P(B/A) 
+Esperimentu bateko bi gertaera askeak badira, honakoa betetzen dira:  
+
+P (A ∩ B) = P (A) ⋅ P (B) 
+P(A/B) = P(A) 
+P(B/A) = P(B) 
+Esperimentu batek hiru gertaera posible baditu, aurreko formula hori aldatu 
+egingo da:  
+A, B eta C menpekoak badira:P (A ∩ B ∩ C) = P (A) ⋅ P (B/A). P (C/A∩B)  
+A, B eta C askeak badira: P (A ∩ B ∩ C) = P (A) ⋅ P (B) ⋅ P (C) 
+1. adibidea (gertaera askeak): Txanpon bat hiru aldiz jaurtitzen badugu, 
+kalkulatu hiru aurpegi ateratzeko probabilitatea. 
+a) Biderketaren teorema 
+P(aurpegia) = 0,5 
+P(A1 ∩ A2 ∩ A3) = P (A1).P(A2).P(A3) = 0,5.0,5.0,5 = 0,125 
+b) Zuhaitz-diagramaren bitartez 
+ 
+ 
+ 
+ 
+ 
+Guztira zenbat aukera posible daude? 8 
+Zenbat aukera daude 3 aurpegi ateratzeko? 1 
+P(A) = Aldeko kasuak/Kasu posibleak = 1/8=0,125 
+2.  Adibidea  (gertaerak  askeak  diren  probatzeko):  Bi  zorizko  gertaeren 
+probabilitateak ezagutzen dira. P(A) =  0,4; P(B) = 0,2; P(AUB) = 0,5. A eta B 
+gertaerak askeak al dira? Arrazoitu erantzuna. 
+P(AUB) = P(A) + P(B) – P(A
+∩ B) 
+
+0,5 = 0,4 + 0,2 - P(A
+∩ B); P(A ∩ B) = 0,1 
+P (A ∩ B)  ≠  P (A) ⋅ P (B) = 0,4 . 0,2 = 0,08  
+A eta B gertaerak ez dira askeak, P (A ∩ B) ez delako P(A) bider P(B) 
+3. Adibidea (menpeko gertaerak):  
+40  kartako  multzotik  bi  karta  aterako  ditugu,  lehenengo  karta  bueltatu  gabe. 
+Kalkulatu zein probabilitate dagoen 2 bateko lortzeko. 
+P(A
+∩ B)= P(A). P(B/A) 
+P(1.batekoa  eta  2.batekoa)  =  P(1.batekoa)  .  P(2.batekoa/1.batekoa)  = 
+1/40.1/39 = 0,000641 
+ 
+7. Probabilitate osoa  
+Esperimentu  bateko  gertaera  elementalak  ez  badagozkio  lagin-espazio 
+osoari,  beraren  azpimultzo  bati  baizik,  probabilitateen  kalkulua  konplexuagoa 
+da. Aurrekoaren ohiko adibide gisa, hiru poltsa desberdinetatik bolak ateratzen 
+ditugu,  hiru  poltsetan  bola-
+multzo  ezberdinak  utzirik.  Zenbateko  probabilitatea 
+dago ateratako boletako bat kolore zehatz batekoa izateko?  
+Horrelakoetan, probabilitate osoaren teoremaz baliatzen gara. Horren arabera, 
+E lagin-espazioa k gertaera bateraezinek osatuta dago (B1, B2, …, Bk), beraz E 
+=  B1,  B2,  …,  Bk,  izango  da.  A  gertaera  badugu  bateragarria  beste B  gertaera 
+guztiekin 
+∩
+=
+ . Eta ondorioz  
+∩
++
++
+∩
++
+∩
+=
+ 
+A-ren  probabilitatea  kalkulatzeko  biderketaren  teorema  aplikatzen 
+badiogu 
+∩
+bakoitzaren lekuan P(Bi). P(A/Bi) jarriko dugu:  
+P(A) = P (B1) ⋅ P (A/B1)+ P (B2) ⋅ P (A/B2)+ … + P (Bk) ⋅ P (A/Bk) 
+B1,  B2,  …,  Bk  –ren  probabilitate  guztiak  jakinik,  eta  A-
+ren  probabilitate 
+baldintzatuak (p(A/Bi)i=1,2,...,n ere jakinik), ondokoa da formula orokorra: 
+=
+=
+ 
+ 
+
+ 
+ 
+ 
+ 
+Adibidea:  Esperimentu  batean  bola  gorri  bat  
+(G)  ateratzen  da  hiru  poltsetako 
+(P1,  P2,  P3)  batetik:
+  lehenengo  poltsan  2  bola  gorri  eta  3  beltz  daude; 
+bigarrenean, 3 bola gorri eta 7 beltz, eta hirugarren poltsan 4 bola gorri eta 4 
+beltz daude. Kalkulatu zoriz bola bat atera eta gorria izatekoa. 
+Beheko zuhaitz-diagramak erakusten dira posibilitate guztiak. 
+ 
+P(G) = P (P1) ⋅ P (G/P1) + P (P2) ⋅ P (G/P2)+ P (P3) ⋅ P (G/P3) 
+P(G) = 1/3.2/5+1/3.3/10+1/3.4/8=0,40 
+ 
+ 
+7. Bayesen teorema  
+Bayes-en  teorema  Thomas  Bayes-ek  (1702-1761)  asmatu  zuen. 
+Probabilitatearen teorian probabilitate baldintzatuaren banaketak ematen duen 
+emaitza lortzen da, zorizko B gertaeraren probabilitate baldintzatua suposatuz 
+A gertaera eman dela jakinik. Algebraikoki adierazita P(Bi/A).  
+ 
+ 
+ 
+    !
+ 
+  "
+"
+ 
+
+Aurreko atalaren jarraipena izango da hau. E lagin-espazioa k gertaera 
+bateraezinez osatuta dago 
+(B1, B2, … , Bk ) eta  B gertaera bat aztertzen badugu 
+(A-ren probabilitatea jakinik -
+inoiz ere zero izango ez dena-, eta Bi bakoitzaren 
+a posteriori probabilitatea ere jakinik - i = 1, 2, … , K izanik-
+), ondoko hau lortuko 
+da Bayesen teoremaren bidez:  
+ 
+=
+=
+∩
+=
+ 
+ 
+Laburbilduz, 
+Bayes-en 
+teorema 
+probabilitate 
+baldintzatuaren 
+testuinguruan kokatzen da baldintza batzuk ematen direnean. Baldintza hauek 
+bi dira: 
+a)  Gertaerak B1, B2, … , Bk  guztiak lagin espazioa osatzen dutela. 
+b)  A gertaera bateragarria dela B gertaera guztiekin: 
+≠
+∩
+. 
+ 
+Teoria  mailan  azpimarratu  behar  da,  ondorengo  probabilitateak  P(B1), 
+P(B2),  ....,  P
+(BK)  a  priori  probabilitateak  direla  esperimentua  egin  aurretik 
+lortutako  probabilitate  teorikoak  direlako.  Baina  probabilitate  baldintzatuak, 
+P(Bi/
+A),  a  posteriori  deitzen  dira  esperimentua  egin  ondorengo  probabilitateei 
+erreferentzia egiten dietelako. 
+ 
+Adibidea:  Aurreko  adibidean  oinarriturik  orain  galdera  da:
+  Bola  gorri  bat  atera 
+dugula jakinik zein da lehengo poltsakoa izateko probabilitatea? 
+ 
+  
+"
+ 
+ 
+ 
+!
+ 
+!
+ 
+ 
+ 
+=
++
++
+=
++
++
+=

@@ -1,0 +1,599 @@
+
+
+
+
+
+
+
+
+
+
+
+
+                       5. GAIA. UHIN ELEKTROMAGNETIKOAK
+
+
+Gai honetan garrantzi handiko uhin batzuk aztertuko ditugu: uhin
+elektromagnetikoak. Dena dela, uhin hauek zer diren hobeto ulertzeko asmotan,
+komenigarria da aldez aurretik dipolo elektrikoaren ezaugarri nagusiak
+jorratzea.
+
+
+5.1. Dipolo elektrikoa
+
+Dipolo elektrikoa karga-banaketa jakin bat baizik ez da; hain zuzen ere, balio
+bereko eta aurkako zeinuko bi kargak eratuko dute dipoloa, baldin eta kargen
+arteko distantzia oso txikia bada aztergai dugun egoeraren gainerako
+distantzien aldean. Karga-banaketa horren jokaera bektore baten bitartez
+deskriba daiteke, eta bektore horri momentu dipolar elektrikoa esaten zaio (
+p).
+[1620_88_far1213-05g_html_m3743e32a.jpg]
+
+p= qL
+(
+Lbektorea karga negatibotik positibora doa)
+
+
+Momentu dipolarrari C·m (coulomb·metro) unitatea dagokio SI sisteman, baina,
+molekulak-eta aztertzen direnean, unitate hori handiegia gertatzen denez, beste
+bat erabili ohi da, debye (D) izenekoa, hain zuzen ere. Bien arteko lotura hau
+da: 1 D = 3,34x10
+–30C·m.
+
+Interesgarria da aztertzea zer jokaera duen dipoloak kanpoko eremu elektriko
+baten eraginpean dagoenean. Jo dezagun eremu elektriko uniforme bat (
+E) dagoen eskualdean kokatu dugula dipoloa (eremua uniformea bada, balio
+berbera izango du eremuak eskualdeko puntu guztietan). Lor ditzagun dipoloari
+eragingo dioten indar eta momentu erresultanteak.
+[1620_88_far1213-05g_html_m4a28301e.jpg]
+
+
+Indar erresultantea:
+
+F
+=F1+F2= qE– qE= 0
+
+Momentu erresultantea:
+
+
+=pxE= p E sin
+
+Ikus daitekeenez, momentu erresultante horrek dipoloa birarazi eta eremuarekiko
+paraleloki jartzeko joera izango du.
+
+Bestalde, esan beharra dago dipoloaren azterketak garrantzi handia daukala,
+atomo eta molekulen jokaera sarritan dipoloen bitartez deskriba baitaiteke.
+Badakigu egoera normalean atomo eta molekulak elektrikoki neutroak direla,
+karga osoa nulua dutela, alegia. Hala ere, molekulen artean sailkapen hau egin
+daiteke:
+
+a) Molekula ez-polarrak: molekula barneko karga negatiboaren karga-zentroa eta
+karga positiboarena leku berean daude. Adibideak: N2, O2, ...
+
+b) Molekula polarrak: molekula barneko karga negatiboaren karga-zentroa eta
+karga positiboarena ez daude toki berean, eta, ondorioz, momentu dipolarra
+defini daiteke. Adibide batzuk: HCl eta H2O (irudian dago). Horrelakoetan,
+molekulak momentu dipolar iraunkorra duela esaten da.
+[1620_88_far1213-05g_html_m51c966f.jpg]
+
+Zer gertatzen da, baina, molekulak eremu elektriko baten eraginpean daudenean?
+Karga positiboari eragiten dion indar elektrikoak eta karga negatiboari
+eragiten dionak aurkako noranzkoa dute. Hortaz, molekula ez-polarretan,
+hasieran toki berean zeuden karga positiboaren eta negatiboaren karga-zentroek
+banatzeko joera azalduko dute eremuaren eraginez, eta, ondorioz, momentu
+dipolar induzitua agertuko da mota horretako molekuletan. Molekula polarretan,
+berriz, kanpo-eremuaren eragin nabarmenena beste hau da: dipolo iraunkorrak
+orientaraztea, hots, dipolo guztiak eremuarekiko paraleloki ipintzera joko du
+kanpo-eremuak, arestian azaldu dugun moduan.
+
+
+5.2. Uhin elektromagnetikoak
+
+Laugarren gaian adierazi dugunez, hutsean ere hedatzen diren uhinak ditugu uhin
+elektromagnetikoak. Zehatz dezagun orain eremu elektrikoa eta eremu magnetikoa
+hedatzen direla uhin elektromagnetikoa hedatzen denean. Hau da, Ox ardatzean
+zehar hedatzen den uhin elektromagnetikoa badugu, ardatz horren
+perpendikularrak diren eremu elektrikoa eta eremu magnetikoa izango ditugu
+(ikus irudia). Hortaz, zeharkako uhinak dira uhin elektromagnetikoak. Halaber,
+uhinari loturiko
+EetaBeremuak elkarzutak izango dira beti.
+[1620_88_far1213-05g_html_m2f2efd2a.jpg]
+
+Uhinaren hedapen-abiadura c = 3x10
+8m/s izango da uhina hutsean hedatzen denean. Uhin elektromagnetikoa hutsa ez
+beste ingurune batean hedatzen bada, uhinaren fase-abiadura ez da c izango, v
+izango da. Nabarmen dezagun beste inguruneetako v abiadura c baino txikiagoa
+izango dela beti. Gainera, abiadurarekin loturik, beste magnitude fisiko bat
+definitu ohi da: ingurune jakin baten errefrakzio-indizea (n). Indize hori
+lortzeko, uhin elektromagnetikoek hutsean duten abiadura (c) eta uhinek
+ingurune horretan duten abiadura (v) zatitu behar ditugu: n = c/v, alegia
+(nabarmena denez, n ≥ 1 izango da beti).
+
+Uhina deskribatzeko erabiltzen diren ekuazioei dagokienez, hona hemen kasurik
+errazenean (x ardatzean zehar hedatzen den uhin elektromagnetiko lau eta
+harmonikoa) agertuko zaizkigunak:
+
+E = E
+0sin k(x – ct) = E0sin (kx –t) (1)
+B = B
+0sin k(x – ct) = B0sin (kx –t) (2)
+
+EetaBeremuek elkarzutak izan behar dute. Halaber, hemen frogatuko ez dugun
+arren,EetaBeremuak beti fasean egoteaz gain, haien balioak lotuta daude edozein
+aldiunetan, E0 = cB0adierazpenaren bidez, hain zuzen ere (uhinaren anplitudeak
+dira E0eta B0). Bestalde, ekuazio horietan ageri diren k etaparametroak 4.
+gaian azaldu zaizkigun berberak dira. Dena den, gogora dezagun zer diren
+uhinaren periodikotasunen adierazle horiek:
+
+- k magnitudeari uhin-zenbakia deritzo, eta espazio-periodikotasunarekin dago
+loturik. Izan ere, uhinaren espazio-periodoa (uhin-luzera,ikurraz adieraziko
+duguna) honela eman daiteke:= 2/k. Uhin-luzera erraz neur daiteke goiko
+irudian.
+
+-parametroa maiztasun angeluarra da, eta denbora-periodikotasunari dagokio.
+Uhinaren denbora-periodoa (periodoa soilik esaten zaio) T ikurraz emango dugu,
+eta, hortik abiatuta, bi maiztasun definitu ohi dira: batetik, f maiztasuna, f
+= 1/T = kc/2, eta bestetik,maiztasun angeluarra,= 2f = kc.
+
+Gainera, periodikotasun biak elkarrekin lotuta daude c abiaduraren bitartez:
+= c T edo f = c.
+
+[Image]
+
+ezagutuz,
+[Image]
+[Image]
+T ezagutuz, eta
+
+
+Berriro ere uhinaren ekuazioetara joz, nabarmen dezagun beste behin ere ekuazio
+hori eta higidura oszilakorra deskribatzeko erabiltzen dena desberdinak direla
+—antz handia badute ere—. Bien arteko funtsezko aldea, hain zuzen, espazioari
+dagokion koordenatua agertzean datza: uhin-higidura adierazten duen edozein
+ekuaziotan, posizioa deskribatzen duen parametroren bat (x, y, z edo dena
+delakoa) azaldu behar da nahitaez funtzioaren barnean (t denboraz gainera),
+uhinaren hedatzearen berri eman behar baitigu. Higidura oszilakorrean, ordea,
+ezin da ekuazioetan espazioa ageri; denbora besterik ez da azalduko, hedapenik
+ez dagoen seinale.
+
+
+
+
+5.3. Uhin elektromagnetikoen polarizazioa eta energia
+
+Zeharkako uhinek, luzetarakoek ez bezala, tasun garrantzitsu bat daukate,
+polarizazio deritzona hain zuzen ere. Hortaz, uhin elektromagnetikoek ere
+polarizazioa azaldu ahal izango dute.
+
+Aurreko ataleko irudian ikusi dugunez, uhin elektromagnetikoek eremu elektriko
+eta magnetikoak izaten dituzte, hedapen-norabidearen perpendikularrak izan
+behar dutenak. Uhinaren eremu elektrikoa etengabe norabide jakin batean badago
+—aurreko ataleko irudian bezala, non beti y ardatzean baitago—, uhina linealki
+polarizaturik dagoela esan ohi da.
+[1620_88_far1213-05g_html_6c5b2d31.jpg]
+
+Baina ez da hori ager daitekeen egoera bakarra; besteak beste, baditugu
+zirkularki polarizaturiko uhinak ere. Horrelakoetan, eremu elektrikoaren eta
+magnetikoaren moduluak ez dira denboran zehar aldatzen, baina bektore horiek
+bira egiten dute hedapen-norabidearen inguruan (etengabe elkarren
+perpendikularrak izanik, jakina). Alboko irudian, horrelako uhin bat adierazi
+da (eremu elektrikoaren jokabidea soilik erakutsi da).
+
+Beste kasu batzuetan, ordea, uhinaren eremuaren norabidea aldiunetik aldiunera
+etengabe aldatuz joango da, eta, gainera, espazioko norabide guztiak
+probabilitate berekoak izango dira (hedapen-norabidearen perpendikularrak diren
+norabide guztiak, noski). Orduan, uhin elektromagnetikoa polarizatu gabea dela
+esango dugu.
+
+Bestalde, dakigunez, edozein uhin hedatzen denean, energia hedatzen da
+espazioan zehar. Uhin elektromagnetikoaren energia lortzeko asmotan, eremu
+elektrikoari loturiko energia eta eremu magnetikoari lotutakoa batu beharko
+dira. Uhin harmonikoekin badihardugu, badakigu uhinaren anplitudearen
+berbiduraren proportzionala dela energia. Horrela, bada:
+
+batetik, U = U
+E+ UBeta bestetik, UEE02eta UBB02
+
+beteko dira, baina E0= cB0denez, ikus dezakegu U energia osoa E02(edo B02)
+magnitudearen proportzionala izango dela.
+
+Atal hau amaitu aurretik, garrantzi handiko kontu baten gainean jardun behar
+dugu. “Erradiazio” elektromagnetikoa aztertzen dugunean, esku artean uhinak
+ditugula esango dugu batzuetan; beste batzuetan, ordea, partikulekin ari garela
+adieraziko dugu (horren ezagunak diren fotoiak, hain zuzen ere). Hortaz, gaian
+zehar sarritan igaroko gara ikuspuntu batetik bestera. Izan ere, ezinezkoa da
+gertakari elektromagnetiko guztiak bi ereduetako bakar baten bitartez azaltzea;
+behar-beharrezkoak dira eredu biak. Horrela, bada, zenbaitetan uhinak izango
+ditugu, eta bestetan, fotoiak. Fotoiei dagokienez, adierazpen honetara jo
+beharko dugu haien energia lortzeko:
+
+E = h f (3)
+
+h da Planck-en konstantea (h = 6,63x10–34J·s) eta f, berriz, fotoiaren (edo
+dagokion uhinaren) maiztasuna. Fotoien energia dela-eta, esan dezagun SI
+sistemako energia-unitatea —joulea— ez dela batere egokia fotoiek azalduko
+dituzten energien balioak adierazteko. Ondorioz, beste unitate bat erabili ohi
+da, elektronvolt izenekoa hain zuzen. Unitate horri eV ikurra dagokio, eta
+esangura argikoa da. Izan ere, 1 eV-eko energia honela lor daiteke: demagun
+elektroi bat kondentsadore lau baten xafla negatiboaren ondoan dugula geldirik;
+dakigunez, xafla positiboak erakarri egingo du elektroia, eta azeleratuz joango
+da, xafla positiboa jo arte. Horrela, bada, kondentsadorearen xaflen arteko
+potentzial-diferentzia 1 V bada, elektroiak 1 eV-eko energia zinetikoa izango
+du xafla positibora heltzen denean.
+
+                    [1620_88_far1213-05g_html_712979d1.gif]
+
+Hasieran E
+z= 0 Amaieran Ez= 1 eV
+
+Elektroiaren karga 1,6x10
+–19C dela jakinik, erraz erdiets daiteke honako baliokidetza hau: 1 eV =
+1,6x10–19J.
+
+5.4. Erradiazio elektromagnetikoen espektroa
+
+Uhin elektromagnetikoen uhin-luzerak (edo maiztasunak) oso desberdinak izan
+daitezke uhin batzuetatik besteetara, iturriaren arabera. Gainera oso helburu
+desberdinetarako erabil daitezke uhin mota desberdinak. Horregatik ohitura dago
+uhin elektromagnetikoak uhin-luzeraren (edo maiztasunaren) arabera sailkatzeko;
+gogoan izan bi magnitude horiek hedapen-abiadurarekin erlazionaturik daudela,
+f = c adierazpenaren bidez. Bestalde, fotoien E energia uhinaren
+maiztasunarekin loturik dagoenez (E = h f), energiaren arabera ere sailka
+dezakegu uhin elektromagnetikoen espektroa.
+
+Orobat, esan behar da sailkapenean agertzen diren zenbait uhin motak muga
+zehatzik ez dutela, gainezarririk dauden maiztasun-tarteetako uhinak sor
+baititzakete iturri desberdinek. Ohar horiek egin ondoren, ikus dezagun nola
+sailkatu ohi diren uhin elektromagnetikoak. Hurrengo taulan, maiztasuna eta
+uhin-luzera SI unitatetan adierazita badaude ere, arestian aipatu dugun eV
+(elektronvolt) unitatea erabili da energiak emateko.
+
+                    [1620_88_far1213-05g_html_m1f1abee.gif]
+
+Sailkapena eman ondoren, espektroaren tarteak banan-banan jorratuko ditugu.
+
+Irrati-uhinak. Hogeita hamar zentimetrotik hainbat kilometrora doan tarteko
+uhin-luzerak dituzte. Normalean, irrati-telebistako sistemetan erabiltzen dira,
+eta uhin hauek sortzeko, tresna elektronikoak erabili ohi dira, zirkuitu
+oszilakorrak gehienetan. Irrati-uhinak era zabalagoan ere sailka daitezke: uhin
+luze, ertain eta laburretan, hain zuzen ere. Telebistan eta maiztasun-
+modulaziozko (FM) igorpenetan maiztasun handiagoak eta, beraz, uhin-luzera
+txikiagoak erabiltzen dira.
+
+Interesgarria gerta daiteke irrati- edo telebista-hargailu bat sintonizatzea
+zertan datzan azaltzea. Badakigu tresnaren sintonizadorea posizio jakin batera
+eraman behar dugula irrati edo kanal jakin bat hartu nahi dugunean. Zergatik
+hori? Kontuan izan behar dugu igorgailu guztiek bidalitako seinaleak iristen
+direla hargailura, eta, ondorioz, tresnaren zirkuitu elektronikoaren gainean
+oszilazio bortxatuak eragiten dituztela (gogoan izan 3. gaian esan duguna).
+Horrela, bada, sintonizadorearen posizioa aldatzean, hargailuaren zirkuitu
+elektronikoaren berezko oszilazio-maiztasuna aldatzen dugu; berezko maiztasun
+hori igorgailu jakin baten maiztasunarekin bat datorrenean, erresonantzia
+gertatuko da, eta, ondorioz, igorgailu horren seinalea besterik ez dugu entzun
+edo ikusiko —seinalea sintonizaturik dagoela esango dugu—, energia-xurgapenak
+maximoa joko baitu maiztasun horretarako.
+
+Mikrouhinak. Uhin hauen uhin-luzera aurrekoena baino txikiagoa da (0,3
+m10–3m). Uhin hauek radar-sistemetan eta bestelako komunikazio-sistema
+batzuetan (sakelako telefonoetan, esaterako) erabili ohi dira. Ikerkuntzan
+baliagarriak gertatzen dira egitura atomiko eta molekularrak aztertzeko.
+Mikrouhinak ere tresna elektronikoz sortzen dira.
+
+Azter dezagun orain nola jokatzen duten urak eta antzeko beste molekula polar
+batzuek mikrouhinen erradiazioaren eraginpean daudenean. Molekula polarraren
+momentu dipolarrak uhin elektromagnetikoari loturiko eremu elektrikoaren
+eragina jasoko du, eta, arestian ikusi dugunez, eremuaren arabera orientatuko
+da aldi oro. Baina eremua aldakorra denez, molekula etengabe biratzen arituko
+da, eta bere energia zinetikoak gora egingo du. Orduan, mikrouhinen eraginpean
+jarri dugun lagin batean, hainbat ur molekula baditugu, molekula guztiak biraka
+arituko dira, eta, azken finean, laginaren tenperatura emendatu egingo da,
+molekulen energia zinetikoaren gorakada dela eta. Zergatik gertatzen da prozesu
+hori mikrouhinen tartean soilik? Badakigu eremu aldakorra espektroaren tarte
+guzti-guztietan izango dugula, baina kontua da dipoloak ezin izango diola
+eremuari behar bezala jarraitu edozein maiztasunetan; mikrouhinen maiztasunetan
+soilik egin ahal izango du hori, molekula polar horien berezko biraketa-
+maiztasunak mikrouhinen tartearen barnean baitaude. Hau da, oraingoan ere,
+erresonantzia gertatuko da kanpo-eragilearen (eremu elektriko aldakorraren) eta
+sistema oszilakorraren (ur molekulen) artean. Ikus dezagun efektu horren pare
+bat aplikazio:
+a) Diatermia: zuzenean larruazalaren gainean beroa aplikatuz berotu ezin diren
+larruazalpeko ehun batzuk mikrouhinen bitartez berotu daitezke (ehun horien
+sakonera dela eta, erre egingo litzateke larruazala zuzenean berotuko bagenu).
+Diatermia erabiltzekotan, osatu nahi den gunetik gertu kokatu behar dira
+mikrouhin-elektrodoak. Besteak beste, artritisa eta betazalen hantura osatzeko
+erabili ohi da teknika hau.
+b) Mikrouhin-labeak: ura eta antzeko beste molekula polar batzuk dituzten
+elikagaiak berotzeko erabiltzen dira. Dakigunez, kontu handia izan behar da
+metalezko objektuekin; labe barnean horrelakoren bat sartzen bada, ez ditu
+uhinak xurgatuko, islatu baizik, eta, ondorioz, energia-dentsitate handiak
+agertuko dira labe barnean; azkenean, hondatu egin daiteke tresna.
+
+Uhin infragorriak. Uhin-luzerak 10–3m-tik 7,8x10–7m-ra doaz. Hiru tartetan dago
+banatuta: infragorri urruna (10–3m3x10–5m), erdiko infragorria
+(3x10–5m3x10–6m) eta infragorri hurbila (3x10–6 m7,8x10–7m).
+
+Espektroaren tarte honetara heldu garelarik, erradiazio izeneko fenomenoa
+zertan den ikusiko dugu. Printzipioz, esan dezakegu tenperatura ez-nulua duten
+gorputz guztiek erradiazioa (uhin elektromagnetikoak) igortzen dutela uhin-
+luzeraren tarte zabal batean. Hala ere, gorputzaren tenperaturak finkatuko du
+zenbat energia igortzen den uhin-luzera bakoitzean. Gorputz bakoitzak igortzen
+duen espektro zehatza (alegia, uhin-luzera bakoitzean igorritako energia
+kantitate zehatza) oso korapilatsua izan daiteke, oro har. Hala ere, badugu
+espektroak lortzeko eredu bat, hainbat egoeratan erabilgarria gertatzen dena.
+
+Eredu horri gorputz beltzaren eredua deritzo, eta Planck-ek lorturikoa da.
+Gorputz beltza, ereduaren arabera, iristen zaion erradiazio elektromagnetiko
+guztia xurgatzen duen objektua da; ez dago gorputza zeharkatuko duen edo
+gorputzean islatuko den erradiaziorik. Baina gorputz beltzek erradiazioa igorri
+ere igortzen dute. Izan ere, gorputz beltz batek, bere T tenperaturaren
+arabera, irudian ikus daitezkeen moduko espektroak igortzen ditu (hiru
+tenperaturatarako irudikatu da espektroa).
+[1620_88_far1213-05g_html_31905f3d.gif]
+
+
+Funtzio horien maximoa —hau da, gorputzak igortzen duen erradiazioaren
+intentsitaterik handiena— honako uhin-luzera honetan azaltzen da:
+
+[Image]
+(SI sisteman) (4)
+
+Emaitza horri Wien-en legea deritzo. Irudiari begiratzen badiogu, berehala
+ohartuko gara funtzioaren maximoa desplazatuz doala, gorputzaren tenperatura
+aldatu ahala. Horrela, bada, Wien-en legearen arabera, Eguzkiaren kanpo-geruzak
+gutxi gorabehera 6.000 Keko tenperatura duenez, espektroaren tarte ikusgaian
+—espektroaren sailkapenaren hurrengo tartean— igorriko du energia gehiena. Giza
+gorputzak, ordea, 300 bat kelvineko tenperatura duenez, infragorrian igorriko
+du gehien bat.
+
+Ikusi berri dugun
+mparametroak tenperaturarekiko duen aldakuntzak garrantzi handiko ondorioak
+ditu. Horietako bat da gure planetan gertatzen den berotegi efektua. Lurrera,
+eguzki-erradiazio erasotzailea iristen da; esan berri dugunez, haren
+intentsitate maximoa 500 nm inguruan azaltzen du (argi ikusgaia da, beraz), eta
+erradiazio horrek nahiko erraz zeharkatzen du gure eguratsa, argiarekiko
+gardena baita. Lurrazalak eta itsasoak xurgatuko dute eguratsa zeharkatu duen
+erradiazioa, eta, jakina, nulua ez den tenperatura dutenez, eurek ere
+erradiazioa igortzen dute. Baina haien tenperatura (300 K inguru) Eguzkiarena
+baino askoz txikiagoa denez, Lurretik igorritako erradiazioaren intentsitateak
+maximoam= 10 mko balioan azalduko du gutxi gorabehera. Balio hori tarte
+infragorriaren barnean dago, eta nekez zeharkatuko du erradiazio horrek
+eguratsa, batez ere airean dauden ur-lurrunak eta karbono dioxidoak erradiazio
+infragorria xurgatzen dutelako. Horregatik, errazago zeharkatzen du eguratsa
+eguzki-energiak erradiazio infragorriak baino, eta lurrazaleko tenperatura
+altuagoa eta egonkorragoa da, eguratsik gabeko kasuan izango genukeena baino.
+Nolabait esatearren, eguratsa gure gaineko burusiaren parekoa da. Bestalde,
+lurrazalean gertatzen diren errekuntza-prozesuek karbono dioxidoaren maila
+jasotzen dute, eta, teoria gehienen arabera, mota horretako prozesuak neurri
+gabe egingo balira, Lurraren batez besteko tenperaturak gorakada nabarmena
+izango luke, eta klima-aldaketa larriak eragingo lituzke. Arazo hau
+korapilatsua da oso, eta, dakigunez, ikerketa arduratsuak egiten ari dira
+gaiaren gainean.
+
+Bide batez, argitu dezagun azaldu berri dugun gertakaria ez dela berotegietan
+gertatzen denaren parekoa. Nola azaldu behar da orduan berotegi barnean
+gertatzen den tenperatura-emendioa? Berotegiak, oro har, beirazkoak dira.
+Hortaz, eguzki-erradiazioa arazorik gabe sartzen da berotegi barnera, eta zorua
+berotzen du; zorua bero dagoenean, inguruko aireari ematen dio beroa, eta aire
+epel horrek gora egingo du konbekzioa dela eta. Hala ere, gora doan airea
+berotegi barnean geldituko da, egitura itxia izaten baita, eta, ondorioz,
+kanpoan baino tenperatura handiagoa izango dugu barnean. Hartara,
+konbekzioarekin dago lotuta azalpena, eta ez, sarritan esan den moduan, beirak
+izpi infragorriak xurgatzearekin. Izan ere, xurgapen horrek ez du garrantzi
+handiegirik.
+
+Gatozen berriro gorputz beltzaren eredura. Aurreko orrialdeko irudiarekin
+loturik, badakigu nola kalkulatu gorputz batek erradiazio bidez igortzen duen
+energia osoa (uhin-luzera guztietarako igortzen duen energia). Gorputzaren
+tenperatura T bada, Stefan-en eta Boltzmann-en legeak emango digu gorputzak
+igortzen duen intentsitate osoa (azalera-unitateko potentzia). Hona hemen
+legearen adierazpena:
+
+I =
+T4
+(5)
+
+ = 5,67x10–8W m–2K–4da. Konstante horri Stefan-en eta Boltzmann-en konstantea
+esaten zaio. Intentsitatearen eta tenperaturaren artean dagoen loturak hainbat
+aplikaziotarako bidea eman digu. Horietako bat termografia da. Giza gorputzaren
+gutxi gorabeherako tenperatura 310 K denez, infragorrian igorriko du gehien
+bat. Baina gorputz-atalek ez dute tenperatura bera, eta, ondorioz, igorritako
+energia-fluxuak desberdinak izango dira. Aldeak txikiak izan arren, badaude
+diferentzia horiek hauteman ditzaketen argazki-pelikula eta detektagailu
+bereziak. Gau-ikusmenerako tresnek ere gertakari horretan dute oinarria.
+Oharra: arestian esan dugunez, Eguzkiak energia gehiena tarte ikusgaian
+igortzen du; hala ere, tarte horretatik kanpo igorritako kantitateak ere
+kontuan hartzekoak dira. Gutxi gorabehera, eguzkitiko energiaren % 47 igortzen
+da ikusgaian, % 45 infragorrian eta gainerako % 8a ultramorean.
+
+Argi ikusgaia. Horrela deritzo gure begiek ikus dezaketen uhin
+elektromagnetikoen multzoari. Uhin-luzeren tartea 7,8x10–7m3,9x10–7m da. Argi
+ikusgaia atomo eta molekulek sortzen dute, haien elektroien egoerek izaten
+dituzten aldaketen ondorioz. Argiak begietan sortzen dituen sentsazioei kolore
+esaten diegu, eta maiztasunei kolore bana dagokie. Oso maiztasun-tarte estua
+dago gorritik morera, baina tarte horretan, ostadarraren kolore guztiak daude
+(ikus 4. orrialdeko irudian ageri den argi ikusgaiaren tartea).
+
+Begiaren sentikortasuna argiaren uhin-luzeraren mendekoa da; izan ere, gutxi
+gorabehera 555 nm-ko uhin-luzerarako jotzen du maximoa sentikortasunak.
+Kolorearen eta uhin-luzeraren (edo maiztasunaren) arteko lotura dela eta, uhin-
+luzera (edo maiztasuna) ondo finkaturik duen uhin elektromagnetikoari uhin
+monokromatiko deritzo.
+
+Ikusmena, bestalde, erretinan dauden bi motatako elementuen bitartez burmuinera
+bidalitako seinaleen ondorioa da. Dakigunez, erretina begiaren atzeko aldean
+dago, eta erretinan daude kono eta makilatxoak. Konoak intentsitate handiko
+argia dagoenean —eguargitan gaudenean, esate baterako— aktibatzen dira. Uhin-
+luzerarekiko (edo kolorearekiko) sentikorrak dira konoak. Makilatxoak, ordea,
+oso argiztapen ahuleko egoeretan ere —gela ilun batean, adibidez— aktiba
+daitezke eta ez dute kolorearekiko sentikortasun handirik.
+
+Izpi ultramoreak. Tarte honetako uhin-luzerak 3,9x10–7m-tik 10–9m-ra doaz.
+Kitzikatutako atomo eta molekulek sortzen dituzte uhin hauek. Izpi ultramoreen
+energia atomoen ionizazioan eta molekulen disoziazioan agertzen diren energien
+mailakoa da; hortik azaltzen dira ultramoreak dituen ondorio kimikoak. Eguzkia,
+dakigunez, izpi ultramoreen iturria da. Kasu honetan ere, zenbait tartetan dago
+banaturik espektroaren UV atala, eta hiru hauek ditugu tarte nagusiak: UVA
+(3,9x10–7m3,15x10–7m), UVB (3,15x10–7m2,8x10–7m) eta UVC (2,8x10–7m10–7m).
+
+Erradiazio ultramoreak ondorio onuragarri eta kaltegarriak ditu gure
+osasunarentzat; adibidez, gure organismoak beharrezkoak ditu izpi ultramoreak D
+bitamina ekoizteko. Gainera, izpi hauek beltzarantzen dute gure larruazala.
+Hala ere, kontuan izan behar dugu izpi ultramoreek larruazala zahartu eta erre
+ez ezik, minbizia ere eragin dezaketela. Izpien uhin-luzera txikitu ahala
+handitzen da haien arriskua. Zorionez, eguratsaren estratosferan (12 km-tik 40
+km-ra doan tartean) dagoen ozonoak (O
+3) ia guztiz xurgatzen ditu izpi kaltegarrienak.
+
+Ultramoreek dituzten ondorio kimikoak geure alde ere erabil ditzakegu; izan
+ere, mikroorganismoren batek erradiazio ultramorearen kantitate handia
+xurgatzen badu, haren molekuletan ionizazio- eta disoziazio-prozesuak gertatuko
+dira, eta mikroorganismoa desegin daiteke, prozesu horiek eragingo dituzten
+erreakzio kimikoen ondorioz. Hori dela eta, izpi ultramoreak erabilgarriak dira
+medikuntzan eta, oro har, esterilizazio-prozesu guztietan.
+
+X izpiak. Energia handiko izpi hauen uhin-luzerak 10–9m6x10–12m tartean daude
+gutxi gorabehera. X izpiak 1895ean aurkitu zituen W. Röntgen-ek, izpi
+katodikoak aztertzen ari zelarik. Ikus dezagun, jarraian, nola sortzen diren X
+izpiak. Hurrengo irudian, X izpiak sortzeko gehien erabiltzen den tresnaren
+eskema ageri da, X izpien hodia, alegia. Hodiaren barnean hutsa dugu, eta
+honako elementu hauek nabarmendu behar dira:
+
+Katodoa. Metalezko harizpia da. Bertatik pasatzen den korronte elektrikoak
+harizpia berotzen du, eta, ondorioz, elektroiak igortzen ditu. Elektroi horiek
+azeleratu egiten dira katodoaren eta anodoaren artean ezarritako potentzial-
+diferentzia dela-eta. Azkenean, anodora heltzen dira elektroiak.
+[1620_88_far1213-05g_html_46517df9.gif]
+Anodoa. Metalezkoa izaten da, eta bertan sortzen dira X izpiak, elektroiek
+talka egiten dutenean. Esan beharra dago elektroiek daramaten energiaren zati
+txiki-txiki bat baino ez dela X izpi gisa azaltzen elektroien eta anodoaren
+arteko talketan. Hain zuzen ere, elektroien energia zinetikoaren % 99 baino
+gehiago bero modura xahutzen da. Hortaz, anodoa urtuko ez bada, nahitaezkoa
+izango da hozte-sistema bat: ur hotza erabili ohi da helburu horretarako.
+Azkenik, leihoak ditugu. Bertatik irteten dira X izpiak hoditik kanpora, eta,
+ondorioz, X izpiekiko gardena den material batez egindakoak izan behar dute.
+Gaur egun, beriliozko xafla meheak erabiltzen dira.
+
+Esan berri dugunez, azeleraturiko elektroien eta anodo modura jokatzen duen
+metalaren arteko talketan sortzen dira X izpiak; dena den, X izpien bi
+erradiazio mota sortzen direla esan beharko dugu; eta azalpenak ematerakoan,
+komenigarri gertatzen da bi mota horiek bereiztea.
+a)X_izpien_espektro_jarraitua_(erradiazio_zuria). Harizpiak igorritako
+elektroien eta metal zatiaren atomoen arteko eragin-trukea dela-eta, elektroiek
+energia galtzen dute, eta galera hori X erradiazioko fotoi modura eta bero
+modura azalduko da; kasurik aldekoenean, elektroiaren energia oso-osorik
+bilakatuko da X erradiazio, eta, orduan, erraz lor daiteke erradiazioarenuhin-
+luzera. Horretarako, kontuan hartu behar da E = eV dela elektroiek (–e karga
+elektrikodunak) hodiarenV potentzial-diferentzian erdietsiko duten energia,
+eta fotoiaren energiari dagokion adierazpena gogora ekarriz, hau izango dugu:
+
+e
+V = hf = hc/
+(6)
+hortaz:
+= hc/(eV) (7)
+
+Intentsitatea
+Baina, jakina, talkarik gehienetan, elektroiaren energiaren zati bat bero
+modura xahutuko da, eta, ondorioz, sortuko den X fotoiaren energia aurrekoa
+baino txikiagoa izango da (edo uhin-luzera handiagoa). Horrela, bada, talketan
+xahu daitekeen bero kantitatea aldakorra dela aintzat hartuz, prozesu horien
+ondorioz sortzen den erradiazioaren uhin-luzera hc/e
+V baliotik abiatu eta gero eta handiagoa izango da. Horixe hauteman daiteke X
+izpien espektro-kurbei behatzean (ikus irudia, non kurba horiek potentzial
+azeleratzailearen zenbait baliotarako adierazi diren). Kurba guztiak jarraituak
+dira eta bat-batean hasten dira uhin-luzera minimo batetik.
+[1620_88_far1213-05g_html_3e162080.gif]
+
+Hodiaren potentzial-diferentzia emendatzean —hots, elektroi erasotzaileen
+energia handitzean—, kurbaren
+minimoak balio txikiagoetara joko du, eman berri dugun adierazpenaren arabera
+(gogoan izan behar dugu elkarren alderantzizkoak direla fotoiaren energia eta
+uhin-luzera). Horretaz gainera, ekoitzitako X izpien intentsitatea ere
+—sortutako X izpien kopurua— gero eta handiagoa izango da potentzial-
+diferentzia handitzen den neurrian.
+
+Espektro[1620_88_far1213-05g_html_m3af7879a.gif]
+bereizgarria
+b)X_izpien_espektro_bereizgarria. Hodiaren potentzial-diferentzia balio jakin
+batera iritsitakoan, espektro jarraituari dagokion kurbaren gainean gailur oso
+zorrotz batzuk azaltzen dira (ikus irudia). Potentzial-diferentziaren balio
+horri potentzial kritiko deritzo, eta anodoan dugun elementu kimikoaren
+araberakoa da. Anodo jakin baterako, hodiaren potentzial-diferentziak
+potentzial kritikoa gainditzen duen unetik, gailur horien uhin-luzerak ez dira
+aldatzen, eta ez daude, hortaz, potentzial-diferentziaren mendean; horrexegatik
+esaten zaio erradiazio bereizgarri. Beraz, potentzial kritikoa gainditu
+ondoren, hodiaren potentzial-diferentzia handituz gero, erradiazio
+bereizgarriaren gailurren intentsitatea soilik emendatuko da, haien kokagunea
+aldatu gabe.
+
+Nondik dator espektro hori? Anodoko metalari erasotzen dioten elektroien
+energia behar bestekoa denean, metalaren atomoen barne-elektroiak egotz
+ditzakete elektroi erasotzaileek, eta, ondorioz, atomoa ionizatuta eta
+kitzikatuta geratuko da. Atomoa bere jatorrizko egoerara itzul dadin, hutsik
+dagoen barne-maila horretara jauzi egin beharko du energia handiagoko maila
+batean dagoen beste elektroi batek, eta, bien bitartean, X fotoi bat igorriko
+da. Jauzian esku hartu duten energia-mailen arteko diferentziak emango digu X
+izpi horren energia. Alegia, jauzia E
+1energia-mailatik E2energia-mailara gertatu bada, igorriko den fotoiak uhin-
+luzera hau izango du:
+
+E
+1– E2= hf12= hc/12
+(8)
+eta ondorioz:
+
+12= hc/(E1– E2) (9)
+
+Beraz, izpiaren energia hori (edo maiztasuna edo uhin-luzera) erabat finkatuta
+dago, anodoko atomoen elektroien energia-mailak ondo finkatuta baitaude. Esan
+dezagun gailurrak lerro monokromatikotzat jotzen direla, haien zabalera txikia
+dela-eta (10
+–4nm baino txikiagoa izaten da). Horrelako lerro bakoitza, hain zuzen, aipatu
+ditugun elektroi-jauzietako baten adierazlea da. Izan ere, material ezezagun
+baten X izpien espektro bereizgarria erabil daiteke materiala zein den
+jakiteko.
+
+Espektro bereizgarria
+Ikus dezagun, segidan, erradiazio mota honen aplikazio garrantzitsu bat. X
+izpiek medikuntzan duten erabilera ohikoenaz jardungo dugu, erradiografiaz hain
+zuzen ere. Erradiografia arruntak egiteko, arestian azaldu dugun hodia erabili
+ohi da, eta hodian sortutako X izpien sorta pazientearengana bideratzen da.
+Sortak gorputza zeharkatu ondoren, argazki-pelikula berezi bati erasotzen dio,
+eta, bertan, bereizmen handiko irudiak jasotzen ditugu. Zergatik azaltzen dira
+kontraste handiko irudi horiek? X izpiek material bat zeharkatzen dutenean,
+izpiak xurgatu egiten dira (uhin guztiekin gertatzen den bezala), baina
+xurgapen-maila materialaren zenbaki atomikoaren araberakoa da. Horrela, bada,
+gure gorputzeko organoek eta hezurrek zenbaki atomiko desberdinak dituztenez (Z
+org≈ 7,4 eta Zhez ≈ 13,8), neurri desberdinean xurgatuko dituzte izpiak, eta
+horregatik agertzen dira argazki-pelikulan intentsitate desberdineko guneak,
+gure barne-egituraren berri ematen dutenak. Baina, jakina, ezin izango dira
+bereizi antzeko zenbaki atomikoa duten organoak teknika honen bidez.
+
+ izpiak. Gamma izpiak nukleo atomikoetan sortzen dira, eta X izpiek baino
+energia handiagoa dute. Uhin-luzerak 10–10m10–14m tartekoak izaten dira gutxi
+gorabehera. Izpi hauek substantzia erradioaktiboek sortzen dituzte. Ez dugu
+hemen erradiazio honen gainean besterik esango, 6. gaian jorratuko baitugu.
+
+Oharra,_erradiazio_ionizatzaileari_buruz: erradiazio ionizatzaile kontzeptuaren
+barruan gamma izpiak, X izpiak eta izpi ultramore gehienak ere sartzen dira,
+horiek guztiek atomoak eta molekulak ionizatzeko adinako energia baitute. Mota
+horretako erradiazioak materia zeharkatzen duenean egiten duen bidea berehala
+hauteman daiteke, ionizatutako atomoz osaturiko lorratza uzten baitu. Eta,
+jakina, ionizazio kopuru txiki batek ere kalteak eragin ditzake zelulak diren
+bezalako sistema delikatuetan.
+
+Erradiazio ionizatzaileak eragin nabariak ditu sistema biologikoen gainean.
+Ondorio batzuk desiragarriak dira —medikuntza-diagnosia eta -tratamendua,
+adibidez—, eta beste batzuk, aurkakoak. Erradiazioak zelula bizidun normal
+batean energia ezartzen duenean, nahi ez diren ondorioak gertatzen dira.
+Energia hori ionizazioa gertatzen denean xurgatu ohi da. Lotura kimikoak
+apurtzen dira, eta zelulan beharrezkoak diren gaiak suntsitu. Ioi berriek
+erreakzio kimiko anormalak sorraraz ditzakete. Kaltearen hiru maila bereiz
+ditzakegu: prozesu zelularren funtzionamendu kimikoa eteten da, eta zelula hil
+egiten da edo ezin ugal daiteke; zelularen jokabidearen barne-kontrolak gal
+daitezke, eta zelula, beraz, minbiziduna bilakatzen da; edo zelularen gene-
+egitura alda daiteke eta, ondorioz, ondorengo anormalak sortzen dira.
+
+
+
+                                       9

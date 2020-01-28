@@ -1,0 +1,172 @@
+
+
+
+
+
+
+
+
+****** 8JARIAKINAK ******
+
+SARRERA:
+Naturako gai guziak lau egoeretan sailka ditzakegu: solidoak, likidoak, gasak,
+eta plasma. Azkeneko hiruak jariakin izenaz ezagutzen ditugu. Sail bakoitzaren
+ezaugarri nagusiak honakoak dira:
+   1. Solidoa: bolumen eta itxura geometrikoa definituak.
+   2. Likidoa: bolumena definitua, baina ez hala itxura geometrikoa.
+   3. Gasa: ez du definitua ez bolumena eta ez itxura geometrikoa.
+   4. Plasma:
+      unibertsoanegoerahonetandagomateriaugarien;adibidezizarrak.Atomoionizatuzdagoosatua,betikargapositibo
+      (ioi+)etanegatiboak(e-
+      )berdinakizanez.Egoerahonetarakobeharrezkoadaosotenperaturaaltuaizatea.
+Solidoa → likidoa → gasa → plasma
+Gureinguruneanegoerarikarruntenaklehendabizikohiruakdira.
+
+***** 8.1JARIKINEN ESTATIKA *****
+**** 8.1.1DENTSITATEA ETA PRESIOA ****
+Dentsitatea(SIedoMKS:kg/m3etaCGS:g/cm3)
+Presioagorputzbatjariakinbateanmurgilduzgerojariakinakindarperpendikularraedonormalaegitenduazalekopuntubakoitzean
+(tentsionormala).Orekanezdagotentsiotangentzialedoebakidurazkorik.
+Presioa jariakinaren puntu bakoitzeko ezberdina da.
+Dimentsioak:
+Unitateak:SI-eanedoMKS-n
+
+**** 8.1.2JARIAKINEN ESTATIKAKO FUNTSEZKO EKUAZIOA ****
+Sakontasun bereko puntu guztiek presio berbera jasaten dute.
+Atmosferairekiadagoenjariakinbateansakontasuneandagoenpuntubatekopresioabsolutuarenbalioapresioatmosferikoagehida,hots:
+baita.
+jariakinarendentsitatea
+grabitate-konstantea
+jariakinarenaltueraneurtzendenpuntutikgora.
+izanez
+Jariakinakeragitenduenpresioaaltuerandagoenpuntubatean:
+**** 8.1.3APLIKAZIOAK ****
+*** 8.1.3.1PASCAL-en printzipioa: ***
+Ontzi baten barrenean hertsirik dagoen jariakin bati eragindako presioa
+jariakinaren puntu guztietara era berean transmititzen da, eta era berean baita
+ontziaren paretetara.
+Prentsa hidraulikoa, adibidez:
+Ikusidugunezhbereanpresioberbera
+Orduan,denez:
+Indar txikiak eginez indar handiak eragin daitezke.
+Altuera berean:
+Nonetagoragohhandiagohandiagoabeharda.
+*** 8.1.3.2ARKIMEDES-en printzipioa ***
+
+Edozein gorputz jariakin batean murgildurik baldin bada, jariakinak beregan
+goranzko bulkada eragiten du, bulkada horrek solidoak desplazatutako
+jariakinaren pisuaren balioa duelarik.
+bulkada(N)
+desplazatutakojariakinarenpisua
+jariakinakeragitenduengoranzkobulkadagorputzarengan
+murgildutakogorputzarenbolumena
+desplazatutakojariakinarenmasa
+
+    * Arras murgildutako gorputzarengan indarra:
+
+Azeleraturikbeheraerortzean:
+    * Flotatzen ari den gorputza, hots partzialki murgildua dagoen gorputza
+      orekan dago:
+gorputzarenpisua
+gorputzarenmasa
+gorputzarendentsitatea
+gorputzarenbolumena
+murgildutakobolumena
+
+** 8.1.3.2.1Presio-unitateak **
+
+
+***** 8.2JARIAKINEN DINAMIKA *****
+
+Jariakinen dinamikak higiduran dauden jariakinak aztertzen ditu, beti ere
+jariakin idealetan eta fluxu iraunkorrean edo xaflakorrean ( ez
+zurrunbilotsua).
+DEFINIZIOAK.
+1.-Jariakinideala:
+konprimagaitzadenjariakinaetagainerabarnekomarruskadurarikgabea,hotsbiskositateazeroduena.
+2.-Fluxuiraunkorra:
+Jariakinarenpropietateaketabereabiadurakonstanteakdirelarikespaziokopuntubatean,edozeinaldiunetanesanendugufluxuairaunkorradela.
+Adibidez:errekabateanuraklasaidoazelarik.
+Orduanpuntubatean
+
+3.-Korronte-lerroak:
+Puntubakoitzeanjariakinarenabiadurarenukitzaileadenlerroa.
+
+
+
+
+**** 8.2.1JARRAITASUN-EKUAZIOA ****
+
+Hodibateanjariakinbatbertanhigitzean,hodiarensekzioabiderjariakinarenabiadurakkteadirauhodiguzian.
+Non eta zabalagoa edo handiagoa sekzioa orduan eta abiadura txikiagoa.
+emaria,fluxua,jarioa(erdarazgastua)
+etaunitateak:edo
+**** 8.2.2BERNOUILLI-REN EKUAZIOA ****
+Fluxua iraunkorra duen jariakin ez likatsu ( beraz, marruskadurarik gabea)
+batean P presioa, gehi energia zinetikoa bolumen –unitateko, gehi energia
+potentziala bolumen-unitateko konstantea da, hots:
+
+Frogapena:
+Demagun jariakin bat hodi batean higitzen, hodiaren sekzioa eta altuera
+aldatuz:
+:
+bolumenekojariakinaespaziorajoatekobiindarkontrajarribadira,indarraaurrerabulkatzenaridena,etaeragoztenaridena
+(aurreanduenjariakinakjartzenduenerresistentzia)
+
+Lana-
+energiateoremaaplikatukodugutarteandagoenjariakinarengan,baino,denborabaterajariakinhauhodianhigitukoda,etaeremuanegonenda.eremukomasaoraintarteanegonenda.
+,altueratikaltuerarajasokodaeta,bereabiadura-etik-raaldatukoda.
+Energia potentzialaren aldakuntza:
+Energia zinetikoaren aldakuntza:
+Atzetikdatorrenjariakinakjariakinaren,,masabultzakaarida,hots,indarraeskuinalderaetalanaegitendu:
+izanik.
+Aldibereanaurreandagoenjariakinakgalgatze-
+indarraegitenduezkerraldera.Horreklanahigidurarenaurkaegitendu.
+Lanaren eta energiaren teoremak dioenez :
+Bernouillirenekuazioa
+
+●Geldirik dagoen jariakin batean:
+,hots,jariakinenestatikakofuntsezkoekuazioa.
+
+*** 8.2.2.1APLIKAZIOAK ***
+8.2.2.1.1Torricelli-renteorema:
+Demagunandelirekibatjariakinezbetea,edoaltueraarte.
+Bernouilliren ekuazioa erabiliz:
+
+puntuanjariakinarenabiadurada,zuloarendiametroaandelarendiametroabainoaskozeretxikiagoadelako
+()
+etaatmosferarairekiakdaudenez:
+Andelirekibateanurazulobatetikaterakodenabiadura,erorketaaskeanhaltueratikizanenlukeenaberada.Torricelli-
+renteorema.
+Andelarenbarrenean,urarenaltuerazuloarengainetikhizanik.
+    * Andela irekia ez balego:
+
+** 8.2.2.1.2Venturi-efektua **
+denezBernouilli-renekuazioahonakoada:
+,hots,
+Jarraitasun-ekuazioaz:,orduanbolumenekofluxuaberberadahodiarenlekuguzietan:
+Orduan Bernouilliren berdintasuna betetzeko:
+hodiarenaldemeheanpresioaaskozeretxikiagoada.
+Jariakinarenabiadurahanditzeanpresioajaistenda.Venturi-efektua
+
+Adibideak:
+
+   1. Gelabatjendezbetea;ateairekiabada:
+Fluxua atean>fluxua barrenean
+,etaargiagooraindikmaratoibateanazkarragodoazentokianlaxoagoetapresiotxikiagoa.
+   1. Hegazkina:Fluxu-
+      lerroakestuagoakdiragoialdeanbehealdeanbaino,orduan,airearenabiadurahegalarengoialdeanhandiagoadabehealdeanbaino.Presioagoialdeantxikiagoadabehealdeanbaino,hegazkinagorajoatenda.
+
+
+
+
+
+
+
+
+   1. Langargailua ( lainoztagailua, pulverizador) eta gasolinazko motorren
+      karburadoreak.
+Ezkerrekobonbattoazapatzean,aireahodihorizontalekoaldemeheanhigitzenda,etaberaz,presioajaistenda;orduan,andelekourakgoraegitendu,etaairekorronteansartzendalangarraeratuz.
+
+9
+

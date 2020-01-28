@@ -1,0 +1,168 @@
+
+
+
+
+Tema 8: Redes de Transporte.
+Introducción y conceptos básicos
+1
+10. GARRAIO SAREEI BIDAIAK ESLEITZEA
+
+4 etapen ereduaren azken fasea da esleiketarena.
+Zona/gune bakoitza  komunikatzen duten bide alternatibo ezberdinetatik 
+trafiko fluxua banatzean datza.
+Esleiketa ereduek eskaintza eta eskaera arteko elkar interakzioa simulatzen 
+dute.
+Azpiegiturei buruzko eta J/H matrizearen ematzak hartzen dituzte kontutan.
+MPRT 09 -
+2
+
+Ereduetan erabiltzen diren aldagaiak:
+1.  Zerbitzu mota:
+- Jarraia: errepidea
+- programatua: garraio publikoa
+2. Pilaketaren ondorioak:
+- pilaketarik gabe: kostuak fluxuarekiko independenteak dira.
+- pilaketarekin: kostuak = f(fluxua)
+3. Eskaeraren segmentazioa:
+- Erabiltzaile bakarra
+- Erabiltzaile ezberdinak jokaera ezberdinekin. (adibidez: ezaugarri 
+sozioekonomikoen araberakoak)
+4. Eskaeraren elastikotasuna:
+- Eskaera finkoa: eskaera fluxua pilaketen ondoren arkuen kostuekiko 
+independentea da.
+- Eskaera aldakorra: fluxua pilaketak eragindako kostuen araberako da.
+5. Jokaera bide aukeraketa egiterakoan 
+- Jatorritik Helmugara bidaia osorik aztertzen da, eta aldaketarik gabe 
+jarraitzen da.
+- Deterministikoa edo estokastikoa ere izan daiteke.
+- Ibilbidea aukeratzea: ibilbidea egiten den arabera erabakitzen da ze bide 
+hartu, geratzen den ibilbidearen informazioa jarraituz.
+MPRT 09 -
+2
+
+– Ibilbide esleipenaren modelo bakoitza hurrengo 
+hipotesian oinarritzen da. Garraio kosteak 
+minimizatu ondoren erabakitzen duela bidaiariak 
+ibilbidea.
+•
+Garraio kosteen neurketa bat bezala BIDAIA-DENBORA 
+aukeratzen da: Sinplea eta erabiltzailearen portaeraren 
+adierazpen bat da. 
+•
+Garraio kosteen neurketa bat bezala DISTANTZIA ere 
+aukera daiteke. Ez da bidaia-Denbora bezain adierazgarria, 
+baina baliagarria da informazio gehiago ez izanez gero.
+•
+GARRAIOKO KOSTUA .
+
+– Minimizatu nahi den aldagaia erabaki ondoren, 
+modeloak lurraldearen eskema bat erabiliko du. 
+Bertan hurrengoa definituta egongo da:
+– Zonako zentroideak.
+– Zentroideen arteko komunikazio-arkuak, non arku bakoitzari 
+dagokion aldagai endogenoaren balorea agertuko den.
+– Bidaia-matrizearen datuak.
+
+–
+Azkenik, ibilbide minimoak esleitzeko algoritmo bat beharrezkoa da.
+Bide minimoa kalkulatzea aurrefasea da: (simplex, bide laburra, fluxu 
+maximoa, garraio algoritmoa, Kruskal,…… 
+ESLEIKETA METODOAK
+
+DENA edo EZ DEUS” Metodoa. 
+
+IBILBIDE BATZUEKIKO ESLEIPEN PROPORTZIONALEKO 
+Modeloak.
+
+KAPAZITATE-MURRIZKETA DUTEN IBILBIDEA ESLEITZEKO 
+Modeloak.
+
+“DENA edo EZ DEUS” Metodoa.
+–
+Zentroide pare bakoitzaren arteko ibildide minimoak aukeratu ondoren, 
+tij bakoitzaren balore totala ibilbide minimoari esleitzen zaio.
+–
+Modeloaren mugak.
+•
+Zentroideak bidai guztien  jatorria eta helmugak direla suposatzea ez du 
+egoera erreala adierazten.
+•
+Erabiltzaileak hartzen duen erabakiak eta modeloak proposatuak (Koste 
+minimoaren araberako erabakia) ezberdinak izan daitezke.
+•
+Garraioko kostean eragina duten aspektuetako bat “trafikoko 
+intentsitatea” da. Trafiko intentsitateagatik laga dakioke ibilbiderik 
+hoberena izateari.
+–
+Lehenengo muga gainditzeko ez dago modelorik. Zonakatze egokia 
+aukeratuz gero arintzen da eragina.
+–
+Bigarren eta hirugarren mugak gainditzeak bi modelo berriak sortarazi 
+ditu.
+•
+Ibilbide batzuekiko ibilbidearen esleipen proportzionaleko modeloak
+•
+Kapazitate murrizketa duten modeloak .
+
+IBILBIDE BATZUEKIKO ESLEIPEN 
+PROPORTZIONALEKO Modeloak.
+–
+Bidaiariak aldagai minimoaren irizpidearen arabera erabakia hartzen 
+duela suposatzen da, bidaia-denbora minimoaren arabera alegia. Baina 
+erabakitzerakoan bidaiariak minimizatzeko aldagaiari buruz gutxi 
+gorabeherako informazioa bakarrik daukala suposatuko da.
+–
+Sareko tarte bakoitzari ibilbide-denboraren banaketa bat esleituko zaio 
+(balore konkreturik ez)
+
+– Zorizko aukeretatik (lagina) ibilbide 
+bakarra erabakitzen da zentroide pare 
+bakoitzeko. Honek ez du esan nahi 
+metodo honen bitartez lortutako 
+emaitza eta “dena edo ezdeus” 
+metodoaren bidez lortutako emaitza 
+berdinak direnik.
+– Zentroide pare bakoitzarentzat zorizko 
+prozesua errepikatzen da. Modeloaren 
+aplikazioak egoera harrigarriak sortu 
+ditzake.
+
+Adibidea.
+– A, B, F, K eta J 5 zona ezberdineko zentroideak dira.
+– C, D, E, G eta H sareko nodoak dira.
+
+
+KAPAZITATE-MURRIZKETA DUTEN IBILBIDEA ESLEITZEKO Modeloak.
+–
+Garraio-sare bat planifikatu nahi bada, trafiko aurreikuspenak 
+balioztatu behar dira eta horren ondoren fluxu hauek xurgatzeko 
+beharrezko azpiegiturak diseinatuko dira.
+–
+Existitzen den azpiegitura baten funtzionamendua zein izango den jakin 
+nahi bada, fluxuen banaketa kapazitatearekin konparatu behar da.
+•
+Hau da modelo hauen helburua.
+•
+Horretarako, orain arte aipatutako elementuez gain (bidaia-matrizea, 
+sarearen grafoa, minimoaren irizpidea, eta abar) ibilbide 
+bakoitzarentzat trafikoko intentsitatearen eta abiaduraren arteko 
+erlazioa ematen duen kurba ezagutu beharko da. 
+•
+Datu honekin modeloak bidaien fluxua frakzioetan banatuko du 
+ibilbide posibleen artean.
+
+****** Document Outline ******
+    * Slide_1
+    * Slide_2
+    * Slide_3
+    * Slide_4
+    * Slide_5
+    * Slide_6
+    * Slide_7
+    * Slide_8
+    * Slide_9
+    * Slide_10
+    * Slide_11
+    * Slide_12
+    * Slide_13
+===============================================================================

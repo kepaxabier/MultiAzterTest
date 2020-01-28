@@ -1,0 +1,2990 @@
+
+
+
+ALDAGAI KONPLEXUKO FUNTZIOEN
+TEORIA
+Irakaslearen datuak
+Izena: Javier Duoandikoetxea
+Bulegoaren kokapena: Matematika Saila.
+Tutoretza-orduak: Astelehenetan, ostegunetan eta ostiraletan, 11etatik 12eta-
+ra; astearteetan eta asteazkenetan, 14:30etatik 16etara.
+Telefonoa: 946012648
+Posta elektronikoa: javier.duoandikoetxea@ehu.es
+Programa
+1. Zenbaki konplexuak. Plano konplexua. Eragiketak. Modulua eta ar-
+gumentua. Adierazpen polarra, Eulerren formula eta zenbaki konplexuen forma
+esponentziala. Erroak. Proiekzio estereograﬁkoa.
+2.
+Aldagai konplexuko funtzio analitikoak. Limiteak. Jarraitutasuna.
+Deribatuak. Cauchy-Riemann-en ekuazioak. Funtzio analitikoak. Funtzio har-
+monikoak eta harmoniko konjokatuak. Hedapen analitikoa.
+3. Oinarrizko funtzioak. Esponentziala. Logaritmoa eta logaritmoaren ada-
+rrak. Berretzaile konplexuak. Funtzio trigonometrikoak eta hiperbolikoak eta
+horien alderantzizkoak.
+4. Integrazio konplexua eta Cauchyren teoremak. Kurben gaineko inte-
+grala. Jatorrizko funtzioak. Cauchyren teorema integrala. Cauchyren formula
+integrala eta formula integral orokortua. Moreraren teorema. Liouvilleren teo-
+rema. Modulu maximoaren printzipioa.
+5. Serieak. Zenbaki eta funtzio konplexuen segidak eta serieak. Konbergentzia
+uniformea. Berretura serieen konbergentzia zirkulua. Berretura serieen integra-
+zioa eta deribazioa. Taylorren serieak. Laurenten serieak. Berretura-serieen
+biderketa eta zatiketa.
+6. Hondarrak eta poloak. Hondarrak. Cauchyren teorema hondarretarako.
+Hondarrak inﬁnituan. Puntu singular isolatuen sailkapena. Funtzioen zeroak
+eta poloak. Portaera puntu singular isolatu baten ingurunean.
+7. Hondarren erabilera. Integral erreal inpropioen kalkulua. Jordanen lema.
+Argumentuaren printzipioa. Rouch´
+eren teorema.
+8. Transformazio konformeak. Deribatuaren moduluaren eta argumentua-
+ren esanahi geometrikoa. Transformazio konformeak. Zenbait transformazioren
+azterketa:
+ linealak, arrazional linealak, trigonometrikoak, berreturak eta erroak.
+Riemannen gainazalak.
+1
+
+Bibliograﬁa
+Testuliburu gomendatua
+J. W. Brown eta R. V. Churchill, Variable compleja y aplicaciones, 7a ed.
+McGraw-Hill, Madrid, 2007.
+Programak liburu horren lehen bederatzi kapituluak hartzen ditu. Irakasgaia hobe-
+to jarraitzeko liburua irakurtzea gomendatzen dizuet. Emandako erreferentzia zaz-
+pigarren argitalpenarena da; aurrekoren bat hartzen baduzue, berdin balioko dizue
+lanerako baina aldaketa formal batzuk daude 
+(adibidez, bostgarren argitalpenean zor-
+tzi kapitulutan dator gure programa). Liburutegiko bilaketa errazteko jakin ezazue
+aurreko argitalpenetan Churchill lehen egile modura agertzen dela.
+Ariketa-liburuak
+L. I. Volkovyskii, G. L. Lunts eta I. G. Aramanovich, Problemas sobre la teor´ıa
+de funciones de variable compleja, Mir, Mosc´
+u, 1977.
+M. L. Krasnov, A. I. Kiselev eta G. I. Makarenko, Funciones de variable com-
+pleja. Calculo operacional. Teor´ıa de la estabilidad, Mir, Mosc´
+u, 1983.
+Problemen enuntziatuak eta emaitzak agertzen dira
+Beste liburu interesgarri batzuk
+Liburu asko daude gai honi buruz. Hurrengo zerrendan daudenak Bibliotekan aurki
+ditzakezue.
+L. V. Ahlfors, Complex Variables, McGraw-Hill, 1978.
+E. Aparicio, Teor´ıa de funciones de variable compleja, UPV/EHUko Argitalpen
+Zerbitzua, Bilbo, 1998.
+J. B. Conway, Functions of One Complex Variable, Springer-Verlag, 1986.
+N. Levinson eta R. M. Redheﬀer, Curso de variable compleja, Revert´
+e, 1990.
+E. M. Stein eta R. Shakarchi, Complex analysis, Princeton University Press,
+2003.
+Interneteko baliabideak:
+Interneteko leku askotan aurki ditzakezue analisi konplexuko materiala. Bila-
+tzaile baten laguntzaz edo wikipedian sartuta, hainbat informazio lor dezake-
+zue. (Gogoratu beti aholku hau: ez inprimatu beharrezkoa ez bada.) Adibi-
+de pare bat: http://www.math.gatech.edu/~cain/winter99/complex.html
+helbidean Complex Analysis izeneko ikastaro baten apunteak dituzue ingelesez;
+Zaragozako unibertsitateko An´
+alisis Matem´
+atico saileko webgunean gaztelaniaz.
+Moodle plataforma erabiliko dut.
+http://moodle.ehu.es/ helbidetik sartu
+behar duzue, norberaren erabiltzaile-
+izena eta pasahitza idatzita. Bertan aurki-
+tuko dituzue gaien laburpenak, ariketak, lanak eta bestelako informazioa. Sartu
+sarritan eta ikusi zer berri dagoen.
+2
+
+1. ZENBAKI KONPLEXUAK
+Gai honetan zenbaki konplexuen multzoaren oinarrizko propietateak aztertzen dira.
+[B-
+Ch] liburuaren lehen kapituluan duzue gaia, baina bibliograﬁako beste edozein
+liburutan ere kontsulta daiteke.
+Hemen eta aurrerantzean [B-Ch] erabiliko dugu bibliograﬁako testuliburu gomen-
+datua (Brown eta Churchill egileena) aipatzeko.
+Zenbaki konplexuen multzoa.
+Zenbaki errealen bikote ordenatuak dira zenbaki konplexuak. Beraz, mul-
+tzo modura ikusita R2-ren berbera dugu.
+Notazioa eta terminoak.
+• Zenbaki konplexuen multzoa C da.
+• (x, y) bikotea x+yi idazten da. Idazkera honi binomio erakoa deritzo.
+• x + 0i zenbaki konplexua x zenbaki errealarekin identiﬁkatzen da;
+horrela, R ⊂ C dugu.
+• z = x + yi bada, x da z-ren parte erreala ( z) eta y, z-ren parte
+irudikaria ( z).
+• Parte erreal nulua duten zenbakiei irudikari hutsak deritze.
+Eragiketak.
+• Batuketa: (x1 + y1i) + (x2 + y2i) = (x1 + x2) + (y1 + y2)i.
+• Biderketa: (x1 + y1i) · (x2 + y2i) = (x1x2 − y1y2) + (x1y2 + x2y1)i.
+Eragiketa bi hauekin C-ren egitura algebraikoa gorputz trukakorra da.
+Gogoratu (edo aurkitu) gorputz trukakorra izateko behar diren propietateak eta
+egiaztatu betetzen direla.
+Plano konplexua.
+C eta R2 identiﬁkatzen direnez, zenbaki konplexuak planoko puntuekin
+identiﬁkatzen dira.
+Modulua eta argumentua. Forma polarra.
+z = x+yi zenbaki konplexuari dagokion planoko (x, y) puntuaren koorde-
+natu polarrak (r, θ) badira, r da z-ren modulua eta θ da z-ren argumentua.
+Argumentua ez da bakarra, θ + 2πk (k ∈ Z) guztiak ere z-ren argumentuak
+dira. Batzuetan komeni da argumentu guztietatik bat aukeratzea, (−π, π]
+tartean dagoen bakarra; argumentu nagusia deritzo.
+Notazioa: z-ren modulua: |z|; z-ren argumentua: arg z (argumentu guz-
+tiak edo argumentu bat, zehaztu barik); z-ren argumentu nagusia: Arg z.
+Forma polarra. z = |z|(cos θ + i sin θ) da z-ren forma polarra, θ z-ren
+argumentu bat izanik.
+1
+
+2
+Biderketa forma polarrean.
+Izan bitez z1 = r1(cos θ1 + i sin θ1) eta
+z2 = r2(cos θ2 + i sin θ2), orduan
+z1z2 = r1r2(cos(θ1 + θ2) + i sin(θ1 + θ2)).
+(Trigonometriako formulak erabiliz frogatzen da.) Ondorioz: biderkadura-
+ren modulua moduluen biderkadura da eta biderkaduraren argumentua, ar-
+gumentuen batura.
+Moduluaren propietateak.
+(1) | z|, | z| ≤ |z| ≤ | z| + | z|.
+(2) |z1 + z2| ≤ |z1| + |z2|. (3) |z1 z2| = |z1| |z2|.
+Konjokatua.
+z = x + yi bada, z-ren konjokatua z = x − yi da.
+Propietateak.
+(1) |z|2 = zz.
+(2) |z| = |z| eta arg z = − arg z.
+(3)
+z = (z + z)/2 eta
+z = (z − z)/(2i).
+(4) z1 + z2 = z1 + z2.
+(5) z1 z2 = z1 z2.
+De Moivre-ren formula: (cos θ + i sin θ)n = cos nθ + i sin nθ. Erabili
+indukzioa frogatzeko.
+Eulerren formula: eit = cos t + i sin t, t ∈ R. Zenbaki konplexuen
+biderkadurarako formulatik ei(t+s) = eit eis ondorioztatzen da, ohiko espo-
+nentzialerako moduan.
+Forma esponentziala. |z| = r eta arg z = θ badira,
+z = re
+iθ
+idazkerari z-ren forma esponentziala deritzo.
+x = Re z
+y = Im z
+|z|
+θ = arg z
+z = x + iy = |z| eiθ
+ z = x - iy = |z| e-iθ
+Formularako arrazoi formal bat hau da: f (t) = cos t + i sin t deﬁnituz gero,
+f (t) = if (t) eta f 
+(0) = 1 dira; i erreala balitz, ekuazio diferentziala integratuz,
+f (t) = eit lortuko genuke.
+
+3
+Funtzio esponentzialaren oinarrizko propietatea erabiliz ez deﬁni daiteke, z ∈ C
+guztietarako. Horretarako z = x + iy bada, ez = exeiy egingo dugu.
+Baina serie baten bidez ere deﬁni daiteke esponentziala, ez =
+∞
+n=0 z
+n/(n!)
+eginez. Badakigu hala dela z ∈ R bada. Serie horretan z = it ordezkatuz, eta
+parte erreala eta irudikaria bananduz, Eulerren formula ateratzen da.
+Eulerren formulan t = π eta t = 2π hartuz, eπi = −1 eta e2πi = 1 ditugu.
+Lehenengoa, beste modu batez idatzita, hau da
+e
+πi + 1 = 0.
+Batzuetan azken honi deitzen zaio Eulerren formula. Bertan agertzen dira
+matematikako zenbakirik ospetsuenak: 0, 1, e, π eta i, oinarrizko eragiketa
+aritmetikoa (batuketa) eta erlazioa (berdintza).
+Biderketak eta berreketak forma esponentzialean. Oso egokia da
+forma esponentziala biderketak eta berreturak egiteko:
+(r1e
+iθ1 )(r
+2e
+iθ2 ) = r
+1r2e
+i(θ1+θ2),
+(re
+iθ )n = reinθ.
+Zenbaki konplexu baten n-erroak.
+Z = Reiφ = 0 zenbaki konplexua emanda eta n ∈ N, zn = w betetzen
+duten zenbakiak aurkitu behar ditugu. Edozein k osotarako Z = Rei(φ+2πk)
+ere badenez, z = reiθ idatziz, zn = Z izango da rneinθ = Rei(φ+2πk) bada,
+eta hemendik r =
+n
+√
+R eta θ = (φ + 2kπ)/n ateratzen da. Argumentu hauek
+n zenbaki konplexu desberdinei dagozkie, eta k = 0, 1, 2, . . . , n − 1, balioekin
+lortzen dira guztiak. Beraz,
+n
+√
+Reiφ =
+n
+√
+R e
+i(φ+2kπ)/n,
+k = 0, 1, 2, . . . , n − 1.
+Unitatearen erroak.
+n
+√
+1 = ei2kπ/n dugu, k = 0, 1, 2, . . . , n − 1 izanik.
+Baldin ω = ei2π/n idazten badugu, erro horiek ω, ω2, . . . , ωn(= 1) dira. Eta
+z0 bada Z-ren n-erro bat, besteak z0ω, z0ω
+2, . . . , z0ωn−1 dira.
+Adierazpen geometrikoa. Z = Reiφ = 0 zenbakiaren n-erroak
+n
+√
+R erra-
+dioko zirkunferentzian daude eta n aldeko poligono erregular baten erpinak
+dira.
+Aljebraren oinarrizko teorema (d’Alemberten teorema).
+Koeﬁziente konplexuko polinomio batek, konstantea ez bada, erro konplexu
+bat du, gutxienez.
+Behin teorema hori frogatuta (zenbait bider frogatuko dugu kurtsoan
+zehar), indukzioa erabiliz hau froga daiteke: polinomioaren maila n ba-
+da, n erro ditu C-n. Hasteko hau ikusi behar da: P -ren maila n bada eta
+P (z0) = 0, P (z) = (z − z0)Q(z) da non Q-ren maila n − 1 den.
+
+4
+P (0) = 0 bada, ez du gai askerik eta bistakoa da P (z) = zQ(z) dela. P 
+(z0) = 0
+bada, ˜
+P (z) = P (z +z0) deﬁnituz, ˜
+P (0) = 0 da eta, ondorioz, ˜
+P (z) = z ˜
+Q(z); orduan,
+P (z) = ˜
+P (z − z0) = (z − z0) ˜
+Q(z − z0).
+Erroak n izan daitezen eta ez gutxiago, anizkoiztasuna kontuan hartu
+behar da. P polinomioaren z0 erroa k bider hartzen da, (z − z0)
+k P -ren
+zatitzailea bada, baina ez (z − z0)
+k+1.
+Proiekzio estereograﬁkoa.
+Izan bedi S, (0, 0, 1/2) zentroko eta 1/2 erradioko esfera R3-n.
+S \
+{(0, 0, 1)} multzoaren eta C-ren arteko bijekzio bat deﬁnitzen dugu mo-
+du honetan: (ξ, η, ζ) ∈ S \ {(0, 0, 1)} bada, egin (0, 0, 1)-etik eta 
+(ξ, η, ζ)-tik
+pasatzen du zuzena; zuzen honek (x, y, 0) puntuan ebakitzen badu OXY
+planoa, (ξ, η, ζ) da z = x + yi zenbaki konplexuaren proiekzio estereograﬁkoa
+esferan.
+(ξ, η, ζ)-tik z = x + yi-ra pasatzeko formulak hauek dira:
+x =
+ξ
+1 − ζ
+, y =
+η
+1 − ζ
+;
+eta alderantziz,
+ξ =
+x
+1 + |z|2
+, η =
+y
+1 + |z|2
+, ζ =
+|z|2
+1 + |z|2
+.
+Geroago, plano konplexu hedatua erabiliko dugu, C = C ∪ {∞}. Orduan,
+C eta S-ren arteko bijekzioa izango dugu ((0, 0, 1)-en irudia ∞ izango da).
+Ez dago ordenarik C-n.
+R-ko ordena (berdin da < edo > hartzea) osoa da eta eragiketekin ba-
+teragarria, hau da: (i) a < b, b < a edo a = b, bat gertatzen da eta bat
+bakarrik; (ii) a < b bada, a + c < b + c da; 
+(iii) a < b bada eta 0 < c, ac < bc
+da. (ii)-n b = 0 eta c = −a hartuz hau ondorioztatzen da: a < 0 bada,
+0 < −a da, eta alderantziz.
+Ezinezkoa da propietate horiek beteko dituen ordena bat izatea C-n. Or-
+dena hori balego, 0 < i edo 0 < −i izango genuke. Horietako edozeinek,
+(iii) erabiliz, 0 < −1 ematen du, eta hemendik 0 < (−1)2 = 1. Baina biak
+batera ezin dira gertatu.
+
+5
+2. FUNTZIO ANALITIKOAK
+Gai honetan aldagai konplexuko funtzio baten deribatua deﬁnituko dugu. Aurre-
+ko kontzeptuak (limiteak, jarraitutasuna) aldagi biko funtzio errealen modukoak
+badira ere, deribazioak propietate bereziak eskatzen dizkio funtzioari.
+Aldagai konplexuko funtzio konplexuak.
+D ⊂ C bada eta f : D ⊂ C → C funtzioa badugu, f aldagai konplexuko
+funtzio konplexua da.
+Funtzio izateko, z ∈ D bakoitzerako f (z) bakarra da. Geroago interesgarria
+izango da kasu batzuetan f (z)-
+ri balio bat baino gehiago eman ahal izatea. Kasu
+horretan funtzio multiformea deitzen da.
+Bektore-funtzio batekiko identiﬁkazioa. f (x+iy) = u(x, y)+iv(x, y) bada,
+u eta v errealak izanik, f eta (x, y) ∈ D → (u(x, y), v(x, y)) ∈ R2 funtzioa
+identiﬁka daitezke.
+Distantzia eta topologia plano konplexuan.
+Planoko distantzia euklidearra hartzen da C-rako: d(z1, z2) = |z1 − z2|.
+Horrekin C espazio metriko bihurtzen dugu. Espazio metriko modura C eta
+R2 identiﬁkatuta daude.
+Kontzeptu topologikoak. Espazio metrikoetako zenbait kontzeptu gogoratu
+behar dira: distantzia, ingurune, barruko, kanpoko eta mugako puntuak; multzo
+irekia, itxia; metatze-puntuak; multzo trinkoa; multzo konexuak eta arkuz kone-
+xuak.
+Emaitza pare bat: (i) C-ko multzo bat trinkoa da baldin eta soilik baldin itxia
+eta bornatua bada.
+(ii) C-ko ireki konexuak arkuz konexuak dira.
+Segidak.
+Limiteak. limn→∞ zn = A da limn→∞ |zn − A| = 0 bada (idatzi
+eta N0
+erabiliz); limn→∞ zn = ∞ da limn→∞ |zn| = +∞ bada.
+Propietateak. (a) limn→∞ zn = A da baldin eta soilik baldin limn→∞ zn =
+A eta limn→∞ zn =
+A badira.
+(b) limn→∞ zn = A bada, limn→∞ |zn| = |A| da. Alderantziz bakarrik
+A = 0 bada, eta hau oso erabilgarria da.
+(c) limn→∞ zn = A = 0 bada, pentsatu ea limn→∞ Arg zn = Arg A den.
+Argumentu nagusia erabili ezean, limn→∞ arg zn galdetzeak ez du zentzurik,
+argumentua ez baitago modu bakarrean deﬁnituta.
+Funtzioen limiteak.
+Izan bedi f : D ⊂ C → C.
+(1) Baldin z0 D-ren metatze-puntua bada, limz→z
+0 f (z) deﬁni daiteke.
+
+6
+• limz→z
+0 f (z) = A da, hau betetzen bada:
+> 0 bakoitzerako,
+existitzen da δ > 0 non |f (z) − A| <
+den, |z − z0| < δ, z = z0
+eta z ∈ D badira. (Irakurri deﬁnizio hau inguruneak erabiliz.)
+• limz→z
+0 f (z) = ∞ da M > 0 bakoitzerako |f (z)| > M betetzen
+bada lehengo moduko z0-ren ingurunean.
+(2) Baldin D ∩ {z : |z| > M } = ∅ bada, M guztietarako, limz→∞ f (z)
+deﬁni daiteke (ﬁnitu edo inﬁnitu), behar diren aldaketak eginez.
+Propietateak.
+(a) limz→z
+0 f (z)
+= A ∈ C da baldin eta soilik baldin
+limz→z
+0
+f (z) =
+A eta limz→z
+0
+f (z) =
+A badira.
+(b) limz→z
+0 f (z)
+= ∞ bada, ez dute zertan limz→z
+0
+f (z) = ∞ eta
+limz→z
+0
+f (z) = ∞ izan. (Aztertu zn = n + i, zn = in eta zn = ni
+n ka-
+suak, adibidez.) Baina limz→z
+0 f (z) = ∞ eta limz→z0 |
+f (z)| + | f (z)| = ∞
+baliokideak dira; azaldu zergatik.
+(c) Limiteak eta eragiketak (konposizioa barne) ohiko moduan portatzen
+dira.
+Jarraitutasuna.
+• f jarraitua da z0 puntuan limz→z
+0 f (z) = f (z0) bada.
+• f uniformeki jarraitua da D multzoan hurrengoa betetzen bada:
+> 0 bakoitzerako, existitzen da δ > 0, zeinetarako |f (z1)−f (z2)| <
+den, |z1 − z2| < δ bada, z1, z2 ∈ D izanik.
+Propietateak. (a) f jarraitua da z0-n baldin eta soilik baldin
+f (z) eta
+f (z) jarraituak badira z0-n.
+(b) f eta g jarraituak badira z0-n, f + g eta f g jarraituak dira z0-n.
+Gainera, g(z0) = 0 bada, f /g ere jarraitua da z0-n.
+(c) f jarraitua bada z0-n eta g jarraitua bada f (z0)-n, orduan g ◦ f ja-
+rraitua da z0-n.
+(d) f jarraitua bada D multzo trinkoan, f (D) trinkoa da, eta f uni-
+formeki jarraitua da D-n. Bereziki, |f | funtzioak bere balio maximo eta
+minimoak hartzen ditu (hau da, existitzen dira z1, z2 ∈ D zeinetarako
+|f (z1)| ≤ |f (z)| ≤ |f (z2)| betetzen den z ∈ D guztietarako).
+Deribagarritasuna.
+f deribagarria da z0-n
+f (z0) = lim
+z→z0
+f (z) − f (z0)
+z − z0
+existitzen bada.
+
+7
+Karakterizazioa. f deribagarria da z0-n baldin eta soilik baldin existitzen
+bada A zenbaki konplexua
+lim
+z→z0
+f (z) − f (z0) − A(z − z0)
+z − z0
+= 0
+betetzen duena. Kasu horretan A = f (z0) da.
+Teorema. f deribagarria bada z0-n, jarraitua da puntu horretan.
+R2-ko analisitik: u(x, y) planoko funtzio erreal bat bada,
+• deribatu partzialak deﬁnitzen dira; notazio hau erabiliko dugu:
+∂u
+∂x
+(x0, y0) = ux(x0, y0) eta
+∂u
+∂y
+(x0, y0) = uy(x0, y0);
+• u diferentziagarria da (x0, y0) puntuan existitzen badira α eta β zenbaki
+errealak, zeinetarako
+lim
+(x,y)→(x0,y0)
+u(x, y) − u(x0, y0) − α(x − x0) − β(y − y0)
+(x − x0)2 + (y − y0)2
+= 0
+den. Kasu horretan, α = ux(x0, y0) eta β = uy(x0, y0) dira;
+• deribatu partzialen existentzia ez da nahikoa diferentziagarritasunerako,
+baina (x0, y0) puntuaren ingurune batean deribatu partzialak existitzen
+badira eta jarraituak badira, funtzioa diferentziagarria da (x0, y0)-n.
+Cauchy-Riemannen baldintzak.
+Demagun f (x + iy) = u(x, y) + iv(x, y) dela eta f (z0) existitzen dela
+z0 = x0 + iy0 puntuan. Deribatuaren deﬁnizioan egin limitea x x0-rantz
+doanean, y = y0 hartuta, eta gero y y0-rantz doanean, x = x0 hartuta. Hau
+lortzen da:
+f (z0) = ux(x0, y0) + ivx(x0, y0) = vy(x0, y0) − iuy(x0, y0)
+Cauchy-Riemannen baldintzak:
+ux(x0, y0) = vy(x0, y0)
+eta
+uy(x0, y0) = −vx(x0, y0).
+Deribagarritasunaren eta Cauchy-Riemannen baldintzen arteko erlazioak:
+• f deribagarria bada z0-n, Cauchy-Riemannen baldintzak betetzen
+dira.
+• f -ren deribagarritasunerako ez da nahikoa u eta v diferentziagarriak
+izatea.
+• Puntu batean Cauchy-Riemannen baldintzak betetzea ez da nahikoa
+f deribagarria izateko.
+• f deribagarria da z0-n baldin eta soilik baldin u eta v diferentzia-
+garriak badira (x0, y0)-n eta bertan Cauchy-Riemannen baldintzak
+betetzen badira,.
+
+8
+Funtzio analitikoak edo holomorfoak.
+Funtzio bat analitikoa da puntu batean, puntuaren ingurune batean deri-
+bagarria bada. Analitikoa da multzo ireki batean, multzoko puntu guztietan
+deribagarria bada. Funtzioa osoa da C-n analitikoa bada.
+Analitiko esan ordez holomorfo esan daiteke. Batzuetan erregularra ere erabil-
+tzen da.
+Deribatuak z eta z-rekiko.
+Deﬁni ditzagun hurrengo “eragile diferentzialak”:
+fz =
+1
+2
+(fx − ify)
+eta
+fz =
+1
+2
+(fx + ify).
+(Azpiindizeak deribazio partziala esan nahi du: fz =
+∂f
+∂z
+eta fz =
+∂f
+∂z
+ere
+idatz daitezke.)
+• f deribagarria bada z0-n, fz(z0) = f (z0) eta fz(z0) = 0 dira.
+• Cauchy-Riemannen baldintzak betetzea eta fz(z0) = 0 izatea balio-
+kideak dira.
+Deﬁnizio horiek justiﬁkatzeko forma diferentzialen bidezko idazkera erabil deza-
+kegu: idatzi
+fx = ux + ivx, fy = uy + ivy, dz = dx + idy, dz = dx − idy,
+ordezkatu df = fz dz + fz dz adierazpenean, eta atera
+df = (ux dx + uy dy) + i(vx dx + vy dy) = du + idv.
+Funtzio harmonikoak eta harmoniko konjokatuak.
+Aldagai biko u(x, y) funtzioaren laplacearra ∆u = uxx + uyy da. Funtzioa
+harmonikoa da ∆u = 0 bada.
+Funtzio bat, f , analitikoa bada multzo batean,
+f eta
+f harmonikoak
+dira. Cauchy-Riemannen ekuazioetatik ateratzen da emaitza hau, funtzio
+erreal horiek bigarren ordenako deribatu jarraituak dituztela onartuz gero
+(hau, aurrerago ikusiko dugunez, beti betetzen da).
+f funtzioa
+f -ren
+harmoniko konjokatua deitzen da.
+Funtzio bat, u, harmonikoa bada D multzo irekian, u + iv analitikoa egi-
+ten duen v funtzio harmonikoa (u-ren harmoniko konjokatua) aurki daiteke
+Cauchy-Riemannen ekuazioen sistema ebatziz. Harmoniko konjokatu hori
+ez da bakarra, konstante bat gehituta beste bat lortzen baita.
+
+9
+3. OINARRIZKO FUNTZIOAK
+Funtzio esponentziala, logaritmoak, funtzio trigonometriko eta hiperbolikoak,
+hauen alderantzizkoak eta erroak aztertuko ditugu.
+Funtzio esponentziala.
+Deﬁnizioa. ez = ex(cos y + i sin y) da (z = x + iy). Baldin z ∈ R bada,
+funtzio esponentzial erreala berreskuratzen dugu; z = it bada, Eulerren
+formula.
+Oinarrizko propietateak: (i) ez1 ez2 = ez1+z2 eta ez1 /ez2 = ez1−z2 .
+(ii) Funtzio esponentziala periodikoa da, 2πi periododuna: ez+2πi = ez.
+Eta ez1 = ez2 da baldin eta soilik baldin z1 − z2 = 2kπi bada, k ∈ Z izanik.
+Analitikotasuna. u = ex cos y eta v = ex sin y izanik, C1 dira eta Cauchy-
+Riemannen baldintzak betetzen dituzte puntu guztietan. Orduan, ez funtzio
+osoa da eta (ez) = ez.
+Logaritmoak.
+Notazioa. ln x notazioak x zenbaki erreal positiboaren logaritmo nepertarra
+adieraziko du, hau da, aldagai errealeko funtzio modura dagokiona.
+Izan bedi z ∈ C \ {0}. ew = z ekuazioaren emaitza guztiak hauek dira:
+w = ln |z| + i arg z. Horiek guztiak dira z-ren logaritmoak eta
+log z = ln |z| + i arg z
+idatziko dugu. Argumentu nagusia hartuta lortzen den balioari logaritmo
+nagusia deritzo: Log z = log |z| + iArg z.
+Logaritmo nagusia C \ {0} multzoan deﬁnituta dago, baina ez da ja-
+rraitua zenbaki erreal negatiboetan (argumentu nagusia ez delako jarraitua
+hor). Deﬁnizio eremutzat C \ (−∞, 0] hartzen badugu, logaritmo nagusia
+analitikoa da eta deribatua 1/z da.
+Balioen multzoa {z : α <
+z ≤ α + 2π} bandan hartuta (α ∈ R) lo-
+garitmoaren beste adar bat deﬁnitzen da. Funtzio analitikoa izan dadin,
+deﬁnizio-eremutzat C \ ({0} ∪ {z : arg z = α}) hartzen da eta balioak ban-
+da irekian. Horrela deﬁnituriko logaritmoaren deribatua ere 1/z da. Plano
+konplexuari kentzen zaion zuzenerdia ebaki bat dela esaten da.
+Kontuan izan: elog z = z baina log ez = z + 2πni, n ∈ Z.
+Ohiko log(z1z2) = log z1 + log z2 formula betetzen da honela ulertuta:
+log z1-en balio guztiak eta log z2-ren balio guztiak batuz gero, log(z1z2)-ren
+balio guztiak lortzen dira. Formula bera logaritmo nagusia idatziz ez da beti
+betetzen.
+
+10
+Berretzaile konplexuak.
+Izan bedi c ∈ C. zc = ec log z deﬁnitzen da, z = 0 bada. Oro har, inﬁnitu
+balio ateratzen dira. Hala ere, n ∈ Z bada, zn bakarra da, eta z1/n-rako n
+balio desberdin lortzen dira.
+Logaritmoaren adar bakoitzak zc-ren adar bat ematen du eta logaritmo
+nagusiak ematen duena da zc-ren balio nagusia. Logaritmoa analitikoa den
+multzo bat hartuz gero, hor zc analitikoa da eta deribatua czc−1 da (deri-
+batuan agertzen den zc-ren balioa funtziorako hautatzen den balio berbera
+da).
+Era berean, c ∈ C \ {0} bada, cz = ez log c funtzio esponentziala deﬁnitzen
+da. Analitikoa da eta deribatua cz log c da.
+Kontuan izan: 1z-ren balio nagusia 1 da, baina ez bakarra, 1z = e2πnzi baita.
+Era berean ez-
+rako ere inﬁnitu balio lortzen dira. Hala ere, notazioa ez nahasteko,
+ez idazten denean balio nagusia hartzen dela onartzen da.
+Funtzio trigonometrikoak.
+Sinua eta kosinua honela deﬁnitzen dira:
+sin z =
+eiz − e−iz
+2i
+eta
+cos z =
+eiz + e−iz
+2
+.
+Aldagai errealeko funtzioekin bat datoz, z ∈ R bada.
+Beste funtzio trigonometrikoak horien bidez deﬁni daitezke:
+tan z =
+sin z
+cos z
+,
+cot z =
+cos z
+sin z
+,
+sec z =
+1
+cos z
+,
+csc z =
+1
+sin z
+.
+Ohiko formulak betetzen dituzte, adibidez,
+sin
+2 z + cos2 z = 1,
+sin(z1 + z2) = sin z1cos z2 + cos z1sin z2.
+Sinua eta kosinua funtzio osoak dira eta deribatuak (sin z) = cos z eta
+(cos z) = − sin z dira.
+Sinu eta kosinuaren zeroak errealak dira: sin z = 0 da baldin eta soilik bal-
+din z = kπ bada, k ∈ Z; cos z = 0 da baldin eta soilik baldin z = (k + 1/2)π
+bada, k ∈ Z. Beste funtzio trigonometrikoak analitikoak dira izendatzai-
+lea anulatzen ez den puntuetan. Analitikoak diren puntuetan deribatuak
+funtzio erreal modura dituzten berberak dira.
+Aldagai errealeko sinua eta kosinua beti daude −1 eta 1 artean, aldagai konple-
+xukoak ez, plano konplexuko edozein balio har dezakete 
+(ikus geroago alderantziz-
+koak).
+Funtzio hiperbolikoak.
+Sinu eta kosinu hiperbolikoak honela deﬁnitzen dira:
+sinh z =
+ez − e−z
+2
+eta
+cosh z =
+ez + e−z
+2
+.
+
+11
+Aldagai errealeko funtzio modura trigonometrikoen desberdinak diren
+arren, aldagai konplexuko funtzio modura aldagai-aldaketa batek erlazio-
+natzen ditu: sin iz = i sinh z, cos iz = cosh z.
+Erroak.
+Erro karratua. f (z) = z2 funtzioa ez da injektiboa. Hartzen badugu D =
+{z : −π/2 < Arg z ≤ π/2} ∪ {0}, z2 funtzioa injektiboa da D-n eta irudia
+C osoa da. Alderantzizkoa (
+√
+z) deﬁni daiteke C-tik D-ra. Baina horrela
+deﬁnituta,
+√
+z ez da jarraitua z erreal negatiboa edo 0 bada (egiaztatu).
+Ardatzerdi erreal negatiboan ebaki bat eginez gero, hau da, C \ (−∞, 0]
+hartuz deﬁnizio eremutzat,
+√
+z jarraitua da eta analitikoa. Adar bi deﬁni
+daitezke:
+√
+reiθ =
+√
+r eiθ/2 (θ argumentu nagusia izanik) eta −
+√
+r eiθ/2.
+Edozein kasutan deribatua 1/(2
+√
+z) da (hemengo
+√
+z adarreko balio bera
+izanik).
+Deﬁnizio-eremutzat C \ ({0} ∪ {z : arg z = α}) hartuta ere
+√
+z-rako adar
+bi deﬁni daitezke, analitikoak. Deribatua 1/(2
+√
+z) da beti
+Maila handiagoko erroak. f (z) = zn badugu, arazo bera dugu. n
+√
+z funtzio
+analitiko modura deﬁnitzeko aukera bat hau da: hartu C \ (−∞, 0] deﬁnizio-
+eremua eta
+n
+√
+reiθ = n
+√
+r eiθ/n egin, θ argumentu nagusia izanik. Deribatua
+1/[n( n
+√
+z)n−1] da.
+Deﬁnizio-eremu berean beste n − 1 aukera (n − 1 adar) daude funtzio
+analitikoa lortzeko. Deribatuak beti du 1/[n( n
+√
+z)n−1] adierazpena baina
+formulan agertzen den n
+√
+z hori egin dugun aukeraren arabera aldatzen da.
+Funtzio trigonometrikoen alderantzizkoak.
+Ebatzi sin w = z ekuazioa, z emanda. Horrek
+arcsin z = −i log(iz +
+1 − z2)
+ematen du. Kontuan izan erro karratuak balio bi ematen dituela eta horieta-
+ko bakoitzaren logaritmoak inﬁnitu balio hartzen dituela. Adar nagusia de-
+ﬁnitzeko −π/2 <
+(arcsin z) ≤ π/2 betetzen duen balioa hartzen da. Ez da
+jarraitua
+(arcsin z) = π/2 betetzen duten puntuetan ((−∞, −1] ∪ [1, +∞)
+multzoko errealak) eta horiek deﬁnizio-eremutik kenduz funtzio analitikoa
+lortzen da. Deribatua 1/
+√
+1 − z2 da.
+Modu berean arrazoituz arccos z = −i log(z +
+√
+z2 − 1) lortzen da. Adar
+nagusia deﬁnitzeko 0 ≤
+(arccos z) < π hartzen da.
+Aurkitu formulak beste funtzio trigonometrikoen eta funtzio hiperboli-
+koen alderantzizkoetarako.
+
+12
+4. INTEGRAZIO KONPLEXUA
+ETA CAUCHYREN TEOREMAK
+Gai honetan kurben gaineko integralak deﬁnituko ditugu funtzio konplexu jarrai-
+tuetarako. Planoko bektore-eremuen integralekin erlazionatuta daude.
+Kurben gaineko integralen teoriak Cauchyren lanean du jatorria. Lehenengo emai-
+tza nagusia Cauchyren teorema integrala da:
+ kurba sinple itxi baten gainean inte-
+grala 0 da funtzioa analitikoa bada kurban eta barruko aldean. Bigarrenaren arabe-
+ra, funtzio bat analitikoa bada kurba itxi sinple batean eta haren barruko aldean,
+barruko puntuetako balioak kurbako balioen bitartez eman daitezke, Cauchyren
+formula integralaren bidez.
+Ondorio bat izango da funtzio analitikoek behin eta berriro deriba daitezkeela eta
+deribatuetarako ere formula integralak daude. Beste ondorio batzuk ere baditu
+formula integralak.
+Kurbak.
+• Kurba parametrizatua: γ : [a, b] → C aplikazio jarraitua. Baldin
+τ : [c, d] → [a, b] bijekzio jarraitu gorakorra bada, ˜
+γ(t) = γ(τ (t)) eta
+γ baliokidetzat hartuko ditugu.
+• γ(a) hasierako puntua da eta γ(b) amaierako puntua.
+• γ-ren alderantzizkoa edo aurkakoa: γ−(t) = γ(a + b − t). γ-ren
+ibilibide bera egiten du baina aurkako noranzkoan.
+• γ itxia da γ(a) = γ(b) bada; γ kurba sinplea da aplikazio injek-
+tiboa bada (itxia bada, [a, b)-n injektiboa izatea eskatzen da); γ
+sinple itxia bada, Jordan-en kurba deitzen da. Jordan-en kurba ba-
+tek bitan banatzen du planoa, barrualdea (bornatua) eta kanpoaldea
+(ez-bornatua).
+• γ leuna da parametrizazioa C1 bada (parametrizazio baliokideetan τ
+ere C1 hartu behar da); γ zatika leuna da parametrizazioa C1 zatika
+bada.
+• Kurben batura. γ1 : [a, b] → C eta γ2 : [c, d] → C kurbek γ1(b) =
+γ2(c) betetzen badute, γ1 + γ2 kurba deﬁnitzen da: (i) b = c bada,
+kurba hori [a, d] tartean deﬁni daiteke modu naturalean; (ii) b = c
+bada, aldatu kurba baten parametrizazioa, baldintza hori bete dadin.
+Integrala kurba baten gainean.
+γ : [a, b] → C kurba leuna bada eta f jarraitua bada γ-ren irudian
+(γ([a, b]) multzoan) f -ren integrala γ-ren gainean deﬁnitzen da:
+γ
+f (z) dz =
+b
+a
+f (γ(t)) γ (t) dt.
+
+13
+Parametrizazio baliokide bat hartuz gero, integrala ez da aldatzen (egiazta-
+tu).
+Kurbaren luzera. γ : [a, b] → C kurba leuna bada, γ-ren luzera
+L(γ) =
+b
+a
+|γ (t)| dt
+da. γ(t) = x(t) + iy(t) idatziz, |γ (t)| =
+x (t)2 + y (t)2 da eta kurbaren
+luzerarako formula ezaguna lortzen da.
+Integralaren propietateak.
+(1)
+γ (αf (z) + βg(z)) dz = α γ f (z) dz + β
+γ g(z) dz.
+(2)
+γ− f (z) dz = − γ f (z) dz (γ
+− γ-ren aurkakoa da);
+(3)
+γ1+γ2 f (z) dz = γ1 f (z) dz + γ2 f (z) dz.
+(4)
+γ f (z) dz ≤ maxz∈γ |f (z)|L(γ).
+Planoko bektore-eremu baten integrala kurba baten gainean honela deﬁnitzen
+da:
+γ
+P dx + Qdy =
+b
+a
+[P (x(t), y(t))x (t) + Q(x(t), y(t))y (t)] dt,
+non (P, Q) bektore-eremu jarraitua den eta γ(t) = (x(t), y
+(t)), a ≤ t ≤ b, kurbaren
+parametrizazioa (C1 zatika).
+Baldin f (x + iy) = u(x, y) + iv(x, y) idazten badugu,
+(1)
+γ
+f (z) dz =
+γ
+udx − vdy + i
+γ
+vdx + udy.
+Jatorrizko funtzioa eta integrala. Teorema. Demagun γ zatika leuna
+dela eta f jarraitua γ-ren (irudiaren) gainean. Baldin F analitikoa bada eta
+F = f bada, orduan
+γ
+f (z) dz = F (γ(b)) − F (γ(a)).
+Frogatzeko, γ leuna bada, erabili
+d
+dt
+F (γ(t)) = f (γ(t))γ (t);
+zatika leuna bada, erabili gauza bera zati leun bakoitzean.
+Teoremaren baldintzetan γ itxia bada, integralak 0 balio du.
+Hartu f (z) = z−1 eta γ = eit, 0 ≤ t ≤ 2π.
+f -ren integrala γ-ren gainean
+2πi da (egiaztatu). Orduan, ez dago γ-ren gainean F = f betetzen duen funtzio
+analitikorik. Izatekotan, logaritmoa izan beharko zen, baina badakigu ezin dela
+modu jarraituan deﬁnitu 0-ren inguruan buelta oso bat egiten duen kurba baten
+gainean.
+
+14
+Cauchyren teorema integrala.
+Cauchy-Goursat-en teorema. Izan bedi f analitikoa D-n. Izan bedi γ kur-
+ba itxi sinple zatika leuna D-n eta demagun γ-ren barrualdea D-n dagoela.
+Orduan,
+γ
+f (z) dz = 0.
+Greenen teorema erabiltzeko modua badago (1) formulan, Cauchy-Riemannen
+ekuazioetatik integralak 0 balio duela ateratzen da. Baina Greenen teoremak kur-
+baren gaineko baldintzaren batez gain, bektore-
+eremua C1 klasekoa izatea eskatzen
+du. Horretarako, teoremaren hipotesietan f jarraitua izatea sartu behar da. Bai-
+na teorema hipotesi hori egin barik froga daiteke eta hala egitea komeni da f -
+ren
+jarraitutasuna ondorio modura aterako baita. Bertsio hau Goursati zor zaio eta
+hortik dator teoremaren izena.
+Teoremaren froga osoa kapituluaren amaieran dago.
+Jatorrizko funtzioen existentzia. D multzo ireki sinpleki konexua
+bada eta f analitikoa D-n, existitzen da F analitikoa D-n zeinetarako F = f
+den.
+Aurreko teoremaren frogan egin dugun azken urratsak ematen du.
+Ondorioa. D multzo ireki sinpleki konexuko γ1 eta γ2 kurben hasierako
+puntuak eta amaierako puntuak berdinak badira,
+γ1 f (z) dz =
+γ2 f (z) dz
+da.
+Cauchyren teoremaren forma orokortua.
+Izan bitez γ0, γ1, γ2,. . . , γk kurba itxi sinpleak, azken guztiak γ0-ren
+barrualdean, elkarren artean disjuntuak eta barrualde disjuntuekin. Izan
+bedi D, γ0-ren barrualdean eta γj (1 ≤ j ≤ k) guztien kanpoaldean gelditzen
+den multzoa. Demagun f analitikoa dela kurben gainean eta D-n; orduan,
+γ0
+f (z) dz −
+k
+j=1
+γj
+f (z) dz = 0.
+Integraletan kurba bakoitza behin ibiltzen da noranzko positiboan.
+
+15
+Beste modu batez irakur daiteke emaitza hau: ∂D, D-ren muga, kurba
+konposatu modura hartzen da, γj, 0 ≤ j ≤ k, kurba guztiez osatua. ∂D-
+ren gainean noranzko bat deﬁnitzeko, D multzoa ezker aldean uzten duena
+aukeratzen da. Orduan, f -ren integrala ∂D-ren gainean 0 da. (Kontuan izan
+hau egitean γj (1 ≤ j ≤ k) kurben gainean erlojuaren orratzen noranzkoa
+hartzen ari garela.)
+Geroago erabiliko dugun aplikazio bat hau da: demagun kurba itxi sinple
+bi ditugula, γ0 eta γ1, bata bestearen barrualdean. f funtzioa analitikoa
+bada kurben gainean eta bien arteko multzoan,
+γ0
+f (z) dz =
+γ1
+f (z) dz.
+(Orain kurba bien ibilbideen noranzkoa berdina da.)
+Cauchyren formula integrala.
+Teorema. Izan bedi γ kurba itxi sinplea eta D, γ-ren barrualdea. f anali-
+tikoa bada D-n eta z0 ∈ D bada,
+f (z0) =
+1
+2πi γ
+f (z)
+z − z0
+dz.
+Froga. Baldin Cr = {z : |z −z0| = r} zirkunferentzia D-n badago, aurreko
+ataleko emaitzagatik,
+γ
+f (z)
+z − z0
+dz =
+Cr
+f (z)
+z − z0
+dz.
+Idatzi
+Cr
+f (z)
+z − z0
+dz = 2πif (z0) +
+Cr
+f (z) − f (z0)
+z − z0
+dz
+(zergatik?), eta erabili f -ren jarraitutasuna ikusteko azken integrala nahi
+bezain txikia egin daitekeela, r 0-tik hurbil hartuta.
+Cauchyren formulan dugun D sinpleki konexua da, baina multzo orokorragoetan
+ere eman daiteke.
+Cauchyren teorema integralerako (bertsio orokortua) aipatu
+ditugun erako multzoetan, adibidez.
+
+16
+Funtzio analitikoen deribagarritasuna.
+Teorema. Izan bedi γ kurba itxi sinplea eta D, γ-ren barrualdea. f analiti-
+koa bada D-n, edozein ordenatako deribatuak ditu bertan. Gainera, z0 ∈ D
+bada,
+f
+(n)(z
+0) =
+n!
+2πi γ
+f (z)
+(z − z0)n+1
+dz.
+Indukzioz frogatzen da. n = 0 kasua goiko formula integrala da. f (n−1)-
+erako balio duela onartuta, f (n)-rako balio duela ikusi behar da. Horretara-
+ko,
+lim
+h→0
+γ
+f (z)
+1
+h
+1
+(z − z0 − h)n
+−
+1
+(z − z0)n
+−
+n
+(z − z0)n+1
+dz = 0
+ikusi behar da.
+Ikus dezagun n = 1 kasua:
+1
+h
+1
+z − z0 − h
+−
+1
+z − z0
+−
+1
+(z − z0)2
+=
+h
+(z − z0)2(z − z0 − h)
+da. Izan bedi d z0-tik γ-rainoko distantzia, M = maxz∈γ |f (z)| eta L = γ-ren
+luzera; orduan,
+γ
+f (z)
+1
+h
+1
+z − z0 − h
+−
+1
+z − z0
+−
+1
+(z − z0)2
+dz ≤
+M L|h|
+d2(d − |h|)
+dugu eta limitea 0 da.
+Cauchy erako integrala.
+Izan bedi γ kurba leun bat (ez du zertan itxia izan) eta ϕ jarraitua γ-n.
+Deﬁnitu
+F (z) =
+γ
+ϕ(w)
+w − z
+dw,
+z /
+∈ γ.
+(Integral hau Cauchy erako integrala da.) F analitikoa da C \ γ multzo
+irekian eta
+F (z) =
+γ
+ϕ(w)
+(w − z)2
+dw
+betetzen da. Maila handiagoko deribatuetarako ere eman daiteke formula
+integrala, lehengo moduan. Frogak ere berdinak dira.
+Moreraren teorema.
+f jarraitua bada D multzo ireki sinpleki konexuan eta D-n dauden kurba
+itxi zatika leunetarako
+γ
+f (z) dz = 0 bada, f analitikoa da D-n.
+Froga. Baldintza horietan existitzen da f -ren jatorrizko funtzioa, F , ana-
+litikoa D-n. Orduan, F = f ere analitikoa da.
+Teorema hau Cauchyren teorema integralaren alderantzizkoa da. Han funtzio
+analitikoen integrala kurba itxietan 0 dela esaten genuen; hemen integrala 0 bada,
+funtzioa analitikoa dela.
+
+17
+Cauchyren desberdintzak.
+f analitikoa bada |z − z0| ≤ R zirkuluan eta MR = max{|f (z)| : |z − z0| =
+R},
+|f (n)(z0)| ≤
+MR n!
+Rn
+.
+Deribatuetarako formulatik ateratzen da.
+Liouvilleren teorema.
+Teorema. f osoa bada eta |f | bornatua bada, f konstantea da.
+Froga. Demagun |f (z)| ≤ M dela z guztietarako.
+(1) Cauchyren formulatik. Izan bitez a ∈ C eta R > |a|. Orduan,
+f (a) − f (0) =
+1
+2πi |z|=R
+f (z)
+1
+z − a
+−
+1
+z
+dz,
+beraz,
+|f (a) − f (0)| ≤
+M |a|
+R − |a|
+.
+R inﬁniturantz eramanez, f (a) = f (0) ateratzen da.
+(2) Lehen deribaturako formulatik, Cauchyren desberdintzaren bidez. Har-
+tu n = 1 Cauchyren desberdintzan; MR ≤ M denez, |f (z0)| ≤ M/R da. R
+inﬁniturantz eramanez, f (z0) = 0 da. z0 edozein denez, f konstantea da.
+Aljebraren oinarrizko teorema.
+Liouvilleren teorematik atera daiteke, absurdora eramanez.
+Izan bedi P polinomio ez-konstantea. Baldin P (z) = 0 bada, z guztieta-
+rako, 1/P osoa da. Gainera, limz→∞ 1/P (z) = 0 denez, 1/P bornatua da.
+Liouvilleren teorema erabiliz, 1/P konstantea da eta, beraz, P ere bai.
+Batezbestekoaren propietatea.
+f analitikoa bada |z − z0| ≤ r zirkuluan,
+f (z0) =
+1
+2π
+2π
+0
+f (z0 + re
+it) dt.
+Hau da, f -ren batezbestekoa |z − z0| = r zirkunferentzian f (z0) da.
+Modulu maximoaren printzipioa.
+Teorema. Izan bedi D konexua eta f analitikoa D-n. f -ren moduluak
+maximoa badu D-n, f konstantea da.
+Froga. Izan bedi M = supz∈D |f (z)|. Deﬁnitu A = {z ∈ D : |f (z)| = M }
+eta demagun ez dela hutsa. Bistan da itxia dela.
+Izan bedi z0 ∈ A eta {z : |z −z0| ≤ r} ⊂ D; orduan, {z : |z −z0| ≤ r} ⊂ A.
+(Hau frogatzeko batezbestekoaren propietatea erabiltzen da.) Hemendik A
+irekia dela ondorioztatzen da eta D konexua denez, A = D.
+Funtzio analitiko baten modulua konstantea bada, funtzioa bera ere kons-
+tantea da (zergatik?).
+
+18
+Cauchyren teorema integralaren froga.
+Beste modu batez enuntziatuko dugu teorema hemen.
+Teorema. Izan bitez D multzo ireki sinpleki konexua eta f analitikoa D-n. Izan
+bedi γ kurba itxi sinple zatika leuna D-n. Orduan,
+γ
+f (z) dz = 0.
+Froga. Froga hiru urratsetan egingo dugu.
+1. Hasteko, kurba laukizuzen bat den kasurako frogatuko dugu. Hemen laukizu-
+zena kurbari deitzen diogu, barruko aldea sartu barik. Notazio hau erabiliko dugu:
+R laukizuzena bada, ˜
+R laukizuzena eta barruko aldea izango da eta p(R), R-ren
+perimetroa.
+1.1. Oinarrizko prozesua hau da. Zati dezagun ˜
+R lau zatitan, aldeak erdibituz.
+Izendatu R00, R10, R01 eta R11, irudiak erakusten dituen moduan, zatien mugako
+kurbak.
+R01
+R00
+R11
+R10
+Bistan denez,
+R
+f (z)dz =
+R00
++
+R10
++
+R01
++
+R11
+.
+Modulua hartuz eta desberdintza triangeluarra erabiliz ikusten da eskuin aldeko in-
+tegral baten moduluak hasierako integralaren moduluaren laurdena gutxienez balio
+duela. Bat baino gehiago badago propietatea betetzen duena, edozein hauta daite-
+ke, adibidez, hor idatzita dauden ordenean lehenengo datorrena.
+1.2. Izan bedi I, R-ren gaineko f -ren integrala. Segida bat deﬁnituko dugu,
+R0, R1, R2, . . . , Rn, . . . non R0 = R den eta Rn-tik Rn+1-
+era pasatzeko oinarrizko
+prozesua erabilitzen den. Orduan,
+(2)
+Rn
+f (z)dz ≥
+|I|
+4n
+,
+p(Rn) =
+p(R0)
+2n
+,
+eta
+(3)
+˜
+R0 ⊃ ˜
+R1 ⊃ ˜
+R2 ⊃ · · · ⊃ ˜
+Rn ⊃ . . .
+1.3. Azken propietate honek ziurtatzen du puntu bat dagoela, z0, guztien ebaki-
+duran. 
+(Puntua bakarra da gainera, diametroen segidak zerorantz jotzen duelako.)
+
+19
+Har dezagun
+> 0. Funtzioa z0-n deribagarria denez, existitzen da δ > 0 non
+|z − z0| < δ bada,
+f (z) − f (z0)
+z − z0
+− f (z0) <
+den. Idatzi r(z) = f (z)−f (z0)−f (z0)
+(z −z0). Laukizuzenen diametroek zerorantz
+doazenez, existitzen da Rn hau betetzen duena: Rn ⊂ D(z0, δ). Orduan, Rn-ko z
+guztietarako betetzen da desberdintza. Idatzi
+Rn
+f (z)dz =
+Rn
+r(z)dz +
+Rn
+[f (z0) + f (z0)(z − z0)]dz.
+Azken integrala 0 da integrakizuna polinomioa delako 
+(polinomioek jatorrizko fun-
+tzioa dute). Gainera, z ∈ Rn bada, |r(z)| ≤ p(Rn) da eta orduan,
+Rn
+f (z)dz =
+Rn
+r(z)dz ≤ p(Rn)
+2 = 4−n p(R
+0)
+2.
+Goiko (2) erabiliz, |I| ≤ p(R0)
+2 dugu. Beraz, I = 0.
+2. Kurba zuzenki horizontalez eta bertikalez osaturiko poligonal itxia bada, teo-
+rema betetzen da.
+2.1. Poligonal hori kurba sinplea bada barruko aldea laukizuzenetan zatitu dai-
+teke, 3π/2-
+ko angeluak gelditzen diren lekuetan zuzenki bat barruko aldera luzatuz
+beste alde bat aurkitu arte.
+2.2. Era horretako poligonal bat kurba sinplea ez bada, sinpletan zati daiteke.
+2.3. Puntu berean hasten diren eta puntu berean amaitzen diren era horretako
+poligonal bi baditugu, bien gaineko integralek berdin balio dute.
+3. Aurreko emaitza erabiliz, jatorrizko funtzio bat lortuko dugu f -rako.
+3.1. Multzo ireki konexu bateko puntu bi emanda beti dago poligonal bat biek
+lotzen dituena eta poligonalaren aldeak horizontalak eta bertikalak har daitezke.
+Bistan da zirkulu batean dauden puntu biren arteko horrelako poligonal bat
+egiteko zuzenki bi gehienez behar direla, bata horizontala eta bestea bertikala.
+Izan bedi D ireki konexua, z0 ∈ D eta A(z0) horrelako poligonal baten bidez
+z0-tik hasita lor daitezkeen puntuen multzoa. z ∈ A(z0) bada eta D(z, δ) ⊂ D,
+bistan da D(z, δ) ⊂ A(z0) dela aurreko iruzkinagatik. Era berean, z ∈ D \ A(z0)
+bada eta D(z, δ) ⊂ D, D(z, δ) ⊂ D \ A(z0). Orduan, A(z0) irekia eta itxia da D-
+n
+eta ez da hutsa; D konexua denez, A(z0) = D da.
+
+20
+3.2. Finkatu z0 ∈ D eta hartu P (z0, z), z0-tik z-ra doan edozein poligonal
+lehengo baldintzetan. Deﬁnitu
+F (z) =
+P (z0,z)
+f (w)dw.
+Badakigu integrala ez dela poligonalaren menpekoa. Ikus dezagun F (z) = f (z)
+dela. Izan bedi
+> 0 eta har dezagun δ > 0 non |w − z| < δ bada, |f (w) − f (z)| <
+den. Hartu h = h1 +ih2, |h| < δ. F (z +h)−F (z) da f -ren integrala z-tik z +h-
+rako
+poligonal batean; z-tik z + h1-era eta z + h1-etik z + h-
+ra joango gara zuzenkietatik.
+Orduan,
+F (z + h) − F (z)
+h
+− f (z)
+=
+1
+h
+1
+0
+(f (z + th1)−f (z))h1dt +
+1
+0
+(f (z + h1 + ith2) − f (z))ih2dt .
+Moduluak hartuz, integralen barruan sartuz eta barruko kenduren moduluak
+bai-
+no txikiagoak direla baliatuz, |h| < δ bada,
+F (z + h) − F (z)
+h
+− f (z) < 2
+lortzen da.
+3.3. Jatorrizko funtzioa egonez gero, badakigu kurba itxien gaineko integrala 0
+dela.
+
+21
+5. SERIEAK.
+Gai honetan berretura-
+serieak aztertuko ditugu lehenengo. Funtzio analitikoak de-
+ﬁnitzen dituztenez, horiek sortzeko bide bat ematen du.
+Funtzio bat analitikoa bada puntu batean, bere Taylorren seriearen batura da pun-
+tuaren ingurune batean.
+Funtzio bat analitikoa bada eraztun batean, serie bikoitz baten bidez eman daiteke:
+Laurenten seriea. Berretura-
+serie bik osatzen dute Laurenten seriea, bata arrunta
+da, besteak (z − z0)
+−1-en berreturak ditu.
+Zenbakizko serieak.
+∞
+n=1 an seriearen batura partzialak sn = a1 + a2 + · · · + an dira. Seriea
+konbergentea edo dibergentea da {sn} segida konbergentea edo dibergentea
+bada. Gainera,
+n an konbergentea da baldin eta soilik baldin
+n
+an eta
+n
+an konbergenteak badira.
+Erabiliko ditugun emaitzak:
+•
+n an konbergentea bada, limn→∞ an = 0 da.
+•
+n |an| konbergentea bada,
+n an ere konbergentea da (eta absolu-
+tuki konbergentea dela esaten da).
+Zenbaki errealen serieetarako emaitzak erabili zati erreal eta iru-
+dikariekin, edo han ematen diren frogen modukoak egin.
+Gai positiboko serieetarako:
+• Erroaren irizpidea edo Cauchy-ren irizpidea. Demagun cn ≥ 0 dela n
+guztietarako eta lim supn→∞ n
+√
+cn = l dela (l = ∞ izan daiteke). Or-
+duan, l < 1 bada,
+n cn konbergentea da; l > 1 bada, limn→∞ cn = 0
+(beraz,
+n cn dibergentea).
+Gogoratu zer den segida baten goi-limitea eta Cauchyren irizpidearen froga.
+Baliteke Cauchyren irizpidearen enuntziatuan limitea agertzea eta ez goi-
+limitea.
+Hala bada, frogak ez du ia aldaketarik behar goi-
+limitearen kasura egokitzeko. Segi-
+da baten goi-limitea beti existitzen da eta limitea, aldiz, ez. 
+(Baina limitea existituz
+gero, horixe izango da goi-limitea ere.) Horregatik merezi du goi-
+limitea erabiltzea,
+berretura-serieetarako beti emango digu erantzun bat.
+Baldin cn > 0 bada eta limn→∞ cn+1/cn = l bada, orduan limn→∞ n
+√
+cn = l da.
+(Goi-limiterako ez da egia: lim sup
+n→∞ cn+1/cn = lim supn→∞
+n
+√
+cn gerta daiteke.)
+Gogoratu beste irizpide hau ere: demagun cn ≥ 0 dela eta limn→∞ n
+αcn =
+l ∈ (0, +∞); orduan, α > 1 bada,
+cn konbergentea da eta α ≤ 1 bada,
+cn
+dibergentea da.
+
+22
+Funtzio-segidak.
+Izan bedi {fn(z)} funtzio-segida bat. z ∈ D bakoitzerako limn→∞ fn(z)
+existitzen bada, segidak puntuz-puntu konbergitzen du D-n eta f (z) =
+limn→∞ fn(z) funtzio limitea deﬁnitzen du.
+Puntuz-puntuko kobergentzia D-n honela adieraz daiteke: z ∈ D eta
+> 0 emanda, existitzen da N0 zeinetarako n ≥ N0 bada, |fn(z) − f (z)| <
+den. (Garrantzitsua:
+eta z-ren mendekoa izan daiteke δ.)
+Konbergentzia uniformea. {fn(z)} segidak f -rantz uniformeki konbergi-
+tzen du D-n hau betetzen bada:
+> 0 emanda, existitzen da N0 zeinetarako
+n ≥ N0 bada, |fn(z) − f (z)| <
+den, z ∈ D guztietarako. (Orain δ, -en
+mendekoa da eta z ∈ D guztietarako balio du.)
+Beste modu batez: {fn(z)} segidak f -rantz uniformeki konbergitzen du
+D-n, baldin
+lim
+n→∞
+sup
+z∈D
+|fn(z) − f (z)| = 0
+bada.
+Segida uniformeki konbergentea bada, puntuz-puntu ere konbergentea da, baina
+ez alderantziz.
+Batzuetan puntuz-puntuko konbergentzia gertatzen den eremua
+baino eremu txikiago bat hartzen da, konbergentzia uniformea izan dadin.
+Teorema. Funtzio jarraituen segida batek uniformeki konbergitzen badu,
+limitea ere jarraitua da.
+(Saiatu teorema honen froga idazten edo aurkitu liburu batean.)
+Funtzio-serieak.
+Izan bedi
+n fn(z) seriea. Puntuz-puntuko konbergentzia eta konbergen-
+tzia uniformea deﬁnitzeko, nahikoa da batura partzialen segidari aurreko
+kontzeptuak aplikatzea.
+Weierstrassen M -testa konbergentzia uniformerako. Baldin |fn(z)| ≤ Mn
+bada, z ∈ D guztietarako, eta
+n Mn seriea konbergentea bada, orduan
+n fn(z) seriea uniformeki konbergentea da D-n.
+Serie errealetarako frogatuta izanez gero, konplexuetarako ere betetzen da, zati
+erreal eta irudikariei aplikatuz. Nahi izanez gero, kasu errealeko froga zuzenean
+idatz daiteke konplexurako. Cauchyren baldintza erabiltzen da.
+Berretura-serieak.
+Berretura-serieak
+n an(z − z0)
+n erako serieak dira (an koeﬁzienteak zen-
+baki konplexuak dira). Nahikoa da z0 = 0 kasua aztertzea (z0 = 0 bada,
+egin w = z − z0 aldaketa).
+
+23
+Teorema (Cauchy-Hadamard). Izan bedi Λ = lim sup
+n |an| eta R = Λ−1
+(non 0−1 = +∞ eta (+∞)−1 = 0 hartzen diren).
+• 0 < R < ∞ bada,
+n an(z − z0)
+n absolutuki konbergentea da
+|z − z0| < R bada, eta dibergentea |z − z0| > R bada.
+• R = ∞ bada,
+n an(z − z0)
+n absolutuki konbergentea da C osoan.
+• R = 0 bada,
+n an(z − z0)
+n dibergentea da z = z0 guztietarako.
+Gainera, lehen kasu bietan, 0 < r < R hartzen bada, seriea uniformeki
+konbergentea da |z − z0| ≤ r diskoan.
+Seriearen konbergentzia-erradioa R da eta konbergentzia-zirkulua (edo dis-
+koa), {z : |z − z0| < R}.
+Froga. Hartu
+n |an(z − z0)
+n|, gai positiboko seriea. lim sup n |an(z − z0)n| =
+Λ|z − z0| da. Λ|z − z0| < 1 bada,
+n an(z − z0)
+n absolutuki konbergentea da;
+Λ|z − z0| > 1 bada, gai orokorraren limitea ez da 0 eta seriea dibergentea da.
+Konbergentzia uniformerako: |z − z0| ≤ r bada, |an(z − z0)
+n| ≤ |an|rn da, eta
+Weierstrassen irizpidea erabiltzen da.
+Jarraitutasuna. Berretura-serie baten batura funtzio jarraitua da kon-
+bergentzia-zirkuluan.
+Deribagarritasuna. Berretura-serie baten batura funtzio analitikoa da
+konbergentzia-zirkuluan eta deribatua seriea gaiz gai deribatuz lortzen den
+berretura-serieak ematen du. Hurrengo teoremak zehazten du emaitza hau.
+Teorema. Izan bedi R = 0,
+∞
+n=0 an(z − z0)
+n seriaren konbergentzia-
+erradioa eta f (z) seriaren batura konbergentzia-zirkuluan. Orduan,
+• seriea gaiz gai deribatuz lortzen den
+∞
+n=1 nan(z − z0)
+n−1 seriaren
+konbergentzia-erradioa ere R da;
+• f (z) =
+∞
+n=1 nan(z − z0)
+n−1 da |z − z0| < R zirkuluan.
+Deribatuen serieari berriro aplika dakioke teorema eta horrela f (z)-rako
+seriea lortzen da, eta behin eta berriro aplikatuz, edozein ordenatako de-
+ribatuak existitzen direla ondorioztatzen da: aurreko teoremako notazioa
+erabiliz,
+f
+(k)(z) =
+∞
+n=k
+n(n − 1) . . . (n − k + 1)(z − z0)
+n−k
+da, |z| < R bada.
+Unizitatea. Berretura-serie baten baturak koeﬁzienteak modu bakarrean
+determinatzen ditu.
+• f (z) =
+∞
+n=0 an(z−z0)
+n bada, z0-ren ingurune batean, an =
+f (n)(z0)
+n!
+da.
+
+24
+•
+∞
+n=0 an(z − z0)
+n =
+∞
+n=0 bn(z − z0)
+n bada, z0-ren ingurune batean,
+an = bn da, n guztietarako.
+Emaitza hauek guztiak berdin betetzen dira berretura-serieak aldagai errealare-
+kin bakarrik hartzen badira.
+Funtzioa emanda, ea berretura-serie baten batura den edo ez, beste problema
+bat da eta erantzuna desberdina da aldagai errealeko funtzioetarako edo aldagai
+konplexuko funtzioetarako.
+Taylorren seriea.
+Teorema. f analitikoa bada |z − z0| < R diskoan,
+f (z) =
+∞
+n=0
+f (n)(z0)
+n!
+(z − z0)
+n
+da, diskoko puntu guztietan.
+Berretura-serie hori da f -ren Taylorren seriea z0-n. Teoremak esaten du, bide
+batez, seriearen konbergentzia-erradioa gutxienez R dela.
+Aldagai errealeko funtzioetarako ez da teorema horren parekoa betetzen. Adi-
+bidez, f (x) = e−1/x
+2
+(x = 0) eta f (0) = 0 hartzen badugu, f ∈ C∞(R) da eta
+0-n deribatu guztiak 0 dira. f -
+ren Taylorren seriearen koeﬁziente guztiak 0 dira,
+batura ez da beraz f -ren berdina.
+Froga. Hartu r < R; |z − z0| < r bada,
+(4)
+f (z) =
+1
+2πi |w−z
+0|=r
+f (w)
+w − z
+dw.
+Idatzi
+1
+w − z
+=
+1
+(w − z0) 1 −
+z − z0
+w − z0
+=
+∞
+n=0
+(z − z0)
+n
+(w − z0)n+1
+.
+Serie hori uniformeki konbergentea da |w − z0| = r zirkunferentzian eta (4)
+formulan sartuta, batukaria integraletik atera daiteke. Teorema lortzeko,
+erabili f -ren deribatuetarako formula.
+Puntu erregularrak eta singularrak. Funtzio bat puntu batean ana-
+litikoa bada, puntu hori erregularra da; analitikoa ez bada, puntu singularra
+da.
+Berretura-serieak eta puntu singularrak.
+(a)
+∞
+n=0 an(z − z0)
+n berretura-seriearen konbergentzia-erradioa R bada
+(0 < R < ∞), |z − z0| = R zirkunferentzian gutxienez baturaren puntu
+singular bat dago.
+(b)
+∞
+n=0 an(z − z0)
+n berretura-seriearen konbergentzia-erradioa z0-tik
+baturaren puntu singular hurbilenerainoko distantzia da.
+
+25
+Frogatzeko Tayloren seriearen teorema erabiltzen da. Absurdora erama-
+nez egiten da froga.
+Unizitatea.
+(1) Izan bedi f analitikoa z0-n. Demagun {zk} segidako gaiak z0-ren
+desberdinak direla eta z0 dela segidaren limitea. Baldin f (zk) =
+0 bada, k ≥ 1 guztietarako, orduan f (z) ≡ 0 da z0-ren ingurune
+batean.
+(2) Izan bedi f analitikoa D ireki konexuan. D-ko puntu baterantz kon-
+bergitzen duen segida baten puntuetan f anulatzen bada, segidaren
+gaiak limitearen desberdinak izanik, f (z) ≡ 0 da D-ko puntu guz-
+tietan.
+(3) Izan bitez f eta g analitikoak D ireki konexuan. f (zk) = g(zk) bada
+{zk} segida ez-konstanteko puntuetan eta limk→∞ zk ∈ D bada, f
+eta g berdinak dira D-ko puntu guztietan.
+(4) Izan bitez f eta g analitikoak D ireki konexuan. f eta g berdinak
+badira A ⊂ D multzoan eta A-k metatze-puntu bat badu D-n, f eta
+g berdinak dira D-ko puntu guztietan.
+D ireki konexuko segida batean funtzio analitiko bat ezagututa, D-ko puntu
+guztietan erabat determinatuta gelditzen da, baldin segida ez-konstantea bada 
+(ezta
+toki batetik aurrera ere) eta D-ko puntu baterantz konbergentea bada.
+Ondorio batzuk (pentsatu zelan ateratzen diren):
+• f osoa eta ez-nulua bada, multzo trinko batean zero-kopurua ﬁnitua da
+(beraz, multzo bornatuetan ere bai);
+• f osoa eta ez-nulua bada, zeroen multzoa ﬁnitua edo kontagarria da.
+(1) frogatzeko nahikoa da ikustea f (n)(z0) = 0 dela n guztietarako (Tay-
+lorren seriea 0 izango da). Indukzioz egiten da. Jarraitutasunak ematen du
+f (z0) = 0. Baldin f
+(k)(z0) = 0 bada k < n guztietarako,
+f (z)
+(z − z0)n
+=
+∞
+k=n
+f (k)(z0)
+k!
+(z − z0)
+k−n.
+Hartu berdintzan z = zk eta egin limitea k ∞-rantz eramanez, f
+(n)(z0) = 0
+lortzeko.
+(2) frogatzeko, hartu A = {z ∈ D : f anulatzen da z-ren ingurune batean}.
+Irekia da deﬁnizioz. Itxia eta ez-hutsa, (1) aplikatuz. Orduan, A = D da,
+D konexua delako.
+(3), (2)-tik ateratzen da, eta (4), (3)-tik.
+
+26
+Laurenten serieak.
+Teorema. f analitikoa bada r < |z − z0| < R eraztunean,
+f (z) =
+∞
+n=−∞
+cn(z − z0)
+n
+eta seriea absolutuki konbergentea da eraztunean. Seriearen koeﬁzienteak
+cn =
+1
+2πi |z−z
+0|=ρ
+f (z)
+(z − z0)n+1
+dz
+dira, ρ ∈ (r, R) edozein izanda. Gainera, r < r1 < R1 < R bada, seriea
+uniformeki konbergentea da r1 ≤ |z − z0| ≤ R1 eraztunean.
+Teoremak ematen duen seriea da f -ren Laurenten seriea eraztunean.
+∞
+n=0
+zatiari parte erregular deritzo eta
+−1
+n=−∞ zatiari, parte nagusi edo singular.
+Froga. Hartu r < r < R < R eta aplikatu Cauchyren formula integrala:
+f (z) =
+1
+2πi |w−z
+0|=R
+f (w)
+w − z
+dw −
+1
+2πi |w−z
+0|=r
+f (w)
+w − z
+dw.
+Integral bietan serie geometriko batek ordezkatu behar du 1/(w − z). Lehe-
+nengoan, Taylorren seriea lortzeko egin dugun moduan. Bigarrenean, aldatu
+serie geometrikoa, (uniformeki) konbergentea izan dadin |w − z0| = r zir-
+kunferentzian,
+1
+w − z
+=
+−1
+(z − z0) 1 −
+w − z0
+z − z0
+= −
+∞
+n=0
+(w − z0)
+n
+(z − z0)n+1
+.
+Honek Laurenten seriea ematen digu eta, bide batez, koeﬁzienteetarako
+formula.
+Hauek zirkunferentzietan integratuz lortzen dira.
+Eraztunaren
+barruan dagoen edozein zirkunferentziak balio du integratzeko, Cauchyren
+teoremaren arabera.
+
+27
+7. HONDARRAK
+Funtzio konplexu baten hondarra puntu singular isolatu batean deﬁnitzen da.
+Cauchyren teorema hondarretarako da emaitza nagusia. Laurenten seriearen parte
+nagusiaren arabera puntu singular isolatuak sailkatzen dira. Poloen kasuan honda-
+rra kalkulatzeko formulak daude, seriea egin barik.
+Puntu singular isolatuak.
+z0 puntua f -ren puntu singularra da f ez bada analitikoa z0-n, baina
+z0-ren edozein ingurunetan f analitikoa den puntuak badaude. Puntu sin-
+gularra isolatua da 0 < |z − z0| <
+erako multzo batean f analitikoa bada
+(hau da, puntu singularren multzoan z0 puntu isolatua da topologiaren zen-
+tzuan).
+Hondarra puntu singular isolatu batean.
+Izan bedi z0 puntua f funtzioaren puntu singular isolatua. Hartu f -ren
+Laurenten seriea 0 < |z − z0| <
+eraztunean,
+f (z) =
+∞
+−∞
+cn(z − z0)
+n.
+f -ren hondarra z0 puntuan (Res (f ; z0) idatziko dugu), c−1 koeﬁzientea da.
+Koeﬁzienteen formulatik,
+Res (f ; z0) =
+1
+2πi |z−z
+0|=r
+f (z) dz,
+non 0 < r <
+den. Cauchyren teorema integralaren arabera, γ kurba itxi
+sinplea bada 0 < |z −z0| < eraztunean eta z0 γ-ren barruko aldean badago,
+hondarra ematen duen integrala γ-n har daiteke.
+Cauchyren teorema hondarretarako.
+Izan bedi γ kurba itxi sinplea. Demagun f analitikoa dela kurban eta
+kurbaren barruko aldean, salbu barruko aldeko z1, z2,. . . , zn puntuetan.
+Orduan,
+1
+2πi γ
+f (z) dz =
+n
+k=1
+Res (f ; zk).
+Froga. Egin puntu singular bakoitzaren inguruan zirkunferentzia bat γ-
+ren barruko aldean, zirkunferentzia guztien barruko aldeak binaka disjun-
+tuak izanda. Aplikatu Cauchyren teorema integrala zirkunferentzien kanpo-
+ko aldean eta γ-ren barruko aldean gelditzen den eremuan, eta hondarraren
+formula.
+
+28
+Puntu singular isolatuen sailkapena.
+Izan bedi z0 f -ren puntu singular isolatua eta
+f (z) =
+∞
+n=−∞
+cn(z − z0)
+n,
+0 < |z − z0| < .
+• Puntu singular ekidingarria. Baldin cn = 0 bada, n < 0 guztietara-
+ko. f (z0) = c0 deﬁnituz, funtzio analitiko bihurtzen da z0-n, hortik
+izena.
+• m ordenako poloa. Baldin c−m = 0 bada eta cn = 0, n < −m
+guztietarako. m = 1 bada, polo sinple esaten da.
+• Puntu singular esentziala. Baldin cn = 0 bada, n-ren inﬁnitu balio
+negatibotarako.
+Hondarren kalkulua poloetan.
+Izan bedi z0 f -ren puntu sigular isolatua. Orduan, m ordenako poloa da
+baldin eta soilik baldin
+f (z) =
+φ(z)
+(z − z0)m
+bada, non φ analitikoa den z0-n eta φ(z0) = 0.
+Froga. Alde batera frogatzeko, f -ren Laurenten seriea (z − z0)
+m-rekin biderkatuz
+berretura serie bat lortzen da. Horrek deﬁnitzen du φ eta φ(z0) = c−m da. Beste
+aldera frogatzeko, hasi φ-ren Taylorren seriearekin f -
+ren Laurenten seriea lortzeko.
+f -ren Laurenten seriea eta φ-ren Taylorren seriea begiratuz hau dugu:
+(z − z0)
+−1-en koeﬁzientea f-rako, (z − z
+0)
+m−1-ren koeﬁzientea da φ-rako.
+Orduan,
+• z0 f -ren polo sinplea bada,
+Res (f ; z0) = lim
+z→z0
+(z − z0)f (z);
+• m ordenako poloa bada,
+Res (f ; z0) = lim
+z→z0
+1
+(m − 1)!
+d(m−1)
+dzm−1
+[(z − z0)
+mf(z)].
+Kalkulurako beste formula bat. f (z) = g(z)/h(z) bada eta g(z0) = 0,
+h(z0) = 0 eta h (z0) = 0 betetzen badira, z0 polo sinplea da eta
+Res (f ; z0) =
+g(z0)
+h (z0)
+.
+(Idatzi lim
+z→z0
+(z − z0)f (z) = lim
+z→z0
+g(z)
+[h(z) − h(z0)]/(z − z0)]
+.)
+
+29
+Zero baten ordena. g funtzio analitikorako g(z0) = 0 bada, z0 g-ren
+zeroa da. Zeroaren ordena m da lehen m − 1 deribatuak anulatzen badira
+z0-n, baina ez g
+(m)(z0). Kasu honetan, g-ren Taylorren seriearen lehen gai
+ez-nulua (z − z0)
+m-ri dagokiona da. Gainera, g(z) = (z − z0)m˜g(z) idatz
+daiteke, non ˜
+g analitikoa den eta ˜
+g(z0) = 0.
+Karakterizazioak.
+Puntu singular ekidingarria. z0 ekidingarria da baldin eta soilik baldin
+hauetariko edozein betetzen bada:
+• existitzen da f -ren limitea z0-n;
+• f bornatua da z0-ren ingurune batean.
+Poloa. z0 m ordenako poloa da baldin eta soilik baldin hauetariko edozein
+betetzen bada:
+• existitzen da limz→z
+0 (z − z0)
+mf (z) = 0;
+• g(z) = 1/f (z) eta g(z0) = 0 deﬁnituz gero, z0 g-ren m ordenako
+zeroa da.
+Ondorioz, hau ere betetzen da: z0 poloa da baldin eta soilik baldin
+limz→z
+0 f (z) = ∞ bada. Horrek ez du zehazten poloaren ordena.
+Puntu singular esentziala. z0 esentziala da baldin eta soilik baldin ez bada
+existitzen f -ren limitea z0-n, ez ﬁnitu ez inﬁnitu.
+Funtzioen portaera puntu singular esentzialen inguruneetan.
+Teorema (Sojotski-Casorati-Weierstrass). Izan bedi z0 f -ren puntu sin-
+gular esentziala. A ∈ C ∪ {∞} bada, existitzen da segida bat {zn}, z0-rantz
+konbergentea, zeinetarako limn→∞ f (zn) = A den.
+Bestela esanda, f ({z : 0 < |z − z0| < }) multzoa dentsoa da C-n. Hu-
+rrengo teorema zailagoa da frogatzeko, baina emaitza zehatzagoa da.
+Teorema (Picard). z0 f -ren puntu singular esentziala bada eta
+> 0,
+f ({z : 0 < |z − z0| < }) multzoa edo C osoa da edo puntu bakar bat falta
+du C osoa izateko.
+• Izan bedi f (z) = e1/z. Orduan, f ({0 < |z| < δ}) = C \ {0} da.
+• Izan bedi g(z) = sin 1/z. Orduan, g({0 < |z| < δ}) = C da.
+
+30
+7. HONDARREN TEOREMAREN APLIKAZIOAK
+Funtzio konplexu baten hondarra puntu singular isolatu batean deﬁnitzen da.
+Cauchyren teorema hondarretarako da emaitza nagusia. Laurenten seriearen parte
+nagusiaren arabera puntu singular isolatuak sailkatzen dira. Poloen kasuan honda-
+rra kalkulatzeko formulak daude, seriea egin barik.
+Zenbait integral errealen kalkulua integrazio konplexuaren bi-
+dez.
+1. Integral trigonometrikoak:
+2π
+0
+R(cos t, sin t) dt erakoak.
+|z| = 1 zirkunferentziaren gaineko integral bat erabil daiteke. z = eit
+parametrizazioa erabiliz,
+2π
+0
+R(cos t, sin t) dt =
+|z|=1
+R
+z + z−1
+2
+,
+z − z−1
+2i
+dz
+iz
+da.
+Adibidea:
+2π
+0
+cos t
+2 + sin t
+dt.
+2π
+0
+cos t
+2 + sin t
+dt =
+|z|=1
+(z + z−1)/2
+2 + (z − z−1)/2i
+dz
+iz
+=
+|z|=1
+z2 + 1
+z(z2 + 4iz − 1)
+dz
+= 2πi Res
+z2 + 1
+z(z2 + 4iz − 1)
+; 0
++ Res
+z2 + 1
+z(z2 + 4iz − 1)
+; (−2 +
+√
+3)i
+.
+2. Funtzio arrazionalen integral inpropioak:
+∞
+−∞
+P (t)
+Q(t)
+dt erakoak.
+P eta Q polinomioak dira; mailen kendurak d(Q) − d(P ) ≥ 2 bete behar
+du, eta Q(t) = 0 behar da, t erreala bada (zergatik baldintza hauek?).
+Hartu P (z)/Q(z) funtzio konplexua eta R erreal positibo (handi) bakoi-
+tzerako integratu γR = lR ∪ cR kurbaren gainean, non lR zuzenkia −R-tik
++R-raino doan eta cR R-tik −R-rainoko zirkunferentzia erdia den (goitik).
+Goiko planoerdian gelditzen diren Q-ren zeroetan kalkulatu behar dira hon-
+darrak (poloak dira). Gero, R ∞-rantz eraman behar da. cR-ren gaineko
+integralak 0-rantz jotzen du d(Q) − d(P ) ≥ 2 delako.
+Azkena egiaztatzeko, bide hau segitzen da. P (z) = anz
+n + · · · bada eta an = 0,
+limz→∞ |P (z)|/|z|
+n = |an| denez,
+1
+2
+|an||z|
+n ≤ |P (z)| ≤ 2|a
+n||z|
+n
+da, |z| handia bada.
+Eskuineko desberdintza erabiliz P -rako eta ezkerrekoaren
+antzekoa Q-rako, |P/Q|-rako cR−2 erako borne bat dugu cR-ren gainean. Luzera
+πR denez, limitean 0 lortzen da.
+
+31
+Adibidea.
+∞
+−∞
+1
+(x2 + 1)2
+dx.
+γR
+1
+(z2 + 1)2
+dz = 2πi Res (
+1
+(z2 + 1)2
+; i) =
+π
+2
+eta
+π
+2
+= lim
+R→∞
+R
+−R
+1
+(x2 + 1)2
+dx +
+cR
+1
+(z2 + 1)2
+dz =
+∞
+−∞
+1
+(x2 + 1)2
+dx.
+3.
+Funtzio arrazionalak eta trigonometrikoak:
+∞
+−∞
+sin t P (t)
+Q(t)
+dt eta
+∞
+−∞
+cos t P (t)
+Q(t)
+dt erakoak.
+Adibidea.
+∞
+−∞
+cos x
+x2 − 2x + 2
+dx.
+Hartu f (z) =
+eiz
+z2 − 2z + 2
+eta integratu aurreko moduko γR = lR ∪ cR
+kurban.
+γR
+f (z) dz = 2πi Res (f ; 1 + i) = πe
+−1+i.
+Hemendik,
+πe
+−1+i = lim
+R→∞
+R
+−R
+eix
+(x − 1)2 + 1
+dx +
+cR
+eiz
+(z − 1)2 + 1
+dz
+=
+∞
+−∞
+eix
+(x − 1)2 + 1
+dx.
+Hala izan dadin cR-ren gaineko integralaren limiteak 0 izan behar du. Ikusi
+arrazoia beherago.
+Parte erreala eta irudikaria bananduz eskaturiko integrala eta sinuari da-
+gokiona lortzen dira:
+∞
+−∞
+cos x
+x2 − 2x + 2
+dx =
+π
+e
+cos 1;
+∞
+−∞
+sin x
+x2 − 2x + 2
+dx =
+π
+e
+sin 1.
+Baldin P eta Q polinomioak badira eta d(P ) < d(Q) 
+(polinomioen mailak), orduan,
+(5)
+lim
+R→∞
+cR
+eizP (z)
+Q(z)
+dz = 0.
+Froga. cR-ren parametrizazioa Re
+it (0 ≤ t ≤ π) da. |eiRe
+it
+| = e−R sin t erabiliz,
+cR
+eizP (z)
+Q(z)
+dz ≤
+π
+0
+e−R sin t |P (Reit)|
+|Q(Reit)|
+R dt.
+Gainera, d(P ) = n) eta d(Q) = m, |z| handirako, |P (z)/Q
+(z)| ≤ c|z|n−m da, gorago
+egin dugun moduan. Orduan,
+cR
+eizP (z)
+Q(z)
+dz ≤
+3|an|
+|bm|
+π
+0
+e
+−R sin t dt Rn+1−m.
+
+32
+(i) Baldin m > n + 1 bada, nahikoa da e−R sin t ≤ 1 erabiltzea (5) ateratzeko.
+(ii) Baldin m = n + 1 bada, erabili Jordanen lema:
+π
+0
+e
+−R sin tdt <
+π
+R
+.
+0-tik π/2-rainoko integralean erabili sin t ≥ 2t/π (beraz, e−R sin t ≤ e−2tR/
+π); π/2-
+tik π-rainoko integralerako, aldatu t = π − s.
+Adibidea.
+∞
+−∞
+sin x
+x
+dx.
+Integratu f (z) = eiz/z hurrengo kurban: cR ∪ l
+− ∪ c ∪ l+ non c
+R zir-
+kunferentzia erdia R-tik −R-ra doan (goitik), l− zuzenkia −R-tik − -era, c
+zirkunferentzia erdia − -etik -era (goitik) eta lR zuzenkia -etik R-ra.
+Cauchyren teorema integrala erabiliz, integralak 0 balio du.
+Lehengo
+moduan arrazoituz, cR-ren gaineko integralak 0-rantz jotzen du R ∞-rantz
+doanean, orduan,
+lim
+R→∞
+R
+−R
+eix
+x
+dx = lim
+→0 c−
+eiz
+z
+dz = πiRes
+eiz
+z
+; 0
+= πi.
+Parte irudikaria hartuz,
+∞
+−∞
+sin x
+x
+dx = π da.
+Emaitza hau erabili dugu: izan bedi z0 f -ren polo sinplea eta γ = z0 + e
+it (t0 ≤
+t ≤ t1) zirkunferentzia zatia. Orduan,
+(6)
+lim
+→0
+γ
+f (z) dz = (t1 − t0)i Res (f ; z0).
+Froga. A = Res (f, z0) idazten badugu, f (z) =
+A
+z − z0
++ h(z) dugu z0-ren ingurune
+batean, h analitikoa izanik. Alde batetik,
+lim
+→0
+γ
+h(z) dz = 0
+da, h bornatua delako |z − z0| ≤ δ erako multzo batean; beste alde batetik,
+γ
+A
+z − z0
+dz = (t1 − t0)iA.
+Oharra.- (6) gertatzeko poloak sinplea izan behar du, maila handiagoko polo
+batean ez da emaitza betetzen, erraz egiaztatzen denez.
+4. Logaritmoak dituzten integralak:
+∞
+0
+log t f (t) dt erakoak.
+Funtzio konplexuan log z erabili behar da eta funtzio hau deﬁnitzeko ar-
+gumentua aukeratu behar denez, f -ren arabera jokatu behar da. f bikoitia
+bada, hurrengo adibideak erakusten duen moduan egin daiteke.
+Adibidea.
+∞
+0
+log x
+4 + x2
+dx.
+
+33
+Integratu f (z) = log z/(4 + z2) aurreko adibidean agertu den kurban:
+cR ∪ l
+− ∪ c ∪ l+, log z = log |z| + i arg z deﬁnizioan −π/2 < arg z < 3π/2
+hartuta. Orduan,
+R
+log x
+4 + x2
+dx+
+cR
+log z
+4 + z2
+dz −
+R log(−x)
+4 + x2
+d(−x) +
+c
+−
+log z
+4 + z2
+dz
+= 2πi Res
+log z
+4 + z2
+; 2i
+=
+π
+2
+log 2 + i
+π
+2
+.
+Erraz egiaztatzen da cR-ren eta c -en gaineko integralek 0-rantz jotzen dutela
+(R ∞-rantz eta
+0-rantz eramatean). log(−t) = log t + iπ idatziz eta parte
+errealak hartuz,
+∞
+0
+log x
+4 + x2
+dx =
+π
+4
+log 2.
+∞
+0
+t
+α f(t) dt erako integralak, α osoa ez bada, logaritmoaren arazo bera dute,
+zα deﬁnitzeko logaritmoa behar baita. Adibide bat 7. ariketa-
+orriko azken ariketan
+duzue, eta liburuetan aurkituko dituzue gehiago.
+Beste gai batzuk.
+Ez dugu astirik izan teoriako klaseetan beste gauza interesgarri batzuk
+ikusteko. Bereziki, argumentuaren printzipioa eta Rouch´
+eren teorema dira
+interesgarriak. Brown-Churchillen liburuan aurki ditzakezue.
+
+ALDAGAI KONPLEXUKO FUNTZIOEN TEORIA. Ariketak (1).
+Notazioa. Arg z, z-ren argumentu nagusia da, (−π, π] tartean dagoena.
+z eta
+z, z-ren parte erreala eta irudikaria dira, hurrenez hurren.
+0. Zenbaki konplexuen binomio erako idazkeratik polarrera pasatzea eta
+alderantziz, eta batuketak, biderketak eta zatiketak egitea oso oinarrizko
+gauzak dira (errazak ere bai, egia esateko) eta nork bere kontura praktikatu
+beharko luke. Ariketak edozein liburutan aurkituko dituzue.
+1. Idatzi forma polarrean
+1 + cos α + i sin α
+1 + cos α − i sin α
+zenbakia.
+2. Adierazi sin 5t sin t-ren funtzio modura eta cos 5t, cos t-ren funtzio mo-
+dura, de Moivreren formula erabiliz.
+3. Kalkulatu: (a)
+1 + i
+√
+3
+1 − i
+40
+; (b) (2 − 2i)7; (c) (
+√
+3 − 3i)6; (d)
+1 − i
+1 + i
+8
+.
+4. Bombelli-ren Algebra liburuan(1579)
+3
+√
+2 + 11i = 2 + i adierazpena ager-
+tzen da. Egiaztatu eta idatzi beste erro biak.
+Idatzi x3 − 15x − 4 = 0 ekuazioaren erroak ematen dituen formula eta
+erabili aurreko emaitza hori ekuazioa ebazteko.
+5. Kalkulatu erroen balio guztiak: (a)
+4
+√
+−4; (b)
+4 −8 − 8
+√
+3i; (c)
+6
+√
+8.
+6. Ebatzi hurrengo ekuazioak: a) z3+3z2+3z+3 = 0; b) (z4+1)(z3−8i) = 0.
+7. Ebatzi z = zn−1 (n ∈ N) ekuazioa.
+8. Frogatu hurrengo berdintzak:
+a) |z + w|2 + |z − w|2 = 2(|z|2 + |w|2);
+b) |1 − zw|2 − |z − w|2 = (1 − |z|2)(1 − |w|2).
+Eman lehenengoaren esanahi geometrikoa.
+9. Baldin z = reiθ eta w = ReiΦ badira, frogatu
+w + z
+w − z
+=
+R2 − r2
+R2 − 2Rr cos(θ − Φ) + r2
+.
+10. Hurrengo ekuazio eta inekuazioen esanahi geometrikoa eman:
+|z−1−i| = 1,
+|z−1| = |z+i|,
+|z−1+i| ≥ |z−1−i|,
+|z+4i|+|z−4i| = 10.
+11. Marraztu plano konplexuan hurrengo inekuazioek deﬁnituriko multzoak:
+(a) |z − 2 + i| ≤ 1; (b) |2z + 3| > 4; (c)
+z > 1; (d) 0 ≤ Arg z ≤ π/4;
+(e)|z − 4| ≥ |z|.
+12. Idatzi era konplexuan hurrengo ekuazio eta inekuazioak (z, z eta |z|
+bakarrik erabiliz):
+x
+2 − y2 = a2;
+x
+2 + y2 + 2x = 0;
+x − 2y > 1.
+13. Adierazi graﬁkoki hurrengo desberdintzen esanahia:
+a)
+z
+|z|
+− 1 ≤ |Arg z|, z = 0;
+b)|z − 1| ≤ ||z| − 1| + |z||Arg z|.
+Hortik geometrikoki frogatuta ikusi beharko zenituzkete desberdintzok.
+1
+
+2
+14. Baldin z1 + z2 + z3 = 0 bada eta |zk| = 1 (k = 1, 2, 3), frogatu z1, z2
+eta z3 puntuak triangelu aldeberdin baten erpinak direla. (Laguntza: hasi
+z1 = 1 kasuarekin.)
+15. Plano konplexuko
+{z ∈ C : Azz + Bz + B z + D = 0}
+multzoa deﬁnitzen dugu, A eta D errealak eta B konplexua izanik. Aztertu
+zer den.
+16. Frogatu
+1 + z + z
+2 + · · · + zn =
+1 − zn+1
+1 − z
+(z = 1).
+Egin gero z = eiθ eta lortu Lagrangek eman zuen identitate trigonometrikoa:
+1
+2
++ cos θ + cos 2θ + · · · + cos nθ =
+sin[(2n + 1)θ/2]
+2 sin(θ/2)
+.
+(Identitateko funtzio hori Fourieren serieen teorian erabiltzen da eta Dirich-
+leten nukleoa deitzen da.)
+
+3
+ALDAGAI KONPLEXUKO FUNTZIOEN TEORIA. Ariketak (2).
+1. Demagun limz→z
+0 f (z) = 0 dela.
+a) Baldin |g(z)|
+≤
+M
+bada z0-ren ingurune batean, frogatu
+limz→z
+0 g(z)f (z) = 0 dela;
+b) Baldin |g(z)| ≥ m > 0 bada z0-ren ingurune batean, frogatu
+limz→z
+0 g(z)/f (z) = ∞ dela.
+(Zatidura horiek zentzuzkoak izan daitezen
+f (z) = 0 izango da 0 < |z − z0| < δ erako multzo batean.)
+2. Frogatu f (z) =
+z
+1 + |z|
+funtzioa jarraitua dela eta f (C) = D dela, non
+D = {z : |z| < 1} den.
+3. Aurkitu hurrengo funtzioen eten-puntuak eta kalkulatu limitea puntu
+horietan:
+z2 + 1
+z − i
+,
+z + 1
+z3 + 1
+,
+z4 − z2
+z8 + z5 − z4 − z
+.
+Kalkulatu funtzio horien limiteak ∞-n.
+4. Izan bedi
+f (z) =
+(z)2/z,
+z = 0 bada;
+0,
+z = 0 bada
+Egiaztatu funtzio horrek Cauchy-Riemann-en baldintzak betetzen dituela
+z0 = 0 puntuan, baina ez dela bertan deribagarria.
+5. Izan bitez z = reiθ eta f (z) = u(r, θ) + iv(r, θ). Idatzi Cauchy-Riemann-
+en baldintzak koordenatu polarretan eta frogatu f (z) = e−iθ(ur + ivr) eta
+zf (z) = vθ − iuθ direla.
+[B-Ch] liburuan eginda dago. Saiatu egiten han begiratu gabe.
+6. Aztertu hurrengo funtzioen deribagarritasuna:
+(a) x2 + xy − i(y + 1);
+(b) (x2 − y2 − 2xy) + i(x2 − y2 + 2xy);
+(c) ex(cos y + i sin y).
+7. a) Izan bedi f (z) = u(x, y) + iv(x, y), non u eta v C1 klasekoak diren.
+Demagun f (z0) existitzen dela eta ez dela 0. Izan bedi z0 = x0 + iy0.
+Frogatu u(x, y) = u(x0, y0) eta v(x, y) = v(x0, y0) kurbak ortogonalak direla
+z0-n.
+(Laguntza: (i) gogoratu planoko kurba bi ortogonalak direla ebaki-puntu batean
+haien bektore ukitzaileak (edo bektore normalak) ortogonalak badira; 
+(ii) gogoratu
+zelan idazten den u(x, y) = k era inplizituan emandako kurbaren bektore normala
+puntu batean.)
+b) Marraztu u(x, y) = k1, v(x, y) = k2, kurbak hurrengo funtzioetarako:
+(i) f (z) = z2; (ii) f (z) = z−1.
+8. Zein baldintza bete behar dute u(x, y) = ax2 + 2bxy + cy2 funtzioaren
+koeﬁzienteek funtzioa harmonikoa izan dadin? Baldintza betetzen denean,
+kalkulatu harmoniko konjokatua.
+
+4
+9. Izan bedi φ(x, y) = 4x3y − 4xy3 + x + 1.
+a) Frogatu φ harmonikoa dela plano osoan.
+b) Aurkitu f analitikoa,
+f = φ betetzen duena.
+c) Aurkitu g analitikoa,
+g = φ betetzen duena.
+d) Zein da b) eta c) atalen arteko aldea?
+10. Izan bedi φ(x, y) = sin 2x(e2y + eky). Erabaki k-ren zein baliotarako
+den φ harmonikoa. Aurkitu harmoniko konjokatua kasu horietan.
+11. Jakinik f (z) = u(x, y) + i arctan y/x analitikoa dela x > 0 eskualdean
+eta f (1) = 0 betetzen duela, aurkitu f .
+12. Demagun ϕ aldagai erreal bateko funtzio erreala dela. Aztertu ea exis-
+titzen diren ϕ(x + y), ϕ(y/x) eta ϕ(xy) erako funtzio harmonikoak. Egonez
+gero, zehaztu zeintzuk diren eta aurkitu harmoniko konjokatuak.
+13. Izan bedi f analitikoa multzo ireki batean. Frogatu
+f edo
+f edo |f |
+konstantea bada, f ere konstantea dela.
+14. Izan bedi f analitikoa {z : |z| > R}-n. Deﬁni dezagun g(z) = f (1/z),
+0 < |z| < 1/R. Baldin g(0) deﬁnitu ahal bada, g analitikoa izan dadin
+{z : |z| < 1/R} multzoan, f ∞-n analitikoa dela esaten da. Frogatu f ∞-n
+analitikoa dela baldin eta soilik baldin existitzen badira a, b ∈ C zeinetarako
+limz→∞ z(f (z) − a) = b betetzen den.
+Zein baldintza bete behar du polinomio batek ∞-n analitikoa izateko?
+Eta funtzio arrazional batek?
+Aljebraren oinarrizko teorema. Koeﬁziente konplexuko polinomio batek, kons-
+tantea ez bada, erro konplexu bat du, gutxienez.
+Teorema honen zenbait froga emango ditugu.
+Hurrengo ariketak dakar lehena,
+jarraitutasunaren propietateak erabiliz.
+15. Demagun P (z) polinomioa ez dela konstantea.
+(a) Frogatu existitzen dela R > 0 zeinetarako |P (z)| > |P (0)| den |z| > R
+bada.
+(b) |z| ≤ R multzoan |P (z)|-ren balio minimoa z0 puntu batean lortuko
+da (zergatik?). Ondorioztatu |P (z0)| minimoa dela C osoan.
+(c) Ikus dezagun P (z0) = 0 dela, absurdora eramanez. Baldin P (z0) = 0
+bada, deﬁnitu Q(z) = P (z + z0)/P (z0). Frogatu Q(z) = 1 + cz
+m + ... erakoa
+dela, c = 0, m ≥ 1, eta hurrengo gaien maila m baino handiagoa izanik.
+d) Izan bedi α ∈ C, cαm = −1 betetzen duen zenbaki bat. Frogatu
+Q(αz) = 1 − zm + ... erakoa dela eta |Q(αz)|-ren minimoa z = 0 puntuan
+lortzen dela.
+e) Heldu kontraesan batera, z positibo eta behar bezain txikia hartuz.
+
+5
+ALDAGAI KONPLEXUKO FUNTZIOEN TEORIA. Ariketak (3).
+1. Aztertu y = mx, (m = 0) zuzenaren irudia ez funtzioaren bidez.
+2. Aurkitu |ez| funtzioaren maximo eta minimoa |z − 2i| ≤ 1 eskualdean.
+3. Izan bedi e1/z = u(x, y) + iv(x, y). Eman u eta v-ren adierazpenak. Non
+dira harmonikoak u eta v, eta zergatik?
+4. (a) Log (zw) = Log z + Log w + 2N πi da, non N = −1, 0 edo 1 den. Noiz
+hartu behar da bakoitza?
+(b) Noiz da Log (z2) = 2Log z?
+(c) Noiz da log z1/2 = (log z)/2?
+5. Aurkitu adierazpen hauen balio guztiak:
+1
+i, (−1)1/π, (Log i)i, i3+4i, (1+i)1+i, (1−i)4i, (1+i)i(1+i)−i, 
+(cos i)i, isin i.
+6. Egiaztatu formula hauek:
+sin(z + w) = sin z cos w + cos z sin w
+eta
+cos(z + w) = cos z cos w − sin z sin w.
+Aurkitu sinh(z + w) eta cosh(z + w)-rako formulak.
+7. Noiz da sin z1 = sin z2?
+8. Idatzi funtzio hauen parte erreala eta parte irudikaria: (a) sin z; 
+(b) cos z;
+(c) tan z; (d) e−z
+2
+.
+9. (a) Aurkitu z-ren zer baliotarako den sin z erreala. Gauza bera cos z-rako.
+(b) Aurkitu z-ren zer baliotarako den | sin z|2 + | cos z|2 = 1.
+10. Idatzi zenbaki hauen parte erreala eta parte irudikaria: (a) cos(2 + i);
+(b) cot(−i log 2 + π/4); (c) coth(2 + i).
+11. Aurkitu funtzio hauen balio guztiak: (a) arcsin 1/2; (b) arccos 1/2;
+(c) arctan(1 + 2i).
+12. Ebatzi ekuazio hauek:
+(a) sinh z = 0; (b) sin z + cos z = 2;
+(c) sin z − cos z = i; (d) sinh z + 2 cosh z = i.
+13. Esan non diren analitikoak hurrengo funtzioak: (a) z−1e−1/(z+i)
+2
+;
+(b) tan(z + 2i); (c) sec(iz − 2).
+14. Non da analitikoa f (z) =
+Log (z + 4)
+z2 + i
+funtzioa? Analitikoa bada, eman
+f (z).
+15. Erro karratua C \ (−∞, 0] eremuan funtzio analitiko modura deﬁnituz,
+esan non den analitikoa
+cos(1/z).
+
+6
+ALDAGAI KONPLEXUKO FUNTZIOEN TEORIA. Ariketak (4).
+1. Izan bitez f : D ⊂ C → C eta h : [a, b] → C funtzio deribagarriak eta
+h([a.b]) ⊂ D. Egiaztatu katearen erregela:
+d
+dt
+f (h(t)) = f (h(t))h (t).
+2. Kalkulatu integral hauek:
+C
+(z
+2 + zz) dz;
+C
+z (z
+2) dz,
+non C unitate zirkunferentziaren goiko erdia den, 1-etik −1-eraino.
+3. Kalkulatu f (z) = zmzn funtzioaren integrala |z| = 1 zirkunferentzian,
+noranzko positiboan.
+4. Izan bedi D = {z : 1 < |z| < 2,
+z > 0} eta C, D-ren muga noranzko
+positiboan. Kalkulatu hurrengo integralak:
+C
+|z|z dz;
+C
+z
+z
+dz;
+C
+|z| dz.
+5. Eman (z − i)e−z funtzio osoaren jatorrizko funtzio bat.
+6. Kalkulatu hurrengo integralak:
+2+i
+1−i
+(3z
+2 + 2z) dz;
+i
+0
+z cos z dz.
+7. Kalkulatu
+γ z
+−1/2 dz, γ unitate zirkunferentziaren goiko erdia izanik,
+1-etik −1-eraino, eta z1/2 deﬁnitzeko
+√
+1 = −1 ematen duen adarra hartuz.
+8. Kalkulatu
+γ z
+−3/4 dz, γ unitate zirkunferentziaren goiko erdia izanik,
+1-etik −1-eraino, eta z1/4 deﬁnitzeko
+4
+√
+1 = 1 ematen duen adarra hartuz.
+9. Izan bedi γ 1-etik i-rainoko zuzenkia. Kalkulatu
+γ
+Log z
+z
+dz;
+γ
+1 + tan z
+cos2 z
+dz.
+10. Kalkulatu
+γ z
+i dz, γ(t) = sin2008 t + iet, 0 ≤ t ≤ 10π, izanik eta zi-rako
+adar nagusia hartuz.
+11. Egiaztatu z−1 funtzioaren integrala jatorrian zentraturiko edozein elip-
+setan eta edozein zirkulutan berbera dela. Ondorioz, atera
+2π
+0
+1
+a2 cos2 t + b2 sin2 t
+dt =
+π
+ab
+,
+(a > 0, b > 0).
+12. Frogatu
+I(a) =
++∞
+−∞
+e
+−(x+ia)2 dx
+= lim
+R→∞
++R
+−R
+e
+−(x+ia)2 dx
+ez dela a-ren menpekoa. (Laguntza: Integratu e−z
+2
+funtzioa −R, R, R + ia,
+−R + ia, erpinak dituen laukizuzenean eta eraman R ∞-rantz.) I(0) =
+√
+π
+dela jakinik, ondorioztatu
+∞
+0
+e
+−x2 cos 2ax dx =
+√
+π
+2
+e
+−a2 .
+
+7
+13. Aljebraren oinarrizko teorema (beste froga bat).
+Izan bedi P (z) = a0 + a1z + · · · + anz
+n (n ≥ 1). Deﬁnitu Q(z) modu
+honetan: P (z) = zQ(z) + a0. Orduan,
+1
+z
+=
+P (z)
+zP (z)
+=
+Q(z)
+P (z)
++
+a0
+zP (z)
+.
+Baldin P (z) polinomioak errorik ez badu
+|z|=R
+Q(z)
+P (z)
+dz = 0
+da eta
+2πi =
+|z|=R
+1
+z
+dz =
+|z|=R
+a0
+zP (z)
+dz,
+R > 0 guztietarako. Baina z handietarako |P (z)| ≥ |an||z|
+n/2 denez (zerga-
+tik?), kontraesana lortzen da.
+
+8
+ALDAGAI KONPLEXUKO FUNTZIOEN TEORIA. Ariketak (5).
+1. Izan bedi γ kurba bat, C1 zatika, eta ϕ funtzio jarraitua γ-n. (γ erabi-
+liko dugu kurbaren irudirako ere.) Deﬁnitu Cauchy erako integrala C \ γ
+multzoan modu honetan:
+F (z) =
+γ
+ϕ(w)
+w − z
+dw,
+z ∈ C \ γ.
+Egiaztatu F ondo deﬁnituta dagoela.
+(a) Frogatu F jarraitua dela.
+(b) Frogatu F analitikoa dela eta F (z) =
+γ
+ϕ(w)
+(w − z)2
+dw.
+Hurrengo zazpi ariketetan erabili Cauchyren formula integralak kalkula-
+tzeko. Hartu zirkunferentzien orientazio positiboa.
+2.
+γ
+ez
+2
+z2 − 6z
+dz, non γ zirkunferentzia hurrengo moduan ematen den:
+(a) |z − 2| = 1; (b) |z − 2| = 3; (c) |z − 2| = 5.
+3.
+|z−1|=1/2
+e1/z
+z2 + z
+dz.
+4.
+|z−2|=2
+cosh z
+z4 − 1
+dz.
+5.
+|z−1−i|=1
+sin π(z − 1)
+z2 − 2z + 2
+dz.
+6.
+|z|=3
+cos(z + πi)
+z(ez + 2)
+dz.
+7.
+|z|=4
+1
+(z2 + 9)(z + 9)
+dz.
+8.
+|z|=2
+sin z sin(z − 1)
+z2 − z
+dz.
+9. Kalkulatu
+C
+1
+z(z2 − 1)
+dz, C kurbaren posizioaren arabera, itxi sinplea
+dela eta 0, 1 eta −1 puntuetatik pasatzen ez dela jakinda.
+Hurrengo sei ariketetan erabili Cauchyren deribatuetarako formula inte-
+gralak kalkulatzeko. Hartu zirkunferentzien orientazio positiboa.
+10.
+|z−1|=1
+sin πz
+(z2 − 1)2
+dz.
+11.
+|z|=2
+cosh z
+(z + 1)3(z − 1)
+dz.
+12.
+|z|=2
+z sinh z
+(z2 − 1)2
+dz.
+13.
+|z−3|=6
+z
+(z − 2)3(z + 4)
+dz.
+14.
+|z|=1/2
+1
+z3
+cos
+π
+z + 1
+dz.
+15.
+|z+i|=2
+e1/(z+2)
+(z2 + 4)2
+dz.
+16. Kalkulatu
+C
+ez
+z2 + a2
+dz, C kurba itxi sinplea bada eta |z| ≤ a diskoa
+kurbaren barrualdean badago.
+17. Izan bedi f funtzio osoa. Kalkulatu
+|z|=2
+f (z)
+(z − i)3
+−
+f (z)
+(z − i)2
+dz.
+18. Aurkitu f analitikoa |z| ≤ 2 diskoan baldintza honekin:
+1
+2πi |w|=2
+wf (w)
+(w − z)(w − 1)
+dw = z
+2 − 1.
+
+9
+ALDAGAI KONPLEXUKO FUNTZIOEN TEORIA. Ariketak (6).
+1. Aurkitu
+n anz
+n seriearen konbergentzia-erradioa koeﬁziente hauetara-
+ko:
+an =
+n2
+2n
+; an =
+(n!)2
+(2n)!
+; an = 4
+n(−1)n ; a
+n =
+n2
+4n + 3n
+; an = (log n)
+2; a
+n = n
+n.
+2. Aurkitu
+n anz
+n seriearen konbergentzia-erradioa, an = n2 bada, n bi-
+koitirako, eta an = 2
+n, n bakoitirako.
+3. Eman serie hauen batura:
+∞
+n=1
+n
+2zn;
+∞
+n=1
+n + 3
+2nn!
+z
+n;
+∞
+n=1
+n2 + 3n + 2
+n!
+z
+n.
+4. Idatzi funtzio hauen Tayloren serieak, bakoitzerako adierazten den pun-
+tuan:
+(a) cos z, z0 = π/4; (b) e
+z , z0 = 1/2; (c)
+z + 1
+z2 + 4z − 5
+, z0 = 0.
+5. Idatzi Log (2 − z) funtzioaren Tayloren seriea jatorrian, deribatuarena
+erabiliz, eta eman konbergentzia-erradioa.
+6. Erabili berretura serieak hurrengo limiteak kalkulatzeko:
+lim
+z→1
+Log z
+z − 1
+,
+lim
+z→0
+eαz − 1
+z
+(α ∈ C).
+7. L’Hˆ
+opitalen erregela. Izan bitez f eta g analitikoak z0-n eta f (z0) =
+g(z0) = 0. Baldin g (z0) = 0 bada, frogatu
+lim
+z→z0
+f (z)
+g(z)
+=
+f (z0)
+g (z0)
+.
+8. Izan bedi α erreal positiboa. Deﬁni dezagun
+α
+n
+=
+α(α − 1)...(α − n + 1)
+n!
+n = 1, 2...
+α
+0
+= 1.
+Frogatu
+∞
+n=0
+α
+n
+z
+n berretura-seriearen konbergentzia-erradioa 1 dela. Izan
+bedi f (z) seriearen batura konbergentzia-zirkuluan. Frogatu
+(1 + z)f (z) = αf (z)
+betetzen dela eta aurkitu f (z).
+9. Idatzi z4-ren koeﬁzientea f (z) = (1 + sin2z)1/3 funtzioaren Tayloren se-
+rierako z0 = 0 puntuan, aurreko ariketako emaitza erabiliz.
+10. Idatzi hurrengo funtzioen Laurenten serieak 0-ren ingurune batean:
+sin z
+z2
+,
+sin2 z
+z
+,
+ez
+z
+,
+z3
+e1/z
+,
+cos
+1
+z
+.
+11. Idatzi
+Log (1 + z2)
+sin z − z − z3/6
+,
+1
+z5
+Log
+sin z
+z
+funtzioen Laurenten serieen parte nagusia z = 0 puntuan.
+
+10
+12. Izan bedi
+f (z) =
+1
+(z − 2)(z + i)
+=
+∞
+n=−∞
+cnz
+n.
+Mota horretako hiru serie daude f adierazteko, bakoitza multzo batean ba-
+liozkoa: |z| < 1, 1 < |z| < 2 edo |z| > 2. Idatzi hiru serie horiek.
+13. Hartu (z + 1/z)m funtzioa. Newtonen binomioa eta Laurenten seriearen
+koeﬁzienteen formula erabiliz lortu
+2π
+0
+(cos θ)
+m cos nθ dθ
+integralen balioa. Bereziki,
+1
+2π
+2π
+0
+(2 cos θ)
+2ndθ =
+(2n)!
+(n!)2
+.
+14. Fibonacciren segida honela deﬁnitzen da:
+F0 = 1, F1 = 1, Fn = Fn−1 + Fn−2 (n ≥ 2).
+Idatz dezagun
+Az + 1
+Bz2 + Cz + 1
+=
+∞
+n=0
+Fnz
+n,
+jatorriaren ingurune batean.
+(a) Aurkitu A, B eta C.
+(b) Ezkerreko atala frakzio sinpletan deskonposatuz eta serie geometrikoa
+erabiliz, eman Fn-rako formula bat.
+(c) Non da konbergentea seriea?
+
+11
+ALDAGAI KONPLEXUKO FUNTZIOEN TEORIA. Ariketak (7).
+1. Aztertu zein motatako puntu singularra den z = 0 funtzio hauetan:
+Log (1 + z) − z
+zm
+(m ≥ 1), z
+2 sin
+1
+z
+,
+1
+ez − 1
+,
+1
+Log (1 + z2) − z2
+.
+2. Aurkitu eta sailkatu funtzio hauen puntu singularrak:
+z2 − 1
+z2 + 1
+,
+z5
+(z3 + 8)2
+,
+1 − ez
+1 + ez
+,
+z(z − π)2
+(sin z)2
+,
+1
+ez − 1
+−
+1
+z
+,
+e
+tan 1/z ,
+1
+z3(2 − cos z)
+,
+1
+z3(1 − cos z)
+, sin
+1
+sin 1/z
+.
+3. Frogatu tan z funtzioaren puntu singular guztiak poloak direla. Idatzi
+puntu horietan Laurenten seriearen parte nagusia.
+4. Aurkitu hurrengo funtzioen hondarrak puntu singular isolatuetan:
+z3
+z4 − 1
+;
+z
+sin z
+;
+1
+1 − ez
+2 ;
+zn−1
+zn + an
+;
+eimz
+(z2 + a2)2
+;
+1
+(1 + z2)n
+.
+5. Aurkitu hurrengo funtzioen hondarra 0 puntuan:
+z2
+sinh z − sin z
+;
+Log (1 + z2)
+sin z − z + z3/6
+.
+6. Baldin limz→0 z
+2f (z) = 3 bada, kalkulatu Res (f (z) tan z/2; 0).
+7. Funtzio baten puntu singular guztiak hauek dira: lehen mailako poloa
+i-n eta bigarren mailako poloa 0-n. Eman funtzioaren forma orokorra.
+8. Funtzio bat, f , aurkitu behar da datu hauekin:
+(a) f -ren puntu singular bakarrak poloak dira: 1 puntuan polo bikoitza
+du eta Res (f ; 1) = 0; i puntuan polo sinplea du eta Res (f ; i) = 10;
+(b) f bornatua da {z : |z| > 2} multzoan;
+(c) f (0) = −1 + i eta f (3) = 1 − 2i.
+9. Kalkulatu integral hauek:
+|z|=2
+dz
+(z + 1)2(z2 + 2)
+;
+|z+1|=4
+z
+ez + 3
+dz;
+|z|=2
+ez
+z3(1 + z)
+dz;
+|z|=1
+z2
+sin3 z cos z
+dz;
+|z|=2
+z
+3 sin
+1
+z
+dz;
+|z|=1/3
+(z + 1)e
+1/z dz;
+|z|=2
+ze1/z
+1 + z
+dz;
+|z|=2/3
+(sin
+1
+z2
++ e
+z2 cos z) dz.
+
+12
+ALDAGAI KONPLEXUKO FUNTZIOEN TEORIA. Ariketak (8).
+1. Kalkulatu integral erreal hauek integrazio konplexua erabiliz |z| = 1
+zirkunferentzian:
+2π
+0
+dx
+1 − 2p cos x + p2
+(0 < p < 1);
+2π
+0
+dx
+a + cos x
+(a > 1).
+2. Kalkulatu integral erreal inpropio hauek hondarrak erabiliz:
+∞
+−∞
+x2 + 1
+x4 + 1
+dx;
+∞
+−∞
+dx
+(x2 + a2)(x2 + b2)
+;
+∞
+−∞
+x
+(x2 + 2x + 5)2
+dx.
+3. Kalkulatu
+∞
+−∞
+x2m
+1 + x2n
+dx.
+Laguntza.- Erabili kurba hau: 0-tik R-ra zuzen errealetik, R-tik Reπi/n-
+raino zirkunferentzia baten arkutik, Reπi/n-tik 0-raino zuzenki batetik. Kur-
+ba hau erabiliz gero bakarrik polo batean kalkulatu behar da hondarra.
+4. Kalkulatu integral erreal inpropio hauek hondarrak erabiliz:
+∞
+−∞
+x cos x
+x2 − 2x + 10
+dx;
+∞
+0
+cos mx
+a2 + x2
+dx;
+∞
+0
+sin x
+x(x2 + 1)
+dx.
+5. Kalkulatu
+∞
+0
+sin2 x
+x2
+dx.
+Laguntza.- Erabili (e2iz − 1)/z2 funtzioa.
+6. Kalkulatu
+∞
+−∞
+eax
+1 + ex
+dx, 0 < a < 1.
+Laguntza.- Integratu laukizuzen batean, alde bat ardatz errealean eta
+beste bat
+z = 2πi zuzenaren gainean hartuta.
+7. Kalkulatu
+∞
+0
+xp
+1 + x2
+dx.
+Laguntza.- Erabili f (z) = zp/(1 + z2) funtzioa non zp deﬁnitzeko log z =
+ln |z| + i arg z hartzen den, −π/z < arg z < 3π/2 izanik. Finkatu
+txikia
+eta R handia eta integratu γ ,R = cR ∪ l
+− ∪ c ∪ l+ kurbaren gainean, non c
+R
+R-tik −R-rainoko zirkunferentzia erdia den (goitik), l− −R-tik − -erainoko
+zuzenkia, c − -etik + -erainoko zirkunferentzia erdia (goitik) eta l+, -etik
+R-rainoko zuzenkia. Egin gero limitea
+0-rantz eta R ∞-rantz eramanez.
+8. Zeroak eta poloak kurba baten barrualdean.
+(a) Demagun f analitikoa dela z0-n eta f (z0) = 0 dela. Frogatu f (z)/f (z)
+funtzioak polo sinplea duela z0-n eta
+Res
+f (z)
+f (z)
+; z0
+= m
+dela, non m z0-ren multiplizitatea den (hau da, f (z0) = · · · = f
+(m−1)(z0) = 0
+eta f (m)(z0) = 0).
+(b) Demagun f funtzioak m ordenako poloa duela z0-n. Frogatu f (z)/f (z)
+funtzioak polo sinplea duela z0-n eta
+Res
+f (z)
+f (z)
+; z0
+= −m
+
+13
+dela.
+(c) Izan bedi γ kurba sinple itxia. Demagun f funtzioak γ-ren barrualdean
+dituen puntu singularrak poloak direla eta ez duela ez zerorik ez puntu
+singularrik γ-ren gainean. Frogatu
+1
+2πi γ
+f (z)
+f (z)
+dz = N − P
+dela, non N = f -ren zero-kopurua γ-ren barrualdean eta P = f -ren polo-
+kopurua γ-ren barrualdean (zeroak multiplizitatearekin kontatu behar dira
+eta poloak ordenarekin).

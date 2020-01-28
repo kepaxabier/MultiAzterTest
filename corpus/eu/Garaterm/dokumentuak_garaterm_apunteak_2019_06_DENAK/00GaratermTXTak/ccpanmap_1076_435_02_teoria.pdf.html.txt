@@ -1,0 +1,976 @@
+
+
+
+2
+Multzo aljebraiko aﬁnak
+2.1. Multzo aljebraiko aﬁnak eta polinomioen idealak
+Geometria aljebraikoaren helburua multzo aljebraikoak, hau da, ekuazio polino-
+mikoen bidez emanda dauden multzoak estudiatzea da. Kapitulu honetan multzo
+aljebraikoen teoria espazio aﬁnean garatuko dugu eta 4. eta 5. kapituluetan es-
+pazio proiektiboaren testuingurura hedatuko dugu gure ikerketa. Lehenengo atal
+honetan, multzo aljebraiko aﬁnen oinarrizko propietateak aztertuko ditugu, eta po-
+linomien aljebren idealekin duten lotura erakutsiko dugu.
+2.1. Deﬁnizioa. Izan bitez K gorputza eta n ∈ N. Orduan K
+n-ri K gaineko n
+dimentsioko espazio aﬁn deitzen diogu. Hori adierazteko A
+n(K) idazten dugu, edo
+sinpleago A
+n, ez badago zalantzarik gorputza zein den. Beraz,
+A
+n = {(a
+1, . . . , an) | ai ∈ K }.
+2.2. Notazioa. Ikusten denez, bi notazio ditugu multzo bera adierazteko, Kn eta
+A
+n. Noiz erabili bata eta noiz bestea?
+Kn: Espazio bektorialaren egitura hartzen denean: elementuak bektore gisa ikus-
+ten ditugu.
+A
+n: Espazio aﬁnaren egitura hartzen denean: elementuak puntu gisa ikusten
+ditugu.
+2.3. Deﬁnizioa. Izan bedi S ⊆ K[X1, . . . , Xn] polinomioen multzoa. Orduan,
+S-ren zeroen multzoa A
+n-ren honako azpimultzo hau da:
+V (S) = {(a1, . . . , an) ∈ A
+n | f(a
+1, . . . , an) = 0, f ∈ S guztietarako}.
+Beraz, V (S) S-ko polinomio guztiak anulatzen diren puntu aﬁnen multzoa da.
+2.4. Deﬁnizioa. Izan bedi Y ⊆ A
+n. Orduan, Y azpimultzo aljebraiko (aﬁna) dela
+esaten dugu existitzen bada S ⊆ K[X1, . . . , Xn], non Y = V (S) baita.
+Beraz, A
+n-ren azpimultzo aljebraikoak ekuazio polinomiko batzuen soluzioen
+multzoak dira.
+56
+
+2.1. MULTZO ALJEBRAIKO AFINAK ETA POLINOMIOEN IDEALAK
+57
+2.5.
+Adibideak. 1) Erraz deskribatzen dira A
+1-eko multzo aljebraiko guztiak.
+Alde batetik, S ⊆ K[X] aukeratzen dugunean, bi aukera daude:
+(i) S = ∅ edo S = {0} izatea. Orduan, V (S) = A
+1 dugu.
+(ii) S-n f polinomio ez-nulu bat egotea. Orduan, f -k erro kopuru ﬁnitu bat du
+A
+1-en eta, ondorioz, V (S) ﬁnitua da.
+Alderantziz, Y = {a1, . . . , ar} ⊆ A
+1 ﬁnitua bada, orduan f (X) = (X − a1) . . . (X −
+ar) hartuz gero, V (f ) = Y dugu. Laburbilduz, honako hauek dira A
+1-eko multzo
+aljebraikoak: A
+1 bera eta azpimultzo ﬁnituak.
+2) Honako azpimultzo hauek aljebraikoak dira A
+2 planoan:
+(i) Zirkunferentziak. Izan ere, 
+(a, b) puntuan zentratutako eta r erradioko zir-
+kunferentzia V ((X − a)2 + (Y − b)2 − r2) multzoa da.
+(ii) Parabolak, elipseak eta hiperbolak. Horiek ere bigarren mailako polinomioen
+bidez emanda daude.
+3) A
+n espazio aﬁn orokorrean, azpimultzo hauek aljebraikoak dira:
+(i) Hiperplanoak :
+ a1X1 + · · · + anXn = b bezalako ekuazio baten soluzioak dira.
+(ii) Hipergainazalak : Horiek polinomio bakar baten zeroen multzoak dira, hau
+da, V (f ) modukoak, non f ∈ K[X1, . . . , Xn] baita.
+(iii) Azpiespazio aﬁn guztiak, lehenengo mailako polinomioen zeroak baitira.
+Bestela esanda, azpiespazio aﬁnak hiperplanoen ebakidurak dira. Aljebra
+linealetik dakigunez, azpiespazioaren dimentsioa d bada, nahikoak dira lehe-
+nengo mailako n − d polinomio, hau da, n − d hiperplano.
+(iv) Puntuak: V (X1 − a1, . . . , Xn − an) = {(a1, . . . , an)} dugu.
+Beraz, V eragile bat dugu, polinomioen azpimultzo bakoitzari espazio aﬁnaren
+azpimultzo bat esleitzen diona:
+V
+:
+P(K[X1, . . . , Xn]) −→ P(A
+n)
+S
+−→
+V (S).
+(Notazio hau erabili dugu: A multzoa bada, P(A) A-ren parteen multzoa da, hau
+da, A-ren azpimultzo guztiek osatzen duten multzoa.)
+2.6. Teorema. V eragileak honako propietate hauek ditu:
+(i) V -k partekotasunak aldatzen ditu: S ⊆ T bada, orduan V (T ) ⊆ V (S).
+(ii) V (S) ∩ V (T ) = V (S ∪ T ). Orokorki, ∩i∈I V (Si) = V (∪i∈I Si).
+(iii) V (S) ∪ V (T ) ⊆ V (S ∩ T ).
+(iv) V (∅) = V (0) = A
+n eta V (K[X1, . . . , Xn]) = V (1) = ∅. Beraz, ∅ eta An
+multzo aljebraikoak dira.
+Froga. (i) Emanda S ⊆ T :
+(a1, . . . , an) ∈ V (T ) =⇒ f (a1, . . . , an) = 0 ∀f ∈ T
+S⊆T
+=⇒ f (a1, . . . , an) = 0 ∀f ∈ S
+=⇒ (a1, . . . , an) ∈ V (S).
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+2.1. MULTZO ALJEBRAIKO AFINAK ETA POLINOMIOEN IDEALAK
+58
+Beraz, V (T ) ⊆ V (S) dugu, nahi bezala.
+(ii) Ikus dezagun V (∪i∈I Si) = ∩i∈I V (Si) propietate orokorra:
+(a1, . . . , an) ∈ V (∪i∈I Si) ⇐⇒ f (a1, . . . , an) = 0 ∀f ∈ ∪i∈I Si
+⇐⇒ f (a1, . . . , an) = 0 ∀f ∈ Si ∀i ∈ I
+⇐⇒ (a1, . . . , an) ∈ V (Si) ∀i ∈ I
+⇐⇒ (a1, . . . , an) ∈ ∩i∈I V (Si).
+(iii) Hori zuzenean ikus daiteke edo, bestela, (i) propietatea erabiliz:
+S ∩ T ⊆ S, T
+(i)-engatik
+=⇒
+V (S), V (T ) ⊆ V (S ∩ T ) =⇒ V (S) ∪ V (T ) ⊆ V (S ∩ T ).
+(iv) Garbi dago V (0) = A
+n dela eta, ∅ ⊆ {0} denez, V (0) ⊆ V (∅) eta V (∅) =
+A
+n ondorioztatzen dugu.∗ Bestalde, berehalakoa da V (K[X1, . . . , Xn]) = V 
+(1) = ∅
+dela.
+Aurreko teoreman V (S) ∪ V (T ) ⊆ V 
+(S ∩ T ) partekotasuna ikusi dugun arren, ezin
+!
+da berdintza ziurtatu. Adibidez, hartu S = {X} eta T = {Y } K[X, Y ]-n. Orduan
+V (S ∩ T ) = V (∅) = A
+2 dugu, baina V (S) ∪ V (T ) bakarrik da OX eta OY ardatzen
+bildura.
+2.7. Teorema. Izan bitez f1, . . . , fr ∈ K[X1, . . . , Xn]. Orduan:
+(i) V (f1, . . . , fr) = V (f1) ∩ · · · ∩ V (fr).
+(ii) V (f1 . . . fr) = V (f1) ∪ · · · ∪ V (fr).
+Froga. (i) Hori aurreko teoremaren (ii) atalaren kasu berezi bat baino ez da.
+(ii) Nahikoa da kontuan izatea biderkadura bat 0 dela baldin eta soilik baldin
+faktoreetako bat 0 bada.
+2.8. Teorema. Izan bitez S ⊆ K[X1, . . . , Xn] eta a = (S). Orduan, V (S) = V 
+(a)
+dugu.
+Froga. Alde batetik, 2.6 teoremaren (i) atalagatik, S ⊆ a partekotasunak V 
+(a) ⊆
+V 
+(S) inplikatzen du. Ikus dezagun alderantzizko inplikazioa. Horretarako, hartu
+(a1, . . . , an) ∈ V (S) eta f ∈ a, eta ikus dezagun f 
+(a1, . . . , an) = 0 dela. Sortuta-
+ko idealaren deﬁnizioaren arabera, existitzen dira f1, . . . , fr ∈ S eta q1, . . . , qr ∈
+K[X1, . . . , Xn], halakoak non f = q1f1 + · · · + qrfr baita. Orduan, f1
+(a1, . . . , an) =
+· · · = fr(a1, . . . , an) = 0 dugu eta, beraz,
+f (a1, . . . , an) = q1(a1, . . . , an)f1(a1, . . . , an)+· · ·+qr
+(a1, . . . , an)fr(a1, . . . , an) = 0,
+nahi bezala.
+∗Absurdora eramanez ere frogatu daiteke V (∅) = An dela. Izan ere, demagun 
+(a1, . . . , an) ∈
+V (∅) dela.
+Orduan, existituko litzateke f polinomio bat multzo hutsaren barruan, non
+f 
+(a1, . . . , an) = 0 baita. Hori kontraesan bat da, multzo hutsak ez baitu elementurik.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+2.1. MULTZO ALJEBRAIKO AFINAK ETA POLINOMIOEN IDEALAK
+59
+Azken teoremaren ondorioz, V eragilea idealetara murrizten badugu, oraindik
+ere A
+n-ren multzo aljebraiko guztiak lortzen ditugu. Hau da,
+V : {K[X1, . . . , Xn]-ren idealak}
+−→
+{A
+n-ren multzo aljebraikoak}
+a
+−→
+V (a)
+supraiektiboa da. Baina ez da injektiboa; adibidez a = (X) bada, orduan V (a) =
+V (a2) = · · · = V (ak) = · · · dugu.
+2.9. Korolarioa. Edozein multzo aljebraiko hipergainazal kopuru ﬁnitu baten eba-
+kidura da. Bestela esanda,
+
+
+
+
+
+
+
+f1(X1, . . . , Xn) = 0
+..
+.
+fr(X1, . . . , Xn) = 0
+moduko sistema polinomiko baten soluzioen multzoa da.
+Froga. Izan bedi Y = V (S) A
+n-ren multzo aljebraiko orokorra. Jarri a = (S).
+Orduan, Hilberten oinarriaren teoremaren arabera, existitzen dira f1, . . . , fr ∈
+K[X1, . . . , Xn], halakoak non a = 
+(f1, . . . , fr) baita. Orain, 2.8 teorema bitan
+erabiliz,
+Y = V (S) = V (a) = V (f1, . . . , fr)
+dugu. Azkenik, 2.7 teorema aplikatuz,
+Y = V (f1) ∩ · · · ∩ V (fr)
+hipergainazal kopuru ﬁnitu baten ebakidura gisa adierazita gelditzen da.
+Ondorengo bi teoremetan ikusten dugu zein den V eragilearen portaera idealen
+arteko eragiketak egiten ditugunean.
+2.10. Teorema. Izan bedi {ai}i∈I K[X1, . . . , Xn]-ren ideal-familia. Orduan,
+V (
+i∈I
+ai) =
+i∈I
+V (ai).
+Froga. Gogoratu ∪i∈I ai bildurak sortzen duen ideala
+i∈I ai batura dela. Hori
+kontuan izanik,
+V (
+i∈I
+ai) = V (
+i∈I
+ai) =
+i∈I
+V (ai)
+lortzen dugu, 2.8 eta 2.6 teoremak aplikatuz, hurrenez hurren.
+2.11. Teorema. Izan bitez a eta b K[X1, . . . , Xn]-ren idealak. Orduan,
+V (a ∩ b) = V (ab) = V (a) ∪ V (b).
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+2.1. MULTZO ALJEBRAIKO AFINAK ETA POLINOMIOEN IDEALAK
+60
+Froga. Alde batetik, ab ⊆ a ∩ b ⊆ a denez eta V -k partekotasunak aldatzen
+dituenez, V (a) ⊆ V (a ∩ b) ⊆ V (ab) dugu. Aldatzen baditugu a eta b elkarrekin
+aurreko partekotasunean, azkenean
+V (a) ∪ V (b) ⊆ V (a ∩ b) ⊆ V (ab)
+lortzen dugu. Beraz, teorema frogaturik geldituko da behin V (ab) ⊆ V (a) ∪ V 
+(b)
+ikusita. Absurdora eramanez, demagun badagoela (a1, . . . , an) ∈ V 
+(ab) puntu bat,
+ez dagoena V (a)-n ezta V (b)-
+n ere. Orduan, existitzen dira f ∈ a eta g ∈ b, non
+f (a1, . . . , an) = 0 eta g
+(a1, . . . , an) = 0 baita. Ondorioz, f g ∈ ab polinomioa ez da
+(a1, . . . , an)-n anulatzen. Hori kontraesan bat da, (a1, . . . , an) ∈ V 
+(ab) da eta.
+Orain, 2.6 eta 2.11 teoremak kontuan izanik, multzo aljebraikoen propietate
+interesgarri hauek lortzen ditugu.
+2.12. Korolarioa. 
+(i) Multzo aljebraikoen bildura ﬁnituak multzo aljebraikoak dira.
+(ii) Multzo aljebraikoen ebakidura orokorrak multzo aljebraikoak dira.
+Oro har, ez da betetzen ∪i∈I V (ai) = V 
+(∩i∈I ai) propietatea I indizeen multzoa
+!
+inﬁnitua bada. Are gehiago, ezin da ziurtatu multzo aljebraikoen bildura inﬁnitu
+bat multzo aljebraikoa denik. Adibidez, jartzen badugu Vλ = V (Y − λX) ⊆ A
+2(R),
+λ ∈ R guztietarako, orduan ∪λ∈R Vλ ez da multzo aljebraikoa. (Hori 2.3 ariketan
+ikusiko dugu.)
+Espazio topologiko bat deﬁnitzeko, multzo irekien familia zehaztu behar da,
+kontuan izanik multzo irekiek bi propietate hauek bete behar dituztela:
+(i) Multzo hutsa eta multzo osoa irekiak dira.
+(ii) Multzo irekien bildura orokorrak eta ebakidura ﬁnituak irekiak dira.
+Multzo itxiak multzo irekien osagarriak direnez, beste aukera bat multzo itxien
+familia zehaztea da. Orduan propietate hauek behar ditugu:
+(i) Multzo hutsa eta multzo osoa itxiak dira.
+(ii) Multzo itxien bildura ﬁnituak eta ebakidura orokorrak itxiak dira.
+Ohartu, 2.6 teoremaren eta 2.12 korolarioaren arabera, A
+n espazio aﬁnean mul-
+tzo aljebraikoek azken bi propietate horiek betetzen dituztela. Ondorioz, badago
+A
+n-ren gainean topologia bat deﬁnitzea, multzo itxi modura multzo aljebraikoak
+hartuz. Topologia horri Zariskiren topologia deitzen zaio.
+Gogoan izan A
+n espazio aﬁna Kn baino ez dela, K gorputza izanik. Orain, K = R
+!
+edo C bada, K
+n-k badu berez espazio topologikoaren egitura, ohiko topologia erabi-
+liz. Garrantzitsua da ohartzea Zariskiren topologia eta ohiko topologia ez datozela
+bat, 2.16 ariketan ikusiko dugun bezala. Zehazkiago, ohiko topologia ﬁnagoa dela
+ikusiko dugu, hau da, Zariskiren topologiarekin irekia 
+(itxia) den multzo bat irekia
+(itxia) da ohiko topologiarekin, baina ez beti alderantziz.
+2.13. Adibidea. Zein da Zariskiren topologia A
+1-en? Multzo itxiak multzo ﬁ-
+nituak dira; beraz, multzo irekiak multzo koﬁnituak dira eta Zariskiren topologia
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+2.2. HILBERTEN NULLSTELLENSATZ-A ETA I − V KORRESPONDENTZIA
+61
+topologia koﬁnitua da. Hori ez da egia A
+2-n K inﬁnitua bada: zuzen baten osagarria
+irekia da, baina ez da koﬁnitua.
+Espazio topologiko batean, multzo irekien U familia bat multzo irekien oinarria
+dela esaten dugu edozein multzo ireki U -
+ko multzoen bildura gisa jar badaiteke.
+Antzera, multzo itxien F familia bat multzo itxien oinarria da edozein multzo itxi
+F -
+ko multzoen ebakidura gisa jar badaiteke. Terminologia hori erabiliz, hurrengo
+emaitza 2.9 korolarioaren ondorio berehalakoa da.
+2.14. Proposizioa. Hipergainazalek A
+n-ren multzo itxien oinarri bat osatzen dute,
+Zariskiren topologiarekiko. Beraz, hipergainazalen osagarriek multzo irekien oinarri
+bat osatzen dute.
+Edozein espazio topologikotan bezala, A
+n-n Y multzo baten itxidura har dai-
+teke, Y idazten dena. Zein da Y -
+ren esanahia? Deﬁnizioz, Y barruan duten multzo
+itxi (hau da, aljebraiko) guztietatik txikiena da. Bereziki, Y ⊆ A
+n multzo aljebrai-
+koa da baldin eta soilik baldin Y = Y bada.
+2.15. Adibidea. Izan bedi Y ⊆ A
+2 multzoa X1 = 0 zuzenaren osagarria. Orduan,
+2.5 ariketaren 
+(iii) atalean ikusiko dugunez, Y ez da multzo aljebraikoa eta Y = A
+2
+dugu.
+2.2. Hilberten Nullstellensatz-a eta I − V korrespondentzia
+Aurreko atalean, V eragilea deﬁnitu dugu. Aipatu dugun bezala, eragile hori
+polinomioen idealetatik multzo aljebraikoetara doala pentsa dezakegu. Jarraian,
+alderantzizko norabidean doan I eragile bat deﬁnituko dugu, eta horren oinarrizko
+propietateak emango ditugu.
+2.16. Deﬁnizioa. Izan bedi Y ⊆ A
+n. Orduan, Y -ren ideala honela deﬁnitzen
+dugu:
+I(Y ) = {f ∈ K[X1, . . . , Xn] | f (a1, . . . , an) = 0, 
+(a1, . . . , an) ∈ Y guztietarako}.
+Bestela esanda, I(Y ) multzoa Y -ko puntu guztien gainean anulatzen diren po-
+linomioek osatzen dute.
+Lehenengo eta behin, argitu dezagun zergatik deitu diogun “Y -ren ideala” I(Y )
+multzoari.
+2.17. Teorema. Izan bedi Y ⊆ A
+n. Orduan, I(Y ) K[X1, . . . , Xn]-ren ideal erra-
+dikala da.
+Froga. Alde batetik, I(Y ) ez da hutsa, 0 ∈ I(Y ) baitugu. Demagun f, g ∈ I(Y )
+dela. Orduan, f eta g polinomioak Y -ko puntu guztietan anulatzen dira eta, be-
+raz, f + g ere bai.
+Horrela, f + g ∈ I(Y ) dugu.
+Era berean, f ∈ I(Y ) eta
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+2.2. HILBERTEN NULLSTELLENSATZ-A ETA I − V KORRESPONDENTZIA
+62
+q ∈ K[X1, . . . , Xn] bada, orduan qf ∈ I(Y ) dugu. Ondorioz, I(Y ) K
+[X1, . . . , Xn]-
+ren ideala da.
+Erradikala dela ikusteko, demagun f r ∈ I(Y ) dela.
+Orduan,
+f r(a1, . . . , an) = 0 dugu 
+(a1, . . . , an) ∈ Y guztietarako eta, polinomioen balioak
+K gorputzean daudenez, f (a1, . . . , an) = 0 izan behar dugu. Horrek f ∈ I
+(Y ) dela
+frogatzen du eta, hortaz, I(Y ) erradikala da.
+2.18. Adibidea. Izan bedi Y multzoa Xn = a ekuazioa duen hiperplanoa, hau da,
+azken osagaia a-ren berdina duten puntu guztien multzoa. Ikus dezagun I(Y ) =
+(Xn−a) dugula, K gorputza inﬁnitua bada. Alde batetik, garbi dago Xn−a ∈ I(Y )
+dela eta, I
+(Y ) ideala izateagatik, ⊇ partekotasuna lortzen dugu. Bestetik, hartu
+edozein f ∈ I(Y ), eta zatitu dezagun Xn − a polinomioaz Xn-rekiko. Orduan,
+f = q(Xn − a) + r deskonposizioa dugu, r ∈ K
+[X1, . . . , Xn−1] izanik. Ebaluatzen
+baditugu polinomioak 
+(a1, . . . , an−1, a) ∈ Y puntuen gainean, orduan f, Xn − a ∈
+I(Y ) izateagatik, r
+(a1, . . . , an−1) = 0 lortzen dugu ai ∈ K guztietarako. Hurrengo
+teoremaren 
+(iii) atalean ikusiko dugunez, K gorputza inﬁnitua bada, hori bakarrik
+gerta daiteke r = 0 bada. Ondorioz, f = q(Xn − a) ∈ (Xn − a) dugu, eta ⊆
+partekotasuna ere betetzen da.
+Ohartu I eragile gisa ikus dezakegula:
+I
+:
+P(A
+n) −→ P(K[X1, . . . , Xn])
+Y
+−→
+I(Y ).
+2.19. Teorema. I eragileak honako propietate hauek ditu:
+(i) I-k partekotasunak aldatzen ditu: Y ⊆ Z =⇒ I(Z) ⊆ I(Y ).
+(ii) I(∅) = K[X1, . . . , Xn].
+(iii) K gorputza inﬁnitua bada, I(A
+n) = {0} dugu.
+(iv) Y, Z ⊆ A
+n badira, orduan I(Y )∩I(Z) = I(Y ∪Z) eta I(Y )+I(Z) ⊆ I(Y ∩Z)
+dugu.
+Froga. (i) Emanda Y ⊆ Z:
+f ∈ I(Z) =⇒ f (a1, . . . , an) = 0 ∀(a1, . . . , an) ∈ Z
+Y ⊆Z
+=⇒ f (a1, . . . , an) = 0 ∀(a1, . . . , an) ∈ Y
+=⇒ f ∈ I(Y ).
+Beraz, I(Y ) ⊆ I(Z) dugu, nahi bezala.
+(ii) Absurdora eramanez, demagun badagoela f ∈ K[X1, . . . , Xn] polinomio
+bat, non f ∈ I(∅) baita. Orduan, I eragilearen deﬁnizioaren arabera, existituko
+litzateke (a1, . . . , an) ∈ ∅ non f 
+(a1, . . . , an) = 0 den. Hori absurdoa da, multzo
+hutsak ez baitu elementurik.
+(iii) Hori 2.5 probleman ikusiko dugu.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+2.2. HILBERTEN NULLSTELLENSATZ-A ETA I − V KORRESPONDENTZIA
+63
+(iv) Ikus dezagun I(Y ) ∩ I(Z) = I(Y ∪ Z) berdintza:
+f ∈ I(Y ∪ Z) ⇐⇒ f (a1, . . . , an) = 0 ∀(a1, . . . , an) ∈ Y ∪ Z
+⇐⇒ f (a1, . . . , an) = 0 ∀(a1, . . . , an) ∈ Y eta
+f (a1, . . . , an) = 0 ∀(a1, . . . , an) ∈ Z
+⇐⇒ f ∈ I(Y ) eta f ∈ I(Z)
+⇐⇒ f ∈ I(Y ) ∩ I(Z).
+Azkenik, frogatu dezagun I(Y ) + I(Z) ⊆ I(Y ∩ Z) partekotasuna. Alde batetik,
+Y ∩ Z ⊆ Y, Z denez, (i) atala aplikatuz I(Y ), I(Z) ⊆ I
+(Y ∩ Z) lortzen dugu. Orain,
+I(Y ∩ Z) ideala denez, I(Y ) + I(Z) batura ere I(Y ∩ Z)-ren barruan dago.
+K gorputza ﬁnitua bada, orduan ez da egia I(A
+n) = {0} denik. Izan ere, |K| = q
+!
+bada, X
+q
+1 − X1, . . . , X
+q
+n − Xn ∈ I (A
+n) dugu. Horren arrazoia ikusteko, ohartu K×
+talde biderkakorrak q − 1 elementu dituela. Orduan, u ∈ K, u = 0 elementu guztiek
+uq−1 = 1 betetzen dute.∗ Ondorioz, uq = u dugu u ∈ K guztietarako eta, beraz,
+X
+q
+1 − X1, . . . , X
+q
+n − Xn ∈ I (A
+n).
+Beste alde batetik, I(Y ) ∩ I(Z) ebakidurak ez du zertan I(Y )I
+(Z) biderkaduraren
+!
+berdina izan. Adibidez, demagun K inﬁnitua dela, eta hartu Y, Z ⊆ A
+3 modu
+honetan: Y multzoa, X1 = 0 eta X2 = 0 planoen bildura, eta Z, berriz, X1 = 0
+eta X3 = 0 planoen bildura. Orduan, 2.19 teoremaren 
+(iv) atala eta 2.18 adibidea
+erabiliz, I(Y ) = (X1) ∩ (X2) = (X1X2) eta I(Z) = (X1) ∩ (X3) = (X1X3) lortzen
+dugu. Beraz, I(Y ) ∩ I(Z) = (X1X2X3) eta I(Y )I(Z) = (X
+2
+1 X2X3) desberdinak
+dira.
+Oro har, ezin da ziurtatu I(Y ) + I(Z) = I
+(Y ∩ Z) berdintza beteko denik. Adibi-
+!
+dez, demagun K inﬁnitua dela, eta hartu Y, Z ⊆ A
+2 honela: Y multzoa, X1 = 0
+zuzena, eta Z, berriz, Y -ren osagarria A
+2-n. Orduan, 2.18 adibidean ikusi dugun
+bezala, I(Y ) = (X1) da. Bestetik, 2.8 ariketa erabiliz, I(Z) = I(A
+2) = {0} du-
+gu. Horrenbestez, I(Y ) + I(Z) = (X1) + {0} = (X1) lortzen dugu. Hala ere,
+I(Y ∩ Z) = I(∅) = K[X1, X2] dugu, eta ez dator bat I(Y ) + I(Z)-rekin.
+Horrenbestez, bi eragile deﬁnitu ditugu, V eta I, honela ikus daitezkeenak:
+V : {K[X1, . . . , Xn]-ren idealak}
+−→
+{A
+n-ren multzo aljebraikoak}
+a
+−→
+V (a)
+eta
+I : {A
+n-ren multzo aljebraikoak} −→ {K[X1, . . . , Xn]-ren idealak}
+Y
+−→
+I(Y ).
+Aurretik aipatu dugun bezala, V supraiektiboa da, baina ez da injektiboa. Bestetik,
+garbi dago I ez dela supraiektiboa, I(Y ) ideal erradikala baita beti 
+(eta ideal guztiak
+ez dira erradikalak). Galdera hauek sortzen zaizkigu:
+∗Gogoan izan taldeen propietate hau:
+ G talde ﬁnitua bada, orduan g|G| = 1 dugu g ∈ G
+guztietarako.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+2.2. HILBERTEN NULLSTELLENSATZ-A ETA I − V KORRESPONDENTZIA
+64
+(i) Ba al da I injektiboa?
+(ii) Zer gertatzen da V eta I konposatzen baditugu?
+2.20. Lema. Izan bitez S, T ⊆ K[X1, . . . , Xn] eta Y, Z ⊆ A
+n. Orduan:
+(i) V -ren eta I-ren konposizioek partekotasunak gordetzen dituzte, hau da,
+S ⊆ T =⇒ I(V (S)) ⊆ I(V (T ))
+eta
+Y ⊆ Z =⇒ V (I(Y )) ⊆ V (I(Z)).
+(ii) S ⊆ I(V (S)) eta Y ⊆ V (I(Y )).
+(iii) V (I(V (S))) = V (S) eta I(V (I(Y ))) = I(Y ).
+Froga. (i) Hori garbi dago: V -k eta I-
+k partekotasunak aldatzen dituztenez, bata
+bestearekin konposatzean partekotasunak mantendu egingo dira.
+(ii) Izan bedi f ∈ S. Frogatzeko f ∈ I(V (S)) dela, f V (S)-ko puntuen gai-
+nean anulatzen dela ikusi behar da. Baina, deﬁnizioz, espazio aﬁneko puntu bat
+V (S)-n dago baldin eta puntu horretan S-ko polinomio guztiak anulatzen badira
+eta, bereziki, f puntu horretan anulatzen da, nahi bezala. Horrek S ⊆ I(V (S))
+dela erakusten du. Antzera frogatzen da Y ⊆ V (I(Y )) partekotasuna.
+(iii) Lehenengo berdintza baino ez dugu ikusiko, bestea era berean frogatzen
+da eta.
+Aurreko atalaren arabera, badakigu S ⊆ I(V (S)) dela.
+Partekotasun
+horri V aplikatzen badiogu, V (I(V (S))) ⊆ V 
+(S) lortzen dugu. Bestetik, aurreko
+atala Y = V (S) multzoari aplikatzen badiogu, V (S) ⊆ V (I(V 
+(S))) alderantzizko
+partekotasuna dugu.
+Ez dira oro har betetzen I(V (S)) = S eta V (I(Y )) = Y berdintzak. Izan ere,
+!
+I(V (S)) K[X1, . . . , Xn]-
+ren ideal erradikala denez, lehenengo berdintza ezin da be-
+te S azpimultzoa ez bada ideal erradikala. Bestetik, V (I(Y )) A
+n-ren azpimultzo
+aljebraikoa denez, bigarren berdintza ere ez da inola ere beteko Y ez bada aljebrai-
+koa.
+Gauzak horrela, galdera hauek naturalak dira:
+(i) a K[X1, . . . , Xn]-ren ideal erradikala bada, ba al da I(V 
+(a)) = a? Zein da
+I(V (S)) ideala S ⊆ K[X1, . . . , Xn] azpimultzo orokor baterako?
+(ii) Y A
+n-ren azpimultzo aljebraikoa bada, betetzen da V (I(Y )) = Y ? Zein da
+V (I(Y )) multzoa Y ⊆ A
+n orokor baterako?
+Has gaitezen (ii) ataleko galderetatik.
+2.21. Teorema. Izan bedi Y ⊆ A
+n. Orduan:
+(i) Y multzo aljebraikoa bada, V (I(Y )) = Y dugu.
+(ii) Y orokorra bada, V (I(Y )) = Y dugu, Y -
+ren itxidura Zariskiren topologiare-
+kiko.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+2.2. HILBERTEN NULLSTELLENSATZ-A ETA I − V KORRESPONDENTZIA
+65
+Froga. (i) Baldin eta Y aljebraikoa bada, orduan Y = V (S) idatz dezakegu,
+S polinomioen azpimultzo bat izanik.
+Orduan, 2.20 lema erabiliz, V (I(Y )) =
+V (I(V (S))) = V (S) = Y dugu.
+(ii) Alde batetik, 2.20 lemaren arabera Y ⊆ V (I(Y )) dugu. Orain, V (I(Y ))
+multzo itxia da Zariskiren topologiarekiko, aljebraikoa delako. Multzo baten itxi-
+dura multzo hori barruan duen multzo itxirik txikiena denez, Y ⊆ V (I(Y )) dela
+ondorioztatzen dugu.
+Beste alde batetik, Y ⊆ Y partekotasunari I eta V eragileak aplikatuz, bata
+bestearen atzetik, V (I(Y )) ⊆ V (I
+(Y )) = Y alderantzizko partekotasuna lortzen
+dugu. (Ohartu (i) atala erabili dugula V (I(Y )) = Y dela ziurtatzeko, Y multzo
+aljebraikoa dela kontuan hartuz.)
+2.22. Korolarioa. V ◦ I konposizioa identitatea da multzo aljebraikoen gainean.
+Bereziki, I injektiboa da multzo aljebraikoen gainean.
+Lehenago esan dugun bezala, I ez da supraiektiboa, I(Y ) ideala erradikala
+baita beti. Beraz, I ez da bijektiboa. Hori konpontzeko asmotan, V eta I ideal
+erradikaletara murrizten ditugu:
+V : {K[X1, . . . , Xn]-ren ideal erradikalak}
+−→
+{A
+n-ren multzo aljebraikoak}
+a
+−→
+V (a),
+eta
+I : {A
+n-ren multzo aljebraikoak} −→
+{K[X1, . . . , Xn]-ren ideal erradikalak}
+Y
+−→
+I(Y ).
+Ba al da orain I bijektiboa? Hori lortzeko modu bat V eta I 
+(multzo aljebraikoe-
+tara eta ideal erradikaletara murriztuta) elkarren alderantzizkoak direla frogatzea
+da. Badakigu, 2.22 korolarioaren arabera, V ◦ I konposizioa identitatea dela multzo
+aljebraikoen gainean. Ba al da I ◦ V identitatea ideal erradikalen gainean? Balio-
+kideki, betetzen da I(V (a)) = a berdintza, a K[X1, . . . , Xn]-
+ren ideal erradikala
+denean?
+2.23.
+Teorema (Hilberten Nullstellensatza, bertsio gogorra).
+Izan bedi a
+K[X1, . . . , Xn]-ren ideala, K gorputza aljebraikoki itxia izanik. Orduan, I
+(V (a)) =
+rad a dugu. Bereziki, a erradikala bada, I(V (a)) = a dugu.
+Nullstellensatzak huts egiten du K ez bada aljebraikoki itxia. Kasu horretan, p ∈
+!
+K[X] polinomio irreduzible bat har dezakegu, deg p ≥ 2 izanik. Orduan, a = (p)
+K[X]-ren ideal erradikala da, baina
+I(V (a)) = I(V (p)) = I(∅) = K[X1, . . . , Xn] = a.
+Hilberten Nullstellensatzaren froga honako emaitza honetan oinarritzen da,
+Nullstellensatzaren “bertsio ahul” deitutakoa.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+2.2. HILBERTEN NULLSTELLENSATZ-A ETA I − V KORRESPONDENTZIA
+66
+2.24.
+Teorema (Hilberten Nullstellensatza, bertsio ahula).
+Izan bedi a
+K[X1, . . . , Xn]-
+ren ideal propioa, K gorputza aljebraikoki itxia izanik. Orduan,
+V (a) multzo aljebraikoa ez da hutsa.
+Froga. Lehenengo eta behin, a K[X1, . . . , Xn]-
+ren ideal propioa denez, m ideal
+maximal baten barruan dago, 1.40 teorema erabiliz. Orain, K aljebraikoki itxia
+denez, 1.93 teoremaren arabera badakigu m = (X1 − a1, . . . , Xn − an) modukoa
+dela. Beraz, V aplikatuz
+{(a1, . . . , an)} = V (m) ⊆ V (a)
+lortzen dugu, eta V (a) ez da hutsa.
+Garbi dago Nullstellensatzaren bertsio ahula bertsio gogorraren ondorioa dela:
+V (a) = ∅ balitz, a ideal propioa izanik, orduan I(V (a)) = I(∅) = K
+[X1, . . . , Xn] =
+rad a izango genuke,∗ bertsio gogorraren kontra. Egia esan, ahul/
+gogor bereizketa
+bi bertsio horien artean itxurazkoa baino ez da, bertsio gogorra ahularen ondorioz
+frogatuko baitugu.
+Bertsio ahulean garbiago ikusten da zein arrazoirengatik deitzen zaion Nulls-
+tellensatz teorema horri. Alemanez, satz hitzaren esanahia teorema da, null zero
+da eta stellen, berriz, posizioak. Beraz, Nullstellensatz hitzaren itzulpena zeroen
+teorema da, eta hori da bertsio ahulak ziurtatzen duena:
+ ideal propio batek zeroak
+dituela beti. Ohartu emaitza hori gorputz aljebraikoki itxiaren deﬁnizioaren oro-
+korpen modura ikus daitekeela, indeterminatu bat baino gehiagoren kasura. Izan
+ere, deﬁnizioz, gorputz bat aljebraikoki itxia da edozein polinomio ez-
+konstantek
+zeroak dituenean eta, K[X] ideal nagusietako domeinuan, ideal propioak {0} eta
+(f ) modukoak dira, f ∈ K[X] ez-konstantea izanik.
+Bertsio gogorraren froga ikusteko, bertsio ahularen korolario hau eskura izatea
+komeni zaigu.
+2.25. Korolarioa. Izan bitez K gorputz aljebraikoki itxia eta
+
+
+
+
+
+
+
+f1(X1, . . . , Xn) = 0
+..
+.
+fr(X1, . . . , Xn) = 0
+ekuazio polinomikoen sistema bat K-ren gainean. Orduan, baliokideak dira:
+(i) Sistema horrek soluzioak ditu.
+(ii) (f1, . . . , fr) ideala propioa da K[X1, . . . , Xn]-n.
+(iii) Ezin da 1 konstantea idatzi f1, . . . , fr polinomioen multiploen batura gisa.
+∗Ohartu, a K[X1, . . . , Xn]-ren ideal propioa izanez gero, rad a = K
+[X1, . . . , Xn] dela. Izan
+ere, berdintza beteko balitz, 1 ∈ rad a izango genuke eta, erradikalaren deﬁnizioagatik, 1 ∈ a. Hori
+ez da posible, a propioa baita.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+2.2. HILBERTEN NULLSTELLENSATZ-A ETA I − V KORRESPONDENTZIA
+67
+Froga. Badakigu a ideal bat eraztun osoarekin bat datorrela baldin eta soilik
+baldin 1 ∈ a bada. Beraz, garbi dago (ii) eta 
+(iii) baliokideak direla. Jarri a =
+(f1, . . . , fr). Orduan, (i) ataleko baieztapena V 
+(a) = ∅ modura idatz daiteke.
+Beraz, (ii)⇒
+(i) inplikazioa Nullstellensatzaren bertsio ahula baino ez da. Bestalde,
+V (a) = ∅ bada, orduan a-k propioa izan behar du, V (K
+[X1, . . . , Xn]) = ∅ baita.
+Eman dezagun azkenik Nullstellensatzaren bertsio gogorraren froga, bertsio
+ahulean oinarrituz.
+Nullstellensatzaren bertsio gogorraren froga. Alde batetik, 2.20 lema-
+ren arabera, badakigu a ⊆ I(V (a)) partekotasuna betetzen dela. Kontuan izanik
+I(V (a)) ideal erradikala dela, rad a ⊆ I(V (a)) lortzen dugu.
+Ikus dezagun alderantzizko partekotasuna. Horretarako, f ∈ I(V (a)) bada,
+frogatu behar dugu badagoela m ≥ 1, non f m ∈ a baita. Nabaria da nahikoa
+dela f = 0 den kasua aztertzea.
+Zein da f ∈ I(V (a)) baldintzaren esanahia?
+Zehatz-mehatz, a-
+ko polinomioak anulatzen diren puntu guztietan f polinomioa ere
+anulatzen dela. Bestalde, Hilberten oinarriaren teorema erabiliz, a = 
+(f1, . . . , fr)
+idatz dezakegu.
+Orain, “Rabinovich-en trukua” delakoa erabiliko dugu.
+Horretarako, Xn+1
+indeterminatu berri bat sartzen dugu, eta honako sistema hau azaltzen dugu:
+
+
+
+
+
+
+
+
+
+
+
+
+
+f1(X1, . . . , Xn) = 0
+..
+.
+fr(X1, . . . , Xn) = 0
+1 − f (X1, . . . , Xn)Xn+1 = 0.
+Kontuan hartuz f1, . . . , fr anulatzen diren puntu guztietan f ere anulatzen dela,
+ohartzen gara sistema horrek ez duela soluziorik. Beraz, Nullstellensatzaren bertsio
+ahularen arabera 
+(hobeto esanda, horren ondorioa den 2.25 korolarioaren arabera),
+1 polinomio konstantea sistema horretan agertzen diren polinomioen multiploen
+batura da. Hau da, existitzen dira q0, . . . , qr ∈ K[X1, . . . , Xn+1], non
+1 = q0(X1, . . . , Xn+1)(1 − f (X1, . . . , Xn)Xn+1) + q1(X1, . . . , Xn+1)f1
+(X1, . . . , Xn)
++ · · · + qr(X1, . . . , Xn+1)fr(X1, . . . , Xn)
+baita. Orain, berdintza honetan Xn+1 → 1/f (X1, . . . , Xn) ordezkapena eginez,
+1 =
+q∗
+1 (X1, . . . , Xn)f1(X1, . . . , Xn) + · · · + q
+∗
+r (X1, . . . , Xn)fr (X1, . . . , Xn)
+f m(X1, . . . , Xn)
+lortzen dugu, q∗
+1 , . . . , q
+∗
+r ∈ K [X1, . . . , Xn] polinomio batzuetarako eta m berretzai-
+leren baterako. Ondorioz,
+f
+m = q∗
+1 f1 + · · · + q
+∗
+r fr ∈ (f1, . . . , fr ) = a,
+nahi bezala.
+Orain, Nullstellensatzaren laguntzaz, I eta V eragileen funtsezko propietate
+hau eman dezakegu.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+2.3. BARIETATEAK ETA OSAGAI IRREDUZIBLEAK
+68
+2.26. Teorema (I − V korrespondentzia). Izan bedi K gorputz aljebraikoki itxia.
+Orduan, I eta V eragileak elkarren alderantzizkoak dira A
+n-ren multzo aljebraikoe-
+tara eta K[X1, . . . , Xn]-
+ren ideal erradikaletara murrizten ditugunean eta, beraz,
+bijekzio bat eratzen dute bi multzo horien artean. Gainera, bijekzio horren bitartez
+A
+n-ko puntuak K[X1, . . . , Xn]-ren ideal maximalekin lotuta daude.
+Froga. Alde batetik, K gorputza edozein izanda ere, Y multzo aljebraikoa bada
+V (I
+(Y )) = Y dugu, 2.21 teoremaren arabera. Bestetik, Nullstellensatza aplikatuz,
+I(V (a)) = a dugu a K[X1, . . . , Xn]-
+ren ideal erradikala bada, K aljebraikoki itxia
+delako.
+Horrek I eta V eragileak elkarren alderantzizkoak direla frogatzen du.
+Azkenik, 1.93 teoremaren arabera, K[X1, . . . , Xn]-ren ideal maximalak m = 
+(X1 −
+a1, . . . , Xn − an) motakoak dira, (a1, . . . , an) ∈ A
+n izanik. Kontuan hartuz V (m) =
+{
+(a1, . . . , an)} dela, bijekzio bat lortzen dugu ideal maximalen eta puntu aﬁnen
+artean.
+I −V korrespondentziaren bitartez ideal erradikalak multzo aljebraiko guztiekin
+bijekzioan daude eta ideal maximalak, berriz, puntuekin lotuta. Orduan, galdera
+hau logikoa da: zein multzo aljebraikorekin daude lotuta K[X1, . . . , Xn]-
+ren ideal
+lehenak? Horren erantzuna hurrengo atalean ikusiko dugu.
+2.27. Oharra. Izan bedi Y ⊆ A
+n multzo aljebraikoa. Orduan, deﬁnizioz, exis-
+titzen da a polinomioen ideal bat, non Y = V (a) baita. Hala ere, a hori ez da
+bakarra, eta Y = V (a) = V (b) = V 
+(c) = · · · izan dezakegu ideal desberdinetarako.
+I − V korrespondentziak dio ideal horietatik erradikala den bakar bat dagoela, K
+aljebraikoki itxia bada. Adibidez, p ∈ K
+[X1, . . . , Xn] irreduziblea bada, orduan
+V (p) = V (p2) = · · · = V (pn) = · · · dugu, baina (p) bakarrik da erradikala.
+2.3. Barietateak eta osagai irreduzibleak
+Zenbakien artean, zenbaki lehenak atomoak bezalakoak dira: ezin dira des-
+konposatu faktore ez-
+tribialetan. Gainera, edozein zenbaki arrunt zenbaki lehenak
+erabiliz eraiki daiteke, biderketaren bidez. Azken atal honetan ikusten dugun beza-
+la, multzo aljebraikoekin antzeko zerbait gertatzen da, kasu honetan bildura jokatuz
+biderketaren papera.
+2.28. Notazioa. Hemendik aurrera, V letra erabiliko dugu multzo aljebraikoak
+idazteko, eta Y A
+n-ren azpimultzo orokorretarako gordeko dugu.
+2.29. Deﬁnizioa. Izan bedi V multzo aljebraiko ez-hutsa. Orduan, V barietatea
+edo irreduziblea dela esango dugu, ezin bada jarri bi multzo aljebraiko txikiagoren
+bildura gisa, hau da, inplikazio hau betetzen bada:
+V = V1 ∪ V2, V1 eta V2 aljebraikoak =⇒ V1 = V edo V2 = V.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+2.3. BARIETATEAK ETA OSAGAI IRREDUZIBLEAK
+69
+Adibidez, char K = 2 bada, orduan Y 2 = X2 ekuazioa duen A
+2-ko kurba ez da
+barietatea, bi zuzenen bildura baita: V (Y 2 −X2) = V (Y −X)∪V (Y +X). (Ohartu
+char K = 2 baldintza funtsezkoa dela bildurako bi multzo aljebraikoak desberdinak
+izan daitezen.) Bestalde, puntuak multzo aljebraikoak direnez, A
+n-ren azpimultzo
+ﬁnituen artean, puntu isolatuak baino ez dira barietateak. Nola jakin dezakegu,
+oro har, multzo aljebraiko bat barietatea den edo ez? Hurrengo teoreman ematen
+dugu erantzuna.
+2.30. Lema. Izan bitez V1 eta V2 multzo aljebraiko aﬁnak, K gorputza edozein
+izanik. Orduan, V1
+V2 bada, I(V2)
+I(V1) dugu.
+Froga. Badakigu I-k partekotasunak aldatzen dituela. Beraz, I(V2) ⊆ I(V1) du-
+gu. Beteko balitz I(V2) = I(V1), orduan V (I(V2)) = V (I(V1)) ere izango genuke
+eta, 2.21 teorema aplikatuz, V1 = V2 lortuko genuke, V1 eta V2 aljebraikoak baitira.
+Hori kontraesan bat denez, I(V2)
+I(V1) izan behar dugu.
+2.31. Teorema. Izan bedi V ⊆ A
+n multzo aljebraikoa, K gorputza edozein izanik.
+Orduan, V barietatea da baldin eta soilik baldin I(V ) ideal lehena bada.
+Froga. ⇒) Ikus dezagun I(V ) ideal lehena dela.
+Lehenengo eta behin, ohar-
+tu I(V ) = K
+[X1, . . . , Xn] dela. Izan ere, berdintza beteko balitz, orduan V =
+V (I(V )) = V (K[X1, . . . , Xn]) = ∅ izango genuke, hipotesiaren kontra. 
+(Lehenen-
+go berdintza V aljebraikoa izateagatik betetzen da.) Orain, demagun f g ∈ I(V )
+dela, eta frogatu dezagun f ∈ I(V ) edo g ∈ I(V ) dela. Horretarako, ohartu
+f g ∈ I(V ) =⇒ V = V (I(V )) ⊆ V (f g) = V (f ) ∪ V (g)
+=⇒ V = (V ∩ V (f )) ∪ (V ∩ V (g))
+dugula. Kontuan harturik V barietatea dela, V = V ∩ V (f ) edo V = V ∩ V 
+(g) izan
+behar du. Lehenengo kasua betetzen bada, orduan V ⊆ V (f ) dugu eta, ondorioz,
+f ∈ I(V (f )) ⊆ I(V ). Bigarren kasuan, g ∈ I
+(V ) lortzen dugu guztiz era berean.
+Horrenbestez, frogaturik gelditzen da lehenengo inplikazioa.
+⇐) Lehenengo eta behin, ohartu V multzoa ez dela hutsa. Izan ere, V = ∅
+balitz, orduan I(V ) = I(∅) = K
+[X1, . . . , Xn] ez litzateke ideal lehena izango, eta
+hori kontraesan bat da. Orain, demagun V = V1 ∪ V2 dela, V1 eta V2 aljebraikoak
+izanik, eta ikus dezagun V1 = V edo V2 = V dela. Absurdora eramanez, V1
+V eta
+V2
+V dela pentsa dezakegu. Hala bada, aurreko lema erabiliz, I(V )
+I(V1) eta
+I(V )
+I(V2) dugu. Aukeratu f ∈ I(V1)
+I(V ) eta g ∈ I(V2)
+I(V ) polinomioak.
+Orduan, f V1-eko puntuen gainean anulatzen da eta g, berriz, V2-koen gainean.
+Ondorioz, f g biderkadura V = V1 ∪ V2 gainean anulatzen da, hau da, f g ∈ I(V )
+dugu. Hori ez da posible, f eta g ez daudelako I(V )-n, eta I
+(V ) ideal lehena delako
+hipotesiaren arabera.
+2.32. Korolarioa. Izan bedi K gorputz aljebraikoki itxia. Orduan I − V korres-
+pondentziaren bitartez, ideal lehenak barietateekin elkartuta daude.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+2.3. BARIETATEAK ETA OSAGAI IRREDUZIBLEAK
+70
+2.33. Adibideak. Adibide hauetan K gorputza aljebraikoki itxia da, Nullstellen-
+satza erabili ahal izateko.
+1) V = V (Y − X2) parabola barietatea da. Izan ere, (Y − X2) ideal lehena da
+eta, bereziki, erradikala. Beraz, I(V ) = I(V (Y − X2)) = rad(Y − X2) = 
+(Y − X2)
+ideal lehena da eta V barietatea da.
+2) Oro har, V 
+(f ) hipergainazala barietatea da baldin eta soilik baldin f polino-
+mio irreduzible baten berretura bada. Hori ikusteko, demagun f = p
+e1
+1 . . . p
+er
+r
+dela
+f -ren irreduzibleetako faktorizazioa. Orduan, I(V (f )) = rad(f ) = 
+(p1 . . . pr) dugu,
+eta ideal hori lehena da baldin eta soilik baldin p1 . . . pr irreduziblea bada, hots,
+r = 1 bada. Ondorioz, V (f ) barietatea da zehatz-
+mehatz f polinomio irreduzible
+baten berretura denean.
+3) V1 = V (Y − X
+2) eta V2 = V (Z − X2) paraboloideen ebakidura barietatea
+da. Izan ere, V1 ∩ V2 = V (Y − X
+2, Z − X2) dugu eta (Y − X2, Z − X2) ideal lehena
+da.
+Demagun K gorputza aljebraikoki itxia dela. Aurreko adibideetan ikusi dugunez, a
+!
+ideal lehena bada, orduan V (a) barietatea da, I(V 
+(a)) = a delako. Baina a ez bada
+ideal lehena, ezin dugu besterik gabe esan V 
+(a) barietatea ez denik. Hori ikusteko,
+a
+= ((Y − X2)2) har dezakegu, adibidez. Orduan, V (a) = V (Y − X2) barietatea
+da, nahiz eta a ideal lehena ez izan. Horren atzean dagoen arrazoia hau da: V
+multzo aljebraikoa bada, orduan a ideal askorekin izan dezakegu V = V 
+(a). Ideal
+horietariko bakar bat da erradikala, eta horixe da I
+(V ). Azken teoremak dioenez,
+V barietatea den edo ez jakiteko, I
+(V ) ideala aztertu behar dugu, eta ez V = V (a)
+idazteko balio duen edozein ideal.
+Multzo aljebraiko bat ez bada barietatea, bi multzo aljebraiko txikiagoren bil-
+dura gisa deskonposatzen da: V = V1 ∪ V2. Bi multzo horietako bat ez bada
+barietatea, are gehiago deskonposa dezakegu V multzoa; adibidez, V1 = V11 ∪ V12
+eta V2 = V21 ∪ V22 izan dezakegu. Berriro ere, multzo berri horietako bat ez ba-
+da barietatea, gehiago deskonposa dezakegu. Deskonposizio-prozesu hori zuhaitz
+baten bitartez irudika daiteke:
+V
+V1
+V2
+V11
+V12
+V21
+V22
+V111
+V112
+V211
+V212
+Bukatuko da prozesu hori edo egon gaitezke agertzen diren multzo aljebraikoak
+etengabe deskonposatzen bildura modura? Bestela esanda, luza daiteke deskonpo-
+sizioaren zuhaitza inﬁnituraino?
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+2.3. BARIETATEAK ETA OSAGAI IRREDUZIBLEAK
+71
+Hurrengo teoreman ikusten dugunez, prozesua beti bukatuko da eta, beraz,
+hasierako multzoa barietate kopuru ﬁnitu baten bildura gisa adierazirik geldituko
+da, zenbaki osoak zenbaki lehenen biderkadura gisa faktorizaturik jar daitezkeen
+bezala. Zenbaki osoen kasuan, faktorizazioa bakarra da. Gertatzen da gauza bera
+multzo aljebraiko baten barietateetako deskonposizioarekin?
+2.34. Teorema. Izan bedi V ⊆ A
+n multzo aljebraiko ez-hutsa. Orduan:
+(i) V = V1 ∪ · · · ∪ Vr idatz daiteke, Vi guztiak barietateak izanik.
+(ii) Deskonposizio hori ez bada erredundantea, hau da, Vi
+Vj betetzen bada
+i = j guztietarako, orduan bakarra da, ordena salbu.
+Hori dela eta, Vi
+barietateei V -ren osagai irreduzible deitzen zaie.
+Froga. 
+(i) Aurretik aipatu dugun bezala, deskonposizioaren zuhaitza inﬁnituraino
+luzatzeko posibilitatea baztertu behar dugu. Bestela, zuhaitzak adar inﬁnitu bat
+izango du. Orduan, adar horretako erpinetan agertzen diren multzo aljebraikoek
+kate hertsiki beherakor inﬁnitu bat osatuko dute:
+V = W0
+W1
+W2
+· · ·
+Wi
+· · · .
+Kate horri I eragilea aplikatuz eta 2.30 lema kontuan hartuz, K
+[X1, . . . , Xn]-ren
+idealen kate hertsiki gorakor bat dugu,
+I(V ) = I(W0)
+I(W1)
+I(W2)
+· · ·
+I(Wi)
+· · · ,
+eta hori ezinezkoa da, Hilberten oinarriaren teorema dela eta. Horrek multzo alje-
+braiko baten deskonposizioaren existentzia frogatzen du, barietateen bildura gisa.
+Deskonposizioak erredundantziarik ez izatea nahi badugu, nahikoa da Vi ⊆ Vj be-
+tetzen dela ikusten dugun bakoitzean Vi multzoa deskonposiziotik kentzea.
+(ii) Demagun V = V1 ∪ · · · ∪ Vr = W1 ∪ · · · ∪ Ws dela, bi deskonposizioak
+ez-erredundanteak izanik. Har dezagun V1 multzo aljebraikoa eta ikus dezagun
+badagoela i ∈ 
+{1, . . . , s}, non V1 = Wi baita. Hori bi deskonposizioetako multzo
+aljebraiko guztiekin egin daitekeenez, alde bateko eta besteko multzoak bat datozela
+ondorioztatuko dugu, eta teorema frogaturik geldituko da. Ohartu
+V1 = V1 ∩ V = V1 ∩ (W1 ∪ · · · ∪ Ws) = (V1 ∩ W1) ∪ · · · ∪ (V1 ∩ Ws)
+dugula. Orain, V1 barietatea izateagatik, existitzen da i non V1 = V1 ∩ Wi baita,
+hau da, V1 ⊆ Wi baita. Argudio bera Wi-ri aplikatuz, lortzen dugu badagoela j,
+non Wi ⊆ Vj baita. Orduan, V1 ⊆ Vj dugu eta, V = V1 ∪ · · · ∪ Vr deskonposizioan
+erredundantziarik ez dagoenez, j = 1 dugu nahitaez. Beraz, V1 ⊆ Wi eta Wi ⊆ V1
+dugu, eta ondorioz V1 = Wi, nahi bezala.
+Adibidez, K aljebraikoki itxia bada, V (Y 2−X2)-ren osagai irreduzibleak V (Y −
+X) eta V (Y + X) dira.
+2.35. Korolarioa. Izan bitez K gorputz aljebraikoki itxia eta a K
+[X1, . . . , Xn]-ren
+ideal erradikal propioa. Orduan:
+(i) a = p1 ∩ · · · ∩ pr idatz daiteke, pi guztiak ideal lehenak izanik.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+2.3. BARIETATEAK ETA OSAGAI IRREDUZIBLEAK
+72
+(ii) Deskonposizio hori ez bada erredundantea, hau da, pi
+pj betetzen bada
+i = j guztietarako, orduan bakarra da, ordena salbu. Hori dela eta, pi ideal
+lehenei a-ren osagai lehen deitzen zaie.
+Froga. Hori aurreko teoremaren “itzulpen” zuzena da, I − V korrespondentzia
+erabiliz. Gogoan izan korrespondentzia horren bitartez multzo aljebraikoak ideal
+erradikalekin elkartuta daudela eta barietateak, berriz, ideal lehenekin lotuta.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU

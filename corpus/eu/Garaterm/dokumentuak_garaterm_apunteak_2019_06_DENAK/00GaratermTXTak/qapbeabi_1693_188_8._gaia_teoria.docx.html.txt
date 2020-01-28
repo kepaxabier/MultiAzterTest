@@ -1,0 +1,491 @@
+
+
+
+
+
+
+
+
+
+
+
+8. GAIA.GAS KROMATOGRAFIA
+
+
+
+
+
+
+
+1 Gas kromatografoa.......................................................            1
+2 Injektorea........................................................................  2
+3 Zutabea...........................................................................  4
+  3.1. Zutabe kapilarrak....................................................          4
+  3.2. Zutabe enpaketatuak............................................                6
+  3.3. Zutabeen eraginkortasuna....................................                   7
+  3.4. Tenperatura programazioa...................................                    8
+  3.5. Gas eramailea.........................................................         9
+4 Detektagailua………………………………………….......               10
+  4.1. Konduktibitate termikoko detektagailua………..                             10
+  4.2. Sugar ionizazioko detektagailua ………………….                        11
+  4.3. Bestelako detektagailuak……………………..……                      12
+
+
+
+
+
+
+Gas kromatografian, fase mugikorra gasa da, normalean He, N2edo H2-a, etagas
+eramaileadeitzen zaio. Analitoak gasak edo likido lurrinkorrak dira eta fase
+mugikorrak garraiatuko ditugas_egoeranzutabean zehar. Fase geldikorra da likido
+ez-lurrinkorra edo solidoa. Honen arabera, gas-kromatografia izango da:
+    * Gas-likidoa. Fase geldikorra likido ez-lurrinkorra da. Likido honek
+      estaliko du zutabearen barrualdea edo euskarri solido baten partikulak.
+      Analitoak orekatuko dira fase mugikor eta geldikor artean, eta interakzio
+      horren arabera bereiziko dira:banaketa_kromatografiaren mekanismoa da
+      hau.
+    * Gas-solidoa. Fase geldikorra solidoa da. Analitoak adsorbatu egingo dira
+      bertan indar desberdinekin eta interakzio horrek bereiziko ditu:adsortzio
+      kromatografiaren mekanismoa dugu hemen.
+
+1. GAS KROMATOGRAFOA
+
+Hurrengo irudian erakusten dagas kromatografoaren eskema orokorra.
+
+
+
+
+
+
+
+
+
+
+
+
+Lagina injektatzen da silikonazko disko baten zehar (septuma edoseptoa)
+injektore bero batean eta hor lurrintzen da. Gas eramaleak garraiatzen du
+lurrin hori zutabean zehar eta hor analitoak banatzen doaz. Zutabearen irteeran
+detektagailua dago; honen erantzuna ordenagailu baten pantailan agertuko da edo
+zuzenean inprimatuko da. Zutabea beroa egon behar da analitoak gas egoeran
+egoteko eta bere tenperatura egokia izan behar da analitoak denbora luzeegian
+ez eluitzeko. Horregatik dago sartuta labe batean. Detektagailua mantentzen da
+tenperatura altuagoan zutabearena baino, analitoak hor ere gas moduan egoteko.
+
+Hurrengo ataletan aztertuko ditugu gas-kromatografoaren osagai nagusiak.
+2. INJEKTOREA
+
+Gas kromatografian lagina injektatu egiten da aparatuan xiringa batekin.
+Normalean injekzioa “sandwich” moduan egiten da, hurrengo irudiak erakusten
+duen bezala:
+
+
+
+
+
+Xiringa garbitzen da disolbatzailearekin hainbat aldiz eta gero xurgatzen da
+lehendabizi airea, gero disolbatzailea, gero berriro airea, gero lagina eta
+azkenik aire gehiago. Xiringaren orratza injektore beroan sartzean, segituan
+baporatu lirateke konposatu lurrinkorrenak. Hau ez gertatzeko sartzen da airea
+hasieran. Bigarren aire burbuila da lagina eta disolbatzailea ez nahasteko.
+Disolbatzaile zatiak garbitzen du orratza, lagin hondarrak eramanez, eta
+azkeneko aire zatiak disolbatzaile hondarrak eliminatzen ditu.Injekzioa egin
+daiteke ere disolbatzaile zatia hartu gabe.
+
+Hurrengo irudian ikusten da injektore baten eskema. Injektorea beroa dagoenean,
+lagina xiringarekin sartzen da gomazko diskoaren zehar (septuma) eta hor
+analitoak segituan lurrintzen dira. Kromatografia analitikoan injektatutako
+lagin likido bolumena 0.1-2L-koa izaten da. Gas eramaileak bultzatzen du lagin
+lurrindua injekzio puntutik zutaberantz, hodi gidaria (liner) zeharkatuz. Hodi
+hau beira silanizatuaz egina dago eta pixkanaka zikintzen doa, izan ere,
+laginaren deskonposizio produktuak eta konposatu ez-lurrikorrak hor metatzen
+dira. Horregatik, noizean behin garbitu edo aldatu egin behar da.
+
+
+
+
+
+
+
+
+
+
+
+Injekzioa egiterakoan, hiru modu erabili daitezke:
+Injekzio zatikatua(split injection)
+Erabiltzen da analitoak laginaren %0.1 baino gehiago badira. Lagin kantitate
+txikiak injektatzen dira (≤ 1mL) eta horretatik %0.2-2 besterik ez da sartzen
+zutabean. Dena sartzea gehiegi litzateke zeren, normalean, erabiltzen diren
+zutabeek ez dute ahalmena hainbesteko kantitateak tratatzeko.
+Aurreko irudira itzuliz, lagina injektorean sartu eta segituan lurrintzen da
+tenperatura altuagatik (~350ºC). Gero, hodi gidaria zeharkatzen du eta honen
+bukaerannahasteganbaradago: honen funtzioa da lagina erabat lurrintzea eta
+lurrin homogeneoa lortzea. Hori pasata gertatzen da zatiketa: baporearen
+frakzio txiki bat zutabean sartzen da, baina gehiena 2. balbulatik ateratzen
+da, hondakinetara. Fluxu orokorra injektoretik altua da (~100 mL/min), gehiena
+arbuiatzen delako, eta laginak denbora gutxi pasatzen du bere barruan.
+Horregatik, zutabearen hasieran solutuek banda estua osatzen dute eta gero
+banatzen doaz.
+
+Injekzio zatikatu gabea(splitless injection)
+Erabiltzen da analitoak aztarnak badira, hau da, laginaren %0.01 baino
+gutxiago. Kasu honetan, lagin kantitate handiagoak injektatzen dira (~2 mL) eta
+injektatutako %80a zutabean sartzen da. Hodi gidaria aurreko kasukoa bezalakoa
+da baina nahaste ganbararik gabe, eta 2. balbula itxita mantentzen da.
+Fluxua aurreko kasukoa baino askoz txikiagoa da (~1 mL/min), zutabean dagoen
+berbera, hain zuzen. Hau dela eta, laginak askoz denbora gehiago pasatzen du
+injektorean eta honen tenperatura txikiagoa mantendu behar da aurreko kasuan
+baino (~220ºC) lagina beroagatik ez deskonposatzeko. Gainera, hainbeste denbora
+injektorean pasa ondoren, solutuek ez dute osatuko banda estua zutabearen
+hasieran, aurreko kasuan bezala. Honen emaitza izango litzateke piko zabalak
+kromatograman. Hau saihesteko, zutabearen hasierako tenperatura finkatzen da
+40ºC disolbatzailearen irakite tenperatura azpitik. Horrela, disolbatzailea
+kondentsatzen da zutabearen hasieran eta solutuak harrapatuak geratzen dira
+disolbatzaile zati honetan, banda estua emanez. Kromatografia hasiko da
+zutabearen tenperatura igotzen, kondentsatutako disolbatzailea lurrintzeko.
+Prozedura honi deitzen zaiodisolbatzailearen_harrapaketaeta honi esker piko
+estuak lortzen dira.
+
+Injekzioa zutabean
+Erabiltzen da analitoak deskonposatzen badira haien irakite tenperatura
+gainetik. Lagina injektatzen da zuzenean zutabean, injektore berotik pasa gabe.
+Lehengo irudira itzuliz, hau lortzen da hodi gidaria kenduz eta zutabea
+zuzenean konektatuz injekzio puntuarekin. Injektorea egongo da zutabearen
+hasierako tenperaturan (adz. 50ºC). Zutabea berotuko da pixkanaka banaketa
+kromatografikoa hasteko. Modu honetan ahalik eta tenperatura baxuena jartzen
+zaio laginari eta analito kantitate txikiak galduko dira.
+Hemen ere, aurreko kasuan bezala, disolbatzailearen harrapaketa egiten da.
+Zutabearen hasierako tenperatura behar bezain baxua da disolbatzailea
+kondentsatzeko eta analitoak banda estu batean harrapatuak geratzeko.
+3. ZUTABEA
+
+3.1. Zutabe kapilarrak
+
+Analisi gehienetan erabiltzen dira hodi formako zutabe irekiak, luzeak eta
+estuak, hurrengo irudian erakusten dena bezalakoak. Deitzen dirazutabe tubular
+irekiakedozutabe kapilarraketa silize fundituarekin (SiO2) fabrikatzen dira.
+Gainetik ipintzen zaie, euskarri eta babes moduan, poliimida izeneko plastikoa,
+gauza dena 350ºC-ko tenperaturak jasateko. Barneko diametro tipikoa 0.1 eta
+0.53 mm artekoa izaten da eta luzera 15 eta 100 m artekoa. Fase geldikorra izan
+daiteke likido bat zutabearen barnealdeari zuzenean itsatsita, likido bat
+euskarri solido baten gainean edo solido bat.
+
+
+
+
+
+
+
+
+
+
+
+
+Fase geldikorra aukeratzeko arau orokorra da: “antzekoak antzekoa disolbatzen
+du”. Honen arabera, solutu apolarrak bereizteko hobe zutabe apolarrak
+erabiltzea, solutu erdi-polarrak bereizteko zutabe erdi-polarrak eta solutu
+polarrak bereizteko zutabe polarrak. Hurrengo taulan agertzen dira solutu
+batzuen polaritateak:
+
+
+
+
+
+
+
+
+
+
+Hurrengo irudian erakusten dira bi kromatograma, lagin berberarekin lortuak.
+Bietan erabili dira zutabe kapilarrak. Kromatogramen arteko diferentzia
+agertzen da fase geldikor desberdina erabili delako:
+
+
+    * Ezkerreko kromatograman fase geldikorra apolarra da: poli
+      (dimetilsiloxanoa). Laginak dituen 10 konposatuak eluitu dira, gutxi
+      gora behera, irakite puntua gero eta altuagoa dutela. Konposatuak atxiki
+      dira zutabean lurrinkortasunaren arabera: lurrinkorrenak izan dira
+      ateratzen lehenak.
+
+    * Eskuineko kromatograman fase geldikorra oso polarra da: poli
+      (etilenglikola). Oraingoan konposatuak atxiki dira zutabean
+      polartasunaren arabera. Polarrenak izan dira atxikienak, eta beraz,
+      ateratzen azkenak. Lehendabizi atera dira 4 alkanoak (apolarrak), gero
+      hiru zetonak (erdi-polar ahulak) eta azkenik hiru alkoholak (erdi-polar
+      sendoak).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Adibide honek erakusten du fase geldikorraren polartasunak eragin handia izan
+dezakeela gertatzen den banaketan. Hurrengo taulan erakusten dira maiz
+erabiltzen diren fase geldikor batzuk eta haien polaritatea.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.2. Zutabe enpaketatuak
+Zutabe hauek noizean behin erabiltzen dira.Guztiz betetadaude barrutik euskarri
+solido batekin, partikula txikiez osatuta. Partikula hauek estalita daude fase
+geldikor likido ez-lurrinkor batekin, edo bestela, solidoa bera da fase
+geldikorra.
+Zutabe hauek fabrikatzen dira altzairu oxidaezinarekin, nikelarekin edo
+beirarekin. Haien neurri tipikoak dira 3-4 mm-ko diametroa eta 1-5 m-ko luzera.
+Euskarri solidoa da askotan diatomea lurra delakoa, hau da, alga batzuen
+eskeleto silizeoak.
+
+
+
+
+Zutabe enpaketatuak ez dira zutabe kapilarrak bezain eraginkorrak solutuak
+banatzeko. Zutabek kapilarrekin analisiak azkarrago egiten dira eta
+sentsibilitate eta bereizmen handiagoak lortzen dituzte. Horregatik erabiltzen
+dira normalean analisiak egiteko. Zutabe enpaketatuak, hala ere, gauza dira
+lagin kantitate handiagoak tratatzeko. Horregatik, zutabe hauek erabiltzen
+dira, batez ere, aldez aurretiko banaketak egiteko, izan ere, hor lagin
+kantitate handiak tratatzen dira eta fase geldikor asko behar da.
+3.3. Zutabeen eraginkortasuna
+
+Zutabe kapilarrak zergatik diren eraginkorragoak enpaketatuak baino, van
+Deemter ekuazioarekin azaldu daiteke:
+
+
+Ikusi genuen bezala, komeni da plater altuera H ahalik eta txikiena izatea
+zutabea eraginkorra izateko eta piko estuak emateko. Ekuazioko “A” gaia sortzen
+da, beste gauzen artean, solutuek bide desberdinak egin ditzaketelako zutabea
+zeharkatzean eta horrek zabaldu egiten ditu bandak. Zutabe kapilarrak hutsak
+dira barrutik beraz bide desberdinen arazoa desagertzen da eta A~0. Honengatik,
+H txikiagoa da zutabe kapilarretan, beraz, eraginkorragoak dira, piko estuagoak
+ematen dituzte.
+
+Aurrekoaz gain, presioaren arazoa daukagu. Zutabe enpaketatu batean, partikulek
+kontra egiten diote fase mugikorraren fluxuari eta zutabe kapilarretan hori ez
+da gertatzen. Ondorioz, gas presio berbera jarrita, zutabe kapilarra askoz
+luzeagoa izan daiteke enpaketatua baino. Biek plater altuera bera badute,
+zutabe kapilarrak askoz plater gehiago izango ditu, luzeagoa da-eta, beraz
+eraginkorragoa izango da.
+
+Hurrengo irudietan ikusten dira bi kromatograma: ezkerrekoa lortu da zutabe
+enpaketatu batekin eta eskuinekoa zutabe kapilar batekin. Argi dago
+bigarrenarekin askoz piko estuagoak lortzen direla (H txikiagoa).
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.4. Tenperatura programazioa
+
+Puntu hau oso garrantzitsua izan daiteke kromatogramaren kalitatea hobetzeko.
+Teknika honetan, zutabearen tenperatura igotzen dabanaketa_egiten_den
+bitarteanbi helbururekin: konposatuen atxikipen denborak motzagoak izatea
+(batez era azkenekoenak) eta piko zorrotzagoak lortzea.
+
+Hurrengo irudian ikusten da adibide bat. Tenperatura mantentzen bada
+konstantea, 150ºC-tan, konposatu lurrinkorrenak ateratzen dira hasieran
+elkarrekin eta ez dira bereizten. Bestalde, lurrinkortasun txikiena daukatenak
+zutabetik eluitu ere ez dira egiten. Igotzen bada tenperatura 50ªC-etatik
+250ºC-etara, 8ºC/min-ko abiaduran, konposatu guztiak eluitzen dira eta pikoen
+arteko distantzia nahiko uniformea da.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.5. Gas eramailea
+
+Normaleanhelioaerabiltzen da. Gas hau egokia da detektagailu gehienekin lan
+egiteko. Beste gas eramaile tipikoak dira hidrogenoa eta nitrogenoa. Hurrengo
+irudian erakusten da van Deemter ekuazioaren irudikapena hiru gas hauek
+erabilita. Ikusten da hiruek ematen dutela plater altuera optimo berbera (H
+txikiena ~0.3 mm) fluxu desberdinetan. Fluxu optimo handiena H2-arekin lortzen
+da, beraz, gas honekin lortuko lirateke banaketa azkarrenak baldintza
+egokienetan.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hala ere, H2-ak badu desabantaila nabarmena: eztanda egin dezake airean.
+Horregatik erabiltzen da gehiago He-a. Bestalde, detektorea ere kontutan hartu
+behar da. Adibidez, sugar ionizazioko detektorea erabili ezkero, N2-ak detekzio
+limite baxuagoak ematen ditu.
+
+Zutabe estuekin, gas emaria izan daiteke baxuegia detektorea ongi
+funtzionatzeko. Kasu horietan, zutabetik pasatzen da gasa emari optimoan
+banaketa egiteko eta gero, detektorera iritsi baino lehen, gas laguntzailea
+delakoa sartzen da emaria handitzeko eta egokia izateko detektorearentzako.
+
+Azkenik, gas eramailea oso purua izan behar da zeren ezpurutasunek hondatzen
+dute fase geldikorra. Hau dela eta, kromatografoan sartu baino lehen, gasa
+pasatzen da purifikatzaile batzuetatik eliminatzeko oxigenoa, ura edo konposatu
+organikoen aztarnak.
+
+4. DETEKTAGAILUA
+
+Analisi kuantitatiboa piko kromatografikoen azaleran oinarritzen da. Aukeratzen
+dira lan baldintza egokiak azalerak proportzionalak izateko analitoen
+kontzentrazioekiko. Pikoak oso estuak badira, azaleraren ordez, altuera ere
+erabili daiteke. Ekipo gehienetan ordenagailu batek neurtzen ditu automatikoki
+azalera guztiak. Analistak egin behar du bakarrik ongi marraztu base lerroa
+pikoen azpian eta, batzuetan, erabaki zein mugen artean neurtu azalera. Eskuz
+neurtu behar bada eta pikoak gauss kurbaren forma badu, azalera formula honekin
+kalkulatzen da:
+            PIKO GAUSIARRAREN AZALERA=1.064×PIKOAREN ALTUERA× w1/2
+Gas kromatografian, analisi kuantitatiboa ia beti barne patroiaren metodoarekin
+egiten da. Kontua da injekzio bakoitzean lagin kantitate desberdina sartzen
+dela zutabean eta hori zuzentzeko modu bakarra barne patroia erabiltzea da.
+Formula orokorra hauxe da:
+
+
+
+Analisiaren aurretik analito bakoitzaren erantzun faktorea ezagutu behar da eta
+horretarako analito eta barne patroi kontzentrazio ezagunak injektatuko dira
+kromatografoan hainbat aldiz.
+Ikus dezagun orain gas kromatografian gehien erabiltzen direndetektagailuak.
+
+
+4.1.Konduktibitate termikoko detektagailua(TCD:thermal conductiviy detector)
+
+Detektagailu hau oso erabilia izan da sinplea eta orokorra delako, hau da,
+analito guztiei erantzuten die. Tamalez, sentsibilitatea ez dute oso altua.
+Konduktibitate termikoak neurtzen du sustantzia baten ahalmena beroa
+transferitzeko leku bero batetik hotz batera. Konduktibitate termikoko
+detektoreetan helioa erabiltzen da normalean gas eramaile bezala. Helioa da
+konduktibitate termiko handiena duen gasa, hidrogenoaren atzetik. Horregatik,
+edozein dela helioarekin nahasten den analitoa, bere konduktibitate termikoa
+jaitsi egingo da, eta jaitsiera hori da, hain zuzen ere,detektagailuak neurtzen
+duena.
+Hurrengo irudian ikusten da horrelakodetektagailubaten eskema. Zutabetik
+ateratzen den gasa (eluatoa)detektagailura bideratzen da eta hor wolframio-
+reniozko filamentu bero batetik pasatzen da. Filamentua zirkuitu elektriko
+batean sartuta dago. Analito bat ateratzen denean, gasaren konduktibitate
+termikoa jaisten da eta filamentua gehiago berotzen da. Horren ondorioz
+handitzen da bere erresistentzia elektrikoa eta horrekin batera bere inguruko
+voltajea. Detektagailuak voltaje aldaketa hori neurtzen du. Horrelako
+detektagailuen sentsibilitatea handitzen da emaria baxua bada.
+
+
+4.2. Sugar ionizazioko detektagailua (FID:flame ionization detector)
+
+Beheko irudiak erakusten dudetektagailuhonen eskema. Eluatoa sartzen denean
+erre egiten da H2eta aire nahaste batean. Baldintza hauetan, karbono atomo
+guztiek, salbu karbonilo eta karboxilo taldekoek, CH erradikalak sortzen
+dituzte eta hauek CHO+katioiak hurrengo erreakzioaren arabera:
+                               CH + O → CHO++ e–
+CHO+katioia oso kantitate txikian sortzen da, 105karbono atomoetatik bat, baina
+kantitate hori proportzionala da ionizagarriak diren karbono atomoekiko.
+Detektagailuaren sugarrean sortzen diren katioiek eroaten dute korronte
+elektrikoa metxeroaren puntatik (anodoa) katodo bateraino. Korronte elektriko
+hau dadetektagailuak ematen duen seinalea.
+
+Detektagailu hau askoz erabiliagoa da aurrekoa baino. Alde batetik bere
+sentsibilitatea handiagoa da eta detekzio muga 100 aldiz txikiagoa. Gainera,
+txikiagotzen da %50ean gas eramaile bezala N2-a erabiltzen bada He-aren ordez.
+Horregatik, normalean sartzen da N2-a gas laguntzaile bezala zutabea eta
+detektagailuaren artean. Bestalde, iadetektagailuunibertsala da, analito
+guztientzako baliagarria. Ez du erantzuten zenbait gasen aurrean, adibidez, H2,
+He, N2, O2, CO, H2O, NH3, NO, H2S eta SiF4-a.
+4.3. Bestelako detektagailuak
+
+Aurreko biak kenduta,detektagailugehienek erantzuten dute analito jakin batzuen
+aurrean, hau da, ez dira orokorrak. Hala ere, analito horiekiko sentsibilitate
+handiagoa ematen dute eta interes handia badugu, erabili egingo ditugu.
+Hurrengo zerrendan ematen diradetektagailuhorietako batzuk eta zein
+analitorentzako balio duten:
+
+    * Harrapaketa elektronikoko detektagailua: halogenoak, C=O konjokatuak,
+      C≡N, NO2.
+    * Nitrogeno-fosforo detektagailua edo sugar alkalinoko detektagailua: P eta
+      N-a duten konposatuak.
+    * Sugar detektagailu fotometrikoa: P, S, Sn, Pb eta beste elementu gutxi
+      batzuk.
+    * Fotoionizazioko detektagailua: konposatu aromatikoak eta asetu gabeak.
+    * Sufrearen kimioluminiszentziako detektagailua: S-a.
+    * Nitrogenoaren kimioluminiszentziako detektagailua: N-a.
+    * Emisio atomikoko detektagailua: elementu gehienak baina banan-banan.
+
+Hurrengo taulan erakusten dira aurreko detektagailuen detekzio mugak. Argi
+ikusten da, elementu jakin batzuentzat bakarrik baliagarriak direnek, horren
+truke askoz sentsibilitate handiagoa dutela eta beraz, detekzio limitea
+baxuagoa.
+
+
+
+
+
+
+
+
+
+
+
+

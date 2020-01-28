@@ -1,0 +1,619 @@
+
+
+
+Kontaketa. Permutazioak eta konbinazioak
+October 8, 2008
+
+Contents
+0.1
+Kontaketaren printzipio nagusiak . . . . . . . . . . . . . . . .
+1
+0.1.1
+Batura eta biderkaduraren erregelak
+. . . . . . . . . .
+1
+0.2
+Permutazioak . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2
+0.3
+Konbinazioak . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5
+0.4
+Teorema binomiala . . . . . . . . . . . . . . . . . . . . . . . .
+9
+0.4.1
+Froga . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9
+0.5
+Errepikapendun konbinazioak: Banaketak . . . . . . . . . . . 10
+0.1
+Kontaketaren printzipio nagusiak
+0.1.1
+Batura eta biderkaduraren erregelak
+Bi erregela hauek oso sinpleak diruditen arren kontaketa kasu konplikatu
+asko ebazteko oso erabilgarriak dira.
+• Baturaren erregela: Eginkizun bat m eratara bete badaiteke eta beste
+eginkizun bat n eratara bete baditeke eta biak batera bete ezin badaitezke,
+eginkizun hauetako bat betetzeko m + n era daude.
+• Biderkaduraren erregela: Betebehar bat bi etapatan zati badaiteke eta
+lehenengorako m era badaude eta bigarrenerako n, eginbeharra mxn
+eratara bete daiteke.
+Bi arau hauek erabiltzeko adibide asko dago, hemen batzuk azalduko
+ditugu:
+1. Liburutegian programatzen ikasteko liburu mota ezberdin asko dago,
+horietako 7 Paskalen oinarritzen dira, 4 ADAn, 3 C++ lengoaian eta 2
+Delphin. Programatzen ikasi nahi duen ikasleak zenbat aukera dauzka?
+7 + 4 + 3 + 2
+1
+
+2. Kotxeen matrikulek bi karaktere eta lau digitu dauzkate. Zenbat ma-
+trikula lor daitezke horrela? eta errepikapenik onartuko ez bagenu?
+• Lehenengo kasuan:
+26x26x10x10x10x10
+• Errepikapenik gabe:
+26x25x10x9x8x7
+3. Programazio lengoaien haserako garaietan bi aldagai-izen mota onartzen
+zituen lengoaia sortu zen, lehenengo motakoak karaktere bakarrez osat-
+utakoak ziren eta bigarren motakoak karaktere bat eta jarraian digitu
+bat. Zenbait aldagai onar zitzakeen gehienez lengoaia hark?
+26 + 26x10
+0.2
+Permutazioak
+Biderkaduraren erregela erabiliz objektuak zenbat eratan koka daitezkeen
+konta dezakegu. Kokatze ordenak garrantzia izango du eta ondorioz orden
+jakin batean dagoena ordenatuta dagoela esango dugu. Kontaketa mota
+honetako adibide asko dago:
+• Hamar ikasleren artean lau zerrenda batean ordenatu behar ditugu.
+Zenbat zerrenda egin daitezke? (ez ahaztu zerrendako ordenak gar-
+rantzia daukala, pentsa ezazu pisuaren arabera ordenatu nahi ditugula).
+10x9x8x7
+n
+objekturen bilduma emanik, objektu hauen edozein ordenaziori permu-
+tazioa deituko diogu. Oro har, n objekturekin, horietako r ≤ n ordenatu
+ditzakegu, eta hauetako bakoitzari r neurriko permutazioa deituko diogu. r
+neurriko permutazio-kopurua ondorengoa da:
+P
+(n, r) = nx(n − 1)x(n − 2)x . . . x(n − r + 1) =
+n
+!
+(n − r)!
+2
+
+Kontuan eduki behar da permutazioez hitzegitean objektuak ez direla
+errepikatzen, eta ordena kontuan hartzen dela. Objektuen errepikapenak
+onartuko bagenitu r aukera egitea izango litzateke, eta aukera bakoitzean
+n
+posibilitate geneuzkake, beraz, r elementu errepikatzeko aukerarekin nr
+eratan ordenatu ditzakegu. Permutazioen adibide bezala ondorengoak izan
+daitezke:
+• Edurnezuriren zazpi ipotxak gauero lotara joan aurretik musu bana
+ematen diote beren bihotzeko kuttunari. Gauero istilu bera izaten
+dute, lehendabizi nork eman erabakitzeko beti burrukan bukatzen dute,
+bigarrenarentzat ere berdin . . . Azkenean ordenazio guztiak egitea eta
+gauero horietako bati jarraitzea erabaki dute. Zenbat gau igaroko dira
+berriz burrukan hasteko?
+7x6x5x4x3x2x1 = 7!
+• Baina Edurnezuri nazkatu egin da eta gauero musu hiruri ematea er-
+abaki du. Zenbat permutazio dago hirunaka ordenatuz?
+7x6x5 =
+7!
+(7 − 3)!
+• Gauero 10 musu ematea erabakiko balu, egoera aldatu egiten da, er-
+repikapenak onartu bahar baitira.
+kasu horretan zenbat ordenazio
+ezberdin leudeke?
+7x7x7x7x7x7x7x7x7x7 = 710
+Zenbait kasutan objektu motekin jokatu behar izaten dugu, mota bereko
+objektuak elkarren artean bereiz ezinak izaten dira, baina mota batetik
+besterako aldea nabarmena da. Kasu horretan objektuak ordenatzean mota
+bakoitzeko objektu guztiak berdinak direnez horietako edozein har dezakegu
+baina beste motetakoak ezingo ditugu hartu. Horren adibide bezala ondoren-
+goa izan daiteke:
+• Marisko platerkada batean hiru otarrainska, bi nekora bi txangurro eta
+buia bat dauzkagu. Hauek jateko orduan ordenaren arabera zenbat
+era dagoen jakin nahi dugu, baina, jakina, nekora hartzerakoan ez du
+garrantzirik bitatik zein hartzen den.
+8!
+3!x2!x2!
+3
+
+Orokorrean, n objekturekin, n1 lehenengo motakoak izanik, n2 bigar-
+renekoak, . . . nr r. motakoak, objektu horiek ordenatzeko
+n
+!
+n1!n1!...nr! era izango
+dugu.
+Horren adibide bezala ondorengoak dauzkagu:
+• BURUGOGOR hitzaren hizkiekikn zenbat ordenazio lor daitezke?
+9!
+2!x2!x2!x2!x1!
+• Eta zenbat izango dira OO hizkiak batera dauzkatenak?
+8!
+2!x2!x2!x1!x1!
+Kasu horretan bi hizki horiek bakar bat bezala hartu behar baitira.
+• Bi dimentsioko planoan (2,1) puntutik (4,7) puntura joateko bide asko
+dago. Baina demagun gure ibilbidean beti puntu baten eskubikora
+ala gainekora joateko aukerak besterik ez ditugula, hau da, momentu
+bakoitzeko aukera G(ora) ala E(skubira) izango da. Kasu horretan
+zenbat bide egin daitezke puntu batetik besteraino?
+8!
+6!x2!
+Batetik bestera joateko bide guztiek bi aldiz E egin behar dute eta 6
+aldiz G.
+• Sei pertsona mahai biribil baten inguruan ordenatu behar dira, baina
+ordenatzerakoan posizio erlatiboak dira kontuan eduki beharreko bakar-
+rak, hau da, ordena jakin bat mahaiaren inguruan biratzean ordena ez
+dela ladatzen suposatzen da, ondorioz, ABCDEF ordenazioa BCDEFA
+ordenazioaren berdina izango da. Zenbat eratara eseri daitezke?
+6!
+6
+Ordenazio bakoitzari beste bost berdin dagozkio, beraz seiko multzotan
+bana ditzakegu permutazio guztiak.
+4
+
+• Hori bera beste era batera ere egin daiteke. Biraketak onartzen ez
+direnez mahaikide baten kokapena beti bera dela suposa dezakegu,
+eta ondorioz beste bostak mahaiaren inguruan kokatzeko era kopurua
+izango da guk bilatzen dugun zenbakia, hau da, bost objekturen per-
+mutazioak: 5!.
+• Sei pertsona horietako hiru europarrak direla suposa dezagun eta beste
+hirurak asiarrak. Txandakatuz ordenatu nahi baditugu zenbat eratara
+egin genezake?
+3x2x2x1x1
+Pertsonetako bat eseri ondoren bere eskubikoa hirutik bat izan daiteke,
+horren eskubikoa bitik bat, horren eskubikoa bitik bat , beste honen
+eskubikoarentzat aukera bakarra dago eta horren eta lehenengoaren
+arterako ere bakarra geratzen da.
+0.3
+Konbinazioak
+Konbinazioa ordena kontuan hartzen ez denean izango da, hau da, elementu
+multzo batetik azpi multzo bat aukeratzean azpimultzo horri konbinazioa
+deituko diogu. Multzoetaz hitzegiten dugunez ordenak ez du garrantzirik,
+garrantzia duen bakarra bertakoa izatea da.
+Horrela, kartetan ari garenean urrezko erregeak, zaldiak txotak eta batak
+konbinazio bat osatzen dute, hau lortzeko ordena edozein dela ere. Ordenaren
+arabera 4! era daude konbinazio hau lortzeko. Eta beste edozein konbinazio
+lortzeko ere, lau kartetakoa bada behintzat, beti 4! era egongo da. Ondorioz,
+konbinazio-kopurua =
+permutazio-kopurua
+konbinazio bakoitzeko dagoen permutazio-kopurua
+Museko kasuan: 10
+x
+9x8x7
+4x3x2x1 .
+Orokorrean, n objekturekin r objektutako konbinazio bakoitza lortzeko r!
+permutazio dago, eta ondorioz r neurriko konbinazioen kopurua ondorengoa
+izango da:
+K
+(n, r) =
+P
+(n, r)
+r
+!
+=
+n
+!
+(n − r)!r!
+=
+n
+r
+Konbinazioen adibide bezala ondorengoak izan daitezke:
+• Azterketa bat 10 galderak osatzen dute baina horietatik zazpi erantzun
+5
+
+behar dira. Azterketa egiteko zenbat era dago?
+K
+(10, 7) =
+10
+7
+=
+10x9x8
+3x2x1
+= 120
+• Azterketa horretan lehenengo bostetatik hiru erantzun beharko bagen-
+itu eta beste bostetatik lau, zenbat era leudeke?
+5
+4
+x
+5
+3
+=
+5!
+4!
+x
+5!
+3!x2!
+= 50
+• Lehenengo bostetatik gutxienez hiru erantzun beharko bagenitu? Kasu
+horretan hiru aukera dauzkagu, eta erantzun zuzena hiru aukeren batuketa
+izango da:
+1. Lehenengo bostetatik hiru eta hurrengo bostetatik lau. Beraz 50
+konbinazio.
+2. Lehenengo bostetatik lau eta hurrengokotatik hiru. Berriz ere 50
+era.
+3. Lehenengo bostak eta besteetatik bi.
+5
+5
+x
+5
+2
+=
+5!
+5!
+x
+5!
+2!x3!
+= 10
+Guztira 110 konbinazio dago beraz 110 eratara egin ahal izango dugu
+azterketa.
+• Eskola batek boleibol-taldea osatu nahi du eta horretarako bi geletako
+aurren artetik bederatzi aukeratu behar dituzte. Gela batean 28 ikasle
+dago eta bestean 25. Zenbat eratara osatu dezakete taldea?
+53
+9
+= 4.431.613.550
+• Gela bateko bi eta besteko bat oso onak dira eta taldean sartzea er-
+abaki dute, hiru hauek taldean sartzen badituzte zenbat eratara osatu
+daiteke?
+50
+6
+= 15.890.700
+6
+
+• lehenengo gelako lau eta bigarreneko bostek osatu behar badute taldea?
+28
+4
+x
+25
+5
+= 1.087.836.750
+• 36 lagunekin lau talde egin nahi dira, bakoitza 9 lagunekoa, eta lagun
+bakoitza talde bakarrekoa izanik. Zenbat era dago?
+36
+9
+x
+27
+9
+x
+18
+9
+x
+9
+9
+=
+36x35 . . . x28
+9!
+x
+27x26 . . . x19
+9!
+x
+18x17 . . . x10
+9!
+x
+9x8 . . . x1
+9!
+=
+36!
+(9!)4
+• Adibide hau beste era batera ere har zitekeen. Pentsa genezake 36
+lagunak lau talde osatzen dituztela eta hauek 36ko zerrenda batean
+jarri behar ditugula. Zenbat zerrenda lor ditzakegu?
+n
+= 36, n1 = 9, n2 = 9, n3 = 9, n4 = 9
+36!
+9!x9!x9!x9!
+• BABARRUNA hitzaren letrekin sortu daitekeen hitz-kopurua
+9!
+2!x3!x2!x1!x1!
+Hitz hauetatik zenbatek ez dituzte A letrak elkarren ondoan?
+Arazo hau ebazteko A letrak alde batera laga eta beste letrekin zenbat
+ordenazio dagoen kalkula dezakegu:
+6!
+2!x2!x1!x1! = 180 Ondoren hitz hauei
+hiru A gehitu diezaiekegu, baina A bakoitza besteengandik aparte. Hor-
+retarako 7 kokagune dauzkagu eta horietatik hiru aukeratu behar dira,
+beraz
+7
+3
+konbinazio erabil ditzakegu hitz bakoitzeko. Guztira 180
+x 35 (biderkadura erregela).
+• Kartekin jokatu dezagun. 5 karta hartuko bagenitu zenbat aukera dago
+urrezkorik ez edukitzeko?
+30
+5
+=
+30x29x28x27x26
+5!
+7
+
+• Eta gutxienez urre bat edukitzeko?
+40
+5
+−
+30
+5
+• Azken ariketa hori beste era batera egin daitekela ere pentsa daiteke,
+adibidez lehenengoa urrea aukeratu eta besteak edozein izan daitezke,
+horrela gutxienez urrezko bat edukiko dugu. Horrela izango balitz kon-
+binazio kopurua ondorengoa litzateke:
+10
+1
+x
+39
+4
+Baina zenbaki hori aurreko zenbakiarekin konparatzean handiagoa dela
+ikus dezakegu. horren arrazoia zenbait konbinazio behin baino gehi-
+agotan kontatu izana da, adibidez (1U), (3U 4E 3B 7B) aukera kontatu
+dugu, baina era berean (3U), (4E 1U 3B 7B) ere kontatu egin dugu,
+baina bi horiek konbinazio berari dagozkio. Kontuz ibili behar da.
+• Gutxienez bi urrezko dauzkaten zenbat konbinazio dago?
+Hori ebazteko kartak bi multzotan banatuko ditugu, alde batetik ur-
+rezkoak eta bestetik besteak. Gutxienez bi urrezko behar ditugunez
+aukerak lau eratakoak dira:
+1. Bi urre dauzkatenak (bestelako hiru):
+10
+2
+x
+30
+3
+2. Hiru urre dauzkatenak (bestelako bi):
+10
+3
+x
+30
+2
+3. lau urre dauzkatenak (bestelako bat):
+10
+4
+x
+30
+1
+8
+
+4. Bost urre dauzkatenak (bestelakorik ez):
+10
+5
+x
+1
+Ondorioz, konbinazio guztiak baturaren erregelaz lor ditzakegu:
+10
+2
+x
+30
+3
++
+10
+3
+x
+30
+2
++
+10
+4
+x
+30
+1
++
+10
+5
+x
+1
+0.4
+Teorema binomiala
+n
+zenbaki osoa eta positiboa izanik:
+(x + y)
+n =
+n
+0
+x
+ny0 +
+n
+1
+x
+n−1y1 + . . . +
+n
+n
+− 1
+x1y
+n−1 +
+n
+n
+x0y
+n =
+n
+k
+=0
+n
+k
+x
+n−kyk
+Gainera badakigu ondorengoa:
+n
+k
+=
+n
+n
+− k
+Horretaz gain:
+n
+0
++
+n
+1
++ . . . +
+n
+n
+− 1
++
+n
+n
+= 2
+n
+0.4.1
+Froga
+(x + y)
+n = (x + y)(x + y)(x + y) . . . (x + y)
+Biderkaketaren banakortasuna erabiliz 2n gai ateratzen dira. Gai bakoitzean
+n
+aldagai egongo dira eta gai bakoitza besteengandik bereiz genezake faktore
+bakoitzetik aukeratu dugun aldagaiaren arabera. Hala ere gai bakoitza bere
+9
+
+baitan hartuz gero x eta y arteko konbinazioa bati dagokio, trukagarrita-
+suna erabiliz ordena daiteke eta xkyn−k bezala jarri ahal izango dugu. Gai
+asko konbinazio berari dagozkio, eta jakin beharrekoa konbinazio bakoitzari
+dagokion gai kopurua da. Azken ﬁnean bi multzo dauzkagu, alde batetik x
+aldagaiena eta bestetik y aldagaiena, eta k ﬁnkatuz n elementuz osatutako
+ordenazio kopurua kalkulatu behar da. Hau da, x aldagaien multzoan k el-
+ementu daude eta y aldagaienean n − k, eta hauekin
+n
+!
+k
+!(n−k)! ordenazio lor
+daitezke. Ordenazio hauek guztiak bata bestearengandik bereiz daitezke eta
+bakoitza behin agertzen da binomioaren garapeari dagozkion gaien artean.
+Guzti horren ondorioz xkyn−k konbinazioari dagozkion
+n
+k
+gai agertzen
+da binomioaren garapenean.
+0.5
+Errepikapendun konbinazioak:
+Banake-
+tak
+Demagun n motatako objektuak dauzkagula, guk r objektu nahi ditugu,
+baina objektu horiek errepikatu daitezke, hau da, mota bereko objektuak
+har ditzakegu. Kalkulatu behar dena r objektuak hartzeko era kopurua da.
+Hartzeko era honela idatz dezakegu:
+n
+k1
+1 n
+k2
+2 . . . n
+kn
+n
+eta bertan:
+n
+kj
+i
+terminoak ni multzoko kj elementu ditugula adierazten du
+gainera:
+k1 + k2 + . . . + kn = r
+Ondorioz, n batugai erabiliz r zenbakia lortzeko era kopurua da bilatzen
+duguna (batugaiak 0 izan daitezke).
+Guzti hau beste era batera ikus dezakegu, hau da, r objektuak mult-
+zotan banatu behar ditugu, objektu bakoitzeko O ikurra erabiliko dugu eta
+mota bateko objektuak bukatzean / ikurra jarriko dugu. Horrela adieraziz
+lehenengo / aurkitu bitartean dauden O kopuruak n1 motako objektu kop-
+urua adieraziko du, lehenego / eta bigarrenaren artean dagoen O kopuruak
+n2 motako objektu kopurua eta abar. n mota dauzkagunez n − 1 banatzaile
+10
+
+edo / ikur jarriko ditugu, eta bi banatzaile (/) jarraian agertuko balira mu-
+gatzen duten motako objekturik ez dugula hartu adieraziko luke. Objektuak
+banatzeko era bakoitza adierazteko r + n − 1 ikur behar ditugu eta hauen
+permutazio bakoitzak banaketa bat adierazten du. Beraz banaketa-kopurua
+ezagutu nahi badugu ikur horien permutazio-kopurua jakin behar dugu:
+(r + n − 1)!
+r
+!(n − 1)!
+=
+r
++ n − 1
+r
+=
+r
++ n − 1
+n
+− 1
+Adibide asko dago banaketen inguruan:
+• Taberna batean lau otarteko mota eskeintzen dituzte, gazta, solomoa,
+txistorra eta urdaiazpikoa. zazpi lagunek otarteko bana eskatu nahi
+dute, zenbat eskari egin ditzakete?
+10!
+7!3!
+=
+10
+3
+=
+10
+7
+• Gozotegi batean 20 pastel mota dago, dozena bat aukeratzeko zenbat
+era dago?
+31!
+12!19!
+=
+31
+12
+=
+31
+19
+• Zazpi bost-duroko lau umeren artean zenbat eratara bana daiteke?
+10!
+7!3!
+• Ondorengo ekuazioaren osoko soluzioen kopurua kalkulatu:
+x1 + x2 + x3 + x4 = 7
+Hau aurrekoaren baliokidea da.
+• Lau umeren artean 7 sagar eta 6 udare banatu behar dira, baina ume
+bakoitzak guxienez sagar bat eduki behar du. Zenbat eratan bana
+ditzakegu? Ume bakoitzak sagar bana hartu ondoren 3 sagar lauren
+artean banatu behar ditugu, eta 6 udareak ere nahi bezala bana ditza-
+kegu.
+11
+
+Sagarrak banatzeko erak:
+(3 + 4 − 1)!
+3!3!
+= 20
+Udareak banatzeko erak:
+(6 + 4 − 1)!
+6!3!
+= 84
+Biderkaketaren erregela erabiliaz: 20x84 = 1680
+• Hori bera beste era batera pentsa daiteke: Sagar bana hartu ondoren
+9 ale gelditzen dira lauen artean banatzeko:
+(9 + 4 − 1)!
+9!3!
+= 220
+Ikus daitekenez emaitza ez da berdina. Horren arrazoia erraz uler
+daiteke, bigarren planteamenduan ez ditugu udarea eta sagarra bereizten
+eta ume batek bi udare eta sagar bat gehiago hartzea bi sagar eta udare
+bat hartzearen parekotzat dauzkagu. Horregatik aukera gutxiago atera
+dira.
+• Mezu bat osatzeko 12 sinbolo dauzkagu. Mezu bakoitzak 12 sinbolo eta
+45 zurigune behar ditu eta gainera bi sinboloren artean beti hiru zuri-
+gune behar dira guxienez. Zenbat mezu osa daiteke? 12 sinboloekin
+12! ordenazio lor daitezke, ordenazio bakoitzak sinboloen artean 11
+posizio dauzka eta bakoitzean hiruna zurigune jarri behar dira, beraz
+33 zurigune erabili behar ditugu mezuaren sintaxiaren arauak betet-
+zeko. Beste 12 zuriguneak guk nahi ditugun lekuan jar daitezke. 11
+kokaguneen artean banatu ditzakegu beraz
+(12+11−1)!
+12!10!
+aukera dauzkagu.
+Biderkaketaren erregela erabiliaz mezu-kopurua ordenazio-kopurua x
+ordenazio bakoitzeko lor daitekeen banaketa-kopurua izango da:
+12!x
+(12 + 11 − 1)!
+12!10!
+• Har dezagun ondorengo programa zatia:
+for (i = 0; i < 20 ; i ++)
+12
+
+for (j = 0; j < i ; j ++)
+for (i=0; k < j ; k ++)
+printf(”i = %d, j = %d, k = %d \n”,i, j, k);
+Zenbat aldiz deitzen zaio printf funtzioari?
+Hirukoteak erabiltzen ditu dei bakoitzak, noiz edo noiz hirukote guz-
+tiak erabiltzen dira, edozein hirukote hartu eta bertako zenbaki handi-
+ena i aldagaiari dagokiona izango da, bigarren handiena j-ri dagokiona
+eta txikiena k-ri dagokiona. Horrela ikusita konbinazioetaz hitzegiten
+ari garela ikus daiteke, baina errepikapenak onartzen dituen konbi-
+nazioetaz. Dei kopurua
+3 + 20 − 1
+3
+=
+3 + 20 − 1
+19
+13

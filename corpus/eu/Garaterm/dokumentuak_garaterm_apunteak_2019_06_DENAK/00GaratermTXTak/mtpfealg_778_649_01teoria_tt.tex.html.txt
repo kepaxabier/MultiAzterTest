@@ -1,0 +1,125 @@
+
+
+
+
+                 778\s\do5(6)49\s\do5(0)1teoria\s\do5(t)t.tex
+                                   mtpfealg
+                                   13/05/28
+ Chapter 1
+Zenbaki osoak
+ 1.1 [
+Zatitzaile komunetako handiena] Zatitzaile komunetako handiena, Euklides-en
+algoritmoa eta Bézout-en identitatea
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+                  [Sorry. Ignored \begin{dfn} ... \end{dfn}]
+Zatiketaren algoritmoaren arabera, b>0 bada, b|a baldin eta soilik baldin a b-
+z zatitzeko hondarra 0 bada. Ondorengo propietateak begibistakoak dira eta,
+horregatik, ez dugu beren frogapena emango.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+Aurreko (viii) puntuaren arabera, a≠0 zenbaki osoa bada, bere zatitzaileen
+artean badago handien bat, |a| alegia. Ondorengo definizioan bi zenbakiren
+zatitzaile komunez kezkatzen gara.
+                  [Sorry. Ignored \begin{dfn} ... \end{dfn}]
+Ohartu (a,b)-k bai a eta bai b zatitzen dituela definizioagatik. Beste alde
+batetik, (a,b)≥0 dugu beti eta, are gehiago, (a,b)>0 ziurtatu ahal da, a=b=0
+den kasuan izan ezik.
+                 [Sorry. Ignored \begin{adik} ... \end{adik}]
+Hain zuzen ere, gure hurrengo kezka (a,b) kalkulatzeko antzinako metodo bat
+deskribatzea da, Euklidesen algoritmoa alegia. Lehenago lema bat behar dugu.
+                  [Sorry. Ignored \begin{lem} ... \end{lem}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Aurreko leman oinarrituta, kalkula dezagun (550,543) zatitzaile komunetako
+handiena:
+(550,543)=(7+543,543)=(7,543)=(7,4+7⋅77)=(7,4)=1.
+Segidan aurkezten dugun Euklidesen algoritmoaren ideia antzera jokatzea da,
+(a,b) edozein zatitzaile komunetako handien (c,0) kasu tribialera eramateko.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+                  [Sorry. Ignored \begin{adi} ... \end{adi}]
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Ohartu behar da Bézouten identitateko x eta y zenbakiak ez direla bakarrak.
+Adibidez, (3,2)=1 dugu eta 1=3⋅1+2⋅(−1)=(−1)⋅3+2⋅2 zatitzaile komunetako
+handiena adierazteko bi modu desberdin dira. Egia esan, ikus daiteke adierazpen
+desberdinen kopurua infinitua dela. Aurreko frogapeneko prozedurak horietariko
+bat ematen digu.
+                  [Sorry. Ignored \begin{adi} ... \end{adi}]
+Bézouten identitatearen ondorengo bi korolarioak garrantzi handikoak dira.
+                  [Sorry. Ignored \begin{kor} ... \end{kor}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+                  [Sorry. Ignored \begin{kor} ... \end{kor}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+1.2 Zenbaki lehenak eta aritmetikaren oinarrizko teorema
+                   [Sorry. Ignored\begin{dfn} ... \end{dfn}]
+Baldin eta p zenbaki lehena bada eta a∈Z, (p,a) zatitzaile komunetako handiena
+p-ren zatitzaile positiboa da eta, beraz, (p,a)=1 edo p dugu. Bestela esanda,
+(p,a)=1 edo p|a. Propietate honetatik ondoko lema garrantzitsua ondorioztatzen
+da.
+                  [Sorry. Ignored \begin{lem} ... \end{lem}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+                  [Sorry. Ignored \begin{kor} ... \end{kor}]
+Demagun n,m∈Z ez-nuluak direla. Orduan, n eta m zenbaki lehenetako biderkadura
+gisa adierazterakoan berretzaile nuluak onartzen baditugu, beti suposatu ahal
+da deskonposizio horietan zenbaki lehen berak agertzen direla: eta . Honetan
+oinarrituz, zatitzaile komunetako handiena kalkulatzeko ondorengo metodo
+ezaguna eman dezakegu.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Hala eta guztiz ere, azpimarratu behar da zatitzaile komunetako handiena
+lor­tzeko metodorik azkarrena Euklidesen algoritmoa dela, goiko teoremak
+zenbakien faktorizazioak behar baititu eta hauek kalkulatzea lan nekeza izango
+da zenbakiak altu samarrak badira.
+ 1.3 Kongruentziak eta Z/nZ eraztunak
+                   [Sorry. Ignored\begin{dfn} ... \end{dfn}]
+                  [Sorry. Ignored\begin{adik} ... \end{adik}]
+                   [Sorry. Ignored\begin{teo} ... \end{teo}]
+                   [Sorry. Ignored\begin{fro} ... \end{fro}]
+Horrelako emaitza dela eta, batzuetan, a-ren baliokidetasun klasea idatzi
+beharrean, a+nZ idatziko dugu. Notazio hau bereziki erabilgarria da n modulua
+zein den azpimarratu nahi denean.
+Bestalde, n moduluarekiko kongruentzia erlaziotik lortzen den zatidura multzoa
+Z/nZ-ren bitartez adieraziko dugu. Bere elementuak baliokidetasun klaseak dira:
+Baliokidetasun klase hauek Z-ren partiketa bat osatzen dute eta a -ren
+ordezkari bat dela esaten dugu. Bi baliokidetasun klase berdinak izan daitezke
+ordezkari desberdinen bitartez emanda badaude ere; izan ere, dugu baldin eta
+soilik baldin a≡bn bada. Ondorengo teoremak erakusten digu badagoela
+ordezkariak aukeratzeko era kanoniko bat eta, hau dela medio, baliokidetasun
+klase desberdinen kopurua lortuko dugu, hau da, Z/nZ multzoaren kardinala.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Azkeneko teorema honek argitzen du zergatik deitu ohi zaien hondar klase
+kongruentzia erlazio baten baliokidetasun klaseei.
+Modulu zehatz batekiko kongruentziak batu eta biderkatu ahal dira, ondorengo
+leman ikusten dugun bezala. Honi esker, Z-ren eraztun egitura Z/nZ-ri pasatu
+ahal izango zaio.
+                  [Sorry. Ignored \begin{lem} ... \end{lem}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Azpimarratu behar da modua ez dela bakarra Z/nZ-ko elementuak errepikapenik
+gabe zerrendatzeko. Adibidez, baditugu beste bi posibilitate hauek:
+eta garbi dago infinitu era desberdinetara egin daitekeela. Egia esan,
+biderketarekiko lan egiterakoan, erosoago izaten da Z/nZ-ko elementuak moduan
+idaztea, 0≤a≤[n/2] izanik. Adibidez, dugu eta errezagoa da -ren bostgarren
+berredura kalkulatzea dela erabiliz.
+Gaia bukatzeko, ikus dezagun Z/nZ-ko zein elementu diren alderanzgarriak
+biderketarekiko. Erantzuna zatitzaile komunetako handiena erabiliz eman
+daiteke.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Adibidez, alderanzgarria da Z/11Z-n. Gainera, Bézouten identitatearen arabera,
+1=3⋅4+11⋅(−1) dugu. Beraz, dela lortzen dugu. Kasu honetan, aproba eginez ere
+lortu ahal genuen zein den -ren alderantzizkoa baina, hala ere, modulu
+handiagoekin Bézouten identitatea erabili gabe oso luzea da alderantzizkoa
+kalkulatzea.
+Bereziki, ondorengo emaitza garrantzitsua lortzen dugu.
+                  [Sorry. Ignored \begin{kor} ... \end{kor}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+                  [Sorry. Ignored \begin{dfn} ... \end{dfn}]
+Adibidez, ϕ(2)=1 eta ϕ(3)=ϕ(4)=ϕ(6)=2. Momentuz, ezin dugu eman ϕ(n)-ren
+formula orokorrik, baina bai ordea n zenbaki lehen baten berredura den kasuan.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]

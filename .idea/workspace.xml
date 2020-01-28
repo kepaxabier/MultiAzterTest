@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11afe74d-90dd-4be5-a2fb-37d54421a58a" name="Default Changelist" comment="corpus+data">
+    <list default="true" id="11afe74d-90dd-4be5-a2fb-37d54421a58a" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/corpus/en/CLIL/aztertestoutput/DBH1_estad_aztertest.xls" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/corpus/en/CLIL/aztertestoutput/DBH2_estad_aztertest.xls" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/corpus/en/CLIL/aztertestoutput/Datos_Aztertest.sav" afterDir="false" />
@@ -763,6 +763,10 @@
       <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/Garaterm200testuakOndo/IOrdenana_4772_813_27._behin-behineko_exeskuzioa.doc.html.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/Garaterm200testuakOndo/NIriondo_5830_244_kt-nahasketa_baten_dentsitatea_garbi.docx.html.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/Garaterm200testuakOndo/OAbalde_4360_996_17.ikasgaia.rtf.html.txt.garbia.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/Garaterm200testuakOndo/hola.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/Garaterm200testuakOndo/holamundo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/Garaterm200testuakOndo/mundo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/convertiratexto.sh" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/dokumentuak_garaterm_apunteak_2019_06_DENAK/00GaratermTXTak/00zerrenda.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/dokumentuak_garaterm_apunteak_2019_06_DENAK/00GaratermTXTak/00zerrenda.txt.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/dokumentuak_garaterm_apunteak_2019_06_DENAK/00GaratermTXTak/00zerrenda.txt.garbia.txt" afterDir="false" />
@@ -5897,12 +5901,412 @@
       <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/dokumentuak_garaterm_apunteak_2019_06_DENAK/zopalsuk_360_412_13irakas.doc.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/dokumentuak_garaterm_apunteak_2019_06_DENAK/zopalsuk_361_217_14irakas.doc.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/dokumentuak_garaterm_apunteak_2019_06_DENAK/zopalsuk_362_370_17irakas.doc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wordembeddings/orig/en.bz2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wordembeddings/orig/es.bz2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wordembeddings/orig/eu.bz2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wordembeddings/orig2idf/es.bz2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wordembeddings/orig2idf/eu.bz2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wordembeddings/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/AAldezabal_5476_159_28._gaia_kormofitoen_moldaerak__eskemak_.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/AApraiz_5073_50_testua_1_gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/AApraiz_5572_150_11._subdukzioa.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/AEtxebarria_3139_665_1_gaia_osoa.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/AGilsanz_5270_383_garaterm.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/AGutierrez_2478_530_post_produkzioa__protools_.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/AGutierrez_2480_423_2480_869_soinu-adierazpena.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ALeturia_4553_300_ikasgaiak-ana.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ALeturia_4585_943_aniztasuna_eta_gizartea_antolatzeko_ereduak.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/AOdriozola_5077_638_prozesal_apunteak_2015.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/AOlasolo_5244_963_1go_gaia.fek.tse.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/AOlasolo_6118_962_tse_2_gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/AOlasolo_6124_854_tse._7._gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/AOrbe_4993_978_froga.tex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/APuente_149_817_zoo_1._gaia-3_laginketak_-_mehatxuak.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/AUrrutia_4702_157_lana_eta_enpresa.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/AZelaia_2621_449_3_dualtasuna.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/AZelaia_2710_114_2_simplex_metodoa.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/BUrgell_2980_587_2.01._eark_sarrera.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/BUrgell_2991_947_3.5._gipuzkera_zaharra.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/EAlberdi_6359_682_0apunte_denak.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/EAlonso_5375_393_1.-_ehunak.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ECompains_4290_911_zt_2_ikasgaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ECompains_4291_858_zt_3_ikasgaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ECompains_4292_769_zt_4_ikasgaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ECompains_4296_359_zt_8_ikasgaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/EEpelde_6431_954_1-oinarrizko_eragiketak.pptx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/EGomez_2250_289_2250_249_gaia_2_egonkortasunaren_oinarriak.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ELarraza_2673_719_1m_11-12_konputagailuen-egitura_agindu-multzoa-1_apunteak.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/EMonasterio_3032_540_eroaleen_izendapena.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ESierra_1721_94_planoen_bisualizazioa-6_-_testua.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/EUriarte_2609_763_gaixotasun_muskuloeskeletikoa_duen_pazientearen_ikerketa.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/EUriarte_2624_737_espondiloartropatiak.sailkapena.diagnostikoa.tratamendua.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/Erabiltzailea_1717_167_1._gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/Erabiltzailea_1723_16_2._gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/Erabiltzailea_1727_986_3._gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/Erabiltzailea_2490_597_10__gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/FRuiz_3633_256_3_1_._gaia_kf.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/GOtazua_4623_643_9.__gaia_akzio-eskubidea.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/IAlbizu_3933_184_1._sarrera.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/IAlbizu_3941_766_4._makina_asinkronoak.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/IAlonso_100_565_cecd_fitxa_cuestionario_estrategias_cognitivas_deportistas.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/IAlonso_82_111_8kap_teknika_proiektiboak_azkena.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/IAltzelai_4816_981_4._ikasgaia_mz_ii.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/IBeriain_216_593_2._gaiazuz.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/IBeriain_4206_263_3._gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/IBeriain_4210_510_5._gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/IEtxebarria_3112_289_elektro_2014-15_-teoria.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/IGAzkoaga_4884_978_kirol_psikologia_irakasgaiko_apunteak.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/IIpinazar_280_117_2_gaia_-2010.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/IIruretagoiena_4307_899_ebz_2013-2014_teoria_-_eusk_prest.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/IIruretagoiena_4401_850_nzp_i_apunteak_2014-2015_prest.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/IMartinA_2741_115_24._konpar2-2.docm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/IOrdenana_4772_813_27._behin-behineko_exeskuzioa.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/Ibarrio_5118_90_4_gaia_itxaropen_matematikoa.tex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/Igone_5839_422_gaia_11.odt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/IkerIra_6666_488_1_soziologia._gizakia_gizartearen_baitan.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/IruneIba_6747_474_apunteak_garaterm-erako.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JATamayo_4794_106_obligazioak_ikasleentzat.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JAlvez_5811_439_1.gaia.zip.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JAstola_384_540_1_konstituzioaren_zati_dogmatikoa.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JAzkargorta_2279_709_2279_715_2gaia.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JAzkargorta_2284_202_3gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JAzkargorta_2365_975_8gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JGaintzarain_5810_998_1_gaia_sarrera_tse1.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JGaintzarain_5912_83_2_gaia_espezifikazioa_eta_dokumentazioa_tse1.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JGarmendia_2927_29_25_hitz_elkartuak_teoriaren_laburpena.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JGutierrez_3198_482_1_eta_2_gaia_14-15.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JIradi_6191_788_4_modelo_de_las_4_etapas.ppt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JMEtxabe_1677_100_1_ikasgaiaocw.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JMEtxabe_2195_793_1_garaterm.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JMEtxabe_2196_143_1bgaraterm.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JMEtxabe_2204_78_4.ikasgaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JMEtxabe_2205_400_4.ikasgaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JMEtxabe_2211_971_7.ikasgaia.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JMLanda_4192_460_1_doc_hiztegia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JManterola_3006_768_zenbaki-konplexuak-teoria.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JManterola_3007_748_zenbakizko-serieak-teoria.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JManterola_3013_944_9-ekuazio-diferentzial-arruntak-teoria.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JManterola_3015_764_11-fourierren-analisirako-sarrera-teoria.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JOrbe_233_883_2gaia.tex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JPineda_1905_25_1905_853_farmakologia_klinikoa_2011-12_zuzend_pineda_mendig.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JSaenz_5789_311_04-part-sist-transp.odp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/JUrkola_4743_691_05_ikasgaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/KIrurzun_3608_479_langileen_ordezkaritza_eta_parte_hartzea_lantokian.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/Kepasara_6689_253_htia_2_hizkuntzaren_prozesamendua.odt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/LBeloki_2925_239_1.komunikazioa_eta_hizkuntza.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/LErriondo_79_807_eskola_berria.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/LImaz_192_653_1._gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/LImaz_219_37_4_1_._gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/LImaz_4196_227_2013_oinordetza_zuzenbidea_-_itzulpen_osoa.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/LImaz_4199_357_1._gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/LLegarreta_120_494_3_gaia_heinak_sistemak.tex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/LMZupiria_202_947_mateii.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/LSaenz_1705_428_01_gaia_2013-14.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/LSaenz_1711_409_07_gaia_2013-14.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/LSaenz_1713_575_09_gaia_2013-14.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/LSanjose_5243_326_1._gaia_finantzaketa_leire_san-jose.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/MHaranburu_188_939_nortasunaren_psikologia_teoria_soila.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/MHaranburu_326_354_hiperaktibitatedun_arreta_gabeziako_nahastea.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/MHaranburu_421_237_doktorego_tesia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/MJElejalde_1724_358_1724_489_analisi_bektoriala.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/MKarrera_4797_297_1._gaiazuz.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/MKarrera_4802_860_6._gaiazuz.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/MKortajarena_3723_588_oheak_egitea.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/MKortajarena_3781_472_5.sutura_praktika.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/MZubia_6292_655_ekonometria-eazg.7z.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/MZubitur_3505_57_lurzorua_eta_hondakinak_2014-2015.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/Mikel_6309_519_1.gaia_testu_orokorrak_espezializatuak_17_18_garbi.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/Mikel_6310_387_4_17_18_terminologiaren_teoriak_metodologiak_garbi.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/NArrese_4427_11_1._gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/NArriola_30_878_2012-2013._apm._1.gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/NIriondo_5829_218_kt-lurrun-galdara_garbi.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/NIriondo_5830_244_kt-nahasketa_baten_dentsitatea_garbi.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/OAbalde_4337_453_1.ikasgaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/OAbalde_4339_258_2.ikasgaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/OAbalde_4344_529_5.ikasgaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/OAbalde_4354_904_11._ikasgaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/OAbalde_4360_996_17.ikasgaia.rtf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/OCastillo_5670_736_gaia_2.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/OCastillo_5671_467_gaia_3.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/OCastillo_5687_491_gaia_7.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/OGonzalez_2256_151_aerlijioa.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/OMitxelena_284_152_topografia_2_teoria_2012-2013_eusk.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/OMitxelena_9_770_topografia_1_teoria_2012-2013_eusk.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/PRuiz_6268_494_nerbio_i.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/Patxi_808_138_am2topologia.tex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/RArruabarrena_6227_205_teoria-2.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/RArruabarrena_6228_242_teoria-3.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ROchoa_4689_865_iturriak.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/SJodra_6106_955_apunteak_irudiak_transferitzeko_teknikak.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/SJodra_6107_543_apunteak_serigrafia_edo_estanpazio_permeografikoa.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/SJodra_6108_445_apunteakpantaila_eta_insolagailua_nola_egin.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/SanMartin_6317_825_5._gaia__barrunbeak_komunikazioa.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/TOrtells_200_257_matei.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/UIzagirre_6272_257_sistema_endokrinoak_i.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/UTamayo_1748_550_2_gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ainhoa.garayar_3364_145_7_gaia_atzerri__moneta.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/bcpazelj_3316_366_enpresa_ekonomia_antolakuntza_eta_zuzendaritza.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/bcpdiaro_6095_888_sarrera_hk15.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/bcpdiaro_6270_377_2-tegumentu1hk_16-17-2.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/bcpelgam_1907_768_gga_hezurren_apunteak_2013.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/bcpetrai_6543_895_1._gaia_apunteak_17-18.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/bcpsepee_5074_691_1._gaia._ahoko_mikrobiologiaren_sarrera_v5.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/bcpsigai_3500_118_1._gaia-apunteak_ikt_azken_bertsioa_ondo.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/bcpsigai_3671_488_9._gaia-apunteak_ikt_azken_bertsioa_ondo.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/bgpgaazz_6453_626_lo_eta_deskantsu_patroia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/bgpmocai_3492_724_programaketa12-13.zip.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/blandeta_3372_333_kontabilitate_orokorra.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/blandeta_3377_622_1.1_-_ekonomia_orokorra.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ccpanmap_1013_798_ikerketa_operatiboa.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ccpanmap_1046_656_6.gaia.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ccpanmap_1074_870_01_teoria.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ccpanmap_1385_71_nagusia.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ccpanmap_1401_316_minimokarratu.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ccpanmap_1405_814_liburuosoa.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ccpanmap_1523_319_9gaia.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ccpanmap_1589_848_1logika.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ccpanmap_958_984_ekuaziodiferentzialarruntak.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ccpanmap_974_671_zenbakikonplexuak.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ciplaain_3195_420_1.gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/convertidoadoc/prueba.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/convertidoatxt/html2doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/convertidoatxt/prueba.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/convertidoatxt/prueba.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/dmpmalaa_5424_655_a....kokapen_ekintzak__reparado_.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/dmpzugua_1762_311_3.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/dmpzugua_1763_934_4.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/dmpzugua_1769_733_10.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/dmpzugua_2753_78_4.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ebpagmoi_6520_536_planen_izapidetzea.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/efpbigaa_2787_698_1._gaia__2013-14_.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/efpbigaa_3841_579_14-15_2t_09_gaia__142-165__progresio_geometrikoan.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/fvpzauni_1106_873_3._gaia_osasun_arloko_terminologia_eta_fraseologia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/iqpolaum_5873_23_2._gaia._erreaktore_ez-jarraitu_isotermoa.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/jepbamei_3288_248_oe_eta_ee.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/jipmaanm_628_780_1._gaia.tex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/leire.aldaz_3579_539_bmodalitatea_datubaseendiseinuaustiapena-zuz-_behin_betikoa_.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/meparmai_1122_535_1m_10-11_bioestatistika_spss_apunteak.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/meparmai_1137_247_1gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/meparmai_1138_102_2gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/mtpfealg_779_659_02teoria_tt.tex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/mtpmapei_2803_904_gidoiberria.zip.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/mtpzaazm_1136_566_12_13_ed_gaiak.tex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/ngphuegj_1826_703_1826_820_17-metabolismoaren_asaldurak_nahiz_asaldura_endokrinoak....html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/qipfimam_3502_786_azido-base_gaia_borrador.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/scpalasb_318_467_318_934_zinematika_berriagoa.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/scphimue_4041_859_1.1-atomoaren_egitura__modo_de_compatibilidad_.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/scphimue_4043_756_1.3..-erradiobabesa__modo_de_compatibilidad_.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/scphimue_4056_864_08_gaia_beharrak__modo_de_compatibilidad_.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/scpuritm_4037_926_4-sendagaiak..doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/scpuritm_4040_696_7-larruazala.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/sgpliotn_1840_945_1840_47_autoebal_practicum_i_oz.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/tlpbilox_6843_964_kf.ikasgaiak.01-08.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/tlpbilox_6847_497_kf.ariketak.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/vcpmaage_3591_743_2._gaia_ta_vs._tao_eu_2014-2015.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/wdpezarj_1601_86_far1213-01g.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/wdpezarj_1625_745_far1213-06g.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/wepmaorj_3526_399_tel_mugikorra.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/yuri.rueda_5496_646_1._atseden-potentziala.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/zopalsuk_344_787_biogeografia02.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/zopalsuk_346_437_biogeografia04.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuak200/zopalsuk_351_495_351_956_liburuii.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/AAldezabal_5476_159_28._gaia_kormofitoen_moldaerak__eskemak_.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/AApraiz_5073_50_testua_1_gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/AEtxebarria_3139_665_1_gaia_osoa.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/AGilsanz_5270_383_garaterm.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/AGutierrez_2478_530_post_produkzioa__protools_.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/AGutierrez_2480_423_2480_869_soinu-adierazpena.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/ALeturia_4585_943_aniztasuna_eta_gizartea_antolatzeko_ereduak.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/AOdriozola_5077_638_prozesal_apunteak_2015.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/AOlasolo_5244_963_1go_gaia.fek.tse.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/AOlasolo_6118_962_tse_2_gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/AOlasolo_6124_854_tse._7._gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/APuente_149_817_zoo_1._gaia-3_laginketak_-_mehatxuak.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/AUrrutia_4702_157_lana_eta_enpresa.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/AZelaia_2621_449_3_dualtasuna.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/BUrgell_2980_587_2.01._eark_sarrera.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/BUrgell_2991_947_3.5._gipuzkera_zaharra.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/EAlberdi_6359_682_0apunte_denak.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/EAlonso_5375_393_1.-_ehunak.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/ECompains_4290_911_zt_2_ikasgaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/ECompains_4292_769_zt_4_ikasgaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/ECompains_4296_359_zt_8_ikasgaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/EEpelde_6431_954_1-oinarrizko_eragiketak.pptx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/EGomez_2250_289_2250_249_gaia_2_egonkortasunaren_oinarriak.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/ELarraza_2673_719_1m_11-12_konputagailuen-egitura_agindu-multzoa-1_apunteak.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/EMonasterio_3032_540_eroaleen_izendapena.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/ESierra_1721_94_planoen_bisualizazioa-6_-_testua.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/EUriarte_2609_763_gaixotasun_muskuloeskeletikoa_duen_pazientearen_ikerketa.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/EUriarte_2624_737_espondiloartropatiak.sailkapena.diagnostikoa.tratamendua.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/Erabiltzailea_1717_167_1._gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/Erabiltzailea_1723_16_2._gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/Erabiltzailea_1727_986_3._gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/Erabiltzailea_2490_597_10__gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/FRuiz_3633_256_3_1_._gaia_kf.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/GOtazua_4623_643_9.__gaia_akzio-eskubidea.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/IAlbizu_3933_184_1._sarrera.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/IAlbizu_3941_766_4._makina_asinkronoak.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/IAlonso_100_565_cecd_fitxa_cuestionario_estrategias_cognitivas_deportistas.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/IAlonso_82_111_8kap_teknika_proiektiboak_azkena.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/IAltzelai_4816_981_4._ikasgaia_mz_ii.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/IBeriain_216_593_2._gaiazuz.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/IBeriain_4206_263_3._gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/IBeriain_4210_510_5._gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/IEtxebarria_3112_289_elektro_2014-15_-teoria.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/IGAzkoaga_4884_978_kirol_psikologia_irakasgaiko_apunteak.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/IIpinazar_280_117_2_gaia_-2010.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/IOrdenana_4772_813_27._behin-behineko_exeskuzioa.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/Ibarrio_5118_90_4_gaia_itxaropen_matematikoa.tex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/Igone_5839_422_gaia_11.odt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/IkerIra_6666_488_1_soziologia._gizakia_gizartearen_baitan.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/IruneIba_6747_474_apunteak_garaterm-erako.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/JAlvez_5811_439_1.gaia.zip.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/JAstola_384_540_1_konstituzioaren_zati_dogmatikoa.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/JAzkargorta_2279_709_2279_715_2gaia.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/JAzkargorta_2284_202_3gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/JAzkargorta_2365_975_8gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/JGaintzarain_5810_998_1_gaia_sarrera_tse1.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/JGaintzarain_5912_83_2_gaia_espezifikazioa_eta_dokumentazioa_tse1.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/JGarmendia_2927_29_25_hitz_elkartuak_teoriaren_laburpena.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/JGutierrez_3198_482_1_eta_2_gaia_14-15.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/JIradi_6191_788_4_modelo_de_las_4_etapas.ppt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/JMEtxabe_2196_143_1bgaraterm.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/JMLanda_4192_460_1_doc_hiztegia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/JManterola_3006_768_zenbaki-konplexuak-teoria.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/JManterola_3007_748_zenbakizko-serieak-teoria.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/JManterola_3015_764_11-fourierren-analisirako-sarrera-teoria.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/JOrbe_233_883_2gaia.tex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/JPineda_1905_25_1905_853_farmakologia_klinikoa_2011-12_zuzend_pineda_mendig.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/JSaenz_5789_311_04-part-sist-transp.odp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/JUrkola_4743_691_05_ikasgaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/KIrurzun_3608_479_langileen_ordezkaritza_eta_parte_hartzea_lantokian.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/Kepasara_6689_253_htia_2_hizkuntzaren_prozesamendua.odt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/LBeloki_2925_239_1.komunikazioa_eta_hizkuntza.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/LErriondo_79_807_eskola_berria.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/LImaz_192_653_1._gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/LImaz_219_37_4_1_._gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/LImaz_4199_357_1._gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/LLegarreta_120_494_3_gaia_heinak_sistemak.tex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/LMZupiria_202_947_mateii.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/LSaenz_1705_428_01_gaia_2013-14.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/LSaenz_1711_409_07_gaia_2013-14.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/LSaenz_1713_575_09_gaia_2013-14.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/LSanjose_5243_326_1._gaia_finantzaketa_leire_san-jose.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/MJElejalde_1724_358_1724_489_analisi_bektoriala.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/MKarrera_4797_297_1._gaiazuz.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/MKarrera_4802_860_6._gaiazuz.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/MKortajarena_3723_588_oheak_egitea.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/MKortajarena_3781_472_5.sutura_praktika.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/MZubia_6292_655_ekonometria-eazg.7z.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/MZubitur_3505_57_lurzorua_eta_hondakinak_2014-2015.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/Mikel_6309_519_1.gaia_testu_orokorrak_espezializatuak_17_18_garbi.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/Mikel_6310_387_4_17_18_terminologiaren_teoriak_metodologiak_garbi.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/NArrese_4427_11_1._gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/NArriola_30_878_2012-2013._apm._1.gaia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/NIriondo_5829_218_kt-lurrun-galdara_garbi.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/OAbalde_4337_453_1.ikasgaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/OAbalde_4344_529_5.ikasgaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/OAbalde_4354_904_11._ikasgaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/OCastillo_5670_736_gaia_2.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/OCastillo_5671_467_gaia_3.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/OCastillo_5687_491_gaia_7.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/OGonzalez_2256_151_aerlijioa.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/OMitxelena_284_152_topografia_2_teoria_2012-2013_eusk.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/OMitxelena_9_770_topografia_1_teoria_2012-2013_eusk.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/PRuiz_6268_494_nerbio_i.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/Patxi_808_138_am2topologia.tex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/RArruabarrena_6227_205_teoria-2.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/RArruabarrena_6228_242_teoria-3.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/ROchoa_4689_865_iturriak.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/SJodra_6106_955_apunteak_irudiak_transferitzeko_teknikak.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/SJodra_6107_543_apunteak_serigrafia_edo_estanpazio_permeografikoa.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/SJodra_6108_445_apunteakpantaila_eta_insolagailua_nola_egin.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/SanMartin_6317_825_5._gaia__barrunbeak_komunikazioa.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/TOrtells_200_257_matei.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/UIzagirre_6272_257_sistema_endokrinoak_i.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/UTamayo_1748_550_2_gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/ainhoa.garayar_3364_145_7_gaia_atzerri__moneta.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/bcpazelj_3316_366_enpresa_ekonomia_antolakuntza_eta_zuzendaritza.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/bcpdiaro_6095_888_sarrera_hk15.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/bcpdiaro_6270_377_2-tegumentu1hk_16-17-2.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/bcpelgam_1907_768_gga_hezurren_apunteak_2013.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/bcpetrai_6543_895_1._gaia_apunteak_17-18.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/bcpsepee_5074_691_1._gaia._ahoko_mikrobiologiaren_sarrera_v5.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/bcpsigai_3500_118_1._gaia-apunteak_ikt_azken_bertsioa_ondo.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/bcpsigai_3671_488_9._gaia-apunteak_ikt_azken_bertsioa_ondo.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/bgpgaazz_6453_626_lo_eta_deskantsu_patroia.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/bgpmocai_3492_724_programaketa12-13.zip.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/blandeta_3372_333_kontabilitate_orokorra.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/blandeta_3377_622_1.1_-_ekonomia_orokorra.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/ccpanmap_1046_656_6.gaia.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/ccpanmap_1074_870_01_teoria.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/ccpanmap_1401_316_minimokarratu.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/ccpanmap_1523_319_9gaia.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/ccpanmap_974_671_zenbakikonplexuak.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/ciplaain_3195_420_1.gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/dmpmalaa_5424_655_a....kokapen_ekintzak__reparado_.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/dmpzugua_1762_311_3.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/dmpzugua_1763_934_4.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/dmpzugua_1769_733_10.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/dmpzugua_2753_78_4.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/ebpagmoi_6520_536_planen_izapidetzea.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/efpbigaa_2787_698_1._gaia__2013-14_.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/efpbigaa_3841_579_14-15_2t_09_gaia__142-165__progresio_geometrikoan.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/fvpzauni_1106_873_3._gaia_osasun_arloko_terminologia_eta_fraseologia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/iqpolaum_5873_23_2._gaia._erreaktore_ez-jarraitu_isotermoa.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/jepbamei_3288_248_oe_eta_ee.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/jipmaanm_628_780_1._gaia.tex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/meparmai_1122_535_1m_10-11_bioestatistika_spss_apunteak.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/meparmai_1137_247_1gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/meparmai_1138_102_2gaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/mtpfealg_779_659_02teoria_tt.tex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/mtpmapei_2803_904_gidoiberria.zip.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/mtpzaazm_1136_566_12_13_ed_gaiak.tex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/ngphuegj_1826_703_1826_820_17-metabolismoaren_asaldurak_nahiz_asaldura_endokrinoak....html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/qipfimam_3502_786_azido-base_gaia_borrador.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/scpalasb_318_467_318_934_zinematika_berriagoa.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/scphimue_4041_859_1.1-atomoaren_egitura__modo_de_compatibilidad_.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/scphimue_4043_756_1.3..-erradiobabesa__modo_de_compatibilidad_.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/scphimue_4056_864_08_gaia_beharrak__modo_de_compatibilidad_.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/sgpliotn_1840_945_1840_47_autoebal_practicum_i_oz.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/tlpbilox_6843_964_kf.ikasgaiak.01-08.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/tlpbilox_6847_497_kf.ariketak.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/vcpmaage_3591_743_2._gaia_ta_vs._tao_eu_2014-2015.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/wdpezarj_1601_86_far1213-01g.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/wdpezarj_1625_745_far1213-06g.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/wepmaorj_3526_399_tel_mugikorra.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/yuri.rueda_5496_646_1._atseden-potentziala.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/zopalsuk_344_787_biogeografia02.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakAcademic/zopalsuk_346_437_biogeografia04.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/AApraiz_5572_150_11._subdukzioa.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/ALeturia_4553_300_ikasgaiak-ana.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/AOdriozola_5077_638_prozesal_apunteak_2015.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/AOrbe_4993_978_froga.tex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/AZelaia_2710_114_2_simplex_metodoa.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/IIruretagoiena_4307_899_ebz_2013-2014_teoria_-_eusk_prest.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/IIruretagoiena_4401_850_nzp_i_apunteak_2014-2015_prest.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/IMartinA_2741_115_24._konpar2-2.docm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/JATamayo_4794_106_obligazioak_ikasleentzat.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/JMEtxabe_1677_100_1_ikasgaiaocw.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/JMEtxabe_2195_793_1_garaterm.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/JMEtxabe_2204_78_4.ikasgaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/JMEtxabe_2205_400_4.ikasgaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/JMEtxabe_2211_971_7.ikasgaia.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/JManterola_3013_944_9-ekuazio-diferentzial-arruntak-teoria.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/LImaz_4196_227_2013_oinordetza_zuzenbidea_-_itzulpen_osoa.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/MHaranburu_188_939_nortasunaren_psikologia_teoria_soila.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/MHaranburu_326_354_hiperaktibitatedun_arreta_gabeziako_nahastea.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/MHaranburu_421_237_doktorego_tesia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/OAbalde_4339_258_2.ikasgaia.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/ccpanmap_1013_798_ikerketa_operatiboa.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/ccpanmap_1385_71_nagusia.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/ccpanmap_1405_814_liburuosoa.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/ccpanmap_1589_848_1logika.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/ccpanmap_958_984_ekuaziodiferentzialarruntak.pdf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/leire.aldaz_3579_539_bmodalitatea_datubaseendiseinuaustiapena-zuz-_behin_betikoa_.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/scpuritm_4037_926_4-sendagaiak..doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/scpuritm_4040_696_7-larruazala.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakGaraterm/zopalsuk_351_495_351_956_liburuii.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakbanakoak/IOrdenana_4772_813_27._behin-behineko_exeskuzioa.doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakbanakoak/NIriondo_5830_244_kt-nahasketa_baten_dentsitatea_garbi.docx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/hautatuakbanakoak/OAbalde_4360_996_17.ikasgaia.rtf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/html2txt.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/corpus/eu/Garaterm/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/es/syllablesplitter/Sol4/readme.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -6095,12 +6499,44 @@
       <option name="project" value="LOCAL" />
       <updated>1579796592261</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="data">
+      <created>1580135780714</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1580135780714</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/data" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -6109,6 +6545,11 @@
           </value>
         </entry>
       </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
@@ -6128,13 +6569,16 @@
     <MESSAGE value="corpus+data+embeddings" />
     <MESSAGE value="corpus+data" />
     <MESSAGE value="new data" />
-    <option name="LAST_COMMIT_MESSAGE" value="new data" />
+    <MESSAGE value="data" />
+    <MESSAGE value="data+corpus" />
+    <MESSAGE value="eu corpus" />
+    <option name="LAST_COMMIT_MESSAGE" value="eu corpus" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="201" y="27" width="1020" height="741" key="CommitChangelistDialog2" timestamp="1580135514696">
+    <state x="201" y="27" width="1020" height="741" key="CommitChangelistDialog2" timestamp="1580199918560">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="201" y="27" width="1020" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1580135514696" />
+    <state x="201" y="27" width="1020" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1580199918560" />
     <state x="258" y="27" key="CommitChangelistDialog2/67.27.1853.1173@67.27.1853.1173" timestamp="1579091490251" />
     <state width="1807" height="219" key="GridCell.Tab.0.bottom" timestamp="1579712287040">
       <screen x="67" y="27" width="1853" height="1173" />
@@ -6168,16 +6612,16 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="417" y="109" width="588" height="574" key="RollbackChangesDialog/67.27.1299.741@67.27.1299.741" timestamp="1579798131148" />
-    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579798439336">
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1580198938285">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1579798439336" />
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1580198938285" />
     <state x="415" y="193" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1579091531398" />
-    <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1580133493743">
+    <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1580199644543">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="372" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741/1366.0.1920.1200@67.27.1299.741" timestamp="1576829786602" />
-    <state x="372" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1580133493743" />
+    <state x="372" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1580199644543" />
     <state x="502" y="340" key="com.intellij.ide.util.TipDialog/67.27.1853.1173@67.27.1853.1173" timestamp="1579768981656" />
     <state x="379" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1576597790261">
       <screen x="67" y="27" width="1299" height="741" />

@@ -1,0 +1,1958 @@
+
+
+
+
+1
+8.GAIA. KALKULU INFINITESIMALA. SARRERA
+1.  Zenbaki errealak
+1.1 Propietateak
+1.2 Kontzeptu topologikoak
+2.  Aldagai errealeko funtzio errealak
+2.1 Definizioa
+2.2 Funtzioen karakterizazioa
+2.3 Funtzioen konposizioa. Alderantzizko funtzioa
+2.4 Funtzioen arteko eragiketak
+2.5 Oinarrizko funtzioak
+3.  Aldagai errealeko funtzio errealak. Limiteak
+3.1 Definizioak
+3.2 Propietateak
+3.3 Limiteen arteko eragiketak. Limite indeterminatuak
+3.4  Infinitesimoak eta infinituak
+
+2
+8.GAIA. KALKULU INFINITESIMALA. SARRERA
+1. ZENBAKI ERREALAK
+1.1 Propietateak.
+Aurreko gaietan ikusi dugu  R zenbaki errealen  multzoa , ohizko eragiketekin
+batuketa eta biderketa gorputz abeldarra dela.
+Zenbaki errealen beste propietate garrantzitsua ordena daitekeela da. Hau
+da,  R
+multzo guztiz ordenatua da, eta ordenako erlazioarekin ondokoa betetzen da:
+i) 
+b
+a
+a
+b
+eta
+b
+a
+=
+⇒
+≤
+≤
+ii) 
+∈
+∀ b
+,
+a
+R   a<b edo b<a edo a=b
+iii) 
+c
+a
+c
+b
+eta
+b
+a
+≤
+⇒
+≤
+≤
+iv) 
+∈
+∀
+c
+,
+b
+,
+a
+R  eta 
+c
+b
+c
+a
+b
+a
++
+≤
++
+⇒
+≤
+v) 
+b
+.
+a
+0
+b
+0
+eta
+a
+0
+≤
+⇒
+≤
+≤
+vi)  Izan bedi 
+b
+a
+≤ , orduan 
+
+
+
+≥
+⇒
+≤
+≤
+⇒
+≥
+x
+b
+ax
+bada
+0
+x
+x
+b
+x
+a
+bada
+0
+x
+GORENAREN AXIOMA.
+Izan bedi 
+⊂
+A
+R.
+Definizioa.  A multzoa  goi-bornatua da baldin eta K
+∈R konstante bat existitzen bada
+non ondokoa betetzen den: 
+K
+x
+,
+A
+x
+≤
+∈
+∀
+. K goi-bornea deitzen da.
+Definizioa. A multzoa behe-bornatua da baldin eta H
+∈R konstante bat existitzen bada
+non ondokoa betetzen den: 
+H
+x
+,
+A
+x
+≥
+∈
+∀
+. H  behe-bornea deitzen da.
+Definizioa. A multzoa bornatua da baldin eta goi-bornatua eta behe-bornatua
+bada, hots
+∃  H,K ∈R  /   
+K
+x
+H
+,
+A
+x
+≤
+≤
+∈
+∀
+ 
+A multzoko s goi-borne bat  gorena  (supremoa) deitzen da, goi-borneetatik
+txikiena bada.
+A multzoko  t  behe-borne  bat  beherena  (infimoa) deitzen da, behe-bornetatik
+handiena bada.
+Supremoa multzoko puntua bada maximoa deitzen da,  infimoa multzoko puntua
+bada minimoa deitzen da.
+
+3
+Teorema. Gorenaren axioma.
+Ez-hutsa eta goi-bornatua (behe-bornatua) den R multzoko edozein azpimultzok,
+supremoa (infimoa) du.
+1.2  Zenbaki errealen balio absolutua.
+Definizioa. Izan bedi x zenbaki erreala. x zenbakiaren   balio
+absolutua,  x  adieraziko
+da, ondokoa da:
+
+
+
+<
+−
+≥
+=
+bada
+0
+x
+x
+bada
+0
+x
+x
+x
+Adierazpen edo espresio baten balio absolutua erabili behar badugu, espresio
+positibo eta negatiboak diren kasuak bereiz aztertzea komenigarria da.
+Propietateak
+1.  
+0
+y
+≥ bada,   
+y
+x
+y
+y
+x
+≤
+≤
+−
+⇔
+≤
+2. 
+∈
+∀
+≥
+x
+0
+x
+R
+3. 
+0
+x
+0
+x
+=
+⇔
+=
+4. 
+y
+x
+y
+x
++
+≤
++
+5. 
+y
+x
+y
+x
+=
+6. 
+y
+x
+y
+x
+−
+≥
+−
+1.2 Kontzeptu topologikoak.
+Sarritan Kalkuluan agertzen diren multzoak, zuzen errealeko tarteak izaten
+dira:
+•  a eta b muturrak dituen tarte irekia ondoko multzoa da: (a,b)={x∈R /a<x<b}
+•  a eta b muturrak dituen tarte itxia ondoko multzoa da: [a,b]={x∈R /
+b
+x
+a
+≤
+≤
+}
+•  a eta b muturrak dituen tarte erdi itxia edo tarte erdi irekia  ondoko
+multzoak dira:
+[a,b)={x
+∈R /
+b
+x
+a
+<
+≤
+}  eta (a,b] ={x
+∈R /
+b
+x
+a
+≤
+<
+}}
+•  Tarte infinituak
+[a,
+∞ )={x∈R /
+x
+a
+≤ }
+
+4
+[-
+∞ ,b)={x∈R /
+b
+x
+≤ }
+(a, 
+∞ )={x∈R /
+x
+a
+< }
+(-
+∞ ,b)={x∈R /
+b
+x
+< }
+non 
+∞  eta  ∞
+−  bi ikur diren (infinitu eta minus infinitu), R multzoa R=( ∞ , ∞
+− ) eran
+adierazteko baliagarriak direnak, baina zenbakiak EZ direnak.
+Definizioa. Izan bitez a, 
+δ∈R , δ>0 izanik.
+§ 
+δ erradioko eta a zentroko a puntuko ingurune, ondoko multzoari deitzen zaio:
+ε(a, δ)={x∈R / a-δ<x<a+δ}=(a-δ,a+δ)
+§ 
+δ erradioko eta a zentroko a puntuko ingurune laburtu, ondoko multzoari deitzen
+zaio:
+ε*(a, δ)={x∈R / a-δ<x<a ∪ a<x<a+δ}=(a-δ,a+δ)-{a}
+§ 
+∞-aren ingurune  (a, ∞)={x∈R /a<x} multzoari deitzen zaio.
+§  -
+∞-aren ingurune  (- ∞,b)={x∈R /x<b} multzoari deitzen zaio.
+Definizioa. Izan bitez a
+∈R eta A⊂R. a puntua A multzoko metatze puntua da baldin eta
+∀ ε*(a, δ) , ε*(a, δ)∩ A   ez hutsa bada
+Propietateak
+1.  A multzoko metatze-puntu baten edozein ingurunetan beti A-ko infinitu puntu
+daude.
+2.  A finitua bada, ez du metatze punturik.
+3.  Edozein multzo infinitu eta bornatuk beti metatze punturen bat du.
+2. ALDAGAI  ERREALEKO  FUNTZIO  ERREALAK
+2.1 Definizioa.
+Definizioa. Izan bitez X
+⊂ R eta f:X → R aplikazioa non x∈X puntu bakoitzari y=f(x)
+∈R balio bakar bat dagokio, orduan f aldagai errealeko funtzio erreala dela
+esaten da
+eta normalki y=f(x) adierazten da. (x: aldagai independentea, y: aldagai
+menpekoa edo
+aldagai dependentea edo funtzioa).
+Definizioa. funtzio baten  existentzi eremua, f(x) funtzioa existitzen den x
+zenbaki
+errealen multzoa da. Dom(f) adierazten da.  Dom(f)={x
+∈R / f(x) ∈R }.
+Definizioa. Funtzio baten  irudi multzoa, y zenbaki errealen multzoa da, non x
+∈Dom(f)
+existitzen den eta f(x)=y den. Im(f) adierazten da.
+Im(f)={y
+∈R / ∃x∈Dom(f), f(x)=y}=f(Dom(f))
+
+5
+Definizioa. Izan bedi f:  ô
+→ R funtzioa zein f(n)=a
+n den. Orduan f aplikazioari  an gai
+generaltzat duen  zenbaki errealeko segida deitzen da  eta {an}n∈ô  adierazten
+da.
+Definizioa. f:X
+→ R funtzioaren  grafoa (x,y) bikote ordenatuen multzoa da x∈X eta
+y=f(x) direnean. Koordenatu  kartesiar angeluzuzen  sistema baten irudikatutako
+multzoa f-ren grafikoa da.
+Definizioa. f funtzioaren grafikoaren eta OX ardatzaren arteko ebaki puntuak,
+hots,
+x
+∈X  non f(x)=0 den, f-ren  zeroak edo erroak  deitzen dira.
+2.2 Funtzioen karakterizazioa.
+Definizioa. f: X
+→ R funtzioa funtzio konstantea da f(x)=K ∀x∈X bada.
+Definizioa. f: X
+→ R funtzioa  T>0  periododun  funtzio periodikoa    da baldin eta
+f(x)=f(x+T) 
+∀x∈X bada, aurrekoa betetzen duen T balio txikiena bada.
+Definizioa. f: X
+→ R funtzio bornatua da baldin eta
+•  m,M∈R bi konstante existitzen badira  m
+≤
+≤
+)
+x
+(
+f
+M betetzen bada
+edo baliokidea dena
+•  bere irudi multzoa bornatua bada, hots  ∃ K∈R non 
+K
+)
+x
+(
+f
+≤  den ∀ x∈X.
+Definizioa. f: X
+→ R bikoitia   da f(-x)=f(x)  ∀  x∈X betetzen bada. Bere grafiko OY
+ardatzarekiko simetrikoa da. f  bakoitia da f(-x)=-f(x) 
+∀  x∈X bada. Kasu honetan bere
+grafikoa koordenatuaren jatorriarekiko, (0,0)-rekiko, simetrikoa izango da.
+Definizioa. Izan bedi f: X
+→ R funtzioa. Ondokoak definitzen dira:
+• 
+f  gorakorra da baldin eta 
+∀ x,y ∈X  x≤ y  ⇒  f(x) ≤ f(y) bada.
+• 
+f  hertsiki gorakorra da baldin eta 
+∀ x,y ∈X  x<y  ⇒  f(x)<f(y) bada.
+• 
+f  beherakorra da baldin eta 
+∀ x,y ∈X  x≤ y  ⇒  f(x) ≥ ≤ f(y) bada.
+• 
+f   hertsiki beherakorra da baldin eta 
+∀ x,y ∈X  x<y  ⇒  f(x)>  ≤ f(y) bada.
+• 
+f  monotonoa da, gorakorra edo beherakorra bada
+2.3 Funtzioen konposizioa. Alderantzizko funtzioa.
+Definizioa. Izan bitez f:X
+→ R eta g:Y → R funtzioak non f(X)⊂Y den. f-ren eta g-ren
+arteko funtzio konposatua honela definitzen da:
+g
+o f: X 
+→  R
+         x 
+a  (g
+o f)(x)=g[f(x)]
+
+6
+Definizioa.  Izan bedi f:X
+→ Im(f) aplikazio  bijektiboa, f(x
+0)=y0 izanik. Orduan f-ren
+alderantzizko funtzioa defini daiteke, f 
+-1 adierazten da eta ondokoa da:
+f 
+-1 :Im(f) 
+→ X
+         y0  a  f 
+-1(y
+0)=x0
+Gainera f 
+-1 ere bijektiboa da  eta f  -1(f(x
+0))=x0   
+∀x
+0
+∈X betetzen da. Alderantzizko
+funtzioaren grafikoa  lehenengo koadrantearen erdikariarekiko f funtzioaren
+grafikoaren
+simetrikoa da, (x,f(x)) puntua f-ren grafikoan badago, (f(x),x) f
+ -1-ren grafikoan baitago.
+2.4 Funtzioen arteko eragiketak.
+Izan bitez f,g : X 
+→  R funtzio errealak.
+Definizioak.
+• 
+f eta g berdinak dira, f=g  
+⇔ f(x)=g(x)  ∀x∈X.
+• 
+Batuketa, f+g : X
+→  R , (f+g)(x) = f(x)+g(x)  ∀x∈X.
+• 
+Biderketa, f.g : X
+→  R , (f.g)(x)=f(x).g(x)  ∀x∈X.
+• 
+Zatiketa, f/g : X
+→  R , (f/g)(x)=f(x)/g(x) ∀x∈X / g(x) ≠ 0.
+• 
+Konstante batez biderketa, c.f : X 
+→  R , (c.f)(x)=c.f(x) ∀x∈X, c∈R.
+Oharra: f 
+-1
+≠ 1/f .
+2.5 Oinarrizko funtzioak.
+3. ALDAGAI ERREALEKO FUNTZIO ERREALAK. LIMITEAK
+Ondokoan limitearen kontzeptua ikusiko dugu. Kontzeptu hau oso garrantzitsua da
+Kalkulu Infinitesimalaren garapen osoan.
+3.1 Definizioak.
+Definizioa. Izan bitez X
+⊂R eta f : X  →  R. L∈R f-ren limitea da a∈R, a X-ko metatze
+puntu batean, eta 
+L
+)
+x
+(
+f
+lim
+a
+x
+=
+→
+ adierazten da, ondokoa betetzen bada:
+)
+,
+L
+(
+)
+x
+(
+f
+X
+)
+,
+a
+(
+x
+/
+0
+,
+0
+*
+ε
+ε
+∈
+⇒
+∩
+δ
+ε
+∈
+∀
+>
+δ
+∃
+>
+ε
+∀
+era baliokidean esanda
+ε
+<
+−
+⇒
+δ
+<
+−
+<
+∈
+∀
+>
+δ
+∃
+>
+ε
+∀
+L
+)
+x
+(
+f
+a
+x
+0
+X
+x
+/
+0
+,
+0
+
+7
+x>a edo x<a balioak bakarrik kontsideratzen badira, orduan  aldetako
+limiteak  sortzen
+dira,  eskuin- eta  ezker-limiteak hurrenez hurren; 
+)
+x
+(
+f
+lim
+a
+x
++
+→
+ eta 
+)
+x
+(
+f
+lim
+a
+x
+−
+→
+ adierazten
+dira. Hau da:
+ε
+<
+−
+⇒
+δ
++
+<
+<
+∈
+∀
+>
+δ
+∃
+>
+ε
+∀
+⇔
+=
++
+→
+L
+)
+x
+(
+f
+a
+x
+a
+,
+X
+x
+/
+0
+,
+0
+L
+)
+x
+(
+f
+lim
+a
+x
+ε
+<
+−
+⇒
+<
+<
+δ
+−
+∈
+∀
+>
+δ
+∃
+>
+ε
+∀
+⇔
+=
+−
+→
+L
+)
+x
+(
+f
+a
+x
+a
+,
+X
+x
+/
+0
+,
+0
+L
+)
+x
+(
+f
+lim
+a
+x
+Teorema. f(x)-k a puntuan L limitea du baldin eta soilik baldin aldetako
+limiteak
+existitzen badira eta beren balioak L badira. Hots:
+L
+)
+x
+(
+f
+lim
+a
+x
+=
+→
+   
+⇔
+)
+x
+(
+f
+lim
+a
+x
++
+→
+ =
+L
+)
+x
+(
+f
+lim
+a
+x
+=
+−
+→
+Definizioa.  Limite infinituak.
+• 
++∞
+=
+→
+)
+x
+(
+f
+lim
+a
+x
+  
+⇔
+K
+)
+x
+(
+f
+a
+x
+0
+X
+x
+/
+0
+,
+0
+K
+>
+⇒
+δ
+<
+−
+<
+∈
+∀
+>
+δ
+∃
+>
+∀
+• 
+−∞
+=
+→
+)
+x
+(
+f
+lim
+a
+x
+  
+⇔
+K
+)
+x
+(
+f
+a
+x
+0
+X
+x
+/
+0
+,
+0
+K
+−
+<
+⇒
+δ
+<
+−
+<
+∈
+∀
+>
+δ
+∃
+>
+∀
+Definizioa.  Limite infinituan.
+• 
+L
+)
+x
+(
+f
+lim
+x
+=
++∞
+→
+  
+⇔
+ε
+<
+−
+⇒
+>
+∈
+∀
+>
+∃
+>
+ε
+∀
+L
+)
+x
+(
+f
+H
+x
+,
+X
+x
+/
+0
+H
+,
+0
+• 
+L
+)
+x
+(
+f
+lim
+x
+=
+−∞
+→
+  
+⇔
+ε
+<
+−
+⇒
+−
+<
+∈
+∀
+>
+∃
+>
+ε
+∀
+L
+)
+x
+(
+f
+H
+x
+,
+X
+x
+/
+0
+H
+,
+0
+• 
++∞
+=
++∞
+→
+)
+x
+(
+f
+lim
+x
+  
+⇔
+K
+)
+x
+(
+f
+H
+x
+,
+X
+x
+/
+0
+H
+,
+0
+K
+>
+⇒
+>
+∈
+∀
+>
+∃
+>
+∀
+3.2 Propietateak.
+1.  Funtzio baten limitea puntu batean existitzen bada, bakarra da.
+2.  Funtzio batek a puntuan limite finitua badu, funtzioa a puntuaren ingurune
+laburtu
+batean  funtzio bornatua da.
+3.  y=f(x) funtzioak a puntuan L>0 limitea badu, orduan a puntuaren ingurune
+laburtua
+existitzen da non f(x)>0 den.Era berean L<0 deneko kasuan.
+4.  Sandwich-en erregela.   f(x)
+≤ g(x)  ≤ h(x) bada a puntuaren ingurune laburtu baten
+edozein x-rentzat eta 
+L
+)
+x
+(
+h
+lim
+)
+x
+(
+f
+lim
+a
+x
+a
+x
+=
+=
+→
+→
+ bada, orduan 
+L
+)
+x
+(
+g
+lim
+a
+x
+=
+→
+da. (a eta
+L finituak edo infinituak)
+5.  f(x) a puntuaren  ingurune batean  bornatua bada eta 
+0
+)
+x
+(
+g
+lim
+a
+x
+=
+→
+, orduan
+(
+) .0
+)
+x
+(
+g
+).
+x
+(
+f
+lim
+a
+x
+=
+→
+(Hots:bornatua x zerbait zerorantz, zerorantz )
+
+8
+3.3 Limiteen arteko eragiketak. Limite indeterminatuak.
+L
+)
+x
+(
+f
+lim
+a
+x
+=
+→
+ eta 
+'
+L
+)
+x
+(
+g
+lim
+a
+x
+=
+→
+ badira, L , L'
+∈R izanik, orduan:
+1. 
+[
+]
+'
+L
+L
+)
+x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+±
+=
+±
+→
+2. 
+[
+]
+'
+L
+.
+L
+)
+x
+(
+g
+).
+x
+(
+f
+lim
+a
+x
+=
+→
+3. 
+[
+]
+∈
+α
+∀
+α
+=
+α
+→
+,
+L
+)
+x
+(
+f
+lim
+a
+x
+R
+4.  L'
+0
+≠  bada, 
+'
+L
+L
+)
+x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+=
+→
+.
+5.  f(x)>0 bada eta L>0, orduan 
+[
+]
+L
+ln
+)
+x
+(
+f
+ln
+lim
+a
+x
+=
+→
+6. 
+0
+>
+α
+bada, orduan 
+L
+)
+x
+(
+f
+lim
+a
+x
+α
+=
+α
+→
+7.  f(x)>0 bada eta L>0, orduan 
+[
+]
+α
+=
+α
+→
+L
+)
+x
+(
+f
+lim
+a
+x
+8.  f(x)>0 bada eta L>0, orduan 
+[
+]
+'
+L
+L
+)
+x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+=
+→
+L edo L' limiteren bat infinitua bada, aurreko eragiketak modu berean  betezen
+dira, ondorengo eragiketak baliagarriak izanik:
+±∞
+=
+∞
+±
+∞
+±
+0
+0
+=
+∞
+±∞
+=
++
+∞
+±
+L
+∞
+=
+−∞
+0
++∞
+=
+±∞
+∞
+±
+)
+.(
+∞
+=
+∞
+L
+, L>1 bada
+−∞
+=
+∞
+∞
+±
+)
+.(
+m
+0
+L
+=
+∞
+, 0<L<1 bada
+±∞
+=
+∞
+±
+L
+.
+, L>0 bada
+0
+L
+=
+−∞
+, L>1 bada
+∞
+=
+∞
+±
+m
+L
+.
+, L<0 bada
+∞
+=
+−∞
+L
+, 0<L<1 bada
+L /
+∞
+± =0
+L / 0 =
+∞
+± , L ≠ 0 bada
+Hala ere, zenbait kasutan limiteak agertzen zaizkigu zeinetan beren emaitza
+aldez aurretik ezezagunak diren. Hauek indeterminazioak deitzen dira. Ondokoak
+dira:
+• 
+±∞
+=
+=
+→
+→
+)
+x
+(
+g
+lim
+)
+x
+(
+f
+lim
+a
+x
+a
+x
+ bada, 
+[
+])
+x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+−
+→
+ limitean 
+∞
+−
+∞
+ erako
+indeterminazioa dago.
+
+9
+• 
+±∞
+=
+=
+→
+→
+)
+x
+(
+g
+lim
+)
+x
+(
+f
+lim
+a
+x
+a
+x
+ bada, 
+[
+])
+x
+(
+g
+/
+)
+x
+(
+f
+lim
+a
+x
+→
+ limitean 
+∞
+∞ /  erako
+indeterminazioa dago.
+• 
+0
+)
+x
+(
+g
+lim
+)
+x
+(
+f
+lim
+a
+x
+a
+x
+=
+=
+→
+→
+ bada, 
+[
+])
+x
+(
+g
+/
+)
+x
+(
+f
+lim
+a
+x
+→
+ limitean 0/0 erako indeterminazioa
+dago.
+• 
+±∞
+=
+=
+→
+→
+)
+x
+(
+g
+lim
+eta
+0
+)
+x
+(
+f
+lim
+a
+x
+a
+x
+ badira, 
+[
+])
+x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+→
+ limitean 0.
+∞  erako
+indeterminazioa dago.
+• 
+0
+)
+x
+(
+g
+lim
+)
+x
+(
+f
+lim
+a
+x
+a
+x
+=
+=
+→
+→
+ bada, 
+[ ] )x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+→
+ limitean 
+0
+0  erako indeterminazioa
+dago.
+• 
+0
+)
+x
+(
+g
+lim
+eta
+)
+x
+(
+f
+lim
+a
+x
+a
+x
+=
+∞
+=
+→
+→
+ bada, 
+[ ] )x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+→
+ limitean 
+0
+∞  erako
+indeterminazioa dago.
+• 
+±∞
+=
+=
+→
+→
+)
+x
+(
+g
+lim
+eta
+1
+)
+x
+(
+f
+lim
+a
+x
+a
+x
+ bada, 
+[ ] )x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+→
+ limitean 
+∞
+1  erako
+indeterminazioa dago.
+Beraz, ager daitezkeen indeterminazioak zazpi dira:
+∞
+∞
+∞
+∞
+∞
+∞
+−
+∞
+1
+,
+0
+,
+0
+0
+,
+.
+0
+,
+0
+/
+0
+,
+/
+,
+3.4 Infinitesimoak eta infinituak.
+Infinitesimo eta infinituen ikerketa eta beren baliokideak, oso garrantzitsuak
+izango
+dira indeterminazioak gainditzeko.
+Definizioa. f funtzioa infinitesimoa da a puntuan baldin eta 
+0
+)
+x
+(
+f
+lim
+a
+x
+=
+→
+Definizioa. f eta g bi  infinitesimo a puntuan  konparagarriak  dira  
+)
+x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+→
+ limitea
+existitzen bada. Ondoko emaitzak ager daitezke:
+• 
+0
+)
+x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+=
+→
+ bada, f-ren ordena  g-ren ordena baino handiagoa da.
+• 
+±∞
+=
+→
+)
+x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+ bada, f-ren ordena g-ren ordena baino txikiagoa da.
+
+10
+• 
+∈
+=
+→
+L
+)
+x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+R, 
+0
+L
+≠  bada, f eta g ordena berdinekoak dira . L=1
+denean, f eta g   a puntuan  infinitesimo baliokideak  direla esaten da, eta
+g
+f
+≈   x→ a denean idazten  da.
+Definizioa. Deituko diogu 
+)
+x
+(
+α
+ infinitesimo nagusia  ORDENA=1 duenari.
+*
+)
+x
+(
+α
+=(x-a) infinitesimoari  x
+→ a denean.
+* 
+)
+x
+(
+α
+=1/x   infinitesimoari x
+∞
+→  doanean.
+Definizioa. Izan bedi f(x)  infinitesimo bat x=a puntuan eta 
+[
+]
+0
+L
+)
+x
+(
+)
+x
+(
+f
+lim
+r
+a
+x
+≠
+=
+α
+→
+.
+Orduan:
+•  r  zenbaki erreala f(x)-ren ordena da.
+•  L [
+)
+x
+(
+α
+]
+r  f(x)-ren zati nagusia  da.
+Definizioa. f funtzioa  infinitua da a puntuan 
+∞
+−
++∞
+=
+→
+edo
+)
+x
+(
+f
+lim
+a
+x
+ bada, hau da
+)
+x
+(
+f
+1
+ infinitesimo bada a puntuan.
+Definizioa.  f eta g bi infinitu a puntuan  konparagarriak  dira 
+)
+x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+→
+ limitea
+existitzen bada. Ondoko emaitzak ager daitezke:
+• 
+±∞
+=
+→
+)
+x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+ bada, f-ren ordena  g-ren ordena baino handiagoa da.
+• 
+0
+)
+x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+=
+→
+ bada, f-ren ordena g-ren ordena baino txikiagoa da.
+• 
+∈
+=
+→
+L
+)
+x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+R, 
+0
+L
+≠  bada, f eta g ordena berdinekoak dira . L=1
+denean, f eta g   a puntuan  infinitu baliokideak direla esaten da, eta 
+g
+f
+≈
+x
+→ a denean idazten  da.
+Definizioa. Deituko diogu 
+)
+x
+(
+β
+ infinitu nagusia  ORDENA=1 duenari.
+*
+)
+x
+(
+β
+=
+)
+a
+x
+(
+1
+−  infinituari  x→ a doanean.
+* 
+)
+x
+(
+β
+=x   infinituari x
+∞
+→  doanean.
+
+11
+Definizioa. Izan bedi f(x) infinitua  x=a puntuan eta 
+[ ]
+0
+L
+)
+x
+(
+)
+x
+(
+f
+lim
+r
+a
+x
+≠
+=
+β
+→
+. Orduan:
+•  r  zenbaki erreala f(x)-ren ordena da.
+•  L [
+)
+x
+(
+β
+]
+r  f(x)-ren zati nagusia  da.
+Propietateak
+1.- Ordezkapen printzipioa.
+f eta g a puntuan  infinitesimo baliokideak edo infinitu baliokideak badira,
+orduan:
+[
+]
+[
+])
+x
+(
+h
+).
+x
+(
+g
+lim
+)
+x
+(
+h
+).
+x
+(
+f
+lim
+a
+x
+a
+x
+→
+→
+=
+  eta  
+)
+x
+(
+g
+)
+x
+(
+h
+lim
+)
+x
+(
+f
+)
+x
+(
+h
+lim
+a
+x
+a
+x
+→
+→
+=
+Hau da, biderketa edo zatiketa batean biderkagai bat den  infinitesimo edo
+infinitu bat
+beste baliokideaz ordezka daitezke.
+2.- Ordena desberdineko  infinitesimo kopuru finituen batura eta ordena
+txikiena
+daukana baliokideak dira.
+3.- Ordena desberdineko  infinituen batura eta ordena handiena daukana
+baliokideak
+dira.
+TAULA: Infinitesimo eta infinitu baliokideak.
+•  Ondoko funtzioak 
+0
+y
+→  doanean, infinitesimo baliokideak dira:
+sin y  
+≈  y  ≈  arcsin y
+tan y  
+≈ y  ≈   arctan y
+1-cos y  
+≈  y2/2
+ln(1+y) 
+≈ y
+a
+y-1   
+≈  y ln a  (a>0)
+e
+y-1  
+≈  y
+•  Ondoko funtzioak 
+1
+y
+→  doanean, infinitesimo baliokideak dira:
+ln y   
+≈  y-1
+
+12
+•  Ondoko funtzioak 
+∞
+→
+y
+ doanean, infinitu  baliokideak dira:
+ak  y
+k + a
+k-1y
+k-1  + …+ a
+0  
+≈   a
+k  y
+k (ordena txikieneko infinituak
+mesprezatzen dira)
+ln[ak y
+k + a
+k-1y
+k-1 + …+ a
+0]  
+≈  ln yk
+•  f(x)  ≈ g(x)  x=a puntuan  (infinituak edo infinitesimoak )  ⇒ ln[f
+(x)]  ≈ ln[g(x)]
+•  n! ≈ e-n nn 
+n
+2
+π  , n∈N , n
+∞
+→  doanean. (Stirling-nen formula)
+Gainera 
+∞
+→
+y
+ gehien erabiltzen diren infinituen ordenek ondoko erlazioak jarraitzen
+dute:
+ordena (ln y)
+a < ordena (yb) < ordena (cy) < ordena (yy)   a,b>0 , c>1
+∞
+→
+y
+Ad: 
+( )
+1
+x
+lim
+x
+lim
+x
+/
+1
+x
+x
+x
+=
+=
+∞
+→
+∞
+→

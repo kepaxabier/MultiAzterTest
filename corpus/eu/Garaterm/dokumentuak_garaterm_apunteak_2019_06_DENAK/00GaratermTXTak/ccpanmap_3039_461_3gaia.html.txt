@@ -1,0 +1,1058 @@
+
+
+
+
+
+
+Ekuazio diferentzial arruntak
+3. gaia
+Goi-ordenako ekuazioak
+3.1 Esangura geometrikoa, 3.2 Existentzia eta bakartasunaren teorema, 3.3
+Ekuazioen eta sistemen arteko baliokidetasuna, 3.4 Ordena-beheratzea, 3.5
+Funtzioen menpekotasun lineala, 3.6 Ekuazio diferentzial linealak, 3.7 Ekuazio
+lineal homogeneoak, 3.8 Ekuazio lineal osoak, 3.9 Oinarrizko soluzioa, 3.1O
+Koefziente konstanteetako ekuazio homogeneoak, 3.11 Koefziente konstanteetako
+ekuazio osoak
+**** 3.1 Esangura geometrikoa ****
+  �
+      Goi-ordenako ekuazioen esangura geometrikoa lehen-ordenakoen kasuan
+      ikusitakoaren orokorpena dugu.
+  �
+      Demagun kurba lauen familia baten ekuazioan Cl, C2,..., Cn parametro
+      independenteak ditugula.
+� Ekuazio fnitua eta haren lehenengo n deribatuak hauek dira:
+c(x, y, Cl , C2,..., Cn )=O, oc oc
++ y'=O,
+ox oy o2co2co2co
+c
+'
++2 y'+ y'2+ y'=O,
+ox2oxoy oy2oy
+.
+.
+.
+oncnoc
+y(n)
++ ... + =O.
+oxnoy
+[imagenes/3gaia_img_0.jpg]
+� Ekuazio guzti horiek erabiliz� � parametroa� desagertarazi daitezke et�
+horrel� familiare� ekuazi� diferentziala lortzen da:
+F(x, y, y', y'',...� y(n))=O�
+� Kurba-familiaren c(x, y, Cl� C2,...� Cn � � � ekuazio� aurreko ekuazio
+diferentzialare� soluzi� orokorr� d� et� haren kurba bakoitza kurb� integra�
+ba� dugu�
+**** 3.1 Ariketa ****
+� Zein da unitate-erradiok� zirkunferentzie� ekuazi� diferentziala?
+� Kasu honetan, Cl = � et� C2 � � hartuz� c(x, y, Cl, C2)=(x -�)2+(� - b)2- � �
+� dugu� Behar dugu beste ekuazi� bi�
+oc oc
++ y'= 2(� - �)� 2(� - b)y�=�
+ox oy
+eta
+o2co2co2� o�
++2 y� � y'2 � y'� =
+ox2oxo� oy2o�
+2+O+2y'2+ 2(y -b)y'�� 2(� � y'2)� 2(� - b)y'�=�
+Lehen deribatuak emate� d� (� - �)2=(� - b)2(y')2eta emaitza hura ekuazi�
+fnituareki� konbinatuz� (y -b)2(1 + y'2) = 1 lortze� dugu� Ikusi berri dugunez,
+ekuazio fnituak eta haren lehenengo deribatuak ondokoa ematen dute:
+[imagenes/3gaia_img_1.jpg]
+1 =(y -b)2.
+1+ y '2Bigarren deribatuak, berriz, hau ematen du:
+''2
+(1 + y '2)2=(y -b)2y .
+Orduan guztira, bilatutako ekuazioa ondokoa da: '2 )
+''2
+(1 + y = y .
+**** 3.2 Existentzia eta bakartasunaren teorema ****
+Ekuazio diferentzial baten
+(n) ' (n-l))
+y= f(x, y, y ,..., y
+'
+forma normalean f funtzioa eta ofjoy, ofjoy , ofjoy(n-l)deribatuak jarraituak
+badira, ekuazioa eta ondoko n hastapen-baldintzak betetzen dituen soluzio
+bakarra dago:
+y(xo)      = yo
+y ' (xo)   = y ' o
+           .
+           .
+           .
+y(n-l)(xo) = y(n-l)o
+[imagenes/3gaia_img_2.jpg]
+3.3 Ekuazioen eta sistemen arteko baliokidetasuna
+Ezezagun eta ekuazioen kopurua handituz, beti behera daiteke ekuazio baten
+ordena. Izan ere,
+' (n-l)
+yl _ y, y2 _ y ,..., yn _ y,
+menpeko aldagai berriak defnitzen baditugu, n
+(n) '
+ordenako y= f(x, y, y ,..., y(n-l)) ekuazioa lehen ordenako n ekuazioen
+hurrengo sistemaren baliokidea
+da:
+    '
+    yl    = y2,
+    '
+    y2    = y ,
+          .
+          .
+          .
+    y ' n = f(x, yl, y2, . . . , yn ).
+**** 3.2 ariketa ****
+Idatzi osziladore harmoniko bortxatuaren ekuazioa sistema baten moduan
+Menpeko aldagaia x eta aldagai independentea � bada, orduan ekuazioa ondokoa
+dugu:
+F (x)
+xx + �2x = .
+Sistema modura adierazteko ekuazioa xl = x eta x2 = x� egin behar dugu. Hori
+eginez,
+xxl = x2 ,
+F (xl)
+[imagenes/3gaia_img_3.jpg] 2 = -�2xl,
+idatzi ahal izango dugu, eta hori izango da gure sistema.
+[imagenes/3gaia_img_4.jpg]
+**** 3.. Ordena-beheratzea ****
+Goi-ordenako ekuazioak ebazteko prozedura orokor
+gutxi dago. Haien artean ordena beheratzen saiatzea dago. Kasu berezi batzutan
+hori modu sistematikoan egin daiteke.
+Menpeko aldagai gabeko ekuazioak
+' ''
+Demagun F (x, y , y ,..., y(n)) = O moduko ekuazioa dugula. Kasu honetan
+menpeko aldagai berria hartzeak komeni
+' '' n
+du: u _ y , u '_ y ,..., u(n-l)_ y. Horrek lehen ordenako ekuazio diferentzial
+bat ematen digu:
+F (x, u, u ',..., u(n-l))=O.
+Jo dezagun cc(x, u, Cl ,..., Cn-l) = O ekuazio berriaren soluzio orokorra dela
+'
+Orduan, u = y aldaketa deseginez, lehen ordenako ekuazio diferentzialen familia
+bat dugu:
+'
+cc(x, y , Cl,..., Cn-l)=O, Hura askatuz jatorrizko ekuazioaren soluzio orokorra
+lortzen da: c(x, y, Cl ,..., Cn ) = O.
+[imagenes/3gaia_img_5.jpg]
+Gainera F (x, u, u ',..., u(n-l)) = O ekuazioaren soluzio singular bakoitzak
+lehen ordenako ekuazio diferentzial ematen digu. Hura ebatziz jatorrizko
+ekuazioaren soluzio singularrak lortzen dira.
+'
+Jakina, y aldagaiaz gain, y ,..., y(m-l)deribatuak ere falta badira, u _
+ymaldaketa eginez, jatorrizko ekuazioa n -� ordenakoa bihurtzen da.
+2 '
+Ikus dezagun adibidez y ''2= 24Oxy ekuazioa.
+'
+Bigarren ordenakoa denez � = y egingo dugu, eta
+horrek u '= ±24Ox� ematen du, beraz,
+duju = ±24Oxdx integrala egin behar dugu. Horren emaitza
+4u = ±24O(x2+ Cl )= ± 15 � 16(x2+ Cl ) dugu, eta aldaketa deseginez ondoko
+ekuaziora iristen gara:
+' 2
+y = 15(x+ Cl)2. Azkenik, aurrekoa garatuz eta berriro integratuz, y =3x + 1OClx
++ 15Clx + C2 soluzio orokorra ondorioztatzen dugu.
+'
+Bestalde, y = O soluzio singularra ezin dugu ahaztu, harek y = C kurba-familia
+ematen digu.
+[imagenes/3gaia_img_6.jpg]
+**** 3.3 ariketa ****
+Partikula puntual bat zuzen bertikal batean zehar ari da jausten jariakin
+batean grabitatearen eraginpean. Marruskadura abiaduraren proportzionala bada,
+zein da abiadura aldiune guztietan? Froga ezazu muga-abiadura batera iristen
+dela.
+Partikularen higidura deskribatzen duen ekuazioa �zx= -�g -kzxda. Orduan, v =
+zxaldaketa komeni zaigu eta ekuazioa honelaxe geratzen da: vx= -g -kvj�.
+Integrazio hutsez
+g� -Tt
+m
+v = -+ Ce
+k
+lortzen da eta argi dago abiadura limite bat dagoela:
+lim v = -g�jk.
+t-=
+Bukatzeko zx= v aldaketa deseginez eta integratuz
+(T)
+m
+m
+z = -g� + Celortzen da.
+T
+Ekuazio autonomoak
+Gure ekuazioaren aldagai independentea ez bada
+' ''
+agertzen autonomoa da: F(y, y , y ,..., y(n))=O. Orduan c(x, y) soluzioa bada,
+c(x -xo , y) soluzioa da ere edozen xo -rako. Horregatik hautazko
+konstanteetako bat jatorriari dagokio eta soluzio orokorra honela adieraz
+daiteke:
+c(x -xo, y, Cl,..., Cn-l)=O.
+Ordena beheratzeko y aldagai independente berritzat
+'
+hartzen da eta gainera u _ y egiten da, eta beraz: du
+''
+y = u
+dy
+d2u du 2
+''' 2
+y = u +u
+dy2dy
+.
+.
+.
+dn-ln-l
+u du
+(n) n-l
+y= u + ... +u (1)
+dyn-ldy
+[imagenes/3gaia_img_7.jpg]
+Aurrekoa erlazioak jatorrizko ekuazioan ordezkatuz n -1 ordenako ekuazio berria
+lortuko da:
+F(y, u, dujdy, d2ujdy2,..., dn-lujdyn-l)=O.
+Ekuazio horren soluzio orokorra
+'
+[imagenes/3gaia_img_8.jpg] (y, u, Cl,..., Cn-l)=O, bada, bertan u = y eginez
+beste ekuazio diferentzial bat lortzen da. Hura askatuz jatorrizko ekuazioaren
+soluzio orokorra lortzen da: c(x -xo, y, Cl,..., Cn-l ) = O.
+Baina aurrera jo baino lehenago notazioa arinduko dugu pixka bat. Horretarako
+xud2,... egingo dugu eta
+u = dujdy, xujdy2beraz:
+''
+y = uu
+x
+''' 22
+y = uu uu
+x+x.
+.
+.
+(n)(n-l)n-l n-l
+y= uu + ... +xuu (2)
+[imagenes/3gaia_img_9.jpg]
+**** 3.. ariketa ****
+'' '
+Ebatzi y = (2y + 1)y ekuazioa.
+'
+Autonomoa denez, u _ y egingo dugu.
+''
+Lehen ikusitakoaren arabera, y = uuxizango dugu gainera. Beraz, ebatzi behar
+dugun ekuazio berria hauxe da:
+x uu = (2y + 1)u.
+J
+Argi eta garbi, u = (2y + 1)dy = y2+ y + Cl (dena den bidean utzi dugu, u = O
+soluzioa).
+' 2
+Aldaketa deseginez, y = y+ y + C ekuazioa geratzen zaigu eta hura integratuz
+ondokoa lortzen da [Spiegel, 263 orr., 1.12.1]:
+2 1+2y
+aretan = x + C2.
+4Cl -14Cl -1
+Ekuazio x-rekiko ekidimentsionalak
+Ekuazio horiek x -�x eskala-aldaketa guztiekiko aldaezinak dira, hau da,
+' '' (n)
+F (�x, y, � -ly , � -2y ,..., � -ny)=
+' ''
+F (x, y, y , y ,..., y(n))=O.
+Horrelako ekuazioak autonomo bihur daitezen x -� _ ln x aldaketa egiten da.
+Horrela
+t
+x = e 1
+'
+y = yx
+x
+1
+''
+y = (xy -yx)
+2
+x
+.
+.
+.
+[
+y(n) = 1 xn dn y d�+ . . . + (-1)n-l(n -1)! dy d�.
+[imagenes/3gaia_img_10.jpg]
+' ''
+Ikus daiteke F (x, y, y , y ,... ) = O jatorrizko ekuazioa
+F (1, y, yx, yx-yx,... ) = O ekuazioaren baliokidea dela. Azken hau ekuazioa
+autonomoa denez, haren soluzioan u _ yxaldaketa egitea komeni du. Lehen
+ordenako ekuazio berri bat lortzen da eta hura askatuz bukatzen da ebazpena.
+**** 3.5 ariketa ****
+'' '
+Ebatzi xy = yy ekuazioa.
+' ''
+Kontuan izanik y = yxjx eta y = (xy -yx)jx2, ondoko moduan geratzen zaigu
+ekuazioa:
+1 yyx
+x (xy -yx) = .
+2
+xx
+Hura xy = (1 + y)xy ekuazio autonomoaren baliokidea da (baina amaieran kontuan
+izan agian y = O galdu dela). Baina, ekuazio honen emaitza �ezaguna� zaigu, y -
+2y eta � -x eginez 3.4 ariketan ebatzi dugun ekuazio berbera lortzen dugu .
+Bilatutako emaitza ariketa horretan lortutako soluzioan 2y -y eta x -�
+transformazioak eginez lortzen da. Ondorioz, problema berri honen soluzio
+orokorra hauxe da:
+2 1+ y
+aretan = � + C2.
+4Cl -14Cl -1
+Horretaz gain, y = C soluzio singularra existitzen da ere.
+[imagenes/3gaia_img_11.jpg]
+Ekuazio y-rekiko ekidimentsionalak
+Ekuazio horiek y -�y eskala aldaketa guztiekiko aldaezinak dira, hau da,
+' ''
+F (x, �y, �y , �y ,..., �y(n))=
+' ''
+F (x, y, y , y ,..., y(n))=O.
+'
+Horrelako ekuazioak autonomo bihur daitezen u = y jy aldaketa egiten da. Orduan
+y ' y '' = =     yu, y(u ' + u 2 ),
+y(n)     . . . = y(u(n-l) + . . . + u n ).
+' ''
+Ikus daiteke F (x, y, y , y ,... ) = O jatorrizko ekuazioa
+'' 2
+F (x, 1, u, u , u + u... ) = O ekuazioaren baliokidea
+dela. Hura ebatzi eta gero, u = y 'jy aldaketa deseginez lehen ordenako ekuazio
+berri bat lortzen da eta hura askatuz bukatzen da ebazpena.
+[imagenes/3gaia_img_12.jpg]
+**** 3.6 ariketa ****
+'' '2
+Ebatzi yy = y ekuazioa.
+'
+Bigarren ordenako ekuazioa dugunez, y = yu eta
+'' '
+y = y(u + u 2) erabili behar dugu.
+'
+Hala eginez y(y(u + u2)) = (yu)2lortzen da, eta y
+faktoreak sinplifkatzean y = O galtzen da.
+'
+Ebatzi beharreko ekuazio berria u = O dugu, eta
+berehala integratzen da u = Cl emanez.
+'
+Hasierako aldaketa desegitean y = Cl y lortzen dugu,
+eta azkenik soluzio orokorra hauxe dugu:
+�l��2
+ln y = Clx + C2, y = e .
+Bestalde, y = O soluzioa ez da benetan galdu C2 --0 limitean berreskuratzen
+baita eta orduan soluzio partikularra baino ez da.
+Lehen integralak
+Demagun ekuazioa deribatu zehatza dela, hau da,
+''
+F (x, y, y ,..., y(n))= d� (x, y, y ,..., y(n-l))=O.
+dx
+Orduan
+'
+G(x, y, y ,..., y(n-l))= C
+koadraturak lehen integral bat ematen digu. Koadratura hori n -1 ordenako
+ekuazio diferentziala da, noski, eta hori izango da ebatzi beharreko ekuazio
+berria.
+[imagenes/3gaia_img_13.jpg]
+3.7 ariketa
+''
+Askatu yy + y '2=O
+Kasu honetan ikuskapenaz hauxe ondorioztatzen da:
+d
+'' '2
+yy + y =(yy ')=O.
+dx
+'
+Beraz yy = Cl lehen integrala da.
+Azkenik, integrazio hutsez
+y 2=2Clx + C2
+lortzen da.
+Batzutan, zehatza ez den jatorrizko ekuazio bat, forma zehatzera ekarri daiteke
+faktore integratzaile edo transformazio egokiaren bidez.
+[imagenes/3gaia_img_14.jpg]
+**** 3.7 ariketa ****
+'' '2
+Egiaztatu yy -y ekuazioa y2-rekin zatituz zehatz bihurtzen dela. Soluzio
+singularrik dago?
+Ikuskapenaz ondokoa asmatzen da:
+'' '2 '
+yy -y dy
+= =O.
+y2dx y
+Orduan, y 'jy = Cl lehen integrala dugu, eta hura askatuz ln y = Clx + C2,
+�l��2
+y = e
+soluzio orokorra lortzen da. Printzipioz y = O soluzioa galduta egon liteke,
+baina C2 --0 limitean berreskuratzen denez, orokorraren barne dago.
+**** 3.5 Funtzioen menpekotasun lineala ****
+Edozein ekuazio lineal homogeneoaren soluzioen
+multzoa espazio bektoriala da. Funtzioen ohiko batuketak eta biderketak
+induzitzen dute estruktura hori. Espazio hura funtio erregularren infnitu
+dimentsioko espazioaren aspiespazioa da.
+Erabil dezagun yT (x) notazioa edozein soluzio adierazteko.
+Dakigunez yT (x) funtzio guztiak gure ekuazio lineal homogeneoaren soluzioa
+badira, orduan
+L�
+y = TlCT yT (x) soluzioa da ere, baina ikusiko dugunez, soluzio orokorra era
+sinpleagoan adieraz daiteke.
+[imagenes/3gaia_img_15.jpg]
+Funtzioen defnizio tartea 1 bada
+{yT (x): k =1,..., n; x E 1}
+funtzio erregularrak linealki independenteak izango dira baldin eta soilik
+baldin
+L
+CT yT (x)=O (\x E 1) T l
+erlazioa Cl = C2 = C = ... = Cn = O kasuan baino ez bada betetzen.
+2 ' n
+Adibidez, 1, x, x,...xberreturen multzoa linealki independentea da edozein
+tartetan.
+n
+Izan ere, Cl + C2x + Cx2+ ... + Cnx=O polinomioaren koefziente guztiak ez
+badira nuluak polinomioa ez da nulua bere erroetan baino . Baina erroen kopurua
+gehienez n delako, erroek ezin dute tarte oso bat bete.
+Funztioen arteko menpekotasun lineala aztertzeko wronskiarra erabilgarria da.
+Haren defnizioa, {yT (x): k =1,..., n; x E 1} funtzio-multzorako hauxe da:
+ yl(x) y2(x) ... yn(x)
+'' '
+ yl(x) y2(x) ... yn(x)
+W[yl,..., yn]= .
+.
+ ... ... . ...
+(n-l) (n-l) (n-l)
+y(x) y2(x) ... y(x)
+l n
+[imagenes/3gaia_img_16.jpg]
+Bestalde, yT (x): k =1,..., n� x E � multzoa linealki menpekoa bada, posiblea
+da Cl, C2,..., Cn kontansteetako multzo ez identikoki nulua aurkitzea
+L
+zeinetarako TlCT yT (x) = O betetzen den tartearen
+edozein x punturako. Baina aurreko konbinazio linealaren lehen n -1 lehen
+deribatuak tarte osoan nuluak izango dira ere, beraz:
+Clyl(x)n+ C2y2(x)+ ... + Cn yn(x)=O,
+'' '
+Clyl(x)+ C2y2(x)+ ... + Cn yn(x)=O,
+. . . .
+. . . .
+. . . .,
+(n-l) (n-l) (n-l)
+Cly(x)+ C2y(x)+ ... + Cn y(x)=O.
+l2 n
+Aurreko ekuazio-sistemak x puntu bakoitzean CT ezezagunak dituen sistema lineal
+homogeneoa defnitzen du.
+Menpekotasun linealaren hipotesiagatik sistema horren
+soluzioa ez nulua da.
+Beraz, tarteko puntu guztietan sistemaren
+determinantea, wronskiarra alegia, nulua izango da.
+Gure ondorioa nagusia hauxe da: funtzio-multzo linealki menpeko baten
+wronskiarra nulua da defnizio-tarteko puntu guztietan.
+Horregatik, wronskiarra identikoki nulua ez bada, funtzioak linealki
+independenteak dira.
+[imagenes/3gaia_img_17.jpg]
+Laburtuz Menpekotasun lineala = W = O tarte osoan W =O = menpekotasun lineala
+(soluzio ez nulua baina tartean zatika defnituta) W = independentzia lineala
+=O
+3.10 ariketa
+Frogatu 1, x, x2,..., xnlinealki independenteak direla haien wronksiarra
+erabiliz
+Berehala kalkulatzen da ondokoa:
+2 n
+1 xxx ... x
+2 n-l
+O 12x 3x... nx
+n-2
+W =O O 26x ... n(n -1)x , ... ... ... ... ... ... OOOO ... n!
+baina W =1 � 2 � 6 ...� n!
+= O eta orduan indepedentzia lineala dago.
+[imagenes/3gaia_img_18.jpg]
+(Otsaila-03) azterketako kuestioa
+Eztabaidatu x -2, x -x eta 6x -3x -6 funtzioak linealki independenteak
+direnentz lerro errealean.
+Erantzuteko aztertu ahal dugu
+Cl(x -2) + C2(x -x)+ C (6x -3x -6) = O
+konbinazio linealaren jokaera lerro errealeko hiru puntutan. Adibidez, x = O, x
+= 2, x = -1 eta puntuek ondoko sistema ematen digute:
+-2Cl -6C =O,
+6C2 + 36C =O,
+-3Cl -4C2 -6C =O.
+Bigarrenak C2 = -6C ematen digu, eta hirugarrenean ordezkatuz -3Cl -3C2 = O
+ondorioztatzen da, hau da, Cl = -C2. Lehenengoak, berriz 2Cl = -6C ematen digu,
+baina aurreko emaitzak erabiliz, 2Cl = C2 bilakatzen da. Lehendik Cl = -C2
+erlazioa genuenez, Cl =O= C2 = C ondorioztatzen da, eta ez dago menpekotasun
+linealik.
+[imagenes/3gaia_img_19.jpg]
+3.6 Ekuazio diferentzial linealak
+Defnizioz ekuazio linealek ondoko itxura dute:
+(n)(n-l) '
+�o(x)y+ �l(x)y+ ... + �n-l(x)y + �ny = b(x).
+Ekuazioa �o-rekin zatitzean defnizio-tartea baino ez da aldatzen. Orokorrean �o
+= 1 joko dugu aurrerantzean. Gainera, �l, �2,..., �n eta b funtzioak I tartean
+jarraituak direla joko dugu beti.
+b = O dugunean ekuazioa homogeneoa da eta ez homogeneoa kontrako kasuan
+Noiz edo noiz ondoko bi eragileek eskeintzen duten notazio konpaktuagoa
+erabiliko dugu:
+O _ d,
+dx
+L _ On+ �l(x)On-l+ ... + �n-l(x)O + �n(x).
+Horrela, L eragaileak 1 tartean defnitutako f (x) funtzio baten gainean
+eragiten duenean ondokoa izango dugu:
+(Lf )(x)= f (n)(x)+ �l(x)f (n-l)(x)+ ... +
+�n-l(x)f '(x)+ �nf (x).
+Ondorioz, ekuazio lineal ez homogeneoa honelaxe adieraz daiteke: Ly = b.
+Gainera, eragile hura lineala da, jakina:
+L(Clfl + C2f2)= ClLfl + C2Lf2
+edozein Cl eta C2 konstanteetarako.
+[imagenes/3gaia_img_20.jpg]
+Ariketatxoak
+Idatz ezazu � maiztasuneko osziladore harmonikoaren ekuazioa O eragilea
+erabiliz.
+Ohiko notazioan ekuazioa hauxe da:
+[imagenes/3gaia_img_21.jpg] + �2x =O,
+beraz, O eragilea erabiliz honelaxe geratuko da: Horrek esan nahi du L = O2+
+�2izango dugula ere, eta � horretarako jatorrizko ekuazioa Lx = O moduan idatzi
+ahal izango dugu.
+**** 3.7 Ekuazio lineal homogeneoak ****
+Ekuazio lineal homogeneorako hauxe dugu:
+Ly =O.
+Gainera, gainezarmenaren printzipioa eta � eragilearen linealtasuna baliokideak
+dira eta, yT -ren bidez ekuazio homogeneoaren soluzioak adierazten baditugu
+hauxe dugu:
+LL
+LyT =O = LCT yT = CT LyT =O. T l T l
+Aurreko emaitzak ekuazio lineal homogeneoaran soluzioek osaturiko multzoa
+espazio bektoriala dela frogatzen du. Haren dimentsioa asmatzeko wronskiarra
+aztertu beharko dugu.
+[imagenes/3gaia_img_22.jpg]
+*** 3.1 teorema ***
+Kontsidera ditzagun 1 tartean defnituriko n ordenako ekuazio lineal
+homogeneoaren n soluzio: LyT = O. Hurrengo hiru baieztapenak baliokideak dira:
+   1. yT funtzioak linealki menpekoak dira 1 tartean.
+   2. yT funtzioen wronskiarra identikoki nulua da 1 tarte osoan.
+   3. yT funtzioen wronskiarra nulua da xo E 1 puntu batean.
+Bestalde, n ordenako ekuazio homogeneoaren soluzio-espazioaren dimentsioa ezin
+da n baino txikiagoa izan. Hori ikusteko existentzia eta bakartasunaren teorema
+erabili ahal da. Horrek esaten du
+yl(xo)=1
+'
+yl(xo)=O .
+.
+.
+(n-l)
+yl(xo)=O
+hastapen-baldintzen problemaren soluzioa bakarra dela. Gainera, antzeko n
+hastapen-baldintzen problema eraiki dezakegu:
+yl(xo)=1 y2(xo)=O ... yn(xo)=O,
+y ' l(xo) = O     y ' 2(xo) = 1     . . . y ' n(xo) = O,
+.                 .                 .
+.                 .                 .
+.                 .                 .
+y(n-l) l (xo) = O y(n-l) 2 (xo) = O . . . y(n-l) n (xo) = 1.
+[imagenes/3gaia_img_23.jpg]
+Existentzia eta bakartasunagatik hastapen-baldintzen
+problema horien soluzioak desberdinak dira haien artean. Horretaz gain, argi
+dago haien wronskiarra ez dela nulua.
+Gure formulazioari esker ekuazio lineal homogeneoaren n soluzio linealki
+independente �eraiki� dugu, baina horrelako eraikuntzen kopurua infnitua da
+(adibidez, 1 bakoitza C = O hautazko konstante batez ordezka daiteke).
+Ondorio nagusia hauxe da: n ordenako ekuazio lineal homogeneoaren n soluzio
+linealki independentek osaturiko multzoari oinarrizko soluzio-sistema deritzo.
+*** 3.2 teorema ***
+n ordenako ekuazio lineal homogeneoaren n soluzio linealki independente (yT )
+aukeratuz gero, beste edozein soluzio era bakarrean adieraz daiteke aipaturiko
+soluzio independenteen koefziente konstanteetako konbinazio baten bidez.
+''
+Adibidez, y + �2y = O ekuaziorako {eos �x, sin �x}oinarrizko sistema dugu
+(haren wronskiarra � da eta soluzio orokorra y = A eos �x + � sin �x dugu,
+baina beste infnitu eratan eman daiteke.
+[imagenes/3gaia_img_24.jpg]
+**** 3.13 ariketa ****
+-''' '
+Egiaztatu {1, e , e } multzoa y -y = O ekuazioaren oinarrizko sistema dela.
+Aurkitu beste oinarrizko sistema bat. Idatzi soluzio orokorra bi modu
+desberdinetara eta egiaztatu bien arteko baliokidetasuna.
+Oinarrizko sistemaren horren wronskiarra hauxe da:
+-
+1 ee
+-
+W =O e -e =2.
+-
+O ee
+Orduan ez da nulua eta sistema linealki independentea. Orain ikusi behar dugu
+funtzio horien hautazko konbinazio lineala ekuazioaren soluzioa dela:
+-'
+y = A + �e + Ce, y = �e -Ce
+'' -''' -'
+y = �e + Ce = y, y = �e -Ce = y .
+-
+Beraz, soluzioa bada, eta {1, e , e } ekuazio horren
+oinarrizko sistema dela egiaztatu dugu.
+Ikuskapenaz {1, sinh x, eosh x} soluzio multzoa lortzen
+da. Haren wronskiarra hauxe da:
+1 sinh x eosh x W = O eosh x sinh x = eosh2x -sinh2x =1. O sinh x eosh x
+Sistema berri hau eta lehengoaren arteko
+baliokidetasuna argi dago:
+e + ee -e
+sinh x = , eosh x = .
+22
+[imagenes/3gaia_img_25.jpg]
+Azter dezagun sakonago oinarrizko-sistemen eta ekuazio linealen arteko lotura.
+Oinarrizko sistema bakoitza ekuazio lineal homogeneo
+bakarrari dagokio (ekuazioan �o = 1 bada behintzat). Jo dezagun n funtzioek
+osaturiko multzoa Ll eta L2 eragile linealen oinarrizko sistema dela, hau da,
+n (n-l)'
+LlyT = yT+�l(x)y+...+�n-l(x)y (x)+�n(x)y =O,
+n (n-l)
+L2yT = yT+c�l(x)y+ ... +c�n-l(x)y '(x)+c�n y =O.
+Orduan multzo hori Ll -L2 eragilearen oinarrizko sistema da ere: LlyT -L2yT =
+(Ll -L2)yT =O. Baina, Ll -L2 eragilearen ordena n -1 da:
+n  n
+ (n-l)
+(Ll -L2)yT =(y - yT)+(�l (x) -�cl(x))y+ ... +
+T
+(�n-l(x) -c�n-l(x))y '(x)+(�n (x) -c�n (x))y =O.
+Orduan n -1 ordenako Ll -L2 eragile berri honek onartzen du n dimentsioko
+oinarrizko-sistema, eta hori ezinezkoa denez Ll -L2 eragile nulua izan behar
+da, hau da, Ll = L2 derrigorrez.
+Oinarrizko sistema batetik hasita, errazki eraiki daiteke
+dagokion ekuazioa. Izan ere, sistema hura {yl,..., yn} bada, ekuazioaren beste
+edozein y soluzio horien konbinazio lineala izango da. Beraz, yl,..., yn , y
+sistema linealki menpekoa izango da, eta orduan W [yl ,..., yn , y] = O
+betetzen da. Hain zuzen ere W [yl ,..., yn , y] = O adierazpenak defnitzen duen
+ekuazioa lineal homogeneoa da y ezezagunerako eta yT soluzio independenteak
+onartzen digu. Ekuazio horretan y(n)izango da deribaturik altuena eta
+�o haren koefzientea. Ikus daiteke W [yl ,..., yn ]= �o = O betetzen dela.
+Ekuazio osoa �o-rekin zatituz aipaturiko soluzio sistemak onartzen duen ekuazio
+lineal homogeneo normalizatu bakarra lortuko dugu.
+[imagenes/3gaia_img_26.jpg]
+Adibidez, x eta x -llinealki independenteak dira jatorria ez duen edozein
+tartetan. Dagokien ekuazio lineal homogeneoa hauxe da:
+-l
+xx y
+-l -2 '
+W [x, x , y]= 1 -xy =
+-''
+O2xy
+'
+222 2 yy
+'' ' '' '
+-y -y + y = -y + y + =O.
+22
+xxxx xx
+Ekuazioa forma normalean idazteko
+-l
+W [x, x -l]= -2x funtzioarekin zatitu behar dugu:
+'
+yy
+''
+y ++ =O
+2
+xx
+.
+**** 3.1. ariketa ****
+Aurkitu {x, e } sistemari dagokion oinarrizko soluzio-sistema onartzen duen
+ekuazio lineal homogeneoa.
+Emaitza lortzeko ondoko wronskiarra planteatu behar
+dugu:
+xe y
+'' '''
+'
+W [x, e , y]= 1 ey = xe y +ey-xe y -ey =
+''
+O ey
+'' '
+e ((x -1)y -xy + y)=O. Beraz, ekuazioa hauxe da:
+'
+xy y
+''
+y -+ y,
+x -1 x -1
+eta x = 1 ez daukan edozein tartean defnituta dago.
+[imagenes/3gaia_img_27.jpg]
+Liouville-k (eta independenteki Abel eta Ostrogradski ere) wronksiarra puntu
+batetik bastera nola aldatzen den adierazten duen formula aurkitu zuen:
+-�l(�)��
+W (x)= W (xo)e o \x E 1 .
+Formula horren azpian �o = 1 hipotesia dago. Gainera, exponentziala ez nulua
+denez, argi ikusten da W puntu batean nulua izatea nahikoa dela defnizio-tarte
+osoan nulua izateko.
+Orokorrean ez dago ekuazio linealak ebazteko metodo zehatzik, baina soluzio
+partikular bat ezaguna bada lana erraztu egiten da.
+Jo dezagun yl dela ezagutzen dugun soluzio partikular hori. D'Alembert-en
+metodoaren arabera, ekuazioaren ordena beheratzen da
+y = yl udx
+aldagai aldaketa egiten bada.
+[imagenes/3gaia_img_28.jpg]
+Hori ulertzeko egin dezagun ondoko eraikuntza:
+�n {y = yl udx}
+''
+�n-l {y = y udx + ylu}
+l
+'' '' ''
+�n-2 {y = y udx +2ylu + ylu }
+l
+..
+..
+..
+(n)(n)(n-l) (n-l)}
+1 {y= yudx + nyu + ... + ylu
+ll
+Ekuazio horiek gehituz hauxe lortzen da:
+' (n-l)
+Ly =(Lyl) udx +(�n-lyl +�n-22yl+...+nyl)u+
+'
+(�n-2yl + ... )u + ... +(... + yl)u(n-l)=O.
+Aurreko adierazpena sinplifka daiteke Lyl = O kontuan hartuz. Izan ere,
+' (n-l)
+Ly =(�n-lyl + �n-22yl+ ... + nyl)u+
+' (n-l)
+(�n-2yl + ... )u + ... + ylu=
+'
+c�n(x)u +c�n-l(x)u + ... + ylu(n-l)=O.
+Orduan, aldagai-aldaketak murriztu du problema ordena baxuagoko ekuazio baten
+ebazpenera.
+[imagenes/3gaia_img_29.jpg]
+Soluzio partikular tipikoak
+Zer baldintza bete behar dute n ordenako ekuazio lineal homogeneo baten
+koefzienteek ondoko soluzio partikularra onartzeko: a) yl = x, b) yl = x2, e)
+-
+yl = e , d) yl = e . a) yl = x kasuan y(n)=O \n � 1, orduan
+(n)(n-l) '' '
+Ly = y+ �l(x)y+ ... + �n-2y + �n-ly + �ny = �n-l + �nx = O eta beraz baldintza
+�n-l = -�nx da, baina �m koefzienteak edonolakoak izan daitezke \n -1 > � > O.
+2
+b) yl = xkasuan y(n)=O \n � 2, orduan Ly =2�n-2 +2�n-lx + �nx2= O eta beraz
+baldintza 2(�n-2 + �n-lx)= -�nx da, baina �m koefzienteak edonolakoak izan
+daitezke \ n -2 � � � O.
+(n)
+e) yl = e kasuan y= y \n � O, orduan Ly = (1 + �l(x)+ ... + �n-2 + �n-l + �n)e
+= O, eta beraz baldintza (1 + �l(x)+ ... + �n-2 + �n-l + �n) = O dugu.
+-
+d) yl = e kasuan y(n)=(-1)ny \n � O, orduan Ly = (1 -�l(-1)(n-l)+ ... + �n-(-1)
++
+-
+�n-2(-1)2-�n-l + �n)e = O moduan geratzen da, eta beraz baldintza (1 -�l(-1)(n-
+l)+ ... + �n-(-1) + �n-2(-1)2-�n-l + �n) = O dugu.
+[imagenes/3gaia_img_30.jpg]
+Bigarren ordenako ekuazio linealaren orokorrerako, hau
+'' '
+da, y + �l(x)y + �o(x)y = O ekuaziorako, d'Alembert-en metodoak eskeintzen duen
+formula erabilgarria honela geratzen da:
+''
+(�l(x)yl(x)+2yl(x))u + yl(x)u =O.
+Azken ekuazioa banangarria da eta berehala integratzen da:
+du (�l(x)yl (x)+2yl(x))
+= -=
+uyl(x)
+2yl(x)
+-(�l(x)+ )dx =
+yl(x)
+ln u -ln C2 = -�l(x)dx -ln yl2.
+Hau da,
+J
+exp(-�l(x)dx)
+u = C2 .
+2
+y
+l
+J
+Baina y = yl udx gogoratuz hauxe dugu gure soluzioa:
+J
+exp(-�l(x)dx)
+y = Clyl + C2yl2dx.
+y
+l
+[imagenes/3gaia_img_31.jpg]
+**** 3.17 ariketa ****
+'' '
+Ebatzi (x2+ 1)y -2xy +2y = O ekuazioa.
+Ikuskapenaz y = x soluzioa asmatzen da. Bestalde, ekuazioa forma normalera
+ekarriz hauxe dugu:
+2x 2
+'' '
+y -y + y,
+x2+1 x2+1
+beraz, �l = -2xj(x2+ 1).
+Lehen lortutako formulan ordezkatuz
+J
+� 2
+exp( dx) y = Cl x + C2x 2�ldx =
+2
+x
+exp(ln((x2+ 1)) x2+1
+Clx + C2x = Clx + C2x =
+22
+xx
+22
+= Clx + C2(x -1) + C2 = Clx + C2x .
+moduan geratzen zaigu soluzio orokorra.
+Erabil ezazu d'Alembert-en metodoa eta yl = eTbesteak beste ondoko emaitza
+frogatzeko:
+'' ' TT
+y -2ky + k2y =O � y = Cle + C2xe .
+Ekuazio horretan �l = -2k beraz,
+J
+exp( 2kdx)
+y = Cle T+ C2e Tdx
+2T
+e
+TT TT
+y = Cle + C2e dx = Cle + C2e dx.
+Beraz,
+'' ' TT
+y -2ky + k2y =O = y = Cle + C2xe .
+frogatu dugu.
+[imagenes/3gaia_img_32.jpg]
+Bestalde eT, xeToinarrizko sistema da:
+TT
+exe
+W ==
+keTeT+ kxeT
+TT T 2T
+e (e + kxeT) -(keT)(xe )= e =O. Zer ekuaziori dagokie?
+TT
+exey
+T '
+W = keTe+ kxeTy =
+TT ''
+k2e2keT+ k2xey
+2T '' '
+e (y -2yk + k2y)=O.
+Eta lehen kalkulatuko 2x2 dimentsioko wronkiarraz zatituz ekuazioa forma
+normalean idazten dugu:
+'' '
+y -2yk + k2y =O
+Beraz,
+'' ' TT
+y -2ky + k2y =O � y = Cle + C2xe .
+frogatu dugu.
+Eta zer gertatzen da soluzio partikularrik ez bada ezagutzen? Orduan beste
+aldagai-aldaketa pare bat saia daiteke.
+[imagenes/3gaia_img_33.jpg]
+**** 3.21 ariketa ****
+J
+Egin x -_ Qdx aldagai-aldaketa
+'' ' ''
+y + P(x)y + Q(x)y = O, eta frogatu 2P� + � =O baldintza betetzen denean
+soluzioak aurkitzen ahalidetzen duela. Ebatzi hurrengo ekuazioa:
+'' '
+xy -y +4xy =O.
+Bestelako zein kasutan izan daiteke baliagarria aldagai-aldaketa hau?
+Kalkula ditzagun deribatuak katearen erregelaz:
+dy dy d�
+'
+y == = yxQ,
+dx d� dx d2yd (� )d� yx
+'' '
+y ==xQ=x� .
+y y� +
+dx2d� dx 2 � Horrekin ekuazioa honela geratzen da:
+'
+yQ x+ yx� + Pyx� + Qy =O.
+2 Q
+Orduan Q'+2PQ = O bada azkenik hauxe lortzen da:
+yx+ y =O.
+Bestalde
+Q' �
+'
+� + Pyx� = C�
+2 Q denean, ekuazioa
+yx+ Cyx+ y =O
+bihurtzen da, eta haren soluzioa �exponentzialen� bidez eman daiteke.
+'' '
+Orain ebatzi behar dugu xy -y +4xy = O ekuazioa. Kasu honetan P = -Qjx =4x2,2P�
+= -8x, eta Q'=8x, beraz, eztabaidatzen ari garen aldagai-aldaketaz xy + y = O
+bihurtzen zaigu. Beraz, soluzio orokorra y = A eos � + � sin � da, baina
+JJ
+2
+� =4x2dx =2xdx = xerabiliz, azkenean modu honetan eman dezakegu soluzio hura:
+y = A eos(x 2)+ � sin(x 2).
+[imagenes/3gaia_img_34.jpg]
+**** 3.22 ariketa ****
+Ondoko aldagai-aldaketari Liouville-ren transformazio deritzo:
+l
+-P()�
+y = ue 2 .
+'' '
+Hura erabiliz frogatu y + P(x)y + Q(x) = O ekuazioa ondoko forma normalera
+laburtzen dela:
+''
+u + f (x)u =O.
+Ondorioztatu soluzioak aurkitzen ahalbidetzen duela f (x) _ (4Q -P2-2P ')j4
+koefzientea konstantea denean.
+Behin deribatuz hauxe lortzen dugu:
+J
+l
+'-P()� '
+2
+y = e (u -u (1j2) P) .
+'' '
+Aurkitu xy +2y + xy = O ekuazioaren soluzio okorra.
+Eta berriro deribatuz hauxe:
+J
+'' -P()� ''
+y = e l2 (u -u 'P + (1j4)uP2-(1j2)uP ')
+Guztira, honela geratzen da gure ekuazioa:
+P2 '
+P
+''
+u -u + -Qu =O.
+42
+'' '
+Orain xy +2y + xy = O ebatzi behar dugu.
+' 2
+Kasu honetan P =2jx, P = -2jxeta Q = 1, orduan
+22
+P2j4+ P 'j2 -Q =1jx-1jx-1= -1, beraz
+''
+f (x) = 1 eta ekuazioa aldaketa horrekin u + u =O bihurtzen zaigu ekuazioa.
+Argi dago u = A eos x + � sin x dugula soluzio orokorra, beraz, guztira
+JJ
+ll
+-P()� -(2/ )�
+2
+y = ue = ue 2 =
+u 1
+=(A eos x + � sin x) .
+xx
+[imagenes/3gaia_img_35.jpg]
+3.8 Ekuazio lineal osoak
+Lineartasunagatik ondokoak betetzen dira: Lyl = bl, Ly2 = b2 = L(�lyl + �2y2 )=
+�lbl + �2b2,
+Lyl =O, Ly2 = b = L(yl + y2)= Lyl + Ly2 = b,
+Lyl = Ly2 = b = L(yl -y2 )= Lyl -Ly2 =O.
+Ondorioz, ekuazio lineal osoaren soluzio orokorra dagokion homogeneoaren
+soluzio orokorra eta osoaren edozein soluzio partikular batuz lortzen da.
+Hortaz, ekuazio lineal osoa ondoko bi urratsetan
+ebazten da: Aurkitu homogeneoaren n soluzio linealki independente eta eraiki
+soluzio orokorra haien bidez:
+n
+L
+Ly =O � y = CT yT . T l
+Aurkitu ekuazio osoaren soluzio partikular bat:
+Lyp = b.
+Ekuazio osoaren soluzio orokorra y = Ln T l CT yT + yp
+izango da:
+n
+L
+Lyp = b � y = CT yT + yp . T l
+[imagenes/3gaia_img_36.jpg]
+''' '
+Adibidez, kontsidera dezagun y -y = 1 ekuazio lineal osoa.
+** 3.13 ariketan ikusi genien horri dagokion ekuazio **
+-
+homogeneoaren soluzio orokorra y = A + �e + Ce dela. Kasu honetan osoaren
+soluzio partikularra y = -x dela ikuskapenaz ondorioztzatzen da. Orduan,
+soluzio orokorra hauxe da:
+-
+y = A + �e + Ce -x.
+3.23 ariketa
+''
+Aurkitu ondokoaren soluzio orokorra: y + y = O.
+Nahiko ezaguna denez, homogenoaren soluzio orokorra
+y = A eos x + � sin x da. Bestalde, ikuskpanez yp = x soluzio partikularra
+aurki daiteke.
+Orduan, ekuazio osoaren soluzio orokorra y = A eos x + � sin x + x da.
+[imagenes/3gaia_img_37.jpg]
+Soluzio orokorraren ebazpenean pausorik zailena soluzio
+partikularra topatzea da. Badaude hori egiteko metodo sistematikoak eta
+horietako bat aztertuko dugu.
+Konstanteen aldakuntzaren metodoa
+L
+n
+Jo dezagun ekuazio lineal homogeneo baten TlCT yT soluzio orokorra ezaguna
+dela.
+L
+n
+Osoaren soluzio partikularra yp = lgT (x)yT
+T modukoa dela joko dugu eta gT (x) zehaztutko ditugu ondoren deskribatuko
+dugun metodoaz.
+Hasteko, ondoko erlazioak bete daitezela eskatuko joko dugu:
+L
+'' ' n '
+glyl + g2y2 +... + gyn = lgTyT =O
+nT
+L
+'''' '' n ''
+gly + g2y +... + gy = lgTy =O
+l2 nn TT
+... .
+.
+. ... .
+. ..+. .
+L
+(n-2) (n-2) (n-2) n (n-2)
+''' '
+gly+g2y+... +gyn = lgy=O
+l2 nTTT ' (n-l) ' (n-l) (n-l) n (n-l)
+L
+''
+g +g +... +gy= y= b
+lyl2y2 nn T l gTT
+[imagenes/3gaia_img_38.jpg]
+Baldintza horiek erabiliz ondoko eraikuntza egin dezakegu:
+L
+n
+�n {yp = lgT yT }
+T
+LL
+' n ' n '
+�n-l {yp= TlgT yT+[ TlgTyT = O] }
+LL
+'' n '' n ''
+�n-2 {yp= TlgT yT+[ TlgTyT= O] }..
+..
+..
+[l LL
+(n-l) n (n-l) n ' (n-2)
+�l {y=+ =O }
+pT l gT yTT l gT yT
+[lLL
+(n) nn (n-l)
+''
+1 {yp = lgTyT (n)+lgTy= b}
+T TT
+Gai guztiak batuz hauxe lortzen dugu:
+n
+L
+Lyp = gT LyT + b, T l
+eta yT funtzioak soluzioak direnez Lyp = b geratzen
+L
+n
+zaigu eta yp = lgT (x)yT eraikuntza soluzio
+T
+partikular oinargarria dugu.
+Bestalde gT (x) funtzioen gainean ezarritako baldintzek
+sistema lineal bat osatzen dute. Haien determinantea, homogenoaren yT soluzioen
+wronskiarra da. Wronksiar hori ez nulua denez sistemaren soluzioa ez da
+tribiala eta gainera bakarra da:
+'
+gT(x)= f (x) = gT (x)= fT (x)dx + CT .
+Beraz, ondoko soluzioa lortzen da:
+n � n
+LL
+yp = fT (x)dx yT + CT yT ,
+T l T l
+eta n konstante aske dituenez, egiatan ekuazio osoaren soluzio orokorra da.
+[imagenes/3gaia_img_39.jpg]
+''
+Adibide moduan, azter dezagun berriro y -y =O ekuazioa.
+-
+Badakigu homogeneoaren soluzioa y = Cle + C2e dela.
+-
+Froga dezagun, beraz, yp = g(x)e + h(x)e moduko partikularra. Kasu honetan
+planteatu behar ditugu erlazio hauek:
+' '''
+gyl + h'y2 =O, gyl+ � 'y = b.
+2
+'' 2
+Hau da, ge + h'e =O, ge -� 'e = x. Errazki ondorioztatzen da g '= x2e -j2 eta
+2
+h'= -xe j2 direla, orduan
+-
+g = -1(x 2+2x + 2)e j2+ Cl,
+2 1
+2
+h = -(x -2x + 2)e + C2,
+2 betetzen da eta soluzio orokorra hauxe dugu:
+y = Cle + C2e --x 2-2.
+**** 3.2. ariketa ****
+''
+Aurkitu y + y =1j eos x ekuazioaren soluzio orokorra.
+Homogeneoaren soluzio orokorra y = Cl eos x + C2 sin x denez hauxe planteatu
+behar dugu: Hau da,
+'
+g eos x + h'sin x =O, -g 'sin x + � 'eos x =1j eos x. Modu honetan ere idaz
+ditzakegu erlazioak:
+'
+g eos x sin x + � 'sin2x =O,
+'
+-g eos x sin x + � 'eos x 2=1.
+'
+Horiek gehituz h'= 1 lortzen da, beraz, g = -tan x, eta h = x + Cl, g = log(eos
+x)+ C2. Guztira osoaren soluzio orokorra honela geratzen da:
+y = (log(eos x)+ C2) eos x +(x + Cl) sin x.
+[imagenes/3gaia_img_40.jpg]

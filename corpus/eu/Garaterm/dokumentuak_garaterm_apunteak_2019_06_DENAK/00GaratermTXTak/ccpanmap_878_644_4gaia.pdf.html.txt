@@ -1,0 +1,1655 @@
+
+
+
+
+1
+4.GAIA.  ESPAZIO BEKTORIALAK
+1.  Definizioa
+2.  Propietateak
+3.  Azpiespazio bektorialak
+4.  Konbinazio linealak
+5.  Dependentzia eta independentzia lineala
+6.  Oinarria eta dimentsioa
+7.  Oinarri-aldaketa
+8.  Azpiespazio bektorialen arteko ebaketa eta batuketa
+
+2
+4.GAIA.  ESPAZIO BEKTORIALAK
+Matematikan, beraien artean batu egin daitezkeen edo zenbaki errealekin biderka
+daitezke objektu matematiko askoren adibide aurki ditzakegu. Nabaria da zenbaki
+errealek guzti hau betetzen dutela. Baina adibide gehiago ere badaude; besteak
+beste,
+matrizeak,funtzioak, zenbaki konplexuak, planoko eta espazioko bektoreak. Gai
+honetan
+ideia hau jeneralizatuko dugu Aljebra Linealaren egitura garrantzitsuena
+sartuz: espazio
+bektoriala.
+Multzo desberdinetan antzeko egiturak agertzen direnean, hauek axiomatizatzea
+eta sortzen den izate berriari izen bat ematea komeni da.Abantaila handiena
+honako hau
+da: egitura hau aztertzen badugu, bere barnean sartzen diren egitura guztiak
+aztertuta
+geratzen dira.
+Laburtuz, espazio bektorial bat edozein elementuren multzo bat da, non batuketa
+eta zenbaki baten bidezko biderketa deitzen diren eragiketak egin daitezkeen.
+ Espazio
+bektorialaren kontzeptua definitzerakoan ez dugu zehazten elementuen izaera
+ezta
+beraien arteko eragiketak nola egiten diren ere, baina espazio bektorialaren
+axiomatzat
+kontsideratuko ditugun propietate batzuk betetzea exijituko dugu.
+Goazen, bada, espazio bektorial delako egitura eta berari dagozkion
+propietateak
+ikustera.
+1. DEFINIZIOA
+Izan bedi  K gorputz trukakor bat. Adibidez, K = 
+R edo  K = C.
+Izan bedi V multzo bat non V 
+≠ φ den. V multzoan VxV 
++
+→  V barne-eragiketa
+bat eta  K.V 
+•
+→  V kanpo-eragiketa bat definitzen dira. Orduan, V  K gainean espazio
+bektoriala edo  K gorputzaren gaineko espazio bektoriala dela esango dugu,
+ondoko
+baldintzak betetzen direnean:
+I) (V,+) Talde abeldarra da.
+1.  Elkarkorra:  
+(
+)
+∈
+∀
++
++
+=
++
++
+z
+,
+y
+,
+x
+)
+z
+y
+(
+x
+z
+y
+x
+V
+2.  Trukakorra:  
+x
+y
+y
+x
++
+=
++
+     
+∈
+∀ y
+,
+x
+ V
+3.  Elementu neutroa:   
+∃
+∈
+∀
+V
+x
+! 
+x
+x
+0
+0
+x
+/
+V
+0
+=
++
+=
++
+∈
+
+3
+4.  Aurkako elementua:   
+( )
+0
+x
+)
+x
+(
+x
+x
+/
+V
+x
+V
+x
+=
++
+−
+=
+−
++
+∈
+−
+∃
+∈
+∀
+II) Kanpo-biderketarekiko ondoko propietateak betetzen dira:
+1. 
+V
+y
+,
+x
+,
+K
+y
+.
+x
+.
+)
+y
+x
+.(
+∈
+∀
+∈
+α
+∀
+α
++
+α
+=
++
+α
+2. 
+V
+x
+,
+K
+,
+x
+.
+x
+.
+x
+).
+(
+∈
+∀
+∈
+β
+α
+∀
+β
++
+α
+=
+β
++
+α
+3. 
+V
+x
+,
+K
+,
+x
+).
+.
+(
+)
+x
+.
+.(
+∈
+∀
+∈
+β
+α
+∀
+β
+α
+=
+β
+α
+4.  1K.
+V
+x
+x
+x
+∈
+∀
+=
+ non 1K  K-ren unitate elementua den (t.1=1.t =t 
+∀ t∈K ).
+V espazio bektorialeko elementuei  bektoreak  esaten zaie, eta  K gorputzeko
+elementuei eskalarrak.
+Baldin K = R, V espazio bektorial erreala dela esango dugu eta K = C denean, V
+espazio bektorial konplexua dela esango dugu.
+Adibideak:
+1.  Planoko bektore geometrikoen multzoa eta espazioko bektore geometrikoen
+multzoa
+batuketa eta zenbaki erreal baten bidezko biderketarekin espazio bektorial
+errealak
+dira.
+2.  m  errenkada eta n zutabe dituzten matrize guztien Mmxn(K) multzoa ,
+elementuak  K
+gorputzeko elementuak izanik, K gorputzaren gaineko espazio bektoriala da.
+3.  R
+ multzoa R gorputzaren gaineko espazio bektoriala da.
+4.  C multzoa R
+ gorputzaren gaineko eta C gorputzaren gaineko espazio bektoriala da.
+5.  Izan bedi  Rn[x], n baino txikiagoko edo maila berdineko x ezezaguneko
+polinomioen multzoa, koefizienteak  R-n daudelarik. Orduan,  Rn
+[x]  R  gorputzaren
+gaineko espazio bektoriala da.
+6.  R
+n = { (x
+1,x2,...,xn) / xi
+ 
+∈R, i = 1,2,...,n } multzoa ondoko eragiketekin  R
+gorputzaren gaineko espazio bektoriala da:
+(x1, x2, ..., xn) + (y1, y2, ..., yn) = (x1+y1, x2+y2, ..., xn+yn)
+α .(x
+1, x2, ..., xn) = (
+α x
+1, 
+α x
+2,..., 
+α x
+n)
+Jeneralean, K
+n   K  gorputzaren gaineko espazio bektoriala da.
+7.  [a,b] tartean definitutako funtzio erreal jarraituen C[a,b] multzoa, ondoko
+eragiketekin, 
+R gorputzaren gaineko espazio bektoriala da:
+(f+g)(x) = f(x) + g(x)    eta    (
+α .f)(x) =  α .f(x)
+
+4
+Baina badaude espazio bektorialaren axioma guztiak betetzen ez dituzten
+egiturak. Ikus
+dezagun zenbait adibide:
+1.  N zenbaki arrunten multzoan, zenbaki erreal baten eta zenbaki arrunt baten
+arteko
+biderkadura ez da beti zenbaki arrunta.
+2. 
+R ez da C gorputzaren gaineko espazio bektoriala.
+3.  Determinante nulua duten n ordenako matrize karratuen D multzoa ez da
+espazio
+bektoriala, D-n matrizeen batura barne-eragiketa ez delako.Adibidea:
+A = 
+
+
+
+
+0
+0
+0
+1
+ eta B = 
+
+
+
+
+1
+0
+0
+0
+  
+∈  D,  baina 
+B
+A
++  = 1 ≠ 0 beraz A + B  ∉ D
+4.  A.
+,
+b
+x
+=
+(
+∈
+b
+R
+n,  ≠
+b
+ 0), sistema ez homogeneo baten S(A, b ) soluzioen multzoa
+ez da espazio bektoriala, sistemaren edozein bi soluzioren batura sistemaren
+batura
+ez delako. Bestalde, sistema homogeneoa baldin bada, A.
+0
+x
+= , soluzioen multzoa
+espazio bektoriala da.
+2. PROPIETATEAK
+1) 
+0
+x
+.
+0
+,
+V
+x
+=
+∈
+∀
+2) 
+0
+x
+edo
+0
+0
+x
+.
+=
+=
+α
+⇒
+=
+α
+3) 
+0
+0
+.
+,
+K
+=
+α
+∈
+α
+∀
+4) 
+)
+x
+.
+(
+)
+x
+.(
+,
+V
+x
+,
+K
+α
+−
+=
+−
+α
+∈
+∀
+∈
+α
+∀
+5) 
+)
+x
+.
+(
+x
+).
+(
+,
+V
+x
+,
+K
+α
+−
+=
+α
+−
+∈
+∀
+∈
+α
+∀
+6) 
+y
+,
+x
+.
+)
+y
+x
+.(
+,
+V
+y
+,
+x
+,
+K
+α
+−
+α
+=
+−
+α
+∈
+∀
+∈
+α
+∀
+7) 
+x
+.
+x
+.
+x
+).
+(
+,
+V
+x
+,
+K
+,
+β
+−
+α
+=
+β
+−
+α
+∈
+∀
+∈
+β
+α
+∀
+8) 
+β
+=
+α
+⇒
+≠
+β
+=
+α
+0
+x
+eta
+x
+.
+x
+.
+9) 
+y
+x
+0
+eta
+y
+.
+x
+.
+=
+⇒
+≠
+α
+α
+=
+α
+3. AZPIESPAZIO BEKTORIALAK
+Definizioa. Izan bitez V  K gainean espazio bektoriala eta honen F azpimultzoa.
+Baldin
+eta V-n definitutako eragiketekin F espazio bektoriala badugu, F  V-ren
+azpiespazio
+bektoriala dela esango dugu.
+
+5
+V-ren azpimultzo bat azpiespazioa dela frogatzeko, espazio bektorialaren
+propietate
+guztiak betetzen dituela frogatzea ez da beharrezkoa izango ondorengo
+karakterizazio-
+teorema erabiltzen badugu:
+Teorema. V-ren  F azpimultzoa  V-ren azpiespazio bektoriala dugu, baldin eta
+soilik
+baldin ondoko propietateak betetzen badira:
+a) 
+F
+y
+x
+F
+y
+,
+x
+∈
++
+⇒
+∈
+∀
+b) 
+F
+x
+.
+F
+x
+,
+K
+∈
+α
+⇒
+∈
+∀
+∈
+α
+∀
+Hau da,F azpiespazio bektoriala batuketarekiko eta biderketarekiko zati
+egonkorra da.
+Oharra.  0  bektore nulua azpiespazio bektorial guztietan dago, 
+α =0 denean b)
+aplikatuz 
+∈
+=
+α
+0
+x
+.
+F betetzen baita.
+Adibideak:
+1.  { 0 } eta V multzoak  V-ren azpiespazio bektorialak dira eta  azpiespazio
+ez-propio
+edo  nabari deritze.Aurrekoren bat ez den beste azpiespazio
+bektoriali  azpiespazio
+bektorial propio deritzo.
+2.  Jatorritik pasatzen diren zuzen guztien multzoa R
+3 espazio bektorialaren azpiespazio
+bektoriala da. Gauza bera geratzen da jatorritik pasatzen diren planoko zuzen
+guztien multzoarekin.
+3.  Izan bedi F = { (x,0,z) / x, z 
+∈R}⊂  R3, orduan F   R3-ren azpiespazio bektoriala da.
+4.  A. x  =  0  , 
+∈
+x
+R
+n, sistema homogeneoaren S(A) soluzioen multzoa  Rn-ren
+azpiespazio bektoriala da.
+5.  R2[x] polinomioen multzoa, koefiziente errealak dituzten polinomio guztien
+espazio
+bektorialaren azpiespazio bektoriala da.
+4.  KONBINAZIO LINEALAK
+Definizioa. Izan bedi V  K gainean espazio bektoriala. Baldin 
+∈
+x
+V bektorea ondoko
+erara idazterik badago: 
+∈
+α
+α
+α
+α
++
++
+α
++
+α
+=
+n
+2
+1
+n
+n
+2
+2
+1
+1
+,...,
+,
+non
+,
+x
+...
+x
+x
+x
+K diren,
+Orduan 
+∈
+x
+V bektorea  
+∈
+n
+2
+1
+x
+,...,
+x
+,
+x
+V bektoreen konbinazio lineala dela esaten da.
+Baldin A = { 
+n
+2
+1
+x
+,...,
+x
+,
+x
+} bada, C(A) = <
+n
+2
+1
+x
+,...,
+x
+,
+x
+>  ikurraren bidez A-ren
+bektoreen konbinazio lineala diren bektoreen multzoa adierazten dugu.(itxidura
+lineala)
+Proposizioa. Izan bitez 
+n
+2
+1
+x
+,...,
+x
+,
+x
+ 
+∈ V. Orduan, F = <
+n
+2
+1
+x
+,...,
+x
+,
+x
+>   V-ren
+azpiespazio bektoriala dela betetzen da eta A = { 
+n
+2
+1
+x
+,...,
+x
+,
+x
+} bektore-familiak
+
+6
+sorturiko azpiespazio bektoriala dela esaten da. A = { 
+n
+2
+1
+x
+,...,
+x
+,
+x
+}  F-ren sistema
+sortzaile bat dela esaten da.
+5.  DEPENDENTZIA ETA INDEPENDENTZIA LINEALA
+Izan bitez V espazio bektoriala eta 
+∈
+n
+2
+1
+x
+,...,
+x
+,
+x
+V.
+Definizioa. 
+∈
+n
+2
+1
+x
+,...,
+x
+,
+x
+V bektoreak  linealki dependenteak edo linealki mendekoak
+direla esaten da baldin eta ondokoa betetzen duten 
+i
+α ∈K eskalarrak existitzen badira,
+guztiak batera zero ez izanik:  
+0
+x
+...
+x
+x
+n
+n
+2
+2
+1
+1
+=
+α
++
++
+α
++
+α
+Kasu honetan, {
+n
+2
+1
+x
+,...,
+x
+,
+x
+} familia edo sistema lotua dela esaten da.
+Definizioa. 
+∈
+n
+2
+1
+x
+,...,
+x
+,
+x
+V bektoreak linealki dependenteak ez direnean  linealki
+independenteak direla esaten da. Beraz, 
+∈
+n
+2
+1
+x
+,...,
+x
+,
+x
+V bektoreak emanik, baldin eta
+0
+x
+...
+x
+x
+n
+n
+2
+2
+1
+1
+=
+α
++
++
+α
++
+α
+   
+⇒    
+0
+...
+n
+2
+1
+=
+α
+=
+=
+α
+=
+α
+ betetzen bada, orduan 
+n
+2
+1
+x
+,...,
+x
+,
+x
+ bektoreak linealki independenteak dira eta
+{
+n
+2
+1
+x
+,...,
+x
+,
+x
+} familia edo sistema askea dela esaten da.
+Proposizioa. 
+∈
+n
+2
+1
+x
+,...,
+x
+,
+x
+V bektoreak linealki dependenteak dira, baldin eta soilik
+baldin bektoreetatik bat gutxienez gainerakoen konbinazio lineala bada.
+Proposizioa. Baldin A = { 
+n
+2
+1
+x
+,...,
+x
+,
+x
+} V-ren sistema askea bada, orduan A-ren
+edozein azpisistema askea da.
+Proposizioa. Baldin A = { 
+n
+2
+1
+x
+,...,
+x
+,
+x
+} V-ren sistema lotua bada, orduan A barnean
+duen V-ren edozein G sistema (A
+⊂ G) lotua da.
+Proposizioa.  0  bektore nulua duen edozein bektore-sistema lotua da.
+0
+x
+.
+0
+...
+x
+.
+0
+x
+.
+a
+n
+2
+1
+=
++
++
++
+ betetzen da     
+∈
+∀a K eskalarretarako
+Adibideak.
+•  1, sin2x, cos2x  ∈ C[0,2π ]  funtzioak linealki dependenteak dira.
+•  { 1-x, 2+x+x2, 1+x2 }  ⊂  R
+2[x]   bektore-sistema askea da.
+•  { (1,2), (0,2), (1,1) } ⊂  R2   bektore-sistema ez da askea .
+Aurreko guztia kontuan hartuz,  matrize baten heina, linealki independenteak
+diren
+matrizearen errenkada-kopuru edo zutabe-kopuru maximoa bezala defini dezakegu.
+
+7
+Beraz, bektore-sistema bat askea den ikusteko nahikoa izango da bektoreek
+osatzen
+duten matrizearen heina aztertzea.
+6.  OINARRIA ETA DIMENTSIOA
+Izan bitez V  K gainean espazio bektoriala eta A
+⊂ V. Orduan,  V = <A> baldin
+bada, A-ri V-ren sistema sortzaile esaten zaio. V espazio bektoriala sorkuntza
+finitukoa
+edo dimentsio finitukoa  dela esango dugu, baldin eta soilik baldin sistema
+sortzaile
+finituren bat badu. Beraz, V dimentsio finituko espazio bektoriala  da, ondokoa
+betetzen
+duen  V-ren A = { 
+n
+2
+1
+x
+,...,
+x
+,
+x
+}  azpimultzo finituren bat existitzen bada:
+∈
+α
+α
+α
+∃
+∈
+∀
+n
+2
+1
+,...,
+,
+V
+x
+K
+  /  
+n
+n
+2
+2
+1
+1
+x
+...
+x
+x
+x
+α
++
++
+α
++
+α
+=
+Badaude dimentsio finitukoak ez diren espazio bektorialak, besteak beste C[a,b]
+eta polinomio guztien espazio bektoriala, baina hemendik aurrera dimentsio
+finituko
+espazio bektorialak soilik kontsideratuko ditugu.
+Definizioa. Baldin eta {
+n
+2
+1
+e
+,...,
+e
+,
+e
+} bektore-sistema V espazio bektorialaren sistema
+sortzailea eta askea bada, V-ren oinarria dela esango dugu.
+Adibideak.
+•  {
+)
+1
+,
+0
+(
+e
+),
+0
+,
+1
+(
+e
+2
+1
+=
+=
+} bektore-sistema R
+2-ren oinarri bat da.
+•  Jeneralean, {
+)
+1
+,
+0
+,...,
+0
+(
+e
+),...,
+0
+,...,
+0
+,
+1
+,
+0
+(
+e
+),
+0
+,...,
+0
+,
+1
+(
+e
+n
+2
+1
+=
+=
+=
+}  R
+n-ren oinarri bat
+da eta R
+n-ren oinarri kanonikoa esango diogu.
+•  {1, x, x2}  R
+2[x] espazio bektorialaren oinarri bat da.
+• 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1
+0
+0
+0
+,
+0
+1
+0
+0
+,
+0
+0
+1
+0
+,
+0
+0
+0
+1
+ 2 ordenako matrize karratuen M2(K) espazio
+bektorialaren oinarri bat da.
+Proposizioa. V-ren edozein bektore, oinarri baten bektoreen konbinazio lineal
+moduan
+idatzia izan daiteke eta konbinazio lineal hori bakarra da.
+Izan bedi B = {
+n
+2
+1
+e
+,...,
+e
+,
+e
+} V-ren oinarri bat, orduan
+∈
+α
+α
+α
+∃
+−
+∈
+∀
+n
+2
+1
+,...,
+,
+rentzat
+V
+x
+ K  bakarrak  /  
+n
+n
+2
+2
+1
+e
+...
+e
+e
+x
+1
+α
++
++
+α
++
+α
+=
+den.
+
+8
+Aurreko adierazpenean agertzen diren n eskalarrei, B
+oinarriarekiko  x  bektorearen
+koordenatuak  esaten zaie: 
+B
+n
+2
+1
+)
+,...,
+,
+(
+x
+α
+α
+α
+=
+.
+Proposizioa. { 0 } ez den dimentsio finituko edozein espazio bektorialek
+gutxienez
+oinarri bat du.
+Oinarriaren teorema. V-ren oinarri guztiek bektore-kopuru berbera dute.
+V espazio bektorialaren  edozein oinarriren bektore-kopuruari, V-
+ren  dimentsioa esaten
+zaio eta dim(V) ikurraren bidez adieraziko dugu.
+{ 0 } espazio bektorialaren dimentsioa 0 dela onartzen da.
+Adibideak.
+dim(R
+2) = 2,dim(Rn) = n, dim(R
+2[x]) = 3, dim(Rn[x]) = n+1, dim(M2(R)) = 4
+Proposizioa. Baldin dim(V) = n bada, orduan “m” elementu dituen V-ren edozein
+bektore-sistema, m>n izanik, lotua da.
+Proposizioa. Izan bitez n dimentsiotako V espazio bektoriala (dim(V)=n) eta “n”
+bektorez osatutako V-ren  A bektore-familia. Orduan:
+A   V-ren oinarria   
+⇔   A askea edo A  V-ren sistema sortzailea
+Definizioa. Izan bitez V espazio bektoriala eta H = { 
+n
+2
+1
+x
+,...,
+x
+,
+x
+}
+⊂ V. H-ren  heina,
+linealki independenteak diren familiaren bektore-kopuru handienari esaten zaio.
+Beraz,
+r(H) = dim<H>.
+Hemen matrize baten heina defini dezakegu: Matrize baten  heina, linealki
+independenteak diren matrizearen errenkada-kopuru edo zutabe-kopuru maximoa da.
+Froga daiteke matrizean linealki independente diren errenkada-kopuru maximoa
+eta
+zutabe-kopuru maximoa kopuru berbera direla.
+Izan bitez V espazio bektoriala eta  F
+⊂ V. Orduan, dim(F) = dim(V) – n  non
+“n”  F definitzen duten ekuazio linealki independenteen kopurua den.
+7.  OINARRI-ALDAKETA
+Atal honetan, bi oinarri desberdinekiko bektore baten koordenatuen arteko
+erlazioa aztertuko dugu.
+Izan bedi V “n” dimentsioko espazio bektorial bat, dim(V) = n.
+Izan bitez B = {
+n
+2
+1
+e
+,...,
+e
+,
+e
+} eta  B’ = {
+n
+2
+1
+u
+,...,
+u
+,
+u
+}  V-ren bi oinarri.
+Badakigu V-ren edozein bektore B oinarriaren bektoreen konbinazio lineal moduan
+eta
+
+9
+B’ oinarriaren bektoreen konbinazio lineal bezala adieraz  daitekela. Izan
+bedi 
+∈
+x
+ V,
+orduan:
+∈
+α
+α
+α
+∃
+n
+2
+1
+,...,
+,
+K
+  /  
+n
+n
+2
+2
+1
+1
+e
+...
+e
+e
+x
+α
++
++
+α
++
+α
+=
+∈
+β
+β
+β
+∃
+n
+2
+1
+,...,
+,
+K
+  /  
+n
+n
+2
+2
+1
+1
+u
+...
+u
+u
+x
+β
++
++
+β
++
+β
+=
+Bestalde, B-ren elementuak V-renak dira eta B’ oinarriaren bektoreen konbinazio
+lineal
+bezala adieraz ditzakegu.
+n
+1
+n
+2
+21
+1
+11
+1
+u
+a
+...
+u
+a
+u
+a
+e
++
++
++
+=
+n
+2
+n
+2
+22
+1
+12
+2
+u
+a
+...
+u
+a
+u
+a
+e
++
++
++
+=
+............................................
+n
+nn
+2
+n
+2
+1
+n
+1
+1
+u
+a
+...
+u
+a
+u
+a
+e
++
++
++
+=
+Orain, 
+i
+i eta β
+α
+ koordenatuen arteko erlazioa lortuko dugu:
+n
+n
+2
+2
+1
+1
+e
+...
+e
+e
+x
+α
++
++
+α
++
+α
+=
+= 
+1
+α (
+n
+1
+n
+2
+21
+1
+11
+u
+a
+...
+u
+a
+u
+a
++
++
++
+) +
+                                                 + 
+2
+α (
+n
+2
+n
+2
+22
+1
+12
+u
+a
+...
+u
+a
+u
+a
++
++
++
+) +
+                                                                 
+....................
+                                              + 
+n
+α (
+n
+nn
+2
+n
+2
+1
+n
+1
+u
+a
+...
+u
+a
+u
+a
++
++
++
+) = 
+n
+n
+2
+2
+1
+1
+u
+...
+u
+u
+β
++
++
+β
++
+β
+Eta hemendik, ondoko erlazioa lortzen dugu:
+
+
+
+
+
+
+
+
+
+
+
+
+β
+β
+β
+n
+2
+1
+..
+ = 
+
+
+
+
+
+
+
+
+
+
+
+
+nn
+2
+n
+1
+n
+n
+2
+22
+21
+n
+1
+12
+11
+a
+...
+a
+a
+...
+...
+...
+...
+a
+...
+a
+a
+a
+...
+a
+a
+
+
+
+
+
+
+
+
+
+
+
+
+α
+α
+α
+n
+2
+1
+..
+   
+⇔   
+( )
+( )
+B
+'
+B
+x
+.
+A
+x
+=
+A matrizea , B eta B’ oinarrien arteko oinarri-aldaketaren matrizea da eta bere
+zutabeak
+B oinarriaren elementuen B’ oinarriarekiko koordenatuak dira.
+A = 
+( ) ( )
+( )
+(
+)
+'
+B
+n
+'
+B
+2
+'
+B
+1
+e
+,...,
+e
+,
+e
+A matrizea inbertigarria da eta A
+-1 matrizeak B’ eta B oinarrien arteko oinarri-aldaketa
+adierazten du.
+
+10
+8. AZPIESPAZIO BEKTORIALEN ARTEKO EBAKETA ETA BATUKETA
+Izan bitez  K-ren gaineko V espazio bektoriala eta V-ren F eta G azpiespazio
+bektorialak.
+Definizioa. F-ren eta G-ren ebakidura honela definitzen dugu:
+}
+G
+x
+eta
+F
+x
+/
+x
+{
+G
+F
+∈
+∈
+=
+∩
+Definizioa. F-ren eta G-ren batura honela definitzen dugu:
+}
+G
+v
+eta
+F
+u
+/
+v
+u
+x
+{
+G
+F
+∈
+∈
++
+=
+=
++
+F + G  batura  batura zuzena dela esango dugu, eta F
+⊕ G ikurraren bidez adieraziko
+dugu, ondoko baldintza betetzen denean:
+v
+u
+x
+/
+G
+v
+!
+eta
+F
+u
+!
+G
+F
+x
++
+=
+∈
+∃
+∈
+∃
++
+∈
+∀
+edo, aurrekoaren baliokide dena:  F
+}
+0
+{
+G
+=
+∩
+.
+Proposizioa. Aurrean definituriko F+G eta F
+∩ G multzoak, V-ren azpiespazio
+bektorialak dira. Gainera, F+G = <F
+∪ G>betetzen da.
+Oharra. Jeneralean, azpiespazioen bildura, 
+}
+G
+x
+edo
+F
+x
+/
+x
+{
+G
+F
+∈
+∈
+=
+∪
+, ez da
+azpiespazio bektoriala.
+Proposizioa.   dim(F+G) = dim(F) + dim(G) – dim(F
+∩ G)

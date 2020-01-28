@@ -1,0 +1,2347 @@
+
+
+
+
+1
+2. GAIA.  KALKULU MATRIZIALA
+1.  Matrizeak. Definizioak
+2.  Matrizeen arteko eragiketak
+2.1 Matrizeen batuketa
+2.2  Eskalar baten eta matrize baten arteko biderketa
+2.3 Matrizeen biderketa
+3.  Matrize iraulia,simetrikoa eta antisimetrikoa
+4.  Matrize karratu baten determinantea
+4.1 Definizioa
+4.2 Determinanteen propietateak
+4.3 Determinante baten garapena
+5.  Matrize karratu baten alderantzizko matrizea
+6.  Matrize ortogonalak
+7.  Matrize baten heina
+
+2
+2. GAIA.  KALKULU MATRIZIALA
+Jakina da, fisika, kimika, ingeniaritza eta beste arlo askotako problema ugari,
+ekuazio linealetako sistemen bidez ebazten direla. Matrizeak oso erabilgarriak
+suertatuko zaizkigu ekuazio linealetako sistemak modu erraz batean adierazteko
+eta
+beste aplikazio-mota anitz dute: aplikazio linealak, biderketa eskalarrak,
+konikak, eta
+abar.
+Horrela, n ezezaguneko eta m ekuazio linealetako sistema:
+
+
+
+
+
+
+=
++
++
++
+=
++
++
++
+=
++
++
++
+m
+n
+mn
+2
+2
+m
+1
+1
+m
+2
+n
+n
+2
+2
+22
+1
+21
+1
+n
+n
+1
+2
+12
+1
+11
+b
+x
+.
+a
+........
+x
+.
+a
+x
+.
+a
+......
+..........
+..........
+..........
+..........
+..........
+b
+x
+.
+a
+........
+x
+.
+a
+x
+.
+a
+b
+x
+.
+a
+........
+x
+.
+a
+x
+.
+a
+matrizialki modu honetan adieraz dezakegu:
+
+
+
+
+
+
+
+
+
+
+
+
+mn
+2
+m
+1
+m
+n
+2
+22
+21
+n
+1
+12
+11
+a
+...
+a
+a
+...
+...
+...
+...
+a
+...
+a
+a
+a
+...
+a
+a
+. 
+
+
+
+
+
+
+
+
+
+
+
+
+n
+2
+1
+x
+..
+x
+x
+ = 
+
+
+
+
+
+
+
+
+
+
+
+
+m
+2
+1
+b
+..
+b
+b
+Ikasgai honetan matrize delako kontzeptua ikasiko dugu; matrize-mota
+desberdinak, matrizeen artean defini daitezkeen eragiketak eta matrize
+karratuen
+determinantearen kontzeptuak ere aztertuko dira.
+1. MATRIZEAK. DEFINIZIOAK
+Definizioa.  K gorputzaren gaineko  mxn ordenako A matrize
+bat,  K gorputzaren  mxn
+elementuren multzo bat da, m errenkadatan eta n zutabetan ezarritako multzoa.
+A-ren
+elementuak aij ikurren bidez adierazten dira, non “i” eta
+“j”  azpiindizeek  aij elementua
+zein errenkadatan eta zein zutabetan dagoen adierazten duten, hurrenez hurren.
+Jeneralean, K = 
+R edo K = C kontsideratuko dugu.
+A = 
+
+
+
+
+
+
+
+
+
+
+
+
+mn
+2
+m
+1
+m
+n
+2
+22
+21
+n
+1
+12
+11
+a
+...
+a
+a
+...
+...
+...
+...
+a
+...
+a
+a
+a
+...
+a
+a
+ = 
+( )
+n
+,...,
+1
+j
+m
+,...,
+1
+i
+ij
+a
+=
+=
+ = Amxn
+K gorputzaren gaineko mxn ordenako matrizeen multzoa Mmxn(K) adieraziko dugu.
+
+3
+Definizioa. A eta B matrizeak ordena berdineko matrizeak baldin badira,
+dimentsiokideak direla esaten da, hots, zutabe eta errenkada-kopurua berdinak
+dituztenean.
+Definizioa. A eta B matrize  dimentsiokideak  berdinak direla esaten da
+ aij =  bij  
+∀ i,j
+betetzen denean.
+Definizioa. Matrize baten errenkada eta zutabe-kopurua berdinak direnean,
+matrizea
+karratua dela esaten da. Matrize karratu baten  aii elementuei  elementu
+diagonalak edo
+nagusiak esaten zaie eta diagonal nagusian daudela esaten da.
+Definizioa. Matrize karratu baten diagonal nagusian ez dauden elementu guztiak
+nuluak
+direnean, matrizea diagonala dela esaten da.
+A = 
+
+
+
+
+
+
+
+
+
+
+
+
+nn
+22
+11
+a
+0
+0
+0
+...
+...
+...
+...
+0
+...
+a
+0
+0
+...
+0
+a
+Definizioa. n ordenako matrize diagonal baten diagonal nagusiko elementu
+guztiak 1
+direnean, n ordenako unitate matrizea dela esaten da.
+In = 
+
+
+
+
+
+
+
+
+
+
+
+
+1
+0
+0
+0
+...
+...
+...
+...
+0
+...
+1
+0
+0
+...
+0
+1
+ = 
+( )
+ij
+δ ;  
+
+
+
+≠
+=
+=
+δ
+j
+i
+baldin
+0
+j
+i
+baldin
+1
+ij
+non  
+ij
+δ  ikurrak Kronecker-en sinboloak diren.
+Definizioa. Matrize diagonal baten diagonal nagusiko elementu guztiak berdinak
+direnean, eskalarra dela esaten dugu.
+A = 
+
+
+
+
+
+
+
+
+
+
+
+
+a
+...
+0
+0
+.
+...
+.
+.
+0
+...
+a
+0
+0
+...
+0
+a
+ = a . In ,   a 
+∈ K (eskalarra)
+Definizioa. Matrize karratu baten diagonal nagusiaren menpeko (goiko) elementu
+guztiak nuluak direnean matrize  goi-triangeluarra (behe-triangeluarra) dela
+esaten
+dugu. 
+       Goi-triangeluarra                                Behe-triangeluarra
+A = 
+
+
+
+
+
+
+
+
+
+
+
+
+nn
+n
+2
+22
+n
+1
+12
+11
+a
+...
+0
+0
+...
+...
+...
+...
+a
+...
+a
+0
+a
+...
+a
+a
+                   B = 
+
+
+
+
+
+
+
+
+
+
+
+
+nn
+2
+n
+1
+n
+22
+21
+11
+b
+...
+b
+b
+...
+...
+...
+...
+0
+...
+b
+b
+0
+...
+0
+b
+
+4
+Definizioa. A matrize karratuaren elementu diagonal edo nagusien
+baturari  aztarna
+deritzo.   Tr(A) = 
+nn
+22
+11
+n
+1
+i
+ii
+a
+...
+a
+a
+a
++
++
++
+=
+∑
+=
+Definizioa. Baldin matrize baten elementu guztiak nuluak badira,  matrize
+nulua edo
+zero matrize deritzo eta bere ikurra (0) da.
+Definizioa. Izan bedi A = 
+( )
+mxn
+ij
+a
+matrizea. – A = 
+( )
+mxn
+ij
+a
+−
+matrizeari  A-ren aurkako
+matrizea esaten zaio.
+Definizioa. Lerro bakar bat duen edozein matrize, lerro matrizea da. Errenkada
+(zutabe)
+bakar batez osatuta baldin badago errenkada (zutabe) matrize deritze.
+(
+)
+
+
+
+
+
+
+
+
+
+
+
+
+n
+2
+1
+n
+2
+1
+a
+..
+a
+a
+a
+...
+a
+a
+Errenkada matrize                     Zutabe matrize
+2. MATRIZEEN ARTEKO ERAGIKETAK
+2.1  Matrizeen batuketa.
+Izan bedi  Mmxn(K)  K gorputzaren gaineko  mxn ordenako matrizeen multzoa.
+Izan bitez A = (aij), B = (bij) 
+∈ M
+mxn(K).
+C 
+∈ M
+mxn(K) matrizea, C = (cij) non cij = aij + bij  
+∀ i,j diren, A eta B matrizeen
+arteko batura esaten da eta C = A + B adierazten da.
+(  Mmxn(K), + ) talde  abeldarra da. ( + barne-eragiketa, elkarkorra, elementu
+neutroa, elementu simetrikoa eta trukakorra).
+2.2 Eskalar baten eta matrize baten arteko biderketa.
+Izan bitez  A
+∈ M
+mxn(K) matrizea eta 
+∈
+α  K eskalarra.  α   eskalarraren eta A
+matrizearen arteko biderketa honela definitzen da:
+α .A = B = (b
+ij) 
+∈ M
+mxn(K)   /   bij = 
+α .a
+ij   
+∀ i, j
+
+5
+Propietateak:
+a)    
+α .(A+B) =  α .A +  α .B       
+∈
+α
+∀
+K     
+∈
+∀
+B
+,
+A
+Mmxn(K)
+b)    
+A
+.
+A
+.
+A
+).
+(
+β
++
+α
+=
+β
++
+α
+          
+∈
+α
+∀
+K     
+∈
+∀
+B
+,
+A
+ Mmxn(K)
+c)    (
+β
+α. ).A  =  
+.
+.(
+β
+α
+A)               
+∈
+β
+α
+∀ ,
+K  
+∈
+∀A M
+mxn(K)
+d)    1K.A  =  A   
+∈
+∀A M
+mxn(K)  (1K  K-ren biderketarekiko elementu neutroa da).
+2.3  Matrizeen biderketa.
+Bi matrize A eta B biderkatu ahal izateko beharrezkoa da A-ren zutabe-kopurua
+eta B-ren errenkada-kopurua berdinak izatea, hau da,  A.B egin ahal izateko
+A
+∈M
+mxn(K) eta B 
+∈ M
+nxp(K) bete behar da.
+Izan bitez A 
+∈  M
+mxn(K) eta B 
+∈  M
+nxp(K) matrizeak. C =(cij) 
+∈  M
+mxp(K)
+matrizea, non cij = 
+kj
+n
+1
+k
+ik b
+.
+a
+∑
+=
+  den 
+∀ i=1,2,...,m  ;  ∀ j=1,2,...,p , A eta B matrizeen arteko
+biderkadura deitzen da eta C = A.B adierazten da.
+A.B matrizearen  cij elementu bakoitza A-ren i errenkadako eta B-ren j zutabeko
+ordena berdineko elementuen arteko biderkaduren batura da.
+Adibidea:     
+
+
+
+
+
+
+=
+
+
+
+
+
+
++
++
++
++
+=
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4
+7
+2
+.
+0
+0
+.
+5
+1
+.
+4
+2
+.
+3
+0
+.
+2
+1
+.
+1
+2
+0
+1
+.
+0
+5
+4
+3
+2
+1
+Matrizeen biderketaren definizioaren arabera, A.B egin badaiteke ere, B.A
+egitea
+ezinezkoa izatea gerta daiteke, ezen horretarako B matrizearen zutabe-kopuruak
+eta A
+matrizearen lerro-kopuruak berdinak izan beharko bailukete. Eta  B.A egin
+daitekeen
+arren,  A.B 
+≠ B.A gerta daiteke, hau da,  MATRIZEEN BIDERKETA EZ DA
+TRUKAKORRA.
+Adibidea: A = 
+
+
+
+
+1
+0
+2
+1
+,  B = 
+
+
+
+
+3
+1
+2
+0
+     A.B = 
+
+
+
+
+≠
+
+
+
+
+5
+1
+2
+0
+3
+1
+8
+2
+ = B.A
+Propietateak:
+a) Elkarkorra:  
+∈
+∀A M
+mxn(K), B 
+∈ M
+nxp(K), C 
+∈ M
+pxq(K)  
+⇒   (A.B).C  =  A.(B.C)
+b) Batuketarekiko banatze-propietatea:
+∈
+∀A M
+mxn(K),   
+∀  B, C ∈ M
+nxp(K)  
+⇒   A.(B+C)  =  A.B+ A.C
+∈
+∀ B
+,
+A
+Mmxn(K),   
+∀  C ∈ M
+nxp(K)   
+⇒   (A + B).C  =  A.C + B.C
+
+6
+c) Biderketa nulua:
+Matrizeen arteko biderketan  A.B = (0) gerta daiteke nahiz eta A 
+≠  B  ≠  (0) izan.
+(Eskalarren arteko biderketan: a.b = 0  
+⇔  a = 0  edo  b = 0  edo  a = b = 0 )
+Adibidea:  A = 
+
+
+
+
+
+
+
+
+
+
+0
+1
+0
+0
+0
+1
+≠ (0) ,  B = 
+
+
+
+
+0
+1
+1
+0
+0
+0
+ 
+≠ (0)   eta   A.B = 
+
+
+
+
+
+
+
+
+
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+ = (0)
+Bestalde,  A.B =  A.C  berdintzatik, nahiz eta A 
+≠ (0) izan, ez da ondorioztatzen
+B = C, zeren eta A.(B-C) = (0) izan baitaiteke, B-C 
+≠  (0) izanik.
+3. MATRIZE IRAULIA, SIMETRIKOA ETA ANTISIMETRIKOA
+Definizioa. Baldin A matrizearen errenkadak zutabe bihurtzen baditugu ordena
+aldatu
+gabe (lehenengo errenkada lehenengo zutabe eta abar.), lortuko dugun matrizeari
+A-ren
+matrize iraulia deitzen zaio, A
+t edo A’ ikurrak erabiliko ditugularik.
+Hots, A = (aij) 
+∈ M
+mxn(K) bada, orduan A
+t = (a
+ji) 
+∈ M
+nxm(K).
+Adibidea:     A = 
+
+
+
+
+2
+3
+5
+7
+0
+1
+,      A
+t = 
+
+
+
+
+
+
+
+
+
+
+2
+7
+3
+0
+5
+1
+Propietateak:
+a)   (A
+t)t  =  A
+b)  
+∈
+∀ B
+,
+A
+ Mmxn(K)   
+⇒    (A + B)t = At + Bt
+c)   
+∈
+∀A  M
+mxn(K), 
+∈
+∀B  M
+nxp(K)   
+⇒    (A.B)t = Bt.At
+d)  
+∈
+∀A  M
+mxn(K),  
+∈
+λ
+∀
+K   
+⇒    (λ .A)t = λ .At
+Definizioa. A matrize karratua  simetrikoa dela esango dugu, bera eta bere
+matrize
+iraulia berdinak direnean: A = A
+t.
+Definizioa. A matrize karratua antisimetrikoa dela esango dugu, bera eta bere
+irauliaren
+aurkakoa berdinak direnean: A = - A’. Matrize  antisimetrikoetan elementu
+diagonalek
+aii = - aii berdintza bete behar dute; beraz, aii = 0  
+∀  i.
+Adibideak: A = 
+
+
+
+
+
+
+
+
+
+
+
+
+0
+9
+7
+4
+9
+8
+6
+3
+7
+6
+5
+2
+4
+3
+2
+1
+simetrikoa da eta  B = 
+
+
+
+
+
+
+
+
+
+
+−
+−
+−
+0
+2
+3
+2
+0
+1
+3
+1
+0
+ antisimetrikoa da.
+
+7
+Propietateak:
+a) Baldin A matrizea karratua bada, orduan A + A
+t simetrikoa da.
+(A + A
+t)t = At + (At)t =At + A = A + At
+b) Baldin A matrizea karratua bada, orduan A – A
+t antisimetrikoa da.
+(A – A
+t)t = At - (At)t =At - A = - (A – At)
+Definizioa. Baldin A matrize karratuak A
+2 = A betetzen badu, idenpotente esaten zaio.
+Definizioa. Baldin A matrize karratuak A
+2 = I
+n betetzen badu, inbolutibo esaten zaio.
+Definizioa. A matrize karratuari  p indizeko matrize  nilpotente  esaten zaio,
+ondokoa
+betetzen duenean:  A
+p-1 
+≠ (0)  eta Ap = (0);  p∈ N eta p > 1 direnean.
+4. MATRIZE KARRATU BATEN DETERMINANTEA
+4.1.  Definizioa.
+Determinanteak ekuazio linealetako sistemen ebazpenak eta matrizeen
+alderantzizko matrizeak modu errazean  adierazteko oso baliagarriak izango
+dira. Baina
+3x3 baino ordena handiagoko ekuazio linealetako sistemen soluzioen kalkuluan
+determinanteen erabilera eraginkorra ez dela azpimarratzea oso garrantzitsua
+da.
+Definizioa. Izan bedi A 
+∈ M
+n(K). A-ren determinantea,  A  edo det(A) ikurraren bidez
+adieraziko dugu, eta ondoko eran definituko dugu:
+Baldin A matrizearen ordena 1 bada, A = (a11), orduan ,  A  = 
+11
+a
+ = a11
+* Baldin A matrizearen ordena 2 bada,  A = 
+
+
+
+
+22
+21
+12
+11
+a
+a
+a
+a
+, orduan
+A  =  
+22
+21
+12
+11
+a
+a
+a
+a
+ = 
+21
+12
+22
+11
+a
+.
+a
+a
+.
+a
+−
+* Baldin A matrizearen ordena 3 bada:
+A  = 
+33
+32
+31
+23
+22
+21
+13
+12
+11
+a
+a
+a
+a
+a
+a
+a
+a
+a
+ = 
+11
+a .
+33
+32
+23
+22
+a
+a
+a
+a
+-
+32
+31
+22
+21
+13
+33
+31
+23
+21
+12
+a
+a
+a
+a
+.
+a
+a
+a
+a
+a
+.
+a
++
+ =
+= 
+32
+23
+11
+33
+21
+12
+31
+22
+13
+13
+32
+21
+31
+23
+12
+33
+22
+11
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+−
+−
+−
++
++
+(Gogoratu Sarrus-en erregela)
+
+8
+ * n ordenako A matrize karratu baten determinantea.
+Izan bedi A = (aij) 
+∈ M
+n(K).  n ordenako matrize karratu baten determinantea
+n-1 ordenako matrizeen determinanteak erabiliz kalkulatuko dugu. Eta
+horretarako
+elementu baten  minore osagarriaren eta adjuntuaren definizioak eman behar
+ditugu.
+Definizioa. A matrizean i errenkada eta j zutabea kenduz lortzen den “n-1”
+ordenako
+matrizearen determinanteari,  aij elementuaren  minore osagarria deitzen zaio
+eta 
+ij
+α
+ikurraren bidez adieraziko dugu.
+Definizioa. Aij = (-1)
+i+j. 
+ij
+α  zenbakiari, a
+ij elementuaren  adjuntua esaten zaio. Hau da,
+i+j bikoitia denean , Aij = 
+ij
+α  eta i+j bakoitia denean, A
+ij = - 
+ij
+α  beteko da.
+Adibidea.
+Baldin A= 
+
+
+
+
+
+
+
+
+
+
+1
+0
+1
+1
+3
+0
+0
+2
+2
+ bada, orduan:
+1
+1
+1
+1
+0
+12
+−
+=
+=
+α
+ eta A12 = (-1)
+3.
+12
+α  = 1;   
+6
+3
+0
+2
+2
+33
+=
+=
+α
+ eta A33  = (-1)
+6.
+33
+α  = 6
+Definizioa.  A
+a = 
+
+
+
+
+
+
+
+
+
+
+
+
+=
+
+
+
+
+
+
+
+
+
+
+
+
+nn
+n
+2
+n
+1
+2
+n
+22
+12
+1
+n
+21
+11
+t
+nn
+2
+n
+1
+n
+n
+2
+22
+21
+n
+1
+12
+11
+A
+...
+A
+A
+...
+...
+...
+...
+A
+...
+A
+A
+A
+...
+A
+A
+A
+...
+A
+A
+...
+...
+...
+...
+A
+...
+A
+A
+A
+...
+A
+A
+ matrizeari, A
+matrizearen matrize adjuntua esaten zaio non  Aij  aij elementuaren adjuntua
+den.
+Adibidea. 
+A = 
+
+
+
+
+
+
+
+
+
+
+1
+0
+1
+1
+3
+0
+0
+2
+2
+A
+a = 
+
+
+
+
+
+
+
+
+
+
+−
+−
+−
+6
+2
+3
+2
+2
+1
+2
+2
+3
+Definizioa. Izan bedi A 
+∈ M
+n(K). Orduan, A-ren determinantea honela definitzen da:
+nj
+nj
+j
+2
+j
+2
+j
+1
+j
+1
+in
+in
+2
+i
+2
+i
+1
+i
+1
+i
+nn
+2
+n
+1
+n
+n
+2
+22
+21
+n
+1
+12
+11
+A
+a
+...
+A
+a
+A
+a
+A
+.
+a
+...
+A
+.
+a
+A
+.
+a
+a
+...
+a
+a
+...
+...
+...
+...
+a
+...
+a
+a
+a
+...
+a
+a
+A
++
++
++
+=
++
++
++
+=
+=
+n
+,....,
+1
+j
+,
+i
+=
+∀
+
+9
+A matrize karratuaren determinantea A-ren edozein lerroren elementuen eta
+dagozkien
+adjuntuen arteko biderkaduren batura da.
+Oharra. Aurreko definizioa erabiliz, n ordenako determinante baten kalkulua n-1
+ordenako n determinanteren kalkulua da, eta n-1 ordenako determinante
+bakoitzaren
+kalkulua n-2 ordenako n-1 determinanteren kalkulua da. Prozesu honekin
+jarraituz,
+kalkulatzeko errazak diren 2 ordenako determinanteak lortuko ditugu.
+Adibideak.
+24
+3
+3
+4
+0
+2
+3
+2
+2
+2
+.
+2
+1
+3
+4
+1
+2
+3
+2
+2
+2
+.
+4
+1
+3
+4
+1
+0
+3
+2
+2
+2
+.
+0
+1
+3
+3
+1
+0
+2
+2
+2
+2
+.
+1
+1
+3
+3
+4
+1
+0
+2
+3
+2
+2
+2
+2
+2
+4
+0
+1
+=
+−
++
+−
+=
+=
++
+−
+=
+3
+3
+0
+2
+.
+2
+1
+3
+1
+2
+.
+2
+1
+3
+1
+0
+.
+2
+1
+3
+3
+1
+0
+2
+2
+2
+2
+-6 + 2 + 12  = 8
+=
++
+−
+=
+3
+4
+2
+3
+.
+2
+1
+4
+1
+3
+.
+2
+1
+3
+1
+2
+.
+2
+1
+3
+4
+1
+2
+3
+2
+2
+2
+-2 + 2 + 2  = 2
+=
++
+−
+=
+3
+4
+2
+3
+.
+2
+3
+4
+0
+3
+.
+2
+3
+3
+0
+2
+.
+2
+3
+3
+4
+0
+2
+3
+2
+2
+2
+12 – 18 + 2  = -4
+4.2  Determinanteen propietateak.
+Definizioa erabiliz,  ordena handiko matrizeen kalkulua oso nekeza suertatzen
+da. Lan hau errazteko determinanteen propietateak aztertuko ditugu. Propietate
+hauen
+frogapena indukzio-metodoa erabiliz egin daiteke.
+1)  Matrize baten lerro (errenkada edo zutabe) bateko elementu guztiak nuluak
+baldin
+badira, bere determinantea nulua da.
+=
+nn
+2
+n
+1
+n
+n
+1
+12
+11
+a
+...
+a
+a
+...
+...
+...
+...
+0
+...
+0
+0
+...
+...
+...
+...
+a
+...
+a
+a
+ 0
+
+10
+2)    
+nn
+2
+n
+1
+n
+in
+in
+2
+i
+2
+i
+1
+i
+1
+i
+n
+1
+12
+11
+a
+...
+a
+a
+...
+...
+...
+...
+b
+a
+...
+b
+a
+b
+a
+...
+...
+...
+...
+a
+...
+a
+a
++
++
++
+=
+nn
+2
+n
+1
+n
+in
+2
+i
+1
+i
+n
+1
+12
+11
+a
+...
+a
+a
+...
+...
+...
+...
+a
+...
+a
+a
+...
+...
+...
+...
+a
+...
+a
+a
++
+nn
+2
+n
+1
+n
+in
+2
+i
+1
+i
+n
+1
+12
+11
+a
+...
+a
+a
+...
+...
+...
+...
+b
+...
+b
+b
+...
+...
+...
+...
+a
+...
+a
+a
+n
+,...,
+1
+i
+=
+∀
+Jeneralean, A matrizearen lerro bateko elementu bakoitza “p” (p
+∈N) batugairen
+batura bada,  A  determinantea beste “p” determinanteren baturan deskonposa
+daiteke,
+determinante horiek honela lortzen direlarik:
+Lerro guztiak, batugaienak izan ezik, berdin idazten dira determinante
+bakoitzean, eta lerro hori deskonposatuta agertzen da lerro bakoitzean batugai
+bat
+idatziz (lehenengo batugaia lehenengo determinantean, bigarren batugaia
+bigarren
+determinantean, ...).
+3) Izan bedi B
+∈  M
+n(K), A matrizean lerro bateko elementu guztiak r eskalar batez
+biderkatuz lortzen den matrizea.Orduan,  B  = r. A .
+nn
+2
+n
+1
+n
+n
+2
+22
+21
+n
+1
+12
+11
+a
+...
+a
+a
+...
+...
+...
+...
+a
+...
+a
+a
+a
+.
+r
+...
+a
+.
+r
+a
+.
+r
+  =  r . 
+nn
+2
+n
+1
+n
+n
+2
+22
+21
+n
+1
+12
+11
+a
+...
+a
+a
+...
+...
+...
+...
+a
+...
+a
+a
+a
+...
+a
+a
+4) Matrize baten bi lerro paralelo lekuz elkar aldatzen baditugu,
+determinantearen
+zeinua aldatu egiten da.
+nn
+2
+n
+1
+n
+n
+2
+22
+21
+n
+1
+12
+11
+a
+...
+a
+a
+...
+...
+...
+...
+a
+...
+a
+a
+a
+...
+a
+a
+  =  - 
+nn
+1
+n
+2
+n
+n
+2
+21
+22
+n
+1
+11
+12
+a
+...
+a
+a
+...
+...
+...
+...
+a
+...
+a
+a
+a
+...
+a
+a
+5) Matrize baten bi lerro paralelo berdinak badira, bere determinantea nulua
+da.
+6) Matrize baten bi lerro paralelo proportzionalak badira, bere determinantea
+nulua da.
+nn
+2
+n
+1
+n
+n
+1
+12
+11
+n
+1
+12
+11
+a
+...
+a
+a
+...
+...
+...
+...
+a
+.
+r
+...
+a
+.
+r
+a
+.
+r
+a
+...
+a
+a
+  =  r . 
+nn
+2
+n
+1
+n
+n
+1
+12
+11
+n
+1
+12
+11
+a
+...
+a
+a
+...
+...
+...
+...
+a
+...
+a
+a
+a
+...
+a
+a
+  =  0
+7) Matrize baten lerro bat (errenkada edo zutabe) gainerako lerro paraleloen
+konbinazio
+lineala baldin bada, bere determinantea nulua da.
+
+11
+0
+p
+n
+m
+c
+b
+a
+p
+n
+m
+.
+p
+n
+m
+c
+b
+a
+c
+b
+a
+.
+p
+n
+m
+c
+b
+a
+p
+.
+c
+.
+n
+.
+b
+.
+m
+.
+a
+.
+)
+2
+)
+6
+=
+β
++
+α
+=
+β
++
+α
+β
++
+α
+β
++
+α
+8) Matrize baten lerro bati gainerako lerro paraleloen konbinazio lineal bat
+batuz lortzen
+den matrizearen determinantea eta hasierako matrizearen determinantea berdinak
+dira.
+9)   
+A
+A
+t
+=
+10)   
+B
+.
+A
+B
+.
+A
+=
+ ,     
+∀ A, B  ∈  M
+nxn(K)
+4.3  Determinante baten garapena.
+Jeneralean, elementu nulu gehien dituen errenkada edo zutabea aukeratuko dugu
+determinantea garatzeko. Horrela, determinanteen propietateak erabiliko ditugu
+balioa
+aldatu gabe zero gehiago dituzten determinanteak lortzeko.
+5.  MATRIZE KARRATU BATEN ALDERANTZIZKO MATRIZEA
+Definizioa. Matrize baten determinantea zeroren desberdina baldin bada,
+matrizea
+erregularra dela esaten da.
+Definizioa. Matrize bat singularra dela esaten da, bere determinantea nulua
+denean.
+Definizioa. A matrize erregularraren  alderantzizko matrizea  A
+-1 ikurraren bidez
+adierazten da eta   A.A
+-1 = A-1.A = I   berdintzak betetzen dituen matrizea da.
+Ondoren, determinanteen teoria erabiliz matrize erregular baten alderantzizko
+matrizearen kalkulua egiteko formula bat emango dugu.
+Teorema. Matrize erregular baten alderantzizko matrizea existitzen da eta
+bakarra da,
+eta gainera ondokoa betetzen da:   A
+-1 = 
+A
+A
+a
+  non  A
+a ikurraren bidez  A-ren matrize
+adjuntua adierazten den..
+Adibidea. Izan bedi A = 
+
+
+
+
+
+
+
+
+
+
+1
+0
+1
+1
+3
+0
+0
+2
+2
+matrizea.  A  = 8 
+≠ 0  ⇒  A erregularra da eta bere
+alderantzizko matrizea  A
+-1 = 
+
+
+
+
+
+
+
+
+
+
+−
+−
+−
+=
+6
+2
+3
+2
+2
+1
+2
+2
+3
+.
+8
+1
+A
+.
+A
+1
+a
+da.
+
+12
+Propietateak.
+1) Baldin A erregularra bada eta A.B = (0), orduan B = (0).
+2) Baldin A erregularra bada eta A.B = A.C, orduan B = C.
+3) Baldin A erregularra bada,orduan 
+A
+1
+A
+1
+=
+−
+.
+4)  (A
+-1)-1  =  A
+5)  (A
+-1)t  =  (At)-1
+6)  Baldin A eta B erregularrak badira, orduan (A.B)
+-1 =  B-1.A-1  eta jeneralean
+A1,A2, …, An erregularrak badira, orduan (A1.A2....An)
+-1 = 
+1
+1
+1
+2
+1
+n
+A
+.
+A
+.....
+A
+−
+−
+−
+6.  MATRIZE ORTOGONALAK
+Matrize ortogonalak matrize erregularren kasu partikular bat dira.
+Definizioa. A matrize karratua  ortogonala dela esaten da, bere matrize iraulia
+matrize
+alderantzizkoaren berdina denean. Hots,  A
+t =  A-1  
+I
+A
+.
+A
+A
+.
+A
+t
+t
+=
+=
+⇔
+Adibidea.  A = 
+
+
+
+
+−
+x
+cos
+x
+sin
+x
+sin
+x
+cos
+ortogonala da.
+Propietateak.
+1) Matrize ortogonal baten determinantea 1 edo –1 da.
+2) Bi matrize ortogonalen arteko biderkadura matrizea ortogonala da.
+3) Unitate matrizea ortogonala da.
+4) Matrize ortogonal baten alderantzizko matrizea ortogonala da.
+Propietate hauek kontuan hartuz, n ordenako matrize ortogonalen M multzoa,
+matrizeen arteko biderkaketarekin, taldea dela froga dezakegu (barne-eragiketa,
+elkarkorra, elementu neutroa,elementu simetrikoak).
+7. MATRIZE BATEN HEINA
+Definizioa. Izan bedi A 
+∈ M
+mxn(K). A matrizearen edozein h errenkadak eta h zutabek
+eratzen duten matrizeari, h (h
+≤ m eta h≤ n) ordenako A-ren azpimatrize esaten zaio.
+Adibidea.
+Izan bedi  A = 
+
+
+
+
+
+
+
+
+
+
+12
+11
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+ matrizea.
+
+13
+
+
+
+
+6
+5
+2
+1
+ eta  
+
+
+
+
+12
+10
+4
+2
+   A  matrizearen 2  ordenako bi azpimatrize dira.
+Definizioa. A matrizearen p ordenako edozein  azpimatrizeren determinanteari, A
+matrizearen p ordenako minore esaten zaio.
+Definizioa. A matrizearen  heina, ordena handiena duen  minore ez-nuluaren
+ordenari
+esaten zaio, eta r(A) adierazten da.
+A matrizearen heina k bada, honek gutxienez k ordenako  minore ez-nulu bat
+existitzen dela esan nahi du, k baino ordena handiagoko  minore guztiak nuluak
+izanik.
+Hau da, A matrizearen heina k da baldin eta soilik baldin k+1 ordenako A
+matrizearen
+minore guztiak zero badira eta nulua ez den k ordenako  minore bat gutxienez
+existitzen
+bada.
+A, n ordenako matrize erregularra da   
+⇔    A-ren heina = n
+A, n ordenako matrize singularra da   
+⇔    A-ren heina < n
+Matrize baten heinaren kalkulu praktikoa:
+Matrizearen r ordenako  minore ez-nulu bat aurkitu ondoren, gehituko diogu
+errenkada bat eta minorean agertzen ez diren A-ren zutabeak, banan-banan.
+Honela lortutako r+1 ordenako determinante guztiak nuluak badira,
+kontsideratutako errenkada  minore ez-nuluan agertzen diren r errenkaden
+konbinazio
+lineala da, eta beraz, kendu egin daiteke,  prozesua beste errenkada batekin
+errepikatuko
+dugu. Gainerako errenkadekin berdin arituz, kontsideratu behar ditugun
+determinante
+guztiak nuluak badira, emandako matrizeak r ordenako  minore ez-nuluan agertzen
+diren
+r errenkadak bakarrik izango ditu independente, beraz, bere heina r izango da.
+Kontrako kasuan, r+1 ordenako determinante bat zeroren desberdina izango
+balitz, hasierako r ordenako minore ez-nuluarekin jardun dugun bezala jardungo
+genuke
+berarekin ere, eta berdin beharreko kasu guztietan.
+Matrizearen heina aurkitzeko prozesu berau baliagarria izan daiteke errenkadei
+ordez zutabeei aplikatzekotan.

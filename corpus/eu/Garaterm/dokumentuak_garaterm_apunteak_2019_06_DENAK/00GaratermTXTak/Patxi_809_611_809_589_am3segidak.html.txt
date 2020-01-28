@@ -1,0 +1,93 @@
+
+
+
+
+
+Analisi Matematikoa Segidak-1 Batuketa/Kenketa: {an ±bn},
++  −b��   +∞
+−−−∞?
+a  −a + b +∞
++�?  +∞  +∞
+−−b��  +∞
+−?��−�−∞
+a  +�a −−∞
++�+�+∞ ?
+Biderketa: {an · bn},
+×    −b < 0  b = 0 0 < b  +∞
+−∞+�+∞   ?     −∞ −∞
+a < 0 +�0 < ab 0     ab < 0 −∞
+a = 0 ?  0      0     0      ?
+0 < a −ab < 0 0     0 < ab +∞
++∞  −−∞ ?     +∞   +∞
+Zatiketa: {an ÷ bn}, bn 0 izanik,
+=
+÷    −b < 0   b = 0 0 < b   +∞
+−∞?  +∞    ±∞ −∞  ?
+a < 0 0  0 < a/b ±∞ a/b < 0 0
+a = 0 0  0       ?     0       0
+0 < a 0  a/b < 0 ±∞ 0 < a/b 0
++∞  ?  −∞  ±∞ +∞    ?
+Logaritmoa: {logKan}, K> 0 eta an > 0 izanik,
+logK an   a = 0 0 < a  +∞
+0 < K < 1 +∞  logK a −∞
+1 < K     −∞logK a +∞
+Esponentziala: {Kan}, K> 0 izanik,
+Kan       −a��+∞
+0 < K < 1 +�Ka 0
+K = 1     1  1  1
+1 < K     0  Ka +∞
+Berreketa: {abn}, an > 0 izanik,
+n
+abn n     −b < 0 b = 0 0 < b +∞
+a = 0     +�+∞  ?     0     0
+0 < a < 1 +�ab    1     ab    0
+a = 1     ?  1     1     1     ?
+1 < a     0  ab    1     ab    +∞
++∞      0  0     ?     +∞  +∞
+Analisi Matematikoa Segidak-2
+Baliokidetzak
+Inﬁnitesimalak: lim an =0 betetzen da.
+n→∞
+•{an}∼{sin an}∼{tanan}∼{arcsinan}∼{arctanan}
+{}
+n
+    * {1−cosan}∼a2
+    * {an}∼{ln(1+an)}
+    * Aurreko baliokidetzan, bn =1+an eginez, hau idatz dezakegu: {bn −1}∼
+      {lnbn}
+2
+Inﬁnituak: lim an = ∞ betetzen da.
+n→∞
+    * {aknk+ ak−1nk−1+ ··· + a1n + a0}∼{aknk} √
+    * Stirling-en baliokidetza: {n!}∼{nne−n2πn}
+Inﬁnituen ordenak
+Lau inﬁnitu-mota bereiz ditzakegu, limitera hurbiltzeko “abiaduraren” arabera:
+{(lnan)q}<<< {(an)p}<<< {kan}<<< {(an)ran}, q,p,r > 0 eta k> 1 izanik.
+Polinomioen arteko zatiduraren limitea
+
+ ∞ k>l aknk+ ak−1nk−1+ ··· + a0a1n+ak k = l
+lim =
+n→∞ blnl+ bl−1nl−1+ ··· + b1n + b0  bl0 k<l
+Stolz-en irizpideak
+{an}eta {bn}segidek baldintza hauek betetzen badituzte: an+1 −an
+1) {bn}hertsiki monotonoa bada, 2) lim existitzen bada eta
+n→∞
+bn+1 −bn
+3) hauetako bat ere betetzen bada: 3.1) lim an = lim bn =0 3.2) lim bn =+∞ 3.3)
+lim bn = −∞
+n→∞ n→∞ n→∞ n→∞
+Stolz-en irizpideak dio berdintza hau beteko dela:
+an an+1 −an
+lim
+= lim
+n→∞ n→∞
+bn bn+1 −bn
+e zenbakiaren erabilpena
+n n+p
+1 k
+k
+e = lim 1+ e= lim 1+
+n→∞nn→∞n + l
+ an)1/an 1
+lim an =0 ⇒ e = lim (1+anlim an = ±∞⇒ e = lim 1+
+n→∞ n→∞ n→∞ n→∞an

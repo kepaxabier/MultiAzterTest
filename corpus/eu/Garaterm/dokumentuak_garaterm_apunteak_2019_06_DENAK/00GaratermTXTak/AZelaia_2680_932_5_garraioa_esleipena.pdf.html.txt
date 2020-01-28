@@ -1,0 +1,3570 @@
+
+
+
+5. Kapitulua
+Garraio-problema eta
+Esleipen-problema
+Gai honetan bi problema lineal berezi ebazteko erabiltzen diren algoritmoak aur-
+kezten dira: garraio-problemarako algoritmoa eta esleipen-problemarako algorit-
+moa.
+5.1
+Garraio-problema
+Programazio linealaren tekniken aplikazioan garraio-problema izan zen aztertu
+ziren problema garrantzitsuetatik lehena. Garraio-
+problema eredu lineal baten bi-
+dez adieraz daiteke, baita ebazpenerako simplex algoritmoa erabili ere. Dena den,
+eta garraio-
+problemari dagokion eredu linealaren egitura berezia kontuan hartuz,
+ebazpenerako eraginkorragoa den metodo bat eraiki daiteke. Kapitulu honetan
+metodo hori aztertuko dugu.
+Garraio-problema produktu baten unitateak
+m iturburu-puntutatik, I1, . . . , Im,
+n helburu-puntutara, H1, . . . , Hn, garraiatzean datza, ondoko baldintzapean:
+• Ii, i = 1, . . . , m, iturburu-puntu bakoitzaren produktu unitateen eskaintza
+ai da.
+• Hj, j = 1, . . . , n, helburu-puntu bakoitzaren eskaria bj da.
+• Ii iturburu-puntutik Hj helburu-puntura produktu unitate bat garraiatzearen
+kostua
+cij da, i = 1, . . . , m, j = 1, . . . , n.
+149
+
+150
+5. Garraio-problema eta Esleipen-problema
+Ii iturburu-puntu bakoitzetik Hj helburu-puntu bakoitzera garraiatuko den xij
+produktu unitate kopurua erabakitzean datza problema, produktu unitateen ga-
+rraioa kostu minimoan egingo delarik eta eskaintzek eta eskariek ﬁnkatutako mu-
+rrizketak kontuan izango direlarik.
+Garraio-problemari dagokion eredu lineala ondokoa da:
+min z =
+m
+i=1
+n
+j=1
+cijxij
+hauen mende
+n
+j=1
+xij ≤ ai, i = 1, . . . , m
+m
+i=1
+xij ≥ bj, j = 1, . . . , n
+xij ≥ 0, i = 1, . . . , m, j = 1, . . . , n
+Ereduaren lehenengo
+m murrizketak iturburu-puntuen eskaintzei dagozkie, eta
+eskaintzak ezin direla gainditu adierazten dute. Hurrengo
+n murrizketek helburu-
+puntuen eskariak zerbitzatuak izango direla ziurtatzen dute. Aldagaiek ezin dituz-
+te balio negatiboak hartu, garraiatuak izango diren produktu unitateak adierazten
+dituztelako.
+Garraio-problemaren forma estandarra hau da:
+min z =
+m
+i=1
+n
+j=1
+cijxij
+hauen mende
+n
+j=1
+xij = ai, i = 1, . . . , m
+m
+i=1
+xij = bj, j = 1, . . . , n
+xij ≥ 0, i = 1, . . . , m, j = 1, . . . , n
+Adibidea. Demagun herrialde batean badirela ogia ekoizten duten 2 enpresa:
+A1 eta A2. Enpresa horietan ekoitzitako ogia 3 okindegitara bidaltzen da bertan
+saldua izateko:
+O1, O2 eta O3. Enpresen eskaintzak, okindegien eskariak eta uni-
+tateko garraio-kostuak ondoko graﬁkoan emanak datoz.
+OpenCourseWare, UPV/EHU
+
+5.1. Garraio-problema
+151
+A1
+A2
+O1
+O2
+O3
+8
+6
+10
+10
+4
+9
+2000
+2000
+2500
+1500
+1000
+Problema adieraziko duen eredu lineala idazteko, ondoko erabaki-aldagaiak
+deﬁnituko ditugu.
+xij: Ai iturburu-puntutik Oj helburu-puntura garraiatuko den ogi kopurua,
+i = 1, 2, j = 1, 2, 3.
+Eredu lineala ondokoa da:
+min z = 8x11 + 6x12 + 10x13 + 10x21 + 4x22 + 9x23
+hauen mende
+x11 +x12 +x13
+= 2000
+x21
++x22 +x23 = 2500
+x11
++x21
+= 1500
+x12
++x22
+= 2000
+x13
++x23 = 1000
+x11, x12, x13, x21, x22, x23 ≥ 0
+Murrizketak berdintzaz idatz ditzakegu eskaintza totala eta eskari totala ber-
+dinak direlako. A matrizearen egitura aztertzeko, eredua matrize-forman jarriko
+dugu.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+152
+5. Garraio-problema eta Esleipen-problema
+min z = (8 , 6 , 10 , 10 , 4 , 9)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+x11
+x12
+x13
+x21
+x22
+x23
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hauen mende
+
+
+
+
+
+
+
+
+
+
+
+1 1 1 0 0 0
+0 0 0 1 1 1
+1 0 0 1 0 0
+0 1 0 0 1 0
+0 0 1 0 0 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+x11
+x12
+x13
+x21
+x22
+x23
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=
+
+
+
+
+
+
+
+
+
+
+
+2000
+2500
+1500
+2000
+1000
+
+
+
+
+
+
+
+
+
+
+
+x11, x12, x13, x21, x22, x23 ≥ 0
+Adibide honetan 2 iturburu-puntu,
+m = 2, eta 3 helburu-puntu, n = 3, daude.
+A matrizeak
+2 + 3 errenkada eta 2 × 3 zutabe ditu. Egiazta daiteke matrizearen
+heina
+4 dela.
+Bestalde, matrizeko zutabe guztietan 2 osagai besterik ez dago 1 balioarekin,
+gainerako osagaiak 0 direlarik. Garraio-problemen erabaki-aldagaiak izendatzeko
+bi azpi-indize erabili ditugun bezala, A matrizeko zutabe-
+bektoreak a11, a12, a13,
+a
+21, a22, a23 izendatuko ditugu, eta azter dezakegu bektore horietako bakoitzean
+zein posiziotan dauden batekoak. a11 bektoreak, adibidez,
+1 posizioan eta m + 1
+posizioan ditu batekoak, a21 bektoreak
+2 eta m + 1 posizioetan, a23 bektoreak 2
+eta
+m + 3 posizioetan. Oro har, esan dezakegu A matrizeko aij bektoreak i eta
+m + j posizioetan dituela batekoak.
+2
+Hortaz, A matrizearen egitura iturburu-puntu kopuruaren eta helburu-puntu
+kopuruaren araberakoa da.
+m iturburu-puntu eta n helburu-puntu dituen edozein
+garraio-problemak A matrize berbera izango du. Matrize honek
+m + n errenkada
+OpenCourseWare, UPV/EHU
+
+5.2. Matrize-forma
+153
+eta
+m × n zutabe ditu. A matrizearen heina m + n − 1 da, hau da, oinarriak m +
+n − 1 bektorez osatuta daude. A matrizearen zutabe-
+bektoreek bi 1eko besterik ez
+dituzte eta gainerako osagaiak 0 dira. A matrizeko aij bektorearen 1ekoak i eta
+m+j posizioetan daude. Beraz, garraio-problemaren datu garrantzitsuak iturburu-
+puntu kopurua, helburu-puntu kopurua, eskaintzak, eskariak eta garraio-kostuak
+dira. Informazio hori guztia biltzen da garraio-problemarako matrize-forman.
+5.2
+Matrize-forma
+Garraio-problemaren datuak taula moduan jasotzen dira. Taula honi garraio-
+problemarako matrize-forma edo garraio-kostuen taula deitzen zaio (ikus 5.1.
+Irudia). Bertan aurkitzen ditugu iturburuak eskaintzekin, helburuak eskariekin
+eta unitateko garraio-kostuak.
+H1
+H2
+· · ·
+Hn
+Eskaintza
+I1
+c11
+c12
+· · ·
+c1n
+a1
+I2
+c21
+c22
+· · ·
+c2n
+a2
+..
+.
+..
+.
+..
+.
+. ..
+..
+.
+..
+.
+Im
+cm1 cm2
+· · ·
+cmn
+am
+Eskaria
+b1
+b2
+· · ·
+bn
+5.1. Irudia: Garraio-problemarako matrize-forma edo Garraio-kostuen taula
+Adibidea. 150. orrialdeko adibidearen matrize-forma honakoa da.
+O1
+O2
+O3
+Eskaintza
+A1
+8
+6
+10
+2000
+A2
+10
+4
+9
+2500
+Eskaria
+1500 2000 1000
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+154
+5. Garraio-problema eta Esleipen-problema
+Taularen lehenengo zutabean problemaren iturburu-puntuak agertzen dira,
+A1
+eta
+A2 enpresak, eta lehenengo errenkadan helburu-puntuak, O1, O2 eta O3 okin-
+degiak. Enpresen eskaintzak taulako azken zutabean agertzen dira, eta okinde-
+gien eskariak azken errenkadan. Taulako laukitxo bakoitzean agertzen da enpre-
+sa bakoitzetik okindegi bakoitzera ogi bat garraiatzearen kostua,
+cij, i = 1, 2,
+j = 1, 2, 3.
+2
+5.3
+Adibide praktikoak
+1. Adibidea. Enpresa batek bere ekoizpena antolatu behar du hurrengo urteko 4
+hiruhilekoetarako. Izango dituen eskariak aurrikusi ditu:
+ 200 unitate lehen hiruhi-
+lekoan, 150, 200 eta 100 hurrengo hiruetan, hurrenez hurren. Hiruhileko bateko
+ekoizpen-ahalmena 150 unitatekoa da. Hiruhileko bateko eskaria ezin daiteke
+geroagoko hiruhileko batean zerbitzatu. Produktu unitate bat ekoiztearen kos-
+tua 2koa da, eta ekoitzitako produktu unitate hori biltegiratu eta beste hiruhileko
+baten eskaria zerbitzatzeko erabiltzen bada, biltegiratutako hiruhileko bakoitzeko
+0.5eko biltegiratze-kostua gehitu beharko zaio produktu unitate bakoitzari.
+Problema hau garraio-problemarako matrize-forman planteatzeko, 4 hiruhi-
+lekoak iturburu-puntu eta helburu-puntu izango dira.
+xij erabaki-aldagaiek hau
+adierazten dute:
+j hiruhilekoaren eskaria zerbitzatzeko, i hiruhilekoan sortuko
+den produktu unitate kopurua,
+i = 1, . . . , 4, j = 1, . . . , 4.
+• Iturburu-puntuen eskaintza: 150, 150, 150, 150.
+• Helburu-puntuen eskaria: 200, 150, 200, 100.
+• i = j bada, ekoizpenaren kostua cij = 2 da, i, j = 1, . . . , 4.
+• i < j bada, cij = ekoizpen-kostua + biltegiratze-kostua. Adibidez, c12 =
+2.5, c13 = 3, eta modu berean kalkulatzen dira gainerakoak.
+• i > j bada, cij kostuari behar bezain handia den M kostua egokituko diogu,
+xij oinarriko izatea ekiditeko.
+Problema honi dagokion garraio-kostuen taula hau da:
+OpenCourseWare, UPV/EHU
+
+5.3. Adibide praktikoak
+155
+1
+2
+3
+4
+Eskaintza
+1
+2
+2.5
+3
+3.5
+150
+2
+M
+2
+2.5
+3
+150
+3
+M
+M
+2
+2.5
+150
+4
+M
+M
+M
+2
+150
+Eskaria
+200 150 200 100
+2
+2. Adibidea. Enpresa batek produktu mota bakar bat ekoizten du hiru ekoizpen-
+zentrotan,
+A1, A2 eta A3. Ekoizpen-zentro hauetako bakoitzaren ekoizpen-ahalmena
+1500 unitatekoa da hilabeteko. Enpresak lau bezerorentzat ekoizten du produk-
+tua, beren hilabeteko eskariak 1000, 1200, 1500 eta 1000 unitatekoak direlarik,
+hurrenez hurren.
+Produktuak enpresari 110 unitateko irabazia sortzen dio, ekoizpen-kostua eta
+salmenta-prezioa kontuan izanik. Hiru ekoizpen-zentroetatik lau bezeroengana
+produktu unitatea garraiatzearen kostua ondoko taulan zehazten da:
+1
+2
+3
+4
+A1 30 10 25 20
+A2 15 25 30 10
+A3 20 30 15 20
+Enpresak ahalik eta irabazi handiena lor dezan, bere hilabeteko ekoizpena pla-
+niﬁkatzen lagunduko dion garraiorako matrize-forma idatziko dugu.
+• Eskaintzak: a1 = 1500, a2 = 1500, a3 = 1500.
+• Eskariak: b1 = 1000, b2 = 1200, b3 = 1500, b4 = 1000.
+• Kostuen taulako cij balioak Ai ekoizpen-zentroan ekoitzi eta j bezeroari
+saltzeak sortutako irabazia adierazten du,
+i = 1, 2, 3, j = 1, 2, 3, 4, eta
+honela kalkulatzen da:
+cij = ekoizpen-irabazia − garraio-kostua. Adibidez,
+c11 = 110 − 30 = 80,
+c12 = 110 − 10 = 100,
+c33 = 110 − 15 = 95.
+Gainerako irabaziak modu berean kalkulatzen dira.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+156
+5. Garraio-problema eta Esleipen-problema
+Helburu funtzioa maximizatzea duen garraio-problema honi dagokion matrize-
+forma ondokoa da:
+1
+2
+3
+4
+Eskaintza
+A1
+80
+100
+85
+90
+1500
+A2
+95
+85
+80
+100
+1500
+A3
+90
+80
+95
+90
+1500
+Eskaria
+1000 1200 1500 1000
+2
+5.4
+Teoremak eta deﬁnizioak
+Garraio-problemarako soluzio optimo baten bilaketarako simplex metodoa egoki-
+tzeko, problema mota honetako soluzioek betetzen dituzten zenbait teorema az-
+tertuko ditugu.
+5.4.1 Teorema. Garraio-problemak soluziorik izan dezan, baldintza beharrezkoa
+eta nahikoa da eskaintza totala eta eskari totala berdina izatea.
+Froga. Garraio-problemaren forma estandarraren arabera, iturburu-puntu ba-
+koitzaren
+ai, i = 1, . . . , m, eskaintzak ondoko murrizketa betetzen du:
+n
+j=1
+xij = ai,
+i = 1, . . . , m
+Iturburu-puntu guztien eskaintzak batuz gero, eskaintza totala honakoa da:
+m
+i=1
+n
+j=1
+xij =
+m
+i=1
+ai
+(5.1)
+Bestalde, helburu-puntuen
+bj, j = 1, . . . , n, eskariek ondoko murrizketak bete-
+tzen dituzte:
+m
+i=1
+xij = bj,
+j = 1, . . . , n
+OpenCourseWare, UPV/EHU
+
+5.4. Teoremak eta deﬁnizioak
+157
+Eskari totala honakoa da:
+n
+j=1
+m
+i=1
+xij =
+n
+j=1
+bj
+(5.2)
+(5.1) eta 
+(5.2) formuletan, berdintzaren ezkerreko atalak berdinak dira. Hortaz,
+formula horiek beteko dira baldin eta soilik baldin
+m
+i=1
+ai =
+n
+j=1
+bj
+2
+Aurreko teoreman frogatzen da garraio-problema batek soluziorik izan dezan,
+eskaintza totala eta eskari totala berdinak izan behar direla. Dena den, hori ez da
+hala gertatzen garraio-
+problema guztietan. Eskaintza totala eta eskari totala ber-
+dinak ez diren kasuetan problema egokitzea beharrezkoa izango da, eta ondoren
+lortutako soluzioa interpretatuko da.
+5.4.1 Deﬁnizioa. (Problema orekatua.) Garraio-problema bat orekatua dela esa-
+ten da baldin
+m
+i=1
+ai =
+n
+j=1
+bj .
+Garraio-problema baten soluzio bat kalkulatzeko eman beharreko lehen urra-
+tsa problema orekatzea da. Bi kasu gerta daitezke.
+1. Kasua. Eskaintza eskaria baino txikiagoa da,
+m
+i=1
+ai <
+n
+j=1
+bj.
+Eskaintza totalarekin ezin daiteke eskari totala zerbitzatu. Kasu honetan,
+gezurrezko iturburu-puntu bat sortzen da,
+Im+1. Bere gezurrezko eskaintza
+eta garraio-kostua honakoak izango dira:
+am+1 =
+n
+j=1
+bj −
+m
+i=1
+ai.
+cm+1,j = 0, j = 1, . . . , n.
+Im+1 gezurrezko iturburu-puntuaren am+1 eskaintza benetakoa ez denez,
+soluzioren batean gezurrezko iturburu-puntutik produktu unitateak jasotzen
+dituzten helburu-puntuen eskariak behar bezala zerbitzatuak izan ez dire-
+la interpretatuko dugu. Zenbait kasu praktikotan posible da
+cm+1,j, j =
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+158
+5. Garraio-problema eta Esleipen-problema
+1, . . . , n, gezurrezko garraio-kostuei zeroren desberdina den balioren bat
+esleitzea, baldin eta eskaria ez zerbitzatzeagatik zigorren bat adierazi nahi
+bada, adibidez.
+Adibidea. Har dezagun ondoko garraio-problema matrize-forman:
+1
+2
+3
+Eskaintza
+1
+2
+4
+3
+10
+2
+6
+1
+4
+20
+Eskaria
+20 20 20
+• Eskaintza totala = a1 + a2 = 10 + 20 = 30.
+• Eskari totala = b1 + b2 + b3 = 20 + 20 + 20 = 60.
+Eskaintza totala eskari totala baino txikiagoa da. Problema orekatzeko
+C
+gezurrezko iturburu-puntua sortzen da, bere eskaintza
+a3 = 60 − 30 = 30
+izango delarik.
+c31, c32 eta c33 garraio-kostuak zero dira. Garraio-problema
+orekaturako matrize-forma ondokoa da:
+1
+2
+3
+Eskaintza
+1
+2
+4
+3
+10
+2
+6
+1
+4
+20
+3
+0
+0
+0
+30
+Eskaria
+20 20 20
+2
+2. Kasua. Eskaria eskaintza baino txikiagoa da.
+m
+i=1
+ai >
+n
+j=1
+bj
+Eskaintza handiagoa izanik, gezurrezko helburu-puntu bat sortzen da,
+Hn+1,
+bere gezurrezko eskaria eta garraio-kostuak ondokoak direlarik:
+bn+1 =
+m
+i=1
+ai −
+n
+j=1
+bj.
+OpenCourseWare, UPV/EHU
+
+5.4. Teoremak eta deﬁnizioak
+159
+ci,n+1 = 0, i = 1, . . . , m.
+Gezurrezko helburu-puntuaren eskaria eskaintza totalaren eta eskari totalaren
+arteko diferentzia da. Gezurrezko helburu-puntura garraiatutako produktu unita-
+teen garraio-kostua zero da, iturburu-
+puntua edozein delarik ere, produktu unita-
+te horiek ez direlako errealak eta, beraz, garraioa ez delako gauzatuko. Zenbait
+kasutan, zeroren desberdina den garraio-
+kosturen bat esleitu daiteke, garraiatuak
+izango ez diren unitateek sortuko duten biltegiratze kostua adierazteko, adibidez.
+Adibidea. Har dezagun ondoko garraio-problema matrize-forman.
+1
+2
+3
+Eskaintza
+1
+3
+2
+1
+50
+2
+6
+4
+4
+50
+Eskaria
+20 20 20
+• Eskaintza totala = a1 + a2 = 50 + 50 = 100.
+• Eskari totala = b1 + b2 + b3 = 20 + 20 + 20 = 60.
+Eskaintza totala eskari totala baino handiagoa da. Problema orekatzeko ge-
+zurrezko
+4 iturburu-puntua sortzen da, bere eskaria b4 = 100 − 60 = 40 izan-
+go delarik.
+c14 eta c24 garraio-kostuak zero dira. Garraio-problema orekaturako
+matrize-forma ondokoa da:
+1
+2
+3
+4
+Eskaintza
+1
+3
+2
+1
+0
+50
+2
+6
+4
+4
+0
+50
+Eskaria
+20 20 20 40
+2
+5.4.2 Teorema. Garraio-problema orekatu orok badu soluzio bideragarririk.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+160
+5. Garraio-problema eta Esleipen-problema
+Froga. Izan bedi garraio-problema orekatu bati dagokion eredu lineala forma
+estandarrean. 5.4.1 Teoreman frogatu da problemak baduela soluziorik. Froga
+dezagun orain soluzio bideragarria existitzen dela. Izan bedi
+T =
+m
+i=1
+ai =
+n
+j=1
+bj
+Egiazta daiteke
+xij =
+aibj
+T ,
+i = 1, . . . , m, j = 1, . . . , n, soluzioa dela, hau da,
+murrizketak betetzen dituela. Gainera, bideragarria da,
+xij ≥ 0, i = 1, . . . , m,
+j = 1, . . . , n, betetzen delako.
+2
+5.4.3 Teorema. Garraio-problema orekatu orok badu oinarriko soluzio bidera-
+garririk. Soluzio horrek gehienez
+m + n − 1 aldagai positibo ditu.
+Hurrengo atalean bi metodo aztertuko ditugu garraio-problema baten oinarriko
+soluzio bideragarri bat kalkulatzeko: Ipar-mendebaldeko ertzaren metodoa eta
+Vogel-en metodoa.
+5.5
+Hasierako oinarriko soluzio bideragarria
+Garraio-problemarako soluzio bat kalkulatzeko, garraio-kostuen taularen dimen-
+tsio berberak dituen beste taula bat erabiliko dugu. Taula honek garraio-ﬂuxuen
+taula izena du (ikus 5.2. Irudia), eta bertan kokatuko ditugu garraio-
+ﬂuxuak, hau
+da, iturburu-puntu bakoitzetik helburu-
+puntu bakoitzera garraiatuko den produktu
+unitate kopuruak.
+5.5.1
+Ipar-mendebaldeko ertzaren metodoa
+Garraio-
+problema orekatu bat izanik, ondoko urratsei jarraituz hasierako oinarriko
+soluzio bideragarri bat lortzen da.
+1. urratsa. Garraio-ﬂuxuen taulan ipar-mendebaldeko
+(i, j) ertza aukeratu
+(hasieran
+i = 1, j = 1).
+2. urratsa. Aukeratutako posizioan
+xij aldagaiari ahal den ﬂuxurik handiena
+esleitu,
+xij = min{ai, bj}. Ondoren, ai eskaintza eta bj eskaria eguneratu
+honela:
+OpenCourseWare, UPV/EHU
+
+5.5. Hasierako oinarriko soluzio bideragarria
+161
+H1
+H2
+· · ·
+Hn
+Eskaintza
+I1
+x11
+x12
+· · ·
+x1n
+a1
+I2
+x21
+x22
+· · ·
+x2n
+a2
+..
+.
+..
+.
+..
+.
+. ..
+..
+.
+..
+.
+Im
+xm1 xm2
+· · ·
+xmn
+am
+Eskaria
+b1
+b2
+· · ·
+bn
+5.2. Irudia: Garraio-problemarako ﬂuxuen taula
+• Minimoa ai bada, Ii iturburu-puntuaren eskaintza zero bihurtuko da.
+Ondoko kalkuluetarako taulako
+i. errenkada ezabatu behar da. bj es-
+karia eguneratu egingo da honela:
+bj − ai.
+• Minimoa bj bada, Hj helburu-puntuaren eskaria zerbitzatua geratzen
+da, eskaria zero bihurtuko da eta taulako
+j. zutabea ezabatuko da, au-
+rrerantzean egingo diren kalkuluetan kontuan ez izateko.
+ai eskaintza
+eguneratu egingo da:
+ai − bj.
+• ai eskaintzak eta bj eskariak balio berbera badute, iturburuaren es-
+kaintza eta helburuaren eskaria aldi berean zero bihurtuko dira. Au-
+rrerantzean egingo diren kalkuluetarako
+i. errenkada eta j. zutabea
+ezabatuko dira.
+3. urratsa. Bi kasu gerta daitezke.
+• Ezabatua izan ez den errenkada edo zutabe bakarra baldin badago tau-
+lan, geratzen diren produktuen eskaintza eta eskariak ezabatu gabeko
+posizioetara esleitzen dira. Amaitu.
+• Bestela, 1. urratsera joan.
+Adibidea. Har dezagun 153. orrialdeko garraio-problema orekatua matrize-
+forman.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+162
+5. Garraio-problema eta Esleipen-problema
+O1
+O2
+O3
+Eskaintza
+A1
+8
+6
+10
+2000
+A2
+10
+4
+9
+2500
+Eskaria
+1500 2000 1000
+Eskaintza =
+2000 + 2500 = 1500 + 2000 + 1000 = Eskaria
+Lehenengo iterazioa.
+1. urratsa. Ipar-mendebaldeko ertza aukeratzen dugu, garraio-ﬂuxuen taulako
+1. errenkada eta 1. zutabea. Taulan izar batez erakusten dugu aukeratutako
+posizioa.
+Eskaintza
+Eskaria
+O1
+O2
+O3
+A1
+A2
+*
+1000
+1500
+2000
+2000
+2500
+2. urratsa. Posizio horretan garraio-ﬂuxu maximoa esleitu eta eskaintza eta
+eskaria eguneratu.
+x11 = min {a1, b1} = min {2000, 1500} = 1500
+A1 iturburuaren eskaintza eguneratua: a1 = 2000 − x11 = 500.
+O1 helburuaren eskari eguneratua: b1 = 1500 − x11 = 0.
+O1 helburu-puntuaren eskaria zerbitzatua izan da. Garraio-ﬂuxuen taula-
+ko 1. zutabea ezabatuko dugu, aurrerantzean egingo ditugun kalkuluetan
+kontuan ez izateko.
+OpenCourseWare, UPV/EHU
+
+5.5. Hasierako oinarriko soluzio bideragarria
+163
+Eskaintza
+Eskaria
+O1
+O2
+O3
+A1
+A2
+*
+1000
+1500
+1500
+2000
+2000
+2500
+500
+3. urratsa. Garraio-ﬂuxuen taulan ezabatu gabeko errenkada edo zutabe bat
+baino gehiago geratzen da. Algoritmoaren 1. urratsean jarraituko dugu
+iterazio berri batekin.
+Bigarren iterazioa. Aurreko iterazioan egin bezala, taulan ezabatu gabe-
+ko ipar-mendebaldeko ertza aukeratuko dugu, bertan garraio-ﬂuxua esleitzeko.
+Oraingoan 1. errenkada eta 2. zutabea aukeratuko ditugu (ikus aurreko taulako
+izarra).
+x12 = min {500, 2000} = 500. Eskaintza eta eskaria eguneratuko ditugu,
+a1 = 500−x12 = 0 eta b2 = 2000−500 = 1500. A1 iturburu-puntuaren eskaintza
+agortu denez, taulako 1. errenkada ezabatzen dugu aurrerantzean emango diren
+urratsetan kontuan ez izateko. Garraio-ﬂuxuen taula eguneratua honela geratzen
+da:
+Eskaintza
+Eskaria
+O1
+O2
+O3
+A1
+A2
+1000
+1500
+1500
+1500
+2000
+2000
+2500
+500
+500
+Taulan ezabatua izan ez den errenkada bakarra geratzen denez,
+A2 iturburuari
+dagokiona, esleituak izan ez diren produktu unitate guztiak ezabatu gabeko posi-
+zioetan esleitzen ditugu,
+x22 = 1500 eta x23 = 1000, eskaintza eta eskari guztiak
+zero bihurtuko direlarik. Honela lortzen da hasierako soluzio bat.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+164
+5. Garraio-problema eta Esleipen-problema
+Eskaintza
+Eskaria
+O1
+O2
+O3
+A1
+A2
+1000
+1000
+1500
+1500
+1500
+2000
+2000
+2500
+500
+Hasierako soluzio hau bideragarria eta oinarrikoa da. Taulan
+m + n − 1 =
+2 + 3 − 1 = 4 posiziotan esleitu dira garraio-ﬂuxuak, oinarriko posizioak dira.
+• Soluzioa.
+x11 = 1500, x12 = 500, x13 = 0, x21 = 0, x22 = 1500, x23 = 1000.
+• Garraio-kostua.
+z = (1500 × 8) + (500 × 6) + (1500 × 4) + (1000 × 9) = 30000.
+2
+Ipar-mendebaldeko ertzaren metodoa garraio-problemarako hasierako oinarri-
+ko soluzio bideragarri bat kalkulatzeko metodo sinplea da. Soluzioa kalkulatzeko
+prozesuan, metodo honek ez du garraio-
+kostuen taula kontuan hartzen, eta garraio-
+ﬂuxuak ipar-mendebaldeko posizioetan kokatzen ditu uneoro. Metodo honen ho-
+bekuntza bat posizio bat aukeratzen denean, garraio-
+kostuak kontuan hartzean da-
+tza.
+5.5.2
+Vogel-en metodoa
+Ipar-mendebaldeko ertzaren metodoa eta Vogel-en metodoa garraio-ﬂuxua koka-
+tzeko posizioa aukeratzeko moduan desberdintzen dira, algoritmoaren 1. urra-
+tsean. Posizio hori aukeratzeko errenkadakako eta zutabekako diferentziak kalku-
+latzen dira modu honetan:
+• EDi = i errenkadako bi kosturik txikienen arteko diferentzia balio absolu-
+tuan,
+i = 1, . . . , m.
+• ZDj = j zutabeko bi kosturik txikienen arteko diferentzia balio absolutuan,
+j = 1, . . . , n.
+OpenCourseWare, UPV/EHU
+
+5.5. Hasierako oinarriko soluzio bideragarria
+165
+Errendakako eta zutabekako diferentzien kalkulua erabiltzen da garraio-ﬂuxu
+bat kokatzeko unean garraio-kostuen arabera egokia den posizio bat aukeratzeko.
+Vogel-en metodoa aplikatuz garraio-problema orekatu baten hasierako oinarriko
+soluzio bideragarri bat lortzeko, ondoko urratsak eman behar dira:
+1. urratsa. Garraio-kostuen taulan
+EDi errenkadakako eta ZDj zutabekako
+diferentziak kalkulatu. Diferentziarik handieneko errenkada edo zutabea
+aukeratu, eta bertan
+cij kosturik txikieneko (i, j) posizioa.
+2. urratsa. Aukeratutako posizioan, garraio-ﬂuxuen taulan
+xij aldagaiari ahal
+den ﬂuxurik handiena esleitu,
+xij = min{ai, bj}. Ondoren, ai eskaintza eta
+bj eskaria eguneratu honela:
+• Minimoa ai bada, Ii iturburu-puntuaren eskaintza zero bihurtuko da.
+Ondoko kalkuluetarako taulako
+i. errenkada ezabatu behar da. bj es-
+karia eguneratu egingo da honela:
+bj − ai.
+• Minimoa bj bada, Hj helburu-puntuaren eskaria zero bihurtuko da, eta
+taulako
+j. zutabea ezabatuko da aurrerantzean egingo diren kalkulue-
+tan kontuan ez izateko.
+ai eskaintza eguneratu egingo da: ai − bj.
+• ai eskaintzak eta bj eskariak balio berbera badute, iturburuaren eskain-
+tza eta helburuaren eskaria aldi berean egiten dira zero. Aurrerantzean
+egingo diren kalkuluetarako
+i. errenkada eta j. zutabea ezabatuko
+dira.
+3. urratsa. Bi kasu gerta daitezke.
+• Ezabatua izan ez den errenkada edo zutabe bakarra baldin badago tau-
+lan, geratzen diren produktuen eskaintza eta eskariak ezabatu gabeko
+posizioetara esleitzen dira. Amaitu.
+• Bestela, 1. urratsera joan.
+Adibidea. Vogel-en metodoa erabiliz 153. orrialdeko garraio-problema ore-
+katurako hasierako oinarriko soluzio bideragarri bat kalkulatuko dugu.
+Lehenengo iterazioa.
+1. urratsa. Garraio-kostuen taulan
+EDi errenkadakako eta ZDj zutabekako
+diferentziak kalkulatuko ditugu. Diferentziarik handieneko errenkada edo
+zutabea aukeratuko dugu, (
+max{2, 5, 2, 2, 1} = 5 duena, 2. errenkada) eta
+bertan kosturik txikieneko posizioa, (
+min{10, 4, 9} = 4 duena, (2, 2) posi-
+zioa).
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+166
+5. Garraio-problema eta Esleipen-problema
+Garraio-kostuen taula
+Garraio-ﬂuxuen taula
+Eskain.
+Eskain.
+Eskaria
+Eskaria
+O
+1
+O
+1
+O
+2
+O
+2
+O
+3
+O
+3
+A
+1
+A
+1
+A
+2
+A
+2
+*
+1000
+1000
+1500
+1500
+2000
+2000
+2000
+2000
+2500
+2500
+4
+6
+8
+9
+1
+2
+2
+2
+5
+10
+10
+EDi
+Z Dj
+2. urratsa. Aukeratutako posizioan ahal den garraio-ﬂuxurik handiena eslei-
+tuko dugu.
+x22 = min{2500, 2000} = 2000.
+Eskaintza eta eskaria eguneratuko ditugu, eta 2. zutabea ezabatuko dugu,
+O2 helburu-puntuaren eskaria zerbitzatua izan delako.
+Garraio-kostuen taula
+Garraio-ﬂuxuen taula
+Eskain.
+Eskain.
+Eskaria
+Eskaria
+O
+1
+O
+1
+O
+2
+O
+2
+O
+3
+O
+3
+A
+1
+A
+1
+A
+2
+A
+2
+1000
+1000
+1500
+1500
+2000
+2000
+2000
+2000
+2500
+500
+0
+4
+6
+8
+9
+10
+10
+3. urratsa. Taulan ezabatu gabeko errenkada bat eta zutabe bat baino gehiago
+daudenez, 1. urratsera goaz.
+Bigarren iterazioa.
+Aurreko iterazioan egin bezala,
+EDi eta ZDj diferentziak kalkulatuko ditugu
+garraio-
+kostuen taulan, ezabatu gabe dauden kostuak kontuan hartuz, eta diferen-
+tziarik handiena aukeratuko dugu. Kasu honetan, diferentziarik handiena aukera-
+tzean lehenengo errenkadan eta lehenengo zutabean berdinketa dagoenez, horie-
+tako edozein aukeratuko dugu, adibidez 1. errenkada. Bertan kosturik txikiena
+c11 = 8 denez, 
+(1, 1) posizioa aukeratuta geratuko da. Posizio horretan garraio-
+ﬂuxuen taulan ﬂuxu maximoa kokatuko dugu,
+x11 = min{1500, 2000} = 1500,
+eta eskaintza eta eskaria eguneratuko ditugu. Taulako 1. zutabea ezabatuko dugu,
+O1 helburu-puntuaren eskaria zero bihurtu delako.
+OpenCourseWare, UPV/EHU
+
+5.6. Oinarriko soluzio bideragarrien hobekuntza
+167
+Garraio-kostuen taula
+Garraio-ﬂuxuen taula
+Eskain.
+Eskain.
+Eskaria
+Eskaria
+O
+1
+O
+1
+O
+2
+O
+2
+O
+3
+O
+3
+A
+1
+A
+1
+A
+2
+A
+2
+1000
+1000
+1500
+1500
+2000
+2000
+2000
+2500
+500
+500
+0
+0
+4
+6
+8
+9
+1
+1
+2
+2
+10
+10
+EDi
+Z Dj
+Ezabatu gabeko zutabe bakarra geratzen denez, oraindik esleituak izan ez di-
+ren eskaintza eta eskarietako produktu unitateak ezabatu gabe dauden posizioetara
+esleituko ditugu, eta Vogel-en metodoaren aplikazioa amaituko da, ﬂuxuen taulan
+garraio-problemarako hasierako oinarriko soluzio bideragarria dugularik.
+Garraio-kostuen taula
+Garraio-ﬂuxuen taula
+Eskain.
+Eskain.
+Eskaria
+Eskaria
+O
+1
+O
+1
+O
+2
+O
+2
+O
+3
+O
+3
+A
+1
+A
+1
+A
+2
+A
+2
+1000
+1000
+1500
+1500
+1500
+2000
+2000
+2000
+2000
+2000
+2500
+2500
+500
+500
+4
+6
+8
+9
+10
+10
+• Soluzioa.
+x11 = 1500, x12 = 0, x13 = 500, x21 = 0, x22 = 2000, x23 = 500.
+• Garraio-kostua.
+z = (8 × 1500) + (10 × 500) + (4 × 2000) + (9 × 500) = 29500.
+Hasierako soluzio hau ipar-mendebaldeko ertzaren metodoa erabiliz kalkulatu
+duguna baino hobea da, garraio-kostua txikiagoa delako.
+2
+5.6
+Oinarriko soluzio bideragarrien hobekuntza
+Oinarriko soluzio bideragarri bat hobetzeko, garraio-problemari dagokion eredu
+duala erabiltzen da. Izan bedi garraio-problema orekatua.
+min z =
+m
+i=1
+n
+j=1
+cijxij
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+168
+5. Garraio-problema eta Esleipen-problema
+hauen mende
+n
+j=1
+xij = ai,
+i = 1, . . . , m
+m
+i=1
+xij = bj,
+j = 1, . . . , n
+xij ≥ 0,
+i = 1, . . . , m,
+j = 1, . . . , n
+Aldagai dualak
+u1, . . . , um eta v1, . . . , vn izendatzen baditugu, dagokion eredu
+duala honela geratzen da adierazita:
+max G =
+m
+i=1
+aiui +
+n
+j=1
+bjvj
+hauen mende
+ui + vj ≤ cij, i = 1, . . . , m,
+j = 1, . . . , n
+ui, vj : ez-murriztuak,
+i = 1, . . . , m,
+j = 1, . . . , n
+Adibidea. Har dezagun 150. orrialdeko garraio-problemari dagokion eredu
+lineala. Dagokion eredu duala kalkulatuko dugu.
+min z = 8x11 + 6x12 + 10x13 + 10x21 + 4x22 + 9x23
+hauen mende
+x11 +x12 +x13
+= 2000
+x21
++x22 +x23 = 2500
+x11
++x21
+= 1500
+x12
++x22
+= 2000
+x13
++x23 = 1000
+x11, x12, x13, x21, x21, x23 ≥ 0
+Aldagai dualak
+u1, u2, v1, v2 eta v3 badira, problema duala honakoa da:
+max G = 2000u1 + 2500u2 + 1500v1 + 2000v2 + 1000v3
+hauen mende
+OpenCourseWare, UPV/EHU
+
+5.6. Oinarriko soluzio bideragarrien hobekuntza
+169
+u1
++v1
+≤ 8
+u1
++v2
+≤ 6
+u1
++v3 ≤ 10
+u2 +v1
+≤ 10
+u2
++v2
+≤ 4
+u2
++v3
+≤ 9
+ui, vj : ez-murriztuak
+2
+Garraio-problema baten soluzio optimoa kalkulatzeko erabiltzen den garraio-
+problemarako algoritmoa simplex metodoaren egokitzapen bat da. Garraio-pro-
+blemaren helburua minimizatzea da. Hasierako oinarriko soluzio bideragarri bate-
+tik abiatuz, helburu funtzioari balio txikiagoa emango dion beste bat kalkulatuko
+da. Horretarako, oinarri-
+aldaketa bat egin behar da, oinarritik irtengo den bektore
+bat eta oinarrian sartuko den beste bat aukeratuz. Aukeraketa hau hobekuntzaren
+teoremaren irizpideei jarraituz egiten da.
+5.6.1
+Oinarrian sartuko den bektorearen aukeraketa
+Garraio-problemarako ereduan
+xij aldagaien bidez izendatu ditugu erabaki-alda-
+gaiak,
+i = 1, . . . , m, j = 1, . . . , n, cij dira garraio-
+kostuak eta aij dira ereduko
+A matrizeko bektoreak.
+Gogora dezagun oinarriko soluzio bideragarri bat hobe daitekeen edo ez eraba-
+kitzeko, oinarriko ez diren bektoreei dagozkien balio adierazleak kalkulatu behar
+direla.
+xij erabaki-aldagaiari dagokion balio adierazlea zij − cij da.
+zij − cij = c
+T
+B
+B−1a
+ij − cij .
+Aldagai dualen bektorea cT
+B
+B−1 dela kontuan hartuz,
+cT
+B
+B−1
+= (u1, . . . , um, v1, . . . , vn)
+orduan,
+zij − cij = (u1, . . . , um, v1, . . . , vn)aij − cij.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+170
+5. Garraio-problema eta Esleipen-problema
+a
+ij bektoreak dituen 1eko bakarrak i eta m + j posizioetan daude. Bektorea-
+ren gainerako osagaiak
+0 dira. Ondorioz,
+zij − cij = ui + vj − cij
+Balio adierazleak dualaren aldagaien balioen bitartez kalkulatzen dira. Dua-
+laren aldagaien balioak kalkula daitezke, kontuan hartuz
+zij − cij = 0 dela oi-
+narriko diren
+xij aldagai guztietarako. Oinarrian m + n − 1 aldagai daudenez,
+ui + vj − cij = 0 moduko m + n − 1 ekuazio daude u1, . . . , um, v1, . . . , vn aldagai
+dualen
+m + n balioak kalkulatzeko. Ekuazio-sistema hori aska daiteke aldagairen
+bati balioren bat emanez.
+Behin aldagai dualen balioak kalkulatuak izan direnean, balio adierazle guz-
+tiak kalkulatu ahal izango dira. Helburua minimizatzea dela kontuan izanik, bi
+kasu gerta daitezke.
+• zij − cij ≤ 0 bada, i = 1, . . . , m, j = 1, . . . , n, soluzioa optimoa da.
+• zij − cij > 0 existitzen bada, soluzioa hobe daiteke. Horretarako, zij − cij
+positiboen artean maximoa duen aldagaia sartuko da oinarrian.
+Adibidea. Har dezagun 163. orrialdeko garraio-problemarako ipar-mendebaldeko
+ertzaren metodoa erabiliz kalkulatutako oinarriko soluzio bideragarria.
+Garraio-kostuen taula
+Garraio-ﬂuxuen taula
+Eskain.
+Eskain.
+Eskaria
+Eskaria
+O
+1
+O
+1
+O
+2
+O
+2
+O
+3
+O
+3
+A
+1
+A
+1
+A
+2
+A
+2
+1000
+1000
+1000
+1500
+1500
+1500
+1500
+2000
+2000
+2000
+2000
+2500
+2500
+500
+4
+6
+8
+9
+10
+10
+Oinarriko aldagaiak
+x11, x12, x22 eta x23 dira. Dualaren u1, u2, v1, v2 eta v3
+aldagaien balioak kalkulatzeko, ondoko ekuazio-sistema daukagu:
+x11 oinarrikoa da
+⇒
+z11 − c11 = 0
+⇒
+u1 + v1 − 8 = 0.
+x12 oinarrikoa da
+⇒
+z12 − c12 = 0
+⇒
+u1 + v2 − 6 = 0.
+x22 oinarrikoa da
+⇒
+z22 − c22 = 0
+⇒
+u2 + v2 − 4 = 0.
+x23 oinarrikoa da
+⇒
+z23 − c23 = 0
+⇒
+u2 + v3 − 9 = 0.
+OpenCourseWare, UPV/EHU
+
+5.6. Oinarriko soluzio bideragarrien hobekuntza
+171
+Ekuazio-sistema honek lau ekuazio eta bost ezezagun dituenez, inﬁnitu solu-
+zio ditu. Soluzio horien guztien artetik edozein har dezakegu. Horretarako alda-
+gairen bati balioren bat ematea nahikoa izango da, gainerako aldagaien balioak
+kalkulatu ahal izateko. Adibidez,
+u1 = 0 bada, v1 = 8, v2 = 6, u2 = −2 eta
+v3 = 11 balioak lortzen dira, sistema askatuz.
+Oinarriko ez diren
+xij aldagai guztietarako, kasu honetan x13 eta x21, balio
+adierazleak kalkulatuko ditugu honela:
+• z13 − c13 = u1 + v3 − c13 = 0 + 11 − 10 = 1 > 0.
+• z21 − c21 = u2 + v1 − c21 = −2 + 8 − 10 = −4 < 0.
+z13 − c13 balio adierazlea positiboa da. Ondorioz, x13 aldagaia oinarrira sartuz
+hobea izango den beste oinarriko soluzio bideragarri bat kalkulatu ahal izango da.
+2
+5.6.2
+Oinarritik aterako den bektorearen aukeraketa
+Oinarritik aterako den bektorea zein izango den erabakitzeko, ondokoak kontuan
+izan behar dira.
+1. Garraio-problemarako soluzio batean oinarrikoak diren aldagaiek ez dute
+ziklorik osatzen. Aurreko adibidean
+x11, x12, x22 eta x23 aldagaiek ez dute
+ziklorik osatzen.
+2. Oinarriko diren aldagaien eta oinarrian sartzea erabaki den aldagaiaren ar-
+tean ziklo bakar bat sortzen da.
+Ziklo hori aurkitzeko erregela bat honakoa da. Oinarrian sartzea erabaki
+den aldagaia ﬂuxu positibotzat hartzen da. Garraio-ﬂuxuen taulan ﬂuxu po-
+sitibo bakarreko errenkadak eta zutabeak ezabatu egingo ditugu, ezabatze-
+prozesua honela burutzen delarik: hasteko, ﬂuxu positibo bakarreko erren-
+kadak ezabatu; ondoren, zutabeak, eta ondoren, berriro ere errenkadak, ha-
+rik eta ﬂuxu positibo bakarreko errenkadarik edo zutaberik geratzen ez den
+arte. Ezabatuak izan ez diren eta ﬂuxu positiboa duten posizioek ziklo bakar
+bat osatzen dute.
+Zikloa zein ﬂuxuk osatzen duten zehaztu denean, oinarrian sartzea erabaki
+den aldagaiari ﬂuxu positibo bat esleitu behar zaio. Gainera, zikloa osatzen duten
+aldagaien artetik batek zero balioa hartu beharko du, eta oinarria utzi. Aldagai
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+172
+5. Garraio-problema eta Esleipen-problema
+hori zein den erabaki ahal izateko, zikloko ﬂuxuek duten joera aztertu behar da.
+Oinarrian sartuko den aldagaitik hasita, honek hazteko joera duela ikusten da, zero
+izatetik balio positibo bat izatera pasako delako. Eskaintza eta eskariak bete behar
+direnez, errenkada edo zutabe berean dauden zikloko beste ﬂuxuek jaisteko joera
+izan behar dute. Modu berean, zikloan jaisteko joera duten aldagai horien alboko
+direnek igotzeko joera erakusten dute.
+Jaisteko joera duten aldagaien balioak txikitu egingo dira horietako bat zero
+bihurtutzen den arte, garraio-
+ﬂuxu negatiboak ez baitira onartzen. Hain zuzen ere,
+zero bihurtu den aldagai hori izango da oinarritik aterako dena. Zikloko ez diren
+aldagaien balioak ez dira aldatzen. Jaisteko joera duten ﬂuxuen artetik minimoa
+izango da oinarrian sartuko den aldagaiari esleituko zaion balioa.
+Adibidea. 170. orrialdeko adibidearekin jarrai dezagun. Esan dugunez,
+x13
+aldagaia oinarrian sartuko da, eta bertan ﬂuxu positibo bat esleituko da. Taulan
+1. zutabea ezabatu egingo dugu, ﬂuxu bakarra dagoelako bertan. Ezin daiteke
+errenkada edo zutabe gehiago ezabatu, guztietan baitaude ﬂuxu positibo bat bai-
+no gehiago,
+x13 ﬂuxu positibotzat hartuz. Hortaz, zikloa x12, x13, x22 eta x23
+aldagaiek osatzen dute (ikus taulan grisez dauden lau laukitxoak).
+Sartu
+Irten
+Eskaintza
+Eskaria
+O1
+O2
+O3
+A1
+A2
+1000
+1000
+1500
+1500
+1500
+2000
+2000
+2500
+500
+x13 aldagaiak hazteko joera duenez, zikloko diren eta bere errenkada eta zu-
+tabe berean dauden
+x12 eta x23 aldagaiek jaisteko joera dute. Azken bi horien
+alboko da zikloan
+x22, igotzeko joera izango duelarik. Garraio-ﬂuxuak beti posi-
+tibo direnez, jaisteko joera dutenen artetik minimoak esango digu zenbat hazi edo
+txikituko diren zikloko ﬂuxuak:
+min{x12 = 500, x23 = 1000} = 500. Hortaz, x12
+aldagaia izango da oinarria utziko duena.
+Oinarrian sartuko den eta oinarritik irtengo den aldagaia aukeratuak izan di-
+renean, zikloko ﬂuxuak eguneratu egin behar dira. Eguneraketa burutzearekin
+batera zikloa desagertu egingo da eta eskaintzak eta eskariak beteko dira, zikloko
+OpenCourseWare, UPV/EHU
+
+5.7. Garraio-taula
+173
+ﬂuxuak eguneratu aurretik betetzen ziren bezalaxe. Kasu honetan, oinarria utziko
+duen aldagaiaren ﬂuxua
+500ekoa denez, zikloko ﬂuxuak 500 unitate hazi edo txi-
+kituko dira, ﬂuxuek duten joeraren arabera. Fluxuak eguneratuz lortzen da beste
+oinarriko soluzio bideragarri hau:
+Eskaintza
+Eskaria
+O1
+O2
+O3
+A1
+A2
+1000
+1500
+1500
+2000
+2000
+2000
+2500
+500
+500
+• Soluzioa.
+x11 = 1500, x12 = 0, x13 = 500, x21 = 0, x22 = 2000, x23 = 500.
+• Garraio-kostua.
+z = (8 × 1500) + (10 × 500) + (4 × 2000) + (9 × 500) = 29500.
+Soluzio hau oinarri-aldaketa egin aurretik genuena baino hobea da, garraio-
+kostua txikiagoa delako (ikus 164. orrialdeko garraio-kostua).
+2
+5.7
+Garraio-taula
+Orain arte, bi taularekin egin dugu lan: garraio-kostuen taula eta garraio-
+ﬂuxuen
+taula. Gainera, soluzioa hobetzerakoan, dualaren
+ui eta vj aldagaiak eta zij − cij
+balio adierazleak ere behar izan ditugu, eta kalkuluak tauletatik kanpo egin behar
+izan ditugu.
+Kalkulu guztiak taula bakar batean egin ahal izateko, garraio-taula erabiltzen
+da, eta bertan jasotzen dira garraio-problemarako soluzio optimoa kalkulatzeko
+prozesuan beharrezko gertatzen diren balio guztiak. Garraio-taulak egitura hau
+dauka:
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+174
+5. Garraio-problema eta Esleipen-problema
+v
+1
+v
+2
+· · ·
+vn
+z
+11
+− c11
+c
+11
+z
+12
+− c12
+c
+12
+· · ·
+z
+1
+n − c1n
+c
+1
+n
+u
+1
+x
+11
+x
+12
+x
+1
+n
+a
+1
+z
+21
+− c21
+c
+21
+z
+22
+− c22
+c
+22
+· · ·
+z
+2
+n − c2n
+c
+2
+n
+u
+2
+x
+21
+x
+22
+x
+2
+n
+a
+2
+..
+.
+. ..
+..
+.
+zm1 − cm1 cm1 zm2 − cm2 cm2
+· · ·
+zmn − cmn cmn
+um
+xm1
+xm2
+xmn
+am
+b
+1
+b
+2
+· · ·
+bn
+Adibidea. Jarrai dezagun aurreko adibidearekin. Dagokion garraio-taula ida-
+tziko dugu.
+Sartu
+Irten
+u1 = 0
+u2 = −2
+v1 = 8
+v2 = 6
+v3 = 11
+4
+6
+8
+9
+1
+−4
+10
+10
+1000
+1000
+1500
+1500
+1500
+2000
+2000
+2500
+500
+Bertan kokatu ditugu problemaren matrize-formako datuak (ikus 153. orrial-
+dea), ipar-mendebaldeko ertzaren metodoa erabiliz kalkulatutako hasierako oina-
+rriko soluzio bideragarria (ikus 163. orrialdeko garraio-ﬂuxuen taula), eta 5.6
+Atalean oinarrian sartuko den bektorea erabakitzeko kalkulatu diren
+ui, vj, eta
+zij − cij balioak 
+(ikus 171. orrialdea). Gainera, oinarritik irtengo den bektorea
+erabakitzeko, zikloa ere adierazten dugu (ikus 172. orrialdeko taula).
+2
+OpenCourseWare, UPV/EHU
+
+5.8. Garraio-problemarako algoritmoa
+175
+5.8
+Garraio-problemarako algoritmoa
+Atal honetan ematen dira garraio-problema baten soluzio optimoa kalkulatzeko
+eman beharreko urratsak, helburua minimizatzea denean.
+1. urratsa. Garraio-problema orekatu.
+2. urratsa. Hasierako oinarriko soluzio bideragarri bat kalkulatu.
+3. urratsa. Une honetan daukagun oinarriari dagozkion
+u1, . . . , um eta v1, . . . , vn
+aldagaien balioak kalkulatu.
+4. urratsa. Oinarriko ez diren bektoreei dagozkien
+zij − cij = ui + vj − cij
+balio adierazleak kalkulatu.
+• zij − cij > 0 existitzen bada, soluzioa hobe daiteke. Balio adierazle
+positiboen artetik maximoa duen aldagaia aukeratu oinarrian sartzeko.
+5. urratsera joan.
+• Oinarriko ez diren aldagai guztietarako zij −cij < 0 bada, une honetan
+daukagun soluzioa optimoa eta bakarra da. Amaitu.
+• Oinarriko ez diren aldagai guztietarako zij − cij ≤ 0 bada, eta oina-
+rrikoa ez den aldagai bat existitzen bada, zeinarentzat
+zij − cij = 0
+den, soluzio optimo anizkoitza dago. Azken aldagai hori aukeratuko
+da oinarrian sartzeko. 5. urratsera joan.
+5. urratsa. Une honetan oinarrian dauden aldagaiek eta oinarrian sartzeko
+aukeratua izan den aldagaiak osatzen duten ziklo bakarra aurkitu. Zikloa
+osatzen duten ﬂuxuak eguneratuz soluzio berria kalkulatu. 3. urratsera joan.
+5.9
+Garraio-problemarako algoritmoaren aplikazioa
+Garraio-kostuen taula hau duen garraio-problemarako soluzio optimoa kalkulatu-
+ko dugu.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+176
+5. Garraio-problema eta Esleipen-problema
+1
+2
+3
+4
+Eskaintza
+1
+5
+9
+−
+4
+28
+2
+6
+10
+3
+−
+32
+3
+4
+2
+5
+7
+60
+Eskaria
+48 29 40 33
+(1, 3) eta (2, 4) posizioetako marratxoek iturburu-puntu eta helburu-puntu ho-
+rien arteko garraioa ezin daitekeela gauzatu adierazten dute. Posizio horietan
+garraio-ﬂuxurik kokatua izan ez dadin,
+M garraio-kostu oso altu bat egokituko
+dugu.
+Lehenengo iterazioa
+1. urratsa. Garraio-problema orekatu. Eskaintza
+= 28 + 32 + 60 = 120,
+Eskaria
+= 48 + 29 + 40 + 33 = 150. Eskaintzan 30 produktu unitate falta
+direnez, eskaria zerbitzatu ahal izateko,
+30 unitateko eskaintza eta garraio-kostuak
+zero izango dituen gezurrezko iturburu-puntu bat sortuko dugu. Garraio-kostuen
+taulako datuak garraio-taulan kokatuko ditugu.
+0
+0
+0
+0
+2
+3
+4
+4
+5
+5
+6
+7
+9
+10
+M
+M
+28
+32
+60
+30
+48
+29
+40
+33
+2. urratsa. Vogel-
+en metodoa erabiliz hasierako oinarriko soluzio bideragarri bat
+kalkulatuko dugu. Taulan
+EDi errenkadakako eta ZDj zutabekako diferentziak
+kalkulatuko ditugu,
+i = 1, . . . , 4, j = 1, . . . , 4. Diferentziarik handiena 1. eta 4.
+zutabeetan dago. 1. zutabea aukeratuko dugu, adibidez. Bertan kosturik txikie-
+neko posizioa
+0 kostua duena da, (4, 1) posizioan. Posizio horretan eskaintzaren
+eta eskariaren arteko minimoa,
+min{30, 48} = 30 esleituko dugu. Eskaintza eta
+OpenCourseWare, UPV/EHU
+
+5.9. Garraio-problemarako algoritmoaren aplikazioa
+177
+eskaria eguneratu eta 4. errenkada ezabatuko dugu, eskaintza zero egin delako.
+Honela geratuko da taula Vogel-en metodoaren hurrengo iterazioari ekiteko:
+0
+0
+0
+0
+0
+0
+1
+2
+2
+2
+3
+3
+3
+4
+4
+4
+4
+5
+5
+6
+7
+9
+10
+M
+M
+EDi
+ZDj
+18
+28
+32
+60
+30
+29
+40
+33
+Vogel-
+en metodoaren bigarren iterazioan, diferentziak kalkulatuko ditugu ezabatu
+gabeko kostuen artean. Handiena 2. zutabean dago,
+ZD2 = 7, eta bertan ezabatu
+gabeko kosturik txikiena
+2koa da, (3, 2) posizioan. min{60, 29} = 29 unitateko
+garraio-ﬂuxua kokatu, eskaintza eta eskaria eguneratu eta 2. zutabea ezabatuko
+dugu, eskaria zero egin delako. Taula honela geratuko da:
+0
+0
+0
+0
+0
+0
+1
+1
+2
+2
+2
+3
+3
+3
+4
+4
+5
+5
+6
+7
+7
+9
+10
+M
+M
+EDi
+ZDj
+18
+28
+32
+30
+31
+29
+40
+33
+Prozesua errepikatuko dugu. Diferentziarik handienak
+ED2 = ZD4 = 3 dira.
+2. errenkada aukeratuko dugu, adibidez. Kosturik txikiena bertan
+c23 = 3 da,
+(2, 3) posizioan. min{32, 40} = 32 garraio-ﬂuxua kokatu, eskaintza eta eskaria
+eguneratu eta 2. errenkada ezabatuko dugu, eskaintza zero egin delako.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+178
+5. Garraio-problema eta Esleipen-problema
+0
+0
+0
+0
+0
+0
+0
+1
+1
+1
+2
+2
+3
+3
+3
+4
+4
+5
+5
+6
+7
+8
+9
+10
+M
+M
+EDi
+ZDj
+18
+28
+32
+30
+31
+29
+33
+Oraingoan, diferentziarik handiena 3. zutabean dago,
+ZD3 = M − 5. Zutabean
+ezabatu gabe dauden kostuen artetik minimoa
+min{c13, c33} = min{M, 5} = 5
+da.
+(3, 3) posizioan min{31, 8} = 8 garraio-ﬂuxua kokatuko dugu. Eskaintza eta
+eskaria eguneratu eta 3. zutabea ezabatu.
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+1
+2
+3
+3
+4
+4
+5
+5
+6
+7
+8
+9
+10
+M
+M
+M − 5
+EDi
+ZDj
+18
+23
+28
+32
+30
+29
+33
+Oraindik, taulan bi errenkada eta bi zutabe daude ezabatu gabe. Diferentziarik
+handienak
+ED3 = ZD4 = 3 dira. 3. errenkada aukeratuko dugu, eta bertan eza-
+batu gabeko kostuen artetik minimoa
+min{c31, c34} = min{4, 7} = 4 da. (3, 1)
+posizioan
+min{23, 18} = 18 garraio-ﬂuxua kokatuko dugu. Eskaintza eta eskaria
+eguneratu eta 1. zutabea ezabatuko dugu.
+OpenCourseWare, UPV/EHU
+
+5.9. Garraio-problemarako algoritmoaren aplikazioa
+179
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+1
+2
+3
+3
+3
+4
+4
+5
+5
+5
+6
+7
+8
+9
+10
+M
+M
+EDi
+ZDj
+18
+28
+32
+30
+29
+33
+Dagoeneko, ezabatu gabeko zutabe bat besterik ez da geratzen taulan. Esleituak
+izan ez diren garraio-ﬂuxuak
+(1, 4) eta (3, 4) posizioetan kokatu eta lortu dugu,
+Vogel-en metodoa erabiliz, hasierako oinarriko soluzio bideragarria.
+0
+0
+0
+0
+2
+3
+4
+4
+5
+5
+5
+6
+7
+8
+9
+10
+M
+M
+18
+28
+28
+32
+32
+60
+30
+30
+48
+29
+29
+40
+33
+3. urratsa. Aldagai dualen balioak kalkulatu. Taulan bertan egingo dugu,
+u3 = 0 eginez. Horrela, adibidez, oinarrikoa den x31 aldagairako z31 − c31 = 0
+betetzen denez,
+u3 + v1 − c31 = 0 + v1 − 4 = 0 ekuaziotik v1 = 4 balioa lortzen
+da. Gainerako aldagaien balioak askatzeko, modu berean egingo dugu.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+180
+5. Garraio-problema eta Esleipen-problema
+0
+0
+0
+0
+2
+3
+4
+4
+5
+5
+5
+6
+7
+8
+9
+10
+M
+M
+18
+28
+28
+32
+32
+60
+30
+30
+48
+29
+29
+40
+33
+u1 = −3
+u2 = −2
+u3 = 0
+u4 = −4
+v1 = 4
+v2 = 2 v3 = 5
+v4 = 7
+4. urratsa. Oinarriko ez diren aldagaiei dagozkien
+zij − cij = ui + vj − cij
+balio adierazleak kalkulatu. Adibidez,
+z21−c21 = u2+v1−c21 = −2+4−6 = −4.
+Modu berean kalkulatuko ditugu gainerako balio adierazleak.
+0
+0
+0
+0
+2
+3
+4
+4
+5
+5
+5
+6
+7
+8
+9
+10
+M
+M
+18
+28
+28
+32
+32
+60
+30
+30
+48
+29
+29
+40
+33
+u1 = −3
+u2 = −2
+u3 = 0
+u4 = −4
+v1 = 4 v2 = 2 v3 = 5 v4 = 7
+−4
+−10
+2
+− M
+−4
+−10
+5
+− M
+−2
+1
+3
+Sartu
+Aurreko taulan ikus daiteke
+z43−c43 = 1 eta z44−c44 = 3 balio adierazleak positi-
+boak direla. Bien artetik handienari dagokion aldagaia aukeratuko dugu oinarrian
+sartzeko,
+(4, 4) posizioko x44 alegia.
+5. urratsa. Zikloa
+x31, x34, x41 eta x44 aldagaiek osatzen dute. Taulako lau-
+kitxoetan gezien bidez adierazten da garraio-
+ﬂuxuek duten hazteko edo txikitzeko
+OpenCourseWare, UPV/EHU
+
+5.9. Garraio-problemarako algoritmoaren aplikazioa
+181
+joera. Txikitzeko joera dutenen artetik minimoa
+min{5, 30} = 5 denez, x34 al-
+dagaia irtengo da oinarritik. Zikloko ﬂuxuak eguneratu eta taula berri bat lortuko
+dugu. Ondoren, 3. urratsera joan eta prozesua errepikatuko da.
+0
+0
+0
+0
+0
+0
+0
+0
+2
+2
+3
+3
+4
+4
+4
+4
+5
+5
+5
+5
+5
+5
+6
+6
+7
+7
+8
+8
+9
+9
+10
+10
+M
+M
+M
+M
+18
+23
+25
+28
+28
+28
+28
+32
+32
+32
+32
+60
+60
+30
+30
+30
+48
+48
+29
+29
+29
+29
+40
+40
+33
+33
+u1 = −3
+u2 = −2
+u3 = 0
+u4 = −4
+v1 = 4 v2 = 2 v3 = 5 v4 = 7
+−4
+−10
+2
+− M
+−4
+−10
+5
+− M
+−2
+1
+3
+Sartu
+Irten
+Bigarren iterazioa
+Prozesua errepikatu behar da: aldagai dualen balioak eta balio adierazleak
+kalkulatu, sartuko den aldagaia aukeratu, zikloa aurkitu, irtengo den aldagaia zein
+izango den erabaki (ezkerreko taulan daude kalkulu guztiak) eta zikloko ﬂuxuak
+eguneratuz, hobea den beste soluzio bat izango dugu (eskuineko taulan).
+0
+0
+0
+0
+0
+0
+0
+0
+2
+2
+3
+3
+4
+4
+4
+4
+5
+5
+5
+5
+5
+5
+6
+6
+7
+7
+8
+8
+9
+9
+10
+10
+M
+M
+M
+M
+17
+23
+25
+28
+28
+28
+28
+32
+32
+32
+32
+60
+60
+30
+30
+31
+48
+48
+29
+29
+29
+29
+40
+40
+33
+33
+u1 = 0
+u2 = −2
+u3 = 0
+u4 = −4
+v1 = 4 v2 = 2 v3 = 5 v4 = 4
+−1
+−7
+5
+− M
+−4
+−10
+2
+− M
+−3
+−2
+1
+Sartu
+Irten
+Hirugarren iterazioa.
+Berriro ere, prozesua errepikatzen da eta garraio-problemarako soluzio opti-
+mora iristen gara. Taula honetan ikus daiteke
+zij − cij balio adierazle guztiak
+negatiboak direla. Hori dela eta, soluzio optimoa bakarra da.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+182
+5. Garraio-problema eta Esleipen-problema
+0
+0
+0
+0
+2
+3
+4
+4
+5
+5
+5
+6
+7
+8
+9
+10
+M
+M
+30
+31
+28
+28
+32
+32
+60
+17
+48
+29
+29
+40
+33
+u1 = 4
+u2 = 3
+u3 = 4
+u4 = 0
+v1 = 0
+v2 = −2 v3 = 0
+v4 = 0
+−1
+−7
+4 − M
+−3
+−9
+3 − M
+−1
+−3
+−2
+• Soluzio optimoa: x∗
+14 = 28, x
+∗
+23 = 32, x
+∗
+31 = 31, x
+∗
+32 = 29, x
+∗
+41 = 17,
+x∗
+43 = 8, x
+∗
+44 = 5. Gezurrezko 17 produktu unitate jasotzen ditu 1 helburu-
+puntuak, gezurrezko 8 unitate 3 helburuak eta gezurrezko 5 unitate 4 helbu-
+ruak. Hortaz, beren eskariak ez dira osotasunean zerbitzatuak izan, eskain-
+tza totala nahikoa ez zelako.
+• Garraio-kostu minimoa:
+z∗ = (4×28)+(3×32)+(4×31)+(2×29)+(0×17)+(0×8)+(0×5) = 390
+2
+5.9.1
+Soluzio endekatua
+m iturburu-puntu eta n helburu-puntu dituen garraio-problema orekatu batean,
+soluzio batek zero baino handiagoak diren
+m + n − 1 aldagai baino gutxiago
+baditu, soluzio hori endekatua dela esaten da. Endekatzea ondoko bi kasuetan
+gerta daiteke.
+• Hasierako oinarriko soluzio bideragarri baten kalkuluan, Vogel-en metodoa
+edo ipar-mendebaldeko ertzaren metodoa aplikatzerakoan, azkena ez den
+urrats batean errenkada eta zutabea aldi berean ezabatzen badira, eskaintza
+eta eskaria biak batera zero egin direlako.
+OpenCourseWare, UPV/EHU
+
+5.9. Garraio-problemarako algoritmoaren aplikazioa
+183
+• Garraio-problemarako algoritmoa aplikatzerakoan, oinarritik irtengo den al-
+dagaia aukeratzeko irizpidean berdinketa gertatzen bada.
+Soluzio bat endekatua denean, beharrezkoa gertatzen da bereiztea zero diren
+garraio-ﬂuxuen artean zeintzuk diren oinarriko aldagaiei dagozkienak, eta zein-
+tzuk ez. Zenbait kasutan, garraio-ﬂuxua zero duten aldagaien artean bereizketa
+egiteko aukera bat baino gehiago izaten da.
+Adibidea. Ondoko garraio-kostuen taula emanik, hasierako oinarriko soluzio
+bideragarri bat kalkulatuko dugu:
+1
+2
+3
+Eskaintza
+1
+3
+2
+1
+15
+2
+1
+2
+3
+10
+3
+2
+3
+1
+14
+Eskaria
+10 6 12
+Problema orekatu eta Vogel-en metodoa aplikatuz, ondoko hasierako oinarriko
+soluzio bideragarria lortzen dugu.
+3
+2
+1
+0
+4
+11
+15
+1
+2
+3
+0
+10
+10
+2
+3
+1
+0
+6
+8
+14
+10
+6
+12
+11
+Aurreko garraio-taulan, zero baino balio handiagoa duten 5 garraio-ﬂuxu daude:
+x13, x14, x21, x32 eta x33. Oinarrian m + n − 1 = 6 aldagai daudenez, soluzioa
+endekatua da. Hortaz, garraio-ﬂuxua zero duten aldagaien artean bat aukeratu
+beharko da oinarriko izateko, beti ere aldagai horiek zikloa osatuko ez dutelarik.
+Kasu honetan,
+x11, x22, x23, x24 eta x31 aldagaien artetik bat aukera daiteke, baina
+ezingo dugu inolaz ere oinarriko aldagai izateko
+x12 edo x34 aukeratu, horietako
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+184
+5. Garraio-problema eta Esleipen-problema
+edozein aukeratuz gero, zikloa osatuko litzatekeelako.
+x22 = 0 aukeratuz gero,
+adibidez, ondoko soluzio endekatua lortuko da:
+3
+2
+1
+0
+4
+11
+15
+1
+2
+3
+0
+10
+0
+10
+2
+3
+1
+0
+6
+8
+14
+10
+6
+12
+11
+Soluzio horretatik abiatuz, algoritmoaren aplikazioarekin jarraituko da.
+2
+Adibidea. Demagun garraio-problema baten ebazpen-prozesuan ondoko tau-
+lan agertzen den soluzio bideragarria daukagula, eta
+zij − cij balio adierazleak
+kalkulatu ditugula.
+v1 = 6
+v2 = 4
+v3 = 1 v4 = 4
+6
+4
+−3 4 −4 8
+u1 = 0 10
+12
+22
+9
+2
+9
+6
+0
+9
+u2 = 5
+10
+8
+18
+3
+6
+−4 11
+4
+7
+u3 = 3
+15
+5
+20
+10
+22
+23
+5
+Balio adierazle positiboen artetik handiena
+z21 − c21 = 9 da; x21 aldagaia oi-
+narrian sartuko da. Zikloa
+x11, x12, x21 eta x22 aldagaiek osatzen dute. Zikloko
+ﬂuxuak eguneratu eta oinarriko bi aldagai aldi berean zero egiten direla ikusten
+dugu:
+x11 = 0 eta x22 = 0. Dena den, bi aldagaiek batera ezin dute oinarria utzi,
+oinarrian ez genukeelako behar adina aldagai izango. Hortaz, bi horietako bat oi-
+narrian mantenduko dugu,
+x11 adibidez, eta bestea oinarritik irtengo da; eskuineko
+taulan ikusten den soluzio endekatua lortuko dugu.
+OpenCourseWare, UPV/EHU
+
+5.9. Garraio-problemarako algoritmoaren aplikazioa
+185
+0
+2
+2
+4
+4
+4
+4
+4
+4
+5
+5
+5
+5
+6
+6
+6
+6
+6
+6
+7
+7
+8
+8
+8
+8
+9
+9
+9
+10
+10
+10
+10
+10
+10
+11
+11
+12
+15
+15
+22
+22
+22
+22
+22
+23
+23
+18
+18
+20
+20
+u1 = 0
+u2 = 5
+u3 = 3
+v1 = 6 v2 = 4 v3 = 1 v4 = 4
+−3
+−4
+9
+0
+3
+−4
+Sartu
+Irten
+Algoritmoaren aplikazioarekin aurrera jarraitu behar da optimora iritsi arte. 2
+5.9.2
+Soluzio optimo anizkoitza
+Ondoko garraio-kostuen taula emanik, soluzio optimo guztiak kalkulatuko ditugu:
+1
+2
+3
+4
+5
+Eskaintza
+1
+4
+1
+2
+6
+9
+100
+2
+6
+4
+3
+5
+7
+120
+3
+5
+2
+6
+4
+8
+120
+Eskaria
+40 50 70 90 90
+Garraio-problemarako algoritmoaren iterazioak egin ondoren, ondoko solu-
+zioa lortzen da:
+v1 = 4 v2 = 1 v3 = 2 v4 = 3 v5 = 6
+4
+1
+2 −3 6 −3 9
+u1 = 0 40
+20
+40
+100
+−1 6 −2 4
+3 −1 5
+7
+u2 = 1
+30
+90
+120
+0
+5
+2 −3 6
+4 −1 8
+u3 = 1
+30
+90
+120
+40
+50
+70
+90
+90
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+186
+5. Garraio-problema eta Esleipen-problema
+Oinarriko ez diren aldagai guztietarako
+zij − cij ≤ 0 betetzen da, eta gainera
+z31 − c31 = 0 da. Hortaz, problemak soluzio optimo anizkoitza du.
+• Soluzio optimoa: x∗
+11 = 40, x
+∗
+12 = 20, x
+∗
+13 = 40, x
+∗
+23 = 30, x
+∗
+25 = 90,
+x∗
+32 = 30, x
+∗
+34 = 90.
+• Garraio-kostu minimoa:
+z∗ = (4×40)+(1×20)+(2×40)+(3×30)+(7×90)+(2×30)+(4×90) = 1400.
+Beste soluzio optimo bat kalkulatzeko,
+x31 aldagaia aukeratuko dugu oinarrian
+sartzeko, eta
+x32 oinarritik ateratzeko. Zikloko garraio-ﬂuxuak eguneratuz, beste
+soluzio optimo bat lortuko dugu.
+4
+1
+2
+6
+9
+10
+50
+40
+100
+6
+4
+3
+5
+7
+30
+90
+120
+5
+2
+6
+4
+8
+30
+90
+120
+40
+50
+70
+90
+90
+• Soluzio optimoa: x∗
+11 = 10, x
+∗
+12 = 50, x
+∗
+13 = 40, x
+∗
+23 = 30, x
+∗
+25 = 90,
+x∗
+31 = 30, x
+∗
+34 = 90.
+• Garraio-kostu minimoa:
+z∗ = (4×10)+(1×50)+(2×40)+(3×30)+(7×90)+(5×30)+(4×90) = 1400.
+Prozesu hau errepikatuz lortuko dira soluzio optimo guztiak.
+2
+OpenCourseWare, UPV/EHU
+
+5.10. Esleipen-problema
+187
+5.10
+Esleipen-problema
+Garraio-problemaren kasu partikular bat da esleipen-problema. Lortu nahi dena
+hau da: iturburu-puntuen (izaki, eginkizun etab.) eta helburu-puntuen (eginki-
+zun, makina etab.) arteko esleipena, esleipen honek kostu-funtzioa optimizatuko
+duelarik. Esleipen honek iturburu-puntu bakoitza helburu-
+puntu bakar batekin eta
+helburu-puntu bakoitza iturburu-puntu bakarrarekin esleituko ditu.
+Ii iturburu-
+puntua eta
+Hj helburu-puntua elkarri esleitzeak cij kostua eragiten du.
+Erabaki-aldagaiak honela daude deﬁnituak:
+xij =
+
+
+
+1 baldin Ii iturburua eta Hj helburua elkarri esleitu badira
+0 bestelakoetan
+Formalki esateko,
+n iturburu-puntu eta n helburu-puntu izanik, eta Ii iturburu-
+puntua
+Hj helburu-
+puntuari esleitzeko kostua cij bada, i = 1, . . . , n, j = 1, . . . , n,
+kostu-totala minimo egingo duen esleipena aurkitzean datza esleipen-problema.
+Esleipen-problemari dagokion eredu lineala forma estandarrean ondokoa da:
+min z =
+n
+i=1
+n
+j=1
+cijxij
+hauen mende
+n
+j=1
+xij = 1,
+i = 1, . . . , n
+n
+i=1
+xij = 1,
+j = 1, . . . , n
+xij = 0, 1,
+i, j = 1, . . . , n
+Iturburu-puntu bakoitza helburu-puntu bakar bati esleitzen zaiola adierazten
+dute lehenenego
+n murrizketek; hurrengo n murrizketek, aldiz, helburu-puntu ba-
+koitzari iturburu-puntu bakar bat esleitzen zaiola.
+Problemaren iturburu-puntu kopurua eta helburu-puntu kopurua berdinak ez
+direnean, kopuru horiek berdinak izan daitezen behar adina iturburu-puntu edo
+helburu-puntu erantsiko dira problema orekatzeko. Iturburu-puntu edo helburu-
+puntu horiek gezurrezkoak izateagatik, zero esleipen-kostua izango dute.
+Esleipen-problemaren informazio esanguratsua esleipen-kostuen taula-n ema-
+ten da, eskaintza eta eskari guztiak 1 direlako.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+188
+5. Garraio-problema eta Esleipen-problema
+H1 H2 . . . Hn
+I1 c11 c12 . . . c1n
+I1 c21 c22 . . . c2n
+..
+.
+..
+.
+. ..
+..
+.
+In cn1 cn2 . . . cnn
+5.3. Irudia: Esleipen-kostuen taula
+5.10.1
+Metodo hungariarra
+Esleipen-problema ebazteko algoritmoa ondoko bi teorematan oinarritzen da.
+5.10.1 Teorema. Esleipen-problema baten helburu funtzioa
+z =
+n
+j=1
+n
+i=1
+cijxij
+izanik,
+xij soluzio optimo badira, i = 1, . . . , n, j = 1, . . . , n, aldagaietarako
+balio horiek soluzio optimo dira baita aurreko helburu funtzio horren ordez
+z′ =
+n
+j=1
+n
+i=1
+c′
+ij xij
+helburu funtzioa duen problemarako,
+c′
+ij = cij − ui − vj izanik eta ui eta vj
+konstanteak izanik.
+Froga.
+z′ =
+n
+j=1
+n
+i=1
+c′
+ij xij =
+n
+j=1
+n
+i=1
+(cij − ui − vj)xij =
+=
+n
+j=1
+n
+i=1
+cijxij −
+n
+j=1
+n
+i=1
+uixij −
+n
+j=1
+n
+i=1
+vjxij =
+= z −
+n
+i=1
+ui
+n
+j=1
+xij −
+n
+j=1
+vj
+n
+i=1
+xij =
+OpenCourseWare, UPV/EHU
+
+5.10. Esleipen-problema
+189
+= z −
+n
+i=1
+ui −
+n
+j=1
+vj = z − k.
+z eta z′ helburu funtzioen arteko aldea k konstantea da. Horregatik lortzen
+dute optimoa
+xij erabaki-aldagaien balioen multzo berberean.
+2
+5.10.1 Teoremari esker, esleipen-kostuen taula eraldatu ahal izango dugu erren-
+kadaka edota zutabeka eragiketak eginez, horrek soluzio optimoaren gain eraginik
+sortuko ez duelarik; adibidez, errenkada edota zutabe bateko elementuei konstante
+bat kendu ahal izango diegu.
+5.10.2 Teorema.
+cij ≥ 0 badira, i, j = 1, . . . , n eta xij aldagaiek hartutako
+balioek
+z =
+n
+j=1
+n
+i=1
+cijxij = 0
+betetzen badute,
+xij problemarako soluzio optimoa dira, i, j = 1, . . . , n.
+Froga.
+cij ≥ 0 badira, i, j = 1, . . . , n, xij = 0, 1 izanik, i, j = 1, . . . , n,
+helburu funtzioaren balioa
+z ≥ 0 izango da. Hortaz, xij aldagaien balioek, i, j =
+1, . . . , n, z = 0 egiten badute, balio hori helburu funtzioaren minimo absolutua
+izanik, soluzioa optimoa da.
+2
+Esleipen-problema baten ebazpenean 5.10.1 Teoremaren arabera egiten dira
+eragiketak, esleipen-
+kostuen taulan zeroak lortzeko. Helburu funtzioari zero ba-
+lioa emango dion esleipen bat lortzen bada, 5.10.2 Teoremaren arabera, esleipen
+hori optimoa dela esango dugu.
+Ikusi dugunez, errenkada edota zutabe bateko elementuei konstante bat ken-
+tzeak ez du problemaren soluzio optimoa aldatzen; eta horretan oinarritzen da
+metodo hungariarra, esleipen-
+kostuen taula eraldatuz, esleipena egin ahal izateko
+behar adina zero lortzeko.
+Esleipen-problema ebazteko erabiltzen den metodo hungariarra K¨onig-en teo-
+reman oinarritzen da. Teorema honek baieztatzen du: errenkadetan eta zutabee-
+tan modu independentean esleitu daitekeen zero kopurua, zero guztiak estaltzeko
+behar den errenkada edota zutabe kopuru minimoaren berdina da.
+Helburu funtzioaren balioa minimizatzeko eman beharreko urratsak ondoko
+algoritmoak ematen ditu.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+190
+5. Garraio-problema eta Esleipen-problema
+5.10.2
+Esleipen-problemarako algoritmoa
+Helburua minimizatzea da
+1. urratsa. Problema orekatu.
+2. urratsa. Zeroak lortu esleipen-kostuen taulako errenkadatan. Errenkada
+bakoitzeko elementuei errenkadako minimoa kendu,
+ui = min
+j
+{cij}. Taula-
+ko elementu berriak
+c′
+ij = cij − ui dira, i, j = 1, . . . , n.
+3. urratsa. Zeroak lortu esleipen-kostuen taulako zutabeetan. Zutabe bakoi-
+tzeko elementuei zutabeko minimoa kendu,
+vj = min
+i
+{c′
+ij }. Taulako ele-
+mentu berriak
+c′′
+ij = c
+′
+ij − vj dira, i, j = 1, . . . , n.
+4. urratsa. Zeroak esleitu. Zero kopuru txikieneko errenkada edo zutabea
+aukeratu. Bertan zero bat esleitu eta errenkada edo zutabe berean dauden
+gainerako zeroak ezabatu. Zeroen esleipenarekin jarraitu, ezabatu gabeko
+zero kopuru txikiena duen errenkadatik edo zutabetik hasita.
+• Zeroak esleitzearen prozesuaren amaieran errenkada guztiek esleituta-
+ko zero bat badute, soluzioa optimoa da. Amaitu.
+• Zeroak esleitzearen prozesuaren amaieran esleitutako zerorik ez duen
+errenkadaren edo zutaberen bat existitzen bada, 5. urratsera joan.
+5. urratsa. Taulako zero guztiak estaltzen dituen errenkada edo zutabe kopuru
+minimoa aukeratu behar da. Aukeraketarako ondoko prozedura erabiltzen
+da.
+5.1 Esleitutako zerorik ez duen errenkada oro markatu.
+5.2 Aurreko 5.1 urratsean markatutako errenkadetan ezabatutako zeroa
+duten zutabeak markatu.
+5.3 Aurreko 5.2 urratsean markatutako zutabeetan zero bat esleituta duten
+errenkadak markatu.
+5.2 eta 5.3 urratsak errepikatu, errenkada edo zutabe gehiago markatu ahal
+izango ez dugun arte.
+Markatuak izan ez diren errenkadek eta markatutako zutabeek zero guztiak
+estaltzen dituzte. Errenkada eta zutabe horiek estali eta 6. urratsera joan.
+OpenCourseWare, UPV/EHU
+
+5.10. Esleipen-problema
+191
+6. urratsa.
+Zero berriak sortu. Estali gabeko elementuen artetik minimoa
+aukeratu. Estali gabeko errenkadetako elementuei balio hori kendu, eta es-
+talitako zutabeetako elementuei gehitu. 4. urratsera joan.
+Adibidea. Demagun
+A, B, C eta D eraikinen eraikuntzarako lehiaketara
+lau kontratistek aurkeztu dituztela beren proiektuak, kontratista bakoitzari erai-
+kin baten eraikuntza esleituko zaiolarik. Ondoko taulan zehazten da kontratista
+bakoitzak eraikuntza bakoitza altxatzeko beharko lukeen denbora. Lau eraikun-
+tzak denbora minimoan altxatzea helburu izanik, kalkula ezazu eraikuntzen eta
+kontratisten arteko esleipen optimoa.
+1
+2
+3
+4
+A
+58
+58
+60
+54
+B
+66
+70
+70
+78
+C 106 104 100
+95
+D
+52
+54
+64
+54
+1. urratsa. Problema orekatua da.
+2. urratsa. Errenkada bakoitzeko elementuei errenkadako minimoa kenduko
+diegu, hau da, 54, 66, 95 eta 52 lehenengo, bigarren, hirugarren eta lauga-
+rren errenkadetan, hurrenez hurren.
+1 2
+3
+4
+A
+4 4
+6
+0
+B
+0 4
+4 12
+C 11 9
+5
+0
+D
+0 2 12
+2
+3. urratsa. Zutabe bakoitzeko elementuei zutabeko minimoa kenduko diegu:
+0, 2, 4 eta 0, hurrenez hurren.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+192
+5. Garraio-problema eta Esleipen-problema
+1 2 3
+4
+A
+4 2 2
+0
+B
+0 2 0 12
+C 11 7 1
+0
+D
+0 0 8
+2
+4. urratsa. Zeroak esleitu.
+• Lehenengo errenkadak zero bakarra dauka; (A, 4), eta esleitu egingo
+dugu. Esleitutako zeroaren zutabe berean dagoen zeroa,
+(C, 4) posi-
+ziokoa alegia, ezabatu egingo dugu. Honela geratzen da taula:
+1 2 3
+4
+A
+4 2 2
+0
+B
+0 2 0 12
+C 11 7 1
+0
+D
+0 0 8
+2
+Bigarren errenkadan ezabatu gabeko bi zero daude, hirugarrengoan ez
+dago ezabatu gabeko zerorik, eta laugarrengoan bi daude.
+• Zutabeak aztertuz gero, lehenengo zutabean bi zero daude. Bigarren
+zutabean zero bakarra dagoenez, bigarren zutabeko
+(D, 2) posizioko
+zeroa esleitua izango da, eta ondorioz,
+(D, 1) posizioko zeroa ezabatua
+errenkada berean egoteagatik. Taula honela geratuko da:
+1
+2 3
+4
+A
+4
+2 2
+0
+B
+0
+2 0 12
+C 11
+7 1
+0
+D
+0
+0
+8
+2
+Zutabeekin jarraituz, hirugarrengoan esleitua izan daitekeen zero ba-
+karra dagoenez,
+(B, 3) posizioko zeroa esleitua izango da, eta (B, 1)
+OpenCourseWare, UPV/EHU
+
+5.10. Esleipen-problema
+193
+posiziokoa ezabatua errenkada berean egoteagatik. Taula honela gera-
+tuko da:
+1
+2
+3
+4
+A
+4
+2
+2
+0
+B
+0
+2
+0
+12
+C 11
+7
+1
+0
+D
+0
+0
+8
+2
+Ez da lortu errenkada eta zutabe guztietan esleitutako zero bat izatea, ez
+dugulako lau zero esleitzerik lortu. Hortaz, taulan ez daukagu esleipen op-
+timoa, eta algoritmoaren hurrengo urratsarekin jarraitu beharko da.
+5. urratsa. Zero guztiak estaltzen dituen errenkada edo zutabe kopuru mini-
+moa aukeratu.
+5.1
+C errenkada markatuko dugu, esleitutako zerorik ez duelako.
+5.2 Markatutako errenkadan, ezabatutako zero bat dago laugarren zuta-
+bean; zutabea markatu.
+5.3 Laugarren zutabeak esleitutako zeroa dauka lehenengo errenkadan;
+markatu errenkada eta 5.2 urratsa errepikatuko dugu.
+5.2 Lehenengo errenkadan ez dago ezabatutako zerorik.
+Errenkadak eta zutabeak markatzeko prozesua amaitu da. Markatu gabeko
+errenkadak eta markatutako zutabeak estaliko ditugu.
+0
+0
+0
+0
+0
+0
+1
+1
+2
+2
+2
+2
+2
+3
+4
+4
+7
+8
+11
+12
+A
+B
+C
+D
+X
+X
+X
+Hiru lerro estali ditugu (bi errenkada eta zutabe bat), taulako zero guztiak
+estaltzen dituztenak. Hala ere, lau iturburu-puntu eta lau helburu-puntu di-
+tugunez, lau zero esleitzea lortu behar dugu. 6. urratsera goaz.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+194
+5. Garraio-problema eta Esleipen-problema
+6. urratsa. Zero berriak sortu. Estali gabeko elementuen arteko minimoa 1
+da. Lehenengo eta hirugarren errenkadetako elementuei 1 kenduko diegu,
+estaliak izan ez direlako, eta laugarren zutabeko elementuei (estalia izan den
+zutabea) 1 gehitu. Taula eguneratua honela geratuko da.
+1 2 3
+4
+A
+3 1 1
+0
+B
+0 2 0 13
+C 10 6 0
+0
+D
+0 0 8
+3
+4. urratsera joan.
+4. urratsa. Zeroak esleitu.
+1
+2
+3
+4
+A
+3
+1
+1
+0
+B
+0
+2
+0 13
+C 10
+6
+0
+0
+D
+0
+0
+8
+3
+Lau zero esleitzea lortu denez, taulako soluzioa optimoa da.
+• Soluzio optimoa.
+A → 4:
+4 kontratistak
+A eraikina altxako du.
+B → 1:
+1 kontratistak
+B eraikina altxako du.
+C → 3:
+3 kontratistak
+C eraikina altxako du.
+D → 2:
+2 kontratistak
+D eraikina altxako du.
+• Esleipen-kostu minimoa:
+cA4 + cB1 + cC3 + cD2 = 54 + 66 + 100 + 54 = 274
+2
+OpenCourseWare, UPV/EHU
+
+5.10. Esleipen-problema
+195
+5.10.3
+Maximizatze-problema
+Esleipen-problemaren helburu funtzioa minimizatzea denean bakarrik aplika dai-
+teke metodo hungariarra. Problemaren helburua maximizatzea den kasuetan, on-
+doko problema ebatzi beharko litzateke.
+min(−z) =
+n
+i=1
+n
+j=1
+−cijxij
+Hala ere, helburu funtzioaren eraldaketa honek esleipen-kostuak negatibo bihur-
+tzen ditu. 5.10.2 Teorema erabili ahal izateko, beharrezkoa da
+cij ≥ 0 betetzea.
+Taulan balio negatiborik ez izateko modu bat taulako kostu negatiboen artetik
+minimoa aukeratu (
+−ckl = min{ −cij / − cij < 0 }) eta taulako elementu guz-
+tiei balio hori kentzea da. Horrela lortuko dira taulako
+c′
+ij ≥ 0 balio berriak,
+c′
+ij = −cij + ckl.
+kendu
+Hj
+Hj
+Hj
+Ii
+Ii
+Ii
+cij
+−cij
+c′
+ij
+−ckl
+max z
+min(−z)
+min(−z)
+Adibidea. Enpresa batek hiru lanpostu bete behar ditu:
+A, B eta C. Lanpostu
+horiek betetzeko asmoz, 5 langile aurkeztu dira hautapen frogara:
+1, 2, 3, 4 eta
+5. Ondoko taulan agertzen dira langile bakoitzak lanpostu bakoitzerako egindako
+frogan lortutako puntuaketa,
+1etik 10era neurtuta. Taulako (C, 4) posizioan ez
+dago puntuaketarik,
+4 langilea ez delako C lana egiteko gai izan.
+1 2
+3
+4 5
+A 2 4 10 3 6
+B 7 7
+5
+6 4
+C 8 6
+7
+− 9
+Langile eta lanpostu arteko esleipen optimoa aurkitu nahi da, hau da, puntua-
+keta totala maximo egingo duen hiru langile eta hiru lanpostuen arteko esleipena.
+Helburua maximizatzea izanik,
+cij balioak −cij balioez ordezkatzen badira, au-
+rreko taulan maximizatzea ondoko taulan minimizatzearen baliokidea da.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+196
+5. Garraio-problema eta Esleipen-problema
+1
+2
+3
+4
+5
+A −2 −4 −10 −3 −6
+B −7 −7
+−5
+−6 −4
+C −8 −6
+−7
+−
+−9
+Taulan balio negatiboak daude; balio guztiei minimoa kenduz,
+−10, ondoko
+taula lortzen da:
+1 2 3 4 5
+A 8 6 0 7 4
+B 3 3 5 4 6
+C 2 4 3 − 1
+Eraldaketa horiek egin ondoren, taula minimizatzeko egokituta dago, eta ez
+dago balio negatiborik. Bestalde,
+4 langilea C lanpostuarekin esleitua izan ez
+dadin,
+(C, 4) posizioan kostu handi bat kokatuko dugu: M. Horrekin guztiarekin
+taula prest dago esleipen-problemarako algoritmoa aplikatzeko.
+2
+5.10.4
+Soluzio optimo anizkoitza. Adibidea
+Har dezagun aurreko adibidean egokitutako taula, esleipen-algoritmoa aplikatzen
+hasteko prest dagoena.
+1 2 3
+4
+5
+A 8 6 0
+7
+4
+B 3 3 5
+4
+6
+C 2 4 3 M 1
+1. urratsa. Problema ez da orekatua. Iturburu-puntu kopurua eta helburu-
+puntu kopurua berdinak izan daitezen, gezurrezko bi iturburu-puntu (ge-
+zurrezko bi lanpostu) berri sartu behar dira. Beren esleipen-kostuak zero
+izango dira, praktikan esleipen horiek ez direlako gauzatuko.
+OpenCourseWare, UPV/EHU
+
+5.10. Esleipen-problema
+197
+1 2 3
+4
+5
+A 8 6 0
+7
+4
+B 3 3 5
+4
+6
+C 2 4 3 M 1
+D 0 0 0
+0
+0
+E 0 0 0
+0
+0
+2. urratsa. Bigarren eta hirugarren errenkadetako elementuei errenkadako mi-
+nimoa kenduko diegu, errenkadetan zeroak sortzeko. Taula honela geratuko
+da:
+1 2 3
+4
+5
+A 8 6 0
+7
+4
+B 0 0 2
+1
+3
+C 1 3 2 M 0
+D 0 0 0
+0
+0
+E 0 0 0
+0
+0
+3. urratsa. Taulako zutabe guztietan zeroren bat badagoenez, ez da eragiketa-
+rik egin behar, eta bere horretan geratzen da.
+4. urratsa. Zeroen esleipena. Lehenengo errenkadatik hasiko gara, zero kopu-
+ru txikiena duenetako bat delako.
+(A, 3) posizioan dagoen zeroa esleituko
+dugu, errenkada edota zutabe berean dauden gainerako zeroak ezabatuko
+ditugu, eta modu berean jarraituko dugu zeroak esleitzen, errenkada eta zu-
+tabe guztiek esleitutako zero bat izango duten arte.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+198
+5. Garraio-problema eta Esleipen-problema
+1
+2
+3
+4
+5
+A
+8
+6
+0
+7
+4
+B
+0
+0
+2
+1
+3
+C
+1
+3
+2
+M
+0
+D
+0
+0
+0
+0
+0
+E
+0
+0
+0
+0
+0
+Taulan esleitutako bost zero dagoenez, soluzioa optimoa da.
+• Soluzioa: A → 3, B → 1, C → 5, D → 2 eta E → 4.
+2 eta 4 langileei gezurrezko lanpostua esleitu zaienez, lanposturik ez dutela
+lortu interpretatu behar da.
+• Kostua: cA3 + cB1 + cC5 + cD2 + cE4 = 10 + 7 + 9 + 0 + 0 = 26.
+Zeroen esleipena egiterakoan, bigarren errenkadan
+B lanpostua 1 langileare-
+kin esleitu daiteke (aurreko soluzioa), edo
+2 langilearekin. Bigarren aukera eginez
+gero, ondoko soluzio optimoa lortzen da:
+1
+2
+3
+4
+5
+A
+8
+6
+0
+7
+4
+B
+0
+0
+2
+1
+3
+C
+1
+3
+2
+M
+0
+D
+0
+0
+0
+0
+0
+E
+0
+0
+0
+0
+0
+• Soluzioa: A → 3, B → 2, C → 5, D → 1, E → 4.
+Kasu honetan,
+1 eta 4 langileak geratu dira lanik gabe.
+• Kostua: cA3 + cB2 + cC5 + cD1 + cE4 = 10 + 7 + 9 + 0 + 0 = 26.
+Modu berean, laugarren eta bostgarren errenkadetan beste esleipen batzuk
+egin daitezke. Eman dugun lehen soluzio optimoan
+A → 3, B → 1, C → 5,
+OpenCourseWare, UPV/EHU
+
+5.10. Esleipen-problema
+199
+D → 2 eta E → 4 esleipena egin beharrean A → 3, B → 1, C → 5, D → 4
+eta
+E → 2 egin daiteke. Eman dugun bigarren soluzio optimoan aldiz A → 3,
+B → 2, C → 5, D → 1, E → 4 esleipena egin beharrean, A → 3, B → 2,
+C → 5, D → 4, E → 1 egin daiteke. Dena den, D eta E gezurrezko lanpostuak
+izanik, praktikan langile berberak geratuko dira lanik gabe.
+2
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala

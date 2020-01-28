@@ -1,0 +1,807 @@
+
+
+
+De alearum calculi (II)
+Probabilitate kalkulua (II)
+Josemari Sarasola Ledesma
+Figure 1: Alicia lurralde miresgarrian
+
+Contents
+1
+Gertakizunen arteko eragiketak
+3
+1.1
+Lagin espazioa
+. . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3
+1.2
+Gertakizuna . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3
+1.3
+Gertakizunen aljebra . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+1.4
+Berdintasuna . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+1.5
+Osagarritasuna . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5
+1.6
+Bateragarritasuna
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+6
+1.7
+Barnekotasuna . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7
+1.8
+Ebaketa . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8
+1.9
+Bilketa . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9
+1.10 De Morgan-en legeak . . . . . . . . . . . . . . . . . . . . . . . . .
+10
+1.11 Bilketa baten probabilitatea . . . . . . . . . . . . . . . . . . . . .
+11
+1.12 Ariketak: Gertakizun aljebra . . . . . . . . . . . . . . . . . . . .
+12
+2
+Probabilitateen biderkaketa
+14
+2.1
+Baldintzapeko probabilitatea
+. . . . . . . . . . . . . . . . . . . .
+14
+2.2
+Biderkaketa teorema . . . . . . . . . . . . . . . . . . . . . . . . .
+14
+2.3
+Independentzia eta dependentzia . . . . . . . . . . . . . . . . . .
+15
+2.4
+Erauzketak, dependentzia eta independentzia . . . . . . . . . . .
+16
+3
+Probabilitate osotuaren teorema: zuhaitzaren estrategia
+17
+4
+Bayes-en teorema
+18
+5
+Ariketak: biderkaketak, zuhaitzak, Bayes-en teorema
+20
+
+Estatistika I
+Josemari Sarasola Ledesma
+1
+Gertakizunen arteko eragiketak
+Demagun makina bateko osagai bakoitza une jakin batean ongi aritzeko prob-
+abilitatea ezagutzen dugula. Makinako osagai guztiak une jakin batean ongi
+aritzeko probabilitatea eman daiteke, osagai bakoitzeko probabilitate sinpleak
+uztartuz.
+Probabilitate sinpleetatik abiatuz, gertakizunen arteko eragiketak egin eta
+probabilitate konplexuak (makinako osagai guztiak ongi aritzeko probabilitatea,
+esaterako) kalkulatzen ikasi behar dugu ondoren.
+1.1
+Lagin espazioa
+Gerta daitezkeen emaitza guztien multzoa da. Adibidez, seiko bat jaurtitzean:
+Ω = {1, 2, 3, 4, 5, 6}
+Lagin espazio mota ezberdinak daude:
+• diskretu ﬁnitoa, txanpon baten emaitza esaterako: Ω = {0, 1}
+• diskretu inﬁnitoa, txanpon baten jaurtiketan lehenengo 0 noiz azaltzen
+den esaterako: Ω = {0, 10, 110, 1110, 11110, . . .}
+• jarraia, osagai baten iraupena esaterako: Ω = {[0, ∞)}
+1.2
+Gertakizuna
+Zerbaiten probabilitatea kalkulatzen da. Zerbait hori gertakizuna 1da. Adibidez:
+• A: seikoaren emaitza bikoitia
+• B: aurpegikoa txanpona 5 aldiz bota baino lehenago atera
+1Gazteleraz, suceso; ingelesez, event.
+3
+
+Estatistika I
+Josemari Sarasola Ledesma
+1.3
+Gertakizunen aljebra
+Gertakizunak bateratu, banandu, ... egin daitezke. Hau da, gertakizunen arteko
+eragiketak egin daitezke. Gertakizunek elkarren artean hainbat erlazio ere izan
+dezakete. Erlazio eta eragiketa hauek ikasiko ditugu jarraian:
+ hau da, gertakizun
+algebra ikasi behar dugu.
+Gertakizunen algebra ikasteko, adibide hau hartuko dugu oinarritzat:
+Gela batean ikasleen jatorria eta sexua jaso dira. Emaitzak taula honetan
+agertzen dira:
+Sexua/Jatorria
+Gipuzkoa
+Bizkaia
+Nafarroa
+Mutilak
+8
+4
+0
+Neskak
+10
+6
+4
+1.4
+Berdintasuna
+Bi gertakizun berdinak direla esango dugu bata gertaturik, bestea ere gertatzen
+denean.
+Adibidez, txanpon bat 10 aldiz botatakoan, A: gurutzekoen kopurua 7 baino
+gehiago izatea eta B: aurpegikoen kopurua 3 baino gutxiago izatea gertakizunak
+berdinak dira: bata gertatzen denean bestea ere gertatzen baita.
+Gelako adibidea hartuta, gelako pertsona bat aukeratzen bada zoriz, A:
+neska izatea eta B: naparra izatea berdinak al dira?
+4
+
+Estatistika I
+Josemari Sarasola Ledesma
+1.5
+Osagarritasuna
+Bi gertakizun aurkako edo osagarriak 2 dira biak batera gertatu ezin daitezkee-
+nean eta bata ala bestea ezinbestez gertatu behar denean.
+Adibidez, txanpon bat 10 aldiz botatakoan, A: gurutzekoen kopurua 4 edo
+handiagoa izatea eta B: gurutzekoen kopurua 4 baino txikiagoa izatea gertakizun
+osagarriak dira.
+Gelako adibidean, A: neska eta B: mutila aurkakoak dira.
+Orohar A gertakizuna emanda, gertakizun osagarriari A edo Ac deituko
+diogu.
+Graﬁkoki azalduz:
+Garbi dago hau betetzen dela: A = A.
+Probabilitateari dagokionean azkenik oinarrizko erregela hau gogoratu behar
+da:
+P [A] = 1 − P [A]
+2Gazteleraz: complementarios(as).
+5
+
+Estatistika I
+Josemari Sarasola Ledesma
+1.6
+Bateragarritasuna
+Bi gertakizun bateragarriak 3 direla esango dugu batera gerta daitezkeenean.
+Bestela, bateraezinak dira.
+Adibidez, txanpon bat 10 aldiz botatakoan, A: 4 gurutzeko suertatzea eta
+B: azken emaitza gurutzekoa izatea bateragarriak dira. Baina A: 10 gurutzeko
+suertatzea eta B: azken emaitza aurpegikoa izatea bateraezinak dira.
+Gelako adibidean, A: mutila eta B: Gipuzkoa bateragarriak dira, baina A:
+mutila eta B: Nafarroa bateraezinak dira.
+Irudiz honelakoak dira gertakizun bateragarriak eta bateraezinak:
+Beste adibide bat daukazu jarraian. A: osagaiaren iraupena 800 ordu baino
+laburragoa izatea eta B:
+ osagaiaren iraupena 600 ordu baino luzeagoa izatea ger-
+takizun bateragarriak dira, irudian ikus dezakezunez elkar ebaki egiten dutelako,
+600-800 tartean hain zuzen:
+Gogoratu behar da azkenik, aurkako gertakizunak bateraezinak direla baina
+alderantzizkoa ez dela beti gertatzen. Ikus irudian aurkakoak ez diren bi ger-
+takizun bateraezin:
+3Gazteleraz: compatibles.
+6
+
+Estatistika I
+Josemari Sarasola Ledesma
+1.7
+Barnekotasuna
+A eta B gertakizunak emanda, B A-ren barnean dagoela esango dugu B ger-
+tatzen denean A ere gertatzen bada 4. Honela idatziko dugu:
+B ⊂ A
+Adibidez, txanpon bat aidera 10 aldiz botatakoan, B: lehenengo biak gu-
+rutzeko izatea gertakizuna A:
+ 10 emaitzak gurutzeko izatea gertakizunaren barnean
+dago.
+Gelako adibidera itzuliz, B: Nafarroa gertakizuna A: neskak gertakizunaren
+barnean dago, Nafarroako guztiak neskak baitira.
+Ikus irudia B ⊂ A erlazioa hobeto ulertzeko:
+4Barnekotasuna gazteleraz: inclusi´
+on
+7
+
+Estatistika I
+Josemari Sarasola Ledesma
+1.8
+Ebaketa
+A eta B gertakizunak emanik, A ∩ B ebaketa 5 edo biderkaketa izeneko eragike-
+tak A eta B batera gertatzea adierazten du.
+A ∩ B honela irakurtzen da: a ebaki b edo a eta b.
+Adibidez, txanpon bat bi aldiz botatzen bada, A: gutxienez gurutzeko bat
+eta B: gutxienez aurpegiko bat izanik:
+A ∩ B : aurpegiko bat eta gurutzeko bat suertatzea
+Gelako adibidean, A: mutilak eta B: Gipuzkoa izanik:
+A ∩ B : mutil gipuzkoarra
+Graﬁkoki, A ∩ B gertakizunak A eta B gertakizunek elkar ebakitzen duten
+eremua hartzen du:
+Beraz, hau baiezta daiteke:
+A, B, bateraezinak → A ∩ B = ∅
+5Gazteleraz, intersecci´
+on.
+8
+
+Estatistika I
+Josemari Sarasola Ledesma
+1.9
+Bilketa
+A eta B gertakizunak emanik, A ∪ B bilketa 6 edo batuketa izeneko eragiketak
+A, B edo A eta B batera gertatzea adierazten du.
+A ∪ B honela irakurtzen da: a bil b edo a edo b.
+Adibidez, txanpon bat 10 aldiz botatzen bada, A: gurutzekoak 4 edo gutxiago
+eta B: gurutzekoak 2, 3, 4, 5, edo 6 izatea izanik:
+A ∪ B : gurutzekoak 6 edo gutxiago izatea
+Gelako adibidean, A: mutilak eta B: Gipuzkoa izanik:
+A ∪ B : mutila edo gipuzkoarra edo mutil gipuzkoarra
+Graﬁkoki:
+6Gazteleraz, uni´
+on.
+9
+
+Estatistika I
+Josemari Sarasola Ledesma
+1.10
+De Morgan-en legeak
+Multzo teorian XIX. mendeko de Morgan matematikariak aurkitu zituen er-
+regela hauek betetzen dira:
+•
+n
+k=1 Ak
+=
+n
+k=1 Ak
+Izan ere, zerbait inongo Akren barnean ez badago, Ak aurkako guztien
+barnean, eta beraz, Ak aurkakoen ebaketaren barnean izango da.
+•
+n
+k=1 Ak
+=
+n
+k=1 Ak
+Izan ere, zerbait Ak ororen barnean ez badago, Ak aurkakoren baten
+barnean, hau da, gutxienez Ak aurkako baten barnean edo Ak aurkakoen
+bilketan izango da.
+Errazago ikusteko, eta graﬁko batez aise egiazta daitekeenez, bi gertakizune-
+tarako honela izango litzakete:
+• A ∪ B = A ∩ B
+• A ∩ B = A ∪ B
+10
+
+Estatistika I
+Josemari Sarasola Ledesma
+1.11
+Bilketa baten probabilitatea
+Bilketa baten kasuan, probabilitatea kalkulatzeko beti aztertu behar da, bilke-
+tagaiak edo bilketan sartzen duren gertakizunak elkarrekiko bateraezinak diren.
+Hau zehaztu ondoren, erregela hauek erabiltzen dira:
+1. A1, A2, . . . , An gertakizunak bateraezinak badira:
+P [A1 ∪ A2 ∪ . . . ∪ An] = P [A1] + P [A2] + . . . + P [An]
+Aurreko erregela honen justiﬁkazioa begi bistakoa da: A1, A2, . . . , An bat-
+eraezinak badira, ez dute elkar ebakitzen eta ondorioz bilketaren proba-
+bilitatea bakoitzaren probabilitateen batura izango da.
+2. A1, A2, . . . , An gertakizunak bateragarriak badira:
+• 2 gertakizuneko bilketen probabilitatea:
+P [Ai ∪ Aj] = P [Ai] + P [Aj] − P [Ai ∩ Aj]
+• 3 gertakizuneko bilketen probabilitatea:
+P [Ai ∪ Aj ∪ Ak] = P [Ai] + P [Aj] + P [Ak]
+−P [Ai ∩ Aj] − P [Ai ∩ Ak] − P [Aj ∩ Ak]
++P [Ai ∩ Aj ∩ Ak]
+• Orohar:
+P
+n
+k=1
+Ai =
+n
+k=1
+P [Ak]
+−
+1≤i≤j≤n
+P [Ai ∩ Aj]
++
+1≤i≤j≤k≤n
+P [Ai ∩ Aj ∩ Ak]
++ . . . − (−1)
+nP [A
+1 ∩ A2 ∩ . . . ∩ An]
+1.
+kasua 2.
+kasuaren kasu berezia besterik ez da: gertakizunak bat-
+eraezinak badira, ebaketak hutsak dira eta ondorioz formula orokorrean
+azaltzen diren ebaketa guztien probabilitateak 0 izango dira, 1. kasuko
+formula geratzen zaigula.
+11
+
+Estatistika I
+Josemari Sarasola Ledesma
+1.12
+Ariketak: Gertakizun aljebra
+I A eta B gertakizunak bateraezinak dira. Gainera P (A) = 0, 25 eta P (B) =
+0, 4 betetzen dira. Kalkula itzazu probabilitate hauek: P (A), P (A ∪ B),
+P (A ∩ B), P (A ∪ B).
+II Bitez A, B, D gertakizunak. Gertakizun hauek adieraz itzazu gertakizun
+aljebrako eragileak erabiliz:
+• A bakarrik gertatzen da.
+• Hiru gertakizunak gauzatzen dira.
+• A eta B gertatzen dira, baina D ez.
+• Gutxienez bi gertakizun gertatzen dira.
+• Bi gertakizun baino gehiago ez dira gertatzen.
+• Ez da bat ere gertatzen.
+• Gutxienez bat gertatzen da.
+• Bat bakarrik gertatzen da.
+III A ∪ B gertakizuna Venn-en diagrama batean adierazi. A: mutila eta B:
+gipuzkoarra izanik izanik, nortzu sartzen dira bertan?
+IV Idem (A ∩ B) ∪ D gertakizuna harturik, D: aprobatua izanik.
+V Ekoizpen prozesu batean datu hauek jaso dira 300 pieza aztertu ondoren:
+A akatsa bakarrik dituzten piezak 20 dira, A eta B akatsak dituzten piezak
+15 dira, B akatsa dituzten piezak 40 dira. Zenbatekoa da pieza batek
+gutxienez akats bat izateko probabilitatea? Zein ihardunpide erabiltzen
+ari zara probabilitate sinpleak ezartzeko?
+VI FNACen lan egiteko eskabideak egin dituztenen artean, %80ek euskaraz
+dakite eta %30ek lan esperienzia egokia dute. Zenbatekoa da zoriz hauta-
+gai bat aukeratuta bi baldintzak betetzeko probabilitatea?
+VII Inkesta bat egin ondoren, datu hauek jaso dira: 10-14 urte bitarteko
+gaztetxoetan, %40k GAMEBOY delako makinatxoa dauka, %30ek NIN-
+TENDO DS delakoa eta azkenik %20ek PSP berria eskuratu dute. %15ek
+GAMEBOY eta NINTENDO DS ditu, %12ek NINTENDO DS eta PSP,
+eta azkenik %8ek GAMEBOY eta PSP dauzkate batera.
+Hiru maki-
+natxoak %4ek dituzte.
+Zenbatekoa da zoriz tarte horretako haur bat
+hartuta, gutxienez makina horietako bat edukitzeko probabilitatea?
+VIII e1, e2, e3, e4 izanik hurrenez hurren bihar, etzi , etzidamu eta laugarren
+egunera euria egitea adierazten duten gertakizunak, adieraz ezazu gertak-
+izun aljebraren terminoetan egun horietan zehar egun bakar batean euria
+izatea.
+12
+
+Estatistika I
+Josemari Sarasola Ledesma
+IX Datu hauek jaso dira inkesta batean:
+Sexua
+Gizon
+Emakume
+Jatorria
+Gipuzkoa
+Gipuzkoaz kanpo
+Gipuzkoa
+Gipuzkoaz kanpo
+Aprobatuak
+41
+22
+63
+62
+Suspendituak
+19
+40
+59
+58
+Guztira
+60
+62
+122
+61
+Venn-en diagrama batean gizon, Gipuzkoakoa izatea eta aprobatua izatea
+multzoak eta berauen arteko ebaketak ezar itzazu, probabilitateak zehaz-
+tuz, pertsona bat zoriz aukeratzen bada.
+X Txanpon bat bi aldiz jaurtikirik, ondoko gertakizun hauek hartzen ditugu
+kontutan:
+• A: aurpegiko bat gutxienez suertatzea
+• B: bi jaurtiketetan emaitza berdina lortzea
+• C: bi gurutzeko suertatzea
+Hiru gertakizun hauek harremanetan jarri: Aurkakoak al dira? Batera-
+garriak al dira? Bata bestearen barnean al dago?
+XI Euskalerriko baserriei buruzko ikerketa bat egitearren, zentsu bat egin
+da: baserrien %2an bakarrik ez dago traktorerik, baserrien %60an behiak
+dituzte, baserrien %59,7an behiak eta traktorea dituzte. Zenbatek ez dute
+ez behirik ez traktorerik?
+XII Bitez P (A) = 1/2, P (B) = 1/4, P (C) = 1/8. A, B eta C bateraezinak
+dira. Probabilitate hauek adierazi eta eman:
+• A, B, C gertakizunetatik gutxienez bat
+• A, B eta C gertakizunetatik bakar bat
+• A, B eta C gertakizunetatik bi
+XIII Biltzar batera gazteleraz bakarrik dakiten 60 lagun joan dira. Ingelesez
+bakarrik dakitenak 30 dira eta bi hizkuntzak dakizkitenak 10 dira. Zoriz
+bi lagun aukeratzen badira, zenbatekoa da elkar ulertzeko probabilitatea?
+XIV P (A) = 0, 2, P (B) = 0, 6, P (A ∪ B) = 0, 8 A eta B bateraezinak dira.
+Emandako informazio hau zuzena izan al daiteke?
+XV P (A) = 0, 4, P (B) = 0, 8, P (ezAetaezB) = 0, 7. Emandako informazio
+hau zuzena izan al daiteke?
+13
+
+Estatistika I
+Josemari Sarasola Ledesma
+2
+Probabilitateen biderkaketa
+2.1
+Baldintzapeko probabilitatea
+10.000 biztanle dituen herri batetik lagun bat aukeratzen dugu zoriz. Unibert-
+sitariak 1000 dira. Zenbatekoa da aukeratutako laguna unibertsitaria izateko
+probabilitatea?
+P (unibertsitari) =
+1.000
+10.000
+Ondoren, informazio gehigarria ematen dugu: herrian 4800 emakume daude
+eta hauetatik 600 unibertsitariak dira.
+Aukeratutako pertsona emakumezkoa dela jakinik, zenbatekoa da aukeratu-
+tako laguna unibertsitaria izateko probabilitatea?
+Informazio gehigarria jaso da: pertsona emakumezkoa da. Horri esker gure
+lagin espazioa murriztu egin da: 10.000 pertsonak ez, baizik eta 4.800 pertsona
+ditugu aukeran. Eskatutako probabilitatea honela adierazi eta kalkulatzen da:
+P (unibertsitari / emakumezko) =
+600
+4.800
+Orohar, B gertatu dela jakinik, A gertatzeko probabilitateari
+B baldintzapeko probabilitatea deitzen zaio eta honela adierazten
+da:
+P (A/B)
+Eta era honetan kalkulatzen da:
+P (A/B) =
+P (A ∩ B)
+P (B)
+2.2
+Biderkaketa teorema
+Aurreko formula honetatik,biderkaketa teorema delakoa eratortzen
+da:
+P (A ∩ B) = P (B ∩ A) = P (B) × P (A/B)
+Adibidez, 100 piezako lote batean 10 akastun daudela ikasi dugu. Bi pieza
+ateratzen badira banaka eta aldi bakoitzean itzuli gabe, zenbatekoa da biak
+akastunak izateko probabilitatea?
+P (biak akastunak) = P (1. pieza akastuna ∩ 2. pieza akastuna) =
+P (1. pieza akastuna) × P (2. pieza akastuna / 1. pieza akastuna) =
+14
+
+Estatistika I
+Josemari Sarasola Ledesma
+10
+100
+×
+9
+99
+=
+90
+9900
+= 0.009
+Eta hiru pieza ateratzen badira, zenbatekoa da hiruruak akastunak izateko
+probabilitatea?
+P (hirurak akastunak) = P 
+(1. pieza akastuna ∩ 2. pieza akastuna ∩ 3. pieza akastuna) =
+P (1. pieza akastuna) × P (2. pieza akastuna / 1. pieza akastuna)×
+P (3. pieza akastuna / 1. eta 2. piezak akastunak) =
+10
+100
+×
+9
+99
+×
+8
+98
+= 0.000742
+Ikusten denez, biderketak garatzeko orduan, orden kronolojikoa jarraitzen
+da: lehenengo pieza, bigarren pieza, hirugarren pieza.
+Erauzketa problemak konbinatoriaz ere ebatz daitezke. Esaterako, aurreko
+probabilitatea honela ere kalkula daiteke:
+P (hirurak akastunak) =
+10
+3
+×
+90
+0
+100
+3
+Emaitza berdina izango da noski.
+2.3
+Independentzia eta dependentzia
+A eta B gertakizunak independenteak direla esango dugu baldin eta:
+P (B) = P (B / A)
+Bestela, dependenteak direla esango dugu.
+Deﬁniziotik erator daiteke bi gertakizun independenteak direla, batak besteari
+buruzko informaziorik ematen ez duenean, hau da, bata gertatu dela jakiteak
+bestearen probabilitatea aldatzen ez duenean.
+Indepedentziaren ondorioa garrantzitsua da. Izan ere, A1, A2, A3, . . . ger-
+takizunak elkarrekiko independenteak badira:
+P (A1 ∩ A2 ∩ A3 ∩ . . .) = P (A1) × P (A2) × P (A3) × . . .
+Gertakizun independenteen adibideak dira hauek:
+15
+
+Estatistika I
+Josemari Sarasola Ledesma
+• Txanpon ezberdinetan suertatutako aldeak: alde bat aurpegikoa suer-
+tatzeak ez du esan nahi, bestean aurpegikoa eod gurutzekoa suertatzeko
+probabilitate handiagoa dela.
+• Urte ezberdinetako egunetako eguraldia: iazko maiatzaren 4ean euria egit-
+eak ez du esan nahi, aurtengoan euria egin edo ez egiteko probabilitatea
+aldatu behar denik.
+• Elkar ezagutzen ez duten bi lagunek erosiko duten marka: batak A marka
+aukeratzeak ez digu deus informatzen besteak A marka edo beste bat
+aukeratzeko probabilitateari buruz.
+2.4
+Erauzketak, dependentzia eta independentzia
+100 piezako lote batean 10 akastun daudela dakigu.
+Bi pieza erauzten da
+itzulerarik gabe. Zenbatekoa da biak akastunak izateko probabilitatea?
+P (biak akastunak) = P (1. pieza akastuna ∩ 2. pieza akastuna) =
+P (1. pieza akastuna) × P (2. pieza akastuna / 1. pieza akastuna) =
+10
+100
+×
+9
+99
+Bigarren pieza akastuna izateko probabilitatea kalkulatzeko, kontuan hartzekoa
+da lehenengo pieza akastuna dela: 99 piezetatik 9 izango dira akastunak. Be-
+raz, bi erauzketen artean dependentzia dago.
+Itzulerarik ez dagoenean (edo
+baliokideak diren baterako erauzketetan), erauzketen artean dependentzia dago.
+Eta pieza bakoitza itzuli egiten bada, erauzi ondoren? Bigarren pieza akas-
+tuna izateko probabilitatea kalkulatzeko, ez da kontuan hartzekoa lehenengo
+piezaren izaera: akastuna edo akasgabea izanda, itzulia izan denez, beti izango
+dira 10 akastun 100 piezetan. Beraz, independentzia dago: probabilitatea ez da
+aldatzen iraganaren arabera, beti izango baita akastuna izateko probabilitatea
+10
+100 . Beraz,
+P (biak akastunak) = P (1. pieza akastuna ∩ 2. pieza akastuna) =
+P (1. pieza akastuna) × P (2. pieza akastuna) =
+10
+100
+×
+10
+100
+Ohartarazi behar da erauzketak kopuru handietatik egiten direnean, depen-
+dentzia ahula dela: adibidez, aurreko adibideetan, bi emaitzak oso antzekoak
+dira. Dependentziaren ahultasuna dagoenean, independentzia dagoela pentsa
+daiteke, baina hau egoera bakoitzean aztertu behar da.
+16
+
+Estatistika I
+Josemari Sarasola Ledesma
+3
+Probabilitate osotuaren teorema: zuhaitzaren
+estrategia
+Ontzi batean 100 pieza daude eta horiatetik 10 akastunak dira. 2 pieza erauzten
+da itzulerarik gabe: zenbatekoa da 2. pieza akastuna izateko probabilitatea?
+Burura etorriko zaizun lehenengo erantzuna hau izango da: lehenengo pieza
+arabera izango da probabilitate hori. Arabera motako erantzun bat azaltzne
+denean, probabilitatea kalkulatzeko probabilitate osotuaren teorema erabili be-
+har izaten da.
+Horretarako, araberako guztien zerrenda egiten dugu eta horiekin zuhaitz
+bat osatzen da, adar bako itzeko probabilitatea zehaztuz. Ondoren, zuhaitzeko
+adar bakoitzean kalkulatu nahi dugun probabilitatearen adarra luzatzen dugu,
+betiere zein adarretan gauden kontuan hartuz. Zuhaitz osoa marraztu
+dugula eta adar bakoitzean probabilitateak ezarri ditugula, adar barruko
+probabilitateak biderkatu eta adar ezberdinetarako probabilitate hauek
+batu behar ditugu. Ikus dezagun:
+Prozeduraren garapen analitikoa hau da (ET A ≡ ∩, EDO ≡ ∪):
+P (2. pieza akastuna) =
+P [ (1. pieza akastuna ET A 2. pieza akastuna)
+EDO
+(1. pieza akasgabea ET A 2. pieza akastuna) ] =
+P [ (1. pieza akastuna ET A 2. pieza akastuna)
++
+(1. pieza akasgabea ET A 2. pieza akastuna) ] =
+P (1. pieza akastuna) × P (2. pieza akastuna / 1. pieza akastuna)
++
+P (1. pieza akasgabea) × P (2. pieza akastuna / 1. pieza akasgabea) =
+17
+
+Estatistika I
+Josemari Sarasola Ledesma
+10
+100
+×
+9
+99
++
+90
+100
+×
+10
+99
+Orohar, prozedura honi probabilitate osoaren teorema deitzen zaio.
+P (B) =
+i
+P (B ∩ Ai) =
+i
+P (Ai) × P (B/Ai)
+Ai delarik gertakizun sistema osotua: gerta daitezkeen gertakizun guztien
+multzo bat. Adibidez, aurreko adibidean Ai = 1. pieza akastuna , 1. pieza akasgabea
+dugu.
+4
+Bayes-en teorema
+Probabilitate teorian oso teorema garrantzitsua da. Teoreman oinarrituz gain-
+era, estatistika inferentzialaren adar edo ikuspegi oso bat garatu da:
+ estatistika
+bayestarra. Teoremaren helburua jasotzen den informazioaren bitartez proba-
+bilitateak zehaztea da. Ikus dezagun adibide batez.
+Gaisotasun bat diagnostikatzeko test bat erabiltzen da. Testa ez da perfektoa
+ordea: orain arte jasotako datuen arabera, pertsona gaiso baten kasuan, testak
+baiezkoa emateko probabilitatea 0,95 da. Pertsona gaisorik ez badago berriz,
+testak ezezkoa emateko probabilitatea 0,90 da. Orohar, pertsonen %1 gaisorik
+dagoela uste da. Lagun bati emandako testak baiezkoa eman badu, zenbatekoak
+dira gaisorik eta ez gaisorik izateko probabilitateak?
+Bayes-en teoremaren erabilera onartzen duten ebazkizunetan adierazgarri
+edo informazio bat dugu beti oinarri: ebazkizun honetan adierazgarria testaren
+emaitza dugu.
+Adierazgarri honetan oinarrituta, gertakizun bati buruzko probabilitateak
+aldatu egiten dira.
+Adibidez, hasiera batean gaisorik izateko probabilitatea
+0,01 da. Jakinda testak baiezkoa eman duela, gaisorik izateko probabilitatea
+aldatu edo zehaztu egin beharra da noski (pentsatzekoa da handiagoa izango
+duela). Hasierako probabilitateei a priori edo aldez aurretiko probabilitateak
+deitu ohi zaie. Adierazgarriaren ondorioz aldatzen diren probabilitateei, berriz,
+a posteriori edo ondorengo probabilitateak deitzen zaie.
+Bayes-en toeremak dakarren probabilitate zehaztapena formula bat garatuz
+eman daiteke, baina garapena taula bidez egingo dugu:
+1. Lehenengo zutabean zehaztu nahi dugun probabilitateari dagokion gertak-
+izuna ezartzen dugu, gerta daitezkeen beste gertakizunekin batera (prob-
+lemari dagokion gertakizun sistema osotu bat). Gue kasuan: pertsona
+gaisorik eta pertsona ez gaisorik jarriko dugu. Zutabe honi Ai izena jar-
+riko diogu.
+18
+
+Estatistika I
+Josemari Sarasola Ledesma
+2. Bigarren zutabean, aurreko zutabeko gertakizunei dagozkien a priori prob-
+abilitateak jarriko ditugu, inongo informaziorik gabe zehaztutakoak. Gure
+kasuan:
+• P(laguna gaisorik)=0.01
+• P(laguna ez gaisorik)=0.99
+Probabilitate hauek P (Ai) izendatuko ditugu. Probabilitate hauen batura
+1 izango da noski.
+3. Hirugarren zutabea osatzeko, prozesuan jasotzen den informazioa zehaztu
+behar da. Gure kasuan, testak baiezkoa eman duela da jasotzen dugun in-
+formazioa, hasierako probabilitateak aldatzea ahalbideratuko diguna. In-
+formazio honi B deituko diogu. Zutabean P (B/Ai) probabilitateak eman
+behar dira, Ai bakoitza gertatzen bada edo egia bada, B gertatzeko prob-
+abilitateak alegia. Probabilitate hauei egiantzak7 deituko diegu. Gure
+adibidean, pertsona gaisorik bada, testak baiezkoa emateko probabilitatea
+0.95 da. Pertsona gaisorik ez badago berriz, testak baiezko emateko prob-
+abilitatea 1-0.90=0.10 da.
+4. Laugarren zutabean aurreko bi zutabeak biderkatzen dira. Zutabeko batura
+ere kalkulatu behar da.
+5. Bostgarren eta azken zutabean, aurreko zutabeko balioak aurreko zutabeko
+baturaz zatitzen ditugu. Emaitzak P (Ai/B) probabilitateak izango dira,
+a posteriori probabilitateak edo jasotako B informazioan oinarrituz, ze-
+haztu ditugun Ai gertakizunen probabilitateak. Hauek dira helburu di-
+tugun probabilitateak eta hasieran bezala, probabilitate hauen batura 1
+izango da.
+Aurreko puntuak garatuz sortzen den taula hau da:
+Ai
+P (Ai)
+P (B/Ai)
+P (Ai) × P (B/Ai)
+P (Ai/B)
+pertsona gaisorik
+0.01
+0.95
+0.0095
+0.087
+pertsona ez gaisorik
+0.99
+0.10
+0.099
+0.913
+1
+0.1085
+1
+Ikusten denez, pertsona gaisorik izateko probabilitatea dexente igotzen da
+testak positibo eman duela jakin ondoren (%1etik %8ra pasatxo). Egia esan,
+irudi luke testak, hain ﬁdagarria izanik, ziurtasun handiko maila bateraino igo
+beharko lukeela gaisorik izateko probabilitatea. Hau ez da horrela gertatzen:
+testaren informazioa kontuan hartu ondoren ere, gaisorik ez dagoela egin behar
+da apustu. Arrazoia hau da: a priori probabilitateek ere eragin handia dutela a
+posteriori probabilitateetan. Alegia, kasu honetan %1eko probabiltiate batetik
+abiatzen garela ere hartu behar da kontuan.
+7Gazteleraz, verosimilitudes.
+19
+
+Estatistika I
+Josemari Sarasola Ledesma
+5
+Ariketak: biderkaketak, zuhaitzak, Bayes-en
+teorema
+I Zenbatekoa da hiru aldiz txanpon bat bota behar bada, hiruretan au-
+rpegiko suertatzeko probabilitatea?
+II I˜
+nakik azterketa aprobatzeko probabilitatea 0.6 dela uste da. Josemarik
+kopiatu egin dio azterketan zehar. Beraz, I˜
+nakik aprobatzen badu, be-
+rak aprobatzeko probabilitatea 0.8 da. Zenbatekoa da biek aprobatzeko
+probabilitatea? Eta biek suspenditzekoa?
+III 100 unitate dituen lote batean 10 akasdun daude. Batera 2 unitate at-
+eratzen badira, zenbatekoa da unitate akasdun bat eta unitate akasgabe
+bat ateratzeko probabilitatea? Probabilitateak biderkatuz egiteaz gain,
+konbinatoriaren eta Laplace-ren erregelaren bitartez ere egin ezazu.
+IV 10000 laguneko herri batean, 1000 lagun XX alderdikoak dira. 6 lagun
+zoriz aukeraturik, zenbatekoa da 3 XX alderdikoak izateko probabilitatea?
+a) aukeratutako laguna multzotik banatzen bada b) banatzen ez bada.
+Zein kasutan dago dependentzia? Izatekotan, dependentzia ahula edo han-
+dia al da? Zergatik?
+V Ikasgela batean, 40 mutil eta 60 neska daude. 3 ikasle zoriz aukeratzen
+bada, zenbatekoa da: a) lehendabiziko biak mutilak eta hirugarrena neska
+izateko probabilitatea? b) hiru ikasleetan, bi mutil eta neska bat auker-
+atzeko probabilitatea? Zergatik da bigarren probabilitatea handiagoa?
+VI Kaxa batean A, B eta C motako 5, 10 eta 15 pieza daude hurrenez hur-
+ren. Zenbatekoa da 3 pieza zoriz erauzi eta mota guztietatik pieza bana
+suertatzeko probabilitatea, a) piezak aldi bakoitzean itzultzen badira? b)
+piezak aldi bakoitzean itzultzen ez badira?
+VII Lote bateko 10 artikuluetatik 3 dira akasdun. a) 5 artikulu zoriz erauzten
+bada, zenbatekoa da 3 akasdunak erauzteko probabilitatea? b) Akasdun
+guztiak atera arteko erauzketak egiten badira, zenbatekoa da 5 erauzketa
+egin behar izateko probabilitatea?
+VIII Kaxa batean 4 pieza akastun eta 6 pieza akasgabe daude. Aldi berean
+3 pieza ateratzen badira, zenbatekoa da 2 pieza akastun baino gehiago
+gertatzeko probabilitatea?
+IX Enpresa bateko erabakiak hartzeko 2 aukera daude, erabakiak gehiengoz
+hartzen direlarik: lagun bakar batek hartzen du erabakia, erabaki zuzena
+hartzeko duen probabilitatea 0,8 delarik, edota 3 laguneko batzarre batek
+hartzen du erabakia, mahaikideek erabaki zuzena hartzeko probabilitateak
+0.8, 0.75 eta 0.7 direla, hurrenez hurren. Zein aukera hartu behar da?
+20
+
+Estatistika I
+Josemari Sarasola Ledesma
+X Ontzi batean 4 pieza akastun eta 6 pieza kasgabe daude. 3 pieza ater-
+atzen dira banan banan eta itzuli gabe. Zenbatekoa da bigarren pieza
+akastuna izateko probabilitatea? Eta hirugarren pieza akastuna izateko
+probabilitatea? Idem aldi bakoitzean pieza itzultzen bada.
+21
+
+Estatistika I
+Josemari Sarasola Ledesma
+XI X, Y, Z eta T jokalariak txapelketa bateko erdiﬁnaletan daude. Enpare-
+jamendurako zozketa egiteke dago. Elkarrekin jokatuz gero errenkadan
+dagoen jokalariak irabazteko probabilitateak azaltzen dira jarraian:
+Taldeak
+X
+Y
+Z
+T
+X
+-
+0.6
+0.4
+0.7
+Y
+-
+0.5
+0.9
+Z
+-
+0.2
+T
+-
+Zenbatekoa da talde bakoitzak irabazteko probabilitatea?
+XII A akzio bat egun batean igotzeko probabilitatea B akzioaren bezperako
+kotizazio aldaketaren menpe dago. B akzioaren kotizazio posibleak egun
+batean -2, -1, 0, +1 eta +2 dira probabilitate hauen arabera: 0.1, 0.2, 0.3
+eta 0.4 hurrenez hurren. A akzioa igotzeko probabilitatea honela kalku-
+latzen da: P (igo) = 0.4 −
+B akzioaren igoera
+10
+. Zenbatekoa da A akzioa egun
+batean igotzeko probabilitatea, B akzioaren bezperako emaitza ezagutzen
+ez dugula?
+XIII Lantegi batean A eta B makinetatik pieza guztien %40 eta %60 ateratzen
+dira hurrenez hurren. A makinako piezen %20 dira akastun. B makinako
+piezetan, %5 da akastun.
+Pieza bat akastuna bada, zenbatekoa da A
+makinakoa izateko probabilitatea?
+XIV Tresna batek ekoizten dituen torlojuen %96a akatsik gabea da. Torlojuak
+saldu aurretik, akatsak hatzematen dituen beste tresna batek aztertzen
+ditu. Bigarren tresna honek 0.05 probabilitateaz onartzen ditu torloju
+akasdunak. Torloju akatsik gabeak berriz, 0.99 probabilitateaz onartzen
+ditu. Bigarren tresna honek torloju bat bi aldiz aztertu ondoren, onartu
+egiten du. Zenbatekoa da torloju hau benetan akatsik gabea izateko prob-
+abilitatea?
+XV Makina batek bi matxura mota izaten ditu. A motako matxura 0,2ko
+probabilitateaz gertatzen da. B motakoa, berriz, 0,05eko probabilitateaz.
+Matxurarik gabe makinak ekoizten dituen pieza guztiak akasgabeak dira.
+A motako matxura badu, 0,2ko probabilitateaz azaltzen dira akasdunak
+eta B motako matxura badu, 0,8ko probabilitateaz. Piezak independenteki
+ekoizten dira. 5 pieza ekoiztu da eta azkenekoa bakarrik da akasduna.
+Informazio honetan oinarrituta, bi matxuren probabilitatea eman itzazu.
+XVI Test bateko galdera batean hiru aukera daude. Ikasleak ez badaki, zoriz
+erantzuten du, hau da, erantzun zuzena asmatzeko probabilitatea 1/3
+da.Irakaslea oso mesﬁkorra da: aldez aurretik ikasle batek ez jakiteko
+probabilitatea 0,99 dela pentsatzen du. Zenbatekoa da ikasle batek zuzen
+22
+
+Estatistika I
+Josemari Sarasola Ledesma
+erantzun ondoren erantzuna benetan jakiteko probabilitatea? Zenbat auk-
+era jarri behar dira galdera bakoitzean, erantzuna zuzena izan bada, er-
+antzuna benetan ezagutzeko probabilitatea 0,5 izan dadin?
+23

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    * ●Higiduraren kontzeptua gauza erlatiboa da. 
+       
+    * ●Gertaera fisikoak bakarrak dira, nahiz eta sistema desberdinetan itxura
+      desberdinez ageri. 
+       
+    * ●Pausagune absolutuan ez dago sistemarik. 
+    * ●Sistema guztiak erlatiboki kotsideratu behar dira. 
+       
+    * ●Garrantzizkoa da sistema desberdinetako neurketak konparatzen jakitea.  
+ 
+ 
+TRANSLAZIO-HIGIDURA ERLATIBOA
+    * ●B' higidura konstantez B-rekiko 
+       
+    * ●       :Posizio bektorea B-k neurtuta 
+       
+    * ●       :Posizio bektorea B'-k neurtuta 
+       
+    * ●  t=t' 
+ r ⃗
+ r ⃗  '
+  r ⃗  =  r ⃗    ' +  R ⃗
+  r ⃗  =  r ⃗    ' +  V ⃗   t
+    x = x   ' +   V x  ⋅ t          y = y   ' +   V y  ⋅ t          z = z   ' +
+V z  ⋅ t          t = t  '
+ 
+B
+B'
+     v ⃗     =      v ⃗  '    +     V ⃗
+     v ⃗  '    =      v ⃗     −     V ⃗
+H. zirk. uniformea
+Abiaduraren modulua aldatuz doa
+Adibidea:
+ 
+BIRAKETA UNIFORMEDUN HIGIDURA ERLATIBOA
+POSIZIO BEKTOREAK
+  r ⃗  =  r ⃗   '
+  r ⃗  = x    i ̂  + y    j ̂  + z   k ̂
+ r ⃗   ' = x  '  i ̂   ' + y  '  j ̂   ' + z  '  k ̂  '
+B-k neurtzen du
+B'-k neurtzen du
+ 
+ABIADURAK
+ 
+ 
+B-k neurtzen du:
+   v ⃗  =      d  r ⃗    dt        B      =  d dt     (  x   i ̂  + y    j ̂  +
+z   k ̂   )  =  dx dt     i ̂  +  dy dt     j ̂  +  dz dt    k ̂
+B'-k neurtzen du:
+ v ⃗    ' =      d  r ⃗  '   dt '         B '       =  d dt     (  x '  i ̂   '
++ y  '  j ̂   ' + z  '  k ̂  '  )  =   dx '  dt    i ̂   ' +   dy '  dt    j ̂
+' +   dz '  dt    k ̂  '
+  r ⃗  =  r ⃗   '
+Demagun B behatzaileak deribatzen duela berdintza.
+      d  r ⃗    dt        B     =      d  r ⃗  '   dt        B
+goian
+ 
+         d  r ⃗  '   dt        B           =        d dt    (  x '  i ̂   ' + y
+'  j ̂   ' + z  '  k ̂  '  )  =                =             dx '  dt   i ̂   '
++   dy '  dt    j ̂   ' +   dz '  dt    k ̂  '  ⏟    + x  '       d  i ̂  '  dt
+B     + y  '       d  j ̂  '  dt       B     + z  '      d  k ̂  '  dt       B
+ v ⃗  '
+ 
+         d  r ⃗  '   dt        B           =        v ⃗   ' + x  '      ω ⃗  ∧
+i ̂   '   + y  '      ω ⃗  ∧  j ̂   '   + z  '     ω ⃗  ∧  k ̂   '
+=        v ⃗     ' +     ω ⃗  ∧ x  '  i ̂  '    +     ω ⃗  ∧ y  '  j ̂  '    +
+ω ⃗  ∧ z  '  k ̂  '                 =        v ⃗   ' +   ω ⃗  ∧   x '  i ̂   '
++ y  '  j ̂   ' + z  '  k ̂  '       =    v ⃗   ' +   ω ⃗  ∧  r ⃗    '
+ 
+AZELERAZIOAK
+B-k neurtzen du:
+   a ⃗  =      d  v ⃗    dt        B      =  d dt     (   v x    i ̂  +  v y
+j ̂  +  v z    k ̂   )  =   d  v x   dt     i ̂  +   d  v y   dt     j ̂  +   d
+v z   dt    k ̂
+B'-k neurtzen du:
+ a ⃗    ' =      d  v ⃗  '   dt '        B   '    =    dv x  '  dt    i ̂   ' +
+dv y  '  dt    j ̂   ' +    dv z  '  dt    k ̂  '
+B eta B'-ren neurketa erlazionatzeko B-k deribatzen du
+  v ⃗  =  v ⃗    ' +   ω ⃗  ∧  r ⃗    '
+       d  v ⃗   dt       B     =       d  v ⃗  '  dt       B     +      d  dt
+(    ω ⃗  ∧  r ⃗   '  )       B       =       d  v ⃗  '  dt       B     +   ω ⃗
+∧      d  r ⃗  '  dt       B
+ 
+         d  v ⃗  '   dt        B           =        d dt    (   v x  '  i ̂   '
++  v y   '  j ̂   ' +  v z   '  k ̂  '  )  =                =              dv x
+'  dt   i ̂   ' +    dv y  '  dt    j ̂   ' +    dv z  '  dt    k ̂  '  ⏟    +
+v x   '       d  i ̂  '  dt       B     +  v y   '       d  j ̂  '  dt       B
++  v z   '       d  k ̂  '  dt       B     =                =         a ⃗  '
++  v x   '   (    ω ⃗  ∧  i ̂   '  )  +  v y   '   (    ω ⃗  ∧  j ̂   '  )  +
+v z   '   (    ω ⃗  ∧  k ̂   '  )  =                =        a ⃗    ' +   ω ⃗
+∧  (   v x  '  i ̂   ' +  v y   '  j ̂   ' +  v z   '  k ̂  '  )    =
+=        a ⃗   ' +   ω ⃗  ∧  v ⃗    '
+Beraz,
+   a ⃗  =      d  v ⃗   dt       B      =   (   a ⃗   ' +   ω ⃗  ∧  v ⃗    '  )
++  [    ω ⃗  ∧  (   v ⃗   ' +   ω ⃗  ∧  r ⃗    '  )    ]
+Az. absolutua
+ 
+    * ●Az. zentripetua eta Coriolis-en azelerazioa bi behatzaileen arteko
+      biraketa erlatiboaren ondorioa da. Azelerazio zentripetua ekuazio honen
+      ezkerraldean idazten dugunean (- zeinua erabiliz, beraz), azelerazio
+      zentrifugoa izendatzen dugu. 
+       
+    * ●Coriolis-en azelerazioa biraka ari diren sistemekiko abiadura erlatiboa
+      (v') duten gorputzen kasuan kontsideratu behar da soilik. 
+       
+    * ●Lurran gaudenez eta Lurrak bere ardatzarekiko biratzen duenez, kontutan
+      hartzeko azelerazioa izango da. 
+       
+Az. absolutua
+(B-k neurtuta)
+ 
+Adibidea:  
+Irudiko plataforma zirkularra biraka ari da bere ardatzaren inguruan
+30 bira minutuko abiadura angeluarraz. Une batean plataformaren
+gainean A pertsona O zentrotik 1.5 m-ra dago eta norabide erradialean
+higitzen ari da 2m/s-ko abiaduraz. Zeintzuk dira A-ren abiadura eta
+azelerazioa, plataformatik kanpo geldi dagoen B behatzaileak neurturik aldiune
+horretan?
+ 
+O=O'
+Ariketak: 4,5,6, 9
+ 
+ HIGIDURA ERLATIBO OROKORRA
+    * ●0xyz: B behatzailea 
+       
+    * ●0XYZ: B-rekiko trasladatzen da. Ardatz paraleloak 
+       
+    * ●0'x'y'z': B' behatzailea.  
+      Biraka OXYZ-rekiko. 
+Kasu bereziak:
+    * ●Translazio uniformea 
+    * ●Biraketa uniformea 
+Ariketak:7
+ 
+ LURRAREKIKO HIGIDURA
+Lurraren abiadura angeluarra:
+    *     o ●Norabidea: Lurraren biraketa ardatza 
+          o ●Noranzkoa: Hegoaldetik iparraldera 
+  ω =   2 π  T   =  7,292 ⋅  10   − 5       rad / s
+Biratzen ez duen behatzaile batek ikusten du:
+  a ⃗  =   g 0  ⃗
+Biratzen duen behatzaile batek ikusten du:
+ a ⃗   ' =    a ⃗  −   ω ⃗  ∧  (    ω ⃗  ∧  r ⃗   '  )    − 2     ω ⃗  ∧  v ⃗
+'
+ a ⃗   ' =     g 0  ⃗  −   ω ⃗  ∧  (    ω ⃗  ∧  r ⃗    )    − 2     ω ⃗  ∧  v ⃗
+'
+Abiadura eta posizioaren menpekoa
+Azelerazio zentrifugoa:
+ 
+Coriolis-en azelerazioa:
+  ∼  3,3 ⋅  10   − 2       m /  s 2
+  ∼  7,3 ⋅  10   − 5      v '
+Oso txikia v' < 400 m/s edo
+1500km/h. BAINA EFEKTU DIREKZIONAL GARRANTZITSUA DU!
+ 
+AZELERAZIO ZENTRIPETUA / ZENTRIFUGOA
+A
+ 
+CORIOLIS-en AZELERAZIOA
+ a ⃗   ' =  a ⃗     −   2   ω ⃗  ∧  v ⃗   '
+ 
+Adib: Foucault-en pendulua.
+Coriolis-en efektuaren ondorioa pendulu batean ikus daiteke
+Nola desbideratzen da horizontalean mugitzen den gorputza Ipar Poloan?
+ 
+Adib: Ipar hemisferioan dagoen eta iparrera isurtzen duen ibai baten ertzen
+arteko maila-desberdintasuna
+ 

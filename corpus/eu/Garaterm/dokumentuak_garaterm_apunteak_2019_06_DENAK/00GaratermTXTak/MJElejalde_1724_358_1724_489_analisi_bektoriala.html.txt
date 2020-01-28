@@ -1,0 +1,388 @@
+
+
+
+
+                                                    1. GAIA: ANALISI BEKTORIALA
+                          1. GAIA: ANALISI BEKTORIALA
+
+
+1.- KOORDENATU LERROMAKUR ORTOGONALAK
+2.- KOORDENATU ZILINDRIKOAK ETA ESFERIKOAK
+3.- ERAGIKETA BEKTORIALAK KOORDENATU LERROMAKUR
+ORTOGONALETAN
+4.-HELMHOLTZ-EN TEOREMA. EREMU BEKTORIALEN SAILKAPENA
+
+
+1.- KOORDENATU LERROMAKUR ORTOGONALAK
+
+Elektromagnetismoan agertzen diren kuestio praktikoak aurrera ateratzeko,
+beharrezkoa da bere legeen adierazpen matematikoak edo bertatik deribatzen
+diren edozeinak problema konkretuaren geometriara ondo egokitzen den koordenatu
+sistema batean adieraztea.
+
+Hiru dimentsioko espazio batean, puntu bat hiru gainazalen ebakidura da.
+Koordenatu kartesiarretan, edozein (x,y,z), hiru gainazal x= kte, y=kte, z=
+kte, lau eta ortogonalen ebakidurak ematen du.
+Koordenatu lerromakur ortogonalsistema orokor batean, elkarren perpendikular
+diren hiru gainazal, u1= kte, u2= kte, u3= kte , multzoen ebakidurak definitzen
+du espazioko edozein puntu (u1, u2,u3). Kasu honetan, u honek ez du zertan
+luzera bat izan beharrik.
+u
+i= kte gainazal multzo bakoitzari, gainazal honen perpendikular den bektore
+unitario bat [1724_489_analisi_bektoriala_html_31b32fda.gif]elkar diezaiokegu,
+bere norantza ui-k hazten doazen aldera izanik. Beraz
+[1724_489_analisi_bektoriala_html_m390b3591.gif] bektore arbitrario bat honela
+idatz daiteke:
+
+[1724_489_analisi_bektoriala_html_m220abfb8.gif](1)
+
+Kalkulu diferentzial eta integraleko kasu praktiko askotan, koordenatu baten
+aldaketari dagokion luzerako elementuaren aldaketa ezagutzea beharrezkoa da.
+Horretarako, koordenatuaren du
+ialdaketa diferentziala, dliluzera aldaketa bilakatzen duen faktore bat behar
+dugu:
+
+dli= hidui
+
+[1724_489_analisi_bektoriala_html_76e6a1f.gif] bektore unitarioak dituen
+koordenatu sistema ortogonal batean, luzera elementua honela definituko dugu
+
+[1724_489_analisi_bektoriala_html_2be005af.gif]
+
+[1724_489_analisi_bektoriala_html_72c0a255.gif](2)
+
+h1,h2,h3koefiziente metrikoak dira eta sistemaren metrika definitzen dute. u1,
+u2, eta u3koordenatuen funtzioak izan daitezke. Orokorrean, hi= hi(ui).
+Luzera elementuaren modulua honela emango da:
+
+[1724_489_analisi_bektoriala_html_a78c901.gif]
+Adibidez, bi dimentsiotan, koordenatu polarretarako:
+(u
+1, u2)(r,)
+
+du
+2= ddl
+2= r d
+
+beraz
+h2= r eta h1=1
+
+
+[1724_489_analisi_bektoriala_html_54d5bf10.gif]
+Koordenatu lerromakur orokortuetan,
+[1724_489_analisi_bektoriala_html_1d0d8972.gif] bektore unitarioen
+perpendikular diren azalera-elementuak honako hauek izango dira:
+
+[1724_489_analisi_bektoriala_html_m2da02a56.gif]
+
+[1724_489_analisi_bektoriala_html_6da0a6b3.gif](3)
+
+[1724_489_analisi_bektoriala_html_6a436125.gif]
+
+Eta bolumen elementua honako hau izango da:
+
+ d
+= h1h2h3du1du2du3(4)
+2.KOORDENATU ZILINDRIKOAK ETA ESFERIKOAK
+
+2.1
+.- Koordenatu zilindrikoak(u1, u2, u3) = (r,, z)
+
+P(r,
+,z) puntua hiru gainazal hauen ebakidurak definitzen du: OZ ardatza eta r
+erradioa duen gainazal zilindrikoa, OZ ardatza daukan etaangelua XZ
+planoarekin osatzen duen erdiplanoa, eta XY planoaren paralelo den z = z plano
+bat., x ardatz positibotik hasita neurtzen da eta
+[1724_489_analisi_bektoriala_html_m6fdf5e84.gif]gainazal zilindrikoaren
+tangentea da.
+
+                [1724_489_analisi_bektoriala_html_m67589e21.gif]
+                                   1 Irudia
+ [1724_489_analisi_bektoriala_html_m2c32a322.gif]
+ [1724_489_analisi_bektoriala_html_3f651a51.gif]
+ [1724_489_analisi_bektoriala_html_6d845933.gif]
+
+x = r cos
+, y = r sin, z = z
+
+Planoaren koordenatu polarrak z=0 kasu bereziari dagozkio.
+Orain, hiru bektore unitario elkarren perpendikular multzoa defini dezakegu,
+[1724_489_analisi_bektoriala_html_m3cd5e4ee.gif] kartesiarretakoa da,
+[1724_489_analisi_bektoriala_html_m64b8810e.gif] XY planoaren paralelo, beraz
+[1724_489_analisi_bektoriala_html_m3cd5e4ee.gif]-ren perpendikular da, eta beti
+norabide erradiala izanik (ikusi 1. irudia), eta
+[1724_489_analisi_bektoriala_html_7dec30b0.gif] hauen perpendikular hartzen da
+eta honela emandako norantzan: [1724_489_analisi_bektoriala_html_m153e7fdd.gif]
+(triedro zuzena).
+
+[1724_489_analisi_bektoriala_html_474b6941.gif] bektorea honela adierazten da
+[1724_489_analisi_bektoriala_html_m27bc9240.gif](5)
+
+A
+r= Ar(r,, z) , A= A(r,, z) , Az= Az(r,, z)
+
+Bi koordenatu, luzerak dira, beraz
+h1= h3=1, baina h2= r baita dl2= r d
+
+[1724_489_analisi_bektoriala_html_m1889651.gif](6)
+
+Azalera elementuak honako hauek dira:
+[1724_489_analisi_bektoriala_html_55d9f040.gif],
+[1724_489_analisi_bektoriala_html_m6539e1ef.gif],
+[1724_489_analisi_bektoriala_html_36a35908.gif]
+
+Eta bolumen elementua: [1724_489_analisi_bektoriala_html_m1a7e51c4.gif]
+
+                [1724_489_analisi_bektoriala_html_m1f9b5965.gif]
+                                   2 Irudia
+[1724_489_analisi_bektoriala_html_26581cd4.gif]
+bektore unitarioak P puntuaren menpekoak dira. Beraz hiru unitario horien
+norabideak ez dira konstanteak, [1724_489_analisi_bektoriala_html_345393d2.gif]
+kartesiarretan ez bezala.
+2.2Koordenatu esferikoak(u1, u2, u3) = (r,,)
+
+P(r,
+,) puntua hiru gainazal hauen ebakidurak definitzen du:
+Jatorrian zentroa eta rerradioa duen esfera bat, jatorrian erpina eta OZ
+ardatza duen kono bat, bere angeluerdiaizanik, eta OZ ardatza daukan
+etaangelua XZ planoarekin osatzen duen planoerdi bat.
+[1724_489_analisi_bektoriala_html_m6c20f377.gif] bektorea jatorritik erradiala
+da,[1724_489_analisi_bektoriala_html_m765131ef.gif] bektorea=planoan dago eta
+gainazal esferikoaren tangentea da eta
+[1724_489_analisi_bektoriala_html_m6fdf5e84.gif] bektorea koordenatu
+zilindrikoen berbera da.
+
+ [1724_489_analisi_bektoriala_html_m281ad51b.gif]
+3 Irudia
+
+[1724_489_analisi_bektoriala_html_m24b625ef.gif] ,
+[1724_489_analisi_bektoriala_html_m3aa86139.gif],
+[1724_489_analisi_bektoriala_html_2fda058a.gif]
+x = r si
+ncos, y = r sinsin, z = r cos
+Irudia begiratuz, honako hauek betetzen direla ikus daiteke:
+
+[1724_489_analisi_bektoriala_html_65d227ad.gif]
+[1724_489_analisi_bektoriala_html_1526cff2.gif]
+[1724_489_analisi_bektoriala_html_78f47ac1.gif]
+Bektore bat honela adieraziko da:
+[1724_489_analisi_bektoriala_html_m2014a986.gif]
+(7)
+
+Luzera elementua: [1724_489_analisi_bektoriala_html_67738857.gif](8)
+
+h
+1= 1, h2= r, h3= r sin
+
+Azalera elementuak, orain honako hauek izango dira
+:
+
+[1724_489_analisi_bektoriala_html_m4b4538fb.gif],
+[1724_489_analisi_bektoriala_html_m74dcc758.gif],
+[1724_489_analisi_bektoriala_html_3afb55f7.gif]
+eta bolumen elementua: [1724_489_analisi_bektoriala_html_m5764f225.gif]
+
+                [1724_489_analisi_bektoriala_html_m6aa51d1f.gif]
+                                   4 Irudia
+
+
+3.-ERAGIKETA BEKTORIALAK KOORDENATU LERROMAKUR ORTOGONALETAN
+
+3.1 Eremu eskalar baten gradientea
+
+Demagun
+S = S (u1, u2, u3) puntuaren menpeko funtzio eskalar bat. Definizioz, S-ren
+gradientea norabide-deribatu maximoa da:
+
+[1724_489_analisi_bektoriala_html_6a9c4555.gif](9)
+S funtzioaren norabide-deribatua
+[1724_489_analisi_bektoriala_html_1cdbc020.gif] norabidean, zeinekangelua
+osatzen duen [1724_489_analisi_bektoriala_html_m5c1193aa.gif]-ri dagokion
+norabidearekin honako hau izango da (modulua):
+
+                [1724_489_analisi_bektoriala_html_6286ef4e.gif]
+
+                                    5Irudia
+
+[1724_489_analisi_bektoriala_html_m1509f4e5.gif]; dl cos
+= dn[1724_489_analisi_bektoriala_html_m699df4ff.gif]
+
+[1724_489_analisi_bektoriala_html_29734f56.gif](10)
+
+Hots, S-ren aldaketa edozein norabidetan gradientearen proiekzioa norabide
+horretan izango da.
+Koordenatukartesiarretan: [1724_489_analisi_bektoriala_html_m644cf2d9.gif]
+
+Koordenatu orokortuetan:
+
+[1724_489_analisi_bektoriala_html_m182b7890.gif]
+
+ [1724_489_analisi_bektoriala_html_bddfb30.gif]
+
+[1724_489_analisi_bektoriala_html_3c764887.gif]
+[1724_489_analisi_bektoriala_html_m6e96b789.gif], beraz, gradientea hau da:
+ -----------
+v----------- ----------v-----------
+ [1724_489_analisi_bektoriala_html_m66c10f04.gif]
+[1724_489_analisi_bektoriala_html_58fdd278.gif]
+
+[1724_489_analisi_bektoriala_html_m1ac73b18.gif] (11)
+
+Koordenatu zilindrikoetan[1724_489_analisi_bektoriala_html_m7d1316fe.gif](12)
+
+Koordenatu esferikoetan: [1724_489_analisi_bektoriala_html_2d04b2dd.gif](13)
+
+
+3.2
+Eremu bektorial baten dibergentzia
+
+[1724_489_analisi_bektoriala_html_474b6941.gif] eremu bektorial baten
+dibergentzia puntu batean honela definitzen da: puntu hori daukan gainazal itxi
+baten zeharreko fluxua bolumen unitateko, bolumen honek zerorantz jotzen
+duenean:
+
+[1724_489_analisi_bektoriala_html_451b013.gif] .
+
+Koordenatukartesiarretan: [1724_489_analisi_bektoriala_html_m33e08bff.gif]
+Koordenatu ortogonal orokortuetan:
+
+[1724_489_analisi_bektoriala_html_m7a0f795b.gif](14)
+
+Koordenatu zilindrikoetan:
+
+[1724_489_analisi_bektoriala_html_m66504a7c.gif](15)
+
+Koordenatu esferikoetan:
+
+[1724_489_analisi_bektoriala_html_73a45322.gif](16)
+
+
+3.3
+Eremu bektorial baten errotazionala
+
+[1724_489_analisi_bektoriala_html_474b6941.gif]eremu bektorial baten
+errotazionala puntu batean honela definitzen da: Bektore bat da. Bektorearen
+modulua: puntua daukan azalera unitateko zirkulazio (gainazal hau mugatzen duen
+lerro itxira hedatua) maximoa da, azalera horrek zerora jotzen duenean. Eta
+bektorearen norabidea gainazalaren perpendikularra da, gainazala zirkulazio
+hori maximoa izateko orientatzen denean.
+
+[1724_489_analisi_bektoriala_html_m778d6686.gif]
+
+Koordenatu kartesiarretan:
+
+[1724_489_analisi_bektoriala_html_32dcd77.gif](17)
+
+Koordenatu orokortuetan:
+
+[1724_489_analisi_bektoriala_html_m51b005c3.gif](18)
+
+Koordenatu zilindrikoetan:
+[1724_489_analisi_bektoriala_html_4d35db45.gif](19)
+[1724_489_analisi_bektoriala_html_m6b1d72e5.gif]
+(20)
+
+Koordenatu esferikoetan:
+
+[1724_489_analisi_bektoriala_html_m506989b0.gif]
+(21)
+
+             4.-HELMHOLTZ-EN TEOREMA. EREMU BEKTORIALEN SAILKAPENA
+
+[1724_489_analisi_bektoriala_html_m3dc666e5.gif]berdintasunak edozein
+dibergentzia nuluko eremu, beste eremu bektorial baten errotazionala dela
+adierazten du (eremu-lerroak jarraituak dira, ez dira inon hasten edota
+amaitzen). Honelako eremuei "solenoidalak" edo "zeharkakoak" deritze.
+
+Era berean [1724_489_analisi_bektoriala_html_6886c46e.gif] berdintasunak
+edozein errotazional nuluko eremu, eremu eskalar baten gradientea dela
+adierazten du. Eremu hauei "irrotazionalak" edo "luzetarakoak" deritze.
+Orokorrean, eremu bektorialak hiru mota hauetan sailka daitezke:
+
+i) Irrotazionalak (edo luzetarakoak):
+[1724_489_analisi_bektoriala_html_1037fd17.gif]
+
+ii) Solenoidalak (edo zeharkakoak
+): [1724_489_analisi_bektoriala_html_m1c83cad2.gif]
+
+iii) Mixtoak;
+[1724_489_analisi_bektoriala_html_m2f6a8942.gif] ,
+[1724_489_analisi_bektoriala_html_557b6c8a.gif]
+
+"Helmholtz"-ek emandako teorema batek, hirugarren motako edozein eremu
+bektorial estatiko, baldintza batzuk betetzen badira, bi lehen motako eremuen
+batura lineala dela frogatzen du.
+
+[1724_489_analisi_bektoriala_html_m5b999644.gif]
+Hau egia izan dadin, iturrien dentsitatea
+[1724_489_analisi_bektoriala_html_a85dfd1.gif] eta zirkulaziokoa
+[1724_489_analisi_bektoriala_html_4446b653.gif] zero izan behar dira
+infinituan. Eremu bektoriala
+Reskualde finitu batean mugatuta badago, eskualde hau inguratzen duen
+[1724_489_analisi_bektoriala_html_m23046a67.gif] gainazalaz, eremu bektoriala
+erabat zehaztuko da bere dibergentzia eta errotazionalaR-n ezagutzeaz gain,
+bere osagai normala gainazalean ezagutzen bada. Edonola, funtzio bektoriala
+monobaluatua eta deribagarria dela suposatzen da, bere deribatuak finituak eta
+jarraituak izanik.
+                    1. GAIA.- ANALISIBEKTORIALA (birpasoa)
+
+
+1.-Ondoko hiru bektoreak emanda:
+[1724_489_analisi_bektoriala_html_690003c1.gif],
+[1724_489_analisi_bektoriala_html_6c9f114b.gif] eta
+[1724_489_analisi_bektoriala_html_m5815e6f2.gif], kalkula itzazu:
+   1. [1724_489_analisi_bektoriala_html_m3b3d537d.gif], bere osagaien menpe.
+   2. [1724_489_analisi_bektoriala_html_m3b3d537d.gif]-ren modulua eta kosinu
+      zuzentzaileak.
+Emaitza:a) [1724_489_analisi_bektoriala_html_m1aa979ef.gif]
+b) [1724_489_analisi_bektoriala_html_207380df.gif],
+[1724_489_analisi_bektoriala_html_33185fd6.gif],
+[1724_489_analisi_bektoriala_html_1af115d9.gif],
+[1724_489_analisi_bektoriala_html_m6a318a97.gif]
+
+2.-[1724_489_analisi_bektoriala_html_m2cf364cb.gif] izeneko bektore bat XY
+planoan kokatuta dago, X ardatzarekin
+[1724_489_analisi_bektoriala_html_m10465bde.gif]-ko angelua osatzen du eta bere
+moduluak 10 balio du. Lor bitez bere osagai kartesiarrak.
+Emaitza:[1724_489_analisi_bektoriala_html_m69cf8ee8.gif]
+
+3.-[1724_489_analisi_bektoriala_html_m16f761fa.gif]bektoreak OX ardatzarekin
+60°-ko angelua osatzen du. Kalkula ezazu "a".
+Emaitza:[1724_489_analisi_bektoriala_html_116cb2d1.gif].
+
+4.-Paralelogramo baten diagonalak bi bektore dira:
+[1724_489_analisi_bektoriala_html_mfa8ae7b.gif] eta
+[1724_489_analisi_bektoriala_html_2eb8f74.gif].Kalkula ezazu paralelogramoaren
+azalera.
+Emaitza:[1724_489_analisi_bektoriala_html_30874917.gif].
+
+5.-Demagun bi bektore:[1724_489_analisi_bektoriala_html_60fad5ae.gif] eta
+[1724_489_analisi_bektoriala_html_m12eff3ab.gif], kalkula itzazu:
+[1724_489_analisi_bektoriala_html_m655d8135.gif],
+[1724_489_analisi_bektoriala_html_1aca4eef.gif] eta
+[1724_489_analisi_bektoriala_html_3071063c.gif] t = 1 aldiunean.
+Emaitza:4,[1724_489_analisi_bektoriala_html_m4fec089d.gif],
+[1724_489_analisi_bektoriala_html_m7a824c04.gif]
+6.-Kalkula bedi                                    [1724_489_analisi_bektoriala_html_2533f9b6.gif]
+[1724_489_analisi_bektoriala_html_4794822b.gif]=2
+[1724_489_analisi_bektoriala_html_m557a3a83.gif]
+eremu bektorialaren zirkulazioa irudiko bide
+itxian zehar.
+Errepika ezazu kalkulua
+[1724_489_analisi_bektoriala_html_4794822b.gif]=2y
+[1724_489_analisi_bektoriala_html_m557a3a83.gif]
+eremu bektorialarekin.
+Kontserbakorrak dira?
+Emaitza:0 eta-4,lehena kontserbakorra
+
+
+7[1724_489_analisi_bektoriala_html_m1b38411c.gif].- Kalkula bedi
+[1724_489_analisi_bektoriala_html_m1b05cfce.gif] eremu uniformearen fluxua
+(0,0), (3,0), (3,2), (0,2) puntuek mugatzen duten laukizuzenean zehar:
+
+Emaitza:36
+
+13
+
+                                                              FISIKA AURRERATUA
+

@@ -1,0 +1,598 @@
+
+
+
+Zorizko aldagaiak
+Josemari Sarasola Ledesma
+2008ko urria
+Figure 1: Apirilaren hasieran entzun zuen aurrena kukua. Urduri zebilelako be-
+harbada, kaosa ordenatzeko joera horrengatik beharbada, kukuak zein notatan
+kantatzen zuen jakin nahi izan zuen.
+Hurrengo arratsaldean, hantxe egon zen basoan zain, diapasoia eskuan, kukuak
+noiz kantatuko. Diapasoiak ez zioen gezurrik: si-sol ziren kukuaren notak.
+Aurkikuntzak bazterrak astindu zituen. Mundu guztiak frogatu nahi zuen bene-
+tan nota horietan kantatzen ote zuen kukuak. Baina neurketak ez zetozen bat.
+Bakoitzak bere egia zuen. Fa-re zirela zioen batek, mi-
+do besteak. Ez ziren ados
+jartzen.
+Bitartean, kukuak kantari jarraitzen zuen basoan: ez si-sol, ez fa-re, mi-
+do ezta
+ere. Mila urte lehenago bezala, kukuak kuku, kuku kantatzen zuen.
+
+Contents
+1
+Zer den probabilitate banakuntza bat
+3
+2
+Zorizko aldagai diskretuak
+3
+2.1
+Probabilitate funtzioa . . . . . . . . . . . . . . . . . . . . . . . .
+3
+2.2
+Banaketa funtzioa
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+3
+Zorizko aldagai jarraiak
+4
+3.1
+Trinkotasun funtzioa . . . . . . . . . . . . . . . . . . . . . . . . .
+5
+3.2
+Banaketa funtzioa
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+6
+4
+Probabilitate banakuntzak errealitatearen eredu
+8
+5
+Eredu jarraien erabilera aldagai diskretuetarako
+8
+6
+Zorizko aldagai diskretuei buruzko ariketak
+9
+7
+Ariketak: zorizko aldagai jarraiak
+9
+
+Estatistika I
+Josemari Sarasola Ledesma
+1
+Zer den probabilitate banakuntza bat
+Zorizko aldagai 1 baten banakuntza deﬁnitu dugula esaten da, gerta daitezkeen
+guztiak beren probabilitateekin batera zehaztu ditugunean.
+Zorizko aldagaiak jarraiak eta diskretuak izan daitezke:
+• Diskretua izango da, aldagaiak balio jakin batzuk bakarrik hartzen
+dituenean: adibidez, makina batek urtean duen matxura kopurua 0, 1,
+2, . . . izan daiteke.
+• JARRAIA izango da, aldagaiak tarte bateko edozein balio har dezakeee-
+nean: adibidez, pertsona baten altuera edo lantegi bateko eguneko burni
+ekoizpena tonatan.
+2
+Zorizko aldagai diskretuak
+Zorizko aldagai diskretuen banakuntza bi eratara zehaz daiteke:
+• probabilitate funtzio bat erabiliz
+• banaketa funtzio bat erabiliz
+2.1
+Probabilitate funtzioa
+Probabilitate funtzioak, P [X = x] adieraziko duguna, zuzenean ematen du,
+funtzioan x balioa jarriz, x balioari dagokion probabilitatea. Adibidez, makina
+batean egunean izandako matxura kopurua honela banatzen dela uste da:
+P [X = x] = 0.1(x + 1) ; x = 0, 1, 2, 3
+Honela, egun batean 2 matxura izateko probabilitatea honela kalkulatzen
+da: P [X = 2] = 0.1(2 + 1) = 0.3. Batzuetan probabilitate funtzioa ezin da
+funtzio analitiko baten bitartez eman eta taula bidez azaldu behar da. Adibidez,
+herrialde batean 2020. urtean familia batek izango duen haur kopurua honela
+banatzen dela uste da:
+Probabilitate funtzioek baldintza hauek bete behar dituzte:
+• Probabilitateen batura, x guztietarako, 1 izan behar da.
+• Probabilitate guztiak [0, 1] tartean kokatu behar dira noski.
+1Gazteleraz,variable aleatoria; ingelesez, random variable.
+3
+
+Estatistika I
+Josemari Sarasola Ledesma
+x
+P [X = x]
+0
+0.20
+1
+0.30
+2
+0.45
+3
+0.05
+1
+2.2
+Banaketa funtzioa
+Banaketa funtzioak, Fx(x) idatziz adieraziko duguna, x balio bakoitzeko, alda-
+gaia x baino txikiagoa izateko probabilitatea ematen du, zuzenean x balioa
+banaketa funtzioan kalkulatuz. x balio bakoitzeko, X ≤ x balioetarako prob-
+abilitateak gehituz kalkulatzen da. Adibidez, haur kopuruari buruzko aurreko
+adibidea hartuz:
+x
+P [X ≤ x]
+0
+0.20
+1
+0.50
+2
+0.95
+3
+1
+3
+Zorizko aldagai jarraiak
+Zorizko aldagai jarraien banakuntza bi eratara zehaz daitezke:
+• trinkotasun funtzio bat erabiliz
+• banaketa funtzio bat erabiliz
+4
+
+Estatistika I
+Josemari Sarasola Ledesma
+3.1
+Trinkotasun funtzioa
+Trinkotasun funtzioak, fX (x) izendatuko duguna, zorizko aldagai jarraiak har
+ditzakeen balio ezberdinen eremuan zehar probabilitateak duen trinkotasuna
+azaltzen du. Adibidez:
+Trinkotasun funtzioetan probabilitatea ez da kalkulatzen x balioa ordezkatuz,
+probabilitate funtzioetan egiten den bezala. Probabilitatea trinkotasun funtzioetan
+azalera da: kontuan hartu behar da zorizko aldagai jarraietan puntu bateko
+probabilitatea 0 dela (inﬁnitu puntu daudelako tarte batean) eta beti tarte
+bateko probabilitatea kalkulatu beharko dugula.
+Tarte bateko probabilitatea tarte horretan zehar trinkotasun
+funtzio azpian dagoen azalera da.
+Beraz, probabilitateak integrala erabiliz kalkulatuko dugu trinkotasun funtzioetan:
+P (a < X < b) =
+b
+a
+fX (x)dx
+Trinkotasun funtzio batek bete behar dituen baldintzak ditugu hauek, Ω
+izanik lagin espazioa edo emaitza posibleen tartea:
+•
+Ω fX (x)dx = 1
+• f (x) ≥ 0, ∀x ∈ Ω
+5
+
+Estatistika I
+Josemari Sarasola Ledesma
+Adibide bat eman dezagun. Eguneko gasoil-ekoizpena reﬁneria batean trinko-
+tasun funtzio honen araberakoa dela uste da:fX (x) = 2x, 0 < x < 1, x milioika
+litrotan.
+I Trinkotasun funtzioa graﬁkoki adierazi eta esan zeintzuk diren probabili-
+tate handieneko ekoizpen mailak.
+II Zenbatekoa da ekoizpena 0.2tik 0.5 milioi litrora bitartekoa izateko prob-
+abilitatea?
+III Zenbatekoa da ekoizpena 0.3 milioi litro baino txikiagoa izateko probabil-
+itatea?
+IV Zenbatekoa da ekoizpena 0.7 milioi litro baino handiagoa izateko proba-
+bilitatea?
+V Zenbatekoa da ekoizpena justu 0.1 milioi litrokoa izateko probabilitatea?
+VI Egiazta ezazu trinkotasun funtzio batek bete beharreko baldintzak bete
+egin direla.
+3.2
+Banaketa funtzioa
+Banaketa funtzioak, Fx(x) idatziz adieraziko duguna, x balio bakoitzeko, alda-
+gaia x baino txikiagoa izateko probabilitatea ematen du, zuzenean x balioa ba-
+naketa funtzioan kalkulatuz. Beraz, honela kalkulatuko da, trinkotasun funtzi-
+otik abiatuta, inf izanik gerta daitekeen balio txikiena:
+FX (x) = P (X ≤ x) = P (inf ≤ X ≤ x) =
+x
+inf
+fX (x)dx
+Arestiko adibidea harturik, banaketa funtzioa hau izango da:
+fX (x) = 2x
+Fx(x) = P (X ≤ x) =
+x
+0
+2xdx = x
+2, ∀x ∈ [0, 1]
+Banaketa funtzioa edukita, edozein probabilitate kalkula daiteke, trinkotasun
+funtzioarekin bezala, baina beste era batera:
+• P (X < 0.3) =
+• P (X ≤ 0.3) =
+• P (X > 0.7) =
+• P (0.2 < X < 0.5) =
+6
+
+Estatistika I
+Josemari Sarasola Ledesma
+Banaketa funtzio batek baldintza hauek bete behar ditu:
+• FX (x = inf ) = 0
+• FX (x = sup) = 1
+• Gorakorra da: x handiagoa bada, azpiko probabilitatea ere handiagoa
+izango da.
+Egiazta itzazu baldintza hauek gure adibiderako.
+Banaketa funtziotik abiaturik, trinkotasun funtzioa ere eman daiteke:
+fX (x) =
+dFX (x)
+dx
+7
+
+Estatistika I
+Josemari Sarasola Ledesma
+4
+Probabilitate banakuntzak errealitatearen eredu
+Probabilitate banakuntzak formula matematikoetan oinarritzen dira askotan.
+Probabilitate banakuntzen formula idealen arabera gertatzen al dira erreali-
+tateko maiztasun erlatiboak? Erantzuna ezezkoa da: errealitateko maiztasun er-
+latiboak modu nahasiago batez gauzatu ohi baitira. Probabilitate banakuntzek
+errealitatea isladatzeko balio ez dutela ondoriozta al daiteke orduan? Ez, prob-
+abilitate banakuntzak eredu gisa, errealitatearen islada sinple moduan, ulertu
+behar direlako. Errealitateko aldakin guzti guztiak aztertzea zaila denez, eredu
+sinpleak erabiltzen ditugu, errealitatearen ezagutza errazagoa izan dadin, eredu
+konplexuagoen eraketa hain zaila izan ez dadin.
+5
+Eredu jarraien erabilera aldagai diskretuetarako
+Ohizkoa izaten da aldagai diskretu batek balio asko hartzen dituenean, torlo-
+juak ekoizten dituen lantegi bateko eguneko ekoizpena unitatetan esaterako,
+probabilitate banakuntza jarrai bat hartzea eredu gisa. Baina badakigu eredu
+jarrai batean puntu bateko probabilitatea 0 dela. Honela, adibidera itzuliz, 100
+torloju hain justu ekoizteko probabilitatea 0 litzateke, baina egia esan posible
+da 100 torloju ekoiztea. Nola gainditu behar da kontraesan hau? 1000 torloju
+ekoizteko probabilitatea honela kalkulatuz:
+P [X = 1000] =
+100.5
+99.5
+fX (x)dx
+Aldagai diskretuetan, puntu-
+probabilitateak kalkulatzeko jardunbide honi jarraitasun-
+zuzenketa deritzo. Ariketa batzuk egin diztagun gai honen inguruan:
+I Nola kalkulatu behar duzu 120 torloju baino gehiago ekoizteko probabili-
+tatea?
+II Nola kalkulatu behar duzu ekozitutako torloju kopurua [110-120] tartean
+izateko probabilitatea?
+III Balantza batek 10 gramuro ematen ditu pisuak. Nola kalkulatu behar
+duzu, tomate jakin batzuen pisurako banakuntza jarraia edukita, tomate
+batek 210 gramukoa izateko probabilitatea?
+8
+
+Estatistika I
+Josemari Sarasola Ledesma
+6
+Zorizko aldagai diskretuei buruzko ariketak
+I Eguneko ekoizpena unitatetan lantegi batean banaketa funtzio honen arabera
+banatzen dela uste da:
+FX (x) =
+x + 1
+5
+; x = 1, 2, 3, 4
+Probabilitate funtzioa eman ezazu modu analitikoan eta taula moduan.
+Bi egunetako ekoizpenaren probabilitate funtzioa osa ezazu.
+5 unitateko pedido bat jaso da. Pedidoa betetzeko behar den egun kopu-
+ruari dagokion probabilitate funtzioa eman taula moduan.
+II Kotxe kontzesionario batean egunero saltzen den kotxe kopurua honela
+banatzen dela uste da:
+P [X = x] =
+k
+x + 1
+; x = 0, 1, 2, 3
+Eman ezazu k, emandako funtzioa probabilitate funtzioa izan dadin.
+III Zentral termiko batean egun batean gertatzen den geldialdi kopurua ba-
+naketa funtzio honen araberakoa dela uste da:
+FX (x) = 1 − p
+x+1; x = 0, 1, 2, . . .
+Banaketa funtzio izan dadin p kalkulatu.
+p = 0.8 harturik, kalkula itzazu, banaketa funtzioa zein probabilitate
+funtzioa erabiliz:
+P [X = 4]; P [X < 4]; P [X > 12]
+IV Probabilitate funtzio hau ezarri da:
+P [X = x] =
+x + 1
+m(m+1)
+2
+; x = 0, 1, 2, ....., p
+Eman itzazu m eta p, P [X = x] probabilitate funtzioa izan dadin.
+7
+Ariketak: zorizko aldagai jarraiak
+I Enpresa batean asteko salmentak trinkotasun funtzio honen arabera ba-
+natzen direla uste da (milaka eurotan):
+fX (x) =
+30 − x
+400
+;
+0 < x < 20
+Trinkotasun funtzioa graﬁkoki adierazi eta adieraz ezazu zeintzuk diren
+probabilitate handieneko salmentak. Probabilitate hauek eman itzazu,
+trinkotasun funtzioa zein banaketa funtzioa erabiliz:
+9
+
+Estatistika I
+Josemari Sarasola Ledesma
+• Salmentak 10.000 euro baino txikiagoak izateko probabilitatea.
+• Salmentak 5.000 euro baino handiagoak izateko probabilitatea.
+• Salmentak 4.000 eurotik 8.000 eurotara bitartekoak izateko probabil-
+itatea.
+II Enpresa bateko eguneko ekoizpena (tonatan) honela banatzen dela uste
+da:
+FX (x) =
+x2
+4
+0 < x < 2
+Egiazta ezazu banaketa funtzioa dela eta berau erabiliz, probabilitate
+hauek eman:
+• Ekoizpena tona bat baino txikiagoa izateko probabilitatea.
+• Ekoizpena tona bat baino handiagoa izateko probabilitatea.
+• Ekoizpena tona batetik 1.5 tonara bitartekoa izateko probabilitatea.
+III Osagai baten iraupena, ordutan, banaketa funtzio hau eratuz modelizatu
+da:
+FX (x) =
+2x2 − 2
+30
+1 < x < k
+Banaketa funtzioa izan dadin k kalkula ezazu. Trinkotasun funtzioa eman
+ezazu. Osagai bat funtzionatzen hasi denetik 2 ordu pasa badira, zen-
+batekoa da guztira gutxienez 3 orduz irauteko probabilitatea?
+IV Denda bateko kaxa batera heltzen diren ondoz ondoko bi bezeroren arteko
+denbora honela banatzen dela uste da:
+fX (x) = ke
+−kx ;
+x > 0
+Trinkotasun funtzioa izan dadin k kalkula ezazu.
+V Zorizko aldagai bati dagokion trinkotasun funtzioa honelakoa da:
+Figure 2:
+10
+
+Estatistika I
+Josemari Sarasola Ledesma
+Trinkotasun funtzioa eta banaketa funtzioa analitikoki ezar itzazu. Zenbat
+parametro ditu ereduak?
+VI Datorren hileko salmentak trinkotasun funtzio honen arabera banatzen
+direla uste da:
+fX (x) = 4 − ax ;
+0 < x < b; b > 0
+Zenbatekoak izan behar dira a eta b fX (x) trinkotasun funtzioa izan
+dadin? Zenbat parametro ditu ereduak?
+VII Gasolindegi berri batek hilean behin jasoko du gasolina. Gasolina salmen-
+tak honela banatuko direla uste da (hektolitrotan):
+fX (x) = 4(1 − x)
+3 ;
+0 < x < 1
+Ziur izateko hilean zehar gasolina ez dela agortuko, zenbatekoa izan be-
+harko da gasolina biltegiaren edukiera? Gasolinarik gabe geratzeko ar-
+riskua %1era mugatu nahi bada, zenbatekoa izan behar da biltegiaren
+edukiera?
+VIII Lagun batek inbertsio batek emango duen errentagarritasuna ehunekotan
+honela banatzen dela uste du:
+fX (x) = −2x + k ; 0 < x < m
+Nolakoak izan behar dira m eta k, f(x) trinkotasun funtzioa izan dadin?
+IX Telefono konpainia batek nazioarteko deiak bakarrik onartzen ditu. Dei
+hauen iraupena honela banatzen dela uste da:
+fX (x) = e
+−x;
+x > 0
+Minutuaren frakzioak minutu osoa bezala kobratzen dira. Kobratutako
+minutu kopuruaren probabilitate-funtzioa eman ezazu.
+X Neska bat mutil baten zai dago. Esperientziaz badaki mutila etorri arte
+pasatzen den minutu kopurua honela banatzen dela:
+fX (x) =
+3x2
+125
+;
+0 < x < 5
+Ikusten denez, 5 minutu baino gehiago ez du inoiz ematen: 5 minutu
+pasata, neskak alde egiten du. Hau aldi guztietatik %25ean gertatzen
+da. Askotan lehenago alde egiteko gogoa sortzen zaio: 5 minutuak pasako
+direla %80ko probabilitateaz ziurtatzen duenean. Noiz gertatzen da mo-
+mentu hau?
+11
+
+Estatistika I
+Josemari Sarasola Ledesma
+XI Osagai baten iraupen bizitza honela banatzen dela uste da:
+fX (x) =
+2x
+k2
+;
+0 < x < k
+4 ordutik gorako iraupena duten piezak %20 direla uste bada, zenbatekoa
+izango da k parametroa?
+XII Kaxa batean sar daitekeen pieza kopurua honela banatzen dela uste da:
+fX (x) =
+1
+100
+; 100 < x < 200
+Zenbatekoa da 110 pieza sartzeko probabilitatea? Pieza bakoitzaren pisua
+honela banatzen dela uste da (gramutan):
+fX (x) =
+1
+50
+;
+50 < x < 100
+Baskulak 5 gramuko zehaztasuna badu, zenbatekoa da pieza baten pisua
+60 gramukoa izateko probabilitatea?
+12
+
+Estatistika I
+Josemari Sarasola Ledesma
+Makina automatiko batean eguneko ekoizpena programa daiteke:
+1, 2, 3 edo 4 pieza ekoiz daitezke. Matxurak direla eta, programan
+ezarrita baino pieza gutxiago ekoiz daitezke. Programan ezarritako
+kopurua k izanik, azkenik ekoizten den pieza kopurua probabilitate
+funtzio honen arabera banatzen dela uste da:
+P (X = x) =
+2x
+(k + 1)k
+;
+x = 0, 1, ...., k
+Piezak egiteko metal bat erabiltzen da. Metal mota 2 erabil daitezke:
+• 10-eko erresistentzia duena
+• 20-ko erresistentzia duena
+Erresistentziaren arabera (e) eta programako pieza kopuruaren arabera
+(k), pieza baten desbidazioa ezaugarri baten neurri estandarrarekiko
+zorizko portaera ezberdina dauka:
+fX (x) =
+e − k
+ke
+;
+0 < x < t
+Lehendabizi, azken trinkotasun funtzio hau zuzena izan dadin t
+kalkula ezazu.
+Egun batean 1-eko desbidazioa baino txikiagoa duten 2 pieza ekoiztu
+behar dira. Eman itzazu metal mota eta programarik hoberena.
+Emandako trinkotasun funtzioa zuzena izan dadin, bi baldintza bete behar
+dira funtsean:
+1. fX (x) ≥ 0, eta hau bete egiten da deﬁnizioz e eta k positiboak direlako;
+2. Trinkotasun funtzioaren azpiko azalera 1 izan behar da. Ikus dezagun:
+t
+0
+e − k
+ke
+dx = 1 →
+(e − k)x
+ke
+t
+0
+= 1 →
+(e − k)t
+ke
+= 1 → t =
+ke
+e − k
+Eta beraz, trinkotasun funtzioa bi parametroren mende geratzen da (e eta k):
+fX (x) =
+e − k
+ke
+;
+0 < x <
+ke
+e − k
+(1)
+13
+
+Estatistika I
+Josemari Sarasola Ledesma
+Metal mota eta programarik onena lortzeko, lehendabizi ditugun aukera guz-
+tien zerrenda eman behar dugu. Taulatxo honetan azaltzen dira:
+e=10, k=1
+e=10, k=2
+e=10, k=3
+e=10, k=4
+e=20, k=1
+e=20, k=2
+e=20, k=3
+e=20, k=4
+Aukera hauek eraktu behar ditugu hoberena zein den erabakitzeko. Nola
+erkatu behar dira? Zeren arabera eman behar dugu hoberena?
+Egun batean 1-eko desbidazioa baino txikiagoa duten 2 pieza ekoizteko prob-
+abilitatea handieneratzea bilatzen da. Beraz, aukera bakoitzeko, probabilitate
+hau kalkulatu beharko da.
+Has gaitezen lehenengo aukeraren azterketarekin.
+e=10, k=1
+k = 1-eko programa ezartzen bada, 2 pieza ezingo dira inolaz atera. Beraz,
+aukera honetan helburua betetzeko probabilitatea hutsa da:
+P (helburua bete) = 0
+e=20, k=1
+Idem gertatzen da:
+P (helburua bete) = 0
+e=10, k=2
+Kasu honetan, helburua bete egingo da baldin eta programatutako 2 piezak
+ekoizten badira eta biak akasgabeak badira. Eman dezagun lehendabizi 2 pieza
+ekoizteko probabilitatea (gogoratu k = 2 dugula):
+P [X = 2] =
+2 × 2
+(2 + 1) × 2
+= 0.66
+Eman dezagun orain pieza bat akasgabea (hau da, desbidazioa 1 baino txikiagoa)
+izateko probabilitatea. Aukera honetan desbidazioaren trinkotasun funtzioa hau
+da (begiratu (1)):
+fX (x) =
+10 − 2
+10 × 2
+= 0.4 ;
+0 < x < 2.5
+Eta beraz,
+P [pieza akasgabea] = P [X < 1] =
+1
+0
+0.4dx = 0.4
+14
+
+Estatistika I
+Josemari Sarasola Ledesma
+Beraz, ekoiztutako piezen eta pieza bakoitzean sortutako desbidazioaren artean,
+eta ekoiztutako piezen beraien artean ere, independentzia dagoela pentsatuz 2,
+bilatutako probabilitatea aurreko probabilitateak biderkatuz emango dugu:
+P (helburua bete) = 0.66 × 0.4 × 0.4 = 0.1056
+e=20, k=2 Aukera honen azterketa aurrekoan bezala egingo dugu. Aldatzen
+den gauza bakarra e parametroa da eta ondorioz, pieza bakoitza akasgabea
+izateko probabilitatea. Desbidazioaren trinkotasun funtzioa hau izango da:
+fX (x) =
+20 − 2
+20 × 2
+= 0.2 ;
+0 < x < 5
+Eta beraz,
+P [pieza akasgabea] = P [X < 1] =
+1
+0
+0.2dx = 0.2
+Azkenik, bilatutako probabilitatea hau izango da:
+P (helburua bete) = 0.66 × 0.2 × 0.2 = 0.0264
+e=10, k=3 Kasu honetan helburua bete egingo da badin eta:
+2 pieza ekoizten badira eta biak akasgabeak badira
+edo
+3 pieza ekoizten badira eta 2 (edozein ordenetan) edo 3 pieza akasgabeak
+badira.
+3 piezako programa ezarri dela (k = 3), eman ditzagun 2 eta 3 pieza ekoizteko
+probabilitateak hurrenez hurren:
+P [X = 2] =
+2 × 2
+(3 + 1) × 3
+= 0.33
+P [X = 3] =
+2 × 3
+(3 + 1) × 3
+= 0.5
+Pieza bakoitza akasgabea izateko probabilitatea eman dezagun orain. Auk-
+era honetan, e = 10, k = 3, eta beraz, desbidazioaren trinkotasun funtzioa hau
+izango da:
+fX (x) =
+10 − 3
+10 × 3
+= 0.23 ;
+0 < x < 4.35
+2Piezen arteko independentziaren supuestoa ez da oso erreala, pieza bat akastuna bada,
+arrazoiak izan daitezkeelako egoera askotan hurrengo pieza akastuna izateko probabilitatea
+handiagoa dela baieztatzeko, baina dependentzia hau nolakoa den eaz dakigunez, hobe da
+independentzia suposatzea.
+15
+
+Estatistika I
+Josemari Sarasola Ledesma
+Beraz, desbidazioa 1 baino txikiagoa eta ondorioz pieza bakoitza akasgabea
+izateko probabilitatea hau da:
+P [pieza akasgabea] = P [X < 1] =
+1
+0
+0.23dx = 0.23
+Beraz, eskatutako probabilitatea, 2 pieza ekoiztea eta 3 pieza ekoiztea bateraez-
+inak direla eta aurrekoetan bezala independentzia suposatuz:
+P (helburua bete) = 0.33 × 0.23
+2 + 0.5 × (0.232 × 0.77 ×
+3!
+2!1!
++ 0.23
+3) = 0.084
+e=20, k=3
+Planteamendua aurrekoan bezala egingo dugu. Aldatzen den elementu bakarra
+pieza akasgabea (desbidazioa 1 baino txikiagoa) izateko probabilitatea da:
+fX (x) =
+20 − 3
+20 × 3
+= 17/60 ;
+0 < x < 60/17
+P [pieza akasgabea] = P [X < 1] =
+1
+0
+17/60dx = 17/60 = 0.283
+Eta aurrekoan bezala eginez helburua betetzeko probabilitatea:
+P (helburua bete) = 0.33×0.283
+2 +0.5×(0.2832 ×0.717×
+3!
+2!1!
++0.283
+3) = 0.1238
+Beste bi aukera falta dira aztertzeko baina oraingoz helburua betetzeko prob-
+abilitate handiena ematen duen aukera eta ondorioz oraingoz aukera optimoa
+hau da: e = 20, k = 3.
+16

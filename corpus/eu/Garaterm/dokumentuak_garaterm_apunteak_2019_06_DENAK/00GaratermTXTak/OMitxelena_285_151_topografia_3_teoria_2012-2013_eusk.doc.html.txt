@@ -1,0 +1,280 @@
+
+
+
+
+
+
+
+
+              IngeniaritzaZibilekoGraduaUEP-Donostia2012-2013 O.
+Mitxelena86
+
+
+
+
+****** 3. GAIA. Metodo Topografikoak ******
+    * Altxaketa topografikoa
+    * Zuinketa
+    * Topografiako metodoak
+    * Planimetrikoak
+          o Erradiazioa
+          o Poligonaketa
+          o Ebaketa
+    * Altimetrikoak
+          o Galgaketa geometrikoa
+          o Galgaketa trigonometrikoa
+    * Emaitzen konpentsaketa
+
+
+***** Altxaketa topografikoa *****
+Eremu bat plano batean irudikatu edo koordenatuen bidez definitzeko lan
+topografikoa burutzeko eragiketa guztiak biltzen ditu altxaketak.
+Topografian doitasun handiko altxaketak egiten dira, baina doitasun gutxi behar
+denean bestelako instrumentazioa erabiliz espedizioko topografia bidez lortu
+daitezke.
+Koordenatuaren arabera, elementuaren datuak, etab eraz altxaketak mota
+desberdinekoak izango ditugu:
+    * Altxaketa planimetrikoak (XY) planoaren gaineko informazioa, alturarik
+      gabe.
+    * Altxaketa altimetrikoak (Z)
+    * 3D altxaketak
+***** Metodo topografikoak. Planimetria *****
+**** Erradiazioa ****
+Erradiazioaren kontzeptua
+Puntu baten koordenatuak ezagutzen baditugu (XA, YA, ZA), bere ingurutakoak
+kalkula ditzakegu, bakoitzarenganainokodistantzia eta azimutalortzen badugu
+(koordenatu polarren bidez kalkulatuko ditugu koordenatu tarteak (ΔXAP, ΔYAP,
+ΔZAP). Datu horien behaketa, eta kalkuluari erradiazioametodoa deituko diogu.
+Angeluak eta distantziak neurtzen dituzten tresnak erabiliko ditugu
+Distantziaren neurketa zuzena Distantziageometrikoa da; 3D. Gaur egungo tresnek
+Distantzia murriztua edo horizontala emateko aukera dute. (ΔXAP, ΔYAP
+kalkulatzeko Dm erabiliko dugu)
+Jatorrizko puntutik angeluak neurtuko ditugu, bai horizontala eta bertikala,
+azken honetaz Dm eta ΔZ kalkulatzeko baliatuko gara.
+
+
+Distantzia geometrikoa neurtzen du instrumentuak.
+
+
+ΔX eta ΔY kalkulatzeko distantzia horizontala kalkulatu behar dugu, Angelu
+bertikalaren bidez.
+                                Dm = Dg * sen V
+ΔZ kalkulatzeko t tarte trigonometrikoa kontutan izango dugu, baina baita
+instrumentuaren altuera (hi) eta behatutako puntuaren gainean jarritako
+punteria elementuaren altuera (hm)
+ΔZ = t + hi – hm
+HP = HE + ΔZ = HE + t + hi - hm
+Azimuta
+A puntutik P puntu baten azimuta neurtzeko, azimuta ezaguna duen norabide bat
+ezagutu behar dugu. Norabide horretan, goniometroak dagokion azimuta markatzen
+badu, behaketa orientatua izango da, bestela desorientazioa kalkulatu beharko
+dugu.
+ΣA = θAR – LAR
+θAP = LAP + ΣA
+θAB = LAB + ΣA
+θAC = LAC + ΣA
+θAD = LAD + ΣA
+
+
+Bessel
+Norabide neurketa doitsuagoak lortzeko Bessel metodoa erabiltzen da; puntu bat
+2 alditan behatzen da, 200gko diferentziarekin eta betaurrekoari buelta emanda.
+Bi behaketa modu hauei zirkulu zuzena eta alderantzizko zirkulua deitzen diegu.
+Metodoaren ezaugarriak
+Puntu batetik erradiazioaren bidez hartuko ditugu bertatik behatu ahal diren
+puntu betegarriak, metodoaren errorea lanaren perdoia berdindu arte. Distantzia
+eta angelua neurtzerakoan egiten den erroreak distantziaren arabera handitzen
+baitira.
+Metodo hau arina da, baina puntu bakoitzean ez dago egiaztapenik.
+Beste aldetik, erradiatutako puntuen arteko errore lineala ez da homogeneoa
+**** Poligonaketa ****
+Altxaketa eremu osoa puntu bakarretik ikusezina bada, puntu betegarriak
+hartzeko koordenatu ezagunetako estazio gehiago ezarri beharko ditugu.
+Poligonaketa berez erradiazioakateatua bada. Erradiatutako puntu bat erabiliko
+dugu beste baten koordenatuak lortzeko, eta abar. Kateaketa horrek erroreak
+pilatzen dituenez, eta altxaketa osoa puntu horietan oinarrituko denez,
+poligonaketa metodoak egiaztapena bilatzen:
+    * Kateaketa koordenatuezagunakdituenbipuntulotzenditu;
+      poligonaketatxertatua da koordenatu ezagunak dituen bi puntuen artean
+      garatzen den poligonaketa horrela ez bada poligonaketazintzilikatua
+      izango da, eta bera eta bertatik hartutako puntuek ez dute egiaztapenik
+      izango. Baldintza teknikoen orrietan poligonaketa zintzilikatuak
+      espresuki galarazten da.
+    * Jatorria eta helmuga puntu bera izan daiteke, orduan
+      poligonaketatxertatuaitxia izango da.
+    * Jatorria eta helmuga puntu bera ez bada, poligonaketatxertatuairekia da.
+Poligonaketa behatzeko garaian, erradiazioan bezala
+    * jatorrizko puntuan azimuta ezaguna duen norabide bat izan behar dugu, eta
+      baita helmuga puntuan ere, azimuta errorea egiaztatzeko.
+    * goniometroa orientatua eraman dezakegu estazio bakoitzean, edo ez, orduan
+      azimuta pasatze prozesua geroago egin beharko dugu.
+**** Ebaketa ****
+Koordenatu ezagunak dituen bi puntuetatik, P puntuaren kokapena lortzeko,
+angelu neurketen bidez ebaketa da.
+A eta B arteko distantzia eta azimuta kalkula dezakegu.
+Sinuaren teorema erabiliz, AC eta BC distantziak izango ditugu.
+θAC = θAB – BAC θBC = θBA – CBA
+
+
+
+
+
+
+
+
+
+
+θAB
+
+
+X
+ θPA
+C = XA + AC * sin θAC
+YC = YA + AC * cos θAC
+θPB
+
+
+
+
+
+
+
+
+***** Zuinketa *****
+Zuinkatzea da errealitatean puntu bat ezartzea, kartografiatik edo informazio
+geografiakotik habiatuta. Horretarako beharrezkoak diren datu topografikoak
+kalkulatu beharko dira, eta instrumentazioaren bidez lurrera eraman.
+Zuinketa-puntuak proiektatutako objektuaren posizioa eta forma definitzeko
+beharrezko puntuak dira, batzutan irudiarekin zerikusirik ez duten puntuak
+izaten dira.
+Zuinketa-metodoak
+   1. Polarren bidez. Hau erradiazioaren alderantzizkoa da.
+   2. Abzisa eta ordenatu bidez.
+   3. Ebakidura bidez. Hau ebakiduraren alderantzizkoa da.
+
+
+Polarren bidezko zuinketa
+Koordenatuak ezagunak dituen punt batetik abiatuko gara.
+Lehenik kokagune-puntuaren eta bila gabiltzanaren arteko azimuta eta distantzia
+kalkulatzen dira.
+    * Aparatua orientatua badago azimutaren irakurketa bilatuko dugu.
+    * Aparatua desorientatua badago, azimutari desorientazioa kendu beharko
+      diogu irakurketari.
+Jarraian, ezarritako norabidean eta kalkulatutako distantzia neurtuz, puntua
+kokatu ahal izango dugu.
+Metodoaren_onurak_eta_eragozpenak
+    * Distantzia-neurgailua erabiltzea oso metodo azkarra da.
+    * Estazio-aldaketarik gabe puntu gehien zuinkatzen dituen metodoa da.
+    * Jardunean zehar aparatua lekualdatzeko arriskua dago, zuinketa-oinarri
+      berean denbora luzez egon ondoren. aldizka erreferentzia finko bati
+      behatu besterik ez dago.
+Ebaketaren bidezko zuinketa
+Koordenatuak ezagunak dituzten BI puntuetatik abiatuko gara AB azimuta
+ezagutzen dugu
+A-tik eta B-tik C-rako azimutak kalkulatzen dira. Diferentzia bidez a eta β
+angeluak ezagutuko ditugu.
+Aparatu bana kokatzen da A n eta B n.Elkar begiztatzen dira, angelu
+horizontalaren 0g irakurketa ezarriz.
+Gero, aparatu bakoitzean dago­kion a eta b irakurketa horizontal kalkulatua
+bilatu (A-ren kasuan 400 – a izango da) eta bi aparatuak C puntu­rantz
+orientatuta izango ditugu. Bi begi-lerroen elkargunea aurkituta, C puntu hori
+aurkituko dugu.
+Metodoaren_onurak_eta_eragozpenak
+    * zuinketarako distantzien neurketarik erabili behar ez izatea.
+    * Distantzia handietan zehaztasun handiagoa lortzea ere litekeena da
+    * Baina bi aparatu eta hiru langile erabili behar
+
+
+***** Galgaketa. Metodo altimetrikoak *****
+Altimetrian zenbait puntuen arteko altuera diferentzia neurtzen da.
+Erreferentzia puntu batetik besteekiko kota tarteak hartzen dira.
+Ingeniaritzan oso garrantzitsua da lurrazalaren altimetria; ur-proiektuak,
+errepideak, trenbideak, urtegiak, zabalgune desberdinak (aparkalekuak,
+aireportuak, etab.). Kota tarteak neurtzeko hainbat metodo ditugu;
+    * Galgaketabarometrikoa; atmosferarenpresioa neurtuz puntuen kota tartea
+      lortzen da; mendian erabiltzen da, metodo bizkorra da, doitasunaren
+      aldetik ez da nahikoa topografiarentzat. (Barometroak dira erabilitako
+      tresnak)
+    * Galgaketatrigonometrikoa; goniometro bertikala duten aparatuekin egin
+      daiteke. Terminotrigonometrikoa kalkulatuz, behatutako puntuarekiko kota
+      tartea lortzen da. (Eklimetroak erabiltzen dira; eklimetroa gonimetroaren
+      angelu bertikala neurtzen duen atala da. Klisimetroek malda neurtzen dute
+      portzentualki)
+    * Galgaketageometrikoa; metodorik doitsuena eta sinpleena da. Galgaren
+      bidez, konparazioplanoa ezartzen da, eta behatutako puntuaren bertikala
+      non mozten duen neurtzen da. (Galga da erabiltzen den instrumentua)
+Nibelazio sinplea da neurtutako altuera kota tarte baten bidez lortzen bada,
+eta konposatua kota tarte bat baino gehiagoren bidez lortzen bada.
+**** Galgaketa geometrikoa ****
+Trenza berezi bat erabiltzen da, galga. Oso doitsua da, eta xinplea, baina
+denbora asko darama, beraz beharrekoa den auditan besterik ez da erabiltzen.
+Erdiko puntuaren metodoa
+Irudian ikusten den bezala, miraren altuera neurtzen badugu, konparazio plano
+batekiko, puntuen kota tartea, bi mira altueren diferentzia izango da,
+aparatuaren, edo konparazio planoaren altueraren independentziarekin.
+Galgek horizontaltasuna lortzen dute konpentsagailuen bidez, doitasun handiz,
+baina egon daitezkeen erroreak saihesteko erdiko puntuaren metodoa erabiltzen
+da.
+                        ZAB = (mA+e) - (mB+ e) = mA- mB
+Lurraren esferikotasuna eta atmosferak eragiten duen esferikotasun efektuak ere
+saihesten dira.
+Estazioa eta puntuen arteko distantzia tartea luzatuko dugu galgaren
+betaurrekoak handitzeko gaitasunaren arabera eta lurrazalaren ezaugarrien
+arabera. 80 m arte izan daiteke.
+Muturreko puntuaren metodoa
+Metodo hau altuerak erradiatzeko erabiltzen da.
+Kasu honetan errore sistematikoak ez dira saihesten. Instrumentuaren altuera
+neurtzerakoan, galgaketa geometrikoaren errorerik handiena egiten da,
+flexometroaren bidez neurtzen delako (0,5 cm onartzen da)
+                                 ZAB = iA - mB
+Galgaketa geometrikoan beste hainbat metodo erabiltzen dira, elkarrenganako
+metodoa adibidez, bi puntuen artean estazioa egiteko oztoporik badago.
+
+
+
+
+**** Galgaketa trigonometrikoa ****
+Distantzia murriztua angelu bertikalaren bidez lortzen da.
+                                Dm = Dg * sen V
+                         t = Dg * cos V = Dm * cotg V
+ΔZ kalkulatzeko t tartetrigonometrikoa kontutan izango dugu, baina baita
+instrumentuarenaltuera (hi) eta behatutako puntuaren gainean jarritako
+punteriaelementuarenaltuera (hm)
+                               ΔZ = t + hi – hm
+                        HP = HE + ΔZ = HE + t + hi – hm
+
+
+Elkarrenganako galgaketa trigonometrikoa
+Metodo honen bidez errefrakzioa eta esferikotasuna saihesten dugu
+                         t = Dg * cos V = Dm * cotg V
+ΔZ kalkulatzeko t tartetrigonometrikoa kontutan izango dugu, baina baita
+instrumentuarenaltuera (hi) eta behatutako puntuaren gainean jarritako
+punteriaelementuarenaltuera (hm)
+                           ZAB = Dg* tg VA +iA – hmB
+                           ZBA = Dg* tg VB +iB – hmA
+                             ZAB = (ZAB - ZBA) / 2
+
+***** Emaitzen konpentsaketa *****
+Topografiako metodo guztiek, erradiazioa izan ezik, datuen ondasuna
+egiaztatzeko aukera ematen dute behar baino datu gehiago hartzen delako landa-
+lanean.
+Matematikoki sistema bat bezala hartzen badugu topografiako aplikazio bat,
+aldagai behagarriak izango genituen eta ezezagunak beste aldetik. Behar baino
+behaketa gehiago izaten badugu, sistema erredundante izango da, hau da;
+soluziorik gabekoa; horregatik egin beharko duguna izango da sistema hori
+estatistikoki doitu.
+    * Txikiengo karratuen bidezko doiketa da modurik egokiena.
+    * Behagarri bat behin baino gehiagotan neurtu badugu; batazbestekoa egingo
+      dugu.
+    * Neurketak fidagarritasun desberdina badute, pisudun batazbestekoa egin
+      beharko dugu.
+    * Poligonaketa edo galgaketa konposatuaren bidez neurtu badugu,
+      egiaztatutako errorea konpentsatu beharko dugu behagarrien artean;
+    * Poligonaketan Angelu itxieraren errorea zati berdinetan, eta koordenatu
+      tarteak distantziari proportzionalki
+    * Orokorrean galgaketan kota tarteari proportzionalki edo baita
+      distantziari proportzionalki
+
+
+
+

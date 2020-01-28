@@ -1,0 +1,1319 @@
+
+
+
+Kapitulua 2
+Lehenengo Ordenako Ekuazio
+Diferentzialak: Teknika
+Analitikoak
+2.1
+Sarrera
+Lehenengo ordenako ekuazioetan, aurreko kapituluan deﬁnitu den moduan, gehie-
+nez y(x) menpeko funtzioaren lehenengo deribatuak azaltzen dira, hau da, y (x).
+Orokorrean
+(2.1)
+F (x, y, y (x)) = 0 edo y = f (x, y).
+idazten da. Bigarren adierazpena era normala esango diogu eta honera iristen da
+F funtziotik y gaia bakan daitekenean, baina hau ezin da lortu kasu guztietan.
+Adibidez (y )x − sin x log y = 0 ekuazioaren era normala erraz lor daiteke,
+(2.2)
+y =
+sin x log y
+x
+.
+Are gehiago, batzuetan f funtzioa ondoko eraz idatz daitekenean, f (x, y) =
+M(x, y)/N(x, y), orduan oso ohia den era diferentziala ondorioztatzen dugu,
+(2.3)
+N(x, y)dy = M(x, y)dx ,
+f (x, y) =
+dy
+dx
+delako.
+Adierazpen hau edo era normala edota era orokorra baliokideak dira.
+Ekuazio diferentzialak nahiz eta soilik lehenengo ordenakoak izan, askotan
+oso zailak dira eta ez daude metodo analitikoak berauen soluzioaren adierazpen
+14
+
+explizitoa ezagutzeko. Horregatik konformatu beharko dugu soluzio hurbilduekin
+edo ezaugarri kualitatiboak azterturik.
+Ekuazio motarik sinpleena f funtzioa soilik aldagai askearen funtziopekoa de-
+nean agertzen da, f = f (t), adibidez f (t) = t
+2−1
+t
+, orduan nahikoa da f (t) bere
+aldagaia t-rekin integratuz,
+(2.4)
+dy
+dt
+=
+t2 − 1
+t
+⇒ dy =
+t2 − 1
+t
+dt ⇒
+dy =
+t −
+1
+t
+dt ⇒ y = t2 − log t + k,
+non k integrazio konstantea den.
+2.2
+Aldagai banatuetako ekuazioak
+Honela esaten zaie ondoko gisaz adieraz daitezkeen ekuazioei,
+(2.5)
+g(y) dy = f (x) dx,
+non x-ren menpeko gai guztiak f (x) funtzioan eta y-ren menpeko gai guztiak
+g(y) funtzioan biltzen diren. Baldin ekuazioa ϕ1(x)φ1(y) dy = ϕ2(x)φ2(y) dx mo-
+takoa bada, orduan aurreko adierazpidera pasa dezakegu ere,
+(2.6)
+φ1(y)
+φ2(y)
+dy =
+ϕ2(x)
+ϕ1(x)
+dx.
+Aldagai bakoitzaren funtziopeko termino guztiak berdintzaren alde batean be-
+reizitak daudenez, alde bakoitzari dagokion aldagairarekin integratuko dugu.
+(2.7)
+g(y) dy =
+f (x) dx + K.
+Baldin ekuazioak ondorengo antza badu,
+(2.8)
+dy
+dx
+= f (ax + by + d).
+Orduan aldagai banatuetako adierazpidea bihur daiteke ere z = ax + by + d aldagai
+aldaketaren bitartez. Gogora dezagun z aldagai berriaren diferentzialaren antza,
+(2.9)
+dz
+dx
+= a + b
+dy
+dx
+⇒
+dy
+dx
+=
+1
+b
+dz
+dx
+−
+a
+b
+.
+Orain ekuazioaren egitura bakunduko da eta lehenengoaren moduan askatuko dugu.
+15
+
+Adibidea 2.2.1 Askatu 3ex tan y dx+(2−ex) sec2 y dy = 0 ekuazio diferentziala.
+Soluzioa: Ekuazioaren bi gaiak bereiziko ditugu,
+3ex
+ex − 2
+dx =
+sec2 y
+tan y
+dy
+eragiketaren laguntzaz ekuazioa aldagai banatuetako erara igaro dugu. Orain berdin-
+tzaren alde bakoitzari dagokion aldagaiarekin integratuko dugu.
+ex
+ex − 2
+dx =
+sec2 y
+tan y
+dy ⇒ 3 ln |ex−2|+K = ln | tan y| ⇒ eK|ex−2|3 = | tan y|
+Baldin K hautazko integrazio-konstantea bada, orduan eK hautazko konstante po-
+sitiboa da erebai eta aurreko adierazpena bakuntzeko K = eK idatz dezakegu. Beraz,
+soluzioaren adierazpena
+y(x) = arctan(K(ex − 2)3) da.
+Oharra: Etorkizunean adierazpidea ahal bezain garbia eta erreza edukitzeko hau-
+tazko konstanteen aldaketak zuzenean eK → K idatziko ditugu, beraz, aurreko
+soluzioaren adierazpena y(x) = arctan(K(ex − 2)3) geratuko litzateke.
+Adibidea 2.2.2 Aurkitu y(π/2) = e hastapen-baldintza betetzen duen y sin x =
+y ln y ekuazio diferentzialaren soluzio berezia.
+Soluzioa: Bereizi ditzagun aldagai bakoitzarekin lotutak dauden gaiak,
+y sin x =
+dy
+dx
+sin x = y ln y ⇒
+dx
+sin x
+=
+dy
+y ln y
+orain berdintzaren bi aldeetan integratuko dugu.
+dx
+sin x
+=
+dy
+y ln y
+⇒ ln | tan
+x
+2
+|+K = ln(ln y) → eK tan
+x
+2
+= ln y ⇒ y = eK tan
+x
+2
+.
+Baldin soluzio honek y(π/2) = e hastapen-
+baldintza bete behar badu, orduan K hau-
+tazko konstanteari balio berezi bat eman beharko zaio. Ikus dezagun zein den balio
+hori:
+e = y(π/2) = eK tan
+π
+4
+= eK ⇒ K tan
+π
+4
+= 1 ⇒ K · 1 = 1 ⇒ K = 1
+eta soluzio zehatza
+y = etan
+x
+2
+da.
+Adibidea 2.2.3 Aurkitu ondoko bi baldintzak betetzen dituen kurba:
+i) (0, −2) puntutik igarotzen da;
+16
+
+ii) bere ukitzailea puntu guztietan 3 gehi 2 bider funtzioaren balioa da.
+Soluzioa: Lehenengo baldintza (i) Hastapen-baldintza da eta bigarrenak (ii)
+ekuazi diferentziala ﬁnkatzen du,
+y = 3 + 2y ,
+y(0) = −2
+Lehenbizian ekuazio diferentzial orokorra askatuko dugu,
+dy
+2y + 3
+=
+dx ⇒
+1
+2
+ln(2y + 3) = x + K ⇒ 2y + 3 = Ke2x → y = Ke2x −
+3
+2
+.
+Orain hastapen-baldintza betetzeko K-ren balio egokia ondorioztatuko dugu.
+−2 = y(0) = K −
+3
+2
+⇒ K = −
+1
+2
+.
+eta soluzio zehatza
+y = −1
+2 e
+2x − 3
+2
+da.
+2.2.1
+Oreka-soluzioak
+Ekuazioen soluzio mota oso garrantsitsua oreka-
+soluzioak dira. Bere izenak adie-
+razten duen moduan, mota honetako soluzioak konstante mantentzen dira denbora
+aurrera doala. Izen honenpean ondoko bi baldintzak betetzen dituzten funtzioak
+daude, lehenengoan y(x) = k konstantea izan behar du eta gainera y-
+k balio konstan-
+te hori hartzen duen bitartean f funtzioa 0 izan behar du, f (x, y(x)) = f 
+(x, k) = 0.
+Noski, deﬁnizio honek logika guztia dauka, y-ren garapena menperatzen duen ba-
+lioa y = f da eta f = 0 bada, honek esan nahi du y-k ez duela baliorik galduko
+ezta irabasiko ere, konstantea mantenduko dela baizik. Horregatik soluzio hauei
+konstanteak esan diezaiekegu ere.
+Soluzio hauek funtsezko informazioa ematen digute fase-diagramak eremu ez-
+berdinetan sailkatzen dutelako eta soluzioen asintotak ﬁnkatzen dituztelako. Asko-
+tan ekuazio diferentzialaren soluzio orokorra aurkitzea oso latza denean, ekuazioan
+bertan bilatzen hasten garen lehenengoetariko informazioa oreka-soluzioak dira.
+Adibidea 2.2.4 Adibide honetan aldagai banatuetako ekuazioaren oreka-soluzioak
+arkitu eta aztertuko ditugu
+y = 1 + y + x + xy.
+Soluzioa Ekuazioaren eskubialdeko gaia faktorizatu daiteke y = f (x, y) =
+(1 + x)
+(1 + y) eta badaukagu aldagai banatuetako ekuazioa. Beronen soluzioak bide
+zuzenaz bilatu aurretik, oreka-soluzioak aztertzera joango gara.
+17
+
+Oreka soluzioek f (x, y) = (1 + x)(1 + y) = 0 egiten dute eta baldintza hori
+betetzen duen y funtzio konstante bakarra y = −1 da.
+Beste aldetik, ekuazioaren soluzio orokorra aurkitzeko, aldagai bakoitzari da-
+gokizkion f -
+ren biderkagaiak berdintzaren alde batean metatuko ditugu eta gero in-
+tegratu,
+dy
+1 + y
+=
+(1 + x)dx ⇒ log |1 + y(x)| =
+(1 + x2)2
+2
++ K.
+Berdintzaren bi aldeei exponentziala aplikatuz, |1+y(x)| = eKe(1+x
+2)2/2 = K e(1+x2)2/2,
+non K > 0 parametroa eK bezelako zorizko konstantea den. Ondorioz, balio absolu-
+tua arretaz kenduz ondoko soluzio orokorra eskuratuko dugu, 0 = |K | = K zorizko
+konstantea kontsideratuz,
+y(x) = −1 + K e
+(1+x2)2
+2
+soluzioa da.
+Hemen K e(1+x
+2)2/2 = 0 denez y(x) = −1 oreka-soluzioa aldagai banatuetako tek-
+nikak eskeinitako soluzio-sortari erantsi beharko genioke.
+Oharra Aldagai banatuetako ekuazioaren terminoak bereizterakoan, termino horiek
+0 egiten dituzten x-ren eta y-ren balioekin erne ibili behar dugu. Adibidez
+(2.10)
+y =
+y + 1
+x − 1
+,
+ekuazioa ondoko gisaz idatz dezakegu,
+(2.11)
+dy
+y + 1
+=
+dx
+x − 1
+.
+Hasieran arazoa sortzen ez zuen y = −1 puntua, orain eragozpena bihurtu da za-
+tikiaren izendatzailea 0 egiten baitu. Oztopoa gainditzeko nahikoa da hasieratik
+f = 0 egiten zuen y = −1 oreka-soluzioa baztertuz. Bestealdetik x = 1 arazoak
+sortzen ditu ere. Are gehiago, ekuazioa integratuz,
+(2.12)
+dy
+1 + y
+=
+dx
+x − 1
+⇒ log |1 + y| = log |x − 1| + K ⇒ |1 + y| = Kelog |x−1|.
+Exponentziala eta logaritmoa elkar-alderantzizko funtzioak dira, baina 0-
+ren loga-
+ritmoa ez da existitzen eta horregatik soluzioa y(x) = −1 + K|x − 1| da x = 0
+puntuetan. Adierazpen honen balio absolutua kenduz, soluzio explizitoa lortuko
+dugu
+(2.13)
+y(x) =
+−1 + K(1 − x),
+x < 1,
+−1 + K(x − 1),
+x > 1,
+non K konstante positiboa den. Funtzio hau ez da deribagarria x = 1 puntuan erpin
+zorrotza baitauka.
+18
+
+5
+10
+15
+K 1
+K 2
+K 3
+y
+1
+Irudia 2.1: y = 1 + y + x + xy ekuazioaren zenbait soluzio K = 1 ⇔ y(0) = 0,
+K = 2 ⇔ y(0) = 1 eta K = 3 ⇔ y(0) = 2 balioetarako eta y = −1 oreka-soluzioa.
+2.3
+Lehenengo ordenako ekuazio linealak
+Baldin ekuazio diferentziala y eta y funtzioekiko lineala bada, orduan lehenengo
+ordenako ekuazio diferentzial lineala dela esango dugu. Nolabait esateko ekuazio
+hauetan ez dira y2, y · y , y · y 2, ..., bezelako termino ez linealarik agertzen. Mota
+hauetako ekuazioak ondoko eraz idatzi daitezke:
+(2.14)
+dy
+dx
++ p(x)y = q(x),
+non p(x) eta q(x) funtzioak y(x)-ren deﬁnizio eremuan jarraiak diren. Baldin
+q(x) = 0 bada, orduan ekuazioari homogenoa esango diogu.
+Ekuazioa askatzeko ?? berdintzan y(x) soluzioa d(x)e− p(x) dx moduko bider-
+kaduraren ordez ordeztuko dugu, non oraindik d
+(x) funtzio ezezaguna baita. Berau
+dy
+dx + p(x)y = 0 ekuazio homogenoaren soluzio bat da.
+(2.15)
+y(x) = d(x)e− p(x) dx, → y (x) = d (x)e− p(x) dx − p(x)d(x)e− p(x) dx.
+Ondorioz d(x)-rentzako aldagai banatuetako ekuazioa agertuko da.
+y + p(x) · y = d (x)e− p(x) dx − p(x)d(x)e− p(x) dx + p(x)d(x)e− p(x) dx
+= d (x)e− p(x) dx = q(x).
+(2.16)
+19
+
+Bukatzeko ekuazio berri honetatik d(x)-ren balioa ebatziko dugu eta beronekin
+y(x)-ren adierazpena eraikiko dugu.
+(2.17)
+d(x) =
+e p(x) dxq(x) dx ⇒ y(x) = e− p(x) dx
+e
+x
+x0
+p(s) dsq(x) dx.
+Adibidea 2.3.1 Askatu y + 2xy = 2xe−x
+2 ekuazio lineala.
+Soluzioa
+p(x) = 2x ⇒ −
+p(x) dx = −x2 ⇒ y(x) = d(x)·e−x
+2
+, y (x) = d (x)e−x
+2 −2xd(x)e−x2.
+d(x)-ren menpeko aldagai banatuetako ekuazioa eraikiko dugu.
+d (x)e−x
+2 − 2xd(x)e−x2 + 2xd(x)e−x2 = 2xe−x2 ⇒ d (x) = 2x ⇒ d(x) = x2 + K,
+eta d(x)-ren adierazpenarekin
+y(x) = (x2 + K)e−x
+2
+soluzioa lortuko dugu.
+2.3.1
+Bernoulli-ren ekuazioa
+Baldin ekuazioak y + p(x) · y = q(x) · yn , egitura badu, orduan Bernoulliren
+ekuazioa esango diogu eta z = y−n+1 aldagai aldaketaren bitartez 1.go ordenako
+batean bihurtuko da.
+Adibidea 2.3.2 Askatu Bernoulli-ren ondoko ekuazioa,
+xy + y = y2 ln x.
+Soluzioa
+y +
+y
+x
+= y2
+ln x
+x
+, ⇒ z = y−2+1 = y−1 , y = −
+z
+z2
+,
+aldaketa darabilgu. Orain,
+−
+z
+z2
++
+1
+xz
+=
+ln x
+xz2
+⇒ z −
+z
+x
+= −
+ln x
+x
+.
+Honen ondoren, z(x) = d(x) · e− p(x) dx = d(x) · eln x = x · d
+(x) gisako soluzioa
+bilatu beharko dugu.
+xd (x) + d(x) − d(x) = −
+ln x
+x
+⇒ d (x) = −
+ln x
+x2
+⇒ d(x) =
+ln x
+x
++
+1
+x
++ K.
+Aldagai aldaketak desegin baino ez zaigu geratzen soluzioa eskuratzeko,
+z(x) = ln x + 1 + Kx ⇒ y(x) =
+1
+ln x + 1 + Kx
+.
+20
+
+2.4
+Ekuazio zehatzak eta faktor integratzaileak
+Ekuazio zehatzak bi kontzeptuekin harremanetan daude, bata matematikoa, kurbak
+bi dimentsioko espazioan, eta bestea ﬁsikoa, eremu iraunkorrak. Bigarren honetan
+oinarrituko gara mota honetako ekuazioak azaltzeko. Idatz dezagun lehenengo or-
+denako ekuazio orokorra ondoko adierazpideaz,
+(2.18)
+M(x, y)dx + N(x, y)dy = 0.
+Hemen F = (M(x, y), N (x, y)) eremu bektoriala da, F : R2 −→ R2 identiﬁkatzen
+baitu. F eta beronen lehenengo ordenako deribatu partialak jarraiak diren lauki-
+zuzenean, F eremua iraunkorra da baldin bere errotazioanala 0 bada, rotF = 0.
+Iraunkortasunaren deﬁnizio honek ondoko berdintza derrigortzen du,
+(2.19)
+M(x, y)
+dy
+=
+N(x, y)
+dx
+.
+F = (M(x, y), N (x, y)) eremu bektoriala iraunkorra denean, goian idatzitako ??
+egitura duten erlazioei ekuazio zehatzak esango diegu. F -
+ren funtzio potentziala, f ,
+existitzen da non f -ren gradientea
+f = (∂f /∂x, ∂f /∂y) = F den.
+Izan bitez berriro
+(2.20)
+M(x, y)dx + N(x, y)dy = 0
+ekuazio zehatza eta f funtzioa F = (M(x, y), N(x, y)) eremu bektorialaren po-
+tentziala, orduan y(x) ?? ekuazioaren soluzioa da baldin y(x) kurbaren zehar
+f konstantea den, f (x, y(x)) = K. Noski, baldin katearen arauaren bitartez f -
+ren
+deribatu osoa kalkulatzen badugu x-rekiko, orduan
+(2.21) 0 =
+dK
+dx
+=
+df
+dx
+=
+∂f
+∂x
++
+∂f
+∂y
+dy
+dx
+= M + N
+dy
+dx
+⇒ M(x, y)dx + N(x, y)dy = 0
+Baldin f (x, y) funtzio erregularra bada orduan x eta y-
+rekiko deribatu partzial
+gurutzatuen ordenak ez du emaitza aldatzen,
+(2.22)
+∂2f
+∂x∂y
+=
+∂2f
+∂y∂x
+⇒
+∂M
+∂y
+=
+∂N
+∂x
+Hau da begiratu behar den lahanango baldintza ekuazio difeentziala zehatza dela
+zurtatzeko. Ondoren integraziozren bidez f 
+(x, y) = K funtzio potentziala aurkitu
+beharko dugu. ∂f /∂x = M eta ∂f /∂y = N kontutan hartuz
+(2.23)
+f (x, y) =
+M(x, y) dx =
+N(x, y) dy = K
+21
+
+Adibidez M integratuz, f (x, y) =
+M(x, y) dx + h(y), hasi gaitezke eta gero
+deribatu y-rekin eta N-rekin konparatu h(y) ﬁnkatzeko,
+(2.24)
+d
+dy
+M(x, y) dx + h(y) = N
+Adibidea 2.4.1 Askatu ondoko ekuazio zehatza, 
+(sin xy+xy cos xy) dx+x2 cos xy dy =
+0.
+Soluzioa Froga dezagun ekuazio zehatzaren baldintza betetzen dela,
+M(x, y) = sin xy + xy cos xy → ∂M
+∂y = 2x cos xy − x
+2y sin xy,
+N(x, y) = x2 cos xy
+→ ∂N
+∂x = 2x cos xy − x
+2y sin xy.
+Ondorioz x-rekin integratuz f aurkitu daiteke
+f (x, y) =
+M dx =
+(sin xy + xy cos xy) dx = −
+cos xy
+y
++ y
+x cos xy dx
+= −
+cos xy
+y
++ y
+x sin xy
+y
+−
+1
+y
+sin xy dx = −
+cos xy
+y
++ x sin xy +
+cos xy
+y
++ h(y),
+non h(y) funtzioa x-rekiko integrazio konstantea den. Orain y-rekin deribatuz,
+x2 cos xy + h (y) =
+df
+dy
+= N = x2 cos xy ⇒ h (y) = 0 ⇒ h(y) = K.
+Azkenean f (x, y) = x sin xy = K da edo explizitoki,
+y(x) =
+1
+x
+arcsin
+K
+x
+.
+2.4.1
+Faktor integratzailea
+Batzuetan M(x, y) dx+N(x, y) dy = 0 ekuazio diferentziala ez da zehatza ∂M/
+∂y eta
+∂N/
+∂x adierazpenak ez direlako berdinak, baina konponketa txikiaren bitartez ekua-
+zio zehatza bihur dezakegu. Horretarako trikimailu bat erabili behar dugu. Baldin
+M(x, y) dx + N(x, y) dy batuketa 0 bada, orduan µ(x, y) funtzioa biderkatzen
+badugu, adierazpenak 0 balioko du ere,
+(2.25)
+µ(x, y)M(x, y) dx + µ(x, y)N(x, y) dy = 0.
+Oraingoko ekuazioa zehatza izateko ondoko deribatu partzialak berdinak izan behar
+dute,
+(2.26)
+∂
+∂x
+(µN) =
+∂
+∂y
+(µM).
+22
+
+Orain hurrengo formula garatuko dugu,
+(2.27)
+N
+∂µ
+∂x
+− M
+∂µ
+∂y
+=
+∂M
+∂y
+−
+∂N
+∂x
+µ.
+Azken ekuazio hau betetzen duen µ(x, y) funtzioa aurkitu behar dugu eta beroni
+faktor integratzailea esango diogu, ekuazioa integratzeko lagunduko baitigu. Ekua-
+zioa deribatu partzialekoa da, beraz hasierako ekuazio diferentzial arrunta baina
+zailagoa izan daiteke, hala ere µ-ren gaineko aztarnaren bat badaukagu, orduan
+prozesua asko erraztuko da. Adibidez, baldin badakigu faktore integratzailea soilik
+x-ren funtziopekoa dela, µ = µ(x) , orduan goiko ekuazioa asko bakunduko da,
+(2.28) µ = µ(x) ⇒
+∂µ
+∂y
+= 0 ⇒ N
+∂µ
+∂x
+=
+∂M
+∂y
+−
+∂N
+∂x
+µ ⇒
+1
+µ
+∂µ
+∂x
+=
+∂M
+∂y −
+∂N
+∂x
+N
+.
+Baldin azken adierazpen hau soilik x-
+ren funtziopekoa bada, orduan ebatzi daiteke.
+Adibidea 2.4.2 Askatu (x + y2) dx − 2xy dy = 0 ekuazioa, µ = µ(x) x-ren
+funtziopeko faktore integratzailearen laguntzaz.
+Soluzioa Ekuazioaren terminoak honako hauek dira,
+M = x + y2 ,
+N = −2xy.
+Orduan
+∂M
+∂y −
+∂N
+∂x
+N
+=
+2y + 2y
+−2xy
+= −
+2
+x
+⇒
+∂(ln µ)
+∂x
+= −
+2
+x
+⇒ ln µ = −2 ln |x|.
+Faktor integratzailea µ(x) = x−2 da eta hurrengo ekuazioa hasierakoaren ordez
+askatuko dugu.
+x + y2
+x2
+dx −
+2y
+x
+dy = 0 ⇒
+u(x, y) =
+1
+x +
+y2
+x2
+dx = ln |x| − y
+2
+x + h1(y)
+u(x, y) =
+−2y
+x
+dy = −y
+2
+x + h2(x)
+Bi adierazpen edukitzeko h1(y) = 0 eta h2
+(x) = ln |x| bete behar dute, ondorioz,
+u(x, y) = ln |x| −
+y2
+x
+= K ⇒ y(x) =
+(ln |x| − K)x.
+23
+
+2.5
+Aldagai Aldaketak
+Batzuetan agertzen zaizkigun ekuazio diferentzialak ez dira aldagai banatuetakoak
+ezta linealak ezta zehatzak ere eta ekuazio zehatza bihurtzen duten faktore inte-
+gratzaile errazik ez daude. Hala ere, orain arte aztertutako ekuazioen egiturara
+igarotzeko aukera badago aldagai aldaketaren bitartez. Demagun ondoko ekuazioa,
+(2.29)
+dy
+dx
+= y +
+y2
+x
++
+y
+x
+.
+Argi dago ekuazio beronen oraka-soluzioa y
+(x) = 0 dela, baina hortaz gain oraindik
+ez daukagu beste soluzioa bilatzeko tresna analitikorik. Agian menpeko aldagaia
+y beste adierazpenaren ordez ordeztu daiteke ekuazioan, adibidez kasu honetan z =
+y/x aldaketa egokia da. Orain y = xz eta y = z + xz direla kontutan hartuz,
+z aldagai berria eta x aldagai askearen menpean ?? ekuazioa berridaitziko dugu,
+(2.30)
+z + xz = xz + xz2 + z ⇒ xz = xz + xz2 ⇒ z = z(1 + z).
+Azken adierazpen hau aldagai banatuetako ekuazioa da eta beronen soluzioa jakin
+badakigu aurkitzen, z(t) = 0 eta z(t) = −1 oreka-soluzioak dira eta
+(2.31)
+z(x) =
+Kex
+1 − Kex
+⇒ y(x) =
+Kxex
+1 − Kex
+,
+K integrazioa konstantea izanik.
+Orokorrean ez da erraza ekuazio mota ezagunera igarotzen den aldagai-aldaketa
+asmatzea, baina ondoan aztertu behar dugun ekuazio homogenoen kasuan aldaketa
+sistematikoa da.
+2.5.1
+Ekuazio Homogenoak
+Baldin f : R =⇒ R2 funtzioa f (λ · x, λ · y) = λn · f 
+(x, y) erlazioa betetzen badu,
+f -ri n. mailako funtzio homogenoa esan ohi zaio. Adibidez f 
+(x, y) = x2 +y2 − xy 2.
+mailako funtzio homogenoa da f (λ·x, λ·y) = λ2x2+λ2y2−λ2xy = λ2(x2+y2−xy) =
+λ2f (x, y) betetzen baita. Bereziki baldin f (λ · x, λ · y) = ·f 
+(x, y) betetzen bada,
+orduan 0. mailako homogenoa dela diogu.
+Funtzio homogenoa beti
+(2.32)
+f (x, y) = g
+y
+x
+antzako adierazpenaz idatzi ahal izango dugu. Adibidez ondoko ekuazioan ezaugarri
+hau ikus dezakegu,
+(2.33)
+dy
+dx
+=
+x2 − y2
+x2 + y2
+=
+1 − (y/x)2
+1 + (y/x)2
+= g
+y
+x
+.
+24
+
+Baldin y = f (x, y) erako ekuazioa badaukagu, non f (x, y) , 0 mailako
+funtzio homogenoa den, orduan berdintza beroni ekuazio homogenoa esan ohi zaio.
+Hauetakoen artean sarritan agertzen dira f funtzio zatikiak non izendatzailearen
+eta zenbakitzailearen batugai guztiak y eta x aldagaien menpeko maila berdineko
+monomioak diren.
+Ekuazioa askatzeko lehenbizian u = y/x gisako aldagai-aldaketa ekuazioan
+ordeztuko dugu, deribatuek ondoko erlazioa betetzen dutela kontutan hartuz,
+(2.34)
+u =
+y
+x
+⇒ xu = y eta u + x
+du
+dx
+=
+dy
+dx
+.
+Ondorioz ekuazioa aldagai banatuetakoa bihurtuko da.
+Adibidea 2.5.1 xy =
+x2 − y2+y ekuazio homogenoari aldagai-aldaketa aplikatu
+eta beronen soluzioa aurkitu.
+Soluzioa Lehenbizian f (x, y funtzioa g(y/x)-ren moduan idatziko dugu eta
+gero u = y/x aldagai aldaketa adierazpenean ordeztuko dugu,
+xy =
+x2 − y2 + y ⇒ y =
+1 −
+y
+x
+2
++
+y
+x
+⇒ u + xu =
+√
+1 − u2 + u,
+non u = y/x , u + xu = y baita. Orain
+du
+√
+1 − u2
+=
+dx
+x
+⇒ arcsin u = ln |x| + K ⇒ u = sin(ln |x| + K).
+Soilik xu = y aldaketa desegitea falta zaigu soluzio orokorra eskuratzeko, y =
+x sin(ln |x| + K).
+Horretaz gain ez dugu ahaztu behar oreka soluzioak, v(x) = −1 eta v(x) = 1,
+hurrenez hurren y(x) = −x eta y(x) = x dagokizkie hain zuzen.
+Baita ondoko gisako erlazioak ekuazio homogenoen egiturara murriztu daitezke
+tarteko urrats bat betetzen,
+(2.35)
+dy
+dx
+= f
+a1x + b1y + d1
+a2x + b2y + d2
+.
+Zatikiaren izendatzailea eta zenbakitzailea x eta y-ren funtziopeko 1.go maila-
+ko monomioetaz osatutak egotea nahi badugu, lehenbizian sistema lineala askatu
+beharko dugu:
+(2.36)
+a1x + b1y + d1 = 0,
+a2x + b2y + d2 = 0.
+Baldin sistemaren soluzioa (x0, y0) bada, orain ekuazioari x = x − x0 , y =
+y − y0 aldagai aldaketa aplikatuko diogu ekuazio homogenoan bihurtzeko.
+25
+
+Adibidea 2.5.2 Askatu (x + y − 2) dx + 
+(x − y + 4) dy = 0 ekuazio diferentziala, .
+Soluzioa Saia gaitezen ekuazioa homogenoa bihurtzeko ondorioztatzen den sis-
+tema lineala,
+x + y − 2 = 0,
+x − y + 4 = 0
+⇒ (x0, y0) = (−1, 3) textitsoluzioa da.
+Jarraian (x = x + 1 , y = y − 3) aldagai-aldaketa darabilgu hurrengo ekuazio
+baliokidea idazteko:
+(x + y) dx + (x − y) dy = 0 ⇒
+dy
+dx
+=
+x + y
+y − x
+=
+1 + y
+x
+y
+x − 1
+⇒ u + xu =
+1 + u
+u − 1
+,
+non u = y/x , u + xu = y baitira. Orain
+du
+1+u
+u−1 − u
+=
+dx
+x
+⇒
+u − 1
+−u2 + 2u + 1
+du =
+dx
+x
+⇒ −
+1
+2
+ln(−u2 + 2u + 1) = K + ln |x|.
+Amaitzeko y = xu aldagai-aldaketa eta (x = x − 1 , y − 3 = y + 3) traslazioa
+deseginez soluzio orokorraren adierazpen inplizitoa daukagu,
+−
+y − 3
+x + 1
+2
++ 2
+y − 3
+x + 1
++ 1 = K(x + 1)2.
+2.5.2
+Riccati-ren ekuazioa
+Riccati-
+ren ekuazioa zenbait eredu matematikoetan azaltzen dira, horietariko ospe-
+tsuena “kontrol-teoria” da. Beronen egitura honako hau da,
+(2.37)
+dy
+dx
++ p(t)y = s(x) + r(x)y2,
+non p(t), s(x) eta r(x) funtzio jarraiak diren 
+(a, b) tarte errealean. Hasiera batean
+Riccati-ren ekuazioa Bernoulli-renaren orokorpen bat da, bigarren hau s
+(x) = 0 har-
+tuz lortzen baita. Baina Riccati-renaren askapena ez da Bernouli-renaren bezain
+arrunta. Aldagai aldaketa berezia burutu behar dugu,
+(2.38)
+y(x) =
+z (x)
+r(x)z(x)
+.
+Baina orain koeﬁziente ez-konstantedun 2. mailako ekuazio lineala bihurtu da,
+(2.39)
+z −
+r (x)
+r(x)
+− p(x) z + s(x)r(x)z = 0.
+26
+
+Mota honetako ekuazioak askatzeko ez daude metodo zuzen orokorrik eta hurrengo
+gaietan ikusiko ditugun serie-garapeneen bitartezkoak erabili beharko ditugu.
+Soilik kasu berezi batzuetan aska daitezke, adibidez baldin y1(x) soluzio bere-
+zia kalkulatu ahal izan badugu, orduan soluzio orokorra y(x) = y1(x)+z
+(x) moduan
+idatziko dugu, non z(x) ondoko Bernoulli-ren ekuazioaren soluzioa den,
+(2.40)
+z + p(x) − 2y1(x)r(x) z = r(x)z2.
+Noski, baldin z(x) ?? ekuazioaren soluzioa bada eta y1
+(x) ?? ekuazioaren soluzio
+berezia, orduan
+y (x) = y
+1(x) + z (x) = −py1 + s + ry
+2
+1 − (p − 2y1rz) + rz
+2 =
+−p(y1 + z) + s + r(y21 + 2y1z + z
+2) = −py + s + ry2.
+(2.41)
+Adibidea 2.5.3 Berretsi y1(x) = 1/x ondoko ekuazioaren soluzio berezi bat dela
+eta berorren soluzio orokorra kalkulatu,
+y + y = xy2 −
+1
+x2
+.
+Soluzioa y1(x) = 1/x soluzioa dela frogatzea erraza da,
+y
+1 + y1 = −
+1
+x2
++
+1
+x
+= −
+1
+x2
++ x
+1
+x2
+= −
+1
+x2
++ xy2.
+Soluzio orokorra y(x) = y1(x) + z(x) modukoa da, non z Bernoulli-ren z +
+p(x) − 2y1(x)r(x) z = r(x)z2 ekuazioaren soluzioa den. Azken ekuazio honek kasu
+honetan ondoko antza hartuko du,
+z + 1 − 2
+1
+x
+x z = xz2 ⇒ z − z = xz2.
+Ekuazio honen oreka-soluzioa z(x) = 0 da eta soluzio orokorra kalkulatzeko u
+(x) =
+1/z(x) ondo datorkigu, ?? erlazioa ondoko ekuazio lineala bihurtuko da,
+(2.42)
+u + u = −x.
+Halabehartutako soluzioa hauxe da,
+u(x) = 1 − x + Ke−x ⇒ z(x) =
+1
+1 − x + Ke−x
+⇒
+y(x) = y1(x) + z(x) =
+1
+x
++
+1
+1 − x + Ke−x
+.
+27
+
+2.6
+Hastapen-baldintzetako Problema
+Orain arte ikusi ditugun ekuazio gehienen soluzio orokorra bilatu dugu soilik, baina
+bizitza errealean datu zehatzetarako soluzioak beharko ditugu. Honek esan nahi du
+baldintza batzuk betetzen dituen soluzio bereziak zehaztu beharko direla. Oroko-
+rrean n. ordenako ekuazio diferentzialak n hautazko integrazio-
+konstanteen funtzio-
+peko soluzioa du. Baldin hasierako unean soluzioari n baldintza ezartzen badizkiegu
+soluzioari eta beronen lehenengo n − 1 deribatuei, orduan Picard-
+en teoremagatik
+badakigu ekuazioa soilik funtzio zehatz batek beteko duela. Gainbegira dezagun
+lehenengo ordenako ekuazioen formulazioa.
+(2.43)
+y = f (x, y),
+y(0) = y0.
+Problema honen soluzioaren bilaketari “Cauchy-ren problema” esan ohi zaio.
+Hasierako puntuan, x = 0, emandako balioa, y0, oreka-soluzioa bada, orduan so-
+luzio hori soluzio konstantea da zuzen erreal osoan R. Bestela baldintza horrek
+soluzioaren K integrazio konstantea ﬁnkatuko du. Ikus ditzagun bi ekuazio mota
+arruntentzako hasierako baldintzetako problemaren soluzioaren antza.
+1. Aldagai banatuetako ekuazioa
+(2.44)
+
+
+
+y =
+f (x)
+g(y)
+,
+y(x0) = y0.
+Soluzioa kalkulatzeko lehenengoan berdintzaren alde bakoitzean aldagai ba-
+kar baten funtziopeko terminoak pilatuko ditugu eta gero aldagai horiekiko
+integratu,
+(2.45)
+g(y)dy =
+f (x)dx ⇒ G(y) = F (x) + k,
+non G(y) eta F (x) hurrenez hurren g(y)-ren eta f (x)-ren jatorrizko fun-
+tzioak diren. ?? adierazpenak ekuazioaren soluzioa inplizitoki erakusten du.
+Orain hastapen-baldintza kontutan hartuz, G(y0) = F (x0) + k, k-ren balioa
+halabehartuko dugu, k = G(y0) − F (x0). Soluzio zehatza honela adieraz dai-
+teke,
+(2.46)
+G(y) = F (x) + G(y0) − F (x0).
+2. Ekuazio linealak
+(2.47)
+y + +p(x)y = q(x),
+y(x0) = y0.
+28
+
+Ekuazio honen soluzioa sistematikoki y(x) = d(x)e− p(x) dx biderkaduraren
+moduko funtzioen artean bilatuko dugu eta emaitza ondokoa da,
+(2.48)
+y(x) =
+1
+h(x)
+y0 +
+x
+x0
+H(s)q(s) ds ,
+non h(x) = e
+x
+x0
+p(s) ds den.
+Adibidea 2.6.1 Ondoko hasierako baldintzzetako problemaren soluzio zehatza kal-
+kulatu,
+y + 3x2y2 = 0,
+y(1) =
+1
+2
+.
+Soluzioa Aldagaiak bereizi ondoren, berdintzaren bi aldeak integratuz soluzio
+orokorra eskuratuko dugu.
+dy
+y2
+=
+−3x2dx ⇒ −
+1
+y
+= −x3 + k ⇒ y(x) =
+1
+x3 − k
+.
+x = 1 puntuan emandako baldintzak, y(1) = 1/2, k konstantearen balioa ﬁnkatuko
+du behin betirako.
+1
+2
+= y(1) =
+1
+1 − k
+⇒ k = −1,
+beraz
+y(x) =
+1
+x3 + 1
+.
+Adibidea 2.6.2 Ondoko hasierako baldintzzetako problemaren soluzio zehatza kal-
+kulatu,
+1
+y
+dy
+dx −
+2y
+x2 = x cos x,
+y
+π
+2
+= 3.
+Soluzioa Lehenbizian idatz dezagun ekuazio linealeen modura.
+dy
+dx
+−
+2
+x
+y = x2 cos x,
+Hemen p(x) = −2/x eta ekuazioari dagokion soluzio orokorra
+y(x) = x2 sin x + kx2,
+non k hastapen-baldintzaz menperatutako integrazio konstantea den, y(π/2) = 3.
+Ondorioz,
+3 = y
+π
+2
+=
+π
+2
+2
+sin
+π
+2
++ k
+π
+2
+2
+=
+π2
+4
++ k
+π2
+4
+⇒ k =
+12
+π2
+− 1.
+Soluzioa zehatza hauxe da,
+y(x) = x2 sin x +
+12
+π2
+− 1 x2,
+29
+
+Ariketak
+Ariketa 1. Ondoko ekuazioen soluzio guztiak aurkitu:
+a) xy − y = y3,
+b) 3ex tan ydx + (1 − ey) sec2 ydy = 0
+c) xy −
+y
+x + 1
+− x = 0.
+d) y tan x = y.
+e) (1 + ex)y y = ex.
+f) y = 2y − 3y2 + y3.
+g) y + y cos x = sin x cos x.
+h) (1 − x2)y + xy = a.
+i) y − y
+2x − 1
+x2
+= 1.
+j) y =
+−x2 + 2x − 3
+x
+Ariketa 2. Baldintza betetzen duten ondoko ekuazioen soluzio zehatza askatu.
+Konstantea ﬁnkatzeko soluzio orokorrean hastapen-baldintza ordeztu:
+a)
+(1 + et)xx = et
+x(0) = 0
+b)
+y sin t = y ln y
+y(π/2) = e
+c)
+(1 + t2)x + 4tx = t
+x(1) = 0
+d)
+(1 + t2)x = (1 + x2)
+x(0) = 1
+e)
+
+
+
+y =
+2x
+y + yx
+y(2) = 3
+f)
+2tx = x
+x(1) = 1
+g)
+2xx = tx − t
+x(0) = 2
+h)
+2xx = tx − t
+x(0) = −1
+i)
+
+
+
+(x2 sin t)dt +
+1
+t
+−
+x
+t
+dx = 0
+x(π) = 1
+j)
+(ety + tety)dt + (tet + 2)dy = 0
+y(0) = −1
+30
+
+Ariketa 3. Ondoko ekuazio diferentzial zehatzak ala zehatzetarako laburgarriak
+dira. Askatu itzazu zuzenean ala soilik aldagai baten menpean dagoen faktor
+integratzailea erabiliz:
+a) (x + y)dx + (x + 2y)dy = 0.
+b) (x + y2)dx − 2xydy = 0.
+c) xdx + ydy =
+xdy − ydx
+(x2 + y2)
+d) (2xy2 − 3y3)dx + (7 − 3xy2)dy = 0.
+e) (x2 + 2xy3)dx + (y2 + 3x2y2)dy = 0.
+f) (x + sin x + sin y)dx + cosydy = 0.
+g)
+sin y + y sin x +
+1
+x
+dx + x cos y − cos x +
+1
+y
+dy = 0.
+Ariketa 4. Aipatzen diren faktor integratzailen laguntzaz ondoko lehenengo mai-
+lako ekuazio diferentzialak ekuazio zehatzak bihurtu eta askatu:
+a) (x2 + y2 + 1)dx − 2xydy = 0,
+µ = φ(y2 − x2)
+b) (3y2 − x)dx + (2y3 − 6xy)dy = 0,
+µ = φ(x + y2)
+Ariketa 5. Datozen hastapen-baldintzetako problemak askatu:
+a)
+
+
+
+1
+x
++ 2y2x dx + (2yx2 − cos y)dy = 0
+y(1) = π
+b)
+
+
+
+yexy −
+1
+y
+dx + xexy +
+x
+y2
+dy = 0
+y(0) = 1
+c)
+
+
+
+(tan y − 2)dx + x sec2 y +
+1
+y
+dy = 0
+y(0) = 1
+d)
+
+
+
+
+
+y =
+y +
+x2 − y2
+x
+y(1) =
+1
+2
+e)
+y = (1 − e−xy)y
+y(1) = 1
+f)
+
+
+
+y =
+1
+y + x
+(ordezkapena: z = y + x)
+y(0) = 1
+Ariketa 6. Riccati-ren ekuazio hauetarako:
+• y1(x) funtzioa ekuazioaren soluzio berezia dela frogatu.
+• Ekuazioaren soluzio orokorra aurkitu.
+• (1, 1) puntutik pasatzen den soluzioa aurkitu.
+31
+
+a) y + y = y2 − 2, y1(x) = 2
+b) y + y = exy2 − e−x, y1(x) = e−x.
+c) y + (2ex − 1)y = y2 + e2x, y1(x) = ex.
+Ariketa 7. y = F (ax + by + c) ekuazioan u = ax + by + c moduko ordezkapena
+egitekotan u = a + bF (u) motako aldagai banatuetako ekuazioa lortzen du-
+gula frogatu. Honako emaitza erabiliz ondoko ekuazio diferentzialen soluzioak
+aurkitu.
+a) (x + y)2y = a, b) y = sin2(x − y), c) y = (x + y + 2)2
+Ariketa 8. Lehenengo mailako ekuazio diferentzialak askatu. Kasu batzuetan men-
+peko aldagaiaren gainean aldagai aldaketa egokia burutu beharko dugu aur-
+keztutako ekuazioa ezagututako ekuazio mota batera igarotzeko:
+a) xdy − ydx =
+x2 + y2dx.
+b) x ln
+x
+y
+dy − ydx = 0
+c) y =
+4y
+x
++ xy
+1
+2
+d) ex−yy = 1
+e) ydx + (
+√
+4xy − x)dy = 0
+f) (ln x + y3)dt − 3xy2dy = 0
+g) (1 + x2y2)dx + 2x2dy = 0
+h) 2 cos xy + y sin x = y3(x sin x − cos x)
+i)
+y + sin
+x + y
+2
+= sin
+x − y
+2
+j)
+(4x2 + 3xy + y2)dx + (4y2 + 3xy + x2)dy = 0.
+k)
+dy
+dx
+= −
+xy
+√
+1+x2
++ 2xy − y
+x
+√
+1 + x2 + x2 − ln x
+Ariketa 9. (12 + 5xy)dx + (6x/y + 3x2)dy = 0 ekuazio diferentzialak xnym motako
+faktor integratzailea onartzen du. Aurkitu ezazu fatorea eta askatu ekuazioa.
+Ariketa 10. (x2y2 − 1)dy + 2xy3dx = 0 ekuazioa y = vα ordezkapenaz homogenoa
+bihurtu daiteke. Aurkitu ordezkapena bidezkoa egiten duen α balioa.
+Ariketa 11. (x + y + 1)dx + (2x + 2y − 1)dy = 0 ekuazioaren soluzio guztiak
+kalkulatu u = y + x ordezkapenaren laguntzaz.
+Ariketa 12. Aldagai-aldaketa erabilgarriaren bitartez y − 1 = ex+2y ekuazioaren
+soluzio orokorra aurkitu.
+32

@@ -1,0 +1,1184 @@
+
+
+
+3. Kapitulua
+Ekuazio ez linealen ebazpen
+hurbildua
+3.1
+Sarrera
+• f(x) = 0 erako ekuazioak ebazteko, hainbat iteraziozko metodo ikusiko ditugu.
+• Erroen banaketa: Metodoak aplikatu baino lehen, erro bakoitza daukan
+[a, b] tarte bat aurkitzen da. Horretarako, bi teknika erabiltzen dira:
+i) Bolzanoren Teorema: f : [a, b] −→R jarraikia bada eta f-ren zeinua al-
+datzen bada tartean (i.e., f (a) · f(b) < 0 bada), orduan existitzen da
+p ∈ [a, b], f(p) = 0 betetzen duena.
+ii) Adierazpen graﬁkoen erabilera: f (x) = f1(x)−f2(x) deskonposizioa eman-
+da, f1 eta f2 funtzioen graﬁkoak marrazten dira. Orduan, p ebakidura ab-
+szisa bakoitza erro bat izango da, f1(p) = f2(p) ⇒ f(p) = f1(p) − f2(p) =
+0 delako.
+Normalean, biak erabiltzen dira batera, ondorengo adibidean ikusten denez:
+3.1 Adibidea. f (x) = sin x − x + 2 funtzioaren erroak kokatuko ditugu:
+53
+
+54
+3. Kapitulua Ekuazio ez linealen ebazpen hurbildua
+-2
+2
+4
+6
+-4
+-2
+2
+4
+f (x) = sin x − (x − 2) dugu. Begibistaz,
+f1(x) = sin x eta f2(x) = x − 2 funtzioen
+graﬁkoak (2, π) tarteko puntu batean eba-
+kitzen dira, eta inon ere ez. Egiazta deza-
+kegu azken hori zehaztasunez:
+f (2) = sin 2 > 0 eta f (π) = −π+2 < 0
+denez, Bolzanoren teoremaz, ∃c ∈ [2, π],
+non f (c) = 0 egiaztatzen den.
+Bestalde, f2 gorakorra denez, ondoriozta
+daiteke erraz ebakidura puntu gehiagorik
+ez daudela.
+• Hurrengo taulan, metodo motak konparatzen dira:
+Metodo Mota
+Konbergentzia
+Abiadura
+Zeren bidez?
+ITZIAK
+Konbergenteak, beti
+Astiro konbergitzen dute tarte familia beherakor bat
+IREKIAK
+Ez dago bermaturik
+itxiak baino azkarragoak
+{xn}n≥0 −→ p
+Normalean, erroak tarte ﬁnitutan kokaturik, lehen metodo itxi bat erabiltzen
+da tartearen luzera murrizteko. Gero, konbergentzia bermaturik, aplikatzen
+da metodo ireki bat erroa kalkulatzeko.
+3.2
+Metodo Itxiak
+3.2.1
+Bisekzio metodoa (Bolzano metodoa)
+• Hasierako tartea [a, b] izanik, deﬁnitzen dira:
+a0 = a,
+eta b0 = b.
+Hemendik aurrera, n-garren etapan, [an, bn] tartearen erdigunea kalkulatzen
+da:
+xn =
+an + bn
+2
+
+3.2. Metodo Itxiak
+55
+eta ondorengo tartea kalkulatzeko erabiltzen da azpiko irizpide hau, Bolzanoren
+teoreman oinarrituta:
+
+
+
+
+
+
+
+
+
+
+
+f (xn) · f(an) < 0 bada, ⇒
+an+1 = an
+bn+1 = xn
+f (xn) · f(bn) < 0 bada, ⇒
+an+1 = xn
+bn+1 = bn
+• Gelditze-irizpidea: Pausu bakoitzean, xn kalkulatu ondoren, f(xn) = 0 bada
+(txiripaz), prozesua gelditzen da. Bestalde, ε > 0 aldez aurretik ﬁnkaturik,
+|f(xn)| < ε bada, prozesua gelditzen da. Baina irizpiderik erabilena tartearen
+luzera da.
+• Konbergentzia: Beti konbergitzen du hasieran Bolzanoren Teoremaren bald-
+intzak betetzen badira: p soluzio zehatza bada, lehen pausuan
+|x0 − p| ≤
+|b0 − a0|
+2
+=
+b − a
+2
+Ondorengo pausuan,
+|x1 − p| ≤
+|b1 − a1|
+2
+=
+|b0 − a0|
+2 · 2
+=
+b − a
+22
+eta, orokorrean, n-garren pausuan,
+|xn−1 − p| ≤
+|bn−1 − an−1|
+2
+= · · · =
+b − a
+2n
+n→∞
+/
+/
+0.
+Azken formula erabiliz, kalkula dezakegu behar diren pausu kopurua zehazta-
+sun jakin bat lortzeko. ε > 0 ﬁnkaturik,
+|xn − p| ≤
+b − a
+2n+1
+≤ ε ⇐⇒ 2
+n
++1 ≥
+b − a
+ε
+,
+eta hemendik abiaturik, logaritmoak hartuz (eta logaritmoa gorakorra izanik),
+(n + 1) log 2 ≥ log (b − a) − log ε ⇐⇒ n ≥
+log (b − a) − log ε
+log 2
+− 1.
+3.2 Adibidea. Bolzano Metodoaz, x3 − 2 = 0 erro erreala kalkulatu nahi dugu
+[1, 2] tartearekin hasiz. Zenbat iterazio egin behar dira ε = 10−6 zehaztasuna
+lortzeko?
+n ≥
+log(2 − 1) − log 10
+−
+6
+log 2
+− 1 =
+6 log 10
+log 2
+− 1 ≃ 18.93 ⇒ n = 19.
+Ondorioz, 19garren iterazioarekin,
+3
+√
+2 lortu egingo dugu 10−6 baino txikiagoa
+den errorez.
+
+56
+3. Kapitulua Ekuazio ez linealen ebazpen hurbildua
+• Oharrak:
+• Bakarrik erabili dugu [a, b] tartea eta ez f(x) = x
+3 − 2 dela.
+• Goiko estimazioa egindako errorearen goi-borne bat da, besterik ez.
+• Baliteke xn xn+1 baino hurbilpen hobeagoa izatea (Kontuz!)
+• Nahiko metodo motela da. Gainera, funtzio bat ebaluatzea prozesu gares-
+tia da. Dena dela, metodo ireki bat erabili aurretik egokia gertatzen da.
+• Metodoak funtzionatzeko, nahitaezkoa de f(a) · f(b) < 0 izatea;
+3.2.2
+Lekugune faltsuaren metodoa (Regula falsi)
+a
+b
+x0
+x1
+f (a) · f(b) < 0 delako kasuan, [an, bn] familia beherakor
+bat deﬁnituko dugu honela:
+i) Pausu bakoitzean, (an, f (an)) eta (bn, f (bn)) puntue-
+tatik igarotzen den lerro zuzena hartzen da aintza-
+kotzat. Zuzen hau eta eta y = 0 ardatz horizonta-
+larekiko ebakitze-puntuari xn deitzen zaio.
+ii) an+1 edo bn+1 deﬁnitzeko, Bolzanoren metodoan era-
+bilitako irizpidea erabiltzen da.
+• Adierazpen analitikoa: n-garren pausuko zuzenaren ekuazioa:
+y − f(bn)
+f (bn) − f(an)
+=
+x − bn
+bn − an
+.
+Hortaz,
+y − f(bn) =
+f (bn) − f(an)
+bn − an
+(x − bn).
+Orain, y = 0 eginez, ondoriozta dezakegu xn ebakidura puntuaren abszisa:
+xn = bn −
+bn − an
+f (bn) − f(an)
+f (bn) =
+anf (bn) − bnf(an)
+f (bn) − f(an)
+Oharra: f (an) · f(bn) < 0 denez, orduan f(bn) = f(an), eta ondorioz, azken
+izendatzailea ez da nulua.
+• Konbergentzia
+
+3.3. Metodo Irekiak
+57
+i) Froga daiteke metodo hau konbergentea dela, zenbait baldintza betetzen
+badira:
+f (x) jarraikia bada, eta
+∃|p ∈ [a, b] : f(p) = 0
+=⇒ xn
+n→∞
+/
+/
+p.
+ii) Orokorrean, bisekzio metodoa baino arinagoa da (adibidez, x3 − 2 =
+0, [1, 2] tartean), baina hori ez da beti gertatzen, honako adibide honetan
+ikusten denez:
+3.3 Adibidea.
+0.2
+0.4
+0.6
+0.8
+1
+-0.4
+-0.2
+0.2
+0.4
+Kontsideratu
+f (x) =
+δ
+x ∈ [0, 1/2]
+4(1 + δ)(x − x
+2) − 1 x ∈ [1/2, 1]
+funtzioa. Ikusiriko bi metodo itxiak aplikatzen ba-
+ditugu f -k [0, 1] tartean duen erroa kalkulatzeko,
+konproba daiteke δ txikia bada, bisekzio metodoak
+lekugune faltsuak baino hobeto funtzionatzen du-
+ela. Irudia egiteko, δ = 0.05 hartu dugu.
+• Gelditze-irizpidea: Hainbat kasutan, hasierako tarteko mutur bat ﬁnko ge-
+ratzen da iterazio bakoitzean (azken adibidean, b = b1 = b2 = . . . ). Horre-
+gaitik, beste muturrak errorantz konbergitzen du (azken adibidean, an segi-
+dak). Hortaz, |bn−an| ez du joko zerorantz, eta |bn−an| < ε gelditze irizpideak
+ez dauka zentzurik (Bisekzio metodoan, ordea, bai).
+Bestalde, badakigu xn segidak ebazpen zehatzerantz konbergitzen duela. Hor-
+regaitik, honako gelditze-irizpide hauek erabil daitezke:
+|xn − xn−1| < ε edo |f(xn)| < ε.
+Funtzioaren ebaluaketa saihesteko (garestia da!), lehena erabi ohi da. Bertsio
+erlatiboan ere erabil daiteke.
+3.3
+Metodo Irekiak
+3.3.1
+Puntu Finkoko Iterazioa
+3.1 Deﬁnizioa. Esango dugu x ∈ R g funtzioaren puntu ﬁnko bat dela baldin
+g(x) = x bada.
+
+58
+3. Kapitulua Ekuazio ez linealen ebazpen hurbildua
+Metodo honetan, f (x) = 0 ekuazioa ebatzi beharrean g(x) = x ekuazio baliokide
+bat ebatziko da.
+Hots, g beste funtzio baten puntu ﬁnkoak aurkituko ditugu.
+Adibidez, g(x) = x − f(x) funtzioaren p puntu ﬁnko bat aurkitzen badugu, ord-
+uan
+p = g(p) = p − f(p) ⇒ f(p) = 0.
+Gehienetan, x − f(x) ez da funtziorik egokiena erabiltzeko.
+3.1 Teorema (Puntu ﬁnkoko teorema). Demagun g : [a, b] −→[a, b] jarraikia dela.
+Orduan,
+i) ∃p ∈ [a, b] : g(p) = p;
+ii) g deribagarria bada 
+[a, b] tartean, eta honako propietate hau betetzen bada:
+∃K < 1 : |g
+′(x)| ≤ K ∀x ∈ [a, b],
+(3.1)
+orduan p g-ren puntu ﬁnko bakarra da [a, b] tartean.
+iii) Baldin honako propietate hau betetzen bada:
+∃K < 1 : ∀x1, x2 ∈ [a, b], |g(x2) − g(x1)| ≤ K|x2 − x1|,
+(3.2)
+orduan p g-ren puntu ﬁnko bakarra da [a, b] tartean.
+Oharra: 
+(3.2) propietateari Lipschitz baldintza deritzo, eta K konstanteari, Lips-
+chitz konstantea.
+Frogapena:
+Lehen, i) frogatuko dugu. g(a) = a edo g(b) = b bada, amaitu egin dugu. Orduan,
+suposa dezakegu g(a) > a eta g(b) < b direla. h(x) = g
+(x) − x funtzioa aintzakotzat
+hartuz,
+h(a) = g(a) − a > 0
+h(b) = g(b) − b < 0
+Bolzano
+⇒ ∃p ∈ [a, b] : h(p) = 0 ⇐⇒ g(p) = p.
+Bigarrenez, ikusiko dugu (3.1) propietatea betetzen bada, orduan 
+(3.2) propietatea
+(Lipschitz baldintza) betetzen dela. Batazbesteko Balioaren Teoremaz, badaukagu
+∃ξ ∈ [a, b] : g(x2) − g(x1) = g
+′(ξ)(x2 − x1)
+Eta orain, balio absolutuak hartuz eta (3.1) propietatea erabiliz, badaukagu
+|g(x2) − g(x1)| ≤ K|x2 − x1|,
+
+3.3. Metodo Irekiak
+59
+hau da, g-k Lipschitz baldintza betetzen du.
+Amaitzeko, bakarrik geratzen zaigu g-
+k Lipschitz baldintza betetzen duenean, puntu
+ﬁnko bakar bat duela frogatzea. Horretarako, suposa dezagun p, q ∈ [a, b] g-ren
+puntu ﬁnkoak direla. Orduan,
+|p − q| = |g(p) − g(q)| ≤ K|p − q| ⇒ |p − q| ≤ K|p − q|
+Orain, p = q izango balitz, orduan K ≥ 1 izango litzateke 
+(kontraesana). Orduan,
+derrigorrez, p = q dugu.
+♣
+Orain deskribatuko dugu puntu ﬁnkoko teknika f (x) = 0 ekuazioa ebazteko:
+1. Bilatu g funtzio jarraiki bat, honako hau betetzen duena:
+g(x) = x bada, ⇒ f(x) = 0;
+2. Hartu x0 hastapen hurbilpena, eta deﬁnitu {xn}n≥0 segida azpiko formula
+honetaz: xn+1 = g(xn) ∀n ≥ 0.
+3. 
+{xn}n≥0 segida konbergentea bada eta p bere limitea bada, orduan, g jarraikia
+denez, ondoriozta dezakegu g(p) = p. Beraz,
+g(p) = g
+lim
+n→∞
+xn = lim
+n→∞
+g(xn) = lim
+n→∞
+xn+1 = p.
+4. Gelditze-irizpidea: beste metodoetan bezala, |xn − xn−1| ≤ ε izan arte (edo
+bertsio erlatiboa erabiliz).
+3.2 Teorema (Konbergentzia globaleko teorema). Bedi g : [a, b] −→[a, b] funtzio
+jarraiki bat, Lipschitz baldintza betetzen duena K < 1 konstantez. Orduan, xn+1 =
+g(xn) formulaz eraikitako segidak g-
+ren puntu ﬁnko bakarrerantz jotzen du edozein
+x0 ∈ [a, b] hastapen baliotarako.
+Frogapena:
+ g Lipschitz izateagatik, badakigu p puntu ﬁnko bakar bat duela. Orduan,
+Lipschitz izateagatik,
+|xn − p| = |g(xn−1) − g(p)| ≤ K|xn−1 − p|
+Azken formula behin eta berriro aplikatuz:
+|xn − p| ≤ K|xn−1 − p| ≤ K
+2|xn−2 − p| ≤ · · · ≤ Kn|x0 − p|.
+Orain, limiteak hartuz,
+lim
+n→∞
+|xn − p| ≤ lim
+n→∞
+K
+n|x0 − p| = 0,
+K < 1 delako. Frogatu egin dugu xn
+n→∞
+/
+/
+p jotzen duela.
+♣
+Oharrak:
+
+60
+3. Kapitulua Ekuazio ez linealen ebazpen hurbildua
+i) g-k 
+(3.1) baldintza betetzen badu, orduan Lipschitz propietatea beteko du, eta
+ondorioz, teorema egiazkoa izango da, ere.
+ii) g funtzioaren hautaketa oso garrantzitsua da (ADIBIDEA).
+3.3 Teorema. (3.2) Teoremaren baldintzetan, badaukagu:
+|xn − p| ≤
+Kn
+1 − K
+|x1 − x0|,
+K Lipschitz konstantea delarik.
+Oharrak:
+• Zenbat eta K txikiago, orduan eta arinago joko du metodoak ebazpen ze-
+hatzerantz.
+• [a, b] tartea txikitzen bada, K alda daiteke.
+3.4 Teorema (Konbergentzia lokaleko teorema). Bedi g : [a, b] −→R funtzio bat,
+honako propietate hauek betetzen dituena:
+i) ∃p ∈ [a, b] : g(p) = p;
+ii) g-ren lehen deribatua jarraikia da;
+iii) |g
+′(p)| < 1.
+Orduan, ∃ε > 0 zeinerako |x0 − p| < ε bada, puntu ﬁnkoko iterazioak sorturiko
+segidak p-rantz jotzen du.
+Frogapena:
+IDEIA: |g
+′(p)| < 1 eta g′ jarraikia denez, |g′(x)| < 1 mantenduko da p-ren
+ingurune batean, eta hor, funtzioa Lipschitz izanik, 
+(3.2) Teorema erabiliz, metodoa
+konbergentea dela ondoriozta dezakegu.
+Lehen, ikusiko dugu g Lipschitz dela: |g
+′(p)| < 1 denez, ∃K ∈ R, zeinerako |g′(p)| <
+K < 1 den. Orduan, g′ jarraikia izanik, ∃ε > 0 zeinerako
+|p − x| < ε
++
+3
+|g
+′(x)| < K
+dugu. Frogatu egin dugu g Lipschitz dela (x − p, x + p) tartean.
+Bakarrik geratzen zaigu
+g : [p − ε, p + ε]−→[p − ε, p + ε]
+
+3.4. Iteraziozko metodoen konbergentzia
+61
+doala frogatzea, hots, g ((p − ε, p + ε)) ⊆ 
+(p − ε, p + ε) dela. Horretarako, har
+dezagun x ∈ (p − ε, p + ε). Frogatu behar dugu g(x) ∈ 
+(p − ε, p + ε). Batazbesteko
+Balioaren Teoremaz,
+∃ξ ∈ (x, p) : g(x) − g(p) = g
+′(ξ)(x − p),
+eta hortaz, balio absolutuak hartuz,
+|g(x) − p| = |g(x) − g(p)| = |g
+′(ξ)| · |x − p| < K|x − p| < Kε < ε,
+frogatu nahi genuen lez.
+♣
+Oharra: Azken teorema hori aplikatzerakoan, ez dugu p puntu ﬁnkoa ezagutuko.
+Estrategia: p tarte txiki batean kokaturik, ebalua dezakegu |g
+′(x)| tartearen bi mu-
+turretan |g
+′(p)| balioaren hurbilpenak izateko. g′ jarraikia bada, orduan hurbilpen
+horiek ﬁdagarriak izan daitezke eta (3.4) teorema aplika dezakegu.
+(ADIBIDEA)
+3.4
+Iteraziozko metodoen konbergentzia
+Kontsideratu f (x) = 0 ekuazioaren p erro bat. Bedi {xn}n≥0
+k→∞
+/
+/
+p zenbait it-
+eraziozko metodok sorturiko segida. Orduan, n-garren pausuan egindako errorea
+en = xn − p dugu.
+3.2 Deﬁnizioa. {xn}n≥0 segidaren p-rantzeko konbergentzia lehen ordenakoa dela
+esango dugu baldin eta
+lim
+n→∞
+|en+1|
+|en|
+= C
+bada, C ∈ (0, 1) izanik.
+Oharra: Lehen ordenako konbergentzia badugu, orduan, asintotikoki, |en+1| ≃
+C|en| egiaztatzen da.
+3.3 Deﬁnizioa. {xn}n≥0 segidaren p-
+rantzeko konbergentzia lehen ordena linealekoa
+dela esango dugu baldin eta
+lim
+n→∞
+en+1
+en
+= C
+badugu, C ∈ (−1, 1) eta C = 0 izanik.
+Oharra: Kasu honetan, segida konbergentea denez, n0 jakin batetik aurrera en+1/
+en
+zatidura guztiak zeinu berekoak izango dira. Ondorioz, C-ren zeinuaren arabera,
+konbergentzia monotono ala oszilagarria izango dugu.
+
+62
+3. Kapitulua Ekuazio ez linealen ebazpen hurbildua
+C > 0
+C < 0
+xn
+xn
+xn+1
+xn+1
+xn+2
+xn+2
+xn+3
+xn+3
+p
+p
+. . .
+. . .
+3.4 Deﬁnizioa. {xn}n≥0 segidaren p-rantzeko konbergentzia α ∈ (1, ∞) ordenakoa
+dela esango dugu baldin eta
+lim
+n→∞
+|en+1|
+|en|α
+= K > 0 bada,
+hots, asintotikoki, |en+1| ≃ K|en|
+α, non K > 0.
+3.5 Deﬁnizioa. Esango dugu metodo batek koadratikoki konbergitzen duela baldin
+eta α = 2 ordenako konbergentziaz konbergitzen badu. α = 3 ordenako konber-
+gentziaz konbergitzekotan, esango dugu metodoaren konbergentzia kubikoa dela.
+Oharrak:
+• Azken deﬁnizio hori balio absoluturik gabe enuntzia daiteke.
+• Nabaritu α haundia edo K txikia den kasuan, konbergentzia arina izango dela,
+abiaduran α-ren eragina inportanteagoa izanik.
+3.4.1
+Puntu ﬁnko metodoen konbergentzia
+Demagun f (x) = 0 ekuazioaren p soluziorantz konbergitzen duen puntu ﬁnkoko
+iterazioa erabili dugula, iteraziozko funtzioa g izanik. Suposa dezagun, orokortasuna
+galdu gabe, x < p dela. Orduan, Taylor garapena erabiliz, x p-ren hurbil baldin
+badago,
+g(x) = g(p) + g
+′(p)(x − p) +
+g′′(p)
+2!
+(x − p)
+2 + · · · +
+gk)(p)
+k!
+(x − p)
+k +
+gk+1)(ξ)
+(k + 1)!
+(x − p)
+k
++1
+dugu, non ξ ∈ (x, p) den.
+k = 0 eta x = xn hartuz, garapen hori Bataztesteko Balioaren Teorema da, eta
+hortaz, ∃ξn ∈ (xn+1, p) non
+en+1 = xn+1 − p = g(xn) − p = g(xn) − g(p) = g
+′(ξn)(xn − p) = g′(ξn)en.
+
+3.4. Iteraziozko metodoen konbergentzia
+63
+Limiteak hartuz, ξn
+k→∞
+/
+/
+p denez eta g′ jarraikia denez,
+lim
+n→∞
+en+1
+en
+= lim
+n→∞
+g
+′(ξn) = g′( lim
+n→∞
+ξn) = g
+′(p).
+Ondorioz, g′
+(p) = 0 bada, orduan metodoaren konbergentzia lehen ordena linealekoa
+da.
+Bestalde, g′(p) = 0 bada, orduan jarrai dezakegu, eta Taylor garapena x = xn
+eta k = 1 erabiliz,
+en+1 = xn+1 − p = g(xn) − g(p) =
+=0
+g
+′(p) (xn − p) +
+g′′(ξn)
+2
+(xn − p)
+2 =
+g′′(ξn)
+2
+e
+2
+n
+Hortaz, g′′ jarraikia bada,
+lim
+n→∞
+en+1
+e2
+n
+= lim
+n→∞
+g′′(ξn)
+2
+=
+g′′(p)
+2
+.
+Ondorioz, g′′(p) = 0 bada, orduan metodoaren konbergentzia koadratikoa da.
+Bestalde, g′′
+(p) = 0 bada, orduan jarraitu dezakegu, eta Taylor seriea k = 2 eta
+x = xn kontsideratuz,
+en+1 = xn+1 − p = g(xn) − g(p)
+=
+=0
+g
+′(p) (xn − p) +
+=0
+g
+′′(p)
+2!
+(xn − p)
+2 +
+g′′′(ξn)
+3!
+(xn − p)
+3
+=
+g′′′(ξn)
+6
+e3
+n.
+Eta era berean arrazoituz jarrai dezakegu. Orokorrean,
+g
+′(p) = g′′(p) = · · · = g
+m−
+1)(p) = 0 eta gm)(p) = 0
+betetzen bada, orduan metodoaren konbergentzia m ordenakoa da.
+3.4.2
+Bisekzio eta Regula Falsi metodoen konbergentzia
+Bi metodo horietan, ezin dugu bermatu
+lim
+n→∞
+|en+1|
+|en|
+= K > 0
+betetzen dela, ezta | · | gabe ere, baina aurki ditzakegu honako bornaketa hauek:
+|en| ≤ Cn,
+
+64
+3. Kapitulua Ekuazio ez linealen ebazpen hurbildua
+non
+lim
+n→∞
+Cn+1
+Cα
+n
+= K > 0
+betetzen den. Hori betetzen denean, esango dugu metodoaren konbergentzia α
+ordenakoa dela esango dugu (α ∈ (1, ∞) delarik).
+Bisekzio metodoan, |en| = |xn − p| ≤
+b−a
+2n+1 = Cn hartuz, egiaztatzen da
+lim
+n→∞
+Cn+1
+Cn
+=
+1
+2
+,
+hots, konbergentzia linealekoa da, 1/
+2 konstantez. Beste hitzetan, errorearen esti-
+mazioa pausu bakoitzean erdibiten da.
+Bestalde, lekugune faltsuaren metodoaren konbergentzia lehen ordena linealekoa
+dela froga daiteke (adierazitako zentzuan).
+3.5
+Konbergentzia Arintzeko Teknikak
+3.5.1
+Aitken ∆2 algoritmoa
+Linealki konbergitzen duen edozein segidaren konbergentzia arintzeko erabili ohi da.
+(Edozein segida, ez bakarrik iteraziozko metodo batek sortuak).
+Demagun {xn}n≥0
+k→∞
+/
+/
+p linealki (i.e. lehen ordena linealeko konbergentziaz) kon-
+bergitzen duela, hots, ∃λ ∈ (−1, 1) ez-nulua zeinerako
+lim
+n→∞
+en+1
+en
+= λ = 0 baita.
+Hots, n handia denean, badaukagu:
+en+1 ≈ λen, eta en+2 ≈ λen+1.
+Hortaz, λ bakanduz,
+λ ≈
+xn+1 − p
+xn − p
+≈
+xn+2 − p
+xn+1 − p
++
+3
+(xn+1 − p)
+2 ≈ (xn − p)(xn+2 − p)
+Azken formula garatuz, eta hortik p askatuz,
+p ≈
+xn+2xn − x
+2
+n
++1
+xn+2 − 2xn+1 + xn
+≈ xn −
+A
+xn+2 − 2xn+1 + xn
+.
+(3.3)
+Orain, lortuko dugu A:
+xn · (xn+2 − 2xn+1 + xn) − A = xn+2xn − x
+2
+n
++1
+
+3.5. Konbergentzia Arintzeko Teknikak
+65
+=⇒ A = x
+2
+n
++1 − 2xn+1xn + x
+2
+n = (xn+1
+− xn)
+2
+(3.4)
+Orain, (3.3) eta (3.4) formuletatik lortzen dugu:
+p ≈ xn −
+(xn+1 − xn)
+2
+xn+2 − 2xn+1 + xn
+.
+Azken formula hori erabiliko dugu {yn}n≥0 segida berri bat deﬁnitzeko honela:
+yn = xn −
+(xn+1 − xn)
+2
+xn+2 − 2xn+1 + xn
+∀n ≥ 0.
+(3.5)
+Aurreko baldintzetan, froga daiteke {yn}n≥0 segidak 
+{xn}n≥0 segidak baino bizkor-
+rago konbergitzen duela p-rantz. Zehazkiago:
+lim
+n→∞
+yn − p
+xn − p
+= 0
+Hala eta guztiz ere, Aitken-
+en ∆2 algoritmoaz, konbergentzia koadratikoa EZ dago
+bermatuta.
+Kontuz!: Aurreko laukiko formula dagoen moduan erabili behar da. Zatiki bakar
+batez idaztekotan,
+p ≈
+xn+2xn − x
+2
+n
++1
+xn+2 − 2xn+1 + xn
+desegonkorra izango litzateke 0/0 motako balioak direla eta.
+(ADIBIDEA)
+3.5.2
+Steﬀensen algoritmoa
+Aitken-en algoritmo “hobetua” da. Demagun puntu ﬁnkoko iterazioaz lorturiko
+segida linealki konbergentea dela. Orduan, Steﬀensen-en metodoa aplikatuz, kon-
+bergentzia koadratikoa lor dezakegu 
+(beraz, konbergentzia linealeko baldintza ez da
+guztiz beharrezkoa).
+Algoritmoa:
+g iteraziozko funtzioa eta x0 hastapen balioa emanda, ondorengo erako segida
+deﬁnituko dugu:
+x
+(0)
+0 , x
+(0)
+1 , x
+(0)
+2 , x
+(1)
+0 , x
+(1)
+1 , x
+(1)
+2 , . . . , x
+(i)
+0 , x
+(i)
+1 , x
+(i)
+2 , . . .
+(3.6)
+ondorengo metodoaz deﬁnituta:
+i) Hartu x
+(0)
+0
+= x0;
+
+66
+3. Kapitulua Ekuazio ez linealen ebazpen hurbildua
+ii) x
+(i)
+0
+emanda, erabili puntu ﬁnkoko iterazioa ondorengo bi gaiak deﬁnitzeko,
+hots:
+x
+(i)
+1
+= g x
+(i)
+0
+eta x
+(i)
+2
+= g x
+(i)
+1
+iii) x
+(i)
+0 , x
+(i)
+1
+eta x
+(i)
+2
+kalkulaturik, erabili Aitken-en formula (3.5) x
+(i+1)
+0
+deﬁnitzeko,
+i.e.:
+x
+(i+1)
+0
+= x
+(i)
+0
+−
+x
+(i)
+1
+− x
+(i)
+0
+2
+x
+(i)
+2
+− 2x
+(i)
+1
++ x
+(i)
+0
+.
+iv) burutu (ii) − (iii) behin eta berriz.
+Oharrak:
+• Froga daiteke Steﬀensen-en metodoa benetazko iteraziozko metodo bat dela
+(zehazkiago, x
+(i+1)
+0
+= ψ x
+(i)
+0
+dela, ψ(x) = x −
+(g(x)−x)2
+g
+(g(x))−2g(x)+x izanik.)
+• Gelditze-irizpidea: |x
+(n)
+0
+−p| < ǫ motako irizpidea erabiliko dugu (edo errore
+erlabiboaz). x
+(n)
+2
+− 2x
+(n)
+1
++ x
+(n)
+0
+= 0 bada, orduan ezin izango dugu zatitu
+x
+(n+1)
+0
+kalkulatzeko, eta ondorioz x
+(n)
+2
+hartuko dugu metodoaren irteeratzat.
+|g
+′(p)| < 1 den kasuan, (3.6) segidako ondoz ondoko gaien artean kalkula
+daiteke errorea.
+3.5 Teorema. Demagun p ∈ R g(x) = x ekuazioaren erro bat dela, g
+′(p) = 1 izanik.
+Demagun δ erradioko p-ren ingurune batean g-ren hirugarren deribatua jarraikia
+dela, hots, ∃δ > 0, zeinerako g ∈ C
+3 ([p − δ, p + δ]) den. Orduan, ∃ε > 0 zeinerako
+Steﬀensen-en metodoa konbergentea den ∀x0 ∈ (p − ε, p + ε). Gainera, |x
+(n)
+0
+− p| <
+ε ∀n eta konbergentzia koadratikoa da.
+3.6
+Newton-Raphson Metodoa
+Konbergentzia koadratikoko metodorik ezagunena da. Ondorioztatuko dugu puntu
+ﬁnkoko iteraziozko metodo koadratikotzat. Demagun f (x) = 0 ekuazioaren soluzio
+bat p dela. g iteraziozko funtzio egoki bat aurkituko dugu. Horretarako,
+g(x) = x + h(x)f (x)
+idatziko dugu, eta orain h(x) hautatuko dugu halako moduan non g′(p) = 0 den
+(apropoz, konbergentzia koadratikoa lortzeko). Horretarako, deriba dezagun:
+g
+′(x) = 1 + h′(x)f(x) + h(x)f′(x)
+
+3.6. Newton-Raphson Metodoa
+67
+eta bereiziki, x = p hartuz,
+g
+′(p) = 1 + h′(p)
+=0
+f (p) +h(p)f
+′(p) = 1 + h(p)f′(p)
++
+3
+h(p) = −
+1
+f ′(p)
+.
+Azken hau lortzeko h(x) = −
+1
+f ′
+(x) hartuko dugu (nabaritu horretarako aukera bakar-
+ra ez dela). Ondorioz, Newton-Raphson-en formulara heldu gara:
+xn+1 = g(xn) = xn −
+f (xn)
+f ′(xn)
+Esanahi geometrikoa:
+xn
+xn+1
+f (xn)
+f (xn+1)
+xn+2
+• (xn, f(xn))-tik igarotzen den zuzen
+ukitzailea: y − f(xn) = f
+′(xn) · (x −
+xn).
+• Zuzen ukitzailea eta y = 0 arda-
+tzarekiko
+ebakiduraren
+abszisa
+kalkulatuz,
+Newton-en
+formula
+lortzen da.
+Metodo honen makaltasun nabaria honako hau da: f ′(xn) = 0 bada, ezin dugu
+zatitu!
+3.6 Teorema (N-R Konbergentzia lokaleko Teorema). Demagun f ∈ C
+2([a, b]) dela,
+∃p ∈ [a, b], f(p) = 0, f
+′(p) = 0 izanik. Orduan, ∃ε > 0 zeinerako Newton-Raphson-
+en metodoa konbergentea baita ∀x0 ∈ (p − ε, p + ε). Gainera, f ∈ C
+3([a, b]) bada,
+konbergentzia koadratikoa da.
+Frogapena: Eginda dago, g′(p) = 0 delako.
+♣.
+3.7 Teorema (Konbergentzia globaleko Teorema). Demagun f ∈ C
+2([a, b]) dela,
+honako propietate hauek betetzen dituena:
+1. f (a) · f(b) < 0;
+2. f ′(x) = 0
+∀x ∈ [a, b];
+3. f ′′(x) = 0
+∀x ∈ [a, b];
+4. max
+f
+(a)
+f ′
+(a) ,
+f
+(b)
+f ′
+(b)
+≤ b − a.
+
+68
+3. Kapitulua Ekuazio ez linealen ebazpen hurbildua
+Orduan, [a, b] tartean, ∃ p : f(p) = 0 zeinerako Newton-Raphson-en metodoak p-
+rantz konbergitzen baitu ∀x0 ∈ [a, b]. Gainera, f ∈ C
+3([a, b]) bada, konbergentzia
+koadratikoa da.
+3.4 Adibidea (Aplikazio bat). Bedi C > 0. Kalkulatuko dugu m
+√
+C Newton-
+Raphson metodoaren bariazio batez.
+f (x) = x
+m − C = 0
+ekuazioa kontsideratuz, Newton-Raphson-
+en metodoari dagokion iteraziozko funtzioa:
+g(x) = x −
+f (x)
+f ′(x)
+= x −
+xm − C
+mxm−1
+=
+mxm − x
+m + C
+mxm−1
+=
+(m − 1)x
+m + C
+mxm−1
+=
+m − 1
+m
+x +
+C
+mxm−1
++
+3
+xn+1 =
+m − 1
+m
+xn +
+C
+mxm−1
+n
+.
+Oharra: Honela, bakarrik berretura bat (kasu honetan, m − 1 biderkaketa) kalku-
+latzen da, 2 berretura kalkulatu beharrean.
+3.7
+Ebakitzaileko metodoa
+Newton-en metodoa “garestia” da (deribatuak kalkula eta ebaluatu behar dira).
+Makaltasun hori gainditzeko, formulan ordezkatuko dugu f ′(xn) 
+(zuzen ukitzailearen
+malda) zuzen ebakitzaile baten maldaz. Zehazkiago,
+f
+′(xn) = lim
+x→x
+n
+f (xn) − f(x)
+xn − x
+denez, |xn − xn−1| oso txikia bada, orduan
+f
+′(xn) ≈
+f (xn) − f(xn−1)
+xn − xn−1
+hurbilpena erabiliko dugu. Newton-Raphson-en formulan ordezkatuz,
+xn+1 = xn −
+xn − xn−1
+f (xn) − f(xn−1)
+f (xn)
+Oharrak:
+
+3.8. Erro anitzkoitzak
+69
+• Teorikoki, xn+1 =
+xn−1f (xn) − xnf(xn−1)
+f (xn) − f(xn−1)
+formula baliokidea da, baina ez dugu
+erabiliko desegonkorra delako: xn eta xn−1 p-ren hurbil badaude, orduan izen-
+datzailea baita zenbakitzailea ere zeroren hurbil egongo dira, eta zenbakizko
+arazoak sor daitezke.
+• Metodo hori ez da benetazko puntu ﬁnkoko iterazioa.
+• Geometrikoki, baita analitikoki ere, regula falsi metodoaren oso antzekoa da,
+baina ebakitzaileko metodoan ez dira aztertzen zeinuak (horregatik sor daitezke
+arazoak, xn eta xn+1 zeinu berekoak direnean).
+• Metodoa aplikatzeko, pausu bakoitzean, f(xn) = f(xn−1) nahitaezkoa da.
+• Bi hasierako balioak dira beharrezkoak: x0 eta x1.
+• Metodoaren konbergentzia ez dago bermatuta orokorrean, baina honako teo-
+rema hau dugu:
+3.8 Teorema. Bedi f ∈ C
+2([a, b]) zeinerako ∃p ∈ [a, b] : f(p) = 0 eta f′(p) = 0
+(hots, erro sinplea) baitira. Orduan, ∃ε > 0 zeinerako ∀x0, x1 ∈ 
+(p − ε, p + ε),
+badaukagu
+i) {xn}n≥0 ebakitzaileko metodoaz sorturiko segida 
+(p − ε, p + ε) tartean edukita
+dago.
+ii) xn
+k→∞
+/
+/
+p.
+Metodo horren konbergentziaren ordena urrezko zenbakia Φ =
+1 +
+√
+5
+2
+≃ 1.61803 . . .
+da.
+(ADIBIDEA)
+3.8
+Erro anitzkoitzak
+3.6 Deﬁnizioa. Esango dugu p ∈ R f-ren m ordenako erro anitzkoitza dela baldin
+eta
+f (p) = f
+′(p) = f′′(p) = · · · = f
+m−
+1)(p) = 0 eta fm)(p) = 0
+bada. Esango dugu p erroaren anitzkoiztasuna m dela.
+
+70
+3. Kapitulua Ekuazio ez linealen ebazpen hurbildua
+Bedi p f -
+ren erro anitzkoitz bat, m ordenakoa. Taylor garapena erabiliz, badaukagu:
+f (x) =
+∞
+i
+=m
+f i)(p)
+i!
+(x − p)
+i
+= (x − p)
+m
+∞
+i
+=0
+f i+m)(p)
+(i + m)!
+(x − p)
+i = (x − p)mϕ(x),
+non ϕ(p) = 0 den. f (x) = (x − p)
+mϕ(x) adierazpena kontuan hartuz, eta p-ren
+ingurune batean ϕ(x)-ren zeinua aldatzen ez denez, ondorioztatzen da:
+p
+p
+m bikoitia
+m bakoitia
+• m bakoitia bada, f-ren
+zeinua aldatzen da, eta
+ondorioz metodo itxiak
+aplika ditzakegu.
+• m bikoitia bada, f-ren
+zeinua ez da aldatzen.
+Hortaz, ezin dezakegu
+metodo itxirik aplika.
+p anitzkoitza bada, f
+′(p) = 0 dugu (i.e. zuzen ukitzailea horizontal dugu!), eta
+orduan ezin dugu Newton-Raphson-en metodoa aplikatu konbergentzia koadratikoa
+lortu nahi badugu. p-ren hurbil, f ′(xn) ≈ 0 izango da, eta hortaz, zenbakizko
+arazoak sor daitezke. Aztertuko dugu N-R-en konbergentziaren ordena:
+g(x) = x −
+f (x)
+f ′(x)
+= x −
+(x − p)
+mϕ(x)
+m(x − p)m−1ϕ(x) + (x − p)mϕ′(x)
+= x −
+(x − p)ϕ(x)
+mϕ(x) + (x − p)ϕ′(x)
+,
+non ϕ(p) = 0 dugun. Nabaritu azken izendatzailea = 0 dela p-
+ren hurbil. Deribatuz,
+g
+′(x) = 1 −
+[ϕ(x) + (x − p)ϕ
+′(x)] · [mϕ(x) + (x − p)ϕ′(x)]
+[mϕ(x) + (x − p)ϕ′(x)]2
++
+[mϕ
+′(x) + ϕ′(x) + (x − p)ϕ′′(x)] · (x − p)ϕ(x)
+[mϕ(x) + (x − p)ϕ′(x)]2
+.
+Orain, x = p hartuz,
+g
+′(p) = 1 −
+m · ϕ(p)
+2
+m2ϕ(p)2
+= 1 −
+1
+m
+= 0,
+
+3.8. Erro anitzkoitzak
+71
+zeren eta m > 1 den. Ondorioz, Newton-Raphson metodoa konbergentea izango
+da, baina m handia bada, konbergentzia motela izango da. Adibidez, m = 2 bada,
+orduan g′(p) = 1/2, eta konbergituko du Bolzano metodoak bezain motel.
+Konbergentzia bizkortzeko era:
+• p erroaren anitzkoiztasuna m > 1 bada, orduan g
+′(p) = 1 − 1/m < 1 denez,
+erabil ditzakegu Aitken edo Steﬀensen metodoak (bigarrenaz, konbergentzia
+koadratikoa lortzen da).
+• p erroaren anitzkoiztasuna ezagutzen badugu (demagun m dela), orduan honako
+aldaketa hau egin dezakegu:
+g(x) = x − m
+f (x)
+f ′(x)
+= · · · = x − m
+(x − p)ϕ(x)
+mϕ(x) + (x − p)ϕ′(x)
+.
+Honela, g′(p) = 0 (ariketa) eta konbergentzia koadratikoa lortuko genuke.
+• m ez badugu ezagutzen, kontsidera dezakegu:
+µ(x) =
+f (x)
+f ′(x)
+= · · · =
+(x − p)ϕ(x)
+mϕ(x) + (x − p)ϕ′(x)
+funtzioa. Nabaritu µ(p) = 0. Deribatuz, µ′(p) = 1/m = 0 lortzen da. Orduan,
+p µ-ren erro sinple bat dugu, eta ondorioz, Newton-Raphson metodoa aplika
+diezaiokegu µ funtzioari:
+g(x) = x −
+µ(x)
+µ′(x)
+= x −
+f (x)f ′(x)
+(f ′(x))2 − f(x)f′′(x)
+.
+Oharrak:
+• µ ∈ C
+3([a, b])
++
+3
+konbergentzia koadratikoa lortzen dugu.
+• Metodo garestia da (3 ebaluaketa iterazio bakoitzean!)
+(ADIBIDEA)
+
+72
+3. Kapitulua Ekuazio ez linealen ebazpen hurbildua

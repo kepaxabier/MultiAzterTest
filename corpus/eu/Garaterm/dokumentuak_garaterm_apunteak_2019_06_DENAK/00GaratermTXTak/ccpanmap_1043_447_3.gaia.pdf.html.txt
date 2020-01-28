@@ -1,0 +1,720 @@
+
+
+
+3. Gaia 3
+Aplikazio Linealak
+1
+3.1
+Aplikazio Linealaren deﬁnizioa eta lehen
+ondorioak
+Deﬁnizioa 3.1.1. Izan bitez V eta V
+IK-espazio bektorialak. f : V → V
+aplikazio bat lineala dela esango dugu hurrengo baldintzak betetzen baditu:
+(i) f (v1 + v2) = f (v1) + f (v2), ∀v1, v2 ∈ V .
+(ii) f (kv) = kf (v), ∀v ∈ V, ∀k ∈ IK.
+Adibidea. (i) Izan bedi V = V = R R espazio bektoriala.
+1.- Deﬁnitzen dugu
+f :
+R
+→ R
+x
+→
+3x
+. Orduan f aplikazio lineala da.
+2.- Deﬁnitzen dugu
+g :
+R
+→ R
+x
+→
+x2
+. Orduan g ez da aplikazio lineala.
+(ii) Izan bedi V = V = R
+2
+R espazio bektoriala. Deﬁnitzen dugu
+f :
+R
+2
+→ R
+2
+(x, y)
+→
+(x + y, 2x − y)
+.
+Orduan f aplikazio lineala da.
+Teorema 3.1.2. Izan bedi f : V → V aplikazio lineala bada orduan:
+f (k1v1 + ... + knvn) = k1f (v1) + ... + knf 
+(vn), ∀k1, ..., kn ∈ IKeta∀v1, ..., vn ∈ V.
+1OCW Proiektua. Txomin Ramirez eta M. Asun Garcia
+1
+
+2
+Aplikazio Linealak
+2
+Frogapena. n gaineko indukzioa erabiliz
+1.- n = 2 deneko kasua. f (k1v1 + k2v2 = f (k1v1) + f (k2v2), aplikazio
+linealaren deﬁnizioko (i) baldintza erabiliz. Orain (ii) baldintza aplikatzen
+badugu f (k1v1) = k1v1 eta f (k2v2) = k2f (v2) betetzen dira.
+2.- Demagun n − 1 kasuan betetzen dela eta froga dezagun n kasuan.
+f (k1v1 + ... + knvn) = f (k1v1 + ... + kn−1vn−1) + f 
+(knvn) da bi kasuan betetzen
+delako. Orain n − 1 bektoreekin betetzen denez f (k1v1 + ... + kn−1vn−1) =
+k1f (v1) + ... + kn−1f (vn−1).
+Ohartu aurreko teorema {v1, ..., vn} oinarria deneko kasuan erabiltzen badugu
+f (v1), ..., f 
+(vn) irudiak jakinik espazioko edozein bektorearen irudia lortuko
+genukeela.
+Adibidea.
+Izan bedi f : R
+3
+→ R
+3 aplikazio lineala non f (1, 0, 0) =
+(1, 0, −1), f (0, 1, 0) = (1, 1, 1) eta f (0, 0, 1) = (1, 2, 1) den.
+Lortuko dugu
+f (x, y, z) edozein (x, y, z) ∈ R
+3 bektorearentzako. Ohartu (x, y, z) = x(1, 0, 0)+
+y(0, 1, 0) + z(0, 0, 1) dela beraz f (x, y, z) = f (x(1, 0, 0) + y(0, 1, 0) + z
+(0, 0, 1))
+baina f aplikazio lineala dela esaten digutenez, aurreko teorema erabiliz:
+f (x, y, z) = xf (1, 0, 0) + yf (0, 1, 0) + zf (0, 0, 1) =
+= x(1, 0, −1) + y(1, 1, 1) + z(1, 2, 1) = (x + y + z, y + 2z, −x + y + z)
+Teorema 3.1.3. Izan bedi f : V → V
+aplikazio lineala orduan hurrengo
+propietateak betetzen dira:
+(i) f (0V ) = 0
+V .
+(ii) W V -ren azpiespazioa bada f (W ) = {f (w)
+|
+w ∈ W V -en azpiespazioa
+da.
+(iii) T V -en azpiespazioa bada f −1(T ) = {v ∈ V
+quadf (v) ∈ T } V -ren
+azpiespazioa da.
+Frogapena. (i) f (0V ) = f (0V +0V ) = f (OV )+f (0V ) eta V talde abeldarrean
+elementuak sinpliﬁkagarriak direnez f (0V ) = 0
+V
+lortzen dugu.
+2OCW Proiektua. Txomin Ramirez eta M. Asun Garcia
+
+Aplikazio Linealak
+3
+3
+(ii) Argi eta garbi f (W ) V -en azpimultzo ez-hutsa da. Orduan azpies-
+pazioa dela frogatzeko hurrengo bi baldintzak frogatu behar dira: f (w1) +
+f (w2) ∈ f (W ), ∀f (w1), f (w2) ∈ f (W ) eta kf (w) ∈ f (W ), ∀k ∈ IK, ∀f 
+(w) ∈
+f (W ). Baina lehenengo f (w1 + w2) da eta bigarrena f (kw) gainera W azpies-
+pazioa denez w1 + w2 eta kw W -ko bektoreak dira.
+(iii) Era berean frogatzen da.
+Oharra 3.1.4. Izan bedi f : V :→ V aplikazio lineala. U = v1, ..., vs ≤ V
+bada orduan f (U ) = f (v1), ..., f (vs) da. Baina {v1, ..., vs} U -
+ren oinarria
+bada {f (v1), ..., f (vs)} ez du zertan f (U )-
+ren oinarria izan behar. Adibidez
+f : R
+3 → R2 non f(x, y, z) = (x+y, y +z), ∀(x, y, z) ∈ R3 den. Orduan f(R3) =
+f ( e1, e2, e3 ) = f (e1), f (e2), f (e3) = (1, 0), (1, 1), (0, 1) = (1, 0), 
+(0, 1) =
+R
+2.
+3.2
+L(V, V ) Espazio Bektoriala
+Deﬁnizioa 3.2.1. Izan bitez V eta V
+IK-espazio bektorialak.
+Deﬁnitzen
+dugu:
+L(V, V = {f : V :→ V
+|
+f aplikazio lineala }
+Teorema 3.2.2. Izan bitez V eta V IK-espazio bektorialak.
+1.- f : V :→ V eta g : V :→ V aplikazio linealak badira orduan f + g :
+V :→ V , non (f + g)(v) = f (v) + g(v), ∀v ∈ V den, ere aplikazio lineala da.
+2.- f : V :→ V aplikazio lineala bada eta λ ∈ IK orduan λf : V :→ V ,
+non (λf )(v) = λf (v), ∀v ∈ V den, ere aplikazio lineala da.
+Frogapena.
+1.- f + g aplikazio lineala dela frogatzeko hurrengo bi baldintzak frogatu
+behar ditugu: (i) (f + g)(v1 + v2) = (f + g)(v1) + (f + g)(v2), ∀v1, v2 ∈ V eta
+(ii) (f + g)(kv) = k(f + g)(v), ∀k ∈ K, ∀v ∈ V .
+(i) (f + g)(v1 + v2) = f (v1 + v2) + g(v1 + v2), f + g-ren deﬁnizioagatik.
+Gainera f eta g aplikazio linealak direnez f (v1) + f (v2) + g(v1) + g
+(v2) eta hau
+f + g-ren deﬁnizioagatik, (f + g)(v1) + (f + g)(v2) da.
+3OCW Proiektua. Txomin Ramirez eta M. Asun Garcia
+
+4
+Aplikazio Linealak
+4
+(ii) (f + g)(kv) = f (kv) + g(kv), f + g-ren deﬁnizioagatik. Gainera f eta
+g aplikazio linealak direnez kf (v) + kg(v) eta hau f + g-ren deﬁnizioagatik,
+k(f + g)(v) da.
+2.- λf aplikazio lineala dela frogatzeko hurrengo bi baldintzak frogatu behar
+ditugu: (i) (λf )(v1 + v2) = (λf )(v1) + (λf )(v2), ∀v1, v2 ∈ V eta (ii) (λf )
+(kv) =
+k(λf )(v), ∀k ∈ K, ∀v ∈ V .
+(i) (λf )(v1+v2) = λ(f (v1+v2)), λf -ren deﬁnizioagatik. Gainera f aplikazio
+lineala denez λf (v1) + λf (v2) eta hau f + g-ren deﬁnizioagatik, (λf )(v1) +
+(λf )(v2) da.
+(ii) (λf )(kv) = λf (kv), λf -ren deﬁnizioagatik. Gainera f aplikazio lineala
+denez λkf (v) eta hau λf -ren deﬁnizioagatik, k(λf )(v) da.
+Izan bedi L(V, V ) aurreko teoreman deﬁnitutako eragiketa eta kanpoko
+biderketarekin. Orduan frogatu daiteke L(V, V ) IK espazio bektoriala dela.
+Oharrak 3.2.3. 1.- Aplikazio linealei deitzeko beste modu bat espazio bektori-
+alen arteko homomorﬁsmoak da.
+2.- V = V deneko kasuan f : V → V aplikazio lineal bati V -ren gaineko
+endomorﬁsmoa deitzen zaio.
+3.3
+Aplikazio Lineal Baten Nukleoa eta Irudia
+Deﬁnizioa 3.3.1. Izan bedi f : V → V aplikazio lineala.
+(i) f -ren nukleoa, Kerf moduan denotatuko duguna ondorengo multzoa da:
+Kerf = f
+−1(0
+V ) = {v ∈ V
+|
+f (v) = 0
+V }.
+(ii) f -ren irudia, Imf edo f (V ) moduan denotatuko duguna ondorengo mult-
+zoa da:
+Imf = f (V ) = {f (v)
+|
+v ∈ V }.
+Adibidea. Izan bedi f : R
+3 → R2 non f(x, y, z) = (x+y, y+z), ∀(x, y, z) ∈ R3
+den. Orduan Kerf = (−1, 1, −1) eta Imf = R
+2.
+4OCW Proiektua. Txomin Ramirez eta M. Asun Garcia
+
+Aplikazio Linealak
+5
+5
+Oharrak 3.3.2. 1.- Dakigunez V V -ren azpiespazioa da eta orduan Imf =
+f (V ) V -en azpiespazioa da.
+2.- Dakigunez {0
+V } V -en azpiespazioa da eta orduan Kerf
+= f −1(0
+V
+V -ren azpiespazioa da.
+Adibidea.
+Izan bedi f : R
+3 → R3 aplikazio lineala non f(x, y, z) = (x +
+y + z, y + 2z, −x + y + z) den ∀(x, y, z) ∈ R
+3. Orduan Kerf = {(0, 0, 0)} eta
+Imf = R
+3 da.
+Dakigunez f : V → V aplikazio lineala supraiektiboa da baldin eta soilik
+baldin Imf = V bada. Hurrengo teoreman f injektiboa izateak eta Kerf -ren
+arteko erlazio aztertzen du.
+Teorema 3.3.3. Izan bedi f : V → V aplikazio lineala. Orduan:
+f injektiboa ⇔ Kerf = {0V }
+Frogapena.
+⇐ Demagun f injektiboa dela. Izan bedi v ∈ Kerf orduan
+f (v) = 0
+V
+= f (0V ) betetzen da eta f injektiboa denez v = 0V dugu.
+⇒ Demagun Kerf = {0V } betetzen dela. Izan bitez v1, v2 ∈ V non f (v1) =
+f (v2) betetzen den. Orduan 0
+v
+= f (v1) − f (v2) = f (v1 − v2) berez v1 − v2 ∈
+Kerf .
+Adibidea. 1.- Izan bedi f : R
+3 → R2 non f(x, y, z) = (x+y, y+z), ∀(x, y, z) ∈
+R
+3 den. Kerf = (−1, 1, −1) = {(0, 0, 0)} denez f ez da injektiboa baina
+supraiektiboa bai.
+2.- Izan bedi f : R
+2 → R3 non f(x, y) = (x, y, x − y), ∀(x, y) ∈ R2 den.
+Kerf = {(0, 0, 0)} denez f injektiboa da baina ez supraiektiboa.
+Teorema 3.3.4. Izan bitez V eta V
+IK-espazio bektorialak, V dimentsio
+ﬁnitukoa izanik, orduan V -tik V -erako edozein f aplikazio linealarentzat Kerf
+eta Imf dimentsio ﬁnitukoak dira eta:
+dimV = dimKerf + dimImf.
+Frogapena.
+Izan bedi n = dimV . Kerf ≤ V denez Kerf ere dimentsio
+ﬁnitukoa da eta dimKerf ≤ dimV . Izan bedi {v1, ..., vs} Kerf -ren oinarri
+5OCW Proiektua. Txomin Ramirez eta M. Asun Garcia
+
+6
+Aplikazio Linealak
+6
+bat. Luzatzen dugu V -ren oinarri bateraino 
+{v1, ..., vs, vs+1, ..., vn} lortuz.
+Frogatzen badugu {f (vs+1), ..., f (vn)} Imf -
+ren oinarri bat dela nahikoa izango
+da teorema frogatzeko.
+1.- Sistema sortzailea: V = v1, ..., vn denez Imf = f (V ) = f (v1), ..., f 
+(vs),
+f (vs+1), ..., f (vn) izango da, gainera v1, ..., vs Kerf -ko bektoreak direnez
+f (vi) = 0
+V
+da i = 1, ..., s. Beraz Imf f (vs+1), ..., f (vn) eta sistema sortzailea
+dela frogatu dugu.
+2.- Sistema askea: {f (vs+1), ..., f (vn)} sistema askea dela frogatzeko on-
+dorengo inplikazioa frogatu behar dugu,
+ks+1f (vs+1) + ... + knf (vn) = 0
+V
+⇒ ks+1 = ... = kn = 0IK
+0
+V
+= ks+1f (vs+1)+...+knf (vn) = f (ks+1vs+1+...+knvn) denez, f aplikazio
+lineala izateagatik, orduan ks+1vs+1 + ... + knvn ∈Kerf eta {v1, ..., vs} nuk-
+leoaren oinarria denez orduan existituko dira k1, ..., ks eskalarrak non ks+1vs+1+
+...+knvn = k1v1 +...+ksvs den. Beraz −k1v1 −...−ksvs +ks+1vs+1 +...+knvn =
+0V eta {v1, ..., vn} V -ren oinarria denez ks+1 = ... = kn = 0IK.
+3.4
+Espazio Bektorialen Arteko Isomorﬁsmoak
+Deﬁnizioa 3.4.1. Izan bedi f : V → V aplikazio lineala. f isomorﬁsmoa
+dela esango dugu baldin eta f bijektiboa bada. V = V deneko kasuan isomor-
+ﬁsmo bati automorﬁsmoa ere deitzen zaio.
+Adibidea.
+Izan bedi f : R
+3
+→ R
+3 aplikazio lineala non f (x, y, z) =
+(x + y + z, y + z, z), ∀(x, y, z) ∈ R
+3. orduan f isomorﬁsmoa da eta gainera
+automorﬁsmoa.
+Deﬁnizioa 3.4.2. Izan bitez V eta V IK-espazio bektorialak. V eta V iso-
+morfoak direla esango dugu baldin eta existitzen bada V -tik V erako f iso-
+morﬁsmo bat eta kasu honetan V ≡ V moduan adieraziko dugu.
+Adibidea. 1.- R
+4 ≡ P
+3(
+R) baina R
+3 ≡ R4.
+2.- R
+6 ≡ M
+2×3(
+R).
+6OCW Proiektua. Txomin Ramirez eta M. Asun Garcia
+
+Aplikazio Linealak
+7
+7
+Teorema 3.4.3. Izan bitez V eta V dimentsio ﬁnituko IK espazio bektorialak.
+Orduan:
+V ≡ V ⇔ dimV = dimV
+Frogapena.
+⇒ Demagun V ≡ V
+betetzen dela, orduan existitzen da
+f : V → V isomorﬁsmo bat. Beraz Kerf = {0V } eta Imf = V dira. Gainera
+dimV = dimKerf + dimImf betetzen denez, dimV = dimV berdintza dugu.
+⇐ Demagun dimV = dimV
+betetzen dela.
+Izan bitez {v1, ..., vn} eta
+{u1, ..., un} V eta V -en oinarriak hurrenez hurren. Izan bedi f : V → V
+aplikazio lineala non f (vi) = ui den i = 1, .., n. f bijektiboa dela frogatzen
+badugu teorema frogatuta izango dugu.
+1.- f injektiboa: Izan bedi v ∈ Kerf bektorea. Orduan v = k1v1 + ... + knvn
+moduan adierazi ahal da eta f (v) = 0
+V . Beraz k1f (v1) + ... + knf (vn) = 0V
+betetzen da. Orduan k1u1 + ... + knun = 0
+V
+dugu baina {u1, ..., un} V -en
+oinarria denez k1 = ... = kn = 0IK da eta orduan v = 0V .
+2.- f supraiektiboa: dimV = dimKerf + dimImf denez eta Kerf = {OV }
+orduan dimV = dimImf eta beraz dimV = dimImf , Imf ≤ V denez, Imf =
+V dugu.
+3.5
+Aplikazio Lineal Bati Elkartutako Matrizea
+Izan bitez V (dimV = n) eta V (dim V = m) IK espazio bektorialak eta f :
+V → V aplikazio lineala. Izan bitez βV = {v1, ..., vn} eta β
+V
+= {w1, ..., wm}
+V eta V en oinarriak hurrenez-hurren. Orduan v = λ1v1 + ... + λnvn bektorea
+bada f (v) = λ1f (v1) + ... + λnf (vn). Matrizialki adierazita:
+f (v) = (f (v1)...f (vn))
+
+
+
+λ1
+..
+.
+λn
+
+
+
+Dakigunez f (vi) ∈ V i = 1, ..., n guztietarako beraz ∃!a1i, ..., ami ∈ IK
+non f (vi) = a1iw1 + ... + amiwm betetzen den. Matrizialki adierazita:
+f (vi) = (w1...wm)
+
+
+
+a1i
+..
+.
+ami
+
+
+
+7OCW Proiektua. Txomin Ramirez eta M. Asun Garcia
+
+8
+Aplikazio Linealak
+8
+Ondorioz:
+f (v) = (w1...wm)
+
+
+
+a11
+· · ·
+a1n
+..
+.
+· · ·
+..
+.
+am1
+· · ·
+amn
+
+
+
+
+
+
+λ1
+..
+.
+λn
+
+
+ .
+Deﬁnizioa 3.5.1. Aurreko egoeran
+
+
+
+a11
+· · ·
+a1n
+..
+.
+· · ·
+..
+.
+am1
+· · ·
+amn
+
+
+
+f -ri elkartutako ma-
+trizea βV eta β
+V
+oinarriekiko deitzen da eta denotatuko dugu M
+β
+V
+βV (f ).
+Adibidea.
+Izan bedi f : R
+3 → R2 aplikazio lineala non f(x, y, z) = (x −
+3y, x + z), ∀(x, y, z) ∈ R
+3 den.
+1.- Izan bitez β1 eta β2 R
+3 eta R2-ren oinarri kanonikoak hurrenez-hurren.
+Orduan:
+M
+β2
+β1 (f ) =
+1
+−3
+0
+1
+0
+1
+.
+2.- Izan bitez β
+1 = {(1, 0, 0), (1, 1, 0), (1, 1, 1)} eta β 2 = {(1, 0), (1, 1)} R
+3
+eta R
+2-ren oinarriak hurrenez-hurren. Orduan:
+M
+β 2
+β 1
+(f ) =
+1
+−3
+−4
+1
+1
+2
+.
+Teorema 3.5.2. Izan bitez V eta V
+dimentsio ﬁnituko espazio bektorialak,
+βV = {v1, ..., vn} eta β
+V
+= {w1, ..., wm} V eta V en oinarriak izanik hurrenez-
+hurren. Orduan:
+1.- f, g ∈ L(V, V ) badira:
+M
+β
+V
+βV (f + g) = M
+β
+V
+βV (f ) + M
+β
+V
+βV (g).
+2.- f ∈ L(V, V ) eta k ∈ IK badira:
+M
+β
+V
+βV (kf ) = kM
+β
+V
+βV (f )
+8OCW Proiektua. Txomin Ramirez eta M. Asun Garcia
+
+Aplikazio Linealak
+9
+9
+Frogapena. 1.- Frogatuko dugu, 2.- era berean frogatzen da.
+M
+β
+V
+βV (f + g) matrizearen i zutabean f (vi) + g(vi) bektorearen koordenat-
+uak daude β
+V
+oinarriarekiko. Baina koordenatu hauek f (vi)-ren koordenatuei
+g(vi)-renak batuz lortzen dira.
+Teorema 3.5.3. Izan bitez V eta V
+dimentsio ﬁnituko espazio bektorialak,
+βV = {v1, ..., vn} eta β
+V
+= {w1, ..., wm} V eta V en oinarriak izanik hurrenez-
+hurren. Deﬁnitzen dugu hurrengo aplikazioa:
+ϕ
+:
+L(V, V )
+→
+Mm×n(IK)
+f
+→
+M
+β
+V
+βV (f )
+Orduan ϕ isomorﬁsmo bat da.
+Frogapena. Aurreko teoremak frogatzen digu ϕ aplikazio lineala dela.
+ϕ injektiboa dela frogatzeko aplikazioaren nukleoa erabiliko dugu. f ∈Ker
+ϕ baldin eta soilik baldin M
+β
+V
+βV (f ) = (0) matrize nulua bada eta horretarako
+derrigorrezkoa da f aplikazio nulua izatea. Beraz, Kerϕ = {0
+L(V,V )} eta honek
+injektiboa dela frogatzen digu.
+ϕ supraiektiboa dela frogatuko dugu. Izan bedi A = (aij) ∈ Mm×n(IK).
+Deﬁnitzen dugu f : V → V aplikazio lineala datu hauekin: f (vi) = a1iw1 +
+... + amiwm, i = 1, ..., n. Honekin f guztiz deﬁniturik dago eta noski f -ri
+elkartutako matrizea oinarri horietan A da.
+Teorema 3.5.4. Izan bitez V , V eta Z dimentsio ﬁnituko espazio bektorialak,
+βV , β
+V
+eta βZ V , V eta Z-ren oinarriak izanik hurrenez-hurren. f ∈ L(V, V )
+eta g ∈ L(V , Z) badira hurrengoa betetzen da:
+1.- g ◦ f aplikazio lineala da V -tik Z-ra.
+2.-
+M
+βZ
+βV (g ◦ f ) = M
+βZ
+β
+V
+(g)M
+β
+V
+βV (f )
+9OCW Proiektua. Txomin Ramirez eta M. Asun Garcia
+
+10
+Aplikazio Linealak
+10
+3.6
+Aplikazio Lineal Bati Elkartutako Matrizeen
+Arteko Erlazioa
+Izan bitez V (dimV = n) eta V (dim V = m) IK espazio bektorialak eta
+f : V → V aplikazio lineala.
+1.- βV = {v1, ..., vn} eta β
+V
+= {w1, ..., wm} V eta V en oinarriak badira
+hurrenez-hurren orduan:
+f (v) = (w1...wm)M
+β
+V
+βV (f )
+
+
+
+λ1
+..
+.
+λn
+
+
+ .
+2.- β
+V = {v1, ..., vn} eta β V
+= {w
+1, ..., wm} V eta V en oinarriak badira
+hurrenez-hurren orduan:
+f (v) = (w
+1...wm)M
+β
+V
+β
+V
+(f )
+
+
+
+λ 1
+..
+.
+λ n
+
+
+ .
+Ohartu hurrengo berdintzak betetzen direla:
+(i) (w
+1...wm)M
+β
+V
+β
+V
+= (w1...wm).
+(ii)
+
+
+
+λ1
+..
+.
+λn
+
+
+ = M
+βV
+β V
+
+
+
+λ 1
+..
+.
+λ n
+
+
+ .
+Beraz 1.- formulan ordezkatuz:
+f (v) = (w
+1...wm)M
+β
+V
+β
+V
+M
+β
+V
+βV (f )M
+βV
+β V
+
+
+
+λ 1
+..
+.
+λ n
+
+
+ .
+Ondorioz elkartutako matrizea bakarra denez hurrengo erlazioa frogatu
+dugu:
+M
+β
+V
+β
+V
+M
+β
+V
+βV (f )M
+βV
+β V
+= M
+β
+V
+β V
+(f ).
+10OCW Proiektua. Txomin Ramirez eta M. Asun Garcia
+
+Aplikazio Linealak
+11
+11
+Adibidea. Izan bedi f : R
+3 → R2 aplikazio lineala non f(x, y, z) = (x−3y, x+
+z), ∀(x, y, z) ∈ R
+3 den. Izan bitez β
+1 eta β2
+R
+3 eta R2-ren oinarri kanonikoak
+hurrenez-hurren. Aurreko adibidiean ikusi bezala
+M
+β2
+β1 (f ) =
+1
+−3
+0
+1
+0
+1
+.
+Izan bitez β
+1 = {(1, 0, 0), (1, 1, 0), (1, 1, 1)} eta β 2 = {(1, 0), (1, 1)} R
+3 eta
+R
+2-ren oinarriak hurrenez-hurren. Orduan:
+M
+β 2
+β 1
+(f ) = M
+β
+2
+β2 M
+β2
+β1 (f )M
+β1
+β 1
+Beraz:
+M
+β 2
+β 1
+(f ) =
+1
+−1
+0
+1
+1
+−3
+−4
+1
+1
+2
+
+
+
+1
+1
+1
+0
+1
+1
+0
+0
+1
+
+
+ .
+11OCW Proiektua. Txomin Ramirez eta M. Asun Garcia

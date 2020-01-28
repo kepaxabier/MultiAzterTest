@@ -1,0 +1,894 @@
+
+
+
+7. Gaia
+EKUAZIO DIFERENTZIAL LINEALAK.
+§1. SARRERA
+Injenieritza, Fisika edo Gizarte Zientzietako hainbat problema, hizkuntza matematikoaren
+bidez adierazi ondoren, ekuazio diferentzialak bihurtzen dira; hau da, ekuazio funtzionalak zeinen
+funtzio ezezagunaren deribatuak edo diferentzialak ekuazioan agertzen diren.
+Esate baterako, Newton-en legea:
+F = m
+d2y(t)
+dt2
+,
+(F = F (t, y(t),
+dy(t)
+dt
+)) izanik.
+Hots, m masako puntu material batean F (t, y(t),
+dy(t)
+dt ) indarraren menpeko higidura linealaren
+ekuazioa, non t denpora, y(t) puntuaren posizioa t aldiunean eta
+dy(t)
+dt
+abiadura diren.
+Puntu materiala erortzen denean mg = m d
+2y
+dt2 dugu, hau da,
+d2y
+dt2 = g ; beraz, bi aldiz inte-
+gratuz, funtzio ezezaguna, hots, y(t) puntuaren posizioa lortuko dugu:
+y(t) = g
+t2
+2
++ C1t + C2.
+Aurreko adibidean airearen erresistentziak eragina badu, indar hori abiadurari proportzionala
+da eta grabitatearen aurkako noranzkoa: −k dy
+dt ,
+mg − k
+dy
+dt
+= m
+d2y
+dt2
+ekuazio diferentziala agertzen da eta hemen y
+(t) funtzio ezezaguna kalkulatzea ez da hain erreza.
+Funtzio ezezaguna soilik aldagai baten menpekoa denean ekuazio diferentziala, Ekuazio
+Diferentzial Arrunta (EDA) edo 
+(soilik) Ekuazio Diferentziala deitzen da. Aldagai anitzeko funtzio
+ezezaguna denean, ekuazio diferentziala Deribatu Partzialetako Ekuazioa deitzen da. Adibidez,
+∂2u
+∂x2
++
+∂2u
+∂y2
++
+∂2u
+∂y2
+= 0
+u = u(x, y, z)
+Laplace-ren ekuazioa.
+15
+
+Deﬁnizioa.
+EDA baten ordena, ekuazio horretan agertzen den ordena goreneko deribatuen ordena da. n
+ordenako EDA-ren adierazpena modu inplizituan ondokoa da:
+F (t, x(t), x (t), x (t), . . . , xn)(t)) = 0
+eta adierazpena era esplizituan hurrengo hau da:
+(1)
+xn)(t) = f (t, x(t), x (t), x (t), . . . , xn−1)(t))
+f funtzioa f : D ⊂ Rn −→ R (ezaguna) izanik.
+Deﬁnizioa.
+Funtzio bat, x(t), (x : I → R, I tarte erreala izanik) n aldiz deribagarria, 
+(1) ekuazio dife-
+rentzialaren soluzioa dela esaten da 
+(1) ekuazio diferentziala egiaztatzen duenean, hau da,
+xn)(t) = f (t, x(t), x (t), x (t), . . . , xn−1)(t)),
+∀t ∈ I.
+(1) formulako f hori aplikazio lineala den kasuan Ekuazio Diferentzial Lineal deitu ohi da eta
+mota honetakoak garrantzi handikoak dira.
+§2. EKUAZIO DIFERENTZIAL LINEALAK.
+Ekuazio Diferentzial Linealak Fisikan erabilera handikoak dira, adibidez, RCL zirkuituetako
+intentsitatea edo malgukien posizioa ekuazio hoien bidez planteiatzen direlako.
+Deﬁnizioa.
+n. ordenako EDA lineala hurrengo formulaz adieraziko da:
+(2)
+xn)(t) + a1(t)xn−1)(t) + a2(t)xn−2)(t) + . . . + an−1(t)x (t) + an(t)x(t) = b
+(t)
+aj : I → R j = 1, . . . , n eta b : I → R ( I tarte erreala ) jarraituak 
+(datuak) izanik.
+b(t) funtzio nulua denean EDA lineal homogenoa deitzen da. Ad:
+x + (t2 + 1)x + x = 0.
+Aldiz, b(t) hori funtzio nulua ez denean EDA lineal betea edo ez-
+homogenoa deitzen da.
+Ekuazio bete orok ekuazio homogeno elkartua du.Ad:
+x + tx = cos t,
+eta
+x + tx = 0.
+16
+
+Existentzia eta Bakartasunaren Teorema .
+t0 ∈ I eta ξ0, ξ1, . . . , ξn−1 zenbaki errealak ﬁnkatu ondoren eta aj :
+ I → R j = 1, . . . , n eta
+b : I → R jarraituak badira, (2) ekuazio linealaren soluzio bakar bat dago, x
+(t) ∈ Cn(I),
+x(t0) = ξ0, x (t0) = ξ1, . . . , xn−1)(t0) = ξn−1
+baldintzak egiaztatzen dituena.
+Propietateak.
+Har ditzagun (2) ekuazio lineal betea eta bere ekuazio homogeno elkartua :
+(3)
+xn)(t) + a1(t)xn−1)(t) + a2(t)xn−2)(t) + . . . + an−1(t)x (t) + an(t)x(t) = 0.
+i) Baldin x1(t) eta x2(t) funtzioak 
+(3)ekuazio homogenoaren bi soluzio badira, orduan αx1(t)+
+βx2(t) funtzioa (3)-
+ren soluzioa da ere edozein α, β zenbaki errealetarako. Beraz, 
+(3) ekuazio lineal
+homogenoaren soluzioak espazio bektorial bat osatzen dute.
+Horrez gain, bere dimentsioa n dela froga daiteke; hau da, espazio bektorial honen oina-
+rria n soluzio linealki independenteez osatuta dago, adibidez, x1(t), ..xn
+(t). Honela soluzio oro
+C1x1(t)+..+Cnxn
+(t) erako formulaz adieraz daiteke C1, ..Cn zenbaki erreal egokiak izanik. Hemen
+C1, ..Cn hautazko konstante errealak bezala hartuz, C1x1(t) + .. + Cnxn
+(t) formulak soluzio familia
+n-parametrikoa adierazten du; soluzio familia hau 
+(3) ekuazio homogenoaren soluzio orokorra
+da eta sarritan xH(t) ikurrez idazten da; hots,
+xH(t) = C1x1(t) + .. + Cnxn(t)
+ii) (3) ekuazio lineal homogenoaren soluzioa x(t) bada eta x(t0) = 0 , x 
+(t0) = 0 , . . . ,
+xn−1)(t0) = 0 balioak hartzen baditu t0 ∈ I punturen batean, orduan x
+(t) funtzio nulua da (x(t) ≡
+0, ∀t ∈ I).
+iii) Baldin x1(t), x2(t) ∈ Cn(I) funtzioak 
+(2) ekuazio lineal betearen soluzioak badira, orduan
+(x1 − x2)(t) funtzioa 
+(3) ekuazio homogeno elkartuaren soluzioa da. Honen ondorioz, (2) ekuazio
+betearen edozein soluzio, xp, ﬁnkatuz, (2)-ren soluzio oro, x
+(t), aurreko xp eta ekuazio homogeno
+elkartuaren soluzio egoki baten batura da; hau da, 
+(2) − ren soluzio orokorra hauxe da:
+x(t) = xp(t) + xH(t)
+17
+
+Ondoren ekuazio lineal homogenoak ebazteko metodoak eta ekuazio lineal beteen soluzio par-
+tikularrak kalkulatzeko bideak azalduko ditugu.
+Ekuazio diferentzial linealen artean koeﬁziente konstanteetakoak bereiztuko ditugu. n. orde-
+nako eta koeﬁziente konstanteetako ekuazio diferentzial lineala honela adieraz daiteke:
+(4)
+xn)(t) + a1xn−1)(t) + a2xn−2)(t) + . . . + an−1x (t) + anx(t) = b(t)
+aj, j = 1, . . . , n zenbaki errealak izanik.
+18
+
+§3. KOEFIZIENTE KONSTANTETAKO EKUAZIO LINEAL HOMOGENOEN EBAZPENA.
+1.- Lehen ordenako ekuazioak ( aldagai bananduen metodoa). Izan bedi
+x + ax = 0
+⇒
+dx
+dt
+= −ax
+⇒
+dx
+x
+=
+−adt
+⇒ ln |x| = −at + C
+⇒ xH(t) = C1e−at ekuazio homogenoaren soluzio orokorra
+(C1 hautazko konstante erreala izanik).
+2.- Bigarren ordenako ekuazioak. Izan bedi
+x + ax + bx = 0
+Lehen ordenakoen soluzioaren adierazpena ezagutzen dugunez, ba dirudi bigarren ordenakoen
+soluzioak ere beste funtzio esponentzial batzuk izango direla. Saiatuko gara x
+(t) = ert espo-
+nentzialarekin. Ekuazio diferentziala egiaztatu behar duenez, ondokoa gertatu behar da:
+r2ert + arert + bert = 0
+hau da,
+r2 + ar + b = 0
+hots, r delakoa azken ekuazioaren soluzioa izango da.
+Azken polinomioari ekuazio
+diferentzialaren polinomio ezaugarri deritzo. Kasu desberdinak agertuko dira:
+i) Polinimio ezaugarriak bi erro erreal ezberdin ditu:
+r1, r2 ∈ R
+r1 = r2
+⇒
+x1(t) = er1t
+x2(t) = er2t
+ekuazio diferentzialaren bi soluzio erreal
+linealki independenteak 
+(bat ez da bestearen multiploa); beraz, ekuazio diferentzial homogenoaren
+soluzio orokorra hurrengo eran adieraz daiteke
+xH(t) = C1er1t + C2er2t
+C1, C2 hautazko konstante errealak izanik.
+ii) Polinomio ezaugarriak erro erreal bikoitza du:
+r ∈ R bikoitza (r = −
+a
+2
+) ⇒ x1(t) = ert ekuazio diferentzialaren soluzio bat
+19
+
+eta beste soluzio bat aurrekoarekin linealki independentea behar dugu. Orain bigarren soluzio hori
+lortzeko bide bat ikusiko dugu:
+ ordenaren beherapena metodoa. Bigarren soluzio hori
+x2(t) = x1(t)z(t)
+erako funtzioen artean aurkituko dugu, z(t) hori, x2
+(t) funtzioa ekuazio diferentziala egiaztatzera
+derrigortuz zehaztuko dugu. Hau da,
+x2 +ax2+bx2 = x1z+2x1z +x1z +a(x1z+x1z )+bx1z = z(x1 +ax1+bx1)+z 
+(2x1+ax1)+x1z =
+= z (2x1 + ax1) + x1z = e
+rtz + (2rert + aert)z = 0
+orduan z + (2r + a)z = 0. r erro bikoitza denez, r = − a
+2 ,hots, 2r + a = 0, beraz,
+z = 0 ⇒ z = B ⇒ z(t) = Bt + B1
+eta adibidez B = 1 eta B1 = 0 aukeratuz, bigarren soluzio bat 
+(lehenengoarekin linealki indepen-
+dentea) dugu:
+x2(t) = tert
+Ondorioz, ekuazio diferentzial homogenoaren soluzio orokorra hurrengo eran adieraz daiteke :
+xH(t) = C1ert + C2tert.
+iii) Polinomio ezaugarriak bi erro konplexu konjokatu ditu:
+r = u ± iv
+⇒
+x∗1(t) = e(u+iv)t
+x∗2(t) = e(u−iv)t
+ekuazio diferentzialaren soluzio konjokatuak
+( bata bestearen konjokatua). Baina guk soluzio errealak nahi ditugu. Dakigunez, z zenbaki kon-
+plexuetarako z + z = 2Re z , z − z = 2Im z egiaztatzen dira eta zati errealak eta zati irudikariak
+zenbaki errealak dira. Bestalde, soluzioen konbinazio linealak soluzioak ere direnez, aurrean aipatu-
+tako soluzio konplexu baten zati erreala eta zati irudikaria ekuazio diferentzialaren bi soluzio erreal
+linealki independenteak dira. Kalkula ditzagun soluzio erreal hoiek.
+x∗1(t) = e
+(u+iv)t = euteivt = eu(cos vt + i sin vt)
+20
+
+hots,
+x1(t) = eut cos vt eta x2(t) = eut sin vt
+beraz, ekuazio diferentzial homogenoaren soluzio orokorra ondokoa da:
+xH(t) = C1eut cos vt + C2eut sin vt.
+3.- n. ordenako ekuazio dif erentzialak. Izan bedi
+xn) + a1xn−1) + a2xn−2) + . . . + an−1x + anx = 0
+aj ∈ R, j = 1, . . . n izanik.
+i) Ekuazio ezaugarria.
+rn + a1rn−1 + a2rn−2 + . . . + an−1r + an = 0.
+ii) Polinomioaren erroak aurkitu Erro bakoitzari loturik soluzio linealki independente kopuru
+bat.
+• Baldin ri erro erreal bakuna bada ⇒
+erit
+soluzio elkartua
+• Baldin ri k anizkuntasuneko erro erreala bada ⇒ erit, terit, t2erit, . . . , tk−1erit dira ekuazio
+diferentzial homogenoaren k soluzio elkartuak (denak linealki independenteak).
+• Baldin ri erro konplexu bakuna bada, konjokatua ere erro bakuna da:
+ ri = ui ± ivi
+⇒
+{euit cos(vit), euit sin(vit)} , bi soluzio elkartuak linealki independenteak.
+• Baldin ri = ui±ivi k anizkuntasuneko erro konplexu bada, bere konjokatua ere klase berekoa
+da eta hauei elkarturik
+⇒
+euit cos(vit), teuit cos(vit), t2euit cos(vit), . . . , tk−1euit cos(vit)
+euit sin(vit), teuit sin(vit), t2euit sin(vit), . . . , tk−1euit sin(vit)
+, 2k soluzio linealki independenteak ditugu.
+iii) Soluzio orokorra xH
+(t). Guztira ekuazio lineal homgenoaren n soluzio linealki independen-
+teak aurkitu dira eta eta ekuazio diferentzial horren soluzio orokorra guzti hoien konbinazio lineala
+da n konstanteak hautazko zenbaki errealak izanik.
+21
+
+Adibidea.
+a) Ebatz dazagun
+x + 3x + 2x = 0.
+Ekuazio ezaugarria
+r2 + 3r + 2 = 0,
+r1 = −2,
+r2 = −1
+⇒
+x1(t) = e−2t, x2(t) = e−t.
+Soluzio orokorra:
+x(t) = C1e−2t + C2e−t.
+b) Ebatz dazagun
+x + 4x + 4x = 0
+Ekuazio ezaugarria:
+r2 + 4r + 4 = 0,
+r1 = −2,
+r2 = −2
+⇒
+x1(t) = e−2t, x2(t) = te−2t
+Soluzio orokorra:
+x(t) = C1e−2t + C2te−2t.
+c) Ebatz dezagun
+x + x + x = 0
+Ekuazio ezaugarria:
+r2 + 2r + 2 = 0,
+r = −1 ± i
+⇒
+x1(t) = e−t cos t, x2(t) = e−t sin t
+Soluzio orokorra:
+x(t) = C1e−t cos t + C2e−t sin t.
+22
+
+§4. EKUAZIO LINEAL BETEAK.
+Dakigunez, edozein ordenatako ekuazio lineal betearen soluzio orokorra, x
+(t), hurrengo baturaz
+adieraz daiteke:
+x(t) = xp(t) + xH(t);
+horregaitik, ekuazio lineal homogeno elkartuaren soluzio orokorra ( xH
+(t)) aurkitu ondoren, ekuazio
+lineal betearen soluzioren bat (xp(t)) kalkulatuko dugu.
+Estudiatuko dugu 2. ordenakoa. Izan bedi
+x + a1x + a2x = b(t),
+a1, a2 ∈ R eta b(t) funtzio jarraitua I = [a, b] tartean direlarik.
+Konstanteen aldakuntza metodoa.
+Izan bedi xH(t) = C1x1(t) + C2x2
+(t), C1, C2 ∈ R ekuazio homogeno elkartuaren soluzio
+orokorra. Ekuazio lineal betearen soluzio bat, xp
+(t), aurkituko dugu ondoko adierazpena dutenen
+artean:
+xp(t) = C1(t)x1(t) + C2(t)x2(t);
+( ekuazio homogeneoaren soluzio orokorreko konstanteen ordez t-
+ren funtzioak agertzen dira, hau
+da metodoaren izenaren arrazoia). xp
+(t) delakoak ekuazio betea egiaztatu behar duenez, bere
+deribatuak aurkituko ditugu:
+xp = C1(t)x1(t) + C2(t)x2(t) + C1(t)x1(t) + C2(t)x2(t).
+Metodo honek ondoko baldintza ezarriko du:
+C1(t)x1(t) + C2(t)x2(t) = 0
+( Lehenengo baldintza )
+Baldintza erabiliz,
+xp = C1(t)x1(t) + C2(t)x2(t) + C1(t)x1(t) + C2(t)x2(t).
+Orain xp(t) funtzioari ekuazio lineal betea egiaztatzera behartuko diogu:
+xp + a1xp + a2xp = C1(x1 + a1x1 + a2x1) + C2(x2 + a1x2 + a2x2) + C1(t)x1
+(t) + C2(t)x2(t) = b(t)
+23
+
+eta x1 , x2 ekuazio homogenoaren soluzioak direnez,
+C1(t)x1(t) + C2(t)x2(t) = b(t)
+( Bigarren baldintza. )
+Laburbilduz, C1(t) eta C2
+(t) funtzioak hurrengo sistema funtzionala egiaztatu behar dute:
+C1(t)x1(t) + C2(t)x2(t) = 0
+C1(t)x1(t) + C2(t)x2(t) = b(t)
+sistema honek beti ditu bi soluzio C1(t) y C2(t) eta hauek integratuz, C1
+(t) eta C2(t) kalkulatuko
+ditugu; beraz, xp(t) lortuko dugu.
+Azken metodo hau ordena goreneko ekuazioetara eta baita koeﬁziente aldakorretako ekuazio
+lineal beteetara zabaltzen da, kasu guztietan ekuazio diferentzial betearen koeﬁziente zuzentzailea
+1 denean.
+Adibidea. Ebatz dezagun
+x + x =
+1
+cos3 t
+.
+Ekuazio homogeno elkartua:
+x + x = 0
+⇒
+r2 + 1 = 0
+⇒
+r = ±i,
+ekuazio homogenoaren soluzio orokorra:
+xH(t) = C1 cos t + C2 sin t.
+Konstante aldakuntzaren metodoaren bidez, emandako ekuazio betearen soluzio bat aurkituko
+dugu. Izan bedi
+xp(t) = C1(t) cos t + C2(t) sin t
+non
+C1(t) cos t + C2(t) sin t = 0
+−C1(t) sin t + C2(t) cos t =
+1
+cos3 t .
+sistema egiaztatu behar duen. Sistema ebatziz, hauxe dugu:
+C2(t) =
+1
+cos2 t
+⇒
+C2(t) = tan t
+eta
+C1(t) = −
+sin t
+cos3 t
+⇒
+C1(t) = −
+1
+2 cos2 t
+.
+24
+
+Orduan
+xp(t) = −
+1
+2 cos2 t
+cos t + tan t sin t
+eta emandako ekuazio lineal betearen soluzio orokorra:
+x(t) = xp + xH = −
+1
+2 cos t
++ tan t sin t + C1 cos t + C2 sin t.
+Koeﬁziente zehaztugabeen metodoa.
+Hau, koeﬁziente konstanteetako ekuazio lineal beteen soluzio 
+(partikular) bat aurkitzeko metodoa
+da ekuazio betearen b(t) gaia hurrengo formulaz idatz daitekenean:
+b(t) = eαt(M (t) cos βt + N (t) sin βt),
+M (t) eta N (t) funtzio polinomikoak izanik.
+a) M (t) eta N (t) polinomioen mailarik handiena d adieraziko dugu.
+b) α ± iβ zenbakia ekuazio homogeno elkartuaren ekuazio ezaugarriaren soluzioa bada, bere
+anizkuntasun ordena k adieraziko dugu; ekuazio ezaugarriaren soluzioa ez bada, k = 0 hartuko
+dugu.
+Metodo honen arabera, ekuazio lineal beteak soluzio 
+(partikular) bat izango du era honetakoa:
+xp(t) = tkeαt(R(t) cos βt + Q(t) sin βt),
+R(t) eta Q
+(t) funtzioak d mailako bi polinomio izanik. Polinomio hauek kalkulatuko dira xp
+(t)-ren
+goiko adierazpena ekuazio betearen soluzio izatera derrigortzean.
+∗ Ekuazio lineal betean b(t) = b1(t) + b2(t) + . . . + bn
+(t) batura denean soluzio partikularra ,xp(t),
+xp
+1 (t) + xp2 (t) + . . . + xpn (t) baturaz adieraz daiteke, non xpi 
+(t) funtzioa bi(t)-ri dagokion ekuazio
+lineal betearen soluzioa den (Eta xp
+i (t) funtzioak kalkulatu daitezke,
+egokiago bada, metodo
+ezberdinez).
+Adibidea. Lx = b
+(t) ekuazio diferentzial lineal betearen polinomio ezaugarriaren erroak r = 0
+bakuna, r = 1 bikoitza, r = −2 ± i bakuna eta r = ±i hirukoitza badira, eta
+b(t) = 2 − t3 − 3 sin t − 2t cos t + e−2t sin t
+25
+
+bada, aurki dezagun soluzio 
+(partikular) baten adierazpena azken metodoa erabiliz. b(t) batura
+bat denez, batugai bakoitza banan banan estudiatuko dugu.
+b1(t) = 2 − t3 ⇒
+d = 3,
+α = 0,
+β = 0 k = 1 ⇒
+xp
+1 (t) = t(A + Bt + C t
+2 + Dt3)
+b2(t) = 3 sin t − 2t cos t ⇒
+d = 1,
+α = 0,
+β = 1 k = 3
+⇒
+xp
+2 (t) = t
+3 ((A + Bt) cos t + (C + Dt) sin t))
+b3(t) = e−2t sin t ⇒
+d = 0,
+α = −2,
+β = 1 k = 1 ⇒
+xp
+3 (t) = te
+−2t (A cos t + B sin t))
+Lerro bakoitzeko A, B, C, D, oro har ezberdinak izango dira; ekuazio bete bakoitza egiaztatzera
+behartuz kalkulatuko dira. Hiru soluzio hoien batura emandako ekuazio betearen soluzio bat da.
+EULER-EN EKUAZIO DIFERENTZIALA.
+Euler-en n. ordenako ekuazioaren adierazpena ondoko hau da:
+antnxn)(t) + an−1tn−1xn−1)(t) + . . . + a1tx (t) + a0x(t) = b(t), (an = 0)
+t = es aldagai aldaketaren bidez,
+t = es ⇒
+dt = tds
+
+
+
+x(t) = x(es) = y(s)
+x (t) = dx
+dt =
+dx
+ds
+ds
+dt =
+dy
+ds
+1
+t = y
+1
+t → tx = y
+x (t) = d
+dt x =
+d(y /t)
+dt
+= y 1
+t2 − y
+1
+t2 → t
+2x = y − y
+(eta abar) ditugu eta koeﬁziente konstanteetako ekuazio lineal bat lortuko dugu y
+(s) funtzio ezeza-
+gunerako. Azken ekuazio honen soluzio orokorra kalkulatu ondoren, aldagai aldaketa deseginez,
+Euler-en ekuazioaren soluzio orokorra izango dugu.
+Adibidea. Ebatz dezagun
+t2x − tx + 2x = t ln t.
+t = es eta ds
+dt =
+1
+t
+
+
+
+x(t) = x(es) = y(s)
+x (t) = dx
+dt =
+dx
+ds
+ds
+dt =
+dy
+ds
+1
+t = y
+1
+t → tx = y
+x (t) = d
+dt x =
+d(y /t)
+dt
+= y 1
+t2 − y
+1
+t2 → t
+2x = y − y
+emandako Euler-en ekuazioan ordezkatuz,
+y − y − y + 2y = ses
+⇒
+y − 2y + 2y = ses
+26
+
+Azken ekuazio betea ebatziko dugu:
+r2 − 2r + 2 = 0,
+r = 1 ± i
+⇒
+yH(s) = C1es cos s + C2es sin s.
+b(s) = ses denez, koeﬁziente zehaztugabeen metodoaren arabera:
+α = 1, β = 0
+k = 0, d = 1 eta
+yp(s) = es(As + B),
+yp(s) = e
+s(As + B + A), y
+p (s) = e
+s(As + B + 2A)
+soluzio izatera behartuz,
+es(As + B + 2A) − 2es(As + B + A) + 2es(As + B) = ses ⇒
+⇒ (As + B + 2A) − 2(As + B + A) + 2(As + B) = s
+hemendik
+As + B = s
+⇒
+A = 1, B = 0
+beraz, ekuazio eraldatuaren soluzio orokorra ondoko hau da:
+y(s) = yp(s) + yH(s) = ses + C1es cos s + C2es sin s;
+eta aldaketa deseginez, emandako Euler-
+en ekuazioaren soluzio orokorra lortuko dugu:
+x(t) = t ln t + C1t cos(ln t) + C2t sin(ln t).
+ERABILERAK
+A) RCL Zirkuituak
+Seriean eraikitako RCL zirkuituen printzipio ﬁsikoak bi dira:
+i) Karga elektrikoaren kontserbazioa.
+ii) Energiaren kontserbazioa.
+Zirkuitu hauek Kirchhoﬀ-en legeak egiaztatzen dituzte:
+1.- Zirkuituko elementu bakoitzean zehar korronte berdina igaroko da.
+2.-
+ Zirkuitu itxi batean, potentzialaren aldiuneko aldaketen batura aljebraikoa, zero da.
+Orain, tentsio erorketak planteatuko ditugu:
+27
+
+a) Ohm-
+en legean oinarriturik, erresistore baten muturren arteko potentzial diferentzia 
+(tentsio
+erorketa, boltaje erorketa), korrontearen proportzionala da: ER = RI.
+R, proportzionaltasun konstantea, elementu bakoitzaren balio bereizgarria da eta erresistentzia
+elektriko deritzo.
+b) Faraday eta Lenz-
+en legeetan oinarriturik, harilkatu baten muturren arteko potentzial
+diferentzia (tentsio erorketa, boltaje erorketa), t-
+rekiko intentsitatearen deribatuaren zuzenki pro-
+portzionala da : EL = L
+dI
+dt
+.
+L proportzionaltasun konstantea, harilaren balio bereizgarria da eta induktantzia edo autoin-
+dukzio koeﬁziente deritzo.
+c) Kondentsadore baten muturren arteko potentzial diferentzia 
+(tentsio erorketa, boltaje eror-
+keta), bere plaketan metatuta dagoen q karga elektrikoarekiko zuzenki proportzionala da:
+ EC =
+1
+C
+q.
+1
+C
+proportzionaltasun konstanteari elastantzia deritzo eta C-ri kapazitantzia.
+Indar elektriko sortzaileak energia potentziala edo boltajea ematen dio zirkuituari.
+t
+unean zirkuituari ezarritako boltajea E
+(t) izendatzen badugu, energia kontserbazioaren Kirchhoﬀ-
+en legearen arabera:
+EL + ER + EC = E(t)
+hau da
+(1)
+L
+dI
+dt
++ RI +
+1
+C
+q = E(t).
+Eta I =
+dq
+dt
+denez, (1) ekuazioa ondoko eran idatz daiteke:
+(2)
+L
+d2q
+dt
++ R
+dq
+dt
++
+1
+C
+q = E(t)
+Eta ekuazioa t-rekiko deribatuz,
+(3)
+L
+d2I
+dt
++ R
+dI
+dt
++
+1
+C
+I =
+dE
+dt
+.
+Gehienetan hasierako karga, q(0), eta hasierako korrontea, I(0) =
+dq
+dt
+(0), ezagutuko dira eta
+ekuazioen gaiak hurrengo unitateetan azaldu beharko dira:
+28
+
+L induktantzia henrioz,
+E(t) indar elektriko higiarazle voltaz
+R erresistentzia ohmez,
+q(t) karga coulombez
+C kapazitantzia faradaiz,
+I(t) korrontea amperez.
+Adibidea. Aurki ezazu korrontea t unean datu hauetarako:
+ kondentsadorearen hasierako karga
+zero da, hasierako korrontea zero da, L = 10 henrio, R = 20 ohm, C = 
+(6260)−1 faraday eta
+E(t) = 100 volta. (3) ekuazioa erabiliz:
+10
+d2I
+dt
++ 20
+dI
+dt
++ 6260I = 0
+ekuazio diferentzial lineal homogenoa dugu eta bere polinimio ezaugarria hauxe da:
+r2 + 2r + 626 = 0
+⇒
+r = −1 ± 25i
+beraz,
+I(t) = C1e−t cos 25t + C2e−t sin 25t
+eta I(0) = 0 denez, C1 = 0. C2 kalkulatzeko 
+(1) ekuazioa erabiliko dugu, non q funtzioa agertzen
+den.
+10C2e−t(− sin 25t + 25 cos 25t) + 20C2e−t sin 25t + 6260q(t) = 100
+Hemen t = 0 baliorako:
+250C2 = 100
+⇒
+C2 =
+2
+5
+Eta problemaren emaitza:
+I(t) =
+2
+5
+e−t sin 25t.
+B) Oszilagailuak
+Har dezagun k moduluko erresorte bat mutur ﬁnko batekin, zeinengandik ω = mg pisu bat
+zintzilik dagoen eta norabide bertikalez desplazatzen da f 
+(t) indar baten eraginez. Aurretik ﬁnkatu-
+tako posizio batekiko pisuaren desplazamendua x
+(t) koordenatu ﬁsikoaren bidez adieraziko dugu.
+29
+
+Erresortearen masa mesprezagarria dela eta desplazamendua bertikala eta oszilazio gabekoa
+dela suposatuko ditugu. Newton-en legea erabiliz :
+mx (t) =
+indarrak.
+∗ Grabitate indarra: mg = ω.
+∗ Elastikotasun indarra: Desplazamendu txikietarako Hooke-
+n legearen arabera, muelle batek
+eragindako indar zuzpertzailea luzapenari 
+(edo laburtzapenari) proportzionala da eta desplaza-
+menduaren aurkako noranzkoa du: −
+ω
+k
++ x k.
+∗ Marruskadura indarra:
+ abiadurari proportzionala da eta desplazamenduaren aurkako no-
+ranzkoa du: −cx .
+∗ Sarrera indarra: f (t).
+Orduan
+mx (t) = ω − (ω + kx) − cx + f (t)
+hots
+mx (t) + cx + kx = f (t).
+Azken ekuazio hau koeﬁziente konstanteetako ekuazio lineala da eta higidura hurrengo eran
+sailkatzen du:
+1.-
+ Oszilazio askeak indargetu gabekoak. Ez dago marruskadurarik ezta sarrera indarrik.
+mx (t) + kx = 0
+polinimio ezaugarriaren erroak
+mr2 + k = 0
+⇒
+r = ±i
+k
+m
+eta
+x(t) = C1 cos
+k
+m
+t + C2 sin
+k
+m
+t
+soluzioa periodikoa da eta ωn =
+k
+m zenbakiari sistemaren maiztasun natural deritzo.
+2.- Higidura indargetua. Ba dago marruskadura baina ez dago sarrera indarrik.
+mx (t) + cx + kx = 0
+30
+
+polinomioaren erroak
+mr2 + cr + k = 0
+⇒
+r =
+−c ±
+√
+c2 − 4mk
+2m
+eta hurrengo sailkapena egiten da:
+a) Higidura gainindargetua. Bi erro erreal bakunen kasua, c2 − 4mk > 0, biak a, b, negatiboak
+dira eta soluzioa ondokoa da:
+x(t) = C1eat + C2ebt.
+Egoera geldikorrean ( t → ∞ ), pisuak oreka posiziorantz jotzen du , x
+(t) → 0, a eta b negatiboak
+direlako. Kasu honetan marruskadura handia da indar zuzpertzailearekin konparatuz.
+b) Higidura kritikoki indargetua. Erro erreal bikoitzaren kasua, c2 = 4mk, hots, c = 2
+√
+mk.
+Erroa r = − c
+2m da eta soluzioa
+x(t) = (C1 + C2t)ert
+ez da periodikoa, baina egoera geldikorra aurreko kasuaren berdina da. Indargetze koeﬁzientea
+cc = 2
+√
+mk kritikoa deitzen da.
+c) Higidura azpindargetua. Bi erro konplexuen kasua. Interesgarriena da. c2 − 4mk < 0,
+orduan r = −
+c
+2m
+± i
+√
+4km − c2
+2m
+= a ± bi, a < 0 eta b > 0 izanik.
+x(t) = eat(C1 cos bt + C2 sin bt)
+soluzioa ez da periodikoa t → ∞ denean eat → 0 delako, baina oszilakorra da sistema t = nπ
+b , n =
+1, 2, . . . tarte erregularretan oreka posiziotik igarotzen delako, eta uhinaren anplitudea t-
+rekin espo-
+nentzialki txikitzen doa. Indargetzea nulua bada, c = 0, higidura periodikoa da eta maiztasun
+naturala hauxe da: ωn
+2π =
+√
+k/m
+2π
+.
+3.- Higidura behartua. Kanpoko indar baten eragina, f 
+(t), egongo da. Bakarrik aztertzen dira
+ekuazio betearen soluzio partikularrak. Ekuazio beteari esleituriko ekuazio homogenoa, aur-
+rean ikusitako aukeraren batekoa izango da. f 
+(t) funtzioa sinoidala denean koeﬁziente zehaz-
+tugabeen metodoa erabil dezakegu; ondoko adibidea aztertuko dugu:
+mx (t) + cx + kx = F0 cos ωt
+bere soluzio partikularra era honetakoa da:
+xp(t) = C1 cos ωt + C2 sin ωt
+31
+
+eta soluzioa izatera behartuz
+C1 =
+k − mω2
+(k − mω2)2 + c2ω2
+F0
+C2 =
+cω
+(k − mω2)2 + c2ω2
+F0.
+Aukera dezagun α non
+cos α =
+k − mω2
+(k − mω2)2 + c2ω2
+sin α =
+cω
+(k − mω2)2 + c2ω2
+den eta ondorioz, ondoko soluzio partikularra dugu:
+xp(t) =
+1
+(k − mω2)2 + c2ω2
+F0 cos(ωt − α).
+t → ∞ denean ekuazio betearen soluzio orokorra x(t) = xp(t)+xH
+(t) soluzio partikularrerantz
+jotzen du fase geldikorra oreka egoera denean. α angeluari desfase angelu deritzo.
+32
+
+Ekuazio diferentzial linealak. Ariketak.
+1.- Egiazta ezazu (1 + t)x + (4t + 5)x + 
+(4t + 6)x = 0 ekuazio diferentzialaren soluzio bat ert
+erako funtzioa dela.
+2.- Aurki ezazu x − 6(1 + t)x + 6x = 0 ekuazioaren soluzio polinomiko bat.
+3.- Ebatz itzazu ondoko ekuazio diferentzialak:
+(a)
+2x − x = 0.
+(b)
+2x + x = 0.
+(c)
+x − 5x + 6x = 0.
+(d)
+x + x + x = 0.
+(e)
+x + 2x + 2x = 0.
+(f)
+x + 2x + 5x = 0.
+(g)
+x7) + 3x6) + 5x5) + 7x4) + 7x3) + 5x + 3x + x = 0.
+(h)
+x4) − 2x3) + 2x − 2x + x = 0.
+(i)
+x(4) + 2x + x = 0.
+(j)
+x + 4x + 4x = 0.
+4.- Kalkula itzazu hurrengo ekuazio lineal beteen soluzio orokorra: (a)
+x +2x +5x = e−t sec 2t.
+(b)
+x + x = te−t +
+1
+cos3 t
+.
+(c)
+t2x − 2tx + 2x = t3et.
+5.-
+ Aurki ezazu koeﬁziente konstanteetako ekuazio lineal homogeno bat hurrengo funtzioak soluziotzat
+dituena hurrengo bi kasuetan:
+(a)
+t2,
+et cos 3t,
+t3 sin t.
+(b)
+t2et − 3e−t cos 2t + cos t + t3 + 1.
+6.- Koeﬁziente konstanteetako ekuazio lineal bat
+Lx = 0 idatzikodugu. Baldin bere polinomio
+ezaugarriaren erroak:
+ r = 0 bakuna, r = 1 bikoitza, r = −2 ± i bakunak eta r = ±i hirukoitza
+badira, Nola bilatuko dugu
+Lx = 2 + t3 + t cos t + t2 sin 2t + (1 + t)et + e2t sin t + e−2t sin t
+ekuazio betearen ebazpen (partikular) bat?.
+33
+
+7.- Baldin
+P (r) polinomioaren erroak r = 0 bikoitza, r = 2 bakuna, r = 1 ± 3i hirukoitza,
+r = ±i bikoitza eta r = 4 ± i bakuna badira, Nola bilatuko dugu
+P (D)x = 2 + t2 − 3 sin t + 2t cos t + (2 − sin t)e2t − (t cos 2t − sin 3t)et
+ekuazio betearen ebazpen (partikular) bat?.
+8.- Ebatz itzazu:
+(a)
+x + 4x + 4x = 2et(sin t + 7 cos t).,
+lim
+t→−∞
+y(t) = 0.
+(b)
+x − x =
+1
+et + 1
+.
+(c)
+(t + 2)
+2x + 3(t + 2)x − 3x = 0.
+(d)
+(2t + 1)
+2x + 2(2t + 1)x + x = 0.
+(e)
+t2x − tx + 2x = t ln t.
+34

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<number>
+ 
+1.        Sarrera
+        Aplikazio paraleloen programazioa. OpenMP.
+2.        Atal paraleloak.
+3.        Harien (thread) sinkronizazioa.
+ 
+         MIMD sistema paraleloen memoria partekatua edo banatua izan daiteke.
+Memoria-izaerak baldintzatzen du aplikazio paraleloak programatzeko eredua.
+ 
+         OpenMP ez da programazio-lengoaia bat, C eta Fortran lengoaiekin
+erabiltzen den API (application programming interface) bat baizik
+ 
+         OpenMP-ko programazio paraleloaren eredua Fork – Join da.
+        Une batean, hari nagusiak P hari sortzen ditu, paraleloan exekutatuko
+direnak.
+ 
+         Hari guztiek kodearen kopia bera exekutatzen dute (SPMD). Hari
+bakoitzari identifikadore bat esleitzen zaio (tid).
+ 
+        Serieko programa bat hartuta, OpenMP erabiliz, programa paralelo bat
+lortzeko honako hauek erantsi behar dira:
+ 
+1.         Sarrera. Aplikazio paraleloen programazioa. OpenMP.
+2.        Atal paraleloak.
+        Harien kudeaketa eta aldagaien esparrua.
+        Atazen banaketa.
+                FOR begiztak. Iterazioen planifikazioa.
+                Sekzio paraleloak.
+3.        Harien sinkronizazioa.
+ 
+        Atal paralelo bat hari guztietan errepikatu eta exekutatzen den kode
+zati bat da.
+ 
+        Hari-kopurua adierazteko hiru aukera hauek ditugu:
+ 
+        Zer hari naiz? Zenbat hari gara?
+        Hari paralelo bakoitza zenbaki batekin identifikatzen da. 0 zenbakia
+duen haria nagusia izango da.
+        2 liburutegiko funtzio hauek erabiltzen dira:
+ 
+> Adibide sinple bat:
+ 
+    * Aldagaien partekatzea da SMP sistema baten gakoa. Oso garrantzitsua da
+      zuzen kontrolatzea aldagai bakoitzaren esparrua. 
+        Aldagai globalak hari guztien artean partekatzen dira. Beste aldagai
+batzuk, berriz, hari bakoitzarentzat pribatuak izan beharko dira.
+ 
+ shared(X)
+ 
+        Objektu osoak definitzen dira. Adibidez, array batean ezin da osagai
+bat pribatua definitu eta besteak, berriz, partekatuak.
+        Besterik adierazi ezean, aldagai guztiak shared dira.
+        Hari bakoitzak bere pila erabiltzen du; beraz, atal paralelo batean
+erazagutzen diren aldagaiak pribatuak izango dira.
+ 
+ firstprivate( )
+ 
+> Adibidea:
+ 
+ reduction( )
+        Reduction motako eragiketak oso arruntak dira aplikazio paraleloetan:
+hari guztiek aldagaiaren bat erabiliko dute balioak metatzeko, modu atomikoan
+(RMW).
+        Adibidea: bektore baten osagaien batuketa.
+        OpenMP-k aurredefinituta duen aldagai mota bat erabil daiteke
+honetarako: reduction.
+ 
+> Adibidea:
+ 
+1.         Sarrera. Aplikazio paraleloen programazioa. OpenMP.
+2.        Atal paraleloak.
+        Harien kudeaketa eta aldagaien esparrua.
+        Atazen banaketa.
+                for begiztak. Iterazioen planifikazioa
+                Sekzio paraleloak.
+3.        Harien sinkronizazioa.
+ 
+        Begizten paralelizazioa.
+        Begiztak dira erraz paralelizatu daitezkeen egiturak (ale xeheko datu-
+paralelismoa, domain decomposition).
+        Kontuz, kodea errepikatzea ez da nahikoa. Adibidez,
+ 
+        Aukerak:
+ 
+1         for sasiagindua
+ 
+        parallel eta for sasiaginduak lotu daitezke
+                #pragma omp parallel for
+        atal paralelo batek begizta bakarra duenean.
+ 
+for (i=0; i<N; i++)
+ Z[i] = a * X[i] + b;
+ 
+for (i=0; i<N; i++)
+ for (j=0; j<M; j++)
+ {       
+  X = B[i][j] * B[i][j];
+  A[i][j] = A[i][j] + X;
+  C[i][j] = X * 2 + 1;
+ }
+ 
+for (i=0; i<N; i++)
+ for (j=0; j<M; j++)
+ {       
+  X = B[i][j] * B[i][j];
+  A[i][j] = A[i][j] + X;
+  C[i][j] = X * 2 + 1;
+ }
+ 
+         Nola banatzen dira begiztaren iterazioak harien artean?
+        Hari bakoitzaren lan-karga gaizki banatuta baldin badago, ez badago
+orekatuta, eraginkortasunaren galera handia izango dugu.
+ 
+         Klausula honen sintaxia:
+                schedule(mota [,zatien tamaina])
+        Hauek dira erabil daitezkeen banaketa motak:
+ 
+        dynamic,k       
+        Banaketa dinamikoa, zatien tamaina k izanda (besterik esan ezean,
+zatien tamaina 1 izango da).
+ 
+         Besterik esan ezean, atal paraleloek edo for paraleloek (eta
+orokorrean, ia OpenMP-ko egiturak guztiek) hesi bat definitzen dute
+inplizituki, hari guztiak bukaeran sinkronizatzeko.
+        Hari motelena markatuko du eragiketaren denbora.
+ 
+         Atazen banaketa (for motako begiztak )
+        #pragma omp for [klausulak]
+                         private(ald)        firstprivate(ald)
+                        reduction(erag:ald)       
+                         schedule(static/dynamic/runtime)
+                         nowait
+        #pragma omp parallel for [klausulak]
+ 
+1.         Sarrera. Aplikazio paraleloen programazioa. OpenMP.
+2.        Atal paraleloak.
+        Harien kudeaketa eta aldagaien esparrua.
+        Atazen banaketa.
+                for begiztak. Iterazioen planifikazioa.
+                Sekzio paraleloak.
+3.        Harien sinkronizazioa.
+ 
+2        sections sasiagindua
+ 
+> Adibidea:
+ 
+3        single sasiagindua
+        Atal paralelo barruan, errepikatu egingo ez den kode zati bat
+definitzen du (adibidez, sarrera/irteerako eragiketa bat); hau da, hari bakar
+batek exekutatuko du.
+ 
+> Adibidea:
+ 
+1.         Sarrera. Aplikazio paraleloen programazioa. OpenMP.
+2.        Atal paraleloak.
+3.        Harien sinkronizazioa.
+                Elkarrekiko esklusioa: sekzio kritikoak.
+                Hesiak.
+ 
+        Harien arteko dependentziak ebatzi ezin direnean, haien exekuzioa
+sinkronizatu egin beharko da.
+        OpenMP-k oinarrizko aukerak ematen dizkigu: sekzio kritikoak, gertaerak
+eta hesiak.
+ 
+1.         Sekzio kritikoak
+        Une batean hari bakar batek exekutatu dezakeen kode-zati bat definitzen
+du.
+        OpenMP-k aukera batzuk eskaintzen ditu sekzio kritikoak definitzeko.
+Aukera garrantzitsuenak hauek dira: critical eta atomic.
+ 
+2.         Sinkronizazio globala: hesiak
+                #pragma omp barrier
+       
+ 
+ 
+ 
+ 

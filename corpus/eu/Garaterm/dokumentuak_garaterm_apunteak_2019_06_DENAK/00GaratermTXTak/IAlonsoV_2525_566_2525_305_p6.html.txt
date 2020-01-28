@@ -1,0 +1,65 @@
+
+
+
+
+                        P6. OLATUEN ALTUERAREN KALKULUA
+
+Olatu handiak sortzeko beharrezko baldintzetako bat isobara-mapetan fetch
+handia izatea da, hots, itsas eskualde bat non haizeak gogor eta norabide
+berdinean jotzen duen. Horrelako egoera bat 2013ko maiatzaren 31an gertatu zen.
+Egun horretako 00 h-etarako azaleko mapak irudian ikus daitekeen itxura zuen.
+
+                        [2525_305_p6_html_2c316d2f.gif]
+               1 irudia. 2013ko maiatzaren 31rako isobara-mapa.
+
+Mapa horretan ikus daiteke Kantauri itsaso gainean fetch handia zegoela (1020
+hPa-eko isobarari esker identifika dezakegu), zeinak euskal kostaldean olatu
+handiak sortu zituen. Fetcha Irlandatik hegoaldera hasten zen Kantauri itsasoko
+ertzera iritsi arte, aipatutako isobara jarraituz. Fetch horren ipar-haizea ia
+konstantea da 1000 km luzerako ibilbidean zehar itsaso gainetik. Egoera
+meteorologikoa aurreko egunetik iraunkorra zen, eta azkenik 48 ordu inguru
+iraun zuen.
+
+Irudiko datuekin olatuaren altuera kalkulatzeko behar ditugun magnitudeen
+balioak estimatuko ditugu:
+
+    * Fetcharen ibilbidea
+
+Maparen eskalarekin fetcharen distantzia hau izango da:
+
+                                Fetch = 1625 km
+
+Itsas miliatan (1 Nm = 1852 m) 877 Nm balio du.
+
+    * Itsaso gainetiko haizea
+
+Haizearen abiadura fetcharen erdian kalkulatuko dugu, non presio-diferentzia 10
+hPa-ekoa den 833 km-tan. Haizearen abiadura izango da:
+
+                              vg = (1/f)(P/d),
+
+eta ekuazioan sartuko ditugun datuak honako hauek dira:
+
+ = 1,31 kg/m3
+f = 10-4 s-1 (latitudea 45º)
+P = 10 hPa = 1000 Pa
+d = 833∙ 103 m
+
+Beraz:
+
+                             vg= 9,2 m/s (32 km/h)
+
+Beaufort eskalan, balio hori 5 indarreko haizeari dagokio.
+
+Ondoren, olatuaren altuera kalkulatzeko irudian ageri diren grafikoak erabiliko
+ditugu:
+
+                        [2525_305_p6_html_52b1f21f.gif]
+
+Espero daitekeen olatuaren altuera 2,5 m izango da ezkerraldeko grafikoaren
+arabera. Prozesuaren iraupena 48 ordu ingurukoa denez, eskuinaldeko grafikoan
+balio horren antzeko bat lortzen dugu. Hortaz, 2,5 m-ko balioa hartuko dugu.
+
+Haizea kostaldearekiko ia perpendikularra denez, islapenagatik olatuaren
+altuera handituko da kasu askotan eta bikoiztu ere egin daiteke. Beraz, azkenik
+olatuaren altuera 2,5 - 5 m artean izango dela joko dugu (itsaso handia).

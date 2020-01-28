@@ -1,0 +1,265 @@
+
+
+
+
+                                             EGONKORTASUNA ETA ISOSTATIKOTASUNA
+3. ESTATIKA GRAFIKOA
+
+3.1 SARRERA
+
+Aurreko gaietan, oraingo honetan erabiliko diren kontzeptuen deskribapenak eta
+definizioak egin dira. Kontzeptu horien azalpenak ezinbestekoak dira gai
+honetan egingo diren prozedurak eta eraikuntza grafikoak ongi ulertzeko.
+
+Ikusi den bezala, egonkortasunaren edo orekaren arazoari ikuspuntu analitiko
+batetik heldu ahal zaio, hau da, ekuazio eta prozedura matematikoetatik; baina,
+ikuspuntu geometriko edo grafiko batez ekitea da beste aukera bat.
+
+Arkitekturan, ezinbestekoa da sistema baten gainean aplikatutako indar-sistema
+batek euskarri edo bermeetan eragiten dituen erreakzioen balioak kalkulatzea.
+Izan ere, honela jakin ahal izango dugu, egiturari eusteko jarri diren bermeak
+egokiak ote diren ala ez.
+
+Jakina da prozedura matematikoak nahi den zehaztasuna izan dezakeela; nahi
+bezain beste dezimal kalkula daitezke eta. Horrela, metodo horiek erabilgarriak
+dira planoan zein espazioan. Metodo grafikoak, ordea, erabilgarriak dira batez
+ere planoan (bi dimentsiotan). Metodo grafikoa era egoki eta zehatz batean
+erabiltzeko, aztertu behar diren egiturak eta haien gainean aplikatutako
+indarrak eskalaz irudikatu behar dira.
+
+Hasiera batean, metodo analitikoak zehatzagoak eta erabilgarriagoak diruditen
+arren, metodo grafikoak egokiagoak dira arkitekturako hainbat aplikaziotan;
+izan ere, dezimal askoren erabilpenak ez du askotan zentzu gehiegirik, ez baitu
+informazio gehiagorik eskaintzen. Adibidez, horma-atal baten luzera 2 354,242 7
+cm dela, edo solairu baten pisua 241,563 82 kg/cm2 dela esateak ez du
+zentzurik.
+
+Metodo grafikoak ongi eta eskala egokian eginak direnean, nahikoa zehatzak izan
+daitezke arkitekturarako edo eraikuntzarako. Gainera, egoera asko eta asko
+planoan aztertuak izan daitezke, eta metodo grafikoa analitikoa baino
+erabilgarriagoa izan daiteke, baita dotoreagoa ere.
+
+Gai honetan suposatzen da bektore analisian ikusitako kontzeptuak ezagunak
+direla; esate baterako, erresultantea, momentua, kanpo-indarrak, erreakzio-
+indarrak, eta abar, horiek izango baitira erabiliko direnak eta era grafiko
+batean kalkulatuko direnak.
+
+Egoerak grafikoki aztertzeko, marrazketarako material egokia beharko da.
+
+
+3.2 INDAR KONKURRENTEEN BATURA ETA KONPOSIZIOA
+
+Bektore-analisian, ikusi den bezala, indarren baturak zentzurik badu, indarrak
+konkurrenteak direnean da. Kasu horretan, erresultantea (batura indarra),
+konkurrentzia-puntuan dago aplikatuta.
+
+Izan bitez [2251_521_gaia_3_estatika_grafikoa_html_4abf9c34.gif] eta
+[2251_521_gaia_3_estatika_grafikoa_html_m25a94f94.gif]bektoreak A puntuan
+aplikatuta daudenak edo A puntuan konkurrenteak direnak. Batura bektorea, S,
+osatzen duten paralelogramoaren diagonala da. Batura bektorea beste era batera
+ere lor daiteke, hots, bi bektoreak bata bestearen atzetik marraztuta (ik.
+Irudia). Berez, q1 bektorea v1 bektorearen ekipolentea dela esaten da, eta
+ondorioz q2, v2-rena.
+[2251_521_gaia_3_estatika_grafikoa_html_m7362e5c0.gif]
+Baturaren definizioak, bektore bat ezagunak diren bi lerrotan deskonposatzeko
+ere balio du, grafikoki egitura berbera erabiltzen baita.
+
+
+
+Batu beharrekoak, bi izan ordez, planokideak diren hiru bektore edo gehiago
+badira, batura bektorea lortzeko, prozedura berbera jarraituko da. Orain,
+bektore ekipolenteak erabil daitezke, bektoreak bata bestearen atzetik
+marrazteko.
+             [2251_521_gaia_3_estatika_grafikoa_html_m5c00737b.gif]
+
+
+3.3 INDAR EZ-KONKURRENTEEN BATURA ETA KONPOSIZIO GRAFIKOA. INDAR-POLIGONOA ETA
+POLIGONO FUNIKULARRA.
+
+Lehendabiziko gaian ikusi den bezala, bektore planokidez osatutako sistema
+baten laburketa bektore bat da, erresultantea ardatz zentralean aplikatuta
+egonik. Indarrak planokideak diren kasuetan, sistema endekatua dela esaten da;
+beraz, momentu minimoa nulua da, hau da, ardatz zentrala momentu nuluen leku
+geometrikoa da, eta hori da sistemaren laburketa. Honelako sistema bat
+grafikoki aztertzeko, indar-poligonoa eta poligono funikularra definitu behar
+dira.
+
+Demagun irudiko solidoa bost indarren eraginpean dagoela: F1, F2, F3, F4 eta
+F5. Irudian, indarrak eta beraien ekintza-lerroak irudikatu dira
+ [2251_521_gaia_3_estatika_grafikoa_html_m2c68bae1.gif]
+[2251_521_gaia_3_estatika_grafikoa_html_169cfc27.gif]
+Bektoreen batura geometrikoz lortzen den poligonoari indar-poligonoa esaten
+zaio.
+
+Erresultanteak, S, ez du aplikazio puntu jakinik, hau da, bektore askea da.
+Aurrean esan bezala, sistemaren laburketa ardatz zentralean egiten da; beraz,
+ardatz zentrala aurkitu behar da, grafikoki, noski.
+
+Hona hemen prozeduraren deskribapena:
+   1. Indar-poligonoan hasiko gara (ezkerreko irudia). Edozein O puntu
+      aukeratuko dugu. Puntu honi polo esaten zaio, eta bertatik abiatuz, OA1,
+      OA2, OA3, OA4, OA5, OA6 lerroak edo erradio polarrak marraztuko dira.
+
+   1. Solidoaren diagrama askean (eskuineko irudia), erradio polar horiek
+      marraztuko ditugu, era honetara: F1 indarraren edozein puntutik abiatuz,
+      OA1 lerroa (horia) edo hobeto esateko, lerro horrekiko paraleloa den
+      lerro bat (L1). Lerro horrek, F1 indarra edo horren ekintza-lerroa
+      ebakiko du (ik. irudia). Ondoren, ebakidura-puntu horretatik L2 lerroa
+      (berdea) marraztuko dugu (OA2 lerroarekiko paraleloa dena); era berean,
+      lerro horrek F2-ren ekintza-lerroa edo F2 bera ebakiko ditu. Azken
+      ebakidura-puntu horretatik hasita, L3 lerroa (urdina) marraztuko dugu
+      (OA3-rekiko paraleloa); horrek F3 edota haren ekintza-lerroa ebakiko du.
+      Eta horrela, L6 lerroa (marroia) marraztu arte.
+
+   1. L1 eta L6 lerroen arteko ebakidura-puntua ardatz zentraleko puntu bat da.
+      Ardatz zentrala erresultantearekiko paraleloa denez, puntu bat ezagutuz
+      gero ardatz zentrala ere ezaguna izango da. Ardatz zentralean marraztuko
+      dugu erresultantea S (gorria).
+
+   1. L1, L2, L3, L4, L5 eta L6 lerroek osatutako poligono irekiari poliogono
+      funikularra esaten zaio, eta horren aldeei, alde funikularrak.Funikular
+      hitza, grekeratik dator, funis (soka) hitzetik, alegia, lerro horrek soka
+      batek F1, F2, F3, F4, eta F5 indarren ondorioz izango lukeen deformazioa
+      gogorarazten baitigu.
+
+ [2251_521_gaia_3_estatika_grafikoa_html_m65fff40b.gif]
+[2251_521_gaia_3_estatika_grafikoa_html_m65bd6af0.gif]
+
+
+Ondoko irudietan ikus daiteke horren guztiaren froga. Ezkerreko irudian ikusten
+denez, A1A2 bektorea (F1, alegia) bi bektoreren batura da, A1O eta OA2
+bektoreena; beraz, F1 bektorea bi horiez ordezkatu dugu eskuineko irudian
+
+Prozesu berbera errepikatuko da indar guztiekin. Alde funikularretan bektoreak
+binaka baliogabetzen dira; ondorioz, A1O eta OA6 gelditzen dira bakarrik. Goiko
+irudian ikusten da bi horien batura Sdela, edo erresultantea.
+             [2251_521_gaia_3_estatika_grafikoa_html_m4f27a3d.gif]
+             [2251_521_gaia_3_estatika_grafikoa_html_m58b173cb.gif]
+
+
+Irudia argiago ikus dadin, egindako pausu guztiak ezabatu ditugu eta
+lehendabiziko eta azkeneko bektoreak bakarrik utzi, A1O eta OA6 alegia.
+             [2251_521_gaia_3_estatika_grafikoa_html_m5a88922e.gif]
+
+Ardatz zentrala grafikoki eraikitzeko O puntu laguntzailea aukeratu dugu, hala
+ere ardatz zentralaren eraikuntza O puntuarekiko askea da, hau da, berdin da
+zein puntu aukeratzen dugun, emaitza beti berbera izango da eta.
+
+             [2251_521_gaia_3_estatika_grafikoa_html_5a29d9b4.gif]
+
+
+
+
+
+
+
+
+3.5. OREKAREN ETA EGONKORTASUNAREN DEDUKZIO GEOMETRIKOA PLANOAN
+
+Estatika grafikoaren helburua, egonkortasuna grafikoki aztertzea da. Indar-
+poligonoak eta lerro funikularrak edo poligono funikularrak marraztean honako
+egoerak aurki ditzakegu:
+
+   1. Indar-poligonoa irekia izatea. Kasu horretan, erresultantea ez da nulua,
+      beraz, sistema erresultantera laburtzen da, eta berau, ardatz zentralean
+      aplikatu behar da. *.* irudietan aztertutako kasua da.
+
+   1. Indar-poligonoa itxia izatea, baina poligono funikularra irekia.
+      Horrelako sistema batean, erresultantea nulua da, baina momentua ez; izan
+      ere, poligono funikularra osatzen duten lehendabiziko eta azkeneko
+      lerroak paraleloak dira; beraz, sistema indar-parea da.
+
+             [2251_521_gaia_3_estatika_grafikoa_html_19fa44ed.gif]
+
+   1. Azkenik indar-poligonoa eta poligono funikularra itxiak diren kasua dugu.
+      Sistema horretan erresultantea eta momentu totala, biak nuluak dira, eta
+      beraz, sistema orekan dago.
+              [2251_521_gaia_3_estatika_grafikoa_html_654c849.gif]
+           3.4. ERRESULTANTE JARRAITUEN POLIGONOA ETA PRESIO-LERROA
+
+Ardatz zentrala marrazteko, aurreko atalean O puntu laguntzailea hartu dugu
+abiapuntu edo polotzat. Edozein puntu aukeratu beharrean F1 edo beste edozein
+indarren aplikazio puntua izan daiteke puntu laguntzailea, honela beste
+poligono funikular mota lortzen da (ikus irudia). Agian, era horretara egin
+beharreko prozedura laburragoa eta zuzenagoa da. Are gehiago, baditu beste
+abantaila batzuk, haien artean garrantzitsuena, eraikitako poligonoa
+erresultante jarraituen poligonoa dela; gainera, poligono hori eraikitzeko
+orduan, kanpo-indarrak edo akzio-indarrak eta erreakzio-indarrak edo bermeek
+eragindako indarrak kontuan hartu badira, eraikitako poligonoak presio-lerroa
+osatzen du.
+
+             [2251_521_gaia_3_estatika_grafikoa_html_m7575582.gif]
+            [2251_521_gaia_3_estatika_grafikoa_html_m75ae1ad7.gif]
+
+Erresultante jarraituak, orduan, zer dira? Ezen, gorputzaren gainean eragiten
+duten indarren batura partzialak. Honela L1, F1 den bezala
+[2251_521_gaia_3_estatika_grafikoa_html_m4eb030bd.gif],
+[2251_521_gaia_3_estatika_grafikoa_html_m61211d6a.gif] eta
+[2251_521_gaia_3_estatika_grafikoa_html_me0df65d.gif] dira.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+APLIKAZIO ARIKETA
+
+Demagun arku baten erdia aztertzen ari garela. Arkua lau dobelaz osatuta dago
+eta beraien pisuak ezagunak dira, irudian ikusten den bezala. Arkuaren erdia
+giltzarriari eutsita dago eta Q erreakzio horizontala jasaten du. Bestalde,
+horma-bularraren gainean jarrita dago eta R erreakzioa jasaten du. Q erreakzioa
+hormaren erdian aplikatuta dago eta R erreakzioa horma-bular kantoian. Aurki
+ezazu presio-lerroa.
+
+
+
+
+[2251_521_gaia_3_estatika_grafikoa_html_m62c474c3.gif]
+[2251_521_gaia_3_estatika_grafikoa_html_3f967d5d.gif]
+
+                          [2251_521_gaia_3_estatika_grafikoa_html_6f645bf9.gif]
+
+[2251_521_gaia_3_estatika_grafikoa_html_3f2c1404.gif]
+
+[2251_521_gaia_3_estatika_grafikoa_html_m74b0a1d2.gif]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. GAIA. ESTATIKA GRAFIKOA
+11
+

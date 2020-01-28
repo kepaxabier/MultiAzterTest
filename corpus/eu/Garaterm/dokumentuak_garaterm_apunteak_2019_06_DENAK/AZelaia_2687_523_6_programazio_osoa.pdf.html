@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<HTML xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<HEAD>
+<TITLE>2687_523_6_programazio_osoa.pdf</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<META name="generator" content="pdftohtml 0.36"/>
+<META name="date" content="2010-12-01T17:24:12+00:00"/>
+</HEAD>
+<BODY bgcolor="#A0A0A0" vlink="blue" link="blue">
+<!-- Page 1 -->
+<a name="1"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft10{font-size:35px;font-family:Times;color:#000000;}
+	.ft11{font-size:15px;font-family:Times;color:#000000;}
+	.ft12{font-size:15px;font-family:Times;color:#000000;}
+	.ft13{font-size:23px;font-family:Times;color:#000000;}
+	.ft14{font-size:15px;font-family:Times;color:#000000;}
+	.ft15{font-size:15px;line-height:21px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page1-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:301px;left:133px;white-space:nowrap" class="ft10"><b>6.&#160;Kapitulua</b></P>
+<P style="position:absolute;top:376px;left:133px;white-space:nowrap" class="ft10"><b>Programazio&#160;osoa</b></P>
+<P style="position:absolute;top:471px;left:133px;white-space:nowrap" class="ft15">Kapitulu&#160;honetan,&#160;aztergai&#160;izango&#160;ditugun&#160;problema&#160;linealetan&#160;aldagai&#160;batzuek<br/>edo&#160;guztiek&#160;balio&#160;osoak&#160;hartu&#160;behar&#160;dituzte.&#160;Mota&#160;horretako&#160;problema&#160;linealak<br/>ebazteko,&#160;programazio&#160;osoaren&#160;teknikak&#160;garatu&#160;dira&#160;eta,&#160;ikusiko&#160;dugunez,&#160;pro-<br/>blema&#160;osoaren&#160;soluzio&#160;optimoa&#160;lortzeko,&#160;programazio&#160;linealeko&#160;zenbait&#160;problema<br/>ebatzi&#160;beharko&#160;dira.</P>
+<P style="position:absolute;top:579px;left:160px;white-space:nowrap" class="ft11">Aldagai&#160;errealeko&#160;eredu&#160;linealak&#160;ebazteko&#160;ezagutzen&#160;dugun&#160;simplex&#160;algorit-</P>
+<P style="position:absolute;top:601px;left:133px;white-space:nowrap" class="ft15">moa&#160;soluzioen&#160;multzoaren&#160;ganbiltasunean&#160;oinarritzen&#160;da.&#160;Multzo&#160;ganbilen&#160;mutur-<br/>puntu&#160;kopurua&#160;ﬁnitua&#160;da&#160;eta,&#160;frogatu&#160;dugunez,&#160;soluzio&#160;optimoa&#160;horietariko&#160;mutur-<br/>puntu&#160;batean&#160;aurkitzen&#160;da.&#160;Aldagaiak&#160;osoak&#160;izateko&#160;murrizketak&#160;soluzioen&#160;mul-<br/>tzoa&#160;murrizten&#160;badu&#160;ere,&#160;problemaren&#160;soluzio&#160;optimoaren&#160;kalkulua&#160;zaildu&#160;egiten<br/>du.</P>
+<P style="position:absolute;top:709px;left:160px;white-space:nowrap" class="ft11">Aldagaien&#160;balioak&#160;kontuan&#160;hartuz,&#160;eredu&#160;lineal&#160;osoak&#160;hiru&#160;motakoak&#160;izan&#160;dai-</P>
+<P style="position:absolute;top:731px;left:133px;white-space:nowrap" class="ft11">tezke.</P>
+<P style="position:absolute;top:764px;left:159px;white-space:nowrap" class="ft12">•</P>
+<P style="position:absolute;top:763px;left:177px;white-space:nowrap" class="ft11">Programazio&#160;oso&#160;mistoan&#160;aldagaiak&#160;bai&#160;oso&#160;eta&#160;bai&#160;erreal&#160;izan&#160;daitezke.</P>
+<P style="position:absolute;top:798px;left:159px;white-space:nowrap" class="ft12">•</P>
+<P style="position:absolute;top:797px;left:177px;white-space:nowrap" class="ft11">Programazio&#160;oso&#160;hutsean&#160;aldagai&#160;guztiak&#160;osoak&#160;dira.</P>
+<P style="position:absolute;top:833px;left:159px;white-space:nowrap" class="ft12">•</P>
+<P style="position:absolute;top:832px;left:177px;white-space:nowrap" class="ft11">0-1&#160;programazio&#160;osoko&#160;ereduetan&#160;aldagai&#160;guztiak&#160;bitarrak&#160;dira.</P>
+<P style="position:absolute;top:886px;left:133px;white-space:nowrap" class="ft13"><b>6.1</b></P>
+<P style="position:absolute;top:886px;left:192px;white-space:nowrap" class="ft13"><b>Programazio&#160;osoaren&#160;aplikazio&#160;batzuk</b></P>
+<P style="position:absolute;top:932px;left:133px;white-space:nowrap" class="ft15">Atal&#160;honetan&#160;programazio&#160;osoaren&#160;eta&#160;0-1&#160;programazio&#160;osoaren&#160;zenbait&#160;adibide<br/>azalduko&#160;dugu.</P>
+<P style="position:absolute;top:975px;left:160px;white-space:nowrap" class="ft14"><b>1.&#160;Adibidea.&#160;</b>Postetxe&#160;bulego&#160;batean&#160;asteko&#160;egun&#160;bakoitzerako&#160;langile&#160;kopuru</P>
+<P style="position:absolute;top:997px;left:133px;white-space:nowrap" class="ft11">desberdinak&#160;behar&#160;dira&#160;(ikus&#160;taula).</P>
+<P style="position:absolute;top:1042px;left:411px;white-space:nowrap" class="ft11">201</P>
+</DIV>
+<!-- Page 2 -->
+<a name="2"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft26{font-size:15px;font-family:Times;color:#000000;}
+	.ft27{font-size:9px;font-family:Times;color:#000000;}
+	.ft28{font-size:14px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page2-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:201px;white-space:nowrap" class="ft21">202</P>
+<P style="position:absolute;top:141px;left:628px;white-space:nowrap" class="ft26"><i>6.&#160;Programazio&#160;osoa</i></P>
+<P style="position:absolute;top:200px;left:422px;white-space:nowrap" class="ft21">Eguna</P>
+<P style="position:absolute;top:200px;left:516px;white-space:nowrap" class="ft21">Langileak</P>
+<P style="position:absolute;top:234px;left:397px;white-space:nowrap" class="ft21">1.&#160;Astelehena</P>
+<P style="position:absolute;top:232px;left:543px;white-space:nowrap" class="ft22">15</P>
+<P style="position:absolute;top:266px;left:397px;white-space:nowrap" class="ft21">2.&#160;Asteartea</P>
+<P style="position:absolute;top:265px;left:543px;white-space:nowrap" class="ft22">13</P>
+<P style="position:absolute;top:299px;left:397px;white-space:nowrap" class="ft21">3.&#160;Asteazkena</P>
+<P style="position:absolute;top:297px;left:543px;white-space:nowrap" class="ft22">15</P>
+<P style="position:absolute;top:331px;left:397px;white-space:nowrap" class="ft21">4.&#160;Osteguna</P>
+<P style="position:absolute;top:330px;left:543px;white-space:nowrap" class="ft22">18</P>
+<P style="position:absolute;top:364px;left:397px;white-space:nowrap" class="ft21">5.&#160;Ostirala</P>
+<P style="position:absolute;top:362px;left:543px;white-space:nowrap" class="ft22">14</P>
+<P style="position:absolute;top:396px;left:397px;white-space:nowrap" class="ft21">6.&#160;Larunbata</P>
+<P style="position:absolute;top:395px;left:543px;white-space:nowrap" class="ft22">16</P>
+<P style="position:absolute;top:429px;left:397px;white-space:nowrap" class="ft21">7.&#160;Igandea</P>
+<P style="position:absolute;top:427px;left:543px;white-space:nowrap" class="ft22">10</P>
+<P style="position:absolute;top:476px;left:227px;white-space:nowrap" class="ft21">Langile&#160;bakoitzak&#160;bost&#160;egunez&#160;jarraian&#160;lan&#160;egin&#160;behar&#160;du&#160;eta&#160;gero&#160;bi&#160;egunez</P>
+<P style="position:absolute;top:497px;left:201px;white-space:nowrap" class="ft25">atsedena&#160;hartu.&#160;Erabaki&#160;behar&#160;da&#160;asteko&#160;egun&#160;bakoitzean&#160;lanean&#160;hasiko&#160;den&#160;langile<br/>kopurua&#160;zein&#160;izango&#160;den,&#160;postetxeko&#160;eguneroko&#160;langile&#160;beharrak&#160;asetuko&#160;direlarik.<br/>Problemaren&#160;helburua&#160;postetxeko&#160;langile&#160;beharrei&#160;aurre&#160;egitea&#160;da,&#160;langile&#160;kopuru<br/>minimoa&#160;kontratatuz.</P>
+<P style="position:absolute;top:586px;left:227px;white-space:nowrap" class="ft21">Eredu&#160;lineala&#160;idazteko&#160;ondoko&#160;erabaki-aldagaiak&#160;deﬁnitzen&#160;dira:</P>
+<P style="position:absolute;top:635px;left:265px;white-space:nowrap" class="ft22">xj&#160;:&#160;j&#160;egunean&#160;lanean&#160;hasiko&#160;den&#160;langile&#160;kopurua,&#160;j&#160;=&#160;1,&#160;.&#160;.&#160;.&#160;,&#160;7.</P>
+<P style="position:absolute;top:674px;left:227px;white-space:nowrap" class="ft21">Asteko&#160;egun&#160;bakoitzerako&#160;murrizketa&#160;bat&#160;idatziko&#160;da,&#160;egun&#160;horretan&#160;lanean</P>
+<P style="position:absolute;top:695px;left:201px;white-space:nowrap" class="ft25">dagoen&#160;langile&#160;kopuruak&#160;langile-beharra&#160;asetzen&#160;duela&#160;ziurtatzeko.&#160;Eredu&#160;lineala<br/>ondokoa&#160;da:</P>
+<P style="position:absolute;top:760px;left:379px;white-space:nowrap" class="ft22">min&#160;z&#160;=&#160;x1&#160;+&#160;x2&#160;+&#160;x3&#160;+&#160;x4&#160;+&#160;x5&#160;+&#160;x6&#160;+&#160;x7</P>
+<P style="position:absolute;top:788px;left:369px;white-space:nowrap" class="ft21">hauen&#160;mende</P>
+<P style="position:absolute;top:814px;left:489px;white-space:nowrap" class="ft22">x1</P>
+<P style="position:absolute;top:813px;left:510px;white-space:nowrap" class="ft22">+&#160;x4&#160;+&#160;x5&#160;+&#160;x6&#160;+&#160;x7&#160;≥&#160;15</P>
+<P style="position:absolute;top:840px;left:489px;white-space:nowrap" class="ft22">x1</P>
+<P style="position:absolute;top:839px;left:510px;white-space:nowrap" class="ft22">+&#160;x2&#160;+&#160;x5&#160;+&#160;x6&#160;+&#160;x7&#160;≥&#160;13</P>
+<P style="position:absolute;top:866px;left:489px;white-space:nowrap" class="ft22">x1</P>
+<P style="position:absolute;top:865px;left:510px;white-space:nowrap" class="ft22">+&#160;x2&#160;+&#160;x3&#160;+&#160;x6&#160;+&#160;x7&#160;≥&#160;15</P>
+<P style="position:absolute;top:892px;left:489px;white-space:nowrap" class="ft22">x1</P>
+<P style="position:absolute;top:891px;left:510px;white-space:nowrap" class="ft22">+&#160;x2&#160;+&#160;x3&#160;+&#160;x4&#160;+&#160;x7&#160;≥&#160;18</P>
+<P style="position:absolute;top:918px;left:489px;white-space:nowrap" class="ft22">x1</P>
+<P style="position:absolute;top:917px;left:510px;white-space:nowrap" class="ft22">+&#160;x2&#160;+&#160;x3&#160;+&#160;x4&#160;+&#160;x5&#160;≥&#160;14</P>
+<P style="position:absolute;top:944px;left:489px;white-space:nowrap" class="ft22">x2</P>
+<P style="position:absolute;top:943px;left:510px;white-space:nowrap" class="ft22">+&#160;x3&#160;+&#160;x4&#160;+&#160;x5&#160;+&#160;x6&#160;≥&#160;16</P>
+<P style="position:absolute;top:971px;left:489px;white-space:nowrap" class="ft22">x3</P>
+<P style="position:absolute;top:970px;left:510px;white-space:nowrap" class="ft22">+&#160;x4&#160;+&#160;x5&#160;+&#160;x6&#160;+&#160;x7&#160;≥&#160;10</P>
+<P style="position:absolute;top:997px;left:431px;white-space:nowrap" class="ft22">x1,&#160;x2,&#160;x3,&#160;x4,&#160;x5,&#160;x6,&#160;x7&#160;≥</P>
+<P style="position:absolute;top:996px;left:622px;white-space:nowrap" class="ft22">0&#160;eta&#160;osoak</P>
+<P style="position:absolute;top:1043px;left:201px;white-space:nowrap" class="ft28"><i>OpenCourseWare,&#160;UPV/EHU</i></P>
+</DIV>
+<!-- Page 3 -->
+<a name="3"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page3-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:133px;white-space:nowrap" class="ft36"><i>6.1.&#160;Programazio&#160;osoaren&#160;aplikazio&#160;batzuk</i></P>
+<P style="position:absolute;top:141px;left:689px;white-space:nowrap" class="ft31">203</P>
+<P style="position:absolute;top:195px;left:160px;white-space:nowrap" class="ft34"><b>2.&#160;Adibidea.&#160;Motxilaren&#160;problema.&#160;</b>Gehienez&#160;12&#160;kg&#160;eramateko&#160;ahalmena</P>
+<P style="position:absolute;top:217px;left:133px;white-space:nowrap" class="ft35">duen&#160;motxila&#160;bat&#160;zenbait&#160;objektuz&#160;bete&#160;nahi&#160;dugu.&#160;Lau&#160;objektu&#160;ditugu,&#160;eta&#160;hauen<br/>balioa&#160;eta&#160;pisua&#160;ondoko&#160;taulakoak&#160;dira:</P>
+<P style="position:absolute;top:311px;left:431px;white-space:nowrap" class="ft32">1</P>
+<P style="position:absolute;top:311px;left:464px;white-space:nowrap" class="ft32">2</P>
+<P style="position:absolute;top:311px;left:496px;white-space:nowrap" class="ft32">3</P>
+<P style="position:absolute;top:311px;left:529px;white-space:nowrap" class="ft32">4</P>
+<P style="position:absolute;top:346px;left:312px;white-space:nowrap" class="ft31">Pisua&#160;(kg)</P>
+<P style="position:absolute;top:344px;left:431px;white-space:nowrap" class="ft32">3</P>
+<P style="position:absolute;top:344px;left:464px;white-space:nowrap" class="ft32">6</P>
+<P style="position:absolute;top:344px;left:496px;white-space:nowrap" class="ft32">5</P>
+<P style="position:absolute;top:344px;left:529px;white-space:nowrap" class="ft32">5</P>
+<P style="position:absolute;top:378px;left:312px;white-space:nowrap" class="ft31">Balioa&#160;(euro)</P>
+<P style="position:absolute;top:377px;left:422px;white-space:nowrap" class="ft32">15&#160;25&#160;12&#160;10</P>
+<P style="position:absolute;top:444px;left:160px;white-space:nowrap" class="ft31">Erabaki&#160;behar&#160;da&#160;zein&#160;objektu&#160;sartu&#160;motxilan&#160;bere&#160;balio-totala&#160;maximizatzeko.</P>
+<P style="position:absolute;top:466px;left:133px;white-space:nowrap" class="ft35">Problema&#160;eredu&#160;lineal&#160;baten&#160;bidez&#160;adierazteko,&#160;ondoko&#160;erabaki-aldagaiak&#160;deﬁni-<br/>tuko&#160;ditugu&#160;j&#160;objektuetarako,&#160;j</P>
+<P style="position:absolute;top:486px;left:361px;white-space:nowrap" class="ft32">=&#160;1,&#160;2,&#160;3,&#160;4.</P>
+<P style="position:absolute;top:560px;left:234px;white-space:nowrap" class="ft32">xj&#160;=</P>
+<P style="position:absolute;top:536px;left:274px;white-space:nowrap" class="ft32"></P>
+<P style="position:absolute;top:552px;left:274px;white-space:nowrap" class="ft32"></P>
+<P style="position:absolute;top:584px;left:274px;white-space:nowrap" class="ft32"></P>
+<P style="position:absolute;top:545px;left:297px;white-space:nowrap" class="ft32">1&#160;baldin&#160;j&#160;objektua&#160;motxilan&#160;sartzen&#160;bada</P>
+<P style="position:absolute;top:578px;left:297px;white-space:nowrap" class="ft32">0</P>
+<P style="position:absolute;top:579px;left:325px;white-space:nowrap" class="ft31">kontrako&#160;kasuan</P>
+<P style="position:absolute;top:623px;left:133px;white-space:nowrap" class="ft31">Eredu&#160;lineala&#160;ondokoa&#160;da:</P>
+<P style="position:absolute;top:671px;left:277px;white-space:nowrap" class="ft32">max&#160;z&#160;=&#160;15x1&#160;+&#160;25x2&#160;+&#160;12x3&#160;+&#160;10x4</P>
+<P style="position:absolute;top:699px;left:267px;white-space:nowrap" class="ft31">hauen&#160;mende</P>
+<P style="position:absolute;top:724px;left:343px;white-space:nowrap" class="ft32">3x1&#160;+&#160;6x2&#160;+&#160;5x3&#160;+&#160;5x4&#160;≤&#160;12</P>
+<P style="position:absolute;top:751px;left:385px;white-space:nowrap" class="ft32">x1,&#160;x2,&#160;x3,&#160;x4</P>
+<P style="position:absolute;top:750px;left:482px;white-space:nowrap" class="ft32">=&#160;0&#160;edo&#160;1</P>
+<P style="position:absolute;top:827px;left:133px;white-space:nowrap" class="ft35">Antzeko&#160;planteamendua&#160;egin&#160;daiteke&#160;murrizketa&#160;gehiagorekin,&#160;adibidez,&#160;objek-<br/>tuaren&#160;bolumena&#160;kontuan&#160;hartuz.</P>
+<P style="position:absolute;top:888px;left:160px;white-space:nowrap" class="ft34"><b>3.&#160;Adibidea.&#160;</b>Eskualde&#160;batean&#160;6&#160;hiri&#160;daude.&#160;Hiriak&#160;elkarren&#160;artean&#160;komunika-</P>
+<P style="position:absolute;top:910px;left:133px;white-space:nowrap" class="ft35">tuak&#160;egon&#160;daitezen,&#160;tren-geltokiak&#160;eraiki&#160;nahi&#160;dira.&#160;Tren-geltoki&#160;horien&#160;kokapena<br/>erabaki&#160;nahi&#160;da,&#160;beti&#160;ere,&#160;edozein&#160;hiritatik&#160;abiatuta&#160;ere,&#160;30&#160;minutuan&#160;edo&#160;gutxia-<br/>gotan&#160;tren-geltoki&#160;bat&#160;izango&#160;dela&#160;ziurtatu&#160;behar&#160;delarik&#160;eta&#160;ahalik&#160;eta&#160;tren-geltoki<br/>gutxienak&#160;eraiki&#160;nahi&#160;direlarik.&#160;Hiri&#160;bakoitzetik&#160;gainerakoetara&#160;joateko&#160;behar&#160;den<br/>denbora&#160;ondoko&#160;taulan&#160;agertzen&#160;da:</P>
+<P style="position:absolute;top:1043px;left:347px;white-space:nowrap" class="ft38"><i>Ikastaroa:&#160;Ikerkuntza&#160;Operatiboa.&#160;Programazio&#160;Lineala</i></P>
+</DIV>
+<!-- Page 4 -->
+<a name="4"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page4-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:201px;white-space:nowrap" class="ft41">204</P>
+<P style="position:absolute;top:141px;left:628px;white-space:nowrap" class="ft46"><i>6.&#160;Programazio&#160;osoa</i></P>
+<P style="position:absolute;top:199px;left:423px;white-space:nowrap" class="ft42">1</P>
+<P style="position:absolute;top:199px;left:455px;white-space:nowrap" class="ft42">2</P>
+<P style="position:absolute;top:199px;left:488px;white-space:nowrap" class="ft42">3</P>
+<P style="position:absolute;top:199px;left:520px;white-space:nowrap" class="ft42">4</P>
+<P style="position:absolute;top:199px;left:553px;white-space:nowrap" class="ft42">5</P>
+<P style="position:absolute;top:199px;left:585px;white-space:nowrap" class="ft42">6</P>
+<P style="position:absolute;top:232px;left:390px;white-space:nowrap" class="ft42">1</P>
+<P style="position:absolute;top:232px;left:423px;white-space:nowrap" class="ft42">0&#160;35&#160;20&#160;40&#160;30&#160;60</P>
+<P style="position:absolute;top:265px;left:390px;white-space:nowrap" class="ft42">2&#160;35</P>
+<P style="position:absolute;top:265px;left:455px;white-space:nowrap" class="ft42">0&#160;45&#160;35&#160;20&#160;70</P>
+<P style="position:absolute;top:297px;left:390px;white-space:nowrap" class="ft42">3&#160;20&#160;45</P>
+<P style="position:absolute;top:297px;left:488px;white-space:nowrap" class="ft42">0&#160;15&#160;55&#160;20</P>
+<P style="position:absolute;top:330px;left:390px;white-space:nowrap" class="ft42">4&#160;40&#160;35&#160;15</P>
+<P style="position:absolute;top:330px;left:520px;white-space:nowrap" class="ft42">0&#160;65&#160;35</P>
+<P style="position:absolute;top:362px;left:390px;white-space:nowrap" class="ft42">5&#160;30&#160;20&#160;55&#160;65</P>
+<P style="position:absolute;top:362px;left:553px;white-space:nowrap" class="ft42">0&#160;40</P>
+<P style="position:absolute;top:395px;left:390px;white-space:nowrap" class="ft42">6&#160;60&#160;70&#160;20&#160;35&#160;40</P>
+<P style="position:absolute;top:395px;left:585px;white-space:nowrap" class="ft42">0</P>
+<P style="position:absolute;top:430px;left:227px;white-space:nowrap" class="ft41">Ondoko&#160;aldagai&#160;bitarrak&#160;deﬁnitzen&#160;ditugu&#160;j&#160;hirietarako,&#160;j</P>
+<P style="position:absolute;top:429px;left:644px;white-space:nowrap" class="ft42">=&#160;1,&#160;.&#160;.&#160;.&#160;,&#160;6:</P>
+<P style="position:absolute;top:490px;left:287px;white-space:nowrap" class="ft42">xj&#160;=</P>
+<P style="position:absolute;top:466px;left:327px;white-space:nowrap" class="ft42"></P>
+<P style="position:absolute;top:482px;left:327px;white-space:nowrap" class="ft42"></P>
+<P style="position:absolute;top:514px;left:327px;white-space:nowrap" class="ft42"></P>
+<P style="position:absolute;top:475px;left:351px;white-space:nowrap" class="ft42">1&#160;baldin&#160;j&#160;hirian&#160;tren-geltokia&#160;eraikitzen&#160;bada</P>
+<P style="position:absolute;top:507px;left:351px;white-space:nowrap" class="ft42">0&#160;kontrako&#160;kasuan</P>
+<P style="position:absolute;top:538px;left:227px;white-space:nowrap" class="ft41">Eredu&#160;lineala&#160;ondokoa&#160;da:</P>
+<P style="position:absolute;top:568px;left:399px;white-space:nowrap" class="ft42">min&#160;z&#160;=&#160;x1&#160;+&#160;x2&#160;+&#160;x3&#160;+&#160;x4&#160;+&#160;x5&#160;+&#160;x6</P>
+<P style="position:absolute;top:596px;left:392px;white-space:nowrap" class="ft41">hauen&#160;mende</P>
+<P style="position:absolute;top:622px;left:556px;white-space:nowrap" class="ft42">x1</P>
+<P style="position:absolute;top:621px;left:577px;white-space:nowrap" class="ft42">+&#160;x3&#160;+&#160;x5&#160;≥&#160;1</P>
+<P style="position:absolute;top:648px;left:595px;white-space:nowrap" class="ft42">x2</P>
+<P style="position:absolute;top:647px;left:616px;white-space:nowrap" class="ft42">+&#160;x5&#160;≥&#160;1</P>
+<P style="position:absolute;top:674px;left:517px;white-space:nowrap" class="ft42">x1</P>
+<P style="position:absolute;top:673px;left:538px;white-space:nowrap" class="ft42">+&#160;x3&#160;+&#160;x4&#160;+&#160;x6&#160;≥&#160;1</P>
+<P style="position:absolute;top:700px;left:595px;white-space:nowrap" class="ft42">x3</P>
+<P style="position:absolute;top:699px;left:616px;white-space:nowrap" class="ft42">+&#160;x4&#160;≥&#160;1</P>
+<P style="position:absolute;top:726px;left:556px;white-space:nowrap" class="ft42">x1</P>
+<P style="position:absolute;top:725px;left:577px;white-space:nowrap" class="ft42">+&#160;x2&#160;+&#160;x5&#160;≥&#160;1</P>
+<P style="position:absolute;top:752px;left:595px;white-space:nowrap" class="ft42">x3</P>
+<P style="position:absolute;top:751px;left:616px;white-space:nowrap" class="ft42">+&#160;x6&#160;≥&#160;1</P>
+<P style="position:absolute;top:779px;left:465px;white-space:nowrap" class="ft42">x1,&#160;x2,&#160;x3,&#160;x4,&#160;x5,&#160;x6</P>
+<P style="position:absolute;top:778px;left:612px;white-space:nowrap" class="ft42">=&#160;0&#160;edo&#160;1</P>
+<P style="position:absolute;top:810px;left:227px;white-space:nowrap" class="ft41">Murrizketa&#160;bakoitza&#160;hiri&#160;bati&#160;dagokio,&#160;eta&#160;ziurtatzen&#160;du&#160;hiri&#160;horretatik&#160;gehie-</P>
+<P style="position:absolute;top:832px;left:201px;white-space:nowrap" class="ft41">nez</P>
+<P style="position:absolute;top:831px;left:233px;white-space:nowrap" class="ft42">30&#160;minutura&#160;badagoela&#160;tren-geltoki&#160;bat.&#160;Adibidez,&#160;lehenengo&#160;murrizketak</P>
+<P style="position:absolute;top:853px;left:201px;white-space:nowrap" class="ft41">lehenengo&#160;hiritik</P>
+<P style="position:absolute;top:852px;left:330px;white-space:nowrap" class="ft42">30&#160;minutura&#160;edo&#160;gertuago&#160;tren-geltoki&#160;bat&#160;egongo&#160;dela&#160;ziurta-</P>
+<P style="position:absolute;top:875px;left:201px;white-space:nowrap" class="ft41">tzen&#160;du.</P>
+<P style="position:absolute;top:929px;left:201px;white-space:nowrap" class="ft43"><b>6.2</b></P>
+<P style="position:absolute;top:929px;left:259px;white-space:nowrap" class="ft43"><b>Problema&#160;osoen&#160;ebazpena</b></P>
+<P style="position:absolute;top:975px;left:201px;white-space:nowrap" class="ft45">Hasteko,&#160;eredu&#160;lineal&#160;oso&#160;baten&#160;soluzio&#160;optimoa&#160;kalkulatzerakoan&#160;sortzen&#160;diren<br/>zailtasunak&#160;adibide&#160;baten&#160;bidez&#160;erakutsiko&#160;ditugu.</P>
+<P style="position:absolute;top:1043px;left:201px;white-space:nowrap" class="ft48"><i>OpenCourseWare,&#160;UPV/EHU</i></P>
+</DIV>
+<!-- Page 5 -->
+<a name="5"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft59{font-size:14px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page5-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:133px;white-space:nowrap" class="ft56"><i>6.2.&#160;Problema&#160;osoen&#160;ebazpena</i></P>
+<P style="position:absolute;top:141px;left:689px;white-space:nowrap" class="ft51">205</P>
+<P style="position:absolute;top:195px;left:160px;white-space:nowrap" class="ft51">Izan&#160;bedi&#160;ondoko&#160;eredu&#160;lineala:</P>
+<P style="position:absolute;top:229px;left:336px;white-space:nowrap" class="ft52">max&#160;z&#160;=&#160;80x1&#160;+&#160;45x2</P>
+<P style="position:absolute;top:256px;left:320px;white-space:nowrap" class="ft51">hauen&#160;mende</P>
+<P style="position:absolute;top:282px;left:411px;white-space:nowrap" class="ft52">x1</P>
+<P style="position:absolute;top:281px;left:433px;white-space:nowrap" class="ft52">+&#160;x2&#160;≤&#160;7</P>
+<P style="position:absolute;top:307px;left:376px;white-space:nowrap" class="ft52">12x1&#160;+&#160;5x2&#160;≤&#160;60</P>
+<P style="position:absolute;top:334px;left:354px;white-space:nowrap" class="ft52">x1,&#160;x2&#160;≥</P>
+<P style="position:absolute;top:333px;left:419px;white-space:nowrap" class="ft52">0&#160;eta&#160;osoak</P>
+<P style="position:absolute;top:396px;left:133px;white-space:nowrap" class="ft51">Ondoko&#160;graﬁkoan&#160;adierazten&#160;da&#160;eredu&#160;lineal&#160;osoaren&#160;soluzioen&#160;multzoa:</P>
+<P style="position:absolute;top:481px;left:279px;white-space:nowrap" class="ft59">x1</P>
+<P style="position:absolute;top:476px;left:299px;white-space:nowrap" class="ft59">+&#160;x2&#160;=&#160;7</P>
+<P style="position:absolute;top:453px;left:279px;white-space:nowrap" class="ft59">12x1&#160;+&#160;5x2&#160;=&#160;60</P>
+<P style="position:absolute;top:664px;left:557px;white-space:nowrap" class="ft52">x1</P>
+<P style="position:absolute;top:433px;left:381px;white-space:nowrap" class="ft52">x2</P>
+<P style="position:absolute;top:569px;left:314px;white-space:nowrap" class="ft51">max</P>
+<P style="position:absolute;top:802px;left:160px;white-space:nowrap" class="ft51">Soluzioen&#160;multzoan&#160;puntu&#160;kopuru&#160;ﬁnitua&#160;dago,&#160;eta&#160;ondorioz,&#160;puntu&#160;guztiak</P>
+<P style="position:absolute;top:823px;left:133px;white-space:nowrap" class="ft55">kalkula&#160;daitezke&#160;eta&#160;horietako&#160;bakoitzean&#160;helburu&#160;funtzioaren&#160;balioa&#160;aztertu,&#160;op-<br/>timoa&#160;aurkitzeko.&#160;Baina,&#160;metodo&#160;hori&#160;ez&#160;da&#160;eraginkorra&#160;aldagai&#160;asko&#160;dituzten<br/>problematan,&#160;soluzioen&#160;multzoan&#160;egon&#160;daitekeen&#160;puntu&#160;kopuruagatik.</P>
+<P style="position:absolute;top:888px;left:160px;white-space:nowrap" class="ft51">Kapitulu&#160;honetan&#160;ikusiko&#160;dugu&#160;problema&#160;osoaren&#160;soluzio&#160;optimoa&#160;kalkulatze-</P>
+<P style="position:absolute;top:910px;left:133px;white-space:nowrap" class="ft55">ko&#160;askoz&#160;ere&#160;kalkulu&#160;gehiago&#160;egin&#160;beharko&#160;dugula,&#160;nahiz&#160;eta&#160;jatorrizko&#160;problemari<br/>oso&#160;izatearen&#160;murrizketa&#160;kenduta&#160;geratzen&#160;den&#160;problemaren&#160;soluzio&#160;kopurua&#160;txi-<br/>kiagoa&#160;izan.&#160;Horren&#160;arrazoia&#160;hau&#160;da:&#160;problema&#160;lineal&#160;osoaren&#160;soluzioen&#160;multzoa<br/>ez&#160;dela&#160;multzo&#160;ganbila,&#160;problema&#160;lineal&#160;orokorretan,&#160;aldiz,&#160;bai.&#160;Ganbiltasunaren<br/>propietateari&#160;esker,&#160;2.&#160;Kapituluan&#160;garatutako&#160;teoria&#160;aplika&#160;daiteke.</P>
+<P style="position:absolute;top:1043px;left:347px;white-space:nowrap" class="ft58"><i>Ikastaroa:&#160;Ikerkuntza&#160;Operatiboa.&#160;Programazio&#160;Lineala</i></P>
+</DIV>
+<!-- Page 6 -->
+<a name="6"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page6-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:201px;white-space:nowrap" class="ft61">206</P>
+<P style="position:absolute;top:141px;left:628px;white-space:nowrap" class="ft66"><i>6.&#160;Programazio&#160;osoa</i></P>
+<P style="position:absolute;top:195px;left:227px;white-space:nowrap" class="ft61">Ereduaren&#160;soluzio&#160;optimoa&#160;aurkitzeko&#160;beste&#160;modu&#160;bat&#160;problema&#160;ebaztea&#160;da,&#160;al-</P>
+<P style="position:absolute;top:217px;left:201px;white-space:nowrap" class="ft65">dagaiak&#160;osoak&#160;izateko&#160;murrizketa&#160;kontuan&#160;hartu&#160;gabe,&#160;eta&#160;behin&#160;soluzio&#160;optimoa<br/>kalkulatu&#160;denean,&#160;soluzio&#160;horretatik&#160;gertuen&#160;dagoen&#160;soluzio&#160;osoa&#160;problema&#160;osoa-<br/>ren&#160;soluziotzat&#160;hartzea.&#160;Adibidearekin&#160;jarraituz,&#160;aldagaiek&#160;osoak&#160;izateko&#160;duten<br/>murrizketa&#160;kenduko&#160;diogu&#160;problemari;&#160;problema&#160;horri&#160;<i>problema&#160;erlaxatua&#160;</i>esaten<br/>zaio,&#160;eta&#160;P&#160;E&#160;laburduraz&#160;adieraziko&#160;dugu&#160;aurrerantzean.&#160;Ondoko&#160;graﬁkoan&#160;dago<br/>problema&#160;erlaxatuaren&#160;ebazpena:</P>
+<P style="position:absolute;top:462px;left:327px;white-space:nowrap" class="ft69">x1</P>
+<P style="position:absolute;top:457px;left:347px;white-space:nowrap" class="ft69">+&#160;x2&#160;=&#160;7</P>
+<P style="position:absolute;top:431px;left:325px;white-space:nowrap" class="ft69">12x1&#160;+&#160;5x2&#160;=&#160;60</P>
+<P style="position:absolute;top:665px;left:643px;white-space:nowrap" class="ft62">x1</P>
+<P style="position:absolute;top:407px;left:444px;white-space:nowrap" class="ft62">x2</P>
+<P style="position:absolute;top:586px;left:540px;white-space:nowrap" class="ft62">xP&#160;E&#160;=&#160;(</P>
+<P style="position:absolute;top:573px;left:603px;white-space:nowrap" class="ft62">25</P>
+<P style="position:absolute;top:597px;left:608px;white-space:nowrap" class="ft62">7</P>
+<P style="position:absolute;top:586px;left:623px;white-space:nowrap" class="ft62">,</P>
+<P style="position:absolute;top:573px;left:632px;white-space:nowrap" class="ft62">24</P>
+<P style="position:absolute;top:597px;left:637px;white-space:nowrap" class="ft62">7</P>
+<P style="position:absolute;top:585px;left:652px;white-space:nowrap" class="ft62">)</P>
+<P style="position:absolute;top:586px;left:380px;white-space:nowrap" class="ft61">max</P>
+<P style="position:absolute;top:845px;left:227px;white-space:nowrap" class="ft61">Problema&#160;erlaxatuaren&#160;soluzio&#160;optimoa&#160;xP&#160;E&#160;=&#160;(</P>
+<P style="position:absolute;top:842px;left:583px;white-space:nowrap" class="ft67">25</P>
+<P style="position:absolute;top:856px;left:586px;white-space:nowrap" class="ft67">7&#160;,</P>
+<P style="position:absolute;top:842px;left:607px;white-space:nowrap" class="ft67">24</P>
+<P style="position:absolute;top:856px;left:610px;white-space:nowrap" class="ft67">7&#160;)&#160;=&#160;(3.571,&#160;3.428)&#160;da,</P>
+<P style="position:absolute;top:867px;left:201px;white-space:nowrap" class="ft65">eta&#160;helburu&#160;funtzioaren&#160;balio&#160;optimoa&#160;puntu&#160;horretan&#160;zP&#160;E&#160;=&#160;440.&#160;Dena&#160;den,<br/>puntu&#160;hori&#160;ez&#160;da&#160;problema&#160;osoaren&#160;soluzio&#160;optimoa,&#160;aldagaien&#160;balio&#160;optimoak<br/>ez&#160;direlako&#160;osoak.&#160;Aldagaien&#160;balioak&#160;biribilduz,&#160;problema&#160;erlaxatuaren&#160;puntu<br/>optimoaren&#160;inguruko&#160;beste&#160;lau&#160;puntu&#160;lortzen&#160;dira:</P>
+<P style="position:absolute;top:931px;left:567px;white-space:nowrap" class="ft62">(3,&#160;3),&#160;(3,&#160;4),&#160;(4,&#160;3),&#160;(4,&#160;4),&#160;eta</P>
+<P style="position:absolute;top:953px;left:201px;white-space:nowrap" class="ft65">helburu&#160;funtzioaren&#160;balioa&#160;kalkula&#160;dezakegu&#160;lau&#160;puntu&#160;horietan.&#160;Kasu&#160;honetan,<br/>optimoa</P>
+<P style="position:absolute;top:974px;left:263px;white-space:nowrap" class="ft62">(4,&#160;4)&#160;puntuan&#160;dago,&#160;baina&#160;ondoko&#160;graﬁkoan&#160;ikus&#160;daitekeen&#160;bezala,&#160;puntu</P>
+<P style="position:absolute;top:997px;left:201px;white-space:nowrap" class="ft61">hori&#160;ez&#160;dago&#160;soluzioen&#160;multzoan:</P>
+<P style="position:absolute;top:1043px;left:201px;white-space:nowrap" class="ft68"><i>OpenCourseWare,&#160;UPV/EHU</i></P>
+</DIV>
+<!-- Page 7 -->
+<a name="7"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page7-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:133px;white-space:nowrap" class="ft76"><i>6.3.&#160;Problema&#160;osoen&#160;ebazpide&#160;graﬁkoa</i></P>
+<P style="position:absolute;top:141px;left:689px;white-space:nowrap" class="ft71">207</P>
+<P style="position:absolute;top:246px;left:279px;white-space:nowrap" class="ft79">x1</P>
+<P style="position:absolute;top:241px;left:299px;white-space:nowrap" class="ft79">+&#160;x2&#160;=&#160;7</P>
+<P style="position:absolute;top:218px;left:279px;white-space:nowrap" class="ft79">12x1&#160;+&#160;5x2&#160;=&#160;60</P>
+<P style="position:absolute;top:429px;left:557px;white-space:nowrap" class="ft72">x1</P>
+<P style="position:absolute;top:198px;left:381px;white-space:nowrap" class="ft72">x2</P>
+<P style="position:absolute;top:334px;left:314px;white-space:nowrap" class="ft71">max</P>
+<P style="position:absolute;top:582px;left:160px;white-space:nowrap" class="ft71">Metodo&#160;hau&#160;ere&#160;ez&#160;da&#160;oso&#160;egokia&#160;problema&#160;handietan&#160;aplikatzeko,&#160;hurbilke-</P>
+<P style="position:absolute;top:604px;left:133px;white-space:nowrap" class="ft75">ta&#160;posible&#160;asko&#160;egon&#160;daitekeelako,&#160;eta&#160;ikusi&#160;dugun&#160;bezala,&#160;hurbilketa&#160;horietako<br/>batzuk&#160;soluzioen&#160;multzotik&#160;kanpo&#160;egon&#160;daitezkeelako.&#160;Gainera,&#160;problema&#160;handie-<br/>tarako&#160;hurbilketa&#160;asko&#160;kalkulatu&#160;beharko&#160;dira.</P>
+<P style="position:absolute;top:670px;left:160px;white-space:nowrap" class="ft71">Arrazoi&#160;horiengatik&#160;problema&#160;osoak&#160;ebazteko&#160;teknika&#160;bereziak&#160;garatu&#160;dira.</P>
+<P style="position:absolute;top:692px;left:133px;white-space:nowrap" class="ft71">Kapitulu&#160;honetan&#160;adarkatzearen&#160;eta&#160;bornatzearen&#160;teknika&#160;azaltzen&#160;da.</P>
+<P style="position:absolute;top:753px;left:133px;white-space:nowrap" class="ft73"><b>6.3</b></P>
+<P style="position:absolute;top:753px;left:192px;white-space:nowrap" class="ft73"><b>Problema&#160;osoen&#160;ebazpide&#160;graﬁkoa</b></P>
+<P style="position:absolute;top:801px;left:133px;white-space:nowrap" class="ft75">Adarkatze-&#160;eta&#160;bornatze-algoritmoaren&#160;arabera,&#160;eredu&#160;erlaxatua&#160;ebazten&#160;da,&#160;eta<br/>lortutako&#160;soluzioa&#160;osoa&#160;ez&#160;bada,&#160;problema&#160;erlaxatua&#160;bitan&#160;banatzen&#160;da&#160;(adarka-<br/>tzea),&#160;soluzioen&#160;multzoari&#160;problema&#160;osoaren&#160;soluzio&#160;optimoa&#160;barnean&#160;ez&#160;duen<br/>zati&#160;bat&#160;kentzeko.&#160;Sortutako&#160;bi&#160;problemak&#160;ebazten&#160;dira,&#160;eta&#160;soluzioa&#160;osoa&#160;ez&#160;bada<br/>adarkatu&#160;egiten&#160;da.&#160;Adarkatzearen&#160;ondorioz&#160;lortzen&#160;diren&#160;problemek,&#160;erlaxatuak<br/>bezala,&#160;ez&#160;dute&#160;aldagaiak&#160;osoak&#160;izatearen&#160;murrizketa,&#160;eta&#160;ondorioz,&#160;simplex&#160;algo-<br/>ritmoa&#160;erabiliz&#160;ebatziak&#160;izango&#160;dira.</P>
+<P style="position:absolute;top:953px;left:160px;white-space:nowrap" class="ft71">Atal&#160;honetan,&#160;adarkatze-&#160;eta&#160;bornatze-algoritmoa&#160;azalduko&#160;dugu&#160;205.&#160;orrialde-</P>
+<P style="position:absolute;top:975px;left:133px;white-space:nowrap" class="ft75">ko&#160;problema&#160;graﬁkoki&#160;ebatziz.&#160;Har&#160;ditzagun&#160;adibideko&#160;eredu&#160;lineala&#160;eta&#160;dagokion<br/>eredu&#160;erlaxatua.</P>
+<P style="position:absolute;top:1043px;left:347px;white-space:nowrap" class="ft78"><i>Ikastaroa:&#160;Ikerkuntza&#160;Operatiboa.&#160;Programazio&#160;Lineala</i></P>
+</DIV>
+<!-- Page 8 -->
+<a name="8"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft810{font-size:9px;line-height:21px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page8-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:201px;white-space:nowrap" class="ft81">208</P>
+<P style="position:absolute;top:141px;left:628px;white-space:nowrap" class="ft86"><i>6.&#160;Programazio&#160;osoa</i></P>
+<P style="position:absolute;top:200px;left:312px;white-space:nowrap" class="ft81">Problema&#160;Osoa:&#160;PO</P>
+<P style="position:absolute;top:200px;left:514px;white-space:nowrap" class="ft81">Problema&#160;Erlaxatua:&#160;PE</P>
+<P style="position:absolute;top:231px;left:314px;white-space:nowrap" class="ft82">max&#160;z&#160;=&#160;80x1&#160;+&#160;45x2</P>
+<P style="position:absolute;top:231px;left:524px;white-space:nowrap" class="ft82">max&#160;z&#160;=&#160;80x1&#160;+&#160;45x2</P>
+<P style="position:absolute;top:265px;left:297px;white-space:nowrap" class="ft81">hauen&#160;mende</P>
+<P style="position:absolute;top:265px;left:507px;white-space:nowrap" class="ft81">hauen&#160;mende</P>
+<P style="position:absolute;top:297px;left:389px;white-space:nowrap" class="ft82">x1</P>
+<P style="position:absolute;top:296px;left:410px;white-space:nowrap" class="ft82">+&#160;x2&#160;≤&#160;7</P>
+<P style="position:absolute;top:297px;left:599px;white-space:nowrap" class="ft82">x1</P>
+<P style="position:absolute;top:296px;left:620px;white-space:nowrap" class="ft82">+&#160;x2&#160;≤&#160;7</P>
+<P style="position:absolute;top:329px;left:354px;white-space:nowrap" class="ft82">12x1&#160;+&#160;5x2&#160;≤&#160;60</P>
+<P style="position:absolute;top:329px;left:564px;white-space:nowrap" class="ft82">12x1&#160;+&#160;5x2&#160;≤&#160;60</P>
+<P style="position:absolute;top:362px;left:326px;white-space:nowrap" class="ft82">x1,&#160;x2&#160;≥</P>
+<P style="position:absolute;top:361px;left:392px;white-space:nowrap" class="ft82">0&#160;eta&#160;osoak</P>
+<P style="position:absolute;top:362px;left:612px;white-space:nowrap" class="ft82">x1,&#160;x2&#160;≥</P>
+<P style="position:absolute;top:361px;left:678px;white-space:nowrap" class="ft82">0</P>
+<P style="position:absolute;top:400px;left:227px;white-space:nowrap" class="ft81">Eredu&#160;erlaxatuaren&#160;soluzio&#160;optimoa&#160;xP&#160;E&#160;=&#160;(3.571,&#160;3.428)&#160;puntuan&#160;dagoe-</P>
+<P style="position:absolute;top:422px;left:201px;white-space:nowrap" class="ft85">la&#160;ikusi&#160;dugu&#160;206.&#160;orrialdeko&#160;graﬁkoan.&#160;Problema&#160;erlaxatuaren&#160;balio&#160;optimoa<br/>zP&#160;E&#160;=&#160;440&#160;da.&#160;Aldagaiek&#160;ez&#160;dituzte&#160;balio&#160;osoak&#160;hartzen.&#160;Ikusiko&#160;dugu&#160;pro-<br/>blema&#160;osoaren&#160;soluzio&#160;optimoa&#160;kalkula&#160;daitekeela&#160;zenbait&#160;problema&#160;erlaxaturen<br/>ebazpenaren&#160;bitartez.&#160;Horretarako,&#160;problema&#160;bitan&#160;banatuko&#160;da,&#160;problema&#160;osoa-<br/>ren&#160;soluzioa&#160;izango&#160;ez&#160;duen&#160;problema&#160;erlaxatuaren&#160;soluzioen&#160;multzoaren&#160;zati&#160;bat<br/>kenduz;&#160;adarkatuz,&#160;alegia.</P>
+<P style="position:absolute;top:551px;left:227px;white-space:nowrap" class="ft81">Problema&#160;adarkatzeko,&#160;soluzio&#160;optimoan&#160;balio&#160;osoa&#160;izan&#160;behar&#160;duen&#160;eta&#160;ez</P>
+<P style="position:absolute;top:573px;left:201px;white-space:nowrap" class="ft85">duen&#160;aldagai&#160;bat&#160;aukeratu&#160;behar&#160;da;&#160;kasu&#160;honetan,&#160;bai&#160;x1&#160;eta&#160;bai&#160;x2&#160;aukeratuak<br/>izan&#160;daitezke.&#160;x1&#160;aukeratuko&#160;dugu,&#160;eta&#160;soluzio&#160;optimoan</P>
+<P style="position:absolute;top:594px;left:633px;white-space:nowrap" class="ft82">3.571&#160;balioa&#160;hartzen</P>
+<P style="position:absolute;top:616px;left:201px;white-space:nowrap" class="ft81">duela&#160;ikusten&#160;dugunez,&#160;esan&#160;dezakegu&#160;aldagai&#160;horrek&#160;ezin&#160;duela</P>
+<P style="position:absolute;top:615px;left:685px;white-space:nowrap" class="ft82">3&#160;&lt;&#160;x1&#160;&lt;&#160;4</P>
+<P style="position:absolute;top:638px;left:201px;white-space:nowrap" class="ft810">tarteko&#160;baliorik&#160;hartu,&#160;osoak&#160;ez&#160;direlako.&#160;Hortaz,&#160;problema&#160;erlaxatuaren&#160;soluzioen<br/>multzoa&#160;bitan&#160;banatuko&#160;dugu&#160;x1&#160;aldagairako&#160;balioen&#160;tarte&#160;hori&#160;kenduz,&#160;hau&#160;da,&#160;x1<br/>aldagairako&#160;balioak&#160;bornatuz&#160;ondoko&#160;murrizketak&#160;erabiliz:&#160;x1&#160;≤</P>
+<P style="position:absolute;top:680px;left:683px;white-space:nowrap" class="ft82">3&#160;eta&#160;x1&#160;≥&#160;4.</P>
+<P style="position:absolute;top:703px;left:201px;white-space:nowrap" class="ft81">Horrela&#160;lortzen&#160;dira&#160;ondoko&#160;bi&#160;problemak:</P>
+<P style="position:absolute;top:744px;left:317px;white-space:nowrap" class="ft81">P2&#160;problema</P>
+<P style="position:absolute;top:744px;left:580px;white-space:nowrap" class="ft81">P3&#160;problema</P>
+<P style="position:absolute;top:775px;left:287px;white-space:nowrap" class="ft82">max&#160;z&#160;=&#160;80x1&#160;+&#160;45x2</P>
+<P style="position:absolute;top:775px;left:550px;white-space:nowrap" class="ft82">max&#160;z&#160;=&#160;80x1&#160;+&#160;45x2</P>
+<P style="position:absolute;top:809px;left:270px;white-space:nowrap" class="ft81">hauen&#160;mende</P>
+<P style="position:absolute;top:809px;left:534px;white-space:nowrap" class="ft81">hauen&#160;mende</P>
+<P style="position:absolute;top:841px;left:362px;white-space:nowrap" class="ft82">x1</P>
+<P style="position:absolute;top:840px;left:383px;white-space:nowrap" class="ft82">+&#160;x2&#160;≤&#160;7</P>
+<P style="position:absolute;top:841px;left:626px;white-space:nowrap" class="ft82">x1</P>
+<P style="position:absolute;top:840px;left:647px;white-space:nowrap" class="ft82">+&#160;x2&#160;≤&#160;7</P>
+<P style="position:absolute;top:873px;left:327px;white-space:nowrap" class="ft82">12x1&#160;+&#160;5x2&#160;≤&#160;60</P>
+<P style="position:absolute;top:873px;left:590px;white-space:nowrap" class="ft82">12x1&#160;+&#160;5x2&#160;≤&#160;60</P>
+<P style="position:absolute;top:906px;left:401px;white-space:nowrap" class="ft82">x1&#160;≤</P>
+<P style="position:absolute;top:905px;left:441px;white-space:nowrap" class="ft82">3</P>
+<P style="position:absolute;top:906px;left:664px;white-space:nowrap" class="ft82">x1&#160;≥</P>
+<P style="position:absolute;top:905px;left:705px;white-space:nowrap" class="ft82">4</P>
+<P style="position:absolute;top:939px;left:375px;white-space:nowrap" class="ft82">x1,&#160;x2&#160;≥</P>
+<P style="position:absolute;top:938px;left:441px;white-space:nowrap" class="ft82">0</P>
+<P style="position:absolute;top:939px;left:639px;white-space:nowrap" class="ft82">x1,&#160;x2&#160;≥</P>
+<P style="position:absolute;top:938px;left:705px;white-space:nowrap" class="ft82">0</P>
+<P style="position:absolute;top:975px;left:227px;white-space:nowrap" class="ft81">Sortu&#160;berri&#160;ditugun&#160;P2&#160;problema&#160;eta&#160;P3&#160;problema&#160;graﬁkoki&#160;ebatziz,&#160;209.&#160;orrial-</P>
+<P style="position:absolute;top:997px;left:201px;white-space:nowrap" class="ft81">deko&#160;graﬁkoan&#160;ikusten&#160;da&#160;hasierako&#160;problema&#160;erlaxatuaren&#160;soluzioen&#160;multzotik&#160;x1</P>
+<P style="position:absolute;top:1043px;left:201px;white-space:nowrap" class="ft88"><i>OpenCourseWare,&#160;UPV/EHU</i></P>
+</DIV>
+<!-- Page 9 -->
+<a name="9"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft911{font-size:15px;line-height:21px;font-family:Times;color:#000000;}
+	.ft912{font-size:15px;line-height:22px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page9-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:133px;white-space:nowrap" class="ft96"><i>6.3.&#160;Problema&#160;osoen&#160;ebazpide&#160;graﬁkoa</i></P>
+<P style="position:absolute;top:141px;left:689px;white-space:nowrap" class="ft91">209</P>
+<P style="position:absolute;top:195px;left:133px;white-space:nowrap" class="ft91">aldagairako</P>
+<P style="position:absolute;top:194px;left:221px;white-space:nowrap" class="ft92">3&#160;eta&#160;4&#160;arteko&#160;balio&#160;erreal&#160;ez-oso&#160;guztiak&#160;desagertu&#160;direla.&#160;P2&#160;proble-</P>
+<P style="position:absolute;top:217px;left:133px;white-space:nowrap" class="ft95">mari&#160;eta&#160;P3&#160;problemari&#160;dagozkien&#160;soluzioen&#160;multzoak&#160;grisez&#160;marraztuta&#160;ikusten<br/>dira&#160;graﬁkoan.&#160;Bi&#160;problema&#160;horiek&#160;modu&#160;independentean&#160;ebatzi&#160;behar&#160;dira.&#160;Gra-<br/>ﬁkoki&#160;ebatziz&#160;lortzen&#160;diren&#160;soluzio&#160;optimoak&#160;ondokoak&#160;dira:</P>
+<P style="position:absolute;top:301px;left:159px;white-space:nowrap" class="ft92">•</P>
+<P style="position:absolute;top:300px;left:177px;white-space:nowrap" class="ft91">P2&#160;problema:&#160;Soluzio&#160;optimoa&#160;xP&#160;2&#160;=&#160;(3,&#160;4)&#160;eta&#160;zP&#160;2&#160;=&#160;420.</P>
+<P style="position:absolute;top:344px;left:159px;white-space:nowrap" class="ft92">•</P>
+<P style="position:absolute;top:343px;left:177px;white-space:nowrap" class="ft91">P3&#160;problema:&#160;Soluzio&#160;optimoa&#160;xP&#160;3&#160;=&#160;(4,</P>
+<P style="position:absolute;top:340px;left:478px;white-space:nowrap" class="ft97">12</P>
+<P style="position:absolute;top:353px;left:481px;white-space:nowrap" class="ft97">5&#160;)</P>
+<P style="position:absolute;top:343px;left:508px;white-space:nowrap" class="ft91">eta&#160;zP&#160;3&#160;=&#160;428.</P>
+<P style="position:absolute;top:383px;left:160px;white-space:nowrap" class="ft91">P2&#160;problemaren&#160;soluzio&#160;optimoa&#160;osoa&#160;denez,&#160;problema&#160;ez&#160;da&#160;adarkatua&#160;izango,</P>
+<P style="position:absolute;top:405px;left:133px;white-space:nowrap" class="ft911">eta&#160;<i>azkeneko&#160;problema&#160;</i>dela&#160;esaten&#160;da.&#160;xP&#160;2&#160;=&#160;(3,&#160;4)&#160;soluzioari&#160;<i>soluziogai&#160;</i>esaten<br/>zaio,&#160;eta&#160;bera&#160;izango&#160;da&#160;problema&#160;osoaren&#160;soluzio&#160;optimoa,&#160;beste&#160;hobe&#160;bat&#160;aurki-<br/>tzen&#160;ez&#160;badugu.&#160;Problema&#160;horren&#160;helburu&#160;funtziorako&#160;balio&#160;optimoa&#160;zP&#160;2&#160;=&#160;420<br/>da&#160;eta&#160;problema&#160;osorako&#160;<i>behe-bornea&#160;</i>ﬁnkatzen&#160;du:&#160;zb&#160;=&#160;420.</P>
+<P style="position:absolute;top:583px;left:258px;white-space:nowrap" class="ft99">x1</P>
+<P style="position:absolute;top:578px;left:278px;white-space:nowrap" class="ft99">+&#160;x2&#160;=&#160;7</P>
+<P style="position:absolute;top:547px;left:258px;white-space:nowrap" class="ft99">12x1&#160;+&#160;5x2&#160;=&#160;60</P>
+<P style="position:absolute;top:557px;left:392px;white-space:nowrap" class="ft99">x1</P>
+<P style="position:absolute;top:552px;left:413px;white-space:nowrap" class="ft99">=&#160;3&#160;x1&#160;=&#160;4</P>
+<P style="position:absolute;top:805px;left:574px;white-space:nowrap" class="ft92">x1</P>
+<P style="position:absolute;top:516px;left:352px;white-space:nowrap" class="ft92">x2</P>
+<P style="position:absolute;top:706px;left:458px;white-space:nowrap" class="ft92">(3,&#160;4)</P>
+<P style="position:absolute;top:733px;left:472px;white-space:nowrap" class="ft92">(4,</P>
+<P style="position:absolute;top:731px;left:497px;white-space:nowrap" class="ft97">12</P>
+<P style="position:absolute;top:744px;left:500px;white-space:nowrap" class="ft97">5&#160;)</P>
+<P style="position:absolute;top:667px;left:280px;white-space:nowrap" class="ft91">max</P>
+<P style="position:absolute;top:743px;left:267px;white-space:nowrap" class="ft91">P2&#160;problema</P>
+<P style="position:absolute;top:765px;left:503px;white-space:nowrap" class="ft91">P3&#160;problema</P>
+<P style="position:absolute;top:910px;left:160px;white-space:nowrap" class="ft91">P3&#160;problemaren&#160;soluzioa&#160;ez&#160;da&#160;problema&#160;osoaren&#160;soluzioa,&#160;ez&#160;delako&#160;osoa;&#160;x2</P>
+<P style="position:absolute;top:932px;left:133px;white-space:nowrap" class="ft91">aldagaiak</P>
+<P style="position:absolute;top:929px;left:210px;white-space:nowrap" class="ft97">12</P>
+<P style="position:absolute;top:942px;left:213px;white-space:nowrap" class="ft97">5</P>
+<P style="position:absolute;top:931px;left:231px;white-space:nowrap" class="ft92">=&#160;2.4&#160;balioa&#160;hartzen&#160;du.&#160;Helburu&#160;funtzioak&#160;puntu&#160;horretan&#160;zP3&#160;=</P>
+<P style="position:absolute;top:952px;left:133px;white-space:nowrap" class="ft95">428&#160;balioa&#160;hartzen&#160;du,&#160;eta&#160;zP3&#160;&gt;&#160;zb&#160;betetzen&#160;denez,&#160;problema&#160;adarkatu&#160;egingo<br/>dugu,&#160;P2&#160;problemaren&#160;ebazpenetik&#160;lortu&#160;dugun&#160;soluziogaia&#160;baino&#160;hobea&#160;den&#160;beste<br/>soluzio&#160;oso&#160;bat&#160;aurkitzeko&#160;aukera&#160;dagoelako.</P>
+<P style="position:absolute;top:1043px;left:347px;white-space:nowrap" class="ft98"><i>Ikastaroa:&#160;Ikerkuntza&#160;Operatiboa.&#160;Programazio&#160;Lineala</i></P>
+</DIV>
+<!-- Page 10 -->
+<a name="10"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page10-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:201px;white-space:nowrap" class="ft101">210</P>
+<P style="position:absolute;top:141px;left:628px;white-space:nowrap" class="ft106"><i>6.&#160;Programazio&#160;osoa</i></P>
+<P style="position:absolute;top:195px;left:227px;white-space:nowrap" class="ft101">Adarkaketa&#160;egiteko,&#160;x2&#160;aldagaia&#160;aukeratuko&#160;dugu,&#160;aldagaia&#160;osoa&#160;izanik&#160;orain-</P>
+<P style="position:absolute;top:217px;left:201px;white-space:nowrap" class="ft105">dik&#160;ez&#160;duelako&#160;balio&#160;osorik&#160;optimoan.&#160;P3&#160;problema&#160;adarkatuz,&#160;hau&#160;da,&#160;bere&#160;solu-<br/>zioen&#160;multzotik</P>
+<P style="position:absolute;top:237px;left:316px;white-space:nowrap" class="ft102">2&#160;&lt;&#160;x2&#160;&lt;&#160;3&#160;balioak&#160;kenduz,&#160;P4&#160;problema&#160;eta&#160;P5&#160;problema&#160;lortzen</P>
+<P style="position:absolute;top:260px;left:201px;white-space:nowrap" class="ft101">dira.</P>
+<P style="position:absolute;top:305px;left:317px;white-space:nowrap" class="ft101">P4&#160;problema</P>
+<P style="position:absolute;top:305px;left:580px;white-space:nowrap" class="ft101">P5&#160;problema</P>
+<P style="position:absolute;top:336px;left:287px;white-space:nowrap" class="ft102">max&#160;z&#160;=&#160;80x1&#160;+&#160;45x2</P>
+<P style="position:absolute;top:336px;left:550px;white-space:nowrap" class="ft102">max&#160;z&#160;=&#160;80x1&#160;+&#160;45x2</P>
+<P style="position:absolute;top:370px;left:270px;white-space:nowrap" class="ft101">hauen&#160;mende</P>
+<P style="position:absolute;top:370px;left:534px;white-space:nowrap" class="ft101">hauen&#160;mende</P>
+<P style="position:absolute;top:402px;left:362px;white-space:nowrap" class="ft102">x1</P>
+<P style="position:absolute;top:401px;left:383px;white-space:nowrap" class="ft102">+&#160;x2&#160;≤&#160;7</P>
+<P style="position:absolute;top:402px;left:626px;white-space:nowrap" class="ft102">x1</P>
+<P style="position:absolute;top:401px;left:647px;white-space:nowrap" class="ft102">+&#160;x2&#160;≤&#160;7</P>
+<P style="position:absolute;top:433px;left:327px;white-space:nowrap" class="ft102">12x1&#160;+&#160;5x2&#160;≤&#160;60</P>
+<P style="position:absolute;top:433px;left:590px;white-space:nowrap" class="ft102">12x1&#160;+&#160;5x2&#160;≤&#160;60</P>
+<P style="position:absolute;top:467px;left:338px;white-space:nowrap" class="ft102">x1&#160;≥</P>
+<P style="position:absolute;top:466px;left:379px;white-space:nowrap" class="ft102">4,&#160;x2&#160;≤&#160;2</P>
+<P style="position:absolute;top:467px;left:602px;white-space:nowrap" class="ft102">x1&#160;≥</P>
+<P style="position:absolute;top:466px;left:643px;white-space:nowrap" class="ft102">4,&#160;x2&#160;≥&#160;3</P>
+<P style="position:absolute;top:499px;left:375px;white-space:nowrap" class="ft102">x1,&#160;x2&#160;≥</P>
+<P style="position:absolute;top:498px;left:441px;white-space:nowrap" class="ft102">0</P>
+<P style="position:absolute;top:499px;left:639px;white-space:nowrap" class="ft102">x1,&#160;x2&#160;≥</P>
+<P style="position:absolute;top:498px;left:705px;white-space:nowrap" class="ft102">0</P>
+<P style="position:absolute;top:543px;left:227px;white-space:nowrap" class="ft101">Hurrengo&#160;graﬁkoan&#160;P4&#160;problemaren&#160;eta&#160;P5&#160;problemaren&#160;soluzio&#160;optimoak&#160;kal-</P>
+<P style="position:absolute;top:565px;left:201px;white-space:nowrap" class="ft105">kulatu&#160;dira,&#160;eta&#160;ikusten&#160;den&#160;bezala,&#160;P5&#160;problemak&#160;ez&#160;du&#160;soluziorik;&#160;ondorioz,&#160;az-<br/>keneko&#160;problema&#160;da,&#160;eta&#160;ez&#160;da&#160;problema&#160;horretatik&#160;abiatuta&#160;adarkaketa&#160;gehiagorik<br/>egingo.</P>
+<P style="position:absolute;top:716px;left:325px;white-space:nowrap" class="ft109">x1</P>
+<P style="position:absolute;top:711px;left:345px;white-space:nowrap" class="ft109">+&#160;x2&#160;=&#160;7</P>
+<P style="position:absolute;top:680px;left:325px;white-space:nowrap" class="ft109">12x1&#160;+&#160;5x2&#160;=&#160;60</P>
+<P style="position:absolute;top:685px;left:499px;white-space:nowrap" class="ft109">x1</P>
+<P style="position:absolute;top:680px;left:520px;white-space:nowrap" class="ft109">=&#160;4</P>
+<P style="position:absolute;top:859px;left:339px;white-space:nowrap" class="ft109">x2</P>
+<P style="position:absolute;top:854px;left:360px;white-space:nowrap" class="ft109">=&#160;3</P>
+<P style="position:absolute;top:885px;left:339px;white-space:nowrap" class="ft109">x2</P>
+<P style="position:absolute;top:880px;left:360px;white-space:nowrap" class="ft109">=&#160;2</P>
+<P style="position:absolute;top:938px;left:641px;white-space:nowrap" class="ft102">x1</P>
+<P style="position:absolute;top:649px;left:419px;white-space:nowrap" class="ft102">x2</P>
+<P style="position:absolute;top:893px;left:556px;white-space:nowrap" class="ft102">(4.16,&#160;2)</P>
+<P style="position:absolute;top:800px;left:348px;white-space:nowrap" class="ft101">max</P>
+<P style="position:absolute;top:877px;left:540px;white-space:nowrap" class="ft101">P4&#160;problema</P>
+<P style="position:absolute;top:853px;left:524px;white-space:nowrap" class="ft101">P5&#160;problema</P>
+<P style="position:absolute;top:1043px;left:201px;white-space:nowrap" class="ft108"><i>OpenCourseWare,&#160;UPV/EHU</i></P>
+</DIV>
+<!-- Page 11 -->
+<a name="11"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page11-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:133px;white-space:nowrap" class="ft116"><i>6.3.&#160;Problema&#160;osoen&#160;ebazpide&#160;graﬁkoa</i></P>
+<P style="position:absolute;top:141px;left:689px;white-space:nowrap" class="ft111">211</P>
+<P style="position:absolute;top:195px;left:160px;white-space:nowrap" class="ft111">P4&#160;problemaren&#160;soluzio&#160;optimoa&#160;xP&#160;4&#160;=&#160;(</P>
+<P style="position:absolute;top:192px;left:466px;white-space:nowrap" class="ft117">25</P>
+<P style="position:absolute;top:205px;left:469px;white-space:nowrap" class="ft117">6&#160;,&#160;2)&#160;=&#160;(4.166,&#160;2)&#160;da,&#160;eta&#160;helburu</P>
+<P style="position:absolute;top:217px;left:133px;white-space:nowrap" class="ft111">funtzioaren&#160;balio&#160;optimoa&#160;zP&#160;4&#160;=</P>
+<P style="position:absolute;top:214px;left:387px;white-space:nowrap" class="ft117">1270</P>
+<P style="position:absolute;top:227px;left:397px;white-space:nowrap" class="ft117">3</P>
+<P style="position:absolute;top:215px;left:423px;white-space:nowrap" class="ft112">=&#160;423.33.&#160;Balio&#160;hori&#160;behe-bornearekin</P>
+<P style="position:absolute;top:238px;left:133px;white-space:nowrap" class="ft115">konparatuz,&#160;zP&#160;4&#160;&gt;&#160;zb&#160;=&#160;420&#160;betetzen&#160;dela&#160;ikusten&#160;da.&#160;Hori&#160;dela&#160;eta,&#160;P4&#160;problema<br/>ez&#160;da&#160;azkeneko&#160;problema&#160;eta&#160;adarkatzea&#160;erabakitzen&#160;da;&#160;x1&#160;aldagaia&#160;aukeratuz&#160;eta<br/>problemari&#160;x1&#160;≤</P>
+<P style="position:absolute;top:281px;left:261px;white-space:nowrap" class="ft112">4&#160;eta&#160;x1&#160;≥&#160;5&#160;murrizketak&#160;gehituz&#160;sortzen&#160;dira&#160;P6&#160;problema&#160;eta</P>
+<P style="position:absolute;top:303px;left:133px;white-space:nowrap" class="ft111">P7&#160;problema.</P>
+<P style="position:absolute;top:342px;left:252px;white-space:nowrap" class="ft111">P6&#160;problema</P>
+<P style="position:absolute;top:342px;left:516px;white-space:nowrap" class="ft111">P7&#160;problema</P>
+<P style="position:absolute;top:373px;left:201px;white-space:nowrap" class="ft112">max&#160;z&#160;=&#160;80x1&#160;+&#160;45x2</P>
+<P style="position:absolute;top:373px;left:485px;white-space:nowrap" class="ft112">max&#160;z&#160;=&#160;80x1&#160;+&#160;45x2</P>
+<P style="position:absolute;top:407px;left:205px;white-space:nowrap" class="ft111">hauen&#160;mende</P>
+<P style="position:absolute;top:407px;left:469px;white-space:nowrap" class="ft111">hauen&#160;mende</P>
+<P style="position:absolute;top:439px;left:297px;white-space:nowrap" class="ft112">x1</P>
+<P style="position:absolute;top:438px;left:318px;white-space:nowrap" class="ft112">+&#160;x2&#160;≤&#160;7</P>
+<P style="position:absolute;top:439px;left:561px;white-space:nowrap" class="ft112">x1</P>
+<P style="position:absolute;top:438px;left:582px;white-space:nowrap" class="ft112">+&#160;x2&#160;≤&#160;7</P>
+<P style="position:absolute;top:471px;left:262px;white-space:nowrap" class="ft112">12x1&#160;+&#160;5x2&#160;≤&#160;60</P>
+<P style="position:absolute;top:471px;left:526px;white-space:nowrap" class="ft112">12x1&#160;+&#160;5x2&#160;≤&#160;60</P>
+<P style="position:absolute;top:504px;left:211px;white-space:nowrap" class="ft112">x1&#160;≥</P>
+<P style="position:absolute;top:503px;left:252px;white-space:nowrap" class="ft112">4,&#160;x2&#160;≤&#160;2,&#160;x1&#160;≤&#160;4</P>
+<P style="position:absolute;top:504px;left:484px;white-space:nowrap" class="ft112">x1&#160;≥</P>
+<P style="position:absolute;top:503px;left:525px;white-space:nowrap" class="ft112">4,&#160;x2&#160;≤&#160;2,&#160;x1&#160;≥&#160;5</P>
+<P style="position:absolute;top:537px;left:311px;white-space:nowrap" class="ft112">x1,&#160;x2&#160;≥</P>
+<P style="position:absolute;top:536px;left:377px;white-space:nowrap" class="ft112">0</P>
+<P style="position:absolute;top:537px;left:574px;white-space:nowrap" class="ft112">x1,&#160;x2&#160;≥</P>
+<P style="position:absolute;top:536px;left:640px;white-space:nowrap" class="ft112">0</P>
+<P style="position:absolute;top:641px;left:258px;white-space:nowrap" class="ft119">x1</P>
+<P style="position:absolute;top:636px;left:278px;white-space:nowrap" class="ft119">+&#160;x2&#160;=&#160;7</P>
+<P style="position:absolute;top:605px;left:258px;white-space:nowrap" class="ft119">12x1&#160;+&#160;5x2&#160;=&#160;60</P>
+<P style="position:absolute;top:615px;left:414px;white-space:nowrap" class="ft119">x1</P>
+<P style="position:absolute;top:609px;left:435px;white-space:nowrap" class="ft119">=&#160;4</P>
+<P style="position:absolute;top:810px;left:272px;white-space:nowrap" class="ft119">x2</P>
+<P style="position:absolute;top:805px;left:292px;white-space:nowrap" class="ft119">=&#160;2</P>
+<P style="position:absolute;top:615px;left:472px;white-space:nowrap" class="ft119">x1</P>
+<P style="position:absolute;top:609px;left:493px;white-space:nowrap" class="ft119">=&#160;5</P>
+<P style="position:absolute;top:863px;left:574px;white-space:nowrap" class="ft112">x1</P>
+<P style="position:absolute;top:574px;left:352px;white-space:nowrap" class="ft112">x2</P>
+<P style="position:absolute;top:791px;left:480px;white-space:nowrap" class="ft112">(4,&#160;2)</P>
+<P style="position:absolute;top:835px;left:525px;white-space:nowrap" class="ft112">(5,&#160;0)</P>
+<P style="position:absolute;top:725px;left:280px;white-space:nowrap" class="ft111">max</P>
+<P style="position:absolute;top:770px;left:480px;white-space:nowrap" class="ft111">P6&#160;problema</P>
+<P style="position:absolute;top:819px;left:503px;white-space:nowrap" class="ft111">P7&#160;problema</P>
+<P style="position:absolute;top:953px;left:133px;white-space:nowrap" class="ft115">P6&#160;problemaren&#160;soluzioen&#160;multzoa&#160;segmentu&#160;bat&#160;da,&#160;eta&#160;xP&#160;6&#160;=&#160;(4,&#160;2)&#160;puntua&#160;da<br/>soluzio&#160;optimoa,&#160;zP&#160;6&#160;=&#160;410&#160;delarik.&#160;zP&#160;6&#160;&lt;&#160;zb&#160;=&#160;420&#160;betetzen&#160;denez,&#160;problema<br/>azkenekoa&#160;da.</P>
+<P style="position:absolute;top:1043px;left:347px;white-space:nowrap" class="ft118"><i>Ikastaroa:&#160;Ikerkuntza&#160;Operatiboa.&#160;Programazio&#160;Lineala</i></P>
+</DIV>
+<!-- Page 12 -->
+<a name="12"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page12-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:201px;white-space:nowrap" class="ft121">212</P>
+<P style="position:absolute;top:141px;left:628px;white-space:nowrap" class="ft126"><i>6.&#160;Programazio&#160;osoa</i></P>
+<P style="position:absolute;top:195px;left:227px;white-space:nowrap" class="ft121">P7&#160;problemaren&#160;soluzioen&#160;multzoan&#160;puntu&#160;bat&#160;besterik&#160;ez&#160;dago,&#160;eta&#160;bera&#160;da</P>
+<P style="position:absolute;top:217px;left:201px;white-space:nowrap" class="ft125">problemaren&#160;soluzio&#160;optimoa:&#160;xP&#160;7&#160;=&#160;(5,&#160;0).&#160;Helburu&#160;funtzioak&#160;bertan&#160;hartzen<br/>duen&#160;balioa&#160;zP&#160;7&#160;=&#160;400&#160;izanik,&#160;zP&#160;7&#160;&lt;&#160;zb&#160;=&#160;420&#160;betetzen&#160;denez,&#160;problema&#160;azkene-<br/>koa&#160;da.</P>
+<P style="position:absolute;top:284px;left:227px;white-space:nowrap" class="ft121">Hortaz,&#160;biak&#160;azkeneko&#160;problemak&#160;dira,&#160;eta&#160;ez&#160;da&#160;adarkaketekin&#160;jarraitu&#160;behar.</P>
+<P style="position:absolute;top:306px;left:201px;white-space:nowrap" class="ft121">Problema&#160;osoaren&#160;soluzio&#160;optimoa&#160;P2&#160;problema&#160;ebatziz&#160;lortutako&#160;soluziogaia&#160;da,</P>
+<P style="position:absolute;top:353px;left:291px;white-space:nowrap" class="ft122">x∗</P>
+<P style="position:absolute;top:361px;left:301px;white-space:nowrap" class="ft127">P&#160;O&#160;=&#160;xP&#160;2&#160;=&#160;(x</P>
+<P style="position:absolute;top:352px;left:413px;white-space:nowrap" class="ft127">∗</P>
+<P style="position:absolute;top:361px;left:413px;white-space:nowrap" class="ft127">1&#160;,&#160;x</P>
+<P style="position:absolute;top:352px;left:438px;white-space:nowrap" class="ft127">∗</P>
+<P style="position:absolute;top:361px;left:438px;white-space:nowrap" class="ft127">2)&#160;=&#160;(3,&#160;4)</P>
+<P style="position:absolute;top:353px;left:533px;white-space:nowrap" class="ft121">eta</P>
+<P style="position:absolute;top:353px;left:572px;white-space:nowrap" class="ft122">z∗</P>
+<P style="position:absolute;top:361px;left:580px;white-space:nowrap" class="ft127">P&#160;O&#160;=&#160;zb&#160;=&#160;420.</P>
+<P style="position:absolute;top:400px;left:201px;white-space:nowrap" class="ft125">Adibide&#160;honen&#160;ebazpen&#160;osoaren&#160;diagrama&#160;6.1&#160;Irudian&#160;dago.&#160;Bertan&#160;ikus&#160;daitez-<br/>ke&#160;adarkatze-&#160;eta&#160;bornatze-algoritmoa&#160;erabiliz&#160;sortutako&#160;problema&#160;erlaxatu&#160;guz-<br/>tien&#160;soluzio&#160;optimoak.&#160;Problema&#160;erlaxatu&#160;bakoitzerako&#160;kalkulatutako&#160;helburu<br/>funtzioaren&#160;balio&#160;optimoa&#160;problema&#160;osoaren&#160;goi-borne&#160;bat&#160;da&#160;ebazpenaren&#160;adar<br/>horretan.</P>
+<P style="position:absolute;top:539px;left:396px;white-space:nowrap" class="ft121">PE&#160;problema</P>
+<P style="position:absolute;top:636px;left:278px;white-space:nowrap" class="ft121">P2&#160;problema</P>
+<P style="position:absolute;top:638px;left:513px;white-space:nowrap" class="ft121">P3&#160;problema</P>
+<P style="position:absolute;top:732px;left:398px;white-space:nowrap" class="ft121">P4&#160;problema</P>
+<P style="position:absolute;top:736px;left:631px;white-space:nowrap" class="ft121">P5&#160;problema</P>
+<P style="position:absolute;top:829px;left:279px;white-space:nowrap" class="ft121">P6&#160;problema</P>
+<P style="position:absolute;top:830px;left:513px;white-space:nowrap" class="ft121">P7&#160;problema</P>
+<P style="position:absolute;top:564px;left:390px;white-space:nowrap" class="ft122">xP&#160;E&#160;=&#160;(3.571,&#160;3.428)</P>
+<P style="position:absolute;top:663px;left:287px;white-space:nowrap" class="ft122">xP&#160;2&#160;=&#160;(3,&#160;4)</P>
+<P style="position:absolute;top:661px;left:512px;white-space:nowrap" class="ft122">xP&#160;3&#160;=&#160;(4,&#160;2.4)</P>
+<P style="position:absolute;top:757px;left:390px;white-space:nowrap" class="ft122">xP&#160;4&#160;=&#160;(4.166,&#160;2)</P>
+<P style="position:absolute;top:770px;left:631px;white-space:nowrap" class="ft121">Bideraezina</P>
+<P style="position:absolute;top:855px;left:290px;white-space:nowrap" class="ft122">xP&#160;6&#160;=&#160;(4,&#160;2)</P>
+<P style="position:absolute;top:856px;left:525px;white-space:nowrap" class="ft122">xP&#160;7&#160;=&#160;(5,&#160;0)</P>
+<P style="position:absolute;top:586px;left:401px;white-space:nowrap" class="ft122">zP&#160;E&#160;=&#160;440</P>
+<P style="position:absolute;top:683px;left:288px;white-space:nowrap" class="ft122">zP&#160;2&#160;=&#160;420</P>
+<P style="position:absolute;top:683px;left:527px;white-space:nowrap" class="ft122">zP&#160;3&#160;=&#160;428</P>
+<P style="position:absolute;top:781px;left:402px;white-space:nowrap" class="ft122">zP&#160;4&#160;=&#160;423.33</P>
+<P style="position:absolute;top:875px;left:289px;white-space:nowrap" class="ft122">zP&#160;6&#160;=&#160;410</P>
+<P style="position:absolute;top:874px;left:525px;white-space:nowrap" class="ft122">zP&#160;7&#160;=&#160;400</P>
+<P style="position:absolute;top:709px;left:270px;white-space:nowrap" class="ft122">zb&#160;=&#160;420</P>
+<P style="position:absolute;top:610px;left:325px;white-space:nowrap" class="ft122">x1&#160;≤</P>
+<P style="position:absolute;top:609px;left:366px;white-space:nowrap" class="ft122">3</P>
+<P style="position:absolute;top:610px;left:495px;white-space:nowrap" class="ft122">x1&#160;≥</P>
+<P style="position:absolute;top:609px;left:536px;white-space:nowrap" class="ft122">4</P>
+<P style="position:absolute;top:707px;left:443px;white-space:nowrap" class="ft122">x2&#160;≤</P>
+<P style="position:absolute;top:706px;left:484px;white-space:nowrap" class="ft122">2</P>
+<P style="position:absolute;top:709px;left:612px;white-space:nowrap" class="ft122">x2&#160;≥</P>
+<P style="position:absolute;top:708px;left:653px;white-space:nowrap" class="ft122">3</P>
+<P style="position:absolute;top:803px;left:325px;white-space:nowrap" class="ft122">x1&#160;≤</P>
+<P style="position:absolute;top:802px;left:366px;white-space:nowrap" class="ft122">4</P>
+<P style="position:absolute;top:804px;left:494px;white-space:nowrap" class="ft122">x1&#160;≥</P>
+<P style="position:absolute;top:803px;left:535px;white-space:nowrap" class="ft122">5</P>
+<P style="position:absolute;top:726px;left:269px;white-space:nowrap" class="ft121">Soluziogaia</P>
+<P style="position:absolute;top:808px;left:649px;white-space:nowrap" class="ft121">Azkenekoa</P>
+<P style="position:absolute;top:908px;left:502px;white-space:nowrap" class="ft121">Azkenekoa</P>
+<P style="position:absolute;top:904px;left:272px;white-space:nowrap" class="ft121">Azkenekoa</P>
+<P style="position:absolute;top:747px;left:268px;white-space:nowrap" class="ft121">Azkenekoa</P>
+<P style="position:absolute;top:945px;left:275px;white-space:nowrap" class="ft121">6.1.&#160;Irudia:&#160;Adibideko&#160;eredu&#160;osoaren&#160;ebazpenaren&#160;diagrama.</P>
+<P style="position:absolute;top:1043px;left:201px;white-space:nowrap" class="ft128"><i>OpenCourseWare,&#160;UPV/EHU</i></P>
+</DIV>
+<!-- Page 13 -->
+<a name="13"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft1313{font-size:15px;line-height:21px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page13-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:133px;white-space:nowrap" class="ft136"><i>6.4.&#160;Adarkatze-&#160;eta&#160;bornatze-metodoa</i></P>
+<P style="position:absolute;top:141px;left:689px;white-space:nowrap" class="ft131">213</P>
+<P style="position:absolute;top:190px;left:133px;white-space:nowrap" class="ft133"><b>6.4</b></P>
+<P style="position:absolute;top:190px;left:192px;white-space:nowrap" class="ft133"><b>Adarkatze-&#160;eta&#160;bornatze-metodoa</b></P>
+<P style="position:absolute;top:235px;left:133px;white-space:nowrap" class="ft1313">Aurreko&#160;atalean&#160;graﬁkoki&#160;ikusi&#160;dugun&#160;adarkatze-&#160;eta&#160;bornatze-algoritmoan&#160;<i>pro-<br/>blema&#160;erlaxatua</i>,&#160;<i>soluziogaia&#160;</i>eta&#160;<i>azkeneko&#160;problema&#160;</i>kontzeptuak&#160;erabili&#160;ditugu.</P>
+<P style="position:absolute;top:292px;left:133px;white-space:nowrap" class="ft1313"><b>6.4.1&#160;Deﬁnizioa.&#160;(Problema&#160;erlaxatua)&#160;</b><i>Problema&#160;lineal&#160;oso&#160;bat&#160;emanik,&#160;alda-<br/>gaiak&#160;osoak&#160;izatearen&#160;murrizketa&#160;kenduta&#160;lortzen&#160;den&#160;ereduari&#160;problema&#160;erlaxa-<br/>tua&#160;esaten&#160;zaio.</i></P>
+<P style="position:absolute;top:366px;left:215px;white-space:nowrap" class="ft131">Problema&#160;Osoa:&#160;PO</P>
+<P style="position:absolute;top:366px;left:461px;white-space:nowrap" class="ft131">Problema&#160;Erlaxatua:&#160;PE</P>
+<P style="position:absolute;top:397px;left:257px;white-space:nowrap" class="ft132">max&#160;z&#160;=&#160;cT&#160;x</P>
+<P style="position:absolute;top:397px;left:527px;white-space:nowrap" class="ft132">max&#160;z&#160;=&#160;cT&#160;x</P>
+<P style="position:absolute;top:431px;left:242px;white-space:nowrap" class="ft131">hauen&#160;mende</P>
+<P style="position:absolute;top:431px;left:517px;white-space:nowrap" class="ft131">hauen&#160;mende</P>
+<P style="position:absolute;top:463px;left:298px;white-space:nowrap" class="ft132">Ax&#160;≤&#160;b</P>
+<P style="position:absolute;top:463px;left:573px;white-space:nowrap" class="ft132">Ax&#160;≤&#160;b</P>
+<P style="position:absolute;top:496px;left:252px;white-space:nowrap" class="ft132">x&#160;≥&#160;0&#160;eta&#160;osoa</P>
+<P style="position:absolute;top:496px;left:590px;white-space:nowrap" class="ft132">x&#160;≥&#160;0</P>
+<P style="position:absolute;top:533px;left:160px;white-space:nowrap" class="ft131">Problema&#160;erlaxatuak&#160;problema&#160;osoak&#160;baino&#160;murrizketa&#160;gutxiago&#160;ditu.&#160;Horrek</P>
+<P style="position:absolute;top:555px;left:133px;white-space:nowrap" class="ft135">esan&#160;nahi&#160;du&#160;problema&#160;osoaren&#160;bideragarritasun-eskualdea&#160;dagokion&#160;problema&#160;er-<br/>laxatuaren&#160;bideragarritasun-eskualdearen&#160;parte&#160;dela,&#160;hau&#160;da,&#160;maximizatze&#160;kasura-<br/>ko&#160;balio&#160;optimoen&#160;artean&#160;honako&#160;erlazioa&#160;betetzen&#160;da:</P>
+<P style="position:absolute;top:632px;left:382px;white-space:nowrap" class="ft132">z∗</P>
+<P style="position:absolute;top:640px;left:390px;white-space:nowrap" class="ft137">P&#160;E&#160;≥&#160;z</P>
+<P style="position:absolute;top:631px;left:443px;white-space:nowrap" class="ft137">∗</P>
+<P style="position:absolute;top:640px;left:442px;white-space:nowrap" class="ft137">P&#160;O.</P>
+<P style="position:absolute;top:667px;left:133px;white-space:nowrap" class="ft1313"><b>6.4.2&#160;Deﬁnizioa.&#160;(Soluziogaia)&#160;</b><i>Problema&#160;oso&#160;bat&#160;izanik,&#160;problemaren&#160;ebazpena-<br/>ren&#160;iterazio&#160;bakoitzean&#160;ordura&#160;arte&#160;lortutako&#160;soluzio&#160;oso&#160;onenak&#160;soluziogai&#160;izena<br/>hartzen&#160;du.</i></P>
+<P style="position:absolute;top:745px;left:160px;white-space:nowrap" class="ft131">Soluziogaia&#160;problema&#160;osoaren&#160;soluzio&#160;optimoa&#160;izan&#160;daitekeenez&#160;gorde&#160;egin</P>
+<P style="position:absolute;top:767px;left:133px;white-space:nowrap" class="ft135">behar&#160;da,&#160;hobea&#160;izango&#160;den&#160;beste&#160;bat&#160;lortu&#160;arte.&#160;Helburu&#160;funtzioak&#160;soluziogaian<br/>hartzen&#160;duen&#160;balioak&#160;problema&#160;osorako&#160;zb&#160;<i>behe-bornea&#160;</i>ﬁnkatzen&#160;du.&#160;Ebazpe-<br/>nean&#160;problema&#160;baten&#160;helburu&#160;funtzioaren&#160;balioa&#160;zb&#160;baino&#160;txikiagoa&#160;edo&#160;berdina<br/>denean,&#160;adar&#160;hori&#160;moztu&#160;egingo&#160;dugu,&#160;eta&#160;problema&#160;ez&#160;da&#160;gehiago&#160;adarkatua&#160;izan-<br/>go,&#160;problema&#160;osoaren&#160;soluzio&#160;optimoa&#160;adar&#160;horretatik&#160;ezin&#160;izango&#160;delako&#160;lortu.<br/>Adarkatua&#160;izango&#160;ez&#160;den&#160;problema&#160;horri&#160;<i>azkeneko&#160;problema&#160;</i>esaten&#160;zaio&#160;eta&#160;hone-<br/>la&#160;deﬁnitzen&#160;da.</P>
+<P style="position:absolute;top:932px;left:133px;white-space:nowrap" class="ft1313"><b>6.4.3&#160;Deﬁnizioa.&#160;(Azkeneko&#160;problema)&#160;</b><i>Problema&#160;oso&#160;bat&#160;ebazterakoan,&#160;ondo-<br/>ko&#160;baldintzetako&#160;bat&#160;betetzen&#160;duen&#160;problema&#160;erlaxatu&#160;oro&#160;azkeneko&#160;problema&#160;dela<br/>esaten&#160;da:&#160;(1)&#160;bideraezina&#160;bada,&#160;(2)&#160;helburu&#160;funtzioaren&#160;balio&#160;optimoa&#160;</i>zb&#160;<i>behe-<br/>bornea&#160;baino&#160;txikiagoa&#160;edo&#160;berdina&#160;bada,&#160;(3)&#160;soluzioa&#160;osoa&#160;bada.</i></P>
+<P style="position:absolute;top:1043px;left:347px;white-space:nowrap" class="ft138"><i>Ikastaroa:&#160;Ikerkuntza&#160;Operatiboa.&#160;Programazio&#160;Lineala</i></P>
+</DIV>
+<!-- Page 14 -->
+<a name="14"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft1414{font-size:19px;font-family:Times;color:#000000;}
+	.ft1415{font-size:9px;font-family:Times;color:#000000;}
+	.ft1416{font-size:8px;font-family:Times;color:#000000;}
+	.ft1417{font-size:12px;font-family:Times;color:#000000;}
+	.ft1418{font-size:8px;font-family:Times;color:#000000;}
+	.ft1419{font-size:12px;font-family:Times;color:#000000;}
+	.ft1420{font-size:12px;line-height:18px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page14-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:201px;white-space:nowrap" class="ft141">214</P>
+<P style="position:absolute;top:141px;left:628px;white-space:nowrap" class="ft146"><i>6.&#160;Programazio&#160;osoa</i></P>
+<P style="position:absolute;top:195px;left:227px;white-space:nowrap" class="ft141">Adibidez,&#160;6.1&#160;Irudian&#160;P2&#160;problema,&#160;P5&#160;problema,&#160;P6&#160;problema&#160;eta&#160;P7&#160;proble-</P>
+<P style="position:absolute;top:217px;left:201px;white-space:nowrap" class="ft141">ma&#160;azkeneko&#160;problemak&#160;dira.</P>
+<P style="position:absolute;top:239px;left:227px;white-space:nowrap" class="ft141">Adarkatze-&#160;eta&#160;bornatze-algoritmoan,&#160;problema&#160;erlaxatu&#160;bakoitzaren&#160;helburu</P>
+<P style="position:absolute;top:260px;left:201px;white-space:nowrap" class="ft145">funtzioaren&#160;balio&#160;optimoa&#160;zg&#160;notazioaz&#160;adieraziko&#160;dugu,&#160;esan&#160;bezala,&#160;problema<br/>osoaren&#160;balio&#160;optimorako&#160;<i>goi-borne&#160;</i>bat&#160;ﬁnkatuko&#160;duelako&#160;adarrean.</P>
+<P style="position:absolute;top:334px;left:201px;white-space:nowrap" class="ft1414"><b>6.4.1</b></P>
+<P style="position:absolute;top:334px;left:265px;white-space:nowrap" class="ft1414"><b>Adarkatze-&#160;eta&#160;bornatze-algoritmoa</b></P>
+<P style="position:absolute;top:370px;left:201px;white-space:nowrap" class="ft145">Algoritmo&#160;hau&#160;maximizatze-helburua&#160;duten&#160;programazio&#160;osoko&#160;problemak&#160;ebaz-<br/>teko&#160;diseinatua&#160;izan&#160;da.&#160;Algoritmoaren&#160;urratsak&#160;ondokoak&#160;dira:</P>
+<P style="position:absolute;top:434px;left:222px;white-space:nowrap" class="ft144"><b>1.&#160;urratsa.&#160;Hasieraketa</b></P>
+<P style="position:absolute;top:463px;left:245px;white-space:nowrap" class="ft141">Problema&#160;osoari&#160;dagokion&#160;problema&#160;erlaxatua&#160;ebatzi.</P>
+<P style="position:absolute;top:501px;left:266px;white-space:nowrap" class="ft144"><b>–&#160;</b>Problema&#160;erlaxatuaren&#160;soluzio&#160;optimoa&#160;osoa&#160;bada,&#160;hori&#160;izango&#160;da&#160;pro-</P>
+<P style="position:absolute;top:523px;left:283px;white-space:nowrap" class="ft141">blema&#160;osoaren&#160;soluzio&#160;optimoa.&#160;Amaitu.</P>
+<P style="position:absolute;top:552px;left:266px;white-space:nowrap" class="ft144"><b>–&#160;</b>Bestela,&#160;problema&#160;osoaren&#160;helburu&#160;funtziorako&#160;zb&#160;behe-bornea&#160;hasie-</P>
+<P style="position:absolute;top:574px;left:283px;white-space:nowrap" class="ft1411">ratu.&#160;Problema&#160;osorako&#160;soluziogairik&#160;ez&#160;bada&#160;ezagutzen,&#160;zb&#160;=&#160;−∞<br/>hasieratuko&#160;da.</P>
+<P style="position:absolute;top:633px;left:222px;white-space:nowrap" class="ft144"><b>2.&#160;urratsa.&#160;Adarkatzea</b></P>
+<P style="position:absolute;top:662px;left:245px;white-space:nowrap" class="ft145">Azkenekoa&#160;ez&#160;den&#160;problema&#160;bat&#160;aukeratu.&#160;Aukeratutako&#160;probleman&#160;osoa<br/>izan&#160;behar&#160;duen&#160;eta&#160;problemaren&#160;soluzio&#160;optimoan&#160;ez&#160;den&#160;xj&#160;aldagai&#160;bat<br/>aukeratu.&#160;Problema&#160;adarkatu,&#160;xj&#160;≤&#160;[xj]&#160;eta&#160;xj&#160;≥&#160;[xj]&#160;+&#160;1&#160;murrizketak<br/>erantsiz,&#160;bi&#160;problema&#160;berri&#160;sortzeko1.</P>
+<P style="position:absolute;top:765px;left:222px;white-space:nowrap" class="ft144"><b>3.&#160;urratsa.&#160;Bornatzea</b></P>
+<P style="position:absolute;top:794px;left:245px;white-space:nowrap" class="ft145">Aurreko&#160;adarkatze-urratsean&#160;sortu&#160;berri&#160;ditugun&#160;bi&#160;problemak&#160;ebatzi2&#160;eta<br/>problema&#160;bakoitzerako&#160;zg&#160;kalkulatu.</P>
+<P style="position:absolute;top:853px;left:222px;white-space:nowrap" class="ft144"><b>4.&#160;urratsa.&#160;Azkeneko&#160;problemak</b></P>
+<P style="position:absolute;top:883px;left:245px;white-space:nowrap" class="ft145">Azkeneko&#160;ez&#160;diren&#160;problema&#160;guztiak&#160;aztertu.&#160;Azkeneko&#160;dira&#160;ondoko&#160;bal-<br/>dintzetako&#160;bat&#160;betetzen&#160;dutenak.</P>
+<P style="position:absolute;top:946px;left:253px;white-space:nowrap" class="ft141">(1)&#160;Problema&#160;bideraezina&#160;da.</P>
+<P style="position:absolute;top:979px;left:222px;white-space:nowrap" class="ft1420">1[xj]&#160;balioa&#160;xj&#160;aldagaiaren&#160;zati&#160;osoa&#160;da<br/>2Ebazteko&#160;sentikortasunaren&#160;analisia&#160;erabiltzen&#160;da,&#160;eta&#160;simplex&#160;dual&#160;algoritmoa&#160;aplikatzen&#160;da.</P>
+<P style="position:absolute;top:1043px;left:201px;white-space:nowrap" class="ft148"><i>OpenCourseWare,&#160;UPV/EHU</i></P>
+</DIV>
+<!-- Page 15 -->
+<a name="15"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft1521{font-size:15px;line-height:21px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page15-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:133px;white-space:nowrap" class="ft156"><i>6.4.&#160;Adarkatze-&#160;eta&#160;bornatze-metodoa</i></P>
+<P style="position:absolute;top:141px;left:689px;white-space:nowrap" class="ft151">215</P>
+<P style="position:absolute;top:195px;left:186px;white-space:nowrap" class="ft151">(2)&#160;zg&#160;≤&#160;zb.</P>
+<P style="position:absolute;top:224px;left:186px;white-space:nowrap" class="ft151">(3)&#160;Problemaren&#160;soluzioa&#160;osoa&#160;da&#160;eta&#160;zg&#160;&gt;&#160;zb.&#160;Behe-bornea&#160;eguneratu&#160;zb</P>
+<P style="position:absolute;top:245px;left:216px;white-space:nowrap" class="ft151">=zg&#160;eginez;&#160;soluzio&#160;oso&#160;hori&#160;soluziogaia&#160;da.</P>
+<P style="position:absolute;top:285px;left:177px;white-space:nowrap" class="ft155">Azkeneko&#160;ez&#160;den&#160;problemarik&#160;existitzen&#160;bada,&#160;algoritmoaren&#160;2.&#160;urratsean<br/>jarraitu&#160;behar&#160;da&#160;adarkatze&#160;berri&#160;batekin.&#160;Problema&#160;guztiak&#160;azkeneko&#160;ba-<br/>dira,&#160;soluziogaia&#160;problema&#160;osoaren&#160;soluzio&#160;optimoa&#160;da.&#160;Soluziogairik&#160;ez<br/>badago,&#160;problema&#160;osoa&#160;bideraezina&#160;da.</P>
+<P style="position:absolute;top:388px;left:160px;white-space:nowrap" class="ft151">Problema&#160;oso&#160;baten&#160;soluzio&#160;optimoaren&#160;bilaketa&#160;adarkatze-&#160;eta&#160;bornatze-algo-</P>
+<P style="position:absolute;top:410px;left:133px;white-space:nowrap" class="ft155">ritmoaren&#160;bidez&#160;egiteak&#160;kalkulu&#160;asko&#160;eskatzen&#160;badu&#160;ere,&#160;algoritmo&#160;hau&#160;da&#160;proble-<br/>ma&#160;osoak,&#160;bai&#160;hutsak&#160;eta&#160;bai&#160;mistoak,&#160;ebazteko&#160;gehien&#160;erabiltzen&#160;dena.</P>
+<P style="position:absolute;top:453px;left:160px;white-space:nowrap" class="ft151">Algoritmoaren&#160;2.&#160;urratsean&#160;adarkatua&#160;izango&#160;den&#160;problema&#160;eta&#160;bornatua&#160;izan-</P>
+<P style="position:absolute;top:475px;left:133px;white-space:nowrap" class="ft155">go&#160;den&#160;aldagaia&#160;irizpideren&#160;baten&#160;arabera&#160;aukeratzen&#160;badira,&#160;soluzio&#160;optimoaren<br/>bilaketan&#160;algoritmoaren&#160;zenbait&#160;iterazio&#160;aurreztu&#160;ahal&#160;izango&#160;dira.&#160;Adarkatua<br/>izango&#160;den&#160;problema&#160;aukeratzeko&#160;irizpide&#160;erraz&#160;bat&#160;azkenekoa&#160;ez&#160;den&#160;zg&#160;handie-<br/>neko&#160;problema&#160;aukeratzea&#160;da.&#160;Bornatua&#160;izango&#160;den&#160;aldagaia&#160;aukeratzeko,&#160;aldiz,<br/>irizpideak&#160;konplexuagoak&#160;dira.&#160;Ondoko&#160;adibidean&#160;zoriz,&#160;hau&#160;da,&#160;irizpiderik&#160;jarrai-<br/>tu&#160;gabe,&#160;aukeratuko&#160;dugu&#160;aldagaia.</P>
+<P style="position:absolute;top:613px;left:160px;white-space:nowrap" class="ft154"><b>Adibidea.&#160;</b>205.&#160;orrialdeko&#160;problema&#160;osoaren&#160;soluzio&#160;optimoa&#160;kalkulatuko</P>
+<P style="position:absolute;top:635px;left:133px;white-space:nowrap" class="ft151">dugu&#160;adarkatze-&#160;eta&#160;bornatze-algoritmoa&#160;erabiliz.</P>
+<P style="position:absolute;top:665px;left:160px;white-space:nowrap" class="ft1521"><b>Lehenengo&#160;iterazioa<br/>1.&#160;urratsa.&#160;Hasieraketa.&#160;</b>PE&#160;problema&#160;erlaxatua&#160;ebatzi.&#160;Taula&#160;optimoa&#160;ondo-</P>
+<P style="position:absolute;top:708px;left:133px;white-space:nowrap" class="ft151">koa&#160;da:</P>
+<P style="position:absolute;top:749px;left:357px;white-space:nowrap" class="ft152">x1&#160;x2</P>
+<P style="position:absolute;top:749px;left:424px;white-space:nowrap" class="ft152">x3</P>
+<P style="position:absolute;top:749px;left:463px;white-space:nowrap" class="ft152">x4</P>
+<P style="position:absolute;top:781px;left:365px;white-space:nowrap" class="ft152">0</P>
+<P style="position:absolute;top:781px;left:397px;white-space:nowrap" class="ft152">0</P>
+<P style="position:absolute;top:781px;left:427px;white-space:nowrap" class="ft152">20</P>
+<P style="position:absolute;top:781px;left:475px;white-space:nowrap" class="ft152">5&#160;440</P>
+<P style="position:absolute;top:815px;left:325px;white-space:nowrap" class="ft152">a2</P>
+<P style="position:absolute;top:814px;left:365px;white-space:nowrap" class="ft152">0</P>
+<P style="position:absolute;top:814px;left:397px;white-space:nowrap" class="ft152">1</P>
+<P style="position:absolute;top:812px;left:430px;white-space:nowrap" class="ft157">12</P>
+<P style="position:absolute;top:825px;left:433px;white-space:nowrap" class="ft157">7</P>
+<P style="position:absolute;top:816px;left:460px;white-space:nowrap" class="ft152">−</P>
+<P style="position:absolute;top:812px;left:475px;white-space:nowrap" class="ft157">1</P>
+<P style="position:absolute;top:825px;left:475px;white-space:nowrap" class="ft157">7</P>
+<P style="position:absolute;top:812px;left:510px;white-space:nowrap" class="ft157">24</P>
+<P style="position:absolute;top:825px;left:513px;white-space:nowrap" class="ft157">7</P>
+<P style="position:absolute;top:847px;left:325px;white-space:nowrap" class="ft152">a1</P>
+<P style="position:absolute;top:846px;left:365px;white-space:nowrap" class="ft152">1</P>
+<P style="position:absolute;top:846px;left:397px;white-space:nowrap" class="ft152">0&#160;−</P>
+<P style="position:absolute;top:845px;left:436px;white-space:nowrap" class="ft157">5</P>
+<P style="position:absolute;top:858px;left:437px;white-space:nowrap" class="ft157">7</P>
+<P style="position:absolute;top:845px;left:475px;white-space:nowrap" class="ft157">1</P>
+<P style="position:absolute;top:858px;left:475px;white-space:nowrap" class="ft157">7</P>
+<P style="position:absolute;top:845px;left:510px;white-space:nowrap" class="ft157">25</P>
+<P style="position:absolute;top:858px;left:513px;white-space:nowrap" class="ft157">7</P>
+<P style="position:absolute;top:888px;left:160px;white-space:nowrap" class="ft155">Behe-bornea&#160;hasieratuko&#160;dugu,&#160;zb&#160;=&#160;−∞.<br/><b>2.&#160;urratsa.&#160;Adarkatzea.&#160;</b>PE&#160;problema&#160;erlaxatuaren&#160;soluzioa&#160;ez&#160;da&#160;osoa.</P>
+<P style="position:absolute;top:932px;left:133px;white-space:nowrap" class="ft155">Adarkatzeko&#160;aldagai&#160;bat&#160;aukeratuko&#160;dugu,&#160;x1,&#160;eta&#160;bi&#160;problema&#160;berri&#160;sortuko&#160;ditu-<br/>gu:&#160;P2&#160;problema&#160;eta&#160;P3&#160;problema&#160;(ikus&#160;208.&#160;orrialdea).</P>
+<P style="position:absolute;top:975px;left:160px;white-space:nowrap" class="ft154"><b>3.&#160;urratsa.&#160;Bornatzea.&#160;</b>Sentikortasunaren&#160;analisia&#160;erabiliz,&#160;bi&#160;problema&#160;ho-</P>
+<P style="position:absolute;top:997px;left:133px;white-space:nowrap" class="ft151">riek&#160;ebatziko&#160;ditugu.</P>
+<P style="position:absolute;top:1043px;left:347px;white-space:nowrap" class="ft158"><i>Ikastaroa:&#160;Ikerkuntza&#160;Operatiboa.&#160;Programazio&#160;Lineala</i></P>
+</DIV>
+<!-- Page 16 -->
+<a name="16"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page16-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:201px;white-space:nowrap" class="ft161">216</P>
+<P style="position:absolute;top:141px;left:628px;white-space:nowrap" class="ft166"><i>6.&#160;Programazio&#160;osoa</i></P>
+<P style="position:absolute;top:196px;left:227px;white-space:nowrap" class="ft162">•</P>
+<P style="position:absolute;top:195px;left:245px;white-space:nowrap" class="ft164"><b>P2&#160;problemaren&#160;ebazpena.&#160;</b>x1&#160;≤</P>
+<P style="position:absolute;top:194px;left:493px;white-space:nowrap" class="ft162">3&#160;murrizketari&#160;dagokion&#160;nasaitze-aldagaia</P>
+<P style="position:absolute;top:217px;left:245px;white-space:nowrap" class="ft165">gehitu&#160;eta&#160;P1&#160;problemari&#160;dagokion&#160;taula&#160;optimoan&#160;sartu.&#160;Ondoko&#160;taula&#160;lor-<br/>tzen&#160;da:</P>
+<P style="position:absolute;top:285px;left:430px;white-space:nowrap" class="ft162">x1&#160;x2</P>
+<P style="position:absolute;top:285px;left:497px;white-space:nowrap" class="ft162">x3</P>
+<P style="position:absolute;top:285px;left:536px;white-space:nowrap" class="ft162">x4</P>
+<P style="position:absolute;top:285px;left:572px;white-space:nowrap" class="ft162">x5</P>
+<P style="position:absolute;top:316px;left:438px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:316px;left:470px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:316px;left:500px;white-space:nowrap" class="ft162">20</P>
+<P style="position:absolute;top:316px;left:548px;white-space:nowrap" class="ft162">5</P>
+<P style="position:absolute;top:316px;left:580px;white-space:nowrap" class="ft162">0&#160;440</P>
+<P style="position:absolute;top:350px;left:398px;white-space:nowrap" class="ft162">a2</P>
+<P style="position:absolute;top:350px;left:438px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:350px;left:470px;white-space:nowrap" class="ft162">1</P>
+<P style="position:absolute;top:348px;left:503px;white-space:nowrap" class="ft167">12</P>
+<P style="position:absolute;top:361px;left:507px;white-space:nowrap" class="ft167">7</P>
+<P style="position:absolute;top:352px;left:533px;white-space:nowrap" class="ft162">−</P>
+<P style="position:absolute;top:348px;left:548px;white-space:nowrap" class="ft167">1</P>
+<P style="position:absolute;top:361px;left:548px;white-space:nowrap" class="ft167">7</P>
+<P style="position:absolute;top:350px;left:580px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:348px;left:615px;white-space:nowrap" class="ft167">24</P>
+<P style="position:absolute;top:361px;left:619px;white-space:nowrap" class="ft167">7</P>
+<P style="position:absolute;top:383px;left:398px;white-space:nowrap" class="ft162">a1</P>
+<P style="position:absolute;top:382px;left:438px;white-space:nowrap" class="ft162">1</P>
+<P style="position:absolute;top:382px;left:470px;white-space:nowrap" class="ft162">0&#160;−</P>
+<P style="position:absolute;top:380px;left:510px;white-space:nowrap" class="ft167">5</P>
+<P style="position:absolute;top:394px;left:510px;white-space:nowrap" class="ft167">7</P>
+<P style="position:absolute;top:380px;left:548px;white-space:nowrap" class="ft167">1</P>
+<P style="position:absolute;top:394px;left:548px;white-space:nowrap" class="ft167">7</P>
+<P style="position:absolute;top:382px;left:580px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:380px;left:615px;white-space:nowrap" class="ft167">25</P>
+<P style="position:absolute;top:394px;left:619px;white-space:nowrap" class="ft167">7</P>
+<P style="position:absolute;top:415px;left:398px;white-space:nowrap" class="ft162">a5</P>
+<P style="position:absolute;top:415px;left:438px;white-space:nowrap" class="ft162">1</P>
+<P style="position:absolute;top:415px;left:470px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:415px;left:509px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:415px;left:548px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:415px;left:580px;white-space:nowrap" class="ft162">1</P>
+<P style="position:absolute;top:415px;left:621px;white-space:nowrap" class="ft162">3</P>
+<P style="position:absolute;top:462px;left:245px;white-space:nowrap" class="ft165">Taulako&#160;3.&#160;errenkada&#160;egokitzeko,&#160;3.&#160;errenkada&#160;−&#160;2.&#160;errenkada&#160;eragiketa<br/>egingo&#160;dugu.</P>
+<P style="position:absolute;top:534px;left:430px;white-space:nowrap" class="ft162">x1&#160;x2</P>
+<P style="position:absolute;top:534px;left:497px;white-space:nowrap" class="ft162">x3</P>
+<P style="position:absolute;top:534px;left:536px;white-space:nowrap" class="ft162">x4</P>
+<P style="position:absolute;top:534px;left:572px;white-space:nowrap" class="ft162">x5</P>
+<P style="position:absolute;top:566px;left:438px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:566px;left:470px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:566px;left:500px;white-space:nowrap" class="ft162">20</P>
+<P style="position:absolute;top:566px;left:548px;white-space:nowrap" class="ft162">5</P>
+<P style="position:absolute;top:566px;left:580px;white-space:nowrap" class="ft162">0&#160;440</P>
+<P style="position:absolute;top:600px;left:398px;white-space:nowrap" class="ft162">a2</P>
+<P style="position:absolute;top:599px;left:438px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:599px;left:470px;white-space:nowrap" class="ft162">1</P>
+<P style="position:absolute;top:597px;left:503px;white-space:nowrap" class="ft167">12</P>
+<P style="position:absolute;top:610px;left:507px;white-space:nowrap" class="ft167">7</P>
+<P style="position:absolute;top:601px;left:533px;white-space:nowrap" class="ft162">−</P>
+<P style="position:absolute;top:597px;left:548px;white-space:nowrap" class="ft167">1</P>
+<P style="position:absolute;top:610px;left:548px;white-space:nowrap" class="ft167">7</P>
+<P style="position:absolute;top:599px;left:580px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:597px;left:615px;white-space:nowrap" class="ft167">24</P>
+<P style="position:absolute;top:610px;left:619px;white-space:nowrap" class="ft167">7</P>
+<P style="position:absolute;top:632px;left:398px;white-space:nowrap" class="ft162">a1</P>
+<P style="position:absolute;top:631px;left:438px;white-space:nowrap" class="ft162">1</P>
+<P style="position:absolute;top:631px;left:470px;white-space:nowrap" class="ft162">0&#160;−</P>
+<P style="position:absolute;top:629px;left:510px;white-space:nowrap" class="ft167">5</P>
+<P style="position:absolute;top:643px;left:510px;white-space:nowrap" class="ft167">7</P>
+<P style="position:absolute;top:629px;left:548px;white-space:nowrap" class="ft167">1</P>
+<P style="position:absolute;top:643px;left:548px;white-space:nowrap" class="ft167">7</P>
+<P style="position:absolute;top:631px;left:580px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:629px;left:615px;white-space:nowrap" class="ft167">25</P>
+<P style="position:absolute;top:643px;left:619px;white-space:nowrap" class="ft167">7</P>
+<P style="position:absolute;top:665px;left:398px;white-space:nowrap" class="ft162">a5</P>
+<P style="position:absolute;top:664px;left:438px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:664px;left:470px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:662px;left:510px;white-space:nowrap" class="ft167">5</P>
+<P style="position:absolute;top:675px;left:510px;white-space:nowrap" class="ft167">7</P>
+<P style="position:absolute;top:666px;left:533px;white-space:nowrap" class="ft162">−</P>
+<P style="position:absolute;top:662px;left:548px;white-space:nowrap" class="ft167">1</P>
+<P style="position:absolute;top:675px;left:548px;white-space:nowrap" class="ft167">7</P>
+<P style="position:absolute;top:664px;left:580px;white-space:nowrap" class="ft162">1&#160;−</P>
+<P style="position:absolute;top:662px;left:622px;white-space:nowrap" class="ft167">4</P>
+<P style="position:absolute;top:675px;left:622px;white-space:nowrap" class="ft167">7</P>
+<P style="position:absolute;top:711px;left:245px;white-space:nowrap" class="ft165">Taulan&#160;ez&#160;dago&#160;bideragarritasun&#160;primalik.&#160;Simplex&#160;dual&#160;algoritmoa&#160;aplika-<br/>tuz,&#160;P2&#160;problemarako&#160;optimoa&#160;den&#160;taula&#160;lortzen&#160;da.</P>
+<P style="position:absolute;top:780px;left:431px;white-space:nowrap" class="ft162">x1&#160;x2</P>
+<P style="position:absolute;top:780px;left:498px;white-space:nowrap" class="ft162">x3</P>
+<P style="position:absolute;top:780px;left:533px;white-space:nowrap" class="ft162">x4</P>
+<P style="position:absolute;top:780px;left:568px;white-space:nowrap" class="ft162">x5</P>
+<P style="position:absolute;top:811px;left:439px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:811px;left:471px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:811px;left:500px;white-space:nowrap" class="ft162">45</P>
+<P style="position:absolute;top:811px;left:541px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:811px;left:570px;white-space:nowrap" class="ft162">35&#160;420</P>
+<P style="position:absolute;top:845px;left:399px;white-space:nowrap" class="ft162">a2</P>
+<P style="position:absolute;top:844px;left:439px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:844px;left:471px;white-space:nowrap" class="ft162">1</P>
+<P style="position:absolute;top:844px;left:509px;white-space:nowrap" class="ft162">1</P>
+<P style="position:absolute;top:844px;left:541px;white-space:nowrap" class="ft162">0&#160;−1</P>
+<P style="position:absolute;top:844px;left:620px;white-space:nowrap" class="ft162">4</P>
+<P style="position:absolute;top:878px;left:399px;white-space:nowrap" class="ft162">a1</P>
+<P style="position:absolute;top:877px;left:439px;white-space:nowrap" class="ft162">1</P>
+<P style="position:absolute;top:877px;left:471px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:877px;left:509px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:877px;left:541px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:877px;left:579px;white-space:nowrap" class="ft162">1</P>
+<P style="position:absolute;top:877px;left:620px;white-space:nowrap" class="ft162">3</P>
+<P style="position:absolute;top:910px;left:399px;white-space:nowrap" class="ft162">a4</P>
+<P style="position:absolute;top:909px;left:439px;white-space:nowrap" class="ft162">0</P>
+<P style="position:absolute;top:909px;left:471px;white-space:nowrap" class="ft162">0&#160;−5</P>
+<P style="position:absolute;top:909px;left:541px;white-space:nowrap" class="ft162">1&#160;−7</P>
+<P style="position:absolute;top:909px;left:620px;white-space:nowrap" class="ft162">4</P>
+<P style="position:absolute;top:954px;left:227px;white-space:nowrap" class="ft162">•</P>
+<P style="position:absolute;top:953px;left:245px;white-space:nowrap" class="ft164"><b>P3&#160;problemaren&#160;ebazpena.&#160;</b>x1&#160;≥</P>
+<P style="position:absolute;top:952px;left:512px;white-space:nowrap" class="ft162">4&#160;murrizketa&#160;−1&#160;balioaz&#160;biderkatuko</P>
+<P style="position:absolute;top:975px;left:245px;white-space:nowrap" class="ft161">dugu&#160;P1&#160;problemaren&#160;taula&#160;optimoan&#160;sartzeko,&#160;−x1&#160;≤&#160;−</P>
+<P style="position:absolute;top:974px;left:655px;white-space:nowrap" class="ft162">4,&#160;eta&#160;ondoren,&#160;x5</P>
+<P style="position:absolute;top:997px;left:245px;white-space:nowrap" class="ft161">nasaitze-aldagaia&#160;gehituko&#160;dugu.&#160;Hau&#160;da&#160;lortuko&#160;dugun&#160;taula:</P>
+<P style="position:absolute;top:1043px;left:201px;white-space:nowrap" class="ft168"><i>OpenCourseWare,&#160;UPV/EHU</i></P>
+</DIV>
+<!-- Page 17 -->
+<a name="17"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page17-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:133px;white-space:nowrap" class="ft176"><i>6.4.&#160;Adarkatze-&#160;eta&#160;bornatze-metodoa</i></P>
+<P style="position:absolute;top:141px;left:689px;white-space:nowrap" class="ft171">217</P>
+<P style="position:absolute;top:200px;left:363px;white-space:nowrap" class="ft172">x1</P>
+<P style="position:absolute;top:200px;left:397px;white-space:nowrap" class="ft172">x2</P>
+<P style="position:absolute;top:200px;left:433px;white-space:nowrap" class="ft172">x3</P>
+<P style="position:absolute;top:200px;left:472px;white-space:nowrap" class="ft172">x4</P>
+<P style="position:absolute;top:200px;left:507px;white-space:nowrap" class="ft172">x5</P>
+<P style="position:absolute;top:231px;left:374px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:231px;left:406px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:231px;left:436px;white-space:nowrap" class="ft172">20</P>
+<P style="position:absolute;top:231px;left:483px;white-space:nowrap" class="ft172">5</P>
+<P style="position:absolute;top:231px;left:516px;white-space:nowrap" class="ft172">0&#160;440</P>
+<P style="position:absolute;top:265px;left:328px;white-space:nowrap" class="ft172">a2</P>
+<P style="position:absolute;top:264px;left:374px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:264px;left:406px;white-space:nowrap" class="ft172">1</P>
+<P style="position:absolute;top:263px;left:439px;white-space:nowrap" class="ft177">12</P>
+<P style="position:absolute;top:276px;left:442px;white-space:nowrap" class="ft177">7</P>
+<P style="position:absolute;top:266px;left:468px;white-space:nowrap" class="ft172">−</P>
+<P style="position:absolute;top:263px;left:484px;white-space:nowrap" class="ft177">1</P>
+<P style="position:absolute;top:276px;left:484px;white-space:nowrap" class="ft177">7</P>
+<P style="position:absolute;top:264px;left:516px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:263px;left:551px;white-space:nowrap" class="ft177">24</P>
+<P style="position:absolute;top:276px;left:554px;white-space:nowrap" class="ft177">7</P>
+<P style="position:absolute;top:298px;left:328px;white-space:nowrap" class="ft172">a1</P>
+<P style="position:absolute;top:297px;left:374px;white-space:nowrap" class="ft172">1</P>
+<P style="position:absolute;top:297px;left:406px;white-space:nowrap" class="ft172">0&#160;−</P>
+<P style="position:absolute;top:295px;left:445px;white-space:nowrap" class="ft177">5</P>
+<P style="position:absolute;top:308px;left:445px;white-space:nowrap" class="ft177">7</P>
+<P style="position:absolute;top:295px;left:484px;white-space:nowrap" class="ft177">1</P>
+<P style="position:absolute;top:308px;left:484px;white-space:nowrap" class="ft177">7</P>
+<P style="position:absolute;top:297px;left:516px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:295px;left:551px;white-space:nowrap" class="ft177">25</P>
+<P style="position:absolute;top:308px;left:554px;white-space:nowrap" class="ft177">7</P>
+<P style="position:absolute;top:330px;left:328px;white-space:nowrap" class="ft172">a5&#160;−</P>
+<P style="position:absolute;top:329px;left:374px;white-space:nowrap" class="ft172">1</P>
+<P style="position:absolute;top:329px;left:406px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:329px;left:445px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:329px;left:483px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:329px;left:516px;white-space:nowrap" class="ft172">1</P>
+<P style="position:absolute;top:331px;left:543px;white-space:nowrap" class="ft172">−</P>
+<P style="position:absolute;top:329px;left:557px;white-space:nowrap" class="ft172">4</P>
+<P style="position:absolute;top:374px;left:177px;white-space:nowrap" class="ft171">3.&#160;errenkada&#160;eguneratu,&#160;3.&#160;errenkada</P>
+<P style="position:absolute;top:373px;left:445px;white-space:nowrap" class="ft172">+&#160;2.&#160;errenkada&#160;eragiketa&#160;eginez.</P>
+<P style="position:absolute;top:421px;left:363px;white-space:nowrap" class="ft172">x1&#160;x2</P>
+<P style="position:absolute;top:421px;left:430px;white-space:nowrap" class="ft172">x3</P>
+<P style="position:absolute;top:421px;left:469px;white-space:nowrap" class="ft172">x4</P>
+<P style="position:absolute;top:421px;left:504px;white-space:nowrap" class="ft172">x5</P>
+<P style="position:absolute;top:453px;left:371px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:453px;left:403px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:453px;left:433px;white-space:nowrap" class="ft172">20</P>
+<P style="position:absolute;top:453px;left:481px;white-space:nowrap" class="ft172">5</P>
+<P style="position:absolute;top:453px;left:513px;white-space:nowrap" class="ft172">0&#160;440</P>
+<P style="position:absolute;top:487px;left:331px;white-space:nowrap" class="ft172">a2</P>
+<P style="position:absolute;top:486px;left:371px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:486px;left:403px;white-space:nowrap" class="ft172">1</P>
+<P style="position:absolute;top:484px;left:436px;white-space:nowrap" class="ft177">12</P>
+<P style="position:absolute;top:497px;left:439px;white-space:nowrap" class="ft177">7</P>
+<P style="position:absolute;top:488px;left:465px;white-space:nowrap" class="ft172">−</P>
+<P style="position:absolute;top:484px;left:481px;white-space:nowrap" class="ft177">1</P>
+<P style="position:absolute;top:497px;left:481px;white-space:nowrap" class="ft177">7</P>
+<P style="position:absolute;top:486px;left:513px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:484px;left:548px;white-space:nowrap" class="ft177">24</P>
+<P style="position:absolute;top:497px;left:551px;white-space:nowrap" class="ft177">7</P>
+<P style="position:absolute;top:519px;left:331px;white-space:nowrap" class="ft172">a1</P>
+<P style="position:absolute;top:518px;left:371px;white-space:nowrap" class="ft172">1</P>
+<P style="position:absolute;top:518px;left:403px;white-space:nowrap" class="ft172">0&#160;−</P>
+<P style="position:absolute;top:516px;left:442px;white-space:nowrap" class="ft177">5</P>
+<P style="position:absolute;top:530px;left:442px;white-space:nowrap" class="ft177">7</P>
+<P style="position:absolute;top:516px;left:481px;white-space:nowrap" class="ft177">1</P>
+<P style="position:absolute;top:530px;left:481px;white-space:nowrap" class="ft177">7</P>
+<P style="position:absolute;top:518px;left:513px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:516px;left:548px;white-space:nowrap" class="ft177">25</P>
+<P style="position:absolute;top:530px;left:551px;white-space:nowrap" class="ft177">7</P>
+<P style="position:absolute;top:552px;left:331px;white-space:nowrap" class="ft172">a5</P>
+<P style="position:absolute;top:551px;left:371px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:551px;left:403px;white-space:nowrap" class="ft172">0&#160;−</P>
+<P style="position:absolute;top:549px;left:442px;white-space:nowrap" class="ft177">5</P>
+<P style="position:absolute;top:562px;left:442px;white-space:nowrap" class="ft177">7</P>
+<P style="position:absolute;top:549px;left:481px;white-space:nowrap" class="ft177">1</P>
+<P style="position:absolute;top:562px;left:481px;white-space:nowrap" class="ft177">7</P>
+<P style="position:absolute;top:551px;left:513px;white-space:nowrap" class="ft172">1&#160;−</P>
+<P style="position:absolute;top:549px;left:554px;white-space:nowrap" class="ft177">3</P>
+<P style="position:absolute;top:562px;left:554px;white-space:nowrap" class="ft177">7</P>
+<P style="position:absolute;top:595px;left:177px;white-space:nowrap" class="ft175">Taulan&#160;ez&#160;dago&#160;bideragarritasun&#160;primalik.&#160;Simplex&#160;dual&#160;algoritmoa&#160;aplika-<br/>tuz,&#160;P3&#160;problemarako&#160;taula&#160;optimoa&#160;lortzen&#160;da.</P>
+<P style="position:absolute;top:668px;left:363px;white-space:nowrap" class="ft172">x1&#160;x2&#160;x3</P>
+<P style="position:absolute;top:668px;left:462px;white-space:nowrap" class="ft172">x4</P>
+<P style="position:absolute;top:668px;left:501px;white-space:nowrap" class="ft172">x5</P>
+<P style="position:absolute;top:699px;left:371px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:699px;left:403px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:699px;left:435px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:699px;left:474px;white-space:nowrap" class="ft172">9</P>
+<P style="position:absolute;top:699px;left:504px;white-space:nowrap" class="ft172">28&#160;428</P>
+<P style="position:absolute;top:733px;left:331px;white-space:nowrap" class="ft172">a2</P>
+<P style="position:absolute;top:732px;left:371px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:732px;left:403px;white-space:nowrap" class="ft172">1</P>
+<P style="position:absolute;top:732px;left:435px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:730px;left:474px;white-space:nowrap" class="ft177">1</P>
+<P style="position:absolute;top:744px;left:474px;white-space:nowrap" class="ft177">5</P>
+<P style="position:absolute;top:730px;left:507px;white-space:nowrap" class="ft177">12</P>
+<P style="position:absolute;top:744px;left:510px;white-space:nowrap" class="ft177">5</P>
+<P style="position:absolute;top:730px;left:548px;white-space:nowrap" class="ft177">12</P>
+<P style="position:absolute;top:744px;left:551px;white-space:nowrap" class="ft177">5</P>
+<P style="position:absolute;top:766px;left:331px;white-space:nowrap" class="ft172">a1</P>
+<P style="position:absolute;top:765px;left:371px;white-space:nowrap" class="ft172">1</P>
+<P style="position:absolute;top:765px;left:403px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:765px;left:435px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:765px;left:474px;white-space:nowrap" class="ft172">0&#160;−1</P>
+<P style="position:absolute;top:765px;left:554px;white-space:nowrap" class="ft172">4</P>
+<P style="position:absolute;top:798px;left:331px;white-space:nowrap" class="ft172">a3</P>
+<P style="position:absolute;top:797px;left:371px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:797px;left:403px;white-space:nowrap" class="ft172">0</P>
+<P style="position:absolute;top:797px;left:435px;white-space:nowrap" class="ft172">1&#160;−</P>
+<P style="position:absolute;top:795px;left:474px;white-space:nowrap" class="ft177">1</P>
+<P style="position:absolute;top:809px;left:474px;white-space:nowrap" class="ft177">5</P>
+<P style="position:absolute;top:799px;left:498px;white-space:nowrap" class="ft172">−</P>
+<P style="position:absolute;top:795px;left:513px;white-space:nowrap" class="ft177">7</P>
+<P style="position:absolute;top:809px;left:513px;white-space:nowrap" class="ft177">5</P>
+<P style="position:absolute;top:795px;left:555px;white-space:nowrap" class="ft177">3</P>
+<P style="position:absolute;top:809px;left:555px;white-space:nowrap" class="ft177">5</P>
+<P style="position:absolute;top:845px;left:133px;white-space:nowrap" class="ft175">Horrela,&#160;P2&#160;problema&#160;eta&#160;P3&#160;problema&#160;ebatzi&#160;dira&#160;(ikus&#160;soluzioak&#160;212.&#160;orrialdeko<br/>6.1&#160;Irudian).</P>
+<P style="position:absolute;top:888px;left:160px;white-space:nowrap" class="ft1721"><b>4.&#160;urratsa.&#160;Azkeneko&#160;problemak.<br/></b>P2&#160;problema&#160;azkenekoa&#160;da&#160;zg&#160;=&#160;420&#160;&gt;&#160;zb&#160;izanik&#160;soluzioa&#160;osoa&#160;delako:&#160;x1&#160;=&#160;3</P>
+<P style="position:absolute;top:932px;left:133px;white-space:nowrap" class="ft171">eta&#160;x2</P>
+<P style="position:absolute;top:931px;left:183px;white-space:nowrap" class="ft172">=&#160;4.&#160;Oraingoz&#160;kalkulatu&#160;den&#160;soluzio&#160;osorik&#160;onena&#160;izateagatik&#160;soluziogaia</P>
+<P style="position:absolute;top:953px;left:133px;white-space:nowrap" class="ft171">da,&#160;eta&#160;behe-bornea&#160;eguneratu&#160;egin&#160;behar&#160;da:&#160;zb&#160;=&#160;zg&#160;=&#160;420.</P>
+<P style="position:absolute;top:975px;left:160px;white-space:nowrap" class="ft171">P3&#160;problema&#160;ez&#160;da&#160;azkenekoa,&#160;ez&#160;duelako&#160;4.&#160;urratseko&#160;irizpide&#160;bat&#160;bera&#160;ere</P>
+<P style="position:absolute;top:997px;left:133px;white-space:nowrap" class="ft171">betetzen.</P>
+<P style="position:absolute;top:1043px;left:347px;white-space:nowrap" class="ft178"><i>Ikastaroa:&#160;Ikerkuntza&#160;Operatiboa.&#160;Programazio&#160;Lineala</i></P>
+</DIV>
+<!-- Page 18 -->
+<a name="18"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft1822{font-size:15px;line-height:25px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page18-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:201px;white-space:nowrap" class="ft181">218</P>
+<P style="position:absolute;top:141px;left:628px;white-space:nowrap" class="ft186"><i>6.&#160;Programazio&#160;osoa</i></P>
+<P style="position:absolute;top:195px;left:227px;white-space:nowrap" class="ft181">Problema&#160;guztiak&#160;azkenekoak&#160;ez&#160;direnez,&#160;algoritmoaren&#160;iterazio&#160;berri&#160;bat&#160;egin</P>
+<P style="position:absolute;top:217px;left:201px;white-space:nowrap" class="ft181">behar&#160;da&#160;2.&#160;urratsean&#160;jarraituz.</P>
+<P style="position:absolute;top:258px;left:227px;white-space:nowrap" class="ft184"><b>Bigarren&#160;iterazioa</b></P>
+<P style="position:absolute;top:283px;left:227px;white-space:nowrap" class="ft184"><b>2.&#160;urratsa.&#160;Adarkatzea.&#160;</b>Azkenekoa&#160;ez&#160;den&#160;problema&#160;bakarra&#160;aukeratuko</P>
+<P style="position:absolute;top:305px;left:201px;white-space:nowrap" class="ft185">dugu:&#160;P3&#160;problema.&#160;Bertan,&#160;x2&#160;aldagaia&#160;aukeratuko&#160;dugu&#160;bornatua&#160;izateko.&#160;Pro-<br/>blema&#160;adarkatuko&#160;dugu&#160;P3&#160;problemari&#160;x2&#160;≤</P>
+<P style="position:absolute;top:325px;left:532px;white-space:nowrap" class="ft182">2&#160;murrizketa&#160;erantsiz&#160;P4&#160;problema</P>
+<P style="position:absolute;top:348px;left:201px;white-space:nowrap" class="ft181">sortzeko,&#160;eta&#160;x2&#160;≥</P>
+<P style="position:absolute;top:347px;left:337px;white-space:nowrap" class="ft182">3&#160;erantsiz&#160;P5&#160;problema&#160;sortzeko&#160;(ikus&#160;210.&#160;orrialdea).</P>
+<P style="position:absolute;top:373px;left:227px;white-space:nowrap" class="ft184"><b>3.&#160;urratsa.&#160;Bornatzea.&#160;</b>Sortutako&#160;bi&#160;problemak&#160;ebatzi.&#160;Aurreko&#160;iterazioan</P>
+<P style="position:absolute;top:395px;left:201px;white-space:nowrap" class="ft185">egin&#160;bezala,&#160;sentikortasunaren&#160;analisia&#160;eta&#160;simplex&#160;dual&#160;algoritmoa&#160;aplikatuko&#160;di-<br/>tugu.&#160;Kasu&#160;honetan,&#160;P3&#160;problemaren&#160;taula&#160;optimotik&#160;abiatuko&#160;gara&#160;P4&#160;proble-<br/>maren&#160;eta&#160;P5&#160;problemaren&#160;soluzio&#160;optimoak&#160;kalkulatzeko&#160;(ikus&#160;soluzioak&#160;212.<br/>orrialdeko&#160;6.1&#160;Irudian).</P>
+<P style="position:absolute;top:485px;left:227px;white-space:nowrap" class="ft184"><b>4.&#160;urratsa.&#160;Azkeneko&#160;problemak.</b></P>
+<P style="position:absolute;top:510px;left:227px;white-space:nowrap" class="ft181">P5&#160;problema&#160;azkenekoa&#160;da&#160;bideraezina&#160;delako.</P>
+<P style="position:absolute;top:535px;left:227px;white-space:nowrap" class="ft181">P4&#160;problemaren&#160;soluzio&#160;optimoa&#160;ez&#160;da&#160;osoa,&#160;eta&#160;zg&#160;=&#160;423.33&#160;&gt;&#160;420&#160;=&#160;zb</P>
+<P style="position:absolute;top:557px;left:201px;white-space:nowrap" class="ft185">betetzen&#160;da.&#160;Hortaz,&#160;problema&#160;ez&#160;da&#160;azkenekoa.&#160;2.&#160;urratsera&#160;joan&#160;behar&#160;da&#160;algo-<br/>ritmoaren&#160;iterazio&#160;berri&#160;bati&#160;ekiteko.</P>
+<P style="position:absolute;top:619px;left:227px;white-space:nowrap" class="ft184"><b>Hirugarren&#160;iterazioa</b></P>
+<P style="position:absolute;top:644px;left:227px;white-space:nowrap" class="ft184"><b>2.&#160;urratsa.&#160;Adarkatzea.&#160;</b>Oraingoan,&#160;P4&#160;problema&#160;da&#160;azkenekoa&#160;ez&#160;den&#160;baka-</P>
+<P style="position:absolute;top:666px;left:201px;white-space:nowrap" class="ft185">rra,&#160;eta&#160;adarkatua&#160;izateko&#160;aukeratuko&#160;dugu.&#160;Bertan,&#160;x1&#160;aldagaia&#160;aukeratuko&#160;dugu.<br/>Bi&#160;problema&#160;berri&#160;sortuko&#160;ditugu:&#160;P6&#160;problema&#160;eta&#160;P7&#160;problema&#160;(ikus&#160;ereduak<br/>211.&#160;orrialdean).</P>
+<P style="position:absolute;top:734px;left:227px;white-space:nowrap" class="ft184"><b>3.&#160;urratsa.&#160;Bornatzea.&#160;</b>Sortutako&#160;bi&#160;problema&#160;berriak&#160;ebatzi,&#160;aurreko&#160;urra-</P>
+<P style="position:absolute;top:756px;left:201px;white-space:nowrap" class="ft185">tsetan&#160;egin&#160;bezala.&#160;Kasu&#160;honetan,&#160;P4&#160;problemaren&#160;taula&#160;optimotik&#160;abiatuko&#160;gara<br/>(ikus&#160;soluzio&#160;optimoak&#160;212.&#160;orrialdeko&#160;6.1&#160;Irudian).</P>
+<P style="position:absolute;top:803px;left:227px;white-space:nowrap" class="ft184"><b>4.urratsa.&#160;Azkeneko&#160;problemak.</b></P>
+<P style="position:absolute;top:828px;left:227px;white-space:nowrap" class="ft1822">P6&#160;problema&#160;azkenekoa&#160;da,&#160;zg&#160;=&#160;410&#160;&lt;&#160;420&#160;=&#160;zb&#160;betetzen&#160;delako.<br/>P7&#160;problema&#160;ere&#160;azkenekoa&#160;da,&#160;zg&#160;=&#160;400&#160;&lt;&#160;420&#160;=&#160;zb&#160;betetzen&#160;delako.<br/>Problema&#160;guztiak&#160;azkeneko&#160;bihurtu&#160;direnez,&#160;algoritmoaren&#160;aplikazioa&#160;amaitu</P>
+<P style="position:absolute;top:900px;left:201px;white-space:nowrap" class="ft185">da.&#160;Problema&#160;osoaren&#160;soluzio&#160;optimoa,&#160;P2&#160;problemaren&#160;ebazpenetik&#160;lortu&#160;den<br/>soluziogaia&#160;da.</P>
+<P style="position:absolute;top:953px;left:365px;white-space:nowrap" class="ft182">x∗</P>
+<P style="position:absolute;top:962px;left:375px;white-space:nowrap" class="ft187">1&#160;=&#160;3,</P>
+<P style="position:absolute;top:953px;left:431px;white-space:nowrap" class="ft182">x∗</P>
+<P style="position:absolute;top:962px;left:441px;white-space:nowrap" class="ft187">2&#160;=&#160;4,</P>
+<P style="position:absolute;top:953px;left:498px;white-space:nowrap" class="ft182">z∗</P>
+<P style="position:absolute;top:962px;left:506px;white-space:nowrap" class="ft187">P&#160;O&#160;=&#160;zb&#160;=&#160;420.</P>
+<P style="position:absolute;top:998px;left:770px;white-space:nowrap" class="ft182">2</P>
+<P style="position:absolute;top:1043px;left:201px;white-space:nowrap" class="ft188"><i>OpenCourseWare,&#160;UPV/EHU</i></P>
+</DIV>
+<!-- Page 19 -->
+<a name="19"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page19-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:133px;white-space:nowrap" class="ft196"><i>6.5.&#160;0-1&#160;programazio&#160;osoa</i></P>
+<P style="position:absolute;top:141px;left:689px;white-space:nowrap" class="ft191">219</P>
+<P style="position:absolute;top:190px;left:133px;white-space:nowrap" class="ft193"><b>6.5</b></P>
+<P style="position:absolute;top:190px;left:192px;white-space:nowrap" class="ft193"><b>0-1&#160;programazio&#160;osoa</b></P>
+<P style="position:absolute;top:235px;left:133px;white-space:nowrap" class="ft195">Praktikan&#160;aldagai&#160;bitarrak&#160;besterik&#160;ez&#160;dituzten&#160;problemak&#160;existitzen&#160;dira.&#160;Mota<br/>horretako&#160;problemak&#160;ebazteko,&#160;algoritmo&#160;desberdinak&#160;garatu&#160;izan&#160;dira.&#160;Atal&#160;ho-<br/>netan,&#160;funtsean&#160;adarkatze-&#160;eta&#160;bornatze-algoritmoaren&#160;egitura&#160;bera&#160;duen&#160;algoritmo<br/>horietako&#160;bat&#160;azalduko&#160;dugu.</P>
+<P style="position:absolute;top:322px;left:160px;white-space:nowrap" class="ft191">Aztertuko&#160;dugun&#160;algoritmoa&#160;erabiltzeko,&#160;0-1&#160;eredu&#160;lineal&#160;osoaren&#160;helburu&#160;fun-</P>
+<P style="position:absolute;top:344px;left:133px;white-space:nowrap" class="ft191">tzioaren&#160;koeﬁzienteek&#160;ondoko&#160;baldintza&#160;bete&#160;behar&#160;dute:</P>
+<P style="position:absolute;top:377px;left:339px;white-space:nowrap" class="ft192">0&#160;≤&#160;c1&#160;≤&#160;c2&#160;≤&#160;·&#160;·&#160;·&#160;≤&#160;cn</P>
+<P style="position:absolute;top:378px;left:682px;white-space:nowrap" class="ft191">(6.1)</P>
+<P style="position:absolute;top:413px;left:133px;white-space:nowrap" class="ft195">Eredu&#160;lineala&#160;beti&#160;idatz&#160;daiteke&#160;(6.1)&#160;baldintza&#160;beteko&#160;duen&#160;idazkeran;&#160;hori&#160;hala<br/>izan&#160;dadin,&#160;beharrezkoak&#160;diren&#160;aldaketa&#160;linealak&#160;egin&#160;beharko&#160;dira.</P>
+<P style="position:absolute;top:463px;left:160px;white-space:nowrap" class="ft194"><b>Adibidea.&#160;</b>Izan&#160;bedi&#160;ondoko&#160;0-1&#160;eredu&#160;lineal&#160;osoa:</P>
+<P style="position:absolute;top:496px;left:343px;white-space:nowrap" class="ft192">max&#160;z&#160;=&#160;6x1&#160;−&#160;4x2</P>
+<P style="position:absolute;top:524px;left:330px;white-space:nowrap" class="ft191">hauen&#160;mende</P>
+<P style="position:absolute;top:549px;left:375px;white-space:nowrap" class="ft192">3x1&#160;+&#160;2x2&#160;≤&#160;10</P>
+<P style="position:absolute;top:577px;left:378px;white-space:nowrap" class="ft192">−</P>
+<P style="position:absolute;top:576px;left:392px;white-space:nowrap" class="ft192">x1</P>
+<P style="position:absolute;top:575px;left:413px;white-space:nowrap" class="ft192">+&#160;x2&#160;≤&#160;17</P>
+<P style="position:absolute;top:602px;left:371px;white-space:nowrap" class="ft192">x1,&#160;x2</P>
+<P style="position:absolute;top:601px;left:418px;white-space:nowrap" class="ft192">=&#160;0&#160;edo&#160;1</P>
+<P style="position:absolute;top:663px;left:160px;white-space:nowrap" class="ft191">Helburu&#160;funtzioaren&#160;koeﬁzienteek&#160;(6.1)&#160;baldintza&#160;betetzen&#160;ez&#160;dutenez,&#160;ondoko</P>
+<P style="position:absolute;top:685px;left:133px;white-space:nowrap" class="ft195">aldaketa&#160;lineala&#160;egin&#160;behar&#160;dugu:&#160;helburu&#160;funtzioan&#160;koeﬁziente&#160;minimoa&#160;aukera-<br/>tuko&#160;dugu&#160;balio&#160;absolutuan,&#160;c2&#160;kasu&#160;honetan.&#160;x2</P>
+<P style="position:absolute;top:705px;left:489px;white-space:nowrap" class="ft192">=&#160;y1&#160;egingo&#160;dugu&#160;baldin&#160;koeﬁ-</P>
+<P style="position:absolute;top:728px;left:133px;white-space:nowrap" class="ft191">zientea&#160;positiboa&#160;bada,&#160;eta&#160;x2</P>
+<P style="position:absolute;top:727px;left:348px;white-space:nowrap" class="ft192">=&#160;1&#160;−&#160;y1&#160;baldin&#160;c2&#160;negatiboa&#160;bada.&#160;Kasu&#160;honetan&#160;c2</P>
+<P style="position:absolute;top:749px;left:133px;white-space:nowrap" class="ft191">negatiboa&#160;denez,&#160;x2</P>
+<P style="position:absolute;top:748px;left:279px;white-space:nowrap" class="ft192">=&#160;1&#160;−&#160;y1&#160;aldagai-aldaketa&#160;egingo&#160;dugu.&#160;Hurrengo&#160;koeﬁziente</P>
+<P style="position:absolute;top:771px;left:133px;white-space:nowrap" class="ft191">txikiena&#160;balio&#160;absolutuan&#160;c1&#160;da;&#160;positiboa&#160;denez,&#160;x1</P>
+<P style="position:absolute;top:770px;left:507px;white-space:nowrap" class="ft192">=&#160;y2&#160;egingo&#160;dugu.</P>
+<P style="position:absolute;top:793px;left:160px;white-space:nowrap" class="ft191">Aldagai-aldaketa&#160;eginez&#160;lortzen&#160;den&#160;eredu&#160;linealean&#160;helburu&#160;funtzioaren&#160;koe-</P>
+<P style="position:absolute;top:814px;left:133px;white-space:nowrap" class="ft195">ﬁzienteek&#160;(6.1)&#160;baldintza&#160;betetzea&#160;lortzen&#160;dugu,&#160;hau&#160;da,&#160;positiboak&#160;izatea&#160;eta&#160;go-<br/>ranzko&#160;ordenean&#160;egotea.</P>
+<P style="position:absolute;top:891px;left:326px;white-space:nowrap" class="ft192">max&#160;z&#160;=&#160;4y1&#160;+&#160;6y2&#160;−&#160;4</P>
+<P style="position:absolute;top:918px;left:320px;white-space:nowrap" class="ft191">hauen&#160;mende</P>
+<P style="position:absolute;top:945px;left:383px;white-space:nowrap" class="ft192">−</P>
+<P style="position:absolute;top:943px;left:397px;white-space:nowrap" class="ft192">2y1&#160;+&#160;3y2&#160;≤&#160;8</P>
+<P style="position:absolute;top:972px;left:391px;white-space:nowrap" class="ft192">−</P>
+<P style="position:absolute;top:971px;left:405px;white-space:nowrap" class="ft192">y1&#160;−&#160;y2&#160;≤</P>
+<P style="position:absolute;top:970px;left:482px;white-space:nowrap" class="ft192">16</P>
+<P style="position:absolute;top:997px;left:385px;white-space:nowrap" class="ft192">y2,&#160;y2</P>
+<P style="position:absolute;top:996px;left:429px;white-space:nowrap" class="ft192">=&#160;0&#160;edo&#160;1</P>
+<P style="position:absolute;top:1043px;left:347px;white-space:nowrap" class="ft198"><i>Ikastaroa:&#160;Ikerkuntza&#160;Operatiboa.&#160;Programazio&#160;Lineala</i></P>
+</DIV>
+<!-- Page 20 -->
+<a name="20"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page20-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:201px;white-space:nowrap" class="ft201">220</P>
+<P style="position:absolute;top:141px;left:628px;white-space:nowrap" class="ft206"><i>6.&#160;Programazio&#160;osoa</i></P>
+<P style="position:absolute;top:196px;left:770px;white-space:nowrap" class="ft202">2</P>
+<P style="position:absolute;top:235px;left:201px;white-space:nowrap" class="ft2013"><b>6.5.1&#160;Deﬁnizioa.&#160;(Problema&#160;erlaxatua)&#160;</b><i>0-1&#160;eredu&#160;lineal&#160;bat&#160;izanik,&#160;dagokion&#160;pro-<br/>blema&#160;erlaxatua&#160;lortzeko&#160;problemari&#160;murrizketa&#160;guztiak&#160;kendu&#160;behar&#160;zaizkio,&#160;al-<br/>dagaiak&#160;bitarrak&#160;izatearena&#160;izan&#160;ezik.</i></P>
+<P style="position:absolute;top:317px;left:201px;white-space:nowrap" class="ft2013"><b>6.5.2&#160;Deﬁnizioa.&#160;(Soluzio&#160;partziala)&#160;</b><i>0-1&#160;eredu&#160;lineal&#160;bat&#160;emanik,&#160;aldagairen&#160;bat<br/>balio&#160;ﬁnkorik&#160;gabe&#160;duen&#160;soluzioari&#160;eredu&#160;linealaren&#160;soluzio&#160;partziala&#160;deitzen&#160;zaio.</i></P>
+<P style="position:absolute;top:379px;left:201px;white-space:nowrap" class="ft2013"><b>6.5.3&#160;Deﬁnizioa.&#160;(Soluzio&#160;partzial&#160;baten&#160;osaketa)&#160;</b><i>0-1&#160;eredu&#160;lineal&#160;oso&#160;baten&#160;so-<br/>luzio&#160;partzial&#160;bat&#160;emanik,&#160;ﬁnkatu&#160;gabe&#160;dauden&#160;aldagaiei&#160;balio&#160;ﬁnkoa&#160;ematen&#160;zaie-<br/>nean&#160;lortzen&#160;den&#160;soluzioa&#160;soluzio&#160;partzialaren&#160;osaketa&#160;dela&#160;esaten&#160;da.</i></P>
+<P style="position:absolute;top:470px;left:227px;white-space:nowrap" class="ft204"><b>Adibidea.&#160;</b>Izan&#160;bedi&#160;ondoko&#160;0-1&#160;eredu&#160;lineala:</P>
+<P style="position:absolute;top:507px;left:385px;white-space:nowrap" class="ft202">max&#160;z&#160;=&#160;x1&#160;+&#160;2x2&#160;+&#160;4x3</P>
+<P style="position:absolute;top:535px;left:389px;white-space:nowrap" class="ft201">hauen&#160;mende</P>
+<P style="position:absolute;top:561px;left:434px;white-space:nowrap" class="ft202">x1</P>
+<P style="position:absolute;top:560px;left:455px;white-space:nowrap" class="ft202">+&#160;x2&#160;+&#160;2x3&#160;≤&#160;4</P>
+<P style="position:absolute;top:586px;left:425px;white-space:nowrap" class="ft202">3x1&#160;+&#160;x2&#160;+&#160;2x3&#160;≤&#160;5</P>
+<P style="position:absolute;top:613px;left:426px;white-space:nowrap" class="ft202">x1,&#160;x2,&#160;x3</P>
+<P style="position:absolute;top:612px;left:498px;white-space:nowrap" class="ft202">=&#160;0&#160;edo&#160;1</P>
+<P style="position:absolute;top:651px;left:227px;white-space:nowrap" class="ft201">Dagokion&#160;problema&#160;erlaxatua&#160;ondokoa&#160;da:</P>
+<P style="position:absolute;top:710px;left:385px;white-space:nowrap" class="ft202">max&#160;z&#160;=&#160;x1&#160;+&#160;2x2&#160;+&#160;4x3</P>
+<P style="position:absolute;top:737px;left:389px;white-space:nowrap" class="ft201">hauen&#160;mende</P>
+<P style="position:absolute;top:763px;left:426px;white-space:nowrap" class="ft202">x1,&#160;x2,&#160;x3</P>
+<P style="position:absolute;top:762px;left:498px;white-space:nowrap" class="ft202">=&#160;0&#160;edo&#160;1</P>
+<P style="position:absolute;top:802px;left:227px;white-space:nowrap" class="ft201">Adibidez,&#160;x</P>
+<P style="position:absolute;top:801px;left:322px;white-space:nowrap" class="ft202">=&#160;(1,&#160;1,&#160;−)&#160;soluzioa&#160;problema&#160;erlaxatuaren&#160;soluzio&#160;partzial&#160;bat</P>
+<P style="position:absolute;top:823px;left:201px;white-space:nowrap" class="ft201">da.&#160;Soluzio&#160;horrek&#160;bi&#160;osaketa&#160;posible&#160;ditu:</P>
+<P style="position:absolute;top:822px;left:521px;white-space:nowrap" class="ft202">(1,&#160;1,&#160;0)&#160;eta&#160;(1,&#160;1,&#160;1).&#160;x&#160;=&#160;(0,&#160;−,&#160;−)</P>
+<P style="position:absolute;top:845px;left:201px;white-space:nowrap" class="ft205">soluzioa&#160;ere&#160;problema&#160;erlaxatuaren&#160;soluzio&#160;partzial&#160;bat&#160;da,&#160;eta&#160;lau&#160;osaketa&#160;posible<br/>ditu:</P>
+<P style="position:absolute;top:866px;left:239px;white-space:nowrap" class="ft202">(0,&#160;1,&#160;1),&#160;(0,&#160;1,&#160;0),&#160;(0,&#160;0,&#160;1)&#160;eta&#160;(0,&#160;0,&#160;0).</P>
+<P style="position:absolute;top:888px;left:227px;white-space:nowrap" class="ft201">Problema&#160;erlaxatua&#160;ebaztea&#160;erraza&#160;gertatzen&#160;da,&#160;jakinda&#160;problemari&#160;murrizketa</P>
+<P style="position:absolute;top:910px;left:201px;white-space:nowrap" class="ft205">guztiak&#160;kendu&#160;zaizkiola,&#160;aldagaiak&#160;bitarrak&#160;izatearena&#160;izan&#160;ezik.&#160;Gainera,&#160;helbu-<br/>ru&#160;funtzioaren&#160;koeﬁziente&#160;guztiak&#160;positiboak&#160;direnez,&#160;garbi&#160;ikusten&#160;da&#160;problema<br/>erlaxatuaren&#160;soluzio&#160;optimoa&#160;x∗</P>
+<P style="position:absolute;top:952px;left:444px;white-space:nowrap" class="ft202">=&#160;(1,&#160;1,&#160;1)&#160;dela.&#160;Soluzio&#160;horrek&#160;0-1&#160;problema</P>
+<P style="position:absolute;top:975px;left:201px;white-space:nowrap" class="ft205">osoaren&#160;murrizketak&#160;beteko&#160;ez&#160;balitu,&#160;helburu&#160;funtzioaren&#160;koeﬁzienteak&#160;txikiene-<br/>tik&#160;handienera&#160;ordenatuta&#160;daudenez,&#160;problema&#160;erlaxatuaren&#160;hurrengo&#160;soluziorik</P>
+<P style="position:absolute;top:1043px;left:201px;white-space:nowrap" class="ft208"><i>OpenCourseWare,&#160;UPV/EHU</i></P>
+</DIV>
+<!-- Page 21 -->
+<a name="21"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page21-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:133px;white-space:nowrap" class="ft216"><i>6.5.&#160;0-1&#160;programazio&#160;osoa</i></P>
+<P style="position:absolute;top:141px;left:689px;white-space:nowrap" class="ft211">221</P>
+<P style="position:absolute;top:195px;left:133px;white-space:nowrap" class="ft211">onenarekin,&#160;hau&#160;da,&#160;x</P>
+<P style="position:absolute;top:194px;left:301px;white-space:nowrap" class="ft212">=&#160;(0,&#160;1,&#160;1)&#160;soluzioarekin&#160;probatuko&#160;genuke,&#160;eta&#160;gero&#160;hu-</P>
+<P style="position:absolute;top:217px;left:133px;white-space:nowrap" class="ft211">rrengoarekin&#160;x</P>
+<P style="position:absolute;top:215px;left:250px;white-space:nowrap" class="ft212">=&#160;(1,&#160;0,&#160;1),&#160;eta&#160;abar.&#160;Problema&#160;erlaxatuaren&#160;soluzioak&#160;onenetik</P>
+<P style="position:absolute;top:238px;left:133px;white-space:nowrap" class="ft215">okerrenera&#160;ordena&#160;ditzakegu,&#160;eta&#160;ordena&#160;horretan&#160;0-1&#160;problema&#160;osoaren&#160;murrizke-<br/>ta&#160;betetzen&#160;duten&#160;egiaztatu,&#160;betetzen&#160;duen&#160;bat&#160;aurkitu&#160;arte.</P>
+<P style="position:absolute;top:284px;left:703px;white-space:nowrap" class="ft212">2</P>
+<P style="position:absolute;top:305px;left:160px;white-space:nowrap" class="ft211">Ondoko&#160;atalean&#160;azaltzen&#160;den&#160;0-1&#160;adarkatze-&#160;eta&#160;bornatze-&#160;algoritmoak,&#160;hain</P>
+<P style="position:absolute;top:327px;left:133px;white-space:nowrap" class="ft215">zuzen&#160;ere,&#160;hori&#160;egiten&#160;du:&#160;algoritmoa&#160;problema&#160;erlaxatuaren&#160;soluzio&#160;optimotik<br/>hasten&#160;da,&#160;eta&#160;0-1&#160;problema&#160;osoaren&#160;murrizketak&#160;betetzen&#160;dituen&#160;egiaztatzen&#160;du.<br/>Problemak&#160;adarkatuz,&#160;0-1&#160;problema&#160;osorako&#160;soluzio&#160;optimoa&#160;aurkituko&#160;da.&#160;Eba-<br/>tzitako&#160;problema&#160;guztiak&#160;erlaxatuak&#160;dira.</P>
+<P style="position:absolute;top:448px;left:133px;white-space:nowrap" class="ft2114"><b>6.5.1</b></P>
+<P style="position:absolute;top:448px;left:198px;white-space:nowrap" class="ft2114"><b>0-1&#160;adarkatze-&#160;eta&#160;bornatze-algoritmoa</b></P>
+<P style="position:absolute;top:486px;left:133px;white-space:nowrap" class="ft215">Algoritmo&#160;hau&#160;helburua&#160;maximizatzea&#160;duten&#160;0-1&#160;problema&#160;linealak&#160;ebazteko&#160;di-<br/>seinatua&#160;izan&#160;da.&#160;Helburu&#160;funtzioaren&#160;koeﬁzienteek</P>
+<P style="position:absolute;top:506px;left:521px;white-space:nowrap" class="ft212">0&#160;≤&#160;c1&#160;≤&#160;c2&#160;≤&#160;·&#160;·&#160;·&#160;≤&#160;cn</P>
+<P style="position:absolute;top:529px;left:133px;white-space:nowrap" class="ft211">baldintza&#160;bete&#160;behar&#160;dute&#160;algoritmoa&#160;aplikatzen&#160;hasi&#160;aurretik.</P>
+<P style="position:absolute;top:576px;left:155px;white-space:nowrap" class="ft214"><b>1.&#160;urratsa.&#160;Hasieraketa</b></P>
+<P style="position:absolute;top:607px;left:177px;white-space:nowrap" class="ft211">Problema&#160;erlaxaturako&#160;soluzio&#160;optimoa&#160;den&#160;x</P>
+<P style="position:absolute;top:606px;left:520px;white-space:nowrap" class="ft212">=&#160;(1,&#160;.&#160;.&#160;.&#160;,&#160;1)&#160;soluzioak&#160;0-1</P>
+<P style="position:absolute;top:629px;left:177px;white-space:nowrap" class="ft211">problema&#160;osoaren&#160;murrizketak&#160;betetzen&#160;dituen&#160;egiaztatu.&#160;Hala&#160;bada,</P>
+<P style="position:absolute;top:628px;left:662px;white-space:nowrap" class="ft212">(1,&#160;.&#160;.&#160;.&#160;,&#160;1)</P>
+<P style="position:absolute;top:651px;left:177px;white-space:nowrap" class="ft211">soluzioa&#160;optimoa&#160;da.&#160;Amaitu.</P>
+<P style="position:absolute;top:682px;left:177px;white-space:nowrap" class="ft211">Bestela,&#160;aztertu&#160;ea&#160;murrizketak&#160;betetzen&#160;diren&#160;x</P>
+<P style="position:absolute;top:681px;left:528px;white-space:nowrap" class="ft212">=&#160;(0,&#160;1,&#160;.&#160;.&#160;.&#160;,&#160;1)&#160;balioetara-</P>
+<P style="position:absolute;top:704px;left:177px;white-space:nowrap" class="ft211">ko.&#160;Hala&#160;bada,</P>
+<P style="position:absolute;top:702px;left:286px;white-space:nowrap" class="ft212">(0,&#160;1,&#160;.&#160;.&#160;.&#160;,&#160;1)&#160;soluzioa&#160;optimoa&#160;da.&#160;Amaitu.</P>
+<P style="position:absolute;top:735px;left:177px;white-space:nowrap" class="ft211">Bestela,&#160;zb&#160;=&#160;z(x)&#160;behe-bornea&#160;hasieratu,&#160;non&#160;x&#160;=&#160;(0,&#160;.&#160;.&#160;.&#160;,&#160;0)&#160;den.</P>
+<P style="position:absolute;top:766px;left:177px;white-space:nowrap" class="ft215">zg&#160;=&#160;z(xg)&#160;da,&#160;non&#160;xg&#160;=&#160;(0,&#160;1,&#160;.&#160;.&#160;.&#160;,&#160;1)&#160;den.&#160;Problemari&#160;k&#160;=&#160;1&#160;indizea<br/>esleitu.</P>
+<P style="position:absolute;top:829px;left:155px;white-space:nowrap" class="ft214"><b>2.&#160;urratsa.&#160;Adarkatzea</b></P>
+<P style="position:absolute;top:860px;left:177px;white-space:nowrap" class="ft215">Azkenekoa&#160;ez&#160;den&#160;problema&#160;bat&#160;aukeratu.&#160;Aukeratutako&#160;problema&#160;adarkatu,<br/>xk&#160;=&#160;0&#160;eta&#160;xk&#160;=&#160;1&#160;murrizketak&#160;erantsiz,&#160;bi&#160;problema&#160;berri&#160;sortzeko.</P>
+<P style="position:absolute;top:922px;left:155px;white-space:nowrap" class="ft214"><b>3.&#160;urratsa.&#160;Bornatzea</b></P>
+<P style="position:absolute;top:953px;left:177px;white-space:nowrap" class="ft211">Bi&#160;problema&#160;berri&#160;horietarako&#160;k</P>
+<P style="position:absolute;top:952px;left:415px;white-space:nowrap" class="ft212">+&#160;1&#160;osagaia&#160;0&#160;duten&#160;eta&#160;hurrengoak&#160;1&#160;di-</P>
+<P style="position:absolute;top:975px;left:177px;white-space:nowrap" class="ft2110">tuzten&#160;xg&#160;osaketak&#160;egin.&#160;Bi&#160;problemek&#160;osaketa&#160;horietan&#160;hartzen&#160;dituzten&#160;zg<br/>balioak&#160;kalkulatu.&#160;Problema&#160;berri&#160;horiei&#160;k</P>
+<P style="position:absolute;top:996px;left:484px;white-space:nowrap" class="ft212">=&#160;k&#160;+&#160;1&#160;indizea&#160;esleitu.</P>
+<P style="position:absolute;top:1043px;left:347px;white-space:nowrap" class="ft218"><i>Ikastaroa:&#160;Ikerkuntza&#160;Operatiboa.&#160;Programazio&#160;Lineala</i></P>
+</DIV>
+<!-- Page 22 -->
+<a name="22"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page22-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:201px;white-space:nowrap" class="ft221">222</P>
+<P style="position:absolute;top:141px;left:628px;white-space:nowrap" class="ft226"><i>6.&#160;Programazio&#160;osoa</i></P>
+<P style="position:absolute;top:195px;left:222px;white-space:nowrap" class="ft224"><b>4.&#160;urratsa.&#160;Azkeneko&#160;problemak</b></P>
+<P style="position:absolute;top:226px;left:245px;white-space:nowrap" class="ft225">Azkeneko&#160;ez&#160;diren&#160;problema&#160;guztiak&#160;aztertu.&#160;Azkeneko&#160;dira&#160;ondoko&#160;bal-<br/>dintzetako&#160;bat&#160;betetzen&#160;dutenak:</P>
+<P style="position:absolute;top:293px;left:253px;white-space:nowrap" class="ft221">(1)&#160;zg&#160;≤&#160;zb.</P>
+<P style="position:absolute;top:324px;left:253px;white-space:nowrap" class="ft221">(2)&#160;zg&#160;&gt;&#160;zb&#160;bada,&#160;eta&#160;xg&#160;soluzioak&#160;problema&#160;osoaren&#160;murrizketak&#160;betetzen</P>
+<P style="position:absolute;top:345px;left:283px;white-space:nowrap" class="ft221">baditu,&#160;xg&#160;soluziogaia&#160;da,&#160;eta&#160;zb&#160;=&#160;zg&#160;eguneratuko&#160;da.</P>
+<P style="position:absolute;top:376px;left:253px;white-space:nowrap" class="ft221">(3)&#160;Problemaren&#160;murrizketa&#160;guztiak&#160;aldi&#160;berean&#160;beteko&#160;dituen&#160;osaketarik</P>
+<P style="position:absolute;top:398px;left:283px;white-space:nowrap" class="ft221">ez&#160;da&#160;existitzen.&#160;Problema&#160;bideraezina&#160;da.</P>
+<P style="position:absolute;top:443px;left:245px;white-space:nowrap" class="ft225">Problema&#160;guztiak&#160;azkenekoak&#160;badira,&#160;amaitu.&#160;Problema&#160;osoaren&#160;soluzio<br/>optimoa&#160;zb&#160;behe-borneak&#160;erakutsitako&#160;soluziogaia&#160;da.</P>
+<P style="position:absolute;top:496px;left:245px;white-space:nowrap" class="ft221">Bestela,&#160;2.&#160;urratsera&#160;joan.</P>
+<P style="position:absolute;top:552px;left:227px;white-space:nowrap" class="ft224"><b>Adibidea.&#160;</b>203.&#160;orrialdeko&#160;motxilaren&#160;problema&#160;ebatziko&#160;dugu&#160;0-1&#160;adarkatze-</P>
+<P style="position:absolute;top:573px;left:201px;white-space:nowrap" class="ft221">eta&#160;bornatze-algoritmoa&#160;erabiliz.</P>
+<P style="position:absolute;top:636px;left:342px;white-space:nowrap" class="ft222">max&#160;z&#160;=&#160;15x1&#160;+&#160;25x2&#160;+&#160;12x3&#160;+&#160;10x4</P>
+<P style="position:absolute;top:663px;left:336px;white-space:nowrap" class="ft221">hauen&#160;mende</P>
+<P style="position:absolute;top:688px;left:408px;white-space:nowrap" class="ft222">3x1&#160;+&#160;6x2&#160;+&#160;5x3&#160;+&#160;5x4&#160;≤&#160;12</P>
+<P style="position:absolute;top:715px;left:450px;white-space:nowrap" class="ft222">x1,&#160;x2,&#160;x3,&#160;x4</P>
+<P style="position:absolute;top:714px;left:547px;white-space:nowrap" class="ft222">=&#160;0&#160;edo&#160;1</P>
+<P style="position:absolute;top:758px;left:227px;white-space:nowrap" class="ft221">Helburu&#160;funtzioaren&#160;koeﬁzienteak&#160;ordenatzeko,&#160;ondoko&#160;aldagai-aldaketa&#160;egin</P>
+<P style="position:absolute;top:780px;left:201px;white-space:nowrap" class="ft221">behar&#160;da:&#160;x4</P>
+<P style="position:absolute;top:778px;left:299px;white-space:nowrap" class="ft222">=&#160;y1,&#160;x3&#160;=&#160;y2,&#160;x1&#160;=&#160;y3&#160;eta&#160;x2&#160;=&#160;y4.&#160;Beste&#160;0-1&#160;problema&#160;osoa&#160;eta</P>
+<P style="position:absolute;top:801px;left:201px;white-space:nowrap" class="ft221">dagokion&#160;eredu&#160;erlaxatua&#160;ondokoak&#160;dira:</P>
+<P style="position:absolute;top:866px;left:264px;white-space:nowrap" class="ft221">0-1&#160;Problema&#160;Osoa:&#160;PO</P>
+<P style="position:absolute;top:866px;left:606px;white-space:nowrap" class="ft221">Problema&#160;Erlaxatua:&#160;PE</P>
+<P style="position:absolute;top:897px;left:208px;white-space:nowrap" class="ft222">max&#160;z&#160;=&#160;10y1&#160;+&#160;12y2&#160;+&#160;15y3&#160;+&#160;25y4</P>
+<P style="position:absolute;top:897px;left:509px;white-space:nowrap" class="ft222">max&#160;z&#160;=&#160;10y1&#160;+&#160;12y2&#160;+&#160;15y3&#160;+&#160;25y4</P>
+<P style="position:absolute;top:931px;left:213px;white-space:nowrap" class="ft221">hauen&#160;mende</P>
+<P style="position:absolute;top:931px;left:514px;white-space:nowrap" class="ft221">hauen&#160;mende</P>
+<P style="position:absolute;top:962px;left:275px;white-space:nowrap" class="ft222">5y1&#160;+&#160;5y2&#160;+&#160;3y3&#160;+&#160;6y4&#160;≤&#160;12</P>
+<P style="position:absolute;top:963px;left:617px;white-space:nowrap" class="ft222">y1,&#160;y2,&#160;y3,&#160;y4</P>
+<P style="position:absolute;top:962px;left:708px;white-space:nowrap" class="ft222">=&#160;0&#160;edo&#160;1</P>
+<P style="position:absolute;top:996px;left:316px;white-space:nowrap" class="ft222">y1,&#160;y2,&#160;y3,&#160;y4</P>
+<P style="position:absolute;top:995px;left:408px;white-space:nowrap" class="ft222">=&#160;0&#160;edo&#160;1</P>
+<P style="position:absolute;top:1043px;left:201px;white-space:nowrap" class="ft228"><i>OpenCourseWare,&#160;UPV/EHU</i></P>
+</DIV>
+<!-- Page 23 -->
+<a name="23"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft2323{font-size:15px;line-height:22px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page23-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:133px;white-space:nowrap" class="ft236"><i>6.5.&#160;0-1&#160;programazio&#160;osoa</i></P>
+<P style="position:absolute;top:141px;left:689px;white-space:nowrap" class="ft231">223</P>
+<P style="position:absolute;top:195px;left:133px;white-space:nowrap" class="ft235">226.&#160;orrialdeko&#160;6.2&#160;Irudiko&#160;diagraman&#160;laburbilduko&#160;ditugu&#160;0-1&#160;problema&#160;osoaren<br/>soluzio&#160;optimoaren&#160;bilaketarako&#160;0-1&#160;adarkatze-&#160;eta&#160;bornatze-&#160;algoritmoa&#160;aplika-<br/>tzean&#160;lortutako&#160;problema&#160;erlaxatu&#160;guztiak,&#160;eta&#160;bertan&#160;zehaztuko&#160;ditugu&#160;problema<br/>bakoitzerako&#160;soluzio&#160;partzial&#160;bat&#160;eta&#160;problemarako&#160;goi-borne&#160;bat&#160;kalkulatzeko&#160;ba-<br/>lioko&#160;digun&#160;osaketa.</P>
+<P style="position:absolute;top:314px;left:160px;white-space:nowrap" class="ft2312"><b>Lehenengo&#160;iterazioa<br/>1.&#160;urratsa.&#160;Hasieraketa</b>.<br/>Problema&#160;erlaxatuaren</P>
+<P style="position:absolute;top:357px;left:327px;white-space:nowrap" class="ft232">(1,&#160;1,&#160;1,&#160;1)&#160;soluzio&#160;optimoak&#160;ez&#160;du&#160;0-1&#160;problema&#160;osoa-</P>
+<P style="position:absolute;top:380px;left:133px;white-space:nowrap" class="ft231">ren&#160;murrizketa&#160;betetzen.</P>
+<P style="position:absolute;top:402px;left:160px;white-space:nowrap" class="ft231">Problema&#160;erlaxatuaren&#160;hurrengo&#160;soluzio&#160;onena&#160;den</P>
+<P style="position:absolute;top:401px;left:541px;white-space:nowrap" class="ft232">(0,&#160;1,&#160;1,&#160;1)&#160;soluzioak&#160;ere</P>
+<P style="position:absolute;top:423px;left:133px;white-space:nowrap" class="ft235">ez&#160;du&#160;0-1&#160;problema&#160;osoaren&#160;murrizketa&#160;betetzen.&#160;Soluzio&#160;horri&#160;dagokion&#160;helburu<br/>funtzioaren&#160;balioa&#160;zg&#160;=&#160;52&#160;da.</P>
+<P style="position:absolute;top:467px;left:160px;white-space:nowrap" class="ft231">Problemari&#160;k</P>
+<P style="position:absolute;top:466px;left:260px;white-space:nowrap" class="ft232">=&#160;1&#160;indizea&#160;esleitu&#160;eta&#160;behe-bornea&#160;zb&#160;=&#160;0&#160;balioarekin&#160;hasiera-</P>
+<P style="position:absolute;top:489px;left:133px;white-space:nowrap" class="ft231">tuko&#160;dugu.</P>
+<P style="position:absolute;top:511px;left:160px;white-space:nowrap" class="ft235"><b>2.&#160;urratsa.&#160;Adarkatzea</b>.<br/>PE&#160;problema&#160;erlaxatua&#160;bi&#160;problematan&#160;adarkatuko&#160;dugu,&#160;y1</P>
+<P style="position:absolute;top:532px;left:611px;white-space:nowrap" class="ft232">=&#160;0&#160;eta&#160;y1&#160;=</P>
+<P style="position:absolute;top:554px;left:133px;white-space:nowrap" class="ft2312">1&#160;murrizketak&#160;erantsiz.&#160;Horrela&#160;lortuko&#160;ditugu&#160;P2&#160;problema&#160;eta&#160;P3&#160;problema,<br/>hurrenez&#160;hurren.</P>
+<P style="position:absolute;top:645px;left:235px;white-space:nowrap" class="ft231">P2&#160;problema</P>
+<P style="position:absolute;top:645px;left:536px;white-space:nowrap" class="ft231">P3&#160;problema</P>
+<P style="position:absolute;top:676px;left:141px;white-space:nowrap" class="ft232">max&#160;z&#160;=&#160;10y1&#160;+&#160;12y2&#160;+&#160;15y3&#160;+&#160;25y4</P>
+<P style="position:absolute;top:676px;left:441px;white-space:nowrap" class="ft232">max&#160;z&#160;=&#160;10y1&#160;+&#160;12y2&#160;+&#160;15y3&#160;+&#160;25y4</P>
+<P style="position:absolute;top:710px;left:146px;white-space:nowrap" class="ft231">hauen&#160;mende</P>
+<P style="position:absolute;top:710px;left:447px;white-space:nowrap" class="ft231">hauen&#160;mende</P>
+<P style="position:absolute;top:742px;left:236px;white-space:nowrap" class="ft232">y1</P>
+<P style="position:absolute;top:741px;left:256px;white-space:nowrap" class="ft232">=&#160;0</P>
+<P style="position:absolute;top:742px;left:536px;white-space:nowrap" class="ft232">y1</P>
+<P style="position:absolute;top:741px;left:557px;white-space:nowrap" class="ft232">=&#160;1</P>
+<P style="position:absolute;top:775px;left:230px;white-space:nowrap" class="ft232">y2,&#160;y3,&#160;y4</P>
+<P style="position:absolute;top:774px;left:298px;white-space:nowrap" class="ft232">=&#160;0&#160;edo&#160;1</P>
+<P style="position:absolute;top:775px;left:530px;white-space:nowrap" class="ft232">y2,&#160;y3,&#160;y4</P>
+<P style="position:absolute;top:774px;left:598px;white-space:nowrap" class="ft232">=&#160;0&#160;edo&#160;1</P>
+<P style="position:absolute;top:821px;left:160px;white-space:nowrap" class="ft235"><b>3.&#160;urratsa.&#160;Bornatzea</b>.<br/>yg&#160;=&#160;(0,&#160;0,&#160;1,&#160;1)&#160;osaketarekin&#160;P2&#160;problemaren&#160;helburu&#160;funtzioak&#160;zg&#160;=&#160;40&#160;ba-</P>
+<P style="position:absolute;top:865px;left:133px;white-space:nowrap" class="ft231">lioa&#160;hartzen&#160;du;&#160;balio&#160;hori&#160;problema&#160;osorako&#160;goi-borne&#160;bat&#160;izango&#160;da&#160;adar&#160;honetan.</P>
+<P style="position:absolute;top:887px;left:160px;white-space:nowrap" class="ft232">yg&#160;=&#160;(1,&#160;0,&#160;1,&#160;1)&#160;osaketarekin&#160;P3&#160;problemaren&#160;helburu&#160;funtzioak&#160;zg&#160;=&#160;50&#160;ba-</P>
+<P style="position:absolute;top:909px;left:133px;white-space:nowrap" class="ft231">lioa&#160;hartzen&#160;du;&#160;balio&#160;hori&#160;problema&#160;osorako&#160;goi-borne&#160;bat&#160;izango&#160;da&#160;adar&#160;honetan.</P>
+<P style="position:absolute;top:931px;left:160px;white-space:nowrap" class="ft231">Problema&#160;hauei&#160;k</P>
+<P style="position:absolute;top:930px;left:291px;white-space:nowrap" class="ft232">=&#160;2&#160;indizea&#160;esleituko&#160;diegu.</P>
+<P style="position:absolute;top:953px;left:160px;white-space:nowrap" class="ft2312"><b>4.&#160;urratsa.&#160;Azkeneko&#160;problemak</b>.<br/>P2&#160;problemarako&#160;dugun&#160;yg&#160;=&#160;(0,&#160;0,&#160;1,&#160;1)&#160;osaketak&#160;0-1&#160;problema&#160;osoaren&#160;mu-</P>
+<P style="position:absolute;top:997px;left:133px;white-space:nowrap" class="ft231">rrizketa&#160;betetzen&#160;du.&#160;Gainera,&#160;zg&#160;=&#160;40&#160;&gt;&#160;0&#160;=&#160;zb&#160;betetzen&#160;denez,&#160;soluzio&#160;hori</P>
+<P style="position:absolute;top:1043px;left:347px;white-space:nowrap" class="ft238"><i>Ikastaroa:&#160;Ikerkuntza&#160;Operatiboa.&#160;Programazio&#160;Lineala</i></P>
+</DIV>
+<!-- Page 24 -->
+<a name="24"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page24-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:201px;white-space:nowrap" class="ft241">224</P>
+<P style="position:absolute;top:141px;left:628px;white-space:nowrap" class="ft246"><i>6.&#160;Programazio&#160;osoa</i></P>
+<P style="position:absolute;top:195px;left:201px;white-space:nowrap" class="ft245">soluziogai&#160;bihurtuko&#160;da,&#160;eta&#160;P2&#160;problema&#160;azkeneko.&#160;Behe-bornea&#160;eguneratuko<br/>dugu,&#160;zb&#160;=&#160;40.</P>
+<P style="position:absolute;top:242px;left:227px;white-space:nowrap" class="ft241">P3&#160;problemaren&#160;yg&#160;=&#160;(1,&#160;0,&#160;1,&#160;1)&#160;osaketak,&#160;aldiz,&#160;ez&#160;du&#160;0-1&#160;problema&#160;osoaren</P>
+<P style="position:absolute;top:263px;left:201px;white-space:nowrap" class="ft245">murrizketa&#160;betetzen.&#160;Gainera,&#160;P3&#160;problema&#160;ez&#160;da&#160;bideraezina,&#160;existitzen&#160;delako<br/>0-1&#160;problema&#160;osoaren&#160;murrizketa&#160;beteko&#160;duen&#160;osaketaren&#160;bat,&#160;y</P>
+<P style="position:absolute;top:284px;left:688px;white-space:nowrap" class="ft242">=&#160;(1,&#160;0,&#160;0,&#160;0)</P>
+<P style="position:absolute;top:307px;left:201px;white-space:nowrap" class="ft245">adibidez.&#160;zg&#160;=&#160;50&#160;&gt;&#160;zb&#160;izanik,&#160;ez&#160;da&#160;azkeneko&#160;problema&#160;izateko&#160;bete&#160;behar&#160;den<br/>baldintzarik&#160;betetzen.&#160;Beraz,&#160;P3&#160;problema&#160;ez&#160;da&#160;azkenekoa,&#160;eta&#160;algoritmoaren<br/>iterazio&#160;berri&#160;bati&#160;ekin&#160;behar&#160;zaio.</P>
+<P style="position:absolute;top:390px;left:227px;white-space:nowrap" class="ft244"><b>Bigarren&#160;iterazioa</b>.</P>
+<P style="position:absolute;top:415px;left:227px;white-space:nowrap" class="ft241">P3&#160;problema&#160;adarkatuko&#160;dugu,&#160;y2</P>
+<P style="position:absolute;top:414px;left:479px;white-space:nowrap" class="ft242">=&#160;0&#160;murrizketa&#160;erantsiz&#160;P4&#160;problema&#160;sor-</P>
+<P style="position:absolute;top:437px;left:201px;white-space:nowrap" class="ft241">tzeko&#160;eta&#160;y2</P>
+<P style="position:absolute;top:436px;left:290px;white-space:nowrap" class="ft242">=&#160;1&#160;murrizketa&#160;erantsiz&#160;P5&#160;problema.</P>
+<P style="position:absolute;top:496px;left:302px;white-space:nowrap" class="ft241">P4&#160;problema</P>
+<P style="position:absolute;top:496px;left:607px;white-space:nowrap" class="ft241">P5&#160;problema</P>
+<P style="position:absolute;top:527px;left:208px;white-space:nowrap" class="ft242">max&#160;z&#160;=&#160;10y1&#160;+&#160;12y2&#160;+&#160;15y3&#160;+&#160;25y4</P>
+<P style="position:absolute;top:527px;left:513px;white-space:nowrap" class="ft242">max&#160;z&#160;=&#160;10y1&#160;+&#160;12y2&#160;+&#160;15y3&#160;+&#160;25y4</P>
+<P style="position:absolute;top:561px;left:213px;white-space:nowrap" class="ft241">hauen&#160;mende</P>
+<P style="position:absolute;top:561px;left:518px;white-space:nowrap" class="ft241">hauen&#160;mende</P>
+<P style="position:absolute;top:594px;left:303px;white-space:nowrap" class="ft242">y1</P>
+<P style="position:absolute;top:593px;left:324px;white-space:nowrap" class="ft242">=&#160;1</P>
+<P style="position:absolute;top:594px;left:608px;white-space:nowrap" class="ft242">y1</P>
+<P style="position:absolute;top:593px;left:629px;white-space:nowrap" class="ft242">=&#160;1</P>
+<P style="position:absolute;top:626px;left:303px;white-space:nowrap" class="ft242">y2</P>
+<P style="position:absolute;top:625px;left:324px;white-space:nowrap" class="ft242">=&#160;0</P>
+<P style="position:absolute;top:626px;left:608px;white-space:nowrap" class="ft242">y2</P>
+<P style="position:absolute;top:625px;left:629px;white-space:nowrap" class="ft242">=&#160;1</P>
+<P style="position:absolute;top:659px;left:300px;white-space:nowrap" class="ft242">y3,&#160;y4</P>
+<P style="position:absolute;top:658px;left:344px;white-space:nowrap" class="ft242">=&#160;0&#160;edo&#160;1</P>
+<P style="position:absolute;top:659px;left:604px;white-space:nowrap" class="ft242">y3,&#160;y4</P>
+<P style="position:absolute;top:658px;left:649px;white-space:nowrap" class="ft242">=&#160;0&#160;edo&#160;1</P>
+<P style="position:absolute;top:713px;left:227px;white-space:nowrap" class="ft241">Algoritmoan&#160;zehazten&#160;diren&#160;osaketak&#160;eta&#160;osaketa&#160;horietarako&#160;helburu&#160;funtzioa-</P>
+<P style="position:absolute;top:735px;left:201px;white-space:nowrap" class="ft241">ren&#160;balioak&#160;kalkulatuko&#160;ditugu&#160;bi&#160;problematarako:</P>
+<P style="position:absolute;top:760px;left:227px;white-space:nowrap" class="ft241">P4&#160;problemarako&#160;yg&#160;=&#160;(1,&#160;0,&#160;0,&#160;1)&#160;eta&#160;zg&#160;=&#160;35&#160;ditugu.&#160;Problema&#160;azkenekoa</P>
+<P style="position:absolute;top:782px;left:201px;white-space:nowrap" class="ft241">da,&#160;zg&#160;&lt;&#160;zb&#160;=&#160;40&#160;betetzen&#160;delako.</P>
+<P style="position:absolute;top:807px;left:227px;white-space:nowrap" class="ft241">P5&#160;problemarako&#160;yg&#160;=&#160;(1,&#160;1,&#160;0,&#160;1)&#160;eta&#160;zg&#160;=&#160;47&#160;ditugu.&#160;Problema&#160;ez&#160;da&#160;azkene-</P>
+<P style="position:absolute;top:828px;left:201px;white-space:nowrap" class="ft241">koa.</P>
+<P style="position:absolute;top:853px;left:227px;white-space:nowrap" class="ft241">Problema&#160;hauei&#160;k</P>
+<P style="position:absolute;top:852px;left:365px;white-space:nowrap" class="ft242">=&#160;3&#160;indizea&#160;esleituko&#160;diegu.&#160;P5&#160;problema&#160;azkenekoa&#160;ez</P>
+<P style="position:absolute;top:875px;left:201px;white-space:nowrap" class="ft241">denez,&#160;2.&#160;urratsera&#160;joan&#160;eta&#160;algoritmoaren&#160;iterazio&#160;berri&#160;bati&#160;ekingo&#160;diogu.</P>
+<P style="position:absolute;top:915px;left:227px;white-space:nowrap" class="ft244"><b>Hirugarren&#160;iterazioa</b>.</P>
+<P style="position:absolute;top:940px;left:227px;white-space:nowrap" class="ft241">P5&#160;problema&#160;adarkatuko&#160;dugu,&#160;y3</P>
+<P style="position:absolute;top:939px;left:479px;white-space:nowrap" class="ft242">=&#160;0&#160;murrizketa&#160;erantsiz&#160;P6&#160;problema&#160;sor-</P>
+<P style="position:absolute;top:962px;left:201px;white-space:nowrap" class="ft241">tzeko&#160;eta&#160;y3</P>
+<P style="position:absolute;top:961px;left:290px;white-space:nowrap" class="ft242">=&#160;1&#160;erantsiz&#160;P7&#160;problema&#160;sortzeko.</P>
+<P style="position:absolute;top:1043px;left:201px;white-space:nowrap" class="ft248"><i>OpenCourseWare,&#160;UPV/EHU</i></P>
+</DIV>
+<!-- Page 25 -->
+<a name="25"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page25-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:133px;white-space:nowrap" class="ft256"><i>6.5.&#160;0-1&#160;programazio&#160;osoa</i></P>
+<P style="position:absolute;top:141px;left:689px;white-space:nowrap" class="ft251">225</P>
+<P style="position:absolute;top:200px;left:235px;white-space:nowrap" class="ft251">P6&#160;problema</P>
+<P style="position:absolute;top:200px;left:540px;white-space:nowrap" class="ft251">P7&#160;problema</P>
+<P style="position:absolute;top:231px;left:141px;white-space:nowrap" class="ft252">max&#160;z&#160;=&#160;10y1&#160;+&#160;12y2&#160;+&#160;15y3&#160;+&#160;25y4</P>
+<P style="position:absolute;top:231px;left:446px;white-space:nowrap" class="ft252">max&#160;z&#160;=&#160;10y1&#160;+&#160;12y2&#160;+&#160;15y3&#160;+&#160;25y4</P>
+<P style="position:absolute;top:265px;left:146px;white-space:nowrap" class="ft251">hauen&#160;mende</P>
+<P style="position:absolute;top:265px;left:451px;white-space:nowrap" class="ft251">hauen&#160;mende</P>
+<P style="position:absolute;top:297px;left:236px;white-space:nowrap" class="ft252">y1</P>
+<P style="position:absolute;top:296px;left:256px;white-space:nowrap" class="ft252">=&#160;1</P>
+<P style="position:absolute;top:297px;left:541px;white-space:nowrap" class="ft252">y1</P>
+<P style="position:absolute;top:296px;left:561px;white-space:nowrap" class="ft252">=&#160;1</P>
+<P style="position:absolute;top:330px;left:236px;white-space:nowrap" class="ft252">y2</P>
+<P style="position:absolute;top:329px;left:256px;white-space:nowrap" class="ft252">=&#160;1</P>
+<P style="position:absolute;top:330px;left:541px;white-space:nowrap" class="ft252">y2</P>
+<P style="position:absolute;top:329px;left:561px;white-space:nowrap" class="ft252">=&#160;1</P>
+<P style="position:absolute;top:362px;left:236px;white-space:nowrap" class="ft252">y3</P>
+<P style="position:absolute;top:361px;left:256px;white-space:nowrap" class="ft252">=&#160;0</P>
+<P style="position:absolute;top:362px;left:541px;white-space:nowrap" class="ft252">y3</P>
+<P style="position:absolute;top:361px;left:561px;white-space:nowrap" class="ft252">=&#160;1</P>
+<P style="position:absolute;top:395px;left:235px;white-space:nowrap" class="ft252">y4</P>
+<P style="position:absolute;top:394px;left:255px;white-space:nowrap" class="ft252">=&#160;0&#160;edo&#160;1</P>
+<P style="position:absolute;top:395px;left:539px;white-space:nowrap" class="ft252">y4</P>
+<P style="position:absolute;top:394px;left:560px;white-space:nowrap" class="ft252">=&#160;0&#160;edo&#160;1</P>
+<P style="position:absolute;top:433px;left:133px;white-space:nowrap" class="ft255">Bi&#160;problemetarako&#160;osaketak&#160;eta&#160;osaketa&#160;horietarako&#160;helburu&#160;funtzioaren&#160;balioa<br/>kalkulatuko&#160;ditugu.</P>
+<P style="position:absolute;top:477px;left:160px;white-space:nowrap" class="ft251">P6&#160;problemarako&#160;yg&#160;=&#160;(1,&#160;1,&#160;0,&#160;0)&#160;eta&#160;zg&#160;=&#160;22&#160;ditugu.&#160;Problema&#160;azkenekoa</P>
+<P style="position:absolute;top:498px;left:133px;white-space:nowrap" class="ft251">da,&#160;zg&#160;&lt;&#160;zb&#160;=&#160;40&#160;betetzen&#160;delako.</P>
+<P style="position:absolute;top:520px;left:160px;white-space:nowrap" class="ft251">P7&#160;problemarako&#160;yg&#160;=&#160;(1,&#160;1,&#160;1,&#160;0)&#160;eta&#160;zg&#160;=&#160;37&#160;ditugu.&#160;Problema&#160;azkenekoa</P>
+<P style="position:absolute;top:542px;left:133px;white-space:nowrap" class="ft251">da,&#160;zg&#160;&lt;&#160;zb&#160;=&#160;40&#160;betetzen&#160;delako.</P>
+<P style="position:absolute;top:563px;left:160px;white-space:nowrap" class="ft251">Problema&#160;hauei&#160;k</P>
+<P style="position:absolute;top:562px;left:291px;white-space:nowrap" class="ft252">=&#160;4&#160;indizea&#160;esleituko&#160;diegu.</P>
+<P style="position:absolute;top:585px;left:160px;white-space:nowrap" class="ft251">Azkenekoa&#160;ez&#160;den&#160;problemarik&#160;ez&#160;dagoenez,&#160;adarkaketak&#160;amaitu&#160;dira.&#160;0-1</P>
+<P style="position:absolute;top:607px;left:133px;white-space:nowrap" class="ft255">problema&#160;osoaren&#160;soluzio&#160;optimoa&#160;zb&#160;=&#160;40&#160;behe-borneari&#160;dagokion&#160;soluziogaia<br/>da,&#160;hau&#160;da,&#160;yg&#160;=&#160;(0,&#160;0,&#160;1,&#160;1).</P>
+<P style="position:absolute;top:650px;left:160px;white-space:nowrap" class="ft251">Egindako&#160;aldagai-aldaketak&#160;deseginez,&#160;0-1&#160;problema&#160;osoaren&#160;soluzio&#160;optimoa</P>
+<P style="position:absolute;top:672px;left:133px;white-space:nowrap" class="ft251">lortzen&#160;da:</P>
+<P style="position:absolute;top:711px;left:243px;white-space:nowrap" class="ft252">x∗</P>
+<P style="position:absolute;top:720px;left:253px;white-space:nowrap" class="ft257">1&#160;=&#160;1,</P>
+<P style="position:absolute;top:711px;left:318px;white-space:nowrap" class="ft252">x∗</P>
+<P style="position:absolute;top:720px;left:328px;white-space:nowrap" class="ft257">2&#160;=&#160;1,</P>
+<P style="position:absolute;top:711px;left:394px;white-space:nowrap" class="ft252">x∗</P>
+<P style="position:absolute;top:720px;left:404px;white-space:nowrap" class="ft257">3&#160;=&#160;0,</P>
+<P style="position:absolute;top:711px;left:469px;white-space:nowrap" class="ft252">x∗</P>
+<P style="position:absolute;top:720px;left:479px;white-space:nowrap" class="ft257">4&#160;=&#160;0,</P>
+<P style="position:absolute;top:711px;left:544px;white-space:nowrap" class="ft252">z∗</P>
+<P style="position:absolute;top:710px;left:565px;white-space:nowrap" class="ft252">=&#160;40.</P>
+<P style="position:absolute;top:751px;left:160px;white-space:nowrap" class="ft251">Ebazpen&#160;osoa&#160;erakusten&#160;duen&#160;diagrama&#160;6.2&#160;Irudian&#160;ikus&#160;daiteke.</P>
+<P style="position:absolute;top:774px;left:703px;white-space:nowrap" class="ft252">2</P>
+<P style="position:absolute;top:1043px;left:347px;white-space:nowrap" class="ft258"><i>Ikastaroa:&#160;Ikerkuntza&#160;Operatiboa.&#160;Programazio&#160;Lineala</i></P>
+</DIV>
+<!-- Page 26 -->
+<a name="26"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page26-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:141px;left:201px;white-space:nowrap" class="ft261">226</P>
+<P style="position:absolute;top:141px;left:628px;white-space:nowrap" class="ft266"><i>6.&#160;Programazio&#160;osoa</i></P>
+<P style="position:absolute;top:353px;left:352px;white-space:nowrap" class="ft261">PE&#160;problema</P>
+<P style="position:absolute;top:450px;left:236px;white-space:nowrap" class="ft261">P2&#160;problema</P>
+<P style="position:absolute;top:448px;left:480px;white-space:nowrap" class="ft261">P3&#160;problema</P>
+<P style="position:absolute;top:563px;left:351px;white-space:nowrap" class="ft261">P4&#160;problema</P>
+<P style="position:absolute;top:563px;left:587px;white-space:nowrap" class="ft261">P5&#160;problema</P>
+<P style="position:absolute;top:677px;left:473px;white-space:nowrap" class="ft261">P6&#160;problema</P>
+<P style="position:absolute;top:678px;left:691px;white-space:nowrap" class="ft261">P7&#160;problema</P>
+<P style="position:absolute;top:474px;left:223px;white-space:nowrap" class="ft262">y</P>
+<P style="position:absolute;top:473px;left:239px;white-space:nowrap" class="ft262">=&#160;(0,&#160;−,&#160;−,&#160;−)</P>
+<P style="position:absolute;top:467px;left:448px;white-space:nowrap" class="ft262">y</P>
+<P style="position:absolute;top:466px;left:464px;white-space:nowrap" class="ft262">=&#160;(1,&#160;−,&#160;−,&#160;−)</P>
+<P style="position:absolute;top:586px;left:329px;white-space:nowrap" class="ft262">y</P>
+<P style="position:absolute;top:585px;left:345px;white-space:nowrap" class="ft262">=&#160;(1,&#160;0,&#160;−,&#160;−)</P>
+<P style="position:absolute;top:588px;left:556px;white-space:nowrap" class="ft262">y</P>
+<P style="position:absolute;top:587px;left:572px;white-space:nowrap" class="ft262">=&#160;(1,&#160;1,&#160;−,&#160;−)</P>
+<P style="position:absolute;top:697px;left:452px;white-space:nowrap" class="ft262">y</P>
+<P style="position:absolute;top:696px;left:468px;white-space:nowrap" class="ft262">=&#160;(1,&#160;1,&#160;0,&#160;−)</P>
+<P style="position:absolute;top:698px;left:662px;white-space:nowrap" class="ft262">y</P>
+<P style="position:absolute;top:697px;left:678px;white-space:nowrap" class="ft262">=&#160;(1,&#160;1,&#160;1,&#160;−)</P>
+<P style="position:absolute;top:376px;left:337px;white-space:nowrap" class="ft262">yg&#160;=&#160;(0,&#160;1,&#160;1,&#160;1)</P>
+<P style="position:absolute;top:497px;left:222px;white-space:nowrap" class="ft262">yg&#160;=&#160;(0,&#160;0,&#160;1,&#160;1)</P>
+<P style="position:absolute;top:492px;left:449px;white-space:nowrap" class="ft262">yg&#160;=&#160;(1,&#160;0,&#160;1,&#160;1)</P>
+<P style="position:absolute;top:611px;left:329px;white-space:nowrap" class="ft262">yg&#160;=&#160;(1,&#160;0,&#160;0,&#160;1)</P>
+<P style="position:absolute;top:609px;left:557px;white-space:nowrap" class="ft262">yg&#160;=&#160;(1,&#160;1,&#160;0,&#160;1)</P>
+<P style="position:absolute;top:723px;left:451px;white-space:nowrap" class="ft262">yg&#160;=&#160;(1,&#160;1,&#160;0,&#160;0)</P>
+<P style="position:absolute;top:723px;left:662px;white-space:nowrap" class="ft262">yg&#160;=&#160;(1,&#160;1,&#160;1,&#160;0)</P>
+<P style="position:absolute;top:398px;left:355px;white-space:nowrap" class="ft262">zg&#160;=&#160;52</P>
+<P style="position:absolute;top:517px;left:246px;white-space:nowrap" class="ft262">zg&#160;=&#160;40</P>
+<P style="position:absolute;top:517px;left:474px;white-space:nowrap" class="ft262">zg&#160;=&#160;50</P>
+<P style="position:absolute;top:633px;left:360px;white-space:nowrap" class="ft262">zg&#160;=&#160;35</P>
+<P style="position:absolute;top:630px;left:587px;white-space:nowrap" class="ft262">zg&#160;=&#160;47</P>
+<P style="position:absolute;top:747px;left:474px;white-space:nowrap" class="ft262">zg&#160;=&#160;22</P>
+<P style="position:absolute;top:746px;left:688px;white-space:nowrap" class="ft262">zg&#160;=&#160;37</P>
+<P style="position:absolute;top:544px;left:227px;white-space:nowrap" class="ft262">zb&#160;=&#160;40</P>
+<P style="position:absolute;top:427px;left:292px;white-space:nowrap" class="ft269">y1</P>
+<P style="position:absolute;top:422px;left:311px;white-space:nowrap" class="ft269">=&#160;0</P>
+<P style="position:absolute;top:427px;left:456px;white-space:nowrap" class="ft269">y1</P>
+<P style="position:absolute;top:422px;left:476px;white-space:nowrap" class="ft269">=&#160;1</P>
+<P style="position:absolute;top:545px;left:418px;white-space:nowrap" class="ft269">y2</P>
+<P style="position:absolute;top:540px;left:437px;white-space:nowrap" class="ft269">=&#160;0</P>
+<P style="position:absolute;top:544px;left:582px;white-space:nowrap" class="ft269">y2</P>
+<P style="position:absolute;top:539px;left:602px;white-space:nowrap" class="ft269">=&#160;1</P>
+<P style="position:absolute;top:660px;left:530px;white-space:nowrap" class="ft269">y3</P>
+<P style="position:absolute;top:655px;left:549px;white-space:nowrap" class="ft269">=&#160;0</P>
+<P style="position:absolute;top:661px;left:689px;white-space:nowrap" class="ft269">y3</P>
+<P style="position:absolute;top:656px;left:709px;white-space:nowrap" class="ft269">=&#160;1</P>
+<P style="position:absolute;top:783px;left:652px;white-space:nowrap" class="ft261">Azkenekoa</P>
+<P style="position:absolute;top:781px;left:443px;white-space:nowrap" class="ft261">Azkenekoa</P>
+<P style="position:absolute;top:667px;left:329px;white-space:nowrap" class="ft261">Azkenekoa</P>
+<P style="position:absolute;top:594px;left:218px;white-space:nowrap" class="ft261">Azkenekoa</P>
+<P style="position:absolute;top:572px;left:217px;white-space:nowrap" class="ft261">Soluziogaia</P>
+<P style="position:absolute;top:840px;left:247px;white-space:nowrap" class="ft261">6.2.&#160;Irudia:&#160;Adibideko&#160;0-1&#160;problema&#160;osoaren&#160;ebazpenaren&#160;diagrama.</P>
+<P style="position:absolute;top:1043px;left:201px;white-space:nowrap" class="ft268"><i>OpenCourseWare,&#160;UPV/EHU</i></P>
+</DIV>
+</BODY>
+</HTML>

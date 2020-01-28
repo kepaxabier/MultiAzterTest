@@ -1,0 +1,1980 @@
+
+
+
+Gaien Aurkibidea
+1 Grafoak
+1
+1.1
+Sarrera . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1
+1.2
+Deﬁnizioak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1
+1.3
+Erpinen graduak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+1.4
+Ibilaldiak grafo batean . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7
+1.5
+Grafo baten adjazentzia-matrizea . . . . . . . . . . . . . . . . . . . . . . .
+9
+1.6
+Azpigrafoak. Grafo osagarria . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+1.7
+Grafoen arteko isomorﬁsmoak . . . . . . . . . . . . . . . . . . . . . . . . . 15
+1.8
+Kate eta zirkuitu eulertarrak . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+1.9
+Bide eta ziklo hamiltondarrak . . . . . . . . . . . . . . . . . . . . . . . . . 20
+1.10 Ariketak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+2 Zuhaitzak
+31
+2.1
+Sarrera . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+2.2
+Deﬁnizioak eta propietateak . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+2.3
+Zuhaitz errodunak. Zuhaitz bitarrak . . . . . . . . . . . . . . . . . . . . . 35
+2.4
+Ariketak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 42
+i
+
+1. Gaia
+Grafoak
+1.1
+Sarrera
+XVIII. mendean K¨onigsberg 
+(gaur Kaliningrado, Errusia) hiritik Pregel ibaia pasatzen
+zen, eta bi irla osatzen zituen. Ibaiaren ertzak eta irlak zazpi zubiz zeuden loturik.
+Biztanleek ibilbideak egiten zituzten etxetik atera, zubietatik behin bakarrik pasatu eta
+etxera bueltatzen saiatzen; baina ez zuten lortzen.
+Istorio hura Euler-
+en eskuetara heldu zen, eta 1736an eman zion soluzioa artikulu
+batean: ezinezkoa zen.
+Euler konturatu zen problemaren soluzioa ez zegoela diztantziaren menpe. Orduan,
+problema aztertzeko, lur-
+eremu bakoitzari puntu bat eta zubi bakoitzari lerro bat egok-
+itu zien. Hortik aurrera Eulerek Grafo-
+Teoriaren oinarrizko kontzeptuak landu zituen.
+Horrela jaio zen Grafo-Teoria.
+Grafo-Teoria elementu-
+kopuru ﬁnitua duten problemak islatzeko erabili da. Lehend-
+abizi, problema grafo baten bidez adierazten da; gero, grafoaren propietateak aztertzen
+dira; azkenik, problemaren soluzioa ondorioztatzen da.
+Grafo-Teoriaren aplikazio asko aurki ditzakegu Informatikan:
+ datuen adierazpena, sa-
+reen diseinua, zirkuitu integratuen diseinua...
+1.2
+Deﬁnizioak
+1.1 Deﬁnizioa. (V -ren gaineko) grafo zuzendua 
+(V, E) bikote bat da, non V multzo
+ﬁnitu ez-hutsa den, eta E ⊆ V × V .
+1
+
+2
+1. Grafoak
+V multzoaren elementuei erpin edo adabegi deituko diegu, eta E multzoaren ele-
+mentuei ertz.
+1.2 Adibidea. Diagrama honekin adieraziko dugu 5 erpin eta 7 ertz dituen grafo zuzendu
+bat:
+V = {x1, x2, x3, x4, x5},
+E = {(x1, x2), (x1, x3), (x2, x3), (x3, x2), (x3, x4), (x4, x2), (x4, x4)}.
+x
+1
+x
+5
+x
+4
+x
+3
+x
+2
+1.3 Deﬁnizioa. (a, b) ertza emanik, kontzeptu hauek erabiliko ditugu:
+• ertza intzidentea da a eta b erpinekin.
+• a erpina b-rantz adjazentea da.
+• b erpina a-tik adjazentea da.
+• a erpina ertzaren jatorria da.
+• b erpina ertzaren amaiera da.
+a = b bada, (a, a) ertzari begizta deituko diogu.
+a erpin isolatua da ez badu ertz intzidenterik.
+1.4 Deﬁnizioa. Ertzen noranzkoak ez badu garrantzirik, hau da,
+(a, b) ∈ E ⇒ (b, a) ∈ E,
+G = (V, E) grafoa ez-zuzendua dela esango dugu.
+Grafo ez-zuzendu batean ertzak ez-zuzenduak dira: {a, b} = {(a, b), (b, a)}.
+Eta a = b bada, begizta bat izango dugu: {a, a} = (a, a).
+Oharra. Ez bada ezer esaten, grafoa ez-zuzendua izango da.
+1.5 Adibidea. Hona hemen K¨onigsberg-ko zubien problemari dagokion grafoa:
+ lau lur-
+eremuak erpinak dira, eta zubiak ertzak:
+
+1.2. Deﬁnizioak
+3
+A
+B
+C
+D
+Grafoak 7 ertz ez-zuzenduak ditu: {A, B}, {A, B}, {A, C}, {A, C}, {A, D}, 
+{B, D} eta
+{C, D}.
+1.6 Deﬁnizioa. G = (V, E) grafo zuzendu bat emanik, grafo ez-zuzendu elkartua G
+grafotik lortzen da ertzen noranzkoa kontuan izan gabe. Bi erpinekin intzidenteak diren
+ertz bat baino gehiago lortzen badira, horietako bat bakarrik hartuko dugu kontuan.
+1.7 Adibideak.
+1.
+2. Hau da 1.2 Adibideko grafoaren grafo ez-zuzendu elkartua:
+x
+1
+x
+5
+x
+4
+x
+3
+x
+2
+1.8 Deﬁnizioa. G = 
+(V, E) grafoa multigrafoa da a, b ∈ V erpinak badaude bi edo ertz
+intzidente gehiagorekin:
+• (a, b) grafo zuzenduetan.
+• {a, b} grafo ez-zuzenduetan.
+(a, b) ({a, b}) moduko ertzen kopurua (a, b) (
+{a, b}) ertzaren anizkoiztasuna da.
+Grafo bat k-
+grafoa da bere ertz batek ere ez badu k baino anizkoiztasun handiagoa.
+Grafo bat bakuna da ez bada multigrafoa, hots, bere ertz guztiek 1 anizkoiztasuna
+badute.
+
+4
+1. Grafoak
+1.9 Adibideak.
+1.
+b
+a
+a
+b
+d
+d
+c
+c
+Lehena 2-grafo zuzendua da, eta bigarrena 3-grafo zuzendua.
+2. K¨onigsberg-ko zubien problemaren grafoa (1.5 Adibidea) 2-grafo ez-
+zuzendua da.
+3. 1.7 Adibideko grafoak bakunak dira.
+1.3
+Erpinen graduak
+1.10 Deﬁnizioa. Izan bedi G = (V, E) grafo zuzendua, eta a ∈ V .
+• a erpinaren irteera-gradua a-tik ateratzen diren ertzen kopurua da, d
++(a) adierazten
+da,
+d
++(a) = card {b | (a, b) ∈ E}.
+• a erpinaren sarrera-gradua a-ra iristen diren ertzen kopurua da, d−
+(a) adierazten
+da,
+d
+−(a) = card {b | (b, a) ∈ E}.
+d
++(a) eta d−
+(a) a erpinaren graduerdi deitzen dira, eta a erpinaren graduerdien bat-
+urari a-ren gradu deituko diogu, d(a) adierazten da,
+d(a) = d
++(a) + d−(a).
+1.11 Adibidea. 1.2 Adibideko grafoan,
+d
++(x
+1
+) = 2,
+d
++(x
+2
+) = 1,
+d
++(x
+3
+) = 2,
+d
++(x
+4
+) = 2,
+d
++(x
+5
+) = 0.
+d
+−(x1) = 0,
+d
+−(x2) = 3,
+d
+−(x3) = 2,
+d
+−(x4) = 2,
+d
+−(x5) = 0.
+d(x1) = 2,
+d(x2) = 4,
+d(x3) = 4,
+d(x4) = 4,
+d(x5) = 0.
+1.12 Deﬁnizioa. G = (V, E) grafo ez-
+zuzendua eta a ∈ V emanik, a erpinaren gradua
+a-rekin intzidenteak diren ertzen kopurua da, eta d(a) adieraziko dugu.
+Kasu honetan,, {a, a} begizta a-
+rekin intzidenteak diren bi ertz bezala kontatzen da.
+a erpina zintzilikatua da d(a) = 1 denean.
+
+1.3. Erpinen graduak
+5
+1.13 Adibideak.
+1. K¨onigsberg-ko zubien problemaren grafoan (1.5 Adibidea),
+d(A) = 5,
+d(B) = d(C) = d(D) = 3.
+2. 1.7-2 Adibideko grafoan,
+d(x1) = 2,
+d(x2) = d(x3) = 3,
+d(x4) = 4,
+d(x5) = 0.
+1.14 Teorema. Izan bedi G = (V, E) grafo ez-zuzendua m ertzekin. Orduan,
+x∈V
+d(x) = 2m.
+Froga.
+(Ideia: {a, b} ertz bakoitzak unitate bat eransten dio d
+(a) graduari, eta beste bat d(b)
+graduari, eta, hortaz, bi unitate
+x∈V d(x) baturari.)
+Frogabidea m ertz-kopuruaren gaineko indukzioaz egingo dugu.
+m = 1 bada, G grafoak e = {a, b} ertz bakarra du. a = b bada,
+
+
+
+d(a) = 1
+d(b) = 1
+d(y) = 0
+a = y = b bada
+,
+eta a = b bada,
+d(a) = 2
+d(y) = 0
+y = a bada
+.
+Bi kasuetan,
+x∈V
+d(x) = 2 = 2m.
+Demagun, orain, teorema betetzen dela m = p denean, eta har dezagun m = p + 1.
+Izan bedi e = 
+{a, b} ∈ E G grafoaren ertz bat eta izan bedi G′ G grafotik e ertza
+kentzean geratzen den grafoa. G′ grafoaren ertzen kopurua m′ bada, eta d′
+(x) bada x
+erpinaren gradua G′ grafoan, orduan, m′ = p izango da. Eta, indukzio-
+hipotesiaren
+arabera,
+x∈V
+d
+′(x) = 2m′ = 2p.
+Horrez gain, a = b bada,
+
+
+
+d(a) = d′(a) + 1
+d(b) = d′(b) + 1
+d(y) = d′(y)
+a = y = b bada
+,
+eta a = b bada,
+d(a) = d′(a) + 2
+d(y) = d′(y)
+y = a bada
+.
+Bi kasuetan,
+x∈V
+d(x) =
+x∈V
+d
+′(x) + 2 = 2p + 2 = 2(p + 1) = 2m.
+2
+
+6
+1. Grafoak
+1.15 Adibideak.
+1. K¨onigsberg-ko zubien problemaren grafoan (1.5 Adibidea), n = 4, m = 7,
+d(A) + d(B) + d(C) + d(D) = 5 + 3 + 3 + 3 = 2 · 7.
+2. 1.7-2 Adibideko grafoan, n = 5, m = 6,
+d(x1) + d(x2) + d(x3) + d(x4) + d(x5) = 2 + 3 + 3 + 4 + 0 = 2 · 6.
+1.16 Korolarioa. Izan bedi G = (V, E) grafo ez-
+zuzendua. Gradu bakoitiko erpinen
+kopurua bikoitia da.
+Froga.
+Izan bedi V = 
+{x1, . . . , xn} eta demagun badaudela gradu bikoitiko p erpin eta gradu
+bakoitiko q erpin (p + q = n).
+d(xi) = 2ki,
+i = 1, . . . , p;
+d(xi) = 2ki + 1, i = p + 1, . . . , p + q.
+Orduan,
+2m =
+x∈V
+d(x) =
+p
+i=1
+d(xi) +
+p+q
+i=p+1
+d(xi) =
+p
+i=1
+(2ki) +
+p+q
+i=p+1
+(2ki + 1) = 2
+p+q
+i=1
+ki + q.
+Hortaz,
+q = 2 m −
+p+q
+i=1
+ki .
+2
+1.17 Adibideak.
+1. K¨onigsberg-ko zubien problemaren grafoan 
+(1.5 Adibidea) gradu bakoitiko 4 erpin
+daude (A, B, C eta D).
+2. 1.7-2 Adibideko grafoan gradu bakoitiko 2 erpin daude (x2 eta x3).
+1.18 Deﬁnizioa. Grafo ez-
+zuzendu bat erregular deitzen da erpin guztiek gradu bera
+badute; eta k-erregular deitzen da erpin guztiek k gradua badute.
+1.19 Adibidea. Grafo hau 3-erregularra da:
+
+1.4. Ibilaldiak grafo batean
+7
+1.4
+Ibilaldiak grafo batean
+1.20 Deﬁnizioa. Izan bedi G = (V, E) grafo ez-
+zuzendua. x, y ∈ V bi erpin badira, x−y
+ibilaldia G grafoan erpinen eta ertzen segida txandakatu ﬁnitu bat da, zeina x erpinean
+hasi eta y erpinean bukatzen den:
+x = x0, e1, x1, e2, x2, e3, . . . , ep
+−
+1
+, xp
+−
+1
+, ep, xp = y
+ei = {xi
+−
+1
+, xi} ertza izanik, i = 1, . . . , p.
+Ibilaldiaren luzera ertzen kopurua da, p. Eta p = 0 bada, x = y izango da eta ibilaldi
+nabaria izango dugu.
+x = y eta p ≥ 1 badira, ibilaldia itxia da; bestela, irekia da.
+Oharra. Grafo bakuna denean, ertzak ez ditugu idatziko.
+1.21 Adibidea. 1.7-
+2 Adibideko grafoan, x1, x3, x2 ibilaldi irekia da, 2 luzerako x1 − x2
+ibilaldia hain zuzen:
+x1, {x1, x3}, x3, {x3, x2}, x2.
+Beste hau 6 luzerako ibilaldi itxia da:
+x1, x3, x2, x4, x3, x2, x1.
+1.22 Deﬁnizioa. Izan bedi x − y ibilaldi bat G = (V, E) grafo ez-zuzenduan,
+• Ertz bat ere ez bada errepikatzen, x − y ibilaldiari kate deituko diogu. Katea itxia
+denean, x − x ibilaldi itxiari zirkuitu deituko diogu.
+• Erpin bat ere ez bada errepikatzen, x − y ibilaldiari bide deituko diogu. Bidea itxia
+denean, x − x ibilaldi itxiari ziklo deituko diogu.
+Hitzarmena. Zirkuituetan gutxienez ertz bat existitzen dela suposatuko dugu; eta bat
+bakarrik dagoenean, zirkuitua begizta izango da. Zikloetan gutxienez hiru ertz desberdin
+daudela suposatuko dugu.
+1.23 Adibidea. 1.7-2 Adibideko grafoan,
+x1, x2, x3 katea eta bidea da;
+x1, x3, x2, x4, x3 katea da, baina ez da bidea;
+x1, x2, x3, x1 zirkuitua eta zikloa da.
+Grafo zuzenduetan zuzendu adjektiboa erabiliko dugu:
+ ibilaldi zuzenduak, bide zuzen-
+duak
+, ziklo zuzenduak, etab.
+1.24 Teorema. Izan bedi G = (V, E) grafo ez-
+zuzendua eta izan bitez x, y ∈ V , x = y.
+Orduan,
+x − y ibilaldi bat badago baldin eta soilik baldin x − y bide bat badago.
+Froga.
+Demagun x − y ibilaldi bat dagoela. Ibilaldi guztien artean, har dezagun luzera
+txikieneko ibilaldia:
+x = x0, x1, . . . , xk
+−
+1
+, xk = y.
+
+8
+1. Grafoak
+Ibilaldi hori ez bada bidea, ∃p, q / 0 ≤ p < q ≤ k eta xp = xq. Baina, orduan,
+x = x0, x1, . . . , xp
+−
+1
+, xq, xq+1, . . . , xk = y
+ere x − y ibilaldi bat da, eta k baino luzera txikiagokoa da.
+Elkarrekikoa berehalakoa da; izan ere, bide bat ibilaldi bat da.
+2
+1.25 Deﬁnizioa. G = (V, E) grafo ez-
+zuzendua konexua da edozein x eta y bi erpin
+desberdinetarako x − y ibilaldi bat badago.
+G = (V, E) grafo zuzendua konexu da grafo ez-zuzendu elkartua konexua bada.
+Grafo bat ez bada konexua, diskonexua da.
+Aurreko teoremaren arabera, horrek esan nahi du grafo ez-zuzendua konexua dela
+edozein x eta y bi erpin desberdinetarako x − y bide bat badago.
+1.26 Adibidea. 1.19 Adibideko grafoa konexua da.
+1.7-1 Adibideko grafoak konexuak dira.
+1.2 Adibideko grafoa eta 1.7-
+2 Adibideko grafo elkartua diskonexuak dira, ez dagoe-
+lako, esaterako, x1 − x5 biderik.
+1.27 Teorema. Izan bedi G = (V, E) grafo ez-zuzendua; R erlazioa,
+xRy ⇔ x − y bide bat badago,
+baliokidetasun-erlazioa da V multzoaren gainean.
+Froga.
+• R bihurkorra da. Hau frogatu behar dugu:
+(∀x ∈ V ) xRx.
+∀x ∈ V , x − x ibilaldi nabaria dago; hortaz, xRx.
+• R simetrikoa da. Hau frogatu behar dugu:
+(∀x, y ∈ V ) xRy ⇒ yRx.
+x, y ∈ V badira,
+xRy ⇒ x = x0, x1, . . . , xp
+−
+1
+, xp = y ibilaldia badago ⇒
+⇒ y = xp, xp
+−
+1
+, . . . , x1, x0 = x ibilaldia badago ⇒ yRx.
+• R iragankorra da. Hau frogatu behar dugu:
+(∀x, y, z ∈ V ) xRy ∧ yRz ⇒ xRz.
+x, y, z ∈ V badira,
+xRy ∧ yRz ⇒
+⇒ x = x0, . . . , xp = y ∧ y = y0, . . . , yq = z ibilaldiak badadaude ⇒
+⇒ x = x0, . . . , xp = y = y0, y1, . . . , yq = z ibilaldia badago ⇒ xRz.
+2
+
+1.5. Grafo baten adjazentzia-matrizea
+9
+1.28 Deﬁnizioa. 1.27 Teoreman deﬁnitutako baliokidetasun-
+erlazioak erpinen V mult-
+zoa V1, . . . , Vq baliokidetasun-klasetan banatzen du. G1 = 
+(V1, E1), . . ., Gq = (Vq, Eq)
+grafoei, non Ei, i = 1, . . . , q, Vi multzoaren erpinekin intzidenteak diren ertzen multzoak
+diren, G grafoaren osagai konexu deituko diegu.
+G grafoaren osagai konexuen kopurua κ(G) adieraziko dugu.
+Ondorioa. G grafoa konexua da baldin eta soilik baldin κ(G) = 1 bada.
+1.29 Adibidea. 1.7-2 Adibideko grafoak 2 osagai konexu ditu, κ(G) = 2:
+G1 = (V1, E1) eta G2 = (V2, E2), non
+V1 = {x1, x2, x3, x4},
+V2 = {x5} diren eta
+E1 = {{x1, x2}, {x1, x3}, {x2, x3}, {x2, x4}, {x3, x4}, {x4, x4}},
+E2 = ∅ diren.
+1.5
+Grafo baten adjazentzia-matrizea
+1.30 Deﬁnizioa. Izan bedi G = (V, E) grafo bakun ez-
+zuzendua, begiztarik gabea eta
+n erpinekin, non V = {x1, . . . , xn} den. G grafoari dagokion adjazentzia-
+matrizea honela
+deﬁnituko dugu: A = (aij), i, j = 1, ..., n
+aij =
+1 xi, xj adjazenteak badira
+0 xi, xj ez badira adjazenteak
+.
+A matrizea simetrikoa da eta diagonal nagusiko elementu guztiak 0 dira. G grafoaren
+egituraren informazio osoa du, eta G adierazteko erabil dezakegu.
+xi ∈ V erpin bakoitzeko hau betetzen da:
+d(xi) =
+n
+j=1
+aij =
+n
+j=1
+aji.
+1.31 Adibideak.
+1. 1.7-2 Adibideko grafoaren adjazentzia-matrizea (begizta kenduta) hau da:
+A =
+
+
+
+
+
+
+0 1 1 0 0
+1 0 1 1 0
+1 1 0 1 0
+0 1 1 0 0
+0 0 0 0 0
+
+
+
+
+
+
+.
+2.
+a
+b
+c
+d
+e
+
+10
+1. Grafoak
+grafoaren adjazentzia-matrizea (erpinak ordena alfabetikoan hartuta) hau da:
+A =
+
+
+
+
+
+
+0 0 0 1 0
+0 0 0 0 1
+0 0 0 1 0
+1 0 1 0 1
+0 1 0 1 0
+
+
+
+
+
+
+.
+Bosgarren errenkadako edo zutabeko elementuen batura 2 da; hau da, d(e) = 2.
+1.32 Teorema. Izan bitez G = (V, E) grafo bakun ez-
+zuzendua, begiztarik gabea, V =
+{x1, . . . , xn} izanik, eta A G grafoari dagokion adjazentzia-
+matrizea. Ap matrizearen (i, j)
+elementua p luzerako xi − xj ibilaldien kopurua da.
+Froga.
+p-ren gaineko indukzioaren bidez frogatuko dugu.
+p = 1 bada, Ap = A izango da; eta 1 luzerako xi − xj ibilaldien kopurua hau da:
+1 (xi, xj) ∈ E bada
+0 (xi, xj) ∈ E bada
+;
+hau da, A matrizearen (i, j) elementua.
+Demagun Teorema betetzen dela p = k denean, hau da, Ak matrizearen 
+(i, j) elemen-
+tua k luzerako xi − xj ibilaldien kopurua dela; ikus dezagun p = k + 1 denean ere betetzen
+dela. Hau da, frogatu behar dugu Ak
++1 matrizearen (i, j) elementua k + 1 luzerako xi − xj
+ibilaldien kopurua dela.
+Izan bitez Ak = (bij) eta Ak
++1 = (cij).
+Orduan, Ak
++1 = AkA denez, hau bateko da:
+cij =
+n
+l=1
+bilalj.
+k + 1 luzerako xi − xj ibilaldi bakoitza k luzerako xi − xl ibilaldi batek eta, jarraian,
+(xl, xj) ertz batek osatuko dute, non xl erpina (l ∈ 
+{1, . . . , n}) edozein erpin den.
+x
+j
+x
+1
+x
+x
+i+1
+x
+l−2
+x
+n
+b
+in
+b
+x
+l−1
+b
+il
+x
+l
+i
+i1
+0
+1
+(xl, xj) ∈ E bada, alj = 1 izango da eta, beraz, k + 1 luzerako eta xi = y0, y1, . . . , yk =
+xl, yk+1 = xj itxurako ibilaldien kopurua k luzerako xi − xl ibilaldien kopurua izango da,
+hots, bil = bilalj.
+
+1.6. Azpigrafoak. Grafo osagarria
+11
+Ordea, (xl, xj) ∈ E bada, alj = 0 izango da eta, beraz, k + 1 luzerako eta xi =
+y0, y1, . . . , yk = xl, yk+1 = xj itxurako ibilaldien kopurua 0 = bilalj izango da.
+Hortaz, k + 1 luzerako xi − xj ibilaldi guztien kopurua hau da:
+n
+l=1
+bilalj = cij.
+2
+1.33 Adibidea. 1.31-2 Adibideko grafoaren adjazentzia-matrizerako hau dugu:
+A
+3 =
+
+
+
+
+
+
+0 1 0 3 0
+1 0 1 0 2
+0 1 0 3 0
+3 0 3 0 4
+0 2 0 4 0
+
+
+
+
+
+
+Ez dago 3 luzerako a − c ibilaldirik a eta c artean; badaude 3 luzerako lau ibilaldi d eta e
+artean:
+d, a, d, e; d, c, d, e; d, e, d, e; eta d, e, b, e.
+1.6
+Azpigrafoak. Grafo osagarria
+1.34 Deﬁnizioa. Izan bedi G = (V, E) grafo bat (zuzendua edo ez). G1 = (V1, E1)
+grafoa G grafoaren azpigrafo bat da bi baldintza hauek betetzen baditu:
+• ∅ = V1 ⊆ V eta
+• E1 ⊆ E eta E1 multzoaren ertz bakoitzak intzidente izan behar du V1 multzoaren
+erpinekin soilik.
+1.35 Adibidea. 1.31-
+2 Adibideko grafoa emanik, grafo hauek bere azpigrafoak dira:
+G1
+a
+b
+c
+d
+G2
+
+12
+1. Grafoak
+a
+b
+c
+d
+e
+G3
+a
+b
+c
+e
+1.36 Deﬁnizioa. G1 = (V1, E1) grafoa G = 
+(V, E) grafoaren azpigrafoa bada, V1 = V
+bada, G1 grafoa G grafoaren azpigrafo sortzailea dela esango dugu.
+Ertzen azpimultzo bakoitzeko azpigrafo sortzaile bat lortuko dugu. Beraz, G = 
+(V, E)
+grafoan | E |= m bada, 2m azpigrafo sortzaile izango ditu.
+1.37 Adibidea. 1.35 Adibidean, G grafoaren G2 azpigrafo sortzailea da; baina, G1 eta
+G3 ez dira azpigrafo sortzaileak.
+G grafoak 2
+4 = 16 azpigrafo sortzaile ditu.
+1.38 Deﬁnizioa. Izan bitez G = (V, E) grafo bat (zuzendua edo ez) eta ∅ = U ⊂
+V multzo bat. U multzoak induzitutako G grafoaren azpigrafo deituko diogu honela
+deﬁnitutako grafoari:
+• erpinen multzoa U da eta
+• ertzen multzoa E ∩ (U × U ) da 
+(hots, U multzoaren erpinekin soilik intzidenteak
+diren E multzoaren ertzak).
+Azpigrafo induzitua < U > adieraziko dugu.
+1.39 Adibidea. 1.35 Adibidean, G3 azpigrafo induzitua da, V3 = 
+{a, b, c, e} multzoak
+induzitutakoa hain zuzen.
+G3 =< V3 > .
+G1 ez da V1 = {a, b, c, d} multzoak induzitutako azpigrafoa, 
+{a, d} ertza ez dago eta.
+Ikus ditzagun, orain, beste bi azpigrafo-
+mota, erpin bat edo ertz bat kentzean sortu-
+takoak.
+1.40 Deﬁnizioa. Izan bedi G = (V, E) grafo bat (zuzendua edo ez).
+
+1.6. Azpigrafoak. Grafo osagarria
+13
+• x ∈ V emanik, G − x idatziko dugu G − x = 
+(V1, E1) azpigrafoa adierazteko, non:
+– V1 = V \ {x} den eta
+– E1 multzoan E multzoaren ertz guztiak dauden, x erpinarekin intzidenteak
+direnak izan ezik.
+Hortaz, G − x =< V1 > grafo induzitua dugu.
+• e ∈ E emanik , G − e idatziko dugu G − e = 
+(V1, E1) azpigrafoa adierazteko, non:
+– V1 = V den eta
+– E1 = E \ {e} den.
+1.41 Adibidea. 1.35 Adibidean, G3 = G − d eta G2 = G − {d, e}.
+Grafo baten grafo osagarria deﬁnitu ahal izateko grafo osotuaren kontzeptua behar
+dugu.
+1.42 Deﬁnizioa. Izan bedi V = 
+{x1, . . . , xn} erpinen multzoa; V multzoaren gaineko
+grafo osotua grafo bakun, ez-zuzendu eta begiztarik gabea da, non
+(∀x, y ∈ V ) x = y =⇒ {x, y} ertza ezistitzen den.
+n erpineko grafo osotua Kn adieraziko dugu.
+Ohar gaitezen Kn grafoak n erpin eta
+n
+2
+ertz dituela, eta erpin bakoitzaren gradua
+n − 1 dela.
+1.43 Adibideak.
+K4
+K5
+
+14
+1. Grafoak
+1.44 Deﬁnizioa. Izan bedi G = (V, E) grafo bakuna, ez-
+zuzendua, begiztarik gabea eta
+n erpinekin, V = 
+{x1, . . . , xn} izanik. G grafoaren grafo osagarria Kn grafo osotuaren
+G = 
+(V, E) azpigrafoa da, non E multzoan E multzoan ez dauden Kn grafo osotuaren
+ertzak dauden.
+G = Kn bada, G grafoak n erpin eta 0 ertz izango ditu; grafo nulua deitzen da.
+1.45 Adibidea. G grafo hau bada:
+a
+b
+c
+d
+orduan, G beste hau izango da:
+a
+b
+d
+c
+1.46 Deﬁnizioa. G = (V, E) zatibiko grafoa da grafo bakuna, ez-
+zuzendua eta begiz-
+tarik gabea bada eta
+• V1, V2 badaude, non V1 ∪ V2 = V eta V1 ∩ V2 = ∅ diren eta
+• G grafoaren {x, y} ertz bakoitzean x ∈ V1 eta y ∈ V2 badira.
+Horrez gain,
+(∀x ∈ V1, ∀y ∈ V2) {x, y} ertza badago,
+G zatibiko grafo osotua da, eta Kn
+1,n2 idatziko dugu, | V1 |= n1 eta | V2 |= n2 izanik.
+1.47 Adibideak.
+1. Grafo hau zatibiko grafo (ez osotua) da:
+2. Grafo hau K2,3 zatibiko grafo osotua da:
+
+1.7. Grafoen arteko isomorﬁsmoak
+15
+1.7
+Grafoen arteko isomorﬁsmoak
+1.48 Deﬁnizioa. Izan bitez G1 = (V1, E1) eta G2 = (V2, E2) bi grafo ez-
+zuzendu. f :
+V1 −→ V2 funtzioa grafoen arteko isomorﬁsmoa da hau betetzen badu:
+• f bijektiboa da eta
+• (∀x, y ∈ V1) {x, y} ∈ E1 baldin eta soilik baldin {f (x), f (y)} ∈ E2.
+Horrelako funtzio bat badago, G1 eta G2 grafo isomorfoak dira eta G1 ∼
+= G2 idatziko
+dugu.
+Grafoen arteko isomorﬁak baliokidetasun-
+erlazio bat deﬁntzen du grafoen multzoan.
+G1 eta G2 grafo isomorfoak badira, funtsean berdinak dira:
+• erpinen kopuru bera dute;
+• ertzen kopuru bera dute;
+• gradu bera duten erpinen kopuru bera dute;
+• zikloen kopuru bera dute;
+• etab.
+1.49 Adibideak.
+1. Har ditzagun grafo hauek:
+G1 = (V1, E1)
+G2 = (V2, E2)
+a
+b
+c
+e
+d
+v
+y
+x
+w
+z
+f : V1 −→ V2 funtzioa,
+f (a) = w,
+f (b) = x,
+f (c) = y,
+f (d) = z,
+isomorﬁsmoa da. Hau da, G1 ∼
+= G2.
+{a, c} ↔ {f (a), f (c)} = {v, w}
+{c, e} ↔ {f (c), f (e)} = {w, x}
+{e, b} ↔ {f (e), f (b)} = {x, y}
+{b, d} ↔ {f (b), f (d)} = {y, z}
+{d, a} ↔ {f (d), f (a)} = {z, v}
+
+16
+1. Grafoak
+2. Ikus ditzagun, orain, grafo hauek:
+G3
+a
+b
+c
+d
+e
+f
+G4
+u
+v
+w
+x
+y
+z
+Bi grafoek 6na erpin eta 9na ertz dituzte. Baina ez dira isomorfoak.
+d(a) = d(d) = 2,
+d(b) = d(e) = 3,
+d(c) = d(f ) = 4,
+d(u) = d(w) = d(y) = 2,
+d(v) = d(x) = d(z) = 4,
+gradu bereko erpinen kopuruak desberdinak dira.
+1.8
+Kate eta zirkuitu eulertarrak
+1.50 Deﬁnizioa. Izan bedi G = (V, E) grafo ez-
+zuzendua eta erpin isolaturik gabea.
+Zirkuitu eulertarra G grafoaren ertz bakoitza behin bakarrik erabiltzen duen zirkuitua
+da.
+Kate eulertarra G grafoaren ertz bakoitza behin bakarrik erabiltzen duen kate irekia
+da.
+G grafoa eulertarra da zirkuitu eulertar bat badauka.
+1.51 Adibideak.
+1. 1.49-2 Adibideko G4 grafoan zirkuitu eulertar hau aurki dezakegu:
+u, v, z, x, v, w, x, y, z, u.
+Beraz, grafo eulertarra da.
+2. 1.49-2 Adibideko G3 grafoan kate eulertar hau aurki dezakegu:
+b, a, f, b, c, d, e, c, f, e.
+Ezin da, ordea, zirkuitu eulertar bat ere aurkitu.
+1.52 Teorema. Izan bedi G = (V, E) grafo ez-
+zuzendua eta erpin isolaturik gabea. Or-
+duan,
+G eulertarra da ⇐⇒ G konexua bada eta G grafoaren erpin guztiek gradu bikoitia
+badute.
+
+1.8. Kate eta zirkuitu eulertarrak
+17
+Froga.
+⇒: Demagun G eulertarra dela, hots, C zirkuitu eulertar bat duela.
+Ikus dezagun G konexua dela: G grafoak erpin isolaturik es duenez, V multzoaren
+erpin guztiak behin gutxienez agertuko dira C zirkuituan. x, y ∈ V bi erpin desberdinak
+emanik, x erpinean hasten den eta y erpinean bukatzen den C zirkuituaren zatia x − y
+ibilaldi bat da. Beraz, G konexua da.
+Ikus dezagun, orain, erpin guztiek gradu bikoitia dutela. Ian bedi x edozein erpin.
+C zirkuitua x erpinera ertz batetik “heltzen” denean, x erpinetik ertz desberdin batetik
+“aterako” da. Beraz, C zirkuituak x erpinarekin intzidenteak diren bi ertz desberdin,
+edo begizta berri bat, erabiltzen ditu. Bi kasuetan, C zirkuitua x erpinetik pasatzen den
+bakoitzean, bi unitate eransten dio x erpinaren graduari; hortaz, d
+(x) bikoitia da.
+⇐:
+ Demagun G konexua dela eta G grafoaren erpin guztiek gradu bikoitia dutela. G
+eulertarra dela frogatu behar dugu. G grafoaren ertzen m kopuruaren gaineko indukzioz
+egingo dugu.
+m = 1 bada, G grafoa hau da:
+a
+eta zirkuitu eulertarra nabaria da.
+Suposa dezagun, m < p denean, zirkuitu eulertarra eraiki dezakegula. Frogatuko
+dugu, m = p denean, zirkuitu eulertarra eraiki ahal izango dugula.
+Hasteko, frogatuko dugu, x ∈ V erpin bat emanik, x erpina duen zirkuitu bat dagoela.
+Izan bedi
+x = y0, f1, y1, . . . , fk, yk
+x erpinean hasten den ibilaldirik luzeena. i ∈ 
+{1, · · · , k} baterako x = yi bada, orduan
+x = y0, f1, · · · , fi, yi = x
+x erpina duen zirkuitu bat da.
+i ∈ 
+{1, · · · , k} guztietarako x = yi bada, orduan yk erpina hartuko dugu. yk = yi
+bada i ∈ 
+{1, · · · , k − 1} baterako, yk erpina ibilaldiaren tartean eta amaieran agertuko da.
+Tartean agertzen den bakoitzean, graduari 2 erantsiko dio, eta amaieran agertzean 1 er-
+antsiko dio; beraz, guztira gradu bakoitia emango du. Hipotesiz, erpin guztiek gradu
+bikoitia dutenez, ibilaldian erabili ez den ertz bat, gutxienez, intzidenatea da yk er-
+pinarekin. Horrek esan nahi du ibilaldia luza dezakegula, suposatu dugunaren kontra,
+hau da, ibilaldia luzeena izatearen kontra.
+yk = yi bada i ∈ 
+{1, · · · , k − 1} guztietarako, yk erpina ibilaldiaren amaieran bakarrik
+agertuko da. yk erpinaren gradua bikoitia denez eta yk erpinarekin intzidentea den ertz
+bat bakarrik erabili dugunez, orduan ibilaldian ez dagoen beste ertz bat egon behar da.
+Berriro ere, horrek esan nahi du ibilaldia luzatu ahal genukeela, ibilaldia luzeena izatearen
+kontra.
+Horrela, x erpinetik pasatzen den C zirkuitu bat dagoela suposa dezakegu.
+Zirkuitu horretan grafoaren ertz guztiak badaude, zirkuitu eulertarra da.
+
+18
+1. Grafoak
+G grafoaren ertz guztiak ez badaude, G grafotik C zirkuitua ezabatuko dugu, eta,
+horrekin batera, isolaturik gera daitezkeen erpinak ere bai. Horrela, G′ grafo bat lortuko
+dugu, zeinak 
+{G1, G2, . . . , Gl} osagai konexuak izan ditzakeen. Osagai bakoitzak erpin
+komun bat izango du C zirkuituarekin. Horrez gain, osagai konexu bakoitza p baino
+ertz gutxiago dituen grafo konexua da, eta erpin guztiek gradu bikoitia izanik; hortaz,
+indukzio-
+hipotesiaren arabera, osagai konexu bakoitzerako zirkuitu eulertar bat izango
+dugu.
+G grafoaren zirkuitu eulertarra lortzeko, C zirkuitutik ibiliko gara, edozein erpinetatik
+hasita. Osagai konexuren batekin komunean duen erpin batera heltzean, C zirkuitutik
+aterako gara eta osagai konexuaren zirkuitu eulertarra ibiliko dugu erpin komunera itzuli
+arte; osagaitik atera eta C zirkuitutik segituko dugu. Horrela, osagai konexu guztietatik
+pasatu eta gero, C zirkuitura itzuliko gara eta hasi garen erpinean bukatuko dugu. Hori
+izango da G grafoaren zirkuitu eulertarra.
+Prozesu honek bukaera izango du, ertzen kopurua ﬁnitua delako.
+2
+1.53 Adibideak.
+1. Irudiko grafoan, b erpinetik pasatzen den C zirkuitua hartuko dugu:
+ C = bcgf b.
+Gero, G grafoari C zirkuituaren ertzak eta isolaturik geratzen diren erpinak 
+(b)
+kenduko dizkiogu; G1, G2 eta G3 osagai konexuek osatzen duten G′ grafoa kenduko
+zaigu.
+Grafo G’
+f
+e
+h
+3
+G
+g
+i
+j
+2
+G
+a
+c
+d
+1
+G
+Grafo G
+a
+b
+c
+d
+f
+e
+g
+h
+i
+j
+G grafoaren zirkuitu eulertarra lortzeko, b erpinetik (esaterako) hasiko gara:
+bcG1cgG2gf G3f b;
+edo erpin guztiak idatziz:
+bcadcgijgf ehf b.
+2. Irudiko G graforako, bi graduko d eta e erpinetatik pasatzen den C zirkuitu bat
+hartuko dugu: C = dheagd. Gero, G grafoari C zirkuituaren ertzak eta isolaturik
+geratzen diren erpinak 
+(d, e) kenduko dizkiogu; G′ lortuko dugu. G′ grafoan, C′ =
+bchf b zirkuitua hartuko dugu. Orain, G′ grafoari C′ zirkuitua kenduz gero 
+(ez da
+erpin isolaturik geratzen), G′′ grafoa lortuko dugu. G′′ grafoan erpin guztiek bi
+gradua dute, eta erraz aurki dezakegu zirkuitu eulertar bat: E′′ = af cgbha.
+
+1.8. Kate eta zirkuitu eulertarrak
+19
+G′ grafoaren zirkuitu eulertarra eratuko dugu. C′ zirkuituaren edozein erpin hartuko
+dugu, esaterako, b. b erpina G′′ grafoan dagoenez, G′′ grafoan sartuko gara eta bere
+zirkuitu eulertarra ibiliko dugu, b erpinean bukatuz. Orain, C′ zirkuitutik segituko
+dugu. Horrela zirkuitu eulertar hau lortuko dugu: E′ = bhaf cgbchf b.
+G grafoaren E zirkuitu eulertarra eratzeko, C zirkuituaren edozein erpinetan hasiko
+gara, adibidez, d erpinean. C zirkuitutik ibiliko gara G′ grafoarekin erpin komun
+bat aurkitu arte, adibidez, h. h erpinetik G′ grafoan sartuko gara eta E′ zirkuitu
+eulertarra berridatziko dugu:
+ E′ = haf cgbchf bh. Horrela, G′ grafo osoa ibili dugu,
+eta C zirkuitura aterako gara h erpinetik, eta hortik segituko dugu d erpineraino.
+Bukaeran zirkuitu eulertar hau osatu dugu: E = dhaf cgbchf bheagd.
+a
+b
+c
+d
+e
+f
+g
+h
+a
+b
+c
+f
+g
+h
+a
+b
+c
+f
+g
+h
+Grafo G
+Grafo G’
+Grafo G"
+1.54 Korolarioa. Izan bedi G = (V, E) grafo ez-
+zuzendu eta erpin isolaturik gabe bat.
+Orduan,
+G grafoak kate eulertar bat du ⇐⇒ G konexua bada eta zehazki bi erpinek gradu
+bakoitia badute.
+Froga.
+⇒: Demagun G grafoak R kate eulertar bat duela (ez zirkuitua):
+ a − b, a = b izanik.
+Izan bedi G′ grafoa G grafoari 
+{a, b} ertza eranstean sortzen den grafoa. Orduan,
+R ∪ 
+{a, b} G′ grafoaren zirkuitu eulertarrra da. 1.52 Teorema G′ grafoari aplikatuz gero,
+G′ grafoaren erpin guztiek gradu bikoitia izango dute. x ∈ V emanik, d
+(x) bada x
+erpinaren gradua G grafoan, eta d′(x) x erpinaren gradua G′ grafoan, orduan
+d(x) = d′(x)
+x = a, x = b bada,
+d(a) = d′(a) − 1,
+d(b) = d′(b) − 1.
+∀x ∈ V , d′
+(x) bikoitia denez, G grafoak gradu bakoitiko bi erpin bakarrik izango ditu, a
+eta b.
+⇐: Demagun G konexua dela eta zehazki bi erpinek gradu bakoitia dutela, a = b.
+Izan bedi G′ grafoa G grafoari 
+{a, b} ertza eranstean sortzen den grafoa. G′ konexua
+da eta G′ grafoaren erpin guztiek gradu bikoitia badute. 1.52 Teorema aplikatuz, G′
+grafoak C zirkuitu eulertar bat dauka. C zirkuitutik 
+{a, b} ertza ezabatuz, kate eulertar
+bat lortuko dugu G graforako. Kate eulertar hori gradu bakoitiko erpin batean hasiko da
+eta bestean bukatuko da.
+2
+
+20
+1. Grafoak
+1.55 Adibideak.
+1.
+d
+c
+b
+a
+grafoan, K = acbadc kate eulertar bat da. Ez dago zirkuitu eulertarrik.
+2. K¨onigsberg-ko zubien problemaren grafoan 
+(1.5 Adibidea), lau erpinek gradu bakoitia
+dute:
+d(A) = 5, d(B) = d(C) = d(D) = 3;
+beraz, ezin da kate eulertarrik, ezta zirkuitu eulertarrik ere, osatu. Ondorioz, ezin
+da halako ibilaldirik egin zubiak behin bakarrik pasatzen.
+Aurreko kontzeptuak eta emaitzak grafo zuzenduetara zabal ditzakegu.
+1.56 Deﬁnizioa. Izan bedi G = 
+(V, E) grafo zuzendu eta erpin isolaturik gabea. Zirkuitu
+eulertarra deituko diogu G grafoaren ertz bakoitza behin bakarrik erabiltzen duen zirkuitu
+zuzenduari.
+1.57 Teorema. Izan bedi G = 
+(V, E) grafo zuzendu eta erpin isolaturik gabea. Orduan,
+G grafoak zirkuitu eulertar zuzendua du ⇐⇒ G grafo konexua bada eta x ∈ V erpin
+guztietarako d
++(x) = d−(x) betetzen bada.
+1.9
+Bide eta ziklo hamiltondarrak
+1.58 Deﬁnizioa. Izan bedi G = (V, E) grafo ez-zuzendua, | V |= n ≥ 3 izanik. G
+grafoaren erpin guztiak dituen ziklo bati ziklo hamiltondar deituko diogu. G grafoaren
+erpin guztiak dituen bide ireki bati bide hamiltondar deituko diogu.
+G grafoa hamiltondarra da ziklo hamiltondar bat badu.
+Oharrak.
+1. Ziklo hamiltondar batetik ertz bat ezabatuz gero, bide hamiltondar bat lortuko
+dugu.
+2. Grafo batek bide hamiltondar bat badu, konexua da.
+3. Zirkuitu eta kate eulertarrekin ez bezala, ez dago baldintza nahikorik, ezta be-
+harrezkorik ere, ziklo edo bide hamiltondarren bat dagoela ziurtatzeko. Teore-
+ma batzuek baldintza beharrezkoak ematen dituzte, eta beste batzuek baldintza
+nahikoak.
+
+1.9. Bide eta ziklo hamiltondarrak
+21
+1.59 Adibidea.
+b
+a
+c
+e
+i
+h
+g
+f
+d
+G grafoan,
+a, b, c, d, e, f, g, h, i
+bide hamiltondarra da. Ikus dezagun ea G grafoan ziklo hamiltondarren bat dagoen.
+G grafoak bederatzi erpin dituenez, ziklo hamiltondar bat balego, bederatzi ertz izango
+lituzke. Has gaitezen b erpinean eta saia gaitezen ziklo hamiltondar bat eratzen. Grafoaren
+simetria kontuan izango dugu. b erpinetik c erpinera joango gara; gero, edo d edo i
+erpinetara joan gaitezke. d erpinera bagoaz, 
+{c, i} ertza ezin da zikloan sartu, ezin garelako
+itzuli c erpinera. Orain, edo e edo i erpinetara joan gaitezke. e erpinera bagoaz, 
+{d, i}
+ertza ezin da zikloan sartu; beraz, i erpinera heltzen garenean ezin izango dugu segitu.
+Baina i erpinera bagoaz, 
+{e, d} ertza ezin da zikloan sartu; beraz, e erpinera heltzen
+garenean ezin izango dugu segitu.
+Ondorioz, grafo horrek ez du ziklo hamiltondarrik.
+Adibide horri begira, iradokizun batzuk eman ditzakegu G = 
+(V, E) grafo ziklo hamil-
+tondar bat aurkitzeko.
+• G hamiltondarra bada, x ∈ V erpin guztietarako d(x) ≥ 2 da.
+• a ∈ V eta d(a) = 2 bada, a erpinarekin intzidenteak diren ertzek G grafoaren
+edozein ziklo hamiltondarretan agertu behar dute.
+• a ∈ V eta d
+(a) > 2 bada, G grafoaren edozein ziklo hamiltondar eraikitzeko, a er-
+pinetik behin pasatu eta gero, a erpinarekin intzidenteak diren eta erabili ez ditugun
+ertzak baztertuko ditugu.
+• G grafoaren edozein ziklo hamiltondar eraikitzean, ezin izango dugu ziklo bat osatu
+G grafoaren azpigrafo baterako, ez bada G grafoaren erpin guztiak hartzen dituela.
+Ikus ditzagun grafo batek bide edo ziklo hamiltondar bat izateko baldintza nahikoak
+ematen dituzten teorema batzuk.
+1.60 Teorema. G = (V, E) grafoa begiztarik gabe eta n ≥ 3 erpinekin emanik,
+∀x, y ∈ V
+(x = y) d(x) + d(y) ≥ n − 1
+betetzen badu, G grafoak bide hamiltondarra izango du.
+
+22
+1. Grafoak
+1.61 Korolarioa. G = (V, E) grafoa begiztarik gabe eta n ≥ 3 erpinekin emanik,
+∀x ∈ V
+d(x) ≥
+n − 1
+2
+betetzen badu, G grafoak bide hamiltondarra izango du.
+1.62 Adibidea. Zazpi azterketa zazpi egunetan antolatu nahi ditugu, irakasle batek bi
+azterketa jarraian ez ditzan izan. Ezein irakaslek ez du lau baino azterketa gehiago.
+Ikusiko dugu beti dela posible azterketak antolatzea.
+Har dezagun G grafoa, non erpinak azterketak diren; bi erpinen artean ertz bat mar-
+raztuko dugu bi azterketak irakasle desberdinenak badira. Orduan, erpin bakoitzaren
+gradua gutxienez 3 (7 − 4 = 3) da.
+Horrela deﬁnitutako G grafoak ∀x ∈ V
+d(x) ≥
+7−1
+2
+= 3 betetzen du; beraz, bide
+hamiltondar bat badu.
+1.63 Teorema. G = (V, E) grafoa begiztarik gabe eta n ≥ 3 erpinekin emanik,
+∀x, y ∈ V
+(x, y ez-adjazenteak) d(x) + d(y) ≥ n
+betetzen badu, G grafo hamiltondarra izango da.
+1.64 Korolarioa. G = (V, E) grafoa begiztarik gabe eta n ≥ 3 erpinekin emanik,
+∀x ∈ V
+d(x) ≥
+n
+2
+betetzen badu, G grafo hamiltondarra izango da.
+1.65 Adibidea. Hogei laguneko talde batean, bakoitzak gutxienez hamar lagun ezagutzen
+ditu. Ikus dezagun mahai biribil baten inguruan eseri daitezkeela, bakoitzak alboko bi
+mahaikideak ezagut ditzan.
+G grafoan erpinak lagunak izango dira; eta ertzak elkar ezagutzen duten lagunen
+artean marraztuko ditugu.
+Grafo horretan erpin bakoitzaren gradua d(x) ≥
+20
+2
+= 10 izango da. Hortaz, G grafo
+hamiltondarra izango da.
+Ziklo hamiltondarra baldintza horietan mahaiaren inguruan eseritzeko era bat izango
+da.
+Teorema hauek grafo batek bide edo ziklo hamiltondar bat izateko baldintza behar-
+rezkoak ematen dituzte. Lehenengoa zatibiko grafo bati dagokio.
+1.66 Teorema. G = (V, E) zatibiko grafoa emanik, non V = V1 ˙∪V2 den, G grafoa
+hamiltondarra bada, | V1 |=| V2 | izango da.
+
+1.9. Bide eta ziklo hamiltondarrak
+23
+Aurreko teoremak esaten digu, G = 
+(V, E) zatibiko grafoa emanik, non V = V1 ˙∪V2
+den, | V1 |=| V2 | bada, G grafoa ez dela hamiltondarra.
+Adibide honek frogabidearen ideia emango digu.
+1.67 Adibidea. Har dezagun G grafo hau:
+i
+e
+h
+j
+f
+g
+c
+b
+a
+d
+Grafo hori zatibikoa da. Hori ikusteko erpinak bi multzotan banatuko ditugu honela:
+ a
+erpina x izendatuko dugu; gero, x erpinarekin adjazenteak diren erpin guztiak 
+(b, c eta d)
+y izendatuko ditugu. Ondoren, y erpinekin adjazenteak diren eta izendatu gabe dauden
+erpinak x izendatuko ditugu; eta horrela ondoz ondo eginez gero, grafoa honela geratuko
+da:
+x
+x
+x
+x
+y
+y
+y
+y
+y
+y
+Orain, x erpin guztiak alde batera eta y erpin guztiak beste aldera eramanez gero, grafoa
+zatibikoa dela nabarmen geratuko da:
+a
+e
+g
+i
+b
+c
+d
+f
+h
+j
+
+24
+1. Grafoak
+G grafoaren erpinak bi multzotan banatuko ditugu:
+V = V1 ˙∪V2,
+V1 = {a, e, g, i},
+V2 = {b, c, d, f, h, j}
+| V1 |=| V2 | denez, G grafoa ez da hamiltondarra.
+Bide hamiltondar bat izanez gero, bidean txandakaturik agertuko lirateke bosna aldiz
+x eta y letrak; baina, x letra lau aldiz eta y letra sei aldiz dauzkagu. Hortaz, horrelako
+bide bat osatzea ezinezkoa da. Ondorioz, grafoak ez du bide hamiltondarrik.
+Idazkera. G = 
+(V, E) grafoa emanik, eta V ′ ⊂ V erpinen azpimultzo bat, G − V ′ idatiko
+dugu G − V ′ = 
+(V1, E1) grafoa adierazteko, non V1 = V \ V ′ den eta E1 multzoan E
+multzoaren ertzak dauden, V ′ multzoaren erpinekin intzidenteak direnak izan ezik.
+1.68 Teorema. G = (V, E) grafo hamiltondarra bada, edozein V ′ ⊂ V azpimultzo-
+tarako, ∅ = V ′ = V izanik,
+κ(G − V
+′ ) ≤ card (V ′).
+1.69 Korolarioa. G = 
+(V, E) grafoa emanik, V ′ ⊂ V azpimultzo bat badago, ∅ = V ′ =
+V izanik, non
+κ(G − V
+′) > card (V ′)
+betetzen den, G grafoa ez da hamiltondarra izango.
+1.70 Adibidea. 1.67 Adibideko grafoan, x izendatutako erpinak kenduz gero, y izen-
+datutako erpinak isolaturik geratuko lirateke. Beraz, κ(G − V ′) = 6 eta card 
+(V ′) = 4
+dira. Ondorioz, G grafoa ez da hamiltondarra.
+
+1.10. Ariketak
+25
+1.10
+Ariketak
+1. Deﬁnizioak. Graduak. Ibilaldiak
+1.1. Gizon batek ibaia zeharkatu behar du ezkerreko aldetik eskuinekora txalupa
+batez, eta berarekin eraman behar ditu otso bat, ardi bat eta zaku aza. Txalu-
+pan gizona eta beste objektu batentzat bakarrik dago lekua (otsoa edo ardia
+edo zaku aza). Gainera gizonak ezin du utzi ardia bakarrik otsoarekin, ezta
+ere zaku aza ardiarekin. Nola zeharkatuko du ibaia? Eraiki grafo ez-zuzendua
+non erpinek adieraziko duten eman daitezkeen konﬁgurazio guztiak: gizona eta
+hiru objektuak ezkerrean eta eskuinean ezer ez, gizona, otsoa eta ardia ezker-
+rean eta zaku aza eskuinean, etab. Bi erpinen artean ertza ipiniko dugu baldin
+konﬁgurazio batetik bestera igaro badaiteke txalupaz ibaia behin zeharkatuz.
+Determinatu gizonak bere objektuekin ibaia zeharkatzeko era desberdinak.
+1.2. Baldin G begizta gabeko grafo ez-
+zuzenduan v erpin eta e ertz baditugu, fro-
+gatu 2e ≤ v
+2 − v betetzen dela.
+1.3. Deduzitu grafo edo multigrafo hauen erpin kopurua.
+a) G-k bederatzi ertz ditu eta erpin guztiak 3 gradukoak dira.
+b) G erregularra da eta 15 ertzekoa.
+c) G-k 10 ertz ditu, bi erpin 4 gradukoak eta beste guztiak 3 gradukoak.
+1.4. Izan bedi G grafo ez-
+zuzendua. Zein da erpin kopururako litekeen balio hand-
+iena baldin 19 ertz baditugu eta erpin bakoitzaren gradua gutxienez 4 bada?
+1.5. Izan bedi G begizta gabeko grafo ez-zuzendua eta 3-
+erregularra. Baldin |E| =
+2|V | − 6, kalkulatu |V | eta |E|.
+1.6. Izan bedi G grafo ez-
+zuzendua, n erpin eta e ertz dituena, δ izanik grafoko
+erpinen graduetatik txikiena eta ∆ handiena. Frogatu δ ≤ 2e/n ≤ ∆ betetzen
+dela.
+1.7. Frogatu grafo 3-erregular orok erpin kopuru bikoitia duela.
+1.8. Izan bedi G grafo ez-zuzendu konexua. Bi erpinen arteko distantzia deituko
+diogu hauen arteko bide motzenaren luzerari. Grafoaren diametroa deituko
+diogu erpinen arteko distantzia handienari.
+a) Zein da irudiko grafoaren diametroa?
+b) Grafoaren erpinek konputagailuak adierazten badituzte eta ertzek hauen
+arteko komunikazio lineak, nola interpretatuko genuke grafoaren diametroa?
+
+26
+1. Grafoak
+c) Grafoaren diametroa d bada, n erpin kopurua eta δ erpinen gradurik han-
+diena, frogatu:
+n ≤ 1 + δ + δ(δ − 1) + δ(δ − 1)
+2 + . . . + δ(δ − 1)d−1
+d) Interpretatu emaitza hau konputagailu sarearen adibiderako.
+1.9. Jauregiko gelak iratxoz josita daude, baina ohitura bitxia dute:
+ ate kopuru
+bikoitiko geletan bakarrik daude. Jauregiak sarrerako ate bakarra du. Frogatu
+beti joan gaitezkeela iratxorik gabeko gela batera.
+1.10. Irudiko grafoan deﬁnitu
+a) b-tik d-rako ibilaldi bat katea ez dena.
+b) b − d kate bat bidea ez dena.
+c) b-tik d-rako bide bat.
+d) b-tik b-rako ibilaldi itxi bat zirkuitua ez dena.
+e) b-tik b-rako zirkuitu bat zikloa ez dena.
+f) b-tik b-rako ziklo bat.
+a
+b 
+e
+f
+d
+c
+g
+1.11. Izan bedi G begizta gabeko grafo ez-zuzendua non erpin bakoitzaren gradua
+k edo handiagoa den, k osoko positibo bat izanik. Frogatu G-n badagoela k
+luzerako bide irekia.
+1.12. Irudiko grafoa izanik, esan erpin bikote bakoitzerako 5 luzerako zenbat ibilaldi
+dauden.
+2. Azpigrafoak. Osagarria. Isomorﬁsmoak
+2.1. Izan bedi G begizta gabeko grafo konexu ez-zuzendua eta 
+{a, b} bere ertz bat.
+Frogatu {a, b} ertza ziklo baten zatia dela baldin eta soilik baldin ertz hau
+kenduz (baina ez a eta b erpinak) grafoak konexu izaten segitzen badu.
+2.2. Izan bedi G begizta gabeko grafo ez-zuzendua, 10 erpinekoa, non d(v1) = 2,
+d(v2) = 3, d(v3) = 3, d(v4) = 5, d(v5) = 1, d(v6) = 2, d(v7) = 5, d(v8) = 2,
+d(v9) = 3, d(v10) = 2. Kalkulatu erpinen gradua grafo osagarrian.
+2.3. Izan bedi G begizta gabeko grafo ez-zuzendua, v erpin eta e ertz dituena.
+Zenbat ertz ditugu G grafoan?
+
+1.10. Ariketak
+27
+2.4. Frogatu kuboa grafo zatibikoa dela.
+2.5. Izan bedi G, n erpineko zikloa. Frogatu G eta G isomorfoak direla baldin eta
+soilik baldin n = 5.
+2.6. Honela deﬁnitzen da Wn grafoa, n ≥ 3 erradioko gurpila: n luzerako zikloa
+dugu eta gainera beste erpin bat zikloko n erpinei albokoa dena. Badago grafo
+osatu bati isomorfoa den Wn graforik?
+2.7. Irudiko bi grafoentzat kalkulatu erpin bakoitzaren gradua. Isomorfoak dira?
+2.8. a) G1 eta G2 begizta gabeko grafo ez-zuzenduak izanik, frogatu G1 eta G2
+isomorfoak direla baldin eta soilik baldin G1 eta G2 isomorfoak badira.
+b) Aztertu irudiko grafoak isomorfoak diren.
+2.9. a) Izan bedi G begizta gabeko grafo ez-zuzendua, n erpinekoa. Baldin G eta
+G isomorfoak badira, zenbat ertz ditu G grafoak?
+b) Aurkitu lau eta bost erpinerako adibideak.
+c) Frogatu erpin kopurua 4k edo 4k + 1 izan behar dela, k izanik osokoren
+bat.
+2.10. Frogatu hiru grafo hauek isomorfoak direla.
+2.11. Frogatu isomorfoak direla.
+
+28
+1. Grafoak
+2.12. Grafo hauek binaka hartuz (lau bikote), aztertu isomorfoak diren edo ez.
+a)
+c)
+d)
+b)
+3. Grafo eulertar eta hamiltondarrak
+3.1. Datozen bi grafoetarako esan ea zirkuitu edo kate eulertarrik duten.
+3.2. Aztertu n-ren zein baliotarako Kn-
+k duen zirkuitu eulertarra. Zein baliotarako
+du kate eulertarra baina ez zirkuitu eulertarra?
+3.3. Dominoko honako 10 ﬁtxak ditugu:
+{1, 2}, {1, 3}, {1, 4}, {1, 5}, {2, 3}, {2, 4}, {2, 5}, {3, 4}, {3, 5}, {4, 5}
+Posible al da pieza guztiak errenkada itxi bat osatuz jartzea? Hala bada, eman
+ezazu piezen kokapena.
+3.4. a) Irudiko grafoan aurkitu bi kate 
+(ireki), disjuntuak eta grafoko ertz guztiak
+hartzen dituztenak.
+b) Izan bedi G grafo konexua, k erpin gradu bakoitikoak dituena. Frogatu
+existitzen direla k/2 kate (ireki), disjuntuak eta ertz guztiak hartzen di-
+tuztenak.
+c) Izan bedi G grafo konexua, k erpin gradu bakoitikoak dituena. Zenbat ertz
+gehitu behar dizkiogu, gutxienez, zirkuitu eulertarra izan dezan? Nola
+erantsiko dizkiogu ertz hauek?
+
+1.10. Ariketak
+29
+3.5. Mugi dezakegu zaldia xake-taulan, honek urrats batean egin ditzakeen mug-
+imendu guztiak, bakoitza behin, burutuz? Xake-taulak 8 × 8 lauki ditu, eta
+bestalde bi laukiren arteko mugimendua osatutzat emango dugu zaldiak ur-
+ratsa noranzko batean edo bestean ematean.Egin gauza bera alﬁlarentzat eta
+dorrearentzat.
+3.6. Grafo konexuen adibideak eman non:
+a) Ez dago zirkuitu eulertarrik eta ziklo hamiltondarrik ere ez.
+b) Zirkuitu eulertarra dago baina ez ziklo hamiltondarrik.
+c) Ziklo hamiltondarra dago baina ez zirkuitu eulertarrik.
+d) Ziklo hamiltondarra eta zirkuitu eulertarra daude.
+3.7. Grafo batek zirkuitu eulertarra badu eta hau baita ere ziklo hamiltondarra
+bada, nolakoa da grafoa?
+3.8. Irudiko labirintuan izarra dagoen puntutik abiatuz itzul gaitezke berriz puntu
+honetara gela guztietatik igaro ondoren, inguruko pasabidea barne, baldin ate
+bakoitza gehienez behin zeharkatu behar bada?
+* 
+3.9. Irudiko grafoetan bilatu ziklo hamiltondarra. Ez badago bilatu bide hamilton-
+darra.
+3.10. a) Grafo hauek badute ziklo hamiltondarrik?
+b) Izan bedi grafo bat p lerro eta q zutabeko sarea. Frogatu ziklo hamiltondarra
+duela baldin eta soilik baldin p edo q bikoitia bada.
+3.11. a) Marraztu begizta gabeko grafo bat, n erpinduna, bide hamiltondarra due-
+na baina d(x) + d(y) < n − 1 izanik bi erpin determinaturako.
+
+30
+1. Grafoak
+b) Marraztu begizta gabeko grafo bat ziklo hamiltondarra duena baina d(x)+
+d(y) < n izanik albokoak ez diren bi erpin determinaturako.
+3.12. Hamabi gonbidatu datoz afaltzera. Hauetako bakoitza gutxienez beste seirekin
+elkar ezaguna da. Mahai baten inguruan eser daitezke baldin gonbidatu bakoitzaren
+bi aldeetan honen ezagunak egon behar badira?
+3.13. Hamaika ikasle afaltzera aterako dira egun batzutan. Mahaiaren inguruan
+eseriko dira eta afari bakoitzean ikasle bakoitzak mahaikide desberdinak izan
+behar ditu ondoan. Zenbat egunetan egin daiteke hau? Idatzi aukera denak.
+3.14. Izan bedi G begizta gabeko grafo ez-zuzendua, 6-
+erregularra eta 11 erpinekoa.
+Frogatu baduela ziklo hamiltondarra.
+3.15. Izan bedi G begizta gabeko grafo ez-zuzendua, k-
+erregularra eta |V | ≥ 2k + 2
+izanik. Frogatu grafo osagarriak ziklo hamiltondarra duela.
+3.16. Izan bedi Cn ziklo ez-zuzendua, n ≥ 5 erpinekoa. Frogatu grafo osagarriak
+ziklo hamiltondarra duela.
+3.17. Frogatu grafo hauek ez dutela ziklo hamiltondarrik.
+3.18. a) Izan bedi Km,n zatibiko grafo osatua, dagokion erpin partizioa 
+{V1, V2}
+izanik. (i) Zein da V1-eko erpinen gradua eta V2-ko erpinena? (ii) Noiz du
+grafoak zirkuitu eulertarra m eta n erpin kopuruen arabera? (iii) Noiz du
+grafoak ziklo hamiltondarra m eta n-ren arabera?
+b) Izan bedi Km,n zatibiko grafo osatua, 16 ertz dituena. Aurkitu m eta n
+erpin kopuruak, m ≤ n, bi kasu hauetan: (i) grafoak zirkuitu eulertarra
+eta ziklo hamiltondarra du, (ii) grafoak zirkuitu eulertarra du baina ez
+ziklo hamiltondarra.
+
+2. Gaia
+Zuhaitzak
+2.1
+Sarrera
+Zuhaitz bat grafo-mota berezi bat da. Kirchhoﬀ-ek (1824-
+1887) erabili zituen lehenengo
+aldiz elektronikan. Beranduago, Cayley-k (1821-
+1895) berriro deﬁnitu eta garatu zituen
+Kimika arloan (1857).
+Zuhaitz berezi batzuk oso garrantzitsuak dira datuen egiturak eta ordenamenduak
+aztertzeko, kodeketa-teorian eta optimizazio-problema batzuen soluzioan.
+2.2
+Deﬁnizioak eta propietateak
+2.1 Deﬁnizioa. Izan bedi T = (V, E) grafo ez-
+zuzendua eta begiztarik gabea. T grafoa
+zuhaitza da konexua bada eta ez badu ziklorik.
+Grafo baten zuhaitz sortzaile deituko diogu zuhaitz den edozein azpigrafo sortzaileri
+(grafoaren erpin guztiak dituena).
+2.2 Adibidea.
+G
+1
+G
+2
+Zuhaitza
+Ez da zuhaitza
+G1 grafoa G2 grafoaren zuhaitz sortzailea da.
+2.3 Teorema. a eta b zuhaitz baten bi erpin desberdin badira, a − b bide bakarra egongo
+da.
+31
+
+32
+2. Zuhaitzak
+Froga.
+Izan bedi T = (V, E) zuhaitz bat, eta a, b ∈ V , a = b.
+T konexua denez, gutxienez a − b bide bat dago: C(a = x0, x1, . . . , xp = b).
+Demagun beste a − b bide bat dagoela, C′.
+Izan bedi xt erpina C′ bidean ez dagoen C bidearen lehen erpina 
+(1 ≤ t ≤ p − 1); eta
+izan bedi xs erpina bi bideetan dagoen C bidearen hurrengo erpina (t < s ≤ p).
+x
+t−1
+x
+s
+x
+t
+C
+C’
+a
+b
+Orduan, C eta C′ bideen zatiek, xt
+−
+1
+eta xs erpinen artean, ziklo bat osatuko lukete,
+T zuhaitza izatearen kontra doana.
+2
+2.4 Lema. Izan bedi G = (V, E) grafo ez-
+zuzendua, begiztarik gabea eta konexua, eta
+izan bedi e ∈ E G grafoaren ertz bat. Orduan,
+e ertza ziklo batean dago ⇐⇒ G − e grafoa konexua bada.
+Froga.
+Izan bedi e = {a, b}.
+⇒:
+Demagun e ertza C ziklo batean dagoela: C = a, b, x1, x2, . . . , xp, a.
+G − e grafoa konexua dela frogatzeko, edozein x, y ∈ V bi erpin desberdin emanik,
+G − e grafoan x − y bide bat dagoela frogatu behar dugu.
+Izan bitez x, y ∈ V desberdinak. G grafoa konexua denez, x − y bide bat dago G
+grafoan (P ).
+P bideak ez badu e ertza, P bidea da G − e grafoan.
+P bideak e ertza badu, P :
+ x, y1, . . . , yt, a, b, z1, . . . , zq, y izango da.
+a
+b
+x
+P
+y
+y
+1
+y
+t
+z 1
+z q
+x p
+x
+1
+C
+Orduan,
+(P − e) ∪ (C − e) : x, y1, . . . , yt, a, xp, . . . , x1, b, z1, . . . , zq, y
+x − y bide bat da G − e grafoan.
+⇐:
+Demagun G − e grafoa konexua dela.
+G − e grafoan a − b bide bat dago, P : a, x1, . . . , xp, b. Hortaz, P ∪ e :
+ a, x1, . . . , xp, b, a
+ziklo bat da G grafoan.
+2
+
+2.2. Deﬁnizioak eta propietateak
+33
+2.5 Teorema. Izan bedi G grafo ez-zuzendu bat.
+G konexua da ⇐⇒ G grafoak zuhaitz sortzailea badu.
+Froga.
+⇐:
+Demagun G grafoak T zuhaitz sortzaile bat duela.
+G grafoaren erpinen x, y bikote bakoitzeko x − y bide bat dago T zuhaitzean. T
+zuhaitzaren ertzak G grafoaren ertzak direnez, bide hori G grafoan egongo da.
+⇒:
+Demagun G konexua dela. Eraiki dezagun zuhaitz sortzaile bat.
+G ez bada zuhaitza, begizta guztiak ezabatuko ditugu. Geratzen den G1 azpigrafoa
+konexua eta begiztarik gabea da eta G grafoaren erpin guztiak ditu. Zuhaitza balitz, G
+grafoaren zuhaitz sortzailea izango litzateke. Ez bada zuhaitza, gutxienez C1 ziklo bat
+dauka. Orduan, C1 ziklotik e1 ertz bat ezabatuko dugu; izan bedi G2 = G1 − e1 grafoa.
+2.4 Lemaren arabera, G2 grafoa konexua eta begiztarik gabea da eta G grafoaren erpin
+guztiak ditu. Zuhaitza balitz, G grafoaren zuhaitz sortzailea izango litzateke. Ez bada
+zuhaitza, gutxienez C2 ziklo bat dauka. Orduan, C2 ziklotik e2 ertz bat ezabatuko dugu;
+izan bedi G3 = G2 − e2 grafoa. Zuhaitza balitz, G grafoaren zuhaitz sortzailea izango
+litzateke. Ez bada zuhaitza, prozesu horrekin segituko genuke urrats-
+kopuru ﬁnitu aldiz,
+G grafoaren zuhaitz sortzaile bat lortu arte.
+2
+2.6 Adibidea.
+G
+G
+1
+G
+2
+G
+3
+G
+4
+G
+5
+G5 grafoa G grafoaren zuhaitz sortzaile bat da.
+2.7 Lema. Izan bedi T zuhaitz bat eta izan bedi e artza T zuhaitzaren edozein ertz.
+Orduan, T − e diskonexua da eta zuhaitzak diren bi osagai konexu ditu.
+Froga.
+Izan bedi e = {a, b}.
+Demagun T − e konexua dela. Orduan, T − e grafoan a − b bide bat dago: C.
+Hortaz, T grafoan a−b bi bide daude, C bidea eta e ertza; T zuhaitza izatearen kontra
+doana, zuhaitz batean bi erpin lotzen dituen bide bakarra baitago 
+(2.3 Teorema).
+Hortaz, T − e diskonexua da eta bi osagai konexu ditu,
+V1 = {a} ∪ {x ∈ V : a − x bide bat dago T − e grafoan}
+eta
+V2 = {b} ∪ {x ∈ V : b − x bide bat dago T − e grafoan}
+erpinen multzoek induzitutako azpigrafoak hain zuzen.
+Osagai konexu horiek zuhaitzak dira, begizta edo ziklo bat izanez gero, T grafoan ere
+egongo litzatekeelako.
+2
+
+34
+2. Zuhaitzak
+2.8 Teorema. Izan bedi T zuhaitz bat n erpinekin eta m ertzekin. Orduan,
+n = m + 1.
+Froga.
+Ertzen m kopuruaren gaineko indukzioz frogatuko dugu.
+m = 0 bada, zuhaitza erpin isolatu batek osatuko du. Kasu horretan, n = 1 = m + 1
+beteko da.
+Demagun teorema betetzen dela m ≤ k denean, eta izan bedi m = k + 1.
+T zuhaitzetik ertz bat ezabatuz gero, 2.7 Lemaren arabera, T1 eta T2 bi azpizuhaitz
+lortuko ditugu. Izan bitez n1, n2 eta m1, m2 T1 eta T2 azpizuhaitzen erpinen eta ertzen
+kopuruak, hurrenez hurren.
+Orduan, n = n1 + n2 eta m = m1 + m2 + 1 = k + 1 izango dira. 0 ≤ m1 ≤ k eta
+0 ≤ m2 ≤ k direnez, indukzio-
+hipotesiaren arabera, n1 = m1 + 1 eta n2 = m2 + 1 beteko
+dira. Hortaz,
+n = n1 + n2 = (m1 + 1) + (m2 + 1) = (m1 + m2 + 1) + 1 = m + 1.
+2
+2.9 Adibidea. 2.2 Adibideko G1 zuhaitzean, n = 6 eta m = 5 dira.
+2.10 Teorema. Izan bedi T = 
+(V, E) zuhaitz bat n erpinekin. n ≥ 2 bada, T zuhaitzak
+gutxienez bi erpin zitzilikatu izango ditu.
+Froga.
+Izan bedi m
+T zuhaitzaren artzen kopurua. 2.8 Teoremaren arabera, m = n − 1
+beteko da. Hortaz,
+x∈V
+d(x) = 2(n − 1).
+T zuhaitza konexua denez, d(x) ≥ 1 izango da x ∈ V guztietarako.
+T zuhaitzak ez balu erpin zintzilikaturik, d
+(x) ≥ 2 beteko zen x ∈ V guztietarako eta,
+beraz, 2(n − 1) =
+x∈V d(x) ≥ 2n, eta hori ezinezkoa da.
+T zuhaitzak a erpin zintzilikatu bakarra izango balu, d(a) = 1 eta d
+(x) ≥ 2 beteko zen
+x ∈ V guztietarako, x = a izanik. Kasu horretan, 2(n − 1) =
+x∈V d(x) ≥ 1 + 2(n − 1),
+eta hori ere ezinezkoa da.
+Ondorioz, T zuhaitzak gutxienez bi erpin zitzilikatu izango ditu.
+2
+2.11 Adibidea. 2.2 Adibideko G1 grafoak 4 erpin zintzilikatu ditu.
+2.6 Adibideko G5 grafoak 3 erpin zintzilikatu ditu.
+2.12 Teorema. Izan bedi G = (V, E) grafo ez-
+zuzendua, begiztarik gabea eta n erpinekin
+eta m ertzekin. Hiru baieztapen hauek baliokideak dira:
+i) G zuhaitza da.
+
+2.3. Zuhaitz errodunak. Zuhaitz bitarrak
+35
+ii) G grafoak ez du ziklorik, eta n = m + 1.
+iii) G grafoa konexua da, eta n = m + 1.
+Froga.
+i) ⇒ ii):
+Demagun i) betetzen dela.
+2.8 Teorema erabiliz, n = m + 1 izango dugu.
+G grafoak ez du ziklorik zuhaitza delako.
+ii) ⇒ iii):
+Demagun ii) betetzen dela.
+Izan bedi κ(G) = r eta izan bitez G1 = (V1, E1), . . ., Gr = 
+(Vr, Er) G grafoaren
+osagai konexuak (zuhaitzak direnak ziklorik ez dutelako).
+i = 1, . . . , r bakoitzeko, vi ∈ Vi erpin bat aukeratuko dugu eta G grafoari r − 1
+ertz hauek erantsiko dizkiogu, {v1, v2}, {v2, v3}, . . . , {vr
+−
+1
+, vr}. Horrela lortuko dugun
+G′ = (V, E′) grafoa zuhaitza da, n erpinekin eta m + r − 1 ertzekin.
+2.8 Teoremaren arabera, n = 
+(m + r − 1) + 1 = m + r eta, ii) hipotesiz n = m + 1
+denez, r = 1 lortuko dugu; hau da, G konexua da.
+iii) ⇒ i):
+Demagun iii) betetzen dela.
+2.5 Teoremaren arabera, G grafoak T = 
+(V, E′) zuhaitz sortzaile bat du. Izan bedi m′
+T zuhaitzaren ertzen kopurua. 2.8 Teoremaren arabera, m′ = n + 1 izango da; baina iii)
+hipotesiz, n + 1 = m da. Hortaz, m′ = m da, eta hortik G = T aterako dugu.
+2
+2.3
+Zuhaitz errodunak. Zuhaitz bitarrak
+2.13 Deﬁnizioa. Izan bedi G grafo zuzendua. G grafoa zuhaitz zuzendua dela esango
+dugu G grafoaren grafo ez-zuzendu elkartua zuhaitza bada.
+2.14 Adibidea.
+Zuhaitz zuzendua
+Zuhaitz ez−zuzendu elkartua
+
+36
+2. Zuhaitzak
+2.15 Deﬁnizioa. G zuhaitz zuzendua bada, G zuhaitza zuhaitz erroduna dela esango
+dugu r erpin bakarra badago (erro deituko duguna), non d−
+(r) = 0 den eta gainerako x
+erpinetarako d−(x) = 1 den.
+2.16 Adibidea.
+a
+b
+e
+c
+d
+Zuhaitz erro gabea
+d−(a) = d−(b) = d−(c) = 0; d−(e) = d−(d) = 2.
+r
+Zuhaitz erroduna
+Ezkerreko zuhaitz erroduna geziak irudikatu gabe adieraz daiteke, ertzen noranzkoa
+goitik behera doala onartzen badugu.
+2.17 Deﬁnizioa. Izan bedi T zuhaitz erroduna:
+Hosto edo bukaerako erpin deituko diogu edozein v erpineri d
++(v) = 0 bada. Gainerako
+erpinei barne-erpin edo adarkatze-adabegi deituko diegu.
+v erpin bat l mailan dagoela edo l maila-
+zenbakia duela esango dugu v erpina erroarekin
+biltzen duen bide bakarraren luzera l bada.
+v1 eta v2 erpinak emanik, v1 erpina v2 erpinaren asaba edo v2 erpina v1 erpinaren
+ondorengoa dela esango dugu v1 erpinetik v2 erpinera bide bat badago. Bidea 1 luzerakoa
+bada, v1 erpina v2 erpinaren gurasoa edo v2 erpina v1 erpinaren umea dela esango dugu.
+Bi erpinek guraso bera badute, senideak direla esango dugu.
+v erpineko azpizuhaitz deituko diogu v erpinak eta bere ondorengo guztiek 
+(baldin
+baditu) induzitutako azpigrafoari.
+2.18 Adibidea. Zuhaitz honetan, f , g, i, j eta k hostoak dira. a erpina k erpinaren
+asaba da. k erpina a erpinaren ondorengoa da. d erpina h erpinaren gurasoa da. h erpina
+d erpinaren umea da. c eta d senideak dira.
+
+2.3. Zuhaitz errodunak. Zuhaitz bitarrak
+37
+r
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+0 maila
+1 maila
+2 maila
+3 maila
+4 maila
+d
+h
+j
+k
+erpineko azpizuhaitza
+d
+2.19 Deﬁnizioa. Izan bedi T = 
+(V, E) zuhaitza erroduna. T zuhaitzaren hostoen maila-
+zenbaki handienari T zuhaitzaren altuera deituko diogu.
+2.20 Adibidea.
+zuhaitzak a = 5 altuera du.
+2.21 Deﬁnizioa. Izan bedi T = 
+(V, E) zuhaitz erroduna, eta p zenbaki oso positiboa.
+Esango dugu T zuhaitz p-tarra dela d
++(x) ≤ p bada x ∈ V guztietarako. (p = 2 bada,
+zuhaitza bitarra da).
+2.22 Adibidea.
+Zuhaitz 4−tarra
+Zuhaitz bitarra
+2.23 Deﬁnizioa. T = (V, E) zuhaitz erroduna zuhaitz p-tar osotua da d
++(x) = 0 edo
+d
++(x) = p bada x ∈ V guztietarako. (p = 2 bada, zuhaitz bitar osotua da).
+
+38
+2. Zuhaitzak
+2.24 Adibidea.
+Zuhaitz 3−tar osotua
+Zuhaitz bitar osotua
+2.25 Teorema. Izan bedi T = (V, E) zuhaitz p-tar osotua n eroinekin, i barne-
+erpin eta
+h hosto izanik. Orduan,
+(a) n = pi + 1 da.
+(b) h = (p − 1)i + 1 da.
+(c) i =
+h − 1
+p − 1
+=
+n − 1
+p
+da.
+Froga.
+(a) Izan bedi a T zuhaitzaren altuera.
+k = 0, 1, . . . , a bakoitzeko, nk eta ik
+k mailan dauden erpin guztien kopuruak eta
+barne-erpinen kopuruak izango dira, hurrenez hurren. Orduan, n0 = 1 da eta
+nk = ik
+−
+1
+p,
+k = 1, . . . , a.
+Hortaz,
+n =
+a
+k=0
+nk = 1 +
+a
+k=1
+ik
+−
+1
+p = 1 + p
+a
+k=1
+ik
+−
+1
+= 1 + pi.
+(b) pi + 1 = n = i + h da. Beraz, h = pi − i + 1 = (p − 1)i + 1 izango da.
+(c) (a) eta (b) ataletatik ondorioztatuko dugu.
+2
+2.26 Adibidea. 2.24 Adibideko zuhaitz 3-
+tar osotuan, p = 3, h = 7, i = 3 eta n = 10
+dira. Eta, beraz, 10 = 3 · 3 + 1, 7 = 2 · 3 + 1 eta 3 =
+6
+2 =
+9
+3 betetzen dira.
+2.27 Adibidea. Bost bikotek hartzen dute parte mus txapelketa batean, non bikote bat
+kanporatzen den partida bat galtzen duenean. Txapelketa 5 hosto dituen zuhaitz bitar
+osotu baten bidez adieraz daiteke:
+
+2.3. Zuhaitz errodunak. Zuhaitz bitarrak
+39
+Txapeldunak izendatzeko jokatu behar diren partida-kopurua barne-
+erpinen kopurua da.
+2.25 Teoremaren arabera, i =
+h−1
+p−1 =
+5−1
+2−1 = 4.
+Oro har, bikoteen kopurua h bada, partiden kopurua i =
+h−1
+p−1 = h − 1 izango da.
+2.28 Adibidea. Laborategi bateko ordenadoreak 4 irteera dituen hormako entxufe batean
+konektatu behar ditugu. Konexioak 4 irteerako luzapen-
+kableen bidez egingo ditugu. 7
+luzapen-kable baditugu, zenbat ordenadore konekta ditzakegu?
+Hormako entxufea zuhaitz 4-
+tar osotu baten erroa bezala har dezakegu. Kable bakoitza
+barne-erpina izango da, eta ordenadore bakoitza hosto bat. Barne-
+erpinen kopurua i =
+7 + 1 da (luzapen-kableak eta hormako entxufea).
+2.25 Teoremaren arabera, ordenadoreen kopurua h = (p − 1)i + 1 = 
+(4 − 1)8 + 1 = 25
+da.
+2.29 Deﬁnizioa. Izan bedi T a altuerako zuhaitz bat. T zuhaitza orekatua dela esango
+dugu hosto bakoitzaren maila-zenbakia a edo a − 1 denean.
+2.30 Adibidea. 2.20 Adibideko zuhaitza ez da orekatua, hosto bat 2 mailan dauka eta.
+Zuhaitz hau a = 3 altuerako zuhaitz orekatua da:
+2.31 Adibidea. 2.27 Adibideko zuhaitzak orekatua izan behar du, txapelketa ahalik eta
+zuzenena izan dadin. Ez bada orekatua, bikoteren batek aukera bat baino gehiago izango
+du hurrengo fasera pasatzeko partida gutxiago jokatuz.
+Zuhaitza hau bada
+a = 3 altuerako zuhaitz orekatua da. Bikote batek, txapeldun izateko, bi edo hiru partida
+jokatu beharko ditu.
+Zuhaitza hau bada
+b
+c
+d
+e
+a
+
+40
+2. Zuhaitzak
+ez da orekatua. Irabazteko, b eta c bikoteek 4 partida jokatu beharko dituzte, d bikoteak
+3 partida, a bikoteak 2 partida eta e bikoteak partida 1 bakarrik.
+Idazkera. x ∈ R emanik, ⌈x⌉ (x-
+ren sabaia) x baino handiagoa edo berdina den zenbaki
+oso txikiena da.
+2.32 Adibidea. ⌈3.2⌉ = 4, ⌈−5.7⌉ = −5, ⌈8⌉ = 8.
+2.33 Teorema. Izan bedi T = (V, E) a altuerako eta h hostoko zuhaitz p-
+tar osotua
+(p > 1). Orduan, h ≤ pa eta a ≥ ⌈log
+p h⌉ beteko dira.
+Froga.
+h ≤ pa a-ren gaineko indukzioaz frogatuko dugu.
+a = 0 bada, n = h = 1 eta pa = p
+0 = 1 izango dira; orduan, h = pa.
+Demagun emaitza zuzena dela a ≤ k denean, eta izan bedi a = k + 1.
+T zuhaitzaren h hostoen maila-
+zenbaki posibleak 1, . . . , a dira, eta, gutxienez, p hosto
+daude a mailan.
+Har ditzagun erroaren p umeak, eta izan bitez T1, . . . , Tp erroak erpin horietan dituzten
+azpizuhaitzak (zuhaitz p-tar osotuak dira). Ti zuhaitzaren hosto-
+kopurua hi eta altuera
+ai badira, i = 1, . . . , p izanik, ai ≤ a − 1, i = 1, . . . , p, eta h = h1 + . . . + hp.
+ai ≤ a − 1 = k denez, i = 1, . . . , p izanik, indukzio-
+hipotesiaren arabera, hi ≤ pai ≤
+pa−
+1 izango dugu, i = 1, . . . , p. Hortaz, h = h1 + . . . + hp ≤ p(pa−1) = pa.
+h ≤ pa denez, log
+p h ≤ logp(p
+a) = a izango dugu, eta a ∈ Z denez, a ≥ ⌈log
+p h⌉ aterako
+dugu.
+2
+2.34 Adibidea. Zuhaitz honetan
+p = 3, a = 3, h = 9 dira; eta 9 ≤ 3
+3 eta 3 ≥ ⌈log
+3 9⌉ = ⌈2⌉ = 2 betetzen dira.
+2.35 Korolarioa. Izan bedi T = (V, E) a altuerako eta h hostoko zuhaitz p-
+tar osotu
+orekatua (p > 1). Orduan, a = ⌈log
+p h⌉ beteko da.
+Froga.
+a = 0 bada, h = 1 eta ⌈log
+p h⌉ = ⌈logp 1⌉ = ⌈0⌉ = 0 = a izango dira.
+a > 0 bada, a − 1 mailan, gutxienez, barn-erpin bat dago (ia
+−
+1
+> 0). k = 0, 1, . . . , a
+balioetarako nk, ik eta hk k mailan dauden erpin guztien kopurua, barne-
+erpinen kopurua
+eta hostoen kopuruak dira, hurrenez hurren. Orduan, n0 = 1 eta
+nk = ik
+−
+1
+p,
+k = 1, . . . , a.
+Horrez gain, orekatua izateagatik, hk = 0 eta nk = ik, k = 0, . . . , a − 2 dira. Hortaz,
+na
+−
+1
+= na
+−
+2
+p = na
+−
+3
+p
+2 = . . . = n0pa−1 = pa−1 eta h = ha
+−
+1
++ ha = ha
+−
+1
++ ia
+−
+1
+p =
+ha
+−
+1
++ ia
+−
+1
++ ia
+−
+1
+(p − 1) > ha
+−
+1
++ ia
+−
+1
+= na
+−
+1
+= pa−
+1.
+
+2.3. Zuhaitz errodunak. Zuhaitz bitarrak
+41
+Hau da, h > pa−
+1 betetzen da. Hortik, log
+p h > logp(p
+a−1) = a − 1 izango dugu.
+Gainera, 2.33 Teoremaren arabera, log
+p h ≤ a betetzen da.
+Hortaz, ⌈log
+p h⌉ = a.
+2
+2.36 Adibidea.
+p = 2, a = 3, h = 7 dira. Eta 3 = ⌈log
+2 7⌉ = ⌈2
+′
+. . .⌉ = 3 betetzen da.
+
+42
+2. Zuhaitzak
+2.4
+Ariketak
+1. Aurkitu K2,3 grafoaren zuhaitz sortzaile bat.
+2. Zuhaitz baten erpinak koloreztatu nahi dira, beti ere ertz guztiek kolore desberdine-
+tako bi erpin elkartuko dituztelarik. Froga ezazu bi kolore erabiltzea beharrezkoa
+eta nahikoa dela.
+3. Frogatu edozein zuhaitz emanik hau grafo zatibikoa dela. Nolako zuhaitzak dira
+zatibiko osatuak?
+4. Baldin G grafo ez zuzendua konektatua bada eta 30 ertz baditu, zenbat erpin ditu
+gehienez?
+5. Zuhaitz batek 2k erpin ditu gradu batekoak, 3k erpin bi gradukoak eta k erpin
+hiru gradukoak. Kalkulatu k, erpin kopurua eta ertz kopurua. Marraztu honelako
+zuhaitz bat.
+6. Nolako zuhaitzek dituzte zehazki bi erpin zintzilikatu?
+7. 
+(a) Zuhaitz batean v1 erpin zintzilikatu baditugu, lau erpin 2 gradukoak, erpin bat
+3 gradukoa, bi 4 gradukoak, eta bat 5 gradukoa, kalkulatu v1.
+(b) Zuhaitz batean v1 erpin zintzilikatu baditugu, v2 erpin 2 gradukoak, . . . , eta
+vm erpin m gradukoak, v1 ezezaguna izanik, kalkulatu |V | eta |E|.
+8. G grafo ez zuzenduak v erpin, e ertz eta k osagai baditu, frogatu e ≥ v − k betetzen
+dela.
+9. (2004.eko otsaila) Izan bedi T = 
+(V, E) zuhaitza, |V | = n erpin dituena. Zuhaitz
+honetako erpin guztiak 1 edo 3 gradukoak dira. Froga ezazu 3 graduko
+n−2
+2
+erpin
+dagoela.
+10. 
+(2004.eko ekaina) Izan bedi T , n = 21 erpindun zuhaitza, erpinen graduak 1, 3, 5
+edo 6 izanik. Demagun T zuhaitzak 15 hosto eta 6 graduko erpin bakarra dituela.
+5 graduko zenbat erpin ditu?
+11. (2005.eko otsaila) Izan bedi T = 
+(V, E) zuhaitza. Froga ezazu T zuhaitzean k > 2
+graduko erpin bat baldin badago, orduan badagoela gutxienez k erpin zintzilikatu.

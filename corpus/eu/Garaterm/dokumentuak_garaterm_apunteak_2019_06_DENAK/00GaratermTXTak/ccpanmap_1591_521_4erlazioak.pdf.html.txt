@@ -1,0 +1,1465 @@
+
+
+
+Gaien Aurkibidea
+1 Erlazioak. Funtzioak
+1
+1.1
+Erlazio bitarrak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1
+1.1.1
+Deﬁnizioak
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1
+1.1.2
+Ordena-erlazioak . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+1.1.3
+Baliokidetasun-erlazioak . . . . . . . . . . . . . . . . . . . . . . . .
+4
+1.1.4
+Kongruentzia modulu n . . . . . . . . . . . . . . . . . . . . . . . .
+7
+1.2
+Funtzioak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9
+1.2.1
+Deﬁnizioak
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9
+1.2.2
+Funtzio-motak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+1.2.3
+Alderantzizko funtzioa . . . . . . . . . . . . . . . . . . . . . . . . . 13
+1.2.4
+Funtzioen konposizioa . . . . . . . . . . . . . . . . . . . . . . . . . 14
+1.3
+Ariketak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+i
+
+1. Gaia
+Erlazioak. Funtzioak
+1.1
+Erlazio bitarrak
+1.1.1
+Deﬁnizioak
+1.1 Deﬁnizioa. A, B multzoak emanik, A multzoaren eta B multzoaren arteko biderkadu-
+ra kartesiarra multzo hau da:
+A
+× B = {(a, b)/a ∈ A eta b ∈ B}.
+(a, b) bikoteari bikote ordenatu deituko diogu; a lehenengo osagaia izango da, eta b
+bigarren osagaia.
+(a, b) eta (c, d) bikoteak berdinak dira a = c eta b = d badira.
+1.2 Deﬁnizioa. A multzoa emanik, A multzoaren gaineko erlazio bitar bat A
+×A biderkadu-
+ra kartesiarraren
+R azpimultzo bat da:
+R ⊆ A × A.
+(a, b)
+∈ R bada, a b-rekin (R erlazioaren bidez) erlazionaturik dagoela esango dugu,
+eta a
+Rb idatziko dugu.
+(a, b)
+∈ R bada, a ez dagoela b-rekin 
+(R erlazioaren bidez) erlazionaturik esango dugu,
+eta a
+Rb idatziko dugu.
+1.3 Adibideak.
+1. A =
+{1, 2, 3, 4}.
+R1 = {(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3), 
+(4, 4)}.
+2. A = Z.
+R2 = {(x, y) : x, y ∈ Z eta x ≤ y}.
+Edo, x, y
+∈ Z emanik, xR2y ⇔ x ≤ y.
+3. A = N∗.
+R3 = {(x, y) : x, y ∈ N
+∗ y x | y}.
+Edo, x, y
+∈ Z emanik, xR3y ⇔ x | y.
+1
+
+2
+1.
+Erlazioak. Funtzioak
+4. A = N∗.
+R4 = {(1, 1), (2, 2)}.
+5. A = Z. x, y
+∈ Z emanik,
+x
+R5y ⇔| x |=| y | .
+Edo, baliokidea dena,
+R5 = {(x, y) : x, y ∈ Z eta | x |=| y |}.
+(x
+∈ Z emanik, | x | x-ren balio absolutua da).
+1.4 Deﬁnizioa.
+R bada A multzoaren gaineko erlazio bitarra:
+• R bihurkorra dela edo bihurtze-propietatea betetzen duela esango dugu
+(
+∀x ∈ A) (x, x) ∈ R bada,
+edo, baliokidea dena,
+(
+∀x ∈ A) xRx bada.
+• R simetrikoa dela edo simetri propietatea betetzen duela esango dugu
+(
+∀x, y ∈ A) (x, y) ∈ R ⇒ (y, x) ∈ R bada,
+edo, baliokidea dena,
+(
+∀x, y ∈ A) xRy ⇒ yRx bada.
+• R antisimetrikoa dela edo antisimetri propietatea betetzen duela esango dugu
+(
+∀x, y ∈ A) (x, y) ∈ R e (y, x) ∈ R ⇒ x = y bada,
+edo, baliokidea dena,
+(
+∀x, y ∈ A) xRy e yRx ⇒ x = y bada.
+• R iragankorra dela edo iragate-propietatea betetzen duela esango dugu
+(
+∀x, y, z ∈ A) (x, y) ∈ R e (y, z) ∈ R ⇒ (x, z) ∈ R bada,
+edo, baliokidea dena,
+(
+∀x, y, z ∈ A) xRy e yRz ⇒ xRz bada.
+
+1.1.
+Erlazio bitarrak
+3
+1.5 Adibideak.
+1. A =
+{1, 2, 3, 4} multzoan,
+R1 = {(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3), 
+(4, 4)}
+erlazioa bihurkorra, simetrikoa eta iragankorra da. Ez da antisimetrikoa.
+2.
+R2 = {(x, y) : x, y ∈ Z eta x ≤ y}.
+• Bihurkorra da: x ∈ Z bakoitzeko, x ≤ x. Beraz, x ∈ Z bakoitzeko, xR2x.
+• Ez da simetrikoa: 0R27, baina 7 R20.
+• Antisimetrikoa da: x, y ∈ Z guztietarako,
+x
+R2y eta yR2x ⇒ x ≤ y eta y ≤ x ⇒ x = y.
+• Iragankorra da: x, y, z ∈ Z guztietarako,
+x
+R2y eta yR2z ⇒ x ≤ y eta y ≤ z ⇒ x ≤ z ⇒ xR2z.
+3.
+R3 = {(x, y) : x, y ∈ N
+∗ eta x | y}.
+• Bihurkorra da: x ∈ N
+∗ guztietarako, xR3x, x = 1 · x, 1 ∈ Z, delako.
+• Ez da simetrikoa: 2R38, baina 8 R32 (2-k zatitzen du 8, baina 8-k ez du
+zatitzen 2).
+• Antisimetrikoa da: x, y ∈ N
+∗ emanik, demagun xR3y eta yR3x betetzen direla;
+frogatu behar dugu x = y dela.
+x
+R3y
+y
+R3x
+⇒
+x
+| y
+y
+| x
+⇒ x = y edo x = −y ⇒ x = y, x, y > 0 direlako.
+• Iragankorra da: x, y, z ∈ N
+∗ guztietarako,
+x
+R3y
+y
+R3z
+⇒
+x
+| y
+y
+| z
+⇒
+y = kx, k
+∈ Z
+z = ly, l
+∈ Z
+⇒ z = lkx, lk ∈ Z ⇒ xR3z.
+4. A = N∗ multzoan,
+R4 = {(1, 1), (2, 2)} erlazioa simetrikoa, antisimetrikoa eta ira-
+gankorra da; eta ez da bihurkorra.
+5. A = Z multzoan, x
+R5y ⇔| x |=| y | erlazioa bihurkorra, simetrikoa eta iragankorra
+da. Ez da antisimetrikoa.
+
+4
+1.
+Erlazioak. Funtzioak
+1.1.2
+Ordena-erlazioak
+1.6 Deﬁnizioa. A multzoaren gaineko
+R erlazio bitar bat ordena-erlazioa da bihurkorra,
+antisimetrikoa eta iragankorra bada.
+A multzo batek
+R ordena-erlazio bat badu deﬁniturik, R erlazioak A multzoa orde-
+natzen duela edo A multzoa ordenaturik dagoela esango dugu.
+1.7 Deﬁnizioa. A multzoaren gaineko
+R ordena-erlazio bat ordena osoko erlazioa dela
+esango dugu
+(
+∀x, y ∈ A) (x, y) ∈ R edo (y, x) ∈ R bada,
+edo, baliokidea dena,
+(
+∀x, y ∈ A) xRy edo yRx bada.
+Kasu horretan,
+R erlazioak A multzoa osoki ordenatzen duela edo A multzoa osorik
+ordenaturik dagoela edo katea dela esango dugu.
+Bestela,
+R erlazioa ordena partzialeko erlazioa izango da, eta R erlazioak A multzoa
+partzialki ordenatzen duela edo A multzoa partzialki ordenaturik dagoela esango dugu.
+1.8 Adibideak.
+1.
+R2 = {(x, y) : x, y ∈ Z eta x ≤ y} ordena-erlazioa da Z multzoan; hau da, R2
+erlazioak Z multzoa ordenatzen du.
+R2 = {(x, y) : x, y ∈ Z eta x ≤ y} ordena osoko erlazioa da:
+ x, y ∈ Z guztietarako,
+x
+≤ y edo y ≤ x delako.
+2.
+R3 = {(x, y) : x, y ∈ N
+∗ eta x | y} ordena-erlazioa da N∗ multzoan. R3 erlazioak
+N∗
+multzoa ordenatzen du.
+R3 = {(x, y) : x, y ∈ N
+∗ eta x | y} ordena partzialeko erlazioa da: 3 R37 eta
+7
+R33, hots, 3 eta 7 ez daude elkarrekin erlazionaturik.
+1.1.3
+Baliokidetasun-erlazioak
+1.9 Deﬁnizioa. A multzoaren gaineko
+R erlazio bitar bat baliokidetasun-erlazioa da
+bihurkorra, simetrikoa eta iragankorra bada.
+1.10 Adibideak.
+1.
+R1 = {(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3), 
+(4, 4)}
+baliokidetasun-erlazioa da A =
+{1, 2, 3, 4} multzoaren gainean.
+Hona hemen bere adierazpen bat:
+1
+2
+4
+3
+
+1.1.
+Erlazio bitarrak
+5
+2.
+x
+R5y ⇔| x |=| y |
+baliokidetasun-erlazioa da Z multzoan.
+1.11 Deﬁnizioa. Izan bedi
+R baliokidetasun-erlazio bat A multzoaren gainean, eta a ∈
+A elementu bat; a-
+rekin erlazionaturik dauden A multzoaren elementu guztien multzoari
+a-ren baliokidetasun-klase deituko diogu, eta [a]R idatziko dugu:
+[a]R :=
+{x ∈ A : (x, a) ∈ R}
+=
+{x ∈ A : xRa}.
+Ez badu nahasmenik sortzen, [a] idatziko dugu [a]R idatzi beharrean.
+1.12 Adibideak.
+1. A =
+{1, 2, 3, 4} multzoaren gaineko
+R1 = {(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3), 
+(4, 4)}
+erlaziorako bi baliokidetasun-klase desberdin dauzkagu:
+[1] = [2] = [3] =
+{1, 2, 3} eta [4] = {4}.
+2.
+R5 erlazioa emanik Z multzoan,
+x
+R5y ⇔| x |=| y |,
+x
+∈ Z guztietarako,
+[x] =
+{−x, x} dugu.
+1.13 Teorema. A multzoaren gaineko
+R baliokidetasun-erlazioa emanik,
+1. (
+∀x ∈ A) x ∈ [x].
+2. (
+∀x, y ∈ A) xRy ⇔ [x] = [y].
+3. (
+∀x, y ∈ A) [x] = [y] ⇒ [x] ∩ [y] = ∅.
+4.
+x
+∈A[x] = A.
+Froga.
+1.
+R bihurkorra denez, x ∈ A guztietarako xRx da, eta, beraz, 
+[x] klasearen deﬁnizioaren
+arabera, x
+∈ [x] betetzen da.
+2. x, y
+∈ A guztietarako, xRy ⇔ [x] = [y] dela frogatu behar dugu:
+⇒) Demagun xRy dela. [x] = [y] dela frogatu behar dugu.
+
+6
+1.
+Erlazioak. Funtzioak
+⊆)
+z
+∈ [x] ⇒ zRx ([x]-aren deﬁnizioz) ⇒
+z
+Rx
+x
+Ry (hipotesiz)
+⇒
+⇒ zRy (R iragankorra delako) ⇒ z ∈ [y] ([y]-aren deﬁnizioz).
+⊇ )
+z
+∈ [y] ⇒ zRy ([y]-aren deﬁnizioz) ⇒
+z
+Ry
+x
+Ry (hipotesiz)
+⇒
+⇒
+z
+Ry
+y
+Rx (R simetrikoa delako)
+⇒ zRx (R iragankorra delako) ⇒
+⇒ z ∈ [x] ([x]-aren deﬁnizioz).
+⇐) Demagun [x] = [y] dela. xRy dela frogatu behar dugu.
+1.aren arabera x
+∈ [x] denez eta hipotesiz [x] = [y] denez, x ∈ [y] betetzen da.
+[y]-aren deﬁniziotik x
+Ry lortuko dugu.
+3. Edozein x, y
+∈ A emanik, demagun [x] = [y]. [x] ∩ [y] = ∅ dela frogatu behar dugu.
+Absurdora eramanez egingo dugu, [x]
+∩[y] = ∅ dela suposatuz eta kontraesan batera
+helduz.
+[x]
+∩ [y] = ∅ ⇒ ∃z ∈ [x] ∩ [y].
+z
+∈ [x] ∩ [y] ⇒
+z
+∈ [x] ⇒ zRx ⇒ xRz
+z
+∈ [y] ⇒ zRy
+⇒ xRy ⇒ [x] = [y] (2.aren arabera).
+Kontraesan batera heldu gara, hipotesiz [x] = [y] delako. Beraz, [x]
+∩ [y] = ∅ ezin
+da izan; hortaz, [x]
+∩ [y] = ∅ beteko da.
+4.
+⊆ ) Edozein x ∈ A emanik, [x] ⊆ A; hortaz,
+x
+∈A[x] ⊆ A.
+⊇ ) z ∈ A ⇒ z ∈ [z] (1.aren arabera) ⇒ z ∈
+x
+∈A[x] (∪-ren deﬁnizioz).
+2
+1.14 Korolarioa. Izan bedi
+R baliokidetasun-erlazioa A multzoaren gainean. Erlazio
+horren baliokidetasun-klase guztien familia,
+P = {[x] : x ∈ A},
+A-ren partiketa bat da.
+Froga.
+1, 3 eta 4 propietateak
+P partiketa izateko bete behar duen deﬁnizioaren baldintzak
+dira.
+2
+Partiketaren deﬁnizioaren ondorioz, A-
+ren elementu bakoitza klase bakar baten ele-
+mentua da:
+∀x ∈ A ∃ | [a] ∈ P / x ∈ [a],
+eta [a] klasearen edozein elementuri klasearen ordezkari deituko diogu.
+
+1.1.
+Erlazio bitarrak
+7
+1.15 Deﬁnizioa. Izan bedi
+R baliokidetasun-erlazioa A multzoaren gainean. Erlazio
+horren baliokidetasun-klase guztien multzoari A gain
+R zatidura multzo deituko diogu,
+eta A/
+R adieraziko dugu:
+A/
+R := {[x] : x ∈ A}.
+1.16 Adibideak.
+1.
+R1 erlazioa emanik A = {1, 2, 3, 4} multzoan,
+R1 = {(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3), 
+(4, 4)},
+[1] klaseak hiru ordezkari ditu: 1, 2 eta 3. 
+[4] klaseak, ordea, ordezkari bakarra du:
+4. Beraz,
+A/
+R1 = {[1], [4]} = {[2], [4]} = {[3], [4]}.
+2.
+R5 erlazioa emanik Z multzoan,
+x
+R5y ⇔| x |=| y |,
+x
+∈ Z
+∗ guztietarako, [x] klaseak bi ordezkari ditu: x eta −x. [0] klaseak, ordea,
+ordezkari bakarra du: 0. Beraz,
+Z
+/
+R5 = {[x] : x ∈ Z} = {[0]} ∪ {[x] : x ∈ Z
++} = {[0]} ∪ {[x] : x ∈ Z
+−}.
+1.1.4
+Kongruentzia modulu n
+1.17 Deﬁnizioa. Izan bedi n
+∈ Z, n > 1. a, b ∈ Z emanik, a b-rekin kongruentea da
+modulu n, eta a
+≡ b (mod n) idatziko dugu, n | a−b bada, hau da, ∃k ∈ Z, non a = b+kn
+den.
+1.18 Adibideak.
+1. 17
+≡ 2 (mod 5) da, 5 | 15 betetzen delako.
+2.
+−23 ≡ −5 (mod 6) da, 6 | −18 betetzen delako.
+3.
+−7 ≡ 2 (mod 3) da, 3 | −9 betetzen delako.
+4.
+−7 ≡ 2 (mod 4) da, 4 | −9 betetzen delako.
+1.19 Teorema. Izan bedi n
+∈ Z, n > 1. Kongruentzia modulu n baliokidetasun-erlazioa
+da Z multzoan.
+Froga.
+Kongruentzia modulu n Z multzoan bihurkorra, simetrikoa eta iragankorra dela fro-
+gatu behar dugu.
+
+8
+1.
+Erlazioak. Funtzioak
+1. Bihurkorra. Hau frogatu behar da:
+(
+∀x ∈ Z) x ≡ x (mod n).
+Izan bedi x
+∈ Z. x − x = 0 = 0 · n betetzen da; hortaz, n | x − x betetzen da; eta
+hortik x
+≡ x (mod n).
+2. Simetrikoa. Hau frogatu behar da:
+(
+∀x, y ∈ Z) x ≡ y (mod n) ⇒ y ≡ x (mod n).
+Izan bitez x, y
+∈ Z.
+x
+≡ y (mod n) ⇒ n | x − y ⇒ n | (−1)(x − y) = y − x ⇒ y ≡ x (mod n).
+3. Iragankorra. Hau frogatu behar da:
+(
+∀x, y, z ∈ Z) x ≡ y (mod n) eta y ≡ z (mod n) ⇒ x ≡ z (mod n).
+Izan bitez x, y, z
+∈ Z.
+x
+≡ y (mod n)
+y
+≡ z (mod n)
+⇒
+n
+| x − y
+n
+| y − z
+⇒ n | (x − y) + (y − z) = x − z ⇒
+⇒ x ≡ z (mod n).
+2
+Baliokidetasun-erlazio honetarako zatidura-
+multzoa bi eratan adierazi ohi da, Z/Zn
+edo Zn:
+Z
+/Zn = Zn =
+{[x] : x ∈ Z}.
+Kongruentzia modulu n erlazioaren baliokidetasun-klaseak lortzeko bidea:
+Lehendabizi, [x], x
+∈ Z izanik, klasearen ordezkari bat aukeratuko dugu.
+Horretarako x zati n egingo dugu. Izan bedi r zatidura euklidestarraren hondarra; hau
+da, x = qn + r da, q, r
+∈ Z eta 0 ≤ r < n izanik. Orduan, x − r = qn dugu, eta, beraz,
+n
+| x − r betetzen da, edo baliokidea dena, x ≡ r (mod n). Hortaz, 1.13-
+2 teoremaren
+arabera, [x] = [r]. Beraz, r hartuko dugu [x] klasearen ordezkaritzat.
+Bigarrenez, [r] klasean dauden elementuak kalkulatuko ditugu.
+[r] =
+{y ∈ Z : n | y − r} = {r + kn : k ∈ Z} =
+=
+{· · · , r − 2n, r − n, r, r + n, r + 2n, · · · } =
+=
+{y ∈ Z : r da y zati n zatidura euklidestarraren hondarra}.
+n klase lortuko ditugu 
+(hondar posible adina klase), eta klaseen multzoa honela adier-
+aziko dugu:
+Z
+/Zn = Zn =
+{[0], [1], · · · , [n − 1]}.
+1.20 Adibidea.
+Z
+/Z5 = Z5 =
+{[0], [1], [2], [3], [4]}.
+22
+∈ [2] da, 22 = 4 · 5 + 2 delako.
+−22 ∈ [3] da, −22 = (−5) · 5 + 3 delako.
+−800 ∈ [0] da, −800 = (−160) · 5 + 0 delako.
+
+1.2.
+Funtzioak
+9
+1.2
+Funtzioak
+1.2.1
+Deﬁnizioak
+1.21 Deﬁnizioa. A eta B multzoak emanik, A multzotik B multzora doan funtzio bat
+A multzoaren elementu bakoitzari B multzoaren elementu bakar bat esleitzen dion f lege
+bat da.
+f A multzotik B multzora doan funtzio bat dela adierazteko honela idatziko dugu:
+f : A
+−→ B
+edo
+A
+f
+−→ B.
+A f funtzioaren abiaburu multzoa da eta B f funtzioaren helburuko multzoa da.
+f funtzioak a
+∈ A elementuari b ∈ B elementua esleitzen badio, esango dugu b dela
+a-ren (f -ren bidezko) irudia, eta a dela b-ren (f -
+ren bidezko) aurreirudi bat. Eta honela
+adierazko dugu:
+f (a) = b
+edo
+a
+−→ b.
+1.22 Adibideak.
+1.
+h : N
+−→
+N
+x
+→ x + 1
+.
+7
+∈ N elementuaren irudia 8 da. 1 ∈ N elementuak aurreirudi bat du: 0. 0 ∈ N
+elementuak ez du aurreirudirik.
+2.
+l : Z
+−→
+Z
+x
+→
+0 x bikoitia bada
+1 x bakoitia bada
+.
+3.
+p :
+R2
+−→ R
+(x1, x2)
+→ x1
+.
+4. Ondokoak ez dira funtzioak:
+f :
+{1, 2, 3} −→ {a, b, c, d}
+1
+→
+a
+1
+→
+b
+2
+→
+c
+3
+→
+d
+.
+Ez da funtzioa abiaburu multzoaren 1 elementuari bi elementu esleitzen baitizkio
+helburuko multzoan (1-ek bi irudi ditu).
+g :
+{1, 2, 3} −→ {a, b}
+1
+→
+a
+2
+→
+b
+.
+
+10
+1.
+Erlazioak. Funtzioak
+Ez da funtzioa abiaburu multzoaren 3 elementuari ez diolako elementurik esleitzen
+helburuko multzoan (3-ek du irudirik).
+h : N
+−→
+N
+x
+→ x − 1
+.
+0-ek du irudirik.
+j : N
+−→ R
+x
+→
+√
+x
+.
+4-k bi irudi ditu:
+−2 eta 2. (Erro karratua funtziotzat hartzeko + eta − ikurrak
+erabiliko ditugu; hau da, f (x) = +
+√
+x eta f (x) =
+−
+√
+x bi funtzio dira; beste
+kasuetan bezala, + ikurra ez da ohi jartzen erroaren aurrean).
+1.23 Deﬁnizioa. f : A
+−→ B funtzioa emanik, f funtzioaren grafo deituko diogu multzo
+honi:
+Gf :=
+{(x, f(x)) : x ∈ A}.
+Ohar gaitezen Gf
+⊆ A × B dela, eta A-ren elementu bakoitza behin bakarrik agertzen
+dela Gf multzoaren elementuen lehenengo osagai gisa.
+1.24 Adibideak.
+1.
+h : N
+−→
+N
+x
+→ x + 1
+;
+Gh =
+{(x, x + 1) : x ∈ N}.
+2.
+l : Z
+−→
+Z
+x
+→
+0 x bikoitia bada
+1 x bakoitia bada
+;
+Gl =
+{(x, 0) : x ∈ N eta x bikoitia da} ∪ {(x, 1) : x ∈ N eta x bakoitia da}.
+Beraz, funtzio bat emanik, grafo bat deﬁnitzen dugu. Alderantziz ere beteko da. Hau
+da, G
+⊆ A × B multzo bat emanik, A-ren elementu bakoitza behin bakarrik agertzen
+delarik G-ren elementuen lehenengo osagai gisa, f : A
+−→ B funtzio bat dago, zeinaren
+grafoa G den.
+1.25 Deﬁnizioa. f eta g funtzioak berdinak direla esango dugu, eta f = g idatziko dugu,
+hau betetzen badute:
+1. A abiaburu multzo bera badute;
+2. B helburuko multzo bera badute;
+3. (
+∀x ∈ A) f(x) = g(x) bada.
+
+1.2.
+Funtzioak
+11
+1.26 Adibidea. Funtzio hauek emanik:
+f : Z
+−→ Z
+x
+→ x
+2 ,
+g :
+{−3, 3} −→ Z
+x
+→ x
+2 ,
+h :
+{−3, 3} −→ N
+x
+→ x
+2 ,
+k :
+{−3, 3} −→ Z
+x
+→
+9
+,
+f = g da, f eta g funtzioek ez baitute abiaburu multzo bera; g = h da, g eta h funtzioek
+ez baitute helburuko multzo bera; g = k da:
+1. g eta k abiaburu multzo bera dute:
+{−3, 3};
+2. g eta k helburuko multzo bera dute: Z; eta
+3. (
+∀x ∈ {−3, 3}) g(x) = 9 = k(x) betetzen dutelako.
+1.27 Deﬁnizioa. f : A
+−→ B funtzioa bat eta abiaburu multzoaren A1 ⊆ A azpimultzo
+bat emanik, ondoko funtzioari f funtzioaren A1 multzorako murrizketa deituko diogu, eta
+f
+|A
+1 adieraziko dugu:
+f
+|A
+1 :
+A1
+−→
+B
+x
+→ f(x)
+.
+1.28 Adibidea.
+f : Z
+−→ Z
+x
+→ x
+2 ;
+f
+|{−3,3}: {−3, 3} −→ Z
+x
+→ x
+2 .
+1.29 Deﬁnizioa. A multzoa emanik, A multzoaren gaineko identitate funtzioa idA edo
+1A adieraziko dugu eta honela deﬁnituko dugu:
+idA : A
+−→ A
+x
+→
+x
+.
+1.30 Deﬁnizioa. A multzoa emanik, funtzio karakteristiko deituko diogu eta fA adier-
+aziko dugu ondoko funtzio honi:
+fA : U
+−→
+{0, 1}
+x
+→
+1 x
+∈ A bada
+0 x
+∈ A bada
+,
+non U multzo unibertsala baita.
+1.31 Adibidea. Demagun multzo unibertsala Z dela.
+fN : Z
+−→
+{0, 1}
+x
+→
+1 x
+≥ 0 bada
+0 x < 0 bada
+.
+1.32 Deﬁnizioa. f : A
+−→ B funtzioa eta A1 ⊆ A azpimultzoa emanik, A1-en elementu
+guztien irudien multzoari A1 azpimultzoaren (f -
+ren bidezko) irudi deituko diogu eta f (A1)
+adieraziko dugu; hau da,
+f (A1) :=
+{f(x) : x ∈ A1}.
+
+12
+1.
+Erlazioak. Funtzioak
+Ohar dezagun f (A1)
+⊆ B dela.
+Hitzarmena. f (
+∅) := ∅.
+1.33 Deﬁnizioa. f : A
+−→ B funtzioa emanik, f(A) multzoari f funtzioaren irudi
+multzo deitzen zaio eta
+ℑf adierazten da; hau da,
+ℑf := {f(x) : x ∈ A}.
+1.2.2
+Funtzio-motak
+1.34 Deﬁnizioa. f : A
+−→ B funtzioa injektiboa dela esango dugu A-ren elementu
+desberdinek irudi desberdinak badituzte B multzoan. Hau da,
+(
+∀x1, x2 ∈ A) x1 = x2
+=
+⇒ f(x1) = f(x2) betetzen bada,
+edo, baliokidea dena,
+(
+∀x1, x2 ∈ A) f(x1) = f(x2)
+=
+⇒ x1 = x2 betetzen bada.
+1.35 Deﬁnizioa. f : A
+−→ B funtzioa suprajektiboa dela esango dugu B-ren elementu
+guztiek gutxienez aurreirudi bat badute A multzoan. Hau da,
+ℑf = B bada, edo, gauza
+bera dena:
+∀y ∈ B ∃x ∈ A, non f(x) = y den.
+1.36 Deﬁnizioa. f : A
+−→ B funtzioa bijektiboa dela esango dugu injektiboa eta supra-
+jektiboa bada.
+1.37 Adibideak.
+1. f : R
+−→ R, f(x) = 3x + 1.
+• f(x) funtzioa injektiboa da:
+x1 = x2
+⇒ 3x1 = 3x2 ⇒ 3x1 + 1 = 3x2 + 1 ⇒ f(x1) = f(x2).
+• f(x) funtzioa suprajektiboa da: y ∈ R emanik, ∃x ∈ R /f(x) = y?
+y = f (x)
+⇒ y = 3x + 1 ⇒ x =
+y
+−1
+3
+∈ R; beraz, bai.
+• Ondorioz, f(x) funtzioa bijektiboa da.
+2. g : N
+−→ N, g(x) = x + 1.
+• g injektiboa da: izan bitez x1, x2 ∈ N edozein,
+g(x1) = g(x2)
+⇒ x1 + 1 = x2 + 1 ⇒ x1 = x2.
+• g ez da suprajektiboa: ∃x ∈ N, non g(x) = 0 den, hau da, x + 1 = 0.
+
+1.2.
+Funtzioak
+13
+3.
+| · |: R −→ R, balio absolutua:
+| x |=
+−x x < 0
+x
+0
+≤ x
+.
+• Ez da injektiboa: | 2 |=| −2 |= 2, eta 2 = −2.
+• Ez da suprajektiboa: ∀x ∈ R | x |≥ 0 da; hau da, ∃x ∈ R / | x |= −1.
+4. p : R
+2 −→ R, p(x1, x2) = x1.
+• p ez da injektiboa: p(1, π) = p(1, 0), baina (1, π) = (1, 0).
+• p suprajektiboa da: ∀y ∈ R ∃(x1, x2) = (y, 0) ∈ R
+2, non p(x1, x2) = y den.
+Ohar gaitezen y
+∈ R elementu bakoitzak aurreirudi bat baino gehiago duela;
+guk bat aukeratu dugu, baina inﬁnitu daude; esaterako, p(y, π) = y.
+1.38 Adibidea. A multzoa emanik, A multzoaren gaineko identitatea,
+idA : A
+−→ A
+x
+→
+x
+,
+injektiboa eta suprajektiboa da. Hortaz, bijektiboa da.
+1.2.3
+Alderantzizko funtzioa
+1.39 Teorema. Funtzio bijektiboen karakterizazioa
+f : A
+−→ B funtzio bat emanik,
+f bijektiboa da
+⇐⇒
+∀y ∈ B ∃ | x ∈ A / f(x) = y betetzen bada.
+Froga.
+⇒) f bijektiboa denez, suprajektiboa da; beraz, hau beteko du:
+∃x ∈ A / f(x) = y.
+Ikus dezagun x
+∈ A hori bakarra dela. ∃x1, x2 ∈ A baleude, non f(x1) = y eta
+f (x2) = y diren, orduan f (x1) = f 
+(x2) izango zen. Eta f injektiboa denez, x1 = x2
+beteko zen.
+⇐) Demagun ∀y ∈ B ∃ | x ∈ A / f(x) = y betetzen dela.
+∀y ∈ B ∃ | x ∈ A / f(x) = y betetzen bada, f suprajektiboa da, suprajektiboa
+izateko nahikoa delako x
+∈ A existitzea.
+Ikus dezagun f injektiboa dela.
+Har ditzagun x1, x2
+∈ A, eta demagun f(x1) = f(x2) dela. f(x1), f(x2) ∈ B; beraz,
+∃ | x ∈ A / f(x) = f(x1) = f(x2); orduan, x = x1 = x2 izango da, x ∈ A bakarra
+delako.
+2
+
+14
+1.
+Erlazioak. Funtzioak
+Orduan, f : A
+−→ B funtzio bijektibo bat emanik, ∀y ∈ B ∃ | x ∈ A / f(x) = y.
+Beraz, esan dezakegu y
+∈ B horri x ∈ A bakar bat dagokiola; hau da, badago lege bat
+y
+∈ B bakoitzari x ∈ A bakar bat esleitzen diona. Lege horri f funtzioaren alderantzizko
+funtzio
+deituko diogu, eta honela adieraziko dugu:
+f −
+1 : B −→
+A
+y
+→ x, non f(x) = y
+1.40 Adibidea. f : R
+−→ R, f(x) = 3x + 1, funtzioa bijektiboa denez, alderantzizko
+funtzioa honela deﬁni dezakegu:
+y
+∈ R emanik, ∃ | x ∈ R / f
+−1(y) = x, non f(x) = y den; beraz, 3x + 1 = y da, eta
+hortik, x =
+y
+− 1
+3
+aterako dugu. Orduan,
+f −
+1 : R −→ R, f
+−1(y) =
+y
+− 1
+3
+, da f funtzioaren alderantzizko funtzioa.
+1.41 Ondorioa. f : A
+−→ B funtzio bijektiboa emanik, f
+−1 : B −→ A bada f
+funtzioaren alderantzizko funtzioa, propietate hauek beteko dituzte:
+1. (
+∀x ∈ A) (∀y ∈ B) f
+−1(y) = x ⇔ f(x) = y.
+2. (
+∀x ∈ A) f
+−1(f(x)) = x.
+3. (
+∀y ∈ B) f(f
+−1(y)) = y.
+1.42 Teorema. Funtzio bijektibo baten alderantzizko funtzioa ere bijektiboa da.
+1.43 Adibidea. f : R
+−→ R, f(x) = 3x + 1, funtzio bijektiboa denez, f
+−1 : R −→ R,
+f −
+1(y) =
+y
+− 1
+3
+, alderantzizko funtzioa ere bijektiboa da.
+1.2.4
+Funtzioen konposizioa
+1.44 Deﬁnizioa. f : A
+−→ B eta g : B −→ C funtzioak emanik, f eta g funtzioen
+arteko funtzio konposatu deituko diogu, eta g
+◦ f idatziko dugu, honako funtzio honi:
+g
+◦ f : A −→
+C
+x
+→ g(f(x))
+Ohar dezagun, g
+◦ f deﬁnitu ahal izateko, f funtzioaren helburuko multzoak bat etorri
+behar duela g funtzioaren abiaburu multzoarekin.
+g
+◦ f : A
+f
+−→
+B
+g
+−→
+C
+x
+−→ f(x) −→ g(f(x))
+g
+◦ f funtzioa ongi deﬁniturik dago:
+• Abiaburu multzoaren elementu bakoitzak irudi bat du helburuko multzoan:
+x
+∈ A ⇒ f(x) ∈ B ⇒ g(f(x)) ∈ C.
+
+1.2.
+Funtzioak
+15
+• Abiaburu multzoaren elementu bakoitzaren irudia bakarra da:
+ x1, x2 ∈ A emanik,
+x1 = x2
+⇒ f(x1) = f(x2) ⇒ g(f(x1)) = g(f(x2)).
+1.45 Adibideak.
+1.
+f : Z
+−→ N
+x
+→ x
+2
+g : N
+−→
+R
+x
+→ x + 3
+g
+◦ f : Z −→
+R
+x
+→ x
+2 + 3
+(g
+◦ f)(x) = g(f(x)) = g(x
+2) = x2 + 3.
+Ohar gaitezen ezin dela f
+◦g deﬁnitu, g funtzioaren helburuko multzoa ez datorrelako
+bat f funtzioaren abiaburu multzoarekin.
+2.
+h : Z
+−→ Z
+x
+→ x
+2
+j : Z
+−→
+Z
+x
+→ x + 3
+j
+◦ h : Z −→
+Z
+x
+→ x
+2 + 3
+h
+◦ j : Z −→
+Z
+x
+→ (x + 3)
+2
+(j
+◦ h)(x) = j(h(x)) = j(x
+2) = x2 + 3. (h ◦ j)(x) = h(j(x)) = h(x + 3) = (x + 3)2.
+Beraz, nahiz eta h
+◦ j eta j ◦ h funtzio konposatuak ezistitu, ez dira berdinak, hots,
+h
+◦ j = j ◦ h.
+Adibideetan ikusi dugu, oro har, funtzioen konposizioa ez dela trukakorra.
+1.46 Propietateak.
+1. Funtzioen konposizioa elkarkorra da.
+f : A
+−→ B, g : B −→ C eta h : C −→ D funtzioak emanik,
+h
+◦ (g ◦ f) = (h ◦ g) ◦ f.
+2. f : A
+−→ B funtzioa emanik,
+f
+◦ idA = f, idB ◦ f = f.
+3. f : A
+−→ B funtzio bijektiboa emanik,
+f −
+1 ◦ f = idA, f ◦ f
+−1 = id
+B .
+4. Funtzio suprajektiboen funtzio konposatua suprajektiboa da.
+f : A
+−→ B eta g : B −→ C funtzioak emanik,
+f, g suprajektiboak
+⇒
+g
+◦ f suprajektiboa.
+
+16
+1.
+Erlazioak. Funtzioak
+5. Funtzio injektiboen funtzio konposatua injektiboa da.
+f : A
+−→ B eta g : B −→ C funtzioak emanik,
+f, g injektiboak
+⇒
+g
+◦ f injektiboa.
+6. Funtzio bijektiboen funtzio konposatua bijektiboa da.
+f : A
+−→ B eta g : B −→ C funtzioak emanik,
+f, g bijektiboak
+⇒
+g
+◦ f bijektiboa.
+7. f : A
+−→ B y g : B −→ C funtzio bijektiboak emanik (beraz, g ◦ f bijektiboa da),
+(g
+◦ f)
+−1 = f−1 ◦ g−1.
+Oharra. Elkartze-propietateari esker, h
+◦ g ◦ f idatz dezakegu parentesiak jarri gabe.
+Idazkera. f n = f
+◦
+n
+· · · ◦f.
+Froga.
+1. Ikusteko zeintzuk diren h
+◦ (g ◦ f) funtzioaren abiaburu eta helburuko multzoak,
+lehenago, g
+◦ f funtzioarenak ikusiko ditugu:
+g
+◦ f : A
+f
+−→ B
+g
+−→ C,
+eta gero, h
+◦ (g ◦ f) funtzioarenak:
+h
+◦ (g ◦ f) : A
+g
+◦f
+−→ C
+h
+−→ D.
+Ikusteko zeintzuk diren (h
+◦ g) ◦ f funtzioaren abiaburu eta helburuko multzoak,
+lehenago, h
+◦ g funtzioarenak ikusiko ditugu:
+h
+◦ g : B
+g
+−→ C
+h
+−→ D,
+eta gero, (h
+◦ g) ◦ f funtzioarenak:
+(h
+◦ g) ◦ f : A
+f
+−→ B
+h
+◦g
+−→ D.
+Ikus dezagun, orain, h
+◦ (g ◦ f) = (h ◦ g) ◦ f betetzen dela.
+• h ◦ (g ◦ f) eta (h ◦ g) ◦ f funtzioek abiaburu multzo bera dute: A.
+• h ◦ (g ◦ f) eta (h ◦ g) ◦ f funtzioek helburuko multzo bera dute: D.
+• (∀x ∈ A) (h ◦ (g ◦ f))(x) = ((h ◦ g) ◦ f)(x):
+(h
+◦ (g ◦ f))(x) = h((g ◦ f)(x)) = h(g(f(x)));
+((h
+◦ g) ◦ f)(x) = (h ◦ g)(f(x)) = h(g(f(x))).
+2.
+• f ◦ idA : A
+idA
+−→ A
+f
+−→ B, f : A −→ B.
+
+1.2.
+Funtzioak
+17
+– f
+◦ idA eta f funtzioek abiaburu multzo bera dute: A.
+– f
+◦ idA eta f funtzioek helburuko multzo bera dute: B.
+– (
+∀x ∈ A) (f ◦ idA)(x) = f(x):
+(f
+◦ idA)(x) = f(idA(x)) = f(x).
+• idB ◦ f : A
+f
+−→ B
+idB
+−→ B, f : A −→ B.
+– idB
+◦ f eta f funtzioek abiaburu multzo bera dute: A.
+– idB
+◦ f eta f funtzioek helburuko multzo bera dute: B.
+– (
+∀x ∈ A) (idB ◦ f)(x) = f(x):
+(idB
+◦ f)(x) = idB(f(x)) = f(x).
+3.
+• f
+−1 ◦ f : A
+f
+−→ B
+f −1
+−→ A, idA : A −→ A.
+– f −
+1 ◦ f eta idA funtzioek abiaburu multzo bera dute: A.
+– f −
+1 ◦ f eta idA funtzioek helburuko multzo bera dute: A.
+– (
+∀x ∈ A) (f
+−1 ◦ f)(x) = idA(x):
+(f −
+1 ◦ f)(x) = f
+−1(f(x)) = x = id
+A(x).
+• f ◦ f
+−1 : B
+f −1
+−→ A
+f
+−→ B, idB : B −→ B.
+– f
+◦ f
+−1 eta idB funtzioek abiaburu multzo bera dute: B.
+– f
+◦ f
+−1 eta idB funtzioek helburuko multzo bera dute: B.
+– (
+∀y ∈ B) (f ◦ f
+−1)(y) = idB(y):
+(f
+◦ f
+−1)(y) = f(f−1(y)) = y = id
+B (y).
+4. g
+◦ f : A
+f
+−→ B
+g
+−→ C. Demagun f eta g suprajektiboak direla.
+Frogatu behar dugu g
+◦ f suprajektiboa dela. Hau da,
+∀z ∈ C ∃x ∈ A / (g ◦ f)(x) = z betetzen dela.
+Izan bedi z
+∈ C edozein. g suprajektiboa denez, ∃y ∈ B / g(y) = z.
+y
+∈ B denez eta f suprajektiboa denez, ∃x ∈ A / f(x) = y.
+Orduan, z = g(y) = g(f (x)) = (g
+◦ f)(x). Hortaz, ∃x ∈ A / (g ◦ f)(x) = z.
+5. g
+◦ f : A
+f
+−→ B
+g
+−→ C. Demagun f eta g injektiboak direla.
+Frogatu behar dugu g
+◦ f injektiboa dela. Hau da,
+(
+∀x1, x2 ∈ A) (g ◦ f)(x1) = (g ◦ f)(x2) ⇒ x1 = x2 betetzen dela.
+Izan bitez x1, x2
+∈ A edozein,
+(g
+◦ f)(x1) = (g ◦ f)(x2) ⇒ g(f(x1)) = g(f(x2)) ⇒
+⇒ f(x1) = f(x2), (g injektiboa delako) ⇒ x1 = x2, (f injektiboa delako).
+
+18
+1.
+Erlazioak. Funtzioak
+6. Aurreko bi propietateen ondorio zuzena da.
+7. g
+◦ f : A
+f
+−→ B
+g
+−→ C, (g ◦ f)
+−1 : C −→ A, f−1 ◦ g−1 : C
+g−1
+−→ B
+f −1
+−→ A
+• (g ◦ f)
+−1 eta f−1 ◦ g−1 funtzioek abiaburu multzo bera dute: C.
+• (g ◦ f)
+−1 eta f−1 ◦ g−1 funtzioek helburuko multzo bera dute: A.
+• (∀z ∈ C) (g ◦ f)
+−1(z) = (f−1 ◦ g−1)(z):
+Izan bedi z
+∈ C edozein. (g ◦f)
+−1(z) = (f−1 ◦g−1)(z) betetzen dela frogatzeko,
+nahikoa da (g
+◦ f)((f
+−1 ◦ g−1)(z)) = z frogatzea:
+(g
+◦ f)((f
+−1 ◦ g−1)(z)) = (g ◦ f ◦ f−1 ◦ g−1)(z) = (g ◦ idB ◦ g−1)(z) =
+= (g
+◦ g
+−1)(z) = id
+C (z) = z.
+2
+
+1.3.
+Ariketak
+19
+1.3
+Ariketak
+1. Erlazioak
+1.1. A =
+{1, 2, 3} multzoaren gaineko erlazio hauetako bakoitza bihurkorra, simetrikoa,
+antisimetrikoa edo iragankorra den azter ezazu.
+ℜ1 = {(1, 1), (2, 1), (2, 2), (3, 2), (2, 3)},
+ℜ2 = {(1, 1)}
+ℜ3 = {(1, 2)},
+ℜ4 = {(1, 1), (3, 2), (2, 3)},
+ℜ5 = A × A
+1.2. Aztertu erlazio bitar hauetako bakoitza bihurkorra, simetrikoa, antisimetrikoa
+edo iragankorra den.
+a) Z
++ multzoan, aℜb baldin a|b;
+b) Z multzoan, a
+ℜb baldin a|b;
+c) Z multzoan, x
+ℜy baldin x + y bakoitia;
+d) Z multzoan, x
+ℜy baldin x + y bikoitia;
+e) N multzoan, a
+ℜb baldin a ≤ b;
+f) N multzoan, a
+ℜb baldin a + b = 10;
+g) Z
+× Z multzoan, (a, b)ℜ(c, d) baldin a ≤ c.
+1.3. A =
+{1, 2, 3, 4} multzoa izanik, deﬁni ezazu honako propietateak betetzen
+dituen A-ren gaineko
+ℜ erlazio bitar bat:
+a) Bihurkorra eta simetrikoa, baina ez iragankorra.
+b) Bihurkorra eta iragankorra, baina ez simetrikoa.
+c) Simetrikoa eta iragankorra, baina ez bihurkorra.
+d) Simetrikoa eta antisimetrikoa.
+1.4.
+R ordena-erlazioa emanik, S erlazioa deﬁnituko dugu honela:
+x
+Sy baldin yRx.
+Frogatu
+S ordena-erlazioa dela eta mota berdinekoa (totala edo partziala).
+1.5. Z
++ × Z+ multzoan erlazio hau dugu:
+(x1, y1)
+ℜ(x2, y2) baldin x1|x2 eta y2|y1.
+ordena-erlazioa da? Totala edo partziala?
+1.6. Egiaztatu Z
++-ren gaineko baliokidetasun-erlazioa dela hau:
+x
+ℜy baldin x = 2
+ny, n ∈ Zzenbakiren batentzat.
+Baliokidetasun-klase hauetatik zenbat dira desberdinak: [1], [2], [3], [4]?
+1.7. N multzoan erlazio hau deﬁnituko dugu:
+x
+ℜy baldin 3 | x
+2 − y2
+a) Frogatu baliokidetasun-erlazioa dela.
+
+20
+1.
+Erlazioak. Funtzioak
+b) Aurkitu [0] klasearen lau elementu eta [1] klasearen beste lau.
+1.8. R
+2 multzoan erlazio hau dugu: (x1, x2)ℜ(y1, y2) baldin x1x2 = y1y2. Frogatu
+baliokidetasun-erlazioa dela eta kalkulatu klaseak. Aztertu baliokidetasun-
+erlazioa den
+ℜ
+′: (x
+1
+, x2)
+ℜ
+′(y
+1
+, y2) baldin x1x2 = y1y2 eta x1y1
+≥ 0.
+1.9. E multzoan deﬁnitutako
+ℜ1 eta ℜ2 bi baliokidetasun erlazio izanik, ℜ honela
+deﬁnituko dugu:
+x
+ℜy b.s.b. xℜ1y eta xℜ2y
+Frogatu
+ℜ baliokidetasun-erlazioa dela eta kalkulatu bere klaseak, ℜ1 eta ℜ2-
+ren klaseen funtzio bezala.
+1.10. Egiaztatu R
+2-ren gaineko baliokidetasun-erlazioa dela hau:
+(x1, x2)
+ℜ(y1, y2) baldin x1 = y1
+Deskribitu geometrikoki
+ℜ-k induzitutako baliokidetasun-klaseak eta R
+2-ren
+partizioa.
+1.11. Z
+× (Z − {0}) multzoan erlazio hau deﬁnituko dugu:
+(x1, x2)
+ℜ(y1, y2) baldin x1y2 = x2y1
+Egiaztatu baliokidetasun-erlazioa dela eta kalkulatu klaseak.
+1.12. Izan bedi A =
+{1, 2, 3, 4, 5}. Egiaztatu A
+2-ren gaineko baliokidetasun-erlazioa
+dela hau:
+(x1, x2)
+ℜ(y1, y2) baldin x1 + x2 = y1 + y2
+Kalkulatu baliokidetasun-klase hauek: [(1, 3)], [(2, 4)], [(1, 1)]; eta
+ℜ-k induzi-
+tutako A
+2-ren partizioa.
+1.13. Esan ondorengoak egiazkoak ala faltsuak diren: 2
+≡ 10(mod 4),
+7
+≡ 2(mod 3), 7 ≡ 7(mod 2), 3 ≡ −12(mod 5), −20 ≡ 5(mod 3).
+1.14. Z6 multzoan:
+a) Zein klasetakoa da -20?
+b) Zein dira klase hauetako elementuak [2], [3], [5]?
+Aurki itzazu klase
+bakoitzerako 4 elementu.
+2. Funtzioak
+2.1. Erabaki ondorengo f : Z
+→ Z funtzioak ondo deﬁnituta dauden, baiezko ka-
+suan esan injektiboak eta suprajektiboak diren.
+a) f (x) = x + 7 b) f (x) = 2x
+− 3 c) f(x) = −x + 5
+d) f (x) = x
+2
+e) f (x) = x
+2 + x f ) f (x) = x3
+g) f (x) =
+1
+x
+−3
+2.2. Izan bedi S =
+{1, 2, 3, 4, 5}. S-tik S-rako aplikazio hauek kontsideratuko di-
+tugu: 1S(n) = n, f (n) = 6
+− n, g(n) = max{3, n}, h(n) = max{1, n − 1}. Zein
+dira injektiboak eta zein suprajektiboak?
+
+1.3.
+Ariketak
+21
+2.3. Kontsidera ditzagun N-tik N-rako funtzio hauek: 1N(n) = n, f (n) = 3n, g
+(n) =
+n + (
+−1)
+n, h(n) = min{n, 100}, k(n) = max{0, n − 5}. Aztertu injektiboak eta
+suprajektiboak diren.
+2.4. Izan bitez A eta B multzo ez hutsak, eta pr : A
+×B → A aplikazioa, pr(x, y) = x
+izanik. Injektiboa da? Suprajektiboa da? Eta B-k elementu bakarra badu?
+2.5. Izan bitez f, g, h : Z
+→ Z funtzioak: f(x) = x − 1, g(x) = 3x eta
+h(x) =
+0
+x bikoitia
+1
+x bakoitia
+a) Kalkulatu f
+◦ g, g ◦ f, g ◦ h, h ◦ g, f ◦ (g ◦ h), (f ◦ g) ◦ h.
+b) Kalkulatu f
+2, f 3, g2, g3, h2, h3, h500.
+2.6. N-tik N-rako funtzio hauek ditugu: f (n) = n + 1 eta g(n) = max
+{0, n − 1}.
+Kalkulatu funtzioen irudiak. Aztertu injektiboak eta suprajektiboak diren.
+Frogatu g
+◦ f = 1N dugula baina f ◦ g = 1N.
+2.7. N-tik N-rako funtzio hauek kontsideratuko ditugu: f (n) = 2n, eta bestalde
+g(n) = n/2 baldin n bikoitia bada eta g(n) = (n + 1)/2 baldin n bakoitia bada.
+Aztertu injektiboak eta suprajektiboak diren. Frogatu g
+◦ f = 1N dugula baina
+f
+◦ g = 1N.
+2.8. Izan bedi C =
+{x
+2 | x ∈ N}. Kontsidera ditzagun f : Z → N, g : N → C eta
+h : C
+→ N funtzioak, f(x) = |x|, g(x) = x
+2 eta h(x) = +
+√
+x.
+a) Aztertu injektiboak eta suprajektiboak diren.
+b) Determinatu h
+◦ g ◦ f funtzioa. Aztertu injektiboa eta suprajektiboa den.
+c) Frogatu g
+◦ h = 1C eta h ◦ g = 1N.
+d) Zein da g−
+1?
+2.9. Izan bedi f : R
+2 → R2 honela deﬁnitua: f(x, y) = (x + y, x − y). Frogatu
+bijektiboa dela. Kalkulatu f −
+1 eta f ◦ f.
+2.10. a) Izan bedi f : B
+→ C eta g, h : A → B. Frogatu f injektiboa bada eta
+f
+◦ g = f ◦ h betetzen bada orduan g = h dela.
+b) Idatzi f , g, h funtzioen adibideak, f
+◦ g = f ◦ h betetzen delarik baina
+g = h izanik.
+c) Izan bedi f : A
+→ B eta g, h : B → C. Zein baldintza bete behar du f
+aplikazioak g
+◦ f = h ◦ f berdintzak g = h inplikatzeko?
+2.11. f : A
+→ B eta g : B → C funtzioak emanik, frogatu:
+a) g
+◦ f injektiboa bada, orduan f injektiboa da. Gainera f suprajektiboa
+bada, orduan g injektiboa da.
+b) g
+◦ f suprajektiboa bada, orduan g suprajektiboa da. Gainera g injektiboa
+bada, orduan f suprajektiboa da.
+2.12. (a) Izan bedi f : Z
+→ Z funtzioa, f(x) = 2x. Funtzio injektiboa delarik f,
+deﬁnitu g : Z
+→ Z funtzio bat g ◦ f = 1Z betetzen duena. (Ondo deﬁnitu g(x)
+funtzioa x bakoitia denerako.) Era bakarrean deﬁni dezakegu g? (b) f : A
+→ B
+funtzioa emanik, frogatu f injektiboa dela baldin eta soilik baldin existitzen
+bada g : B
+→ A funtzio bat g ◦ f = 1A betetzen duena.

@@ -1,0 +1,1036 @@
+
+
+
+5. Kapitulua
+Interpolazioa
+5.1
+Sarrera
+IDEIA: f : R −→ R funtzio bat ordezkatu nahi dugu f beste funtzio batetik, non
+• f
+“erabilgarriagoa” den (beraz, f polinomio bat izango da);
+• f funtzioa f -rekin bat dator puntu jakin batzuetan.
+5.2
+Lagrange interpolazio polinomioa
+ARAZO OROKORRA:
+(x0, y0), (x1, y1), . . . , (xn, yn) puntuak emanda, aurkitu n
+mailako P (x) polinomio bat, P (x0) = y0, . . . , P 
+(xn) = yn egiaztatzen duena.
+PAUSUZ PAUSU:
+n = 1 Kontsideratu (x0, y0) eta (x1, y1) datuak. Puntu haietatik igarotzen den
+zuzena (hots, 1-mailako polinomioa) honako hau da:
+P (x) =
+x − x1
+x0 − x1
+· y0 +
+x − x0
+x1 − x0
+· y1
+Beraz,
+P (x0) = 1 · y0 + 0 · y1 = y0;
+P (x1) = 0 · y0 + 1 · y1 = y1.
+n = 2 Kontsideratu, orain, hiru puntu: (x0, y0), (x1, y1) eta 
+(x2, y2). Puntu haietatik
+igarotzen den parabola (hots, 2-mailako polinomioa) honako hau da:
+P (x) =
+(x − x1)(x − x2)
+(x0 − x1)(x0 − x2)
+·y0 +
+(x − x0)(x − x2)
+(x1 − x0)(x1 − x2)
+·y1 +
+(x − x0)(x − x1)
+(x2 − x0)(x2 − x1)
+·y2
+79
+
+80
+5. Kapitulua Interpolazioa
+Beraz,
+P (x0) = 1·y0+0·y1+0·y2;
+P (x1) = 0·y0+1·y1+0·y2;
+P (x2) = 0·y0+0·y1+1·y2.
+Orokorrean, honako teorema hau daukagu:
+5.1 Teorema.
+Bitez n ∈ N eta x0, x1, . . . , xn abszisa desberdinak. Orduan, y0, . . . , yn
+balioak emanda, existitzen da P polinomio bakar bat P (x0) = y0, . . . , P 
+(xn) = yn eta
+maila(P ) ≤ n egiaztatzen dituena.
+Frogapena:
+Existentzia: Lagrange funtzio oinarrizkoak eraikiko ditugu:
+Lj(x) =
+n
+i
+=0,i=j
+x − xi
+xj − xi
++
+3
+Lj(xi) = δij =
+0 i = j
+1 i = j.
+Hemendik abiaturik, erraz lortzen da nahi dugun polinomioa
+P (x) = y0 · L0(x) + y1 · L1(x) + · · · + yn · Ln(x).
+Bakartasuna: Suposatu P1(x) eta P2
+(x) teoremaren baldintzak betetzen dituzten bi
+polinomio direla (i.e., P1(xi) = P2(xi) = yi ∀i = 0, . . . , n, eta maila
+(P1), maila(P2) ≤
+n). Orduan, P (x) = P1(x) − P2(x) polinomioak honako propietate hauek betetzen
+ditu:
+i) P (xi) = 0 ∀i = 0, . . . , n (
++
+3
+n erro desberdin ditu P -k);
+ii) maila(P ) ≤ n.
+Ondorioz, P (x) ≡ 0
++
+3
+P1(x) = P2(x) ∀x ∈ R.
+♣.
+Oharrak:
+• Esango dugu P f -ren interpolazio-polinomioa dela, x0, . . . , xn nodoekikoa.
+• Nodo bat aldatzen bada, edo gehitzen bada, orduan Lj guztiak aldatzen dira
+osoz.
+• Interpolazio-polinomioa kalkulatzeko arazoa txarto baldintzatua dagoela.
+5.2 Teorema.
+Bedi f ∈ Cn+1([a, b]), eta bedi P (x) f -ren interpolazio-polinomioa
+x0, . . . , xn ∈ [a, b] nodoetarako. Orduan, ∀x ∈ [a, b] existitzen da ξ ∈ 
+(a, b) zeinerako
+e(x) = f (x) − P (x) =
+f n+1)(ξ)
+(n + 1)!
+Π(x),
+baita, non Π(x) = (x − x0)(x − x1) . . . (x − xn) den.
+
+5.3. Newtonen diferentzia zatituen metodoa
+81
+Oharrak:
+• ξ = ξx;
+• f n+1)(x) bornatuta dago [a, b] tartean jarraikia delako. Beraz, Mn+1 = max
+ξ
+∈
+[a,b]
+{|f n+1)(x)|}
+hartuz,
+|e(x)| ≤
+Mn+1
+(n + 1)!
+|Π(x)| ≤
+Mn+1
+(n + 1)!
+(b − a)
+n
++1
+dugu. Ondorioz, bornaketa orokor bat existitzen bada, hau da, existitzen bada
+A ∈ R zeinerako Mn ≤ A ∀n ∈ N betetzen baita, orduan
+Pn(x)
+k
+→∞
+/
+/
+f (x) ∀x ∈ (a, b).
+(ADIBIDEA)
+5.3
+Newtonen diferentzia zatituen metodoa
+IDEIA: Lagrange metodoaz, nodo berri bakoitza gehitzen denean, kalkulu guztiak
+egin behar dira berriro. Newton metodoaz, makaltasun hori saihestuko dugu.
+Demagun qk(x) f -ren interpolazio-polinomioa dela x0, . . . , xk nodoetarako 
+(adibidez,
+q0(x) = f (x0)). Orduan,
+qk(x) = qk−1(x) + hk(x)
+dugu, non maila(hk) ≤ k den. Orduan,
+hk(xi) = qk(xi) − qk−1(xi) = 0 ∀i = 0, 1, . . . , k − 1.
+eta hortaz,
+hk(xi) = ak(x − x0)(x − x1) . . . (x − xk−1).
+(5.1)
+Orain, aurkituko dugu ak ∈ R koeﬁzientea. Horretarako, (5.1) ekuazioan bakanduz
+eta x = xk hartuz,
+ak =
+qk(xk) − qk−1(xk)
+(xk − x0) . . . (xk − xk−1)
+=
+f (xk) − qk−1(xk)
+(xk − x0) . . . (xk − xk−1)
+(5.2)
+lortzen da. k = 0-tik hasiz,
+q0(x) = f (x0)
+q1(x) = f (x0) + a1(x − x0)
+q2(x) = f (x0) + a1(x − x0) + a2(x − x0)(x − x1)
+..
+.
+P (x) = qn(x) = f (x0) + a1(x − x0) + a2(x − x0)(x − x1) + · · · + an
+(x − x0) . . . (x − xn−1).
+
+82
+5. Kapitulua Interpolazioa
+Nabaritu metodo honen bidez, egindako kalkulu guztiak aprobetxatzen direla nodo
+berri bat gehitzen den bakoitzean!
+5.1 Deﬁnizioa.
+ak (5.2) ekuazioak deﬁnituriko koeﬁzienteari k ordenako diferentzia
+zatitua deituko diogu, eta
+ak = f [x0, x1, . . . , xk]
+notazioaz adieraziko dugu.
+5.3.1
+Diferentzia zatituen propietateak
+1. ak diferentzia zatitua qk(x) polinomioan xk berreturarekin doan koeﬁzientea
+da.
+2. Nodoen ordenak ez dauka eraginik ak balioan. Zehazki, σ 
+{0, 1, . . . , k} mult-
+zoaren permutazio bat bada, orduan
+f [x0, . . . , xn] = f [xσ(0), . . . , xσ(k)].
+3.
+f [x0, x1, . . . , xk] =
+f [x1, x2, . . . , xk] − f [x0, x1, . . . , xk−1]
+xk − x0
+∀k ≥ 1
+5.3.2
+Diferentzia zatituak kalkulatzeko algoritmoa
+(TAULA: ORRIA)
+P (x) = f [x0] + f [x0, x1](x − x0)
++ f [x0, x1, x2](x − x0)(x − x1)
++ f [x0, x1, x2, x3](x − x0)(x − x1)(x − x2)
++ . . .
++ f [x0, x1, . . . , xn](x − x0) . . . (x − xn−1)
+polinomioa balioztatzeko era optimoa H¨orner teknikaren honako bariazio hau da:
+P (x) = [. . . [[an(x − xn−1) + an−1] (x − xn−2) + an−2] · · · + a1] 
+(x − x0) + a0
+ALGORITMOA:
+1. bn = an;
+2. bi = bi+1(x − xi) + ai i = n − 1, n − 2, . . . , 0
+3. b0 = P (x) (irteera).
+
+5.3. Newtonen diferentzia zatituen metodoa
+83
+5.3.3
+Memorian biltegiraketa
+Hasierako datuak (hori da, (x0, f (x0)), . . . , (xn, f 
+(xn)) bikoteak) biltegiratzeko, n+1
+luzerako bi bektore behar izaten dira:
+
+
+
+
+
+x0
+x1
+..
+.
+xn
+
+
+
+
+
+eta
+
+
+
+
+
+f (x0)
+f (x1)
+..
+.
+f (xn)
+
+
+
+
+
+Ikusiko dugunez, bi bektore horiekin nahikoa dugu polinomioaren koeﬁzienteak
+kalkulatzeko. Nodoen bektorea ez da aldatuko (diferentzia bakoitza kalkulatzeko
+beharrezkoa izango baita), eta bestea aldatuko da behetik gora: f [xn] eta f 
+[xn−1]
+erabiliz kalkulatzen da f [xn−1, xn] diferentzia. Bestalde, f 
+[xn] gehiago erabiltzen ez
+denez, gainean idatziko dugu kalkulaturiko balio berria:
+
+
+
+
+
+
+
+f [x0]
+f [x1]
+...
+f [xn−1]
+f [xn]
+
+
+
+
+
+
+
+−→
+
+
+
+
+
+
+
+f [x0]
+f [x1]
+...
+f [xn−1]
+f [xn−1, xn]
+
+
+
+
+
+
+
+Orain, gauza bera egingo dugu hurrengo bi osagaiekin, eta hori errepikatuko dugu
+bigarren ordenako diferentzia guztiak kalkulatu arte, gehiago erabiltzen ez ditugun
+gaien gainean berriak idatziz:
+−→
+
+
+
+
+
+
+
+
+
+f [x0]
+f [x1]
+..
+.
+f [xn−3]
+f [xn−2, xn−1]
+f [xn−1, xn]
+
+
+
+
+
+
+
+
+
+−→ . . . −→
+
+
+
+
+
+
+
+
+
+f [x0]
+f [x0, x1]
+f [x1, x2]
+...
+f [xn−2, xn−1]
+f [xn−1, xn]
+
+
+
+
+
+
+
+
+
+eta era berean jarraituko dugu behetik gora, ondorengo ordenako diferentziak kalku-
+la eta biltegiratuz, ordena guztiekin, amaitu arte
+−→ . . . −→
+
+
+
+
+
+
+
+f [x0]
+f [x0, x1]
+f [x0, x1, x2]
+...
+f [xn−2, xn−1, xn]
+
+
+
+
+
+
+
+−→ . . . −→
+
+
+
+
+
+
+
+f [x0]
+f [x0, x1]
+f [x0, x1, x2]
+...
+f [x0, x1, . . . , xn].
+
+
+
+
+
+
+
+Azkenean, bigarren bektorean P (x) polinomioaren koeﬁzienteak izango ditugu.
+
+84
+5. Kapitulua Interpolazioa
+5.3.4
+Motze-errorearen azterketa
+Kontsideratu (x0, f (x0), . . . , (xn, f 
+(xn)) nodo desberdinak, dagozkien balioekin bat-
+era, eta kontsideratu Pn haietatik igarotzen den interpolazio-polinomioa (f -
+rekin
+bat datorrena adierazitako nodoetan). Egindako errorea azpiko hau da (gogoratu
+5.2 teorema):
+Rn(x) = e(x) = f (x) − Pn(x) =
+f n+1)(ξ)
+(n + 1)!
+Π(x),
+non ξ ∈ [x0, xn].
+5.3 Teorema.
+x0, . . . , xn nodoak emanda, eta Pn polinomioa kontsideratuz, badauk-
+agu
+Rn(x) = f (x) − Pn(x) = f [x0, . . . , xn, x]Π(x) ∀x = x0, . . . , xn.
+Frogapena: Kontsideratu q(t) interpolazio-polinomioa 
+{x0, . . . , xn, x} nodoetarako
+(kontsideratzen ari gara x nodotzat). Orduan,
+q(t) = Pn(t) + f [x0, . . . , xn, x]
+Π(t)
+(t − x0) . . . (t − xn)
+Ondorioz, t = x hartuz, badaukagu
+q(x) = Pn(x) + f [x0, . . . , xn, x]Π(x) = f (x).
+x nodo bat delako. Amaitzeko,
+Rn(x) = f (x) − Pn(x) = f [x0, . . . , xn, x]Π(x)
+♣
+Orain, 5.2 eta 5.3.4 teoremak erabiliz, ondoriozta dezakegu diferentzia zatituen
+honako propietate hau:
+5.4 Teorema.
+Bedi f ∈ Cn([a, b]), eta bitez x0, x1, . . . , xn ∈ [a, b] nodo desberdinak.
+Orduan,
+∃ξ ∈ (a, b) :
+f n)(ξ)
+n!
+= f [x0, x1, . . . , xn]
+Oharrak praktikarako:
+• Teorema 5.2 erabili ohi da errorea bornatzeko f n+1)-en bornaketa ezagutzen
+den kasuan.
+• Teorema 5.3 erabiltzen da errorea estimatzeko, (xn+1, f 
+(xn+1)) beste nodo bat
+ezagutzen dugunean, f [x0, . . . , xn, x] ≈ f 
+[x0, . . . , xn, xn+1] estimazioa hartuz.
+
+5.4. Nodo distantzikideak: Diferentzia ﬁnituak
+85
+(ESKEMA)
+(ADIBIDEA)
+5.1 Adibidea.
+f funtzioa n mailako polinomioa den kasuan, badaukagu f (x) =
+Pn(x) ∀x ∈ R, eta ondorioz, 0 = Rn(x) = Rn+1(x) = Rn+2(x) = . . . . Egoera
+hori nabaritzen da taulan: f [x0, . . . , xn] = f
+n
+)(ξx)/n!, baina fn) ≡konstante da
++
+3
+f [x0, . . . , xn+1] = 0.
+i
+xi
+f [xi] f [xi, xj] f [xi, xj, xk] f [xi, . . . ] f [xi, . . . ] f [xi, . . . ]
+0
+0
+-5
+6
+1
+1
+1
+2
+12
+1
+2
+3
+25
+6
+0
+30
+1
+0
+3
+4
+55
+11
+0
+63
+1
+4
+6
+181
+15
+108
+5
+7
+289
+Ikusten denez, f funtzioa oso ondo hurbil daiteke 3.mailako polinomio batez.
+Nabaritu azken honek ez du esan nahi beraz f polinomio bat dela.
+5.4
+Nodo distantzikideak: Diferentzia ﬁnituak
+Demagun x0, . . . , xn nodoak distantzikideak direla, hau da, existitzen dela h > 0
+halako moduan non
+x1 − x0 = x2 − x1 = · · · = xn − xn−1 = h
+den. Beste erara esanda,
+xj = x0 + j · h ∀j = 0, . . . , n.
+Kasu honetan, diferentzia zatituen metodoen kalkuluak asko sinpliﬁkatzen dira.
+5.2 Deﬁnizioa. Aurrerakako diferentzia ﬁnituak
+(h ﬁnkatuta dago)
+∆0f (x) = f (x)
+∆f (x)
+= f (x + h) − f (x)
+∆2f (x) = ∆(∆f (x))
+= ∆f (x + h) − ∆f (x)
+∆3f (x) = ∆(∆2f (x))
+= ∆2f (x + h) − ∆2f (x)
+..
+.
+∆nf (x) = ∆(∆n−1f (x))
+= ∆n−1f (x + h) − ∆n−1f (x)
+
+86
+5. Kapitulua Interpolazioa
+Diferentzia ﬁnituen taula askoz errazago eraikitzen da (zatitu gabe kalkulatzen
+dira), azpiko adibide honetan ikus dezakegunez:
+i
+xi
+f (xi) ∆(f ) ∆2(f ) ∆3(f ) ∆4(f )
+0
+0
+-5
+6
+1
+1
+1
+2
+8
+6
+2
+2
+9
+8
+0
+16
+6
+3
+3
+25
+14
+30
+4
+4
+55
+Polinomio interpolatzailea eraikitzeko, honako formula hauek hartuko ditugu
+aintzakotzat:
+f [x0, x1] =
+f (x1) − f (x0)
+x1 − x0
+=
+∆f (x0)
+h
+f [x0, x1, x2] =
+f [x1, x2] − f [x0, x1]
+x2 − x0
+=
+∆f (x0 + h)/h − ∆f (x0)/h
+2h
+=
+∆2f (x0)
+2h2
+..
+.
+Orokorrean, lortzen da honako formula hau:
+f [x0, x1, . . . , xn] =
+∆nf (x0)
+n!hn
+(5.3)
+Azken formula hori erabiliko dugu aurreko ataleko Newton polinomio interpolatza-
+ilearen formulak diferentzia ﬁnituen hizkuntzara “itzultzeko”. Pn(x) polinomioa
+idazteko, x = x0 + α · h aldagai aldaketa egingo dugu, non α aldagai berria den.
+Alde batetik, badaukagu
+x − xi = x0 + α · h − (x0 + i · h) = h · (α − i)
+eta, hortaz,
+(x − x0) . . . (x − xk) = h
+k · α · (α − 1) . . . (α − k).
+
+5.4. Nodo distantzikideak: Diferentzia ﬁnituak
+87
+Goiko formula hauek erabiliz, ondorioztatzen da zuzenean
+Pn(x0 + α · h) = f (x0) + α∆f (x0)
++ α(α − 1)
+∆2f (x0)
+2!
++ α(α − 1)(α − 2)
+∆3f (x0)
+3!
+. . .
++ α(α − 1) . . . (α − n + 1)
+∆nf (x0)
+n!
+(5.3) formula erabiliz, erraz ondorioztatzen dira egindako errorearen adierazpen ze-
+hatza eta hurbildua:
+Rn(x) = h
+n
++1α(α − 1) . . . (α − n)
+f n+1)(ξx)
+(n + 1)!
+,
+ξx ∈ (x0, xn)
+Rn(x) ≈ α(α − 1) . . . (α − n)
+∆n+1f (x0)
+(n + 1)!
+Nabaritu f -ren beste nodo bateko balioa ezagutu behar dugula azken estimazioa
+lortzeko.
+[ADIBIDEA]
+5.4.1
+Errorearen zabaltzea
+• Diferentzia ﬁnituen tauletan errorea era triangeluarrean zabaltzen da.
+(ADIBIDEA)
+• Normalean, diferentzia ﬁnituen tauletan, f “ona” bada (diferentziagarria, er-
+regular. . . ), diferentziak beherakorrak dira 
+(ordenarekiko), eta berdinak iza-
+teko joera dute, polinomio batean gertatzen den bezala.
+• Hots, zeinua alternatiboki aldatzen bada zutabeetan, edo diferentziaren modu-
+lua gorakorra bada, orduan esan dezakegu errore bat gertatu dela (borobiltze-
+errorea, edo beste motakoa). Zutabe horiek “susmagarriak” izango dira, eta
+horregatik ez ditugu erabiliko interpolatzeko.
+Adibidea:
+
+88
+5. Kapitulua Interpolazioa
+Non dago
+errorea?
+xi
+f (xi) ∆f (xi) ∆2f (xi) ∆3f (xi) ∆4f (xi) ∆5f (xi)
+1
+1
+3
+2
+4
+2
+5
+0
+3
+9
+2
+0
+7
+0
+-1
+4
+16
+2
+-1
+9
+-1
+5
+5
+25
+1
+4
+10
+3
+10
+6
+35
+4
+-6
+14
+-3
+10
+7
+49
+1
+4
+15
+1
+-5
+8
+64
+2
+-1
+17
+0
+9
+81
+2
+19
+10
+100
+
+5.5. Hermite polinomioa
+89
+5.5
+Hermite polinomioa
+Interpolazioaren jatorriko problemaren bariazio bat kontsideratuko dugu. Bitez
+x0, . . . , xn ∈ [a, b] nodo desberdinak, eta f ∈ C1(
+[a, b]). Orduan, aurkitu nahi dugu
+P (x) polinomio bat, azpiko baldintza hauek betetzen dituena:
+• maila(P ) ≤ 2n + 1;
+• P (xi) = f (xi),
+∀i = 0, . . . , n;
+• P ′(xi) = f ′(xi),
+∀i = 0, . . . , n.
+Existitzekotan, P (x) polinomioari Hermite polinomio 
+(oskulatzailea) deituko diogu.
+5.5 Teorema.
+Bitez x0, . . . , xn ∈ [a, b] nodo desberdinak, eta f ∈ C1([a, b]). Ordu-
+an, f funtziorako, Hermite polinomioa existitzen da eta bakarra da.
+5.6 Teorema.
+Bedi f ∈ C2n+2([a, b]) eta bedi P (x) bere Hermite polinomioa x0, . . . , xn ∈
+[a, b] nodo desberdinetarako. Orduan, ∀x ∈ [a, b], badaukagu
+∃ξx ∈ (a, b) :
+e(x) = f (x) − P (x) =
+f 2n+2(ξx)
+(2n + 2)!
+Π2(x),
+non Π2(x) = (Π(x))2 = (x − x0)2(x − x1)2 . . . (x − xn)2 den.
+Oharrak:
+• Interpolazio arruntean bezala, f -ren deribatu guztiek borne komun badute,
+orduan, erroreak zerorantz jotzen du n → ∞ doanean.
+• Errorearen adierazpenari begira, Hermite polinomioa interpreta dezakegu poli-
+nomio interpolatzaile arrunt bat bezala nodoak errepikatzen direnean.
+Hermite polinomioa eraikitzeko, Newton diferentzia zatituen teknikaren ondoren-
+go bariazioa erabiliko dugu, azken oharra kontuan hartuz: Kontsideratuko ditugu
+ondorengo nodoak:
+x0, x0, x1, x1, x2, x2, . . . , xn, xn
+interpolaziorako datuak ondorengoak izanik:
+f (x0), f
+′(x0), f(x1), f′(x1), . . . , f(xn), f′(xn).
+Orain, nodoak berrizendatuko ditugu ondorengo erara:
+z0 = x0, z1 = x0, z2 = x1, z3 = x1, . . . , z2n = xn, z2n+1 = xn.
+
+90
+5. Kapitulua Interpolazioa
+Hermite polinomioaren adierazpena honako hau da:
+P (x) = f [z0] +
+2n+1
+i
+=1
+f [z0, z1, . . . , zi](x − z0) . . . (x − zi−1).
+Horretarako, diferentzia zatituen taula eraiki eta Newton-
+en formula aplikatu behar
+dugu zuzenean. Diferentzia zatituak kalkulatzerakoan sortuko den arazo bakarra
+lehen ordenako diferentzietan dago:
+• f [z2i−1, z2i] motako diferentziak problemarik gabe kalkulatzen dira:
+f [z2i−1, z2i] =
+f (z2i) − f (z2i−1)
+z2i − z2i−1
+=
+f (xi) − f (xi−1)
+xi − xi−1
+= f [xi, xi−1].
+• Bestalde, f [z2i, z2i+1] motako diferentziak zuzenean kalkulatu nahi badugu:
+f [z2i, z2i+1] =
+f (z2i+1) − f (z2i)
+z2i+1 − z2i
+=
+f (xi) − f (xi)
+xi − xi
+=
+0
+0
+Zailtasun hori saihesteko, kontuan hartuko dugu 5.3 teorema:
+∃ξ ∈ [x0, xi] :
+f [x0, . . . , xi] =
+f i)(ξ)
+i!
+(5.4)
+Nabaritu nodoak ordenatuta daudela suposatu dugula. (5.4) erabiliz, badauk-
+agu
+f [z2i, z2i+1] = f [xi, xi] =
+f ′(xi)
+1!
+= f
+′(x
+i)
+• (5.4) formula uler daiteke diferentziak jarraikiak direla interpretatuz:
+f [xi, xi] = lim
+x
+→xi
+f [x, xi] = lim
+x
+→xi
+f (x) − f (xi)
+x − xi
+= f
+′(x
+i).
+(ESKEMA)
+(ADIBIDEA)
+Oharrak:
+• Interpolazio arrunteko kasuan bezala, Hermite-ren polinomioa balioztatzeko
+H¨orner-en teknikaren bariazioa erabiliko dugu.
+• Memorian biltegiratzeko, diferentziak kalkulatuko dira azpitik gora, interpo-
+lazio arrunteko kasuan legez.
+
+5.5. Hermite polinomioa
+91
+• Hermite-ren polinomio orokortuen problema plantea daiteke baita, xi nodo
+jakin batean (edo batzuetan) f (xi), f ′(xi), . . . , f k)
+(xi) datuak ezagutzen ditu-
+gunean. Kasu horretan, xi nodo berezi hori(ek) errepikatuko dugu (k+1) aldiz.
+Diferentzia zatituen kalkuluan sortuko diren arazoak (5.4) formulaz saihestuko
+ditugu. Adibidez,
+f [xi, xi, xi] =
+f ′′(ξ)
+2!
+.
+(ADIBIDEA)
+
+92
+5. Kapitulua Interpolazioa
+5.6
+Chebyshev nodoak
+Atal honetan interpolaziorako nodoak hautatzeko era optimoa ikusiko dugu errorea
+minimizatzeko asmoz. Gogoratu errorearen adierazpenak
+|e(x)| =
+|f n+1)(ξx)|
+(n + 1)!
+|Π(x)| eta |e(x)| =
+|f 2n+2)(ξx)|
+(2n + 2)!
+Π2(x)
+(5.5)
+direla interpolazio arrunt eta Hermite interpolaziorako, hurrenez hurren. f -
+ren de-
+ribatuak gure kontrolpean ez daudenez (hau da, optimizagarriak ez direnez), |Π
+(x)|
+balioa ahalik eta txikiena izaten saiatuko gara. Horretarako, aukeratuko ditugu
+x0, . . . , xn nodo desberdinak halako moduan non
+||Π(x)||∞ = max
+x
+∈
+[a,b]
+|Π(x)|
+balioa ahalik eta txikiena den. Nodo horiek Chebyshev nodoak izango dira, deﬁnituko
+ditugun Chebyshev-en polinomioen erroak.
+Lehenengoz, aztertuko dugu nodo optimoen hautaketa [−1, 1] tarterako. Gero,
+aldagai aldaketa egoki bat eginez, edozein 
+[a, b] tartetara trasladatuko dugu azter-
+keta.
+5.3 Deﬁnizioa.
+Honako polinomio honi Chebyshev-en lehen ordenako eta n mailako
+polinomioa deritzo:
+Tn(t) = cos[n · arccos t],
+∀t ∈ [−1, 1]
+• Nahiz eta iruditu ez, beraz Tn(t) funtzioa polinomio bat da:
+5.7 Proposizioa.
+Chebyshev-en lehen ordenako polinomioek ondorengo for-
+mulak egiaztatzen dituzte:
+
+
+
+
+
+T0(t) = 1
+T1(t) = t
+Tn+1(t) = 2t · Tn(t) − Tn−1(t),
+n = 1, 2, . . .
+Frogapena: Lehenengo bi polinomioetarako badaukagu
+T0(t) = cos(0 · arccos t) = cos 0 = 1;
+T1(t) = cos(arccos t) = t.
+Bestalde, θ = arccos t aldagai aldaketa eginez,
+cos[(n + 1) · θ] = cos(n · θ) · cos θ − sin(n · θ) · sin(θ)
+cos[(n − 1) · θ] = cos(n · θ) · cos θ + sin(n · θ) · sin(θ),
+
+5.6. Chebyshev nodoak
+93
+Hortaz,
+Tn+1(t) + Tn−1(t) = cos[(n + 1) · θ] + cos[(n − 1) · θ]
+= 2 · cos(n · θ) · cos θ
+= 2t · cos(n · θ) = 2t · Tn(t).
+Ondorioz, Tn+1(t) = 2t · Tn(t) − Tn−1(t).
+♣
+• Ikusiriko formula errepikariaren bidez, ondorengo zerrenda lortzen da:
+T0(t) = 1
+T1(t) = t
+T2(t) = 2tT1(t) − T0(t) = 2t
+2 − 1
+T3(t) = 2t · T2(t) − T1(t) = 4t
+3 − 3t
+T4(t) = 2t · T3(t) − T2(t) = 8t
+4 − 8t2 + 1
+. . .
+• Indukzioz erraz froga daiteke Tn(t)-ren koeﬁziente nagusia (hau da, tn-rekin
+doan koeﬁzientea) 2n−1 dela. Ondorioz,
+T n(t) =
+1
+2n−1
+Tn(t)
+polinomio normalizatua monikoa da.
+• Deﬁnizioa erabiliz, egiazta daiteke Tn(t) polinomioaren zeroak 
+(hau da, Cheby-
+shev nodoak [−1, 1] tarterako) honako hauek direla:
+tk = cos
+2k + 1
+2n
+π ,
+k = 0, 1, . . . , n − 1
+eta erraz irudikatzen dira: uniformeki bananduta daude 1 erradioko zirkunfer-
+entzian, baina proiektatu ondoren, ez dira distantzikideak [IRUDIA].
+• Bestalde, ikus daiteke ere Tn(t) polinomioak maximo eta minimoak hartzen
+dituztela ondorengo puntuetan:
+t
+•
+k = cos
+kπ
+n
+,
+k = 0, 1 . . . , n − 1,
+hartzen dituzten balio maximo eta minimoak ±1 izanik, alternatiboki.
+
+94
+5. Kapitulua Interpolazioa
+5.8 Teorema.
+Bedi Pn, n mailako polinomio moniko guztien multzoa. Orduan,
+1
+2n−1
+= ||T n||∞ ≤ ||p||∞,
+∀p ∈ Pn.
+(5.5) formulen arabera, eta Π(x) polinomio moniko bat izanik, ondoriozta deza-
+kegu Tn(t)-ren zeroak nodo egokienak direla interpolazio-errorea gutxitzeko 
+[−1, 1]
+tartean. Beraz, x0, . . . , xn ∈ [−1, 1] edozein nodo badira, eta baldin p
+(x) bada
+interpolatzen dituen polinomioa, orduan
+Πp(x) = (x − x0) . . . (x − xn)
+polinomioa (n + 1)-garren mailako polinomio moniko bat da. Bestalde, kontsider-
+atu t0, . . . , tn Chebyshev nodoak (Tn+1 polinomioaren zeroak), eta q
+(x) nodo horiek
+erabiliz eraikitzen den interpolazio-polinomioa. Orduan,
+Πq(x) = (x − t0) . . . (x − tn)
+beste polinomio moniko bat dugu. Aurreko teorema erabiliz, badaukagu
+Tn+1 ∞ = max
+x
+∈
+[−1,1]
+|Πq(x)| ≤ max
+x
+∈
+[−1,1]
+|Πp(x)|
+eta horrek esan nahi du Chebyshev nodoak hoberenak direla errorea 
+[−1, 1] tartean
+uniformeki optimizatzeko. [−1, 1] tartetik 
+[a, b] tartera igarotzeko, honako aldagai
+aldaketa hau egingo da:
+x =
+b − a
+2
+· t +
+b + a
+2
+⇐⇒ t =
+2
+b − a
+· x −
+b + a
+b − a
+.
+Holan, [a, b] tarterako 1. ordenako eta n mailako Chebyshev polinomioa dugu:
+T
+•
+n (x) = cos
+n · arccos
+2
+b − a
+x −
+b + a
+b − a
+eta ondorengo propietateak beteko ditu:
+• T •
+n (x)-ren koeﬁziente nagusia ondorengoa da:
+2
+n
+−
+1 ·
+2
+b − a
+n
+.
+• T •
+n (t) polinomioaren erroak ondorengoak dira:
+xk =
+b − a
+2
+cos
+2k + 1
+2n
+π +
+b + a
+2
+,
+k = 0, 1, . . . , n − 1
+Ikusiriko nodo hauek Chebyshev-en nodoak dira [a, b] tarterako.
+• T •
+n (t) polinomioak maximo eta minimoak hartzen ditu ondorengo puntuetan:
+x
+•
+k =
+b − a
+2
+· cos
+kπ
+n
++
+b + a
+2
+k = 0, 1 . . . , n.
+
+5.7. Runge efektua
+95
+5.7
+Runge efektua
+(5.5) formuletatik ondoriozta daiteke e(x) eta Π(x) funtzioen portaera antzekoa
+dela. Portaera honi Runge efektua deritzo: Π(x) polinomioa oszilagarria da 
+(kontuan
+hartu bere faktorizazioa).
+Nodoak distantzikideak direnean, nabaritzen da tartearen muturretan errorearen
+oszilazioa tartearen erdiko puntuetan baino handiagoa dela . Gainera, nodoen kopu-
+rua haundituz arazo hori larritzen da, egonkortasun eta baldintzatze arazoak direla
+eta. Bestalde, Chebyshev nodoekin interpolatuz, errorea uniformeki oszilatzen dela
+ikus daiteke. Ondorioz, tarte osoan lan egin behar badugu, hobe dugu Chebyshev
+nodoak erabil. Tartearen erdian lan egitekotan, nodo distantzikideak erabil daitezke.
+(GRAFIKOAK)
+5.8
+Funtzio zatika polinomikoen bidezko interpo-
+lazioa
+Demagun 
+[a, b] tarte luzeegi batean lanegiten ari garela. Alde batetik, tartea handia
+izanik, nodo gehiago hartu behar izango genuke. Bestalde, ikusi dugunez, nodo
+gehiegi erabiltzen badira, polinomioaren maila handia izanik, errorea handia izan
+daiteke ere.
+Arazo hauek ekiditzeko teknika tartearen partiketa bat egitea da, hau da:
+[a, b] =
+n
+−
+1
+i
+=0
+[xi, xi+1]
+tarte nagusia azpitarteetan bananduz. 
+[xi, xi+1] azpitarte bakoitzean, kalkulatuko
+da maila baxuko pi
+(x) polinomio interpolatzaile bat, azpitarteko muturrak nodoak
+izanik 
+(hori lortzeko, beste nodo batzuk hartu behar dira azpitartean). Prozedura
+honen bidez, lortzen da p : [a, b] −→ R funtzio jarraiki bat zeinerako
+p(x) = pi(x), ∀x ∈ [xi, xi+1], ∀i ∈ {0, . . . , n − 1},
+hau da, p funtzioa zatika polinomikoa da. Nahiz eta funtzioa jarraikia izan, bere
+deribatuak etenak izan daitezke. Graﬁkoki, erpinak ikusiko dira xi puntuetan.
+Egonkortasun eta baldintzatze arazoak direla eta, komenigarria izango da nodo
+gutxi erabiltzea azpitarte bakoitzean. Normalean, spline-
+en teknika erabiltzen da.

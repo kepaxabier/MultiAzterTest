@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+4. Prozesadore seg. aurreratuak
+<number>
+ 
+ 
+<number>
+ 
+<number>
+Exekuzioaren hasiera  Exekuzioaren bukaera  Eredua
+ordena                ordena               �lineala
+ordena                desordena            �ziklo anitzekoa
+desordena             desordena            �aurreratua
+ 
+<number>
+FDIV                F2, B4D Ir A/ A/ A/ A/ Id         
+FADD        F10, F2, F4      B D  D  D  D  D  D  Ir A+  Id  
+FSUB                F8,   B14B  B  B  B  B  D  Ir  A- Id
+                                             B  ...    
+FDIV        F2, F4, B6D Ir A/ A/  A/ A/ Id        
+FADD        F10, F2, B D  .  .   .  .  .  Ir A+ Id  
+FSUB        F8, F8,   B  D  Ir  A- Id          
+                           B  ...              
+ 
+4
+ 
+ 
+4
+ 
+4
+FDIV        F2, F4, B6D Ir A/ A/ A/ A/ Id        
+FADD        F10, F2, B D  .  .  .  .  .  Ir A+ Id  
+FSUB        F8, F8,   B  D  Ir A- Id          
+FDIV        F2, F4, B6D Ir A/ A/ A/ A/ Id        
+FADD        F10, F2, B D  .  .  .  .  .  Ir A+ Id  
+FSUB        F8, F8,   B  D  Ir A- .  .  Id      
+FDIV        F2, F4, B6D Ir A/ A/ A/ A/ Id       
+FADD        F10, F2, B D  .  .  .  .  .  Ir  A+ Id
+FSUB        F2, F8,   B  D  D  D  D  D  Ir   
+...                         B  B  B  B  B  ...    
+ 
+<number>
+FDIV        F2, F4, FB D Ir A/ A/ A/ A/ Id        
+FADD        F10, F2,  B D  .  .  .  .  .  Ir A+ Id  
+FADD        F12, F8,   B  D  D  D  D  D  D  Ir  
+FDIV        F2, F4, B6D Ir A/ A/ A/ A/ Id      
+FMUL        F10, F3, B D  .  Ir A* A* A* Id    
+...                       B  D  Ir          
+ 
+<number>
+ 
+9
+                                           
+bukatzeko behar den ziklo-kopurua       n   .. 3 2 1
+        okupatuta                   0   0  0 1 1
+        informazio osagarria (UF, HE, ....     ...
+                                          ...     ...
+  RAW, WAW?   F1 F2 F3 ... R1 R2 ...
+                  0  0  0     0  0   
+           UF   �          
+ 
+<number>
+UF      urrats-kop. seg/ez-seg okup ...
+fadd    2           1          0    ...
+fmul    5           0          1     
+add/sub 1           1          0     
+....                              
+Eragiketa-kodea Rh Ri1 Ri2 i1 prest? i2 prest? gel. bus gel. WAR
+                                                  
+FADD            F4 F5  F2  0         1         0        0
+ 
+<number>
+Eragiketa-kodea Rh Ri1 Ri2 i1 prest? i2 prest? gel. bus gel. WAR
+FDIV            F5 F1  F3  1         1         0        0
+FADD            F4 F5  F2  0         1         0        0
+FMUL            F7 F6  F4  1         0         0        0
+FSUB            F6 F8  F9  1         1         0        1
+ 
+<number>
+ 
+<number>
+ 
+<number>
+             5         10         15         20        25        30
+loop
+: LD  B D   Ir AM M  M Id                                            
+F1, A
+(R1)
+LD
+F2, B  B   D  Ir AM M M  Id                                          
+(R1)
+FADD
+F3,       B  D  .  . .  .  Ir A   A A Id                                 
+F1,
+F2
+ST C
+(R2),       B  D  . .  .  .  .   . . .  Ir  AM M  M   Id                     
+F3
+ADDI
+R1,    raw     B  D Ir A  Id                                        
+R1,
+#2
+ADDI
+R2,             B D  Ir A  Id' . . .  Id                               
+R2,
+#1
+SUBI
+R3,              B  D  D  D   D D D  D   Ir A  Id                        
+R3,
+#1
+LD
+F4,                B  B  B   B B B  B   D  Ir AM  M  M Id                  
+C-1
+(R2)
+FMULI
+F2,                              B  D  .   .  . .   Ir A  A A A  A Id      
+F4,
+#2
+FADDI
+F4,                uf   war          B  D   D  D D   Ir A  A A Id         
+F3,
+#5
+ST D
+(R3),                         raw     B   B  B B   D  .  . . .  . .  Ir AM M
+F2
+ST A-
+1                                             B  D  D D D  D D  D  Ir AM
+(R1),
+F4
+BNZ
+R3,                                  waw         B  B B B  B B  B  D  Ir
+loop
+ADDI
+R2,                                        raw              B  D
+R2,
+#1
+ST B
+(R1),                                           uf            B
+F4
+ 
+<number>
+ 
+16
+UF Okup Iturb1 UF1 Iturb2 UF2
+F+ 0    F2     F/  F4     ---
+ 
+<number>
+ 
+<number>
+FDIV F2, F4, F6  B D IR A/ A/ A/ A/ Id    
+FADD F10, F2, F4  B D  IR .  .  .  .  A+ Id
+FSUB F8, F8, F14   B  D  IR A- Id      
+ 
+<number>
+FDIV F8, F4, F6  B D IR A/      A/ A/ A/      Id        
+FADD F10, F2, F8  B D  IR (f2) .  .  .       . (f8) A+ Id
+FSUB F8, F3, F14   B  D       IR A- Id (f8)          
+ 
+<number>
+FDIV F8, F4, F6   B D IR A/      A/ A/ A/ Id        
+FADD F10, F2, F8   B D  IR (f2) .  .  .  . (f8) A+ Id
+FADD F12, F8, F14   B  D       D  D  D  D      Ir A+
+FDIV F8, F4, F6  B D IR A/ A/ A/ A/ Id    
+FMUL F10, F2, F3  B D  IR A* A* A* .  Id  
+…                B  D  Ir        
+ 
+<number>
+ 
+22
+ 
+22
+ 
+22
+ 
+22
+ 
+22
+ 
+ 
+ 
+FDIV        F3, F2,BFD Ir A  A  A   A A  A  A  A  A  Id   
+LD        R1, d(R2) B D  Ir AM M   M Id             
+ADDI        R1, R1,  B  D  Ir .   . Ir A+ Id         
+ST        d(R1), F3    B  D  Ir- . .  .  Ir AM .  Ir M M
+LD        F5, d(R2)      B  D   D D  D  D  Ir AM .  . M
+ 
+<number>
+be: LD F1,  B D  Ir AM M  M  Id     zl             B  D  Ir  AM .   . .  . . .  M  M   Id     
+A(R1)
+LD F2, B     B  D  Ir AM M  M  Id                   B  D   Ir AM  . .  . . .  .  M   M   Id  
+(R1)
+FADD F3,       B  D  .  .  Ir Ir A  A  A  Id                                       
+F1, F2
+ST C(R2),        B  D  Ir AM .  .  .  .  Ir M  M   Id                                
+F3
+ADDI R1,     rd     B  D  Ir A  Id                                             
+R1, #2
+ADDI R2,             B  D  Ir A  Id       ord ena M                              
+R2, #1
+SUBI R3,         rd     B  D  Ir A  Id               bus                        
+R3, #1
+LD F4, C-1               B  D  Ir AM .  .  M   M   Id                             
+(R2)
+FMULI F2,                  B  D  Ir .  .  .   .   Ir A  A   A  A   A Id       ord ena M   
+F4, #2
+FADDI F4,                    B  D  Ir A  A   A   .  Id                           
+F3, #5
+ST  D(R3),                    B  D  Ir AM  .   .  .  .   .  .   . Ir M M Id            
+F2
+ST A-1(R1),                      B  D  Ir  AM  .  Ir .   .  .   . .  . M M  Id          
+F4
+BNZ R3, be                   rd     B  D   Ir    .  Id    bus                   
+ADDI R2,                             B   D   Ir A  .   Id                      
+R2, #1
+ST  B(R1),                             B   D  Ir AM  .  .   . .  . . M  M  Id        
+F4
+ 
+<number>
+FDIV        F3, F2,BFD Ir A  A  A   A A  A  A  A  A  Id   
+LD        R1, d(R2) B D  Ir AM M   M Id             
+ADDI        R1, R1,  B  D  Ir .   . Ir A+ Id         
+ST        d(R1), F3    B  D  Ir- . .  .  Ir AM .  Ir M M
+LD        F5, d(R2)      B  D   D D  D  D  Ir AM M  M  
+ 
+ 
+ 
+ 
+29
+                    5          10         15         20         25       30
+loop: LD F1, A B D Ir AM M  M  Id                 B  D  Ir AM M  M  Id              
+(R1)
+LD F2, B(R1)    B D  Ir AM M  M  Id                 B  D  Ir AM Ir .  Id            
+FADD F3, F1,     B  D  .  .  Ir Ir A  A  A  Id           B  D  .  .  Ir Ir A  A  A  Id    
+F2
+ST C(R2), F3       B  D  Ir AM .  .  .  .  Ir M  M  Id       B  D  Ir AM .  .  .  .  Ir M M Id
+ADDI R1, R1,         B  D  Ir A  Id                                        
+#2
+ADDI R2, R2,           B  D  Ir A  Id                                      
+#1
+SUBI R3, R3,             B  D  Ir A  Id                                    
+#1
+LD F4, C-1(R2)             B  D  Ir AM Ir Id                                
+FMULI F2, F4,                B  D  Ir .  Ir A  A  A  A  A  Id                    
+#2
+FADDI F4, F3,                  B  D  Ir A  A  A  Id                          
+#5
+ST D(R3), F2                     B  D  Ir AM .  .  .  .  Ir .  M  M  .  Id          
+ST A-1(R1), F4                     B  D  Ir AM Ir .  .  .  .  .  M  M  .  Id        
+BNZ R3, Loop                         B  D  Ir .  Id                        
+ADDI  R2, R2,                         B  D  Ir A  Id                      
+#1
+ST B(R1), F4                             B  D  Ir AM .  .  .  .  M  M  .  Id      
+ 
+<number>
+LD R1, d(R2) B D Ir AM M  M Id  
+LD R3, d(R2)  B D  Ir AM . .  Id
+ 
+<number>
+FMUL F3, F2, F1 B D Ir A  A  A  A  A Id     
+ST d(R1), F3    B D  Ir AM .  .  . Ir M  M Id
+LD F4, d(R1)      B  D  Ir AM .  . Ir Id   
+ST d(R1), F5        B  D  Ir AM . .  M  M Id
+ 
+<number>
+ 
+33
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+33
+FMUL    F2, F4, F6 B D Ir A* A* A* A* Id            
+FDIV     F10, F2, F B D  .  .  .  .  .  Ir A/ A/ A/ A/ Id
+FSUB     F8, F8, F1  B  D  Ir A- Id              
+ 
+<number>
+ 
+36
+ Helb.-erreg Emaitza Bukatu? Salbues? Baliogab? PC …
+1 F5          -27     1       0        0         160
+�                                           
+ 
+<number>
+ Rh Em Buk Salb Bg PC
+1     1          
+2     0          
+3     1          
+�    0          
+N               
+ 
+ 
+ 
+<number>
+ Rh Em Buk Salb Bg PC
+1     1          
+2     0          
+3     0   1    1   
+�    1       1   
+     0       1   
+N               
+ 
+39
+ 
+39
+ 
+41
+PC  Agindua                    5           10    13    16
+100 LD        F1, A(RB)D Ir AM M   M  Id                
+101 LD        F2, B(R B D  Ir AM  M  M  Id              
+102 FMUL        F3,F2  B  D  Ir- · · · A  A  A A  A  Id   
+103 FADD        F4,F5    B  D   Ir A  A  A  Id          
+104 ADDI        R1,R1      B   D  Ir A  Id            
+105 FDIV        F2,F6         B  D  Ir A  A  A A  A  A  A Id
+106 FSUB        F6,F2           B  D  Ir A  A A  Id     
+107 SUB        R2,R2,             B  D  Ir A Id       
+ 
+<number>
+Zikloa Okup BB   Rh Emai Buk? Salb? Bb? PC
+1             1                    
+2             2                    
+3             3                    
+4             4                    
+5             5                    
+6             6                    
+7             7                    
+8             8                    
+ 
+43
+ 
+43
+ Helb.-erreg Balio zaharra Bukatu? Salbues? PC …
+1 F5          -27           1       0        160
+�                                        
+ 
+<number>
+ 
+<number>
+ 

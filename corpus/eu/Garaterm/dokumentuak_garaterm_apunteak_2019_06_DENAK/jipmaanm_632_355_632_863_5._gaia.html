@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.2  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="0;0">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		PRE { font-family: "Times New Roman" }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="es-ES" DIR="LTR">
+<PRE>Programa errekurtsiboen transformazioa: Burstall-en metodoa
+
+komandoak
+
+Burstall-en metodoa, programa errekurtsiboak iteratibo bihurtzeko
+
+Programa errekurtsiboak soluziorik zuzenena, sinpleena eta argiena izaten dira zenbait problematarako. Esate baterako:
+Indukzio bidez definitutako funtzioak.
+Datu-mota induktiboen tratamendua.
+Izaera bereko azpiproblematan banatzen diren problemak.
+
+Baina askotan, batez ere programa iteratiboekin konparatuz, ez dira eraginkorrenak. Eraginkor ez izate hori bi arrazoi hauengatik gertatzen da:
+Kalkuluen errepikapenagatik.
+Parametroak gorde eta berreskuratu behar direlako deiak kateatzean.
+
+Hala ere, esan dugunez, zenbaitetan errazagoa da algoritmo errekurtsiboa garatzea iteratiboa garatzea baino. Horregatik, oso interesgarria da ebazpide errekurtsiboa abiapuntu gisa erabiltzea programa iteratibo bat lortzeko, bereziki batetik besterako bihurketa era metodikoan egiten bada. Horrela jokatuz gero, ebazpide eraginkorragoa lor daiteke eta, era berean, azkeneko programa iteratiboaren zuzentasuna justifikatuta geratzen da.
+
+Gainera, transformazio-eredu honen bidez sakonki azter daiteke errekurtsibitatearen eta iterazioaren arteko erlazioa.
+
+Gai honetan, Burstall-en metodoaA Transformation System for Developing Recursive Programs. R.M Burstall and J. Darlington. In Journal of the ACM, Volume 24, Issue 1, pages 44-67. January 1977.  landuko dugu. Metodo honek funtzio errekurtsiboak iteratibo bihurtzeko balio du. 
+
+Honako hauek dira metodoaren oinarriak:
+Abiapuntutzat, algoritmo errekurtsiboa edo zehaztapen induktiboa hartzen da.
+Formulazio induktibo horri erreparatuta, soluzioaren errekurrentzia-erlazioa ateratzen da.
+Errekurrentzia-erlazio hori izango da, hain zuzen ere, oraindik sortu gabe dagoen iterazioaren inbariantea. Iterazioaren borne-adierazpena ere pauso honetan asmatzen da.
+Inbariante hori oinarri hartuta, iterazioa edo algoritmo iteratiboa formalki eratortzen da, honako urratsetan:  hasieraketa, bukaerako tratamendua ( emaitza) eta iterazioaren gorputza.
+
+Iterazioaren gorputza eratortzeko, definizio induktiboan eta inbariantean oinarrituta, destolesketa/tolesketa teknika erabiltzen da.
+
+Metodoaren deskribapena
+
+Esan bezala, Burstall-en metodo orokorra funtzio baten definizio induktiboarekin hasten da
+
+T=T_1 T_n$  diren funtzioko parametro formalen motak, eta $T'$ den emaitzaren mota.
+$ovx=x_1  x_n$ deituko diegu parametro formalei ($x_1  T_1,  x_n in T_n$). Definizio induktibo horretatik errekurrentzia-erlazio bat ateratzen da, eta erlazio hori inbariantetzat hartzen da. Honako hau izango da inbariantearen forma:
+
+non $ovy$ eta $ovz$ aldagai berriak diren, iterazioan erabiliko direnak. $F$ funtzioaren bidez adierazten dugu $f(ovy)$ eta $ovz$-ren arteko erlazioa, hasierako funtzioaren definizio induktibotik asmatu behar duguna. Orokorrean, errekurrentzia erlazioak antz handia hartzen du kasu induktiboek bueltatzen duten emaitzarekin. 
+
+Borne-adierazpena $ovy$ aldagaien gainean definituko da, eta iterazioak bukatzeko falta dituen pausoen kopurua mugatuko du.
+
+Inbariante horretatik eratorriko den funtzio iteratiboak honako forma hartzen du:
+
+
+$f_it$ funtzio iteratiboaren goi-burukoa $f$ funtzio errekurtsiboaren berdina da: parametro berdinak hartzen ditu ($ovx$) eta emaitza ere mota berekoa da. Hori bai, $f_it$ funtzioak beste aldagai laguntzaile batzuk ere erabiltzen ditu: $ovy$ eta $ovz$. $ovx$ parametroek konputazio errekurtsiboan hartuko lituzketen balioak gordetzeko erabiltzen dira $ovy$ aldagaiak algoritmo iteratiboan, eta horregatik dira mota berekoak. $ovz$ aldagaiak informazio osagarria gordetzeko erabiltzen dira.
+
+Programaren lehenengo zatia hasieraketa da, eta bertan $ovy$ eta $ovz$ aldagaiak hasieratu behar dira inbariantea iteraziora sartzerako bete dadin. 
+
+Programaren bigarren zatia iterazioa bera da, non bukaera-baldintza ( bukbal funtzioa) eta gorputza definitu behar diren. Bukaera-baldintza definitzeko, hasierako algoritmo errekurtsiboko kasu nabariekin parekatzen dira iterazioko bukaera-kasuak. Oinarria sinplea da: iterazioa bukatuko da errekurtsioa bukatuko litzatekeen egoera berdinetan. Hori bai, kontuan hartu behar da errekurtsioaren bukaera $ovx$ parametroen arabera formulatzen zela, eta iterazioan, berriz, $ovy$ aldagaien arabera formulatu beharko da. Hortaz, bukbal funtzioa kasu nabari guztien baldintzen disjuntzioa izango da. Iterazioaren gorputzari dagokionez, irizpide nagusia honako hau da: iterazioko pauso bakoitzak dei errekurtsibo bat simulatu behar du. Nolabait, algoritmo errekurtsiboaren exekuzioan dei batetik bestera gertatzen ziren aldaketak izango dira $ovy$ eta $ovz$ aldagaietan jasoko direnak. Aldagai horiei, beraz, balio berriak esleitzen zaizkie iterazio-pauso bakoitzean. Metodoaren aplikazioan, balio berri horiek zaharretatik bereizteko horrela izendatuko dira: $ovy'$ eta $ovz'$. Balio horiek destolesketa/tolesketa teknikaren bidez lortzen dira inbariantea oinarritzat hartuta eta kasu induktiboen arabera. Behin balio berriak zein izango diren erabakita, erraz asma daiteke gorputzaren kodea: azken batean, $ovy$ eta $ovz$ aldagaiei balio berriak esleitu beharko zaizkie. Asignazio horiek, formalki, aldi berean gertatzen dira eta $(ovy,ovz) := (ovy',ovz')$ notazioarekin adieraz daiteke aldi berekoak direla. Baina, ADAn asignazioak banan-banan egin beharra dagoenez, kontu handia eduki behar da asignazioen hurrenkerarekin, eta batzuetan aldagai laguntzaileak ere erabili behar dira. Gainera, kasu induktibo bat baino gehiago dagoenean, kasu horien araberako esleipen baldintzatuak egin behar izaten dira, eta horregatik, if agindua erabiltzen da.
+
+Programaren azken zatian bukaerako tratamendua egiten da, hau da, azken emaitza lortzea. Emaitza zein den kalkulatzeko inbariantearen ebaluazioa egiten da $ovy$ eta $ovz$ aldagaien balioekin (iteraziotik ateratakoan izango dituzten balioekin). Honakoan ere, kasu nabari bat baino gehiago badago, kasu horiek denak ondo tratatzeko if agindu bat erabiltzen da. 
+
+Metodoaren aplikazio-adibideak
+
+Lehenengo adibidea zenbakien oinarri-aldaketa da. Izan bedi $oinald(x,b)$ funtzioa, $x$ zenbaki arruntaren $b$ oinarriko errepresentazioa itzultzen duena:
+
+
+Definizio errekurtsibo hori programa iteratibo bihurtuko dugu. 
+Hasteko, errekurrentzia-erlazioa atera behar dugu. Helburu horretara iristeko hurbilpen egokia da destolesketa/tolesketa teknika erabiltzea adibide zehatz baten gainean. Adibidez, $oinald(123,4)$ adibidea hartuko dugu, eta espresio horren kalkulua egingo dugu definizio induktiboak adierazitakoaren arabera. Kalkulu horretan, destolesketa-urrats bakoitzean funtzioaren definizioa aplikatzen da eta, berriz, tolesketa-urrats bakoitzen, lortzen dugun adierazpena sinplifikatu egiten da. 
+
+$oinald(123,4)$ destolestuta $oinald(30,4) @ langle 3 rangle$ lortzen dugu ($oinald$-en kasu induktiboa), eta adierazpen hau ezin da sinplifikatu. Ondoren, beste destolesketa-urrats bat egingo dugu, orain $oinald(30,4)$-ren gainean, eta $oinald(7,4) @ langle 2 rangle$ ateratzen da (kasu induktiboa). Adierazpen osoa $( oinald(7,4) @ langle 2 rangle ) @ langle 3 rangle$ da eta, sekuentzien kateaketa elkarkorra denez, sinplifika daiteke (tolesketa-urratsa): $oinald(7,4) @ langle 2,3 rangle$. Berriro beste destolesketa-urrats bat egingo da $oinald(7,4)$-ren gainean, eta, horrela, bukatu arte. Laburbilduz, destolesketa/tolesketa teknika erabiliz gelditzen den transformazioa horrelakoa da:
+
+Orain, transformazio hori aztertzen da errekurrentzia ateratzeko. Horretarako, tolesketa-urrats guztien ondoren gelditzen den adierazpena kontuan hartzen dugu:
+
+Azkena izan ezik, oso erraz ikus daiteke gelditzen den adierazpenaren forma orokorra horrelakoa dela
+
+non $x$, $b$ eta $y$ zenbaki arruntak diren, eta $S$ zenbaki arrunten sekuentzia bat. Hau da, hasierako espresioa beti da zenbaki baten oinarri-aldaketaren emaitza zenbaki osokoen sekuentzia batekin kateatuta. Adierazpen hori da atera dugun errekurrentzia-erlazioa eta hori izango da, hain zuzen, inbariantetzat hartuko duguna. Garbi ikusten da inbariantea eta kasu induktiboaren emaitza oso antzekoak direla.
+
+Borne-adierazpena ere asma dezakegu egin dugun transformazioan oinarrituta. Destolesketa/tolesketa prozesuan ikusi dugu $y$ aldagaia gero eta txikiagoa egiten dela, harik eta $b$ baino txikiagoa izan eta prozesua bukatu den arte. Borne-adierazpena, hortaz, honako hau izan daiteke: $E equiv y$
+ 
+Ondoren, eta inbariantea abiapuntutzat hartuta, programa iteratiboaren atal guztiak eratortzen dira:
+
+
+Hasieraketa. Ataza honek ziurtatu behar du inbariantea betetzen dela lehenengo iterazioa egikaritu baino lehenago. Horretarako, pentsatu behar dugu zein balio hartu behar duten $y$ eta $S$ aldagaiek
+
+
+Bukaera-baldintza. Hasierako definizio induktiboan kasu nabari bakar bat dago, $x &lt; b$ baldintzaren bidez adierazten dena. Iterazioan, hortaz, bukaera-baldintza  sinplea izango da, eta horrela formulatuko da: $bukbal(y) ; equiv ; y &lt; b$.
+
+Emaitza. Bukaera-baldintza bakarra dagoenez, emaitza ere modu bakunean adieraz dezakegu (if aginduaren beharrik gabe). Inbariantean $oinald(y,b)$ adierazpena bere balioarekin ($langle y rangle$) ordeztuta lortuko dugu emaitza:
+displaymath
+
+Hau da, emaitza $y sekKonp S$ da. ADAn adierazita:
+
+
+Iterazioaren gorputza. Inbariantea abiapuntu hartuta, destolesketa / tolesketa teknika erabiliko dugu kasu induktibo bakarrarekin:
+
+Hau da, iterazioen gorputza honako aldibereko asignazioa da:
+
+Aldibereko asignazio anizkoitz honen asignazioak ezin daitezke edozein ordenatan egin. $S$ sekuentzia eguneratzeko erabiltzen den $y$ aldagaiaren balioa zaharra da, $y$ eguneratu aurrekoa. Beraz, beharrezkoa da $y$ eguneratu aurretik $S$ eguneratzea:
+
+
+
+Horrenbestez, metodoa aplikatuta lortu dugun funtzio iteratiboa honako hau da:
+
+
+Ikusiko dugun bigarren adibidea sekuentzien nahasketa egitean datza. Adibide honetan deskribatzen da zer gertatzen den kasu induktiboetan erabiltzen diren eragiketak ez-elkarkorrak direnean. 
+
+Izan bedi $nahastu$ funtzioa, non $nahastu(S,R)$ adierazpenak $S$ eta $R$ sekuentzien fusioa itzultzen duen:
+
+
+
+Funtzio honek bi kasu nabari eta bi kasu induktibo ditu. Aplika dezagun Burstall-en metodoa, definizio induktibo horretatik funtzio iteratibo bat lortzeko.
+
+Aurreko adibidean egin dugun bezalaxe, destolesketa/tolesketa teknika erabiliko dugu datu zehatz batzuen gainean errekurrentzia erlazioa ateratzeko. Baina, adibide honetan, datuak aukeratzean kasu induktibo guztiak gerta daitezen bilatuko dugu. Esate baterako, $nahastu(langle 1, 4, 6 rangle, langle 2, 3 rangle)$ adibide on bat da, $1$ (lehenengo sekuentziako lehenengo osagaia) $2$ (bigarren sekuentziako lehenengo osagaia) baino txikiagoa delako (lehenengo kasu induktiboa), eta $4$ (lehenengo sekuentziako bigarren osagaia) $2$ baino handiagoa delako. Alegia, definizio induktiboaren araberako kalkuluan, bi kasu induktiboak gertatuko dira, eta horrek orokortasuna ematen dio egindako transformazioari.
+
+Hala bada, $nahastu(langle 1, 4, 6 rangle, langle 2, 3 rangle)$ destolestu ondoren $1 sekKonp nahastu(langle 4, 6 rangle, langle 2, 3 rangle)$ lortzen dugu (funtzioaren lehenengo kasu induktiboa). Sinplifikatu ezin denez, $nahastu(langle 4, 6 rangle, langle 2, 3 rangle)$ destolesten dugu, eta $2 sekKonp nahastu(langle 4, 6 rangle, langle 3 rangle)$ lortzen dugu. Adierazpen osoa $1 sekKonp ( 2 sekKonp nahastu(langle 4, 6 rangle, langle 3 rangle) )$ da, eta adierazpen hau ezin da sinplifikatu $sekKonp$ eragiketa erabiliz. Kontua da $sekKonp$ ez-elkarkorra dela eta, horregatik, ezin ditugula $1$, $2$ eta $nahastu(langle 4, 6 rangle, langle 3 rangle) )$ adierazpenak beste era batean $sekKonp$-ren bidez erlazionatu. Kasu hauetan, funtzio ez-elkarkorra beste funtzio batekin ordezkatzen da, elkarkorra dena. Sekuentziak osatzeko elkarkorra den funtzio bat kateaketa ($@$) da eta, horren bidez, aurreko adierazpena toles daiteke: $langle 1, 2 rangle @ nahastu(langle 4, 6 rangle, langle 3 rangle)$. Hortaz, $sekKonp$ funtzioa kateaketarekin ($@$) ordezkatuta, destolesketa/tolesketa prozesu osoa horrela gelditzen da:
+
+Transformazio hori aztertu ondoren ateratzen den errekurrentzia-erlazioa honako hau da
+
+non $S$, $R$, $U$, $V$ eta $W$ zenbaki osokoen sekuentziak diren. $U$, $V$ eta $W$ aldagai berriak dira. Ikus daitekeenez, kasu induktiboetan erabiltzen diren adierazpenetatik atera da errekurrentzia-erlazioa, $sekKonp$ funtzioa kateaketarekin ordezkatuz. Errekurrentzia-erlazio hori funtzio iteratiboaren inbariantea izango da.
+
+Borne-adierazpenari dagokionez, esan dezakegu bukaerarako falta dena $V$ eta $W$ sekuentzien luzeraren araberakoa dela. Aukera bat baino gehiago badaude ere, borne-adierazpen egokia da honako hau: $E equiv luz(V)+luz(W)$, non $luz(V)$ eta $luz(W)$ $V$ eta $W$ sekuentzien luzerak diren hurrenez hurren. 
+
+
+Ondoren, eta inbariantea ardatz hartuta, programa iteratiboaren zati guztiak eratorriko ditugu:
+
+
+Hasieraketa. -ra lehenengo aldiz iristean inbariantea bete dadin, honako asignazio hauek egin daitezke hasieran:
+
+
+Bukaera-baldintza. Bi kasu nabari daudenez, horiek ondo jasotzen dituen bukaera-baldintza disjuntzio baten bidez adieraziko dugu, hasierako parametroen ordez iterazioko aldagaiak jarriz: 
+
+
+Iteraziotik aterako gara $V$ edo $W$ sekuentzia hutsa denean.  
+
+Emaitza. Bukaera-baldintza bi kasuren disjuntzioa denez, kasu bakoitzaren emaitza era banatuan kalkulatuko dugu. Inbariantean $nahastu(V,W)$ adierazpenak duen balioa jarriko dugu kasu bakoitzean:
+
+Hau da, emaitza $U @ W$ edo $U @ V$ izango da, bukaerako kasuaren arabera:
+
+
+Iterazioaren gorputza. Inbariantea abiapuntu hartuta, destolesketa / tolesketa teknika erabiliko dugu kasu induktibo bakoitzeko. 
+
+Lehenengo kasu induktiboa: $lehena(V) leq lehena(W)$
+
+Hau da, lehenengo kasu induktiboan iterazioaren gorputza honako aldibereko asignazioa da:
+
+Izan ere, lehenago $V := hondarra(V);$ jarriko bagenu, orduan $V$ sekuentzian agertzen den lehenengo osagaia galdu egingo genuke. 
+
+Bigarren kasu induktiboa: $lehena(V) &gt; lehena(W)$
+
+Hortaz, aldibereko asignazioa honako hau da:
+
+Bi kasuak bilduta, iterazioaren gorputza horrela gelditzen da:
+
+
+
+Lortu dugun funtzio iteratiboa honako hau da:
+
+
+Hirugarren adibidea aztertuko dugu orain. Honako honetan errekurtsibitate anizkoitzeko definizio induktibo bat transformatu, eta iteratibo bihurtuko dugu. Horretarako, destolestean dei bat baino gehiago eduki behar dira kontuan. Gainera, aztertu behar da zein dei-konbinazio destolestu behar den, gero tolestu ahal izateko.
+
+Izan bedi $fib$ funtzioa, non $fib(n)$ adierazpenak Fibonacci segidaren $n$-garren zenbakia bueltatzen duen:
+
+
+Funtzio honek kasu nabari bakar bat eta kasu induktibo bakar bat ditu, baina kasu induktiboan bi dei errekurtsibo erabiltzen dira.
+Aurreko adibideetan bezalaxe, destolesketa/tolesketa teknika erabiliko dugu errekurrentzi erlazioa ateratzeko, baina, kasu honetan, bi dira landu beharreko dei errekurtsiboak. Transformazioan estrategia hau erabiliko dugu: argumentu handiena duen deia destolestu.
+
+Transformazio horri erreparatuta, errekurrentzia-erlazio bat baino gehiago asma daiteke:
+
+Azken errekurrentzia-erlazioa hartuko dugu inbariantetzat:
+
+
+Borne-adierazpena: 
+
+
+Inbariantea ardatz hartuta eratorriko ditugu programa iteratiboaren atal guztiak.
+
+Hasieraketa. Inbariantea hasieran bete dadin, honako asignazio hauek erabil daitezke:
+
+
+Bukaera-baldintza. Kasu nabari bakar bat dagoenez, bukaera-baldintza sinplea da:
+
+
+Iterazioaren gorputza. Inbariantea oinarritzat hartuta, destolesketa / tolesketa teknika erabiliko dugu:
+
+
+Hortaz, iterazioaren gorputza honako aldibereko asignazioa da:
+
+
+
+
+Horrenbestez, urrats guztiak bildurik, hona hemen lortu dugun funtzio iteratiboa:
+
+
+</PRE>
+</BODY>
+</HTML>

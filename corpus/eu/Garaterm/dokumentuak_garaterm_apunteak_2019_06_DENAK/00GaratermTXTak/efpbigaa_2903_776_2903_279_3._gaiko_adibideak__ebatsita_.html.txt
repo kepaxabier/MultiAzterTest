@@ -1,0 +1,817 @@
+
+
+
+
+
+2013-2014 FINANTZA-MATEMATIKA: BANKU- ETA BURTSA-ERAGIKETAK
+Alberto BILBAO GARZON
+                                                                            108
+
+ _______________________________________________________________________________
+|__________________________________1._adibidea__________________________________|
+|                                                                               |
+|Enpresa batek 100.000 € ko mailegua eskatu du , urteko terminoen bidez sistem|
+|frantsesean 5 urtean amortizatzeko. Hasierako interes-tipoa %3 da. Eta hurrengo|
+|urteetarako erreferentziatzat euribor-a gehi 75 oinarrizko puntu hartuko du.   |
+|   1. Egin ezazu amortizazio-laukiteorikoa, bere osagaiak aurkeztuz, hasierako |
+|      interes-tipo konstantea kontuan hartuz.                                  |
+|   2. Datozen urteetarako dagozkien “euribor”-en tipoak badira: %2,775. %2,|55,
+|      %2,120, %1,862, atera ezazubenetakoamortizazio-laukia (erreala).         |
+|                                                                               |
+|                                  Erantzuna:                                   |
+|                                                                               |
+|   1. Egin ezazu amortizazio-laukiteorikoa, bere osagaiak aurkeztuz, hasierako |
+|      interes-tipo konstantea kontuan hartuz.                                  |
+|                                                                               |
+|Hasieran kalkuluak interes finkoko maileguaren amortizazioan egiten den bezala |
+|egingo dira, kasu honetan hasierako interes-tipoa i = %3 kontuan hartuz.       |
+|(Bezeroari_maileguaren_iraupen_osorako_ematen_zaio_amortizazio-lauki_teoriko   |
+|osoaren_informazioa; nahiz eta lehen_aldirako_bakarrik_balioa_izan, aldiko     |
+|erreferentziapean egoteagatik aldiz aldi amortizazio-laukia aldatu egingo      |
+|delako; eta ondorioz, aldakuntza bakoitzean datorren aldiaren azkena arteko    |
+|amortizazio-laukiaren informazioa bidaliko zaio).                              |
+|                                                                               |
+|    * Lehen_urterako.-                                                         |
+|                                                                               |
+|. Amortizazio-terminoa (Amortizazio-terminoa konstantea da : M = M1 =          |
+|M2=M3=M4=M5):                                                                  |
+|                                                                               |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_2d1e8ae9.gif]                     |
+|. Amortizazio-kuota:                                                           |
+|                                                                               |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m45a2f268.gif]                    |
+|                                                                               |
+|. Interes-kuota: [2903_279_3._gaiko_adibideak__ebatsita__html_2ba32bb7.gif]    |
+|                                                                               |
+|. Amortizatutako osoa:                                                         |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m6012b9fc.gif]                    |
+|                                                                               |
+|                                                                               |
+|. Zorra: [2903_279_3._gaiko_adibideak__ebatsita__html_m6de93ea1.gif]           |
+|                                                                               |
+|                                                                               |
+|    * Bigarren_urterako,_eta_hurrengo_urteetarako.-                            |
+|                                                                               |
+|Amortizazio-terminoa konstantea da. Eta gainerako urteetako amortizazio-kuotak,|
+|sistema frantsesean amortizazio-kuoten arteko errepikatze-legea erabiliz,      |
+|kalkulatuko ditugu:                                                            |
+|          [2903_279_3._gaiko_adibideak__ebatsita__html_m48d64207.gif]          |
+|                                                                               |
+|Amortizazio-terminoak eta amortizazio-kuotak kalkulatuz behin, interes-kuotak  |
+|kalkulatuko ditugu,                                                            |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m5ac0b24f.gif]adierazpena         |
+|erabiliz, emaitza hauek lortuz:                                                |
+|                                                                               |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m7a694465.gif]                    |
+|                                                                               |
+|Amortizatutako kapital osoak ateratzeko hurrengo errepikatze-legea erabiliko   |
+|dugu:                                                                          |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m7f6de24e.gif],eta adierazpen hori|
+|erabiliz, honela: [2903_279_3._gaiko_adibideak__ebatsita__html_m1b19c87f.gif], |
+|emaitza hauek lortuko ditugu:                                                  |
+|                                                                               |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m6cc44045.gif]                    |
+|                                                                               |
+|Azken emaitza hau amortizazioa zuzen egin den egiaztatzeko balio du; eta       |
+|ondorioz, amortizazioa zarratzeko anotazioa da.                                |
+|Azkenean, urte bakoitzeko zorra aterako dugu:                                  |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_27d1e9fc.gif]adierazpena erabiliz,|
+|emaitza hauek lortuz:                                                          |
+|                                                                               |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m542f5ab2.gif]Azken emaitza honek |
+|amortizazioa egoki egin dela adierazten du eta eragiketa zarratzeko azken      |
+|anotazioa da.                                                                  |
+|                                                                               |
+|    * Ateratako emaitza hauekin amortizazio-laukia egiten da:                  |
+|                                                                               |
+|       _______________________________________________________________________ |
+|      |________|___________|_euribor__|_____it_____|____________|_____________||
+|      |        |           |          |i= %3,000 = |            |             ||
+|      |________|___________|__________|_____i1_____|____________|_____________||
+|      |___t____|__Mt_=_M1__|____It____|_____At_____|_____Tt_____|_____Dt______||
+|      |___0____|_____-_____|____-_____|_____-______|_____-______|100.000,00___||
+|      |___1____|_21.835,46_|_3.000,00_|_18.835,46__|___18.835,46|____81.164,54||
+|      |___2____|_21.835,46_|_2.434,94_|_19.400,52__|___38.235,98|____61.764,02||
+|      |___3____|_21.835,46_|_1.852,92_|_19.982,54__|___58.218,51|____41.781,49||
+|      |___4____|_21.835,46_|_1.253,44_|_20.582,01__|___78.800,53|____21.199,47||
+|      |___5____|_21.835,46_|__635,98__|_21.199,47__|__100.000,00|_________0,00||
+|                                                                               |
+|                                                                               |
+| [2903_279_3._gaiko_adibideak__ebatsita__html_54229a46.gif]                    |
+|   1. Datozen urteetarako dagozkien “euribor”-en tipoak badira: %2,775. %2,|55,
+|      %2,120, %1,862, atera ezazubenetakoamortizazio-laukia (erreala).         |
+|                                                                               |
+|Baina, amortizazioa erreferentziazko interes-tipoarekin egin behar denean, hau |
+|da interes-tipoa aldiz aldi aldatzen denean, amortizazio-laukia egiteko modua  |
+|aldatzen da zerbait, amortizazio-laukia aldiz aldi egin behar delako. Aldia    |
+|gure adibidea urtea da, beraz erreferentziazko interes-tipoa urtez urte        |
+|aldatzen bada amortizazio-laukia urtez urte atera beharko dugu. Horrela, aldi  |
+|bakoitzaren hasieran dagoen zorra atera beharko da eta urte horretan zor hori  |
+|interes-tipo berri horretan eragiketaren azkena arte finantzatuko balitz bezala|
+|aterako genuke amortizazio laukia (nahiz eta bezeroari informazio bezala aldi  |
+|bateko amortizazio-laukia aurkeztuko zen).                                     |
+|Metodologia hau izango zen:                                                    |
+|   1. Amortizazio-termino berria atera.                                        |
+|   2. Amortizazio-kuota berria atera.                                          |
+|   3. Bi horien arteko kenketa eginez, interes-kuota berria atera.             |
+|   4. Ondoren, amortizatutako kapital osoa eta zorra, eta amortizazio-lauki    |
+|      berria egin.                                                             |
+|                                                                               |
+|Honela:Zorra bigarren_urtearen_hasieran:                                       |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_2dccd93c.gif]                     |
+|                                                                               |
+|Erabiltzeko interes-tipoa:                                                     |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_md8af4b7.gif]                     |
+|                                                                               |
+|    * Bigarren urterako eta hurrengoetarako (nahiz eta bezeroari_bigarren      |
+|      urteko_informazioa_bakarrik_emango_zaio, hurrengo aldakuntza arteko      |
+|      informazioa) .-                                                          |
+|                                                                               |
+|. Bigarren urtetik aurrerako amortizazio-terminoa (Amortizazio-terminoa        |
+|konstantea da : M´ = M2=M3=M4=M5):                                            |
+|                                                                               |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m21fad195.gif]                    |
+|. Amortizazio-kuota: [2903_279_3._gaiko_adibideak__ebatsita__html_7617db5b.gif]|
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m2a574f55.gif]                    |
+|                                                                               |
+|. Interes-kuota: [2903_279_3._gaiko_adibideak__ebatsita__html_m77ef8783.gif]   |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m4c6cbb96.gif]                    |
+|                                                                               |
+|. Amortizatutako osoa:                                                         |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_4d71d49d.gif]                     |
+|                                                                               |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_7724cdad.gif]                     |
+|                                                                               |
+|. Zorra: [2903_279_3._gaiko_adibideak__ebatsita__html_189fff49.gif]            |
+|                                                                               |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_66ad4d66.gif]                     |
+|                                                                               |
+|Ohart gaitezen emaitzak ez datozela lehen atera ditugun amortizazio-laukikoekin|
+|batera, bigarren aldian indarrean digun interes-tipoarekin atera ditugulako    |
+|oraingo emaitzak.                                                              |
+|                                                                               |
+|    * Emaitza berri horiekin hurrengo amortizazio-laukia egiten da (baina,     |
+|      bezeroari informazio bezala , 2. aldia hasi baino lehenago, bidaliko     |
+|      zaio: bigarren aldiko laukia):                                           |
+|                                                                               |
+|       _______________________________________________________________________ |
+|      |        |           | euribor  |     it     |            |             ||
+|      |________|___________|__________|____________|____________|_____________||
+|      |________|___________|__%2,775__|_%3,525=_i2_|____________|_____________||
+|      |___t____|__Mt_=_M2__|____It____|_____At_____|_____Tt_____|_____Dt______||
+|      |___1____|___________|__________|____________|___18.835,46|____81.164,54||
+|      |___2____|_22.110,25_|_2.861,05_|_19.249,20__|___38.084,66|____61.915,34||
+|      |___3____|_22.110,25_|_2.182,52_|_19.927,74__|___58.012,40|____41.987,60||
+|      |___4____|_22.110,25_|_1.480,06_|_20.630,19__|___78.642,59|____21.357,41||
+|      |___5____|_22.110,25_|__752,85__|_21.357,41__|__100.000,00|_________0,00||
+|                                                                               |
+|                                                                               |
+| [2903_279_3._gaiko_adibideak__ebatsita__html_2eb63a1b.gif]                    |
+|Zorra hirugarren urtearen hasieran:                                            |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_6c667d15.gif]                     |
+|                                                                               |
+|Erabiltzeko interes-tipoa:                                                     |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_4fb5dcaf.gif]                     |
+|                                                                               |
+|    * Hirugarren urterako eta hurrengoetarako (nahiz eta bezeroari_hirugarren  |
+|      urteko_informazioa_bakarrik_emango_zaio, hurrengo aldakuntza arteko      |
+|      informazioa) .-                                                          |
+|                                                                               |
+|. Hirugarren urtetik aurrerako amortizazio-terminoa (Amortizazio-terminoa      |
+|konstantea da : M” = M3=M4=M5):                                              |
+|                                                                               |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_4b1ce81a.gif]                     |
+|                                                                               |
+|. Amortizazio-kuota: [2903_279_3._gaiko_adibideak__ebatsita__html_63f1cf13.gif]|
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m25d41c52.gif]                    |
+|                                                                               |
+|. Interes-kuota: [2903_279_3._gaiko_adibideak__ebatsita__html_m52cdfb99.gif]   |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m5f4fd915.gif]                    |
+|                                                                               |
+|. Amortizatutako osoa:                                                         |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_3634bf27.gif]                     |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m32d63804.gif]                    |
+|                                                                               |
+|. Zorra: [2903_279_3._gaiko_adibideak__ebatsita__html_me9d49e.gif]             |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_9600d0c.gif]                      |
+|                                                                               |
+|Ohart gaitezen emaitzak ez datozela lehen atera ditugun amortizazio-laukikoekin|
+|batera, hirugarren aldian indarrean digun interes-tipoarekin atera ditugulako  |
+|oraingo emaitzak.                                                              |
+|                                                                               |
+|    * Emaitza berri horiekin hurrengo amortizazio-laukia egiten da (baina,     |
+|      bezeroari informazio bezala , 3. aldia hasi baino lehenago, bidaliko     |
+|      zaio: hirugarren aldiko laukia):                                         |
+|                                                                               |
+|       _______________________________________________________________________ |
+|      |_|_________|euribor_|it________|___________________|___________________||
+|      |_|_________|%2,455__|%3,205=_i3|___________________|___________________||
+|      |t|Mt_=_M3__|It______|At________|Tt_________________|Dt_________________||
+|      |2|_________|________|__________|__________38.084,66|__________61.915,34||
+|      |3|21.975,28|1.984,39|19.990,89_|__________58.075,55|__________41.924,45||
+|      |4|21.975,28|1.343,68|20.631,60_|__________78.707,16|__________21.292,84||
+|      |5|21.975,28|682,44__|21.292,84_|_________100.000,00|_______________0,00||
+|                                                                               |
+| [2903_279_3._gaiko_adibideak__ebatsita__html_5ec3f187.gif]                    |
+|                                                                               |
+|Zorra laugarren urtearen hasieran:                                             |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m1382ec70.gif]                    |
+|                                                                               |
+|Erabiltzeko interes-tipoa:                                                     |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_5b0f35fd.gif]                     |
+|                                                                               |
+|    * Laugarren urterako eta hurrengorako (nahiz eta bezeroari_laugarren_urteko|
+|      informazioa_bakarrik_emango_zaio, hurrengo aldakuntza arteko informazioa)|
+|      .-                                                                       |
+|                                                                               |
+|. Laugarren urtetik aurrerako amortizazio-terminoa (Amortizazio-terminoa       |
+|konstantea da : M”´ = M4=M5):                                               |
+|                                                                               |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m5b753266.gif]                    |
+|. Amortizazio-kuota: [2903_279_3._gaiko_adibideak__ebatsita__html_5a598d22.gif]|
+|                                                                               |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_6536ce83.gif]                     |
+|                                                                               |
+|. Interes-kuota: [2903_279_3._gaiko_adibideak__ebatsita__html_1e1cd251.gif]    |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m698141e5.gif]                    |
+|                                                                               |
+|. Amortizatutako osoa:                                                         |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_2332d2c0.gif]                     |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m165deaa4.gif]                    |
+|                                                                               |
+|. Zorra: [2903_279_3._gaiko_adibideak__ebatsita__html_3538efde.gif]            |
+|                                                                               |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_4c9d7f54.gif]                     |
+|                                                                               |
+|Ohart gaitezen emaitzak ez datozela lehen atera ditugun amortizazio-laukikoekin|
+|batera, laugarren aldian indarrean digun interes-tipoarekin atera ditugulako   |
+|oraingo emaitzak.                                                              |
+|                                                                               |
+|    * Emaitza berri horiekin hurrengo amortizazio-laukia egiten da (baina,     |
+|      bezeroari informazio bezala , 4. aldia hasi baino lehenago, bidaliko     |
+|      zaio: laugarren aldiko laukia):                                          |
+|                                                                               |
+|       _____________________________________________________                   |
+|      |_|_________|euribor_|it_________|__________|_________|                  |
+|      |_|_________|%2,120__|%2,870_=_i4|__________|_________|                  |
+|      |t|Mt_=_M4__|It______|At_________|Tt________|Dt_______|                  |
+|      |3|_________|________|___________|58.075,55_|41.924,45|                  |
+|      |4|21.868,90|1.203,23|20.665,67__|78.741,22_|21.258,78|                  |
+|      |5|21.868,90|610,13__|21.258,78__|100.000,00|0,00_____|                  |
+|                                                                               |
+|                                                                               |
+| [2903_279_3._gaiko_adibideak__ebatsita__html_64445ece.gif]                    |
+|                                                                               |
+|Zorra bosgarren urtearen hasieran:                                             |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_47231a7d.gif]                     |
+|                                                                               |
+|Erabiltzeko interes-tipoa:                                                     |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_7967030a.gif]                     |
+|                                                                               |
+|    * Bosgarren urterako(Azken urtea da. Bezeroari_bosgarren_urteko_informazioa|
+|      emango_zaio).                                                            |
+|                                                                               |
+|. Bosgarren urteko amortizazio-kuota:                                          |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m725b953b.gif]                    |
+|                                                                               |
+|. Interes-kuota: [2903_279_3._gaiko_adibideak__ebatsita__html_ma0c36de.gif]    |
+|. Amortizazio-terminoa:                                                        |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m524b1a6.gif]                     |
+|                                                                               |
+|. Amortizatutako osoa:                                                         |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m64587007.gif]                    |
+|                                                                               |
+|. Zorra: [2903_279_3._gaiko_adibideak__ebatsita__html_339c6e11.gif]            |
+|                                                                               |
+|Ohart gaitezen emaitzak ez datozela lehen atera ditugun amortizazio-laukikoekin|
+|batera, bosgarren aldian indarrean digun interes-tipoarekin atera ditugulako   |
+|oraingo emaitzak.                                                              |
+|                                                                               |
+|    * Emaitza berri horiekin bosgarren urteko amortizazio-laukia egiten da     |
+|      (Azken urtea da. Bezeroari informazio bezala , 5. aldia hasi baino       |
+|      lehenago, bidaliko zaio: bosgarren aldiko laukia):                       |
+|                                                                               |
+|       _______________________________________________________________________ |
+|      |_|_________|euribor|it_________|_____________________________|_________||
+|      |_|_________|%1,862_|%2,612_=_i5|_____________________________|_________||
+|      |t|Mt_=_M5__|It_____|At_________|Tt___________________________|Dt_______||
+|      |4|_________|_______|___________|____________________78.741,22|21.258,78||
+|      |5|21.814,06|555,28_|21.258,78__|100.000,00___________________|0,00_____||
+|                                                                               |
+|                                                                               |
+| [2903_279_3._gaiko_adibideak__ebatsita__html_m486e42c7.gif]                   |
+|                                                                               |
+|   1. Datozen urteetarako dagozkien “euribor”-en tipoak badira: %2,775. %2,|55,
+|      %2,120, %1,862, atera ezazubenetakoamortizazio-laukia (erreala).         |
+|                                                                               |
+|Ondorioz, ahal dugu benetako amortizazio-laukia zuzenean egin, egindako        |
+|amortizazio-laukietan lehen lerroa hartuta eta benetako amortizazio-laukia,    |
+|idatzita, honela:                                                              |
+|                                                                               |
+|                                                                               |
+|       _______________________________________________________________________ |
+|      |_______|______|_|_________|euribor_|it___________|__________|__________||
+|      |_______|______|_|_________|________|Euribor+%0,75|__________|__________||
+|      |euribor|it____|t|Mt_______|It______|At___________|Tt________|Dt________||
+|      |_______|______|0|-________|-_______|-____________|-_________|100.000,00||
+|      |_______|%3,000|1|21.835,46|3.000,00|__18.835,46__|_18.835,46|_81.164,54||
+|      |%2,775_|%3,525|2|22.110,26|2.861,05|__19.249,20__|_38.084,66|_61.915,34||
+|      |%2,455_|%3,205|3|21.975,28|1.984,39|19.990,89____|_58.075,55|_41.924,45||
+|      |%2,120_|%2,870|4|21.868,90|1.203,23|20.665,67____|78.741,23_|_21.258,77||
+|      |%1,862_|%2,612|5|21.814,05|555,28__|21.258,77____|100.000,00|______0,00||
+|                                                                               |
+|_[2903_279_3._gaiko_adibideak__ebatsita__html_m33b0872e.gif]___________________|
+         1. MAILEGU HIPOTEKADUNAK edo hipoteka-maileguak.
+
+ _____________________________________________________________________________
+|_________________________________2._adibidea_________________________________|
+|Partikular batek 10 urtean sei hileroko maiztasunaz ordainketa konstanteen   |
+|bidez amortizatuko duen 150.000€-ko mailegua lortu du. Interes-tipoak      |
+|erreferentziatzat du urte baterako euribor-a. Urte bakoitzean joan den urteko|
+|erreferentziazko interes-tipoa gehi 50 oinarrizko puntu hartuko da. Lehen    |
+|urtean aplikatuko den interes-tipoa urteko %3 nominala da.                   |
+|                                                                             |
+|Maileguak gastu batzuk ditu, irekierako komisioa erakundearen alde %1, eta   |
+|kontzeptu guztiengatik bitartekarien gastuak 12.000 €. Kontratuaren unean  |
+|erreferentziazko interes-tipoa %1,5ean dago.Atera ezazu eragiketaren UTB/TAE.|
+|                                                                             |
+|                                  Ebazpena                                   |
+|                                                                             |
+|Lehen urteko seihilerokoaren kalkulua:                                       |
+|                                                                             |
+|                                                                             |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_4b6d3a7d.gif]                   |
+|                                                                             |
+|Zorra lehen urtearen azkenean da:                                            |
+|                                                                             |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_55b0f157.gif]                   |
+|                                                                             |
+|Demagun bigarren urterako seihileroko interes-hainbestekoa dela:             |
+|                                                                             |
+|         [2903_279_3._gaiko_adibideak__ebatsita__html_mc1b7487.gif]          |
+|                                                                             |
+|Bigarren urteko seihilerokoaren kalkulkua:                                   |
+|                                                                             |
+|         [2903_279_3._gaiko_adibideak__ebatsita__html_m2e383bf4.gif]         |
+|                                                                             |
+|                                                                             |
+|UTB/TAE kalkulatzeko, honako ekuazioa adieraziko dugu:                       |
+|                                                                             |
+|                                                                             |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m47a40467.gif]                  |
+|                                                                             |
+| [2903_279_3._gaiko_adibideak__ebatsita__html_65b73781.gif]                  |
+|                                                                             |
+|Demagun hirugarren urterako erreferentziazko interes-tipoa %0,9 dela.        |
+|Maileguan kontuan hartzeko interes-tipoa bigarren urterako izango zen: %0,9 +|
+|%0,5 = %1,4. Kontuan hartzeko seihileroko interes-tipoa izango zen:          |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m1ba4193f.gif]                  |
+|                                                                             |
+|Zorra hirugarren urtearen hasieran da:                                       |
+|                                                                             |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m518cee80.gif]                  |
+|                                                                             |
+|                                                                             |
+|UTB/TAE-ren kalkulua, une honetan izango zen:                                |
+|                                                                             |
+|                                                                             |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m5dd67aa2.gif]__________________|
+
+ __________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+|_______________________________________________________________________________________________________________________________________________________________________________3._adibidea________________________________________________________________________________________________________________________________________________________________________________|
+|Partikular batek250.000 €-ko mailegua eskatu du 10 urtean amortizatzeko seihileroko konstanteen bidez.                                                                                                                                                                                                                                                                  |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|Mailegua eskatzeko 3 aukera ditu: 3 erakunde ezberdinek laukian dauden baldintzak eskaintzen dizkiote:                                                                                                                                                                                                                                                                    |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+| ______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________   |
+||___________________________________________________________________|__________________________________________A_erakundeak__________________________________________|__________________________________________B_erakundeak__________________________________________|__________________________________________C_erakundeak__________________________________________|  |
+||___1.______________________urteko_tipo_finkoa______________________|_______________________________________________%2_______________________________________________|_______________________________________________%4_______________________________________________|_______________________________________________%5_______________________________________________|  |
+||                   Gainerako urteetan aldakorra                    |                                         Erreferentzia+                                         |                                         Erreferentzia+                                         |                                         Erreferentzia+                                         |  |
+||___________________________________________________________________|____________________________________________100_o.p.____________________________________________|____________________________________________70_o.p._____________________________________________|____________________________________________40_o.p._____________________________________________|  |
+||________________________Hasierako_komisioak________________________|_______________________________________________%1_______________________________________________|_________________________________________Komisio_barik__________________________________________|______________________________________________%0,5______________________________________________|  |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|   1. Atera ezazu UTB/TAE eta hautatu aukera hoberena.                                                                                                                                                                                                                                                                                                                    |
+|   2. Demagun urte hauen azkenean, 1.,2.,3.,4.,5.,6.,7.,8, eta 9.ean erreferentziazko indizea dela %3,5, %3,3, %3,2, %3, %2,8, %2,7, %2,6, %2,5, %2,4. Atera ezazu benetako kostua eta hautatu aukera hoberena.                                                                                                                                                           |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|Oharra: UTB/TAEren kalkuluan ez dira bitartekariei ordaindu behar diren gastuei dagokien gastu gehikinik kontuan hartzen.                                                                                                                                                                                                                                                 |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|                                                                                                                                                                                 Ebazpena                                                                                                                                                                                 |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|Ikusten den moduan datuei begiratuz ez da posible osotara aukera hoberena zein den aukeratzea.                                                                                                                                                                                                                                                                            |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|UTB/TAE kalkulatzeko, mailegu bakoitzean dagokion ekuazioa planteatuko dugu:                                                                                                                                                                                                                                                                                              |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|    * A mailegua.                                                                                                                                                                                                                                                                                                                                                         |
+|                                                                                                                                                        [2903_279_3._gaiko_adibideak__ebatsita__html_58b2fdb9.gif]                                                                                                                                                        |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|                                                                                                                                                       [2903_279_3._gaiko_adibideak__ebatsita__html_m1cc85b88.gif]                                                                                                                                                        |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|UTB/TAE kalkulatzeko ekuaziotik:                                                                                                                                                                                                                                                                                                                                          |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_17a5e61.gif]                                                                                                                                                                                                                                                                                                                 |
+|    * B mailegua.                                                                                                                                                                                                                                                                                                                                                         |
+|                                                                                                                                                        [2903_279_3._gaiko_adibideak__ebatsita__html_2e6e0dab.gif]                                                                                                                                                        |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|                                                                                                                                                        [2903_279_3._gaiko_adibideak__ebatsita__html_5344f807.gif]                                                                                                                                                        |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|UTB/TAE kalkulatzeko ekuaziotik:                                                                                                                                                                                                                                                                                                                                          |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_4bd840c1.gif]                                                                                                                                                                                                                                                                                                                |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|    * C mailegua.                                                                                                                                                                                                                                                                                                                                                         |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|                                                                                                                                                       [2903_279_3._gaiko_adibideak__ebatsita__html_m36a9a7b6.gif]                                                                                                                                                        |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|                                                                                                                                                        [2903_279_3._gaiko_adibideak__ebatsita__html_12afeeef.gif]                                                                                                                                                        |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|UTB/TAE kalkulatzeko ekuaziotik:                                                                                                                                                                                                                                                                                                                                          |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_5a5180ca.gif]                                                                                                                                                                                                                                                                                                                |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+| __________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________                                                               |
+||_______|__________________________________________A_erakundeak__________________________________________|__________________________________________B_erakundeak__________________________________________|__________________________________________C_erakundeak__________________________________________|                                                              |
+||UTB/TAE|_____________________________________________%3,032_____________________________________________|_____________________________________________%4,613_____________________________________________|_____________________________________________%5,500_____________________________________________|                                                              |
+||_______________________________________________________________________________________________________________________[2903_279_3._gaiko_adibideak__ebatsita__html_m4966a743.gif]________________________________________________________________________________________________________________________|                                                              |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|UTB –ak ikusi ondoren nabaria da mailegariak A erakundearen mailegua aukeratuko duela.                                                                                                                                                                                                                                                                                  |
+|   1. UTBren kalkulua ostean “ a posteriori”.                                                                                                                                                                                                                                                                                                                         |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|Ahal dugu egiaztatu ostean egindako kalkuluak ez duela erabaki-hartzea aldatzen.                                                                                                                                                                                                                                                                                          |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|Lehen eta bigarren urteetako seihileroko amortizazio-terminoa eta zorra badaude lehen kalkulatuak.                                                                                                                                                                                                                                                                        |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|Baina, bigarren urterako, berriz kalkulatuko dugu egoera berrirako.                                                                                                                                                                                                                                                                                                       |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_188ac9de.gif]                                                                                                                                                                                                                                                                                                                |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|Bigarren urtean, seihileroko hainbestekoa: [2903_279_3._gaiko_adibideak__ebatsita__html_m114281a.gif]                                                                                                                                                                                                                                                                     |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_205b7ce7.gif]                                                                                                                                                                                                                                                                                                                |
+|    * Hirugarren urterako:                                                                                                                                                                                                                                                                                                                                                |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|Zorra hirugarren urtearen hasieran:                                                                                                                                                                                                                                                                                                                                       |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_30ca6387.gif]                                                                                                                                                                                                                                                                                                                |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|Hirugarren urtean, seihileroko hainbestekoa: [2903_279_3._gaiko_adibideak__ebatsita__html_m528da636.gif]                                                                                                                                                                                                                                                                  |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|Hirugarren urtean, seihileroko amortizazio-terminoa:                                                                                                                                                                                                                                                                                                                      |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_6b00ff6a.gif]                                                                                                                                                                                                                                                                                                                |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|    * Laugarren urterako:                                                                                                                                                                                                                                                                                                                                                 |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|Zorra laugarren urtearen hasieran:                                                                                                                                                                                                                                                                                                                                        |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|                                                                                                                                                        [2903_279_3._gaiko_adibideak__ebatsita__html_24843292.gif]                                                                                                                                                        |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|Laugarren urtean, seihileroko hainbestekoa: [2903_279_3._gaiko_adibideak__ebatsita__html_4d8f636b.gif]                                                                                                                                                                                                                                                                    |
+|Laugarren urtean, seihileroko amortizazio-terminoa:                                                                                                                                                                                                                                                                                                                       |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m41723ef4.gif]                                                                                                                                                                                                                                                                                                               |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|Era berdinean aterako genuke gainerako urteetako seihileroko amortizazio-terminoak:                                                                                                                                                                                                                                                                                       |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m1ee18c61.gif]                                                                                                                                                                                                                                                                                                               |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|Hurrengo laukian erakutsiko ditugu seihileroko amortizazio-terminoei eta urte bakoitzeko lehen seihilabetearen hasierako zorrari dagozkien emaitzak, kontuan hartuz urte bakoitzeko euribor-aren tipoak.                                                                                                                                                                  |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+| ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________ |
+||__|______________________________________________________A_mailegua_______________________________________________________|______________________________________________________B_mailegua______________________________________________________|______________________________________________________C_mailegua______________________________________________________||
+||t_|[2903_279_3._gaiko_adibideak__ebatsita__html_m298c906c.gif]|[2903_279_3._gaiko_adibideak__ebatsita__html_m53aee56e.gif]|[2903_279_3._gaiko_adibideak__ebatsita__html_m275c9fb2.gif]|[2903_279_3._gaiko_adibideak__ebatsita__html_16622826.gif]|[2903_279_3._gaiko_adibideak__ebatsita__html_m5899dd4b.gif]|[2903_279_3._gaiko_adibideak__ebatsita__html_10d5758c.gif]||
+||0_|____________________________---____________________________|_________________________________________________250.000,00|____________________________---____________________________|________________________________________________250.000,00|____________________________---____________________________|________________________________________________250.000,00||
+||2_|_________________________13.853,83_________________________|_________________________________________________227.178,80|_________________________15.289,18_________________________|________________________________________________229.215,86|_________________________16.036,78_________________________|________________________________________________230.181,77||
+||4_|_________________________15.488,41_________________________|_________________________________________________206.191,54|_________________________15.423,93_________________________|________________________________________________207.772,24|_________________________15.286,19_________________________|________________________________________________208.375,91||
+||6_|_________________________15.367,07_________________________|_________________________________________________184.088,56|_________________________15.302,45_________________________|________________________________________________185.255,28|_________________________15.165,16_________________________|________________________________________________185.546,27||
+||8_|_________________________15.313,30_________________________|_________________________________________________160.953,28|_________________________15.248,65_________________________|________________________________________________161.756,02|_________________________15.111,59_________________________|________________________________________________161.790,87||
+||10|_________________________15.219,68_________________________|_________________________________________________136.712,05|_________________________15.155,03_________________________|________________________________________________137.205,93|_________________________15.018,41_________________________|________________________________________________137.046,39||
+||12|_________________________15.140,16_________________________|_________________________________________________111.388,48|_________________________15.075,55_________________________|________________________________________________111.635,24|_________________________14.939,35_________________________|________________________________________________111.349,23||
+||14|_________________________15.107,48_________________________|__________________________________________________85.053,54|_________________________15.042,90_________________________|_________________________________________________85.121,56|_________________________14.906,90_________________________|_________________________________________________84.782,96||
+||16|_________________________15.081,93_________________________|__________________________________________________57.707,70|_________________________15.017,39_________________________|_________________________________________________57.671,17|_________________________14.881,55_________________________|_________________________________________________57.359,20||
+||18|_________________________15.063,58_________________________|__________________________________________________29.354,37|_________________________14.999,08_________________________|_________________________________________________29.293,27|_________________________14.863,36_________________________|_________________________________________________29.092,44||
+||20|_________________________15.052,51_________________________|_______________________________________________________0,00|_________________________14.988,04_________________________|______________________________________________________0,00|_________________________14.852,40_________________________|______________________________________________________0,00||
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|Berriz, balio horiekin guztiekin UTB/TAE kalkulatzen badugu lortzen diren emaitzak hauek izango ziren:                                                                                                                                                                                                                                                                    |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|    * A mailegua.                                                                                                                                                                                                                                                                                                                                                         |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m357f03c8.gif]                                                                                                                                                                                                                                                                                                               |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|    * B mailegua.                                                                                                                                                                                                                                                                                                                                                         |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m2b6fbde6.gif]                                                                                                                                                                                                                                                                                                               |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|    * C mailegua.                                                                                                                                                                                                                                                                                                                                                         |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m2504e8da.gif]                                                                                                                                                                                                                                                                                                               |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+| [2903_279_3._gaiko_adibideak__ebatsita__html_157d5202.gif]                                                                                                                                                                                                                                                                                                               |
+| __________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________                                                               |
+||_______|__________________________________________A_erakundeak__________________________________________|__________________________________________B_erakundeak__________________________________________|__________________________________________C_erakundeak__________________________________________|                                                              |
+||UTB/TAE|_____________________________________________%3,928_____________________________________________|_____________________________________________%3,874_____________________________________________|_____________________________________________%3,935_____________________________________________|                                                              |
+||_______________________________________________________________________________________________________________________[2903_279_3._gaiko_adibideak__ebatsita__html_m69ee9063.gif]________________________________________________________________________________________________________________________|                                                              |
+|                                                                                                                                                                                                                                                                                                                                                                          |
+|Beraz, orain, B mailegua aukeratzeko erabakia izango zen erabaki hoberena, hurrenkera aldatu egin delako.                                                                                                                                                                                                                                                                 |
+|__________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________|
+
+
+
+               1. Hipoteka-maileguaren KITAPEN AURRERATUA.
+
+       _________________________________________________________________________
+      |_______________________________4._adibidea_______________________________|
+      |Partikular batek orain dela 5 urte120.000 €-ko mailegua eskatu zuen 10 |
+      |urtean amortizatzeko %5eko urteko hainbesteko nominalean hilero          |
+      |kapitalizagarrian.                                                       |
+      |                                                                         |
+      |Maileguaren hasierako gastuak hauek izan ziren:                          |
+      |   1. Irekierako komisioa: nominalaren gain % 0,75; gutxienezkoa: 600 €|
+      |   2. Aztertzeko komisioa: nominalaren gain % 0,2; gutxienezkoa: 300 €.|
+      |   3. Notari gastuak: nominalaren gain % 0,35.                           |
+      |   4. Artekariaren gastuak: nominalaren gain % 0,2.                      |
+      |   5. Ekintza Juridiko Dokumentatuen zerga: nominalaren gain % 2,5.      |
+      |                                                                         |
+      |Amortizazio-sistema frantsesa erabiliko da, hileroko termino konstanteen |
+      |bidez.                                                                   |
+      |                                                                         |
+      |Atera itzazu:                                                            |
+      |   1. Eragiketaren UTB /TAE eta benetako hainbestekoak.                  |
+      |   2. Une honetan maileguaren kitapen aurreratua eskatu da. Kasu honetan,|
+      |      partikularrak zorraren gain %1 abonatu beharko du. Atera ezazu     |
+      |      baldintza hauetan balio berrien UTB/TAE eta benetako hainbestekoak.|
+      |                                                                         |
+      |                                Ebazpena                                 |
+      |Maileguari dagokion hasierako gastuak:                                   |
+      |                                                                         |
+      | _______________________________________________________________________ |
+      ||Irekiera-gastuak|0,0075_x_120.000_>_600____|________________________900||
+      ||Aztertze-gastuak|0,002_x_120.000_<_300_____|________________________300||
+      ||Notari_gastuak__|0,0035_x_120.000__________|________________________420||
+      ||Artekaria_______|0,002_x_120.000___________|________________________240||
+      ||Zerga___________|0,025_x_120.000___________|______________________3.000||
+      ||________________|Hasierako_gastuak._Guztira|______________________4.860||
+      |                                                                         |
+      |   1. Atera itzazu: eragiketaren UTB /TAE eta benetako hainbestekoak     |
+      |                                                                         |
+      |Hileroko terminoaren zenbatasuna.-                                       |
+      |                                                                         |
+      |[2903_279_3._gaiko_adibideak__ebatsita__html_13479b51.gif]               |
+      |Kontuan hartuz seihileroko hainbestekoa:                                 |
+      |                                                                         |
+      |     [2903_279_3._gaiko_adibideak__ebatsita__html_468e93ad.gif]dela.     |
+      |                                                                         |
+      |UTB / TAEren kalkulua:                                                   |
+      |                                                                         |
+      |UTB / TAE kalkulatzeko bankuak hartzen dituen komisioak hartu behar dira |
+      |kontuan, zeintzuek UTB/TAE kalkulatzeko sartuko diren.                   |
+      |                                                                         |
+      |                 120.000 - ( 900 + 300 ) = 118.800,00 €                |
+      |                                                                         |
+      |       [2903_279_3._gaiko_adibideak__ebatsita__html_576b597c.gif]        |
+      |                                                                         |
+      |       [2903_279_3._gaiko_adibideak__ebatsita__html_m605e2164.gif]       |
+      |                                                                         |
+      |Bezeroarentzat urteko benetako hainbestekoa:                             |
+      |                                                                         |
+      |Bezeroaren ikuspegitik ordaindu dituen gastu guztiak hartu behar ditu    |
+      |kontuan.                                                                 |
+      |                                                                         |
+      |       [2903_279_3._gaiko_adibideak__ebatsita__html_m29a7be43.gif]       |
+      |                                                                         |
+      |                                                                         |
+      |                                                                         |
+      |   1. Une honetan maileguaren kitapen aurreratua eskatu da. Kasu honetan,|
+      |      partikularrak zorraren gain %1 abonatu beharko du. Atera ezazu     |
+      |      baldintza hauetan balio berrien UTB/TAE eta benetako hainbestekoak.|
+      |                                                                         |
+      |Benetako hainbestekoa.-                                                  |
+      |                                                                         |
+      |Zorra 5. urtearen azkenean (6. urtearen hasieran):                       |
+      |                                                                         |
+      |[2903_279_3._gaiko_adibideak__ebatsita__html_447a41f8.gif]               |
+      |                                                                         |
+      |Kitapenaren zenbatasuna (penalizazioa kontuan hartuta):                  |
+      |                                                                         |
+      |       [2903_279_3._gaiko_adibideak__ebatsita__html_m5d46b9e8.gif]       |
+      |                                                                         |
+      |UTB.-                                                                    |
+      |       [2903_279_3._gaiko_adibideak__ebatsita__html_m67de6457.gif]       |
+      |                                                                         |
+      |       [2903_279_3._gaiko_adibideak__ebatsita__html_564c5be0.gif]        |
+      |                                                                         |
+      |Bezeroaren urteko benetako hainbestekoa.-                                |
+      |                                                                         |
+      |       [2903_279_3._gaiko_adibideak__ebatsita__html_74828f6b.gif]        |
+      |                                                                         |
+      |                                                                         |
+      | [2903_279_3._gaiko_adibideak__ebatsita__html_614e3ab0.gif]              |
+      |_________________________________________________________________________|
+
+
+
+
+               1. CLIP HIPOTEKADUNA.
+
+
+         1. ETXEBIZITZARAKO MAILEGUAK.
+ _______________________________________________________________________________
+|__________________________________5._adibidea__________________________________|
+|Finantza eta Aseguruen Gradua atera duen ikasle ohi batek Madrilera doa lana   |
+|dela eta bi aukera hauen artean aztertzen ari da etxebizitza erostea ala       |
+|alokairuan hartzea.                                                            |
+|                                                                               |
+|   1. Etxebizitza erosi.                                                       |
+|                                                                               |
+|. Erosketa-prezioa: 300.000€ , 65m2–ko etxebizitza.                        |
+|. Balio erantsiaren gaineko zerga: %7                                          |
+|. Ekintza Juridiko Dokumentatuen gaineko zerga: %1                             |
+|. PFGZn etxebizitza erosteagatik eta finantzatzeagatik kenkaria dago: %18koa,  |
+|12.000€ko mugaz. Balio katastrala %40.                                       |
+|. Erosketaren formalizazio-gastuak: prezioaren %0,65                           |
+|                                                                               |
+|Hipoteka-mailegua eskatu du 20 urtera %100gatik:                               |
+|    * Eragiketaren interes-tipoa: i = %6                                       |
+|    * Maileguaren banketxearen komisioa: %0,5                                  |
+|    * Hipoteka-mailegua izateagatik Ekintza Juridiko Dokumentatuen gaineko     |
+|      zerga: %1                                                                |
+|    * Tasazio-gastuak, erregistroaren egiaztapena, notarioa: %1,3              |
+|                                                                               |
+|   1. Etxebizitzaren alokairua 18.000 € urtean.                              |
+|    * Alokairuan ordaindutakoak 12.000 €ko mugaz, PFGZan %28ko kenkaria du   |
+|      (zergaren marjinala).                                                    |
+|    * Etxebizitzaren IBI %0,2                                                  |
+|    * Etxebizitza mantentzea %0,4                                              |
+|Azken bi osagai hauek %2ko urteko inflazioan haziko dira.                      |
+|                                                                               |
+|Eguneratzeko 15 urterako Estatu-obligazioen interes-tipoa %4,5 erabiliko dugu. |
+|                                                                               |
+|15 urte igaro ondoren Bilbora itzuli da aktuario lanetan eta ondorioz          |
+|etxebizitza saldu eta mailegua kitatu egiten du.                               |
+|                                                                               |
+|Etxebizitza urteko %1ean birbaloratu da.                                       |
+|Kitapen aurreratuagatik banketxearen komisioa: %1,5                            |
+|Ekintza Juridiko Dokumentatuen gaineko zerga: %1                               |
+|Kitapenaren gastuak (notarioa, erregistroa, …): %1,3                         |
+|PFGZ salmentagatik : %28                                                       |
+|                                                                               |
+|                                   Ebazpena                                    |
+|                                                                               |
+|Etxebizitzaren_hasierako_kostua:                                               |
+|                                                                               |
+|Balio erantsiaren gaineko zerga: BEZa = 0,07 x 300.000 = 21.000 €            |
+|Ekintza Juridiko Dokumentatuen gaineko zerga: EJDZ = 0,01 x 300.000 = 3.000 €|
+|Erosketaren formalizazio-gastuak: EFG = 0,0065 x 300.000 = 1.950 €           |
+|                                                                               |
+|Etxebizitzaren hasierako kostua = Etxebizitzaren prezioa + BEZa + EJDZ + EFG = |
+|= 300.000+21.000 +3.000 + 1.950 = 325.950 €                                  |
+|                                                                               |
+|Maileguagatik_lortutako_sarrera_garbiak:                                       |
+|                                                                               |
+|. Banketxearen komisioa: Kb = 300.000 x 0,005 = 1.500 €                      |
+|. Ekintza Juridiko Dokumentatuen gaineko Zerga, maileguaren zenbatasuna hartuko|
+|dugu zerga- oinarritzat: EJDZ = 300.000 x 0,01 = 3.000 €                     |
+|. Beste gastu batzuk: G = 300.000 x 0,013 = 3.900 €                          |
+|                                                                               |
+|Mailegutik lortutako sarrera garbia = 300.000 – 1.500 – 3.000 – 3.900 = 2|1.600
+|€                                                                            |
+|                                                                               |
+|Hasierako ordainketa garbian = 325.950 – 291.600 = 34.350 €.               |
+|                                                                               |
+|Jardueran_ari_den_artean,_izango_duen_kapitalen_fluxua:                        |
+|                                                                               |
+|    * Maileguaren terminoa :                                                   |
+|      [2903_279_3._gaiko_adibideak__ebatsita__html_46ec8d5c.gif]               |
+|                                                                               |
+|- PFGZren kenkaria 1. urtean (etxea erosteagatik kenkaria:                     |
+|                                                                               |
+|300.000 x 0,18 = 54.000 > 12.000 €  12.000 €                            |
+|                                                                               |
+|- PFGZren maileguaren terminoaren kenkaria: 26.155,37 x 0,18 = 4.707,97 € <  |
+|12.000€                                                                      |
+|                                                                               |
+|Termino garbia : 26.155,37 4.707,97 = 23.539,83 €                            |
+|                                                                               |
+|Termino garbien balio eguneratua (balioztatzeko interes-tipoan):               |
+|                                                                               |
+|           [2903_279_3._gaiko_adibideak__ebatsita__html_3cafdae.gif]           |
+|                                                                               |
+|Terminoen balio eguneratu garbia (etxe-kenkariak kontuan hartuta):             |
+|                                                                               |
+|(26.155,37-12.000) . (1,035)-1 +230.280,93= 243.826,74 €                     |
+|                                                                               |
+|IBI kuoten balio eguneratua:                                                   |
+|                                                                               |
+|. Lehen urteko IBI: Balio katastrala x  = 300.000 x 0,4 x 0,002 = 240 €|
+|                                                                               |
+|           [2903_279_3._gaiko_adibideak__ebatsita__html_e6c2961.gif]           |
+|                                                                               |
+|Etxebizitza mantentzearen balio eguneratua:                                    |
+|                                                                               |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m6781e5a8.gif]                    |
+|                                                                               |
+|Balio eguneratu osoa: 243.826,74 + 2.923,80 + 14.618,99 = 261.369,53 €       |
+|                                                                               |
+|                                                                               |
+|Etxebizitza_saltzeagatik_sarrera_garbiak:                                      |
+|                                                                               |
+|Etxebizitza %1,1ean birbaloratu da urtean behin, beraz salmenta-prezioa da:    |
+|                                                                               |
+|          [2903_279_3._gaiko_adibideak__ebatsita__html_m4637d911.gif]          |
+|. PFGZ:                                                                        |
+|                                                                               |
+|Zerga-oinarria (ZO) diferentziagatik aterako dugu, etxebizitzaren salmenta-    |
+|prezio gordina eta etxebizitzaren erosketa gordinaren artean.                  |
+|                                                                               |
+|ZO = 348.290,69 – 300.000 = 48.290,69 €                                    |
+|Zerga-kuota : 48.290,69 x 0,28 = 13.521,39 €                                 |
+|Etxebizitza saltzeagatik sarrera garbiak: 348.290,69 – 13.521,39 = 334.769,29|€
+|                                                                               |
+|. Azken gastuak:                                                               |
+|                                                                               |
+|Maileguaren zorra: [2903_279_3._gaiko_adibideak__ebatsita__html_m11d7eb25.gif] |
+|                                                                               |
+|Banketxearen komisioa maileguaren kitapen aurreratuagatik:                     |
+|                                                                               |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_10e558e.gif]                      |
+|                                                                               |
+|Hipoteka kitatzeagatik zerga: EJDZ = 300.000 x 0,01 = 3.000 €                |
+|                                                                               |
+|Kitatzeagatik gastuak (erregistroa, notaria, etab.) = Gk = 300.000 x0,013 =    |
+|3.900 €                                                                      |
+|                                                                               |
+|Azken ordainketak: 110.175,92 + 1.652,64 + 3.000 + 3.900 = 118.728,56 €      |
+|                                                                               |
+|Etxebizitzaren sarrera_garbia_eguneratuta: 348.290,69 – 118.728,56 = 216.040,|3
+|€                                                                            |
+|                                                                               |
+|Balio baliokidea eguneratuta :                                                 |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_768fc008.gif]111.632,66 €       |
+|                                                                               |
+|                                                                               |
+|Etxea erosi eta saltzeagatik, balio eguneratu garbia kontzeptu guztiengatik:   |
+|                                                                               |
+|                34.350 + 261.369,53 – 111.632,66 = 184.086,66_€            |
+|                                                                               |
+|                                                                               |
+|Alokairuaren ordainketen balio eguneratua, alokairua urtez urte %2an hazten    |
+|bada :                                                                         |
+|                                                                               |
+|          [2903_279_3._gaiko_adibideak__ebatsita__html_5cdafdb1.gif]           |
+|Honek esan nahi du alokairuagatik ordainketen balio eguneratua handiagoa dela  |
+|etxebizitza erosi eta saltzea baino. Baina alokairuak PGZ zergan kenkaria badu,|
+|orduan:                                                                        |
+|                                                                               |
+|Alokairuaren kenkarirako oinarria, urtez urte: 18.000 > 12.000. beraz urtez    |
+|urteko kenkaria da: 12.000 x 0,28 = 3.360 €                                  |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_64a9fb9.gif]                      |
+|                                                                               |
+|Alokairuaren ordainketen balio eguneratu garbia: 219.284,87 – 40.933,18 =    |
+|178.351,69_€.                                                                |
+|                                                                               |
+|Ondorioz, alokairuaren kenkaria kontuan hartu barik hoberena etxebizitza       |
+|erostea izango zen; ordea, alokairuak kenkaria badu, erabaki hoberena etxea    |
+|alokairuan hartzea da.                                                         |
+|                                                                               |
+|                                                                               |
+|Oharra: beste prozedura bat izango zen, etxebizitzaren erosketaren eta         |
+|saltzearen kasuan lehen urterako kostu urterokotu baliokidea ateratzea eta     |
+|lehen urteko alokairuaren prezioarekin konparatzea, gordinean eta garbian.     |
+|                                                                               |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m19066b18.gif]____________________|
+
+         1. MAILEGUAREN SUBROGAZIOA ETA ALDABERRITZEA.
+
+
+ ____________________________________________________________________________
+|________________________________6._adibidea_________________________________|
+|Partikular batek orain dela5 urte 90.000 €ko mailegua eskatu zuen %4,80ko |
+|urteko interesean hilero kapitalizagarrian, 15 urtean amortizatua izateko.  |
+|Une honetan beste banketxe batek mailegu zaharrean subrogatzea eskaini dio. |
+|Lortu duen informazioa da subrogazioaren gastu guztiak zorraren saldoaren %1|
+|direla. Banketxe berriak eskaini dion hainbesteko nominala da urteko %3,80  |
+|hilero kapitalizagarria.                                                    |
+|Atera ezazu subrogazioa interesatzen bazaio.                                |
+|                                                                            |
+|                                  Ebazpena                                  |
+|Hasierako maileguan amortizazio-terminoa:                                   |
+|                                                                            |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_50aee326.gif]                  |
+|                                                                            |
+|Zor, onartua, 5. unean da:                                                  |
+|                                                                            |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_5d474019.gif]                  |
+|Mailegu berriaren terminoa da:                                              |
+|                                                                            |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m2022de74.gif]                 |
+|                                                                            |
+|Erantzuna:                                                                  |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_1b07a09d.gif],ondorioz         |
+|subrogazioa interesatzen zaio.                                              |
+|[2903_279_3._gaiko_adibideak__ebatsita__html_m3f8eab3c.gif]_________________|
+ [2903_279_3._gaiko_adibideak__ebatsita__html_0.gif]
+[2903_279_3._gaiko_adibideak__ebatsita__html_0.gif]
+[2903_279_3._gaiko_adibideak__ebatsita__html_0.gif]

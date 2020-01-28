@@ -1,0 +1,1265 @@
+
+
+
+
+
+
+Donostiako Enpresa-ikasketen Unibertsitate-
+Eskola                        ENPRESARAKO MATEMATIKAK II 
+ 
+Laugarren gaia: Hoberenatzea aldagai anitzetan (hoberenatze ez baldintzatua) 
+ 
+1.- Hoberenatze problema baten planteamendu orokorra 
+Aldagai  anitzeko  funtzio  bat  emanda,  bere  hoberenak  kalkulatzea,  baldintzarik  gabe,  honelako 
+problema bat ebaztea da:  hoberenatu 
+)
+,...,
+,
+(
+2
+1
+n
+x
+x
+x
+f
+y
+=
+, hau da, helburu-funtzioak balio maximo 
+eta minimoak non hartzen dituen aurkitzea. 
+ 
+Baldintzarik  gabeko  hoberenatzean,  funtzioaren  puntu  hoberenak  E  izate-
+eremu  osoan  bilatuko 
+ditugu. 
+ 
+2.- Topologia nozioak 
+n
+x
+R
+∈
+0
+r
+ 
+puntua emanda, bertan zentroa duen bola irekia, 
+0
+>
+δ
+erradiokoa, honako puntu-multzoa 
+da: 
+{
+}
+δ
+δ
+<
+∈
+=
+)
+,
+(
+/
+)
+(
+0
+0
+x
+x
+d
+x
+x
+B
+n
+r
+r
+r
+r
+R
+.  Hots, 
+0
+x
+r
+  puntutik 
+δ  baino  distantzia  txikiagora  dauden 
+puntu guztiak. 
+• 
+n
+x
+R
+∈
+0
+r
+ 
+puntua  eta 
+n
+A
+R
+⊂
+  multzoa  emanda, 
+0
+x
+r
+  da  A-ren  barne-puntua,  bertan 
+zentratutako  bola  ireki  bat  existitzen  bada  A  multzoaren  partea  dena.  A-
+ren  barne-puntu 
+guztiek A-ren barnealdea osatzen dute. 
+• 
+n
+x
+R
+∈
+0
+r
+  puntua  eta 
+n
+A
+R
+⊂
+  multzoa  emanda, 
+0
+x
+r
+  da  A-ren  muga-puntua,  bertan 
+zentratutako bola ireki guztiek A-
+ren eta bere osagarriaren puntuak badituzte. A-ren muga-
+puntu guztiek A-ren muga osatzen dute. 
+• 
+n
+x
+R
+∈
+0
+r
+ 
+puntua  eta 
+n
+A
+R
+⊂
+  multzoa  emanda, 
+0
+x
+r
+  da  A-ren  kanpo-puntua,  bertan 
+zentratutako  bola  ireki  bat  existitzen  bada  A-
+ren  osagarriaren  partea  dena.  A-ren  kanpo-
+puntu guztiek A-ren kanpoaldea osatzen dute. 
+ 
+•  Multzo baten muga-
+puntu guztiak multzo horretakoak badira, multzo itxia dela esaten da. 
+•  Multzo baten muga-
+puntu guztiak multzo horretakoak ez badira, multzo irekia dela esaten 
+da. 
+•  Multzo  baten  muga-
+puntu  batzuk  multzo  horretakoak badira, eta beste batzuk ez, orduan 
+multzo hori ez da irekia, ezta itxia ere. 
+ 
+
+Donostiako Enpresa-ikasketen Unibertsitate-
+Eskola                        ENPRESARAKO MATEMATIKAK II 
+•  Multzo bat emanda, bere puntu guztietatik jatorrira dagoen distantzia finitua bada, multzo 
+hori bornatua dela esaten da. 
+•  Multzo  bat  emanda,  bere  edozein  puntu  pare  hartuta,  biak  lotzen  dituen  segmentuaren 
+puntu guztiak multzo horretakoak badira ere, multzo hori konbexua dela esaten da. 
+ 
+3.- Hoberen motak. Muturreko balioen teorema 
+)
+,...,
+,
+(
+2
+1
+n
+x
+x
+x
+f
+y
+=
+ funtzioaren puntu hoberenak mota hauetakoak izan daitezke: 
+•  Maximo lokal hertsia: 
+)
+(
+)
+(
+:
+)
+(
+/
+0
+.
+.
+.
+0
+0
+0
+x
+f
+x
+f
+x
+B
+x
+h
+l
+M
+x
+r
+r
+r
+r
+r
+<
+∈
+∀
+>
+∃
+⇔
+δ
+δ
+ 
+•  Maximo lokal erlatiboa:  
+)
+(
+)
+(
+:
+)
+(
+/
+0
+.
+.
+.
+0
+0
+0
+x
+f
+x
+f
+x
+B
+x
+e
+l
+M
+x
+r
+r
+r
+r
+r
+≤
+∈
+∀
+>
+∃
+⇔
+δ
+δ
+ 
+•  Minimo lokal hertsia: 
+)
+(
+)
+(
+:
+)
+(
+/
+0
+.
+.
+.
+0
+0
+0
+x
+f
+x
+f
+x
+B
+x
+h
+l
+m
+x
+r
+r
+r
+r
+r
+>
+∈
+∀
+>
+∃
+⇔
+δ
+δ
+ 
+•  Minimo lokal erlatiboa:  
+)
+(
+)
+(
+:
+)
+(
+/
+0
+.
+.
+.
+0
+0
+0
+x
+f
+x
+f
+x
+B
+x
+e
+l
+m
+x
+r
+r
+r
+r
+r
+≥
+∈
+∀
+>
+∃
+⇔
+δ
+δ
+ 
+•  Maximo global hertsia:  
+)
+(
+)
+(
+:
+.
+.
+.
+0
+0
+x
+f
+x
+f
+E
+x
+h
+g
+M
+x
+r
+r
+r
+r
+<
+∈
+∀
+⇔
+ 
+•  Maximo global erlatiboa:  
+)
+(
+)
+(
+:
+.
+.
+.
+0
+0
+x
+f
+x
+f
+E
+x
+e
+g
+M
+x
+r
+r
+r
+r
+≤
+∈
+∀
+⇔
+ 
+•  Minimo global hertsia:  
+)
+(
+)
+(
+:
+.
+.
+.
+0
+0
+x
+f
+x
+f
+E
+x
+h
+g
+m
+x
+r
+r
+r
+r
+>
+∈
+∀
+⇔
+ 
+•  Minimo global erlatiboa:  
+)
+(
+)
+(
+:
+.
+.
+.
+0
+0
+x
+f
+x
+f
+E
+x
+e
+g
+m
+x
+r
+r
+r
+r
+≥
+∈
+∀
+⇔
+ 
+ 
+Beraz, puntu hoberenak sailkatzeko hiru irizpide ditugu: 
+•  Maximoa edo minimoa izatea:
+ funtzioari baliorik handiena edo txikiena ematea. 
+•  Lokala  edo  globala  izatea:
+  puntu  hoberena  bere  ingurune  batean,  ala  hoberenatze  multzo 
+osoan izatea. 
+•  Hertsia edo erlatiboa izatea:
+ soilik puntu horretan funtzioak lortzea muturreko balioa, edo 
+beste punturen batean ere funtzioak balio bera hartzea. 
+ 
+Muturreko balioen teorema: 
+)
+(x
+f
+y
+r
+=
+  izanik  funtzio  jarraia 
+n
+S
+R
+⊂
+multzo  itxi  eta  bornatu  batean,  orduan  multzo  horretan 
+maximo bat (
+M
+x
+r
+) eta minimo bat (
+m
+x
+r
+) existitzen dira, non: 
+)
+(
+)
+(
+)
+(
+M
+m
+x
+f
+x
+f
+x
+f
+r
+r
+r
+<
+<
+ 
+ 
+
+Donostiako Enpresa-ikasketen Unibertsitate-
+Eskola                        ENPRESARAKO MATEMATIKAK II 
+4.- Barne hoberen lokalerako baldintza beharrezkoa. Puntu gerakorrak. Zela-
+puntuak 
+)
+(x
+f
+y
+r
+=
+  funtzioaren  deribatu  partzialak  existitzen  badira,  funtzioaren  hurbilketa  linealaz 
+badakigu 
+)
+(
+)
+(
+)
+(
+)
+(
+0
+0
+0
+x
+x
+x
+f
+x
+f
+x
+f
+r
+r
+r
+r
+r
+−
+⋅
+∇
++
+≈
+  izango  dela, 
+0
+x
+r
+  puntuan  zentratutako  bola  ireki  baten 
+x
+r
+  puntuetarako.  Bestalde, 
+)
+(
+)
+(
+0
+0
+x
+x
+x
+f
+r
+r
+r
+−
+⋅
+∇
+  biderkadura  eskalarrak  balio  positiboak  zein 
+negatiboak har ditzake,  x
+r
+ desberdinetarako. 
+0
+x
+r
+  maximo  lokal  hertsia  izanik,  bertan  zentratutako  bola  batean 
+)
+(
+)
+(
+0
+x
+f
+x
+f
+r
+r <
+  izango  da, 
+ondorioz,  bola  horretako  x
+r
+  guztietarako 
+0
+)
+(
+)
+(
+0
+0
+≤
+−
+⋅
+∇
+x
+x
+x
+f
+r
+r
+r
+  izatea  beharko  genuke,  eta 
+biderkadura  eskalar  horrek  zeinu  desberdinak  har  ditzakeenez,  nahitaezkoa  da 
+0
+)
+(
+0
+=
+∇ x
+f
+r
+ 
+egiaztatzea. 
+Antzera, 
+0
+x
+r
+ minimo lokal hertsia bada, frogatzen da nahitaezkoa dela bertan 
+0
+)
+(
+0
+=
+∇ x
+f
+r
+ betetzea. 
+(Modu bertsuan frogatuko genuke maximo eta minimo lokal erlatiboetarako) 
+ 
+Beraz: 
+0
+x
+r
+ hoberen lokala  
+0
+)
+(
+0
+=
+∇
+⇒
+x
+f
+r
+ (baina inplikazioa ez da beste aldera betetzen) 
+ 
+Bi  aldagai  askeko  funtzioetako  grafikoetan,  gauza  argia  da:
+  puntu  batean  maximo  lokal  bat  zein 
+minimo  lokal  bat  baldin  badago,  bertan  plano  ukitzailea  horizontala  izango  da,  hau  da,  bere  bi 
+deribatu partzialek zero balioko dute. 
+Baina  puntu  batean  deribatu  partzialak  zero  izateak  
+(funtzioaren  plano  ukitzailea  horizontala 
+izateak) ez du ziurtatzen puntu horretan maximo edo minimo lokal bat dagoenik. 
+ 
+Puntu  gerakorrak: 
+0
+)
+(
+0
+=
+∇ x
+f
+r
+  betetzen  duten  puntu  guztiak  puntu  gerakorrak  (edo  kritikoak) 
+direla esango dugu, hoberen lokalak izan ala ez. 
+ 
+Zela-puntuak: hoberen lokalak ez diren puntu gerakorrei zela-
+puntuak esaten zaie. 
+ 
+5.- Forma koadratikoak 
+n
+n
+A ×  matrize simetriko bat emanda, 
+x
+A
+x
+t
+r
+r
+⋅
+⋅
+ biderkadurari forma koadratikoa esaten zaio, izanik 
+n
+x
+R
+∈
+r
+. 
+Forma koadratikoen sailkapena: 
+• 
+0
+>
+⋅
+⋅
+x
+A
+x
+t
+r
+r
+ bada 
+0
+r
+r ≠
+∀x
+, definitu positiboa da. 
+• 
+0
+≥
+⋅
+⋅
+x
+A
+x
+t
+r
+r
+ bada, gutxienez anulatuz 
+0
+r
+r ≠
+x
+ baterako, erdidefinitu positiboa da. 
+
+Donostiako Enpresa-ikasketen Unibertsitate-
+Eskola                        ENPRESARAKO MATEMATIKAK II 
+• 
+0
+<
+⋅
+⋅
+x
+A
+x
+t
+r
+r
+  bada 
+0
+r
+r ≠
+∀x
+, definitu negatiboa da. 
+• 
+0
+≤
+⋅
+⋅
+x
+A
+x
+t
+r
+r
+  bada, gutxienez anulatuz 
+0
+r
+r ≠
+x
+ baterako, erdidefinitu negatiboa da. 
+• 
+0
+>
+⋅
+⋅
+x
+A
+x
+t
+r
+r
+    bada  gutxienez  x_  bektore  baterako,  eta 
+0
+<
+⋅
+⋅
+x
+A
+x
+t
+r
+r
+  gutxienez  beste 
+baterako, definitu gabea da. 
+ 
+Forma koadratikoak sailkatzeko modu desberdinak daude. Matrizearen minore nagusiak erabiliz:
+ 
+•  Minore nagusi guztiak positiboak badira, forma koadratikoa definitu positiboa da. 
+•  Minore  nagusi  guztiak,  azkena  ezik,  positiboak  badira,  eta  matrizearen  determinantea 
+nulua, orduan forma koadratikoa erdidefinitu positiboa da. 
+•  Ordena  bakoitiko  minore  nagusi  guztiak  negatiboak  badira,  eta  ordena  bikoitiko  guztiak 
+positiboak, forma koadratikoa definitu negatiboa da. 
+•  Ordena  bakoitiko  minore  nagusi  guztiak  negatiboak  badira,  eta  ordena  bikoitiko  guztiak 
+positiboak,  azkena  ezik,  eta  matrizearen  determinantea  nulua  bada,  orduan  forma 
+koadratikoa erdidefinitu negatiboa da. 
+•  Bestela,  forma  koadratikoa  definitu  gabea  da  ziurrenera.  (Oharra:
+  tarteko  minore  nagusi  nuluak 
+badaude,  forma  erdidefinitua  izan  daiteke  ere,  beste  irizpideak  erabili  beharko  genituzke,  autobalioena 
+esaterako [Sydsaeter, 424 orr.] edo minore guztiak aztertzearena 
+[Sydsaeter, 427 orr.]) 
+ 
+6.- Hoberen lokalerako baldintza nahikoak 
+)
+(x
+f
+y
+r
+=
+  funtzioaren  bigarren  ordenako  deribatu  partzialak  existitzen  badira,  funtzioaren 
+hurbilketa koadratikoaz badakigu 
+x
+x
+Hf
+x
+x
+x
+f
+x
+f
+x
+f
+t
+r
+r
+r
+r
+r
+r
+r
+∆
+⋅
+⋅
+∆
++
+∆
+⋅
+∇
++
+≈
+)
+(
+)
+(
+)
+(
+)
+(
+0
+2
+1
+0
+0
+ izango dela, 
+0
+x
+r
+ 
+puntuan zentratutako bola ireki baten  x
+r
+ puntuetarako. 
+0
+x
+r
+  puntu  gerakorra  izanik  eta 
+)
+(
+0
+x
+Hf
+r
+  definitu  negatiboa  bada, 
+)
+(
+)
+(
+0
+x
+f
+x
+f
+r
+r <
+  beteko  da,  alegia, 
+0
+x
+r
+ maximo lokal hertsia izango da. Hau da: 
+
+
+
+−
+=
+∇
+)
+(
+.
+)
+(
+0
+)
+(
+0
+0
+def
+x
+Hf
+x
+f
+r
+r
+r
+  
+0
+x
+r
+⇒
+  maximo lokal hertsia. 
+Antzera, 
+0
+x
+r
+ puntu gerakorra izanik eta 
+)
+(
+0
+x
+Hf
+r
+ definitu positiboa bada, 
+)
+(
+)
+(
+0
+x
+f
+x
+f
+r
+r >
+ beteko da, 
+alegia, 
+0
+x
+r
+ minimo lokal hertsia izango da. Hau da: 
+
+
+
++
+=
+∇
+)
+(
+.
+)
+(
+0
+)
+(
+0
+0
+def
+x
+Hf
+x
+f
+r
+r
+r
+  
+0
+x
+r
+⇒
+  minimo lokal hertsia. 
+
+Donostiako Enpresa-ikasketen Unibertsitate-
+Eskola                        ENPRESARAKO MATEMATIKAK II 
+Bestalde, 
+0
+x
+r
+  puntu  gerakorra  izanik  eta 
+)
+(
+0
+x
+Hf
+r
+  definitu  gabea  bada, 
+)
+(
+)
+(
+0
+x
+f
+x
+f
+r
+r <
+  eta 
+)
+(
+)
+(
+0
+x
+f
+x
+f
+r
+r >
+ beteko da  x
+r
+ desberdinetarako, alegia, 
+0
+x
+r
+ zela-puntua izango da. Hau da: 
+
+
+
+=
+∇
+gabea
+def
+x
+Hf
+x
+f
+.
+)
+(
+0
+)
+(
+0
+0
+r
+r
+r
+  
+0
+x
+r
+⇒
+  zela-puntua. 
+0
+x
+r
+ puntu gerakorra izanik eta 
+)
+(
+0
+x
+Hf
+r
+ erdidefinitu negatiboa bada, zalantzazko kasua da, 
+0
+x
+r
+ izan 
+baitaiteke maximo lokal hertsia, maximo lokal erlatiboa edo zela-puntua. 
+0
+x
+r
+ puntu gerakorra izanik eta 
+)
+(
+0
+x
+Hf
+r
+ erdidefinitu positiboa bada, zalantzazko kasua da, 
+0
+x
+r
+ izan 
+baitaiteke minimo lokal hertsia, minimo lokal erlatiboa edo zela-puntua. 
+ 
+Bigarren  ordenako  deribatu  partzialak  dituen  funtzio  baten  puntu  hoberenak  bilatzen  direnean, 
+aurreko  baldintzak  erabil  daitezke  hoberen  lokalak  aurkitzeko.  Baina  irizpide  horien  bidez, 
+hoberen  globalak  ez  ditugu  lortuko.  Horretarako  funtzioaren  jokaera  aztertu  beharko  da:
+  hoberen 
+lokalak,  edo  hauetako  batzuk,  izan  daitezke  ere  hoberen  globalak,  edo  gerta  daiteke  azken  hauek 
+izate-eremuaren muga-puntuetan egotea. 
+ 
+Bestalde,  maximo  globalerako  
+(zein  minimo  globalerako)  funtzioa  bornatu  gabea  izan  daiteke, 
+bere irudiek infiniturantz (minus infiniturantz) jotzen badute. 
+ 
+7.- Funtzio ahur eta ganbilak. Hoberen globalerako baldintza nahikoa 
+Funtzio  bat  emanda,  bere  izate-
+eremuaren  puntu  baten  inguruan  funtzioaren  hurbilketa  linealaren 
+balioak funtzioarenak baino txikiagoak badira, puntu horretan funtzio hori ganbila dela esaten da. 
+)
+(x
+f
+y
+r
+=
+  funtzioaren  bigarren  ordenako  deribatu  partzialak  existitzen  badira,  funtzioaren 
+x
+x
+Hf
+x
+x
+x
+f
+x
+f
+x
+f
+t
+r
+r
+r
+r
+r
+r
+r
+∆
+⋅
+⋅
+∆
++
+∆
+⋅
+∇
++
+≈
+)
+(
+)
+(
+)
+(
+)
+(
+0
+2
+1
+0
+0
+  hurbilketa  koadratikoa  hartuta 
+0
+x
+r
+-ren  inguruan, 
+bertan hurbilketa lineala 
+x
+x
+f
+x
+f
+p
+r
+r
+r
+∆
+⋅
+∇
++
+=
+)
+(
+)
+(
+0
+0
+ da (lehen bi batugaiak). Funtzioa ganbila izateko 
+p
+x
+f
+>
+)
+(
+r
+ bete beharko denez, 
+)
+(
+0
+x
+Hf
+r
+ definitu positiboa izango da. 
+ 
+Funtzio  bat  emanda,  bere  izate-
+eremuaren  puntu  baten  inguruan  funtzioaren  hurbilketa  linealaren 
+balioak funtzioarenak baino handiagoak badira, puntu horretan funtzio hori ahurra dela esaten da. 
+)
+(x
+f
+y
+r
+=
+ funtzioaren bigarren ordenako deribatu partzialak existitzen badira, 
+0
+x
+r
+ puntuan funtzioa 
+ahurra izateko 
+p
+x
+f
+<
+)
+(
+r
+ bete beharko denez, 
+)
+(
+0
+x
+Hf
+r
+ definitu negatiboa izango da. 
+ 
+
+Donostiako Enpresa-ikasketen Unibertsitate-
+Eskola                        ENPRESARAKO MATEMATIKAK II 
+Hoberen globalerako baldintza nahikoa: 
+ 
+)
+(x
+f
+y
+r
+=
+  funtzioa  ganbila  bada,  eta  bere  izate-
+eremua  multzo  konbexua,  orduan  minimo  lokala, 
+globala izango da ere. 
+)
+(x
+f
+y
+r
+=
+  funtzioa  ahurra  bada,  eta  bere  izate-
+eremua  multzo  konbexua,  orduan  maximo  lokala, 
+globala izango da ere. 
+ 

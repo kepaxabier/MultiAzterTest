@@ -1,0 +1,649 @@
+
+
+
+
+
+
+
+
+
+
+
+
+                Energia Berriztagarrietan Ingeniaritzako Gradua
+                              Makina Elektrikoak
+                                    2014/15
+
+                             4._Makina_asinkronoak
+
+****** 4.1. Sarrera ******
+Makina asinkronoa makina birakaria da. Makina asinkronoak trifasikoak izaten
+dira gehienetan. Osagai finko baten (estatorea) eta osagai birakari baten
+(errotorea) elkarrekintza elektromagnetikoaren bidez energia elektrikoa energia
+mekaniko bihurtuko du motorren kasuan eta alderantziz sorgailuen kasuan. Makina
+asinkronoaren bereizgarri da errotoreko biraketa-abiadura asinkronoa dela, hau
+da, abiadura sinkronoaren desberdina. Ikusiko den bezala, baldintza hau
+derrigorrezkoa da errotorean tentsioa induzitu dadin.
+Makina asinkronoak azaltzean motorra hartuko da erreferentzia bezala, hori
+baita erabilera nagusia.
+Ezaugarri-plakan agertzen den informazioa:
+    * Fabrikatzailea
+    * Mota: Sorgailua, motorra
+    * Fabrikazio-zenbakia
+    * Tentsioa (V)
+    * Intentsitatea (A)
+    * Potentzia mekanikoa (W) motorra bada
+    * Itxurazko potentzia (S) sorgailua bada
+    * cosφ
+    * Biraketa abiadura (bira/min)
+    * Maiztasuna (Hz)
+    * Babes kodea
+    * Fabrikazio-urtea
+Estatorea induktorea da eta harilkatu trifasikoa du. Korronte alternoko sistema
+trifasiko baten bidez elikatzen da.
+                                      **
+
+
+                                      **
+                                      **
+                                      **
+                                      **
+                                       *
+                                       *
+Errotorea induzitua da eta harilkatua zirkuitulaburrean dauka. Errotore
+harilkatua edo urtxintxa kaiolakoa izan daiteke.
+                                       *
+                                       *
+Estatoreko hiru harilak izarrean edo triangeluan konekta daitezke. Hiru harilen
+bi muturrak borne-plakan daude eskuragarri. Adibidez, 4.4 irudiko borne-plakan,
+hiru harilen muturrak U1-U2, V1-V2eta W1-W2dira. Borne-plakan estatoreari
+dagozkion 6 borne daude beraz. Harilak ez dira ikusten, beraz 4.4.a) irudiak
+adierazi nahi duena da plakan ikusten diren borneak harilen muturrak direla.
+Nabarmentzekoa da haril baten bi bornak ez direla egoten parez pare. Horren
+arrazoia triangelu konexioa erraztea da. 4.4.b) irudian agertzen den bezala,
+triangelu konexioa egiteko, parez pare dauden borneak konektatu behar dira
+kobrezko pletinen edo eroaleen bidez. Izar konexioa egiteko alde bateko mutur
+guztiak elkarrekin konektatzen dira izarraren neutroa osatuz (4.4.c).
+                                      **
+Argazkian urtxintxa-kaiolako makina asinkrono baten borne-plaka ikus daiteke.
+Estatoreko hiru harilen hasierako eta bukaerako muturrak ikus daitezke (6
+borne). Urtxintxa-kaiolako errotoreko harilen hasierak elkarrekin
+zirkuitulaburrean daude makinaren barruan (horregatik ez dago kanpo-bornerik).
+Berdin gertatzen da errotoreko harilen bukaerentzat.
+ Makina horren ezaugarri plaka ondorengoko irudian ikus daiteke. Nabarmentzekoa
+da U tentsio eta I intentsitate izendatuentzat bi balio daudela. BatΔtriangelu-
+konexioari dagokio eta bestea Y izar-konexioari.
+Hurrengo argakian, errotore harilkatuko makina asinkrono baten borne-plaka ikus
+daiteke. Kasu honetan, errotoreko harilen hasierak zirkuitulaburrean daude
+makinaren barnean baina bukaera bakoitza borne batera doa (K, L, M). Borne
+horiek zirkuitulaburrean jarri behar dira, baina aukera ematen du borne eta
+zirkuitulaburraren artean erresistentzia bat jartzeko. Horrela, errotoreko
+erresistentzia handitzen da eta bere portaera aldatzen da.
+Irudian, eraztun igurzleak eta eskuilak ikus daitezke. Eskuilak K,L,M borneekin
+konektaturik daude eta eraztunak errotoreko harilen bukaerekin.
+****** 4.2. Eremu magnetiko birakaria ******
+Esan bezala, estatoreak harilkatu trifasikoa du eta korronte alternoko sistema
+trifasiko baten bidez elikatzen da. Ferrarisen teoremak erakusten duen bezala,
+sistema horrek eremu magnetiko birakaria sortzen du makinaren nukleo
+magnetikoan.
+Makinaren barneko angelu geometrikoarentzat jatorri bat definitzen
+bada,θgangelu-geometrikora dagoen P puntu batean, p polo-pareko estatoreko hiru
+hariletako bakoitzak ezarriko duen indar magnetoeragilea:
+
+
+
+
+
+
+Adierazpen hauetan Fmeintentsitatearen anplitudearen arabera dagoen indar
+magnetoeragilearen anplitudea da.
+Adierazpenak beste modu batera jar daitezke:
+
+
+
+
+
+
+
+
+
+
+
+
+Indar magnetoeragile totala:
+
+
+
+
+Denbora (t) aldatzean, indar magnetoeragile maximoa ( izango duen angelu
+geometrikoa (θg) aldatzen joango da. Beste hitzetan,indar magnetoeragilea
+birakaria da.
+                                       *
+**
+Biraketa-abiaduraren noranzkoa bi fase elkarren artean trukatuz lor daiteke.
+                                      **
+Beraz, intentsitate trifasikoa daraman harilkatu trifasiko batek n1abiaduran
+biratzen duen eremu magnetiko birakari bat sortzen du estatorean. Abiadura
+bira/min adierazten bada:
+
+
+
+
+f1sareko maiztasuna da, eta balio finkoa izaten du, 50 Hz Europan. Bider 60
+egiten da minutu batek 60 segundo dituelako. Azkenik, n1biraketa-abiadura
+(bira/min), p polo-pare kopuruaren araberakoa da. Zenbat eta polo-pare gehiago
+orduan eta biraketa-abiadura txikiagoa. Horren arrazoia da intentsitateak ziklo
+bat egiten duenean, eremu magnetikoaren uhina polo-pare baten hasieratik
+bukaeraraino doala. Estatoreak polo-pare bakarra badauka ziklo batean eremu
+magnetikoak bira osoa emango dio estatoreari. Bi polo-pare badauzka, ziklo
+batean bira erdia emango du (polo-pare batek betetzen duen zatia) eta beste
+ziklo bat beharko du bira osoa osatzeko, hiru polo-pare badauzka hiru ziklo
+beharko ditu, etab. Sareko f1maiztasunari loturiko n1abiadurari abiadura
+sinkrono esaten zaio.
+Era berean, errotorean ere p polo-pareko harilkatua egongo da. Kasu honetan,
+errotoreko intentsitatearen maiztasuna fsbada, errotorearen inguruan eremu
+magnetikoaren nsabiadura hau izango da:
+
+
+Estatoreko eta errotoreko eremu magnetikoak elkar akoplaturik batera biratzen
+dute. Horretarako hau betetzen da:
+
+
+n1: sareko f1maiztasunari loturiko abiadura sinkronoa da
+n2: errotoreko abiadura mekaniko asinkronoa da
+ns: errotoreko fsmaiztasunari loturiko abiadura da
+s lerradurak adierazten du n1abiadura sinkronoaren eta n2abiadura asinkronoaren
+arteko diferentzia
+
+
+Errotorea geldirik dagoenean:
+
+
+Errotorearen abiadura sinkronoa denean:
+
+
+4.3. Indar elektroeragileak eta maiztasunak
+Makina asinkrono bat transformadore baten antza dauka. Estatoreko harila
+transformadorearen primarioaren baliokidea litzateke, eta errotorekoa
+transformadorearen sekundarioarena. Beraz, transformadorearen azalpenean
+erabilitako kontzeptu asko errepikatzen dira makina asinkronoan ere.
+Horrela, estatoreko tentsioaren E1balio-efikaza:
+
+
+Kasu honetan, N1estatoreko faseko espira kopurua da eta f1sareko edo estatoreko
+maiztasuna.
+Errotoreko tentsioaren Esbalio-efikaza:
+
+
+Kasu honetan, N2errotoreko faseko espira kopurua da eta fserrotoreko
+maiztasuna.
+Errotoreko fsmaiztasuna eta estatoreko f1maiztasuna s lerraduraren arabera
+erlazionaturik daude:
+
+
+Errotorea geldirik dagoenean:
+
+
+
+
+Beraz, errotorea geldirik dagoenean transformadore baten portaera du makina
+asinkronoak. Kasu honetan, errotoreko tentsioa transformadore baten
+sekundarioko E2tentsioaren berdina izango da maiztasuna f1delako. Baina makina
+biratzen dagoenean, maiztasuna txikiagoa izango da eta Estentsioa ere bai.
+
+
+Errotorearen parametroak, s lerraduraren arabera aldatzen dira. Erresistentzian
+lerraduraren balioaren eragina baztergarria da baina Xserreaktantzia
+induktiboan eragin nabarmena dauka.
+                                       =
+Erreaktantziaren balioada errotorea geldirik dagoenean (transformadorearen
+baliokidea) eta .
+
+
+4.4. Zirkuitu baliokidea
+Errotoreko Isintentsitatea errotoreko tentsioa eta inpedantzia zatituz lortzen
+da. Intentsitatea s lerraduraren arabera aldatzen da, alde batetik, Estentsioa
+aldatzen delako, eta beste aldetik, Xserreaktantzia aldatzen delako.
+
+
+Aurreko adierazpena moldatu daiteke s lerraduraren arabera daudenak tentsioa
+eta erreaktantzia izatetik erresistentzia izan dadin:
+
+
+Kasu honetan, E2tentsioa eta X2erreaktantzia finkoak dira eta errotorea geldi
+dagoen egoerari dagozkionak dira . Erresistentzia aldiz aldakorra da eta balio
+du. Balio hau bitan banandu daiteke: balio finkoa eta balio aldakorra:
+
+
+Transformadore batekin parekatuz, errotorea Rkkarga aldakorra elikatzen duen
+transformadore baten sekundarioa da.
+                                       *
+Errotorea geldirik dagoenean,eta ondorioz I2intentsitatearen balioa handia da.
+Transformadorearen baliokidetasuna erabiliz, sekundarioa zirkuitulaburrean duen
+transformadorea litzateke.
+                                       =
+Errotorearen abiadura handiagotu ahala, s txikiagotu egingo da,handiagotu, eta
+I2murriztu.
+Nabarmentzekoa da, s aldatzeanI2intentsitatearen osagai erresistiboa bakarrik
+aldatzen dela. Bere osagai induktiboa ez da aldatzen X2konstante delako.
+Ondorioz, s murriztean, osagai erresistiboa igotzen denez, potentzia-faktorea
+( igo egiten da.
+Errotorean karga mekanikorik ez dagoenean, karga mekanikoa marruskadurari
+dagokiona bakarrik denean, biraketa-abiadura sinkronoaren ia berdina da eta
+infinitua da. Transformadorearen baliokidetasuna erabiliz, sekundarioa hutsean
+duen transformadorea litzateke.
+                                       =
+Transformadorearen sekundarioko magnitudeak primariotik ikusteko egiten den
+transformazio berdina egin daiteke errotoreko magnitudeak estatoretik ikusteko.
+Aldaturiko magnitudeak komatxo batekin adieraziko dira:
+                                    V’2=aV2
+                                    E’2=aE2
+                                   I’2=I2/a
+                                   X’2= a2X2
+                                   R’2= a2R2
+Horrela, estatoreko eta errotoreko zirkuituak lotuz, makinaren zirkuti
+baliokidea lortzen da.
+                                       *
+
+
+                                       *
+Transformadorearen kasuan bezala, paraleloko adarra ezkerrera mugitu daiteke,
+zirkuitua sinplifikatuz eta kalkuluak erraztuz.
+                                       *
+
+
+
+
+Zirkuitu baliokideak faseko tentsio eta intentsitateak irudikatzen ditu.
+Lineako tentsio eta intentsitateak konexio trifasikoaren araberakoa izango
+dira.
+    * Izar konexioa
+          o Lineako tentsioa aldiz handiagoa
+
+
+          o Lineako intentsitatea eta fasekoa berdinak
+
+
+    * Triangelu konexioa
+          o Lineako tentsioa eta fasekoa berdinak
+
+
+          o Lineako intentsitatea aldiz handiagoa
+
+
+4.5. Saiakuntzak
+4.5.1. Blokeatutako ardatzeko saiakuntza (zirkuitulaburreko saiakuntza)
+Errotorea blokeatu egiten da, geldirik dago (n2=0).
+Estatorea tentsiomurriztuanelikatzen da. Intentsitate izendatua izatea egiten
+duen tentsioaren balioa aukeratzen da.
+
+
+Saiakuntza hau transformadoreko zirkuitulaburreko saiakuntzarekin parekatzen
+da.
+Egiten diren neurketak:
+    * Tentsioa: U1zl/L
+    * Intentsitatea: I1zl/L
+    * Potentzia aktiboa (trifasikoa): Pzl
+Saiakuntza honetan paraleloko adarra baztertu daiteke, bere intentsitatea askoz
+txikiagoa delako.
+Serieko Zbfaseko inpedantziaren parametroak kalkulatzeko lehenbizi potentzia-
+faktorea kalkulatzen da.
+
+
+Faseko inpedantzia kalkulatzeko, faseko tentsio eta intentsitateak erabiltzen
+dira. Hauek estatorearen konexioaren (izar edo triangelu) arabera kalkulatzen
+dira.
+
+
+
+
+
+
+4.5.2 Ardatz askeko saiakuntza
+Errotorea aske dago. Ardatzean ez dago karga mekanikorik.
+Estatorea tentsio izendatuan elikatzen da.
+Egiten diren neurketak:
+    * Tentsioa: U10l/L
+    * Intentsitatea: I10/L
+    * Potentzia aktiboa (trifasikoa): P0
+Saiakuntza hau transformadoreko hutseko saiakuntzarekin parekatzen da baina
+kasu honetan badaude aldeak. Izan ere transformadorearen kasuan sekundarioko
+inpedantzia infinitua da eta bere intentsitatea zero. Baina, makina asinkronoak
+bira dezan, lerradura egon behar da eta ondorioz Rkoso handia den arren, ez da
+infinitua eta errotoreko intentsitate bat agertuko da. Kasu honetan,
+Rkmarruskadura galerekin lotzen da, beste karga mekanikorik ez baitago.
+Neurturiko potentzia aktiboak hiru osagai dauzka: burdinako galerak,
+marruskadura galerak eta estatoreko Joule galerak. Errotoreko Joule galerak
+baztertu egiten dira errotoreko intentsitatea oso txikia delako ardatz askean.
+
+
+Estatoreko erresistentzia neurtzen bada kalkula daiteke:
+
+
+Beraz, eta ezagunak direnez, eta -ren batura lortzen da.
+
+
+tentsioaren araberakoa da eta aldiz ez. Tentsioa murrizten bada eta saiakuntza
+behin eta berriz egiten bada, murrizten joango da. Kurba bat irudikatzen bada,
+-ren balioa ondoriozta daiteke.
+**
+Azkenik, Gokalkula daiteke PFebaliotik abiatuz:
+
+
+
+
+Bokalkulatzeko, intentsitatearen Imosagai irudikaria kalkulatuko da:
+
+
+
+
+
+
+4.6. Potentziak
+Saretik xurgaturiko P1potentzia aktiboa,V1,I1eta beraien artekoφdesfasearen
+arabera kalkulatzen da.
+
+
+Estatoreko erresistentzia dela eta PJ1Joule galerak daude.
+
+
+Bai estatoreko bai errotoreko nukleo magnetikoetan burdinako galerak daude
+histeresiagatik eta Foucault-eko intentsitateagatik. Hala ere, maiztasunaren
+balioa errotorean txikia da eta ondorioz estatoreko burdinako galerak askoz
+handiagoak dira. Ondorioz, makinako PFeburdinako galerak estatoreko
+PFe1burdinako galeretara hurbil daitezke.
+
+
+Estatoretik errotorera igarotzen den potentziari P12burdinarteko potentzia
+deritzo. Motor baten kasuan, bere balioa saretik xurgaturiko P1potentzia ken
+estatorean galdurikoa da.
+
+
+Errotorean, erresistentzia dela eta PJ2Joule galerak daude.
+
+
+Errotoreko ardatzera iristen den barne-potentzia mekanikoari Pmbderitzo. Bere
+balioa burdinarteko P12potentzia ken errotorean galdurikoa da.
+
+
+Pmbbarne-potentzia mekanikoa Rkerresistentzia aldakorraren arabera kalkula
+daiteke. Hain zuzen, erresistentzia horren “Joule galerak” dira ardatzera
+iristen den potentzia mekanikoa. Kasu honetan ordea, energia elektrikoa ez da
+bero bihurtzen baizik eta energia mekaniko bihurtzen da.
+
+
+Karga mekanikora iristen den Pepotentzia erabilgarria da Pmbbarne-potentzia
+mekanikoa ken errotoreko PMmarruskadura eta aireztatze galerak.
+
+
+Burdinarteko P12potentzia eta bere ondorioz sortzen diren PJ2Joule galerak eta
+Pmbbarne-potentzia mekanikoa s lerraduraren arabera erlazionaturik daude.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lerradura zenbat eta txikiagoa, orduan eta P12burdinarteko potentziaren zati
+handiagoa bihurtzen da Pmbpotentzia mekaniko.
+Motor baten kasuan, errendimenduak karga mekanikora iristen den Pepotentzia
+mekaniko erabilgarria eta motorrera sartzen den P1potentzia elektrikoa
+erlazionatzen ditu.
+
+
+Sorgailu baten kasuan, errendimenduak sorgailutik irteten den P1potentzia
+elektrikoa eta eragile mekanikoak ardatzean sartzen duen Pepotentzia mekaniko
+erabilgarria erlazionatzen ditu.
+
+
+4.7. Momentu eragilea
+Pmbbarne-potentzia mekanikoak ardatzean eragiten duen Cemomentu eragilea,
+errotorearen n2biraketa-abiaduraren araberakoa da.
+
+
+Aurreko adierazpenean, n2bira/min dela suposatzen da. abiadura angeluarra,
+berriz, rad/s da. Horregatik zatitzen da n260gatik.
+Pmbbarne-potentzia mekanikoa I’2errotorearen intentsitatearen araberakoa da:
+
+
+I’2errotorearen intentsitatea makinaren zirkuitu baliokide sinplifikatuaren
+arabera:
+
+
+Pmbbarne-potentzia mekanikoa:
+
+
+Cemomentu eragilea n1abiadura sinkronoaren arabera jar daiteke:
+
+
+
+
+
+
+Pmbbarne-potentzia mekanikoaren adierazpena ordezkatuz:
+
+
+Ikusten denez, Cemomentu eragilea balio aldakorra dauka eta magnitude hauen
+araberakoa da:
+    * Biraketa-abiadura edo s lerradura
+    * Errotoreko R2erresistentzia
+    * Estatoreko edo sareko V1tentsioa
+    * Sareko maiztasuna edo n1abiadura sinkronoa
+7.15 irudian, Cemomentu eragilea s lerraduraren arabera irudikatzen da.
+Nabarmentzekoa da makina geldirik dagoenean (s=1), momentu eragilea positiboa
+dela eta ondorioz errotorea biraraziko duen indar bat eragingo du. Bestalde,
+momentua handiagotuz doa maximo batera iritsi arte eta ondoren bere balioa
+murrizten du biraketa-abiadura sinkronoan (s=0) bere balioa zero den arte.
+                                       *
+Cemaxbalio maximoa ematen den sCmaxlerradura kalkulatzeko Cemomentu eragilearen
+izendatzailea deribatu daiteke izendatzailearen balio minimoa aurkitzeko eta
+ondorioz Cemomentu eragilearen balio maximoa.
+
+
+
+
+Balio hau Ce momentu eragilearen adierazpenean ordezkatzen bada Cemaxbalio
+maximoa lortzen da:
+
+
+Nabarmentzekoa da errotoreko R2erresistentziaren eragina momentu eragile
+maximoan. Adierazpenetan ikusten denez, Cemaxbalio maximoa ez dago errotoreko
+R2erresistentziaren mende. Aldiz, balio maximo hori ematen den abiadura edo
+lerradura bai. Hau, 7.18 irudian ikus daiteke. R2erresistentzia handiagotzean
+sCmaxlerradura handiagotu egiten da, hau da, maximoa ezkerrerantz desplazatzen
+da. Behin momentu maximoa abiaratze abiaduran kokatzen denean (sCmax=1), ez
+dauka zentzu praktikorik R2erresistentzia igotzen jarraitzeak horrek maximoa
+motorraren lan eremutik (s 1 eta 0 bitartean) kanpora eramango lukeelako.
+R2erresistentzia igo ahal izateko errotorea harilkatua izan behar du eta
+marruskadura eraztunen bidez motorretik kanpo dagoen erresistentzia aldakor
+batera konektatzen da.
+                                       *
+V1tentsioa aldatzean, Cemaxbalio maximoa aldatzen da baina sCmaxlerradura ez da
+aldatzen.
+                                       *
+Karga mekaniko desberdinak daude eta bakoitzak bere momentu eragozlearen kurba
+izango du, momentu eragozlea biraketa-abiadurarekin alda baitaiteke. 7.16
+irudian momentu eragozlearen ohiko kurbak irudikatzen dira:
+    * Momentu konstantea, Cergz A: Kurba hau daukate garabiek eta igogailuek.
+      Potentzia abiadurarekiko zuzenki proportzionala da.
+    * Momentu abiadurarekiko lineala, Cergz B: Kurba hau daukate ehuna eta
+      papera berdintzeko eta satinatzeko makinek. Potentzia abiaduraren
+      karratuarekiko zuzenki proportzionala da.
+    * Momentu abiaduraren karratuarekiko lineala, Cergz B: Kurba hau daukate
+      ponpa zentrifugoek eta haizagailuek. Potentzia abiaduraren kuboarekiko
+      zuzenki proportzionala da.
+                                       *
+Errotorearen biraketa-abiadura egonkortuko da motorraren Cemomentu eragilea eta
+karga mekanikoaren Cergzmomentu eragozlea berdinak direnean. Adibidez, 7.17
+irudian, motorrak Cergz1momentu eragozlea duen karga mekanikoa eragitean, oreka
+puntua A izango da, Ce=Cergzegiten duen puntua.
+                                       *
+Cemomentu eragilea Cergzmomentu eragozlea baino handiagoa denean (Ce>Cergz)
+errotoreak azelerazio positiboa du eta ondorioz biraketa-abiadura handiagotzen
+joango da. Alderantziz, Ce<Cergzbada, errotorea desazeleratu egingo da eta bere
+biraketa-abiadura murrizten joango da. Ondorioz, geldirik dagoen errotore bat
+bere funtzionamendu puntura iris dadin, bide guztian Ce>Cergzbete behar da,
+funtzionamendu puntuan Ce=Cergzden arte. 7.17 irudian, hori horrela dela
+ikusten da Cergz1kargaren kasuan. Aldiz, Cergz2kargaren kasuan, errotorea
+geldirik geratuko litzateke, ezingo luke abiarazi, egoera horretan
+Ce<Cergzdelako eta ondorioz ez dago azelerazio positiborik.
+Bestalde, oreka puntua izango da Ce=Cergzegiten duen puntua, baina oreka puntu
+hori egonkorra izango da s lerradura scmaxbaino txikiagoa bada eta desegonkorra
+izango da handiagoa bada.
+                                       *
+Makina asinkronoaren funtzionamendua motor bezala azaldu da, aplikazio
+erabiliena delako alde batetik, eta azalpenak sinplifikatzeko beste aldetik.
+Baina egia esan makina asinkronoak hiru funtzionamendu-modu ditu bere biraketa-
+abiaduraren arabera:
+    * Motor: Funtzionamendu-modu ohikoena
+          o Ce>0; n2>0. Momentu eragilearen eta biraketa-abiaduraren noranzkoa
+            berdinak dira. Hain zuzen, momentu hau da mugimenduaren erantzule.
+          o 1>s>0. Lerradura positiboa eta 1 baino txikiagoa. Biraketa-
+            abiaduraren noranzkoa abiadura sinkronoaren berdina da (s<1; n2>0)
+            baina bere balioa txikiagoa da (s>0; n2<n1)
+          o P1potentzia elektrikoa sartzen da makinara eta Pepotentzia mekaniko
+            erabilgarria lortzen da
+    * Sorgailu: Funtzionamendu-modu ez hain erabilia baina zenbait sorkuntza-
+      sistemetan erabiltzen dena, adibidez minizentral hidroelektrikoetan.
+          o Ce<0; n2>0. Momentu eragilearen eta biraketa-abiaduraren noranzkoak
+            alderantzizkoak dira. Hain zuzen, momentu honek mugimenduari aurka
+            egingo dio. Sorkuntza-sistemaren turbina da mugimenduaren
+            erantzule.
+          o s<0. Lerradura negatiboa. Biraketa-abiaduraren noranzkoa abiadura
+            sinkronoaren berdina da (s<1; n2>0) eta bere balioa handiagoa da
+            (s<0; n2>n1)
+          o Pepotentzia mekanikoa sartzen da makinara eta P1potentzia
+            elektrikoa lortzen da
+    * Balazta: Funtzionamendu-modu ez iraunkorra, motorra gelditzeko erabiltzen
+      dena
+          o Ce>0; n2<0. Momentu eragilearen eta biraketa-abiaduraren noranzkoak
+            alderantzizkoak dira. Beraz, momentu honek mugimenduari aurka
+            egingo dio.
+          o s>1. Lerradura 1 baino handiagoa. Biraketa-abiaduraren noranzkoa
+            abiadura sinkronoaren alderantzizkoa da (s>1; n2<0).
+          o P1potentzia elektrikoa eta Pepotentzia mekanikoa sartzen dira
+            makinara. Potentzia galeretan bilakatzen da, Joule galerak batez
+            ere.
+                                       *
+Sorgailu bezala ari denean Cemaxbalio maximoa ematen den sCmaxlerradura:
+
+
+Balio hau Cemomentu eragilearen adierazpenean ordezkatzen bada Cemaxbalio
+maximoa lortzen da.
+
+
+
+
+4.8. Abiaduraren erregulazioa
+Errotorearen n2biraketa-abiadura:
+
+
+Ondorioz, n2erregulatzeko hiru aukera daude: f1aldatu, s aldatu edota p aldatu.
+4.8.1. Maiztasunaren aldaketa
+Gaur egun gehien erabiltzen den aukera f1aldatzearena da. Horretarako,
+estatorea maiztasun finko sarera konektaturik egon beharrean maiztasun
+aldakorreko bihurgailu batera konektatuko da.
+V1tentsioa, f1maiztasuna eta fluxu magnetikoa erlazionaturik daude:
+
+
+
+
+Abiadura aldatzean, makinaren momentu maximoa konstante iraun dezan, makinaren
+barneko fluxu magnetikoa konstante iraun behar du. Ondorioz, abiadura aldatzeko
+f1aldatzen bada, V1tentsioa ere aldatu beharko da. V1tentsioa murrizteak ez
+dakar arazorik baina igotzeak muga bat du makinaren isolamendua dela eta.
+Ondorioz, maiztasuna balio izendatutik gora igotzen bada, tentsioa ezin
+daitekeenez igo, momentua jaitsi egingo da (7.76 irudia).
+                                      **
+Bestalde, Cemaxmomentua konstante mantentzeko fluxua erlaziorekiko
+proportzional mantendu behar dela esatea ez da guztiz zehatza. Hau egia da
+maiztasun izendatuaren inguruan baina ez maiztasun txikiekin. Maiztasuna handia
+denean X>>R eta ondorioz . Aldiz, maiztasuna txikia denean, X<<R eta ondorioz .
+Beraz, maiztasun handiekin, Cemaxmomentua konstante mantentzeko V1eta f1-ren
+aldaketa proportzionala izan behar da. Aldiz, maiztasun txikiekin,
+maiztasunaren aldaketa tentsioarena baino handiagoa izan behar da (7.74
+irudia).
+
+
+                                      **
+4.8.2. Lerraduraren aldaketa
+Lerraduraren aldaketaren bidez lortzen den abiadura aldaketa txikia da. Zenbait
+aukera daude lerradura aldatzeko momentua konstante mantenduz: tentsioa
+aldatzea, errotoreko R2erresistentzia aldatzea, p polo-parea aldatzea.
+Cemaxmomentua V1tentsioaren karratuarekiko proportzionala da. Beraz V1aldatzean
+momentua aldatzen da. Nahiz eta Cemaxaldatu, momentu maximoa gertatzen deneko
+sCmaxlerradura ez da aldatzen V1aldatzean. V1igotzean abiadura igotzen da eta
+alderantziz.
+                                       *
+Beste aukera bat errotoreko R2erresistentzia aldatzea da. Lehen esan den
+bezala, R2erresistentzia handiagotzean sCmaxlerradura handiagotu egiten da, hau
+da, maximoa ezkerrerantz desplazatzen da. Behin momentu maximoa abiaratze
+abiaduran kokatzen denean (sCmax=1), ez dauka zentzu praktikorik
+R2erresistentzia igotzen jarraitzeak horrek maximoa motorraren lan eremutik (s
+1 eta 0 bitartean) kanpora eramango lukeelako. R2erresistentzia igo ahal
+izateko errotorea harilkatua izan behar du eta marruskadura eraztunen bidez
+motorretik kanpo dagoen erresistentzia aldakor batera konektatzen da.
+R2igotzean abiadura murriztu egiten da.
+                                       *
+4.8.3. Polo-pare kopurua aldatzea
+Zenbait motorretan, harilkatu berezi baten bidez polo kopurua erdira pasa
+daiteke, adibidez 8 polotik 4 polotara. Polo-parea erdira murriztean, abiadura
+mekanikoa bikoiztu egiten da. Dahlander motor edo bi abiadurako motor esaten
+zaie.
+                                       *
+4.9. Abiaraztea
+Motor asinkronoa abiarazteko, beharrezkoa izango da Cemomentu eragilea
+Cergzmomentu eragozlea baino handiagoa izatea.
+Abiatzeko unean intentsitatea oso handia da. Intentsitate izendatua baino 8-10
+aldiz handiagoa izan daiteke. Horren arrazoia da,errotorea geldirik
+dagoenean,dela. Transformadorearen baliokidetasuna erabiliz, sekundarioa
+zirkuitulaburrean duen transformadorea litzateke. Egoera hau iragankorra da,
+berehala hasiko baita errotorea mugimenduan. Hala ere, intentsitate handi
+horrek Joule galera handiak eta batez ere, tentsio-jaitsiera handiak eragin
+ditzake. Horregatik, araudiek motorra abiaraztean onargarriak diren balio
+maximoak ezartzen dituzte. Adibidez, Behe-tentsioko Erregelamendu
+Elektroteknikoak ezarritakoa 7.1 taulan ikus daiteke.
+                                       *
+Ondorioz, araudia bete dadin, beharrezkoa da intentsitatea murrizteko metodoak
+erabiltzea.
+Metodo gehienek tentsioa murrizten dute. Tentsioa murriztean, makinak
+xurgaturiko intentsitatea modu proportzionalean murrizten da. Hala ere, era
+berean, momentu eragilea ere murrizten da. Gainera, momentua tentsioaren
+karratuarekiko proportzionala da eta ondorioz, momentuan ematen den murrizketa
+intentsitatean ematen dena baino handiagoa da. Beraz, kontuz ibili behar da
+abiaraztea eman dadin momentu eragile nahikoa egon dadin. Ondorioz, abiarazte
+metodoek intentsitatea murrizteaz gain momentu eragilea ahalik eta handien
+mantentzen saiatzen dira.
+4.9.1. Izar-triangelu abiaraztea
+Sareko tentsioa motorrak triangeluan jasaten duenarekin bat etorriko da.
+Ezaugarri plakan agertzen diren bi tentsioen artean txikiena da hau. Arrazoia
+da motorra abiarazitakoan triangelu konexioarekin geldituko dela. Motorra izar
+konexioarekin abiarazten da eta abiarazitakoan triangelu konexiora pasatzen da.
+                                       *
+                                       *
+
+
+
+
+
+
+
+
+
+
+*Irudiak liburu honetatik hartu dira: “Makina Elektrikoak. Oinarrizko
+kontzeptuak eta aplikazio-ariketak”, J. Mazon, J.F. Miñambres, M.A. Zorrozua,
+G. Buigues, V. Valverde, UPV/EHU, 2012.
+**Irudiak liburu honetatik hartu dira: “Máquinas Eléctricas”, J. Fraile Mora,
+Mc Graw Hill, 2008.
+
+
+                                      30

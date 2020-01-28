@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<HTML xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<HEAD>
+<TITLE>6.GAIA.doc</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<META name="generator" content="pdftohtml 0.36"/>
+<META name="author" content="maite"/>
+<META name="date" content="2004-01-20T18:08:08+00:00"/>
+</HEAD>
+<BODY bgcolor="#A0A0A0" vlink="blue" link="blue">
+<!-- Page 1 -->
+<a name="1"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft10{font-size:16px;font-family:Times;color:#000000;}
+	.ft11{font-size:19px;font-family:Times;color:#000000;}
+	.ft12{font-size:16px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page1-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:442px;white-space:nowrap" class="ft10">1</P>
+<P style="position:absolute;top:110px;left:268px;white-space:nowrap" class="ft11"><b>6.GAIA. &#160;INTEGRAL ANIZKOITZAK</b></P>
+<P style="position:absolute;top:197px;left:127px;white-space:nowrap" class="ft12"><b>1. Integral bikoitza. Definizioa.</b></P>
+<P style="position:absolute;top:247px;left:127px;white-space:nowrap" class="ft12"><b>2. Integral bikoitzaren propietateak.</b></P>
+<P style="position:absolute;top:309px;left:127px;white-space:nowrap" class="ft12"><b>3. Integral bikoitzaren kalkulua.</b></P>
+<P style="position:absolute;top:371px;left:127px;white-space:nowrap" class="ft12"><b>4. Aldagai-aldaketa.</b></P>
+<P style="position:absolute;top:433px;left:127px;white-space:nowrap" class="ft12"><b>5. Integral bikoitzaren aplikazio geometrikoak.</b></P>
+<P style="position:absolute;top:464px;left:180px;white-space:nowrap" class="ft12"><b>5.1. Irudi lauen azalerak eta bolumenak.</b></P>
+<P style="position:absolute;top:496px;left:180px;white-space:nowrap" class="ft12"><b>5.2. Gainazal baten azaleraren kalkulua.</b></P>
+<P style="position:absolute;top:558px;left:127px;white-space:nowrap" class="ft12"><b>6. Integral hirukoitzak.</b></P>
+<P style="position:absolute;top:588px;left:180px;white-space:nowrap" class="ft12"><b>6.1. Definizioa eta propietateak.</b></P>
+<P style="position:absolute;top:620px;left:180px;white-space:nowrap" class="ft12"><b>6.2. Integral hirukoitzaren kalkulua.</b></P>
+<P style="position:absolute;top:650px;left:180px;white-space:nowrap" class="ft12"><b>6.3. Aldagai-aldaketak integral hirukoitzean.</b></P>
+<P style="position:absolute;top:681px;left:180px;white-space:nowrap" class="ft12"><b>6.4. Bolumenen integral hirukoitzen bidezko kalkulua.</b></P>
+</DIV>
+<!-- Page 2 -->
+<a name="2"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft23{font-size:16px;font-family:Helvetica;color:#000000;}
+	.ft24{font-size:11px;font-family:Times;color:#000000;}
+	.ft25{font-size:25px;font-family:Symbol;color:#000000;}
+	.ft26{font-size:16px;font-family:Times;color:#000000;}
+	.ft27{font-size:19px;font-family:Symbol;color:#000000;}
+	.ft28{font-size:12px;font-family:Times;color:#000000;}
+	.ft29{font-size:16px;font-family:Symbol;color:#000000;}
+	.ft210{font-size:10px;font-family:Times;color:#000000;}
+	.ft211{font-size:11px;font-family:Symbol;color:#000000;}
+	.ft212{font-size:19px;font-family:Times;color:#000000;}
+	.ft213{font-size:8px;font-family:Times;color:#000000;}
+	.ft214{font-size:12px;font-family:Symbol;color:#000000;}
+-->
+</STYLE>
+<DIV id="page2-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:442px;white-space:nowrap" class="ft20">2</P>
+<P style="position:absolute;top:140px;left:266px;white-space:nowrap" class="ft21"><b>6. GAIA. &#160;INTEGRAL ANIZKOITZAK</b></P>
+<P style="position:absolute;top:202px;left:127px;white-space:nowrap" class="ft22"><b>1.&#160;&#160;INTEGRAL BIKOITZA. DEFINIZIOA</b></P>
+<P style="position:absolute;top:264px;left:154px;white-space:nowrap" class="ft20">Eremu lauaren azaleraren kalkuluak, aldagai bateko funtzio baten integralaren</P>
+<P style="position:absolute;top:298px;left:127px;white-space:nowrap" class="ft20">kontzeptua sortu zuen. Era berean,&#160;</P>
+<P style="position:absolute;top:296px;left:379px;white-space:nowrap" class="ft21"><b>R</b></P>
+<P style="position:absolute;top:291px;left:395px;white-space:nowrap" class="ft24">3</P>
+<P style="position:absolute;top:298px;left:402px;white-space:nowrap" class="ft20">&#160;espazioan solidoen bolumenen kalkuluak integral</P>
+<P style="position:absolute;top:332px;left:127px;white-space:nowrap" class="ft20">bikoitzaren kontzeptua sortzen du.</P>
+<P style="position:absolute;top:383px;left:154px;white-space:nowrap" class="ft20">[a,b] tartean aldagai bateko y=f(x) funtzio baten integralaren kontzeptua,&#160;</P>
+<P style="position:absolute;top:375px;left:696px;white-space:nowrap" class="ft25">∫</P>
+<P style="position:absolute;top:365px;left:696px;white-space:nowrap" class="ft24">b</P>
+<P style="position:absolute;top:409px;left:696px;white-space:nowrap" class="ft24">a</P>
+<P style="position:absolute;top:383px;left:739px;white-space:nowrap" class="ft20">dx</P>
+<P style="position:absolute;top:383px;left:731px;white-space:nowrap" class="ft20">)</P>
+<P style="position:absolute;top:383px;left:722px;white-space:nowrap" class="ft20">x</P>
+<P style="position:absolute;top:383px;left:716px;white-space:nowrap" class="ft20">(</P>
+<P style="position:absolute;top:383px;left:707px;white-space:nowrap" class="ft20">f</P>
+<P style="position:absolute;top:383px;left:761px;white-space:nowrap" class="ft20">,</P>
+<P style="position:absolute;top:436px;left:127px;white-space:nowrap" class="ft20">ezaguna dugu, era berean bi aldagaiko z=f(x,y) funtzioaren&#160;&#160;<i>integral bikoitza</i>&#160;planoko D</P>
+<P style="position:absolute;top:469px;left:127px;white-space:nowrap" class="ft20">eremu batean (itxia eta&#160;&#160;bornatua) defini daiteke eta&#160;</P>
+<P style="position:absolute;top:463px;left:529px;white-space:nowrap" class="ft27">∫∫</P>
+<P style="position:absolute;top:491px;left:529px;white-space:nowrap" class="ft28">D</P>
+<P style="position:absolute;top:469px;left:613px;white-space:nowrap" class="ft20">dy</P>
+<P style="position:absolute;top:469px;left:592px;white-space:nowrap" class="ft20">dx</P>
+<P style="position:absolute;top:469px;left:585px;white-space:nowrap" class="ft20">)</P>
+<P style="position:absolute;top:469px;left:575px;white-space:nowrap" class="ft20">y</P>
+<P style="position:absolute;top:469px;left:567px;white-space:nowrap" class="ft20">,</P>
+<P style="position:absolute;top:469px;left:558px;white-space:nowrap" class="ft20">x</P>
+<P style="position:absolute;top:469px;left:551px;white-space:nowrap" class="ft20">(</P>
+<P style="position:absolute;top:469px;left:542px;white-space:nowrap" class="ft20">f</P>
+<P style="position:absolute;top:469px;left:633px;white-space:nowrap" class="ft20">&#160;adieraziko dugu.</P>
+<P style="position:absolute;top:519px;left:127px;white-space:nowrap" class="ft20">Horretarako, D eremua hautazko kurben bidez n&#160;&#160;azpieremutan zatituko dugu, beren</P>
+<P style="position:absolute;top:552px;left:127px;white-space:nowrap" class="ft20">azalerak&#160;</P>
+<P style="position:absolute;top:546px;left:190px;white-space:nowrap" class="ft29">∆S</P>
+<P style="position:absolute;top:558px;left:212px;white-space:nowrap" class="ft210">1,&#160;</P>
+<P style="position:absolute;top:546px;left:227px;white-space:nowrap" class="ft29">∆S</P>
+<P style="position:absolute;top:558px;left:249px;white-space:nowrap" class="ft210">2, ...,&#160;</P>
+<P style="position:absolute;top:546px;left:287px;white-space:nowrap" class="ft29">∆S</P>
+<P style="position:absolute;top:558px;left:307px;white-space:nowrap" class="ft210">n&#160;ikurren bidez adieraziko ditugu.&#160;Azpieremu bakoitzean (xi,&#160;yi)</P>
+<P style="position:absolute;top:600px;left:127px;white-space:nowrap" class="ft20">puntu bat aukeratuko dugu eta &#160;eta &#160;</P>
+<P style="position:absolute;top:608px;left:497px;white-space:nowrap" class="ft24">i</P>
+<P style="position:absolute;top:584px;left:393px;white-space:nowrap" class="ft24">n</P>
+<P style="position:absolute;top:624px;left:398px;white-space:nowrap" class="ft24">1</P>
+<P style="position:absolute;top:624px;left:387px;white-space:nowrap" class="ft24">i</P>
+<P style="position:absolute;top:608px;left:459px;white-space:nowrap" class="ft24">i</P>
+<P style="position:absolute;top:608px;left:434px;white-space:nowrap" class="ft24">i</P>
+<P style="position:absolute;top:600px;left:486px;white-space:nowrap" class="ft20">S</P>
+<P style="position:absolute;top:600px;left:466px;white-space:nowrap" class="ft20">)</P>
+<P style="position:absolute;top:600px;left:449px;white-space:nowrap" class="ft20">y</P>
+<P style="position:absolute;top:600px;left:441px;white-space:nowrap" class="ft20">,</P>
+<P style="position:absolute;top:600px;left:423px;white-space:nowrap" class="ft20">x</P>
+<P style="position:absolute;top:600px;left:416px;white-space:nowrap" class="ft20">(</P>
+<P style="position:absolute;top:600px;left:408px;white-space:nowrap" class="ft20">f</P>
+<P style="position:absolute;top:595px;left:476px;white-space:nowrap" class="ft29">∆</P>
+<P style="position:absolute;top:589px;left:386px;white-space:nowrap" class="ft25">∑</P>
+<P style="position:absolute;top:619px;left:392px;white-space:nowrap" class="ft211">=</P>
+<P style="position:absolute;top:600px;left:504px;white-space:nowrap" class="ft20">&#160;batura definituko dugu.</P>
+<P style="position:absolute;top:652px;left:154px;white-space:nowrap" class="ft20">f(x,y)&#160;</P>
+<P style="position:absolute;top:646px;left:208px;white-space:nowrap" class="ft29">≥&#160;0 bada D eremuan, f(x</P>
+<P style="position:absolute;top:658px;left:408px;white-space:nowrap" class="ft210">i,&#160;yi).</P>
+<P style="position:absolute;top:646px;left:439px;white-space:nowrap" class="ft29">∆S</P>
+<P style="position:absolute;top:658px;left:460px;white-space:nowrap" class="ft210">i&#160;batugai bakoitzak, geometrikoki,&#160;</P>
+<P style="position:absolute;top:646px;left:740px;white-space:nowrap" class="ft29">∆S</P>
+<P style="position:absolute;top:658px;left:762px;white-space:nowrap" class="ft210">i</P>
+<P style="position:absolute;top:684px;left:127px;white-space:nowrap" class="ft20">oinarriko eta f(xi,yi) altuerako zilindro elemental baten bolumena adierazten du.</P>
+<P style="position:absolute;top:732px;left:127px;white-space:nowrap" class="ft20">Horrela,&#160;</P>
+<P style="position:absolute;top:740px;left:308px;white-space:nowrap" class="ft24">i</P>
+<P style="position:absolute;top:716px;left:204px;white-space:nowrap" class="ft24">n</P>
+<P style="position:absolute;top:755px;left:209px;white-space:nowrap" class="ft24">1</P>
+<P style="position:absolute;top:755px;left:198px;white-space:nowrap" class="ft24">i</P>
+<P style="position:absolute;top:740px;left:270px;white-space:nowrap" class="ft24">i</P>
+<P style="position:absolute;top:740px;left:245px;white-space:nowrap" class="ft24">i</P>
+<P style="position:absolute;top:732px;left:297px;white-space:nowrap" class="ft20">S</P>
+<P style="position:absolute;top:732px;left:277px;white-space:nowrap" class="ft20">)</P>
+<P style="position:absolute;top:732px;left:260px;white-space:nowrap" class="ft20">y</P>
+<P style="position:absolute;top:732px;left:252px;white-space:nowrap" class="ft20">,</P>
+<P style="position:absolute;top:732px;left:234px;white-space:nowrap" class="ft20">x</P>
+<P style="position:absolute;top:732px;left:227px;white-space:nowrap" class="ft20">(</P>
+<P style="position:absolute;top:732px;left:219px;white-space:nowrap" class="ft20">f</P>
+<P style="position:absolute;top:726px;left:287px;white-space:nowrap" class="ft29">∆</P>
+<P style="position:absolute;top:720px;left:197px;white-space:nowrap" class="ft25">∑</P>
+<P style="position:absolute;top:751px;left:203px;white-space:nowrap" class="ft211">=</P>
+<P style="position:absolute;top:732px;left:315px;white-space:nowrap" class="ft20">&#160;zilindro elementalen bolumenen arteko batura da, hau da,</P>
+<P style="position:absolute;top:783px;left:127px;white-space:nowrap" class="ft20">gorputz mailakatu baten bolumena.</P>
+<P style="position:absolute;top:847px;left:127px;white-space:nowrap" class="ft20">Definizioa. D eremuan partiketa ezberdin egiten baditugu non &#160;max{</P>
+<P style="position:absolute;top:841px;left:649px;white-space:nowrap" class="ft29">∆S</P>
+<P style="position:absolute;top:853px;left:671px;white-space:nowrap" class="ft210">i&#160;} zerorantz</P>
+<P style="position:absolute;top:879px;left:127px;white-space:nowrap" class="ft20">doan, hau da&#160;</P>
+<P style="position:absolute;top:874px;left:287px;white-space:nowrap" class="ft29">∞</P>
+<P style="position:absolute;top:874px;left:266px;white-space:nowrap" class="ft29">→</P>
+<P style="position:absolute;top:879px;left:252px;white-space:nowrap" class="ft20">n</P>
+<P style="position:absolute;top:879px;left:304px;white-space:nowrap" class="ft20">, eta &#160;aukeratutako&#160;(xi,yi) puntuak edozein izanda ere,</P>
+<P style="position:absolute;top:931px;left:314px;white-space:nowrap" class="ft28">i</P>
+<P style="position:absolute;top:910px;left:212px;white-space:nowrap" class="ft28">n</P>
+<P style="position:absolute;top:946px;left:218px;white-space:nowrap" class="ft28">1</P>
+<P style="position:absolute;top:946px;left:206px;white-space:nowrap" class="ft28">i</P>
+<P style="position:absolute;top:931px;left:277px;white-space:nowrap" class="ft28">i</P>
+<P style="position:absolute;top:931px;left:252px;white-space:nowrap" class="ft28">i</P>
+<P style="position:absolute;top:946px;left:192px;white-space:nowrap" class="ft28">0</P>
+<P style="position:absolute;top:946px;left:164px;white-space:nowrap" class="ft28">S</P>
+<P style="position:absolute;top:946px;left:129px;white-space:nowrap" class="ft28">max</P>
+<P style="position:absolute;top:924px;left:304px;white-space:nowrap" class="ft20">S</P>
+<P style="position:absolute;top:924px;left:285px;white-space:nowrap" class="ft20">)</P>
+<P style="position:absolute;top:924px;left:267px;white-space:nowrap" class="ft20">y</P>
+<P style="position:absolute;top:924px;left:259px;white-space:nowrap" class="ft20">,</P>
+<P style="position:absolute;top:924px;left:241px;white-space:nowrap" class="ft20">x</P>
+<P style="position:absolute;top:924px;left:234px;white-space:nowrap" class="ft20">(</P>
+<P style="position:absolute;top:924px;left:226px;white-space:nowrap" class="ft20">f</P>
+<P style="position:absolute;top:926px;left:151px;white-space:nowrap" class="ft212">lim</P>
+<P style="position:absolute;top:952px;left:172px;white-space:nowrap" class="ft213">i</P>
+<P style="position:absolute;top:919px;left:293px;white-space:nowrap" class="ft29">∆</P>
+<P style="position:absolute;top:917px;left:208px;white-space:nowrap" class="ft27">∑</P>
+<P style="position:absolute;top:941px;left:210px;white-space:nowrap" class="ft214">=</P>
+<P style="position:absolute;top:941px;left:178px;white-space:nowrap" class="ft214">→</P>
+<P style="position:absolute;top:941px;left:155px;white-space:nowrap" class="ft214">∆</P>
+<P style="position:absolute;top:924px;left:322px;white-space:nowrap" class="ft20">&#160;limitea existitzen bada, limite honi&#160;<i>D eremuan zabaldutako</i></P>
+<P style="position:absolute;top:978px;left:127px;white-space:nowrap" class="ft26"><i>f(x,y) funtzioaren integral bikoitza&#160;&#160;</i>esaten zaio eta&#160;</P>
+<P style="position:absolute;top:973px;left:534px;white-space:nowrap" class="ft27">∫∫</P>
+<P style="position:absolute;top:1001px;left:534px;white-space:nowrap" class="ft28">D</P>
+<P style="position:absolute;top:978px;left:619px;white-space:nowrap" class="ft20">dy</P>
+<P style="position:absolute;top:978px;left:597px;white-space:nowrap" class="ft20">dx</P>
+<P style="position:absolute;top:978px;left:591px;white-space:nowrap" class="ft20">)</P>
+<P style="position:absolute;top:978px;left:581px;white-space:nowrap" class="ft20">y</P>
+<P style="position:absolute;top:978px;left:573px;white-space:nowrap" class="ft20">,</P>
+<P style="position:absolute;top:978px;left:564px;white-space:nowrap" class="ft20">x</P>
+<P style="position:absolute;top:978px;left:557px;white-space:nowrap" class="ft20">(</P>
+<P style="position:absolute;top:978px;left:548px;white-space:nowrap" class="ft20">f</P>
+<P style="position:absolute;top:978px;left:639px;white-space:nowrap" class="ft20">&#160;ikurraren bidez</P>
+<P style="position:absolute;top:1029px;left:127px;white-space:nowrap" class="ft20">adierazten da.</P>
+<P style="position:absolute;top:1069px;left:286px;white-space:nowrap" class="ft27">∫∫</P>
+<P style="position:absolute;top:1098px;left:286px;white-space:nowrap" class="ft28">D</P>
+<P style="position:absolute;top:1075px;left:370px;white-space:nowrap" class="ft20">dy</P>
+<P style="position:absolute;top:1075px;left:349px;white-space:nowrap" class="ft20">dx</P>
+<P style="position:absolute;top:1075px;left:342px;white-space:nowrap" class="ft20">)</P>
+<P style="position:absolute;top:1075px;left:332px;white-space:nowrap" class="ft20">y</P>
+<P style="position:absolute;top:1075px;left:324px;white-space:nowrap" class="ft20">,</P>
+<P style="position:absolute;top:1075px;left:315px;white-space:nowrap" class="ft20">x</P>
+<P style="position:absolute;top:1075px;left:308px;white-space:nowrap" class="ft20">(</P>
+<P style="position:absolute;top:1075px;left:299px;white-space:nowrap" class="ft20">f</P>
+<P style="position:absolute;top:1075px;left:390px;white-space:nowrap" class="ft20">&#160;=&#160;</P>
+<P style="position:absolute;top:1082px;left:596px;white-space:nowrap" class="ft28">i</P>
+<P style="position:absolute;top:1061px;left:494px;white-space:nowrap" class="ft28">n</P>
+<P style="position:absolute;top:1097px;left:501px;white-space:nowrap" class="ft28">1</P>
+<P style="position:absolute;top:1097px;left:488px;white-space:nowrap" class="ft28">i</P>
+<P style="position:absolute;top:1082px;left:559px;white-space:nowrap" class="ft28">i</P>
+<P style="position:absolute;top:1082px;left:534px;white-space:nowrap" class="ft28">i</P>
+<P style="position:absolute;top:1097px;left:475px;white-space:nowrap" class="ft28">0</P>
+<P style="position:absolute;top:1097px;left:447px;white-space:nowrap" class="ft28">S</P>
+<P style="position:absolute;top:1097px;left:412px;white-space:nowrap" class="ft28">max</P>
+<P style="position:absolute;top:1075px;left:586px;white-space:nowrap" class="ft20">S</P>
+<P style="position:absolute;top:1075px;left:567px;white-space:nowrap" class="ft20">)</P>
+<P style="position:absolute;top:1075px;left:549px;white-space:nowrap" class="ft20">y</P>
+<P style="position:absolute;top:1075px;left:541px;white-space:nowrap" class="ft20">,</P>
+<P style="position:absolute;top:1075px;left:523px;white-space:nowrap" class="ft20">x</P>
+<P style="position:absolute;top:1075px;left:516px;white-space:nowrap" class="ft20">(</P>
+<P style="position:absolute;top:1075px;left:509px;white-space:nowrap" class="ft20">f</P>
+<P style="position:absolute;top:1076px;left:433px;white-space:nowrap" class="ft212">lim</P>
+<P style="position:absolute;top:1103px;left:455px;white-space:nowrap" class="ft213">i</P>
+<P style="position:absolute;top:1069px;left:575px;white-space:nowrap" class="ft29">∆</P>
+<P style="position:absolute;top:1068px;left:491px;white-space:nowrap" class="ft27">∑</P>
+<P style="position:absolute;top:1092px;left:493px;white-space:nowrap" class="ft214">=</P>
+<P style="position:absolute;top:1092px;left:460px;white-space:nowrap" class="ft214">→</P>
+<P style="position:absolute;top:1092px;left:438px;white-space:nowrap" class="ft214">∆</P>
+<P style="position:absolute;top:1075px;left:604px;white-space:nowrap" class="ft20">.</P>
+</DIV>
+<!-- Page 3 -->
+<a name="3"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft315{font-size:22px;font-family:Symbol;color:#000000;}
+	.ft316{font-size:16px;font-family:Helvetica;color:#000000;}
+	.ft317{font-size:21px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page3-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:442px;white-space:nowrap" class="ft30">3</P>
+<P style="position:absolute;top:109px;left:180px;white-space:nowrap" class="ft30">Limite hau existitzen bada, ez dago D eremuan egindako partiketa-eraren</P>
+<P style="position:absolute;top:140px;left:127px;white-space:nowrap" class="ft30">menpe, beraz D eremua laukizuzenetan zati daiteke.</P>
+<P style="position:absolute;top:204px;left:127px;white-space:nowrap" class="ft30">Teorema.&#160;z = f(x,y) funtzioa D eremuan jarraitua bada, orduan&#160;</P>
+<P style="position:absolute;top:199px;left:600px;white-space:nowrap" class="ft37">∫∫</P>
+<P style="position:absolute;top:227px;left:600px;white-space:nowrap" class="ft38">D</P>
+<P style="position:absolute;top:204px;left:684px;white-space:nowrap" class="ft30">dy</P>
+<P style="position:absolute;top:204px;left:663px;white-space:nowrap" class="ft30">dx</P>
+<P style="position:absolute;top:204px;left:656px;white-space:nowrap" class="ft30">)</P>
+<P style="position:absolute;top:204px;left:646px;white-space:nowrap" class="ft30">y</P>
+<P style="position:absolute;top:204px;left:638px;white-space:nowrap" class="ft30">,</P>
+<P style="position:absolute;top:204px;left:629px;white-space:nowrap" class="ft30">x</P>
+<P style="position:absolute;top:204px;left:622px;white-space:nowrap" class="ft30">(</P>
+<P style="position:absolute;top:204px;left:613px;white-space:nowrap" class="ft30">f</P>
+<P style="position:absolute;top:204px;left:704px;white-space:nowrap" class="ft30">&#160;integral</P>
+<P style="position:absolute;top:254px;left:127px;white-space:nowrap" class="ft30">bikoitza existitzen da.</P>
+<P style="position:absolute;top:317px;left:127px;white-space:nowrap" class="ft30">Adierazpen geometrikoa.</P>
+<P style="position:absolute;top:347px;left:180px;white-space:nowrap" class="ft30">D eremuan f(x,y) positiboa bada, orduan bere integral bikoitzak f(x,y)</P>
+<P style="position:absolute;top:379px;left:127px;white-space:nowrap" class="ft30">gainazaleraren eta planoaren artean mugatutako bolumena adierazten du.</P>
+<P style="position:absolute;top:845px;left:127px;white-space:nowrap" class="ft32"><b>2.&#160;&#160;INTEGRAL BIKOITZAREN PROPIETATEAK</b></P>
+<P style="position:absolute;top:909px;left:127px;white-space:nowrap" class="ft30">1.</P>
+<P style="position:absolute;top:896px;left:158px;white-space:nowrap" class="ft315">[</P>
+<P style="position:absolute;top:896px;left:278px;white-space:nowrap" class="ft315">]</P>
+<P style="position:absolute;top:903px;left:461px;white-space:nowrap" class="ft37">∫∫</P>
+<P style="position:absolute;top:903px;left:340px;white-space:nowrap" class="ft37">∫∫</P>
+<P style="position:absolute;top:903px;left:144px;white-space:nowrap" class="ft37">∫∫</P>
+<P style="position:absolute;top:903px;left:447px;white-space:nowrap" class="ft39">+</P>
+<P style="position:absolute;top:903px;left:326px;white-space:nowrap" class="ft39">=</P>
+<P style="position:absolute;top:903px;left:214px;white-space:nowrap" class="ft39">+</P>
+<P style="position:absolute;top:931px;left:461px;white-space:nowrap" class="ft38">D</P>
+<P style="position:absolute;top:931px;left:340px;white-space:nowrap" class="ft38">D</P>
+<P style="position:absolute;top:931px;left:144px;white-space:nowrap" class="ft38">D</P>
+<P style="position:absolute;top:909px;left:547px;white-space:nowrap" class="ft30">dy</P>
+<P style="position:absolute;top:909px;left:527px;white-space:nowrap" class="ft30">dx</P>
+<P style="position:absolute;top:909px;left:519px;white-space:nowrap" class="ft30">)</P>
+<P style="position:absolute;top:909px;left:509px;white-space:nowrap" class="ft30">y</P>
+<P style="position:absolute;top:909px;left:501px;white-space:nowrap" class="ft30">,</P>
+<P style="position:absolute;top:909px;left:492px;white-space:nowrap" class="ft30">x</P>
+<P style="position:absolute;top:909px;left:485px;white-space:nowrap" class="ft30">(</P>
+<P style="position:absolute;top:909px;left:475px;white-space:nowrap" class="ft30">g</P>
+<P style="position:absolute;top:909px;left:424px;white-space:nowrap" class="ft30">dy</P>
+<P style="position:absolute;top:909px;left:404px;white-space:nowrap" class="ft30">dx</P>
+<P style="position:absolute;top:909px;left:396px;white-space:nowrap" class="ft30">)</P>
+<P style="position:absolute;top:909px;left:387px;white-space:nowrap" class="ft30">y</P>
+<P style="position:absolute;top:909px;left:379px;white-space:nowrap" class="ft30">,</P>
+<P style="position:absolute;top:909px;left:370px;white-space:nowrap" class="ft30">x</P>
+<P style="position:absolute;top:909px;left:363px;white-space:nowrap" class="ft30">(</P>
+<P style="position:absolute;top:909px;left:354px;white-space:nowrap" class="ft30">f</P>
+<P style="position:absolute;top:909px;left:304px;white-space:nowrap" class="ft30">dy</P>
+<P style="position:absolute;top:909px;left:284px;white-space:nowrap" class="ft30">dx</P>
+<P style="position:absolute;top:909px;left:271px;white-space:nowrap" class="ft30">)</P>
+<P style="position:absolute;top:909px;left:262px;white-space:nowrap" class="ft30">y</P>
+<P style="position:absolute;top:909px;left:254px;white-space:nowrap" class="ft30">,</P>
+<P style="position:absolute;top:909px;left:244px;white-space:nowrap" class="ft30">x</P>
+<P style="position:absolute;top:909px;left:237px;white-space:nowrap" class="ft30">(</P>
+<P style="position:absolute;top:909px;left:228px;white-space:nowrap" class="ft30">g</P>
+<P style="position:absolute;top:909px;left:204px;white-space:nowrap" class="ft30">)</P>
+<P style="position:absolute;top:909px;left:195px;white-space:nowrap" class="ft30">y</P>
+<P style="position:absolute;top:909px;left:187px;white-space:nowrap" class="ft30">,</P>
+<P style="position:absolute;top:909px;left:178px;white-space:nowrap" class="ft30">x</P>
+<P style="position:absolute;top:909px;left:171px;white-space:nowrap" class="ft30">(</P>
+<P style="position:absolute;top:909px;left:162px;white-space:nowrap" class="ft30">f</P>
+<P style="position:absolute;top:992px;left:127px;white-space:nowrap" class="ft30">2.</P>
+<P style="position:absolute;top:992px;left:449px;white-space:nowrap" class="ft32"><b>R</b></P>
+<P style="position:absolute;top:986px;left:434px;white-space:nowrap" class="ft39">∈</P>
+<P style="position:absolute;top:986px;left:410px;white-space:nowrap" class="ft39">∀</P>
+<P style="position:absolute;top:986px;left:261px;white-space:nowrap" class="ft39">=</P>
+<P style="position:absolute;top:986px;left:284px;white-space:nowrap" class="ft37">∫∫</P>
+<P style="position:absolute;top:986px;left:144px;white-space:nowrap" class="ft37">∫∫</P>
+<P style="position:absolute;top:992px;left:422px;white-space:nowrap" class="ft30">k</P>
+<P style="position:absolute;top:992px;left:398px;white-space:nowrap" class="ft30">,</P>
+<P style="position:absolute;top:992px;left:374px;white-space:nowrap" class="ft30">dy</P>
+<P style="position:absolute;top:992px;left:353px;white-space:nowrap" class="ft30">dx</P>
+<P style="position:absolute;top:992px;left:345px;white-space:nowrap" class="ft30">)</P>
+<P style="position:absolute;top:992px;left:336px;white-space:nowrap" class="ft30">y</P>
+<P style="position:absolute;top:992px;left:329px;white-space:nowrap" class="ft30">,</P>
+<P style="position:absolute;top:992px;left:320px;white-space:nowrap" class="ft30">x</P>
+<P style="position:absolute;top:992px;left:313px;white-space:nowrap" class="ft30">(</P>
+<P style="position:absolute;top:992px;left:304px;white-space:nowrap" class="ft30">f</P>
+<P style="position:absolute;top:992px;left:271px;white-space:nowrap" class="ft30">k</P>
+<P style="position:absolute;top:992px;left:243px;white-space:nowrap" class="ft30">dy</P>
+<P style="position:absolute;top:992px;left:222px;white-space:nowrap" class="ft30">dx</P>
+<P style="position:absolute;top:992px;left:215px;white-space:nowrap" class="ft30">)</P>
+<P style="position:absolute;top:992px;left:205px;white-space:nowrap" class="ft30">y</P>
+<P style="position:absolute;top:992px;left:197px;white-space:nowrap" class="ft30">,</P>
+<P style="position:absolute;top:992px;left:188px;white-space:nowrap" class="ft30">x</P>
+<P style="position:absolute;top:992px;left:181px;white-space:nowrap" class="ft30">(</P>
+<P style="position:absolute;top:992px;left:172px;white-space:nowrap" class="ft30">f</P>
+<P style="position:absolute;top:992px;left:158px;white-space:nowrap" class="ft30">k</P>
+<P style="position:absolute;top:1015px;left:284px;white-space:nowrap" class="ft38">D</P>
+<P style="position:absolute;top:1015px;left:144px;white-space:nowrap" class="ft38">D</P>
+<P style="position:absolute;top:1077px;left:127px;white-space:nowrap" class="ft30">3.&#160;&#160;f(x,y)</P>
+<P style="position:absolute;top:1072px;left:197px;white-space:nowrap" class="ft39">≥&#160;0 &#160;bada&#160;∀&#160;(x,y)∈D, orduan&#160;</P>
+<P style="position:absolute;top:1072px;left:413px;white-space:nowrap" class="ft37">∫∫</P>
+<P style="position:absolute;top:1100px;left:413px;white-space:nowrap" class="ft38">D</P>
+<P style="position:absolute;top:1077px;left:497px;white-space:nowrap" class="ft30">dy</P>
+<P style="position:absolute;top:1077px;left:476px;white-space:nowrap" class="ft30">dx</P>
+<P style="position:absolute;top:1077px;left:469px;white-space:nowrap" class="ft30">)</P>
+<P style="position:absolute;top:1077px;left:459px;white-space:nowrap" class="ft30">y</P>
+<P style="position:absolute;top:1077px;left:451px;white-space:nowrap" class="ft30">,</P>
+<P style="position:absolute;top:1077px;left:442px;white-space:nowrap" class="ft30">x</P>
+<P style="position:absolute;top:1077px;left:435px;white-space:nowrap" class="ft30">(</P>
+<P style="position:absolute;top:1077px;left:426px;white-space:nowrap" class="ft30">f</P>
+<P style="position:absolute;top:1072px;left:520px;white-space:nowrap" class="ft39">≥&#160;0</P>
+<P style="position:absolute;top:555px;left:335px;white-space:nowrap" class="ft312">z=f(x,y)</P>
+<P style="position:absolute;top:675px;left:367px;white-space:nowrap" class="ft317">D</P>
+<P style="position:absolute;top:663px;left:195px;white-space:nowrap" class="ft32"><b>X</b></P>
+<P style="position:absolute;top:501px;left:227px;white-space:nowrap" class="ft32"><b>Z</b></P>
+<P style="position:absolute;top:609px;left:540px;white-space:nowrap" class="ft32"><b>Y</b></P>
+</DIV>
+<!-- Page 4 -->
+<a name="4"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft418{font-size:14px;font-family:Symbol;color:#000000;}
+	.ft419{font-size:16px;line-height:28px;font-family:Symbol;color:#000000;}
+	.ft420{font-size:16px;line-height:31px;font-family:Symbol;color:#000000;}
+-->
+</STYLE>
+<DIV id="page4-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:442px;white-space:nowrap" class="ft40">4</P>
+<P style="position:absolute;top:112px;left:127px;white-space:nowrap" class="ft40">4.&#160;&#160;f(x,y)&#160;</P>
+<P style="position:absolute;top:107px;left:201px;white-space:nowrap" class="ft418">≤&#160;g(x,y) betetzen bada&#160;</P>
+<P style="position:absolute;top:106px;left:365px;white-space:nowrap" class="ft49">∀&#160;(x,y)∈D, orduan&#160;</P>
+<P style="position:absolute;top:106px;left:510px;white-space:nowrap" class="ft47">∫∫</P>
+<P style="position:absolute;top:135px;left:510px;white-space:nowrap" class="ft48">D</P>
+<P style="position:absolute;top:112px;left:594px;white-space:nowrap" class="ft40">dy</P>
+<P style="position:absolute;top:112px;left:573px;white-space:nowrap" class="ft40">dx</P>
+<P style="position:absolute;top:112px;left:566px;white-space:nowrap" class="ft40">)</P>
+<P style="position:absolute;top:112px;left:556px;white-space:nowrap" class="ft40">y</P>
+<P style="position:absolute;top:112px;left:548px;white-space:nowrap" class="ft40">,</P>
+<P style="position:absolute;top:112px;left:539px;white-space:nowrap" class="ft40">x</P>
+<P style="position:absolute;top:112px;left:532px;white-space:nowrap" class="ft40">(</P>
+<P style="position:absolute;top:112px;left:523px;white-space:nowrap" class="ft40">f</P>
+<P style="position:absolute;top:107px;left:617px;white-space:nowrap" class="ft418">≤</P>
+<P style="position:absolute;top:106px;left:632px;white-space:nowrap" class="ft47">∫∫</P>
+<P style="position:absolute;top:135px;left:632px;white-space:nowrap" class="ft48">D</P>
+<P style="position:absolute;top:112px;left:717px;white-space:nowrap" class="ft40">dy</P>
+<P style="position:absolute;top:112px;left:696px;white-space:nowrap" class="ft40">dx</P>
+<P style="position:absolute;top:112px;left:689px;white-space:nowrap" class="ft40">)</P>
+<P style="position:absolute;top:112px;left:680px;white-space:nowrap" class="ft40">y</P>
+<P style="position:absolute;top:112px;left:672px;white-space:nowrap" class="ft40">,</P>
+<P style="position:absolute;top:112px;left:663px;white-space:nowrap" class="ft40">x</P>
+<P style="position:absolute;top:112px;left:656px;white-space:nowrap" class="ft40">(</P>
+<P style="position:absolute;top:112px;left:646px;white-space:nowrap" class="ft40">g</P>
+<P style="position:absolute;top:193px;left:127px;white-space:nowrap" class="ft40">5.&#160;&#160;D eremua&#160;D1&#160;eta&#160;D2&#160;eremuen arteko bildura bada, eta komunak diren puntuak</P>
+<P style="position:absolute;top:224px;left:154px;white-space:nowrap" class="ft40">bakarrik mugan badaude, orduan</P>
+<P style="position:absolute;top:251px;left:262px;white-space:nowrap" class="ft47">∫∫</P>
+<P style="position:absolute;top:280px;left:262px;white-space:nowrap" class="ft48">D</P>
+<P style="position:absolute;top:257px;left:347px;white-space:nowrap" class="ft40">dy</P>
+<P style="position:absolute;top:257px;left:325px;white-space:nowrap" class="ft40">dx</P>
+<P style="position:absolute;top:257px;left:318px;white-space:nowrap" class="ft40">)</P>
+<P style="position:absolute;top:257px;left:308px;white-space:nowrap" class="ft40">y</P>
+<P style="position:absolute;top:257px;left:300px;white-space:nowrap" class="ft40">,</P>
+<P style="position:absolute;top:257px;left:291px;white-space:nowrap" class="ft40">x</P>
+<P style="position:absolute;top:257px;left:285px;white-space:nowrap" class="ft40">(</P>
+<P style="position:absolute;top:257px;left:276px;white-space:nowrap" class="ft40">f</P>
+<P style="position:absolute;top:257px;left:367px;white-space:nowrap" class="ft40">&#160;=&#160;</P>
+<P style="position:absolute;top:251px;left:392px;white-space:nowrap" class="ft47">∫∫</P>
+<P style="position:absolute;top:287px;left:399px;white-space:nowrap" class="ft413">1</P>
+<P style="position:absolute;top:280px;left:388px;white-space:nowrap" class="ft48">D</P>
+<P style="position:absolute;top:257px;left:476px;white-space:nowrap" class="ft40">dy</P>
+<P style="position:absolute;top:257px;left:456px;white-space:nowrap" class="ft40">dx</P>
+<P style="position:absolute;top:257px;left:448px;white-space:nowrap" class="ft40">)</P>
+<P style="position:absolute;top:257px;left:438px;white-space:nowrap" class="ft40">y</P>
+<P style="position:absolute;top:257px;left:431px;white-space:nowrap" class="ft40">,</P>
+<P style="position:absolute;top:257px;left:421px;white-space:nowrap" class="ft40">x</P>
+<P style="position:absolute;top:257px;left:414px;white-space:nowrap" class="ft40">(</P>
+<P style="position:absolute;top:257px;left:405px;white-space:nowrap" class="ft40">f</P>
+<P style="position:absolute;top:257px;left:497px;white-space:nowrap" class="ft40">&#160;+&#160;</P>
+<P style="position:absolute;top:251px;left:523px;white-space:nowrap" class="ft47">∫∫</P>
+<P style="position:absolute;top:287px;left:531px;white-space:nowrap" class="ft413">2</P>
+<P style="position:absolute;top:280px;left:519px;white-space:nowrap" class="ft48">D</P>
+<P style="position:absolute;top:257px;left:608px;white-space:nowrap" class="ft40">dy</P>
+<P style="position:absolute;top:257px;left:587px;white-space:nowrap" class="ft40">dx</P>
+<P style="position:absolute;top:257px;left:579px;white-space:nowrap" class="ft40">)</P>
+<P style="position:absolute;top:257px;left:569px;white-space:nowrap" class="ft40">y</P>
+<P style="position:absolute;top:257px;left:561px;white-space:nowrap" class="ft40">,</P>
+<P style="position:absolute;top:257px;left:552px;white-space:nowrap" class="ft40">x</P>
+<P style="position:absolute;top:257px;left:546px;white-space:nowrap" class="ft40">(</P>
+<P style="position:absolute;top:257px;left:537px;white-space:nowrap" class="ft40">f</P>
+<P style="position:absolute;top:257px;left:628px;white-space:nowrap" class="ft40">.</P>
+<P style="position:absolute;top:343px;left:127px;white-space:nowrap" class="ft42"><b>3. INTEGRAL BIKOITZAREN KALKULUA</b></P>
+<P style="position:absolute;top:405px;left:180px;white-space:nowrap" class="ft40">Definizioa erabiliz, integral bikoitzaren kalkulua zaila da kasu askotan.</P>
+<P style="position:absolute;top:436px;left:127px;white-space:nowrap" class="ft40">Horregatik orain aztertuko dugu &#160;nola egin daitekeen bi integral sinple erabiliz.</P>
+<P style="position:absolute;top:498px;left:180px;white-space:nowrap" class="ft40">f(x,y) funtzioa D eremuan jarraitua dela suposatuz, bere integral bikoitzaren</P>
+<P style="position:absolute;top:530px;left:127px;white-space:nowrap" class="ft40">kalkulua D eremuaren itxuraren araberakoa izango da. Horrela:</P>
+<P style="position:absolute;top:591px;left:180px;white-space:nowrap" class="ft40">a)&#160;&#160;D laukizuzen bat bada, D=[a,b]x[c,d], orduan</P>
+<P style="position:absolute;top:669px;left:239px;white-space:nowrap" class="ft47">∫∫</P>
+<P style="position:absolute;top:697px;left:239px;white-space:nowrap" class="ft48">D</P>
+<P style="position:absolute;top:675px;left:323px;white-space:nowrap" class="ft40">dy</P>
+<P style="position:absolute;top:675px;left:302px;white-space:nowrap" class="ft40">dx</P>
+<P style="position:absolute;top:675px;left:295px;white-space:nowrap" class="ft40">)</P>
+<P style="position:absolute;top:675px;left:285px;white-space:nowrap" class="ft40">y</P>
+<P style="position:absolute;top:675px;left:277px;white-space:nowrap" class="ft40">,</P>
+<P style="position:absolute;top:675px;left:268px;white-space:nowrap" class="ft40">x</P>
+<P style="position:absolute;top:675px;left:261px;white-space:nowrap" class="ft40">(</P>
+<P style="position:absolute;top:675px;left:252px;white-space:nowrap" class="ft40">f</P>
+<P style="position:absolute;top:675px;left:343px;white-space:nowrap" class="ft40">&#160;=&#160;</P>
+<P style="position:absolute;top:665px;left:512px;white-space:nowrap" class="ft45">∫&#160;∫</P>
+<P style="position:absolute;top:665px;left:366px;white-space:nowrap" class="ft45">∫&#160;∫</P>
+<P style="position:absolute;top:680px;left:612px;white-space:nowrap" class="ft49"></P>
+<P style="position:absolute;top:663px;left:612px;white-space:nowrap" class="ft419"><br/></P>
+<P style="position:absolute;top:652px;left:612px;white-space:nowrap" class="ft49"></P>
+<P style="position:absolute;top:680px;left:522px;white-space:nowrap" class="ft49"></P>
+<P style="position:absolute;top:663px;left:522px;white-space:nowrap" class="ft419"><br/></P>
+<P style="position:absolute;top:652px;left:522px;white-space:nowrap" class="ft49"></P>
+<P style="position:absolute;top:669px;left:496px;white-space:nowrap" class="ft49">=</P>
+<P style="position:absolute;top:680px;left:465px;white-space:nowrap" class="ft49"></P>
+<P style="position:absolute;top:663px;left:465px;white-space:nowrap" class="ft419"><br/></P>
+<P style="position:absolute;top:652px;left:465px;white-space:nowrap" class="ft49"></P>
+<P style="position:absolute;top:680px;left:376px;white-space:nowrap" class="ft49"></P>
+<P style="position:absolute;top:663px;left:376px;white-space:nowrap" class="ft419"><br/></P>
+<P style="position:absolute;top:652px;left:376px;white-space:nowrap" class="ft49"></P>
+<P style="position:absolute;top:655px;left:512px;white-space:nowrap" class="ft44">d</P>
+<P style="position:absolute;top:700px;left:512px;white-space:nowrap" class="ft44">c</P>
+<P style="position:absolute;top:655px;left:531px;white-space:nowrap" class="ft44">b</P>
+<P style="position:absolute;top:700px;left:531px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:655px;left:366px;white-space:nowrap" class="ft44">b</P>
+<P style="position:absolute;top:700px;left:366px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:655px;left:385px;white-space:nowrap" class="ft44">d</P>
+<P style="position:absolute;top:700px;left:385px;white-space:nowrap" class="ft44">c</P>
+<P style="position:absolute;top:675px;left:619px;white-space:nowrap" class="ft40">dy</P>
+<P style="position:absolute;top:675px;left:592px;white-space:nowrap" class="ft40">dx</P>
+<P style="position:absolute;top:675px;left:584px;white-space:nowrap" class="ft40">)</P>
+<P style="position:absolute;top:675px;left:575px;white-space:nowrap" class="ft40">y</P>
+<P style="position:absolute;top:675px;left:567px;white-space:nowrap" class="ft40">,</P>
+<P style="position:absolute;top:675px;left:557px;white-space:nowrap" class="ft40">x</P>
+<P style="position:absolute;top:675px;left:550px;white-space:nowrap" class="ft40">(</P>
+<P style="position:absolute;top:675px;left:541px;white-space:nowrap" class="ft40">f</P>
+<P style="position:absolute;top:675px;left:471px;white-space:nowrap" class="ft40">dx</P>
+<P style="position:absolute;top:675px;left:444px;white-space:nowrap" class="ft40">dy</P>
+<P style="position:absolute;top:675px;left:437px;white-space:nowrap" class="ft40">)</P>
+<P style="position:absolute;top:675px;left:428px;white-space:nowrap" class="ft40">y</P>
+<P style="position:absolute;top:675px;left:420px;white-space:nowrap" class="ft40">,</P>
+<P style="position:absolute;top:675px;left:411px;white-space:nowrap" class="ft40">x</P>
+<P style="position:absolute;top:675px;left:404px;white-space:nowrap" class="ft40">(</P>
+<P style="position:absolute;top:675px;left:395px;white-space:nowrap" class="ft40">f</P>
+<P style="position:absolute;top:675px;left:651px;white-space:nowrap" class="ft40">.</P>
+<P style="position:absolute;top:773px;left:183px;white-space:nowrap" class="ft45">∫&#160;∫</P>
+<P style="position:absolute;top:788px;left:282px;white-space:nowrap" class="ft49"></P>
+<P style="position:absolute;top:771px;left:282px;white-space:nowrap" class="ft419"><br/></P>
+<P style="position:absolute;top:760px;left:282px;white-space:nowrap" class="ft49"></P>
+<P style="position:absolute;top:788px;left:194px;white-space:nowrap" class="ft49"></P>
+<P style="position:absolute;top:771px;left:194px;white-space:nowrap" class="ft419"><br/></P>
+<P style="position:absolute;top:760px;left:194px;white-space:nowrap" class="ft49"></P>
+<P style="position:absolute;top:763px;left:183px;white-space:nowrap" class="ft44">b</P>
+<P style="position:absolute;top:808px;left:183px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:763px;left:203px;white-space:nowrap" class="ft44">d</P>
+<P style="position:absolute;top:808px;left:204px;white-space:nowrap" class="ft44">c</P>
+<P style="position:absolute;top:783px;left:289px;white-space:nowrap" class="ft40">dx</P>
+<P style="position:absolute;top:783px;left:263px;white-space:nowrap" class="ft40">dy</P>
+<P style="position:absolute;top:783px;left:255px;white-space:nowrap" class="ft40">)</P>
+<P style="position:absolute;top:783px;left:246px;white-space:nowrap" class="ft40">y</P>
+<P style="position:absolute;top:783px;left:239px;white-space:nowrap" class="ft40">,</P>
+<P style="position:absolute;top:783px;left:228px;white-space:nowrap" class="ft40">x</P>
+<P style="position:absolute;top:783px;left:222px;white-space:nowrap" class="ft40">(</P>
+<P style="position:absolute;top:783px;left:213px;white-space:nowrap" class="ft40">f</P>
+<P style="position:absolute;top:783px;left:323px;white-space:nowrap" class="ft40">adierazpen honetan, lehenengo parentesien arteko integrala</P>
+<P style="position:absolute;top:838px;left:127px;white-space:nowrap" class="ft40">kalkulatzen da. Integrazioa y-rekiko egiten da, x konstantetzat hartuz. Horrela, x-ren</P>
+<P style="position:absolute;top:868px;left:127px;white-space:nowrap" class="ft40">funtzio bat lortzen dugu eta azken hau a eta b limiteen artean integratzen dugu, x-rekiko.</P>
+<P style="position:absolute;top:932px;left:180px;white-space:nowrap" class="ft40">b)&#160;&#160;D eremua&#160;</P>
+<P style="position:absolute;top:932px;left:341px;white-space:nowrap" class="ft40">b</P>
+<P style="position:absolute;top:932px;left:314px;white-space:nowrap" class="ft40">x</P>
+<P style="position:absolute;top:932px;left:287px;white-space:nowrap" class="ft40">a</P>
+<P style="position:absolute;top:926px;left:327px;white-space:nowrap" class="ft49">≤</P>
+<P style="position:absolute;top:926px;left:299px;white-space:nowrap" class="ft49">≤</P>
+<P style="position:absolute;top:932px;left:353px;white-space:nowrap" class="ft40">&#160; eta&#160;</P>
+<P style="position:absolute;top:932px;left:513px;white-space:nowrap" class="ft40">)</P>
+<P style="position:absolute;top:932px;left:503px;white-space:nowrap" class="ft40">x</P>
+<P style="position:absolute;top:932px;left:496px;white-space:nowrap" class="ft40">(</P>
+<P style="position:absolute;top:932px;left:477px;white-space:nowrap" class="ft40">g</P>
+<P style="position:absolute;top:932px;left:451px;white-space:nowrap" class="ft40">y</P>
+<P style="position:absolute;top:932px;left:426px;white-space:nowrap" class="ft40">)</P>
+<P style="position:absolute;top:932px;left:416px;white-space:nowrap" class="ft40">x</P>
+<P style="position:absolute;top:932px;left:410px;white-space:nowrap" class="ft40">(</P>
+<P style="position:absolute;top:932px;left:393px;white-space:nowrap" class="ft40">g</P>
+<P style="position:absolute;top:942px;left:488px;white-space:nowrap" class="ft413">2</P>
+<P style="position:absolute;top:942px;left:403px;white-space:nowrap" class="ft413">1</P>
+<P style="position:absolute;top:926px;left:464px;white-space:nowrap" class="ft49">≤</P>
+<P style="position:absolute;top:926px;left:437px;white-space:nowrap" class="ft49">≤</P>
+<P style="position:absolute;top:932px;left:522px;white-space:nowrap" class="ft40">&#160;desberdintzak erabiliz definitzen</P>
+<P style="position:absolute;top:966px;left:207px;white-space:nowrap" class="ft40">bada, eta g1&#160;eta g2&#160;funtzioak [a,b] tartean jarraituak badira, orduan</P>
+<P style="position:absolute;top:1045px;left:263px;white-space:nowrap" class="ft47">∫∫</P>
+<P style="position:absolute;top:1073px;left:263px;white-space:nowrap" class="ft48">D</P>
+<P style="position:absolute;top:1050px;left:348px;white-space:nowrap" class="ft40">dy</P>
+<P style="position:absolute;top:1050px;left:326px;white-space:nowrap" class="ft40">dx</P>
+<P style="position:absolute;top:1050px;left:320px;white-space:nowrap" class="ft40">)</P>
+<P style="position:absolute;top:1050px;left:309px;white-space:nowrap" class="ft40">y</P>
+<P style="position:absolute;top:1050px;left:302px;white-space:nowrap" class="ft40">,</P>
+<P style="position:absolute;top:1050px;left:293px;white-space:nowrap" class="ft40">x</P>
+<P style="position:absolute;top:1050px;left:286px;white-space:nowrap" class="ft40">(</P>
+<P style="position:absolute;top:1050px;left:277px;white-space:nowrap" class="ft40">f</P>
+<P style="position:absolute;top:1050px;left:368px;white-space:nowrap" class="ft40">=&#160;</P>
+<P style="position:absolute;top:1046px;left:545px;white-space:nowrap" class="ft47">∫&#160;∫</P>
+<P style="position:absolute;top:1046px;left:386px;white-space:nowrap" class="ft47">∫&#160;∫</P>
+<P style="position:absolute;top:1045px;left:529px;white-space:nowrap" class="ft49">=</P>
+<P style="position:absolute;top:1055px;left:496px;white-space:nowrap" class="ft49"></P>
+<P style="position:absolute;top:1038px;left:496px;white-space:nowrap" class="ft420"><br/></P>
+<P style="position:absolute;top:1027px;left:496px;white-space:nowrap" class="ft49"></P>
+<P style="position:absolute;top:1055px;left:395px;white-space:nowrap" class="ft49"></P>
+<P style="position:absolute;top:1038px;left:395px;white-space:nowrap" class="ft420"><br/></P>
+<P style="position:absolute;top:1027px;left:395px;white-space:nowrap" class="ft49"></P>
+<P style="position:absolute;top:1035px;left:543px;white-space:nowrap" class="ft48">b</P>
+<P style="position:absolute;top:1074px;left:543px;white-space:nowrap" class="ft48">a</P>
+<P style="position:absolute;top:1034px;left:583px;white-space:nowrap" class="ft48">)</P>
+<P style="position:absolute;top:1034px;left:574px;white-space:nowrap" class="ft48">x</P>
+<P style="position:absolute;top:1034px;left:568px;white-space:nowrap" class="ft48">(</P>
+<P style="position:absolute;top:1034px;left:554px;white-space:nowrap" class="ft48">g</P>
+<P style="position:absolute;top:1074px;left:582px;white-space:nowrap" class="ft48">)</P>
+<P style="position:absolute;top:1074px;left:573px;white-space:nowrap" class="ft48">x</P>
+<P style="position:absolute;top:1074px;left:567px;white-space:nowrap" class="ft48">(</P>
+<P style="position:absolute;top:1074px;left:554px;white-space:nowrap" class="ft48">g</P>
+<P style="position:absolute;top:1035px;left:385px;white-space:nowrap" class="ft48">b</P>
+<P style="position:absolute;top:1074px;left:385px;white-space:nowrap" class="ft48">a</P>
+<P style="position:absolute;top:1034px;left:433px;white-space:nowrap" class="ft48">)</P>
+<P style="position:absolute;top:1034px;left:424px;white-space:nowrap" class="ft48">x</P>
+<P style="position:absolute;top:1034px;left:419px;white-space:nowrap" class="ft48">(</P>
+<P style="position:absolute;top:1034px;left:404px;white-space:nowrap" class="ft48">g</P>
+<P style="position:absolute;top:1074px;left:432px;white-space:nowrap" class="ft48">)</P>
+<P style="position:absolute;top:1074px;left:424px;white-space:nowrap" class="ft48">x</P>
+<P style="position:absolute;top:1074px;left:417px;white-space:nowrap" class="ft48">(</P>
+<P style="position:absolute;top:1074px;left:404px;white-space:nowrap" class="ft48">g</P>
+<P style="position:absolute;top:1050px;left:647px;white-space:nowrap" class="ft40">dx</P>
+<P style="position:absolute;top:1050px;left:626px;white-space:nowrap" class="ft40">dy</P>
+<P style="position:absolute;top:1050px;left:619px;white-space:nowrap" class="ft40">)</P>
+<P style="position:absolute;top:1050px;left:609px;white-space:nowrap" class="ft40">y</P>
+<P style="position:absolute;top:1050px;left:601px;white-space:nowrap" class="ft40">,</P>
+<P style="position:absolute;top:1050px;left:592px;white-space:nowrap" class="ft40">x</P>
+<P style="position:absolute;top:1050px;left:585px;white-space:nowrap" class="ft40">(</P>
+<P style="position:absolute;top:1050px;left:576px;white-space:nowrap" class="ft40">f</P>
+<P style="position:absolute;top:1050px;left:503px;white-space:nowrap" class="ft40">dx</P>
+<P style="position:absolute;top:1050px;left:477px;white-space:nowrap" class="ft40">dy</P>
+<P style="position:absolute;top:1050px;left:469px;white-space:nowrap" class="ft40">)</P>
+<P style="position:absolute;top:1050px;left:459px;white-space:nowrap" class="ft40">y</P>
+<P style="position:absolute;top:1050px;left:452px;white-space:nowrap" class="ft40">,</P>
+<P style="position:absolute;top:1050px;left:442px;white-space:nowrap" class="ft40">x</P>
+<P style="position:absolute;top:1050px;left:435px;white-space:nowrap" class="ft40">(</P>
+<P style="position:absolute;top:1050px;left:426px;white-space:nowrap" class="ft40">f</P>
+<P style="position:absolute;top:1040px;left:561px;white-space:nowrap" class="ft413">2</P>
+<P style="position:absolute;top:1081px;left:561px;white-space:nowrap" class="ft413">1</P>
+<P style="position:absolute;top:1040px;left:412px;white-space:nowrap" class="ft413">2</P>
+<P style="position:absolute;top:1081px;left:412px;white-space:nowrap" class="ft413">1</P>
+<P style="position:absolute;top:1050px;left:681px;white-space:nowrap" class="ft40">.</P>
+</DIV>
+<!-- Page 5 -->
+<a name="5"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft521{font-size:12px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page5-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:442px;white-space:nowrap" class="ft50">5</P>
+<P style="position:absolute;top:452px;left:180px;white-space:nowrap" class="ft50">c)&#160;&#160;D eremua&#160;</P>
+<P style="position:absolute;top:452px;left:342px;white-space:nowrap" class="ft50">d</P>
+<P style="position:absolute;top:452px;left:316px;white-space:nowrap" class="ft50">y</P>
+<P style="position:absolute;top:452px;left:289px;white-space:nowrap" class="ft50">c</P>
+<P style="position:absolute;top:446px;left:329px;white-space:nowrap" class="ft59">≤</P>
+<P style="position:absolute;top:446px;left:302px;white-space:nowrap" class="ft59">≤</P>
+<P style="position:absolute;top:452px;left:354px;white-space:nowrap" class="ft50">&#160; eta&#160;</P>
+<P style="position:absolute;top:452px;left:522px;white-space:nowrap" class="ft50">)</P>
+<P style="position:absolute;top:452px;left:512px;white-space:nowrap" class="ft50">y</P>
+<P style="position:absolute;top:452px;left:505px;white-space:nowrap" class="ft50">(</P>
+<P style="position:absolute;top:452px;left:486px;white-space:nowrap" class="ft50">h</P>
+<P style="position:absolute;top:452px;left:458px;white-space:nowrap" class="ft50">x</P>
+<P style="position:absolute;top:452px;left:434px;white-space:nowrap" class="ft50">)</P>
+<P style="position:absolute;top:452px;left:424px;white-space:nowrap" class="ft50">y</P>
+<P style="position:absolute;top:452px;left:417px;white-space:nowrap" class="ft50">(</P>
+<P style="position:absolute;top:452px;left:399px;white-space:nowrap" class="ft50">h</P>
+<P style="position:absolute;top:462px;left:497px;white-space:nowrap" class="ft513">2</P>
+<P style="position:absolute;top:462px;left:411px;white-space:nowrap" class="ft513">1</P>
+<P style="position:absolute;top:446px;left:471px;white-space:nowrap" class="ft59">≤</P>
+<P style="position:absolute;top:446px;left:443px;white-space:nowrap" class="ft59">≤</P>
+<P style="position:absolute;top:452px;left:531px;white-space:nowrap" class="ft50">&#160;desberdintzen bidez definitzen</P>
+<P style="position:absolute;top:487px;left:207px;white-space:nowrap" class="ft50">bada, eta h1&#160;eta h2&#160;funtzioak [c,d] tartean jarraituak badira, orduan</P>
+<P style="position:absolute;top:565px;left:263px;white-space:nowrap" class="ft57">∫∫</P>
+<P style="position:absolute;top:594px;left:263px;white-space:nowrap" class="ft58">D</P>
+<P style="position:absolute;top:571px;left:348px;white-space:nowrap" class="ft50">dy</P>
+<P style="position:absolute;top:571px;left:326px;white-space:nowrap" class="ft50">dx</P>
+<P style="position:absolute;top:571px;left:320px;white-space:nowrap" class="ft50">)</P>
+<P style="position:absolute;top:571px;left:309px;white-space:nowrap" class="ft50">y</P>
+<P style="position:absolute;top:571px;left:302px;white-space:nowrap" class="ft50">,</P>
+<P style="position:absolute;top:571px;left:293px;white-space:nowrap" class="ft50">x</P>
+<P style="position:absolute;top:571px;left:286px;white-space:nowrap" class="ft50">(</P>
+<P style="position:absolute;top:571px;left:277px;white-space:nowrap" class="ft50">f</P>
+<P style="position:absolute;top:571px;left:368px;white-space:nowrap" class="ft50">=&#160;</P>
+<P style="position:absolute;top:566px;left:545px;white-space:nowrap" class="ft57">∫&#160;∫</P>
+<P style="position:absolute;top:566px;left:386px;white-space:nowrap" class="ft57">∫&#160;∫</P>
+<P style="position:absolute;top:565px;left:529px;white-space:nowrap" class="ft59">=</P>
+<P style="position:absolute;top:575px;left:497px;white-space:nowrap" class="ft59"></P>
+<P style="position:absolute;top:559px;left:497px;white-space:nowrap" class="ft520"><br/></P>
+<P style="position:absolute;top:547px;left:497px;white-space:nowrap" class="ft59"></P>
+<P style="position:absolute;top:575px;left:395px;white-space:nowrap" class="ft59"></P>
+<P style="position:absolute;top:559px;left:395px;white-space:nowrap" class="ft520"><br/></P>
+<P style="position:absolute;top:547px;left:395px;white-space:nowrap" class="ft59"></P>
+<P style="position:absolute;top:556px;left:543px;white-space:nowrap" class="ft58">d</P>
+<P style="position:absolute;top:595px;left:543px;white-space:nowrap" class="ft58">c</P>
+<P style="position:absolute;top:554px;left:583px;white-space:nowrap" class="ft58">)</P>
+<P style="position:absolute;top:554px;left:575px;white-space:nowrap" class="ft58">y</P>
+<P style="position:absolute;top:554px;left:569px;white-space:nowrap" class="ft58">(</P>
+<P style="position:absolute;top:554px;left:554px;white-space:nowrap" class="ft58">h</P>
+<P style="position:absolute;top:595px;left:582px;white-space:nowrap" class="ft58">)</P>
+<P style="position:absolute;top:595px;left:574px;white-space:nowrap" class="ft58">y</P>
+<P style="position:absolute;top:595px;left:568px;white-space:nowrap" class="ft58">(</P>
+<P style="position:absolute;top:595px;left:555px;white-space:nowrap" class="ft58">h</P>
+<P style="position:absolute;top:556px;left:385px;white-space:nowrap" class="ft58">d</P>
+<P style="position:absolute;top:595px;left:386px;white-space:nowrap" class="ft58">c</P>
+<P style="position:absolute;top:554px;left:433px;white-space:nowrap" class="ft58">)</P>
+<P style="position:absolute;top:554px;left:425px;white-space:nowrap" class="ft58">y</P>
+<P style="position:absolute;top:554px;left:420px;white-space:nowrap" class="ft58">(</P>
+<P style="position:absolute;top:554px;left:404px;white-space:nowrap" class="ft58">h</P>
+<P style="position:absolute;top:595px;left:432px;white-space:nowrap" class="ft58">)</P>
+<P style="position:absolute;top:595px;left:424px;white-space:nowrap" class="ft58">y</P>
+<P style="position:absolute;top:595px;left:419px;white-space:nowrap" class="ft58">(</P>
+<P style="position:absolute;top:595px;left:405px;white-space:nowrap" class="ft58">h</P>
+<P style="position:absolute;top:571px;left:648px;white-space:nowrap" class="ft50">dy</P>
+<P style="position:absolute;top:571px;left:627px;white-space:nowrap" class="ft50">dx</P>
+<P style="position:absolute;top:571px;left:619px;white-space:nowrap" class="ft50">)</P>
+<P style="position:absolute;top:571px;left:609px;white-space:nowrap" class="ft50">y</P>
+<P style="position:absolute;top:571px;left:602px;white-space:nowrap" class="ft50">,</P>
+<P style="position:absolute;top:571px;left:592px;white-space:nowrap" class="ft50">x</P>
+<P style="position:absolute;top:571px;left:585px;white-space:nowrap" class="ft50">(</P>
+<P style="position:absolute;top:571px;left:576px;white-space:nowrap" class="ft50">f</P>
+<P style="position:absolute;top:571px;left:504px;white-space:nowrap" class="ft50">dy</P>
+<P style="position:absolute;top:571px;left:477px;white-space:nowrap" class="ft50">dx</P>
+<P style="position:absolute;top:571px;left:469px;white-space:nowrap" class="ft50">)</P>
+<P style="position:absolute;top:571px;left:460px;white-space:nowrap" class="ft50">y</P>
+<P style="position:absolute;top:571px;left:452px;white-space:nowrap" class="ft50">,</P>
+<P style="position:absolute;top:571px;left:442px;white-space:nowrap" class="ft50">x</P>
+<P style="position:absolute;top:571px;left:435px;white-space:nowrap" class="ft50">(</P>
+<P style="position:absolute;top:571px;left:426px;white-space:nowrap" class="ft50">f</P>
+<P style="position:absolute;top:561px;left:561px;white-space:nowrap" class="ft513">2</P>
+<P style="position:absolute;top:601px;left:561px;white-space:nowrap" class="ft513">1</P>
+<P style="position:absolute;top:561px;left:413px;white-space:nowrap" class="ft513">2</P>
+<P style="position:absolute;top:601px;left:412px;white-space:nowrap" class="ft513">1</P>
+<P style="position:absolute;top:571px;left:681px;white-space:nowrap" class="ft50">.</P>
+<P style="position:absolute;top:659px;left:180px;white-space:nowrap" class="ft50">d)&#160;&#160;Integrazio-eremuaren itxura hauetako bat ez bada, orduan aurreko formak</P>
+<P style="position:absolute;top:689px;left:207px;white-space:nowrap" class="ft50">erabiliz zatituko dugu, posible bada.</P>
+<P style="position:absolute;top:752px;left:127px;white-space:nowrap" class="ft52"><b>4. ALDAGAI-ALDAKETA</b></P>
+<P style="position:absolute;top:814px;left:180px;white-space:nowrap" class="ft50">Askotan integral bikoitzen kalkulua erraz daiteke, aldagaien aldaketaren bat</P>
+<P style="position:absolute;top:845px;left:127px;white-space:nowrap" class="ft50">eginez. Adibidez, eremuak zirkuluak,&#160;&#160;kardioideak, ... badira, koordenatu polarretara</P>
+<P style="position:absolute;top:876px;left:127px;white-space:nowrap" class="ft50">aldatzea oso baliagarria da.</P>
+<P style="position:absolute;top:940px;left:180px;white-space:nowrap" class="ft50">Batzuetan&#160;</P>
+<P style="position:absolute;top:934px;left:304px;white-space:nowrap" class="ft57">∫∫</P>
+<P style="position:absolute;top:963px;left:304px;white-space:nowrap" class="ft58">D</P>
+<P style="position:absolute;top:940px;left:388px;white-space:nowrap" class="ft50">dy</P>
+<P style="position:absolute;top:940px;left:367px;white-space:nowrap" class="ft50">dx</P>
+<P style="position:absolute;top:940px;left:360px;white-space:nowrap" class="ft50">)</P>
+<P style="position:absolute;top:940px;left:350px;white-space:nowrap" class="ft50">y</P>
+<P style="position:absolute;top:940px;left:342px;white-space:nowrap" class="ft50">,</P>
+<P style="position:absolute;top:940px;left:333px;white-space:nowrap" class="ft50">x</P>
+<P style="position:absolute;top:940px;left:326px;white-space:nowrap" class="ft50">(</P>
+<P style="position:absolute;top:940px;left:317px;white-space:nowrap" class="ft50">f</P>
+<P style="position:absolute;top:940px;left:408px;white-space:nowrap" class="ft50">&#160;integral bikoitza kalkulatzeko,</P>
+<P style="position:absolute;top:1001px;left:307px;white-space:nowrap" class="ft58">*</P>
+<P style="position:absolute;top:1007px;left:294px;white-space:nowrap" class="ft50">D</P>
+<P style="position:absolute;top:1007px;left:270px;white-space:nowrap" class="ft50">)</P>
+<P style="position:absolute;top:1007px;left:261px;white-space:nowrap" class="ft50">v</P>
+<P style="position:absolute;top:1007px;left:253px;white-space:nowrap" class="ft50">,</P>
+<P style="position:absolute;top:1007px;left:244px;white-space:nowrap" class="ft50">u</P>
+<P style="position:absolute;top:1007px;left:237px;white-space:nowrap" class="ft50">(</P>
+<P style="position:absolute;top:1020px;left:210px;white-space:nowrap" class="ft50">)</P>
+<P style="position:absolute;top:1020px;left:200px;white-space:nowrap" class="ft50">v</P>
+<P style="position:absolute;top:1020px;left:194px;white-space:nowrap" class="ft50">,</P>
+<P style="position:absolute;top:1020px;left:183px;white-space:nowrap" class="ft50">u</P>
+<P style="position:absolute;top:1020px;left:177px;white-space:nowrap" class="ft50">(</P>
+<P style="position:absolute;top:1020px;left:168px;white-space:nowrap" class="ft50">y</P>
+<P style="position:absolute;top:1020px;left:140px;white-space:nowrap" class="ft50">y</P>
+<P style="position:absolute;top:993px;left:210px;white-space:nowrap" class="ft50">)</P>
+<P style="position:absolute;top:993px;left:201px;white-space:nowrap" class="ft50">v</P>
+<P style="position:absolute;top:993px;left:194px;white-space:nowrap" class="ft50">,</P>
+<P style="position:absolute;top:993px;left:183px;white-space:nowrap" class="ft50">u</P>
+<P style="position:absolute;top:993px;left:178px;white-space:nowrap" class="ft50">(</P>
+<P style="position:absolute;top:993px;left:168px;white-space:nowrap" class="ft50">x</P>
+<P style="position:absolute;top:993px;left:140px;white-space:nowrap" class="ft50">x</P>
+<P style="position:absolute;top:1001px;left:279px;white-space:nowrap" class="ft59">∈</P>
+<P style="position:absolute;top:1019px;left:129px;white-space:nowrap" class="ft59"></P>
+<P style="position:absolute;top:1004px;left:129px;white-space:nowrap" class="ft59"></P>
+<P style="position:absolute;top:988px;left:129px;white-space:nowrap" class="ft59"></P>
+<P style="position:absolute;top:1014px;left:153px;white-space:nowrap" class="ft59">=</P>
+<P style="position:absolute;top:987px;left:153px;white-space:nowrap" class="ft59">=</P>
+<P style="position:absolute;top:1007px;left:317px;white-space:nowrap" class="ft50">&#160; aldagai-aldaketa beharrezkoa da, ondoko baldintzak</P>
+<P style="position:absolute;top:1055px;left:127px;white-space:nowrap" class="ft50">betetzen direla suposatuz:</P>
+<P style="position:absolute;top:1117px;left:180px;white-space:nowrap" class="ft50">- &#160; &#160;f(x,y) jarraitua da D eremuan</P>
+<P style="position:absolute;top:182px;left:165px;white-space:nowrap" class="ft521"><i>z</i></P>
+<P style="position:absolute;top:268px;left:246px;white-space:nowrap" class="ft521"><i>y</i></P>
+<P style="position:absolute;top:322px;left:75px;white-space:nowrap" class="ft521"><i>x</i></P>
+<P style="position:absolute;top:161px;left:356px;white-space:nowrap" class="ft521"><i>z</i></P>
+<P style="position:absolute;top:265px;left:432px;white-space:nowrap" class="ft521"><i>y</i></P>
+<P style="position:absolute;top:332px;left:270px;white-space:nowrap" class="ft521"><i>x</i></P>
+<P style="position:absolute;top:161px;left:545px;white-space:nowrap" class="ft521"><i>z</i></P>
+<P style="position:absolute;top:265px;left:621px;white-space:nowrap" class="ft521"><i>y</i></P>
+<P style="position:absolute;top:332px;left:459px;white-space:nowrap" class="ft521"><i>x</i></P>
+<P style="position:absolute;top:171px;left:757px;white-space:nowrap" class="ft521"><i>z</i></P>
+<P style="position:absolute;top:275px;left:834px;white-space:nowrap" class="ft521"><i>y</i></P>
+<P style="position:absolute;top:342px;left:672px;white-space:nowrap" class="ft521"><i>x</i></P>
+</DIV>
+<!-- Page 6 -->
+<a name="6"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page6-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:442px;white-space:nowrap" class="ft60">6</P>
+<P style="position:absolute;top:140px;left:180px;white-space:nowrap" class="ft60">-&#160;&#160;OXY planoko D &#160;eta O’UV planoko&#160;D</P>
+<P style="position:absolute;top:136px;left:536px;white-space:nowrap" class="ft610">*&#160;eremuetako puntuen arteko</P>
+<P style="position:absolute;top:171px;left:207px;white-space:nowrap" class="ft60">korrespondentzia biuniboko eta jarraitu bat existitzen da.</P>
+<P style="position:absolute;top:202px;left:180px;white-space:nowrap" class="ft60">-&#160;&#160;x=x(u,v) eta y=y(u,v) funtzioak jarraituak dira, deribatu jarraituekin&#160;D</P>
+<P style="position:absolute;top:198px;left:758px;white-space:nowrap" class="ft610">*</P>
+<P style="position:absolute;top:233px;left:207px;white-space:nowrap" class="ft60">eremuan.</P>
+<P style="position:absolute;top:264px;left:180px;white-space:nowrap" class="ft60">-&#160;&#160;u eta v-rekiko x eta y funtzioen&#160;&#160;Jakobiarraren zeinua ez da aldatzen&#160;D</P>
+<P style="position:absolute;top:260px;left:758px;white-space:nowrap" class="ft610">*</P>
+<P style="position:absolute;top:296px;left:207px;white-space:nowrap" class="ft60">eremuan:</P>
+<P style="position:absolute;top:398px;left:538px;white-space:nowrap" class="ft60">v</P>
+<P style="position:absolute;top:372px;left:538px;white-space:nowrap" class="ft60">y</P>
+<P style="position:absolute;top:398px;left:500px;white-space:nowrap" class="ft60">u</P>
+<P style="position:absolute;top:372px;left:500px;white-space:nowrap" class="ft60">y</P>
+<P style="position:absolute;top:355px;left:538px;white-space:nowrap" class="ft60">v</P>
+<P style="position:absolute;top:329px;left:538px;white-space:nowrap" class="ft60">x</P>
+<P style="position:absolute;top:355px;left:500px;white-space:nowrap" class="ft60">u</P>
+<P style="position:absolute;top:329px;left:500px;white-space:nowrap" class="ft60">x</P>
+<P style="position:absolute;top:375px;left:461px;white-space:nowrap" class="ft60">)</P>
+<P style="position:absolute;top:375px;left:451px;white-space:nowrap" class="ft60">v</P>
+<P style="position:absolute;top:375px;left:444px;white-space:nowrap" class="ft60">,</P>
+<P style="position:absolute;top:375px;left:434px;white-space:nowrap" class="ft60">u</P>
+<P style="position:absolute;top:375px;left:429px;white-space:nowrap" class="ft60">(</P>
+<P style="position:absolute;top:375px;left:415px;white-space:nowrap" class="ft60">D</P>
+<P style="position:absolute;top:350px;left:461px;white-space:nowrap" class="ft60">)</P>
+<P style="position:absolute;top:350px;left:452px;white-space:nowrap" class="ft60">y</P>
+<P style="position:absolute;top:350px;left:444px;white-space:nowrap" class="ft60">,</P>
+<P style="position:absolute;top:350px;left:434px;white-space:nowrap" class="ft60">x</P>
+<P style="position:absolute;top:350px;left:428px;white-space:nowrap" class="ft60">(</P>
+<P style="position:absolute;top:350px;left:414px;white-space:nowrap" class="ft60">D</P>
+<P style="position:absolute;top:361px;left:387px;white-space:nowrap" class="ft60">J</P>
+<P style="position:absolute;top:392px;left:530px;white-space:nowrap" class="ft69">∂</P>
+<P style="position:absolute;top:366px;left:530px;white-space:nowrap" class="ft69">∂</P>
+<P style="position:absolute;top:392px;left:491px;white-space:nowrap" class="ft69">∂</P>
+<P style="position:absolute;top:366px;left:492px;white-space:nowrap" class="ft69">∂</P>
+<P style="position:absolute;top:349px;left:530px;white-space:nowrap" class="ft69">∂</P>
+<P style="position:absolute;top:323px;left:529px;white-space:nowrap" class="ft69">∂</P>
+<P style="position:absolute;top:349px;left:491px;white-space:nowrap" class="ft69">∂</P>
+<P style="position:absolute;top:323px;left:491px;white-space:nowrap" class="ft69">∂</P>
+<P style="position:absolute;top:355px;left:473px;white-space:nowrap" class="ft69">=</P>
+<P style="position:absolute;top:355px;left:399px;white-space:nowrap" class="ft69">=</P>
+<P style="position:absolute;top:362px;left:555px;white-space:nowrap" class="ft60">.</P>
+<P style="position:absolute;top:491px;left:180px;white-space:nowrap" class="ft60">ORDUAN:</P>
+<P style="position:absolute;top:552px;left:299px;white-space:nowrap" class="ft67">∫∫</P>
+<P style="position:absolute;top:580px;left:299px;white-space:nowrap" class="ft68">D</P>
+<P style="position:absolute;top:558px;left:384px;white-space:nowrap" class="ft60">dy</P>
+<P style="position:absolute;top:558px;left:362px;white-space:nowrap" class="ft60">dx</P>
+<P style="position:absolute;top:558px;left:356px;white-space:nowrap" class="ft60">)</P>
+<P style="position:absolute;top:558px;left:345px;white-space:nowrap" class="ft60">y</P>
+<P style="position:absolute;top:558px;left:338px;white-space:nowrap" class="ft60">,</P>
+<P style="position:absolute;top:558px;left:329px;white-space:nowrap" class="ft60">x</P>
+<P style="position:absolute;top:558px;left:322px;white-space:nowrap" class="ft60">(</P>
+<P style="position:absolute;top:558px;left:313px;white-space:nowrap" class="ft60">f</P>
+<P style="position:absolute;top:558px;left:404px;white-space:nowrap" class="ft60">&#160;=&#160;</P>
+<P style="position:absolute;top:553px;left:433px;white-space:nowrap" class="ft67">∫∫</P>
+<P style="position:absolute;top:579px;left:444px;white-space:nowrap" class="ft613">*</P>
+<P style="position:absolute;top:583px;left:433px;white-space:nowrap" class="ft68">D</P>
+<P style="position:absolute;top:558px;left:620px;white-space:nowrap" class="ft60">dv</P>
+<P style="position:absolute;top:558px;left:600px;white-space:nowrap" class="ft60">du</P>
+<P style="position:absolute;top:558px;left:583px;white-space:nowrap" class="ft60">J</P>
+<P style="position:absolute;top:558px;left:560px;white-space:nowrap" class="ft60">))</P>
+<P style="position:absolute;top:558px;left:551px;white-space:nowrap" class="ft60">v</P>
+<P style="position:absolute;top:558px;left:543px;white-space:nowrap" class="ft60">,</P>
+<P style="position:absolute;top:558px;left:534px;white-space:nowrap" class="ft60">u</P>
+<P style="position:absolute;top:558px;left:528px;white-space:nowrap" class="ft60">(</P>
+<P style="position:absolute;top:558px;left:519px;white-space:nowrap" class="ft60">y</P>
+<P style="position:absolute;top:558px;left:505px;white-space:nowrap" class="ft60">),</P>
+<P style="position:absolute;top:558px;left:495px;white-space:nowrap" class="ft60">v</P>
+<P style="position:absolute;top:558px;left:488px;white-space:nowrap" class="ft60">,</P>
+<P style="position:absolute;top:558px;left:478px;white-space:nowrap" class="ft60">u</P>
+<P style="position:absolute;top:558px;left:471px;white-space:nowrap" class="ft60">(</P>
+<P style="position:absolute;top:558px;left:462px;white-space:nowrap" class="ft60">x</P>
+<P style="position:absolute;top:558px;left:456px;white-space:nowrap" class="ft60">(</P>
+<P style="position:absolute;top:558px;left:447px;white-space:nowrap" class="ft60">f</P>
+<P style="position:absolute;top:558px;left:640px;white-space:nowrap" class="ft60">&#160;.</P>
+<P style="position:absolute;top:669px;left:182px;white-space:nowrap" class="ft69"></P>
+<P style="position:absolute;top:654px;left:182px;white-space:nowrap" class="ft69"></P>
+<P style="position:absolute;top:638px;left:182px;white-space:nowrap" class="ft69"></P>
+<P style="position:absolute;top:664px;left:254px;white-space:nowrap" class="ft69">ϑ</P>
+<P style="position:absolute;top:664px;left:207px;white-space:nowrap" class="ft69">=</P>
+<P style="position:absolute;top:637px;left:255px;white-space:nowrap" class="ft69">ϑ</P>
+<P style="position:absolute;top:637px;left:206px;white-space:nowrap" class="ft69">=</P>
+<P style="position:absolute;top:670px;left:231px;white-space:nowrap" class="ft60">sin</P>
+<P style="position:absolute;top:670px;left:223px;white-space:nowrap" class="ft60">r</P>
+<P style="position:absolute;top:670px;left:194px;white-space:nowrap" class="ft60">y</P>
+<P style="position:absolute;top:643px;left:230px;white-space:nowrap" class="ft60">cos</P>
+<P style="position:absolute;top:643px;left:222px;white-space:nowrap" class="ft60">r</P>
+<P style="position:absolute;top:643px;left:192px;white-space:nowrap" class="ft60">x</P>
+<P style="position:absolute;top:657px;left:270px;white-space:nowrap" class="ft60">&#160; koordenatu polarretara aldaketaren kasu partikularrean, behekoa</P>
+<P style="position:absolute;top:705px;left:180px;white-space:nowrap" class="ft60">izango &#160;dugu:</P>
+<P style="position:absolute;top:750px;left:555px;white-space:nowrap" class="ft60">r</P>
+<P style="position:absolute;top:764px;left:493px;white-space:nowrap" class="ft60">cos</P>
+<P style="position:absolute;top:764px;left:484px;white-space:nowrap" class="ft60">r</P>
+<P style="position:absolute;top:764px;left:428px;white-space:nowrap" class="ft60">sin</P>
+<P style="position:absolute;top:737px;left:502px;white-space:nowrap" class="ft60">sin</P>
+<P style="position:absolute;top:737px;left:494px;white-space:nowrap" class="ft60">r</P>
+<P style="position:absolute;top:737px;left:426px;white-space:nowrap" class="ft60">cos</P>
+<P style="position:absolute;top:765px;left:399px;white-space:nowrap" class="ft60">)</P>
+<P style="position:absolute;top:765px;left:381px;white-space:nowrap" class="ft60">,</P>
+<P style="position:absolute;top:765px;left:375px;white-space:nowrap" class="ft60">r</P>
+<P style="position:absolute;top:765px;left:368px;white-space:nowrap" class="ft60">(</P>
+<P style="position:absolute;top:765px;left:356px;white-space:nowrap" class="ft60">D</P>
+<P style="position:absolute;top:739px;left:401px;white-space:nowrap" class="ft60">)</P>
+<P style="position:absolute;top:739px;left:392px;white-space:nowrap" class="ft60">y</P>
+<P style="position:absolute;top:739px;left:384px;white-space:nowrap" class="ft60">,</P>
+<P style="position:absolute;top:739px;left:374px;white-space:nowrap" class="ft60">x</P>
+<P style="position:absolute;top:739px;left:367px;white-space:nowrap" class="ft60">(</P>
+<P style="position:absolute;top:739px;left:353px;white-space:nowrap" class="ft60">D</P>
+<P style="position:absolute;top:750px;left:326px;white-space:nowrap" class="ft60">J</P>
+<P style="position:absolute;top:744px;left:540px;white-space:nowrap" class="ft69">=</P>
+<P style="position:absolute;top:758px;left:519px;white-space:nowrap" class="ft69">ϑ</P>
+<P style="position:absolute;top:758px;left:451px;white-space:nowrap" class="ft69">ϑ</P>
+<P style="position:absolute;top:731px;left:523px;white-space:nowrap" class="ft69">ϑ</P>
+<P style="position:absolute;top:731px;left:479px;white-space:nowrap" class="ft69">−</P>
+<P style="position:absolute;top:731px;left:452px;white-space:nowrap" class="ft69">ϑ</P>
+<P style="position:absolute;top:744px;left:412px;white-space:nowrap" class="ft69">=</P>
+<P style="position:absolute;top:759px;left:388px;white-space:nowrap" class="ft69">ϑ</P>
+<P style="position:absolute;top:744px;left:339px;white-space:nowrap" class="ft69">=</P>
+<P style="position:absolute;top:752px;left:564px;white-space:nowrap" class="ft68">,</P>
+<P style="position:absolute;top:798px;left:127px;white-space:nowrap" class="ft60">eta ondorioz</P>
+<P style="position:absolute;top:825px;left:311px;white-space:nowrap" class="ft67">∫∫</P>
+<P style="position:absolute;top:854px;left:311px;white-space:nowrap" class="ft68">D</P>
+<P style="position:absolute;top:831px;left:395px;white-space:nowrap" class="ft60">dy</P>
+<P style="position:absolute;top:831px;left:374px;white-space:nowrap" class="ft60">dx</P>
+<P style="position:absolute;top:831px;left:367px;white-space:nowrap" class="ft60">)</P>
+<P style="position:absolute;top:831px;left:357px;white-space:nowrap" class="ft60">y</P>
+<P style="position:absolute;top:831px;left:349px;white-space:nowrap" class="ft60">,</P>
+<P style="position:absolute;top:831px;left:340px;white-space:nowrap" class="ft60">x</P>
+<P style="position:absolute;top:831px;left:333px;white-space:nowrap" class="ft60">(</P>
+<P style="position:absolute;top:831px;left:324px;white-space:nowrap" class="ft60">f</P>
+<P style="position:absolute;top:831px;left:415px;white-space:nowrap" class="ft60">&#160;=&#160;</P>
+<P style="position:absolute;top:826px;left:444px;white-space:nowrap" class="ft67">∫∫</P>
+<P style="position:absolute;top:825px;left:620px;white-space:nowrap" class="ft69">ϑ</P>
+<P style="position:absolute;top:825px;left:556px;white-space:nowrap" class="ft69">ϑ</P>
+<P style="position:absolute;top:825px;left:507px;white-space:nowrap" class="ft69">ϑ</P>
+<P style="position:absolute;top:852px;left:456px;white-space:nowrap" class="ft613">*</P>
+<P style="position:absolute;top:856px;left:444px;white-space:nowrap" class="ft68">D</P>
+<P style="position:absolute;top:831px;left:611px;white-space:nowrap" class="ft60">d</P>
+<P style="position:absolute;top:831px;left:591px;white-space:nowrap" class="ft60">dr</P>
+<P style="position:absolute;top:831px;left:578px;white-space:nowrap" class="ft60">r</P>
+<P style="position:absolute;top:831px;left:567px;white-space:nowrap" class="ft60">)</P>
+<P style="position:absolute;top:831px;left:536px;white-space:nowrap" class="ft60">sin</P>
+<P style="position:absolute;top:831px;left:525px;white-space:nowrap" class="ft60">r</P>
+<P style="position:absolute;top:831px;left:519px;white-space:nowrap" class="ft60">,</P>
+<P style="position:absolute;top:831px;left:483px;white-space:nowrap" class="ft60">cos</P>
+<P style="position:absolute;top:831px;left:473px;white-space:nowrap" class="ft60">r</P>
+<P style="position:absolute;top:831px;left:467px;white-space:nowrap" class="ft60">(</P>
+<P style="position:absolute;top:831px;left:458px;white-space:nowrap" class="ft60">f</P>
+<P style="position:absolute;top:831px;left:633px;white-space:nowrap" class="ft60">.</P>
+<P style="position:absolute;top:914px;left:127px;white-space:nowrap" class="ft60">Koordenatu polar orokortuak.</P>
+<P style="position:absolute;top:976px;left:180px;white-space:nowrap" class="ft60">D eremua (0,0) zentroko eta a eta b&#160;&#160;ardatzerdiak dituen elipse baten bidez</P>
+<P style="position:absolute;top:1008px;left:127px;white-space:nowrap" class="ft60">mugatuta badago, komenigarria da hurrengo aldagai-aldaketa (koordenatu polar</P>
+<P style="position:absolute;top:1038px;left:127px;white-space:nowrap" class="ft60">orokortuak) egitea:</P>
+<P style="position:absolute;top:1097px;left:422px;white-space:nowrap" class="ft69"></P>
+<P style="position:absolute;top:1083px;left:422px;white-space:nowrap" class="ft69"></P>
+<P style="position:absolute;top:1067px;left:422px;white-space:nowrap" class="ft69"></P>
+<P style="position:absolute;top:1093px;left:509px;white-space:nowrap" class="ft69">ϑ</P>
+<P style="position:absolute;top:1093px;left:447px;white-space:nowrap" class="ft69">=</P>
+<P style="position:absolute;top:1066px;left:510px;white-space:nowrap" class="ft69">ϑ</P>
+<P style="position:absolute;top:1066px;left:446px;white-space:nowrap" class="ft69">=</P>
+<P style="position:absolute;top:1099px;left:485px;white-space:nowrap" class="ft60">sin</P>
+<P style="position:absolute;top:1099px;left:477px;white-space:nowrap" class="ft60">r</P>
+<P style="position:absolute;top:1099px;left:460px;white-space:nowrap" class="ft60">b</P>
+<P style="position:absolute;top:1099px;left:433px;white-space:nowrap" class="ft60">y</P>
+<P style="position:absolute;top:1072px;left:484px;white-space:nowrap" class="ft60">cos</P>
+<P style="position:absolute;top:1072px;left:476px;white-space:nowrap" class="ft60">r</P>
+<P style="position:absolute;top:1072px;left:459px;white-space:nowrap" class="ft60">a</P>
+<P style="position:absolute;top:1072px;left:432px;white-space:nowrap" class="ft60">x</P>
+</DIV>
+<!-- Page 7 -->
+<a name="7"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft722{font-size:35px;font-family:Symbol;color:#000000;}
+-->
+</STYLE>
+<DIV id="page7-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:442px;white-space:nowrap" class="ft70">7</P>
+<P style="position:absolute;top:126px;left:180px;white-space:nowrap" class="ft70">Kasu honetan,&#160;</P>
+<P style="position:absolute;top:126px;left:558px;white-space:nowrap" class="ft70">r</P>
+<P style="position:absolute;top:126px;left:547px;white-space:nowrap" class="ft70">b</P>
+<P style="position:absolute;top:126px;left:538px;white-space:nowrap" class="ft70">a</P>
+<P style="position:absolute;top:139px;left:477px;white-space:nowrap" class="ft70">cos</P>
+<P style="position:absolute;top:139px;left:458px;white-space:nowrap" class="ft70">br</P>
+<P style="position:absolute;top:139px;left:394px;white-space:nowrap" class="ft70">bsin</P>
+<P style="position:absolute;top:112px;left:485px;white-space:nowrap" class="ft70">sin</P>
+<P style="position:absolute;top:112px;left:469px;white-space:nowrap" class="ft70">ar</P>
+<P style="position:absolute;top:112px;left:403px;white-space:nowrap" class="ft70">cos</P>
+<P style="position:absolute;top:112px;left:392px;white-space:nowrap" class="ft70">a</P>
+<P style="position:absolute;top:140px;left:363px;white-space:nowrap" class="ft70">)</P>
+<P style="position:absolute;top:140px;left:345px;white-space:nowrap" class="ft70">,</P>
+<P style="position:absolute;top:140px;left:339px;white-space:nowrap" class="ft70">r</P>
+<P style="position:absolute;top:140px;left:333px;white-space:nowrap" class="ft70">(</P>
+<P style="position:absolute;top:140px;left:320px;white-space:nowrap" class="ft70">D</P>
+<P style="position:absolute;top:114px;left:365px;white-space:nowrap" class="ft70">)</P>
+<P style="position:absolute;top:114px;left:356px;white-space:nowrap" class="ft70">y</P>
+<P style="position:absolute;top:114px;left:348px;white-space:nowrap" class="ft70">,</P>
+<P style="position:absolute;top:114px;left:339px;white-space:nowrap" class="ft70">x</P>
+<P style="position:absolute;top:114px;left:332px;white-space:nowrap" class="ft70">(</P>
+<P style="position:absolute;top:114px;left:318px;white-space:nowrap" class="ft70">D</P>
+<P style="position:absolute;top:126px;left:290px;white-space:nowrap" class="ft70">J</P>
+<P style="position:absolute;top:120px;left:523px;white-space:nowrap" class="ft79">=</P>
+<P style="position:absolute;top:133px;left:503px;white-space:nowrap" class="ft79">ϑ</P>
+<P style="position:absolute;top:133px;left:426px;white-space:nowrap" class="ft79">ϑ</P>
+<P style="position:absolute;top:106px;left:505px;white-space:nowrap" class="ft79">ϑ</P>
+<P style="position:absolute;top:106px;left:456px;white-space:nowrap" class="ft79">−</P>
+<P style="position:absolute;top:106px;left:429px;white-space:nowrap" class="ft79">ϑ</P>
+<P style="position:absolute;top:120px;left:377px;white-space:nowrap" class="ft79">=</P>
+<P style="position:absolute;top:134px;left:352px;white-space:nowrap" class="ft79">ϑ</P>
+<P style="position:absolute;top:120px;left:303px;white-space:nowrap" class="ft79">=</P>
+<P style="position:absolute;top:126px;left:568px;white-space:nowrap" class="ft70">&#160;da, eta ondorioz</P>
+<P style="position:absolute;top:200px;left:294px;white-space:nowrap" class="ft77">∫∫</P>
+<P style="position:absolute;top:228px;left:294px;white-space:nowrap" class="ft78">D</P>
+<P style="position:absolute;top:206px;left:378px;white-space:nowrap" class="ft70">dy</P>
+<P style="position:absolute;top:206px;left:357px;white-space:nowrap" class="ft70">dx</P>
+<P style="position:absolute;top:206px;left:350px;white-space:nowrap" class="ft70">)</P>
+<P style="position:absolute;top:206px;left:340px;white-space:nowrap" class="ft70">y</P>
+<P style="position:absolute;top:206px;left:332px;white-space:nowrap" class="ft70">,</P>
+<P style="position:absolute;top:206px;left:323px;white-space:nowrap" class="ft70">x</P>
+<P style="position:absolute;top:206px;left:316px;white-space:nowrap" class="ft70">(</P>
+<P style="position:absolute;top:206px;left:307px;white-space:nowrap" class="ft70">f</P>
+<P style="position:absolute;top:206px;left:398px;white-space:nowrap" class="ft70">&#160;=&#160;</P>
+<P style="position:absolute;top:201px;left:428px;white-space:nowrap" class="ft77">∫∫</P>
+<P style="position:absolute;top:200px;left:637px;white-space:nowrap" class="ft79">ϑ</P>
+<P style="position:absolute;top:200px;left:557px;white-space:nowrap" class="ft79">ϑ</P>
+<P style="position:absolute;top:200px;left:498px;white-space:nowrap" class="ft79">ϑ</P>
+<P style="position:absolute;top:227px;left:439px;white-space:nowrap" class="ft713">*</P>
+<P style="position:absolute;top:230px;left:429px;white-space:nowrap" class="ft78">D</P>
+<P style="position:absolute;top:206px;left:628px;white-space:nowrap" class="ft70">d</P>
+<P style="position:absolute;top:206px;left:608px;white-space:nowrap" class="ft70">dr</P>
+<P style="position:absolute;top:206px;left:594px;white-space:nowrap" class="ft70">r</P>
+<P style="position:absolute;top:206px;left:575px;white-space:nowrap" class="ft70">ab</P>
+<P style="position:absolute;top:206px;left:567px;white-space:nowrap" class="ft70">)</P>
+<P style="position:absolute;top:206px;left:536px;white-space:nowrap" class="ft70">sin</P>
+<P style="position:absolute;top:206px;left:516px;white-space:nowrap" class="ft70">br</P>
+<P style="position:absolute;top:206px;left:510px;white-space:nowrap" class="ft70">,</P>
+<P style="position:absolute;top:206px;left:473px;white-space:nowrap" class="ft70">cos</P>
+<P style="position:absolute;top:206px;left:456px;white-space:nowrap" class="ft70">ar</P>
+<P style="position:absolute;top:206px;left:450px;white-space:nowrap" class="ft70">(</P>
+<P style="position:absolute;top:206px;left:441px;white-space:nowrap" class="ft70">f</P>
+<P style="position:absolute;top:206px;left:650px;white-space:nowrap" class="ft70">.</P>
+<P style="position:absolute;top:289px;left:154px;white-space:nowrap" class="ft70">D eremua (x0,&#160;&#160;&#160;y0) zentroko eta a eta b&#160;&#160;ardatzerdiak dituen elipse baten bidez</P>
+<P style="position:absolute;top:320px;left:127px;white-space:nowrap" class="ft70">mugatuta badago, egingo dugun aldagai-aldaketa honako hau izango da:</P>
+<P style="position:absolute;top:381px;left:404px;white-space:nowrap" class="ft79"></P>
+<P style="position:absolute;top:365px;left:404px;white-space:nowrap" class="ft79"></P>
+<P style="position:absolute;top:350px;left:404px;white-space:nowrap" class="ft79"></P>
+<P style="position:absolute;top:376px;left:522px;white-space:nowrap" class="ft79">ϑ</P>
+<P style="position:absolute;top:376px;left:467px;white-space:nowrap" class="ft79">+</P>
+<P style="position:absolute;top:376px;left:429px;white-space:nowrap" class="ft79">=</P>
+<P style="position:absolute;top:349px;left:523px;white-space:nowrap" class="ft79">ϑ</P>
+<P style="position:absolute;top:349px;left:466px;white-space:nowrap" class="ft79">+</P>
+<P style="position:absolute;top:349px;left:428px;white-space:nowrap" class="ft79">=</P>
+<P style="position:absolute;top:382px;left:498px;white-space:nowrap" class="ft70">sin</P>
+<P style="position:absolute;top:382px;left:491px;white-space:nowrap" class="ft70">r</P>
+<P style="position:absolute;top:382px;left:482px;white-space:nowrap" class="ft70">b</P>
+<P style="position:absolute;top:382px;left:443px;white-space:nowrap" class="ft70">y</P>
+<P style="position:absolute;top:382px;left:415px;white-space:nowrap" class="ft70">y</P>
+<P style="position:absolute;top:355px;left:497px;white-space:nowrap" class="ft70">cos</P>
+<P style="position:absolute;top:355px;left:489px;white-space:nowrap" class="ft70">r</P>
+<P style="position:absolute;top:355px;left:480px;white-space:nowrap" class="ft70">a</P>
+<P style="position:absolute;top:355px;left:442px;white-space:nowrap" class="ft70">x</P>
+<P style="position:absolute;top:355px;left:414px;white-space:nowrap" class="ft70">x</P>
+<P style="position:absolute;top:390px;left:453px;white-space:nowrap" class="ft74">0</P>
+<P style="position:absolute;top:363px;left:452px;white-space:nowrap" class="ft74">0</P>
+<P style="position:absolute;top:369px;left:538px;white-space:nowrap" class="ft70">.</P>
+<P style="position:absolute;top:450px;left:127px;white-space:nowrap" class="ft72"><b>5.&#160;&#160;INTEGRAL BIKOITZAREN APLIKAZIO GEOMETRIKOAK</b></P>
+<P style="position:absolute;top:512px;left:127px;white-space:nowrap" class="ft72"><b>5.1. Irudi lauen azalerak eta bolumenak.</b></P>
+<P style="position:absolute;top:573px;left:180px;white-space:nowrap" class="ft70">Integral bikoitzaren esanahi geometrikoa kontuan hartuz, D eremu lau baten A</P>
+<P style="position:absolute;top:605px;left:127px;white-space:nowrap" class="ft70">azalera honela adieraz dezakegu:</P>
+<P style="position:absolute;top:639px;left:399px;white-space:nowrap" class="ft70">A=</P>
+<P style="position:absolute;top:633px;left:426px;white-space:nowrap" class="ft77">∫∫</P>
+<P style="position:absolute;top:661px;left:426px;white-space:nowrap" class="ft78">D</P>
+<P style="position:absolute;top:639px;left:466px;white-space:nowrap" class="ft70">dy</P>
+<P style="position:absolute;top:639px;left:443px;white-space:nowrap" class="ft70">dx</P>
+<P style="position:absolute;top:639px;left:487px;white-space:nowrap" class="ft70">.</P>
+<P style="position:absolute;top:720px;left:180px;white-space:nowrap" class="ft70">Eta goitik z = f(x,y) gainazal jarraituaz, behetik z = 0 planoaz eta aldeetatik D</P>
+<P style="position:absolute;top:750px;left:127px;white-space:nowrap" class="ft70">eremua OXY planoan mozten duen azalera zilindriko zuzenaz mugatutako gorputzaren</P>
+<P style="position:absolute;top:782px;left:127px;white-space:nowrap" class="ft70">B &#160;bolumena ondokoa da:</P>
+<P style="position:absolute;top:814px;left:378px;white-space:nowrap" class="ft70">B=</P>
+<P style="position:absolute;top:808px;left:404px;white-space:nowrap" class="ft77">∫∫</P>
+<P style="position:absolute;top:837px;left:404px;white-space:nowrap" class="ft78">D</P>
+<P style="position:absolute;top:814px;left:488px;white-space:nowrap" class="ft70">dy</P>
+<P style="position:absolute;top:814px;left:467px;white-space:nowrap" class="ft70">dx</P>
+<P style="position:absolute;top:814px;left:460px;white-space:nowrap" class="ft70">)</P>
+<P style="position:absolute;top:814px;left:450px;white-space:nowrap" class="ft70">y</P>
+<P style="position:absolute;top:814px;left:442px;white-space:nowrap" class="ft70">,</P>
+<P style="position:absolute;top:814px;left:433px;white-space:nowrap" class="ft70">x</P>
+<P style="position:absolute;top:814px;left:426px;white-space:nowrap" class="ft70">(</P>
+<P style="position:absolute;top:814px;left:417px;white-space:nowrap" class="ft70">f</P>
+<P style="position:absolute;top:814px;left:509px;white-space:nowrap" class="ft70">.</P>
+<P style="position:absolute;top:896px;left:127px;white-space:nowrap" class="ft72"><b>5.2. Gainazal baten azaleraren kalkulua.</b></P>
+<P style="position:absolute;top:958px;left:180px;white-space:nowrap" class="ft70">f eta&#160;bere lehen ordenako deribatu partzialak jarraituak badira &#160;D eremu lau</P>
+<P style="position:absolute;top:989px;left:127px;white-space:nowrap" class="ft70">batean, orduan D gainean z = f(x,y) gainazalaren A azalera ondokoa da:</P>
+<P style="position:absolute;top:1068px;left:296px;white-space:nowrap" class="ft70">A=</P>
+<P style="position:absolute;top:1042px;left:372px;white-space:nowrap" class="ft722">(</P>
+<P style="position:absolute;top:1042px;left:435px;white-space:nowrap" class="ft722">)&#160;(</P>
+<P style="position:absolute;top:1042px;left:531px;white-space:nowrap" class="ft722">)</P>
+<P style="position:absolute;top:1063px;left:323px;white-space:nowrap" class="ft77">∫∫</P>
+<P style="position:absolute;top:1063px;left:455px;white-space:nowrap" class="ft79">+</P>
+<P style="position:absolute;top:1063px;left:359px;white-space:nowrap" class="ft79">+</P>
+<P style="position:absolute;top:1091px;left:323px;white-space:nowrap" class="ft78">D</P>
+<P style="position:absolute;top:1056px;left:536px;white-space:nowrap" class="ft78">2</P>
+<P style="position:absolute;top:1062px;left:483px;white-space:nowrap" class="ft78">'</P>
+<P style="position:absolute;top:1075px;left:480px;white-space:nowrap" class="ft78">y</P>
+<P style="position:absolute;top:1056px;left:440px;white-space:nowrap" class="ft78">2</P>
+<P style="position:absolute;top:1062px;left:386px;white-space:nowrap" class="ft78">'</P>
+<P style="position:absolute;top:1075px;left:385px;white-space:nowrap" class="ft78">x</P>
+<P style="position:absolute;top:1068px;left:569px;white-space:nowrap" class="ft70">dy</P>
+<P style="position:absolute;top:1068px;left:549px;white-space:nowrap" class="ft70">dx</P>
+<P style="position:absolute;top:1068px;left:524px;white-space:nowrap" class="ft70">)</P>
+<P style="position:absolute;top:1068px;left:515px;white-space:nowrap" class="ft70">y</P>
+<P style="position:absolute;top:1068px;left:507px;white-space:nowrap" class="ft70">,</P>
+<P style="position:absolute;top:1068px;left:497px;white-space:nowrap" class="ft70">x</P>
+<P style="position:absolute;top:1068px;left:491px;white-space:nowrap" class="ft70">(</P>
+<P style="position:absolute;top:1068px;left:473px;white-space:nowrap" class="ft70">f</P>
+<P style="position:absolute;top:1068px;left:429px;white-space:nowrap" class="ft70">)</P>
+<P style="position:absolute;top:1068px;left:420px;white-space:nowrap" class="ft70">y</P>
+<P style="position:absolute;top:1068px;left:412px;white-space:nowrap" class="ft70">,</P>
+<P style="position:absolute;top:1068px;left:403px;white-space:nowrap" class="ft70">x</P>
+<P style="position:absolute;top:1068px;left:396px;white-space:nowrap" class="ft70">(</P>
+<P style="position:absolute;top:1068px;left:377px;white-space:nowrap" class="ft70">f</P>
+<P style="position:absolute;top:1068px;left:347px;white-space:nowrap" class="ft70">1</P>
+<P style="position:absolute;top:1068px;left:591px;white-space:nowrap" class="ft70">.</P>
+</DIV>
+<!-- Page 8 -->
+<a name="8"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page8-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:442px;white-space:nowrap" class="ft80">8</P>
+<P style="position:absolute;top:109px;left:127px;white-space:nowrap" class="ft82"><b>6.&#160;&#160;INTEGRAL HIRUKOITZAK</b></P>
+<P style="position:absolute;top:171px;left:127px;white-space:nowrap" class="ft82"><b>6.1.&#160;Definizioa eta propietateak.</b></P>
+<P style="position:absolute;top:233px;left:159px;white-space:nowrap" class="ft80">Integral anizkoitzen azterketa, bi baino aldagai gehiagoko funtzioen integralak,</P>
+<P style="position:absolute;top:264px;left:127px;white-space:nowrap" class="ft80">integral bikoitzerako egindako azterketaren antzekoa da. Han ikusitako kontzeptu,</P>
+<P style="position:absolute;top:296px;left:127px;white-space:nowrap" class="ft80">emaitza eta propietate gehienak errepikatzen baitira.</P>
+<P style="position:absolute;top:357px;left:159px;white-space:nowrap" class="ft80">Ondoan, integral hirukoitzerako &#160;oinarrizko emaitzak laburtuko ditugu.</P>
+<P style="position:absolute;top:423px;left:159px;white-space:nowrap" class="ft80">Izan bedi u = f(x,y,z)&#160;</P>
+<P style="position:absolute;top:420px;left:325px;white-space:nowrap" class="ft81"><b>R</b></P>
+<P style="position:absolute;top:416px;left:341px;white-space:nowrap" class="ft84">3</P>
+<P style="position:absolute;top:423px;left:348px;white-space:nowrap" class="ft80">-ko &#160;V solido&#160;&#160;bornatu baten gainean definiturik dagoen</P>
+<P style="position:absolute;top:455px;left:127px;white-space:nowrap" class="ft80">funtzioa. n kutxa dituen sare baten bidezko V-ren barneko partiketa bat egiten da, eta&#160;&#160;i-</P>
+<P style="position:absolute;top:488px;left:127px;white-space:nowrap" class="ft80">garren kutxako bolumena</P>
+<P style="position:absolute;top:482px;left:335px;white-space:nowrap" class="ft89">∆V</P>
+<P style="position:absolute;top:494px;left:359px;white-space:nowrap" class="ft810">i&#160;ikurraren bidez adieraziko dugu. Kutxa bakoitzeko</P>
+<P style="position:absolute;top:541px;left:127px;white-space:nowrap" class="ft80">(xi,yi,zi)<b>&#160;&#160;</b>hautazko puntu bat aukeratzen dugu eta&#160;</P>
+<P style="position:absolute;top:548px;left:696px;white-space:nowrap" class="ft84">i</P>
+<P style="position:absolute;top:525px;left:574px;white-space:nowrap" class="ft84">n</P>
+<P style="position:absolute;top:564px;left:581px;white-space:nowrap" class="ft84">1</P>
+<P style="position:absolute;top:564px;left:568px;white-space:nowrap" class="ft84">i</P>
+<P style="position:absolute;top:548px;left:658px;white-space:nowrap" class="ft84">i</P>
+<P style="position:absolute;top:548px;left:637px;white-space:nowrap" class="ft84">i</P>
+<P style="position:absolute;top:548px;left:614px;white-space:nowrap" class="ft84">i</P>
+<P style="position:absolute;top:541px;left:685px;white-space:nowrap" class="ft80">V</P>
+<P style="position:absolute;top:541px;left:665px;white-space:nowrap" class="ft80">)</P>
+<P style="position:absolute;top:541px;left:649px;white-space:nowrap" class="ft80">z</P>
+<P style="position:absolute;top:541px;left:642px;white-space:nowrap" class="ft80">,</P>
+<P style="position:absolute;top:541px;left:627px;white-space:nowrap" class="ft80">y</P>
+<P style="position:absolute;top:541px;left:620px;white-space:nowrap" class="ft80">,</P>
+<P style="position:absolute;top:541px;left:604px;white-space:nowrap" class="ft80">x</P>
+<P style="position:absolute;top:541px;left:597px;white-space:nowrap" class="ft80">(</P>
+<P style="position:absolute;top:541px;left:588px;white-space:nowrap" class="ft80">f</P>
+<P style="position:absolute;top:535px;left:674px;white-space:nowrap" class="ft89">∆</P>
+<P style="position:absolute;top:529px;left:567px;white-space:nowrap" class="ft85">∑</P>
+<P style="position:absolute;top:560px;left:573px;white-space:nowrap" class="ft811">=</P>
+<P style="position:absolute;top:541px;left:703px;white-space:nowrap" class="ft80">&#160;batura</P>
+<P style="position:absolute;top:590px;left:127px;white-space:nowrap" class="ft80">kontsideratzen dugu.</P>
+<P style="position:absolute;top:654px;left:127px;white-space:nowrap" class="ft80">Definizioa.&#160;V-n partiketa ezberdin egiten baditugu non max{</P>
+<P style="position:absolute;top:649px;left:565px;white-space:nowrap" class="ft89">∆V</P>
+<P style="position:absolute;top:661px;left:588px;white-space:nowrap" class="ft810">i&#160;}</P>
+<P style="position:absolute;top:649px;left:610px;white-space:nowrap" class="ft89">→&#160;0, hots n→&#160;∞&#160;, eta</P>
+<P style="position:absolute;top:702px;left:127px;white-space:nowrap" class="ft80">aukeratutako&#160;(xi,yi,zi) puntuak edozein izanda ere&#160;</P>
+<P style="position:absolute;top:709px;left:758px;white-space:nowrap" class="ft88">i</P>
+<P style="position:absolute;top:687px;left:630px;white-space:nowrap" class="ft88">n</P>
+<P style="position:absolute;top:723px;left:637px;white-space:nowrap" class="ft88">1</P>
+<P style="position:absolute;top:723px;left:624px;white-space:nowrap" class="ft88">i</P>
+<P style="position:absolute;top:709px;left:719px;white-space:nowrap" class="ft88">i</P>
+<P style="position:absolute;top:709px;left:695px;white-space:nowrap" class="ft88">i</P>
+<P style="position:absolute;top:709px;left:671px;white-space:nowrap" class="ft88">i</P>
+<P style="position:absolute;top:724px;left:606px;white-space:nowrap" class="ft88">0</P>
+<P style="position:absolute;top:724px;left:577px;white-space:nowrap" class="ft88">V</P>
+<P style="position:absolute;top:724px;left:542px;white-space:nowrap" class="ft88">max</P>
+<P style="position:absolute;top:702px;left:746px;white-space:nowrap" class="ft80">V</P>
+<P style="position:absolute;top:702px;left:727px;white-space:nowrap" class="ft80">)</P>
+<P style="position:absolute;top:702px;left:710px;white-space:nowrap" class="ft80">z</P>
+<P style="position:absolute;top:702px;left:703px;white-space:nowrap" class="ft80">,</P>
+<P style="position:absolute;top:702px;left:685px;white-space:nowrap" class="ft80">y</P>
+<P style="position:absolute;top:702px;left:677px;white-space:nowrap" class="ft80">,</P>
+<P style="position:absolute;top:702px;left:659px;white-space:nowrap" class="ft80">x</P>
+<P style="position:absolute;top:702px;left:653px;white-space:nowrap" class="ft80">(</P>
+<P style="position:absolute;top:702px;left:645px;white-space:nowrap" class="ft80">f</P>
+<P style="position:absolute;top:701px;left:582px;white-space:nowrap" class="ft812">lim</P>
+<P style="position:absolute;top:732px;left:587px;white-space:nowrap" class="ft813">i</P>
+<P style="position:absolute;top:696px;left:735px;white-space:nowrap" class="ft89">∆</P>
+<P style="position:absolute;top:695px;left:627px;white-space:nowrap" class="ft87">∑</P>
+<P style="position:absolute;top:718px;left:629px;white-space:nowrap" class="ft814">=</P>
+<P style="position:absolute;top:719px;left:592px;white-space:nowrap" class="ft814">→</P>
+<P style="position:absolute;top:719px;left:568px;white-space:nowrap" class="ft814">∆</P>
+<P style="position:absolute;top:757px;left:127px;white-space:nowrap" class="ft80">limitea existitzen bada, limite honi V eremuan zabaldutako f(x,y,z) funtzioaren integral</P>
+<P style="position:absolute;top:793px;left:127px;white-space:nowrap" class="ft80">hirukoitza esaten zaio eta &#160;</P>
+<P style="position:absolute;top:793px;left:451px;white-space:nowrap" class="ft80">dz</P>
+<P style="position:absolute;top:793px;left:431px;white-space:nowrap" class="ft80">dy</P>
+<P style="position:absolute;top:793px;left:411px;white-space:nowrap" class="ft80">dx</P>
+<P style="position:absolute;top:793px;left:403px;white-space:nowrap" class="ft80">)</P>
+<P style="position:absolute;top:793px;left:394px;white-space:nowrap" class="ft80">z</P>
+<P style="position:absolute;top:793px;left:387px;white-space:nowrap" class="ft80">,</P>
+<P style="position:absolute;top:793px;left:378px;white-space:nowrap" class="ft80">y</P>
+<P style="position:absolute;top:793px;left:370px;white-space:nowrap" class="ft80">,</P>
+<P style="position:absolute;top:793px;left:361px;white-space:nowrap" class="ft80">x</P>
+<P style="position:absolute;top:793px;left:354px;white-space:nowrap" class="ft80">(</P>
+<P style="position:absolute;top:793px;left:345px;white-space:nowrap" class="ft80">f</P>
+<P style="position:absolute;top:818px;left:327px;white-space:nowrap" class="ft84">V</P>
+<P style="position:absolute;top:785px;left:322px;white-space:nowrap" class="ft85">∫∫∫</P>
+<P style="position:absolute;top:793px;left:471px;white-space:nowrap" class="ft80">&#160; ikurraren bidez adierazten da.</P>
+<P style="position:absolute;top:861px;left:383px;white-space:nowrap" class="ft80">dz</P>
+<P style="position:absolute;top:861px;left:362px;white-space:nowrap" class="ft80">dy</P>
+<P style="position:absolute;top:861px;left:342px;white-space:nowrap" class="ft80">dx</P>
+<P style="position:absolute;top:861px;left:334px;white-space:nowrap" class="ft80">)</P>
+<P style="position:absolute;top:861px;left:325px;white-space:nowrap" class="ft80">z</P>
+<P style="position:absolute;top:861px;left:318px;white-space:nowrap" class="ft80">,</P>
+<P style="position:absolute;top:861px;left:309px;white-space:nowrap" class="ft80">y</P>
+<P style="position:absolute;top:861px;left:302px;white-space:nowrap" class="ft80">,</P>
+<P style="position:absolute;top:861px;left:293px;white-space:nowrap" class="ft80">x</P>
+<P style="position:absolute;top:861px;left:286px;white-space:nowrap" class="ft80">(</P>
+<P style="position:absolute;top:861px;left:277px;white-space:nowrap" class="ft80">f</P>
+<P style="position:absolute;top:887px;left:259px;white-space:nowrap" class="ft84">V</P>
+<P style="position:absolute;top:853px;left:253px;white-space:nowrap" class="ft85">∫∫∫</P>
+<P style="position:absolute;top:861px;left:403px;white-space:nowrap" class="ft80">=</P>
+<P style="position:absolute;top:868px;left:631px;white-space:nowrap" class="ft88">i</P>
+<P style="position:absolute;top:847px;left:503px;white-space:nowrap" class="ft88">n</P>
+<P style="position:absolute;top:883px;left:510px;white-space:nowrap" class="ft88">1</P>
+<P style="position:absolute;top:883px;left:497px;white-space:nowrap" class="ft88">i</P>
+<P style="position:absolute;top:868px;left:592px;white-space:nowrap" class="ft88">i</P>
+<P style="position:absolute;top:868px;left:568px;white-space:nowrap" class="ft88">i</P>
+<P style="position:absolute;top:868px;left:543px;white-space:nowrap" class="ft88">i</P>
+<P style="position:absolute;top:884px;left:479px;white-space:nowrap" class="ft88">0</P>
+<P style="position:absolute;top:884px;left:450px;white-space:nowrap" class="ft88">V</P>
+<P style="position:absolute;top:884px;left:415px;white-space:nowrap" class="ft88">max</P>
+<P style="position:absolute;top:861px;left:619px;white-space:nowrap" class="ft80">V</P>
+<P style="position:absolute;top:861px;left:600px;white-space:nowrap" class="ft80">)</P>
+<P style="position:absolute;top:861px;left:583px;white-space:nowrap" class="ft80">z</P>
+<P style="position:absolute;top:861px;left:576px;white-space:nowrap" class="ft80">,</P>
+<P style="position:absolute;top:861px;left:558px;white-space:nowrap" class="ft80">y</P>
+<P style="position:absolute;top:861px;left:550px;white-space:nowrap" class="ft80">,</P>
+<P style="position:absolute;top:861px;left:532px;white-space:nowrap" class="ft80">x</P>
+<P style="position:absolute;top:861px;left:525px;white-space:nowrap" class="ft80">(</P>
+<P style="position:absolute;top:861px;left:518px;white-space:nowrap" class="ft80">f</P>
+<P style="position:absolute;top:860px;left:455px;white-space:nowrap" class="ft812">lim</P>
+<P style="position:absolute;top:892px;left:460px;white-space:nowrap" class="ft813">i</P>
+<P style="position:absolute;top:856px;left:608px;white-space:nowrap" class="ft89">∆</P>
+<P style="position:absolute;top:854px;left:500px;white-space:nowrap" class="ft87">∑</P>
+<P style="position:absolute;top:878px;left:502px;white-space:nowrap" class="ft814">=</P>
+<P style="position:absolute;top:879px;left:465px;white-space:nowrap" class="ft814">→</P>
+<P style="position:absolute;top:879px;left:441px;white-space:nowrap" class="ft814">∆</P>
+<P style="position:absolute;top:861px;left:638px;white-space:nowrap" class="ft80">.</P>
+<P style="position:absolute;top:947px;left:127px;white-space:nowrap" class="ft80">f(x,y,z)=1 bada V osoan, orduan integral hirukoitzak V-ren bolumena adierazten du.</P>
+<P style="position:absolute;top:1010px;left:127px;white-space:nowrap" class="ft80">Teorema.&#160;f(x,y,z) &#160;V solido&#160;&#160;bornatu eta itxi batean jarraitua bada, orduan</P>
+<P style="position:absolute;top:1045px;left:260px;white-space:nowrap" class="ft80">dz</P>
+<P style="position:absolute;top:1045px;left:240px;white-space:nowrap" class="ft80">dy</P>
+<P style="position:absolute;top:1045px;left:219px;white-space:nowrap" class="ft80">dx</P>
+<P style="position:absolute;top:1045px;left:212px;white-space:nowrap" class="ft80">)</P>
+<P style="position:absolute;top:1045px;left:203px;white-space:nowrap" class="ft80">z</P>
+<P style="position:absolute;top:1045px;left:196px;white-space:nowrap" class="ft80">,</P>
+<P style="position:absolute;top:1045px;left:187px;white-space:nowrap" class="ft80">y</P>
+<P style="position:absolute;top:1045px;left:179px;white-space:nowrap" class="ft80">,</P>
+<P style="position:absolute;top:1045px;left:170px;white-space:nowrap" class="ft80">x</P>
+<P style="position:absolute;top:1045px;left:163px;white-space:nowrap" class="ft80">(</P>
+<P style="position:absolute;top:1045px;left:154px;white-space:nowrap" class="ft80">f</P>
+<P style="position:absolute;top:1070px;left:136px;white-space:nowrap" class="ft84">V</P>
+<P style="position:absolute;top:1037px;left:131px;white-space:nowrap" class="ft85">∫∫∫</P>
+<P style="position:absolute;top:1045px;left:280px;white-space:nowrap" class="ft80">&#160;integral hirukoitza existitzen da.</P>
+<P style="position:absolute;top:1099px;left:180px;white-space:nowrap" class="ft80">Integral bikoitzean ikusitako propietateak integral&#160;&#160;hirukotzetan baliagarriak dira.</P>
+</DIV>
+<!-- Page 9 -->
+<a name="9"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft923{font-size:16px;line-height:25px;font-family:Symbol;color:#000000;}
+-->
+</STYLE>
+<DIV id="page9-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:442px;white-space:nowrap" class="ft90">9</P>
+<P style="position:absolute;top:109px;left:127px;white-space:nowrap" class="ft92"><b>6.2. Integral hirukoitzaren kalkulua.</b></P>
+<P style="position:absolute;top:171px;left:180px;white-space:nowrap" class="ft90">&#160;f(x,y,z) &#160;V solidoan jarraitua dela suposatuz, integral hirukoitzaren&#160;kalkulua V-</P>
+<P style="position:absolute;top:202px;left:127px;white-space:nowrap" class="ft90">ren itxuraren araberakoa izango da. Horrela:</P>
+<P style="position:absolute;top:264px;left:180px;white-space:nowrap" class="ft90">a)&#160;&#160;V=[a,b]x[c,d]x[e,f] bada, orduan</P>
+<P style="position:absolute;top:348px;left:425px;white-space:nowrap" class="ft90">dz</P>
+<P style="position:absolute;top:348px;left:405px;white-space:nowrap" class="ft90">dy</P>
+<P style="position:absolute;top:348px;left:385px;white-space:nowrap" class="ft90">dx</P>
+<P style="position:absolute;top:348px;left:377px;white-space:nowrap" class="ft90">)</P>
+<P style="position:absolute;top:348px;left:368px;white-space:nowrap" class="ft90">z</P>
+<P style="position:absolute;top:348px;left:361px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:348px;left:352px;white-space:nowrap" class="ft90">y</P>
+<P style="position:absolute;top:348px;left:344px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:348px;left:335px;white-space:nowrap" class="ft90">x</P>
+<P style="position:absolute;top:348px;left:329px;white-space:nowrap" class="ft90">(</P>
+<P style="position:absolute;top:348px;left:320px;white-space:nowrap" class="ft90">f</P>
+<P style="position:absolute;top:374px;left:302px;white-space:nowrap" class="ft94">V</P>
+<P style="position:absolute;top:340px;left:296px;white-space:nowrap" class="ft95">∫∫∫</P>
+<P style="position:absolute;top:348px;left:446px;white-space:nowrap" class="ft90">=&#160;</P>
+<P style="position:absolute;top:348px;left:627px;white-space:nowrap" class="ft90">dx</P>
+<P style="position:absolute;top:348px;left:601px;white-space:nowrap" class="ft90">dy</P>
+<P style="position:absolute;top:348px;left:575px;white-space:nowrap" class="ft90">dz</P>
+<P style="position:absolute;top:348px;left:566px;white-space:nowrap" class="ft90">)</P>
+<P style="position:absolute;top:348px;left:558px;white-space:nowrap" class="ft90">z</P>
+<P style="position:absolute;top:348px;left:550px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:348px;left:541px;white-space:nowrap" class="ft90">y</P>
+<P style="position:absolute;top:348px;left:534px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:348px;left:524px;white-space:nowrap" class="ft90">x</P>
+<P style="position:absolute;top:348px;left:518px;white-space:nowrap" class="ft90">(</P>
+<P style="position:absolute;top:348px;left:509px;white-space:nowrap" class="ft90">f</P>
+<P style="position:absolute;top:332px;left:462px;white-space:nowrap" class="ft98">b</P>
+<P style="position:absolute;top:371px;left:462px;white-space:nowrap" class="ft98">a</P>
+<P style="position:absolute;top:332px;left:482px;white-space:nowrap" class="ft98">d</P>
+<P style="position:absolute;top:371px;left:482px;white-space:nowrap" class="ft98">c</P>
+<P style="position:absolute;top:332px;left:500px;white-space:nowrap" class="ft98">f</P>
+<P style="position:absolute;top:371px;left:500px;white-space:nowrap" class="ft98">e</P>
+<P style="position:absolute;top:343px;left:464px;white-space:nowrap" class="ft97">∫&#160;∫&#160;∫</P>
+<P style="position:absolute;top:354px;left:621px;white-space:nowrap" class="ft99"></P>
+<P style="position:absolute;top:337px;left:621px;white-space:nowrap" class="ft919"><br/></P>
+<P style="position:absolute;top:326px;left:621px;white-space:nowrap" class="ft99"></P>
+<P style="position:absolute;top:354px;left:473px;white-space:nowrap" class="ft99"></P>
+<P style="position:absolute;top:337px;left:473px;white-space:nowrap" class="ft919"><br/></P>
+<P style="position:absolute;top:326px;left:473px;white-space:nowrap" class="ft99"></P>
+<P style="position:absolute;top:352px;left:594px;white-space:nowrap" class="ft99"></P>
+<P style="position:absolute;top:338px;left:594px;white-space:nowrap" class="ft923"><br/></P>
+<P style="position:absolute;top:327px;left:594px;white-space:nowrap" class="ft99"></P>
+<P style="position:absolute;top:352px;left:491px;white-space:nowrap" class="ft99"></P>
+<P style="position:absolute;top:338px;left:491px;white-space:nowrap" class="ft923"><br/></P>
+<P style="position:absolute;top:327px;left:491px;white-space:nowrap" class="ft99"></P>
+<P style="position:absolute;top:348px;left:648px;white-space:nowrap" class="ft90">.</P>
+<P style="position:absolute;top:435px;left:180px;white-space:nowrap" class="ft90">b)&#160;&#160;V eremua &#160;</P>
+<P style="position:absolute;top:435px;left:654px;white-space:nowrap" class="ft90">)</P>
+<P style="position:absolute;top:435px;left:645px;white-space:nowrap" class="ft90">y</P>
+<P style="position:absolute;top:435px;left:637px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:435px;left:627px;white-space:nowrap" class="ft90">x</P>
+<P style="position:absolute;top:435px;left:620px;white-space:nowrap" class="ft90">(</P>
+<P style="position:absolute;top:435px;left:601px;white-space:nowrap" class="ft90">h</P>
+<P style="position:absolute;top:435px;left:575px;white-space:nowrap" class="ft90">z</P>
+<P style="position:absolute;top:435px;left:551px;white-space:nowrap" class="ft90">)</P>
+<P style="position:absolute;top:435px;left:541px;white-space:nowrap" class="ft90">y</P>
+<P style="position:absolute;top:435px;left:534px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:435px;left:524px;white-space:nowrap" class="ft90">x</P>
+<P style="position:absolute;top:435px;left:518px;white-space:nowrap" class="ft90">(</P>
+<P style="position:absolute;top:435px;left:501px;white-space:nowrap" class="ft90">h</P>
+<P style="position:absolute;top:435px;left:494px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:435px;left:486px;white-space:nowrap" class="ft90">)</P>
+<P style="position:absolute;top:435px;left:476px;white-space:nowrap" class="ft90">x</P>
+<P style="position:absolute;top:435px;left:469px;white-space:nowrap" class="ft90">(</P>
+<P style="position:absolute;top:435px;left:450px;white-space:nowrap" class="ft90">g</P>
+<P style="position:absolute;top:435px;left:424px;white-space:nowrap" class="ft90">y</P>
+<P style="position:absolute;top:435px;left:399px;white-space:nowrap" class="ft90">)</P>
+<P style="position:absolute;top:435px;left:389px;white-space:nowrap" class="ft90">x</P>
+<P style="position:absolute;top:435px;left:383px;white-space:nowrap" class="ft90">(</P>
+<P style="position:absolute;top:435px;left:366px;white-space:nowrap" class="ft90">g</P>
+<P style="position:absolute;top:435px;left:359px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:435px;left:349px;white-space:nowrap" class="ft90">b</P>
+<P style="position:absolute;top:435px;left:321px;white-space:nowrap" class="ft90">x</P>
+<P style="position:absolute;top:435px;left:294px;white-space:nowrap" class="ft90">a</P>
+<P style="position:absolute;top:445px;left:612px;white-space:nowrap" class="ft913">2</P>
+<P style="position:absolute;top:445px;left:511px;white-space:nowrap" class="ft913">1</P>
+<P style="position:absolute;top:445px;left:461px;white-space:nowrap" class="ft913">2</P>
+<P style="position:absolute;top:445px;left:376px;white-space:nowrap" class="ft913">1</P>
+<P style="position:absolute;top:429px;left:587px;white-space:nowrap" class="ft99">≤</P>
+<P style="position:absolute;top:429px;left:560px;white-space:nowrap" class="ft99">≤</P>
+<P style="position:absolute;top:429px;left:437px;white-space:nowrap" class="ft99">≤</P>
+<P style="position:absolute;top:429px;left:410px;white-space:nowrap" class="ft99">≤</P>
+<P style="position:absolute;top:429px;left:334px;white-space:nowrap" class="ft99">≤</P>
+<P style="position:absolute;top:429px;left:306px;white-space:nowrap" class="ft99">≤</P>
+<P style="position:absolute;top:435px;left:666px;white-space:nowrap" class="ft90">desberdintzen</P>
+<P style="position:absolute;top:470px;left:207px;white-space:nowrap" class="ft90">bidez definiturik badago, eta g1,g2, h1&#160;eta h2&#160;jarraituak badira, orduan</P>
+<P style="position:absolute;top:551px;left:415px;white-space:nowrap" class="ft90">dz</P>
+<P style="position:absolute;top:551px;left:395px;white-space:nowrap" class="ft90">dy</P>
+<P style="position:absolute;top:551px;left:375px;white-space:nowrap" class="ft90">dx</P>
+<P style="position:absolute;top:551px;left:367px;white-space:nowrap" class="ft90">)</P>
+<P style="position:absolute;top:551px;left:358px;white-space:nowrap" class="ft90">z</P>
+<P style="position:absolute;top:551px;left:351px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:551px;left:342px;white-space:nowrap" class="ft90">y</P>
+<P style="position:absolute;top:551px;left:334px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:551px;left:325px;white-space:nowrap" class="ft90">x</P>
+<P style="position:absolute;top:551px;left:318px;white-space:nowrap" class="ft90">(</P>
+<P style="position:absolute;top:551px;left:309px;white-space:nowrap" class="ft90">f</P>
+<P style="position:absolute;top:577px;left:291px;white-space:nowrap" class="ft94">V</P>
+<P style="position:absolute;top:543px;left:286px;white-space:nowrap" class="ft95">∫∫∫</P>
+<P style="position:absolute;top:551px;left:435px;white-space:nowrap" class="ft90">&#160;=&#160;</P>
+<P style="position:absolute;top:545px;left:458px;white-space:nowrap" class="ft97">∫&#160;∫</P>
+<P style="position:absolute;top:545px;left:524px;white-space:nowrap" class="ft97">∫</P>
+<P style="position:absolute;top:534px;left:457px;white-space:nowrap" class="ft98">b</P>
+<P style="position:absolute;top:574px;left:457px;white-space:nowrap" class="ft98">a</P>
+<P style="position:absolute;top:533px;left:496px;white-space:nowrap" class="ft98">)</P>
+<P style="position:absolute;top:533px;left:488px;white-space:nowrap" class="ft98">x</P>
+<P style="position:absolute;top:533px;left:483px;white-space:nowrap" class="ft98">(</P>
+<P style="position:absolute;top:533px;left:467px;white-space:nowrap" class="ft98">g</P>
+<P style="position:absolute;top:574px;left:495px;white-space:nowrap" class="ft98">)</P>
+<P style="position:absolute;top:574px;left:487px;white-space:nowrap" class="ft98">x</P>
+<P style="position:absolute;top:574px;left:482px;white-space:nowrap" class="ft98">(</P>
+<P style="position:absolute;top:574px;left:468px;white-space:nowrap" class="ft98">g</P>
+<P style="position:absolute;top:533px;left:546px;white-space:nowrap" class="ft98">)</P>
+<P style="position:absolute;top:533px;left:538px;white-space:nowrap" class="ft98">y</P>
+<P style="position:absolute;top:533px;left:533px;white-space:nowrap" class="ft98">,</P>
+<P style="position:absolute;top:533px;left:525px;white-space:nowrap" class="ft98">x</P>
+<P style="position:absolute;top:533px;left:519px;white-space:nowrap" class="ft98">(</P>
+<P style="position:absolute;top:533px;left:504px;white-space:nowrap" class="ft98">h</P>
+<P style="position:absolute;top:574px;left:545px;white-space:nowrap" class="ft98">)</P>
+<P style="position:absolute;top:574px;left:537px;white-space:nowrap" class="ft98">y</P>
+<P style="position:absolute;top:574px;left:532px;white-space:nowrap" class="ft98">,</P>
+<P style="position:absolute;top:574px;left:524px;white-space:nowrap" class="ft98">x</P>
+<P style="position:absolute;top:574px;left:518px;white-space:nowrap" class="ft98">(</P>
+<P style="position:absolute;top:574px;left:504px;white-space:nowrap" class="ft98">h</P>
+<P style="position:absolute;top:539px;left:476px;white-space:nowrap" class="ft913">2</P>
+<P style="position:absolute;top:581px;left:475px;white-space:nowrap" class="ft913">1</P>
+<P style="position:absolute;top:539px;left:512px;white-space:nowrap" class="ft913">2</P>
+<P style="position:absolute;top:581px;left:512px;white-space:nowrap" class="ft913">1</P>
+<P style="position:absolute;top:551px;left:637px;white-space:nowrap" class="ft90">dx</P>
+<P style="position:absolute;top:551px;left:617px;white-space:nowrap" class="ft90">dy</P>
+<P style="position:absolute;top:551px;left:599px;white-space:nowrap" class="ft90">dz</P>
+<P style="position:absolute;top:551px;left:591px;white-space:nowrap" class="ft90">)</P>
+<P style="position:absolute;top:551px;left:582px;white-space:nowrap" class="ft90">z</P>
+<P style="position:absolute;top:551px;left:575px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:551px;left:566px;white-space:nowrap" class="ft90">y</P>
+<P style="position:absolute;top:551px;left:558px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:551px;left:548px;white-space:nowrap" class="ft90">x</P>
+<P style="position:absolute;top:551px;left:541px;white-space:nowrap" class="ft90">(</P>
+<P style="position:absolute;top:551px;left:533px;white-space:nowrap" class="ft90">f</P>
+<P style="position:absolute;top:551px;left:658px;white-space:nowrap" class="ft90">.</P>
+<P style="position:absolute;top:605px;left:180px;white-space:nowrap" class="ft90">Aurreko integralen kalkulurako, aldagai batekiko integratzen denean , besteak</P>
+<P style="position:absolute;top:636px;left:180px;white-space:nowrap" class="ft90">konstanteak kontsideratu &#160;behar dira, integrazio limiteak konstantetzat hartzen</P>
+<P style="position:absolute;top:667px;left:180px;white-space:nowrap" class="ft90">diren funtziopean &#160;adierazirik.</P>
+<P style="position:absolute;top:729px;left:127px;white-space:nowrap" class="ft92"><b>6.3.&#160;&#160;Aldagai-aldaketak integral hirukoitzean.</b></P>
+<P style="position:absolute;top:823px;left:288px;white-space:nowrap" class="ft90">dz</P>
+<P style="position:absolute;top:823px;left:268px;white-space:nowrap" class="ft90">dy</P>
+<P style="position:absolute;top:823px;left:248px;white-space:nowrap" class="ft90">dx</P>
+<P style="position:absolute;top:823px;left:240px;white-space:nowrap" class="ft90">)</P>
+<P style="position:absolute;top:823px;left:231px;white-space:nowrap" class="ft90">z</P>
+<P style="position:absolute;top:823px;left:224px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:823px;left:215px;white-space:nowrap" class="ft90">y</P>
+<P style="position:absolute;top:823px;left:207px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:823px;left:198px;white-space:nowrap" class="ft90">x</P>
+<P style="position:absolute;top:823px;left:191px;white-space:nowrap" class="ft90">(</P>
+<P style="position:absolute;top:823px;left:182px;white-space:nowrap" class="ft90">f</P>
+<P style="position:absolute;top:849px;left:164px;white-space:nowrap" class="ft94">V</P>
+<P style="position:absolute;top:815px;left:159px;white-space:nowrap" class="ft95">∫∫∫</P>
+<P style="position:absolute;top:823px;left:308px;white-space:nowrap" class="ft90">&#160;integral hirukoitza kalkulatzeko&#160;</P>
+<P style="position:absolute;top:838px;left:558px;white-space:nowrap" class="ft97"></P>
+<P style="position:absolute;top:802px;left:558px;white-space:nowrap" class="ft97"></P>
+<P style="position:absolute;top:817px;left:558px;white-space:nowrap" class="ft97"></P>
+<P style="position:absolute;top:788px;left:558px;white-space:nowrap" class="ft97"></P>
+<P style="position:absolute;top:844px;left:584px;white-space:nowrap" class="ft99">=</P>
+<P style="position:absolute;top:817px;left:584px;white-space:nowrap" class="ft99">=</P>
+<P style="position:absolute;top:790px;left:584px;white-space:nowrap" class="ft99">=</P>
+<P style="position:absolute;top:850px;left:663px;white-space:nowrap" class="ft90">)</P>
+<P style="position:absolute;top:850px;left:649px;white-space:nowrap" class="ft90">w</P>
+<P style="position:absolute;top:850px;left:641px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:850px;left:632px;white-space:nowrap" class="ft90">v</P>
+<P style="position:absolute;top:850px;left:624px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:850px;left:614px;white-space:nowrap" class="ft90">u</P>
+<P style="position:absolute;top:850px;left:608px;white-space:nowrap" class="ft90">(</P>
+<P style="position:absolute;top:850px;left:600px;white-space:nowrap" class="ft90">z</P>
+<P style="position:absolute;top:850px;left:570px;white-space:nowrap" class="ft90">z</P>
+<P style="position:absolute;top:823px;left:664px;white-space:nowrap" class="ft90">)</P>
+<P style="position:absolute;top:823px;left:650px;white-space:nowrap" class="ft90">w</P>
+<P style="position:absolute;top:823px;left:642px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:823px;left:633px;white-space:nowrap" class="ft90">v</P>
+<P style="position:absolute;top:823px;left:626px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:823px;left:617px;white-space:nowrap" class="ft90">u</P>
+<P style="position:absolute;top:823px;left:610px;white-space:nowrap" class="ft90">(</P>
+<P style="position:absolute;top:823px;left:600px;white-space:nowrap" class="ft90">y</P>
+<P style="position:absolute;top:823px;left:570px;white-space:nowrap" class="ft90">y</P>
+<P style="position:absolute;top:796px;left:665px;white-space:nowrap" class="ft90">)</P>
+<P style="position:absolute;top:796px;left:650px;white-space:nowrap" class="ft90">w</P>
+<P style="position:absolute;top:796px;left:642px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:796px;left:633px;white-space:nowrap" class="ft90">v</P>
+<P style="position:absolute;top:796px;left:627px;white-space:nowrap" class="ft90">,</P>
+<P style="position:absolute;top:796px;left:617px;white-space:nowrap" class="ft90">u</P>
+<P style="position:absolute;top:796px;left:610px;white-space:nowrap" class="ft90">(</P>
+<P style="position:absolute;top:796px;left:600px;white-space:nowrap" class="ft90">x</P>
+<P style="position:absolute;top:796px;left:569px;white-space:nowrap" class="ft90">x</P>
+<P style="position:absolute;top:823px;left:674px;white-space:nowrap" class="ft90">&#160;(u,v,w)</P>
+<P style="position:absolute;top:817px;left:732px;white-space:nowrap" class="ft99">∈V*</P>
+<P style="position:absolute;top:887px;left:127px;white-space:nowrap" class="ft90">aldagai-aldaketa egitea beharrezkoa bada, ondoko baldintzak betetzen direla suposatuz:</P>
+<P style="position:absolute;top:950px;left:180px;white-space:nowrap" class="ft90">-&#160;&#160;f(x,y,z) jarraitua da V-n.</P>
+<P style="position:absolute;top:981px;left:180px;white-space:nowrap" class="ft90">-&#160;&#160;OXYZ &#160;espazioko V solidoko puntuen eta O’UVW espazioko &#160;V</P>
+<P style="position:absolute;top:977px;left:690px;white-space:nowrap" class="ft910">*&#160;solidoko</P>
+<P style="position:absolute;top:1012px;left:207px;white-space:nowrap" class="ft90">puntuen artean korrespondentzia biuniboko eta jarraitu bat existitzen da.</P>
+<P style="position:absolute;top:1043px;left:180px;white-space:nowrap" class="ft90">-&#160;&#160;x(u,v,w), y(u,v,w) eta z(u,v,w) funtzioak jarraituak dira, deribatu partzial</P>
+<P style="position:absolute;top:1074px;left:207px;white-space:nowrap" class="ft90">jarraituekin V</P>
+<P style="position:absolute;top:1070px;left:306px;white-space:nowrap" class="ft910">*&#160;-n.</P>
+<P style="position:absolute;top:1106px;left:180px;white-space:nowrap" class="ft90">-&#160;&#160;u,v,w –rekiko &#160;x,y,z funtzioen&#160;Jakobiarraren zeinua ez da aldatzen &#160;V</P>
+<P style="position:absolute;top:1102px;left:704px;white-space:nowrap" class="ft910">*-n:</P>
+</DIV>
+<!-- Page 10 -->
+<a name="10"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page10-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:438px;white-space:nowrap" class="ft100">10</P>
+<P style="position:absolute;top:222px;left:563px;white-space:nowrap" class="ft100">w</P>
+<P style="position:absolute;top:197px;left:565px;white-space:nowrap" class="ft100">z</P>
+<P style="position:absolute;top:222px;left:524px;white-space:nowrap" class="ft100">v</P>
+<P style="position:absolute;top:197px;left:524px;white-space:nowrap" class="ft100">z</P>
+<P style="position:absolute;top:222px;left:486px;white-space:nowrap" class="ft100">u</P>
+<P style="position:absolute;top:197px;left:487px;white-space:nowrap" class="ft100">z</P>
+<P style="position:absolute;top:180px;left:563px;white-space:nowrap" class="ft100">w</P>
+<P style="position:absolute;top:154px;left:565px;white-space:nowrap" class="ft100">y</P>
+<P style="position:absolute;top:180px;left:524px;white-space:nowrap" class="ft100">v</P>
+<P style="position:absolute;top:154px;left:524px;white-space:nowrap" class="ft100">y</P>
+<P style="position:absolute;top:180px;left:486px;white-space:nowrap" class="ft100">u</P>
+<P style="position:absolute;top:154px;left:486px;white-space:nowrap" class="ft100">y</P>
+<P style="position:absolute;top:137px;left:563px;white-space:nowrap" class="ft100">w</P>
+<P style="position:absolute;top:111px;left:565px;white-space:nowrap" class="ft100">x</P>
+<P style="position:absolute;top:137px;left:524px;white-space:nowrap" class="ft100">v</P>
+<P style="position:absolute;top:111px;left:524px;white-space:nowrap" class="ft100">x</P>
+<P style="position:absolute;top:137px;left:486px;white-space:nowrap" class="ft100">u</P>
+<P style="position:absolute;top:111px;left:486px;white-space:nowrap" class="ft100">x</P>
+<P style="position:absolute;top:180px;left:446px;white-space:nowrap" class="ft100">)</P>
+<P style="position:absolute;top:180px;left:432px;white-space:nowrap" class="ft100">w</P>
+<P style="position:absolute;top:180px;left:424px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:180px;left:415px;white-space:nowrap" class="ft100">v</P>
+<P style="position:absolute;top:180px;left:407px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:180px;left:398px;white-space:nowrap" class="ft100">u</P>
+<P style="position:absolute;top:180px;left:392px;white-space:nowrap" class="ft100">(</P>
+<P style="position:absolute;top:180px;left:378px;white-space:nowrap" class="ft100">D</P>
+<P style="position:absolute;top:154px;left:443px;white-space:nowrap" class="ft100">)</P>
+<P style="position:absolute;top:154px;left:434px;white-space:nowrap" class="ft100">z</P>
+<P style="position:absolute;top:154px;left:428px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:154px;left:419px;white-space:nowrap" class="ft100">y</P>
+<P style="position:absolute;top:154px;left:411px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:154px;left:402px;white-space:nowrap" class="ft100">x</P>
+<P style="position:absolute;top:154px;left:395px;white-space:nowrap" class="ft100">(</P>
+<P style="position:absolute;top:154px;left:381px;white-space:nowrap" class="ft100">D</P>
+<P style="position:absolute;top:165px;left:351px;white-space:nowrap" class="ft100">J</P>
+<P style="position:absolute;top:217px;left:554px;white-space:nowrap" class="ft109">∂</P>
+<P style="position:absolute;top:191px;left:557px;white-space:nowrap" class="ft109">∂</P>
+<P style="position:absolute;top:217px;left:515px;white-space:nowrap" class="ft109">∂</P>
+<P style="position:absolute;top:191px;left:516px;white-space:nowrap" class="ft109">∂</P>
+<P style="position:absolute;top:217px;left:477px;white-space:nowrap" class="ft109">∂</P>
+<P style="position:absolute;top:191px;left:478px;white-space:nowrap" class="ft109">∂</P>
+<P style="position:absolute;top:174px;left:554px;white-space:nowrap" class="ft109">∂</P>
+<P style="position:absolute;top:148px;left:556px;white-space:nowrap" class="ft109">∂</P>
+<P style="position:absolute;top:174px;left:515px;white-space:nowrap" class="ft109">∂</P>
+<P style="position:absolute;top:148px;left:515px;white-space:nowrap" class="ft109">∂</P>
+<P style="position:absolute;top:174px;left:477px;white-space:nowrap" class="ft109">∂</P>
+<P style="position:absolute;top:148px;left:477px;white-space:nowrap" class="ft109">∂</P>
+<P style="position:absolute;top:131px;left:554px;white-space:nowrap" class="ft109">∂</P>
+<P style="position:absolute;top:105px;left:556px;white-space:nowrap" class="ft109">∂</P>
+<P style="position:absolute;top:131px;left:515px;white-space:nowrap" class="ft109">∂</P>
+<P style="position:absolute;top:105px;left:515px;white-space:nowrap" class="ft109">∂</P>
+<P style="position:absolute;top:131px;left:477px;white-space:nowrap" class="ft109">∂</P>
+<P style="position:absolute;top:105px;left:477px;white-space:nowrap" class="ft109">∂</P>
+<P style="position:absolute;top:160px;left:457px;white-space:nowrap" class="ft109">=</P>
+<P style="position:absolute;top:160px;left:363px;white-space:nowrap" class="ft109">=</P>
+<P style="position:absolute;top:166px;left:592px;white-space:nowrap" class="ft100">.</P>
+<P style="position:absolute;top:319px;left:127px;white-space:nowrap" class="ft100">ORDUAN</P>
+<P style="position:absolute;top:386px;left:311px;white-space:nowrap" class="ft100">dz</P>
+<P style="position:absolute;top:386px;left:290px;white-space:nowrap" class="ft100">dy</P>
+<P style="position:absolute;top:386px;left:270px;white-space:nowrap" class="ft100">dx</P>
+<P style="position:absolute;top:386px;left:262px;white-space:nowrap" class="ft100">)</P>
+<P style="position:absolute;top:386px;left:253px;white-space:nowrap" class="ft100">z</P>
+<P style="position:absolute;top:386px;left:246px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:386px;left:237px;white-space:nowrap" class="ft100">y</P>
+<P style="position:absolute;top:386px;left:230px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:386px;left:221px;white-space:nowrap" class="ft100">x</P>
+<P style="position:absolute;top:386px;left:214px;white-space:nowrap" class="ft100">(</P>
+<P style="position:absolute;top:386px;left:205px;white-space:nowrap" class="ft100">f</P>
+<P style="position:absolute;top:411px;left:187px;white-space:nowrap" class="ft104">V</P>
+<P style="position:absolute;top:377px;left:181px;white-space:nowrap" class="ft105">∫∫∫</P>
+<P style="position:absolute;top:386px;left:331px;white-space:nowrap" class="ft100">=&#160;</P>
+<P style="position:absolute;top:387px;left:684px;white-space:nowrap" class="ft100">dw</P>
+<P style="position:absolute;top:387px;left:663px;white-space:nowrap" class="ft100">dv</P>
+<P style="position:absolute;top:387px;left:639px;white-space:nowrap" class="ft100">du</P>
+<P style="position:absolute;top:387px;left:626px;white-space:nowrap" class="ft100">J</P>
+<P style="position:absolute;top:387px;left:604px;white-space:nowrap" class="ft100">))</P>
+<P style="position:absolute;top:387px;left:591px;white-space:nowrap" class="ft100">w</P>
+<P style="position:absolute;top:387px;left:583px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:387px;left:574px;white-space:nowrap" class="ft100">v</P>
+<P style="position:absolute;top:387px;left:566px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:387px;left:557px;white-space:nowrap" class="ft100">u</P>
+<P style="position:absolute;top:387px;left:550px;white-space:nowrap" class="ft100">(</P>
+<P style="position:absolute;top:387px;left:542px;white-space:nowrap" class="ft100">z</P>
+<P style="position:absolute;top:387px;left:529px;white-space:nowrap" class="ft100">),</P>
+<P style="position:absolute;top:387px;left:514px;white-space:nowrap" class="ft100">w</P>
+<P style="position:absolute;top:387px;left:507px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:387px;left:498px;white-space:nowrap" class="ft100">v</P>
+<P style="position:absolute;top:387px;left:491px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:387px;left:482px;white-space:nowrap" class="ft100">u</P>
+<P style="position:absolute;top:387px;left:475px;white-space:nowrap" class="ft100">(</P>
+<P style="position:absolute;top:387px;left:466px;white-space:nowrap" class="ft100">y</P>
+<P style="position:absolute;top:387px;left:452px;white-space:nowrap" class="ft100">),</P>
+<P style="position:absolute;top:387px;left:438px;white-space:nowrap" class="ft100">w</P>
+<P style="position:absolute;top:387px;left:430px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:387px;left:421px;white-space:nowrap" class="ft100">v</P>
+<P style="position:absolute;top:387px;left:414px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:387px;left:404px;white-space:nowrap" class="ft100">u</P>
+<P style="position:absolute;top:387px;left:397px;white-space:nowrap" class="ft100">(</P>
+<P style="position:absolute;top:387px;left:388px;white-space:nowrap" class="ft100">x</P>
+<P style="position:absolute;top:387px;left:381px;white-space:nowrap" class="ft100">(</P>
+<P style="position:absolute;top:387px;left:372px;white-space:nowrap" class="ft100">f</P>
+<P style="position:absolute;top:410px;left:360px;white-space:nowrap" class="ft104">*</P>
+<P style="position:absolute;top:416px;left:350px;white-space:nowrap" class="ft104">V</P>
+<P style="position:absolute;top:377px;left:349px;white-space:nowrap" class="ft105">∫∫∫</P>
+<P style="position:absolute;top:386px;left:709px;white-space:nowrap" class="ft100">.</P>
+<P style="position:absolute;top:473px;left:180px;white-space:nowrap" class="ft100">Oso arruntak &#160;diren solidoak, &#160;esferak, elipsoideak, konoak eta paraboloideak</P>
+<P style="position:absolute;top:505px;left:127px;white-space:nowrap" class="ft100">esate baterako, integral hirukoitzak koordenatu angeluzuzenetan egiteko erabiltzen</P>
+<P style="position:absolute;top:536px;left:127px;white-space:nowrap" class="ft100">badira, nahiko zailak izaten dira. Beraz, beste koordenatu-sistema mota erabili behar</P>
+<P style="position:absolute;top:567px;left:127px;white-space:nowrap" class="ft100">dira integralak errazteko. Espazioan erabiltzen diren koordenatu-aldaketa</P>
+<P style="position:absolute;top:598px;left:127px;white-space:nowrap" class="ft100">garrantzitsuenak hauexek dira:</P>
+<P style="position:absolute;top:662px;left:180px;white-space:nowrap" class="ft100">a)&#160;&#160;<i>Koordenatu zilindrikoak</i>. (x,y,z) koordenatu&#160;&#160;kartesiar eta (r,</P>
+<P style="position:absolute;top:656px;left:647px;white-space:nowrap" class="ft109">ϑ,z) koordenatu</P>
+<P style="position:absolute;top:693px;left:207px;white-space:nowrap" class="ft100">zilindrikoen arteko erlazioak ondokoak dira:</P>
+<P style="position:absolute;top:800px;left:239px;white-space:nowrap" class="ft109"></P>
+<P style="position:absolute;top:769px;left:239px;white-space:nowrap" class="ft109"></P>
+<P style="position:absolute;top:782px;left:239px;white-space:nowrap" class="ft109"></P>
+<P style="position:absolute;top:754px;left:239px;white-space:nowrap" class="ft109"></P>
+<P style="position:absolute;top:807px;left:279px;white-space:nowrap" class="ft109">=</P>
+<P style="position:absolute;top:780px;left:309px;white-space:nowrap" class="ft109">ϑ</P>
+<P style="position:absolute;top:780px;left:261px;white-space:nowrap" class="ft109">=</P>
+<P style="position:absolute;top:752px;left:309px;white-space:nowrap" class="ft109">ϑ</P>
+<P style="position:absolute;top:752px;left:262px;white-space:nowrap" class="ft109">=</P>
+<P style="position:absolute;top:813px;left:293px;white-space:nowrap" class="ft100">z</P>
+<P style="position:absolute;top:813px;left:267px;white-space:nowrap" class="ft100">z</P>
+<P style="position:absolute;top:786px;left:285px;white-space:nowrap" class="ft100">sin</P>
+<P style="position:absolute;top:786px;left:276px;white-space:nowrap" class="ft100">r</P>
+<P style="position:absolute;top:786px;left:249px;white-space:nowrap" class="ft100">y</P>
+<P style="position:absolute;top:758px;left:284px;white-space:nowrap" class="ft100">cos</P>
+<P style="position:absolute;top:758px;left:276px;white-space:nowrap" class="ft100">r</P>
+<P style="position:absolute;top:758px;left:249px;white-space:nowrap" class="ft100">x</P>
+<P style="position:absolute;top:786px;left:323px;white-space:nowrap" class="ft100">&#160; &#160;&#160;</P>
+<P style="position:absolute;top:780px;left:343px;white-space:nowrap" class="ft109">⇒&#160;&#160;&#160;</P>
+<P style="position:absolute;top:786px;left:642px;white-space:nowrap" class="ft100">r</P>
+<P style="position:absolute;top:813px;left:614px;white-space:nowrap" class="ft100">1</P>
+<P style="position:absolute;top:813px;left:565px;white-space:nowrap" class="ft100">0</P>
+<P style="position:absolute;top:813px;left:502px;white-space:nowrap" class="ft100">0</P>
+<P style="position:absolute;top:786px;left:614px;white-space:nowrap" class="ft100">0</P>
+<P style="position:absolute;top:786px;left:556px;white-space:nowrap" class="ft100">cos</P>
+<P style="position:absolute;top:786px;left:547px;white-space:nowrap" class="ft100">r</P>
+<P style="position:absolute;top:786px;left:489px;white-space:nowrap" class="ft100">sin</P>
+<P style="position:absolute;top:758px;left:614px;white-space:nowrap" class="ft100">0</P>
+<P style="position:absolute;top:758px;left:564px;white-space:nowrap" class="ft100">sin</P>
+<P style="position:absolute;top:758px;left:556px;white-space:nowrap" class="ft100">r</P>
+<P style="position:absolute;top:758px;left:488px;white-space:nowrap" class="ft100">cos</P>
+<P style="position:absolute;top:800px;left:462px;white-space:nowrap" class="ft100">)</P>
+<P style="position:absolute;top:800px;left:455px;white-space:nowrap" class="ft100">z</P>
+<P style="position:absolute;top:800px;left:447px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:800px;left:430px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:800px;left:423px;white-space:nowrap" class="ft100">r</P>
+<P style="position:absolute;top:800px;left:416px;white-space:nowrap" class="ft100">(</P>
+<P style="position:absolute;top:800px;left:404px;white-space:nowrap" class="ft100">D</P>
+<P style="position:absolute;top:774px;left:464px;white-space:nowrap" class="ft100">)</P>
+<P style="position:absolute;top:774px;left:456px;white-space:nowrap" class="ft100">z</P>
+<P style="position:absolute;top:774px;left:449px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:774px;left:440px;white-space:nowrap" class="ft100">y</P>
+<P style="position:absolute;top:774px;left:432px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:774px;left:422px;white-space:nowrap" class="ft100">x</P>
+<P style="position:absolute;top:774px;left:415px;white-space:nowrap" class="ft100">(</P>
+<P style="position:absolute;top:774px;left:402px;white-space:nowrap" class="ft100">D</P>
+<P style="position:absolute;top:786px;left:375px;white-space:nowrap" class="ft100">J</P>
+<P style="position:absolute;top:780px;left:628px;white-space:nowrap" class="ft109">=</P>
+<P style="position:absolute;top:780px;left:582px;white-space:nowrap" class="ft109">ϑ</P>
+<P style="position:absolute;top:780px;left:512px;white-space:nowrap" class="ft109">ϑ</P>
+<P style="position:absolute;top:752px;left:587px;white-space:nowrap" class="ft109">ϑ</P>
+<P style="position:absolute;top:752px;left:541px;white-space:nowrap" class="ft109">−</P>
+<P style="position:absolute;top:752px;left:514px;white-space:nowrap" class="ft109">ϑ</P>
+<P style="position:absolute;top:780px;left:474px;white-space:nowrap" class="ft109">=</P>
+<P style="position:absolute;top:794px;left:437px;white-space:nowrap" class="ft109">ϑ</P>
+<P style="position:absolute;top:780px;left:387px;white-space:nowrap" class="ft109">=</P>
+<P style="position:absolute;top:786px;left:651px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:850px;left:127px;white-space:nowrap" class="ft100">orduan</P>
+<P style="position:absolute;top:885px;left:372px;white-space:nowrap" class="ft100">dz</P>
+<P style="position:absolute;top:885px;left:352px;white-space:nowrap" class="ft100">dy</P>
+<P style="position:absolute;top:885px;left:332px;white-space:nowrap" class="ft100">dx</P>
+<P style="position:absolute;top:885px;left:324px;white-space:nowrap" class="ft100">)</P>
+<P style="position:absolute;top:885px;left:315px;white-space:nowrap" class="ft100">z</P>
+<P style="position:absolute;top:885px;left:308px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:885px;left:299px;white-space:nowrap" class="ft100">y</P>
+<P style="position:absolute;top:885px;left:291px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:885px;left:282px;white-space:nowrap" class="ft100">x</P>
+<P style="position:absolute;top:885px;left:276px;white-space:nowrap" class="ft100">(</P>
+<P style="position:absolute;top:885px;left:267px;white-space:nowrap" class="ft100">f</P>
+<P style="position:absolute;top:911px;left:249px;white-space:nowrap" class="ft104">V</P>
+<P style="position:absolute;top:877px;left:243px;white-space:nowrap" class="ft105">∫∫∫</P>
+<P style="position:absolute;top:885px;left:393px;white-space:nowrap" class="ft100">&#160;=&#160;</P>
+<P style="position:absolute;top:886px;left:627px;white-space:nowrap" class="ft100">dz</P>
+<P style="position:absolute;top:886px;left:602px;white-space:nowrap" class="ft100">d</P>
+<P style="position:absolute;top:886px;left:584px;white-space:nowrap" class="ft100">dr</P>
+<P style="position:absolute;top:886px;left:573px;white-space:nowrap" class="ft100">r</P>
+<P style="position:absolute;top:886px;left:564px;white-space:nowrap" class="ft100">)</P>
+<P style="position:absolute;top:886px;left:555px;white-space:nowrap" class="ft100">z</P>
+<P style="position:absolute;top:886px;left:548px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:886px;left:514px;white-space:nowrap" class="ft100">sin</P>
+<P style="position:absolute;top:886px;left:505px;white-space:nowrap" class="ft100">r</P>
+<P style="position:absolute;top:886px;left:498px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:886px;left:462px;white-space:nowrap" class="ft100">cos</P>
+<P style="position:absolute;top:886px;left:453px;white-space:nowrap" class="ft100">r</P>
+<P style="position:absolute;top:886px;left:448px;white-space:nowrap" class="ft100">(</P>
+<P style="position:absolute;top:886px;left:439px;white-space:nowrap" class="ft100">f</P>
+<P style="position:absolute;top:910px;left:426px;white-space:nowrap" class="ft104">*</P>
+<P style="position:absolute;top:915px;left:416px;white-space:nowrap" class="ft104">V</P>
+<P style="position:absolute;top:880px;left:611px;white-space:nowrap" class="ft109">ϑ</P>
+<P style="position:absolute;top:880px;left:538px;white-space:nowrap" class="ft109">ϑ</P>
+<P style="position:absolute;top:880px;left:488px;white-space:nowrap" class="ft109">ϑ</P>
+<P style="position:absolute;top:877px;left:415px;white-space:nowrap" class="ft105">∫∫∫</P>
+<P style="position:absolute;top:885px;left:647px;white-space:nowrap" class="ft100">.</P>
+<P style="position:absolute;top:975px;left:180px;white-space:nowrap" class="ft100">b)&#160;&#160;<i>Koordenatu esferikoak.&#160;&#160;</i>(x,y,z) koordenatu&#160;&#160;kartesiar eta (r,</P>
+<P style="position:absolute;top:969px;left:646px;white-space:nowrap" class="ft109">ϑ,φ) koordenatu</P>
+<P style="position:absolute;top:1007px;left:207px;white-space:nowrap" class="ft100">esferikoen arteko erlazioak ondokoak dira:</P>
+<P style="position:absolute;top:1113px;left:131px;white-space:nowrap" class="ft109"></P>
+<P style="position:absolute;top:1082px;left:131px;white-space:nowrap" class="ft109"></P>
+<P style="position:absolute;top:1095px;left:131px;white-space:nowrap" class="ft109"></P>
+<P style="position:absolute;top:1067px;left:131px;white-space:nowrap" class="ft109"></P>
+<P style="position:absolute;top:1120px;left:219px;white-space:nowrap" class="ft109">φ</P>
+<P style="position:absolute;top:1120px;left:171px;white-space:nowrap" class="ft109">=</P>
+<P style="position:absolute;top:1092px;left:239px;white-space:nowrap" class="ft109">φ</P>
+<P style="position:absolute;top:1092px;left:203px;white-space:nowrap" class="ft109">ϑ</P>
+<P style="position:absolute;top:1092px;left:154px;white-space:nowrap" class="ft109">=</P>
+<P style="position:absolute;top:1065px;left:239px;white-space:nowrap" class="ft109">φ</P>
+<P style="position:absolute;top:1065px;left:203px;white-space:nowrap" class="ft109">ϑ</P>
+<P style="position:absolute;top:1065px;left:154px;white-space:nowrap" class="ft109">=</P>
+<P style="position:absolute;top:1126px;left:194px;white-space:nowrap" class="ft100">cos</P>
+<P style="position:absolute;top:1126px;left:186px;white-space:nowrap" class="ft100">r</P>
+<P style="position:absolute;top:1126px;left:159px;white-space:nowrap" class="ft100">z</P>
+<P style="position:absolute;top:1098px;left:215px;white-space:nowrap" class="ft100">sin</P>
+<P style="position:absolute;top:1098px;left:178px;white-space:nowrap" class="ft100">sin</P>
+<P style="position:absolute;top:1098px;left:168px;white-space:nowrap" class="ft100">r</P>
+<P style="position:absolute;top:1098px;left:141px;white-space:nowrap" class="ft100">y</P>
+<P style="position:absolute;top:1071px;left:215px;white-space:nowrap" class="ft100">sin</P>
+<P style="position:absolute;top:1071px;left:177px;white-space:nowrap" class="ft100">cos</P>
+<P style="position:absolute;top:1071px;left:169px;white-space:nowrap" class="ft100">r</P>
+<P style="position:absolute;top:1071px;left:141px;white-space:nowrap" class="ft100">x</P>
+<P style="position:absolute;top:1099px;left:250px;white-space:nowrap" class="ft100">&#160;&#160;</P>
+<P style="position:absolute;top:1093px;left:261px;white-space:nowrap" class="ft109">⇒&#160;&#160;</P>
+<P style="position:absolute;top:1092px;left:748px;white-space:nowrap" class="ft109">φ</P>
+<P style="position:absolute;top:1092px;left:695px;white-space:nowrap" class="ft109">−</P>
+<P style="position:absolute;top:1092px;left:681px;white-space:nowrap" class="ft109">=</P>
+<P style="position:absolute;top:1120px;left:654px;white-space:nowrap" class="ft109">φ</P>
+<P style="position:absolute;top:1120px;left:609px;white-space:nowrap" class="ft109">−</P>
+<P style="position:absolute;top:1120px;left:446px;white-space:nowrap" class="ft109">φ</P>
+<P style="position:absolute;top:1092px;left:666px;white-space:nowrap" class="ft109">φ</P>
+<P style="position:absolute;top:1092px;left:630px;white-space:nowrap" class="ft109">ϑ</P>
+<P style="position:absolute;top:1092px;left:565px;white-space:nowrap" class="ft109">φ</P>
+<P style="position:absolute;top:1092px;left:528px;white-space:nowrap" class="ft109">ϑ</P>
+<P style="position:absolute;top:1092px;left:462px;white-space:nowrap" class="ft109">φ</P>
+<P style="position:absolute;top:1092px;left:425px;white-space:nowrap" class="ft109">ϑ</P>
+<P style="position:absolute;top:1065px;left:667px;white-space:nowrap" class="ft109">φ</P>
+<P style="position:absolute;top:1065px;left:630px;white-space:nowrap" class="ft109">ϑ</P>
+<P style="position:absolute;top:1065px;left:569px;white-space:nowrap" class="ft109">φ</P>
+<P style="position:absolute;top:1065px;left:534px;white-space:nowrap" class="ft109">ϑ</P>
+<P style="position:absolute;top:1065px;left:488px;white-space:nowrap" class="ft109">−</P>
+<P style="position:absolute;top:1065px;left:462px;white-space:nowrap" class="ft109">φ</P>
+<P style="position:absolute;top:1065px;left:426px;white-space:nowrap" class="ft109">ϑ</P>
+<P style="position:absolute;top:1092px;left:387px;white-space:nowrap" class="ft109">=</P>
+<P style="position:absolute;top:1106px;left:367px;white-space:nowrap" class="ft109">φ</P>
+<P style="position:absolute;top:1106px;left:350px;white-space:nowrap" class="ft109">ϑ</P>
+<P style="position:absolute;top:1092px;left:300px;white-space:nowrap" class="ft109">=</P>
+<P style="position:absolute;top:1098px;left:725px;white-space:nowrap" class="ft100">sin</P>
+<P style="position:absolute;top:1098px;left:705px;white-space:nowrap" class="ft100">r</P>
+<P style="position:absolute;top:1126px;left:630px;white-space:nowrap" class="ft100">sin</P>
+<P style="position:absolute;top:1126px;left:622px;white-space:nowrap" class="ft100">r</P>
+<P style="position:absolute;top:1126px;left:529px;white-space:nowrap" class="ft100">0</P>
+<P style="position:absolute;top:1126px;left:419px;white-space:nowrap" class="ft100">cos</P>
+<P style="position:absolute;top:1098px;left:642px;white-space:nowrap" class="ft100">cos</P>
+<P style="position:absolute;top:1098px;left:605px;white-space:nowrap" class="ft100">sin</P>
+<P style="position:absolute;top:1098px;left:596px;white-space:nowrap" class="ft100">r</P>
+<P style="position:absolute;top:1098px;left:540px;white-space:nowrap" class="ft100">sin</P>
+<P style="position:absolute;top:1098px;left:502px;white-space:nowrap" class="ft100">cos</P>
+<P style="position:absolute;top:1098px;left:494px;white-space:nowrap" class="ft100">r</P>
+<P style="position:absolute;top:1098px;left:438px;white-space:nowrap" class="ft100">sin</P>
+<P style="position:absolute;top:1098px;left:402px;white-space:nowrap" class="ft100">sin</P>
+<P style="position:absolute;top:1071px;left:642px;white-space:nowrap" class="ft100">cos</P>
+<P style="position:absolute;top:1071px;left:604px;white-space:nowrap" class="ft100">cos</P>
+<P style="position:absolute;top:1071px;left:595px;white-space:nowrap" class="ft100">r</P>
+<P style="position:absolute;top:1071px;left:545px;white-space:nowrap" class="ft100">sin</P>
+<P style="position:absolute;top:1071px;left:511px;white-space:nowrap" class="ft100">sin</P>
+<P style="position:absolute;top:1071px;left:503px;white-space:nowrap" class="ft100">r</P>
+<P style="position:absolute;top:1071px;left:439px;white-space:nowrap" class="ft100">sin</P>
+<P style="position:absolute;top:1071px;left:402px;white-space:nowrap" class="ft100">cos</P>
+<P style="position:absolute;top:1112px;left:376px;white-space:nowrap" class="ft100">)</P>
+<P style="position:absolute;top:1112px;left:360px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:1112px;left:343px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:1112px;left:336px;white-space:nowrap" class="ft100">r</P>
+<P style="position:absolute;top:1112px;left:330px;white-space:nowrap" class="ft100">(</P>
+<P style="position:absolute;top:1112px;left:316px;white-space:nowrap" class="ft100">D</P>
+<P style="position:absolute;top:1086px;left:377px;white-space:nowrap" class="ft100">)</P>
+<P style="position:absolute;top:1086px;left:369px;white-space:nowrap" class="ft100">z</P>
+<P style="position:absolute;top:1086px;left:362px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:1086px;left:353px;white-space:nowrap" class="ft100">y</P>
+<P style="position:absolute;top:1086px;left:345px;white-space:nowrap" class="ft100">,</P>
+<P style="position:absolute;top:1086px;left:335px;white-space:nowrap" class="ft100">x</P>
+<P style="position:absolute;top:1086px;left:329px;white-space:nowrap" class="ft100">(</P>
+<P style="position:absolute;top:1086px;left:315px;white-space:nowrap" class="ft100">D</P>
+<P style="position:absolute;top:1098px;left:288px;white-space:nowrap" class="ft100">J</P>
+<P style="position:absolute;top:1093px;left:713px;white-space:nowrap" class="ft104">2</P>
+<P style="position:absolute;top:1099px;left:759px;white-space:nowrap" class="ft100">,</P>
+</DIV>
+<!-- Page 11 -->
+<a name="11"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page11-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:438px;white-space:nowrap" class="ft110">11</P>
+<P style="position:absolute;top:109px;left:127px;white-space:nowrap" class="ft110">beraz,</P>
+<P style="position:absolute;top:177px;left:297px;white-space:nowrap" class="ft110">dz</P>
+<P style="position:absolute;top:177px;left:277px;white-space:nowrap" class="ft110">dy</P>
+<P style="position:absolute;top:177px;left:257px;white-space:nowrap" class="ft110">dx</P>
+<P style="position:absolute;top:177px;left:249px;white-space:nowrap" class="ft110">)</P>
+<P style="position:absolute;top:177px;left:240px;white-space:nowrap" class="ft110">z</P>
+<P style="position:absolute;top:177px;left:233px;white-space:nowrap" class="ft110">,</P>
+<P style="position:absolute;top:177px;left:224px;white-space:nowrap" class="ft110">y</P>
+<P style="position:absolute;top:177px;left:216px;white-space:nowrap" class="ft110">,</P>
+<P style="position:absolute;top:177px;left:207px;white-space:nowrap" class="ft110">x</P>
+<P style="position:absolute;top:177px;left:200px;white-space:nowrap" class="ft110">(</P>
+<P style="position:absolute;top:177px;left:191px;white-space:nowrap" class="ft110">f</P>
+<P style="position:absolute;top:203px;left:173px;white-space:nowrap" class="ft114">V</P>
+<P style="position:absolute;top:169px;left:168px;white-space:nowrap" class="ft115">∫∫∫</P>
+<P style="position:absolute;top:177px;left:317px;white-space:nowrap" class="ft110">=</P>
+<P style="position:absolute;top:172px;left:711px;white-space:nowrap" class="ft119">φ</P>
+<P style="position:absolute;top:172px;left:686px;white-space:nowrap" class="ft119">ϑ</P>
+<P style="position:absolute;top:172px;left:645px;white-space:nowrap" class="ft119">φ</P>
+<P style="position:absolute;top:172px;left:582px;white-space:nowrap" class="ft119">φ</P>
+<P style="position:absolute;top:172px;left:530px;white-space:nowrap" class="ft119">φ</P>
+<P style="position:absolute;top:172px;left:494px;white-space:nowrap" class="ft119">ϑ</P>
+<P style="position:absolute;top:172px;left:442px;white-space:nowrap" class="ft119">φ</P>
+<P style="position:absolute;top:172px;left:406px;white-space:nowrap" class="ft119">ϑ</P>
+<P style="position:absolute;top:169px;left:331px;white-space:nowrap" class="ft115">∫∫∫</P>
+<P style="position:absolute;top:177px;left:702px;white-space:nowrap" class="ft110">d</P>
+<P style="position:absolute;top:177px;left:677px;white-space:nowrap" class="ft110">d</P>
+<P style="position:absolute;top:177px;left:660px;white-space:nowrap" class="ft110">dr</P>
+<P style="position:absolute;top:177px;left:623px;white-space:nowrap" class="ft110">sin</P>
+<P style="position:absolute;top:177px;left:606px;white-space:nowrap" class="ft110">r</P>
+<P style="position:absolute;top:177px;left:591px;white-space:nowrap" class="ft110">)</P>
+<P style="position:absolute;top:177px;left:555px;white-space:nowrap" class="ft110">cos</P>
+<P style="position:absolute;top:177px;left:546px;white-space:nowrap" class="ft110">r</P>
+<P style="position:absolute;top:177px;left:539px;white-space:nowrap" class="ft110">,</P>
+<P style="position:absolute;top:177px;left:507px;white-space:nowrap" class="ft110">sin</P>
+<P style="position:absolute;top:177px;left:470px;white-space:nowrap" class="ft110">sin</P>
+<P style="position:absolute;top:177px;left:459px;white-space:nowrap" class="ft110">r</P>
+<P style="position:absolute;top:177px;left:451px;white-space:nowrap" class="ft110">,</P>
+<P style="position:absolute;top:177px;left:421px;white-space:nowrap" class="ft110">sin</P>
+<P style="position:absolute;top:177px;left:380px;white-space:nowrap" class="ft110">cos</P>
+<P style="position:absolute;top:177px;left:369px;white-space:nowrap" class="ft110">r</P>
+<P style="position:absolute;top:177px;left:363px;white-space:nowrap" class="ft110">(</P>
+<P style="position:absolute;top:177px;left:354px;white-space:nowrap" class="ft110">f</P>
+<P style="position:absolute;top:202px;left:342px;white-space:nowrap" class="ft114">*</P>
+<P style="position:absolute;top:208px;left:332px;white-space:nowrap" class="ft114">V</P>
+<P style="position:absolute;top:173px;left:614px;white-space:nowrap" class="ft114">2</P>
+<P style="position:absolute;top:177px;left:723px;white-space:nowrap" class="ft110">.</P>
+<P style="position:absolute;top:265px;left:127px;white-space:nowrap" class="ft112"><b>6.4.&#160;&#160;Bolumenen integral hirukoitzen bidezko kalkulua.</b></P>
+<P style="position:absolute;top:332px;left:127px;white-space:nowrap" class="ft110">Koordenatu&#160;kartesiarretan, V gorputz baten bolumena &#160;</P>
+<P style="position:absolute;top:332px;left:594px;white-space:nowrap" class="ft110">dz</P>
+<P style="position:absolute;top:332px;left:575px;white-space:nowrap" class="ft110">dy</P>
+<P style="position:absolute;top:332px;left:555px;white-space:nowrap" class="ft110">dx</P>
+<P style="position:absolute;top:357px;left:533px;white-space:nowrap" class="ft114">V</P>
+<P style="position:absolute;top:323px;left:528px;white-space:nowrap" class="ft115">∫∫∫</P>
+<P style="position:absolute;top:332px;left:614px;white-space:nowrap" class="ft110">&#160;da.</P>
+<P style="position:absolute;top:408px;left:127px;white-space:nowrap" class="ft116"><i>Koordenatu zilindrikoetan</i>, bolumena&#160;</P>
+<P style="position:absolute;top:409px;left:486px;white-space:nowrap" class="ft110">dz</P>
+<P style="position:absolute;top:409px;left:464px;white-space:nowrap" class="ft110">d</P>
+<P style="position:absolute;top:409px;left:443px;white-space:nowrap" class="ft110">dr</P>
+<P style="position:absolute;top:409px;left:433px;white-space:nowrap" class="ft110">r</P>
+<P style="position:absolute;top:433px;left:417px;white-space:nowrap" class="ft114">*</P>
+<P style="position:absolute;top:438px;left:407px;white-space:nowrap" class="ft114">V</P>
+<P style="position:absolute;top:403px;left:473px;white-space:nowrap" class="ft119">ϑ</P>
+<P style="position:absolute;top:400px;left:406px;white-space:nowrap" class="ft115">∫∫∫</P>
+<P style="position:absolute;top:408px;left:506px;white-space:nowrap" class="ft110">&#160;da.</P>
+<P style="position:absolute;top:478px;left:127px;white-space:nowrap" class="ft116"><i>Koordenatu esferikoetan</i>, bolumena&#160;</P>
+<P style="position:absolute;top:472px;left:531px;white-space:nowrap" class="ft119">φ</P>
+<P style="position:absolute;top:472px;left:505px;white-space:nowrap" class="ft119">ϑ</P>
+<P style="position:absolute;top:472px;left:462px;white-space:nowrap" class="ft119">φ</P>
+<P style="position:absolute;top:470px;left:394px;white-space:nowrap" class="ft115">∫∫∫</P>
+<P style="position:absolute;top:478px;left:522px;white-space:nowrap" class="ft110">d</P>
+<P style="position:absolute;top:478px;left:496px;white-space:nowrap" class="ft110">d</P>
+<P style="position:absolute;top:478px;left:476px;white-space:nowrap" class="ft110">dr</P>
+<P style="position:absolute;top:478px;left:439px;white-space:nowrap" class="ft110">sin</P>
+<P style="position:absolute;top:478px;left:421px;white-space:nowrap" class="ft110">r</P>
+<P style="position:absolute;top:502px;left:408px;white-space:nowrap" class="ft114">*</P>
+<P style="position:absolute;top:502px;left:403px;white-space:nowrap" class="ft114">*</P>
+<P style="position:absolute;top:508px;left:394px;white-space:nowrap" class="ft114">V</P>
+<P style="position:absolute;top:473px;left:430px;white-space:nowrap" class="ft114">2</P>
+<P style="position:absolute;top:478px;left:543px;white-space:nowrap" class="ft110">&#160;da.</P>
+</DIV>
+</BODY>
+</HTML>

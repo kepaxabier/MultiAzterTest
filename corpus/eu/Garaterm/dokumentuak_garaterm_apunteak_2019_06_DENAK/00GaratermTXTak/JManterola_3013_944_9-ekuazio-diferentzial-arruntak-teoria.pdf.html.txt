@@ -1,0 +1,3325 @@
+
+
+
+9.
+K a p itu lu a
+Ekuazio d ife re n tzial arrun tak
+171
+
+172
+9.
+K A P IT U L U A
+E K U A Z IO
+D IF E R E N T Z IA L A R R U N T A K
+UEP D o n o stia
+M ate m atik a A p lik atu a S aila
+
+9.1.
+ARAZOAREN AURKEZPENA
+173
+9.1
+A ra z o a re n a u rk e z p e n a
+D a kig u n be z a la , n a tu ra ko fe n ome n oa k e lka rre n me n pe koa k d ire n a ld a g a i ba tz u e i lotu ta d a u -
+d e 
+(d ista n tz ia k, a ltu e ra k, ma ila k, d e n tsita te a k, in d a rra k, te n pe ra tu ra k, e ta b.); horre g a tik, x
+a ld a g a i ba te k a ld a ke ta re n ba t ja sa te n ba d u , be re me n pe koa k d ire n be ste a ld a g a i g u z tie k e re ,
+y1, y2, y3, ... a ld a ke ta re n ba t ja sa n d e z a ke te . G og ora tu K a lku lu in ﬁ n ite sima la re n he lbu ru a ,
+me n pe ko x a ld a g a ia re n e ra g in e z su e rta d a ite z ke e n y a ld a g a ia re n a ld a ke ta k a z te rtz e a n d a -
+tz a la . Z ie n tz ia k e ta in g e n ia ritz a k, be n e ta ko fe n ome n o ba t a z te rtz e n d u te n e a n , le he n d a biz i
+be n e ta n g a rra n tz itsu a k d ire n a ld a g a ia k z e ha z te n d itu z te , e ta g e ro, be ra ie n a rte ko me n pe -
+kota su n a k a u rkitz e n sa ia tz e n d ira :
+ ha u d a , fe n ome n oa a rra z oitu a ha l iz a n g o d u e n e re d u
+ma te ma tiko ba t a u rkitz e n sa ia tz e n d ira . D a g oe n e ko e ra bili d itu z u be n e ta ko fe n ome n oa k
+a z te rtz e ko e re d u ma te ma tiko ba tz u k: N e w ton -
+e n big a rre n le g e a (F = ma), O hm-e n le g e a
+(R = V / I ) e ta a bia d u ra kon sta n te a n ibilita ko e spa z io-
+lu z e ra (E = V t).
+B e sta ld e , ba d a kig u y, x-e n me n pe ko a ld a g a ia ba d a , y
+(x) fu n tz ioa re n d e riba tu a k (x-
+e kiko), y-re n a bia d u ra a ld a ke ta (x-
+e kiko) a d ie ra z te n d u e la e ta y (x) = dy/ dx bid e z a d ie ra z -
+te n d e la . M od u be re a n , y-re n x-
+e kiko d e riba tu a k a bia d u ra re n a bia d u ra a d ie ra z te n d u , ha u
+d a , y-re n a z e le ra z ioa x-e kiko: y (x) = d
+2y/ dx2.
+Z ie n tz ia n e ta in g e n ia ritz a n in te re sg a rria k d ire n n a tu ra ko fe n ome n o a sko, e ku a z io ba t
+e d o g e hia g ore n bid e z a d ie ra z d a ite z ke ; e ku a z io horie ta n , ba i ma g n itu d e a k e ta ba ita be ra ie n
+a bia d u ra a ld a ke ta k e re a g e rtz e n d ira . H a u d a , y(x), y 
+(x), y (x), ... a g e rtz e n d ira . Iku s
+d itz a g u n a d ibid e ba tz u k:
+1. Solid o b aten erorketa lib rea
+L e he n a ipa tu d u g u n N e w ton -e n big a rre n le g e a n y(t)
+ma g n itu d e ba t a g e rtz e n d a ; ma g n itu d e hon e k m ma sa kon sta n te ko g orpu tz ba te k, F 
+(t)
+in d a r ba te n e ra g in pe a n , e g in d a ko d ista n tz ia a d ie ra z te n d u . y
+(t) fu n tz ioa re n a z e le ra z ioa
+t-re kiko a(t) = y 
+(t) d e n e z , g orpu tz a re n mu g ime n d u le rroz u z e n a a d ie ra z te n d u e n e re d u
+ma te ma tikoa hu rre n g oa d a : F (t) = my (t).
+D e ma g u n , g orpu tz a libre e rortz e n d e la , g ra bita te a re n in d a rra re kin soilik. K a su ho-
+n e ta n , F = mg, n on g g ra bita te a k e ra g in d a ko a z e le ra z ioa d e n 
+(g = 9.8m/ s
+2). y(t)
+a ld a g a ia k, g orpu tz a k e g in d a ko d ista n tz ia a d ie ra z te n d u , e rortz e n ha si d e n mome n tu tik
+(t = 0) t mome n tu a rte . B e ra z :
+m
+d
+2y
+dt
+2
+= mg ⇒
+d
+2y
+dt
+2
+= 0
+(1 )
+A u rre ko e ku a z ioa , g orpu tz ba te n e rorke ta a z te rtz e ko e ra bili d a ite ke e n e re d u ma te -
+ma tiko posible ba t iz a n d a ite ke . E re d u hori oso sin ple a d a , e ta hobe tu d e z a ke g u ,
+a ire a k g orpu tz a re n e rorke ta n e ra g ite n d u e n e rre siste n tz ia in d a rra e re kon tu ta n ha rtu z .
+Matematika Aplikatua Saila
+UEP Donostia
+
+174
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+Adibidez, hipotesi bezala, pentsa dezakegu airearen erresistentzia indarra momentu
+bakoitzeko abiadurarekiko proportzionala dela. Horrela, erorketa librearen fenomenoa
+aztertzeko, bigarren eredu konplex uago bat lortzen dugu:
+m
+d
+2y
+dt
+2
+= mg − k
+dy
+dt
+(2)
+Ikusitako bi ereduetan interesatzen zaigun magnitudea, y
+(t), agertzen da, eta baita
+y(t)-
+ren deribatuak denborarekiko. Bi ekuazioak ekuazio diferentzial arrunten adibi-
+deak dira. ”Arrunta” hitzak, ekuazio mota hauetan, aldagai bakarrarekiko deribatuak
+agertzen direla esan nahi du 
+(gure kasuan, t aldagaia). Hau da, ekuazio diferentzial
+arruntak, y magnitude jakin bat, y-ren aldaketa 
+(x aldagaiarekiko) batekin erlazio-
+natzen duten ekuazioak dira. Hemendik aurrera, ekuazio diferentzial arruntak EDA
+siglen bidez adieraziko ditugu.
+Erorketa librearen fenomenoaren azterketa ez da bukatzen EDA baten bidez zehaz-
+tu dugun eredu matematikoarekin, noski. Benetan interesatzen zaiguna, EDA-ren
+soluzioa aurkitzea da, hau da, zehaztea zein funtzio(k) betetzen du
+(t)en EDA ho-
+ri. Lehenengo adibide sinplea hartuko dugu; nahikoa da bi aldiz integratzea ondokoa
+lortzeko:
+y (t) = g ⇒ y (t) = gt + K1 ⇒ y(t) =
+1
+2
+gt
+2 + K1t + K2
+(3)
+S oluzio hori aztertuz, lehenengo ondorioa lortzen dugu:
+ EDA batek ez du soluzio
+bakarra, baizik eta bere soluzioa funtzio familia (multzo) bat da. 
+(3) funtzio multzoa
+(1) EDA-ren soluzioa da. K1 eta K2 edozein balio izan daitezke. K1-eri eta K2-
+ri
+balio zehatzak emanez, 
+(3) multzoko funtzio ezberdinak lortzen ditugu. Bi konstante
+hauek ba al dute esanahi ﬁsikorik? Bai. K1-
+ek gorputzaren abiadura adierazten du
+t = 0 denean 
+(hasierako abiadura); K2 konstanteak, berriz, t = 0 unean gorputzak
+egindako ibilbidearen luzera adierazten du.
+Beraz, nahiz eta EDA-
+ko ez eduki soluzioa den funtzio bakarra, baldintza batzuk gehitu
+ondoren soluzioa bakarra izan daiteke. Adibidez, demagun gorputza gure altuerara
+3 m/s-ko abiaduraz iristen dela, eta 6 m egin dituela. Orduan, 
+(3) funtzio multzotik,
+baldintza horiek betetzen dituen soluzio bakarra aukeratzen dugu:
+y(t) =
+1
+2
+gt
+2 + 3t + 6
+(4 )
+(4) soluzioari, (3)-
+ren ebazpen partikularra deitzen zaio. S oluzio partikularra lortzeko
+ezarri ditugun baldintzei (y(0) = 6, y 
+(0) = 3), hasierako baldintzak deitzen zaie;
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.1.
+ARAZOAREN AURKEZPENA
+175
+hau da, y(t) ebazpenak bete behar dituen baldintzak dira, t-
+ren balio jakin baterako
+(gure kasuan, t = 0 izan da). Beste baldintza mota batzuetan ere pentsa dezakegu 
+(3)
+familiaren soluzio bat aukeratzeko orduan. Adibidez, demagun t = 1 unean, gorputzak
+y = 9.9 m egin dituela, eta t = 2 unean, berriz, y = 26.5 m; hau da:
+y(1) = 9.9
+y(2) = 26.5
+(5)
+Baldintza hauei inguruko baldintzak deitzen zaie, denbora momentu ezberdinetako
+baldintzak direlako. (5) baldintzak betetzen dituen 
+(3) familiako soluziorik existitzen
+den aztertzeko:
+9.9 = 4.9 + K1 + K2 ∧ 26.5 = 19.6 + 2K1 + K2 ⇒ K1 = 2 ∧ K2 = 3
+y(t) = 4.9t
+2 + 2t + 3
+Ezarritako baldintzen arabera, soluzio bat baino gehiago egon daitezke. Demagun,
+adibidez, y(0) = 0.05 betetzen duten (3)-
+ren soluzioak bilatu nahi ditugula. Kasu
+horretan:
+y(t) = 4.9t
+2 + K2t + 0.05
+(6 )
+(3)-ren azpi-familia bat da. Aztertu ondorengo irudia, 
+(6 ) funtzioen graﬁko batzuk
+marraztu dira, K2-ri balio ezberdinak emanez.
+9 .1 Irudia: (6 ) funtzioen graﬁko batzuk
+9.1. Ariketa
+Zehaztu y (0) = 0.3 betetzen duten funtzioez osatutako (3) soluzioen
+azpi-familia. Marraztu funtzio horietako batzuen graﬁkoak.
+Matematika Aplikatua Saila
+UEP Donostia
+
+176
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+9.2. Ariketa
+y (x) = x EDA emanda, aurkitu hurrengo hasierako baldintzak be-
+tetzen dituen y(x) soluzioa: y(0) = 1, y 
+(0) = 2. Aurkitu, baita ere, hurrengo in-
+guruko baldintzak betetzen dituen soluzioa: y(0) = 1, y(1) = 1/
+6. Existitzen al da
+y(0) = 1, y(1) = 19/6, y(−1) = −7/
+6 baldintzak betetzen dituen soluziorik? Planoko
+hiru puntu emanda, (x1, y1), (x2, y2), 
+(x3, y3), zein baldintzetan existituko da lehenen-
+go bietatik pasatzen den soluzio bakarra? Eta hiruretatik pasatzen dena?
+9.3 . Ariketa
+y (x) = k EDA emanda, bere soluzioaren adierazpen graﬁkoa egin, eta
+zehaztu koordenatu planoko edozein puntutik, 
+(x0, y0), pasatzen den soluzio partiku-
+larra.
+9.4 . Ariketa
+Orain arte ikusi dugunarekin, prozedura bakarra daukagu y (x) =
+f (x), y (x) = f (x), ..., yn(x) = f (x) moduko EDA-
+en soluzioak kalkulatzeko. Espli-
+katu yn(x) = f (x) EDA-ren soluzioa kalkulatzeko erabili daitekeen metodoa, f 
+(x)
+funtzio ezagun bat izanik. Nolakoa izango da soluzioa? Zenbat konstante agertuko di-
+ra bertan? Pentsa ezazu modu horretako EDA batean eta aplikatu aurreko prozedura
+bere soluzio orokorra kalkulatzeko.
+Erorketa librearen fenomenoa aztertzen jarraituko dugu. Fenomenoa deskribatzeko
+(1) eredua aukeratuz gero, ikusi dugu y(t) ibilbidea aurkitzeko gai garela 
+(ikus (2)
+ekuazioa), eta soluzio orokorrean agertzen diren bi konstanteei esanahi ﬁsikoa emateko
+gai, eta baita ibilbide posibleen graﬁkoak marrazteko ere.
+Baina, gogoratu, fenomeno bera deskribatzeko bigarren eredu bat ere ikusi dugula; ere-
+du honetan, kontutan hartzen genuen, gorputzak, erortzean airearekin duen marruska-
+dura indarra. Suposatu genuen, indar hau gorputzaren abiadurarekiko proportzionala
+zela une bakoitzean, eta horren bidez, eredu berri bat eraiki dugu:
+m
+d
+2y
+dt
+2
+= mg − k
+dy
+dt
+(7)
+EDA honen soluzio orokorra aurkitzeko, lehen erabilitako prozedura bera jarrai deza-
+kegu; hau da, ekuazioaren bi aldeak integratuz:
+my = mg
+dt − ky ⇒ my = mgt − ky + K1
+(8)
+Ekuazio hau, oraindik EDA da, y 
+(t) funtzioa agertzen baita. Berriz integratuko ditugu
+8 ekuazioaren bi aldeak:
+my =
+1
+2
+mgt
+2
+−
+k
+ydt + K1t + K2
+(9)
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.1.
+ARAZOAREN AURKEZPENA
+177
+Ezin dugu jarraitu. Ezin dugu kalkulatu
+ydt
+ez baitugu y
+(t) ezagutzen; hori da kalkulatu nahi duguna, hain zuzen. Adibide honekin,
+ikus daiteke EDA guztiak ezin daitezkeela integrazioarekin soilik ebatzi. Badaukagu,
+beraz, konpondu beharreko arazo berri bat: EDA-en soluzioak kalkulatzeko meto-
+doak garatu beharko ditugu; baina ikusi dugunez, ez dira nahikoak izango jatorrizko
+funtzioak kalkulatzen dituzten metodoak.
+2. Malgukiak eta zirkuitu elektrikoak
+Lehenengo adibidean ikusi dugu nola gorputz baten erorketa librearen fenomenoa 
+(gra-
+bitate indarra eta airearen marruskadura indarra kontutan hartuz soilik) EDA bat eta
+hasierako bi baldintzen bidez modelizatu daitekeen:
+my + ky = mg
+y(0) = y0
+y (0) = v0
+(10)
+non:
+m: gorputzaren masa
+k: gorputzaren menpekoa den proportzionaltasun konstantea
+y0: t = 0 momentuan egindako ibilbidea
+v0: t = 0 momentuko abiadura
+Aipagarria da beste fenomeno ﬁsiko garrantzitsu batzuk ere (10 )-
+aren antzeko eredu
+baten bidez aztertu daitezkeela. Eta bitxiena da posible dela fenomeno hauek eror-
+keta librearekin zerikusirik ez izatea. Modu horretako bi fenomeno aztertuko ditugu:
+malguki baten oszilazio libreak eta zirkuitu elektrikoak. Ikusi malgukiaren irudia 
+(2a);
+malgukitik m masako gorputz bat zintzilikatuta dago, orekan. Gorputzetik beheraka
+tiratzen badugu, malgukia d distantzia bateraino luzatzen da 
+(2b irudia). Gorputza
+askatzen badugu, oszilatzen hasiko da. F 
+(t) indar aldakor bat ere eragin diezaiokegu.
+Baldintza horietan, gorputzaren oszilazioak aztertzeko eredu bat hurrengoa da:
+my + ay + ky = F (t)
+y(0) = d
+Matematika Aplikatua Saila
+UEP Donostia
+
+178
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+y (0) = v0
+(11)
+non:
+y(t): gorputzaren posizioa t momentuan
+m: gorputzaren masa
+a: esekidura konstantea 
+(adibidez, gorputzak oszilatzen duen ingurumena airea, ura
+edo beroa barreiatzeko malgukia egon daitekeen olioren bat izan daiteke; azken kasu
+horretan, a konstante ezberdinak izango genituzke).
+k: malgukiaren ezaugarrien menpekoa den konstantea. Adibidez, malgukia 20cm lu-
+zatzen bada 10 Kg-ko masa batekin, k = 10/20 = 0.5 Kg/cm
+d: hasierako luzera
+v0: hasierako abiadura
+F (t): t une bakoitzean gorputzari eragiten dion indarra
+Ohartu, (11) ereduan, 2 ordenako EDA, (10) eredukoaren oso antzekoa dela. (10)-
+ean
+ez da agertzen ky gaia, baina bere gai askeak (eskuinekoa) (11)-
+aren esanahi ﬁsiko
+bera du: gorputzean eragiten duen indar bat da. 
+(10) ereduan, indar hori konstantea
+da (F (t) = mg); eta (11)-ean berriz, aldakorra izan daiteke. Gainera, (11)-
+ren hase-
+rako baldintzek bi ereduetan esanahi ﬁsiko bera dute. 
+(11) eredua sistema mekaniko
+bibradore askotan agertzen da 
+(makinen zati mugikorrak, zubien bibrazioak autoen
+eraginez, etb.). 3 irudian mugimenduan dagoen motor bat ageri da; motorrak bibratu
+egiten du eta bere bibrazioa instalatuta dagoen sistema osora igortzen du.
+9.2 Irudia: (a) eta (b) malkugi baten luzamendua; (c ) zirkuitua
+11 ereduak, zirkuitu elektriko batzuk aztertzeko ere balio du; 2c irudikoa, adibidez. Zir-
+kuitu horretan L induktantzia bat (Henrio-tan neurtuta), R erresistentzia bat 
+(Ohmio-
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.1.
+ARAZOAREN AURKEZPENA
+179
+9.3 Irudia: mugimenduan dagoen motorra
+tan neurtuta) eta C kapazitate bat (Faradio-
+tan neurtuta) seriean konektatu dira, E(t)
+tentsio aldakor batekin (V oltio-
+tan neurtuta). Baldintza hauetan, zirkuituan dabilen
+I(t) intentsitatearen balioa kalkulatzeko ondorengo eredua erabili daiteke:
+LI + RI +
+1
+C
+I = E (t)
+I(0) = i0
+I (0) = a0
+(12)
+Ohartu, eredu horretan EDA-ren gai askea E (t) dela, hau da, E(t)-ren abiadura
+denborarekiko. (12) eredua (11)-
+renaren berbera da. Baina, zer adierazten dute, ka-
+su honetan, hasierako baldintzetan dauden I(0) eta I 
+(0) balioek? Fenomeno ﬁsiko
+honetan, ez daude gorputzen mugimenduak, karga elektrikoenak baizik. q
+(t) konden-
+tsadorearen karga bada t une bakoitzean, orduan q (t) = I(t) betetzen da. I
+(0), t = 0
+hasierako momentuan zirkuituan dagoen intentsitatearen balioa da, eta I 
+(0), berriz,
+intentsitatearen abiadura aldaketa da, hasierako momentu horretan.
+Hala ere, (11) eta (12) ereduetan agertzen diren EDA-k ebazteko, 
+(10) eredukoa ebaz-
+teko izan dugun arazo bera dugu:
+ ezin dugu ebatzi integrazioaren bidez, soilik. y(x)
+EDA-ren soluzioa baldin bada, ezin dugu ondorengo eragiketa egin:
+y(x)dx
+y(x) ez baitugu ezagutzen 
+(hori da kalkulatu nahi duguna). Lehen esan dugun beza-
+la, konpondu behar dugun arazoa hauxe da: EDA ezberdinen soluzioak kalkulatzeko
+metodoak garatzea. Eta bestalde, edozein teoria matematikoan garrantzitsua den ara-
+zo bati ere soluzioa aurkitu behar diogu:
+ existentzia eta bakartasuna. Hau da, zein
+baldintzetan ziurtatu dezakegu EDA-ren y
+(x) soluzio bakar bat existitzen dela? Gai
+honetan, arazo hauei erantzuna aurkituko diegu. Oraingoz, deﬁni ditzagun EDA-
+ren
+soluzioen inguruan aurkitu ditugun bi kontzeptuak:
+Matematika Aplikatua Saila
+UEP Donostia
+
+180
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+9.1. Deﬁ niz ioa
+n o rd enak o E D A, y(x) fu ntzio aren eta bere d eribatu en y (x), y 
+(x), ..., yn(x)
+artek o erlazio a ezartzen d u en ek u azio a d a. O nd o reng o itx u ra izang o d u E D A batek o ro -
+k o rk i:
+F (x, y, y (x), y (x), ..., yn(x)) = 0
+(13)
+9.2. Deﬁ niz ioa
+(1 3 ) ek u azio a eg iaztatzen d u en y(x) ed o zein fu ntzio , E D A-
+ren so lu -
+zio a d ela esaten d a.
+9.5 . Ariketa
+Frogatu y = sin x, y = c o s x, y = 2 c o s x − 3 sin x funtzioak 2y + y = 0
+EDA-
+ren soluzioak direla. Frogatu, orokorrean, y = K1 c o s x + K2 sin x familiako
+edozein funtzio EDA horren soluzioa dela.
+9.6 . Ariketa
+y = x
+2 + Kx funtzioen familia emanda, K konstante erreala izanik:
+1. Funtzio-familiaren adierazpen graﬁkoa egin.
+2. Planoko edozein 
+(x0, y0) puntu emanda, ziurtatu al daiteke puntu horretatik pa-
+satzen den familiako kurbaren bat existitzen dela? Bakarra al da kurba hori?
+3. Aurkitu EDA bat bere soluzioa funtzio-familia hori izango dena.
+9.7 . Ariketa
+Naftalinazko esfera batek bolumena galtzen du lurrinketaren ondorioz;
+suposatzen dugu lurrinketa-
+abiadura bere azalerarekiko proportzionala dela. Ikus de-
+zakegun bezala, esferaren diametroa 2 cm-tik 1 cm-
+ra txikitu da lau hilabetetan.
+Eraiki esferaren diametroa (momentu bakoitzean) kalkulatzeko eredu matematikoa.
+Ebatzi problema, baina orain, suposatu lurrinketa-
+abiadura bere azaleraren karratua-
+rekiko proportzionala dela.
+9.8 . Ariketa
+Substantzia porotsu bat likido batez hezetuta dago eta airean da-
+go; substantzia horrek bere hezetasuna galtzen du; demagun hezetasunaren galera-
+abiadura substantziak duen likidoaren edukierarekiko proportzionala dela. Eraiki subs-
+tantziak 
+(momentu bakoitzean) duen likido kantitatea kalkulatzeko eredu matematiko
+bat.
+9.2
+E D A b aten soluzioaren leheneng o hurb ilketa
+Arazoa sinpliﬁkatzeko, lehendabizi 1.go ordenako EDA-
+k aztertuko ditugu, eta ondorengo
+itxura dutenak, zehazki:
+y = F (x, y)
+(14)
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.2.
+EDA B ATEN S OLUZIOAREN LEH ENENG O H URB ILKETA
+181
+Hau da, EDA-en kasu partikular bat aztertuko dugu: y (x), x eta y-
+ren menpean aska-
+tu daitezkeen 1.go ordenako ekuazioak. Itxura hori duten 
+(edo itxura horretara murriztu
+daitezkeen) EDA-en adibide batzuk hurrengoak dira:
+y = x
+2 + y2
+y = xy + 1
+xy = 2y + 3xy
+Hurrengo EDA-k, aldiz, 1.go ordenakoak dira, baina ezin dira 14-
+ko itxuran idatzi:
+y = x + e x p xy
+sin(xy ) = y + xy
+ln(x + y ) = 2 − 3x + y
+Zergatik aztertu nahi dira (14) itxurako EDA-k? Ondorengo arrazoiengatik:
+1. Egoera errealetan, normalean (14) itxura duten EDA-
+k agertzen dira. Adibidez, 5.
+eta 6. ariketetako EDA-k modu horretakoak dira.
+2. (14) itxurako EDA-
+k ebazteko hainbat metodo dago; 3. atalean ikusiko ditugu metodo
+hauek.
+3. 4. atalean ikusiko dugun bezala, baldintza jakin batzuekin, posible da 
+(14) itxurako
+EDA-ren soluzio bakar baten existentzia ziurtatzea (
+(x0, y0) puntu zehatz batetik pa-
+satzen den soluzioa, hain zuzen); hau da, baldintza jakin batzuekin ziurtatu daiteke
+problemaren soluzio bakar bat existitzen dela:
+y = F (x, y)
+y(x0) = y0
+(15)
+Kasu batzuetan 
+(15) problemaren soluzio bakar hori zehazki kalkulatzeko aukera izango
+dugu, eta bestetan, soluzio hurbilduak kalkulatu beharko ditugu; soluzio hurbildu horiek
+zenbakizko metodoen bidez kalkulatuko ditugu, 5. atalean ikusiko dugun bezala.
+Baina, orain arte dakigunarekin, (15) problemaren y
+(x) soluzioa ikuspuntu ezberdineta-
+tik azter dezakegu, nahiz eta oraindik ez jakin nola kalkulatu y
+(x). Atal honetan (15)-en
+soluzioa aztertzeko erabiliko ditugun ideiak hurrengoak dira:
+Matematika Aplikatua Saila
+UEP Donostia
+
+182
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+y(x)-en deribatuen azterketa. Ohartu (15) problemako EDA-k y (x)-
+ren adierazpena
+ematen digula zuzenean. Honek y(x)-en gorakortasuna /
+ beherakortasuna aztertzeko ideia
+ematen digu, eta baita, y(x)-i ukitzailea den zuzena (
+(x0, y0) puntu bakoitzean) kalkulatzeko
+ere. Gainera, (15)-eko EDA-tik abiatuta, posible da y (x)-
+en adierazpena lortzea, eta beraz,
+y(x)-en ahurtasuna/ganbiltasuna aztertu ahal izango dugu horrekin.
+y(x)-en hurbilketa Taylor-en polinomioen bidez. (15)-eko EDA-tik abiatuz, y 
+(x0)
+lortu daiteke, eta inplizituki deribatuz, y (x0), y 
+(x0), etab. ere bai. Beraz, posible da da-
+goeneko y(x) hurbiltzea x0-
+ren inguruneko polinomio baten bidez. Hemen daukagu berriz,
+gure Tay lor-en teorema garrantzitsua, kasu honetan, (15) problemaren y
+(x) soluzioari bu-
+ruzko informazioa emateko!
+Azter ditzagun xehetasun gehiagorekin bi aukera horiek.
+9.2.1
+y
+(x)-en d erib a tu en a z terk eta
+Hurrengo E D A -ren soluz ioen jok a era a z tertuk o d ugu:
+y
+= x2y
+(1 6 )
+D a k igunez , y(x)-en gora k orta suna / beh era k orta suna y (x)-
+ren z einua rek in erla z iona tuta d a -
+go, h a u d a :
+y
+(x) gora k orra (a , b) ta rtea n ⇔ y (x) > 0 (a , b) ta rtea n
+y
+(x) beh era k orra (a , b) ta rtea n ⇔ y (x) < 0 (a , b) ta rtea n
+K a su h oneta n, y (x) = x2y funtz ioa ren z einua a z tertu beh a rk o d ugu:
+y
+(x) > 0 ⇔ x2y > 0 ⇔ y > 0
+y
+(x) < 0 ⇔ x2y < 0 ⇔ y < 0
+B era z , y(x) (1 6 ) E D A -ren soluz io ba t ba d a , y 
+(x) > 0 betetz en d en x ∈ (a , b) ta rteeta n
+y
+(x) funtz ioa gora k orra d a . E ta y (x) < 0 betetz en d en x ∈ 
+(a , b) ta rteeta n berriz , beh e-
+ra k orra . Ha u d a , gra ﬁ k oa goik o p la noerd ia n d uen 1 6 E D A -ren y
+(x) soluz io ba t, gora k orra
+iz a ngo d a ; eta bere gra ﬁ k oa beh ek o p la noerd ia n ba d u, berriz , y
+(x) beh era k orra .
+A z ter d ez a gun ora in, y(x)-en a h urta suna /
+ ga nbilta suna . Horreta ra k o y (x)-en z einua a z -
+tertu beh a rk o d ugu:
+y
+(x) a h urra d a (a , b) ta rtea n ⇔ y (x) > 0 (a , b) ta rtea n
+y
+(x) ga nbila d a (a , b) ta rtea n ⇔ y (x) < 0 (a , b) ta rtea n
+UEP D o n o stia
+M ate m atik a A p lik atu a S aila
+
+9.2.
+E D A B AT E N
+S O L U Z IO AR E N
+L E H E N E N G O
+H U R B IL K E T A
+183
+y
+(x) kalkulatzeko (16) ekuazioa inplizituki deribatuko dugu:
+y
+(x) =
+d
+dx
+(x
+2y) = 2xy + x2y = yx(2 + x3)
+(17 )
+Beraz, y (x), y(x) faktoreen eta h(x) = x(2 + x
+3) funtzioaren biderkaduraz osatuta dago.
+Azter dezagun bere zeinua:
+y
+(x) > 0 ⇔ y(x) eta h(x) funtzioek zeinu bera dute
+y
+(x) < 0 ⇔ y(x) eta h(x) funtzioek aurkako zeinua dute
+h
+(x)-
+en graﬁkoak, funtzioa positiboa edo negatiboa deneko tarteak zehazteko balio digu.
+Ikusi 4 irudia. h(x)-en erroak: x = 0, x = −(2)
+1
+/3 ∼
+= −1.26. Beraz:
+9 .4 Irudia: h(x)-en graﬁkoa
+h
+(x) = x(2 + x
+3) > 0 ⇔ x ∈ (−∞, −1.26) ∪ (0, ∞)
+h
+(x) = x(2 + x
+3) < 0 ⇔ x ∈ (−1.26, 0)
+Hurrengo taulak y(x) funtzioaren ahurtasuna/ganbiltasuna erakusten digu:
+x
+-en tartea
+y
+(x)-en tartea
+y
+(x)-en ahurtasuna/ganbiltasuna
+x ∈
+(−∞, −1.26)
+y ∈
+(0, ∞)
+ahurra
+x ∈
+(−1.26, 0)
+y ∈
+(0, ∞)
+ganbila
+x ∈
+(0, ∞)
+y ∈
+(0, ∞)
+ahurra
+x ∈
+(−∞, −1.26)
+y ∈
+(−∞, 0)
+ganbila
+x ∈
+(−1.26, 0)
+y ∈
+(−∞, 0)
+ahurra
+x ∈
+(0, ∞)
+y ∈
+(−∞, 0)
+ganbila
+Matematika Aplikatua Saila
+UEP Donostia
+
+184
+9.
+KAP ITULUA EKUAZIO DIF ERENTZIAL ARRUNTAK
+O hartu x = −1.26 eta x = 0 puntuetan y(x)-en ahurtasuna/
+ganbiltasuna aldatzen dela,
+beraz, inﬂ ex io puntuak dira. 5 irudian, aurreko baldintzak betetzen dituzten bi funtzio po-
+sibleren graﬁkoak agertzen dira. G oiko planoerdian dagoen graﬁkoa 
+(−0.63 , 1.2) puntutik
+pasatzen da eta beheko planoerdian dagoena, berriz, 
+(1.26, −0.6) puntutik. Ezin dugu ziur-
+tatu, noski, bi funtzio hauek (16) EDA-
+ren soluzioak izango direnik; soilik esan dezakegu,
+beherakortasun/gorakortasuneko eta ahurtasun/ganbiltasuneko baldintzak, 
+(16) EDA-ren
+y
+(x) soluzioak bezala betetzen dituztela.
+9.5 Irudia: bi funtzio posibleren graﬁkoak
+Bestalde, y = F (x, y) EDA-k, y
+(x) funtzioaren zuzen ukitzailea kalkulatzeko aukera
+em aten digu (x0, y0) puntu bakoitzean. Z uzen horren m alda F 
+(x0, y0) denez, bere ekuazioa
+hurrengoa izango da:
+y − y0
+= F (x0, y0)(x − x0)
+16 EDA-ren kasuan, 
+(x0, y0) puntu bakoitzeko zuzen ukitzailearen ekuazioa haux e izango
+da:
+y
+= y0 + x
+2
+0y0(x − x0)
+Adibidez, 5 irudian agertzen diren puntuetan ((−0.63 , 1.2) eta 
+(1.26, −0.6)), zuzen ukitzai-
+leen ekuazioak
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.2.
+EDA BATEN SOLUZIOAREN LEHENENGO HURBILKETA
+185
+y
+= 1.2 + 0.4 76(x + 0.63) eta y = −0.6 − 0.9 5 3(x − 1.26)
+izango dira, hurrenez-
+hurren. Orain, eragiketa horiek egiten baditugu X Y planoko puntu
+askorekin, eta bakoitzean, zuzen ukitzailearen segmentu txiki bat marrazten badugu, EDA-
+ren soluzioen jokaeraren irudi bat lortuko dugu: y(x)-
+en malden eremua da. 6 irudian, (16)
+EDA-ren y(x)-en malden eremua agertzen da.
+9.6 Irudia: y(x)-en malden eremua
+Orain, 6 irudiko malden eremuaren gainean, 5 irudiko bi soluzio posibleen graﬁkoak
+marraztuko ditugu. Emaitza 7 irudian dago. Ikus daitekeenez, malda-
+eremuak soluzio
+posibleak zehatzago marrazten laguntzen digu (puntu bakoitzeko ukitzaileekin).
+M alda-
+eremuak, dentsoagoak izan daitezke, noski, 8 irudian agertzen den bezala:
+Ohartu,y(x)-en malda-eremu hauek, (16) EDA-ren soluzioen gorakortasun/
+beherakortasunari
+buruzko informazioa ematen digutela. y(x) soluzioen ahurtasun/
+ganbiltasunari buruzko in-
+formazioa lortzeko, y (x)-en malda-eremua marraz daiteke. y 
+(x) lortzeko, berriz, nahikoa
+da (17) inplizituki deribatzea, eta y (x) = yx(2 + x
+3) lortzen da. 9 irudian y (x)-en malda-
+eremua dago. Egiaztatu graﬁko honetan lortutakoa, aurretik analitikoki lortu genuen emai-
+tzarekin (5 irudia): y (x)-en (y (x)-
+en deribatuaren) zeinua, x = 0 eta x = −1.26 puntuetan
+aldatzen da, y(x) funtzioak inﬂexio puntua duen lekuan, hain zuzen.
+Azkenik, begiratu 10 irudia; (16) EDA-
+ren soluzioaren beste aukera batzuk marraztu
+dira (malda-
+eremuaren gainean). Baina kasu honetan, ukitzaile bakoitzaren segmentuak
+Matematika Aplikatua Saila
+UEP Donostia
+
+186
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+9.7 Irudia: aurreko bi graﬁkoak malden eremuan
+9.8 Irudia: malda-eremu dentsoagoa
+luzera handiagokoak marraztu ditugu.
+Ohartu, eremu ahurretan, zuzen ukitzailea beti funtzioaren azpitik geratzen dela, eta
+eremu ganbiletan, berriz, ukitzailea funtzioaren gainetik. Gogoratu zehazki horiexek direla
+ahurtasuna/ganbiltasuna deﬁnitzen dituzten baldintza geometrikoak.
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.2.
+EDA BATEN SOLUZIOAREN LEHENENGO HURBILKETA
+187
+9.9 Irudia: y (x)-en malda eremua
+9.2.2
+y
+(x)-en hurbilketa Tay lo r-en po lino m io en bidez
+Aurreko atalean, (16) problemaren y
+(x) soluzioaren azterketa kualitatiboa egin dugu, y(x)-
+ek bete behar dituen propietateak lortu ditugulako. Orain, azterketa analitikoa egingo
+dugu; eta horren bidez, y(x) soluzioaren hurbilketa bat lortuko dugu, Tay lor-
+en teoremaren
+laguntzaz. Gogoratuko duzunez, y
+(x) n ordenaraino deribagarria baldin bada, Tay lor-en n
+ordenako polinomioa x = a puntuan ondorengoa da:
+Pn(x) = y(a) + y (a)(x − a) +
+y
+(a)
+2
+(x − a)
+2 + . . . +
+yn
+(a)
+n
+!
+(x − a)n
+Gure kasuan, a = x0, y(a) = y0, y (x0) = F (x0, y0) = x
+2
+0y0, y
+(x0) = y0x0(2+x
+3
+0). Beraz,
+kalkula dezakegu dagoeneko Tay lor-en 2 ordenako polinomioa, P2
+(x). Hala ere, lor dezagun
+y
+(x0)-ren balioa P3(x) kalkulatzeko. 
+(17) inplizituki deribatuz, erraz egiaztatu daiteke:
+y
+(x) = y(2 + 6x
+3 + x6) ⇒ y (x0) = y(2 + 6x3
+0 + x
+6
+0)
+Horrela, dagoeneko idatz dezakegu P3(x) polinomioa:
+P3
+(x) = y0 + y (x0)(x − x0) +
+y
+(x0)
+2
+(x − x0)
+2 +
+y
+(x0)
+6
+(x − x0)
+3
+Matematika Aplikatua Saila
+UEP Donostia
+
+188
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+9.10 Irudia: (16)-en soluzioaren beste aukera posible batzuk
+(−0.63, 1.2) puntuan,ondorengoa lortzen da:
+P3
+(x) = 1.2 + 0.476(x + 0.63) − 0.6615(x + 0.63)
+2 + 0.1125(x + 0.63)3
+Eta (1.26, −0.6) puntuan:
+P3
+(x) = −0.6 − 0.953(x − 1.26) − 1.512(x − 1.26)
+2
+−
+1.8 (x − 1.26)
+3
+11 irudian, aurreko bi polinomioen graﬁkoen zati txikiak daude marraztuta (y
+(x)-en
+malda eremuarekin). Ohartu, polinomioen graﬁkoak eta ukitzaileen segmentu txikiak ia
+paraleloak direla. Polinomioek eta EDA-en soluzioek oso antzeko jokaera dute.
+Hala ere, ez da ahaztu behar, Taylor-
+en n ordenako polinomioak, funtzioaren hurbilketa
+lokal bat ematen digula soilik; hau da, Pn(x), y(x)-
+era hurbiltzen da polinomioa kalkulatu
+den puntuaren inguruan. Begiratu 12 irudia. Aurreko bi polinomioen graﬁkoak daude,
+baina oraingoan tarte handiago bat hartuta. Ikus daitekeenez, polinomioak kalkulatu diren
+puntuetatik urrun, funtzioek ez dute EDA-
+ren soluzioen jokaera berbera, hau da, hauen
+ukitzaileak ez datoz bat malda-eremuko ukitzaileekin.
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.2.
+EDA BATEN SOLUZIOAREN LEHENENGO HURBILKETA
+189
+9.11 Irudia: bi polinomioen graﬁkoen zatiak
+9.12 Irudia: aurreko bi polinomioen graﬁkoak tarte zabalago bat hartuta
+Matematika Aplikatua Saila
+UEP Donostia
+
+190
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+9.2.3
+E kuazio homog eneoak.
+y
+= f (
+y
+x ) itxurako ekuazioari homogeneoa deritzo. Ikus ditzagun ondorengo adibideak:
+y
+=
+y
+2
+x
+2 + y2
+⇐⇒
+y
+=
+y
+x
+2
+1 +
+y
+x
+2
+(9.1)
+y
+=
+x
+2 + y2
+x
+⇐⇒
+y
+=
+x
+2 + y2
+x
+=
+1 +
+y
+x
+2
+(9.2)
+y
+=
+x
+y
+⇐⇒
+y
+=
+y
+x
+(9.3)
+Ekuazio hauek ebazteko
+y
+x = z aldaketa egingo dugu. Honen ondorioz, ekuazioan z eta z-ren
+deribatua x-ekiko agertuko dira. Hau da:
+z
+=
+y
+x
+=⇒
+y
+= z x =⇒
+y
+= z + xz
+(9.4)
+Hasierako ekuazioan ordezkatuz:
+y
+= f
+y
+x
+=⇒
+f
+(z) = y = z + xz
+(9.5)
+Beraz:
+dz
+f
+(z) − z
+=
+dx
+x
+(9.6)
+Azkeneko ekuazio hau aldagai banduetako ekuazio diferentziala denez, soluzio orokorra adie-
+razpen hau integratuz lortzen da. Hots:
+dz
+f
+(z) − z
+= ln |x| + k
+(9.7)
+Berdintzaren ezkerreko atalan agertzen den integrala kalkulatuz gero, hasierako z =
+y
+x
+aldagai-aldaketa desegin beharko da.
+9.9. Ariketa
+Metodo hau erabiliz, atalaren hasieran emandako adibideetan dauden E.D.A.
+ebatzi.
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.2.
+EDA BATEN SOLUZIOAREN LEHENENGO HURBILKETA
+191
+9.2.4
+Ekuazio zehatzak.
+Idatz dezagun y = F (x, y) ekuazioa era diferentzialean, hau da:
+M
+(x, y)dx + N (x, y)dy = 0
+(9.8)
+Adibidez:
+1.
+y
+=
+xy
+x
+2 − y2
+⇐⇒ xydx + (y
+2 − x2)dy = 0
+M
+= xy, N = y
+2 − x2
+(9.9)
+2.
+y
+= x + y ⇐⇒ (x + y)dx − dy = 0
+(M = x + y, N = −1)
+(9.10)
+(M (x, y), N (x, y)) bektorea U (x, y) funtzio baten gradientea bada, hau da:
+Ux(x, y) = M (x, y)
+(9.11)
+Uy(x, y) = N (x, y)
+(9.12)
+orduan ekuazio diferentzialaren soluzio orokorra U (x, y) = k izango da.
+Froga dezagun U (x, y) = k itxurako funtzioek E.D.A. betetzen dutela. x-
+ekiko deribatuz
+eta katearen erregela aplikatuz ondorengoa lortzen dugu:
+d
+dx
+U
+(x, y) = 0
+=⇒
+Ux(x, y) + Uy(x, y)
+dy
+dx
+= 0 =⇒
+(9.13)
+M
+(x, y)dx + N (x, y)dy
+=
+0
+(9.14)
+Azkeneko hau froga daiteke gradientearen esanahia erabiliz. Hau da:
+1. U (x, y) = k , z = U (x, y) gainazalaren maila-lerro bat da.
+Matematika Aplikatua Saila
+UEP Donostia
+
+192
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+2. Puntu bakoitzean, U (x, y)-
+ren gradientea, puntu horretatik pasatzen den maila-lerroare
+kiko perperdikularra da.
+3. Puntu bakoitzean, U (x, y) -ren gradientea, (Ux(x, y), Uy
+(x, y)) bektorea da. (x, y)
+puntuan bektore perpendikular bat (−Ux(x, y), Uy(x, y)) izango da. Beraz, y(x)-
+ren
+malda, puntu bakoitzean, y = −
+U
+x (x,y)
+U
+y (x,y)
+izango da. Orduan, y = −
+M (x,y)
+N (x,y)
+lortu dugu
+eta hau gure ekuazio diferentziala da.
+Beraz, ekuazio diferentzial honen soluzio orokorra kalkulatzeko Ux(x, y) = M 
+(x, y) eta
+Uy(x, y) = N (x, y) baldintzak betetzen dituen U 
+(x, y) funtzioa lortu beharko dugu. Bal-
+dintza hauek betetzen dituzten ekuazio diferentzialak ekuazio diferentzial zehatzak dira.
+S oluzio orokorrari funtzio potentziala deritzo.
+Adibidez, 3x2y2dx + 2x3ydy = 0 ekuazioa zehatza da, U (x, y) = x3y2 funtzioak 
+(9.11) eta
+(9.12) baldintzak betetzen dituelako. Orduan, ekuazioaren soluzio orokorra x3y2 = k izango
+da. Zer kasuetan existitzen da U (x, y) funtzioa? . Eta U 
+(x, y) existitzen bada nola kalkula-
+tzen da? .
+Ux(x, y) = M (x, y) baldintza y-rekiko deribatzen badugu Uxy(x, y) = My
+(x, y) lortzen dugu
+eta Uy(x, y) = N (x, y) baldintza x-rekiko deribatuz Uyx(x, y) = Nx
+(x, y) lortzen da.
+Demagun U 
+(x, y) funtzioak bigarren ordenako deribatu partzial jarraiak onartzen dituela.
+S chwartz-en teorema aplikatuz Uxy(x, y) = Uyx
+(x, y) berdintza lortzen da. Beraz, (9.8)
+ekuazioa zehatza izateko beharrezkoa da My(x, y) = Nx(x, y) berdintza betetzea.
+9.1. Ad ib id ea
+y
++ 2xy3 dx + x + 3x2y2 dy = 0
+(9.15)
+ekuazioa zehatza da My = 1 + 6xy2 = Nx betzetzen delako.
+Orduan, U 
+(x, y) funtzio bat existitzen da non ondorengo baldintzak betetzen diren:
+Ux = y + 2xy
+3
+(9.16)
+Uy = x + 3x
+2y2
+(9.17)
+(9.16) berdintza integratuz:
+U
+=
+y
++ 2xy3dx = xy + x2y3 + h(y)
+(9.18)
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.2.
+EDA BATEN SOLUZIOAREN LEHENENGO HURBILKETA
+193
+(9.16) berdintza integratzean lortutako integrazio konstantea y-
+ren menpeko funtzioa izan
+daiteke; horregatik konstanteari h
+(y) deitzen diogu. Funtzio hau determinatzeko (9.18) x-
+rekiko deribatuko dugu eta 9.17 ekuazioarekin berdinduko dugu, hau da:
+Uy = x + 3x
+2y2 + h (y) = x + 3x2y2 =⇒ h (y) = 0 =⇒ h(y) = k
+(9.19)
+U
+(x, y) = xy + x2y3 + k itxurako funtzio guztiek (9.16) eta 
+(9.17) baldintzak betetzen
+dituzte. Beraz, E.D.A.-ren soluzio orokorra
+U
+(x, y) = xy + x2y3 = k
+(9.20)
+izango da. 
+(9.20) ekuazioa x eta y aldagaien arteko erlazioa da non hautazko k konstantea
+agertzen den. Hala ere, 
+(9.20) ekuazioan y aldagaia ez da era esplizituan agertzen. Zer adie-
+razten du (9.20) familiak?. k konstante errealaren balio ﬁnko bakoitzarako, 
+(9.20) ekuazioak
+planoko kurba bat adierazten du non (x, y) puntuek 
+(9.20) baldintza betetzen duten.
+Hurrengo 
+(9.13) irudian k = 0.2 baliorako lortzen den kurba agertzen da. Argi denez, graﬁ-
+koa ez da y(x) funtzio batena; x bakoitzari y-
+ren balio bat baino gahiago dagozkio. Adibidez,
+x
+= −2 abzisa hartuz hiru puntu lortzen dira
+(−2, 0.753), (−2, −0.102), (−2, −0.650)
+x
+= 0.4 abzisa hartuz ordea, (0.4, 0.461) puntu bakarra lortzen da.
+Kurbako (x0, y0) puntua hartuz, badago kurbako zati bat zeina y
+(x) funtzioaren adierazpena
+den. y(x) funtzioa E.D.A.-ren soluzioa x0 puntuaren ingurune batean da.
+(9.14) irudian kurbaren lau zati agertzen dira
+(−2, 0.753), (−2, −0.102), (−2, −0.650), (0.4, 0.461)
+puntuei dagozkiena hain zuzen ere.
+L au zati hauek hainbeste y
+(x) funtzio desberdinen adierazpen graﬁkoak dira. Hauetako
+funtzio bakoitza, puntu bakoitzetik pasatzen den E.D.A.-ren soluzio bakarra da.
+9.10. Ariketa
+Har itzazu (9.20) kurba familia.
+1. Planoko hautazko P (x0, y0) puntua izanik, badago P puntutik pasatzen den 
+(9.20)
+familiako kurbaren bat?.
+Matematika Aplikatua Saila
+UEP Donostia
+
+194
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+9.13 Irudia: Funtzio inplizitua
+2. Finka dezagun k konstantearen balioa 
+(9.20) familiako kurba konkretu bat hartzeko.
+Hautazko x0 hartzen badugu, badago kurban P punturen bat non bere abzisa x0 den?.
+3. Finka dezagun k konstantearen balioa 
+(9.20) familiako kurba konkretu bat hartzeko.
+Hautazko y0 hartzen badugu, badago kurban abzisa hau duen P punturik?.
+9.2.5
+Z ehatz bihur daitezkeen ekuazio diferentzialak. Integrazio-faktorea.
+Aurreko atalan ikusi dugu
+M
+(x, y)dx + N (x, y)dy = 0
+(9.21)
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.2.
+EDA BATEN SOLUZIOAREN LEHENENGO HURBILKETA
+195
+9.14 Irudia: Kurbaren lau zati
+zehatza denean (hau da, My(x, y) = Nx
+(x, y) denean), orduan badakigu bere soluzio oroko-
+rra lortzeko erabili behar dugun metodo bat. 
+(9.21) zehatza ez izan arren, batzuetan badago
+G(x, y) funtzio bat aurkitzerik non (9.21) ekuazioa G
+(x, y) faktoreaz biderkatzean lortutako
+ekuazioa zehatza den. G(x, y) funtzioari integ raz io-
+faktorea deritzo. Adibidez, hurrengo
+ekuazioa ez da zehatza:
+y dx + (x2y2 − x) dy = 0
+(9.22)
+Konproba dezagun:
+M = y
+My = 1
+N = x2y2 − x
+Nx = 2xy2 − 1
+(9.22) ekuazioa G(x) = 1/ x2 integrazio-
+faktoreaz biderkatuz gero, E.D.A. ondorengo eran
+Matematika Aplikatua Saila
+UEP Donostia
+
+196
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+geratzen zaigu:
+y
+x2
+dx + y2 −
+1
+x
+dy = 0
+(9.23)
+Ekuazio hau zehatza da ondorengo baldintzak betetzen direlako:
+M =
+y
+x2
+N = y2 −
+1
+x
+My =
+1
+x2
+= Nx
+9.2.4 atalan azaldutako metodoa erabiliz, 
+(9.23) ekuazioaren soluzio orokorra kalkulatu.
+N ola kalkula dezakegu (9.21) ekuazioaren integrazio-
+faktore bat?. Oro har, oso zaila
+da G(x, y) integrazio-faktore bat aurkitzea. Hala ere, ekuazio batzuetan G
+(x, y) = xnym
+itxurako integrazio-
+faktore bat kalkula daiteke; m eta n determinatzeke dauden konstante
+errealak dira. Aplika dezagun prozedura hau ondorengo ekuazioari:
+2y dx + (3y − 2x)dy = 0
+(9.24)
+Ekuazio hau ez da zehatza My = 2, Nx = −2 betetzen direlako. (9.24) ekuazioa
+G(x, y) = xnym faktoreaz biderkatuz:
+2ym+ 1xn dx + (3ym+ 1xn − 2xn+ 1ym)dy = 0
+Ekuazioa zehatza izan behar duenez:
+My = 2(m + 1)y
+mxn = Nx = 3nxn−1ym+ 1 − 2(n + 1)xnym
+Eragiketak eginez:
+2xnym(m + n + 2) = 3nxn−1ym+ 1
+Sinpliﬁkatuz:
+2x(m + n + 2) = 3ny
+Zeintzu dira n eta m-ren balioak aurreko berdintza edozein x eta y-
+rekiko betetzeko?. Kasu
+honetan soluzio bakarra dago: n = 0, m = −2. (9.23) ekuazioa G
+(y) = y−2 integrazio-
+faktoreaz biderkatuz gero, ekuazioa ondorengo eran geratzen da:
+2
+y
+dx +
+3
+y
+−
+2x
+y2
+dy = 0
+(9.25)
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.2.
+EDA BATEN SOLUZIOAREN LEHENENGO HURBILKETA
+197
+Kalkula ezazu 
+(9.25) ekuazioaren soluzio orokorra, 9.2.4 atalan azaldutako prozedura erabi-
+liz.
+9.11. Ariketa
+Izan bedi (x2 + y2 + 1)dx − y(x + 1)dy = 0 ekuazioa. Froga ezazu ez dagoela
+G(x, y) = xnym itxurako integrazio-faktorerik. Kalkula ezazu G(x) = 
+(x + 1)n itxurako
+integrazio-faktorea eta ekuazioaren soluzio orokorra lortu.
+9.2.6
+Ekuazio linealak
+Ondorengo itxurako E.D.A.-ri ekuazio diferentzial lineala deritzo
+y + y · P (x) = Q(x)
+(9.26)
+Itxura honetako ekuazioa askotan aplikazio praktikoetan agertzen da. Adibidez, zirkui-
+tu elektrikoetan, erresistentzia eta induktantzia elikadura-
+iturriarekin seriean konektatzen
+direnean (ikus 9.15 irudia).
+9.15 Irudia: R L zirkuitua
+Froga daiteke zirkuituan, denbora unitate bakoitzean, ibiltzen den I
+(t) intentsitatea ondo-
+rengo ekuazioaren bidez modelizatzen dela:
+L
+dI
+dt
++ RI = E
+non L induktantziaren balioa, R erresistentziarena eta E aplikatutako tentsioa diren. Ekua-
+zio hau L faktoreaz zatituz, 
+(9.26) itxuran gertzen zaigu. Orokorrean, L eta R konstanteak
+dira, baina E denboraren menpe dagoen funtzioa izan daiteke. Hau gertatzen da adibidez,
+zirkuituan E(t) = E0 sin(ωt) itxurako tentsio alternoa aplikatzen denean.
+Matematika Aplikatua Saila
+UEP Donostia
+
+198
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+(9.26) ekuazioaren soluzio orokorra lortzeko
+e
+R
+P (x) d x
+integrazio-faktorea erabiltzen dugu:
+y e
+R
+P (x) d x + yP (x)e
+R
+P (x) d x = Q(x)e
+R
+P (x) d x
+(9.27)
+Azkeneko hau ondorengo eran idatz daiteke:
+d
+dx
+y e
+R
+P (x) d x
+= Q(x) e
+R
+P (x) d x
+Beraz:
+y e
+R
+P (x) d x =
+Q(x) e
+R
+P (x) d xdx + k
+k hautazko konstantea da. y(x) askatuz (9.26) E.D.A.-
+ren soluzio orokorra lortzen da.
+y(x) = e−
+R
+P (x) d x
+k +
+Q(x) e
+R
+P (x) d xdx
+(9.28)
+9.12. Ariketa
+Ondorengo problemaren soluzioa aurkitu:
+y − 2y = e3x
+y(0) = −1
+9.13 . Ariketa
+Ondorengo E.D.A.-ren soluzio orokorra bi era desberdinetan lortu:
+x2y + 2xy = 2
+1. lehen ordenako ekuazio lineal bihurtzen duen aldagai-aldaketa aurkituz.
+2. Ezkerreko atala bi funtzioen biderkaketaren deribatu moduan idatziz.
+9.14 . Ariketa
+Froga ezazu z = y1−n aldagi-aldaketak y + yP (x) = ynQ(x) Bernoulli-ren
+ekuazioa ekuazio lineal bihurtzen duela. (LAGU NTZA:
+ Hasteko ekuazioa y−n faktoreaz
+biderkatu. Ondoren aldagi-aldaketa egin).
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.3.
+SOLUZIOAREN EX ISTENTZIA ETA BAKARTASUNA.
+199
+9.16 Irudia: RC zirkuitua
+9.15. Ariketa
+Q(t) kargaren C kondentsadorea R erresistentziarekin eta E(t) elikadura-
+iturriarekin seriean konektatuta dago 
+(ikus 9.16 irudia). Honen modelizazioa hau da:
+R
+dQ
+dt
++
+1
+C
+Q = E(t)
+Soluzioa aurkitu. Demagun R = 20 Ω, C = 0. 01 F eta E(t) = 60e−
+2t V direla. Kon -
+den tsadorearen hasierako karg a Q(0) = 0 bada, Q
+(t) kalku latu , m arraz tu eta au rkitu z er
+u n etan karg a m ax im oa den , karg a hori em an ez .
+9.3
+S o lu z io a r e n e x iste n tz ia e ta b a k a r ta su n a .
+A u rreko atalan y = F 
+(x, y) E .D .A . ebaz teko m etodo batz u k iku si ditu g u . M etodo horiek
+erabiltz eko beharrez koa iz an da eku az ioak baldin tz a batz u k betetz ea. E san dez akeg u , beraz ,
+m etodo hau ek ez direla orokorrak. B atz u etan , ez dag o au rkitz erik m etodo an alitikoren bat
+eku az ioa ebaz teko. H ar dez ag u n adibidez on doren g o problem a:
+y
+= sin (xy) + c o s(x + y),
+y
+(0. 5) = 1
+(9 .2 9 )
+(9 .2 9 ) eku az ioa ez dag o ebaz terik au rretik em an dako m etodoak erabiliz 
+(frog atu adibide
+m odu an ). H ala ere, solu z ioen m alden erem u a m arraz ten badu g u 
+(iku s 9 .1 6 iru dia), em aten
+du y(x) solu z ioaren hu rbilketa bat lor dez akeg u la; solu z io horrek 
+(9 .2 9 ) betetz en du elarik.
+H orrez g ain , y(x)-ren hu rbilketa bat Tay lor-
+en polin om ioen bidez au rkitu g en ez ake.
+9.16. A rik e ta
+9 .1 7 iru dian (9 .2 9 )-
+ren solu z ioa g u tx i g ora behera m arraz tu . Tay lor-en P2(x)
+eta P3
+(x) polin om ioak a = 0. 5 pu n tu an kalku latu eta pu n tu horren in g u ru n ean m arraz tu .
+M ate m atik a A p lik atu a S aila
+U E P D o n o stia
+
+200
+9.
+K A P IT U L U A
+E K U A Z IO
+D IF E R E N T Z IA L A R R U N T A K
+9.17 Irudia: 9.29-ren malden eremua
+Interesatzen zaigu zer baldintzetan
+y
+= F (x, y),
+y
+(x0) = y0
+(9.3 0)
+ekuazioak y(x) soluzio orokorra onartzen duen.
+O ndorengo teoreman galdera hau erantzuten da.
+9.1. Teorema
+(Soluzioare n e x iste n tzia e ta bak artasun a.)
+D e m ag un F (x, y) fun tzioa e ta Fy
+(x, y) d eribatu partziala X Y plan oko D erem u batean
+jarraiak d ire la. D e m ag un 
+(x0, y0) pun tua D e re m uan d ag oe la. O rd uan , bad ag o y(x) fun -
+tzio bak arra, x0 pun tuare n in g urun e batean d e ﬁ n ituta d ag oe n a e ta 
+(9 .3 0 ) bald in tzak be te tze n
+d itue n a.
+Ikus ditzagun teorema honen ondorio batzuk.
+1. F (x, y) funtzioa eta Fy
+(x, y) bere deribatu partziala X Y planoko D eremu batean
+jarraiak badira, y = F (x, y) E.D.A.-ren soluzioak diren y
+(x) inﬁ nitu soluzio existitzen
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.3.
+S OLUZIOAREN EX IS TENTZIA ETA B AKARTAS UNA.
+201
+dira. (x0, y0) ∈ D puntua ﬁnkatzen badugu, orduan, 
+(x0, y0) puntutik pasatzen den
+y
+(x) soluzio bakarra existitzen da. Hau da: y
+(x0) = y0. Adibidez, y + y = e−x lehen
+ordenako ekuazio lineala hartuz, 9.2.6 atalan ikusitako prozedura erabil daiteke bere
+soluzioa kalkulatzeko eta konprobatzeko soluzio hori hauxe dela:
+y
+= e−
+x(k + x)
+(9.31)
+Existentzi teorema aztertzen badugu F 
+(x, y) = e−x − y lortzen da. Funtzio hau XY
+planoan ondo deﬁnituta dago eta jarraia da, bere deribatu partziala, Fy
+(x, y) ere jarraia
+izanik. Orduan, teorema honek ziurtatzen du (x0, y0) puntua ﬁnkatzen dugunean
+(9.31) familiako funtzio bakarra existitzen dela non y
+(x0) = y0 betetzen den. Ikus
+dezagun nola kalkula daitekeen soluzio hori, hau da, nola kalkulatu k-
+ren balioa:
+y
+(x0) = y0
+⇒
+y0
+= e−
+x0 (k + x0)
+⇒
+k
+= y0e
+x0
+−
+x0
+(9.32)
+Demagun (0, 1. 5) puntutik pasatzen den (9.31)-
+ren funtzio bakarra lortu nahi dugula.
+Orduan (9.32) erabiliz, k = 1. 5 dela lortzen da. Beraz,
+y
++ y = e−
+x,
+y
+(0) = 1. 5
+problemaren soluzio bakarra y = e−x(1. 5+x) izango da. 9.17 irudian 
+(9.31) familiaren
+malden eremua eta familiako funtzio batzuk azaltzen dira. Funtzio bakoitza lortzeko
+(x0, y0) puntua ﬁnkatu da eta k-ren balioa 
+(9.32) baldintza erabiliz kalkulatu da.
+2. (9.31) funtzioetako familia y + y = e−x E.D.A.-
+ren soluzio orokorra deitzen da. Honek
+ondorengoa esan nahi du: (x0, y0) puntutik pasatzen den eta 
+(9.31) familia dagoen
+funtzio bakarra existitzen dela non y + y = e−x betetzen den. y = F (x, y)-
+ren soluzio
+orokorra
+y
+= H(x, k)
+(9.33)
+funtzioetako familia da non edozein (x0, y0) punturako y
+(x) funtzio bakarra existitzen
+den (9.33) familia dagoena eta y(x0) = y0 baldintza betetzen duena. Edo berdina
+dena, k0 balio bakarra dago non y0 = H(x0, k0) den.
+3. (9.33) familian y aldagaia, x eta k-
+ren menpe era esplizituan idatzita dago. Hala ere,
+y
+= F (x, y) E.D.A.-ren soluzio orokorra ez dago beti era esplizituan idazterik, 
+(9.33)
+ekuazioan egin dugun bezala, baizik eta era inplizituan, hau da:
+H
+(x, y, k) = 0
+(9.34 )
+Matematika Aplikatua Saila
+UEP Donostia
+
+202
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+9.18 Irudia: 9.32 familia
+Adibidez, ondorengo ekuazio homogeneoaren soluzio orokorra
+y
+=
+xy
+x
+2 − y2
+(9.35 )
+hauxe da (frogatu adibide gisa 9.2.3 atalan erabilitako prozedura erabiliz) :
+−x
+2
+2y
+2
+= ln |ky|
+(9.36)
+Ez dago (9.36) familiako funtzioak era esplizituan idazterik. Hau da:
+ ez dago y, x eta
+k
+-ren menpe askatzerik.
+Ikus 9.19 irudia. Ezkerrean 
+(9.36) ekuazioan k = 1 eginez lortutako kurba marraztu
+da. Eskuinean, berriz, familiako beste funtzio batzuk, k-
+ren balio desberdinetarako lortu
+direnak, marraztu dira. Existentzi teorema edozein (x, y)-
+rako aplika daiteke, y = x denean
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.3.
+SOLUZIOAREN EXISTENTZIA ETA BAKARTASUNA.
+203
+ezik. P untu hauetan (9.35) E.D.A.-
+ren izendatzailea anulatzen da. y = x zuzenan dauden
+puntuetarako ezik, (x0, y0) puntu bakoitzarako badago y(x) funtzioa x0-
+ren ingurunean deﬁ-
+nituta dagoena eta y(x0) = y0 betetzen duena. Existentzi teoremak, 
+(9.30) problemak y(x)
+soluzioa onartzen duela, ziurtatzen du baina y(x) funtzioa x0-
+ren ingurune batean deﬁni-
+tuta egongo da. Beraz, teorema honek, puntuaren ingurune batean soluzioaren existentzia,
+ziurtatzen du. Itxura honetako beste teorema batzuk ikusi ditugu non propietateak lokalki
+ematen diren. Adibidez, Taylor-en polinomioa, y(x)-
+ren gorakortasuna eta beherakortasu-
+na x0-ren ingurune batean ( y (x0)-
+ren zeinuaren arabera aztertzen direnak), maximo eta
+minimo lokalak x0 puntuan 
+( deribatuen zeinuaren arabera x0 puntuan aztertzen direnak),
+etb.
+Har dezagun berriro gure adibidea. Har ezazu 9.19 irudiako edozein kurba. Kurba honek
+ez du y = y(x) funtzio bakarra adierazten x-ren balio ﬁnko baterako y-
+ren balio bat baino
+gehiago lortzen direlako. Kurbako 
+(x0, y0) puntu ﬁnko bat aukeratzen baduzu, orduan,
+har dezakezu kurbaren zati txiki bat y
+(x) funtzioa adierazten duena. 9.20 irudian y(x)
+soluzio lokalak adierazten duten kurbako zati desberdinak agertzen dira. S oluzio hauek,
+soluzioaren existentzia aztertzen den puntuaren ingurune batean deﬁnituta daude. y = x
+zuzenan dauden puntuetan ez dago y
+(x) funtzio lokalik. L ehen esan dugunaren arabera,
+puntu horietan ez dago existentzi teorema aplikatzerik.
+9.19 Irudia: 9.36 familia
+Matematika Aplikatua Saila
+UEP Donostia
+
+204
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+9.20 Irudia: kurba lokalak
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.4.
+2 . ORDENAKO EKUAZIO DIFERENTZIALAK
+205
+9.4
+2 . ord enako ekuazio d iferentzialak
+9.4.1
+S o lu z io e n e x iste n tz ia e ta b a k a r ta su n a
+Orain arte y = F 
+(x, y) erako lehenengo ordenako ekuazio diferentzialak aztertu ditugu. So-
+luzioen esangura eta soluzio horiek aurkitzeko metodo analitiko batzuk ikusi ditugu. Baina,
+1. ordenako EDAk ez dira zientzian eta ingeniaritzan garrantzia duten bakarrak. 1. atalean,
+fenomeno erreal eta garrantzitsu batzuk eredutzeko erabilgarriak diren 2. ordenako ekuazio
+batzuk ikusi genuen,
+• Aizearen marruskadura kontutan hartuz gorputz baten jaisketa aztertzerakoan azal-
+tzen den EDA.
+m
+d
+2y
+dx
+2 = mg − k
+dy
+dx
+• F 
+(t) indar aldakorra jasatzen duen malguki baten oszilazioak aztertzerakoan azaltzen
+den EDA.
+my
++ cy + ky = F (t)
+• E
+(t) tentsioa duen eta erresistentzia, kondentsadorea eta harila seriean konektatuta
+dituen zirkuitu elektriko baten korrontea aztertzerakoan azaltzen EDA.
+L I
++ RI +
+1
+C
+I
+= E (t)
+2. ordenako EDA ebazteko beharra beste egoera askotan ere gertatzen da, y
+(x) magni-
+tudearen aldatze era aztertu behar dugunean.
+• Aurreko RC L zirkuitoan, Q
+(t) kondentsadorearen karga 2. ordenako EDA baten solu-
+zioa da.
+L Q
++ RQ +
+1
+C
+Q
+= E(t)
+• F indar horizontal eta konstante bat, mutur bat landatua duen habe baten mutur
+askean aplikatzen dugunean (ikus (9.21) irudia) habearen deﬂ exioa y
+(x) ekuazio dife-
+rentzial arrunt baten bidez lortzen da.
+Matematika Aplikatua Saila
+UEP Donostia
+
+206
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+9.21 Irudia: Habe baten deﬂexioa
+EIy
++ F y = −
+W
+(L − x)
+2
+2L
+E
+eta I habearen ezaugarri ﬁsikoen araberako konstanteak dira 
+(E elastikotasun mo-
+dulua eta I sekzioaren inertzi momentua), L habearen luzera eta W pisua.
+Adibide hauetan ikusi ditugun ekuazioak era honetakoak dira:
+ay
++ by + cy = F (x)
+(9.37)
+a, b
+eta d konstante errealak eta F (x) funtzio bat direlarik.
+Era honetako ekuazioak ebazteko bideak ikusiko ditugu atal honetan.
+9.3. Deﬁ niz ioa
+. (9.37 ) ekuazioa koeﬁziente konstantedun, 2 . ordenako ekuazio diferentzial
+lineala da. F (x) = 0 denean h omogeneoa dela esaten da.
+O h arra:
+Aurreko atal baten aztertu genuen ekuazio homogeneoak eta ekuazio diferentzial lineal ho-
+mogeneoak ez dira gauza berdina.
+1. ordenako ekuazioa diferentzial arruntak aztertu dugunean era honetako hastapen
+problemak ebazpenaz arduratu gara
+y
+= F (x, y)
+y
+(x0) = y0
+(9.38)
+1. ordenako ekuazioa diferentzial arruntak ebazterakoan, y = F (x, y) EDA-
+ren soluzio
+orokorraz aritu ginen eta zer nolako baldintzetan bakarra den 
+(9.38) ekuazioaren soluzioa.
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.4.
+2. ORDENAKO EKUAZIO DIFERENTZIALAK
+207
+G auza berdina egingo dugu orain problema honekin.
+ay
++ by + cy = F (x)y(x0) = y0,
+y
+(x0) = m0
+(9.39)
+non F (x, y) funtzioa jarraitua den
+(9.39) probleman hastapen baldintzak bi dira, bilatzen dugun funtzioa, 
+(x0, y0) puntutik
+pasatzen da eta x0 puntuan m0 malda duen EDA-ren soluzioa izan behar du.
+9.4. Deﬁnizioa
+Bi konstanteen menpe dagoen
+y
+= f (x, k1, k2)
+(9.40)
+funtzioa sorta (9.37) E DA-
+ren soluzio orokorra da, honako baldintzak betetzen dituenean:
+1 . (9.37) funtzio sortako edozein funtziok E DA betetzen du.
+2. E dozein 
+(x0, y0) eta m0 balioentzat, funtzio sortako funtzio bakar batek betezen ditu
+hastapen baldintza horiek
+9.2 . Ad ib id ea
+Egiaztatu funtzio sorta hau
+y
+= k1e
+x + k2e−x − x
+2 − 2
+(9.41)
+ekuazio diferentzial honen soluzioa dela.
+y
+− y = x
+2
+(9.42)
+Ikus dezagun (9.41) funtzio sortako edozein funtzio 
+(9.42) ekuazio diferentzialaren solu-
+zioa dela konstanteen edozein baliorentzat.
+(9.41) deribatuz
+y
+= k1e
+x − k2e−x − 2x
+y
+= k1e
+x + k2e−x − 2
+eta (9.42) ekuazioaren ezkerreko gaian ordezkatuz
+y
+− y = k1e
+x + k2e−x − 2 − (k1ex + k2e−x − x
+2 − 2) = x2
+Hastapen baldintzak y(x0) = y0 eta y (x0) = m0 ﬁnkatzen ditugu eta 
+(9.41) funtzio
+sortatik baldintza horiek betetzen dituena aurkituko dugu.
+y0
+= k1ex0 + k2e−x0 − x
+2
+0 − 2
+m0
+= k1ex0 − k2e−x0 − 2x0
+(9.43)
+Matematika Aplikatua Saila
+UEP Donostia
+
+208
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+Ekuazio-
+sistema askatuz koeﬁzienteen balioak lortzen ditugu. Sistemak soluzio bakarra
+du
+ex0
+e−x0
+ex0
+−e−x0
+= 2 = 0
+delako.
+(9.22) irudian (9.41) funtzio sortako funtzio batzuen adierazpena dugu. 
+(x0, y0) puntutik
+funtzio sortako inﬁnitu funtzio pasatzen dira baina horietatik malda m0 duen bakarra.
+9.22 Irudia: (9.41) funtzio sortako funtzio batzuk
+(9.23) irudian (9.41) funtzio sortako (2.6, 2.05555) puntutik pasatuz, y 
+(2.6) = 5.5264 3
+betetzen duen funtzioaren adierazpena dugu. Irudi horretan x0 = 2. puntuan ukitzailea
+adierazita dago. k1 = 0.8 eta k2 = 0.6 konstanteen balioak 
+(9.43) sistema askatuz lortu dira.
+9.23 Irudia: Hastapen baldintzak betetzen dituen funtzioa
+Adibide honetan egiaztatuko dugu bi parametroen menpe dagoen funtzio sorta ekuazio
+diferentzial arrunta baten soluzioa dela. Soluzio orokorrak bilatzeko metodoren bat ezagu-
+tzea interesatzen zaigu.
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.4.
+2. ORDENAKO EKUAZIO DIFERENTZIALAK
+209
+Adibide hori aztertzen jarraitzen dugu. (9.41) soluzio orokorrak bi zatien, y1
+(x) eta
+y2
+(x), batura da
+y
+(x) = (k1e
+x + k2e−x) − x
+2 − 2
+y1
+= k1e
+x + k2e−x
+y
+= −x
+2 − 2
+Era horretan deﬁnitutako y1(x) 
+(9.41) ekuazio diferentzial arruntari elkartutako ekuazio
+diferentzial homogeneoaren soluzio orokorra da eta y2
+(x) ekuazio osoaren soluzio partikular
+bat da.
+9.17.
+Egiaztatu aurreko baieztapenak betetzen direla.
+Propietate hori, egia izango al da kasu guztietan? Hau da , 
+(9.44) erako ekuazio lineala
+baldin badugu eta (9.45) berari elkartutako ekuazio homogeneoa
+ay
++ by + cy = F (x)
+(9.44)
+ay
++ by + cy = 0
+(9.45)
+egia al da (9.44) ekuazioaren soluzio orokorra 
+(9.45) ekuazio homogeneoaren soluzio orokorra
+eta osoaren partikular bat batuz lor daitekeela? Egia baldin bada soluzio orokorra bilatzeko
+bi problema ebatzi behar ditugu.
+Egiaztapen hori egia da eta teorema honetan enuntziatuko dugu.
+9.2. Teorema
+y1
+(x, k1, k2) bi parametroen menpe deﬁnitutako funtzio sorta (9.4 5 ) ekuazio
+diferentzial homogeneoaren soluzioa baldin bada eta y2(x) 
+(9.4 4 )n ekuazio osoaren soluzio
+partikularra baldin bada, orduan
+y
+(x) = y1(x, k1, k2) + y2(x)
+(9.4 4 ) ekuazio diferentzial osoaren soluzio orokorra da.
+Frog apena
+Ikus dezagun y
+(x) funtzioak soluzio orokorrek bete behar dituzten baldintzak betetzen
+dituela.
+Matematika Aplikatua Saila
+UEP Donostia
+
+210
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+1. y(x) = y1(x, k1, k2) + y2(x)-k (9.44) EDA betetzen du.
+ay
+2 + by2 + cy2 = F (x)
+betetzen da ekuazio osoaren soluzio partikularra delako, eta
+ay
+1 + by1 + cy1 = 0
+betetzen da ekuazio homogeneoaren soluzioa delako, beraz
+a
+(y1 + y2) + b(y1 + y2) + c(y1 + y2) = (ay
+1 + by1 + cy1) + (ay2 + by2 + cy2) = F (x)
+2. Soluzio orokorra osatzen duten funtzioen artean y(x0) = y0 eta y 
+(x0) = m0 hastapen
+baldintzak betetzen dituen funtzio bakarra dago.
+Hastapen problema hau eratzen dugu
+ay
++ by + cy = 0,
+y
+(x0) = y0 − y2(x0),
+y
+(x0) = m0 − y
+2(x0)
+y1
+(x, k1, k2) ekuazio homogeneoaren soluzio orokorra denez, funtzio horietatik bakar
+bat, u(x) izango hastapen problema horren soluzioa. y(x) = u(x) + y2
+(x) bilatzen ari
+ginen soluzioa da.
+y
+(x0) = u(x0) + y2(x0) = y0 − y2(x0) + y2(x0) = y0
+eta
+y
+(x0) = u (x0) + y
+2(x0) = m0 − y2(x0) + y2(x0) = m0
+9.4.2
+E D A h om og eneoen soluzio orokorra
+(9.2) adibidean kusi dugu, y = k1ex + k2e−x bi parametroen menpe dagoen funtzio sorta
+y
+− y = 0 ekuazio diferentzial homogeneoaren soluzio orokorra dela.
+Soluzio horretan esponentzialen konbinazio lineala dugu. Azter dezagun ea ekuazio ho-
+mogeneoen soluzio orokorra esponentzialen konbinazio lineal bezala lor dezakegun ala ez.
+Bila dezagun bigarren ordenako ekuazio diferentzial lineal homogeneoen soluzio oroko-
+rrak.
+ay
++ by + cy = 0
+(9.46)
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.4.
+2. ORDENAKO EKUAZIO DIFERENTZIALAK
+211
+y
+= emx erako funtzioak soluzio bezala proposatzen ditugu eta azter dezagun zeintzuk
+izen behar diren mren balioak. Funtzio hori deribatuz eta ekuazioan ordezkatuz hau lortzen
+dugu,
+y
+= e
+mx
+y
+= me
+mx
+y
+= m
+2emx
+ay
++ by + cy = 0 ⇔ am
+2emx + bmemx + cemx = 0 ⇔ am2 + bm + c = 0
+m1
+eta m2 am
+2 + bm + c = 0 ekuazioaren soluzioak bilatzen badugu
+y
+= k1e
+m1x + k2em2x
+(9.47)
+funtzio sorta EDA soluzioa dirudi. am
+2 + bm + c = 0 ekuazioa EDA-ri elkartutako ekuazio
+karakteristikoa da.
+9.18.
+Frogatu m1 eta m1 soluzioak errealak eta ezberdinak direnean
+y
+= k1e
+m1x + k2em2x
+ay
++ by + cy = 0 ekuazioaren soluzio orokorra dela.
+9.19.
+Ekuazio diferentzial honen soluzio orokorra bilatu.
+y
+− y = 0
+Azterketa bukatu gabe dugu. Z er gertatzen da m1 = m2 berdinak direnean? Eta
+konplexuak direnean?
+m1
+= m2 betetzen denean (9.49) funtzio sorta parametro bakarren menpe gelditzen da
+eta ezin da soluzio orokorra izan. Kasu honetan soluzioa orokorra hurrengo ariketan aipatzen
+dena da.
+9.20 .
+Frogatu, ekuazio karakteristikoen soluzioak berdinak direnean, m1 = m2 = m, 
+(9.46)
+EDA-ren soluzio orokorra era honetakoa dela.
+y
+= k1e
+mx + k2xemx
+Matematika Aplikatua Saila
+UEP Donostia
+
+212
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+Ekuazio karakteristikoa ebazterakoan erro konplexu konjokatuak m = p ± qi lor ditzake-
+gu, (9.49) funtzio sortan ordezkatuz, hau lortuko dugu
+y
+= k1e
+(p+qi)x + k2xe(p−qi)x = y = epx ((k1 + k2) cos qx + i(k1 − k2) sin qx)
+Funtzio sortaren parametroak errealak izan daitezen
+A
+= k1 + k2,
+B
+= i(k1 − k2)
+egiten dugu eta soluzioa era honetan gelditzen da
+y
+= y = e
+px (A cos qx + B sin qx)
+(9.48)
+9.21.
+Frogatu m1 = p + qi eta m2 = p − qi soluzioak konplexu konjokatuak direnean 
+(9.48)
+funtzio sorta ay + by + cy = 0 ekuazioaren soluzio orokorra dela.
+9.4.3
+2. ord enako EDA osoaren soluzio p artikularra
+Koeﬁziente indeterminatuen metodoa
+Ekuazio osoaren soluzio partikularra bilatzeko bideak aztertuko ditugu orain.
+Azter dezagun berriro (9.2) ariketaren soluzio orokorra.
+Egiaztatu dugu y2 = −2 − 2 soluzio partikular bat dela. Funtzio hau eskubiko gaian,
+F
+(x) = x2, dugun funtzioaren antzerako itxura du.
+y2 = Ax2 + Bx + C erakoa da
+A
+= −1, B = 0 eta C = −2 direnean. Koeﬁziente indeterminatuen metodoa antzeko-
+tasun horretan oinarritzen da. Soluzio partikular bezala proposatzen den funtzioa F 
+(x)
+funtzioaren antzekoa da, baina kasuz kasu, ﬁnkatu behar diren koeﬁziente batzuekin.
+Adibidez,
+F
+(x) = 3e4x denean, y2 = Ae4
+x proposatuko dugu.
+F
+(x) = 4x3 − x + 4 denean, y2 = Ax3 + Bx2 + Cx + D proposatuko dugu.
+F
+(x) = −4 sin(3x) denean, y2 = A sin(3x) + B cos(3x) proposatuko dugu.
+F
+(x) = 2e5x sin(2x) denean, y2 = e5
+x (A sin(2x) + B cos(2x)) proposatuko dugu.
+9.22.
+(9.2) adibidean azaltzen den ekuazio diferentzialarentzat y = ax2 + Bx + C erako
+soluzio partikular proposatu eta y2 = −x2 − 2 soluzioa lortzen dela egiaztatu.
+9.23.
+Honako ekuazio diferentzialaren soluzio orokorra aurkitu.
+y
+− y = e
+x
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.4.
+2. ORDENAKO EKUAZIO DIFERENTZIALAK
+213
+Aplika dezagun metodo hau ekuazio honen soluzioa bilatzeko.
+ay + by + cy = e
+px
+(9.49)
+p konstante erreala izanik.
+y = Aepx erako soluzioarekin saiatzen gara. Ekuazioan ordezkatuz
+y = Ape
+px
+y = Ap2e
+px
+aAp2e
+px + bpepx + cepx = epx
+A(ap2 + bp + c) = 1
+ap2 + bp + c zero egiten dituzten p balioentzat ez dugu A-
+rik lortzen. Hau da p ekua-
+zio karakteristikoen soluzioa denean proposatu dugun funtzioarekin ez dugu lortzen soluzio
+partikularrik. Egoera hau gainditzeko y = Axepx funtzioa proposatuko dugu. Ekuazioan
+ordezkatuko dugu:
+y = Ae
+px + Axpepx = A(1 + xp)epx
+y = Ape
+px + Apepx + Axp2epx = A(2p + xp2)epx
+aA(2p + xp2)e
+px + bA(1 + xp)epx + cxepx = epx
+A(2ap + b) + A(ap2 + bp + c)x = 1
+A(2ap + b) = 1
+Berriro 2ap + b = 0 denean ezin dugu A lortu. 2ap + b = 0 dugu p ekuazio karakteristikoaren
+erro bikoitza denean. Kasu hau gainditzeko y = Ax2epx funtzioa proposatzen dugu. Ariketa
+bezala, egiaztatu A = 1/2a lortzen dela kasu honetan. 
+(a = 0 gogoratuz hemen ez dugu
+arazorik A lortzeko.)
+Edozein F (x) funtziorekin gauza berbera egingo dugu. 
+(9.1) taulan, lehenengo zuta-
+bean F (x)-
+ren aukerak ditugu, hirugarrenean dagokien proposatutako soluzio partikularra.
+(Pn(x) eta Qn(x) n. mailako polinomioak dira.
+Taula era honetan erabiliko dugu:
+1. F (x) lehenengo zutabean bilatzen dugu.
+2. ekuazio karakteristikoen erroak, m1, m2 lortuko ditugu.
+Matematika Aplikatua Saila
+UEP Donostia
+
+214
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+F (x)
+P (r)-ren erroa
+y
+1
+0
+ez
+bai k aldiz
+A
+Axk
+xn
+0
+ez
+bai k aldiz
+Pn(x)
+xkPn(x)
+eα x
+α
+ez
+bai k aldiz
+Aeα x
+Axkeα x
+eα x(a cos(βx) + b sin(βx))
+α + βi
+ez
+bai k aldiz
+eα x(A cos(βx) + B sin(βx))
+xkeα x(A cos(βx) + B sin(βx))
+xneα x(a cos(βx) + b sin(βx))
+α + βi
+ez
+bai k aldiz
+eα x (Pn(x) cos(βx) + Qn(x) sin(βx))
+eα x Pn(x)xk cos(βx) + Qn(x)xk sin(βx)
+9.1 Taula: Koeﬁziente indeterminatuak
+3. erroa eta bigarren zutabean azaltzen den balioarekin bat datorren ala ez begiratzen
+dugu, k anizkoiztasun ordena kontutan hartuz,
+4. hirugarren zutabeko funtzioa hartzen dugu.
+9.24.
+.Honako EDA-en soluzio orokorrak bilatu.
+1. y − 3y + 2y = 3e
+2x
+2. y − 3y + 2y = 3e
+5x
+3. y − 4y + 4y = 3e
+2x
+4. y − 2y + 10y = 2e
+3x + ex cos(2x)
+5. y + y = x4
+Eragileen metodoa
+Koeﬁziente indeterminatuen metodoa erabiltzeko erraza da baina F (x) funtzioa 
+(9.1) taulan
+dauden funtzio erakoentzat erabil daiteke soilik. Adibidez, ezin dugu erabili F 
+(x) = ln(x)
+edo F (x) = 1/x edo F (x) =
+√
+x kasuetan. Atal honetan beste metodo bat aztertuko dugu
+(9.50) ekuazioaren soluzio partikularra lortzeko. Metodo hau F 
+(x) kasu gehiago onartzen
+ditu, baina baditu ere bere mugak. Eragileen metodoa erabiltzeko ekuazio karakteristikoaren
+erroak m1 eta m2 errealak izan behar dira.
+y + by + cy = F (x)
+(9.50)
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.4.
+2. ORDENAKO EKUAZIO DIFERENTZIALAK
+215
+Ekuazio karakteristikoaren erroen bidez polinomio karakteristikoa era honetan jarri dai-
+teke
+m2 + bm + c = 0 ⇐⇒ (m − m1)(m − m2) = 0 ⇐⇒ m
+2 − (m1 + m2)m + m1m2 = 0
+Beraz ekuazio diferentziala era honetan adieraz dezakegu
+y − (m1 + m2)y + m1m2y = F (x)
+(9.51)
+Orain, berridatzi egingo dugu ezkerreko gaia era (9.52) EDA lortuz.
+(y − m1y) − m2(y − m1y) = F (X)
+(9.52)
+Erez egiaztatzen da, (9.51) eta 
+(9.52) adierazpen ezberdina baina ekuazio berdinak direla.
+(y − m1y) − m2(y − m1y) = y − m1y − m2y + m1m2y = y − (m1 + m2)y + m1m2y
+(9.52) ekuazioaren ezkerreko gaia aztertzen dugu, lehendabizi y -
+ren deribatua eta m1y
+kenduz funtzio berri bat lortzen dugu eta funtzio hori bigarren batugaian duguna da, baina
+lehenengoan deribaturik bazen bigarrenean m2-ren bidez bidertua. u − pu = 
+(D − p)u eran
+laburtzen badugu (D − p) eragilea deﬁnitzen dugu.
+Hurrengo adibidetan eragilea nola aplikatzen den azaltzen dugu
+(D − 3)(e
+x − x5) = (ex − x5) − 3(ex − x5) = −2ex − 3x5 + 4x4
+(D + 1)(sin x) = (sin x) + sin x = cos x + sin x
+Beste adibide honetan bi eragile aplikatzen ditugu
+(D − 2) (D − 4) (e
+x − x3)
+= (D − 2) (e
+x − x3) − 4(ex − x3) =
+= (D − 2) −e
+x + 4x3 − 3x2 =
+= (−e
+x + 4x3 − 3x2) − 2(−ex + 4x3 − 3x2)
+= 3e
+x − 8x3 + 18x2 − 6x
+Erreza da eragilearen biderketak trukatze propietatea betetzen duela egiaztatzea. Egin
+ezazu ariketa bezala.
+(D − p)[(D − q)u(x)] = (D − q)[(D − p)u(x)]
+Beraz (D−p)(D−q)u
+(x) adierazpidea ikusten dugunean badakigu eragilea bi aldiz aplikatzen
+dugula eta ordenak ez duela emaitza aldatzen.
+Matematika Aplikatua Saila
+UEP Donostia
+
+216
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+(9.50) ekuazioa eragileen bidez adieraziko dugu
+(D − m1)(D − m2)y = F (x)
+(9.53)
+(9.53) e k u a z ioa be te tz e n d u e n y fu n tz ioa bila tu be h a r d u g u . H orre ta ra k o e k u a z iotik y
+a sk a tu be h a r d u g u . D e ﬁ n i d e z a g u n a ld e ra n tz iz k o e ra g ile a ,
+(D − p)u(x) = v(x)
+(9.54 )
+e k u a z ioa g a ra tu z ,
+(D − p)u(x) = u (x) − pu(x) = v(x)
+lortu ta k o e k u a z ioa , 1 . ord e n a k o e k u a z io lin e a la d a e ta solu z ioa
+u
+(x) = epx
+e−pxv(x)d x + k
+d e la ik u si g e n u e n .
+S olu z io p a rtik u la r ba t bila tz e n a ri g a re n e z k = 0 a u k e ra tz e n d u g u e ta
+u
+(x) = epx
+e−pxv(x)d x
+lortz e n d u g u .
+H on e n bid e z (D − p)-
+re n a ld e ra n tz iz k o e ra g ile a d e ﬁ n itz e n d u g u
+y
+= (D − p)−1F (x) = epx
+e−pxF (x)d x
+(9.55)
+9.25. u
+(x) fu n tz ioa ri 
+(D − p) e ra g ile a a p lik a tu z lortz e n d u g u n fu n tz ioa ri 
+(D − p)−1 e ra g ile a
+a p lik a tz e n z a ion e a n u
+(x) h a sie ra k o fu n tz ioa lortu k o d u g u la e g ia z ta tu 
+(9.55) e ra biliz .
+9.26 .
+E ra g ile e n m e tod oa e ra bili E D A h a u e n solu z io orok orra bila tz e k o.
+1 . y + y = x4
+2 . y − 3y + 2y = −e2x
+U E P D o n o stia
+M ate m atik a A p lik atu a S aila
+
+9.4.
+2 . O R D E N A K O
+E K U A Z IO
+D IF E R E N T Z IA L A K
+217
+Higidura h armonikoa
+(9.56 ) ekuazio diferentzialak fenomeno ﬁsiko ezberdinen eredu matematikoa adierazteko ba-
+liogarria da. Horietako asko bibrazio higidura mekaniko edo elektrikoekin erlazionaturik
+daude.
+ay + by + cy = F (t)
+(9.56 )
+2. ordenako ekuazio diferentzial linealak ebazteko aztertu duguna, honako problema hau
+ebazteko erabiliko dugu. M alguki batetik zintzilikatua eta F 
+(t) indarra jasatzen duen m
+masa duen gorputz baten higiduraren adierazpen matematikoa 2. orenako ekuazio diferen-
+tziala da.
+9.24 Irudia: M alguki batetik zintzilikatzen dagoen gorputza
+(9.24
+(a)) irudian gorputza orekan dago. G orputzatik tira egiten dugu malgukiaren luzera
+d izan arte, (9.24(b)) irudian ikusten den bezala, eta F 
+(t) indarra aplikatzen dugu. Indarra
+F (t) = F0 sin (ωt) erakoa denean aztertuko dugu, 
+(9.25) irudian adierazita dago eta T =
+2π/ω periodoa, 1/T = ω/
+(2π) maiztasuna eta F0 anplitudea dietuen funtzio periodikoa da.
+G orputzaren higidura aztertzeko 
+(9.45) ekuazioaren bidez eredutzen dugu, eta ebatziko
+dugu.
+my + βy + ky = F0 sin ωt
+(9.57)
+y(t) = gorputzaren kokalekua t unean.
+m = gorputzaren masa.
+β = moteltze konstantea. G orputza airean, urean, edo olioan murgilduta badago konstante
+hori aldatuko da.
+k = malgukiaren ezaugarriek ﬁnkatzen duten konstantea.
+Matematika Aplikatua Saila
+UEP Donostia
+
+218
+9.
+KAP ITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+9.25 Irudia: F (t) = F0 sin(ωt)
+m, β, eta k-ren menpe lortzen dugun higidura aztertuko dugu. Hau da 
+(9.57) ekuazioaren
+soluzioa bilatuko dugu eta horretarako, elkartutako ekuazio homogeneoaren soluzio orokorra,
+y1(t, k1, k2), eta osoaren soluzio partikularra y2(t) aurkitu behar ditugu.
+Elkartutako ekuazio homogeneoa, (9.58) ekuazioa da
+my + βy + ky = F0
+(9.58)
+Ekuazio hau malgukiaren higiduraren eredua da indarrik egiten ez dugunean. Indarrik
+ez dugunez oszilazioaren anplitudea y1 moteltzen doa eta t inﬁniturantz jotzen duenean
+anplitudea 0 -rantz jotzen du.
+Ekuazio karakteristikoaren erroak r1 eta r2 lortuko ditugu,
+r =
+β ±
+β
+2 − 4mk
+2m
+= −λ ±
+λ
+2 −
+k
+m
+λ =
+β
+2m
+Soluzio orokorra lortuko dugu, λ
+2 − k/m-ren zeinuaren arabera.
+I kasua:
+λ
+2 − k/m > 0
+Soluzio orokorra hau izango da:
+y1 = K1e
+r1t + K2er2t
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.4.
+2. ORDENAKO EKUAZIO DIFERENTZIALAK
+219
+r1 < 0 eta r2 < 0 direnez (zergatik? ), t → ∞ doanean y → 0 betetzen da. λ
+2 − k/m > 0
+baldintzak β
+2 > 4mk dela adierazten du, hau da, moteltze-koeﬁzientea handia dela mal-
+gukiaren k konstantearekin konparatuta. Horregatik, mugimendu mota honi gainmoteldua
+deitzen zaio. Mugemendu hau ez da oszilatzailea eta denbararen epe luze bat pasa ondo-
+ren, masaren desplazamendua hutsala da. 
+(9.26) irudian y1 funtzioaren bi graﬁko posible
+azaltzen dira.
+9.26 Irudia: Mugimendu gainmoteldua
+II kasua:
+λ
+2 − k/m = 0
+Soluzio orokorra hau izango da:
+y1 = K1e−
+λt + K2e−λt
+λ > 0 denez 
+(zergatik? ), kasu honetan ere betetzen da y1 → 0 dela t → ∞ doanean.
+(9.27) irudian y1 funtzioaren graﬁko tipiko bat azaltzen da. Egoera honi moteltze k ritik oa
+deitzen zaio, moteltze-
+koeﬁzientearen jaiste tx iki batek mugimendua oszilatzaile bihurtzen
+duelako (ikusi III kasua).
+9.27 Irudia: Moteltze kritikoa
+III kasua:
+λ
+2 − k/m < 0
+Matematika Aplikatua Saila
+UEP Donostia
+
+220
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+Soluzio orokorra hau izango da:
+y1 = e−
+λt
+K1 c o s
+k
+m
+−
+λ
+2 t + K2 sin
+k
+m
+−
+λ
+2 t
+λ
+2 − k/m < 0 baldintzak β2 < 4mk dela adierazten du, hau da, moteltze-
+koeﬁzientea
+txikia dela malgukiaren k konstantearekin konparatuta, horregatik, mugimendu mota honi
+beh emoteldua
+deitzen zaio. Mugimendu hau oszilatzailea da, baina oszilazio-anplitudeak
+0-rantz doaz t → ∞ doanean. 
+(9.28) irudian y1 funtzioaren graﬁko tipiko bat azaltzen da.
+9.28 Irudia: Mugimendu behemoteldua
+9.27. Ariketa
+Ikusi dugunez, mugimenduaren mota β
+2 − 4mk zeinuarekiko dependentea
+da. (9.29) irudian β
+2 = 4mk graﬁkoa adierazi dugu m-ren balio desberdinentzat.
+9.29 Irudia: m-ren eragina
+a) Suposa dezagun mugimendua gainmoteldua dela. β, m edo k-ren balioa aldatzen
+badugu, mugimenduaren mota aldatuko da? N ola?
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.4.
+2. ORDENAKO EKUAZIO DIFERENTZIALAK
+221
+b) Eta mugimendua kritikoki moteldua bada?
+c ) Eta mugimendua behemoteldua bada?
+9.28. Ariketa
+Aurreko hiru mugimenduetan, K1 eta K2 konstanteen esanahia interpretatu.
+(9.58) ekuazioaren soluzio orokorra lortu ondoren, koeﬁziente indeterminatuen metodoa
+erabiliko dugu 
+(9.57) EDA osoaren soluzio partikular bat aurkitzeko. K asu honetan gai
+askea F (t) = F0 sin(wt) da, eta 
+(9.1) taulan agertzen da. Erroa 0 + iw izango da, eta honek
+ezin ekuazio karakteristikoaren soluzioa izan 
+(zergatik?). O rduan, proposatuko dugun (9.57)
+ekuazioaren soluzio partikularra hau da:
+y = A cos(wt) + B sin(wt)
+(9.59)
+(9.59) ekuazioa deribatzen:
+y = −Aw sin(wt) + Bw cos(wt)
+y = −Aw
+2 cos(wt) − Bw2 sin(wt)
+(9.57) ekuazioan ordezkatzen eta ordenatzen:
+sin wt(−Bmw
+2 − Aβw + kB) + cos wt(−Amw2 + Bβw + kA) = F0 sin wt
+A(k − mw
+2) + Bβw = 0
+−
+Aβw + B(k − mw
+2) = F0
+Sistema ebazten badugu:
+A =
+0
+βw
+F0 k − mw
+2
+(k − mw
+2)2 + β2w2
+=
+−
+F0βw
+(k − mw
+2)2 + β2w2
+B =
+k − mw
+2
+0
+−
+βw
+F0
+(k − mw
+2)2 + β2w2
+=
+−
+F0(k − mw
+2)
+(k − mw
+2)2 + β2w2
+(9.60)
+O rduan, (9.57) ekuazioaren soluzio orokorra hau izango da:
+y = y1 + A cos(wt) + B sin(wt)
+(9.61)
+non y1 EDA homogeneoaren soluzio orokorra den 
+(lehen kalkulatu duguna) eta A eta B
+balioak 
+(9.60) erlazioen bidez lortzen diren. B aina gogoratu y1 → 0 doala t → ∞ doanean,
+Matematika Aplikatua Saila
+UEP Donostia
+
+222
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+horregatik y1eri gai iragankorra deitzen zaio:
+ denborako epe bat pasa ondoren gai honek
+ez du y(t) funtzioan eragiten. A cos(wt) + B sin
+(wt) gaia, ordea, gai iraunkorra deitzen da,
+masak denborako epe luze bat pasatu ondoren jarraituko duen mugimendu oszilatzailearen
+hurbilketa on bat adierazten duelako. L aburtzen, denborako epe luze bat pasa ondoren,
+kontsidera dezakegu masaren oszilazioa hau dela:
+y = A cos(wt) + B sin(wt)
+(9.62)
+Beraz, masaren oszilazioa periodikoa da eta bere periodoa aplikatutako indarrarena da
+(2π/w). Baina, zein da oszilazio hauen anplitudea? Ikus dezagun nola kalkulatu 
+(9.62)
+funtzioaren anplitudea.
+(9.62) ekuazioa kosinuaren funtzioan idazten saiatuko dugu, hau da:
+y = M cos(wt + θ)
+(9.63)
+eta, orduan, (9.62) funtzioaren anplitudea lortutako M balioa izango da.
+A eta B koeﬁzienteak A + iB zenbaki konplexu baten zati erreal eta irudikaritzat kon-
+tsidera ditzakegu (ikusi (9.30) irudia):
+*
+)
+G
+9.30 Irudia: Z enbaki konplexuaren adierazpena
+nondik:
+sin θ =
+B
+√
+A
+2 + B2
+,
+cos θ =
+A
+√
+A
+2 + B2
+,
+θ = a rcta n
+B
+A
+Orduan, (9.62) ekuaziotik honako hau lortzen dugu:
+y =
+A
+2 + B2
+A
+√
+A
+2 + B2
+cos(wt) +
+B
+√
+A
+2 + B2
+sin(wt)
+=
+=
+A
+2 + B2 (cos θ cos(wt) + sin θ sin(wt)) =
+A
+2 + B2 cos(wt − θ)
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.4.
+2. ORDENAKO EKUAZIO DIFERENTZIALAK
+223
+Azkeneko berdintza cos(a+b) = cos(a) cos(b)−sin(a) sin
+(b) dela aplikatuz lortzen da. Beraz,
+(9.62) funtzioaren M anplitudea A + iB zenbaki konplexuaren modulua da:
+M =
+A
+2 + B2 =
+F
+2
+0 β
+2w2 + F
+2
+0 (k
+− mw
+2)2
+(k − mw
+2)2 + β2w2
+=
+= F0
+β
+2w2 + (k − mw2)2
+(k − mw
+2)2 + β2w2
+=
+F0
+(k − mw
+2)2 + β2w2
+(9.64)
+(9.64) emaitza interesgarria da. Adierazten digunez, ondoriozkoko oszilazioaren anplitu-
+dea aplikatu dugun F0 indarraren anplitudea bider anpliﬁkazio-faktorea 
+(9.65) da.
+1
+(k − mw
+2)2 + β2w2
+(9.65)
+(9.65) koeﬁzientea malgukiaren ezaugarri ﬁsikoak (k eta β), masa 
+(m) eta aplikatutako
+masaren maiztasunarekiko (w/(2π)) dependentea da. Zenbat eta anpliﬁkazio-
+faktorea (9.65)
+handiagoa izan, are handiagoa da ondoriozko oszilazioaren anplitudea.
+9.4.4
+E r r e so n a n tz ia
+(9.65) koeﬁzientea gehiago aztertuko dugu. Ondoriozko anpliﬁkazioa sistemaren ezaugarri
+ﬁsikoekiko dependentea da: ingurunearen moteltzea 
+(β), malgukiaren elastikotasuna (k)
+eta masa (m). Baina w-rekiko dependentea da ere. Ondorioz, aplikatzen dugun F 
+(t) =
+F0 sin
+(wt) indarraren maiztasunaren arabera, lortuko den oszilazioaren anplitudea desber-
+dina izango da. Eta honek esan nahi du w-
+ren balio batzuekin lortzen diren oszilazioak
+ikaragarriak izan daitezkeela, baita hondagarriak ere. Pentsa ezazu beste sistemetan non
+mugitzen diren elementu mekanikoek 
+(gurpilak, motoreak,...) bibrazioak eragiten dituzten.
+Agian, nahiz eta motore batek aplikatutako F (t) = F0 sin
+(wt) indar periodiko baten magni-
+tudea txikia izan (hau da, F0 txikia), eragiten duen bibrazioa oso handia da 
+(9.65) faktorea
+ere oso handia delako.
+Hortaz, (9.65) koeﬁziente haundi bat ematen diguten w-
+ren balioak ezagutu nahi ditugu.
+(9.65) koeﬁzientearen balioa maximoa da h(w) = (k − mw
+2)2 + β2w2 minimo denean. Baina
+h(w)-ren minimoa badakigu kalkulatzen:
+h(w) = (k − mw
+2)2 + β2w2
+h (w) = −4mw(k − mw
+2) + 2β2w
+Matematika Aplikatua Saila
+UEP Donostia
+
+224
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+Orain h (w) = 0 egiten dugu eta w = 0 denez (zergatik?) hau lortzen da:
+h (w) = 0 ⇒ 2m(k − mw
+2) = β2
+k − mw
+2 =
+β
+2
+2m
+⇒ w = ±
+1
+m
+k −
+β
+2
+2m
+Erroaren balioa positiboa aztertuko dugu, negatiboa F (t)-
+ren ikurraren aldaketa bat
+baino ez delako. Izan bedi w0 minimo erlatibo posiblea.
+w0 =
+1
+m
+k −
+β
+2
+2m
+(9.66)
+Ikus dezakegunez, w0 belio erreal bat izango da hau betetzen bada:
+k −
+β
+2
+2m
+> 0 ⇔ 2mk > β
+2
+(9.67)
+Ikus dezagun w0 puntuan minimo bat dagoen:
+h (w) = 2 β
+2 − 2mk + 2m2w2 + 4m2w2
+h (w) = 2 β
+2 − 2mk + 6m2w2
+h (w0) = 2 β
+2 − 2mk + 6m2
+1
+m
+k −
+β
+2
+2m
+=
+= 2 β
+2 − 2mk + 6mk − 3β2 = 2 4mk − 2β2 = 4 2mk − β2
+w0 puntuan minimoa bat egoteko 2mk − β
+2 > 0 bete behar da, eta hau (9.67) baldintza
+da.
+(9.66) adierazpenan agertzen den w0 balioa sistemaren ezaugarriekiko 
+(β, k eta m) de-
+pendentea da. Eta balio garrantzitsu bat da. Sistema oszilatzailean F 
+(t) = F0 sin(wt)
+funtzio periodikoa aplikatzen badugu, non w w0-
+ren hurbilketa bat den, sistemaren oszilazio-
+anplitudea oso handia izan daiteke. Maiztasun karakteristiko hau w0/
+2π da, eta erresonantzi
+maiztasuna
+deitzen da. Makinak, berebilak, untziak eta hegazkinak oszilatzen diren siste-
+ma mekanikoak dira, eta bere erresonantzi maiztasun karakteristikoa dute. Gertatzen diren
+bibrazioen maiztasuna erresonantzi maiztasunetik gertu badaude, sistema suntsitu daiteke.
+Zubiak bibratzen diren sistema mekanikoen adibide onak dira, bibrazioak pertsonak edo
+ibilgailuak pasatzerakoan, haizearekin edo ibaiaren ura zimenduen kontra jotzerakoan sor-
+tzen dira. Oso famatua da Tacoma 
+(W ashington) hiriko zubiaren adibidea. Zubi hau 1940
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.4.
+2. ORDENAKO EKUAZIO DIFERENTZIALAK
+225
+urtean suntsituta gelditu zen, ibiltzen zen haizeak egindako indar periodikoaren oszilazio
+maiztasuna sistemaren erresonantziatik oso gertu zegoelako.
+(9.2) taulan sistema oszilatzaile batzuen erresonantzi maiztasunaren adibideak azaltzen
+dira, β, k, m-ren balioetatik.
+β
+k
+m
+w0
+Erresonantzi
+Erresonantzian lortutako
+maiztasuna (w0/2π)
+anpliﬁkazio-faktorea (9.65)
+3.752
+0.06
+600
+0.00897
+0.01409
+28
+3.752
+0.033
+600
+0.00595
+0.00935
+40
+0.35
+0.033
+1500
+0.00469
+0.00736
+609
+0.01
+0.033
+3000
+0.00332
+0.00521
+30151
+9.2 Taula: Erresonantzi maiztasunak
+(9.31) irudian aurreko taulan agertzen den lehenengo adibideari dagokion h
+(w) = (k −
+mw
+2)2 +β2w2 funtzioaren graﬁkoa azaltzen da. Sistema honetan F (t) = F0 sin
+(0.008 9 7 t) in-
+darra aplikatzen bada, zeinen maiztasuna sistemaren erresonantzi maiztasuna den, masaren
+oszilazio-anplitudea 28 bider F0 izango da.
+9.31 Irudia: h(w) = (k − mw
+2)2 + β2w2
+(9.32) irudian adibideko sisteman aplikatu den indarra, F (t) = 25 sin
+(0.008 9 7 t), adierazi
+Matematika Aplikatua Saila
+UEP Donostia
+
+226
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+dugu. Funtzio honen periodoa T = 2π/w0 = 2π/
+0.00897 = 700.52477 da eta maiztasuna
+1/T = 175, 1312. Ondoriozko oszilazioa hau da:
+y = A sin(wt) + B sin(wt) = −662.38837 cos(0.00897t) + 230.906894 sin(0.00897t)
+A eta B koeﬁzienteak 
+(9.60) erlazioetatik lortu dira. Sarrerako indarraren anplitudea 25
+da eta ondoriozko oszilazioaren maiztasuna 28 bider sarrerakoa da, hau da, 700.
+9.32 Irudia: Sisteman aplikatutako indarra eta lortzen den oszilazioa
+Ikus ezazu zer gertatzen den masa handitzen denean, 
+(9.2) taulako azkeneko bi adibidee-
+tan bezala. Azkeneko adibidean β moteltze-koeﬁzientea oso handia da 
+(0.01), sistema gutxi
+moteldua dago eta masa oso handia da 
+(3000). Ondorioz, lortzen den oszilazioaren anplitu-
+dea sarrerako anplitudea baino 30000 aldiz gehiago da!. Imajina dezakezu gaizki moteldua
+dagoen sistema mekaniko bati gertatuko zaiona, aplikatzen diogun indarraren maiztasuna
+erresonantzi maiztasunetik oso gertu badago? Ba, Tacomako zubiari gertatu zitzaiona. Kon-
+ponbide tekniko bat sistema hobeto moteltzea da 
+(β handi bat lortu) eta egitura kalkulatu
+bere erresonantzi maiztasuna normalean jasango dituen indarren bidez lortezina izan dadin.
+Erresonantziari buruz geroago hitzegingo dugu berriro.
+9.29. Ariketa
+Suposa dezagun malgukia moteltzeko sistema desberdinak aztertzen ari
+garela eta, esperimentalki, oszilazio maiztasun maximoa neurtu dugula m, k, F0 eta w-
+ren
+balio desberdinentzat. Zein izango da β moteltze-
+faktorea? Emaitza ondorengo parame-
+troekin aplikatu: m = 35Kg, k = 2500Kg/
+ m, F0 = 600, w = 6 eta oszilazioko anplitude
+maximoa= 0.472. Kalkulatu kasu honetan oszilazioko anplitude maximoa erresonantzian.
+9.4.5
+O szilazioa zirk u itu elek trik oetan
+Ikusi dugunez, bigarren ordenako ekuazio diferentzial lineal batek erabat desberdinak diren
+bi fenomeno ﬁsiko modeliza ditzake:
+ malguki baten oszilazioak eta R LC zirkuitu batetik
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.4.
+2. ORDENAKO EKUAZIO DIFERENTZIALAK
+227
+zirkulatzen den intentsitatea.
+F (t) = F0 sin wt indar bat jasaten duen malguki baten y
+(t) oszilazioa deskribatzen duen
+EDA hau da:
+my + βy + ky = F (t) = F0 sin wt
+Eta RLC zirukuitu batean, non E(t) = E0 sin
+(wt) Volteko tentsio bat aplikatzen den,
+kondentsadore baten karga q(t) honako EDA honen bidez deskribatzen da:
+Lq + Rq +
+1
+C
+q = E0 sin wt
+(9.68)
+L=Induktantziaren balioa (Henry )
+R=Erresistentziaren balioa (Ohm)
+C=Kapazitatearen balioa (Faraday )
+(9.3) taulan bi modeloetan agertzen diren parametro mekaniko eta elektrikoen arteko
+baliokidetasuna azaltzen da.
+Modelo mekanikoa
+Modelo elektrikoa
+Masa m
+Induktantzia L
+Moteltze-konstantea β
+Erresistentzia R
+Malgukiaren konstantea k
+Kapazitatearen alderantzizkoa 1/C
+Indar bulkatzailea F (t) = F0 sin wt
+Sarrerako tentsioa E(t) = E0 sin wt
+Malgukiaren desplazamendua y(t)
+Kondentsadorearen karga q(t)
+9.3 Taula: Modelo mekaniko eta elektrikoaren baliokidetasuna
+Bi sistema baliolideak direnez, sistema mekaniko bat emanda, modelo elektriko bat eraiki
+daiteke non I(t) korronteak sistema mekanikoaren y
+(t) desplazamenduaren balioak emango
+ditu. Honek, praktikan, oso garrantzi handia du zeren eta sistema mekanikoak garestiak
+dira eta ez da erraza desplazamenduak neurtzea, baina zirkuitu elektrikoen muntaketa sin-
+plea da eta korronteak polimetro baten bidez neurtzen dira. Gainera, sistema mekaniko
+batean, zaila izaten da nahi dugu anplitude eta maiztasuneko F 
+(t) = F0 sin wt indar perio-
+diko bat aplikatzea. Zirkuitu elektrikoetan, berriz, badaude edozein maiztasuneko tentsioak
+aplikatzeko seinale-sorgailuak.
+9.3 . Adib idea
+Malguki batek eta bertatik zintzilikatzen den masak osatutako sistema
+oszilatzaile bat diseinatu nahi dugu, non F 
+(t) = 350 sin w0t indarra aplikatzen den. Erre-
+sonantzia dagoenean malgukiaren oszilazioa aztertu nahi dugu. Sistemaren parametroak
+Matematika Aplikatua Saila
+UEP Donostia
+
+228
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+hauek dira: m = 15Kg, k = 5000Kg/m, β = 50. Masaren posizioa, y
+(t), deskribatzen duen
+EDA ondorengoa da:
+15y + 50y + 5000y = F (t) = 350 sin wt
+Aurreko emaitzak aplikatzen baditugu, hau lortzen da:
+w0 = 18.105
+y(t) = −0.383 cos(18.105t) + 0.035 sin(18.105t)
+Erresonantzi maiztasuna = w0/(2π) = 2.881Hz
+Erresonantzi oszilazioaren anplitude maximoa = 0.385m
+(9.33) irudian y(t)-ren graﬁkoa adierazten da.
+9.33 Irudia: Masaren posizioaren graﬁkoa
+Orain, saiakuntzak egiteko sistema mekanikoaren prototipo bat eraiki nahi dugu. Hala
+ere, ez da erraza sistema mekaniko hau eraikitzea ezta erabiltzea ere. Beraz, baliokidea den
+sistema elektriko bat erabil dezakegu. Kasu honetan, unitateak hauek izango dira:
+ L = 15
+Henry, R = 50 Ohm, C = 1/5000 = 0.0002 Faraday, E(t) = 350 sin
+(18.105t) Volt. Eta
+modeloaren EDA:
+15y + 50y + 5000y = F (t) = 350 sin wt
+Baina, ez al da errazagoa induktantzi eta tentsio txikiagoekin lantzea?, ba aurreko EDAn
+1/25 eskala faktorea aplikatuko dugu, eta lortzen da:
+0.6y + 2y + 200y = F (t) = 14 sin wt
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.4.
+2. ORDENAKO EKUAZIO DIFERENTZIALAK
+229
+Orduan, gure zirkuituaren propotipoa muntatuko dugu, L = 0.6H, R = 2Ω , C =
+0.005F=5mF parametroekin, eta E(t) = 14 sin
+(18.105t) tentsioa aplikatuko dugu. Zirkui-
+tuan neurtutako q(t)-ren balioak eta sistema mekanikoaren y
+(t) desplazamenduaren balioak
+baliokideak dira.
+(9.68) ekuazioa kondentsadorearen kargaren ekuazioa da. Baina zirkuituen problema
+praktiko gehienetan interesatzen zaigun magnitude ﬁsikoa ez da karga, zirkuitutik zirku-
+latzen den I(t) intentsitatea baizik. Kontutan hartzen badugu q (t) = I
+(t) betetzen de-
+la, 
+(9.68) ekuazioa deribatuz, lortzen den ekuazio diferentzia RLC zirkuitu batena da non
+E(t) = E0 sin wt Volteko tentsioa aplikatzen den:
+LI + RI +
+1
+C
+I = E0w cos wt
+(9.69)
+(9.69) EDAren soluzioa aurkitzeko kasu mekanikoan jarraitu genuen prozesu bera erabi-
+liko dugu, eta lortutako zirkuitutik zirkulatzen den I(t) intentsitatea hau da:
+I(t) = A cos(wt) + B sin(wt)
+(9.70)
+Orain, A eta B koeﬁzienteak lortzeko (9.70) balioa 
+(9.69) ekuazioan ordezkatzen dugu
+eta ondorengo ekuazioen sistema lortzen da:
+A
+1
+C
+− Lw
+2
++ BRw = E0w
+− ARw + B
+1
+C
+− Lw
+2
+= 0
+
+
+
+
+
+
+
+Sistema ebazten badugu:
+A =
+E0w
+Rw
+0
+1
+C − Lw
+2
+1
+C − Lw
+2
+2
++ R
+2w2
+=
+E0w
+1
+C − Lw
+2
+1
+C − Lw
+2
+2
++ R
+2w2
+B =
+1
+C − Lw
+2
+E0w
+−Rw
+0
+1
+C − Lw
+2
+2
++ R
+2w2
+=
+Rw
+2E0
+1
+C − Lw
+2
+2
++ R
+2w2
+(9.71)
+Matematika Aplikatua Saila
+UEP Donostia
+
+230
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+Orain, (9.70) funtzioaren anplitudea kalkulatzeko:
+A
+2 + B2 =
+E
+2
+0 w
+2
+1
+C − Lw
+2
++ R
+2E
+2
+0 w
+4
+1
+C − Lw
+2
+2
++ R
+2w2
+=
+E0w
+1
+C − Lw
+2
++ R
+2w2
+1
+C − Lw
+2
+2
++ R
+2w2
+=
+=
+E0w
+1
+C − Lw
+2
+2
++ R
+2w2
+=
+E0
+1
+wC − Lw
+2
++ R
+2
+(9.72)
+Zirkuitutik pasatzen den I
+(t) intentsitatearen anplitudea maximoa izateko w0 balioa
+kalkulatuko dugu, hau da, zirkuituaren erresonantzia lortzeko behar den w-
+ren balioa, zein
+ez den R-rekiko dependentea:
+w0 =
+1
+√
+LC
+(9.73)
+9.30. Ariketa
+Frogatu (9.72) funtzioaren maximoa lortzen dela w0 (9.73) adierazpenakoa
+denenan. Frogatu kasu honetan 
+(9.71) erlazioko A koeﬁzientea 0 dela. Hemen lortzen den
+I(t) intentsitatearen adierazpena kalkulatu.
+9.4 . Adibidea
+Kontsidera dezagun RLC zirkuitua non R = 10Ω, L = 0.1H, C = 1mF=0.001F
+eta E
+(t) = 0.6 sin 4πt diren. Kasu honetan, sarrerako tentsioaren anplitudea 0.6V da, bere
+maiztasuna 4π/(2π) = 2Hz eta periodoa T =0.5 segundos. (9.34) irudian E(t)-
+ren graﬁkoa
+ikus dezakegu.
+9.34 Irudia: E(t) = 0.6 sin 4πt
+Zirkulatzen den I(t) intentsitatea deskribatzen duen modelo matematikoa hau da:
+0.1I + 10I + 10
+3I = 7.636 cos 4πt
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.4.
+2. ORDENAKO EKUAZIO DIFERENTZIALAK
+231
+(9.71) erlazioak erabiliz, korrontea egoera iraunkorran honako hau izango da:
+I(t) = 0.0075 cos(4πt) + 0.001 sin(4πt)
+eta bere anplitudea:
+0.0075
+2 + 0.0012 = 0.0076 Ampere
+(9.35) irudian I(t)-ren graﬁkoa adierazten da.
+9.35 Irudia: I(t) = 0.0075 cos(4πt) + 0.001 sin(4πt)
+(9.73) aplikatuz, erresonantzia w0 = 100 denean lortzen da. Zirkuituan anplitude ber-
+dineko tentsio bat (0.6V) sartuko dugu, baina erresonantzi maiztasun honekin: E
+(t) =
+0.6 sin(100t). Kalkuluak errepikatzen, lortutako intentsitatea hau izango da:
+I(t) = 0.06 sin(100t)
+eta anplitudea 0.06, ia zortzi aldiz handiagoa. (9.36) irudian bi I
+(t) funtzioen graﬁkoak
+adierazten dira. Nabaritu nola handitzen den intentsitatea erresonantzian.
+9.31. Ariketa
+RLC zirkuitu baten erresonantzi maiztasunak aplikazio garrantzitsu bat du
+irrati-igorgailuen sintonizazioan. Ikusi (9.37) irudia.
+Hargailuaren antenak jasotzen duen seinalea RLC zirkuitura sartzen da w/
+2π maiztasu-
+na duen tentsio bat bezala, E(t) = E0 sin
+(wt). Aparatuko agintea biratzen denean, C-ren
+(edo L-
+ren) balioa aldatzen da, eta, horrela, zirkuitua sarrerako maiztasun horretan erreso-
+nantzian sartzen da. Honekin lortzen dena sarrerako maiztasuna duen seinale bat lortzen
+da, baina anpliﬁkatuta.
+a) Suposa dezagun apartuko aginteak C-
+ren balioa aldatzen duela. Zein izango da C-ren
+balioa zirkuituko erresonantzia lortzeko?
+b) Suposa dezagun apartuko aginteak L-
+ren balioa aldatzen duela. Zein izango da L-ren
+balioa zirkuituko erresonantzia lortzeko?
+Matematika Aplikatua Saila
+UEP Donostia
+
+232
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+9.36 Irudia: (9.4) adibidean lortutako intentsitateak
+9.37 Irudia: RLC zirkuitua
+9.5
+Ikuspe g i ko n puta z io n a la k
+9.5.1
+Tay lor-e n 1., 2 . e ta 3 . ord e n ak o hu rb ilk e tak
+Dakigunez,
+y
+= F (x, y)
+y
+(x0) = y0
+(9 .7 4 )
+problem aren soluzioa ez d a beti ex istitzen 
+(E x istentziako teorem a gogoratu). B aina, nah iz
+eta soluzioa egon, batzuetan ez d a posible soluzio esplizitua, ed o inplizitua, lortu. A skotan,
+UEP D o n o stia
+M ate m atik a A p lik atu a S aila
+
+9.5.
+IK U S P E G I K O N P U T A Z IO N A L A K
+233
+soluzio hurbildu batekin konformatu beharko dugu. O ndoren, soluzio hurbildua lortzeko
+prozedura batzuk ikusiko ditugu.
+Aurreko atal batean ikusi dugunez, 
+(9.74) problemaren soluzio hurbildu bat lor daiteke
+Tay lor-en polinomio erabiliz. (9.74) problemaren soluzioa, y
+(x), x0 puntuan n.ordenaraino
+deribagarria dela suposatzen badugu, orduan eraiki dezakegu P
+n
+(x) polinomio bat x0 pun-
+tuan y(x) funtzioaren hurbilketa dena:
+P
+n
+(a + h) = y(a) + y (a)h +
+y
+(a)
+2 !
+h2
++ · · · +
+yn)
+(a)
+n
+!
+h
+n
+P
+n
+(a + h) ≈ y(a + h)
+(9.75 )
+Adibidez, (9.38 ) irudian ondorengo problemaren soluzioa azaltzen da:
+y
+= x2y
+y
+(1 .2 6) = −0.6
+Irudian adierazi ditugu ere P1(x), P2(x) eta P3(x) polinomioen graﬁ koak.
+9.38 Irudia: Funtzioaren hurbilketa Tay lor-en polinomioen bidez
+P rozedura hau aplikatzeko, y = F (x, y) erabiliz, y
+(x) funtzioaren deribatuak x0 puntuan
+kalkulatzen ditugu. H ala ere, gehienetan, lortzen dugun hurbilketa x0 puntutik urrutik
+dauden puntuetan ez da ona. G ainera, y
+(x) funtzioak behar dugun ordeneraino deribagarria
+izan behar du eta kalkulatu behar ditugu deribatuak x0 puntuan.
+Matematika Aplikatua Saila
+UEP Donostia
+
+234
+9.
+KAPITULUA EKUAZIO D IF ER ENTZIAL AR R UNTAK
+N abaritu prozedura honek erabiltzen duena y
+(x) funtzioaren hurbilketa kalkulatzeko
+bakarrik dela x0 puntuan informazioa: y(x0), y (x0), y 
+(x0), e.a. Informazio horrekin, y(x)
+hurbiltzeko beste P
+n(x) funtzio bat eraikitzen da.
+Ba, praktikan egiten dena desberdina
+izaten da. Bilatzen dena ez da funtzio bat y
+(x) tarte batean hurbiltzeko, h distantziara
+dauden puntu batzuen segida bat baizik:
+x0, x1 = x0 + h, x2 = x1 + h = x0 + 2h, . . . , x
+n
++ 1 = xn + h = x0 + (n + 1)h
+eta punutu hauetan y(x) funtzioaren balio hurbilduak lortu:
+y
+(x0), y(x1), y(x2), . . . , y(x
+n
++ 1)
+Ikus dezagun nola egin daitekeen hau, daukagun informazio bakarra y (x) = F 
+(x, y)
+bada. (9.75) Taylorren hurbilketa, n = 1 denean, hartzen badugu:
+y
+(a + h) ≈ y(a) + hy (a)
+(9.76 )
+y0 puntutik, y (x0) ezaguna denez, (9.76 ) ekuazioa erabiliko dugu y(x1)-
+ren balio hur-
+bildua kalkulatzeko. y(x1) eta y (x1) balioak ditugunean, berriro 
+(9.76 ) ekuazioa erabiliz
+y
+(x2) kalkulatuko dugu, eta abar. M etodo honi Euler-
+en m etod oa deitzen zaio eta honela
+idaz daiteke:
+y1 = y(x0) + hy (x0) = y(x0) + hF (x0, y0)
+y2 = y(x1) + hy (x1) = y(x1) + hF (x1, y1)
+..
+.
+y
+n
++ 1 = y(xn) + hy (xn) = y(xn) + hF (xn, yn)
+Ideia hau heda daiteke 2., 3.,. . . ordenako Taylorren hurbilketak erabiliz. Adibidez, n = 2
+bada:
+y
+(a + h) = y(a) + y (a)h +
+y
+(a)
+2
+h2
+y
+(x) = F
+x(x, y) + y (x)Fy (x, y) = Fx(x, y) + F (x, y)Fy (x, y)
+y
+n
++ 1 = yn + hF (xn, yn) +
+h2
+2
+F
+x(xn, yn) + F (xn , yn)Fy (xn, y
+)
+n
+= 0, 1, 2, . . .
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.5.
+IKUSPEGI KONPUTAZIONALAK
+235
+9.5. Ad ib id ea
+(9.5) taulan azaltzen dira Eulerren eta 2.ordenako Taylorren metodoen bidez
+lortutako balioak, h = 0.05 izanik, ondorengo probleman aplikatzen direnean:
+y = x2y,
+y(0.85 ) = 0.8
+K asu honetan soluzio zehatza, y(x) = 0.65 19 1 e x p (x3/
+3 ), aldagai banaketaren bidez lor
+daiteke. 
+(9.5) taulan azaltzen da ere puntu bakoitzean daukagun balio zehatza, y(x), eta
+metodo bakoitzarekin agertzen den errorea 
+(absolutua eta balio zehatzarekiko portzentaia).
+Ikus daitekenez, errorea txikiagoa da Taylorren metodoa aplikatzen denean, baino bi meto-
+doekin errorea handitu egiten da x0 hasteko puntutik urruntzen garenean.
+xk
+Balio
+Euler-en
+Euler-en
+% Euler-en
+Taylor-en
+Taylor-en
+% Taylor-en
+zehatza
+hurbilketa
+errorea
+errorea
+hurbilketa
+errorea
+errorea
+y(xk)
+yk
+yk
+0 .850 0
+0 .80 0 0
+0 .80 0 0
+0 .0 0 0 0
+0 .0 0 0 0
+0 .80 0 0
+0 .0 0 0 0
+0 .0 0 0 0
+0 .90 0 0
+0 .831 2
+0 .8289
+0 .0 0 23
+0 .280 3
+0 .831 1
+0 .0 0 0 1
+0 .0 1 32
+0 .950 0
+0 .8676
+0 .8625
+0 .0 0 51
+0 .5878
+0 .8648
+0 .0 0 28
+0 .321 6
+1 .0 0 0 0
+0 .90 98
+0 .90 1 4
+0 .0 0 84
+0 .9255
+0 .90 38
+0 .0 0 60
+0 .6595
+1 .0 50 0
+0 .9589
+0 .9465
+0 .0 1 24
+1 .2963
+0 .9490
+0 .0 0 99
+1 .0 31 4
+1 .1 0 0 0
+1 .0 1 59
+0 .9986
+0 .0 1 73
+1 .70 38
+1 .0 0 1 3
+0 .0 1 46
+1 .440 0
+1 .1 50 0
+1 .0 823
+1 .0 591
+0 .0 233
+2.1 50 0
+1 .0 61 9
+0 .0 20 4
+1 .8876
+1 .20 0 0
+1 .1 597
+1 .1 291
+0 .0 30 6
+2.6395
+1 .1 321
+0 .0 276
+2.3782
+1 .250 0
+1 .250 1
+1 .21 0 4
+0 .0 397
+3.1 750
+1 .21 36
+0 .0 364
+2.91 51
+1 .30 0 0
+1 .3559
+1 .30 49
+0 .0 51 0
+3.761 3
+1 .30 84
+0 .0 475
+3.50 31
+1 .350 0
+1 .480 4
+1 .41 52
+0 .0 652
+4.40 1 0
+1 .41 90
+0 .0 61 4
+4.1 450
+1 .40 0 0
+1 .6271
+1 .5442
+0 .0 830
+5.0 992
+1 .5483
+0 .0 788
+4.8447
+1 .450 0
+1 .80 1 0
+1 .6955
+0 .1 0 55
+5.860 0
+1 .70 0 0
+0 .1 0 1 0
+5.60 79
+9.4 Taula: Euler eta 2.ordenako Taylorren metodoak
+9.3 2 . Ariketa
+x0 punturen ezkerrean dagoen puntuetan hurbiltzeko, nahikoa da h > 0
+pauso bat erabiltzea. Prozedura hau aplikatu aurreko adibidean, h = −0.05 pausoa hartuz.
+(9.5) taula bezalako taula bat lortu.
+9.3 3 . Ariketa
+3.ordenako Taylorren hurbiltzeko algoritmoa ondorioztatu. Euler-en formula
+hobetua deitzen da. Algoritmo hau aurreko adibidean aplikatu, dagokion taula osatuz. A
+Matematika Aplikatua Saila
+UEP Donostia
+
+236
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+9.5.2
+4 . ordenako R ung e-K utta-ren m etodoa
+(9.74) problema ebazteko zenbakizko metodo erabilienetako bat da, eta 4. ordenako Taylo-
+rren hurbilketan oinarritzen da. Hemen, kalkuluko algoritmoa soilik azalduko:
+n = 0, 1, 2, . . . balioentzat:
+yn+1 = yn + (k1 + 2k2 + 2k3 + k4)/6
+non ki konstanteak modu honetan lortzen dira:
+k1 = hF (xn, yn)
+k2 = hF (xn + 0.5h, yn + 0.5k1)
+k3 = hF (xn + 0.5h, yn + 0.5k2)
+k4 = hF (xn + h, yn + k3)
+(9.5.2) taulan R unge-
+Kutta metodoaren aplikazioa aurreko adibidean azaltzen da. Ikus
+dezakezunez, lortutako balioak aurreko metodoen bidez lortutakoak baino zehatzagoak dira.
+xk
+y(xk)
+yk
+R -K errorea
+% R -K errorea
+Balio zehatza
+R -K hurbilketa
+0.8500
+0.8000
+0.8000000
+0.0000000
+0.0000000
+0.9000
+0.8312
+0.8312300
+0.0000000
+0.0000000
+0.9500
+0.8676
+0.8675700
+0.0000000
+0.0000000
+1.0000
+0.9098
+0.9098100
+0.0000000
+0.0000000
+1.0500
+0.9589
+0.9588900
+0.0000000
+0.0000000
+1.1000
+1.0159
+1.0159400
+0.0000000
+0.0000000
+1.1500
+1.0823
+1.0823200
+0.0000000
+0.0000000
+1.2000
+1.1597
+1.1596800
+0.0000100
+0.0008623
+1.2500
+1.2501
+1.2500600
+0.0000000
+0.0000000
+1.3000
+1.3559
+1.3559200
+0.0000100
+0.0007375
+1.3500
+1.4804
+1.4803400
+0.0000100
+0.0006755
+1.4000
+1.6271
+1.6271200
+0.0000100
+0.0006146
+1.4500
+1.8010
+1.8010300
+0.0000000
+0.0000000
+9.5 Taula: R unge-Kutta metodoa
+Bukatzeko, (9.39) irudian soluzio zehatza (lerro mehea) eta Euler eta Kunge-
+Kutta me-
+todoen bidez, h = 0.05 izanik, lortutako hurbilketak 
+(lerro lodia) azaltzen dira. Hurbilketak
+UEP Donostia
+Matematika Aplikatua Saila
+
+9.5.
+IKUSPEGI KONPUTAZIONALAK
+237
+erabiliz lortutako puntuak poligonal baten bidez lotu ditugu, lerro jarraituak lortzeko. Eule-
+rren metodoarekin lortutako errorea ikusten da, baina Runge-
+Kuttaren hurbilketa eta y(x)
+ia berdinak dira.
+9.39 Irudia: Euler eta Runge-Kuttaren hurbilketak
+Matematika Aplikatua Saila
+UEP Donostia
+
+238
+9.
+KAPITULUA EKUAZIO DIFERENTZIAL ARRUNTAK
+UEP Donostia
+Matematika Aplikatua Saila

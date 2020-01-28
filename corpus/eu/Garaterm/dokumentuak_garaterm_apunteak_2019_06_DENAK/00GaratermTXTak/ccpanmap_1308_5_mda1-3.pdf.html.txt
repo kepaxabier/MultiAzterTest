@@ -1,0 +1,230 @@
+
+
+
+3. gaia : Multzoak eta osokoak
+1
+Multzoak eta azpimultzoak
+Multzoa objektu batzuren bilduma bezala deﬁni dezakegu, objektu hauek
+multzoaren elementuak direlarik. Ez dugu formalki deﬁnituko multzoa eta
+kontzeptu primitibotzat hartuko dugu.
+Maiuskulak erabiliko ditugu multzoak izendatzeko : A, B, C, . . . ; eta
+minuskulak elementuak izendatzeko : x, y, z, . . .Baldin x A-ko elementua
+bada x ∈ A idatziko dugu (“x barne A” irakurriz), x ∈ A ez bada A-koa.
+Multzoa bi eratara deﬁni dezakegu :
+– multzoko elementu guztiak emanaz,
+– multzoko elementuek betetzen duten propietatea adieraziz.
+Unibertsoa deituko diogu testuinguru batean kontsideratzen ditugun ele-
+mentu guztien multzoari, U idatziz.
+Adibidea 1 (a) Idatzi A multzoa, lehenengo bost osoko positiboen multzoa,
+aipatutako bi eratan. Idatzi A berriz unibertsoa osokoen multzoa bada, U = Z.
+(b) Idatzi osoko bikoitien multzoa, B.
+Adibidean ikusten dugunez, multzo ﬁnituak eta inﬁnituak ditugu. Multzo
+ﬁnitu bateko elementuen kopurua |A| idatziz adieraziko dugu eta A-ren kar-
+dinala edo tamaina deituko diogu. Bi multzo berdinak dira, A = B, elementu
+berak badituzte. Multzo batean ordena ez da kontuan hartzen, eta multzoko
+elementuak ematean ez ditugu errepikatuko.
+Deﬁnizioa 1 C multzoa D multzoaren azpimultzoa dela esango dugu, C ⊆
+D (“C parte D”), baldin edozein x-erako :
+x ∈ C ⇒ x ∈ D
+15
+
+Baldin C ⊆ D eta C = D, esango dugu D-ren azpimultzo propioa dela C,
+C ⊂ D idatziz.
+Partekotasuna eta oro har multzoen arteko erlazioak irudikatzeko Venn
+diagramak erabiliko ditugu.
+Multzo hutsa elementurik ez duen multzoa da, φ = {}, beraz |φ| = 0.
+Edozein A-rako φ ⊆ A dugu.
+Deﬁnizioa 2 A-ren potentzia multzoa, P(A), deituko diogu A-ren azpimul-
+tzo guztien bildumari.
+A multzo ﬁnitua emanik |P(A)| = 2n, non n = |A|.
+Adibidea 2 Idatzi C = {1, 2, 3} multzoaren potentzia multzoa. Arrazoitu
+azpimultzo kopurua.
+Multzo batzuek notazio berezia dute : Z zenbaki osokoak, Z+ osoko po-
+sitiboak, 0 ∈ Z+, R errealak, Q arrazionalak, C konplexuak, etab.
+2
+Multzo eragiketak
+Multzoen arteko eragiketak deﬁnituko ditugu.
+Deﬁnizioa 3 A, B ⊆ U multzoak emanik,
+a) A eta B-ren bildura :
+A ∪ B = {x | x ∈ A edo x ∈ B}
+b) A eta B-ren ebakidura :
+A ∩ B = {x | x ∈ A eta x ∈ B}
+Deﬁnizioa 4 A eta B multzoak disjuntuak direla esango dugu baldin ele-
+mentu komunik ez badute, A ∩ B = φ.
+Deﬁnizioa 5 A ⊆ U multzoaren osagarria :
+A = {x | x ∈ U eta x ∈ A}
+Deﬁnizioa 6 A, B ⊆ U emanik, A-ren B-rekiko osagarria :
+B − A = {x | x ∈ B eta x ∈ A}
+16
+
+Adibidea 3 Marraztu eragiketa hauei dagozkien Venn diagramak.
+Multzo teoriako lege hauek ditugu :
+A ∩ B = A ∪ B
+De Morgan-en legeak
+A ∪ B = A ∩ B
+A ∩ B = B ∩ A
+Trukatze legeak
+A ∪ B = B ∪ A
+A ∩ (B ∩ C) = (A ∩ B) ∩ C
+Elkartze legeak
+A ∪ (B ∪ C) = (A ∪ B) ∪ C
+A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)
+Banatze legeak
+A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)
+A ∪ φ = A
+Identitate legeak
+A ∩ U = A
+A ∪ U = U
+Menpekotasun legeak
+A ∩ φ = φ
+Lege hauek kalkulu proposizionaleko baliokidetasun legeekin parekatu ditza-
+kegu, frogatzerakoan ikusiko dugunez.
+Adibidea 4 Frogatu A ∩ B = A ∪ B.
+3
+Zatiketa algoritmoa : zenbaki lehenak
+Esango dugu a = 0 osokoak b osokoa zatitzen duela, a | b idatziz, baldin
+existitzen bada n osokoa b = na izanik ; honela bada esango dugu a b-ren
+zatitzailea dela, eta b a-ren multiploa.
+Adibidea 5 2 | 6, 7 | − 21, 7 | 20 ?
+Propietatea 1 Edozein osoko a, b, c emanik (eta zatitzailea beti ez nulua
+izanik) :
+(a) 1 | a, a | a, a | 0.
+(b) Baldin a | b eta b | a orduan a = ±b.
+(c) Baldin a | b eta b | c orduan a | c.
+(d) Baldin a | b orduan a | bx, edozein osoko x-erako.
+(e) Baldin a | b eta a | c orduan a | bx + cy, edozein osoko x, y-rako (b eta
+c-ren konbinazio lineal bat da bx + cy).
+17
+
+Froga. 
+(a) Lehenik a = a 1 beraz 1 | a. Antzera a = 1 a beraz a | a. Eta 0 = 0 a
+beraz a | 0.
+(b) Hipotesiak dio a | b eta b | a, hau da, b = m a eta a = n b, non m, n
+osokoak diren, a eta b ez nuluak izanik |b| ≥ |a| eta |a| ≥ |b| dugu, beraz
+a = ±b.
+(c) Hipotesia da a | b eta b | c, hau da, b = m a eta c = n b, non m, n
+osokoak diren, beraz c = n m a, non n m osokoa den, beraz a | c.
+(d) Honen froga (e)ren frogaren kasu berezia da.
+(e) Hipotesia a | b eta a | c da, b = m a eta c = n a, non m, n osokoak
+diren, honela bx + cy = max + nay = (mx + ny) a dugu, non mx + ny osokoa
+den, beraz a | bx + cy.
+♦
+Osoko positibo bat, n > 1, zenbaki lehena dela esango dugu baldin ez
+badu zatitzaile positiborik, 1 eta n izan ezik ; lehena ez bada konposatua
+deituko diogu.
+Zatiketa algoritmoaren teorema ikusiko dugu ondoren, lehenik adibidea
+eginez.
+Adibidea 6 Zatitu 30a 7arekin.
+Teorema 1 (Zatiketa algoritmoa.) Izan bitez a eta b osokoak, non b > 0,
+orduan existitzen dira q eta r osokoak, bakarrak, hau betzen delarik :
+a = q b + r ,
+non 0 ≤ r < b
+Froga. Azter dezagun a ≥ 0 kasua eta kontsideratu multzo hau :
+S = {a − t b | t ∈ Z eta a − t b ≥ 0}
+S ez da hutsa (adibidez a − 0 b ≥ 0). Izan bedi S-ko osoko txikiena r :
+r = a − q b ,
+r ≥ 0
+non q osoko bat den.
+Frogatuko dugu r < b dela. Eman dezagun (r.a.a.) r ≥ b dela, q = q + 1
+hartzen badugu :
+a − q b = a − (q + 1) b = a − q b − b = r − b ≥ 0
+beraz a − q b ∈ S, eta a − q b = r − b < r izanik, r ez litzateke S-ko osoko
+txikiena, kontraesana r-ren deﬁnizioarekin. Ondorioz r < b.
+18
+
+Orain q eta r bakarrak direla frogatuko dugu. Baldin a = q1b + r1 =
+q2b + r2, non 0 ≤ r1, r2 < b, hau dugu :
+(q1 − q2) b = r2 − r1
+hemendik |q1 − q2| b = |r2 − r1| < b, beraz |q1 − q2| = 0 izango da, ondorioz
+q1 = q2, eta baita |r2 − r1| = 0 ere, hau da, r1 = r2.
+♦
+Adibidea 7 (a) Zatitu 21a 7arekin, baita 22a ere. (b) Zatitu -43a 8arekin.
+4
+Zatitzaile komun handiena
+Izan bitez a, b eta c = 0 osokoak, esango dugu a eta b-ren zatitzaile
+komuna dela c baldin c | a eta c | b.
+Deﬁnizioa 7 Izan bitez a, b, c ∈ Z+, esango dugu a eta b-ren zatitzaile ko-
+mun handiena dela c hau betetzen bada :
+(i) a eta b-ren zatitzaile komuna da c,
+(ii) baldin d | a eta d | b orduan d | c, edozein d ∈ Z+-rako.
+Idazkera hau erabiliko dugu zatitzaile komun handienarentzat, c = zkh(a, b).
+Adibidea 8 (a) Zein da 6a eta 10aren zatitzaile komun handiena ? (b) Zein
+da multzo honetako osoko txikiena ?
+S = {6 s + 10 t | s, t ∈ Z eta 6 s + 10 t > 0}
+Teorema 2 Izan bitez a, b ∈ Z+, orduan existitzen da, eta bakarra da, a eta
+b-ren zatitzaile komun handiena. Izan bitez a, b, c ∈ Z+, non c | a eta c | b,
+orduan : c = zkh(a, b) baldin eta soilik baldin existitzen badira x, y osokoak
+c = a x + b y izanik.
+Froga. Kontsidera dezagun multzo hau :
+S = {a s + b t | s, t ∈ Z eta a s + b t > 0}
+Multzoa ez da hutsa. Izan bedi S-ko osoko txikiena c. Ikusiko dugu a eta
+b-ren zatitzaile komun handiena dela.
+19
+
+Lehenik c zatitzaile komuna dela frogatuko dugu. Alde batetik c | a, honela
+ez balitz (r.a.a.), zatiketa algoritmotik hau genuke :
+a = q c + r ,
+non 0 < r < c
+eta r osokoa, c baino txikiagoa, S-koa litzatekeela deduzituko dugu. S mult-
+zokoa izanik c, orduan c = a x + b y, non x, y ∈ Z, beraz
+r = a − q c = a − q (a x + b y) = a (1 − q x) + b (−q y)
+hau da r ∈ S. Ondorioz c ez litzateke S-ko osoko txikiena, kontraesana c-ren
+deﬁnizioarekin. Orduan c | a bete behar da. Antzera arrazoituz c | b dugu.
+Gainera, edozein d ∈ Z+-rako, baldin d | a eta d | b, nola c = a x + b y den,
+d | c betetzen da. Beraz a eta b-ren zatitzaile komun handiena da c.
+Zatitzaile komun handiena bakarra dela frogatuko dugu : a eta b-ren za-
+titzaile komun handienak balira c1 eta c2, orduan c1 | c2 eta c2 | c1, hemendik
+c1 = c2, positiboak direnez.
+Azkenik, izan bitez a, b, c ∈ Z+, non c | a eta c | b. Baldin c = zkh(a, b),
+ikusi dugunez c = a x + b y. Alderantziz, baldin existitzen badira x, y osokoak
+c = a x + b y izanik, honela frogatuko dugu c = zkh(a, b) dela : hasteko
+c zatitzaile komuna da, bestalde edozein d ∈ Z+-rako baldin d | a eta d | b
+orduan d | a x + b y, hau da, d | c.
+♦
+Baldin zkh(a, b) = 1 esango dugu a eta b erlatiboki lehenak direla.
+Zatitzaile komun handiena kalkulatzeko algoritmo euklidearra dugu. Izan
+bitez a eta b osoko positiboak :
+a zatitu b-rekin : hondarra r1 > 0
+b zatitu r1-ekin : hondarra r2 > 0
+r1 zatitu r2-rekin : hondarra r3 > 0
+r2 zatitu r3-rekin : hondarra r4 > 0
+· · ·
+rk−1 zatitu rk-rekin : hondarra 0
+zkh(a, b) = rk
+Adibidea 9 Kalkulatu zkh(250, 111) eta zkh(1820, 231), eta lortu dagozkien
+konbinazio linealak.
+20
+
+5
+Aritmetikako teorema nagusia
+Propietatea 2 Izan bitez a, b ∈ Z+ eta p osoko lehena. Baldin p | a b orduan
+p | a edo p | b.
+Froga. Hipotesitzat dugu p | a b. Bi kasu bereiziko ditugu. Lehenengo kasuan,
+baldin p | a, betetzen da inplikazioaren ondorioa. Beste kasuan, baldin p |a,
+frogatuko dugu p | b betetzen dela. Lehena denez p, kasu honetan zkh(p, a) =
+1, ondorioz existituko dira x, y osokoak zeinentzat
+1 = p x + a y
+Berdintza b-rekin biderkatuz eta berrordenatuz,
+b = p (b x) + (a b) y
+Dakigunez p | p eta p | a b, beraz
+p | p (b x) + (a b) y
+hau da, p | b. Bi kasuetatik p | a edo p | b.
+♦
+Teorema 3 (Aritmetikako teorema nagusia.) Edozein osoko n > 1 idatz
+dezakegu zenbaki lehenen biderkadura bezala, honi deitzen diogu faktorizazio
+lehena. Faktorizazio lehena bakarra da, ordena kontuan hartu gabe.
+Faktorizazioaren existentzia frogatzeko nahikoa da zenbaki lehenaren deﬁni-
+zioa erabiltzea. Faktorizazioa bakarra dela frogatuko dugu aurreko propieta-
+tean oinarrituz.
+Adibidea 10 Kalkulatu 980 220 osokoaren faktorizazio lehena.
+6
+Multiplo komun txikiena
+Izan bitez a, b, c ∈ Z+, esango dugu a eta b-ren multiplo komuna dela c
+baldin a-ren multiploa eta b-ren multiploa bada c. Baldintza hau betetzen
+duen osoko txikienari deituko diogu a eta b-ren multiplo komun txikiena,
+mkt(a, b). Bi propietate aipatuko ditugu, hauen frogak egin gabe.
+Propietatea 3 Baldin c = mkt(a, b), eta a eta b-ren multiplo komuna bada
+d, orduan c | d.
+Propietatea 4 Berdintza hau betetzen da :
+a b = mkt(a, b) · zkh(a, b)
+21

@@ -1,0 +1,2334 @@
+
+
+
+4. Kapitulua
+Sentikortasunaren analisia
+Sentikortasunaren analisia eredu linealaren soluzio optimoa kalkulatu ondoren
+egiten da, eredu linealaren parametroetan gertatutako aldaketek soluzio optimoa-
+ren gain izango duten eragina ezagutzeko asmoz. Aldaketak A koeﬁziente tekno-
+logikoen matrizean, b baliabide-bektorean eta c prezio-
+bektorean gerta daitezke.
+Azter daiteke ere, eredu linealari aldagai berriak edo murrizketa berriak gehitzeak
+soluzio optimoaren gain izango duen eragina.
+Sentikortasunaren analisia egiteko metodoek iterazio kopuru garrantzitsua au-
+rrezten dute, aldaketa gertatu aurreko eredu linealaren soluzio optimotik hasten
+baitira aldaketek sortutako eraginaren azterketa egiten.
+Aldaketa diskretuen analisi hau zabaldua izan daiteke aldaketa jarraituek so-
+luzio optimoan sortzen duten eragina aztertzeko. Analisi hori programazio para-
+metrikoa izenez ezagutzen da.
+4.1
+Planteamendu orokorra
+Gai honetan parametro mota bakoitzerako sentikortasunaren analisia aztertzen da;
+bi aldaketa edo gehiago aldi berean gertatzen diren kasurako ere analisi hau aplika
+daiteke.
+Izan bedi honako eredu lineala:
+max z = c
+T x
+hauen mende
+Ax
+≤ b
+x
+≥ 0
+127
+
+128
+4. Sentikortasunaren analisia
+b bektorearen osagaiak zero baino handiagoak edo berdinak badira, ereduaren
+forma estandarra lortzeko, murrizketa bakoitzean nasaitze-aldagai bat gehitzen
+da.
+max z = c
+T x + 0T xh
+hauen mende
+Ax
++ Ixh = b
+x
+, xh ≥ 0
+Aurreko kapituluetan ikusi dugu lehenengo oinarri gisa kanonikoa aukeratuz
+gero, hasierako taula ereduaren parametroen bidez eraikitzen dela. Kasu hone-
+tan, hasierako taulako oinarria nasaitze-
+aldagaiez osaturik dago, eta honek nota-
+zioa erraztu egiten du. Bektore horiei dagozkien zutabeetan aurkitzen da oina-
+rri matrizearen alderantzizkoa, kasu honetan identitatea. Taula optimoan oinarri
+matrizearen alderantzizkoa zutabe berberetan aurkitzen da, eta sentikortasunaren
+analisiaren garapenean oso erabilgarria dela ikusiko dugu.
+• Hasierako taula.
+Hasierako aldagaiak
+Nasaitze-aldagaiak
+x1
+. . .
+xn
+xn+1 . . . xn+m
+−cT
+0
+0
+B
+A
+I
+b
+• Taula optimoa.
+Hasierako aldagaiak Nasaitze-aldagaiak
+x1 . . . xn
+xn+1 . . . xn+m
+cT
+B B
+−
+1A − cT
+cT
+B B
+−
+1
+z = cT
+B xB
+B
+B
+−
+1A
+B
+−
+1
+xB = B
+−
+1b
+OpenCourseWare, UPV/EHU
+
+4.2. Adibidea
+129
+Produktuak
+Baliabideen
+Baliabideak
+A
+B
+C
+erabilgarritasuna
+1
+4
+2
+3
+40
+2
+2
+2
+1
+30
+Irabazia
+3
+2
+1
+4.1. Taula: Baliabideak eta irabaziak
+Eredu lineal baten taula optimoak bideragarritasun primala du, hau da, xB zu-
+tabeko osagai guztiak ez-negatiboak dira. Bideragarritasun duala ere badu, hau
+da, adierazleen lerroko elementu guztiak zero baino handiagoak edo berdinak di-
+ra. Esan dugun bezala, sentikortasunaren analisia taula optimoaren erabilpenean
+oinarritzen da. Tauletan ikus daiteke, behin B oinarri bat ﬁnkatuta, parametro
+mota bakoitzaren aldaketan taularen zonalde desberdinetan sortzen duela eragi-
+na. Adibidez, baliabide-bektorean aldaketak egiteak bideragarritasun primalaren
+gain sortzen du eragina; prezio-bektorean eta koeﬁzienteen matrizean aldaketak
+egiteak bideragarritasun dualaren gain sortzen du eragina. Aldaketaren eraginez
+bideragarritasunen bat galtzen bada, dagoeneko ezagunak ditugun algoritmoetako
+bat erabiltzea beharrezkoa izango da, eredu berriaren taula optimoa lortzeko.
+4.2
+Adibidea
+Aztertuko ditugun aldaketa diskretuen adibide praktikoak egiteko, ekoizpen-
+problema
+hau erabiliko dugu.
+Enpresa batean 1 eta 2 baliabideak erabili nahi dira
+A, B eta C produktuak
+ekoizteko. Produktu mota bakoitzeko unitate baten ekoizpenerako behar den 1
+eta 2 baliabideen unitate kopurua, baliabide bakoitzetik dagoen unitate erabilgarri
+kopurua eta produktu unitate bakoitzak emandako irabazia 4.1 Taulan adieraziak
+datoz.
+Produktuen ekoizpenetik lortutako irabaziak maximizatzeko eredu lineal hau
+plantea daiteke. Forma estandarra lortzeko, beharrezko izan diren nasaitze-
+aldagaiak
+gehitu zaizkio ereduari.
+max
+z = 3x1 + 2x2 + x3 + 0x4 + 0x5
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+130
+4. Sentikortasunaren analisia
+hauen mende
+4x1 + 2x2 + 3x3 +x4
+= 40
+2x1 + 2x2 + x3
++x5 = 30
+x1, . . . , x5 ≥ 0
+A, B eta C produktu mota bakoitzetik ekoitziko den unitate kopurua adieraz-
+ten dute ereduaren
+xj aldagaiek, j = 1, 2, 3. x4 eta x5 nasaitze-aldagaiak dira.
+Eredua ebatziz, problemaren taula optimoa lortzen da:
+x1
+x2
+x3
+x4
+x5
+0
+0
+1
+1
+2
+1
+2
+35
+a1
+1
+0
+1
+1
+2
+−
+1
+2
+5
+a2
+0
+1
+−
+1
+2
+−
+1
+2
+1
+10
+Soluzio optimoa
+x
+∗
+1 = 5, x
+∗
+2 = 10
+eta
+x
+∗
+3 = 0 da eta irabazi optimoa z
+∗ = 35.
+Irabazi optimo hau
+A produktu motatik 5 unitate ekoitziz eta B produktu motatik
+10 unitate ekoitziz lortzen da, hau da, erabilgarri dauden baliabideak
+A eta B
+produktuen ekoizpenean erabiliz.
+2
+4.3
+Aldaketak b bektorean
+Izan bitez eredu lineal bat eta bere soluzio optimoa. Demagun b baliabide-
+bektorean
+aldaketa diskretu bat gertatzen dela, eta aldaketaren ondorioz dugun baliabide-
+bektore berria
+∧
+b dela. Hortaz, hasierako eredua (1. Eredua) eta aldaketa ondore-
+nekoa (2. Eredua) ditugu.
+1. Eredua
+2. Eredua
+max
+z = cT x
+max
+z = cT x
+hauen mende
+hauen mende
+Ax
+≤ b
+Ax
+≤
+∧
+b
+x
+≥ 0
+x
+≥ 0
+OpenCourseWare, UPV/EHU
+
+4.3. Aldaketak b bektorean
+131
+Aldaketak sortutako eragina aztertzeko, 1. Ereduari dagokion taula optimoan oi-
+narrituko gara. Baliabide-bektore berria
+∧
+b izanik, taula optimoan grisez margotu-
+tako zutabea besterik ez da aldatzen 
+(ikus 4.1 Irudia). Zutabe hori eguneratzean
+bideragarritasun primala galtzea gerta daiteke.
+B
+B
+B
+−
+1A
+B
+−
+1A
+B
+−
+1
+B
+−
+1
+zj − cj = c
+T
+B
+B
+−
+1a
+j − cj
+z
+= cT
+B
+xB
+xB = B
+−
+1b
+∧
+z
+= cT
+B
+∧
+x
+B
+zj − cj = c
+T
+B
+B
+−
+1a
+j − cj
+∧
+x
+B = B
+−
+1
+∧
+b
+1. Eredurako taula optimoa
+2. Eredurako hasierako taula
+4.1. Irudia: Aldaketak b bektorean
+b bektorearen aldaketak soluzio primalaren gain eta helburu funtzioaren ba-
+lioaren gain eragina sortzen duenez, balio horiek eguneratu egin behar dira.
+∧
+xB= B
+−
+1
+∧
+b
+∧
+z= c
+T
+B
+∧
+xB
+Balio eguneratuak kalkulatuak izan direnean, 2. Ereduaren hasierako taulan ko-
+katzen dira. Taula honetan bi kasu gerta daitezke.
+1. kasua.
+∧
+xB≥ 0 bada, bideragarritasun primala ez da galdu, eta 2. Eredua-
+ren hasierako taula optimoa da 2. Eredurako. Soluzio optimoa eta helburu
+funtzioaren balio optimoa
+∧
+xB eta
+∧
+z dira, hurrenez hurren.
+2. kasua.
+∧
+xB≥
+/ 0 bada, bideragarritasun primala galdu egin da. Kasu honetan
+2. Ereduaren hasierako taulan simplex dual algoritmoa aplikatu behar da 2.
+Ereduaren soluzio optimoa kalkulatzeko.
+Adibidea. Har ditzagun 4.2 Ataleko ekoizpen-problema eta dagokion taula
+optimoa. b baliabide-bektorean bi aldaketa aztertuko ditugu.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+132
+4. Sentikortasunaren analisia
+Lehenengo aldaketa. Azter dezagun baliabide-bektorea bT
+= (40, 30) izate-
+tik
+∧
+b
+T
+= (38, 36) izatera aldatzeak soluzio optimoaren gain sortzen duen eragina.
+∧
+xB= B
+−
+1
+∧
+b=
+
+
+1
+2
+−
+1
+2
+−
+1
+2
+1
+
+
+
+
+38
+36
+
+
+=
+
+
+1
+17
+
+
+≥ 0
+.
+∧
+z= c
+T
+B
+∧
+xB= (3 , 2)
+
+
+1
+17
+
+
+= 37.
+2. Ereduari dagokion hasierako taula honakoa da:
+x1
+x2
+x3
+x4
+x5
+0
+0
+1
+1
+2
+1
+2
+37
+a1
+1
+0
+1
+1
+2
+−
+1
+2
+1
+a2
+0
+1
+−
+1
+2
+−
+1
+2
+1
+17
+Bideragarritasun primala ez da galdu, eta ondorioz, B oinarriak optimo iza-
+ten jarraitzen du. Hala ere, soluzioa eta helburu funtzioaren balioa aldatu egin
+dira. Soluzio optimoa
+x
+∗
+1 = 1, x
+∗
+2 = 17, x
+∗
+3 = 0 da, eta helburu funtzioaren balio
+optimoa
+z
+∗
+= 37. Aztertutako aldaketaren interpretazio gisa, esan daiteke solu-
+zio optimoaren arabera
+A eta B produktu-moten ekoizpenarekin segitzea komeni
+dela, nahiz eta kantitate desberdinak ekoitziko diren.
+Bigarren aldaketa. Azter dezagun bT
+= (40, 30) baliabide-bektorea bes-
+te
+∧
+b
+T
+= (20, 60) bektoreaz ordezkatzeak soluzio optimoaren gain sortzen duen
+eragina.
+∧
+xB= B
+−
+1
+∧
+b=
+
+
+1
+2
+−
+1
+2
+−
+1
+2
+1
+
+
+
+
+20
+60
+
+
+=
+
+
+−
+20
+50
+
+
+≥ 0
+.
+∧
+z= c
+T
+B
+∧
+xB= (3 , 2)
+
+
+−
+20
+50
+
+
+= 40.
+Bideragarritasun primala galdu egin da, eta ondorioz, 2. Ereduaren hasierako taula
+ez da optimoa.
+∧
+xB eta
+∧
+z eguneratu eta simplex dual algoritmoa aplikatu behar da
+galdutako bideragarritasuna berreskuratzeko.
+OpenCourseWare, UPV/EHU
+
+4.4. Aldaketak c bektorean
+133
+x1
+x2
+x3
+x4
+x5
+0
+0
+1
+1
+2
+1
+2
+40
+3 a1
+1
+0
+1
+1
+2
+−
+1
+2
+−
+20
+2 a2
+0
+1 −
+1
+2
+−
+1
+2
+1
+50 −2
+1
+0
+2
+1
+0
+20
+0 a5 −2
+0 −2 −1
+1
+40
+2 a2
+2
+1
+3
+2
+1
+2
+0
+10
+Eredu berriaren soluzio optimoa
+x
+∗
+1 = 0 , x
+∗
+2 = 10, x
+∗
+3 = 0 da, eta irabazi
+maximoa
+z
+∗
+= 20. Kasu honetan baliabide-bektorearen aldaketaren ondorioz B
+produktu mota besterik ez ekoiztea da komenigarriena.
+2
+4.4
+Aldaketak c bektorean
+Izan bedi eredu lineal bat, zeinaren soluzio optimoa ezaguna zaigun. Demagun
+c prezio-bektorea aldatu egiten dela, bektore berria
+∧
+c delarik. Horrela, hasierako
+eredua (1. Eredua) eta aldaketa ondoreneko eredua (2. Eredua) ditugu.
+1. Eredua
+2. Eredua
+max
+z = cT x
+max
+z =
+∧
+c
+T
+x
+hauen mende
+hauen mende
+Ax
+≤ b
+Ax
+≤ b
+x
+≥ 0
+x
+≥ 0
+1. Ereduaren taula optimotik abiatuz, prezio-bektorearen aldaketak
+zj −cj balioen
+gain eta helburu funtzioaren balioaren gain eragina duela ikusten da (ikus 4.2
+Irudia). Horren ondorioz bideragarritasun duala gal daiteke.
+c bektorearen aldaketa dela eta, honakoak eguneratu behar dira:
+∧
+zj −
+∧
+cj=
+∧
+c
+T
+B B
+−
+1a
+j −
+∧
+cj=
+∧
+c
+T
+B yj −
+∧
+cj .
+∧
+z=
+∧
+c
+T
+B xB .
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+134
+4. Sentikortasunaren analisia
+B
+B
+B
+−
+1A
+B
+−
+1A
+B
+−
+1
+B
+−
+1
+zj − cj = c
+T
+B
+B
+−
+1a
+j − cj
+z
+= cT
+B
+xB
+cB
+∧
+c
+B
+xB = B
+−
+1b
+∧
+z j −
+∧
+c j =
+∧
+c
+T
+B
+B−1aj−
+∧
+cj
+∧
+z
+=
+∧
+c
+T
+B
+xB
+xB = B
+−
+1b
+1. Eredurako taula optimoa
+2. Eredurako hasierako taula
+4.2. Irudia: Aldaketak c bektorean.
+Behin
+∧
+zj −
+∧
+cj eta
+∧
+z balioak kalkulatuak izan direnean, 2. Ereduaren hasierako
+taulan jasotzen dira. Bi kasu hauek gerta daitezke:
+1. kasua.
+∧
+zj −
+∧
+cj≥ 0 bada j guztietarako, xB oinarriko soluzio bideragarria
+optimoa da 2. Eredurako eta
+∧
+z=
+∧
+c
+T
+B xB da balio optimoa.
+2. kasua.
+∧
+zj −
+∧
+cj< 0 existitzen bada, 2. Ereduaren hasierako taula ez da
+optimoa, eta simplex primal algoritmoa erabili behar da bideragarritasun
+duala berreskuratzeko.
+Adibidea. Har dezagun 4.2 Ataleko problema, eta azter ditzagun prezio-
+bektorearen bi aldaketa.
+Lehenengo aldaketa. cT
+= (3, 2, 1) prezio-bektorea beste
+∧
+c
+T
+= (4, 3, 1)
+bektoreaz aldatzeak soluzio optimoan duen eragina aztertuko dugu.
+Aldaketa honek
+zj − cj balioen errenkadari eragiten dionez, balio berriak kal-
+kulatu behar dira honela:
+∧
+z1 −
+∧
+c1= (4, 3)
+
+
+1
+0
+
+
+−
+4 = 0.
+∧
+z2 −
+∧
+c2= (4, 3)
+
+
+0
+1
+
+
+−
+3 = 0.
+OpenCourseWare, UPV/EHU
+
+4.4. Aldaketak c bektorean
+135
+∧
+z3 −
+∧
+c3= (4, 3)
+
+
+1
+−
+1
+2
+
+
+−
+1 =
+3
+2
+.
+∧
+z4 −
+∧
+c4= (4, 3)
+
+
+1
+2
+−
+1
+2
+
+
+−
+0 =
+1
+2
+.
+∧
+z5 −
+∧
+c5= (4, 3)
+
+
+−
+1
+2
+1
+
+
+−
+0 = 1.
+zj − cj balioen errenkada eguneratzen dugu:
+x1
+x2
+x3
+x4
+x5
+0
+0
+3
+2
+1
+2
+1
+50
+4
+a1
+1
+0
+1
+1
+2
+−
+1
+2
+5
+3
+a2
+0
+1
+−
+1
+2
+−
+1
+2
+1
+10
+Taulan ikusten denez,
+∧
+zj −
+∧
+cj balio guztiak zero baino handiagoak edo berdi-
+nak dira, eta ondorioz, ez da bideragarritasun duala galdu. Soluzio optimoa ez da
+aldatzen,
+x
+∗
+1 = 5, x
+∗
+2 = 10, x
+∗
+3 = 0; bai, ordea, helburu funtzioaren balio optimoa,
+z
+∗
+= 50. Prezio-bektorean gertatutako aldaketaren ondorioz, helburu funtziora-
+ko balio optimoa
+A eta B produktuen aldaketa aurretiko kantitate bera ekoitziz
+lortzen dela ikusten da.
+Bigarren aldaketa. Azter dezagun soluzio optimoaren gain sortzen den era-
+gina cT
+= (3, 2, 1) prezio-bektorea beste
+∧
+c
+T
+= (1, 1, 1) bektoreaz aldatzen
+badugu.
+Aurreko kasuan bezala kalkuluak eginez, 2. Ereduari dagokion hasierako taula
+hau lortzen da:
+x1
+x2
+x3
+x4
+x5
+0
+0
+−
+1
+2
+0
+1
+2
+15
+1
+a1
+1
+0
+1
+1
+2
+−
+1
+2
+5
+1
+a2
+0
+1
+−
+1
+2
+−
+1
+2
+1
+10
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+136
+4. Sentikortasunaren analisia
+z3 − c3 balio adierazlea negatiboa da; bideragarritasun duala galdu da eta sim-
+plex primal algoritmoaren bidez kalkulatuko da 2. Ereduaren taula optimoa.
+x1 x2
+x3
+x4
+x5
+0
+0 −
+1
+2
+0
+1
+2
+15
+1 a1
+1
+0
+1
+1
+2
+−
+1
+2
+5
+1 a2
+0
+1 −
+1
+2
+−
+1
+2
+1 10 −
+1
+2
+1
+2
+0
+0
+1
+4
+1
+4
+35
+2
+1 a3
+1
+0
+1
+1
+2
+−
+1
+2
+5
+1 a2
+1
+2
+1
+0 −
+1
+4
+3
+4
+25
+2
+Soluzio optimoa
+x
+∗
+1
+= 0 , x
+∗
+2
+=
+25
+2
+, x
+∗
+3
+= 5 da, eta z
+∗
+=
+35
+2
+da helburu
+funtziorako balio optimoa. Kasu honetan,
+A eta B produktuen ekoizpenak sortu-
+tako irabaziak jaitsi direnez,
+A-ren ekoizpenak errentagarri izateari utzi dio, B-ren
+ekoizpena jaitsi egin da eta
+C produktuaren ekoizpena errentagarri bihurtu da so-
+luzio optimoan.
+2
+4.5
+Aldaketak oinarrikoa ez den aj batean
+Oinarriko ez diren aj bektoreen aldaketak besterik ez ditugu aztertuko. Aldaketa
+oinarrikoa den aj bektore batean gertatuko balitz, B
+−
+1 aldatu egingo litzateke,
+eta ondorioz, taulako zutabe guztiak ere; horrelako kasuetan, problema hasieratik
+ebaztea gomendatzen da, sentikortasunaren analisirik egin gabe.
+Izan bitez eredu lineal bat eta bere taula optimoa. Izan bedi oinarri optimoan
+ez dagoen aj bektorea eta demagun bektorea aldatu egiten dela
+∧
+aj bektorera. Ho-
+rrela, hasierako eredua (1. Eredua) eta aldaketa ondoreneko eredua (2. Eredua)
+ditugu.
+OpenCourseWare, UPV/EHU
+
+4.5. Aldaketak oinarrikoa ez den aj batean
+137
+1. Eredua
+2. Eredua
+max
+z = cT x
+max
+z = cT x
+hauen mende
+hauen mende
+a1
+x1 + · · · + ajxj + · · · + anxn ≤ b
+a1
+x1 + · · · +
+∧
+aj xj + · · · + anxn ≤ b
+x1, · · · , xn ≥ 0
+x1, · · · , xn ≥ 0
+1. Eredurako taula optimoan oinarrituz, A matrizearen
+j zutabe batean al-
+daketa gertatuz gero, honek aj bektorearen koordenatuen zutabean eta dagokion
+zj − cj balio adierazlean eragina sortzen duela ikus daiteke 4.3 Irudiko taulan.
+Horren ondorioz, bideragarritasun duala gal daiteke.
+  
+B
+B
+B
+−
+1
+B
+−
+1
+zj − cj = cT
+B B
+−
+1aj − cj
+z = cT
+B xB
+yj = B
+−
+1aj
+∧
+y
+j = B
+−
+1
+∧
+aj xB = B−1b
+xB = B
+−
+1b
+∧
+zj −cj = cT
+B B
+−
+1
+∧
+aj −cj
+z = cT
+B xB
+1. Eredurako taula optimoa
+2. Eredurako hasierako taula
+4.3. Irudia: Aldaketak aj ∈ B bektorean.
+aj bektorean gertatutako aldaketak honakoak eragiten ditu:
+∧
+y
+j = B
+−
+1
+∧
+aj .
+∧
+zj −cj = c
+T
+B B
+−
+1
+∧
+aj −cj = c
+T
+B
+∧
+y
+j −cj .
+∧
+y
+j eta
+∧
+zj −cj eguneratuak izan direnean, 2. Eredurako hasierako taulan jasotzen
+dira. Bi kasu gerta daitezke:
+1. Kasua.
+∧
+zj −cj ≥ 0 bada, bideragarritasun duala mantendu egin da, eta xB
+soluzioak eta helburu funtzioaren
+z balioak optimo izaten jarraituko dute.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+138
+4. Sentikortasunaren analisia
+2. Kasua
+∧
+zj −cj < 0 bada, bideragarritasun duala galdu egin da eta simplex
+primal algoritmoa erabiliz berreskuratu beharko da.
+Adibidea. Har dezagun 4.2 Ataleko problema eta azter ditzagun koeﬁzienteen
+matrizean gertatutako bi aldaketa.
+Lehenengo aldaketa. Oinarrikoa ez den a3 bektorean aldaketa hau egin da:
+a3
+=
+
+
+3
+1
+
+
+aldatu egin da:
+∧
+a3
+=
+
+
+4
+2
+
+
+Orduan,
+∧
+y
+3
+= B
+−
+1
+∧
+a3
+=
+
+
+1
+2
+−
+1
+2
+−
+1
+2
+1
+
+
+
+
+4
+2
+
+
+=
+
+
+1
+0
+
+
+∧
+z3 −c3 = (3 , 2)
+
+
+1
+0
+
+
+−
+1 = 3 − 1 = 2 > 0.
+Ondorioz, bideragarritasun duala ez da galdu, oinarriak optimo izaten jarraitzen
+du eta eguneratutako taula optimoa da eredu berriarentzat.
+x1
+x2
+x3
+x4
+x5
+0
+0
+2
+1
+2
+1
+2
+35
+a1
+1
+0
+1
+1
+2
+−
+1
+2
+5
+a2
+0
+1
+0
+−
+1
+2
+1
+10
+Soluzio optimoa
+x
+∗
+1 = 5 , x
+∗
+2 = 10 , x
+∗
+3 = 0 da eta helburu funtzioaren balio
+optimoa
+z
+∗ = 35.
+Bigarren aldaketa. Azter dezagun aldaketa hau:
+a3
+=
+
+
+3
+1
+
+
+aldatu egin da:
+∧
+a3
+=
+
+
+1
+2
+1
+
+
+OpenCourseWare, UPV/EHU
+
+4.6. Aldagai berriak
+139
+Kalkuluak eginez,
+∧
+y
+3
+= B
+−
+1
+∧
+a3
+=
+
+
+1
+2
+−
+1
+2
+−
+1
+2
+1
+
+
+
+
+1
+2
+1
+
+
+=
+
+
+−
+1
+4
+3
+4
+
+
+∧
+z3 −c3 = (3 , 2)
+
+
+−
+1
+4
+3
+4
+
+
+−
+1 = −
+1
+4
+.
+Bideragarritasun duala galdu egin da eta simplex primal algoritmoa erabiliz
+berreskuratuko da.
+x1 x2
+x3
+x4
+x5
+0
+0 −
+1
+4
+1
+2
+1
+2
+35
+3 a1
+1
+0 −
+1
+4
+1
+2
+−
+1
+2
+5 −
+1
+3
+2 a2
+0
+1
+3
+4
+−
+1
+2
+1
+10
+0
+1
+3
+0
+1
+3
+5
+6
+115
+3
+3 a1
+1
+1
+3
+0
+1
+3
+−
+1
+6
+25
+3
+1
+∧
+a3
+0
+4
+3
+1 −
+2
+3
+4
+3
+40
+3
+Soluzio optimoa
+x
+∗
+1 =
+25
+3 , x
+∗
+2 = 0 eta x
+∗
+3 =
+40
+3
+da, eta balio optimoa
+z
+∗ =
+115
+3 .
+Kasu honetan,
+B produktuaren ekoizpena uztea eta C produktuarenarekin hastea
+komeni dela ikusten da.
+2
+4.6
+Aldagai berriak
+Izan bitez eredu lineal bat eta bere taula optimoa. Demagun ereduan aldagai berri
+bat erantsi nahi dela. Horrela, hasierako eredua 
+(1. Eredua) eta aldaketa ondore-
+neko eredua (2. Eredua) izango ditugu.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+140
+4. Sentikortasunaren analisia
+1. Eredua
+2. Eredua
+max
+z = c1x1 + · · · + cnxn
+max
+z = c1x1 + · · · + cnxn + cn+1xn+1
+hauen mende
+hauen mende
+a1
+x1 + · · · + anxn ≤ b
+a1
+x1 + · · · + anxn + an+1xn+1 ≤ b
+x1, · · · , xn ≥ 0
+x1, · · · , xn, xn+1 ≥ 0
+1. Eredurako taula optimoan oinarrituz, ereduari
+xn+1 aldagai berri bat eransteak
+yn+1 zutabe berri bat eta zn+1 − cn+1 balio adierazle berri bat sortzen ditu 
+(ikus
+4.4 Irudia). Horren ondorioz, bideragarritasun duala gal daiteke.
+ 
+B
+B
+B
+−
+1
+B
+−
+1
+zj − cj = cT
+B B
+−
+1aj − cj
+z = cT
+B xB
+xB = B
+−
+1b
+xB = B
+−
+1b
+zn+1 − cn+1 = cT
+B B
+−
+1an+1 − cn+1
+z = cT
+B xB
+yn+1 = B
+−
+1an+1
+1. Eredurako taula optimoa
+2. Eredurako hasierako taula
+4.4. Irudia: Aldagai berria eranstea.
+yn+1 zutabe berria eta zn+1 − cn+1 balio adierazle berria kalkulatu eta 2. Ere-
+durako hasierako taulan jasotzen dira.
+yn+1 = B
+−
+1a
+n+1.
+zn+1 − cn+1 = c
+T
+B yn+1 − cn+1.
+Bi kasu gerta daitezke:
+1. Kasua.
+zn+1 − cn+1 ≥ 0 bada, xn+1 aldagai berria eransteak ez du eraginik
+sortzen soluzio optimoaren gain; xB soluzioak eta z balioak optimo izaten
+jarraituko dute.
+OpenCourseWare, UPV/EHU
+
+4.6. Aldagai berriak
+141
+2. Kasua.
+zn+1 − cn+1 < 0 bada, bideragarritasun duala galdu egin da eta
+simplex primal algoritmoa erabili behar da soluzio optimoa lortzeko.
+Adibidea. Har dezagun 4.2 Ataleko problema eta azter dezagun aldagai berri
+bat eransteak sortzen duen eragina.
+Lehenengo aldaketa.
+D produktu mota berri bat ekoitzi nahi da. x4 aldagaiak
+adierazten du ekoitziko den
+D motako produktu unitate kopurua, ekoizpenerako
+beharrezko diren lehengaien erabilpena eta ekoitzitako produktu unitate bakoitzak
+emandako irabazia ondokoak direlarik:
+a4
+=
+
+
+1
+2
+
+
+, c4 = 1.
+Aldagai berria
+x4 denez, nasaitze-aldagaiei izena aldatu eta x5 eta x6 izango
+dira.
+Kalkula ditzagun y4 eta
+z4 − c4 produktu berrirako:
+y4
+= B
+−
+1a
+4
+=
+
+
+1
+2
+−
+1
+2
+−
+1
+2
+1
+
+
+
+
+1
+2
+
+
+=
+
+
+−
+1
+2
+3
+2
+
+
+z4 − c4 = (3, 2)
+
+
+−
+1
+2
+3
+2
+
+
+−
+1 = −
+3
+2
++
+6
+2
+−
+1 =
+1
+2
+> 0.
+y4 eta
+z4 − c4 kalkulatu ondoren, eredu berrirako hasierako taulan jasotzen dira.
+x1 x2
+x3
+x4
+x5
+x6
+0
+0
+1
+1
+2
+1
+2
+1
+2
+35
+3 a1
+1
+0
+1 −
+1
+2
+1
+2
+−
+1
+2
+5
+2 a2
+0
+1 −
+1
+2
+3
+2
+−
+1
+2
+1 10
+Bideragarritasun duala ez da galdu. Soluzio optimoa mantendu egiten da,
+x
+∗
+1 = 5, x
+∗
+2 = 10 eta x
+∗
+3 = 0. Helburu funtzioaren balio optimoa ere ez da aldatu,
+z
+∗
+= 35. Soluzio optimoaren arabera, A eta B produktu moten ekoizpenarekin
+jarraitzea da errentagarriena, eta
+D produktu berriaren ekoizpena ez da errentaga-
+rria.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+142
+4. Sentikortasunaren analisia
+Bigarren aldaketa. Demagun ekoitzi nahi den
+D produktu berriari dagozkion
+koeﬁziente teknologikoen bektorea eta irabazia ondokoak direla:
+a4
+=
+
+
+3
+2
+
+
+, c4 = 3.
+Eredu berriaren hasierako taularako egin beharreko kalkuluak ondokoak dira:
+y4
+= B
+−
+1a
+4
+=
+
+
+1
+2
+−
+1
+2
+−
+1
+2
+1
+
+
+
+
+3
+2
+
+
+=
+
+
+1
+2
+1
+2
+
+
+z4 − c4 = (3, 2)
+
+
+1
+2
+1
+2
+
+
+−
+3 =
+5
+2
+−
+3 = −
+1
+2
+< 0.
+z4 − c4 balio adierazlea negatiboa da; bideragarritasun duala galdu egin da eta
+simplex primal algoritmoa erabiliko dugu.
+x1
+x2
+x3
+x4
+x5
+x6
+0
+0
+1 −
+1
+2
+1
+2
+1
+2
+35
+3 a1
+1
+0
+1
+1
+2
+1
+2
+−
+1
+2
+5
+2 a2
+0
+1 −
+1
+2
+1
+2
+−
+1
+2
+1 10 1
+1
+0
+2
+0
+1
+0 40
+3 a4
+2
+0
+2
+1
+1 −1 10
+2 a2 −1
+1 −
+3
+2
+0 −1
+3
+2
+5
+Soluzio optimoa
+x
+∗
+1 = 0, x
+∗
+2 = 5, x
+∗
+3 = 0 eta x
+∗
+4 = 10 da, eta helburu funtzioa-
+ren balio optimoa
+z
+∗ = 40. Soluzio optimo honek adierazten du D produktu mota
+ekoiztea komeni dela
+A ekoitzi beharrean, eta B produktuaren ekoizpenarekin
+aurrera jarraituko dela.
+2
+4.7
+Murrizketa berriak
+Izan bitez eredu lineal bat (1. Eredua) eta bere taula optimoa.
+m murrizketa dituen
+1. Ereduan murrizketa bat erantsiz gero, 2. Eredua lortzen da.
+OpenCourseWare, UPV/EHU
+
+4.7. Murrizketa berriak
+143
+1. Eredua
+2. Eredua
+max
+z = c1x1 + · · · + cnxn
+max
+z = c1x1 + · · · + cnxn
+hauen mende
+hauen mende
+a11x1 + · · · + a1nxn ≤ b1
+a11x1 + · · · + a1nxn ≤ b1
+..
+.
+..
+.
+..
+.
+..
+.
+am1x1 + · · · + amnxn ≤ bm
+am1x1 + · · · + amnxn ≤ bm
+x1, · · · , xn ≥ 0
+am+1,1x1 + · · · + am+1,nxn ≤ bm+1
+x1, · · · , xn ≥ 0
+4.5 Irudian ikus daiteke 1. Ereduaren taula optimoa. Bertan ikus daiteke oi-
+narriko bektoreei dagozkien zutabeetan aurkitzen dela identitate matrizea. Taula
+horretan murrizketa bat eransten bada, 2. Eredurako hasierako taula lortzen da.
+Dena den, murrizketa zuzenean taulan sartzearen ondorioz, identitate matrizea ez
+da taula horretan inon ageriko.
+1
+0
+0
+1
+*
+.
+.
+.
+.
+.
+0
+.
+.
+. .
+. . .
+.
+.
+.
+.
+’
+0
+.
+.
+*
+*
+* *
+*
+*
+*
+*
+* *
+* *
+* *
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+1
+.
+0
+1
+.
+.
+.
+.
+.
+* *
+. .
+1
+0
+0
+* *
+* *
+.
+.
+.
+.
+.
+.
+0
+.
+0
+Oinarriko aldagaiak
+Oinarriko
+bektoreak
+I matrizea
+Murrizketa
+Murrizketa berriaren
+nasaitze-aldagaia
+berria
+xj
+aj
+1. Eredurako taula optimoa
+2. Eredurako hasierako taula
+4.5. Irudia: Murrizketa berria eranstea.
+Taulan, oinarriko bektoreei dagozkien zutabeetan identitate matrizea eduki
+ahal izateko, errenkaden artean eragiketak egin behar dira. Horrek bideragarri-
+tasun primalaren galera eragin dezake (ikus 4.6 Irudia).
+Aldaketa hauen guztien ondorioz, bi kasu gerta daitezke:
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+144
+4. Sentikortasunaren analisia
+*
+* *
+* *
+*
+.
+.
+* *
+ 
+1 .  . . 
+ 0 .  .  .  1
+0
+.
+.
+.
+.
+.
+.
+* .  .  .  *
+*
+0
+.
+.
+.
+1
+*
+1 .  .  . 0
+.
+.
+.
+0 .  .  .  1
+0
+.
+1
+0 .  .  .  0
+* *
+*
+*
+*
+.
+.
+.
+.
+*
+*
+.
+.
+.
+.
+.
+.
+.
+.
+.
+*
+*
+.
+.
+.
+.
+*
+*
+*
+.
+.
+*
+.
+xj
+xj
+aj
+aj
+4.6. Irudia: Murrizketa berria: errenkaden arteko oinarrizko eragiketak
+1. Kasua. 2. Ereduaren hasierako taulan bideragarritasun primala baldin ba-
+dago, taula optimoa da
+2. Kasua. 2. Ereduaren hasierako taulan bideragarritasun primala galdu egin
+bada, simplex dual algoritmoa erabili behar da taula optimoa kalkulatzeko.
+Adibidea. Har dezagun 4.2 Ataleko problema eta azter dezagun murrizketa
+berri bat eransteak soluzio optimoan sortzen duen eragina. Murrizketa berri ho-
+nen bidez
+A, B eta C produktu moten ekoizpenean lehengai berri bat erabiltzea
+errentagarri izango ote den aztertu nahi da.
+Lehenengo aldaketa. Demagun lehengai berri horren 20 unitate ditugula, eta
+lehengai horri dagozkion koeﬁziente teknologikoak ondoko murrizketan agertzen
+direnak direla:
+x1 + x2 + x3 ≤ 20
+Aztertu nahi da murrizketa berri honek soluzio optimoan izango duen eragina.
+Murrizketari nasaitze-aldagai bat gehituz forma estandarrean jarriko dugu.
+x1 + x2 + x3 + x6 = 20
+Hasierako ereduaren taula optimoan sartuko dugu murrizketa berria.
+OpenCourseWare, UPV/EHU
+
+4.7. Murrizketa berriak
+145
+0
+0
+0
+35
+3
+2
+0
+1
+0
+0
+1
+0
+1
+0
+10
+1
+1
+1
+20
+0
+5
+0
+1
+1
+1
+x1
+x2
+x3
+x4 x5
+x6
+a1
+a2
+a6
+1
+2
+1
+2
+1
+2
+−
+1
+2
+−
+1
+2
+−
+1
+2
+B
+= (a1 a2 a6) oinarriari dagozkion zutabeetan koordenatu kanonikoek egon
+behar dute, eta hori ez da horrela gertatzen aurreko taulan. Horretarako, erren-
+kaden artean ondoko eragiketa egin behar da: 3 errenkada − 1 errenkada − 2
+errenkada. Honako taulan ikus daiteke a1
+, a2, a6 bektoreen koordenatuek identi-
+tate matrizea osatzen dutela.
+0
+0
+0
+35
+3
+2
+0
+1
+0
+0
+1
+0
+0
+10
+1
+5
+0
+5
+0
+1
+1
+1
+0
+x1
+x2
+x3
+x4
+x5
+x6
+a1
+a2
+a6
+1
+2
+1
+2
+1
+2
+1
+2
+−
+1
+2
+−
+1
+2
+−
+1
+2
+−
+1
+2
+Kasu honetan bideragarritasun primala ez da galdu, hortaz, soluzio optimoa
+x
+∗
+1 =
+5, x
+∗
+2 = 10 eta x
+∗
+3 = 0 da eta helburu funtzioaren balio optimoa z
+∗
+= 35. Hau
+da, soluzio optimoa berbera da, nahiz eta orain produktuen ekoizpenean lehengai
+berria ere erabiltzen den.
+Bigarren aldaketa. Demagun aurrekoaren antzeko aldaketa bat egin nahi de-
+la, baina kasu honetan murrizketa berria hau izanik:
+x1 + x2 + x3 ≤ 10
+Murrizketa berria forma estandarrean ondokoa da:
+x1 + x2 + x3 + x6 = 10
+Murrizketa taulan sartu eta a6 bektorea oinarri optimoan sartzen da.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+146
+4. Sentikortasunaren analisia
+0
+0
+0
+35
+3
+2
+0
+1
+0
+0
+1
+0
+1
+0
+10
+1
+1
+1
+0
+5
+0
+1
+1
+1
+10
+x1
+x2
+x3
+x4 x5
+x6
+a1
+a2
+a6
+1
+2
+1
+2
+1
+2
+−
+1
+2
+−
+1
+2
+−
+1
+2
+Kasu honetan ere, aurrekoan bezala, errenkaden artean eragiketak egin behar dira
+taula zuzena izan dadin. Egin beharreko kalkulua ondokoa da: 3 errenkada − 2
+errenkada − 1 errenkada.
+0
+0
+0
+35
+3
+2
+0
+1
+0
+0
+1
+0
+1
+0
+10
+1
+5
+0
+1
+1
+−5
+0
+0
+x1
+x2
+x3
+x4 x5
+x6
+a1
+a2
+a6
+1
+2
+1
+2
+1
+2
+1
+2
+−
+1
+2
+−
+1
+2
+−
+1
+2
+−
+1
+2
+Eragiketa horiek egin ondoren, bektoreak ondo adierazita daude B
+= (a1 a2 a6)
+oinarriarekiko. Dena den, aldaketen ondorioz bideragarritasun primala galdu egin
+da; simplex dual algoritmoa erabiliko dugu soluzio optimoa kalkulatzeko.
+x1 x2
+x3
+x4
+x5
+x6
+0
+0
+1
+1
+2
+1
+2
+0
+35
+3 a1
+1
+0
+1
+1
+2
+−
+1
+2
+0
+5
+1
+2 a2
+0
+1 −
+1
+2
+−
+1
+2
+1
+0
+10 −2
+0 a6
+0
+0
+1
+2
+0
+−
+1
+2
+1 −5
+0
+0
+3
+2
+1
+2
+0
+1
+30
+3 a1
+1
+0
+1
+2
+1
+2
+0 −1
+10
+2 a2
+0
+1
+1
+2
+−
+1
+2
+0
+2
+0
+0 a5
+0
+0 −1
+0
+1 −2
+10
+OpenCourseWare, UPV/EHU
+
+4.7. Murrizketa berriak
+147
+Lehengai berria erabiliz, soluzio optimoa
+x
+∗
+1 = 10, x
+∗
+2 = 0 eta x
+∗
+3 = 0 da eta
+helburu funtzioaren balio optimoa
+z
+∗ = 30 da.
+2
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala

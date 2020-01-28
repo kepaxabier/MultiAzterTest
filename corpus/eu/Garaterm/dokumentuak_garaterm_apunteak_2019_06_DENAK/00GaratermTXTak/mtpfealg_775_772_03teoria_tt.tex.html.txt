@@ -1,0 +1,109 @@
+
+
+
+
+                 775\s\do5(7)72\s\do5(0)3teoria\s\do5(t)t.tex
+                                   mtpfealg
+                                   13/05/28
+ Chapter 1
+Talde ziklikoak
+ 1.1 Elementu baten ordena
+Aurreko gaian ikusi bezala, g elementu batek sortzen duen azpitaldea berredurek
+osatzen dute, i∈Z izanik. Gai honetan era honetako taldeak, elementu bakar
+baten berredurak baino ez dituztenak, estudiatuko ditugu. Horretarako,
+kontzeptu nagusia elementu baten ordenarena da, ondoren definitzen duguna.
+                  [Sorry. Ignored \begin{dfn} ... \end{dfn}]
+Beraz, g-ren ordena finitua bada dugu. Jakina, 1 ordenako elementu bakarra
+elementu neutroa da. Bestalde, kontuan hartuz betetzen dela baldin eta soilik
+baldin bada, berdintza ondorioztatzen dugu g guztietarako.
+                 [Sorry. Ignored \begin{adik} ... \end{adik}]
+Hurrengo teoremak esaten digu, g∈G elementu baten ordena ezagututa, g-ren bi
+berredura noiz diren berdinak jakin dezakegula.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Adibidez, taldean σ=
+              [Sorry. Ignored \begin{pmatrix} ... \end{pmatrix}]
+hartzen badugu, permutazio honen ordena 3 denez, dugu, baina .Behin jakinda eta
+    bi berredura noiz diren berdinak, g-k sortutako azpitaldeko elementuak
+ zerrendatu ahal ditugu errepikapenik gabe. Ondorioz, 〈g〉 azpitaldearen ordena
+           eman dezakegu. [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Adibidez, goian bezala hartzen badugu,
+              ,[Sorry. Ignored\begin{pmatrix} ... \end{pmatrix}]
+}
+dugu, errepikapenik gabe.
+Lagrangeren teorema aplikatuz, azkeneko teorema honek ondorengo korolarioa
+ematen digu, elementu baten ordenaren balio posibleak murrizten dituena.
+                  [Sorry. Ignored \begin{kor} ... \end{kor}]
+Beraz, G talde batean g elementu baten ordena kalkulatzeko orduan, bakarrik
+kezkatu behar dugu begiratzen den edo ez n berretzaileak G-ren ordena zatitzen
+duenean.
+Ondorengo emaitzak klasikoak dira zenbakien teorian, eta azken korolarioaren
+kasu bereziak dira.
+                  [Sorry. Ignored \begin{kor} ... \end{kor}]
+Atal hau bukatzeko, ikus dezagun nola, g elementuaren ordena ezagututa, g-ren
+edozein berreduraren ordena ere eman dezakegun.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Bereziki, o(g)=n<∞ eta i|n bada, dugu. Ondorioz, n-ren d zatitzaile bakoitzeko
+badago d ordena duen g-ren berredura bat: , hain zuzen ere. Adibidez, o(g)=12
+bada, elementua 2 ordenakoa da, 3 ordenakoa, 6 ordenakoa, eta abar.
+                  [Sorry. Ignored \begin{adi} ... \end{adi}]
+ 1.2 Talde ziklikoak. Talde zikliko baten sortzaileak
+                   [Sorry. Ignored\begin{dfn} ... \end{dfn}]
+Ondorengo emaitzak esaten digu nola ikusi ahal dugun talde finitu bat ziklikoa
+den edo ez, eta nabaria da Errorea: ez da erreferentziaren iturburua aurkitu
+teorema erabiliz.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+Elementu baten berredurak elkarrekin trukatzen direnez, talde ziklikoak
+abeldarrak dira bereziki. Hala ere, talde abeldar batek ez du zertan ziklikoa
+izan, (Z/8Z) taldeak erakusten duen bezala (ikusi beheko 4) adibidea).
+                 [Sorry. Ignored \begin{adik} ... \end{adik}]
+Definizioaren arabera talde zikliko batek sortzaile bat izan behar badu,
+logikoa da hau galdetzea: zein dira talde zikliko baten sortzaile guztiak?
+Hurrengo teoremak ematen digu erantzuna.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Adibidez, Z-ren sortzaile bakarrak 1 eta −1 dira, eta Z/nZ-renak, berriz,
+motakoak non (a,n)=1 den, hau da, (Z/nZ)-ko elementuak. Beste alde batetik, (Z/
+5Z)-ren sortzailea denez, eta talde honek 4 elementu dituenez, badago zehazki
+beste sortzaile bat: .
+ 1.3 Talde zikliko baten azpitaldeak
+Atal honetan talde zikliko baten azpitalde guztiak deskribatzen ditugu.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Adibidez, Z=〈1〉-ren azpitaldeak 〈r〉=rZ dira, r≥0 izanik. Garbi dago azpitalde
+hauek guztiak desberdinak direla. Bestalde, -ren azpitaldeak motakoak dira, r|n
+izanik. Kasu honetan ez da beharbada hain begibistakoa hauek desberdinak
+direnik, baina hurrengo teoremak hala dela ziurtatzen digu.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+                  [Sorry. Ignored \begin{kor} ... \end{kor}]
+                  [Sorry. Ignored \begin{adi} ... \end{adi}]
+ 1.4 Talde ziklikoen biderkadura zuzena
+Gai hau ondorengo galderari erantzunez bukatuko dugu: noiz da ziklikoa bi
+azpitalde ziklikoren biderkadura zuzena? Bi taldeak finituak diren kasuaren
+azterketarako, funtsezkoa da hurrengo lema, elkarrekin trukatzen diren bi
+elementuren biderkaduraren ordenari buruzkoa.
+                  [Sorry. Ignored \begin{lem} ... \end{lem}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Bi elementu, g eta h, elkarrekin trukatzen ez badira, ezin da kontrolatu gh-ren
+ordena g-ren eta h-ren ordenen funtzioan. Adibidez, talde dihedrikoan hartu 2π/
+n angeluko biraketa, σ, eta ϱ edozein erreflexio. Orduan τ=σϱ ere erreflexioa
+da eta, beraz, o(τ)=o(ϱ)=2. Hala ere, o(τϱ)=o(σ)=n guk nahi bezain handia izan
+daiteke.
+Demagun orain biderkadura zuzen bat dugula, eta bertan (g,h) elementu bat
+hartzen dugula. Orduan, (g,h)=(g,1)(1,h) faktorizazioa dugu. Ohartu (g,1) eta
+(1,h) elementuak elkarrekin trukatzen direla eta sortzen dituzten azpitaldeen
+ebakidura tribiala dela. Gainera, garbi dago o((g,1))=o(g) eta o((1,h))=o(h)
+dela. Beraz, o(g) eta o(h) finituak badira, aurreko lemaren (ii) ataletik o(
+(g,h))=[o(g),o(h)] ondorioztatzen dugu. Emaitza hau hurrengo teorema frogatzeko
+erabil dezakegu.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Azkeneko teoremaren ondorio gisa, Eulerren ϕ funtzioaren edozein balio
+kalkulatzeko formula bat eman dezakegu.
+                  [Sorry. Ignored \begin{kor} ... \end{kor}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+                  [Sorry. Ignored \begin{kor} ... \end{kor}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]

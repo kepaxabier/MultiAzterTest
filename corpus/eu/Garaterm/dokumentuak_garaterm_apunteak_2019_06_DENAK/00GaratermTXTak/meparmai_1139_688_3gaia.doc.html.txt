@@ -1,0 +1,1038 @@
+
+
+
+
+
+
+
+
+
+3._gaia_Estatistika_deskribatzailea
+****** 3.ESTATISTIKA DESKRIBATZAILEA ******
+***** 3.1SARRERA *****
+Esperimentuan datuen bilketaz, azterketaz, antolakuntzaz eta laburpenaz
+arduratzen den Estatistikaren arloa Estatistika Deskribatzailea da.
+
+3.1. adibidea: Demagun Hezkuntza-Sailak, karrera aukeratzerakoan urte horretan
+matrikulaturik dauden batxilergoko bigarren mailako ikasleen lehentasunak
+ezagutu nahi dituela. Honetarako galdera-sorta garatzen da. Galderak erantzun
+eta batu ondoren, informazio guztia antolatuko da: zenbaketa egin eta datuak
+tauletan ordenatuko dira; beharrezkoa baldin bada taldeak sortuko dira;
+informazioa erraztuko da; azalpen grafikoak egingo dira; eta abar.
+Baina, batxilergoko bigarren mailako ikasle guztiek galdera-sorta erantzun
+beharrak, esperimentua nahastu eta moteldu egingo du. Horretarako, Hezkuntza-
+Sailak Euskal Autonomi Elkarte osoan zehar ikasle batzu zoriz aukeratuko ditu,
+galdera-sorta berauek bakarrik erantzuten dutelarik.
+
+3.1. definizioa: Azterketa estatistikoaren helburuak diren elementuen multzoari
+populazioa deitzen zaio. Populazioaren elementu bakoitza unitate estatistikoa
+edo alea deitzen da.
+
+3.2. definizioa: Populazioaren azpimultzoa lagina deitzen da. Laginaren
+tamainua, laginaren elementu-kopurua da, n-ren bidez adierazten delarik.
+Populazio osoa aztertzea zaila denean, lagin bat aukeratzen da.
+
+3.2. adibidea: 3.1.adibidean oinarriturik. Populazioa, azterturiko ikasturtean
+batxilergoko bigarren mailan matrikulaturik dauden Euskal Autonomi Elkarteko
+ikasle guztiek osotzen dute. Lagina, galdera-sorta erantzuten duten ikasle
+taldea da.
+
+3.3. definizioa: Izaera, aztertzen den populazioaren propietatea da; izaerak
+aurkez dezakeen era edo egoera bakoitza modalitatea izanik.
+
+Izaerak, mota honetakoak izan daitezke:
+    * Kualitatiboak: beren modalitateak ezin daitezke era numerikoan adierazi.
+    * Kuantitatiboak: beren modalitateak neurgarriak dira.
+
+3.4. definizioa: Izaera kuantitatiboaren modalitateen neurketari dagokion
+zenbaki-multzoari aldagai estatistikoa deitzen zaio.
+
+Aldagai estatistikoak modu honetan sailka daitezke:
+    * Aldagai estatistiko diskretuak: modalitateek hartzen dituzten balioak
+      zenbaki diskretuak dira.
+    * Aldagai estatistiko jarraikiak: tarte batean barnean, edozein izan
+      daiteke modalitateak hartzen duen balioa.
+
+Oharra: Aldagai estatistiko diskretu eta jarraikien arteko ezberdintasuna
+guztiz erlatiboa da; neurrien akatsak direla kausa, azkenean, beti aldagaien
+balioak zenbaki diskretuak izango baitira; baina, teorikoki, ezberdintasuna
+argi dago eta, praktikoki, aldagaiak balio ezberdin asko hartzen dituenean,
+aldagai estatistikoa jarraikitzat hartuko da.
+***** 3.2TAULA ESTATISTIKOA *****
+Estatistika deskribatzaileak egiten duen lehenengoa hauxe da: aztertu nahi den
+fenomenoari datuak biltzea. Lan hau arazo delikatua da, zeren eta, fase
+honetako erroreak datuen azterketa faltsutzen baitu. Kasu bakoitzean, lana
+burutzeko erabide eta teknikak, egiten den azterketaren eta ikertzailearen
+erizpideen menpean daude. Demagun populazio edo lagin batean aldagai bat
+aztertu nahi dela. Orduan, datuak bildu eta gero, taula estatistiko edo
+maiztasun taula izenekoan ordenatuta aurkeztea da bigarren lana. Taula
+estatistikoan ondokoak adierazten dira:
+   1. lehen zutabean, aldagaia eta bere balioak txikienetik_handienera
+      ordenaturik.
+   2. bigarren zutabean: aldagaiaren balio bakoitzari dagokion laginaren ale-
+      kopurua edo maiztasun absolutua . Maiztasun absolutuek ondoko
+      propietateak betetzen dituzte:
+non, k aldagaiaren balio ezberdinen kopurua eta n laginaren tamainua diren.
+   1. hirugarren zutabean: aldagaiaren balio bakoitzari dagokion maiztasun
+      metatua , hots, txikiagoak diren balio guztien eta beronen maiztasun
+      absolutuen batura. Matematikoki, . Maiztasun metatuek ondoko propietatea
+      betetzen dute:
+non, k aldagaiaren balio ezberdinen kopurua eta n laginaren tamainua diren.
+   1. laugarren zutabean: aldagaiaren balio bakoitzari dagokion maiztasun
+      erlatiboa , hots, maiztasun absolutua eta laginaren tamainuaren arteko
+      zatidura, . Maiztasun erlatiboa, aldagaiaren balio bakoitzak adierazten
+      duen aleen batekoa bezala uler daiteke. Lehen gaian ikusi zen bezala,
+      maiztasun hauek probabilitatearekin lotuta daude. Maiztasun erlatiboek
+      ondoko propietateak betetzen dituzte:
+   i. 0  hi  1
+non, k aldagaiaren balio ezberdinen kopurua den.
+   1. bosgarren zutabean: aldagaiaren balio bakoitzari dagokion maiztasun
+      metatu erlatiboa , hots, txikiagoak diren balio guztien eta beronen
+      maiztasun erlatiboen batura. Matematikoki, . Maiztasun metatu erlatiboa,
+      maiztasun metatu eta laginaren tamainuaren arteko zatidura bezala ere
+      defini daiteke:
+.
+Maiztasun metatuek ondoko propietatea betetzen dute:
+non, k aldagaiaren balio ezberdinen kopurua den.
+
+Halaber, taula estatistikoan, portzentaia eta portzentai metatua adierazten
+dituzten beste zutabe bi ager daitezke. Zutabe bi hauek, maiztasun erlatiboak
+eta maiztasun metatu erlatiboak 100-ez biderkatuz lortzen dira, hurrenez
+hurren.
+Aurreko guztia kontuan izanik, taula estatistikoaren adierazpen orokorra
+ondokoa da:
+
+         Aldagaia      Maiztasun    Maiztasun     Maiztasun   Maiztasun metatu
+                       absolutua     metatua      erlatiboa       erlatiboa
+            .              .            .             .               .
+            .              .            .             .               .
+            .              .            .             .               .
+          Totala           n                          1
+
+3.3. adibidea : Birus baten latentzia-aldia ikertzeko, 90 txitei inokulatu
+zitzaien birusa. Bakoitzarentzako gaixotasunaren lehen sintomak agertu arte
+pasatutako egun-kopurua aztertu zen. Lortutako datuak hurrengoak ziren:
+
+      8   10   8    14   16   9    12   13   9    12   12   10   15   8    6
+      5   9    11   13   5    9    12   13   8    14   8    5    14   6    13
+      7   8    12   12   8    6    8    9    9    15   8    9    8    13   7
+      9   12   8    6    9    14   13   8    12   9    11   8    16   10   6
+      10  13   6    5    14   12   14   6    11   12   10   12   6    7    10
+      6   15   7    9    5    9    7    10   7    10   8    11   11   14   15
+
+Datu hauen azterketa egin baino lehen, jar ditzagun maiztasun taula
+estatistikoan:
+
+        Egun-kopurua
+              5             5             5             0.0556       0.0556
+              6             9             14             0.1         0.1556
+              7             6             20            0.0667       0.2223
+              8            14             34            0.1555       0.3778
+              9            12             46            0.1333       0.5111
+             10             8             54            0.0889        0.6
+             11             5             59            0.0556       0.6556
+             12            11             70            0.1222       0.7778
+             13             7             77            0.0778       0.8556
+             14             7             84            0.0778       0.9334
+             15             4             88            0.0444       0.9778
+             16             2             90            0.0222         1
+           Totala          90                             1
+
+Datuak txikienetik handienera ordenatzeak, aurrerago ikusiko dugunez,
+estatistiko batzuren kalkulua errazteko garrantzia du.
+11 egunetako latentzia-aldia daukaten txita portzentaia kalkulatu nahi bada,
+maiztasun erlatiboa 100-ez biderkatzea baizik ez dago: 0.0556100=5.56. Beraz,
+txiten %5.56ak 11 egunetako birusaren latentzia-aldia dauka.
+11 egun edo gutxiagoko latentzia-aldia daukaten txiten portzentaia baldin bada
+kalkulatu nahi duguna, maiztasun metatu erlatiboa 100-ez biderkatuko dugu:
+0.6556100=65.56. Beraz, txiten %65.56ak 11 egun edo gutxiagoko birusaren
+latentzia-aldia dauka.
+***** 3.3DATU ELKARTUAK *****
+Demagun datuak elkarturik daudela, zehaztasunagalduz. Adibidez, 20 eta 25 urte
+bitarteko gizonezkoen altuera ondoko erara neurtu da: 1.50 baino gutxiago
+(<1.50); 1.50 edo 1.50 baino gehiago eta 1.60 baino txikiago (1.50 eta <1.60);
+1.60 edo 1.60 baino gehiago eta 1.70 baino txikiago (1.60 eta <1.70); 1.70 edo
+1.70 baino gehiago eta 1.80 baino txikiago (1.70 eta <1.80); 1.80 edo 1.80
+baino gehiago eta 1.90 baino txikiago (1.80 eta <1.90) eta 1.90 edo 1.90 baino
+gehiago (1.90).
+Beste alde batetik, aldagaiak hartzen dituen balio-kopurua handia denean,
+datuen azterketa zaila egiten da. Kasu honetan, nahiz eta informazioa eta
+zehaztasunagaldu, komeni daiteke datuak elkartzea, beraien azterketa errazteko
+(adibidez txosten bat aurkezterakoan edo grafiko bat egiterakoan).
+Kasu bietan, datuak klase edo azpitarteetan elkartu beharra dago. Hau egiteko
+teknika ondokoa da:
+
+   1. Aldagai estatistikoaren heina edo aldakuntz tarte osoa determinatu.
+      Tartea, k azpitarteetan zatitzen da, lehen muturra eta azkena direlarik.
+      Zenbaki egokirik ez dago: klase-kopuru txikiak ezin lezake neurrien
+      arteko ezberdintasuna erakuts eta, beraz, informazioa gal liteke;
+      gehiegizko klase-kopurua egoteak metodoa korapila lezake eta metodo honen
+      bidez bilatu nahi duguna kalkuluak erraztea da, hain zuzen ere.k egokia
+      aukeratzeko laguntza bezala erabili daiteken metodo bat Sturges-en
+      erregela da, hots:
+non n laginaren tamainua den. Erregela honek eskeintzen duen klase-kopurua
+gutxi gora-beherakoa da, eta egokitasunaren eta adierazpen hoberenaren arabera
+gehi edo murriz daiteke.
+   1. Klase edo tarteak ondoko erara erdi-irekiak izango dira: , , , …, .
+      Honela, klase muga hauek inolako zalantzagarritasunik gabe hautatuko
+      dira. Hau da, datu_posible_bakoitzari_klase_bat_eta_bakar_bat_dagokio.
+      Beste era batetara esanik, balio bakoitza klaseren batean egon behar da
+      eta ezin da klase bitan egon.
+   2. Komenigarria da zabalera berdinako klaseak aukeratzea, ahal den neurrian.
+
+Honela, maiztasunak zenbatu, eta aurreko kasuetan egin dugun antzera, esandako
+zutabe guztiak dituen taula estatistikoa era dezakegu.
+   1. Klasearen marka klasearen erdiko puntua bezala definituko dugu: . Klase
+      bakoitzak daukan informazioa adierazten duen balioa da, estatistikoak
+      kalkulatzeko erabiltzen dena izateaz gain.
+   2. Klasearen zabalera, klasearen muga bien arteko kendura da:
+Honela, maiztasun taula datu elkartuak ditugunean ondokoa da:
+
+           X
+           .          .        .        .        .        .        .
+           .          .        .        .        .        .        .
+           .          .        .        .        .        .        .
+         Totala                         n                 1
+
+3.4. adibidea: 3.3. adibidea erabiliko dugu datuak elkartuz taula berri bat
+eratzeko. Lehenengo, aldagaiaren heina kalkulatu beharko dugu: 16-5=11. Klase-
+kopurua Sturges-en erregelaren bidez kalkulatuko dugu: ; beraz 7 klase egingo
+ditugu. Aldagaiaren heina klase-kopuruarekiko zatituz, klaseen gutxi gora
+beherako zabalera aterako zaigu: 11/7=1.5714. Zabalera hau erabili beharrean,
+kalkuluak errazteko, 2 zabalera onartuko dugu (emandakoa baino zabalera
+handiagoa hartzerakoan, klase-kopurua murriz daiteke). Klaseak ezin dira elkar
+gainezarri eta aldagaiaren balio posible guztiak betebehar dituzte, honetarako
+eta hartuko ditugu lehen behe-muga eta azken goi-muga bezala, hurrenez hurren.
+Honela, klaseak ondokoak dira: [4.5,6.5), [6.5,8.5), [8.5,10.5), [10.5,12.5),
+[12.5,14.5) y [14.5,16.5) eta taula estatistikoa hauxe da:
+
+         Egun-
+        kopurua
+      [4.5, 6.5)      5.5        2        14        14      0.1556   0.1556
+      [6.5, 8.5)      7.5        2        20        34      0.2222   0.3778
+      [8.5, 10.5)     9.5        2        20        54      0.2222    0.6
+        [10.5,       11.5        2        16        70      0.1778   0.7778
+         12.5)       13.5        2        14        84      0.1556   0.9334
+        [12.5,
+         14.5)
+        [14.5,       15.5        2         6        90      0.0666     1
+         16.5)
+        Totala                            90                  1
+***** 3.4ADIERAZPEN GRAFIKOAK *****
+Nahiz eta taula estatistikoan behar den informazio guztia izan, informazio hau
+grafikoen bidez adieraztea komenigarria da, batez ere, argiagoa edota ageriagoa
+egiteko, eta, lorturiko datuen laburpen bisual bat edukitzeko. Adierazpen
+grafikoek informazio orokorra, arina eta ulertzeko erraza eskeintzen digute,
+honetaz gain, informazioa erlatibizatzeko konparaketak egitea baimentzen
+dizkigute.
+Grafikoa ona izan behar da, alegia, testua irakurri gabe ulertzea beharrezkoa
+da. Honetarako, ondo etiketaturik egon behar da, ardatzetan aldagaien unitateak
+eduki behar ditu, eta abar.
+Adierazpen grafiko mota asko daude. Hauetariko batzu azalduko dira ondoren:
+
+   1. Barra-grafikoa: gehien erabiltzen denetariko bat da. Aldagai diskretuen
+      kasuan erabiltzen da. Abzisa-ardatzean aldagaiaren balioak eta ordenatu-
+      ardatzean maiztasun absolutu edo erlatiboak adierazten dira, batzuen eta
+      besteen arteko egokitasuna barra-sistema baten bidez deskribatuz. Barra
+      guztiak zabalera berdinekoak izan behar dira, eta ukitzaileak ez badira,
+      elkarrekiko distantzia berdinean egon behar dira.
+
+3.5. adibidea: 3.3. adibideko datuen barra-grafikoa egingo dugu (datuak elkartu
+aurretik).
+3.1. Irudia:3.3. adibideko datuen barra-grafikoa.
+
+   1. Grafiko metakorra: elkartu gabeko datu diskretuetan erabiltzen da,
+      aldagai kuantitatiboak aztertzerakoan. Abzisa-ardatzean aldagaiaren
+      balioak eta ordenatu-ardatzean maiztasun metatuak adierazten dira,
+      batzuen eta besteen arteko egokitasuna barra-sistema baten bidez
+      deskribatuz. Barra guztiak zabalera berdinekoak eta ukitzaileak izan
+      behar dira. Honetara, barra-grafikoa metakorra lortzen da. Barra
+      bakoitzaren goi-segmentuak lotzen direnean eskailera itxura duen grafiko
+      metakorra lortzen da. Grafiko hau maiztasun metatu erlatiboak erabiliz
+      ere egin daiteke.
+
+   1. adibidea: 3.3. adibideko grafiko metakorra egingo dugu (datuak elkartu
+      aurretik).
+
+3.2. Irudia:3.3. adibideko datuen grafiko metakorra.
+
+   1. Histograma: datuak klaseetan elkarturik daudenean erabiltzen da. Ardatz-
+      kartesiarren gainean, hurrengo moduko errektangelu-sistema eraikitzen da:
+      oinarriak, klaseen muga errealek definituak izango dira eta errektangelu
+      bakoitzak, adierazten duen klasearen maiztasun absolutu eta klasearen
+      zabaleraren arteko zatiduraren () araberakoaden altuera edukiko du.
+      Alegia, errektangelu bakoitzak, adierazten duen klasearen_maiztasun
+      absolutuaren_araberako_azalera edukiko du, zeren eta:
+Errektangeluaren zabalera =
+Altuera, zatiduraren araberakoa =
+Beraz, azalera maiztasun absolutuaren araberakoa =
+non, = klasearen zabalera
+= maiztasun absolutua
+k = proportzionaltasun-koefizientea
+Klase guztiek zabalera berdina baldin badaukate, errektangeluaren azalera, eta
+baita altuera, maiztasun absolutuaren araberakoak dira. Ordea, klaseek zabalera
+ezberdinak dauzkatenean, histograma irudikatzerakoan, maiztasun absolutuen
+araberako errektangeluak eraikitzea maiz egiten den akatsa da. Honek datuak
+oker interpretatzera garamatza.
+Maiztasun erlatiboak erabiliz ere eraiki daiteke histograma.
+
+3.7. adibidea: 3.4. adibideko datu elkartuen histograma eraikiko dugu.
+3.3. irudia:3.4. adibideko datuen histograma.
+
+3.8. adibidea: Ondoko datuak 50 pertsonen altuerak adierazten dituzte. Eraiki
+dezagun beraien histograma:
+              Altuera
+             1.40-1.60                          6
+             1.60-1.70                         22
+             1.70-1.75                         12
+             1.75-1.80                          7
+             1.80-1.90                          3
+              Totala                           50
+Klaseen zabalerak ez dira berdinak, orduan, maiztasunak klaseen zabaleraren
+artean zatitu beharko ditugu, ondoko taulan agertzen den bezala. Beraz,
+histograma 3.4. irudian agertzen dena da:
+
+
+          Altuera                                ai             fi/ai
+         1.40-1.60            6                  0.2              30
+         1.60-1.70            22                 0.1             220
+         1.70-1.75            12                0.05             240
+         1.75-1.80            7                 0.05             140
+         1.80-1.90            3                  0.1              30
+          Totala              50
+
+
+
+
+240
+220
+
+140
+30
+
+1.40 1.60 1.70 1.75 1.80 1.90
+Altuera
+3.4. irudia:3.7. adibideko datuen histograma.
+
+   1. Maiztasun-poligonoa: histogramako errektangeluen goiko oinarrien erdiko
+      puntuak lotzen dituen lerro poligonala da. Maiztasun erlatiboen poligonoa
+      ere eraiki daiteke. Laginaren tamainua emendatzerakoan, , maiztasun
+      erlatiboen poligonoa aldagaiaren dentsitate-funtzioaren adierazpen
+      grafikora hurbiltzen da (2. gaian ikusitakoa).
+
+3.9. adibidea: 3.4. adibideko datuen maiztasun (absolutuen) poligonoa ondokoa
+da.
+3.5. irudia:3.4. adibideko datuen maiztasun-poligonoa.
+
+   1. Ojiba edo maiztasun-poligono metakorra: abzisa-ardatzean klase
+      bakoitzaren goi-muturra eta ordenatu-ardatzean klasearen maiztasun
+      metatua jarririk lortzen diren puntuak lotuz eraikitzen den poligonoa da.
+      Alegia, (li+1,Fi) puntuak lotuz eraikitako lerro poligonala da. Baita
+      ere, maiztasun erlatiboen poligono metakorra eraiki daiteke. Laginaren
+      tamainua emendatzerakoan, , maiztasun erlatiboen poligono metakorra
+      aldagaiaren banaketa-funtzioaren adierazpen grafikora (ojiba deritzona)
+      hurbiltzen da (2. gaian ikusitakoa).
+
+3.10. adibidea: 3.4. adibideko datuen ojiba ondokoa da:
+3.6. irudia:3.4. adibideko datuen ojiba edo poligono metakorra.
+
+   1. Zurtoin eta hosto grafikoa (stem-and-leaf): eraikitzeko ondoko pausuak
+      jarraitu behar dira:
+   1. Aldagaiaren balio bakoitza osagai bitan banandu: zurtoin-osagaia eta
+      hosto-osagaia; non, zurtoin-osagaia azken zenbakia izan ezik beste
+      guztiak, eta, hosto-osagaia azken zenbakiak osoturik dauden. Adibidez,
+      483 balioaren zurtoin-osagaia 48 eta hosto osagaia 3 dira.
+   2. Grafikoaren ezkerreko goi muturrean lortutako zurtoin-osagai txikiena
+      jarri.
+   3. Bat batu balio honi eta justu azpian jarri.
+   4. Azken pausua errepikatu, zurtoin-osagairik handienera iritsi arte.
+   5. Zurtoin-osagaien eskuma-aldean lerro bertikal bat jarri.
+   6. Aldagaiaren balio bakoitzerako, bere zurtoin-osagaia aurkitu grafikoan;
+      eta honen parean, baina lerro bertikalaren eskuma-aldean, bere hosto-
+      osagaia idatzi. Errenkada bakoitzeko hosto-osagaiak txikienetik
+      handienera ordenatzen dira.
+Honela, hosto multzoak datuen banaketaren itxura orokorra hartzen du. Grafiko
+mota hau, grafiko eta taularen nahasketa da, zeren eta zenbakizko balioak
+taulan bezala agertzen baitira, baina histograma itxura baitu.
+
+   1. adibidea: Ondoko datuak 100 insekturen luzera adierazten dute:
+      111 121 124 104 125 102 122 137 110 101 58  118 92  108 132 32  140 138 96  161
+      91  122 138 99  115 104 98  89  119 109 120 86  115 118 95  83  112 128 127 124
+      104 115 138 105 144 87  88  103 108 109 123 134 94  67  124 155 105 100 112 141
+      128 106 125 108 98  133 104 122 124 110 104 132 98  146 132 93  85  94  116 113
+      133 115 127 135 89  121 112 135 115 64  121 68  107 122 126 88  89  108 115 85
+
+Irudika dezagun datu hauen zurtoin eta hosto grafikoa:
+      3  2
+      4
+      5  8
+      6  4 7 8
+      7
+      8  3 5 5 6 7 8 8 9 9 9
+      9  1 2 3 4 4 5 6 8 8 8 9
+      10 0 1 2 3 4 4 4 4 4 5 5 6 7 8 8 8 8 9 9
+      11 0 0 1 2 2 2 3 5 5 5 5 5 6 8 8 9
+      12 0 1 1 1 2 2 2 2 3 4 4 4 4 5 5 6 7 7 8 8
+      13 2 2 2 3 3 4 5 5 7 8 8 8
+      14 0 1 4 6
+      15 5
+      16 1
+
+3.7. irudia:3.11. adibideko datuen zurtoin eta hosto grafikoa.
+
+   1. Kutxa-diagrama (box-plot): gai honen amaieran azalduko da, berau
+      eraikitzeko tresna guztiak azaldu ondoren.
+***** 3.5ESTATISTIKOAK *****
+Biologi azterketa estatistikoaren tratamendurako aztertzen dugun etapa
+deskribatzailea, laburpen eredua behar izaten dugu. Eredu honek, datuen
+azterketa baimenduko digu modu maneiagarrian, eta bide batez, ondorio posibleak
+ateratzeko gaitasuna emango digu.
+Lehenago ikasitako grafikoak, laburpen mota bat dira. Hala ere, zenbakizko
+laburpena beharrezkoa da helburu gehienentzat.
+Gai honetan zehar aurkeztuko diren estatistiko guztiak lagin-neurriak dira,
+laginak soilik aztertzen baitira. Honen eta bigarren gaian aztertu diren
+parametroen arteko erlazioak ondorengo gaietan ezarriko ditugu.
+
+3.5. definizioa: Aztertutako aldagaiaren propietateak laburki eta zehazki
+deskribatzen dituen zenbakizko balioa estatistikoa deitzen da.
+**** 3.5.1Joera zentraleko estatistikoak ****
+3.6. definizioa: Joera zentraleko estatistikoa, neurriak bere inguruan,
+nolabait, biltzen direla adierazten duen zenbakizko balioa da.
+Estatistiko hauetariko batzu ondokoak dira:
+
+3.5.1.1 Batezbesteko aritmetikoa
+3.7. definizioa: Datu indibidualen baturaren eta laginaren elementu-kopuruaren
+arteko zatidura batezbesteko aritmetikoa da, hauxe da, n aletako lagin bat
+hartzen badugu eta bere ezaugarri estatistiko bat azterturik, neurriak lortzen
+baditugu,
+Neurriak errepikatuko balira, maiztasunak sortuko lirateke; hots, balioen
+maiztasunak baldin badira, batezbesteko aritmetikoaren adierazpena ondokoa da:
+
+Era berean, aldagai estatistikoaren banaketa klasez emango balitz, klase
+bakoitzaren zenbaki adierazgarria bere erdiko puntua edo klase-marka izango da.
+
+3.12. adibidea: Kalkula ditzagun 3.3. eta 3.4. adibideetako datuen batezbesteko
+aritmetikoak. Datu berdinak dira (txitei inokulaturiko birusen latentzia-
+aldia), baina baten (3.3.) datu zehatzak eta bestean (3.4.) elkartuta ditugu.
+
+Elkartu gabeko datuen kasuan (3.3. adibideko datuak): batezbesteko aritmetikoa
+ondokoa da: . Hots, txitei inokulaturiko birusaren batezbesteko latentzia-aldia
+9.9 egunetakoa da.
+Elkartutako datuen kasuan (3.4. adibideko datuak): batezbesteko aritmetikoa
+ondokoa da: . Hots, txitei inokulaturiko birusaren batezbesteko latentzia-aldia
+9.8 egunetakoa da.
+
+Taula estatistikoak ondokoak dira:
+
+      Egun-kopurua
+           xi
+            5                      5                    25
+            6                      9                    54
+            7                      6                    42
+            8                      14                  112
+            9                      12                  108
+           10                      8                    80
+           11                      5                    55
+           12                      11                  132
+           13                      7                    91
+           14                      7                    98
+           15                      4                    60
+           16                      2                    32
+         Totala                    90                  889
+
+   Egun-kopurua
+    [4.5, 6.5)         5.5              14                   77
+    [6.5, 8.5)         7.5              20                  150
+   [8.5, 10.5)         9.5              20                  190
+   [10.5, 12.5)        11.5             16                  184
+   [12.5, 14.5)        13.5             14                  189
+   [14.5, 16.5)        15.5              6                   93
+      Totala                            90                  883
+
+Agertutako batezbestekoak ezberdinak dira; hau guztiz logikoa da, zeren eta
+datuak elkartzerakoan informazioa galtzen baita, eta honek estatistikoaren
+kalkuluan eragina baitu. Dena den, klase-kopurua egokia baldin bada, galdutako
+informazioa ez da garrantzitsua.
+
+Batezbesteko aritmetikoaren propietateak:
+   1. Bere abantailarik handiena kalkulatzeko erraztasuna da.
+   2. Bere oztopoa da, lagin-fluktuazioekiko sentikorra izan daitekela,
+      muturretan jartzen diren balio arraroek eragina daukatelako
+      batezbestekoan. Adibidez, 2, 3, 4, 5, 5, 6 eta 300 balioen batezbesteko
+      aritmetikoa da, baina balio honek ez ditu aurreko balioak ondo
+      adierazten.
+
+   1. Mediana
+3.8. definizioa: Mediana,Me, alde bakoitzean ale-kopuru berdina daukan
+aldagaiaren balioa da, txikienetik handienera ordenatuta daudela suposaturik;
+hau da, alde bakoitzean elementuen %50a uzten duen aldagaiaren balioa.
+Geometrikoki, histogramaren azalera osoa bi zati berdinetan banatzen duen x
+abzisaren balioa da. Mediana kalkulatzeko datuak elkartuta edo elkartu gabe
+dauden kasu biak bereiztuko ditugu.
+
+   1. Elkartu gabeko datuak: datuak taula estatistikoan jarri ondoren mediana
+      kalkulatzeko ondokoa egin behar da:
+   1. kalkulatzen da.
+   2. taulako maiztasun metatuen (Fi) zutabean agertzen den ala ez egiaztatzen
+      da.
+   3. Ez bada agertzen, maiztasun metatu biren bitartean egon beharko da, beraz
+      hauetatik handienari dagokion aldagaiaren balioa izango da mediana.
+   4. balioa taulako maiztasun metatuetariko bat baldin bada, adibidez ,
+      orduan:
+
+3.13. adibidea: Kalkula dezagun 3.3. adibideko datuen mediana; hau da, txitei
+inokulaturiko birusaren latentzia-aldiaren mediana (datuak elkartu gabe).
+
+           Egun-kopurua
+                 5                    5                  5
+                 6                    9                  14
+                 7                    6                  20
+                 8                    14                 34
+                 9                    12                 46
+                10                    8                  54
+                11                    5                  59
+                12                    11                 70
+                13                    7                  77
+                14                    7                  84
+                15                    4                  88
+                16                    2                  90
+              Totala                  90
+
+
+
+
+Kasu honetan, n=90, orduan n/2=45. 45 ez da agertzen maiztasun metatuen
+zutabean. 3) atalean esandakoari jarraituz, handiagoa den lehenengo maiztasun
+46 da, eta honi dagokion aldagiaren balioa 9 da, alegia Me=9.
+
+
+
+
+
+   1. Elkartutako datuak: beti, mediana datu originalekin kalkulatzea hobe da,
+      noski. Baina, datuak ez ditugunean, propietate geometriko sinple batzutan
+      oinarritzen den ondoko formula aplikatuko dugu. Mediana barne daukan
+      klaseko datuak, klasean uniformeki banatuta daudela onartzen da.
+      Baldintza honen pean, mediana Me ondoko formularen bidez kalkulatzen da:
+.
+non  = mediana daukan klasearen beheko muga
+n = laginaren tamainua
+= mediana daukanaren aurreko klasearen maiztasun metatua
+= mediana daukan klasearen zabalera
+= mediana daukan klasearen maiztasuna
+diren.
+Geometrikoki, ondoko 3.8. irudiak adierazten du medianaren kalkulu-metodoa
+datuak elkarturik daudenean:
+Fi
+n/2fi=Fi-Fi-1
+n/2-Fi-1
+Fi-1
+
+li-1liMe li+1
+3.8. irudia:datu elkartuetan, medianaren kalkulu-geometrikoa.
+
+3.14. adibidea: Kalkula dezagun 3.4. adibideko datuen mediana; hau da, txitei
+inokulaturiko birusaren latentzia-aldiaren mediana (datuak elkarturik).
+   Egun-kopurua         xi
+    [4.5, 6.5)         5.5          2         14             14
+    [6.5, 8.5)         7.5          2         20             34
+   [8.5, 10.5)         9.5          2         20             54
+   [10.5, 12.5)        11.5         2         16             70
+   [12.5, 14.5)        13.5         2         14             84
+   [14.5, 16.5)        15.5         2         6              90
+      Totala                                  90
+
+Mediana ondoko erara kalkulatuko da:
+n/2 = 90/2 = 45 orduan, mediana daukan klasea [8.5, 10.5) da.
+Beraz, li=8.5, Fi-1=34, ai=2 eta fi=20. Hau da,
+egun
+Mediana, bere ezkerretara banaketaren %50a uzten duen balio zentrala da.
+Medianaren propietateak:
+   1. Banaketa asimetrikoak ditugunean, joera zentraleko estatistikorik
+      adierazgarriena mediana da.
+   2. Kalkulatzeko erraza da.
+   3. Lagin-fluktuazioekiko, edo balio arraroekiko, ez da sentikorra; beraz,
+      kasu honetan batezbestekoaren ordez erabil daiteke.
+   4. Datu guztiak beraien ordena finkatzeko soilik erabiltzen dira, beraz
+      datuen balioek ez dute beregan eraginik.
+
+3.5.1.3. Moda
+3.9. definizioa: Moda, Mo, maiztasun handiena daukan aldagaiaren balioa da;
+hots, aldi-kopuru gehienetan agertzen den neurria.
+
+Moda ez da zertan bakarra izan behar. Maiztasun banaketan, grafikoaren maximoa
+(k) adierazten duen (dituen) absiza balioa(k) da (dira). Moda kalkulatzeko
+datuak elkartuta edo elkartu gabe dauden kasu biak bereiztuko ditugu.
+
+   1. Elkartu gabeko datuak: maiztasun absoluturik handiena daukan balioa da.
+
+3.15. adibidea: Kalkula dezagun 3.3. adibideko datuen moda; hau da, txitei
+inokulaturiko birusaren latentzia-aldiaren moda (datuak elkartu gabe).
+Maiztasun absoluturik handiena 14 da, eta honi dagokion aldagaiaren balioa 8
+(begira ezazu 3.3. adibidean eraikitako taula); orduan Mo=8.
+
+   1. Elkartutako datuak: beti, moda (mediana bezala) datu originalekin
+      kalkulatzea hobe izaten da, noski. Baina, datuak ez ditugunean,
+      propietate geometriko sinple batzutan oinarritzen den formula aplikatuko
+      dugu. Maiztasun-konzentraziorik handiena ( handiena, edo histogramako
+      altuerarik handiena) daukan klaseari klase modala deituko diogu, eta kasu
+      honetan, modaren balioa ondoko adierazpenaren bidez kalkulatzen da:
+
+non: = klase modalaren beheko muga
+= klase modalaren zabalera
+= klase modalaren histogramako altuera
+= klase modalaren aurreko klasearen histogramako altuera (klase modala
+lehenengoa baldin bada, balio hau 0 da)
+= klase modalaren hurrengo klasearen histogramako altuera (klase modala azkena
+baldin bada, balio hau 0 da)
+diren.
+
+Geometrikoki, ondoko 3.9. irudiak adierazten du modaren kalkulu-metodoa datuak
+elkarturik daudenean:
+
+ fi/ai
+
+
+
+
+
+
+li-1liMo li+1li+2
+
+3.9. irudia:datu elkartuetan, modaren kalkulu-geometrikoa.
+
+3.16. adibidea: Kalkula dezagun 3.4. adibideko datuen moda; hau da, txitei
+inokulaturiko birusaren latentzia-aldiaren moda (datuak elkarturik).
+
+
+        Egun-kopurua
+         [4.5, 6.5)         5.5             2                 7
+         [6.5, 8.5)         7.5             2                 10
+         [8.5, 10.5)        9.5             2                 10
+        [10.5, 12.5)       11.5             2                 8
+        [12.5, 14.5)       13.5             2                 7
+        [14.5, 16.5)       15.5             2                 3
+           Totala
+
+
+
+
+Klase modal bi daude: [6.5, 8.5) eta [8.5, 10.5), zeren eta histogramako
+altuera maximoa biek baitute dute. Klase bakoitzeko moda kalkulatzen da:
+Kasu honetan, klaseak jarraian daudenez, moda bakarra da.
+3.17. adibidea:Kalkula dezagun 3.8. adibideko datuen moda; hau da 50 pertsonen
+altueren moda (datuak elkarturik).
+
+          Altuera                                ai             fi/ai
+         1.40-1.60            6                  0.2              30
+         1.60-1.70            22                 0.1             220
+         1.70-1.75            12                0.05             240
+         1.75-1.80            7                 0.05             140
+         1.80-1.90            3                  0.1              30
+          Totala              50
+
+Histogramaren altuerak begiratu behar ditugu (). Handiena 240 da, eta [1.70,
+1.75) klaseari dagokio, orduan berau izango da klase modala. Formula aplikatuz:
+metro.
+
+Modaren propietateak:
+   1. Literatur zientifikoan gutxien agertzen den joera zentraleko estatistikoa
+      da, eta ea inoiz ez da inferentzia estatistikorik egiten berarengan,
+      arrazoia bere tratamendu matematikoa zaila izatea delarik.
+   2. Bere kalkuluan lagineko datu bakar bat erabiltzen denez, informazio asko
+      galtzen da.
+   3. Nahiz eta joera zentraleko neurria izan, moda ez da zertan erdi aldean
+      egon behar; banaketaren muturretan egon daiteke.
+
+**** 3.5.2Posizio-estatistikoak ****
+Mediana, alde bakoitzean balioen %50a uzten duen aldagaiaren balioa izan arren,
+hots, balioen posizioarekiko balio zentrala izan, zenbait posizio adierazten
+dizkiguten beste estatistiko batzu ere defini ditzakegu.
+
+3.10. definizioa: Lagin ordenatua 100 zati berdinetan banatzen dituzten
+aldagaiaren balioak pertzentilak deitzen dira, adierazten direlarik.
+Orokorrean, i-garren pertzentila, bere ezkerrean balioen %ia uzten duen
+aldagaiaren balioa da.
+
+Pertzentil batzu, erabilgarrienak, izen bereziak hartzen dituzte. Honela,
+lehenengo, bigarren eta hirugarren koartilak deitzen dira, adierazten
+direlarik; zeren eta bere ezkerrean lagin ordenatuaren laugarren partea, erdia
+eta hiru laurdenak, hurrenez hurren, uzten baitituzte dituzte. Alegia, lagina 4
+zati berdinetan banatzen dute. Era berean, dezilak deitzen dira, adierazten
+direlarik; zeren eta lagin ordenatua 10 zati berdinetan banatzen baitute dute.
+Ohar gaitezen, azken definizio hauek erabiliz, betetzen dela.
+
+Pertzentilen kalkulua medianaren kalkuluaren antzera egiten da. Honela, , j-
+garren pertzentila kalkulatzeko:
+
+   1. Elkartu gabeko datuak: medianaren kalkulurako emandako urratsak
+      jarraitzen dira; baina orain, baizik, erabiliz.
+
+   1. Elkartutako datuak: medianaren kalkuluan bezala, pertzentila dagoen
+      klasea aurkitu ondoren, kalkulatzeko ondoko formula erabiliz:
+sinboloen adierazpena medianaren formulako berdina delarik.
+
+3.18. adibidea: Kalkula dezagun 60. pertzentila, 3.3. adibideko datuak
+erabiliz; hau da, txiten %60a gaixotu arte iraun den birusaren latentzia-aldia
+(datuak elkartu gabe).
+
+
+           Egun-kopurua
+                 5                    5                  5
+                 6                    9                  14
+                 7                    6                  20
+                 8                    14                 34
+                 9                    12                 46
+                10                    8                  54
+                11                    5                  59
+                12                    11                 70
+                13                    7                  77
+                14                    7                  84
+                15                    4                  88
+                16                    2                  90
+              Totala                  90
+
+
+
+Kasu honetan, n=90 denez, orduan . Balio hau maiztasun metatuen zutabean
+agertzen da, beraz, medianaren kalkuluan amandako 4) atalari jarraituz:
+Orduan, txiten %60ak, birusa inokulatu eta 10.5 egun baino lehenago
+gaixotasunaren sintomak dituzte.
+
+3.19. adibidea: Kalkula dezagun lehen koartila, 3.4. adibideko datuak erabiliz;
+hau da, txiten %25a gaixotu arte iraun den birusaren latentzia-aldia, datuak
+elkarturik daudenean.
+Lehen koartila kalkulatzeko:  = 22.5. Orduan, lehen koartila daukan klasea
+[6.5,8.5) da.
+
+   Egun-kopurua
+    [4.5, 6.5)         5.5          2         14             14
+    [6.5, 8.5)         7.5          2         20             34
+   [8.5, 10.5)         9.5          2         20             54
+   [10.5, 12.5)        11.5         2         16             70
+   [12.5, 14.5)        13.5         2         14             84
+   [14.5, 16.5)        15.5         2         6              90
+      Totala                                  90
+
+Beraz, li=6.5, Fi-1=14, ai=2 y fi=20. Eta,
+Orduan, txiten %25ak, birusa inokulatu eta 7.85 egun baino lehenago
+gaixotasunaren sintomak dituzte.
+**** 3.5.3Sakabanapen-estatistikoak ****
+Posizio eta joera zentraleko estatistikoak, laginaren kontzentrazioari buruzko
+informaziorik ez digute ematen. Posible da joera zentraleko estatistiko
+berdinak dituzten lagin bi aukeratzea, non baten balioak bestearenak baino
+bilduagoak diren. Bi laginen arteko ezberdintasun hau nabaria egiteko
+sakabanapen-estatistikoak erabiltzen dira.
+
+3.20. adibidea: Ikasturte berdineko ikasle talde biri, zenbakizko gaitasunari
+buruzko 100 galderatako test bat egin arazi diote, lortutako balioak ondokoak
+direlarik:
+
+       A taldea                         B taldea
+          46                               10
+          48                               18
+          49                               30
+          50                               50
+          50                               50
+          51                               70
+          52                               82
+          54                               90
+
+Batezbestekoa, mediana eta moda kalkulatzen ditugunean, hirurak 50 direla
+konturatzen gara. Bi taldeak, ostera, nahiko ezberdinak dira. A taldean, ikasle
+gehienak ea-ea galdera erdiak erantzun dituzte; B taldean, ordea, ikasle batzuk
+galdera gehienak eta beste batzuk oso galdera gutxi erantzun dituzte. Beraz, A
+taldeko ikasleen erantzunak erdian oso kontzentratuta dauden bitartean, B
+taldekoenak oso sakabanatuta daude.
+
+Beraz, banaketaren azterketa egiterakoan, joera zentraleko neurriak soilik
+aztertzea ez da nahikoa, datuen sakabanapena ezagutzea derrigorrezkoa egiten
+zaigularik.
+
+3.11. definizioa: Aldagaiak duen, zentralizazioarekiko, sakabanapena edo
+kontzentrazioa adierazten duten neurriak sakabanapen-estatistikoak deitzen
+dira.
+
+Datuek aldakuntzarik ez daukatenean, hau da, zenbaki bakar batean
+kontzentraturik daudenean, edozein sakabanapen-estatistikoren balioa zero
+izango da; beste kasuetan balio positiboak bakarrik hartzen dituztelarik.
+Zenbat eta sakabanapen handiagoa, estatistikoen balioa handiagoa izango da.
+
+3.5.3.1 Heina
+3.12. definizioa: Heina, anplitudea edo aldakuntz tartea, sakabanapen neurririk
+sinpleena eta intuikorrena da, laginaren balio handienaren eta txikienaren
+arteko kendura bezala definitzen da, bere adierazpena R delarik.
+                                 R=Xmax- Xmin
+
+Heinaren propietateak:
+   1. Abantailarik nabariena kalkuluaren erraztasuna da.
+   2. Eragozpenik garrantzizkoenak hauxek dira: bakarrik balio biren menpean
+      dagoela, eta, laginaren tamainua handitzerakoan, handitu egiten dela.
+
+3.21. adibidea: Azter dezagun sei balioz osoturiko ondoko lagina: 7, 1, 8, 9,
+2, 10. Lagin honen heina hauxe da:
+R
+=Xmax- Xmin= 10-1 = 9
+3.5.3.2 Koartilarteko heina
+3.13. definizioa: Koartilarteko heina, aldakuntza edo anplitudea, hirugarren
+eta lehen koartilen arteko kendura bezala definitzen da, RI adierazten delarik.
+
+Koartilarteko heinaren propietateak:
+Heinak laginaren %100aren aldakuntza adierazten du; koartilarteko heinak,
+ostera, laginaren erdiko %50arena eskeintzen digu. Hau dela eta, muturretako
+balio arraroak azkenengoan ez dute eraginik izango eta estatistiko hau
+sendoagoa izango da.
+
+3.5.3.3 Bariantza
+3.14. definizioa: Aldagaiaren balioen eta batezbestekoaren arteko kendurak
+batezbestekoarekiko desbiderapenak deitzen dira. Hots, aldagaiaren balioak eta
+batezbestekoa baldin badira, batezbestekoarekiko desbiderapenak (x1  ), (x2 
+), …, (xn  ) dira.
+
+3.15. definizioa: Laginaren bariantza, batezbestekoarekiko desbiderapenen
+karratuen batezbestekoa da, adierazten delarik. Matematikoki hauxe da bere
+adierazpena:
+
+Neurriak errepikatuko balira, maiztasunak sortuko lirateke; hots, balioen
+maiztasunak baldin badira, batezbesteko aritmetikoaren adierazpena ondokoa da:
+
+Bariantzaren kalkulua errazteko ondoko formula baliokideetariko bat erabil
+daiteke segun eta aurreko zein kasutan gauden:
+edo
+Froga dezagun baliokidetasun hau maiztasunak erabiltzen direnean:
+
+Bariantzaren propietateak:
+   1. Bariantzaren erabilpen matematikoa oso erraza denez, hauxe da gehien
+      erabiltzen denetariko sakabanapen neurri bat.
+   2. Bere eragozpenik garrantzizkoena aldagaiaren unitate karratuetan
+      adieraztean datza.
+
+3.22. adibidea: Kalkula dezagun 3.3. adibideko datuen bariantza; hau da, txitei
+inokulaturiko birusaren latentzia-aldiaren bariantza (datuak elkartu gabe).
+Batezbestekoa kalkulaturik zegoen, .
+Egun-kopurua (xi)
+        5                   5                   25              125
+        6                   9                   54              324
+        7                   6                   42              294
+        8                  14                  112              896
+        9                  12                  108              972
+        10                  8                   80              800
+        11                  5                   55              605
+        12                 11                  132              1584
+        13                  7                   91              1183
+        14                  7                   98              1372
+        15                  4                   60              900
+        16                  2                   32              512
+      Totala               90                  889              9567
+
+
+Laginaren bariantza hauxe da:
+egun karratuak
+
+
+
+3.5.3.4 Desbiderapen estandarra
+3.16. definizioa: Laginaren desbiderapen estandarra, sn, bariantzaren erro
+karratu positiboa da. Batzuetan sakabanapen absolutua deitzen diogu ere.
+
+Desbiderapen estandarraren propietateak:
+Bariantzaren abantaila berdinak ditu, eta gainera, kasu honetan, bere unitateak
+aldagaiarenak dira.
+
+3.5.3.5 Kuasibariantza
+3.17. definizioa: Laginaren kuasibariantza, adierazten da, eta ondoko erara
+kalkulatzen da:
+Neurriak errepikatuko balira, maiztasunak sortuko lirateke; hots, balioen
+maiztasunak baldin badira, batezbesteko aritmetikoaren adierazpena ondokoa da:
+Aurreko hauen formula baliokideak hauek dira:
+edo
+
+Hurrengo gaian sakonki ikusiko denez, estimazioaren alborapena dela eta,
+laginaren bariantzaren ordez kuasibariantza erabiltzen da maiz.
+Bariantza eta kuasibariantzeren arteko erlazioa ondokoa da:
+
+3.5.3.6 Aldakuntz-koefizientea
+3.18. definizioa:Laginaren aldakuntz koefizientea desbiderapen estandarra eta
+batezbestekoaren arteko zatidura da, ehunekotan bihurtu ondoren, CV adierazten
+delarik.
+%
+Dimentsio gabeko kantitatea da eta portzentaiatan adierazten dugu. Batzuetan
+sakabanapen erlatiboa deitzen diogu ere. Neurri hau sakabanapena konparatzeko
+erabiltzen da ondoko kasuetan:
+   1. Aldagai berdina lagin ezberdinetan: batezbesteko ezberdinak dituzten
+      laginetako sakabanapena konparatzeko erabiltzen da; zeren eta, 10-eko
+      desbiderapen estandarra ez baita berdina batezbestekoa 10-ekoa edo 1000-
+      koa denean. Esate baterako, demagun altueraren azterketa lagin bitan
+      egiten dela, lehenengoa jaio berriak eta bigarrena 65 urtetik gorako
+      pertsonak osoturik egonik, hurrenez hurren. Beraz, 10 cm-tako
+      diferentziaren esangura oso desberdina da lagin bi hauetan. Hots,
+      lehenengoan bigarrenean baino askoz ere adierazgarriagoa da.
+   2. Lagin berdineko aldagai ezberdinak.
+
+3.23. adibidea: Gaixo talde bati tratamendu desberdin bi eman ondoren, beraien
+sendatze denbora neurtzen da. Sendagileak ondoko datuak lortu ditu:
+A tratamendua:
+B tratamendua:
+Zein tratamendutako datuak dira sakabanatuenak?
+Galdera honi erantzuteko, ezin ditugu beste barik desbiderapen estandarrak
+konparatu, zeren eta tratamenduek batezbesteko sendatze egun-kopuru desberdina
+baitute. Sakabanapena konparatzeko aldakuntz koefizientea erabili behar dugu.
+CVA=100.6/45=13.33%
+CVB=100.2/13=15.38%
+Beraz, B tratamendua lorturiko egun-kopurua A tratamenduan lorturikoa baino
+sakabanatuagoa da, bere aldakuntz koefizientea handiagoa delako, nahiz eta
+desbiderapen estandarra txikiagoa izan.
+
+**** 3.5.4Forma-estatistikoak ****
+3.19. definizio: Forma-estatistikoak banaketaren itxura adierazten duten
+zenbakizko balioak dira; alegia, banaketaren adierazpen grafikoa egin gabe
+simetria ezagutzea baimentzen digu.
+
+3.20. definizioa: Maiztasun-banaketa alboragabea dela esango dugu, neurri
+zentral batekiko distantzia berean dauden balioen maiztasunak berdinak baldin
+badira. Beste kasuetan banaketa alboraduna izango da. Maiztasun-banaketak
+eskuinerantz isats luzeagoa erakusten baldin badu, eskuinerantz alboratua; eta
+ordea, ezkerrerantz isats luzeagoa erakusten baldin badu, ezkerrerantz
+alboratua deituko diogu.
+
+
+
+
+
+
+
+
+= Me = Mo Mo< Me < < Me < Mo
+Alboragabea Eskuinerantz alboratua Ezkerrerantz alboratua
+
+3.10. irudia:alborapenaren adierazpen grafikoa.
+
+3.5.4.1. Alborapena.
+3.21. definizioa: Alborapena, banaketaren simetria neurtzen duen estatistikoa
+da; batezbesteko aritmetikoa eta modaren arteko kendurak definiturik dago,
+desbiderapen estandarrekiko zatituz adimentsionala egiten delarik.  letra
+bidez adierazten da, eta, matematikoki ondoko erara kalkulatzen da:
+
+Estatistiko honen zentzua, moda bakar bat eta kanpai itxura duten banaketetan
+da. Asimetria ondoko erara neurtzen du:
+   1. baldin bada, banaketa simetrikoa edo alboragabea da.
+   2. baldin bada, banaketa eskuinerantz alboratua da.
+   3. baldin bada, banaketa ezkerrerantz alboratua da.
+
+3.24. adibidea:Kalkula dezagun 3.3. adibideko datuen alborapena; hau da, txitei
+inokulaturiko birusaren latentzia-aldiaren alborapena (datuak elkartu gabe).
+Ezagunak dira: egun, Mo=8 egun eta egun2
+Orduan: , beraz, eskuinerantz alboratua.
+   1. adibidean, datu hauen barra-grafikoa irudikatu dugu, eta banaketa
+      eskuinerantz alboratua zela nabaria zen.
+***** 3.6ERANSKINA: KUTXA-DIAGRAMA *****
+Estatistiko guztiak azaldu ondoren kutxa-diagrama eraikitzeko behar diren
+tresna guztiak ezagutzen ditugu. Kutxa-diagrama, datu-multzo baten posizioaren
+ikus-pertzepzioa errazten duen adierazpen grafikoa da. Baita, outlier deritzon
+balio arraro edo muturretakoak aurkitzea baimentzen digu. Hainbat datu-
+multzoren banaketa konparatu nahi direnean oso erabilgarria da. Kutxa-diagrama
+edozein estatistikarako software-en bidez eraiki daitezken arren, bere
+erikuntza pausuka azalduko dugu. Pausoak ondokoak dira:
+   1. Erreferentzia eskala irudikatu, bertikala zein horizontala.
+   2. Mediana, lehen eta hirugarren koartilak eta koartilarteko heina
+      kalkulatu.
+   3. Barne-hesiak deitzen diren m1 eta m3 puntuak kalkulatu ondoko erara:
+m1=q1-1.5RI
+m3=q3+1.5RI
+Puntu hauek outlier-ak detektatzeko erabiliko dira.
+   1. Albo-balioak deitzen diren b1 eta b3 balioak kalkulatu. Non, b1, m1
+      balioarengandik hurbilen dagoen aldagaiaren balioa da, m1 baino txikiagoa
+      ez izanik; eta, b3, m3 balioarengandik hurbilen dagoen aldagaiaren balioa
+      da, m3 baino handiagoa ez izanik.
+   2. Kanpo-hesiak deitzen diren M1 eta M3 puntuak kalkulatu ondoko erara:
+M1=q1-2(1.5)RI
+M3=q3+2(1.5)RI
+   1. Orain arte kalkulaturiko balio guztiak eskalan kokatu.
+   2. q1 eta q3 balioak muturretan ezarriz, kutxa bat irudikatu, mediana dagoen
+      puntuan lerro bat jarririk.
+   3. Albo-balioak besoen bidez adierazi, eta kutxarekin lotu.
+   4. Barne eta kanpo-hesien bitartean dauden aldagaiaren balioak, zirkulu
+      irekien bidez adierazi. Puntu hauek outlier moderatu bezala
+      kontsideratzen dira.
+   5. Kanpo-hesien kanpokaldean dauden aldagaiaren balioak asteriskoen bidez
+      adierazi. Puntu hauek izugarrizko outlier bezala kontsideratzen dira.
+
+M1 m1 b1 q1 Me q3 b3 m3 M3
+
+* *
+
+3.11. irudia:kutxa-diagramaren irudikapena.
+
+3.25. adibidea: Buruko lesio bat izan ondoren pairatzen den amnesiari buruzko
+ikerketa egin da. Azterturiko aldagaia, hospitaleko egonaldiaren egun-kopurua
+da. 21 pazienterengan lorturiko datuak ondokoak dira:
+         12        27        32         8        35        36         40
+         20        30        40        40        47        89        108
+         40        42        45        61        52        41         50
+Irudika dezagun datu hauen kutxa-diagrama. Honetarako mediana, lehen eta
+hirugarren koartilak kalkulatuko ditugu:
+
+
+     Egun-kopurua xi                fi                   Fi
+            8                       1                    1
+            12                      1                    2
+            20                      1                    3
+            27                      1                    4
+            30                      1                    5
+            32                      1                    6
+            35                      1                    7
+            36                      1                    8
+            40                      4                    12
+            41                      1                    13
+            42                      1                    14
+            45                      1                    15
+            47                      1                    16
+            50                      1                    17
+            52                      1                    18
+            61                      1                    19
+            89                      1                    20
+           108                      1                    21
+          Totala                    21
+
+
+
+n=21 denez, n/2=10.5, beraz Me=40.
+Beste aldetik n/4=21/4=5.25, beraz q1=32.
+Eta, 3n/4=3.21/4=15.75, beraz q3=47.
+Datu hauekin, koartilarteko heina:
+RI=47-32=15 da.
+Barne-hesiak: m1=32-1.5·(15)=9.5
+m3=47+1.5·(15)=69.5.
+Albo-balioak: b1=12 (handiagoa izanik, 9.5-etik hurbilena izateagaitik) eta
+b3=61 (txikiagoa izanik, 69.5-tik hurbilena izateagaitik).
+Kanpo-hesiak: M1=32-2·(1.5)·(15)=-13
+M3=47+2·(1.5)·(15)=92.
+Bi outlier moderatu: 8 (-13<8<12) eta 89 (61<89<92); eta izugarrizko outlier
+bat: 108 (108>92) ditugu.
+
+Kutxa-diagrama ondoko erara irudikatzen da:
+
+0 10 20 30 40 50 60 70 80 90 100 110
+
+*
+
+3.12. irudia:3.25. adibideko datuen kutxa-diagrama.
+
+
+Erdi-lerroak (medianak), banaketaren itxura edo forma adierazten digu. Lerroa
+zentratua ez badago, banaketa kutxaren alderik luzeenerantz alboratua da.
+Banaketa normaletik lagina hartzerakoan, barne-hesietatik kanpo 1000 baliotik 7
+baino ez direla egongo froga daiteke. Balio hauek ez ohizkoak direnez, outlier-
+ak kontsideratzen dira. Outlier-ak kontu handiarekin aztertu behar dira, zeren
+eta batezbesteko aritmetikoarengan, bariantzarengan eta desbiderapen
+estandarrarengan eragin handia eduki baitezakete. Outlier bat aurkitzen den
+bakoitzean, bere arrazoia aztertu beharko litzateke: txarto erregistraturiko
+balio bat al da? Ikerkuntzako errore edo istripuren baten ondorioa al da?
+Benetakoa al da?. Lehenengo bi kasuetan, outlier-ak ezabatuz, gelditzen diren
+datuen azterketa egin daiteke. Azken kasuan, outlier-a ezagutaraztea komeni da,
+estatistikoak, bera kontuan hartuz eta kontuan hartu gabe kalkulatzen
+direlarik; honela ikertzailearen esku dago bihar-etziko azterketetan balio hau
+kontuan izan edo ez izatea.
+
+55
+I. Arostegui, A. Urkaregi

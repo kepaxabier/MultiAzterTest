@@ -1,0 +1,4087 @@
+
+
+
+Gaien Aurkibidea
+1
+Proposizio-kalkulua
+1
+1.1
+Sarrera . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1
+1.2
+Proposizio-kalkulua. Esaldien formalizazioa . . . . . . . . . . . . . . . . . .
+3
+1.3
+Sintaxia . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6
+1.4
+Semantika . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8
+1.5
+Baliozkotasuna. Inkontsistentzia. Baliokidetza logikoak . . . . . . . . . . . 11
+1.6
+Ondorio logikoak. Baliozko argumentuak . . . . . . . . . . . . . . . . . . . 15
+1.7
+Dedukzio formala . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+1.7.1
+Froga formala. Inferentzi erregelak . . . . . . . . . . . . . . . . . . 20
+1.7.2
+Ordezkapen-erregela . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+1.7.3
+Baldintzazko frogaren erregela . . . . . . . . . . . . . . . . . . . . . 25
+1.7.4
+Zeharkako frogaren erregela edo absurdora eramateko erregela . . . 27
+1.8
+Ariketak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+2
+Predikatu-kalkulua
+35
+2.1
+Sarrera . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+2.2
+Sintaxia . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 38
+2.3
+Semantika . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 41
+2.4
+Baliozkotasuna. Inkontsistentzia. Ondorio logikoak . . . . . . . . . . . . . 47
+2.5
+Baliokidetza logikoak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 51
+2.6
+Dedukzio formala . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+2.7
+Ariketak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 63
+i
+
+1.
+Gaia
+Proposizio-kalkulua
+1.1
+Sarrera
+Hizkuntzan esaldi ezagutarazleak, agintzaileak eta galdetzaileak erabiltzen ditugu. Ezagutza,
+funtsean, lehenek deskribatzen dute.
+Ezagutza bi bidetik jaso dezakegu:
+ gertakariak edo ideiak egiaztatuz, esaldi ezagutara-
+zleen bidez, edo dedukzioaren bidez.
+Logika formalaren
+helburua dedukzioa (arrazoibidea, inferentzia, argumentazioa) da.
+Dedukzioa ezagutzen diren datu batzuetatik ezagutza berriak sortzean datza. Arrazoibide
+baten ezaugarri nagusia hau da, abiapuntutzat hartzen ditugun baieztapen 
+(premisa)
+batzuetatik beste baieztapen 
+(ondorio) bat ondorioztatzea. Gogoratzea edota imagi-
+natzea, adibidez, pentsaerak dira, baina ez dira arrazoibideak.
+Arrazoibide orok forma eta edukia ditu.
+Arrazoibide hauek edukian bereizten dira:
+(1) Lehoi guztiak ugaztunak dira.
+Ugaztun guztiek birikak dituzte.
+Beraz, lehoi guztiek birikak dituzte.
+(2) Zenbaki arrunt guztiak bikoitiak dira.
+Zenbaki bikoiti guztiak lehenak dira.
+Beraz, zenbaki arrunt guztiak lehenak dira.
+baina forma bera dute:
+a guztiak b dira.
+b guztiak c dira.
+Beraz, a guztiak c dira.
+Logika arrazoibideen forman bakarrik aritzen da. Horregatik da logika formala baliozko
+arrazoibideen eskemen edo formen zientzia.
+Aurreko eskema baliozkoa da, premisak egiazkoak badira, ondorioa halabeharrez izan-
+go baita egiazkoa.
+Ohar gaitezen arrazoibidea baliozkoa izan daitekeela premisak egiazkoak edo faltsuak
+diren kontuan izan gabe. Arrazoibide zuzena izan daiteke, nahiz eta premisak eta ondorioa
+faltsuak izan, (2) adibidean bezala.
+Arrazoibide bat baliozkoa edo zuzena da, bere premisak egiazkoak izanik, ondorioa
+ezin denean faltsua izan. Premisak egiazkoak izan edo faltsuak izan beste kontu bat
+1
+
+2
+1. Proposizio-kalkulua
+da, logikatik at geratzen den kontua 
+(zenbaki bikoitiak lehenak izan ala ez aritmetikaren
+kontua da, ez logikarena).
+Ikus ditzagun beste adibide batzuk:
+(3) Pilotan ari banaiz, kirolean ari naiz.
+Kirolean ari naiz.
+Beraz, pilotan ari naiz.
+arrazoibidea eskema honi lotzen zaio:
+a bada, orduan b.
+b.
+Beraz, a.
+(4) Aberatsa banaiz, ona naiz.
+Ez naiz aberatsa.
+Beraz, ez naiz ona.
+Dagokion eskema hau da:
+a bada, orduan b.
+Ez a.
+Beraz, ez b.
+Arrazoibide horiek ez dira zuzenak, gerta baitaiteke premisak egiazkoak izatea eta,
+hala ere, ondorioa faltsua izatea.
+Logikak arrazoibideen forman oinarritu behar du, edukiak kontuan izan gabe. Hor-
+regatik gainditu behar du hizkuntza naturalaren joera, non forma eta edukia nahasirik
+ematen baitira. Bestalde, forma isolaturik agertzen duen lengoaia bat erabili behar dugu,
+hots, arrazoibideen egitura bakarrik erakusten duen lengoaia.
+Horregatik sortuko dugu lengoaia artiﬁziala, objektu lengoaia deituko duguna. Eta
+horri buruz hitz egiteko erabiliko dugun hizkuntzari metalengoaia deituko diogu 
+(Euskaraz
+idatzitako ingelesari buruzko liburu batean, euskara metalengoaia da).
+Zeinuak edo hizkuntzak, zeinu-
+sistema gisa, aztertzen dituen zientzia semiotika da.
+Semiotika sintaxiak, semantikak eta pragmatikak osatzen dute.
+Sintaxiak
+zeinuen arteko erlazioak bakarrik aztertzen ditu. Ongi osatutako zeinuen
+segidak ezagutu eta eraiki egiten ditu. Esaterako, “da hau erloju Arantzarena” hitzen
+segida gaizki osaturik dagoela esaten dugunean, arazo sintaktiko bati heltzen diogu.
+Semantikak
+, beste aldetik, zeinuen eta zeinuek adierazten dutenaren arteko erlazioak
+aztertzen ditu; hau da, zeinuen eta horiekin aipatzen ditugun zera horien arteko erlazioak
+(izen berezien eta izendatutakoen arteko erlazioak, enuntziatuen eta enuntziatuek deskri-
+batzen dutenaren arteko erlazioak...): “Multzo-
+teorian, multzo hutsa elementurik ez duen
+multzoa da” esaten dugunean, semantikan ari gara.
+Azkenik, pragmatikan hizkuntzaren elementuen eta hizkuntz komunitateko kideen
+arteko erlazioek ere hartzen dute parte. Esate baterako, “abertzale” hitzak esanahi des-
+berdina du, erabiltzailearen arabera.
+Hau da, pragmatika egiten dugunean, hizkuntzaz kezkatuko gara, subjektu baten edo
+talde baten jokabide gisa. Semantikan, aldiz, hiztunaz ahaztuko gara, eta bere hizkerak
+erabiltzen dituen zeinuen eta zeinu horiek irudikatzen dituzten gauzen arteko erlazioak
+aztertuko ditugu. Sintaxian, azkenik, zeinuak eta zeinuen arteko erlazioak bakarrik azter-
+tuko ditugu, kontuan izan gabe zeinu horiek aipatzen dituzten gauzak edo egoerak.
+
+1.2. Proposizio-kalkulua. Esaldien formalizazioa
+3
+Lengoaiaren formak sinbolizatzean, bi maila bereiz ditzakegu: Proposizio-
+kalkulua eta
+Predikatu-kalkulua.
+Proposizio-kalkulua
+: hizkuntza arruntaren esaldi ezagutarazle bakunak (proposizioak )
+oinarrizko elementutzat hartuko ditugu, eta adierazi.
+Predikatu-kalkulua
+: proposizioen osagai batzuk oinarrizko elementutzat hartuko di-
+tugu, eta adierazi: terminoak eta predikatuak .
+Lengoaia adierazteko bi maila horietarako bi eratan adieraz daitezke dedukziozko egi-
+tura zuzenak:
+Interpretazio-teoria
+edo Eredu-teoria: proposizioei eta dedukziozko egitura zuzenei
+egoki dakizkiekeen esanahiak 
+(gehienetan egiazkoa eta faltsua) deﬁnitzean datza.
+Frogabidearen eta dedukzio naturalaren teoria
+: dedukziozko egitura zuzen batzuk eta
+horietatik dedukziozko egitura berri batzuk lortzeko arauak axiomatikoki deﬁnitzean
+datza.
+1.2
+Proposizio-kalkulua. Esaldien formalizazioa
+Logika formalaren azterketa oinarritik hasiko dugu, proposizioen edo enuntziatuen logikatik
+hain zuzen.
+Sinbolizazio-maila honetan lengoaia elementu hauek osatuko dute:
+- Enuntziatu bakunak, proposizio atomikoak deituak;
+- lokailuak.
+Enuntziatu bakunak (proposizio atomikoak) informazioa duen hizkuntzaren unitate
+txikientzat har ditzakegu, informazio horri buruz zerbait esan dezakegularik 
+(egiazkoa
+edo faltsua dela):
+Esate baterako, “euria ari du”, “Ane azkarra da”.
+Hizkuntzaren “euria”, “Ane” elementuek ez dute berezko informaziorik, ez badira
+elkartzen beste elementu batzuekin; ez dira, beraz, proposizioak. Horregatik ez dira
+agertuko proposizio-kalkuluan; predikatu-
+kalkuluan, ordea, bere lekua izango dute.
+Aurreko enuntziatuak ezin dira banatu informazioa duten hizkuntzaren elementu txiki-
+agoetan. Izan ere, “ari du” zatiak ez du informaziorik ematen ez bazaio zerbaiti lotzen.
+“Euria ari du eta bustitzen ari naiz” esaldia, ordea, bi zatitan bana dezakegu “eta”
+hitzaren bidez 
+(“euria ari du”, “bustitzen ari naiz”), bakoitzak berezko informazioa emat-
+en duelarik.
+“Eta” hizkuntzaren elementua da eta bi proposiziotik esaldi berri bat eraikitzeko balio
+du; esaldi berriaren informazioa proposizioena bera da, baina aldiberekotasuna erantsiz.
+“Euria ari du eta bustitzen ari naiz” proposizio konposatuaren adibidea da.
+Hizkuntzan badira beste hitz batzuk esaldiak alboratzeko:
+ “baina”, “hala ere”, “or-
+dea”, “nahiz eta”... Horiek guztiek, informazio-
+edukiaren ikuspuntutik, “eta” hitzaren
+paper bera jokatzen dute. Hala ere, hiztunari aukera ematen diote esaldi batzuk azpimar-
+ratzeko beste esaldi batzuen aurrean. Proposizio-
+kalkuluan ez ditugu eite horiek kontuan
+izango, eta horregatik beren adierazpen matematikoa “eta” hitzarena izango da.
+Aurreko adibidean “eta” lokailu bat da. Lokailu bat esaldi batzuetatik esaldi berri bat
+eraikitzeko aukera ematen duen hizkuntzaren elementu bat da, esaldi lotuen informazioei
+˜
+nabardurak eransten dizkiola. Gorago esan bezala, lokailu bera, informazio-
+edukiaren
+ikuspuntutik, hizkuntza arruntaren zenbait elementuren bidez gauza daiteke.
+
+4
+1. Proposizio-kalkulua
+Proposizio-kalkuluaren lokailuak hauek dira:
+ ukapena, konjuntzioa, disjuntzioa, bald-
+intzazkoa eta baldintzabikoa.
+Proposizio-
+kalkuluaren sinbolizazio matematikoa proposizioetan eta lokailuetan oinar-
+ritzen da; honela:
+-
+ p, q, r, s, . . . hizkiek proposizio atomikoak adieraziko dituzte. Adibidez, “euria ari
+du” esaldia p adieraziko dugu, eta “bustitzen ari naiz” esaldia q.
+- Lokailuak adierazteko sinbolo hauek erabiliko ditugu:
+• Ukapena: ¬
+• Konjuntzioa: ∧
+• Disjuntzioa: ∨
+• Baldintzazkoa: →
+• Baldintzabikoa: ↔
+Horrela, “Euria ari du eta bustitzen ari naiz”, “Aldi berean euria ari du eta bustitzen
+ari naiz” “Euria ari du, baina bustitzen ari naiz”, “Euria ari du, hala ere bustitzen ari
+naiz”, “Euria ari duen bitartean bustitzen ari naiz” esaldiak honela adieraziko ditugu:
+p ∧ q
+Azpimarratzekoa da p ∧ q esaldiaren egitura adierazteko era bat dela, eta ez esal-
+dia idazteko era bat. Logika egitura horien azterketaz arduratzen da, ez informazioaren
+edukiaz.
+Jarraian lokailuak deﬁnituko ditugu:
+Ukapena
+: ¬p
+p motako proposizio batetik “ez p”, “p faltsua da”, “p ez da egiazkoa” motako propo-
+sizioa eraikitzeko aukera ematen duen lengoaiaren elementua da.
+Konjuntzioa
+: p ∧ q
+p, q bi proposizioak lotuz “p eta q”, “p, baina q”, “p, hala ere q”, “p, nahiz eta q”...
+motako proposizioa eraikitzeko aukera ematen duen lengoaiaren elementua da.
+Disjuntzioa
+: p ∨ q
+p, q bi proposizioak lotuz “edo p edo q edo biak”, “gutxienez p edo q”... motako
+proposizioak eraikitzeko erabiliko dugun lengoaiaren elementua da.
+Hizkuntza arruntaren “edo”, “ala” hitzek bi esanahi dituzte: Inklusiboa:
+ Larunbatean
+edo igandean hots egingo dizut. Esklusiboa: Zenbaki bakoitia edo bikoitia da.
+Ez dakigu esaldi batzuetan zentzu inklusiboa edo esklusiboa dagoen. Baina logikaren
+ikuspuntutik interesgarriagoa da zentzu inklusiboa esklusiboa baino. Hortaz, ∨ beti izango
+da inklusiboa.
+Baldintzazkoa
+: p → q
+Hizkuntza arruntaren kausa-ondorio erlazioa adierazteko erabiliko dugu:
+ “p bada, q”,
+“p soilik baldin q”, “q p bada”, “q beharrezkoa da p izateko”, “p nahikoa da q izateko”,
+“ez p ez bada q”... p aurrekaria eta q atzekaria deituko ditugu.
+
+1.2. Proposizio-kalkulua. Esaldien formalizazioa
+5
+Adibidez, p “seme-alabak ditut” bada eta q “emakumea naiz” bada, “Ez dut seme-
+alabarik ez banaiz emakume” esaldia p → q adieraziko dugu.
+Baldintzabikoa
+: p ↔ q
+“p nahikoa eta beharrezkoa da q izateko”, “p baldin eta soilik baldin q bada” bezalako
+esaldiak adierazteko erabiliko dugu.
+Adibideak
+1. “a bikoitia bada, a − 3 bakoitia da eta a2 − 3 bakoitia da”.
+Proposizio atomikoak hauek dira:
+- p: “a bikoitia da”
+- q: “a − 3 bakoitia da”
+- r: “a2 − 3 bakoitia da”
+Formalki, esaldia inplikazio bat da, aurrekaria lehenengo proposizioa eta atzekaria
+azkeneko bien konjuntzioa izanik. Proposizio-
+logikan honela adieraziko dugu esaldi
+hori:
+p → (q ∧ r)
+Adierazpen hori beste era honetan ere irakur dezakegu:
+ “a ez da bikoitia a − 3 eta
+a2 − 3 ez badira bakoitiak”.
+2. “Mendira joango naiz edo hondartzara joango naiz soilik eguraldi ona egiten badu”.
+- p: “mendira joango naiz”
+- q: “ondartzara joango naiz”
+- r: “eguraldi ona egiten du”
+Honela adieraziko dugu esaldia:
+(p ∨ q) → r
+Adierazpen hori bera erabiliko dugu honetarako: “Ni mendira edo ondartzara joan
+nadin beharrezkoa da eguraldi ona egin dezan”.
+3. Programazioko “If p then q else r” egitura logikoak “p bada, orduan q, eta p ez
+bada, orduan r”. Bere adierazpena proposizio-kalkuluan hau da:
+(p → q) ∧ (¬p → r)
+Oharra
+. Hizkuntza arruntean lokailuek eragiten dituzten esaldiak testuinguruaren edo
+zeinuen arabera ezagutzen ditugu. Lengoaia formalean parentesiak erabili beharko ditugu
+lokailu bakoitzari dagokion proposizioa zehazteko. Horrez gain, hizkuntza arruntean ez
+dira aipatutako bi lokailu jarraian agertzen.
+Beraz, “forma” hauek idazteko arauak deﬁnitu beharko ditugu, hizkuntza arruntean
+esaldiak eraikitzeko erabiltzen ditugun arauetatik abiatuta.
+Hau da, proposizioen “formak”, formula deitugu ditugunak, idazteko sintaxia deﬁnitu
+beharko dugu, aurretik aipatu ditugun baldintzak kontuan izanik 
+(lokailuak jarraian ez,
+proposizioen eta lokailuen arteko erlazioak deﬁnitu...).
+
+6
+1. Proposizio-kalkulua
+1.3
+Sintaxia
+Lengoaia baten sintaxia zeinuen arteko erlazioaz arduratzen da; hau da, zeinuen segida
+ongi eratuak ezagutu eta eraikitzen dituen teoria da.
+1.1 Deﬁnizioa.
+Proposizio-lengoaiaren A alfabetoa sinbolo hauek osatzen dute:
+1. Enuntziatu bakunak adierazteko erabiliko ditugun sinboloak: P = 
+{p, q, r, s, · · · }.
+Sinbolo hauei atomo deituko diegu.
+2. Lokailu logikoak 
+(edo eragile logikoak) adierazteko erabiliko ditugun sinboloak:
+{¬, ∧, ∨, →, ↔}.
+3. Sinbolo inpropioak: parentesiak, {(, )}.
+A = P ∪ {¬, ∧, ∨, →, ↔} ∪ {(, )}.
+1.2 Deﬁnizioa.
+Formula bat A multzoaren elementuekin eratutako segida ﬁnitu bat da.
+Adibidez, p ∨ ¬q →, pr(∨s, (q ∨ t)...
+1.3 Deﬁnizioa.
+Proposizio-kalkuluan formula ongi eratuak (foe) arau hauei jarraituz
+eraikiko ditugu:
+1. Atomo bat formula ongi eratua da.
+2. A eta B formula ongi eratuak badira, (¬A), (A∧B), (A∨B), (A → B) eta (A ↔ B)
+ere formula ongi eratuak dira.
+3. Aurreko bi arauak kopuru ﬁnitu aldiz erabiliz lortzen diren formulak soilik dira
+formula ongi eratuak.
+Esate baterako, hauek formula ongi eratuak dira: p, q, r, (¬r), (p ∨ q) eta (
+(p ∨ q) →
+(¬r)). Beste hauek, ordea, ez dira: (p∨) eta (q →.
+Hemendik aurrera, formulez hitz egiten dugunean formula ongi eratuei 
+(foe) gatzaizkie.
+1.4 Deﬁnizioa.
+G formula emanik, G formularen azpiformula G formularen zatia den
+ondoz ondo eraikitako formula ongi eratu bat da.
+Adibidez, G = ((p ∨ q) → (¬r)) bada, (p ∨ q) eta (¬r) azpiformulak dira, baina
+(q → (¬r)) ez da azpiformula.
+1.5 Deﬁnizioa.
+Formula batean, lokailu baten agerpen baten irismena agerpen horrek
+eragiten dituen azpiformulak dira.
+Formula bat idazterakoan parentesi batzuk ezaba ditzakegu:
+1. Nahasteko arriskurik ez dagoenean. Adibidez, ((p∨q) → 
+(¬r)) formula honela idatz
+dezakegu: (p ∨ q) → ¬r.
+
+1.3. Sintaxia
+7
+2. Lokailuen artean hierarkia bat deﬁnituz:
+• 1. maila: ¬.
+• 2. maila: ∧, ∨.
+• 3. maila: →, ↔.
+Formula batean maila desberdinetako lokailuak agertzen direnean, maila goreneko
+lokailuak ez du parantesien beharrik izango.
+Hierakia hau aritmetikako eragitetarako erabiltzen dugun hierarkiaren antzekoa da.
+Adibidez, ((¬p) ∧ q) → r formula honela idatz dezakegu:
+ ¬p ∧ q → r. Aritmetikan,
+((−p) · q) + r honela idazten dugun bezala: −p · q + r.
+1.6 Adibideak.
+1. (¬p) ∨ 
+(¬q) formula ¬p ∨ ¬q idatz dezakegu; izan ere, ∨ lokailua ¬ lokailua baino
+maila altuagokoa denez, (¬p) eta (¬q) formulen parentesiak ken ditzakegu.
+Lokailu baten agerpen bakoitzaren irismena adierazteko, agerpen hori eta bere iris-
+mena etiketatuko ditugu, honela:
+¬p
+1
+∨1
+¬q
+1
+¬2p
+2
+¬3q
+3
+p
+q
+2. (p ∧ q) → 
+(r ∨ s) formula p ∧ q → r ∨ s idatz dezakegu, → lokailua 3. mailakoa denez,
+∧ eta ∨ lokailuek lotzen dituzten aurreko bi formulen parentesiak ken ditzakegu.
+p ∧ q
+1
+→1
+r ∨ s1
+p
+2
+∧2 q
+2
+r3 ∨3 s3
+p q
+r
+s
+3. ((r ∧ s) ∨ p) → ((¬p) ∧ q) formula (r ∧ s) ∨ p → ¬p ∧ q idatz dezakegu.
+Ezin dugu parentesi gehiagorik kendu, ∧ eta ∨ maila berekoak direlako.
+(r ∧ s) ∨ p
+1
+→1
+¬p ∧ q
+1
+(r ∧ s)
+2
+∨2 p
+2
+¬p
+4
+∧4 q
+4
+r3 ∧3 s3 p
+¬5p
+5
+q
+r
+s
+p
+4. (p ↔ q ∧ r) → ¬s formulan lokailuen agerpenen irismenak hauek dira:
+(p ↔ q ∧ r)
+1
+→1
+¬s1
+p
+2
+↔2 q ∧ r
+2
+¬4s4
+p
+q
+3
+∧3 r3
+s
+q
+r
+Hortaz, parentesiak jarriz gero, formula hau izango dugu:
+((p ↔ (q ∧ r)) → (¬s)).
+
+8
+1. Proposizio-kalkulua
+1.4
+Semantika
+Atomoak esaldi ezagutarazleak adierazteko erabiliko ditugu; eta horiek, bestelakoak ez
+bezala, egiazkoak edo faltsuak dira beti. Beraz, atomoak egiazko edo faltsu balioak har
+ditzaketen aldagaitzat hartuko ditugu. Proposizio atomiko baten egiazkotasunari edo
+faltsutasunari proposizioaren egia-balio deituko diogu.
+Adibidez, p aldagaiak egiazko edo faltsu balioak har ditzake, eta honela azalduko dugu:
+p
+E
+F
+edo
+p
+1
+0
+,
+non 1 balioak egiazkoa eta 0 balioak faltsua esan nahi duten.
+p aldagai baten ordez, p eta q bi aldagai hartzen baditugu, eta dagozkien egia-
+balioak
+konbinatzen baditugu, honelako taula bat lortuko dugu:
+p
+q
+E E
+E F
+F E
+F F
+4 = 22 aukera.
+Hiru aldagai baditugu, p, q eta r taula hau izango dugu:
+p
+q
+r
+E E E
+E E F
+E F E
+E F F
+F E E
+F E F
+F F E
+F F F
+8 = 23 aukera.
+Oro har, n atomo badauzkagu, p1, p2, . . . , pn, beren egia-
+balioen konbinazioen kopurua
+2n izango da.
+1.7 Deﬁnizioa.
+Izan bedi A formula ongi eratua eta izan bitez p1, p2, . . . , pn (pi = pj, i =
+j) A formulan agertzen diren atomoak. A formularen interpretazio bat p1, p2, . . . , pn
+atomoei egia-balioak esleitzean datza, honela:
+ pi atomoei balio bana, E edo F , esleitzen
+zaie.
+Formulak n atomo baditu, formulak 2n interpretazio desberdin izango ditu.
+1.8 Adibidea.
+Izan bedi A = (p → q)∧(q → r). A formulan 3 atomo desberdin agertzen
+dira. Hortaz, 8 interpretazio desberdin izango ditu A formulak, aurreko taularen 8 lerroak
+hain zuzen.
+
+1.4. Semantika
+9
+p1, p2, . . . , pn badira A formula ongi eratuan agertzen diren atomo desberdinak, A
+formularen interpretazio bat multzo bat gisa adieraz dezakegu,
+I = {m1, . . . , mn},
+non mi bakoitza honela zehaztuko dugun:
+mi =
+pi
+pi atomoari E balioa esleitzen badiogu
+¬pi pi atomoari F balioa esleitzen badiogu
+.
+1.9 Adibidea.
+Hona hemen A = (p → q) ∧ (q → r) formularen interpretazio batzuk:
+I1 = {p, q, r}, I2 = {p, q, ¬r}, I3 = {p, ¬q, r}, I5 = 
+{¬p, q, r}, etab. I3 interpretazioan, p
+eta r atomoei E balioa esleitu diegu, eta q atomoari F balioa.
+G formula ongi eratua eta bere I interpretazio bat emanik, G formularen I interpre-
+taziorako egia-balioa kalkula dezakegu. Egia-balio hori V 
+(G, I) idatziko dugu eta ondoko
+bost arau hauek, lokailu bakoitzeko bat, aplikatuz kalkulatuko dugu:
+Erregelak
+Izan bitez A eta B bi formula ongi eratu, edozein:
+1. V ((¬A), I) = E izango da V (A, I) = F denean eta V ((¬A), I) = F izango da
+V (A, I) = E denean. Taula eta deﬁnizioa:
+A
+¬A
+E
+F
+F
+E
+V ((¬A), I) =
+E V (A, I) = F bada
+F V (A, I) = E bada
+.
+2. V ((A ∧ B), I) = E izango da V (A, I) = V (B, I) = E denean eta V (
+(A ∧ B), I) = F
+izango da bestelako kasuetan. Taula eta deﬁnizioa:
+A
+B
+A ∧ B
+E
+E
+E
+E
+F
+F
+F
+E
+F
+F
+F
+F
+V ((A ∧ B), I) =
+E V (A, I) = V (B, I) = E bada
+F
+bestela
+.
+3. V ((A ∨ B), I) = F izango da V (A, I) = V (B, I) = F denean eta V (
+(A ∨ B), I) = E
+izango da bestelako kasuetan. Taula eta deﬁnizioa:
+A
+B
+A ∨ B
+E
+E
+E
+E
+F
+E
+F
+E
+E
+F
+F
+F
+V ((A ∨ B), I) =
+F V (A, I) = V (B, I) = F bada
+E
+bestela
+.
+Ohar dezagun ∨ disjuntzio inklusiboa dela. Disjuntzio esklusiboak F bat izango luke
+lehenengo lerroan.
+
+10
+1. Proposizio-kalkulua
+4. V ((A → B), I) = F izango da V (A, I) = E eta V (B, I) = F direnean eta V (
+(A →
+B), I) = E izango da bestelako kasuetan. Taula eta deﬁnizioa:
+A
+B
+A → B
+E
+E
+E
+E
+F
+F
+F
+E
+E
+F
+F
+E
+V ((A → B), I) =
+F V (A, I) = E eta V (B, I) = F bada
+E
+bestela
+.
+Ohar dezagun, V (A, I) = F bada, V (
+(A → B), I) = E dela beti, nahiz eta A eta B
+formulen artean erlaziorik ez egon; berdin V (B, I) = E denean.
+5. V ((A ↔ B), I) = E izango da V (A, I) = V (B, I) denean eta V (
+(A ↔ B), I) = F
+izango da bestelako kasuetan. Taula eta deﬁnizioa:
+A
+B
+A ↔ B
+E
+E
+E
+E
+F
+F
+F
+E
+F
+F
+F
+E
+V ((A ↔ B), I) =
+E V (A, I) = V (B, I) bada
+F
+bestela
+.
+1.10 Deﬁnizioa.
+G formula ongi eratua eta bere I interpretazio bat emanik, V (G, I) =
+E bada, G formula I interpretaziorako egiazkoa dela, edo I interpretazioak G formula
+egiaztatzen duela, edo I interpretazioa G formularen eredu bat dela, esango dugu. Eta
+I |= G idatziko dugu. V 
+(G, I) = F bada, ordea, G formula I interpretaziorako faltsua
+dela, edo I interpretazioak G formula faltsutzen duela, esango dugu.
+Aurreko bost erregelekin edozein formula ongi eraturen egia-
+balioa kalkula dezakegu
+interpretazio baterako.
+1.11 Adibidea.
+Izan bedi A = (p → q) ∧ (q → r) eta izan bedi I3 = {p, ¬q, r} interpre-
+tazioa. Ikus ditzagun, lehendabizi, lokailuen agerpenen irismenak:
+(p → q)
+1
+∧1 (q → r)
+1
+p
+2
+→2 q
+2
+q
+3
+→3 r3
+eta osa dezagun taula:
+p
+q
+r
+p → q q → r A
+E F E
+F
+E
+F
+Beraz, I3 interpretazioak A formula faltsu egiten du.
+Saia gaitezen, orain, I7 = {¬p, ¬q, r} interpretazioarekin. Taula hau da:
+p
+q
+r
+p → q q → r A
+F F E
+E
+E
+E
+Beraz, I7 interpretazioak A formula egiaztatzen du. Hau da, I7 |= A.
+Bide beretik, A formularen egia-
+balioak kalkula ditzakegu 8 interpretazioetarako.
+
+1.5. Baliozkotasuna. Inkontsistentzia. Baliokidetza logikoak
+11
+Adibidean ikus dezakegun bezala, formula bat ez da berez egiazkoa edo faltsua, baizik
+eta egiazkoa edo faltsua da interpretazio baterako.
+Formula baten interpretazio guztietarako egia-
+balioak erakusten dituen taula bati for-
+mularen egia-taula deituko diogu.
+1.12 Adibideak.
+1. A = (p → q) ∧ (q → r) formularen egia-taula:
+p
+q
+r
+p → q q → r A
+E E E
+E
+E
+E
+E E F
+E
+F
+F
+E F E
+F
+E
+F
+E F F
+F
+E
+F
+F E E
+E
+E
+E
+F E F
+E
+F
+F
+F F E
+E
+E
+E
+F F F
+E
+E
+E
+2. B = p → (q ∨ r → (r → ¬p)) formularen egia-taula:
+p
+q
+r
+¬p q ∨ r r → ¬p q ∨ r → (r → ¬p) B
+E E E
+F
+E
+F
+F
+F
+E E F
+F
+E
+E
+E
+E
+E F E
+F
+E
+F
+F
+F
+E F F
+F
+F
+E
+E
+E
+F E E
+E
+E
+E
+E
+E
+F E F
+E
+E
+E
+E
+E
+F F E
+E
+E
+E
+E
+E
+F F F
+E
+F
+E
+E
+E
+1.5
+Baliozkotasuna.
+Inkontsistentzia.
+Baliokidetza
+logikoak
+1.13 Deﬁnizioa.
+A formula ongi eratu bat emanik, esango dugu
+1. A formula kontsistentea dela gutxienez A formularen interpretazio baterako egiazkoa
+bada.
+2. A formula tautologia edo baliozkoa dela A formularen interpretazio guztietarako
+egiazkoa bada. Eta |= A adieraziko dugu.
+3. A formula inkontsistentea edo kontraesana dela ez bada kontsistentea, hau da, A
+formularen interpretazio guztietarako faltsua bada.
+4. A formula baliogabea dela ez bada baliozkoa, hau da, gutxienez A formularen in-
+terpretazio baterako faltsua bada.
+
+12
+1. Proposizio-kalkulua
+1.14 Adibideak.
+1. Izan bedi A = (p → q) ∧ p → q; bere egia-taula hau da:
+p
+q
+p → q (p → q) ∧ p A
+E E
+E
+E
+E
+E F
+F
+F
+E
+F E
+E
+F
+E
+F F
+E
+F
+E
+Hortaz, A tautologia da, |= A, eta kontsistentea da.
+2. Izan bedi B = (p → q) ∧ (p ∧ ¬q); bere egia-taula hau da:
+p
+q
+p → q ¬q p ∧ ¬q B
+E E
+E
+F
+F
+F
+E F
+F
+E
+E
+F
+F E
+E
+F
+F
+F
+F F
+E
+E
+F
+F
+Beraz, B inkontsistentea eta baliogabea da.
+3. Izan bedi C = p ∨ ¬q; bere egia-taula hau da:
+p
+q
+¬q p ∨ ¬q
+E E
+F
+E
+E F
+E
+E
+F E
+F
+F
+F F
+E
+E
+Beraz, C kontsistentea eta baliogabea da.
+Egia-taularen arabera aukera hauek guztiak izango ditugu formula baterako:
+Taula
+
+
+
+Dena E
+Tautologia; kontsistentea
+Batzuk E eta beste batzuk F Kontsistentea; baliogabea
+Dena F
+Inkontsistentea; baliogabea
+Ondoko taulan, emandako lau deﬁnizioen arteko nahasketa guztiak ikusiko ditugu:
+Kontsistentea
+Inkontsistentea
+(Kontraesana)
+Baliozkoa
+(Tautologia)
+Bai
+Ez
+Baliogabea
+Bai
+Bai
+Beste alde batetik, erraz ikus dezakegu, A formula bat emanik,
+
+1.5. Baliozkotasuna. Inkontsistentzia. Baliokidetza logikoak
+13
+A tautologia da baldin eta soilik baldin ¬A inkontsistentea bada.
+A inkontsistentea da baldin eta soilik baldin ¬A tautologia bada.
+A tautologia bada, A kontsistentea da; baina elkarrekikoa ez da, orokorrean, egiazkoa.
+A inkontsistentea bada, A baliogabea da, eta elkarrekikoa ez da, orokorrean, egiazkoa.
+1.14 adibidean, C kontsistentea da, baina ez da tautologia. Eta C baliogabea da,
+baina ez da kontraesana.
+1.15 Deﬁnizioa.
+A eta B bi formula ongi eratuak logikoki baliokideak dira egia-balio
+berberak badituzte interpretazio guztietarako (V (A, I) = V 
+(B, I) da I interpretazio guzti-
+etarako), edo berdina dena, A eta B formulen egia-taulak berdinak direnean.
+A eta B formula logikoki baliokideak badira, A ≡ B idatziko dugu.
+1.16 Adibidea.
+Izan bitez A = p → q eta B = ¬p ∨ q formulak; beren egia-taulak hauek
+dira:
+p
+q
+p → q ¬p ¬p ∨ q
+E E
+E
+F
+E
+E F
+F
+F
+F
+F E
+E
+E
+E
+F F
+E
+E
+E
+Beraz, A eta B baliokideak dira, hots, A ≡ B.
+Baliokidetza logikoak
+Baliokidetza logikoen artean hauek aipatuko ditugu:
+ A, B eta C formula ongi eratuak
+emanik,
+1. Elkartze-legeak (ELKAR)
+(A ∧ B) ∧ C ≡ A ∧ (B ∧ C)
+(A ∨ B) ∨ C ≡ A ∨ (B ∨ C)
+2. Trukatze-legeak (TRUK)
+A ∧ B ≡ B ∧ A
+A ∨ B ≡ B ∨ A
+3. Banatze-legeak (BANA)
+A ∧ (B ∨ C) ≡ (A ∧ B) ∨ (A ∧ C)
+A ∨ (B ∧ C) ≡ (A ∨ B) ∧ (A ∨ C)
+4. Tautologiak (TAUT)
+A ∧ A ≡ A
+A ∨ A ≡ A
+5. Ukapen bikoitza (UB)
+¬¬A ≡ A
+
+14
+1. Proposizio-kalkulua
+6. De Morganen legeak (DeM)
+¬(A ∧ B) ≡ ¬A ∨ ¬B
+¬(A ∨ B) ≡ ¬A ∧ ¬B
+7. Transposizioa (TRANS)
+A → B ≡ ¬B → ¬A
+8. Inplikazio materiala (INP)
+A → B ≡ ¬A ∨ B
+9. Baliokidetza materialak (BALIO)
+A ↔ B ≡ (A → B) ∧ (B → A)
+A ↔ B ≡ (A ∧ B) ∨ (¬A ∧ ¬B)
+10. Esportazioa (ESP)
+A → (B → C) ≡ (A ∧ B) → C
+Baliokidetza horiek frogatzeko, egia-
+taulak kalkulatuko genituzke, eta berdinak direla
+egiaztatuko genuke.
+1.17 Adibideak.
+1. 9b) baliokidetza frogatzeko, bi formulen egia-taulak kalkulatuko ditugu:
+A B A ↔ B A ∧ B ¬A ¬B ¬A ∧ ¬B (A ∧ B) ∨ (¬A ∧ ¬B)
+E E
+E
+E
+F
+F
+F
+E
+E F
+F
+F
+F
+E
+F
+F
+F E
+F
+F
+E
+F
+F
+F
+F F
+E
+F
+E
+E
+E
+E
+↑
+↑
+2. A, B eta C formulak edozein direnez gero, p ∧ q → r ∨ s ≡ ¬(p ∧ q) ∨ (r ∨ s)
+baliokidetza ere beteko da.
+Oharra.
+∧ eta ∨ lokailuen elkartze-legeak direla eta, A∧B ∧C eta A∨B ∨C parentesirik
+gabe idatz ditzakegu.
+Hala ere, ezin izango dugu A ∧ B ∨ C idatzi, (A ∧ B) ∨ C ≡ A ∧ (B ∨ C) delako.
+A B C A ∧ B (A ∧ B) ∨ C B ∨ C A ∧ (B ∨ C)
+E E E
+E
+E
+E
+E
+E E F
+E
+E
+E
+E
+E F E
+F
+E
+E
+E
+E F F
+F
+F
+F
+F
+F E E
+F
+E
+E
+F
+F E F
+F
+F
+E
+F
+F F E
+F
+E
+E
+F
+F F F
+F
+F
+F
+F
+
+1.6. Ondorio logikoak. Baliozko argumentuak
+15
+1.18 Teorema.
+Izan bitez A eta B bi formula ongi eratuak,
+A ≡ B baldin eta soilik baldin |= (A ↔ B).
+Froga.
+Soilik baldin. Demagun A ≡ B dela. Horrek esan nahi du edozein I interpretazio-
+tarako V (A, I) = V (B, I) dela. |= 
+(A ↔ B) frogatu behar dugu, hau da, edozein I
+interpretaziotarako V ((A ↔ B), I) = E dela.
+Izan bedi I edozein interpretazio. Bi aukera daude:
+1. V (A, I) = E. Orduan, A ≡ B denez, V (B, I) = E izango dugu eta, hortaz,
+V ((A ↔ B), I) = E.
+2. V (A, I) = F . Orduan, V (B, I) = F eta, berriro ere, V ((A ↔ B), I) = E.
+Bi kasuetan frogatuta geratu da V ((A ↔ B), I) = E dela.
+Baldin. Demagun |= (A ↔ B) dela.
+Izan bedi I edozein interpretazio. Bi aukera daude:
+1. V (A, I) = E. Orduan, |= (A ↔ B) denez, V ((A ↔ B), I) = E izango dugu eta,
+hortaz, V (B, I) = E.
+2. V (A, I) = F . Orduan, V ((A ↔ B), I) = E denez, V (B, I) = F izango dugu.
+Beraz, edozein I interpretaziotarako V (A, I) = V 
+(B, I) da eta, ondorioz, A ≡ B.
+2
+1.6
+Ondorio logikoak. Baliozko argumentuak
+1.19 Deﬁnizioa.
+A1, . . . , An eta B n+1 formula emanik, B formula A1, . . . , An formulen
+ondorio logikoa dela edo formuletatik logikoki deduzitzen dela esango dugu edozein I
+interpretaziotarako, non V (A1, I) = · · · = V (An, I) = E den, V 
+(B, I) = E ere bada.
+B formula A1, . . . , An formulen ondorio logikoa bada, honela adieraziko dugu:
+A1, . . . , An ⇒ B edo A1, . . . , An |= B.
+1.20 Adibideak.
+1. q formula p → q eta p formulen ondorio logikoa da.
+p
+q
+p → q
+E E
+E
+E F
+F
+F E
+E
+F F
+E
+Bai p formula bai p → q formula E diren errenkadetan 
+(lehenengo errenkada bakar-
+rik) q formula ere E da.
+
+16
+1. Proposizio-kalkulua
+2. Hala ere, p ez da p → q eta q formulen ondorio logikoa. Izan ere, lehenengo eta
+hirugarren errenkadetan p → q eta q formulak E dira, baina hirugarren errenkadan
+p formula F da.
+1.21 Teorema.
+A1, . . . , An eta B n + 1 formula emanik,
+B formula A1, . . . , An formulen ondorio logikoa da baldin eta soilik baldin
+|= (A1 ∧ . . . ∧ An → B) bada.
+Froga.
+Soilik baldin. Demagun B formula A1, . . . , An formulen ondorio logikoa dela. Frogatu
+beharko dugu |= 
+(A1 ∧ . . . ∧ An → B) dela, hau da, edozein I interpretaziotarako V (A1 ∧
+. . . ∧ An → B, I) = E dela.
+Izan bedi I edozein interpretazio. Bi aukera daude:
+1. V (A1, I) = · · · = V 
+(An, I) = E. Orduan, ondorio logikoaren deﬁnizioaren arabera,
+V (B, I) = E izango dugu eta, hortaz, V (A1 ∧ . . . ∧ An → B, I) = E ere bai.
+2. i baten baterako, V (Ai, I) = F . Orduan, V 
+(A1 ∧ . . . ∧ An, I) = F izango da eta,
+hortaz, V (A1 ∧ . . . ∧ An → B, I) = E ere bai.
+Si. Demagun, orain, |= 
+(A1 ∧ . . . ∧ An → B) dela. B formula A1, . . . , An formulen
+ondorio logikoa dela frogatu behar dugu, hau da, edozein I interpretaziotarako, V 
+(A1, I) =
+· · · = V (An, I) = E bada, V (B, I) = V ere izango dela.
+Izan bedi I edozein interpretazio, non V (A1, I) = · · · = V 
+(An, I) = E den. Orduan,
+V (A1 ∧ . . . ∧ An, I) = E izango da. Horrez gain, |= 
+(A1 ∧ . . . ∧ An → B) izateagatik,
+V (A1 ∧ . . . ∧ An → B, I) = E ere bada. Hortik V (B, I) = E aterako dugu.
+2
+1.22 Adibideak.
+1. q formula p → q eta p formulen ondorio logikoa da. Hortaz, |= (
+(p → q) ∧ p → q).
+p
+q
+p → q (p → q) ∧ p (p → q) ∧ p → q
+E E
+E
+E
+E
+E F
+F
+F
+E
+F E
+E
+F
+E
+F F
+E
+F
+E
+2. p formula ez da p → q eta q formulen ondorio logikoa. Hortaz, 
+(p → q) ∧ q → p
+formula baliogabea da.
+p
+q
+p → q (p → q) ∧ q (p → q) ∧ q → p
+E E
+E
+E
+E
+E F
+F
+F
+E
+F E
+E
+E
+F
+F F
+E
+F
+E
+
+1.6. Ondorio logikoak. Baliozko argumentuak
+17
+1.23 Teorema.
+A1, . . . , An eta B n + 1 formula emanik,
+B formula A1, . . . , An formulen ondorio logikoa da baldin eta soilik baldin
+A1 ∧ . . . ∧ An ∧ ¬B formula inkontsistentea bada.
+Teorema frogatu baino lehen, froga dezagun lema hau:
+1.24 Lema.
+¬(A1 ∧ . . . ∧ An → B) ≡ A1 ∧ . . . ∧ An ∧ ¬B.
+1.24 Lemaren froga
+¬(A1 ∧ . . . ∧ An → B) ≡ ¬(¬(A1 ∧ . . . ∧ An) ∨ B) (inplikazio materiala) ≡ ¬¬
+(A1 ∧
+. . . ∧ An) ∧ ¬B (De Morganen legeak) ≡ (A1 ∧ . . . ∧ An) ∧ ¬B 
+(ukapen bikoitza) ≡
+A1 ∧ . . . ∧ An ∧ ¬B (elkartze-legea).
+Hortaz, ¬(A1 ∧ . . . ∧ An → B) ≡ A1 ∧ . . . ∧ An ∧ ¬B.
+2
+1.23 Teoremaren froga
+1.21 Teorema frogatzeko teknika bera erabil genezake, baina beste frogabide-
+mota bat
+erabiliko dugu.
+1.21 Teoremaren arabera, B formula A1, . . . , An formulen ondorio logikoa da baldin eta
+soilik baldin |= (A1 ∧ . . . ∧ An → B) bada. Beste aldetik, badakigu |= 
+(A1 ∧ . . . ∧ An → B)
+dela baldin eta soilik baldin ¬
+(A1 ∧ . . . ∧ An → B) formula inkontsistentea bada. Lema
+erabiliz, azkeneko formula inkontsistentea da baldin eta soilik baldin A1 ∧ . . . ∧ An ∧ ¬B
+formula inkontsistentea bada, baliokideak direlako. Nahi genuena lortu dugu, B formula
+A1, . . . , An formulen ondorio logikoa da baldin eta soilik baldin A1 ∧ . . . ∧ An ∧ ¬B formula
+inkontsistentea bada.
+2
+1.25 Adibideak.
+1. q formula p → q eta p formulen ondorio logikoa da. Hortaz, 
+(p → q)∧ p ∧ ¬q formula
+inkontsistentea da.
+p formula ez da p → q eta q formulen ondorio logikoa. Hortaz, (p → q) ∧ q ∧ ¬p
+formula kontsistentea da.
+p
+q
+p → q ¬q (p → q) ∧ p ∧ ¬q ¬p (p → q) ∧ q ∧ ¬p
+E E
+E
+F
+F
+F
+F
+E F
+F
+E
+F
+F
+F
+F E
+E
+F
+F
+E
+E
+F F
+E
+E
+F
+E
+F
+2. p∨q formula p formularen ondorio logikoa da. Honela egiazta genezake:
+ 1) deﬁnizioa
+erabiliz; 2) |= (p → p ∨ q) egiaztatuz; 3) p ∧ ¬
+(p ∨ q) formula inkontsistentea dela
+egiaztatuz.
+p
+q
+p ∨ q p → p ∨ q ¬(p ∨ q) p ∧ ¬(p ∨ q)
+E E
+E
+E
+F
+F
+E F
+E
+E
+F
+F
+F E
+E
+E
+F
+F
+F F
+F
+E
+E
+F
+1
+2
+3
+
+18
+1. Proposizio-kalkulua
+1.26 Deﬁnizioa.
+Argumentu bat edo argumentu-eskema bat P1, . . . , Pn, C formula ongi
+eratuen multzo bat da, non P1, . . . , Pn premisa deitzen diren eta C ondorio deitzen den.
+Honela adieraziko dugu:
+P1
+...
+Pn
+C
+edo
+P1
+...
+Pn / ˙.. C
+1.27 Deﬁnizioa.
+Argumentu bat baliozkoa da edo ongi eraikita dago ondorioa premisen
+ondorio logikoa bada edo premisetatik logikoki deduzitzen bada, hau da, eziznezkoa bada
+premisak E izatea eta ondorioa F izatea.
+Argumentu bat baliogabea da edo gaizki eraikita dago ez bada baliozko argumentua.
+1.28 Adibideak.
+1.
+p → q
+p
+premisak
+q
+ondorioa
+
+
+
+baliozko argumentua (ikus 1.25 Adibidea)
+2.
+p → q
+q
+p
+
+
+
+argumentu baliogabea (ikus 1.25 Adibidea)
+3.
+p ∨ q
+¬p
+q
+
+
+
+baliozko argumentua
+p
+q
+p ∨ q ¬p
+E E
+E
+F
+E F
+E
+F
+F E
+E
+E
+F F
+F
+E
+4.
+p ∨ q
+p
+q
+
+
+
+argumentu baliogabea
+p
+q
+p ∨ q
+E E
+E
+E F
+E
+F E
+E
+F F
+F
+Premisa egiazkoak izanik, ondorioa faltsua deneko kasua azpimarratu dugu, argu-
+mentua baliogabetzen duelako.
+Baliozko argumentu-eskemak
+Hona hemen ezagunak diren baliozko argumentu-eskema batzuk: A, B, C, D edozein
+formula ongi eratu dira,
+
+1.6. Ondorio logikoak. Baliozko argumentuak
+19
+1. Modus Ponens (MP)
+A → B
+A
+B
+2. Modus Tollens (MT)
+A → B
+¬B
+¬A
+3. Silogismo Hipotetikoa (SH)
+A → B
+B → C
+A → C
+4. Silogismo Disjuntiboa (SD)
+A ∨ B
+¬A
+B
+5. Dilema Eraikitzailea (DE)
+(A → B) ∧ (C → D)
+A ∨ C
+B ∨ D
+6. Dilema Suntsitzailea (DS)
+(A → B) ∧ (C → D)
+¬B ∨ ¬D
+¬A ∨ ¬C
+7. Konjuntzioaren Sinpliﬁkazioa (KS)
+A ∧ B
+A
+8. Konjuntzioaren Konbinazioa (KK)
+A
+B
+A ∧ B
+9. Disjuntzioaren Batuketa (DB)
+A
+A ∨ B
+
+20
+1. Proposizio-kalkulua
+Aurreko argumentuak baliozkoak direla egiazta dezakegu egia-taulen bidez. Esate
+baterako, silogismo disjuntiboa frogatzeko taula hau osatuko dugu:
+A B A ∨ B ¬A
+E E
+E
+F
+E F
+E
+F
+F E
+E
+E
+F F
+F
+E
+eta silogismo hipotetikoa frogatzeko beste hau:
+A B C A → B B → C A → C
+E E E
+E
+E
+E
+E E F
+E
+F
+F
+E F E
+F
+E
+E
+E F F
+F
+E
+F
+F E E
+E
+E
+E
+F E F
+E
+F
+E
+F F E
+E
+E
+E
+F F F
+E
+E
+E
+Oharra.
+A, B, C, D edozein foe direnez, argumentu hau ere baliozkoa da:
+p ∧ q → (r → s)
+(r → s) → t ∨ q
+p ∧ q → t ∨ q
+Silogismo hipotetikoaren eskemari dagokio: A = p ∧ q, B = r → s eta C = t ∨ q.
+1.7
+Dedukzio formala
+1.7.1
+Froga formala. Inferentzi erregelak
+Argumentuek bi edo hiru atomo baino gehiago dituztenean, baliozkotasuna frogatzeko
+egia-taulak erabiltzea luze eta astun egiten da.
+Bide motzago bat, argumentuak baliozkoak direla frogatzeko, argumentu elementalak
+erabiltzea da, baliozkoak direla badakigulako; inferentzi erregelak deitzen dira.
+Adibidez, hau inferentzi erregela bat da:
+A → B
+A
+B
+non A eta B edozein foe diren. Demagun argumentu hau baliozkoa dela frogatu nahi
+dugula:
+1. p ∧ ¬s → q
+2. q → r
+3. p ∧ ¬s / ˙.. r
+
+1.7. Dedukzio formala
+21
+Erregela aplikatuz 
+(A = p ∧ ¬s eta B = q direnean), 1 eta 3 premisetatik hau aterako
+dugu:
+4. q
+Erregela berriro aplikatuz 
+(A = q eta B = r direnean), 2 eta 4 formuletatik hau aterako
+dugu:
+5. r
+ondorioa dena. Beraz, argumentua baliozkoa da.
+Inferentzi erregelak
+Hasiera batean 9 inferentzi erregela erabiliko ditugu, baliozko argumentu hauek, hain
+zuzen:
+1. Modus Ponens (MP)
+2. Modus Tollens (MT)
+3. Silogismo Hipotetikoa (SH)
+4. Silogismo Disjuntiboa (SD)
+5. Dilema Eraikitzailea (DE)
+6. Dilema Suntsitzailea (DS)
+7. Konjuntzioaren Sinpliﬁkazioa (KS)
+8. Konjuntzioaren Konbinazioa (KK)
+9. Disjuntzioaren Batuketa (DB)
+1.29 Deﬁnizioa.
+P1
+...
+Pn
+C
+argumentu baten baliozkotasunaren froga formal bat formulen segida ﬁnitu bat da, S1, . . . , Sm,
+non:
+1. Sm = C.
+2. i = 1, . . . , m balioetarako, Si edo premisa bat den edo segidaren aurreko formuletatik
+deduzitzen den inferentzi erregela baten bidez.
+Interpretazio baterako, premisa guztiak egiazkoak direla suposatzen badugu, horietatik
+inferentzi erregelen bidez deduzituko ditugun formula guztiak egiazkoak izango dira, in-
+terpretazio horretarako. Hortaz, Sm = C formula ere egiazkoa izango da, interpretazio
+horretarako.
+
+22
+1. Proposizio-kalkulua
+1.30 Adibideak.
+1.
+A → B
+C → D
+(¬B ∨ ¬D) ∧ (¬A ∨ ¬B)
+¬A ∨ ¬C
+1. A → B
+premisa
+2. C → D
+premisa
+3. (¬B ∨ ¬D) ∧ (¬A ∨ ¬B) premisa / ˙.. ¬A ∨ ¬C
+4. (A → B) ∧ (C → D)
+KK(1,2)
+5. ¬B ∨ ¬D
+KS(3)
+6. ¬A ∨ ¬C
+DS(4,5)
+2.
+A ∨ (B → D)
+¬C → (D → E)
+A → C
+¬C
+B → E
+1. A ∨ (B → D)
+premisa
+2. ¬C → (D → E) premisa
+3. A → C
+premisa
+4. ¬C
+premisa / ˙.. B → E
+5. ¬A
+MT(3,4)
+6. B → D
+SD(1,5)
+7. D → E
+MP(2,4)
+8. B → E
+SH(6,7)
+3.
+1. A ∧ B → (A → D ∧ E) premisa
+2. (A ∧ B) ∧ C
+premisa / ˙.. D ∨ E
+3. A ∧ B
+KS(2)
+4. A → D ∧ E
+MP(1,3)
+5. A
+KS(3)
+6. D ∧ E
+MP(4,5)
+7. D
+KS(6)
+8. D ∨ E
+DB(7)
+4.
+1. J → K
+premisa
+2. J ∨ (K ∨ ¬L) premisa
+3. ¬K
+premisa / ˙.. ¬L ∧ ¬K
+4. ¬J
+MT(1,3)
+5. K ∨ ¬L
+SD(2,4)
+6. ¬L
+SD(5,3)
+7. ¬L ∧ ¬K
+KK(6,3)
+1.7.2
+Ordezkapen-erregela
+Baliozko argumentu askoren kasuan beren baliozkotasuna ezin da bederatzi inferentzi
+erregela horien bidez frogatu. Adibidez,
+A ∧ B
+B
+
+1.7. Dedukzio formala
+23
+baliozko argumentuaren froga formalak inferentzi erregela gehiago behar ditu.
+Izan bitez A foe bat, A formularen B azpiformula bat eta B′ beste foe bat, non B ≡ B′
+den. A′ idatziko dugu A formulan B azpiformularen ordez B′ formula jartzean lortzen
+den formula adierazteko.
+1.31 Adibideak.
+1. Izan bedi A = p → q ∨ ¬r formula. B = q ∨ ¬r A formularen azpiformula bat da.
+Bestalde, B = q ∨ ¬r ≡ ¬r ∨ q = B′. Beraz, A′ = p → ¬r ∨ q izango da.
+2. Izan bitez A = p ∧ s ↔ (¬q → t) formula bat eta B = ¬q → t. B = ¬q → t ≡
+¬¬q ∨ t = B′ azpiformula bat. Orduan, A′ = p ∧ s ↔ (¬¬q ∨ t) izango da.
+Ohar gaitezen A ≡ A′ dela; izan ere, A eta A′ formulen egia-
+taulak kalkulatzerakoan,
+diferentzia bakarra B eta B′ azpiformulak dira; baina horiek egia-
+taula berdinak dituzte.
+Ordezkapen-erregelak
+A formulatik A′ formula deduzitzeko aukera ematen digu, eta
+honela adieraziko dugu:
+A
+A′
+Ordezkapen-
+erregelari esker, aurreko bederatzi inferentzi erregelei beste hamar erregela
+erants diezazkiekegu, baliokidetza logikoetan oinarrituz.
+1.32 Adibideak.
+1.
+...
+k. p → q ∨ ¬r
+k + 1. p → ¬r ∨ q TRUK(k)
+...
+2.
+...
+k. p ∧ s ↔ (¬q → t)
+k + 1. p ∧ s ↔ (¬¬q ∨ t) INP(k)
+...
+3. Baliozkotasunaren froga formala argumentu honetarako: A ∧ B / ˙.. B.
+1. A ∧ B premisa / ˙.. B
+2. B ∧ A TRUK(1)
+3. B
+KS(2)
+Diferentzia handi bat dago erregela honen eta aurreko bederatzi erregelen artean. 1.7.1
+atalean deﬁnitutako erregelak frogabide baten formula osoei aplikatu dizkiegu; ordezkapen-
+erregelaren barruan dauden hamar erregelak, ordea, formula osoei zein azpifromulei ap-
+likatuko dizkiegu. Adibidez, konjuntzioaren sinpliﬁkazioa formula osoei bakarrik aplika
+
+24
+1. Proposizio-kalkulua
+diezaiekegu: esaterako,
+...
+k. A ∧ B
+k + 1. A
+KS(k)
+...
+argumentuan ongi aplikaturik dago, baina
+...
+k. A ∧ B → C
+k + 1. A → C
+KS(k) gaizki
+...
+argumentuan gaizki aplikaturik dago. Eta trukatze-
+legea, esate baterako, formula osoei
+aplika diezaiekegu,
+...
+k. A ∧ B
+k + 1. B ∧ A TRUK(k)
+...
+bai eta azpiformulei ere,
+...
+k. A ∧ B → C
+k + 1. B ∧ A → C TRUK(k)
+...
+Zerrendari beste erregela batzuk erants genizazkioke, esate baterako, A ∧ B /
+ ˙.. B.
+Baina zerrenda luzeegia eta erabiltezina izango genuke.
+Beste alde batetik, inferentzi erregelen zerrendak erredundantziak ditu; esaterako
+Modus Tollens erregela ken genezake, beste erregelen bidez emaitza bera lor dezakeg-
+ulako. Adibidez:
+1. A ∨ B
+premisa
+2. A → C premisa
+3. ¬C
+premisa / ˙.. B
+4. ¬A
+MT(2,3)
+5. B
+SD(1,4)
+4. ¬C → ¬A TRANS(2)
+5. ¬A
+MP(4,3)
+6. B
+SD(1,5)
+Hala eta guztiz ere, Modus Tollens erregela sartu dugu, inferentzi erregela ezaguna eta
+intuiziozkoa delako. Berdin gertatzen da beste erregela batzuekin.
+
+1.7. Dedukzio formala
+25
+1.33 Adibideak.
+1.
+1. A ∨ B → C ∧ D premisa
+2. ¬C
+premisa / ˙.. ¬B
+3. ¬C ∨ ¬D
+DB(2)
+4. ¬(C ∧ D)
+DeM(3)
+5. ¬(A ∨ B)
+MT(1,4)
+6. ¬A ∧ ¬B
+DeM(5)
+7. ¬B ∧ ¬A
+TRUK(6)
+8. ¬B
+KS(7)
+2.
+1. (E ∧ F ) ∧ G
+premisa
+2. (F ↔ G) → H ∨ I
+premisa / ˙.. I ∨ H
+3. E ∧ (F ∧ G)
+ELKAR(1)
+4. (F ∧ G) ∧ E
+TRUK(3)
+5. F ∧ G
+KS(4)
+6. (F ∧ G) ∨ (¬F ∧ ¬G) DB(5)
+7. F ↔ G
+BALIO(6)
+8. H ∨ I
+MP(2,7)
+9. I ∨ H
+TRUK(8)
+3.
+1. S → T
+premisa
+2. S ∨ T
+premisa / ˙.. T
+3. T ∨ S
+TRUK(2)
+4. ¬¬T ∨ S UB(3)
+5. ¬T → S
+INP(4)
+6. ¬T → T
+SH(5,1)
+7. ¬¬T ∨ T INP(6)
+8. T ∨ T
+UB(7)
+9. T
+TAUT(8)
+1.7.3
+Baldintzazko frogaren erregela
+P → C motako baldintzazko formula bat deduzitu nahi dugunean erabil dezakegun infer-
+entzi erregela da. Adibidez, A → B / ˙.. A → A ∧ B.
+1.34 Teorema.
+(Baldintzazko frogaren erregela)
+(1)
+P1
+...
+Pn
+P → C
+
+26
+1. Proposizio-kalkulua
+argumentua baliozkoa da baldin eta soilik baldin
+(2)
+P1
+...
+Pn
+P
+C
+argumentua baliozkoa bada.
+Froga.
+(1) argumentua baliozkoa da baldin eta soilik baldin P → C formula P1, . . . , Pn for-
+mulen ondorio logiko bat bada, baliozko argumentuaren deﬁnizioaren arabera.
+1.21 Teorema aplikatuz, P → C formula P1, . . . , Pn formulen ondorio logiko bat da
+baldin eta soilik baldin |= (P1 ∧ · · · ∧ Pn → (P → C)) bada.
+Eta hori horrela da baldin eta soilik baldin |= 
+(P1 ∧ · · · ∧ Pn ∧ P → C) bada, P1 ∧ · · · ∧
+Pn → (P → C) ≡ P1 ∧ · · · ∧ Pn ∧ P → C (ESP) delako.
+Eta azken hori beteko da baldin eta soilik baldin C formula P1, . . . , Pn, P formulen
+ondorio logiko bat bada, 1.21 Teorema erabiliz. Hau da, baldin eta soilik baldin 
+(2)
+argumentua baliozkoa bada, baliozko argumentuaren deﬁnizioaren arabera.
+2
+Erregela erabiltzeko bidea
+P1, . . . , Pn premisak dituen (1) argumentu bat emanik, P → C formula deduzitu
+nahi badugu, premisei P hipotesia erantsiko diegu, eta C deduzituko dugu. P hipotesia
+eranstean beste argumentu bat, 
+(2), izango dugu, premisak P1, . . . , Pn, P dituena. Behin
+C deduzitu eta gero, P hipotesia baztertuko dugu eta, baldintzazko frogaren erregela
+aplikatuz, P → C deduzituko dugu; hau da, P → C formula P1, . . . , Pn formuletatik
+deduzituko dugu. Hori dena honela adieraziko dugu:
+1.
+P1
+Premisa.
+...
+...
+n.
+Pn
+Premisa.
+...
+...
+→
+m.
+P
+BFEren hipotesia / ˙.. C
+...
+...
+k.
+C
+k + 1. P → C BFE(m-k)
+Idazkera horrekin adierazi nahi dugu m + 1etik kra bitartean formulak P1, . . . , Pn, P
+premisak erabiliz deduzitu ditugula (
+(2) argumentua). k + 1 formula, aldiz, P1, . . . , Pn
+premisetatik deduzitu dugu ((1) argumentua), P hipotesia baztertu dugu.
+1.35 Adibideak.
+1.
+1. A → B
+premisa / ˙.. A → A ∧ B
+→ 2. A
+BFEren hipotesia / ˙.. A ∧ B
+3. B
+MP(1,2)
+4. A ∧ B
+KK(2,3)
+5. A → A ∧ B BFE(2-4)
+
+1.7. Dedukzio formala
+27
+2.
+1. T → E
+premisa
+2. A → L
+premisa / ˙.. T ∨ A → L ∨ E
+→ 3. T ∨ A
+BFEren hipotesia / ˙.. L ∨ E
+4. (T → E) ∧ (A → L) KK(1,2)
+5. E ∨ L
+DE(4,3)
+6. L ∨ E
+TRUK(5)
+7. T ∨ A → L ∨ E
+BFE(3-6)
+3.
+1. Q → R
+premisa / ˙.. (P → Q) → (P → R)
+→
+2. P → Q
+BFEren hipotesia / ˙.. P → R
+→ 3. P
+BFEren hipotesia / ˙.. R
+4. Q
+MP(2,3)
+5. R
+MP(1,4)
+6. P → R
+BFE(3-5)
+7. (P → Q) → (P → R) BFE(2-6)
+4.
+1. (A → C) → D premisa
+2. B → E
+premisa
+3. A ∧ B → C
+premisa / ˙.. B → E ∧ D
+→
+4. B
+BFEren hipotesia / ˙.. E ∧ D
+5. E
+MP(2,4)
+→
+6. A
+BFEren hipotesia / ˙.. C
+7. A ∧ B
+KK(6,4)
+8. C
+MP(3,7)
+9. A → C
+BFE(6-8)
+10. D
+MP(1,9)
+11. E ∧ D
+KK(5,10)
+12. B → E ∧ D
+BFE(4-11)
+1.7.4
+Zeharkako frogaren erregela edo absurdora eramateko er-
+regela
+Zeharkako frogaren metodoa, edo absurdora eramateko metodoa, frogatu nahi dugunaren
+aurkakoa suposatu eta kontraesan bat 
+(formula inkontsistente bat) deduzitzean datza.
+Idazkera.
+Formula inkontsistente bat 2 adieraziko dugu (adibidez, A ∧ ¬A).
+1.36 Teorema.
+(Zeharkako frogaren erregela edo absurdora eramateko erregela)
+(1)
+P1
+...
+Pn
+C
+argumentua baliozkoa da baldin eta soilik baldin (2)
+P1
+...
+Pn
+¬C
+2
+argumentua
+baliozkoa bada.
+
+28
+1. Proposizio-kalkulua
+Erregela frogatzeko lema hau erabiliko dugu:
+1.37 Lema.
+Izan bedi 2 foe inkontsistente bat eta izan bedi A edozein foe. Orduan,
+A inkontsistentea da baldin eta soilik baldin |= (A → 2) bada.
+1.37 Lemaren froga
+Soilik baldin. Demagun A formula inkontsistentea dela; |= (A → 2) frogatu behar
+dugu, hau da, edozein I interpretaziotarako, V ((A → 2), I) = V betetzen dela.
+Izan bedi I edozein interpretazio. A formula inkontsistentea denez, V 
+(A, I) = F da
+eta, hortaz, V ((A → 2), I) = V izango da.
+Baldin. Demagun |= (A → 2) dela. A formula inkontsistentea dela frogatu behar
+dugu, hau da, edozein I interpretaziotarako, V (A, I) = F dela.
+Izan bedi I edozein interpretazio. |= (A → 2) denez, V (
+(A → 2), I) = V izango da
+eta, 2 inkontsistentea denez, V (2, I) = F da. Hortaz, V (A, I) = F .
+2
+1.36 Teoremaren froga
+(1) argumentua baliozkoa da baldin eta soilik baldin C formula P1, . . . , Pn formulen
+ondorio logikoa bada, baliozko argumentuaren deﬁnizioaren arabera. Hori horrela da
+baldin eta soilik baldin P1 ∧ · · · ∧ Pn ∧ ¬C formula inkontsistentea bada 
+(1.23 Teorema)
+eta, lemaren arabera, baldin eta soilik baldin |= 
+(P1 ∧ · · · ∧ Pn ∧ ¬C → 2) bada. Hori
+dena beteko da baldin eta soilik baldin 2 formula P1, . . . , Pn, ¬C formulen ondorio logikoa
+bada (1.21 Teorema). Hau da, baldin eta soilik baldin 
+(2) argumentua baliozkoa bada,
+baliozko argumentuaren deﬁnizioaren arabera.
+2
+Erregela erabiltzeko bidea
+P1, . . . , Pn premisak dituen 
+(1) argumentu bat emanik, C formula deduzitu nahi badugu,
+¬C hipotesia erantsiko dugu eta kontraesan bat deduzituko dugu 
+(A∧¬A motako edozein
+formula).
+¬C hipotesia eranstean, P1, . . . , Pn, ¬C premisak dituen beste argumentu
+bat, 
+(2), lortuko dugu. Behin kontraesana deduzitu eta gero, ¬C hipotesia baztertuko
+dugu eta, absurdora eramateko erregela erabiliz, C formula deduzituko dugu 
+(C formula
+P1, . . . , Pn formuletatik deduzituko dugu).
+1.
+P1
+Premisa
+... ...
+n.
+Pn
+Premisa
+... ...
+→
+m. ¬C AEEren hipotesia / ˙.. 2
+... ...
+k.
+2
+k + 1.
+C
+AEE(m-k)
+m+1etik kra formulak P1, . . . , Pn, ¬C premisak erabiliz deduzitu ditugu (
+(2) argumentua);
+k + 1 formula, aldiz, P1, . . . , Pn formuletatik deduzitu dugu (
+(1) argumentua).
+
+1.7. Dedukzio formala
+29
+1.38 Adibideak.
+1. Ikus ditzagun argumentu beraren bi froga formal, bata AEE erabiliz eta bestea
+erabili gabe.
+1. p
+premisa / ˙.. q ∨ (q → r)
+→ 2. ¬(q ∨ (q → r))
+AEEren hipotesia / ˙.. 2
+3. ¬q ∧ ¬(q → r)
+DeM(2)
+4. ¬q ∧ ¬(¬q ∨ r)
+INP(3)
+5. ¬q ∧ (¬¬q ∧ ¬r) DeM(4)
+6. (¬q ∧ ¬¬q) ∧ ¬r ELKAR(5)
+7. ¬q ∧ ¬¬q
+KS(6)
+8. q ∨ (q → r)
+AEE(2-7)
+Absurdora eramateko erregela erabili gabe:
+1. p
+premisa / ˙.. q ∨ (q → r)
+→
+2. ¬(q ∨ (q → r))
+BFEren hipotesia / ˙.. q ∨ (q → r)
+3. ¬q ∧ ¬(q → r)
+DeM(2)
+4. ¬q ∧ ¬(¬q ∨ r)
+INP(3)
+5. ¬q ∧ (¬¬q ∧ ¬r)
+DeM(4)
+6. (¬¬q ∧ ¬r) ∧ ¬q
+TRUK(5)
+7. ¬¬q ∧ ¬r
+KS(6)
+8. ¬¬q
+KS(7)
+9. q
+UB(8)
+10. q ∨ (q → r)
+DB(9)
+11. ¬(q ∨ (q → r)) → q ∨ (q → r)
+BFE(2-10)
+12. ¬¬(q ∨ (q → r)) ∨ (q ∨ (q → r)) INP(11)
+13. (q ∨ (q → r)) ∨ (q ∨ (q → r))
+UB(12)
+14. q ∨ (q → r)
+TAUT(13)
+2.
+1. p
+premisa / ˙.. q ∨ (r → ¬q)
+→ 2. ¬(q ∨ (r → ¬q))
+AEEren hipotesia / ˙.. 2
+3. ¬q ∧ ¬(r → ¬q)
+DeM(2)
+4. ¬q ∧ ¬(¬r ∨ ¬q)
+INP(3)
+5. ¬q ∧ (¬¬r ∧ ¬¬q) DeM(4)
+6. ¬q ∧ (¬¬q ∧ ¬¬r) TRUK(5)
+7. (¬q ∧ ¬¬q) ∧ ¬¬r ELKAR(6)
+8. ¬q ∧ ¬¬q
+KS(7)
+9. q ∨ (r → ¬q)
+AEE(2-8)
+
+30
+1. Proposizio-kalkulua
+3. Ikus ditzagun, berriro ere, argumentu beraren bi froga formal, bata AEE erabiliz
+eta bestea erabili gabe.
+1. ¬q ∧ s
+premisa
+2. s → ¬r
+premisa
+3. ¬r → ¬p ∨ q premisa / ˙.. ¬p
+→
+4. ¬¬p
+AEEren hipotesia / ˙.. 2
+5. ¬q
+KS(1)
+6. ¬¬p ∧ ¬q
+KK(4,5)
+7. ¬(¬p ∨ q)
+DeM(6)
+8. ¬¬r
+MT(3,7)
+9. ¬s
+MT(2,8)
+10. s ∧ ¬q
+TRUK(1)
+11. s
+KS(10)
+12. s ∧ ¬s
+KK(11,9)
+13. ¬p
+AEE(4-12)
+4. s ∧ ¬q TRUK(1)
+5. s
+KS(4)
+6. ¬r
+MP(2,5)
+7. ¬p ∨ q MP(3,6)
+8. q ∨ ¬p TRUK(7)
+9. ¬q
+KS(1)
+10. ¬p
+SD(8,9)
+
+1.8. Ariketak
+31
+1.8
+Ariketak
+1. Sintaxia
+1.1. Adieraz itzazu argumentu hauek proposizio-kalkuluan:
+a) Euria egiten duenean etxean geratzen gara. Euria ari du. Hortaz, etxean
+geratuko gara.
+b) a > 2 bada, a2 > 4 izango da, eta, a < −2 bada, a2 > 4 izango da. Hortaz,
+|a| > 2 denean, a2 > 4 betetzen da.
+c) Matematika ikasten duenak Hautaproba gaindituko du eta Hautaproba
+gainditzen duenak badaki integralak kalkulatzen. Hortaz, Matematika
+ikasi duenak badaki integralak kalkulatzen.
+d) Donostiara Tolosatik edo Zarauztik joan gaitezke. Tolosako bidea itxita
+dagoenez gero, Donostiara bagoaz, Zarauztik joango gara.
+e) Jone datorrenean Izaskun ere badator. Eta Ane datorrenean Bittori ere
+badator. Bietako bat, Izaskun edo Bittori, kanpoan da. Hortaz, Jone edo
+Ane ez da etorriko.
+1.2. Esan ezazu zein den lokailuen agerpen bakoitzaren irismena formula hauetan:
+a) (¬p ∨ q) ∧ ¬(p ∧ q)
+b) ¬p ∧ q ↔ (r ∧ ¬¬(p ∨ q) → s)
+c) p ∧ (p ∨ q → (r → ¬p))
+2. Semantika
+2.1.
+A = p ∨ ¬r → r ∧ q
+B = ¬p ∨ q → (¬(p ∧ r) → ¬p)
+formulak eta I1 = {p, q, ¬r}, I2 = {¬p, q, ¬r} interpretazioak emanik, kalkula
+itzazu V (A, I1), V (A, I2), V (B, I1) eta V (B, I2) egia-balioak.
+2.2. Eraiki itzazu egia-taulak formula hauetarako:
+a) p ∨ ¬q ↔ s
+b) (¬p → q) ∧ (q → p)
+c) (p → q) → (¬(q ∧ r) → ¬(r ∧ p))
+d) (p ↔ ¬q) → r ∨ s
+2.3. Formula bakoitzerako, aurki itzazu interpretazio bat formula hori egiazko egit-
+en duena eta beste interpretazio bat faltsu egiten duena (egia-taulak eraiki
+gabe).
+a) (p → q) ∨ q
+b) (p ∨ ¬q) ∧ p
+c) (p → r) → ((q → s) → (p ∨ q → r))
+
+32
+1. Proposizio-kalkulua
+3. Baliozkotasuna. Inkontsistentzia. Baliokidetza logikoak
+3.1. Esan ezazu formula hauetako bakoitza kontsistentea, inkontsistentea, baliozkoa
+edo baliogabea den (egia-taulak eraiki gabe).
+a) ¬p → q ∧ (q → p)
+b) (p ∧ q) ∧ (¬p ∨ ¬q)
+c) p ∧ (p ∨ q → (r → ¬p))
+d) (¬p ∧ ¬q) ∨ (p ∨ q)
+3.2. Esan ezazu egiazkoa edo faltsua den, erantzuna arrazoituz:
+a) ¬A tautologia bada, A ez da tautologia izango.
+b) A ez bada tautologia, ¬A tautologia izango da.
+c) A ∨ B tautologia bada, A tautologia izango da edo B tautologia izango da.
+d) A tautologia bada edo B tautologia bada, A ∨ B tautologia izango da.
+e) A ∧ B tautologia da baldin eta soilik baldin A eta B tautologiak badira.
+3.3. Froga itzazu baliokidetzen katen baten bidez:
+a) (p ∧ q) ∨ (q ∧ r) ≡ q ∧ (p ∨ r)
+b) ¬(¬p ∨ ¬(r ∨ s)) ≡ (p ∧ r) ∨ (p ∧ s)
+c) (p ∨ r) ∧ (q ∨ s) ≡ (p ∧ q) ∨ (p ∧ s) ∨ (r ∧ q) ∨ (r ∧ s)
+d) p → (q → r) ≡ q → (p → r)
+e) p ∧ q → r ≡ ¬(p ∧ q ∧ ¬r)
+3.4. Esan ezazu egiazkoa edo faltsua den, erantzuna arrazoituz:
+a) (p → q) ∧ (p → r) ≡ p → q ∧ r
+b) (p → q) → p ∧ q ≡ (¬p → q) ∧ (q → p)
+c) ¬p ∧ ¬q ≡ ¬(p ∧ q)
+d) (p ∧ q) ∨ r ≡ p ∧ (q ∨ r)
+4. Ondorio logikoak. Argumentuak
+4.1. Esan ezazu egiazkoa edo faltsua den, erantzuna arrazoituz:
+a) q formula p ∧ q formularen ondorio logikoa da.
+b) q formula p ∨ q formularen ondorio logikoa da.
+c) q formula p ∨ q eta ¬p formulen ondorio logikoa da.
+d) p formula p ∨ q eta q formulen ondorio logikoa da.
+4.2. Azter ezazu argumentu hauen baliozkotasuna 
+(esan ezazu baliozkoak edo bali-
+ogabeak diren, erantzuna arrazoituz).
+a) A → D
+D → C
+A / ˙.. D ∧ C
+b) p → q / ˙.. ¬(q ∧ r) → ¬(r ∧ p)
+
+1.8. Ariketak
+33
+c) o → (p → q)
+p → (q → r) / ˙.. o → (p → r)
+d) A → B
+C → D
+B ∨ C / ˙.. A ∨ D
+5. Dedukzio formala
+5.1. Eman itzazu argumentu hauen baliozkotasunaren froga formalak, lehenengo 9
+inferentzi erregelak bakarrik erabiliz.
+a) (p → q) ∧ (r → s)
+(q → t) ∧ (s → u)
+(¬p → t) ∧ (¬q → s)
+¬t / ˙.. ¬r ∨ ¬q
+b) ¬b → (d ↔ ¬h)
+(d → e) → f
+e ∧ a → ¬b
+¬f ∨ ¬(d ↔ ¬h)
+c → (d → e) / ˙.. ¬c ∨ ¬(e ∧ a)
+5.2. Eman itzazu argumentu hauen baliozkotasunaren froga formalak, absurdora
+eramateko erregela erabili gabe.
+a) p ∧ s
+¬r → ¬p ∨ q
+p ∨ r → s ∧ ¬q / ˙.. r
+b) p → q
+¬r → s
+¬(¬r → q) / ˙.. s ∧ ¬p
+c) p → ¬q
+¬r ∧ s → p
+s ∧ q / ˙.. r
+5.3. Eman itzazu argumentu hauen baliozkotasunaren froga formalak:
+a) a ∧ b → c
+c → d
+b ∧ ¬d / ˙.. ¬a
+b) x → (y → z)
+x → (a → b)
+x ∧ (y ∨ a)
+¬z / ˙.. b
+c) (v → ¬w) ∧ (x → y)
+(¬w → z) ∧ (y → ¬a)
+(z → ¬b) ∧ (¬a → c)
+v ∧ x / ˙.. ¬b ∧ c
+d) a / ˙.. b ∨ (b → c)
+
+34
+1. Proposizio-kalkulua
+e) (l ∨ m) ∨ (n ∧ o)
+(¬l ∧ o) ∧ ¬(¬l ∧ m) / ˙.. ¬l ∧ n
+f) p ∨ q → (r ∧ s)
+¬(¬p ∨ ¬r)
+¬t → ¬(p ∧ s) / ˙.. t
+
+2.
+Gaia
+Predikatu-kalkulua
+2.1
+Sarrera
+Proposizio-
+kalkuluan, argumentuen baliozkotasuna enuntziatu konposatuak sortzeko as-
+moz enuntziatu bakunak konbinatzeko eraren menpe dago, baina ez enuntziatuen barne-
+egituraren menpe.
+Adibidez, intuizioz zuzena dirudien argumentu hau hartuko dugu:
+Txakur guztiak ugaztunak dira.
+Bizi txakurra da.
+Beraz, Bizi ugaztuna da.
+Proposizio-kalkuluan, “Txakur guztiak ugaztunak dira” premisa proposizio bakuna
+da, eta p atomo batez adierazten dugu. Berdin gertatzen da bigarren premisarekin eta
+ondorioarekin, “Bizi txakurra da” proposizio bakuna q atomoaz adieraziko dugu eta “Bizi
+ugaztuna da” proposizio bakuna r atomoaz.
+Beraz, proposizio-kalkuluan, argumentua honela adieraziko dugu:
+p
+q
+r
+Eta argumentu hori ez da baliozkoa; izan ere, I = 
+{p, q, ¬r} interpretaziorako premisak
+egiazkoak dira eta ondorioa faltsua da.
+Hori hala da, argumentuaren baliozkotasuna enuntziatuen barne-
+egitura logikoaren
+menpe dagoelako. Horrelako kasuetan, barne-
+egitura horiek analizatzeko tresnak garatu
+beharko ditugu. Predikatu-logika proposizio-
+logikaren hedapena da, analisi horrek behar
+duen tresna.
+Argumentuaren bigarren premisak dio “Bizi” izeneko indibiduoak txakurra izatearen
+atributua duela. “Bizi” subjektua da eta “txakurra” el predikatua da 
+(subjektuak duen
+ezaugarri bat adierazten du).
+Enuntziatuen egiturak aztertzen ditugunean, funtsean, bi adierazpen-
+mota hauek in-
+teresatzen zaizkigu: alde batetik, indibiduoei (izaki zehatzak:
+ pertsonak, zenbakiak...)
+dagozkien adierazpenak eta, beste aldetik, indibiduoen propietateak edo indibiduoen
+arteko erlazioak azaltzen dituzten adierazpenak (predikatuak).
+Esate baterako, “Bizi txakurra da”, “Ilargia zuria da”, “2 5 baino txikiagoa da”, “Anek
+tea nahiago du kafea baino” enuntziatuetan “Bizi”, “ilargia”, “2”, “5”, “Ane”, “tea”,
+35
+
+36
+2. Predikatu-kalkulua
+“kafea” indibiduoak dira eta “txakurra da”, “zuria da”, “baino txikiagoa da”, “nahiago
+du” predikatuak dira, indibiduoen propietateak edo indibiduoen arteko erlazioak azaltzen
+dituzten adierazpenak.
+Formalizazioa
+Indibiduoak adierazteko a, b, c, . . . letra xeheak erabiliko ditugu. Sinbolo horiek in-
+dibiduoak adierazten dituztenez, konstante deituko diegu.
+Predikatuak adierazteko letra larriak erabiliko ditugu.
+Adibidez,
+1. Bizi txakurra da.
+b: “Bizi”
+T : “txakurra izan”
+T (b)
+2. Ilargia zuria da.
+i: “ilargia”
+Z: “zuria izan”
+Z(i)
+3. 2 7 baino txikiagoa da.
+b: “2”
+z: “7”
+T : “txikiagoa izan”
+T (b, z)
+4. Anek tea nahiago du kafea baino.
+a: “Ane”
+t: “tea”
+k: “kafea”
+N : “nahiago izan”
+N (a, t, k)
+Aurreko adibideetan ikus dezakegu predikatu batzuetan indibiduoen izen bakarra
+agertzen dela 
+(banako predikatuak) eta beste batzuetan indibiduoen bi izen edo gehi-
+ago agertzen direla (predikatu anizkoitzak: bitarrak, hirutarrak...).
+Azter dezagun, orain, predikatu-
+sinbolo bera duten proposizioak nola formulatzen di-
+ren:
+Bizi txakurra da: T (b)
+Lagun txakurra da: T (l)
+7 txakurra da: T (z)
+Proposizio horiek guztiak batera adierazteko T 
+(x) idatziko dugu. x letrari aldagai
+esango diogu. Ez da konstantea, eta edozein konstantez ordezka dezakegu.
+T (b), T (l), T 
+(z) proposizioak dira, hots, esan dezakegu egiazkoak edo faltsuak diren;
+baina T (x) ez da egiazkoa, ezta faltsua ere, ez da proposizio.
+T (x) bazalako adierazpenei proposizio-
+funtzio deituko diegu. Banako aldagaiak onartzen
+dituzten adierazpenak dira, eta proposizio bihurtzen dira banako aldagaien ordez banako
+konstanteak jartzen ditugunean.
+Proposizio-
+funtzio batetik proposizio bat lortzeko prozesuari, aldagai bat konstante
+batez ordezkatuz, instantziazio deituko diogu, eta ateratzen den proposizioari ordezkapen-
+instantzia
+.
+Esate baterako,
+¬T (b) (Bizi ez da txakurra) eta ¬T (z) (7 ez da txakurra) ¬T (x) proposizio-
+funtzioaren
+bi instantziazioren emaitzak dira.
+¬T (b) eta ¬T (z) ¬T (x) proposizio-funtzioaren bi
+ordezkapen-instantzia dira.
+
+2.1. Sarrera
+37
+Badago beste prozedura bat proposizio-funtzio batetik proposizio bat lortzeko:
+ alda-
+gaiak kuantiﬁkatzea.
+Orain arte banako enuntziatuen adibideak ikusi ditugu, zeinetan indibiduo bati propi-
+etate bat egokitu zaion edo bi indibiduoren edo gehiagoren arteko erlazio bat ezarri
+den. Baina enuntziatuak ez dira beti banakoak; adibidez, “Dena zuria da” eta “Zer-
+bait zuria da” proposizio orokorrak dira, ez dute indibiduo-
+izenik. Hala ere, proposizio-
+funtzio batetik lor ditzakegu, ez instantziazioen bidez, baizik eta orokortzearen edo kuan-
+tiﬁkatzearen
+bidez.
+Lehenengo adibidea, “Dena zuria da”, beste era honetan ere adieraz dezakegu:
+ “Edozein
+gauza emanik, gauza hori zuria da”; eta, x aldagaia erabiliz, “Edozein x emanik, x zuria
+da”.
+“Edozein x emanik” esaldia zenbatzaile unibertsala da, eta ∀x idatziz adieraziko dugu.
+Sinbolo hori erabiliz, “Dena zuria da” esaldia honela idatziko dugu:
+∀xZ(x)
+Antzeko eran, “Zerbait zuria da” esaldia honela idatz dezakegu:
+“Badago gutxienez
+gauza bat zuria dena”; eta, aldagai batekin, “Badago gutxienez x bat, non x zuria den”.
+“Badago gutxienez x bat” esaldia zenbatzaile existentziala da, eta ∃x idatziz adieraziko
+dugu. Sinbolo hori erabiliz, “Zerbait zuria da” esaldia honela idatziko dugu:
+∃xZ(x)
+Laburbilduz, “x zuria da” (Z(x)) bezalako proposizio-funtzio bat emanik 
+(edo enuntziatu
+irekia
+), bi bide dauzkagu proposizio bat lortzeko (edo enuntziatua ixteko):
+1. Instantziazioa, aldagaia konstante batez ordezkatzea: Z
+(i), “Ilargia zuria da”. Bide
+honen bidez banako enuntziatua lortuko dugu.
+2. Orokortzea edo kuantiﬁkazioa, zenbatzaile bat aurrean jartzea: ∀xZ
+(x), “Dena zuria
+da”; ∃xZ(x), “Zerbait zuria da”.
+Bide honen bidez enuntziatu orokorra lortuko dugu.
+Historiari begira, logika tradizionalak lau proposizio-
+mota nabarmendu zituen; ikus
+ditzagun adibide hauekin:
+• A (baiezko proposizio unibertsala): “Txakur guztiak ugaztunak dira”.
+• E (ezezko proposizio unibertsala): “Txakur bat ere ez da ugaztun”.
+• I (baiezko proposizio partikularra): “Zenbait txakur ugaztunak dira”.
+• O (ezezko proposizio partikularra): “Zenbait txakur ez dira ugaztun”.
+T (x)=”x txakurra da” eta U (x)=”x ugaztuna da” proposizio-
+funtzioak erabiltzen ba-
+ditugu, A, baiezko unibertsala, honela irakur genezake:
+ “Edozein gauza emanik, gauza
+hori txakurra bada, gauza hori ugaztuna izango da” edo “Edozein x emanik, x txakurra
+bada, x ugaztuna izango da”. Eta adierazpen sinbolikoan:
+∀x(T (x) → U (x)).
+
+38
+2. Predikatu-kalkulua
+Era berean gainerako hiru proposizioekin:
+E:
+ “Edozein x emanik, x txakurra bada, x ez da ugaztun”. Adierazpen sinbolikoan:
+∀x(T (x) → ¬U (x))
+I: “Badago gutxienez x bat, non x txakurra den eta x ugaztuna den”. Adierazpen
+sinbolikoan:
+∃x(T (x) ∧ U (x))
+O:
+ “Badago gutxienez x bat, non x txakurra den eta x ez den ugaztun”. Adierazpen
+sinbolikoan:
+∃x(T (x) ∧ ¬U (x))
+Adibideak
+1. Arranoek altu egiten dute hegan:
+∀x(A(x) → H(x)).
+Arranoek bakarrik hegan egiten dute altu:
+∀x(H(x) → A(x)).
+2. Beroki bat ere ez da iragazgaitza ez bada bereziki tratatua izan:
+∀x(B(x) ∧ I(x) → T (x)).
+3. Zenbaki arrazional bakoitza zenbaki erreala da, baina zenbait zenbaki erreal ez dira
+arrazional:
+∀x(Q(x) → R(x)) ∧ ∃x(R(x) ∧ ¬Q(x)).
+4. Edozein zenbaki arrunten hurrengoa zenbaki arrunta da:
+∀x∀y(N (x) ∧ H(y, x) → N (y)),
+(H(y, x) : y x-ren hurrengoa da).
+5. Edozein zenbaki arrunten hurrengoa zeroren desberdina da:
+∀x∀y(N (x) ∧ H(y, x) → ¬B(y, a)),
+(B(y, x) : y = x; a : 0).
+2.2
+Sintaxia
+2.1 Deﬁnizioa.
+Predikatu-kalkuluaren A alfabetoa sinbolo hauek osatzen dute:
+1. Aldagaiak: V = {x, y, z, . . .};
+2. Konstanteak: C = {a, b, c, . . .};
+3. Predikatuak: P = 
+{P, Q, R, . . .}; P predikatu bakoitzak zenbaki arrunt bat darama
+elkarturik, predikatuak onartzen duen aldagaien edo konstanteen kopurua adierazten
+duena, hain zuzen; zenbaki horri predikatuaren aritate deituko diogu eta ar(P )
+idatziko dugu.
+4. Lokailu logikoak: {¬, ∧, ∨, →, ↔}.
+5. Zenbatzaileak : {∀, ∃}.
+
+2.2. Sintaxia
+39
+6. Sinbolo inpropioak: {(, ), , } (parentesiak eta komak).
+A = V ∪ C ∪ P ∪ {¬, ∧, ∨, →, ↔} ∪ {(, ), , }.
+2.2 Deﬁnizioa.
+Aldagaiei eta konstanteei lehen ordenako termino deituko diegu.
+2.3 Deﬁnizioa.
+P n aritateko predikatu-sinbolo bat bada eta t1, . . . , tn terminoak badira,
+P (t1, . . . , tn) atomo bat edo formula atomiko bat da.
+2.4 Adibidea.
+Har ditzagun V = {x, y, z} aldagaien multzoa, C = {a, b} konstanteen
+multzoa eta P = {P, Q, R, S} predikatuen multzoa, ar(P ) = 1, ar(Q) = 3, ar
+(R) = 2,
+ar(S) = 3 aritateak barne.
+Hona hemen atomo batzuk: P (x), P (b), Q(x, a, y), Q(x, y, x), R(x, y), S
+(a, b, b).
+Honako hauek, ordea, ez dira atomo: P (x, y), Q(a).
+2.5 Deﬁnizioa.
+Predikatu-kalkuluan formula ongi eratuak (foe) arau hauei jarraituz
+eraikiko ditugu:
+1. Atomo bat formula ongi eratua da.
+2. A eta B formula ongi eratuak badira, (¬A), (A∧B), (A∨B), (A → B) eta (A ↔ B)
+ere formula ongi eratuak dira.
+3. A formula ongi eratu bat bada eta x aldagai bat bada, (∀xA) eta 
+(∃xA) formula
+ongi eratuak dira.
+4. Aurreko hiru arauak kopuru ﬁnitu aldiz erabiliz lortzen diren formulak soilik dira
+formula ongi eratuak.
+2.6 Adibidea.
+Har ditzagun V = {x, y, z} aldagaien multzoa, C = {a, b} konstanteen
+multzoa eta P = {P, Q, R} predikatuen multzoa, ar(P ) = 1, ar(Q) = 3, ar(R) = 2
+aritateak barne.
+Hona hemen formula ongi eratu batzuk: P (x), P (b), Q(x, a, y), R(y, a), (∃yR
+(y, a)),
+(∃xR(y, a)), (∀xP (x)), ((¬P (x)) → Q(x, a, y)), (∀z(((¬P (x)) → Q(x, a, y))∧
+(∃xR(y, a)))).
+Honako hauek, aldiz, ez dira formula ongi eratu: (∀aP (x)), (∀P (x, y)), 
+(∀x, yP (x, y)).
+Proposizio-
+kalkuluan bezala, bi eratan ken ditzakegu parentesi batzuk, nahasteko ar-
+riskurik ez dagoenean eta zenbatzaileen eta lokailuen artean hierarkia bat deﬁnituz:
+• 1. maila: ¬, ∀, ∃.
+• 2. maila: ∧, ∨.
+• 3. maila: →, ↔.
+2.7 Adibideak.
+1. (∀z((P (x) ∧ R(x, z)) → Q(x, a, y))) formula honela idatz dezakegu: ∀z(P 
+(x) ∧
+R(x, z) → Q(x, a, y)).
+
+40
+2. Predikatu-kalkulua
+2. ∀xP (x) → R(x, y) formula ((∀xP (x)) → R(x, y)) formula da, eta ez (∀x(P 
+(x) →
+R(x, y))).
+3. ∀x∀yR(x, y) ∨ P (y) formula ((∀x(∀yR(x, y))) ∨ P (y)) formula da.
+2.8 Deﬁnizioa.
+A formula emanik, A formularen azpiformula A formularen zatia den
+ondoz ondo eraikitako formula ongi eratu bat da.
+Adibidez, A = ∀xP (x) → R(x, y) formula emanik, ∀xP (x) eta R
+(x, y) azpiformulak
+dira, baina P (x) → R(x, y) ez da azpiformula.
+2.9 Deﬁnizioa.
+Formula batean, zenbatzaile baten agerpen baten irismena agerpen hor-
+rek eragiten duen azpiformula da.
+2.10 Adibideak.
+1. ∀x∃yR(x, y) formulan, ∃y zenbatzailearen irismena R
+(x, y) azpiformula da, eta ∀x
+zenbatzailearena ∃yR(x, y).
+2. ∀y(∃xR(x, y) ∨ P (x)) formulan, ∃x zenbatzailearen irismena R
+(x, y) azpiformula da,
+eta ∀y zenbatzailearena ∃xR(x, y) ∨ P (x).
+3. ∀y(R(x, y) → ∀x∃yQ(x, a, y)) formulan, ∃y zenbatzailearen irismena Q
+(x, a, y) azpi-
+formula da, ∀x zenbatzailearena ∃yQ
+(x, a, y) azpiformula da, eta ∀y zenbatzaileare-
+na R(x, y) → ∀x∃yQ(x, a, y).
+2.11 Deﬁnizioa.
+Aldagai baten agerpen bat formula batean lotua da zenbatzaile batekin
+badago edo aldagaia erabiltzen duen zenbatzaile baten irismenaren barne badago. Ager-
+pena askea da ez bada lotua.
+Aldagai bat askea da formula batean gutxienez aldagaiaren agerpen bat askea bada
+formulan. Aldagai bat lotua da formula batean gutxienez aldagaiaren agerpen bat lotua
+bada formulan.
+Ohar gaitezen aldagai bat aldi berean askea eta lotua izan daitekeela.
+2.12 Deﬁnizioa.
+Formula bat itxia da ez badauka aldagi askeen agerpenik.
+2.13 Adibideak.
+1. ∀xR(x, y).
+Zenbatzaileen agerpenen irismenak azpimarratuko ditugu, eta irismenei eta zen-
+batzaileek lotzen dituzten aldagaien agerpenei azpiindize bera jarriko diegu:
+∀x1R(x1, y)
+1
+. x lotua da; y askea da.
+2. ∀x∃y(R(x, y) → ∀xP (x)).
+Jakiteko zenbatzaileen agerpen bakoitzak aldagaien zer aagerpen lotzen dituen, for-
+mularen barrutik kanpora joango gara, formula eraikitzeko bideari jarraituz.
+∀x3∃y2(R(x3, y2) → ∀x1P (x1)
+1
+)
+23
+. x, y lotuak dira eta formula itxia da.
+
+2.3. Semantika
+41
+3. ∃x∀yR(x, y) ∨ ∃zQ(x, a, z).
+∃x2∀y1R(x2, y1)
+12
+∨ ∃z3Q(x, a, z3)
+3
+. x askea eta lotua da; y, z lotuak dira.
+4. ∀x∃yR(x, y) → ∀xP (x).
+∀x2∃y1R(x2, y1)
+12
+→ ∀x3P (x3)
+3
+. x, y lotuak dira eta formula itxia da.
+2.3
+Semantika
+Proposizio-kalkuluan interpretazio bat atomoei egia-
+balioak esleitzea zen. Predikatu-
+kalkuluan aldagaiak erabiltzen ditugunez, hori baino zerbait gehiago beharko dugu.
+Lehendabizi, kontuan izan behar dugu zer objektu izan daitezkeen aldagaiaren balioak
+(hots, aldagaiaren deﬁnizio-eremua). Esaterako, demagun Z(x, y) formulak “x y-
+ren za-
+titzailea dela” esan nahi duela. x eta y aldagaiak zenbaki osoz ordezkatzen baditugu,
+proposizio bat lortuko dugu, egiazkoa edo faltsua izango dena. Baina aldagaiak zuhaitz-
+izenez ordezkatzen baditugu, ez da horrela gertatzen. Ez du zentzurik “Pagoak haritza
+zatitzen du” esateak. Dena dela, horrelako eztabaida baztertuko dugu suposatuz D eremu
+ez-huts bat dagoela, non D eremuaren elementuak aldagaien balioak diren.
+Suposatuko dugu D multzo ez-hutsa ez dugula ezagutzen; hau da, saiatuko gara
+predikatu-logika garatzen edozein D multzo ez-huts erabiliz.
+Adibidez, D eremuak bi elementu baditu, elementuei 1 eta 2 deituko diegu; orduan,
+D = {1, 2} idatz dezakegu. P 3 aritateko predikatu bat bada, P 
+(x, y, z) adierazpenean x,
+y, z aldagaiek 1 eta 2 balioak har ditzakete: P (1, 1, 1), P (1, 1, 2), ..., P 
+(2, 2, 2).
+Guztira, 23 = 8 aukera ditugu, 1 eta 2 zenbakiekin osa ditzakegun hirukote guztiak,
+hain zuzen. Hirukote horien multzoa honela adieraziko dugu:
+D3 = {(1, 1, 1), (1, 1, 2), (1, 2, 1), (1, 2, 2), (2, 1, 1), (2, 1, 2), 
+(2, 2, 1), (2, 2, 2)}
+Antzeko eran, D2 = {(1, 1), (1, 2), (2, 1), (2, 2)} dugu.
+D = {1, 2, 3} eremua badugu, 32 = 9 bikoteen multzoa hau izango da:
+D2 = {(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3)},
+eta 33 = 27 hirukoteen multzoa beste hau:
+D3 = {(1, 1, 1), (1, 1, 2), (1, 1, 3), . . . , (3, 3, 3)}.
+Oro har, D eremuak m elementu baditu, Dn multzoak mn n-kote izango ditu.
+Orain, P (x, y, z) formulatik x, y, z aldagaiak D3 multzoaren 
+(d1, d2, d3) hirukotearen
+balioez ordezkatzean lortzen den proposizioa egiazkoa edo faltsua izango da 
+(baina ez
+biak). Hori D3 multzoaren hirukote bakoitzarekin gertatuko da; beraz, 3 aritateko P
+predikatuari ϕ funtzio bat esleitu ahal izango diogu; funtzio horrek D3 multzoaren hirukote
+bakoitzari E edo F balioa esleituko dio, hau da, ϕ : D3 −→ 
+{E, F } funtzio bat izango
+dugu.
+
+42
+2. Predikatu-kalkulua
+Adibidez, D = {1, 2} bada, demagun P (1, 1, 1), P (1, 2, 1), P 
+(1, 2, 2) proposizioei E
+balioa esleitzen diegula, eta gainerakoei F balioa. Orduan, P predikatuari esleitzen diogun
+funtzioa hau da:
+ϕ : D3
+→ {E, F }
+111 → E
+112 → F
+121 → E
+122 → E
+211 → F
+212 → F
+221 → F
+222 → F
+D3 zutabean 111, 112, ... idatzi dugu, (1, 1, 1), 
+(1, 1, 2), ... idatzi beharrean, idazkera
+sinpliﬁkatzeko asmoz. Horrela egingo dugu nahasteko arriskurik ez dagoenean.
+Funtzio horri 3 aritateko funtzio logiko deituko diogu, eta honela adieraziko dugu:
+D3
+ϕ
+111 E
+112 F
+121 E
+122 E
+211 F
+212 F
+221 F
+222 F
+D = 
+{1, 2} eremuaren kasuan 3 aritateko 28 = 256 funtzio logiko daude P predikatuari
+esleitu ahal izateko:
+D3 ϕ1 ϕ2 ϕ3 . . . ϕ256
+111 E
+E
+E
+. . .
+F
+112 E
+E
+E
+. . .
+F
+121 E
+E
+E
+. . .
+F
+122 E
+E
+E
+. . .
+F
+211 E
+E
+E
+. . .
+F
+212 E
+E
+E
+. . .
+F
+221 E
+E
+F
+. . .
+F
+222 E
+F
+E
+. . .
+F
+Antzera, P n aritateko predikatu bakoitzari n aritateko funtzio logiko bat esleituko
+diogu, ϕ : Dn −→ {E, F }.
+D eremuak m elementu baditu, Dn multzoak mn elementu izango ditu; eta, beraz, n
+aritateko 2(m
+n
+) funtzio logiko daude.
+
+2.3. Semantika
+43
+2.14 Adibideak.
+1. Izan bedi D = {1, 2} eremua.
+1 aritateko funtzio logikoak:
+D ϕ1 ϕ2 ϕ3 ϕ4
+1
+E
+E
+F
+F
+2
+E
+F
+E
+F
+2 aritateko funtzio logikoak:
+D2 ϕ1 ϕ2 ϕ3 . . . ϕ16
+11
+E
+E
+E
+. . .
+F
+12
+E
+E
+E
+. . .
+F
+21
+E
+E
+F
+. . .
+F
+22
+E
+F
+E
+. . .
+F
+2. Izan bedi D = {1, 2, 3} eremua.
+2 aritateko funtzio logikoak:
+D2 ϕ1 ϕ2 . . . ϕ512
+11
+E
+E
+. . .
+F
+12
+E
+E
+. . .
+F
+13
+E
+E
+. . .
+F
+21
+E
+E
+. . .
+F
+22
+E
+E
+. . .
+F
+23
+E
+E
+. . .
+F
+31
+E
+E
+. . .
+F
+32
+E
+E
+. . .
+F
+33
+E
+F
+. . .
+F
+2.15 Deﬁnizioa.
+A formula ongi eratu baten interpretazio bat emateko D eremu ez-huts
+bat hartuko dugu eta A formulan agertzen diren konstanteei, aldagai askeei eta predikatu-
+sinboloei balioak esleituko dizkiegu honela:
+1. konstante bakoitzari D eremuaren elementu bat esleituko diogu;
+2. aldagai aske bakoitzari D eremuaren elementu bat esleituko diogu;
+3. n aritateko predikatu-
+sinbolo bakoitzari n aritateko funtzio logiko bat esleituko dio-
+gu.
+Batzuetan, D eremua azpimarratzeko, D eremuaren gaineko interpretazioaz hitz eg-
+ingo dugu.
+2.16 Adibidea.
+A = P (x) ∧ ∀xQ(x, a).
+Konstanteak: a.
+Aldagai askeak: x.
+Predikatu-sinboloak: P , Q; ar(P ) = 1, ar(Q) = 2.
+Interpretazio batzuk:
+
+44
+2. Predikatu-kalkulua
+1.
+D = {1, 2}
+x a P Q
+1 2 α β
+D α
+1
+E
+2
+F
+D2 β
+11 E
+12 F
+21 F
+22 E
+2.
+D = {1, 2}
+x a P Q
+2 2 α β
+D α
+1
+E
+2
+E
+D2 β
+11 E
+12 F
+21 F
+22 E
+2.17 Deﬁnizioa.
+G formula ongi eratu bat eta G formularen D eremuaren gaineko I
+interpretazio bat emanik, G formularen egia-
+balioa I interpretaziorako honela kalkulatuko
+dugu:
+1. G = (¬A), G = (A ∧ B), G = (A ∨ B), G = (A → B) edo G = (A ↔ B) bada,
+egia-balioa proposizio-kalkuluan bezala kalkulatuko dugu.
+2. G = (∀xA) edo G = (∃xA) bada, A formularen egia-balioa kalkulatuko dugu x
+aldagaiak A formulan duen agerpen aske bakoitza D eremuaren elementu guztiez
+ordezkatuz; horrela, x aldagaiaren funtzio logiko bat lortuko dugu:
+x A∗
+1
+E
+2
+F
+... ...
+V 
+(∀xA, I) = E da funtzio logiko horrek E balioa hartzen badu D eremuaren elemen-
+tu guztietarako, hau da, A∗ zutabean dena E bada. Bestela, hau da, A∗ zutabean
+gutxienez F bat badago, V (∀xA, I) = F .
+V (∃xA, I) = E da funtzio logiko horrek E balioa hartzen badu gutxienez D ere-
+muaren elementu baterako, hau da, A∗ zutabean gutxienez E bat badago. Bestela,
+hau da, A∗ zutabean dena F bada, V (∃xA, I) = F .
+2.18 Adibideak.
+1. A = ∀xP (x)
+A formularen I interpretazio bat emateko D eremu bat hartuko dugu eta P predikatu-
+sinboloari 1 aritateko α funtzio logiko bat esleituko diogu. Bi elementuko eremu bat-
+en gainean 1 aritateko lau funtzio logiko daude. Konstanterik eta aldagai askerik
+ez dagoenez, eta 1 aritateko predikatu bakarra dagoenez, guztira lau interpretazio
+izango ditugu (bi elementuko eremu baten gainean). Hona hemen horietako bat:
+I : D = {1, 2}
+P
+α
+D α
+1
+E
+2
+F
+V (A, I) kalkulatzeko honela jokatuko dugu:
+
+2.3. Semantika
+45
+(a) Funtzio logikoa formulan ordezkatu: A∗ = ∀xα(x).
+(b) Formula ∀x (zenbatzaile) motakoa denez, zenbatzailearen (α(x)) irismenaren
+egia-balioa kalkulatuko dugu x aldagaiak α(x) adierazpenean duen agerpen
+aske bakoitza D eremuaren elementu bakoitzaz ordezkatuz:
+x
+α(x)
+1
+α(1) = E
+2
+α(2) = F
+Taulan F bat agertzen denez, ∀xα(x) = F da.
+Hau da, V (A, I) = F da.
+2. A = ∃x¬P (x)
+Bi elementuko eremu baten gainean lau interpretazio daude. Har dezagun A formu-
+laren interpretazio hau:
+I : D = {1, 2}
+P
+α
+D α
+1
+F
+2
+E
+(a) Funtzio logikoa formulan ordezkatu: A∗ = ∃x¬α(x).
+(b) Formula ∃x (zenbatzaile) motakoa denez, zenbatzailearen (¬α(x)) irismenaren
+egia-balioa kalkulatuko dugu x aldagaiak ¬α(x) adierazpenean duen agerpen
+aske bakoitza D eremuaren elementu bakoitzaz ordezkatuz. Bestalde, ¬α(x)
+adierazpena ¬ motakoa da, beraz, proposizio-kalkuluan bezala kalkulatuko
+dugu:
+x
+α(x)
+¬α(x)
+1
+α(1) = F
+E
+2
+α(2) = E
+F
+Taulan E bat agertzen denez, ∃x¬α(x) = E da.
+Beraz, V (A, I) = E da.
+3. A = P (x) ∨ ∀y(P (y) → Q(a))
+2 · 2 · 4 · 4 = 64 interpretazio daude bi elementuko eremu baten gainean 
+(aldagai aske
+bat, konstante bat eta bi predikatu-sinbolo). Interpretazio hau hartuko dugu:
+I : D = {1, 2}
+x a P Q
+2 1 α β
+D α
+1
+E
+2
+F
+D β
+1
+F
+2
+F
+(a) A∗ = α(2) ∨ ∀y(α(y) → β(1)) = F ∨ ∀y(α(y) → F ).
+(b) ∀y(α(y) → F ) kalkulatu behar dugu:
+y
+α(y)
+α(y) → F
+1
+α(1) = E
+F
+2
+α(2) = F
+E
+
+46
+2. Predikatu-kalkulua
+∀y motakoa denez, eta taulan F bat agertzen denez, ∀y(α(y) → F ) = F da.
+Eta, hortik, A∗ = F ∨ F = F da.
+Beraz, V (A, I) = F da.
+4. A = ∀x∃yP (x, y)
+D = {1, 2, 3} eremuaren gainean 29 = 512 interpretazio daude; hau hartuko dugu:
+I : D = {1, 2, 3}
+P
+α
+D2 α
+11 E
+12 E
+13 F
+21 F
+22 E
+23 E
+31 F
+32 F
+33 E
+(a) A∗ = ∀x∃yα(x, y).
+(b) ∀x∃yα(x, y) kalkulatu behar dugu; hona hemen dagokion taula:
+x
+∃yα(x, y)
+1
+∃yα(1, y)
+2
+∃yα(2, y)
+3
+∃yα(3, y)
+∃yα(1, y) adierazpena ∃y motakoa denez, dagokion taula eraiki beharko dugu;
+eta berdin ∃yα(2, y) eta ∃yα(3, y) adierazpenekin. Beraz, taula baten barnean
+hiru taula izango ditugu; honela:
+x
+∃yα(x, y)
+1
+y
+α(1, y)
+1
+α(1, 1) = E
+2
+α(1, 2) = E
+3
+α(1, 3) = F
+
+
+
+
+
+
+
+∃yα(1, y) = E
+2
+y
+α(2, y)
+1
+α(2, 1) = F
+2
+α(2, 2) = E
+3
+α(2, 3) = E
+
+
+
+
+
+
+
+∃yα(2, y) = E
+3
+y
+α(3, y)
+1
+α(3, 1) = F
+2
+α(3, 2) = F
+3
+α(3, 3) = E
+
+
+
+
+
+
+
+∃yα(3, y) = E
+∀x motakoa denez, eta (eskuineko) taulan dena E denez, ∀x∃yα(x, y) = E da.
+Hortaz, V (A, I) = E da.
+
+2.4. Baliozkotasuna. Inkontsistentzia. Ondorio logikoak
+47
+2.4
+Baliozkotasuna. Inkontsistentzia. Ondorio logikoak
+Baliozkotasunaren, konsistentziaren eta ondorio logikoaren deﬁnizioek bere horretan di-
+raute, proposizio-kalkuluan bezala.
+2.19 Deﬁnizioa.
+A formula bat tautologia edo baliozkoa da A formularen interpretazio
+guztietarako egiazkoa bada. A formula baliogabea da ez bada baliozkoa.
+A formula bat kontsistentea da gutxienez A formularen interpretazio baterako egiazkoa
+bada. A formula bat inkontsistentea edo kontraesana da ez bada kontsistentea.
+2.20 Deﬁnizioa.
+B formula bat A1, . . . , An formulen ondorio logikoa dela edo formule-
+tatik logikoki deduzitzen dela esango dugu edozein I interpretaziotarako, non V 
+(A1, I) =
+· · · = V (An, I) = E den, V (B, I) = E ere bada. Eta honela adieraziko dugu:
+A1, . . . , An ⇒ B edo A1, . . . , An |= B.
+2.21 Deﬁnizioa.
+P1, . . . , Pn/ ˙..C argumentu bat baliozkoa da C ondorioa premisen ondo-
+rio logikoa bada. Hau da, edozein I interpretaziotarako, non V 
+(P1, I) = · · · = V (Pn, I) =
+E den, V 
+(C, I) = E ere bada. Argumentua baliogabea da ez bada baliozko argumentua.
+Teorema hauek ere betetzen dira:
+2.22 Teorema.
+1. B formula A1, . . . , An formulen ondorio logikoa da baldin eta soilik baldin |= 
+(A1 ∧
+· · · ∧ An → B) bada.
+2. B formula A1, . . . , An formulen ondorio logikoa da baldin eta soilik baldin A1 ∧ · · · ∧
+An ∧ ¬B formula inkontsistentea bada.
+Hala eta guztiz ere, predikatu-kalkuluaren egoera eta proposizio-
+kalkuluaren egoera
+zeharo desberdinak dira. Azken horretan edozein formularen egia-
+taula eraikitzea posiblea
+den bitartean, predikatu-kalkuluan ez da hori beti posible.
+Predikatu-kalkuluan, eremua ﬁnitua denean, egia-
+taula eraiki dezakegu, teorikoki bada
+ere. Baina formula bat baliozkoa izateko, edozein eremuren gaineko edozein interpretazio-
+tarako egiazkoa izan behar du, eremu inﬁnituak barne. Berdin formula inkontsistenteekin,
+baliogabeekin...
+Dena dela, formula bat baliozkoa edo kontsistentea den ala ez arrazoi dezakegu egia-
+taula lerroz lerro eraiki gabe.
+2.23 Adibideak.
+1. Ikus dezagun A = ∃x(P (x) ∧ ¬P (x)) formula inkontsistentea dela.
+Izan bitez D edozein eremu ez-
+huts eta I edozein interpretazio eremu horren gainean.
+I :
+D
+P
+α
+D α
+1
+?
+... ...
+
+48
+2. Predikatu-kalkulua
+(a) A∗ = ∃x(α(x) ∧ ¬α(x)).
+(b) ∃x(α(x) ∧ ¬α(x)) kalkulatu behar dugu.
+x
+α(x)
+¬α(x)
+α(x) ∧ ¬α(x)
+1
+α(1) =?
+¬?
+? ∧ ¬? = F
+...
+...
+...
+...
+∃x motakoa denez eta taulan dena F denez, ∃x(α(x) ∧ ¬α(x)) = F izango da.
+Beraz, V (A, I) = F da, non I edozein interpretazio eta D edozein eremu diren.
+Hortaz, A formula inkontsistentea da.
+2. Ikus dezagun A = P (y) → ∀xP (x) formula baliogabea dela.
+Horretarako nahikoa da V (A, I) = F betetzen duen I interpretazio bat bilatzea.
+Proba dezagun D = {1} eremuarekin.
+I :
+D = {1}
+y P
+1 α
+D α
+1
+?
+(a) A∗ = α(1) → ∀xα(x).
+(b) A∗ = F izateko, α(1) = E eta ∀xα(x) = F bete behar dira. Orduan, 1
+aritateko funtzio logiko hau daukagu:
+D α
+1
+E
+Orduan, taula hau izango genuke:
+x
+α(x)
+1
+α(1) = E
+Taulan dena E denez, ∀xα(x) = E izango da.
+Beraz, D = 
+{1} eremurako ezin izan dugu aurkitu A formula faltsutzen duen inter-
+pretaziorik (A formula kontsistentea da).
+Proba dezagun D = {1, 2} eremuarekin.
+I :
+D = {1, 2}
+y P
+d α
+D α
+1
+?
+2
+?
+(d D eremuaren elementu bat da)
+(a) A∗ = α(d) → ∀xα(x).
+(b) A∗ = F izateko, α(d) = E eta ∀xα
+(x) = F bete behar dira. Biak bete daitezen:
+x
+α(x)
+1
+α(1) F bat eta E bat
+2
+α(2)
+
+2.4. Baliozkotasuna. Inkontsistentzia. Ondorio logikoak
+49
+Har dezagu, adibidez, interpretazio hau:
+I :
+D = {1, 2}
+y P
+1 α
+D α
+1
+E
+2
+F
+Egiaztapena:
+(a) A∗ = α(d) → ∀xα(x).
+(b) Interpretazio honetarako α(1) = E eta ∀xα(x) = F dauzkagu, taula honetan
+F bat dagoelako:
+x
+α(x)
+1
+α(1) = E
+2
+α(2) = F
+Beraz,A∗ = E → F = F da.
+Ondorioz, V (A, I) = F da eta A formula baliogabea da.
+3. Ikus dezagun B = Q(a) formula A1 = ∀x(P (x) → Q(x)) eta A2 = P (a) formulen
+ondorio logikoa dela.
+Horretarako frogatu beharko dugu edozein I interpretaziotarako V (A1, I) = V 
+(A2, I) =
+E bada, V (B, I) = E ere izango dela.
+Izan bitez D edozein eremu eta I edozein interpretazio D eremuaren gainean, non
+V (A1, I) = V (A2, I) = E den.
+I : D
+a P Q
+d α β
+D α
+1
+?
+... ...
+D β
+1
+?
+... ...
+A∗1 = ∀x(α(x) → β(x)).
+A∗2 = α(d).
+A∗2 = E izateko α
+(d) = E bete behar da; beraz, α funtzioaren taulan, errenkada bat
+honelakoa izango da: d
+α(d) = E .
+A∗1 = E denez, α(x) → β(x) adierazpenaren taularen errenkada guztietan E ager-
+tuko da. Horien artean, d duen errenkada: d
+α(d) → β(d) = E .
+B∗ = β(d).
+α(d) → β(d) = E eta α(d) = E direnez, β(d) = E bete beharko da.
+Hortaz, V (B, I) = E eta B formula A1 eta A2 formulen ondorio logikoa da.
+4. Ikus dezagun argumentu hau baliogabea dela:
+A1 = ∀x(P (x) → ¬Q(x))
+A2 = ∃x(R(x) ∧ Q(x))
+B = ∀x(P (x) → R(x))
+
+50
+2. Predikatu-kalkulua
+Argumentu bat baliogabea dela frogatzeko nahikoa da frogatzea ondorioa ez dela
+premisen ondorio logikoa. Hau da, nahikoa da premisak egiaztatzen dituen eta
+ondorioa faltsutzen duen interpretazio bat aurkitzea.
+Proba dezagun D = {1} eremuarekin.
+I : D
+P Q R
+α β
+γ
+D α
+1
+?
+D β
+1
+?
+D γ
+1
+?
+A∗1 = ∀x(α(x) → ¬β(x)).
+A∗1 = E izateko,
+x
+α(x) → ¬β(x)
+1
+α(1) → ¬β(1) = E
+bete behar da.
+A∗2 = ∃x(γ(x) ∧ β(x)).
+A∗2 = E izateko,
+x
+γ(x) ∧ β(x)
+1
+γ(1) ∧ β(1) = E
+bete behar da.
+Hortaz, azkenekotik, γ(1) = E eta β(1) = E dira. β(1) = E denez, ¬β(1) = F
+da eta, α(1) → ¬β(1) = E bete behar denez, α(1) = F aterako dugu. Eta B∗
+adierazpenerako, taula hau daukagu:
+x
+α(x) → γ(x)
+1
+α(1) → γ(1) = E
+eta, hortaz, B∗ = E da.
+Ondorioz, D = {1} eremuarekin ezin izan dugu aurkitu A1 eta A2 egiaztatu eta B
+faltsutzen dituen interpretaziorik.
+Proba dezagun D = {1, 2} eremuarekin.
+I : D
+P Q R
+α β
+γ
+D α
+1
+?
+2
+?
+D β
+1
+?
+2
+?
+D γ
+1
+?
+2
+?
+A∗1 = ∀x(α(x) → ¬β(x)).
+A∗1 = E izateko,
+x
+α(x) → ¬β(x)
+1
+α(1) → ¬β(1) = E
+2
+α(2) → ¬β(2) = E
+bete behar da.
+(2.1)
+A∗2 = ∃x(γ(x) ∧ β(x)).
+A∗2 = E izateko,
+x
+γ(x) ∧ β(x)
+1
+γ(1) ∧ β(1)
+batek E izan behar du.
+2
+γ(2) ∧ β(2)
+(2.2)
+
+2.5. Baliokidetza logikoak
+51
+B∗ = ∀x(α(x) → γ(x)).
+B∗ = F izateko,
+x
+α(x) → γ(x)
+1
+α(1) → γ(1)
+batek F izan behar du.
+2
+α(2) → γ(2)
+(2.3)
+(2.2) betetzeko, nahikoa da γ(1) = β(1) = E betetzea (¬β(1) = F ). Orduan,
+α(1) → ¬β(1) = E izan behar denez, α(1) = F aterako dugu. Eta hortik α(1) →
+γ(1) = E daukagu.
+(2.3) betetzeko, α(2) → γ(2) = F bete behar da, hau da, α(2) = E eta γ(2) = F .
+Hortaz, (2.1) betetzeko, α(2) = E eta α(2) → ¬β(2) = E badira, ¬β(2) = E eta
+β(2) = F izango dira.
+Laburbilduz, hona hemen A1 eta A2 egiaztatu eta B faltsutzen dituen interpretazio
+bat:
+I : D
+P Q R
+α β
+γ
+D α
+1
+F
+2
+E
+D β
+1
+E
+2
+F
+D γ
+1
+E
+2
+F
+Egiaztapena:
+A∗1 = ∀x(α(x) → ¬β(x))
+x
+α(x)
+β(x)
+¬β(x)
+α(x) → ¬β(x))
+1
+F
+E
+F
+E
+2
+E
+F
+E
+E
+A∗2 = ∃x(γ(x) ∧ β(x))
+x
+γ(x)
+β(x)
+γ(x) ∧ β(x)
+1
+E
+E
+E
+2
+F
+F
+F
+B∗ = ∀x(α(x) → γ(x))
+x
+α(x)
+γ(x)
+α(x) → γ(x)
+1
+F
+E
+E
+2
+E
+F
+F
+Beraz, V (A1, I) = V (A2, I) = E eta V (B, I) = F betetzen dira. Eta argumentua
+baliogabea da.
+2.5
+Baliokidetza logikoak
+2.24 Deﬁnizioa.
+A eta B bi formula ongi eratuak logikoki baliokideak dira (A ≡ B)
+egia-balio berberak badituzte interpretazio guztietarako, V (A, I) = V (B, I).
+Ondorioak
+1. Proposizio-
+kalkuluaren baliokidetza logikoek bere horretan diraute predikatu-kalkuluan.
+2. A ≡ B da baldin eta soilik baldin |= (A ↔ B) bada.
+
+52
+2. Predikatu-kalkulua
+Horietaz gain, predikatu-kalkuluan baliokidetza gehiago dauzkagu.
+Idazkera.
+• A[x], B[x]: x aldagai asketzat duten formulak dira.
+Adibideak: A[x] = P (x), A[x] = ∀y(P (x) ∧ Q(y) → ∃xR(x, x)), A[x] = P (x) →
+∀yP (y), etab.
+• J: x aldagai asketzat ez duen formula da.
+Adibideak: J = ∀yP (y), J = ∀xP (x) → Q(y), etab.
+• A∗[x], J∗: I interpretazio bat A
+[x], J formuletan ordezkatzean lortzen diren adier-
+azpenak dira.
+Zenbatzaileen baliokidetzak
+1. ¬∀xA[x] ≡ ∃x¬A[x].
+2. ∀x¬A[x] ≡ ¬∃xA[x].
+3. ∀xA[x] ∧ ∀xB[x] ≡ ∀x(A[x] ∧ B
+[x]), ∀ zenbatzailea banakorra da ∧ lokailuarekiko.
+4. ∃xA[x] ∨ ∃xB[x] ≡ ∃x(A[x] ∨ B
+[x]), ∃ zenbatzailea banakorra da ∨ lokailuarekiko.
+5. 1. ∀xA[x] ∨ J ≡ ∀x(A[x] ∨ J).
+2. ∃xA[x] ∨ J ≡ ∃x(A[x] ∨ J).
+6. 1. ∀xA[x] ∧ J ≡ ∀x(A[x] ∧ J).
+2. ∃xA[x] ∧ J ≡ ∃x(A[x] ∧ J).
+Ez dira baliokideak
+N1:
+∀xA[x] ∨ ∀xB[x] ≡ ∀x(A[x] ∨ B[x]),
+∀ zenbatzailea ez da banakorra ∨ lokailu-
+arekiko.
+N2:
+∃xA[x] ∧ ∃xB[x] ≡ ∃x(A[x] ∧ B[x]),
+∃ zenbatzailea ez da banakorra ∧ lokailu-
+arekiko.
+Froga.
+1. G = ¬∀xA[x] ≡ ∃x¬A
+[x] = H dela frogatzeko ikusi behar dugu edozein I interpre-
+taziotarako V (G, I) = V (H, I) betetzen dela.
+Izan bitez D edozein eremu eta I edozein interpretazio D eremuaren gainean.
+I interpretazioa G eta H formuletan ordezkatzean, G∗ = ¬∀xA∗[x] eta H∗ =
+∃x¬A∗[x] adierazpenak lortuko ditugu, hurrenez hurren.
+Bi aukerak ditugu: a) V (G, I) = E. b) V (G, I) = F .
+
+2.5. Baliokidetza logikoak
+53
+a) V (G, I) = E bada, G∗ = ¬∀xA∗[x] = E izango da; orduan, ∀xA∗[x] = F
+izango da. Beraz, A∗[x] adierazpenaren taulan honelako errenkada bat egongo da:
+d
+A∗[d] = F .
+¬A∗[x] adierazpenaren errenkada hori honelakoa izango da: d
+¬A∗[d] = E . Be-
+raz, H∗ = ∃x¬A∗[x] = E beteko da.
+Hortaz, V (H, I) = E = V (G, I) dugu.
+b) V (G, I) = F bada, G∗ = ¬∀xA∗[x] = F izango da; orduan, ∀xA∗[x] = E izango
+da. Beraz, A∗[x] adierazpenaren taulan dena da E.
+A∗[x] adierazpenaren taulan dena E bada, ¬A∗[x] adierazpenaren taulan dena F
+izango da. Beraz, H∗ = ∃x¬A∗[x] = F da.
+Hortaz, V (H, I) = F = V (G, I) da.
+Bi kasuetan, V (G, I) = V (H, I) dugu, hau da, G ≡ H.
+2. G = ∀x¬A[x] ≡ ¬∃xA
+[x] = H dela frogatzeko baliokidetasun logikoaren deﬁnizioa
+erabil dezakegu, aurrekoan bezala, eta frogatu edozein I interpretaziotarako V 
+(G, I) =
+V (H, I) betetzen dela.
+Baina, jadanik frogatu ditugun baliokidetzak ere erabil ditzakegu, aurrekoa eta
+proposizio-kalkuluarenak.
+G = ∀x¬A[x]
+U B
+≡ ¬(¬∀x¬A[x])
+1.
+≡ ¬∃x¬¬A[x]
+U B
+≡ ¬∃xA[x] = H.
+3. G = ∀xA[x] ∧ ∀xB[x] ≡ ∀x(A[x] ∧ B[x]) = H dela frogatzeko baliokidetasun
+logikoaren deﬁnizioa erabiliko dugu.
+Izan bitez D edozein eremu eta I edozein interpretazio D eremuaren gainean.
+I interpretazioa G eta H formuletan ordezkatzean, G∗ = ∀xA∗[x] ∧ ∀xB∗[x] eta
+H∗ = ∀x(A∗[x] ∧ B∗[x]) adierazpenak lortuko ditugu, hurrenez hurren.
+Bi aukerak ditugu: a) G∗ = E. b) G∗ = F .
+a) G∗ = E bada, ∀xA∗[x] = E eta ∀xB∗[x] = E izango dira. Beraz, A∗[x] eta B∗[x]
+adierazpenen tauletan errenkada guztiak dira E.
+Hortik, A∗[x] ∧ B∗
+[x] adierazpenaren taularen errenkada guztietan E agertuko da.
+Ondorioz, H∗ = ∀x(A∗[x] ∧ B∗[x]) = E dugu.
+Hortaz, V (H, I) = E = V (G, I) da.
+b) G∗ = F bada, beste bi aukera dauzkagu: b.1) ∀xA∗[x] = E. b.2) ∀xA∗[x] = F .
+b.1) ∀xA∗[x] = E bada, G∗ = F denez, ∀xB∗[x] = F izango da. Beraz, B∗[x]
+adierazpenaren taulan honelako errenkada bat egongo da: d
+B∗[d] = F .
+Errenkada hori bera baina orain A∗[x] ∧ B∗
+[x] adierazpenaren taulan hau izango da:
+d
+A∗[d] ∧ B∗[d] = F . Beraz, H∗ = ∀x(A∗[x] ∧ B∗[x]) = F beteko da.
+Ondorioz, V (H, I) = F = V (G, I) dugu.
+b.2) ∀xA∗[x] = F bada, A∗[x] adierazpenaren taularen errenkadaren batean hau
+izango dugu: d
+A∗[d] = F . A∗[x] ∧ B∗[x] adierazpenaren taularen errenkada
+
+54
+2. Predikatu-kalkulua
+berean beste hau izango dugu: d
+A∗[d] ∧ B∗[d] = F . Beraz, H∗ = ∀x(A∗[x] ∧
+B∗[x]) = F da.
+Ondorioz, V (H, I) = F = V (G, I) betetzen da
+Hortaz, edozein I interpretaziotarako V (H, I) = V 
+(G, I) daukagu, hau da, G ≡ H.
+4. G = ∃xA[x] ∨ ∃xB[x] ≡ ∃x(A[x] ∨ B[x]) = H betetzen dela frogatzeko jadanik
+frogatu ditugun baliokidetzak erabiliko ditugu.
+G = ∃xA[x] ∨ ∃xB[x]
+U B
+≡ ¬(¬(∃xA[x] ∨ ∃xB[x]))
+DeM
+≡ ¬(¬∃xA[x] ∧ ¬∃xB[x])
+2.
+≡
+¬(∀x¬A[x] ∧ ∀x¬B[x])
+3.
+≡ ¬∀x(¬A[x] ∧ ¬B[x])
+1.
+≡ ∃x¬(¬A[x] ∧ ¬B[x])
+DeM
+≡
+∃x(¬¬A[x] ∨ ¬¬B[x])
+U B
+≡ ∃x(A[x] ∨ B[x]) = H
+5. 1. G = ∀xA[x] ∨ J ≡ ∀x(A[x] ∨ J) = H betetzen dela frogatzeko baliokidetasun
+logikoaren deﬁnizioa erabiliko dugu.
+Izan bitez D edozein eremu eta I edozein interpretazio D eremuaren gainean.
+I interpretazioa G eta H formuletan ordezkatzean, G∗ = ∀xA∗[x] ∨ J∗ eta H∗ =
+∀x(A∗[x] ∨ J∗) adierazpenak lortuko ditugu, hurrenez hurren.
+Aukerak: a) G∗ = ∀xA∗[x] ∨ J∗ = E. b) G∗ = ∀xA∗[x] ∨ J∗ = F .
+a) G∗ = E bada, beste bi aukera ditugu: a.1) J∗ = E. a.2) J∗ = F .
+a.1) J∗ = E bada, A∗
+[x] ∨ J∗ adierazpenaren taularen errenkada guztietan E ager-
+tuko da. Beraz, H∗ = ∀x(A∗[x] ∨ J∗) = E izango da.
+Hortaz, V (H, I) = E = V (G, I) beteko da.
+a.2) J∗ = F bada, G∗ = E denez, ∀xA∗[x] = E bete beharko da. Hau da, A∗[x]
+adierazpenaren taularen errenkada guztietan E agertuko da. Hortik, A∗[x] ∨ J∗
+adierazpenaren taularen errenkada guztietan E agertuko da. Eta, ondorioz, H∗ =
+∀x(A∗[x] ∨ J∗) = E izango da.
+Kasu honetan ere V (H, I) = E = V (G, I) beteko da.
+b) G∗ = ∀xA∗[x] ∨ J∗ = F bada, ∀xA∗[x] = F eta J∗ = F bete beharko dira.
+Lehenengotik aterako dugu A∗[x] adierazpenaren taularen errenkadaren batean F
+agertuko dela: d
+A∗[d] = F . A∗[x] ∨ J∗ adierazpenaren taularen errenkada bere-
+an ere F agertuko da: d
+A∗[d] ∨ J∗ = F . Ondorioz, H∗ = ∀x(A∗[x] ∨ J∗) = F
+izango da.
+Kasu honetan V (H, I) = F = V (G, I) dugu.
+Hortaz, edozein I interpretaziotarako V (H, I) = V 
+(G, I) daukagu, hau da, G ≡ H.
+2. G = ∃xA[x] ∨ J ≡ ∃x(A[x] ∨ J) = H betetzen dela frogatzeko baliokidetasun
+logikoaren deﬁnizioa erabiliko dugu berriro.
+Izan bitez D edozein eremu eta I edozein interpretazio D eremuaren gainean.
+I interpretazioa G eta H formuletan ordezkatzean, G∗ = ∃xA∗[x] ∨ J∗ eta H∗ =
+∃x(A∗[x] ∨ J∗) adierazpenak lortuko ditugu, hurrenez hurren.
+Aukerak: a) G∗ = E. b) G∗ = F .
+
+2.5. Baliokidetza logikoak
+55
+a) G∗ = E bada, beste bi aukera ditugu: a.1) J∗ = E . a.2) J∗ = F .
+a.1) J∗ = E bada, A∗[x] ∨ J∗ adierazpenaren taulan dena E da. Beraz, H∗ =
+∃x(A∗[x] ∨ J∗) = E izango da.
+Kasu honetan V (H, I) = E = V (G, I) betetzen da.
+a.2) J∗ = F bada, G∗ = E denez, ∃xA∗[x] = E bete behar da. Beraz, A∗[x] adier-
+azpenaren taulan honelako errenkadaren bat egongo da: d
+A∗[d] = E . Errenka-
+da hori bera A∗[x] ∨ J∗ adierazpenaren taulan hau izango da: d
+A∗[d] ∨ J∗ = E .
+Beraz, H∗ = ∃x(A∗[x] ∨ J∗) = E dugu.
+Kasu honetan ere V (H, I) = E = V (G, I) betetzen da.
+b) G∗ = F bada, ∃xA∗[x] = F eta J∗ = F izango dira. Lehenengotik aterako dugu
+A∗[x] adierazpenaren taulan dena F dela. Beraz, A∗
+[x] ∨ J∗ adierazpenaren taulan
+ere tambi´en dena F da. Hortaz, H∗ = ∃x(A∗[x] ∨ J∗) = F izango da.
+Kasu honetan ere bai V (H, I) = F = V (G, I) betetzen da.
+Ondorioz, edozein I interpretaziotarako V (H, I) = V 
+(G, I) daukagu, hau da, G ≡
+H.
+6. 6.1. eta 6.2. frogatzeko aurreko baliokidetza batzuk erabiliko ditugu.
+1. ∀xA[x] ∧ J
+U B
+≡ ¬¬(∀xA[x] ∧ J)
+DeM
+≡ ¬(¬∀xA[x] ∨ ¬J)
+1.
+≡ ¬(∃x¬A[x] ∨ ¬J)
+5.2.
+≡
+¬∃x(¬A[x] ∨ ¬J)
+DeM
+≡ ¬∃x¬(A[x] ∧ J)
+2.
+≡ ∀x¬(¬(A[x] ∧ J))
+U B
+≡ ∀x(A[x] ∧ J).
+2. ∃xA[x] ∧ J
+U B
+≡ ¬¬(∃xA[x] ∧ J)
+DeM
+≡ ¬(¬∃xA[x] ∨ ¬J)
+2.
+≡ ¬(∀x¬A[x] ∨ ¬J)
+5.1.
+≡
+¬(∀x(¬A[x] ∨ ¬J))
+DeM
+≡ ¬(∀x¬(A[x] ∧ J))
+1.
+≡ ∃x¬¬(A[x] ∧ J)
+U B
+≡ ∃x(A[x] ∧ J).
+Egiazta dezagun, orain, N1 eta N2 ez direla baliokidetzak
+N1: ∀xA[x] ∨ ∀xB[x] ≡ ∀x(A[x] ∨ B[x]) dela frogatzeko ikus dezagun A[x] = P 
+(x) eta
+B[x] = Q(x) direnean, G = ∀xP (x) ∨ ∀xQ(x) ≡ ∀x(P (x) ∨ Q(x)) = H dela.
+Horretarako nahikoa izango da V (H, I) = V 
+(G, I) betetzen duen I interpretazio bat
+aurkitzea.
+Har dezagun interpretazio hau:
+I : D = {1, 2}
+P Q
+α β
+D α
+1
+E
+2
+F
+D β
+1
+F
+2
+E
+G∗ = ∀xα(x) ∨ ∀xβ(x).
+x
+α(x)
+1
+α(1) = E
+2
+α(2) = F
+
+
+
+∀xα(x) = F
+x
+β(x)
+1
+β(1) = F
+2
+β(2) = E
+
+
+
+∀xβ(x) = F
+Beraz, G∗ = F ∨ F = F betetzen da.
+H∗ = ∀x(α(x) ∨ β(x)).
+
+56
+2. Predikatu-kalkulua
+x
+α(x)
+β(x)
+α(x) ∨ β(x)
+1
+α(1) = E
+β(1) = F
+α(1) ∨ β(1) = E
+2
+α(2) = F
+β(2) = E
+α(2) ∨ β(2) = E
+H∗ = ∀x(α(x) ∨ β(x)) = E
+Orduan, V (H, I) = V (G, I). Eta, beraz, G ≡ H daukagu.
+N2: G = ∃xA[x] ∧ ∃xB[x] ≡ ∃x(A[x] ∧ B
+[x]) = H dela frogatzeko, ikus dezakegu, au-
+rrekoan bezala, I interpretazio baterako V (H, I) = V 
+(G, I) dela. Baina jadanik
+frogaturik dauden baliokidetzak eta baliokidetza ez den aurrekoa ere erabil ditza-
+kegu.
+G = ∃xA[x] ∧ ∃xB[x]
+U B
+≡ ¬¬(∃xA[x] ∧ ∃xB[x])
+DeM
+≡ ¬(¬∃xA[x] ∨ ¬∃xB[x])
+2.
+≡
+¬(∀x¬A[x] ∨ ∀x¬B[x])
+N
+1
+≡ ¬∀x(¬A[x] ∨ ¬B[x])
+1.
+≡ ∃x¬(¬A[x] ∨ ¬B[x])
+DeM
+≡
+∃x(¬¬A[x] ∧ ¬¬B[x])
+U B
+≡ ∃x(A[x] ∧ B[x]) = H.
+2.6
+Dedukzio formala
+Predikatu-
+kalkuluan ere argumentuak baliozkoak diren ala ez ikusteko froga formalak egin
+ditzakegu.
+Hona hemen erabiliko ditugun erregelak:
+1. Proposizio-kalkuluaren 1-9 inferentzi erregelak:
+ MP, MT, SH, SD, DE, DS, KS, KK,
+DB.
+2. Ordezkapen-erregela, proposizio-
+kalkuluaren baliokidetza logikoak erabiliz, 10-19,
+eta aurreko atalean frogatutako zenbatzaileen baliokidetzak.
+3. Baldintzazko frogaren erregela eta absurdora eramateko erregela.
+4. Erregela berriak agertuko dira:
+ Zenbatzaileen erregelak. Erregela hauek froga baten
+errenkada osoei bakarrik aplika diezazkiekegu.
+Idazkera.
+Erregela horiek erabiltzean idazkera hau erabiliko dugu:
+A(x) edozein formula da; A(r) da x aldagaiak A(x) formulan dituen agerpen aske
+guztiak r balioaz ordezkatzean lortzen den formula.
+2.25 Adibideak.
+1. A(x) = ∀z(Q(x) ∨ ∀xP (x, y, z)) bada, A(y) = ∀z(Q(y) ∨ ∀xP 
+(x, y, z)) daukagu.
+2. A(y) = ∃x(P (x, y) ∨ ∀z∃yP (y, z)) bada, A(z) = ∃x(P (x, z) ∨ ∀z∃yP 
+(y, z)) daukagu.
+3. A(x) = ∀xP (x, y) ∨ P (z, y) bada, A(z) = ∀xP (x, y) ∨ P (z, y) (= A
+(x)) daukagu.
+4. A(x) = ∀yP (y) bada, A(y) = A(z) = A(x) daukagu.
+2.26 Deﬁnizioa.
+Esango dugu r aldagaia A(x) formulan x aldagairako aske dela r alda-
+gaiak A
+(r) formulan ordezkapenaren ondorioz dituen agerpen guztiak askeak badira (r
+aske ager daiteke posizio gehiagotan).
+
+2.6. Dedukzio formala
+57
+2.27 Adibideak.
+1. A(x) = ∀z(Q(x) ∨ ∀xP (x, y, z)).
+A(y) = ∀z(Q(y) ∨ ∀xP (x, y, z)). y aske da x aldagairako A(x) formulan.
+A(z) = ∀z(Q(z) ∨ ∀xP (x, y, z)). z ez da aske x aldagairako A(x) formulan.
+2. A(y) = ∃x(P (x, y) ∨ ∀z∃yP (y, z)).
+A(z) = ∃x(P (x, z) ∨ ∀z∃yP (y, z)). z aske da y aldagairako A(y) formulan.
+A(x) = ∃x(P (x, x) ∨ ∀z∃yP (y, z)). x ez da aske y aldagairako A(y) formulan.
+3. A(x) = ∀xP (x, y) ∨ P (z, y).
+A(z) = A(y) = · · · = A(x). Edozein aldagai da aske x aldagairako A
+(x) formulan.
+Oharrak.
+1. A(x) formulak ez badu x aske, edozein r aldagaitarako A(r) = A
+(x) izango da, eta
+r aske izango da x aldagairako A(x) formulan.
+2. Edozein A(x) formulatarako, x aske da x aldagairako A(x) formulan.
+Zenbatzaileen erregelak
+•
+∀ zenbatzailea ezabatu
+∀xA(x)
+A(r)
+Murriztapenak: r aske da x aldagairako A(x) formulan edo r konstante bat da.
+2.28 Adibideak.
+1.
+∀x(P (x, x) ∧ Q(y))
+P (z, z) ∧ Q(y)
+A(x) = P (x, x) ∧ Q(y); A(z) = P (z, z) ∧ Q(y), z aske da x-rako A(x) formulan.
+2.
+∀x(P (x, x) ∧ Q(y))
+P (x, x) ∧ Q(y)
+∀x(P (x, x) ∧ Q(y))
+P (y, y) ∧ Q(y)
+x eta y aske dira x aldagairako P (x, x) ∧ Q(y) formulan.
+3.
+∀y(P (y, y) ∧ Q(x) ∧ ∀xR(x))
+P (x, x) ∧ Q(x) ∧ ∀xR(x))
+x aske da y aldagairako P (y, y) ∧ Q(x) ∧ ∀xR(x) formulan.
+
+58
+2. Predikatu-kalkulua
+4.
+∀x(P (x, x) ∧ Q(y) ∧ ∃xR(x))
+P (y, y) ∧ Q(y) ∧ ∃xR(x))
+y aske da x aldagairako P (x, x) ∧ Q(y) ∧ ∃xR(x) formulan.
+5.
+Txakur guztiak ugaztunak dira. ∀x(T (x) → U (x))
+Bizi txakurra da.
+T (b)
+Beraz, Bizi ugaztuna da.
+U (b)
+1. ∀x(T (x) → U (x)) premisa
+2. T (b)
+premisa / ˙.. U (b)
+3. T (b) → U (b)
+∀x-ezab(1) (b konstantea da)
+4. U (b)
+MP(3,2)
+6.
+1. ¬P (x)
+premisa
+2. ∀y(P (y) ∨ Q(y)) premisa / ˙.. Q(x)
+3. P (x) ∨ Q(x)
+∀y-ezab(2) (x aske da y-rako P (y) ∨ Q(y) formulan)
+4. Q(x)
+SD(3,1)
+7. Hona hemen deduzio oker bat:
+1. ∀x∃yP (x, y) premisa / ˙.. ∃yP (y, y)
+2. ∃yP (y, y)
+∀x-ezab(1)
+Erregela gaizki aplikatu dugu, y ez delako aske x aldagairako ∃yP 
+(x, y) formulan.
+Horrez gai, argumentua baliogabea dela froga dezakegu. Har dezagun interpretazio
+hau:
+I : D = {1, 2}
+P
+α
+D2 α
+11 F
+12 E
+21 E
+22 F
+V (∀x∃yP (x, y), I) = E da, eta V (∃yP (y, y), I) = F .
+8. Hona hemen erregelaren aplikazio okerraren beste adibide bat:
+∀xP (x, x)
+P (x, y)
+Ez dira ordezkatu x aldagaiak P 
+(x, x) formulan dituen agerpen aske guztiak y alda-
+gaiarekin.
+Horrez gain, argumentua baliogabea dela froga dezakegu.
+
+2.6. Dedukzio formala
+59
+•
+∃ zenbatzailea sartu
+A(r)
+∃xA(x)
+Murriztapenak: r aske da x aldagairako A(x) formulan edo r konstantea da.
+2.29 Adibideak.
+1.
+P (x)
+∃xP (x)
+P (y)
+∃xP (x)
+x eta y aske dira x aldagairako P (x) formulan.
+2.
+P (x, y) ∧ ∀zR(z)
+∃z(P (x, z) ∧ ∀zR(z))
+y aske da z aldagairako P (x, z) ∧ ∀zR(z) formulan.
+3.
+P (x) → Q(x)
+∃y(P (x) → Q(y))
+x aske da y aldagairako P (x) → Q(y) formulan.
+4.
+1. ∀x(P (x) → Q(x))
+premisa / ˙.. P (y) → ∃x(P (x) ∧ Q(x))
+→ 2. P (y)
+BFEren hipotesia / ˙.. ∃x(P (x) ∧ Q(x))
+3. P (y) → Q(y)
+∀x-ezab(1) (y aske x-rako, P (x) → Q(x))
+4. Q(y)
+MP(3,2)
+5. P (y) ∧ Q(y)
+KK(2,4)
+6. ∃x(P (x) ∧ Q(x))
+∃x-sar(5) (y aske x-rako, P (x) ∧ Q(x))
+7. P (y) → ∃x(P (x) ∧ Q(x)) BFE(2-6)
+5. Erregelaren aplikazio oker bat:
+P (x) ↔ ¬P (y)
+∃x(P (x) ↔ ¬P (x))
+Erregela gaizki aplikatu dugu ez ditugulako ordezkatu y aldagaiarekin x aldagaiak
+P (x) ↔ ¬P (x) formulan dituen agerpen aske guztiak.
+Eta argumentua baliogabea dela froga dezakegu.
+6. Erregelaren beste aplikazio oker bat:
+∀xP (x, x)
+∃y∀xP (y, x)
+Erregela gaizki aplikatu dugu x ez delako aske y aldagairako ∀xP 
+(y, x) formulan.
+Eta argumentua baliogabea dela froga genezake.
+
+60
+2. Predikatu-kalkulua
+•
+∀ zenbatzailea sartu
+P1
+...
+Pn
+A
+argumentua baliozkoa bada,
+P1
+...
+Pn
+∀xA
+argumentua ere baliozkoa izango da.
+Murriztapenak: P1, . . . , Pn premisek ez dute x aske.
+Aplikabidea: Argumentu baten froga formal batean, non ez premisek ez indarrean
+dauden hipotesiek ez duten x aske, frogaren formuletako bat A bada, ∀ zenbatzailea
+sartzeko erregelatik ∀xA deduzi dezakegu.
+1.
+P1
+premisa
+...
+...
+...
+n.
+Pn
+premisa / ˙.. C
+...
+...
+m.
+A
+m + 1. ∀xA ∀x-sar(m)
+(P1, . . . , Pn premisek eta indarrean dauden hipotesiek ez dute x aske)
+2.30 Adibideak.
+1.
+1. ∀yP (y, y) ∧ ∀zR(z) premisa / ˙.. ∀y(P (y, y) ∧ R(y))
+2. ∀yP (y, y)
+KS(1)
+3. P (y, y)
+∀y-ezab(2) (y aske da y aldagairako P (y, y) formulan)
+4. ∀zR(z) ∧ ∀yP (y, y) TRUK(1)
+5. ∀zR(z)
+KS(4)
+6. R(y)
+∀z-ezab(5) (y aske da z aldagairako R(z) formulan)
+7. P (y, y) ∧ R(y)
+KK(3,6)
+8. ∀y(P (y, y) ∧ R(y))
+∀y-sar(7) (1ak ez du y aske)
+2.
+1. ∀x(P (x) → Q(x))
+premisa
+2. ∀x(R(x) → ¬Q(x)) premisa / ˙.. ∀x(R(x) → ¬P (x))
+→ 3. R(x)
+BFEren hipotesia / ˙.. ¬P (x)
+4. R(x) → ¬Q(x)
+∀x-ezab(2) (x aske x-rako, R(x) → ¬Q(x))
+5. ¬Q(x)
+MP(4,3)
+6. P (x) → Q(x)
+∀x-ezab(1) (x aske x-rako P (x) → Q(x) formulan)
+7. ¬P (x)
+MT(6,5)
+8. R(x) → ¬P (x)
+BFE(3-7)
+9. ∀x(R(x) → ¬P (x)) ∀x-sar(8)
+(1ak eta 2ak ez dute x aske; 3a. ez dago indarrean)
+
+2.6. Dedukzio formala
+61
+3. Aplikazio okerraren adibidea:
+1. ∀x(P (x) → Q(x)) premisa / ˙.. P (x) → ∀xQ(x)
+→ 2. P (x)
+BFEren hipotesia / ˙.. ∀xQ(x)
+3. P (x) → Q(x)
+∀x-ezab(1) (x aske x-rako P (x) → Q(x) formulan)
+4. Q(x)
+MP(3,2)
+5. ∀xQ(x)
+∀x-sar(4)
+(gaizki: 2 hipotesiak x aske du)
+6. P (x) → ∀xQ(x)
+BFE(2-5)
+•
+∃ zenbatzailea ezabatu
+(1)
+P1
+...
+Pn
+A
+C
+argumentua baliozkoa bada, (2)
+P1
+...
+Pn
+∃xA
+C
+argumentua ere baliozkoa da.
+Murriztapenak: P1, . . . , Pn premisek eta C ondorioak ez dute x aske.
+Aplikabidea: (2) argumentu baten froga formalean, non ez premisek ez indarrean
+dauden hipotesiek ez duten x aske, frogaren formuletako bat ∃xA bada, A su-
+posatuko dugu erregela aplikatzeko (
+(1) argumentua). Hipotesi horrekin C formula
+deduzituz gero, (1) argumentua frogatua dugu. Orduan, C formulak ere ez badu x
+aske, erregela aplikatuz, 
+(2) argumentua ere baliozkoa dela esan ahal izango dugu.
+1. P1
+premisa
+... ...
+...
+n. Pn
+premisa
+... ...
+p. ∃xA
+... ...
+→
+q. A
+∃x-ezabatzeko hipotesia(p)
+... ...
+m. C
+m + 1. C
+∃x-ezab(p,q-m)
+(P1, . . . , Pn premisek, hipotesiek eta C ondorioak ez dute x aske)
+2.31 Adibideak.
+1.
+1. ∀x(P (x) → Q(x)) premisa
+2. ∃yP (y)
+premisa / ˙.. ∃zQ(z)
+→ 3. P (y)
+∃y-ezabatzeko hipotesia(2)
+4. P (y) → Q(y)
+∀x-ezab(1) (y aske x-rako P (x) → Q(x) formulan)
+5. Q(y)
+MP(4,3)
+6. ∃zQ(z)
+∃z-sar(5) (y aske da z aldagairako Q(z) formulan)
+7. ∃zQ(z)
+∃y-ezab(2,3-6) (1ak, 2ak eta 6ak ez dute y aske)
+
+62
+2. Predikatu-kalkulua
+2.
+1. ∃x(P (x) ∧ Q(x))
+premisa / ˙.. ∃xP (x) ∧ ∃xQ(x)
+→ 2. P (x) ∧ Q(x)
+∃x-ezabatzeko hipotesia(1)
+3. P (x)
+KS(2)
+4. ∃xP (x)
+∃x-sar(3) (x aske da x aldagairako P (x) formulan)
+5. Q(x) ∧ P (x)
+TRUK(2)
+6. Q(x)
+KS(5)
+7. ∃xQ(x)
+∃x-sar(6) (x aske da x aldagairako Q(x) formulan)
+8. ∃xP (x) ∧ ∃xQ(x) KK(4,7)
+9. ∃xP (x) ∧ ∃xQ(x) ∃x-ezab(1,2-8) (1ak eta 8ak ez dute x aske)
+3. Erregelaren aplikazio okerraren adibidea:
+1. ∀x∃yP (x, y) premisa / ˙.. ∀y∃xP (x, y)
+2. ∃yP (x, y)
+∀x-ezab(1) (x aske da x aldagairako ∃yP (x, y) formulan)
+→ 3. P (x, y)
+∃y-ezabatzeko hipotesia(2)
+4. ∃xP (x, y)
+∃x-sar(3) (x aske da x aldagairako P (x, y) formulan)
+5. ∃xP (x, y)
+∃y-ezab(2,3-4) (gaizki: 4 ondorioak y aske du)
+6. ∀y∃xP (x, y) ∀y-sar(5) (1ak eta 2ak ez dute y aske)
+4. Argumentu beraren beste froga oker bat:
+1. ∀x∃yP (x, y) premisa / ˙.. ∀y∃xP (x, y)
+2. ∃yP (x, y)
+∀x-ezab(1) (x aske da x aldagairako ∃yP (x, y) formulan)
+→ 3. P (x, y)
+∃y-ezabatzeko hipotesia(2)
+4. ∃xP (x, y)
+∃x-sar(3) (x aske da x aldagairako P (x, y) formulan)
+5. ∀y∃xP (x, y) ∀y-sar(4) (gaizki: 3 hipotesiak y aske du)
+6. ∀y∃xP (x, y) ∃y-ezab(2,3-5) (1ak eta 5ak ez dute y aske)
+5. Erregelaren beste aplikazio oker bat:
+1. ∃x(P (x) ∧ R(x)) premisa
+2. ∃x(Q(x) ∧ R(x)) premisa / ˙.. ∃x(P (x) ∧ Q(x))
+→
+3. Q(x) ∧ R(x)
+∃x-ezabatzeko hipotesia(2)
+4. Q(x)
+KS(3)
+→
+5. P (x) ∧ R(x)
+∃x-ezabatzeko hipotesia(1)
+6. P (x)
+KS(5)
+7. P (x) ∧ Q(x)
+KK(6,4)
+8. ∃x(P (x) ∧ Q(x)) ∃x-sar(7) (x aske x-rako P (x) ∧ Q(x) formulan)
+9. ∃x(P (x) ∧ Q(x)) ∃x-ezab(1,5-8) (gaizki: 3 hipotesiak x aske du)
+10. ∃x(P (x) ∧ Q(x)) ∃x-ezab(2,3-9) (1ak, 2ak eta 9ak ez dute x aske)
+
+2.7. Ariketak
+63
+2.7
+Ariketak
+1. Sintaxia
+1.1. Formaliza itzazu esaldi hauek aipatzen ditugun predikatuekin: N (x):
+ x arrunta
+da. B(x): x bikoitia da. I(x): x bakoitia da. M (x): x negatiboa da. Z(x, y):
+x zenbakiak y zatitzen du. A(x, y, z): x zenbakia y, z zenbakien biderkadura
+da.
+a) Bikoitiak arruntak dira. b) Bikoitiak bakarrik dira arruntak. c) Arrunt bat
+ere ez da negatiboa. d) Badago bakoiti bat, bikoiti guztiek zatitzen dutena.
+e) Arrunt orok bikoitiren bat zatitzen du. f) Bikoitiak bakarrik dira bikoitien
+biderkadurak. g) Bakoiti bat ere ez da bikoiti batek zatitua.
+1.2. Determina ezazu zenbatzaileen irismena ondoko formuletan, eta esan ezazu
+aldagaien zer agerpen diren askeak edo lotuak.
+a) ∀z∃y(P (z, y) ∧ ∀zQ(z, x) → R(z)).
+b) ∃z∀x(P (z, x) ∨ ∀zQ(x, y, z)).
+c) ∀x∃yP (x, z, y) → ∃x¬Q(x, y) ∨ R(z).
+d) ∃x(¬P (x, y) → R(x, z)) ∨ ¬P (x, y).
+e) ∃xP (x, y) ∧ Q(z).
+2. Semantika
+2.1. Kalkul ezazu zenbat interpretazio dauden bi elementuko eremu baten gainean
+ondoko formuletarako. Aukera ezazu horietako bat eta kalkula ezazu formula-
+ren egia-balioa interpretazio horretarako.
+a) ∃x(P (y) ∨ Q(x)) ∧ Q(a).
+b) ∀x∃y¬P (x, y).
+c) P (x, y) → ∀x(P (x, y) → ∃zP (z, z)).
+2.2. D = 
+{1, 2} eremuaren gainean, formula hauetako bakoitza egiazko egiten duen
+interpretazio bat, eta faltsu egiten duen beste bat.
+a) ∃xP (x) ∧ ∃xQ(x) → ∃x(P (x) ∧ Q(x)).
+b) ∀x(P (x) ∨ Q(x)) → ∀xP (x) ∨ ∀xQ(x).
+c) ∀xP (x, y) ∧ Q(x).
+3. Baliozkotasuna. Inkontsistentzia. Ondorio logikoak
+3.1. Froga ezazu formula hauek baliogabeak direla:
+a) ∃x∃yP (x, y) → ∃xP (x, x).
+b) ∀x∃yP (x, y) → ∃y∀xP (x, y).
+3.2. Froga ezazu formula hauek kontsistenteak direla:
+a) P (y) ∧ ¬∀xP (x).
+b) ∀x∃yP (x, y) → ∃y∀xP (x, y).
+3.3. Froga ezazu formula hauek baliozkoak direla:
+a) ∀xP (x) → P (y).
+b) P (y) → ∃xP (x).
+3.4. Froga ezazu formula hauek inkontsistenteak direla:
+a) ∀xP (x) ∧ ¬∃xP (x).
+b) ∃xP (x) ∧ ∀x¬P (x).
+
+64
+2. Predikatu-kalkulua
+3.5. Froga ezazu argumentu hauek baliogabeak direla:
+a)
+∀x(P (x) → Q(x))
+∀x(R(x) → Q(x))
+∀x(P (x) → R(x))
+b)
+∃x(P (x) ∧ Q(x))
+∃x(¬P (x) ∧ ¬Q(x))
+∃x(Q(x) ∧ ¬P (x))
+4. Baliokidetza logikoak
+4.1. Esan ezazu formulen bikote hauek baliokideak diren edo ez:
+a) A = ∃x∃yP (x, y);
+B = ∃y∃xP (x, y).
+b) A = ∃x∀yP (x, y);
+B = ∀y∃xP (x, y).
+c) A = ∀x∀yP (x, y);
+B = ∀xP (x, x).
+4.2. Froga itzazu baliokidetza hauek baliokidetza-kate baten bidez:
+a) ∀x(N (x) → ¬G(x)) ≡ ¬∃x(N (x) ∧ G(x)).
+b) ∀x(P (x) → ∃yQ(y)) ≡ ∃xP (x) → ∃yQ(y).
+c) ∀x∃y(P (x) ∧ Q(y)) ≡ ∃y∀x(P (x) ∧ Q(y)).
+5. Deduzio formala
+5.1. Eman itzazu hurrengo argumentuen baliozkotasunaren froga formalak:
+a)
+∀x(P (x) → Q(x))
+∀x(Q(x) → R(x)) → (P (y) → R(y))
+b)
+∃xP (x) → ∀yQ(y)
+∀x(P (x) → ∀yQ(y))
+c)
+∃xP (x) → ∀y(P (y) ∨ Q(y) → R(y))
+∃xP (x) ∧ ∃xR(x)
+∃x(P (x) ∧ R(x))
+d)
+∃xP (x) ∨ ∃yQ(y)
+∀x(P (x) → Q(x))
+∃yQ(y)
+e)
+∃xP (x) ∨ ∀y(P (y) → Q(y))
+∀x(R(x) → ¬P (x))
+∀x(P (x) → R(x)) → ∀y(P (y) → Q(y))
+f)
+∃x∀y(P (x) ↔ Q(y))
+∀y∃x(P (x) ↔ Q(y))
+5.2. Formaliza itzazu eta azter itzazu argumentu hauen baliozkotasuna:
+a) Atleta guztiak langileak dira. Langile eta adimentsu den edozeinek ikaske-
+tak bukatuko ditu. Pello atleta da. Pello adimentsua da. Hortaz, Pellok
+ikasketak bukatuko ditu.
+b) Informatikariek gogoko dute abestea. Lagun batek ez du abestea gogoko,
+baina pianoa jotzen du. Hortaz, badago informatikaria ez den eta pianoa
+jotzen duen lagun bat.
+
+2.7. Ariketak
+65
+c) Norbait maite duen orok Frantzisko Asiskoa maite du. Ez dago inor inor
+maite ez duenik. Hortaz, guztiek maite dute Frantzisko Asiskoa.
+d) Oteiza miresten dutenak ez dira artezaleak. Kepak ez du inor miresten.
+Hortaz, Kepa ez da artezalea.
+e) Donostiarrek edozein txalotzen dute. Luisek ez du Chillida txalotzen. Hor-
+taz, Luis ez da donostiarra.
+f) Lagun bat beste baten aita bada, hori lehenaren semea edo alaba da. Eneko
+norbaiten aita da. Enekok ez du semerik. Hortaz, Enekok alabaren bat
+dauka.
+g) Beti dago zurrutari edo gautxori bat. Gautxoriak zurrutariak dira. Hortaz,
+bati dago gautxori bat.

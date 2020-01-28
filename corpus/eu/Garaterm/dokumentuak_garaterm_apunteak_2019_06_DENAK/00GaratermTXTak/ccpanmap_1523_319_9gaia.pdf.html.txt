@@ -1,0 +1,1814 @@
+
+
+
+9. Gaia
+ALDAGAI ANITZEKO FUNTZIOAK. KALKULU BEKTORIALA.
+§0. ESPAZIO EUKLIDEAR n-DIMENTSIONALA: Rn.
+- R, R2, R3 espazioen adierazpen geometrikoa.
+- Rn espazio bektoriala:
+ Batuketa eta zenbaki erreal batekin biderketa. Oinarri kanonikoa.
+- Biderkadura eskalarra (euklidearra). Biderkadura eskalarraren propietateak.
+- Rn-ko bektore baten norma euklidearra.
+Rn-ko bi bektoreen arteko angelua.
+Rn-en Cauchy-Schwarz-en desberdintza.
+Rn-n desberdintza triangeluarra.
+- Rn-ko bi elementuen arteko distantzia (euklidearra).
+§1. ALDAGAI ANITZEKO FUNTZIOAK.
+Gai honetan R zenbaki errealen espazio unidimentzionala eta Rn espazio bektorial euklidear
+n-dimentsionala (n zenbaki arrunta izanik) erabiliko dira.
+Izan bedi A, Rn espazio euklidear n-
+dimentsionalaren multzo bat; hots, A ⊂ Rn. Atal honetan
+A ⊂ Rn multzotik Rm espazio m-dimentsionalera doazen funtzioak 
+( aplikazioak ) aztertuko
+ditugu. m = 1 denean funtzio errealak deitzen dira eta m > 1 denean, funtzio bektorialak.
+Honela,
+f :A ⊂ Rn −→ Rm
+x −→ f (x) = (f1(x), f2(x), . . . , fm(x))
+non fj :
+ A ⊂ Rn −→ R, j = 1, . . . , m funtzioei f funtzioaren osagai funtzio deritze.
+Aurreko f funtzioaren aldagai anitza, x, n osagai erreal dituenez, f funtzioa n aldagaiko
+(errealeko) funtzioa dela esaten da.
+n aldagaiko funtzioaren deﬁnizio eremua, Rn-
+ren azpimultzo bat da, zeinen puntuetarako
+funtzioaren balioak funtzioaren irudi multzokoak diren.
+Adibideak:
+a) f (x, y, z) =
+1
+x2 + y2 + z2
+funtzio erreala da eta bere deﬁnizio eremua A = R3 − {(0, 0, 0)} da.
+67
+
+b) f (x1, x2, x3, x4) = x1x2x3,
+x21 + x24 funtzio bektoriala R
+4 espazio osoan dago deﬁnitua eta
+bere balioak R2 espaziokoak dira.
+c) Zehaz ditzagun ondoko funtzioen existentzi eremuak, analitikoki hemen eta graﬁkoki irakurleak:
+i) f (x, y) =
+1 − (x2 + y)2,
+1 − (x2 + y)2 ≥ 0 ;
+(x2 + y)2 ≤ 1 ;
+|x2 + y| ≤ 1
+−1 ≤ x2 + y ≤ 1
+x2 + y ≤ 1
+x2 + y ≥ −1
+,
+y ≤ 1 − x2
+y ≥ −1 − x2.
+domf = {(x, y) ∈ R2 : −1 − x2 ≤ y ≤ 1 − x2}
+ii) f (x, y) =
+1
+y −
+√
+x
+x ≥ 0 eta y −
+√
+x > 0 ;
+√
+x < y.
+domf = {(x, y) ∈ R2 : x ≥ 0 eta
+√
+x < y}
+Deﬁnizioa.
+Izan bedi f : A ⊂ Rn −→ R. f -
+ren graﬁko deritzo Rn+1 espazioko ondoko azpimultzoari:
+{(x1, x2, . . . , xn, f(x1, . . . , xn)) ∈ Rn+1 / (x1, . . . , xn) ∈ A}
+n = 1 denean azpimultzo hori R2-ko kurba bat da:
+{(x, f (x)) ∈ R2
+/ x ∈ A} = {(x, y) ∈ R2
+/ y = f (x) x ∈ A}.
+n = 2 denean aipatutako azpimultzoa R3 espazioko gainazala da:
+{(x, y, f (x, y)) ∈ R3
+/ (x, y) ∈ A} = {(x, y, z) ∈ R3
+/ z = f (x, y) (x, y) ∈ A}.
+n ≥ 3 denean azpimultzoa ezin da ikustarazi. Funtzio baten graﬁkoa aztertzeko maila multzoak
+deﬁnituko ditugu:
+Deﬁnizioa.
+Izan bedi f :
+ A ⊂ Rn −→ R eta izan bedi c ∈ R. c balioko maila multzo deritzo ondoko
+multzoari:
+Lc = {x ∈ A / f(x) = c} = {(x1, . . . , xn) ∈ A / f(x1, . . . , xn) = c}.
+68
+
+n = 2 denean funtzioaren graﬁkoa gainazal bat da eta maila multzoak maila kurbak:
+f (x, y) = c;
+Mapa topograﬁkoetako altuera kurbak altuerako maila kurbak dira. Maila kurba bakoitzeko pun-
+tuak mailak adierazten duen altuerara altxatuz graﬁkoa ikusteraziko dugu.
+n = 3 denean funtzioaren graﬁkoa imajinatzea ez da posible eta maila multzoak gainazalak
+dira .
+Adibideak.
+1.- f 
+(x, y) = x + y + 2. Funtzio honen graﬁkoa z = x + y + 2 ekuazioko planoa da eta , maila
+kurbak hurrengo zuzenak:
+c = 0 denean
+y = −x − 2;
+c = 2 denean
+y = −x ....
+2.- f 
+(x, y) = x2 + y2. c < 0 denean maila multzoak hutsak dira; c = 0 baliorako maila multzoa
+punto bat da: {
+(0, 0)}, eta c > 0 denean maila multzoak x2 + y2 = c zirkunferentziak dira.
+Zirkunferentzi hauek c altuerara altzatuz, biraketa paraboloidea izango dugu:
+ z = x2 + y2.
+3.- f 
+(x, y) = x2 − y2. Kasu honetan gainazala imajinatzeko maila kurbak erabiltzea komeni da.
+c = 0 denean maila multzoa bi zuzenen bildura da :
+ x = y eta x = −y. c > 0 denean,
+maila kurbak :
+ x2 = y2 + c, hiperbolak dira OX ardatzekoak. c < 0 denean, maila kurbak
+y2 = x2 − c , OY ardatzeko hiperbolak dira. f honen graﬁkoari paraboloide hiperboliko
+deritzo.
+4.- Aztertu beste koadrikei dagozkien gainazalak.
+69
+
+FUNTZIOEN LIMITEAK.
+Rn espazio euklidearrean azpimultzo eta puntu bereziak:
+- Rn-ko puntu batean zentratutako bola irekiak eta bola itxiak.
+- Rn-ko puntu baten inguruneak.
+- Rn-ko multzo irekiak eta multzo itxiak.
+- Rn-ko multzo baten barne puntuak, muga puntuak eta metatze puntuak.
+Deﬁnizioa.
+Izan bedi f : A ⊂ Rn −→ Rm funtzioa, eta izan bedi a, A-ren metatze puntua, 
+(barnekoa edo
+mugakoa ). f 
+(x) funtzioaren limitea x aldagaia a punturantz doanean b ∈ Rm dela esaten da, eta
+lim
+x→a
+f (x) = b
+idazten da, ondoko baldintza egiaztatzen denean:
+∀ > 0,
+∃δ > 0,
+∀x ∈ A :
+0 < x − a < δ,
+→
+f (x) − b < .
+Baldintzako norma bakoitza espazio egokikoa da: Lehenengoa Rn-
+koa eta bigarrena Rm-koa.
+Teorema.
+Baldin limx→a f(x) = b1 eta limx→a f
+(x) = b2 badira, halabeharrez, b1 = b2 izango da.
+Jarraian limiteen propietate aljebraikoak azalduko ditugu.
+Teorema.
+Izan bitez f , g :
+ A ⊂ Rn −→ Rm bi funtzio A azpimultzoan deﬁnituak eta izan bedi a, A-ren
+metatze puntua. Horrez gain, hurrengo bi limiteak existitzen dira:
+lim
+x→a
+f (x) = b1
+lim
+x→a
+g(x) = b2
+Orduan ondoko emaitzak egiaztatzen dira:
+i) lim
+x→a
+(f (x) + g(x)) = lim
+x→a
+f (x) + lim
+x→a
+g(x) = b1 + b2
+ii) lim
+x→a
+cf (x) = c lim
+x→a
+f (x) = cb1
+iii) m = 1 denean, lim
+x→a
+f (x) · g(x) = lim
+x→a
+f (x) · lim
+x→a
+g(x) = b1 · b2 .
+iv) m = 1, b1 = 0 eta f(x) = 0∀x ∈ A direnean lim
+x→a
+1
+f (x)
+=
+1
+b1
+70
+
+v) Izan bedi f (x) = (f1(x), . . . , fm(x)), non fj(x) funtzioak f-
+ren osagai errealak diren eta
+izan bedi b1 = (b1, . . . , bm):
+lim
+x→a
+f (x) = b1
+⇐⇒
+lim
+x→a
+fj(x) = bj,
+j = 1, . . . , m.
+vi) lim
+x→a
+f (x) = b1 .
+Ondorioa. v) propietatearen ondorioz, funtzio bektorial baten limitea kalkulatzeko nahikoa da
+bere osagai funtzio errealen limiteak kalkulatzea. Horregaitik, funtzio errealen limiteen kalkulua
+estudiatuko dugu.
+Bi aldagai errealeko funtzio errealen limitea.
+Izan bedi f : A ⊂ R2 −→ R funtzioa, x = (x, y) aldagaia eta a = (x0, y0), A-
+ren metatze
+puntua. f -
+ren limiteari limite bikoitza deritzo eta deﬁnizio baldintzako normak hurrengo hauek
+dira:
+x − a =
+(x − x0)
+2 + (y − y
+0)
+2 edo max{|x − x
+0|, |y − y0|}
+f (x) − b = |f (x) − b|
+Bestalde, ohar gaitezen R2 espazioan a punturantz era desberdinez hurbildu gintezkela; ez
+bakarrik a puntutik igarotzen den planoko zuzen batetik, baita ere, puntu horretatik igarotzen den
+beste kurbetatik: parabolak, espiralak, eta abar.
+Deﬁnizioa. Limite direkzionalak.
+Izan bitez f : A ⊂ R2 −→ R funtzioa eta (x0, y0) A-
+ren metatze puntua. Izan bedi y = φ(x)
+kurba (norabide, bide,..)bat , non y0 = φ(x0) den. f-
+ren limite direkzionala y = φ(x) kurba jarraituz
+eta (x, y) → (x0, y0) denean, honela deﬁnitzen da:
+lim
+(x,y)→(x0,y0)
+y=φ(x)
+f (x, y) = lim
+x→x0
+f (x, φ(x)).
+Bistakoa da limite bikoitza 
+(x0, y0) puntutan l bada, halabeharrez, limite direkzional guztiak
+(edozein kurba jarraituz) (x0, y0) puntuan l direla. Beraz,
+Funtzio batek puntu batean bi limite direkzional ezberdin baditu, orduan puntu horretan ez du
+limite bikoitzik.
+71
+
+Erabiltzeko kurba edo norabibe errezenak: lerro zuzenak
+x − x0 = t
+y − y0 = mt
+t → 0 denean
+edo parabolak
+x − x0 = t
+y − y0 = at2 + bt
+t → 0 denean.
+Adibideak: Kalkula ezazu
+lim
+(x,y)→(0,0)
+f (x, y) ondoko funtzioetarako
+i) f (x, y) =
+x − y
+x + y
+.
+Polinomioen zatidura honek 0
+0 motako indeterminazioa du jatorrian.
+Limite direkzionalak
+y = mx lerro zuzenen zehar kalkulatuko ditugu.
+lim
+(x,y)→(0,0)
+y=mx
+x − y
+x + y
+= lim
+x→0
+x − mx
+x + mx
+=
+1 − m
+1 + m
+.
+Denak existitzen dira m = −1 balioari dagokiona izan ezik eta limite direkzionalak desberdinak
+direnez ( m-ren menpekoak ), funtzioaren limitea (bikoitza) 
+(0, 0) puntuan EZ da existitzen.
+ii) f (x, y) =
+x2y2
+x2y2 + (x − y)2
+.
+Funtzio hau polinomioen zatidura da ere. Jatorrirantz hurbilduko gara y = x zuzenaren zehar:
+lim
+(x,y)→(0,0)
+y=x
+x2y2
+x2y2 + (x − y)2
+= lim
+x→0
+x4
+x4
+= 1
+Eta beste edozein maldatako zuzenaren zehar, y = mx, 
+(m = 1) ondoko limite direkzionala dugu:
+lim
+(x,y)→(0,0)
+y=mx
+x2y2
+x2y2 + (x − y)2
+= lim
+x→0
+m2x4
+m2x4 + x2(1 − m)2
+= lim
+x→0
+m2x2
+m2x2 + (1 − m)2
+= 0
+Beraz, EZ da existitzen proposatutako limitea (bikoitza).
+Aurreko bi adibideetan limiterik ez dagoela frogatu dugu limite direkzionalak erabiliz, baina
+nola kalkulatuko dugu limitea 
+(bikoitza), limitea dagoenean? Deﬁnizio baldintza egiaztatzen den
+estudiatzea bide zaila da, eta sarritan, egokiagoa da koordenatu polarretan kalkuluak egitea.
+Honela limitea 
+(x0, y0) puntuan hartuta badago, koordenatu polarretako aldaketa ondokoa
+izango da:
+x = x0 + ρ cos θ
+y = y0 + ρ sin θ
+72
+
+eta ρ =
+(x − x0)2 + (y − y0)2 zenbakia (x, y) eta 
+(x0, y0) puntuen arteko distantzia denez,
+lim
+(x,y)→(x0,y0)
+f (x, y) = lim
+ρ→0
+f (x0 + ρ cos θ, y0 + ρ sin θ)
+berdintza egiaztatzen da bigarren limitea existitu eta θ-
+tik independente denean.
+Adibideak:
+a)
+lim
+(x,y)→(0,0)
+x2 + y2
+x2 + y2 + 1 − 1
+= lim
+ρ→0
+ρ2
+ρ2 + 1 − 1
+= lim
+ρ→0
+ρ2( ρ2 + 1 + 1)
+ρ2
+= 2
+b)
+lim
+(x,y)→(0,0)
+x3 + y3
+x2 + y2
+= lim
+ρ→0
+ρ3(cos3 θ + sin3 θ)
+ρ2
+= lim
+ρ→0
+ρ(cos3 θ + sin3 θ) = 0
+Azken bi adibideetan limiteak existizen direla frogatu dugu eta kalkulatu ditugu limiteak.
+Limite iteratuak.
+Izan bedi f : A ⊂ R2 −→ R eta ondoko bi funtzioak deﬁnituko ditugu:
+f1(x) = lim
+y→y0
+f (x, y)
+f2(y) = lim
+x→x0
+f (x, y)
+limite hoiek existitzen direnean. Funtzio hauen eta limite bikoitzaren arteko ondoko propietatea
+dugu:
+Teorema.
+Baldin f1(x) , f2(y) eta
+lim
+(x,y)→(x0,y0)
+f (x, y) = L existitzen badira, orduan, lim
+x→x0
+f1(x) eta
+lim
+y→y0
+f2(y) existitzen dira ere eta biak L dira; ondorio hau honela idazten da:
+lim
+x→x0
+lim
+y→y0
+f (x, y) = lim
+y→y0
+lim
+x→x0
+f (x, y) = L
+eta azken limiteei f -ren limite iteratu deritze.
+Ohar gaitezen limite iteratuen existentziak eta berdintzak ez duela limite bikoitzaren exis-
+tentzia ziurtatzen. Adibidez:
+f (x, y) =
+xy
+x2+y2
+(x, y) = (0, 0)
+0
+(x, y) = (0, 0)
+.
+f1(x) = lim
+y→0
+xy
+x2 + y2
+= 0
+x = 0 denean
+73
+
+etaf (0, y) = 0 denez, f1(0) = 0 dugu. Simetriaz, f2(y) = 0. f1(x), f2
+(x) , biak, funtzio konstante
+nuluak dira, beraz, limite iteratu biak existitzen dira eta 0 dira. Ikus dezagun ez dagoela limite
+bikoitzik; horretarako, jatorrirantz lerro zuzenen zehar hurbilduko gara:
+lim
+(x,y)→(0,0)
+y=λx
+f (x, y) = lim
+x→0
+f (x, λx) = lim
+x→0
+λx2
+x2 + λ2x2
+=
+λ
+1 + λ2
+,
+limite direkzionalak ez dira berdinak eta ez da existituko limite bikoitzik.
+Bestalde, posible da ere limite bikoitza existitzea eta limite iteraturen bat ez existitzea.
+Adibidez :
+f (x, y) =
+y
+x > 0
+−y x ≤ 0
+|f (x, y)| = |y| denez, ”sandwich”-en erregela erabiliz, bistakoa da f -
+ren limite bikoitza jatorrian 0
+dela. Aldiz, y = 0 denean
+lim
+x→0+
+f (x, y) = y
+lim
+x→0−
+f (x, y) = −y
+beraz, limx→0 f(x, y) ez da existitzen, hots, f2
+(y) ez da existitzen y = 0 denean.
+Beraz, teoremaren ondorio praktikoa hauxe da:
+ limite iteratuak desberdinak badira, orduan
+ez dago limite bikoitzik.
+74
+
+Ariketak. Aldagai anitzeko funtzioak.
+1.- Aurkitu ondoko funtzioen existentzi eremuak:
+a) f (x, y) = arcsin
+x
+y2
++ arcsin (1 − y)
+b) f (x, y) =
+sin(x2 + y2)
+c) f (x, y, z) = arccos
+z
+x2 + y2
+d) f (x, y) = arctan
+x − y
+1 + x2y2
+e) f (x, y) =
+x2 − 4 +
+4 − y2
+2.- estudia ezazu
+lim
+(x,y)→(0,0)
+2xy
+x2 + y2
+.
+3.- Kalkula itzazu hurrengo limite bikoitzak :
+a) lim
+x→∞
+y→∞
+x + y
+x2 − xy + y2
+b) lim
+x→0
+y→0
+f (x, y),
+f (x, y) =
+1
+x
+sin xy,
+x = 0 denean eta f (0, y) = y
+c) lim
+x→0
+y→0
+f (x, y),
+f (x, y) =
+(x + y) sin 1
+x sin
+1
+y ,
+(x, y) = (0, 0)
+0
+(x, y) = (0, 0)
+d) lim
+x→0
+y→0
+f (x, y)
+f (x, y) = x sin
+x
+y
+y = 0 denean eta f (x, 0) = 0
+4.- Izan bedi A = {(x, y)/y = 4x} eta
+f (x, y) =
+x2−y2
+x2+y2 ,
+x+y
+x−y , e
+x+y
+(x, y) = (0, 0)
+(0, 0, 1)
+(x, y) = (0, 0)
+Kalkula ezazu
+lim
+(x,y)→(0,0)
+(x,y)∈A
+f (x, y).
+5.- Aurki ezazu
+lim
+(x,y)→(0,0)
+f (x, y) ondoko funtziorako
+f (x, y) =
+x2y
+x2+y2 , sin(x + y)
+(x, y) = (0, 0)
+(0, 0)
+(x, y) = (0, 0)
+6.- Kalkula itzazu ondoko limiteak :
+a)
+lim
+(x,y)→(0,0)
+sin(x3 + y3)
+x2 + y2
+b)
+lim
+(x,y)→(0,0)
+e
+−
+1
+x2+y2
+x4 + y4
+c)
+lim
+(x,y)→(0,0)
+(1 + x2y2)
+−
+1
+x2+y2
+.
+75
+
+§2. FUNTZIO JARRAITUAK
+Atal honetan f : A ⊂ Rn −→ Rm eta a ∈ A izango dira.
+Deﬁnizioa.
+Izan bedi a ∈ A. f funtzioa a puntuan jarraitua dela esaten da ondoko baldintza egiaztatzen
+duenean:
+∀ > 0,
+∃δ > 0 ∀x ∈ A :
+x − a < δ
+,
+halabeharrez
+f (x) − f (a) < .
+Baldin a, A-ren metatze puntua bada, deﬁnizio hau honela adieraz daiteke:
+lim
+x→a
+f (x) = f (a)
+Eta m > 1 eta f = 
+(f1...fm) direnean azken formula eta ondokoen bilduma baliokideak dira:
+lim
+x→a
+fj(x) = fj(a)
+j = 1, . . . , m
+hau da:
+Teorema.
+Funtzio bektoriala jarraitua da, baldin eta soilik baldin, bere osagai funtzio erreal guztiak, aldi
+berean, jarraituak badira.
+Funtzioen limiteen propietate aljebraikoetatik hurrengo propietateak ondorioztatzen dira
+Propietateak.
+i) Izan bitez f , g :
+ A ⊂ Rn −→ Rm. Baldin bi funtzioak, aldi berean, a ∈ A puntuan jarraituak
+badira , orduan : f ± g , f · g eta cf , jarraituak dira, ere, a puntuan.
+Baldin f : A ⊂ Rn −→ R jarraitua bada a puntuan eta ∀x ∈ A f 
+(x) = 0 bada, orduan
+1
+f
+funtzioa jarraitua da a puntuan.
+ii) Izan bitez f : A ⊂ Rn −→ Rm , g : A1 ⊂ Rm −→ Rq, eta f
+(A) ⊂ A1. Baldin f jarraitua
+a puntuan eta g jarraitua f 
+(a) puntuan badira, orduan funtzio konposatua g ◦ f jarraitua da a
+puntuan.
+Ondorioak.
+n aldagaiko funtzio polinomiko errealak deﬁnituak eta jarraituak dira Rn osoan.
+n aldagaiko bi polinomioen arteko zatiduraren bidez deﬁnitutako funtzioak jarraituak dira euren
+existentzi eremuko puntu guztietan.
+76
+
+Adibidea. Estudia dezagun hurrengo funtzioen jarraitasuna
+a)
+f (x, y) = x
+2y
+x2+y2
+(x, y) = (0, 0)
+f (0, 0) = 0
+(0, 0) puntuan izan ezik f funtzioa bi polinomioaren arteko zatidura denez, jarraitua izango da,
+gutxienez, R2 − (0, 0) eremuan. Azter dezagun funtzioa 
+(0, 0) puntuaren inguruan.
+lim
+(x,y)→(0,0)
+x2y
+x2 + y2
+= lim
+ρ→0
+ρ3 cos2 θ sin θ
+ρ2
+= lim
+ρ→0
+ρ cos2 θ sin θ = 0 = f (0, 0)
+Funtzioa jarraitua da (0, 0) puntuan ere.
+b)
+f (x, y) = x
+2+y2
+x2+y
+y = −x2
+f (x, −x2) = 0
+Funtzio honen jarraitasuna zalantzazkoa da y = −x2 parabolako puntuetan bakarrik; beste guzti-
+etan aurreko teoremaren ondorioz, jarraitua dela dakigu. Finka dezagun parabolako puntu bat,
+edozein, 
+(0, 0) izan ezik; puntu horretatik pasatzen den lerro zuzen baten gaineko f -
+ren limite
+direkzionala ﬁnkatutako puntuan ez da existitzen. Beraz, f funtzioa ez da jarraitua 
+{(x, y) : y =
+−x2, (x, y) = (0, 0)} puntuetan. Azter dezagun orain 
+(0, 0) puntua. y = −x2 kurbaren zehar
+f -
+ren limite direkzionala jatorrian 0 dela bistakoa da; aldiz, y = 0 zuzenaren zehar f -
+ren limite
+direkzionala jatorrian
+lim
+(x,y)→(0,0)
+y=0
+x2 + y2
+x2 + y
+= lim
+x→0
+x2
+x2
+= 1,
+denez, ez da existitzen f -
+ren limite bikoitza jatorrian eta f ez da jarraitua jatorrian. Laburbilduz,
+f ez da jarraitua y = −x2 parabolako puntuetan.
+Teorema.
+Izan bedi a ∈ A. f funtzioa jarraitua da a puntuan, baldin eta soilik baldin, ∀
+{xn} ⊂ A :
+limn→∞ xn = a segidetarako {f(xn)}, segida konbergentea eta limn→∞ f(xn) = f
+(a) badira.
+Adibidea. Izan bedi f (x) =
+1 x ∈ Q
+0 x ∈ I = R − Q.
+Baldin a ∈ Q bada, zenbaki irrazionalen dentsitatearen arabera, ba dago segida bat 
+{xn} ⊂ I,
+a punturantz konbergente dena. Deﬁnizioz, {f (xn)} = {0} da eta f
+(a) = 1 denez,f funtzioa ez da
+jarraitua Q-ren puntuetan eta era berean frogatzen da ez dela ere I-
+ren puntuetan.
+77
+
+Ariketak. Funtzio jarraituak.
+1.- Azter ezazu ondoko funtzioen jarraitasuna :
+a)
+f (x, y) =
+x+sin(x+y)
+x+y
+x + y = 0
+f (x, −x) = 0.
+b)
+f (x, y) = x
+2y2
+x4+y4
+(x, y) = (0, 0)
+f (0, 0) = 0.
+c)
+f (x, y) = x
+|x| ≤ |y|
+f (x, y) = y
+|x| > |y|
+d)
+f (x, y) =
+sin(x2+y2)
+x2+y2
+(x, y) = (0, 0)
+f (0, 0) = 0.
+.
+2.- Azter ezazu hurrengo eran deﬁnitutako f :
+ R2 −→ R funtzioaren jarraitasuna :
+f (x, y) =
+x
+4x2+y2−1
+4x2 + y2 = 1,
+(x, y) = (0, 0)
+f (x, y) = 1
+4x2 + y2 = 1
+edo (x, y) = (0, 0)
+3.- Izan bedi f : R3 −→ R,
+f (x, y, z) = 2x−y+z−2
+x+y−z−1
+x + y − z = 1
+f (x, y, z)) = 0
+x + y − z = 1.
+Azter ezazu f -ren jarraitasuna R3 espazioan.
+4.- Deﬁni ezazu f (0, 0) delakoaren balioa, ondoko funtzioa 
+(0, 0) puntuan jarraitua izan dadin:
+f (x, y) =
+1 − cos
+x2 + y2
+x2 + y2
+.
+5.- Estudia ezazu hurrengo funtzioen jarraitasuna R2 espazioan.
+a)
+
+
+
+f (x, y) =
+y2 + 2x
+y2 − 2x
+y2 = 2x
+f (x, ±
+√
+2x) = 1
+.
+b)
+f (x, y) =
+sin πx
+sin πy
+y ∈ Z
+f (x, y) = 1
+y ∈ Z
+.
+6.- Izan bedi f (x, y) =
+1 − cos
+√
+xy
+y
+y = 0 denean. Deﬁni daiteke f (x, 0) delakoaren balioa f
+funtzioa R2 espazioan jarraitua izan dadin?
+78
+
+JARRAITASUNA MULTZO BATEAN.
+Rn espazio euklidearrean azpimultzo bereziak :
+- Multzo bornatuak
+- Multzo trinkoak
+- Multzo konexuak.
+Aurrean jarraitasuna puntuan deﬁnitu dugu. Ondoren, eremu bateko puntu guztietan ja-
+rraituak diren funtzioak aztertuko ditugu.
+Deﬁnizioa.
+Izan bedi A ⊂ Rn. f funtzioa A multzoan jarraitua dela esaten da A multzoko puntu guztietan
+jarraitua denean.
+Baldintza horretan ikus dezagun A multzoko azpimultzoen zeintzu propietate kontserbatzen
+diren aplikazio jarraituen bidez.
+Teorema.
+Izan bedi D ⊂ A eta D Rn-
+ren multzo konexua. Baldin f funtzioa D multzo konexuan
+jarraitua bada, halabeharrez, f (D) ere Rm-ren multzo konexua izango da.
+Azken emaitza funtzio errealetara murrizten badugu, hurrengo teorema lortuko dugu:
+Bolzano-ren teorema.
+Izan bedi D ⊂ A eta D Rn-ren multzo konexua. Izan bedi f : A ⊂ Rn −→ R (erreal)
+jarraitua D-n. Orduan edozein α ∈ R, non inf{f (x) /x ∈ D} < α < sup{f (x) /
+x ∈ D} den,
+existitzen da x0 ∈ D puntu bat f(x0) = α berdintza egiaztatzen duena.
+Honela, ba, jarraitasunak konexioa gordetzen duela ikusi dugu. Jarraian beste propietate bat
+ere kontserbatzen dela ikusiko dugu.
+Teorema.
+Izan bedi K ⊂ A eta K Rn-ren multzo trinkoa. Baldin f :
+ A ⊂ Rn −→ Rm funtzioa jarraitua
+K multzo trinkoan bada, halabeharrez, f (K) ere Rm-
+ren multzo trinkoa izango da.
+Berriro ere funtzio errealetara murriztuz teorema hau dugu:
+Maximo eta Minimoaren teorema.
+Izan bedi K ⊂ A eta K Rn-ren multzo trinkoa. Baldin f :
+ A ⊂ Rn −→ R funtzioa jarraitua
+79
+
+K multzo trinkoan bada, orduan α eta β ∈ K daude, non
+f (α) = sup{f (x) /x ∈ K}
+f (β) = inf{f (x) /x ∈ K}
+diren; hau da, f -
+k bere balio gorena eta balio txikiena K multzoko punturen batzuetan hartzen ditu.
+Jarraiko teoreman alderantzizko funtzioaren jarraitasuna aztertuko dugu. 
+(Dakigunez, funtzio
+baten alderantzizko funtzioa existitzen da hasierako funtzioa injektiboa denean)
+Teorema.
+Izan bedi K Rn-ren multzo trinkoa. Baldin f :
+ K ⊂ Rn −→ R funtzioa injektiboa eta jarraitua
+K multzo trinkoan bada, orduan alderantzizko funtzioa, f −1, jarraitua da f 
+(K) irudi multzoan.
+Jarraitasun uniformea
+Gogora dezagun multzo baten gaineko jarraitasunaren deﬁnizioa.
+f funtzioa jarraitua da A multzoan, multzo honetako puntu guztietan jarraitua denean; hau
+da,
+∀ > 0,
+∀x ∈ A ∃δ( , x) > 0,
+non ∀y ∈ A :
+x − y < δ puntutarako
+f (x) − f (y) <
+den.
+Azken baldintzako δ x puntuaren menpe dago, baina batzuetan, menpekotasun hori ez dagoe-
+nean eta δ hori bakarrik -
+ren menpe dagoenean, f funtzioa uniformeki jarraitua dela A multzoan
+esaten da. Adibidez, f 
+(x) = 2x funtziorako eta edozein x, y zenbaki errealetarako:
+|f (x) − f (y)| = 2|x − y|
+denez, δ =
+2
+baliorako aurreko baldintza egiaztatzen da ( A = R izanik). f (x) = 2x funtzioa
+uniformeki jarraitua da R espazioan. Baina jarraitasuna ez da beti uniformea; adibidez, g
+(x) =
+1
+x
+funtzioa jarraitua da {x :
+ x > 0} multzoan eta, aldiz, ez da uniformeki jarraitua multzo horretan.
+Jarraitasun uniformea jarraitasuna baino propietate indartsuagoa da.
+Deﬁnizioa.
+Izan bedi f :
+ A ⊂ Rn −→ Rm. f funtzioa D ⊂ A multzoan uniformeki jarraitua dela esaten
+da hurrengo baldintza egiaztatzen duenean:
+∀ > 0,
+∃δ = δ( ) > 0 non
+∀x, y ∈ D :
+x−y < δ
+puntutarako
+f (x)−f (y) <
+den.
+80
+
+Oharra.
+-
+ Funtzio uniformeki jarraituak D multzoan, jarraituak dira ere; alderantzizkoa ez da
+egia.
+Teorema.
+Baldin f : A ⊂ Rn −→ Rm jarraitua A multzoan bada eta K ⊂ A, K Rn-
+ren multzo trinkoa
+bada, orduan f es uniformeki jarraitua da K multzoan.
+Funtzio Linealak.
+Deﬁnizioa. f :
+ Rn −→ Rm funtzioa lineala dela esaten da edozein a, b ∈ R eta edozein x, y ∈ Rn
+baliotarako f (ax + by) = af (x) + bf (y) egiaztatzen denean.
+Funtzio linealetarako f (0) = f (x − x) = f (x) − f 
+(x) = 0 da. Ondoren, funtzio linealak matrize
+baten bidez adierazten direla ikusiko dugu:
+Teorema.
+Izan bedi f : Rn −→ Rm funtzio lineala. Orduan mn zenbaki erreal, hots, 
+{cji}, j =
+1, . . . , m,
+i = 1, . . . , n zenbakiak existitzen dira, non f (x) = y formula edozein x = 
+(x1, . . . , xn)
+eta y = (y1, . . . , ym) bektoretarako, ondoko era baliokidean adierazten den:
+(5)
+y1 =c11x1 + c12x2 + . . . + c1nxn
+y2 =c21x1 + c22x2 + . . . + c2nxn
+·
+·
+ym =cm1x1 + cm2x2 + . . . + cmnxn
+Eta
+
+
+
+
+
+c11
+. . .
+c1n
+c21
+. . .
+c2n
+.
+.
+cm1 . . . cmn
+
+
+
+
+
+= (cj,i)
+j = 1, . . . , m i = 1, . . . , n
+matrizeari f funtzio linealaren matrize elkartu deritzo.
+81
+
+§3. DIFERENTZIAZIOA.
+Atal osoaren zehar f ikurrak Rn-
+ren A multzo ireki eta konexuan deﬁnituriko funtzioa adier-
+aziko du, besterik esaten ez bada. 
+( R espazioko multzo konexu irekiak tarte irekiak dira).
+Deribatu direkzionalak (norabidetuak)
+Deﬁnizioa. Izan bitez A, Rn-ren multzo irekia, f :
+ A ⊂ Rn → Rm funtzioa, xo ∈ A puntua
+eta u ∈ Rn bektore unitario n-dimentsionala. f -ren deribatua 
+(direkzionala) u norabidearekiko xo
+puntuan Duf(xo) idatziko dugu eta ondoko limite gisa deﬁnitzen da:
+Duf(xo) = lim
+h→0
+f (xo + hu) − f(xo)
+h
+.
+Ohar gaitezen Duf(xo), Rm-
+ko bektorea dela eta m = 1 kasuan, zenbaki erreal bat dela.
+Adibidea. Izan bedi
+f (x, y) =
+xy3
+x3+y6 ,
+baldin (x, y) = (0, 0)
+0,
+baldin (x, y) = (0, 0)
+Ikus dezagun Duf(0) deribatua u = 
+(u1, u2) bektore unitario orotarako existitzen dela:
+Duf(0) = lim
+h→0
+f (0 + hu) − f (0)
+h
+= lim
+h→0
+hu1(hu2)3
+h[(hu1)3 + (hu2)6]
+= lim
+h→0
+u1(u2)3
+(u1)3 + h2(u2)6
+beraz,
+Duf(0) =
+0,
+baldin u1 = 0
+u3
+2
+u2
+1
+, baldin u1 = 0.
+Deﬁnizioa.
+Izan bitez ei = (0, . . . , 1, . . . 0) i-garren bektore kanoniko n-
+dimentsionala eta f : A ⊂ Rn →
+Rm funtzioala. ei bektorearekiko f-ren deribatua, De
+i f (xo), f -ren i-garren (edo xi-rekiko) deribatu
+partziala xo puntuan deitzen da eta sarritan Dif
+(xo) ikurrez ere adierazten da; honela,
+Dif(xo) =
+∂f
+∂xi
+(xo) = De
+i f (xo)
+xo = 
+(a1, . . . , an) denean eta f erreala, deribatu partziala ondoko limitea da:
+Dif(xo) = lim
+h→0
+f (a1, . . . , ai + h, . . . an) − f(a1, . . . , ai, . . . an)
+h
+.
+Dif(x) deribatu partziala f-
+ren deribatua da xi aldagaiarekiko beste aldagai guztiak parametro
+bezala utziz; honen ondorioz, aldagai bateko funtzioen deribazioari buruzko teoria erabil dezakegu
+deribatu partzialen kalkulurako.
+82
+
+Oharra Deribatu direkzionalen guztien existentziak funtzioaren jarraitasuna ez du ziurtatzen .
+Adibidez
+f (x, y) =
+
+
+
+xy
+y+x2 ,
+baldin y = −x2
+1,
+baldin y = −x2, (x, y) = (0, 0)
+0,
+(x, y) = (0, 0)
+Funtzioa ez da jarraitua (0, 0) puntuan eta, aldiz, Duf
+(0, 0) existitzen da edozein u = (u1, u2)
+bektore unitariorekiko:
+Duf(0, 0) = lim
+h→0
+f ((0, 0) + hu) − f (0, 0)
+h
+= lim
+h→0
+hu1hu2
+h[hu2 + (hu1)2]
+=
+lim
+h→0
+u1u2
+u2 + hu21
+laburbilduz,
+Duf(0, 0) =
+0,
+si u2 = 0
+u1, si u2 = 0.
+Deﬁnizioa: Funtzio diferentziagarriak.
+1. Kasua: Izan bedi f : (a, b) ⊂ R → R eta xo ∈ (a, b).
+f hori xo ∈ (a, b) puntuan deribagarria da, deﬁnizioz,
+⇐⇒ ∃ lim
+h→0
+f (xo + h) − f(xo)
+h
+= f (xo)
+⇐⇒ lim
+h→0
+f (xo + h) − f(xo) − f (xo)h
+h
+= 0
+⇐⇒ lim
+x→xo
+f (x) − f (xo) − f (xo)(x − xo)
+x − xo
+= 0
+⇐⇒ lim
+x→xo
+|f (x) − f (xo) − f (xo)(x − xo)|
+|x − xo|
+= 0
+denean. Kasu honetan L(h) = f (xo)h, ∀h ∈ R aplikazio lineala f-
+ren diferentziala xo puntuan
+deitzen da eta L = df (xo) idazten da; hau da:
+df (xo)(h) = f (xo)h, ∀h ∈ R
+edo h = dx eginez,
+df (xo)(dx) = f (xo)dx,
+83
+
+eta laburtuz,
+df (xo) = f (xo)dx.
+Eta f funtzioa xo puntuan diferentziagarria dela esaten da.
+Interpretazio geometrikoa.
+y = f (xo) + f (xo)(x − xo) zuzena Oxy planoan f funtzioaren graﬁkoaren 
+(hau da, y = f(x)
+kurbaren) zuzen ukitzailea (xo, f(xo)) puntuan da eta f(xo) + f (xo)
+(x − xo) adierazpena f(x)
+adierazpenaren hurbilketa.
+2. Kasua: Izan bedi f : A ⊂ R2 → R, A irekia eta (xo, yo) ∈ A.
+f funtzioa diferentziagarria (xo, yo) puntuan dela esaten da
+lim
+(x,y)→(xo,yo)
+|f (x, y) − f (xo, yo) −
+∂f
+∂x (xo, yo)(x − xo) −
+∂f
+∂y (xo, yo)(y − yo)|
+(x − xo, y − yo)
+= 0
+baldintza egiaztatzen denean.
+z = f (xo, yo)+
+∂f
+∂x (xo, yo)(x − xo) +
+∂f
+∂y (xo, yo)(y − yo) ekuazioa espazioko plano baten ekuazioa
+da. f -ren graﬁkoaren (xo, yo, f(xo, yo)) puntua plano horretan dago eta ∂z
+∂x (xo, yo) =
+∂f
+∂x (xo, yo)
+eta ∂z
+∂y (xo, yo) =
+∂f
+∂y (xo, yo) dira. Diferentziagarritasun baldintza egiaztatzen denean plano hori
+z = f (x, y) gainazalaren plano ukitzailea (xo, yo, f
+(xo, yo)) puntuan dela esaten da.
+Diferentziagarritasun baldintza honela idatz dezakegu:
+lim
+(x,y)→(xo,yo)
+|f (x, y) − f (xo, yo) − (
+∂f
+∂x (xo, yo),
+∂f
+∂y (xo, yo))
+(x − xo)
+(y − yo)
+|
+(x − xo, y − yo)
+= 0
+eta kasu honetan
+df (xo, yo)(h1, h2) = (
+∂f
+∂x
+(xo, yo),
+∂f
+∂y
+(xo, yo))
+h1
+h2
+, ∀(h1, h2) ∈ R2
+aplikazio lineala f -rendiferentziala 
+(xo, yo) puntuan deitzen da. Eta h1 = dx , h2 = dy eginez eta
+laburtuz,
+df (xo, yo) =
+∂f
+∂x
+(xo, yo)dx +
+∂f
+∂y
+(xo, yo)dy
+Aplikazio linealari elkartutako matrizeak bi zutabe eta errenkada bat duenez, bektore bat da:
+gradiente bektorea eta
+f (xo, yo) edo Df(xo, yo)idazten da:
+f (xo, yo) = (
+∂f
+∂x
+(xo, yo),
+∂f
+∂y
+(xo, yo))
+84
+
+3. Kasua: Izan bedi f : A ⊂ Rn → R, A irekia eta xo = (xo1..xon) ∈ A.
+f funtzioa diferentziagarria xo puntuan dela esaten da ondoko baldintza egiaztatzen denean:
+lim
+x→xo
+|f (x) − f (xo) − (
+∂f
+∂x1 (xo)..
+∂f
+∂xn (xo))
+
+
+x1 − x1o
+...
+xn − xno
+
+ |
+(x − xo)
+= 0
+Kasu honetan
+df (xo)(h1, ..hn) = (
+∂f
+∂x1
+(xo)..
+∂f
+∂xn
+(xo))
+
+
+h1
+...
+hn
+
+ , ∀(h1..hn) ∈ Rn
+aplikazio lineala f -
+ren diferentziala xo puntuan dela esaten da. Elkartutako matrizeak n zutabe eta
+errenkada bat du, gradiente bektorea xo puntuan deitu ohi da eta
+f (xo) edo Df(xo)idazten
+da:
+f (xo) = (
+∂f
+∂x1
+(xo), ..
+∂f
+∂xn
+(xo))
+Laburtuz,
+df (xo) =
+∂f
+∂x1
+(xo)dx1 + .. +
+∂f
+∂xn
+(xo)dxn.
+4. Kasua: Izan bedi f : A ⊂ Rn → Rm, A irekia, xo ∈ A eta f = (f1, ...fm).
+f funtzioa xo puntuan diferentziagarria dela esaten da, hurrengo baldintza egiaztatzen denean:
+lim
+x→xo
+f (x) − f (xo) − Df(xo)(x − xo)
+x − xo
+= 0
+non
+Df (xo) =
+
+
+
+D1f1(xo)
+D2f1(xo)
+. . .
+Dnf1(xo)
+D1f2(xo)
+D2f2(xo)
+. . .
+Dnf2(xo)
+. . .
+. . .
+. . .
+. . .
+D1fm(xo) D2fm(xo) . . . Dnfm(xo)
+
+
+
+den.
+f diferentziagarria denean Df 
+(xo) matrizeari elkartutako aplikazio linealari f-ren diferentzial
+xo puntuan deritzo eta matrize hori f-
+ren matrize jakobiarra xo puntuan deitzen da.
+Kasu honetan Df (xo) matrizearen errenkadak f-
+ren osagai funtzioen gradienteak dira.
+Oharra.- Ez da nahikoa f -
+ren deribatu partzial guztien existentzia f funtzioa diferentziagarria
+izan dadin.
+85
+
+Ba dakigu aldagai bateko funtzio diferentziagarriak puntu batean, puntu horretan funtzio jar-
+raituak direla. Orain emaitza hori f :
+ A ⊂ Rn → Rm funtzioetarako ere egiaztatzen dela ikusiko
+dugu:
+Teorema.
+Baldin f diferentziagarria xo puntuan bada, orduan f jarraitua izango da xo puntuan.
+Aurreko teoremaren ondorioz funtzio bat puntu batean jarraitua ez bada, ez da diferentziagarria
+izango puntu horretan.
+Funtzio bektorialaren diferentziagarritasuna bere osagai funtzioen diferentziagarritasunaren
+baliokidea da:
+Teorema.
+Izan bitez f : A ⊂ Rn → Rm, xo ∈ A eta f = 
+(f1, ...fm). f diferentziagarria da xo puntuan,
+baldin eta soilk baldin, bere osagai funtzio oro, fi, diferentziagarria xo puntuan bada. Kasu honetan
+ondoko berdintza dugu: Df (xo) = (Df1(xo), . . . , Dfm(xo))t.
+Deﬁnizioa.
+Izan bitez ei = (0, . . . , 1, . . . 0) i-garren bektore kanoniko n-
+dimentsionala eta f : A ⊂ Rn →
+Rm funtzioala. ei bektorearekiko f-ren deribatua, De
+i f (xo), f -ren i-garren (edo xi-rekiko) deribatu
+partziala xo puntuan deitzen da eta sarritan Dif
+(xo) ikurrez ere adierazten da; honela,
+Dif(xo) =
+∂f
+∂xi
+(xo) = De
+i f (xo)
+xo = 
+(a1, . . . , an) denean eta f erreala, deribatu partziala ondoko limitea da:
+Dif(xo) = lim
+h→0
+f (a1, . . . , ai + h, . . . an) − f(a1, . . . , ai, . . . an)
+h
+.
+Dif(x) deribatu partziala f-
+ren deribatua da xi aldagaiarekiko beste aldagai guztiak parametro
+bezala utziz; honen ondorioz, aldagai bateko funtzioen deribazioari buruzko teoria erabil dezakegu
+deribatu partzialen kalkulurako.
+Oharra Deribatu direkzionalen guztien existentziak funtzioaren jarraitasuna ez du ziurtatzen .
+Adibidez
+f (x, y) =
+
+
+
+xy
+y+x2 ,
+baldin y = −x2
+1,
+baldin y = −x2, (x, y) = (0, 0)
+0,
+(x, y) = (0, 0)
+86
+
+Funtzioa ez da jarraitua (0, 0) puntuan eta, aldiz, Duf
+(0, 0) existitzen da edozein u = (u1, u2)
+bektore unitariorekiko:
+Duf(0, 0) = lim
+h→0
+f ((0, 0) + hu) − f (0, 0)
+h
+= lim
+h→0
+hu1hu2
+h[hu2 + (hu1)2]
+=
+lim
+h→0
+u1u2
+u2 + hu21
+laburbilduz,
+Duf(0, 0) =
+0,
+si u2 = 0
+u1, si u2 = 0.
+Teorema.
+Izan bedi A, Rn-ren azpimultzo irekia eta f :
+ A → Rm. Baldin f diferentziagarria xo ∈ A
+puntuan bada, orduan f -
+ren deribatu direkzional guztiak xo puntuan existitzen dira. Horrez gain,
+edozein u ∈ Rn bektore unitariorekiko Duf
+(xo) deribatu direkzionalak ondoko berdintza egiaztatzen
+du:
+Duf(xo) = Df(xo)u.
+Bereziki
+Dif(xo) = Df(xo)ei
+Funtzioa erreala denean, hau da, m = 1 denean, aurreko berdintzaren ezkerreko atalean zenbaki
+erreal bat dugu eta eskuineko atalean bi bektore n-
+dimentsionalen biderkadura eskalarra.
+Azken teoremaren ondorioa:
+ f funtzioa xo puntuan diferentziagarria izateko baldintza beha-
+rrezkoa da Duf(xo) deribatu direkzional guztiak existitzea; hoien artean f-
+ren deribatu partzialak
+xo puntuan.
+Gradiente bektorearen propietateak.
+i).Aurrean ikusi dugun bezala, f : A ⊂ Rn → R diferentziagarria xo ∈ A 
+(A irekia) puntuan
+eta
+f (xo) = 0 badira, orduan edozein u ∈ Rn 
+( u = 1 ) bektore unitariotarako, deribatu
+direkzionala, gradientearen eta u bektorearen biderkadura eskalarra da:
+Duf(xo) = f(xo) · u.
+87
+
+ii). Horrez gain, xopuntuko deribatu direkzionalen balio absolutuen maximoa, gradiente bek-
+torearen norabidearekiko deribatu direkzionalak izango du. Hori dela eta, gradiente bektoreak
+funtzioaren hazkunde maximoaren norabidea duela esaten da. Azken propietatea frogatuko dugu:
+|Duf(xo)| = | f(xo) · u| =
+=
+f (xo) u | cos α|.
+α, u eta
+f 
+(xo) bektoreek osatzen duten angelua izanik. Honela ba, deribatu direkzionalen balio
+absolutuaren balio maximoa, α = 0 denean lortzen da; hau da u
+f (xo) denean. Beraz, deribatu
+direkzional maximoa, balio absolutuz, u =
+f (xo)
+f (xo)
+norabidearekiko lortuko da eta balio maximo
+hori ondokoa da:
+|D
+f (xo)
+f (xo)
+f (xo)| =
+f (xo)
+Laburbilduz,
+f (xo) = max{|Duf(xo)|| u = 1}.
+iii).Izan bedi f :
+ R3 → R funtzioa diferentziagarria eta deribatu partzialak jarraituak R3
+espazioan dituena. Izan bitez S, f -ren maila gainazala (adibidez, f 
+(x, y, z) = k ekuaziokoa) , x0 ∈
+S eta
+f (x0) = 0. Orduan
+f (x0) bektorea S gainazalaren bektore ortogonal bat da x0 puntuan.
+Ondorioz, S gainazaleraren ”plano ukitzailea” x0 = 
+(x0, y0, z0) puntuan ondoko ekuazioaren bidez
+adierazten da :
+f (x0, y0, z0).(x − x0, y − y0, z − z0) = 0
+Adibidea.- Kalkula ezazu (x − 1)2 + (y − 1)2 + 
+(z − 1)2 = 2 gainazalaren plano ukitzailea (1, 0, 2)
+puntuan.
+Diferentziagarritasunerako baldintza nahikoa.
+Aurretik ikusi dugunez, deribatu partzial guztien existentziak ez du diferentziagarritasuna ziur-
+tatzen. Hurrengo teoreman baldintza nahiko bat bat ikusiko dugu. Adibide askotan erraz frogatzen
+da baldintza hori egiaztatzen dela.
+Teorema.
+Izan bedi A, Rn-ren multzo irekia eta izan bedi f : A ⊂ Rn → Rm, f = 
+(f1, f2, . . . , fn).
+Djfi(x), 
+(i = 1, 2, ..n) deribatu partzial guztiak deﬁnituak eta jarraituak A multzoan badira, orduan
+f diferentziagarria da A multzoan.
+88
+
+Ondorioa.-
+ Funtzio polinomikoak diferentziagarriak dira espazioaren puntu guztietan.
+Deﬁnizioa.
+Izan bedi A, Rn-ren multzo irekia eta izan bedi f : A ⊂ Rn → Rm, f = 
+(f1, f2, . . . , fn).
+Djfi(x), 
+(i = 1, 2, ..n) deribatu partzial guztiak deﬁnituak eta jarraituak A multzoan direnean f,
+C1 motakoa A multzoan dela esaten da eta honela adierazten da: f ∈ C1(A, Rm).
+Funtzio diferentziagarrien propietate aljebraikoak.
+i) Izan bedi A ⊂ Rn irekia, f , g :
+ A ⊂ Rn → Rm diferentziagarriak x ∈ A puntuan. Orduan
+batura, biderkadura eta, m = 1, g
+(x) = 0 direnean zatidura ere,diferentziagarriak izango dira x
+puntuan eta ondoko berdintzak egiaztatzen dira:
+D(f + g) = Df + Dg,
+D(fg) = f Dg + gDf ,
+D(
+f
+g
+) =
+gDf − f Dg
+g2
+.
+ii) 
+(Katearen erregela edo funtzio konposatuaren diferentziala. ) Izan bedi A ⊂ Rn irekia,
+f : A ⊂ Rn → Rm diferentziagarria A multzoan, izan bedi g :
+ B ⊂ Rm → Rt diferentziagarria
+B ⊂ Rm irekian eta izan bedi f 
+(A) ⊂ B. Orduan h = g ◦ f funtzio konposatua diferentziagarria
+da A multzoan eta x ∈ A puntuan berdintza hau egiaztatzen da:
+Dh(x) = D(g ◦ f )(x) = Dg[f (x)] ◦ Df (x).
+Era matriziala.
+Funtzio konposatuaren matrize jakobiarra bi matrizen biderkadura bezala kalkula daiteke. Hain
+zuzen ere, baldin h = g ◦ f = (h1, . . . , ht), f = (f1, . . . , fm) , g = 
+(g1, . . . , gt) badira, katearen
+erregelaren ondoko adierazpen matriziala dugu:
+Dh(x) =
+
+
+
+D1h1 D2h1 . . . Dnh1
+D1h2 D2h2 . . . Dnh2
+. . .
+. . .
+. . .
+. . .
+D1ht
+D2ht . . . Dnht
+
+
+ =
+
+
+
+D1g1 D2g1 . . . Dmg1
+D1g2 D2g2 . . . Dmg2
+. . .
+. . .
+. . .
+. . .
+D1gt
+D2gt . . . Dmgt
+
+
+
+
+
+
+D1f1
+D2f1
+. . .
+Dnf1
+D1f2
+D2f2
+. . .
+Dnf2
+. . .
+. . .
+. . .
+. . .
+D1fm D2fm . . . Dnfm
+
+
+
+Esate baterako, Dh(x) matrizearen r, s-garren gaia hauxe da:
+∂hr
+∂xs
+=
+m
+j=1
+∂gr
+∂yj
+∂fj
+∂xs
+.
+89
+
+Ariketak. Funtzioen diferentziagarritasuna.
+1.- Izan bedi f : R2 −→ R,
+f (x, y) =
+x
+y
+,
+f (x, 0) = 0
+Azter itzazu R2-ko edozein bektore unitariorekiko deribatu partzialak 
+(0, 0) puntuan. Froga
+ezazu funtzioa ez dela jarraitua eta bornatuta dagoela 
+(0, 0) puntuaren ingurune batean.
+2.- Izan bedi g : R2 −→ R,
+g(x, y) =
+0 xy = 0
+1 xy = 0
+Estudia itzazu deribatu partzialak edozein norabiderekiko 
+(0, 0) puntuan. Froga ezazu funtzioa
+ez dela jarraitua eta bornatuta dagoela.
+3.- Izan bedi h : R2 −→ R
+h(x, y) =
+xy
+x2 + y2
+h(0, 0) = 0
+Estudia itzazu deribatu partzialak edozein norabiderekiko 
+(0, 0) puntuan. Froga ezazu funtzioa
+ez dela jarraitua
+4.- Izan bedi f (x, y) = x sin
+1
+x2 + y2
+,
+f (0, 0) = 0. Froga ezazu (0, 0) puntuan jarraitua dela.
+Azter ezazu diferentziagarritasuna (0, 0) puntuan .
+5.- Izan bed f (x, y) =
+x|y|
+x2 + y2
+f (0, 0) = 0. Froga ezazu (0, 0) puntuan jarraitua dela. Kalkula
+itzazu deribatu partzialak edozein norabiderekiko. Azter ezazu diferentziagarritasuna 
+(0, 0)
+puntuan.
+6.- Izan bedi f (x, y) = (x2 + y2) sin
+1
+x2 + y2
+f (0, 0) = 0. Kalkula itzazu deribatu partzialak
+edozein norabiderekiko jatorrian. Azter ezazu deribagarritasuna jatorrian.
+7.- Izan bedi f (x, y) = ex+y . Kalkula ezazu bere deribatua jatorrian.
+8.- Izan bedi f (x, y) = (ex+y, sin(x−y), x2 sin 1
+x ),
+si x = 0denean
+f (0, y) = (ey, sin(−y), 0).
+Estudia ezazu bere diferentziagarritasuna jatorrian.
+90
+
+9.- Izan bedi g(x, y, z) = (cos yz, xyz,
+1
+z
+)
+g(x, y, 0) = (1, 0, 0). Estudia ezazu bere diferentzia-
+garritasuna jatorrian.
+10.- Izan bedi f (x, y) =
+xy3
+x3 + y6
+f (0, 0) = 0. Kalkula itzazu deribatu partzialak edozein nora-
+biderekiko jatorrian.
+11.- Izan bedi f (x, y) =
+x3 − y3
+x2 + y2
+f (0, 0) = 0. Kalkula itzazu deribatu partzialak funtzioak jator-
+rian. Estudia ezazu bere diferentziagarritasuna jatorrian.
+12.-
+ Kalkula itzazu ondoko funtzioen deribatu direkzionalak ﬁnkatutako puntuetan eta emandako
+bektore unitarioekiko: a) f (x, y) = x + 2xy − 3y2
+P = (1, 2) u = ( 3
+5 ,
+4
+5 )
+b) f (x, y) = ln( x2 + y2)
+P = (1, 0) u = ( 2
+√
+5
+, 1
+√
+5
+)
+c) f (x, y) = ex cos πy
+P = (0, −1) u = (− 1
+√
+5
+, 2
+√
+5
+)
+13.- Izan bedi f (x, y, z) = (sin(xy + z), (1 + x2)yz) eta izan bedi g(u, v) = 
+(u + ev, v + eu).
+a)Froga ezazu f diferentziagarria dela (1, −1, 1) puntuan eta kalkula ezazu Df 
+(1, −1, 1).
+b) Froga ezazu g diferentziagarria dela (0, 1
+2 ) puntuan eta kalkula ezazu Dg(0,
+1
+2 ).
+c) Kalkula ezazu D(g ◦ f )(1, −1, 1).
+14.- Kalkula ezazu
+∂h
+∂x
+hurrengo funtzioetarako erantzuna arrazoituz:
+a) h(x, y) = f (x, u(x, y)) b) h(x) = f (x, u(x), v(x))
+c) h(x, y, z) = f (u(x, y, z), v(x, y), w(x))
+15.- Aurki itzazu a, b, c parametroen balioak
+f (x, y, z) = axy2 + byz + cz2x3
+funtzioaren deribatu direkzionalen balio maximoa 
+(1, 2, −1) puntuan 64 izan dadin OZ ar-
+datzaren norabide paralelo batekiko.
+91
+
+§4. EREMU BEKTORIALAK.
+Atal honetan mota berezi bateko funtzio bektorialak aztertuko ditugu eta hoien propietate ge-
+ometriko eta ﬁsiko batzuetaz arduratuko gara. Funtzio hoien deﬁnizio multzoa eta irudi multzoa
+R2 edo R3 espazioetako azpimultzoak izango dira eta kasu hauetan adierazpen geometrikoak egin
+daitezke; horrez gain, batzuetan gure emaitzak dimentsio goreneko espaziotara hedatuko ditugu.
+Deﬁnizioa.
+F :
+ A ⊂ Rn → Rn funtzio bektorialari eremu bektorial Rn espazioan deritzo. Eremu bektorial
+honek, geometrikoki, A ∈ Rn multzoko x puntu bakoitzari F
+(x) ∈ Rn bektorea elkartzen dio. F
+eremu bektoriala geometrikoki adierazteko A multzoko x puntu batzuk hautatu eta puntu bakoitzaren
+gainean berari elkartutako F(x) bektorea 
+(gezia) marraztuko dugu. R2 eta R3 espazioko eremu
+bektorialak gezi (bektore) multzo (eremu) bezala adieraz daitezke.
+f : A ⊂ Rn → R funtzio errealari eremu eskalar Rn espazioan deritzo.
+Eremu bektorial edo eskalar interesgarrienak C1 motakoak dira 
+(deribatu partzial jarraituak
+dituztenak).
+Ibilbideak eta kurbak.
+Izan bedi σ : I ⊂ R → Rn funtzioa (aldagai erreala eta balioak Rn-
+ko puntuak). Funtzio
+hauen irudi multzoari Rn espazioko kurba parametrizagarri deritzo. Kurba parametrizatzen duen
+funtzioa, hau da, σ, ibilbide deitu ohi da. Hau da:
+σ : [a,b] ⊂ R −→ Rn
+t −→ σ(t) = (x1(t), . . . , xn(t))
+erako funtzio jarraituei ibilbide deritze eta funtzio hauen irudi multzoak Rn espazioko kurba bat
+adierazten dute, kurba parametrizagarria deitzen dena eta σ(a) muturretik σ
+(b) muturreraino doana.
+Beraz, kurba orientatuak dira. Adibidez, σ(t) = (x1(t), . . . , xn
+(t)) funtzioak partikula baten posizioa
+t aldiunean adierazten du.
+Ibilbide desberdinek irudi multzo berbera eduki dezakete, hau da, kurba geometriko berbera,
+ibilbideek kurba geometrikoa errekorritzeko era adierazten dutelako. Kurba behin baino gehiagotan
+errekorritu daiteke, astiroago 
+(edo denpora gutziagoan),...eta abar. Horregaitik ibilbidea ﬁnkatzeko
+bai σ funtzioa eta baita ere t parametroaren deﬁnizio tartea zehaztu behar dira.
+92
+
+Deﬁnizioa.
+Izan bedi σ : [a, b] → Rn diferentziagarria. σ-ren deribatua t puntuan
+σ (t) = Dσ(t) =
+
+
+
+x1(t)
+.
+.
+xn(t)
+
+
+
+matrize Jakobiarra da eta zutabe bakarreko matrize hori erabili beharrean ondoko errenkada bektorea
+erabiliko dugu:
+σ (t) = (x1(t), . . . , xn(t)) = lim
+h→0
+σ(t + h) − σ(t)
+h
+eta aldiuneko abiadura puntuan deituko dugu.
+Denpora aurrerantz doanez, bektore honek kurbaren orientazioa adierazten digu. Bektore hori
+t-ren balio baterako nulua ez denean, irudi kurbako σ
+(t) puntuan zuzen ukitzaileari paraleloa da.
+Irudi kurba leuna izan dadin, beharrezkoa da σ (t) = 0 edozein t ∈ [a, b].
+Abiadura bektorearen moduluari arintasun ” deritzo: σ (t) . 
+( Aldiuneko abiadura bektore
+aldakorra izan arren arintasuna zenbaki erreal konstantea izan daiteke).
+Bestalde σ : 
+[a, b] → Rn ibildidearen irudi kurkako luzera ibilbidearen arku luzera deitzen da
+eta ondoko deﬁnizioa dugu:
+σ : [a, b] → Rn ibilbidea C1 motako funtzioa bada, arku luzera, 
+(σ), honela adierazten da:
+(σ) =
+b
+a
+σ (t) dt.
+Kurba geometriko baten luzera kalkulatu nahi badugu, ibilbide bat kurba hori behin bakarrik
+errekorritzen duena aurkitu behar dugu eta ibilbide honen arku luzera kalkulatu nahi dugun luzera
+da.
+Ibilbidea C1 erakoa ez bada, baina C1 erako zatien bildura ﬁnitua 
+(ibilbide zatika C1 erakoa)
+bada, C1 erako zati guztien luzeren batura ibilbidearen luzera izango da.
+Kontzeptu hauek eremu bektorialen ﬂuxu lerroak deﬁnitzeko erabiliko ditugu:
+Deﬁnizioa.
+Izan bedi F eremu bektorial bat. F eremu bektorialaren ﬂuxu lerroa σ
+(t) ibilbide bat da non
+σ (t) = F(σ(t)),
+93
+
+den. Hau da, F-k ﬂuxu lerroaren abiadura eremua adierazten du.
+F eremu bektorial baterako x0 puntutik igarotzen den ﬂuxu lerroa geometrikoki kalkulatzea,
+kurba bat kalkulatzea da, zeinen puntu bakoitzean bektore ukitzailea eta F-
+ren balio bektoriala bat
+diren. Fluxu lerro hori analitikoki kalkulatzeko ondoko ekuazio diferentzial eta hastapen baldintzaz
+mugatutako problema diferentziala ebatziko dugu:
+σ (t) = F(σ(t))
+σ(0) = xo
+.
+F eremu bektoriala R3 espaziokoa denean, aurreko problema diferentzial bektoriala honela
+idazten da:
+
+
+
+
+
+x (t) = F1(x(t), y(t), z(t))
+y (t) = F2(x(t), y(t), z(t))
+z (t) = F3(x(t), y(t), z(t))
+(x(0), y(0), z(0)) = (xo, yo, zo)
+.
+F eremu bektorialaren ﬂuxu lerro oro Φ
+(x, t) idatziko dugu eta ondoko problema diferentziala egiaz-
+tatzen du:
+∂Φ(x,t)
+∂t
+= F (Φ(x, t))
+Φ(x, 0) = x.
+Baldin F eremu bektoriala C1 motakoa bada, orduan x bakoitzerako problema diferentzialak
+soluzio bakarra du, soluzio hori t guztietarako deﬁniturik ez egon arren. Eremu bektorial desberdi-
+nen ﬂuxu lerroen kurba geometrikoak berdinak izan daitezke.
+Eremu bektorial garrantzitsuenetariko bat eremu eskalarrari elkartutako ondoko hau da:
+Deﬁnizioa: Gradiente eremua
+Izan bedi f : A ⊂ Rn → R funtzio diferentziagarria. Eremu bektorial bat,
+f , deﬁnituko
+dugu:
+f : A ⊂ Rn → Rn non x ∈ A puntuari
+f (x) bektorea (f -ren gradientea x puntuan)
+elkartzen dion.
+f eremu bektorialari gradiente eremu deritzo.
+Eremu bektorial guztiak ez dira gradiente eremuak, noski.
+Gradiente eremu bat, jatorriz, eremu eskalar batetik dator; eremu eskalar hori eremu bekto-
+rialaren eremu potentziala deitu ohi da. Aurreko kasuan f da eremu potentziala. f -
+ren maila
+multzoak, hau da, f konstante den puntuen multzoak, multzo ekipotentzialak deitu ohi dira.
+94
+
+Gogora dezagun puntu bateko gradiente bektorea puntu hori bere barnean duen maila gainaza-
+laren ortogonala dela puntu horretan. Beraz, A multzoko puntu bakoitzean gradiente bektorea eta
+multzo ekipotentzialak ortogonalak dira.
+R3 espazioko eta C1 motako eremu bektorialen gainean errotazional eragilea deﬁni dezakegu
+honela:
+Deﬁnizioa: Errotazional eremua
+Izan bedi F = (F1, F2, F3), R3-ko eremu bektorial C1 motakoa. F-
+ren errotazionala eremu
+bektorial bat da hurrengo formulaz deﬁnitua
+rot F =
+∂F3
+∂y
+−
+∂F2
+∂z
+,
+∂F1
+∂z
+−
+∂F3
+∂x
+,
+∂F2
+∂x
+−
+∂F1
+∂y
+.
+Eragileen notazioa.
+Eragileek funtzio multzoen gainean aritzen dira. Nabla eragilea:
+=
+∂
+∂x
+,
+∂
+∂y
+,
+∂
+∂z
+Adibidez, f funtzio errealaren gainean
+f =
+∂f
+∂x
+,
+∂f
+∂y
+,
+∂f
+∂z
+.
+Eta adibidez F eremu bektorialaren gainean
+× F =
+i
+j
+k
+∂
+∂x
+∂
+∂y
+∂
+∂z
+F1 F2 F3
+= rot F.
+Bistakoa da rotF eremu bektoriala Ck−1 motakoa dela hasierako F eremua Ck motakoa denean.
+Teorema. f eremu eskalarra C2 motakoa bada, orduan
+× ( f ) = 0
+da. Gradiente eremu baten errotazionala bektore nulua da 
+(hau da eremu bat gradiente eremua
+izateko bete behar duen baldintza beharrezko bat).
+95
+
+Eremu bektorial baten errotazionala eremu barruko errotazioen existentziari loturik dago. Eremu
+horrek ﬂuido baten ﬂuxua adierazten badu, bere errotazionala zero izateak, hots, eremua irrotazion-
+ala izateak, eremuak zurrunbilorik ez duela adierazten du, hau da, itxoroski gurpil bat ﬂuidoaren
+gainean ezartzen badugu, ﬂuidoarekin mugituko da baina ez du biratuko bere ardatzarekiko.
+Hirugarren eremu oinarrizkoa, ”dibergentzia”, eremu bektorialen gainean aplikatzen da.
+Deﬁnizioa: Dibergentzia.
+Izan bedi F = (F1, . . . , Fn), Rn espazioko eremu bektoriala. F-
+ren dibergentzia eremu eskalar
+bat da hurrengo formulaz deﬁnitua:
+div F =
+∂F1
+∂x1
++ . . . +
+∂Fn
+∂xn
+.
+Eragileen notazioa erabiliz,
+div F =
+· F.
+F eremuak ﬂuido baten abiadura eremua adierazten badu, div F eremu eskalarrak espantsio tasa
+bolumen unitateko adieraziko du.
+div F < 0 denean ﬂuidoa galkatzen 
+(konprimatzen) dela esaten da eta div F = 0 denean,
+ﬂuidoa konprimaezina dela.
+Teorema.
+Baldin F eremu bektoriala R3 espazioko eta C2 motakoa bada, orduan
+div rotF =
+· (
+× F) = 0.
+Aurrekoaren ondorioz, eremu bat beste eremu baten errotazionala izateko baldintza nahikoa
+bere dibergentzia 0 izatea da.
+Azkenez, Laplace-ren eragilea dugu.
+96
+
+Deﬁnizioa:Laplace-ren eragilea.
+Izan bedi f : Rn → R. Laplace-ren eragilea f -ren gainean honela deﬁnitzen da:
+2f =
+· ( f ) =
+∂2f
+∂x21
++ · · · +
+∂2f
+∂x2n
+.
+Orain izan bedi F eremu bektoriala. Deﬁnizioz,
+2F = ( 2F1, · · · , 2Fn).
+97

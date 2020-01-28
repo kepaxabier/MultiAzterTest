@@ -1,0 +1,2376 @@
+
+
+
+7.
+K a p itu lu a
+Inte g ra l a niz k o itz a k
+61
+
+62
+7.
+K A P IT U L U A
+IN T E G R A L A N IZ K O IT Z A K
+UEP D o n o stia
+M ate m atik a A p lik atu a S aila
+
+7.1.
+ARAZOAREN AURKEZPENA
+63
+7.1
+A ra z o a re n a u rk e z p e n a
+5 . g a ia n a ld a g a i ba ka rre ko y
+(x) fu n tz io ba te n ba te z be ste ko ba lioa ka lku la tz e n ika si g e n u e n
+[a , b] ta rte ba te a n . G og ora d itz a g u n ba te z be ste ko ba lio h ori e ra bilg a rria d e n e g oe ra p ra ktiko
+ba tz u k.
+7 .1 Iru d ia : G ra ﬁ koa k
+7 .1
+(a ) iru d ia n , h e rri ba te ko te rmome tro ba te k e g u n ba te a n ja sota ko T 
+(t) te n p e ra tu ra -
+re n fu n tz ioa re n g ra ﬁ koa a g e rtz e n d a . G ra ﬁ ko h on e ta tik a bia tu z , te n p e ra tu ra re n a ld a ke ta k
+n ola koa k iz a n d ire n ja kin d e z a ke g u . Ad ibid e z , ja sota ko te n p e ra tu ra min imoa e ta ma x imoa
+z e in iz a n d ire n ja kin d e z a ke g u , te n p e ra tu ra ig o e d o je itsi d e n e g u n a re n ta rte a k e z a g u tu d i-
+tz a ke g u , te n p e ra tu ra g e h ie n a ld a tu d e n ta rte a ka lku la d e z a ke g u , e tb. E ta n oski, e g u n e a n
+z e h a r ja sota ko te n p e ra tu ra re n ba te z be ste koa lor d e z a ke g u :
+T =
+1
+2 4
+24
+0
+T (t) dt
+(7 .1)
+7 .1(b) iru d ia k, ibilg a ilu ba te k 3 se g u n d ota n h a rtu ta ko v
+(t) a bia d u ra (m / s -ta n n e u rtu a )
+a d ie ra z te n d u . K a su h on e ta n e re in te re sg a rria k d ira a bia d u ra ma x imoa /
+ min imoa , h a z ku n tz a
+ta rte a k, e tb. e ta v ba te z be ste koa :
+v =
+1
+3
+3
+0
+v(t) dt
+(7 .2)
+Az ke n ik, 7 .1
+(c ) iru d ia n , 3 me troko lu z e ra ko ba rra ba te ta n ma te ria n ola ba n a tz e n d e n
+a g e rtz e n d a , d(x) d e n tsita te fu n tz ioa re n bid e z (gr/ m -
+ta n n e u rtu a ), x ∈ [0 , 3] ba koitz e ra ko.
+Iku s d e z a ke z u n e z , ma te ria re n ba n a ke ta e z d a u n iforme a ; be ra z , ora in e re be ste p a ra me tro
+ba tz u k e z a g u tz e a in te re sg a rria iz a n g o z a ig u :
+ ma x imo e ta min imo a bsolu tu a k, mu g a loka la k,
+h a z ku n tz a ta rte a k, e tb. e ta d e n tsita te a re n ba te z be ste koa :
+d =
+1
+3
+3
+0
+d(x) dx
+(7 .3)
+Matematika Aplikatua Saila
+UEP Donostia
+
+64
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+O rokorrean, y(x) funtzio jarraitu baten batezbestekoa 
+[a, b] tartean hurrengo moduan
+kalkulatu daiteke:
+y =
+1
+b − a
+b
+a
+y(x) dx
+(7.4)
+6. gaian 
+(aldagai anitzeko funtzio errealetan) ikusi genuen bezala, Z ientziako eta Inge-
+niaritzako problema errealetan arruntena funtzioek bi, hiru edo aldagai gehiago edukitzea
+da. B aina nola kalkulatu z = F (x, y) funtzioaren batezbestekoa D ⊂ R
+2 eremu batean? Eta
+w = F (x, y, z) funtzioarena V ⊂ R
+3 eremuan? Ikus ditzagun aurrekoen oso antzekoak diren
+adibide batzuk.
+7.1. Ad ib id ea
+Tenperatura atmosferikoa.
+N ormalean, herri bateko tenperaturaren azterketa egun batean, lurraldean banatutako
+termometro batzuk erabiliz egiten da. H orrela, eguneko momentu jakin baterako, R eskualde
+geograﬁkoaren (x, y) puntu bakoitzean deﬁnitutako T 
+(x, y) tenperatura funtzioan pentsa
+dezakegu. L ogikoa da T 
+(x, y) funtzioa jarraitua dela pentsatzea, nahiz eta termometroak
+dauden (x, y) puntuetako T tenperaturak bakarrik ezagutu.
+7.2 irudiak, sei zatitan banatutako R eremu geograﬁkoa adierazten du; zati bakoitzean
+estazio meteorologiko bat kokatu dugu. Irudian, termometro bakoitzak eguerdiko 12tan
+jasotako tenperaturak ere ageri dira. Ezin dugu espero, noski, eremu bakoitzeko puntu
+guztietan tenperatura bera izango denik, baina hurbilketa horrekin lan egin beharko dugu.
+D atuetatik abiatuz, zein izango da R eremuaren batezbesteko M tenperatura?
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.1.
+ARAZOAREN AURKEZPENA
+65
+7.2 Irudia: R eremuko tenperaturak
+Hasiera batean kalkulua egiteko sei tenperaturen batezbesteko aritmetikoa lortzea pentsa
+dezakegu:
+M =
+36 + 37 + 36 + 42 + 44 + 39
+6
+= 39 ◦C
+P rozedura honetan, hala ere, ez dugu kontutan hartu sei tenperatura horietako bakoitzak
+azalera ezberdineko eremu geograﬁkoak adierazten dituztela. 4 eta 5 eremuak, adibidez,
+besteak baino azalera handiagoa dute, eta beraz, R-
+ko tenperatura osoaren batezbestekoa-
+ren kalkulurako, bertako tenperaturek besteek baino pisu handiagoa izan beharko dutela
+pentsatzera bultzatzen gaitu. Arrazoi horregatik eremu bakoitzaren azalera (Km
+2-tan) kal-
+kulatu dugu:
+Matematika Aplikatua Saila
+UEP Donostia
+
+66
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+Eremua
+Azalera (Km
+2) Tenperatura (◦C )
+1
+640
+36
+2
+350
+37
+3
+655
+36
+4
+9 50
+42
+5
+10 40
+44
+6
+370
+39
+Total
+40 0 5
+Orain, tenperaturaren sei balioen batezbesteko haztatua kalkulatuko dugu:
+M =
+36 · 640 + 37 · 35 0 + 36 · 65 5 + 42 · 95 0 + 44 · 1040 + 39 · 370
+4005
+= 39. 8 7 ◦C
+Ikus dezakezunez, bi batezbestekoen arteko diferentzia 0. 8 7◦C-
+ekoa da. Hala ere, M ≈
+39. 8 7◦C balioa R eremuko batezbesteko tenperatura adierazgarriagoa da.
+7.2. Adibidea
+M ateriaren banaketa.
+Demagun orain L xaﬂ a bat dugula eta bere gainazalera materia kantitate jakin bat bota-
+tzen dela. Horrela, (x, y) ∈ L puntu bakoitzean F 
+(x, y) magnitudea deﬁnitzen da. Adibidez,
+F (x, y) funtzioak xaﬂ ari aplikatutako inprimazioaren lodiera (mm-
+tan) adieraz dezake; edo
+gainean botatako oxido kantitatea (mg/cm
+2-tan). Nola kalkulatuko genuke gutxi gora behe-
+ra F (x, y)-ren batezbesteko balioa L-
+en? Ideia da L xaﬂ a azalera bereko eremu txikietan
+banatzea, eremu bakoitzeko edozein puntu aukeratzea eta azkenik, batezbestekoa kalkula-
+tzea aurreko adibidean egin dugun modu berean. Aztertu 7.3 irudia. a) irudian L xaﬂ a
+laukizuzen bat dago, b)-n L-ren banaketa bat 12 eremutan eta c)-
+n aipatutako puntuen
+aukeraketa posible bat: P1, P2, . . . , P12.
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.1.
+ARAZOAREN AURKEZPENA
+67
+7.3 Irudia: L xaﬂaren deskonposaketa
+A 12 eremuetako bakoitzaren azalera baldin bada 
+(beraz azalera osoa 12A izango da)
+eta F (Pi) F 
+(x, y) funtzioaren balioa bada Pi puntuan, 1 ariketako kalkulu berak eginez,
+F (x, y)-ren gutxi gora beherako batezbestekoa (L-
+en) kalkulatu ahal izango dugu:
+F ≈
+12
+i= 1
+A · F (Pi)
+12A
+=
+12
+i= 1
+F (Pi)
+12
+Ohartu,
+L,
+azalera
+berdineko
+eremuetan
+deskonposatuz,
+nahikoa
+dela
+F (P1),
+. . . , F 
+(P12) 12 balioen batezbesteko aritmetikoa kalkulatzearekin. Hala ere, problema ba-
+tzuk plantea ditzakegu:
+1) Ikasitako adibideetan, F (x, y)-
+ren batezbestekoaren balio hurbidua kalkulatu dugu,
+Pi ∈ D, i = 1, . . . , n puntuetan F (x, y)-
+ren lagin batetik abiatuz. Baina, nola kalkula deza-
+kegu F (x, y)-ren batezbestekoaren balio zehatza?
+2) z = F (x, y) gainazal batek (
+(x, y) ∈ L izanik) goitik mugatzen duen bolumena kalku-
+latzea ere interesgarria da (ikus 7.4 irudia). Adibidez, F 
+(x, y) funtzioa L eremuan eroritako
+elur kaparen lodiera bada, bolumen horrek L gaineko elur kantitate osoa adierazten du.
+3) Pieza bat hainbat gainazalen bidez deﬁnituta egon daiteke, 7.5 irudian agertzen dena
+bezala. Bere bolumenak, pieza fabrikatzeko behar den material kantitatea ezagutzeko balio
+Matematika Aplikatua Saila
+UEP Donostia
+
+68
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+7.4 Irudia: z = F (x, y) funtzioak mugatutako bolumena
+digu. Baina nola kalkulatu bolumen hori? Eta gainazalaren azalera?
+7.5 Irudia: Pieza
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.2.
+EREM U LAUKIZUZEN B ATEN INTEGRAL B IKOITZA
+69
+4) F (x, y) funtzioak 
+(x, y) ∈ D puntu bakoitzeko materiaren kontzentrazioa adierazten
+badu, F 
+(x, y) funtzioari lotutako beste parametro batzuk daude; parametro horiek kalku-
+latzea interesgarria izango da:
+ zein da bere grabitate zentroa? Eta bere inertzi momentua
+puntu edo ardatz batekiko? Eta D-n dagoen materia kantitatea?
+5) w = F (x, y, z), V ⊂ R
+3 eremuan deﬁnitutako funtzioa bada, F -ren batezbestekoa
+V -n kalkulatzea ere interesgarria izango da. Adibidez, demagun w = T 
+(x, y, z) funtzioak
+espazioko V barruti baten 
+(pieza bat edo labe bat, adibidez) tenperatura adierazten duela.
+Kasu honetan, zein izango da T -ren batezbestekoa? Eta w = F 
+(x, y, z) funtzioak S solido
+baten 
+(x, y, z) puntu bakoitzeko materia kontzentrazioa adieratzen badu, zein izango da S-
+ko materia kantitatea? Eta bere grabitate zentroaren koordenatuak? Nola kalkulatu V -
+ren
+inertzi momentua ardatz batekiko?
+Ikus dezakezunez, galdera asko sortzen zaizkigu; gai honetan, guzti horiei erantzunak
+emango dizkiegu.
+7.2
+E rem u laukizuzen b aten integ ral b ikoitza
+[a, b]-n deﬁnitutako y
+(x) funtzio jarraituaren batezbestekoaren kontzeptua deﬁnitu genuen
+ideia berberak erabiliko ditugu oraingo batezbestekoa deﬁnitzeko ere. Gogora dezagun era-
+bilitako prozedura:
+1) [a, b] tartea h = (b − a)/n luzerako n azpitartetan deskonposatu:
+a = x0 < x1 < x2 < . . . < xn = b, xi = a + ih, i = 0, ..., n
+[a, x1], [x1, x2], . . . , [xn
+−1, b]
+2) Azpitarte bakoitzetik puntu bana aukeratu (edozein):
+zi ∈ [xi, xi+ 1] i = 0, ..., n − 1
+3) Kalkulatu
+yn =
+1
+b − a
+n−1
+i=0
+h · y(zi)
+(7.5)
+An =
+n−1
+i=0
+h · y(zi)
+(7.6)
+Matematika Aplikatua Saila
+UEP Donostia
+
+70
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+7.5 balioa y(x)-en batezbestekoaren hurbilketa da [a, b] tartean. Gainera, y
+(x) ≥ 0 bada
+[a, b]-n, 7.6 balioa, goitik y
+(x) funtzioaren graﬁkoak eta behetik OX ardatzak mugatzen
+duten azaleraren hurbilketa da.
+7.6(a) irudia, 
+[a, b] tartearen lau azpitartetako deskonposaketa da; azpitarte bakoitzean
+erdiko puntuak aukeratu dira:
+ z0, z1, z2, z3. Lau laukizuzenen azaleren batura, (goitik) y(x)-
+ek eta (behetik) OX ardatzak mugatutako azaleraren hurbilketa da. 7.6(b), 7.6
+(c) eta 7.6(d)
+irudiek eragiketa bera adierazten dute, baina geroz eta azpitarte kopuru handiagoa hartuta;
+modu horretan, hurbilketa hobeak lortzen dira.
+7.6 Irudia: Geroz eta azpitarte txikiagoak, orduan eta hurbilketa hobeak
+4) y(x)-en y batezbestekoaren balio zehatza kalkulatzeko [a, b] tartean eta y
+(x)-ek eta
+OX ardatzak mugatutako A azalera kalkulatzeko limitera pasako dugu n → ∞ denean:
+yn = lim
+n→∞
+1
+b − a
+n−1
+i=0
+h · y(zi)
+An = lim
+n→∞
+n−1
+i=0
+h · y(zi)
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.2.
+EREMU LAUKIZUZEN BATEN INTEGRAL BIKOITZA
+71
+Orain, z = F 
+(x, y) funtzio erraz bat aukeratuko dugu, eta prozedura bera jarraituko
+dugu, baina bi dimentsiotan. Izan bedi z = F (x, y) = xy + 1 D = [0, 2] × 
+[0, 1] eremuan
+deﬁnituta dagoen funtzioa. Aztertu 7.7
+(a) irudia. z = xy + 1 gainazalaren adierazpen
+graﬁkoa dago, D = [0, 2] × 
+[0, 1] eremuan deﬁnituta. Gero, D eremu hori 9 laukizuzenetan
+zatitu dugu eta bakoitzetik puntu bat hartu dugu. Kasu honetan, laukizuzen bakoitzaren
+goi-
+ezkerraldeko erpina aukeratu dugu. Irudi berean, 9 puntu horien irudiak ere kokatu
+ditugu.
+7.7 Irudia: xy + 1 gainazala
+Laukizuzenei R1, . . . , R9 deituko diegu eta aukeratutako puntuei P1, . . . , P9. 7.7
+(b) iru-
+dian z = F (x, y) gainazala dago eta Ri laukizuzen bakoitza F 
+(Pi) altuerara igota dago.
+7.7
+(c) irudian, igotako laukizuzen horiek bakarrik agertzen dira. Laukizuzen guztien azalera
+berbera denez (2/9) eta D eremuaren azalera osoa 2 denez, F 
+(x, y) = xy + 1 funtzioaren
+batezbestekoaren hurbilketa D = [0, 2] × 
+[0, 1] eremuan, modu honetan kalkulatuko dugu:
+F ≈
+1
+2
+2
+9
+(F (P1) + . . . + F (P9)) =
+1
+2
+2
+9
+F
+0,
+1
+3
++ F
+0,
+2
+3
++
++F (0, 1) + F
+2
+3
+,
+1
+3
++ F
+2
+3
+,
+2
+3
++ F
+2
+3
+, 1 + F
+4
+3
+,
+1
+3
++
++F
+4
+3
+,
+2
+3
++ F
+4
+3
+, 1
+= 1.44
+Orain, kalkulo horiek, gainazalak (goitik) eta D eremuak 
+(behetik) mugatzen duten bolu-
+menaren hurbilketa kalkulatzeko balio digute. Ikusi 7.8 irudia, bolumen horren balioa eta
+Matematika Aplikatua Saila
+UEP Donostia
+
+72
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+9 prismen bolumenen baturarena oso antzekoak dira. Horrela, bolumenaren hurbilketaren
+balioa ondorengoa izango da:
+V = 2F ≈ 2. 88
+7.8 Irudia: Bolumenaren hurbilketa prismen bolumenen baturaren bidez
+Orain eragiketa bera egingo dugu, baina [0, 2] eta 
+[0, 1] tarteak n zatitan banatuz. F n ba-
+tezbesteko hurbildua kalkulatuko dugu eta baita Vn bolumen hurbildua ere. Beraz, badirudi
+V -ren balio zehatza eta F batezbesteko zehatza ondorengoak izango direla:
+V = lim
+n→∞
+Vn
+F = lim
+n→∞
+F n
+Egin dezagun bada. Lehendabizi, [0, 2] eta 
+[0, 1] tarteak n zatitan zatituko ditugu:
+F (x, y) = xy + 1 x ∈ [0, 2] y ∈ [0, 1]
+xi =
+2
+n
+i i = 0, 1, . . . , n h =
+2
+n
+yj =
+1
+n
+j j = 0, 1, . . . , n k =
+1
+n
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.2.
+EREMU LAUKIZUZEN BATEN INTEGRAL BIKOITZA
+73
+Modu horretan n errenkadako eta n zutabeko laukizuzenak edukiko ditugu. Ikusi 7.9 irudia.
+Rij deituko diogu i. errenkadako eta j. zutabeko laukizuzenari. Rij laukizuzen bakoitzean
+goi-ezkerraldeko erpina aukeratzen dugu, hau da:
+Pij = (xi, yj+1) i = 0, .., n − 1, j = 0, ..., n − 1
+7.9 Irudia: Rij laukizuzena
+Matematika Aplikatua Saila
+UEP Donostia
+
+74
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+Orduan:
+F (Pij) = F (xi, yj+1) = xi · yj+1 + 1 =
+2
+n
+i
+1
+n
+(j + 1) + 1 =
+2
+n2
+i(j + 1) + 1
+Eta beraz, F -ren batezbestekoaren balio hurbildua:
+F n =
+1
+2
+n−1
+j=0
+n−1
+i=0
+2
+n2
+2
+n2
+i(j + 1) + 1
+=
+1
+2
+n−1
+j=0
+n−1
+i=0
+4
+n4
+i(j + 1) +
+2
+n2
+=
+=
+1
+2
+n−1
+j=0
+4
+n4
+n−1
+i=0
+i(j + 1) +
+2
+n
+=
+1
+2
+
+
+4
+n4
+n−1
+j=0
+n−1
+i=0
+i(j + 1)
++ 2
+
+
+=
+=
+2
+n4
+n−1
+j=0
+n−1
+i=0
+i(j + 1)
++ 1 =
+2
+n4
+n−1
+j=0
+(j + 1)
+n−1
+i=0
+i
++ 1 =
+=
+2
+n4
+n−1
+j=0
+(j + 1)
+n−1
+i=0
+i
++ 1 =
+2
+n4
+n−1
+j=0
+(j + 1)
+n(n − 1)
+2
++ 1 =
+=
+n − 1
+n3
+n−1
+j=0
+(j + 1) + 1 =
+n − 1
+n3
+n(n + 1)
+2
++ 1 =
+n
+2 − 1
+2n2
++ 1
+Orain F balio zehatza lortzen dugu:
+F = lim
+n→∞
+n
+2 − 1
+2n2
++ 1 =
+3
+2
+Eta z = xy + 1 gainazalak eta D = [0, 2] × [0, 1] eremuak mugatutako bolumena:
+V = 2F = 3
+7.1.
+Espero d a F (x, y)-
+ren batezbestek oa ez d ela au k eratu tak o Pij ∈ Rij pu n tu en araberakoa.
+H ori frog atzek o, Pij pu n tu a Rij-ren goi-
+ezker erpin a au keratu beh arrean , h artu beste pu n tu
+ezberd in bat, ad ibid ez lau k izu zen aren zen troa. Frog atu lortu tak o F balio berria au rrek oaren
+berbera d ela, eta n osk i, baita V -ren balioa ere.
+7.2.
+Au rrek o F (x, y) = xy + 1 ad ibid e berd in erak o, saiatu k o g ara D = 
+[0, 2] × [0, 1] erem u a
+m od u ezberd in ean d esk on posatzen (lau k izu zen ak m an ten d u z). 
+[0, 2] tartea, leh en bezala, 2/n
+lu zerak o n azpitartetan zatitu k o d u g u , bain a orain g oan altu era k on stan tea izan g o d u , 1; m od u
+h orretan , Ri n lau kizu zen d eﬁ n itu d itu gu , i = 0, . . . , n − 1. O h artu n → ∞ d en ean , Ri-
+ren
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.2.
+EREMU LAUKIZUZEN BATEN INTEGRAL BIKOITZA
+75
+azalera 0-
+ra doala. Orain, hartu laukizuzen bakoitzean goi ezkerraldeko erpina eta saiatu
+modu berean kalkulatzen F -
+ren batezbesteko balioa. Z er gertatzen da? Ondoren, aukeratu
+laukizuzen bakoitzean behe ezkerraldeko erpina eta gauza bera egin. Z er gertatzen da? Z errek
+hutsegiten du?
+Orain, ideia guzti hauek D = [a, b] × [c, d] eremuan deﬁnitutako F 
+(x, y) funtzio jarraitu
+orokor bati aplikatuko dizkiogu. [a, b] tartea h = (b−a)/
+n luzerako n zatitan banatuko dugu
+eta [c, d] tartea k = (d − c)/
+n luzerako n zatitan. Gero, laukizuzen bakoitzeko Pij puntu
+bana aukeratuko dugu eta adibideko ideia berdinak aplikatuko dizkiogu 
+(ikus 7.10 irudia).
+7.10 Irudia: Rij kasu orokorrean
+F (x, y)-ren batezbesteko hurbildua kalkulatzeko:
+F n =
+1
+(b − a)(d − c)
+n−1
+i=0
+
+
+n−1
+j=0
+h k F (xi, yj)
+
+
+=
+1
+(b − a)(d − c)
+n−1
+i=0
+h
+
+
+n−1
+j=0
+k F (xi, yj)
+
+
+Limiteak hartuz:
+F =
+1
+(b − a)(d − c)
+lim
+n→∞
+n−1
+i=0
+h
+
+
+lim
+n→∞
+n−1
+j=0
+k F (xi, yj)
+
+
+(7.7)
+Matematika Aplikatua Saila
+UEP Donostia
+
+76
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+Baina kontuz, gogoratu h(x), 
+[a, b] tartean deﬁnitutako funtzio jarraitua bada eta h =
+(b − a)/n bada, ondorengo daukagula:
+b
+a
+h(x) dx = lim
+n→∞
+n−1
+i=0
+h h(xi)
+Orduan, 7.7 ekuazioaren limitean, h(y) = F 
+(xi, y) funtzioaren integrala y aldagaiarekiko
+([c, d] tartean) dagoela konturatzen gara. Hau da:
+lim
+n→∞
+n−1
+i=0
+k F (xi, yj) =
+d
+c
+F (xi, y) dy = A(xi)
+(7.8)
+7.8 ekuazioan, x1, . . . , xn balioak konstanteak dira. xi balio konstante bakoitzerako,
+[c, d]-n jarraitua den h(y) = F (xi, y) funtzioa eraikitzen da. 7.11
+(a) irudian, D = [a, b] ×
+[c, d]-n deﬁnitutako z = F 
+(x, y) gainazalaren graﬁkoaren adierazpena dago. 7.11(b) iru-
+dian, xi ∈ [a, b] balio bat aukeratu eta h(y) = F 
+(xi, y) funtzioaren graﬁkoa marraztu dugu,
+y ∈ [c, d] izanik. Orain h(y) = F (xi, y) funtzioa [c, d]-
+n integratzen badugu, A(xi) funtzioak
+h(y) = F (xi, y) kurbak [c, d] tartean mugatutako azalera emango digu, 7.11
+(c) irudian ager-
+tzen den bezala.
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.2.
+EREMU LAUKIZUZEN BATEN INTEGRAL BIKOITZA
+77
+7.11 Irudia: z = F (x, y) gainazala eta h(y) integratuz lortzen den A
+(xi) azalera
+Orduan, 7.7 ekuazioa honela geratuko da:
+F =
+1
+(b − a)(d − c)
+lim
+n→∞
+n−1
+i=0
+h A(xi)
+Baina orain, A(x) funtzioaren arrazonamendu berbera aplikatuko diogu:
+lim
+n→∞
+n−1
+i=0
+h A(xi) =
+b
+a
+A(x) dx
+Beraz:
+F =
+1
+(b − a)(d − c)
+b
+a
+d
+c
+F (x, y) dy
+dx
+Matematika Aplikatua Saila
+UEP Donostia
+
+78
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+Eta z = F (x, y) gainazalak eta D = [a, b] × 
+[c, d] eremuak mugatutako V bolumenari dago-
+kionez, F (x, y) ≥ 0 baldin bada, ikusi 7.12 irudia:
+V =
+b
+a
+d
+c
+F (x, y) dy
+dx
+7.12 Irudia: Bolumena
+Aplika ditzagun idei berri hauek atal honetan erabili dugun F 
+(x, y) = xy + 1 funtzioari
+non D = [0, 2] × [0, 1] den. Betiko metodoak erabilita ikusi dugu F = 3/
+2 eta V = 3 direla.
+Konproba dezagun emaitza hau, garatu dugun metodo berria erabiliz.
+V =
+2
+0
+1
+0
+F (x, y) dy
+dx
+(7.9)
+A(x) lortzeko non x ∈ [0, 2] den, aurreko integrala kalkulatuko dugu:
+1
+0
+(xy + 1)dy =
+1
+2
+xy
+2 + y
+y=1
+y=0
+=
+1
+2
+x + 1 = A(x)
+7.13 irudian, D = [0, 2] × [0, 1] eremuan deﬁnitutako z = xy + 1 gainazala eta
+h(y) = F (x, y) funtzioa agertzen dira. F 
+(x, y), x balio ﬁnko bakoitzarako x maila duen
+UEP Donostia
+M ate m atik a A p lik atu a S aila
+
+7.2.
+E R E M U
+L A U K IZ U Z E N
+B A T E N
+IN T E G R A L B IK O IT Z A
+79
+7.1 3 Iru d ia : K a lku lu a xy + 1 ka su ra ko
+z u z e n a d a . A(x) 
+( 1 3 iru d ia n g rise z ma rra z tu ta ko a z a le ra ), x ba koitz a ra ko, g a in e tik h
+(y)-
+re n g ra ﬁ koa k mu g a tz e n d u e n a z a le ra d a . h(y) y ∈ 
+[0, 1] e re mu a n d e ﬁ n itu a d a g o.
+K a lku la d e z a g u n ora in 
+(7.8 ) e ku a z ioa n a g e rtz e n d e n ka n p oko in te g ra la :
+2
+0
+A(x)dx =
+2
+0
+1
+2
+x + 1 dx =
+1
+4
+x
+2 + x
+x= 2
+x= 0
+= 3
+K a su h on e ta n e re F = 3/
+2 lortz e n d a . E ma itz a be rd in a lortu d u g u ba in a e ra bilita ko e ra
+a skoz e rra z a g oa iz a n d a . Iz a n be d i F (x, y), D = [a, b] × 
+[c, d] e re mu a n d e ﬁ n itu ta ko fu n tz io
+ja rra ia . O rd u a n F on d ore n g o e ra n ka ku la tz e n d a :
+F =
+1
+(b − a)(d − c)
+b
+a
+d
+c
+F (x, y) dy
+dx
+F (x, y) ≥ 0 ba d a D e re mu a n , F 
+(x, y) g a in e tik e ta D e re mu a a z p itik mu g a tz e n d u te n V
+bolu me n a on d ore n g o e ra n ka lku la d a ite ke :
+V = (b − a)(d − c)F
+(e c 3 2 )
+E ra h on e ta n , in te g ra l bikoitz a re n kon tz e p tu a lortu d u g u e ta be re on d orioa d e n ba te z -
+be ste ko ba lioa re n kon tz e p tu a e re .
+Matematika Aplikatua Saila
+U E P Donostia
+
+80
+7.
+KAP ITULUA INTEGRAL ANIZKOITZAK
+7.1. Deﬁ niz ioa
+D=
+[a, b]x[c, d] e re m u an d e ﬁ n itu tak o F 
+(x, y) fu n tzio jarraiare n in teg ral bi-
+k o itza o n d o re n g o balio a d a:
+D
+F (x, y) dx dy =
+b
+a
+d
+c
+F (x, y) dy
+dx
+7.2 . Deﬁ niz ioa
+D=
+[a, b]x[c, d] e re m u an d e ﬁ n itu tak o F 
+(x, y) fu n tzio jarraiare n bate zbe ste k o
+balio a o n d o re n g o a d a:
+F =
+1
+(b − a)(d − c)
+D
+F (x, y) dx dy
+7.3 . Ariketa
+Z er gertatzen da F (x, y) funtzioaren integral bikoitzan integrazio ordena al-
+datzen badugu? . H au da: zer gertatzen da, hasteko, barruko integralan x-
+rekiko integratzen
+badugu eta gero kanpoko integralan, y-
+rekiko integratzen badugu? . 7.11 irudiaren antzera,
+integrazio ordenaren aldaketa graﬁkoki aztertu. F (x, y) = xy + 1 non D = 
+[0, 2] × [0, 1] den
+adibidean, integrazio ordena aldatu. Frogatu orokorrean ondorengoa betetzen dela:
+D
+F (x, y) dx dy =
+b
+a
+d
+c
+F (x, y) dy
+dx =
+d
+c
+b
+a
+F (x, y) dx
+dy
+7.4 . Ariketa
+Aldagai bakarreko integralaren propietatetan oinarrituz, ahal dituzun integral
+bikoitzaren propietateak, enuntziatu eta frogatu. Adibidez, ondorengo berdintzak egiazkoak
+al dira? .
+D
+K F (x, y) dx dy = K
+D
+F (x, y) dx dy
+D
+(F (x, y) + G(x, y)) dx dy =
+D
+F (x, y) dx dy +
+D
+G(x, y) dx dy
+7.5 . Ariketa
+Izan bitez F (x, y) eta G(x, y), D = [a, b] × [c, d] eremuan deﬁnitutako gaina-
+zalak. D emagun D eremuan F (x, y) ≥ G
+(x, y) betetzen dela. Ondorengo balioaren esanahia
+aztertu:
+D
+(F (x, y) − G(x, y)) dx dy
+7.6 . Ariketa
+F (x, y) = 1 funtzio kontantearen integral bikoitza D = [a, b] × [c, d] eremuan
+kalkulatu. J akinik emaitza gorputz baten bolumena dela lortutako emaitza interpretatu.
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.3.
+INTEGRAL BIKOITZA H AUTAZKO EREMUAN.
+81
+7.7. Ariketa
+Izan bedi F (x, y) D = [a, b] × [c, d] eremuan konstante den funtzioa. Zein da
+bere batezbesteko balioa?. Emaitza egiaztatu kalkuluak eginez.
+7.8 . Ariketa
+. G ogora ezazu batezbesteko balioaren teorema aldagai bakarreko kasurako.
+y(x), [a, b] tartean deﬁnitutako funtzio jarraia bada orduan y
+(x) funtzioak batezbesteko
+balioa onartzen du [a, b] tartean. Hau da, badago w ∈ 
+[a, b] non ondorengoa betetzen den.
+y =
+1
+b − a
+b
+a
+y(x) dx = y(w)
+Ariketa honetan, emaitza hau enuntziatu eta frogatu behar da D = [a, b] × 
+[c, d] eremuan
+deﬁnitutako funtzio jarraientzat. Izan bedi F (x, y) = xy +1 [0, 2]×
+[0, 1] tartean deﬁnitutako
+funtzioa non bere batezbesteko balioa F = 3/2 den. L ortu eta marraztu 
+(x, y) ∈ [0, 2]×[0, 1]
+puntu multzoa non F (x, y) = 3/2 den. Ohar zaitez puntu multzo hau F (x, y)-
+ren maila
+kurba bat dela.
+7.9 . Ariketa
+7.14 (a,b) irudietan F (x, y) = 1 + 0. 15 x
+2 sin (πy/6 ) gainazalaren bi irudi
+dituzue non D = [0, 6 ]×
+[0, 6 ] den. G ainetik F gainazalak eta azpitik D eremuak mugatutako
+V gorputzaren bolumena kalkulatu. F (x, y)-
+ren F batezbesteko balioa kalkukatu. G ogora
+ezazu aldagai bakarreko kasuan batezbesteko balioaren gainetik eta azpitik dauden graﬁkoen
+bidez mugatutako azalerak berdinak direla. (ikus 7.14 (c) irudia). 7.14 
+(d) irudian z = F
+planoak ebakitako F (x, y) gainazalaren zatia agertzen da. 7.14 
+(e,f) irudietan bi irudi ikusten
+dira non F 
+(x, y) = F maila kurba ipini den. Antzeko propietatea asma dezakezu bi aldagai
+errealeko funtzioentzat?.
+7.10 . Ariketa
+7.15 irudian mendi baten mapa tipograﬁkoa agertzen da. M endian ikatz-
+hobiak daudelaren susmoa dago. Altuera kotak itsas-
+mailatik metrotan adierazten dira.
+M endi osoa ustiatu nahi denez, bere bolumeraren balio hurbildua kalkulatu.
+7.3
+In te g ra l b ik oitz a h a u ta z k o e re m u a n .
+Orain arte D = [a, b] × [c, d] itx urako eremuetan deﬁnitutako F 
+(x, y) funtzio jarraiak az-
+tertu ditugu. Aplikazio errealetan berriz, funtzioek beste motako eremuetan deﬁniturik
+egon daitezke. Adibidez, interesgarria izan daiteke T 
+(x, y) tenperatura x aﬂ a metaliko baten
+(x, y) puntu bakoitzean aztertzea; x aﬂ a hori zirkularra izan daiteke. N ola kalkulatuko dugu
+batezbesteko balioa?.
+Ikus 7.16 irudia. Demagun F (x, y) funtzioaren D eremua f (x) eta g
+(x) funtzioek deﬁni-
+tzen dutela non f (x) ≤ g(x) betetzen den, eta f (x) eta g(x) funtzioak 
+[a, b] tartean jarraiak
+Matematika Aplikatua Saila
+UEP Donostia
+
+82
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+7.14 Irudia: asmatutako batezbesteko balioa
+diren. Aplika ditzagun aurreko atalan erabilitako ideak; hau da, F 
+(x, y) funtzioaren integral
+bikoitza D eremuan deﬁnitzeko erabili ditugunak.
+7.17 irudian z = F (x, y), 
+(x, y) ∈ D gainazal baten bi irudi agertzen dira. Ikus daiteke
+x ∈ [a, b] balio ﬁnko bakoitzarako y-ren balioa [f (x), g(x)] tartean dagoela.
+Gogora ezazu oso erraza izan zela eremu errekangularrak, D laukizuzen tixikietan des-
+konposatzea . Orduan, gure D eremua estaltzen duen sareta bat marraztuko dugu eta auke-
+ratuko ditugu bakarrik D eremuaren barnean dauden laukizuzenak. Ikus 7.18 irudia. Gero
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.3.
+INTEGRAL BIKOITZA HAUTAZKO EREMUAN.
+83
+7.15 Irudia: Mendia
+7.16 Irudia: Hautazko eremua.
+eta sareta ﬁnagoa hartu dugu eta D-
+rekiko barneko laukizuzenak grisez marraztu ditugu.
+B eharrezkoa da R1, R2, . . . , Rn laukizuzenak D-
+ren barnean egotea ondorengo pausoa
+hau izango delako: hautazko Pi = (xi, yi) ∈ Ri puntua hartu eta F (Pi) = F 
+(xi, yi) kalkulatu.
+Izan bitez Ai, Ri-ren azalera eta R, D-
+ren azalera. Kalkula ditzagun ondorengoak:
+Fn =
+1
+R
+n
+i=1
+F (xi, yi) A1
+(7.10)
+Vn =
+n
+i=1
+F (xi, yi) A1
+(7.11)
+(7.10) ekuazioan dagoen Fn, F 
+(x, y) funtzioaren F batezbesteko balioaren hurbilketa bat da.
+F (x, y) ≥ 0 bada D eremuan, 
+(7.11) ekuazioan agertzen den Vn, V bolumenaren hurbilketa
+Matematika Aplikatua Saila
+UEP Donostia
+
+84
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+7.17 Irudia: Gainazal baten hautazko eremua.
+bat da. V bolumnena, gainetik z = F 
+(x, y) gainazalak eta azpitik D eremuak mugatzen
+dute. F eta V lortzeko n → ∞ egingo dugu:
+F = lim
+n→∞
+1
+R
+n
+i
+=1
+F (xi, yi) A1
+V = lim
+n→∞
+n
+i
+=1
+F (xi, yi) A1
+(7.12)
+Eremu errektangularren kasuan bezala, zaila da praktikan 
+(7.12) ekuazioak aplikatzea.
+Baina, 
+(7.12) integral bikoitzaren bidez kalkulatu ahal izango da. Ikus dezagun nola egin
+daiteke:
+1. Har dezagun x ∈ [a, b] hautazko puntu bat. 
+(x, y), D eremuan egon dadin beharrez-
+koa da y ∈ [f (x), g(x)] tartean egotea. 7.19
+(a) irudian zuzenki hau agertzen da non
+(x, f (x)) eta (x, g(x)) tarteko balioak hartu diren x ∈ [a, b] izanik.
+2. x ∈ [a, b] balio ﬁnko bakoitzarako, h(y) = F 
+(x, y) funtzioa y aldagaiko funtzioa da non
+[f (x), g(x)] tartean deﬁnitutako funtzio jarraia den. 7.19
+(a) irudian itxura honetako
+funtzio baten marrazkia agertzen da.
+3. x ∈ [a, b] balio ﬁnkorako, [f (x), g(x)] tartean h(y) = F 
+(x, y) integratzen dugu. Hau
+da:
+A(x) =
+g
+(x)
+f
+(x)
+F (x, y) dy
+(7.13)
+(7.13) ekuazioan F (x, y) funtzioa y aldagaiarekiko integratzen da [f (x), g
+(x)] tartean.
+Ohar zaitez (7.13)-
+ren integrakizunan, x konstante dela. Integral honen emaitza x-ren
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.3.
+INTEGRAL BIKOITZA HAUTAZKO EREMUAN.
+85
+7.18 Irudia: Eremu baten partiketa.
+menpeko funtzio bat da; A(x) izendatuko dugu. F 
+(x, y) ≥ 0 bada, x ﬁnko bakoitzarako
+A(x) gainetik h(y) = F (x, y) kurbak mugatutako azalera da non y ∈ [f (x), g
+(x)] den.
+7.19(b) irudian x-
+ren balio konkretu baterako lortu den azalera grisez marraztuta
+agertzen da.
+4. Integra dezagun orainA(x) [a, b] tartean. Horrela F eta V -
+ren balio zehatzak lortuko
+ditugu:
+F =
+1
+R
+b
+a
+g
+(x)
+f
+(x)
+F (x, y) dy
+dx
+V =
+b
+a
+g
+(x)
+f
+(x)
+F (x, y) dy
+dx
+Matematika Aplikatua Saila
+UEP Donostia
+
+86
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+7.19 Irudia: A(x)-ren kasu orokorra.
+Ikus 7.20(a) irudia. 7.18
+(a) irudiaren sareta hartu dugu eta, V bolumenaren hurbilketa
+bat ondorengo eran kalkulatu da:
+ lau prisma errektangularren bolumenen batura egin da.
+S areta ﬁnagoa eginez, ikus ( 7.18
+(b,c,d)) irudiak, hurbilketak V bolumenaren balio zeha-
+tzarantz jotzen du. Balio hau, z = F (x, y), 
+(x, y) ∈ D gainazalak gainetik mugatutako
+gorputzaren bolumena da. Gorputz hau 7.20(b) irudian azaltzen da.
+7.20 Irudia: Bolumenaren hurbilketa.
+Lortu ditugu beraz, integral bikoitza eta batezbesteko balioaren deﬁnizioak. Izan bedi
+D, f (x) eta g(x) funtzioek mugatutako eremua non (f (x) ≤ g(x)) 
+[a, b] tartean den. F (x, y)
+funtzioa D eremuan jarraia bada, eta R, D-ren azalera bada orduan:
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.3.
+INTEGRAL BIKOITZA HAUTAZKO EREMUAN.
+87
+7.3. Deﬁnizioa
+F (x, y)-ren integral bikoitza D eremuan ondorengo balioa da:
+D
+F (x, y) dx dy =
+b
+a
+g
+(x)
+f
+(x)
+F (x, y) dy
+dx
+(7.14)
+7.4. Deﬁnizioa
+F (x, y) funtzioaren batezbesteko balioa D eremuan ondorengo balioa da:
+F =
+1
+R
+b
+a
+g
+(x)
+f
+(x)
+F (x, y) dy
+dx
+(7.15)
+(7.15) aplikatzeko beharrezkoa da aurretik R kalkulatzea. Nola egin dezakegu hau?.
+Auke-
+ra bat da aldagai bakarreko funtzio baten integrala erabiltzea. Hau da:
+R =
+b
+a
+(g(x) − f (x)) dx
+Ondorengo ariketan 
+(7.6 ariketaren antzekoa) ikusten da nola erabil daitekeen integral
+bikoitza R kalkulatzeko.
+7.11. Ariketa
+F (x, y) = 1 funtzio konstantearen integral bikoitza D eremuan kalkulatu.
+Jakinik balioa gorputz baten bolumena dela nola interpretatzen duzu lortutako emaitza?
+7.12. Ariketa
+Izan bedi F (x, y) = x + y, f (x) = x2, g(x) = x3 + 1, x ∈ [0, 1] baldintzek
+mugatutako D eremuan deﬁnitutako funtzioa. F (x, y)-
+ren F batezbesteko balioa D eremuan
+lortu. Gainetik z = F (x, y), 
+(x, y) ∈ D gainazalak mugatutako gorputzaren V bolumena
+lortu. F (x, y) funtzioak batezbesteko balioa hartzen duen 
+(x, y) ∈ D puntuak graﬁkoki
+adierazi.
+7.13. Ariketa
+Integral bikoitzan, eremu errektangularren kasuan bezala, integrazio ordena
+aldatu daiteke. Ikus 7.21 irudia. F (x, y)-ren D eremua x = f (y), x = g(y), f 
+(y) ≤ g(y),
+y ∈ 
+[c, d] funtzio jarraiek mugatzen badute antzeko prozedura erabiliz, ondorengoa frogatzen
+da:
+D
+F (x, y) dx dy =
+d
+c
+g
+(y)
+f
+(y)
+F (x, y) dx
+dy
+Formula hau aplikatuz, F (x, y) = ex
+2 -ren integrala kalkulatu non D, f(x) = 0, g(x) = x,
+x ∈ [0, 1] baldintzek mugatutako eremua den 
+( integrazio ordena egokia aukeratu).
+Matematika Aplikatua Saila
+UEP Donostia
+
+88
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+7.21 Irudia: Integrazio ordena aldaketa: Hautazko eremua.
+7.14. Ariketa
+[7.4 ariketaren antzekoa] Aldagi bakarreko integralaren propietateak era-
+biliz, ahal dituzun integral bikoitzaren propietateak enuntziatu eta frogatu.
+7.15. Ariketa
+[7.5 ariketaren antzekoa] Izan bitez F (x, y) eta G(x, y) D eremuan deﬁni-
+tutako funtzio jarraiak. Demagun F (x, y) ≥ G
+(x, y) betetzen dela D eremuan. Ondorengo
+balioa interpretatu:
+D
+(F (x.y) − G(x, y)) dx dy
+7.4
+Integrazio ald agaien ald aketa
+Ikusi dugu funtzio jarraitu baten D ⊂ R
+2 eremuan integral bikoitza integral berrituen bidez
+lortzen dela. Integral bakuna aztertzerakoan y(x) funtzio jarraitua 
+[a, b] tartean integra-
+tzerakoan aldagai aldaketa nola erabili ikusi genuen. Era berdinean bi aldagai errealeko
+funtzioak integratzerakoan aldagai aldaketaren bidez lana erraz dezakegu. Adibidez, D ere-
+mua zentroa (0, 0) puntuan eta erradio bateko zirkulua baldin bada (ikus (7.22
+(a)) irudia)
+goi eta behe mugak adierazten dituzten funtzioak hauek dira,
+f (x) = −
+√
+1 − x2
+x ∈ [−1, 1]
+g(x) =
+√
+1 − x2
+eta erroak dituztenez integrala lortzea zaila izan daiteke.
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.4.
+INTEGRAZIO ALD AGAIEN ALD AKETA
+89
+7.22 Irudia: Integrazio eremuak
+Baina eremu horrek, oso adierazpen erraza du koordenatu polarrak erabiltzen ditugu-
+nean. x = ρ c o s θ, y = ρ sin θ aldagai aldaketa eginda D eremuaren adierazpena θ ∈ 
+[0, 2π],
+ρ ∈ [0, 1] eta graﬁkoki zirkulutik laukizuzenera (ikus (7.22
+(b)) irudia) pasatzen gara.
+Gogora dezagun aldagai aldaketa integral bakunean. Demagun y
+(x) funtzio jarraitua
+dela D = 
+[a, b] tartean. Integrazio aldagaiaren aldaketa egiterakoan, x aldagaia x = h
+(t)
+funtzioaz ordezkatzen dugu, h(t) funtzioa D = 
+[α, β] tartean deﬁnitua, deribagarria eta
+h(α) = a, h(β) = b betetzen duenean. Orduan
+b
+a
+y(x)dx =
+β
+α
+y(h(t))h (t)dt
+(7.16)
+berdinketa lortzen dugu.
+7.23 Irudia: Aldagai aldaketa integral bakunean
+(7.23) irudia aztertuz t ∈ D bakoitzari x ∈ D bat elkartzen zaiola ikusten dugu.
+Matematika Aplikatua Saila
+UEP Donostia
+
+90
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+(7.24) irudiak bi dimentsiotako aldagai aldaketa adierazten du. 
+(x, y) aldagaiak (u, v)
+aldagaiekin ordeztuko dira. Aldagai aldaketa, D eremuan deﬁnitutako x = h
+(u, v), y =
+g
+(u, v) bi funtzioen bidez deﬁnitzen da. Funtzioak deribatu partzial jarraituak izan behar
+dituzte eta (x, y) ∈ D puntu bakoitzari 
+(u, v) ∈ D puntu bakar bat elkartzen diote eta
+alderantziz.
+7.24 Irudia: Aldagai aldaketa integral bikoitzean
+Aurreko baldintzak betetzen badira 
+(7.17) ekuazioak adierazten du nola lortuko den
+integral bikoitza aldagai berriak, (u, v), eta D eremua erabiliz.
+D
+F (x, y)dxdy =
+D
+F (h(u, v), g(u, v))|J|dudv
+(7.17)
+Adierazpen horretan azaltzen den J-ren balioa era honetan deﬁnitzen da,
+J =
+hu(u, v) hv(u, v)
+gu(u, v) gv(u, v)
+(7.18)
+(7.18) adierazpenean ikusten denez, J determinante baten bidez deﬁnitzen da, osagaiak
+h(u, v) eta g(u, v)-
+ren deribatu partzialak dira eta determinante jacobiarra deitzen da. In-
+tegrakizunean jacobiarraren balio absolutua ipinten da.
+J, u eta v aldagaien funtzioa da eta (7.16) adierazpenean azaltzen den h 
+(t) biderkagaia-
+ren antzerakoa da.
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.4.
+INTEGRAZIO ALDAGAIEN ALDAKETA
+91
+7.16.
+Demagun D eremua f (x) eta g(x), f (x) ≤ g(x), x ∈ 
+[a, b] izanik, funtzio jarrai-
+tuak mugatzen dutela. x(u, v), y(u, v) aldagai aldaketa erabiliz D = [0, 1] × 
+[0, 1] (ikus
+(7.25)irudia) eremu berria karratua izan daitekeela ikusi.
+7.25 Irudia: Eremu berria karratua
+P ropietate hau oso interesgarria da Winplot erako programak erabiltzen direnean, inte-
+gral bikoitzan zenbakizko metodoekin lortzerakoan eremuak laukizuzenak izan behar dire-
+lako.
+Aldagai aldaketa honekin eremu berria D = [0, 1] × 
+[0, 1] karratua izatea lortuko dugu:
+x(u, v) = a + (b − a)u
+y(u, v) = v(f (x(u, v)) − g(x(u, v))) + g(x(u, v))
+u ∈ [0, 1], v ∈ [0, 1] izanik.
+1. Egiaztatu aldagai aldaketa onargarria dela, hau da, (u, v) bakoitzari 
+(x, y) bakarra
+elkartzen diola eta (x, y) bakoitzari (u, v) bakarra, eta x(u, v), y
+(u, v) funtzio jarraituak
+direla eta deribatu partzial jarraituak dituztela.
+2. Aldagai aldaketaren J jacobiarra lortu eta J ≥ 0 dela egiaztatu.
+3. Aldagai aldaketa erabiliz, F 
+(x, y) = x+y funtzioaren integral bikoitza lortu, D eremua
+f (x) = (x − 2)(x − 4), g(x) = 0.5x, x ∈ [2, 4] funtzioak mugatzen dutenean. 
+(Ikus
+(7.26) irudia).
+Matematika Aplikatua Saila
+UEP Donostia
+
+92
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+4. Emaitza egiaztatu, F 
+(x, y) = x + y funtzioaren integral bikoitza D eremuan, aldagai
+aldaketa egin gabe, kalkulatuz.
+7.26 Irudia: Eremu aldaketa
+7.5
+Koordenatu polarrak eta polar orokortuak
+Ikusi dugunez, integrazio eremuak zirkularrak direnean errazago lan egiten dugu koorde-
+natu polarrak erabiltzen ditugunean. Hurrengo ariketan aldagai aldaketa nola egiten den
+aztertzen da.
+7.17.
+F 
+(x, y) funtzio jarraitua de D eremuan. x = ρ cos θ, y = ρ sin θ, aldagai aldaketa
+aplikatu D eremu berria lortuz.
+1. Aldagai aldaketa onargarria dela egiaztatu.
+2. Jakobiarra lortu eta J = ρ lortzen dela egiaztatu.
+3. F 
+(x, y) funtzioaren integral bikoitza D eremuan kalkulatzeko adierazpena lortu aldagia
+aldaketa erabiliz
+4. F (x, y) = x2 + y2, funtzioaren integral bikoitza lortu integrazio eremua 
+(7.27) irudian
+adierazitako eremuak harturik eta 
+(7.22) irudian bezala eremu berrien adierazpen gra-
+ﬁkoa egin.
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.6. AZPIEREMUTAN J ARRAITUAK DIREN F UNTZIOEN INTEGRAL BIKOITZA
+93
+7.27 Irudia: Proposatutako eremuak
+7.18.
+D eremua zirkularra izan beharrean eliptikoa denean koordenatu polarrak ez dira
+egokiak eta koordenatu polar orokortua erabiliko ditugu.. Demagun D eremua x2/
+a2 +
+y2/
+ b2 = 1 elipsea d ela. K asu h on etan , koord en atu polar orokortuak d eitz en d iren , ald ag ai
+ald aketa h au erabili d aiteke x = a ρ c o s θ, y = bρ sin θ. J ac obiarra lortu eta F 
+(x, y) = 2xy
+fun tz ioaren in teg ral bikoitz a lortz eko erabili, 
+(7 .2 8 ) irud ian ad ieraz itako erem uak h arturik
+eta D erem u berriak ad ieraz i.
+7.6
+A z p ie re m u ta n ja rra itu a k d ire n fu n tz io e n in te g ra l b ik o itz a
+O rain arte D erem uan jarraitua d en F 
+(x, y) fun tz ioaren in teg ral bikoitz a az tertu d ug u.
+B atz utan F 
+(x, y) fun tz ioa era h on etako erem uan d eﬁ n itutuka d ug u D = D1 ∪ D2, D1 eta
+D2 ren ebakid uraren azalera 0 d a, eta fun tzioa jarraitua d a azpierem u bakoitzean bain a ez
+erem u osoan . Ad ibid ez (7 .2 9 ) irud ian ad ieraz itako fun tz ioa.
+F 
+(x, y) fun tz ioak x aﬂ a baten ten peratura ban aketa ad ieraz ten bad u, z aila d a jarrai-
+tua ez iz atea bain a fun tz io h orrek pun tuko d en tsitatea ad ieraz ten bad u m aterial d esber-
+d in ez eg in d ako piez a d ug un ean d en tsitate d esberd in ak aurki d itz akeg u.
+(7 .3 0) irud ian
+euro tx an pon aren d en tsitate ban aketa ad ieraz ita d ag o eta era h on etako ad ieraz pen a d u:
+(x, y) ∈ D1, F (x, y) = 8.4, eta (x, y) ∈ D2, F (x, y) = 8.9.
+Matematika A p likatu a S aila
+U E P D o n o stia
+
+94
+7.
+K A P IT U L U A
+IN T E G R A L A N IZ K O IT Z A K
+7.28 Irudia: E remu eliptikoak
+7.29 Irudia: Azpieremuez osatutako eremua
+Kasu hauetan integral bikoitza era honetan deﬁni dezakegu:
+D
+F (x, y)d xd y =
+D1
+F (x, y)d xd y +
+D2
+F (x, y)d xd y
+eta D eremuan deﬁnitutako integral bikoitza bi integral bikoitzen batua bezala lor deza-
+kegu. D eﬁnizio hau, F 
+(x, y) funtzioaren batezbesteko balioa lortzerakoan edo mugatutako
+bolumena edo ikusiko ditugun beste aplikazioetan erabili daiteke.
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.6. AZPIEREM UTAN J ARRAITUAK D IREN F UNTZIOEN INTEGRAL B IKOITZA
+95
+7.30 Irudia: Euro txanponaren eremuak materialen arabera
+Matematika Aplikatua Saila
+UEP Donostia
+
+96
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+7.7
+Integral bikoitzaren aplikazio geh iago
+Ikusi dugu F 
+(x, y) funtzio jarraituaren integral bikoitza D eremuan, funtzioaren batezbeste-
+koa edo z = F (x, y) gainazalak goitik eta XY planoaren 
+(x, y) ∈ D zatiak azpitik mugatzen
+duten gorputzaren bolumena lortzeko erabil daitekeela. Beste erabilpen batzuk ikusiko di-
+tugu.
+Azter dezagun honako hauek:
+1 . D eremu lauaren F (x, y) funtzioa deﬁnituta dago.
+2. D-
+n dauden n laukizuzenek osatzen duten sareta. R1, R2, . . . , Rn, n handitzen denean
+Ri-en oina eta altuerak 0-
+runtz jotzen dute eta lauki zuzen horiekin D eremua estaltzen
+dugu.
+3. L auki zuzenen azalerak Ai lortzen ditugu
+4. (xi, yi) ∈ Ri puntuak aukeratzen ditugu
+G uzti hauek kontutan hartuz honako hau dugu:
+D
+F (x, y)dxdy = lim
+n→∞
+n
+i= 1
+F (xi, yi)Ai
+7.7.1
+G a in a z a le n a z a le r a r e n ka lku lu a
+Aztertu genuen bezala, 
+(??) irudiko D eremu lauaren azalera, A, integral bikoitzaren bidez
+era honetan kaluka dezakegu
+A =
+D
+dxdy
+Biraketa gainazal baten azalera integral bakunaren bidez lor dezakegula ikusi genuen. Ikus
+dezagun F (x, y) funtzio jarraituak (x, y) ∈ D eremuan deﬁnitzen duen 
+(ikus 7.31 irudia)
+gainazaleraren azalera nola lor daitekeen.
+Azalera hori lortzeko z = F 
+(x, y) gainazaleraren n plano ukitzaileen zatiekin hurbilduko
+dugu, zati horien azalerak batuz azaleraren hurbilketa lortuko dugu, eta n handitzen joango
+gara hurbilketa hobetuz. (ikus (7.32) irudia.
+P lano ukitzaileen zati horien azalerak lortuko ditugu. 
+(a, b) ∈ D puntutik pasatzen den
+plano ukitzailearen ekuazioa hau da:
+z = F (a, b) + (x − a)Fx(a, b) + (y − b)Fy(a, b)
+(7.1 9)
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.7.
+INTEGRAL BIKOITZAREN APLIKAZIO GEH IAGO
+97
+7.31 Irudia: F (x, y), (x, y) ∈ D-k deﬁnitzen duen gainazala
+(7.33) irudian R lauki zuzenari dagokion plano ukitzailearen T zatia dugu. Laukizu-
+zenaren dimentsioak h eta k dira. (7.19) ekuazioa erabiliz, R laukizuzenaren P 
+(a + h, b),
+Q(a, b + k) eta M 
+(a + h, b + k) erpinei dagozkien z koordenatuak plano ukitzailean hauek
+dira:
+P (a + h, b) : z = F (a, b) + hFx(a, b)
+Q(a, b + k) : z = F (a, b) + kFy(a, b)
+M (a + h, b + k) : z = F (a, b) + hFx(a, b) + kFy(a, b)
+T paralelogramoa denez, egiazta ezazu ariketa bezala n eta u bektoreak eta v eta w bek-
+toreak elkar paraleloak direla, bere azalera u eta v bektoreen bektore-
+biderketaren modulua,
+AT = u × v , da.
+Kalkula dezagun AT = u × v :
+u = (h, 0, hFx(a, b))
+v = (0, k, kFy(a, b))
+u × v =
+¯ı
+¯
+
+¯
+k
+h 0 Fx(a, b)
+0 k Fy(a, b)
+= −hk(Fx(a, b), Fy(a, b), −1) = −hk g ra d F (a, b)
+Matematika Aplikatua Saila
+UEP Donostia
+
+98
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+7.32 Irudia: Azaleraren hurbilketak
+AT = u × v = hk (Fx(a, b))2 + (Fy(a, b))2 + 1.
+h, k > 0
+AR = hk biderkadura R lauki zuzenaren azalera da.
+Beraz,
+AT = AR (Fx(a, b))2 + (Fy(a, b))2 + 1
+z = F (x, y) gainazalaren plano ukitzailearen bektore karakteristikoa 
+(a, b) puntuan
+(Fx(a, b), Fy(a, b), −1) izan daiteke, beraz, u × v eta (Fx(a, b), Fy
+(a, b), −1) bektoreak para-
+leloak dira. Labur bildurik T paralelogramoaren AT lortzeko, R lauki zuzenaren AR azalera,
+plano ukitzailearkin elkarzut dagoen (Fx(a, b), Fy
+(a, b), −1) bektorearen moduluaz biderka-
+tuz lortzen dugu.
+Beraz, D eremua estaltzen duen saretako Ri laukizuzena aukeratzen badugu R bezala,
+(a, b) goi eta ezkerreko erpina 
+(xi, yi) bezala hartzen badugu, Ri bakoitzaren AR azalera Ai
+bezala adierazten badugu, gainazaleraren azalera honako honen bidez lortzen dugu:
+D = lim
+n→∞
+n
+i=1
+Ai (Fx(a, b))2 + (Fy(a, b))2 + 1
+(7.20)
+Baina adierazpen hori H(x, y) =
+(Fx(x, y))2 + (Fy(x, y))2 + 1 funtzioaren integral bi-
+koitza da D eremuan.
+H au da, z = F (x, y), 
+(x, y) ∈ D funtzioak deﬁnitzen duen gainazaleraren azalera era
+honetan kalkulatuko dugu:
+S =
+D
+(Fx(x, y))2 + (Fy(x, y))2 + 1 dxdy
+(7.21)
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.7.
+INTEGRAL BIKOITZAREN APLIKAZIO GEHIAGO
+99
+7.33 Irudia: Laukizuzenen bidez hurbilketa
+7.19.
+F (x, y) funtzioak, zer nolako baldintzak bete behar ditu 
+(7.21) berdintza aplikagarria
+izan dadin?
+7.2 0 .
+Demagun F (x, y) = Ax + By + D funtzio lineala deﬁnitzen dugula D eremuan. 
+(ikus
+(7.34) irudia) Egiaztatu gainazaleraren S azalera D-
+ren azalerarekin proportzionala dela.
+7.34 Irudia: Azalera
+Matematika Aplikatua Saila
+UEP Donostia
+
+100
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+7.7.2
+E rem u lauen m asa
+Integral bikoitzaren bidez D eremu lauaren masa lor dezakegu. Demagun D eremua F 
+(x, y)
+funtzio jarraituaz deﬁnitutako dentsitatea duen materialaz osatuta dagoela. Funtzioaren
+adierazpena egiterakoan z = F (x, y) altuerek 
+(x, y) koordenatuko puntuaren dentsitatea
+adierazten dute. (ikus 
+(7.35) irudia). D eremua Ri lauki zuzenez osatutako sareta batez
+estaltzen dugu, eta 
+(xi, yi) ∈ Ri aukeratzen ditugu. Ri laukizuzenetan dentsitatea konstante
+eta F 
+(xi, yi) balio duela suposatzen dugu. Laukizuzenen masen batura eremuaren masa
+izango da:
+M = lim
+n→∞
+n
+i=1
+F (xi, yi)Ai
+(7.22)
+Baina (7.22) formulan dugun limitea integral bikoitzaren deﬁnizioa da, beraz
+M =
+D
+F (x, y)dxdy
+7.35 Irudia: eremu lauaren masa
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.7.
+INTEGRAL BIKOITZAREN APLIKAZIO GEHIAGO
+101
+7.7.3
+Grab itate zentro aren kalkulua
+Eremu baten grabitate zentroa ezagutzea interesgarria da eremu horren masa guztia gra-
+bitate zentroan kokatuta balitz bezala lan egin dezakegulako. Adibidez xaﬂa zurrun batek
+oreka mantentzen du bere grabitate zentroa punta zorrotz baten gainean jartzen dugunean.
+(ikus (7.36) irudia) ).
+7.36 Irudia: X aﬂaren oreka grabitate-zentroan
+(7.37) irudiak lau masa puntualez osatutako sistema adierazten du. Z ein da sistemaren
+grabitate zentroa?
+7.37 Irudia: Puntu-masen grabitate-zentroa
+S istemaren masa M = m1 + m2 + m3 + m4 da.
+Matematika Aplikatua Saila
+UEP Donostia
+
+102
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+Grabitate zentroaren xG koordenatua, x1, x2, x3 eta x4 puntuen koordenatuen batez-
+besteko haztatua da. Haztapena, masen bidez egingo dugu.
+xG =
+x1m1 + x2m2 + x3m3 + x4m4
+M
+mi masa handitzen den heinean xG koordenatua xi-ri gerturatzen da.
+Antzerakoa dugu yG koordenatuarentzat:
+yG =
+y1m1 + y2m2 + y3m3 + y4m4
+M
+Orokorrean n masa puntual mi, i = 1, . . . , n ditugunean 
+(xi, yi)i = 1, . . . n puntuetan,
+sistemaren GZ
+(xG, yG) grabitate zentroaren koordenatuak era honetan lortzen ditugu:
+xG =
+n
+i
+=1 ximi
+M
+,
+yG =
+n
+i
+=1 yimi
+M
+(7.23)
+Demagun D eremuan F (x, y) funtzioak deﬁnitzen duen dentsitateko masa dugula D
+eremuan n laukizuzen deﬁnitzen ditugu, R1, . . . , Rn. Ri laukizuzenean dentsitate konstantea
+dela eta F (xi, yi), 
+(xi, yi) ∈ Ri balioa duela suposatzen dugu. Ai Ri laukizuzenaren azalera
+baldin bada, Ri-ren masa mi = F (xi, yi)Ai denez, D-
+ren grabitate zentroaren koordenatuak
+GZ(xG, yG) (7.24) adierazpenen bidez lortzen ditugu.
+xG =
+n
+i
+=1 xiF (xi, yi)Ai
+n
+i
+=1 F (xi, yi)Ai
+,
+yG =
+n
+i
+=1 yiF (xi, yi)Ai
+n
+i
+=1 F (xi, yi)Ai
+(7.24)
+Laukizuzenen kopurua handituz, n → ∞ jotzen duenean xG eta yG-
+ren balio zehatzak
+lortzen ditugu (7.25) adierazpenen bidez.
+xG = lim
+n→∞
+n
+i
+=1 xiF (xi, yi)Ai
+n
+i
+=1 F (xi, yi)Ai
+,
+yG = lim
+n→∞
+n
+i
+=1 yiF (xi, yi)Ai
+n
+i
+=1 F (xi, yi)Ai
+(7.25)
+Baina (7.25) adierazpenean azaltzen diren limiteak F (x, y), xF (x, y) eta yF 
+(x, y) fun-
+tzioen integral bikoitzak dira.
+xG =
+D xF (x,y)dxdy
+D F (x,y)dxdy
+,
+yG =
+D yF (x,y)dxdy
+D F (x,y)dxdy
+(7.26)
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.7.
+INTEGRAL BIKOITZAREN APLIKAZIO GEHIAGO
+103
+7.21.
+D eremuaren grabitate zentroa, beti eremuaren barnean al dago?
+7.22.
+Eskalatzaileek ondo dakite gorputzaren grabitate zentroa gutxi gora behera zilborran
+dugula, eta eskalatzen ari direnean grabitate zentroa inguru horretan mantentzen saiatzen
+dira. (7.38 
+(a)) irudian pertsona baten siluetaren hurbilketa dugu. Lortu irudiaren grabitate
+zentroa dentsitatea konstantea dela suposatuz. Pertsonak besoa luzatzen duenean, 
+(7.38(b))
+irudian bezala, non dago grabitate zentroa?
+7.38 Irudia: Pertsonaren eskema
+7.23 .
+(7.39(a)) irudian dungun xaﬂa F (x, y) dentsitatea duen materialaz eginda dago.
+F 
+(x, y) = ky baldin bada, adierazpen graﬁkoa egin eta sestra kurbak adierari. Xaﬂaren
+grabitate zentroaren koordenatuak lortu. Bigarren kasuan xaﬂari zati karratu bat kendu
+zaio (7.39
+(b)) irudian adierazten den bezala, Zein da kasu honetan grabitate zentroa?
+7.24 .
+Ibilgaluien oreka aztertzerakoan garrantzi handia du grabitate zentroaren kokalekua.
+Grabitate zentroa goikaldean duten ibilgailuak, furgonetak adibidez, iraultzeko aukera han-
+diagoa dute. (7.40
+(a)) irudian ibilgailu baten silueta dugu. Dentsitatea konstantea dela
+suposatuz lortu grabitate zentroaren koordenatuak. Ibilgailuaren parrilla gainean fardel
+astun bat jartzen denean, (7.40
+(b)) irudian ikusten den bezala, fardelaren dentsitatea k
+aldiz ibilgailuarena baldin bada non dago grabitate zentroa?. N ola aldatzen da grabitate
+zentroaren kokalekua k handitzen denean?
+7.25 .
+Hegazkinek erregai asko daramate eta erretzen den heinean grabitate zentroaren koka-
+lekua aldatzen doa. (7.41
+(a)) irudian hegazkinen hegoan ipinten den erregai ontziaren adie-
+razpena dugu. (7.41(b)) irudian ontziaren x = k sekzioa dugu, z(y) = ±0.07 
+(y + 1)(y − 8),
+Matematika Aplikatua Saila
+UEP Donostia
+
+104
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+7.39 Irudia: Parabola itxurako xaﬂa
+7.40 Irudia: Kotxea karga gabe eta kargatua
+y ∈ [0, 8]. parabolak mugatzen duten eremua kasu honetan. (7.41
+(c)) irudian sekzioa dugu
+eta erregaia h altuerara irizten da. h txikitzen doan arabera nola aldatzen da grabitate
+zentroaren kokalekua? (7.41
+(a)) irudian zein da grabitate zentroaren xG koordenatua?
+7.7.4
+Eremu lau baten inertzi-momentuen kalkulua
+Integral bikoitza erabil daiteke ere D xaﬂa batek ardatz batekiko biratzeko duen erraztasuna
+neurtzeko. Erlazionaturik dagoen kontzeptu ﬁsikoa inertzi-
+momentua deitzen da. Zenbat eta
+handiagoa den D eremuaren ardatz batekiko inertzi-
+momentua, handiagoa izan behar du D
+ardatz horrekiko biratzeko aplikatu behar den indarra. Ohikoa da biratzeko ardatzak ardatz
+koordenatuak izatea. Horrela, masa baten inertzi-
+momentuak OY eta OX ardatzekiko Iy
+eta Ix izendatuko ditugu hurrenez hurren.
+Suposa ditzagun, adibidez, dimentsio eta masa berdineko patinatzaile bat eta barra
+asimetrikoetako gimnasta bat. Patinatzailearen inertzi-
+ momentua bere gorputzaren ardatz
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.7.
+INTEGRAL BIKOITZAREN APLIKAZIO GEHIAGO
+105
+7.41 Irudia: Hegazkinaren erregai-ontzia
+bertikalarekiko, gimnastarena barra horizontalarekiko baino askoz txikiagoa da 
+(Ikusi (7.42)
+irudia). Beraz, biraketa lortzeko behar den esfortzua askoz txikiagoa da patinatzailearen
+kasuan bestean baino.
+7.42 Irudia: Patinatzailea eta gimnasta
+Nola neur dezakegu, parametro bat erabiliz, masa batek ardatz batekiko biratzerakoan
+sufritutako erresistentzia? Suposa dezagun m masa puntu batetan konzentratuta dagoela.
+Biraketarekiko erresistentzia m-
+ren balioa eta biraketa ardatzarako d distantziarekin erla-
+zionaturik dago. Zenbat eta handiagoa den m eta zenbat eta handiagoa den d, handiagoa da
+biraketarekiko erresistentzia. Horregatik, masa puntualaren inertzi-
+momentua honela deﬁ-
+nitzen da: I = md2. Galdera bat: zure ustez, zergatik erabiltzen da d-
+ren karratua I = md
+hartu ordez?
+Suposa dezagun orain D eremu lau bat dela eta bere masaren dentsitatea F 
+(x, y) dela
+(x, y)∈D puntu bakoitzean. Suposa dezagun biratzeko ardatza OY ardatza dela. 
+(Ikusi
+(7.43) irudia). Hartuko dugu, beti bezala, D-
+n sartuta dauden Ri laukizuzenak, Ri-ren
+Matematika Aplikatua Saila
+UEP Donostia
+
+106
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+azalera Ai izanik, eta Ri bakoitzean 
+(xi, yi) puntu bat aukeratzen dugu. Suposatuko dugu
+Ri-ren azalera (xi, yi) puntuan kontzentratuta dagoela.
+7.43 Irudia: D eremua
+D eremuaren OY ardatzarekiko inertzi-momentua, Iy, gutxi gora behera honako hau
+izango da:
+Iy
+n
+i
+=1
+x2iF (xi, yi)Ai
+Limitea kalkulatzen Iy inertzi-momentuaren balio zehatza lortuko dugu:
+Iy = lim
+n→∞
+n
+i
+=1
+x2iF (xi, yi)Ai
+(7.27)
+Baina (7.27) ekuazioan agertzen dena x2F 
+(x, y) funtzioaren integral bikoitza D eremuan
+da:
+Iy =
+D
+x2F (x, y)dxdy
+Era berean, D eremuaren inertzi-momentua OX ardatzarekiko lortzen da:
+Ix =
+D
+y2F (x, y)dxdy
+7.26. Ariketa
+D eremuaren x = a eta y = b ardatzekiko inertzi-momentuak kalkulatzeko
+metodoa azaldu. Nola kalkula daiteke inertzi-momentua y = ax + b ardatzarekiko?
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.7.
+INTEGRAL BIKOITZAREN APLIKAZIO GEHIAGO
+107
+7.27. Ariketa
+Izan bedi D (7.44) irudian agertzen den y(x) = −0.5 (x − 3)(x + 3) parabolak
+mugatutako eremua, eta suposa dezagun bere dentsitatea konstantea dela.
+(a) Ix eta Iy inertzi-momentuen balioak konparatu.
+(b) Frogatu OY ardatza dela ardatz horrekiko inertzi-
+momentua minimoa ematen digun
+ardatz bertikala.
+OHAR R A: x = a ardatza kontsideratu (ikusi 
+(7.44) irudia), ardatz horrekiko inertzi-
+momentua ematen digun I(a) funtzioa kalkulatu eta, bukatzeko, I(a)-ren minimoa
+kalkulatu. Azter dezakezu ere I(a)-ren aldakuntza a→±∞ denean.
+7.44 Irudia: (7.27) ariketako eremuaren irudia
+7.28 . Ariketa
+D xaﬂaren P (a, b) puntuarekiko inertzi-momentuak, IP , P -rekiko biratze-
+rakoan D-ren masak egindako erresistentzia neurtzen du.
+(a) IP -ren deﬁnizioa azaldu.
+(b) D jatorrian zentroa duen R erradioko zirkulua bada, IP -
+ren balioak konparatu P
+jatorria bada edo mugako puntu bat bada 
+(masa dentsitatea konstantea dela suposatu).
+7.29. Ariketa
+1960 urtean tenis-erraketak a = 4 eta b = 2 erdiardatzeko elipse formakoak
+ziren. 1990an berriz, erdiardatzak a = 6 eta b = 3 ziren. Erraketa biratzeko tenistaren
+eskumuturreko esfortzu minimoa nahi dugula kontutan hartuz, zein erraketa da onena?
+(Gogaratu elipsearen ekuazioa hau dela, x2/a2 + y2/
+b2 = 1. Gogoratu ere koordenatu polar
+orokorretarako aldagai-aldaketa.)
+Matematika Aplikatua Saila
+UEP Donostia
+
+108
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+7.8
+Integral hirukoitza
+7.8.1
+Integ ral bikoitzaren bid ez ebazkarriak ez d iren p roblemak
+Orain arte integral bikoitza D eremuan deﬁnitutako F 
+(x, y) funtzioaren propietate batzuk
+aztertzeko erabili dugu. Horrela, ikusi dugu nola kalkulatu:
+(1) D eremuan F (x, y) funtzioaren batezbesteko balioa.
+(2) z = F (x, y), (x, y)∈D, gainazalak goitik mugatutako solidoaren bolumena.
+(3) z = F (x, y), (x, y)∈D, gainazalaren azalera.
+(4) D eremuaren azalera.
+Eta F (x, y) funtzioak 
+(x, y)∈D puntuan dagoen masa dentsitatea adierazten badu, badakigu
+kalkulatzen:
+(5) D-ren materiaren kantitatea.
+(6) D-ren grabitate zentroaren koordenatuak.
+(7) D-ren ardatz batekiko inertzi-momentua.
+7.30. Ariketa
+Aurreko zazpi parametroak kalkulatzeko adierazpenak idatzi.
+Baina, integral bikoitzaren bidez ezin dugu magnitude baten propietateak neurtu, magni-
+tude hori espazioko V eremuan deﬁniturik dagoenean. V izan daiteke, adibidez, labe bat non
+(x, y, z) puntu bakoitzean neurtutako tenperatura T 
+(x, y, z) den. Zein izango da T (x, y, z)-
+ren T batezbesteko balioa? T kalkulatzen badugu, tenperatura hori duten 
+(x, y, z)∈V pun-
+tuek osatutako F (x, y, z) = T maila-gainazala adieraz dezakegu graﬁkoki.
+F 
+(x, y, z) funtzioarekin adieraz daiteke ere R solido baten masa dentsitatea. Zein izango
+litzateke G Z (xG, yG, zG), R-
+ren grabitate zentroa? R solidoa ardatz batekiko biratzen bada,
+zein izango litzateke ardatz horrekiko R-ren inertzi-momentua?
+Orain, prozedura hau erabiliko dugu F 
+(x, y, z) funtzioaren integrala R solidoan kalkula-
+tzeko. Hasteko, funtzioaren batezbesteko balioa kalkulatuko dugu.
+7.8.2
+F
+(x , y, z) funtzioaren batezbesteko balioa
+Suposa dezagun F 
+(x, y, z) espazioko R eremuan deﬁniturik dagoen funtzio jarraitu bat dela.
+(7.45
+(a)) irudian eremu posible bat azaltzen da. Orain aurpegiak plano koordenatuekiko
+paraleloak dituzten kutxek osatutako sareta bat aukeratuko dugu. (7.45
+(b)) irudian R
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.8.
+INTEGRAL HIRUKOITZA
+109
+7.45 Irudia: R eremua eta bi hurbilketak
+barruan duen sareta bat azaltzen da, nondik bakarrik R barruan dauden Ri elementuak
+hartuko ditugu, (7.45(c)) irudian azaltzen den bezala.
+Hurrengo pausoa (xi, yi, zi) ∈ Ri hautazko puntu bat hartzea eta F 
+(xi, yi, zi)-ren balioa
+kalkulatzea da. F 
+(x, , y, z) funtzioaren balioa hurbiltzeko Ri bakoitzean kostantea dela su-
+posatuko dugu, konstante hori F (xi, yi, zi) izanik. Ri-ren bolumena Vi eta R-
+rena V badira,
+F (x, y, z)-ren batezbesteko balioa R eremuan hurbildu dugu modu honetan:
+F
+1
+V
+n
+i
+=1
+F (xi, yi, zi)Vi
+Bukatzeko, Ri kutxaren luzera, zabalera eta altuera 0-
+rantz hurbiltzen badira n inﬁni-
+turantz doanean, F -ren balio zehatza lortuko dugu:
+F =
+1
+V
+lim
+n→∞
+n
+i
+=1
+F (xi, yi, zi)Vi
+Izendatuko dugu:
+lim
+n→∞
+n
+i
+=1
+F (xi, yi, zi)Vi =
+R
+F (x, y, z)dxdydz
+(7.28)
+eta (7.28) ekuazioaren eskubiko gaiari F (x, y, z) funtzio jarraituaren R-
+n integral hiru-
+koitza deitzen dioagu. Froga dezakegu integral hirukoitza existitzen dela F 
+(x, y, z) jarraitua
+bada.
+Matematika Aplikatua Saila
+UEP Donostia
+
+110
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+Eta ikusi dugunez:
+F =
+1
+V
+R
+F (x, y, z)dxdydz
+7.8.3
+Integral h irukoitzaren kalkulua
+(7.28) ekuazioan emandako integral hirukoitzaren deﬁnizioaren aplikapena praktikan oso
+zaila da. Zorionez, integral bikoitzarekin gertatzen zenez, integral hirukoitzaren kalkulua
+aldagai bakar baten funtzioen integralen bidez egingo da. Kasu honetan kalkulatu behar
+diren integralen kopurua hiru da. Ikus dezagun nola egiten den.
+Ikusi (7.46(a)) irudia. u(x.y) eta v
+(x, y) bi funtzioen adierazpen graﬁkoa azaltzen da.
+Bi funtzioen D eremua g(x) eta h(x) fu n tz ioez mu g atu ta d ag o, x∈
+[a , b] d en ean g(x)≤h(x)
+iz an ik. (7 .4 6 
+(b )) iru d ian ald eko z ilin d roaren z atia g eh itu d u g u b i g ain az alek mu g atu tako R
+solid oa az altz eko. F (x, y, z) fu n tz ioa R-
+ren p u n tu etan d eﬁ n itu rik b ad ag o, iku s d ez ag u n n ola
+kalku la d ez akeg u n F (x, y, z)-ren in teg ral h iru koitz a R-n .
+x∈
+[a , b] p u n tu b at au keratz en d u g u . 
+(7 .4 7 ) iru d ian az altz en d ira b i g ain az aletan x b alio
+kon stan te h ori h artz erakoan lortz en d iren maila-
+ku rb ak. E ta iru d ian ag ertz en d en ez , x∈[a , b]
+b alio ﬁ n ko b akoitz aren tz at, (x, y, z) p u n tu a R-n d ag o y∈[g(x), h
+(x)] eta z∈[u(x, y), v(x, y)]
+b ad ira.
+In teg ral h iru koitz a h orrela kalku latz en d a:
+R
+F
+(x, y, z)d xd yd z =
+b
+a
+h
+(x)
+g
+(x)
+v
+(x,y )
+u
+(x,y )
+F
+(x, y, z)d z
+d y
+d x
+(7 .2 9 )
+Iku s d itz ag u n (7 .2 9 ) erlaz ioan d au d en erag iketak:
+•
+Hasteko
+[u(x, y), v(x, y)] tartean F 
+(x, y, z) fu n tz ioaren in teg rala z ald ag aiarekiko
+kalku latz en d a, F 
+(x, y, z) fu n tz ioan x eta y kon stan teak kon tsid eratu z . E maitz a x eta
+y
+-ren fu n tz io b at d a. Fu n tz io h orri d eitu ko d iog u , ad ib id ez , S
+(x, y).
+•
+O n d oren
+S
+(x, y) fu n tz ioaren in teg rala y ald ag aiarekiko kalku latz en d a [g(x), h
+(x)]
+tartean , x kon stan tea kon tsid eratu z . E maitz a x-
+ren fu n tz io b at d a. Fu n tz io h orri
+d eitu ko d iog u , ad ib id ez , I(x).
+•
+B u kaeran
+I
+(x) fu n tz ioaren in teg rala x ald ag aiarekiko kalku latz en d a 
+[a , b] tartean .
+E maitz a F 
+(x, y, z) fu n tz ioaren ion teg ral h iru koitz a R eremu an d eitz en d a.
+U E P D on ostia
+M atem atika A p likatu a S aila
+
+7.8.
+IN T E G R A L H IR U K O IT Z A
+111
+7.46 Irudia: B i gainazalek mugatutako bolumena
+7.31. Ariketa
+Izan bedi F (x, y, z) = x2 + y2 + z2 R eremuan deﬁniturik dagoen funtzioa,
+non R x = 0, y = 0, z = 0 eta 2x + y + 3z = 6 planoek mugatutako eremua den.
+(a) R solidoa graﬁkoki adierazi.
+(b) S(x, y) eta I(x) funtzioak kalkulatu.
+(c ) F (x, y, z) funtzioaren integral hirukoitza R-
+n kalkulatu integratzeko ordena posible
+guztiak erabiliz.
+(d) F , F (x, y, z)-ren batezbesteko balioa R-n kalkulatu.
+(e) F (x, y, z) = F maila-gainazalaren adierazpen graﬁkoa marraztu.
+7.32 . Ariketa
+F
+(x, y, z) = 1 funtzioaren integral hirukoitza kalkulatu edozein R solidoan.
+Z ein da ateratzen duzun ondorioa?
+Matematika Aplikatua Saila
+UEP Donostia
+
+112
+7.
+KAP ITULUA INTEGRAL ANIZKOITZAK
+7.47 Irudia: x konstantea denean kurba bat lortzen da
+7.8.4
+Koor d e n a tu z ilin d r ik o e ta e sfe r ik oa k
+F
+(x, y, z) funtzioaren integral hirukoitza R eremuan kalkulatzerakoan integral bikoitzare-
+kin aurkitu genuen arazo berbera ikusten dugu, nola kalkula dezakegun integrala aldagai-
+aldaketa bat aplikatzen badugu? Aldagai-
+aldaketa egokia bada, integralaren kalkulua sin-
+pliﬁkatu daiteke. Adibidez, integrazio-eremua R zilindro zirkular bat ((7.48 )
+(a) irudia) edo
+esfera ((7.48 )(b) irudia) bat bada integrazio-
+mugetan agertzen diren funtzioetan erro karra-
+tuak azaltzen dira, eta integrazioa zaila izaten da.
+7.33. Ariketa
+K alkulatu integrazio-mugak (7.48 ) irudian agertzen diren eremuetan.
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.8.
+INTEGRAL HIRUKOITZA
+113
+7.48 Irudia: (7.33) ariketako eremuak
+Baina, bi eremu mota hauen erabilpena errazagoa izango da, koordenatu angeluzuze-
+nen ordez, lehenengo kasuan koordenatu zilindrikoak eta bigarrenean koordenatu esferikoak
+erabiltzen baditugu. Ikus dezagun zer diren bi koordenatu sistema hauek.
+Koordenatu z ilindrikoak
+Koordenatu sistema bat puntu bakoitza forma bakarrean azaltzeko metodo bat da. Adi-
+bidez, planoan P puntu bakoitza koka dezakegu 
+(x, y) koordenatu angeluzuzenak eta (ρ,θ)
+koordenatu polarrak erabiliz. Eta sistema bateko koordenatuak ezagutzen baditugu, beste
+sistemakoak kalkula ditzakegu:
+x
+= ρ c o s θ ρ =
+x2
++ y2
+y
+= ρ sin θ
+θ
+= a rc ta n
+y
+x
+ρ ≥
+0
+θ ∈
+[0, 2π]
+x, y ∈ R
+(7.30 )
+Koordenatu polarrak erabiliz (ikusi 7.30 ) espazioko P 
+(x, y, z) edozein puntu adieraz-
+teko modu bat lor daiteke:
+ x eta y koordenatu polarretan idazten ditugu eta z berdina
+mantentzen dugu. H orrela, P 
+(x, y, z) puntua koordenatu zilindrikoetan honela adierazten
+da, P ( ,θ,z), non sistema batetik bestera pasatzeko erlazioak 
+(7.30 ) ekuazioan agertzen di-
+ra. 
+(7.49) irudian P puntu baten koordenatu angeluzuzenen eta zilindrikoen adierazpenak
+azaltzen dira.
+Matematika Aplikatua Saila
+UEP Donostia
+
+114
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+7.49 Irudia: Koordenatu zilindrikoak
+Koordenatu aldaketa honekin integrazio eremua sinpliﬁka daiteke. Adibidez 
+(ikusi (7.5 0)(a)
+irudia), R eremua honako baldintza hauek deﬁnitutako zilindro zirkularra bada, x2+y2 = a2,
+0≤z≤H, koordenatu zilindrikoetara pasatuz lortzen dugun eremu berria R sinpleagoa da
+(7.5 0)(b) irudia), eta erlazio hauek deﬁnituta dago: 0≤θ≤2π, ρ= a, 0≤z≤H.
+7.5 0 Irudia: Koordenatu zilindrikoetarako aldagai-aldaketa
+7.34. Ariketa
+Koordenatu zilindrikoen sistema baliagarria da ere zilindrikoak ez diren
+gainazalak erabiltzeko. Honako atal bakoitzean R eremu bat deﬁniturik dago koordenatu
+angeluzuzenetan. R eremua eta koordentu zilindrikoetara pasatzerakoan lortutako R eremu
+berria graﬁkoki adierazi ((7.5 0) irudian bezala).
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.8.
+INTEGRAL HIRUKOITZA
+115
+(a) x2 + y2 = z2, z = 1
+(b) x2 − y2 = z − 2, x2 + y2 = 1
+(c) x2 + y2 = z, x2 + y2 = 1
+7.35. Ariketa
+(Koordenatu zilindriko orokorrak). Koordenatu polar orokorren sistemaren
+deﬁnizioa gogoratuz, koordenatu zilindriko orokorren sistema deﬁnitu. Honako atal bakoi-
+tzean R eremu bat deﬁniturik dago koordenatu angeluzuzenetan. R eremua eta koordentu
+zilindriko orokorretara pasatzerakoan lortutako R eremu berria graﬁkoki adierazi 
+((7.50)
+irudian bezala).
+(a) 2x2 + 3y2 = z2, z=0, z=1.
+(b) x2 + 5y2 = z, z = 0, z = 2.
+Koordenatu esferikoak
+Begiratu (7.51) irudia. P (x, y, z) puntua koordenatu esferikoetan P 
+(θ, ϕ, r) eran idazten da,
+non:
+x
+= r sin ϕ cos θ
+r ≥
+0, 0 ≤ ϕ ≤ π, 0 ≤ θ ≤ 2π
+y
+= r sin ϕ sin θ
+z
+= r cos ϕ
+(7.31)
+G aldera bat. Zure ustez, zergatik aldatzen da ϕ parametroa [0, π] tartean, 
+[0, 2π] tantean
+aldatu ordez?
+7.36 . Ariketa
+(7.31) erlazioa kontutan hartuz, idatzi θ, ϕ eta r-ren balioak x, y eta z-ren
+menpe.
+Horrela, (ikusi (7.52)
+(a) irudia), R esfera x2 + y2 + z2 = a2 ekuazioak deﬁniturik bada-
+go, koordenatu esferikoak erabiliz r = a ekuazioak deﬁnitutako R solido errezago batean
+integratuko dugu (ikusi (7.52)(b) irudia).
+7.37. Ariketa
+Koordenatu esferikoen sistema baliagarria da ere esferikoak ez diren gaina-
+zalak erabiltzeko. Honako atal bakoitzean R eremu bat deﬁniturik dago koordenatu angelu-
+zuzenetan. R eremua eta koordentu esferikoetara pasatzerakoan lortutako R eremu berria
+graﬁkoki adierazi ((7.52) irudian bezala).
+(a) x2 + y2 = z2, z = 1
+(b) x2 − y2 = z − 2, x2 + y2 = 1
+Matematika Aplikatua Saila
+UEP Donostia
+
+116
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+7.51 Irudia: Koordenatu esferikoak
+7.52 Irudia: Koordenatu esferikoetarako aldagai-aldaketa
+7.8.5
+Integ razio aldag aien aldaketa
+D eﬁnitu ditugun bi aldagai-aldaketak erabiliz integrazio-eremu batzuk 
+(zilindroak, esferak,
+konoak,...) modu errezago batetan adierazten dira. Galdera da, nola aplika daiteke aldagai-
+aldaketa bat integral hirukoitza kalkulatzerakoan? Ba, integral bikoitzako antzerako mo-
+duan. (7.53) irudian hiru dimentsioetako aldagai-
+aldaketa bat adierazten da, non (x, y, z)
+aldagaiak (u, v, w) aldabai berriez ordezkatzen dira. Aldagai-
+aldaketa R eremuan deﬁniturik
+dauden hiru funtzioek ﬁnkatuta dago: x = h(u, v, w), y = g(u, v, w), z = s
+(u, v, w), beraien
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.8.
+INTEGRAL HIRUKOITZA
+117
+deribatu partzialak jarraituak izanik eta non (x, y, z) ∈ R puntu bakoitzari 
+(u, v, w) ∈ R
+puntu bakarra dagokion, eta alderantziz.
+7.53 Irudia: Aldagai-aldaketa hiru dimentsioetan
+Ba, aurreko baldintza guztiak betetzen badira, 
+(7.32) adierazpenak integral bikoitza
+kalkulatzeko modua ematen digu, (u, v, w) aldagai berriak eta R integrazio-
+eremu berria
+erabiliz:
+R
+F
+(x, y, z)dxdydz =
+R
+F
+(h(u, v, w), g(u, v, w), s(u, v, w)) |J| dudvdw (7.32)
+non
+J
+=
+hu hv hw
+gu
+gv
+gw
+su
+sv
+sw
+(7.33)
+N abaritu, integral bikoitzarekin bezala, aldagai-aldaketako 
+(7.32) adierazpenan, J J aco-
+biarraren balio absolutua agertzen dela, baina orain hiru dimentsioetan. 
+(7.33) ekuazioan
+agertzen denez, J J akobiarra h(u, v, w), g(u, v, w) eta s
+(u, v, w) funtzioen deribatu partzialez
+osatuta dago.
+7.38. Ariketa
+Frogatu koordenatu zilindrikoetarako aldagai-aldaketan J = ρ dela, eta
+J
+= r2 sin ϕ koordenatu esferikoetarako aldaketan. 
+(7.32) ekuazioa erabiliz, idatzi aldagai-
+aldaketako adierazpenak bi kasu partikular hauetan.
+Matematika Aplikatua Saila
+UEP Donostia
+
+118
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+7.8.6
+Integral h irukoitzaren beste ap likazioak
+O rain arte ikusi dugu nola erabil dezakegun F 
+(x, y, z) funtzio jarraitu baten integral hiru-
+koitza R eremuan funtzioaren batezbesteko balioa eta R-
+ren bolumena kalkulatzeko. O rain,
+F
+(x, y, z) funtzioaren bidez 
+(x, y, z)∈R puntuan dagoen masa dentsitatea adierazten ba-
+da, integral bikoitzean aplikatu genuen arrazoibide bera aplikatuz, integral hirukoitza erabil
+dezakegu R-ren masa, G Z
+(xG, yG, zG) grabitate zentroa eta R − re n ardatz batekiko inertzi-
+momentua kalkulatzeko:
+Masa:
+M
+=
+R
+F
+(x, y, z)dxdydz
+G rab itate zentroa:
+xG =
+R xF (x, y, z)dxdydz
+M
+yG =
+R yF (x, y, z)dxdydz
+M
+zG =
+R zF (x, y, z)dxdydz
+M
+R-ren inertzi-momentuak OX, OY eta OZ ardatzekiko:
+Ix =
+R
+(y2 + z2)F (x, y, z)dxdydz
+Iy =
+R
+(x2 + z2)F (x, y, z)dxdydz
+Iz =
+R
+(x2 + y2)F (x, y, z)dxdydz
+7.8.7
+A zp ierem uka jarraituak diren funtzioen integral h irukoitza
+Hurrengo garapena integral bikoitzarekin egin genuena bezalakoa da. O rain arte R ere-
+muan jarraitua den funtzio baten integral hirukoitza kontsideratu dugu. Baina, batzuetan,
+UEP Donostia
+Matematika Aplikatua Saila
+
+7.8.
+INTEGRAL HIRUKOITZA
+119
+F
+(x, y, z) funtzioa R = R1∪R2 motako eremu batean deﬁnituta dago, non R1 eta R2 eremuen
+arteko ebakigunearen bolumena 0 den, eta F 
+(x, y, z) jarratua da azpieremu bakoitzean, bai-
+na ez da jarraitua R osoan. Kasu hauetan, F 
+(x, y, z) funtzioaren integral hirukoitza honela
+deﬁni daiteke:
+R
+F
+(x, y, z)dxdydz =
+R1
+F
+(x, y, z)dxdydz +
+R2
+F
+(x, y, z)dxdydz
+Adibidez, F 
+(x, y, z) R solido bateko puntuetan tenperaturaren banaketa adierazten ba-
+du, ﬁsikoki oso zaila izaten da F 
+(x, y, z) funtzio eten bat izatea. Baina, desjarraitutasuna
+ohikoa da, adibidez, F (x, y, z) funtzioak 
+(x, y, z)∈R puntuan dagoen masa dentsitatea adie-
+razten duenean. R eremua masa dentsitate desberdineko material desberdinez 
+(altzairu,
+kautx u, plastiko,...) osatutako pieza bat izan daiteke, eta orduan R-
+n kalkulatutako integral
+hirukoitza beste hiru integral hirukoitzen arteko batura izango da. Deﬁnizio hau erabili dai-
+teke F (x, y, z) funtzioaren batezbesteko balioa kalkulatzeko, R-
+ren bolumena kalkulatzeko
+eta aztertu ditugun integralaren beste aplikazioetan.
+7.39. Ariketa
+Izan bedi R (7.54) irudian dagoen prisma triangeluar batek eta prisma lau-
+kizuzen batek mugatutako solidoa. S uposa dezagun bi prismaetan masa-
+dentsitatea kons-
+tantea dela, baina prisma triangeluarena angeluzuzenaren dentsitatearen bikoitza dela.
+(a) S olidoaren masa kalkulatu.
+(b) Grabitate zentroa kalkulatu.
+(c) Zein ardatz koordenatuekiko biratuko da errezago?
+7.54 Irudia: (7.39) ariketako eremua
+Matematika Aplikatua Saila
+UEP Donostia
+
+120
+7.
+KAPITULUA INTEGRAL ANIZKOITZAK
+UEP Donostia
+Matematika Aplikatua Saila

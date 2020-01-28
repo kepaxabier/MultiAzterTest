@@ -1,0 +1,2466 @@
+
+
+
+Gaien Aurkibidea
+1 Deribaketa
+2
+1.1
+Deribatuaren Kontzeptua eta Esanahi Geometrikoa. Funtzio Deribagarria . . . .
+2
+1.1.1
+Funtzio erreal Baten Lerro Ikutzailea . . . . . . . . . . . . . . . . . . . . .
+2
+1.1.2
+Objektuen Abiadura . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+1.1.3
+Bestelako Aldaketen Tasak . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+1.1.4
+Puntu Bateko Deribatua . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5
+1.1.5
+Deribatu funtzioa . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6
+1.1.6
+Funtzioak noiz ez dira deribagarri? . . . . . . . . . . . . . . . . . . . . . .
+7
+1.2
+Deribaketa Arauak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8
+1.2.1
+Deribaketaren Oinarrizko Arauak . . . . . . . . . . . . . . . . . . . . . . .
+8
+1.2.2
+Funtzio Konposatuaren Deribatua. Katearen Araua . . . . . . . . . . . .
+10
+1.2.3
+Funtzio Exponentzialen Deribatua . . . . . . . . . . . . . . . . . . . . . .
+11
+1.2.4
+Alderantzizko Funtzioen Deribatua . . . . . . . . . . . . . . . . . . . . . .
+12
+1.2.5
+Funtzio Logaritmikoen Deribatua . . . . . . . . . . . . . . . . . . . . . . .
+12
+1.2.6
+e zenbakia Limite Moduan
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+12
+1.2.7
+Deribaketa Logaritmikoa
+. . . . . . . . . . . . . . . . . . . . . . . . . . .
+13
+1.2.8
+Alderantzizko Funtzio Trigonometrikoen Deribatuak . . . . . . . . . . . .
+14
+1.2.9
+Funtzio Inplizitoen Deribatua . . . . . . . . . . . . . . . . . . . . . . . . .
+14
+1.2.10 Era Parametrikoko Funtzio Baten Deribatua . . . . . . . . . . . . . . . .
+15
+1.3
+Diferentziala. Konzeptua eta Esanahi Geometrikoa . . . . . . . . . . . . . . . . .
+15
+1.4
+Ordena Garaiagoko Deribatuak eta Diferentzialak . . . . . . . . . . . . . . . . . .
+17
+1.5
+Rolle, Lagrange, eta Cauchy-ren Teoremak. L’Hospital-
+en Araua. . . . . . . . . .
+18
+1.6
+Taylor Bidezko Garapena . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+23
+1
+
+1. Kapitulua
+Deribaketa
+1.1
+Deribatuaren Kontzeptua eta Esanahi Geometrikoa. Funtzio
+Deribagarria
+1.1.1
+Funtzio erreal Baten Lerro Ikutzailea
+f funtzio erreal bat a puntu baten inguruan deﬁnituta baldin badago, a-
+n bertan ere bai, bere
+graﬁkoan P = (a, f 
+(a)) puntua edukiko dugu. Askotan P puntutik lerro zuzen bat pasarazi
+daiteke, graﬁkoaren ikutzaile, hau da kurba P puntuan bakarrik ikutuko duena.
+Orokorrean P puntutik pasatako lerro orokorrak inguru gertuan ere f -
+ren graﬁkoa ebaki egingo
+du. Baina bigarren puntu hori P puntura hurbiltzerakoan lerro sekantearean malda aldatzen
+hasiko da 
+(lerroa zutitzen edo etzaten), eta x → a limitean lerroa ikutzaile geldituko da. 
+(ikus
+irudia).
+x
+0
+y
+a
+f
+(a)
+P
+definizioa
+1.1. y = f (x) kurbaren P (a, f (a)) puntuko lerro ikutzailea P -
+tik barrena pasatako
+lerro zuzen bat da, malda honetakoa
+m = lim
+x→a
+f (x) − f(a)
+x − a
+,
+noski, limite hori existitzen baldin bada.
+x
+0
+y
+a
+P
+f
+(x) − f(a)
+x − a
+x
+y
+= f (x)
+2
+
+Lerro ikutzailearen malda kurbaren malda deitzen dugu ere. Zergatik? P puntuaren ingu-
+ruan gero eta gertuago jarriz, kurbak gero eta aukera txikiago daukalako kurbatzen hasteko,
+azkenean kurba lerro zuzena bihurtzen baita. Hori gertatzen da kurbaren gero eta zati txikiagoa
+hartzen ari garelako, hau da, P puntuaren ingurua gero eta lupa ahaltsuagoarekin begiratzen
+ari garalako. Berdin gertatzen da gainazal kurbatuekin. Lurra bera bola bat da, eta horrela
+ikusten dute astronautek. Baina guk ez dugu bola ikusten, guk Lurra lau ikusten dugu, grekoar-
+rek bezala. Eta haiek uste zuten Lurra lau zela. Zergatik ikusten dugu lau? Lurraren edozein
+lekutan jarrita Lurraren zati nimi˜
+no bat besterik ez dugulako ikusten eta horrek zerbait lauaren
+itxura duelako. Beraz azkenean lerro ikutzailearen malda eta kurbaren malda, P puntuaren
+inguru gertuan berdinak dira, eta esaten dugu hori kurbaren malda ere badela.
+Lerro ikutzailearen deﬁnizioa honela idatziko dugu ere,
+m = lim
+h→0
+f (a + h) − f(a)
+h
+x
+0
+y
+a
+P
+f
+(a + h) − f(a)
+h
+y
+= f (x)
+a
++ h
+adibidea
+1.1.
+1. y = x2. Kalkulatu lerro ikutzailea P (1, 1) puntuan.
+2. y = 3/x. Kalkulatu lerro ikutzailea P (3, 1) puntuan.
+3. y =
+√
+x. Kalkulatu ikutzaileen maldak (1, 1), (4, 2), eta(9, 3) puntuetan.
+Ebazpena:
+1. y = x2-ren malda P = (1, 1) puntuan zera da,
+m(1) = lim
+h→0
+(1 + h)2 − 1
+2
+h
+= lim
+h→0
+(1 + 2h + h2) − 1
+h
+= lim
+h→0
+2h + h2
+h
+= lim
+h→0
+(2 + h) = 2
+Lerro ikutzailaren ekuaziorako formula hau erabiliko dugu, y = y1 +m
+(x−x1), nun (x1, y1)
+lerro zuzenaren puntu bat da. Puntu hori P puntu bera hartuko dugu,
+y − 1 = 2(x − 1) → y = 2x − 1
+eta hori izango da eskatutako lerro ikutzailearen ekuazioa.
+2. Berdin saiatuko gara P = (3, 1) puntuko malda kalkulatzen,
+m(3) = lim
+h→0
+3
+3 + h
+−
+3
+3
+h
+= lim
+h→0
+3 − 3 − h
+3 + h
+h
+= lim
+h→0
+−1
+3 + h
+= −
+1
+3
+eta lerro ikutzailearen ekuazioa hau izango da,
+y − 1 = −
+1
+3
+(x − 3) → y = −
+1
+3
+x + 2
+
+3. Kasu honetan hiru puntu ezberdineko maldak eskatzen dira, y =
+√
+x funtzioarenak.
+Banan-banan kalkulatu daitezke, erantzunak hauek dira,
+m(1) = 0.5
+m(4) = 0.25
+m(9) = 1/6
+1.1.2
+Objektuen Abiadura
+Demagun s = f 
+(t) dela partikula baten posizioaren legea, partikula lerro zuzen baten gainean
+higitzen ari delarik. Bere abiadura, aldiunez aldiune, kalkulatu egin daiteke. Adibidez t = t0
+aldiunekoa honela,
+v(t0) = lim
+∆t→0
+s(t0 + ∆t) − s(t0)
+∆t
+Hori t0 aldiune zehatzeko abiadura da.
+Lehengo formularen egitura berekoa da: s-ren ordez f jarri, t0-ren ordez a, ∆t-
+ren ordez h,
+berriro dugu,
+v(a) = lim
+h→0
+f (a + h) − f(a)
+h
+adibidea
+1.2. Gorputz bat amildegi batetik, 450 m-
+ko garaieratik hasita, jauzten ari da. Jauzi-
+tako luzera s = 4, 9 t2 legekoa bada, kalkulatu v
+(t), eta lurreraino iritsakoaren abiadura.
+Ebazpena:
+Edozein t aldiunean izango den s garaieran jarrita, ∆t denbora igarota garaiera ere aldatuko
+da ∆s. Bien arteko zatidurak t aldiuneko abiduraren balioren bat da, orokorrean ezberdina ∆t
+ezberdina bada. t aldiuneko abiadura deitzen dena v
+(t) horren limitea da, ∆t → 0-ra doanean.
+v(t) = lim
+∆t→0
+∆s
+∆t
+= lim
+∆t→0
+s(t + ∆t) − s(t)
+∆t
+= lim
+∆t→0
+4.9(t + ∆t)2 − 4.9t
+2
+∆t
+= 4.9 lim
+∆t→0
+(t + ∆t)2 − t
+2
+∆t
+= 4.9 lim
+∆t→0
+t2 + 2t∆t + (∆t)2 − t
+2
+∆t
+= 4.9 lim
+∆t→0
+(2t + ∆t) = 9.8 t
+Lurrera iritsiko denean s = 450 eta hortik bere t aldiunea lor daiteke,
+t =
+s
+4.9
+=
+450
+4.9
+=
+√
+91.84 = 9.58seg.
+Orduan abiadura hau izango da,
+v(9.58) = 9.8 × 9.58 = 93.9 m/seg
+1.1.3
+Bestelako Aldaketen Tasak
+Bedi y = f (x) funtzioa eta demagun x-aren balioa aldatu dugula x1-etik x2-
+ra, beraz, aldaketa
+∆ = x2 − x1 dugu. Funtzioa ere aldatu egingo da ∆f(x) = f(x2) − f
+(x1. Aldaketen arteko
+erlazioa zera da,
+∆y
+∆x
+=
+f (x2) − f(x1)
+x2 − x1
+hori dela ∆x tartean funtzioak duen batazbesteko aldaketaren tasa. Baina f -
+ren aldaketeran
+tasa, aldiunez aldiune ere kalkulatu daiteke, beheko limitearekin. Limiteak adierazten duen
+prozesuan x1 ﬁjo manatentzen ari bagara beheko formulak x1-eko tasa emango du.
+instanteko aldaketa-tasa = lim
+∆x→0
+∆y
+∆x
+= lim
+x2→x1
+f (x2) − f(x1)
+x2 − x1
+
+adibidea
+1.3. Hurrengo taulan tenperaturaren neurketak idatzi dira, T versus t. Apirilaren
+egun bateko gauerdian hasi eta orduoro egun osoan zehar neurketak eginez. Hauek eskatzen dira
+1. Tenperaturaren aldaketaren batazbesteko tasa (denborarekiko)
+(i) eguerditik 3 P.M. arte
+(ii) eguerditik 2 P.M. arte
+(iii) eguerditik 1 P.M. arte
+2. Estimatu eguerdiko aldaketaren tasa.
+Ebazpena:
+x(h)
+T(oC)
+x(h)
+T(oC)
+0
+6.5
+13
+16.0
+1
+6.1
+14
+17.3
+2
+5.6
+15
+18.2
+3
+4.9
+16
+18.8
+4
+4.2
+17
+17.6
+5
+4.0
+18
+16.0
+6
+4.0
+19
+14.1
+7
+4.8
+20
+11.5
+8
+6.1
+21
+10.2
+9
+8.3
+22
+9.0
+10
+10.0
+23
+7.9
+11
+12.1
+24
+7.0
+12
+14.3
+(i) Eguerditik 3 P.M. arte tenperatura 14.3 oC-tik 18.2 oC-
+ra aldatu da , beraz ∆T =
+18.2 − 14.3 = 3.9
+oC. Beraz, aldaketaren tasa 3.9/3 = 1.3 oC/h da.
+(ii) Aldiz, 2 P.M. arte aldaketa 17.3 − 14.3 = 3
+oC izan da. Beraz, tasa 3.0/2 = 1.5oC/h.
+(iii) 1 P.M. arte aldaketa 16.0 − 14.3 = 1.7
+oC eta tasa 1.7/1 = 1.7oC/h.
+Instanteko tasa estimatzea eskatzen digute. Gure kalkuluen arabera eskuinetik joanda tasa
+orden honetan aldatu da 1.3 → 1.5 → 1.7, beraz poliki-
+poliki handitzen joan da. Begira dezagun
+bestaldetik,
+(i) Goizeko 9 A.M.-tik eguerdirarte tenperatura 14.3 − 8.3 = 6.0
+oC aldatu da. Tasa 6.0/3 =
+2.0oC.
+(ii) 10 A.M.-tik eguerdira aldaketa 14.3 − 10.0 = 4.3
+oC eta tasa 4.3/2 = 2.15oC.
+(iii) 11 A.M-tik eguerdirarte aldaketa 14.3 − 12.1 = 2.2
+oC eta tasa 2.2/1 = 2.2oC.
+Hor dugun aldaketa hau da:
+ 2.0 → 2.15 → 2.2. Instanteko tasarentzako ezkerretik joanda eta
+eskuinetik joanda tarte txikienekin ditugun balioen batazbestekoa aukeratu dezakegu, 
+(2.2 +
+1.7)/2 = 1.95oC.
+1.1.4
+Puntu Bateko Deribatua
+Zientziatan eta Injenieritzan zerbaiten aldaketen tasa nahi denean, hala nola, erreakzio kimiko
+batean gertatutako produktuen aldaketen tasa edo ura galtzen ari den ontzi zulatu baten ur
+kopuruaren aldaketaren tasa, orduan tasa hori 
+(aldaketa aldagaiaren unitate bakoitzeko) deri-
+batua izeneko kontzeptuak ematen du. Magnituderen baten deribatua izango dugu, hala nola,
+
+erreakzio kimikoan produkturen bateko kopuruaren deribatua, ontzi zulatuko ur kopuruaren
+deribatua.
+definizioa
+1.2. Bedi a puntu baten inguruan deﬁnitutako f funtzioa. f -
+ren deribatua a puntuan,
+f
+′(a) idazten duguna, hau da
+f
+′ (a) = lim
+h→0
+f (a + h) − f(a)
+h
+limitea existitzen bada.
+Beste kasuetan bezala deribatuaren ekuazioa honela idatzi daiteke ere,
+f
+′(a) = lim
+x→a
+f (x) − f(a)
+x − a
+Beste limitekin bezala, alde bietatik eginda, eskuinetik eta ezkerretik, limiteak berdina izan
+beharko du
+Bestaldetik ikusten dugu zatitzailearen limitea zero dela, beraz limitea existitzeko dagoen
+aukera bakarra goikoaren limitea ere zero izatea da. Goikoaren limiteak zero izan behar badu
+orduan f -ren beraren limiteak f (a) izan beharko du,
+lim
+x→a
+(f (x) − f(a)) = lim
+x→a
+f (x) − lim
+x→a
+f (a) = lim
+x→a
+f (x) − f(a) = 0 → lim
+x→a
+f (x) = f (a)
+Horrela ikusten dugu f funtzioak a puntuan deribatua edukitzeko puntu horretan jarrai behar
+duela. Alderantzizkoa ez da egia, badaude funtzio jarraiak beti deribagarri ez direnak.
+adibidea
+1.4. f (x) = x2 − 8x + 9 izanik, zenbat da f
+′(a)?
+Ebazpena:
+Lehenengo formula erabiliz,
+f
+′(a) = lim
+h→0
+(a + h)2 − 8(a + h) + 9 − (a
+2 − 8a + 9)
+h
+= lim
+h→0
+a2 + 2ah + h2 − 8a − 8h + 9 − a2 + 8a − 9
+h
+= lim
+h→0
+h2 + (2a − 8)h
+h
+= lim
+h→0
+(h + 2a − 8) = 2a − 8
+eta bigarren formula erabiliz,
+f
+′ (a) = lim
+x→a
+x2 − 8x + 9 − (a
+2 − 8a + 9)
+x − a
+= lim
+x→a
+(x2 − a
+2) − 8(x − a)
+x − a
+= lim
+x→a
+(x + a − 8) = 2a − 8
+1.1.5
+Deribatu funtzioa
+Deribatua kalkulatzerakoan a puntu batean bakarrik ez, x aldagaiaren balio guztietan kalku-
+latzen badugu, puntuz-puntu hau eegingo dugu,
+f
+′(x) = lim
+h→0
+f (x + h) − f(x)
+h
+Limite hori existitzen denean x bakoitzari bere f
+′(x) balioa ematen badiogu funtzio berri bat
+osotuko dugu, deribatu funtzioa, f
+′ idatzita, f -ren deribatua deitzen duguna. Deribatua hitza
+
+ingelesaren ‘derived’ hitzatik dator, hizkuntza horretan f
+′ funtzioa beste batetik, f -tik, eratorrita
+dela esateko erabiltzen delarik.
+f
+′ -ren deﬁnizio-eremua, D = {x/f′(x) existitzen den}, f-
+rena baino txikiagoa izan daiteke.
+Adibidez |x| funtzioa jarrai da R osoan, baina x = 0 puntuan ez da deribagarri. Edo ariketa
+batean aztertutako beste hau,
+f (x) =
+x2,
+x < 1,
+√
+x, x ≥ 1
+Hori ere jarraia da R osoan, baina x = 1 puntuan ez da deribagarri.
+Deribatu funtzioaren beste idazkera hauek ere erabiltzen dira maiz,
+y = f (x) −→ f
+′(x) = y′ =
+dy
+dx
+=
+df
+dx
+=
+d
+dx
+f (x) = Df (x) = Dxf (x)
+D eta d
+dx diferentziazio eragileak deitzen dira ere.
+dy
+dx
+idazkera Leibniz-ek asmatutakoa da, f
+′ (x)-ren sinonimoa. Deribatuaren interpretazio bat
+erabiliz,
+dy
+dx
+= lim
+∆x→0
+∆y
+∆x
+Leibniz-
+en notazioa erabiliz a puntuko deribatua adierazteko hurrengoak erabiltzen dira,
+dy
+dx
+x=a
+edo
+dy
+dx
+x=a
+definizioa
+1.3. f funtzioa a puntuan diferentziagarri da f
+′ (a) existitzen bada. (a, b) tarte
+irekian diferentziagarri
+da, [edo (a, ∞)-n, edo (−∞, a)-n, edo (−∞, ∞)-n] tarteko puntu
+orotan diferentziagarri bada.
+Deﬁnizioaren diferentziagarri hitzaren ordez deribagarri hitza ere erabil daiteke.
+adibidea
+1.5.
+f (x) = |x| → f
+′ (x) =
+1,
+x > 0
+−1, x < 0
+baina f
+′ (0) ez dago. |x| funtzioak ez du ikutzailerik (0, 0) puntuan.
+1.1.6
+Funtzioak noiz ez dira deribagarri?
+• Lehen esan dugu funtzioa deribagarrai funtzioa jarrai dela ere. Beraz jarraia izatea ez-
+inbesteko baldintza da. Horrek esan nahi du funtzio ezjarrai oro 
+(ezjarraia den punutetan)
+ez dela deribagarri.
+• Esan dugu ere badaudela funtzio jarraiak deribagarri ez direnak. Nola atzeman hoiek?
+Beren graﬁkoetan, deribagarri ez diren puntuetan bihurgune zorrotz bat, erpin moduko
+bat ikusi izaten da.
+• Punturen batean kurbak lerro ikutzaile bertikala badu bere malda inﬁnitua izango da.
+Beraz deribatua ere inﬁnitu izango da. Zorrotz jokatu nahi bada, funtzioa hor ez dela
+deribagarri esan beharko dugu.
+Orduan deribatu funtzioak +∞ edo −∞ balioa hartuko du,
+lim
+x→a
+f
+′(x) = ∞.
+
+1.2
+Deribaketa Arauak
+Arau hauen laguntzarekin deribatuak zuzenago kalkulatu daitezke, deribatuaren deﬁnizio behin
+eta berriz aplikatzen ibili gabe. Deribatuaren deﬁnizioa diferentziazio arauak banan-
+banan er-
+atortzeko erabiltzen da, baina hortik aurrera araua bera erabiltzen da deribatuak kalkulatzeko
+eta ez deribatuaren deﬁnizio bera.
+1.2.1
+Deribaketaren Oinarrizko Arauak
+Konstante Baten Deribatua
+Bedi f (x) = c funtzio konstantea. x-
+ren edozein balioa hartu eta funtzioaren balioa beti c delako,
+dc
+dx
+= lim
+h→0
+c − c
+h
+= lim
+h→0
+0
+h
+= 0
+Batuketa Baten Deribatua
+Bitez f eta g funtzio deribagarriak eta f ± g batura 
+(edo kendura) funtzioa. f eta g biak
+deribagarri badira x puntuan, orduan
+d
+dx
+(f ± g)(x) = lim
+h→0
+(f ± g)(x + h) − (f ± g)(x)
+h
+= lim
+h→0
+(f (x + h) − f(x)) ± (g(x + h) − g(x))
+h
+= lim
+h→0
+f (x + h) − f(x)
+h
+± lim
+h→0
+g(x + h) − g(x)
+h
+=
+d
+dx
+f (x) ±
+d
+dx
+g(x)
+Konstante bat bider Funtzio Baten Deribatua
+d
+dx
+(cf )(x) = lim
+h→0
+(cf )(x + h) − (cf)(x)
+h
+= lim
+h→0
+cf (x + h) − cf(x)
+h
+= c lim
+h→0
+f (x + h) − f(x)
+h
+= c
+d
+dx
+f (x)
+Berreketa Funtzioaren Deribatua
+Bedi f (x) = xn, nun n osoa eta positiboa den. Orduan,
+f
+′ (x) = lim
+h→0
+(x + h)n − x
+n
+h
+Baina (x + h)n = xn + nxn
+−
+1h + (1/2)n(n − 1)xn−2h2 + · · · + nxhn−1 + hn denez (Newton
+binomioaren garapena), orduan
+(x + h)n − x
+n = nxn−1h + (1/2)n(n − 1)xn−2h2 + · · · + nxhn−1 + hn
+Beraz,
+f
+′ (x) = lim
+h→0
+[nxn
+−
+1 + (1/2)n(n − 1)xn−2h + · · · + nxhn−2 + hn−1] = nxn−1
+
+Polinomio Baten Deribatua
+Bedi Pn(x) = cnxn + cn−1xn
+−
+1 + · · · + c1x + c0, n graduko polinomioa. Bere deribatua lortzeko
+polinomioa batuketa bat dela, eta batugai bakoitza konstante bat bider goiko berreketa funtzioa
+dela hartuko dugu kontuan,
+d
+dx
+Pn(x) =
+d
+dx
+(cnx
+n + cn
+−
+1x
+n−1 + · · · + c1x + c0) =
+d
+dx
+(cnx
+n + cn
+−
+1x
+n−1 + · · · + c1x) +
+d
+dx
+c0
+=
+d
+dx
+(cnx
+n + cn
+−
+1x
+n−1 + · · · + c2x2) +
+d
+dx
+(c1x) = . . .
+=
+d
+dx
+(cnx
+n) +
+d
+dx
+(cn−1x
+n−1) + · · · +
+d
+dx
+(c1x)
+= cnnx
+n−1 + cn
+−
+1(n
+− 1)x
+n−2 + · · · + c22x + c1
+= ncnx
+n−1 + (n − 1)cn
+−
+1x
+n−2 + . . . 2c2x + c1
+Biderkaketaren Deribatua
+Bitez f eta g bi funtzio deribagarri x puntu berean. Orduan,
+d
+dx
+(f g)(x) = lim
+h→0
+(f g)(x + h) − (f g)(x)
+h
+= lim
+h→0
+f (x + h)g(x + h) − f(x)g(x)
+h
+= lim
+h→0
+f (x + h)g(x + h) − f(x)g(x) + f(x + h)g(x) − f(x + h)g(x)
+h
+= lim
+h→0
+f (x + h)g(x) − f(x)g(x)
+h
++ lim
+h→0
+f (x + h)g(x + h) − f(x + h)g(x)
+h
+= lim
+h→0
+f (x + h) − f(x)
+h
+g(x) + lim
+h→0
+f (x + h)
+g(x + h) − g(x)
+h
+= lim
+h→0
+f (x + h) − f(x)
+h
+lim
+h→0
+g(x) + lim
+h→0
+f (x + h) lim
+h→0
+g(x + h) − g(x)
+h
+= f
+′ (x)g(x) + f (x)g′(x)
+nun f -ren jarraitasuna erabili dugun.
+Zatiketaren Deribatua
+Bitez f eta g bi funtzio deribagarri x puntu berean,
+d
+dx
+f
+g
+(x) = lim
+h→0
+(f /g)(x + h) − (f /g)(x)
+h
+= lim
+h→0
+f (x + h)
+g(x + h)
+−
+f (x)
+g(x)
+h
+= lim
+h→0
+f (x + h)g(x) − f(x)g(x) − f(x)g(x + h) + f(x)g(x)
+g(x)g(x + h)
+h
+= lim
+h→0
+f (x + h) − f(x)
+h
+g(x) − f(x)
+g(x + h) − g(x)
+h
+g(x)g(x + h)
+=
+lim
+h→0
+f (x + h) − f(x)
+h
+g(x) − lim
+h→0
+f (x)
+g(x + h) − g(x)
+h
+lim
+h→0
+[g(x)g(x + h)]
+=
+f
+′(x)g(x) − f(x)g′(x)
+[g(x)]2
+
+Zatiketaren araua erabilita ikusi daiteke f 
+(x) = xn berreketa funtzioaren deribatua, n negat-
+iboa eta osoa izanik, f
+′ (x) = nxn−1 dela,
+n < 0 izanda, bedi n = −m, m > 0; orduan y = x
+n = x−m =
+1
+xm
+eta zatiketa horren deribatua,
+y
+′ =
+0 · x
+m − 1 · mxm−1
+x2m
+= −m
+xm
+−
+1
+x2m
+= −mx
+−
+m−1 = nxn−1
+Sinu, Cosinu, eta Tangentearen Deribatuak
+Bedi f (x) = sin x funtzio trigonometrikoa, R osoan deribagarria,
+d
+dx
+sin x = lim
+h→0
+sin(x + h) − sin x
+h
+= lim
+h→0
+sin x cos h + cos x sin h − sin x
+h
+= sin x lim
+h→0
+cos h − 1
+h
++ cos x lim
+h→0
+sin h
+h
+= sin x lim
+h→0
+−h
+2/2
+h
++ cos x lim
+h→0
+h
+h
+= sin x lim
+h→0
+−
+h
+2
++ cos x lim
+h→0
+1 = sin x · 0 + cos x · 1 = cos x
+Bedi f (x) = cos x, R osoan deribagarri. Era analogoan frogatu daiteke,
+d
+dx
+cos x = − sin x
+Bedi f (x) = tan x funtzioa, hori ere R-
+n deribagarri, cosinuaren zeroetan izan ezik. Za-
+tiketaren araua erabiliz,
+d
+dx
+tan x =
+d
+dx
+sin x
+cos x
+=
+(cos x) · cos x − sin x · (− sin x)
+cos2 x
+=
+sin2 x + cos2 x
+cos2 x
+=
+1
+cos2 x
+= 1 + tan2 x
+1.2.2
+Funtzio Konposatuaren Deribatua. Katearen Araua
+Funtzio konposatuen deribatuak maiz egin behar izaten dira. Gogoratuko dugunez funtzio kon-
+posatua f ◦ g eran idatzen da, eta,
+(f ◦ g)(x) = f(g(x))
+da, g(x) balioa f -ren deﬁnizio-eremuan egon behar delarik.
+Bedi g funtzioa a puntuaren inguruan deﬁnitua, a puntuan bertan ere bai, eta bedi f funtzioa
+g(a) puntuaren inguruan deﬁnitua, g
+(a) puntuan bertan ere bai. f eta g biak deribagarri badi-
+ra, g deribagarri x = a puntuan eta f deribagarri g
+(a) puntuan, orduan f ◦ g deribagarri da a
+puntuan
+Deribatuaren formularen frogapena hau da: Dei ditzagun g
+(x) balioak u hizkiarekin; orduan
+f -ren aldagai askea u da. y = f (u) eta u = g
+(x) funzioak konposatzen ari gara.
+Gainera aldagaien aldaketak honela daude lotuta,
+∆u = g(x + ∆x) − g(x)
+∆y = f (u + ∆u) − f(u)
+
+f ◦ g-ren deribatua hau izango da,
+dy
+dx
+= lim
+∆x→0
+∆y
+∆x
+= lim
+∆x→0
+∆y
+∆u
+·
+∆u
+∆x
+= lim
+∆x→0
+∆y
+∆u
+· lim
+∆x→0
+∆y
+∆x
+= lim
+∆u→0
+∆y
+∆u
+· lim
+∆x→0
+∆u
+∆x
+∆x → 0-ra doanean ∆u → 0-ra doalako
+=
+dy
+du
+du
+dx
+Emaitza honela idatzi daiteke ere,
+(f ◦ g)
+′ (x) = f ′(g(x)) · g′(x)
+Beraz, lehenengo kanpoko deribatua dugu, f -rena, g
+(x) barruko funtzioaren balioan ebalu-
+atuta, eta gero barruko funtzioaren deribatua, g-rena, x puntuan ebaluatuta.
+Frogapen horrek duen arazoa prozesuan ∆u-
+rekin zatitu dugula da eta hori nulu izan leike.
+Hori gertatuko da g funtzioa a-
+ren inguruan konstante denean. Hala ere gure azken formulak
+erantzun zuzena emango du ze g(x) = c → g
+′ (x) = 0 → (f ◦ g)′(x) = 0, eta hori izan behar da
+erantzuna ze g funtzioa a-
+ren inguruan ez bada aldatzen orduan f ◦ g ere ez, eta bere deribatuak
+nulu behar du.
+adibidea
+1.6. Kalkula dezagun F (x) =
+√
+x2 + 1 funtzioaren deribatua.
+Ebazpena:
+Funtzio hauen konposaketa dugu: kanpoko funtzioa y =
+√
+u da, eta barrukoa u = x2 + 1. Beraz,
+F
+′ (x) =
+dy
+du
+du
+dx
+=
+d
+du
+√
+u ·
+d
+dx
+(x2 + 1) =
+1
+2
+√
+u
+· 2x =
+2x
+2
+√
+x2 + 1
+=
+x
+√
+x2 + 1
+1.2.3
+Funtzio Exponentzialen Deribatua
+Bedi f 
+(x) = ax funtzio erreala, nun x zenbaki erreala eta a zenbaki erreal positibo bat den.
+Deﬁnizioa erabilita,
+d
+dx
+ax = lim
+h→0
+ax+h − a
+x
+h
+= ax lim
+h→0
+ah − 1
+h
+= axf
+′ (0)
+zeren azken limitea ax-ren deribatua da, baina x = 0 puntuan. f
+′ (0) deribatua kurbaren
+malda da x = 0 puntuan. a-ri balioak emanez f
+′(0)-ren balioa kalkulatu daiteke, adibidez,
+a = 2 denean bere balioa, gutxi gora behera 0,69 da, eta a = 3 denean 1,10. Eta badago a-
+ren
+balio berezi bat, a = e, nun f
+′ (0)-ren balioa 1 den. Horrekin zera dugu,
+d
+dx
+ex = ex · 1 = e
+x
+Beraz y = ex-ren deribatua funtzio bera da.
+Aurreko emaitzari jarraipena emanez beste edozein funtzio exponentzialaren deribatua honela
+kalkulatu daiteke:
+y = ax → y = (e
+ln a)x = ex ln a
+eta hori funtzio konposatua da:
+ kanpoko funtzioa exponentziala, eta barrukoa x ln a. Beraz,
+d
+dx
+ax = (ex ln a) · (ln a) = a
+x ln a
+
+1.2.4
+Alderantzizko Funtzioen Deribatua
+Badakigu f funtzioa bat-bat denean 
+(funtzio injektiboa) baduela bere alderantzizkoa f
+−
+1. Honela
+daude lotuta,
+y = f
+−
+1(x) ⇐⇒ f(y) = x
+f
+−
+1 ere bat-bat funtzioa da.
+Demagun f deribagarri dela (puntu batean edo tarte batean). Orduan f
+−
+1 ere deribagarri
+da. Nola kalkulatu
+d
+dx
+f
+−
+1(x)?
+d
+dx
+f
+−
+1(x) =
+dy
+dx
+= lim
+∆x→0
+∆y
+∆x
+= lim
+∆x→0
+1
+∆x/∆y
+=
+1
+lim∆y→0(∆x/∆y)
+=
+1
+f ′(y)
+=
+1
+f ′(f −1(x))
+Hori aplikatzeko adibidea hurrengo kasu orokorra da.
+1.2.5
+Funtzio Logaritmikoen Deribatua
+y = loga x funtzio logaritmikoak a
+x funtzio exponentzialen alderantzizko funtzioak dira. Baliokide-
+tasun hau idatzi dezakegu,
+y = loga x ⇐⇒ x = a
+y
+Eta logaritmoaeren deribatua,
+d
+dx
+loga x =
+dy
+dx
+=
+1
+dx
+dy
+=
+1
+d
+dy
+ay
+=
+1
+ay ln a
+=
+1
+x ln a
+a = e logaritmo naturalaren kasuan,
+d
+dx
+ln x =
+1
+x ln e
+=
+1
+x
+adibidea
+1.7. Kalkulatu f (x) = ln |x| funtzioaren deribatua.
+Ebazpena:
+Funtzio konposatua dugu, f = h ◦ g nun g(x) = |x| eta h(x) = ln x. Beraz,
+f
+′ (x) =
+1
+|x|
+d
+dx
+|x| =
+
+
+
+
+
+
+
+
+
+1
+−x
+· (−1) =
+1
+x
+,
+x < 0
+1
+x
+· 1 =
+1
+x
+,
+x > 0
+Beraz,
+d
+dx
+ln |x| =
+1
+x
+, x = 0
+f eta f
+′
+biek dute deﬁnizio-eremu bera. x = 0 denean g
+(0) = 0 eta g deﬁnituta dago, baina
+h ez dago deﬁnituta g
+(0) puntuan beraz f = h ◦ g ez dago deﬁnituta 0 puntuan eta hor ez da
+deribagarri.
+1.2.6
+e zenbakia Limite Moduan
+Ikasi berri dugu f (x) = ln x-en deribatua 1/
+x dela. Beraz x = 1 puntuan deribatua 1 da:
+f
+′(1) = 1. Deribatuaren deﬁnizioa kontuan hartuta,
+1 = f
+′ (1) = lim
+h→0
+ln(1 + h) − ln 1
+h
+= lim
+h→0
+ln(1 + h)
+h
+= lim
+h→0
+ln(1 + h)1/h
+
+edo, h aldagai mutua denez,
+1 = lim
+x→0
+ln(1 + x)1/x
+Hoiek berdinak badira baita ere hauek,
+e1 = e
+lim
+x→0
+ln(1 + x)1/x
+= lim
+x→0
+eln(1+x)
+1
+/x
+= lim
+x→0
+(1 + x)1/x = e
+Limite hori dela eta e-
+ren balioa hortik ebaluatu daiteke. Adibidez, balio hau lor daiteke,
+e ≈ 2, 7182818
+Batzuetan limitea beste eran idatzita aurkitu daiteke: x aldagaia n = 1/
+x aldagaiarekin
+ordezkatuz,
+e = lim
+n→∞
+1 +
+1
+n
+n
+zeren x → 0-ra doanean n → ∞ doa.
+1.2.7
+Deribaketa Logaritmikoa
+Zientziatan askotan y = f 
+(x) funtzioa formula konplexukoa izan daiteke, bere osagaiak funtzio
+xinpleak izan daitezke, baina elkarren artean biderkatzen edota zatitzen edota berreketak egit-
+en egon daitezke. f
+′(x) zuzenean kalkulatu ordez, lehenengo formularen logaritmoak hartzea
+komeni izaten da, eta gero deribatzen hasi. Hori deribaketa logaritmikoa deitzen dugu.
+ln f (x)-
+ren deribatua egiterakoan kontuan hartu behar dugu hori funtzio konposatua dela,
+kanpoko funtzioa logaritmoa eta barrukoa f bera izanik. Beraz,
+d
+dx
+ln f (x) =
+1
+f (x)
+f
+′(x) =
+f
+′ (x)
+f (x)
+adibidea
+1.8. Deribatu y =
+x3/4
+√
+x2 + 1
+(3x + 2)5
+.
+Ebazpena:
+Logaritmoak hartuta gauzak asko errazten dira kasu honetan,
+ln y =
+3
+4
+ln x +
+1
+2
+ln(x2 + 1) − 5 ln(3x + 2).
+Orain x-rekiko deribatuz,
+1
+y
+dy
+dx
+=
+3
+4
+1
+x
++
+1
+2
+2x
+x2 + 1
+− 5
+3
+3x + 2
+=
+3
+4x
++
+x
+x2 + 1
+−
+15
+3x + 2
+eta dy/dx askatuz,
+dy
+dx
+= y
+3
+4x
++
+x
+x2 + 1
+−
+15
+3x + 2
+=
+x3/4
+√
+x2 + 1
+(3x + 2)5
+3
+4x
++
+x
+x2 + 1
+−
+15
+3x + 2
+
+1.2.8
+Alderantzizko Funtzio Trigonometrikoen Deribatuak
+Bedi y = arcsin x funtzioa. Hori sin x funtzioaren alderantizkoa da. Hau da,
+y = arcsin x → x = sin y
+Hori lehen f (y) deitu dugu, eta f
+′(y) = cos y. Arcu sinua da lehen f −1(x) deitu duguna, eta
+f
+′(y)-n ordezkatuz cos y = cos(arcsin x) =
+√
+1 − x2. Beraz,
+d
+dx
+arcsin x =
+1
+√
+1 − x2
+Berdin-berdin y = arccos x → x = cos y, eta
+dx
+dy
+= − sin y = − sin(arccos x) = − 1 − x2
+Beraz,
+dy
+dx
+=
+1
+−
+√
+1 − x2
+Hauek dira alderantzizko funtzio trigonometrikoen deribatuak,
+d
+dx
+(sin
+−
+1 x) =
+1
+√
+1 − x2
+d
+dx
+(csc
+−
+1 x) = −
+1
+x
+√
+x2 − 1
+d
+dx
+(cos
+−
+1 x) = −
+1
+√
+1 − x2
+d
+dx
+(sec
+−
+1 x) =
+1
+x
+√
+x2 − 1
+d
+dx
+(tan
+−
+1 x) =
+1
+1 + x2
+d
+dx
+(cot
+−
+1 x) = −
+1
+1 + x2
+1.2.9
+Funtzio Inplizitoen Deribatua
+Gogoratuko dugunez funtzio inplizitoak f 
+(x, y) = 0 ekuaziokoak dira, nun y askatzea zaila den,
+edo komeni ez zaigun. Hala ere suposatzen dugu funtzio inplizitoan dagoen y aldagaia x-
+ren
+benetazko funtzioa dela, eta deribagarri, hau da, dy/
+dx existitzen dela. Bere formularen bat f
+funtzio inplizitoa deribatuz lor daiteke.
+Ikusten dugunez x aldatuz f aldatu egingo da, lehenengo zuzenean f alde batetik zuzenean
+delako x-ren menpeko; baina baita ere y-
+ren aldaketen bitartez, era ez zuzenean. Erabiltzen den
+metodoa diferentziazio inplizitoa deitzen da eta hurrengo bi adibidetan ikusiko dugu nola
+aritu behar den.
+adibidea
+1.9. x2 + y2 = 25 funtziotik abiatuta dy/
+dx deribatua kalkulatuko dugu, lehenengo
+x-rekiko diferentziatuz,
+d
+dx
+(x2 + y2) =
+d
+dx
+(25) → 2x + 2y
+dy
+dx
+= 0
+Lehenengo batuketa bat izan dugu, bigarren batugaia funtzio konposatu bat izan dela.
+Gure deribatua askatuz,
+dy
+dx
+= −
+x
+y
+
+adibidea
+1.10. Kalkulatu y
+′ ekuazio honetatik x3 + y3 = 6xy
+d
+dx
+(x3 + y3) =
+d
+dx
+(6xy) → 3x
+2 + 3y2
+dy
+dx
+= 6 y + x
+dy
+dx
+eta sinpliﬁkatuz eta askatuz,
+x2 + y2
+dy
+dx
+= 2y + 2x
+dy
+dx
+→
+dy
+dx
+=
+2y − x
+2
+y2 − 2x
+1.2.10
+Era Parametrikoko Funtzio Baten Deribatua
+Funtzio bat era parametrikoan badago x eta y aldagaien arteko menpekotasuna ez da zuzena,
+baizik eta parametro baten bidez, bedi t. Parametroa aldatu eta x eta y aldatu egiten dira.
+x = x(t)
+y = y(t)
+Adibidez x eta y higitzen ari den puntu baten koordenatuak izan daitezke, eta t igarotako
+denbora. t aldatuz puntua higitu egingo da y = f 
+(x) funtzioaren graﬁkoko kurban. f futzioaren
+formula aurkitzeko t = t(x) beharko genuke eta y = y
+(t) funtzioan ordezkatu. Horrek eskatzen
+du x = x
+(t) funtzioaren alderantzizko funtzioa egotea eta kalkulatzeko erraza izatea. Hala ere
+dy/
+dx deribatuaren balioak aurkitzeko nahikoa da jakitea alderantzizko funtzio hori badagoela,
+kalkulatu gabe.
+Deribatzeko funtzio konposatua dugula pentsa dezakegu t x-ren funtzio delako,
+dy
+dx
+=
+dy
+dt
+·
+dt
+dx
+=
+dy
+dt
+dx
+dt
+=
+y
+′ (t)
+x′(t)
+Hori ere t-ren menpeko funtzioa izango da, puntuaren koordenatuak bezala.
+1.3
+Diferentziala. Konzeptua eta Esanahi Geometrikoa
+Bedi f funtzio deribagarria x puntuan. Deribatuaren deﬁnizioa hau da,
+f
+′ (x) = lim
+∆x→0
+∆y
+∆x
+nun ∆y = f (x + ∆x) − f
+(x). Limite bat denez x puntura hurbilketa prozesu bat da. Prozesua
+bukatu arte zatiketaren balioa ez da orokorrean f
+′(x) balio zehatza izango,
+∆y
+∆x
+= f
+′(x) + α
+nun α zerora joango den ∆x zerora doanean. Hau ere idatzi dezakegu, ∆x-
+rekin biderkatuz,
+∆y = f
+′ (x)∆x + α∆x
+Beraz ∆y inﬁnitesimoa, bi inﬁnitesimoen batura moduan dugu. Hala ere bi hoiek ez dira orden
+berdinekoak. Orokorrean f
+′ (x) = 0 izango da, eta horrek egiten du α∆x ordena handiagoko
+inﬁnitesimoa izatea f
+′(x)∆x baino. Azken honen ordena ∆x inﬁnitesimoarena da, baina α∆x-
+rena handiagoa da,
+lim
+∆x→0
+α∆x
+∆x
+= lim
+∆x→0
+α = 0
+
+Lortu dugun berdintzan,
+∆y = f
+′ (x)∆x + α∆x
+y-ren diferentziala dugu dy ≡ f
+′ (x)∆x.
+Ikusten dugunez x aldatu ∆x kopuruz, eta
+funtzioaren aldaketaren, ∆y, zati bat ematen du. Ez da aldaketa guztia zeren α∆x zatia ere
+hor dago, baina bai zati nagusia ∆y inﬁnitesimoarena.
+Goikoa kontuan hartuta laster konturatzen gara zein den diferentzialaren esannahi geometrikoa:
+f funtzioaren aldaketaren zati bat, lerro ikutzaileak ematen duena.
+∆y
+dy
+x
+x
++ ∆x
+∆x
+0
+x
+y
+y
+= f (x)
+P
+∆y dy
+x
+x
++ ∆x
+∆x
+0
+x
+y
+y
+= f (x)
+P
+Diferentzialaren idazketa askotan beste moduan ere idazten da. Lehenengo x aldagaiaren
+diferentziala deﬁnitzen da dx ≡ ∆x, nun ∆x → 0 doan. Orduan dy = f
+′(x) dx idazten da.
+adibidea
+1.11. Kalkulatu f (x) = x3 + x2 − 2x + 1 funtzioaren diferentziala a) ∆x :
+ 2 → 2.05
+eta b) ∆x : 2 → 2.01 denean. Kasu bakoitzean alderatu dy-ren balioa ∆y-
+ren balioarekin.
+Ebazpena:
+Orokorrean dy = f
+′(x) dx = (3x2 + 2x − 2) dx, eta x = 2 denean, dy = 14 dx. Emandako
+∆x-rekin,
+1)∆x = 0.05 → dy = 14 dx = 0.70
+2)∆x = 0.01 → dy = 14 dx = 0.14
+Funtzioaren aldaketa osoak hauek dira,
+1)∆y = f (2.05) − f(2) = 9.718 − 9 = 0.718
+2)∆y = f (2.01) − f(2) = 9.141 − 9 = 0.141
+Bigarren kasuan diferentziala hurbilketa hobeagoa da, bai balio absolutuz bai erlatiboz.
+adibidea
+1.12. Esfera baten erradioa 21 ± 0.05 cm-
+koa neurtu dugu. Zenbat izango da bolu-
+menaren errorea erradio horrekin kalkulatuta?
+Ebazpena:
+Ariketa hau zailtxuagoa da, baina Laborategian holako galderei erantzun behar izaten diegu,
+V =
+4
+3
+πR3 → V =
+4
+3
+π213 = 38792.386 cm3
+
+Bolumenaren errorea erradioaren erroearekin dago lotuta ∆R = 0.05 cm. Baina nola? Er-
+antzuna:
+ dy eta dx lotuta dauden moduan. Guk erradioaren errorea, aldaketa, dugu eta behar
+duguna bolumenaren aldaketa da, bere errorea. Aldaketa hoiek, lehenengo hurbilketan deribat-
+uak lotzen ditu, beraz V -ren diferentziala hartzen dugu. Ez da V -
+ren aldaketa osoa izango, bai
+bere zati nagusia.
+∆V ≈ V
+′ (R) ∆R
+Beraz,
+V
+′ (R) = 4πR2 = 4π · 21
+2 = 5541.769 → ∆V = V ′(R) · ∆R = 5541.769 · 0.05 = 277.1 cm3
+Errorearen tamaia ikusita honela emango genuke azken emaitza,
+V = 38800 ± 280 cm
+3
+Askotan kasu honetako ∆R eta ∆V lotzeko deribaketa logaritmikoa erabiltzen dugu,
+ln V = ln
+4
+3
+π + ln(R3) = ln
+4
+3
+π + 3 ln R
+eta alde bien diferentzialak hartuz,
+1
+V
+dV = 3
+1
+R
+dR → dV = 3
+V
+R
+dR = 4π R2 dR
+nahiz eta kasu honetan ez dugun asko irabazten.
+1.4
+Ordena Garaiagoko Deribatuak eta Diferentzialak
+f (x) funtzio deribagarritik deribaketa eragileak f
+′(x) deribatu funtzioa ematen du. Esan dugunez
+bere deﬁnizio-eremua murritzagoa izan daiteke f -
+rena baino. Hala ere jarraia izan daiteke bere
+deﬁnizio-eremuaren tarteren batean eta baita deribagarri ere. f
+′ (x) deribagarri den tarteetan
+bere deribaketak beste funtzio bat emango du f -ren bigarren deribatua,
+f
+′′ (x) =
+d
+dx
+f
+′ (x)
+Deribaketa prozesua segi badaiteke ordena handiagoko deribatuak lortzen dira:
+ hirugarren
+deribatua, laugarrena, . . . , n-garrena,
+f (n)(x) =
+dn
+dxn
+f (x)
+adibidea
+1.13. Kalkulatu y = ecx funtzioaren n-garren deribatuaren formula bat.
+Ebazpena:
+Deribatuen segida hau lortzen da,
+y
+′ = cecx, y′′ = c2 ecx, y′′′ = c3 ecx
+Eta araua hau litzateke, y(n) = cn ecx
+adibidea
+1.14. Aurkitu y = sin x funtzioaren n-garren deribatuaren formula bat.
+
+Ebazpena:
+Honela jokatu daiteke,
+y
+′ = cos x = sin x +
+π
+2
+y
+′′ = − sin x = sin(x + π) = x + 2
+π
+2
+y
+′′′ = − cos x = sin x + 3
+π
+2
+yiv = sin x = sin x + 4
+π
+2
+..
+.
+y(n) =
+dn
+dxn
+sin x = sin x + n
+π
+2
+Diferentzialak ere bat baino ordena handiagokoak izan daitezke. Lehenengo ordenakoa hau
+da,
+dy = f
+′ (x) dx
+Berdintzaren bigarren zatia x-ren eta dx-
+ren funtzioa da. Bata edota bestea, edozein aldatu
+eta dy aldatu egingo da. Bestaldetik x-ren aldaketa eta dx-
+ren aldaketa ez dute elkarrekin zer
+ikusirik, edozein alda daiteke bestea aldatu gabe. Partikularki dy x-
+ren funtzioa da eta bere
+diferentziala deﬁnitu daiteke, beste edozein x-ren funtzioan bezala. Hori f -
+ren bigarren ordenako
+diferentziala litzateke, d(dy) = d2y idazten delarik. Hau dugu,
+d2y = [f
+′ (x) dx]′ dx = f ′′(x) dx dx = f ′′(x)(dx)2 = f ′′(x) dx2
+dx-ren parentesia kendu egiten da, agian ulertzeko zailagoa.
+Berriro ere d2y x-ren funtzio da, f
+′′ (x)-ren bitartez, eta bere diferentziala deﬁnitu daiteke,
+d3y = [f
+′′ (x) dx2]′ dx = f ′′′(x) dx3
+Horrela segi daiteke n-garren ordenako diferentziala lortu arte, hori dn
+−
+1y diferentzialaren
+diferentziala delarik,
+dny = f (n)(x) dxn
+Diferentzialen zatiketaren bidez, f (n)(x)-ren formula hau lortzen dugu,
+dny = f (n)(x) dxn → f
+(n)(x) =
+dny
+dxn
+1.5
+Rolle, Lagrange, eta Cauchy-ren Teoremak. L’Hospital-en
+Araua.
+Hiru teorema hoiek funtzio deribagarriek betetako teoremak dira. Lehenengo biak intuitiboak
+dira eta beren enuntziatua emango dugu bakarrik.
+
+f
+(b)
+y
+= f (x)
+m
+= f ′(c)
+0
+x
+y
+a
+f
+(a)
+c
+b
+f
+(b) − f(a)
+b − a
+f
+(a) = f (b)
+y
+x
+a
+b
+0
+m
+= f ′(c) = 0
+y
+= f (x)
+c
+teorema
+1.1. Rolle-ren Teorema. f funtzio erreala [a, b] tartean jarrai, 
+(a, b) tartean de-
+ribagarri, eta f (a) = f (b) bada, orduan 
+(a, b) tartean badago c puntu bat, gutxienez bat, nun
+f
+′(c) = 0
+Funtzioa konstante bada tarteko puntu guztietan beteko da f
+′(c) = 0. Orokorrean, f goruntz
+hasten bada beheruntz ere etorri beharko da, eta beheruntz hasiko den unean malda nulua
+izango da. Berdin hasi a puntutik beheruntz hasten bada.
+teorema
+1.2. Lagrange-ren Teorema. f funtzio erreala [a, b] tartean jarrai eta 
+(a, b) tartean
+deribagarri bada, orduan 
+(a, b) tartean badago c puntu bat, gutxienez bat, nongo deribatuarekin
+hau dugun f (b) − f(a) = f
+′(c)(b − a).
+Ikusten dugunez f
+′(c) balioa (a, f (a)) eta (b, f (b)) puntuak zuzenean lotzen dituen lerroaren
+malda da.
+teorema
+1.3. Cauchy-ren Teorema. Bitez f eta g funtzio errealak, biak jarraiak [a, b]
+tartean, deribagarri (a, b) tartean, eta g
+′ (x) = 0 (a, b) tartean direla. Orduan (a, b) tartean
+badago c puntu bat nun
+f (b) − f(a)
+g(b) − g(a)
+=
+f
+′ (c)
+g′(c)
+Frogapena:
+Bedi,
+Q =
+f (b) − f(a)
+g(b) − g(a)
+eta deﬁni dezagun F (x) funtzio berri bat,
+F (x) = f (x) − f(a) − Q[g(x) − g(a)]
+F deribagarri da (a, b) tartean f eta g ere deribagarri direlako, eta jarraia 
+[a, b] tartean.
+Gainera,
+F (a) = f (a) − f(a) − Q[g(a) − g(a)] = 0
+F (b) = f (b) − f(a) −
+f (b) − f(a)
+g(b) − g(a)
+[g(b) − g(a)] = 0
+Beraz badago c puntu bat, a < c < b, nun F
+′ (c) = 0. Azken berdintza garatuz,
+F
+′ (c) = f ′(c) − Qg′(c) = 0 → Q =
+f
+′ (c)
+g′(c)
+Beraz,
+Q =
+f (b) − f(a)
+g(b) − g(a)
+=
+f
+′(c)
+g′(c)
+q.e.d.
+Azaltzeko gelditzen zaigun azken teoremak l’Hospital-
+en Araua du izen. Zera dio,
+
+teorema
+1.4. Bitez f eta g funtzio erreal deribagarriak eta g
+′ (x) = 0, a puntua gordetzen duen
+I tarte ireki batean (agian a-n bertan izan ezik). Demagun,
+lim
+x→a
+f (x) = 0
+eta
+lim
+x→a
+g(x) = 0
+dela,
+edo
+lim
+x→a
+f (x) = ±∞
+eta
+lim
+x→a
+g(x) = ±∞ dela.
+(Beste hitzetan, 0/0 edo ∞/∞ indeterminazioak ditugula.) Orduan,
+lim
+x→a
+f (x)
+g(x)
+= lim
+x→a
+f
+′(x)
+g′(x)
+,
+eskuineko limitea existitzen bada (edo ∞ edo −∞ bada.)
+Frogapena:
+Bedi limx→a f (x) = 0 eta limx→a g(x) = 0 kasua. Bedi,
+L = lim
+x→a
+f
+′ (x)
+g′(x)
+Frogatu nahi duguna limx→a f (x)/g
+(x) = L dela da. Deﬁni dezagun bi funtzio berri
+F (x) =
+f (x) x = a
+0
+x = a
+G(x) =
+g(x)
+x = a
+0
+x = a
+F jarraia da I tartean, alde batetik I tarteko x = a puntuetan f jarraia delako, bestetik
+lim
+x→a
+F (x) = lim
+x→a
+f (x) = 0 = F (a)
+delako. Era berdinean G(x) ere jarraia da I osoan.
+I
+a
+y
+x
+Bedi x ∈ I eta x > a. Orduan F eta G jarraiak dira 
+[a, x] tartean eta deribagarri (a, x)
+tartean, hor ere G
+′ = 0 delarik ((a, x) tarte irekian G′ = g′ delako). Cauchy-ren teoremagatik
+badago y zenbaki bat a < y < x, nun
+F
+′ (y)
+G′(y)
+=
+F (x) − F (a)
+G(x) − G(a)
+=
+F (x)
+G(x)
+Azken berdintzan F (a) = G(a) = 0 erabili dugula (ikus F -ren eta G-
+ren deﬁnizioak.)
+Orain a < y < x izanik, x → a
++-ra joaten bada, y → a+-ra joango da ere, beraz
+lim
+x→a+
+f (x)
+g(x)
+= lim
+x→a+
+F (x)
+G(x)
+= lim
+y→a+
+F
+′ (y)
+G′(y)
+= lim
+y→a+
+f
+′(y)
+g′(y)
+= L.
+Garapen berdina erabil daiteke ezker aldeko limitearentzako. Ezker aldeko limitea L da ere.
+Guztira,
+lim
+x→a
+f (x)
+g(x)
+= L
+q.e.d.
+Hurrengo adibideak egingo ditugu,
+
+1) lim
+x→1
+ln x
+x − 1
+Zatikizunaren eta zaitzailearen limiteak 0 dira, beraz 0/
+0 indeterminazioa dugu. Biak dira
+deribagarri x = 1 puntuaren inguruan eta,
+lim
+x→1
+1/x
+1
+= 1
+Hori deribatuen zatiketaren limitea da. Existitzen denez jatorrizko funtzioen zatiketaren
+limitea ere hori izango da (l’Hospital),
+lim
+x→1
+ln x
+x − 1
+= lim
+x→1
+(ln x)
+′
+(x − 1)′
+= lim
+x→1
+1/x
+1
+= 1
+2) lim
+x→∞
+ex
+x2
+Orain funtzio bien limitea ∞ da eta ∞/
+∞ indeterminazioa dugu. Ez dugu ikusten metodo
+elementalekin nola kendu indeterminazioa, eta funtzioak deribagarriak direnez l’Hospital-
+en arauarekin hasiko gara,
+lim
+x→∞
+ex
+x2
+= lim
+x→∞
+d
+dx
+(ex)
+d
+dx
+(x2)
+= lim
+x→∞
+ex
+2x
+Hori berriro ∞/
+∞ indeterminazioa da, baina funtzio berriak deribagarri dira, beraz beren
+zatiketaren limitea aurkitzeko berriro aplikatuko dugu l’Hospital,
+lim
+x→∞
+ex
+x2
+= lim
+x→∞
+ex
+2x
+= lim
+x→∞
+ex
+2
+= ∞
+Hau da ex funtzioa, x gero eta handiagoa eginez, x2 funtzioa baino askoz azkarrago hand-
+itzen da. Beren zatiketa ‘inﬁnito’ bat da.
+3) lim
+x→∞
+ln x
+3
+√
+x
+Berriro ∞/∞ indeterminazioa dugu, eta berriro funtzio biak deribagarriak dira,
+lim
+x→∞
+ln x
+3
+√
+x
+= lim
+x→∞
+1/x
+(1/3)x−2/3
+= 3 lim
+x→∞
+x2/3
+x
+= 3 lim
+x→∞
+1
+x1/3
+= 3 lim
+x→∞
+1
+3
+√
+x
+= 3 · 0 = 0
+Logaritmo naturala nahiko apal handitzen da x handietan.
+4) lim
+x→0
+tan x − x
+x3
+Orain 0/
+0 indeterminazioa dugu. Goiko tan x eta x ordena bereko inﬁnitesimoak dira.
+Funtzio deribagarriak ditugu eta l’Hospital-en arabera,
+lim
+x→0
+tan x − x
+x3
+= lim
+x→0
+1
+cos2 x
+− 1
+3x2
+= lim
+x→0
+sin2 x
+3x2 cos2 x
+=
+1
+3
+lim
+x→0
+sin x
+x
+2
+lim
+x→0
+1
+cos2 x
+=
+1
+3
+· (1)
+2 · (1) =
+1
+3
+tan x − x inﬁnitesimoa hirugarren ordenakoa da x inﬁnitesimoarekiko.
+
+5) lim
+x→π
+sin x
+1 − cos x
+Agian itsu-
+itsuan has gintezkeen l’Hospital aplikatzen kasu honetan ere, baina eskatzen
+den limitea pixka bat aztertuz laster konturatuko gara hor ez dugula indeterminaziorik:
+goikoaren limitea 0 da, baina behekoarena 1 − 
+(−1) = 2, beraz zatiketarena 0 da.
+6) lim
+x→0+
+x ln x
+Orain dugun indeterminazioa 0 · ∞ erakoa da. Aurreko erako indeterminazioa bihurtzeko
+(0/0 edo ∞/
+∞), biderkatzen dagoen funtzio bat zatitzen jarriko dugu. x funtzioa auker-
+atuko dugu, hurrengo kalkuluetarako hori delako aukera egokiena,
+lim
+x→0+
+x ln x = lim
+x→0+
+ln x
+1/x
+= lim
+x→0+
+1/x
+−1/x2
+= lim
+x→0+
+(−x) = 0
+7) limx→(π/2)+(sec x − tan x)
+Secantea cosinuaren alderantzizkoa da, eta π/
+2 puntuan bere limitea ∞ da, cosinua an-
+ulatzen joaten delako. Kentzen dagoen tangenteari hori gertatzen zaio ere. Eta ∞ − ∞
+indeterminazioa dugu 
+(ez noski ∞ + ∞ izango balitz). Orokorrean indeterminazio hori
+ekiditzen hasteko biderkatu eta zatitu ∞ + ∞-
+rekin egiten dugu. Kasu honetan ez da be-
+harrezkoa, secantea eta tangentea funtzioak sinu eta cosinu funtzioekin jartzen baditugu.
+lim
+x→(π/2)+
+(sec x − tan x) =
+lim
+x→(π/2)+
+1
+cos x
+−
+sin x
+cos x
+=
+lim
+x→(π/2)+
+1 − sin x
+cos x
+Orain 0/0 indeterminazioa dugu, funtzio deribagarriekin,
+lim
+x→(π/2)+
+(sec x − tan x) =
+lim
+x→(π/2)+
+− cos x
+− sin x
+=
+0
+−1
+= 0
+8) lim
+x→0
+(1 + sin 4x)cot x
+Hor duguna funtzioen arteko berreketa funtzioa da, eta era honetako limitea
+lim
+x→a
+[f (x)]g(x)
+Hor ere indeterminazioak sor daitezke: 00, ∞
+0, 1∞ erakoak. Hoiek ekiditzeko l’Hospital
+araua ere erabili daiteke, baina ez zuzenean, logaritmoak hartu ondoren baizik,
+ln y = g(x) ln f (x)
+eta kontuan hartuta,
+[f (x)]g(x) = [eln f(x)]g(x) = eg(x) ln f(x)
+dela, hor funtzio konposatua dugu, kanpotik funtzio exponentziala eta hori jarraia da.
+Berretzaileak limiterik badu, orduan exponentziala ere bai, bere balioa e ber limitea izanik.
+Gure adibidean 1
+∞ erako indeterminazioa dugu. Logaritmoa hartuta,
+ln y = cot x ln(1 + sin 4x) =
+ln(1 + sin 4x)
+1/ cot x
+=
+ln(1 + sin 4x)
+tan x
+eta hor lehenengo 0 · ∞ indeterminazioa dugu, eta azkenean 0/
+0. Funtzioak deribatu
+daitezke 0-aren eskuin aldean, eta l’Hospital erabiliz,
+lim
+x→0+
+ln y = lim
+x→0+
+4 cos 4x
+1 + sin 4x
+cos2 x = 4
+Beraz,
+lim
+x→0+
+(1 + sin 4x)cot x = elimx→0+ cot x ln(1+sin 4x) = e4
+
+9) lim
+x→0+
+xx
+Orain 00 indeterminazioa dugu. Berriro logaritmo naturala hartuz, logaritmoaren limitea
+aztertuko dugu,
+ln y = x ln x
+eta,
+lim
+x→0+
+x ln x = lim
+x→0+
+ln x
+1/x
+= lim
+x→0+
+1/x
+−1/x2
+= lim
+x→0+
+(−x) = 0
+Beraz,
+lim
+x→0+
+xx = elimx→0+ x ln x = e0 = 1
+1.6
+Taylor Bidezko Garapena
+Lehen ikusi dugu diferentzialaren konzeptua,
+dy = f
+′(x)∆x
+hori zela ∆y funtzioaren aldaketaren zati nagusia,
+∆y = f
+′ (x)∆x + α∆x
+nun α∆x inﬁnitesimoa ∆x baino ordena garaiagoko inﬁnitesimoa den. Demagun funtzioaren
+aldaketa (a, f (a)) puntutik hasita egin dugula, orduan ∆y = f (x) − f
+(a) eta ∆x = x − a. Hau
+gelditzen da,
+f (x) − f(a) = f
+′ (a)(x − a) + α(x − a) → f(x) = f(a) + f′(a)(x − a) + α(x − a)
+Hor, dagoeneko, hasi gara f funtzioa Taylor bidez garatzen, berdintzaren eskuin aldea da
+Taylor garapenaren hasiera. f (a) + f
+′ (a)(x − a) zatia funtzioaren hurbilketa lineala deitzen
+da. Taylor garapenak proposatzen duena gelditzen den zatia (x − a)
+n polinomioen konbinaketa
+lineala moduan banatzea da. Guztira,
+f (x) = f (a) + f
+′(a)(x − a) + c2(x − a)
+2 + c3(x − a)3 + · · · + cn(x − a)n
+Berdintzaren eskuin aldea Taylor polinomioa deitzen da. Polinomio hori x = a denean
+funtzioaren berdina egiten da: f (a) + f
+′ (a) · 0 + . . . cn · 0 = f(a). Polinomiaoren deribatua,
+polinomioa Tn(x) deituko dugula, zera da,
+T
+′
+n(x) = f
+′ (a) + 2c2(x − a) + 3c3(x − a)
+2 + · · · + ncn(x − a)n−1
+eta x = a puntuan, T
+′
+n(a) = f
+′ (a), hau da, bat egiten du f -ren deribatuarekin.
+Ez hori bakarrik, cn koeﬁzienteak era egokian aukeratuz n-
+garren deribatuek ere bat egin
+dezakete,
+T (n)
+n
+(a) = f (n)(a)
+Azteru dezagun berdintza hori, bigarren deribatua zera da,
+T
+′′
+n (x) = 2c2 + 6c3(x − a) + · · · + n(n − 1)cn(x − a)
+n−2
+eta T
+′′
+n (a) = 2c2 = f
+′′ (a) → c2 = (1/2)f′′(a). c2 horrekin bigarren deribatuek bat egitea
+lortzen da.
+
+Hurrengo koeﬁzientearekin hirugarren deribatuek bat egitea lor dezakegu,
+T
+′′′
+n (x) = 6c3 + 24c4(x − a) + · · · + n(n − 1)(n − 2)(x − a)
+n−3 → T ′′′
+n (a) = 6c3
+eta c3 = (1/6)f
+′′′ (a) aukeratuko genuke. Orain arte lortutakoak hauek dira,
+c0 = f (a), c1 = f
+′(a), c2 =
+1
+2
+f
+′′ (a), c3 =
+1
+6
+f
+′′′ (a)
+eta koeﬁziente hoiekin,
+T3(x) = c0f (a) + c1(x − a) + c2(x − a)
+2 + c3(x − a)3
+T3(x) Taylor polinomioak eta f 
+(x) funtzioak bat egiten dute x = a puntuan. Baita beren
+lehenengo, bigarren eta hirugarren deribatuek ere.
+n-garren deribatua eginez gai bakarra gelditzen da anulatu gabe,
+T (n)
+n
+(x) = n(n − 1)(n − 2) . . . [n − (n − 1)]cn(x − a)
+n−n = n(n − 1)(n − 2) . . . 1 · cn = n! cn
+nun n! = 1 · 2 · 3 · · · · (n − 1) · n da eta n-
+ren faktoriala deitzen den. Deribatuak biak berdinduz,
+T (n)
+n
+(a) = f (n)(a) → n! cn = f
+(n)(a) → cn =
+1
+n!
+f (n)(a)
+Izan ere, koeﬁziente guztiak dira formula horretakoak,
+c0 =
+1
+0!
+f (0)(a), c1 =
+1
+1!
+f
+′ (a), c2 =
+1
+2!
+f
+′′(a), c3 =
+1
+3!
+f
+′′′(a), . . . , cn =
+1
+n!
+f (n)(a)
+Nun lehenengoak funtzioa deribatu gabekoaren balioa gordetzen duen: f (0)
+(a). Koeﬁciente
+hoiekin Taylor polinomio hau dugu,
+Tn(x) =
+1
+0!
+f (0)(a)(x − a)
+0 +
+1
+1!
+f
+′ (a)(x − a) +
+1
+2
+f
+′′ (a)(x − a)
+2 + · · · +
+1
+n!
+f (n)(a)(x − a)
+n
+eta f 
+(x) funtzioaren hurbilketa bat da, gero eta orden handiagoko diferentzialen bidez egin-
+dakoa. Taylor-en polinomia (x − a)
+n monomioen konbinaketa lineala da, eta gero eta gehiago
+hartuz funtzioaren baliora nahi den beste gerturatu daiteke. Hori zehaztuko du bukaeran azter-
+tuko dugun teoremak.
+Monomio hoiek espazioko hiru bektore ezplanarrak bezala jokatzen dute:
+ beste edozein bek-
+torea hiruren konbinaketa lineala moduan jar daiteke, bektore sortzaileak dira. Era berean
+{(x − a)
+n} polinomiak funtzio deribagarrien multzo sortzaile bat dira 
+(Algebraren konzeptua.)
+Gelditzen zaiguna n-garren Taylor polinomioa f 
+(x) funtzioaren ze moduzko hurbilketa den
+aztertzea da. x = a puntuan bat egiten dute, baina a puntutik kanpo Taylor polinomioa f 
+(x)-
+en balioen hurbilketa bat besterik ez da izango. Geldituko den zatiaren balioa, noski, aurretik
+hartutako monomioen kopuruaren menpekoa izango da, bedi Rn(x),
+f (x) = Tn(x) + Rn(x)
+eta Rn(x) zerora joango da x → a-
+ra joango denenan, gainera Taylor polinomioaren azken
+gaian dagoen (x − a)
+n baino azkarrago. Hortaz gain pentsa dezakegu, orokorrean, monomio
+gehiago hartu beharko dugula, x puntua a puntutik aldenduago hartzen badugu. Hurrengo
+teoremak azaltzen du nola kuantiﬁkatu Rn(x) errore gaia (x − a)-
+ren balioaren arabera.
+
+teorema
+1.5. Demagun |x−a| ≤ d dela (a−d ≤ x ≤ a+d). Tarte horretan f
+(n+1)(x) akotatuta
+badago ( |f
+(n+1)(x)| ≤ M,) orduan
+|Rn(x)| ≤
+M
+(n + 1)!
+|x − a|
+n+1
+izango da.
+Beraz lehenengo erabaki behar dugu a puntutik zenbat nahi dugu aldendu eta gero aztertu
+n + 1 garren deribatuaren balio absolutuaren kota d luzerako tartean, x puntua tarte horretakoa
+dela. M kotarekin errorea akotatu daiteke.
+adibidea
+1.15. Bedi f 
+(x) = ex funtzioa eta a = 0 puntua. Tayloren hurbilketa erabiliko dugu
+0 ≤ x ≤ 1 hartuz. Deribatu funtzioa, deribatuaren edozein ordenarako, e
+x da, beti positiboa eta
+[0, 1] tartean e1 = e baino txikiagoa edo berdin. Errore gaiaren kota hau izango da,
+|Rn(x)| ≤
+e
+(n + 1)!
+xn+1, esandako tartean.
+Tarteko x = 1 muturrean eta n = 10 hartuz errorearen kota hau da,
+|R10(x = 1)| ≤
+e
+11!
+111 =
+e
+11!
+< 6.9 · 10
+−
+8
+Noski balio zehatza f (1) = e1 = e da eta errore erlatiboaren kota,
+|R10(1)|
+f (1)
+≤
+1
+11!
+< 2.6 · 10
+−
+8 < 10−7
+Taylor-en garapena a = 0 puntuan egiten denean Maclaurin-
+en garapena deitzen dugu.
+Adibidez horrela hasiko ziren funtzio elemental garrantzitsu batzuren Maclaurin garapenak,
+1
+1 − x
+= 1 + x + x2 + x3 + · · · + x
+n
+ex = 1 +
+x
+1!
++
+x2
+2!
++
+x3
+3!
++ · · · +
+xn
+n!
+sin x = x −
+x3
+3!
++
+x5
+5!
+−
+x7
+7!
++ · · · + (−1)
+n
+x2n+1
+(2n + 1)!
+cos x = 1 −
+x2
+2!
++
+x4
+4!
+−
+x6
+6!
++ · · · + (−1)
+n x
+2n
+(2n)!
+arctan x = x −
+x3
+3
++
+x5
+5
+−
+x7
+7
++ · · · + (−1)
+n x
+2n+1
+2n + 1

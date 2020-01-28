@@ -1,0 +1,77 @@
+
+
+
+
+Propietate metalogikoak 
+ 
+Konsistentzia:  
+•  Sinplea: Sistema formalean ezin da ondorioztatu formula bat eta bere 
+ukapena. Hau da, 
+S ϕ
+ϕ
+−
+∧ ¬
+/
+ 
+•  Absolutua: Gutxienez formula bat ezin da sisteman frogatu. Hau da: 
+badago formula bat 
+φ non 
+S ϕ
+−
+ 
+ 
+Zuzentasuna:  
+Sintaxiaren eta semantikaren arteko zubia eraikitzen duen propietatea da. 
+sistema bat zuzena da bere teorema guztiak logikoki baliozkoak direnean. 
+Hau da, 
+φ sistemaren teorema bat bada, orduan φ formula logikoki 
+baliozkoa da. Sinboloetan:  
+S ϕ
+−
+ bada, orduan 
+ϕ
+= . 
+Propietate hau orokor daiteke ondoko era honetan: Formula bat premisa 
+multzo batetik deribatzen bada sistema batean, premisa horien ondorio 
+semantikoa ere izango da. Sinboloetan:  
+S ϕ
+Γ −
+ bada, orduan 
+ϕ
+Γ =  
+ 
+Osotasuna: 
+Sintaxiaren eta semantikaren arteko zubia eraikitzen duen propietatea da, 
+zuzentasunaren alderantzizkoa: logikoki baliozkoak diren formulentzat 
+froga bat dago sisteman, hau da sistemaren teoremak dira. Sinboloetan:  
+ϕ
+=  bada, orduan 
+S ϕ
+−
+. 
+Aurrekoa bezala orokorrago adierazi daitekeen propietatea da: Premisa 
+multzo batetik semantikoki ondorioztatzen den formula oro, deribazio bat 
+izango du sisteman premisa multzo horretatik.  Sinboloetan:  
+ϕ
+Γ =  bada, orduan 
+S ϕ
+Γ −
+ 
+ 
+Erabakigarritasuna 
+Sistema bat erabakigarria da baldin badago prozeduraren bat 
+erabakitzeko formula bat sistemaren teorema den ala ez.  
+ 
+ 
+Axiomen independentzia 
+Sistemaren axiomak ezin dira deribatu bata besteetatik. 
+ 
+ 
+Logika elementala konsistentea, zuzena eta osoa dela frogatzen da. 
+Bestalde Logika elementala ez da erabakikorra, hau da ez dago 
+prozedurarik erabakitzeko edozein formula teorema den ala ez (logikarako 
+proposatutako edozein sistematan). Logika elementala erdierabakikorra 
+da. Hau da, formula bat teorema bada, badaude prozedurak hala dela 
+ziurtatzeko. Teorema ez bada, aldiz, prozedura horiek ez dira kasu 
+guztietan existitzen. 
+ 

@@ -1,0 +1,1726 @@
+
+
+
+Atala III
+Deribatu Partzialetako Ekuazioak eta
+Aldagaien banantzea
+7
+Sarrera
+Adibidea: bero eroalpena
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+1111
+T
+1
+T
+2
+0
+L
+x
+Adibidea: bero eroalpena
+Zeharkako dimentsioak
+≪ L, dimentsio bateko hurbilketa: u(x, t) tenperatura ere-
+mua.
+Bero eroalpen ekuazioa:
+ut = α
+2uxx .
+Hastapen baldintza:
+u(x, 0) = f (x).
+Mugalde baldintzak: bi muturretan baino termikoa, tenperatura konstanteak:
+u(0, t) = T1 ,
+u(L, t) = T2 .
+Problema: lortu
+u(x, t), ∀x ∈ [0, L] eta t ≥ 0: bero eroalpen ekuazioaren soluzia,
+hastapen baldintzaren eta mugalde baldintzen pean.
+Adibidea: bero eroalpena
+Ideia: gainezarmena. Ez zuzenean: mugalde baldintza desegokiak. Aldagai depen-
+dentearen aldaketa:
+ω(x, t) = u(x, t) − T1 − (T2 − T1)
+x
+L
+edo
+w(x, t) = u(x, t) − T1 − (T2 − T1)
+x2
+L2
+,
+edo
+v(x, t) = u(x, t) − g(x)
+non
+g(0) = T1 eta g(L) = T2 diren.
+27
+
+Adibidea: bero eroalpena
+Azken aukerarekin, hastapen baldintzapeko problema honela aldatzen da:
+vt = α
+2vxx + α2g′′(x) ,
+v(x, 0) = f (x) − g(x) ,
+v(0, t) = 0 ,
+v(L, t) = 0 ,
+mugalde baldintza homogeneoekin.
+Adibidea: bero eroalpena - Banantze problema
+Beste
+problema bat, ezberdina baina aurrekoari lotua, erabiliko dugu bere soluzioa
+eraikitzeko:
+ aldagai bananduen problema. Hastapen baldintzaren ordez, beste baldin-
+tza bat sartuko dugu: banantzea. Honezaz gain, gai inhomogeneoa ahaztuko dugu.
+Hori bai, mugalde baldintzak mantentzen ditugu.
+zt = α
+2zxx ,
+z(x, t) = X(x)T (t) ,
+z(0, t) = 0 ,
+z(L, t) = 0 .
+Problema: Tribiala ez den soluziorik existitzen al da? Soluzioak:
+ 1) ekuazio homo-
+geneoaren soluzioak; 2) mugalde baldintzak betetzen dituzte; 3) modu normalak dira
+(denborarekiko eboluzioa berbera dugu puntu guztietan!)
+Adibidea: bero eroalpena - Banantze eta mugalde baldintzak
+Ordezkatu banantze baldintza bai ekuazioan baita mugalde baldintzetan ere:
+X(x) ˙
+T (t) = α2X
+′′(x)T (t) ,
+X(0)T (t) = 0 = X(L)T (t) .
+Soluzioa tribiala ez izateko,
+T (t) funtzioak ezin du identikoki nulua izan. Beraz,
+X(0) = X(L) = 0 .
+Adibidea: bero eroalpena - Banantzea eta ekuazio homogeneoa
+Arrazoi bera dela eta,
+t
+∗ unean T (t∗) = 0 izango balitz, ˙
+T (t
+∗) nulua izan behar
+da. Beraz, nahiz eta, agian, ˙
+T (t)/T (t) puntu guztietan deﬁnituta ez egotea, t
+∗ puntu
+berezietan limitea existituko da. Eta konstante da:
+α2
+X
+′′(x)
+X(x)
+=
+˙
+T (t)
+T (t)
+= −λ
+2α2 .
+[Ez dago inolako funtsezko arrazoirik banantze konstantearen izena
+−λ
+2 beti izateko;
+adibide honetan emaitza ezaguna delako badakigu izen hori erabilgarria izango dela]
+28
+
+Adibidea: bero eroalpena - Sturm-Liouville
+X
+′′ + λ2X = 0 ,
+X(0) = X(L) = 0 .
+Dakigunez, tribiala ez den soluzioa ez da beti existituko. Kasu honetan, soilik
+λ ∈
+{λn = nπ/L} multzoan egonez gero tribialak ez diren soluzioak egongo dira, Xn
+(x) =
+sin nπx/L funtzioen proportzionalak hain zuzen ere. Hau Sturm - Liouville-
+ren oinarri
+propioa da
+; ondorioz: ideia: garatu hasierako probleman, mugalde baldintza egokie-
+kin
+,
+x aldagaiaren funtzio guztiak oinarri honetan. I.e.,
+v(x, t) =
+∞
+n=1
+cn(t) sin
+nπx
+L
+, g(x) =
+∞
+n=1
+gn(t) sin
+nπx
+L
+,
+eta
+f era berean.
+Adibidea: bero eroalpena - Oinarri propioan garatzea
+Trukatu dugu bi aldagaien funtzio ezezagun bat,
+v(x, t), aldagai bakarreko cn(t)
+funtzio multzoarekin.
+fn eta gn zuzenean kalkulagarriak dira:
+fn =
+2
+L
+L
+0
+dx f (x) sin
+nπx
+L
+eta
+gn modu antzekoan.
+Sartu garapenak ekuazioan eta hastapen baldintzetan, eta erabili ortogonalitatea:
+˙cn = −α
+2 n
+2π2
+L2
+cn − α
+2 n
+2π2
+L2
+gn ,
+cn(0) = fn − gn .
+Adibidea: bero eroalpena - AB soluzioa
+cn(t) = (fn − 2gn) e
+−
+α
+2n2π2t/L2 + g
+n .
+v(x, t) =
+∞
+n=1
+cn(t) sin
+nπx
+L
+.
+u(x, t = v(x, t) + g(x) .
+Adibidea: bero eroalpena -
+g jakin bat
+Hartu
+g(x) = T1 + (T2 − T1)x/L. Ondorioz
+gn =
+2
+nπ
+[T1 − (−1)
+nT2] .
+29
+
+Adibidea: bero eroalpena - ﬁsikarion ikuspuntua
+Ahaztu hasierako probleman hastapen baldintza. Soluzio egonkorrik al dago? Hau
+da, ondokoaren soluzioa:
+ξ
+′′(x) = 0 ,
+ξ(0) = T1 , ξ(L) = T2 .
+Bai:
+ξ(x) = T1 + (T2 − T1)x/L. Beraz u(x, t) − ξ(x) → 0 doa t → ∞ doanean, hau
+da,
+∞
+n=1
+βne
+−
+n
+2π2α2t/L2 sin
+nπx
+L
+,
+eta, hastapen baldintza betetzeko,
+βn = fn − ξn. Azkenean:
+u(x, t) = ξ(x) +
+∞
+n=1
+fn −
+2
+nπ
+(T1 − (−1)
+nT2) e−n
+2π2α2t/L2 sin
+nπx
+L
+.
+2. Adibidea: bero eroalpena eraztunean
+L luzerako eraztun bero-eroalea, hastapen tenperatura distribuzioa f (x) 
+(periodi-
+koa,
+L periododuna). Problema:
+ut = α
+2uxx ,
+u(x, 0) = f (x) ,
+v(0, t) = v(L, t) ,
+vx(0, t) = vx(L, t) ,
+garatu Fourier-en seriea:
+f (x) =
+α0
+2
++
+∞
+n=1
+αn cos
+2πnx
+L
++ βn sin
+2πnx
+L
+.
+u(x, t) =
+a0(t)
+2
++
+∞
+n=1
+an(t) cos
+2πnx
+L
++ bn(t) sin
+2πnx
+L
+.
+2. Adibidea: bero eroalpena eraztunean
+Ordezkatu ekuazioan eta hastapen baldintzan:
+˙a0 = 0 ,
+˙an = −
+4n2π2α2
+L2
+an ,
+˙b
+n =
+−
+4n2π2α2
+L2
+bn .
+an(0) = αn ,
+bn(0) = βn ,
+beraz, soluzioa ondokoa da:
+u(x, t) =
+α0
+2
++
+∞
+n=1
+αn cos
+2πnx
+L
++ βn sin
+2πnx
+L
+e
+−
+4n
+2π2α2t/L2 .
+30
+
+8
+Metodoaren deskribapena
+Metodoaren deskribapen orokorra
+• Menpeko aldagaia aldatu gainezarmenak onartzen dituzten mugalde baldintzak
+lortzeko.
+• Lortu aldagai baten (edo batzuen!) menpeko funtzioak garatzeko oinarri propio
+egokia.
+• Garatu funtzio horiek (guztiak!) oinarri propioan.
+• Hasierako problemaren baliokidea den (aldagai independente gutxiagoko) deri-
+batu partzialetako ekuazio multzoa edo ekuazio diferentzial arrunten multzoa
+• Berriz egin ekuazio arrunten multzoa lortu arte. Ebatzi, ordezkatu.
+Deskribapen xehatuagoa
+1. Saiatu mugalde baldintza “ezkutatuak”ikusten.
+2. Zeintzuk dira mugalde baldintzak (baldintzen artean)?
+3. Mugalde baldintzak ”homogeneizatu”/ periodiko bihurtu / apaindu.
+4. Lortutako problema berri honetatik, idatzi beste problema bat, non hastapen bal-
+dintzen ordez banantze baldintza agertzen den.
+5. Problema bananduaren soluzio ez-tribialak lortu.
+6. Horrela SL problema sorta bat sortzen da: kalkulatu oinarri propioa
+7. Alboratu orain problema banandua, eta erabili oinarri propioa mugalde baldintza
+egokiak dituen probleman.
+Caveat
+1. Aldagaien banantzea koordenatu sistema berezietan soilik dabil ondo. Metodoa
+erabiltzeko agian aldagai aldaketa beharrezkoa izango da.
+2. Lotutako SL eragilea zein den jakitea komenigarria izan daiteke, baina ez da
+beharrezkoa. Erabakigarria da, beste aldetik, oinarri ortogonal egokia lortzea;
+egokia DPErekiko eta mugalde baldintzekiko. Banantze prozesua eta SL eragi-
+learen identiﬁkazioa erabilgarria izan daiteke oinarri ortogonal egokia lortzeko,
+erabilgarria soilik.
+3. Per se, problema banandua ez da erabilgarria. Izatez, hasierako problema inho-
+mogeneoa bada, ez da batere erabilgarria: soluzio bananduak onak dira ekuazio
+homogeneoentzat soluzioa eraikitzeko. Gai inhomogeneoari dagokionez oinarri
+propioan garatu behar dugu.
+31
+
+9
+Mugalde baldintza ezkutatuak
+Mugalde baldintza ezkutatuak: adibidea - Laplacearra, koordenatu polarretan
+∇
+2u(x, y) = 0 , x2 + y2 ≤ R2
+u(x, y)|x2+y2=R2 = f (actan(y/x)) .
+Hobeto polarretan:
+u(x, y) = v(r, θ):
+1
+r
+∂
+∂r
+r
+∂v
+∂r
++
+1
+r2
+∂2v
+∂θ2
+= 0 , r ∈ [0, R) , θ ∈ [0, 2π) ,
+v(R, θ) = f (θ) .
+Adibidea, jarr.
+Lehenengo baldintza ezkutatuta: periodikotasuna. Fourier-en garapena:
+v(r, θ) =
+1
+2
+A0(r) +
+∞
+n=1
+[An(r) cos (nθ) + Bn(r) sin (nθ)] ,
+f (θ) =
+1
+2
+a0 +
+∞
+n=1
+[an cos (nθ) + bn sin (nθ)] .
+Beraz,
+1
+r
+d
+dr
+r
+dAn
+dr
+−
+n2
+r2
+An = 0 ,
+An(R) = an ,
+eta
+Bn era berean.
+Adibidea, jarr.
+Euler-en ekuazioa;
+n = 0 kasuan, ekuazioaren soluzio orokorra:
+An(r) → αr
+n + βr−n ,
+A0(r) → α + β ln r .
+2. baldintza ezkutatua
+:
+r = 0 puntuan erregularra izatea.
+Maths Mugalde baldintza singularra:
+ρ(r) = r, ρa0 ∼ r
+2.
+Phys Ez dago arrazoi ﬁsikorik zentruan singularitatea izatea.
+32
+
+Adibidea: soluzioa
+v(r, θ) =
+a0
+2
++
+∞
+n=1
+an
+rn
+Rn
+cos (nθ) + bn
+rn
+Rn
+sin (nθ) ,
+era esplizituagoan:
+v(r, θ) =
+1
+π
+2π
+0
+dσ f (σ)
+∞
+n=0
+r
+R
+n
+cos n(θ − σ) −
+1
+2
+=
+1
+2π
+π
+−
+π
+dσ f (σ)
+R2 − r
+2
+R2 + r2 − 2Rr cos(θ − σ)
+.
+Adibidea, era sistematikoan
+Problema banandua:
+1
+r
+∂
+∂r
+r
+∂z
+∂r
++
+1
+r2
+∂2z
+∂θ2
+= 0 ,
+z(r, θ) = ρ(r)Θ(θ)
+Badirudi beste baldintzarik ez dagoela...badago: periodikotasuna
+Θ(θ) funtzioan (koor-
+denatu sistemaren ondorioa!).
+Ekuazio bananduak
+Θ
+′′(θ)
+Θ(θ)
+= −
+r
+ρ(r)
+[rρ
+′(r)]
+′
+= −λ
+2 .
+SL problema:
+Θ
+′′ + λ2Θ = 0 ,
+Θ(0) = Θ(2π) , Θ
+′(0) = Θ′(2π) .
+10
+Beste kuestio batzuk
+Banantzeen kateaketa
+∂tu = ∇
+2u , u(x, y, t) , 0 ≤ x ≤ a , 0 ≤ y ≤ b ; u(x, y, 0) = g(x, y) ;
+u(0, y, t) = u(a, y, t) = u(x, 0, t) = u(x, b, t) = 0 .
+33
+
+x
+y
+0
+a
+b
+0
+Kateaketa II
+Problema banandu berria:
+∂tz = ∇
+2z , z(x, y, t) = A(x, y)T (t) ;
+z(0, y, t) = z(a, y, t) = z(x, 0, t) = z(x, b, t) = 0 .
+Beraz,
+˙
+T
+T
+=
+1
+A
+∇
+2A = −λ2 ,
+A(0, y) = A(a, y) = A(x, 0) = A(x, b) = 0 .
+Kateaketa III
+Problema berria: Nolakoa izan behar da
+λ ondoko problemak tribiala ez den solu-
+ziorik izateko?
+∇
+2A + λ2A = 0 ,
+(Helmholtz
+′ equation)
+A(0, y) = A(a, y) = A(x, 0) = A(x, b) = 0 .
+Berriro banantzea: problema hau eta banantzea,
+A(x, y) = X(x)Y (y)
+Kateaketa IV
+X
+′′
+X
+= −λ
+2 +
+Y
+′′
+Y
+= −µ
+2
+X(0) = X(a) = Y (0) = Y (b) = 0
+1. SL problema :
+µ nolakoa izan behar da ondokoaren soluzio ez-tribialik existitzeko:
+X
+′′ + µ2X = 0 , X(0) = 0 = X(a)
+Balio multzoa,
+µn = nπ/a, eta Xn(x) = sin nπx/a.
+34
+
+Kateaketa V
+SL2: eta
+Y ? Nolakoa izan behar da λ ondoko problema multzoak tribiala ez den
+soluziorik izateko?
+Y
+′′ + (µ2
+n − λ
+2)Y = 0 , Y (0) = 0 = Y (b)
+Indize multzo bikoitza:
+λ2nm = (m
+2/b2 + n2/a2)π2, eta Ym(y) = sin mπy/b.
+Kateaketa VI
+Beraz,
+Anm(x, y) = sin
+nπx
+a
+sin
+mπy
+b
+;
+λ2nm =
+n2π2
+a2
++
+m2π2
+b2
+Hauxek dira Dirichlet mugalde baldintzapeko laukizuzenean Laplace-
+arraren funtzio
+eta balio propioak.
+Kateaketa, amaiera
+Hasierako problemara, berriro: garatu
+u eta g:
+gnm =
+2
+ab
+a
+0
+dξ
+b
+0
+dη g(ξ, η) sin
+nπξ
+a
+sin
+mπη
+b
+,
+g(x, y) =
+∞
+n,m=1
+gnm sin
+nπx
+a
+sin
+mπy
+b
+.
+u(x, y, t) =
+∞
+n,m=1
+unm(t) sin
+nπx
+a
+sin
+mπy
+b
+.
+Kateaketa, amaiera
+Ordezkatu ekuazioan eta hastapen balioaren baldintzan:
+˙unm = −λ
+2
+nmunm ;
+unm(0) = gnm .
+Ondorioz:
+u(x, y, t) =
+∞
+n,m=1
+gnme
+−
+λ
+2
+nm t
+sin
+nπx
+a
+sin
+mπy
+b
+.
+35
+
+11
+AB garrantzitsuen katalogoa
+11.1
+Koordenatu polarrak
+Bero eroalpen ekuazioa koordenatu polarretan
+γ2∇
+2u = ut ,
+u(r, θ, 0) = g(r, θ) ,
+u(a, θ, t) = 0 .
+Baldintza ezkutatua:
+θ aldagaiarekiko periodikotasuna:
+g(r, θ) =
+α0(r)
+2
++
+∞
+n=1
+[αn(r) cos nθ + βn(r) sin nθ] ;
+u(r, θ, t) =
+A0(r, t)
+2
++
+∞
+n=1
+[An(r, t) cos nθ + Bn(r, t) sin nθ] ;
+Bero eroalpen ekuazioa koordenatu polarretan
+γ2
+1
+r
+∂
+∂r
+r
+∂An
+∂r
+−
+n2
+r2
+An =
+∂An
+∂t
+,
+An(r, 0) = αn(r) =
+1
+π
+2π
+0
+dθ g(r, θ) cos θ ;
+An(a, t) = 0 .
+eta
+Bn(r, t) funtzioekin era berean.
+Orain berriro aldagaien banantzea
+Bero eroalpen ekuazioa koordenatu polarretan
+Banantze problemen multzo berri bat:
+γ2
+1
+r
+∂
+∂r
+r
+∂zn
+∂r
+−
+n2
+r2
+zn =
+∂zn
+∂t
+,
+zn(r, t) → R(r)T (t) ; zn(a, t) = 0 .
+Eta hemendik . . .
+Bero eroalpen ekuazioa koordenatu polarretan
+γ2
+rR
+(rR
+′)
+′
+−
+γ2n2
+r2
+=
+˙
+T
+T
+= −λ
+2γ2
+Hau dela eta
+1
+r
+(rR
+′)
+′
++ λ2 −
+n2
+r2
+R = 0 , R(a) = 0 .
+Mugalde baldintza baten faltan? Ez:
+ erregulartasunaren hipotesi ezkutatua. Ekuazioa-
+ren
+soluzio orokorra:
+R → c1Jn(λr) + c2Yn(λr) .
+c2 nulua, erregularra izateko.
+36
+
+Bessel-en funtzioen garapenak
+Balio propioen ekuazioa:
+Jn(λa) = 0 .
+Balio propioen ekuazioaren soluzioa: biz
+ξ
+(n)
+k
+zenbakia
+Jn funtzioaren k-garren erroa.
+Soluzio ez tribial existitzen da baldin eta
+λ ∈ {ξ
+(n)
+k
+/a}
+∞
+k=1 badago, funtzio propioak
+Jn(ξ
+(n)
+k
+r/a). f (r) funtzioaren garapenak: haztapena r dugu;
+f (r) =
+∞
+k=1
+
+
+2
+a2J2n+1 ξ
+(n)
+k
+a
+0
+ds sf (s)Jn
+ξ
+(n)
+k
+s
+a
+
+
+Jn
+ξ
+(n)
+k
+r
+a
+.
+11.2
+Bessel-en funtzioei buruzko interludioa
+Bessel-en funtzioei buruzko interludioa
+xJ2ν(x) =
+1
+2
+d
+dx
+x2 − ν
+2 J2
+ν (x) + x
+2 (J′
+ν (x))
+2
+,
+Bessel-en ekuazioa erabiliz;
+xJ
+′
+ν (x) = νJν (x) − xJν+1(x) ,
+funtzio sortzailea erabiliz, edo
+Jν funtzioaren berretura seriea:
+Jν(x) =
+∞
+n=0
+(−1)
+n
+n!Γ(ν + n + 1)
+x
+2
+2n+ν
+.
+Bessel-en funtzioak: gehigarriak
+a
+0
+dr rJ2n
+ξ
+(n)
+k
+r
+a
+=
+a2
+ξ
+(n)
+k
+2
+ξ
+(n)
+k
+0
+ds sJ2n(s)
+=
+a2
+2
+J
+′
+n
+ξ
+(n)
+k
+2
+=
+a2
+2
+J2n+1 ξ
+(n)
+k
+11.3
+Berriro polarrak
+Bero eroalpen ekuazioa koordenatu polarretan
+An(r, t) =
+∞
+k=1
+ank(t)Jn
+ξ
+(n)
+k
+r
+a
+,
+37
+
+˙ank = −γ
+2
+ξ
+(n)
+k
+a
+2
+ank ;
+ank(0) =
+2
+a2J2n+1 ξ
+(n)
+k
+a
+0
+ds sαn(s)Jn
+ξ
+(n)
+k
+s
+a
+12
+Harmoniko esferikoak
+Harmoniko esferikoak
+Askotan, lehen banantze prozesua egin ondoren,
+∇
+2u + λ2u = 0 aztertu behar
+dugu. Hain zuzen ere, galdera hau da: nolakoa izan behar da
+λ ekuazio horrek tribiala
+ez den soluziorik izateko, mugalde baldintzen pean?
+Aurrean dugun probleman simetria esferikoa agertzen bada, baldintza batzuk ezku-
+tatuak dira.
+Harmoniko esferikoak
+Koordenatu esferikoak:
+r ≥ 0, θ ∈ [0, π], ϕ ∈ [0, 2π).
+Lehenengo MB ezkutatua:
+ϕ-rekiko periodikotasuna. Fourier-en garapena
+u(r, θ, ϕ) =
+a0(r, θ)
+2
++
+∞
+n=1
+[an(r, θ) cos nϕ+
+bn(r, θ) sin nϕ ] .
+edo
+u(r, θ, ϕ) =
+∞
+n=−∞
+cn(r, θ)e
+inϕ .
+Koordenatu esferikoak: Laplacearra
+∇
+2u =
+1
+r2
+∂r r
+2∂ru +
+1
+r2 sin θ
+∂θ (sin θ∂θu) +
+1
+r2 sin2 θ
+∂2ϕu .
+So
+∇
+2u + λ2u = 0 ⇒
+1
+r2
+∂r r
+2∂rcn +
+1
+r2 sin θ
+∂θ (sin θ∂θcn)
++ λ2 −
+n2
+r2 sin2 θ
+cn = 0 .
+38
+
+Banantzea, berriro
+Saiatu arestian ikusitako ekuazioan
+cn → R(r)Θ(θ) forman. Hots,
+−
+r2R
+′ ′
+R
+=
+(sin θ Θ
+′)
+′
+Θ sin θ
++ λ2 −
+n2
+sin2 θ
+= −γ + λ
+2 ,
+eta ondorioz
+(sin θ Θ
+′)
+′
+sin θ
+−
+n2
+sin2 θ
+Θ + γΘ = 0 .
+Mugalde baldintzak?
+Aldagai aldaketa:
+t = cos θ, P (t) = Θ(θ).
+Hasi
+n = 0 kasuan.
+12.1
+Legendre-ren polinomioak
+Legendre-ren polinomioak
+1 − t
+2 P ′
+′
++ γP = 0 .
+1 punturen inguruko berretura seriea:
+P (t) →
+∞
+k=0
+αk(1 − t)
+µ+k
+Indizea
+µ: 0, bikoitza. Soluzio bat: logaritmikoa. Baztertu, ez da erregularra t → 1!!
+Errekurrentzi erlazioa:
+αk+1 =
+k(k + 1) − γ
+2(k + 1)2
+αk .
+Legendre-ren polinomioak
+Konbergentzia:
+|1 − t| < 2 tartean konbergentea
+k + 1 > γ kasuan,
+αk+1
+αk
+>
+1
+2
+k − 1
+k + 1
+.
+Beraz,
+t = −1 puntuan dibergente! Baldin eta...
+Baldin eta
+γ = l(l + 1) bada, non l osoa den, konbergentea da: seriea mozten da
+eta polinomio bat dugu.
+Hau da:
+Pl(t) =
+l
+k=0
+(l + k)!
+(l − k)! (k!)
+2 2k
+(−1)
+k(1 − t)k .
+[Normalizazioaren hitzarmena:
+Pl(1) = 1]
+39
+
+Legendre-ren polinomioak
+-1 -0.5
+0.5
+1
+-0.4
+-0.2
+0.2
+0.4
+0.6
+0.8
+1
+-1 -0.5
+0.5
+1
+-1
+-0.5
+0.5
+1
+-1 -0.5
+0.5
+1
+0.5
+1
+1.5
+2
+-1 -0.5
+0.5
+1
+-1
+-0.5
+0.5
+1
+Rodrigues-en formula
+Pl(x) =
+1
+2ll!
+dl
+dxl
+x2 − 1
+l
+.
+1
+2ll!
+dl
+dxl
+x2 − 1
+l
+=
+1
+2ll!
+dl
+dxl
+(x − 1)
+l (x − 1 + 2)l
+=
+1
+2ll!
+dl
+dxl
+(x − 1)
+l
+l
+k=0
+l
+k
+(x − 1)
+k2(l−k)
+=
+l
+k=0
+(l + k)!
+(l − k)! (k!)
+2 2k
+(−1)
+k(1 − x)k .
+Haztapena: 1.
+1
+−
+1
+dt Pl(t)Pk(t) =
+2
+2l + 1
+δlk .
+[froga: SL eragilea; bestela: zatikako integrazioa, Rodrigues-en formularekin]
+12.2
+Legendre-ren funtzio asoziatuak
+Legendre-ren funtzio asoziatuak
+[
+n = 0]:
+d
+dt
+(1 − t
+2)
+d
+dt
+P (t) + γ −
+n2
+1 − t2
+P (t) = 0 .
+Erabili
+dk
+dtk
+[f (t)g(t)] =
+k
+n=0
+k
+n
+f (n)(t)g(k
+−
+n)(t)
+40
+
+ondokoan:
+d
+dt
+(1 − t
+2)
+d
+dt
+f (t) + γf (t) = 0 .
+(1 − t
+2)f(m+2)(t) − 2(m + 1)tf(m+1)(t) + (γ − m(m + 1))f(m)(t) = 0 .
+Legendre-ren funtzio asoziatuak
+Aldagai dependentea aldatu,
+f (m)(t) = g(t)/(1 − t
+2)m/2. Demagun f Legendre-
+ren ekuazioaren soluzioa dela,
+n = 0 kasuan. Hau honela izanda, g ondokoaren solu-
+zioa da,
+d
+dt
+(1 − t
+2)
+d
+dt
+g(t) + γg(t) −
+m2
+1 − t2
+g(t) = 0 .
+Legendre-ren ekuazioaren soluzio orokorrak singularitate logaritmikoa du
+t = 1 pun-
+tuan. Deribazioaz, berretura singularra sortzen du horrek. Ondorioz,
+t = 1 puntuan
+g erregularra izateko f -
+n singularitate logaritmikoaren koeﬁzienteak nulua izan behar
+du.
+Legendre-ren funtzio asoziatuak
+γ parametroa l(l + 1) formakoa ez bada, non l naturala den, t = −1 puntuan ere
+singularitatea agertzen da, eta
+g funtzioak jaraunsten du. Beraz, muturretan erregularra
+eta aldi berean tribiala ez den soluziorik izateko,
+γ parametroak l(l + 1) formakoa izan
+behar du, non
+l naturala den.
+Eta
+f → Pl(t) bada, m gehienez l izango da (bestela l ordenako polinomioa l aldiz
+baino gehiago deribatuz 0 lortzen dugu)
+Legendre-ren funtzio asoziatuak
+P m
+l (t)
+= (−1)
+m(1 − t2)m/2
+dm
+dtm
+Pl(t)
+=
+(−1)
+m
+2ll!
+(1 − t
+2)m/2
+dm+l
+dtm+l
+(t2 − 1)
+l ,
+non
+l = m, m + 1, . . . Adibidez, l = 0 aukerak m = 0 ondorio dakar, P 0
+0 (t) = 1;
+l = 1 kasuan bi aukera ditugu, m = 0 edo m = 1:
+P 0
+1 (t) = t ,
+P 1
+1 (t) = −
+1 − t2 .
+Legendre-ren funtzio asoziatuak
+Oharra: literaturan gehien bat bi hitzarmen daude faserako. Hemen erabilitakoak
+Condon-Shortley-ren fasea kontuan hartzen du 
+(Erabilgarria da gero mekanika kuan-
+tikoak goranzko eta beheranzko eragileak bateragarritasunez erabiltzeko). Besteak
+ez du Legendre-
+ren funtzio asoziatuetan sartzen bai, ordea, harmoniko esferikoetan.
+41
+
+Abramowitz-
+Stegun liburuan adibidez azken kasu honetan ondoko notazioa erabiltzen
+dute:
+Plm(x) = (−1)
+mP l
+m(x).
+m negatiboentzat funtzio asoziatua deﬁnitua izatea komenigarria da, ondoko mo-
+duan:
+P
+−
+m
+l
+(x) = (−1)
+m (l − m)!
+(l + m)!
+P m
+l (x)
+non
+m ≥ 0. Harmoniko esferikoetan agertuko da.
+Legendre-ren funtzio asoziatuak
+Ortogonalak:
+m jakin batentzat, l ezberdinek funtzio ortogonalak zehazten dituzte:
+1
+−
+1
+dt P m
+l (t)P
+m
+k (t) =
+2
+2l + 1
+(l + m)!
+(l − m)!
+δlk .
+Frogapena: zatikako integrazioa,
+m deribatuak P m
+k
+funtziotik integrakizunaren bes-
+te zatietara pasatuz. Honela integrakizun berrian
+Pk(t) bider l mailako polinomioa
+agertuko da.
+l k baino txikiago bada, berriro zatikako integrazioz integrala nulua dela
+ikusten dugu. Nulua ez izateko halabeharrezkoa da
+k eta l berdinak izatea.
+12.3
+Harmoniko esferikoak
+Harmoniko esferikoak
+Banantze problemara itzuliz, koordenatu esferikoetan Laplacearraren osagai ange-
+luarraren balio eta funtzio propioen problema ondokoa dugu:
+r2∇
+2Y m
+l
+(θ, ϕ) = −l(l + 1)Y
+m
+l
+(θ, ϕ)
+non
+Y m
+l
+(θ, ϕ) =
+2l + 1
+4π
+(l − m)!
+(l + m)!
+1/2
+P m
+l (cos θ)e
+imϕ .
+Harmoniko esferikoak: adibideak
+Y 0
+0 (θ, ϕ) =
+1
+√
+4π
+;
+Y
+−
+1
+1
+(θ, ϕ) =
+3
+4π
+sin θe
+−
+iϕ , Y 0
+1 (θ, ϕ) =
+3
+4π
+cos θ ,
+Y 1
+1 (θ, ϕ) = −
+3
+4π
+sin θeiϕ .
+42
+
+Harmoniko esferikoak: adibideak
+-0.1
+-0.05
+0
+0.05
+0.1
+-0.1
+-0.05
+0
+0.05
+0.1
+-0.04
+-0.02
+0
+0.02
+0.04
+-0.1
+-0.05
+0
+0.05
+0.1
+-0.05
+0
+0.05
+-0.05
+0
+0.05
+-0.2
+0
+0.2
+-0.05
+-0.1
+-0.05
+0
+0.05
+0.1
+-0.1
+-0.05
+0
+0.05
+0.1
+-0.04
+-0.02
+0
+0.02
+0.04
+-0.1
+-0.05
+0
+0.05
+0.1
+-0.1
+-0.05
+00.05
+0.1
+-0.1
+-0.05
+0
+0.05
+0.1
+-0.2
+0
+0.2
+-0.1
+-0.05
+0
+0.05
+-0.1
+0
+0.1
+-0.1
+0
+0.1
+-0.1
+0
+0.1
+-0.1
+0
+-0.1
+0
+0.1
+-0.1
+0
+0.1
+-0.1
+0
+0.1
+-0.1
+0
+-0.1
+0
+0.1
+-0.1
+0
+0.1
+-0.1
+0
+0.1
+-0.05
+0
+0.05
+-0.1
+0
+0.1
+Harmoniko esferikoak: propietateak
+2π
+0
+dϕ
+π
+0
+dθ sin θ Y m
+′
+l′
+(θ, ϕ)
+∗Y m
+l
+(θ, ϕ)δll′δmm′ .
+g(θ, ϕ) =
+∞
+l=0
+l
+m=−l
+clmY
+m
+l
+(θ, ϕ) ,
+non
+clm =
+2π
+0
+dϕ
+π
+0
+dθ sin θ Y m
+l
+(θ, ϕ)
+∗g(θ, ϕ) .
+Fisikako erabilera bat: CMBR
+∆T (θ, ϕ) =
+∞
+l=0
+l
+m=−l
+clmY
+m
+l
+(θ, ϕ) ,
+m-rekiko menpekotasunik gabe:
+Cl =
+1
+2l + 1
+l
+m=−l
+|clm|
+2
+eta
+l(l + 1)Cl marrazten dugu, l-ren funtzio gisa
+CMBR
+43
+
+CMBR
+CMBR
+TT: temperature angular power spectrum
+TE: temperature-polarization cross-power spectrum
+Harmoniko esferikoak: eragileak
+44
+
+Biz
+ˆ
+Lz
+= −i
+∂
+∂ϕ
+= −i x
+∂
+∂y
+− y
+∂
+∂x
+,
+ˆ
+Lx = i sin ϕ
+∂
+∂θ
++ cos ϕ
+cos θ
+sin θ
+∂
+∂ϕ
+= −i y
+∂
+∂z
+− z
+∂
+∂y
+,
+ˆ
+Ly
+= −i cos ϕ
+∂
+∂θ
+− sin ϕ
+cos θ
+sin θ
+∂
+∂ϕ
+= −i z
+∂
+∂x
+− x
+∂
+∂z
+,
+Harmoniko esferikoak: goranzko eta beheranzko eragileak
+[Li, Lj] = iǫijkLk .
+ˆ
+L+ = ˆ
+Lx + i ˆ
+Ly
+ˆ
+L− = ˆ
+Lx − i ˆ
+Ly
+ˆ
+L+, ˆ
+L−
+= 2 ˆ
+Lz
+ˆ
+Lz, ˆ
+L±
+= ± ˆ
+L±
+ˆ
+Li = −iǫijkxj
+∂
+∂xk
+Harmoniko esferikoak: Casimir
+ˆ
+L
+2, ˆ
+Li = 0 .
+Adierazpen diferentziala:
+ˆ
+L
+2 = −
+1
+sin θ
+∂
+∂θ
+sin θ
+∂
+∂θ
+−
+1
+sin2 θ
+∂2
+∂ϕ2
+.
+Harmoniko esferikoak: aldibereko diagonalizazioa
+ˆ
+L
+2Y m
+l
+(θ, ϕ) = l(l + 1)Y m
+l
+(θ, ϕ) .
+ˆ
+LzY
+m
+l
+(θ, ϕ) = mY m
+l
+(θ, ϕ) .
+45
+
+Irudi baliokidea
+ˆ
+L
+2(x + iy)l = l(l + 1)(x + iy)l ,
+ˆ
+Lz(x + iy)
+l = l(x + iy)l .
+ˆ
+L+(x + iy)
+l = 0 ,
+ˆ
+L−(x + iy)l = −2lz(x + iy)
+l−1 ,
+ˆ
+Lz ˆ
+Lk−(x + iy)l = ˆ
+Lk− ˆ
+Lz − k (x + iy)
+l = (l − k)ˆLk
+−(x + iy)
+l ;
+ˆ
+L
+2Lk
+−(x + iy)
+l = l(l + 1)ˆ
+Lk−(x + iy)l
+ˆ
+L
+2l+1
+−
+(x + iy)l = 0 .
+Irudi baliokidea
+(x + iy)l = rl sinl θeilϕ ∝ Y
+l
+l (θ, ϕ) .
+ˆ
+L±Y m
+l
+(θ, ϕ) = [l(l + 1) − m(m ± 1)]
+1/2 Y m±1
+l
+(θ, ϕ) .
+46

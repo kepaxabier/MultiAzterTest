@@ -1,0 +1,2137 @@
+
+
+
+
+1
+5.GAIA.  INTEGRAL MUGATUA. APLIKAZIOAK
+1. Integral mugatua. Definizioa.
+2. Propietateak.
+3. Kalkulu integralaren oinarrizko teorema. Barrow-en erregela.
+4. Ordezkapen-metodoak eta zatikako integrazioa integral mugatuan.
+5. Integral inpropioak.
+5.1. Integrala tarte ez bornatuetan.
+5.2. Funtzio ez jarraituen integrala.
+6. Aplikazio geometrikoak.
+6.1. Eremu lau baten azalera.
+6.2. Kurba-arku baten luzera.
+6.3. Bolumenen kalkulua.
+6.4. Biraketa-gorputzaren gainazalaren azalera.
+7. Zenbakizko integrazioa.
+7.1. Trapezioaren formula.
+7.2. Simpson-en formula.
+7.3. Zenbakizko integrazio konposatua.
+
+2
+5. GAIA. INTEGRAL MUGATUA. APLIKAZIOAK
+Kalkulu Infinitesimalaren bidez, bi problema garrantzitsu azter daitezke: kurba
+baten zuzen ukitzailea aurkitu eta kurba batek mugatzen duen zalera kalkulatu.
+Lehenengoa, aurreko gaietan aztertu dugu limiteak erabiliz eta deribatua
+definituz, eta
+bigarrena ere limiteak erabiliz ebatziko dugu, integrazioarekin hain zuzen.
+Gero, bi teknika hauek elkarren artean erlazionaturik daudela ikusiko dugu eta
+horrekin integralen kalkulua erraztuko da.
+1.  INTEGRAL MUGATUA. DEFINIZIOA
+Izan bedi f(x)  funtzioa [a,b] tartean jarraitua. Izan bitez [a,b] tartean m
+eta M f(x)-
+ren minimoa eta maximoa hurrenez hurren. Tartearen partiketa bat emango dugu,
+hau da
+ x0, x1, …, xn puntuak  non a=x0<x1< … <xn=b  betetzen den, eta izan bitez
+∆ x
+1=x1-x0 , 
+∆ x
+2=x2-x1 , … , 
+∆ x
+n=xn-xn-1
+azpitarteen luzerak. mi eta Mi funtzioaren minimoak eta maximoak badira [xi-
+1,  xi]
+i=1,…,n tarte bakoitzean, orduan ondokoak defini daitezke:
+BEHE-BATURA: 
+∑
+=
+∆
+=
+n
+1
+i
+i
+i
+n
+x
+m
+s
+ eta GOI-BATURA: 
+∑
+=
+∆
+=
+n
+1
+i
+i
+i
+n
+x
+M
+S
+Batura hauek f funtzioarekiko eta partiketarekiko  dependenteak dira. Gainera
+ondokoak betetzen dute:
+m(b-a) 
+≤  s
+n 
+≤  S
+n 
+≤  M(b-a)          
+m
+≤  m
+i 
+≤ M
+i 
+≤  M  izateagatik
+∈
+λ
+i
+[xi-1,xi] i=1, …, n puntuak kontsideratzen badira eta f( i
+λ ) irudiak kalkulatzen
+badira 
+∑
+=
+∆
+λ
+=
+σ
+n
+1
+i
+i
+i
+n
+x
+)
+(
+f
+batura egin daiteke. Batura honek   
+n
+n
+n
+S
+s
+≤
+σ
+≤
+ betetzen du
+mi 
+≤  f(
+i
+λ )  ≤  M
+i baita. 
+n
+σ  batura [a,b] tartean egindako partiketaren eta 
+i
+λ puntuen
+dependentea da.
+Izan bedi max(
+i
+x
+∆ )  [x
+i-1,xi] tarteen luzerarik handiena. Kontsidera ditzagun
+[a,b] tarteko zenbait partiketa desberdin non,  max(
+i
+x
+∆ )-k  zerorantz jotzen duen.
+
+3
+[a,b] tarteko edozein partiketarako non max(
+i
+x
+∆ )
+0
+→ den eta 
+i
+λ  arbitrarioak diren,
+∑
+=
+∆
+λ
+n
+1
+i
+i
+i
+x
+)
+(
+f
+baturen limitea  existitzen bada eta beti I balioa bada, orduan, f funtzioa
+[a,b] tartean  Riemann-en zentzuan integragarria dela esaten da eta
+∑
+∫
+=
+→
+∆
+∆
+λ
+=
+=
+n
+1
+i
+i
+i
+0
+x
+max
+b
+a
+x
+)
+(
+f
+dx
+)
+x
+(
+f
+I
+lim
+adierazten da. 
+∫
+=
+b
+a
+dx
+)
+x
+(
+f
+I
+ balioa f(x)-ren integral mugatua [a,b] tartean deitzen da.
+f(x)>0 eta a<b badira, [a,b] tartean f(x)-ren integral mugatuak  f(x)-ren
+kurbak,
+x=a eta x=b zuzenek eta OX ardatzak mugatzen duten trapezio  kurbilineoaren
+azalera
+neurtzen du.
+Teorema
+a)  [a,b] tartean f(x)  jarraitua bada, orduan f(x)  [a,b] tartean
+integragarria da.
+b)  Edozein f:[a,b]
+→ R funtzio monotono, integragarria da.
+c)  f(x)  bornatua bada eta [a,b] multzoan f(x)-ren eten-puntuen kopurua
+finitua bada,
+orduan, integragarria da [a,b] tartean.
+2.  PROPIETATEAK
+1. 
+∫
+∫
+−
+=
+a
+b
+b
+a
+dx
+)
+x
+(
+f
+dx
+)
+x
+(
+f
+2. 
+0
+dx
+)
+x
+(
+f
+a
+a
+=
+∫
+3. 
+∫
+∫
+∫
++
+=
+b
+c
+c
+a
+b
+a
+dx
+)
+x
+(
+f
+dx
+)
+x
+(
+f
+dx
+)
+x
+(
+f
+ azken integral hauek existitzen badira.
+4. 
+R
+∫
+∫
+∈
+∀
+= b
+a
+b
+a
+k
+,
+dx
+)
+x
+(
+f
+k
+dx
+)
+x
+(
+f
+k
+5. 
+∫
+∫
+∫
+±
+=
+±
+b
+a
+a
+b
+b
+a
+dx
+)
+x
+(
+g
+dx
+)
+x
+(
+f
+dx
+))
+x
+(
+g
+)
+x
+(
+f
+(
+6.  Izan bedi  f(x)
+≥ 0 
+[ ]b
+,
+a
+x
+∈
+∀
+, orduan 
+0
+dx
+)
+x
+(
+f
+b
+a
+≥
+∫
+7.  f(x)
+≤ g(x) 
+[ ]b
+,
+a
+x
+∈
+∀
+ betetzen bada, orduan 
+∫
+∫
+≤
+b
+a
+b
+a
+dx
+)
+x
+(
+g
+dx
+)
+x
+(
+f
+8.  [a,b] tartean M eta m  f(x) funtzioaren maximoa eta minimoa badira, orduan:
+)
+a
+b
+(
+M
+dx
+)
+x
+(
+f
+)
+a
+b
+(
+m
+b
+a
+−
+≤
+≤
+−
+∫
+
+4
+3.  KALKULU INTEGRALAREN OINARRIZKO TEOREMA.  BARROW-EN
+ERREGELA
+Batezbestekoaren teorema
+f(x) funtzioa  [a,b] tartean jarraitua bada, orduan c
+∈[a,b] punturen bat existitzen da non
+)
+a
+b
+(
+)
+c
+(
+f
+dx
+)
+x
+(
+f
+b
+a
+−
+=
+∫
+betetzen den.
+Esanahi geometrikoa ondokoa da: trapezio  kurbilineoaren azalera eta  [a,b]
+oinarria eta f(c) altuera dituen laukizuzenaren azalera  berdinak dira.
+Kalkulu Integralaren Oinarrizko Teorema.
+Izan bedi f:[a,b]
+→ R integragarria. 
+)
+x
+(
+Φ
+ funtzioa definituko dugu
+[ ]
+∫
+=
+Φ
+→
+Φ
+x
+a
+dt
+)
+t
+(
+f
+)
+x
+(
+x
+b
+,
+a
+:
+)
+x
+(
+a
+R
+Ondorengoa betetzen da:
+a) 
+)
+x
+(
+Φ
+ jarraitua da [a,b] tartean.
+b)  f(x) funtzioa [a,b] tartean  jarraitua bada, 
+)
+x
+(
+Φ
+ deribagarria da eta bere
+deribatua 
+)
+x
+(
+f
+)
+x
+(
+'
+=
+Φ
+ da [a,b] tartean.
+Teorema honek ziurtatzen du edozein funtzio jarraituk beti jatorrizko funtzio
+bat
+onartzen duela. Jatorrizko hori 
+∫
+=
+Φ
+x
+a
+dt
+)
+t
+(
+f
+)
+x
+(
+ da.
+Aurreko teorema  eta katearen erregela erabiliz, kasu orokor bat eman daiteke.
+Teorema. f(x) jarraitua bada eta h(x) eta g(x) deribagarriak badira, orduan
+∫
+=
+)
+x
+(
+g
+)
+x
+(
+h
+dt
+)
+t
+(
+f
+)
+x
+(
+F
+funtzioa deribagarria da eta bere deribatua  ondokoa da:
+F'(x)=f(g(x)) g'(x) - f(h(x)) h'(x)
+Barrow-en erregela.
+[a,b] tartean f(x) jarraitua bada eta F(x) funtzioa f(x)-ren jatorrizko funtzio
+bat bada,
+orduan
+
+5
+]b
+a
+b
+a
+)
+x
+(
+F
+)
+a
+(
+F
+)
+b
+(
+F
+dx
+)
+x
+(
+f
+=
+−
+=
+∫
+Kalkulu Integralaren Oinarrizko Teoremaren bidez, Kalkuluan agertzen diren bi
+kontzeptu garrantzitsu elkartzen dira: deribazioa eta integrazioa.
+Barrow-en erregelak azaleren kalkulua f(x) funtzioaren F jatorrizko funtzioa
+bat
+aurkitzera laburtu du. Eta jatorrizko funtzioa kalkulatzeko aurreko gaian
+aztertutako
+teknikak erabiliko ditugu.
+4.  ORDEZKAPEN-METODOAK ETA ZATIKAKO INTEGRAZIOA
+INTEGRAL MUGATUAN
+Aldagai-aldaketa.
+f(x) [a,b] tartean jarraitua bada eta g(t)
+∈C1[ β
+α, ] bada ( g(t) jarraitua bada eta deribatu
+jarraitua  badu [
+β
+α, ] tartean) non g( α )=a eta g( β )=b diren eta g[ β
+α, ]=[a,b] den,
+orduan
+∫
+∫
+β
+α
+=
+dt
+))
+t
+(
+g
+(
+f
+dx
+)
+x
+(
+f
+b
+a
+betetzen da.
+Zatikako integrazioa.
+f(x) , g(x) 
+∈C1[a,b] badira, orduan
+∫
+∫
+−
+−
+=
+b
+a
+b
+a
+dx
+)
+x
+(
+g
+)
+x
+(
+'
+f
+)
+a
+(
+g
+)
+a
+(
+f
+)
+b
+(
+g
+)
+b
+(
+f
+dx
+)
+x
+(
+'
+g
+)
+x
+(
+f
+betetzen da.
+5.  INTEGRAL INPROPIOAK
+Jarraian, integralaren kontzeptua infinitua agertzen den kasuetara zabalduko
+da.
+Definizioa.  
+∫
+b
+a
+dx
+)
+x
+(
+f
+ integrala  inpropioa dela esaten da baldin eta (a,b) integrazio-
+tartea ez bada bornatua  edota  f(x) integrazio-funtzioa [a,b] tartean
+jarraitua ez bada.
+
+6
+5.1 Integrala tarte ez bornatutan
+Ondoko motakoak dira: 
+∫
+∞
+a
+dx
+)
+x
+(
+f
+ , 
+∫ ∞
+−
+b
+dx
+)
+x
+(
+f
+ , 
+∫
+∞
+∞
+−
+dx
+)
+x
+(
+f
+.
+Eman dezagun kasu guztietan integrazio-funtzioa jarraitua dela, orduan
+• 
+∫
+∞
+a
+dx
+)
+x
+(
+f
+=
+∫
+∞
+b
+a
+b
+dx
+)
+x
+(
+f
+lim
+, limite hori existitzen bada. Limitea finitua
+bada, integrala konbergentea dela eta infinitua bada dibergentea  dela esaten
+da.
+• 
+∫ ∞
+−
+b
+dx
+)
+x
+(
+f
+=
+∫
+∞
+−
+b
+a
+a
+dx
+)
+x
+(
+f
+lim
+ limite hori existitzen bada. Limitea
+finitua bada, integrala konbergentea dela eta infinitua bada dibergentea dela
+esaten da.
+• 
+∫
+∞
+∞
+−
+dx
+)
+x
+(
+f
+=
+∫
+∞
+−
+b
+a
+a
+dx
+)
+x
+(
+f
+lim
+ + 
+∫
+∞
+c
+b
+c
+dx
+)
+x
+(
+f
+lim
+, b
+∈R.  Integral
+konbergentea da baldin eta bi limiteak existitzen badira eta finituak badira
+eta dibergentea izango da horietako bat gutxienez infinitua bada. Beste
+edozein kasutan, integrala ez dela existitzen esaten da.
+Konparaketarako irizpideak.
+Irizpide hauen bidez jakingo dugu integralaren balioa finitua edo infinitua
+den,
+baina ez bere balio zehatza. Hau da, integralaren izaera aztertuko dugu.
+1. 
+)
+x
+(
+g
+)
+x
+(
+f
+0
+a
+x
+≤
+≤
+≥
+∀
+ betetzen bada eta 
+∫
+∞
+a
+dx
+)
+x
+(
+g
+ konbergentea bada,
+orduan 
+∫
+∞
+a
+dx
+)
+x
+(
+f
+konbergentea da eta 
+∫
+∫
+∞
+∞
+≤
+a
+a
+dx
+)
+x
+(
+g
+dx
+)
+x
+(
+f
+ betetzen
+da.
+2. 
+)
+x
+(
+g
+)
+x
+(
+f
+0
+a
+x
+≤
+≤
+≥
+∀
+ betetzen bada eta 
+∫
+∞
+a
+dx
+)
+x
+(
+g
+ dibergentea bada,
+orduan 
+∫
+∞
+a
+dx
+)
+x
+(
+f
+ ere dibergentea da.
+
+7
+5.2 Funtzio etenen integrala
+Eman dezagun f(x) funtzioa [a,b] tarteko zenbait puntutan etena dela. Ondoko
+kasuak ager daitezke:
+* f(x) etena da a behe integrazio-mugan. Integral  inpropioa 
+∫
+b
+a
+dx
+)
+x
+(
+f
+ ondoko eran
+definitzen da:
+∫
+b
+a
+dx
+)
+x
+(
+f
+= 
+∫
+ε
++
+→
+ε
++
+b
+a
+0
+dx
+)
+x
+(
+f
+lim
+Limitea existitzen bada eta finitua bada, orduan
+integral  inpropioa konbergentea
+dela esaten da. Infinitua bada  dibergentea  da. Limitea ez bada existitzen,
+integrala ez
+dela existitzen esaten da.
+* f(x) etena da b goi integrazio-mugan. Integral  inpropioa 
+∫
+b
+a
+dx
+)
+x
+(
+f
+ ondoko eran
+definitzen da:
+∫
+b
+a
+dx
+)
+x
+(
+f
+= 
+∫
+ε
+−
+→
+ε
++
+b
+a
+0
+dx
+)
+x
+(
+f
+lim
+Limitea existitzen bada eta finitua bada, orduan
+integral  inpropioa konbergentea
+dela esaten da. Infinitua bada  dibergentea  da. Limitea ez bada existitzen,
+integrala ez
+dela existitzen esaten da.
+* f(x)  c
+∈(a,b) puntuan etena da. Orduan integral inpropioa ondoko eran definitzen da:
+∫
+b
+a
+dx
+)
+x
+(
+f
+= 
+∫
+∫
+ε
++
+→
+ε
+ε
+−
+→
+ε
++
++
++
+b
+c
+0
+c
+a
+0
+2
+2
+1
+1
+dx
+)
+x
+(
+f
+lim
+dx
+)
+x
+(
+f
+lim
+Limite biak existitzen badira eta finituak badira, orduan integral  inpropioa
+konbergentea dela esaten da. Limiteren bat infinitua bada eta ez bada
+indeterminaziorik
+sortzen  dibergentea  da. Limiteren bat  existitzen ez bada, orduan integrala
+ez dela
+existitzen esaten da.
+* [a,b] tartean f(x)-k a1, a2, …,  an puntuetan (puntu-kopuru finitua) etena
+bada,
+∫
+b
+a
+dx
+)
+x
+(
+f
+ integral inpropioa honela deskonposatzen da:
+∫
+b
+a
+dx
+)
+x
+(
+f
+= 
+∫ 1
+a
+a
+dx
+)
+x
+(
+f
++
+∫ 2
+1
+a
+a
+dx
+)
+x
+(
+f
++ … + 
+∫
+b
+a n
+dx
+)
+x
+(
+f
+
+8
+Agertzen diren integralak lehen ikusi ditugu. Integrala konbergentea da baldin
+eta integral inpropio bakoitza konbergentea bada.
+Konparaketarako irizpideak eman daitezke ere integrazio tartea ez bornatua
+deneko kasuetan.
+6.  APLIKAZIO GEOMETRIKOAK
+6.1 Eremu lau baten azalera.
+* OX ardatzak, x=a eta x=b zuzenek eta f(x) [a,b] tartean jarraitua eta
+positiboa den
+funtzioaren grafikoak mugatzen duten eremuaren azalera ondokoa da:
+∫
+=
+b
+a
+dx
+)
+x
+(
+f
+A
+* Aurreko baldintzetan, baina [a,b] tartean  
+0
+)
+x
+(
+f
+≤  bada, orduan mugatutako
+eremuaren azalera ondokoa da:
+∫
+−
+=
+b
+a
+dx
+)
+x
+(
+f
+A
+* f(x) funtzioa [a,b] tartean zeinuz aldatzen bada aldi-kopuru finituan, orduan
+integrala
+[a,b] tartean deskonposatzen da dagozkion  azpitarteetan. 
+0
+)
+x
+(
+f
+≥  izango den tarteetan
+integrala positibo izango da eta 
+0
+)
+x
+(
+f
+≤  den tarteetan  negatibo izango da. Azalera
+lortzeko, azpitarteen integralen balio absolutuen batura eman behar dugu edo
+∫
+=
+b
+a
+dx
+)
+x
+(
+f
+A
+kalkulatu.
+* [a,b] tartean 
+)
+x
+(
+f
+)
+x
+(
+g
+≤
+ badira, f(x) eta g(x) kurbek eta  x=a eta x=b zuzenek
+mugatzen duten azalera hauxe da:
+[
+]
+∫
+−
+=
+b
+a
+dx
+)
+x
+(
+g
+)
+x
+(
+f
+A
+* f(x) eta g(x) funtzioek elkar ebakitzen badute, mugatutako azalera ondorengoa
+da:
+∫
+−
+=
+b
+a
+dx
+)
+x
+(
+g
+)
+x
+(
+f
+A
+
+9
+* OY ardatzak, y=c eta y=d zuzenek eta x=g(y) kurbak mugatzen duten trapezio
+kurbilineoaren azalera ondokoa da:
+∫
+=
+d
+c
+dy
+)
+x
+(
+g
+A
+* Kurba 
+[ ]β
+α
+∈
+
+
+
+=
+=
+,
+t
+)
+t
+(
+h
+y
+)
+t
+(
+g
+x
+ ekuazio  parametrikoen bidez emanda badago eta g(
+α)=a,
+g(
+β)=b badira, orduan
+∫
+∫
+∫
+β
+α
+=
+=
+=
+dt
+)
+t
+(
+'
+g
+)
+t
+(
+h
+dx
+y
+dx
+)
+x
+(
+f
+A
+b
+a
+b
+a
+6.2 Kurba-arku baten luzera.
+* Izan bedi [a,b] tartea deribagarria den y=f(x) kurba, bere deribatua
+jarraitua izanik.
+Orduan A(a,f(a)) eta B(b,f(b)) puntuen arteko AB arkuaren luzera ondokoa da:
+[
+]
+∫ +
+=
+b
+a
+2
+dx
+)
+x
+(
+'
+f
+1
+L
+* Kurba 
+[ ]β
+α
+∈
+
+
+
+=
+=
+,
+t
+)
+t
+(
+h
+y
+)
+t
+(
+g
+x
+ ekuazio  parametrikoen bidez emanda badago, g(
+α)=a,
+g(
+β)=b izanik eta g eta h funtzioek [α,β] tartean deribatu jarraitua badute,
+orduan arku-
+luzera ondokoa da:
+[
+] [
+]
+∫
+β
+α
++
+=
+dt
+)
+t
+(
+'
+h
+)
+t
+(
+'
+g
+L
+2
+2
+6.3 Bolumenen kalkulua.
+*  Gorputz baten bolumena sekzio lauen bidez. Izan bedi gorputz bat zein OX
+ardatzarekiko perpendikularra den plano batekin ebakitzen denean, x abzisa duen
+puntu
+bakoitzean, A(x) azaleradun sekzioa sortzen den. A(x) funtzioa jarraitua bada
+gorputz
+horren bolumena ondokoa da:
+∫
+=
+b
+a
+dx
+)
+x
+(
+A
+B
+
+10
+Modu berean defini daiteke gorputzaren bolumena sekzioak OY edo OZ ardatzekiko
+perpendikularrak direnean.
+∫
+=
+d
+c
+dy
+)
+y
+(
+A
+B
+    edo  
+∫
+=
+m
+e
+dz
+)
+z
+(
+A
+B
+*Biraketa-gorputzaren bolumena. Biraketa-gorputz deitzen diegu eremu lau bat
+zuzen
+finko baten inguruan biratuz sortzen diren gorputzei; zuzen horri biraketa
+ardatz deitzen
+zaio.
+Izan bedi y=f(x) kurbak determinatzen duen arkuak, x=a eta x=b zuzenek eta X
+ardatzak
+eratzen duten  biraketa-gorputza, jakinik f(x) jarraitua dela [a,b] tartean.
+Eremu hori X
+ardatzaren inguruan biratzean  sortzen den solidoaren bolumena,  OX-rekiko
+perpendikularrak diren ebaki-sekzioak 
+)
+x
+(
+f
+ erradiodun zirkunferentziak direla eta
+beren azalerak A(x) = 
+[ ]2
+)
+x
+(
+f
+π
+ direla kontuan izanik, ondokoa da:
+[ ]
+∫
+π
+=
+b
+a
+2
+dx
+)
+x
+(
+f
+B
+Era berean  x=g(y) kurba [c,d] tartean OY ardatzaren ingurunean biratzen bada,
+biraketa-gorputzaren bolumena ondokoa da:
+[ ]
+∫
+π
+=
+d
+c
+2
+dy
+)
+y
+(
+g
+B
+6.4 Biraketa-gorputz baten gainazalaren azalera.
+* Izan bedi y=f(x) funtzioa non  f '(x) [a,b] tartean jarraitua den y=f(x) OX
+ardatzaren
+inguruan biratzean sortutako biraketa-gorputzaren gainazalaren alde-azalera
+ondokoa
+da:
+[
+]
+∫
++
+π
+=
+b
+a
+2
+dx
+)
+x
+(
+'
+f
+1
+)
+x
+(
+f
+2
+A
+Era berean x=g(y) funtzioak [c,d] tartean  g'(y) deribatua jarraitua badu. OY
+ardatzaren
+inguruan biratzean sortutako biraketa-gorputzaren gainazalaren azalera  ondokoa
+da:
+[
+]
+∫
++
+π
+=
+d
+c
+2
+dy
+)
+y
+(
+'
+g
+1
+)
+y
+(
+g
+2
+A
+
+11
+* Kurba 
+[ ]β
+α
+∈
+
+
+
+=
+=
+,
+t
+)
+t
+(
+h
+y
+)
+t
+(
+g
+x
+ ekuazio  parametrikoen bidez emanda badago, g(
+α)=a,
+g(
+β)=b izanik eta g eta h funtzioek [α,β] tartean deribatu jarraitua badute,
+orduan
+sortutako biraketa-gorputzaren gainazaleraren azalera ondokoa da:
+[
+] [
+]
+∫
+β
+α
++
+π
+=
+dt
+)
+t
+(
+'
+h
+)
+t
+(
+'
+g
+)
+t
+(
+h
+2
+A
+2
+2
+OHARRA
+Integral mugatuaren ikusitako aplikazio guztietan, integrazio-funtzioak beti
+positiboa
+izan behar du, kalkulatu nahi diren magnitudeak positiboak edo nuluak baitira,
+esate
+baterako azalera, arku-luzera, bolumena.
+7. ZENBAKIZKO INTEGRAZIOA
+∫
+=
+b
+a
+dx
+)
+x
+(
+f
+I
+integrala kalkulatzeko, integrazio hurbilduaren zenbait metodo
+azalduko dugu.
+Orain arte 
+∫
+=
+b
+a
+dx
+)
+x
+(
+f
+I
+ erako integral mugatuak kalkulatzeko metodo erosoena
+f(x) funtzioaren jatorrizko funtzio bat lortzea eta ondoren  Barrow erregela
+aplikatzea
+izan da. Baina gerta daiteke f(x) funtzioaren jatorrizko funtzio baten kalkulua
+oso zaila
+izatea edo f(x) funtzioak funtzio elementalen bidez adierazgarri diren
+jatorrizkorik ez
+izatea, ondorengo funtzioetan gertatzen den bezala:
+.......
+x
+e
+,
+x
+sin
+,
+x
+x
+sin
+,
+e
+x
+2
+2
+x
+−
+Aurreko kasuetan edo f(x) funtzioaren adierazpen esplizitu bat ez dugunean,
+balio taula bat baizik, integrazio hurbildua erabili beharko dugu eta honetan,
+I integrala
+∑
+=
+n
+0
+i
+i
+i
+)
+x
+(
+f
+a
+ erako batura baten bidez hurbilduko dugu.
+
+12
+7.1. Trapezioaren formula.
+f(x) funtzioa [a,b] tartean, (a,f(a)) eta (b,f(b)) puntuak elkartzen dituen
+zuzenkiaren bidez hurbiltzen da. Orduan integralaren balioztapen bat (a,f(a)),
+(b,f(b)),
+(b,0) eta (a,0) erpinak dituen trapezioaren azalera da:
+))
+b
+(
+f
+)
+a
+(
+f
+(
+2
+a
+b
+dx
+)
+x
+(
+f
+I
+b
+a
++
+−
+≈
+=
+∫
+.
+Formula hau zehatza da 1 baino txikiagoko edo maila berdineko
+polinomioentzat. Egindako errorea kurbaren ahurtasunaren araberakoa da, horrela
+[ ]b
+,
+a
+C
+f
+2
+∈
+ baldin bada, ondoko berdintza betetzen duen c
+∈(a,b) puntu bat existitzen
+da:
+)
+c
+(
+'
+'
+f
+12
+h
+))
+b
+(
+f
+)
+a
+(
+f
+(
+2
+h
+dx
+)
+x
+(
+f
+I
+3
+b
+a
+−
++
+=
+=
+∫
+,   h = b- a.
+M
+)
+x
+(
+'
+'
+f
+≤
+   
+∀  x∈(a,b)  betetzen bada, orduan trapezioaren erregela erabiliz
+egindako errorearen borne bat  
+12
+h
+M
+3
+ da.
+7.2. Simpson-en  formula.
+Kasu honetan f(x)   x0=a, 
+2
+b
+a
+x
+1
++
+=
+ eta x2=b puntuetatik pasatzen den
+parabola-arku baten bidez  hurbiltzen da. Parabolaren arkua integratuz:
+[
+]
+2
+a
+b
+h
+,
+)
+x
+(
+f
+)
+x
+(
+f
+4
+)
+x
+(
+f
+3
+h
+dx
+)
+x
+(
+f
+I
+b
+a
+2
+1
+0
+−
+=
++
++
+≈
+=
+∫
+ bada.
+[ ]b
+,
+a
+C
+f
+4
+∈
+ bada, ondoko berdintza betetzen duen c
+∈(a,b) puntu bat existitzen
+da:
+[
+]
+2
+a
+b
+h
+,
+)
+c
+(
+f
+90
+h
+)
+x
+(
+f
+)
+x
+(
+f
+4
+)
+x
+(
+f
+3
+h
+dx
+)
+x
+(
+f
+I
+)
+4
+5
+b
+a
+2
+1
+0
+−
+=
+−
++
++
+=
+=
+∫
+ bada.
+
+13
+Beraz,  Simpson-en formula hau zehatza da 3 baino txikiagoko edo maila
+berdineko polinomioak integratzeko. 
+M
+)
+x
+(
+f
+)
+4
+≤
+  
+∀  x∈(a,b)  betetzen bada, orduan  Simpson-en erregela erabiliz
+egindako errorearen borne bat  
+90
+h
+M
+5
+ da.
+7.3. Zenbakizko integrazio konposatua.
+Aurreko metodoak, orokorrean,  integrazio tartea oso handia bada (h oso handia
+bada errorea oso handia da) ,  ez dira oso egokiak eta funtzioa hurbiltzeko goi
+mailako
+polinomioak erabiltzeak emaitza ez zehatzak dakartza. Beraz, atal honetan [a,b]
+tartea
+luzera txikiko  azpitartetan zatituko dugu eta azpitarteetan aurreko metodoak
+aplikatuko
+ditugu.
+•  Trapezioaren erregela konposatua.
+Metodo honetan [a,b] tartea, luzera berdineko n  azpitartetan zatituko ditugu,
+n
+a
+b
+h
+−
+=
+ luzerakoak, eta [xi,  xi+1]  (xi  = a+ih,  i = 0,1,..,n izanik)  azpitarte
+bakoitzean trapezioaren erregela aplikatuko dugu. Orduan:
+[
+])
+b
+(
+f
+)
+x
+(
+f
+2
+...
+)
+x
+(
+f
+2
+)
+x
+(
+f
+2
+)
+a
+(
+f
+2
+h
+dx
+)
+x
+(
+f
+I
+1
+n
+2
+1
+b
+a
++
++
++
++
++
+≈
+=
+−
+∫
+.
+f
+∈C2[a,b] bada, orduan d∈(a,b) existitzen da, non ondokoa betetzen den:
+[
+]
+).
+d
+(
+'
+'
+f
+12
+h
+)
+a
+b
+(
+)
+b
+(
+f
+)
+x
+(
+f
+2
+...
+)
+x
+(
+f
+2
+)
+x
+(
+f
+2
+)
+a
+(
+f
+2
+h
+dx
+)
+x
+(
+f
+I
+2
+1
+n
+2
+1
+b
+a
+−
+−
++
++
++
++
++
+=
+=
+−
+∫
+•  Simpson-en  erregela konposatua.
+Simpson-en erregela n azpitartetan aplikatzeko, n bikoitia izatea beharrezkoa
+da eta orduan azpitarteak binaka elkartzen dira:
+
+14
+[
+]
+[
+]
+[
+]
+b
+x
+x
+x
+....
+x
+x
+x
+x
+x
+x
+a
+n
+x
+,
+2
+n
+x
+n
+1
+n
+2
+n
+4
+x
+,
+2
+x
+4
+3
+2
+2
+x
+,
+0
+x
+2
+1
+0
+=
+<
+<
+<
+<
+<
+<
+<
+<
+=
+−
+−
+−
+4
+4
+4
+3
+4
+4
+4
+2
+1
+4
+4 3
+4
+4 2
+1
+4
+4 3
+4
+4 2
+1
+n
+a
+b
+h
+−
+=
+eta xi = a+ih, i = 0,1,…n izanik. [xi-2, xi] tarte bakoitzean Simpson-en
+erregela aplikatzen da:
+(
+).
+)
+b
+(
+f
+)
+x
+(
+f
+4
+)
+x
+(
+f
+2
+...
+)
+x
+(
+f
+4
+)
+x
+(
+f
+2
+)
+x
+(
+f
+4
+)
+a
+(
+f
+3
+h
+dx
+)
+x
+(
+f
+I
+1
+n
+2
+n
+3
+2
+1
+b
+a
++
++
++
++
++
++
++
+≈
+=
+−
+−
+∫
+[ ]b
+,
+a
+C
+f
+4
+∈
+ bada, orduan existitzen da d
+∈(a,b) non Simpson-en erregela
+konposatuan egindako errorea 
+)
+d
+(
+f
+180
+h
+)
+a
+b
+(
+E
+)
+4
+4
+−
+−
+=
+ den.

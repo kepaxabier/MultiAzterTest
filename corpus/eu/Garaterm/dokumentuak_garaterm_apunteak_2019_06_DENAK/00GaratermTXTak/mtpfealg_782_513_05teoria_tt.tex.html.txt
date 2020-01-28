@@ -1,0 +1,293 @@
+
+
+
+
+                 782\s\do5(5)13\s\do5(0)5teoria\s\do5(t)t.tex
+                                   mtpfealg
+                                   13/05/28
+ Chapter 1
+Homomorfismoak eta isomorfismoak
+ 1.1 Isomorfismoaren kontzeptuaren motibazioa
+Izan bitez eta n ordenako bi talde zikliko. Badakigu, Errorea: ez da
+erreferentziaren iturburua aurkitu teoremaren arabera, eta dela, bi kasuetan
+errepikapenik gabe. Gainera, eta -eko bi elementu badira, 0≤i,j≤n−1 izanik, hau
+da beren biderkadura aurreko zerrendako elementu batekin identifikatzeko modua:
+dugu, k harturik i+j-ren hondarra n moduluarekiko. Era berean funtzionatzen du
+-ren eragiketak: , k aurreko balio bera izanik.
+Beraz, bi talde hauen arteko diferentzia bakarra da beren elementuak objektu
+desberdinak izan daitezkeela, azken finean beren eragiketek berdin jokatzen
+dutela ikusten dugu eta. Ideia hau hobeto zehaztu ahal da: taldeetako
+elementuak errepikapenik gabe zerrendatzeko modua ikusita, eta -ren arteko
+bijekzio bat eratu ahal da erregelaren bitartez. Orduan, -eko bi elementu, eta
+, biderkatzen ditugunean lortuz, biderkadura honi dagokion -ko elementua eta
+elementuei dagozkien irudien biderkadura baino ez da:
+Bestela esanda, badugu aplikazio bijektibo bat,f(xy)=f(x)f(y) betetzen duena
+guztietarako. Honek isomorfismo eta homomorfismoaren kontzeptuetara eramaten
+gaitu, hurrengo atalean definitzen ditugunak eta gai honen helburua direnak.
+ 1.2 Homomorfismoak eta isomorfismoak
+                   [Sorry. Ignored\begin{dfn} ... \end{dfn}]
+Aurrerantzean, homomorfismoei buruz hitz egiten denean, beti ulertuko da talde
+homomorfismoei buruz ari garela.
+                  [Sorry. Ignored \begin{dfn} ... \end{dfn}]
+                 [Sorry. Ignored \begin{adik} ... \end{adik}]
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+                  [Sorry. Ignored \begin{kor} ... \end{kor}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Ohartu, G -ren azpitaldea izateagatik, automorfismoen taldeko eragiketa
+“justaposizioaren konposizioa" dela eta ez “zirkuluarena": eta bi
+automorfismoren eragiketa konposizioa da, lehenengo eta gero aplikatuz lortzen
+dena, eta ez . Hala ere, ohituraz, gehienetan f automorfismo baten irudiak f(x)
+moduan idatziko ditugu, eta ez (x)f moduan, talde simetrikoetan bezala.
+                  [Sorry. Ignored \begin{kor} ... \end{kor}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Talde isomorfo guztiak isomorfia klase batean biltzean, ulertu ahal dugu ez
+ditugula desberdinduko bi talde baldin eta hauen arteko diferentzia bakarra
+elementuen izaeran badatza, eta ez eragiketen jokabidean. Talde teorian,
+problema tipiko bat da emandako talde batzuk isomorfiaren arabera sailkatzea,
+eta honekin esan nahi dugu talde horien isomorfia klaseetatik talde bakar bana
+zerrendatzen dugula: ikuspegi honetatik, zerrendan bi talde isomorfo sartzea
+errepikapen bat litzateke. Esate baterako, 1.2 adibideetako 5) atala kontuan
+hartuta, talde ziklikoak sailkatu ahal ditugu isomorfiaren arabera: nahikoa da
+ordena bakoitzeko talde zikliko bakar bat hartzea. Ohikoa da isomorfia klase
+horretako ordezkaria -ren bidez adieraztea n<∞ ordenako talde ziklikoekin ari
+bagara, eta ikurraz talde zikliko infinituetarako. Horrela, “izan bedi …"
+bezalako esaldi batek G taldea n ordenako ziklikoa dela esan nahi du. Notazio
+honen arabera, Errorea: ez da erreferentziaren iturburua aurkitu teoreman
+frogatu genuen emaitza, ordena elkarrekiko lehenak dituzten bi talde ziklikoren
+biderkadura zuzena berriro ere ziklikoa dela baieztatzen duena, honela idatz
+daiteke: (m,n)=1 bada, orduan . Helburu garrantzitsuago bat talde finitu
+guztien sailkapena litzateke, baina talde finituen ugaritasunak sailkapen hau
+burutzea galarazten du. Hala ere, ikastaro honen amaieran ordena zehatz
+batzuetako talde finituak sailkatuko ditugu, ordena txikia denean edo ordenaren
+lehenetako faktorizazioa errazagoa denean. Adibidez, Errorea: ez da
+erreferentziaren iturburua aurkitu. gaian ikusi dugunez, p zenbaki lehena bada,
+p ordenako talde guztiak ziklikoak dira eta, honenbestez, ordena horretako
+talde ez-isomorfoen kopurua bat da. Bestela jarrita: |G|=p zenbaki lehena bada,
+orduan .
+Taldeak sailkatzerakoan, gai izan behar dugu emandako bi talde isomorfoak diren
+ala ez erabakitzeko. Isomorfoak direla frogatzeko, beren artean isomorfismo
+esplizitu bat eraiki beharko dugu, baina isomorfoak ez direla ikusteko, nola
+frogatu beren artean eratu ahal diren aplikazioetatik bat ere ez dela
+isomorfismoa? Honetarako, ikertuko dugu taldeen zein propietate gordetzen diren
+isomorfismoen bitartez. Orduan, talde batek propietate horietako bat badu,
+baina besteak ez, bi talde horiek ez dira isomorfoak.
+                  [Sorry. Ignored \begin{dfn} ... \end{dfn}]
+Beraz, bi talde isomorfoak ez direla frogatzeko modua honako hau da: egitura-
+propietate bat topatu behar dugu, taldeetako batek betetzen duena baina besteak
+ez. Zein propietate dira estrukturalak? Garbi dago taldeen ordena egitura-
+propietatea dela. Bestalde, −1 zenbaki erreala taldeko elementua izatea ez da
+egitura-propietatea, isomorfismoak erakusten duen bezala. Hurrengo atalean,
+homomorfismoen propietate nagusiak ikusi eta gero, egitura-propietate
+gehiagoren adibideak emango ditugu.
+ 1.3 Homomorfismoen propietateak
+                   [Sorry. Ignored\begin{teo} ... \end{teo}]
+                   [Sorry. Ignored\begin{fro} ... \end{fro}]
+Aurreko teorema Errorea: ez da erreferentziaren iturburua aurkitu. gaian
+ikusitako emaitza hau beste era batera frogatzeko erabil daiteke: NG bada eta
+x∈G ordena finituko elementua bada, orduan dela. Horretarako, aplikatu (iv)
+atala epimorfismo kanonikoari.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Azkeneko teorema hau aplikatuz, ezagutzen ditugun talde batzuk isomorfoak ez
+direla ikus dezakegu. Badakigu bi talde isomorfoak diren ala ez galdetzeak
+bakarrik duela zentzua taldeak ordena berekoak direnean. Azter ditzagun 8
+ordenako talde batzuk. Adibidez, dugu, lehenengoa abeldarra delako baina
+bigarrena ez. Beste alde batetik, Z/8Z≇(Z/16Z), lehenengoa ziklikoa izateagatik
+eta bigarrena ez. Azkenik, eta ez-abeldarrak dira biak, baina hala ere ez dira
+isomorfoak: ohartu -k 2 ordenako elementu bakar bat duela, -k 2 ordenako bost
+elementu dituen bitartean. Hau bezalako argudio batek frogatzen du (R,+) eta
+taldeak ez direla isomorfoak. Izan ere, (R,+)-n ordena finituko elementu
+bakarra 0 da, baina -en bi ditugu: 1 eta −1.
+Edozein homomorfismo emanda, f-ri elkartuta bi azpimultzo azpimarragarri daude.
+Lehenengoa f-ren irudia da, , -ren azpimultzoa dena. Bestea segidan definitzen
+dugun -en azpimultzoa da.
+                  [Sorry. Ignored \begin{dfn} ... \end{dfn}]
+Esan dezagun f notazioa erabiltzearen arrazoia dela nukleoa ingelesez “kernel"
+esaten dela. Ohartu f-ren nukleoa ez dela inoiz multzo hutsa, 1∈f dugu eta.
+Adibidez, NG bada, orduan epimorfismo kanonikoaren nukleoa
+da eta, beraz, nukleoa G-ren azpitalde normala da. Berehala ikusiko dugu hau ez
+dela kasualitatea, propietate orokor baten isla baizik.
+Homomorfismo baten suprajektibotasuna aztertzeko irudi multzoa begiratu behar
+dugu: f suprajektiboa da baldin eta soilik baldin bada. Hurrengo emaitzak
+nukleoa injektibotasuna erabakitzeko balio duela esaten digu.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Hurrengo teoremak erakusten digu zein den homomorfismoen portaera
+azpitaldeekiko eta azpitalde normalekiko.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Azpimarratzekoa da azpitalde normalen portaera desberdina irudi zuzenekiko eta
+alderantzizko irudiekiko. Baldin eta homomorfismoa bada, orduan -ren azpitalde
+normalen alderantzizko irudiak beti dira -en azpitalde normalak baina, hala
+ere, -en azpitalde normal baten irudia ez da oro har izango -ren azpitalde
+normala, bakarrik ziurtatu ahal dugu normala dela f irudian. Adibidez, demagun
+G taldeak H azpitalde ez-normal bat duela eta hartu partekotasun homomorfismoa.
+Orduan, HH bada ere ι(H)=H/G dugu.
+                  [Sorry. Ignored \begin{kor} ... \end{kor}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+                  [Sorry. Ignored \begin{kor} ... \end{kor}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Demagun monomorfismo bat dugula. Orduan, f-ren koeremua f-ra murrizten badugu,
+isomorfismo bat lortzen eta f taldeen artean. Beraz, -ren azpitalde batekin
+identifikatu ahal da. Hau dela eta honako definizio hau ematen dugu.
+                  [Sorry. Ignored \begin{dfn} ... \end{dfn}]
+Lagrangeren teoremagatik, izanez gero betetzen da.
+1.4 Isomorfiari buruzko teoremak
+Demagun N G-ren azpitalde normala dela eta epimorfismo kanonikoa dela. Orduan,
+dakigunez, π=N dugu eta, beraz, G/π zatidura taldea π taldearen isomorfoa da.
+Atal honetako lehenengo teoremak erakusten duen bezala, propietate hau
+homomorfismo guztiek betetzen dute.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Beraz, homomorfismo guztietatik isomorfismoak ondorioztatu ahal ditugu. Ikus
+ditzagun adibide batzuk.
+                 [Sorry. Ignored \begin{adik} ... \end{adik}]
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Isomorfiari buruzko hirugarren teoremak esaten digu zatidura talde baten
+zatidura bat egiten dugunean, berriro hasierako taldearen zatidura bat lortzen
+dugula.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Adibidez, d|n denean, badakigu dZ/nZ Z/nZ-ren azpitaldea dela, eta normala
+gainera, Z/nZ abeldarra izateagatik. Orduan, isomorfiari buruzko hirugarren
+teoremak honako isomorfismo hau ematen digu:
+ 1.5 Aurkezpenak sortzaile eta erlazioen bitartez
+Isomorfismoaren ideiari esker, G talde batean sinbolikoki egin dezakegu lan,
+bere elementuak x,y,z,… indeterminatuen bidez adieraziz eta beren izaera
+zehatzaz kezkatu gabe: bi indeterminaturen biderkadura zein indeterminatu den
+baino ez dugu jakin behar taldearen eragiketa ulertzeko. Are eraginkorragoa da
+beste modu honetara jokatzea: taldeko elementu bakoitzari izen sinboliko bat
+eman beharrean, izendatu bakarrik sistema sortzaile bateko elementuak. Horrela,
+X indeterminatu multzoa erabiltzen ari bagara sortzaileak adierazteko, Errorea:
+ez da erreferentziaren iturburua aurkitu teoremaren arabera G-ko elementuak
+
+(1.1)
+moduan idatz daitezke, , eta izanik. Orduan, (1.1) adierazpena X multzoaren
+gainean hitz normal bat dela esaten dugu. Hitz normaletan, agertzen diren
+berreduren kopurua, hau da k zenbakia, 0 izatea ere onartzen dugu, orduan
+hitzaren balioa 1 dela ulertuz. Hitz berezi honi hitz hutsa deritzo. Taldeko
+elementuak hitz normalen bitartez adierazten ditugunean, garbi dago nola
+funtzionatzen duen G-ren eragiketak: eta bi hitz normalen biderkadura lortzeko,
+lehenengo eta behin bi hitzen justaposizioa egiten dugu, eta gero lehenengo
+hitzaren bukaera eta bigarren hitzaren hasiera konparatzen ditugu,
+indeterminatu beraren berredurak izanez gero berredura bakar batean jartzeko
+(edo ezer ez jartzeko, lehenengo hitzaren bukaera eta bigarrenaren hasiera
+elkarren alderantzizkoak badira). Azkeneko prozedura honi biderkaduraren
+laburketa esaten zaio, hitz normala lortzeko.
+Hala ere, G taldea guztiz determinaturik gelditzeko, eragiketa ezagutzeaz gain,
+elementuak desberdintzeko gai izan behar dugu, eta hau ez da zuzenean lortzen
+hitz normalen bitartez: w eta w' hitz normalak formalki desberdinak diren
+arren, w=w' izan dezakegu G taldean. Orduan, w=w' berdintza erabiltzen ari
+garen G-ren sortzaileen arteko erlazio bat dela esaten dugu. Adibidez, G hiru
+ordenako talde ziklikoa bada eta bere sortzaile bat adierazteko x
+indeterminatua erabiltzen badugu, orduan erlazio bat da eta, oro har, sortzaile
+horrek betetzen dituen erlazio guztiak modukoak dira, i≠j eta i≡j3 izanik.
+Ohartu talde finitu batean erlazioen kopurua infinitua dela beti: hitz normalen
+kopurua infinitua den bitartean, taldeko elementuen kopurua finitua da.
+Orokorki, talde bateko elementuak desberdintzeko, pentsa genezake zerrenda bat
+prestatzea, horretan sortzaileen arteko erlazio guztiak sartuz. Hau baino
+erabilgarriago, erlazio guztiak zerrendatu beharrean, nahikoa litzateke erlazio
+batzuk ematea, horietatik gainontzeko erlazioak ondorioztatu ahal badira. Esate
+baterako, berriro ere hiru ordenako taldearen adibidea hartzen badugu, lehenago
+emandako erlazio guztiak erlazio bakarraren ondorioak dira eta, beraz, erlazio
+hau ezagutzea nahikoa da taldeko elementuak desberdintzeko. Honek guztiak
+hurrengo definiziora eramaten gaitu.
+                  [Sorry. Ignored \begin{dfn} ... \end{dfn}]
+Definizioa baino lehen esandakoagatik, garbi dago aurkezpen batek G taldea
+zehazten duela, talde isomorfoak identifikatuz gero. Beraz, talde bat
+adierazteko orduan, nahikoa izango da bere aurkezpen bat ematea.
+Adibidez, eman dezagun G=〈x〉 talde zikliko baten aurkezpen bat. Sortzaile
+horretan, hitz normalak berredurak dira, i∈Z izanik. Erabil dezagun Errorea: ez
+da erreferentziaren iturburua aurkitu teorema x sortzaileak betetzen dituen
+erlazioak aztertzeko, hau da, hitz normalen arteko berdintzak. Baldin eta G
+infinitua bada, badakigu betetzen dela bakarrik i=j denean eta, beraz, ez dago
+inolako erlaziorik. Ondorioz, G-ren aurkezpen bat
+G=〈x|∅〉
+litzateke. Bestela, G finitua bada, n ordenakoa, orduan baldin eta soilik
+baldin i=j+λn bada λ∈Z batentzat. Erlazio hauek guztiak erlazioaren ondorioak
+direnez, kasu honetan
+aurkezpena dugu.
+Talde baten aurkezpen bat dugunean, ziurtasun teorikoa dugu hitz normalen
+arteko berdintzak aurkezpeneko erlazioen ondorioak direla. Hala ere, honek ez
+du esan nahi hau praktikan egiteko algoritmo bat dagoenik, egia esan aurkezpen
+batzuetarako horrelako algoritmorik ez dagoela froga daiteke eta, beraz, ezin
+ditugu desberdindu taldeko elementuak. Hala ere, guk erabiliko ditugun
+aurkezpenekin ez da problema hau agertuko.
+Taldeen aurkezpenak oso erabilgarriak dira homomorfismoak definitzerakoan.
+Demagun G taldea ondorengo aurkezpenaren bitartez emanda dagoela:
+Orduan, K beste edozein talde bada, homomorfismo bat guztiz determinaturik
+geldituko da X-ko elementuen irudien bitartez: azken finean, g∈G bada orduan
+hitz normal baten berdina da eta, ondorioz,
+
+(1.2)
+Gainera, X-ko elementuek w=w' erlazio bat betetzen badute, hau da,
+
+(1.3)
+bezalako berdintza bat badugu, orduan f aplikatuz,
+
+(1.4)
+dugu eta, beraz, erlazio bera betetzen dute f(X)-ko elementuek. Demagun orain,
+alderantziz, G-tik K-rako homomorfismo bat eraiki nahi dugula. Honetarako,
+nahikoa da f X-ko elementuen gainean definitzea eta, gero, (1.2) formula
+erabiliz, definizio hori G-ko elementu guztietara luzatzea. Honela, erraz
+egiaztatzen da f homomorfismoa dela, ondo definituta dagoela frogatu ahal
+badugu: kontuan hartu G-ko elementuen deskribapena X-ren gaineko hitz normal
+bezala ez dela bakarra. Aurrean ikusi bezala, f homomorfismoa izatea lortu
+behar badugu, badakigu f(X)-ko elementuek X-koek dituzten erlazioak bete behar
+dituztela. Egia esan, hau nahikoa da f ondo definituta dagoela frogatzeko: G-ko
+elementu bat bi modutara idazten badugu hitz normal moduan, orduan (1.3)
+bezalako berdintza bat dugu eta, erlazioak gordetzen direlako hipotesia dela
+eta, (1.4) berdintza ere beteko da, hau da, elementu horren irudiak balio bera
+hartzen du edozein modutan adierazita ere. Honek f ondo definituta dagoela esan
+nahi du. Honenbestez ondorengo teorema frogatu dugu, homomorfismoen
+eraikuntzari buruz.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+Dagoeneko talde ziklikoen aurkezpenak ezagutzen ditugunez, von Dycken teorema
+aplika diezaiekegu zuzenean hurrengo emaitza lortzeko.
+                  [Sorry. Ignored \begin{kor} ... \end{kor}]
+Adibidez, -tik -ra bi homomorfismo baino ezin dira definitu: -ren sortzailea x
+bada eta -rena, berriz, y bada, orduan homomorfismo hauek eta x↦1 erregelen
+bitartez definituta daude, eta 1 direlako betetzen duten elementu bakarrak
+taldean. Ohartu bigarren homomorfismoa tribiala dela.
+Azkeneko teoremaren beste ondorio bat, praktikan askotan erabiliko duguna,
+beste hau da.
+                  [Sorry. Ignored \begin{kor} ... \end{kor}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Bukatzeko, eman dezagun taldearen aurkezpen bat. Hartu -ren ondorengo bi
+permutazioak:
+σ=
+              [Sorry. Ignored \begin{pmatrix} ... \end{pmatrix}]
+eta τ =
+              [Sorry. Ignored \begin{pmatrix} ... \end{pmatrix}]
+.
+Badakigu o(σ)=3 eta o(τ)=2 dela. Beraz, 〈τ〉〈σ〉 biderkadura 6 ordenakoa da eta
+dugu. Bereziki, σ-k eta τ-k sortzen dute. Sortzaile hauek, eta erlazioez gain,
+beste hau betetzen dute:
+= σ\s\up5(-1).
+Orduan, Errorea: ez da erreferentziaren iturburua aurkitu korolarioaren
+arabera, hurrengo aurkezpena duen G taldearen zatidura talde baten isomorfoa
+da:
+Frogatzen badugu |G|≤6 dela, orduan -k eta G-k isomorfoak izan behar dute eta,
+beraz,
+aurkezpena ondorioztatu ahal izango dugu. Baina, G taldean 〈x〉 azpitaldea
+normala da, eta izateagatik. Beraz, G=〈x,y〉=〈y〉〈x〉. Kontuan hartuz eta dela,
+|G|≤6 lortzen dugu, nahi bezala.
+Azkenik, ikus dezagun nola erabil dezakegun -ren aurkezpena talde horretan lan
+egiteko, bere elementuak permutazioak direla kontuan hartu gabe. Hain zuzen
+ere, , eta izateagatik,
+
+(1.5)
+dugu, eta ez dago errepikapenik, -k 6 elementu dituelako. Gainera, dela
+erabiliz, horrelako bi elementuren biderkadura berriro ere idazkera horretan
+eman dezakegu:
+(Gogoratu izatetik ondorioztatzen dela, Errorea: ez da erreferentziaren
+iturburua aurkitu teoremaren arabera.) Beraz,ri+k-ren hondarra bada 2
+moduluarekiko etas, berriz, -ren hondarra 3 moduluarekiko, dugu, eta (1.5)
+zerrendako bi elementuren biderkadura zerrenda horretako elementu batekin
+identifikatzeko gai gara. Horrela, -ren taula eraiki genezake. Adibidez,
+lortzen dugu. Beraz, -ren aurkezpen egoki bat lortu dugu, taldea determinatzeko
+balio baitigu, ez bakarrik ikuspegi teoriko batetik, praktikan baizik: badakigu
+nola idatzi elementuak sortzaileen funtzioan errepikapenik gabe, eta baita ere
+nola funtzionatzen duen eragiketak elementu horien artean.

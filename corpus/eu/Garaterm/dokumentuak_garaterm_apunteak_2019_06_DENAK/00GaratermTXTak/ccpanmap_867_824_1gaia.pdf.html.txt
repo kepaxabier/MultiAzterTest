@@ -1,0 +1,623 @@
+
+
+
+
+1
+1.  GAIA. TRIGONOMETRIA ESFERIKOA
+1.  Sarrera
+2.  Gainazal esferikoaren gaineko geometria
+3.  Triangelu esferikoak. Propietateak
+3.1. Definizioak
+3.2. Triangelu polarrak
+3.3. Triangelu esferikoen propietateak
+4.  Triangelu esferikoak berdinak izateko irizpideak
+5.  Triangelu esferiko baten gainazalaren azalera
+6.  Bessel-en formulak
+7.  Triangelu esferiko angeluzuzenak. Neper-en erregela
+8.  Triangelu errektilateroak
+9.  Gauss-Delambre-ren eta Neper-en analogiak
+10. Aplikazioak
+
+2
+1. GAIA. TRIGONOMETRIA ESFERIKOA
+1. SARRERA
+Trigonometria Matematikaren eremu bat da. Trigonometriak  triangeluen zatien
+neurketa aztertzen du; triangelu  lerrozuzenena nahiz esferikoena eta ere
+berarekin
+osatzen diren irudiak. Honekin batera, funtzio trigonometrikoen azterketa ere
+egiten da.
+Topografian eta Kartografian, Trigonometria Laua oso inportantea den neurrian,
+Astronomian eta Geodesian funtsezkoa da oso triangelu esferikoen analisia.
+Trigonometria  Laua eta funtzio trigonometrikoen propietateen  ezaguera
+oinarritzat hartuko da Trigonometria Esferikoaren garapenean.
+2. GAINAZAL ESFERIKOAREN GAINEKO GEOMETRIA
+Gainazal esferikoan egindako irudien azterketa, Geometria Esferikoak egiten du.
+Geometria honen oinarrizko kontzeptuak honako hauek dira: zirkunferentzia
+maximoak
+eta  minoreak, distantzia esferikoa, angelu esferikoa... Hauek uzten digute
+triangelu
+esferikoa eta bere triangelu polarra definitzen eta beren oinarrizko
+propietateak
+deduzitzen.
+•  Esfera baten zirkunferentzia maximoak edo zikloak , esfera eta bere
+zentrotik
+pasatzen diren planoen arteko ebakidurak  dira.
+•  Planoa esferaren zentrotik ez bada pasatzen, zirkunferentzia minorea sortzen
+da.
+P’
+P
+Zirkunferentzia
+minorea
+Zirkunferentzia
+maximoa
+O
+
+3
+•  Zirkunferentzia maximoaren edo  minorearen  poloak, zirkunferentzia
+definitzen duen planoarekiko perpendikularra den esferaren diametroko
+muturrak dira. Aurreko irudian  kasu bietan P eta P´ dira.
+•  Gainazal esferiko baten bi ziklo emanik, beti diametro bateko aurkakoak
+diren P eta P’ bi puntuetan ebazten dute elkar. Halaxe da, bi ziklo hauek
+mugatzen duten planoak esferako O zentrotik pasatzen baitira eta elkar
+ebakitzen dute   P eta P’ muturrak dituen diametro baten bidez, P eta P’ bi
+ziklo horietako puntuak izanik.
+Bi zikloen arteko angelu esferikoa definituko dugu. Ukitze-puntu batean
+zirkunferentzierdien zuzen ukitzaileek osatzen duten angeluari,  angelu
+esferikoa deritzo. Beheko irudian ikusten denez, 
+α angelu esferikoa eta
+zikloak sortzen duten planoek osatutako diedroaren angelua berdinak dira.
+•  Gainazal esferikoan dauden A eta B bi puntuen arteko distantzia txikiena,
+distantzia esferikoa deitzen da. Eta bi puntu hauen artean mugatutako
+zikloko arku txikienaren luzera da. Bi puntu horietatik, diametralki
+aurkakoak ez badira, ziklo bakar bat pasatzen dela ikustea berehalakoa da.
+Aurreko kontzeptuaren aplikazio zuzen bat, lurreko  bi lekuren arteko
+distantziaren kalkulua da, Lur-esfera esfera bat dela kontsideratuz.
+Zirkunferentzia maximoaren arkua esfera batean, eta zuzena planoan antzekoak
+dira, eta orduan Geometria esferikoa, Geometria laua garatu den era berean gara
+daiteke.
+3. TRIANGELU ESFERIKOAK. PROPIETATEAK
+3.1. Definizioak.
+Hiru  zirkunferentzia maximoren
+arkuak esfera batean mugatzen duten
+eremua,  triangelu  esferikoa deitzen da.
+Arkuak, triangelu esferikoaren  aldeak
+dira eta hiru angelu esferikoen erpinak,
+triangelu esferikoaren 
+erpinak edo
+angeluak dira.
+P
+P’
+O
+A
+B
+α
+B
+A
+C
+a
+c
+b
+
+4
+Trigonometria lauan dauden formulak, Trigonometria esferikoko formulekin
+konparatzeko,  triangelu esferikoaren angeluak edo erpinak A,B,C izendatuko
+ditugu eta
+a,b,c beren aurkako aldeak.
+Triangelu esferiko baten aldeak, nahiz eta arkuak izan, unitate angeluarretan
+adierazten dira, normalki gradu hirurogeitarretan, erpinak bezalaxe.
+Triangelu esferiko baten A,B,C erpinak eta esferaren zentroa elkartzen
+direnean,
+angelu triedro bat sortzen da, eta ABC triangeluarekin estuki lotuta dago:
+-  Triangelu esferikoaren a,b,c aldeek, triedro honen aurpegiko angeluen
+neurria dute.
+-  Triangelu esferikoaren A,B,C angeluak bat datoz angelu triedroaren angelu
+diedroekin. Angelu diedro bakoitza, berari dagokion angelu lerrozuzenaren
+bidez neurtzen da. Puntu batean diedroaren ertzarekiko eta aurpegi
+bakoitzean elkarzutak diren zuzenek osatzen duten angelua neurtuz.
+Hau ikusita, triangelu esferikoaren definizio berri bat eman daiteke, esferaren
+eta
+triedroaren hiru aurpegien arteko ebakidura. Hau dela eta, angelu triedroen
+edozein
+propietatetatik, triangelu esferikoen  propietateen antzeko bat deduzi daiteke
+eta
+alderantziz.
+Nabaria da, esferako erradioa aldatuz gero, aurpegien angeluek eta angelu
+triedro
+baten angelu diedroek beren neurriak ez dutela  aldatzen. Hau dela eta,
+triangelu
+esferiko baten aldeen eta angeluen arteko erlazioak  erradioko neurriarekiko
+independenteak dira. Gai honetan, angeluen eta aldeen neurriak 180º baino
+txikiagoak
+dituzten triangelu esferikoak bakarrik aztertuko dira.
+O
+A
+B
+C
+B
+*
+C
+*
+A
+*
+
+5
+3.2. Triangelu polarrak.
+Triangelu esferiko baten hiru aldeko
+poloak, zirkunferentzia maximoko arkuak
+erabiliz elkartzen badira, triangelu
+esferikoaren  triangelu polarra sortzen da.
+Alde bakoitzak dituen bi poloetatik,
+triangelua kokatuta dagoen hemisferioan
+dagoen poloa aukeratzen da; hemisferioa
+aldea kokatuta dagoen zirkunferentzia
+maximoarekiko kontsideratuta.
+3.3. triangelu esferikoen propietateak.
+a)  Triangelu esferiko baten edozein alde beste bien arteko batura baino
+txikiagoa da.
+b)  Triangelu esferiko baten aldeen batura 360º baino txikiagoa da.
+c)  Bi alde berdinak badira, aurkako angeluak ere berdinak izango dira . Era
+berean angeluak berdinak badira. Gainera, triangelu esferiko baten alde bi
+desberdinak badira, aurkako angeluak desberdinak dira eta angelu
+handienaren aurkako aldea ere handiena da . Era berean aldeekin.
+d)  ABC triangelu esferikoaren triangelu polarra A’B’C’ bada, orduan A’B’C’
+triangelu esferikoaren triangelu polarra  ABC da. Emandako edozein
+triangeluren angelu bakoitza, beste triangeluan dagokion   aldearen
+betegarria da. Hau da:
+A=180º-a’
+B=180º-b’
+C=180-c’
+A’=180º-a
+B’=180º-b
+C’=180º-c
+e)  Triangelu esferiko baten angeluen batura 180º baino handiagoa da eta 540º
+baino txikiagoa.
+4. TRIANGELU ESFERIKOAK BERDINAK IZATEKO IRIZPIDEAK
+Bi triangelu esferiko berdinak dira baldin eta:
+a)  Bi alde eta haien artean osatutako angelua berdinak badituzte.
+b)  Bi angelu eta elkartzen duen aldea berdinak badituzte.
+c)  Bere hiru aldeak berdinak badituzte .
+d)  Bere hiru angeluak berdinak badituzte.
+A’
+B’
+C’
+A
+B
+C
+
+6
+5. TRIANGELU ESFERIKO BATEN GAINAZALAREN  AZALERA
+ABC triangelu esferiko baten  gehiegizko esferiko, 
+ε adierazten da, ondoko
+kendurari deritzo:
+ε=A+B+C-180º
+Kasu honetan, gehiegizkoa gradutan emanda dago. A,B,C angeluak radianetan
+ emanda
+badaude, orduan gehiegizko esferikoa  
+ε’ adierazten da eta honela lortuko da
+ε’=A+B+C-π
+Gehiegizko esferikoaren laguntzarekin, r erradiodun esfera batean kokaturik
+dagoen ABC triangelu esferikoaren gainazalaren azalera kalkula daiteke:
+o
+180
+r
+S
+2 ε
+π
+=
+   edo  S = r
+2 
+ε’
+gehiegizko esferikoa gradutan edo radianetan neurturik.
+6. BESSEL-EN FORMULAK
+Atal honetan triangelu esferikoak ebazteko emaitzak emango ditugu, bai
+triangelu esferiko angeluzuzenak edo kamutsak. Hau da, triangeluaren hiru
+elementu
+ezagutuz, beste hirurak lortu.
+1 erradiodun esfera batean, izan bedi ABC triangelu esferikoa, bere aldeak
+a,b,c
+dituena.
+I) 
+SINUEN TEOREMA.
+Triangelu esferiko baten aldeen sinuak eta aurkako angeluen sinuak
+proportzionalak dira.
+C
+sin
+c
+sin
+B
+sin
+b
+sin
+A
+sin
+a
+sin
+=
+=
+II) 
+KOSINUAREN TEOREMA.
+Triangelu esferiko batean, edozein alderen kosinua, beste bi aldeen
+kosinuen arteko biderkadura gehi alde hauen sinuen biderkadura bider
+osatutako angeluaren kosinua  da.
+cos a = cos b cos c + sin b sin c cos A
+cos b = cos c cos a  + sin c sin a cos B
+cos c = cos a cos b + sin a sin b cos C
+
+7
+III) 
+FORMULAKO  HIRUGARREN TALDEA.
+cot a sin b = cos b cos C + sin C cot A
+cot a sin c = cos c cos B + sin B cot A
+cot b sin c = cos c cos A + sin A cot B
+cot b sin a = cos a cos C + sin C cot B
+cot c sin a = cos a cos B + sin B cot C
+cot c sin b = cos b cos A + sin A cot C
+IV) 
+ERPINETARAKO KOSINUAREN TEOREMA.
+cos A = - cos B cos C + sin B sin C cos a
+cos B = - cos A cos C + sin A sin C cos b
+cos C = - cos A cos B + sin A sin B cos c
+7. TRIANGELU ESFERIKO ANGELUZUZENAK. NEPER-EN ERREGELA
+ Izan bedi A angelua zuzena duen ABC triangelu esferiko angeluzuzena.
+Geometria lauarekin konparatuz, a aldeari hipotenusa eta b eta c aldeei
+katetoak  deituko
+diegu. Aurreko atalean ikusitako formulak kasu honetan honela geratzen dira:
+I’) 
+sin b = sin a sin B
+sin c = sin a sin C
+II’) 
+cos a = cos b cos c
+III’)
+tan b = tan a cos C
+tan c = tan a cos B
+tan b = sin c tan B
+tan c = sin b tan C
+IV’) 
+cos a = cot B cot C
+cos B = cos b sin C
+cos C = cos c sin B
+Triangelu angeluzuzeneko lortutako aurreko hamar formulak,  Neper-en
+erregelarekin gogora ditzakegu : Pentagono baten erpinetan triangelu
+angeluzuzenaren
+
+8
+elementuak jarriko ditugu, angelu zuzena izan ezik eta katetoak jarri beharrean
+beren
+osagarriak jarriko ditugu, hau da   a , B , 90º-c , 90º-b , eta C. Orduan
+Elementu bakoitzaren kosinua
+1º) aurkako erpinetako sinuen arteko biderkadura da.
+2º) alboko elementuen kotangenteen arteko biderkadura da.
+8. TRIANGELU ESFERIKO ERREKTILATEROAK
+ 
+Triangelu esferiko  errektilatero edo koadrantea deitzen diogu alde bat  zuzena
+duen triangelu esferikoari. Izan bedi a=90º duen ABC triangelua. Bessel-en
+formuletan,
+sin a =1 ,  cos a =0,  cot a =0 ordezkatuz, triangelu  errektilateroetan erabil
+daitezkeen
+formulak   lortzen dira.
+I’’) 
+sin B = sin A sin b
+sin C = sin A sin c
+II’’) 
+cos A = - cot b cot c
+cos b = cos B  sin c
+cos c = cos C sin b
+III’’)  tan B = -tan A cos c
+tan C = - tan A cos b
+tan B = sin C tan b
+tan C = sin B tan c
+IV’’)  cos A = - cos B cos C
+ABC triangelua  errektilateroa bada, A’B’C’ bere triangelu polarra
+errektangeluarra da eta orduan aurreko atalean lortutako formulak aplika
+ditzakegu.
+              
+a
+B                    C
+   90-c        90-b
+
+9
+9. GAUSS-DELAMBRE-REN  ETA NEPER-EN ANALOGIAK
+Triangelu esferiko baten erpin-erdietako  formulak
+     
+sinc
+.
+sinb
+)
+c
+p
+(
+sin
+.
+)
+b
+p
+(
+sin
+2
+A
+sin
+−
+−
+=
+      
+sinc
+.
+sinb
+)
+a
+p
+(
+sin
+.
+sinb
+2
+A
+cos
+−
+=
+  
+)
+a
+p
+(
+sin
+.
+sinp
+)
+c
+p
+(
+sin
+.
+)
+b
+p
+(
+sin
+2
+A
+tg
+−
+−
+−
+=
+         
+2
+c
+b
+a
+p
++
++
+=
+ izanik
+Gauss-Delambre-ren analogiak ( analogia
+≡ proportzioa)
+2
+c
+cos
+2
+b
+a
+cos
+2
+C
+sin
+2
+B
+A
+cos
++
+=
++
+ 
+2
+c
+cos
+2
+b
+a
+cos
+2
+C
+cos
+2
+B
+A
+sin
+−
+=
++
+ 
+2
+c
+sin
+2
+b
+a
+sin
+2
+C
+sin
+2
+B
+A
+cos
++
+=
+−
+2
+c
+sin
+2
+b
+a
+sin
+2
+C
+cos
+2
+B
+A
+sin
+−
+=
+−
+Neper-en analogiak:
+2
+C
+cot
+2
+b
+a
+cos
+2
+b
+a
+cos
+2
+B
+A
+tan
++
+−
+=
++
+2
+C
+cot
+2
+b
+a
+sin
+2
+b
+a
+cos
+2
+B
+A
+tan
++
+−
+=
+−
+10. APLIKAZIOAK
+Bai Lur-esferaren gainean bai Zeru-esferaren gainean zenbait aplikazio daude.
+Lur-esfera:
+•  Bi punturen arteko distantzia geografiko minimoa.
+•  Nabigazio problemak: norabidea eta distantzia.
+Zeru-esfera:
+•  Ordua zehaztea.
+•  Eguzkiaren irteera eta sartzera.
+•  Leku baten latitudea.
+
+10
+Trigonometria esferikoaren beste aplikazioak baliagarriak dira Kartografian eta
+proiekzio kartografikoak  egiteko.
+Lur-esfera
+•  Koordenatu geografikoak
+•  Bi punturen arteko distantzia geografiko minimoa
+Lur-esfera esfera bat dela suposatuz, A eta B puntuen arteko distantzia
+geografiko minimoa, 
+∩
+AB zikloko arkua da.
+•  Nabigazio problemak
+Ipar poloa
+Hego  poloa
+Ekuatorea
+M
+e
+r
+i
+d
+i
+a
+n
+o
+a
+Greenwich-eko
+meridianoa
+Hegoa (S)
+Iparra(N)
+Ekialdea (E)
+Mendebaldea (W)
+P
+A
+B
+G
+λ
+2
+λ
+1
+ϕ
+2
+ϕ
+1
+
+11
+1.  Adibidea.  Boston eta Lurmutur Hiria (Ciudad  del  Cabo) hirien arteko
+distantzia
+kalkulatu, beren koordenatu geografikoak ondokoak badira:
+Boston:  latitudea 42º 21’  N.  eta longitudea 71º 4’  W.
+Lurmutur Hiria: latitudea 33º 56’ S.   eta longitudea 18 º 29’ E.
+Ebazpena:
+∧
+PBC  triangeluko datuak:
+PB aldea=90º - Bostoneko latitudea = 47º39’
+      PC aldea = 90º+ Lurmutur Hiriko latitudea = 123º 56’
+P angelua = Bostoneko longitudea + Lurmutur Hiriko longitudea = 89º 33’
+cos BC=cos PB cos PC +sin PB sin PC cos 
+∧
+PBC  = -0.3712387
+BC aldea= 111º 47’ 31’’
+Boston- Lurmutur Hiria distantzia = BC x 
+º
+180
+π
+ x Lurreko erradioa =
+=  12 421 Km    ( Lurreko erradioa = 6370 Km)
+2. Adibidea. Konparaitzazu latitude bera duten bi punturen arteko distantzia
+geografiko
+minimoa eta paralelo bati jarraituz lortzen den distantzia.
+Adibidez:  New York : longitudea: 76º 21’ Mendebaldea eta latitudea 40º 43’
+Iparra eta
+Napoles: longitudea 14º 13’ Ekialdea eta latitudea bera.
+Ebazpena:
+Meridianoen arteko angelua:
+76º 21’ + 14º 13’ = 90º 34’
+Distantzia geografiko minimoa:
+7242 Km
+Distantzia paraleloan: 7627 Km
+P
+P1
+ P2
+O
+r
+ϕ
+Boston
+L. Hiria
+  G 
+*
+P
+B
+C
+
+12
+Zeru-esfera
+•  Ekuatore-koordenatuak eta koordenatu horizontalen arteko aldaketa.
+•  Ordua zehaztea.
+•  Eguzkiaren irteera eta sarrera ordua.
+•  Leku baten latitudea ematea.
+Horizontea
+     Ekuatorea
+I P
+H P
+Z
+Z’
+Orduko
+zirkunferentzia
+Zirkunferentzia
+bertikala
+Ikuslearen
+meridianoa

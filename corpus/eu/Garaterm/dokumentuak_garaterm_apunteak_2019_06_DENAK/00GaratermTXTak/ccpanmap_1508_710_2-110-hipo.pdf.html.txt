@@ -1,0 +1,983 @@
+
+
+
+Hipotesi parametrikoen alderakuntza
+Josemari Sarasola Ledesma
+2007ko abendua
+
+Inferentzia
+Josemari Sarasola Ledesma
+Contents
+1
+Zer den hipotesi parametriko baten alderakuntza
+4
+2
+Hipotesi hutsaren eraketa
+5
+2.1
+Mesﬁdantza edo ezkortasuna
+. . . . . . . . . . . . . . . . . . . .
+5
+2.2
+Egonkortasuna . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5
+3
+Hipotesien alderakuntza adibide bat
+6
+3.1
+p maila kritikoaren ihardunbidea . . . . . . . . . . . . . . . . . .
+6
+3.2
+Eskualde kritikoaren ihardunbidea . . . . . . . . . . . . . . . . .
+7
+4
+Adierazgarritasun mailaren esanahia
+7
+5
+Konﬁdantza tarteak eta hipotesi alderakuntzak
+8
+6
+Alde bakarreko eta alde biko kontrasteak
+8
+6.1
+Alde bakarreko kontrastea . . . . . . . . . . . . . . . . . . . . . .
+8
+6.2
+Alde biko kontrastea . . . . . . . . . . . . . . . . . . . . . . . . .
+9
+7
+Ohizko hipotesi alderakuntzak
+11
+7.1
+Populazio batezbestekoari buruzko alderakuntza, eredua normala
+eta desbidazioa ezaguna izanik
+. . . . . . . . . . . . . . . . . . .
+11
+7.2
+Populazio batezbestekoari buruzko alderakuntza, eredua normala
+eta desbidazioa ezezaguna izanik . . . . . . . . . . . . . . . . . .
+12
+7.2.1
+Kontrastea R softwarean . . . . . . . . . . . . . . . . . . .
+12
+7.3
+Populazio proportzioari buruzko alderakuntza, lagin tamainu hand-
+ietarako . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+13
+7.4
+Populazio bariantzari buruzko alderakuntza, eredu normaletan
+.
+14
+8
+Ebazkizunak
+14
+9
+Populazio batezbestekoen berdintasunari buruzko alderakuntzak 15
+2
+
+9.1
+Eredu normalak eta bariantzak ezagunak
+. . . . . . . . . . . . .
+16
+9.2
+Eredu normalak, bariantzak ezezagunak baina berdinak bi pop-
+ulazioetan . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+16
+9.2.1
+Populazio independenteak . . . . . . . . . . . . . . . . . .
+17
+9.2.2
+Populazio dependenteak . . . . . . . . . . . . . . . . . . .
+17
+9.3
+Eredu normalak, bariantzak ezezagunak eta ezberdinak
+. . . . .
+18
+10 Populazio bariantzen berdintasunari buruzko kontrasteak eredu
+normaletan
+19
+11 Proportzioen berdintasunari buruzko kontrasteak lagin tamainu
+handietarako
+19
+12 Ebazkizunak
+20
+
+Inferentzia
+Josemari Sarasola Ledesma
+1
+Zer den hipotesi parametriko baten alderakuntza
+Orain arte, parametroen balioak ezagutzen ez genituela, datuetan oinarritzen
+ginen, berauetatik zuzenean parametroa puntuz edo tartez zenbatesteko. Para-
+metroak zehazteko badago beste bide bat: parametroari buruzko hipotesi bat
+ezartzen dugu (H0 = µ = 4, esaterako) eta hipotesi hau datuen aldean jartzen
+dugu, hipotesia onartu daitekeen erabakitzeko.
+Hipotesi parametriko baten
+alderakuntza egiten ari naiz.
+Hipotesi parametriko batean parametroak balio jakin bat hartzen duela
+baieztatzen da. Inongo azterketa egin gabe, sinisten dugun hipotesiari hipotesi
+hutsa deitzen zaio.
+Esan bezala, hipotesi parametriko baten alderakuntza edo kontraste batean,
+datuek erakusten dutena aztertuta, hipotesia onartu (edo ukatu) behar den
+aztertzen da. Adibidez, H0 : µ < 2 hipotesia (hau da, populazio batezbestekoa
+2 baino txikiagoa dela dioen hipotesia) lagin batezbestekoa 2.5 baino handiagoa
+denean ukatzen dela ezar daiteke kontrasterako erregela bezala. Gure helburua
+kontrasterako erregela egokiak eratzea da. Erregelan ﬁnkatu beharrekoak zen-
+bateslea (aurreko adibidean, lagin batezbestekoa) eta eskualde kritiko optimoa
+delakoa (adibidean, lagin batezbesteko aritmetikoa 2.5 baino handiagoa izatea)
+dira.
+Azpimarratu behar da hipotesia egiazkoa edo faltsua den ez dugula inoiz
+jakingo: ukatu edo onartu egiten dira.
+Arrazoia argi dago: parametroaren
+benetako balioa ez dugu inoiz jakingo.
+Hipotesia ukatzeko gertatu dena (edo gertatu dena baino areago) harrigar-
+ria izan behar da, hau da, gertatu denaren probabilitatea (edo areago) txikia
+izan behar da. Txikitasuna αadierazgarritasun maila delako batekin alderatuz
+ezartzen da.
+Adibidez, hipotesi bezala ikasle batek ez duela aski estudiatu
+sinetsirik, aprobatzeko probabilitatea oso txikia bada, eta azkenean aprobatzen
+badu, hasierako hipotesia ukatu beharko nuke eta beraz, estudiatu duela onartu
+beharko nuke.
+4
+
+Inferentzia
+Josemari Sarasola Ledesma
+2
+Hipotesi hutsaren eraketa
+Hipotesi hutsa ezartzeko irizpide batzuk jaraitu behar dira. Funtsezkoak ikasiko
+ditugu jarraian.
+2.1
+Mesﬁdantza edo ezkortasuna
+Esaten digutenaren edo datuek erakusten dutenaren aurkakoa hartuko dugu hipotesi
+huts bezala.
+Adibidez, hornitzaile batek bere pieza akastunen proportzioa %1 dela (gehienez
+ulertu behar da) baieztatzen badu, eta horretan sinistuta bagaude enpresan,
+mesﬁkor pentsatu, eta beraz, hipotesi huts bezala, proportzioa %1 baino hand-
+iagoa dela ezarri behar da.
+Beste adibide bat: azken egunotan ekoizpena batezbestez 80 dela jakin
+badugu, normalean 100 delarik, datuek erakusten dutenaren aurkakoa sinistu
+behar da: H0 : µ > 100.
+Mesﬁkortasunez esan daiteke baita ere hipotesi huts bezala hau hartu be-
+har dela: hipotesia egia izanda, bere balizko ukapenak ondorio larriak ekarriko
+lituzkeen hipotesia aukeratu behar da.
+Adibidez, hondartza batean kutsadura mila onargarria batezbestez µ = 2
+bada, inongo susmorik, inongo daturik ezean, kutsatuta dagoela (H0 = µ >
+2) sinistu behar da: benetan kutsatuta balitz eta kutsatuta dagoela ukatuko
+bagenu (ura garbia dela esango bagenu), jendearengan osasun arazo larriak sor-
+tuko genituzke.
+2.2
+Egonkortasuna
+Zientziaren printzipio bat parsimonia da: hipotesi sinpleak hartu behar dira
+printzipioz oinarritzat. Adibidez, ereduaren batezbestekoa 4 den (H0 = 4) edo
+ez (H0 = 4) erabaki behar bada, hipotesi huts bezala,H0 = 4 aukeratuko dugu,
+beste hipotesia konplexua eta zehazgabea baita.
+Beste adibide bat, pertsona batek seikoen emaitzak ia beti asmatzen dituela
+baieztatzen badu, hipotesi huts bezala zenbakiak ez dituela batere asmatzen
+(hau da, zenbakiak zoriz esaten dituela) ezarriko dugu hipotesi huts bezala,
+beste alternatiba (zenbakiak neurri handi batean asmatzen dituela) lausoa eta
+konplexua delako (zein neurritaraino asmatzen ditu?)
+5
+
+Inferentzia
+Josemari Sarasola Ledesma
+3
+Hipotesien alderakuntza adibide bat
+Idiazabalgo gaztaren jatorrizko izendapena jasotzeko ekoizlearen gazten batezbesteko
+koipe edukina %50 baino txikiagoa izan behar da. Izendapena jasota duen ekoi-
+zle baten 4 gazta aztertu dira. Koipe edukinak hauek izan dira ehnuekotan:
+46-44-54-52. Koipe edukinaren desbidazioa ezaguna da: 2. α adierazgarritasun
+maila %10 izanik, zein erabaki hartu behar da?
+Izendapenaren barnean badago, oraingoz baldintza betetzen duela uste da.
+Beraz, aurkakoa hartuko dut hipotesi huts bezala, hau da, ezkorra izango naiz:
+baldintza ez da betetzen, hau da,
+H0 : µ > 50
+Kontrastea egiteko lagin batezbestekoa erabiliko dugu (lojikoena da eta gain-
+era matematikoki froga daiteke kontraste honetarako zenbatesle optimoa dela).
+Lagin batezbestekoa hau da: 49.
+Kontrastea burutzeko bi metodo daude: p maila kritikoaren ihardunbidea
+eta eskualde kritikoaren ihardunbidea
+3.1
+p maila kritikoaren ihardunbidea
+Gertatu dena 49ko batezbestekoa da.
+Hipotesi hutseko erreferentzia 50 da.
+Hipotesiak dioena egiazkotzat jotzen denez, ikus dezagun zenbatekoa den µ = 50
+izanik, 49 edo areago izateko probabilitatea (areago behetik kokatuko da kasu
+honetan, Ho:¿50 hipotesia koipe edukinak txikiak direnean ukatuko baita):
+x ∼ N (µ = 50,
+σ
+√
+n
+=
+2
+√
+4
+= 1
+P [x < 49 /µ = 50] = {estandartuz} = P [z <
+49 − 50
+1
+] = P [z < −1] = 0.158
+Gertatu dena (edo areago) izateko probabilitate honi p maila kritikoa deituko
+diogu.
+p maila kritikoa, gertatu denaren probabilitatea alegia, handia dela
+pentsatu behar da, aldez aurretik ﬁnkatu den adierazgarritasun maila baino
+handiagoa delako. Hau da, gertatu dena normaltzat jo behar da. Beraz, hipotesi
+hutsa ez da ukatu behar (Ho : µ > 50 ) eta ondorioz jatorrizko izendapena eman
+behar zaio ekoizleari.
+Azpimarratu behar da α maila aldez aurretik ﬁnkatu behar dela, neutral-
+tasunez jokatu nahi badugu behintzat (bestela badago arriskua norberak nahi
+duena erabakitzeko).
+6
+
+Inferentzia
+Josemari Sarasola Ledesma
+3.2
+Eskualde kritikoaren ihardunbidea
+α adierazgarritasun maila bada, ikus dezagun zer gertatu beharko litzatekeen
+hipotesia ukatzeko:
+x ∼ N (µ = 50,
+σ
+√
+n
+=
+2
+√
+4
+= 1)
+P [x < k / µ = 50] = {estandartuz} = P [z <
+k − 50
+1
+] = 0.1 →
+k − 50
+1
+= −1.28 → k = 48.72
+Beraz, H0 = µ > 50 hipotesi hutsa ukatzeko 4 datuen batezbestekoa 48.71845
+baino txikiagoa suertatu behar da.
+Bestela esanda, onarpen eskualdea eta
+ukapen eskualdea hauek lirateke hurrenez hurren: onartu : x > 48.71845 eta
+ukatu : x < 48.71845. Emaitza 49 denez, H0 = µ > 50 onartu egingo dugu.
+Ohartu behar da p maila kritikoaren metodoa ezin dela erabili datuak jaso ez
+badira. Eskulade kritikoaren bitartez bai diseinatu daitekeela kontrastea datuak
+jaso aurretik. Alde horretatik eskualde kritikoaren ihardunbidea zuzenagoa edo
+osatuagoa da, datuen aurretik, ia ezarrita baitago zein den erabaki-erregela,
+H0 noiz onartu eta noiz ukatu behar dugun alegia. Emaitza dena den berdina
+izango da bi kasuetan.
+4
+Adierazgarritasun mailaren esanahia
+Aurreko adibidean, ukapen aldean honela adierazten da graﬁkoki:
+Figure 1: Ukapena adibideko konstrastean: lagin batezbestekoa 48.71 baino
+txikiagoa denean ukatzen da H0.
+Hipotesi hutsa egia izanda, populazio
+batezbestekoa 50 delarik alegia, hipotesi hutsa ukatzeko probabilitatea alfa da.
+7
+
+Inferentzia
+Josemari Sarasola Ledesma
+Irudian ikusten denez, populazio batezbestekoa 50 izanda, posible da lagin
+batezbestekoa 48.71 baino txikiagoa izatea, baina ez da oso probablea. Horre-
+gatik ukatzen dugu 50eko batezbestekoa lagin batezbestekoa eskualde ilunean
+kokatzen denean. Baina egia esan bada posible, batezbestekoa 50 izanda, la-
+gin batezbestekoa 48.71 baino txikiagoa izatea. Hau gertatuz gero, Ho ukatzen
+dugunez, errore bat jaukiko genuke: Ho egia izanda, Ho ukatzeko errorea. Er-
+rore honi I motako errorea ere deitzen zaio. Errore hau gertatzeko probabil-
+itatea adierazgarritasun mailarekin dator bat, ukapen aldean gaudenean ger-
+tatzen baita errorea, Ho egia izanda, Ho ukatzen dugunean alegia.
+Adierazgarritasun maila zenbat eta txikiagoa ezarri, ukapen aldea orduan eta
+txikiagoa da eta beraz, Ho ukatzea zailagoa izango da. Ho hipotesiarekin oso
+sinistuta bagaude, berarekin oso fede handia badugu aurretik, adierazgarritasun
+maila txikia aukeratu beharko da.
+5
+Konﬁdantza tarteak eta hipotesi alderakuntzak
+Konﬁdantza tarteak eta hipotesi alderakuntzak honela daude lotuta:
+Konﬁdantza tarte batek parametroari esleitzen dizkion balioak, 1 − α-ko
+konﬁdantzaz, hipotesi alderakuntzetan α-ko adierazgarritasun mailaz onartuko
+genituzkeen parametroari buruzko hipotesiak dira.
+6
+Alde bakarreko eta alde biko kontrasteak
+Kontraste edo alderakuntza batean arraro izan zaigunaren probabilitatea kalku-
+latzen dugu. Probabilitatea norabide jakin batean kalkulatzen dugu: aurreko
+adibidean, arrarotzat jotzen genuena behetik gertatzen da. Arraroa behetik
+bakarrik 
+(edo goitik bakarrik) gertatzen denean kontrastea alde bakarrekoa1 dela
+esango dugu. Arrarotzat jo behar dena, goitk zein behetik dagoenean kontrastea
+alde bikoa 2dela esango dugu. Ikus dezagun adibide bana (gainera horrela kon-
+trasteen mekanika hobeto ulertuko dugu).
+6.1
+Alde bakarreko kontrastea
+Gure enpresak kalitatezko produktuak ekoizten ditu: kakao edukin handiko tx-
+okolateak ekoizten dira. Ekoizten ditugun txokolate tableten kakao edukina
+1Gazteleraz, unilateral
+2Gazteleraz, bilateral
+8
+
+Inferentzia
+Josemari Sarasola Ledesma
+batezbestez 60 gr. baino handiagoa den kontrastatu nahi dugu. Horretarako,
+16 tableta independente 
+(lote ezberdinetakoak, alegia) aztertu eta batezbestekoa
+kalkulatuko da. Tableta bakoitzaren kakao edukinaren desbidazioa 8 gr. dela
+uste da. Adierazgarritasun maila %5 izanik, zein da erabaki erregela?
+Hipotesi hutsa ezartzeko, ikus dezagun zer uste dugun: kakao edukin handia
+dugula. Ezkortasunez jokatuz, aurkakoa hartuko dugu hipotesi huts bezala,
+kakao edukina txikia dela alegia, hartuko dugu:
+H0 = µ < 60
+Hipotesiari buruz erabaki bat hartzeko, eskualde kritikoaren metodoa bakar-
+rik dugu eskura, lagin datuen emaitzak ez baitira oraindik jaso.
+Eskualde kritikoa edo ukapen aldea goitik bakarrik izango da (alde bakarreko
+kontrastea da hortaz), batezbestekoa 60 baino txikiagoa dela, lagin batezbestekoa
+handia denean ukatuko baita. Ikus dezagun zehaztasunez zein den balio kritikoa
+edo muga-balioa:
+x ∼ N (µ = 60,
+σ
+√
+n
+=
+8
+√
+16
+= 2)
+P [x > k / µ = 60] = {estandartuz} = P [z >
+k − 60
+2
+] = 0.05 →
+k − 60
+2
+= 1.64 → k = 63.28
+Erabaki erregela ematen digun ukapen aldea hau da, beraz: 16 datuen lagin
+batezbestekoa 63.28 baino handiagoa denean H0 = µ < 60 ukatu egingo dugu.
+6.2
+Alde biko kontrastea
+Enpresa batek fruta kaxetan sartu behar du.
+Kaxen pisu nominal edo es-
+tandarra 5 kilokoa da. Beste enpresetan jasotako datuen arabera, langileek
+paketeraturiko kaxa bakoitzaren egiazko edukinaren desbidazio estandarra 400
+gramukoa dela dakigu. 25 kaxa aztertu eta lagin batezbestekoa 4.950 kilo suer-
+tatu da. Adierazgarritasun maila %1 izanik, zein erabaki hartu behar da: kaxak
+batezbestez ongi betetzen dira edo ez? Pentsatu kaxa bakoitzaren pisuak ba-
+nakuntza normalari darraiola.
+Hipotesi hutsa ﬁnkatu behar da: kaxa batezbestez 5 kilokoa dela ezarriko
+dugu, H0 = 5 alegia. Beste alternatiba 5 kilokoa ez dela esatea da, baina
+honela ezin dugu kontrastea garatu ez baita parametrorako balio bat zehazten
+(zenbat izango da orduan batezbesteko pisua: 5.1, 4.8, ...?). Beraz, parsimonia
+irizpideaz, H0 = 5.
+Ohartarazi behar da kasu honetan eskualde kritikoa goitik zein behetik
+koakzten dela: hipotesi hutsa,batezbesteko edukina 5 kilokoa dela edo kaxa ongi
+9
+
+Inferentzia
+Josemari Sarasola Ledesma
+betetzen dela alegia, kaxen pisuen batezbestekoa aski handia edo aski txikia de-
+nean ukatuko baita. Kasu hauetan kontrastea alde bikoa dela esaten da. Alde
+biko kontrasteetan adierazgarritasun maila bi muturren artean banatu behar da
+kontrastea burutzeko, alde banatan %0.5 utziz.
+p maila kritikoaren ihardunbidea:
+Ikus dezagun zenbateraino den harrigarria gertatu dena (edo areago), hipotesi
+hutsarekin sinesten bada:
+x ∼ N (µ = 5,
+σ
+√
+n
+=
+0.4
+√
+25
+= 0.08)
+P [x < 4.95 /µ = 5] = {estandartuz} = P [z <
+4.95 − 5
+0.08
+] = P [z < −0.625] = 0.266
+Gertatutakoaren probabilitatea adierazgarritasun mailaren erdia (0.01/2=0.005
+alegia) baino handiagoa denez, normaltzat hartzen dugu hipotesi hutsa sinistuz
+eta beraz, hipotesi hutsa onartu egingo dugu:
+ kaxa 5 kiloko edukinez batezbestez
+betetzen dira.
+Eskualde kritikoaren ihardunbidea:
+Kontrastea alde bikoa denez, alde banatan %0.5 = 0.005eko probabilitatea
+utzi beharko dugu. Oinarri bezala hartzen dugun zenbateslea, batezbestekoa
+alegia, banakuntza normalaren araberakoa denez, simetria dago eta beraz onarpen
+aldea 5±k erakoa izango da. Lehenik goi aldeko eskualde kritikoa emango dugu:
+x ∼ N (µ = 5,
+σ
+√
+n
+=
+0.4
+√
+25
+= 0.08)
+P [x < k / µ = 5] = {estandartuz} = P [z <
+k − 5
+0.08
+] = 0.005 →
+k − 5
+0.08
+= −2.57 → k = 4.79
+Hipotesi hutsa lagin batezbestekoa 4.79 baino txikiagoa denean ukatuko dugu
+orduan. Ikus dezagun orain goitik noiz ukatuko dugun:
+x ∼ N (µ = 5,
+σ
+√
+n
+=
+0.4
+√
+25
+= 0.08)
+P [x > k / µ = 5] = {estandartuz} = P [z >
+k − 5
+0.08
+] = 0.005 →
+k − 5
+0.08
+= 2.57 → k = 5.21
+Labur, kaxa ongi betetzen dugula ezartzen duen hipotesi hutsa batezbestekoa
+4.79 baino txikiagoa eta 5.21 baino handiagoa denean ukatuko dugu. Batezbestekoa
+4.95 suertatu denez, kaxek batezbestez 5 kiloko edukina dutela erabakitzen
+dugu.
+10
+
+Inferentzia
+Josemari Sarasola Ledesma
+7
+Ohizko hipotesi alderakuntzak
+7.1
+Populazio batezbestekoari buruzko alderakuntza, ere-
+dua normala eta desbidazioa ezaguna izanik
+Aurreko adibideetako egoera da. Labur orain, hauek dira alde bakarreko eta
+alde biko kontrasteen ukapen aldeak eratzeko formulak, erabili beharreko lagin
+banakuntzarekin batera:
+x ∼ N µ,
+σ
+√
+n
+Alde bakarreko kontrasteak
+(α: adierazgarritasun maila, zα: bere gainetik α-ko probabilitatea uzten
+duen balioa).
+Ukapen aldeak hauek dira:
+x > µ + zα
+σ
+√
+n
+x < µ − zα
+σ
+√
+n
+Alde biko kontrastea
+Ukapen aldea bakarra da baina bi norabidekoa da kasu honetan:
+x > µ + zα/2
+σ
+√
+n
+x < µ − zα/2
+σ
+√
+n
+11
+
+Inferentzia
+Josemari Sarasola Ledesma
+7.2
+Populazio batezbestekoari buruzko alderakuntza, ere-
+dua normala eta desbidazioa ezezaguna izanik
+Ereduaren desbidazioa ez ezagutzea egoera ohizkoena da. Egoera honetan, ere-
+duaren desbidazioa ˆ
+s quasi-bariantzaren bitartez zenbatesten dugu. Kontraste
+hau t-test izenez ere ezagutzen da.
+Erabili beharreko estatistikoa eta bere lagin banakuntza hauek dira:
+x − µ
+ˆ
+s /
+√
+n
+∼ tn−1
+Alde bakarreko kontrasteak
+Ukapen aldeak hauek dira:
+x > µ + tn−1,α
+ˆ
+s
+√
+n
+x < µ − tn−1,α
+ˆ
+s
+√
+n
+Alde biko kontrastea
+Ukapen aldea bakarra da baina bi norabidetan:
+x > µ + tn−1,α/2
+ˆ
+s
+√
+n
+x < µ − tn−1,α/2
+ˆ
+s
+√
+n
+7.2.1
+Kontrastea R softwarean
+R sofware askean, kontraste hau burutzeko aginduak (input) jasotako datuak
+3 − 4 − 5 badira eta hipotesi hutsa H0 : µ > 5 izanik:
+> x<-c(3,4,5)
+> t.test(x,alternative=c("less"),mu=5,conf.level=0.99)
+Emaitza hau da:
+One Sample t-test
+12
+
+Inferentzia
+Josemari Sarasola Ledesma
+data:
+x
+t = -1.7321, df = 2, p-value = 0.1127
+alternative hypothesis: true mean is less than 5
+99 percent confidence interval:
+-Inf 8.020989
+sample estimates:
+mean of x
+4
+Emaitzan hauek azaltzen dira besteak beste: t estatistikoaren balioa, bere
+azpiko probabilitatearekin batera (p-value), lagin batezbestekoa eta konﬁdantza
+tarte bat parametroari buruz %99ko probabilitatekoa. Erabakia p-value delakoa
+adierazgarritasun mailarekin alderatuz hartuko dugu. Kasu honetan, α = 0.10
+balitz, hipotesi hutsa onartu beharko genuke.
+R softwarean kontrastea alde bikoa denean (alternative("two.sided")
+jarriz egingo dugu), p maila kritikoa (p-value) α-
+rekin alderatu behar da eta ez
+α/2-rekin, maila kritikoari bider bi egin zaiolako.
+7.3
+Populazio proportzioari buruzko alderakuntza, lagin
+tamainu handietarako
+Lagin proportzioa erabiliko dugu zenbatesle gisa. Bere lagin banakuntza lagin
+tamainu handietarako hau da:
+ˆ
+p ∼ N (p,
+pq
+n
+)
+Alde bakarreko kontrasteak
+Ukapen aldeak hauek dira:
+ˆ
+p > p + zα
+pq
+n
+ˆ
+p < p − zα
+pq
+n
+Alde biko kontrastea
+Ukapen aldea bakarra da baina bi norabidetan:
+ˆ
+p > p + zα/2
+pq
+n
+ˆ
+p < p − zα/2
+pq
+n
+13
+
+Inferentzia
+Josemari Sarasola Ledesma
+7.4
+Populazio bariantzari buruzko alderakuntza, eredu nor-
+maletan
+Egoera honetan estatistiko hau, bere lagin banakuntzarekin batera, erabiltzen
+dugu:
+ns2
+σ2
+∼ χ2
+n−1
+χ2
+n−1,α deituko diogu bere gainetik α-ko probabilitatea uzten duen balioari,
+ji karratu batean, askatasun maila kopurua n − 1 izanik.
+Alde bakarreko kontrasteak
+Ukapen aldeak hauek dira:
+s
+2 >
+σ2 χ2
+n−1,α
+n
+s
+2 <
+σ2 χ2
+n−1,α
+n
+Alde biko kontrastea
+Ukapen aldea bakarra da baina bi norabidetan:
+s
+2 >
+σ2 χ2
+n−1,α/2
+n
+s
+2 <
+σ2 χ2
+n−1,α/2
+n
+8
+Ebazkizunak
+• Ekoizpen plangintzan ezarritakoaren arabera, langile bakoitzak batezbestez
+22 pieza burutu behar ditu orduko lantoki batean.
+Langile baten er-
+rendimendua gutxitu dela susmoak baditugu. Elkarrekiko independentzia
+duten orduetan datu hauek jaso zaizkio:
+20 − 18 − 23 − 17 − 22 − 20
+Erredimenduak banakuntza normalari darraiola uste da, desbidazioa 2
+unitatekoa delarik. %5eko adierazgarritasun mailaz, zein erabaki hartu
+behar da? p maila kritikoaren ihardunbidea zein ukapen aldearen ihardun-
+bidea erabil itzazu.
+14
+
+Inferentzia
+Josemari Sarasola Ledesma
+• Ur berogailu baten kutsadur emisiok banakuntza normalari darraiola uste
+da. ezarritako arauen arabera, batezbestez 5 baino txikiagoa izan be-
+har da. Azken aldi honetan egindako neuketen arabera, badirudi marka
+bateko berogailuek ez dutela baldintza hori betetzen. Jasotako neurketak,
+erabateko independentziaz, hauek dira:
+5.6 − 5.2 − 4.8 − 5.1 − 5 − 4.9 − 6 − 6 − 2
+%1eko adierazgarritasun mailaz, markak araua betetzen duen erabaki ezazu.
+• Ur mineral marka batek %2ko sufre-edukina bilatzen du bere uretan,
+neurri hori justu baita egokia markak aipatzen dituen gaisotasunak ar-
+intzeko. Botila independenteetan neurketa hauek jaso dira ehunekotan:
+2.1 − 2.2 − 2 − 1.9 − 1.8 − 2.4 − 2.2
+Edukinak banakuntzanormalari badarraio, %10eko adierazgarritasun mailaz
+zein erabaki hartu behar da.
+• Ardo marka batek jatorrizko izendapen batera bildu nahi badu, alkohol
+edukin homogenoa izan behar da bere botiletan: zehatzago, alkohol eduk-
+inaren bariantza 4 baino txikiagoa izan behar da. Izendapenera bildu nahi
+duen markaren gainean alkohol edukin hauek jaso dira botila independen-
+tetan:
+6 − 7 − 8 − 7 − 9 − 10 − 5 − 6
+%1-eko adierazgarritasun mailaz, zein erabaki hartu behar da?
+• Hornitzaile bati pieza akastunak %2 gehienez izan daitezkeela ezarri diogu
+baldintza gisa. Azken lotean 500 piezatik 15 suertatu da akastun. Zein
+erabaki hartu behar da %1eko adierazgarritasun mailaz?
+9
+Populazio batezbestekoen berdintasunari bu-
+ruzko alderakuntzak
+Praktikan askotan ebazkizun hau azaltzen da:
+ neskatoen eta mutikoen batezbesteko
+errendimendua matematiketan berdina al da?; bi makina ezberdinetako batezbesteko
+ekoizpenak berdinak al dira?; maiatzeko eta urriko batezbesteko hozberoak
+batezbestez berdinak al dira?. Egoera hauetan guztietan bi populazio ezberdine-
+tako batezbestekoak berdinak diren kontrastatu behar da. Hau da hipotesi hutsa
+hau da:
+H0 : µ1 = µ2
+Izan ere, hipotesi huts gisa batezbestekoak ezberdinak direla ezarriko bagenu,
+hipotesia zehazgabea eta lausoa izango bailitzateke.
+15
+
+Inferentzia
+Josemari Sarasola Ledesma
+Kontrastea ezberdina izango da ezarritako ereduaren arabera eta baita ere
+bi populazioetako bariantzak berdinak diren edota bariantzak ezagunak diren
+arabera besteak beste. Egoera arruntenak ikasiko ditugu.
+Azpimarratu behar da alde biko kontrasteak aztertuko ditugula. Hau da,
+H0 : µ1 = µ2 ukatzen bada, batezbestekoak ezberdinak, besterik gabe, direla
+onartuko dugu (ez bata bestea baino handiagoa denik, zeren orduan H0 hipote-
+siaren ukapena alde bakar batetik gertatuko bailitzateke).
+9.1
+Eredu normalak eta bariantzak ezagunak
+Kontrastea burutzeko x1 − x2 estatistikoa erabiliko dugu. Ikus dezagun nola
+banatzen den.
+Lehenengo populazioko lagin batezbestekoa honela banatzen da, n1 datu
+jasotzen direla:
+x1 ∼ N µ1,
+σ1
+n1
+Bigarren populazioko batezbestekoa, bere aldetik, honela banatuko da:
+x2 ∼ N µ2,
+σ2
+n2
+Banakuntza normalaren propietateak erabiliz, x1 − x2 honela banatuko da, H0 :
+µ1 = µ2 hipotesipean:
+x1 − x2 ∼ N µ1 − µ2 = 0,
+σ2
+1
+n1
++
+σ2
+2
+n2
+Kontrastea alde bikoa denez, ukapen aldeak jauek izango dira:
+x1 − x2 > zα/2
+σ2
+1
+n1
++
+σ2
+2
+n2
+x1 − x2 < −zα/2
+σ2
+1
+n1
++
+σ2
+2
+n2
+9.2
+Eredu normalak, bariantzak ezezagunak baina berdi-
+nak bi populazioetan
+Bi populazioetako bariantzak berdinak direnean, sakabanakidetasuna 3 dagoela
+esango dugu. Sakabanakidetasun supuestoarekin kontrastea askoz ere sinpleagoa
+3Gazteleraz, homocedasticidad. Sakabanakidetasun eza heterocedasticidad esaten da.
+16
+
+Inferentzia
+Josemari Sarasola Ledesma
+da. Orohar, estatistikan populazio ezberdinak alderatu behar direnean, saka-
+banakidetasuna bilatzen da, garapen teorikoa askoz ere sinpleagoa delako. Sak-
+abanakidetasuna edo bariantzen berdintasuna ere kontrasta daiteke.
+9.2.1
+Populazio independenteak
+Populazioak independenteak direla esango dugu, populazio bateko datu bat han-
+dia izateagatik, beste populazioko edozein datu handiagoa edo txikiagoa iza-
+teko arrazoirik ez dagoenean. Ingelesez, kasu honetan laginak unpaired edo un-
+matched direla esan ohi da. Adibidez, emakumezkoen eta gizonezkoen batezbesteko
+altueraren berdintasuna kontrastatzeko, 10 bikoteren datuak jasotzen baditugu,
+datuak ez dira independenteak izango: emazte bat altua bada, beste taldean da-
+goen bere senarra ere altua izango da ziur aski.
+Kasu honetan, erabili beharreko estatistikoa hau da:
+t =
+n1n2
+n1+n2
+(x1 − x2)
+n1s2
+1 +n2 s
+2
+2
+n1+n2−2
+Estatistiko hau honela banatzen da:
+t ∼ tn
+1 +n2 −2
+Ukapen aldeak hauek dira:
+t > tα/2,n
+1 +n2 −2
+t < −tα/2,n
+1 +n2 −2
+9.2.2
+Populazio dependenteak
+Praktikan laginak askotan dira independenteak: Europear Batasuneko 2005.eko
+batezbesteko langabezi tasa, herrialde ezberdinetarako jasoa, 2006.ko tasen batezbestekoaren
+berdina ote den kontrastatu nahi dugunean, 2005.ean tasa handia zuen herrialde
+batek hurrengo urtean ere handia izan behar duela pentsatu behar da: datuak
+lotuta daude, ingelesez paired edo matched daudela esango dugu. Idem ikasle
+gela bateko batezbesteko errendimendua matematiketan alderatu nahi badugu
+urte batetik bestera:
+ ikasleak berdinaki direnez, bi urteetarako datuak berdinak
+izango dira. Idem gaiso multzo baten egoera botika hartu aurretik edo ondoren
+aztertu nahi denean ere. Orohar, bi populazioetako laginak elementu edo ba-
+nako berdinen gainean jasotakoak direnean izango dira bi laginak dependenteak:
+hau dela eta, n datu kopurua bi laginetarako berdina dela pentsatu behar da.
+17
+
+Inferentzia
+Josemari Sarasola Ledesma
+Kontrastea burutzeko estatistikoa hau da (n: lagin bakoitzeko datu kopu-
+rua):
+t = x1 − x2
+n(n − 1)
+(ˆ
+xi1 − ˆ
+xi2)2
+non ˆ
+xi = xi − x den.
+Honela banatzen da:
+t ∼ tn−1
+Ukapen aldeak hauek izango dira:
+t > tα/2,n−1
+t < −tα/2,n−1
+9.3
+Eredu normalak, bariantzak ezezagunak eta ezberdi-
+nak
+Kontraste honi Behrens-Fisher-en testa ere deritzo. Ematen duen soluzioa hur-
+bilketa moduan hartu behar da, hau da, emandako datuen ez du erabateko
+zehaztasunez jokatzen. Kontrasterako erabiltzen den estatistikoa hau da:
+τ =
+x1 − x2
+s2
+1
+n1
++
+s2
+2
+n2
+Estatistiko hau honela banatzen da (τ : tau, ν: nu):
+τ ∼ tν
+ν honela kalkulatzen delarik:
+1
+ν
+=
+1
+n1 − 1
+s
+2
+1
+n1
+s2
+1
+n1
++
+s2
+2
+n2
++
+1
+n2 − 1
+s
+2
+2
+n2
+s2
+1
+n1
++
+s2
+2
+n2
+Ukapen aldeak hauek izango dira:
+t > tα/2, ν
+t < −tα/2, ν
+18
+
+Inferentzia
+Josemari Sarasola Ledesma
+10
+Populazio bariantzen berdintasunari buruzko
+kontrasteak eredu normaletan
+Inferentzia prozesuan populazio ezberdinetako bariantzak berdinak direla egiaz-
+tatzen bada, hau da, sakabanakidetasuna egiaztatzen da (gogoratu gazteleraz,
+homocedasticidad esaten dela), lan teorikoa aiseago egiten da (adibidez, aur-
+reko atalean ikusi dugunez, batezbestekoen berdintasuna erabakitzeko orduan,
+bariantzak ezezagunak eta ezberdinak badira, hurbilketa bat bakarrik egin deza-
+kegu). Hortaz, oso interesgarria da bariantzak berdinak diren erabaki daitekeen
+edo ez.
+Bi populazioetako batezbestekoak ezezagunak badira, erabili beharreko es-
+tatistikoa hau da, bi populazio normaletako bariantzak berdinak diren erabak-
+itzeko:
+F =
+ˆ
+s
+2
+1
+n1−1
+ˆ
+s2
+2
+n2−1
+Estatistiko hau honela banatzen da, bi populazioetako bariantzen berdinta-
+sun hipotesipean:
+F ∼ Fn
+1 −1, n2 −1
+Kontrastea alde bikoa izaten da, ez baita aldez aurretik ﬁnkatzen bariantza
+handiagoa duen populazio bat. Beraz, ukapen aldeak hauek izango dira:
+F > Fα/2; n
+1 −1, n2 −1
+F < F1−α/2; n
+1 −1, n2 −1
+11
+Proportzioen berdintasunari buruzko kontrasteak
+lagin tamainu handietarako
+Kontrastea burutzeko ˆ
+p1 − ˆ
+p2 estatistikoa erabiliko dugu. Ikus dezagun nola
+banatzen den, dedukzioa batezbestekoen kasuaren antzekoa delarik, desbidazio
+ezagunekin:
+ˆ
+p1 − ˆ
+p2 ∼ N p1 − p2 = 0,
+p1q1
+n1
++
+p2q2
+n2
+p1, p2, q1, q2 proportzioak ezaguna ez direnez, datuetatik zenbatesten ditugu:
+hipotesi hutsaren pean, bi proportzioak berdinak direnez, bi populazioetako lag-
+inak batera jarri eta baterako proportzioa, ˆ
+p, kalkulatzen dugu. Estatistikoaren
+19
+
+Inferentzia
+Josemari Sarasola Ledesma
+lagin banakuntza honela hurbiltzen dugu era horretan:
+ˆ
+p1 − ˆ
+p2 ∼ N p1 − p2 = 0,
+ˆ
+pˆ
+q
+n1
++
+ˆ
+pˆ
+q
+n2
+Kontrastea alde bikoa denez, ukapen aldeak hauek izango dira:
+ˆ
+p1 − ˆ
+p2 > zα/2
+ˆ
+pˆ
+q
+n1
++
+ˆ
+pˆ
+q
+n2
+ˆ
+p1 − ˆ
+p2 < −zα/2
+ˆ
+pˆ
+q
+n1
++
+ˆ
+pˆ
+q
+n2
+12
+Ebazkizunak
+I Eragiketa bat egiteko behar den denbora batezbestez sexuaren arabera
+ezberdina den erabaki behar da. Aipatu denborak banakuntza normalari
+darraio, desbidazioak ezagunak direla: 5 segundu emakumezkoetarako, 8
+segundu gizoneskoetarako. Denbora hauek jaso ditugu:
+emakumeak
+23-21-25-26-19-28-31
+gizonak
+34-23-28-35-21-22
+%5eko adierazgarritasun mailaz erabakia har ezazu batezbestekoen berdinta-
+sunari buruz.
+II Makina mota batek mantenimendua egin gabe edo mantenimendua eginda
+batezbestez berdin ekoizten duen erabaki behar da. Orduko ekoizpenak
+banakuntza normalari darraio, desbidazioak ezezagunak direla baina bi
+kasuetan berdinak direla pentsatzen da. Makina ezberdinetan jasotako
+datuak hauek dira: %10-eko adierazgarritasun mailaz erabakia har ezazu.
+mantenimenduz
+8-5-7-9-4-8
+mantenimendurik gabe
+5-6-8-4-5
+Idem bi populazioetako desbidazioak ezezagunak eta ezberdinak izan daitez-
+keela ezartzen bada.
+Azkenik, bi populazioetako desbidazioak berdinak diren kontrasta ezazu
+eta erabakia hartu ondoren, esan aurreko bi egoeretatik zein den hartu
+behar duzuna.
+20
+
+Inferentzia
+Josemari Sarasola Ledesma
+aurretik
+11-13-15-16-18-14
+ondoren
+10-12-15-15-19-10
+III Hipertensoentzat botika berri asmatu da. Bere eraginkortasunari buruz
+erabaki bat hartzeko, 6 hipertenso aukeratu eta botika hartu aurretik eta
+ondoren zuten odol presioa neurut zaie. Hauek dira emaitzak: %1-eko
+adierazgarritasun mailaz erabakia har ezazu botikaren eraginkortsunari
+buruz.
+IV Mantenimendua egin aurretik makina batek 100 piezetatik 6 akastun egin
+zituen. Mantenimendu plan bat burutu ondoren, 200 piezetatik 7 akas-
+tun izan da. %2ko adierazgarritasun mailaz proportzioen berdintasuna
+eztabaida ezazu.
+21

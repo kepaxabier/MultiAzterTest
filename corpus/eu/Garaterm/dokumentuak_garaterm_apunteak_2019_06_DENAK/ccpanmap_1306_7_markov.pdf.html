@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<HTML xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<HEAD>
+<TITLE>1306_7_markov.pdf</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<META name="generator" content="pdftohtml 0.36"/>
+<META name="date" content="2007-04-26T14:11:00+00:00"/>
+</HEAD>
+<BODY bgcolor="#A0A0A0" vlink="blue" link="blue">
+<!-- Page 1 -->
+<a name="1"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft10{font-size:28px;font-family:Times;color:#000000;}
+	.ft11{font-size:23px;font-family:Times;color:#000000;}
+	.ft12{font-size:15px;font-family:Times;color:#000000;}
+	.ft13{font-size:9px;font-family:Times;color:#000000;}
+	.ft14{font-size:15px;line-height:21px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page1-div" style="position:relative;width:892px;height:1262px;">
+<P style="position:absolute;top:188px;left:294px;white-space:nowrap" class="ft10">MARKOV&#160;KATEAK</P>
+<P style="position:absolute;top:306px;left:166px;white-space:nowrap" class="ft11">1</P>
+<P style="position:absolute;top:306px;left:210px;white-space:nowrap" class="ft11">Sarrera</P>
+<P style="position:absolute;top:351px;left:193px;white-space:nowrap" class="ft12">Esan&#160;bezala,&#160;Markov&#160;kateak,&#160;berritze&#160;teoriarekin&#160;batera,&#160;konputagailu</P>
+<P style="position:absolute;top:373px;left:166px;white-space:nowrap" class="ft14">eta&#160;komunikazio&#160;teknologiako&#160;hainbat&#160;eredu&#160;probabilistikotan&#160;erabiltzen&#160;dira.<br/>Eredu&#160;batzuk&#160;analizatzeko&#160;nahikoa&#160;dugu&#160;berritze&#160;teoria,&#160;baina&#160;beste&#160;askotan<br/>beharrezkoa&#160;da&#160;Markov&#160;kate&#160;bat&#160;deﬁnitzea.&#160;Berritze&#160;teorian&#160;oinarrituz&#160;azter-<br/>tuko&#160;ditugu&#160;Markov&#160;kateak.&#160;Ondoren&#160;deﬁnituko&#160;dugun&#160;Markov&#160;propietatea<br/>erlazionatuta&#160;dago&#160;Poisson&#160;prozesuaren&#160;oroimengabetasunarekin,&#160;prozesu&#160;es-<br/>tokastiko&#160;orokorragoetara&#160;zabalduko&#160;dugu&#160;propietate&#160;hau,&#160;lehenik&#160;denbora<br/>diskretuko&#160;prozesuetara.&#160;Prozesu&#160;estokastiko&#160;batek&#160;Markov&#160;propietatea&#160;be-<br/>tetzen&#160;duenean,&#160;bere&#160;analisia&#160;egitea&#160;erraza&#160;izango&#160;zaigu.</P>
+<P style="position:absolute;top:546px;left:193px;white-space:nowrap" class="ft12">Kontsidera&#160;dezagun&#160;{Xn,&#160;n&#160;=&#160;0,&#160;1,&#160;.&#160;.&#160;.}&#160;denbora&#160;diskretuko&#160;prozesu&#160;esto-</P>
+<P style="position:absolute;top:568px;left:166px;white-space:nowrap" class="ft14">kastikoa.&#160;Ohikoa&#160;denez,&#160;baldin&#160;Xn&#160;=&#160;j&#160;esango&#160;dugu&#160;prozesua&#160;j&#160;estatu&#160;edo<br/>egoeran&#160;dagoela&#160;n&#160;denboran.&#160;Estatu&#160;posibleen&#160;multzoa&#160;zenbakigarria&#160;izango<br/>da&#160;:&#160;normalean&#160;estatuak&#160;0,1,2,.&#160;.&#160;.izango&#160;dira,&#160;edo&#160;hauen&#160;azpimultzoa.&#160;Hone-<br/>lako&#160;prozesuari&#160;Markov&#160;katea&#160;deitzen&#160;zaio&#160;baldin&#160;:</P>
+<P style="position:absolute;top:673px;left:255px;white-space:nowrap" class="ft12">P&#160;{Xn+1&#160;=&#160;j&#160;|&#160;X0,&#160;.&#160;.&#160;.&#160;,&#160;Xn−1,&#160;Xn}&#160;=&#160;P&#160;{Xn+1&#160;=&#160;j&#160;|&#160;Xn}</P>
+<P style="position:absolute;top:712px;left:166px;white-space:nowrap" class="ft14">edozein&#160;denbora&#160;n&#160;eta&#160;estatu&#160;j-rako.&#160;Berdintza&#160;hau&#160;honela&#160;interpretatzen<br/>dugu&#160;:&#160;Xn&#160;emanik&#160;Xn+1&#160;independentea&#160;da&#160;X0,&#160;.&#160;.&#160;.,&#160;Xn−1-ekiko,&#160;hau&#160;da,&#160;jakina<br/>bada&#160;“oraingo&#160;estatua”&#160;prozesuaren&#160;“hurrengo&#160;estatua”&#160;independentea&#160;da<br/>“iraganeko&#160;estatuetatik”.</P>
+<P style="position:absolute;top:799px;left:193px;white-space:nowrap" class="ft12">Trantsizio&#160;probabilitatea&#160;deituko&#160;diogu&#160;probabilitate&#160;baldintzatu&#160;honi,&#160;n</P>
+<P style="position:absolute;top:821px;left:166px;white-space:nowrap" class="ft12">denboraren&#160;menpekoa&#160;izango&#160;ez&#160;den&#160;probabilitate&#160;honi&#160;:</P>
+<P style="position:absolute;top:860px;left:352px;white-space:nowrap" class="ft12">P&#160;{Xn+1&#160;=&#160;j&#160;|&#160;Xn&#160;=&#160;i}&#160;=&#160;Pij</P>
+<P style="position:absolute;top:900px;left:166px;white-space:nowrap" class="ft14">Beraz&#160;Pij&#160;trantsizio&#160;probabilitatea,&#160;prozesua&#160;i&#160;estatuan&#160;dagoela&#160;pauso&#160;baten<br/>ondoren&#160;j&#160;estaturako&#160;trantsizioa&#160;egiteko&#160;probabilitatea&#160;da.&#160;Trantsizio&#160;proba-<br/>bilitateen&#160;matrizea&#160;osatuko&#160;dugu&#160;trantsizio&#160;desberdinak&#160;kontsideratuz,&#160;eta</P>
+<P style="position:absolute;top:1041px;left:453px;white-space:nowrap" class="ft12">1</P>
+</DIV>
+<!-- Page 2 -->
+<a name="2"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft25{font-size:12px;font-family:Times;color:#000000;}
+	.ft26{font-size:12px;line-height:8px;font-family:Times;color:#000000;}
+	.ft27{font-size:12px;line-height:9px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page2-div" style="position:relative;width:892px;height:1262px;">
+<P style="position:absolute;top:194px;left:166px;white-space:nowrap" class="ft22">lerroak&#160;eta&#160;zutabeak&#160;estatuen&#160;arabera&#160;zenbakituz&#160;:</P>
+<P style="position:absolute;top:264px;left:352px;white-space:nowrap" class="ft22">P&#160;=</P>
+<P style="position:absolute;top:227px;left:389px;white-space:nowrap" class="ft25"></P>
+<P style="position:absolute;top:253px;left:389px;white-space:nowrap" class="ft27"><br/><br/><br/><br/></P>
+<P style="position:absolute;top:227px;left:406px;white-space:nowrap" class="ft24">P00&#160;P01&#160;P02&#160;·&#160;·&#160;·<br/>P10&#160;P11&#160;P12&#160;·&#160;·&#160;·<br/>P20&#160;P21&#160;P22&#160;·&#160;·&#160;·</P>
+<P style="position:absolute;top:288px;left:416px;white-space:nowrap" class="ft22">..</P>
+<P style="position:absolute;top:300px;left:416px;white-space:nowrap" class="ft22">.</P>
+<P style="position:absolute;top:288px;left:456px;white-space:nowrap" class="ft22">..</P>
+<P style="position:absolute;top:300px;left:456px;white-space:nowrap" class="ft22">.</P>
+<P style="position:absolute;top:288px;left:496px;white-space:nowrap" class="ft22">..</P>
+<P style="position:absolute;top:300px;left:496px;white-space:nowrap" class="ft22">.</P>
+<P style="position:absolute;top:289px;left:527px;white-space:nowrap" class="ft22">.&#160;..</P>
+<P style="position:absolute;top:227px;left:554px;white-space:nowrap" class="ft25"></P>
+<P style="position:absolute;top:253px;left:554px;white-space:nowrap" class="ft27"><br/><br/><br/><br/></P>
+<P style="position:absolute;top:337px;left:166px;white-space:nowrap" class="ft24">Orain&#160;estatu&#160;batetik&#160;bertarako&#160;trantsizioak&#160;ere&#160;gerta&#160;daitezke.&#160;Nabaria&#160;denez,<br/>P&#160;matrizearen&#160;sarrerak&#160;ez&#160;negatiboak&#160;dira,&#160;eta&#160;bestalde&#160;edozein&#160;lerro&#160;i-ko<br/>sarreren&#160;batura&#160;1&#160;da,</P>
+<P style="position:absolute;top:388px;left:350px;white-space:nowrap" class="ft23">j&#160;Pij&#160;=&#160;1.</P>
+<P style="position:absolute;top:416px;left:166px;white-space:nowrap" class="ft24">Adibidea&#160;1&#160;Deﬁnitu&#160;eguraldiaren&#160;iragarpenerako&#160;eredu&#160;erraz&#160;bat,&#160;Markov<br/>katearen&#160;bidez.</P>
+<P style="position:absolute;top:477px;left:166px;white-space:nowrap" class="ft24">Adibidea&#160;2&#160;Demagun&#160;apustu&#160;batean&#160;euro&#160;bat&#160;irabazten&#160;dela&#160;p&#160;probabilita-<br/>tearekin&#160;eta&#160;euro&#160;bat&#160;galdu&#160;1&#160;−&#160;p&#160;probabilitatearekin.&#160;Apustulariak&#160;jokatzeari<br/>uzten&#160;dio&#160;dirurik&#160;gabe&#160;geratzen&#160;denean&#160;edo&#160;N&#160;euroko&#160;dirutza&#160;lortzen&#160;duenean.<br/>Deﬁnitu&#160;dagokion&#160;Markov&#160;katea.</P>
+<P style="position:absolute;top:581px;left:166px;white-space:nowrap" class="ft24">Esan&#160;dugunez&#160;Pij&#160;pauso&#160;bateko&#160;trantsizio&#160;probabilitatea&#160;da,&#160;eta&#160;kalkulatu<br/>nahi&#160;genuke&#160;n&#160;pausoko&#160;trantsizio&#160;probabilitatea.</P>
+<P style="position:absolute;top:633px;left:166px;white-space:nowrap" class="ft22">Propietatea&#160;1</P>
+<P style="position:absolute;top:671px;left:335px;white-space:nowrap" class="ft22">P&#160;{Xm+n&#160;=&#160;j&#160;|&#160;Xm&#160;=&#160;i}&#160;=&#160;(P</P>
+<P style="position:absolute;top:667px;left:554px;white-space:nowrap" class="ft23">n)</P>
+<P style="position:absolute;top:680px;left:569px;white-space:nowrap" class="ft23">ij</P>
+<P style="position:absolute;top:709px;left:166px;white-space:nowrap" class="ft24">Froga.&#160;Indukzioz&#160;frogatuko&#160;dugu&#160;n-ren&#160;gainean.&#160;Baldin&#160;n&#160;=&#160;1,&#160;Pij&#160;dugu&#160;bi<br/>aldeetan.&#160;Eman&#160;dezagun&#160;n&#160;pausorako&#160;betetzen&#160;dela&#160;berdintza.&#160;Azter&#160;dezagun<br/>n&#160;+&#160;1&#160;pausorako&#160;:</P>
+<P style="position:absolute;top:790px;left:188px;white-space:nowrap" class="ft22">P&#160;{Xm+n+1&#160;=&#160;j&#160;|&#160;Xm&#160;=&#160;i}&#160;=</P>
+<P style="position:absolute;top:817px;left:218px;white-space:nowrap" class="ft22">=</P>
+<P style="position:absolute;top:839px;left:244px;white-space:nowrap" class="ft23">k</P>
+<P style="position:absolute;top:817px;left:261px;white-space:nowrap" class="ft22">P&#160;{Xm+n+1&#160;=&#160;j&#160;|&#160;Xm&#160;=&#160;i,&#160;Xm+n&#160;=&#160;k}&#160;·&#160;P&#160;{Xm+n&#160;=&#160;k&#160;|&#160;Xm&#160;=&#160;i}</P>
+<P style="position:absolute;top:859px;left:218px;white-space:nowrap" class="ft22">=</P>
+<P style="position:absolute;top:881px;left:244px;white-space:nowrap" class="ft23">k</P>
+<P style="position:absolute;top:859px;left:261px;white-space:nowrap" class="ft22">P&#160;{Xm+n+1&#160;=&#160;j&#160;|&#160;Xm+n&#160;=&#160;k}&#160;·&#160;(P</P>
+<P style="position:absolute;top:855px;left:507px;white-space:nowrap" class="ft23">n)</P>
+<P style="position:absolute;top:868px;left:523px;white-space:nowrap" class="ft23">ik</P>
+<P style="position:absolute;top:902px;left:218px;white-space:nowrap" class="ft22">=</P>
+<P style="position:absolute;top:925px;left:244px;white-space:nowrap" class="ft23">k</P>
+<P style="position:absolute;top:902px;left:261px;white-space:nowrap" class="ft22">(P</P>
+<P style="position:absolute;top:899px;left:282px;white-space:nowrap" class="ft23">n)</P>
+<P style="position:absolute;top:912px;left:297px;white-space:nowrap" class="ft23">ik&#160;Pkj&#160;=</P>
+<P style="position:absolute;top:902px;left:370px;white-space:nowrap" class="ft22">P</P>
+<P style="position:absolute;top:899px;left:383px;white-space:nowrap" class="ft23">n+1</P>
+<P style="position:absolute;top:916px;left:417px;white-space:nowrap" class="ft23">ij</P>
+<P style="position:absolute;top:953px;left:166px;white-space:nowrap" class="ft24">Hasieran&#160;probabilitate&#160;totalaren&#160;teorema&#160;erabili&#160;dugu&#160;n&#160;pausorako&#160;estatu&#160;po-<br/>sibleen&#160;gainean&#160;baldintzatuz,&#160;ondoren&#160;adierazpena&#160;sinpliﬁkatu&#160;dugu&#160;Markov<br/>propietatea&#160;eta&#160;indukzio&#160;hipotesiaren&#160;bidez,&#160;eta&#160;azkeneko&#160;berdintza&#160;matrize</P>
+<P style="position:absolute;top:1041px;left:453px;white-space:nowrap" class="ft22">2</P>
+</DIV>
+<!-- Page 3 -->
+<a name="3"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft38{font-size:8px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page3-div" style="position:relative;width:892px;height:1262px;">
+<P style="position:absolute;top:194px;left:166px;white-space:nowrap" class="ft32">biderkaketaren&#160;deﬁniziotik&#160;daukagu.&#160;♦</P>
+<P style="position:absolute;top:233px;left:166px;white-space:nowrap" class="ft34">Beraz&#160;i&#160;estatuan&#160;dagoen&#160;prozesua&#160;n&#160;pauso&#160;ondoren&#160;j&#160;estatuan&#160;izateko&#160;pro-<br/>babilitatea&#160;P&#160;n&#160;matrizearen&#160;(i,&#160;j)&#160;sarrera&#160;da.&#160;P&#160;n</P>
+<P style="position:absolute;top:264px;left:534px;white-space:nowrap" class="ft33">ij&#160;idatziko&#160;dugu&#160;n&#160;pausoko</P>
+<P style="position:absolute;top:277px;left:166px;white-space:nowrap" class="ft32">trantsizio&#160;probabilitatea&#160;adierazteko.</P>
+<P style="position:absolute;top:298px;left:193px;white-space:nowrap" class="ft32">Trantsizio&#160;probabilitateak&#160;probabilitate&#160;baldintzatuak&#160;dira,&#160;baina&#160;n&#160;den-</P>
+<P style="position:absolute;top:320px;left:166px;white-space:nowrap" class="ft34">boran&#160;izan&#160;ditzakegun&#160;estatuen&#160;probabilitate&#160;ez&#160;baldintzatuak&#160;ere&#160;interesatzen<br/>zaizkigu.&#160;Horretarako&#160;trantsizio&#160;probabilitateetaz&#160;gain,&#160;hasierako&#160;estatu&#160;po-<br/>sibleen&#160;probabilitateak&#160;behar&#160;ditugu,&#160;i&#160;bakoitzerako&#160;:</P>
+<P style="position:absolute;top:398px;left:396px;white-space:nowrap" class="ft32">αi&#160;=&#160;P&#160;{X0&#160;=&#160;i}</P>
+<P style="position:absolute;top:432px;left:166px;white-space:nowrap" class="ft34">Nahikoa&#160;da,&#160;n&#160;denboran&#160;j&#160;estatuan&#160;izateko&#160;probabilitatea&#160;kalkulatzeko,&#160;ha-<br/>sierako&#160;estatu&#160;posibleen&#160;gainean&#160;baldintzatzea&#160;(probabilitate&#160;totalaren&#160;teo-<br/>remari&#160;jarraituz),&#160;P&#160;{Xn&#160;=&#160;j}&#160;=</P>
+<P style="position:absolute;top:484px;left:431px;white-space:nowrap" class="ft33">i&#160;P&#160;{Xn&#160;=&#160;j&#160;|&#160;X0&#160;=&#160;i}&#160;·&#160;P&#160;{X0&#160;=&#160;i},&#160;beraz&#160;:</P>
+<P style="position:absolute;top:510px;left:371px;white-space:nowrap" class="ft32">P&#160;{Xn&#160;=&#160;j}&#160;=</P>
+<P style="position:absolute;top:532px;left:490px;white-space:nowrap" class="ft33">i</P>
+<P style="position:absolute;top:510px;left:506px;white-space:nowrap" class="ft32">αiP</P>
+<P style="position:absolute;top:507px;left:536px;white-space:nowrap" class="ft33">n</P>
+<P style="position:absolute;top:519px;left:533px;white-space:nowrap" class="ft33">ij</P>
+<P style="position:absolute;top:556px;left:166px;white-space:nowrap" class="ft32">j&#160;estatu&#160;bakoitzerako.</P>
+<P style="position:absolute;top:589px;left:166px;white-space:nowrap" class="ft32">Adibidea&#160;3&#160;Eguraldiaren&#160;iragarpenerako&#160;eredua.</P>
+<P style="position:absolute;top:642px;left:166px;white-space:nowrap" class="ft31">2</P>
+<P style="position:absolute;top:642px;left:210px;white-space:nowrap" class="ft31">Estatuen&#160;sailkapena</P>
+<P style="position:absolute;top:687px;left:193px;white-space:nowrap" class="ft32">Markov&#160;katearen&#160;estatuak&#160;sailkatuko&#160;ditugu&#160;denbora&#160;diskretuko&#160;prozesu</P>
+<P style="position:absolute;top:709px;left:166px;white-space:nowrap" class="ft34">estokastiko&#160;honen&#160;bilakaera&#160;karakterizatzeko.&#160;Sailkapen&#160;hau&#160;erabilgarria&#160;izan-<br/>go&#160;da&#160;limiteko&#160;probabilitateak&#160;aztertzerakoan&#160;ere.&#160;Har&#160;dezagun&#160;i&#160;estatua&#160;eta<br/>eman&#160;dezagun&#160;prozesuaren&#160;hasierako&#160;estatua&#160;dela.&#160;Prozesua&#160;berriz&#160;i&#160;estatura<br/>itzuliko&#160;den&#160;denbora&#160;Ti&#160;aldagaiak&#160;adieraziko&#160;digu.&#160;Inoiz&#160;ez&#160;balitz&#160;itzuliko<br/>Ti&#160;=&#160;∞.&#160;Izan&#160;bedi&#160;fi&#160;=&#160;P&#160;{Ti&#160;&lt;&#160;∞&#160;|&#160;X0&#160;=&#160;i},&#160;prozesua&#160;i&#160;estatura&#160;noizbait<br/>itzultzeko&#160;probabilitatea.&#160;Honela&#160;sailkatuko&#160;dugu&#160;i&#160;estatua&#160;:</P>
+<P style="position:absolute;top:839px;left:193px;white-space:nowrap" class="ft32">–&#160;errekurrentea&#160;da&#160;baldin&#160;fi&#160;=&#160;1,&#160;hau&#160;da,&#160;prozesua&#160;i-tik&#160;abiatuz&#160;i-ra</P>
+<P style="position:absolute;top:861px;left:210px;white-space:nowrap" class="ft32">itzultzen&#160;bada&#160;beti&#160;(1&#160;probabilitatearekin),</P>
+<P style="position:absolute;top:882px;left:193px;white-space:nowrap" class="ft32">–&#160;iragankorra&#160;da&#160;baldin&#160;fi&#160;&lt;&#160;1,&#160;hau&#160;da,&#160;prozesua&#160;i-tik&#160;abiatuz&#160;i-ra&#160;ez</P>
+<P style="position:absolute;top:904px;left:210px;white-space:nowrap" class="ft32">itzultzeko&#160;probabilitate&#160;positiboa&#160;badago&#160;(1&#160;−&#160;fi&#160;&gt;&#160;0).</P>
+<P style="position:absolute;top:926px;left:166px;white-space:nowrap" class="ft34">Estatua&#160;errekurrentea&#160;bada,&#160;prozesua&#160;behin&#160;eta&#160;berriz&#160;itzuliko&#160;da&#160;estatura&#160;;<br/>aldiz,&#160;iragankorra&#160;bada,&#160;egonaldi&#160;batzuk&#160;egin&#160;ondoren&#160;ez&#160;da&#160;inoiz&#160;itzuliko1.</P>
+<P style="position:absolute;top:978px;left:186px;white-space:nowrap" class="ft38">1Beste&#160;aldagai&#160;hau&#160;dugu&#160;:&#160;Ni,&#160;prozesuak&#160;i-tik&#160;abiatuz&#160;zenbat&#160;egonaldi&#160;egiten&#160;dituen&#160;i</P>
+<P style="position:absolute;top:998px;left:166px;white-space:nowrap" class="ft35">estatuan.&#160;Estatua&#160;errekurrentea&#160;denean&#160;1&#160;probabilitatearekin&#160;Ni&#160;=&#160;∞,&#160;izan&#160;ere,&#160;prozesua</P>
+<P style="position:absolute;top:1041px;left:453px;white-space:nowrap" class="ft32">3</P>
+</DIV>
+<!-- Page 4 -->
+<a name="4"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft49{font-size:12px;line-height:17px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page4-div" style="position:relative;width:892px;height:1262px;">
+<P style="position:absolute;top:194px;left:193px;white-space:nowrap" class="ft42">Estatuak&#160;sailkatzerakoan&#160;beste&#160;irizpidea&#160;periodikotasuna&#160;da.&#160;Esango&#160;dugu</P>
+<P style="position:absolute;top:216px;left:166px;white-space:nowrap" class="ft42">i&#160;estatu&#160;errekurrentea&#160;periodikoa&#160;dela,&#160;d&#160;≥&#160;2&#160;periododuna,&#160;baldin&#160;P&#160;n</P>
+<P style="position:absolute;top:224px;left:701px;white-space:nowrap" class="ft43">ii&#160;=&#160;0</P>
+<P style="position:absolute;top:238px;left:166px;white-space:nowrap" class="ft44">bada&#160;n&#160;ez&#160;denean&#160;d-ren&#160;multiploa,&#160;d&#160;izanik&#160;propietate&#160;hau&#160;betetzen&#160;duen<br/>osoko&#160;handiena.&#160;Ez&#160;badago&#160;honelako&#160;osokorik,&#160;edo&#160;i&#160;iragankorra&#160;bada,&#160;esango<br/>dugu&#160;estatua&#160;aperiodikoa&#160;dela.&#160;Beraz&#160;i&#160;estatuak&#160;d&#160;≥&#160;2&#160;periodoa&#160;badu,&#160;pro-<br/>zesua&#160;i-tik&#160;abiatuz&#160;estatu&#160;honetan&#160;egon&#160;daitekeen&#160;uneak&#160;d,&#160;2d,&#160;3d,&#160;.&#160;.&#160;.dira,<br/>denbora&#160;hauetan&#160;bakarrik&#160;egon&#160;daiteke&#160;i&#160;estatuan,&#160;ez&#160;denbora&#160;guzti&#160;hauetan<br/>nahitaez,&#160;baina&#160;ezin&#160;daiteke&#160;egon&#160;i&#160;estatuan&#160;d-ren&#160;multiploa&#160;ez&#160;den&#160;denbora<br/>batean&#160;(eta&#160;d&#160;da&#160;honelako&#160;handiena).</P>
+<P style="position:absolute;top:389px;left:193px;white-space:nowrap" class="ft42">Ikusiko&#160;dugunez&#160;Markov&#160;katearen&#160;estatuen&#160;multzoan&#160;partizioa&#160;deﬁni&#160;dai-</P>
+<P style="position:absolute;top:411px;left:166px;white-space:nowrap" class="ft44">teke,&#160;klase&#160;bateko&#160;estatuak&#160;mota&#160;berdinekoak&#160;izango&#160;direlarik.&#160;Lehenik&#160;esta-<br/>tuen&#160;arteko&#160;erlazio&#160;bat&#160;deﬁnituko&#160;dugu,&#160;i&#160;→&#160;j&#160;idatziz,&#160;i&#160;estatutik&#160;j&#160;estatura<br/>heldu&#160;ahal&#160;izatea&#160;:</P>
+<P style="position:absolute;top:481px;left:210px;white-space:nowrap" class="ft42">i&#160;→&#160;j&#160;baldin&#160;badago&#160;n-ren&#160;bat&#160;P&#160;n</P>
+<P style="position:absolute;top:489px;left:464px;white-space:nowrap" class="ft43">ij&#160;&gt;&#160;0&#160;izanik</P>
+<P style="position:absolute;top:507px;left:166px;white-space:nowrap" class="ft44">Erlazio&#160;hau&#160;trantsitiboa&#160;da&#160;:&#160;baldin&#160;i&#160;→&#160;j&#160;eta&#160;j&#160;→&#160;k&#160;orduan&#160;i&#160;→&#160;k,&#160;erraz<br/>frogatuko&#160;dugunez.&#160;Hipotesiaren&#160;arabera&#160;badaude&#160;m&#160;eta&#160;n-ren&#160;bat,&#160;P&#160;m</P>
+<P style="position:absolute;top:538px;left:702px;white-space:nowrap" class="ft43">ij&#160;&gt;&#160;0</P>
+<P style="position:absolute;top:551px;left:166px;white-space:nowrap" class="ft42">eta&#160;P&#160;n</P>
+<P style="position:absolute;top:559px;left:207px;white-space:nowrap" class="ft43">jk&#160;&gt;&#160;0&#160;izanik.&#160;Bestalde&#160;P</P>
+<P style="position:absolute;top:548px;left:400px;white-space:nowrap" class="ft43">m+n</P>
+<P style="position:absolute;top:559px;left:397px;white-space:nowrap" class="ft43">ik</P>
+<P style="position:absolute;top:550px;left:434px;white-space:nowrap" class="ft42">≥&#160;P&#160;m</P>
+<P style="position:absolute;top:559px;left:464px;white-space:nowrap" class="ft43">ij&#160;·&#160;P</P>
+<P style="position:absolute;top:548px;left:505px;white-space:nowrap" class="ft43">n</P>
+<P style="position:absolute;top:559px;left:503px;white-space:nowrap" class="ft43">jk&#160;daukagu,&#160;beraz&#160;P</P>
+<P style="position:absolute;top:548px;left:658px;white-space:nowrap" class="ft43">m+n</P>
+<P style="position:absolute;top:559px;left:656px;white-space:nowrap" class="ft43">ik</P>
+<P style="position:absolute;top:551px;left:693px;white-space:nowrap" class="ft42">&gt;&#160;0.</P>
+<P style="position:absolute;top:572px;left:193px;white-space:nowrap" class="ft42">Beste&#160;erlazioa&#160;deﬁnituko&#160;dugu&#160;:&#160;i&#160;eta&#160;j&#160;estatuak&#160;komunikatzen&#160;dira,&#160;i&#160;↔&#160;j</P>
+<P style="position:absolute;top:594px;left:166px;white-space:nowrap" class="ft42">idatziz,&#160;baldin&#160;batetik&#160;bestera&#160;hel&#160;badaiteke&#160;:</P>
+<P style="position:absolute;top:621px;left:210px;white-space:nowrap" class="ft42">i&#160;↔&#160;j&#160;baldin&#160;i&#160;→&#160;j&#160;eta&#160;j&#160;→&#160;i</P>
+<P style="position:absolute;top:647px;left:166px;white-space:nowrap" class="ft44">(Eta&#160;i&#160;↔&#160;i&#160;edozein&#160;estaturako.)&#160;Komunikazio&#160;erlazioa&#160;baliokidetasun&#160;erlazioa<br/>da&#160;:&#160;bihurkorra&#160;eta&#160;simetrikoa&#160;da&#160;nabarmena&#160;denez,&#160;eta&#160;baita&#160;trantsitiboa<br/>ere,&#160;“→”&#160;erlazioa&#160;honelakoa&#160;denez.&#160;Komunikazio&#160;erlazioari&#160;dagozkion&#160;balio-<br/>kidetasun&#160;klaseek&#160;estatuen&#160;multzoaren&#160;partizioa&#160;deﬁnitzen&#160;dute.</P>
+<P style="position:absolute;top:734px;left:193px;white-space:nowrap" class="ft42">Markov&#160;katea&#160;laburtezina&#160;dela&#160;esango&#160;dugu&#160;komunikazio&#160;klase&#160;bakarra</P>
+<P style="position:absolute;top:756px;left:166px;white-space:nowrap" class="ft44">badu,&#160;hau&#160;da,&#160;estatu&#160;denak&#160;elkarren&#160;artean&#160;komunikatzen&#160;badira.&#160;Bestalde,<br/>komunikazio&#160;klase&#160;bat&#160;itxia&#160;dela&#160;esango&#160;dugu&#160;baldin&#160;klaseko&#160;estatuetatik&#160;ezin<br/>badaiteke&#160;hel&#160;klasean&#160;ez&#160;dagoen&#160;inongo&#160;estatura.&#160;Klase&#160;itxi&#160;batean&#160;estatu<br/>bakarra&#160;badago&#160;estatu&#160;honi&#160;xurgatzailea&#160;deitzen&#160;zaio.</P>
+<P style="position:absolute;top:842px;left:193px;white-space:nowrap" class="ft42">Markov&#160;kate&#160;laburtezinaren&#160;klase&#160;bakarra&#160;itxia&#160;da.&#160;Markov&#160;katea&#160;nolana-</P>
+<P style="position:absolute;top:864px;left:166px;white-space:nowrap" class="ft44">hikoa&#160;izanik,&#160;prozesua&#160;klase&#160;itxi&#160;bateko&#160;estatura&#160;heltzen&#160;denean,&#160;klase&#160;horre-<br/>tatik&#160;ez&#160;da&#160;irtetzen&#160;eta&#160;klase&#160;horretako&#160;estatuek&#160;deﬁnitzen&#160;duten&#160;Markov&#160;kate<br/>laburtezinaren&#160;arabera&#160;jarraitzen&#160;du.&#160;Estatu&#160;xurgatzailera&#160;erortzen&#160;bada&#160;ez<br/>da&#160;hortik&#160;irtengo.</P>
+<P style="position:absolute;top:962px;left:166px;white-space:nowrap" class="ft49">i&#160;estatura&#160;itzuliko&#160;da&#160;behin&#160;eta&#160;berriz&#160;1&#160;probabilitatearekin.&#160;Estatua&#160;iragankorra&#160;denean<br/>1&#160;probabilitatearekin&#160;Ni&#160;&lt;&#160;∞,&#160;egonaldi&#160;kopuru&#160;ﬁnitua&#160;dugu&#160;;&#160;kopuru&#160;honen&#160;banaketa<br/>aldagai&#160;geometrikoak&#160;ematen&#160;digu,&#160;Ni&#160;=&#160;k&#160;izango&#160;da&#160;f</P>
+<P style="position:absolute;top:995px;left:526px;white-space:nowrap" class="ft48">k−1</P>
+<P style="position:absolute;top:1005px;left:524px;white-space:nowrap" class="ft48">i</P>
+<P style="position:absolute;top:998px;left:548px;white-space:nowrap" class="ft45">(1&#160;−&#160;fi)&#160;probabilitatearekin.</P>
+<P style="position:absolute;top:1041px;left:453px;white-space:nowrap" class="ft42">4</P>
+</DIV>
+<!-- Page 5 -->
+<a name="5"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page5-div" style="position:relative;width:892px;height:1262px;">
+<P style="position:absolute;top:194px;left:166px;white-space:nowrap" class="ft54">Adibidea&#160;4&#160;Markov&#160;kateko&#160;trantsizio&#160;probabilitateen&#160;matrizea&#160;emanik,&#160;mar-<br/>raztu&#160;pauso&#160;bateko&#160;trantsizioen&#160;diagrama&#160;eta&#160;kalkulatu&#160;komunikazio&#160;klaseak.</P>
+<P style="position:absolute;top:251px;left:166px;white-space:nowrap" class="ft54">Propietatea&#160;2&#160;Komunikazio&#160;klase&#160;ez&#160;itxiko&#160;estatuak&#160;iragankorrak&#160;dira.&#160;Kla-<br/>se&#160;itxian&#160;estatu&#160;denak&#160;errekurrenteak&#160;dira&#160;baldin&#160;estatu&#160;kopurua&#160;ﬁnitua&#160;bada&#160;;<br/>estatu&#160;kopurua&#160;ez&#160;bada&#160;ﬁnitua2,&#160;estatu&#160;denak&#160;errekurrenteak&#160;edo&#160;denak&#160;ira-<br/>gankorrak&#160;izango&#160;dira.&#160;Azkenik,&#160;klase&#160;batean&#160;estatu&#160;denak&#160;aperiodikoak&#160;dira,<br/>edo&#160;bestela&#160;denak&#160;periodikoak&#160;dira,&#160;denak&#160;periodo&#160;berdinekoak.</P>
+<P style="position:absolute;top:374px;left:166px;white-space:nowrap" class="ft54">Markov&#160;kate&#160;laburtezinean&#160;estatu&#160;denak&#160;mota&#160;berdinekoak&#160;dira,&#160;propieta-<br/>tearen&#160;arabera,&#160;errekurrenteak&#160;estatu&#160;kopurua&#160;ﬁnitua&#160;bada.&#160;Markov&#160;kate<br/>laburtezinari&#160;aperiodikoa&#160;deitzen&#160;diogu&#160;estatuak&#160;honelakoak&#160;badira.</P>
+<P style="position:absolute;top:439px;left:193px;white-space:nowrap" class="ft52">Amaitzeko,&#160;periodikotasuna&#160;aztertzeko&#160;irizpide&#160;bat&#160;emango&#160;dugu&#160;:&#160;baldin</P>
+<P style="position:absolute;top:460px;left:166px;white-space:nowrap" class="ft54">Pii&#160;&gt;&#160;0&#160;orduan&#160;i&#160;estatua&#160;aperiodikoa&#160;da.&#160;Kontuan&#160;izan&#160;baldintza&#160;hau&#160;aperio-<br/>dikoa&#160;izateko&#160;nahikoa&#160;dela&#160;baina&#160;ez&#160;beharrezkoa.&#160;Bestalde,&#160;gogoratu&#160;behar<br/>dugu&#160;klase&#160;batean&#160;estatuek&#160;periodikotasun&#160;bera&#160;dutela.</P>
+<P style="position:absolute;top:536px;left:166px;white-space:nowrap" class="ft52">Adibidea&#160;5&#160;Sailkatu&#160;aurreko&#160;adibideko&#160;Markov&#160;katearen&#160;estatuak.</P>
+<P style="position:absolute;top:571px;left:166px;white-space:nowrap" class="ft52">Adibidea&#160;6&#160;Sailkatu&#160;apustulariari&#160;zegokion&#160;Markov&#160;katearen&#160;estatuak.</P>
+<P style="position:absolute;top:625px;left:166px;white-space:nowrap" class="ft51">3</P>
+<P style="position:absolute;top:625px;left:210px;white-space:nowrap" class="ft51">Limiteko&#160;probabilitateak</P>
+<P style="position:absolute;top:670px;left:193px;white-space:nowrap" class="ft52">Berritze&#160;teorian&#160;oinarrituko&#160;gara&#160;limiteko&#160;probabilitateak&#160;lortzeko.&#160;Mar-</P>
+<P style="position:absolute;top:692px;left:166px;white-space:nowrap" class="ft54">kov&#160;kateari&#160;dagokion&#160;denbora&#160;jarraituko&#160;prozesu&#160;estokastikoa&#160;deﬁnitzea&#160;er-<br/>raza&#160;da,&#160;nahikoa&#160;dugu&#160;denbora&#160;diskretuko&#160;prozesuan&#160;pausoaren&#160;iraupena<br/>kontsideratzea.</P>
+<P style="position:absolute;top:757px;left:193px;white-space:nowrap" class="ft52">Izan&#160;bedi&#160;Markov&#160;kate&#160;laburtezina,&#160;estatu&#160;kopuru&#160;ﬁnitukoa,&#160;P&#160;izanik</P>
+<P style="position:absolute;top:778px;left:166px;white-space:nowrap" class="ft54">trantsizio&#160;probabilitateen&#160;matrizea.&#160;Estatu&#160;batetik&#160;abiatuz,&#160;denbora&#160;jarrai-<br/>tuan&#160;prozesu&#160;birsortzailea&#160;dagokio,&#160;estatuak&#160;errekurrenteak&#160;direnez,&#160;eta&#160;ho-<br/>nek&#160;baditu&#160;limiteko&#160;probabilitateak3.&#160;Balantza&#160;ekuazioetatik4&#160;kalkulatuko</P>
+<P style="position:absolute;top:852px;left:186px;white-space:nowrap" class="ft58">2Estatu&#160;errekurrenteak&#160;bi&#160;motakoak&#160;dira,&#160;estatura&#160;itzultzeko&#160;denboraren&#160;arabera&#160;:&#160;er-</P>
+<P style="position:absolute;top:872px;left:166px;white-space:nowrap" class="ft59">rekurrente&#160;positiboak&#160;dira&#160;baldin&#160;E[Ti&#160;|&#160;X0&#160;=&#160;i]&#160;&lt;&#160;∞&#160;eta&#160;errekurrente&#160;nuluak&#160;baldin<br/>E[Ti&#160;|&#160;X0&#160;=&#160;i]&#160;=&#160;∞.&#160;Estatu&#160;kopurua&#160;ﬁnitua&#160;denean,&#160;klase&#160;itxiko&#160;estatuak&#160;errekurrente<br/>positiboak&#160;dira&#160;;&#160;estatu&#160;kopurua&#160;inﬁnitua&#160;bada,&#160;eta&#160;klase&#160;itxiko&#160;estatuak&#160;errekurrenteak<br/>direnean,&#160;denak&#160;errekurrente&#160;positiboak&#160;edo&#160;denak&#160;errekurrente&#160;negatiboak&#160;dira.</P>
+<P style="position:absolute;top:942px;left:186px;white-space:nowrap" class="ft58">3Hasierako&#160;estaturako&#160;itzulerak&#160;lirateke&#160;berritzeak.&#160;Pausoen&#160;iraupena&#160;aldagai&#160;aleatorio</P>
+<P style="position:absolute;top:962px;left:166px;white-space:nowrap" class="ft55">jarraitua&#160;bada&#160;berritzearteko&#160;denbora&#160;ere&#160;jarraitua&#160;da.</P>
+<P style="position:absolute;top:978px;left:186px;white-space:nowrap" class="ft58">4Idatziko&#160;ditugun&#160;probabilitateak&#160;zatituz&#160;pausoaren&#160;iraupenaren&#160;itxarotako&#160;balioarekin</P>
+<P style="position:absolute;top:998px;left:166px;white-space:nowrap" class="ft55">lortzen&#160;dira&#160;prozesu&#160;birsortzaileko&#160;bisita&#160;eta&#160;trantsizio&#160;tasak.</P>
+<P style="position:absolute;top:1041px;left:453px;white-space:nowrap" class="ft52">5</P>
+</DIV>
+<!-- Page 6 -->
+<a name="6"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page6-div" style="position:relative;width:892px;height:1262px;">
+<P style="position:absolute;top:194px;left:166px;white-space:nowrap" class="ft62">ditugu&#160;Markov&#160;kate&#160;honen&#160;πj&#160;limiteko&#160;probabilitateak&#160;:</P>
+<P style="position:absolute;top:234px;left:342px;white-space:nowrap" class="ft62">πj&#160;=</P>
+<P style="position:absolute;top:256px;left:391px;white-space:nowrap" class="ft63">i</P>
+<P style="position:absolute;top:234px;left:407px;white-space:nowrap" class="ft62">πiPij&#160;,&#160;j&#160;=&#160;0,&#160;1,&#160;.&#160;.&#160;.</P>
+<P style="position:absolute;top:298px;left:389px;white-space:nowrap" class="ft63">j</P>
+<P style="position:absolute;top:276px;left:405px;white-space:nowrap" class="ft62">πj&#160;=&#160;1</P>
+<P style="position:absolute;top:329px;left:166px;white-space:nowrap" class="ft64">Azken&#160;ekuazioa&#160;probabilitateen&#160;normalizazio&#160;ekuazioa&#160;da.&#160;Ekuazio&#160;sistema<br/>honen&#160;π&#160;=&#160;(π0,&#160;π1,&#160;.&#160;.&#160;.)&#160;soluzioa&#160;bakarra&#160;da&#160;eta&#160;positiboa</P>
+<P style="position:absolute;top:348px;left:590px;white-space:nowrap" class="ft63">5.&#160;Estatuak&#160;aperiodi-</P>
+<P style="position:absolute;top:372px;left:166px;white-space:nowrap" class="ft62">koak&#160;badira,&#160;estatuen&#160;limiteko&#160;probabilitateak&#160;ematen&#160;dizkigu&#160;π&#160;soluzioak&#160;:</P>
+<P style="position:absolute;top:412px;left:376px;white-space:nowrap" class="ft62">πj&#160;=&#160;lim</P>
+<P style="position:absolute;top:425px;left:416px;white-space:nowrap" class="ft63">n→∞</P>
+<P style="position:absolute;top:412px;left:453px;white-space:nowrap" class="ft62">P&#160;{Xn&#160;=&#160;j}</P>
+<P style="position:absolute;top:454px;left:166px;white-space:nowrap" class="ft64">Ikusten&#160;dugunez&#160;estatu&#160;baten&#160;limiteko&#160;probabilitatea&#160;ez&#160;da&#160;hasierako&#160;esta-<br/>tuaren&#160;menpekoa,&#160;limn→∞&#160;P</P>
+<P style="position:absolute;top:474px;left:384px;white-space:nowrap" class="ft63">n</P>
+<P style="position:absolute;top:485px;left:382px;white-space:nowrap" class="ft63">ij&#160;=&#160;πj&#160;edozein&#160;i-rako.</P>
+<P style="position:absolute;top:498px;left:193px;white-space:nowrap" class="ft62">Estatuak&#160;periodikoak&#160;badira&#160;Markov&#160;kateak&#160;ez&#160;du&#160;limiteko&#160;probabilitate-</P>
+<P style="position:absolute;top:519px;left:166px;white-space:nowrap" class="ft64">rik6,&#160;baina&#160;orduan&#160;π&#160;soluzioak&#160;estatuen&#160;denbora&#160;proportzioen&#160;limiteak&#160;ema-<br/>ten&#160;dizkigu&#160;Markov&#160;katerako.</P>
+<P style="position:absolute;top:563px;left:193px;white-space:nowrap" class="ft62">Estatu&#160;kopuru&#160;inﬁnituko&#160;Markov&#160;kate&#160;laburtezinaren&#160;azterketa&#160;korapila-</P>
+<P style="position:absolute;top:584px;left:166px;white-space:nowrap" class="ft64">tsuagoa&#160;da.&#160;Esango&#160;duguna&#160;teorematzat&#160;hartu&#160;behar&#160;da&#160;(ezin&#160;dugu&#160;frogatu<br/>prozesu&#160;birsortzaile&#160;batean&#160;oinarritutako&#160;arrazoiketa&#160;heuristikoaren&#160;bidez&#160;le-<br/>hen&#160;bezala).&#160;Idatzi&#160;dugun&#160;ekuazio&#160;sistemak&#160;ez&#160;du&#160;beti&#160;soluzioa7.&#160;Ekuazio<br/>sistemak&#160;soluzioa&#160;badu&#160;estatuak&#160;errekurrenteak&#160;dira,&#160;π&#160;soluzioa&#160;bakarra&#160;eta<br/>positiboa&#160;da,&#160;limiteko&#160;probabilitateak&#160;emango&#160;dizkiguna&#160;estatuak&#160;aperiodi-<br/>koak&#160;badira&#160;(denbora&#160;proportzioen&#160;limiteak&#160;estatuak&#160;periodikoak&#160;badira).<br/>Ekuazio&#160;sistemak&#160;ez&#160;badu&#160;soluziorik&#160;orduan&#160;limiteko&#160;probabilitateak&#160;nuluak<br/>dira,&#160;limn→∞&#160;P</P>
+<P style="position:absolute;top:734px;left:283px;white-space:nowrap" class="ft63">n</P>
+<P style="position:absolute;top:745px;left:281px;white-space:nowrap" class="ft63">ij&#160;=&#160;0&#160;edozein&#160;i,j-rako.&#160;Argi&#160;dago&#160;limiteko&#160;probabilitate&#160;nu-</P>
+<P style="position:absolute;top:758px;left:166px;white-space:nowrap" class="ft62">luak&#160;ditugula&#160;baldin&#160;estatuak&#160;iragankorrak&#160;badira.</P>
+<P style="position:absolute;top:779px;left:193px;white-space:nowrap" class="ft62">Balantza&#160;ekuazioen&#160;(eta&#160;normalizazio&#160;ekuazioaren)&#160;sistema&#160;matrize&#160;no-</P>
+<P style="position:absolute;top:801px;left:166px;white-space:nowrap" class="ft62">tazioaz&#160;idatz&#160;dezakegu.&#160;Hau&#160;erabilgarria&#160;izango&#160;zaigu&#160;matrize&#160;kalkuluak&#160;egi-</P>
+<P style="position:absolute;top:833px;left:186px;white-space:nowrap" class="ft68">5Bakarra&#160;da,&#160;π&#160;soluzioa&#160;balitz&#160;eta&#160;hauek&#160;balira&#160;hasierako&#160;estaturako&#160;probabilitateak,</P>
+<P style="position:absolute;top:853px;left:166px;white-space:nowrap" class="ft69">pauso&#160;baten&#160;ondoren&#160;π&#160;probabilitateak&#160;genituzke,&#160;aurrerago&#160;ikusiko&#160;dugunez,&#160;eta&#160;baita<br/>limitean&#160;ere,&#160;baina&#160;limiteko&#160;probabilitateak&#160;bakarrak&#160;dira.&#160;Soluzioa&#160;positiboa&#160;da&#160;estatu<br/>errekurrenteak&#160;ditugunez&#160;eta&#160;kopuru&#160;ﬁnitua.</P>
+<P style="position:absolute;top:905px;left:186px;white-space:nowrap" class="ft68">6Estatu&#160;periodikoekin,&#160;n&#160;ez&#160;denean&#160;periodoaren&#160;multiploa&#160;hasierako&#160;estatuaren&#160;pro-</P>
+<P style="position:absolute;top:925px;left:166px;white-space:nowrap" class="ft65">babilitatea&#160;0&#160;da,&#160;n&#160;nahi&#160;bezain&#160;handia&#160;hartu&#160;arren.&#160;Aperiodikoekin&#160;ez&#160;dago&#160;arazo&#160;hau.</P>
+<P style="position:absolute;top:941px;left:186px;white-space:nowrap" class="ft68">7Soluzioa&#160;dagoenean&#160;estatuak&#160;errekurrente&#160;positiboak&#160;dira,&#160;eta&#160;soluziorik&#160;ez&#160;dagoenean</P>
+<P style="position:absolute;top:961px;left:166px;white-space:nowrap" class="ft65">errekurrente&#160;nuluak&#160;edo&#160;iragankorrak,&#160;ez&#160;dugu&#160;prozesu&#160;birsortzailerik.</P>
+<P style="position:absolute;top:1041px;left:453px;white-space:nowrap" class="ft62">6</P>
+</DIV>
+<!-- Page 7 -->
+<a name="7"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page7-div" style="position:relative;width:892px;height:1262px;">
+<P style="position:absolute;top:194px;left:166px;white-space:nowrap" class="ft72">teko.&#160;Har&#160;ditzagun&#160;lerro&#160;eta&#160;zutabe&#160;matrize&#160;hauek&#160;:</P>
+<P style="position:absolute;top:258px;left:328px;white-space:nowrap" class="ft72">π&#160;=</P>
+<P style="position:absolute;top:258px;left:376px;white-space:nowrap" class="ft72">π0&#160;π1&#160;.&#160;.&#160;.</P>
+<P style="position:absolute;top:258px;left:491px;white-space:nowrap" class="ft72">,&#160;1&#160;=</P>
+<P style="position:absolute;top:230px;left:544px;white-space:nowrap" class="ft75"></P>
+<P style="position:absolute;top:256px;left:544px;white-space:nowrap" class="ft77"><br/><br/></P>
+<P style="position:absolute;top:232px;left:561px;white-space:nowrap" class="ft74">1<br/>1</P>
+<P style="position:absolute;top:271px;left:563px;white-space:nowrap" class="ft72">..</P>
+<P style="position:absolute;top:283px;left:563px;white-space:nowrap" class="ft72">.</P>
+<P style="position:absolute;top:230px;left:578px;white-space:nowrap" class="ft75"></P>
+<P style="position:absolute;top:256px;left:578px;white-space:nowrap" class="ft77"><br/><br/></P>
+<P style="position:absolute;top:321px;left:166px;white-space:nowrap" class="ft72">Honela&#160;geratzen&#160;zaigu&#160;ekuazio&#160;sistema&#160;:</P>
+<P style="position:absolute;top:361px;left:423px;white-space:nowrap" class="ft72">π&#160;=&#160;πP</P>
+<P style="position:absolute;top:387px;left:413px;white-space:nowrap" class="ft72">π1&#160;=&#160;1</P>
+<P style="position:absolute;top:427px;left:193px;white-space:nowrap" class="ft72">Har&#160;dezagun&#160;Markov&#160;kate&#160;laburtezina,&#160;aperiodikoa,&#160;eta&#160;eman&#160;dezagun</P>
+<P style="position:absolute;top:449px;left:166px;white-space:nowrap" class="ft74">π&#160;=&#160;πP&#160;,&#160;π1&#160;=&#160;1&#160;ekuazioek&#160;soluzioa&#160;dutela.&#160;Dakigunez&#160;π&#160;soluzioak&#160;limi-<br/>teko&#160;probabilitateak&#160;ematen&#160;dizkigu,&#160;gainera&#160;π1&#160;=&#160;1&#160;betetzen&#160;denez&#160;bana-<br/>keta&#160;bat&#160;deﬁnitzen&#160;du&#160;estatuentzat,&#160;limiteko&#160;banaketa.&#160;Banaketa&#160;gerakorra<br/>deitzen&#160;zaio&#160;arrazoi&#160;honengatik&#160;:&#160;baldin&#160;hasierako&#160;estatua&#160;π&#160;probabilitateen<br/>arabera&#160;hartzen&#160;bada,&#160;pauso&#160;baten&#160;ondoren&#160;πP&#160;probabilitateak&#160;dituzte&#160;esta-<br/>tuek&#160;(&#160;i&#160;πiPij,&#160;j&#160;=&#160;0,&#160;1,&#160;.&#160;.&#160;.&#160;probabilitateak&#160;lerro&#160;matrizean&#160;idatziz&#160;πP&#160;dugu),<br/>hau&#160;da,&#160;berriz&#160;π.&#160;Eta&#160;berdin&#160;beste&#160;pauosoaren&#160;ondoren,&#160;behin&#160;eta&#160;berriz&#160;π<br/>banaketa&#160;dugu.</P>
+<P style="position:absolute;top:622px;left:193px;white-space:nowrap" class="ft72">Azkenik&#160;estatu&#160;kopuru&#160;ﬁnitua&#160;duen&#160;Markov&#160;kate&#160;laburtezinaren&#160;bana-</P>
+<P style="position:absolute;top:644px;left:166px;white-space:nowrap" class="ft74">keta&#160;gerakorraren&#160;kalkulua&#160;zehaztuko&#160;dugu.&#160;Badakigu&#160;existitzen&#160;dela&#160;eta&#160;ba-<br/>karra&#160;dela.&#160;Eskuz&#160;ebatzi&#160;behar&#160;badugu&#160;ekuazio&#160;sistema,&#160;kontuan&#160;izango&#160;dugu<br/>π&#160;=&#160;πP&#160;sistema&#160;homogeneoaren&#160;soluzioen&#160;multzoa&#160;bat&#160;dimentsioko&#160;bektore<br/>azpiespazioa&#160;dela&#160;(normalizazio&#160;ekuazioarekin&#160;batera&#160;soluzio&#160;bakarra&#160;bai-<br/>tugu).&#160;Beraz&#160;ezezagun&#160;bat&#160;ﬁnkatuko&#160;dugu,&#160;esaterako&#160;π∗</P>
+<P style="position:absolute;top:739px;left:582px;white-space:nowrap" class="ft73">0&#160;=&#160;1.&#160;Honela&#160;π&#160;=&#160;πP</P>
+<P style="position:absolute;top:752px;left:166px;white-space:nowrap" class="ft74">balantza&#160;ekuazioetako&#160;bat&#160;sobran&#160;izango&#160;dugu&#160;eta&#160;gainerakoekin&#160;π∗&#160;soluzioa<br/>aurkituko&#160;dugu.&#160;Ondoren&#160;π&#160;=&#160;πP&#160;,&#160;π1&#160;=&#160;1&#160;ekuazio&#160;sistema&#160;osoaren&#160;soluzioa<br/>lortuko&#160;dugu&#160;π∗&#160;normalizatuz,&#160;hau&#160;da,&#160;π&#160;=&#160;(1/</P>
+<P style="position:absolute;top:803px;left:542px;white-space:nowrap" class="ft73">j&#160;π</P>
+<P style="position:absolute;top:792px;left:563px;white-space:nowrap" class="ft73">∗</P>
+<P style="position:absolute;top:804px;left:562px;white-space:nowrap" class="ft73">j&#160;)&#160;·&#160;π</P>
+<P style="position:absolute;top:792px;left:598px;white-space:nowrap" class="ft73">∗.&#160;Matrize&#160;kalkulue-</P>
+<P style="position:absolute;top:817px;left:166px;white-space:nowrap" class="ft74">tarako&#160;konputagailu&#160;programa&#160;bereziekin&#160;ez&#160;dugu&#160;arduratu&#160;behar&#160;xehetasun<br/>hauetaz,&#160;zuzenean&#160;sartuko&#160;dugu&#160;ekuazio&#160;sistema&#160;osoa.</P>
+<P style="position:absolute;top:875px;left:166px;white-space:nowrap" class="ft74">Adibidea&#160;7&#160;Klase&#160;mugikortasunerako&#160;eredua&#160;deﬁnitu&#160;Markov&#160;kate&#160;baten&#160;bi-<br/>dez&#160;eta&#160;kalkulatu&#160;limiteko&#160;probabilitateak.</P>
+<P style="position:absolute;top:1041px;left:453px;white-space:nowrap" class="ft72">7</P>
+</DIV>
+<!-- Page 8 -->
+<a name="8"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft810{font-size:23px;line-height:32px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page8-div" style="position:relative;width:892px;height:1262px;">
+<P style="position:absolute;top:189px;left:166px;white-space:nowrap" class="ft81">4</P>
+<P style="position:absolute;top:189px;left:210px;white-space:nowrap" class="ft810">Denbora&#160;jarraituko&#160;Markov&#160;kateak&#160;eta<br/>semi-Markov&#160;prozesuak</P>
+<P style="position:absolute;top:266px;left:193px;white-space:nowrap" class="ft82">Markov&#160;katea&#160;denbora&#160;diskretuko&#160;prozesu&#160;estokastiko&#160;bezala&#160;deﬁnitu&#160;du-</P>
+<P style="position:absolute;top:288px;left:166px;white-space:nowrap" class="ft84">gu,&#160;baina&#160;denbora&#160;jarraituko&#160;prozesurako&#160;ere&#160;deﬁni&#160;dezakegu&#160;Markov&#160;pro-<br/>pietatea.&#160;Izan&#160;bedi&#160;{X(t),&#160;t&#160;≥&#160;0}&#160;denbora&#160;jarraituko&#160;prozesu&#160;estokastikoa,<br/>non&#160;estatuen&#160;multzoa&#160;zenbakigarria&#160;den,&#160;adibidez&#160;0,1,2,.&#160;.&#160;.estatuak.&#160;Esango<br/>dugu&#160;denbora&#160;jarraituko&#160;Markov&#160;katea&#160;(DJMK)&#160;dela&#160;baldin&#160;edozein&#160;denbora<br/>s,t&#160;eta&#160;edozein&#160;estatu&#160;j-rako&#160;:</P>
+<P style="position:absolute;top:414px;left:240px;white-space:nowrap" class="ft82">P&#160;{X(s&#160;+&#160;t)&#160;=&#160;j&#160;|&#160;X(u),&#160;u&#160;≤&#160;s}&#160;=&#160;P&#160;{X(s&#160;+&#160;t)&#160;=&#160;j&#160;|&#160;X(s)}</P>
+<P style="position:absolute;top:454px;left:166px;white-space:nowrap" class="ft84">Hau&#160;da&#160;interpretazioa&#160;:&#160;jakina&#160;bada&#160;X(s)&#160;“oraingo”&#160;estatua,&#160;X(s&#160;+&#160;t)&#160;“etor-<br/>kizuneko”&#160;estatua&#160;independentea&#160;da&#160;X(u),&#160;u&#160;&lt;&#160;s,&#160;“iraganeko”&#160;estatuetatik.<br/>Gainera&#160;P&#160;{X(s&#160;+&#160;t)&#160;=&#160;j&#160;|&#160;X(s)&#160;=&#160;i}&#160;trantsizio&#160;probabilitatea&#160;ez&#160;da&#160;izango&#160;s<br/>denboraren&#160;menpekoa.&#160;Trantsizio&#160;probabilitatea&#160;i,&#160;j&#160;estatuak&#160;eta&#160;t&#160;denbora<br/>jarraituaren&#160;funtzioa&#160;da,&#160;orain&#160;ez&#160;ditugu&#160;pausoak&#160;lehen&#160;bezala.</P>
+<P style="position:absolute;top:562px;left:193px;white-space:nowrap" class="ft82">DJMK&#160;prozesuaren&#160;bilakaera&#160;karakterizatuko&#160;dugu.&#160;Prozesua&#160;estatu&#160;ba-</P>
+<P style="position:absolute;top:584px;left:166px;white-space:nowrap" class="ft84">tetik&#160;beste&#160;estatu&#160;desberdin&#160;batera&#160;igarotzen&#160;denean&#160;esango&#160;dugu&#160;trantsizioa<br/>gertatu&#160;dela,&#160;T1&#160;izango&#160;da&#160;lehenengo&#160;trantsizioa&#160;gertatu&#160;den&#160;unea,&#160;T2&#160;bigar-<br/>rengo&#160;trantsizioaren&#160;unea,&#160;etab.&#160;(hauek&#160;ez&#160;dira&#160;berritzeak).&#160;Trantsizioarteko<br/>denborak&#160;aldagai&#160;aleatorio&#160;jarraituak&#160;izango&#160;dira.&#160;Markov&#160;propietateak&#160;in-<br/>plikatzen&#160;du&#160;trantsizioarteko&#160;denbora&#160;oroimengabea&#160;dela&#160;:&#160;une&#160;zehatz&#160;batean<br/>i&#160;estatuan&#160;gaudelarik&#160;hurrengo&#160;trantsizioa&#160;bitartean&#160;igaroko&#160;den&#160;denborak,<br/>eta&#160;i-ra&#160;sartu&#160;garenetik&#160;hurrengo&#160;trantsizioa&#160;bitarteko&#160;denborak,&#160;banaketa<br/>berdina&#160;dute.&#160;Beraz&#160;i&#160;estaturako&#160;bisita&#160;baten&#160;egonaldi&#160;denbora&#160;esponent-<br/>ziala&#160;da,&#160;νi&#160;izango&#160;da&#160;bere&#160;parametroa.&#160;Bestalde&#160;denbora&#160;diskretuko&#160;Markov<br/>katea&#160;deﬁni&#160;dezakegu&#160;honen&#160;pausoak&#160;egokituz&#160;DJMKren&#160;estatu&#160;trantsizioe-<br/>kin,&#160;honela&#160;Pij&#160;trantsizio&#160;probabilitateak&#160;ditugu,&#160;orain&#160;Pii&#160;=&#160;0.&#160;Beraz&#160;DJMK<br/>prozesua&#160;karakteriza&#160;dezakegu&#160;egitura&#160;eta&#160;parametro&#160;hauekin&#160;:&#160;estatu&#160;bat<br/>bisitatzean&#160;egonaldi&#160;denborak&#160;banaketa&#160;esponentziala&#160;du,&#160;νi&#160;parametrokoa<br/>i&#160;estatuan&#160;bagaude,&#160;eta&#160;ondoren&#160;trantsizioa&#160;izango&#160;da&#160;beste&#160;estatu&#160;batera<br/>P&#160;=&#160;[Pij]&#160;probabilitateak&#160;jarraituz,&#160;eta&#160;honela&#160;segituko&#160;da&#160;denboran&#160;zehar.<br/>Ohartzen&#160;gara&#160;egitura&#160;eta&#160;parametro&#160;hauek&#160;erabilgarriagoak&#160;izango&#160;direla<br/>hasierako&#160;deﬁnizioa&#160;baino.</P>
+<P style="position:absolute;top:952px;left:193px;white-space:nowrap" class="ft82">DJMK&#160;prozesua&#160;berritzailea&#160;izan&#160;daiteke&#160;ala&#160;ez.&#160;Prozesu&#160;berritzailea&#160;de-</P>
+<P style="position:absolute;top:974px;left:166px;white-space:nowrap" class="ft84">nean&#160;estatuen&#160;limiteko&#160;probabilitateak&#160;ditugu,&#160;denbora&#160;proportzioen&#160;limiteen<br/>berdinak,&#160;Pj&#160;=&#160;limt→∞&#160;P&#160;{X(t)&#160;=&#160;j},&#160;j&#160;=&#160;0,&#160;1,&#160;.&#160;.&#160;.&#160;eta&#160;balantza&#160;ekuazioen&#160;bi-</P>
+<P style="position:absolute;top:1041px;left:453px;white-space:nowrap" class="ft82">8</P>
+</DIV>
+<!-- Page 9 -->
+<a name="9"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page9-div" style="position:relative;width:892px;height:1262px;">
+<P style="position:absolute;top:194px;left:166px;white-space:nowrap" class="ft92">dez&#160;kalkulatuko&#160;ditugu,&#160;normalizazio&#160;ekuazioa&#160;gehituz8&#160;:</P>
+<P style="position:absolute;top:228px;left:327px;white-space:nowrap" class="ft92">νjPj&#160;=</P>
+<P style="position:absolute;top:250px;left:392px;white-space:nowrap" class="ft93">i</P>
+<P style="position:absolute;top:228px;left:408px;white-space:nowrap" class="ft92">νiPijPi&#160;,&#160;j&#160;=&#160;0,&#160;1,&#160;.&#160;.&#160;.</P>
+<P style="position:absolute;top:291px;left:403px;white-space:nowrap" class="ft93">j</P>
+<P style="position:absolute;top:269px;left:420px;white-space:nowrap" class="ft92">Pj&#160;=&#160;1</P>
+<P style="position:absolute;top:318px;left:166px;white-space:nowrap" class="ft94">Izan&#160;ere&#160;j&#160;estatuan&#160;egonaldi&#160;denboraren&#160;itxarotako&#160;balioa&#160;1/νj&#160;da,&#160;eta&#160;pro-<br/>zesua&#160;hor&#160;izateko&#160;probabilitatea&#160;Pj&#160;denez,&#160;bisita&#160;tasa&#160;νjPj&#160;da.&#160;Bestalde&#160;i&#160;es-<br/>tatuaren&#160;bisita&#160;tasa&#160;νiPi&#160;izanik,&#160;i-tik&#160;j-rako&#160;trantsizioen&#160;tasa&#160;νiPiPij&#160;izango<br/>da.&#160;Hemendik&#160;ekuazioak.</P>
+<P style="position:absolute;top:405px;left:193px;white-space:nowrap" class="ft92">Ekuazio&#160;hauek&#160;ebazteko&#160;lehenik&#160;estatu&#160;trantsizioek&#160;deﬁnitzen&#160;duten&#160;den-</P>
+<P style="position:absolute;top:426px;left:166px;white-space:nowrap" class="ft94">bora&#160;diskretuko&#160;Markov&#160;katearen&#160;π&#160;banaketa&#160;gerakorra&#160;kalkula&#160;dezakegu,<br/>π&#160;=&#160;πP&#160;,&#160;π1&#160;=&#160;1,&#160;non&#160;P&#160;=&#160;[Pij],&#160;eta&#160;DJMK&#160;prozesuaren&#160;limiteko&#160;banaketa<br/>hau&#160;izango&#160;da,&#160;goian&#160;ordezkatzean&#160;ikus&#160;dezakegunez&#160;:</P>
+<P style="position:absolute;top:506px;left:353px;white-space:nowrap" class="ft92">Pj&#160;=</P>
+<P style="position:absolute;top:494px;left:407px;white-space:nowrap" class="ft92">sj&#160;πj</P>
+<P style="position:absolute;top:526px;left:412px;white-space:nowrap" class="ft93">i&#160;si&#160;πi</P>
+<P style="position:absolute;top:506px;left:463px;white-space:nowrap" class="ft92">,&#160;j&#160;=&#160;0,&#160;1,&#160;.&#160;.&#160;.</P>
+<P style="position:absolute;top:549px;left:166px;white-space:nowrap" class="ft92">non&#160;sj&#160;=&#160;1/νj&#160;itxarotako&#160;balioak&#160;ditugun.</P>
+<P style="position:absolute;top:571px;left:193px;white-space:nowrap" class="ft92">Balantza&#160;ekuazioetatik&#160;ere&#160;zuzenean&#160;kalkula&#160;dezakegu&#160;limiteko&#160;banaketa.</P>
+<P style="position:absolute;top:592px;left:166px;white-space:nowrap" class="ft94">Horretarako&#160;Q&#160;=&#160;[qij]&#160;matrizea&#160;idatziko&#160;dugu,&#160;non&#160;qij&#160;sarrerak&#160;estatua&#160;i<br/>deneko&#160;trantsizio&#160;tasak&#160;diren,&#160;eta&#160;qii&#160;diagonaleko&#160;sarrerak&#160;egonaldi&#160;denboren<br/>parametroak&#160;ikur&#160;negatiboaz&#160;:</P>
+<P style="position:absolute;top:680px;left:351px;white-space:nowrap" class="ft92">qij&#160;=</P>
+<P style="position:absolute;top:669px;left:413px;white-space:nowrap" class="ft92">νiPij&#160;baldin&#160;i&#160;=&#160;j</P>
+<P style="position:absolute;top:689px;left:417px;white-space:nowrap" class="ft92">−νi</P>
+<P style="position:absolute;top:690px;left:464px;white-space:nowrap" class="ft92">baldin&#160;i&#160;=&#160;j</P>
+<P style="position:absolute;top:723px;left:166px;white-space:nowrap" class="ft92">Ohartzen&#160;gara</P>
+<P style="position:absolute;top:731px;left:298px;white-space:nowrap" class="ft93">j&#160;νiPij&#160;=&#160;νi&#160;dela,&#160;beraz</P>
+<P style="position:absolute;top:759px;left:407px;white-space:nowrap" class="ft92">qii&#160;=&#160;−</P>
+<P style="position:absolute;top:781px;left:466px;white-space:nowrap" class="ft93">j=i</P>
+<P style="position:absolute;top:759px;left:490px;white-space:nowrap" class="ft92">qij</P>
+<P style="position:absolute;top:812px;left:166px;white-space:nowrap" class="ft92">Baldin&#160;ρ&#160;=</P>
+<P style="position:absolute;top:812px;left:275px;white-space:nowrap" class="ft92">P0&#160;P1&#160;.&#160;.&#160;.</P>
+<P style="position:absolute;top:812px;left:384px;white-space:nowrap" class="ft92">idazten&#160;badugu&#160;honela&#160;geratzen&#160;zaizkigu&#160;ekua-</P>
+<P style="position:absolute;top:834px;left:166px;white-space:nowrap" class="ft92">zioak&#160;:</P>
+<P style="position:absolute;top:868px;left:419px;white-space:nowrap" class="ft92">ρ&#160;Q&#160;=&#160;0</P>
+<P style="position:absolute;top:894px;left:422px;white-space:nowrap" class="ft92">ρ&#160;1&#160;=&#160;1</P>
+<P style="position:absolute;top:924px;left:186px;white-space:nowrap" class="ft98">8Baldintza&#160;zehatzak&#160;hauek&#160;dira.&#160;DJMK&#160;prozesuari&#160;dagokion&#160;denbora&#160;diskretuko&#160;Mar-</P>
+<P style="position:absolute;top:944px;left:166px;white-space:nowrap" class="ft99">kov&#160;katea&#160;laburtezina&#160;izan&#160;behar&#160;du&#160;;&#160;gainera&#160;bornatuta&#160;egon&#160;behar&#160;dira&#160;egonaldi&#160;denboren<br/>νi&#160;parametroak&#160;eta&#160;1/νi&#160;itxarotako&#160;balioak.&#160;Orduan&#160;DJMK&#160;birsortzailea&#160;da&#160;baldin&#160;eta&#160;soi-<br/>lik&#160;baldin&#160;denbora&#160;diskretuko&#160;Markov&#160;katearen&#160;estatuak&#160;errekurrente&#160;positiboak&#160;badira.<br/>Honela&#160;bada&#160;denbora&#160;jarraituko&#160;prozesuaren&#160;limiteko&#160;banaketa&#160;ekuazioetatik&#160;dugu.</P>
+<P style="position:absolute;top:1041px;left:453px;white-space:nowrap" class="ft92">9</P>
+</DIV>
+<!-- Page 10 -->
+<a name="10"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft1011{font-size:19px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page10-div" style="position:relative;width:892px;height:1262px;">
+<P style="position:absolute;top:192px;left:166px;white-space:nowrap" class="ft1011">Jaiotza&#160;eta&#160;heriotza&#160;prozesuak&#160;:&#160;M/M/1&#160;kola</P>
+<P style="position:absolute;top:227px;left:193px;white-space:nowrap" class="ft102">Jaiotza&#160;eta&#160;heriotza&#160;prozesua&#160;deitzen&#160;diogu&#160;DJMK&#160;prozesu&#160;bati&#160;non&#160;es-</P>
+<P style="position:absolute;top:249px;left:166px;white-space:nowrap" class="ft104">tatuak&#160;sistema&#160;bateko&#160;jende&#160;kopurua&#160;adierazten&#160;duen.&#160;Estatu&#160;trantsizioa<br/>izango&#160;dugu&#160;jaiotza&#160;edo&#160;heriotza&#160;gertatzen&#160;den&#160;bakoitzean.&#160;Jaiotza&#160;eta&#160;he-<br/>riotza&#160;prozesua&#160;deﬁnitzeko,&#160;sisteman&#160;n&#160;≥&#160;0&#160;banako&#160;daudeneko&#160;jaiotza&#160;eta<br/>heriotza&#160;tasak&#160;eman&#160;ditzakegu,&#160;λn&#160;=&#160;qn,n+1&#160;eta&#160;µn&#160;=&#160;qn,n−1&#160;hurrenez&#160;hurren.<br/>Q&#160;matrizea&#160;osatzeko&#160;qnn&#160;=&#160;−(qn,n−1&#160;+&#160;qn,n+1)&#160;dugu&#160;dakigunez,&#160;beraz&#160;n&#160;bana-<br/>korako&#160;egonaldi&#160;denboraren&#160;parametroa&#160;νn&#160;=&#160;λn&#160;+&#160;µn&#160;da,&#160;n&#160;≥&#160;0.&#160;Ondorioz<br/>trantsizio&#160;probabilitateak&#160;Pn,n+1&#160;=&#160;λn/(λn&#160;+&#160;µn)&#160;eta&#160;Pn,n−1&#160;=&#160;µn/(λn&#160;+&#160;µn)<br/>dira.</P>
+<P style="position:absolute;top:422px;left:193px;white-space:nowrap" class="ft102">Oinarrizko&#160;adibidea&#160;M/M/1&#160;kola&#160;da.&#160;Sistemara&#160;bezeroak&#160;iristen&#160;dira&#160;λ</P>
+<P style="position:absolute;top:444px;left:166px;white-space:nowrap" class="ft104">tasako&#160;Poisson&#160;prozesua&#160;jarraituz&#160;eta&#160;sisteman&#160;zerbitzari&#160;bat&#160;dago,&#160;zerbitzu<br/>denborak&#160;µ&#160;parametroko&#160;banaketa&#160;esponentziala&#160;duelarik.&#160;Kolaren&#160;X(t)&#160;ta-<br/>maina&#160;sisteman&#160;dauden&#160;bezeroen&#160;kopurua&#160;da.&#160;Bezero&#160;berria&#160;heltzen&#160;denean<br/>jaiotza&#160;dugu&#160;eta&#160;zerbitzua&#160;jasotzen&#160;ari&#160;den&#160;bezeroak&#160;amaitzen&#160;duenean&#160;he-<br/>riotza.&#160;Etorrerarteko&#160;denborak&#160;eta&#160;zerbitzuak&#160;esponentzialak&#160;dira,&#160;beraz&#160;oroi-<br/>mengabeak,&#160;honek&#160;esan&#160;nahi&#160;du&#160;{X(t),&#160;t&#160;≥&#160;0}&#160;prozesua&#160;DJMK&#160;dela,&#160;jaiotza<br/>eta&#160;heriotza&#160;prozesua&#160;hain&#160;zuzen.&#160;Dagozkion&#160;parametroak&#160;kalkulatuko&#160;di-<br/>tugu.&#160;Eman&#160;dezagun&#160;une&#160;batean&#160;prozesua&#160;n&#160;estatuan&#160;dagoela&#160;eta&#160;har&#160;dit-<br/>zagun&#160;Xj&#160;eta&#160;Xh&#160;aldagaiak,&#160;hurrengo&#160;jaiotza&#160;eta&#160;heriotza&#160;bitartean&#160;igaroko<br/>diren&#160;denborak.&#160;Aldagai&#160;esponentzialen&#160;oroimengabetasuna&#160;kontuan&#160;izanik,</P>
+<P style="position:absolute;top:685px;left:322px;white-space:nowrap" class="ft102">Pn,n+1&#160;=&#160;P&#160;{X</P>
+<P style="position:absolute;top:682px;left:431px;white-space:nowrap" class="ft103">j&#160;&lt;&#160;Xh}&#160;=</P>
+<P style="position:absolute;top:673px;left:536px;white-space:nowrap" class="ft102">λ</P>
+<P style="position:absolute;top:697px;left:520px;white-space:nowrap" class="ft102">λ&#160;+&#160;µ</P>
+<P style="position:absolute;top:727px;left:322px;white-space:nowrap" class="ft102">Pn,n−1&#160;=&#160;P&#160;{X</P>
+<P style="position:absolute;top:724px;left:431px;white-space:nowrap" class="ft103">h&#160;&lt;&#160;Xj}&#160;=</P>
+<P style="position:absolute;top:715px;left:536px;white-space:nowrap" class="ft102">µ</P>
+<P style="position:absolute;top:739px;left:520px;white-space:nowrap" class="ft102">λ&#160;+&#160;µ</P>
+<P style="position:absolute;top:775px;left:166px;white-space:nowrap" class="ft104">Bestalde&#160;min(Xj,&#160;Xh)&#160;esponentziala&#160;da,&#160;λ&#160;+&#160;µ&#160;parametrokoa,&#160;beraz&#160;egonaldi<br/>denboraren&#160;parametroa&#160;hau&#160;da&#160;:</P>
+<P style="position:absolute;top:835px;left:416px;white-space:nowrap" class="ft102">νn&#160;=&#160;λ&#160;+&#160;µ</P>
+<P style="position:absolute;top:873px;left:166px;white-space:nowrap" class="ft104">Kasu&#160;berezia&#160;dugu&#160;kola&#160;husten&#160;denean,&#160;P0,1&#160;=&#160;1&#160;eta&#160;ν0&#160;=&#160;λ.&#160;Erraz&#160;arrazoitu<br/>dezakegunez&#160;prozesua&#160;birsortzailea&#160;da&#160;λ&#160;&lt;&#160;µ&#160;denean.&#160;Kasu&#160;honetan&#160;balantza<br/>ekuazioetatik&#160;lortuko&#160;ditugu&#160;limiteko&#160;probabilitateak,&#160;eta&#160;hauek&#160;dira&#160;bere-<br/>hala&#160;egiaztatu&#160;dezakegunez&#160;:</P>
+<P style="position:absolute;top:987px;left:377px;white-space:nowrap" class="ft102">Pn&#160;=</P>
+<P style="position:absolute;top:975px;left:434px;white-space:nowrap" class="ft102">λ</P>
+<P style="position:absolute;top:999px;left:434px;white-space:nowrap" class="ft102">µ</P>
+<P style="position:absolute;top:969px;left:458px;white-space:nowrap" class="ft103">n</P>
+<P style="position:absolute;top:987px;left:482px;white-space:nowrap" class="ft102">1&#160;−</P>
+<P style="position:absolute;top:975px;left:514px;white-space:nowrap" class="ft102">λ</P>
+<P style="position:absolute;top:999px;left:514px;white-space:nowrap" class="ft102">µ</P>
+<P style="position:absolute;top:1041px;left:449px;white-space:nowrap" class="ft102">10</P>
+</DIV>
+<!-- Page 11 -->
+<a name="11"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft1112{font-size:9px;line-height:21px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page11-div" style="position:relative;width:892px;height:1262px;">
+<P style="position:absolute;top:194px;left:166px;white-space:nowrap" class="ft114">Ikusten&#160;dugunez&#160;P0&#160;=&#160;1&#160;−&#160;U&#160;,&#160;non&#160;U&#160;=&#160;λ/µ&#160;erabilera&#160;den&#160;;&#160;gainera&#160;probabili-<br/>tatea&#160;kola&#160;luzeraren&#160;funtzio&#160;esponentzial&#160;beherakorra&#160;da.</P>
+<P style="position:absolute;top:238px;left:193px;white-space:nowrap" class="ft112">Badira&#160;beste&#160;kola&#160;eredu&#160;batzuk&#160;ere&#160;jaiotza&#160;eta&#160;heriotza&#160;prozesuak&#160;direnak,</P>
+<P style="position:absolute;top:259px;left:166px;white-space:nowrap" class="ft114">beraz&#160;eredu&#160;esponentzialak&#160;(hau&#160;da&#160;DJMK&#160;prozesuak).&#160;Adibidez&#160;M/M/K<br/>kola,&#160;non&#160;K&#160;zerbitzari&#160;ditugun.&#160;Eta&#160;M/M/1/K&#160;kola,&#160;honek&#160;zerbitzari&#160;ba-<br/>karra&#160;du&#160;eta&#160;sisteman&#160;K&#160;bezerorentzako&#160;lekua&#160;dago&#160;bakarrik,&#160;sistema&#160;beteta<br/>dagoela&#160;bezero&#160;berria&#160;badator&#160;hau&#160;galdu&#160;egiten&#160;da&#160;sistemara&#160;sartu&#160;aurretik.<br/>Azken&#160;kola&#160;honen&#160;analisia&#160;oso&#160;erraza&#160;da,&#160;estatu&#160;kopuru&#160;ﬁnitua&#160;dugunez.</P>
+<P style="position:absolute;top:395px;left:166px;white-space:nowrap" class="ft1111">Etorrera&#160;teorema&#160;:&#160;sistema&#160;oroimengabeak</P>
+<P style="position:absolute;top:431px;left:193px;white-space:nowrap" class="ft112">Kontsidera&#160;dezagun&#160;gune&#160;batzuek&#160;osatutako&#160;sistema,&#160;bezeroak&#160;guneeta-</P>
+<P style="position:absolute;top:453px;left:166px;white-space:nowrap" class="ft114">tik&#160;zehar&#160;dabiltzalarik.&#160;Gune&#160;baten&#160;estatua&#160;bertan&#160;dauden&#160;bezeroen&#160;kopurua<br/>izango&#160;da.&#160;Sistemaren&#160;estatua&#160;gune&#160;desberdinen&#160;estatuek&#160;deﬁnituko&#160;dute.<br/>Eman&#160;dezagun&#160;hauek&#160;denak&#160;DJMK&#160;prozesuak&#160;direla&#160;eta&#160;gainera&#160;prozesu<br/>birsortzaileak.&#160;(Sistemara&#160;kanpotik&#160;bezeroak&#160;badatoz&#160;Poisson&#160;prozesua&#160;jar-<br/>raituko&#160;dute.)&#160;Sistema&#160;irekia&#160;dugu&#160;kanpotik&#160;bezeroak&#160;etortzen&#160;badira&#160;eta<br/>sistematik&#160;kanpora&#160;irteten&#160;badira&#160;;&#160;sistema&#160;itxia&#160;da&#160;kanpotik&#160;ez&#160;bada&#160;sart-<br/>zen&#160;bezerorik&#160;ezta&#160;kanpora&#160;irteten&#160;ere,&#160;sistemako&#160;bezeroak&#160;berak&#160;dira&#160;den-<br/>boran&#160;zehar,&#160;guztira&#160;N&#160;.&#160;Sistemako&#160;gune&#160;bat&#160;hartuko&#160;dugu,&#160;X(t)&#160;izanik&#160;gu-<br/>nean&#160;dauden&#160;bezeroen&#160;kopurua&#160;t&#160;unean.&#160;Honek&#160;limiteko&#160;probabilitateak&#160;ditu,<br/>limt→∞&#160;P&#160;{X(t)&#160;=&#160;n},&#160;n&#160;desberdinetarako&#160;:&#160;sistema&#160;irekia&#160;denean&#160;Pn&#160;idatziko<br/>dugu,&#160;ohi&#160;bezala,&#160;eta&#160;sistema&#160;itxia&#160;denean&#160;Pn(N&#160;),&#160;probabilitateak&#160;N&#160;-ren<br/>funtziotzat&#160;hartuz.</P>
+<P style="position:absolute;top:713px;left:193px;white-space:nowrap" class="ft112">Beste&#160;probabilitate&#160;hauek&#160;deﬁnituko&#160;ditugu.&#160;An&#160;izango&#160;da&#160;bezero&#160;bat</P>
+<P style="position:absolute;top:734px;left:166px;white-space:nowrap" class="ft114">gunera&#160;sartzeko&#160;unean&#160;gunean&#160;n&#160;bezero&#160;aurkitzeko&#160;probabilitatea.&#160;Sare&#160;itxi-<br/>aren&#160;kasuan&#160;An(N&#160;)&#160;idatziko&#160;dugu.&#160;Hau&#160;da&#160;etorrera&#160;teoremak&#160;esaten&#160;diguna,<br/>edozein&#160;n-rako&#160;:</P>
+<P style="position:absolute;top:799px;left:193px;white-space:nowrap" class="ft1112">–&#160;sistema&#160;irekian&#160;An&#160;=&#160;Pn<br/>–&#160;sistema&#160;itxian&#160;An(N&#160;)&#160;=&#160;Pn(N&#160;−&#160;1)</P>
+<P style="position:absolute;top:871px;left:166px;white-space:nowrap" class="ft1111">Semi-Markov&#160;prozesuak</P>
+<P style="position:absolute;top:906px;left:193px;white-space:nowrap" class="ft112">Denbora&#160;jarraituko&#160;prozesu&#160;estokastiko&#160;bat&#160;semi-Markov&#160;prozesua&#160;dela</P>
+<P style="position:absolute;top:928px;left:166px;white-space:nowrap" class="ft114">esango&#160;dugu&#160;baldin&#160;DJMK&#160;prozesuaren&#160;egitura&#160;probabilistiko&#160;bera&#160;badu<br/>baina&#160;egonaldi&#160;denboren&#160;banaketa&#160;edozein&#160;izan&#160;daitekeelarik,&#160;ez&#160;nahitaez&#160;es-<br/>ponentziala.&#160;(Egonaldi&#160;denboraren&#160;banaketa&#160;orokor&#160;hau,&#160;dagokion&#160;estatuaren</P>
+<P style="position:absolute;top:1041px;left:449px;white-space:nowrap" class="ft112">11</P>
+</DIV>
+<!-- Page 12 -->
+<a name="12"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page12-div" style="position:relative;width:892px;height:1262px;">
+<P style="position:absolute;top:194px;left:166px;white-space:nowrap" class="ft124">menpekoa&#160;izan&#160;daiteke&#160;;&#160;bestalde,&#160;egonaldi&#160;denborak&#160;elkarren&#160;artean&#160;indepen-<br/>denteak&#160;diren&#160;aldagai&#160;aleatorioak&#160;izan&#160;behar&#160;dira.)&#160;Semi-Markov&#160;prozesua<br/>analizatzeko&#160;Pij&#160;trantsizio&#160;probabilitateak&#160;eta&#160;si&#160;egonaldi&#160;denboren&#160;itxaro-<br/>tako&#160;balioak&#160;behar&#160;ditugu.&#160;Hortik&#160;aurrera&#160;DJMK&#160;prozesuaren&#160;analisi&#160;berare-<br/>kin&#160;jarraituko&#160;dugu&#160;limiteko&#160;probabilitateak&#160;kalkulatzeko&#160;balantza&#160;ekuazioen<br/>bidez.&#160;Nabarmentzen&#160;dugu&#160;egonaldi&#160;denboraren&#160;itxarotako&#160;balioak&#160;bakarrik<br/>duela&#160;eragina&#160;limiteko&#160;probabilitateetan,&#160;ez&#160;bariantzak&#160;edo&#160;banaketa&#160;funtzio<br/>motak.</P>
+<P style="position:absolute;top:368px;left:193px;white-space:nowrap" class="ft122">M/G/1&#160;kola&#160;azter&#160;dezakegu&#160;semi-Markov&#160;prozesu&#160;egoki&#160;baten&#160;bidez.&#160;Kola</P>
+<P style="position:absolute;top:389px;left:166px;white-space:nowrap" class="ft124">honetara&#160;bezeroak&#160;Poisson&#160;prozesua&#160;jarraituz&#160;etortzen&#160;dira&#160;eta&#160;zerbitzari&#160;ba-<br/>karra&#160;dugu,&#160;zerbitzu&#160;denboraren&#160;banaketa&#160;funtzioa&#160;edozein&#160;motakoa&#160;izanik.<br/>Prozesuaren&#160;estatua&#160;era&#160;honetan&#160;deﬁnitzen&#160;da&#160;:&#160;azkena&#160;zerbitzatua&#160;izan&#160;den<br/>bezeroa&#160;irten&#160;ondoren&#160;sisteman&#160;geratu&#160;diren&#160;bezeroen&#160;kopurua&#160;(estatu&#160;bere-<br/>zia&#160;dugu&#160;kola&#160;hustean).&#160;Etorrerarteko&#160;denborak&#160;oroimengabeak&#160;direnez,&#160;es-<br/>tatuen&#160;arteko&#160;trantsizioek&#160;denbora&#160;diskretuko&#160;Markov&#160;katea&#160;jarraitzen&#160;dute.<br/>Limiteko&#160;probabilitateak&#160;aurkitzeko&#160;balantza&#160;ekuazioak&#160;ditugu&#160;baina&#160;diment-<br/>sio&#160;inﬁnituko&#160;sistema&#160;dugu&#160;eta&#160;teknika&#160;bereziak&#160;erabili&#160;behar&#160;dira&#160;;&#160;ez&#160;dugu<br/>arazo&#160;hau&#160;M/G/1/K&#160;kolan,&#160;non&#160;gehienez&#160;K&#160;bezero&#160;ditugun&#160;sisteman.&#160;Dena<br/>dela,&#160;ez&#160;dugu&#160;limiteko&#160;probabilitateen&#160;beharrik&#160;L&#160;kola&#160;luzeraren&#160;batez&#160;bes-<br/>tekoa&#160;eta&#160;W&#160;bezeroek&#160;sisteman&#160;egingo&#160;duten&#160;denboraren&#160;itxarotako&#160;balioa<br/>lortzeko,&#160;prozesu&#160;birsortzaileen&#160;kostu&#160;ekuazioan&#160;oinarritutako&#160;analisi&#160;batetik<br/>deduzitzen&#160;dira&#160;Pollaczek-Khinchine&#160;formulak&#160;:</P>
+<P style="position:absolute;top:695px;left:373px;white-space:nowrap" class="ft122">W&#160;=</P>
+<P style="position:absolute;top:683px;left:418px;white-space:nowrap" class="ft122">λ(σ2&#160;+&#160;m2)</P>
+<P style="position:absolute;top:707px;left:421px;white-space:nowrap" class="ft122">2(1&#160;−&#160;λm)</P>
+<P style="position:absolute;top:695px;left:509px;white-space:nowrap" class="ft122">+&#160;m</P>
+<P style="position:absolute;top:745px;left:166px;white-space:nowrap" class="ft124">eta&#160;L&#160;=&#160;λW&#160;=&#160;λ2(σ2&#160;+&#160;m2)/2(1&#160;−&#160;λm)&#160;+&#160;λm.&#160;Formuletan&#160;m&#160;eta&#160;σ2,&#160;zerbitzu<br/>denboraren&#160;itxarotako&#160;balioa&#160;eta&#160;bariantza&#160;dira,&#160;λ&#160;berriz&#160;etorrera&#160;tasa.</P>
+<P style="position:absolute;top:1041px;left:449px;white-space:nowrap" class="ft122">12</P>
+</DIV>
+</BODY>
+</HTML>

@@ -1,0 +1,969 @@
+
+
+
+
+
+
+
+
+                                2.5AZPIRRUTINAK
+2.5.1 SARRERA
+Aurreko kapituluetan azaldu den moduan, programa baten aginduak ondoz ondoko
+helbideetan gordetzen dira memorian. Hori dela eta, programak sekuentzialki
+exekutatzen dira, hots, agindu bat exekutatu ondoren memoriako hurrengo agindua
+exekutatuko da. Aginduen exekuzio-ordena edo fluxua aldatu ahal izateko, PCaren
+sekuentzia eteten duten aginduak erabili behar dira: jauzi-aginduak, hain zuzen
+ere. 2.5.1 irudian ageri den moduan, bi motako jauziak daude: itzulera gabekoa
+eta itzuleraduna. Orain arte ikusi ditugun jauziak —jmp, beq, ...— itzulera
+gabekoak dira, programa ez baita itzuliko jauzia egin den puntura. Aldiz, jauzi
+itzuleradunak exekutatzen direnean, hainbat agindu exekutatu ondoren, programak
+berreskuratuko du aginduen jatorrizko fluxua (gorde baita jauziaren ondorengo
+aginduaren helbidea). Kapitulu honen helburua jauzi itzuleradunak lantzea da,
+hots, azpirrutinak aztertzea.
+****** 2.5.1 irudia.Itzulera gabeko jauziak eta itzuleradunak. ******
+Goi-mailako programazio-hizkuntzek funtzioak eta prozedurak erabiltzen dituzten
+modu berean, mihiztadura-hizkuntzek azpirrutinak (azpiprogramak) erabiltzen
+dituzte. Lan jakin bat burutzen duen makina-hizkuntzako agindu-multzoa da
+azpirrutina bat, eta programa nagusiaren edo azpirrutina baten edozein
+puntutatik aktiba, dei, edo exekutarazi daiteke, baita azpirrutinatik bertatik
+ere. Zentzu horretan, bi aktibazio mota daude: kanpo-aktibazioa —programa
+nagusitik edo beste azpirrutina batetik aktibatzen denean— eta barne-aktibazioa
+—azpirrutinatik bertatik aktibatzen denean—.
+Azpirrutinak erabiltzeak baditu abantailak eta desabantailak. Abantailen
+artean, hauek dira aipagarrienak:
+• Programak toki gutxiago behar du memorian. Izan ere, azpirrutinari dagokion
+kodea behin bakarrik ageri da programan (memorian), nahiz eta programa
+deitzailearen puntu askotatik aktiba daitekeen; azpirrutinen kodea berrerabili
+egiten da.
+• Programaren kodeak egitura argiagoa du. Ondorioz, programa zuzenak lortu arte
+ezinbestekoak diren zuzenketak, aldaketak eta antzekoak egitea errazagoa da.
+Horrez gain, programa-liburutegiak erabiltzeko aukera dago.
+Baina azpirrutinak erabiltzeak baditu desabantailak ere:
+• Programen exekuzio-denbora hazten da, agindu gehiago exekutatu behar baitira:
+azpirrutinak deitzeko, programa deitzailera itzultzeko, eta deitzen duen
+programaren eta azpirrutinaren arteko informazio-trukea egiteko (parametroak
+pasatu eta emaitza itzuli).
+• Prozesadorearen konplexutasuna areagotzen da, hardware berezia gehitu behar
+baita azpirrutinen kudeaketa eraginkorra izan dadin. Izan ere, programen
+exekuzioak analizaturik, egiaztatu da azpirrutinen kontrolarekin
+erlazionatutako kodea (deiak eta itzulerak), batez bestean, aginduen %3-%10
+tartean dagoela. Hala izanik, azpirrutinen erabilera eraginkorra izateko,
+garrantzitsua izango da hardwareak eskain dezakeen edozein laguntza.
+2.5.2 AZPIRRUTINEN SAILKAPENA
+Azpirrutinen exekuzioaren analisia egin baino lehen, ikus dezagun azpirrutinen
+sailkapen nagusia:
+
+
+• Maila bakarrekoak: azpirrutinaren barnean ez da beste azpirrutinarik
+aktibatzen. 2.5.2 irudian ageri da adibide bat: azpirrutina bat bi aldiz
+deitzen da programa nagusitik. Irudian ageri diren zenbakiek exekutatze-ordena
+denboran zehar adierazten dute.
+
+
+• Maila anitzekoak: azpirrutinaren barnean beste azpirrutina batzuk aktibatzen
+dira (2.5.3 irudia).
+
+
+• Errekurtsiboak: azpirrutinak bere buruari dei egiten dio (2.5.4 irudia)
+zuzenean, edo, agian, beste azpirrutina baten bidez (zeharka).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            ****** 2.5.2 irudia.Maila bakarreko azpirrutina. ******
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            ****** 2.5.3 irudia.Maila anitzeko azpirrutina. ******
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 2.5.4irudia.
+                          Azpirrutina errekurtsiboa.
+Bestalde, erabilerarenarabera, beste sailkapen hau egin daiteke:
+• Ez-berrabiagarriak: ezin dira berriz aktibatu aurreko aktibazioaren exekuzioa
+bukatu artean.
+• Berrabiagarriak: bigarren mota honetan, onartzen da azpirrutina berriz
+aktibatzea, nahiz eta aurreko aktibazioa oraindik bukatu gabe egon. Halako
+azpirrutinak oso erabilgarriak dira, esaterako, sistema eragileetarako zein
+konpiladoreetarako konputagailu multiprogramatuetan (aldi berean programa bat
+baino gehiago exekutatzea onartzen duten sistemak).
+Azpirrutina berrabiagarriek baldintza batzuk bete behar dituzte: (a)
+azpirrutinak ezin du bere kodea aldatu exekuzioaren ondorioz (ohiko ezaugarria
+egungo edozein programatan); eta (b) azpirrutinaren datuetarako behar den
+memoria-eremuak desberdina izan behar du exekuzio batetik bestera.
+2.5.3 AZPIRRUTINEN EXEKUZIOAREN ANALISIA
+Azpirrutina bat exekutatzeko, pauso hauek jarraitu behar dira: (a) azpirrutinak
+erabiliko dituen parametroak edo datuak dagokien tokian idatzi; (b)
+azpirrutinara jauzi, bere kodea exekutatzeko; eta, azkenik, (c) deia egin duen
+programara itzuli, haren exekuzioarekin jarraitzeko. Azpirrutinaren
+exekuzioarekin lotutako informazio guztia (parametroak itzulera-helbideak, ...)
+aktibazio-bloke izeneko datu-egituran pilatzen da.
+Azpirrutinak exekutatzeko jarraitu beharreko pauso guztiak aztertuko ditugu,
+zehatz-mehatz, hurrengo ataletan, kasu sinpleenetik konplexuenera.
+
+
+2.5.3.1 Deia eta itzulera
+Deia egiteko, hots, azpirrutinaren kodera jauzi egiteko, agindu berezi bat
+erabiltzen da; Agindu hori callazpirrutina_izenaizaten da.
+Agindu horren eginkizuna bikoitza da. Batetik, agindu-sekuentzia eteten du,
+jauzi bat eginez. Horretarako, ohiko PC:=PC+i egin beharrean, PC:=PC+despl_azpi
+egiten du, non despl_azpi desplazamendua call aginduan adierazi den
+azpirrutinara dagoen distantzia baita. PCak adieraziko duen helbide berri
+horretan hasten da azpirrutinaren kodea. PCa aldatzea da, hain zuzen ere,
+edozein jauzi-aginduk egiten duena. Baina, bestetik, eta hau da call aginduaren
+berezitasuna, itzulera-helbidea (@itzulera) gordetzen du, azpirrutinaren
+exekuzioa amaitzean programa nagusira itzuli ahal izateko.
+Programa nagusira itzultzeko, beste agindu bat erabili ohi da; retda agindu
+hori. Aginduaren eginkizuna sinplea da: PC erregistroan kargatu behar du call
+aginduak gorde duen itzulera-helbidea (
+PC:=@itzulera
+).
+Bi agindu horien bidez, 2.5.5 irudian ageri den moduan, exekuzioaren fluxu
+sekuentziala (PCak hartzen dituen balioak) etetea lortzen da. Adibidean, agindu
+bakoitzak bi memoria-posizio betetzen ditu.
+  ****** 2.5.5 irudia.Azpirrutina baten exekuzioa: exekutatzen diren aginduen
+                           helbideen segida. ******
+2.5.5 irudiko adibidean, azpirrutina bukatzen denean, PCaren edukia 110etik 8ra
+aldatu behar da, deia egin duen programara itzultzeko. Itzulera-helbide hori
+call aginduak gorde du, eta horretarako toki jakin bat behar da. Non_gorde
+daiteke itzulera-helbidea? Aukera bat baino gehiago dago:
+a.Memoria-posizio edo erregistro finko bat azpirrutina guztientzat.
+call agindua exekutatzen denean, itzulera-helbidea beti toki berean gordetzen
+da, dela erregistro jakin batean dela memoria-posizio jakin batean. Hortik
+hartuko du ret aginduak itzulera-helbidea, azpirrutina bukatzean, programa
+nagusira itzultzeko. Erregistro bat erabiltzen denean, prozesua azkarragoa da
+memoria erabiltzen denean baino.
+Adibidez, IBM 360-ak r14 erregistroa erabiltzen zuen itzulera-helbidea
+gordetzeko (5.6 irudia). Aukera bera erabiltzen da gaur egun prozesadore
+askotan (MIPS, PowerPC, ...), halakoek agindu berezi bat erabiltzen baitute,
+Jump-and-Link (JAL) izenekoa, azpirrutina sinpleak exekutarazteko. Esaterako,
+MIPS prozesadore-familiak r31 erregistroa erabiltzen du itzulera-helbidea
+gordetzeko, Jump-and-Link agindua exekutatzen denean. ARM prozesadoreak berriz,
+BL (branch and link) izeneko agindua erabiltzen du azpirrutinak exekutatzeko
+eta itzulera helbidea lr (r14) erregistroan gordetzen du.
+Erregistro bat erabiltzea itzulera-helbidea gordetzeko ez da soluzio orokorra,
+ez baitu balio azpirrutina mota guztietarako; hala ere, exekuzioa azkarra
+denez, oso erabilia da arazorik sortzen ez duten kasuetan.
+     ****** 2.5.6 irudia.Itzulera-helbidearen kudeaketa IBM 360-an. ******
+Itzulera-helbidea erregistro batean gordetzeak badu arazo nabarmena maila
+anitzeko azpirrutinak erabili behar direnean. Azpirrutina bukatu baino lehen
+beste bat aktibatzen bada, aurrekoaren itzulera-helbidea galduko da, itzulera-
+helbide berria erregistro berean (adibidean, r14-an) idatziko baita, eta
+aurrekoa galdu! 2.5.7 irudian ageri da arazo hori: AZP1 azpirrutina
+exekutatzera jauzi egin denean gorde den itzulera-helbidea, 8, galdu egin da
+AZP2 deitu denean, une horretan bigarren itzulera-helbide bat idatzi baita,
+108. Hori dela eta, ezin izango da AZP1 azpirrutinatik programa nagusira
+itzuli.
+****** 2.5.7 irudia.Maila anitzeko azpirrutinentzat (a) soluzioak duen arazoa.
+                                    ******
+
+
+Maila anitzeko azpirrutinak exekutatu ahal izateko, aurreko call aginduarekin
+gorde den itzulera-helbidea lekuren batean (memorian edo beste erregistro
+batean) salbatu beharko da hurrengo deia egin aurretik; itzuli ondoren,
+lehenengo itzulera-helbidea berreskuratu beharko da, gorde den tokitik. Arazoa
+hala konpontzen denean, “software irtenbidea” erabili dela esaten da. IBM 360-
+an adibidez, 2.5.8 irudian ageri den moduan egiten zen.
+******
+
+ ******
+******
+
+ ******
+******
+
+ ******
+                                    ******
+
+                                     ******
+******
+
+ ******
+******
+
+ ******
+  ****** 2.5.8 irudia. Maila anitzeko azpirrutinen kudeaketa IBM 360 makinan.
+                                    ******
+b.Memoria-posizio (edo erregistro) desberdin bat azpirrutina bakoitzarentzat.
+Azpirrutina bakoitzak memoria-posizio edo erregistro finko bat erabiltzen du
+dagokion itzulera-helbidea gordetzeko. HP 2100-ean adibidez, azpirrutinaren
+lehenengo memoria-posizioan (kodearen aurrean) gordetzen zen itzulera-helbidea,
+eta hortik eskuratzen zuen geroago ret aginduak. 2.5.9 irudian, estrategia hori
+erabili da maila anitzeko azpirrutina bat (AZP1) exekutatzeko.
+ ****** 2.5.9 irudia.Maila anitzeko azpirrutinen kudeaketa, itzulera-helbidea
+           azpirrutina bakoitzaren hasieran gordetzen denean. ******
+Gauza bera egin daiteke erregistroak erabiliz. PDP-11 konputagailuan,
+esaterako, azpirrutinaren deian bertan adierazten zen itzulera-helbidea
+gordetzeko erabili behar zen erregistroa.
+Ikusi dugun moduan, metodo honek maila bakarreko eta maila anitzeko
+azpirrutinak onartzen ditu, baina, hala ere, ezin da erabili azpirrutina
+errekurtsiboak antolatzeko (azpirrutina errekurtsiboak bere burua deitzen du).
+Izan ere, dei errekurtsibo bakoitzaren ostean, aurreko deiaren itzulera-
+helbidea (adibidean, 8) galdu egiten da, memoriako helbide berean idazten baita
+beti (2.5.10 irudia). Errekurtsibitatea erabili nahi bada, beste teknikaren bat
+erabili beharko da.
+    ****** 2.5.10 irudia.(b) teknika erabiliz, errekurtsibitatea kudeatzeko
+                                arazoak. ******
+c. Memoriako pila.
+Pila izeneko datu-egitura, Datu-biltegi berezi bat besterik ez da. Eskuarki,
+memoriako zati bat. Datuak pilan uzten dira eta pilatik hartzen dira, baina
+biltegi hori modu berezian kudeatzen da, LIFO (Last In First Out) moduan: gorde
+den azkeneko datua da aurrena ateratzen. Memoriako zati horretan, pilan,
+idazteko edo irakurtzeko, erakusle berezi bat erabiltzen da, SPa (pilaren
+erakuslea, Stack Pointer), eta agindu bereziak ere bai: push eta pop.
+Azpirrutinen itzulera-helbidea gordetzeko hirugarren aukera pila da, hain zuzen
+ere. Hala egiten denean, azpirrutinak habira daitezke, bata bestearen gainean
+metatuko baitira itzulera-helbideak pilan, batere informaziorik galdu gabe. SP
+erakusleak erakutsiko du non gorde helbide horiek. Beraz, maila bakarreko
+azpirrutinak, maila anitzekoak, eta errekurtsiboak exekuta daitezke arazorik
+gabe (2.5.11 irudia).
+       ****** 2.5.11 irudia.Itzulera-helbidea pilan gordetzen da. ******
+Ia prozesadore guztiek egiten duten moduan, ARM prozesadoreak ere pila
+erabiltzen du itzulera-helbideak gordetzeko. Hala ere, lehen aipatu den bezala,
+ARMko mihiztadura lehengoaian call motako agindu baten ordez bl agindua
+erabiltzen da azpirrutineri deitzeko eta ez dago ret bezalako agindurik.
+• bl, azpirrutina bat deitzeko agindua:
+bl#@
+r14
+=PC+4
+{itzulera-helbidea r14 erregistroan gordetzen da}
+PC:=@
+{azpirrutinaren helbidea PCan kargatzen da}
+
+
+
+
+Maila anitzeko eta azpirrutina errekurtsiboen arazoa konpontzeko, azpirrutina
+baten exekuzioaren hasieran r14 edo lr erregistroa pilan gordetzen da, eta
+azpirrutinaren exekuzioaren bukaeran bere balioa berreskuratzen da pilatik. ARM
+prozesadorean r13 erregistroa erabiltzen da SP erakuslea gordetzeko eta push
+agindua erabiltzen da parametroak pilan sartzeko.
+
+
+
+
+•
+pushagindua:
+push{r1,r2...rn}
+sp
+=sp-4;
+M[sp]=rn;
+.....
+sp=sp–4;
+M[sp]=ri;
+•ldmagindua:
+ldmsp,{r1,r2...rn}
+r1
+=M[sp];
+sp=sp+4;
+.....
+rn=M[sp];
+sp=sp+4;??????????
+2.5.3.2 Azpirrutinetarako parametroak eta azpirrutinen emaitzak
+Programa nagusitik azpirrutina bat aktibatu aurretik, azpirrutina horrek behar
+dituen datuak edo parametroak prestatu behar dira; modu berean, azpirrutina
+bukatzen denean, emaitzak jaso behar dira programa nagusian. Informazio-truke
+hori bi modutan egin daiteke:
+• balio bidez: aldagaiaren kopia bat egiten da, eskuarki pilan, eta
+azpirrutinak kopia horrekin lan egiten du; beraz, jatorrizko aldagaia ez da
+aldatzen.
+• erreferentziabidez: aldagaiaren helbidea adierazten zaio azpirrutinari; ez da
+kopiarik egiten, eta, beraz, azpirrutinak alda dezake jatorrizko datua.
+ADA programazio-hizkuntzaz, adibidez, in moduan pasatutako parametroak balio
+bidez pasatzen dira, eta in out edo out moduan pasatutakoak, aldiz,
+erreferentzia bidez. Bektore, matrize eta antzeko datu-egiturak erreferentzia
+bidez pasatu ohi dira, ez baita batere eraginkorra haien kopia bat egitea pilan
+(datu asko izan ohi dira). C programazio-hizkuntzaz berriz, parametro bat
+erreferentzi bidez pasatzeko zuzenean parametro edo aldagaiaren helbidea pasa
+beharko dugu.
+Deia egiten duen programaren eta azpirrutinaren arteko informazio-trukea
+(parametroak eta emaitzak) biek atzi dezaketen toki jakin batean egin behar da.
+Aurreko atalean aztertu diren hiru aukerak berak ditugu: (a) memoria-posizio
+edo erregistro jakinak eta beti berdinak azpirrutina guztientzat; (b) memoria-
+posizio edo erregistro jakinak azpirrutina bakoitzarentzat; eta (c) pila.
+Aipatu berri ditugun arrazoiak direla eta, hirugarren aukera da ohikoena, maila
+anitzeko azpirrutinak eta errekurtsibitatea erabiltzeko aukera ematen baitu.
+Azpirrutina batekin lotutako informazio guztia, beraz, pilan metatuko da, eta
+aktibazio-bloke izeneko datu-egitura osatuko da. Azpirrutina baten exekuzioari
+buruz orain arte dakiguna kontuan hartuta, aktibazio-blokea 2.5.12 irudian
+ageri den moduan osatuko da: azpirrutinak behar dituen parametroak kargatu dira
+pilan, eta, gainean, itzulera-helbidea. SP erakusleak beti pilaren tontorra
+erakusten du.
+TXORI mihiztadura-hizkuntza erabiliz, pushri agindua erabil daiteke parametroak
+pilan kargatzeko:
+
+•push
+ri SP:=SP+1
+M[SP]:=ri
+
+Pilan dauden elementuak irakurtzeko, pilaren erakuslea, SP (r31 erregistroa),
+erabili behar da, helbideratze erlatiboa erabiliz.
+
+
+                  PILA
+                                                     +
+     SP         @itzulera
+               parametroak
+
+                   ...                               -
+****** 2.5.12irudia.Aktibazio-blokea: parametroak eta itzulera-helbidea. ******
+                                    ******
+
+                                     ******
+                                    ******
+
+                                     ******
+2.5.1 Adibidea
+TXIKIEN azpirrutinak bektore baten osagairik txikiena lehenengo posizioan
+jartzen du, elementuen arteko trukea erabiliz horretarako. Adibide honetan,
+algoritmo hori erabiliko dugu, baina bektore baten elementu guztiak
+ordenatzeko, txikienetik handienera.
+Bektore baten elementuak ordenatzeko proposatzen den soluzioan (ORDENATUizeneko
+programan) begizta bat erabiltzen da, nonTXIKIENazpirrutina deitzen baita. Bi
+parametro jasotzen ditu: bektorearen hasiera-helbidea, erreferentzia bidez, eta
+bektorearen elementu kopurua, balio bidez. Elementu txikiena lortuta, eragiketa
+errepikatzen da, baina elementu bat gutxiago duen bektorea prozesatuz iterazio
+bakoitzean.
+
+
+.title ORDENATU
+
+PILA: .word 40;
+BEKTORE: .value 7,3,-1,5,0;
+ZENB: .value 5;
+
+.proc main
+
+mova sp, PILA {sperregistroahasieratupilarenhasiera-helbidearekin}
+mova r1, BEKTORE {bektorearenhasiera-helbidear1-engordetzenda}
+ld r2, ZENB {r2-kbektorearenelementukopuruagordetzendu}
+begiz: push r1 {1.parametroaerreferentziabidez:bektorearen@hasiera}
+push r2 {2.parametroabaliobidez:bektorearenelementukopurua}
+call TXIKIEN {txikienprozedurarideia}
+
+{errepikatubehardaaurrekoa,bainaorainelementubatgutxiagoduenbektorearekin,besteosagaibatgehiagoordenatudelako}
+
+subi sp, sp, #2 {pilakoparametroakezabatu}
+addi r1, r1, #1 {bektorearenhasiera-helbideaeguneratu}
+subi r2, r2, #1 {bektorearenelementukopuruagutxitu}
+subi r3, r2, #1 {begiztarenkontrola}
+bne r3, begiz
+
+outm #5, BEKTORE {bektoreapantailaratu}
+retm
+
+.endp main
+
+.proc TXIKIEN
+
+ldd r11, -1[sp] {2.param.atzitu:bektorearenelementukopurua}
+ldd r12, -2[sp] {1.param.atzitu:bektorearenhasiera-helbidea}
+ldd r13, [r12] {3.8adibidekokodearenantzekoa}
+addi r14, r12, #1
+subi r11, r11, #1
+movi r15, #0
+
+begiz2: ldd r16, [r14]
+sub r17, r16, r13
+bge r17, ezalda
+
+std r16, [r12]
+std r13, [r14]
+mov r13, r16
+
+ezalda: addi r14, r14, #1
+addi r15, r15, #1
+sub r17, r15, r11
+bne r17, begiz2
+
+ret
+
+.endp TXIKIEN
+.end
+
+
+
+
+
+
+
+Azpirrutina exekutatutakoan, pilan kargatu diren parametroak “ezabatu”1 egin
+behar dira, tokia berreskuratzeko. Lan hori programa deitzaileak berak egin
+dezake, baina ez da aukera bakarra, itzulera-aginduak berak ere egunera
+baitezake SP erakuslea. i80x86an, adibidez, ret n aginduaren bidez egiten da
+hori (n = parametro kopurua). BIRD konputagailuan, lehenengo aukera erabiltzen
+da, eta, horretarako, subisp,sp,#parametro_kopurua agindua erabili behar da.
+Azpirrutinek emaitzen bat itzultzen duten kasuetan (goi-mailako programazio-
+hizkuntzetako funtzioek egin ohi duten moduan), deia egiten duen programak,
+parametroak pilaratu aurretik, tokia erreserbatu beharko du pilan
+azpirrutinaren emaitzarako (5.13 irudia). Horretarako, addisp,sp,#1agindua
+erabiliko da.
+                   PILA
+                                                       +
+    SP          @itzulera
+               parametroak
+
+            emaitzarako tokia                          -
+                   ...
+  ****** 2.5.13irudia.Aktibazio-blokea: funtzioaren emaitza gordetzeko tokia,
+                  parametroak, eta itzulera-helbidea. ******
+Azpirrutinaren exekuzioa bukatutakoan, deia egin duen programak parametroak
+ezabatuko ditu, eta azpirrutinak itzulitako emaitza eskuratu ahal izango du
+pilatik. Pilatik hitz bat irakurtzeko (eta han desagerrarazteko), poprh agindua
+erabiltzen da:
+
+
+•pop
+rh rh:=M[SP]
+SP:=SP-1
+2.5.3.3 Deia egiten duen programaren egoera gordetzea eta berreskuratzea
+2.5.1 adibidean, TXIKIENazpirrutinak ez ditu erabiltzen deia egin duen
+programak erabilitako erregistroak. Hori dela eta, ez dago arazorik programa
+nagusiari berriro ekiten zaionean, berak erabiltzen dituen erregistroak ez
+baitira aldatu. Hala ere, hori ez da ohikoa, azpirrutinek erregistro-multzoko
+edozein erregistro erabiltzeko aukera izan behar baitute. Azpirrutinen
+exekuzioak gardena izan behar du programa nagusiarentzat; hots, programa
+nagusiari berriz ekiten zaionean, haren egoera ere (erregistroen edukia)
+berreskuratu behar da. Bi aukera daude gardentasuna lortzeko:
+1. Azpirrutinaren_ardurada programa nagusiko egoera ez aldatzea. Azpirrutinaren
+exekuzioaren hasieran, bertan erabiliko diren erregistro guztien edukia pilan
+gordetzen da; modu berean, amaitzean, erregistroen jatorrizko edukia pilatik
+berreskuratzen da. Hala, azpirrutinak edozein erregistro erabil eta alda
+dezake, jatorrizko balioak berreskuratuko baitira bukaeran.
+2.Deia_egiten_duen_programaren_ardurada haren egoera gordetzea. Errutinara
+jauzi egin aurretik, erabiltzen dituen erregistroak gordetzen ditu pilan, eta
+exekuzioaren kontrola berreskuratzen duenean, azpirrutina amaitu bezain laster,
+erregistroen edukia berreskuratuko du.
+Hala lehenengo kasuan nola bigarrenean, litekeena da behar diren erregistroak
+baino gehiago gordetzea pilan: lehenengo kasuan, programa nagusian erabiltzen
+ez diren erregistroak; eta, bigarrenean, berriz, azpirrutinan aldatuko ez
+direnak.
+Gure programetan, lehenengo aukera erabiliko dugu, eta, beraz, aktibazio-blokea
+2.5.14 irudian ageri den moduan geratuko da.
+                   PILA
+
+    SP         erregistroak
+                                                       +
+                @itzulera
+               parametroak
+
+            emaitzarako tokia                          -
+                   ...
+****** 2.5.14irudia.Aktibazio-blokea: emaitzarako tokia, parametroak, itzulera-
+   helbidea eta deia egiten duen programaren egoera gordetzeko tokia. ******
+2.5.2 Adibidea
+Aurreko adibide bera da hau, baina, kasu honetan, azpirrutinaren exekuzioa
+“gardena” da programa deitzailearentzat.
+
+Azpirrutinaren exekuzioaren hasieran, erregistroen balioak gordetzen dira, eta
+bukaeran, berreskuratzen. Hori dela eta, edozein erregistro erabili ahal izango
+du azpirrutinak. Beraz, azpirrutinaren exekuzioa gardena da deia egiten duen
+programarentzat; erregistroen erabilerari dagokionean, behintzat. Ondorioz,
+azpirrutinaren parametroak atzitzeko behar diren desplazamenduak ere aldatu
+egin dira ({1*} eta{2*} aginduak).
+
+.title ORDENATU
+
+PILA: .word 40;
+BEKTORE: .value 7,3,-1,5,0;
+ZENB: .value 5;
+
+.proc main
+
+mova sp, PILA {sperregistroahasieratupilarenhasiera-helbidearekin}
+mova r1, BEKTORE {bektorearenhasiera-helbidear1-engordetzenda}
+ld r2, ZENB {r2-kbektorearenelementukopuruagordetzendu}
+begiz: push r1 {1.parametroaerreferentziabidez:bektorearen@hasiera}
+push r2 {2.parametroabaliobidez:bektorearenelementukopurua}
+call TXIKIEN{txikien
+prozedurarideia}
+
+subi sp, sp, #2 {pilakoparametroakezabatu}
+addi r1, r1, #1 {bektorearen@hasieragehitu}
+subi r2, r2, #1{bektorearen
+elementukopuruagutxitu}
+subi r3, r2, #1 {begiztarenkontrola}
+bne r3, begiz
+
+outm #5, BEKTORE {bektoreapantailaratu}
+retm
+
+.endp main
+
+.proc TXIKIEN
+
+pushr1
+{azpirrutinakerabiltzendituenerregistroakgorde}
+pushr2
+push
+r3
+push
+r4
+push
+r5
+push
+r6
+push
+r7
+
+{1*} lddr1,-8[sp]
+{parametroaatzitu:bektorearenelementukopurua}
+{2*} lddr2,-9[sp]
+{parametroaatzitu:bektorearen@hasiera}
+ldd r3, [r2] {3.8adibidekokodearenantzekoa}
+addi r4, r2, #1
+subi r1, r1, #1 Aktibazio-blokea
+movi r5, #0
+
+begiz2: ldd r6, [r4]
+sub r7, r6, r3
+bge r7, ezalda
+
+std r6, [r2]
+std r3, [r4]
+mov r3, r6
+
+ezalda: addi r4, r4, #1
+addi r5, r5, #1
+sub r7, r5, r1
+bne r7, begiz2
+
+{azpirrutinakerabilidituenerregistroenbalioakberreskuratu}
+
+popr7
+pop
+r6
+pop
+r5
+pop
+r4
+pop
+r3
+pop
+r2
+pop
+r1
+
+ret
+
+
+.endp TXIKIEN
+.end
+
+
+
+
+
+
+
+2.5.3.4 Aktibazio-blokearen kudeaketa
+2.5.2 adibidean ageri den moduan, hiru eremu bereizi ditugu aktibazio-blokean:
+beheko aldean, azpirrutinaren parametroak; ondoren, itzulera-helbidea; azkenik,
+gainean, salbatu diren erregistroak. Parametro bat eskuratzeko erabili behar
+den helbidea, beraz, SParekiko desplazamendu bat eginez lortuko da. Gorde den
+erregistro kopuruaren mende dago desplazamendu hori, eta horrek zailtzen du
+azpirrutinen eta, oro har, programen garapen-prozesua. Izan ere, programazio-
+prozesuan zehar, aldaketa bat dela eta, erregistro gehiago gorde behar bada,
+desplazamenduak aldatu beharko dira parametroak atzitzen dituzten agindu
+guztietan.
+Aktibazio-blokea atzitu ahal izateko SP erakuslea erabili gabe, prozesadore
+askok aktibazio-blokerako erakusle berezi bat erabiltzen dute: FPa (Frame
+Pointer,aktibazio-blokearen erakuslea). Erregistro horrekaktibazio-blokeko
+posizio_finko_bat erakusten du azpirrutinaren exekuzio_osoan_zehar. FP
+erregistroa azpirrutinaren hasieran ezartzen da, hardware bidez edo software
+bidez, eta, itzulera arte, edukiari eutsiko dio. Hori dela eta, aktibazio-
+blokean egin behar diren atzipenak, oraingoz parametroak eskuratzeko edo
+emaitza uzteko, FParekiko helbideratze erlatiboa erabiliz egingo dira. Hala,
+posizio bakoitza atzitzeko behar den desplazamendua beti bera izango da
+azpirrutinaren exekuzioaren zehar.
+Zenbait prozesadoretan, FP erregistroa makinaren erregistro zehatz bat da (BP
+erregistroa, adibidez, i80x86 prozesadoreetan). BIRD konputagailuaren kasuan,
+r30 erregistroa erabiliko dugu FParena egiteko; ez dago arrazoi berezirik
+erregistro hori aukeratzeko, edozein erregistro izan baitzitekeen. Helburu
+orokorreko erregistro bat erabiliko dugunez, FP (r30) erregistroaren edukia ere
+pilan gorde behar da, azpirrutinaren aktibazio-blokearen parte gisa, gainerako
+erregistroekin egiten den modu berean (makinaren egoera salbatzeko).
+2.5.15 irudian ageri da nola geratuko den aktibazio-blokea BIRD konputagailuan,
+FPa gehituta.
+
+
+                     PILA
+
+SP(r31)     gainerako erregistroak
+                 aurreko FPa                                     FP berria(r30)
+                  @itzulera
+                 parametroak
+
+              emaitzarako tokia
+                     ...
+  ****** 2.5.15irudia.BIRD makinaren aktibazio-blokea, aurreko FPa gordetzen
+                                denean. ******
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.5.3 Adibidea
+Bektore baten osagaiak ordenatzen dituen programatxoa egingo dugu berriz, baina
+orain FP erregistroa erabiliko dugu, parametroak atzitzeko behar diren
+desplazamenduak alda ez daitezen eta gordetako erregistro kopuruaren
+independente izan daitezen.
+
+
+Adibide honetan ikus daitekeen moduan, 5 agindu gehitu edo aldatu ditugu ({1*}—
+{5*} markatutakoak); hala, aktibazio-blokeko parametroen atzipena ez dago
+salbatutako erregistro kopuruaren mende.
+
+
+
+.title ORDENATU2
+
+PILA: .word 40;
+BEKTORE: .value 7,3,-1,5,0;
+ZENB: .value 5;
+
+.proc main
+
+mova sp, PILA
+mova r1, BEKTORE
+
+ld r2, ZENB
+begiz: push r1
+push r2
+
+call TXIKIEN
+
+subi sp, sp, #2
+addi r1, r1, #1
+subi r2, r2, #1
+subi r3, r2, #1
+bne r3, begiz
+
+outm #5, BEKTORE
+retm
+
+.endp main
+
+.proc TXIKIEN
+
+{1*} pushr30{aurrekoazpiprogramarenFPagordepilan}
+{2*} movr30,sp{FP:=SP;aktibazio-blokeberrikoFPaezartzenda}
+push r1 {eramanpilarar1,r2,...,r6etar7erreg.}
+...
+push r7
+
+{3*} lddr1,-2[r30]
+{parametroakeskuratuFPerakusleaerabiliz}
+{4*} lddr2,-3[r30]
+ldd r3, [r2]
+addi r4, r2, #1
+subi r1, r1, #1
+movi r5, #0
+
+begiz2: ldd r6, [r4]
+sub r7, r6, r3
+bge r7, ezalda
+
+std r6, [r2]
+std r3, [r4]
+mov r3, r6
+
+ezalda: addi r4, r4, #1
+addi r5, r5, #1
+sub r7, r5, r1
+bne r7, begiz2
+
+pop r7 {berreskuratur7,r6,...,r1erregistroak}
+...
+pop r1
+{5*} popr30{aurrekoFParenbalioaberreskuratu}
+
+ret
+
+.endp TXIKIEN
+.end
+
+
+
+
+
+
+
+2.5.4 Adibidea
+Faktorial programa (1. bertsioa):faktoriala iteratiboki kalkulatzen
+da,FAKTfuntzioaren bidez, zeinak, emaitza gisa, zenbakiaren faktoriala
+itzultzen duen (ikus {1*}, {2*} eta {3*} aginduak). Goi-mailako programa C-
+z hau da:
+
+      (C)
+                    void main ()
+      intFAKT(inti) {
+      {             intn=3;
+      intb,k;       intemai;
+      k=1;          emai=FAKT(n);
+      b=1;          printf(“%d”,emai);
+      while(k<i)    }
+      {
+      k++;
+      b=b*k;
+      }
+      return(b);
+      }
+
+
+
+
+TXORI mihiztadura-hizkuntzaz idatzitako programa nagusia etaFAKTazpirrutina
+hauek dira.
+.titleFAKTORIAL1
+
+PILA: .word 40;
+ZENB: .value 3;
+EMAI: .word 1;
+
+.procmain
+
+movasp,PILA
+{1*} addisp,sp,#1{funtzioak
+itzulikoduenemaitzarakotokia}
+ld
+r1,ZENB
+pushr1{parametroa
+baliobidez:ZENB}
+
+callFAKT
+
+subisp,sp,#1 {parametroaezabatu}
+{3*} popr1{funtzioaren
+emaitzajaso}
+st
+r1,EMAI {emai:=FAKT(n)}
+out {put(emai)}
+
+retm
+
+.endpmain
+
+.procFAKT
+
+pushr30 {FPaeguneratu}
+mov
+r30,sp
+
+pushr1 {erregistroakgorde}
+push
+r2
+push
+r3
+push
+r4
+
+movir1,#1 {r1=b:=1}
+movi
+r2,#1 {r2=k:=1}
+
+begiz: ldd r3, -2[r30] {r2:=n}
+sub
+r4,r2,r3 {r4:=k-n}
+bge
+r4,buk
+
+addi
+r1,r1,#1 {k:=k+1}
+mul
+r4,r4,r1 {b:=b*k}
+jmp
+begiz
+
+buk:{2*} stdr4,-3[r30]{returnb}
+
+popr4 {erregistroakberreskuratu}
+pop
+r3
+pop
+r2
+pop
+r1
+
+movsp,r30 {aldagailokalakezabatu}
+pop
+r30 {FPaberreskuratu}
+
+ret
+
+.endpFAKT
+.end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.5.5 Adibidea
+Faktorial programa (2. bertsioa):bigarren kasu honetan
+ere,FAKTazpirrutinafuntzio bat da, baina, iteratiboa izan ordez, errekurtsiboa
+da.
+
+
+
+               (C)
+
+               int FAKT (int i)           void G (int n)
+               {                          {
+               if(i==1)return(1);         intemai;
+               elsereturn(FAKT(i–1)*i);
+               }                          emai=FAKT(n);
+                                          printf(“%d”,emai);
+                                          }
+
+
+Honako hau izan daiteke programa, TXORI mihiztadura-hizkuntzaz:
+
+
+
+.titleFAKTORIAL2
+
+PILA: .word 40;
+ZENB: .value 3;
+EMAI: .word 1;
+
+.procmain
+
+movasp,PILA
+addisp,sp,#1
+{funtzioak
+itzulikoduenemaitzarakotokia}
+ld
+r1,ZENB
+pushr1{parametroa
+baliobidez:ZENB}
+
+callFAKT
+
+subisp,sp,#1 {parametroaezabatu}
+popr1
+{funtzioaren
+emaitzajaso}
+st
+r1,EMAI {emai:=FAKT(n)}
+out {put(emai)}
+
+retm
+
+.endpmain
+
+
+.proc FAKT
+
+push r30 {r30gorde}
+mov r30, sp {r30eguneratu}
+push r1 {erregistroakgorde}
+push r2
+push r3
+ldd r1, -2[r30] {r1=i}
+subi r2, r1, #1
+bne r2, errek
+
+std r1, -3[r30] {r1=1=i}
+jmp buk
+
+{1*}{aktibazioerrekurstiboarenemaitzarakotokia}
+errek: addi sp, sp, #1
+push r2 {r2=i-1}
+
+{2*} callFAKT
+
+subi sp, sp, #1
+
+{FAKT(i-1)funtzioarenemaitzajaso}
+{3*} popr3
+
+{i*FAKT(i-1)kalkulatu}
+mul r3, r3, r1
+
+{gordeemaitzaaktibazio-blokeandagokiontokian}
+{4*} stdr3,-3[r30]
+
+buk: pop r3
+pop r2
+pop r1
+pop r30
+ret
+
+.endp FAKT
+.end
+
+
+
+Mihiztadura-hizkuntzako programan ikus daitekeen moduan, programa nagusia ez da
+aldatu aurreko adibidetik hona.FAKTazpirrutinan, berriz, dei errekurtsiboa {2*}
+egin aurretik, tokia erreserbatu da pilan,FAKTen aktibazio berriaren emaitza
+gorde ahal izateko {1*}.
+Aktibazioa amaitutakoan, itzulitako balioa hartu {3*}, funtzioaren emaitza
+kalkulatu —iFAKT(i–1)—, eta emaitza dagokion tokian utziko da {4*}.
+
+
+1 Pilaren edukia ez da, berez, ezabatzen. Edukia desagerrarazteko, pilaren
+tontorra markatzen duen erakuslea, SPa, gutxiagotzen da, besterik ez.
+                                       1

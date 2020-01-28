@@ -1,0 +1,378 @@
+
+
+
+6 Gaia
+Kolinealitate anizkoitza
+Aurkibidea
+6.1
+Sarrera . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+98
+6.2
+Kolinealitate anizkoitz zehatza . . . . . . . . . . . . . . . . . . .
+98
+6.3
+Kolinealitate anizkoitz altua . . . . . . . . . . . . . . . . . . . . 100
+
+98
+6.Gaia: Kolinealitate anizkoitza
+6.1
+Sarrera
+Orokorrean, erregresio eredu bat estimatzeko eskuragarri diren datuak eta ereduaren oina-
+rrizko teoria ekonomikoaren arteko baterakuntza ez da beti posible izaten, laginean datu
+batzuk falta direlako, datuak taldekatuta daudelako, neurketa erroreak dituztelako edota
+aztergai ditugun aldagai azaltzaileen arteko koerlazioa handiegia delako.
+Atal honetan, azken arazo hau aztertuko dugu, hau da, kolinealitate anizkoitza edo alda-
+gai azaltzaileen arteko lagin koerlazioa. Erregresio ereduko koeﬁzienteen interpretazioa egi-
+terakoan, konkretuki malden interpretazioa, Xji 
+(j > 2) unitate batean handitzean aldagai
+azalduaren 
+(Yi) batezbesteko gehikuntza βj unitatekoa dela aipatzen genuen, beste alda-
+gai azaltzaile guztiak konstante mantenduz. Kolinealitate anizkoitz zehatza dugunean
+ordea, ezinezkoa da gainontzeko aldagai azaltzaile guztiak konstante mantentzea, beraien ar-
+teko erlazio lineala baitago. Kasu hauetan, ondoren ikusiko dugun bezala, ezinezkoa izaten
+da, aldagai bakoitzaren eragin isolatua bereiztea.
+Bereziki bi kasu analizatuko ditugu: kolinealitate anizkoitz zehatza eta altua.
+6.2
+Kolinealitate anizkoitz zehatza
+Ereduaren zehazpen zuzena emanik, aldagai azaltzaileetariko bat besteen konbinazio lineal
+zehatz bezala adierazi badaiteke, orduan kolinealitate anizkoitz zehatza dugula esango dugu.
+Ikusiko dugunez, ereduaren zehazpena zuzena izan arren, bere estimazioan eragina izango
+du.
+Izan bedi hurrengo erregresio eredu orokorra:
+Yi = β1 + β2X2i + β3X3i + . . . + βiXKi + ui i = 1, . . . , N
+non bi aldagai azaltzaileen artean konbinazio lineal zehatza ematen den, adibidez X3i = cX2i,
+c konstante ezaguna izanik. Informazio honekin X datu matrizea osatuko bagenu, hiruga-
+rren zutabeko balioak bigarren zutabekoak bider c eginez lortuko genituzke eta ondorioz,
+X matrizea ez litzateke zutabeetan hein osokoa izango (h(X)=K-
+1), hau da ez lituzke K
+zutabe independente izango. Hondar Karratuen Batura 
+(HKB) minimo eginez lortzen diren
+ekuazio normalen sistema 
+(X Y = X Xβ) ezin izango litzateke era bakar batean askatu,
+X X matrizearen determinantea zero izango baita eta hortaz, bere alderantzizkoa ezin izango
+litzateke lortu. Ondorioz, ereduko koeﬁzienteak banaka estimatzea ˆ
+β = (X X)−1X Y erabiliz
+ez litzateke posible izango.
+Koeﬁzienteen interpretazioaren ikuspuntutik ere arazoa aztertu dezakegu. Alde batetik, lehen
+bezala, termino independentea, aldagai azalduaren batezbestekoa izango da aldagai azaltzaile
+guztiak zero direnean. Bestetik ordea, β2-ren kasuan, E(Y )-
+ren aldakuntza izango da X2
+unitate batean handitzean eta X3 konstante mantenduz, baina kolinealitate zehatza dugunean
+eta gure adibidearekin jarraituz, ezin daiteke X3 konstante mantendu X2 unitate batean
+handitzean, zeren eta X3i = cX2i baita.
+Ikusi dugunez, ezin izango litzateke koeﬁziente guztiak estimatu banan-
+banan, baina bai ordea
+beraien konbinazio linealen bat. Gure adibidearekin jarraituz, X3i = cX2i 
+(c=konstantea)
+
+Gretl-en bidezko erregresio analisia
+99
+ereduan barneratzen dugunean eta ordenatzerakoan ondorengo eredua lortuko genuke:
+Yi = β1 + β2X2i + β3(cX2i) + . . . + βKXKi + ui
+Yi = β1 + (β2 + cβ3)X2i + . . . + βKXKi + ui
+Yi = β1 + γX2i + . . . + βKXKi + ui
+Lortutako eredu honetan ez dugu kolinealitate arazorik eta bertako koeﬁziente guztiak in-
+terpretagarriak dira eta estimagarriak KTAn bitartez. Eredu honetako koeﬁziente guztiak
+estimatu daitezke eta horien artean γ, hau da, hasierako ereduko koeﬁzienteen konbinazio
+lineal hau, baina ez ordea β2 eta β3 bi koeﬁzienteak banaka. Koeﬁziente guztiak estimatzeko
+informazio independente nahiko ez dago, zeren eta lagina izanik, X3 aldagaiak ez baitu X2
+aldagaiak eskeintzen duen informazioaren gehigarri esanguratsurik ematen.
+Nola estimatzen du Gretlek kolinealitate anizkoitz zehatza duen eredu bat?
+Demagun Ramanathaneko (2002) data4-
+1 ﬁtxategian SQFT aldagaiaren konbinazio lineala
+den aldagai berri bat sortzen dugula, SQFT1 = 5 × SQFT eta hurrengo eredua zehazten
+dugula:
+P RICEi = β1 + β2SQF Ti + β3BEDRMSi + β4SQF T 1 + ui
+Kolinealitate anizkoitz zehatza dagoenean, Gretlek kolinealitatea sortarazten duen aldagaie-
+tariko bat omititzen du, hurrengo emaitza erakutsiz:
+Eredua 1: KTA estimazioak 14 behaketak erabiliz 1-14
+Aldagai azaldua: price
+Omitituta kolinealitate zehatzagatik sqft1
+ALDAGAIA
+KOEFIZIENTEA
+DESB.TIP
+T ESTAT
+P-BALIOA
+const
+121,179
+80,1778
+1,511
+0,15888
+sqft
+0,148314
+0,0212080
+6,993
+0,00002 ***
+bedrms
+-23,9106
+24,6419
+-0,970
+0,35274
+Aldagai azalduaren batezbestekoa = 317,493
+Aldagai azalduaren desbiderazio tipikoa = 88,4982
+Hondar Karratuen Batura = 16832,8
+Hondarren desbiderazio tipikoa = 39,1185
+R-karratua = 0,834673
+Zuzendutako R-karratua = 0,804613
+F-estatistikoa (2, 11) = 27,7674 (p-balioa = 5,02e-005)
+Log-egiantza = -69,5093
+Akaike Informazio Irizpidea (AIC) = 145,019
+Schwarz Bayesian Irizpidea (BIC) = 146,936
+Hannan-Quinn Irizpidea (HQC) = 144,841
+
+100
+6.Gaia: Kolinealitate anizkoitza
+Hau da, Gretlek ohartarazten du erregresioan aldagai bat omititu duela, gure adibidean
+SQFT1, eta aldagaia ez duen ereduaren estimazioaren emaitzak ematen ditu. Teorikoki,
+SQFT1 = 5 × SQFT ereduan barneratu ondoren lortzen den eredua honakoa da:
+P RICEi = β1 + (β2 + 5β4)SQF Ti + β3BEDRMSi + ui
+non β1 eta β3 banaka estimatu daitezkeen baina β2 eta β4 ez. Beraz, estimazio emaitzetan,
+SQFT-ren koeﬁziente estimatua (0,148314) (β2 + 5β4) konbinazioari dagokio.
+6.3
+Kolinealitate anizkoitz altua
+Errealitatean, aldagai ekonomikoen artean nolabaiteko erlazioa izaten da, nahiz eta erlazio
+hori zehatza izatea ohikoa ez izan. Oso garrantzitsua da erlazio hori zein gradukoa den azter-
+tzea, oso sakona baldin bada, hau da, kolinealitate anizkoitz altua baldin badago, ondorioak
+izango baititu adibidez ereduko koeﬁzienteen zehaztasunean eta kontrasteetan. Hala ere,
+kontuan izan behar da askotan datuetan ematen den arazoa izaten dela, hau da, aukeratutako
+laginekoa eta ez eredukoa.
+Aldagai azaltzaile batzuren arteko erlazioa sakona baldin bada baina ez zehatza, X datu
+matrizea hein osokoa izango da zutabeetan. Hau da, ereduan K koeﬁziente baldin baditugu,
+h
+(X) = K izango da eta hortaz, X X matrizearen determinantea zeroren desberdina izango
+denez, koeﬁziente guztiak estimagarriak dira.
+Aurreko adibidean oinarrituz, kolinealitate anizkoitz altua hurrengo moduan ikusi daiteke:
+Yi = β1 + β2X2i + β3X3i + ui
+X3i ≈ cX2i
+non X2 eta X3 aldagaien arteko erlazioa zehatza ez den. Aldagai azaltzaileen artean kolinea-
+litate altua denean, ohikoa izaten da ondorengo arazoak izatea:
+• Datuetan aldaketa txiki batzuk, koeﬁzienteen estimazioetan aldaketa handiak sortaraz-
+tea.
+• Koeﬁzienteen estimazioek espero den zeinua ez izatea edota magnitute sinesgaitza.
+• Koeﬁzienteen estimatzaileek bariantza handia izaten dute, hau da, zehaztasun txikiare-
+kin estimatuta daude. Ondorioz, aldagaien banakako esanguratasun kontrastea egitean,
+estatistikoaren balioa oso txikia izango da eta ondorioz, hipotesi hutsa ez baztertzearen
+probabilitatea izugarri handitzen denez, aldagaia banaka nabaria ez dela ondorioztatu-
+ko dugu. Hau da, gezurrezkoak diren hipotesi hutsak ez baztertzearen probabilitatea
+handiagoa izatea eragingo du. Ondorioz, koeﬁziente baten konﬁdantza tartea lortuz
+gero, tartea oso zabala izango da.
+• Eredua estimagarria da eta erregresioaren mugatze koeﬁzientea altua izaten da. Horre-
+la, aldagai azaltzaileen baterako esanguratasun kontrastea burutuz gero, hipotesi hutsa
+ez da baztertzen eta aldagaiak batera nabariak direla ondorioztatzen da, baina lehen
+ikusi dugunez, banaka ez esanguratsuak direla irtengo da.
+
+Gretl-en bidezko erregresio analisia
+101
+Kolinealitatearen arazo nagusienak hauek izanik, emaitza horiek izatea lagungarri izan dai-
+teke kolinealitatea dagoen edo ez susmatzeko. Ondorio edo arazo horien arrazoitariko bat
+X X matrizearen determinantean datza. Aldagaien arteko erlazioa sakona izan arren, ez da
+zehatza eta beraz, X matrizearen zutabeen artean ez dagoenez konbinazio lineal zehatzik,
+determinantea ez da zero izaten. Hala ere, kolinealitate altuagatik, determinantea zerotik oso
+hurbileko balio bat izango da.
+Dena den, kontu handia izan behar da, gertagarria delako aldagaien neurri unitateagatik
+determinantea ia zero izatea eta ez kolinealitate arazoagatik. Bestalde, posible da aldagaien
+banakako esanguratasun kontraste batean hipotesi hutsa ez baztertzea, benetan aldagai ez
+nabaria delako aldagai azaldua azaltzeko. Garbi izan behar dugu, egoera hauek ematen diren
+guztietan ez dagoela beti kolinealitate anizkoitzaren arazoa eta beraz, kontu handia izan
+behar da emaitzak aztertu eta interpretatzerakoan.
+Kolinealitatea hautematzeko modu eragingarri bat, aldagai azaltzaile bakoitza besteekiko
+eginiko erregresio laguntzaileen mugatze koeﬁzienteak erabiliz izango da. Erregresio lagun-
+tzaile hauetako R2j-
+tariko bat edo batzuk handiak badira, erregresioan kontuan hartutako
+aldagaien arteko koerlazioa handia dela esan nahiko du eta beraz, aldagai hauen arteko
+kolinealitate anizkoitz posiblea dugula. Gure adibidean, oso lagungarria izango litzateke X2
+eta X3ren arteko erregresio laguntzaile bat burutzea:
+X2i = α1 + α2X3i + vi
+Kolinealitate altua badute, erregresio honen mugatze koeﬁzientea oso altua izango da, erre-
+gresio lineal eredu bakuna izanik, mugatze koeﬁzientea X2 eta X3 aldagaien arteko lagineko
+koerlazio koeﬁziente linealaren karratua baita (R2 = (rX
+2X3 )
+2).
+Beste aukera bat aldagaien arteko lagineko koerlazio koeﬁzienteak kalkulatzean datza. Alda-
+gaien arteko koerlazio koeﬁzienteek −1 eta 1 bitarteko balioak har ditzakete, positiboa baldin
+bada erlazio zuzena dela adierazten duelarik eta negatiboa bada ordea, alderantzizkoa. Bes-
+talde, balio absolutuan bat baliotik hurbileko balioa bada, erlazioa sakona da eta zero baldin
+bada, koerlazio linealik ez dutela esango dugu. Aurreko gaietan ikusi bezala, etxebizitzen
+prezioaren adibideko kasuan 
+(A eredua hartuz), ondorengo koerlazioak lortuko genituzke:
+6.1 Taula: A ereduko aldagaien koerlazio matrizea
+Koerlazio Koefizienteak, 1 - 14 behaketak erabiliz
+%5eko esanguratasuna (alde bikoa) = 0,5324
+n = 14 -rentzat
+price
+sqft
+bedrms
+baths
+1,0000
+0,9058
+0,3156
+0,6696
+price
+1,0000
+0,4647
+0,7873
+sqft
+1,0000
+0,5323
+bedrms
+1,0000
+baths
+Ikus dezakegunez, aldagai azaltzaileen arteko erlazio linealak zuzenak dira, koeﬁziente guztien
+zeinuak positiboak baitira. Erlazio sakonena, SQFT eta BATH-
+en artekoa litzateke 0.7873
+balioarekin, zuzena eta nahiko sakona. Hala ere, BATH eta BEDRMS aldagaien koerla-
+zio koeﬁzientea ikusirik 
+(0.5323) eta aurreko ikasgaian egin ditugun banakako eta baterako
+
+102
+6.Gaia: Kolinealitate anizkoitza
+esanguratasun kontrasteak gogoratuz, azterketa sakonago bat egingo dugu. Ikusi dugunez,
+eredu honetan aldagai azaltzaileak batera nabariak direla ondorioztatu dugu eta SQFT al-
+dagaia ezik, beste biak banaka ez nabariak direla. Kolinealitate arazoak izan ditzakegu eta
+horren ondorioz eman al dira emaitza hauek? Formalki aztertuko dugu Gretleko aukerak
+aprobetxatuz.
+Badira kolinealitatea hautemateko prozedura formalak ere. Belsley, Kuh eta Welsch
+(1980) egileen prozedura adibidez, matrize baten Baldintza Zenbakian 
+(γ) oinarritzen da,
+hau da, matrize horren balio propio handienaren eta txikienaren 
+(λmax, λmin) zatiduraren erro
+karratuan: γ =
+λmax
+λmin . Gure kasuan, X X matrizearen balio propioak kalkulatuko genituzke
+eta aipaturiko Baldintza Zenbakia kalkulatuko. Aldagaien arteko koerlazioa handituz gero,
+zenbaki hau handiagoa izango litzateke. Egile hauek diotenez, zenbaki hau 30 baino handiago
+denean, gradu altuko kolinealitate arazoak egon daitezke.
+Gai honetan proposatu eta erabiliko duguna ordea, Neter, Wasserman eta Kutner 
+(1990)
+proposaturiko Jasankortasuna (JAS) eta Bariantzaren Puztea 
+(VIF) izango dira, Gretlek
+prozedura hau jarraitzeko aukera ematen baitu.
+Yi = β1 + β2X2i + β3X3i + . . . + βiXKi + ui
+i = 1, . . . , N.
+Aurreko erregresio lineal eredu orokorreko koeﬁziente baten ( ˆ
+βj) bariantza ondorengo espre-
+sioaren bitartez kalkulatu daiteke:
+bar( ˆ
+βj) =
+σ2
+(Xji − ¯
+Xj)2
+1
+(1 − R2
+j )
+=
+σ2
+(Xji − ¯
+Xj)2
+V IFj
+non βj, Xj aldagaiaren koeﬁzientea den, R2j koeﬁzientea Xj aldagaia beste aldagai azal-
+tzaile guztien funtzioan adierazitako erregresio laguntzailearen mugatze koeﬁzientea den eta
+azkenik, V IFj =
+1
+(1−R2
+j )
+bariantzaren puztea den. Era laburrean azalduz, R2j batetik gero
+eta hurbilago badago, hau da, Xj aldagaiak beste aldagai azaltzaileekin duen kolinealitatea
+gero eta handiagoa bada, V IFj ere handitu egiten da 
+(1 ≤ V IFj ≤ ∞), ikusi dugunez,
+kolinealitateak bariantza “puztu” egiten baitu. Egile hauen arabera, V IFj > 10 bada, Xj
+aldagaiaren kolinealitatea besteekiko handia dela esango dugu. (OHARRA:
+ jasankortasuna
+V IF -aren alderantzizkoa da: JASj = 1
+V IFj ).
+Aipatu beharra dago, kolinealitatearen azterketa V IF -
+ak edota jasankortasuna erabiliz, zen-
+bait kritika jasan dituela, askotan hauen arabera lortutako emaitzak ez baitira erabatekoak.
+Ikusi bezala, koeﬁzienteen estimatzaileen bariantzak, V IFj, σ2 eta
+(Xji − ¯
+Xj)2-en arabera
+daudenez, V IFj altu bat ez da baldintza nahikoa eta beharrezkoa estimatzaileen bariantza
+handiak lortzeko. Nahiz eta V IFj altu bat izan, baliteke σ2 txikia edota
+(Xji − ¯
+Xj)2
+oso handia izatea eta kolinealitatearen ondorioen arraztorik ez izatea kontraste eta tartezko
+estimazioetan adibidez.
+Etxebizitzen prezioen adibidearekin jarraituz, aldagaien artean kolinealitatea dugun edo ez
+aztertzeko bariantzaren puzte koeﬁzientea kalkulatuko dugu. Horretarako, eredua KTA bi-
+tartez estimatutako lehiatilan Kontrasteak → Kolinealitatea klikatuko dugu, bertan azaltzen
+baitira kolinealitate arazoa emateko aztertu eta konparatu beharreko balioak. Ondorengoa
+lortzen da:
+Ikus dezakegunez, V IFj-
+aren arabera, kolinealitate arazorik ez dugula ondorioztatuko genuke.
+Hortaz, ereduko BATHS eta BEDRMS aldagaiak ez nabariak dira etxebizitzaren prezioa
+
+Gretl-en bidezko erregresio analisia
+103
+6.2 Taula: Kolinealitate kontrastearen emaitzak
+Bariantzaren Inflazio Faktoreak
+Balio minimo posiblea = 1.0
+Balioak > 10.0 badira, agian kolinealitate arazoren bat dago
+2)
+sqft
+2,651
+3)
+bedrms
+1,406
+4)
+baths
+2,900
+VIF(j) = 1/(1 - R(j)^2), non R(j) j aldagaiaren eta beste aldagai
+azaltzaileen arteko koerlazio koefiziente anizkoitza den
+X’X matrizearen propietateak:
+1-norma = 55654161
+Determinantea = 1,366856e+008
+Elkarrekiko baldintza zenbakia = 2,808412e-009
+azaltzeko eta SQFT ordea, nabaria da eta aurreko gaian ikusi bezala, proposatzen genuen E
+eredua erabiliko genuke etxebizitzen prezioa azaltzeko.
+Kolinealitate arazoa zuzentzeko proposaturiko soluzioak asko dira, baina orokorrean ez dira
+asebetegarriak.
+• Lagin horretan ematen den arazoa bada, datuak aldatuz posible da 
+(ez da beti ema-
+ten) kolinealitate arazoa konpontzea. Ideia, aurrekoak baino gutxiago erlazionaturiko
+datuak barneratzea izango da, datu bakar batzuk barneratuz edota lagina aldatuz.
+Edonola ere, oso gutxitan izan ohi da hobeagoak diren datuak lortzeko aukera.
+• Askotan, koeﬁzienteeen informazioa barneratuz arazoa desagertu egiten da. Hala ere,
+informazio gehigarri hori kolinealitate arazoa hauteman baino lehen kontuan hartu be-
+harko genuke eta ez ondoren, informazio gehiagorekin eredua era eﬁzienteagoan esti-
+matuko baitugu.
+• Kolinealitate anizkoitza sortarazten duten aldagairen bat eredutik kendu. Hala ere,
+soluzio honekin kontu handia izan behar da, ereduaren zehazpen oker bat izan dezakegu
+eta, hau da aldagai nabari baten omisioa. Ondorioz, lortuko genituzkeen koeﬁzienteen
+KTA estimatzaileak eta perturbazioaren bariantzaren estimatzailea alboratuak izango
+lirateke eta proposatutako kontrasteak 
+(inferentzia) ez lirateke baliogarriak izango.
+• Aldagaien arteko kolinealitatea altua bada, intuitiboki baliogarria eta ulergarria den
+soluzio posible bat Osagai Nagusiko Metodoa erabiltzean datza. Hau da, metodo
+honekin X matrizetik aldagai kopuru txikiago bat kanporatuko da, konkretuki alda-
+gai azaltzailearen aldakuntz edo bariantza guztia edo gehiena jasoko duten aldagaiak.
+Horrela lortzen diren estimatzailearen bariantza, KTA estimatzailearena baino txikia-
+
+104
+6.Gaia: Kolinealitate anizkoitza
+goa izan arren, alboratua izango da eta gainera, aldagaien neurri unitateen menpekoa.
+Bestalde, osagai nagusiak aukeratzerakoan ez dugu aldagai azaltzaile eta azalduaren
+arteko erlazioa kontuan hartzen eta azkenik, horrela lortzen diren estimatzaileak, hasie-
+rako ereduko koeﬁzienteen konbinazioak dira eta ondorioz, oso zaila izaten da emaitzak
+interpretatzea.
+• Cresta Erregresio Estimatzailea: ( ˆ
+βλ) = [X X+λD]−1X Y non D matrize diagonal
+bat den X X matrizeko diagonal nagusiko elementuak izanik, λ parametro ezezaguna
+aukeratu egin behar da. Normalean parametro hau aukeratzeko balio txiki batekin has-
+ten gara λ = 0, 01 eta bere balioa handitzen joaten gara estimatzailea egonkortu arte.
+Aurkeztutako estimatzailea alboratua izan arren, bere bariantza eta kobariantza matri-
+zea, KTA estimatzailearena baino “txikiagoa”da eta Batezbesteko Errore Koadratiko
+(BEK) txikiagoa du. KTAko estimatzailea kasu berezi bat bezala lor daiteke λ = 0
+denean. Estimatzailearen batezbestekoa eta bariantza honakoak dira:
+E( ˆ
+βλ) = σ2[X X + λD]−1X Xβ
+Bar( ˆ
+βλ) = σ2[X X + λD]−1X X[X X + λD]−1
+Bibliograﬁa
+Belsley, D., E. Kuh eta R. Welsch 
+(1980). Regression Diagnostics. Wiley, New York.
+Neter, J., W. Wasserman eta M.H. Kutner 
+(1990). Applied Linear Statistical Models,
+3. ed., Boston, M.A.: Irwin, Boston.
+Ramanathan, R. 
+(2002). Introductory Econometrics with Applications, 5. ed., South Wes-
+tern, Ohio.
