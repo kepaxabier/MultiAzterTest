@@ -2,6 +2,7 @@
 # coding: utf-8
 
 # In[29]:
+import math
 import os
 import subprocess
 import sys
@@ -26,10 +27,10 @@ from sklearn.externals import joblib
 ####Google Universal Encoder utiliza Tensorflow
 ## Importar tensorflow
 import tensorflow.compat.v1 as tf
-
 tf.disable_v2_behavior()
 ## Desactivar mensajes de tensorflow
 import tensorflow_hub as hub
+#import tensorflow_text
 
 
 class ModelAdapter:
@@ -46,6 +47,7 @@ class ModelAdapter:
             lines = text.split('@')
             for line in lines:  # paragraph
                 p = Paragraph()  # -> paragraph = []
+                p.text = line
                 if not line.strip() == '':
                     doc = self.model(line)
                     for sent in doc.sentences:
@@ -74,6 +76,7 @@ class ModelAdapter:
             lines = text.split('@')
             for line in lines:
                 p = Paragraph()  # -> paragraph = []
+                p.text = line
                 if not line.strip() == '':
                     sequences = self.model(line)
                     for seq in sequences:
@@ -609,17 +612,40 @@ class Document:
 
     def flesch(self):
         sentences = float(self.indicators['num_sentences'])
-        syllables = float(len(self.aux_lists['syllabes_list']))
+        syllables = float(len(self.aux_lists['syllables_list']))
         words = float(self.indicators['num_words'])
-        flesch = 206.835 - 1.015 * (words / sentences) - 84.6 * (syllables / words)
+        # ranking scale of 0-100
+        # For most business writing, a score of 65 is a good target, and scores between 60 and 80 should generally
+        # be understood by 12 to 15 year olds.
+        if self.language == "english":
+            # formula= 206.835 - 1.015 x (words/sentences) - 84.6 x (syllables/words)
+            flesch = 206.835 - 1.015 * (words / sentences) - 84.6 * (syllables / words)
+        if self.language == "spanish":
+            # Flesh=206.84 -60 * P - 1,02 F donde  P, el promedio de sílabas por palabra; F, la media de palabras por frase.
+            flesch = 206.84 - 1.02 * (words / sentences) - 60 * (syllables / words)
         if flesch >= 0: self.indicators['flesch'] = round(flesch, 4)
 
     def flesch_kincaid(self):
         sentences = float(self.indicators['num_sentences'])
-        syllables = float(len(self.aux_lists['syllabes_list']))
+        syllables = float(len(self.aux_lists['syllables_list']))
         words = float(self.indicators['num_words'])
+        # Flesch-Kincaid grade level formula = 0.39 x (words/sentences) + 11.8 x (syllables/words) - 15.59.
+        # Years:American School Grade:European School Grade
+        # 6-7:1:LH1
+        # 7-8:2:LH2
+        # 8-9:3:LH3
+        # 9-10:4:LH4
+        # 10-11:5:LH5
+        # 11-12:6:LH6
+        # 12-13:7:DBH1
+        # 13-14:8:DBH2
+        # 14-15:9:DBH3
+        # 15-16:10:DBH4
+        # 16-17:11:bachiller1
+        # 17-18:12:bachiller2
         fk = 0.39 * words / sentences + 11.8 * syllables / words - 15.59
-        if fk >= 0: self.indicators['flesch_kincaid'] = round(fk, 4)
+        if fk >= 0:
+            self.indicators['flesch_kincaid'] = round(fk, 4)
 
     def calculate_dale_chall(self):
         sentences = self.indicators['num_sentences']
@@ -654,9 +680,11 @@ class Document:
 
     def calculate_readability(self):
         # self.get_syllable_list()
-        self.calculate_dale_chall()
+        if self.language == "english":
+            self.calculate_dale_chall()
+            self.calculate_smog()
+            self.flesch_kincaid()
         self.flesch()
-        self.flesch_kincaid()
 
     def calculate_connectives_for(self, sentence, connectives):
         i = self.indicators
@@ -723,7 +751,7 @@ class Document:
         if similarity:
             print("similarity")
             # Preparar Google Universal Sentence Encoder
-            module_url = "https://tfhub.dev/google/universal-sentence-encoder-large/5"
+            module_url = "https://tfhub.dev/google/universal-sentence-encoder-multilingual/3"
             embed = hub.load(module_url)  # Utilizar KerasLayer o Module para TF2
             similarity_input_placeholder = tf.placeholder(tf.string, shape=(None))
             similarity_sentences_encodings = embed(similarity_input_placeholder)
@@ -737,8 +765,7 @@ class Document:
                                                                feed_dict={
                                                                    similarity_input_placeholder: sent_tokenize(s.text)})
                             self.aux_lists['sentences_in_paragraph_token_list'].append(sentences_embeddings)
-                        # self.aux_lists['paragraph_token_list'] = session.run(similarity_sentences_encodings, feed_dict={
-                        #     similarity_input_placeholder: paragraphs})
+                    self.aux_lists['paragraph_token_list'] = session.run(similarity_sentences_encodings, feed_dict={similarity_input_placeholder: sent_tokenize(p.text)})
         for p in self.paragraph_list:
             self.aux_lists['sentences_per_paragraph'].append(len(p.sentence_list))  # [1,2,1,...]
             for s in p.sentence_list:
@@ -778,7 +805,6 @@ class Document:
                                     if wordfrequency <= 4.00:
                                         i['num_rare_words_4'] += 1
                                         if w.is_noun():
-                                            print(w.text)
                                             i['num_rare_nouns_4'] += 1
                                         elif w.is_adjective():
                                             i['num_rare_adj_4'] += 1
@@ -837,6 +863,10 @@ class Document:
                                     self.aux_lists['different_verbs'].append(w.text.lower())
                                 if w.lemma not in self.aux_lists['different_lemma_verbs']:
                                     self.aux_lists['different_lemma_verbs'].append(w.lemma)
+                                if w.is_passive():
+                                    i['num_pass'] += 1
+                                    if w.is_agentless(s):
+                                        i['num_agentless'] += 1
                                 if w.is_past():
                                     i['num_past'] += 1
                                     if w.is_irregular():
@@ -933,6 +963,7 @@ class Document:
             i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
         except ZeroDivisionError:
             i['num_decendents_noun_phrase'] = 0
+        self.get_syllable_list(text_without_punctuation)
         i['num_different_forms'] = len(self.aux_lists['different_forms'])
         self.indicators['left_embeddedness'] = round(float(np.mean(self.aux_lists['left_embeddedness'])), 4)
         self.calculate_honore()
@@ -944,10 +975,26 @@ class Document:
         self.calculate_mtld()
         self.calculate_readability()
         self.calculate_connectives()
-        # self.get_syllable_list()
         i['min_wf_per_sentence'] = round(float(np.mean(min_wordfreq_list)), 4)
+        if similarity:
+            self.calculate_similarity_adjacent_sentences()
 
-        # self.get_syllable_list(text_without_punctuation)
+    def calculate_similarity_adjacent_sentences(self):
+        i = self.indicators
+        adjacent_similarity_list = []
+        for sentence in self.aux_lists['sentences_in_paragraph_token_list']:
+            if len(sentence) > 1:
+                for x, y in zip(range(0, len(sentence) - 1), range(1, len(sentence))):
+                    adjacent_similarity_list.append(self.calculate_similarity(sentence[x], sentence[y]))
+            else:
+                adjacent_similarity_list.append(0)
+        if len(adjacent_similarity_list) > 0:
+            i['similarity_adjacent_mean'] = round(float(np.mean(adjacent_similarity_list)), 4)
+            i['similarity_adjacent_std'] = round(float(np.std(adjacent_similarity_list)), 4)
+
+    # Este metodo devuelve la similitud calculada mediante Google Sentence Encoder
+    def calculate_similarity(self, sentence1, sentence2):
+        return np.inner(sentence1, sentence2)
 
     # List of syllables of each word. This will be used to calculate mean/std dev of syllables.
     def get_syllable_list(self, text_without_punctuation):
@@ -968,12 +1015,17 @@ class Document:
         i['sentences_length_mean'] = round(float(np.mean(self.aux_lists['sentences_length_mean'])), 4)
         i['words_length_mean'] = round(float(np.mean(self.aux_lists['words_length_list'])), 4)
         i['lemmas_length_mean'] = round(float(np.mean(self.aux_lists['lemmas_length_list'])), 4)
+        i['num_syllables_words_mean'] = round(float(np.mean(self.aux_lists['syllables_list'])), 4)
         i['mean_propositions_per_sentence'] = round(float(np.mean(self.aux_lists['prop_per_sentence'])), 4)
         i['num_punct_marks_per_sentence'] = round(float(np.mean(self.aux_lists['punct_per_sentence'])), 4)
         i['polysemic_index'] = round(float(np.mean(self.aux_lists['ambiguity_content_words_list'])), 4)
         i['hypernymy_index'] = round(float(np.mean(self.aux_lists['noun_verb_abstraction_list'])), 4)
         i['hypernymy_verbs_index'] = round(float(np.mean(self.aux_lists['verb_abstraction_list'])), 4)
         i['hypernymy_nouns_index'] = round(float(np.mean(self.aux_lists['noun_abstraction_list'])), 4)
+        i['num_pass_mean'] = round((i['num_pass']) / i['num_words'], 4)
+        i['num_past_irregular_mean'] = round(((i['num_past_irregular']) / i['num_past']), 4) if i['num_past'] != 0 else 0
+
+
         i['sentences_length_no_stopwords_mean'] = round(
             float(np.mean(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_mean'] = round(float(np.mean(self.aux_lists['words_length_no_stopwords_list'])), 4)
@@ -992,6 +1044,7 @@ class Document:
         i['sentences_length_std'] = round(float(np.std(self.aux_lists['sentences_length_mean'])), 4)
         i['words_length_std'] = round(float(np.std(self.aux_lists['words_length_list'])), 4)
         i['lemmas_length_std'] = round(float(np.std(self.aux_lists['lemmas_length_list'])), 4)
+        i['num_syllables_words_std'] = round(float(np.std(self.aux_lists['syllables_list'])), 4)
         i['sentences_length_no_stopwords_std'] = round(
             float(np.std(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_std'] = round(float(np.std(self.aux_lists['words_length_no_stopwords_list'])), 4)
@@ -1006,12 +1059,16 @@ class Document:
         i['num_sentences_incidence'] = self.get_incidence(i['num_sentences'], n)
         i['num_paragraphs_incidence'] = self.get_incidence(i['num_paragraphs'], n)
         i['num_impera_incidence'] = self.get_incidence(i['num_impera'], n)
+        i['num_past_irregular_incidence'] = self.get_incidence(i['num_past_irregular'], n)
         i['num_personal_pronouns_incidence'] = self.get_incidence(i['num_personal_pronouns'], n)
         i['num_first_pers_pron_incidence'] = self.get_incidence(i['num_first_pers_pron'], n)
         i['num_first_pers_sing_pron_incidence'] = self.get_incidence(i['num_first_pers_sing_pron'], n)
         i['num_third_pers_pron_incidence'] = self.get_incidence(i['num_third_pers_pron'], n)
+        i['agentless_passive_density_incidence'] = self.get_incidence(i['num_agentless'], n)
         i['gerund_density_incidence'] = self.get_incidence(i['num_ger'], n)
         i['infinitive_density_incidence'] = self.get_incidence(i['num_inf'], n)
+        i['num_pass_incidence'] = self.get_incidence(i['num_pass'], n)
+        i['agentless_passive_density_incidence'] = self.get_incidence(i['num_agentless'], n)
         i['num_subord_incidence'] = self.get_incidence(i['num_subord'], n)
         i['num_rel_subord_incidence'] = self.get_incidence(i['num_rel_subord'], n)
         i['num_past_incidence'] = self.get_incidence(i['num_past'], n)
@@ -1085,6 +1142,7 @@ class Paragraph:
 
     def __init__(self):
         self._sentence_list = []
+        self.text = None
 
     @property
     def sentence_list(self):
@@ -1330,7 +1388,13 @@ class Word:
     def num_syllables(self):
         list = []
         max = 0
-        for x in Pronouncing.prondict[self.text.lower()]:
+        if Connectives.lang == "basque":
+            txt = self.text
+        else:
+            txt = self.text.lower()
+        for x in Pronouncing.prondict[txt]:
+            if Connectives.lang == "basque":
+                return int(x)
             tmp_list = []
             tmp_max = 0
             for y in x:
@@ -1347,38 +1411,63 @@ class Word:
         Calculate syllables of a word using a less accurate algorithm.
         Parse through the sentence, using common syllabic identifiers to count
         syllables.
-        ADAPTED FROM:
-        [http://stackoverflow.com/questions/14541303/count-the-number-of-syllables-in-a-word]
         """
-        # initialize count
-        count = 0
-        # vowel list
-        vowels = 'aeiouy'
-        # take out punctuation
-        word = self.text.lower()  # word.lower().strip(".:;?!")
-        # various signifiers of syllabic up or down count
-        if word[0] in vowels:
-            count += 1
-        for index in range(1, len(word)):
-            if word[index] in vowels and word[index - 1] not in vowels:
+        if (Connectives.lang != "spanish"):
+            """
+            ADAPTED FROM:
+            [http://stackoverflow.com/questions/14541303/count-the-number-of-syllables-in-a-word]
+            """
+            # initialize count
+            count = 0
+            # vowel list
+            vowels = 'aeiouy'
+            # take out punctuation
+            word = self.text.lower()  # word.lower().strip(".:;?!")
+            # various signifiers of syllabic up or down count
+            if word[0] in vowels:
                 count += 1
-        if word.endswith('e'):
-            count -= 1
-        if word.endswith('le') or word.endswith('a'):
-            count += 1
-        if count == 0:
-            count += 1
-        if "ooo" in word or "mm" in word:
-            count = 1
-        if word == 'll':
-            count = 0
-        if (word.startswith('x') and len(word) >= 2) and word[1].isdigit():
-            count = 0
-        if word == 'lmfao':
-            count = 5
-        if len(word) < 2 and word not in ['a', 'i', 'y', 'o']:
-            count = 0
-        return count
+            for index in range(1, len(word)):
+                if word[index] in vowels and word[index - 1] not in vowels:
+                    count += 1
+            if word.endswith('e'):
+                count -= 1
+            if word.endswith('le') or word.endswith('a'):
+                count += 1
+            if count == 0:
+                count += 1
+            if "ooo" in word or "mm" in word:
+                count = 1
+            if word == 'll':
+                count = 0
+            if (word.startswith('x') and len(word) >= 2) and word[1].isdigit():
+                count = 0
+            if word == 'lmfao':
+                count = 5
+            if len(word) < 2 and word not in ['a', 'i', 'y', 'o']:
+                count = 0
+            return count
+        else:
+            chars = char_line(re.sub(r'\W+', '', self.text))
+            return len(self.syllablesplit(chars))
+
+    def syllablesplit(self, chars):
+        rules  = [('VV',1), ('cccc',2), ('xcc',1), ('ccx',2), ('csc',2), ('xc',1), ('cc',1), ('vcc',2), ('Vcc',2), ('sc',1), ('cs',1),('Vc',1), ('vc',1), ('Vs',1), ('vs',1)]
+        for split_rule, where in rules:
+            first, second = chars.split_by(split_rule,where)
+            if second:
+                if first.type_line in set(['c','s','x','cs']) or second.type_line in set(['c','s','x','cs']):
+                    #print 'skip1', first.word, second.word, split_rule, chars.type_line
+                    continue
+                if first.type_line[-1]=='c' and second.word[0] in set(['l','r']):
+                    continue
+                if first.word[-1]=='l' and second.word[-1]=='l':
+                    continue
+                if first.word[-1]=='r' and second.word[-1]=='r':
+                    continue
+                if first.word[-1]=='c' and second.word[-1]=='h':
+                    continue
+                return self.syllablesplit(first)+self.syllablesplit(second)
+        return [chars]
 
     def allnum_syllables(self):
         try:
@@ -1417,6 +1506,19 @@ class Word:
             return True
         else:
             return False
+
+    def is_passive(self):
+        atributos = self.feats.split('|')
+        return True if 'Voice=Pass' in atributos else False
+
+    def is_agentless(self, frase):
+        # Si el siguiente indice esta dentro del rango de la lista
+        if int(self.index) < len(frase.word_list):
+            siguiente = frase.word_list[int(self.index)+1].text.lower()
+            if siguiente == 'by' or siguiente == 'por':
+                return False
+            else:
+                return True
 
     def is_np(self, list_np_indexes):
         if self.upos == 'NOUN' or self.upos == 'PRON' or self.upos == 'PROPN':
@@ -1464,7 +1566,6 @@ class Word:
 
     def is_subordinate_relative(self):
         subordinate_relative_labels = ['acl:relcl']
-
         return True if self.dependency_relation in subordinate_relative_labels else False
 
     def is_stopword(self):
@@ -1525,6 +1626,43 @@ class Word:
 
     def has_more_than_three_syllables(self):
         return True if self.allnum_syllables() > 3 else False
+
+class char_line():
+    def __init__(self, word):
+        self.word = word
+        self.char_line = [(char, self.char_type(char)) for char in word]
+        self.type_line = ''.join(chartype for char, chartype in self.char_line)
+
+    def char_type(self, char):
+        if char in set(['a', 'á', 'e', 'é', 'o', 'ó', 'í', 'ú']):
+            return 'V'  # strong vowel
+        if char in set(['i', 'u', 'ü']):
+            return 'v'  # week vowel
+        if char == 'x':
+            return 'x'
+        if char == 's':
+            return 's'
+        else:
+            return 'c'
+
+    def find(self, finder):
+        return self.type_line.find(finder)
+
+    def split(self, pos, where):
+        return char_line(self.word[0:pos + where]), char_line(self.word[pos + where:])
+
+    def split_by(self, finder, where):
+        split_point = self.find(finder)
+        if split_point != -1:
+            chl1, chl2 = self.split(split_point, where)
+            return chl1, chl2
+        return self, False
+
+    def __str__(self):
+        return self.word
+
+    def __repr__(self):
+        return repr(self.word)
 
 
 class Oxford():
@@ -1629,24 +1767,38 @@ class Connectives():
         f.close()
 
 
-class Irregularverbs:
+class Irregularverbs():
+
     irregular_verbs = []
+    def __init__(self, language):
+        self.lang = language
 
     def load(self):
-        f = open('data/en/IrregularVerbs.txt', 'r')
-        lineas = f.readlines()
-        for linea in lineas:
-            if not linea.startswith("//"):
-                # carga el verbo en presente, dejando pasado y preterito
-                Irregularverbs.irregular_verbs.append(linea.split()[0])
-        f.close()
+        if self.lang.lower() == "spanish":
+            f = open('data/es/irregularverbs.txt', 'r')
+            lineas = f.readlines()
+            for linea in lineas:
+                if not linea.startswith("//"):
+                    # carga el verbo en presente, dejando pasado y preterito
+                    Irregularverbs.irregular_verbs.append(linea.rstrip('\n'))
+            f.close()
+        if self.lang.lower() == "english":
+            f = open('data/en/IrregularVerbs.txt', 'r')
+            lineas = f.readlines()
+            for linea in lineas:
+                if not linea.startswith("//"):
+                    #carga el verbo en presente, dejando pasado y preterito
+                    Irregularverbs.irregular_verbs.append(linea.split()[0])
+            f.close()
+
 
 
 class Printer:
 
-    def __init__(self, indicators, language):
+    def __init__(self, indicators, language, similarity):
         self.indicators = indicators
         self.language = language
+        self.similarity = similarity
 
     def print_info(self):
         i = self.indicators
@@ -1729,13 +1881,14 @@ class Printer:
         # MTLD
         print('Measure of Textual Lexical Diversity (MTLD): ' + str(i['mtld']))
 
-        # Flesch-Kincaid grade level =0.39 * (n.º de words/nº de frases) + 11.8 * (n.º de silabas/numero de words) – 15.59)
-        print("Flesch-Kincaid Grade level: " + str(i['flesch_kincaid']))
+
         # Flesch readability ease=206.835-1.015(n.º de words/nº de frases)-84.6(n.º de silabas/numero de words)
         print("Flesch readability ease: " + str(i['flesch']))
-
-        print("Dale-Chall readability formula: " + str(i['dale_chall']))
-        print("Simple Measure Of Gobbledygook (SMOG) grade: " + str(i['smog']))
+        if self.language == "english":
+            # Flesch-Kincaid grade level =0.39 * (n.º de words/nº de frases) + 11.8 * (n.º de silabas/numero de words) – 15.59)
+            print("Flesch-Kincaid Grade level: " + str(i['flesch_kincaid']))
+            print("Dale-Chall readability formula: " + str(i['dale_chall']))
+            print("Simple Measure Of Gobbledygook (SMOG) grade: " + str(i['smog']))
 
         print("Number of verbs in past tense: " + str(i['num_past']))
         print("Number of verbs in past tense (incidence per 1000 words): " + str(i['num_past_incidence']))
@@ -1952,6 +2105,14 @@ class Printer:
             print('Reference connectives (incidence per 1000 words):  ' + str(i['reference_connectives_incidence']))
             print('Summary connectives: ' + str(i['summary_connectives']))
             print('Summary connectives (incidence per 1000 words): ' + str(i['summary_connectives_incidence']))
+        if self.similarity:
+            print('Semantic Similarity between adjacent sentences (mean): ' + str(i['similarity_adjacent_mean']))
+            print('Semantic Similarity between all possible pairs of sentences in a paragraph (mean): ' + str(i['similarity_pairs_par_mean']))
+            print('Semantic Similarity between adjacent paragraphs (mean): ' + str(i['similarity_adjacent_par_mean']))
+            print('Semantic Similarity between adjacent sentences (standard deviation): ' + str(i['similarity_adjacent_std']))
+            print('Semantic Similarity between all possible pairs of sentences in a paragraph (standard deviation): ' + str(i['similarity_pairs_par_std']))
+            print('Semantic Similarity between adjacent paragraphs (standard deviation): ' + str(i['similarity_adjacent_par_std']))
+
 
     # genera el fichero X.out.csv, MERECE LA PENA POR IDIOMA
     def generate_csv(self, csv_path, input, similarity):  # , csv_path, prediction, similarity):
@@ -2011,10 +2172,11 @@ class Printer:
         estfile.write("\n%s" % 'Maas Lexical Density: ' + str(i['maas']))
         estfile.write("\n%s" % 'Measure of Textual Lexical Diversity (MTLD): ' + str(i['mtld']))
         estfile.write("\n%s" % 'Readability/Text Dimension/Grade Level')
-        estfile.write("\n%s" % 'Flesch-Kincaid Grade level: ' + str(i['flesch_kincaid']))
         estfile.write("\n%s" % 'Flesch readability ease: ' + str(i['flesch']))
-        estfile.write("\n%s" % 'Dale-Chall readability formula: ' + str(i['dale_chall']))
-        estfile.write("\n%s" % 'Simple Measure Of Gobbledygook (SMOG) grade: ' + str(i['smog']))
+        if self.language == "english":
+            estfile.write("\n%s" % 'Flesch-Kincaid Grade level: ' + str(i['flesch_kincaid']))
+            estfile.write("\n%s" % 'Dale-Chall readability formula: ' + str(i['dale_chall']))
+            estfile.write("\n%s" % 'Simple Measure Of Gobbledygook (SMOG) grade: ' + str(i['smog']))
         estfile.write("\n%s" % 'Morphological features')
         estfile.write("\n%s" % 'Number of verbs in past tense: ' + str(i['num_past']))
         estfile.write(
@@ -2193,17 +2355,45 @@ class Printer:
                 i['similarity_adjacent_par_std']))
         estfile.write("\n%s" % 'Connectives')
         estfile.write(
+            "\n%s" % 'Number of connectives: ' + str(i['all_connectives']))
+        estfile.write(
             "\n%s" % 'Number of connectives (incidence per 1000 words): ' + str(i['all_connectives_incidence']))
+        estfile.write(
+            "\n%s" % 'Causal connectives: ' + str(i['causal_connectives']))
         estfile.write(
             "\n%s" % 'Causal connectives (incidence per 1000 words): ' + str(i['causal_connectives_incidence']))
         estfile.write(
-            "\n%s" % 'Logical connectives (incidence per 1000 words):  ' + str(i['logical_connectives_incidence']))
-        estfile.write("\n%s" % 'Adversative/contrastive connectives (incidence per 1000 words): ' + str(
-            i['adversative_connectives_incidence']))
+            "\n%s" % 'Temporal connectives:  ' + str(i['temporal_connectives']))
         estfile.write(
             "\n%s" % 'Temporal connectives (incidence per 1000 words):  ' + str(i['temporal_connectives_incidence']))
+        estfile.write("\n%s" % 'Conditional connectives: ' + str(i['conditional_connectives']))
         estfile.write("\n%s" % 'Conditional connectives (incidence per 1000 words): ' + str(
             i['conditional_connectives_incidence']))
+        if self.language == "english" or self.language == "basque":
+            estfile.write("\n%s" % 'Logical connectives:  ' + str(i['logical_connectives']))
+            estfile.write("\n%s" % 'Logical connectives (incidence per 1000 words):  ' + str(i['logical_connectives_incidence']))
+            estfile.write("\n%s" % 'Adversative/contrastive connectives: ' + str(i['adversative_connectives']))
+            estfile.write("\n%s" % 'Adversative/contrastive connectives (incidence per 1000 words): ' + str(
+                i['adversative_connectives_incidence']))
+        if self.language == "spanish":
+
+            estfile.write("\n%s" % 'Adition connectives:  ' + str(i['addition_connectives']))
+            estfile.write("\n%s" % 'Adition connectives (incidence per 1000 words):  ' + str(i['addition_connectives_incidence']))
+            estfile.write("\n%s" % 'Consequence connectives: ' + str(i['consequence_connectives']))
+            estfile.write("\n%s" % 'Consequence connectives (incidence per 1000 words): ' + str(i['consequence_connectives_incidence']))
+            estfile.write("\n%s" % 'Purpose connectives:  ' + str(i['purpose_connectives']))
+            estfile.write("\n%s" % 'Purpose connectives (incidence per 1000 words):  ' + str(i['purpose_connectives_incidence']))
+            estfile.write("\n%s" % 'Illustration connectives: ' + str(i['illustration_connectives']))
+            estfile.write(
+                "\n%s" % 'Illustration connectives (incidence per 1000 words): ' + str(i['illustration_connectives_incidence']))
+            estfile.write("\n%s" % 'Opposition connectives:  ' + str(i['opposition_connectives']))
+            estfile.write("\n%s" % 'Opposition connectives (incidence per 1000 words):  ' + str(i['opposition_connectives_incidence']))
+            estfile.write("\n%s" % 'Order connectives: ' + str(i['order_connectives']))
+            estfile.write("\n%s" % 'Order connectives (incidence per 1000 words): ' + str(i['order_connectives_incidence']))
+            estfile.write("\n%s" % 'Reference connectives:  ' + str(i['reference_connectives']))
+            estfile.write("\n%s" % 'Reference connectives (incidence per 1000 words):  ' + str(i['reference_connectives_incidence']))
+            estfile.write("\n%s" % 'Summary connectives: ' + str(i['summary_connectives']))
+            estfile.write("\n%s" % 'Summary connectives (incidence per 1000 words): ' + str(i['summary_connectives_incidence']))
         estfile.close()
 
     # fichero csv para el aprendizaje automatico
@@ -2224,9 +2414,15 @@ class Printer:
         # Anade en estas listas las que no quieras mostrar para todos los casos
         ignore_list = []
         # ignore language specific features
-        ignore_list_eu = []
-        ignore_list_es = []
-        ignore_list_en = []
+        ignore_list_eu = ['flesch_kincaid','dale-chall','smog','addition_connectives','addition_connectives_incidence','consequence_connectives','consequence_connectives_incidence',
+        'purpose_connectives','purpose_connectives_incidence','illustration_connectives','illustration_connectives_incidence',
+        'opposition_connectives','opposition_connectives_incidence','order_connectives','order_connectives_incidence','reference_connectives',
+        'reference_connectives_incidence','summary_connectives','summary_connectives_incidence', 'num_past_irregular', 'num_past_irregular_incidence','num_past_irregular_mean']
+        ignore_list_en = ['flesch_kincaid','dale-chall','smog','addition_connectives','addition_connectives_incidence','consequence_connectives','consequence_connectives_incidence',
+        'purpose_connectives','purpose_connectives_incidence','illustration_connectives','illustration_connectives_incidence',
+        'opposition_connectives','opposition_connectives_incidence','order_connectives','order_connectives_incidence','reference_connectives',
+        'reference_connectives_incidence','summary_connectives','summary_connectives_incidence']
+        ignore_list_es = ['logical_connectives','logical_connectives_incidence','adversative_connectives','adversative_connectives_incidence']
         # ignore counters: only incidence, ratios, mean and std
         ignore_list_counters = ['prop', 'num_complex_words', 'num_words_more_3_syl', 'num_words', 'num_different_forms',
                                 'num_words_with_punct', 'num_paragraphs', 'num_sentences', 'num_past', 'num_pres',
@@ -2245,6 +2441,7 @@ class Printer:
                                 'num_pass_incidence', 'num_agentless', 'num_neg', 'num_ger', 'num_inf']
         similarity_list = ["similarity_adjacent_mean", "similarity_pairs_par_mean", "similarity_adjacent_par_mean",
                            "similarity_adjacent_std", "similarity_pairs_par_std", "similarity_adjacent_par_std"]
+
         if not (similarity):
             ignore_list.extend(similarity_list)
         if ratios:
@@ -2255,6 +2452,7 @@ class Printer:
             ignore_list.extend(ignore_list_es)
         if language == "basque":
             ignore_list.extend(ignore_list_eu)
+
 
         for key, value in i.items():
             if key not in ignore_list:
@@ -2308,9 +2506,10 @@ class Stopwords:
         if self.lang == "english":
             Stopwords.stop_words = stopwords.words('english')
         if self.lang == "spanish":
-            Stopwords.stop_words = stopwords.words('spanish')
+            #Stopwords.stop_words = stopwords.words('spanish')
+            Stopwords.stop_words = set(line.strip() for line in open('data/es/stopwords/stopwords.txt'))
         if self.lang == "basque":
-            Stopwords.stop_words = set(line.strip() for line in open('data/eu/stopwords_formaketakonektoreak.txt'))
+            Stopwords.stop_words = set(line.strip() for line in open('data/eu/stopwords/stopwords.txt'))
 
 
 class Predictor:
@@ -2535,15 +2734,15 @@ class Pronouncing:
 
             # Tratamos el fichero y guardamos en un diccionario cada palabra
             with open("docSilabas.txt", mode="r", encoding="utf-8") as f:
-                indice = 0
                 for linea in f:
-                    if not linea == "\n":
-                        s = linea.rstrip('\n')
-                        palabra_sin_puntos = s.replace('.', '')
+                    if not linea == '\n':
+                        str = linea.rstrip('\n')
+                        palabra_sin_puntos_rep = str.replace('.', '')     #[txakurra txakurra, ... , ...]
+                        line = palabra_sin_puntos_rep.split('\t')    #[ [txakurra, txakurra], [..,..], ...]
+                        palabra = line[0]
                         num_sil = []  # se crea para utilizar la misma estructura que cmudict.dict()
-                        num_sil.append(len(s.split('.')))
-                        Pronouncing.prondict[palabra_sin_puntos] = num_sil  # [txakurra] = 3
-                        indice += 1
+                        num_sil.append(len(str.split('.')))
+                        Pronouncing.prondict[palabra] = num_sil  # [txakurra] = 3
 
 
 "This is a Singleton class which is going to start necessary classes and methods."
@@ -2593,16 +2792,17 @@ class Main(object):
         # Por último parsear los argumentos
         opts = p.parse_args()
 
+
         languagelist = opts.language
-        #language = languagelist[0]
-        language = "spanish"
+        language = languagelist[0]
+        #language = "basque" # language = "english"
         print("language:", str(language))
-        # language = "english"
         modellist = opts.model
-        #model = modellist[0]
-        model = "stanford"
+        model = modellist[0]
+        #model = "stanford"
         print("model:", str(model))
         similarity = opts.similarity
+        similarity = False
         print("similarity:", str(similarity))
         csv = opts.csv
         print("csv:", str(csv))
@@ -2622,7 +2822,7 @@ class Main(object):
 
         # Carga Niveles Oxford
         ox = Oxford(language)
-        #ox.load()
+        ox.load()
 
         # Carga StopWords
         stopw = Stopwords(language)
@@ -2640,6 +2840,9 @@ class Main(object):
         cargador.download_model()
         cargador.load_model()
 
+        irregular = Irregularverbs(language)
+        irregular.load()
+
         # Predictor
         predictor = Predictor(language)
         predictor.load()
@@ -2651,7 +2854,7 @@ class Main(object):
         #    FileLoader.files = args
         #    print("Parametros: " + str(FileLoader.files))
 
-        files = ["vlad.txt"] #euskaratestua
+        #files = ["euskaratestua.txt"] #euskaratestua Loterry-adv
         print("Files:" + str(files))
         ### Files will be created in this folder
         path = Printer.create_directory(files[0])
@@ -2671,7 +2874,7 @@ class Main(object):
             # Get indicators
             document = cargador.get_estructure(text)
             indicators = document.get_indicators(similarity)
-            printer = Printer(indicators, language)
+            printer = Printer(indicators, language, similarity)
             printer.print_info()
             printer.generate_csv(path, input, similarity)  # path, prediction, opts.similarity)
             if csv:

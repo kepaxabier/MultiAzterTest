@@ -1,0 +1,36 @@
+Legibilidad
+===========
+
+*Legibilidad*, es decir, cuán fácil de leer es un texto.
+
+Este programita sirve para calcular la legibilidad de un texto castellano. Aplica las fórmulas de:
+
+* Fernández Huerta
+* Gutiérrez
+* Crawford
+* Szigriszt-Pazos
+* Inflesz
+* Legibilidad µ
+
+Cómo se usa
+===========
+Tiene dos opciones:
+
+*************
+Demo en línea
+*************
+
+Use mi `demo en línea <https://legible.es>`_. Pegue su texto y obtenga el resutlado. Más fácil y rápido.
+
+*********
+Instálelo
+*********
+
+1. Baje estos ficheros:
+
+* `legibilidad.py <https://raw.githubusercontent.com/amunozf/legibilidad/master/legibilidad.py>`_
+* `nal.py <https://raw.githubusercontent.com/amunozf/cifra-a-texto/master/nal.py>`_
+* `separasilabas.py <https://raw.githubusercontent.com/amunozf/separasilabas/master/separasilabas.py>`_
+
+2. Póngalos en la misma carpeta
+3. Vea "ejemplo.py" para averiguar cómo funciona
