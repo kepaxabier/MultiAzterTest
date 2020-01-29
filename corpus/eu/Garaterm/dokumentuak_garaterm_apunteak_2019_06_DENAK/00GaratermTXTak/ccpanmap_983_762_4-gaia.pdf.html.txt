@@ -1,0 +1,671 @@
+
+
+
+4 Gaia
+Murrizketa linealen kontrasteak eta
+aurresanak
+Aurkibidea
+4.1
+Sarrera . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+72
+4.2
+Murrizketa linealen kontraste orokorra . . . . . . . . . . . . . . .
+72
+4.3
+Murrizketei baldintzaturiko Karratu Txikienen Arruntetako esti-
+matzailea . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+74
+4.4
+Murrizketa linealen kontrasteak Gretl erabiliz . . . . . . . . . . .
+76
+4.5
+Puntuzko eta tartezko aurresanak . . . . . . . . . . . . . . . . .
+80
+4.6
+Puntuzko eta tartezko aurresanak Gretl erabiliz . . . . . . . . .
+81
+
+72
+4.Gaia: Murrizketa linealen kontrasteak eta aurresanak
+4.1
+Sarrera
+Gai honetan, koeﬁzienteen edozein murrizketa linealen kontrastea egiteko estatistiko orokor
+bat aztertuko dugu. Aurreko gaietan azaldutako esanguratasun kontrasteak izaten direnez
+ekonometrian gehien erabiltzen direnak, erregresioak egiten dituen edozein programa infor-
+matikok automatikoki kontraste horiek egiteko informazioa ematen du. Hala ere, badira beste
+kontraste interesgarri batzuk ere, ekonomilariek portaera ekonomikoari buruzko teoriak gara-
+tu eta ebaluatzen baitituzte eta hipotesien kontrasteak, teoria hauek ebaluatzeko prozedurak
+dira.
+Atal honetan ikusiko dugun bezala, estatistiko bakar batekin koeﬁzienteen murrizketa linealen
+multzo bat kontrasta daiteke. Jakin, aurretik ikusitako banakako esanguratasun kontraste-
+rako estatistikoa eta baterako esanguratasun kontrastekoa, jarraian lortuko dugun estatis-
+tistikotik eratorriak izan daitezkeela. Aldi berean, Gretl erabiliz kontraste hauek nola egin
+aztertuko dugu.
+4.2
+Murrizketa linealen kontraste orokorra
+Yi = β1 + β2X2i + β3X3i + . . . + βKXKi + ui i = 1, 2, . . . , N
+Aurreko erregresio linealeko eredu orokorrean, koeﬁzienteen edozein q murrizketa lineal 
+(Rβ =
+r adierazpen matriziala izanik) kontrastatu nahi izanez gero:
+ ezagunak diren konstanteen ma-
+trizea R (q × K ordenakoa) eta konstante ezagunen bektorea r 
+(q × 1 ordenakoa) deﬁnitu
+behar ditugu kontrastatu nahi diren murrizketen arabera. Hipotesi hutsan murrizketak ma-
+trizialki 
+(Rβ = r) jarri behar direnez, jarraian adibide batzuen bitartez adierazten da nola
+osatu R eta r:
+1. X2 aldagai azaltzailearen banakako esanguratasun kontraste batean:
+H0 : β2 = 0 vs Ha : β2 = 0
+Rβ = r ⇒
+0 1 0 · · · 0
+R
+
+
+
+
+
+β1
+β2
+..
+.
+βK
+
+
+
+
+
+β
+= (0)
+r
+Hipotesi hutsa H0 : β2 = 8 bada, aldatu beharreko gauza bakarra r = (8) izango
+litzateke.
+
+Gretl-en bidezko erregresio analisia
+73
+2. Baterako esanguratasun kontraste batean: H0 : β2 = β3 = . . . = βK = 0
+Rβ = r ⇒
+
+
+
+
+
+0 1 0 · · · 0
+0 0 1 · · · 0
+..
+.
+. ..
+0 0 0
+1
+
+
+
+
+
+R
+
+
+
+
+
+β1
+β2
+..
+.
+βK
+
+
+
+
+
+β
+=
+
+
+
+
+
+0
+0
+..
+.
+0
+
+
+
+
+
+r
+3. Koeﬁzienteen konbinazio linealen murrizketak:
+(a) Murrizketa bat: H0 : β2 + β3 = 7 vs Ha : β2 + β3 = 7
+Rβ = r ⇒
+0 1 1 0 · · · 0
+R
+
+
+
+
+
+
+
+β1
+β2
+β3
+..
+.
+βK
+
+
+
+
+
+
+
+β
+(7)
+r
+(b) Murrizketa bat baino gehiago:
+H0 :
+5β2 + 4β3 = 5
+β1 − 4β4
+= 6
+vs Ha :
+5β2 + 4β3 = 5
+edota
+β1 − 4β4
+= 6
+Rβ = r ⇒
+0 5 4
+0 · · · 0
+1 0 0 −4 · · · 0
+R
+
+
+
+
+
+
+
+β1
+β2
+β3
+..
+.
+βK
+
+
+
+
+
+
+
+β
+5
+6
+r
+Teoriara bueltatuz, ikusi dugunez, oinarrizko hipotesien menpean KTA estimatzailearen ba-
+naketa ˆ
+β ∼ N (β, σ2(X X)−1) da. Adierazitako murrizketa linealen kontrasteak egiteko,
+ordea, R ˆ
+β-ren banaketan oinarrituko gara:
+R ˆ
+β
+(q × 1)
+∼ N ( Rβ
+(q × 1)
+, σ2R(X X)−1R
+(q×q)
+)
+(4.1)
+Estatistiko honekin eta ˆ
+σ2 = ˆu ˆu
+N −K estimatzailearekin, Wald-en F estatistiko bezala ezagutzen
+den hurrengo estatistikoa osatuko genuke:
+F =
+R ˆ
+β − r
+R ( X X )
+−1 R
+−1
+R ˆ
+β − r /q
+ˆ
+σ2
+H0
+∼ F(q,N−K)
+(4.2)
+
+74
+4.Gaia: Murrizketa linealen kontrasteak eta aurresanak
+H0 ez baldin bada egiazkoa, (R ˆ
+β − r) diferentzia handia izango denez, F estatistikoak balio
+altuak hartuko ditu eta H0 baztertuko genuke α esangura-
+mailarekin. Hau da, hipotesi hutsa
+baztertuko dugu baldin eta F > F
+(q,N−K)α bada eta ez dugu baztertuko bestelako kasuan.
+Bada ordea estatistiko honen baliokidea den beste estatistiko bat:
+ murriztu gabeko ereduko
+hondar karratuen batura eta murriztutako ereduko hondar karratuen baturan oinarritzen den
+estatistikoa. Ikus dezagun beste adierazpen hau lortzeko burutu behar diren pausuak.
+4.3
+Murrizketei baldintzaturiko Karratu Txikienen Arruntetako es-
+timatzailea
+Erregresio linealeko eredu orokorra izanik 
+(matrizialki Y = Xβ + u), ereduko koeﬁzienteei
+buruzko informazioa eskuragarri baldin bada, oso garrantzitsua da informazio berri hori egiaz-
+koa den edo ez kontrastatzea zeren β ezezaguna denez, ez dakigu ziurtasunez Rβ = r ematen
+den. Kontrastearen ondorioz, hau da, hipotsi hutsa ez bada baztertzen, informazioa egiazkoa
+dela ondorioztatuko dugu α esanguratasun mailarekin eta murrizketa kontuan hartuta lortu-
+ko genukeen estimatzaile berria 
+(Murriztutako Karratu Txikienen Arruntetako estimatzailea
+( ˆ
+βMKTA edo ˆ
+βM )), KTA estimatzailea baino eﬁzienteagoa izango da, bariantza txikiagoa
+izango baitu.
+Ereduko koeﬁzienteak murrizketa hauek kontuan hartuta estimatu nahi izanez gero 
+( ˆ
+βM ),
+murrizketa hauei baldintzatutako Hondar Karratuen Batura minimo egin beharko genuke.
+Minimizazio prozeduraren ondorioz eta zenbait eragiketa eginik, honako emaitza lortuko ge-
+nuke:
+ˆ
+βM = ˆ
+βKTA + (X X)−1R R(X X)−1R
+−1(r − R ˆβ
+KT A)
+(4.3)
+non aurreko atalean ikusi dugun bezala, koeﬁzienteen edozein murrizketa multzo Rβ = r
+bezala adierazten dugun eta R eta r matrizeak ezagunak diren, murrizketen arabera osatuak
+izanik.
+KTA estimatzailearekin bezala, posible da KTM estimatzailearekin Hondar Karratuen Batura
+edota mugatze koeﬁzientea lortzea:
+HKBM = ˆuM ˆuM = (Y − X ˆβM) (Y − X ˆβM)
+eta
+R2
+M = 1 − (ˆ
+u
+M ˆ
+uM /
+(Yt − ¯
+Y )2)
+Dena den, bide hau jarraituz estimazioak lortzeko egin beharreko eragiketa kopurua handia
+da eta eskuz egin beharko genituzke. Bada ordea, Gretl erabiliz ˆ
+βM lortzeko eta bide batez,
+HKBM eta R2M lortzeko beste metodo alternatibo bat:
+ Rβ = r murrizketak ereduan ordezka-
+tuz, murriztutako eredua lortuz 
+(Y∗ = X∗β∗ + u∗) eta bertako koeﬁzienteak KTA bitartez
+estimatuz ( ˆ
+β∗ = (X∗X∗)−1X∗Y∗). Horrela, hasierako ereduko (murriztu gabeko eredua)
+koeﬁziente batzuk bakarrik estimatuko genituzkeenez, gainontzekoak lortzeko murrizketetara
+bueltatuko ginateke.
+Aukera hau adibide batekin ikusiko dugu. Izan bedi ondorengo erregresio eredua:
+Yi = β1 + β2X2i + β3X3i + ui
+i = 1, 2, . . . , N
+non β2 = 5 dela dakigun. Informazio hau ereduan barneratzen badugu, murriztutako ere-
+dua lortuko dugu. Aipatu bezala, eredu honetan Hondar Karratuen Batura minimo eginez,
+bertako koeﬁzienteak estimatu ahal izango ditugu, hauek murrizketak betetzen dituztelarik.
+
+Gretl-en bidezko erregresio analisia
+75
+Eredu honetan ordea, ez daude murriztu gabeko ereduko koeﬁziente guztiak eta murrizkete-
+tara zuzendu beharko gara guztiak lortzeko. Ikus dezagun:
+Hasierako eredua:
+Yi = β1 + β2X2i + β3X3i + ui
+Murriztutako eredua: Yi = β1 + β2X2i + 5X3i + u∗i
+Yi − 5X3i = β1 + β2X2i + u∗i
+Y ∗
+i = β1 + β2X2i + u
+∗
+i
+non Y ∗
+i = Yi − 5X3i den. Hondar Karratuen Batura minimo eginik, β1 eta β2 estimatu ahal
+izango ditugu ˆ
+βM
+1
+eta ˆ
+βM
+2
+lortuz. Gainontzekoak murrizketetara bueltatuz lortuko genituzke.
+Horrela, murriztutako estimatzailea ˆ
+βM = ˆ
+βM
+1
+ˆ
+βM
+2
+5
+izango da.
+Eredu berdinarekin jarraituz, beste adibide bat ondorengoa litzateke:
+ β1 + 3β2 = 4 murriz-
+ketari loturikoa edo baliokidea dena, β1 = 4 − 3β2.
+Hasierako eredua:
+Yi = β1 + β2X2i + β3X3i + ui
+Murriztutako eredua: Yi = β1 + (4 − 3β3)X2i + β3X3i + u∗i
+Yi − 4X2i
+Y
+i
+= β1 + β3(X3i − 3X2i
+X
+i
+) + u∗i
+Azken eredu honetan ˆ
+βM
+1
+eta ˆ
+βM
+3
+estimatzen dira eta ondoren ˆ
+βM
+2
+= 4 − 3 ˆ
+βM
+3
+lortzen da.
+Murriztutako eredua estimatzerakoan, erregresio horretan lortuko genukeen Hondar Karra-
+tuen Batura (HKB∗ = ˆu∗ˆu∗ = Y∗Y∗ − ˆ
+β∗X∗Y∗) eta lehen lortutako HKBM berdinak dira;
+hau da, hasierako ereduan murriztutako estimatzailearekin lortutako HKB eta murriztutako
+eredukoak berdinak dira. Bestalde, murriztutako ereduko aldagai azaldua eta murriztu gabe-
+koa berdinak badira, murriztutako ereduko mugatze koeﬁzientea 
+(R2∗) eta lehenago deﬁnitu
+duguna KTM estimatzailearekin (R2
+M ), berdinak dira. Guzti hau jakinik eta Gretl erabiliz,
+eragiketak asko errazten dira, baina lehenik, murriztutako ereduko aldagai berrien behaketak
+kalkulatu beharko genituzke eta aurreko gaietan ikusitakoa aplikatu:
+ aldagai berriak deﬁnitu
+eta murriztutako ereduan KTA aplikatu.
+Esan bezala, aipatutako HKB hauek erabiliz, posible da ere koeﬁzienteen murrizketa linealen
+kontrastea burutzea, hau da, posible da lehen adierazitako estatistikoaren beste adierazpide
+baliokide bat lortzea: halaber, hipotesi hutsagatik murriztutako ereduko HKBn 
+(ˆ
+u
+M ˆ
+uM ) eta
+murriztu gabeko ereduko HKBn (ˆ
+u ˆ
+u), non ˆ
+uM = Y − X ˆ
+βM eta ˆu = Y − X ˆ
+βKTA diren,
+oinarrituriko estatistikoa ondorengoa da:
+F =
+(ˆ
+u
+M ˆ
+u
+M − ˆ
+u ˆ
+u)/q
+ˆ
+u ˆ
+u/(N − K)
+H0
+∼ F(q,N−K)
+(4.4)
+non ˆ
+u
+M ˆ
+u
+M = (Y − X
+ˆ
+βM ) (Y − X ˆ
+βM ) edota murriztutako ereduan (Y∗ = X∗β∗ + u∗), ˆu∗ˆu∗ =
+Y∗Y∗ − ˆ
+β∗X∗Y∗. Lehen bezala, hipotesi hutsa baztertuko dugu baldin eta F > F(q,N−K)α
+bada eta ez dugu baztertuko bestelako kasuan.
+Honen baliokidea den beste estatistiko bat mugatze koeﬁzienteetan oinarritzen dena da. Al-
+
+76
+4.Gaia: Murrizketa linealen kontrasteak eta aurresanak
+de batetik, murriztu gabeko eredua KTA bitartez estimatuz lortuko genukeena 
+(R2 = R2
+M G)
+eta bestalde, KTM bitartez lortuko genukeena (R2
+M ) (azken hau murriztutako ereduko mu-
+gatze koeﬁzientearen 
+(R2∗) berdina da, murrizketa kontuan hartuta aldagai azaldua ez bada
+aldatzen, hau da Y = Y∗ denean, R2M = R
+2
+∗ izango da). Honakoa da aipaturiko estatistikoa:
+F =
+(R2
+M G − R
+2
+M )/q
+(1 − R2
+M G)/(N − K)
+H0
+∼ F(q,N−K)
+(4.5)
+Kontrastea aurreko estatistikoarekin bezala burutzen delarik.
+Azken estatistiko hau aprobetxatuz, aldagai azaltzaileen baterako esanguratasun kontrastea
+aztertu genuenean proposatzen genuen estatistikoa gogoratuko dugu. Erregresio lineal eredu
+orokor batean izango genukeen hipotesi hutsa
+H0 : β2 = β3 = · · · = βK = 0
+izango litzateke eta honi atxikitutako murrizturiko eredua Yt = β1+ut izango da non R2∗ = 0 =
+R2
+M izango den, horrelako kontraste baterako proposatzen genuen estatistikoa justiﬁkatuz:
+F =
+R2/(K − 1)
+(1 − R2)/(N − K)
+H0
+∼ F(K−1,N−K)
+(4.6)
+4.4
+Murrizketa linealen kontrasteak Gretl erabiliz
+Murrizketa linealen kontrasteak formalki nola egingo genituzkeen azaldu dugu baina zenbait
+programa informatikok, besteak beste Gretl, estatistiko hauen balioa lortzeko aukera eskein-
+tzen du (Wald-en testa), murrizketen kontrasteak egiteko aukera asko erreztuz.
+Erregresio lineal eredu orokor batean eta Gretl programa erabiliz, koeﬁzienteak nola adie-
+razten ditugun eta programak nola adierazten dituen kontuan hartu beharra dago. Gretl
+programan, guk β1 bezala deﬁnitu dugun koeﬁzientea 
+(hau da termino konstantea) b1 da,
+gure β2, b2 izango da, β3 berriz b3 eta antzera ereduko koeﬁziente guztiekin. Hau da:
+Eredu orokorra: Yi = β1 + β2X2i + β3X3i + . . . + βKXKi + ui
+Gretl programan: Y = b1 + b2 ∗ X2 + b3 ∗ X3 + . . . + bK ∗ XK + u
+Horrela, koeﬁzienteen edozein murrizketa 
+(Rβ = r) adierazterakoan, kontuan izan beharko
+dugu deitura desberdintasunak eta biderkaketak nola adierazten diren. Adibidez, β1+5β3 = 4
+eta β2 + 4, 5β4 = 2 murrizketak, Gretlekin b1 + 5 ∗ b3 = 4 eta b2 − 4, 5 ∗ b4 = 2 idatzi behar
+ditugu. Murrizketa bakoitza ekuazio bakar batean idatzi behar dugu, berdintzaren ezker
+aldean parametroen konbinazio lineala adieraziz eta eskubian dagokion zenbakia.
+Etxebizitzen prezioen adibideko ereduan1
+P RICEi = β1 + β2SQF Ti + β3BEDRMSi + β4BAT HSi + ui
+ondorengo irudian azaltzen den bezala, eredua KTA bitartez estimatu ondoren lortzen den
+lehiatilan kontrasteak egin daitezke: Kontrasteak → Murrizketa linealak.
+1Ramanathaneko (2002) data4-1.gdt datu-ﬁtxategia.
+
+Gretl-en bidezko erregresio analisia
+77
+4.1 Irudia: Murrizketa linealen kontrasteak
+Ondoren interesatzen zaizkigun murrizketak adieraziko ditugu:
+4.2 Irudia: Murrizketa linealen zehazpena
+Ados klikatzean, murrizketak kontuan hartuz lortzen diren murriztutako estimazio emaitzak
+agertzen dira. Hau da Murriztutako Karratu Txikienen estimatzailea. Bertan, Wald-
+en F
+
+78
+4.Gaia: Murrizketa linealen kontrasteak eta aurresanak
+4.3 Irudia: Murrizketa linealen kontrastearen emaitza
+estatitsikoaren balioa ere agertzen da (F=0,04389) eta dagokion p-
+balioa, kontrastea burutu
+ahal izateko.
+
+Gretl-en bidezko erregresio analisia
+79
+Horrela koeﬁzienteen edozein murrizketa linealen kontrasteak burutu ditzakegunez, jada egin
+ditugun banakako eta baterako esanguratasun kontrasteak ere egin ditzakegu. Baterako esan-
+guratasun kontrastean adibidez, horrela adieraziko genuke:
+4.4 Irudia: Baterako esanguratasunaren murrizketen zehazpena
+Ondorengo emaitza lortuz:
+4.5 Irudia: Baterako esanguratasun kontrastearen emaitza
+
+80
+4.Gaia: Murrizketa linealen kontrasteak eta aurresanak
+Bertan ikusten dugun bezala, oraingoan proposatzen dugun Wald-
+en F estatistikoaren ba-
+lioa 16,9889 da, hirugarren gaian ikusi genuen bezala. Horregatik, kontrastea era berean
+egin dezakegu, estatistikoaren balioarekin batera, alboan dagokion p-
+balioa agertzen baita.
+Dakusagunez, F = 16, 9889 > F
+(3,10)0,05 = 3, 71 da eta hipotesi hutsa baztertu egiten da
+α = 0.05eko esangura-
+mailarekin, ondorioz aldagai azaltzaileak batera nabariak direlarik.
+Bide batez, p-
+balioa erabiliz, α = 0, 01 balioa baino txikiagoa denez, hipotesi hutsa baztertu
+egingo dugu α = 0, 01eko esangura-
+mailarekin eta baita α = 0, 1 eta α = 0, 05ekin.
+4.5
+Puntuzko eta tartezko aurresanak
+Ekonometriaren helburu nagusia ereduaren estimazio on baten lorpena dela pentsatzen bada
+ere, sarritan aurresan zehatzak lortzea ere oso garrantzitsua da. Eredua zuzenki zehaz-
+tu ondoren, parametroak estimatu ditugu eta kontrasteak eginez, ereduari oniritzia eman
+diezaiokegu edo ez. Emaitza ezezkoa bada, eredua berriro zehaztu beharko dugu eta pau-
+su guztiak berregin. Eredua onartuz gero, aurresanak egiteko erabili dezakegu edota “zein
+izango litzatekeen aldagai azalduaren balioa aldagai azaltzaileek balio konkretu bat hartzen
+badute”motako galderei erantzun ahal izango diegu.
+Suposa dezagun ondorengo eredua T behaketekin estimatu dela:
+Yi = β1 + β2X2i + . . . + βKXKi + ui i = 1, . . . , N
+hurrengo lagineko erregresio funtzioa lortuz:
+ˆ
+Yi = ˆ
+β1 + ˆ
+β2X2i + . . . + ˆ
+βKXKi
+Orduan, aldagai azaltzaileen behaketa berri bat emanik,
+Xp = 1 X2p · · · XKp
+p ∈ {1, 2, . . . , N }
+KTAn bitartez estimatutako eredua erabili daiteke aldagai azalduak izango duen balioa aurre-
+sateko 
+(puntuzko aurresana), hau da, balio hauek lagineko erregresio funtzioan ordezkatuko
+genituzke, ˆ
+Yp lortuz.
+ˆ
+Yp = Xp ˆ
+βKTA
+Edo beste era batera:
+ˆ
+Yp = ˆ
+β1 + ˆ
+β2X2p + . . . + ˆ
+βKXKp.
+Hala ere, aldagai azalduaren p momentuko benetako balioa jakiterakoan, errore bat egin
+dugula antzemango dugu (aurresanaren errorea: ep = Yp − ˆ
+Yp), aldagai azaltzaileen balioe-
+tan errorea dagoelako, β koeﬁzienteen estimatzaileak erabili ditugulako, Yp up-
+ren menpean
+dagoelako 
+(hau da behaketa horri dagokion perturbazioaren menpe), etab. Horregatik, ko-
+menigarria izaten da tartezko aurresan bat egitea, nolabait aurresanaren zehaztasun neurri
+bat kontuan hartzen baitu.
+Tartezko aurresana lortzeko, aurresanaren errorearen banaketan oinarrituko gara, up eta ˆ
+β
+aldagai aleatorio normalak badira, aurresanaren errorea ere normala baita:
+
+Gretl-en bidezko erregresio analisia
+81
+ep ∼ N (0, σ2( 1 + Xp X X
+−1 X
+p )).
+Orokorrean σ2 ezezaguna izaten denez, bere estimatzaile alboragabea erabiliz, ondorengo
+banaketa lortuko genuke:
+ep
+ˆ
+σ
+1 + Xp ( X X )
+−1 Xp
+∼ t(N−K).
+Eta hemendik, puntuzko aurresanaren inguruan, aldagai azalduak p momentuan hartuko
+duen balioaren aurresanaren tarte bat lortuko genuke 1−α konﬁdantza mailarekin, ondorengo
+adierazpena lortuz:
+KT (Yp)1−α = ˆ
+Yp − t(N−K)α
+2
+ˆ
+σe
+p ,
+ˆ
+Yp + t(N−K)α
+2
+ˆ
+σe
+p
+non ˆ
+σ2e
+p = ˆ
+σ2( 1 + Xp ( X X )
+−1 Xp ) eta X
+p =
+1 X2p · · · XKp
+diren.
+4.6
+Puntuzko eta tartezko aurresanak Gretl erabiliz
+Aurreko atalean aurresanak nola lortzen diren aztertu dugu baina eskuz egin nahi izanez gero,
+egin beharreko eragiketak asko dira. Gretlek aurresanak lortzeko aukera eskeintzen duenez,
+etxebizitzen prezioen ariketa erabiliko dugu Gretlen jarraitu beharreko pausuak zein diren
+jakiteko. Demagun honako eredua
+P RICEi = β1 + β2SQF Ti + β3BEDRMSi + β4BAT HSi + ui
+(4.7)
+dugula eta beste etxebizitza baten ondorengo informazioa:
+ SQF T = 3200, BEDRM S =
+5 eta BAT HS = 3 izanik, bere prezioa aurresan nahi dugula. Horretarako 
+(4.7) eredua
+erabiliz ezaugarri hauetako etxebizitzaren prezioaren aurresan bat egin dezakegu eta bide
+batez, aztertu ea eskatzen diguten prezioa 
+(P RICE = 500) arrazoizkoa den edo ez.
+Gretlen bitartez aurresan hau egiteko lehen pausua datu berriak datu-
+basean barneratzea da:
+Datuak → Aukeratu guztia egin ondoren, Datuak → Editatu balioak aukeran
+Behaketa → Erantsi behaketak klikatu
+eta behaketa berria barneratuko dugu. Hau egiteko, barneratuko ditugun behaketa kopurua
+(adibidean behaketa bat) zein den adierazi behar dugu:
+
+82
+4.Gaia: Murrizketa linealen kontrasteak eta aurresanak
+4.6 Irudia: Balioak editatzea
+4.7 Irudia: Behaketak erantsi
+4.8 Irudia: Eransteko behaketen kopurua
+eta bakoitzari dagokion lekuan ezagutzen ditugun balioak barneratzen ditudu azken errenkada
+osatuz. Jarraian, Aplikatu klikatuz.
+Ondoren, kontu handia izan behar dugu, gure eredua estimatzerakoan, behaketa berri hau ez
+baitugu kontuan hartu behar 
+(lagina 14 behaketez osaturik zegoen). Horregatik, Lagina →
+
+Gretl-en bidezko erregresio analisia
+83
+4.9 Irudia: Datu berrien ikuspena
+Ezarri ibiltartea aukeran
+4.10 Irudia: Ibiltartearen ezarpena
+
+84
+4.Gaia: Murrizketa linealen kontrasteak eta aurresanak
+lagina nola osatzen den adieraziko dugu, gure kasuan 14 behaketez:
+4.11 Irudia: Lagin tartearen ezarpena
+Ados klikatu ondoren, aurreko gaietan ikusi bezala, eredua KTA bitartez estimatuko dugu
+eta emaitzen lehiatilan Analisia → Aurresanak klikatuko.
+4.12 Irudia: Aurresanak
+
+Gretl-en bidezko erregresio analisia
+85
+Lehiatila berrian 15. behaketa sartuko dugu, ondoren Ados klikatuz.
+4.13 Irudia: Aurresan tartearen ezarpena
+Lehiatila berrian, interesatzen zaizkigun balioak azken errenkadan daude. Hau da, ezaugarri
+horietako etxebizitza baten prezioaren puntuzko aurresana 479, 91 da edota %95eko konﬁ-
+dantza mailarekin 356, 49 eta 603, 32 bitartean egongo denez, 500 prezioa arrazoizkoa dela
+deritzogu.
+4.14 Irudia: Puntuzko eta tartezko aurresanen balioak
+
+86
+4.Gaia: Murrizketa linealen kontrasteak eta aurresanak
+Aurreko emaitzarekin batera beste irudi bat agertzen da. Bertan orain arte lortutakoa labur-
+biltzen da, halaber, interesatzen zaigun aldagaiaren balioaren garapena 
+(gorriz), aurresanak
+(urdinez) eta %95eko konﬁdantza mailako konﬁdantza tartea 
+(berdez). Askotan lagungarria
+izaten da emaitzak horrela ikustea, zenbakiz osatutako taula batean baino hobeto nabari
+direlako aztergai dugun aldagaiaren ezaugarri nagusienak.
+4.15 Irudia: Aurresanen graﬁkoa
+Bibliograﬁa
+Ramanathan, R. 
+(2002), Introductory Econometrics with Applications, 5. ed., South-
+Western, Ohio.

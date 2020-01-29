@@ -1,0 +1,3055 @@
+
+
+
+Gaien Aurkibidea
+1
+Aldagai Anitzeko Funtzioak. Deribaketa
+2
+1.1
+Sarrera . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2
+1.1.1
+Bi Aldagai Funtzioak . . . . . . . . . . . . . . . . . . . . . .
+2
+1.1.2
+n Aldagai Funtzioak . . . . . . . . . . . . . . . . . . . . . .
+4
+1.1.3
+Bi Aldagaiko Funtzioaren Adierazpen Geometrikoa . . . . .
+5
+1.1.4
+Funtzioaren Gehikuntza Partziala eta Totala . . . . . . . .
+6
+1.1.5
+Aldagai Anitzeko Funtzioen Jarraitasuna . . . . . . . . . .
+7
+1.2
+Aldagai Anitzeko Funtzioen Deribatu Partzialak . . . . . . . . . . 10
+1.3
+Diferentziala
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+1.4
+Funtzio Konposatuaren Deribatua. Deribatu Totala . . . . . . . . 15
+1.5
+Funtzio Inplizituen Deribatua . . . . . . . . . . . . . . . . . . . . . 17
+1.6
+Ordena Goreneko Deribatu Partzialak . . . . . . . . . . . . . . . . 20
+1.7
+Maila Gainazalak eta Maila Lerroak. Norabide Batekiko Deriba-
+tua eta Gradientea . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+1.7.1
+Maila Gainazalak eta Maila Lerroak . . . . . . . . . . . . . 22
+1.7.2
+Norabide Batekiko Deribatua . . . . . . . . . . . . . . . . . 23
+1.7.3
+Gradientea. Deﬁnizioa . . . . . . . . . . . . . . . . . . . . . 25
+1.7.4
+Gradientea. Propietatea . . . . . . . . . . . . . . . . . . . . 27
+1.8
+Taylor-en Formula Bi Aldagai Funtzioekin . . . . . . . . . . . . . . 28
+1.9
+Aldagai Anitzeko Funtzioaren Maximoak eta Minimoak . . . . . . 29
+1.10 Maximo eta Minimo Baldintzatuak . . . . . . . . . . . . . . . . . . 36
+1
+
+Kapitulua 1
+Aldagai Anitzeko Funtzioak.
+Deribaketa
+1.1
+Sarrera
+1.1.1
+Bi Aldagai Funtzioak
+Funtzio hauen balioak aldagai independente bi edo gehiagoko balioen menpekoak
+dira.
+adibidea
+1.1.
+1. x eta y aldeetako laukizuzenaren S azalera formula hone-
+takoa da: S = xy. Beraz bi aldagaien menpekoa, hoien balioak bakoitza
+bere aldetik aldatu daitekeela S aldatzeko. S-ren balioa (x, y) bikotearen
+menpekoa da.
+2. Proiektil bat v0 hasierako abiadurarekin eta horizontalarekin ϕ angeluarekin
+ateratzen bada, berriro lurrera jetsi eta R distantzia formula honetako da,
+R =
+v20 sin 2ϕ
+g
+nun g grabitatearen azelerazioa den, konstante bat. Beraz R distantzia bi
+aldagaien menpekoa dela esan dezakegu v0 eta ϕ.
+O
+x
+y
+D
+(x, y)
+(a, b)
+f
+z
+O
+f
+(a, b)
+f
+(x, y)
+definizioa
+1.1. Bedi D = {(x, y)/(x, y) ∈ R × R}, x eta y aldagai independen-
+teen balio errealekin osotutako multzo bat. 
+(x, y) bikote bakoitzari zenbaki erreal
+bakarra ematen dion arauari x eta y aldagaiko funtzioa deitzen dugu. Bere
+balioak f (x, y) deitzen dugu.
+Honela idatzi dezakegu ere,
+2
+
+1.1.
+SARRERA
+3
+D ⊂ R × R
+(x, y)
+R
+f
+(x, y)
+f
+D multzoko puntuak badira f -ren bidez f (x, y) irudia dutenak orduan D deﬁ-
+nizio eremua edo existentzi eremua deitzen dugu
+Emandako bi adibidetan funtzioa formula baten bidez deﬁnituta dago, eta deﬁ-
+nizio eremuko edozein bikotearentzako kalkulatu daiteke funtzioaren balioa. Beste
+batzuetan, bereziki funtzioa laborategiko neurketa esperimentalekin ezagutu nahi
+denean, informazioa askoz murritzagoa da eta taula batean kabitu eta gauzatzen
+da. Adibidez laukizuzen baten azaleraren formula eratortzeko laukizuzen multzo
+baten neurriak hartu eta holako taula osotu daiteke,
+x=0
+1
+1,5
+2
+3
+y=1
+0
+1
+1,5
+2
+3
+2
+0
+2
+3
+4
+6
+3
+0
+3
+4,5
+6
+9
+4
+0
+4
+6
+8
+12
+S = xy = 2 × 4 = 8
+f (x, y) funtzio baten D deﬁnizio-eremua xy planuko zati bat da, M (x, y) pun-
+tuak gordetzen dituena.
+Deﬁnizio eremuan barne-puntuak daude eta muga-
+puntuak egon daitezke ere. Azken hoiek D-renak direnean D eremu itxia du-
+gu. Muga puntuak D-renak ez direnean D eremu irekia dugu. xy planu osoa
+deﬁnizio-eremua izan daiteke ere (deﬁnizio eremu ireki bat.) Ikus irudiak,
+M
+(x, y)
+O
+x
+y
+x
+y
+z
+D
+barne-puntua
+muga-puntua
+O
+x
+y
+z
+D eremu irekia
+O
+x
+y
+z
+D eremu itxia
+Deﬁnizio eremuak bornatuak eta ez bornatuak izan daitezke ere. Lehenengo
+kasuan D eremuko puntu guztiak espazioko O jatorritik distantzi mugatu baten
+barrura daude. M ∈ D bada |OM| ≤ c.
+
+4
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. DERIBAKETA
+O
+x
+y
+z
+O
+x
+y
+z
+c
+D =
+R × R
+D
+D eremu bornatua
+D eremu ez bornatua, xy planua
+adibidea
+1.2.
+1. z = f (x, y) = 2x − y funtzioaren deﬁnizio eremua xy planu
+osoa da. Ez dago arazorik edozein zenbaki errealeko bikote hartu eta z
+kalkulatzeko.
+2. z =
+1 − x2 − y2 funtzioaren deﬁnizio eremua errokizuna zenbaki positibo
+(edo zero) egiten duten bikoteen multzoa izango da,
+1 − x
+2 − y2 ≥ 0 → x2 + y2 ≤ 1
+x2 +y = 1 ekuazioko lerroa xy planuko zirkunferentzi zentratua da, erradioa
+1. Zirkunferentzi horren puntuak D deﬁnizio eremukoak dira, baita bere
+barruko zirkuluaren guztiak,
+D = (x, y) ∈ R
+2/x2 + y2 ≤ 1
+3. z = ln(x + y) funtzioa existitzeko x + y positiboa izan behar da (ezin da 0
+izan). Beraz deﬁnizio eremua x + y > 0 ekuazioa betetzen duten bikotekin
+osatuta dago. Horrek xy planuaren erdi bat deﬁnitzen du,
+y
+= −x
+x
++ y > 0
+O
+x
+y
+D
+eremu irekia
+D
+ln(x + y) funtzioaren deﬁnizio-eremua
+1.1.2
+n Aldagai Funtzioak
+1. x, y eta z aldeak dituen paralelepipedo baten V bolumena formula hone-
+takoa da: V = xyz, beraz hiru aldagaien funtzioa, aldagai independen-
+te bakoitzak bere balioa aldatu dezakeela, besteak zer egiten duten kon-
+tuan hartu gabe. V aldagaiaren balioak hirukote baten menpekoak dira
+V = V (x, y, z).
+
+1.1.
+SARRERA
+5
+2.
+u =
+x2 + y2 + z2 + t2
+√
+1 + x2
+Formula horretako u lau aldagaien funtzioa da u = u(x, y, z, t).
+definizioa
+1.2. Bedi D = (x1, x2, . . . , xn)/(x1, x2, . . . , xn) ∈ R × R ×
+(n)
+. . . ×R ,
+x1, x2, . . . , xn aldagai independenteen balio errealekin osotutako n-
+kote multzo
+bat. (x1, x2, . . . , xn) n-
+kote bakoitzari zenbaki erreal bakarra ematen dion arauari
+x1, x2, . . . , xn aldagaiko funtzioa deitzen dugu. Bere balioak f 
+(x1, x2, . . . , xn)
+deitzen dugu.
+Honela idatzi dezakegu ere,
+D ⊂ R × R ×
+(n)
+. . . ×R
+(x1, x2, . . . , x
+n
+)
+R
+f
+(x1, x2, . . . , x
+n
+)
+f
+D multzoko n-koteak badira f -ren bidez f 
+(x1, x2, . . . , xn) irudia dutenak, or-
+duan D deﬁnizio eremua edo existentzi eremua deitzen dugu
+Hiru aldagaiko funtzioaren deﬁnizio eremua hiru dimentsio espazioko puntu
+multzo edo objektua da,
+O
+x
+y
+z
+D
+M
+(x, y, z)
+x
+y
+z
+funtzioaren balioa,
+f
+(M ) = f (x, y, z)
+ez dago irudikatzerik.
+Baina funtzioaren balio berak f (x, y, z) ez dago graﬁkatzerik, espazioko pun-
+tuetan labelak itsasten ez badira. Adibidez f (x, y, z) = T 
+(x, y, z) gela baten
+puntuen tenperatura izan daiteke, edo argitasuna, etabar.
+Era berean lau aldagaiko u = f (x, y, z, t) funtzioaren deﬁnizio-
+eremua lau zen-
+bakizko laukoten multzo bat da.
+1.1.3
+Bi Aldagaiko Funtzioaren Adierazpen Geometrikoa
+Esan dugunez f (x, y) funtzio baten D deﬁnizio eremua xy planuko eremu bat da.
+Beraz hiru dimentsio espazioan badago beste neurri bat, garaiera, hor funtzioaren
+
+6
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. DERIBAKETA
+M
+(x, y)
+O
+x
+y
+x
+y
+z
+D
+z
+z
+= f (x, y)
+P
+z=x
+2+y2
+-2
+-1
+ 0
+ 1
+ 2-2
+-1
+ 0
+ 1
+ 2
+ 0
+ 1
+ 2
+ 3
+ 4
+menpeko aldagaiaren balioak jarri daitezkeela. Hori z ardatza da, eta z ardatzean
+funtzioaren balioak jarriko ditugu, deﬁnizio eremuko (x, y) bakoitzeko,
+z = f (x, y) balio bat
+Horrela hiru dimentsio espazioan (x, y, z) hirukoteak edukiko ditugu, edo 
+(x, y, f (x, y))
+hirukoteak. Hirukote guztien multzoa f (x, y)-
+ren grafoa da, eta espazioko gaina-
+zal bat osatzen dute.
+Irudiek erakusten dute grafo orokor bat, eta z = x2 + y2 funtzioarena. Azken
+hori paraboloide bat da.
+1.1.4
+Funtzioaren Gehikuntza Partziala eta Totala
+f 
+(x, y) funtzioaren aldagai independenteak x eta y dira, eta bietako edozein alda-
+tuz funtzioa aldatu eginten da. Demagun x aldagaiaren ∆x gehikuntza dugula,
+funtzioaren gehikuntza x-rekiko z-
+ren gehikuntza partziala deituko dugu eta ida-
+tzi ∆xz. Orduan,
+∆xz = f (x + ∆x, y) − f(x, y)
+Berdin-berdin y aldagaiaren ∆y gehikuntza badugu funtzioarena z-ren gehi-
+kuntza partziala y-rekiko deituko dugu, eta idatzi ∆yz, nun
+∆yz = f (x, y + ∆y) − f(x, y)
+x aldagaiak ∆x gehikuntza badu eta, aldi berean, y aldagaiak ∆y gehikuntza
+badu, orduan funtzioarena z-ren gehikuntza totala deituko dugu, eta idatzi ∆z,
+nun
+∆z = f (x + ∆x, y + ∆y) − f(x, y)
+Kontuan hartu behar dugu kasu orokorrean hau dugula ∆z = ∆xz + ∆yz.
+
+1.1.
+SARRERA
+7
+adibidea
+1.3. Bedi z = xy. Funtzioaren gehikuntza partzialak eta totala hauek
+dira,
+∆xu = (x + ∆x)y − xy = y∆x
+∆yz = x(y + ∆y) − xy = x∆y
+∆z = (x + ∆x)(y + ∆y) − xy = x∆y + y∆x + ∆x∆y
+Edozein aldagai kopuruko funtzioaren gehikuntza total eta partzialak era ber-
+dinean kalkulatzen dira. u = f (x, y, z) hiru aldagaiko funtzioan hau dugu,
+∆xu = f (x + ∆x, y, z) − f(x, y, z)
+∆yu = f (x, y + ∆y, z) − f(x, y, z)
+∆zu = f (x, y, z + ∆z) − f(x, y, z)
+∆u = f (x + ∆x, y + ∆y, z + ∆z) − f(x, y, z)
+1.1.5
+Aldagai Anitzeko Funtzioen Jarraitasuna
+Azpigai hau bakarrik f (x, y) bi aldagai funtzioekin aztertuko dugu. Besteekin
+konzeptuak geometrikoki azaltzea zailagoa baita. Konzeptuak ez dira aldatzen,
+bi aldagaikoa izan edo aldagai gehiagoko funtzioa izan.
+Jarraitasuna konzeptuak, dakigunez, funtzio baten balioak puntu zehatz baten
+inguruan aztertzea eskatzen du, jarraitasunak limitearen konzeptua gordetzen
+baitu. Aldagai bakarreko funtzioarekin ingurua dimentsio bakarreko tartea da.
+Bi aldagaiekin gauzak ezberdinak dira.
+Dakigunez orain D deﬁnizio eremua xy planuko inguru bat da. Bere puntu
+bat hartu M (x0, y0) eta horren inguru bat xy planuko zati bat da ere. Ondo-
+rioz berarengana joateko norabide asko daude eta r distantzia berdinara dauden
+puntuak M0-n zentratuta r erradioko zirkunferentzian daude; r baino distantzia
+laburrera daudenak zirkuluaren barruan daude.
+D
+O
+x
+y
+M0
+(x0, y0)
+M
+(x, y)
+x
+x0
+y
+y0
+r
+f
+O
+z
+A
+A + ǫ
+A − ǫ
+Limitearen deﬁnizioa emango dugu lehenengo,
+definizioa
+1.3. M (x, y) puntua M0(x0, y0) punturantz doanean, A zenbakia f (x, y)
+funtzioaren limitea dela esango dugu, baldin edozein ǫ > 0 zenbakirako r > 0 zen-
+bakia existitzen bada, nun M M0 < r betetzen duten puntu guztietarako
+|f(x, y) − A| < ǫ
+betetzen bada.
+
+8
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. DERIBAKETA
+Bi aldagaiko funtzioaren limitea honela idatziko dugu,
+lim
+x→x0
+y→y0
+f (x, y) = A
+Deﬁnizioak ez du esaten zehazki zein puntutik hasi behar den M0 puntura joa-
+ten. M puntua inguruko edozein puntua izan daiteke. Gainera ez du esaten zein
+bidetik joan behar den, M batetik hasi eta bidea aukeran dago. Kasu guztietan
+limitearen balioa A balio bera lortu beharko genuke, bestela ez dago M0 puntuko
+limiteaz hitzegiterik.
+adibidea
+1.4.
+f (x, y) =
+2xy
+x2 + y2
+funtzioa ez dago deﬁnituta 
+(0, 0) puntuan, zatitzailea anulatzen delako. Hala ere,
+puntu horretan limiterik egon daiteke. Demagun (0, 0) puntura lerro zuzenetatik
+hurbiltzen hari garela, hau da y = kx dela, nun k konstante bat den. Orduan
+lim
+x→0
+y→0
+2xy
+x2 + y2
+= lim
+x→0
+2kx2
+x2 + k2x2
+= lim
+x→0
+2k
+1 + k2
+=
+2k
+1 + k2
+Ikusten dugunez limitearen balioa k-ren menpekoa da, aukeratutako bidearena,
+beraz ez dago limiterik (0, 0) puntuan.
+Bidearen balizko menpetasuna dela eta limiteak kalkulatzerakoan askotan erre-
+zagoa izango da esatea limiterik ez dagoela, limitearen balioa aurkitzea baino.
+Horrela gertatzen da bi limite hauekin ere,
+lim
+(x,y)→(0,0)
+x2 − y
+2
+x2 + y2
+lim
+(x,y)→(0,0)
+xy2
+x2 + y4
+Lehenengoaren azterketa koordenatu ardatzetatik joanda egin daiteke, biga-
+rrenarena lehenengo bide zuzenetatik eta gero x = y2 ekuazioko bidetik.
+Orain puntu bateko jarraitasuna azalduko dugu,
+definizioa
+1.4. Bedi f (x, y) funtzioaren deﬁnizio eremuko M0(x0, y0) puntu bat.
+f funtzioa M0 puntuan jarraia dela esango dugu baldin ondoko berdintza betetzen
+bada,
+lim
+x→x0
+y→y0
+f (x, y) = f (x0, y0)
+Jarraitasunaren baldintza era ezberdinetan idatzi dezakegu,
+1. x = x0 + ∆x eta y = y0 + ∆y jarriz, ikusten dugu x → x0-k ∆x → 0
+ekartzen duela, eta y → y0-k ∆y → 0. Beraz formula hau dugu,
+lim
+∆x→0
+∆y→0
+f (x0 + ∆x, y0 + ∆y) = f (x0, y0)
+
+1.1.
+SARRERA
+9
+2. Baina baita hau ere,
+lim
+∆x→0
+∆y→0
+[f (x0 + ∆x, y0 + ∆y) − f(x0, y0)] = 0
+Azkenak M0 puntutik aldatzen hasi eta funtzioren balioaren aldaketa dugu,
+∆z = f (x0 + ∆x, y0 + ∆y) − f(x0, y0). Beraz,
+lim
+∆x→0
+∆y→0
+∆z = 0
+M0 puntutik norabide batean aldatzen hasi eta ∆ρ distantzia aldatu bagera
+hau dugu ∆ρ =
+(∆x)2 + (∆y)2 eta ekuazio horren arabera ∆x → 0 eta
+∆y → 0 badira, orduan ∆ρ → 0 da ere. Alderantziz ere ∆ρ → 0 denean,
+∆x eta ∆y biak anulatu behar dira, ez da nahikoa bat bakarrik anulatzea.
+Beraz, jarraitasunaren baldintza honela idatzi dezakegu ere
+lim
+∆ρ→0
+∆z = 0
+Eremu bateko puntu bakoitzean f jarraia bada, orduan eremu horretan f ja-
+rraia dela esango dugu.
+Berriro ere funtzioak ezjarraitasunak eduki ditzakete, etenguneak deitzen di-
+tugu ere. Ezjarraitasunak mota ezberdinekoak izan daitezke,
+1. M0 puntuko limitea egon daiteke, baina puntu horretan funtzioa deﬁnituta
+ez badago funtzioa etengune bat edukiko du. Ezjarraitasun hau ekidigarria
+da. Funtzioa deﬁnitu behar da deﬁnituta ez dagoen puntuan.
+2. Mo puntuan limiterik ez badago funtzioa jarraia ere ezin da izan. Ezja-
+rraitasuna ezin da ekiditu. Adibide bat limitearen deﬁnizioa ematerakoan
+jarritakoa da.
+3. M0(x0, y0) puntua f (x, y)-ren deﬁnizio eremukoa bada eta funtzioaren limi-
+tea ere badago M0 puntuan, baina biak ezberdinak badira funtzioak eten-
+gunea du,
+lim
+x→x0
+y→y0
+f (x, y) = f (x0, y0)
+adibidea
+1.5. z = x2 + y2 funtzioa jarraia da jarraia da bere deﬁnizio eremu
+osoan, hau da, xy planu ososan. Izan ere, edozein x, y, ∆x, ∆y zenbakitarako,
+∆z = [(x + ∆x)2 + (y + ∆y)2] − (x
+2 + y2) = 2x∆x + 2y∆y + ∆2x + ∆2y
+dugu. Beraz,
+lim
+∆x→0
+∆y→0
+∆z = 0
+Eremu itxi eta bornatu batean jarraia den aldagai anitzeko funtzio baten pro-
+pietate bi azalduko dugu. Tarte batean jarrai aldagai bakarreko funtzioak bete-
+takoen analogoak dira.
+
+10
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. DERIBAKETA
+1. Propietatea.
+f (x, y, . . . ) funtzioa D eremu itxi eta bornatu batean deﬁnituta eta ja-
+rraia bada, eremu horretan badaude gutxienez bi puntu N0(x0, y0, . . . ) eta
+N 0(x0, y0, . . . ), nun eremuaren puntu guztietarako,
+f (x0, y0, . . . ) ≥ f(x, y, . . . )
+eta,
+f (x0, y0, . . . ) ≤ f(x, y, . . . )
+Noski f (x0, y0, . . . ) funtzioaren maximoa deitzen dugu, M, eta f 
+(x0, y0, . . . )
+funtzioaren minimoa, m. Propietateak esaten du esandako baldintzetan
+gutxienez maximo bat eta minimo bat edukiko dugula.
+2. Propietatea.
+f (x, y, . . . ) funtzioa D eremu itxi eta bornatu batean deﬁnituta eta jarraia
+bada eta M balio maximoa eta m balio minimoa badira, bitarteko µ edozein
+baliorako m ≤ µ ≤ M, badago N∗(x∗0, y∗0, . . . ) punturik non
+f (x∗0, y∗0, . . . ) = µ
+beteko den.
+Korolarioa.
+2. propietatearen korolarioa zera da: f (x, y, . . . ) funtzioa D eremu itxi
+eta bornatu batean deﬁnituta eta jarraia bada, eta eremu horretan balio
+positiboak eta negatiboak hartzen baditu, D-ren barnean puntu batzuk
+existituko dira, nun f (x, y, . . . ) anulatuko den.
+1.2
+Aldagai Anitzeko Funtzioen Deribatu Partzialak
+definizioa
+1.5. ∆xz gehikuntza partzialaren eta ∆x gehikuntzaren arteko zati-
+duraren limitea, ∆x zerorantz doanean, z = f (x, y) funtzioaren x-
+rekiko deribatu
+partziala deitzen dugu, eta idatzi
+∂z
+∂x
+= lim
+∆x→0
+∆xz
+∆x
+= lim
+∆x→0
+f (x + ∆x, y) − f(x, y)
+∆x
+Beste idazkerak ere erabiltzen dira, hala nola, z′x, f′x(x, y),
+∂f
+∂x
+.
+Era berean deﬁnitzen da y-rekiko deribatu partziala,
+definizioa
+1.6. ∆yz gehikuntza partzialaren eta ∆y gehikuntzaren arteko zati-
+duraren limitea, ∆y zerorantz doanean, z = f (x, y) funtzioaren y-
+rekiko deribatu
+partziala deitzen dugu, eta idatzi
+∂z
+∂y
+= lim
+∆y→0
+∆yz
+∆y
+= lim
+∆y→0
+f (x, y + ∆y) − f(x, y)
+∆y
+Beste idazkerak hauek dira: z′y, f′y(x, y),
+∂f
+∂y
+.
+Deribatu partzialak kalkulatzerakoan aldagai bat aldatu eta bestea konstante
+mantentzen da. Horrela x-rekiko deribatu partziala, y konstante mantentzen
+delako, bakarrik x-ren funtzio den f (x, y)-ren deribatua da. y-rekiko deribatu
+partzialaren kalkuluan f (x, y) funtzioa y-ren funtzio da bakarrik.
+
+1.2.
+ALDAGAI ANITZEKO FUNTZIOEN DERIBATU PARTZIALAK
+11
+x-rekiko eta y-rekiko deribatu partzialen esanahi geometrikoa irudian dugu. S
+gainazala f (x, y) funtzioaren grafoa da. x konstanteko, x = a, puntuen grafoa
+C2 lerroa da (yz planoaren paraleloa), eta y konstanteko, y = b, puntuen grafoa
+C1 lerroa da (xz planoaren paraleloa). Lerro hoien ekuazioak hauek dira,
+C2 : z = f (a, y)
+C1 : z = f (x, b)
+P puntuan beren lerro ikutzileak T2 eta T1 dira, eta lerro hoien maldak hauek,
+T2 : m =
+d
+dy
+f (a, y)
+y=b
+=
+∂
+∂y
+f (x, y)
+(a,b)
+T1 : m =
+d
+dx
+f (x, b)
+x=a
+=
+∂
+∂x
+f (x, y)
+(a,b)
+x
+y
+z
+O
+S
+C2
+C1
+T1
+T2
+P
+(a, b, c)
+(a, b, 0)
+b
+a
+adibidea
+1.6. Kalkulatu funtzio honen deribatu partzialak z = x2 sin y.
+Ebazpena:
+Deribatzea erreza denez,
+∂
+∂x
+(x2 sin y) = 2x sin y,
+∂
+∂y
+(x2 sin y) = x2 cos y
+adibidea
+1.7. Kalkulatu futzio honen deribatu partzialak z = xy.
+Ebazpena:
+∂
+∂x
+xy = yxy−1;
+∂
+∂y
+xy = xy ln x
+Bi baino aldagai gehiagoko funtzioekin deribatu partzialak gehiago dira, hi-
+ru aldagai independenteekin hiru deribatu partzial, lau aldagaiekin lau deribatu
+partzial, etabar.
+
+12
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. DERIBAKETA
+adibidea
+1.8. Kalkulatu funtzio honetako aldagai independente bakoitzeko deri-
+batu partzialak, u = x2 + y2 + xtz3.
+Ebazpena:
+Lau aldagai independente dugu, edozein aldatu eta u funtzioa aldatu egingo da.
+Beraz lau deribatu partizal dugu,
+∂u
+∂x
+= 2x + tz3,
+∂u
+∂y
+= 2y,
+∂u
+∂z
+= 3xtz2,
+∂u
+∂t
+= xz3
+1.3
+Diferentziala
+Aldagai bateko f (x) funtzio errealetan deﬁnitutako diferentziala hau zen,
+dy = f ′(x) ∆x = f ′(x) dx
+eta diferentziala ∆y gehikuntzaren hurbilketa lineala da,
+∆y = f ′(x) ∆x + α∆x
+nun α∆x inﬁnitesimoaren ordena ∆x inﬁnitesimoarena baino handiagoa den.
+Bedi z = f (x, y) funtzioa. Bere gehikuntza totala honela jar daiteke, ∆z =
+f (x + ∆x, y + ∆y) − f(x, y), edo pixka bat operatuz,
+∆z = [f (x + ∆x, y + ∆y) − f(x, y + ∆y)] + [f(x, y + ∆y) − f(x, y)]
+Egin dugu gauza bakarra zenbaki bat batu eta kentzea da.
+Bigarren zatia hestu-hestu dago lotuta y-rekiko deribatu partzialarekin,
+∂z
+∂y
+= lim
+∆y→0
+f (x, y + ∆y) − f(x, y)
+∆y
+Deribatu hori existitzen bada f (x, y) jarraia da y-rekiko eta Lagrange teore-
+maren arabera (y, y + ∆y) tartean egon behar da punturen bat y ∈ (y, y + ∆y),
+horko deribatuaren balioarekin hau dugun,
+f (x, y + ∆y) − f(x, y) = ∆y
+∂f (x, y)
+∂y
+∆z-ren lehenengo zatian y + ∆y konstante mantentzen ari da, eta x aldatu
+x baliotik x + ∆x baliora, beraz gehikuntza hori lotuta dago x-rekiko deribatu
+partzialarekin. Deribatu hori existitzen bada f (x, y) jarraia da x-rekiko, eta
+Lagrange teoremaren arabera existitzen da x
+∈ (x, x + ∆x), horko deribatuarekin
+hau dugun,
+f (x + ∆x, y + ∆y) − f(x, y + ∆y) = ∆x
+∂f (x, y + ∆y)
+∂x
+
+1.3.
+DIFERENTZIALA
+13
+∆z-ren ekuazioan ordezkapenak eginez,
+∆z = ∆x
+∂f (x, y + ∆y)
+∂x
++ ∆y
+∂f (x, y)
+∂y
+Aurrera segitzeko f ′x eta f′y funtzioak jarraiak direla suposatu behar dugu.
+Kontuan hartzen badugu x
+∈ (x, x + ∆x) eta y ∈ (y, y + ∆y) daudela, ∆x → 0
+eta ∆y → 0 limitean x-k bat egingo du x-ekin, eta y-k bat egingo du y-rekin.
+Bestaldetik y + ∆y → y joango da. Deribatu partzialak jarraiak izanik beren
+balioak ere (x, y) azken puntukoak izango dira. Beraz, hauek esan ditzakegu,
+lim
+∆x→0
+∆y→0
+∂f (x, y + ∆y)
+∂x
+= lim
+∆x→0
+∆y→0
+∂f
+∂x
+(x,y+∆y)
+=
+∂f
+∂x
+(x,y)
+=
+∂f (x, y)
+∂x
+lim
+∆x→0
+∆y→0
+∂f (x, y)
+∂y
+= lim
+∆x→0
+∆y→0
+∂f
+∂y
+(x,y)
+=
+∂f
+∂y
+(x,y)
+=
+∂f (x, y)
+∂y
+Deribatu partzial jarraien limitearen eta inguruko balioaren arteko aldea nahi
+den txikia egin daiteke, hau da,
+∂f (x, y + ∆y)
+∂x
+=
+∂f (x, y)
+∂x
++ α1
+∂f (x, y)
+∂y
+=
+∂f (x, y)
+∂y
++ α2
+nun α1 eta α2 zerora doaz ∆x eta ∆y biak zerorantz doazenean, hau da ∆r =
+∆2x + ∆2y zerorantz doanean. ∆z honela gelditzen da,
+∆z =
+∂f (x, y)
+∂x
+∆x +
+∂f (x, y)
+∂y
+∆y + α1∆x + α2∆y
+(1.1)
+Azkeneko bietan ∆x eta ∆y ditugu eta hoiek inﬁnitesimoak dira ∆r inﬁnitesi-
+moaren ordena berekoak. Orduan α1∆x eta α2∆y ordena garaiagokoak dira ∆r
+inﬁnitesimoa baino. Beraz beren batura ere bai.
+Lehenengo gaiak bakarrik hartuz,
+∆z ≈ f ′x(x, y)∆x + f′y(x, y)∆y
+eta hori ∆z gehikuntza totalaren hurbilketa lineala deitzen dugu. Gehikuntza-
+ren balio osoa lortzeko gelditzen dena ∆r baino ordena handiagoko inﬁnitesimoa
+da. Hurbilketa lineala existitzen denean funtzioa diferentziagarria dela esaten
+dugu, eta hurbilketari funtzioaren diferentzial totala deitzen diogu. Idatzi dz
+edo df egiten dugu,
+dz = f ′x(x, y)∆x + f′y(x, y)∆y = f′x(x, y) dx + f′y(x, y) dy =
+∂f
+∂x
+dx +
+∂f
+∂y
+dy
+nun ∆x eta ∆y aldagai independenteen diferentzialak diren ere, dx ≡ ∆x eta
+dy ≡ ∆y.
+
+14
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. DERIBAKETA
+adibidea
+1.9. Kalkulatu z = xy funtzioaren diferentzial totala eta gehikuntza
+totala (2, 3) puntuan, ∆x = 0, 1 eta ∆y = 0, 2 direnean.
+Ebazpena:
+Gehikuntza totala hau da,
+∆z = (x + ∆x)(y + ∆y) − xy = x∆y + y∆x + ∆x∆y
+eta emandako balioekin,
+∆z = 2 · 0, 2 + 3 · 0, 1 + 0, 1 · 0, 2 = 0, 4 + 0, 3 + 0, 02 = 0, 72
+Diferentzial totala beste hau izango da,
+dz =
+∂z
+∂x
+∆x +
+∂z
+∂y
+∆y = y∆x + x∆y = 3 · 0, 1 + 2 · 0, 2 = 0, 3 + 0, 4 = 0, 7
+Beraz hurbilketa bat, kasu honetan balio txikiagokoa.
+Diferentzial totalaren konzeptua bi aldagai baino aldagai gehiago dugunean
+ere erabiltzen da. 
+(x1, x2, . . . , xn) aldagai independenteetako funtzioa badugu
+z = f 
+(x1, x2, . . . , xn), eta puntu batean n deribatu partzialak jarraiak badira,
+orduan puntu horretako diferentziala totala hau da,
+dz =
+∂f
+∂x1
+dx1 +
+∂f
+∂x2
+dx2 + · · · +
+∂f
+∂xn
+dxn
+Deribatu partzialak jarraiak diren puntuan ebaluatuta daude.
+adibidea
+1.10. Kalkulatu hurrengo funtzioaren diferentzial totalaren ekuazioa
+u = ex
+2 +y2 sin2 z
+Ebazpena:
+Deribatu partzialak hauek dira,
+∂u
+∂x
+= 2xex
+2 +y2 sin2 z
+∂u
+∂y
+= 2yex
+2 +y2 sin2 z
+∂u
+∂z
+= ex
+2 +y2 2 sin z cos z = ex
+2 +y2 sin 2z
+eta diferentzial totala,
+du = 2 sin z ex
+2 +y2 (x sin z dx + y sin z dy + cos z dz)
+
+1.4. FUNTZIO KONPOSATUAREN DERIBATUA. DERIBATU TOTALA
+15
+1.4
+Funtzio Konposatuaren Deribatua. Deribatu To-
+tala
+Bedi bi aldagai funtzio erreal bat,
+z = f (u, v)
+nun u eta v aldagaiak ere, z-rekiko independenteak, menpekoak badiren u =
+ϕ(x, y) eta v = ψ(x, y). Menpekotasun horren bidez z funtzioa azkenean x-ren
+eta y-ren menpekoa da, Esaten dugu z, x-ren eta y-ren funtzio konposatua
+dela.
+z = f [ϕ(x, y), ψ(x, y)]
+z, u, v, x eta y aldagaien arteko menpekotasunak zuhaitz-diagrama baten bidez
+adierazten dira ere, lagungarri da
+z
+u
+v
+x
+y
+x
+y
+adibidea
+1.11. Bitez funtzioa hauek,
+z = u3v3 + u + 1;
+u = x2 + y2;
+v = ex+y + 1
+orduan,
+z = (x2 + y2)3(ex+y + 1)3 + (x2 + y2) + 1
+Azter dezagun nola kalkulatu daitezkeen z-ren deribatuak x-rekiko eta y-rekiko.
+Demagun f (u, v), ϕ(x, y), ψ
+(x, y) funtzioen deribatu partzialak funtzio jarraiak
+direla. z-ren menpekotasuna x-rekiko eta y-rekiko agerian jarri gabe (aurreko
+adibideko azken formula da horrelakoa) nahi dugun jakin nola kalkulatu daitez-
+keen
+∂z
+∂x
+eta
+∂z
+∂y
+.
+x aldagaiak ∆x gehikuntza badu (y aldagaia aldatu gabe), orduan bai u eta bai
+v biak aldatuko dira eta beraien gehikuntza partzialak ∆xu eta ∆xv dira, hurrenez
+hurren. Baina u aldagaiak ∆xu eta v aldagaiak ∆xv gehikuntzak badute, orduan
+z aldagaia ere aldatzen da, bere gehikuntza ∆z. Aurrreko ataleko gehikuntza
+totala da eta hango 1.1 ekuazioarekin idatziko dugu,
+∆z =
+∂f
+∂u
+∆xu +
+∂f
+∂v
+∆xv + α1∆xu + α2∆xv
+eta ∆x gehikuntzarekin zatituz,
+∆z
+∆x
+=
+∂f
+∂u
+∆xu
+∆x
++
+∂f
+∂v
+∆xv
+∆x
++ α1
+∆xu
+∆x
++ α2
+∆xv
+∆x
+Ekuazio horretan u eta v deribatu partzialak dituzte, beraz Gainera
+lim
+∆x→0
+∆xu
+∆x
+=
+∂u
+∂x
+;
+lim
+∆x→0
+∆xv
+∆x
+=
+∂v
+∂x
+
+16
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. DERIBAKETA
+Deribatu hoiek daudenez ∆x → 0 bada ∆xu → 0 eta ∆xv → 0 dira. Orduan,
+lim
+∆x→0
+α1 = lim
+∆
+x
+u→0
+α1 = 0;
+lim
+∆x→0
+α2 = lim
+∆
+x
+v→0
+α2 = 0
+Beraz ekuazioaren ∆x → 0 limitea hartuz,
+∂z
+∂x
+=
+∂f
+∂u
+∂u
+∂x
++
+∂f
+∂v
+∂v
+∂x
+x aldagaia aldatu gabe y-ren gehikuntza erabiliz, berdin lor daiteke beste der-
+batu partzialaren formula,
+∂z
+∂y
+=
+∂f
+∂u
+∂u
+∂y
++
+∂f
+∂v
+∂v
+∂y
+adibidea
+1.12. Hurrengo funtzioekin kalkulatu ∂z/∂x eta ∂z/∂y,
+z = ln(u2 + v);
+u = ex+y
+2
+;
+v = x2 + y
+Ebazpena:
+∂z/∂x kalkulatzeko lehenengo hauek ditugu,
+∂u
+∂x
+= ex+y
+2
+;
+∂v
+∂x
+= 2x
+eta hauek ere ditugunez,
+∂z
+∂u
+=
+2u
+u2 + v
+=
+2ex+y
+2
+x2 + y + e2(x+y
+2 )
+∂z
+∂v
+=
+1
+u2 + v
+=
+1
+x2 + y + e2(x+y
+2 )
+guztira hau dugu,
+∂z
+∂x
+=
+2ex+y
+2
+x2 + y + e2(x+y
+2 )
+ex+y
+2
++
+1
+x2 + y + e2(x+y
+2 )
+2x = 2
+x + e2(x+y
+2 )
+x2 + y + e2(x+y
+2 )
+∂z/∂y kalkulatzeko lehenengo hauek ditugu,
+∂u
+∂y
+= 2y ex+y
+2
+;
+∂v
+∂y
+= 1
+eta,
+∂z
+∂y
+=
+2ex+y
+2
+x2 + y + e2(x+y
+2 )
+2y ex+y
+2
++
+1
+x2 + y + e2(x+y
+2 )
+=
+1 + 4y e2(x+y
+2 )
+x2 + y + e2(x+y
+2 )
+Noski aldagai anitzeko funtzio konposatuen kasuistika oso zabala, bukaezina
+da. Adibidez, funtzio hauek eduki dezakegu konposatzen,
+w
+u
+v
+z
+s
+x
+y x
+y x
+y x
+y
+
+1.5.
+FUNTZIO INPLIZITUEN DERIBATUA
+17
+eta w-ren deribatu partzialen formula hauek,
+∂w
+∂x
+=
+∂w
+∂z
+∂z
+∂x
++
+∂w
+∂u
+∂u
+∂x
++
+∂w
+∂v
+∂v
+∂x
++
+∂w
+∂s
+∂s
+∂x
+∂w
+∂y
+=
+∂w
+∂z
+∂z
+∂y
++
+∂w
+∂u
+∂u
+∂y
++
+∂w
+∂v
+∂v
+∂y
++
+∂w
+∂s
+∂s
+∂y
+Bedi beste kasu hau,
+z
+y
+u
+x
+v
+x
+x
+x
+nun funtzio hauek ditugun,
+z = F (x, y, u, v);
+y = f (x);
+u = ϕ(x);
+v = ψ(x)
+Guztira z, x-ren funtzio da bakarrik, eta menpekotasun horri dagokion deriba-
+tua deribatu totala da,
+dz
+dx
+=
+∂z
+∂x
+∂x
+∂x
++
+∂z
+∂y
+∂y
+∂x
++
+∂z
+∂u
+∂u
+∂x
++
+∂z
+∂v
+∂v
+∂x
+Formula horretan deribatu partzial batzuk deribatu totalak dira, eta
+∂x
+∂x
+= 1.
+Beraz, honela idatziko dugu,
+dz
+dx
+=
+∂z
+∂x
++
+∂z
+∂y
+dy
+dx
++
+∂z
+∂u
+du
+dx
++
+∂z
+∂v
+dv
+dx
+Adibide horretako
+dz
+dx
+eta
+∂z
+∂x
+oso gauza ezberdinak dira.
+adibidea
+1.13. Bitez,
+z = x2 +
+√
+y;
+y = sin x
+Kalkulatu dz/dx
+Ebazpena:
+dz
+dx
+=
+∂z
+∂x
++
+∂z
+∂y
+dy
+dx
+= 2x +
+1
+2√y
+cos x = 2x +
+cos x
+2
+√
+sin x
+1.5
+Funtzio Inplizituen Deribatua
+I Gaian ezagutu dugu era inplizituko funtzioak F (x, y) = 0, nun suposatzen
+genuen benetazko y = f (x) genuela. Bere deribatua lortzeko era inplizituko
+formula x-rekiko deribatzen genuen, formulako y aldagaia zegoen bakoitzean bere
+x-rekiko menpekotasuna ahaztu gabe. Orduko adibide bat hau zen,
+
+18
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. DERIBAKETA
+adibidea
+1.14.
+F (x, y) = x3 + y3 − 6xy = 0
+eta honela deribatzen genuen,
+d
+dx
+(x3 + y3 − 6xy) = 3x
+2 + 3y2
+dy
+dx
+− 6y − 6x
+dy
+dx
+= (3x2 − 6y) + (3y
+2 − 6x)
+dy
+dx
+= 0
+eta hortik y′ askatzen genuen.
+Laster ohartzen gara lehenengo parentesia F -ren deribatu partziala x-rekiko
+dela, eta bigarren parentesia y-rekikoa.
+Holako egoera gertatzen da orokorrean ere,
+∂F
+∂x
++
+∂F
+∂y
+dy
+dx
+= 0
+nundik,
+dy
+dx
+= −
+F ′x
+F ′y
+Formula hori noiz erabili daitekeen teorema batek esaten du:
+F, F ′x, F ′y jarraiak
+eta F ′y = 0 diren (x, y) puntu orotan.
+adibidea
+1.15. Hurrengo funtzio inplizitoarekin kalkulatu y′,
+ey − e
+x + xy = 0
+Ebazpena:
+∂F
+∂x
+= −e
+x + y;
+∂F
+∂y
+= ey + x
+direnez,
+dy
+dx
+= −
+−e
+x + y
+ey + x
+=
+ex − y
+ey + x
+Adibide hoietan ikusten da F (x, y) = 0 funtzioa 
+(beti 0 balio konstantekoa, fun-
+tzio konposatuaz hartu dugula, bere barruan dagoen y aldagaia menpeko aldagaia
+da x-rekiko. Beraz funtzio inplizituak benetazko y = y
+(x) funtzioa deﬁnitzen edo
+gordetzen duela suposatu dugu. Zuhaitz diagrama xinple hau erabili dugu,
+u
+= F (x, y) = 0
+x
+y
+x
+Metodoa erabili daiteke honelako funtzio inplizitoekin ere F (x, y, z) = 0, nun
+suposatzen dugun benetazko z = f (x, y) dugula. Funtzio konposatu moduan
+erabiltzekoa zuhaitz diagrama hau dugu,
+
+1.5.
+FUNTZIO INPLIZITUEN DERIBATUA
+19
+u
+= F (x, y, z) = 0
+x
+y
+x
+z
+y
+Deribatu dezagun funtzio konposatua x-rekiko,
+0 =
+∂u
+∂x
+=
+∂F
+∂x
++
+∂F
+∂z
+∂z
+∂x
+= F ′x + F ′z
+∂z
+∂x
+eta hortik gure z = f (x, y) funtzioaren x-
+rekiko deribatu partzialarentzako for-
+mula bat aterako dugu,
+∂z
+∂x
+= −
+F ′x
+F ′z
+Berdin-berdin,
+∂z
+∂y
+= −
+F ′y
+F ′z
+Kasu bietan F ′z = 0 dela suposatzen ari gara, eta deribatu guztiak partzialak
+dira.
+adibidea
+1.16. Era inplizituko funtzio hau erabiliz kalkulatu z-ren deribatu par-
+tzialak x-rekiko eta y-rekiko,
+ez + x2y + z + 5 = 0
+Ebazpena:
+Hor F (x, y, z) = ez + x2y + z + 5 dugunez,
+F ′x = 2xy;
+F ′y = x
+2;
+F ′z = e
+z + 1
+Beraz,
+∂z
+∂x
+= −
+2xy
+ez + 1
+∂z
+∂y
+= −
+x2
+ez + 1
+Noski formula teorikoari kasu egin gabe ere atera daitezke formula hoiek, adi-
+bideko funtzio inplizitua funtzio konposatua dela eta,
+0 = ez
+∂z
+∂x
++ 2xy +
+∂z
+∂x
+= 2xy + (1 + ez)
+∂z
+∂x
+→
+∂z
+∂x
+= −
+2xy
+1 + ez
+eta berdin beste deribatu partziala.
+
+20
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. DERIBAKETA
+1.6
+Ordena Goreneko Deribatu Partzialak
+z = f 
+(x, y) funtzioaren deribatu partzialak kalkulatzerakoan, f ′x eta f′y, berriro x
+eta y-
+ren funtzio bana lortuko dugu. Lehenengo deribatu partzialak deribagarriak
+badira beren deribatu partzialak kalkulatu daitezke: f ′x(x, y)-
+tik bi deribatu par-
+tzial eta f ′y(x, y) beste bi, guztira lau. Hoiek f-
+ren bigarren deribatu partzialak
+dira,
+f ′′
+xx =
+∂f ′x
+∂x
+=
+∂
+∂x
+∂z
+∂x
+=
+∂2z
+∂x2
+f ′′
+xy = · · · =
+∂2z
+∂x∂y
+,
+lehenengo x-rekiko deribatu, ondoren y-rekiko
+f ′′
+yx = · · · =
+∂2z
+∂y∂x
+,
+lehenengo y-rekiko deribatu, ondoren x-rekiko
+f ′′
+yy = · · · =
+∂2z
+∂y2
+Bigarren deribatuak ere x-ren eta y-ren funtzioak dira, eta deribatu daitezke,
+hirugarren ordenako deribatuak lortuz, guztira zortzi,
+∂3z
+∂x3
+;
+∂3z
+∂x2∂y
+;
+∂3z
+∂x∂y∂x
+;
+∂z3
+∂x∂y2
+∂z3
+∂y∂x2
+;
+∂z3
+∂y∂x∂y
+;
+∂3z
+∂y2∂x
+;
+∂3z
+∂y3
+Orokorrean n-garren ordenako deribatu partzialak n − 1-garren ordenako deri-
+batuen deribatu partzialak dira. Honelako batean
+∂nz
+∂xp∂yn−p
+lehenengo x-rekiko
+p bider deribatuko da, ondoren n − p bider y-rekiko.
+adibidea
+1.17. Kalkulatu u = z2ex+y
+2
+funtzioaren
+∂4u
+∂x2∂y∂z
+deribatu partziala.
+Ebazpena:
+Eskatutakoa lortzeko deribatuak orden honetan egin bahrko dugu,
+∂u
+∂x
+= z2 ex+y
+2
+→
+∂2u
+∂x2
+= z2 ex+y
+2
+→
+∂3u
+∂x2∂y
+= 2yz2 ex+y
+2
+→
+∂4u
+∂x2∂y∂z
+= 4yz ex+y
+2
+Ikusten dugu deribatu partzial batzuen artean dagoen alde bakarra deribake-
+taren ordena dela, adibidez
+∂3f (x, y, t)
+∂x∂y∂t
+eta
+∂3f (x, y, t)
+∂t∂x∂y
+eduki ditzakegu. Emaitza berdina lortuko al da beti? Badago teorema garran-
+tzitsu bat horretaz arduratzen dena (ez dugu frogatuko),
+
+1.6.
+ORDENA GORENEKO DERIBATU PARTZIALAK
+21
+teorema
+1.1. M (x, y) puntuaren inguru batean f (x, y) funtzioa eta bere deri-
+batuak f ′x, f′y, f′′xy, f′′yx deﬁnituta eta jarraiak badira, inguru horretan hau beteko
+da,
+∂2f
+∂x∂y
+=
+∂2f
+∂y∂x
+(f ′′
+xy = f
+′′
+yx)
+Teorema hori ordena garaiagoko deribatu partzialetara hedatu daiteke. Bere
+korolarioa hau da: baldin eta
+∂nf
+∂xp∂yn−p
+eta
+∂xnf
+∂yn−p∂xp
+biak jarraiak badira, orduan berdinak dira,
+∂nf
+∂xp∂yn−p
+=
+∂xnf
+∂yn−p∂xp
+eta bi baino aldagai gehiagoarekin ere deribatu partzialen ordena edozein izan
+daiteke, hurrengo adibidean ikusten den moduan,
+adibidea
+1.18. u = exy sin z izanik, kalkulatu
+∂3u
+∂x∂y∂z
+eta
+∂3u
+∂y∂z∂x
+Ebazpena:
+Lehenengoa kalkulatzeko,
+∂u
+∂x
+= y exy sin z →
+∂2u
+∂x∂y
+= (1 + xy)exy sin z →
+∂3u
+∂x∂y∂z
+= (1 + xy)exy cos z
+Bigarrena kalkulatzeko,
+∂u
+∂y
+= x exy sin z →
+∂2u
+∂y∂z
+= x exy cos z →
+∂3u
+∂y∂z∂x
+= (1 + xy)exy cos z
+Biak berdinak izanik.
+Hurrengo oharrak era inplizituko funtzioen deribatu partzialei buruzkoak dira.
+Aurreko galderan atera dugu bi formula hauek,
+∂z
+∂x
+= −
+F ′x
+F ′z
+,
+∂z
+∂y
+= −
+F ′y
+F ′z
+Ulertzen da horko funtzio guztiak x, y, eta z-ren menpekoak direla, nun z =
+f (x, y). Beraz ordena garaiagoko deribatuak kalkulatzeko funtzio konposatuen
+moduan deribatu ditzakegu. Adibidez,
+∂2z
+∂x2
+=
+∂
+∂x
+∂z
+∂x
+= −
+F ′′
+xx + F
+′′
+xz
+∂z
+∂x
+F ′z − F ′x F ′′zx + F ′′zz
+∂z
+∂x
+(F ′z)2
+= −
+F ′′
+xxF
+′
+z − F
+′′
+zxF
+′
+x + F
+′′
+xz F
+′
+z − F
+′′
+zz F
+′
+x
+∂z
+∂x
+(F ′z)2
+Baina formula hori aplikatu beharrean zuzenagoa izango da, adibide zehatzeko
+formula zuzenean deribatzea.
+
+22
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. DERIBAKETA
+adibidea
+1.19. z = f (x, y) funtzioa ez + x2y + z + 5 = 0 era inplizitoan dugu.
+Kalkulatu ∂2z/∂x2.
+Ebazpena:
+Lehen kalkulatu dugu,
+∂z
+∂x
+= −
+2xy
+ez + 1
+Hori funtzio konposatua da, eta bere deribatua x-rekiko,
+∂2z
+∂x2
+= −
+2y(ez + 1) − 2xy e
+z ∂z
+∂x
+(ez + 1)2
+= −2y
+ez + 1 + x ez
+2xy
+ez + 1
+(ez + 1)2
+eta operatuz
+∂2z
+∂x2
+= −2y
+(ez + 1)2 + 2x2y ez
+(ez + 1)3
+1.7
+Maila Gainazalak eta Maila Lerroak.
+Norabide
+Batekiko Deribatua eta Gradientea
+1.7.1
+Maila Gainazalak eta Maila Lerroak
+Has gaitezen f (x, y) bi aldagai funtzio errealarekin. Bere grafoa z = f 
+(x, y) hiru
+dimentsio espazioan marraztu daiteke (x, y, z) hirukoten bidez, adibidez, grafo
+bat Lurraren erliebea izan daiteke, Adarra mendiaren ingurua agian. Grafoak
+baditu garaiera berdineko puntuak, izan ere puntu bakoitzak du bere garaiera
+(z balioa) eta bere garaiera bereko puntuak badaude. f 
+(x, y) funtzioaren grafoa
+hiru dimentsio gainazala da eta 
+(x, y, z) puntutik hasita z bereko puntuek maila
+lerro bat osatzen dute. Maila lerro bakoitzeko garaiera bat dugu, bedi c. Maila
+lerro baten ekuazioa hau izango da,
+c = f (x, y)
+Maila lerroaren
+ekuazioa.
+Beraz (x, y) planuko lerro bat (esan nahi dugu planu horizontal batean sartuta
+dagoen lerro bat) da.
+adibidea
+1.20. Aztertu funtzioaren maila lerroak,
+z = 1 − x
+2 − y2
+Ebazpena:
+Maila lerroen ekuazioa 1 − x
+2 − y2 = c da, edo
+x2 + y2 = 1 − c
+Hori (x, y) planuko zirkunferentzi zentratu bat da, erradioa
+√
+1 − c. Izan ere
+emandako funtzioaren grafoa z ardatzean zentratutako paraboliodea da, erpina
+z ardatzean eta z = 1 garaieran duela. Paraboloidea buruz bera dago eta bere
+
+1.7. MAILA GAINAZALAK ETA MAILA LERROAK. NORABIDE BATEKIKO DERIBATUA ETA GRADIENTEA
+ekuazioa honela jar daiteke x2 + y2 = 1 − z. Beraz 1 − z ≥ 0 edo z ≤ 1 izan behar
+da.
+Maila lerroak denak planu horizontaletan daudenez denak jarri daitezke planu
+horizontal berean. Hori egiten da erliebea mapa bat marrazterakoan. Mapa
+bateko maila lerroek garaiera eta beraren aldeketei buruzko informazioa ematen
+dute. Ez dute garaiera funtzio osoaren informazioa ematen: maila lerroetan ez
+dauden puntuen garaiera jakiteko interpolatu egin behar da. Bestaldetik mapako
+garaiera ezberdineko maila lerroak ez dira elkarrekin gurutzatuko, ez dute bat
+egingo inun, horrek bat egindako puntuaren garaierak, puntu berekoak, bi balio
+ezberdin dituela esan nahiko lukeelako.
+Hiru dimentsio funtzioa, u = u(x, y, z) ezin dugu hiru dimentsio espazioan gra-
+ﬁkatu, u-rentzako laugarren ardatz bat beharko genuke. Orain hiru dimentsio
+espazio arruntan bakarrik deﬁnizio eremua graﬁkatu daiteke. Baina orain ere de-
+ﬁnizio eremuaren (x, y, z) puntu bat hartu eta horko u
+(x, y, z) balio bereko beste
+puntuak egongo dira ere. Adibidez u funtzioa gela bateko puntuen tenperatura
+izan daiteke. Graﬁkatzeko gelako puntu batzuetan labelak itsatsi daitezke 
+(puntu
+guztietan ezinezko litzake), eta egongo dira tenperatura berdina duten puntuak,
+hoiek gainazal bat osotuko dutela. Puntu guzti hoiek ekuazio hau beteko dute,
+c = u(x, y, z)
+Maila gainazaleran
+ekuazioa.
+eta hori hiru dimentsioko gainazala da (era inplizitoan idatzita.)
+adibidea
+1.21. Idatzi eremu eskalarraren maila gainazalen ekuazioa,
+u(x, y, z) =
+x2
+4
++
+y2
+4
++
+z2
+4
+Ebazpena:
+Eskatutako ekuazioa hau besterik ez da,
+x2
+4
++
+y2
+9
++
+z2
+16
+= c
+Gainazal horren grafoa elipsoide bat da, bere ardatz erdiak luzera honetakoak:
+2
+√
+c, 3
+√
+c, 4
+√
+c.
+1.7.2
+Norabide Batekiko Deribatua
+Hiru aldagaiko funtzioarekin arituko gara u = u(x, y, z). Demagun hiru dimen-
+tsio espazioko M puntuan gaudela, M (x, y, z), hori u funtzioaren D deﬁnizio
+eremuan dagoela, eta deﬁnizio eremuan M -ren inguruko puntuak badaudela ere.
+M puntuan u deribagarri dela suposatuko dugu ere.
+Demagun M puntutik hasi joaten eta funtzioaren aldaketa aztertu nahi dugu-
+la, hau da ∆u = u(x + ∆x, y + ∆y, z + ∆z) − u(x, y, z). Aldaketa hori, nahiz
+eta M -
+tik beti distantzia berdina aldendu, ezberdina izango da segun zein nora-
+bidean abiatuko garen. Lehenengo hurbilketan, hurbilketa linealean, diferentzial
+totalarekin kalkulatu daiteke aldaketa,
+∆u ≈
+∂u
+∂x
+∆x +
+∂u
+∂y
+∆y +
+∂u
+∂z
+∆z
+
+24
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. DERIBAKETA
+Funtzioa deribagarri da, beraz jarraia, eta (∆x, ∆y, ∆z) → (0, 0, 0)-ra doanean
+hurbilketa lineala funtzioaren aldaketa osoa bihurtzen da. Diferentziala honela
+idatzi daiteke ere,
+du =
+∂u
+∂x
+dx +
+∂u
+∂y
+dy +
+∂u
+∂z
+dz =
+∂u
+∂x
+ds cos α +
+∂u
+∂y
+ds cos β +
+∂u
+∂z
+ds cos γ
+Bigarren berdintzan egin duguna zera da: M puntutik aldendutako distantziak
+(dx, dy, dz) osagai cartesiarrak ditu, eta hoiek ds distantzia bektorearen osagaiak
+dira. Gero ds bektoreak ardatz cartesiarrekin osatzen dituen angelu zuzendariak
+erabili ditugu (cos α, cos β, cos γ).
+α
+β
+γ
+ds
+∆y
+∆x
+∆z
+M
+M -tik hartutako
+norabidea
+y
+z
+x
+O
+Beraz,
+du
+ds
+=
+∂u
+∂x
+cos α +
+∂u
+∂y
+cos β +
+∂u
+∂z
+cos γ
+(1.2)
+Azken deribatua u-ren deribatua ds-ren (edo s-ren) norabidean deitzen dugu,
+du
+ds
+= lim
+∆s→0
+∆u
+∆s
+1.2 ekuazioan ikusten dugu (cos α, cos β, cos γ) bektorea eta (∂u/∂x, ∂u/
+∂y, ∂u/∂z)
+bektorearen arteko biderkaketa eskalarraren adierazpena dugula.
+adibidea
+1.22. Bedi u = x2 + y2 + z2 funtzioa. Kalkulatu horren deribatua
+M (1, 1, 1) puntuan eta 2ˆ
+x + ˆ
+y + 3ˆ
+z bektorearen norabidean.
+Ebazpena:
+Garapen teorikoan ikusi dugunez u-ren deribatu partzialak behar ditugu, M pun-
+tuan ebaluatuta,
+∂u
+∂x
+M
+= 2x|(1,1,1) = 2
+∂u
+∂y
+M
+= 2y|(1,1,1) = 2
+∂u
+∂z
+M
+= 2z|(1,1,1) = 2
+
+1.7. MAILA GAINAZALAK ETA MAILA LERROAK. NORABIDE BATEKIKO DERIBATUA ETA GRADIENTEA
+Bestaldetik bektorearen modulua har daiteke aldendutako distantzia bezala,
+∆s =
+√
+4 + 1 + 9 =
+√
+14, eta desplazamenduaren cosinu zuzendariak hauek dira,
+cos α =
+2
+√
+14
+cos β =
+1
+√
+14
+cos γ =
+3
+√
+14
+Beraz,
+du
+ds
+= 2 ·
+2
+√
+14
++ 2 ·
+1
+√
+14
++ 2 ·
+3
+√
+14
+=
+12
+√
+14
+du/ds deribatuaren balioa ezberdina da distantziaren norabidea aldatuta. Hori,
+adibidez, beste bektore hau hartuta, ˆ
+x + ˆ
+y + ˆ
+z, egiaztatu daiteke.
+1.7.3
+Gradientea. Deﬁnizioa
+Gradientea bektore bat da eta bere deﬁnizioa u funtzioaren norabide batekiko
+deribatuan oinarritzen da. Behin deﬁnituta gradienteak u funtzioaren edozein
+norabidekiko deribatua kalkulatzeko balio du.
+Bektore denez gradienteak hiru ezaugarri ditu (modulua, direkzioa eta noran-
+tza, edo hiru osagai cartesiar, edo hiru osagai zilindriko, etabar). Bere deﬁnizioa
+u(M ) funtzioaren informazioan oinarritzen da, u
+(M ) funtzioa ez dagoen edo eza-
+gutzen ez dugun bitartean ez dago gradienteaz hitzegiterik. Izan ere gradienteak
+u-ren gradientea du izena. Bestaldetik u(M ) funtzioa eremu eskalarra deitu
+dezakegu ere. Zera esan nahi dugu: M puntu bakoitzean u(M ) balio bakarra (u
+funtzio da), eta zenbaki hutsa (u eskalar da) dugu. Gradientea ere puntuz-puntu
+deﬁnitzen den funtzioa da, puntu bakoitzean bektore bakarra, eremu bektoriala
+da gradientea.
+definizioa
+1.7. Bedi hiru aldagaien u(x, y, z) funtzioa, D deﬁnizio-eremuan de-
+ribagarri.
+u-ren gradientea, grad u edo ∇u idazten duguna, bektore hau da
+1. Bere norabidea (direkzioa eta norantza), M puntutik hasi eta du/ds-ren
+balio handiena eta positiboa lortzeko hartutako norabidea da.
+2. Bere modulua aipatu du/ds-ren balio handiena da.
+Bi aldagai funtzio eskalar baten gradientea, u = u(x, y), xy planuko bektore
+bat da, eta u = u(x, y, z) funtzioaren gradientea hiru dimentsio espazioko bek-
+tore bat da. u = u(x, y) funtzioa maila lerroekin marraztu daiteke mapa bat
+eginez (erliebea). Gradientea mapa lau horretako bektore bat da. Mapako pun-
+tu bakoitzean gradiente bektore bat dugu eta bere norabideak esaten digu zein
+norabidean abiatu beharko dugun bide aldapatsuenatik hasteko. Bere aurkako
+norantzan joanda ahal den azkarren jeisten hasiko gara. Baina kontuz, gradientea
+bera ez da goruntz edo beheruntz hasiko den bektorea, bera planu lauan dago.
+
+26
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. DERIBAKETA
+Gradientearen deﬁnizioa dela eta propietate garrantzitsu hau betetzen da: edo-
+zein norabideko du/ds deribatuaren balioa honela kalkulatu daiteke,
+du
+ds
+= ∇u · ˆs
+(1.3)
+nun bi bektoren biderkaketa eskalarra dugun, bat gradientea bestea desplaza-
+menduaren norabidea zehazten duen ˆ
+s bektore unitarioa. Ekuazio hori guztiz
+ados dago goian eman dugun gradientearen deﬁnizioarekin, izan ere biak balio-
+kideak dira, eta bigarrena gradientearen deﬁniziotzat hartzen da ere.
+Adibidez 1.3 ekuaziotik emandako deﬁnizioa erator daiteke. Ekuazioko ∇u
+bektorea u-ren gradientea besterik ezin da izan.
+Demagun (x, y) puntuan du/ds norabide deribatua dugula eta bi bektoren
+biderkaketa eskalarra moduan jar daitekeela, hoietako bat ˆ
+s norabidea ematen
+duen bektore unitarioa (modulu bat). ∇u puntu horretan jarritako bektore bat
+da, oraindik ez da gradientea. Biderkaketa eskalarra dugunez ∇u eta ˆs-
+ren arteko
+angelua ϕ bada,
+du
+ds
+= |∇u| cos ϕ
+Ikusten dugunez du/ds handiena ϕ = 0 denean gertatuko da, hau da, hartutako
+norabidea, ˆ
+s-ren norabidea, ∇u bektorearen norabidea denean. Gainera, orduan
+du
+ds
+handiena
+= |∇u|
+Beraz ∇u-ren norabidea norabide deribatu handiena lortzeko norabidea da,
+bere modulua ere deribatu handienaren balioa dela. Beraz ∇u-k gradientearen
+deﬁnizio betetzen du.
+Aztertzeko gelditzen dena hau da: norabide deribatua jar al daiteke bektore
+bat bider ˆ
+s? Baina horri norabide deribatua azaltzerakoan erantzun diogu. Han
+(dx, dy, dz) eta beste bektore baten biderkaketa eskalarra genuen.
+Gradiente bektorea bere osagaietan banatu daiteke eta bere adierazpena auke-
+ratutako koordenatu sistemaren menpekoa da. Adibidez, lehenago formula hau
+atera dugu sistema cartesiarrean,
+du
+ds
+=
+∂u
+∂x
+cos α +
+∂u
+∂y
+cos β +
+∂u
+∂z
+cos γ
+nun (cos α, cos β, cos γ) hirukotea ˆ
+s bektore unitarioaren osagai cartesiarrak
+den. Baina deribatu partzialeko hirukotea ere
+∂u
+∂x
+,
+∂u
+∂x
+,
+∂u
+∂x
+, beste bektore ba-
+ten osagai kartesiarrak izan daiteke ere, eta orduan du/ds bi bektoren arteko
+biderkaketa eskalarraren adierazpen cartesiarra da,
+du
+ds
+=
+∂u
+∂x
+,
+∂u
+∂x
+,
+∂u
+∂x
+· ˆs
+Ekuazioak hartu duen formagatik laster konturatzen gara lehenengo bektoreak
+∇u-ren adierazpena izan behar duela. Sistema cartesiarrean,
+∇u =
+∂u
+∂x
+ˆ
+x +
+∂u
+∂y
+ˆ
+y +
+∂u
+∂z
+ˆ
+z
+Baina beste koordenatu sistematan adierazpena ezberdina da.
+
+1.7. MAILA GAINAZALAK ETA MAILA LERROAK. NORABIDE BATEKIKO DERIBATUA ETA GRADIENTEA
+adibidea
+1.23. Kalkulatu ∇u gradientea, u = x2 + y2 + z2 funtzioarena
+Ebazpena:
+Ikusten dugu gradientearen adierazpen cartesiarra zuzenean kalkulatu daitekeela,
+∇u = 2xˆx + 2yˆ
+y + 2zˆ
+z
+Demagun gradientea M (1, 1, 1) puntuan ezagutu nahi dugula,
+∇u(M) = 2ˆx + 2ˆy + 2ˆz
+Bere norabideak ematen du M puntutik aldentzen hasi eta zein norabidean
+aldatuko den azkarren u funtzioa. Norabide hori ˆ
+x + ˆ
+y + ˆ
+z da, edo bektore
+unitario moduan,
+ˆ
+s|azkarrena =
+1
+√
+3
+(ˆ
+x + ˆ
+y + ˆ
+z)
+u-ren aldaketa handiena balio honetakoa da,
+du
+ds
+handiena
+= |∇u| =
+22 + 22 + 22 =
+√
+12 = 2
+√
+3
+1.7.4
+Gradientea. Propietatea
+Gradiente bektorea kokapen berezia du u funtzio eskalarraren balioekiko. Hiru
+dimentsio funtzioarekin u = u(x, y, z), gradientea ere hiru dimentsio espazioko
+bektorea da. Sistema cartesiarrean,
+∇u =
+∂u
+∂x
+ˆ
+x +
+∂u
+∂y
+ˆ
+y +
+∂u
+∂z
+ˆ
+z
+eta bi dimentsio funtzio eskalarrarekin u = u(x, y) gradientea xy planuan sar-
+tutako bektorea da,
+∇u =
+∂u
+∂x
+ˆ
+x +
+∂u
+∂y
+ˆ
+y
+Esan dugu gradientearen norabidea du/ds handiena gertatzeko norabidea dela.
+Gradientearekin elkartzut dagoen norabidean ˆ
+s eta ∇u-ren arteko angelua 90
+o da,
+eta
+du
+ds
+= |∇u| · cos 90 = 0
+Beraz gradientea elkartzut dago maila lerroekin edo maila gainazalekin.
+O
+x
+y
+P
+(x0, y0)
+∇
+f
+(x0, y0)
+garaiera lerroa
+f
+(x, y) = k
+bide
+maldatsuena
+100
+200
+300
+
+28
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. DERIBAKETA
+1.8
+Taylor-en Formula Bi Aldagai Funtzioekin
+Demagun bi aldagaiko z = f (x, y) funtzioa M (a, b) puntu baten inguruan ja-
+rraia dela, baita (n+1)-
+garrenarainoko deribatu partzialak ere jarraiak direla. Bi
+aldagai funtzio diferentziagarria aztertzerakoan lehenengo deribatu partzialak ja-
+rraiak izanik M 
+(a, b) puntutik aldentzen hasita funtzioaren gehikuntza honela jar
+zitekeen,
+∆z =
+∂f (x, y)
+∂x
+∆x +
+∂f (x, y)
+∂y
+∆y + α1∆x + α2∆y
+(1.4)
+Idazketa hau erabiliko dugu orain,
+∆z = f (x, y) − f(a, b);
+∆x = x − a;
+∆y = y − b
+Beraz,
+f (x, y) = f (a, b) +
+∂f
+∂x
+(x − a) +
+∂f
+∂y
+(y − b) + α1(x − a) + α2(y − b)
+nun deribatu partzialak hasiera puntuan, M (a, b) puntuan kalkulatutakoak
+diren, eta α1(x − a) eta α2(y − b) biak (beraz beren batura ere bai) ∆r =
+(x − a)2 + (y − b)2 baino ordena garaiagoko inﬁnitesimoak diren.
+Aldagai bakarreko Taylor garapenean egiten zen era analogoan, orain zehazteke
+dauden azken bi gaientzako konbinaketa lineal bat proposatzen da {(x − a)
+p(y −
+b)n−p} erako batugaiekin. Taylor-en formula honelakoa da berriro,
+f (x, y) = Tn(x, y) + Rn(x, y)
+nun,
+Tn(x, y) =
+n
+s=0
+s
+p=0
+s!
+p! (s − p)!
+∂ sf
+∂xp∂ys−p
+(a,b)
+(x − a)
+p(y − b)s−p
+Ondarreko gaia, Rn aldatu egingo da Taylor polinomioa, Tn, luzeagoa edo
+laburragoa hartuz, n-ren menpekoa da.
+Behin n aukeratuta s-k n + 1 balio ezberdinak hartuko ditu. s bakoitzeko
+s + 1 batugaiak ditugu, s = 0 denean gai bat, s = 1 denean bi gai (p = 0, 1),
+s = 2 denean hiru, . . . , s = n denean n + 1. Guztira Tn(x, y) polinomioak
+(1/2)(n + 1)(n + 2) batugai edukiko ditu.
+n = 0 denean s = p = 0 dugu ere. Batugai bakarra dugu eta batugai horretan
+ez dugu funtzioa deribatzen. Gaia hau da
+0!
+0! 0!
+∂0f
+∂x0∂y0
+(a,b)
+(x − a)
+0(y − b)0 = f(a, b)
+n = 1 denean s = 0, 1 dugu. s = 0 gaia orain esandakoa da. s = 1 denean bi
+gai hauek ditugu,
+1!
+0! 1!
+∂f
+∂x0∂y1
+(x−a)
+0(y −b)1 +
+1!
+1! 0!
+∂f
+∂x1∂y0
+(x−a)
+1(y −b)0 =
+∂f
+∂x
+(x−a)+
+∂f
+∂y
+(y −b)
+
+1.9. ALDAGAI ANITZEKO FUNTZIOAREN MAXIMOAK ETA MINIMOAK
+29
+Beraz,
+T1(x, y) = f (a, b) +
+∂f
+∂x
+(x − a) +
+∂f
+∂y
+(y − b)
+eta hori ezagutzen dugun funtzio diferentziagarriaren hurbilketa lineala da.
+T2(x, y) polinomioan batugai hauek ere egongo dira,
+∂2f
+∂x2
+(x − a)
+2 + 2
+∂2f
+∂x∂y
+(x − a)(y − b) +
+1
+2
+∂2f
+∂y2
+(y − b)
+2
+Guztira sei batugai daude T2 polinomioan.
+1.9
+Aldagai Anitzeko Funtzioaren Maximoak eta Mi-
+nimoak
+Gure intuizioak esaten digu maximo bat eta minimo bat zer izan daitezkeen. Gai-
+nera funtzioen jarraitasuna aztertzerakoan esan dugu D eremu itxi eta bornatuan
+f (x, y) jarraia denean badaudela D eremuko puntuetarako gutxienez maximo bat
+eta minimo bat. Hoiek maximo absolutua eta minimo absolutua izango lirateke.
+Maximo eta minimo erlatiboak hauek lirateke,
+definizioa
+1.8. Bedi z = f (x, y) funtzioa. M0(x0, y0) puntuan funtzioaren ma-
+ximo bat dugu baldin eta M0 puntuaren inguru hurbilean, puntuan bertan izan
+ezik, funtzioaren balioak (x0, y0) puntukoa baino txikiagoak badira,
+f (x, y) < f (x0, y0)
+Era berean M1(x1, y1) puntuan funtzioaren minimo bat dugu, baldin eta M1
+puntuaren inguru hurbilduan, puntuan bertan izan ezik, funtzioaren balioak 
+(x1, y1)
+puntukoa baino handiagoak badira,
+f (x, y) > f (x1, y1)
+f funtzioaren maximoei eta minimoei mutur deritzegu.
+adibidea
+1.24. z = (x − 1)
+2 + (y − 2)2 − 1 funtzioak, parentesiak positibo direnez,
+balio txikiena −1 du. Hori gertatzen da parentesiak nulu direnean (beren balio
+txikienak), hau da, (1, 2) puntuan. Puntu horretan funtzioaren balio txikiena
+dugunez puntuan minimoa dugu. Beste puntu guztietan,
+f (x, y) > f (1, 2) = −1
+adibidea
+1.25. z = (1/2) − sin(x
+2 + y2) funtzioan sinu funtzioa dugu bere ar-
+gumentua beti positibo delarik (x2 + y2) ∈ [0, ∞). Funtzioaren maila lerroak
+zirkunferentzi zentratuak dira.
+(0, 0) puntutik hasita sinua nulu izatetik handitzen hasten da eta funtzioaren
+balioa z = 1/2 izatetik txikitzen hasten da, beraz 
+(0, 0) puntuan maximo bat dugu.
+Ondoren sinuaren balioak 
+[−1, 1] tartekoak izango dira eta funtzio osoaren balioak
+[−(1/2), 3/2)] tartekoak izango dira. Jatorrizko maximoaz gain beste maximoak
+
+30
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. DERIBAKETA
+eta minimoak kopuru inﬁnituan daude, eta sinuaren maximoen eta minimoen
+posizioetan gertatzen dira. Funtzioaren minimoak hemen,
+x2 + y2 = (4n + 1)
+π
+2
+,
+n = 0, 1, 2, . . .
+puntuetan ditugu. Funtzioaren maximoak hemen,
+x2 + y2 = (4n + 3)
+π
+2
+,
+n = 0, 1, 2, . . .
+Hoiek denak zirkunferentzi zentratuak dira, bakoitzak bere erradioarekin.
+Bi aldagai funtzioen maximoaren eta minimoaren deﬁnizioak garatu daitezke
+aldagai gehiagoko funtzioetara.
+Mutur puntuetan aldagai bakarreko muturretan gertatzen zena gertatu behar
+da ere, hau da, lehenengo deribatua anulatu egin behar da, funtzioaren malda
+anulatu behar da. Bi aldagai funtzioetan edozein norabideko lehenengo deribatua
+anulatu behar da (aldagai bakarreko funtzioaren deribatua maldaren balioa da,
+baina bakarrik X ardatzaren norabidean). Orain beharrezkoa da du/ds = 0
+izatea eta horretarako nahikoa da ∂u/∂x = ∂u/∂y = 0 izatea. Hori da hurrengo
+teormak esaten duena.
+definizioa
+1.9. z = f (x, y) funtzioak M0(x0, y0) puntuan mutur bat badu, or-
+duan M0 puntuko lehen ordenako deribatu partzialak edo nuluak dira edo ez dira
+existitzen. Laburbilduz esaten dugu M0 puntuak puntu kritikoa izan behar duela.
+Teoremak muturren existentziarako beharrezko baldintza zehazten du. Bal-
+dintza hori ez da nahikoa M0 puntuan mutur bat edukitzeko, baina muturren
+bilaketa hasteko informazioa ematen du: kritikoak ez diren puntuak ezin dira
+mutur izan. Puntu kritikoak puntu egonkorrak deitzen dira ere.
+adibidea
+1.26. z = x2 − y
+2 funtzioaren deribatu partzialak hauek dira,
+∂z
+∂x
+= 2x;
+∂z
+∂y
+= −2y
+Deribatu hoiek edozein (x, y) puntuan existitzen dira, ez dago arazorik beren
+balioak kalkulatzeko. Alde horretatik ez dugu puntu kritikorik, beraz muturrik ez.
+Deribatu partzialak anulatu egiten dira (0, 0) puntuan. Hori puntu kritikoa da.
+Hala ere ez da muturra. (0, 0)-
+tik x ardatzaren gainetik aldentzen hasten bagara
+z funtzioa handitzen hasten da 
+(alde horretatik minimoa), baina y ardatzaren gai-
+netik joanda z gero eta negatiboagoa da, beraz txikitzen hasiko da 
+(alde horretatik
+maximoa). Izan ere (0, 0) puntua zaldi-aulki puntua deitzen dugu.
+Har dezagun gabiltzan M0(x0, y0) puntuaren inguruko Taylor garapena,
+f (x, y) = f (x0, y0) +
+∂f
+∂x
+M0
+(x − x0) +
+∂f
+∂y
+M0
+(y − y0)+
+∂2f
+∂x2
+M0
+(x − x0)
+2 + 2
+∂2f
+∂x∂y
+M0
+(x − x0)(y − y0) +
+∂2f
+∂y2
+M0
+(y − y0)
+2 + . . .
+
+1.9. ALDAGAI ANITZEKO FUNTZIOAREN MAXIMOAK ETA MINIMOAK
+31
+Deribatuen jarraitasunak zihurtatzen du gai garrantzitsuagoak garapenaren
+lehenengoak direla, limitean f (x, y) = f (x0, y0) dugula. f (x, y) − f
+(x0, y0)-ren
+zati handiena lehenengo deribatu partzialekin dugun bi osagaien batura da, gero
+bigarren deribatuekin daudenen batura, etabar1. Esan dugunez puntu kritikoe-
+tan lehenengo deribatuak, nahitaez, nulu dira. Beraz f (x, y) − f(x0, y0)-
+ren zati
+handiena bigarren deribatuekin duguna da. Hori positibo izango denean aldea
+positibo da, eta f (x, y) > f (x0, y0), eta 
+(x0, y0) puntuan minimo bat dugu. Maxi-
+mo bat edukiko dugu bigarren deribatuekin dugun gaia negatibo izango denean.
+Positibotasun edo negatibotasun hori M0 puntutik edozein norabidetik joanda
+gertatu behar da, hau da, (x − x0), 
+(y − y0) bikotea edozein izanik. Azter deza-
+gun gai hori,
+∂2f
+∂x2
+M0
+(x − x0)
+2 + 2
+∂2f
+∂x∂y
+M0
+(x − x0)(y − y0) +
+∂2f
+∂y2
+M0
+(y − y0)
+2
+Gai hori S2 deitu eta (y − y0)
+2-rekin zatituz,
+S2
+(y − y0)2
+=
+∂2f
+∂x2
+M0
+x − x0
+y − y0
+2
++ 2
+∂2f
+∂x∂y
+M0
+x − x0
+y − y0
++
+∂2f
+∂y2
+M0
+S2-ren zei˜nua positibo (edo negatibo) denean S2/(y −y0)
+2 ere positibo (edo nega-
+tibo) izango da, eta alderantziz. Eta hori M0 puntutik hasitako edozein norabide-
+tan gertatuko da, bat izan ezik, y −y0 = 0 denean zatiketa ez dago deﬁnituta hori
+X ardatzako norabide biak delarik. Beraz salbuespen hori ahaztu gabe eztabaida
+hau egin dezakegu: izenak aldatuz era honetako funtzioa dugu
+Aλ2 + 2Bλ + C
+Hori λ-ren funtzio bat da eta parabola baten ekuazioa da. Positiboa izateko pa-
+rabolaren puntu guztiek positibo behar dute, eta hori gertatuko bere minimoan
+parabola positibo denean. Hori gertatzeko nahikoa da parabolaren muturra mi-
+nimo izatea, eta parabolak X ardatza ez ikutzea edo ebakitzea.
+Parabolak minimo izateko bere bigarren deribatuak positibo behar du, biga-
+rren deribatua 2A denez A > 0 izan behar da. X ardatza ez ikutzeko λ-ren
+erroen ekuazioan diskriminanteak negatibo behar du, hau da, AC − B
+2 > 0. Be-
+raz, A > 0, eta AC − B
+2 > 0 betetako puntuak f(x, y) funtzioaren minimoak
+lirateke.
+1 Esaten ari garena zera da: Aldagai bakarreko f
+(x) funtzioa dugunean eta Taylor bidez
+garatzen hasten dugunean,
+f
+(x) = f (x0) + f ′(x0)(x − x0) +
+1
+2
+f ′′
+(x0)(x − x0)
+2 + . . .
+f
+(x0) lehenengo gaia da zati handiena x → x0 doanean, eta horren aurrean beste guztiak
+mesprexatu daitezke x − x0 nahikoa txikitu bada. Hurrengo gai handiena f′(x0)
+(x − x0) da eta
+f
+(x) − f(x0) = f′(x0)
+(x − x0) har daiteke. Gero x0 puntuaren inguruan x − x0 txikia denean
+f
+(x) − f(x0) − f
+′ (x0)(x − x0) =
+1
+2
+f ′′
+(x0)(x − x0)
+2
+har daiteke etabar.
+
+32
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. DERIBAKETA
+Hala ere, azterketa era honetan has daiteke ere: (x − x0)-rekin zatituz,
+S2
+(x − x0)2
+=
+∂2f
+∂x2
+M0
++ 2
+∂2f
+∂x∂y
+M0
+y − y0
+x − x0
++
+∂2f
+∂y2
+M0
+y − y0
+x − x0
+2
+eta hurrengo azterketak balioko luke norabide guztietarako Y ardatzakoak izan
+ezik. Izenak aldatuz parabolaren ekuazio hau dugu,
+A + 2Bµ + Cµ2
+Hori positibo izateko parabolak minimo behar du eta X ardatza ez ikutu. Hoiek
+C > 0 eta AC − B
+2 > 0 eskatzen dute. Beraz muturra minimo jator bat izango
+da A > 0, C > 0, eta AC − B
+2 > 0 direnean. Hala ere azken baldintza dela
+eta, hori positibo bada A eta C-ren zeinuak berdinak izan behar dira, bestela
+ezberdintza ez da beteko. Beraz nahikoa da A > 0 edo C > 0 izatea.
+Garbi dago maximoak edukiko ditugula A < 0, edo C < 0, eta AC − B
+2 > 0
+izango direnean.
+A eta C aurkako zei˜
+nukoak izango direnean AC − B
+2 < 0 izango da, parabo-
+lak bi erro erreal edukiko ditu, eta horrek esan nahi du λ-ren balio batzuetan,
+hau da, M0-tik hasitako norabide batzuetan, funtzioaren aldaketa positibo eta
+beste batzuetan negatibo izango dela. Ez dugu maximo edo minimorik edukiko.
+AC − B
+2 < 0 izango denean. Orduan zela puntu bat, mini-max puntu bat edu-
+kiko dugu. 2
+Diskriminantea nulu denean parabolak erro bat du (erro bikoitza), erroak no-
+rabide bat ematen duela. Norabide horretan f (x, y) funtzioaren aldaketa nulu
+litzateke lehenengo deribatuak nulu izanda eta bigarren deribatuetako gaia nulu
+izanda. Beraz muturren azterketa luzatu beharko zen hirugarren ordenako deri-
+batuen gaia aztertuz.
+Lortutako emaitzak hurrengo teoremetan biltzen dira,
+teorema
+1.2. Bedi z = f (x, y) funtzioaren M0(x0, y0) puntu kritiko bat. Dema-
+gun M0 puntuaren inguruan funtzioa deﬁnituta eta funtzioaren hirugarren orde-
+narainoko deribatu parzialak, hoiek ere barne, jarraiak direla.
+Bedi M0(x0, y0) puntuan kalkulatutako matrize hau, Hessiano du izena,
+H =
+
+
+
+
+∂2f
+∂x2
+∂2f
+∂x∂y
+∂2f
+∂y∂x
+∂2f
+∂y2
+
+
+
+
+M0(x0,y0)
+Orduan M0(x0, y0) puntuan,
+1. f (x, y) funtzioak maximoa du baldin
+|H| > 0
+eta
+∂2f (x0, y0)
+∂x2
+< 0
+badira. |H| hessianoaren determinantea da.
+2 Ingelesez ‘saddle point’ deitzen da, eta hurrengo irudi batean dugu marraztuta
+
+1.9. ALDAGAI ANITZEKO FUNTZIOAREN MAXIMOAK ETA MINIMOAK
+33
+2. f (x, y) funtzioak minimo du baldin
+|H| > 0
+eta
+∂2f (x0, y0)
+∂x2
+> 0
+badira.
+3. f (x, y) funtzioak ez du maximorik ez minimorik baldin
+|H| < 0
+bada.
+x
+y
+z
+Hori gertatzen da azken adibidean, zaldi-aulki puntu bat dugu (0, 0) pun-
+tuan.
+4. Hessianoaren determinantea nulu bada |H| = 0, orduan muturra egon dai-
+teke, baina azterketa luzatu egin behar da.
+adibidea
+1.27. Aurkitu funtzioaren maximoak eta minimoak,
+z = x2 − xy + y
+2 + 3x − 2y + 1
+Ebazpena:
+1. Puntu kritikoak,
+∂z
+∂x
+= 2x − y + 3;
+∂z
+∂y
+= −x + 2y − 2
+Deribatuen deﬁnizio eremua xy planu osoa da. Anulatuko direnean,
+2x − y + 3
+= 0
+−x + 2y − 2 = 0
+sistema beteko da. Sistematik y = 1/3, x = −4/3 ateratzen da.
+2. Hessianoaren determinantea puntu horretan hau da,
+2
+−1
+−1
+2
+= 4 − 1 = 3 > 0
+eta
+∂2f (−4/3, 1/3)
+∂x2
+= 2 > 0. Beraz hor minimoa dugu.
+
+34
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. DERIBAKETA
+3. Funztioaren balio minimoa hau da,
+f
+−
+4
+3
+,
+1
+3
+=
+−
+4
+3
+2
+− −
+4
+3
+1
+3
++
+1
+3
+2
++ 3 −
+4
+3
+− 2
+1
+3
++ 1
+=
+16
+9
++
+4
+9
++
+1
+9
+− 4 −
+2
+3
++ 1 =
+21
+9
+− 3 −
+2
+3
+=
+21
+9
+−
+11
+3
+=
+21 − 33
+9
+= −
+12
+9
+= −
+4
+3
+adibidea
+1.28. Kalkulatu maximoak eta minimoak,
+z = x3 + y3 − 3xy
+Ebazpena:
+1. Puntu kritikoak,
+∂z
+∂x
+= 3x2 − 3y;
+∂z
+∂y
+= 3y2 − 3x
+Hoien deﬁnizio eremua berriro xy planu osoa da. Balio nuluko deribatuak
+hemen lortzen dira,
+x2 − y
+= 0
+−x + y
+2
+= 0
+Beraz y = x2 eta −x+x
+4 = 0. Hortik x = 0, y = 0 eta x = 1, y = 1 puntuak
+ateratzen dira.
+2. Hessianoko bigarren ordenako deribatu partzialak hauek dira,
+∂2z
+∂x2
+= 6x;
+∂2f
+∂x∂y
+= −3;
+∂2f
+∂y2
+= 6y
+eta Hessianoaren determinantearen balio hauek ditugu,
+|H|(0,0) = −9 < 0;
+|H|(1,1) = 36 − 9 = 27 > 0
+Beraz (0, 0) puntuan ez dugu ez maximo ez minimo, eta (1, 1) puntuan
+minimoa.
+3. Funtzioaren balio minimoa hau da,
+f (1, 1) = −1
+adibidea
+1.29. Demagun a zenbakia hiru osagai positiboetan banatu nahi dugula
+a = x + y + z. Nolako banaketak emango du osagaien biderkadura handiena?
+
+1.9. ALDAGAI ANITZEKO FUNTZIOAREN MAXIMOAK ETA MINIMOAK
+35
+Ebazpena:
+Proposatutakoaren arabera hauek bete beharko dira x, y > 0 eta z = a−x−y > 0,
+beraz x + y < a. Horrek (x, y) balioentzako hurrengo eremu irekia ematen du
+x
+O
+y
+a
+a
+x + y = a
+Osagaien biderkaketarekin funtzio berri bat deﬁnituko dugu, u = xy(a−x−y),
+bi aldagai funtzio bat beraz. Bere maximoa aztertu behar dugu,
+1. Puntu kritikoak,
+∂u
+∂x
+= y(a − x − y) + xy(−1) = y(a − 2x − y);
+∂u
+∂y
+= x(a − x − 2y)
+Berriro hoien deﬁnizio eremua xy planu osoa da.
+2. Anulatu eta sistema hau bete behar da,
+y(a − 2x − y) = 0
+x(a − x − 2y) = 0
+Aukera hauek daude:
+(a) x = 0 → y(a − y) = 0. Beraz (0, 0) eta (0, a) puntuak ateratzen dira.
+(b) a−x−2y = 0 → x = a−2y → y(a−2a+4y−y) = 0 → y(−a+3y) = 0.
+Hortik y = 0 eta y = a/3 aukerak. Orduan (a, 0) eta (a/3, a/3)
+puntuak ateratzen dira.
+(c) Lehenengo ekuazioaren zeroen azterketarekin hasita ez da sistemaren
+soluzio berririk ateratzen.
+Beraz lau puntutan anulatzen dira lehenengo ordenako deribatu partzialak.
+Lehenengo hiru puntuetan a-ren banaketa bera dugu: 0, 0, a hor biderka-
+dura nulua dela, ez dira marraztu dugun eremuarenak. Laugarren puntuan
+hiru osagaiak berdinak dira, balioa a/3 eta biderkadura a3/27 da. u fun-
+tzioa beti positiboa izanik eta a/3, a/3, a/3 osagaiekin muturra edukiz hor
+maximoa besterik ezin dugu eduki. Egiaztatu dezagun hori Hessianoa era-
+biliz,
+3. Bigarren deribatuak hauek dira,
+∂2u
+∂x2
+= −2y;
+∂2u
+∂x∂y
+= a − 2x − 2y;
+∂2u
+∂y2
+= −2x
+
+36
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. DERIBAKETA
+eta (a/3, a/3) puntuan Hessianoaren determinante hau dugu,
+−2a/3
+−a/3
+−a/3
+−2a/3
+=
+4a2
+9
+−
+a2
+9
+=
+a2
+3
+Hori positiboa da eta
+∂2u
+∂x2
+< 0 denez hor maximoa dugu.
+Ikusten dugu ere (0, 0) puntuan,
+0 a
+a 0
+= −a
+2 < 0
+ez dugula ez maximo ez minimo. Gauza bera gertatzen da (a, 0) puntuan,
+0
+−a
+−a −2a
+= −a
+2 < 0
+eta (0, a) puntuan,
+−2a −a
+−a
+0
+= −a
+2 < 0
+1.10
+Maximo eta Minimo Baldintzatuak
+Sarritan, maximo eta minimoko problemetan funtzioaren aldagai independenteak
+ez dira guztiz independenteak, lotuta izaten dira problemak bete behar baldin-
+tzaren batengatik. Adibide klasikoa da supermerkatuko ontziena. Zein forma
+edo neurritakoa izan behar du pote batek bolumen berdina txapa gutxienarekin
+egiteko (kostu merkeeneko potea).
+Txapa kopuru txikiena nahi badugu minimizatu beharko duguna potearen aza-
+lera, zilindro baten azalera da, baina bolumen ﬁjo batekin,
+S = 2πR h + 2πR2
+potearen azalera totala
+V = π R2 h
+aldatu ezin dugun bolumen ﬁjoa
+Horrelako problematan nola aritu behar den aztertuko dugu. Bi aldagai funtzio
+bat hartuz bere maximoak eta minimoak aztertu nahi ditugu,
+u = f (x, y)
+baina lotura batekin,
+ϕ(x, y) = 0
+Aurreko adibidean lotura honela idatzi daiteke, V − π R
+2 h = 0.
+Lotuta daudelako y eta x aldagaietatik bat bakarrik aldatu daiteke indepen-
+denteki. Adibidez x aldatuz lotura bete ahal izateko y aldatu beharko da. Lotura
+era inplizitoko funtzioa da. Benetazko y = y
+(x) bada, gure u funtzioan sartu eta
+u bakarrik x-ren funtzioa izango da. Horrela lotura horrekin maximoen eta mi-
+nimoen azterketa bakarrik x aldagaiarekiko maximoen eta minimoen azterketa
+bihurtzen da.
+Loturagatik u funtzioa funtzio konposatua da,
+
+1.10.
+MAXIMO ETA MINIMO BALDINTZATUAK
+37
+u
+x
+x
+y
+eta bere deribatua x-rekiko honela kalkulatuko dugu,
+du
+dx
+=
+∂u
+∂x
++
+∂u
+∂y
+dy
+dx
+Mutur puntuetan hori nulu izango da,
+∂u
+∂x
++
+∂u
+∂y
+dy
+dx
+= 0
+edo
+∂f
+∂x
++
+∂f
+∂y
+dy
+dx
+= 0
+Loturaren ekuazioa berdin-berdin deribatu dezakegu,
+∂ϕ
+∂x
++
+∂ϕ
+∂y
+dy
+dx
+= 0
+Azken bi ekuazioak sistema bat osatzen dute. Sistema askatuz lortuko genituz-
+ke beharrezko baldintzak beteko zituzten puntuak. Hala ere y = y(x) ez badugu
+ezagutzen ezingo dugu sistema guztiz zehaztu (dy/dx behar dugu.)
+Beste hau egin dezakegu: λ konstante erabiliz konbinaketa lineal hau hartuko
+dugu,
+F (x, y, λ) = f (x, y) + λϕ(x, y)
+nun ϕ(x, y) = 0. Horrela funtzio berriaren muturrak u-
+ren muturrak dira ere, eta
+alderantziz. Baina funtzio berriaren muturren bila hasitakoan lehenengo deribatu
+partzialek bete behar duten baldintzekin sistema hau dugu
+
+
+
+
+
+∂f
+∂x + λ
+∂ϕ
+∂x = 0
+∂f
+∂y + λ
+∂ϕ
+∂y = 0
+ϕ(x, y) = 0
+Hirugarren ekuazioa problemaren lotura da, eta da ere funtzio berriaren λ-
+rekiko deribatu partziala. Sistema horretan hiru ezezagun dugu: x, y, λ. Mutur
+puntuetan betetako baldintzetatik eratorriko sistema da eta muturretan sistema
+bete egin behar da. Alderantzizkoa ez da egia, sistemaren soluzio guztiak ez dira
+muturrak izango.
+Kasu orokorrerako azken bidea garatu egin daiteke. Demagun n aldagaiko u =
+f 
+(x1, x2, . . . , xn) funtzioaren maximoak eta minimoak kalkulatu behar ditugula,
+baina x1, x2, . . . , xn aldagaien artean m lotura ditugula, m < n,
+
+
+
+
+
+
+
+
+
+
+
+ϕ1(x1, x2, . . . , xn) = 0
+ϕ2(x1, x2, . . . , xn) = 0
+. . .
+ϕm(x1, x2, . . . , xn) = 0
+(1.5)
+
+38
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. DERIBAKETA
+Mutur baldintzatuak kalkulatzeko hurrengo funtzioa erabiliko dugu,
+F (x1, x2, . . . , xn, λ1, λ2, . . . , λm) = f (x1, x2, . . . , xn) + λ1ϕ1
+(x1, x2, . . . , xn)
++ λ2ϕ2(x1, x2, . . . , xn) + · · · + λmϕm(x1, x2, . . . , xn)
+Metodo hau Lagrangeren biderkatzailen metodoa deitzen dugu.
+Ekuazio horren x1, x2, . . . , xn-
+rekiko deribatu partzialak zeroarekin berdinduz,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+∂f
+∂x1
++ λ1
+∂ϕ1
+∂x1
++ · · · + λm
+∂ϕm
+∂x1
+= 0
+∂f
+∂x2
++ λ1
+∂ϕ1
+∂x2
++ · · · + λm
+∂ϕm
+∂x2
+= 0
+. . .
+∂f
+∂xn
++ λ1
+∂ϕ1
+∂xn
++ · · · + λm
+∂ϕm
+∂xn
+= 0
+(1.6)
+1.5 multzoko ekuazioekin guztira m + n ekuazioko sistema dugu askatzeko,
+x1, x2, . . . , xn, λ1, λ2, . . . , λm ezezagunekin. Sistema askatutakoan soluzioen ba-
+laiagarritasuna aztertu beharko dugu.
+Potearen problemara itzuliz, ekuazio eta lotura hauek ditugu,
+S = 2π R h + 2π R2
+V − π R
+2 h = 0
+nun R eta h positiboak izan behar diren. Funtzio laguntzaile hau erabiliko
+dugu,
+F (R, h, λ) = 2π R h + 2π R2 + λ(V − π R
+2 h)
+Horren deribatu partzialak zeroarekin berdinduz,
+∂F
+∂R
+= 2π h + 4π R − 2π Rλ h = 0
+∂F
+∂h
+= 2πR − πR
+2λ = 0
+∂F
+∂λ
+= V − πR
+2h = 0
+Bigarren ekuaziotik λ = 2/R eta hirugarrenatik h = V /(πR2). Lehenengo
+ekuazioan ordezkatuz,
+2V
+R2
++ 4πR − 2πR
+2V
+πR3
+= 4πR −
+2V
+R2
+= 0
+eta hortik R = 3 V /2π. Ondoren,
+h =
+V
+π(V /2π)2/3
+=
+3
+4V
+π
+Neurri hoiekin potea egiteko beharko dugun txaparen azalera hau izango da,
+S = 2πR(R + h) = 2π
+3
+V
+2π
+3
+V
+2π
++
+3
+4V
+π
+= 6π
+V
+2π
+2/3
+
+1.10.
+MAXIMO ETA MINIMO BALDINTZATUAK
+39
+Azalera hori txikiena da V bolumenerako, ze bolumen berdina lor daiteke oso
+pote motz eta zabalarekin (R ≫, h ≪), orduan azalera handia edukiko dugula,
+S = 2πR(R + h) → 2πR
+2 ≫
+eta pote hestua baina oso luzearekin, orduan ere azalerak inﬁnitura joan beharko
+duela.
+S = 2πR(R + h) → 2πRh =
+2V
+R
+≫

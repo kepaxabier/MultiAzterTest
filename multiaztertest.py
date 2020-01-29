@@ -16,6 +16,10 @@ import re
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize, word_tokenize
+#wordnet
+nltk.download('wordnet')
+#Add multilingual wordnet
+nltk.download('omw')
 from nltk.corpus import wordnet as wn
 from nltk.corpus import cmudict
 from wordfreq import zipf_frequency
@@ -267,22 +271,7 @@ class Document:
         self.calculate_lemma_adv_ttr()
         self.calculate_lemma_content_ttr()
 
-    def get_ambiguity_level(self, word, FLAG):
-        if FLAG == 'NOUN':
-            ambiguity_level = len(wn.synsets(word, pos='n'))
-        elif FLAG == 'ADJ':
-            ambiguity_level = len(wn.synsets(word, pos='a'))
-        elif FLAG == 'ADV':
-            ambiguity_level = len(wn.synsets(word, pos='r'))
-        else:
-            ambiguity_level = len(wn.synsets(word, pos='v'))
-        return ambiguity_level
 
-    def get_abstraction_level(self, word, FLAG):
-        abstraction_level = 0
-        if len(wn.synsets(word, pos=FLAG)) > 0:
-            abstraction_level = len(wn.synsets(word, pos=FLAG)[0].hypernym_paths()[0])
-        return abstraction_level
 
     def calculate_mean_depth_per_sentence(self, depth_list):
         i = self.indicators
@@ -907,16 +896,16 @@ class Document:
                                 if wn.synsets(w.text):
                                     if w.is_noun():
                                         self.aux_lists['noun_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'n'))
+                                            w.get_abstraction_level(self.language))
                                         self.aux_lists['noun_verb_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'n'))
+                                            w.get_abstraction_level(self.language))
                                     elif w.is_verb(s):
                                         self.aux_lists['verb_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'v'))
+                                            w.get_abstraction_level(self.language))
                                         self.aux_lists['noun_verb_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'v'))
+                                            w.get_abstraction_level(self.language))
                                     self.aux_lists['ambiguity_content_words_list'].append(
-                                        self.get_ambiguity_level(w.text, w.upos))
+                                        w.get_ambiguity_level(self.language))
                             if w.text.lower() not in self.aux_lists['different_forms']:
                                 self.aux_lists['different_forms'].append(w.text.lower())
                             if w.lemma not in self.aux_lists['different_lemmas']:
@@ -1578,6 +1567,47 @@ class Word:
     def has_more_than_three_syllables(self):
         return True if self.allnum_syllables() > 3 else False
 
+    def get_ambiguity_level(self, language):
+        if language == "basque":
+            lang = "eus"
+        if language == "spanish":
+            lang = "spa"
+        if language == "english":
+            lang = "eng"
+        if self.upos == 'NOUN':
+            ambiguity_level = len(wn.synsets(self.lemma, lang=lang, pos='n'))
+        elif self.upos == 'ADJ':
+            ambiguity_level = len(wn.synsets(self.lemma, lang=lang, pos='a'))
+        elif self.upos == 'ADV':
+            ambiguity_level = len(wn.synsets(self.lemma, lang=lang, pos='r'))
+        elif self.upos == 'VERB' or self.upos == 'AUX':
+            ambiguity_level = len(wn.synsets(self.lemma, lang=lang, pos='v'))
+        else:
+            ambiguity_level = 1
+        return ambiguity_level
+
+    def get_abstraction_level(self, language):
+        if language == "basque":
+            lang = "eus"
+        if language == "spanish":
+            lang = "spa"
+        if language == "english":
+            lang = "eng"
+        if self.upos == 'NOUN':
+            if len(wn.synsets(self.lemma, lang=lang, pos='n')) > 0:
+                abstraction_level = len(wn.synsets(self.lemma, lang=lang, pos='n')[0].hypernym_paths()[0])
+        elif self.upos == 'ADJ':
+            if len(wn.synsets(self.lemma, lang=lang, pos='a')) > 0:
+                abstraction_level = len(wn.synsets(self.lemma, lang=lang, pos='a')[0].hypernym_paths()[0])
+        elif self.upos == 'ADV':
+            if len(wn.synsets(self.lemma, lang=lang, pos='r')) > 0:
+                abstraction_level = len(wn.synsets(self.lemma, lang=lang, pos='r')[0].hypernym_paths()[0])
+        elif self.upos == 'VERB' or self.upos == 'AUX':
+            if len(wn.synsets(self.lemma, lang=lang, pos='v')) > 0:
+                abstraction_level = len(wn.synsets(self.lemma, lang=lang, pos='v')[0].hypernym_paths()[0])
+        else:
+            abstraction_level = 1
+        return abstraction_level
 
 class Oxford():
     lang = ""
@@ -1685,7 +1715,7 @@ class Irregularverbs:
     irregular_verbs = []
 
     def load(self):
-        f = open('data/en/IrregularVerbs.txt', 'r')
+        f = open('data/en/IrregularVerbs/IrregularVerbs.txt', 'r')
         lineas = f.readlines()
         for linea in lineas:
             if not linea.startswith("//"):
@@ -2367,12 +2397,13 @@ class Stopwords:
 
     def load(self):
         if self.lang == "english":
-            Stopwords.stop_words = stopwords.words('english')
+            #Stopwords.stop_words = stopwords.words('english')
+            Stopwords.stop_words = set(line.strip() for line in open('data/en/StopWords/stopwords.txt'))
         if self.lang == "spanish":
             #Stopwords.stop_words = stopwords.words('spanish')
             Stopwords.stop_words = set(line.strip() for line in open('data/es/StopWords/stopwords.txt'))
         if self.lang == "basque":
-            Stopwords.stop_words = set(line.strip() for line in open('data/eu/stopwords/stopwords.txt'))
+            Stopwords.stop_words = set(line.strip() for line in open('data/eu/StopWords/stopwords.txt'))
 
 
 class Predictor:

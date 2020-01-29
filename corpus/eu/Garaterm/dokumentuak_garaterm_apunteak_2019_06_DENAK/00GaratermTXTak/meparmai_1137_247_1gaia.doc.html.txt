@@ -1,0 +1,494 @@
+
+
+
+
+
+
+
+
+1._gaia_Probabilitatea
+   1. ****** PROBABILITATEA ******
+***** 1.1. SARRERA *****
+Esperimentua egin aurretik, bere emaitza ezagutzea ezinezkoa denean, zorizkoa
+deitzen da, teorikoki baldintza berdinen pean etengabe errepika daiteke eta
+emaitza posible guztien multzoa ezaguna da. Multzo hau zorizko esperimentuaren
+lagin-espazioa deitzen da eta -ren bidez adierazten da.
+Zorizko esperimentu baten lagin-espazioa multzo finitu edo infinitua izan
+daiteke.
+Lagin-espazioaren azpimultzoak gertaerakdeitzen dira eta letra maiuskulen bidez
+adierazten dira; beraien artean multzo hutsa - ezinezko gertaera () - eta
+lagin-espazioa bera azpimultzo bezala - gertaera segurua () - kontuan izan
+behar dira. Elementu bakar batek osoturiko gertaerak oinarrizko gertaerak
+deitzen dira eta elementu bat baino gehiagoz osoturikoak gertaera konposatuak.
+1.1. adibidea: Demagun zorizko esperimentua dado bat botatzean datzala.
+Lagin-espazioa ondokoa da:  = {1, 2, 3, 4, 5, 6}
+Ondoko gertaerak hartzen ditugu: A = {2, 4, 6}, B = {3, 4, 5, 6}, C = {1, 3, 5}
+eta D = {1}
+Beraz:
+    * Dadoa botatzerakoan emaitza bikoitia ateratzen baldin bada A gertaera
+      jazotzen da.
+    * Dadoa botatzerakoan 2 baino emaitza handiagoa ateratzen baldin bada B
+      gertaera jazotzen da.
+    * Dadoa botatzerakoan emaitza bakoitia ateratzen baldin bada C gertaera
+      jazotzen da.
+    * Dadoa botatzerakoan 1 ateratzen baldin bada D gertaera jazotzen da.
+Alegia, gertaera bat zorizko esperimentuaren proba bat egin ondoren behatu
+daiteken jazoera da.
+Halaber,
+    * B eta C gertaera konposatuak dira eta D oinarrizko gertaera da.
+    * A eta C gertaerak ezin daitezke batera jazo eta gertaera bateraezinak
+      deitzen dira.
+    * D gertaera jazotzen baldin bada, C gertaera ere jazotzen da. Kasu honetan
+      DparteC dela esaten da eta D  C adierazten da.
+***** 1.2. GERTAEREN ARTEKO ERLAZIOAK *****
+Gertaeren bildura: A eta B gertaeren arteko bat gutxienez jazotzea beste
+gertaera bat da. Gertaera berri honi, A eta B-ren arteko bildura deritzogu eta
+A  B adierazten da. Alegia, A edo B-n dauden elementuek osoturiko lagin-
+espazioaren azpimultzoa da. A “gorria izatea” eta B “zuria izatea” baldin
+badira, A  B ”gorria edozuria izatea” izango da.
+Gertaeren ebakidura: A eta B gertaerak batera gertatzen direnean, jazotzen den
+gertaera A eta B-ren ebakidura deitzen da eta A  B moduan adierazten da.
+Alegia, A eta B-n dauden elementuak osoturiko lagin-espazioaren azpimultzoa da.
+A “gorria izatea” eta B “zuria izatea” baldin badira, A  B ”gorria eta zuria
+izatea” izango da.
+A eta B gertaera bateraezinak baldin badira, A  B  betetzen da.
+Kontrako gertaera: A gertaera ez jazotzea beste gertaera bat da eta A-ren
+kontrako gertaera deitzen da eta adierazten da. Alegia, A-n ez dauden
+elementuek osoturiko lagin-espazioaren azpimultzoa. A “gorria izatea” baldin
+bada, “gorria ez izatea” izango da.
+Gertaeren kendura: A gertaera jazo eta B gertaera ez jazotzea A eta B gertaeren
+arteko kendura deitzen da eta A B adierazten da. Alegia, A-n egonik, B-n ez
+dauden elementuak osoturiko lagin-espazioaren azpimultzoa da. A “gorria izatea”
+eta B “zuria izatea” baldin badira, A  B ”gorria baina ez zuria izatea” izango
+da, beraz A  B= A  betetzen da.
+1.2. adibidea: Demagun 1.1. adibideko zorizko esperimentua.
+A  B = {2, 3, 4, 5, 6}, dado bat botatzerakoan emaitza bikoitia edo 2 baino
+handiagoa ateratzea da, beraz 1 baino handiagoa.
+A  B = {4, 6}, emaitza bikoitia eta 2 baino handiagoa izatea adierazten du.
+= {1, 3, 5} = C, emaitza bikoitia ez izatea adierazten du, hots, bakoitia
+izatea.
+A  B = {2} emaitza bikoitia baina ez 2 baino handiagoa adierazten du. Alegia,
+emaitza 2 izatea.
+Oharra: De Morgan-en legeak azpimultzoen arteko ondoko erlazioak adierazten
+dituzte. Aeta B emandako multzo baten azpimultzoak izanik:
+1.1. definizioa: Zorizko esperimentu bati loturiko lagin-espazioa  izanik, -
+ren azpimultzo guztiek osoturiko multzoa -ren parteen multzoa deitzen da eta 
+() adierazten da. Zorizko esperimentu bati loturiko gertaera guztiek osoturiko
+multzoa da.
+   1. adibidea: Zorizko esperimentua txanpon bat airera botatzea baldin bada, 
+      = {A, G} da, non A-k aurpegia eta G-k gurutzea adierazten duten. Beraz: 
+      () = {, {A}, {G}, {A, G}}
+***** 1.3. PROBABILITATE KALKULUAREN AXIOMATIKA *****
+Helburua: Zorizko esperimentu bati lotutako gertaeren jazoeraren ziurtasun edo
+ziurgabetasunaren neurria adierazten duen funtzio bat definitu nahi dugu.
+Honetarako, zorizko esperimentuan behaturiko gertaeraren maiztasun erlatiboa
+erabiltzen da.
+1.2. definizioa:Demagun zorizko esperimentu baten n proba egiten direla eta A
+gertaera n probatatik f aldiz jazo dela. Orduan:
+    * A-ren maiztasun absolutua f da.
+    * A-ren maiztasun erlatiboa da eta adierazten da.
+Maiztasun erlatiboen propietateak:Demagun A gertaeraren maiztasun erlatiboa
+dela. Orduan, ondoko propietateak betetzen dira:
+   1.  A gertaera, h(A)  [0, 1], zeren eta f, n  0 eta f  n.
+   2. h() = 1. Gertaera segurua beti jazotzen denez, bere maiztasun erlatiboa
+      1 da.
+   3. Demagun A eta B gertaera bateraezinak, f1 A-ren maiztasun absolutua eta
+      f2 B-ren maiztasun absolutua direla. A  B  denez, orduan (A  B) -ren
+      maiztasun absolutua f1 + f2 da. Beraz:
+h(A  B ) == h(A) + h(B)  h(A  B) = h(A) + h(B).
+   1. definizioa:Biz zorizko esperimentu bati lotutako lagin-espazioa. Defini
+      dezagun () definizio-barrutitzat duen eta bere balioak [0, 1] tarte
+      itxian hartzen dituen zenbakizko funtzioa, funtzio honi Pprobabilitatea
+      deituko diogu:
+P: () [0, 1]
+ A
+ P(A)
+Probabilitate-funtzioak ondoko axiomak betetzen ditu:
+   1. P() = 1.
+   2.  A, B,  () non A  B   P(A  B ) = P(A) + P(B)
+Lehen axiomak gertaera segurua lortzearen ziurtasuna adierazten du. Bigarren
+axiomak, lagin-espazioko edozein bi gertaera bateraezin arteko bilduraren
+probabilitatea beraien probabilitateen batura izatera derrigortzen du.
+Oharra: (Probabilitate enpirikoa): Batzutan, gertaera baten probabilitatea nola
+kalkulatu ez da erraza izaten. Kasu hauetan balio enpiriko bat lor daiteke
+ondoko erara:
+   1. Esperimentua hainbat aldiz errepikatzen da
+   2. Gertaeraren jazoera-kopurua kontatzen da
+   3. Gertaeraren maiztasun erlatiboa kalkulatzen da ondoko zatiduraren bidez:
+   1. Orduan, A gertaera jazotzeko probabilitatea da, non esperimentuaren n
+      errepikapenetan A gertaeraren jazoera-kopuruar den, eta errepikapen-
+      kopuru aski handia hartzen dela adierazten duen.
+n errepikapen-kopuruak nahiko handiak baldin badira, kantitateek gutxi
+desberdintzen dira elkarren artean, hots, zenbaki finko baterantz jotzen dute,
+zenbaki hau A gertaeraren probabilitatea izanik.
+Probabilitatearen oinarrizko propietateak:Demagun  zorizko esperimentuari
+lotutako lagin-espazioa dela. Orduan ondoko propietateak betetzen dira.
+   1.  A  ()  P(A) = 1 – P().
+Bereziki: P()= 0
+   1.  A, B,  () non A  B  P(A)  P(B) eta P(B – A) = P(B) – P(A)
+Bereziki: P(A  B)  P(A)  P(A  B) eta P(A  B)  P(B)  P(A  B)
+   1.  A, B,  ()  P(A  B) = P(A) + P(B) – P(A  B)
+Formula hau gertera-kopuru handiagorako orokor daiteke. Esate baterako,  A, B,
+C  ()  P(A  B C) = P(A) + P(B) + P(C) – P(A  B) – P(A  C) – P(B  C) +
+P(A  B C)
+   1.  A, B,  ()  P(A  B)  P(A) + P(B)
+Orokorrean: P(A1 A2  …  An)  P(A1) + P(A2) + … + P(An)
+Frogapena:
+   1. A  (): A  =  eta A  =  betetzen dira. Orduan:
+A  =   P(A  ) = P(A) + P() (2garren axioma)
+A  =   P(A  ) = P() = 1 (lehenengo axioma)
+Beraz P(A) + P() = 1 eta ondorioz P(A) = 1 – P().
+P() = 1 – P() = 1 – 1 = 0 lehen axiomaren aplikazio zuzena da.
+   1. A  B  B = A  (B – A) eta A  (B – A) = A  (B  )) = . Orduan:
+P(B) = P(A  (B – A)) = P(A) + P(B – A) (2garren axioma) 
+ P(A)  P(B) eta P(B – A) = P(B) – P(A)
+A  B A A  BP(A  B)  P(A)  P(A  B)
+A  B B A  BP(A  B)  P(B)  P(A  B)
+   1. A  B= A  (B – A) eta A  (B – A) = A  (B  )) =   P(A  B) = P(A) +
+      P(B – A) (2garren axioma)
+B= (B – A)  (A  B) eta (B – A)  (A  B) =   P(B) = P(B – A) + P(A  B)  P
+(B – A) = P(B) – P(A  B) (2garren axioma)
+Aurreko emaitza biak bat eginik P(A  B) = P(A) + P(B) – P(A  B) lortzen dugu.
+   1. Frogapenik gabe.
+1.4. adibidea: DemagunA eta B gertaera bateraezinak direla, non P(A)= 0.3 eta P
+(B)= 0.6 diren. Kalkula dezagun ondoko gertaeren probabilitatea: , , A  B, A 
+B,  eta  .
+Emaitza:
+P() = 1 – P(A) = 1 – 0.3 = 0.7
+P() = 1 – P(B) = 1 – 0.6 = 0.4
+A eta B bateraezinak  A  B   P(A  B) = 0
+A eta B bateraezinak  P(A  B) = P(A) + P(B) = 0.3 + 0.6 = 0.9
+P() = P() = 1 – P(A  B) = 1 – 0.9 = 0.1
+P() = P() = 1 – P(A  B) = 1 – 0 = 1
+***** 1.4. EREDU PROBABILISTIKOAK *****
+Demagun lagin-espazio finitua duen zorizko esperimentua:  = {e1, e2, …, en}.
+Orduan, zorizko esperimentuari lotutako gertaera guztiek osotzen duten multzoa,
+(), ondoko erara lortzen da:
+Gertaera segurua: .
+Ezinezko gertaera: .
+Oinarrizko gertaerak: {e1}, {e2}, …, {en}
+Oinarrizko gertaerak binaka osotzen dituzten bildurak: {ei, ej} non i  j.
+Oinarrizko gertaerak hirunaka osotzen dituzten bildurak.
+…….
+Oinarrizko gertaerak (n-1)-naka osotzen dituzten bildurak.
+Gure helburua ()-n probabilitate bat definitzea da; honetarako, oinarrizko
+gertaeratan definitzea nahikoa dela ikusiko dugu.
+Kasu bi bereiztuko ditugu:
+               1. **** Zorizko eredu klasikoa ****
+Demagun oinarrizko gertaera-kopuru finitua daukan zorizko esperimentu bat,  =
+{e1, e2, …, en}, gertaera guzti hauek ekiprobableak izanik, P({e1}) = P({e2}) =
+… = P({en}) = p.
+Ondorioz:  = {e1}  {e2}  …  {en}  P() = P({e1}) + … + P({en}) = p + p + …
++ p 
+ 1 = np  p = 1/n
+Hots: P({e1}) = P({e2}) = … = P({en}) = 1/n
+A edozein gertaera konposatu, oinarrizko gertaeren bildura bakar baten modura
+adieraz daiteke:
+non   eta l  n
+Oinarrizko gertaerak bateraezinak direnez,
+Gertaera baten probabilitatea kalkulatzeko Laplace-n formula agertzen da:
+“aldeko emaitza-kopurua” eta “emaitza posible-kopurua”-ren arteko zatidura.
+Beraz, modu honetako probabilitateak kalkulatzeko, A gertaera eta lagin-
+espazioa osotzen duten oinarrizko gertaera-kopuruak ezagutzea derrigorrezkoa
+da. Honetarako Konbinatoriak eskaintzen dizkigun zenbatze-teknikak erabiliko
+ditugu.
+1.5. adibidea: Seme-alaba bi dauzkaten familietan, AA, AS, SS, SA lau aukerek
+(A-k alaba eta S-k semea adierazten dutelarik) probabilitate berdina daukate.
+Kalkula itzazu:
+   1. Hartutako familia batek gehien jota alaba bat edukitzeko probabilitatea.
+   2. Hartutako familia batek seme bat eta alaba bat edukitzeko probabilitatea.
+Emaitza:
+ = {SS, AS, SA, AA} non P({SS}) = P({AS}) = P({SA}) = P({AA}) = 1/4
+   1. P({SS, AS, SA}) = 3/4
+   2. P({AS, SA}) = 1/2
+*** Konbinatoria ***
+nelementutako multzoa emanik, zenbat eratara ordena daitezke? n elementuen
+arteko k elementutako azpimultzoak (kn) eratu nahi badira, zenbat aukera daude?
+Konbinatorian, hauek eta antzeko egoerak aztertzen dira. Multzo finitu batetako
+elementuek osoturiko azpimultzo-kopurua zenbatzeko erabiltzen den teknika-
+sistema Konbinatoria deitzen da, azpimultzoak eratzeko irizpideak aukeratzen
+diren elementuak, beraien ordena edo biak direlarik.
+Aldez aurretik, behar ditugun zenbait nozio gogoraziko ditugu:
+n zenbaki arrunt bakoitzerako, nfaktoriala (n!), n lehen zenbaki arrunten
+arteko biderkadura da eta n! = n(n – 1)(n – 2) …21 idazten dugu.
+Faktorialaren propietateak hauek dira:
+   1. n! = n(n – 1)! = n(n – 1)·(n – 2)! = …
+   2. Komenientziazko arrazoiak direla eta 0! = 1 definitzen da.
+Halaber, n, k zenbaki arruntak emanik, k n izanik (noizean behin, k= n= 0 izan
+daiteke), ngainkkonbinazio-zenbakia horrela definitzen dugu: =
+Frogatzeko propietate errazak hauek dira:
+   1. ==1; =n
+   2. =
+   3. +=
+Egingo ditugun baieztapenak frogatu nahi gabe, hel diezaiogun gaiari: n
+elementutako multzotik atera daitezkeen n elementutako taldeen desberdintasuna,
+elementuen ordenan soilik datza, nelementuren permutazio (arruntak) deitzen
+dira eta adierazten dira.
+Baina, multzoko elementuen arteko k (k n) elementutako taldeak eraiki nahi
+baditugu bi aukera desberdin ditugu:
+   1. Taldeak desberdintzat hartzen ditugu, elementuren batez diferitzen
+      direnean, edo, elementu berberak izanik, beraien ezarrera-ordenaz
+      diferitzen direnean. Kasu honetan talde desberdinak k-naka
+      hartutakonelementuren aldakuntza (arruntak) deitzen dira eta adierazten
+      dira.
+   2. Taldeak desberdintzat hartzen ditugu, elementuren batez diferitzen
+      direnean. Kasu honetan talde desberdinak k-naka hartutakonelementuren
+      konbinazio (arruntak) deitzen dira eta adierazten dira.
+Kontutan har dezagun ondoko propietatea: .=.
+Elementuak errepikatzea posible denean, beraietatik atera daitezkeen k
+elementutako (k hautazkoa) taldeak era berean definitzen dira, errepikatuzko
+permutazioak, aldakuntzak eta konbinazioak deitzen direlarik.
+Errepikatuzko permutazioak, adierazten dira, non, errepikatzen diren elementuek
+adierazten dituzten: bat aldiz, beste bat aldiz, eta abar..., aldiz, eta ,
+Errepikatuzko aldakuntzak eta konbinazioak hurrenez hurren adierazten dituzten
+notazioak ondokoak dira: , non, ez da derrigorrezkoa.
+Kasu ezberdinetako adibide adierazgarriak hauek dira:
+1.6. adibidea:Apal batean 12 liburu baditugu, ordenatzeko era desberdinak 12
+elementuren permutazioak dira. Beraien artetik 4 aukeratu behar badira, aukera
+posibleak 4-naka hartutako 12 elementuren konbinazioak dira. Baina 4 liburu
+apal berri batean kokatzeko aukerak ere kontatu nahi baditugu 4-naka hartutako
+12 elementutako aldakuntzak dira.
+1.7. adibidea:1-etik 5-erako zenbakiz osoturiko 12 zifratako zenbakiak lortu
+nahi badira errepika beharko ditugu. Posible izango litzateke 1 hiru aldiz , 2
+lau aldiz eta 3 hiru aldiz dauzkatenetan soilik interesa edukitzea. Azken kasu
+honetan bat 3 aldiz, beste bat 4 aldiz eta bestea 3 aldiz errepikatzen diren
+errepikatuzko permutazioak ditugu; errepika gabe gelditzen diren biak osotuko
+lituzke 12 elementutako taldea. Bost zenbakiekin zenbat 12 zifratako zenbaki
+lortu daiteken kalkulatu nahi bada 12-naka hartutako 5 elementutako
+errepikatuzko aldakuntzak dira.
+1.8. adibidea: Futbol kinieletan 14 emaitza eman behar ditugu X,1,2 sinboloak
+erabiliz, beraz hauek 14-naka hartutako 3 elementuren errepikatuzko aldakuntzak
+dira. Kinieletan 3 sinbolo 14 aldiz erabiltzen dira, beraien ordenak garrantzia
+duelarik. Partiduetan baizik etxeko eta kanpoko garaipenak eta berdinketetan
+interesa baldin badaukagu, kasu honetan ordenak ez du garrantzirik eta kiniela
+bi beraien arteko X, 1 eta 2 sinbolo-kopuruan desberdintzen dira, hauek 14-naka
+hartutako 3 elementuren errepikatuzko konbinazioak dira.
+1.9. adibidea: Psikiatria klinika batean 5 gaixoz osoturik dagoen terapia talde
+bat daukagu. Demagun gaixoak A, B, D, E eta F letren bidez adierazten ditugula.
+5 gaixo hauetatik, 3 pertsonaz osoturiko taldeak 3-naka hartutako 5 elementuren
+konbinazio arruntak dira. Zeren eta, esate baterako, ABD eta BAD talde berdina
+dira. Beraz, ordenak ez du garrantzirik gaixoak aukeratzerakoan.
+*** Konbinatoriaren kalkulua ***
+Demagun n elementutako multzo bat daukagula eta k elementu () ordenatzeko era
+desberdinak kontatu nahi dugula. Elementuak ordenaturik eta sistematikoki
+aukeratzen dira eta aukera bakoitzerako beste elementu bat gehitzeko (n- 1)
+posibilitate edukiko ditugu. Bi elementuz osoturiko taldea osotuz gero,
+gelditzen diren (n- 2)-etatik bat aukeratzen da. Honela 3 elementutako talde
+guztiak dauzkagu, eta bere kopurua n(n-1)(n-2) izango da. Honela jarraituz, k
+elementuz osoturiko talde-kopurua n(n- 1)(n- 2) ... (n- (k- 1)) izango da.
+Alegia,
+= n(n - 1)(n- 2)....(n- (k- 1)).
+1.10. adibidea:Demagun letraz osoturiko {A, B, C, D, E, F} multzoa.
+Ordenaturiko 4 letratako taldeak sortu nahi ditugu. Seietatik edozein aukera
+daiteke. Aukeraturiko bakoitzerako, beste bat gehitzeko 5 aukera desberdin
+dauzkagu. Bikote bakoitzari gelditzen diren lauretatik bat gehi diezaiokegu,
+eta azkenez hirukote bakoitzarentzako hirutik bat aukera dezakegu
+Lehen aukera: A, B, C, D, E, F n = 6
+Bigarren aukera A finkatuz: AB, AC, AD, AE, AF n – 1 = 5
+Bigarren aukera B finkatuz: BA, BC, BD, BE, BF n – 1 = 5
+Era berean,C, D, E eta F finkatuz: bikote-kopurua 65 da; orokorrean: n(n- 1).
+Bikote bakoitzari lautik letra bat gehi diezaiokegu, adibidezbikoteari:.65
+bikote daude, eta 4 aukera bakoitzeko. Beraz,: 654 hirukote; orokorrean n(n-
+1)(n- 2).
+Hirukote bakoitzari gelditzen diren hiru letretatik bat gehi diezaiokegu, esate
+baterako hirukotearen aukerak dira, hau da 3 aukera hirukoteko. Beraz, 6543
+= ; orokorrean: n(n- 1)(n- 2)(n- 3) = laukote. Lortutako zenbakia 4-naka
+hartutako 6 elementuren aldakuntza-kopurua da.
+k= n denean, , n elementuren permutazioak, lortzen dira. Pn = n(n – 1)(n –
+2) …21 = n!
+eta .Pk =, denez: ====
+k ordenako n elementutako konbinazio-kopurua zenbaki konbinatorioaren bidez
+kalkula daiteke.
+Arrazonamendu berdinak erabiliz, pixka bat zailagoak izan arren, elementuen
+errepikapena posible denerako formulak ateratzen ditugu:
+,
+1.11. adibidea:Demagun 58 pertsonak osoturiko populazioan, 35 emakume eta 23
+gizon daudela. Erantzun itzazu ondoko galderak:
+   1. 10 pertsonatako zenbat talde aukera daitezke?
+   2. Zoriz aukeraturiko 10 pertsonatako talde batean, zein da %60a emakumeak
+      izateko probabilitatea?
+   3. Talde bat aukeratzeko pertsonak zenbatzen dira, zenbakiak kutxan sartzen
+      direlarik. Zenbaki bat zoriz aukeratzen da, eta idatzi ondoren kutxara
+      bueltatzen da. Zein da 10 ateralditan zenbaki errepikatuak ez ateratzeko
+      probabilitatea?
+   4. Zenbat eratara jar daitezke 10 pertsonak osoturiko taldea errenkada
+      baten?
+   5. 10 pertsonatako talde bat izanik, zenbat eratara jar daitezke 4 pertsona
+      errenkadan?
+Emaitza:
+   1. 58 pertsonaz osoturiko populazio batetik 10 zoriz hartzeko aukerak,
+      ordenak garrantzirik ez daukanez, 10-naka harturik 58 elementuren
+      konbinazioak dira.
+===52 179 482 355
+   1. 10 pertsonatako taldean %60 emakumeak izateak, 6 soilik emakumeak direla
+      esan nahi du. Guztiz, 35 emakume daudenez 6 aukeratu behar ditugu, talde-
+      kopurua -ren bidez kalkulatzen delarik. Aukera bakoitzerako 4 gizon
+      hartzeko aukera desberdin izango dira. Beraz, soilik 6 emakumez osotutako
+      10 pertsonatako talde kopurua da. Eta eskatutako probabilitatea:
+izango da.
+   1. 10!=3 628 800
+               1. **** Eredu probabilistiko finitua ****
+Demagun oinarrizko gertaera-kopuru finitua daukan zorizko esperimentu bat,  =
+{e1, e2, …, en}, baina gertaera guzti hauek ekiprobableak ez izanik. Hots, P(
+{ei}) = pi i / 1  i  n, ondoko bi propietateak betetzen direlarik:
+   1. 0  pi  1 i / 1  i  n
+   2. P() = 1  p1 + p2 + … + pn = 1
+A edozein gertaera konposatu, oinarrizko gertaeren bildura bakar baten modura
+adieraz daiteke:
+non   eta l  n
+Oinarrizko gertaerak bateraezinak direnez, P(A) = =
+1.12. adibidea: Demagun zorizko esperimentu bati loturiko lagin-espazioa  =
+{1, 2, 3}dela. Orduan: () = {, , {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}} da.
+Demagun halaber: p1 = P({1}) = 1/4; p2 = P({2}) = 1/6 eta p3 = P({3}) = 7/12
+direla. ( betetzen da).
+A = {1, 3} gertaeraren probabilitatea kalkulatzeko:
+P(A) = P({1}  {3}) = P({1}) + P({3}) =
+***** 1.5. PROBABILITATE BALDINTZATUA *****
+Batzutan, ondokoa gertatzen da: Zorizko esperimentuari buruzko informazio-mota
+zehatzagoa lor dezakegu, eta honek, berari buruzko ikuspen orokorra aldarazten
+digu. Horrela adibidez, A gertaera burutu dela ezagutzen badugu, beste zenbait
+gauzaren artean, gertaera ez dela burutu esan dezakegu, edo gertaerari,
+gertatzeko probabilitate handiagoa eman diezaiokegu.
+Probabilitate baldintzatuaren bidez, gertaera baten jazoera ezagutuz, beste
+gertaera baten probabilitatea kalkula dezakegu.
+Demagun 100 pertsonek osoturiko multzo bat, hauetatik 50 gizonezkoak eta beste
+50 emakumezkoak direlarik. Gizonezkoen artean, 40 beltzaranak (B) eta 10
+ilehoriak (H) dira; emakumezkoen artean aldiz, 40 ilehoriak eta 10 beltzaranak
+izanik.
+Pertsona bat zoriz aukeratzen bada, zein da ilehoria izateko probabilitatea?
+Probabilitate hau P(H) = 0.5 da, beraz ilehoria ateratzeko edo ez ateratzeko
+dagoen probabilitatea berdina da. Baina demagun emakume bat zoriz aukeratzen
+dela, zein da ilehoria izateko probabilitatea? Probabilitate hau kalkulatuko
+dugu:
+Eta gizon bat aukeratzen badugu, zein da ilehoria izateko probabilitatea? Kasu
+honetan:
+Beraz, emakume ilehori bat ateratzea gizon ilehori bat ateratzea baino
+probableagoa da. Alegia, esperimentuari buruzko informazio zehatza edukitzeak
+probabilitatea aldarazten du.
+1.4. definizioa: Demagun zorizko esperimentu bat eta P(A) > 0 baldintza
+betetzen duen A gertaera. Beste edozein B gertaeraren A-rekiko probabilitate
+baldintzatua P(B|A) adierazten da, ondoko erara definitzen delarik: .
+
+Oharra: P(A) > 0 betetzen duen A gertaera izanik:
+                                       :
+                                       B
+funtzioak probabilitatearen propietatek betetzen dituela behatzen da. Hain
+zuzen,
+   1. .
+eta direnez .
+Beraz; .
+   1. .
+   2. non .
+1.13. adibidea:Isolamendu handia eta endogamia daukaten populazio batean %57
+emakumezkoak dira, eta pertsonen %12an atzerapen psikikoak aurkitu dira.
+Emakumezkoen artean %46ak Rh-- daukate eta %15 atzeratuak dira. Populazioaren
+%8a atzeratua da eta Rh-- dauka. Populazioaren zein portzentai dira
+emakumezkoak eta Rh---ak? Eta zein da Rh+-dun portzentaia, atzeratuen artean?
+Pertsona bat zoriz aukeratuz, zein da emakume atzeratua izateko probabilitatea?
+Emaitza: Erabiliko ditugun gertaerak ondokoak dira:
+E: emakumezkoa R: Rh-- A: atzeratua
+Datuak hauek dira:
+                                       ,
+                                      , ,
+Horretara:
+,
+,
+Beraz, populazioaren %26 Rh---dun emakumezkoak dira eta atzeratuen artetik
+%33ak Rh+ daukate. Zoriz aukeraturiko pertsona emakume atzeratua izateko
+probabilitatea 0.09 da.
+Probabilitate_konposatuaren_teorema_(Biderkadura_erregela): Demagun A1, A2, …,
+An gertaera-familia non den. Orduan:
+Frogapena: n-rekiko indukzioz.
+n = 2 denean, probabilitate baldintzatuaren definizioa besterik ez da.
+Suposa dezagun 1, 2, …, (n – 1) balioentzat egia dela eta froga dezagun n-
+rentzat:
+Lehen berdinketa (n – 2)-ntzako indukzioa aplikatzearen ondorioa da, eta
+hirugarrena (n – 1)-entzako egitearena.
+1.14. adibidea: Depositu mineralen azterketan landareen presentziari,azterketa
+geobotanikoa deitzen zaio. Malba-koloreko loredun menda landare txiki bat
+kobrearen adierazlea da. Demagun emandako herrialde batean lurraren kobre
+edukia altua izateko probabilitatea %30ekoa dela eta menda toki horretan
+presente egoteko probabilitatea %23koa. Kobre edukia altua baldin bada, menda
+egoteko probabilitatea %70ekoa da. Zein da kobre edukia altua izan eta menda
+egoteko probabilitatea?
+Emaitza: Kobre edukia altua izatea A gertaeraren bidez adierazten badugu eta
+menda egotea B-ren bidez, P(A  B) kalkulatu behar dugu.
+Dauzkagun datuak ondokoak dira: P(A) = 0.3, P(B) = 0.23, P(B|A) = 0.7.
+Beraz probabilitate konposatua erabiliz: P(A  B) = P(A)P(B|A) = 0.30.7 =
+0.21
+***** 1.6.INDEPENDENTZIA. BAYES-en TEOREMA *****
+1.5 atalaren hasieran emandako adibideanP(H) =0.5 eta P(H|E) = 0.8 ikus
+daiteke, ilehorien portzentaia populazioan emakumezkoen azpi-populazioan baino
+txikiagoa dela adierazten delarik. Beraz, H gertaeraren dependentzia bat dago E
+gertaerarekiko. Egoera honek independentzi estokastikoa deitzen den kontzeptura
+garamatza.
+1.5. definizioa: Bira A eta B gertaerak, P(A) > 0 eta P(B) > 0 izanik. A eta B
+askeak dira ondokoa betetzen baldin bada: P(A  B) = P(A)P(B)
+Definizio honen eta probabilitate baldintzatuarenaren ondorioz hurrengo
+baieztapenak ditugu:
+   1. Ondokoak baliokideak dira:
+   1. A eta B gertaera askeak dira
+   2. P(A  B) = P(A)P(B)
+   3. P(A|B) = P(A) non P(B) > 0 den.
+   4. P(B|A) = P(B) non P(A) > 0 den.
+   1. A eta B gertaera askeak baldin badira, orduan:
+   1. A eta askeak dira.
+   2. eta B askeak dira.
+   3. eta askeak dira.
+   1. A eta B gertaera askeak baldin badira, orduan: P(A|B) = = P(A)
+1.15. adibidea: Euskal Autonomi Elkarteko populazioaren artean, %55a oso lodia
+(A), %20a hipertensoa (B) eta %60a oso lodia edo hipertensoa dela estimatzen
+da. Pertsona bat oso lodia izatea hipertensoa izatearekiko askea al da?
+Emaitza: P(A  B) = P(A) + P(B) – P(A  B) denez, ondoko erlazioa betetzen da:
+P(A  B) = P(A) + P(B) – P(A  B)= 0.55 + 0.2 – 0.6 = 0.15.
+Beraz:
+P(B|A) = 0.27  0.2 = P(B) denez, gertaerak askeak ez direla esan daiteke.
+Alegia, pertsona bat oso lodia izateak hipertensoa izateko probabilitatea
+handitu egiten du.
+Independentzia aurkitzeko irizpidea izateaz gain; banakako probabilitateak
+ezagutzen direnean eta independentziaren aurrean gaudenean, batera betetzen
+diren gertaeren probabilitatearen kalkulua ematean datza kontzeptu honen
+garrantzia.
+Oharra: Bateraezintasuna eta independentzia guztiz kontzeptu ezberdinak dira,
+nahiz eta sarritan nahasten diren. Bateraezintasuna batera jazoezinean datza:
+hau jazotzen baldin bada, beste hori ezin da jazo. Independentziaren esanahia
+bataren jazoerak bestearengan eraginik ez izatea da.
+Probabilitate_osoaren_teorema: Bira A1, A2, …, An bateraezinak eta beraien
+bildura gertaera segurua den gertaera-familia bat. (Honelako gertaera-familia
+bati gertaera-sistema osoa deitzen zaio). Demagun P(Ai) > 0 i = 1, …, n. B
+edozein gertaera izanik, ondokoa betetzen da:
+eta bildura hau disjuntua da, beraz:
+Probabilitate baldintzatuaren definizioa kontuan izanik,
+, beraz:
+
+
+1.16. adibidea: Demagun kutxabi ditugula. Lehen kutxak 3 bola zuri eta 2 beltz
+eta bigarrenak 2 bola zuri eta 3 beltz dituzte. Kutxa bat aukeratzen da zoriz
+eta bola bat ateratzen da. Zein da zuria izateko probabilitatea?
+Emaitza: Defini ditzagun ondoko gertaerak: B= “bola zuri bat atera da”, =
+“lehen kutxa aukeratu da”, = “bigarren kutxa aukeratu da”.
+Datu ezagunak hauek dira: , , ,
+Probabilitate osoaren teorema erabiliz:
+Berriz probabilitate baldintzatuaren definiziora bueltatzen bagara, hurrengoa
+daukagu:
+eta orain probabilitate baldintzatuaren definizioa eta probabilitate osoaren
+teorema batera erabiltzen baditugu Bayes-en teorema lortzen dugu:
+Bere erabilpen praktikoa ondoko adibidetan erakusten da.
+1.17. adibidea:1.16 adibidean oinarriturik, demagun bola zuri bat atera dela.
+Zein da bola hau lehenengo kutxatik ateratakoa izateko probabilitatea?
+Emaitza:
+1.18. adibidea:A, B eta C, hiru bakteriotako preparazioa daukagu, %10a, %30a
+eta %60an, hurrenez hurren. A motakoek %80an sulfatoekin erreakzionatzen dute;
+B motakoek, %60an, eta C motakoek, %40an. Bakterio bat isolatzen da eta
+sulfatoekin erreakzionatzen duela egiaztatzen da. Hemendik aurrera, A motakoa
+edo B-koa edo C-koa izateko probabilitateak kalkula daitezke.
+Emaitza: Defini ditzagun ondoko gertaerak:
+A: A motatako bakterioa isolatzea,
+B: B motatako bakterioa isolatzea,
+C: C motatako bakterioa isolatzea,
+S: sulfatoekin erreakzionatzea, , ,
+Bakterioa C motatakoa izateko probabilitatea, beste motatakoa baino handiagoa
+dela egiaztatzen da lorturiko emaitzetatik.
+
+15
+I. Arostegui, A. Urkaregi

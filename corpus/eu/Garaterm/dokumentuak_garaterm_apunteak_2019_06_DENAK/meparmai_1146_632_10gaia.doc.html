@@ -1,0 +1,1397 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>REGRESION Y ANALISIS DE LA VARIANZA</TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 3.4  (Unix)">
+	<META NAME="AUTHOR" CONTENT="xxxxxxxxxxxxxxxxxxxxx">
+	<META NAME="CREATED" CONTENT="20090929;15380000">
+	<META NAME="CHANGEDBY" CONTENT="inma">
+	<META NAME="CHANGED" CONTENT="20091029;10470000">
+	<META NAME="informazioa 1" CONTENT="">
+	<META NAME="informazioa 2" CONTENT="">
+	<META NAME="informazioa 3" CONTENT="">
+	<META NAME="informazioa 4" CONTENT="">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.27in 11.69in; margin-left: 0.79in; margin-right: 0.79in; margin-top: 0.5in; margin-bottom: 0.5in }
+		P { margin-top: 0.08in; margin-bottom: 0in; direction: ltr; color: #000000; text-align: justify; widows: 2; orphans: 2 }
+		P.western { font-family: "Times New Roman", serif; font-size: 12pt; so-language: es-ES }
+		P.cjk { font-family: "Times New Roman", serif; font-size: 12pt }
+		P.ctl { font-family: "Times New Roman", serif; font-size: 10pt; so-language: ar-SA }
+		H1 { margin-bottom: 0.17in; direction: ltr; color: #000000; widows: 2; orphans: 2 }
+		H1.western { font-family: "Arial", sans-serif; font-size: 14pt; so-language: es-ES }
+		H1.cjk { font-family: "Times New Roman", serif; font-size: 14pt }
+		H1.ctl { font-family: "Arial", sans-serif; font-size: 10pt; so-language: ar-SA; font-weight: normal }
+		H2 { margin-top: 0.25in; margin-bottom: 0.08in; direction: ltr; color: #000000; text-align: justify; widows: 2; orphans: 2 }
+		H2.western { font-family: "Arial", sans-serif; font-size: 12pt; so-language: eu; font-style: italic }
+		H2.cjk { font-family: "Times New Roman", serif; font-size: 12pt; font-style: italic }
+		H2.ctl { font-family: "Arial", sans-serif; font-size: 10pt; so-language: ar-SA; font-weight: normal }
+		H3 { margin-bottom: 0.04in; direction: ltr; color: #000000; widows: 2; orphans: 2 }
+		H3.western { font-family: "Arial", sans-serif; font-size: 12pt; so-language: es-ES }
+		H3.cjk { font-family: "Times New Roman", serif; font-size: 12pt }
+		H3.ctl { font-family: "Arial", sans-serif; font-size: 10pt; so-language: ar-SA; font-weight: normal }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="eu" TEXT="#000000" DIR="LTR">
+<DIV TYPE=HEADER>
+	<P LANG="es-ES" ALIGN=LEFT STYLE="margin-top: 0in; margin-bottom: 0.25in; border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding-top: 0in; padding-bottom: 0.01in; padding-left: 0in; padding-right: 0in">
+	<FONT SIZE=2><I>10. gaia		                                          
+	                                  Erregresio lineala</I></FONT></P>
+</DIV>
+<H1 CLASS="western">10.ERREGRESIO LINEALA</H1>
+<OL START=10>
+	<OL>
+		<LI><H2 CLASS="western">SARRERA</H2>
+	</OL>
+</OL>
+<P CLASS="western">Bi aldagai jarraikiren arteko erlazio linealaren
+indarra neurtzean datza korrelazioa. Erregresioaren helburua ordea,
+aldagai ezberdinek hartzen dituzten balioetatik abiatuta beste
+zorizko aldagai jarraiki baten itxarotako balioak aurresateko ekuazio
+bat lortzea da. Ekuazioaren bidez azaldu edo aurresan nahi den
+zorizko aldagaia menpeko aldagaia edo erantzuna deitzen da, eta berau
+azaltzeko erabiltzen diren aldagaiak askeak, azaltzaileak edo
+koaldagaiak deitzen dira. Erregresioa eta korrelazioa lotura estua
+daukaten kontzeptuak dira, bereziki erregresio lineal sinpleaz
+mintzatzen garenean, hau da aldagai aske bakarra daukagunean.</P>
+<P LANG="es-ES" CLASS="western"><SPAN LANG="eu"><I>Sir Francis Galton</I></SPAN><SPAN LANG="eu">
+jaunak sartu zuen XIX. mendean erregresio lineal sinplea teknika
+estatistiko bezala. Semearen eta aitaren altueren arteko erlazioan
+interesaturik zegoen </SPAN><SPAN LANG="eu"><I>Galton</I></SPAN><SPAN LANG="eu">.
+Hurrengo irudiko puntu-hodeian ikusten den bezala, gizon altuak seme
+altuak izateko joera dute. Semeen batez besteko altuera gurasoena
+baino txikiagoa den arren.</SPAN></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.39in; margin-top: 0in">
+</P>
+<P CLASS="western" ALIGN=JUSTIFY><BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>Galton</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">ek
+erabilitako ekuazioa ondokoa da:</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER><FONT SIZE=3><I>Semearen altuera =
+28.63 + 0.595·Aitaren altuera</I></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Gertakari
+honi </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Galton</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">ek
+emandako izena </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><B>erregresioa</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+da. Ordutik hona, izen hau erantzun-aldagaia (adibide honetan
+semearen altuera) koaldagaia bat edo gehiagoren bidez (adibide
+honetan aitaren altuera) aurresateko doitzen den eredurako erabiliko
+den izena izango da. </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Galton</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">ek
+behaturiko erregresioa deritzon gertakari honek ondoko ataletan
+eztabaidaturiko diren  ondorio garrantzizkoak dakartza lorturiko
+emaitzak azaltzerakoan.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Erregresio
+ereduan gehienbat zorizko aldagai baten interesatuak gaude, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+(semearen altuera). Aldagai honen balioa beste aldagai baten edo
+batzuengatik eraginda dagoela pentsa dezakegu (aitaren altuera). Gure
+intereseko </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+aldagaia menpeko aldagaia edo erantzun-aldagaia deitzen da, eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+aldagaian eragina daukaten beste aldagaiak askeak, azaltzaileak edo
+koaldagaiak deitzen dira. Estimazioak edo predikzioak egiterakoan
+aldagai askeak ez dira zorizkotzat hartzen. Hauek balio ezberdinak
+hartzen dituzten ezaugarriak dira, baina predikzioa egiterakoan
+balioa hauek ez dira zoriz hartutakoak. Esate baterako, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Galton</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">en
+datuetan oinarrituz berriro, semearen altuera neurri baten aitaren
+altueraren menpekoa izan daitekeenez, bi aldagai kontutan hartzen ari
+gara: </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">,
+aitaren altuera eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">,
+semearen altuera.  Helburua ez da aitaren altueraz ezer aurresatea,
+baizik eta semearen altuera aurresatea, bere aitaren altuera aldiz
+aurretik zehaztasun osoz ezagutzen dela suposatuz. Adibide honetan,
+semearen altuera erantzun-aldagaia izango litzateke, eta aitaren
+altuera kontutan hartu dugun aldagai azaltzaile bakarra.</SPAN></FONT></FONT></P>
+<P CLASS="western">Has gaitezen erregresio lineala erabiliz deskriba
+daitekeen ikerketa aurkeztuz.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><B>10.1.
+adibidea</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">: Diabetikoei
+bere odoleko glukosa-maila neurtzen irakasteak abantaila ikaragarriak
+ditu. Ohiko prozedura baino errazagoa den teknika probatzeko ikerketa
+egiten da. Teknika honek oxidasa entzima erabiltzen du hagatxo baten.
+Hagatxoak bi kolore garatzen ditu aldi berean, eta kolore hauek
+glukosa-maila markatzen duen txartelarekin konparatu behar dira
+begirada batean. Teknika hau zehatza dela erakutsi ahal izanez gero,
+bere erabilpena merkaturatuko litzateke. Helburu honekin, pazientea
+diabetikoaren odoleko glukosa-maila neurtzen da bi metodoekin,
+hagatxoarekin eta laborategian, ohiko litroko milimoletan.</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY><FONT SIZE=3>Adibide honetan,
+hagatxoaren bidez neurtutako pazientearen odoleko glukosa-maila
+aldagai azaltzailea izango da, eta laborategian neurtutako
+pazientearen odoleko glukosa-maila ordea, menpeko aldagaia. </FONT>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Gai
+honetan erabiliko dugun idazkera ezarriko dugu orain. </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+aldagaia </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+balioen menpeko moduan erabiliko dugu. Beraz, finkaturiko </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>x</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-rako
+aldagai baldintzatuaz mintzatzen ari garela onartuko dugu </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">|</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>x</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+(</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+non </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+= </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>x</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+den). Zorizko aldagai baldintzatuaren itxaropena edo batez bestekoa
+</SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT></SUB><SUB><FONT SIZE=3><SPAN LANG="eu">|</SPAN></FONT></SUB><SUB><FONT SIZE=3><SPAN LANG="eu"><I>x</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+adieraziko dugu, eta logikoa dirudi </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT></SUB><SUB><FONT SIZE=3><SPAN LANG="eu">|</SPAN></FONT></SUB><SUB><FONT SIZE=3><SPAN LANG="eu"><I>x</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>x</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+funtzioa dela pentsatzea. Funtzio honen adierazpen grafikoa da, hain
+zuzen, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+gaineko </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+erregresio zuzena deitzen dena.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Planteatzen
+den arazoa </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+aldagai azaltzailearen behaturiko balio batzuen menpe, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>x</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">1</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">,
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>x</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">2</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">,
+...., </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>x</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>n</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">,
+</SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT></SUB><SUB><FONT SIZE=3><SPAN LANG="eu">|</SPAN></FONT></SUB><SUB><FONT SIZE=3><SPAN LANG="eu"><I>x</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+funtzioaren itxura ikertzea da. Helburu nagusia, erregresio ekuazio
+sinple baina arrazonagarria aurkitzea da.</SPAN></FONT></FONT></P>
+<H2 CLASS="western">10.3DATUEN DESKRIBAPENA</H2>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Erregresio
+linealaren ereduan behaturiko datuak </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>n</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+neurketa-pare dira, (</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>y</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu"><I>,
+x</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">)
+non, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>i </I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">=
+1,</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I> </I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">2,
+...,</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I> n</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">.
+Hots, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>y</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">-k
+erantzun-aldagaiaren balioa eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>x</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">-k
+koaldagaiaren balioa adierazten dituzte, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>n</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+laginaren tamaina da eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+azpi-indizeak lagineko ale bakoitza adierazten du..</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Erregresio
+ereduaren analisian, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+koaldagaiarekiko </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+aldagaiaren puntu-hodeia eraikitzea parte garrantzizkoa da.
+Ordenatu-ardatzean (bertikalean) </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+erantzun aldagaiaren balioak eta abzisa-ardatzean (horizontalean)
+dagozkion </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+argibide-aldagaiaren balioak adierazten dituan grafikoa da hau.
+Irudikapen erraz honek aldagai bien arteko erlazioaren ideia ematen
+du. </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Software</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">aren
+aurrerapena kontuan izanik, inolako analisirik egiten ausartu baino
+lehen grafiko arrunt hau egitea derrigorrezkoa bihurtzen da. Behin
+puntu-hodeia adierazten duen grafikoa egin eta gero, puntuan gutxi
+gora behera zuzen bat erakusten dutela ikusten baldin bada, puntu
+hauek doitzeko zuzen bat erabiltzea arrazonagarria dela onartuko dugu
+eta, beraz, erregresio lineala metodo onargarritzat hartuko dugu.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><B>10.2.
+adibidea</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">: Aurreko
+10.1. adibidean deskribaturiko esperimentua egin ondoren ondoko
+datuak lortu ziren. Gogora dezagun 10.1. adibidean pazientearen
+odoleko glukosa-maila hagatxoa erabiliz (</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">)
+eta laborategian (</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">),
+litroko milimoletan neurtzen direla.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Hurrengo
+grafikoak biltzen duen puntu-hodeia taulako </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+balioak ardatz horizontalean eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+balioak ardatz bertikalean adierazita lortzen da. Nahiz eta puntu
+hauek zehatz-mehatz zuzen bat ez osatu, joera lineal bat erakusten du
+grafikoak. Joera hori da bilatzen ari garena, beraz, erregresio
+lineal sinplea onargarritzat hartzen dugu ikerketa honetan
+planteaturiko arazoaren ebazpenerako.</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="page-break-before: always"><BR>
+</P>
+<TABLE WIDTH=600 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES RULES=ROWS>
+	<COL WIDTH=51>
+	<COL WIDTH=47>
+	<COL WIDTH=94>
+	<COL WIDTH=47>
+	<COL WIDTH=103>
+	<COL WIDTH=56>
+	<COL WIDTH=85>
+	<COL WIDTH=37>
+	<TR VALIGN=TOP>
+		<TD WIDTH=51 STYLE="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.2in; margin-top: 0in">
+			<FONT SIZE=3><I>x</I></FONT></P>
+		</TD>
+		<TD WIDTH=47 STYLE="; border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.05in; margin-top: 0in">
+			<FONT SIZE=3><I>y</I></FONT></P>
+		</TD>
+		<TD WIDTH=94 STYLE="; border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.64in; margin-top: 0in">
+			<FONT SIZE=3><I>x</I></FONT></P>
+		</TD>
+		<TD WIDTH=47 STYLE="; border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3><I>y</I></FONT></P>
+		</TD>
+		<TD WIDTH=103 STYLE="; border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.64in; margin-top: 0in">
+			<FONT SIZE=3><I>x</I></FONT></P>
+		</TD>
+		<TD WIDTH=56 STYLE="; border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.12in; margin-top: 0in">
+			<FONT SIZE=3><I>y</I></FONT></P>
+		</TD>
+		<TD WIDTH=85 STYLE="; border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-left: 0.44in; margin-top: 0in">
+			<FONT SIZE=3><I>x</I></FONT></P>
+		</TD>
+		<TD WIDTH=37 STYLE="; border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0in"><FONT SIZE=3><I>y</I></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=51 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>1.3</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>2.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>2.4</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>2.6</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>2.5</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>2.6</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>2.7</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>3.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>3.7</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>3.7</FONT></P>
+		</TD>
+		<TD WIDTH=47 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.05in; margin-top: 0in">
+			<FONT SIZE=3>2.4</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.05in; margin-top: 0in">
+			<FONT SIZE=3>3.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.05in; margin-top: 0in">
+			<FONT SIZE=3>2.3</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.05in; margin-top: 0in">
+			<FONT SIZE=3>3.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.05in; margin-top: 0in">
+			<FONT SIZE=3>2.2</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.05in; margin-top: 0in">
+			<FONT SIZE=3>2.4</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.05in; margin-top: 0in">
+			<FONT SIZE=3>2.5</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.05in; margin-top: 0in">
+			<FONT SIZE=3>3.8</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.05in; margin-top: 0in">
+			<FONT SIZE=3>2.5</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.05in; margin-top: 0in">
+			<FONT SIZE=3>3.5</FONT></P>
+		</TD>
+		<TD WIDTH=94 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.64in; margin-top: 0in">
+			<FONT SIZE=3>3.2</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.64in; margin-top: 0in">
+			<FONT SIZE=3>3.6</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.64in; margin-top: 0in">
+			<FONT SIZE=3>3.7</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.64in; margin-top: 0in">
+			<FONT SIZE=3>3.7</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.64in; margin-top: 0in">
+			<FONT SIZE=3>3.8</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.64in; margin-top: 0in">
+			<FONT SIZE=3>4.4</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.64in; margin-top: 0in">
+			<FONT SIZE=3>4.3</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.64in; margin-top: 0in">
+			<FONT SIZE=3>5.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.64in; margin-top: 0in">
+			<FONT SIZE=3>5.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.64in; margin-top: 0in">
+			<FONT SIZE=3>6.3</FONT></P>
+		</TD>
+		<TD WIDTH=47 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>4.4</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>4.3</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>4.3</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>5.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>4.4</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>4.5</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>5.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>4.5</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>6.2</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.18in; margin-top: 0in">
+			<FONT SIZE=3>6.2</FONT></P>
+		</TD>
+		<TD WIDTH=103 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.54in; margin-top: 0in">
+			<FONT SIZE=3>7.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.54in; margin-top: 0in">
+			<FONT SIZE=3>8.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.54in; margin-top: 0in">
+			<FONT SIZE=3>8.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.54in; margin-top: 0in">
+			<FONT SIZE=3>10.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.54in; margin-top: 0in">
+			<FONT SIZE=3>10.2</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.54in; margin-top: 0in">
+			<FONT SIZE=3>10.2</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.54in; margin-top: 0in">
+			<FONT SIZE=3>12.5</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.54in; margin-top: 0in">
+			<FONT SIZE=3>11.3</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.54in; margin-top: 0in">
+			<FONT SIZE=3>13.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.54in; margin-top: 0in">
+			<FONT SIZE=3>14.5</FONT></P>
+		</TD>
+		<TD WIDTH=56 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.12in; margin-top: 0in">
+			<FONT SIZE=3>7.7</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.12in; margin-top: 0in">
+			<FONT SIZE=3>8.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.12in; margin-top: 0in">
+			<FONT SIZE=3>10.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.12in; margin-top: 0in">
+			<FONT SIZE=3>10.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.12in; margin-top: 0in">
+			<FONT SIZE=3>9.5</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.12in; margin-top: 0in">
+			<FONT SIZE=3>11.2</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.12in; margin-top: 0in">
+			<FONT SIZE=3>11.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.12in; margin-top: 0in">
+			<FONT SIZE=3>13.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.12in; margin-top: 0in">
+			<FONT SIZE=3>13.1</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.12in; margin-top: 0in">
+			<FONT SIZE=3>13.8</FONT></P>
+		</TD>
+		<TD WIDTH=85 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.44in; margin-top: 0in">
+			<FONT SIZE=3>15.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.44in; margin-top: 0in">
+			<FONT SIZE=3>15.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.44in; margin-top: 0in">
+			<FONT SIZE=3>17.5</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.44in; margin-top: 0in">
+			<FONT SIZE=3>18.7</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.44in; margin-top: 0in">
+			<FONT SIZE=3>6.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.44in; margin-top: 0in">
+			<FONT SIZE=3>8.7</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.44in; margin-top: 0in">
+			<FONT SIZE=3>5.6</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.44in; margin-top: 0in">
+			<FONT SIZE=3>9.1</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.44in; margin-top: 0in">
+			<FONT SIZE=3>16.2</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 0.44in; margin-top: 0in">
+			<FONT SIZE=3>9.0</FONT></P>
+		</TD>
+		<TD WIDTH=37 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-top: 0in"><FONT SIZE=3>14.9</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-top: 0in"><FONT SIZE=3>13.8</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-top: 0in"><FONT SIZE=3>17.6</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-top: 0in"><FONT SIZE=3>17.5</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-top: 0in"><FONT SIZE=3>6.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-top: 0in"><FONT SIZE=3>8.8</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-top: 0in"><FONT SIZE=3>5.7</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-top: 0in"><FONT SIZE=3>9.0</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-top: 0in"><FONT SIZE=3>12.5</FONT></P>
+			<P CLASS="western" ALIGN=LEFT STYLE="margin-top: 0in"><FONT SIZE=3>14.0</FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" ALIGN=CENTER></P>
+<H2 CLASS="western">10.4KORRELAZIOA</H2>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Aurreko
+adibidean </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+aldagaiaren balioen arabera </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+beste aldagai baten balioak aurresaten saiatu gara, bata bestearen
+menpe deskribatuz. Askotan, interesa orokorragoa da, hain zuzen bi
+aldagairen artean erlazio lineal bat dagoen jakitea, bata bestearen
+menpekotasuna landu barik. Halaber, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+menpekotasun lineala </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-rekiko
+burutzeko erregresio lineal eredua eraiki baino lehen, bien arteko
+baterako erlazio lineala deskribatzea egokia da baita. Helburu
+honetarako erabili beharrezko parametroa korrelazio linealaren
+koefizientea da.</SPAN></FONT></FONT></P>
+<OL START=10>
+	<OL START=5>
+		<OL>
+			<LI><H3 CLASS="western">KORRELAZIO LINEALAREN KOEFIZIENTEA</H3>
+		</OL>
+	</OL>
+</OL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Bi
+aldagai jarraikiren arteko erlazio lineala neurtzeko maizen
+erabiltzen den neurria korrelazio linealaren </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Pearson</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">en
+koefizientea da. Parametro hau </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+arteko kobariantzaren bidez definitzen da, non kobariantza </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+baterako aldakuntzaren neurria den. Kobariantzak daukan arazoetariko
+bat bornatua ez egotea da, beraz bere interpretazioa neurri
+absolutuetan egin beharko genuke. Arazo hau ekiditeko, kobariantza
+“erlatibizatu” egiten da, bi aldagaien desbiderapen estandarren
+biderkaduragatik zatituz. Horretara, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I><B>X</B></I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><B>
+eta </B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I><B>Y</B></I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><B>-ren
+arteko </B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I><B>Pearson</B></I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><B>en
+korrelazio linealaren koefizientea definitzen</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+da, </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I><B></B></I></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu">
+adierazten delarik</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER></P>
+<P LANG="es-ES" STYLE="widows: 2; orphans: 2; page-break-after: auto">
+<SPAN LANG="eu"><I>Pearson</I></SPAN><SPAN LANG="eu">en korrelazio
+linealaren koefizientea [</SPAN><FONT FACE="Symbol, serif"><SPAN LANG="eu"></SPAN></FONT><SPAN LANG="eu">1,
+1] tartean dago beti. Balioa positiboa denean korrelazioa positiboa
+dela esaten dugu (</SPAN><SPAN LANG="eu"><I>X</I></SPAN><SPAN LANG="eu">
+handitzerakoan </SPAN><SPAN LANG="eu"><I>Y</I></SPAN><SPAN LANG="eu">
+ere handitu egiten da), balio negatiboak ordea, korrelazio negatiboa
+adierazten dute (</SPAN><SPAN LANG="eu"><I>X</I></SPAN><SPAN LANG="eu">
+handitzerakoan </SPAN><SPAN LANG="eu"><I>Y</I></SPAN><SPAN LANG="eu">
+txikitu egiten da).</SPAN></P>
+<P LANG="es-ES" STYLE="widows: 2; orphans: 2; page-break-after: auto">
+<SPAN LANG="eu">Definizio hau guztiz teorikoa dela konturatu behar
+gara, beraz </SPAN><FONT FACE="Symbol, serif"><SPAN LANG="eu"><I></I></SPAN></FONT><SPAN LANG="eu">
+kalkulatu ahal izateko </SPAN><SPAN LANG="eu"><I>X</I></SPAN><SPAN LANG="eu">
+eta </SPAN><SPAN LANG="eu"><I>Y</I></SPAN><SPAN LANG="eu">-ren
+bariantzak eta bien arteko kobariantza kalkulatu behar dira, alegia
+aldagaien probabilitate-banaketa ezaguna izan behar du. Estatistikan,
+arazoa aurreko kantitateak estimatzean datza. Laugarren gaian azaldu
+dugu nola estimatu bariantza, era berean gai honetan, </SPAN><SPAN LANG="eu"><I>Pearson</I></SPAN><SPAN LANG="eu">en
+korrelazio linealaren </SPAN><FONT FACE="Symbol, serif"><SPAN LANG="eu"><I></I></SPAN></FONT><SPAN LANG="eu">
+ koefizientea estimatzen arituko gara.</SPAN></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Demagun
+behaturiko datuak </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>n</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+neurketa-pare direla, (</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>y</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu"><I>,
+x</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">)
+non, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>i </I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">=
+1,</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I> </I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">2,
+...,</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I> n</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">.
+Hots, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>y</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">-k
+erantzun-aldagaiaren balioa eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>x</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">-k
+koaldagaiaren balioa adierazten dituzte. </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Pearson</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">en
+korrelazio linealaren koefizientearen estimatzailea </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>r</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+adierazten da eta ondokoa da</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>r
+</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">= </SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><B>Oharra</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">:
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>r</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+estatistikoak </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+arteko erlazio lineala neurtzen du. Alegia, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+arteko erlazioa adierazgarria izan arren, lineala ez bada, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>r</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-k
+zero balioa har dezake.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><B>10.3.
+adibidea</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">: Hurrengo
+taulan agertzen diren datuetarako </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>r
+</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">= 0 da, nahiz eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+artean erlazioa funtzionala dagoen, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>y=x</I></SPAN></FONT><SUP><FONT SIZE=3><SPAN LANG="eu"><I>2</I></SPAN></FONT></SUP><FONT SIZE=3><SPAN LANG="eu">
+alegia</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">.</SPAN></FONT></FONT></P>
+<P STYLE="margin-top: 0in; widows: 2; orphans: 2; page-break-after: auto">
+<BR>
+</P>
+<DL>
+	<DD>
+	<TABLE WIDTH=227 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES RULES=ROWS>
+		<COL WIDTH=28>
+		<COL WIDTH=28>
+		<COL WIDTH=28>
+		<COL WIDTH=28>
+		<COL WIDTH=28>
+		<COL WIDTH=28>
+		<TR VALIGN=TOP>
+			<TD WIDTH=28 STYLE="border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT SIZE=3><I>x</I></FONT></P>
+			</TD>
+			<TD WIDTH=28 STYLE="; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT SIZE=3>-2</FONT></P>
+			</TD>
+			<TD WIDTH=28 STYLE="; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT SIZE=3>-1</FONT></P>
+			</TD>
+			<TD WIDTH=28 STYLE="; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT SIZE=3>0</FONT></P>
+			</TD>
+			<TD WIDTH=28 STYLE="; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT SIZE=3>1</FONT></P>
+			</TD>
+			<TD WIDTH=28 STYLE="; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT SIZE=3>2</FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=28 STYLE="; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT SIZE=3><I>y</I></FONT></P>
+			</TD>
+			<TD WIDTH=28 STYLE="; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT SIZE=3>4</FONT></P>
+			</TD>
+			<TD WIDTH=28 STYLE="; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT SIZE=3>1</FONT></P>
+			</TD>
+			<TD WIDTH=28 STYLE="; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT SIZE=3>0</FONT></P>
+			</TD>
+			<TD WIDTH=28 STYLE="; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT SIZE=3>1</FONT></P>
+			</TD>
+			<TD WIDTH=28 STYLE="; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT SIZE=3>4</FONT></P>
+			</TD>
+		</TR>
+	</TABLE>
+</DL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>Pearson</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">en
+korrelazio linealaren koefizientea estimatzen dugunean, bere
+interpretazioa dagokion arloan oinarrituta behar da. Hurrengo irudiak
+interpretazio laguntza gisa erabil daitekeen irizpidea eskaintzen du
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>r</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+interpretatzerakoan (J. S. Milton. </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Estadística
+para Biología y Ciencias de la Salud</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">.
+Interamericana-McGraw-Hill, 1994). Esate baterako, 0.5 korrelazio
+positibo moderatua da, </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu">0.9
+ordea, korrelazio negatibo altua da. Edozein kasutan, hemen aurkezten
+dugun irizpide hau zuhurtasunez erabili behar da, korrelazioaren
+indarra neurtzen ari garen ezaugarriaren menpekoa baita. Laborategiko
+esperimentu biologiko edo kimikoetan, batez ere oso giro
+kontrolatuetan egiten direnean, korrelazio-koefiziente altuak espero
+ditugu. Gizakiek parte hartzen duten ikerketetan ordea, batez ere
+behaketan oinarritzen direnetan, aurkitzen diren
+korrelazio-koefizienteak baxuak izan arren oso esanguratsuak izan
+daitezke. </SPAN></FONT></FONT>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-top: 0in">
+<BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-top: 0in">
+   <FONT SIZE=1 STYLE="font-size: 8pt">Sendoa        Moderatua       
+                       Ahula                                        
+Ahula                        Moderatua           Sendoa </FONT>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-top: 0in">
+<SPAN CLASS="sd-abs-pos" STYLE="position: absolute; top: 0.02in; left: 0.47in; width: 1px"></SPAN><SPAN CLASS="sd-abs-pos" STYLE="position: absolute; top: 0.02in; left: 5.97in; width: 1px"></SPAN><SPAN CLASS="sd-abs-pos" STYLE="position: absolute; top: 0.01in; left: 3.2in; width: 1px"></SPAN><SPAN CLASS="sd-abs-pos" STYLE="position: absolute; top: 0.02in; left: 1.82in; width: 1px"></SPAN><SPAN CLASS="sd-abs-pos" STYLE="position: absolute; top: 0.02in; left: 4.58in; width: 1px"></SPAN><SPAN CLASS="sd-abs-pos" STYLE="position: absolute; top: 0.02in; left: 0.83in; width: 1px"></SPAN>
+                                                            
+                <FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">+          
+            +               +</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-top: 0in">
+<SPAN CLASS="sd-abs-pos" STYLE="position: absolute; top: 0.01in; left: 0.47in; width: 529px"></SPAN><BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-right: -0.1in; margin-top: 0in">
+<SPAN CLASS="sd-abs-pos" STYLE="position: absolute; top: -0.57in; left: 0.02in; width: 1px"></SPAN><SPAN CLASS="sd-abs-pos" STYLE="position: absolute; top: -0.57in; left: 0.42in; width: 1px"></SPAN><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">1
+</SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu">0.9
+                </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu">0.5
+                            0                              0.5       
+             0.9    1</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+arteko korrelazio altua izateko arrazoiak hainbat izan daitezke:
+kausazko erlazioa dagoela bi aldagaien artean; beste hirugarren
+aldagai batek aurreko bietan eragiten duela; edo baita, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+erlazionatuak ez egon arren, lortutako lagina arraroa izateagatik
+erlazio faltsu bat erakusten duela. </SPAN></FONT></FONT>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Korrelazio
+linealaren koefizientea kalkulatzen duten agindu gehienak, ondoko
+hipotesi-kontrastea egiten dute baita </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu">-rako</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-top: 0in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">H</SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">0</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">:
+</SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu">
+= 0</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-top: 0in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">H</SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">1</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">:
+</SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu">
+</SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu">
+0</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Hipotesi-kontraste
+honen emaitza arretaz interpretatu behar da. </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+arteko korrelazio lineala ezberdin zero den kontrastatzen du hain
+zuzen, baina inola ere ez du kontrastatzen korrelazioaren esanahi
+praktikoa. Laginaren tamaina handia denean, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>r</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+= 0.05 izanik hipotesi-kontrastearen ondorioz korrelazioa
+adierazgarria izatea oso erraza da, nahiz eta korrelazio hori oso
+ahula izan. </SPAN></FONT></FONT>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>SPSS</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">ren
+bitartez korrelazio analisia gauzatzeko erabili beharreko agindua
+hauxe da: </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>&gt;Analizar
+&gt;Correlaciones &gt;Bivariadas</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">.
+Agertzen zaigun leihatilan erabili nahi ditugun aldagaik soilik
+aukeratu behar ditugu. </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Pearson</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+aukera hautatuz, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Pearson</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">en
+korrelazio linealaren koefizientea estimatuko dugu. </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Prueba
+de significación</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+aukeratuz, korrelazio linealaren koefizientearen
+adierazgarritasunerako aipaturiko hipotesi-kontrastea egingo dugu.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><B>10.4.
+adibidea</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">: 10.1.
+adibidean azaldutako ikerketarako 10.2. adibidean emandako datuak
+erabiliz, paziente diabetikoen odoleko glukosa-maila neurtzeko bi
+metodoen arteko korrelazio lineala kalkulatuko dugu </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>SPSS</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+erabiliz.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western"><SPAN LANG="eu">Hurrengo taulak
+korrelazio analisia </SPAN><SPAN LANG="eu"><I>SPSS</I></SPAN><SPAN LANG="eu">ren
+bitartez egiteko jarraitu beharreko urratsak erakusten ditu</SPAN></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0in"></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>SPSS</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">k
+eskaintzen duen emaitza taula bakarra da, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+arteko korrelazio-matrizea agertzen delarik. Agertzen diren datuak
+matrizean hauxek dira: estimaturiko </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Pearson</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">en
+korrelazio linealaren koefizientea (</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>r</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+= 0.965), bere adierazgarritasun hipotesi-kontrastearen </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>p</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-balioa
+(</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>p</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+&lt; 0.05), eta laginaren tamaina (</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>n</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+= 40). Datu hauen arabera odoleko glukosa-maila neurtzeko bi metodoen
+arteko korrelazio lineala oso sendoa da. </SPAN></FONT></FONT>
+</P>
+<H2 CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.08in; font-weight: normal">
+</H2>
+<H2 CLASS="western">10.5ERREGRESIO LINEAL SINPLEA</H2>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Erregresio
+lineal sinpleaz mintzatzen garenean, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+menpeko aldagairi buruzko informazioa aurresateko </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X
+</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">aldagai azaltzaile
+bakarra erabiltzen ari garela suposatzen dugu. Aldagai azaltzaileen
+kopurua bat baino handiagoa denean ordea, erregresio lineal
+anizkoitza deituko diogu.</SPAN></FONT></FONT></P>
+<OL START=10>
+	<OL START=3>
+		<OL>
+			<LI><H3 CLASS="western">EREDUA</H3>
+		</OL>
+	</OL>
+</OL>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I><B>X</B></I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><B>
+gaineko </B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I><B>Y</B></I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><B>-ren
+erregresio lineal sinplea</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+deitzen diogun ereduak ondoko itxura du:</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+= </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">0</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
++ </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">1</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
++ </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT></FONT></P>
+<P LANG="es-ES" ALIGN=CENTER STYLE="margin-top: 0in; widows: 2; orphans: 2; page-break-after: auto">
+<SPAN LANG="eu">(</SPAN><SPAN LANG="eu"><I>Y</I></SPAN><SPAN LANG="eu">
+= Osagai sistematikoa + Zorizko osagaia)</SPAN></P>
+<P LANG="es-ES" STYLE="widows: 2; orphans: 2; page-break-after: auto">
+<SPAN LANG="eu">Eredu honetan bi osagai daude. Bata osagai
+sistematikoa da, eta </SPAN><SPAN LANG="eu"><I>Y</I></SPAN><SPAN LANG="eu">
+eta </SPAN><SPAN LANG="eu"><I>X</I></SPAN><SPAN LANG="eu">-ren arteko
+menpekotasun lineala definitzen duena da (</SPAN><FONT FACE="Symbol, serif"><SPAN LANG="eu"><I></I></SPAN></FONT><SUB><SPAN LANG="eu">0</SPAN></SUB><SPAN LANG="eu">
++ </SPAN><FONT FACE="Symbol, serif"><SPAN LANG="eu"><I></I></SPAN></FONT><SUB><SPAN LANG="eu">1</SPAN></SUB><SPAN LANG="eu"><I>X</I></SPAN><SPAN LANG="eu">).
+Bestea zorizko osagaia da eta </SPAN><SPAN LANG="eu"><I>Y</I></SPAN><SPAN LANG="eu">-ren
+balioak </SPAN><SPAN LANG="eu"><I>X</I></SPAN><SPAN LANG="eu">-ren
+bidez estimatzerakoan jaukitzen den errorea neurtzen du. Zorizko
+osagaia </SPAN><SPAN LANG="eu"><B>zorizko errorea</B></SPAN><SPAN LANG="eu">
+edo </SPAN><SPAN LANG="eu"><B>perturbazioa</B></SPAN><SPAN LANG="eu">
+deitzen da eta </SPAN><FONT FACE="Symbol, serif"><SPAN LANG="eu"><I></I></SPAN></FONT><SPAN LANG="eu">
+bidez adierazten da.</SPAN></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Orokorrean,
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>n</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+alek osaturiko zorizko laginean, erregresio lineal eredua ondoko
+erara adierazten da. Erantzun aldagaiak, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">1</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">,</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>
+Y</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">2</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">,
+...,</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I> Y</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>n</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">,</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>
+</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">ondoko adierazpena
+dauka:</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER STYLE="margin-top: 0in"><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+= </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">0</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
++ </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">1</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu"><I>x</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
++ </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT></SUB></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">non </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+0 itxaropena eta </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUP><FONT SIZE=3><SPAN LANG="eu"><I>2</I></SPAN></FONT></SUP><FONT SIZE=3><SPAN LANG="eu">
+bariantza duten zorizko aldagai normal eta askeak diren. Hain zuzen,</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER STYLE="margin-top: 0in"><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>E</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">(</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">)
+= </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT></SUB></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER STYLE="margin-top: 0in"><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>Var</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">(</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">)
+= </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUP><FONT SIZE=3><SPAN LANG="eu">2</SPAN></FONT></SUP></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Erregresio
+lineal sinplearen ereduko osagai sistematikoak E(</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">)
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+arteko erlazioa lerro zuzenak emandakoa dela onartzen du. Alegia, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+menpeko aldagaiaren batez besteko balioen grafikoa, aurresandako </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X
+</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">aldagai azaltzailearen
+balioetarako, lerro zuzena dela.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER><FONT SIZE=2><SUB><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT></SUB><SUB><FONT SIZE=3><SPAN LANG="eu">|</SPAN></FONT></SUB><SUB><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+= </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">0</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
++ </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">1</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Alegia,
+erregresio lineal sinple ereduak </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+arteko erlazio teorikoa </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><B>erregresio
+zuzena</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"> deitzen den
+lerro zuzenaren bidez zehazturik dagoela onartzen du. Eredu honetan
+hiru parametro daude: </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">0</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">,</SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">1</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUP><FONT SIZE=3><SPAN LANG="eu">2</SPAN></FONT></SUP><FONT SIZE=3><SPAN LANG="eu">.
+Osagai sistematikoan agertzen diren </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">0</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">1</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+parametroek, lerro zuzenak </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+ardatza mozten duen puntua eta zuzenaren malda adierazten dute,
+hurrenez hurren. Ordea, zorizko osagaian agertzen den </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUP><FONT SIZE=3><SPAN LANG="eu">2</SPAN></FONT></SUP><FONT SIZE=3><SPAN LANG="eu">
+parametroak, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+koaldagaiaren edozein baliorako </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+banaketaren sakabanapena adierazten du.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Praktikan,
+erlazio funtzional zehatza ezezaguna da, alegia, </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">0</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">1</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+parametroen balioak zeintzuk diren ez da ezaguna. Parametro hauek
+aukeraturiko zorizko laginean behaturiko </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+balioak erabiliz estimatzen dira.</SPAN></FONT></FONT></P>
+<H3 CLASS="western">10.5.3PARAMETROEN ESTIMAZIOA</H3>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Erregresio
+zuzeneko parametroak, hain zuzen </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">0</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">1</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">,
+estimatzeko erabiltzen den metodoa </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><B>karratu
+txikienen metodoa </B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">deitzen
+da. Metodo honen baitan dagoen arrazonamendua oso sinplea da.
+Puntu-hodeiaren inguruan marraztu daitezkeen hainbat lerro zuzenen
+artean, behaturiko datuak hoberen doitzen dituena aukeratzea da
+komenigarri. Doikuntza hobea izateko erabiltzen den irizpidea,
+behaturiko puntuek eta doituriko zuzenaren arteko distantzia
+karratuen batura txikiena izatea da. Horrela, orotara, behaturiko
+puntu guztietatik ahalik eta hurbilen dagoen zuzena aukeratzen dugu.
+Intuikorki, metodo honen helburua puntu bakoitzetik zuzenera dagoen
+distantzia bertikala ahalik eta txikiena egitea da.</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY><FONT SIZE=3>Behin erregresio
+zuzeneko parametroak estimaturik, eredu estimatuaren adierazpena
+lortzen dugu:</FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+= </SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu">+
+</SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
++ </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>e</I></SPAN></FONT></FONT></P>
+<P LANG="es-ES" ALIGN=CENTER STYLE="margin-top: 0in; widows: 2; orphans: 2; page-break-after: auto">
+<SPAN LANG="eu">(</SPAN><SPAN LANG="eu"><I>Y</I></SPAN><SPAN LANG="eu">
+= Osagai sistematikoa + Zorizko osagaia)</SPAN></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Eredu estimatuak eredu
+teorikoaren egitura berdina dauka, baina kasu honetan </SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu">
+balioak ezagunak dira, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y </I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">aldagaietarako
+behaturiko balioan bidez kalkulatzen dira eta </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">0</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">1
+</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">parametroen
+estimatzaileak dira.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Ondoko adierazpenari </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+gaineko </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+erregresio zuzen estimatua deitzen zaio:</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-top: 0in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">= </SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu">+
+</SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu"><I>x</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT></SUB></FONT></P>
+<P LANG="es-ES" STYLE="widows: 2; orphans: 2; page-break-after: auto">
+<SPAN LANG="eu">Zuzen hau erabiliz, </SPAN><SPAN LANG="eu"><I>X</I></SPAN><SPAN LANG="eu">-ren
+balioen menpeko </SPAN><SPAN LANG="eu"><I>Y</I></SPAN><SPAN LANG="eu">-ren
+batez besteko balioak edo itxarotako balioak kalkula ditzakegu,
+alegia </SPAN><FONT SIZE=2><SPAN LANG="eu"><I></I></SPAN></FONT><SPAN LANG="eu">.
+Errorearen estimazioak, </SPAN><SPAN LANG="eu"><I>e</I></SPAN><SUB><SPAN LANG="eu"><I>i</I></SPAN></SUB><SPAN LANG="eu">
+= </SPAN><SPAN LANG="eu"><I>y</I></SPAN><SUB><SPAN LANG="eu"><I>i</I></SPAN></SUB><SPAN LANG="eu">
+- </SPAN><FONT SIZE=2><SPAN LANG="eu"></SPAN></FONT><SPAN LANG="eu">,
+behaturiko puntuaren balioa eta erregresio zuzenaren arteko
+distantzia neurtzen du. Orduan, </SPAN><SPAN LANG="eu"><I>y</I></SPAN><SUB><SPAN LANG="eu"><I>i</I></SPAN></SUB><SPAN LANG="eu">
+= </SPAN><FONT SIZE=2><SPAN LANG="eu"></SPAN></FONT><SPAN LANG="eu">+
+</SPAN><SPAN LANG="eu"><I>e</I></SPAN><SUB><SPAN LANG="eu"><I>i</I></SPAN></SUB><SPAN LANG="eu">
+ betetzen da. Esan dugun bezala, eredu doituak eredu teorikoak zeukan
+egitura berdina dauka, parametroen ordez estimatzaileak agertzen
+direlarik. </SPAN><FONT SIZE=2><SPAN LANG="eu"></SPAN></FONT><SPAN LANG="eu">
+eta </SPAN><SPAN LANG="eu"><I>e</I></SPAN><SUB><SPAN LANG="eu"><I>i</I></SPAN></SUB><SPAN LANG="eu">
+</SPAN><SPAN LANG="eu"><B>itxarotako balioak</B></SPAN><SPAN LANG="eu">
+eta </SPAN><SPAN LANG="eu"><B>hondarrak</B></SPAN><SPAN LANG="eu">
+deitzen dira, hurrenez hurren.</SPAN></P>
+<P CLASS="western">Itxarotako balioen propietateek koaldagaiaren eta
+erantzun-aldagaiaren arteko erlazioari buruzko galdera zientifikoen
+erantzuna ematea baimenduko digute. Hondarren propietateek ordea,
+doitutako ereduaren egokitasuna eta eredu probabilistikoaren
+baldintzak juzgatzeko erabiliko ditugu.</P>
+<P CLASS="western" ALIGN=JUSTIFY><FONT SIZE=3>Aipatu dugun bezala,
+behaturiko puntuek eta doituriko zuzenaren arteko distantzia
+karratuen batura txikiena izatea, hondar karratuen batura txikiena
+izatea da estimatzaileak aukeratzeko irizpide.</FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER STYLE="margin-top: 0in"><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>EKB</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+= </SPAN></FONT><SPAN LANG="eu"></SPAN></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>EKB</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><B>errorearen karratuen
+batura</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"> deitzen da, </SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu">
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><B>estimatzaile minimo
+koadratikoak</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"> deitzen
+dira eta EKB minimoa egiten duten parametroen balioak dira.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Karratu txikien estimazio
+metodoaren aplikazioaren ondorioz, </SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu">
+estimatzaile minimo koadratikoak ondoko adierazpenak definiturik
+daude:</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">non, </SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu">diren.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Praktikan, parametroen
+estimazioen interpretazioa funtsezkoa da. Malda edo </SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu">-ek
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+unitate baten gehitzen denean </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-rako
+itxarotako gehikuntza adierazten du. Horrela, </SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu">
+positiboa izateak </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+handitzerakoan </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+ere handitu egiten dela adierazten du, ordea </SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu">
+negatiboa izateak, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+handitzerakoan </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+txikitu egiten dela esan nahi du eta, azkenik, </SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu">=
+0 izateak </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+artean erlazio linealik ez dagoela erakusten du. Gai askeak edo </SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu">-k,
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+= 0 denean </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-rako
+itxarotako balioa adierazten du. Egoeraren arabera azken hau zentzu
+gabeko interpretazio izan daiteke, beraz, </SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu">-ren
+interpretazioa zuhurtasunez egin beharrekoa da.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Datu
+multzoak behaturiko datu hauek osatzen duten eremuan soilik
+eskaintzen digu linealtasun proba. Zer esanik ez eremu honetatik
+kanpo dagoen balioentzako ez dagoela linealtasunaren nabaritasunik.
+Beraz, azpimarratu beharrekoa da</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>
+X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren behaturiko
+balioetatik kanpo dagoen balioari dagokion </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+balioa aurresateko estimaturiko erregresio zuzena erabiltzea oso
+arriskutsua izan daitekeela.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Estimaturiko
+erregresio zuzena idazterakoan, zuzenean dauden puntuak itxarotako
+batez besteko erantzuna dira, aldagai azaltzailearen balioa </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>x</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+denean, Erregresioaren bidez lortutako emaitzak interpretatzerakoan
+zuhurtasun ikaragarriarekin jokatu behar dugu, lortutako ereduaren
+ekuazioak batez besteko erantzuna adierazteaz gain, ale bakoitzaren
+itxarotako balioa ere adierazten baitu, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+balio bakoitzerako. </SPAN></FONT></FONT>
+</P>
+<H3 CLASS="western">10.5.4PARAMETROTARAKO KONFIANTZA-TARTEAK</H3>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT SIZE=3>Praktikan,
+parametroen estimazioak parametroen benetako balioak aurresateko
+erabiliko dira. Beraz, aurreko gaietan definitu ditugun tekniketan
+egin dugun era berean, hemen ere inferentzia egitea helburuetariko
+bat izango da. Parametroetarako inferentzia estimazioa eta
+hipotesi-kontrastea bidez egingo dugu eta horretarako estimatzaileen
+desbiderapen estandarrak kalkulatu beharra ditugu. Zuzeneko malda eta
+gai askearen estimatzaileen desbiderapen estandarrak ondoko
+adierazpenen bidez estimatzen dira:</FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0in"></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0in"></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">non </SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu">
+</SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><SUP><FONT SIZE=3><SPAN LANG="eu">2</SPAN></FONT></SUP><FONT SIZE=3><SPAN LANG="eu">
+parametroaren ondoko estimatzailea den: </SPAN></FONT></FONT>
+</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0in"></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Behin
+estimatzaileak eta beraien desbiderapen estandarrak kalkulatuta,
+beste parametro batzuetarako erabili ditugun metodo berdinak erabili
+ditzakegu </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">0</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">1</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+parametroen %100·(1 </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu">
+</SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu">)
+konfiantza-mailako konfiantza-tarteak kalkulatzeko.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">=
+ </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu">
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>t</I></SPAN></FONT><SUB><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT></SUB><SUB><FONT SIZE=3><SPAN LANG="eu">/2;
+(</SPAN></FONT></SUB><SUB><FONT SIZE=3><SPAN LANG="eu"><I>n</I></SPAN></FONT></SUB><SUB><FONT SIZE=3><SPAN LANG="eu">
+–2)</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">=
+ </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu">
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>t</I></SPAN></FONT><SUB><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT></SUB><SUB><FONT SIZE=3><SPAN LANG="eu">/2;
+(</SPAN></FONT></SUB><SUB><FONT SIZE=3><SPAN LANG="eu"><I>n</I></SPAN></FONT></SUB><SUB><FONT SIZE=3><SPAN LANG="eu">
+–2)</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu"> </SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Non
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>t</I></SPAN></FONT><SUB><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT></SUB><SUB><FONT SIZE=3><SPAN LANG="eu">/2;
+(</SPAN></FONT></SUB><SUB><FONT SIZE=3><SPAN LANG="eu"><I>n</I></SPAN></FONT></SUB><SUB><FONT SIZE=3><SPAN LANG="eu">
+–2)</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu"> (</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>n</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+</SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu">
+2) askatasun gradutako </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Student</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">en
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>t</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+banaketaren balio kritikoa den. Alegia, dentsitate-funtzioa eta
+ardatz horizontala bitartean eskuinerantz </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu">/2
+azalera uzten duen (</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>n</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+</SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu">
+2) askatasun gradutako </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Student</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">en
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>t</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+banaketaren balioa.</SPAN></FONT></FONT></P>
+<H3 CLASS="western">10.5.5ANOVA TAULA ETA ERREGRESIO KONTRASTEA</H3>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Erregresio zuzenak </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+aldagaian behaturiko sakabanapenaren kantitate adierazgarria azaltzen
+duen kontrastatzeko teknika bariantz analisia deitzen da. Hurrengo
+taula ANOVA taula deitzen da eta erregresio lineal sinplerako
+informazio biltzen du. ANOVA taulan agertzen diren kantitateak
+ondokoak dira:</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.98in; text-indent: -0.59in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>KB(x)</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+= </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+koaldagaiari dagokion karratuen batura, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+arteko erlazio linealari lotzen zaion </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+aldakortasuna adierazten du.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>EKB</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+= Erroreen karratuen batura, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+zorizko aldakortasuna adierazten du.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>KBT</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+= Karratuen batura totala, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+aldakortasun osoa adierazten du.</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><BR>
+</P>
+<DL>
+	<DD>
+	<TABLE WIDTH=463 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES RULES=GROUPS>
+		<COL WIDTH=85>
+		<COL WIDTH=151>
+		<COL WIDTH=198>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=85 STYLE="border-top: 1.50pt solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT SIZE=3>Jatorria</FONT></P>
+				</TD>
+				<TD WIDTH=151 STYLE="; border-top: 1.50pt solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT SIZE=3>Askatasun
+					graduak</FONT></P>
+				</TD>
+				<TD WIDTH=198 STYLE="; border-top: 1.50pt solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in">
+					<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Karratuen batura (</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>KB</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">)</SPAN></FONT></FONT></P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=85 STYLE="; border: none; padding: 0in">
+					<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><BR>
+					</P>
+					<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT SIZE=3>Eredua</FONT></P>
+				</TD>
+				<TD WIDTH=151 STYLE="; border: none; padding: 0in">
+					<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><BR>
+					</P>
+					<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT SIZE=3><I>1</I></FONT></P>
+				</TD>
+				<TD WIDTH=198 STYLE="; border: none; padding: 0in">
+					<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"></P>
+				</TD>
+			</TR>
+			<TR VALIGN=TOP>
+				<TD WIDTH=85 STYLE="; border: none; padding: 0in">
+					<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><BR>
+					</P>
+					<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT SIZE=3>Errorea</FONT></P>
+				</TD>
+				<TD WIDTH=151 STYLE="; border: none; padding: 0in">
+					<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><BR>
+					</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in">
+					<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>n </I></SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu"><I>
+					2</I></SPAN></FONT></FONT></P>
+				</TD>
+				<TD WIDTH=198 STYLE="; border: none; padding: 0in">
+					<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"></P>
+				</TD>
+			</TR>
+		</TBODY>
+		<TBODY>
+			<TR VALIGN=TOP>
+				<TD WIDTH=85 STYLE="; border-top: 1px solid #000000; border-bottom: 1.50pt solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><BR>
+					</P>
+					<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><FONT SIZE=3>Totala</FONT></P>
+				</TD>
+				<TD WIDTH=151 STYLE="; border-top: 1px solid #000000; border-bottom: 1.50pt solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"><BR>
+					</P>
+					<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in">
+					<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>n </I></SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu"><I>
+					1</I></SPAN></FONT></FONT></P>
+				</TD>
+				<TD WIDTH=198 STYLE="; border-top: 1px solid #000000; border-bottom: 1.50pt solid #000000; border-left: none; border-right: none; padding: 0in">
+					<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-top: 0in"></P>
+				</TD>
+			</TR>
+		</TBODY>
+	</TABLE>
+</DL>
+<P CLASS="western" ALIGN=JUSTIFY><FONT SIZE=3>Aurreko hiru
+kantitateak ondoko erlazioa betetzen dute.</FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>KBT</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+= </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>KB</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">(</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">)
++ </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>EKB</I></SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Beraz,
+erregresio linealaren erabilpena egokia baldin bada, orduan </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>KB</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">(</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">)
+osagaiak aldakortasun osoaren zatirik handiena osatuko du, eta
+zorizko aldakortasuna txikia izango da azaldukoarekiko .</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Aldagai
+azaltzaileak erantzunean eraginik ez daukala </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>1</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu"><I>
+= 0</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"> hipotesiarekin bat
+dator. Beraz, erregresio lineal sinplea ereduan interesekok
+hipotesi-kontrastea hauxe da:</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-top: 0in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">H</SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">0</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">:
+</SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">1</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+= 0</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-top: 0in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">H</SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">1</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">:
+</SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">1</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+</SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu">
+0</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY><FONT SIZE=3>Hipotesi-kontraste hau
+garatzeko bi metodo azalduko ditugu. Funtsean, bi metodoak
+baliokideak dira erregresio lineal sinplerako. </FONT>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><B>1.
+Egiantz arrazoiaren testa</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">:
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>F</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+estatistikoaren bidez gauzatzen da</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0in"></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.2in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">H</SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">0</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+hipotesi nulua egia baldin bada, aurreko estatistikoaren banaketa </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>1</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>n </I></SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu"><I>
+2</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"> askatasun gradutako
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>F</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+banaketa da.</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.2in"><FONT SIZE=3>Beraz,
+hipotesi-kontrastea egiteko estatistikoaren balio kritikoa erabil
+dezakegu:</FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-top: 0in">
+   <FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">H</SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">0</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+errefusatu</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-top: 0in">
+   <FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">H</SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">0</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+ez errefusatu</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.2in; margin-top: 0in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">edo, bestela </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>p</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-balioa
+kalkula dezakegu:</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-top: 0in">
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><B>2.
+Wald-en testa</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">: </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>t
+</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">estatistikoaren bidez
+gauzatzen da.</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0in"></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.2in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">H</SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">0</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+hipotesi nulua egia baldin bada, aurreko estatistikoaren banaketa </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>n
+</I></SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"><I></I></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu"><I>
+2</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"> askatasun gradutako
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Student</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">en
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>t</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+banaketa da.</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.2in"><FONT SIZE=3>Kasu
+honetan ere, hipotesi-kontrastea egiteko estatistikoaren balio
+kritikoa erabil dezakegu</FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-top: 0in">
+   <FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">H</SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">0</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+errefusatu</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-top: 0in">
+   <FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">H</SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">0</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+ez errefusatu</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.2in; margin-top: 0in">
+<FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">edo, bestela </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>p</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-balioa
+kalkula dezakegu:</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-left: 0.39in; margin-top: 0in">
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><B>Oharra:</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+Esan dugun bezala, aurreko hipotesi-kontrastea burutzeko bi metodoak
+guztiz baliokideak dira, honen arrazoia </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>F
+</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>t</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+banaketen artean dagoen ondoko erlazioa izanik: </SPAN></FONT><SPAN LANG="eu"></SPAN><FONT SIZE=3><SPAN LANG="eu">.</SPAN></FONT></FONT></P>
+<OL START=10>
+	<OL START=5>
+		<OL START=2>
+			<LI><H3 CLASS="western">DETERMINAZIO-KOEFIZIENTEA</H3>
+		</OL>
+	</OL>
+</OL>
+<P CLASS="western">Azkenik, erregresio lineal sinplea eta korrelazio
+linealaren arteko erlazio aztertuko dugu.</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Erregresio
+lineal eredua erabili ahal izateko, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+gaineko </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+erregresio zuzena kalkulatu baino lehen linealtasuna bi aldagaien
+artean ontzat hartu dugu. Beraz, behaturiko puntu multzora zuzenaren
+doikuntzaren egokitasuna neurtu ahal izateko metodo bat beharrezkoa
+da. Determinazio-koefizientea </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+arteko erlazio linealaren indarra neurtzeko erabiltzen den
+estatistikoa da, bai erregresio lineal ereduan, baina baita
+korrelazio analisian ere.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+gaineko </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+erregresio lineal sinplea doitzen dugunean, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+bidez azaldutako </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+aldakortasunaren proportzioa ondoko adierazpenak neurtzen du</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Non
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>r</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+arteko </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Pearson</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">en
+korrelazio linealaren koefizientea den.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Ondorioz,
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Pearson</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">en
+korrelazio linealaren koefizientearen karratuak </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+bidez azaldutako </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+aldakortasun-proportzioaren estimazioa ematen digu. Kantitate hau
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><B>determinazio-koefizientea</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+deitzen da eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I><B>R</B></I></SPAN></FONT><SUP><FONT SIZE=3><SPAN LANG="eu"><B>2</B></SPAN></FONT></SUP><FONT SIZE=3><SPAN LANG="eu"><B>
+</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">adierazten da.
+Erregresio lineal sinplerako, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+gaineko </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+erregresioan lortutako determinazio-koefizientea eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+arteko </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Pearson</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">en
+korrelazio linealaren koefizientearen karratua gauza bera dira.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Gaur
+egungo pakete estatistiko gehienak, determinazio-koefiziente arruntaz
+gain, determinazio-koefiziente zuzendua kalkulatzen dute. Azken hau
+aurrekoaren ordezkoa baizik ezta, baina ereduko
+parametro-kopuruagatik zuzenduta. </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><B>Determinazio-koefiziente
+zuzendua</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">  adierazten
+da eta ondoko formularen bidez kalkulatzen da.</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">non
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>n</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+lagineko ale-kopurua den eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+gai askeak ekuazioan egotearen aldagai adierazlea den (1 balioa
+hartzen du </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu">0</SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">
+ekuazioan baldin badago eta 0 ez badago).</SPAN></FONT></FONT></P>
+<H2 CLASS="western">10.6ERREGRESIO LINEAL SINPLEA SPSSREN BITARTEZ</H2>
+<P LANG="es-ES" STYLE="widows: 2; orphans: 2; page-break-after: avoid">
+<SPAN LANG="eu">Aurreko formuletan ikusi ahal izan dugunez,
+erregresio lineal sinplea ereduaren aplikazioak eragiketa dezente
+egitea eskatzen du. Praktikan, eragiketa guzti hauek ez dira eskuz
+egiten, baizik eta horretarako diseinaturiko </SPAN><SPAN LANG="eu"><I>software</I></SPAN><SPAN LANG="eu">a
+erabiltzen da, esate baterako </SPAN><SPAN LANG="eu"><I>SPSS</I></SPAN><SPAN LANG="eu">.
+Beraz, gure helburua ondorioak ateratzeko beharrezkoak diren emaitzak
+lokalizatzea eta interpretatzea izango da.</SPAN></P>
+<P LANG="es-ES" CLASS="western"><SPAN LANG="eu"><I>SPSS</I></SPAN><SPAN LANG="eu">ren
+bitartez erregresio lineala gauzatzeko erabili beharrezko agindua
+hauxe da: </SPAN><SPAN LANG="eu"><I>&gt;Analizar &gt;Regresión
+&gt;Lineal</I></SPAN><SPAN LANG="eu">. Agertzen zaigun leihatilan,
+zein den menpeko aldagaia edo erantzuna </SPAN><SPAN LANG="eu">eta
+zein den aldagai azaltzailea edo koaldagaia adierazi behar dugu.
+Besterik adierazi ezean, agertzen diren emaitzak erregresio zuzena
+eta ANOVA taula dira. </SPAN><SPAN LANG="eu"><I>Estadísticos</I></SPAN><SPAN LANG="eu">
+eta </SPAN><SPAN LANG="eu"><I>Gráficos</I></SPAN><SPAN LANG="eu"> bi
+botoiak kalkulatzea nahi ditugun estatistiko gehigarriak eta
+irudikatzea nahi ditugun grafikoak eskatzeko aukera ematen digute.
+</SPAN><SPAN LANG="eu"><I>Guardar</I></SPAN><SPAN LANG="eu"> botoiak
+eredua doitzerakoan kalkulatu diren beste aldagai batzuk gure
+datu-fitxategiari biltzeko aukera eskaintzen digu, esate baterako
+itxarotako balioak edo hondarrak. </SPAN><SPAN LANG="eu"><I>Opciones</I></SPAN><SPAN LANG="eu">
+botoiak estimazio prozesua kudeatzeko baliagarriak diren aukerak
+eskaintzen dizkigu, erregresio lineal sinplean gutxitan erabiltzen
+diren arren, erregresio lineal anizkoitzean oso beharrezkoak izango
+diren aukerak hain zuzen. Azken botoi honetan erregresio zuzena </SPAN><FONT FACE="Symbol, serif"><SPAN LANG="eu"></SPAN></FONT><SUB><SPAN LANG="eu">0</SPAN></SUB><SPAN LANG="eu">
+</SPAN><SPAN LANG="eu">gai askea gabe estimatzea baimentzen digun
+aukera hautatu dezakegu baita.</SPAN></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><B>10.5.
+adibidea</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">: 10.1.
+adibidean azaldutako ikerketarako 10.2. adibidean emandako datuak
+erabiliz erregresio lineal sinplea doituko dugu datu hauetarako </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>SPSS</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+erabiliz.</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER></P>
+<P CLASS="western" ALIGN=CENTER></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>Estadísticos</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+botoia erabiliz </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Estimaciones</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Intervalos de
+confianza</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"> aukerak
+hautatzen ditugu erregresio zuzeneko parametroen estimazioetarako.
+Baita, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Ajuste del
+modelo</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"> aukera
+hautatzen dugu, determinazio-koefizientearen bidez ereduaren
+doikuntza neurtu ahal izateko. </SPAN></FONT></FONT>
+</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0in"></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Lorturiko
+emaitzak bi taulatan laburbiltzen dira. Lehena ANOVA taula da, bertan
+erregresioaren hipotesi-kontrastea agertzen delarik, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>F</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+estatistikoaren bidez egina. Kasu honetan, lortutako </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>p</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+&lt; 0.05, beraz, odoleko glukosa-maila kalkulatzeko bi neurketen
+arteko erlazio lineala estatistikoki adierazgarria da.</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0in"><BR>
+</P>
+<P CLASS="western" ALIGN=LEFT STYLE="margin-top: 0in"></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Bigarren
+taulak parametroen estimazioak gehi haien desbiderapen estandarra,
+konfiantza-tartea eta adierazgarritasunerako hipotesi-kontrastearen
+estatistikoa eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>p</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-balioa
+erakusten dizkigu (Wald-en testa). Kasu honetan, hagatxoaren bidez
+egindako odoleko glukosa-mailaren neurketan unitate bateko gehikuntza
+benetako odoleko glukosa-mailaren 0.912 unitateko gehikuntzari lotuta
+dago. Erlazio hau estatistikoki adierazgarria da (</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>p</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+&lt; 0.05) eta %95eko konfiantzaz 0.832 eta 0.993 balioen artean
+egongo da gehikuntza hau. </SPAN></FONT></FONT>
+</P>
+<P CLASS="western">Balio honen interpretazioan zentratzen bagara,
+hagatxoa laborategiko neurketaren ordez erabili ahal izateko 1 balioa
+konfiantza-tartearen barruan egon beharko zen, horrek ziurtatuko
+baitzuen hagatxoaren bidez lortutako neurketaren fidagarritasuna
+benetako balioa aurresateko. Ikerketaren helburua paziente
+diabetikoen odoleko glukosa-maila neurtzeko hagatxoaren zehaztasuna
+egiaztatzea da eta emaitza honen arabera hau ez da posible izango.
+Azkenik, gai askearen interpretazioa hagatxoaren bidez lortutako
+neurketa zero denean itxarotako benetako odoleko glukosa-maila da,
+eta kasu honetan hori ez da interpretagarria.</P>
+<P CLASS="western">Erlazio hau grafikoki ikusi ahal izateko, aurretik
+egin dugun puntu-hodeiari erregresio zuzena gehitu ahal diogu,
+hurrengo grafikoan adierazten den moduan.</P>
+<P CLASS="western" STYLE="margin-top: 0in"><BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER STYLE="margin-top: 0in"></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0in"><BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Bukatzeko,
+gogora dezagun </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Ajuste
+del modelo</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"> aukera
+hautatu dugula ereduaren doikuntza neurtu ahal izateko. Agindu honen
+ondorioz, hirugarren taula bat lortzen dugu doikuntzaren egokitasuna
+neurtzeko. Taula honetan </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Pearson</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">en
+korrelazio linealaren koefizientea, determinazio-koefiziente gordina,
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>R</I></SPAN></FONT><SUP><FONT SIZE=3><SPAN LANG="eu">2</SPAN></FONT></SUP><FONT SIZE=3><SPAN LANG="eu">,
+</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">eta zuzendua, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">,
+agertzen dira.</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0in"></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Horrela,
+ikus dezakegu nola </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Pearson</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">en
+korrelazio linealaren koefizientea, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>r</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+= 0.965, aurreko adibidean kalkulatu dugunaren berdina dela.
+Determinazio-koefiziente gordina eta zuzendua </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>R</I></SPAN></FONT><SUP><FONT SIZE=3><SPAN LANG="eu">2</SPAN></FONT></SUP><FONT SIZE=3><SPAN LANG="eu">
+= 0.932 = 0.930 dira, hurrenez hurren. Azpimarratu beharrekoa da
+determinazio-koefiziente zuzendua beti dela gordina baino txikiagoa.
+Baita, kontura gaitezke </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>R</I></SPAN></FONT><SUP><FONT SIZE=3><SPAN LANG="eu">2</SPAN></FONT></SUP><FONT SIZE=3><SPAN LANG="eu">
+= </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>r</I></SPAN></FONT><SUP><FONT SIZE=3><SPAN LANG="eu">2</SPAN></FONT></SUP><FONT SIZE=3><SPAN LANG="eu">
+betetzen dela. </SPAN></FONT></FONT>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY><FONT SIZE=3>Emaitza honen ondorioz,
+hagatxoaren bidez egindako odoleko glukosa-mailaren neurketak
+laborategian egindako benetako odoleko glukosa-mailaren
+aldakortasunaren %93a biltzen du. </FONT>
+</P>
+<H2 CLASS="western">10.7ERREGRESIO LINEAL SINPLEA EREDUAREN DIAGNOSIA</H2>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Erregresio
+lineal sinplea eredua definitu dugunean, erroreen baldintza teoriko
+batzuk finkatu ditugu. Erroreak zorizko aldagai askeak dira, beraien
+banaketa normala, itxaropena zero eta bariantza </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><SUP><FONT SIZE=3><SPAN LANG="eu">2</SPAN></FONT></SUP><FONT SIZE=3><SPAN LANG="eu">
+izanik. Hain zuzen,</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>E</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">(</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">)
+= </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT></SUB></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=CENTER><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>Var</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">(</SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><SUB><FONT SIZE=3><SPAN LANG="eu"><I>i</I></SPAN></FONT></SUB><FONT SIZE=3><SPAN LANG="eu">)
+= </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><SUP><FONT SIZE=3><SPAN LANG="eu">2</SPAN></FONT></SUP></FONT></P>
+<P CLASS="western">Baldintza teoriko hauek egiaztatu beharko dira,
+erregresio lineal eredua erabili, emaitzak interpretatu eta ondorioak
+atera baino lehen. Laburbilduz, bermatu beharko ditugun baldintzak
+hauek dira: erlazioaren linealtasuna, behaketen independentzia,
+erroreen normaltasuna eta erroreen bariantza konstantea. Lehena,
+erlazioaren linealtasuna, aurretik egiaztatu beharrekoa da, esan
+dugunez, puntu-hodeiaren itxura grafikoa erabiliz. Behaketen
+independentzia laginketa prozesuan bermatu beharrekoa da, zorizko
+lagin bakuna izateak ziurtatuko du, batez ere, behaketak askeak
+izatea, nahiz eta hau ez den bide bakarra independentzia lortzeko.
+Beste bi baldintzak erroreen banaketa eta bariantzarako dira.
+Erroreak zorizko aldagai behatu ezinak dira, beraz, beraiengan
+egindako hipotesiak ezin izango ditugu zuzenean egiaztatu. Gai honen
+hasieran aipatu dugunez, erroreen estimazioak hondarrak dira, eta
+azken hauetan egiaztatu beharko ditugu ezarritako baldintzen
+betetze-maila.  
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><B>Hondar
+estandarizatuak</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+definitzen dira </SPAN></FONT></FONT>
+</P>
+<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0in"></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Ereduaren
+hipotesiak egokiak baldin badira, hondar estandarizatuak gutxi gora
+behera banaketa normalari darraio, itxaropena 0 eta bariantza 1
+izanik. Ondorioz, hondar estandarizatuen histogramak banaketa
+simetrikoa erakutsi beharko luke, zeron zentratua, eta </SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=3><SPAN LANG="eu"></SPAN></FONT></FONT><FONT SIZE=3><SPAN LANG="eu">3
+baino handiagoak diren balioak arretaz aztertu beharko genituzke.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><I>SPSS</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">k
+hondarrak gordetzea baimentzen du, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Guardar</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+aukera hautatuz, erregresio lineala burutzerakoan. Hondarrak
+datu-fitxategian ditugunean, </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Gráficos</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Analizar</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">
+agindu orokorrak erabil daitezke, hondarren analisi grafikoa eta
+normaltasunerako doikuntz egokitasun hipotesi-kontrastea egiteko.
+Halaber, erregresio lineala burutzerakoan aukera dago agindu berean
+diagnosi analisi partziala egiteko.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Kontrastatzeko
+zailena den baldintza hondarren homozedastizitatea da, bariantza
+konstantea izatea alegia. Hala ere, hondarren bariantza konstantea ez
+den kasu gehienetan, arrazoia </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-ren
+balioen menpekoa dela da. Egoera hau grafikoki erraz ikusten da
+itxarotako balioak, , </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-rekiko
+irudikatzen direnean.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu">Aipaturiko
+baldintza orokorretaz gain, erregresio lineala burutzerakoan kontutan
+hartu behar den beste faktore bat balio arraroena da. Bai </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>Y</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-rako
+edo baita </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-rako
+ale batzuen balioak oso arraroak izan daitezke, eta hauek eredua
+baldintzatzen badute balio eraginkorrak direla esaten da. Nahiz eta
+balioa arraroak ez dute zertan eraginkorrak izan behar derrigorrez,
+diagnosia egiterakoan balioa arraroen miaketa egin behar da. Balio
+arraroren bat aurkituz gero, lehendabizi akatsak diren ala ez
+egiaztatu beharko dugu. Akatsak badira, zuzendu edo laginetik kanpo
+utziko ditugu. Benetako balioak baldin badira ordea, ereduan
+mantentzearen egokitasuna eztabaidatu beharko dugu lortutako ereduan 
+daukaten eraginkortasunaren arabera.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><FONT SIZE=2><FONT SIZE=3><SPAN LANG="eu"><B>10.6.
+adibidea</B></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">: 10.1.
+adibidean azaldutako ikerketarako, 10.5. adibidean egindako
+erregresio linealaren hondar estandarizatuak gorde ditugu eta,
+lehendabizi, beraien azterketa grafikoa egin dugu. Irudikatzen
+ditugun bi grafikoak hondarren histograma eta </SPAN></FONT><FONT SIZE=3><SPAN LANG="eu"><I>X</I></SPAN></FONT><FONT SIZE=3><SPAN LANG="eu">-rekiko
+puntu-hodeia dira.</SPAN></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY><BR>
+</P>
+<MULTICOL ID="Sekzioa1" DIR="LTR" COLS=2 GUTTER=38>
+	<P LANG="es-ES" CLASS="western" ALIGN=LEFT STYLE="margin-top: 0in"></P>
+	<P LANG="es-ES" CLASS="western" ALIGN=LEFT STYLE="margin-top: 0in"><BR>
+	</P>
+	<P CLASS="western" ALIGN=LEFT STYLE="margin-left: 1.18in; margin-top: 0in">
+	<BR>
+	</P>
+	<P CLASS="western" ALIGN=LEFT STYLE="margin-top: 0in"></P>
+</MULTICOL>
+<DIV ID="Sekzioa2" DIR="LTR">
+	<P LANG="es-ES" ALIGN=JUSTIFY STYLE="margin-top: 0in"><SPAN LANG="eu">Bi
+	grafiko hauek ez dute erakusten normaltasun faltarik, ezta bariantza
+	konstantea izatearen hipotesia ez denik betetzen. Histogramak
+	eskuinerantz alborapen txiki bat eduki arren, ez da 40 tamainako
+	laginerako espero den baino handiagoa. Sakabanapen irudia, balio
+	absolutuan 3 baino handiagoa den hondar bat eta 2 eta 3 bitartean
+	beste bat ikus ditzakegu (gorriz markatuak irudian), baina, hau ere,
+	zorizkotasunari dagokion mugetan dago. Gainontzeko balioak bariantza
+	nahiko konstante mantentzen dela erakusten digute. Azkenik, hondar
+	estandarizatuen doikuntz egokitasuna banaketa normalera
+	kontrastatzen dugunean, </SPAN><SPAN LANG="eu"><I>Kolmogorov</I></SPAN><SPAN LANG="eu">-</SPAN><SPAN LANG="eu"><I>Smirnov</I></SPAN><SPAN LANG="eu">
+	testa erabiliz, hipotesi nulua ez da errefusatzen (</SPAN><SPAN LANG="eu"><I>p</I></SPAN><SPAN LANG="eu">
+	= 0.278). Ondorioz, banaketa normalaren baldintza ez dugu zalantzan
+	jartzen ezta.</SPAN></P>
+	<P LANG="es-ES" CLASS="western" ALIGN=JUSTIFY><BR>
+	</P>
+</DIV>
+<DIV TYPE=FOOTER>
+	<P LANG="es-ES" ALIGN=LEFT STYLE="margin-right: -0in; margin-top: 0.25in; border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding-top: 0.01in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in">
+	<SPAN ID="Markoa1" DIR="LTR" STYLE="position: absolute; top: 0in; left: 0in; width: 0.24in; height: 0.15in; border: none; padding: 0in; background: #ffffff">
+		<P LANG="es-ES" ALIGN=LEFT STYLE="margin-top: 0in"><SDFIELD TYPE=PAGE SUBTYPE=RANDOM FORMAT=PAGE>170</SDFIELD></P>
+	</SPAN><FONT SIZE=2><I>I. Arostegui, A. Urkaregi</I></FONT>
+	</P>
+</DIV>
+</BODY>
+</HTML>

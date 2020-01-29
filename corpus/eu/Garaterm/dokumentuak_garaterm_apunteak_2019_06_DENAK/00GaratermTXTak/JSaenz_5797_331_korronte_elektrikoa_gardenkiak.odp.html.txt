@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+Korronte elektrikoa
+korronte elektriko hitzak kargen higidura edo garraioa adierazi nahi du
+<number>
+ 
+1. Korronte elektrikoa
+   [  I  ]  = A  =   C S
+<number>
+ 
+1.1 Korronte elektriko zuzena
+   E  ⃗  =  −    ∂ V   ∂ x         i ̂   ≈  −     (    V b  −  V a    )      x
++ L  − x         i ̂  =      V a  −  V b    L     i ̂
+x
+x+L
+ 
+1.2 Zenbait korronteren balioak
+<number>
+ 
+2. Korronte-dentsitatea
+ I =    ∫ S   j ⃗   ⋅   dS  ⃗
+ 
+3. Jito abiadura
+   J  ⃗  =   I S        u E   ̂  = q  n    v d   ⃗
+  I =   dq dt    = q  n S  v d
+6
+ 
+3.1 Korronte eta kargaren kontserbazioa
+Elektroien jito abiadura
+ 
+   1. Adibidea : 5 MeV-eko energia duen protoi-sorta batek 1,5 mm-ko erradioa
+      du eta 0,5  mA-ko intentsitatea darama. Kalkulatu bolumen unitateko
+      protoi kopurua eta pantaila bat ipiniko bagenu, pantailak segundo batean
+      jasoko lukeen protoi kopurua.  
+   2.  
+   3. Adibidea : Hari baten zeharreko korrontea denborarekiko honela aldatzen
+      da: I=30+3t2. Zenbat coulombio garraiatu ditu alanbreak t=0s, t=10s
+      denbora tartean? Zein korronte konstantek garraiatuko luke Q berdina,
+      denbora tarte berdinean? 
+   4.  
+   5. Adibidea : Zenbatets ezazu zer jito-abiadura (vd) duen kobrezko d = 1mm-
+      ko diametroko hari batek, 100 mA-ko korrontea daramanean. Kobreak
+      elektroi aske bat inguru du atomoko, korrontea garraiatzeko prest;
+      halaber, 8,92 g/cm3-ko masa-dentsitatea eta 63,5 g/mol-eko pisu
+      molekularra ditu. 
+   6.  
+7
+ 
+4. Ohm-en legea
+ 
+R eta tenperatura
+Normalean, erresistentzia handitu egiten da tenperaturarekin batera:
+ ρ =  ρ   20 ∘  C       1 + α   (   t −  t   20 ∘  C     )
+Tenperatura-koefizientea:
+α
+ 
+4.1 Zenbait erresistibitateren balioak
+<number>
+ 
+   1. Adibidea: Metro bateko hari eroale batek 0,3 -eko erresistentzia dauka.
+      2 m-ko luzera izan arte luzatzen bada, zein da bere erresistentzia
+      berria? Kontsideratu eroalearen bolumena konstante mantentzen dela. 
+   2.  
+   3. Adibidea: Demagun L luzera duen zilindro huts eroale bat, 
+      erresistibitateduna.  
+   4. a) kalkulatu zilindroaren muturren arteko erresistentzia, korrontea eta
+      ardatza paraleloak badira 
+   5. b) kalkulatu korronte erradial batekiko erresistentzia. 
+   6.  
+   7.  
+<number>
+ 
+5. Joule-ren legea
+ 
+6. Indar elektroeragilea
+ 
+   1. Adibidea : 11 -eko erresistentzia bat 6 V-eko sorgailu bati konektatzen
+      zaio zeinaren barne erresistentzia 1  den. Kalkulatu: 
+   2.         a) Intentsitatea 
+   3.         b) Bateriaren borneen arteko tentsioa 
+   4.         c) Sorgailuak emandako potentzia 
+   5.         d) R-ri emandako potentzia 
+   6.         e) Sorgailuaren barne erresistentziak xurgatutako energia 
+   7.  
+<number>
+ 
+7. Erresistentzia elektrikoen elkarketak
+ 
+   1. Adibidea : Marrazkian agertzen den zirkuitu elektrikoaren erresistentzia
+      baliokidea kalkulatu 
+   2.  
+   3.  
+   4.  
+   5.  
+   6.  
+   7.  
+ 
+8. Kirchhoff-en legeak
+<number>
+ 
+8. Kirchhoff-en legeak
+<number>
+ 
+8.1 Potentzial jauziak
+20
+ 
+8.1 Potentzial jauziak - II
+ 
+8.1 Potentzial jauziak - III
+   E  ⃗  =  −    dV   dx         i  ̂  =  −      V a  −  V c    d       i  ̂
+   V a  −  V c   =  −   σ   ε 0         d =  −    Q    ε 0    A d        =  −
+Q C
+    V  aa   =    V  ab   +  V  bc    +  V  ca     =   ε − IR  +  (    V a  −  V
+c    )    = 0
+   ε − IR  −   Q C    = 0
+ 
+Adibidea : Marrazkian agertzen den zirkuituko adar bakoitzeko intentsitatea
+kalkulatu
+ 
+9. RC zirkuituak
+S etengailua a muturrera mugitzen denean eta oreka lortu ondoren:  
+KARGATU egiten da kondentsadorea (Ior = 0  IorR = 0)
+Oreka lortu ondore S etengailua b muturrera mugitzean:
+DESKARGATU egiten da kondentsadorea
+Xafla 2
+Xafla 1
+ 
+   ε − IR  −  V C   = 0
+     ε   − IR  −   Q C    = 0
+   ε   −   dQ dt      R −   Q C    = 0
+Q   (  t  )  =   ε    C    1 −  e   −   t  RC
+I   (  t  )  =     ε   R     e   −   t  RC
+   τ   = RC
+denbora-konstantea
+9.1. RC zirkuitua kargatzen
+Xafla 2
+Xafla 1
+ 
+    Q C   − IR  = 0  ;  I =  −   dQ dt
+    Q RC   +   dQ dt    = 0
+ 
+9.2. RC zirkuitua deskargatzen
+ 
+9.3. RC zirkuituko energia
+ 

@@ -1,0 +1,1841 @@
+
+
+
+KAPITULU I.
+ALDAGAI BATEKO EKUAZIOEN
+EBAZPEN HURBILDUA: HASTAPENAK
+1.
+ERROEN BANAPENA
+Ekuazio algebraiko edo orozgaineko gehienak zailegiak dira zehatz mehatz askatzeko. Horregatik,
+ekuazioaren erroen bilakuntza hurbildua eta errorearen estimazioa oso garrantsitsuak agertzen zaizkigu.
+Izan bitez 
+[a, b] tartea eta f funtzioa ondo deﬁnitua eta jarraia tarte horretan. Orduan, beronen
+erroak bilatzea eta
+f (x) = 0
+ekuazioaren soluzioak asmatzea problema baliokidea da. Berdintza hori
+betetzen duen p soluzioari funtzioaren erroa esango diogu.
+Batzuetan f (x) edo f 
+(x) funtzioen existentzia funtsezkoa izango da helburua lortzeko.
+Suposa dezagun
+f (x) = 0
+ekuazioaren erro guztiak ezberdinak direla, izan ere, erro bakoitzaren
+ingurune batean ez dago beste errorik. Orduan ondoko bi urrats beteko ditugu:
+a) Erroen bereizketa: erro bakoitzaren ahal den 
+[α, β] ingurune txikiena aurkitzea, non
+tartearen barnean ekuazioaren beste errorik ez baitago.
+b) Erro hurbilduen balioak egokitzea: emaitzak gero eta obeago hurbiltzea.
+Lehenbizian ondorengo bi emaitzak kontutan hartu beharko ditugu.
+Tarteko balioaren teorema
+Izan bitez f (x) ∈ C[a, b] eta k ∈ IR, f (a) < k < f (b), orduan, ∃ d ∈ 
+(a, b), non f (d) = k baita.
+Korolarioa
+Izan bedi f (x) ∈ C[a, b] non f -k [α, β]-
+ren muturretan zeinu ezberdinak dituen, f (α) · f (β) < 0,
+orduan f -k tarte horren barruan gutxienez erro bat izango du, ∃ p ∈ 
+(α, β) non f (p) = 0 . Baldin
+∃ f
+eta tartearen barnean ez badu zeinurik aldatzen, orduan f -
+k erro bat baino ez dauka [α, β]-n.
+Funtzioaren erroen bereizketaren prozesua hasteko, lehenengoan emandako tartearen partizio bat
+egiten da a < α1 < ... < αn < b. Gero jarraian dauden bi puntuen artean zeinu aldaketaren bat bilatzen
+da, f (αk) · f
+(αk+1) < 0. Eragiketa horrek erro baten existentzia adieraziko digu. Praktikan, emandako
+tartea 2,4,8,...,2n azpitarteetan zatituko da.
+Adibidea
+f (x) ≡ x3 − 6x + 2 = 0
+ekuazioa askatu.
+x aldagaia
+−∞
+–3
+–1
+0
++1
++3
++∞
+funtzioaren zeinuak
+–
+–
++
++
+–
++
++
+Hiru zeinu-aldaketa daude, ondorioz erro-banaketa (−3, −1), (0, 1) eta 
+(1, 3) tarteetan egingo da.
+Adibidea
+Funtzioaren zeinu-
+aldaketak ﬁnkatzeko aski da emandako tartearen muturretako balioekin eta funtzioaren
+gorena eta beherena lokalekin. Adibidez askatu f 
+(x) ≡ x4 − 4x − 1 = 0 ekuazioa.
+Funtzioaren deribatua f (x) = 4(x3 − 1) da eta beronen erroa x = 1 da 
+(anizkoiztasuna=3).
+x aldagaia
+−∞
+1
++∞
+funtzioaren zeinuak
++
+–
++
+Bi zeinu-aldaketak daudenez f -k bi erro erreal dauzka, (−∞, 1)-
+an bat egongo da eta (1, ∞)-an bestea.
+1
+
+Adibidea
+f (x) ≡ x + ex = 0 ekuazioa askatu.
+Batazbestekoaren teorema
+Biz f ∈ C[a, b] ∩ C1(a, b), orduan ∃ d ∈ (a, b) non f (d) = (f (b) − f (a))/
+(b − a) betetzen den.
+Muturreko balioaren teorema
+Izan bedi f ∈ C[a, b], orduan, ∀x ∈ [a, b], ∃d1, d2 ∈ [a, b] non f(d1) ≤ f
+(x) ≤ f(d2) betetzen den.
+Horrez gain, baldin f ∈ C1
+(a, b), orduan d1 eta d2 tartearen muturrak dira edo f anulatuko dute.
+Teorema
+Izan bitez f (x)-ren p erro zehatza eta x erro hurbildua [α, β]-an, non |f 
+(x)| ≥ m1 > 0. Orduan
+∀α ≤ x ≤ β, |x − p| ≤ |f (x)|/m1
+ezberdintza bete ohi da.
+Adibidea
+Izan bedi f (x) ≡ x4 − x − 1 = 0 ekuazioa [1.22, 1.23] tartean.
+x1 = 1.22 → f(x1) = −0.0047 eta
+x2 = 1.23 → f(x2) = 0.0589.
+Puntu hauetan funtzioaren zeinuak ezberdinak direnez, (1.22, 1.23)-n f -
+k erro bat izango du eta aurreko
+teoremaren bidez errorearen bornapena:
+m1 = 6.2632 =⇒ |x1 − p| ≤
+0.0047
+6.2632
+≈ 0.00075 da.
+II EKUAZIOEN EBAZPEN GRAFIKOA
+y = f (x) kurbak eta x = 0 ardatzak elkar ebakitzen duten puntugunean f (x)-
+ren erro bat dago.
+Kurbaren irudiak hurbilketa zehatza bilatzen hasteko lagunduko digu. Batzuetan f 
+(x) = g(x) + h(x)
+adierazpen arruntagoaz idatz daiteke eta orduan f (x) = 0 =⇒ g(x) = −h
+(x). Erroa y = g(x) eta
+y = −h(x) funtzioen ebakiduran dago.
+Adibidea
+x log10 x − 1 = 0 ekuazioa graﬁkoki ebatzi.
+x log10 x = 1 =⇒ log10 x = 1/x, eta orain y = log10 x eta y = 1/
+x funtzioak marraztuko ditugu,
+1
+2
+3
+4
+5
+6
+0.5
+1
+1.5
+2
+p ≈ 2.5 erro hurbildutzat agertu zaigu.
+2
+
+KAPITULU II.
+BISEKZIO ALGORITMOA
+1.
+SARRERA ETA METODOA
+Funtzioen erroen bilakuntzaren problema ebazteko ikusi behar dugun lehenengo metodoa ”tarteko
+balioaren teoreman” oinarritutako Bisekzio algoritmoa da.
+Demagun f ∈ C[a, b] non f (a)·f 
+(b) < 0 betetzen den. Tarteko balioaren teoremaren korolarioaren
+ondorioz a < p < b zenbakia existitzen da non f 
+(p) = 0 . Baldin p tarte horren erro bakarra bada,
+orduan a = a1 eta b = b1 har ditzakegu eta emandako tartea p1 = (a + b)/
+2 erdiguneaz zatitutako
+bi azpitarte luzekidetan banatuko dugu. Baldin f 
+(p1) = 0 bada orduan p1 erroa izango da. Bestela,
+horietariko zati batean egongo da erroa eta prozesua jarraitzeko ea f 
+(a1) eta f(p1) edo f(p1) eta
+f 
+(b1) zeinu ezberdikoak diren begiratu beharko dugu. Lehenengo kasuan a2 = a1 eta b2 = p1 izendapen
+berriak izango dira eta 
+(a2, b2) tartea hartuko dugu, bestela, a2 = p1 eta b2 = b1 izendapenekin
+errepikatuko dugu prozesua. Prozesu hau eskatutako doitasuna beheragotu arte zenbait aldiz errepika
+daiteke gero eta tarte txikiagoak lorturik. Tarteak n. urratsean (b − a)/
+2n luzera izango du.
+Programatzerakoan inﬁnitu iterazio ez egiteko metodo hauei geldi-
+erizpidea erantsi behar zaie, hau
+da, N0 iterazio kopuru maximoa ﬁnkatzea edo 
+[an, bn] tartea emandako T OL tolerantzia baino
+motzagoa izatea edo |pn+1 − pn| azken bi hurbilketeen arteko aldea emandako ε baino txikiagoa izatea.
+2.
+ALGORITMOA ETA ADIBIDEAK
+Bisekzio algoritmoa
+Biz f ∈ C[a, b], f(a) · f(b) < 0, algoritmoak f
+(x) = 0 ekuazioaren soluzioa hurbilduko du
+Sarreran: a eta b muturrak; T OL tolerantzia; N0 iterazio kopuru maximoa.
+Irteeran: p ebazpen hurbildua edo porrot mezua.
+Urrats 1: Hartu i = 1.
+Urrats 2: i ≤ N0 den bitartean 3-6 urratsak jarraitu.
+Urrats 3: Hartu p = a + (b − a)/2.
+Urrats 4: Baldin f (p) = 0 edo (b − a)/2 < T OL, orduan IRTEERA (p); GELDITU.
+Urrats 5: Baldin f (a) · f 
+(p) > 0, orduan a = p, bestela b = p; hartu i = i + 1.
+Urrats 6: IRTEERA 
+(N0 ’iterazio egin ondoren, metodoak porrot egin du’); GELDITU.
+Programatzerakoan har dezagun |pn−1 − pn|/|pn| < 10−4 geldi erizpidetzat
+Adibidea
+Biz f (x) = x3 − 4x2 − 10. f (1) = −5 eta f (2) = 14 direnez funtzioak 
+[1,2] tartean erro bat dauka.
+Funtzio honi bisekzio algoritmoaren 13 iterazio burutu ondoren: |p − p13|/
+|p| < |b14 − a14|/|a14| <
+10−4 betetzen dela ikus daiteke. Beraz, p ≈ 1.365112305 erro hurbildutzat har dezakegu.
+Nahiz eta bisekzio algoritmoa erraz eta garbia izan, eragozpen batzuk erakusten ditu. Metodoak
+soluzioa astiro hurbiltzen du eta bitartean hurbilketa onak alde batean utzi ditzake. Hala ere, metodo
+honek beti soluziora konbergitzen du eta horregatik hau baino azkarragoak diren beste metodoen hasier-
+ako estimazio bat asmatzeko interesgarria bihurtzen da.
+Orain segida baten konbergentzi abiaduraren deﬁnizioa ﬁnkatuko dugu
+3
+
+Deﬁnizioa
+Izan bedi k konstantea, n handia denean,
+|αn − α|/|βn| ≤ k
+bada, non
+{βn}∞
+n=1
+βn =
+0 ∀n segida baita, orduan {αn}∞
+n=1
+segidak O(βn) abiaduraz α-ra konbergitzen duela esan ohi da.
+αn = α + O(βn)
+⇐=⇒
+αn → α
+O(βn) abiaduraz
+Teorema
+Izan bitez f ∈ [a, b] eta f (a) · f 
+(b) < 0 , orduan bisekzio metodoaren bidez aurkitutako erroaren
+hurbilketak ondoko bornapena beteko du:
+|pn − p| ≤
+b − a
+2n
+∀n ≥ 1
+**frog**
+Nahiz eta teorema honek errorearen bornapena ﬁnkatu, askotan soluzioa eta hurbilketaren arteko
+aldea bornapen hori baino askoz txikiagoa da, orobat, lehenengo adibidean ondoko berezitasuna ikus
+dezakegu: nahiz eta teoremak |p − p9| aldea (2 − 1)/29 = 2.0 ∗ 10−3
+kopuruaz bornatu, benetazko
+aldea hori baino askoz txikiagoa da 4.3 ∗ 10−6.
+Adibidea
+Baldin
+ε = 10−5
+hartzen badugu, zenbat iterazio beharko ditugu
+[1, 2]
+tartean
+f (x) = x3 + 4x2 − 10 = 0 ekuazioaren erroa hurbiltzeko?
+|pn − p| ≤ 2−N (b − a) = 2−N ≤ 10−5
+Aurreko adirezpenetik N askatzeko logaritmoak erabiliko ditugu:
+2−N ≤ 10−5 =⇒ log102−N ≤ log1010−5 ⇐⇒ −Nlog102 ≤ −5 ⇐⇒ N ≥
+5
+log102
+= 16.6
+Erantzuna: 17 iterazio.
+ARIKETAK
+1. Ondoko ekuazioen erro errealeen kopurua bilatu. Erroak tarte ezberdinetan banatu eta graﬁkoki
+ebatzi. Gero bisekzio algoritmoaren bidez 10−2 doitasunez soluzioa bilatu:
+a) x − 2−x = 0 ;
+b) 2sin(πx) + x = 0
+2.
+Bisekzio algoritmoaren bidez 10−3 doitasunez 7x2 + 14x − 6 = 0 ekuazioaren erroak hurbildu
+eta 10−5 doitasunez [1,2] tartean ex + 2−x + 2cos
+(x) − 6 = 0 ekuazioaren erroa hurbildu.
+3.
+Bisekzio algoritmoaren bidez 10−4 doitasunez
+2
+√
+3 zenbakiaren hurbilketa bilatu.
+4
+
+KAPITULU III.
+PUNTU FINKOAREN ITERAZIOA
+1.
+SARRERA ETA METODOA
+Kapitulu honetan ikusi behar ditugun funtzioak ondoko gisaz adieraz daitezkenak dira:
+f (x) = g(x) − x eta ondorioz f (x) = 0 ⇐⇒ g(x) = x ekuazio baliokideak dira.
+Ekuazio honen soluzioari g funtzioaren puntu ﬁnkoa esaten zaio eta hain zuzen ere f -
+ren erroa da
+erebai. Orain g-ren puntu ﬁnkoak bilatzeko baldintzak aztertuko ditugu.
+Teorema
+Izan bedi g ∈ C[a, b]
+non
+∀x ∈ [a, b] =⇒ g(x) ∈ [a, b] , orduan g-k [a, b] tartean, gutxienez,
+puntu ﬁnko bat dauka. Gainera, baldin g (x) existitzen bada (a, b)-n eta ∀x ∈ 
+(a, b) =⇒ |g (x)| ≤ k < 1 ,
+orduan g funtzioak [a, b] tartean puntu ﬁnko bat bakarra dauka.
+**frog**
+1
+2
+3
+4
+1
+2
+3
+4
+y = x eta y = g(x) funtzioek elkar ebakitzen duteneko gunean f (x) = g
+(x) − x funtzioaren erroa dago.
+Adibidea
+Izan bedi g(x) = (x2 − 1)/3 ∈ C[−1, 1]. Tarte honetan g-
+ren beherena x = 0 puntuan dago,
+g(0) = −1/3, eta gorena x = ±1 puntuan, g(±1) = 0, beraz, ∀x ∈ [−1, 1] =⇒ g
+(x) ∈ [−1, 1], honetaz
+gain, |g (x)| = |2x/3| ≤ 2/3 < 1 , ∀x ∈ [−1, 1].
+Ikusitako teoremaren bidez g-k [−1, 1]-n puntu ﬁnko bakar bat du eta f (x) = g
+(x) − x funtzioaren
+erroa da. Berau aurkizeko p = (p2 − 1)/3 ekuaziotik p askatuko dugu, 3p = 
+(p2 − 1) =⇒ p2 − 3p − 1 = 0
+=⇒ p = (3 ±
+2
+√
+13)/2 . Bi balio hauetatik [−1, 1] tartearen barnean dagoena (3 −
+2
+√
+13)/2 da.
+Adibidea
+Biz g(x) = 3−x funtzioa [0, 1] tartean. Honek ∀x ∈ [0, 1] =⇒ g(x) ∈ 
+[0, 1] betetzen du baina ez
+du |g (0)| ≤ k < 1 betetzen, horregatik funtzioak 
+[0, 1] tartean gutxienez puntu ﬁnko bat dauka. Hala
+ere ∀x ∈ [0, 1] g (x) < 0 denez, g beherakorra da [a, b]-n eta ondorioz g-
+k puntu ﬁnko bakar bat du.
+Adibide hauek ikusi ondoren g funtzioaren puntu ﬁnkoak aurkitzeko metodo sistematikoa asmatu
+nahi dugu. Metodo hau existitzen da eta puntu ﬁnkoaren iterazioa deritzo, baina edozein funtzioari
+ezin zaio aplikatu. Metodo honerako egokia den funtzioak teoremaren bi baldintzak bete behar ditu.
+Ondoko teoremaren bidez metodoaren konbergentziaren ezaugarriak ﬁnkatuko ditugu.
+5
+
+Teorema
+Izan bedi g ∈ C[a, b]
+non
+∀x ∈ [a, b] =⇒ g(x) ∈ [a, b] , baldin g (x) (a, b) tartean existitzen
+bada eta |g (x)| ≤ k < 1, orduan, pn = g(pn−1) ∀n ≥ 1
+segidak g-ren [a, b]-ko p puntu ﬁnkora
+konbergituko du. Gainera:
+|pn − p| ≤ kn max{p0 − a, b − p0} ∀n ≥ 1
+|pn − p| ≤
+kn
+1 − k
+|p0 − p1| ∀n ≥ 1
+**frog**
+Teoremak metodoaren bilakaera garbi utzi du:
+ baldin g funtzioak teoremaren baldintzak betetzen
+baditu, p0 hasierako estimaziotzat hartuko dugu eta pn = g
+(pn−1) moduaz eraikiko ditugu hurrengo
+hurbilketak. {pi}∞
+i=0 segidak p errorantz konbergituko du. Gainera, [a, b]-n |g 
+(x)| ≤ k < 1 betetzen
+duen k konstantea hainbat eta txikiagoa izan orduan eta azkarrago konbergituko du metodoak.
+2.
+ALGORITMOA ETA ADIBIDEAK
+Puntu ﬁnkoaren iterazioa
+p0 hasierako balioarekin algoritmoak f
+(p) = p ekuazioaren ebazpen hurbildua bilatzen du
+Sarreran: p0 hasierako hurbilketa; T OL toleranzia; N0 iterazio kopuru maximoa.
+Irteeran: p ebazpen hurbildua edo porrot mezua.
+Urrats 1: Hartu i = 1.
+Urrats 2: i ≤ N0 den bitartean 3-5 urratsak jarraitu.
+Urrats 3: Hartu p = g(p0).
+Urrats 4: Baldin f (p) = 0 edo |p − p0| < T OL bada, orduan IRTEERA 
+(p); GELDITU.
+Urrats 5: Hartu p0 = p eta i = i + 1.
+Urrats 6: IRTEERA 
+(N0 ’iterazio egin ondoren, metodoak porrot egin du’); GELDITU.
+Adibidea
+[1, 2] tartean x3 + 4x2 − 10 = 0 ekuazioa puntu ﬁnkoaren eskemaren moduan idazteko aukera
+ezberdin daude:
+a) x = g1(x) = x−x3 −4x2 +10;
+b) x = g2(x) =
+10
+x
+−4x
+1/2;
+c) x = g3(x) =
+1
+2
+10−x3
+1/2
+d) x = g4(x) =
+10
+4 + x
+1/2;
+e) x = g5(x) = x −
+x3 + 4x2 − 10
+3x2 + 8x
+n
+pn(a)
+pn(b)
+pn(c)
+pn(d)
+pn(e)
+0
+1.5
+1.5
+1.5
+1.5
+1.5
+1
+−0.875
+0.8165
+1.28695
+1.34839
+1.37333
+2
+6.732
+2.9969
+1.40254
+1.36737
+1.36526
+3
+−469.7
+(−8.65)1/2
+1.34545
+1.36495
+1.36523
+4
+1.03 ∗ 108
+1.37517
+1.36526
+1.36523
+5
+1.36009
+1.36522
+6
+1.36786
+1.36523
+7
+1.36388
+1.36522
+8
+1.36591
+1.36523
+6
+
+Lehenengo bi funtzioek [a, b]-n ez dute |gi(x)| ≤ k < 1 betetzen, ezta gi : 
+[a, b] → [a, b] ere,
+beraz ezin da zihurtatu beraien segidek konbergituko dutenik. Hirugarrenak 
+[1, 1.5] tartea berenganara
+bidaltzen du eta honen barruan |g3
+(x)| < 1 , horregatik p0 = 1.5 hasierako estimazioarekin metodoak
+konbergitzen du. Azken biek teoremaren baldintzak betetzen dituztenez segidek konbergitzen dute erebai.
+Teorema
+Izan bedi g(x) ondo deﬁnitua eta diferentziagarria [a, b] tartean.
+Demagun g-k [a, b] tartean puntu ﬁnko bat daukala, |g (x)| ≤ k < 1 eta g 
+(x) ez duela
+zeinurik aldatzen. Orduan, p0 ∈ (a, b) , pn = g
+(pn−1) segidak p puntu ﬁnkorantz konbergitzen du: 1)
+monotonoki baldin g (x) > 0 bada eta biraka baldin g (x) < 0.
+**frog**
+Orain konbergentzia arintzeko bidea aipatuko dugu.
+Demagun [a, b] tartean f (x) = 0 ekuazioak erro bat duela eta 0 < m1 ≤ f 
+(x) ≤ M1 (baldin
+f (x) < 0 bada orduan −f 
+(x) > 0 hartuko dugu eta ondorioztapen berbera bete dezakegu). Zehatz
+meatz m1 = minx∈[a,b] f (x) eta M1 = maxx∈[a,b] f (x) hartuko ditugu.
+f (x) = 0 =⇒ λf (x) = 0 =⇒ x = x − λf (x)
+Har dezagun
+g(x) = x − λf (x)
+non λ konstante positibo ezezaguna baita. Puntu ﬁnkoaren
+iterazioa betetzeko |g 
+(x)| ≤ k < 1 izan behar duenez, egoera hau derrigortuko dugu:
+0 ≤ g (x) = 1 − λf (x) ≤ k < 1 =⇒ 0 ≤ 1 − λM1 ≤ 1 − λm1 ≤ k
+Azken adierazpen hau betetzeko aski da λ = 1/M1 hartuz eta ondorioz k = 1 − m1/
+M1 < 1 .
+Adibidea
+x3 + x = 1000 ekuazioaren erro positiborik handiena aurkitu 10−4 doitasunez.
+Bistakoa denez erro hori 9 eta 10 zenbakien artean egon behar du, beraz har dezagun 
+[9, 10] tartea.
+f (x) = x3 + x − 1000
+eta
+f (x) = 3x2 + 1
+orduan
+m1 = 244 ≤ f (x) ≤ 301 = M1 =⇒ λ =
+1
+M1
+≈ 0.00332
+eta
+k = 1 −
+m1
+M1
+≈ 0.19
+x = g(x) = x − λ(x3 + x − 1000)
+Laugarren iterazioan eskaturiko hurbilketa lortuko dugu 9.966667.
+7
+
+ARIKETAK
+1.
+[1, 2] tartean puntu ﬁnkoaren iterazioaren bidez eta p0 = 1 hasierako hurbilketatzat hartuz
+10−2 doitasunez 2sin(x) − x = 0 ekuazioaren soluzioa aurkitu.
+2.
+Ikusitako teorema baten bidez [0, 2π] tartean g
+(x) = 2−x ekuazioak puntu ﬁnko bat bakarra
+duela frogatu. Puntu ﬁnkoaren iterazioaren bidez 10−4 doitasunez berorren hurbilketa bat aurkitu.
+Ikusitako korolarioen bidez 10−4 doitasuna lortzeko iterazio kopurua asmatu eta doitasun hori lortzen
+duen benetako iterazio kopuruarekin konparatu.
+3.
+Ondoko ekuazioetarako puntu ﬁnkoaren iterazioa konbergitzeko 
+[a, b] tartea aurkitu. Erroaren
+bilakuntzan 10−5 doitasuna lortzeko iterazio kopurua eta hurbilketak kalkulatu:
+a) x =
+2 − ex + x2
+3
+b) x =
+2
+1
+3
+ex
+c) x = 5−x
+d) x = 6−x
+e) x = 1.75 +
+4x − 7
+x − 2
+f) x =
+5
+x2
++ 2
+4.
+∀x0 > 0
+xn = 1
+2 xn−1 + 2/xn−1 ,
+n ≥ 1 segidak
+2
+√
+2-rantz konbergitzen duela frogatu.
+8
+
+KAPITULU IV.
+NEWTON-RAPHSONEN METODOA
+1.
+SARRERA ETA METODOA
+f 
+(x) = 0 ekuazioaren erroak bilatzeko metodorik famatu eta eraginkorrena Newton-
+Raphsonena da.
+Metodo beronen problemarik handiena honako hau da, soilik erroaren ingurune txikietan konbergituko
+dela. Taylorren garapenaren bidez bere oinarri analitikoa aztertuko dugu.
+Izan bitez f ∈ C2[a, b] eta p erroaren x ∈ [a, b] hurbilketa ona 
+(|x − p| << 1), non f (x) = 0 den.
+f (p)-ren Taylorren garapena x puntuan ondokoa da:
+0 = f (p) = f (x) + (p − x)f (x) +
+(p − x)2
+2
+f (ξ) =⇒ 0 ≈ f (x) + (p − x)f (x)
+Azken formula halabehartzeko (p − x)2f (ξ)/
+2 gaia txikia izan behar du ezabatu ahal izateko.
+Horregatik Newtonen metodoak soilik erroaren ingurunean 
+(|x−p| << 1) konbergitzen duela esan daiteke.
+Orduan 0 ≈ f (x) + (p − x)f (x) ekuaziotik p askatuz p ≈ x − f (x)/f 
+(x) hurbilketa lortzen dugu eta
+metodoaren formula ondokoa da,
+pn = pn−1 −
+f (pn−1)
+f (pn−1)
+.
+Demagun
+y = f (x) ,
+f (x) > 0
+∀x ∈ [a, b] ,
+f (a) < 0 ,
+f (b) > 0 . Geometrikoki,
+metodoak y = f (x) kurba, (p0, f
+(p0) puntutik pasatzen den kurbaren ukitzailearen ordez ordezkatzen
+du eta honek X-
+en ardatza ebakitzen dueneko puntua erroaren hurbilketatzat hartuko dugu. Prozesua
+errepikatuko dugu hurbilketa ona asmatu arte. (pn, f
+(pn)) puntutiko kurbaren ukitzailearen ekuazioa
+y − f (pn) = f (pn)(x − pn) da. y = 0 puntuan x aska dezakegu x = pn − f(pn)/f 
+(pn) hurbilketa
+berria lorturik.
+0.5
+1
+1.5
+2
+2.5
+3
+-1
+-0.5
+0.5
+1
+1.5
+2
+Teorema
+Izan bedi f ∈ C2[a, b] , baldin f (a)·f (b) < 0, f (x) , f 
+(x) = 0 badira eta ∀x ∈ [a, b] f eta f
+ez
+badute zeinurik aldatzen, orduan, p0 ∈ [a, b] lehenengo estimazioarekin, non f
+(p0) · f (p0) > 0 baita,
+Newtonen metodoak f 
+(x) = 0 ekuazioaren erroa nahi den doitasunez hurbilduko du.
+**frog**
+Beraz, Newtonen metodoaren konbergentzia zihurtatzeko f (p0)·f 
+(p0) > 0 betetzen duen [a, b] tartearen
+muturra p0-tzat hartuko dugu.
+9
+
+Teorema
+Izan bitez f ∈ C[−∞, ∞] , f (a) · f (b) < 0 eta f (x) = 0 ∀x ∈ 
+[a, b]. Baldin f (x) funtzioa
+IR osoan existitzen bada eta ez du bere zeinua aldatzen, orduan, ∀ p0 ∈ 
+[a, b] estimazioarekin Newtonen
+metodoak f 
+(x) = 0 ekuazioaren erroa aurkituko du. Adibidez p0 = a edo p0 = b har daitezke.
+**frog**
+Metodo honetan hurbilketa berria lortzeko aurrekoari erantsiten zaion zuzenketa f 
+(pn)/f (pn) da,
+beraz |f (pn)|-ren tamainua konbergentzi-
+abiadura halabehartzen du. Baldin balio absolutu hori handia
+bada metodoa azkar konbergituko du, txikia bada iterazio pilo bat bete beharko ditugu emaitza ona
+lortzeko eta baldin f (pn) = 0 bada orduan metodoa ezin da aplikatu.
+Teorema
+Izan bedi f ∈ C2[a, b] , baldin p ∈ [a, b] puntuan f (p) = 0 eta f 
+(p) = 0 badira, orduan
+∃ δ > 0 non ∀ p0 ∈ [p − δ, p + δ] Newtonen metodoaren {pn}∞
+n=1 segidak p-rantz konbergituko den.
+**frog**
+Lehenengo kapituluan ikusitako |p − pn| ≤ |f(pn)|/
+m1 bornapena erabilgarria da, baina Taylorren
+garapenari esker metodo honetarako beste bornapen berezia ikusiko dugu:
+0 = f (p) = f (pn) + f (pn)(p − pn) +
+(p − pn)2
+2
+f (dn) ,
+dn ∈ (p, pn).
+Aurreko adierazpennetik p askatuz, p = pn −
+f (pn)
+f (pn)
+−
+(p − pn)2
+2
+f (dn)
+f (pn)
+eta ondorioz
+pn+1 = pn −
+f (pn)
+f (pn)
+=⇒
+p − pn+1 = −
+1
+2
+f (dn)
+f (pn)
+(p − pn)2
+=⇒
+|p − pn+1| ≤
+M2
+2m1
+(p − pn)2
+non M2 = maxx∈[a,b] |f (x)|. Baldin (M2/
+2m1)|p − p0| ≤ k < 1 bada orduan konbergentzia azkarra
+(karratua) daukagu, bereziki |p − pn| ≤ 10−m =⇒ |p − pn+1| ≤ 10−2m.
+2.
+ALGORITMOA ETA ADIBIDEAK
+Newton-Raphsonen algoritmoa
+Emandako p0 hasierako hurbilketarekin algoritmoak f
+(x) = 0 ekuazioaren ebazpen hurbildua
+aurkitzen du
+Sarreran:
+ p0 hasierako hurbilketa; T OL tolerantzia; N0 iterazio kopuru maximoa.
+Irteeran: p ebazpen hurbildua edo porrot mezua.
+Urrats 1: Hartu i = 1.
+Urrats 2: i ≤ N0 den bitartean 3-5 urratsak jarraitu.
+Urrats 3: Hartu
+p = p0 −
+f (p0)
+f (p0)
+Urrats 4: Baldin f (p) = 0 edo |p − p0| < T OL bada, orduan IRTEERA 
+(p); GELDITU.
+Urrats 5: Hartu p0 = p eta i = i + 1.
+Urrats 6: IRTEERA 
+(N0 ’iterazio egin ondoren, metodoak porrot egin du’); GELDITU.
+Adibidea
+x = cos x ekuazioaren soluzio bat lortzeko, lehenbizian f 
+(x) = cos x − x = 0 gisaz idatziko eta
+orain problema f (x) funtzioaren erro bat aurkitzean datza. f (π/2) = −π/
+2 < 0 < 1 = f (0) denez
+10
+
+(−π/
+2, 1) tartean gutxienez erro bat dago eta graﬁkoki ikusi daiteke ez dagoela beste errorik. Deribatua
+f (x) = − sin x − 1 izanik, Newtonen metodoaren formula
+pn = pn−1 −
+cos pn−1 − pn−1
+− sin pn−1 − 1
+n ≥ 1
+da. Geometrikoki ikus daiteke p0 = π/4 ona dela hasierako estimaziotzat.
+p0 = 0.785398163,
+p2 = 0.739085178,
+p4 = 0.739085133.
+p1 = 0.739536134,
+p3 = 0.739085133,
+Adibidea
+Newtonen metodoaren bidez [1, 2] tartean f 
+(x) = x3 + 4x2 − 10 ekuazioaren erroa aurkitu.
+3.
+EBAKITZAILEAREN METODOA
+Baldintzak egokiak badira eta hasierako hurbilketa nahiko zehatza bada, lehebizian ikusitako teore-
+mak Newtonen metodoaren konbergentzia frogatzen du. Are gehiago, Newtonen formula eta Taylorren
+garapena aztertuz metodoaren konbergentzi karratua frogatu dugu.
+Nahiz eta Newtonen metodoa oso ona izan arazo bat dauka, hauxe da, f (x)-
+en deribatuaren balioz-
+tapena, askotan f 
+(x) funtzioarena baino askoz zailagoa da. Eragozpen hau gainditzeko ebakitzailearen
+metodoari esker Newtonen metodoaren aldakuntza garrantsitsua dugu.
+f (pn−1) = lim
+x→pn−1
+f (x) − f (pn−1)
+x − pn−1
+x = pn−2 hartuz f (pn−1) ≈ [f(pn−1) − f(pn−2)]/(pn−1 − pn−2) dugu.
+Baldin Newtonen formularen barnean aldakuntz hau sartzen badugu:
+pn = pn−1 −
+f (pn−1)
+f (pn−1) − f(pn−2)
+(pn−1 − pn−2)
+geratzenda.
+ebakitzailearen algoritmoa
+Emandako p0 eta p1 hasierako hurbilketekin algoritmoak f
+(x) = 0 ekuazioaren ebazpen hur-
+bildua aurkitzen du
+Sarreran:
+ p0 eta p1 hasierako hurbilketak; T OL tolerantzia; N0 iterazio kopuru maximoa.
+Irteeran: p ebazpen hurbildua edo porrot mezua.
+Urrats 1: Hartu i = 2 eta q0 = f(p0) , q1 = f(p1) deﬁnitu.
+Urrats 2: i ≤ N0 den bitartean 3-6 urratsak jarraitu.
+Urrats 3: Hartu
+p = p1 −
+q1
+q1 − q0
+(p1 − p0)
+Urrats 4: Baldin f (p) = 0 edo |p − p0| < T OL bada, orduan IRTEERA 
+(p); GELDITU.
+Urrats 5: Hartu p0 = p1 , q0 = q1 , p1 = p , q1 = f(p) eta i = i + 1.
+Urrats 6: IRTEERA 
+(N0 ’iterazio egin ondoren, metodoak porrot egin du’); GELDITU.
+11
+
+Adibidea
+p0 = 0.5 eta p1 = π/
+4 hasierako hurbilketekin ebakitzailearen aldaraziriko metodoaren bidez
+[−π/2, 0] tartean f (x) = cos x − x funtzioaren erroa aurkitu.
+pn = pn−1 −
+(cos pn−1 − pn−1)(pn−1 − pn−2)
+(cos pn−1 − pn−1) − (cos pn−2 − pn−2)
+,
+n ≥ 2
+p0 = 0.5,
+p2 = 0.736384139,
+p4 = 0.739085149,
+p1 = 0.785398163,
+p3 = 0.739058139,
+p5 = 0.739085133.
+Ikus dezakegunez metodo hau gehienetan ez da Newtonena bezain azkarra. Hala ere, nahiko arin
+konbergitu du eta bisekzioaren metodoaz lortutako hurbilketa hobetzeko oso egokia da.
+ARIKETAK
+1.
+Newtonen eta ebakitzailearen metodoaren bidez 10−4 doitasunez ondoko ekuazioen erroak
+aurkitu:
+a) x3 + 3x2 − 1 = 0
+[−4, 0] ;
+b) x − 0.8 − 0.2 sin x = 0
+[0, Π/2]
+2.
+Newtonen eta ebakitzailearen metodoaren bidez 10−5 doitasunez ondoko ekuazioen erroak
+aurkitu:
+a) x3 − x − 1 = 0
+[1, 2] ;
+b) x =
+2 − ex + x2
+3
+c) 3x2 − ex = 0 ;
+d) ex + 2−x + 2 cos x − 6 = 0
+3.
+p0 = 2 hasierako hurbilketarekin Newtonen metodoa eta ebakitzailearenaren bidez 10−4 doita-
+sunez
+2
+√
+3 zenbakiaren hurbilketa asmatu.
+4.
+Newtonen metodoaren bidez 10−4 doitasunez 
+(1, 0) puntutiko y = x2 kurbaren punturik
+hurbilena aurkitu ( d(x) = (x, x2) eta 
+(1, 0) puntuen arteko luzera minimoa aurkitu).
+5.
+f (x) = (4x − 7)(x − 2)
+funtzioak p = 1.75 puntuan erro bat dauka. Newtonen metodoa
+aplikatu ondoko hasierako puntuetatik:
+a) p0 = 1.625 ; b) p0 = 1.875 ; d) p0 = 1.5 ;
+e) p0 = 1.95 ; f) p0 = 3 ;
+g) p0 = 7
+eta emaitzaren azalpen graﬁkoa eman.
+12
+
+KAPITULU V.
+ARINTZEKO TEKNIKAK
+1.
+ITERAZIOZKO METODOEN ERROREAREN ANALISIA
+Kapitulu hau iterazio metodoen konbergentziaren ordena aztertzeaz diharduen. Baldintza berezipetan
+metodo batzuen konbergentzia arindu daiteke. Konbergentzi-
+abiadura neurtzeko prozesua azalduko dugu.
+Deﬁnizioa
+Demagun {pn}∞
+n=0 segida non limn→∞ pn = p eta en = pn − p ∀n ≥ 0 diren. Baldin bi zenbaki
+positivo λ eta α existitzen badira non
+lim
+n→∞
+|pn+1 − p|
+|pn − p|α
+= lim
+n→∞
+|en+1|
+|en|α
+= λ
+baita, orduan, p-rako {pn}∞
+n=0 segidaren konbergentzia λ errore asintotiko konstantearekiko ”α or-
+deneko konbergentzia” dela esango dugu. Baldin x = g
+(x) ekuazioa askatzeko puntu ﬁnkoaren segidaren
+konbergentzia α ordenekoa bada, orduan, metodoa α ordenekoa dela esango dugu. Ordena konstante
+asintotikoa baino garrantsitsuagoa da eta hainbat eta orden altuagoa orduan eta konbergentzi azkarragoa.
+Baldin α = 1−→ konbergentzia lineala eta α = 2−→ konbergentzia karratua.
+Adibidea
+Izan bedi g : [a, b] −→ [a, b]
+eta |g (x)| ≤ k < 1, orduan [a, b] tartean g-k p puntu ﬁnko bat
+dauka, g(p) = p. Aplika dezagun puntu ﬁnkoaren iterazioa g
+(x) = x problemaren ebazpen hurbildua
+aurkitzeko. Baldin g (p) = 0 bada orduan konbergentzia lineala da:
+∀n ≥ 1
+en+1 = pn+1 − p = g(pn) − g(p) = g (ξn)(pn − p) = g (ξn)en
+non ξn ∈ (pn, p)
+Gainera limn→∞ pn = p =⇒ limn→∞ ξn = p. Baldin g ∈ C
+[a, b] bada, orduan limn→∞ g (ξn) = g (p) ,
+erebai, beraz,
+lim
+n→∞
+en+1
+en
+= lim
+n→∞
+g (ξn) = g (p) ,
+eta
+lim
+n→∞
+|en+1|
+|en|
+= |g (p)|
+Baldin g (p) = 0 bada orduan λ = |g 
+(p)| konstante asintotikoarekiko konbergentzia lineala da.
+Adibidea
+Konbergentzia lineala eta konbergentzia karratua duten iteraziozko eskemak konparatzeko, dema-
+gun lehenengoak limn→∞ |en+1|/
+|en| = 0.75 betetzen duela eta besteak limn→∞ |en+1|/|en|2 = 0.75.
+Adierazpenak errazteko |en+1|/|en| ≈ 0.75
+eta
+|en+1|/|en|2 ≈ 0.75
+hartuko ditugu, ondorioz,
+|en| ≈ 0.75|en−1| ≈ 0.752|en−2| ≈ ... ≈ 0.75n|e0|
+|˜
+en| ≈ 0.75|˜en−1|2 ≈ 0.75[0.75(˜en−2|2)2 = 0.753|˜en−2|4 ≈ ... ≈ 0.752
+n−1|˜e
+0|
+2n
+Demagun ere |e0| = |˜e0| = 0.5 eta 10−8 tolerantzia beheragotu nahi dugula. Logaritmoak hartuz,
+|en| = 0.75n|e0| ≤ 10−8
+=⇒
+n log10 0.75 + log10 0.5 ≤ −8 · 1
+=⇒
+n ≥
+− log10 0.5 − 8
+log10 0.75
+≈ 62
+|˜
+en| = 0.752
+n−1|˜e
+0|
+2n = 0.75−10.3752
+n
+≤ 10−8
+=⇒
+2n ≤
+log10 0.75 − 8
+log10 0.375
+=⇒
+2n ≥ 19.1
+=⇒
+n ≥ 5
+Hasierako hurbilketa bera izanik, konbergentzia linealarekiko metodoak 62 iterazio behar izango ditu,
+aldiz, konbergentzia karratua duenak 5 iterazio baino ez du beharko.
+13
+
+2.
+ARINTZEKO TEKNIKAK ETA NEWTONEN
+FORMULAREN OROKORPENA
+Teorema
+Izan bedi p , x = g(x), ekuazioaren soluzio bat eta suposa dezagun g 
+(p) = 0 eta g
+funtzioa
+jarraia dela p-ren ingurune irekian. Orduan ∃ δ > 0 non ∀ p0 ∈ 
+[p−δ, p+δ] , pn = g(pn−1) adierazpenaz
+eraikitako {pn}∞
+n=1
+segidak p-ra karratuki konbergitzen duela.
+**frog**
+Izan bitez f (x) = 0 ekuazioa eta beronen erroa p non f 
+(p) = 0 baita. Aurreko teorema
+aplikatzeko x = g(x) = x − φ(x) · f (x) funtzioa har dezakegu non φ
+(x) bornatua den. Oraingoan galdera
+logikoa hauxe da, ”Nolakoa izan behar duen φ
+(x) funtzioa, ikusitako eskemak konbergentzi karratua
+edukitzeko?” eta erantzuna nabaria da erebai:
+g (x) = 1 − φ (x)f (x) − φ(x)f (x) eta g (p) = 1 − φ(p)f (p) , beraz, g 
+(p) = 0 ⇐⇒ φ (p) =
+1
+f (p)
+.
+Noski orain eskema hau, pn = g(pn−1) = pn−1 − f(pn−1)/f 
+(pn−1), Newtonen formulan bihurtu egin da.
+Hala ere, f (pn)-rekin batera f (pn) 0-
+rantz joateak eragozpenak erakartzen ditu.
+Deﬁnizioa
+Baldin f (x) = (x − p)mq(x)
+bada non
+limx→p q(x) = 0 baita p-ri f-ren m anizkoiztasuneko
+zeroa esango diogu. Baldin m = 1 bada orduan zero simplea esango diogu. x p-
+ra doanean q(x) gaia
+0-ra ez duen konbergitzen f (x) funtzioaren zatia da.
+Adibidea
+f 
+(x) = ex − x − 1 funtzioan p = 0 erroaren anizkoiztasuna 2 dela frogatuko dugu.
+Biz q(x) = (ex − x − 1)/x2, orduan l’Hopitalaren erregelaren bitartez
+lim
+x→0
+q(x) = lim
+x→0
+ex − 1
+2x
+= lim
+x→0
+ex
+2
+=
+1
+2
+=⇒ f (x) = x2
+ex − x − 1
+x2
+non
+lim
+x→0
+ex − x − 1
+x2
+= 0 .
+Newtonen metodoa erabiliz p0 = 1 hurbilketarekin ondoko taula eraikiko da:
+p1 = 0.58198,
+p5 = 0.04380,
+p9 = 0.2775 ∗ 10−2,
+p13 = 0.17358 ∗ 10−3,
+p2 = 0.31906,
+p6 = 0.02206,
+p10 = 0.13881 ∗ 10−2,
+p14 = 0.86773 ∗ 10−4.
+p3 = 0.16800,
+p7 = 0.01107,
+p11 = 0.6942 ∗ 10−3,
+p4 = 0.08634,
+p8 = 0.5545 ∗ 10−2,
+p12 = 0.37416 ∗ 10−3,
+Bistakoa denez konbergentzia ez da karratua.
+Deﬁni dezagun µ(x) = f (x)/f (x) funtzioa. Baldin p f (x)-
+ren m anizkoiztasuneko erroa bada,
+hots, f (x) = (x − p)mq(x) non m ≥ 1 , orduan,
+µ(x) =
+(x − p)mq(x)
+m(x − p)m−1q(x) + (x − p)mq (x)
+=
+(x − p)q(x)
+mq(x) + (x − p)q (x)
+.
+Orain p
+µ(x)-
+ren zero simplea da eta Newtonen metodoa µ funtzioari aplika diezaiokegu ondoko
+”Newtonen formularen orokorpena” lortuz:
+g(x) = x −
+µ(x)
+µ (x)
+= x −
+f (x)f (x)
+[f (x)]2 − f (x)f (x)
+.
+14
+
+Metodo honek zero anizkoitzek ematen dituzten arazoak gainditzen ditu eta baldin g funtzioak
+betiko baldintzak betetzen baditu orduan konbergentzi karratua zihurtatuko du. Beronen eragozpen
+bakarra f (x) funtzioa balioaztatzea da.
+Adibidea
+f 
+(x) = x3 + 4x2 − 10 = 0 funtzioari aplikaturiko Newtonen metodoa eta Newtonen formularen
+orokorpenaren portaerak ikusiko ditugu.
+pn = pn−1 −
+p3n−1 + 4p2n−1 − 10
+3p2n−1 + 8pn−1
+(Newtonen metodoa)
+pn = pn−1 −
+(p3n−1 + 4p
+2
+n−1 − 10)(3p
+2
+n−1 + 8pn−1)
+(3p2n−1 + 8pn−1)2 − (p
+3
+n−1 + 4p
+2
+n−1 − 10)(6pn−1 + 8)
+(Newtonen formularen orokorpena)
+p1 = 1.373333333
+p1 = 1.356898976
+p2 = 1.365262015
+p2 = 1.365195849
+p3 = 1.365230014
+p3 = 1.365230013
+p4 = 1.365230013
+p4 = 1.365230013
+Adibidea
+Demagun f (x) = x4 − 4x2 + 4 = (x −
+√
+2)2(x2 + 2
+√
+2x + 2) funtzioa eta x =
+√
+2 = 1.414213652.
+pn = pn−1 −
+pn−1 − 2
+4pn−1
+(Newtonen metodoa)
+pn = pn−1 −
+(p2n−1 − 2)pn−1
+(p2n−1 + 2)
+(Newtonen formularen orokorpena)
+p1 = 1.453333333
+p1 = 1.411764706
+p2 = 1.436607143
+p2 = 1.414211438
+p3 = 1.425497619
+p3 = 1.414213562
+Erroa 10−9 doitasunez hurbiltzeko formularen orokorpenak 3 iterazio behar ditu eta Newtonenak 20.
+3.
+KONBERGENTZIA AZKARRA ETA AITKEN-EN ∆2
+ALGORITMOA
+Aitken-
+en ∆2 metodoa linealki konbergitzen duen segidaren konbergentzia arintzeko erabili ohi da.
+Demagun {pn}∞
+n=0
+p-ra linealki konbergitzen duen segida, limn→∞ |en+1|/|en| = λ, 0 < λ < 1 eta
+idatz dezagun en+1 ≈ λen eta en+2 ≈ λen+1, n handietarako.
+Orduan aldiberean λ = (pn+2 − p)/(pn+1 − p), λ = (pn+1 − p)/
+(pn − p) eta bi ekuazio hauek
+berdinduz:
+pn+2 − p
+pn+1 − p
+=
+pn+1 − p
+pn − p
+=⇒ p ≈
+pn+2pn − p2n+1
+pn+2 − 2pn+1 + pn
+≈
+pn+2pn − p2n+1 ± p2n ± 2pn+1pn
+pn+2 − 2pn+1 + pn
+≈
+≈
+(p2n + pn+2pn − 2pn+1pn) − (p2n+1 − 2pn+1pn + p2n)
+pn+2 − 2pn+1 + pn
+≈ pn −
+(pn+1 − pn)2
+pn+2 − 2pn+1 + pn
+Orain
+ˆ
+pn = pn − (pn+1 − pn)2/(pn+2 − 2pn+1 + pn) adierazpenaz deﬁnituriko {ˆ
+pn}∞
+n=0
+segidak
+{pn}∞
+n=0 baino azkarrago konbergitzen duela p-rantz frogatuko dugu.
+15
+
+Adibidea
+{pn}∞
+n=0 segidak non pn = cos(1/n) baita p = 1 punturantz linealki konbergitzen du:
+p1 = 0.54030
+ˆ
+p1 = 0.96178
+p2 = 0.87758
+ˆ
+p2 = 0.98213
+p3 = 0.94496
+ˆ
+p3 = 0.98979
+p4 = 0.96891
+ˆ
+p4 = 0.99342
+p4 = 0.98981
+ˆ
+p4 = 0.99541
+Argi eta garbi {ˆ
+pn}∞
+n=0 segidak {pn}
+∞
+n=0 baino azkarrago konbergitzen du 1-erantz.
+Deﬁnizioa
+Izan bedi
+{pn}∞
+n=0
+segida, ∆pn = pn+1 − pn , (n ≥ 0) adierazpenari diferentzia aurrerakorra
+esaten zaio eta ∆kpn = ∆k−1
+(∆pn) , k ≥ 2 adierazpenaren bidez deﬁnituko dira, beraz,
+∆2pn = ∆(pn+1 − pn) = ∆pn+1 − ∆pn = pn+2 − 2pn+1 + pn.
+ˆ
+pn-rako formula ondoko gisaz adieraz daiteke,
+ˆ
+pn = pn −
+(∆pn)2
+∆2pn
+(n ≥ 0).
+Teorema
+Izan bedi {pn}∞
+n=0
+p-ra linealki konbergitzen duen edozein segida non en = pn − p = 0 ∀n ≥ 0.
+Orduan {ˆ
+pn}∞
+n=0 aurreko segida baino azkarrago konbergituko du p-rantz, hau da:
+lim
+n→∞
+ˆ
+pn − p
+pn − p
+= 0
+**frog**
+Aitken-en ∆2 algoritmoa
+Emandako p0 hasierako hurbilketarekin algoritmoak g
+(x) = x ekuazioaren ebazpen hurbildua
+aurkitzen du
+Sarreran: p0 hasierako hurbilketa; T OL toleranzia; N0 iterazio kopuru maximoa.
+Irteeran: p ebazpen hurbildua edo porrot mezua.
+Urrats 1: Hartu i = 1 eta p1 = g(p0) kalkulatu.
+Urrats 2: i ≤ N0 den bitartean 3-5 urratsak jarraitu.
+Urrats 3: Hartu p2 = g(p1) (pi+1−ren kalkulua)
+p = p0 −
+(p1 − p0)2
+(p2 − 2p1 + p0)
+( ˆ
+pi+1−ren kalkulua)
+Urrats 4: Baldin f (p) = 0 edo |p − p0| < T OL bada, orduan IRTEERA 
+(p); GELDITU.
+Urrats 5: Hartu p0 = p1 , p1 = p2; hartu i = i + 1.
+Urrats 6: IRTEERA 
+(N0 ’iterazio egin ondoren, metodoak porrot egin du’); GELDITU.
+16
+
+4.
+STEFFERSEN-EN ALGORITMOA
+Puntu ﬁnkoaren iterazioaz lorturiko segida edo linealki konbergitzen duen edozein segidari Aitken-
+en
+∆2 algoritmoaren antzekoa den Steﬀersen-
+en metodoa aplikatuz konbergentzi karratua lor dezakegu.
+Aitken-en metodoa {pn}∞
+n=0 segidari zuzenean aplikatzen zaio, aldiz, Steﬀersen-enak ˆ
+p0 hurbilketa
+p2 baino hobeagoa dela suposatzen du, beraz:
+Aitken
+Steﬀersen
+p0
+p0
+p1 = g(p0)
+p1 = g(p0)
+p2 = g(p1)
+ˆ
+p0 = ∆2p0
+p2 = g(p1)
+ˆ
+p0 = ∆2p0
+p3 = g(p2)
+ˆ
+p1 = ∆2p1
+p3 = ˆ
+p0
+p4 = g(p3)
+ˆ
+p2 = ∆2p2
+p4 = g(p3)
+p5 = g(p4)
+ˆ
+p3 = ∆2p3
+p5 = g(p4)
+ˆ
+p1 = ∆2p3
+p6 = g(p5)
+ˆ
+p4 = ∆2p4
+p6 = ˆ
+p1
+Steﬀersen-en algoritmoa
+Emandako p0 hasierako hurbilketarekin algoritmoak g
+(x) = x ekuazioaren ebazpen hurbildua
+aurkitzen du
+Sarreran: p0 hasierako hurbilketa; T OL toleranzia; N0 iterazio kopuru maximoa.
+Irteeran: p ebazpen hurbildua edo porrot mezua.
+Urrats 1: Hartu i = 1.
+Urrats 2: i ≤ N0 den bitartean 3-5 urratsak jarraitu.
+Urrats 3: Hartu p1 = g(p0) , p2 = g(p1) (p
+(i−1)
+1
+, p
+(i−1)
+1
+−en kalkulua)
+p = p0 −
+(p1 − p0)2
+(p2 − 2p1 + p0)
+(p
+(i)
+0 −ren kalkulua)
+Urrats 4: Baldin f (p) = 0 edo |p − p0| < T OL bada, orduan IRTEERA 
+(p); GELDITU.
+Urrats 5: Hartu p0 = p; hartu i = i + 1.
+Urrats 6: IRTEERA 
+(N0 ’iterazio egin ondoren, metodoak porrot egin du’); GELDITU.
+Adibidea
+x3 + 4x2 − 10 = 0 ekuazioaren erroa Steﬀersen-en metodoaz bilatu
+x3 + 4x2 − 10 = 0 ⇐⇒ x =
+10
+x + 4
+= g(x)
+k
+p
+(k)
+0
+p
+(k)
+1
+p
+(k)
+2
+0
+1.5
+1.348399725
+1.367376372
+1
+1.36526524
+1.36522553
+1.36523058
+2
+1.36523001
+p
+(2)
+0
+= 1.36523001 eta errorea 10−9 baino txikiagoa da.
+17
+
+Teorema
+Demagun x = g(x) ekuazioaren p erroa non g 
+(x) = 1. Baldin δ > 0 existitzen bada non
+g ∈ C3[p − δ, p + δ] , orduan ∀p0 ∈ [p − δ, p + δ] Steﬀersen-
+en metodoaren konbergentzia karratua da.
+Steﬀersen-en metodoaren eragozpena g 
+(x) = 1 izan behar duela da, hots, bilatutako funtzioaren
+erroa sinplea izan behar du.
+Adibidea
+p0 = 1 hasierako hurbilketarekin puntu ﬁnkoaren iterazioa, Newton-
+en metodoa, Aitken-ena eta
+Steﬀersen-enaren bitartez f 
+(x) = x2 − cos x funtzioaren erroaren hurbilketa bilatu x =
+√
+cos x =
+g(x) funtzioa erabiliz.
+k
+Puntu ﬁnkoa
+Aitken
+Steﬀersen
+Newton
+0
+1.0
+0.820545868
+0.820545868
+1.0
+1
+0.735052587
+0.823387630
+0.824131023
+0.838218410
+2
+0.861275501
+0.823989495
+0.824132312
+0.824241868
+3
+0.807137102
+0.824103654
+0.824132312
+0.824132319
+4
+0.831606374
+0.824126663
+0.824132312
+5
+0.820785901
+0.824131189
+0.824132312
+6
+0.825618791
+0.824132089
+7
+0.823469674
+0.824132268
+8
+0.824427236
+0.824132304
+9
+0.824000957
+0.824132312
+10
+0.824190798
+0.824132312
+25
+0.824132312
+ARIKETAK
+1.
+p0 = π/2 hasierako hurbilketarekin (sin x − x/
+2)2 = 0 ekuazioaren erroa 10−5 doitasunez
+Newton-en metodoaz eta Newton-en formularen orokorpenaz hurbildu.
+2. p0 = 0 hasierako hurbilketarekin ondorengo bi ekuazioen zeroak hurbildu Newton-
+en metodoaz,
+|pn+1 − pn| < 0.0002 izan arte:
+f (x) = e6x + 3(log 2)2e2x − (log 8)2e4x − (log 2)3 = 0
+f (x) = e6x + 1.441e2x − 2.79e4x − 0.333 = 0
+3. [0, 1] tartean x − 2−x = 0 ekuazioaren erroa 10−4 doitasunez Steﬀersen-
+en metodoaz aurkitu.
+4.
+Ondoko ekuazioen soluzioak Steﬀersen-en metodoaz 10−5 doitasunez aurkitu:
+a) x =
+2 − ex + x2
+3
+;
+b) 3x2 − ex = 0
+5.
+pn = 1/n2 adierazpenaz eraikitako {pn}∞
+n=0
+segida linealki konbergenteari Aitken-en ∆2
+metodoa aplikatu |ˆ
+pn − p| < 10−2 izan arte.
+18
+
+KAPITULU VI.
+INTERPOLAZIO METODOAK
+1.
+LEKUGUNE FALTSUAREN INTERPOLAZIO METODOA
+Aztertu behar ditugun metodoak edozein f 
+(x) funtzio errealaren erroak bilatzeko balio dute eta
+interpolazio metodo hauek ez dute deribatuaren balioaztapenik behar.
+Interpolazio metodorik ezagunena ”regula falsi” edo ”lekugune faltsuaren metodoa” izenekoa da.
+Bisekzio metodoaren moduan a0, b0 zenbakiak hautatzen dira non f(b0) · f
+(a0) < 0 baita, beraz
+[a0, b0] tartean funtzioak gutxienez erro bat du eta bere kurba (b0, f
+(b0)) eta (a0, f(a0)) puntuen arteko
+zuzenaren ordez ordeztuko dugu. X ardatza eta zuzen horrek elkar ebakitzen duteneko p1 puntugunea
+erroaren hurbilketatzat hartuko dugu. Baldin f (p1) eta f
+(a0) balioek zeinu berbera badaukate, orduan
+a1 = p1 eta b1 = b0 izendatuko ditugu eta prozesua 
+[a1, b1] tartean jarraituko dugu; bestela a1 = a0 eta
+b1 = p1 izendatuko ditugu. Prozesu hau emandako tolerantzia beheragotu arte errepikatuko dugu.
+Analitikoki ondoko gisaz adieraz daiteke:
+y − f (a)
+x − a
+=
+f (b) − f (a)
+b − a
+,
+(y = 0) =⇒ p1 = x = a − (b − a)
+f (a)
+f (b) − f (a)
+Baldin f -ren zeinua berdina bada [ai, bi]-
+n, orduan tartearen mutur bat beti ﬁnkoa geratuko da.
+Adibidez, baldin a muturra ﬁnkoa badago, hurrenez hurren: pn+1 = pn −(pn −a)·f
+(pn)/(f(pn)−f(a)).
+Bestela b muturra ﬁnkoa egongo da eta pn+1 = pn − (b − pn) · f(pn)/(f(b) − f
+(pn)).
+f (a) > 0
+f (a) < 0
+19
+
+Lehenengoan a ﬁnkoa dago eta a < p < ... < pn+1 < pn < ... < p0 segida monotono beherakorra
+eta bornatua da. Bigarrenean p0 < ... < pn < pn+1 < ... < p < b segida monotono gorakorra da.
+Metodoaren portaeraren arabera ondoko ondorioa atera daiteke, zeinu bereko f eta f
+dituen
+muturra ﬁnkoa geratuko da eta pn gaiak beste muturraren aldetik hurbilduko dira.
+Metodoaren konbergentzia frogatzeko bornatua eta monotonoa den {pn}∞
+n=1
+segidaren limitea
+kalkula dezakegu:
+p = p −
+f (p)
+f (p) − f (a)
+(p − a) =⇒ f (p) = 0
+[a,b] tartean funtzioaren erro bakarra p da eta halabeharrez p = p.
+XIV kapituluan ikusitako |pn − p| ≤ |f(pn)|/
+m1 bornapenaz gain ondoko hau froga dezakegu.
+Teorema
+Izan bedi f ∈ C1[a, b] , non [a, b] tartean f (a) · f (b) < 0, f (x)-
+k ez duen bere zeinurik aldatzen
+eta 0 < m1 ≤ |f 
+(x)| ≤ M1 < +∞ den, orduan ondoko errorearen bornapena beteko da:
+|p − pn| ≤
+M1 − m1
+m1
+|pn − pn−1|.
+**frog**
+2.
+ALGORITMOA ETA ADIBIDEAK
+Lekugune faltsuaren metodoaren algoritmoa
+Biz f ∈ C[a, b] eta f(a)f(b) < 0, algoritmoak f
+(x) = 0 ekuazioaren ebazpena hurbiltzen du.
+Sarreran: a eta b muturrak; T OL tolerantzia; N0 iterazio kopuru maximoa.
+Irteeran: p ebazpen hurbildua edo porrot mezua.
+Urrats 1: Hartu i = 2, eta i ≤ N0 den bitartean 2-4 urratsak jarraitu
+Urrats 2: Hartu
+p = b −
+f (b)
+f (b) − f (a)
+(b − a)
+Urrats 3: Baldin f (a) · f 
+(p) > 0, orduan a = p, bestela b = p; hartu i = i + 1.
+Urrats 4: Baldin f (p) = 0 edo (b − a) < T OL, orduan IRTEERA (p); GELDITU.
+Urrats 5: IRTEERA 
+(N0 ’iterazio egin ondoren, metodoak porrot egin du’); GELDITU.
+Adibidea
+f (x) = x3 + 4x2 − 10 = 0 ekuazioaren erro positiboa 0.0002 doitasunez aurkitu.
+Erroaren banaketa: f (1.3) = −1.043 < 0 , f (1.4) = 0.584 > 0 eta f (1.4) · f 
+(1.4) > 0 da:
+p0 = 1.3
+f (p0) = −1.043
+p1 = 1.36410716
+f (p1) = −0.0185573934
+p2 = 1.364105716
+f (p2) = −0.00031260885
+Bigarren iterazioa bete ondoren m1 = minx∈[p
+2,b] |f (x)| = f (p2) = 16.513 eta M1 = maxx∈[p2,b] |f (x)| =
+f (b) = 17.08. Orduan ondoko bi errore bornapenak ondoriozta ditzakegu,
+0 < |p − p2| <
+|f (p2)|
+m1
+≈ 0.189 ∗ 10−4 < 2.0 ∗ 10−4
+0 < |p − p2| <
+M1 − m1
+m1
+|p2 − p1| ≈ 0.379 ∗ 10−3
+Bi emaitz horietatik lehenengoak nahi genuen tolerantzia beheragotu du.
+20
+
+2.
+MULLERREN INTERPOLAZIO METODOA
+M¨
+ullerrek 1956 urtean aurkeztutako teknika honek edozein funtzioaren erroak bilatzeko balio du.
+Baldin ebakitzailearen metodoak x0, x1 hasierako bi hurbilketekin (x0, f
+(x0)) eta (x1, f(x1)) puntue-
+tatik pasatzen den zuzenaren erroa bilatzen badu, M¨
+ullerr-enak x0, x1 eta x2 hasierako hiru hur-
+bilketekin (x0, f(x0)), (x1, f(x1)) eta (x2, f
+(x2)) puntuetatik pasatzen den polinomio karratuaren
+erroa bilatuko du. Demagun P (x) = a(x − x2)2 + b
+(x − x2) + d polinomio karratua. Ikusitako baldintzak
+betetzeko polinomioaren koeﬁzienteak balio bereziak izan beharko dituzte.
+f (x0) = P (x0) = a(x0 − x2)2 + b(x0 − x2) + d
+f (x1) = P (x1) = a(x1 − x2)2 + b(x1 − x2) + d
+f (x2) = P (x2) = d
+
+
+
+=⇒
+
+
+
+
+
+d = f (x2)
+b =
+(x0−x2)
+2[f(x1)−f(x2)]−(x1−x2)2[f(x0)−f(x2)]
+(x0−x2)(x1−x2)(x0−x1)
+a =
+(x1−x2)[f(x0)−f(x2)]−(x0−x2)[f(x1)−f(x2)]
+(x0−x2)(x1−x2)(x0−x1)
+Biribiltze errorengatik P (x) hartu beharrean P (x)/
+(x − x2)2 erabiliko dugu. Beronen erroak
+x3 − x2 =
+−2d
+b+
+√
+b2 − 4ad
+dira. ± zeinuei dagozkien bi aukeretatik b-
+ren zeinuduna hautatuko dugu, beraz zatikiaren izendatza-
+ilearen balio absoluturik handiena izango dugu eta x2-
+tik gertuen dagoen erroa hautatuko dugu.
+x3 = x2 −
+2d
+b + zeinu(b)
+√
+b2 − 4ad
+.
+Era berean x4 lortzeko aurreko prozesua x1, x2 eta x3 hurbilketekin errepikatuko dugu.
+M¨
+ullerren algoritmoa
+Emandako x0 , x1 , x2 hasierako hurbilketetarako algoritmoak f
+(x) = 0 ekuazioaren ebazpen
+hurbildua bilatzen du
+Sarreran:
+ x0 , x1 , x2 hasierako hurbilketak; ”T OL” tolerantzia; ”N0” iterazio kopuru maximoa.
+Irteeran: ”p” ebazpen hurbildua edo porrot mezua.
+Urrats 1: Hartu:
+h1 = x1 − x2, h2 = x0 − x2, δ1 =
+f (x1) − f(x2)
+h1
+, δ2 =
+f (x0) − f(x2)
+h2
+, a =
+δ2 − δ1
+h2 − h1
+.
+Urrats 2: 2 ≤ i ≤ N0 den bitartean 3-7 urratsak jarraitu.
+Urrats 3: Hartu b = [f (x0) − f(x1)]/(x0 − x1) − (h1 + h2)a , D =
+b2 − 4f (x2)a .
+Urrats 4:
+ Baldin |b − D| < |b + D| bada orduan hartu E = b + D bestela hartu E = b − D.
+Urrats 5: Hartu h = −2f (x2)/E ,
+p = x2 + h .
+Urrats 6: Baldin |h| < T OL bada, orduan IRTEERA (p); GELDITU.
+Urrats 7: Hartu
+x0 = x1, x1 = x2, x2 = p, h1 = x1 − x2, h2 = x0 − x2
+δ1 =
+f (x1) − f(x2)
+h1
+, δ2 =
+f (x0) − f(x2)
+h2
+, a =
+δ2 − δ1
+h2 − h1
+, i = i + 1.
+Urrats 8: IRTEERA 
+(N0 ’iterazio egin ondoren, metodoak porrot egin du’); GELDITU.
+21
+
+Adibidea
+P 
+(x) = 16x4 − 40x3 + 5x2 + 20x + 6 polinomioaren erroak 1.2416774, 1.9704461 eta −0.356062 ±
+0.162758i dira. Ikus dezagun M¨
+uller-en algoritmoaren bilakaera hasierako estimazio ezberdinetarako.
+x0 = 0.5 ,
+x1 = −0.5 ,
+x2 = 0.0
+x3 = −0.555556 + 0.598352i
+f (x3) = −29.4007 − 3.89872i
+x4 = −0.435450 + 0.102101i
+f (x4) = 1.33223 − 1.19309i
+x5 = −0.390631 + 0.141852i
+f (x5) = 0.375057 − 0.670164i
+x6 = −0.357699 + 0.169926i
+f (x6) = −0.146746 − 0.00744629i
+x7 = −0.356051 + 0.162856i
+f (x7) = −0.183868 ∗ 10−2 + 0.539780 ∗ 10−3i
+x8 = −0.356062 + 0.162758i
+f (x8) = 0.286102 ∗ 10−2 + 0.953674 ∗ 10−6i
+x0 = 0.5 ,
+x1 = 1.0 ,
+x2 = 1.5
+x3 = 1.287855
+f (x3) = −1.376275
+x4 = 1.237459
+f (x4) = 1.269422 ∗ 10−1
+x5 = 1.241604
+f (x5) = 2.194520 ∗ 10−3
+x6 = 1.241677
+f (x6) = 1.321123 ∗ 10−6
+x7 = 1.241677
+f (x7) = 1.321123 ∗ 10−6
+x0 = 2.5 ,
+x1 = 2.0 ,
+x2 = 2.25
+x3 = 1.960592
+f (x3) = −6.113129 ∗ 10−1
+x4 = 1.970564
+f (x4) = 7.456961 ∗ 10−3
+x5 = 1.970447
+f (x5) = 3.133506 ∗ 10−5
+x6 = 1.970447
+f (x6) = 2.720395 ∗ 10−6
+Baldin hasierako hurbilketak onak badira M¨
+ullerren metodoak polinomioaren erroak hurbilduko ditu.
+Baldin Newtonen metodoaren konbergentziaren ordena α = 2 bada M¨
+ullerrena α = 1.84 da eta regula
+falsi-rena α = 1.62 da.
+ARIKETAK
+1.
+Emandako tartetan ekuazioen erroak hurbildu regula falsiren metodoaz eta 10−4 doitasunez:
+a) x3 − 2x2 − 5 = 0 , [1, 4] ;
+b) x − 0.8 − 0.2 sin(x) = 0 , [0, Π/2]
+2.
+Regula falsiren metodoaz 10−5 doitasunez ekuazioen erroak hurbildu.
+a) x =
+2 − ex − x2
+3
+;
+b) ex + 2−x + 2 cos(x) − 6 = 0 ;
+c) x2 + 10 cos(x) = 0
+3.
+M¨
+ullerren metodoaren bidez 10−4 doitasunez ondoko polinomioen erro errealak aurkitu:
+a) P (x) = x3 − 2x2 − 5 ;
+b) P (x) = x3 + 3x2 − 1
+d) P (x) = x3 − x − 1 ;
+e) P (x) = x4 + 2x2 − x − 3
+4.
+Regula Falsiren metodoaren bidez ondoko ekuazioen erroak aurkitu 10−5 doitasunez:
+a) x3 − x − 1 = 0
+[1, 2] ;
+b) x =
+2 − ex + x2
+3
+d) 3x2 − ex = 0 ;
+e) ex + 2−x + 2 cos x − 6 = 0
+22
+
+KAPITULU VII.
+POLINOMIO ERREALEEN ZEROAK
+1.
+HORNERREN METODOA
+P 
+(x) = anxn + an−1xn−1 + ... + a0 moduko funtzioari n. mailako polinomioa esaten zaio.
+Algebraren funtsezko teorema
+Baldin P (x) polinomioa n > 0 mailakoa bada, gutxienez erro bat izango du 
+(erreala edo konplexua).
+Korolarioa
+Baldin P 
+(x) = anxn +an−1xn−1 +...+a0 polinomioa n ≥ 1 mailakoa bada, orduan x1, ..., xk erro
+eta m1, ..., mk ∈ IN berretzaile bakarrak existitzen dira zein P (x) = an
+(x−x1)m1 · · · (x−xk)mk betetzen
+duten. Gainera
+k
+i=1 mi = n.
+Hots, polinomioak bere erroen menpeko deskonposaketa bakar bat du eta baldin erro bakoitzaren
+anizkoiztasuna kontutan hartzen bada orduan erroen kopurua eta polinomioaren maila berdinak dira.
+Hornerren metodoa polinomioei Newton-en metodoa aplikatzean datza. Newton-
+en metodoaren
+bitartez funtzioa eta bere deribatuaren zenbait balio kalkulatu behar dira. Baldin funtzioa n. mailako
+polinomioa bada bere deribatua n−1. mailako polinomioa izango da eta biak konputazionalki zehatz
+mehatz kalkula daitezke. n. mailako polinomioaren balioztapenak n batuketa eta n biderkaketa behar
+ditu.
+Teorema (Hornerren metodoa)
+Izan bedi P (x) = anxn + an−1xn−1 + ... + a0 polinomioa.
+Baldin zn = an eta zk = ak + zk+1x0 ∀k = n − 1, ...1, 0 bada, orduan z0 = P 
+(x0) . Gainera
+baldin Q(x) = znxn−1 + zn−1xn−2 + ... + z1 bada orduan P (x) = (x − x0)Q
+(x) + z0 .
+**frog**
+Emaitza honek P (x) polinomioaren deribatua kalkulatzeko metodoa ematen digu.
+P (x) = (x − x0)Q(x) + z0 =⇒ P (x) = Q(x) + (x − x0)Q (x) =⇒ P (x0) = Q(x0)
+Adibidea
+Izan bedi
+P (x) = 2x4 − 3x2 + 3x − 4
+polinomioa. Hornerren metodoaren bitartez P (−2) eta
+P (−2) kalkulatu.
+z4 = 2, z3 = 2(−2) + 0 = −4, z2 = (−4)(−2) − 3 = 5, z1 = 5(−2) + 3 = −7,
+z0 = (−7)(−2) − 4 = 10 = P (−2)
+P (x) = (x − x0)Q(x) + z0
+non
+(x − x0) = x + 2 , Q(x) = 2x3 − 4x2 + 5x − 7 , z0 = 10
+diren
+P (−2) = Q(−2) denez Q(x) polinomioarekin prozesua errepikatuko dugu:
+¯
+z3 = 2, ¯z2 = 2(−2) − 4 = −8, ¯z1 = (−8)(−2) + 5 = 21
+¯
+z0 = (21)(−2) − 7 = −49 = Q(−2) = P (−2)
+Kalkuluak eskuz egiterakoan taula batean sartuko ditugu:
+x0 = −2
+a4 = 2
+a3 = 0
+a2 = −3
+a1 = 3
+a0 = −4
+z4x0 = −4
+z3x0 = 8
+z2x0 = −10 z1x0 = 14
+z4 = 2
+z3 = −4
+z2 = 5
+z1 = −7
+z0 = 10
+23
+
+Hornerren algoritmoa
+Algoritmoak
+P (x) = anxn + an−1xn−1 + ... + a0
+polinomioa eta bere deribatuaren balioa
+x0 puntuan kalkulatzen ditu
+Sarreran: n polinomioaren maila; a0, ...an koeﬁzienteak; x0 puntua.
+Irteeran: y = P (x0) eta z = P (x0).
+Urrats 1: Hartu y = an eta z = an) .
+Urrats 2: Hartu
+y = x0y + aj
+z = x0z + y
+j = n − 1, n − 2, ..., 1.
+Urrats 3: Hartu y = x0y + a0.
+Urrats 4: IRTEERA (y, z); GELDITU.
+Adibidea
+x0 = −2 hasierako hurbilketarekin Newton-en metodoaz P 
+(x) = 2x4 −3x2 +3x−4 polinomioaren
+erro bat bilatu. Eragiketak lau digito esangarriekin burutu.
+Lehenengo iterazioa
+x0 = −2
+2
+0
+−3
+3
+−4
+−4
+8
+−10
+14
+2
+−4
+5
+−7
+10 = P (−2)
+Halabeharrez
+Q(x) = 2x3 − 4x2 + 5x − 7 .
+x0 = −2
+2
+−4
+5
+−7
+−4
+16
+−42
+2
+−8
+21
+−49 = Q(−2) = P (−2)
+x1 = x0 −
+P (x0)
+P (x0)
+= −2 −
+10
+−49
+≈ −1.796
+Bigarren iterazioa
+x1 = −1.796
+2
+0
+−3
+3
+−4
+−3.592
+6.451
+−6.198
+5.744
+2
+−3.592
+3.451
+−3.198
+1.744 = P (x1)
+−3.592
+12.90
+−29.36
+2
+−7.184
+16.35
+−32.56
+= Q(x1) = P (x1)
+x2 = x1 −
+P (x1)
+P (x1)
+= −1.796 −
+1.744
+−32.56
+≈ −1.742
+Baldin polinomioak soilik erro konplexuak baditu, hasierako hurbilketa errealarekin abiatuz geroz
+metodo honek hurbilketa errealak bilatuko ditu eta jakina, ezin izango du erro horietara konbergitu.
+Eragozpen hau gainditzeko aritmetika konplexua erabil daiteke.
+24
+
+2.
+DEFLAZIO TEKNIKA
+Baldin xN Newton-en metodoaren bidez kalkulatutako P (x)-
+en erro hurbildua bada, orduan:
+P (x) = (x − xN )Q(x) + z0 = (x − xN )Q(x) + P (xN ) ≈ (x − xN )Q(x)
+Har dezagun ˆ
+x1 = xN erro hurbildutzat eta Q1
+(x) beroni dagokion faktore hurbidutzat, orduan:
+P (x) ≈ (x − ˆ
+x1)Q1(x)
+Era berean Q1(x) polinomioari Newton-en metodoa aplika diezaiokegu. Baldin P 
+(x)-k n erro erreal
+baditu, metodo errepikakor hau 
+(n − 2) bider aplika dezakegu hain zuzen. Azkenean geratzen den 2.
+mailako Qn−2 polinomioaren bi erroak zuzenean kalkula ditzakegu. Teknika beroni ”deﬂazioa” deritzo:
+P (x) ≈ (x − ˆ
+x1)...(x − ˆxk)Qk(x)
+Teknika honen eragozpen handiena errorearen hazkunntza da. Lehenbbizian eragiketak P 
+(x) poli-
+nomioaren gainean egingo ditugu baina hurrengoetan Qk
+(x) polinomio laburtuen gainean egingo dira,
+beraz, geroz eta kalkulu okerragoak aterako dira. Noski
+ˆ
+xk+1 Qk(x) polinomioaren erro hurbildua
+da eta balio hori ez du P 
+(x) polinomio jatorriaren hain erro hurbildu ona izan behar. Eragozpen hau
+gainditzeko ˆ
+x1, ..., ˆ
+xk balioak atera ondoren berauek hasierako estimaziotzat hartuko ditugu Newton-
+en
+metodoa P (x)-ren gainean aplikatzeko. Orain benetan P (x)-
+ren erroen hurbilketa onak lortuko ditugu.
+Errorea txikitzeko p erroa hurbildu ondoren T (x) = P (x)/(x − p) funtzioa 
+(Wilkinson) erabil
+dezakegu. Orain Newton-en metodoa T (x) funtzioari aplikatzen zaio:
+xn+1 = xn −
+T (xn)
+T (xn)
+= xn −
+P (xn)
+P (xn)
+−
+1
+xn − p
+−1
+p1, ...ps erroak aurkitu ondoren ondoko formula orokorra erabili ohi da:
+xn+1 = xn −
+P (xn)
+P (xn)
+−
+s
+k=1
+1
+xn − p
+−1
+Beraz polinomio laburtuarekin lan egin beharrean, jatorrizkoarekin egiten da.
+Teorema
+Izan bedi koeﬁziente errealekiko n ≥ 2 mailako P (x) polinomioa. Baldin P 
+(x) polinomioaren
+ξi erro guztiak errealak badira eta ξn ≤ ... ≤ ξ1 badira, orduan, edozein p0 > ξ1 hasierako hurbilke-
+tarako Newton-en metodoak ξ1-
+ra konbergitzen duen segida beherakorra eraikitzen du.
+**frog**
+ARIKETAK
+1.
+Ondoko polinomioen erroak deﬂazio-
+metodoaz hurbildu |pn − pn−1| < 10−4 bete arte .
+a) P (x) = x3 − 2x2 − 5 ;
+b) P (x) = x4 + 2x2 − x − 3
+2.
+Ondoko polinomioen erroak deﬂazio-
+metodoaren bidez hurbildu |pn − pn−1| < 10−5 bete arte.
+Lehenengoz erro errealak aurkitu, gero polinomioak laburtu eta azkenik erro konplexuak kalkulatu.
+a) P (x) = x4 + 5x3 − 9x2 − 85x − 136 ;
+b) P (x) = x4 + x3 + 3x2 + 2x − 2
+c) P (x) = 16x4 + 88x3 + 159x2 + 76x − 240 ;
+d) P (x) = x4 − 2x3 − 4x2 + 4x + 4
+25

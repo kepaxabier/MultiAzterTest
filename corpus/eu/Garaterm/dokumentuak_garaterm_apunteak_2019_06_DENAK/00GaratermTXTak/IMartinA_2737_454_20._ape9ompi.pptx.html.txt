@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<number>
+ 
+         MIMD motako sistema paraleloen arkitektura bietako bat izan daiteke:
+memoria partekatukoa edo memoria banatukoa.
+ 
+         Memoria banatuko (MPP, cluster-ak) sistemen programazioa, ordea,
+mezu-ematearen bidez egiten da, MPI erabiliz.
+ 
+ 
+OpenMP
+laburpena
+ 
+        OpenMP da gaurko estandarra memoria partekatuko aplikazio paraleloak
+programatzeko.
+ 
+         OpenMP-k erabiltzen duen programazio-eredua Fork / Join da.
+        Une batean, hari nagusiak P hari sortzen ditu, paraleloan exekuta
+daitezen.
+ 
+         Hari guztiek kode-kopia berdina exekutatuko dute (SPMD). Hari
+bakoitzak identifikadore (tid) bat darama.
+ 
+        Laburbilduz, programa serie batetik abiatuta, OpenMP programa paralelo
+bat lortzeko, honako hauek gehitu behar dira:
+ 
+0        Prozesu paraleloak (hariak).
+1        ATAL PARALELOAK. Aldagaien izaera.
+2        LAN-BANAKETA.
+                Datuak: for begiztak. Iterazioen banaketa.
+                Funtzioak: sections / single / ...
+3        SINKRONIZAZIOA.
+                Sekzio kritikoak, sarrailak, hesiak.
+ 
+0         Hari kopurua
+ 
+1        ATAL PARALELOAK (parallel regions)
+          # pragma omp parallel [aldag,...]
+                {  kodea        }
+        Hari bakoitzean errepikatu, eta paraleloan exekutatuko den kode zatia.
+        Atal paralelo baten aldagaiak partekatuak (shared) edo pribatuak
+(private) izan daitezke.
+ 
+> Adibide sinple bat:
+ 
+2        LAN-BANAKETA: begiztak
+        Begiztak dira paralelismoa modu “sinplean” ustiatzeko gunerik nagusiak
+(ale xeheko datu-paralelismoa – domain decomposition).
+        Jakina, ez da nahikoa errepikapen hutsa.
+       
+ 
+Honako hau egin beharko genuke:
+ 
+for (i=0; i<N; i++)
+ for (j=0; j<M; j++)
+ {       
+  X = B[i][j] * B[i][j];
+  A[i][j] = A[i][j] + X;
+  C[i][j] = X * 2 + 1;
+ }
+ 
+for (i=0; i<N; i++)
+ for (j=0; j<M; j++)
+ {       
+  X = B[i][j] * B[i][j];
+  A[i][j] = A[i][j] + X;
+  C[i][j] = X * 2 + 1;
+ }
+ 
+         Nola banatzen dira begizta baten iterazioak harien artean?
+        Begiztaren bukaeran hesi bat dagoenez, eraginkortasun-galera nabaria
+izango da harien lan-karga orekatuta ez badago.
+ 
+> Adibide bat
+ 
+3        SINKRONIZAZIOA
+        Harien arteko datu-dependentziak desagerrarazi ezin badira, haien
+exekuzioa sinkronizatu egin behar da.
+        OpenMP-k sinkronizazio-funtzio ohikoenak eskaintzen ditu: elkarrekiko
+esklusioa eta gertaeren bidezko sinkronizazioa.
+ 
+a.        Sekzio kritikoak:        pragma omp critical
+ 
+a.        Sekzio kritikoak:        pragma omp atomic
+ 
+b.        Sarrailak
+ 
+> Adibide bat
+ 
+ 
+ 
+ 
+MPI
+laburpena
+ 
+         Sinkronoa:
+                MPI_Ssend (&mes,count,datatype,dest,tag,comm);
+        Ez du kontrola itzultzen harik eta hartzaileak mezua hartzen duen arte.
+ 
+         Hainbat aplikaziotan, komunikazioa prozesu askoren artean egin behar
+da, batera.
+        Komunikazioa kolektiboa da komunikatzailearen prozesu guztiek parte
+hartzen badute.
+ 
+        Komunikazio kolektiboko funtzioak blokeakorrak dira.
+        Komunikatzailearen prozesu guztiek exekutatu behar dute funtzioa.
+ 
+1a        Broadcast: datuak prozesadore batetik (root) gainerakoetara
+bidaltzeko.
+ 
+1b        Scatter: prozesadore baten datuak guztien artean banatzeko
+ 
+3.        Sinkronizazio-hesiak
+        Komunikatzailearen prozesu guztien arteko sinkronizazio globala.
+                        MPI_Barrier (comm);
+        Funtzioa blokeatu egiten da, harik eta prozesu guztiak exekutatu arte.
+ 
+> Adibidea:        V(i) = V(i) *  V(j)
+        batura = 0;       
+        for (j=0; j<N; i++) batura = batura + V[j];
+        for (i=0; i<N; i++) V[i] = V[i] * batura;
+ 
+        Banaketa askekoak: MPICH / LAM
+         Oro har, cluster batean MPI programa bat exekutatu baino lehen, zera
+behar da:
+-         sistema paraleloa osatzen duten makinen zerrenda fitxategi batean
+izatea.
+-         makina bakoitzean, komunikazioetarako erabili behar den daemon bat
+exekutatzea.
+-         sortu nahi den prozesu kopurua adieraztea:
+                mpiexec -n 8 pi
+ 
+LIBURUAK
+        •         P. S. Pacheco: Parallel Programming with MPI.
+                Morgan Kaufmann, 1997.
+        •         W. Groop et al.: Using MPI. Portable Parallel        
+Programming with the Message Passing Interface (2. ed.).
+                MIT Press, 1999.
+        •         M. Snir et al.: MPI - The complete reference (vol. 1 & 2).
+                The MIT Press, 1998.
+WEB       
+        •         www-unix.mcs.anl.gov/mpi/         (dena)
+ 

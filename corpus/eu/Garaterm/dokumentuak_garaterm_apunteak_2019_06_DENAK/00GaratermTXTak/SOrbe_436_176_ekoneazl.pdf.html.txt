@@ -1,0 +1,4896 @@
+
+
+
+EAZL Ekonometria
+J.M. Arteche, I. D´ıaz Emparanza, M.C. Iglesias, J.I. Modro˜
+no,
+M.P. Moral, I.Murillo, A. Oguiza, S. Orbe, J. Virto, M.Zubia1
+Ekonometria eta Estatistika Saila
+2011-2012 ikasturtea
+2012ko otsaila
+1Egileek, eskerrak eman nahi dute Euskal Herriko Unibertsitateko Ekonometria eta Estatis-
+tika Saileko kideek eskeinitako laguntzagatik. Esker berezi bat Petr Mariel irakasleari, zeinek
+bilduma honen zati batean parte hartu du.
+
+Debekaturik dago testu hau osorik edo zatika kopiatzea, gordetzea edo transmititzea,
+bai bide elektronikoz, mekanikoz, fotokopiaz, erregistroz edo beste edozein eratara, baldin
+eta jabeek ez badute horretarako baimena aurretik eta idatziz ematen.
+c UPV/EHU 2006
+Egileak:
+Josu Arteche
+I. D´ıaz Emparanza
+M. Carmen Iglesias
+Juan I. Modro˜
+no
+M. Paz Moral
+I˜
+naki Murillo
+Ainhoa Oguiza
+Susan Orbe
+Jorge Virto
+Marian Zubia
+
+Gaien Aurkibidea
+0 Aurretikoak: Oinarrizko kontzeptuen berrikuspena.
+1
+0.1
+Oinarrizko ELOE. KTA estimatzailearen propietateak ELOEn. . . . . . . .
+1
+0.1.1
+Eredua eta oinarrizko hipotesiak . . . . . . . . . . . . . . . . . . . .
+1
+0.1.2
+KTAko estimatzailearen propietateak lagin txikietan . . . . . . . .
+1
+0.2
+Estimatzaile baten propietate asintotikoak . . . . . . . . . . . . . . . . . .
+2
+0.2.1
+Tinkotasuna . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2
+0.2.2
+Banaketazko konbergentzia . . . . . . . . . . . . . . . . . . . . . . .
+4
+0.2.3
+Eﬁzientzia Asintotikoa . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+0.3
+KTA estimatzailearen propietate asintotikoak ELOEn . . . . . . . . . . . .
+5
+0.3.1
+KTA estimatzaileen tinkotasuna ELOEn . . . . . . . . . . . . . . .
+5
+0.3.2
+σ2
+u-ren estimatzailearen tinkotasuna
+. . . . . . . . . . . . . . . . . .
+5
+0.3.3
+KTA estimatzailearen banaketazko konbergentzia . . . . . . . . . .
+6
+0.3.4
+KTA estimatzailearen eﬁzientzia asintotikoa . . . . . . . . . . . . .
+6
+0.3.5
+Inferentzia ELOEn . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7
+1 Erregresio Lineal Ereduaren Orokorpena
+9
+1.1
+Perturbazio ez esferikodun erregresio eredua . . . . . . . . . . . . . . . . .
+9
+1.2
+KTA estimatzaileen propietateak . . . . . . . . . . . . . . . . . . . . . . . 10
+1.3
+Karratu Txikienen Zabalduen edo Orokortuen metodoa (KTZ). . . . . . . 12
+1.3.1
+KTZ estimatzaileen propietateak . . . . . . . . . . . . . . . . . . . 13
+1.3.2
+σ2-ren estimatzailea . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+1.4
+KTZ Eginkorren metodoa (KTZE) . . . . . . . . . . . . . . . . . . . . . . 14
+1.5
+Murrizketa linealen kontrasteak . . . . . . . . . . . . . . . . . . . . . . . . 15
+1.5.1
+Σ = σ2Ω ezaguna . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+1.5.2
+Ω ezaguna eta σ2 ezezaguna . . . . . . . . . . . . . . . . . . . . . . 16
+1.5.3
+Σ ezezaguna baina estimagarria . . . . . . . . . . . . . . . . . . . . 16
+1.6
+Ekuazio Sistemak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+1.6.1
+1 kasua: Bariantza berdineko ekuazioak. Egitura aldaketa. . . . . . 19
+1.6.2
+2. kasua: Erlazionatu gabeko ekuazioak. . . . . . . . . . . . . . . . 20
+1.6.3
+3. kasua: Erlazionatutako ekuazioak. . . . . . . . . . . . . . . . . . 22
+2 Heterozedastizitatea.
+25
+2.1
+Deﬁnizioa eta eragileak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+2.2
+Heterozedastizitatearen detektapena
+. . . . . . . . . . . . . . . . . . . . . 29
+2.2.1
+Metodo graﬁkoak . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29
+i
+
+ii
+GAIEN AURKIBIDEA
+2.2.2
+Goldfeld eta Quandt-en kontrastea . . . . . . . . . . . . . . . . . . 30
+2.2.3
+Breusch eta Pagan-en kontrastea . . . . . . . . . . . . . . . . . . . 31
+2.3
+KTZ: Karratu Txikienen Ponderatuak . . . . . . . . . . . . . . . . . . . . 32
+2.4
+KTZE:
+ heterozedastizitatearen zehazpena . . . . . . . . . . . . . . . . . . . 35
+2.5
+Whiten Bar( ˆ
+βKTA)ko estimatzailea . . . . . . . . . . . . . . . . . . . . . . 36
+2.6
+Murrizketa linealen kontrasteak . . . . . . . . . . . . . . . . . . . . . . . . 37
+2.6.1
+Kontrasteak:
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+3 Autokoerlazioa.
+39
+3.1
+Eragileak eta zehazpena . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39
+3.1.1
+Autokoerlaziodun egoerak . . . . . . . . . . . . . . . . . . . . . . . 40
+3.1.2
+Zehazpena . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+3.2
+Autokoerlazioaren detektapena . . . . . . . . . . . . . . . . . . . . . . . . 46
+3.2.1
+Metodo graﬁkoak . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+3.2.2
+Durbin-Watson-en kontrastea . . . . . . . . . . . . . . . . . . . . . 47
+3.2.3
+Breusch eta Godfrey-ren kontrastea . . . . . . . . . . . . . . . . . . 50
+3.3
+Autokoerlaziodun ereduen estimazioa: KTZ/KTO . . . . . . . . . . . . . . 51
+3.3.1
+AR(1)-dun perturbazioak . . . . . . . . . . . . . . . . . . . . . . . 51
+3.3.2
+M A(1)-dun perturbazioak . . . . . . . . . . . . . . . . . . . . . . . 53
+3.4
+KTZE: AR
+(1) prozedura . . . . . . . . . . . . . . . . . . . . . . . . . . . . 54
+3.5
+Kontrasteak eta Aurresanak . . . . . . . . . . . . . . . . . . . . . . . . . . 55
+3.5.1
+Murrizketa linealen kontrasteal . . . . . . . . . . . . . . . . . . . . 55
+4 Erregresore estokastikoak.
+57
+4.1
+Sarrera . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+4.2
+KTAko estimatzailearen propietateak . . . . . . . . . . . . . . . . . . . . . 58
+4.2.1
+Erregresore eta perturbazioen arteko independentzia
+. . . . . . . . 58
+4.2.2
+X eta u-ren arteko denbora bereko koerlazio eza . . . . . . . . . . 61
+4.2.3
+X eta u arteko denbora bereko koerlazioa . . . . . . . . . . . . . . 61
+4.3
+Ordezko aldagaien metodoa (OA) . . . . . . . . . . . . . . . . . . . . . . . 62
+4.4
+Hausmanen kontrastea . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 65
+4.5
+Neurketa erroreak aldagaietan . . . . . . . . . . . . . . . . . . . . . . . . . 67
+4.5.1
+Neurketa erroreak aldagai endogenoan . . . . . . . . . . . . . . . . 67
+4.5.2
+Neurketa erroreak aldagai exogenoan . . . . . . . . . . . . . . . . . 68
+4.5.3
+Neurketa erroreak aldagai endogeno eta exogenoan . . . . . . . . . 68
+5 Eredu dinamikoak.
+69
+5.1
+Sarrera . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+5.2
+Aldagai exogenoen atzerapenadun eredua . . . . . . . . . . . . . . . . . . . 69
+5.3
+Aldagai edogenoaren atzerapenadun eredua . . . . . . . . . . . . . . . . . . 70
+5.3.1
+Autokoerlatu gabeko perturbazioak . . . . . . . . . . . . . . . . . . 70
+5.3.2
+Koerlaturiko perturbazioak . . . . . . . . . . . . . . . . . . . . . . . 70
+
+0. Kapitulua
+Aurretikoak: Oinarrizko kontzeptuen
+berrikuspena
+0.1
+Oinarrizko ELOE. KTA estimatzailearen propie-
+tateak ELOEn
+0.1.1
+Eredua eta oinarrizko hipotesiak
+Izan bedi Eredu Lineal Orokorraren Eredua:
+Yt = β1 + β2X2t + . . . + βKXKt + ut
+t = 1, . . . , T
+matrizialki,
+Y = Xβ + u
+u ∼ N(0, σ
+2
+uI )
+X ez estokastikoa
+h(X) = K
+0.1.2
+KTAko estimatzailearen propietateak lagin txi-
+kietan
+KTAko estimatzailea hurrengoa da:
+ˆ
+βKTA = (X′X)−
+1X′Y = β + (X′X)−1X′u
+Ekonometriarako Sarreratik badakigu estimatzaile honek oinarrizko hi-
+potesien menpean ondorengo propietateak betetzen dituela:
+• Linealtasuna (u-rekiko).
+• Alboragabetasuna.
+• Bariantzarik txikiena estimatzaile lineal eta alboragabeen artean.
+1
+
+2 0. KAPITULUA AURRETIKOAK: OINARRIZKO KONTZEPTUEN BERRIKUSPENA.
+Gogora ezazue, lagin txikietan:
+1. Estimatzaile alboragabe biren artean, bariantzarik txikiena duena ho-
+berena dela.
+2. Estimatzaile alboragabe bat ez dela beti alboratu bat baino hobeagoa.
+0.2
+Estimatzaile baten propietate asintotikoak
+Propietate asintotikoak lagina tamainua inﬁnitora doanean aztertuko di-
+tugun propietateak dira ⇒ zenbat eta handiagoa izan lagin tamainua, pro-
+pietate hauen betekizuna hainbat eta hurbilago dago.
+• Tinkotasuna.
+• Banaketazko konbergentzia.
+• Eﬁzientzi asintotikoa.
+0.2.1
+Tinkotasuna
+Deﬁnizioa 0.1 Aldagai aleatorioen segida bat {XT : T ≥ 1} X aldagai alea-
+toriora probabilitatean konbergitzen du baldin eta
+∀ε > 0
+lim
+T
+→∞
+P [|XT − X| < ε] = 1
+Probabilitatezko konbergentziaren idazkera honakoa da :
+XT
+p
+→ X edo plim XT = X
+Probabilitatezko konbergentziaren kontzeptuak tinkotasunarena deﬁni-
+tzeko balio digu:
+Deﬁnizioa 0.2 θ parametroaren estimatzaile bat, ˆ
+θT , tinkoa dela esango
+dugu baldin eta θra probabilitatean konbergitzen badu.
+Idazkera: ˆ
+θT
+p
+→ θ edo plim ˆθT = θ.
+Edozein estimatzaile, ˆ
+θT , aldagai aleatorioen segida bat bezala idatzi
+daiteke. Tinkotasunaren propietatea ateratzeko plim eragilearen propie-
+tateak erabili daitezke edota probabilitatezko konbergentziarako baldintza
+nahikoak (tinkotasunerako bladintzak ere badirela).
+
+0.2. ESTIMATZAILE BATEN PROPIETATE ASINTOTIKOAK
+3
+plim eragilearen propietateak:
+Izan bitez aldagai aleatorioen edozein segida bi, {XT } eta {YT }. Or-
+duan:
+1.plim (XT + YT ) = plimXT + plimYT
+2.plim (XT YT )
+= plimXT plimYT
+3.plimXT
+YT
+= plim
+XT
+plimY
+T
+baldin plimYT = 0
+4.plim g(XT )
+= g(plim(XT ))
+edozein g(·) funtzio jarraiarentzat.
+5.plim XT
+= limT→∞ XT
+baldin eta XT ez bada aldagai aletorio bat.
+6. Propietate hauek aldagai aleatorioen matrizeetara zabaldu dai-
+tezke, adibidez {AT } eta {ZT } matrizeetara.
+plimA−1
+T ZT = (plimAT )
+−1plimZT baldin eta |plimAT| = 0
+Probabilitatezko Konbergentziarako baldintza nahikoak
+Izan bedi X1, . . . , XT aldagai aleatorioen segida bat. Segida hau C
+konstante batera probabilitatean konbergitzeko, ondorengo bi baldintzak
+betetzea nahikoa da:
+lim
+T
+→∞
+E(XT ) =
+C
+lim
+T
+→∞
+Bar(XT ) = 0
+Era berdinean, ˆ
+θT estimatzailea tinkoa izateko nahikoa da ondorengoa
+betetzea:
+Tinkotasunerako Baldintza Nahikoak
+lim
+T
+→∞
+E(ˆ
+θT ) =
+θ
+(Alboragabetasun asintotikoa)
+lim
+T
+→∞
+Bar(ˆ
+θT ) = 0
+
+4 0. KAPITULUA AURRETIKOAK: OINARRIZKO KONTZEPTUEN BERRIKUSPENA.
+0.2.2
+Banaketazko konbergentzia
+Deﬁnizioa 0.3 {XT } aldagai aleatorioen segida bat X aldagai aleatoriora
+banaketan konbergitzen duela esango dugu baldin eta banaketa funtzioen
+segida, FX
+T ,
+FX banaketa funtziora konbergitzen badu, F ren jarraitasun
+puntu guztientzat, hau da:
+FX
+T (x)
+→ FX(x)
+∀x FX(·)-en jarraitasun punturako
+Idazkera: XT
+b
+→ X edo XT
+a
+∼ F (x)
+Teorema 0.1 (Cramer) Izan bedi AT matrize estokastiko bat zeina AT
+p
+→
+A eta zT aldagai aleatorioen bektore bat zeina zT
+b
+→ z den. Orduan,
+AT zT
+b
+→ Az
+Ondorengo Mann eta Walden teoremak, baldintza batzuen menpe tin-
+kotasuna eta konbergentzi asintotikoa lortzen laguntzen digu:
+Teorema 0.2 (Mann-Wald) Izan bitez (TxK) ordenako X matrize bat
+(baliteke estokastikoa), eta (Tx1) ordenako u aldagai aleatorioen bektore
+bat. Ondorengoa betetzen bada:
+i) ut
+ibb
+∼ (0, σ
+2
+u)
+(⇒ u ∼ (0, σ
+2
+uI ))
+ii) E(Xitut) = 0
+(⇒ E(X′u) = 0)
+iii) plimX
+′X
+T
+= Q < ∞ simetrikoa eta deﬁnitu positiboa.
+i)-iii) betetzen badira, orduan,
+1. plimX
+′u
+T
+= 0
+2. X
+′u
+√
+T
+b
+→ N 0, σ
+2
+uQ
+0.2.3
+Eﬁzientzia Asintotikoa
+Deﬁnizioa 0.4 Estimatzaile bat asintotikoki eﬁzientea dela esango dugu,
+baldin eta estimatzaile tinko guztien artean bariantza asintotikorik txikiena
+badu.
+
+0.3. KTA ESTIMATZAILEAREN PROPIETATE ASINTOTIKOAK ELOEN
+5
+0.3
+KTA estimatzailearen propietate asintotikoak ELOEn
+0.3.1
+KTA estimatzaileen tinkotasuna ELOEn
+Orain, normaltasunaren hipotesia ez da beharrezkoa. Bai suposatzen du-
+gu, ordea, ondorengoa:
+plim
+X′X
+T
+= Q ﬁnitua eta ez singularra
+Idatz dezakegu:
+ˆ
+βT = β + (X′X)−
+1X′u = β +
+
+
+X′X
+T
+
+
+−1 X′u
+T
+Eta orduan:
+plim ˆ
+βT = β + plim
+X′X
+T
+−1 X′u
+T
+= β + plim
+
+
+X′X
+T
+
+
+−1
+=Q−
+1
+plim
+X′u
+T
+=0
+= β
+0.3.2
+σ2
+u-ren estimatzailearen tinkotasuna
+Hurrengo teorema lagungarria da:
+Teorema 0.3 (Khintchine) X1, X2, . . . , XT aldagai aleatorioak indepen-
+denteak eta berdinki banatuta baldin badaude batezbesteko ﬁnituarekin (µ),
+orduan,
+plim
+1
+T
+T
+t
+=1
+Xt = µ
+Ikus dezagun ˆ
+σ2u-ren tinkotasuna:
+ˆ
+σ2
+u =
+ˆ
+u′ˆ
+u
+T − K
+=
+u′M u
+T − K
+=
+u′(I − X(X′X)−
+1X′)u
+T − K
+T -gatik biderkatuz eta zatituz,
+ˆ
+σ2u =
+T
+T − K
+
+
+
+u′u
+T
+−
+u′X
+T
+
+
+X′X
+T
+
+
+−1 X′u
+T
+
+
+
+plim eragilea alderdi bietan aplikatuz, hurrengoa daukagu:
+plim ˆ
+σ2u = 1 · [σ
+2
+u
+− 0 · Q−
+1 · 0] = σ2
+u
+
+6 0. KAPITULUA AURRETIKOAK: OINARRIZKO KONTZEPTUEN BERRIKUSPENA.
+0.3.3
+KTA estimatzailearen banaketazko konbergen-
+tzia
+Kontzeptu hau beharrezkoa da, adibidez, perturbazioek banaketa normala
+ez dutenean jarraitzen.
+KTAko estimatzailearen kasuan:
+ˆ
+βT = β + (X′X)−
+1X′u
+β ezkerrera pasatuz eta T -gatik biderkatu eta zatituz,
+ˆ
+βT − β =
+
+
+X′X
+T
+
+
+−1 X′u
+T
+Orain alderdi biak
+√
+T -gatik biderkatuz,
+√
+T ˆ
+βT − β =
+
+
+X′X
+T
+
+
+−1 X′u
+√
+T
+Ondorengoa jakinez:
+X′u
+√
+T
+b
+→ N(0, σ
+2
+uQ)
+(Mann-Wald)
+X′X
+T
+p
+→ Q
+ﬁnitua eta alderanzgarria
+Crameren teoremagatik:
+√
+T ˆ
+βT − β =
+
+
+X′X
+T
+
+
+−1 X′u
+√
+T
+b
+−→ N 0, σ
+2
+uQ
+−1
+0.3.4
+KTA estimatzailearen eﬁzientzia asintotikoa
+ELEOko oinarrizko hipotesiak kontuan izanik, KTA estimatzailea asinto-
+tikoki eﬁzientea izango dela frogatzen da.
+
+0.3. KTA ESTIMATZAILEAREN PROPIETATE ASINTOTIKOAK ELOEN
+7
+0.3.5
+Inferentzia ELOEn
+Kontzeptu hau adibide baten bitartez ikusiko dugu: koeﬁziente baten ba-
+nakako esanguratasuna. Hurrengo eran planteatzen da:
+
+
+
+H0 : βi = 0
+HA : βi = 0
+Ekonometriarako Sarreran perturbazioaren normaltasunaren suposizio-
+pean (u ∼ N(0, σ
+2
+uI )), kontrasteak burutzeko bi aukera daudela (beti H0-
+ren menpean) ikusi genuen:
+1. σ2u ezaguna denean:
+ˆ
+βi
+σu
+√
+aii
+H0
+∼ N(0, 1)
+2. σ2u ezezaguna denean:
+ˆ
+βi
+ˆ
+σu
+√
+aii
+H0
+∼ tT−K
+u-ren banaketa normala ez denean, edota ezezaguna denean, aurreko
+estatistikoen banaketak lagin txikietako ez daude ongi.
+Lehen ateratako emaitza asintotikoak erabiliz, hau da, ˆ
+β asintotikoki
+normala dela eta ˆ
+σ2u tinkoa dela, eta Crameren teorema aplikatuz (beti
+H0-ren menpean):
+ˆ
+βi
+ˆ
+σu
+√
+aii
+b,H0
+→ N(0, 1)
+(Oharra: tT−k → N(0, 1)
+T → ∞ denean.)
+
+8 0. KAPITULUA AURRETIKOAK: OINARRIZKO KONTZEPTUEN BERRIKUSPENA.
+Hipotesi linealen kontraste orokorraren kasuan:
+
+
+
+H0 : Rβ = r
+HA : Rβ = r
+u ∼ N(0, σ
+2
+uI ) ematen denean (H0-ren menpean) estatistikoa ondoren-
+goa da:
+1. σ2u ezaguna denean:
+(R ˆ
+β − r)′[σ
+2
+uR(X
+′X)−1R′]−1(R ˆ
+β − r)
+H0
+∼ χ
+2
+q
+2. σ2u ezezaguna deanean:
+(R ˆ
+β − r)′[R(X′X)−
+1R′]−1(R ˆ
+β − r)/q
+ˆ
+σ2u
+H0
+∼ Fq,T−k
+Era berean, perturbazioak normalak ez direnean eta adibide berdina
+jarraituz, ondorengoa erabili dezakegu (H0 menpean),
+(R ˆ
+β − r)′[ˆσ
+2
+uR(X
+′X)−1R′]−1(R ˆ
+β − r)
+b,H0
+→ χ
+2
+q
+(Oharra: Fq,T →
+χ
+2
+q ,
+T → ∞ denean.)
+
+1. Kapitulua
+Erregresio Lineal Ereduaren
+Orokorpena
+1.1
+Perturbazio ez esferikodun erregresio eredua
+Erregresio lineal eredu orokorrean
+Y = Xβ + u
+(1.1)
+oinarrizko hipotesi bat, perturbazioak esferikoak direla dugu, hau da,
+Bar(u) = σ2I =
+
+
+
+
+
+
+
+
+σ2 0 · · · 0
+0 σ2 · · · 0
+... ... ... ...
+0
+0 · · · σ
+2
+
+
+
+
+
+
+
+
+Honek bi balizko inposatzen ditu:
+1. Homozedastizitatea: bar(ut) = σ2 edozein t-rentzat.
+2. Koerlazio eza: kob(utus) = 0 t = s.
+Gai honetan balizko hauek erlajatuko ditugu, ondokoa onartuz:
+1. Heterozedastizitatea: bar(ut) = σ2t.
+2. Koerlazioa: kob(utus) = 0 t = s.
+9
+
+10
+1. KAPITULUA ERREGRESIO LINEAL EREDUAREN OROKORPENA
+Orokorrean, perturbazioek ondorengo bariantz eta kobariantz matrize
+ez-eskalarra izan dezatela baimentzen dugu:
+E(uu′) = Σ =
+
+
+
+
+
+
+
+
+σ21 σ12 · · · σ1T
+σ21 σ22 · · · σ2T
+...
+... ... ...
+σT1 σT2 · · · σ
+2
+T
+
+
+
+
+
+
+
+
+= σ2Ω = σ2
+
+
+
+
+
+
+
+
+w11 w12 · · · w1T
+w21 w22 · · · w2T
+...
+... ... ...
+wT1 wT2 · · · wTT
+
+
+
+
+
+
+
+
+non bar(ut) = σ
+2
+t
+= σ2wtt, t = 1, ..., T
+kob(utus) = σts = σst = σ
+2wts, t = s
+1.2
+KTA estimatzailearen propietateak
+Izan bedi (1.1) eredua, non oinarrizko hipotesiak betetzen diren hurrengoa
+ezik:
+E(uu′) = Σ = σ2Ω non Ω = I
+ˆ
+βKTA-ren propietateak:
+1. u-rekiko lineala: ˆ
+β = β + (X′X)−1X′u
+2. Alboragabea: E( ˆ
+β) = β + E[(X′X)−1X′u] = β + (X′X)−1X′E(u) =
+β
+3. Bariantz eta Kobariantz matrizea:
+Bar( ˆ
+β) = E[(X′X)−1X′uu′X(X′X)−1]
+= (X′X)−1X′E(uu′)X(X′X)−1
+= (X′X)−1X′ΣX(X′X)−1
+= σ2(X′X)−1X′ΩX(X′X)−1
+
+1.2. KTA ESTIMATZAILEEN PROPIETATEAK
+11
+4. Estimatzaile lineal eta alboragabeen artean ez da bariantza minimo-
+koa izango.
+5. Perturbazioek banaketa normala badute, orduan:
+ˆ
+β ∼ N(β, (X′X)−
+1X′ΣX(X′X)−1)
+6. Tinkoa: limT→∞
+X′
+ΩX
+T
+= B < ∞ bada, orduan:
+limT→∞ E( ˆ
+βT )
+= β
+limT→∞ Bar( ˆ
+βT ) = limT→∞
+σ
+2
+T (
+X′X
+T
+)−1(X
+′ΩX
+T
+)(X
+′X
+T
+)−1 =
+= 0 · Q−
+1 · B · Q−1 = 0
+eta horrela, tinkotasunerako baldintza nahikoak kontuan izanik:
+plim ˆ
+βT = β
+Garrantzitsua: ˆ
+βKTA estimatzailearen bariantz eta kobariantz matri-
+zea estimatzeko ezin izango dugu ˆ
+σ2(X′X)−1 adierazpena erabili. Arra-
+zoiak:
+1. (X′X)−1 = (X′X)−1X′ΩX(X′X)−1 baita.
+2. Eta gainera, ˆ
+σ2 estimatzailea, σ2-ren estimatzaile alboratua da:
+ˆ
+σ2 =
+(Y − X ˆ
+β)′(Y − X ˆ
+β)
+T − K
+=
+Y ′M ′M Y
+T − K
+=
+u′M u
+T − K
+non M = (I − X(X′X)−
+1X′) simetrikoa, idenpotentea eta MY = Mu
+den. Orduan
+E(ˆ
+σ2) =
+E(u′M u)
+T − K
+=
+E(trM uu′)
+T − K
+=
+σ2tr(M Ω)
+T − K
+= σ2
+Beraz, nahiz eta tr(M ) = T − K izan, tr(MΩ) = T − K da, Ω = I
+denean. Gainera, estimatzaile hori tinkoa ez dela frogatzen da. Ondo-
+rioz, σ2 ezezaguna bada eta ˆ
+σ2-rekin estimatzen badugu, estimatzaile
+honekin egindako kontraste guztiak ez dira baliogarriak.
+
+12
+1. KAPITULUA ERREGRESIO LINEAL EREDUAREN OROKORPENA
+1.3
+Karratu Txikienen Zabalduen edo Orokortuen
+metodoa (KTZ).
+Suposa dezagun E(uu′) = Σ = σ2Ω ezagutzen dugula. (1.1) eredua eral-
+datuko dugu, perturbazio esferikodun beste eredu bat lortu arte.
+Izan ere, Σ = σ2Ω simetrikoa eta erdideﬁnitu positiboa denez ⇒ ∃P
+matrize ez singular bat, zeinak Ω = P P ′ betetzen duen.
+Ondorioz, ondokoa idatz dezakegu: Ω−1 = (P P ′)−1 = (P ′)−1P −1
+(1.1) eredua eraldatzeko P −1-gatik aurrebiderkatzen dugu:
+P −1Y
+Y ∗
+= P −1X
+X∗
+β + P −1u
+u∗
+(1.2)
+=⇒ Y ∗ = X∗β + u∗
+Eredu honetan u∗ perturbazioak esferikoak izatea lortu dugu:
+E(u∗) = E(P −1u) = P −1E(u) = 0
+Bar(u∗) = E(P −1uu′(P −1)
+′) = P −1E(uu′)(P −1)′ =
+= σ2P −1ΩP −1
+′ = σ2P −1P P ′(P ′)−1 = σ2I
+Hortaz, eraldatutako ereduan oinarrizko hipotesiak betetzen direnez,
+KTA aplikatuz emaitza onak izango ditugu. Horrela, KTZ estimatzailea
+lortzen dugu:
+˜
+βKTZ = (X∗′X∗)−
+1X∗′Y ∗ =
+(1.3)
+= (X′(P ′)−
+1P −1X)−1X′(P ′)−1P −1Y =
+= (X′Ω−1X)−1X′Ω−1Y =
+(1.4)
+= (X′Σ−1X)−1X′Σ−1Y
+(1.5)
+Hortaz, KTZko estimatzailea bi modutara kalkula dezakegu:
+• Eraldatutako ereduan KTA aplikatuz: (1.3) ekuazioa.
+• Hasierako ereduan (1.4) edo (1.5) esprezioa aplikatuz.
+
+1.3. KARRATU TXIKIENEN ZABALDUEN EDO OROKORTUEN METODOA (KTZ). 13
+1.3.1
+KTZ estimatzaileen propietateak
+1. u-rekiko lineala: ˜
+β = (X′Ω−1X)−1X′Ω−1Y = β+(X′Ω−1X)−1X′Ω−1u
+2. Alboragabea: E( ˆ
+β) = β + E[(X′Ω−1X)−1X′Ω−1u] =
+β + (X′Ω−1X)−1X′Ω−1E(u) = β
+3. Bariantza eta kobariantza matrizea:
+Bar( ˆ
+β) = E[(X′Ω−1X)−1X′Ω−1uu′Ω−1X(X′Ω−1X)−1]
+= (X′Ω−1X)−1X′Ω−1E[uu′]Ω−1X(X′Ω−1X)−1
+= σ2(X′Ω−1X)−1X′Ω−1ΩΩ−1X(X′Ω−1X)−1
+= σ2(X′Ω−1X)−1
+4. u ∼ N bada ⇒ ˜
+β ∼ N(β, σ
+2(X′Ω−1X)−1)
+5. Eﬁzientea:
+Eraldatutako ereduan Gauss-Markoven teorema apli-
+katuz, estimatzaile lineal eta alboragabeen artean bariantza minimo-
+koa izango da.
+6. Tinkoa: plimX
+′Ω−
+1 X
+T
+= plimX
+∗′X∗
+T
+= A < ∞ eta ez singularra ba-
+da, eraldatutako ereduan Mann eta Wald-en teoremaren baldintzak
+betetzen dira.
+7. Banaketa asintotikoa: Mann eta Wald-en teorematik ondorengo
+daukagu:
+√
+T ( ˜
+β − β)
+b
+→ N(0, σ
+2A−1)
+1.3.2
+σ2
+-ren estimatzailea
+σ2 parametroa, E[uu′] matrizeko konstante komuna da (ez da beti u-ren
+bariantza). Bere estimazioa ohiko eran egiten da eraldatutako ereduan,
+lortzen den estimatzailea alboragabea eta tinkoa izanik:
+˜
+σ2
+=
+(Y ∗ − X∗ ˜
+β)′(Y ∗ − X∗ ˜
+β)
+T − K
+=
+ˆ
+u∗
+′ ˆu∗
+T − K
+=
+(Y − X ˜
+β)′Ω−1(Y − X ˜
+β)
+T − K
+=
+˜
+u
+′
+KT Z Ω
+−1 ˜uKTZ
+T − K
+
+14
+1. KAPITULUA ERREGRESIO LINEAL EREDUAREN OROKORPENA
+1.4
+KTZ Eginkorren metodoa (KTZE)
+Orain arte, E(uu′) = Σ = σ2Ω edo Ω ezagunak zirela suposatzen genuen.
+Kasu honetan, KTZko estimatzailea lineala, alboragabea eta bariantza mi-
+nimoduna izanik. Baina gehienetan Ω ezezaguna izaten da. Ohiko soluzioa,
+Ω (edo Σ) KTZko estimatzailearen adierazpidean, bere estimatzaileagatik
+ordezkatzea da, horrela KTZEko estimatzailea lortuz:
+˜
+βKTZE = (X′ ˆ
+Ω−1X)−1X′ ˆ
+Ω−1Y
+= (X′ ˆ
+Σ−1X)−1X′ ˆ
+Σ−1Y
+(1.6)
+˜
+βKTZE-ren propietateak:
+1. EZ da u-rekiko lineala: ˆ
+Ω aldagai aleatorioen matrizea era ez lineal
+batean azaltzen da (1.6) ekuazioan.
+2. Lagin txikietan bere propietateak ezezagunak dira edo kalkulatzeko
+zailak izaten dira.
+3. Lagin handietan ordea, eta erregulartasun baldintza batzuk kontuan
+hartuz, nahikoa izaten da ˆ
+Ω, Ω-ren estimatzaile tinkoa izatea. Horrela,
+˜
+βKTZE estimatzailea ˜
+βKTZ-ren baliokidea da asintotikoki eta ˜
+σ2KTZE =
+˜
+u
+′
+KT ZE Ω
+−1 ˜
+uKT ZE
+T
+−K
+, σ2-ren estimatzaile tinkoa da.
+
+1.5. MURRIZKETA LINEALEN KONTRASTEAK
+15
+1.5
+Murrizketa linealen kontrasteak
+Atal honetan, β bektorearekiko murrizketa linealen kontrasteak nola egiten
+diren ikusiko dugu. Perturbazio ez esferikodun Y = Xβ + u eredu batean,
+murrizketa adierazteko era Rβ = r da non R, (q × K) ordenako matrizea
+den eta r (q), dimentsioko bektorea den. Horrela, q murrizketa linealen
+kontrasterako hipotesi hutsa eta alternatiboa ondorengoak dira:
+H0 : Rβ = r
+Ha : Rβ = r
+Hiru kasu bereiztuko ditugu:
+1. Σ = σ2Ω guztiz ezaguna.
+2. Ω ezaguna baina σ2 ezezaguna.
+3. Ω ezezaguna baina estimagarria.
+1.5.1
+Σ = σ2Ω ezaguna
+Kasu honetan, KTZ aplikatuko dugu eta perturbazioek banaketa Normala
+jarraitzen badute, orduan
+R ˜
+βKTZ ∼ N(Rβ, R(X′Σ−
+1X)−1R′)
+(1.7)
+eta hipotesi hutsa egiazkoa bada,
+R ˜
+βKTZ
+H0
+∼ N(r, R(X′Σ−
+1X)−1R′)
+Hortaz,
+Fc = (R ˜
+βKTZ − r)′[R(X′Σ−
+1X)−1R′]−1(R ˜
+βKTZ − r)
+H0
+∼ χ
+2
+q
+non q murrizketa kopurua den eta
+H0
+∼ adierazpenak, hipotesi hutsaren men-
+peko banaketa adierazten duen. Orduan, hipotesi hutsa baztertuko dugu α
+esangura mailarekin, baldin eta Fc > χ2q,α bada.
+
+16
+1. KAPITULUA ERREGRESIO LINEAL EREDUAREN OROKORPENA
+1.5.2
+Ω ezaguna eta σ2 ezezaguna
+Ω ezaguna izanik, KTZ aplikatu dezakegu, (1.7) betetzen delarik. Fc esta-
+tistikoa horrela berridatzi dezakegu:
+Fc =
+(R ˜
+βKTZ − r)′[R(X′Ω−
+1X)−1R′]−1(R ˜
+βKTZ − r)
+σ2
+H0
+∼ χ
+2
+q
+(1.8)
+Hala ere, Fc ezin daiteke zuzenean estimatu, σ2 ezezaguna bait da. ˜
+σ2KTZ
+estimatzaile alboragabea erabiltzen badugu σ2 estimatzeko, orduan, bana-
+keta aldatu egiten da, izendatzailea ez bait da konstante bat, aldagai alea-
+torio bat baizik. ˆu
+∗′ ˆ
+u∗
+σ
+2
+∼ χ
+2
+T
+−K izanik, (1.8) ekuazioa eta χ
+2 banaketadun bi
+aldagai independente zati bere askatasun graduen zatidura, zenbakitzaileko
+eta izendatzaileko aldagaien askatasun graduko Snedecorren F banaketa
+dela kontuan izanik, ondorengoa daukagu:
+Fcd =
+(R ˜
+βMCG − r)′[R(X′Ω−
+1X)−1R′]−1(R ˜
+βMCG − r)/q
+˜
+σ2KTZ
+Fcd
+H0
+∼ Fq,T−K
+(1.9)
+Hortaz, hipotesi hutsa baztertuko dugu α esangura mailarekin, baldin eta
+Fcd > Fq,T−K|α bada.
+1.5.3
+Σ ezezaguna baina estimagarria
+Kasu honetan ezin dugu KTZko estimatzailea kalkulatu, baina bai ordea
+KTZEko estimatzailea. KTZEren lagin txikietako banaketa ez dugu eza-
+gutzen eta hortaz egin dezakegun inferentzia lagin tamainu handientzat
+bakarrik izango da baliagarria. ˆ
+Σ estimatzailea tinkoa bada, ˜
+βKTZE-ren
+banaketa asintotikoa ˜
+βKTZ -ren banaketaren berdina izango da, baina la-
+gin handietan bakarrik baliagarria izanik:
+R ˜
+βKTZE
+b
+→ N(Rβ, R(X′Σ−
+1X)−1R′)
+(1.10)
+non
+b
+→ adierazpideak banaketazko konbergentzia adierazten duen. Beraz,
+hipotesi hutsaren menpean,
+(R ˜
+βKTZE − r)′[R(X′Σ−
+1X)−1R′]−1(R ˜
+βKTZE − r)
+b,H0
+−→ χ
+2
+q
+
+1.6.
+EKUAZIO SISTEMAK
+17
+non
+b,H0
+−→, banaketazko konbergentzia den hipotesi hutsaren menpean. Esta-
+tistiko hau ere ezin daiteke erabili Σ ezezaguna bait da. Baina, estimatzaile
+tinko bat erabiltzen badugu Σ ordezkatzeko, banaketa asintotikoa ez da al-
+datzen eta beraz, erabili dezakegun estatistikoa ondorengoa da:
+Fds = (R ˜
+βKTZE − r)′[R(X′ ˆ
+Σ−1X)−1R′]−1(R ˜
+βKTZE − r)
+b,H0
+−→ χ
+2
+q
+eta erabaki erizpidea, hipotesi hutsa baztertzea izango da α esangura
+mailarekin, baldin eta Fds > χ2q,α bada.
+1.6
+Ekuazio Sistemak
+KTA eta KTZ estimatzaileen artean aukeratzeko adibide bezala ekuazio
+sistemak aurkeztuko ditugu. Askotan, bi erregresio ekuazioen arteko erla-
+zioa aztertzea nahi izango dugu:
+Adibideak:
+1. (PZ-G.35)
+Y1t : Brasileko inﬂazioa
+X1t : Brasileko diru eskaintzaren hazkundea
+Y2t : Argentinako inﬂazioa X2t : Argentinako diru eskaintzaren hazkundea
+
+
+
+Y1t = α1 + β1X1t + u1t
+t = 1, 2, . . . , 50
+Y2t = α2 + β2X2t + u2t
+t = 1, 2, . . . , 150
+(1.11)
+2. ∆Et: enplegatuen gehikuntza;
+∆BP Gt: BPGren hazkundea
+
+
+
+∆Et = α1 + β1∆BP Gt + u1t
+t = 1982, . . . , 1995
+∆Et = α2 + β2∆BP Gt + u2t
+t = 1996, . . . , 2000
+(1.12)
+Aurreko sistemak hurrengo moduan adieraz daitezke:
+
+
+
+Y1 = X1β1 + u1 T1 behaketa
+Y2 = X2β2 + u2 T2 behaketa
+
+
+Y1
+Y2
+
+ =
+
+
+X1
+0
+0
+X2
+
+
+
+
+β1
+β2
+
+ +
+
+
+u1
+u2
+
+
+→
+Y
+((T1 + T2) × 1)
+= Xβ + u
+Y = Xβ + u eredua estimatzeko erarik egokiena ondorengo zehazpenen
+funtzioan dago:
+
+18
+1. KAPITULUA ERREGRESIO LINEAL EREDUAREN OROKORPENA
+• X eta u-ren arteko erlazioa ( X ez estokastikoa suposatzen dugu)
+• bariantz eta kobariantz matrizearen egitura
+E(uu′)
+((T1 + T2) × (T1 + T2))
+=
+
+
+
+
+
+
+E(u1u′1)
+(T1 × T1)
+E(u1u′2)
+(T1 × T2)
+E(u2u′1)
+(T2 × T1)
+E(u2u′2)
+(T2 × T2)
+
+
+
+
+
+
+Azterketa Hiru kasu berezitan oinarrituko dugu:
+1. −
+E(uu′) =
+
+
+σ2I
+0
+0
+σ2I
+
+ = σ2I
+2. −
+E(uu′) =
+
+
+σ21I
+0
+0
+σ22I
+
+ = Σ
+3. −
+E(uu′) =
+
+
+σ21I σ12I
+σ12I σ22I
+
+ = Σ
+Estimazioa aztertu aurretik, oso garrantzitsua den lehen emaitza bat
+ikusiko dugu: Baterako ˆ
+βKTA ≡ banakako ˆ
+βKTA
+Frogapena:
+ˆ
+βKTA = (X′X)
+−1 X′Y =
+
+
+
+
+X1
+0
+0
+X2
+
+
+′ 
+
+X1
+0
+0
+X2
+
+
+
+
+−1 
+
+X1
+0
+0
+X2
+
+
+′ 
+
+Y1
+Y2
+
+
+=
+
+
+X′1X1
+0
+0
+X′2X2
+
+
+−1 
+
+X′1Y1
+X′2Y2
+
+ =
+
+
+(X′1X1)−
+1
+0
+0
+(X′2X2)−
+1
+
+
+
+
+X′1Y1
+X′2Y2
+
+
+=
+
+
+(X′1X1)−
+1X′
+1Y1
+(X′2X2)−
+1X′
+2Y2
+
+ =
+
+
+ˆ
+βKTA
+1
+ˆ
+βKTA
+2
+
+
+
+1.6.
+EKUAZIO SISTEMAK
+19
+Oharrak:
+1. Emaitza hau lortzeko X blokez diagonala izatea beharrezkoa da, hau
+da, ezin da β1 eta β2 artean murrizketarik egon.
+2. Bar( ˆ
+βKTA) kasuaren arabera aldatzen da:
+Bar( ˆ
+βKTA) = σ
+2(X′X)−1
+1 kasua
+= (X′X)−1X′ΣX(X′X)−1
+2 eta 3 kasua
+1.6.1
+1 kasua: Bariantza berdineko ekuazioak. Egitu-
+ra aldaketa
+
+
+
+Y1 = X1β1 + u1 T1 behak.
+Y2 = X2β2 + u2 T2 behak.
+edo
+Y
+((T1 + T2) × 1)
+= Xβ+u non E(uu′) = σ2I
+β1 eta β2 desberdinak dira, baina perturbazioen bariantza berdina da ekua-
+zio bientzat. Perturbazio esferikoak ditugunez, ˆ
+βKTA lineala, alboragabea,
+bariantza minimoduna, tinkoa, asintotikoki normala eta eﬁzientea da.
+1-EMA → estimazio berdinak lortzen dira KTA aplikatuz ekuazio ba-
+koitza bere aldetik estimatuz (eta errezagoa da).
+Gainera
+ˆ
+σ2 =
+ˆ
+u′ˆ
+u
+T − K
+=
+ˆ
+u′1ˆu1 + ˆu′2ˆu2
+T − K
+non T = T1 + T2
+eta
+K = K1 + K2
+alboragabea eta tinkoa da.
+Testuinguru honetan, egitura aldeketa kontrastea, ekuazio bien aldagai
+azaltzaile berdinei dagozkien koeﬁzienteen berdinketa kontrastatzean da-
+tza. Egitura aldaketarik ez baldin badago, ekuazio bien aldagaien eragina
+dagozkien aldagai endogenoarekiko berdina da:
+
+
+
+H0 : α1 = α2 eta β1 = β2
+HA : α1 = α2 eta/edo β1 = β2
+→ q = 2
+Bi era desberdin dauzkagu kontrastea burutzeko:
+1 −
+Rβ − r =
+
+
+1 0 −1
+0
+0 1
+0 −1
+
+
+
+
+
+
+
+
+
+
+α1
+β1
+α2
+β2
+
+
+
+
+
+
+
+
+−
+
+
+0
+0
+
+
+
+20
+1. KAPITULUA ERREGRESIO LINEAL EREDUAREN OROKORPENA
+H0 menpean,
+F =
+(R ˆ
+β − r)′ R(X′X)−
+1R′
+−1 (R ˆβ − r)/2
+ˆ
+σ2
+∼ F(2, T − 4)
+2-
+Murriztutako eredua H0-ren menpean :
+∆Et = α + β∆NP Gt + uM,t t = 1982, . . . , 2000
+KT A
+→
+ˆ
+u′M ˆuM
+H0-ren menpean,
+F =
+(ˆ
+u′M ˆuM − ˆu′ˆu)/2
+ˆ
+u′ˆ
+u/T − 4
+∼ F(2, T − 4) non ˆu′ˆu = ˆu′1ˆu1 + ˆu′2ˆu2 den.
+KONKLUSIOA: 1 KASUAN, KTA da estimazio metodo eﬁzientea, bai
+murriztutako, bai murriztu gabeko ereduentzat, egitura aldaketa kontras-
+tearen hipotesi hutsa pean.
+1.6.2
+2. kasua: Erlazionatu gabeko ekuazioak
+Izan bedi
+
+
+
+Y1 = X1β1 + u1
+T1 behaketa
+Y2 = X2β2 + u2
+T2 behaketa
+Matrizialki,
+
+
+Y1
+Y2
+
+ =
+
+
+X1
+0
+0
+X2
+
+
+
+
+β1
+β2
+
+ +
+
+
+u1
+u2
+
+
+Y = Xβ + u
+E(uu′) =
+
+
+E(u1u′1) E(u1u′2)
+E(u2u′1) E(u2u′2)
+
+ =
+
+
+σ21I
+0
+0
+σ22I
+
+
+non perturbazioa heterozedastikoa den. Hala ere, X eta Σ matrizeak,
+biak blokez diagonalak direnez, KTZko estimatzailea eta KTAkoa (bai ba-
+terakoa bai banakakoa) baliokideak dira.
+˜
+βKTZ = (X′Σ−
+1X)−1X′Σ−1Y =
+=
+
+
+
+
+
+
+
+X′1 0
+0
+X′2
+
+
+
+
+σ21I
+0
+0
+σ22I
+
+
+−1 
+
+X1
+0
+0
+X2
+
+
+
+
+
+
+
+−1 
+
+X′1 0
+0
+X′2
+
+
+
+
+σ21I
+0
+0
+σ22I
+
+
+−1 
+
+Y1
+Y2
+
+ =
+
+1.6.
+EKUAZIO SISTEMAK
+21
+Σ diagonala denez,
+=
+
+
+
+
+
+
+
+X′1 0
+0
+X′2
+
+
+
+
+
+1
+σ
+2
+1
+I
+0
+0
+1
+σ
+2
+2
+I
+
+
+
+
+
+X1
+0
+0
+X2
+
+
+
+
+
+
+
+−1 
+
+X′1 0
+0
+X′2
+
+
+
+
+
+1
+σ
+2
+1
+I
+0
+0
+1
+σ
+2
+2
+I
+
+
+
+
+
+Y1
+Y2
+
+ =
+=
+
+
+
+
+
+
+
+
+X′
+1
+σ
+2
+1
+I
+0
+0
+X′
+2
+σ
+2
+2
+I
+
+
+
+
+
+X1
+0
+0
+X2
+
+
+
+
+
+
+
+−1 
+
+
+X′
+1
+σ
+2
+1
+I
+0
+0
+X′
+2
+σ
+2
+2
+I
+
+
+
+
+
+Y1
+Y2
+
+ =
+=
+
+
+
+X′
+1 X1
+σ
+2
+1
+0
+0
+X′
+2 X2
+σ
+2
+2
+
+
+
+−1 
+
+
+X′
+1 Y1
+σ
+2
+1
+X′
+2 Y2
+σ
+2
+2
+
+
+ =
+blokez diagonala denez, alderatzizkoa,
+=
+
+
+σ21(X′1X1)−
+1
+0
+0
+σ22(X′2X2)−
+1
+
+
+
+
+
+X′
+1 Y1
+σ
+2
+1
+X′
+2 Y2
+σ
+2
+2
+
+
+ =
+
+
+
+σ21(X′1X1)−
+1 X
+′
+1 Y1
+σ
+2
+1
+σ22(X′2X2)−
+1 X
+′
+2 Y2
+σ
+2
+2
+
+
+ =
+=
+
+
+(X′1X1)−
+1X′
+1Y1
+(X′2X2)−
+1X′
+2Y2
+
+ =
+
+
+ˆ
+β1
+ˆ
+β2
+
+
+KT A
+= ˆ
+βKTA
+Ohartu, emaitza hau perturbazioen bariantzak ezagutzen edo ezagutzen ez
+baditugu ere, lortzen dela. Izatez, ekuazio bien arteko erlaziorik ez dago,
+ez alderdi sistematikoan (Xβ) ezta ere perturbazioetan (u1 eta u2). Hau
+da, baterako KTZ eta banakako KTAk baliokideak izatearen arrazoia.
+ˆ
+βKTZ-n bariantza eta kobariantza matrizea
+Ekuazio bakoitzaren barnean perturbazioak esferikoak dira baina ere-
+du osoa kontsideratzerakoan perturbazioak heterozedastikoak dira. KTZ
+bitartez estimatzerakoan,
+Bar( ˜
+βKTZ) = (X′Σ−
+1X)−1 =
+
+
+
+
+
+
+
+X′1 0
+0
+X′2
+
+
+
+
+σ21I
+0
+0
+σ22I
+
+
+−1 
+
+X1
+0
+0
+X2
+
+
+
+
+
+
+
+−1
+=
+=
+
+
+
+
+
+
+
+X′1 0
+0
+X′2
+
+
+
+
+
+1
+σ
+2
+1
+I
+0
+0
+1
+σ
+2
+2
+I
+
+
+
+
+
+X1
+0
+0
+X2
+
+
+
+
+
+
+
+−1
+=
+
+
+
+X′
+1 X1
+σ
+2
+1
+0
+0
+X′
+2 X2
+σ
+2
+2
+
+
+
+−1
+=
+=
+
+
+σ21(X′1X1)−
+1
+0
+0
+σ22(X′2X2)−
+1
+
+ = (X′X)−1X′ΣX(X′X)−1 = Bar( ˆ
+βKTA)
+
+22
+1. KAPITULUA ERREGRESIO LINEAL EREDUAREN OROKORPENA
+Hau da, ekuazio bakoitzean KTA aplikatzerakoan, bai koeﬁzienteak bai-
+ta kobariantza matrizeak ere eﬁzienteki estimatzen dira.
+Bar( ˆ
+β1) = σ
+2
+1 (X
+′
+1X1)
+−1
+Bar( ˆ
+β2) = σ
+2
+2 (X
+′
+2X2)
+−1
+Ekuazio bakoitzak perturbazioaren bariantza ezberdina dauka, beraz,
+ezezagunak direnean, tinkoak diren bi estimatzaile ditugu bakoitzari dago-
+kion bariantzaren matrizea estimatzeko:
+ˆ
+σ21 =
+ˆ
+u′1ˆu1
+T1 − K1
+ˆ
+σ22 =
+ˆ
+u′2ˆu2
+T2 − K2
+non
+ˆ
+u1 = Y1 − X1 ˆ
+β1
+ˆ
+u2 = Y2 − X2 ˆ
+β2
+karratu txikienen arrunten hondarrak diren.
+KONKLUSIOA: 2 KAUSAN, KTA eta KTZ estimatzaileak berdinak
+dira, biak eﬁzienteak bait dira.
+Ohartu, 2. KASU honetan, hipotesi hutsari dagokion murriztutako ere-
+dua hurrengoa dela:
+
+
+
+H0 : α1 = α2 eta β1 = β2
+HA : α1 = α2 eta/edo β1 = β2
+→ q = 2
+heterozedastikoa da eta bakarrik estima daiteke eﬁzienteki KTZ edo
+KTZE bidez.
+1.6.3
+3. kasua: Erlazionatutako ekuazioak
+Izan bedi eredua
+
+
+
+Y1 = X1β1 + u1
+Y2 = X2β2 + u2
+E(uiu′j) = σijI
+∀i, j
+T1 = T2 = T
+Oharra: σii = σ2i = Bar(uit) eta σij = Kob(uit, ujt).
+
+
+Y1
+Y2
+
+ =
+
+
+X1
+0
+0
+X2
+
+
+
+
+β1
+β2
+
+ +
+
+
+u1
+u2
+
+
+E(uu′) =
+
+
+σ11I σ12I
+σ12I σ22I
+
+
+
+1.6.
+EKUAZIO SISTEMAK
+23
+Y
+(2T × 1)
+=
+X
+(2T × (K1 + K2))
+β
+((K1 + K2) × 1)
++
+u
+(2T × 1)
+E(uu′) =
+Σ
+(2T × 2T )
+Ekuazio bien perturbazioen arteko denbora bereko koerlazioa existitzen da,
+σ12 = 0. Hortaz, E(uu′) ez da diagonala. Eredu osoan KTA aplikatzea ez
+da eﬁzientea izango eta beraz KTZ aplikatu behar da.
+Oharra: uit arteko denbora bereko koerlazioa = autokoerlazioa.
+˜
+βKTZ = (X′Σ−
+1X)−1X′Σ−1Y
+Σ ezezaguna
+σij ezezagunak baldin badira, era tinko batean estimatu behar dira KTA
+hondarrak erabiliz:
+ˆ
+σii =
+ˆ
+u′iˆui
+T − Ki
+∀i
+ˆ
+σij =
+ˆ
+u′iˆuj
+T
+i = j
+=⇒ ˆ
+Σ tinkoa.
+eredua KTZEren bitartez estimatuko genuke:
+˜
+βKTZE = (X′ ˆ
+Σ−1X)−1X′ ˆ
+Σ−1Y
+Estimatzaile hau asintotikoki KTZkin bat dator beraien propietate asinto-
+tikoak berdinak izanik.
+Konklusioa: Orokorrean, 3 Kasuan eﬁzientea den estimatzailea KTZkoa
+da (Ez da aztertzen KTZ eta KTA bat egiten duten kasua).
+
+24
+1. KAPITULUA ERREGRESIO LINEAL EREDUAREN OROKORPENA
+
+2. Kapitulua
+Heterozedastizitatea
+2.1
+Deﬁnizioa eta eragileak
+Heterozedastizitatea:.
+perturbazioen bariantzak aldakorrak
+Homozedastizitatea:
+perturbazioen bariantzak berdinak,
+bar(ut) = σ2 edozein t
+Aurreko gaian, perturbazioen bariantz eta kobariantz matrize ez eska-
+larrak, Σ = σ2Ω, KTAko inferentzian duen eragina orokorki ikusi dugu eta
+KTZko estimatzaileak bariantza txikiagoa duela atera dugu. Gai honetan
+Σ = σ2Ω diagonala dela suposatuko dugu (ez dago autokoerlaziorik per-
+turbazioen gain) baina diagonal nagusiko elementuak desberdinak izango
+dira.
+E(uu′) = Σ =
+
+
+
+
+
+
+
+
+σ21 0
+· · · 0
+0
+σ22 · · · 0
+... ...
+. .. ...
+0
+0
+· · · σ
+2
+T
+
+
+
+
+
+
+
+
+= σ2Ω = σ2
+
+
+
+
+
+
+
+
+w1 0
+· · · 0
+0
+w2 · · · 0
+...
+...
+. .. ...
+0
+0
+· · · wT
+
+
+
+
+
+
+
+
+non σ2t = σ
+2wt = bar(ut), t = 1, ..., T .
+25
+
+26
+2. KAPITULUA HETEROZEDASTIZITATEA.
+Heterozedastizitatezko egoera posibleak:
+1 kasua: Sekzio gurutzatutako datuak: Erregresore batek sortarazitako he-
+terozedastizitatea.
+Yi = α + βXi + ui
+i = 1, 2, ..., n.
+(2.1)
+Yi : i familiaren kontsumo gastua.
+Xi : i familiaren errenta.
+σ2i = f(Xi) f′ > 0
+2 kasua: Taldekatutako datuak:
+Izan bedi (2.1) eredua u ∼ (0, σ
+2I) per-
+turbazio esferikoduna. Demagun nahi ditugun n datuak ez ditugula
+eta eskuragarriak direnak, g1, . . . , gm multzotan taldekatutako m datu
+direla, gj multzoaren behaketen kopurua nj izanik.
+i
+∈gj
+Yi =
+i
+∈gj
+α + β
+i
+∈gj
+Xi +
+i
+∈gj
+ui
+j = 1, 2, ..., m,
+˜
+Yj = njα + β ˜
+Xj + ˜
+uj
+j = 1, 2, ..., m.
+Orduan
+bar(˜
+uj) =
+i
+∈gj
+bar(uj) = njσ
+2
+Antzerako kasua batezbesteko datuekin sortzen da, non perturbazio
+berria ¯
+uj = ˜
+uj/nj espresioan bihurtzen den eta bere bariantza σ2/nj,
+j-rekin ere aldatzen dena.
+
+2.1. DEFINIZIOA ETA ERAGILEAK
+27
+1 adibidea: Izan bedi ondorengo eredua eta 50 behaketaz osoturiko
+lagin bat
+Yt = α + βXt + ut
+t = 1, 2, ..., 50,
+non
+α = 10 β = 1 Xt = 1, ..., 50, eta ut ∼ N(0, 0.5X
+2
+t )
+Irudia 2.1: Perturbazio heterozedastikoak
+
+28
+2. KAPITULUA HETEROZEDASTIZITATEA.
+Lortzen diren KTA eta KTZko estimazioak:
+Irudia 2.2: Benetako eredua eta KTA eta KTZ estimazioak
+
+2.2. HETEROZEDASTIZITATEAREN DETEKTAPENA
+29
+2.2
+Heterozedastizitate detektapena
+2.2.1
+Metodo graﬁkoak
+• Azaldutako aldagaia vs heterozedastizitatea sortarazten duen
+suposatutako aldagai azaltzailea.
+• KTAko hondarrak vs heterozedastizitatea sortarazten duen
+suposatutako aldagai azaltzailea.
+• KTAko hondarren karratuak vs heterozedastizitatea sorta-
+razten duen suposatutako aldagai azaltzailea.
+Kontraste formalak:
+H0 : σ
+2
+1 = σ
+2
+2 = ... = σ
+2
+T non σ
+2
+t = bar(ut)
+Ha : Heterozedastizitatea.
+
+30
+2. KAPITULUA HETEROZEDASTIZITATEA.
+2.2.2
+Goldfeld eta Quandt-en kontrastea
+Ha : σ
+2
+t = f (zt) non f
+′(zt) > 0 ∀t
+( ´o f ′(zt) < 0 ∀t)
+Prozedura:
+1. Laginaren behaketa guztiak zt balio gorakorrekiko (edo beherakorre-
+kiko) ordenatzen dira.
+2. Erdiko P behaketa kentzen dira eta horrela bi azpilaginekin gelditzen
+gara, T1 eta T2 behaketaz osoturikoak hurrenez hurren.
+3. Azpilagin bakoitzaren datuak erabiliz, hasierako eredua KTA bitartez
+estimatzen da eta jarraian perturbazioen bariantza estimatu.
+ˆ
+σ21 =
+T1
+t
+=1 ˆ
+u21t
+T1 − K
+ˆ
+σ22 =
+T2
+t
+=1 ˆ
+u22t
+T2 − K
+4. Hurrengo estatistikoa eraikitzen dugu:
+GQ =
+ˆ
+σ22
+ˆ
+σ21
+H0
+∼ F(T
+2
+−K),(T1−K)
+non K, ereduaren erregresore kopurua den, terminu konstantea barne
+dagoelarik.
+Erabakitze araua: Homozedastizitate hipotesia baztertzen dugu α
+esangura mailarekin baldin eta GQ > F(T
+2
+−K),(T1−K)|α ematen bada.
+
+2.2. HETEROZEDASTIZITATEAREN DETEKTAPENA
+31
+2.2.3
+Breusch eta Pagan-en kontrastea
+Ha : σ
+2
+t = h(αo + α1z1t + ... + αpzpt)
+σ2t zehazpen honetan oinarrituz, homozedastizitatearen presentzia kontras-
+tatzea honetan datza:
+H0 : α1 = α2 = ... = αp = 0
+zeren eta Ho-ren menpean, σ2t = h(α0) konstantea bait da ∀t.
+Prozedura:
+1. Hasierako eredua KTA bitartez estimatzen da eta hondarrak, ˆ
+ut, ate-
+ratzen dira.
+2. Kalkulatzen dira
+ˆ
+e2t =
+ˆ
+u2t
+ˆ
+σ2u
+,
+t = 1, 2, ..., T,
+non hipotesi hutsaren menpean, ˆ
+σ2u perturbazio bariantzaren estima-
+tzaile tinkoa den (orokorrean ˆ
+σ2u =
+ˆ
+u
+2
+t
+T
+).
+3. Ondorengo ereduan KTA aplikatuz, KAB kalkulatzen da:
+ˆ
+e2t = αo + α1z1t + ... + αpzpt + ηt
+t = 1, ..., T.
+4. Kontrastearen estatistikoa hurrengoa izango da:
+BP =
+KAB
+2
+b,H0
+→ χ
+2
+p
+non p aldagaien kopurua den (z1, ..., zp).
+Erabakitze araua:
+Hipotesi hutsa baztertzen dugu α esangura
+mailarekin baldin eta BP > χ2
+p
+|α ematen bada.
+
+32
+2. KAPITULUA HETEROZEDASTIZITATEA.
+2.3
+KTZ: Karratu Txikienen Ponderatuak
+Y = Xβ + u
+Σ = E(uu′) = σ2Ω non Ω = I
+˜
+βKTZ = (X′Ω−
+1X)−1X′Ω−1Y = (X′Σ−1X)−1X′Σ−1Y
+bar( ˜
+βKTZ) = (X′ΣX)−
+1 = σ2(X′Ω−1X)−1
+Perturbazio heterozedastiko eta ez koerlatuen kasuan,
+˜
+β = (X′Σ−1X)−1X′Σ−1Y
+=
+
+
+
+
+
+
+
+
+
+
+X
+2
+1
+t
+σ
+2
+t
+X1tx2t
+σ
+2
+t
+· · ·
+X1txkt
+σ
+2
+t
+X2tX1t
+σ
+2
+t
+X
+2
+2
+t
+σ
+2
+t
+· · ·
+X2tXkt
+σ
+2
+t
+...
+...
+. .. ...
+XKtX1t
+σ
+2
+t
+XKtX2t
+σ
+2
+t
+· · ·
+X
+2
+Kt
+σ
+2
+t
+
+
+
+
+
+
+
+
+
+
+−1 
+
+
+
+
+
+
+
+
+X1tYt
+σ
+2
+t
+X2tYt
+σ
+2
+t
+...
+XKtYt
+σ
+2
+t
+
+
+
+
+
+
+
+
+
+zeina hurrengo ereduaren KTAko estimatzailea besterik ez den:
+Yt
+σt
+= β1
+X1t
+σt
++ β2
+X2t
+σt
++ . . . + βK
+XKt
+σt
++
+ut
+σt
+.
+bar
+ut
+σt
+=
+bar(ut)
+σ2t
+=
+σ2t
+σ2t
+= 1
+Hortaz, KTZko estimatzaileak KT ponderatuak dira non bariantza txikia-
+goa duten behaketei pisu handiagoa ematen zaien.
+Gauss-Markoven teorema: Eraldatutako ereduan oinarrizko hipo-
+tesiak betetzen direnez, estimatzaile lineal eta alboragabe guztien artetik
+˜
+βKTZ estimatzaileak du bariantzarik txikiena.
+
+2.3. KTZ: KARRATU TXIKIENEN PONDERATUAK
+33
+Ω bakarrik ezagutu ezkero
+Σ = σ2Ω = σ2
+
+
+
+
+
+
+
+
+w1 0
+· · · 0
+0
+w2 · · · 0
+...
+...
+. .. ...
+0
+0
+· · · wT
+
+
+
+
+
+
+
+
+˜
+β = (X′Ω−1X)−1X′Ω−1Y emaitza, eraldatutako ereduan KTA aplikatuz
+lor daiteke:
+Yt
+√
+wt
+= β1
+X1t
+√
+wt
++ β2
+X2t
+√
+wt
++ . . . + βK
+XKt
+√
+wt
++
+ut
+√
+wt
+non eraldatutako ereduaren perturbazioak homozedastikoak diren, barian-
+tza σ2 izango da, hain zuzen.
+bar
+
+
+ut
+√
+wt
+
+ =
+bar(ut)
+wt
+=
+σ2wt
+wt
+= σ2.
+σ2 eraldatutako ereduko perturbazioen bariantza denez, non ELOEko oi-
+narrizko hipotesi guztiak betetzen diren, bere estimatzaile alboragabea eta
+tinkoa honakoa da:
+˜
+σ2KTZ =
+T
+t
+=1 ˆ
+u∗
+2
+t
+T − K
+,
+non ˆ
+u∗t eraldatutako ereduaren KTAko hondarrak diren (ˆu∗t =
+Yt
+√
+wt −
+˜
+β1
+X1t
+√
+wt − . . . −
+˜
+βK
+XKt
+√
+wt ).
+˜
+σ2KTZ =
+˜
+u′
+KT Z Ω
+−1 ˜u′
+KT Z
+T − K
+=
+T
+t
+=1 ˜
+u2KTZ,t/wt
+T − K
+non ˜
+uKTZ = Y − X ˜
+β den.
+
+34
+2. KAPITULUA HETEROZEDASTIZITATEA.
+1 adibidea (jarraipena):
+Yt = α + βXt + ut
+σ2t = 0.5X
+2
+t
+Eraldatutako eredua:
+Yt
+Xt
+= α
+1
+Xt
++ β +
+ut
+Xt
+.
+bar
+ut
+Xt
+=
+bar(ut)
+X2t
+=
+0.5X2t
+X2t
+= 0.5
+Irudia 2.3: Perturbazio homozedastikoak
+
+2.4. KTZE: HETEROZEDASTIZITATEAREN ZEHAZPENA
+35
+2.4
+KTZE: heterozedastizitatearen zehazpena
+Errealitatean, bariantzaren egitura (Σ edo Ω) ezagutzea arraroa da,
+KTZetako estimazioa ezinezkoa izanik. Askotan, Σ edo Ω aurrez estimatu
+beharko dira. Azken hau egiterakoan Karratu Txikienen Zabaldu Eginko-
+rrak lortzen dira:
+˜
+βKTZE = (X′ ˆ
+Σ−1X)−1X′ ˆ
+Σ−1Y
+(2.2)
+= (X′ ˆ
+Ω−1X)−1X′ ˆ
+Ω−1Y
+(2.3)
+non ˆ
+Σ ( ˆ
+Ω), Σ-ren (Ω-ren) estimatzaile egokia den. KTZEren estimatzai-
+leak, KTZen estimatzailearen propietate asintotiko berberak ditu.
+Perturbazioak heterozedastikoak izatearen kasuan, baina koerlazio eza
+mantenduz, Σ edo Ω-ren estimazioa, perturbazio bakoitzaren bariantza
+estimatzean laburtzen da. Horretarako, bariantzaren egituraren informa-
+zio gehigarria behar dugu. Bestela, bariantza bakoitza estimatzerakoan
+behaketa bakar batekin aurkitzen gara. Ondorioz, bariantzaren egitura
+konkretu bat ezartzea beharrezkoa zaigu, horrela parametro ezezagunen
+kopurua murriztu egiten dugulako. Egitura honen parametro ezezagunak
+estimatzerakoan erabiltzen dugun informazioa, KTAko hondarretatik a-
+teratzen dugu. Beraz, KTZEko estimazioan jarraitu beharrezko pausuak
+ondorengoak dira:
+1. Heterozedastizitatearen presentzia ahaztuz, hasierako eredua KTA bi-
+dez estimatzen da eta hondarrak ateratzen ditugu, ˆ
+ut.
+2. σ2t-rentzat egitura ﬁdagarriren bat zehazten da.
+3. Erabakitako zehazpenean, σ2t ˆu
+2
+t -gatik ordezkatu eta bertatik ˆ
+σ2t-ren
+estimazioa lortzen da: ˆ
+Σ.
+
+36
+2. KAPITULUA HETEROZEDASTIZITATEA.
+4. Hasierako eredua eraldatu behaketa bakoitza
+ˆ
+σ2t-gatik zatitzen da.
+5. Eraldatutako eredua KTA bitartez estimatzen da.
+KTZE estimatzailea, beraz, bi estimazioen bidez lortzen da, ˆ
+σ2t estima-
+tzeko behar izan duguna eta ondoren araldatutako ereduari aplikatutako
+KTAk. 4 eta 5 pausuak, ˜
+βKTZE = (X′ ˆ
+Σ−1X)−1X′ ˆ
+Σ−1Y formularen aplika-
+zio zuzenagatik ordezka daitezke.
+2.5
+Whiten Bar( ˆ
+βKT A)ko estimatzailea
+KTZEko estimatzailearen propietateak, perturbazio bariantzaren funtzioa-
+rentzat suposatzen dugun egituraren egiazkotasunaren menpean dago, hor-
+taz, Σ-ren estimazio tinkoa bideratzen duena. Benetazko forma funtzionala
+ezezaguna balitz, beste edozein egituraren bat erabiltzerakoan, ˆ
+Σ = σ2Ω-
+ren estimatzailea ez tinkoa lortuko genuke. Hau dela eta, KTA erabiltzea
+komenigarriagoa litzateke, hauek behintzat alboragabeak eta tinkoak dire-
+lako.
+ˆ
+β = (X′X)−1X′Y
+bar( ˆ
+β) = (X′X)−1X′ΣX(X′X)−1
+= σ2(X′X)−1X′ΩX(X′X)−1
+Hala ere, β-ren gain inferentzia burutzeko, bar( ˆ
+β) ezagutzea edo estimatu
+ahal izatea behar dugu. KTA erabiltzen ditugu Σ = σ2Ω ezagutzen ez du-
+gulako (KTZ erabiltzea ezinezkoa izanik) eta ezinezkoa zaigulako era tinko
+batean estimatzea (bestela KTZE erabiliko genuke). Soluzioa honakoa da:
+bar( ˆ
+β)-ren Whiten estimatzailea:
+bar( ˆ
+β) = (X′X)−1X′SX(X′X)−1
+
+2.6. MURRIZKETA LINEALEN KONTRASTEAK
+37
+S =
+
+
+
+
+
+
+
+
+ˆ
+u21 0
+· · · 0
+0
+ˆ
+u22 · · · 0
+... ...
+. .. ...
+0
+0
+· · · ˆu
+2
+T
+
+
+
+
+
+
+
+
+non ˆ
+ut KTAko hondarrak diren heterozedastizitatea kontuan hartu barik.
+bar( ˆ
+β) ⇒ bar( ˆ
+β) − ren estimatzaile tinkoa da
+2.6
+Murrizketa linealen kontrasteak eta aurresanak
+2.6.1
+Kontrasteak:
+H0 : Rβ = r
+Ha : Rβ = r.
+Lau kasu bereiztu behar dira:
+1. Σ = σ2Ω guztiz ezaguna denean.
+2. Ω ezaguna denean baina σ2 ezezaguna.
+3. Ω ezezaguna izanik, heterozedastizitatearen egiturari buruzko balizko
+ﬁdagarriak inposatu ahal ditugunean.
+4. Heterozedastizitatearen egitura guztiz ezezaguna denean.
+Lehenego hirurak aurreko gaian ikusita daude. Azkenekoan KTA erabili
+behar dira.
+
+38
+2. KAPITULUA HETEROZEDASTIZITATEA.
+Guztiz ezezaguna den heterozedastizitatea
+Kasu honetan ezin dira KTZ erabili eta KTZE estimatzaile ez tinkoak
+ematen ditu bere banaketa asintotikoa ezezaguna izanik. KTAko ˆ
+β esti-
+matzailea erabiltzen dugu, badakigulako perturbazioen banaketa normala
+izanik, hurrengoa dugula
+ˆ
+β ∼ N(β, (X′X)−
+1X′ΣX(X′X)−1)
+Hipotesi hutsaren menpean daukagun banaketa:
+(R ˆ
+β − r)′[R(X′X)−
+1X′ΣX(X′X)−1R′]−1(R ˆ
+β − r)
+H0
+∼ χ
+2
+q
+ˆ
+β-ren bariantz eta kobariantz matrizea ezezaguna denez, bere estima-
+tzaile tinko bat erabili behar dugu, gutxienez banaketa asintotikoa man-
+tentzen dela bermatzen duena. Erabiliko dugun estimatzailea Whitena da:
+Fdd = (R ˆ
+β − r)′[R(X′X)−
+1X′SX(X′X)−1R′]−1(R ˆ
+β − r)
+b,H0
+−→ χ
+2
+q
+Erabakitze araua: hipotesi hutsa baztertzen dugu α esangura mailarekin,
+η > χ2
+q
+|α ematen bada. Gogora ezazue lagin handietako kontrastea dela.
+
+3. Kapitulua
+Autokoerlazioa
+3.1
+Eragileak eta zehazpena.
+Erregresio lineal orokorraren ereduan:
+Yt = β1 + β2X2t + . . . + βKXKt + ut t = 1, 2, ..., T
+autokoerlazioa edo denbora bereko koerlazioa existitzen dela esango
+dugu, baldin eta perturbazio desberdin biren arteko koerlazioren bat (edo
+gehiago) zerotik ezberdina bada:
+∃t = s non: E(utus) = 0
+Ondorioz, perturbazioak ez dira esferikoak zeren E(uu′) = Σ diagonala ez
+baita. Homozedastizitatea berriz, mantentzen dela suposatzen dugu, hau
+da, diagonal nagusiko elementu guztiak berdinak direla.
+E(uu′) =
+
+
+
+
+
+
+
+
+σ2
+u
+σ12 · · · σ1T
+σ12 σ2u
+· · · σ2T
+...
+... ... ...
+σ1T σ2T · · · σ
+2
+u
+
+
+
+
+
+
+
+
+= Σ
+(3.1)
+39
+
+40
+3. KAPITULUA AUTOKOERLAZIOA.
+3.1.1
+Autokoerlaziodun egoerak
+Serie denboraleko datuak
+• Shock aleatorio baten eragin egonkorra.
+Yt = α + βXt + ut
+t = 1, 2, ..., T.
+(3.2)
+Yt : t hileko Coca-Colaren salmentak.
+Xt : t hileko Coca-Colaren prezioa.
+Hilabete konkretu batean Coca-Coca laten kutsatutako partida bat
+agertzen bada, ondorio bezala Coca-Colaren salmentak hurrengo hi-
+labeteetan, esperotakoak baino txikiagoak izango dira. Eragin hau
+apurka apurka desagertzen joango da balio arruntetara heldu arte.
+• Tasetan neurtuta dauden datuak.
+Normalean, aldagai ekonomikoetan, etengabe aldatzen direnak, tar-
+teka neurtzen direnean (ad. hiruhilabetealdiko datuak) eta aurreko
+epearekiko hazkunde tasa bat bezala adierazita daudenean, autokoer-
+lazioa agertzen da. Tasen erabilerak beti sortzen du autokoerlazioa.
+Ad, Barne Produktu Gordina aurreko urtearekiko duen hazkunde tasa
+bezala neurtzen bada,
+BP Gt = f (Xt) + ut
+∆BP Gt = BP Gt − BP Gt−1 = f(Xt, Xt−1) + ut − ut−1
+∆ut
+Normalean hazkunde tasa ∆BPGt
+BP Gt−1 da, baina zatitzailea alde batera
+utziz, ∆BP Gt autokoerlatuta dagoela ikustea erraza da:
+∆ut = ut − ut−1
+eta
+∆ut−1 = ut−1 − ut−2
+biak ut−1 − ren menpean bait daude.
+
+3.1. ERAGILEAK ETA ZEHAZPENA
+41
+• Erlazio dinamikoak.
+Aldagai ekonomikoen arteko erlazio gehienak epe batera baino gehia-
+gora luzatzen dira. Demagun inﬂazioa eta diru eskaintza erlazioaren
+adibidea:
+πt = β1 + β2mt + β3πt−1 + ut
+Egitez, erlazio dinamikoak oraindik konplexuagoak izan daitezke, eta
+kasu hauetan erlazio hori perturbazioetara pasatzen da eta autokoer-
+lazioa agertuko litzaiguke.
+Ereduaren zehazpen txarra eta autokoerlazioa
+• Forma funtzional ezegokia.
+Demagun enpresa baten kostu marginala (KM) eta produkzioaren (P)
+arteko erlazioa koadratikoa dela:
+KMt = β1 + β2 Pt + β3 P
+2
+t + ut
+baina doitzen den eredua ondorengoa dela:
+KMt = β1 + β2 Pt + wt
+Kostu marginalaren doikuntza lineal bat egiteagatik, behaketek joera
+bat aurkezten dute: produkzio maila txiki eta handien kasuan behake-
+tak erregresio zuzenaren gainetik aurkitzen dira eta produkzio maila
+ertaina denean, behaketak erregresio zuzenaren azpitik agertzen dira.
+Irudia 3.1: Forma funtzional ezegokia
+Producción
+Coste Mariginal de Producción
+
+42
+3. KAPITULUA AUTOKOERLAZIOA.
+• Autokoerlazioa daukaten aldagai ahanztuak.
+Demagun ondorengo eredua benetakoa dela:
+Yt = β1 + β2X2t + β3X3t + ut
+(3.3)
+Baina arrazoiren batengatik, beste erregresio eredu hau estimatzen
+dela:
+Yt = β1 + β2X2t + wt
+(3.4)
+Orduan, (3.3) “benetako” eredua baldin bada, (3.4) erregresioaren
+perturbazioak wt = β3X3t + ut dira. X3t-ren balio jarraiak koerlatuta
+badaude, orduan wt aldagaiak ere autokoerlazioa aurkeztuko du.
+• Ziklo ekonomikoak eta tendentziak.
+Aldagai ekonomiko batzuk, BPG adibidez, zikloak aurkezten dituzte.
+Boladetan, batezbestekoaren gainetik edo azpitik ibiltzeko joera izaten
+dute.
+Irudia 3.2: Zikloaren adibidea: urteroko BPG
+
+3.1. ERAGILEAK ETA ZEHAZPENA
+43
+3.1.2
+Zehazpena
+ut, us perturbazio bikoteen erlazioa aurkitzean datza. ut, usren arteko
+koerlazio koeﬁzientea hurrengo moduan deﬁnitzen da:
+ρts =
+kob(ut, us)
+des(ut) des(us)
+=
+σts
+σtσs
+=
+σts
+σuσu
+=
+σts
+σ2u
+E(uu′) (3.1) matrizea, ρtsren funtzioan idazten dugu:
+E(uu′) = σ2u
+
+
+
+
+
+
+
+
+1
+ρ12 ρ13 · · · ρ1T
+ρ12
+1
+ρ23 · · · ρ2T
+...
+...
+... ... ...
+ρ1T ρ2T ρ3T · · · 1
+
+
+
+
+
+
+
+
+= σ2uΩ
+(3.5)
+Printzipioz, Ω matrizeak estimatu beharreko parametro gehiegi dauka.
+Parametro kopurua murrizteko, ρts autokoerlazio koeﬁzienteak atzerapenaren
+menpe egongo direla soilik suposatuko dugu, hau da, |t − s| diferentziaren
+menpe. Horrela:
+ρ12 = ρ23 = ρ34 = . . . = ρ1
+ρ13 = ρ24 = ρ35 = . . . = ρ2
+Sinpliﬁkazio honekin Ω matrizea hurrengo moduan geratzen da:
+Ω =
+
+
+
+
+
+
+
+
+
+
+
+1
+ρ1
+ρ2
+· · · ρT−1
+ρ1
+1
+ρ1
+· · · ρT−2
+ρ2
+ρ1
+1
+· · · ρT−3
+...
+...
+...
+. ..
+...
+ρT−1 ρT−2 ρT−3 · · ·
+1
+
+
+
+
+
+
+
+
+
+
+
+(3.6)
+Hala ere, Ω-n, (T − 1) parametro ezberdin daude. ut-rentzat, auto-
+koerlazio mota ezberdin asko jasotzeko gai diren eredu batzuk kontutan
+hartuko ditugu, ARMA ereduak (= autoerregresiboak eta batezbeste
+higikorrak):
+ut = φ1ut−1 + . . . + φput−p
+AR
+(p)
+zatia
++ θ1ǫt−1 + . . . + θqǫt−q
+M A
+(q)
+zatia
++ǫt
+
+44
+3. KAPITULUA AUTOKOERLAZIOA.
+ARMA prozedura baten propietateak, ǫt, berrikuntzen menpe daude.
+Aldagai hau, ǫt ∼ ibb(0, σ
+2
+ǫ ) bezala zehazten da, zarata zuria izenaz ezagu-
+tzen dena.
+Ω matrizea ezberdina da ARMA prozedura bakoitzarentzat eta parame-
+tro gutxien menpe egongo da ⇒ β KTZ egonkorren bidez estima daiteke.
+Bi adibideen bidez ikusiko dugu: AR(1) eta MA(1) prozedurak.
+AR(1) prozedura.
+ut = ρut−1 + ǫt ǫt ∼ iib(0, σ
+2
+ǫ )
+|ρ| < 1
+(3.7)
+Datu ekonomikoetan sarritan agertzen den autokoerlazio mota da. Atze-
+rantz ordezkatuz, ut, ǫt-ren oraingo eta aurreko balioen konbinazio lineal
+bat bezala idatz daiteke:
+ut = ρut−1 + ǫt = ρ
+2ut−2 + ρǫt−1 + ǫt = · · · =
+∞
+j
+=0
+ρ
+j ǫt−j
+Prozedura honen propietateak hurrengoak dira:
+E(ut) = E(
+∞
+j
+=0
+ρ
+j ǫt−j) =
+∞
+j
+=0
+ρ
+j E(ǫt−j) = 0
+E(u2t) = E(
+∞
+j
+=0
+ρ
+j εt−j)2 =
+∞
+j
+=0
+ρ2
+j E(ε2
+t
+−j) = σ
+2
+ε (1 + ρ
+2 + ρ4 + ρ6 + . . .)
+|ρ| < 1 bada,
+B(ut) = σ
+2
+u =
+σ2ε
+1 − ρ2
+,
+∀t
+Gainera:
+E(utut−1) = E[(ρut−1 + ǫt)ut−1] = ρE(u
+2
+t
+−1) + E(ut−1ǫt) = ρσ
+2
+u
+E(utut−2) = E[(ρut−1 + ǫt)ut−2] = ρE(ut−1ut−2) + E(ut−2ǫt) = ρ
+2σ2
+u
+Orokorrean,
+E(utut−s) = ρ
+sσ2
+u da eta ondorioz:
+E(uu′) = σ2u
+
+
+
+
+
+
+
+
+1
+ρ
+ρ2
+· · · ρ
+T
+−1
+ρ
+1
+ρ
+· · · ρ
+T
+−2
+...
+...
+...
+. ..
+...
+ρT−1 ρT−2 ρT−3 · · ·
+1
+
+
+
+
+
+
+
+
+(3.8)
+
+3.1. ERAGILEAK ETA ZEHAZPENA
+45
+AR(1) prozedura ezartzerakoan, E(uu′) bariantz eta kobariantz matrizean
+agertzen diren parametro ezezagunen kopurua murriztea lortu da, orain bi
+izanik: σ2u eta ρ (edota σ
+2
+ǫ eta ρ).
+Ondorengo graﬁkak, autokoerlatu gabeko (ut = ǫt) eta AR(1) autokoer-
+lazio positiboa (ut = 0, 9ut−1 + ǫt) duten perturbazioen portaera konpara-
+keta erakusten du.
+Irudia 3.3: Zarata zuria eta AR(1) positiboadun perturbazioak
+-2,5
+-2
+-1,5
+-1
+-0,5
+0
+0,5
+1
+1,5
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+Ruido blanco (u)
+-3
+-2,5
+-2
+-1,5
+-1
+-0,5
+0
+0,5
+1
+1,5
+2
+2,5
+1
+3
+5
+7
+9
+11 13 15 17 19
+u = AR(1) (ro=0.9)
+MA(1) prozedurak.
+ut = ǫt + θǫt−1 ǫt ∼ iib(0, σ
+2
+ǫ )
+(3.9)
+Prozedura honen propietateak hauek dira:
+E(ut) = E(ǫt) + θE(ǫt−1) = 0
+E(u2t) = E(ǫt + θǫt−1)
+2 = E(ǫ2
+t ) + θ
+2E(ǫ2
+t
+−1) + 2θE(ǫtǫt−1) = σ
+2
+ǫ (1 + θ
+2)
+Perturbazioen batezbestekoa zero da eta bariantza konstantea. Gainera:
+E(utut−1) = E(εt + θεt−1)(εt−1 + θεt−2) = θσ
+2
+ε
+E(utut−2) = E(εt + θεt−1)(εt−2 + θεt−3) = 0
+E(utut−s) = 0
+s ≥ 2
+da eta beraz
+E(uu′) = σ2u
+
+
+
+
+
+
+
+
+1
+θ
+1+θ
+2
+0
+· · · 0
+θ
+1+θ
+2
+1
+θ
+1+θ
+2
+· · · 0
+...
+...
+... ... ...
+0
+0
+0
+· · · 1
+
+
+
+
+
+
+
+
+(3.10)
+
+46
+3. KAPITULUA AUTOKOERLAZIOA.
+3.2
+Autokoerlazioaren detektapena
+ut perturbazioak ez dira behagarriak. Gainera,
+ˆ
+uKTA = Y − X ˆ
+βKTA
+u
+= Y − Xβ
+
+
+ →
+ˆ
+uKTA − u = −X( ˆ
+βKTA − β)
+eta ˆ
+βKTA
+p
+→ β bada, orduan KT A hondarrak u perturbazioen hurbilketa
+ona dira. Beraz, autokoerlazioaren detektapena ˆ
+uKTA hondarren ikerketan
+oinarritzen da.
+3.2.1
+Metodo graﬁkoak
+• KTA hondarrak denboran zehar. Hondarrek jarraitzen duten
+portaera zarata zuri edo prozedura autoerregresibo baten itxura du-
+ten ala ez zehazten saiatuko gara (ikusi 3.3 graﬁkoa zarata zuri eta
+prozedura AR(1) positiboaren adibide bezala).
+• KTA hondarra ˆ
+ut, bere aurreko balioarekiko ˆ
+ut
+−1.
+• KTA hondarren lagin Koerlograma. j ordenako autokoerlazio
+lagin koeﬁzientea hurrengo moduan deﬁnitzen da:
+ˆ
+ρj =
+T
+t
+=j+1 ˆ
+utˆ
+ut−j
+T
+t
+=j+1 ˆ
+u2t−j
+ˆ
+ρj-ren adierazpen graﬁkoa, j-ren funtzioan, hondarren lagin koerlogra-
+ma da. ˆ
+ρj koeﬁziente bakoitza, Ω(3.13) matrizearen ρj perturbazioen,
+j ordenako autokoerlazio koeﬁzientearen hurbilketa bezala hartzen du-
+gu. Zarata zuri bat bereizten da bere autokoerlazio koeﬁzienteak zero
+direlako, ρj = 0, ∀j > 0. Hau da, autokoerlaziorik ez badago, hon-
+darren koerlogramak zerotik hurbil dauden balioak izan behar ditu,
+ˆ
+ρj ≃ 0.
+Kontraste formalak:
+Planteaketa orokorra honako da:
+H0: Serial koerlazio eza (hau dar, ρj = 0, j = 1, 2, . . .)
+Ha: Autokoerlazioa
+(ARMA prozedura zehatz bat izan daiteke)
+
+3.2. AUTOKOERLAZIOAREN DETEKTAPENA
+47
+3.2.2
+Durbin-Watson-en kontrastea
+AR(1) motako autokoerlazioa hautemateko eraikita dago, hau da,
+ut = ρut−1 + ǫt non ǫt zarata zuria den. Kontrastearen estatistikoari d edo
+DW deritzogu:
+d = DW =
+T
+t
+=2(ˆ
+ut − ˆut−1)
+2
+T
+t
+=1 ˆ
+u2t
+non ˆ
+ut KTAko hondarrak diren. Bere erabilera ulertzeko baliogarria den
+estatistiko honen beste espresio bat lortu daiteke (hurbilketa). Zenbaki-
+tzailea berridatziz,
+DW =
+T
+t
+=2 ˆ
+u2t +
+T
+t
+=2 ˆ
+u2t−1 − 2
+T
+t
+=2 ˆ
+utˆ
+ut−1
+T
+t
+=1 ˆ
+u2t
+ondorengoa kontuan izanik,
+• T handia da,
+T
+t
+=2
+ˆ
+u2t ≃
+T
+t
+=2
+ˆ
+u2t−1 ≃
+T
+t
+=1
+ˆ
+u2t;
+• KTAko jarraiko hondarren lagin koerlazio koeﬁzientea ondorengoa da:
+ˆ
+ρ =
+T
+t
+=2 ˆ
+utˆ
+ut−1
+T
+t
+=2 ˆ
+u2t−1
+(3.11)
+horrela, DW -en hurbilketa ondorengoa izango da:
+DW ≈ 1 + 1 − 2ˆ
+ρ
+≈ 2(1 − ˆ
+ρ)
+Azkenik, ˆ
+ρ ρ-ren estimatzaile tinkoa dela kontuan hartuz eta −1 ≤ ρ ≤ 1
+dela, orduan
+ρ = 1 ⇒ DW ≈ 0
+(autokoerlazio positiborik handiena)
+ρ = 0 ⇒ DW ≈ 2
+(autokoerlaziorik ez)
+ρ = −1 ⇒ DW ≈ 4
+(autokoerlazio negatiborik handiena)
+hau da, DW ∈ (0, 4) gutxi gora behera.
+
+48
+3. KAPITULUA AUTOKOERLAZIOA.
+Zoritxarrez, DW estatistikoaren banaketa ez da ohikoak bezalakoak (X-
+ren funtzioan dago). Banaketaren ordez, behe kotak, di, eta goi kotak, ds,
+tabulatuta agertzen dira. Hauen bitartez, autokoerlazio positiboaren exis-
+tentzia kontrastatu ahal dugu, balio gune baten izan ezik. Gune honetan,
+zalantza gunea deritzoguna, kontrasteak ez bait du ezer baieztatzen.
+Kontrastearen prozedura honakoa da:
+1. Hipotesi alternatiboa erabaki (autokoerlazio positibo edo negatiboa).
+H0 : ρ = 0 ezartzen dugu eta Ha laginaren informazioaren arabera
+aukeratzen dugu, adibidez, ˆ
+ρ-ren ikurra begiratzen dugu. Demagun
+Ha : ρ > 0 aukeratzen dugula.
+2. DW estatistikoa kalkulatuko dugu.
+3. Esangura maila bat aurretik erabakiz (ad. α = %5), taulatik di eta
+ds kotak aterako ditugu. Kota hauek aldagai azaltzaileen kopuruaren
+menpekoak dira (terminu konstantea kanpo delarik).
+4. DW balioa, di eta ds koten balioekin konparatuko dugu:
+DW < di bada ⇒ H0 : ρ = 0 baztertu
+DW > ds bada ⇒ H0 : ρ = 0 ez baztertu
+di < DW < ds bada ⇒ ezin dugu ezer baieztatu
+Aurkako hipotesia autokoerlazio negatiboa baldin bada, kontrastearen
+prozedura berdina da, baina erabili beharreko kotak 4 − di eta 4 − ds dira.
+Graﬁkoki:
+Irudia 3.4: DW estatistikoa
+AR(1)
+???
+Ho ez baztertu
+???
+AR(1)
+positiboa
+negatiboa
+0<--->di
+di<--->ds
+ds<--->2<--->4-ds
+4-ds<--->4-di
+4-di<--->4
+
+3.2. AUTOKOERLAZIOAREN DETEKTAPENA
+49
+Oharrak:
+• Nahiz eta zalantza guneak autokoerlazioa ez onartu, zalantzaren au-
+rrean, arrazoizkoa dirudi estimatzeko orduan autokoerlazioa balego
+bezala jokatzea.
+• di eta ds kotaren balioak ereduan terminu konstantearen presentzia-
+rekin aldatzen dira. Askotan, terminu independentea duen eredua
+estimatzen dugu, kasu honetarako kalkulatutako taulak erabiltzen di-
+tugularik, non k‘ erregresore kopurua adierazten duen terminu inde-
+pendentea ezik.
+• Kontrastea X aldagai estokastikoak ez direlaren suposiziopean eraiki-
+ta dago.
+• Estatistikoa ut-k AR(1) prozedura jarraitzen duelaren baldintzapean
+eginda dago. Hala ere, orden handiagodun autokoerlazioa eta baita
+beste motako autokoerlazioa hautematzeko gai da, nahiz eta beraiei
+buruzko informaziorik ez eman.
+• Hipotesi hutsa baztertzearen kasuan, ereduaren zehazpen txar baten
+aurrean egoteko posibilitatea dago.
+
+50
+3. KAPITULUA AUTOKOERLAZIOA.
+3.2.3
+Breusch eta Godfrey-ren kontrastea
+Durbin eta Watsonen autokoerlazio kontrastea baino orokorragoa da. Hi-
+potesiak honela zehazten dira:
+H0 :
+Autokoerlaziorik ez
+Ha :
+ut = ρ1ut−1 + ρ2ut−2 + . . . + ρput−p + ǫt
+AR(p) edo
+ut = ǫt + θ1ǫt−1 + θ2ǫt−2 + . . . + θpǫt−p
+M A(p)
+non ǫt ∼ NIB(0, σ
+2
+ǫ ). Aukeratu beharreko edozein p ordenarako, Durbin
+eta Watsonen autokoerlazio kontrastea baino orokorragoa da.
+Kontrastearen prozedura honako hau dugu:
+1. Yt = β1 + β2X2t + . . . + βKXKt + ut t = 1, 2, ..., T eredua KTA bidez
+estimatu eta KTAko hondarrak kalkulatu, ˆ
+ut.
+2. Ateratako hondarrak eta hasierako ereduko erregresoreak erabiliz, on-
+dorengo eredu laguntzailea KTA bitartez estimatzen da:
+ˆ
+ut = α1ˆ
+ut−1 + . . . + αpˆut−p + αp+1 + αp+2X2t + . . . + αp+KXKt + wt
+eta erregresio honetako R2 kalkulatzen da.
+3. Orduan, H0 menpean,
+T R2
+b,H0
+→ χ
+2
+p
+non p susmatzen dugun autokoerlazio prozeduraren ordena den. T R2
+tauletako χ2
+p balioarekin konparatzen dugu aurrez erabakitako esan-
+gura mailarentzat. Hipotesi hutsa baztertu egingo dugu estatistikoa
+taulako balioa baino handiagoa izatearen kasuan eta alderantziz.
+Oharrak:
+• Kontraste honek, ereduak jarraitzen duen autokoerlazio prozedura-
+ren ordena erabakitzeko balio du. Baina ez digu balio zein motako
+autokoerlazioa, AR(p) edo M A(p), den erabakitzeko.
+• Aldagai azaltzaileen artean, DW kontrastea ez bezala, aldagai alea-
+torioak egon daitezke.
+
+3.3. AUTOKOERLAZIODUN EREDUEN ESTIMAZIOA: KTZ/KTO
+51
+3.3
+Autokoerlaziodun ereduen estimazioa: KTZ/KTO
+Izan bedi eredua
+Y = Xβ + u
+E(uu′) = σ2uΩ
+Badakigu KTAko estimatzailea ez dela bariantzarik txikiena duena.
+Atal honetan Ω ezaguna dela suposatuko dugu eta ondorioz bariantza-
+rik txikiena duen estimatzailea KTZ da. AR(1) eta M A(1) autokoerlazio
+prozedura jarraitzen dituzten ereduak aztertuko ditugu.
+3.3.1
+AR
+(1)-dun perturbazioak
+ut = ρut−1 + ǫt
+ǫt
+ibb
+∼ (0, σ
+2
+ǫ )
+|ρ| < 1
+˜
+βKTZ lortzeko bi aukera ditugu:
+1. Hasierako ereduaren parametroak KTZ bitartez zuzenean estimatzea.
+2. Eraldatutako ereduaren parametroak KTA bitartez estimatzea.
+KTZn zuzeneko estimazioa
+Datuetan zuzenean aplika dezakegu:
+˜
+βKTZ = (X′Ω−
+1X)−1XΩ−1Y
+(3.12)
+non
+Ω =
+
+
+
+
+
+
+
+
+
+
+
+1
+ρ1
+ρ2
+· · · ρT−1
+ρ1
+1
+ρ1
+· · · ρT−2
+ρ2
+ρ1
+1
+· · · ρT−3
+...
+...
+...
+. ..
+...
+ρT−1 ρT−2 ρT−3 · · ·
+1
+
+
+
+
+
+
+
+
+
+
+
+(3.13)
+Eraldatutako ereduaren KTAko estimazioa
+Hasierako eredua eraldatzeko, berau P −1 matrizeagatik aurrebiderkatzen
+dugu non Ω = P P ′ den:
+P −1Y = P −1Xβ + P −1u
+(3.14)
+
+52
+3. KAPITULUA AUTOKOERLAZIOA.
+eta
+P −1
+=
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+√
+1 − ρ2 0 0 · · · 0 0
+−ρ
+1
+0 · · · 0 0
+0
+−ρ 1 · · · 0 0
+...
+... ... ... ... ...
+0
+0
+0 · · · 1 0
+0
+0
+0 · · · −ρ 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+dagokion
+1
+√
+1−ρ
+2
+terminua desagertzen delarik eredua P −1-gatik aurre-
+biderkatzerakoan. Matrizeak irekiz, (3.14) eraldatutako ereduaren itxura
+ondorengoa da:
+
+
+
+
+
+
+
+
+√
+1 − ρ2Y1
+Y2 − ρY1
+...
+YT − YT−1
+
+
+
+
+
+
+
+
+=
+
+
+
+
+
+
+
+
+√
+1 − ρ2
+√
+1 − ρ2X11
+· · ·
+√
+1 − ρ2XK1
+1 − ρ
+X22 − ρX21
+· · ·
+XK2 − ρXK1
+...
+...
+. ..
+...
+1 − ρ
+X2T − ρX2(T−1) · · · XKT − ρXK(T−1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+β1
+...
+βK
+
+
+
+
+
++
+
+
+
+
+
+
+
+
+√
+1 − ρ2u1
+ǫ2
+...
+ǫT
+
+
+
+
+
+
+
+
+(3.15)
+non perturbazioak, lehenengo behaketan ezik, (3.7)-tik zuzenean lortu-
+tako ǫt-ak diren. Zarata zuria dira eta, beraz, eraldatutako eredu honen
+KTAko estimatzailea bariantza minimokoa da. Lehen perturbazioak, ǫ1,
+espresio ezberdin bat dauka, u0 ez delako existitzen, baina beste berri-
+kuntzen propietate berdinak dauzka. Adibidez, bere bariantza hurrengoa
+da
+E( 1 − ρ2u1)
+2 = (1 − ρ2)E(u21) = (1 − ρ2)σ2
+u = σ
+2
+ǫ
+
+3.3. AUTOKOERLAZIODUN EREDUEN ESTIMAZIOA: KTZ/KTO
+53
+Lehen behaketa gabeko eraldatutako eredua
+Eraldatutako eredua, (3.15), ut ∼ AR(1) bada, erraz lortu daiteke on-
+doko pausuak emanez. ELOE hurrengoa bada:
+Yt = β1 + β2X2t + . . . + βKXKt + ut,
+t = 1, 2, ..., T
+(3.16)
+Denboraldi bat atzeratuz eta ρ-gatik biderkatuz:
+ρYt−1 = ρβ1 + ρβ2X2,t−1 + . . . + ρβKXK,t−1 + ρut−1,
+t = 2, ..., T (3.17)
+Ondoren, (3.16) ereduari (3.17) kenduz:
+Yt − ρYt−1 = (1 − ρ)β1 + β2(X2t − ρX2,t−1) + . . . + βK(XKt − ρXK,t−1) +
++ (ut − ρut−1)
+ǫt
+t = 2, ..., T
+(3.18)
+(3.15) emandako eraldatutako eredu bera daukagu, lehen behaketa ezik,
+omititzen dena. Nahiz eta behaketa baten informazioa ez erabiltzea eﬁzien-
+tea ez izan, sortutako galera ez da garrantzitsua T handia denean. Orden
+nagusiagoko autokoerlatutako perturbazioak dituzten ereduen eraldakun-
+tza, pausu hauek orokortuz lortzen da.
+V ar ˜
+βKTZ-ren estimatzailea.
+˜
+βKTZ eredu transformatuaren KTA estimatzailea denez, orduan:
+V ar ˜
+βKTZ = σ
+2
+ǫ (X
+∗′X∗)−1
+eta σ2ǫ KTA bitartez estimatzen da eredu transformatuan
+ˆ
+σ2ǫ =
+ˆǫ′ˆǫ
+T − K
+Hasierako ereduaren perturbazioen bariantza honela estima daiteke:
+˜
+σ2u =
+ˆ
+σ2ǫ
+1 − ρ2
+3.3.2
+M A
+(1)-dun perturbazioak
+Kasu honetan,
+ut = ǫt + θǫt−1
+ǫt
+ibb
+∼ (0, σ
+2
+ǫ )
+
+54
+3. KAPITULUA AUTOKOERLAZIOA.
+KTZ zuzenean aplikatzeko (3.12) espresioa erabiltzen dugu non Ω ma-
+trizea (3.10) delarik. Prozedura autoerregresiboak ez bezala, kasu honetan
+ez da erraza eraldatutako eredua lortzea.
+3.4
+KTZE: AR(1) prozedura
+Praktikan, KTZ aplikatzea ia ezinezkoa da zeren normalean ρ ezezaguna
+izaten bait da. Ondorioz, β eta σ2u parametroekin batera ρ estimatu behar
+da. Azkenik, KTZE aplikatzen dira, hauen propietate asintotikoak KTAko
+estimatzailearenak baino hobeagoak direlako. Hau aurrera eramateko hiru
+aukera ditugu:
+1. Bi etapetako metodoa ρ erabili beharrean bere estimatzaile tinko
+bat erabiltzean datza, hau da
+ˆ
+ρ =
+T
+t
+=2 ˆ
+utˆ
+ut−1
+T
+t
+=2 ˆ
+u2t−1
+eta aurreko atalean ikusitako KTZ estimatzailea lortzeko proposatu-
+tako aukeren bat erabiltzea. Horrela lorturiko ˜
+βKTZE estimatzailea
+tinkoa dela froga daiteke.
+Arazoa: ˆ
+βKTA estimatzaileak ez du bariantzarik txikiena, beraz be-
+rarekin lortutako ρ-ren estimazioa ez da hoberena izango. ρ-ren esti-
+mazioa zenbat eta hurbilago egon bere benetako baliotik, hainbat eta
+zehatzagoa izango da ˜
+βKTZE, lagin tamainu batentzat. Estimazioa
+hobetzeko era bat hurrengoa da.
+2. Metodo iteratiboa (Cochrane eta Orcutt)
+Aurreko atalean lortutako estimazioa hobetzean datza, hurrengo mo-
+duan:
+• Lehen ˜
+β
+(1)
+E
+lortu ondoren (goi indizeak, parametro bakoitza zenbat
+aldiz estimatua izan den adierazten du = iterazioa) hondarrak
+kalkulatzen dira ˜
+u
+(1)
+E
+= Yt − X′t ˜
+β
+(1)
+E
+non X′t = (1 X2t . . . XKt) den.
+ˆ
+ρ-ren formulan, (3.11), ordezkatuz, estimazio berria ateratzen da
+˜
+ρ
+(1)
+E .
+
+3.5. KONTRASTEAK ETA AURRESANAK
+55
+• Estimazio berriarekin, ˜
+ρ
+(1)
+E
+˜
+β
+(2)
+E
+kalkulatuko da → ˜u
+(2)
+E
+→
+˜
+ρ
+(2)
+E
+. . . Honela jarraitzen dugu |˜
+ρ(i+1) − ˜
+ρ(i)| aurrez erabakitako balio
+bat baino txikiagoa izan arte.
+• β eta ρ-ren azken estimatzaileak ˜
+β
+(i)
+E
+eta ˜
+ρ
+(i)
+F
+izango dira.
+3. Sare bilakera (Hildreth eta Lu)
+Metodo honen ideia, ρ ∈ (−1, 1) erabiltzean datza, eraldatutako ere-
+dua lortzeko (hau da, autokoerlaziorik ez duten perturbazioen ere-
+dua). Estrategia hurrengoan datza: eraldatutako eredua estimatzean,
+ρ parametro ezezagunaren balio ezberdinei baldintzatuz eta HKBrik
+txikiena lortzen duena aukeratu.
+Eraldatutako eredua (ρ = ρi erabiliz) hurrengo moduan idatz daiteke:
+Yt − ρiYt−1 = (X′t − ρiX′t−1)β + ǫt
+t = 2, ..., T
+(3.19)
+Jarraitu beharreko pausuak hauek dira:
+• Lehen sarea ﬁnkatu, hau da ρ-ren balio posible batzuk aukeratu
+(ρi, i = 1, . . . , n). Adibidez, n = 39 emanik ρi-ren balioak -0.95,
+-0.9, -0.85, . . . , -0.05, 0, 0.05, . . . , 0.95 dira.
+• ρi balio bakoitzarentzat eraldatutako eredua eraiki, (3.19), eta
+KTAn bitartez estimatu eta dagokion HKB(ρi) kalkulatu.
+• ˜
+βE eta ˜
+ρE estimatzaileak HKB(ρi)-rik txikienari dagozkienak di-
+ra. Zehaztasun handiago bat lortzeko, HKB(ρi)-rik txikiena lortu
+duen ρi balioaren inguruan sare bat eraikitzen da, berriro proze-
+dura guztia errepikatuz.
+Metodo honek aurkezten duen abantaila zera da, nahiko zehatza den
+sari bat erabiliz (n handia), ia guztiz bermatuta daukagu eraldatutako
+ereduaren HKBren minimo orokorraren lorpena.
+3.5
+Kontrasteak eta Aurresanak
+3.5.1
+Murrizketa linealen kontrasteak
+Autokoerlazioaren presentzian kontrasteak aurrera eramateko behar dugun
+teoria, bai KTZ bai KTZE bitartez, lehen gaian emanda dago. Desberdin-
+tasuna, Ω, Σ eta σ2u estimatzaileak lortzean datza.
+
+56
+3. KAPITULUA AUTOKOERLAZIOA.
+
+4. Kapitulua
+Erregresore estokastikoak
+4.1
+Sarrera
+Y = Xβ + u
+X erregresore ez estokastikoen balizkoa mantentzea, ekonomian, zaila
+izaten da. Arrazoiak:
+• aldagai ekonomikoak, agente ekonomikoen (kontsumitzaileak, produ-
+zitzaileak,...) erabaki aleatorioen bitartez zehazten dira.
+• neurketa erroreak dituzten aldagai ekonomikoak agertzen dira (inkes-
+tak, aldagai ezezagunen hurbilketak ...).
+X-rekiko baldintzaturiko analisiaren emaitzak ez dira aldatzen (X-ri
+baldintzatzeak, X ﬁnkoak bezala bezala hartzea suposatzen du). Baina
+baldintzatu gabeko analisia guztiz aldatzen da.
+X estokastikoa bada, bere banaketa kontuan hartu behar dugu eta baita
+u-rekin duen erlazioa ere, (X, u)-ren baterako banaketaren bidez.
+KTAko estimazioan oinarrituko gara non u ∼ (0, σ
+2
+uI ) den.
+Antzeko
+analisia KTZ(E)-ekin egitea posiblea da, perturbazio heterozedastiko edota
+autokoerlatuekin.
+57
+
+58
+4. KAPITULUA ERREGRESORE ESTOKASTIKOAK.
+4.2
+KTAko estimatzailearen propietateak
+Demagun u ∼ (0, σ
+2
+uI ) eta X estokastikoa dela, zeinaren banaketa β eta
+σ2
+u-rekin erlazionatuta ez dauden parametroen bidez zehazten den.
+ˆ
+β = (X′X)−1X′Y = β + (X′X)−1X′u
+KTAko estimatzailearen propietateak:
+• Ez lineala.
+• Alboragabea?
+E( ˆ
+β) = β + E[(X′X)−1X′u] =⇒ alborapena = E[(X′X)−
+1X′u]
+• Bariantza?
+Bar( ˆ
+β) = E( ˆ
+β − E ˆ
+β)( ˆ
+β − E ˆ
+β)′
+= E (X′X)−1X′u − E[(X′X)−
+1X′u] [ · ]′
+• Banaketa? Nahiz eta u eta X-ak banaketa Normala izan, ˆ
+β ez da
+beraien konbinazio lineal bat eta ondorioz, ez du banaketa Normal
+bat jarraituko.
+ˆ
+β-ren banaketa eta propietateak (X, u) baterako banaketaren menpean
+daude. Hiru kasu bereizten ditugu: independentzia, denbora bereko koer-
+lazio eza (E(Xitut) = 0) eta X eta u-ren arteko denbora bereko koerlazioa.
+4.2.1
+Erregresore eta perturbazioen arteko indepen-
+dentzia
+X, u independenteak
+⇔ f(X′, u) = f(X′)f(u) ⇒ E[X′u] = E[X′]E[u];
+f (X|U) = f(X) ⇒ Ex|u[X] = Ex[X];
+f (u|X) = f(u) ⇒ Eu|x[u] = Eu[u]
+E(x,u)(.) = ExEu|x(.) = EuEx|u(.).
+
+4.2. KTAKO ESTIMATZAILEAREN PROPIETATEAK
+59
+ˆ
+β = β + (X′X)−1X′u-ren propietateak:
+• Ez lineala.
+• Alboragabea.
+E( ˆ
+β) = β + E(x,u)[(X′X)−
+1X′u] = β + Ex[(X′X)−1X′]Eu(u) = β
+• Bariantza:
+Bar( ˆ
+β) = E(x,u)[( ˆ
+β − E ˆ
+β)( ˆ
+β − E ˆ
+β)′]
+= E(x,u) (X′X)−
+1X′uu′X(X′X)−1
+= Ex Eu|x[(X′X)−
+1X′uu′X(X′X)−1]
+= Ex (X′X)−
+1X′E
+u
+|x[uu
+′]X(X′X)−1
+= Ex (X′X)−
+1X′Eu[uu′]X(X′X)−1
+= σ2uEx(X′X)−
+1
+• Erregresore estokastikoak egon arren ˆ
+β estimatzailea alboragabea eta
+bariantza minimoduna da.
+• Tinkotasuna.
+Balizkoa: plim
+X′X
+T
+= Mx ﬁnitua, simetrikoa eta ez singularra.
+plim ˆ
+β = β + plim
+
+
+X′X
+T
+
+
+−1
+=M −
+1
+x
+plim
+X′u
+T
+=0
+(M-W)
+= β
+zeren Mann-Wald Teoremaren hipotesiak betetzen dira:
+1. u ∼ (0, σ
+2
+uI ).
+2. E(Xitut) = Ex(Xit)Eu(ut) = 0; X eta u-ren arteko independen-
+tziagatik.
+3. plimX
+′X
+T
+= Mx ﬁnitua, simetrikoa eta ez singularra.
+
+60
+4. KAPITULUA ERREGRESORE ESTOKASTIKOAK.
+• Banaketa asintotikoa:
+√
+T ( ˆ
+β − β) =
+
+
+X′X
+T
+
+
+−1 X′u
+√
+T
+Mann-Wald teorema erabiliz
+X′u
+√
+T
+b
+→ N(0, σ
+2
+uMx)
+Crameren teorema aplikatuz
+√
+T ( ˆ
+β − β) =
+
+
+X′X
+T
+
+
+−1 X′u
+√
+T
+b
+→ N(0, σ
+2
+uM
+−1
+x )
+M −1
+x
+ezezaguna bada, orduan (X
+′X
+T
+)−1 estimatzaile tinkoa erabili dai-
+teke.
+Baldin eta σ2u ezezaguna bada, KTAko estimatzailea erabiltzen da σ
+2
+estimatzeko:
+ˆ
+σ2 = ˆ
+u′ˆ
+u/(T − K) KTAn oinarritutako kontrasteak baliagarritasun
+asintotikoa dutelako.
+• Asintotikoki eﬁzientea
+
+4.2. KTAKO ESTIMATZAILEAREN PROPIETATEAK
+61
+4.2.2
+X
+eta u arteko denbora bereko koerlazio eza
+X eta u ez dira independenteak baina kob(Xit, ut) = E(Xitut) = 0
+i = 1, ..., K, t = 1, ..., T dira. Erregresore eta perturbazioen arteko inde-
+pendentzia ez dagoenez, ˆ
+β-ren lagin txikietako propietateak (alboragabe-
+tasuna, bariantza eta banaketa) ez dira ezagunak. Propietate asintotikoak
+lortzeko Mann-Wald teorema erabiltzen da:
+1. u ∼ (0, σ
+2
+uI ).
+2. E(Xitut) = 0, X eta u arteko denbora bereko koerlazio eza.
+3. plimX
+′X
+T
+= Mx ﬁnitua, simetrikoa eta ez singularra.
+Ondorioz, ˆ
+β-ren tinkotasuna eta banaketa asintotikoa,
+√
+T ( ˆ
+β−β)
+b
+→ N(0, σ
+2
+uM
+−1
+x ),
+mantendu egiten dira perturbazio eta erregresoren arteko denbora bereko
+koerlazio ezaren menpean. KTAn oinarritutako kontrasteak asintotikoki
+baliagarriak dira. Adibidez: Yt = βYt−1 + ut, ut ∼ ibb(0, σ
+2
+u) kasuan.
+4.2.3
+X
+eta u arteko denbora bereko koerlazioa
+Orain, kob(Xit, ut) = 0 daukagu, X eta u ez dira independenteak eta beraz
+KTAko estimatzailearen lagin txikietako propietateak ez ditugu ezagutzen.
+Gainera, KTAko estimatzailea ez da tinkoa izango eta bere banaketa asin-
+totikoa ez dugu ezagutzen. Adibidez:
+• Aldagai nabarien omisioa.
+• Aldagai endogenoaren atzerapenak erregresore bezala eta gainera au-
+tokoerlazioaren existentzia perturbazioetan (ad. Yt = βYt−1 + ut,
+ut ∼ AR(1)).
+• Baterako ekuazioak.
+• Neurketa erroreak aldagaietan.
+
+62
+4. KAPITULUA ERREGRESORE ESTOKASTIKOAK.
+4.3
+Ordezko aldagaien metodoa (OA)
+Y = Xβ + u
+u ∼ (0, σ
+2
+uI ) X aleatorioa
+E(Xitut) = 0
+Egoera honetan ˆ
+β ez da tinkoa eta bere banaketa ez da ezaguna (ez la-
+gin txikietan, ez handietan). Ordezko aldagaien estimatzailearen ( ˆ
+βOA)
+oinarria, perturbazioarekin koerlatuta dauden aldagaiak beste aldagai ba-
+tzuekin (Zi= ordezko aldagaiak) partzialki ordezkatzean datza. Hauek
+ondorengo bi baldintza bete behar dituzte:
+1. E(Zitut) = 0, perturbazioarekiko denbora bereko koerlazio eza ema-
+tea.
+2. Ordezkatzen duten aldagaiarekiko oso koerlatuak egotea (urekiko koer-
+lazio eza mantenduz).
+Ordezko aldagaien estimatzailea ondorengoa da:
+ˆ
+βOA = (Z′X)−
+1Z′Y
+non
+Z =
+
+
+
+
+
+
+
+
+Z11 Z21 · · · ZK1
+Z12 Z22 · · · ZK2
+...
+... ...
+...
+Z1T Z2T · · · ZKT
+
+
+
+
+
+
+
+
+Zit = Xit da baldin E(Xitut) = 0 bada. Bestela, Zit aurreko bi baldintzak
+betetzen dituen aldagai bat da, baldin eta ordezkatzen duen erregresorea
+perturbazioarekin denbora berean koerlatuta badago, hau da, E(Xitut) =
+0.
+
+4.3. ORDEZKO ALDAGAIEN METODOA (OA)
+63
+ˆ
+βOA-ren propietateak.
+Erantsitako balizkoak:
+plim
+Z′X
+T
+= Qzx
+plim
+Z′Z
+T
+= Qz
+non Qzx eta Qz matrize ﬁnituak eta ez singularrak diren.
+ˆ
+βOA = β + (Z′X)−
+1Z′u
+• Ez lineala.
+• Lagin txikietako propietateak (alborapena, bariantza eta banaketa)
+ezezagunak.
+• Tinkoa
+plim ˆ
+βOA = β + plim
+
+
+Z′X
+T
+
+
+−1
+=Q−
+1
+zx
+plim
+Z′u
+T
+=0
+(M-W)
+= β
+zeren Mann-Wald teoremaren baldintzak betetzen bait dira:
+1. u ∼ (0, σ
+2
+uI ).
+2. E(Zitut) = 0.
+3. plimZ
+′Z
+T
+= Qz ﬁnitua, simetrikoa eta ez singularra.
+
+64
+4. KAPITULUA ERREGRESORE ESTOKASTIKOAK.
+• Banaketa asintotikoa:
+√
+T ( ˆ
+βOA − β) =
+
+
+Z′X
+T
+
+
+−1 Z′u
+√
+T
+eta Mann-Wald teorema aplikatuz
+Z′u
+√
+T
+b
+→ N(0, σ
+2
+uQz )
+Crameren teorema aplikatuz
+√
+T ( ˆ
+βOA − β) =
+
+
+Z′X
+T
+
+
+−1 Z′u
+√
+T
+b
+→ N(0, σ
+2
+uQ
+−1
+zx Qz [Q
+−1
+zx ]
+′)
+• Ez da asintotikoki eﬁzientea
+Honela,
+√
+T ˆ
+βOA-ren bariantza asintotikoa,σ2uQ−
+1
+zx Qz [Q
+−1
+zx ]
+′ da eta be-
+raz, ˆ
+βOA-ren bariantza asintotikoa hurrengoa da:
+Bar( ˆ
+βOA) =
+σ2u
+T
+Q−1
+zx Qz [Q
+−1
+zx ]
+′)
+Q−1
+z
+eta Q−1
+zx ezezagunak badira
+→ (
+Z′Z
+T ), (
+Z′X
+T )
+−1 beraien estimatzaile
+tinkoak dira.
+σ2u ezezaguna baldin bada, bere estimatzaile tinkoa honakoa da:
+ˆ
+σ2OA =
+ˆ
+u′OAˆuOA
+T − K
+=
+(Y − X ˆ
+βOA)′(Y − X ˆ
+βOA)
+T − K
+Eta orduan, ˆ
+βOA-ren bariantza asintotikoaren estimatzaile tinko bat,
+hurrengoa da:
+ˆ
+Bar( ˆ
+βOA) = ˆ
+σ2OA(Z′X)−
+1(Z′Z)(X′Z)−1
+eta OAn oinarrituriko kontrasteak asintotikoki baliagarriak dira. Zehaz-
+ki, q murrizketa lineal kontrastatzeko:
+H0 : Rβ = r
+Ha : Rβ = r
+
+4.4. HAUSMANEN KONTRASTEA
+65
+ondorengo estatistikoa erabiltzen da:
+TOA =
+(R ˆ
+βOA − r)′[R(Z′X)−
+1(Z′Z)(X′Z)−1R′]−1(R ˆ
+βOA − r)
+ˆ
+σ2OA
+b,H0
+−→ χ
+2
+q
+eta erabaki araua, H0 baztertzea da α esangura mailarekin baldin eta
+TOA > χ2q|α ematen bada.
+Orain arte, arazoa zeukan aldagai bakoitzarentzat ordezko aldagai baka-
+rra genuelaren suposiziopean ibili gara. Aldagai azaltzaile bakoitzarentzat
+ordezko aldagai bat baino gehiago eduki ezkero, bat bakarra erabili beha-
+rrean, denen informazioa erabiltzen da. Honegatik, guztien konbinazio
+lineal bat erabiliko dugu. Zein? Arazoa sortarazten duen aldagaiaren erre-
+gresioa egiten da, aukera daitezken ordezko aldagaiekiko. Adibide baten
+bidez ikusiko dugu.
+Izan bedi hurrengo eredua:
+Yt = β1 + β2Yt−1 + β3X1t + β4X2t + ut
+non perturbazioak lehen ordenako autokoerlazio prozedura jarraitzen
+duen, hau da, ut = ρut−1 + ǫt
+ǫt ∼ iib(0, σ
+2
+ǫ ).
+Nahiz eta X1t eta X2t
+ﬁnkoak izan, badakigu KTAko estimatzailea ez dela tinkoa, E(Yt−1ut) = 0
+denez, plimX
+′u
+T
+= 0 delako.
+X1t eta X2t aldagai azaltzaile ﬁnkoak direnez, X1t−1 eta X2t−1 ez dira
+perturbazioarekin koerlaturik egongo ezta ere. Hau da, E(X1t−1ut) = 0 eta
+E(X2t−1ut) = 0, beraz, bi aldagaiak ordezko aldagai egokiak izango lira-
+teke eredua ordezko aldagaien bidez estimatzeko. Kasu hauetan egokiena
+hurrengoa da: ordezkatu beharreko aldagaiaren erregresioa egin, ordezko
+aldagai bezala dazkagun aldagai hoiekiko eta arazoak sortzen ez dituzten
+erregresoreekiko. Gure adibidea jarraituz, ideia, hurrengo erregresioa egi-
+tea izango litzateke: Yt−1 = α1 + α2X1t−1 + α3X3t−1 + α4X1t + α5X2t + wt,
+eta ˆ
+Yt−1 ordezko aldagai bezala erabiltzea ereduaren estimazioarako. Or-
+dezko aldagai hau erabiltzen duen OAko estimatzailea, Karratu Txikienen
+Arruntak 2 Etapetan (KTA2E) bezala ezagutzen da.
+4.4
+Hausmanen kontrastea
+Aldagai batzuen eta perturbazioen arteko denbora bereko koerlazio eza
+kontrastatzen du. Hasteko eredua bi zatitan banatzen dugu:
+
+66
+4. KAPITULUA ERREGRESORE ESTOKASTIKOAK.
+• Xr: perturbazioarekin koerlatuak egon daitezken r aldagaiak.
+• XK−r: gelditzen diren (K − r) aldagaiak, zeintzuek u-rekiko koerlatu
+gabe dauden (terminu konstantea adibidez).
+Gelditzen zaigun eredua honakoa da
+Y = Xrβr + X(K−r)β(K−r) + u
+(4.1)
+non Xr guztientzat ordezko aldagaiak existitzen direla suposatu den.
+Hipotesi hutsa: Xr eta u-ren arteko denbora bereko koerlazio eza.
+=⇒ H0 : plim
+X′
+r u
+T
+= 0
+Aurkako hipotesia: Xr eta u-ren arteko denbora bereko koerlazioa.
+=⇒ Ha : plim
+X′
+r u
+T
+= 0
+Kontrastea burutzean bi estimatzaile desberdin erabiltzen dira:
+1. H0-ren menpean ˆ
+β0r tinkoa eta eﬁzientea da, baina Ha-ren menpean
+ez da tinkoa.
+2. ˆ
+β1r tinkoa H0 eta Ha menpean, baina ez eﬁzientea H0 pean.
+Hipotesi hutsaren menpean
+plim ( ˆ
+β0r − ˆ
+β1r) = 0 eta ( ˆ
+β0r − ˆ
+β1r)
+b
+→ N(0, Bar( ˆ
+β0r − ˆ
+β1r))
+baina aurkako hipotesiaren menpean plim ( ˆ
+β0r − ˆ
+β1r) = 0. Hausmanek, ˆ
+β0r
+eta ( ˆ
+β0r − ˆ
+β1r)-ren arteko kobariantza asintotikoa zero dela frogatu zuen,
+horrela, Bar( ˆ
+β0r − ˆ
+β1r) = Bar( ˆ
+β1r) − Bar( ˆ
+β0r) gelditzen delarik. Ondorengo
+estatistikoa eraiki dezakegu:
+( ˆ
+β0
+r
+− ˆ
+β1
+r )
+′[ ˆ
+Bar( ˆ
+β1
+r )
+− ˆ
+Bar( ˆ
+β0
+r )]
+−1( ˆ
+β0
+r
+− ˆ
+β1
+r )
+b,H0
+→ χ
+2
+r
+(4.2)
+non ˆ
+Bar( ˆ
+β1r) eta ˆ
+Bar( ˆ
+β0r) bariantz eta kobariantz asintotikoen matrizeen
+estimatzaile tinkoak diren.
+ˆ
+β0r eta ˆ
+β1r koeﬁzienteen aukeraketa
+Hipotesi hutsaren menpean KTAko estimatzailea tinkoa da eta baita asin-
+totikoki eﬁzientea ere. Aurkako hipotesiaren menpean ez da tinkoa izango.
+
+4.5. NEURKETA ERROREAK ALDAGAIETAN
+67
+OA estimatzailea berriz, tinkoa da hipotesi bien menpean, baina hipote-
+si hutsaren menpean ez da eﬁzientea izango. Horrela, ˆ
+β0r = ˆ
+βKTA
+r
+eta
+ˆ
+β1r = ˆ
+βOA
+r
+izango dira, eta erabiliko dugun estatistikoa honakoa izango da:
+( ˆ
+β
+KT A
+r
+− ˆ
+β
+OA
+r
+)′[ ˆ
+Bar( ˆ
+β
+OA
+r
+) − ˆ
+Bar( ˆ
+β
+KT A
+r
+)]−1( ˆ
+β
+KT A
+r
+− ˆ
+β
+OA
+r
+)
+b,H0
+→ χ
+2
+r
+non
+ˆ
+Bar( ˆ
+β
+OA
+r
+) = ˆ
+σ2OA(Z′X)−
+1(Z′Z)[(Z′X)−1]′
+eta
+ˆ
+Bar( ˆ
+β
+KT A
+r
+) = ˆ
+σ2OA(X′X)−
+1
+ˆ
+σ2OA =
+ˆ
+u′OAˆuOA
+T − K
+=
+(Y − X ˆ
+βOA)′(Y − X ˆ
+βOA)
+T − K
+Estimazio bietan H0-ren menpean tinkoa den σ2u-ren edozein estimatzai-
+le erabili daiteke (ˆ
+σ2KTA adibidez). ˆσ
+2
+OA erabiltzearen abantaila potentzia
+irabaztea da, estimatzaile hau aurkako hipotesiaren menpean ere tinkoa
+bait da.
+4.5
+Neurketa erroreak aldagaietan
+Sarreran aipatu den bezala, ekonomiako ohiko kasu bat da. Izan bedi
+ondorengo eredua:
+Yt = βXt + ut ut
+ibb
+∼ (0, σ
+2
+u)
+t = 1, 2, . . . , T
+(4.3)
+hiru kasu analizatuko dira:
+4.5.1
+Neurketa erroreak aldagai endogenoan
+Behatzen den aldagaia Y ∗
+t = Yt + ǫt da, zeinetean ǫt
+ibb
+∼ (0, σ
+2
+ǫ ) non X , u eta
+ǫ denboran koerlatu gabe dauden aldagaiak diren.
+Estimatuko den eredua berriz:
+(Y ∗
+t
+− ǫt) = βXt + ut → Y ∗t = βXt + (ut + ǫt)
+u∗
+t
+non u∗t
+ibb
+∼ (0, σ
+2
+u + σ
+2
+ǫ ) eta E[Xtu
+∗
+t ] = 0.
+Oinarrizko hipotesiak betetzen
+direnez, KTAko estimatzailearen propietateak betikoak izango dira, baina
+dagokion bariantza handiagoa izango da.
+
+68
+4. KAPITULUA ERREGRESORE ESTOKASTIKOAK.
+4.5.2
+Neurketa erroreak aldagai exogenoan
+Behatzen den aldagaia X∗t = Xt + ǫt da, zeinetan ǫt
+ibb
+∼ (0, σ
+2
+ǫ ) den eta non
+X, u eta ǫ denboran koerlatu gabe dauden aldagaiak diren.
+Estimatuko den eredua berriz:
+Yt = β(X∗t − ǫt) + ut → Yt = βX∗t + (ut − βǫt)
+u∗
+t
+Orain u∗t
+ibb
+∼ (0, σ
+2
+u + β
+2σ2
+ǫ ) da eta nahiz eta E[X
+∗
+t u
+∗
+s] = 0 t = s izan,
+E[X∗tu∗t] = −βσ
+2
+ǫ = 0 ematen da.
+Ondorioz, erregresore eta perturbazioaren arteko denbora bereko koer-
+lazioa dago eta KTAko estimatzailea ez da tinkoa. Nahiz eta neurketa
+errorea aldagai konkretu batean egon, ez da ahaztu behar koeﬁziente guz-
+tiek tinkotasuna galtzen dutela. Konponbidea, askotan, OA erabiltzea da,
+ordezko aldagai bezala arazoa sotarazten duen aldagaia denboraldi bat
+atzeratuta hartuko genukeelarik.
+4.5.3
+Neurketa erroreak aldagai endogeno eta exoge-
+noan
+Aurreko bien konbinazioa da. Behatzen diren aldagaiak Y ∗
+t
+= Yt + vt eta
+X∗t = Xt + ǫt dira, non vt
+ibb
+∼ (0, σ
+2
+v ),
+ǫt
+ibb
+∼ (0, σ
+2
+ǫ ) diren, eta X , u, v eta ǫ
+denboran koerlatu gabe dauden aldagaiak diren.
+Estimatutako eredua ondorengoa izango da:
+(Y ∗
+t
+− vt) = β(X∗t − ǫt) + ut → Y ∗t = βX∗t + (ut + vt − βǫt)
+u∗
+t
+non u∗
+t
+ibb
+∼ (0, σ
+2
+u + σ
+2
+v + β
+2σ2
+ǫ ) eta E[X
+∗
+t u
+∗
+t ] =
+−βσ
+2
+ǫ = 0 diren. Ondorioz,
+KTAko estimatzailea ez da tinkoa izango.
+
+5. Kapitulua
+Eredu dinamikoak
+5.1
+Sarrera
+Orain arte ikasitako erlazio gehienak estatikoak ziren. Hau da, aldagai en-
+dogenoaren (Yt) erantzuna, aldagai azaltzaileekiko (Xit) berehalakoa zen.
+Baina sarritan, teoria ekonomikoak aldagai ekonomikoen denbora desberdi-
+neko erlazioak, zehazten ditu. Gai honetan erlazio mota hauek analizatzen
+ditugu, zeintzuetan denborarekiko zehazpena ereduaren zati garrantzitsu
+bat da. Eredu dinamikoetan aldagaien atzerapenak barneratzen dira erre-
+gresore gisa. Jarraitu beharreko tratamendu ekonometrikoa, atzerapenak
+aldagai endogenoarenak edo exogenoenak izatearen funtzioan dago.
+5.2
+Aldagai exogenoen atzerapenadun eredua
+Atzerapen guztiak aldagai exogenoenak direnean, oinarrizko hipotesi guz-
+tiak mantentzen dira. Horrela, KTAko estimatzaileak ohiko propietateak
+ditu. Estimatzen dugun erduaren itxura ondokoa da:
+Yt = α + β0Xt + β1Xt−1 + . . . + βqXt−q + ut t = (q + 1), ..., T
+Atzerapenen kopurua, q, ezaguna baldin bada ohiko emaitzak dauzka-
+gu. Normalean ez da horrela izaten eta zehazpen arazoaren aurrean egoten
+gara. Bestalde, aldagai exogenoa berez autokoerlatuta baldin badago (al-
+dagai ekonomikoak sarritan daude), erregresore matrizean agertzen den
+kolinealitate maila altua izatea erraza da.
+69
+
+70
+5. KAPITULUA EREDU DINAMIKOAK.
+5.3
+Aldagai endogenoaren atzerapenadun eredua
+Erregresore bezala aldagai endogenoaren atzerapenak agertzerakoan, es-
+timatzaileen propietateak perturbazioen autokoerlazioaren existentziaren
+menpean daude.
+5.3.1
+Autokoerlatu gabeko perturbazioak
+Izan bedi ondorengo eredua:
+Yt = α + β0Yt−1 + β1X1t + . . . + βKXKt + ut
+ut
+ibb
+∼ (0, σ
+2
+u)
+|β0| < 1
+t = 2, ..., T
+Kasu honetan, erregresore eta perturbazioaren arteko independentziarik ez
+dago, baina hala ere, E[Yt−1ut] = 0 betetzen da. Beraz, nahiz eta KTA
+lagin txikietan propietate onik ez izan (orokorrean), tinkoak, asintotiko-
+ki eﬁzienteak eta normalak dira. Horrela, KTAn oinarrituriko inferentzia
+asintotikoki baliagarria da.
+5.3.2
+Koerlaturiko perturbazioak
+Egoera desberdinen analisia egingo dugu. Adibide hauen bitartez, mota
+honetako ereduen elementu komunak aurkeztuko ditugu.
+Eredu orokorra zeinetan ut autokoerlatuta dagoen
+Yt = α + β0Yt−1 + β1Xt + ut t = 2, 3, ..., T
+(5.1)
+non Xt ez estokastikoa den (kob(Xt, ut) = E(Xtut) = 0).
+Kasu honetan
+kob(Yt−1, ut) = E(Yt−1ut)
+= E[(α + β0Yt−2 + β1Xt−1 + ut−1)ut] = 0
+perturbazioak autokoerlatuta daudenez =⇒ KTAk ez dira tinkoak.
+
+5.3. ALDAGAI EDOGENOAREN ATZERAPENADUN EREDUA
+71
+a) ut = ρut−1 + εt non ε ∼ (0, σ
+2
+ε I ) eta
+|ρ| < 1 ezaguna.
+Kasu honetan, KTZko estimatzailea tinkoa eta asintotikoki normala da,
+zeren eraldatutako ereduan KTAk aplikatzearekin baliokidea bait da:
+Yt − ρYt−1 = (1 − ρ)α + β0(Yt−1 − ρYt−2) + β1(Xt − ρXt−1) + ut − ρut−1
+εt
+eta kob(Yt−1 − ρYt−2, εt) = kob(Xt − ρXt−1, εt) = 0 da. KTZn oinarrituriko
+kontrasteak asintotikoki baliagarriak dira.
+b) ut = ρut−1 + εt non ε ∼ (0, σ
+2
+ε I ) eta
+|ρ| < 1 ezezaguna.
+Eraldatutako eredua berordenatuz:
+Yt = (1 − ρ)α + (β0 + ρ)Yt−1 − β0ρYt−2 + β1Xt − β1ρXt−1 + εt.
+Perturbazioa eta erregresoreak koerlatu gabe daudenez, KTAko estima-
+tzailea tinkoa eta asintotikoki normala da. Baina lortzen diren estimazio
+kopurua, koeﬁziente ezezagunena baino handiagoa bada, koeﬁzienteen es-
+timazio bakarra ez da existitzen.
+Soluzioa: Hasierako eredua OAn bitartez estimatzen da (ordezko al-
+dagaia: Zt = Xt−1), eta ˆuOA = Y − X ˆ
+βOA hondarrak erabiliz ρ estimatuko
+da, ˆ
+ρOA. Behin balio hau izanik Cochrane-Orcutten estimazio prozedu-
+ra erabiltzen da. Horrela KTZEn oinarrituriko kontrasteak asintotikoki
+baliagarriak dira.
+Kasu berezia: Izan bedi ondorengo eredua:
+Yt = βYt−1 + ut
+|β| < 1
+ut = ρut−1 + ǫt
+ǫt
+ibb
+∼ (0, σ
+2
+ǫ )
+t = 2, ..., T
+E[Yt−1ut] = 0 denez, KTAko estimatzailea ez da tinkoa izango. ρ ezagu-
+na baldin bada, KTZko estimatzaileak propietate asintotiko onak ditu. ρ
+ezezaguna baldin bada, eraldatutako ereduari KTAk aplikatuz estimatzaile
+tinkoak eta asintotikoki normalak lortzen dira:
+Yt − ρYt−1 = β(Yt−1 − ρYt−2) + (ut − ρut−1)
+ǫt
+⇒
+Yt = (β + ρ)Yt−1 − (βρ)Yt−2 + ǫt
+(5.2)
+Lortzen diren estimazio biekin β eta ρ-ren banakako estimazioak lortzea
+posiblea da.

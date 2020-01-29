@@ -1,0 +1,5886 @@
+
+
+
+Ekonometriarako Sarrera
+EAZL 3
+Ekonometria eta Estatistika Saila
+2008-2009 kurtsoa
+
+c 2008 Aurora Alonso, Josu Arteche, Ana Fern´andez, Beatriz Goitisolo, Juan I. Modro˜
+no,
+I˜
+naki Murillo, Susan Orbe, Ainhoa Z´
+arraga eta Marian Zubia
+Debekaturik dago testu hau osorik edo zatika kopiatzea, gordetzea edo transmititzea, bai bide
+elektronikoz, mekanikoz, fotokopiaz, erregistroz edo beste edozein eratara, baldin eta jabeek ez
+badute horretarako baimena aurretik eta idatziz ematen.
+
+Edukia
+1 Ekonometriarako Sarrera
+1
+1.1
+Sarrera . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1
+1.2
+Ereduaren kontzeptua . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1
+1.3
+Eredu ekonometrikoa . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2
+1.4
+Eredu ekonometrikoen elaborazio etapak . . . . . . . . . . . . . . . . . . . . . . .
+3
+2 ELOE (I). Zehazpena eta Estimazioa
+4
+2.1
+Eredu lineal orokorreko ereduaren zehazpena 
+(ELOE) . . . . . . . . . . . . . . .
+4
+2.2
+ELOEn Oinarrizko Hipotesiak. Koeﬁzienteen interpretazioa . . . . . . . . . . . .
+6
+2.3
+Estimazioa: Karratu Txikienen Arruntak 
+(KTA) . . . . . . . . . . . . . . . . . .
+8
+2.4
+Lagin Erregresio Funtzioaren propietateak 
+(LEF) . . . . . . . . . . . . . . . . . .
+13
+2.5
+Doikuntza neurriak:
+ Mugatze koeﬁzienteak . . . . . . . . . . . . . . . . . . . . .
+14
+2.6
+Erregresio Lineal Bakuneko Ereduan lortzen diren emaitzen erakuspena . . . . .
+16
+2.7
+KTAko estimatzaileen lagin txikietako propietateak. Gauss-Markoven teorema .
+17
+2.8
+KTAko estimatzailearen banaketa perturbazioen normalitatepean . . . . . . . . .
+18
+2.9
+Perturbazioaren bariantzaren estimazioa . . . . . . . . . . . . . . . . . . . . . . .
+19
+2.10 Eranskina . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+21
+3 ELOE (II). Murrizketa linealen kontrasteak eta aurresanak
+22
+3.1
+Banakako esanguratasun kontrasteak. Konﬁdantza tarteak . . . . . . . . . . . . .
+22
+3.1.1
+H0 : βk = c hipotesiaren kontrastea σ2 ezaguna denean . . . . . . . . . . .
+23
+3.1.2
+H0 : βk = 0 hipotesiaren kontrastea σ2 ezaguna denean . . . . . . . . . . .
+23
+3.1.3
+H0 : βk = c hipotesiaren kontrastea σ2 ezezaguna denean . . . . . . . . .
+24
+3.1.4
+H0 : βk = 0 hipotesiaren kontrastea σ2 ezezaguna denean . . . . . . . . .
+25
+3.1.5
+βkren konﬁdantza tartea . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+26
+3.2
+Baterako esanguratasun kontrastea.
+. . . . . . . . . . . . . . . . . . . . . . . . .
+27
+3.3
+Murrizketa linealen kontraste orokorra . . . . . . . . . . . . . . . . . . . . . . . .
+27
+3.3.1
+Hipotesiak kontrastatzeko prozedura orokorra. . . . . . . . . . . . . . . .
+29
+3.3.2
+Aldagai zentratuetan oinarrituriko kontraste orokorra . . . . . . . . . . .
+31
+3.3.3
+Murrizketa bakar baten kontrastea . . . . . . . . . . . . . . . . . . . . . .
+32
+3.4
+Murrizketei baldintzaturiko karratu txikienen estimatzailea . . . . . . . . . . . .
+33
+3.5
+Hondar Karratuen Baturetan oinarritutako kontrasteak . . . . . . . . . . . . . .
+34
+3.6
+Puntuzko eta tartezko aurresanak . . . . . . . . . . . . . . . . . . . . . . . . . . .
+35
+3.6.1
+Aldagai endogenoaren puntuzko aurresana . . . . . . . . . . . . . . . . . .
+36
+3.6.2
+Aldagai endogenoaren tartezko aurresana . . . . . . . . . . . . . . . . . .
+37
+3.7
+Eranskinak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+38
+i
+
+4 Zehazpen eta lagin arazoak
+45
+4.1
+Zehazpen errorea . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+45
+4.1.1
+Aldagai nabarien omisioa . . . . . . . . . . . . . . . . . . . . . . . . . . .
+45
+4.1.2
+Aldagai ez nabarien barnerapena . . . . . . . . . . . . . . . . . . . . . . .
+47
+4.2
+Kolinealitate anizkoitza . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+49
+4.2.1
+Kolinealitate anizkoitz zehatza . . . . . . . . . . . . . . . . . . . . . . . .
+49
+4.2.2
+Kolinealitate anizkoitz altua . . . . . . . . . . . . . . . . . . . . . . . . . .
+50
+4.3
+Aldagai koalitatiboak eta aldagai ﬁktizioak . . . . . . . . . . . . . . . . . . . . .
+54
+4.3.1
+Sarrera . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+54
+4.3.2
+Zehazpenak:
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+55
+ii
+
+1. Gaia
+Ekonometriarako Sarrera
+1.1
+Sarrera
+Deﬁnizioa
+Ekonometriak, aldagai ekonomiko baten ezaugarriak edo propietateak analizatzeko lagun-
+garriak diren egiturak ikertzen ditu, beste aldagai ekonomiko batzu kausa bezala erabiliz.
+(Novales, 1993)
+Baliabideak
+Aldagai ekonomikoen arteko erlazioak era egokian kuantiﬁkatzeko eta ezarritako estan-
+darrekin emaitzak baloratzeko, beharrezkoa egiten da datu tratamenduen metodoak iza-
+tea. Lan hau aurrera eramateko beharrezko egitura estatistikan oinarritzen da.
+1.2
+Ereduaren kontzeptua: Eredu ekonomikoa eta eredu ekono-
+metrikoa.
+Ereduaren egitura. Pausuak:
+1. Hasierako teoria edo eredu ekonomikoa planteatu: Y = f (X).
+2. X eta Y aldagaien datuak bildu.
+3. Teoriarekin ados dagoen eredu ekonometriko bat zehaztu.
+• Forma funtzionala. Eredu ekonomikotik ekonometrikora pasatzeko, funtzio sor-
+tzailearen, f (
+·), forma matematikoa zehaztu behar da. Askotan, erlazio lineal
+bat aukeratzen da, horrela eredua ondorengoa izanik:
+Y = β1 + β2X
+• Datu edo behaketak
+Yt = β1 + β2Xt
+t = 1, 2, . . . , T
+1
+
+• Perturbazio aleatorioa ez da behagarria. Emandako berdintza behaketa guz-
+tientzat bete ahal izateko, beharrezkoa da perturbazio aleatorioa edo errorea
+sartzea. Elementu berri hau u bezala idatziko da eta hortaz, eredu ekonometri-
+koaren zehazpena hau izango da:
+Yt = β1 + β2Xt + ut
+t = 1, 2, . . . , T.
+Perturbazioa aldagai aleatorio bat da zeinaren probabilitatezko banaketa zehaz-
+tu beharra dagoen.
+1.3
+Eredu ekonometrikoa
+Eredu ekonometriko orokorra, K aldagai azaltzaile dituena ondorengoa da:
+Yt = β1 + β2X2t + . . . + βKXKt + ut
+t = 1, 2, . . . , T.
+Eredu ekonometrikoen oinarrizko ezaugarriak
+• Aldagai ekonomikoen arteko erlazio bat analizatzen du.
+• Koeﬁziente edo parametroek, βk, aldagaien arteko erlazioa koantiﬁkatzen dute. Koe-
+ﬁziente hauek ezezagunak direnez, estimatu egin behar dira, estimaturiko koeﬁzien-
+tea ˆ
+βk bezala jarriko delarik.
+• Honako elementuak bereiztuko dira:
+– Aldagai azaldua, endogenoa, dependentea edo erregresandoa: azaldu nahi den
+aldagaia da, Y .
+– Aldagai azaltzaileak, exogenoak, independenteak edo erregresoreak:
+ X2, . . . , XK:
+interesatzen zen aldagaia azaltzeko erabiltzen diren aldagaiak.
+• Eredu ekonometrikoak aldagai aleatorio bat du, perturbazio aleatorioa deritzona,
+zeinak aldagai azalduaren gain lagin behaketa desberdinek izan ditzaketen eragin
+guztiak biltzen dituen eta baita, ereduan barneratu ez diren aldagaien eraginak ere.
+Datu motak
+• Normalean, datu ekonomikoek ez dute izaera esperimentalik. Hau da, ezin dira behin
+eta berriro erreplikatu baldintza ezin hobetan. Datu mota desberdinak daude:
+– Denbora segidak: aldagai berdin baten behaketak denboran zehar. Orokorrean
+t azpindizearekin izendatzen dira.
+Yt = β1 + β2Xt + ut
+t = 1, 2, . . . , T.
+– Zeharkako datuak: unitate ekonomiko ezberdinen behaketak dira denbora une
+berdinean. Orokorrean i azpindizearekin Izendatzen dira.
+Yi = β1 + β2Xi + ui
+i = 1, 2, . . . , N.
+2
+
+Eredu ekonometrikoen sailkapena
+Eredu eonometrikoen sailkapena erizpide desberdinen arabera egin daiteke:
+1. Eredu estatikoak eta eredu dinamikoak.
+• Eredu estatikoak. Aldagai guztiak denbora une berean neurtuta daude.
+• Eredu dinamikoak. Aldagaiak denbora une desberdinetan neurtuta daude.
+Yt = β1 + β2X2t + β3X3,t−1 + ut
+2. Ekuazio bakarreko ereduak eta ekuazio anizkoitzeko ereduak.
+• Ekuazio bakarreko ereduak. Aldagaien arteko erlazio bakarra dago.
+• Ekuazio anizkoitzeko ereduak. Aldagaien arteko erlazio bat baino gehiago dago.
+1.4
+Eredu ekonometrikoen elaborazio etapak
+1. Erlazioa. Interesatzen den teoria planteatzea.
+2. Zehazpena. Teoriarekin ados datorren eredu ekonometriko bat zehaztu.
+3. Estimazioa. Behin eredua zehazten denean eta erabilgarria den informazioan oina-
+rrituz, ezezagunak diren parametroak estimatzea.
+4. Ereduaren balorazioa. Parametro ezezagunak estimatu ondoren, eredua teoriare-
+kin bat datorren edo ez analizatzeko inferentzia estatistikoa erabiltzen da. Eredua
+zuzena ez bada, berriro zehazpen etapara bueltatu behar da.
+Etapa guztiak gainditu dituen eredua aurresanak egiteko erabili daiteke. Aurresanak bi
+helburu ditu:
+• Aldagai azaltzaileen balio batzuk emanik, Y aldagaiaren balio berriak lortzea.
+• Zer gertatuko litzateke baldin eta ...? motako galderak erantzutea.
+3
+
+2. Gaia
+Erregresio Lineal Orokorreko Eredua
+(I). Zehazpena eta Estimazioa
+2.1
+ELOEn zehazpena
+Helburua
+Y aldagai kuantitatiboa eta X1, X2, . . . , XK, K aldagaien arteko erlazioa kuantiﬁkatu
+nahi da eredu lineal baten zehazpenarekin.
+Errekurtso erabilgarriak
+Y, X1, X2, . . . , XK aldagaien T tamainuko datu lagin bat izaten da non T , eskuragarriak
+diren aldagai guztien behaketa kopurua den. Ondorengo notazioa erabiliko da:
+Yt = Y -ren t behaketa
+Xkt = Xk-ren t behaketa
+∀k = 1, 2, . . . , K,
+non t laginean eskuragarria den behaketa bat den, hau da t = 1, 2, . . . , T .
+Zehazpena (ELOE)
+Yt = β1X1t + β2X2t + . . . + βKXKt + ut
+t = 1, 2, . . . , T.
+Gehienetan X1t = 1
+∀t kontsideratzen da eta hortaz, β1 termino independentea izaten da.
+Honela,
+Yt = β1 + β2X2t + . . . + βKXKt + ut
+t = 1, 2, . . . , T.
+4
+
+ELOEren elementuak
+• Y aldagai endogenoa edo azaldua da.
+• Xk k = 1, . . . , K, aldagai azaltzaileak edo exogenoak dira.
+• βk k = 1, . . . , K, koeﬁziente edo parametroak dira (ezezagunak).
+• u perturbazio aleatorioa da (ez behagarria).
+ut perturbazioa behagarria ez den aldagaia bat da eta aleatorio izaerakoa. Ondorengoa
+bildu dezake:
+• Ereduan barneratu gabeko aldagaien eraginak.
+• Agente ekonomikoen jokabide aleatorioak.
+• Neurketa erroreak.
+ELOEren adierazpen matriziala
+Eredua
+Yt = β1 + β2X2t + . . . + βKXKt + ut
+t = 1, 2, . . . , T.
+(2.1)
+Eskuragarriak diren behaketa guztiak erabiliz, era honetan idatz daiteke:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Y1 =
+β1 + β2X21 + β3X31 + . . . + βKXK1 + u1
+t = 1
+Y2 =
+β1 + β2X22 + β3X32 + . . . + βKXK2 + u2
+t = 2
+...
+...
+...
+...
+...
+...
+Yt =
+β1 + β2X2t + β3X3t + . . . + βKXKt + ut
+t = t
+...
+...
+...
+...
+...
+...
+YT = β1 + β2X2T + β3X3T + . . . + βKXKT + uT
+t = T
+edo matrizialki
+Y
+(T × 1)
+=
+X
+(T × K)
+β
+(K × 1)
++
+u
+(T × 1)
+5
+
+non
+Y
+(T × 1)
+=
+
+
+
+
+
+
+
+
+
+
+
+Y1
+Y2
+...
+Yt
+...
+YT
+
+
+
+
+
+
+
+
+
+
+
+X
+(T × K)
+=
+
+
+
+
+
+
+
+
+
+
+
+1 X21 X31
+· · · XK1
+1 X22 X32
+· · · XK2
+... ...
+...
+...
+1 X2t
+X3t
+· · · XKt
+... ...
+...
+...
+1 X2T X3T
+· · · XKT
+
+
+
+
+
+
+
+
+
+
+
+β
+(K × 1)
+=
+
+
+
+
+
+
+
+
+β1
+β2
+β3
+...
+βK
+
+
+
+
+
+
+
+
+u
+(T × 1)
+=
+
+
+
+
+
+
+
+
+
+
+
+u1
+u2
+...
+ut
+...
+uT
+
+
+
+
+
+
+
+
+
+
+
+2.2
+ELOEn oinarrizko hipotesiak. Koeﬁzienteen interpretazioa
+Oinarrizko hipotesiak
+1. Forma funtzionalari dagokion hipotesia.
+• Koeﬁzienteekiko linealtasuna.
+2. Koeﬁzienteei dagokien hipotesia.
+• Koeﬁzienteak konstanteak dira lagin osoaren zehar.
+3. Aldagaiei dagozkien hipotesiak.
+• Eredua ondo zehazturik dago. X1, X2, . . . , XK aldagaiek Y aldagaia azaltzen
+dute eta Y azaltzen duen beste aldagairik ez dago eredutik kanpo.
+• Aldagai azaltzaileak ez dira aldagai aleatorio edo estokastikoak.
+• Xen zutabeak linealki independenteak dira, horrela h(X) = K. Gainera K ≤ T
+ematen da.
+6
+
+4. Perturbazio aleatorioarekiko hipotesiak.
+• E(ut) = 0 ∀t = 1, 2, . . . , T .
+• Homozedastizitatea: Bar(ut) = E(ut − E(ut))
+2 = E(ut)2 = σ2
+u = σ
+2 konstantea
+∀t = 1, 2, . . . , T .
+• Autokoerlazio eza: Kob(ut, us) = E[(ut − E(ut))(us − E(us))] = E(utus) =
+0
+∀t = s.
+• Normaltasuna: ut-k banaketa normala du
+∀t = 1, 2, . . . , T .
+Azken propietate hauek batera idatzi al dira:
+ut
+∼ NIB(0, σ
+2
+u)
+∀t = 1, . . . , T
+matrizialki,
+u
+(T × 1)
+∼ N ( 0T
+(T × 1)
+, σ2
+uIT
+(T × T )
+)
+zeren
+E(u)
+(T × 1)
+=
+
+
+
+
+
+
+
+
+E(u1)
+E(u2)
+E(u3)
+...
+E(uT )
+
+
+
+
+
+
+
+
+=
+
+
+
+
+
+
+
+
+0
+0
+0
+...
+0
+
+
+
+
+
+
+
+
+= 0T
+E(uu′)
+(T × T )
+=
+
+
+
+
+
+
+
+
+E(u1)2
+E(u1u2) E(u1u3)
+· · · E(u1uT )
+E(u2u1)
+E(u2)2
+E(u2u3)
+· · · E(u2uT )
+E(u3u1) E(u3u2)
+E(u3)2
+· · · E(u3uT )
+...
+...
+...
+. ..
+...
+E(uT u1) E(uT u2) E(uT u3)
+· · · E(uT )
+2
+
+
+
+
+
+
+
+
+=
+=
+
+
+
+
+
+
+
+
+σ2
+u
+0
+0
+· · · 0
+0
+σ2
+u
+0
+· · · 0
+0
+0
+σ2
+u
+· · · 0
+... ... ... ... ...
+0
+0
+0
+· · · σ
+2
+u
+
+
+
+
+
+
+
+
+= σ2
+uIT
+7
+
+Koeﬁzienteen interpretazioa
+ELOEren oinarrizko hipotesiak emanik,
+E(Yt) = E(β1 + β2X2t + . . . + βKXKt + ut)
+= β1 + β2X2t + . . . + βKXKt + E(ut)
+=0
+=
+= β1 + β2X2t + . . . + βKXKt.
+E(Yt)-ri Populazioko Erregresio Funtzioa deritzo (PEF) eta bere koeﬁzienteak, 
+(2.1) ere-
+dukoekin bat izanik ere, honela interpretatzen dira:
+• β1 = E(Yt|X2t = . . . = XKt = 0). Yt-
+ren itxarondako balioa aldagai azaltzaile
+guztiak zero direnean.
+• βk =
+∂E
+(Yt)
+∂Xkt
+=
+∆E(Yt)
+∆Xkt
+∀k = 2, . . . , K. Yt-ren itxarondako balioaren gehikuntza,
+Xk aldagaia unitate batean handitzerakoan eta beste aldagai azaltzaileak konstante
+mantentzen direlarik.
+2.3
+Estimazioa: Karratu Txikienen Arruntak (KTA)
+Helburua
+Helburua βk parametro ezezagunen estimazioa da.
+Erregresio lineal eredu orokorra
+Yt = β1 + β2X2t + . . . + βKXKt + ut
+t = 1, 2, . . . , T
+izanik (matrizialki Y = Xβ + u) eta estimatutako parametroak ˆ
+βk bezala adierazirik,
+estimatutako eredua honakoa izango da:
+ˆ
+Yt = ˆ
+β1 + ˆ
+β2X2t + . . . + ˆ
+βKXKt
+t = 1, 2, . . . , T.
+edo matrizialki
+ˆ
+Y = X ˆ
+β. Funtzio hau Lagin erregresio Funtzioa
+(LEF) izenez
+ezagutzen da.
+Elementu gehigarriak
+• Perturbazioak. Horrela idatzi daitezke:
+ut = Yt
+− E(Yt)
+t = 1, 2, . . . , T
+edo matrizialki
+u = Y
+− Xβ
+• Hondarrak:
+ˆ
+ut = Yt
+− ˆ
+Yt = Yt
+− ˆ
+β1
+− ˆ
+β2X2t
+− . . . − ˆ
+βKXKt
+t = 1, 2, . . . , T
+edo matrizialki
+ˆ
+u = Y
+− ˆ
+Y = Y
+− X ˆ
+β
+8
+
+LEFrekiko hondarrak, PEFerekiko perturbazioak diren bezalakoak dira. Hala ere, lehenak
+ez dira azken hauen estimatzaile onak izango 
+(lagina txikia bada behintzat ez), zeren
+geroago ikusiko den bezala, ez baituzte propietate berdinak.
+Adierazpen graﬁkoa K = 2 denean,
+Yt = β1 + β2X2t + ut
+eredua honela idatzi ohi da:
+Yt = α + βXt + ut
+eta Erregresio Lineal Bakuneko Eredua da 
+(ELBE). Kasu honetan, LEF, PEF, hondarrak
+eta perturbazioak graﬁka baten bitartez adierazi daitezke.
+X
+Y
+E
+(Y ) = α + βX
+ˆ
+Y
+= ˆ
+α
++ ˆ
+βX
+(Xt, Yt)
+Xt
+Yt
+ˆ
+Yt
+E
+(Yt)
+ˆut
+u
+t
+2.1 Irudia: LEF, PEF, hondarrak eta perturbazioak ELBEn.
+9
+
+Karratu Txikienen Arruntetako estimazio metodoa (KTA)
+min
+ˆ
+β
+T
+t
+=1
+ˆ
+u2
+t = min
+ˆ
+β
+T
+t
+=1
+(Yt
+− ˆ
+Yt)
+2
+Oraingo helburua, β koeﬁziente ezezagunaren estimatzailea lortzea da 
+(ELOEko koeﬁ-
+zienteen bektorea da, β1, . . . , βK). Estimatzaile bat formula bat besterik ez da eta datu
+batzuei aplikatuz, zenbakizko balio bat ematen duen. Estimatzaile baten medioz eta
+lagin konkretu batekin lortutako zenbakizko balio hau, estimazioa da. Biak ˆ
+β bezala
+ezagutzen dira eta estimatzaileen edo estimazioen bektorea izango da. Barnean duenaren
+arabera, formulen edo zenbakizko balioen bektorea izango da. Testuingurunearen arabe-
+ra bata edo bestea izango da baina sekula ere ez dira berdinak izango eta beraz, ez dira
+nahastu behar.
+Kasu honetan, KTAko estimazio erizpidea erabili denez, lortzen diren estimatzaileak,
+KTAko estimatzaileak
+dira.
+KTAko estimatzailea ELOEn
+Estimazio erizpidea:
+min
+ˆ
+β1,..., ˆ
+βK
+T
+t
+=1
+ˆ
+u2
+t =
+min
+ˆ
+β1,..., ˆ
+βK
+T
+t
+=1
+(Yt
+− ˆ
+β1
+− ˆ
+β2X2t
+− . . . − ˆ
+βKXKt)
+2
+(2.2)
+Matrizialki,
+T
+t
+=1 ˆ
+u2
+t =
+ˆ
+u′ ˆ
+u
+(1 × 1)
+da non ˆ
+u, T
+× 1 ordenako bektorea den. Estimazio erizpidea
+beraz, honela jarri daiteke:
+min
+ˆ
+β
+ˆ
+u′ ˆ
+u = min
+ˆ
+β
+(Y
+− X ˆ
+β)′(Y
+− X ˆ
+β).
+Minimoduna izateko beharrezkoak diren K lehen ordenako baldintzak 
+(L.O.B.) ondoren-
+goak dira:
+∂ ˆ
+u′ ˆ
+u
+∂ ˆ
+β
+= 0
+⇒ −2X
+′(Y − X ˆβ) = 0.
+Ebatziz, ekuazio normalak lortzen dira
+X′Y = X′X ˆ
+βKTA.
+(2.3)
+Alderdi biak (X′X)−1-gatik aurrebiderkatuz eta h
+(X) = K delarik, KTAko estimatzailea
+lortzen da:
+ˆ
+βKTA = (X
+′X)−1X′Y
+(2.4)
+non ˆ
+β, (K
+×1) ordenako bektorea den, X
+′X (K ×K) ordenako matrizea eta X′Y (K ×1)
+ordenako bektorea. Hauen itxura honakoak dira:
+X′X
+(K × K)
+=
+
+
+
+
+
+
+
+
+T
+X2t
+X3t
+· · ·
+XKt
+X2t
+X22t
+X2tX3t
+· · ·
+X2tXKt
+X3t
+X3tX2t
+X23t
+· · ·
+X3tXKt
+...
+...
+...
+...
+XKt
+XKtX2t
+XKtX3t
+· · ·
+X2
+Kt
+
+
+
+
+
+
+
+
+10
+
+X′Y
+(K × 1)
+=
+
+
+
+
+
+
+
+
+Yt
+X2tYt
+X3tYt
+...
+XKtYt
+
+
+
+
+
+
+
+
+ˆ
+β
+(K × 1)
+=
+
+
+
+
+
+
+
+
+
+ˆ
+β1
+ˆ
+β2
+ˆ
+β3
+...
+ˆ
+βK
+
+
+
+
+
+
+
+
+
+Hortaz, (2.3) espresioan diren K ekuazio normalak honela jar daitezke:
+Yt = T ˆ
+β1 + ˆ
+β2
+X2t + . . . + ˆ
+βK
+XKt
+X2tYt = ˆ
+β1
+X2t + ˆ
+β2
+X22t + . . . + ˆ
+βK
+X2tXKt
+...
+...
+...
+...
+XKtYt = ˆ
+β1
+XKt + ˆ
+β2
+XKtX2t + . . . + ˆ
+βK
+X2
+Kt.
+Bestalde, KTAko estimatzailea minimoduna izateko bigarren ordenako baldintzak bete-
+tzen dituela frogatzea erraza da. Hau horrela izanik, hondar karratuen baturaren minimi-
+zaziotik lortzen den estimatzailea optimizazio problemaren soluzio bakarra dela frogatzen
+da.
+KTAko estimatzailea datu zentratuen menpean
+KTAko estimatzailea, 
+(2.4), kalkulatzeko beste era bat existitzen da, aldagaiak zentratuz.
+Honela kalkulatutako KTAko estimatzaileari, datu zentratuetan oinarrituriko KTAko es-
+timatzailea da, ez beste estimatzaile bat delako 
+(izatez berbera da), baizik eta beste era
+batean kalkulaturik dagoelako.
+Ekuazio normaletatik abiatuz eta lehen ekuaziotik ˆ
+β1 askatuz:
+Yt = T ˆ
+β1 + ˆ
+β2
+X2t + . . . + ˆ
+βK
+XKt
+=
+⇒ ˆ
+β1 = ¯
+Y
+− ˆ
+β2 ¯
+X2
+− . . . − ˆ
+βK ¯
+XK
+gainontzeko (K
+−1) ekuazioetan ordezkatzen da. Adibidez bigarrenean ordezkatzen bada:
+X2tYt =
+( ¯
+Y
+− ˆ
+β2 ¯
+X2
+− . . . − ˆ
+βK ¯
+XK)
+X2t + ˆ
+β2
+X22t + . . . + ˆ
+βK
+X2tXKt
+Ondoren ˆ
+βk k = 1, 2, . . . , K koeﬁzienteekiko biderkatzaile komunak ateraz:
+X2tYt
+− ¯
+Y
+X2t =
+ˆ
+β2(
+X22t − ¯
+X2
+X2t) + . . . + ˆ
+βK(
+X2tXKt
+− ¯
+XK
+X2t).
+Azkenik,
+X2t terminoa T -gatik biderkatuz eta zatituz:
+X2tYt
+− T ¯
+Y ¯
+X2 =
+ˆ
+β2(
+X22t − T ¯
+X22) + . . . + ˆ
+βK(
+X2tXKt
+− T ¯
+XK ¯
+X2).
+11
+
+Hemen xkt, Xk aldagaiaren zentraturiko t. behaketa da, hau da, xkt = Xkt
+− ¯
+Xk
+∀k.
+Notazio berdina erabiltzen da aldagai endogenoarentzat: yt = Yt
+− ¯
+Y . Erraz frogatu
+daiteke, zentraturiko bi aldagaien gurutzatutako biderkadura era berean jarri daitekela,
+adibidez,
+x2tx3t =
+(X2t
+− ¯
+X2)(X3t
+− ¯
+X3) =
+X2tX3t
+− T ¯
+X2 ¯
+X3. Beraz, bigarren
+ekuazio normalaren itxura ondorengoa da:
+x2tyt = ˆ
+β2
+x22t + . . . + ˆ
+βK
+x2txKt .
+Lehen ekuazio normaletik lorturiko ˆ
+β1-ren espresioa, gainontzeko (K
+− 1) ekuazioetan
+ordezkatuz lortzen den zentraturiko ekuazio normalen sistema ondorengoa da:
+x2tyt = ˆ
+β2
+x22t + ˆ
+β3
+x2tx3t + . . . + ˆ
+βK
+x2txKt
+x3tyt = ˆ
+β2
+x3tx2t + ˆ
+β3
+x23t + . . . + ˆ
+βK
+x3txKt
+...
+...
+...
+...
+xKtyt = ˆ
+β2
+xKtx2t + ˆ
+β3
+xKtx3t + . . . + ˆ
+βK
+x2
+Kt,
+edo matrizialki adierazirik, x′y = x′x ˆ
+β∗ (2.3) bezalako itxura lortuz. Hemen ordea, ˆ
+β∗
+((K
+−1)×1) ordenako koeﬁzienteen bektorea da, hau da, ˆ
+β2, . . . , ˆ
+βK koeﬁzienteak dituena
+( termino independentea kontuan izan gabe).
+Horrela, 
+(2.4), KTAko estimatzailea lortzeko baliokidea den beste era bat ondorengoa da:
+ˆ
+β∗ = (x′x)−1x′y
+non
+x′x
+(K − 1) × (K − 1)
+=
+
+
+
+
+
+
+x22t
+x2tx3t
+· · ·
+x2txKt
+x3tx2t
+x23t
+· · ·
+x3txKt
+...
+...
+...
+xKtx2t
+xKtx3t
+· · ·
+x2
+Kt
+
+
+
+
+
+
+x′y
+((K − 1) × 1)
+=
+
+
+
+
+
+
+x2tyt
+x3tyt
+...
+xKtyt
+
+
+
+
+
+
+ˆ
+β∗
+((K − 1) × 1)
+=
+
+
+
+
+
+
+
+ˆ
+β2
+ˆ
+β3
+...
+ˆ
+βK
+
+
+
+
+
+
+
+Azkenik, aurreko koeﬁzienteak estimatu ondoren, termino konstantea edo independentea
+estimatzen da lehen ekuazioko ˆ
+β1-ren espresioa erabiliz:
+ˆ
+β1 = ¯
+Y
+− ˆ
+β2 ¯
+X2
+− ... − ˆ
+βK ¯
+XK.
+12
+
+2.4
+Lagin Erregresio Funtzioaren propietateak (LEF)
+Notazio baliokidetasun batzuk
+Yt = β1 + β2X2t + . . . + βKXKt + ut t = 1, 2, . . . , T
+⇔ Y = Xβ + u
+E(Yt) = β1 + β2X2t + . . . + βKXKt
+t = 1, 2, . . . , T
+⇔ E(Y ) = Xβ
+ˆ
+Yt = ˆ
+β1 + ˆ
+β2X2t + . . . + ˆ
+βKXKt
+t = 1, 2, . . . , T
+⇔
+ˆ
+Y = X ˆ
+β
+ˆ
+ut = Yt
+− ˆ
+Yt
+t = 1, 2, . . . , T
+⇔
+ˆ
+u = Y
+− ˆ
+Y
+PEFen propietateak
+1. Hondarrak aldagai azaltzaileekiko ortogonalak dira: X′ ˆ
+u = 0.
+Ekuazio normalak kontuan izanik,
+X′ ˆ
+u = X′(Y
+− ˆ
+Y ) = X′(Y
+− X ˆ
+β) = 0
+2. Hondarrak estimatutako aldagai endogenoarekiko ortogonalak dira: ˆ
+Y ′ ˆ
+u = 0.
+ˆ
+Y ′ ˆ
+u = (X ˆ
+β)′ ˆ
+u = ˆ
+β′ X′ ˆ
+u
+=0
+= 0
+Ereduak termino independentea izanez gero, hau da, X1t = 1 baldin bada, orduan X′ˆ
+u-ren
+lehen errenkada eta
+ˆ
+ut berdinak dira eta ondorioz hurrengoak betetzen dira.
+3. Hondarren batura zero da:
+T
+t
+=1 ˆ
+ut = 0.
+X′ ˆ
+u = 0
+⇔
+
+
+
+
+
+
+
+
+
+T
+1 ˆ
+ut
+T
+1 X2t ˆ
+ut
+T
+1 X3t ˆ
+ut
+...
+T
+1 XKt ˆ
+ut
+
+
+
+
+
+
+
+
+
+=
+
+
+
+
+
+
+
+
+0
+0
+0
+...
+0
+
+
+
+
+
+
+
+
+⇒
+T
+t
+=1
+ˆ
+ut = 0
+4. Y -ren lagin batezbestekoa eta Y -
+ren estimazioen lagin batezbestekoa berdinak dira:
+¯
+Y =
+¯ˆ
+Y .
+ˆ
+ut = Yt
+− ˆ
+Yt
+⇐⇒ Yt = ˆ
+Yt + ˆ
+ut
+Yt =
+ˆ
+Yt +
+ˆ
+ut
+=0
+1
+T
+Yt =
+1
+T
+ˆ
+Yt
+¯
+Y
+=
+¯ˆ
+Y
+13
+
+5. LEF batezbestekoen bektoretik pasatzen da: ¯
+Y = ˆ
+β1 + ˆ
+β2 ¯
+X2 + . . . + ˆ
+βK ¯
+XK.
+T
+t
+=1
+ˆ
+ut = 0
+⇔
+(Yt
+− ˆ
+β1
+− ˆ
+β2X2t
+− . . . − ˆ
+βKXKt) = 0
+Yt
+− T ˆ
+β1
+− ˆ
+β2
+X2t
+− . . . − ˆ
+βK
+XKt = 0
+Yt = T ˆ
+β1 + ˆ
+β2
+X2t + . . . + ˆ
+βK
+XKt
+1
+T
+Yt = ˆ
+β1 + ˆ
+β2
+1
+T
+X2t + . . . + ˆ
+βK
+1
+T
+XKt
+¯
+Y = ˆ
+β1 + ˆ
+β2 ¯
+X2 + . . . + ˆ
+βK ¯
+XK
+Oharra:
+ KTAtik lorturiko LEFek lehenengo bi propietateak beti betetzen dituzte. Baina,
+azken hiru propietateak beteko dituzte baldin eta soilik baldin ereduak termino konstan-
+tea baldin badauka.
+KTAko koeﬁziente estimatuen interpretazioa
+• ˆ
+β1 = E(Yt
+|Xkt = 0, ∀k = 2, . . . , K). Yt-ren itxarondako balioaren estimazioa
+aldagai azaltzaile guztiak zero direnean.
+• ˆ
+βk =
+∂E
+(Yt)
+∂Xkt
+=
+∆E(Yt)
+∆Xkt
+∀k = 2, . . . , K.
+Xk aldagaia unitate batean handitzerakoan, Yt-
+ren itxarondako gehikuntza estimatua
+(edo estimatutako gehikuntza) beste aldagai azaltzaile guztiak konstante mantenduz.
+2.5
+Doikuntza neurriak: Mugatze koeﬁzienteak
+Eredua estimatuta dagoenean,lagin erregresio funtzioa datuekiko nola doitzen den ana-
+lizatzea interesatzen da. Hau da, estimatutako funtzioa eta datuak nola doitzen diren.
+Yt-ren balio guztiak berdinak izango balira, hauek eta Y -
+ren lagin batezbestekoa ber-
+dinak lirateke, honela, Y -
+ren aldakuntza zero izanik. Orokorrean, Y aldagaiaren bariabi-
+litatea, behatutako balioen eta aldagai horren batezbestekoaren arteko distantzia bezala
+deﬁnitzen da. Kalkulatutako aldakortasunaren karratuen batura (KTB:
+ Karratu Tota-
+laren Batura) aldagai azaltzaileekin azaldu nahi den aldakuntza da. Honela, zenbat eta
+handiagoa izan azaldutako bariabilitatearen proportzioa, hainbat eta hobeagoa izango da
+egindako doikuntza.
+KT B =
+(Yt
+− ¯
+Y )2 =
+y2
+t =
+Y 2
+t
+− T ¯
+Y 2 = Y ′Y
+− T ¯
+Y 2
+Y = ˆ
+Y + ˆ
+u izanik:
+Y ′Y
+= ( ˆ
+Y + ˆ
+u)′( ˆ
+Y + ˆ
+u) =
+= ˆ
+Y ′ ˆ
+Y + ˆ
+Y ′ ˆ
+u
+=0
++ ˆ
+u′ ˆ
+Y
+=0
++ˆ
+u′ ˆ
+u =
+= ˆ
+Y ′ ˆ
+Y + ˆ
+u′ ˆ
+u
+14
+
+Alderdi biei T ¯
+Y 2 kenduz,
+Y ′Y
+− T ¯
+Y 2 = ˆ
+Y ′ ˆ
+Y
+− T ¯
+Y 2 + ˆ
+u′ ˆ
+u
+Ereduak termino konstantea baldin badauka, ¯
+Y =
+¯ˆ
+Y ematen da eta ondorioz,
+Y ′Y
+− T ¯
+Y 2 = ˆ
+Y ′ ˆ
+Y
+− T
+¯ˆ
+Y
+2
++ ˆ
+u′ ˆ
+u
+Yt
+2 − T ¯Y 2 =
+ˆ
+Y 2
+t
+− T
+¯ˆ
+Y
+2
++
+ˆ
+u2
+t
+(Yt
+− ¯
+Y )2 =
+( ˆ
+Yt
+−
+¯ˆ
+Y )2 +
+ˆ
+u2
+t
+KT B = KAB + HKB
+Mugatze koeﬁzientea, R2
+R2 =
+KAB
+KT B
+Mugatze koeﬁzientea erregresioaren doikuntza neurri bat da. Aldagai azaltzaileen alda-
+kuntzek zenbatean azaltzen duten aldagai endogenoaren aldakuntza era lineal batean,
+neurtzen du.
+Ereduan terminu independentea existitzen denean, KTB=KAB+HKB berdintza betetzen
+denez,
+R2 =
+KAB
+KT B
+=
+KT B
+− HKB
+KT B
+= 1
+−
+HKB
+KT B
+.
+Argi dagoenez, ereduan terminu independentea existitzen bada, R2 zero eta bat balioen
+artean aurkituko da.
+Zuzendutako mugatze koeﬁzientea, ¯
+R2
+Mugatze koeﬁzienteak arazo bat aurkezten du. Ereduan aldagai azaltzaile berriak barne-
+ratzerakoan, nahiz eta hauek aldagai endogenoa azaltzeko esanguratsuak ez izan, mugatze
+koeﬁzientea mantendu edo handitu egiten da. Arazo hau dela eta, beste doikuntza neurri
+bat deﬁnitzen da, zuzendutako mugatze koeﬁzientea, ¯
+R2 alegia.
+¯
+R2 = 1
+−
+HKB
+(T −K)
+KT B
+(T −1)
+= 1
+−
+(T
+− 1)
+(T
+− K)
+HKB
+KT B
+= 1
+−
+(T
+− 1)
+(T
+− K)
+(1
+− R
+2)
+Neurketa doikuntza honek, aurrekoarekin konparatuz, aldagai ez nabarien barnerapena
+penalizatu egiten du.
+15
+
+2.6
+Erregresio Lineal Bakuneko Ereduan lortzen diren emaitzen
+erakuspena
+Izan bedi hurrengo ELBE Yt = α + βXt + ut t = 1, . . . , T eta karratu txikienen arrun-
+tetako doikuntza aplikatzen da:
+min
+ˆ
+β
+T
+t
+=1
+ˆ
+u2
+t = min
+ˆ
+α, ˆ
+β
+T
+t
+=1
+(Yt
+− ˆα − ˆ
+βXt)
+2
+Minimoa lehen deribatu partzialak zero egitean lortzen da (L.O.B.):
+∂
+T
+t
+=1 ˆ
+u2
+t
+∂ ˆ
+α
+= 2
+T
+t
+=1
+(Yt
+− ˆα − ˆ
+βXt)(
+−1) = 0
+(2.5)
+∂
+T
+t
+=1 ˆ
+u2
+t
+∂ ˆ
+β
+= 2
+T
+t
+=1
+(Yt
+− ˆα − ˆ
+βXt)(
+−Xt) = 0
+(2.6)
+(2.5) T -gatik zatituz
+ˆ
+αKTA = ¯
+Y
+− ˆ
+βKTA ¯
+X
+(2.7)
+(2.6) espresioan (2.7) ordezkatuz:
+T
+t
+=1
+[YtXt
+− ( ¯
+Y
+− ˆ
+β ¯
+X)Xt
+− ˆ
+βX2
+t ] = 0
+ˆ
+β-ri dagozkion terminoen biderkatzaile komuna ateraz,
+T
+t
+=1
+(YtXt
+− Xt ¯
+Y ) = ˆ
+β
+T
+t
+=1
+(X2
+t
+− Xt ¯
+X)
+eta ˆ
+β despejatuz
+ˆ
+βKTA =
+YtXt
+− T ¯
+X ¯
+Y
+X2t
+− T ¯
+X2
+=
+xtyt
+x2t
+(2.8)
+Behin α eta β estimatzen direnean, estimatutako eredua lortzen da ˆ
+Yt = ˆ
+α + ˆ
+βXt, zei-
+narekin hondarrak kalkulatu ahal diren, ˆ
+ut = Yt
+− ˆ
+Yt. Erregresio zuzena datuekiko nola
+doitzen den ikertzeko, mugatze koeﬁzientea kalkulatzen da, R2. Erregresio lineal baku-
+neko ereduan soilik, mugatze koeﬁzientea eta aldagai endogeno eta exogenoaren arteko
+koerlazio koeﬁziente bakunaren karratua, berdinak dira: R2 = r2
+Y X .
+KT B =
+y2
+t
+KAB =
+ˆ
+y2
+t =
+( ˆ
+Yt
+−
+¯ˆ
+Y t)
+2 =
+=
+( ˆ
+βxt)
+2 = ˆ
+β2
+x2
+t =
+=
+xtyt
+x2t
+xtyt
+x2t
+x2
+t =
+= ˆ
+β
+xtyt =
+(
+xtyt)2
+x2t
+16
+
+rxy =
+(Xt− ¯
+X
+)(Yt− ¯
+Y
+)
+T
+(Xt− ¯
+X
+)
+2
+T
+(Yt− ¯
+Y
+)
+2
+T
+=
+xtyt
+T
+x
+2
+t
+T
+y
+2
+t
+T
+r2xy =
+(
+xtyt)2
+x2t
+y2t
+=
+KAB
+KT B
+= R2
+2.7
+KTAko estimatzaileen lagin txikietako propietateak. Gauss-
+Markoven teorema
+KTAko estimatzaileen propietateak lagin txikietan
+• Alborapena
+• Bariantza
+• Batezbesteko errore koadratikoa
+Izan bedi erregresio lineal orokorraren eredua, Y = Xβ+u, non oinarrizko hipotesi guztiak
+betetzen diren. KTAko estimatzaileak, ˆ
+β = (X′X)−1X′Y , ondorengo propietateak ditu:
+• Linealtasuna. Aldagai azaltzaileen ﬁnkotasunean oinarrituz eta KTAko estimatzai-
+lea perturbazioen 
+(baita aldagai endogenoarena) konbinazio lineal bat dela kontuan
+harturik, KTAko estimatzailea lineala da.
+ˆ
+β = (X′X)−1X′Y =
+= (X′X)−1X′(Xβ + u) =
+= β + (X′X)−1X′u
+• Alboragabetasuna. E(u) = 0 eta X matrizea ﬁnkoa dela jakinik, ˆ
+βKTA albo-
+ragabea da, hau da, bere itxaropena ereduko benetako koeﬁzienteen bektorearekiko
+berdina da.
+E( ˆ
+β) = E(β + (X′X)−1X′u) =
+= E(β) + (X′X)−1X′E(u) =
+= β
+17
+
+• Bariantza minimoduna. u ∼ (0, σ
+2IT ) emanik eta X matrizea ﬁnkoa izanik,
+Bar( ˆ
+β) = E[( ˆ
+β
+− E( ˆ
+β))( ˆ
+β
+− E( ˆ
+β))′] =
+= E[( ˆ
+β
+− β)( ˆ
+β
+− β)
+′] =
+= E
+(X′X)−1X′u (X′X)−1X′u
+′
+=
+= E[(X′X)−1X′uu′X(X′X)−1] =
+= (X′X)−1X′E[uu′]X(X′X)−1 =
+= (X′X)−1X′σ2IT X(X
+′X)−1 =
+= σ2(X′X)−1X′X(X′X)−1 =
+= σ2(X′X)−1
+Bar( ˆ
+β)
+(K × K)
+=
+
+
+
+
+
+
+
+
+
+Bar( ˆ
+β1)
+Kob( ˆ
+β1, ˆ
+β2)
+Kob( ˆ
+β1, ˆ
+β3)
+· · · Kob( ˆ
+β1, ˆ
+βK)
+Kob( ˆ
+β2, ˆ
+β1)
+Bar( ˆ
+β2)
+Kob( ˆ
+β2, ˆ
+β3)
+· · · Kob( ˆ
+β2, ˆ
+βK)
+Kob( ˆ
+β3, ˆ
+β1)
+Kob( ˆ
+β3, ˆ
+β2)
+Bar( ˆ
+β3)
+· · · Kob( ˆ
+β3, ˆ
+βK)
+...
+...
+...
+. ..
+...
+Kob( ˆ
+βK, ˆ
+β1) Kob( ˆ
+βK, ˆ
+β2) Kob( ˆ
+βK, ˆ
+β3)
+· · ·
+Bar( ˆ
+βK)
+
+
+
+
+
+
+
+
+
+=
+= σ2
+
+
+
+
+
+
+
+
+a11
+a12
+a13
+· · · a1K
+a21
+a22
+a23
+· · · a2K
+a31
+a32
+a33
+· · · a3K
+...
+...
+... ...
+...
+aK1 aK2 aK3
+· · · aKK
+
+
+
+
+
+
+
+
+= σ2(X′X)−1
+simetrikoa.
+Gauss-Markoven Teorema
+Erregresio lineal orokorreko ereduaren oinarrizko hipotesien menpean, estimatzaile lineal
+eta alboragabe guztien artetik, KTAko estimatzailea eﬁzientea da, hau da, bariantzarik
+txikiena du.
+2.8
+KTAko estimatzailearen banaketa perturbazioen normalita-
+tepean
+Y = Xβ + u ereduan non u
+∼ N(0, σ
+2IT ) den, KTAko estimatzailea, perturbazioekiko
+linealtasunaren medioz, banaketa normal anizkoitza jarraitzen du, E( ˆ
+β) = β batezbeste-
+koarekin eta Bar( ˆ
+β) = σ2(X′X)−1 bariantza eta kobariantza matrizearekin. Hau da,
+ˆ
+β
+∼ N(β, σ
+2(X′X)−1).
+Eta k. koeﬁzientea bakarka harturik,
+ˆ
+βk
+∼ N(βk, σ
+2a
+kk)
+non akk, (X′X)−1 matrizearen (k, k) elementua den.
+18
+
+2.9
+Perturbazioaren bariantzaren estimazioa
+KTAko hondarren propietateak
+Y = Xβ + u eredua emanik non perturbazioak esferikoak diren, u
+∼ N(0, σ
+2IT ), KTAko
+estimatzailea ˆ
+β = (X′X)−1X′Y da. Beraz, KTAko hondarrak perturbazioen funtzioan
+idatzi daitezke:
+ˆ
+u = Y
+− ˆ
+Y =
+= Y
+− X ˆ
+β =
+= Y
+− X(X
+′X)−1X′Y =
+= [IT
+− X(X
+′X)−1X′]Y =
+= [IT
+− X(X
+′X)−1X′](Xβ + u) =
+= Xβ
+− X(X
+′X)−1X′Xβ + [I
+T
+− X(X
+′X)−1X′]u =
+= [IT
+− X(X
+′X)−1X′]
+=M
+u = M u
+M matrizearen ezaugarriak honakoak dira:
+• Simetrikoa da: M = M
+′
+M ′ = [IT
+− X(X
+′X)−1X′]′ = I′
+T
+− (X(X
+′X)−1X′)′ =
+= IT
+− (X
+′)′[(X′X)−1]′X′ = IT − X(X′X)−1X′ = M
+• Idenpotentea da: MM = M
+M M = [IT
+− X(X
+′X)−1X′][IT − X(X′X)−1X′] =
+= IT
+− X(X
+′X)−1X′ − X(X′X)−1X′ + X (X
+′X)−1X′X
+=IK
+(X′X)−1X′ =
+= IT
+− X(X
+′X)−1X′ = M
+• h(M)= tr(M)= T − K
+tr(M ) = tr[IT
+− X(X
+′X)−1X′] = tr(IT ) − tr[X(X′X)−1X′] =
+= tr(IT )
+− tr[(X
+′X)−1X′X] = tr(IT ) − tr(IK) = T − K
+• M X-rekiko ortogonala da: MX = 0
+M X = [IT
+− X(X
+′X)−1X′]X = X − X(X′X)−1X′X = 0
+ˆ
+u = M u izanik eta M matrizea Xekiko dependentea denez X ﬁnkoa delarik, orduan:
+E(ˆ
+u) = M E(u) = M 0 = 0
+19
+
+Bar(ˆ
+u) = E(ˆ
+uˆ
+u′) =
+= E(M uu′M ′) = M E(uu′)M ′ =
+= M σ2IT M = σ
+2M
+M matrizearen diagonal nagusiko elementu guztiak ez dira berdinak eta ondorioz, hon-
+darrek ez dituzte bariantza berdinak. Bestaldetik, diagonal nagusitik kanpoko elementu
+guztiak ez direnez zero baliokoak, hortaz, hondarrak ez dira koerlatu gabeak. Nahiz
+eta perturbazioak homozedaztikoak eta autokoerlatu gabeak izan, hondarrekin EZ DA
+BERDINA ematen.
+ˆ
+u
+∼ N(0, σ
+2M)
+Perturbazioaren bariantzaren estimatzailea
+Ohituraz, σ2-ren ondorengo estimatzaile alboragabea erabiltzen da:
+ˆ
+σ2 =
+ˆ
+u′ ˆ
+u
+T
+− K
+=
+HKB
+T
+− K
+=
+ˆ
+u2
+t
+T
+− K
+.
+Honakoa kontuan harturik,
+E(ˆ
+u′ ˆ
+u) = E(u′M u) =
+= E(tr(u′M u)) = E(tr(M uu′)) =
+= tr(E(M uu′)) = tr(M E(uu′)) =
+= tr(M σ2IT ) =
+= σ2tr(M ) = σ2(T
+− K).
+Erraz frogatu daiteke ˆ
+σ2-ren alboragabetasuna:
+E(ˆ
+σ2) = E
+ˆ
+u′ ˆ
+u
+T
+− K
+=
+=
+E(ˆ
+u′ ˆ
+u)
+T
+− K
+=
+=
+σ2(T
+− K)
+T
+− K
+= σ2.
+20
+
+2.10
+Eranskina
+Eranskina.- KTB, KAB eta HKB ren espresio desberdinak
+KT B =
+y2
+t = y
+′y =
+=
+(Yt
+− ¯
+Y )2 =
+=
+Y 2
+t
+− T ¯
+Y 2 = Y ′Y
+− T ¯
+Y 2
+KAB =
+ˆ
+y2
+t =
+( ˆ
+Yt
+−
+¯ˆ
+Y )2 =
+=
+ˆ
+Y 2
+t
+− T
+¯ˆ
+Y
+2
+=
+= ˆ
+Y ′ ˆ
+Y
+− T
+¯ˆ
+Y
+2
+=
+= (X ˆ
+β)′(X ˆ
+β)
+− T
+¯ˆ
+Y
+2
+=
+= ˆ
+β′ X′X ˆ
+β
+=X′Y
+−T ¯
+Y 2 =
+= ˆ
+β′X′Y
+− T
+¯ˆ
+Y
+2
+=
+= ˆ
+y′ ˆ
+y =
+= ˆ
+β∗
+′ x′x ˆ
+β∗ =
+= ˆ
+β∗
+′ x′y
+HKB =
+ˆ
+u2
+t = ˆ
+u′ ˆ
+u =
+= (Y
+− ˆ
+Y )′(Y
+− ˆ
+Y ) = (Y
+− X ˆ
+β)′(Y
+− X ˆ
+β) =
+= Y ′Y
+− ˆ
+β′X′Y
+− Y
+′X ˆ
+β + ˆ
+β′X′X ˆ
+β =
+= Y ′Y
+− Y
+′X(X′X)−1X′Y − Y ′X(X′X)−1X′Y +
+Y ′X(X′X)−1X′X(X′X)−1X′Y =
+= Y ′Y
+− Y
+′X(X′X)−1X′Y =
+= Y ′Y
+− ˆ
+β′X′X ˆ
+β =
+= Y ′Y
+− ˆ
+β′X′Y =
+= y′y
+− ˆ
+β∗
+′ x′y
+21
+
+3. Gaia
+ELOE (II). Murrizketa linealen
+kontrasteak eta aurresanak
+Ekonometriaren funtsezko zeregin bat ekonomia erreal baten ezaguera kuantitatibo bat
+ekartzea da. Hori lortzeko metodo bat balizko alternatiboen kontrasteak dira. Hau da,
+ekonomilariek portaera ekonomikoari buruzko teoriak garatu eta ebaluatzen dituzte eta
+hipotesien kontrasteak, teoria hauek ebaluatzeko prozedurak dira.
+3.1
+Banakako esanguratasun kontrasteak. Konﬁdantza tarteak
+Hipotesien kontrasteen oinarrizko kontzeptu estatistikoak gogoratzeko gai honen amaie-
+rako A Eranskina irakurri daiteke.
+Atal honetan ondorengo bi hipotesi hutsen kontrasteak nola egin daitezken azalduko da:
+(a) H0 : βk = c
+non c edozein konstante ezagun bat den
+(b) H0 : βk = 0
+(b) kasua Xk aldagaiaren banakako esanguratasun kontrastearen hipotesi hutsa li-
+tzateke, ekonometrian sarrien planteatzen den kontrastea delarik. Hipotesi huts hori
+egiazkoa balitz, orduan Xk aldagaiak ez luke aldagai endogenoan eragingo, hau da, Xk
+aldagaian izandako aldaketek ez lukete Y aldagaian aldaketarik eragingo, gainontzeko
+aldagaiak konstante mantenduz gero. Beraz, kontraste honek Xk aldagaia ereduan man-
+tendu behar den edo ez erabakitzeko balio du.
+2.2 atalean azaldutako ELOEren oinarrizko hipotesiak kontuan izanik 
+(perturbazioen nor-
+maltasuna barneratuz), 2.8 atalean βk KTAko estimatzailearen banaketa ondorengoa dela
+frogatu zen:
+ˆ
+βk
+∼ N (βk, σ
+2a
+kk).
+Beraz, aldagai tipiﬁkatua hau izango da:
+z =
+ˆ
+βk
+− βk
+σ√akk
+∼ N (0, 1)
+(3.1)
+Izendatzailekoa, ˆ
+βk estimatzailearen desbiderazio tipikoa da eta desb( ˆ
+βk) edo σˆ
+βk
+izen-
+datzen da. Horrela, σ2 ezaguna balitz, estatistiko hau erabil daiteke (a) eta 
+(b) hipotesien
+kontrasteak burutzeko.
+22
+
+3.1.1
+H0 : βk = c hipotesiaren kontrastea σ2 ezaguna denean
+Bi aldetako kontrastearekin hasiz,
+H0 : βk = c
+HA : βk = c
+H0 egiazkoa balitz, βk c-gatik ordezka genezake (3.1)-
+ren zenbakitzailean, horrela banaketa
+aldatuko ez delarik. Beraz,
+H0 egiazkoa bada
+z =
+ˆ
+βk
+− c
+σˆ
+βk
+∼ N (0, 1) .
+Bi aldetako kontrastea denez, 0 baliotik urruneko z estatistikoaren balioentzat, bai posi-
+tibo bai negatiboak, hipotesi hutsa baztertuko da. Hau da, H0 hipotesi hutsa baztertuko
+da α esangura mailarekin, baldin eta
+ˆ
+βk
+− c
+σˆ
+βk
+> zα
+2
+bada
+non zα
+2 , N (0
+, 1) banaketako koantila den, zeinak bere eskubirantz
+α
+2 probabilitatea uzten
+duen.
+Alde bateko kontrastea egin nahi bada ordea, aldatzen den gauza bakarra erabaki araua
+da. Adibidez, hurrengo kontrastea egiteko,
+H0 : βk = c
+HA : βk > c
+erabaki araua hipotesi hutsa baztertzea izango da α esangura mailarekin, baldin eta
+z =
+ˆ
+βk
+− c
+σˆ
+βk
+> zα bada.
+Aurkako hipotesia HA :
+ βk < c bada, erabaki araua H0 baztertzea izango da baldin eta
+z <
+−zα ematen bada.
+3.1.2
+H0 : βk = 0 hipotesiaren kontrastea σ2 ezaguna denean
+Aurreko atalarekiko desberdintasun bakarra c balioaren ordez zero balioa jartzea litzateke.
+23
+
+3.1.3
+H0 : βk = c hipotesiaren kontrastea σ2 ezezaguna denean
+Normalean, σ2 ezezaguna izaten da. Kasu honetan, σ2-ren ordez, ˆ
+σ2 bere estimatzailea
+erabiltzean, kontrasterako estatistikoen banaketa aldatzen da,
+N (0, 1) izatetik t(T−K)
+izatera pasatzen baita. σ2 konstantea da baina ˆ
+σ2, ordea, aldagai aleatorioa denez, bere
+banaketa kontuan izan behar da.
+Baina zein da ˆ
+σ2-ren banaketa? Zein erlazio dago ˆ
+β eta ˆ
+σ2 aldagai aleatorioen artean?
+1. ˆ
+σ2
+-ren banaketaren lorpena
+Oso erraz lortzen da:
+ B Eranskineko 3. emaitza aplikatu behar da baina Z = u eta
+A = M baliokidetasunak erabiliz. Ordezkapen hauek eginez,
+u′M u
+σ
+2
+∼ χ
+2
+(T −K) lortzen
+da. Ondoren, 2.9 atalean ikusi zenez, u′M u = ˆ
+u′ ˆ
+u da eta ˆ
+σ2-ren deﬁnizioa erabiliz,
+ondokoa lortzen da:
+ˆ
+σ2(T
+− K)
+σ2
+∼ χ
+2
+(T −K)
+(3.2)
+2. ˆ
+β
+eta ˆ
+σ2
+estimatzaileek banaketa independenteak dituzte
+Frogapena C Eranskinean dago.
+Horrela, B Eranskineko 6.emaitza aplikatzeko beharrezkoak diren elementu guztiak izanik,
+ˆ
+βk eta ˆ
+σ2 independenteak direnez eta (3.1) eta (3.2) erabiliz, hau lortzen da:
+t =
+ˆ
+βk
+− βk
+ˆ
+σ√akk
+∼ t(T−K)
+(3.3)
+Student t banaketa
+N (0, 1) banaketaren antzekoa da, baina buztanak lodiagoak ditu,
+batez ere askatasun gradu baxukoak direnean.
+Hemendik aurrera kontraste baten garapena oso erraza da, 3.1.1 atalean eginikoaren an-
+tzekoa baita.
+H0 : βk = c
+HA : βk = c
+H0-ren menpean
+t =
+ˆ
+βk
+− c
+ˆ
+σ√akk
+=
+ˆ
+βk
+− c
+ˆ
+σˆ
+βk
+∼ t(T−K)
+(3.4)
+Hipotesi hutsa egiazkoa bada, t estatistikoak zerotik oso urruneko balioa izatea gertagaitza
+da. Hortaz, H0 baztertuko da α esangura mailarekin, baldin eta
+|t| > tα
+2 (T −K )
+bada.
+24
+
+-4
+-2
+0
+2
+4
+6
+x
+0.1
+0.2
+0.3
+0.4
+0.5
+f
+HxL
+Denstitate
+F. tH12L
+Eskualde
+Onartze
+Eskualde
+Kritikoa Eskualdea
+Kritikoa
+3.1 Irudia: Bi aldetako kontrastea t(T−K)-rekin non T
+− K = 12 den
+3.1.4
+H0 : βk = 0 hipotesiaren kontrastea σ2 ezezaguna denean
+(3.4)estatistikoan, c zerogatik ordezkatu besterik ez da egin behar.
+H0 : βk = 0
+HA : βk = 0
+H0 egiazkoa bada:
+t =
+ˆ
+βk
+ˆ
+σˆ
+βk
+∼ t(T−K)
+(3.5)
+Estatistiko hau praktikan oso erabilgarria da eta t estatistikoa edo lagineko t bezala eza-
+gutzen da. H0 baztertzen da α esangura mailarekin,
+|t| =
+ˆ
+βk
+ˆ
+σˆ
+βk
+> tα
+2 (T −K )
+denean.
+H0 baztertzen bada, βk esanguratsuki zeroren desberdina dela esaten da eta beraz, da-
+gokion aldagaiak, Xk, eragin nabaria du Y aldagaiarengain edo sinpleago esanda, Xk
+nabaria edo esanguratsua da.
+25
+
+3.1.5
+βkren konﬁdantza tartea
+ˆ
+βkren eta ˆ
+σˆ
+βk ren estimatzaileak izanik, konﬁdantza tarteak datuak emanik gertagaitzak
+ez diren benetako βkren balioen tarte bat hainbanatzen du. 
+(3.3)tik oinarrituz, hurrengoa
+baieztatu daiteke (ikusi (3.1) irudia):
+P r
+−tα
+2 (T −K ) ≤
+ˆ
+βk
+− βk
+ˆ
+σˆ
+βk
+≤ tα
+2 (T −K )
+= 1
+− α
+βk parametro ezezaguna erdian utziz:
+P r ˆ
+βk
+− tα
+2 (T −K )
+ˆ
+σˆ
+βk ≤ βk ≤
+ˆ
+βk + tα
+2 (T −K )
+ˆ
+σˆ
+βk
+= 1
+− α
+KT1−α(βk) :
+ˆ
+βk
+− tα
+2 (T −K )
+ˆ
+σˆ
+βk ,
+ˆ
+βk + tα
+2 (T −K )
+ˆ
+σˆ
+βk
+Tartearen goi eta behe kotetan ˆ
+βk eta ˆ
+σˆ
+βk estimatzaileak agertzen direnez, tartezko es-
+timatzaile
+bat da, hau da tarte hau aleatorioa da (lagin bakoitzarentzat ˆ
+βk eta ˆ
+σˆ
+βk ren
+zenbaki desberdin bat lortzen da). Estimazioak lortzeko lagin bat erabiltzean, 
+[ zenbaki
+bat
+≤ βk ≤ beste zenbaki bat ] lortuko da βkren tartezko estimaziotzat ezagutuz edo/
+eta
+βkren (1
+− α) konﬁdantza tartea.
+KT1−α
+(βk) aldagai aleatorioaren propietateak errepikaturiko laginketan oinarritzen di-
+ra:
+ populazio berdineko T tamainuko inﬁnitu lagin lortuko balira, bakoitzarentzat tartea
+lortuz, orduan lorturiko tarte guztietatik %(1
+− α) × 100 tartek, βkren benetako balio
+ezezaguna barneratuko lukete. Behin βkren tartezko estimazio bat dugunean, parametro
+hau barnean edo kanpoan egongo da. Dena den, ezin da jakin benetan βk barnean dagoen
+edo ez, parametro ezezaguna baita. Ondorioz, estimazioa lortzeko erabilitako prozeduran
+datza konﬁdantza eta ez lorturiko estimazio partikularrean.
+Zertarako dira tartezko estimazioak? Erantzuna, puntuzko estimazioei buruzko informa-
+zio baliogarria ematen dutela da, hau da, noraino diren ﬁdagarriak esaten dute. Konﬁ-
+dantza tarte bat oso zabala bada ( Bar( ˆ
+βk) handia delako), laginean βkri buruzko infor-
+mazio askorik ez dagoela dio.
+Konﬁdantza tarteak banakako kontrasteak egiteko ere erabilgarriak dira. Hurrengoa kon-
+trastatu nahi izanez gero, adibidez:
+H0 : βk = c
+HA : βk = c
+konﬁdantza tarte bat osatu daiteke::
+KT1−α(βk) : ˆ
+βk
+− tα
+2 (T −K )
+ˆ
+σˆ
+βk
+,
+ˆ
+βk + tα
+2 (T −K )
+ˆ
+σˆ
+βk
+eta erabaki araua H0 ez baztertzea litzateke c balioa tartean egongo balitz, α esangura
+mailarekin. Tartean egongo ez balitz ordea, H0 hipotesi hutsa baztertuko da. Garbi
+dago kontrasteak horrela egiterakoan esanguratasun kontrastearen fokapenarekin lorturiko
+emaitza berberak lortzen direla.
+26
+
+3.2
+Baterako esanguratasun kontrastea
+Hurrengo erregresio eredu orokorrean,
+Yt = β1 + β2X2t + . . . + βKXKt + ut
+t = 1, 2, . . . , T
+erregresoreetatik batek ere ez duela aldagai endogenoarengain eragitearen kontrastea
+ondorengoa da:
+H0 : β2 = β3 =
+· · · = βK = 0
+HA : berdintasunen bat ez da betetzen
+Aldagai azaltzaile guztiek Y aldagai endogenoan ez dutela eragitearen indikatzaile argi
+bat zerotik hurbileko balioko mugatze koeﬁziente bat litzateke. Hau kontuan izanik eta
+hipotesi hutsaren menpean, ondorengoa froga daiteke:
+F =
+R2/(K
+− 1)
+(1
+− R2) /(T − K)
+∼ F(K−1,T−K)
+(3.6)
+R2, mugatze koeﬁzientea zerotik gero eta hurbilago badago, kontraste honetarako estatis-
+tikoaren balioa txikiagoa izango da eta beraz, α esangura mailarentzat, logikoa litzateke
+H0 hipotesi hutsa baztertzea
+F >
+Fα(K−1,T−K) bada.
+3.5.2 atalean ikusiko da kontrasterako estatistiko honen justiﬁkabide formala.
+3.3
+Murrizketa linealen kontraste orokorra
+Aurreko bi ataletan azaldutako kontrasteak izaten dira ekonometrian gehien erabiltzen
+direnak. Hain garrantzitsuak direnez, erregresioak egiten dituen edozein programa infor-
+matikok automatikoki kontraste horiek egiteko informazioa ematen du. Hala ere, badira
+beste kontraste interesgarri batzuk ere. Atal honetan ikusiko den bezala, estatistiko ba-
+kar batekin koeﬁzienteen murrizketa linealen edozein kopuru kontrasta daiteke. Hasierako
+pausua hipotesi hutsa jarraian bezala adieraztea da:
+H0 :
+R
+(q × K)
+·
+β
+(K × 1)
+=
+r
+(q × 1)
+Adierazpen honetan, q, hipotesi hutsak inposatutako murrizketa kopurua da, R berriz,
+ezagunak diren konstanteen matrizea da eta r, konstante ezagunen bektorea. Gainera, R
+eta r matrizetako konstanteak kontrastatu nahi den hipotesi hutsaren menpean daude.
+Garbiago geratzearren, ikusi adibide batzuk:
+1. Banakako kontrasteak:
+H0 : β2 = 0
+−→ H0 : Rβ = r bezala adierazirik,
+27
+
+Rβ = β2 eta r = 0 izango dira.
+Horrela, Rβ =
+0 1 0
+· · · 0
+
+
+
+
+
+
+β1
+β2
+...
+βK
+
+
+
+
+
+
+eta
+r = [0]
+Hipotesi hutsa H0 : β2 = 5 bada, aldatu beharreko gauza bakarra r = 
+[5] izango da.
+2. Konbinazio linealen murrizketak:
+H0 : β2 + β3 = 1
+−→ Rβ = 0 1 1 0 · · · 0
+
+
+
+
+
+
+
+
+β1
+β2
+β3
+...
+βK
+
+
+
+
+
+
+
+
+r = [1]
+H0 :
+2β2 + 3β3 = 5
+β1
+− 2β4 = 3 −→
+Rβ =
+0 2 3
+0
+· · · 0
+1 0 0
+−2 · · · 0
+
+
+
+
+
+
+
+
+β1
+β2
+β3
+...
+βK
+
+
+
+
+
+
+
+
+r =
+5
+3
+3. Erregresioaren multzoko esanguratasuneko kontrastean,
+H0 : β2 = β3 =
+· · · = βK = 0
+→ q = K − 1
+HA : berdintasunen bat ez da betetzen
+Hipotesi hutsa bektorialki horrela da:
+
+
+
+
+
+
+β2
+β3
+...
+βK
+
+
+
+
+
+
+=
+
+
+
+
+
+
+0
+0
+...
+0
+
+
+
+
+
+
+eta R matrizea, ((K
+− 1) × K) ordenakoa, hurrengoa izango da:
+R =
+
+
+
+
+
+
+
+0 1 0
+· · · 0 0
+0 0 1
+· · · 0 0
+0 0 0
+· · · 0 0
+0 0 0
+· · · 0 1
+
+
+
+
+
+
+
+= [0 IK−1]
+Orain badakigu murrizketa bat edo batzuren hipotesi hutsa nola zehaztu. Hurrengo pau-
+sua hipotesi hau, HA :
+ Rβ = r hipotesiaren aurka, kontrastatzeko baliogarria den estatis-
+tikoa aurkitzea da.
+28
+
+3.3.1
+Hipotesiak kontrastatzeko prozedura orokorra.
+2.8 atalean ikusi den bezala, oinarrizko hipotesien menpean KTA estimatzailearen ba-
+naketa ˆ
+β
+∼ N (β, σ
+2(X′X)−1) da. Ikusi bezala, R matrizea aleatorioa ez denez, R ˆ
+β ren
+banaketa lor daiteke:
+R ˆ
+β
+(q × 1)
+∼ N ( Rβ
+(q × 1)
+, σ2R(X′X)−1R′
+(q×q)
+)
+(3.7)
+Frogapena:
+E(R ˆ
+β) = RE( ˆ
+β) = Rβ
+R ezaguna eta ﬁnkoa baita.
+Bar(R ˆ
+β) = E R ˆ
+β
+− E(R ˆ
+β) R ˆ
+β
+− E(R ˆ
+β)
+′
+= E R ˆ
+β
+− Rβ R ˆ
+β
+− Rβ
+′
+= E R( ˆ
+β
+− β) R( ˆ
+β
+− β)
+′
+= E R( ˆ
+β
+− β)( ˆ
+β
+− β)
+′R′
+= R E( ˆ
+β
+− β)( ˆ
+β
+− β)
+′
+=Bar( ˆ
+β
+)=σ
+2 ( X′X )−
+1
+R′ = σ2R ( X′X )
+−1 R′
+ˆ
+β normal anizkoitza denez eta R konstante ezagunen matrizea denez,
+R ˆ
+β
+∼ N Rβ, σ
+2R ( X′X )
+−1 R′
+Kontrasterako estatistiko orokorra (σ2 ezaguna)
+R ˆ
+β aldagai aleatorioari bere batezbestekoa kenduz gero, ondorengoa lortzen da:
+R ˆ
+β
+− Rβ ∼ N 0, σ
+2R ( X′X )
+−1 R′
+Hipotesi hutsa egiazkoa bada, Rβ r-
+ren berdina litzateke eta aurreko adierazpenean or-
+dezkatuz gero, hau lortuko da:
+R ˆ
+β
+− r
+(q × 1)
+H0
+∼ N 0, σ
+2R ( X′X )
+−1 R′
+Bariantz eta kobariantz matrizea deﬁnitu positiboa da eta hortaz, B Eranskineko 2. emai-
+tza aplikatu daiteke ondorengoa emateko:
+G = R ˆ
+β
+− r
+′
+σ2R ( X′X )
+−1 R′
+−1
+R ˆ
+β
+− r
+H0
+∼ χ
+2
+(q)
+(3.8)
+Perturbazioen bariantza (σ2) ezaguna balitz 
+(ez da bat ere erreala), modu orokorrean
+adierazitako edozein hipotesi huts kontrastatzeko baliogarria litzateke estatistiko hau.
+Hipotesi hutsak Rβ eta r berdinak direla baieztatzen duenez, hipotesi hutsa egiazkoa
+bada (R ˆ
+β
+− r) diferentzia oso txikia izatea espero da. Hipotesi hutsa gezurrezkoa bada
+29
+
+(R ˆ
+β
+− r) diferentzia handia izatea esperoko dugu 
+(balio absolutuan). Horregatik, Gren
+zerotik hurbileko balioek onartze eskualdea osatuko dute eta Gren balio handiek aldiz,
+eskualde kritikoa.
+Gainera, Bar( ˆ
+β) gero eta handiagoa bada, gero eta handiagoa izango da Bar(R ˆ
+β) eta
+beraz, errezagoa izango da (R ˆ
+β
+− r) diferentzia handia izatea nahiz eta H0 egiazkoa izan.
+Horregatik, estatistikoa bariantz eta kobariantz matrizeagatik ponderatzen da.
+2
+4
+6
+8
+10
+12
+x
+0.025
+0.05
+0.075
+0.1
+0.125
+0.15
+0.175
+f
+HxL
+?H4L
+Onartze
+Eskualde
+Eskualdea
+Kritikoa
+3.2 Irudia: Kontraste orokorra σ2 ezaguna denean, non q = 4 den
+Kontrastearen erizpidea H0 hipotesia baztertzea izango da α ezangura mailarekin, baldin
+eta
+G = R ˆ
+β
+− r
+′
+σ2R ( X′X )
+−1 R′
+−1
+R ˆ
+β
+− r > χ
+2
+α
+(q)
+bada eta ez baztertzea bestelako kasuan.
+Kontrasterako estatistiko orokorra (σ2 ezezaguna denean)
+Aurreko atalean azaldutako kontrastea aplikatzeko ohiko arazoa, σ2 ezezaguna izaten
+dela da. Kasu honetan, bariantza hori bere estimatzaile bategatik ordezkatu behar da,
+adibidez ˆ
+σ2 = ˆ
+u′
+ˆ
+u
+T
+−K estimatzaileagatik. Baina ordezkapen honek estatistikoak jarraitzen
+duen banaketa aldatuko du. B eranskineko 5. emaitza aplikatuz (3.8) eta 
+(3.2)n, hurrengo
+estatistikoa lortzen da:
+F =
+R ˆ
+β
+− r
+′
+σ2R ( X′X )
+−1 R′
+−1
+R ˆ
+β
+− r /q
+ˆ
+σ
+2 (T −K)
+σ
+2
+/(T
+− K)
+H0
+∼ F(q,T−K)
+30
+
+Sinpliﬁkatuz:
+F =
+R ˆ
+β
+− r
+′
+R ( X′X )
+−1 R′
+−1
+R ˆ
+β
+− r /q
+ˆ
+σ2
+H0
+∼ F(q,T−K)
+(3.9)
+F estatistikoarekin kontrasteak egiteko ideia G estatistikoarekin egitearen berdina da.
+Ikusi bezala, estatistikoaren balio handientzat hipotesi hutsa baztertuko da. Horrela, H0
+ez baldin bada egiazkoa, (R ˆ
+β
+− r) diferentzia handia izango da eta F estatistikoak balio
+altuak hartuko ditu.
+1
+2
+3
+4
+5
+x
+0.2
+0.4
+0.6
+0.8
+f
+HxL
+.
+H2, 12L
+Onartze
+Eskualde
+eskualdea
+kritikoa
+3.3 Irudia: Kontraste orokorra σ2 ezezagunarekin (q = 2, T
+− K = 12)
+Kontrastearen erizpidea beraz, H0 baztertzea izango da α esangura mailarekin,
+F =
+R ˆ
+β
+− r
+′
+R ( X′X )
+−1 R′
+−1
+R ˆ
+β
+− r /q
+ˆ
+σ2
+>
+Fα(q,T−K)
+bada eta ez baztertzea bestelako kasuan.
+3.3.2
+Aldagai zentratuetan oinarrituriko kontraste orokorra
+Hipotesi hutsean termino independentea 
+(β1) sartzen ez denean, kontraste orokorreko
+estatistikoa horrela adierazi daiteke:
+F =
+R ˆ
+β∗
+− r
+′
+R (x′x)
+−1 R′
+−1
+R ˆ
+β∗
+− r /q
+ˆ
+u′ ˆ
+u/(T
+− K)
+H0
+∼ F(q,T−K)
+31
+
+Adierazpen hau hurrengoa kontuan izanik lortu da:
+( X′X )
+−1 =
+
+
+
+
+
+
+a11
+a12
+· · · a1K
+a21
+a22
+· · · a2K
+...
+... ...
+...
+aK1 aK2
+· · · aKK
+
+
+
+
+
+
+eta
+(x′x)
+−1 =
+
+
+
+
+a22
+· · · a2K
+...
+...
+aK2
+· · · aKK
+
+
+
+
+hau da (x′x)
+−1 matrizea ( X′X )−1 matrizean barneraturik dago.
+Hala ere, kontuan izan behar da ˆ
+β∗ eta r bektoreek eta R matrizeak elementu bat eta
+zutabe bat gutxiago dutela hurrenez hurren, aldagai zentratuekin ez baita esplizituki
+azaltzen termino independentea.
+3.3.3
+Murrizketa bakar baten kontrastea
+q = 1 denean eta murrizketa egiazkoa delaren hipotesi hutsaren menpean, 
+(3.9) adieraz-
+penean F
+∼ F(1,T−K) izango litzateke. Horrela, B Eranskineko 7.emaitza aplikatu daiteke
+hurrengoa lortzeko:
++
+√
+F
+≡ t =
+R ˆ
+β
+− r
+ˆ
+σ R ( X′X )
+−1 R′
+H0
+∼ t(T−K)
+(3.10)
+Kontuan izan R ( X′X )
+−1 R′
+−1
+, (1
+× 1) ordenakoa dela eta bere erroa izendatzailean
+agertzeak ez duela arazorik sortzen. Egia esan, (3.10)eko izendatzailea
+Bar(R ˆ
+β) da
+baina estimatua.
+R ˆ
+β = ˆ
+w eta r = c berrizendatuz, (3.10) horrela adierazi daiteke:
+t =
+ˆ
+w
+− c
+ˆ
+σ ˆw
+∼ t(T−K) H0 egiazkoa bada.
+(3.11)
+Estatistiko hau 3.1.3 atalean lorturikoaren antzekoa da.
+Adibidea:
+H0 : 2β2
+− 5β3 = 7
+HA : 2β2
+− 5β3 = 7
+ˆ
+w
+− c = R ˆ
+β
+− r = [0 2
+− 5 0 . . . 0]
+
+
+
+
+ˆ
+β1
+...
+ˆ
+βk
+
+
+
+ − 7 = 2
+ˆ
+β2
+− 5 ˆ
+β3
+− 7
+ˆ
+σ2ˆw = 2
+2Bar( ˆ
+β2) + 52Bar( ˆ
+β3)
+− 2 · 2 · 5Kob( ˆ
+β2, ˆ
+β3)
+=
+ˆ
+σ2(4a22 + 25a33
+− 20a23)
+Adierazpen hauekin,
+t =
+ˆ
+w
+− c
+ˆ
+σ ˆw
+=
+2 ˆ
+β2
+− 5 ˆ
+β3
+− 7
+ˆ
+σ (4a22 + 25a33
+− 20a23)
+32
+
+eta beraz, murrizketa bakar bat kontrastatu nahi izanez gero, murrizketa honi w deitu
+diezaiokegu, ondoren ˆ
+w eta bere desbiderazio estimatua (ˆ
+σ ˆw) kalkulatu eta azkenik, t
+estatistikoarekin kontrastea burutu daiteke.
+3.4
+Murrizketei baldintzaturiko karratu txikienen estimatzailea
+Suposatu Y = Xβ + u ereduan H0 :
+ Rβ = r murrizketa burutu dela eta hipotesi hutsa
+ez baztertzearen ondorioa lortu dela. Orduan interesgarria litzateke eredua berriro esti-
+matzea, baina oraingoan kontrastatu eta baztertu ez den murrizketa multzo hori kontuan
+harturik. Matematikoki, oraingo optimizazio ariketa ondorengoa da:
+ˆ
+βM zeinak
+
+
+
+
+
+min
+ˆ
+β
+ˆ
+u′ ˆ
+u
+k.h.
+R ˆ
+β = r
+Hau baldintzatutako minimizazioa da eta emaitza honakoa da (D Eranskina):
+ˆ
+βM = ˆ
+βKTA + (X
+′X)−1R′ R(X′X)−1R′
+−1
+(r
+− R ˆ
+βKTA)
+ˆ
+βM estimatzailearen propietateak
+1. ˆ
+βM perturbazioarekiko (u) lineala da.
+2. ˆ
+βM alboratua da. Rβ = r denean ordea, alboragabea izango da
+E( ˆ
+βM ) = E
+{βKTA + (X
+′X)−1R′ R ( X′X )
+−1 R′
+−1
+≡A
+( ﬁnkoa)
+(r
+− RβKTA)} =
+= E(βKTA) + A r
+− R E(βKTA) =
+= β + A (r
+− Rβ) =
+= β
+Rβ = r
+bada bakarrik.
+Baina β ezezaguna denez, ez dakigu zihur Rβ eta r berdinak diren.
+3. ˆ
+βM estimatzaileak, ˆ
+βKTA estimatzaileak baino bariantza txikiagoak du beti, baita
+murrizketa gezurrezkoa bada ere.
+E Eranskinean Bar( ˆ
+βM )ren adierazpena lortu da.
+ˆ
+βM lortzeko beste aukera bat Rβ = r murrizketak ereduan barneratzean datza:
+Yt = β1 + β2X2t + . . . + βKXKt + ut
+t = 1, 2, . . . , T
+Lortzen den ereduan (murriztutako eredua) KTA aplikatzean, KTMko zenbait esti-
+matzaile lortuko dira. Gainontzeko ˆ
+βM estimatzaileak murrizketekin lortzen dira.
+33
+
+1 adibidea: ˆ
+βM -ren lorpena ereduan:
+Yt = β1 + β2X2t + β3X3t + β4X4t + ut
+t = 1, 2, . . . , T
+k.h.
+β2 = β3 = 0
+Murrizturiko eredua (ME) ondorengoa izango da:
+Yt = β1 + β4X4t + uMt
+KT A
+−→
+ˆ
+β
+M
+1 ,
+ˆ
+β
+M
+4
+eta
+ˆ
+βM = ˆ
+βM
+1
+0 0
+ˆ
+βM
+4
+′
+.
+2 adibidea: ˆ
+βM -ren lorpena ereduan
+Yt = β1 + β2X2t + β3X3t + ut
+t = 1, 2, . . . , T
+k.h.
+β2 + β3 = 1
+ME:
+Yt = β1 + β2X2t + (1
+− β2)X3t + uMt
+Yt
+− X3t
+=Y ⋆
+t
+= β1 + β2(X2t
+− X3t
+=X⋆
+t
+) + uMt
+KT A
+−→
+ˆ
+β
+M
+1 ,
+ˆ
+β
+M
+2
+eta azkenik ˆ
+βM
+3
+= 1
+− ˆ
+βM
+2
+lortzen da.
+3.5
+Hondar Karratuen Baturetan oinarritutako kontrasteak
+3.3 atalean ikusi denez, H0 : Rβ = r eran idatzitako edozein hipotesi huts 
+(3.9)ko F
+estatistikoarekin kontrasta daiteke. Estatistiko honen adirazpide baliokide bat, hipotesi
+hutsagatik murriztutako ereduko HKBn eta hasierako ereduko HKBn (non ˆ
+uM = Y
+−
+X ˆ
+βM eta ˆ
+u = Y
+− X ˆ
+βKTA diren) oinarrituriko estatistikoa da:
+F =
+(ˆ
+u′
+M ˆ
+u
+M
+− ˆu
+′ ˆu)/q
+ˆ
+u′ ˆ
+u/(T
+− K)
+H0
+∼ F(q,T−K)
+(3.12)
+F Eranskinean frogatzen da (3.9) eta (3.12)ko F estatistikoak berdinak direla.
+Murriztutako ereduko HKB lortzeko bi bide baliokide daude:
+1.
+ˆ
+βM
+(K × 1)
+bektore osotik eta ondoren ˆ
+u′
+M ˆ
+u
+M tik, non ˆ
+u′
+M ˆ
+u
+M = (Y
+− X ˆ
+βM )′(Y
+− X ˆ
+βM ).
+Kontuz:
+ˆ
+u′
+M ˆ
+u
+M = Y
+′Y − ˆβ′
+M X
+′Y
+2. Murrizketa barneratzean lorturiko eredua Y ⋆ = X⋆β⋆ + u⋆ izanik eta KTAn bitartez
+estimatu ondoren,
+ˆ
+β⋆
+M
+((K − q) × 1)
+lortzen da, eta ondoren
+ˆ
+u′
+M ˆ
+u
+M = Y
+⋆
+′Y ⋆ − ˆβ⋆′
+M X
+⋆
+′Y ⋆ kalkulatzen da, non Y ⋆ eta X⋆ murrizturiko ereduan
+gelditzen diren aldagai endogenoa eta datu matrizea diren.
+34
+
+Dena den, (3.12)ko zenbakitzailea eta izendatzailea KT B = y′y-
+gatik zatituz, hurrengo
+adierazpena lortu daiteke:
+F =
+(ˆ
+u′
+M ˆ
+u
+M
+− ˆu
+′ ˆu)/q
+ˆ
+u′ ˆ
+u/(T
+− K)
+=
+(R2
+M G
+− R
+2
+M )/q
+(1
+− R2MG)/(T − K)
+(3.13)
+Garrantzitsua: bi estatistikoen berdintasuna emateko,R2
+M ez da K T BM = y
+∗′y∗ erabiliz
+kalkulatu behar.
+Baterako esanguratasun kontrastera bueltatuz (3.2 atala),
+H0 : β2 = β3 =
+· · · = βK = 0 -ren menpean
+−→ K − 1 murrizketa
+murrizturiko eredua Yt = β1 + ut izango da eta R2M = 0 izango denez, 
+(3.6)ko estatistikoa
+justiﬁkatzen da.
+3.6
+Puntuzko eta tartezko aurresanak
+Ekonometriaren helburu nagusia estimazio multzo on baten lorpena dela pentsatzen bada
+ere, sarritan aurresan zehatzak lortzea ere oso garrantzitsua da.
+Suposa dezagun eredua T behaketekin estimatu dela:
+Yt = β1 + β2X2t + . . . + βKXKt + ut
+t = 1, . . . , T
+orduan aldagai azaltzaileen behaketa berri bat emanik,
+X′
+p =
+1 X2p
+· · · XKp
+p
+∈ {1, 2, . . . , T }
+KTAn bitartez estimatutako eredua erabili daiteke aldagai endogenoak izango duen balioa
+aurresateko (momentu horretan ezezaguna izanik).
+Aurresaterakoan egindako erroreek lau jatorri posible dituzte:
+1. Zehazpen errorea. Oinarritzen garen eredua desegokia izan daiteke:
+ Y aldagaian
+eragiten duten aldagai azaltzaileak falta daitezke. Baliteke proposaturiko forma
+funtzionala zuzena ez izatea, baliteke oinarrizko hipotesi bat ez betetzea, etab.
+2. Xp-
+ren balioetan errorea. Aurresatea Xpren balio konkretu batzuentzat egiten da,
+baina baliteke aurresana egiteko momentu horretan ezezagunak izatea.
+3. Lagineko errorea. Aurresanak egiteko ˆ
+β erabili beharra dago benetako βren balioen
+ordez.
+4. Errore aleatorioa. Yp, up-
+ren menpean dago, hau da behaketa horri dagokion per-
+turbazioaren menpe 
+(ezezaguna da) eta beraz, zeroren gero eta desberdinago bada,
+errorea gero eta handiagoa izango da.
+Y aurresaterakoan dauden ziurgabetasun jatorri horiek kontuan izanik, gomendagarria
+da Y ren puntuzko aurresana eta aurresan horren zehaztasunaren neurri bat batera kal-
+kulatzea. Honetan datza tartezko aurresana.
+35
+
+3.6.1
+Aldagai endogenoaren puntuzko aurresana
+Erregresio eredua kontuan izanik, Yp-ren ekuazioa ondorengoa litzateke:
+Yp = β1 + β2X2p + . . . + βKXKp + up.
+Laburtzeko, hurrengo bektorezko adierazpena erabiliko da: Yp = X′pβ + up
+non (Xp)′ =
+(1, X2p, . . . , XKp)′. Horrela, lagineko informazio erabilgarria izanik 
+(ez da β ez up ezagut-
+zen),
+Yp-ren puntuzko aurresana ondorengoa da:
+ˆ
+Yp = X
+′
+p
+ˆ
+β
+KT A
+Edo beste era batera:
+ˆ
+Yp = ˆ
+β1 + ˆ
+β2X2p + . . . + ˆ
+βKXKp.
+Dena den, oso zaila da aurresana eta benetako balioa berdinak izatea. Puntuzko aurresana
+hurrengo hilabeterako edo hurrengo urterako kalkulatzen baldin bada, egindako errorearen
+berri izango da momentu batean. Errore hau, aurresanaren errorea bezala ezagutzen
+da eta ep = Yp
+− ˆ
+Yp izango da. Aurresana egiten den momentuan ordea, ep-ren zenbait
+informazio izaten bada, banaketa ezaguneko aldagai aleatorioa baita. Konkretuki,
+ep
+∼ N (0, σ
+2( 1 + X′
+p ( X
+′X )
+−1 X
+p )).
+Frogapena:
+ep = Yp
+− ˆ
+Yp = X
+′
+p β + up
+− X
+′
+p
+ˆ
+β =
+= up
+− X
+′
+p (
+ˆ
+β
+−β)
+(3.14)
+up eta ˆ
+β aldagai aleatorio normalak badira, aurresanaren errorea ere normala da. Bere
+batezbestekoa eta bariantza ondorengoak dira:
+E(ep) = E up
+− X
+′
+p (
+ˆ
+β
+−β) = 0 − X
+′
+p (β
+− β) = 0
+Bar(ep) = E [ep
+− E(ep)] [ep − E(ep)]
+′ = E e
+p e
+′
+p
+=
+= E
+up
+− X
+′
+p (
+ˆ
+β
+−β)
+up
+− X
+′
+p (
+ˆ
+β
+−β)
+′
+=
+= E up u
+′
+p
++ E X′
+p (
+ˆ
+β
+−β) ( ˆ
+β
+−β)
+′ X
+p
+−
+−2X
+′
+p E
+( ˆ
+β
+−β) u
+′
+p
+=
+= E u2
+p
++ X′
+p E
+( ˆ
+β
+−β) ( ˆ
+β
+−β)
+′ X
+p
+−
+−2X
+′
+p E ( X
+′X )
+−1 X′ u u
+p
+=
+= σ2 + σ2X′
+p ( X
+′X )
+−1 X
+p
+− 0 = σ
+2
+1 + X′
+p ( X
+′X )
+−1 X
+p
+36
+
+3.6.2
+Aldagai endogenoaren tartezko aurresana
+Aurresanaren errorea tipiﬁkatuz,
+ep
+− 0
+σ
+1 + X′
+p ( X
+′X )
+−1 X
+p
+∼ N(0, 1)
+arazoa σ2 ezezaguna dela da. ep eta ˆ
+σ2 aldagai aleatorioak direla kontuan izanik eta B
+Eranskineko 6. emaitza erabiliz,
+ep
+σ
+1 + X′
+p ( X
+′X )
+−1 X
+p
+ˆ
+σ2(T
+− K)
+σ2
+1
+T
+− K
+=
+ep
+ˆ
+σ
+1 + X′
+p ( X
+′X )
+−1 X
+p
+∼ t(T−K)
+Egitez, azken izendatzailea ˆ
+σe
+p da.
+Estatistikoan ep = Yp
+− ˆ
+Yp ordezkatuz, banaketa hau
+ondorengoa baieztatzeko erabili daiteke:
+P r
+− tα
+2 (T −K ) ≤
+Yp
+− ˆ
+Yp
+ˆ
+σe
+p
+≤ tα
+2 (T −K )
+= 1
+− α
+P r ˆ
+Yp
+− tα
+2 (T −K ) ·
+ˆ
+σe
+p
+≤ Yp ≤ ˆ
+Yp + tα
+2 (T −K ) ·
+ˆ
+σe
+p
+= 1
+− α
+KT1−α(Yp) = ˆ
+Yp
+− tα
+2 (T −K )
+ˆ
+σe
+p ,
+ˆ
+Yp + tα
+2 (T −K )
+ˆ
+σe
+p
+37
+
+3.7
+Eranskinak
+A Eranskina.- Estatistikaren errepasoa: hipotesien kontrastea
+Hipotesi bat aldagai aleatorio baten dentsitate funtzioari buruzko baieztapen edo susmo
+bat da. Bigarren gaian adibidez, Erregresio Lineal Bakuneko Eredu bateko maldaren
+KTAko estimatzailearen banaketa honakoa dela ikusi da:
+ˆ
+β
+∼ N β,
+σ2
+(Xt
+− ¯
+X)2
+Hipotesien adibide bat, ezezaguna den β koeﬁzientea 0,8 dela esatea litzateke. Hipotesi
+hau egiazkoa bada, ˆ
+βren dentsitate funtzioa hurrengo (3.4) irudian agertzen dena litzateke.
+-4
+-2
+0
+2
+4
+6
+8 >
+<
+0.05
+0.1
+0.15
+0.2
+0.25
+f
+H><L
+H0-ren  menpean
+3.4 Irudia: 0,8 batezbestekoarekin Normalaren dentsitate funtzioa
+Hipotesien kontrasteen burutzeak hiru fase ditu:
+1. Bi hipotesi baztertzaile formulatu.
+2. Kontrasterako estatistiko bat lortu eta bere lagin banaketa identiﬁkatu.
+3. Erabaki araua ﬁnkatu eta bi hipotesietatik bat aukeratu.
+Lehen fasean eta adibidearekin jarraituz, bi hipotesi baztertzaileak hauek dira:
+ hipotesi
+hutsa H0 : β = 0,8 eta aurkako hipotesia ordea, HA : β = 0,8. Hipotesi hutsa
+dentsitate funtzioari buruzko baieztapen konkretu bat da eta aurkako hipotesia hipotesi
+hutsaren osagarria da beti. Perturbazioaren bariantza 
+(σ2) ezaguna dela suposatzen bada,
+bigarren fasea ˆ
+βren banaketa tipiﬁkatuz lortzen da:
+z =
+ˆ
+β
+− β
+σ
+2
+(Xt− ¯
+X
+)
+2
+∼ N (0, 1)
+38
+
+Ezkerraldean kontrasterako estatistikoa dago 
+(z) eta eskubialdean berriz, bere lagineko
+banaketa.
+Azkenik, hirugarren fasean, erabaki arauak estatistikoak har ditzakeen balio guztiak bi
+eskualdetan banatzen ditu eta z estatistikoak hartzen duen balioaren arabera, hipotesi
+hutsa baztertuko da edo ez.
+• Eskualde kritikoa:
+ H0 baztertzea gomendatzen duen estatistikoaren balio multzoa
+da.
+• Onespen eskualdea: H0 ez baztertzea gomendatzen duen estatistikoaren balio
+multzoa da.
+Adibidean H0 : β = 0,8 egiazkoa bada, z estatistikoa horrela gelditzen da:
+z =
+ˆ
+β
+− 0, 8
+σ
+2
+(Xt− ¯
+X
+)
+2
+∼ N (0, 1)
+eta z estatistikoak zerotik hurbilen dauden balioak hartuko ditu probabilitate handiena-
+rekin. H0 gezurrezkoa bada, aldiz, z-
+ren batezbestekoa ez da zero izango, eta z-k zerotik
+hurbileko balioak hartzeko probabilitatea txikia izango da. Ondorioz, hurrengoa hartuko
+da kontuan:
+• Zerotik hurbileko balioek H0ren aldeko ziurtasuna adierazten dute eta beraz, onar-
+pen eskualdean egongo dira.
+• Zerotik urruneko balioek HAren aldeko ziurtasuna adierazten dute, eta beraz, es-
+kualde kritikoan egongo dira.
+-4
+-2
+0
+2
+4
+6
+z
+0.1
+0.2
+0.3
+0.4
+f
+HzL
+Ho menpeko banaketa
+Eskualde
+Onartze
+Eskualde
+Kritikoa Eskualdea
+Kritikoa
+3.5 Irudia: Onarpen eskualdea eta eskualde kritikoa (α = 0,05) denean
+Hortaz, z-k hartzen duen balioaren arabera, H0 edo HA aukeratuko da.
+39
+
+Kontrastearen erroreak
+Kontrastearen ondorioz erabaki oker bat hartu daiteke edo errore batean erori. Bi eratako
+erroreak izan daitezke:
+• I Motako errorea: H0 baztertu egiazkoa denean.
+• II Motako errorea: H0 ez baztertu gezurrezkoa denean.
+Esanguratasun maila edo kontrastearen tamainua, I Motako errorea burutzeko pro-
+babilitate handiena da.
+Adibidea:
+ epaiketa batean ditugun bi hipotesi baztertzaileak honakoak izan daitezke:
+H0
+−→ aldezkariak: salatua errugabea da.
+HA
+−→ ﬁskalak: salatua erruduna da.
+I Motako errorea:
+ errugabe bat kondenatzeko probabilitatea, esangura mailak jasoko du.
+II Motako errorea:
+ errudun bati absoluzioa ematearen probabilitatea da. Kontrastapen
+estatistikoan mota honetako errorearen probabilitate zehatza ezezaguna da. βren bene-
+tako balioaren menpean dago .
+Kontrastearen potentzia H0 baztertzearen probabilitatea da gezurrezkoa denean. Hau
+da, 1
+− P r(II Motako errorea) izango da.
+B Eranskina.- Normalari elkartutako banaketak
+Frogapenak Johnston 5. Kap., 197–201 orr; Uriel eta besteak 5. Kap., 97–105orr.
+Jarraian Normaletik abiatuz lortzen diren banaketa funtzioei buruzko emaitza estatistiko
+batzuk errepasatzen dira:
+1. emaitza: ji-karratuaren deﬁnizioa.
+Izan bedi Z
+∼ N (0, 1) aldagai aleatorioa , orduan Z
+2 ∼ χ2
+(1).
+(Oharra: parentesi arteko zenbakia banaketaren askatasun graduak dira).
+Aldagai aleatorioen bektore baten orokorpena ondorengoa da:
+Izan bedi
+Z
+(T × 1)
+∼ N (0, σ
+2I), orduan, Z
+′Z
+σ
+2
+∼ χ
+2
+(T ) betetzen da.
+(Oharra: kasu honetan bektoreko osagai guztiak, Z =
+
+
+
+
+Z1
+...
+ZT
+
+
+
+
+independenteak dira).
+2. emaitza: 1. emaitzaren orokorpena.
+Izan bedi
+Z
+(T × 1)
+∼ N (µ, σ
+2V ) non V matrize ez singularra den. Orduan, ondorengoa
+betetzen da:
+(Z
+− µ)
+′
+σ2V
+−1
+(Z
+− µ) ∼ χ
+2
+(T )
+40
+
+3. emaitza: Izan bitez Z
+∼ N (0, σ
+2IT ) eta A (T × T ) ordenako matrize simetriko eta
+idenpotentea, non h(A) = r den. Orduan, hau betetzen da:
+Z′AZ
+σ2
+∼ χ
+2
+(r).
+4. emaitza: Izan bedi Z
+∼ N (0, IT ), eta izan bitez A eta B, (T × T ) ordenako bi matrize
+simetriko eta idenpotente. Orduan, Z′AZ eta Z′BZ independenteki banatuko dira
+baldin eta A
+· B = 0.
+5. emaitza: Snedecor–en F-ren deﬁnizioa.
+Izan bitez V
+∼ χ
+2
+(r)
+eta W
+∼ χ
+2
+(s) bi aldagai aleatorio independente. Orduan ondorengoa
+ematen da:
+V /r
+W/s
+∼ F(r,s).
+6. emaitza: Student-en t-ren deﬁnizioa
+N (0, 1) eta χ
+2
+(s) independentetan oinarrituz.
+z
+∼ N (0, 1), w ∼ χ
+2
+(s) eta z eta w independenteak badira, orduan
+t =
+z
+w/s
+∼ t(s).
+7. emaitza: Student-en t-ren deﬁnizioa askatasun gradu bakarreko Snedecor-
+ren F-n
+oinarrituz.
+F
+∼ F(1,s) bada, orduan t = +
+√
+F
+∼ t(s).
+C Eranskina.- ˆ
+β
+eta ˆ
+σ2
+independenteak direlaren frogapena
+ˆ
+β
+∼ N β, σ
+2 ( X′X )
+−1
+B Eranskineko 2. emaitza aplikatuz χ2 batera heltzen da:
+( ˆ
+β
+−β)
+′
+σ2 ( X′X )
+−1 −1 ( ˆβ−β) ∼ χ2
+(K)
+( ˆ
+β
+−β)
+′X′X ( ˆ
+β
+−β)
+σ2
+∼ χ
+2
+(K)
+(3.15)
+χ2 banaketa jarraitzen duten bi estatistikoen arteko independentzia 
+(4. emaitza), (3.2)
+eta 
+(3.15)n aplikatzeko, u bektorearen menpeko forma koadratikoan adierazi behar dira.
+(3.2)rentzat forma koadratikoa
+u′M u
+σ
+2
+∼ χ
+2
+(T −K) da. Berdina lor daiteke (3.15)rentzat,
+( ˆ
+β
+−β) = ( X
+′X )
+−1 X′u, aurreko estatistikoan ordezkatu besterik ez baita egin behar:
+( ˆ
+β
+−β)
+′X′X ( ˆ
+β
+−β)
+σ2
+=
+u′X ( X′X )
+−1 X′X ( X′X )−1 X′u
+σ2
+=
+41
+
+=
+u′ X ( X′X )
+−1 X′ u
+σ2
+=
+u′ (I
+− M) u
+σ2
+∼ χ
+2
+(K)
+(I
+− M) simetrikoa da M simetrikoa baita. (I − M) idenpotentea da M idenpotentea
+delako eta beraz, (I
+− M) (I − M) = I − M − M + M = I − M.
+Gainera, h (I
+− M) = tr (I − M) = tr(IT ) − tr(M) = T − (T − K) = K.
+Guzti honekin eta 4. emaitza erabiliz (3.2) eta 
+(3.15) forma koadratikoak independenteak
+dira M (I
+− M) = 0 baita. (3.2) eta (3.15)n agertzen diren aldagai aleatorio bakarrak ˆσ
+2
+eta β dira hurrenez hurren eta hortaz, independenteak dira. Hau dela eta, β bektoreko
+edozein elementu eta ˆ
+σ2 independenteak direnez, orduan R ˆ
+β ˆ
+σ2-rekiko ere.
+D Eranskina.- Murriztutako Karratu Txikienen estimatzaileen lorpena
+Optimizazioa hau da:
+
+
+
+
+
+min
+ˆ
+β
+ˆ
+u′ ˆ
+u
+k.h.
+R ˆ
+β = r
+Lagrangianoa L = (Y
+− X ˆ
+β)′(Y
+− X ˆ
+β)
+− 2ˆλ
+′(R ˆ
+β
+− r)
+da non ˆ
+λ, Lagrangeren biderka-
+tzaileen (q
+×1) ordenako bektore bat den. L-ren deribatu partzialak eginez ˆ
+β eta ˆ
+λ-rekiko,
+(K + q) ekuaziotako sistema lortzen da:
+
+
+
+
+
+∂L
+∂ ˆ
+β
+= 2X′X ˆ
+β
+− 2X
+′Y − 2R′ˆλ
+K ekuazio
+∂L
+∂ ˆ
+λ
+=
+−2(R ˆ
+β
+− r)
+q ekuazio
+Deribatu hauek berdin zero betetzen dituzten ˆ
+β-k, ˆ
+βM -k dira (Murriztutako Karratu
+Txikienen estimatzaileak, KTM):
+X′X ˆ
+βM
+− X
+′Y − R′ˆλM = 0K
+(AD
+− 1)
+R ˆ
+βM
+− r = 0q
+(AD
+− 2)
+(AD
+− 1), R(X
+′X)−1gatik aurrebiderkatuz, honakoa lortzen da:
+R (X′X)−1X′X
+=I
+ˆ
+βM
+− R (X
+′X)−1X′Y
+= ˆ
+βKT A
+−R(X
+′X)−1R′ˆλ
+M = 0q
+R ˆ
+βM
+− R ˆ
+βKTA = R(X
+′X)−1R′ˆλ
+M
+(AD
+− 3)
+eta R ˆ
+βM = r (AD
+−2) kontuan izanik, ˆλM askatzeko, (AD−3) ekuazioa R ( X
+′X )
+−1 R′
+−1
+-
+gatik aurrebiderkatzen da:
+ˆ
+λM = R ( X
+′X )
+−1 R′
+−1
+(r
+− R ˆ
+βKTA)
+ˆ
+λM adierazpena (AD
+− 1)n ordezkatuz:
+X′X ˆ
+βM
+− X
+′Y − R′ R ( X′X )
+−1 R′
+−1
+(r
+− R ˆ
+βKTA) = 0K
+42
+
+Eta ˆ
+βM askatzeko, ekuazio hau (X′X)−1gatik aurrebiderkatuko da:
+ˆ
+βM = (X
+′X)−1X′Y + (X′X)−1R′ R ( X′X )
+−1 R′
+−1
+(r
+− R ˆ
+βKTA)
+ˆ
+βM = ˆ
+βKTA + (X′X)−1R′ R ( X′X )
+−1 R′
+−1
+(r
+− R ˆ
+βKTA)
+E Eranskina.-Bar( ˆ
+βM)ren lorpena
+3.4 atalean E( ˆ
+βM ) = β + A (r
+− Rβ) lortu da, non A matrize ﬁnkoa honakoa den: A ≡
+( X′X )
+−1 R′ R ( X′X )−1 R′
+−1
+. Notazio honekin
+ˆ
+βM = ˆ
+βKTA + A r
+− R ˆ
+βKTA
+da.
+(AE
+− 1)
+Eta honekin:
+Bar( ˆ
+βM ) = E
+ˆ
+βM
+− E( ˆ
+βM )
+ˆ
+βM
+− E( ˆ
+βM )
+′
+=
+= E
+ˆ
+βKTA
+− β − AR( ˆ
+βKTA
+− β)
+ˆ
+βKTA
+− β − AR( ˆ
+βKTA
+− β)
+′
+=
+= E ( ˆ
+β
+−β) ( ˆ
+β
+−β)
+′ − ( ˆβ−β) ( ˆβ−β) ′R′A′
+−AR ( ˆ
+β
+−β) ( ˆ
+β
+−β)
+′ + AR ( ˆ
+β
+−β) ( ˆ
+β
+−β)
+′R′A′ =
+= σ2 ( X′X )
+−1 − σ2 ( X′X )−1 R′A′
+−AR σ
+2 ( X′X )
+−1 + AR σ2 ( X′X )−1 R′A′
+Ikurra kontuan izan gabe, azken hiru batugaiak berdinak dira:
+1. σ2 ( X′X )
+−1 R′A′ = σ2 ( X′X )−1 R′ R ( X′X )−1 R′
+−1
+R ( X′X )
+−1
+2. ARσ2 ( X′X )
+−1 = ( X′X )−1 R′ R ( X′X )−1 R′
+−1
+Rσ2 ( X′X )
+−1
+3. ARσ2 ( X′X )
+−1 R′A′ =
+( X′X )
+−1 R′ R ( X′X )−1 R′
+−1
+Rσ2 ( X′X )
+−1 R′ R ( X′X )−1 R′
+−1
+= σ2I
+R ( X′X )
+−1
+Beraz, Bar( ˆ
+βM )ko azken bi batugaiak ezeztatu daitezke, ondorengoa lortuz:
+Bar( ˆ
+βM ) = Bar( ˆ
+βKTA)
+− σ
+2 ( X′X )
+−1 R′ R ( X′X )−1 R′
+−1
+R ( X′X )
+−1
+Kentzen ari den matrizea erdideﬁnitu positiboa denez, ˆ
+βM estimatzaileen bariantzak,
+ˆ
+βKTA estimatzaileenak baino txikiagoak dira.
+43
+
+F Eranskina.- Kontraste orokorreko F estatistikoen baliokidetasuna
+Hurrengoa frogatu nahi da:
+(R ˆ
+β
+− r)
+′[R(X′X)−1R′]−1(R ˆ
+β
+− r)/q
+ˆ
+σ2
+=
+(ˆ
+u′
+M ˆ
+u
+M
+− ˆu
+′ ˆu)/q
+ˆ
+u′ ˆ
+u/(T
+− K)
+Argi dago izendatzaileak berdinak direla. Zenbakitzaileak berdinak direla frogatzeko, ˆ
+u
+eta ˆ
+βKTA-en funtzioan adierazitako hondarrak erabiliz hasi daiteke, horretarako (AE
+− 1)
+adierazpena erabiliz.
+ˆ
+uM = Y
+− X ˆ
+βM = Y
+− X ˆ
+βKTA + A(r
+− R ˆ
+βKTA) = ˆ
+u
+− XA(r − R ˆ
+βKTA)
+ˆ
+u′
+M ˆ
+u
+M
+=
+ˆ
+u
+− XA(r − R ˆ
+β)
+′
+ˆ
+u
+− XA(r − R ˆ
+β) =
+= ˆ
+u′ ˆ
+u
+− ˆu
+′X
+=0
+A(r
+− R ˆ
+β)
+− (r − R ˆ
+β)′A′ X′ ˆ
+u
+=0
++(r
+− R ˆ
+β)′A′X′XA(r
+− R ˆ
+β)
+Ondorengoa jakinik,
+A′X′XA =
+R ( X′X )
+−1 R′
+−1
+R(X′X)−1 X′X(X′X)−1
+= I
+R′ R ( X′X )
+−1 R′
+−1
+=
+R ( X′X )
+−1 R′
+−1
+R(X′X)−1R′ R ( X′X )
+−1 R′
+−1
+= I
+=
+R ( X′X )
+−1 R′
+−1
+Hondar karratuen baturen arteko diferentzia hau da:
+ˆ
+u′
+M ˆ
+u
+M
+− ˆu
+′ ˆu = (r − R ˆβ)′ R ( X′X )
+−1 R′
+−1
+(r
+− R ˆ
+β)
+= (R ˆ
+β
+− r)
+′ R ( X′X )
+−1 R′
+−1
+(R ˆ
+β
+− r)
+44
+
+4. Gaia
+Zehazpen eta lagin arazoak
+4.1
+Zehazpen errorea
+Ereduan zehazpen errorea dagoela esango da ereduan barneratutako aldagai azaltzailetzat
+barneratutako aldagai multzoa zuzena ez denean, bai aldagaiak falta direlako 
+(aldagai
+nabarien omisioa) edo bai behar direnak baino gehiago daudelako 
+(aldagai ez nabarien
+barnerapena).
+4.1.1
+Aldagai nabarien omisioa
+Suposatu eredu zuzena honakoa dela:
+Y = Xβ + u = [ X1 X2 ]
+β1
+β2
++ u = X1β1 + X2β2 + u
+(4.1)
+non
+X
+(T × K)
+=
+
+
+
+
+
+
+
+
+
+X11 X21 . . . XK
+1
+,
+1
+X12 X22 . . . XK
+1
+,
+2
+...
+...
+...
+...
+...
+...
+X1T X2T . . . XK
+1
+,T
+X1
+XK
+1
++1,1
+. . . XK,1
+XK
+1
++1,2
+. . . XK,2
+...
+...
+...
+...
+XK
+1
++1,T
+. . . XK,T
+
+
+
+
+
+
+
+
+
+X2
+β
+(K × 1)
+=
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+β1
+β2
+...
+βK
+1
+βK
+1
++1
+...
+βK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Generalki, X1t = 1
+∀t, hau da, termino independentea izaten da ereduan. Bestalde, X1,
+(T
+× K1) ordenako matrizea da eta X2, ordea, (T × K2) ordenakoa, non K1 + K2 = K
+den. Eredu honetan ELOEren oinarrizko hipotesi guztiak betetzen dira.
+Zehazten den eredua hau da:
+Y = X1β1 + v
+non
+v = X2β2 + u den
+(4.2)
+hau da, β2 = 0 murrizketa bektorialari baldintzatutako 
+(4.1) ereduaren estimazioaren
+baliokidea da. Rβ = r, forma orokorrean idatzirik,
+45
+
+R
+(K2 × K)
+= [ 0 I ]
+β
+(K × 1)
+=
+β1
+β2
+r
+(K2 × 1)
+= [ 0]
+murriztutako eredu baten estimatzailea, ˆ
+βM ,
+ˆ
+βM = ˆ
+β + (X′X)−1R′ R(X′X)−1R′
+−1
+=A
+(r
+− R ˆ
+β)
+da, non ˆ
+β, (4.1) ez murriztutako ereduko KTA estimatzailea den. Kasu honetan
+ˆ
+βM =
+ˆ
+βM
+1
+0
+non
+ˆ
+β
+M
+1
+= (X′1X1)
+−1X′
+1Y
+ˆ
+β =
+ˆ
+β1
+ˆ
+β2
+= (X′X)−1X′Y =
+X′1X1 X
+′
+1X2
+X′2X1 X
+′
+2X2
+−1
+X′1Y
+X′2Y
+KTM estimatzailea egiazkoa ez den murrizketa bati baldintzaturik dago (β2 = 0
+⇒ Rβ =
+r), eta beraz, estimatzaile hori alboratua da:
+E( ˆ
+βM ) = E( ˆ
+β) + A(r
+− R E( ˆ
+β)) = β + A (r
+− Rβ)
+=0
+= β
+eta bariantza hau izango da:
+Bar( ˆ
+βM ) = σ
+2 (X′X)−1 − (X′X)−1R′ R(X′X)−1R′
+−1
+R(X′X)−1
+Oharra:
+(4.2) zehazturiko ereduko β1, 
+(4.1) eredu zuzenekoarekin konparatu nahi izanez gero, bat
+alboratua eta beste alboragabea denez, BEK erabili beharko da. MGEko koeﬁziente
+estimatuen bariantzak, zehazturiko MEkoenak baino handiagak direla egiazkoa denez,
+baliteke azken hau eredu zuzenekoa baino hobesgarria izatea kasuren batean. Hala ere,
+hau, alborapena oso txikia den kasuetan bakarrik gertatuko da ( β2
+≈ 0 bada), eta hau
+frogatzea oso zaila da.
+KTAko estimatzailea alboratua da, aldagairen bat omitituta baldin badago, baina salbues-
+pena
+, X′1X2 = 0 denean ematen da, hau da, omititutako aldagaiak eta barneratutakoak
+ortogonalak direnean.
+Frogapena
+A = (X′X)−1R′ R(X′X)−1R′
+−1
+=
+=
+(X′1X1)
+−1
+0
+0
+(X′2X2)
+−1
+0
+I
+0 I
+(X′1X1)
+−1
+0
+0
+(X′2X2)
+−1
+0
+I
+−1
+=
+0
+(X′2X2)
+−1
+0 (X′2X2)
+−1
+0
+I
+−1
+=
+=
+0
+(X′2X2)
+−1
+(X′2X2)
+−1 −1 =
+0
+I
+46
+
+Orduan,
+E( ˆ
+βM ) = E
+ˆ
+βM
+1
+ˆ
+βM
+2
+=
+β1
+β2
++
+0
+I
+(
+−β2) =
+β1
+0
+non E( ˆ
+βM
+1 ) = β1 alboragabea den. β2ren estimatzailea ordea ez da alboragabea izango,
+E( ˆ
+βM
+2 ) = 0 = β2 baita. Hau da problemaren mamia, β2 zero dela suposatzen ari gara
+egiazkoa ez denean.
+(4.2) ereduko perturbazioaren bariantzaren ohiko estimatzailea,
+ˆ
+σ2 =
+ˆ
+v′ˆ
+v
+T
+− K1
+σ2ren estimatzaile alboratua dela frogatzea dago.
+Ondorioak
+• Ongi ez zehazturiko ereduko koeﬁzienteen KTAko estimatzailea alboratua da, sal-
+buespena X′1X2 = 0 ematean izanik.
+• Perturbazioaren bariantzaren estimatzailea alboratua da.
+• Aurreko bietariko edozein emanik, orain arte ikusitako ˆ
+βM
+1
+eta ˆ
+σ2etan oinarritutako
+hipotesien kontrasteentzat inferentzia baliogabetua geratzen da.
+4.1.2
+Aldagai ez nabarien barnerapena
+Kasu hau, formalki, aurrekoaren alderantzizkoa da. Eredu zuzena ondorengoa da:
+Y = X1β1 + u u
+∼ N(0, σ
+2I)
+(4.3)
+eta zehaztutako eredua ordea,
+Y = X1β1 + X2β2 + v
+(4.4)
+da, non (T
+×K2) ordenako X2 azpimatrizean aldagai ez nabariak azaltzen diren, populazio
+balioa zero duen (K2
+× 1) ordenako β2 koeﬁzientearekin. Orokorrean,
+E( ˆ
+β) = E((X′X)−1X′Y ) = E(β + (X′X)−1X′u) = β
+da zeina 
+(4.4)n aplikatuz eta eredu zuzena Y = X1β1 + X20 + u idatzi daitekela kontuan
+izanik:
+E
+ˆ
+β1
+ˆ
+β2
+= E
+
+ β1
+0
++
+X′1X1 X
+′
+1X2
+X′2X1 X
+′
+2X2
+−1
+X′1u
+X′2u
+
+ =
+=
+β1
+0
++
+X′1X1 X
+′
+1X2
+X′2X1 X
+′
+2X2
+−1
+X′1E(u)
+X′2E(u)
+0
+=
+β1
+0
+47
+
+X ﬁnkoa baita eta E(u) = 0. Horregatik, 
+(4.4)ko estimatzailea alboragabea izaten
+jarraituko du nahiz eta aldagai ez nabariak barneratu. Murriztu gabeko estimatzailearen
+bariantz eta kobariantz matrizeari dagokionez:
+Bar( ˆ
+β) = σ2(X′X)−1
+baina murriztutako estimatzailearena berriz,
+Bar( ˆ
+βM ) = σ
+2 (X′X)−1 − (X′X)−1R′ R(X′X)−1R′
+−1
+R(X′X)−1
+da non
+ˆ
+βM =
+ˆ
+β1
+0
+den.
+(4.4) ereduko perturbazioaren bariantzaren ohiko estimatzailea
+ˆ
+σ2 =
+ˆ
+v′ˆ
+v
+T
+− (K1 + K2)
+da eta σ2ren estimatzailea alboragabea dela froga daiteke.
+Ondorioak
+• KTAko estimatzailea alboragabea da. Baina benetako ereduko KTAko estimatzai-
+leak baino bariantza handiagoa du.
+• Perturbazioen bariantzaren estimatzailea alboragabea da.
+• Aurrekoaren ondorioz, hipotesien kontrasteak baliogarriak dira ˆ
+β1, ˆ
+β2 eta ˆ
+σ2etan
+oinarritutako estatistikoentzat.
+48
+
+4.2
+Kolinealitate anizkoitza
+Kolinealitate anizkoitza, aldagai azaltzaileen arteko lagin koerlazioa da. Ereduaren ze-
+hazpena emanik, erregresoretariko bat besteen konbinazio lineal zehatz bezala adierazi
+badaiteke, orduan kolinealitate anizkoitz zehatza dagoela esango da. Ondorioz, arazoa
+laginekoa da, hau da, ereduaren zehazpena zuzena da, baina estimatzerakoan laginean
+ematen den koerlazioaren arazoa antzemango da.
+4.2.1
+Kolinealitate anizkoitz zehatza
+Problemaren kasu limitea da, eta aldagai azaltzaileen artean konbinazio lineal zehatza
+dagoela esan nahi du. Kasu honetan bi efektu bereiztuko ditugu:
+• Ereduko koeﬁziente guztiak ezin daitezke banaka estimatu, beraien arteko konbinazio
+lineal bat baizik, zeina aldagaien arteko erlazioaren menpe egongo den.
+• R
+2 koeﬁzientea eta aurresanak ez dira ukituak izango.
+Adibidea:
+Izan bedi hurrengo erregresio eredua:
+Yt = β1 + β2X2t + β3X3t + ut
+non X3t = λX2t den eta λ konstante ezaguna den. Datu zentratuetan oinarrituriko ekuazio
+normalak hauek dira:
+x22t
+x2tλx2t
+x2tλx2t
+λ2
+x22t
+ˆ
+β2
+ˆ
+β3
+=
+x2tyt
+λ
+x2tyt
+non
+|x
+′x| = 0 den
+Edo, beste honela adierazirik,
+x22t
+1
+λ
+λ λ2
+ˆ
+β2
+ˆ
+β3
+=
+x2tyt
+1
+λ
+.
+Ez da (x′x)−1 existitzen eta ekuazio normalak horrela idatzi daitezke:
+x22t( ˆ
+β2 + λ ˆ
+β3) =
+x2tyt
+x22t(λ ˆ
+β2 + λ
+2
+ˆ
+β3) = λ
+x2tyt.
+Bi ekuazio hauetariko bat gehiegizkoa da eta estima daiteken gauza bakarra hau da:
+ˆ
+γ
+(β2 + λβ3) =
+x2tyt
+x22t
+.
+Koeﬁzienteen konbinazio lineal hau estima daiteke, baina ez ordea β2 eta β3 bi koeﬁzien-
+teak banaka. Koeﬁziente guztiak estimatzeko informazio independente nahiko ez dago,
+zeren eta lagin hau izanik, X3 aldagaiak ez baitu X2 aldagaiak eskeintzen duen infor-
+mazioaren gehigarririk ematen.
+49
+
+Hala ere, aurresanak arazorik gabe egin daitezke. Ereduaren egitura mantentzen bada,
+p momentuko erregresio eredua honakoa izango da:
+Yp = β1 + β2X2p + β3X3p + up
+eta aldagaien arteko X3p = λX2p erlazioa mantentzen bada, Yp-
+ren puntuzko aurresana
+ˆ
+Yp = ˆ
+β1 +
+ˆ
+γ
+(β2 + λβ3) X2p izango da eta beraz, γ = β2 + λβ3 estimazioa kontuan izanik, ez
+dago arazorik Ypren aurresanak egiteko.
+4.2.2
+Kolinealitate anizkoitz altua
+Kasu honetan arazoa ez da aldagai azaltzaileen artean konbinazio linealik dagoen edo ez
+edukitzea, baizik eta zein gradutako kolinealitate anizkoitza dagoen ikustea da. Aurreko
+adibidean oinarrituz, ikertuko den kasua hurrengo moduan ikusi daiteke:
+Yt = β1 + β2X2t + β3X3t + ut
+X3t = λX2t + vt
+non vt, X2 eta X3 aldagaien arteko diferentziak jasotzen dituzten, orain erlazioa ez baita
+zehatza.
+Kolinealitate anizkoitzaren efektuak
+X matrizea zutabetan hein osokoa dela suposatuz, hau da K zutabe linealki independen-
+teak direla, ondorioz, parametroen KTAko estimazioak lortu daitezke. Hala ere,
+• Aldagai azaltzaileen arteko koerlazioa handitzen den heinean, estimatzaileen ba-
+riantzak ere handitu egiten dira.
+ˆ
+β2 eta ˆ
+β3 estimatzaileen bariantzak horrela idatzi daitezke:
+B( ˆ
+β2) =
+σ2
+x22t(1
+− r223)
+B( ˆ
+β3) =
+σ2
+x23t(1
+− r223)
+Aldagaiak koerlazio gabeak badira, r23 = 0, eta koerlazioa handitzen den heinean
+1
+− r
+2
+23 txikitu egiten da eta beraz, bariantzak handituz doaz.
+• Estimaturiko koeﬁzienteek desbidazio tipiko handiak dituztenez, banakako esangura-
+tasun kontrasteak egiteko erabiltzen diren t estatistikoak txikiak izango dira. Honek
+gezurrezkoak
+diren hipotesi hutsak ez baztertzeko probabilitate handiagoa eragin-
+go du. Nahiz eta banaka ez esanguratsuak izan, batera esanguratsuak izatea eta
+mugatze koeﬁzientea altua izatea ohikoa da.
+50
+
+Hala ere, oinarrizko hipotesiak betetzen direnez eta Gauss-
+Markoven teoremagatik, lor-
+tzen diren estimatzaileak alboragabeak eta bariantza minimokoak dira. Hau da, aldagai
+azaltzaileen arteko erlazioa garrantzitsua izan arren, eta hortaz bariantzak handiak izan
+arren, ezin daiteke bariantza txikiagoko beste estimatzaile lineal eta alboragabe bat aur-
+kitu.
+Arazoa nola hauteman
+Kolinealitate anizkoitzak KTAko estimatzailearen gain dituen eraginak ikertzerakoan,
+X′X matrizearen determinantea ez da zero eta zenbakiz detektatzeko zailtasunak kontuan
+izanik, jarraian kolinealitate anizkoitz altuak sortarazten dituen arriskuak aztertuko dira.
+Estimatu nahi den ereduko aldagai azaltzaileen arteko gradu altuko kolinealitate aniz-
+koitzaren existentziaren susmoa izango da, baldin eta hurrengo egoeretariko bat ematen
+bada:
+• Datuetan izandako aldaketa txikiek estimazioetan aldaketa nabariak sortarazten
+badituzte.
+• Estimaturiko koeﬁzienteek desbidazio tipiko altuak badituzte eta indibidualki zero-
+ren berdinak badira estatistikoki, nahiz eta R2 koeﬁzientea handia izan eta aldagaiak
+batera nabariak izan.
+Hala ere, garbi izan behar dugu, egoera hauek ematen diren guztietan ez dagoela be-
+ti kolinealitate anizkoitzeko arazoa. Arazoa hautematzeko modu eragingarri bat, aldagai
+azaltzaile bakoitza besteekiko eginiko erregresio laguntzaileen mugatze koeﬁzienteak azter-
+tuz izango da. Erregresio laguntzaile hauetako R2
+i -tariko bat edo batzuk handiak badira,
+erregresioan kontuan hartutako aldagaien arteko koerlazioa handia degoela esan nahiko
+du eta beraz, posible da aldagai hauen arteko kolinealitate anizkoitza izatea.
+Soluzio posibleak
+Arazoa zuzentzeko proposaturiko erremedioak asko dira, baina orokorrean ez dira asebe-
+tegarriak.
+• Soluzio garbiena eta lehenik bururatzen dena, datu gehiago lortzea da baina datu
+hauekin ere beste hainbeste gertatuz gero, ez dago konponbiderik. Garrantzitsuena
+X′X matrizearen egitura da eta berau hobetzeko modua, aurrekoak baino gutxiago
+erlazionaturiko datuak barneratzea izango da. Edonola ere, oso gutxitan izan ohi da
+hobeagoak diren datuak lortzeko aukera.
+• A prioriko murrizketen barnerapena. Ereduko koeﬁziente batek edo batzuk har
+ditzaketen balioen a prioriko informazioa izanez gero, informazio hori erabili daiteke
+kolinealitate anizkoitzaren arazoak saihesteko.
+• Kolinealitate anizkoitza sortarazten duten aldagaien ikerketa sakon bat egin eta
+estimazio prozeduratik kanporatu. Hala ere, ez da soluzio egokia zehazpen oker
+51
+
+baten arazoa sor bait dezake, hau da, aldagai nabarien omisioa zehazki esanda eta
+lortzen diren estimatzaileek ez dituzte propietate egokirik.
+52
+
+Eztabaida guzti honetan, aipatu beharra dago aldagaien arteko erlazio linealak axola
+direla eta sekula ez dute arazorik sortaraziko hurrengo egoerek:
+Yt = β1 + β2X2t + β3X
+2
+2t + ut
+non aldagaien arteko erlazioa koadratikoa den eta matrizea zutabetan hein osokoa.
+53
+
+4.3
+Aldagai koalitatiboak eta aldagai ﬁktizioak
+4.3.1
+Sarrera
+Aldagai ﬁktizioak bat edo zero balioak hartzen dituzten aldagaiak dira, klase edo kategoria
+baten barnerapena adieraziz. Honela:
+Djt =
+1 t-behaketa j klasean barneratua baldin badago
+0 bestelako kasuan
+Aplikazioak:
+ Aldagai ﬁktizioak, normalean koantitatiboki neurgarria ez den informazioa
+ereduan barneratzeko erabiltzen dira. Informazioa ondokoa bezalakoa izaten da:
+• Aldagai koalitatiboak
+– Sexua (gizonezkoa, emakumezkoa)
+– Arraza (zuria, beltza, besteren bat)
+– Egoera zibila (ezkongabea, ezkondua, alarguna)
+– Denborazko efektuak (urtaroak, gerra eta bakea)
+– Leku efektuak (autonomi elkarteak, inguruneak, herrialdeak)
+• Tartezko aldagai koantitatiboak (populazioa, errenta, adina)
+Nahiz eta behaketak klase, kategoria edo azpilagin desberdinekoak izan, aldagai ﬁktizioek
+behaketa guztiak batera jasotzen dituen eredu bakar bat zehaztea eta estimatzea bai-
+mentzen dute, klase bakoitzarentzat bat estimatu beharrean. Era berean klase, kategoria
+edo azpilaginen arteko desberdintasunei buruzko kontrasteak egin daitezke.
+Adibidea: Demagun alokairua aldagaia 
+(Yi) azaldu nahi dela lan esperientziaren urteak,
+(Xi), sexua (Si) eta hezkuntza mailaren 
+(Hi) funtzioan, azken hau indibiduoak lortutako
+hezkuntza maila gorena izanik. Daukagun lagina ondorengoa bada:
+Yi
+Xi
+Si Hi
+Y1
+X1 E
+L
+Y2
+X2 E
+B
+Y3
+X3 E
+U
+Y4
+X4 E
+L
+Y5
+X5
+G
+B
+Y6
+X6
+G
+U
+...
+...
+... ...
+YN XN G
+U
+non:
+E=
+Emakumea
+G= Gizona
+L=
+Lehen mailako ikasketak
+B=
+Bigarren mailako ikasketak
+U=
+Goi mailako ikasketak edo unibertsitarioak
+Sexu eta hezkuntza maila aldagaiak koalitatiboak direnez, ondorengo aldagai ﬁktizioak
+(bat maila edo kategoria bakoitzarentzat) deﬁnitzen ditugu:
+Ei =
+1
+i emakumea bada
+0 bestelako kasuan
+Gi =
+1 i gizona bada
+0 bestelako kasuan
+54
+
+Li =
+1 i-k lehen mailako ikasketak ditu gehienez
+0 bestelako kasuan
+Bi =
+1 i-k bigarren mailako ikasketak ditu gehienez
+0 bestelako kasuan
+Ui =
+1 i-k ikasketa unibertsitarioak ditu gehienez
+0 bestelako kasuan
+Honela, adibidea jarraituz, beraien balioak ondorengoak dira:
+Si Ei Gi
+E
+1
+0
+E
+1
+0
+E
+1
+0
+E
+1
+0
+G
+0
+1
+G
+0
+1
+... ... ...
+G
+0
+1
+Hi Li Bi Ui
+L
+1
+0
+0
+B
+0
+1
+0
+U
+0
+0
+1
+L
+1
+0
+0
+B
+0
+1
+0
+U
+0
+0
+1
+... ... ... ...
+U
+0
+0
+1
+4.3.2
+Zehazpenak:
+Atal honetan, aldagai ﬁktizioak barneratzen dituzten ereduak zehaztuko dira, kasu bi
+bereiztuz:
+1. Aldagai koalitatiboak soilik dituzten ereduak.
+A. Aldagai koalitatibo bakarra.
+B. Aldagai koalitatibo bat edo gehiago.
+2. Aldagai koalitatibo eta koantitatiboak, batera, dituzten ereduak.
+C. Aldaketa jatorrian.
+D. Aldaketa maldetan.
+E. Aldaketa jatorrian eta maldetan.
+55
+
+(A.) ALDAGAI KOALITATIBO BAKARRA
+Eredu ekonometriko batean barneraturiko aldagai azaltzaileak maila edo kategoria des-
+berdinak biltzen dituzten aldagai ﬁktizioak direnean, maila horien arteko batezbestekoak
+eta dagozkien diferentziak analizatzeko balio duen eredu baten aurrean gaude. Adibidez,
+demagun N indibiduoen alokairu behaketak ditugula, zeintzuetatik NE emakumezkoenak
+diren eta gainontzekoak, NG = N
+−NE, gizonezkoenak. Ereduren bat zehaztu gabe, talde
+bakoitzaren lagin batezbestekoak atera ditzakegu, ¯
+YE eta ¯
+YG, eta baita taldeen batezbes-
+tekoen arteko diferentziak ere, ¯
+YE
+− ¯
+YG edo ¯
+YG
+− ¯
+YE. Gainera, sarritan diferentzia hauek
+esanguratsuak diren ala ez kontrastatzea interesgarria izaten da.
+Oker legoken zehazpen bat:
+ Eredua zehazterakoan, termino konstantea eta eraikitako al-
+dagai ﬁktizio biak barneratzen baditugu, ereduko koeﬁzienteak ez daude identiﬁkaturik,
+hau da, ezin dira banaka estimatu:
+Yi = λ + λ1Ei + λ2Gi + ui i = 1,
+· · · , N
+Eredu honetako datu matrizea ondokoa da:
+X =
+
+
+
+
+
+
+
+
+
+
+
+
+
+1 1 0
+1 1 0
+1 1 0
+... ... ...
+1 0 1
+1 0 1
+1 0 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+Matrize hau ez da hein osokoa; hau da, h(X) < K < T eta 
+(X′X)−1 ezin daiteke lortu.
+Ondorioz, estimagarria den eredu bat ondo zehazteko, hiru zutabetatik bat kendu be-
+harra dago. Kentzen den zutabearen arabera, beraien artean baliokideak diren zehazpen
+desberdineko ereduak lortzen dira.
+(A.1) Askotan erabiltzen den aukera, talde edo kategoria bati dagokion aldagai ﬁkti-
+zioa kentzean datza. Horrela emakumea adierazten duen aldagai ﬁktizioa kentzerakoan
+gelditzen zaigun eredua honakoa da:
+Yi = α + α1Gi + ui i = 1,
+· · · , N
+(4.5)
+Koeﬁzienteen interpretazioa:
+E(Yi
+| i gizona da) = α + α1 = gizon baten batezbesteko alokairua.
+E(Yi
+| i emakumea da) = α = emakume baten batezbesteko alokairua.
+α1 = gizon baten batezbesteko alokairuaren diferentzia emakume baten batezbesteko
+alokairuarekiko.
+56
+
+Interpretazio graﬁkoa:
+-
+6
+Y
+i
+α1 + α
+Gizonak
+α
+Emakumeak
+KTA estimatzailea:
+ˆ
+α = ¯
+YE =
+1
+NE
+E
+Yi
+ˆ
+α1 = ¯
+YG
+− ¯
+YE =
+1
+NG
+G
+Yi
+−
+1
+NE
+E
+Yi
+hemendik honakoa ondorioztatzen da:
+ˆ
+α + ˆ
+α1 = ¯
+YG =
+1
+NG
+G
+Yi
+(A.2) Ereduan termino konstantea ez bada barneratzen:
+Yi = γ1Ei + γ2Gi + ui
+i = 1,
+· · · , N
+(4.6)
+Koeﬁzienteen interpretazioa:
+E(Yi
+| i emakumea da) = γ1 = emakume baten batezbesteko alokairua.
+E(Yi
+| i Gizona da) = γ2 = gizon baten batezbesteko alokairua.
+KTA estimatzailea:
+ˆ
+γ1 = ¯
+YE =
+1
+NE
+E
+Yi
+ˆ
+γ2 = ¯
+YG =
+1
+NG
+G
+Yi
+Zehazpen konkretu honetan, koeﬁzienteak zuzenean estimatzen dira lagin batezbestekoen
+bitartez. Hortaz, batezbestekoan diferentziak kalkulatzeko: ˆ
+γ1
+−ˆγ2 = ¯
+YE
+− ¯
+YG edo ˆ
+γ2
+−ˆγ1 =
+¯
+YG
+− ¯
+YE egitea besterik ez dago.
+Aurreko zehazpen bien arteko baliokidetasuna ondorengoa da:
+E(Yi
+| i emakumea da) =
+α = γ1
+E(Yi
+| i gizona da) =
+α + α1 = γ2
+E(Yi
+| i gizona da) − E(Yi| i emakumea da) : α1 = γ2 − γ1
+57
+
+Kontrasteak aurreko gaietan ikusitako estatistikoen bitartez egiten dira eta murrizketen
+egiturak erabilitako zehazpenaren menpekoak dira. Esanguratasun kontrasteak egiteko
+hondar karratuen baturetan oinarrituriko estatistikoa erabili nahi izanez gero, aurreko
+edo murriztu gabeko ereduak ondorengo murriztutako ereduarekin konparatzen dira:
+Yi = α + ui
+i = 1,
+· · · , N
+(4.7)
+non ˆ
+α = ¯
+Y = 1
+N
+E,G Yi dela dakigun eta beraz dagokion ˆ
+u′
+M ˆ
+uM = y′y den.
+Demagun gizonek eta emakumeek batezbesteko alokairu berdina dutela kontrastatu nahi
+dugula, hau da, sexuan oinarrituriko alokairu desberdintasunik ez dagoela 
+(sexu aldagai
+koalitatiboa ez da aldagai nabaria alokairua azaltzeko).
+A.1) H0 : α1 = 0
+ME: (4.7)
+HA : α1 = 0
+MGE: (4.3.2)
+A.2) H0 : γ1 = γ2
+ME: (4.7)
+HA : γ1 = γ2
+MGE: (4.3.2)
+58
+
+(B.) ALDAGAI KOALITATIBO BI
+Demagun alokairua eta sexuari buruzko informazioa izateaz gain, pertsona bakoitzaren
+ikasketa maila zein den dakigula. Berriro, ereduren bat zehaztu gabe, talde bakoitzaren
+lagin batezbestekoak atera ditzakegu ( ¯
+YEL, ¯
+YEB, ¯
+YEU , ¯
+YGL, ¯
+YGB eta ¯
+YGU ) eta baita taldeen
+batezbestekoen arteko desberdintasunak ere. Diferentzia hauek esanguratsuak diren ala
+ez jakiteko dagozkien kontrasteak egin beharko genituzke.
+Ikusita daukagun bezala, batezbesteko hauen analizia eredu ekonometriko baten bitar-
+tez egin daiteke. Baina kasu honetan, aldagai koalitatibo bat baino gehiago daudenez,
+beraien arteko “independentzia” analizatu beharra dago aurretik. Beharbada sexua eta
+hezkuntza maila ez dira independenteak alokairua azaltzerakoan. Horregatik, ereduan
+aldagai koalitatibo bat baino gehiago daudenean, baliokideak diren zehazpen posible ge-
+hiago dauzkagu.
+Oker legoken zehazpen bat:
+Ikus dezagun zer gertatzen den ereduan sexua eta hezkuntza aldagai koalitatiboen katego-
+ria guztiak barneratzerakoan. Kasu honetan, nahiz eta termino konstantea ez barneratu,
+ereduaren koeﬁzienteak ez dira banaka estimagarriak:
+Yi = λ + λ1Gi + λ2Ei + λ3Li + λ4Bi + λ5Ui + ui
+i = 1,
+· · · , N
+Estimagarria den eredu on bat zehazteko, ereduan barneraturiko bi aldagai ﬁktizio kendu
+behar dira 
+(baina ez edonola, adibidez Gi eta Ei aldagai ﬁktizioak kentzeak ez du arazoa
+konpontzen), gelditzen den datu matrizea hein osokoa izan dadin. Kendutako zutabeen
+arabera baliokideak diren zehazpen desberdinak izango ditugu.
+(B.1) Independentzia
+Aldagai koalitatiboen independentziaren kasua ulertzea eta analizatzea errazagoa da.
+Eredu batean aldagai koalitatiboak independenteak direla suposatzean, koeﬁzienteek ezin
+dute talde bakoitzaren batezbestekoa zuzenean neurtu. Honen arrazoia, talde hauek 
+(sexu
+× hezkuntza) interakzio edo elkareraginaren bitartez osatzen direlako da.
+Zehazpen posible bat, aldagai koalitatibo bakoitzeko kategoria bat kentzean datza. Adi-
+bidez, emakumea kategoria eta lehen mailako ikasketak kategoria kenduz:
+Yi = α + α1Gi + α2Bi + α3Ui + ui
+i = 1,
+· · · , N
+(4.8)
+Koeﬁzienteen interpretazioa:
+Lor dezagun aldagai azalduaren batezbestekoa aldagai koalitatibo bakoitzaren kategoria
+ﬁnkatuz:
+E(Yi
+| i emakumea eta lehen mailako ikasketak) = α = gehienez lehen mailako ikas-
+ketak dituen emakume baten batezbesteko alokairua.
+E(Yi
+| i emakumeak eta bigarren mailako ikasketak) = α + α2 = gehienez bigarren
+mailako ikasketak dituen emakume baten batezbesteko alokairua.
+59
+
+E(Yi
+| i emakumea eta ikasketa unibertsitarioak) = α + α3 = gehienez goi mailako
+ikasketak dituen emakume baten batezbesteko alokairua.
+E(Yi
+| i gizona eta lehen mailako ikasketak ) = α + α1 = gehienez lehen mailako
+ikasketak dituen gizon baten batezbesteko alokairua.
+E(Yi
+| i gizona eta bigarren mailako ikasketak ) = α + α1 + α2 = gehienez bigarren
+mailako ikasketak dituen gizon baten batezbesteko alokairua.
+E(Yi
+| i gizona eta ikasketa unibertsitarioak) = α + α1 + α3 = gehienez goi mailako
+ikasketak dituen gizon baten batezbesteko alokairua.
+Aurreko informazioa ondorengo taularen bitartez laburtu daiteke:
+Lehen
+Bigarren
+Unibertsitario
+Emakumea α
+α + α2
+α + α3
+Gizona
+α + α1 α + a1 + α2 α + α1 + a3
+Taula honetan aldagai koalitatiboen arteko independentziaren hipotesia azpimarraturik
+agertzen da. Lerroen arteko kenketarekin, sexuak eragindako 
+(hezkuntzarekiko indepen-
+dentea) batezbesteko alokairuaren diferentzia nabaritzen da, α1. Zutabeen arteko ken-
+ketarekin, hezkuntzak eragindako 
+(sexuarekiko independentea) batezbesteko alokairuaren
+diferentziak nabaritzen dira:
+ α2 gehienez bigarren ikasketa maila dutenak lehenak dute-
+nekiko; α3 gehienez goi mailako ikasketa maila dutenak lehena dutenekiko; eta, α3
+− α2
+ikasketa unibertsitarioak dutenentzat bigarrena detenekiko:
+α2 = E(Yi
+| i E,B da) − E(Yi| i E,L da) = E(Yi| i G,B da) − E(Yi| i G,L da) =
+gehienez bigarren mailako ikasketak dituen pertsona baten (emakumea edo gizona)
+batezbesteko alokairuaren diferentzia lehen ikasketak dituen pertsona batekiko.
+α1 = E(Yi
+| i G,L da) − E(Yi| i E,L da) = E(Yi| i G,B da) − E(Yi| i E,B da) =
+E(Yi
+| i G,U da) − E(Yi| i E,U da) =
+gizon batek duen batezbesteko alokairuaren diferentzia 
+(edozein ikasketa maila iza-
+nik) emakume baten batezbesteko alokairuarekiko.
+Kontrasteak aureko gaietan ikusitako estatistikoen bitartez egiten dira. Adibidez, hez-
+kuntza aldagaia alokairua azaltzeko nabaria ez dela kontrastatu nahi badugu, hau da,
+ikasketa mailen efektu desberdintzaileak zero direla:
+B.1) H0 : α2 = α3 = 0
+ME: (4.3.2)
+HA : berdintzaren bat ez da ematen
+MGE: (4.8)
+60
+
+(B.2) Dependentzia:
+Kasu honetan eredu posibleak asko dira. Hipotesi honen menpean proposatzen den edo-
+zein ereduko koeﬁzienteek, azken ﬁnean, talde desberdinen lagineko batezbestekoak ja-
+sotzen dituzte. “Dependentzia”jasotzeko aldagai ﬁktizio berriak, interakzioak edo elka-
+reraginak, sortzea beharrezkoa da. Interakzio hauek dependentziarik gabeko ereduan
+azaltzen diren faktore desberdinen aldagai ﬁktizioak biderkatuz osatzen dira. Horrela,
+GBi = Gi
+× Bi, GUi = Gi × Ui interakzioak (B.1) atalean inposatutako hipotesia erla-
+jatzeko sortzen ditugu eta ondoren, hurrengo eredua zehazten dugu:
+Yi = λ + λ1Gi + λ2Bi + λ3Ui + λ4GBi + λ5GUi + ui i = 1,
+· · · , N
+(4.9)
+Koeﬁzienteen interpretazioa:
+Faktore koalitatibo bakoitzaren kategoriek osatutako taldea ﬁnkatuz, aldagai endogenoa-
+ren batezbesteko balioa lortuko dugu.
+E(Yi
+| i E, L da) = λ = hezkuntza maila gorena lehen hezkuntza duen emakume
+baten batezbesteko alokairua.
+E(Yi
+| i E, B da) = λ + λ2 = hezkuntza maila gorena bigarren mailako hezkuntza
+duen emakume baten batezbesteko alokairua.
+E(Yi
+| i E, U da) = λ+λ3 = hezkuntza maila gorena goi edo unibertsitate hezkuntza
+duen emakume baten batezbesteko alokairua.
+E(Yi
+| i G, L da) = λ+λ1 = hezkuntza maila gorena lehen hezkuntza duen gizonezko
+baten batezbesteko alokairua.
+E(Yi
+| i G, B da) = λ + λ1 + λ2 + λ4 = hezkuntza maila gorena bigarren mailako
+hezkuntza duen gizonezko baten batezbesteko alokairua.
+E(Yi
+| i G, U da) = λ + λ1 + λ3 + λ5 = hezkuntza maila gorena goi edo unibertsitate
+hezkuntza duen gizonezko baten batezbesteko alokairua.
+Informazio hau ondorengo taulan laburbildu daiteke. Gainera, sexuaren efektu desber-
+dintzaileak hezkuntza maila desberdineko taldeekiko, berdinak ez direla ikusi daiteke. Era
+berean, hezkuntza mailen efektu desberdintzaileak ere desberdinak dira sexu bakoitzare-
+kiko.
+Lehen
+Bigarren
+Unib.
+Emakumea λ
+λ + λ2
+λ + λ3
+Gizona
+λ + λ1 λ + λ1 + λ2 + λ4 λ + λ1 + λ3 + λ5
+61
+
+Bertikalki aztertuz gero, sexuaren efektu desberdintzailea hezkuntza maila bakoitzean ez
+da berdina 
+(dependentzia). Horizontalki eginez gero ordea, hezkuntza mailaren efektu
+desberdintzailea sexu desberdinetan berdina ez dela ikus daiteke. Hau da:
+λ = hezkuntza maila gorena lehen hezkuntza duen emakume baten batezbesteko
+alokairua.
+λ1 = gehienez lehen hezkuntza duen gizon baten batezbesteko alokairuaren arte-
+ko diferentzia lehen hezkuntza duen emakume baten batezbesteko alokairuarekiko
+(sexuaren efektu desberdintzailea lehen hezkuntzako taldean).
+λ2 = gehienez bigarren mailako hezkuntza duen emakume baten batezbesteko alokai-
+ruaren arteko diferentzia lehen hezkuntzako beste emakume baten batezbesteko alo-
+kairuarekiko 
+(bigarren hezkuntza eta lehen hezkuntzen efektu desberdintzailea edo
+“saria”
+emakumeen taldean).
+λ3 = gehienez goi mailako hezkuntza duen emakume baten batezbesteko alokairua-
+ren arteko diferentzia, lehen hezkuntzako beste emakume baten batezbesteko alokai-
+ruarekiko 
+(goi mailako hezkuntza eta lehen hezkuntzen efektu desberdintzailea edo
+“saria”emakumeen taldean).
+λ2 + λ4 = gehienez bigarren mailako hezkuntza duen gizon baten batezbesteko alo-
+kairuaren arteko diferentzia, lehen hezkuntzako beste gizon baten batezbesteko alo-
+kairuarekiko 
+(bigarren hezkuntza eta lehen hezkuntzen efektu desberdintzailea edo
+“saria”gizonezkoen taldean).
+λ3 + λ5 = gehienez goi mailako hezkuntza duen gizon baten batezbesteko alokai-
+ruaren arteko diferentzia, lehen hezkuntzako beste gizon baten batezbesteko alokai-
+ruarekiko
+(goi mailako hezkuntza eta lehen hezkuntzen efektu desberdintzailea edo
+“saria”gizonezkoen taldean).
+Aldi berean, goi hezkuntza eta bigarren mailako hezkuntzen arteko efektu desberdintzailea
+bilatu ditzakegu emakume eta gizonezkoen taldeetan. Azken kasu honetan: 
+(λ3 + λ5)
+−
+(λ2 + λ4) .
+KTA estimatzaileak:
+Koeﬁzienteen interpretaziotik ondorengoa ondorioztatu dezakegu:
+ˆ
+λ = ¯
+YEL =
+1
+NEL
+EL
+Yi
+ˆ
+λ + ˆ
+λ2 = ¯
+YEB =
+1
+NEB
+EB
+Yi
+ˆ
+λ + ˆ
+λ3 = ¯
+YEU =
+1
+NEU
+EU
+Yi
+ˆ
+λ + ˆ
+λ1 = ¯
+YGL =
+1
+NGL
+GL
+Yi
+ˆ
+λ + ˆ
+λ1 + ˆλ2 + ˆλ4 = ¯
+YGB =
+1
+NGB
+GB
+Yi
+ˆ
+λ + ˆ
+λ1 + ˆλ3 + ˆλ5 = ¯
+YGU =
+1
+NGU
+GU
+Yi
+62
+
+Horregatik, ereduko koeﬁzienteen KTA estimazioek lehen aipatutako efektu desberdin-
+tzaile estimatuak jasotzen dituzte.
+Kontrasteak ohiko estatistikoekin egiten dira eta kontrastatu nahi diren murrizketak ze-
+haztutako ereduaren araberakoak dira. Gainera, orain faktore koalitatiboen independen-
+tzia edo dependentzia kontrastatu daiteke. Kasu honetan, murriztu gabeko eredua, MGE,
+orain aztertutako (4.9) eredua da eta murriztutakoa berriz (4.8).
+Egin daitezken beste kontrasteak hauek izan daitezke adibidez:
+• Goi hezkuntza mailan ez dago sexuarekiko efektu desberdintzailerik 
+(efektu desber-
+dintzailea zero da): H0 : λ1 + λ5 = 0, HA : λ1 + λ5 = 0
+• Sexuarekiko alokairu desberdintasunak berdinak dira bigarren eta lehen mailako
+hezkuntza mailetan: H0 : λ4 = 0, HA : λ4 = 0.
+• Faktoreen independentzia baterako kontraste batekin egin daiteke: H0 :
+ λ4 = λ5 = 0,
+HA : berdintasunen bat ez da betetzen.
+• Sexua eta hezkuntza ez dira alokairuen azalpenean lagungarriak. Murriztutako ere-
+dua 
+(4.7) da eta ez murriztutakoa ordea, lehen proposaturikoa. Beste aukera bat,
+ez murriztutako ereduan H0 : λ1 = λ2 = λ3 = λ4 = λ5 = 0 baterako murrizketa
+kontrastatzea litzateke.
+(C) JATORRIAN BAKARRIK ALDAKETA
+Hemendik aurrera, errealago diren egoerak aztertuko ditugu, hau da, faktore moduan al-
+dagai ﬁktizioak edo/
+eta aldagai koantitatiboak agertzen diren ereduak. Dena den, azalpe-
+nak errazagoak izan daitezen, aldagai koantitatibo bakarra, X, barneratuko dugu ereduan.
+Suposa dezagun, oinarrizko eredua ondorengoa dela:
+Yi = α + βXi + ui
+(4.10)
+non X aldagaiak lan esperientziaren urteak jasotzen dituen.
+-
+6
+Y
+X
+β
+α
+Jatorrian bakarrik eragingo lukeen “Sexua”barneratu nahi izanez gero, deﬁnitutako bi
+aldagai ﬁktizioak barneratzen dituen eredua ez da zuzena. Ikusi ahal izateko, 
+(A.1) edo
+(A.2) ataletan eginikoa jarraitu.
+Zehazpen zuzen bat:
+ Emakumeen taldea jasotzen duen aldagaia kenduz, ondorengo ere-
+dua izango genuke:
+Yi = α + α1Gi + βXi + ui
+i = 1, ..., N.
+(4.11)
+63
+
+Koeﬁzienteen interpretazioa:
+E(Yi
+| i lan esperientziarik gabeko emakumea da) = α = lan esperientzia gabeko
+emakume baten batezbesteko alokairua.
+E(Yi
+| i lan esperientziarik gabeko gizona da) = α + α1 = lan esperientzia gabeko
+gizon baten batezbesteko alokairua.
+∂E
+(Yi)
+∂Xi
+= β = lan esperientzia urte batean handitzean ematen den batezbesteko alo-
+kairuaren gehikuntza (emakume eta gizonezkoetan berdina) beste guztia konstante
+mantentzen delarik.
+α1 = lan esperientzia berdinekoak izanik, gizon baten batezbesteko alokairuen di-
+ferentzia emakume baten batezbesteko alokairuarekiko beste guztia konstante man-
+tentzen delarik.
+Interpretazio graﬁkoa
+-
+6
+Y
+X
+β
+α1 + α
+gizonak
+β
+α
+emakumeak
+Kontrasteak ohiko diren bezala egiten dira. Adibidez bi sexuentzat batezbesteko alokairua
+berdina dela kontrastatu nahi izanez gero, hau da, H0 : α1 = 0, HA :
+ α1 = 0, murriztutako
+eredua (4.10) da eta ez murriztutakoa, ordea, (4.11).
+64
+
+(D) MALDAN ALDAKETA
+Suposa dezagun hasierako eredua ondorengoa dela:
+Yi = α + βXi + ui
+(4.12)
+eta lan esperientzia urteak modu desberdinean eragiten duela emakume eta gizonezkoen
+alokairuetan.
+Oker legoken zehazpen bat:
+Yi = λ + λ1Xi + λ2EiXi + λ3GiXi + ui
+Kasu honetan datu matrizea hau da:
+X =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1 X1 X1
+0
+1 X2 X2
+0
+1 X3 X3
+0
+... ...
+...
+...
+1 XJ
+0
+XJ
+... ...
+...
+...
+1 XN
+0
+XN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(4.13)
+eta hein osokoa ez denez, ezin da ( X′X )
+−1 kalkulatu. Era bakarrean estimagarria den
+eredu bat zehazteko azken hiru zutabetariko bat kendu behar da 
+(maldari dagokieneta-
+tik). Kentzen dugun zutabearen arabera, baliokideak diren zehazpen desberdinak izango
+ditugu. Ondoren zehazpen zuzen posible bat aztertuko dugu, nahiz eta beste zenbait ere
+osatu daitezkeen.
+Zehazpen zuzen bat:
+ X matrizeko laugarren zutabea kenduz gero, hurrengo eredua izango
+genuke:
+Yi = α + βXi + β1EiXi + ui
+i = 1, ..., N.
+(4.14)
+Koeﬁzienteen interpretazioa:
+E(Yi
+|Xi = 0) = α = lan esperientziarik gabeko pertsona baten batezbesteko alokai-
+rua.
+∂E
+(Yi| i
+emakumea da)
+∂Xi
+= β + β1 = lan esperientzia urte batean handitzean ema-
+kume baten batezbesteko alokairuan ematen den gehikuntza beste guztia konstante
+mantentzen delarik.
+∂E
+(Yi| i
+gizona da)
+∂Xi
+= β = lan esperientzia urte batean handitzean gizon baten ba-
+tezbesteko alokairuan ematen den gehikuntza beste guztia konstante mantentzen
+delarik.
+65
+
+β1 = lan esperientzia urte batean handitzean emakume baten batezbesteko alokai-
+ruaren gehikuntzaren diferentzia, gizon baten batezbesteko alokairuaren gehikunt-
+zarekiko.
+Interpretazio graﬁkoa
+-
+6
+Y
+X
+β + β1
+emakumeak
+β
+gizonak
+α
+Kontrasteak beti bezala egiten dira. Adibidez lan esperientzia urteen eragina alokairue-
+tan sexuaren independentea dela kontrastatu nahi bada, H0 : β1 = 0, HA :
+ β1 = 0,
+murriztutako eredua (4.12) da eta ez murriztutakoa berriz (4.14).
+(E) ALDAKETA JATORRIAN ETA MALDAN
+Suposa dezagun hasierako eredua honakoa dela:
+Yi = α + βXi + ui
+(4.15)
+Eta sexua aldagaiak alokairuan eragiten duela, bai jatorriarekiko eta baita lan esperient-
+ziarekiko.
+Zehazpen zuzen bat:
+Yi = α + α1Ei + βXi + β1EiXi + ui
+i = 1, ..., N.
+(4.16)
+Koeﬁzienteen interpretazioa:
+E(Yi
+| i lan esperientziarik gabeko emakumea da) = α + α1 = lan esperientziarik
+gabeko emakume baten batezbesteko alokairua.
+E(Yi
+| i lan esperientziarik gabeko gizona da) = α = lan esperientziarik gabeko gizon
+baten batezbesteko alokairua.
+α1 = lan esperientziarik gabeko emakume baten batezbesteko alokairuaren diferent-
+zia gizon baten batezbesteko alokairuarekiko.
+∂E
+(Yi| i
+emakumea da)
+∂Xi
+= β + β1 = lan esperientzia urte batean handitzean ema-
+kume baten batezbesteko alokairuan ematen den gehikuntza beste guztia konstante
+mantentzen delarik.
+66
+
+∂E
+(Yi| i
+gizona da)
+∂Xi
+= β = lan esperientzia urte batean handitzean gizon baten ba-
+tezbesteko alokairuan ematen den gehikuntza beste guztia konstante mantentzen
+delarik.
+β1 = lan esperientzia urte batean handitzean emakume baten batezbesteko alokai-
+ruan ematen den gehikuntzen diferentzia gizon baten batezbesteko alokairuarekiko.
+Interpretazio graﬁkoa
+-
+6
+Y
+X
+β + β1
+emakumea
+α1 + α
+β
+gizona
+α
+Kontrasteak beti bezala egiten dira. Hona hemen zenbait adibide:
+Sexuak batezbesteko alokairuan ez duela eragiten kontrastatu nahi bada, orduan H0 :
+α1 = β1 = 0, HA : berdintasunen bat ez da ematen, murriztutako eredua, ME, 
+(4.15)
+eredua da eta ez murriztutakoa, MGE, (4.16) eredua.
+Sexuak batezbesteko alokairuan lan esperientziaren bitartez bakarrik eragiten duela kon-
+trastatu nahi bada, H0 : α1 = 0, HA : α1 = 0, ME (4.14) eredua da eta MGE 
+(4.16)
+eredua.
+Lan esperientziaren eragina batezbesteko alokairuan sexuaren menpean ez dagoela kon-
+trastatu nahi bada, H0 : β1 = 0, HA : β1 = 0, MGE (4.16) da eta ME berriz:
+Yi = α + α1Mi + βXi + ui
+(4.17)
+67

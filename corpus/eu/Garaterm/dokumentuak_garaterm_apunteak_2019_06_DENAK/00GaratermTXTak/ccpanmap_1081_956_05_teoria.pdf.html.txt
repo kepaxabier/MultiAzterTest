@@ -1,0 +1,1147 @@
+
+
+
+5
+Multzo aljebraiko aﬁnen eta
+proiektiboen arteko erlazioa
+5.1. Homogeneizazioa eta deshomogeneizazioa
+Izan bedi 0 ≤ i ≤ n ﬁnkoa. Aurreko gaian ikusi dugu
+Ui = {(a0 : · · · : ai−1 : 1 : ai+1 : · · · : an) | aj ∈ K}
+= {(a0 : · · · : ai−1 : ai : ai+1 : · · · : an) | aj ∈ K, ai = 0}
+multzoa A
+n-rekin bijekzioan dagoela eta Pn-ren zati aﬁn deitzen zaiola. Orduan,
+P
+n = Ui
+·
+∪ Hi dugu,
+Hi = {(a0 : · · · : ai−1 : 0 : ai+1 : · · · : an) | aj ∈ K ez denak 0}
+inﬁnituko hiperplanoa izanik. Bere puntuei inﬁnituko puntu deitzen zaie. Zati
+aﬁna eta inﬁnituko hiperplanoa i-
+ren aukeraren araberakoak dira. Normalean i = 0
+hartuko dugu, baina dimentsio txikien kasuan, ohikoagoa da i = n hartzea.
+Orain, demagun V ⊆ A
+n multzo aljebraikoa dela. Identiﬁkatzen badugu An
+espazio aﬁna U0 zati aﬁnarekin, orduan V U0-ren barruan sartuta dagoela pentsa
+dezakegu. Horrela, V ⊆ P
+n dugu. Baina, V An-n aljebraikoa bada ere, ez du
+zertan aljebraikoa izan P
+n-n. Edozein kasutan, multzo aljebraiko proiektibo bat
+nahi badugu, V har dezakegu, V -ren itxidura P
+n-n Zariskiren topologiarekiko. Zein
+erlazio dago V eta V -ren artean? Ezagutzen baditugu V -
+ren ekuazioak, zein dira
+V -ren ekuazioak? Ohartu V -
+ren ekuazioek X1, . . . , Xn indeterminatuak erabiltzen
+dituzten bitartean, V -
+ren ekuazioetan X0 indeterminatua ere ager daitekeela eta,
+gainera, ekuazio horiek homogeneoak izan behar dutela.
+Gai honetan, galdera horiei erantzuna emango diegu eta, oro har, A
+n-ko multzo
+aljebraiko aﬁnen eta P
+n-ko multzo aljebraiko proiektiboen arteko lotura aztertuko
+dugu. Horretarako, garapen sistematiko bat egingo dugu, hurrengo bi deﬁnizioeta-
+tik hasten dena.
+5.1. Deﬁnizioa. Izan bedi V ⊆ A
+n multzo aljebraiko aﬁna. Ikus dezagun multzo
+hori P
+n espazio proiektiboaren barruan sartuta, An U0-rekin identiﬁkatuz. Orduan,
+V ∗ = V deﬁnitzen dugu eta V ∗-ri V -ren itxidura proiektibo deitzen diogu.
+131
+
+5.1. HOMOGENEIZAZIOA ETA DESHOMOGENEIZAZIOA
+132
+5.2.
+Deﬁnizioa. Izan bedi V ⊆ P
+n multzo aljebraiko proiektiboa. Orduan,
+V∗ = V ∩ U0 deﬁnitzen dugu, A
+n-ren azpimultzo gisa ikus dezakeguna, An U0-
+rekin identiﬁkatuz gero.
+5.3.
+Oharra. Deﬁnizioa ikusita ez dago garbi V∗ multzo aljebraiko aﬁna den,
+baina laster ikusiko dugu hala dela.
+Lehenago, K[X1, . . . , Xn]-ko polinomioak
+K[X0, . . . , Xn]-ko polinomio homogeneoekin lotzeko modua emango dugu, homo-
+geneizazioaren eta deshomogeneizazioaren bitartez.
+Bestetik, azpimarratzekoa da U0 eta A
+n identiﬁkatzeko erabiltzen dugun bijek-
+zioa are gehiago homeomorﬁsmoa dela, multzo horiek espazio topologiko modura
+ikusten baditugu Zariskiren topologiarekiko. (Zehazkiago, U0-
+n azpiespazioaren to-
+pologia dugu, P
+n-n Zariskiren topologiatik eratorria.) Hori ere homogeneizazioaren
+eta deshomogeneizazioaren ondorioa izango da.
+5.4. Deﬁnizioa. Izan bedi f ∈ K[X1, . . . , Xn]. Orduan, f -
+ren homogeneizazioa,
+f ∗ ∈ K[X0, . . . , Xn], honela deﬁnituriko polinomio homogeneoa da:
+(i) f = 0 bada, orduan f ∗ = 0.
+(ii) f = 0 bada, idatzi f = f0 + · · · + f osagai homogeneotan deskonposaturik,
+f = 0 izanik. (Beraz, deg f =
+dugu.) Orduan,
+f
+∗ = X
+0 f0 + X
+−1
+0
+f1 + · · · + X0f −1 + f
+deﬁnitzen dugu. Hau da, f ∗ lortzeko, X0 indeterminatua erabiltzen dugu
+osagai homogeneo guztien maila -rekin berdintzeko.
+Adibidez, f (X, Y ) = X3 + XY + 1 bada eta Z indeterminatu berria erabiltzen
+badugu homogeneizatzeko, orduan f ∗(X, Y, Z) = X3 + XY Z + Z3 dugu.
+5.5.
+Deﬁnizioa. Izan bedi f ∈ K[X0, . . . , Xn]. (Eskuarki homogeneoa izango
+da, baina deﬁnizioa orokorki ematen dugu.) Orduan, f -ren deshomogeneizazioa,
+f∗ ∈ K[X1, . . . , Xn], X0 = 1 jarriz lortzen den polinomioa da:
+f∗(X1, . . . , Xn) = f (1, X1, . . . , Xn).
+Deﬁnizio horren arabera, f (X, Y, Z) = X3 + X2Z + Y Z2 bada, eta Z-rekiko
+deshomogeneizatzen badugu, orduan f∗(X, Y ) = X
+3 + X2 + Y dugu.
+Azter ditzagun orain polinomioen homogeneizazioaren eta deshomogeneizazioa-
+ren oinarrizko propietateak. Has gaitezen homogeneizazioaren kasutik.
+5.6. Teorema. Izan bitez f, g ∈ K[X1, . . . , Xn]. Orduan:
+(i) f = 0 bada,
+f
+∗ = Xdeg f
+0
+f
+X1
+X0
+, . . . ,
+Xn
+X0
+.
+(ii) (f g)∗ = f ∗g∗.
+(iii) Ez da oro har egia 
+(f + g)∗ = f ∗ + g∗ denik, baina karakteriza dezakegu noiz
+betetzen den berdintza hori. Zehazkiago:
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+5.1. HOMOGENEIZAZIOA ETA DESHOMOGENEIZAZIOA
+133
+(a) f , g edo f + g polinomioetako bat 0 bada, orduan (f + g)∗ = f ∗ + g∗
+dugu.
+(b) f , g eta f + g hiru polinomioak 0ren desberdinak badira, orduan
+(f + g)
+∗ = f∗ + g∗ ⇐⇒ deg f = deg g = deg(f + g).
+(5.1)
+Froga. (i) Izan bedi deg f = . Deskonposatzen badugu f osagai homogeneotan,
+f = f0 + f1 + · · · + f , orduan deﬁnizioaren arabera f
+∗ = X
+0 f0 + X
+−1
+0
+f1 + · · · + f
+dugu. Orduan, 4.7 teorema erabiliz,
+X
+0 f
+X1
+X0
+, . . . ,
+Xn
+X0
+= X
+0
+f0
+X1
+X0
+, . . . ,
+Xn
+X0
++ f1
+X1
+X0
+, . . . ,
+Xn
+X0
++ · · · + f
+X1
+X0
+, . . . ,
+Xn
+X0
+= X
+0
+f0(X1, . . . , Xn) +
+1
+X0
+f1(X1, . . . , Xn) + · · · +
+1
+X
+0
+f (X1, . . . , Xn)
+= X
+0 f0(X1, . . . , Xn) + X
+−1
+0
+f1(X1, . . . , Xn) + · · · + f (X1, . . . , Xn)
+= f
+∗(X
+0, . . . , Xn)
+dugu, nahi bezala.
+(ii) Alde batetik, f eta g polinomioetako bat 0 bada, emaitza begi-bistakoa da.
+Demagun bada f, g = 0 dela. Orduan,
+(f g)
+∗ = X
+deg(f g)
+0
+(f g)
+X1
+X0
+, . . . ,
+Xn
+X0
+= X
+deg f
+0
+f
+X1
+X0
+, . . . ,
+Xn
+X0
+· X
+deg g
+0
+g
+X1
+X0
+, . . . ,
+Xn
+X0
+= f
+∗g∗.
+(iii) Adibidez, f = X2
+1 + X2 eta g = X
+3
+1 + X2 bada, orduan f
+∗ = X2
+1 + X0X2
+eta g∗ = X3
+1 + X
+2
+0 X2 dugu. Beraz, kasu horretan f
+∗ + g∗ ez da homogeneoa eta,
+ondorioz, 
+(f + g)∗ = f ∗ + g∗ dugu. Beste alde batetik, garbi dago f = 0, g = 0 edo
+f + g = 0 denean 
+(f + g)∗ = f ∗ + g∗ betetzen dela. Demagun orain f , g eta f + g
+hiru polinomioak ez direla 0, eta frogatu dezagun (5.1) baliokidetasuna.
+⇒) Demagun (f + g)∗ = f ∗ + g∗ dela. Bereziki, f ∗ + g∗ batura homogeneoa
+da eta, horretarako, f ∗ = 0 eta g∗ = 0 denez, beharrezkoa da f ∗-ren eta g∗-
+ren
+mailak berdinak izatea. Ikusten badugu f ∗ + g∗ = 0 dela, orduan deg
+(f ∗ + g∗) =
+deg f ∗ = deg g∗ dugu, eta emaitza betetzen dela ondorioztatzen dugu, deg f ∗ =
+deg f , deg g∗ = deg g eta deg(f + g)∗ = deg
+(f + g) izateagatik. Beraz, f ∗ + g∗ = 0
+izateko posibilitatea baztertu behar dugu. Baina, hala balitz, 
+(f + g)∗ = 0 izango
+genuke, eta hori gertatzeko modu bakarra f + g = 0 izatea da, gure hipotesiaren
+kontra.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+5.1. HOMOGENEIZAZIOA ETA DESHOMOGENEIZAZIOA
+134
+⇐) Orain, deg f = deg g = deg(f + g) bada,
+f
+∗ + g∗ = Xdeg f
+0
+f
+X1
+X0
+, . . . ,
+Xn
+X0
++ X
+deg g
+0
+g
+X1
+X0
+, . . . ,
+Xn
+X0
+= X
+deg(f +g)
+0
+f
+X1
+X0
+, . . . ,
+Xn
+X0
++ X
+deg(f +g)
+0
+g
+X1
+X0
+, . . . ,
+Xn
+X0
+= X
+deg(f +g)
+0
+(f + g)
+X1
+X0
+, . . . ,
+Xn
+X0
+= (f + g)
+∗.
+Jarraian ikusten dugunez, deshomogeneizazioaren kasua errazagoa da.
+5.7. Teorema. Izan bitez f, g ∈ K[X0, . . . , Xn]. Orduan, 
+(f + g)∗ = f∗ + g∗ eta
+(f g)∗ = f∗g∗ dugu.
+Froga. Polinomioen aljebren propietate unibertsalagatik, deﬁni dezakegu ϕ :
+K[X0, . . . , Xn] −→ K[X1, . . . , Xn] aljebra homomorﬁsmo bat X0 → 1, X1 → X1,
+. . . , Xn−1 → Xn−1 eta Xn → Xn esleipenen bitartez. Orduan, f ∈ K
+[X0, . . . , Xn]
+polinomio orokor baten irudia f∗ da. Aljebra homomorﬁsmo batek baturak eta
+biderkadurak gordetzen dituenez, (f + g)∗ = f∗ + g∗ eta (f g)∗ = f∗g∗ dugu.
+Erraz ikusten da aurreko frogan agertzen den ϕ homomorﬁsmoaren nukleoa
+(X0 − 1) ideala dela. Ondorioz, f eta g bi polinomiok deshomogeneizatu bera
+badute, hau da, f∗ = g∗ bada, orduan f − g ∈ (X0 − 1) dugu.
+Ikus dezagun orain zer gertatzen den homogeneizazioa eta deshomogeneizazioa
+konposatzen baditugu.
+5.8. Teorema.
+(i) f ∈ K[X1, . . . , Xn] bada, orduan (f
+∗)∗ = f dugu.
+(ii) f ∈ K[X0, . . . , Xn] bada, ez da oro har (f∗)
+∗ = f berdintza betetzen. Hala
+ere, f homogeneoa bada eta Xm
+0
+bada f zatitzen duen X0-ren berreturarik
+handiena, orduan f = Xm
+0 (f∗)
+∗ dugu.
+Froga. (i) Jakina, f = 0 har dezakegu. Orain, (f
+∗)∗ polinomioa lortzeko, X0 = 1
+jarri behar dugu f ∗-ren adierazpenean. Kontuan izanik
+f
+∗ = Xdeg f
+0
+f
+X1
+X0
+, . . . ,
+Xn
+X0
+dela, nabaria da (f ∗)∗ = f dugula.
+(ii) Adibidez, f = X3
+0 + X
+2
+0 X1 hartzen badugu, orduan (f∗)
+∗ = X
+0 + X1 = f
+dugu. Demagun orain f homogeneoa dela eta Xm
+0
+dela f zatitzen duen X0-ren
+berreturarik handiena. Orduan, f osatzen duten monomio guztietan Xm
+0
+agertzen
+denez, X0 = 1 jartzean monomioen mailari gutxienez m kenduko diogu. Bestetik,
+monomioren batean Xm
+0
+faktorea baino ez dugu, eta ez X
+m+1
+0
+. Orduan, monomio
+horren mailari m kentzen diogu zehatz-
+mehatz. Beraz, deg f∗ = deg f − m erlazioa
+dugu.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+5.1. HOMOGENEIZAZIOA ETA DESHOMOGENEIZAZIOA
+135
+Orain,
+(f∗)
+∗ = Xdeg f∗
+0
+f∗
+X1
+X0
+, . . . ,
+Xn
+X0
+= X
+deg f −m
+0
+f 1,
+X1
+X0
+, . . . ,
+Xn
+X0
+= X
+−m
+0
+f (X0, X1, . . . , Xn)
+dugu, azken berdintzan 4.7 teorema erabiliz, f homogeneoa dela kontuan izanik.
+Hemendik f = Xm
+0 (f∗)
+∗ lortzen dugu, nahi bezala.
+Ondorengo bi teoremetan, esplizituki jartzen dugu zein erlazio dagoen zeroen
+artean homogeneizatzen edo deshomogeneizatzen dugunean.
+Bi emaitzak begi-
+bistakoak dira f ∗-ren eta f∗-ren deﬁnizioak erabiliz.
+5.9. Teorema. Izan bedi f ∈ K[X1, . . . , Xn]. Orduan:
+(a1, . . . , an) f -ren zero aﬁna ⇐⇒ (1 : a1 : · · · : an) f
+∗-ren zero proiektiboa.
+5.10. Teorema. Izan bedi f ∈ K[X0, . . . , Xn] polinomio homogeneoa. Orduan:
+(1 : a1 : · · · : an) f -ren zero proiektiboa ⇐⇒ (a1, . . . , an) f∗-
+ren zero aﬁna.
+Aurreko bi teoremetan oinarrituz, gaiaren hasieran aurreratu ditugun emaitza
+pare bat frogatu ditzakegu.
+5.11. Proposizioa. Izan bedi V = V+
+(fi | i ∈ I) multzo aljebraiko proiektiboa, fi
+guztiak polinomio homogeneoak izanik. Orduan, V∗ = V (
+(fi)∗ | i ∈ I) dugu. Berezi-
+ki, V∗ multzo aljebraiko aﬁna da, eta V∗-ren ekuazioak V -
+ren ekuazio homogeneoak
+deshomogeneizatuz lortzen dira.
+Froga. Izan bedi (1 : a1 : · · · : an) ∈ U0. Puntu proiektibo hori 
+(a1, . . . , an)-rekin
+lotuta dago U0-ren eta A
+n-ren arteko identiﬁkazioaren bitartez. Orduan,
+(a1, . . . ,an) ∈ V∗ ⇐⇒ (1 : a1 : · · · : an) ∈ V
+⇐⇒ fi(1 : a1 : · · · : an) = 0, i ∈ I guztietarako (V = V+(fi | i ∈ I) delako)
+⇐⇒ (fi)∗(a1, . . . , an) = 0, i ∈ I guztietarako
+⇐⇒ (a1, . . . , an) ∈ V ((fi)∗ | i ∈ I)
+baliokidetasun-katea dugu eta, beraz,
+V∗ = V ((fi)∗ | i ∈ I).
+5.12.
+Adibidea. Izan bedi V = V+(X
+2 + Y 2 − Z2) ⊆ P2. Orduan, Z-rekiko
+deshomogeneizatzen badugu, V∗ = V (X
+2 + Y 2 − 1) ⊆ A2 zirkunferentzia bat da.
+Bestalde, X-rekiko deshomogeneizatzen badugu, orduan V∗ = V (Y
+2 − Z2 + 1)
+hiperbola bat da. Horrek erakusten du multzo proiektibo bat beraren zati aﬁnak
+desberdinak izan daitezkeela, P
+n-ren barruan aukeratzen dugun An-ren kopiaren
+arabera.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+5.1. HOMOGENEIZAZIOA ETA DESHOMOGENEIZAZIOA
+136
+5.13. Proposizioa. U0-ren eta A
+n-ren arteko identiﬁkazioa homeomorﬁsmoa da.
+Froga. Badakigunez, identiﬁkazioa ϕ : (a1, . . . , an) → (1 : a1 : · · · :
+ an) erre-
+gelaren bidez emanda dago. Orain, ϕ homeomorﬁsmoa dela frogatzeko, A
+n-ren
+azpimultzo itxi baten irudia eta U0-
+ren azpimultzo itxi baten alderantzizko irudia
+itxiak direla ikusi behar dugu. Gainera, azpimultzo itxi guztiak begiratu beharrean,
+bi kasuetan nahikoa da azpimultzo itxien oinarri banarekin egiaztatzea. Orain,
+2.14 proposizioa erabiliz, badakigu {V (f ) | f ∈ K
+[X1, . . . , Xn]} hipergainaza-
+lek A
+n-ren multzo itxien oinarri bat osatzen dutela eta, antzera, {U0 ∩ V+(f) |
+f ∈ K[X0, . . . , Xn] homogeneoa} U0-
+ren multzo itxien oinarria da. Azter dezagun,
+bada, zer gertatzen den multzo itxi horien irudi zuzenekin eta alderantzizko irudie-
+kin, hurrenez hurren.
+Izan bedi f ∈ K[X1, . . . , Xn]. Orduan, 5.9 teorema kontuan hartuz,
+ϕ(V (f )) = ϕ {(a1, . . . , an) | f (a1, . . . , an) = 0}
+= {(1 : a1 : · · · : an) | f
+∗(1 : a
+1 : · · · : an) = 0} = U0 ∩ V+(f
+∗)
+dugu eta, ondorioz, ϕ(V (f )) multzo itxia da U0-n.
+Bestetik, f ∈ K[X0, . . . , Xn] polinomio homogeneoa bada, orduan 5.10 teore-
+maren arabera,
+ϕ
+−1(U
+0 ∩ V+(f )) = ϕ
+−1 {(1 : a
+1 : · · · : an) | f (1 : a1 : · · · : an) = 0}
+= {(a1, . . . , an) | f∗(a1, . . . , an) = 0} = V (f∗).
+Beraz, ϕ−1(U0 ∩ V+(f )) A
+n-ren azpimultzo itxia da, nahi bezala.
+Jarraian, (des)homogeneizazioa polinomioetatik idealetara hedatzen dugu.
+5.14. Deﬁnizioa. Izan bedi a K[X1, . . . , Xn]-ren ideala. Orduan, a-
+ren homoge-
+neizazioa honako ideal homogeneo hau da:
+a
+∗ = (f∗ | f ∈ a).
+5.15. Deﬁnizioa. Izan bedi a K[X0, . . . , Xn]-ren ideala. Orduan, a-
+ren deshomo-
+geneizazioa honako ideal hau da:
+a∗ = {f∗ | f ∈ a}.
+Ohartu a∗ ideala dela f∗ + g∗ = (f + g)∗ eta f∗g∗ = (f g)∗ izateagatik, eta
+f → f∗ aplikazioa supraiektiboa izateagatik. Gara ditzagun orain idealen homoge-
+neizazioaren eta deshomogeneizazioaren propietateak.
+5.16. Teorema. Izan bedi a K[X1, . . . , Xn]-ren ideala. Orduan:
+(i) a = (f1, . . . , fr) bada, ezin da ziurtatu a
+∗ = (f∗
+1 , . . . , f
+∗
+r ) denik.
+Hala ere,
+a
+= (f ) ideal nagusia bada, orduan a∗ = (f ∗) dugu.
+(ii) (a∗)∗ = a dugu.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+5.1. HOMOGENEIZAZIOA ETA DESHOMOGENEIZAZIOA
+137
+Froga. (i) Ikus dezagun, a = (f1, . . . , fr) denean, ez duela zertan a
+∗ = (f∗
+1 , . . . , f
+∗
+r )
+izan. Horretarako, jarri f = Y −X2, g = Z −X2, eta hartu a = (f, g) ⊆ K
+[X, Y, Z].
+Homogeneizazioa T indeterminatu berriarekiko egingo dugu. Orduan, f ∗ = Y T −
+X2 eta g∗ = ZT − X2 dugu. Orain, Y − Z ∈ a∗ dela, baina Y − Z ∈ (f ∗, g∗) dela
+ikusiko dugu. Alde batetik, Y − Z = f − g kendura a-n dago eta, polinomio hori
+homogeneoa denez, Y − Z ∈ a∗ dugu. Bestetik, Y − Z ∈ (f ∗, g∗) balitz, orduan
+existituko lirateke α, β ∈ K[X, Y, Z, T ] non
+Y − Z = α (Y T − X
+2) + β (ZT − X2)
+baita. Berdintza honetan X = 0 ordezkatzen badugu, orduan
+Y − Z = α Y T + β ZT = (α Y + β Z)T
+dugu eta T -k Y − Z zatituko luke K[X, Y, Z, T ]-
+n. Hori faltsua da, argi eta garbi.
+Demagun orain a = (f ) ideal nagusia dela, eta frogatu dezagun a∗ = (f ∗) dela.
+Bakarrik arduratu behar dugu ⊆ partekotasuna frogatzeaz. Orain,
+a
+∗ = (g∗ | g ∈ a) = ((qf)∗ | q ∈ K[X
+1, . . . , Xn])
+= (q
+∗f∗ | q ∈ K[X
+1, . . . , Xn]) ⊆ (f
+∗)
+dugu, nahi bezala.
+(ii) ⊇) Izan bedi f ∈ a edozein. Badaukagunez (f ∗)∗ = f dela, f ∈ (a
+∗)∗
+ondorioztatzen dugu.
+⊆) Izan bedi h ∈ (a∗)∗. Ideal deshomogeneizatuaren deﬁnizioagatik, badago
+g ∈ a∗ non h = g∗ baita. Orain, homogeneizatuaren deﬁnizioa erabiliz, existitzen
+dira q1, . . . , qr ∈ K[X0, . . . , Xn] eta f1, . . . , fr ∈ a non g = q1(f1)
+∗ + · · · + q
+r (fr )
+∗
+baita. Orduan,
+h = g∗ = (q1)∗((f1)
+∗)∗ + · · · + (qr)∗((fr)∗)∗ = (q1)∗f1 + · · · + (qr)∗fr ∈ a.
+Nola lor dezakegu a∗ ideala, a = 
+(f1, . . . , fr) sortzaileen bidez emanda badago?
+Aurreko teoremaren arabera, sortzaile bakar baten kasuan baino ezin dugu ziurtatu
+a∗
+= (f ∗
+1 , . . . , f
+∗
+r ) denik.
+Problema hori ebazteko, Gr¨
+obnerren oinarriak erabiliko
+ditugu.
+5.17.
+Deﬁnizioa. Izan bedi > ordena monomiala. Orduan, > ordenak maila
+gordetzen duela esango dugu propietate hau betetzen badu: deg X
+α > deg Xβ
+bada, orduan X
+α > Xβ dugu.
+Adibidez, grlex eta grevlex ordenek maila gordetzen dute; lex-ek, berriz, ez.
+Orain, > ordena monomiala bada Mon(X1, . . . , Xn)-ren gainean, horretan oi-
+narrituz >∗ ordena bat deﬁni dezakegu Mon(X0, . . . , Xn)-
+ren gainean honako modu
+honetan:
+X
+r
+0 X
+α >∗ Xs
+0 X
+β ⇐⇒ Xα > Xβ edo Xα = Xβ eta r > s.
+Erraz egiaztatzen da >∗ ere ordena monomiala dela.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+5.1. HOMOGENEIZAZIOA ETA DESHOMOGENEIZAZIOA
+138
+5.18. Lema. Izan bedi > ordena monomiala Mon(X1, . . . , Xn)-ren gainean, eta
+demagun > ordenak maila gordetzen duela. Orduan, LM>∗ (f
+∗) = LM
+>(f ) dugu,
+f ∈ K[X1, . . . , Xn] guztietarako.
+Froga. Jarri k = deg f eta X
+α = LM
+>(f ).
+Orduan, > ordenak maila gorde-
+tzeagatik, X
+α monomioa f
+k osagai homogeneoan agertzen da.
+Hori dela eta, f ∗
+homogeneizatua egiten dugunean, X
+α aldatu gabe gelditzen da. Hau da, Xα f∗-
+ren monomioetako bat da.
+Orain, f ∗-ren beste monomioak Xs
+0 X
+β modukoak dira, Xβ f-ren monomio bat
+izanik, X
+α-ren desberdina. Orduan, f-ren monomio nagusia Xα denez, Xα > Xβ
+dugu eta, >∗ ordenaren deﬁnizioaren arabera, X
+α >∗ Xs
+0 X
+β ondorioztatzen dugu.
+Horrek LM>∗ (f
+∗) = Xα dela frogatzen du.
+5.19. Teorema. Izan bitez a K[X1, . . . , Xn]-ren ideala eta G = 
+{g1, . . . , gt} a-ren
+Gr¨
+obnerren oinarria, maila gordetzen duen > ordena monomial batekiko. Orduan,
+a∗
+= (g∗
+1 , . . . , g
+∗
+t ) dugu.
+Froga. Are gehiago, {g
+∗
+1 , . . . , g
+∗
+t } a
+∗-ren Gr¨obnerren oinarria dela frogatuko dugu,
+>∗ ordenarekiko. Horretarako, f ∈ a∗ hartzen dugu, eta ikusiko dugu badagoela g ∈
+G, halakoa non LT>∗ (g
+∗) | LT
+>∗ (f ) baita. Orokortasuna galdu gabe, f homogeneo
+har dezakegu. Izan ere, f badin bada maila handieneko f -ren osagai homogeneoa,
+orduan
+LT>∗ (f ) = LT>(f ) = LT>(f ) = LT>∗ (f )
+dugu, aurreko lema erabiliz eta > ordena monomialak maila gordetzen duela kon-
+tuan hartuz.
+Alde batetik, f∗ ∈ (a
+∗)∗ = a dugu eta, bestetik, f = Xm
+0 (f∗)
+∗ dugu m berre-
+tzaileren baterako. Orduan, berriro ere aurreko lema erabiliz,
+LT>∗ (f ) = X
+m
+0 LT>
+∗
+((f∗)
+∗) = Xm
+0 LT>(f∗)
+betetzen dela ikusten dugu. Orain, G a-ren Gr¨
+obnerren oinarria izateagatik, exis-
+titzen da g ∈ G non LT>(g) | LT>(f∗) baita. Bereziki, LT>(g)-k LT>∗ 
+(f ) zatitzen
+du. Orain, LT>∗ (g
+∗) = LT(g) denez, teorema frogaturik gelditzen da.
+5.20. Adibidea. Izan bedi a = (Y −X2, Z −X2), eta aukera dezagun grlex ordena
+monomiala, X > Y > Z izanik. Erraz ikusten da, S-irizpidea erabiliz, emandako
+sistema sortzailea ez dela Gr¨
+obnerren oinarria ordena horrekiko. Beraz, ezin du-
+gu a∗ ideal homogeneizatua lortu sortzaile horiek besterik gabe homogeneizatuz.
+Buchbergerren algoritmoa aplikatuz, {Y − X2, Z − X2, Z − Y } a-ren Gr¨
+obnerren
+oinarria ateratzen dugu eta, azken teoremaren arabera,
+a
+∗ = (Y T − X2, ZT − X2, Z − Y )
+dugu. (Ohartu T indeterminatu berria erabili dugula homogeneizatzeko.)
+Izan bedi a K[X1, . . . , Xn]-ren ideala. Orduan, f
+∗ motako polinomioak a∗-ren
+sortzaileak dira eta, normalean, a∗-k askoz polinomio gehiago izango ditu. Hala
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+5.2. MULTZO ALJEBRAIKO AFINEN ETA PROIEKTIBOEN ARTEKO ERLAZIOA
+139
+ere, h ∈ a∗ polinomioa homogeneizatu bat bada, orduan a-ko polinomio baten
+homogeneizatua izan behar du.
+Bestela esanda, g∗ ∈ a∗ bada, orduan g ∈ a
+ondorioztatzen da. Hori zuzenean lor daiteke, 5.8 eta 5.16 teoremak aplikatuz:
+g∗ ∈ a∗ bada, orduan deshomogeneizatuz, g = (g∗)∗ ∈ (a
+∗)∗ = a dugu. Beraz, a∗
+idealean, 
+{f ∗ | f ∈ a} sortzaileez aparte, ez dago beste polinomio homogeneizaturik.
+Hala ere, a K[X0, . . . , Xn]-
+ren ideala bada, ez da egia g∗ ∈ a∗ baldintzatik g ∈ a
+!
+ondorioztatzen denik. Esan daitekeen guztia da existituko dela f ∈ a halakoa non
+g∗ = f∗ baita. Orduan, (g − f )∗ = 0 da eta, hortaz, g − f ∈ 
+(X0 − 1) dugu, baina
+g = f eta g ∈ a gerta daiteke. Adibidez, a = (X0 + X1) eta g = 1 + X1 bada,
+orduan g∗ = g ∈ a∗ dugu, baina g ∈ a.
+5.21. Teorema. Izan bedi a K[X0, . . . , Xn]-ren ideala. Orduan:
+(i) a = (f1, . . . , fr) bada, a∗ = ((f1)∗, . . . , (fr)∗) dugu.
+(ii) Demagun a ideal homogeneoa dela. Orduan, a ⊆ (a∗)
+∗ partekotasuna dugu,
+baina, oro har, ezin da ziurtatu berdintza beteko denik.
+Froga. (i) Erraz eman dezakegu ⊆ partekotasunaren froga zuzen bat, eta alde-
+rantzizko partekotasuna tribiala da. Hala ere, 5.7 teoremaren frogan aipaturiko
+ϕ : K[X0, . . . , Xn] −→ K
+[X1, . . . , Xn] homomorﬁsmoa erabiliz ere lor dezakegu
+berdintza. Gogoratu ϕ-ren bitartez X0-
+ren irudia 1 dela eta gainontzeko indeter-
+minatuak ﬁnko gelditzen direla. Bereziki, f -
+ren irudia f∗ da, eta ϕ supraiektiboa
+da. Orduan, a = (f1, . . . , fr) bada,
+a∗ = ϕ(a) = (ϕ(f1), . . . , ϕ(fr)) = ((f1)∗, . . . , (fr)∗),
+nahi bezala. Ohartu bigarren berdintzan 1.2 ariketa erabili dugula.
+(ii) Hipotesiagatik, a ideal homogeneoa da eta, beraz, polinomio homogeneoen
+bidez sor daiteke. Izan bedi f ∈ a homogeneoa. Orduan, 5.8 teoreman ikusi bezala,
+existitzen da m non f = Xm
+0 (f∗)
+∗ baita. Bereziki, f ∈ (a∗)∗ dugu. Horrek a ⊆ (a∗)∗
+partekotasuna frogatzen du.
+Ikusteko berdintza ez dela oro har betetzen, nahikoa da f polinomio homogeneo
+bat hartzea, non (f∗)
+∗ = f baita. Orduan, a = (f) ideal homogeneoa da, eta
+(a∗)
+∗ = ((f∗)∗) ideala ez da a-ren berdina.
+Ohartu a ⊆ (a∗)
+∗ partekotasuna ez dela oro har betetzen a ideala ez bada homoge-
+!
+neoa. Adibidez, a = (X0 − 1) hartzen badugu, orduan (a∗)
+∗ = {0} dugu.
+5.2. Multzo aljebraiko aﬁnen eta proiektiboen arteko
+erlazioa
+Aurreko atalean garatu dugun tresneriaz baliatuz, orain A
+n-ko multzo alje-
+braikoen eta P
+n-ko multzo aljebraikoen arteko lotura zehazteko posizioan gaude.
+Oraindik ere lema pare bat behar ditugu, bai homogeneizazioak bai deshomogenei-
+zazioak ideal erradikalak gordetzen dituztela ziurtatzen dutenak.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+5.2. MULTZO ALJEBRAIKO AFINEN ETA PROIEKTIBOEN ARTEKO ERLAZIOA
+140
+5.22. Teorema. Izan bedi a K[X1, . . . , Xn]-ren ideal erradikala. Orduan, a
+∗ ho-
+mogeneizatua K[X0, . . . , Xn]-ren ideal erradikala da.
+Froga. Deﬁnizioz, a
+∗ ideal homogeneoa da. Beraz, 4.12 teoremaren arabera, a∗
+erradikala dela frogatu nahi badugu, nahikoa da gr ∈ a∗ baldintzak g ∈ a∗ dakarrela
+ikustea, g polinomioa homogeneoa den kasuan. Lehenengo eta behin, gr ∈ a∗ bada,
+orduan (g∗)
+r = (gr)∗ ∈ (a∗)∗ = a dugu. Hortaz, a ideal erradikala denez, g∗ ∈ a
+lortzen da. Homogeneizatuz, (g∗)
+∗ ∈ a∗ dugu. Orain, badakigunez, g homogeneoa
+izateagatik, existitzen da m berretzaile bat non g = Xm
+0 (g∗)
+∗ baita. Hemendik,
+g ∈ a∗ ondorioztatzen dugu, nahi genuen moduan.
+5.23. Teorema. Izan bedi a K[X0, . . . , Xn]-
+ren ideal erradikal homogeneoa. Or-
+duan, a∗ deshomogeneizatua K[X1, . . . , Xn]-ren ideal erradikala da.
+Froga. Izan bedi f ∈ K[X1, . . . , Xn] halakoa non f
+r ∈ a∗ den, eta frogatu dezagun
+f ∈ a∗ dela. Idatz dezagun, lehenengo eta behin, f
+r = g∗ moduan, g ∈ a izanik.
+Orain, deskonposatu g osagai homogeneotan, g = g0 + · · · + g ,
+= deg g izanik.
+Orduan, a ideal homogeneoa izateagatik, g0, . . . , g ∈ a dugu. Ondorioz,
+h = X
+0 g0 + X
+−1
+0
+g1 + · · · + X0g −1 + g
+polinomio homogeneoa a-n dago. (Ohartu h ez dela berez g-ren homogeneizatua,
+g polinomioan X0 ager baitaiteke. Hala ere, h deﬁnitzeko homogeneizatuaren ideia
+bera jarraitu dugu: g-ren osagai homogeneo guztien maila g-
+ren mailarekin berdin-
+tzen dugu X0-ren berretura egoki batez biderkatuz.) Orain, garbi dago h∗ = g∗
+dela eta, beraz, f r = h∗ dugu. Orduan,
+(f
+∗)r = (fr)∗ = (h∗)∗
+dugu eta, h homogeneoa izateagatik, h = Xm
+0 (f
+∗)r ondorioztatzen dugu, Xm
+0
+izanik
+h zatitzen duen X0-ren berreturarik handiena. Beraz,
+(X
+m
+0 f
+∗)r = Xmr
+0
+(f
+∗)r = X
+m(r−1)
+0
+h ∈ a
+da eta, a ideal erradikala izateagatik, Xm
+0 f
+∗ ∈ a lortzen dugu. Deshomogeneizatuz,
+f = (f
+∗)∗ = (Xm
+0 f
+∗)∗ ∈ a∗
+dugu, nahi bezala.
+Aurreko teorema ez da betetzen a ideala ez bada homogeneoa. Adibidez, a =
+!
+(X0 + X
+2
+1 − 1) K [X0, X1]-en ideal erradikala da (are gehiago, ideal lehena), baina
+a∗ = (X
+2
+1 ) ez da erradikala K [X1]-en.
+Hurrengo teoreman, gaiaren hasieran egindako galderari erantzuna emango dio-
+gu: V -ren ekuazioak ezagunak badira, zein dira V ∗-
+ren ekuazioak? Hori V eta V ∗
+deﬁnitzeko balio duten idealen bidez lortuko dugu.
+5.24. Teorema. Izan bedi V ⊆ A
+n multzo aljebraiko aﬁna, eta demagun K gor-
+putza aljebraikoki itxia dela. Orduan:
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+5.2. MULTZO ALJEBRAIKO AFINEN ETA PROIEKTIBOEN ARTEKO ERLAZIOA
+141
+(i) V = V (a) bada, V ∗ = V+(a
+∗) dugu.
+(ii) I(V ) = a bada, I+(V
+∗) = a∗ dugu.
+Froga. (i) ⊆) Nahikoa da V ⊆ V+(a
+∗) partekotasuna ikustea. Izan ere, V
++(a
+∗)
+multzo aljebraiko proiektiboa denez, orduan V ∗ ⊆ V+(a
+∗) lortzen dugu zuzenean,
+V ∗ izateagatik V barruan duten multzo aljebraiko proiektiboetatik txikiena.
+Ikus dezagun, bada, V ⊆ V+(a
+∗) dela. Partekotasun horrek zentzua du iden-
+tiﬁkatzen badugu A
+n espazio aﬁna U0 multzoarekin, hau da, (a1, . . . , an) puntu
+aﬁnaren ordez (1 : a1 : · · · : an) puntu proiektiboa hartzen badugu. Orduan,
+(a1, . . . , an) ∈ V puntu orokor bat harturik, (1 : a1 : · · · : an) ∈ V+(a
+∗) de-
+la frogatu behar dugu.
+Orain, a∗ = (f ∗ | f ∈ a) denez, nahikoa da f ∗ poli-
+nomioa (1 : a1 : · · · : an) puntuan anulatzen dela ikustea f ∈ a guztietarako.
+Hau 5.9 teoremaren ondorio hutsa da: kontuan izan f 
+(a1, . . . , an) = 0 dugula,
+(a1, . . . , an) ∈ V = V (a) eta f ∈ a izateagatik.
+⊇) Alderantzizko partekotasunaren frogan bezala, V azpimultzo aljebraiko aﬁ-
+na U0-ren barruan sartuta ikusiko dugu. Orduan, I(V ) zein I+
+(V ) idatz dezakegu.
+Gure helburua I+(V ) ⊆ rad a
+∗ partekotasuna frogatzea izango da. Behin hori lor-
+turik, V+ eragilea aplikatuz,
+V+(a
+∗) = V
++(rad a
+∗) ⊆ V
++(I+(V )) = V = V
+∗
+desiratutako emaitza lortuko dugu.
+Frogatu dezagun, orduan, I+(V ) ⊆ rad a
+∗ dela. Gogoratu I
++(V ) ideala V -ren
+gainean anulatzen diren polinomio homogeneoek sortzen dutela; beraz, nahikoa da
+polinomio horiek rad a∗-n daudela ikustea. Izan bedi f sortzaile horietako edo-
+zein. Orduan, (a1, . . . , an) ∈ V bada, f polinomioa (1 : a1 : · · · :
+ an) puntuaren
+gainean anulatzen da eta, beraz, 5.10 teoremaren arabera, f∗ deshomogeneizatua
+(a1, . . . , an) puntuan anulatzen da. Bestela esanda f∗ ∈ I
+(V ) dugu. Orain, K alje-
+braikoki itxia denez eta V = V 
+(a) denez, Nullstellensatz aﬁnak f∗ ∈ rad a ematen
+du. Orduan, existitzen da r ≥ 1 non (f r)∗ = (f∗)
+r ∈ a. Badakigunez, m-ren
+batentzat f r = Xm
+0 ((f
+r )∗)∗ dugu eta, honen ondorioz, fr ∈ a∗. Horrela, f ∈ rad a∗
+lortzen dugu, nahi genuen moduan.
+(ii) Alde batetik, I(V ) = a izateagatik, V = V (a) ere badugu eta, 
+(i) atalaren
+ondorioz, V ∗ = V+(a
+∗). Bestetik, a ideal erradikalari 5.22 teorema aplikatuz, a∗ ere
+erradikala dela lortzen dugu. Ohartu, gainera, a∗ = 
+(X0, X1, . . . , Xn) dela. Izan
+ere, berdintza beteko balitz, orduan
+a
+= (a
+∗)∗ = (1, X1, . . . , Xn) = K[X1, . . . , Xn]
+eta, beraz, a∗ = K
+[X0, . . . , Xn] izango genuke, egindako hipotesiaren kontra. Orain,
+K aljebraikoki itxia denez, Nullstellensatz proiektiboa erabil dezakegu eta I+
+(V
+∗) =
+I+(V+(a
+∗)) = a∗ lortzen dugu, a∗ ideal erradikal homogeneoa eta ideal bazterga-
+rriaren desberdina izateagatik.
+Aurreko teorema ez da egiazkoa K gorputza ez bada aljebraikoki itxia. Hartu,
+!
+adibidez, f (X, Y ) = X2 + Y 4 ∈ R[X, Y ], a = (f ) eta V = V (a) ⊆ A
+2(R). Orduan,
+V = {(0, 0)} dugu eta, hortaz, V ∗ = {(0 : 0 : 1)}. 
+(Kontuan izan puntuak itxiak
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+5.2. MULTZO ALJEBRAIKO AFINEN ETA PROIEKTIBOEN ARTEKO ERLAZIOA
+142
+direla espazio proiektiboan, 5.8 ariketan ikusiko dugun bezala. Bestetik, ohartu A
+2
+U2-rekin identiﬁkatzen ari garela, eta ez U0-
+rekin, garapen teorikoan egiten dugun
+bezala.) Homogeneizatzeko Z indeterminatu berria erabiltzen badugu, orduan a∗ =
+(f ∗) dugu, f ∗ = X2Z2 + Y 4 izanik. Beraz,
+V+(a
+∗) = V
++(X
+2Z2 + Y 4) = {(a : 0 : c) ∈ P2(R) | a = 0 edo c = 0}
+= {(0 : 0 : 1), (1 : 0 : 0)}
+ez dator bat V ∗-rekin eta teoremaren (i) atalak huts egiten du.
+5.25. Adibideak. 1) Izan bedi V hipergainazal aﬁna, f = 0 ekuazioaren bidez
+emana. Orduan, 5.16 teoremaren eta aurreko teoremaren arabera, V ∗ itxidura
+proiektiboaren ekuazioa f ∗ = 0 da. Hala ere, a = 
+(f1, . . . , fr) sortzaile bat baino
+gehiagorekin emanda dagoenean ez denez beti betetzen a∗ = (f ∗
+1 , . . . , f
+∗
+r ) denik,
+ezin dugu esan V -ren ekuazioak f1 = 0, . . . , fr = 0 direnean V
+∗-ren ekuazioak
+f ∗
+1 = 0, . . . , f
+∗
+r = 0 direnik. Arazo hori gainditzeko, 5.19 teorema erabil dezakegu.
+Horren arabera, {g1, . . . , gt} a-ren Gr¨
+obnerren oinarria bada, maila gordetzen duen
+ordena monomial batekiko, orduan V -
+ren ekuazioak g1 = 0, . . . , gt = 0 dira, eta
+V ∗-renak, berriz, g∗
+1 = 0, . . . , g
+∗
+t = 0.
+2) Y = X eta Y = X + 1 zuzenek ez dute ebakitze-punturik A
+2-n. Zer ger-
+tatzen da P
+2-n? Hori ikusteko, zuzen horien itxidura proiektiboak hartuko ditugu.
+Aurreko oharraren arabera, itxiduren ekuazioak Y = X eta Y = X + Z dira, eta
+horiek ebakitze-puntu bat dute: (1 : 1 : 0) alegia.
+3) Zein dira X2 + Y 2 = 1 zirkunferentziaren inﬁnituko puntuak P
+2(C)-n? Itxi-
+dura proiektiboaren ekuazioa X2 +Y 2 = Z2 da eta inﬁnituko puntuak Z = 0 eginez
+lortzen dira. Garbi dago bi puntu lortzen ditugula: (1 : i : 0) eta (1 : −i :
+ 0). Horiei
+zirkunferentziaren puntu zikliko deritze.
+Antzeko teorema bat eman dezakegu V multzo proiektibo batetik V∗ multzo
+aﬁnera pasatzeko. Ohartu kasu honetan ez dugula behar K aljebraikoki itxia iza-
+terik.
+5.26. Teorema. Izan bedi V ⊆ P
+n multzo aljebraiko proiektiboa. Orduan:
+(i) V = V+(a) bada, a ideal homogeneoa izanik, orduan V∗ = V (a∗) dugu.
+(ii) I+(V ) = a bada, orduan I(V∗) = a∗ dugu.
+Froga. (i) Izan bedi {fi | i ∈ I} polinomio homogeneoek osatutako a-ren sistema
+sortzailea. Orduan, V = V+(fi | i ∈ I) dugu eta, 5.9 proposizioa erabiliz, V∗ =
+V ((fi)∗ | i ∈ I) lortzen dugu. Bestetik, 5.21 teoremaren arabera, a∗ = (
+(fi)∗ | i ∈ I)
+dugu. (Enuntziatua sortzaile kopuru ﬁnitu batekin emanda badago ere, sistema
+sortzaile inﬁnituekin ere balio du.) Horrela, V∗ = V 
+(a∗) ondorioztatzen dugu, nahi
+bezala.
+(ii) ⊆) Izan bedi f ∈ I(V∗). Orduan, (a1, . . . , an) ∈ V∗ puntu guztietarako,
+f (a1, . . . , an) = 0 dugu eta, ondorioz, f
+∗(1 : a
+1 : · · · : an) = 0 ere bai.
+Jarri
+g = X0f
+∗. Polinomio hori Pn-ren inﬁnituko hiperplanoan anulatzen da, eta V -
+ko puntu aﬁnen gainean ere bai. Beraz, g V -ren gainean anulatzen da, hau da,
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+5.3. BARIETATE AFINEN ETA PROIEKTIBOEN ARTEKO ERLAZIOA
+143
+g ∈ I+(V ) = a dugu. Orduan, g∗ ∈ a∗ dugu, eta g∗ = (X0)∗(f
+∗)∗ = f denez,
+f ∈ a∗ lortzen dugu.
+⊇) Izan bedi orain f ∈ a∗. Orduan, existitzen da g ∈ a, halakoa non f = g∗
+baita. Har dezagun (a1, . . . , an) edozein puntu V∗ multzoan. Orduan, g ∈ I+
+(V )
+denez, g(1 : a1 : · · · : an) = 0 dugu. Beraz, f (a1, . . . , an) = g∗
+(a1, . . . , an) = 0, eta
+f ∈ I(V∗) dugu, nahi bezala.
+Aurreko teoremaren (i) atala ez da egiazkoa a ideala ez bada homogeneoa. Hartu,
+!
+adibidez, a = (X0 − X
+2
+1 ) eta V
+= V+(a). Alde batetik, a idealean polinomio
+homogeneo bakarra 0 denez, V = V+(0) = P
+1 eta V∗ = A1 dugu. Baina kasu
+honetan V (a∗) = V (1 − X
+2
+1 ) = {1, −1} baino ez da eta, beraz, ez da betetzen (i)
+ataleko berdintza.
+5.3. Barietate aﬁnen eta proiektiboen arteko erlazioa
+Multzo aljebraikoen artean, barietateak bereizi ditugu oinarrizko osagai gisa.
+Egiten ari garen estudio honetan, logikoa dirudi galdetzeak zein erlazio dagoen
+barietate aﬁnen eta proiektiboen artean. Gakoa ondorengo bi teoremetan dago.
+5.27. Teorema. Izan bedi a K[X1, . . . , Xn]-ren ideal lehena. Orduan, a
+∗ homoge-
+neizatua K[X0, . . . , Xn]-ren ideal lehena da.
+Froga. Lehenengo eta behin, ohartu a
+∗ K[X
+0, . . . , Xn]-ren ideal propioa dela.
+Izan ere, bestela balitz, orduan a = (a∗)∗ propietatea erabiliz, a = K
+[X1, . . . , Xn]
+izango genuke eta a ez litzateke ideal lehena izango.
+Orain, a∗ ideal homogeneoa izateagatik eta 4.12 teoremagatik, nahikoa da in-
+plikazio hau frogatzea:
+f g ∈ a
+∗
+f eta g homogeneoak
+=⇒ f ∈ a
+∗ edo g ∈ a∗.
+Hasteko, f g ∈ a∗ baldintzatik, deshomogeneizatuz, f∗g∗ ∈ (a
+∗)∗ = a lortzen dugu.
+Gogoan izanik a ideal lehena dela, f∗ ∈ a edo g∗ ∈ a dela ondoriozta dezakegu.
+Demagun, orokortasuna galdu gabe, f∗ ∈ a dela. Orduan, f homogeneoa denez,
+f = Xm
+0 (f∗)
+∗ dugu m berretzaileren baterako. Horrela f ∈ a∗ lortzen dugu, froga
+bukatuz.
+Antzeko emaitza bat dugu ideal lehenen deshomogeneizazioarekin, baina lehe-
+nengo honako lema hau frogatu behar dugu.
+5.28. Lema. Izan bedi a K[X0, . . . , Xn]-
+ren ideal lehen homogeneoa, eta demagun
+X0 ∈ a dela. Orduan, (a∗)
+∗ = a dugu.
+Froga. Alde batetik, 5.21 teoreman ikusi bezala, badakigu a ideal homogeneoa
+izateagatik a ⊆ (a∗)
+∗ betetzen dela. Alderantzizko partekotasuna lortzeko, kontuan
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+5.3. BARIETATE AFINEN ETA PROIEKTIBOEN ARTEKO ERLAZIOA
+144
+izanik
+(a∗)
+∗ = ((f∗)∗ | f ∈ a)
+dugula, nahikoa da (f∗)
+∗ ∈ a dela frogatzea f ∈ a guztietarako. Horretarako,
+deskonposatu f osagai homogeneotan, f = f0 + · · · + f ,
+= deg f izanik. Orain, a
+ideal homogeneoa izateagatik, f0, . . . , f ∈ a dugu. Ondorioz,
+g = X
+0 f0 + X
+−1
+0
+f1 + · · · + X0f −1 + f
+polinomio homogeneoa a-n dago, eta g∗ = f∗ dugu. Orduan, m berretzaileren
+baterako g = Xm
+0 (g∗)
+∗ = Xm
+0 (f∗)
+∗ dugu. Hemendik, Xm
+0 (f∗)
+∗ ∈ a lortzen dugu
+eta, a ideal lehena izateagatik, X0 ∈ a edo (f∗)
+∗ ∈ a dugu. Hipotesiaren arabera
+X0 ∈ a denez, (f∗)
+∗ ∈ a lortzen dugu, nahi bezala.
+5.29. Teorema. Izan bedi a K[X0, . . . , Xn]-ren ideal lehen homogeneoa, X0 ∈ a
+izanik. Orduan, a∗ deshomogeneizatua K[X1, . . . , Xn]-ren ideal lehena da.
+Froga. Ohartu (a∗)
+∗ = a berdintza dugula, azken lemaren arabera, X
+0 ∈ a iza-
+teagatik.
+Lehenengo eta behin, a∗ K[X1, . . . , Xn]-ren ideal propioa dela ikusiko dugu.
+Bestela balitz, orduan
+a
+= (a∗)
+∗ = (K[X
+1, . . . , Xn])
+∗ = K[X
+0, . . . , Xn]
+izango genuke, eta a ez litzateke ideal lehena izango.
+Orain, a∗ ideal lehena dela ikusteko, demagun f g ∈ a∗ dela eta frogatu dezagun
+f ∈ a∗ edo g ∈ a∗ dela. Lehenengo eta behin, f g ∈ a∗ baldintza homogeneizatuz,
+f ∗g∗ ∈ (a∗)
+∗ = a dugu. Hemendik, a ideal lehena izateagatik, f∗ ∈ a edo g∗ ∈ a
+lortzen dugu. Orain, deshomogeneizatuz, f = (f ∗)∗ ∈ a∗ edo g = (g
+∗)∗ ∈ a∗, nahi
+bezala.
+5.30. Teorema. Izan bedi K gorputz aljebraikoki itxia.
+(i) V ⊆ A
+n barietatea bada, orduan V ∗ ⊆ Pn ere barietatea da.
+(ii) V ⊆ P
+n barietatea bada, eta ez badago inﬁnituko hiperplanoan sartuta, or-
+duan V∗ ⊆ A
+n ere barietatea da.
+Froga. (i) Jarri a = I(V ).
+Ideal hau lehena da K[X1, . . . , Xn]-n, V barieta-
+te aﬁna izateagatik. Orain, 5.24 teoremaren arabera, I+(V
+∗) = a∗ dugu, eta a∗
+K[X0, . . . , Xn]-
+ren ideal lehena da, 5.27 teorema erabiliz. Azkenik, 4.30 teoreman
+ikusi bezala, I+(V
+∗) ideal lehena bada, V ∗ barietatea da espazio proiektiboan.
+(ii) Hau guztiz antzekoa da. Jarri a = I+(V ). Ideal hau lehena da K
+[X0, . . . , Xn]-
+n, V barietate proiektiboa izateagatik. Orain, 5.26 teoremaren arabera, I
+(V∗) = a∗
+dugu, eta a∗ K[X1, . . . , Xn]-ren ideal lehena da, 5.29 teorema erabiliz. 
+(Ohartu
+X0 ∈ a dugula: bestela, V = V+(a) ⊆ V+(X0) dugu eta V inﬁnituko hiperplanoan
+sartuta dago, kontraesan bat dena.) Beraz, I
+(V∗) ideal lehena da, eta V∗ barietatea
+da espazio aﬁnean.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+5.3. BARIETATE AFINEN ETA PROIEKTIBOEN ARTEKO ERLAZIOA
+145
+5.31. Teorema. Izan bedi V ⊆ A
+n multzo aljebraiko aﬁna. Orduan, (V ∗)∗ = V
+dugu.
+Froga. Deﬁnizioz, V
+∗ V -ren itxidura da Pn-ren Zariskiren topologiarekiko. Be-
+raz, aurreko gaian ikusi bezala, V ∗ = V+(I+(V )) dugu. Orduan, 5.26 teoremaren
+arabera, (V ∗)∗ = V (I+(V )∗) dugu. Ikusten badugu I+(V )∗ = I(V ) dela, orduan
+(V ∗)∗ = V (I(V )) = V lortuko dugu, V multzo aljebraiko aﬁna izateagatik.
+Ikus dezagun, bada, I+(V )∗ = I(V ) dela. Alde batetik, f ∈ I(V ) bada, orduan
+f (a1, . . . , an) = 0 dugu 
+(a1, . . . , an) ∈ V guztietarako. Beraz, 5.9 teorema erabiliz,
+f ∗ ∈ I+(V ) dugu eta, ondorioz, f = (f
+∗)∗ ∈ I+(V )∗. Horrek I(V ) ⊆ I+(V )∗
+partekotasuna frogatzen du.
+Bestetik, I+(V )∗ = (g∗ | g ∈ I+(V ) homogeneoa)
+dugu.
+Orain, g homogeneoa bada, 5.10 teoremagatik, g ∈ I+(V ) dugu baldin
+eta soilik baldin g∗ ∈ I(V ) bada. Hori dela eta, I+(V )∗ ⊆ I
+(V ) ondorioztatzen
+dugu.
+Aurreko teorema askoz azkarrago frogatu daiteke K gorputza aljebraikoki itxia
+bada. Izan ere, kasu horretan, V = V (a) bada, orduan V ∗ = V+(a
+∗) dugu, 5.24
+teoremaren arabera. Beraz,
+(V
+∗)∗ = V ((a∗)∗) = V (a) = V
+lortzen dugu, 5.26 eta 5.16 teoremak erabiliz, hurrenez hurren.
+5.32. Teorema. Izan bedi K gorputz aljebraikoki itxia. Orduan, V ⊆ P
+n barieta-
+tea bada eta ez badago inﬁnituko hiperplanoan sartuta, (V∗)
+∗ = V dugu.
+Froga. Jarri a = I+(V ). Orduan V = V+(a) dugu, eta a ideal lehen homogeneoa
+da, V barietatea delako. Beraz,
+(V∗)
+∗ = (V (a∗))∗ = V+((a∗)∗)
+dugu, K aljebraikoki itxia delako. Orain, X0 ∈ a frogatzen badugu, (a∗)
+∗ = a
+lortuko dugu 5.28 lema aplikatuz, eta hortik (V∗)
+∗ = V
++(a) = V , nahi bezala.
+Demagun, absurdora eramanez, X0 ∈ a dela. Orduan, V = V+(a) ⊆ V+(X0)
+dugu, hau da, V inﬁnituko hiperplanoan sartuta dago, eta hori hipotesiaren kontra
+doa.
+5.33. Teorema. Izan bedi K gorputz aljebraikoki itxia. Orduan, V → V ∗ eta
+V → V∗ aplikazioak elkarren alderantzizkoak dira, alde batetik barietate aﬁn guztiak
+eta bestetik inﬁnituko hiperplanoan sarturik ez dauden barietate proiektibo guztiak
+hartzen baditugu. Ondorioz, mota horietako barietateak bijekzioan daude.
+Froga. Azken bi teoremen ondorio berehalakoa da.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU

@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<HTML xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<HEAD>
+<TITLE>zenbaliburu.dvi</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<META name="generator" content="pdftohtml 0.36"/>
+<META name="date" content="2009-10-25T12:52:40+00:00"/>
+</HEAD>
+<BODY bgcolor="#A0A0A0" vlink="blue" link="blue">
+<!-- Page 1 -->
+<a name="1"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft10{font-size:72px;font-family:Times;color:#000000;}
+	.ft11{font-size:33px;font-family:Helvetica;color:#000000;}
+	.ft12{font-size:35px;font-family:Times;color:#000000;}
+	.ft13{font-size:23px;font-family:Times;color:#000000;}
+	.ft14{font-size:15px;font-family:Times;color:#000000;}
+	.ft15{font-size:19px;font-family:Times;color:#000000;}
+	.ft16{font-size:9px;font-family:Times;color:#000000;}
+	.ft17{font-size:35px;line-height:44px;font-family:Times;color:#000000;}
+	.ft18{font-size:15px;line-height:29px;font-family:Times;color:#000000;}
+	.ft19{font-size:15px;line-height:21px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page1-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:300px;left:129px;white-space:nowrap" class="ft10">1.&#160;Kapitulua</P>
+<P style="position:absolute;top:419px;left:129px;white-space:nowrap" class="ft17">Errorea&#160;eta&#160;algoritmoen<br/>ezaugarriak</P>
+<P style="position:absolute;top:565px;left:129px;white-space:nowrap" class="ft13">1.1</P>
+<P style="position:absolute;top:565px;left:196px;white-space:nowrap" class="ft13">Errorearen&#160;jatorriak</P>
+<P style="position:absolute;top:610px;left:155px;white-space:nowrap" class="ft14">•&#160;Problemaren&#160;planteamenduan</P>
+<P style="position:absolute;top:648px;left:194px;white-space:nowrap" class="ft18">•&#160;problemaren&#160;modelizazioa<br/>•&#160;datu&#160;ﬁsikoak</P>
+<P style="position:absolute;top:717px;left:155px;white-space:nowrap" class="ft14">•&#160;Zenbakizko&#160;ebazpenean</P>
+<P style="position:absolute;top:756px;left:194px;white-space:nowrap" class="ft18">•&#160;motze-errorea<br/>•&#160;borobiltze-errorea</P>
+<P style="position:absolute;top:839px;left:129px;white-space:nowrap" class="ft15">1.1.1</P>
+<P style="position:absolute;top:839px;left:203px;white-space:nowrap" class="ft15">motze-errorea</P>
+<P style="position:absolute;top:875px;left:129px;white-space:nowrap" class="ft14">1.1&#160;Adibidea.</P>
+<P style="position:absolute;top:874px;left:254px;white-space:nowrap" class="ft14">f&#160;(x)&#160;=&#160;sin&#160;x&#160;funtzioaren&#160;Taylor&#160;garapena&#160;zera&#160;da:</P>
+<P style="position:absolute;top:929px;left:249px;white-space:nowrap" class="ft14">sin&#160;x&#160;=</P>
+<P style="position:absolute;top:913px;left:313px;white-space:nowrap" class="ft16">∞</P>
+<P style="position:absolute;top:955px;left:309px;white-space:nowrap" class="ft16">i</P>
+<P style="position:absolute;top:954px;left:314px;white-space:nowrap" class="ft16">=0</P>
+<P style="position:absolute;top:929px;left:333px;white-space:nowrap" class="ft14">(−1)</P>
+<P style="position:absolute;top:927px;left:369px;white-space:nowrap" class="ft16">i</P>
+<P style="position:absolute;top:917px;left:389px;white-space:nowrap" class="ft14">x2i+1</P>
+<P style="position:absolute;top:941px;left:376px;white-space:nowrap" class="ft14">(2i&#160;+&#160;1)!</P>
+<P style="position:absolute;top:929px;left:446px;white-space:nowrap" class="ft14">=&#160;x&#160;−</P>
+<P style="position:absolute;top:917px;left:499px;white-space:nowrap" class="ft14">x3</P>
+<P style="position:absolute;top:941px;left:500px;white-space:nowrap" class="ft14">3!</P>
+<P style="position:absolute;top:929px;left:522px;white-space:nowrap" class="ft14">+</P>
+<P style="position:absolute;top:917px;left:541px;white-space:nowrap" class="ft14">x5</P>
+<P style="position:absolute;top:941px;left:543px;white-space:nowrap" class="ft14">5!</P>
+<P style="position:absolute;top:929px;left:564px;white-space:nowrap" class="ft14">−</P>
+<P style="position:absolute;top:917px;left:584px;white-space:nowrap" class="ft14">x7</P>
+<P style="position:absolute;top:941px;left:585px;white-space:nowrap" class="ft14">7!</P>
+<P style="position:absolute;top:929px;left:606px;white-space:nowrap" class="ft14">+&#160;.&#160;.&#160;.</P>
+<P style="position:absolute;top:984px;left:129px;white-space:nowrap" class="ft19">Praktikan,&#160;seriea&#160;moztu&#160;behar&#160;dugu&#160;batugai&#160;kopuru&#160;ﬁnitu&#160;bat&#160;batzeko.&#160;Demagun<br/>n-garren&#160;batugaian&#160;gelditzen&#160;garela,&#160;honako&#160;polinomio&#160;hau&#160;sortuz:</P>
+<P style="position:absolute;top:1057px;left:278px;white-space:nowrap" class="ft14">pn(x)&#160;=&#160;x&#160;−</P>
+<P style="position:absolute;top:1045px;left:376px;white-space:nowrap" class="ft14">x3</P>
+<P style="position:absolute;top:1069px;left:378px;white-space:nowrap" class="ft14">3!</P>
+<P style="position:absolute;top:1057px;left:399px;white-space:nowrap" class="ft14">+</P>
+<P style="position:absolute;top:1045px;left:419px;white-space:nowrap" class="ft14">x5</P>
+<P style="position:absolute;top:1069px;left:420px;white-space:nowrap" class="ft14">5!</P>
+<P style="position:absolute;top:1057px;left:441px;white-space:nowrap" class="ft14">−&#160;·&#160;·&#160;·&#160;+&#160;(−1)</P>
+<P style="position:absolute;top:1054px;left:538px;white-space:nowrap" class="ft16">n</P>
+<P style="position:absolute;top:1045px;left:562px;white-space:nowrap" class="ft14">x2n+1</P>
+<P style="position:absolute;top:1069px;left:548px;white-space:nowrap" class="ft14">(2n&#160;+&#160;1)!</P>
+<P style="position:absolute;top:1109px;left:444px;white-space:nowrap" class="ft14">3</P>
+</DIV>
+<!-- Page 2 -->
+<a name="2"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft210{font-size:15px;line-height:24px;font-family:Times;color:#000000;}
+	.ft211{font-size:15px;line-height:22px;font-family:Times;color:#000000;}
+	.ft212{font-size:15px;line-height:26px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page2-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:155px;left:129px;white-space:nowrap" class="ft24">4</P>
+<P style="position:absolute;top:156px;left:379px;white-space:nowrap" class="ft24">1.&#160;Kapitulua&#160;Errorea&#160;eta&#160;algoritmoen&#160;ezaugarriak</P>
+<P style="position:absolute;top:211px;left:129px;white-space:nowrap" class="ft24">p(x)&#160;=&#160;sin&#160;x&#160;denez,&#160;egin&#160;dugun&#160;motze&#160;errorea&#160;zera&#160;da:</P>
+<P style="position:absolute;top:252px;left:379px;white-space:nowrap" class="ft24">et&#160;=&#160;sin&#160;x&#160;−&#160;pn(x)&#160;.</P>
+<P style="position:absolute;top:294px;left:129px;white-space:nowrap" class="ft24">1.2&#160;Adibidea.</P>
+<P style="position:absolute;top:293px;left:254px;white-space:nowrap" class="ft24">Demagun&#160;f&#160;:&#160;[0,&#160;1]&#160;−→R&#160;funtzio&#160;integragarri&#160;bat&#160;dela.&#160;Izan&#160;bedi</P>
+<P style="position:absolute;top:343px;left:376px;white-space:nowrap" class="ft24">I(f&#160;)&#160;=</P>
+<P style="position:absolute;top:328px;left:451px;white-space:nowrap" class="ft26">1</P>
+<P style="position:absolute;top:364px;left:443px;white-space:nowrap" class="ft26">0</P>
+<P style="position:absolute;top:343px;left:461px;white-space:nowrap" class="ft24">f&#160;(x)&#160;dx</P>
+<P style="position:absolute;top:391px;left:129px;white-space:nowrap" class="ft29">I(f&#160;)&#160;balioaren&#160;hurbilpen&#160;bat&#160;kalkula&#160;daiteke&#160;Riemann&#160;baturak&#160;erabiliz.&#160;f&#160;-ren&#160;graﬁkoak<br/>eta&#160;ardatzak&#160;mugatzen&#160;duten&#160;azaleraren&#160;balioa&#160;hurbildu&#160;daiteke&#160;n&#160;laukizuzen&#160;erabi-<br/>liz,&#160;Q(f&#160;)&#160;haien&#160;azaleren&#160;batura&#160;izanik:</P>
+<P style="position:absolute;top:483px;left:150px;white-space:nowrap" class="ft24">Q(f&#160;)&#160;=</P>
+<P style="position:absolute;top:471px;left:215px;white-space:nowrap" class="ft24">1</P>
+<P style="position:absolute;top:495px;left:214px;white-space:nowrap" class="ft24">n</P>
+<P style="position:absolute;top:471px;left:244px;white-space:nowrap" class="ft24">f&#160;(0)&#160;+&#160;f&#160;(1/n)</P>
+<P style="position:absolute;top:495px;left:293px;white-space:nowrap" class="ft24">2</P>
+<P style="position:absolute;top:483px;left:357px;white-space:nowrap" class="ft24">+</P>
+<P style="position:absolute;top:471px;left:376px;white-space:nowrap" class="ft24">f&#160;(1/n)&#160;+&#160;f&#160;(2/n)</P>
+<P style="position:absolute;top:495px;left:435px;white-space:nowrap" class="ft24">2</P>
+<P style="position:absolute;top:483px;left:508px;white-space:nowrap" class="ft24">+&#160;·&#160;·&#160;·&#160;+</P>
+<P style="position:absolute;top:471px;left:570px;white-space:nowrap" class="ft24">f&#160;((n&#160;−&#160;1)/n)&#160;+&#160;f(1)</P>
+<P style="position:absolute;top:495px;left:642px;white-space:nowrap" class="ft24">2</P>
+<P style="position:absolute;top:483px;left:741px;white-space:nowrap" class="ft24">.</P>
+<P style="position:absolute;top:537px;left:129px;white-space:nowrap" class="ft24">Egindako&#160;motze-errorea:&#160;et&#160;=&#160;I(f&#160;)&#160;−&#160;Q(f)</P>
+<P style="position:absolute;top:587px;left:129px;white-space:nowrap" class="ft25">1.1.2</P>
+<P style="position:absolute;top:587px;left:203px;white-space:nowrap" class="ft25">Borobiltze&#160;errorea</P>
+<P style="position:absolute;top:622px;left:129px;white-space:nowrap" class="ft211">Ordenagailu&#160;bat&#160;erabiltzen&#160;badugu&#160;aurreko&#160;adibideko&#160;Q(f&#160;)&#160;kalkulatzeko,&#160;beraz,<br/>makina-zenbakiak&#160;erabiltzeagatik,&#160;hau&#160;da,&#160;hamartar&#160;kopurua&#160;mugatuta&#160;egonik,&#160;ez<br/>dugu&#160;Q(f&#160;)&#160;balioa&#160;lortuko,&#160;baizik&#160;eta&#160;Q(f&#160;)&#160;beste&#160;balio&#160;bat.&#160;Egindako&#160;borobiltze-<br/>errorea</P>
+<P style="position:absolute;top:690px;left:189px;white-space:nowrap" class="ft24">zera&#160;da:</P>
+<P style="position:absolute;top:716px;left:377px;white-space:nowrap" class="ft24">er&#160;=&#160;Q(f&#160;)&#160;−&#160;Q(f).</P>
+<P style="position:absolute;top:767px;left:129px;white-space:nowrap" class="ft25">1.1.3</P>
+<P style="position:absolute;top:767px;left:203px;white-space:nowrap" class="ft25">Errore&#160;totala</P>
+<P style="position:absolute;top:802px;left:129px;white-space:nowrap" class="ft29">Aurreko&#160;adibideko&#160;integralaren&#160;balioari&#160;ordenagailuz&#160;lortzen&#160;dugun&#160;balioa&#160;kentzen<br/>badiogu,&#160;errore&#160;totala&#160;lortzen&#160;dugu:</P>
+<P style="position:absolute;top:865px;left:326px;white-space:nowrap" class="ft24">e&#160;=&#160;I(f&#160;)&#160;−&#160;Q(f)</P>
+<P style="position:absolute;top:897px;left:339px;white-space:nowrap" class="ft212">=&#160;I(f&#160;)&#160;−&#160;Q(f)&#160;+&#160;Q(f)&#160;−&#160;Q(f)<br/>=&#160;et&#160;+&#160;er</P>
+<P style="position:absolute;top:970px;left:129px;white-space:nowrap" class="ft25">1.1.4</P>
+<P style="position:absolute;top:970px;left:203px;white-space:nowrap" class="ft25">Hasierako&#160;errorea</P>
+<P style="position:absolute;top:1004px;left:129px;white-space:nowrap" class="ft24">Demagun&#160;sin</P>
+<P style="position:absolute;top:990px;left:233px;white-space:nowrap" class="ft24">√</P>
+<P style="position:absolute;top:1004px;left:248px;white-space:nowrap" class="ft24">3&#160;kalkulatu&#160;nahi&#160;dugula&#160;pn&#160;Taylor&#160;polinomioa&#160;erabiliz,&#160;eta&#160;kalkulu-</P>
+<P style="position:absolute;top:1026px;left:129px;white-space:nowrap" class="ft24">rako,</P>
+<P style="position:absolute;top:1011px;left:173px;white-space:nowrap" class="ft24">√</P>
+<P style="position:absolute;top:1026px;left:188px;white-space:nowrap" class="ft24">3&#160;≈&#160;1.7&#160;hartzen&#160;dugula.&#160;Hasierako&#160;errore&#160;bat&#160;eragiten&#160;du&#160;hurbilketa&#160;honek:</P>
+<P style="position:absolute;top:1064px;left:365px;white-space:nowrap" class="ft24">ei&#160;=&#160;pn(</P>
+<P style="position:absolute;top:1049px;left:426px;white-space:nowrap" class="ft24">√</P>
+<P style="position:absolute;top:1064px;left:441px;white-space:nowrap" class="ft24">3)&#160;−&#160;pn(1.7)</P>
+</DIV>
+<!-- Page 3 -->
+<a name="3"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page3-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:156px;left:135px;white-space:nowrap" class="ft34">1.2.&#160;Errore&#160;absolutu&#160;eta&#160;erlatiboa</P>
+<P style="position:absolute;top:155px;left:758px;white-space:nowrap" class="ft34">5</P>
+<P style="position:absolute;top:211px;left:129px;white-space:nowrap" class="ft34">Kasu&#160;honetan,&#160;errore&#160;guztiak&#160;metatzen&#160;dira&#160;errore&#160;totalean:</P>
+<P style="position:absolute;top:255px;left:219px;white-space:nowrap" class="ft34">e&#160;=&#160;sin</P>
+<P style="position:absolute;top:239px;left:275px;white-space:nowrap" class="ft34">√</P>
+<P style="position:absolute;top:255px;left:290px;white-space:nowrap" class="ft34">3&#160;−&#160;pn(1.7)</P>
+<P style="position:absolute;top:289px;left:232px;white-space:nowrap" class="ft34">=&#160;sin</P>
+<P style="position:absolute;top:273px;left:275px;white-space:nowrap" class="ft34">√</P>
+<P style="position:absolute;top:289px;left:290px;white-space:nowrap" class="ft34">3&#160;−&#160;pn(</P>
+<P style="position:absolute;top:273px;left:345px;white-space:nowrap" class="ft34">√</P>
+<P style="position:absolute;top:289px;left:360px;white-space:nowrap" class="ft34">3)&#160;+&#160;pn(</P>
+<P style="position:absolute;top:273px;left:421px;white-space:nowrap" class="ft34">√</P>
+<P style="position:absolute;top:289px;left:436px;white-space:nowrap" class="ft34">3)&#160;−&#160;pn(1.7)&#160;+&#160;pn(1.7)&#160;−&#160;pn(1.7)</P>
+<P style="position:absolute;top:315px;left:232px;white-space:nowrap" class="ft34">=&#160;et&#160;+&#160;ei&#160;+&#160;er.</P>
+<P style="position:absolute;top:363px;left:129px;white-space:nowrap" class="ft33">1.2</P>
+<P style="position:absolute;top:363px;left:196px;white-space:nowrap" class="ft33">Errore&#160;absolutu&#160;eta&#160;erlatiboa</P>
+<P style="position:absolute;top:408px;left:129px;white-space:nowrap" class="ft34">1.1&#160;Deﬁnizioa.</P>
+<P style="position:absolute;top:407px;left:262px;white-space:nowrap" class="ft34">Benetazko&#160;balio&#160;bat&#160;eta&#160;bere&#160;hurbilketa&#160;baten&#160;arteko&#160;diferentziari</P>
+<P style="position:absolute;top:430px;left:129px;white-space:nowrap" class="ft34">errore&#160;absolutu</P>
+<P style="position:absolute;top:429px;left:249px;white-space:nowrap" class="ft34">esaten&#160;zaio,&#160;eta&#160;honela&#160;idatziko&#160;da:</P>
+<P style="position:absolute;top:469px;left:409px;white-space:nowrap" class="ft34">e&#160;=&#160;x&#160;−&#160;¯x,</P>
+<P style="position:absolute;top:508px;left:129px;white-space:nowrap" class="ft34">benetazko&#160;balioa&#160;eta&#160;hurbilketa&#160;x&#160;eta&#160;¯</P>
+<P style="position:absolute;top:508px;left:421px;white-space:nowrap" class="ft34">x&#160;izanik,&#160;hurrenez&#160;hurren.</P>
+<P style="position:absolute;top:545px;left:129px;white-space:nowrap" class="ft34">Balio&#160;negatiboak&#160;ekiditzeko,&#160;ohikoa&#160;da&#160;balio&#160;absolutua&#160;hartzea,&#160;hau&#160;da:</P>
+<P style="position:absolute;top:585px;left:404px;white-space:nowrap" class="ft34">e&#160;=&#160;|x&#160;−&#160;¯x|.</P>
+<P style="position:absolute;top:625px;left:129px;white-space:nowrap" class="ft34">1.2&#160;Deﬁnizioa.</P>
+<P style="position:absolute;top:624px;left:262px;white-space:nowrap" class="ft34">Errore&#160;absolutua&#160;eta&#160;benetazko&#160;balioaren&#160;arteko&#160;zatidurari&#160;errore</P>
+<P style="position:absolute;top:647px;left:129px;white-space:nowrap" class="ft34">erlatibo</P>
+<P style="position:absolute;top:646px;left:191px;white-space:nowrap" class="ft34">esaten&#160;zaio,&#160;eta&#160;honela&#160;idazten&#160;da:</P>
+<P style="position:absolute;top:694px;left:373px;white-space:nowrap" class="ft34">erel&#160;=</P>
+<P style="position:absolute;top:682px;left:429px;white-space:nowrap" class="ft34">e</P>
+<P style="position:absolute;top:707px;left:423px;white-space:nowrap" class="ft34">|x|</P>
+<P style="position:absolute;top:694px;left:450px;white-space:nowrap" class="ft34">=</P>
+<P style="position:absolute;top:682px;left:470px;white-space:nowrap" class="ft34">|x&#160;−&#160;¯x|</P>
+<P style="position:absolute;top:707px;left:486px;white-space:nowrap" class="ft34">|x|</P>
+<P style="position:absolute;top:744px;left:129px;white-space:nowrap" class="ft39">Askotan,&#160;|x|&#160;balioa&#160;ezezagutzen&#160;ez&#160;dugunez,&#160;ohikoa&#160;da&#160;|¯x|&#160;balio&#160;ezagunaz&#160;zatitzea<br/>errore&#160;erlatiboa&#160;kalkulatzeko,&#160;hau&#160;da:</P>
+<P style="position:absolute;top:815px;left:394px;white-space:nowrap" class="ft34">erel&#160;=</P>
+<P style="position:absolute;top:802px;left:444px;white-space:nowrap" class="ft34">|x&#160;−&#160;¯x|</P>
+<P style="position:absolute;top:827px;left:460px;white-space:nowrap" class="ft34">|¯x|</P>
+<P style="position:absolute;top:815px;left:498px;white-space:nowrap" class="ft34">.</P>
+<P style="position:absolute;top:864px;left:129px;white-space:nowrap" class="ft34">Errore&#160;erlatiboa&#160;adieraz&#160;daiteke&#160;portzentaiezko&#160;adierazpena&#160;erabiliz:&#160;%100&#160;·&#160;erel.</P>
+<P style="position:absolute;top:902px;left:129px;white-space:nowrap" class="ft34">1.3&#160;Adibidea.</P>
+<P style="position:absolute;top:901px;left:258px;white-space:nowrap" class="ft34">Demagun&#160;x&#160;=&#160;0.00006&#160;balio&#160;zehatza&#160;dela&#160;eta&#160;¯</P>
+<P style="position:absolute;top:901px;left:627px;white-space:nowrap" class="ft34">x&#160;=&#160;0.00005&#160;bere</P>
+<P style="position:absolute;top:923px;left:129px;white-space:nowrap" class="ft34">hurbilketa.&#160;Egindako&#160;errore&#160;absolutua&#160;txikia&#160;dirudi:</P>
+<P style="position:absolute;top:962px;left:251px;white-space:nowrap" class="ft34">e&#160;=&#160;|x&#160;−&#160;¯x|&#160;=&#160;|0.00006&#160;−&#160;0.00005|&#160;=&#160;0.00001&#160;=&#160;10</P>
+<P style="position:absolute;top:961px;left:628px;white-space:nowrap" class="ft36">−</P>
+<P style="position:absolute;top:959px;left:638px;white-space:nowrap" class="ft36">5</P>
+<P style="position:absolute;top:1002px;left:129px;white-space:nowrap" class="ft34">baina&#160;errore&#160;erlatiboa&#160;handia&#160;da:</P>
+<P style="position:absolute;top:1048px;left:296px;white-space:nowrap" class="ft34">erel&#160;=</P>
+<P style="position:absolute;top:1036px;left:346px;white-space:nowrap" class="ft34">|x&#160;−&#160;¯x|</P>
+<P style="position:absolute;top:1060px;left:362px;white-space:nowrap" class="ft34">|¯x|</P>
+<P style="position:absolute;top:1048px;left:405px;white-space:nowrap" class="ft34">=</P>
+<P style="position:absolute;top:1036px;left:436px;white-space:nowrap" class="ft34">10−5</P>
+<P style="position:absolute;top:1060px;left:425px;white-space:nowrap" class="ft34">0.00005</P>
+<P style="position:absolute;top:1048px;left:489px;white-space:nowrap" class="ft34">=&#160;0.2&#160;≡&#160;%20a.</P>
+</DIV>
+<!-- Page 4 -->
+<a name="4"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page4-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:155px;left:129px;white-space:nowrap" class="ft44">6</P>
+<P style="position:absolute;top:156px;left:379px;white-space:nowrap" class="ft44">1.&#160;Kapitulua&#160;Errorea&#160;eta&#160;algoritmoen&#160;ezaugarriak</P>
+<P style="position:absolute;top:212px;left:129px;white-space:nowrap" class="ft44">1.4&#160;Adibidea.</P>
+<P style="position:absolute;top:211px;left:259px;white-space:nowrap" class="ft44">Demagun&#160;x&#160;=&#160;100500&#160;balio&#160;zehatza&#160;dela&#160;eta&#160;¯</P>
+<P style="position:absolute;top:211px;left:629px;white-space:nowrap" class="ft44">x&#160;=&#160;100000&#160;bere</P>
+<P style="position:absolute;top:232px;left:129px;white-space:nowrap" class="ft44">hurbilketa.&#160;Orain,&#160;errore&#160;absolutua&#160;handia&#160;dirudi:</P>
+<P style="position:absolute;top:272px;left:381px;white-space:nowrap" class="ft44">e&#160;=&#160;|x&#160;−&#160;¯x|&#160;=&#160;500</P>
+<P style="position:absolute;top:311px;left:129px;white-space:nowrap" class="ft44">baina&#160;errore&#160;erlatiboa&#160;txikia&#160;da:</P>
+<P style="position:absolute;top:356px;left:287px;white-space:nowrap" class="ft44">erel&#160;=</P>
+<P style="position:absolute;top:344px;left:337px;white-space:nowrap" class="ft44">|x&#160;−&#160;¯x|</P>
+<P style="position:absolute;top:368px;left:353px;white-space:nowrap" class="ft44">|¯x|</P>
+<P style="position:absolute;top:356px;left:396px;white-space:nowrap" class="ft44">=</P>
+<P style="position:absolute;top:344px;left:429px;white-space:nowrap" class="ft44">500</P>
+<P style="position:absolute;top:368px;left:416px;white-space:nowrap" class="ft44">100000</P>
+<P style="position:absolute;top:356px;left:476px;white-space:nowrap" class="ft44">=&#160;0.005&#160;≡&#160;%0.5a.</P>
+<P style="position:absolute;top:415px;left:129px;white-space:nowrap" class="ft43">1.3</P>
+<P style="position:absolute;top:415px;left:196px;white-space:nowrap" class="ft43">Koma&#160;ﬂotatzaileko&#160;adierazpena</P>
+<P style="position:absolute;top:462px;left:129px;white-space:nowrap" class="ft45">1.3.1</P>
+<P style="position:absolute;top:462px;left:203px;white-space:nowrap" class="ft45">Borobiltze-prozesua</P>
+<P style="position:absolute;top:497px;left:129px;white-space:nowrap" class="ft411">Ordenagailu&#160;batek&#160;bakarrik&#160;biltegira&#160;dezake&#160;informazio&#160;mugatua.&#160;Zenbakiak&#160;idazteko,<br/>koma&#160;ﬂotatzaileko&#160;adierazpena</P>
+<P style="position:absolute;top:519px;left:368px;white-space:nowrap" class="ft44">erabiliko&#160;dugu:</P>
+<P style="position:absolute;top:558px;left:356px;white-space:nowrap" class="ft44">x&#160;=&#160;±(0.d1d2&#160;.&#160;.&#160;.&#160;dt)&#160;·&#160;β</P>
+<P style="position:absolute;top:556px;left:529px;white-space:nowrap" class="ft46">e,</P>
+<P style="position:absolute;top:598px;left:129px;white-space:nowrap" class="ft44">non&#160;honako&#160;osagai&#160;hauek&#160;ditugu:</P>
+<P style="position:absolute;top:634px;left:155px;white-space:nowrap" class="ft44">•&#160;e&#160;∈&#160;Z&#160;berretzailea&#160;da;</P>
+<P style="position:absolute;top:671px;left:155px;white-space:nowrap" class="ft44">•&#160;β&#160;∈&#160;N&#160;−&#160;{1}&#160;oinarria&#160;da;</P>
+<P style="position:absolute;top:707px;left:155px;white-space:nowrap" class="ft44">•&#160;di&#160;∈&#160;{0,&#160;1,&#160;.&#160;.&#160;.&#160;,&#160;β&#160;−&#160;1}&#160;dijituak&#160;dira;</P>
+<P style="position:absolute;top:744px;left:155px;white-space:nowrap" class="ft44">•&#160;0.d1d2&#160;.&#160;.&#160;.&#160;dt&#160;∈&#160;[0,&#160;1)&#160;zenbakiari&#160;mantisa&#160;deritzo,&#160;zeinen&#160;dijituak&#160;β&#160;oinarrian</P>
+<P style="position:absolute;top:766px;left:173px;white-space:nowrap" class="ft44">adierazita&#160;dauden,&#160;hau&#160;da,</P>
+<P style="position:absolute;top:805px;left:284px;white-space:nowrap" class="ft44">0.d1d2&#160;.&#160;.&#160;.&#160;dn&#160;≡&#160;d1&#160;·&#160;β</P>
+<P style="position:absolute;top:804px;left:438px;white-space:nowrap" class="ft46">−</P>
+<P style="position:absolute;top:802px;left:448px;white-space:nowrap" class="ft46">1&#160;+&#160;d2&#160;·&#160;β−2&#160;+&#160;·&#160;·&#160;·&#160;+&#160;dt&#160;·&#160;β−t.</P>
+<P style="position:absolute;top:852px;left:155px;white-space:nowrap" class="ft44">•&#160;t&#160;∈&#160;N&#160;mantisaren&#160;luzera&#160;da,&#160;eta&#160;dijitu&#160;esanguratsu&#160;kopurua&#160;da.</P>
+<P style="position:absolute;top:889px;left:129px;white-space:nowrap" class="ft44">1.3&#160;Deﬁnizioa.</P>
+<P style="position:absolute;top:888px;left:259px;white-space:nowrap" class="ft44">Ordenagailuak&#160;erabiltzen&#160;dituen&#160;zenbakiak&#160;makina-zenbakiak&#160;direla</P>
+<P style="position:absolute;top:910px;left:129px;white-space:nowrap" class="ft49">esango&#160;dugu,&#160;eta&#160;honako&#160;adierazpen&#160;hau&#160;erabiliko&#160;da:&#160;x&#160;benetazko&#160;zenbakiari&#160;f&#160;l(x)<br/>makina-zenbakia&#160;dagokio.</P>
+<P style="position:absolute;top:968px;left:129px;white-space:nowrap" class="ft49">Hasiera&#160;batean,&#160;zenbaki&#160;batek&#160;koma&#160;ﬂotatzaileko&#160;adierazpen&#160;bat&#160;baino&#160;gehiago&#160;onar-<br/>tu&#160;dezake:</P>
+<P style="position:absolute;top:1011px;left:247px;white-space:nowrap" class="ft44">0.003&#160;=&#160;0.3&#160;·&#160;10</P>
+<P style="position:absolute;top:1011px;left:364px;white-space:nowrap" class="ft46">−</P>
+<P style="position:absolute;top:1009px;left:374px;white-space:nowrap" class="ft46">2&#160;=&#160;0.03&#160;·&#160;10−1&#160;=&#160;0.00003&#160;·&#160;101&#160;=&#160;.&#160;.&#160;.</P>
+<P style="position:absolute;top:1043px;left:129px;white-space:nowrap" class="ft49">Hori&#160;ekiditzeko,&#160;inposatuko&#160;diogu&#160;mantisari&#160;d1&#160;=&#160;0&#160;izatea.&#160;Baldintza&#160;hori&#160;betetzen<br/>duten&#160;zenbakiei&#160;normalizatuta&#160;esango&#160;zaie.</P>
+</DIV>
+<!-- Page 5 -->
+<a name="5"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page5-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:156px;left:135px;white-space:nowrap" class="ft54">1.3.&#160;Koma&#160;ﬂotatzaileko&#160;adierazpena</P>
+<P style="position:absolute;top:155px;left:758px;white-space:nowrap" class="ft54">7</P>
+<P style="position:absolute;top:211px;left:156px;white-space:nowrap" class="ft54">Mantisaren&#160;luzeraren&#160;arabera,&#160;esango&#160;dugu&#160;ordenagailu&#160;batek&#160;zehaztasun&#160;sinple</P>
+<P style="position:absolute;top:232px;left:129px;white-space:nowrap" class="ft59">(7&#160;dijitu&#160;esanguratsu,&#160;hau&#160;da,&#160;t&#160;=&#160;7)&#160;edo&#160;zehaztasun&#160;bikoitza&#160;(16&#160;dijitu&#160;esanguratsu,<br/>hau&#160;da,&#160;t&#160;=&#160;16)&#160;erabiltzen&#160;duela.</P>
+<P style="position:absolute;top:298px;left:156px;white-space:nowrap" class="ft54">Sinpliﬁkatzeko,&#160;beti&#160;hartuko&#160;dugu&#160;β&#160;=&#160;10&#160;(oinarri&#160;hamartarra,&#160;hau&#160;da,&#160;di&#160;∈</P>
+<P style="position:absolute;top:319px;left:129px;white-space:nowrap" class="ft59">{0,&#160;1,&#160;.&#160;.&#160;.&#160;,&#160;9})&#160;baita&#160;mantisa&#160;normalizatuak&#160;ere&#160;(d1&#160;=&#160;0).&#160;Honako&#160;notazio&#160;hauek<br/>erabiltzen&#160;dira:</P>
+<P style="position:absolute;top:363px;left:297px;white-space:nowrap" class="ft54">2432.91&#160;=&#160;0.243291&#160;·&#160;10</P>
+<P style="position:absolute;top:360px;left:475px;white-space:nowrap" class="ft56">4&#160;=&#160;0.243291E4.</P>
+<P style="position:absolute;top:395px;left:129px;white-space:nowrap" class="ft54">Mantisaren&#160;luzera&#160;(t)&#160;txikiegia&#160;gertatzen&#160;denean,&#160;2&#160;aukera&#160;ditugu&#160;adierazteko:</P>
+<P style="position:absolute;top:432px;left:155px;white-space:nowrap" class="ft54">•&#160;mozketa&#160;hutsa&#160;(hartu&#160;mantisa&#160;teorikoaren&#160;lehenengo&#160;t&#160;hamartar);</P>
+<P style="position:absolute;top:470px;left:155px;white-space:nowrap" class="ft54">•&#160;ohiko&#160;borobilketa,&#160;hau&#160;da,&#160;dt+1&#160;≥&#160;5&#160;bada,&#160;orduan,&#160;10−</P>
+<P style="position:absolute;top:468px;left:579px;white-space:nowrap" class="ft56">t&#160;gehitzen&#160;zaio&#160;mantisari.</P>
+<P style="position:absolute;top:508px;left:129px;white-space:nowrap" class="ft54">1.5&#160;Adibidea.</P>
+<P style="position:absolute;top:507px;left:255px;white-space:nowrap" class="ft54">x&#160;=&#160;2/3&#160;=&#160;0.66666&#160;.&#160;.&#160;.&#160;zenbakia&#160;adieraziko&#160;dugu&#160;t&#160;=&#160;4&#160;dijitu&#160;esan-</P>
+<P style="position:absolute;top:529px;left:129px;white-space:nowrap" class="ft59">guratsuz&#160;goiko&#160;bi&#160;teknikak&#160;aplikatuz:&#160;mozketa&#160;hutsa&#160;eginez,&#160;f&#160;l(x)&#160;=&#160;0.6666&#160;lortuko<br/>genuke,&#160;eta&#160;borobilduz,&#160;aldiz,&#160;f&#160;l(x)&#160;=&#160;0.6667.&#160;Mozketaz,&#160;0.00006666&#160;.&#160;.&#160;.&#160;errorea&#160;egin<br/>dugu,&#160;eta&#160;borobilduz,&#160;aldiz,&#160;0.00003333&#160;.&#160;.&#160;.&#160;.</P>
+<P style="position:absolute;top:609px;left:156px;white-space:nowrap" class="ft54">Demagun&#160;dt+1&#160;≤&#160;4&#160;dela.&#160;Orduan,&#160;fl(x)&#160;berdina&#160;lortzen&#160;da&#160;moztuz&#160;zein&#160;boro-</P>
+<P style="position:absolute;top:631px;left:129px;white-space:nowrap" class="ft59">bilduz.&#160;Aldiz,&#160;dt+1&#160;≥&#160;5&#160;bada,&#160;orduan&#160;mozketaz&#160;egindako&#160;errorea,&#160;borobilduz&#160;egiten<br/>dena&#160;baino&#160;handiagoa&#160;da&#160;(aurreko&#160;adibidean&#160;gertatzen&#160;denez).&#160;Horregatik,&#160;beti<br/>erabiliko&#160;dugu&#160;ohiko&#160;borobilketa.</P>
+<P style="position:absolute;top:756px;left:129px;white-space:nowrap" class="ft54">1.1&#160;Adibideak.</P>
+<P style="position:absolute;top:755px;left:300px;white-space:nowrap" class="ft54">•&#160;Borobiltzen&#160;badugu&#160;π&#160;=&#160;3.14159265&#160;.&#160;.&#160;.&#160;zenbakia&#160;t&#160;=&#160;4</P>
+<P style="position:absolute;top:777px;left:173px;white-space:nowrap" class="ft59">dijitu&#160;esanguratsutara,&#160;orduan&#160;f&#160;l(π)&#160;=&#160;3.142&#160;da.&#160;t&#160;=&#160;5&#160;erabiliz,&#160;aldiz,&#160;f&#160;l(π)&#160;=<br/>3.1416.</P>
+<P style="position:absolute;top:836px;left:164px;white-space:nowrap" class="ft54">•&#160;x&#160;=&#160;10.18999&#160;bada&#160;eta&#160;t&#160;=&#160;6&#160;erabiltzen&#160;badugu,&#160;orduan,&#160;fl(x)&#160;=&#160;10.19.</P>
+<P style="position:absolute;top:873px;left:164px;white-space:nowrap" class="ft54">•&#160;Borobiltzen&#160;badugu&#160;x&#160;=</P>
+<P style="position:absolute;top:858px;left:385px;white-space:nowrap" class="ft54">√</P>
+<P style="position:absolute;top:873px;left:400px;white-space:nowrap" class="ft54">2&#160;=&#160;1.41421&#160;.&#160;.&#160;.&#160;4&#160;zifra&#160;esanguratsutara,&#160;1.414</P>
+<P style="position:absolute;top:895px;left:173px;white-space:nowrap" class="ft59">lortuko&#160;dugu.&#160;Borobiltzen&#160;badugu&#160;4&#160;zifra&#160;dezimaletara,&#160;orduan&#160;1.4142&#160;lortuko<br/>dugu.</P>
+<P style="position:absolute;top:968px;left:129px;white-space:nowrap" class="ft55">1.3.2</P>
+<P style="position:absolute;top:968px;left:203px;white-space:nowrap" class="ft55">Ordenagailuaren&#160;zehaztasuna</P>
+<P style="position:absolute;top:1003px;left:129px;white-space:nowrap" class="ft59">Bedi&#160;x&#160;∈&#160;R.&#160;Erabiliko&#160;dugu&#160;t&#160;zifra&#160;esanguratsu&#160;x&#160;adierazteko,&#160;eta&#160;fl(x)&#160;makina-<br/>zenbakia&#160;kontsideratuz&#160;egiten&#160;den&#160;errorea&#160;neurtuko&#160;dugu.&#160;Badaukagu</P>
+<P style="position:absolute;top:1064px;left:390px;white-space:nowrap" class="ft54">f&#160;l(x)&#160;=&#160;α&#160;·&#160;10</P>
+<P style="position:absolute;top:1062px;left:495px;white-space:nowrap" class="ft56">e,</P>
+</DIV>
+<!-- Page 6 -->
+<a name="6"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page6-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:155px;left:129px;white-space:nowrap" class="ft64">8</P>
+<P style="position:absolute;top:156px;left:379px;white-space:nowrap" class="ft64">1.&#160;Kapitulua&#160;Errorea&#160;eta&#160;algoritmoen&#160;ezaugarriak</P>
+<P style="position:absolute;top:211px;left:129px;white-space:nowrap" class="ft64">non&#160;α&#160;mantisa&#160;normalizatua&#160;baita.&#160;Badaukagu,&#160;ere,</P>
+<P style="position:absolute;top:256px;left:406px;white-space:nowrap" class="ft64">x&#160;=&#160;a&#160;·&#160;10</P>
+<P style="position:absolute;top:254px;left:479px;white-space:nowrap" class="ft66">e.</P>
+<P style="position:absolute;top:316px;left:129px;white-space:nowrap" class="ft64">Borobiltze&#160;prozesuagatik,&#160;erraz&#160;ikus&#160;daiteke&#160;|a&#160;−&#160;α|&#160;≤&#160;0.</P>
+<P style="position:absolute;top:295px;left:590px;white-space:nowrap" class="ft66">t</P>
+<P style="position:absolute;top:316px;left:570px;white-space:nowrap" class="ft64">0&#160;.&#160;.&#160;.&#160;0&#160;5&#160;=&#160;5&#160;·&#160;10−</P>
+<P style="position:absolute;top:315px;left:703px;white-space:nowrap" class="ft66">t−</P>
+<P style="position:absolute;top:314px;left:718px;white-space:nowrap" class="ft66">1&#160;dela.</P>
+<P style="position:absolute;top:338px;left:129px;white-space:nowrap" class="ft64">Orduan,&#160;borobilduz&#160;egiten&#160;dugun&#160;errore&#160;absolutua&#160;borna&#160;dezakegu&#160;honela:</P>
+<P style="position:absolute;top:383px;left:210px;white-space:nowrap" class="ft64">e&#160;=&#160;|x&#160;−&#160;fl(x)|&#160;=&#160;|a&#160;·&#160;10</P>
+<P style="position:absolute;top:381px;left:391px;white-space:nowrap" class="ft66">e&#160;−&#160;α&#160;·&#160;10e|&#160;=&#160;10e&#160;·&#160;|a&#160;−&#160;α|&#160;≤&#160;5&#160;·&#160;10e−t−</P>
+<P style="position:absolute;top:381px;left:680px;white-space:nowrap" class="ft66">1</P>
+<P style="position:absolute;top:429px;left:129px;white-space:nowrap" class="ft69">Adierazpen&#160;normalizatua&#160;erabiltzeagatik,&#160;badaukagu&#160;|a|&#160;≥&#160;0.1.&#160;Hori&#160;erabiliz,&#160;borna<br/>dezakegu&#160;errore&#160;erlatiboa:</P>
+<P style="position:absolute;top:505px;left:233px;white-space:nowrap" class="ft64">erel&#160;=</P>
+<P style="position:absolute;top:493px;left:283px;white-space:nowrap" class="ft64">|x&#160;−&#160;fl(x)|</P>
+<P style="position:absolute;top:518px;left:314px;white-space:nowrap" class="ft64">|x|</P>
+<P style="position:absolute;top:505px;left:372px;white-space:nowrap" class="ft64">≤</P>
+<P style="position:absolute;top:493px;left:392px;white-space:nowrap" class="ft64">5&#160;·&#160;10</P>
+<P style="position:absolute;top:492px;left:432px;white-space:nowrap" class="ft66">e−t−</P>
+<P style="position:absolute;top:491px;left:462px;white-space:nowrap" class="ft66">1</P>
+<P style="position:absolute;top:518px;left:403px;white-space:nowrap" class="ft64">|a&#160;·&#160;10e|</P>
+<P style="position:absolute;top:505px;left:476px;white-space:nowrap" class="ft64">≤</P>
+<P style="position:absolute;top:493px;left:497px;white-space:nowrap" class="ft64">5&#160;·&#160;10</P>
+<P style="position:absolute;top:492px;left:536px;white-space:nowrap" class="ft66">e−t−</P>
+<P style="position:absolute;top:491px;left:566px;white-space:nowrap" class="ft66">1</P>
+<P style="position:absolute;top:518px;left:499px;white-space:nowrap" class="ft64">10−1&#160;·&#160;10e</P>
+<P style="position:absolute;top:505px;left:580px;white-space:nowrap" class="ft64">=&#160;5&#160;·&#160;10</P>
+<P style="position:absolute;top:505px;left:643px;white-space:nowrap" class="ft66">−</P>
+<P style="position:absolute;top:503px;left:653px;white-space:nowrap" class="ft66">t</P>
+<P style="position:absolute;top:561px;left:129px;white-space:nowrap" class="ft64">Azken&#160;borne&#160;honi&#160;deituko&#160;diogu&#160;ordenagailuaren&#160;zehaztasuna,&#160;eta&#160;eps&#160;=&#160;5&#160;·&#160;10−</P>
+<P style="position:absolute;top:560px;left:762px;white-space:nowrap" class="ft66">t</P>
+<P style="position:absolute;top:583px;left:129px;white-space:nowrap" class="ft64">adierazpenaz&#160;idatziko&#160;dugu.</P>
+<P style="position:absolute;top:630px;left:129px;white-space:nowrap" class="ft64">1.1&#160;Lema.</P>
+<P style="position:absolute;top:629px;left:223px;white-space:nowrap" class="ft64">x&#160;∈&#160;R&#160;guztietarako&#160;existitzen&#160;da&#160;εx&#160;∈&#160;R&#160;zeinerako</P>
+<P style="position:absolute;top:674px;left:375px;white-space:nowrap" class="ft64">f&#160;l(x)&#160;=&#160;x&#160;·&#160;(1&#160;+&#160;εx)</P>
+<P style="position:absolute;top:720px;left:129px;white-space:nowrap" class="ft64">dugun,</P>
+<P style="position:absolute;top:720px;left:187px;white-space:nowrap" class="ft64">|εx|&#160;≤&#160;eps&#160;izanik.</P>
+<P style="position:absolute;top:768px;left:129px;white-space:nowrap" class="ft64">Frogapena.</P>
+<P style="position:absolute;top:767px;left:220px;white-space:nowrap" class="ft64">Hartu&#160;εx&#160;=</P>
+<P style="position:absolute;top:764px;left:313px;white-space:nowrap" class="ft66">x−f&#160;l</P>
+<P style="position:absolute;top:763px;left:341px;white-space:nowrap" class="ft66">(x)</P>
+<P style="position:absolute;top:779px;left:332px;white-space:nowrap" class="ft66">x</P>
+<P style="position:absolute;top:767px;left:360px;white-space:nowrap" class="ft64">.</P>
+<P style="position:absolute;top:767px;left:753px;white-space:nowrap" class="ft64">♣</P>
+<P style="position:absolute;top:820px;left:156px;white-space:nowrap" class="ft64">Normalean,&#160;ordenagailu&#160;batean&#160;e&#160;berretzailearen&#160;balio&#160;posibleak&#160;mugatuta&#160;daude.</P>
+<P style="position:absolute;top:841px;left:129px;white-space:nowrap" class="ft69">Adibidez,&#160;−99&#160;≤&#160;e&#160;≤&#160;99&#160;izan&#160;daiteke.&#160;Kasu&#160;horretan,&#160;x&#160;=&#160;0.3421234E110&#160;ez&#160;litza-<br/>teke&#160;makina-zenbakirik&#160;izango,&#160;eta&#160;overﬂow&#160;gertatzen&#160;dela&#160;esango&#160;genuke.&#160;Bestalde,<br/>y&#160;=&#160;0.234321E–110&#160;zenbakiari&#160;dagokion&#160;makina-zenbakia&#160;f&#160;l(y)&#160;=&#160;0&#160;izango&#160;litzateke,<br/>eta&#160;underﬂow&#160;gertatzen&#160;dela&#160;esango&#160;genuke.</P>
+<P style="position:absolute;top:973px;left:129px;white-space:nowrap" class="ft63">1.4</P>
+<P style="position:absolute;top:973px;left:196px;white-space:nowrap" class="ft63">Koma&#160;ﬂotatzaileko&#160;aritmetika</P>
+<P style="position:absolute;top:1021px;left:129px;white-space:nowrap" class="ft69">Demagun&#160;makina&#160;batek&#160;t&#160;zifra&#160;esanguratsuz&#160;lanegiten&#160;duela.&#160;Eragiketa&#160;bakoitza<br/>egin&#160;ondoren,&#160;borobilketa&#160;egiten&#160;du,&#160;eta&#160;honek&#160;ondorio&#160;garrantzitsuak&#160;dakartza<br/>azken&#160;emaitzerako.</P>
+</DIV>
+<!-- Page 7 -->
+<a name="7"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft713{font-size:12px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page7-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:156px;left:135px;white-space:nowrap" class="ft74">1.4.&#160;Koma&#160;ﬂotatzaileko&#160;aritmetika</P>
+<P style="position:absolute;top:155px;left:758px;white-space:nowrap" class="ft74">9</P>
+<P style="position:absolute;top:209px;left:129px;white-space:nowrap" class="ft75">1.4.1</P>
+<P style="position:absolute;top:209px;left:203px;white-space:nowrap" class="ft75">Batuketa&#160;ez&#160;da&#160;elkarkorra</P>
+<P style="position:absolute;top:244px;left:129px;white-space:nowrap" class="ft74">Ohiko&#160;aritmetikan,&#160;batuketa&#160;elkarkorra&#160;da,&#160;hau&#160;da,&#160;a+(b+c)&#160;=&#160;(a+b)+c,&#160;∀a,&#160;b,&#160;c&#160;∈</P>
+<P style="position:absolute;top:263px;left:129px;white-space:nowrap" class="ft710">R.&#160;Baina&#160;koma&#160;ﬂotatzaileko&#160;aritmetika&#160;erabiltzen&#160;dugunean,&#160;ordena&#160;inportantea&#160;da,<br/>eta&#160;beraz,&#160;f&#160;l(f&#160;l(a&#160;+&#160;b)&#160;+&#160;c)&#160;=&#160;f&#160;l(a&#160;+&#160;f&#160;l(b&#160;+&#160;c))&#160;izan&#160;daiteke.</P>
+<P style="position:absolute;top:322px;left:129px;white-space:nowrap" class="ft74">1.6&#160;Adibidea.</P>
+<P style="position:absolute;top:321px;left:254px;white-space:nowrap" class="ft74">Kontsidera&#160;dezagun&#160;t&#160;=&#160;4&#160;eta&#160;honako&#160;zenbaki&#160;hauek:</P>
+<P style="position:absolute;top:357px;left:295px;white-space:nowrap" class="ft74">a&#160;=&#160;0.002333,</P>
+<P style="position:absolute;top:357px;left:420px;white-space:nowrap" class="ft74">b&#160;=&#160;55.55,</P>
+<P style="position:absolute;top:357px;left:516px;white-space:nowrap" class="ft74">c&#160;=&#160;−55.45</P>
+<P style="position:absolute;top:394px;left:129px;white-space:nowrap" class="ft74">Badaukagu</P>
+<P style="position:absolute;top:430px;left:208px;white-space:nowrap" class="ft74">f&#160;l(b&#160;+&#160;c)&#160;=&#160;0.1</P>
+<P style="position:absolute;top:434px;left:360px;white-space:nowrap" class="ft713">+</P>
+<P style="position:absolute;top:439px;left:360px;white-space:nowrap" class="ft713">3</P>
+<P style="position:absolute;top:430px;left:369px;white-space:nowrap" class="ft74">f&#160;l(a&#160;+&#160;f&#160;l(b&#160;+&#160;c))&#160;=&#160;f&#160;l(0.102333)&#160;=&#160;0.1023</P>
+<P style="position:absolute;top:466px;left:129px;white-space:nowrap" class="ft74">Bestalde,</P>
+<P style="position:absolute;top:502px;left:129px;white-space:nowrap" class="ft74">f&#160;l(a+b)&#160;=&#160;f&#160;l(55.5523333)&#160;=&#160;55.55&#160;=&#160;b</P>
+<P style="position:absolute;top:507px;left:460px;white-space:nowrap" class="ft713">+</P>
+<P style="position:absolute;top:511px;left:460px;white-space:nowrap" class="ft713">3</P>
+<P style="position:absolute;top:502px;left:467px;white-space:nowrap" class="ft74">f&#160;l(f&#160;l(a+b)+c)&#160;=&#160;f&#160;l(b+c)&#160;=&#160;0.1&#160;=&#160;0.1023</P>
+<P style="position:absolute;top:552px;left:129px;white-space:nowrap" class="ft75">1.4.2</P>
+<P style="position:absolute;top:552px;left:203px;white-space:nowrap" class="ft75">Elementu&#160;neutroa&#160;ez&#160;da&#160;bakarra</P>
+<P style="position:absolute;top:587px;left:129px;white-space:nowrap" class="ft74">Aritmetika&#160;arrunta&#160;erabiliz,&#160;x&#160;+&#160;y&#160;=&#160;x</P>
+<P style="position:absolute;top:592px;left:467px;white-space:nowrap" class="ft713">+</P>
+<P style="position:absolute;top:596px;left:467px;white-space:nowrap" class="ft713">3</P>
+<P style="position:absolute;top:587px;left:476px;white-space:nowrap" class="ft74">y&#160;=&#160;0&#160;ondorioztatzen&#160;da,&#160;baina&#160;koma</P>
+<P style="position:absolute;top:609px;left:129px;white-space:nowrap" class="ft79">ﬂotatzaileko&#160;adierazpenaz,&#160;baliteke&#160;inﬁnitu&#160;y&#160;existitzea&#160;zeintzuetarako&#160;f&#160;l(x&#160;+&#160;y)&#160;=&#160;x<br/>baita.</P>
+<P style="position:absolute;top:665px;left:129px;white-space:nowrap" class="ft74">1.7&#160;Adibidea.</P>
+<P style="position:absolute;top:664px;left:254px;white-space:nowrap" class="ft74">t&#160;=&#160;3&#160;hartuz,</P>
+<P style="position:absolute;top:700px;left:325px;white-space:nowrap" class="ft74">x&#160;=&#160;0.234E7,&#160;y&#160;=&#160;0.123E–2&#160;=&#160;0</P>
+<P style="position:absolute;top:737px;left:129px;white-space:nowrap" class="ft74">eta&#160;badaukagu</P>
+<P style="position:absolute;top:773px;left:269px;white-space:nowrap" class="ft74">f&#160;l(x&#160;+&#160;y)&#160;=&#160;f&#160;l(2340000.00123)&#160;=&#160;0.234E7&#160;=&#160;x.</P>
+<P style="position:absolute;top:809px;left:156px;white-space:nowrap" class="ft74">Ondorioz,&#160;eragiketak&#160;gauzatzeko,&#160;garrantzi&#160;haundia&#160;izango&#160;du&#160;ordenak&#160;errorea</P>
+<P style="position:absolute;top:831px;left:129px;white-space:nowrap" class="ft74">hedatu&#160;ez&#160;dadin.&#160;Batugaiak&#160;ordenatzeko&#160;estrategia&#160;bereziak&#160;ikusiko&#160;digutu:</P>
+<P style="position:absolute;top:865px;left:129px;white-space:nowrap" class="ft74">1.1&#160;Trikimailua.</P>
+<P style="position:absolute;top:864px;left:276px;white-space:nowrap" class="ft74">Urrezko&#160;legetzat&#160;har&#160;dezakegu&#160;honako&#160;baieztapen&#160;informal&#160;hau:</P>
+<P style="position:absolute;top:886px;left:129px;white-space:nowrap" class="ft79">“Koma&#160;ﬂotatzaileko&#160;aritmetikan,&#160;inoiz&#160;ere&#160;ez&#160;gehitu&#160;zenbaki&#160;handi&#160;bat&#160;txikiegia<br/>den&#160;beste&#160;bati”.&#160;Aurreko&#160;adibideetan&#160;ikusi&#160;dugunez,&#160;zifra&#160;esanguratsu&#160;galtzen&#160;dira<br/>prozesu&#160;horretan.</P>
+<P style="position:absolute;top:964px;left:129px;white-space:nowrap" class="ft74">1.2&#160;Trikimailua.</P>
+<P style="position:absolute;top:963px;left:280px;white-space:nowrap" class="ft74">Zenbaki&#160;batzu&#160;batu&#160;behar&#160;baditugu,&#160;hobe&#160;dugu&#160;txikienetatik</P>
+<P style="position:absolute;top:985px;left:129px;white-space:nowrap" class="ft74">hasi,&#160;honako&#160;adibide&#160;honetan&#160;frogatuko&#160;dugunez:</P>
+<P style="position:absolute;top:1007px;left:156px;white-space:nowrap" class="ft74">Izan&#160;bitez&#160;a1,&#160;a2,&#160;a3,&#160;a4,&#160;a5&#160;∈&#160;R&#160;eta&#160;demagun&#160;koma&#160;ﬂotatzaileko&#160;aritmetika&#160;erabiliz</P>
+<P style="position:absolute;top:1028px;left:129px;white-space:nowrap" class="ft74">batzen&#160;ditugula&#160;honako&#160;ordena&#160;hau&#160;jarraituz:</P>
+<P style="position:absolute;top:1064px;left:337px;white-space:nowrap" class="ft74">((((a1&#160;+&#160;a2)&#160;+&#160;a3)&#160;+&#160;a4)&#160;+&#160;a5)</P>
+</DIV>
+<!-- Page 8 -->
+<a name="8"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft814{font-size:6px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page8-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:155px;left:129px;white-space:nowrap" class="ft84">10</P>
+<P style="position:absolute;top:156px;left:379px;white-space:nowrap" class="ft84">1.&#160;Kapitulua&#160;Errorea&#160;eta&#160;algoritmoen&#160;ezaugarriak</P>
+<P style="position:absolute;top:211px;left:129px;white-space:nowrap" class="ft89">Orduan,&#160;koma&#160;ﬂotatzaileko&#160;adierazpena&#160;erabiliz,&#160;benetazko&#160;emaitza&#160;honako&#160;hau<br/>izango&#160;litzateke:</P>
+<P style="position:absolute;top:273px;left:172px;white-space:nowrap" class="ft84">emaitza&#160;=&#160;f&#160;l&#160;(f&#160;l&#160;(f&#160;l&#160;(f&#160;l(a1&#160;+&#160;a2)&#160;+&#160;a3)&#160;+&#160;a4)&#160;+&#160;a5)</P>
+<P style="position:absolute;top:299px;left:237px;white-space:nowrap" class="ft84">=&#160;((((a1&#160;+&#160;a2)(1&#160;+&#160;ε1)&#160;+&#160;a3)&#160;(1&#160;+&#160;ε2)&#160;+&#160;a4)&#160;(1&#160;+&#160;ε3)&#160;+&#160;a5)&#160;(1&#160;+&#160;ε4)</P>
+<P style="position:absolute;top:341px;left:129px;white-space:nowrap" class="ft89">Sinpliﬁkatzeko,&#160;suposatuko&#160;dugu&#160;ε1&#160;=&#160;ε2&#160;=&#160;ε3&#160;=&#160;ε4&#160;=&#160;ε&#160;direla,&#160;non&#160;|ε|&#160;≤&#160;eps.<br/>Biderketak&#160;burutuz,&#160;badaukagu:</P>
+<P style="position:absolute;top:403px;left:133px;white-space:nowrap" class="ft84">emaitza&#160;≃&#160;a1(1&#160;+&#160;ε)</P>
+<P style="position:absolute;top:400px;left:285px;white-space:nowrap" class="ft86">4&#160;+&#160;a2(1&#160;+&#160;ε)4&#160;+&#160;a3(1&#160;+&#160;ε)3&#160;+&#160;a4(1&#160;+&#160;ε)2&#160;+&#160;a5(1&#160;+&#160;ε)</P>
+<P style="position:absolute;top:459px;left:198px;white-space:nowrap" class="ft84">=&#160;(a1&#160;+&#160;a2&#160;+&#160;a3&#160;+&#160;a4&#160;+&#160;a5)&#160;+&#160;ε(4a1&#160;+&#160;4a2&#160;+&#160;3a3&#160;+&#160;2a4&#160;+&#160;a5)+</P>
+<P style="position:absolute;top:433px;left:695px;white-space:nowrap" class="ft86">O</P>
+<P style="position:absolute;top:432px;left:705px;white-space:nowrap" class="ft86">(ε2)</P>
+<P style="position:absolute;top:459px;left:663px;white-space:nowrap" class="ft84">ε2(.&#160;.&#160;.&#160;)&#160;+&#160;.&#160;.&#160;.,</P>
+<P style="position:absolute;top:501px;left:129px;white-space:nowrap" class="ft89">non&#160;Landau&#160;O&#160;larria&#160;notazioa&#160;erabili&#160;dugun&#160;(hondarra&#160;zerora&#160;ε2&#160;bezain&#160;agudo&#160;doala<br/>adierazteko).&#160;Hondar&#160;hori&#160;mezprezugarritzat&#160;eman&#160;dezakegu.&#160;Laburbilduz,&#160;frogatu<br/>dugu</P>
+<P style="position:absolute;top:585px;left:203px;white-space:nowrap" class="ft84">emaitza&#160;≃&#160;(a1&#160;+&#160;a2&#160;+&#160;a3&#160;+&#160;a4&#160;+&#160;a5)ε(4a1&#160;+&#160;4a2&#160;+&#160;3a3&#160;+&#160;2a4&#160;+&#160;a5)</P>
+<P style="position:absolute;top:616px;left:301px;white-space:nowrap" class="ft813">+</P>
+<P style="position:absolute;top:620px;left:301px;white-space:nowrap" class="ft813">3</P>
+<P style="position:absolute;top:611px;left:310px;white-space:nowrap" class="ft84">errorea&#160;=&#160;ε(4a1&#160;+&#160;4a2&#160;+&#160;3a3&#160;+&#160;2a4&#160;+&#160;a5).</P>
+<P style="position:absolute;top:652px;left:129px;white-space:nowrap" class="ft84">Era&#160;berean&#160;froga&#160;daiteke&#160;n&#160;batugai&#160;erabiltzen&#160;dugunean,&#160;orduan</P>
+<P style="position:absolute;top:693px;left:138px;white-space:nowrap" class="ft84">emaitza&#160;≃&#160;(a1&#160;+&#160;·&#160;·&#160;·&#160;+&#160;an)ε((n&#160;−&#160;1)a1&#160;+&#160;(n&#160;−&#160;1)a2&#160;+&#160;(n&#160;−&#160;2)a3&#160;+&#160;·&#160;·&#160;·&#160;+&#160;2an−1&#160;+&#160;an)</P>
+<P style="position:absolute;top:724px;left:237px;white-space:nowrap" class="ft813">+</P>
+<P style="position:absolute;top:728px;left:237px;white-space:nowrap" class="ft813">3</P>
+<P style="position:absolute;top:719px;left:245px;white-space:nowrap" class="ft84">errorea&#160;=&#160;ε((n&#160;−&#160;1)a1&#160;+&#160;(n&#160;−&#160;1)a2&#160;+&#160;(n&#160;−&#160;2)a3&#160;+&#160;·&#160;·&#160;·&#160;+&#160;2an−1&#160;+&#160;an).</P>
+<P style="position:absolute;top:760px;left:129px;white-space:nowrap" class="ft89">Nabaria&#160;denez,&#160;lehenengo&#160;bi&#160;gaiek&#160;eragindako&#160;errorea&#160;hirugarrenak&#160;egindakoa&#160;baino<br/>handiagoa&#160;dela,&#160;eta&#160;eragin&#160;horrek&#160;gero&#160;eta&#160;baxuagoa&#160;da.&#160;Horregatik&#160;hobe&#160;dugu<br/>batugaiak&#160;ordena&#160;gorakorrez&#160;antolatu&#160;batu&#160;baino&#160;lehen.</P>
+<P style="position:absolute;top:860px;left:129px;white-space:nowrap" class="ft84">1.8&#160;Adibidea.</P>
+<P style="position:absolute;top:841px;left:257px;white-space:nowrap" class="ft86">500</P>
+<P style="position:absolute;top:885px;left:255px;white-space:nowrap" class="ft86">n</P>
+<P style="position:absolute;top:884px;left:263px;white-space:nowrap" class="ft86">=1</P>
+<P style="position:absolute;top:847px;left:286px;white-space:nowrap" class="ft84">1</P>
+<P style="position:absolute;top:871px;left:282px;white-space:nowrap" class="ft84">n5</P>
+<P style="position:absolute;top:859px;left:307px;white-space:nowrap" class="ft84">batzeko&#160;ordenarik&#160;egokiena&#160;honako&#160;hau&#160;da:</P>
+<P style="position:absolute;top:915px;left:363px;white-space:nowrap" class="ft84">1</P>
+<P style="position:absolute;top:939px;left:350px;white-space:nowrap" class="ft84">5005</P>
+<P style="position:absolute;top:927px;left:389px;white-space:nowrap" class="ft84">+</P>
+<P style="position:absolute;top:915px;left:421px;white-space:nowrap" class="ft84">1</P>
+<P style="position:absolute;top:939px;left:409px;white-space:nowrap" class="ft84">4995</P>
+<P style="position:absolute;top:927px;left:448px;white-space:nowrap" class="ft84">+</P>
+<P style="position:absolute;top:915px;left:480px;white-space:nowrap" class="ft84">1</P>
+<P style="position:absolute;top:939px;left:467px;white-space:nowrap" class="ft84">4985</P>
+<P style="position:absolute;top:927px;left:507px;white-space:nowrap" class="ft84">+&#160;.&#160;.&#160;.</P>
+<P style="position:absolute;top:985px;left:129px;white-space:nowrap" class="ft85">1.4.3</P>
+<P style="position:absolute;top:985px;left:203px;white-space:nowrap" class="ft85">Deuseztapen&#160;efektua</P>
+<P style="position:absolute;top:1021px;left:129px;white-space:nowrap" class="ft89">Demagun&#160;x&#160;eta&#160;y&#160;oso&#160;antzekoak&#160;direla&#160;eta&#160;x−y&#160;kalkulatu&#160;nahi&#160;dugula&#160;koma&#160;ﬂotatza-<br/>ileko&#160;aritmetikaz.&#160;Orduan,&#160;dijitu&#160;esanguratsu&#160;asko&#160;gal&#160;ditzakegu,&#160;errore&#160;erlatibo<br/>haundia&#160;gertatuz,&#160;honako&#160;adibide&#160;honetan&#160;ikus&#160;dezakegunez:</P>
+</DIV>
+<!-- Page 9 -->
+<a name="9"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page9-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:156px;left:135px;white-space:nowrap" class="ft94">1.4.&#160;Koma&#160;ﬂotatzaileko&#160;aritmetika</P>
+<P style="position:absolute;top:155px;left:750px;white-space:nowrap" class="ft94">11</P>
+<P style="position:absolute;top:212px;left:129px;white-space:nowrap" class="ft94">1.9&#160;Adibidea.</P>
+<P style="position:absolute;top:211px;left:256px;white-space:nowrap" class="ft94">Bitez&#160;x&#160;=&#160;0.123444444&#160;eta&#160;y&#160;=&#160;0.123411111.&#160;Orduan,&#160;badaukagu</P>
+<P style="position:absolute;top:232px;left:129px;white-space:nowrap" class="ft99">x&#160;−&#160;y&#160;=&#160;0.33333E–4.&#160;Bestalde,&#160;t&#160;=&#160;5&#160;dijitu&#160;esanguratsuz&#160;lanegiten&#160;duen&#160;makina<br/>batek&#160;ez&#160;luke&#160;lortuko&#160;x&#160;−&#160;y&#160;balio&#160;zehatza,&#160;baizik&#160;eta:</P>
+<P style="position:absolute;top:296px;left:163px;white-space:nowrap" class="ft94">α&#160;=&#160;f&#160;l(f&#160;l(x)&#160;−&#160;fl(y))&#160;=&#160;fl(0.12344&#160;−&#160;0.12341)&#160;=&#160;fl(0.00003)&#160;=&#160;0.3000E–4</P>
+<P style="position:absolute;top:338px;left:129px;white-space:nowrap" class="ft99">Nabaritu&#160;α-ren&#160;mantisako&#160;lehen&#160;dijitua&#160;bakarrik&#160;dela&#160;zehatza.&#160;Beraz,&#160;x&#160;−&#160;y&#160;kalku-<br/>latzean&#160;egindako&#160;errore&#160;erlatiboa&#160;x&#160;borobiltzean&#160;egindakoa&#160;baino&#160;askoz&#160;handiagoa<br/>da.</P>
+<P style="position:absolute;top:428px;left:129px;white-space:nowrap" class="ft94">erelx&#160;=</P>
+<P style="position:absolute;top:416px;left:187px;white-space:nowrap" class="ft94">|fl(x)&#160;−&#160;x|</P>
+<P style="position:absolute;top:441px;left:217px;white-space:nowrap" class="ft94">|x|</P>
+<P style="position:absolute;top:428px;left:275px;white-space:nowrap" class="ft94">=&#160;0.000036&#160;≡&#160;%0.0036,&#160;erel(x−y)&#160;=</P>
+<P style="position:absolute;top:416px;left:557px;white-space:nowrap" class="ft94">|α&#160;−&#160;(x&#160;−&#160;y)|</P>
+<P style="position:absolute;top:441px;left:580px;white-space:nowrap" class="ft94">|x&#160;−&#160;y|</P>
+<P style="position:absolute;top:428px;left:661px;white-space:nowrap" class="ft94">=&#160;0.09999&#160;·&#160;·&#160;·&#160;≈&#160;%10</P>
+<P style="position:absolute;top:479px;left:129px;white-space:nowrap" class="ft94">Orain&#160;ikusiko&#160;dugu&#160;deuseztapen&#160;efektua&#160;ekiditzeko&#160;hainbat&#160;teknika:</P>
+<P style="position:absolute;top:521px;left:129px;white-space:nowrap" class="ft94">1.3&#160;Trikimailua.</P>
+<P style="position:absolute;top:520px;left:272px;white-space:nowrap" class="ft94">Batzuetan,&#160;konjokatu&#160;egokiaz&#160;biderkatzea&#160;eta&#160;zatitzea&#160;komeni-</P>
+<P style="position:absolute;top:541px;left:129px;white-space:nowrap" class="ft99">garri&#160;gertatzen&#160;da,&#160;honako&#160;adibide&#160;honetan&#160;ikus&#160;dezakegunez:&#160;Demagun&#160;balioztatu<br/>nahi&#160;dugula</P>
+<P style="position:absolute;top:587px;left:386px;white-space:nowrap" class="ft94">f&#160;(x)&#160;=&#160;1&#160;−&#160;cos&#160;x</P>
+<P style="position:absolute;top:621px;left:129px;white-space:nowrap" class="ft94">funtzioa&#160;,&#160;0-ren&#160;hurbileko&#160;x&#160;batean.&#160;Orduan,&#160;x&#160;∼&#160;0</P>
+<P style="position:absolute;top:626px;left:555px;white-space:nowrap" class="ft913">+</P>
+<P style="position:absolute;top:630px;left:555px;white-space:nowrap" class="ft913">3</P>
+<P style="position:absolute;top:621px;left:566px;white-space:nowrap" class="ft94">cos&#160;x&#160;∼&#160;1,&#160;eta&#160;deuseztapen</P>
+<P style="position:absolute;top:643px;left:129px;white-space:nowrap" class="ft99">efektuaren&#160;arriskuan&#160;egongo&#160;gara.&#160;Hori&#160;ekiditzeko,&#160;erabil&#160;dezakegu&#160;beste&#160;adierazpen<br/>baliokide&#160;bat,&#160;zein&#160;deuseztapen&#160;efektuaren&#160;arriskupean&#160;ez&#160;baitago:</P>
+<P style="position:absolute;top:722px;left:218px;white-space:nowrap" class="ft94">1&#160;−&#160;cos&#160;x&#160;=&#160;(1&#160;−&#160;cos&#160;x)&#160;·</P>
+<P style="position:absolute;top:710px;left:404px;white-space:nowrap" class="ft910">1&#160;+&#160;cos&#160;x<br/>1&#160;+&#160;cos&#160;x</P>
+<P style="position:absolute;top:722px;left:478px;white-space:nowrap" class="ft94">=</P>
+<P style="position:absolute;top:710px;left:498px;white-space:nowrap" class="ft94">1&#160;−&#160;cos</P>
+<P style="position:absolute;top:708px;left:552px;white-space:nowrap" class="ft96">2&#160;x</P>
+<P style="position:absolute;top:734px;left:502px;white-space:nowrap" class="ft94">1&#160;+&#160;cos&#160;x</P>
+<P style="position:absolute;top:722px;left:579px;white-space:nowrap" class="ft94">=</P>
+<P style="position:absolute;top:710px;left:617px;white-space:nowrap" class="ft94">sin2&#160;x</P>
+<P style="position:absolute;top:734px;left:605px;white-space:nowrap" class="ft94">1&#160;+&#160;cos&#160;x</P>
+<P style="position:absolute;top:775px;left:129px;white-space:nowrap" class="ft94">Adibidez,&#160;t&#160;=&#160;5&#160;hartzen&#160;badugu,&#160;eta&#160;x&#160;=&#160;0.14500E–1&#160;kontsideratuz,&#160;badaukagu</P>
+<P style="position:absolute;top:817px;left:262px;white-space:nowrap" class="ft94">cos&#160;x&#160;=&#160;0.99989E0</P>
+<P style="position:absolute;top:821px;left:441px;white-space:nowrap" class="ft913">+</P>
+<P style="position:absolute;top:825px;left:441px;white-space:nowrap" class="ft913">3</P>
+<P style="position:absolute;top:817px;left:450px;white-space:nowrap" class="ft94">1&#160;−&#160;cos&#160;x&#160;=&#160;0.11000E–3,</P>
+<P style="position:absolute;top:858px;left:129px;white-space:nowrap" class="ft94">bakarrik&#160;lehen&#160;dijitua&#160;zehatza&#160;izanik.&#160;Bestalde,</P>
+<P style="position:absolute;top:900px;left:180px;white-space:nowrap" class="ft94">1&#160;+&#160;cos&#160;x&#160;=&#160;0.19999E1,&#160;sinx&#160;=&#160;0.14499E–1</P>
+<P style="position:absolute;top:905px;left:550px;white-space:nowrap" class="ft913">+</P>
+<P style="position:absolute;top:909px;left:550px;white-space:nowrap" class="ft913">3</P>
+<P style="position:absolute;top:900px;left:562px;white-space:nowrap" class="ft94">sin2&#160;x&#160;=&#160;0.21022E–3</P>
+<P style="position:absolute;top:962px;left:291px;white-space:nowrap" class="ft913">+</P>
+<P style="position:absolute;top:966px;left:291px;white-space:nowrap" class="ft913">3</P>
+<P style="position:absolute;top:945px;left:314px;white-space:nowrap" class="ft94">sin2&#160;x</P>
+<P style="position:absolute;top:970px;left:301px;white-space:nowrap" class="ft94">1&#160;+&#160;cos&#160;x</P>
+<P style="position:absolute;top:957px;left:375px;white-space:nowrap" class="ft94">=&#160;f&#160;l</P>
+<P style="position:absolute;top:945px;left:428px;white-space:nowrap" class="ft94">0.00021022</P>
+<P style="position:absolute;top:970px;left:446px;white-space:nowrap" class="ft94">1.9999</P>
+<P style="position:absolute;top:957px;left:532px;white-space:nowrap" class="ft94">=&#160;0.10512E–3,</P>
+<P style="position:absolute;top:1001px;left:129px;white-space:nowrap" class="ft94">zeinen&#160;hamartar&#160;guztiak&#160;zehatzak&#160;baitira,&#160;Taylor&#160;seriez&#160;konproba&#160;dezakegunez:</P>
+<P style="position:absolute;top:1052px;left:298px;white-space:nowrap" class="ft94">f&#160;(x)&#160;=&#160;1&#160;−&#160;cos&#160;x&#160;=</P>
+<P style="position:absolute;top:1040px;left:449px;white-space:nowrap" class="ft94">x2</P>
+<P style="position:absolute;top:1064px;left:453px;white-space:nowrap" class="ft94">2</P>
+<P style="position:absolute;top:1052px;left:472px;white-space:nowrap" class="ft94">−</P>
+<P style="position:absolute;top:1040px;left:491px;white-space:nowrap" class="ft94">x4</P>
+<P style="position:absolute;top:1064px;left:493px;white-space:nowrap" class="ft94">4!</P>
+<P style="position:absolute;top:1052px;left:514px;white-space:nowrap" class="ft94">+</P>
+<P style="position:absolute;top:1040px;left:534px;white-space:nowrap" class="ft94">x6</P>
+<P style="position:absolute;top:1064px;left:535px;white-space:nowrap" class="ft94">6!</P>
+<P style="position:absolute;top:1052px;left:556px;white-space:nowrap" class="ft94">−&#160;.&#160;.&#160;.</P>
+</DIV>
+<!-- Page 10 -->
+<a name="10"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page10-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:155px;left:129px;white-space:nowrap" class="ft104">12</P>
+<P style="position:absolute;top:156px;left:379px;white-space:nowrap" class="ft104">1.&#160;Kapitulua&#160;Errorea&#160;eta&#160;algoritmoen&#160;ezaugarriak</P>
+<P style="position:absolute;top:212px;left:129px;white-space:nowrap" class="ft104">1.4&#160;Trikimailua.</P>
+<P style="position:absolute;top:211px;left:276px;white-space:nowrap" class="ft104">Demagun&#160;2.&#160;mailako&#160;ekuazioa&#160;ebatzi&#160;nahi&#160;dugula:</P>
+<P style="position:absolute;top:256px;left:171px;white-space:nowrap" class="ft104">ax2&#160;+&#160;bx&#160;+&#160;c&#160;=&#160;a(x&#160;−&#160;x1)(x&#160;−&#160;x2)&#160;=&#160;0</P>
+<P style="position:absolute;top:261px;left:495px;white-space:nowrap" class="ft1013">+</P>
+<P style="position:absolute;top:265px;left:495px;white-space:nowrap" class="ft1013">3</P>
+<P style="position:absolute;top:256px;left:510px;white-space:nowrap" class="ft104">x1,2&#160;=</P>
+<P style="position:absolute;top:244px;left:562px;white-space:nowrap" class="ft104">−b&#160;±</P>
+<P style="position:absolute;top:229px;left:606px;white-space:nowrap" class="ft104">√</P>
+<P style="position:absolute;top:244px;left:620px;white-space:nowrap" class="ft104">b2&#160;−&#160;4ac</P>
+<P style="position:absolute;top:268px;left:613px;white-space:nowrap" class="ft104">2a</P>
+<P style="position:absolute;top:256px;left:684px;white-space:nowrap" class="ft104">.</P>
+<P style="position:absolute;top:256px;left:731px;white-space:nowrap" class="ft104">(1.1)</P>
+<P style="position:absolute;top:298px;left:129px;white-space:nowrap" class="ft104">Demagun&#160;b2&#160;&gt;&gt;&#160;4|ac|&#160;dela.&#160;Orduan,&#160;badaukagu</P>
+<P style="position:absolute;top:284px;left:498px;white-space:nowrap" class="ft104">√</P>
+<P style="position:absolute;top:298px;left:513px;white-space:nowrap" class="ft104">b2&#160;−&#160;4ac&#160;≈&#160;|b|,&#160;eta&#160;erro&#160;bat&#160;kalku-</P>
+<P style="position:absolute;top:320px;left:129px;white-space:nowrap" class="ft109">latzeko&#160;formula&#160;deuseztapen&#160;efektuaren&#160;arriskuan&#160;egon&#160;daiteke.&#160;Hori&#160;ekiditzeko,<br/>badaukagu&#160;2&#160;estrategia.&#160;Sinpliﬁkatzeko,&#160;suposatuko&#160;dugu&#160;b&#160;&gt;&#160;0&#160;dela.</P>
+<P style="position:absolute;top:373px;left:164px;white-space:nowrap" class="ft104">i)</P>
+<P style="position:absolute;top:420px;left:246px;white-space:nowrap" class="ft104">x1&#160;=</P>
+<P style="position:absolute;top:408px;left:288px;white-space:nowrap" class="ft104">−b&#160;+</P>
+<P style="position:absolute;top:393px;left:331px;white-space:nowrap" class="ft104">√</P>
+<P style="position:absolute;top:408px;left:346px;white-space:nowrap" class="ft104">b2&#160;−&#160;4ac</P>
+<P style="position:absolute;top:432px;left:339px;white-space:nowrap" class="ft104">2a</P>
+<P style="position:absolute;top:420px;left:415px;white-space:nowrap" class="ft104">=</P>
+<P style="position:absolute;top:408px;left:436px;white-space:nowrap" class="ft104">−b&#160;+</P>
+<P style="position:absolute;top:393px;left:479px;white-space:nowrap" class="ft104">√</P>
+<P style="position:absolute;top:408px;left:494px;white-space:nowrap" class="ft104">b2&#160;−&#160;4ac</P>
+<P style="position:absolute;top:432px;left:487px;white-space:nowrap" class="ft104">2a</P>
+<P style="position:absolute;top:420px;left:561px;white-space:nowrap" class="ft104">·</P>
+<P style="position:absolute;top:408px;left:572px;white-space:nowrap" class="ft104">−b&#160;−</P>
+<P style="position:absolute;top:393px;left:616px;white-space:nowrap" class="ft104">√</P>
+<P style="position:absolute;top:408px;left:631px;white-space:nowrap" class="ft104">b2&#160;−&#160;4ac</P>
+<P style="position:absolute;top:434px;left:572px;white-space:nowrap" class="ft104">−b&#160;−</P>
+<P style="position:absolute;top:419px;left:616px;white-space:nowrap" class="ft104">√</P>
+<P style="position:absolute;top:434px;left:631px;white-space:nowrap" class="ft104">b2&#160;−&#160;4ac</P>
+<P style="position:absolute;top:471px;left:268px;white-space:nowrap" class="ft104">=</P>
+<P style="position:absolute;top:459px;left:315px;white-space:nowrap" class="ft104">b2&#160;−&#160;b</P>
+<P style="position:absolute;top:457px;left:359px;white-space:nowrap" class="ft106">2&#160;+&#160;4ac</P>
+<P style="position:absolute;top:485px;left:288px;white-space:nowrap" class="ft104">2a(−b&#160;−</P>
+<P style="position:absolute;top:471px;left:357px;white-space:nowrap" class="ft104">√</P>
+<P style="position:absolute;top:485px;left:372px;white-space:nowrap" class="ft104">b2&#160;−&#160;4ac)</P>
+<P style="position:absolute;top:471px;left:447px;white-space:nowrap" class="ft104">=</P>
+<P style="position:absolute;top:459px;left:510px;white-space:nowrap" class="ft104">−2c</P>
+<P style="position:absolute;top:485px;left:473px;white-space:nowrap" class="ft104">b&#160;+</P>
+<P style="position:absolute;top:471px;left:502px;white-space:nowrap" class="ft104">√</P>
+<P style="position:absolute;top:485px;left:517px;white-space:nowrap" class="ft104">b2&#160;−&#160;4ac</P>
+<P style="position:absolute;top:471px;left:586px;white-space:nowrap" class="ft104">,</P>
+<P style="position:absolute;top:519px;left:173px;white-space:nowrap" class="ft109">eta&#160;azken&#160;adierazpen&#160;horrek&#160;ez&#160;dauka&#160;deuseztapen&#160;efekturik,&#160;ezta&#160;x2&#160;kalku-<br/>latzeko&#160;ohiko&#160;formulak&#160;ere.</P>
+<P style="position:absolute;top:576px;left:164px;white-space:nowrap" class="ft104">ii)&#160;Beste&#160;estrategia&#160;bat&#160;izan&#160;daiteke&#160;honako&#160;hau:&#160;kalkula&#160;dezakegu&#160;x2&#160;(ez&#160;dago</P>
+<P style="position:absolute;top:597px;left:173px;white-space:nowrap" class="ft104">deuseztapen&#160;efekturik):</P>
+<P style="position:absolute;top:644px;left:385px;white-space:nowrap" class="ft104">x2&#160;=</P>
+<P style="position:absolute;top:631px;left:428px;white-space:nowrap" class="ft104">−b&#160;−</P>
+<P style="position:absolute;top:617px;left:471px;white-space:nowrap" class="ft104">√</P>
+<P style="position:absolute;top:631px;left:486px;white-space:nowrap" class="ft104">b2&#160;−&#160;4ac</P>
+<P style="position:absolute;top:656px;left:479px;white-space:nowrap" class="ft104">2a</P>
+<P style="position:absolute;top:644px;left:550px;white-space:nowrap" class="ft104">.</P>
+<P style="position:absolute;top:683px;left:173px;white-space:nowrap" class="ft104">Gero,&#160;(1.1)&#160;formulatik,&#160;badaukagu</P>
+<P style="position:absolute;top:726px;left:355px;white-space:nowrap" class="ft104">x1&#160;·&#160;x2&#160;=</P>
+<P style="position:absolute;top:714px;left:429px;white-space:nowrap" class="ft104">c</P>
+<P style="position:absolute;top:738px;left:428px;white-space:nowrap" class="ft104">a</P>
+<P style="position:absolute;top:731px;left:478px;white-space:nowrap" class="ft1013">+</P>
+<P style="position:absolute;top:735px;left:478px;white-space:nowrap" class="ft1013">3</P>
+<P style="position:absolute;top:726px;left:492px;white-space:nowrap" class="ft104">x1&#160;=</P>
+<P style="position:absolute;top:714px;left:550px;white-space:nowrap" class="ft104">c</P>
+<P style="position:absolute;top:738px;left:534px;white-space:nowrap" class="ft104">x2&#160;·&#160;a</P>
+<P style="position:absolute;top:726px;left:575px;white-space:nowrap" class="ft104">.</P>
+<P style="position:absolute;top:773px;left:173px;white-space:nowrap" class="ft104">Nabaritu&#160;x1&#160;=&#160;−x2&#160;−&#160;b/a&#160;formula&#160;desegokia&#160;dela&#160;deuseztapen&#160;efektuagatik.</P>
+<P style="position:absolute;top:828px;left:129px;white-space:nowrap" class="ft103">1.5</P>
+<P style="position:absolute;top:828px;left:196px;white-space:nowrap" class="ft103">Algoritmoen&#160;propietateak</P>
+<P style="position:absolute;top:872px;left:129px;white-space:nowrap" class="ft109">Algoritmo&#160;bat&#160;zehazki&#160;deﬁnituriko&#160;prozedura&#160;ﬁnitu&#160;bat&#160;da,&#160;normalean&#160;etapatan<br/>antolatuta&#160;dago&#160;eta&#160;erraz&#160;idazten&#160;da&#160;adierazpen&#160;formala&#160;erabiliz.&#160;Horregatik,&#160;oso<br/>aproposak&#160;dira&#160;makina&#160;batekin&#160;programatzeko.</P>
+<P style="position:absolute;top:965px;left:129px;white-space:nowrap" class="ft105">1.5.1</P>
+<P style="position:absolute;top:965px;left:203px;white-space:nowrap" class="ft105">Konbergentzia</P>
+<P style="position:absolute;top:999px;left:129px;white-space:nowrap" class="ft109">Algoritmo&#160;askotan,&#160;{un}n∈N&#160;segida&#160;bat&#160;sortzen&#160;da,&#160;un&#160;gaia&#160;algoritmoko&#160;n-garren<br/>pausuan&#160;lortzen&#160;den&#160;emaitza&#160;izanik.&#160;Baldintza&#160;batzuk&#160;betetzen&#160;badira,&#160;segida&#160;ho-<br/>rrek&#160;problemaren&#160;soluzio&#160;zehatzera&#160;konbergitzen&#160;du.&#160;Konbergentziaren&#160;abiadura&#160;oso<br/>garrantzitsua&#160;izango&#160;da,&#160;ere.</P>
+</DIV>
+<!-- Page 11 -->
+<a name="11"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page11-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:156px;left:135px;white-space:nowrap" class="ft114">1.5.&#160;Algoritmoen&#160;propietateak</P>
+<P style="position:absolute;top:155px;left:750px;white-space:nowrap" class="ft114">13</P>
+<P style="position:absolute;top:209px;left:129px;white-space:nowrap" class="ft115">1.5.2</P>
+<P style="position:absolute;top:209px;left:203px;white-space:nowrap" class="ft115">Egonkortasuna&#160;eta&#160;problemaren&#160;baldintzatzea</P>
+<P style="position:absolute;top:244px;left:129px;white-space:nowrap" class="ft119">Nahiz&#160;eta&#160;algoritmo&#160;bat&#160;konbergente&#160;eta&#160;azkarra&#160;izan,&#160;horrek&#160;ez&#160;du&#160;ezertarako&#160;balio<br/>borobiltze-errorea&#160;kontrolatuta&#160;ez&#160;badago.</P>
+<P style="position:absolute;top:287px;left:156px;white-space:nowrap" class="ft114">Algoritmo&#160;baten&#160;zehar&#160;borobiltze-erroreak&#160;gehiegi&#160;hedatzen&#160;badira,&#160;irteerako</P>
+<P style="position:absolute;top:309px;left:129px;white-space:nowrap" class="ft1111">emaitzak&#160;nahiko&#160;okerrak&#160;izan&#160;daitezke.&#160;Kasu&#160;horretan,&#160;esaten&#160;da&#160;algoritmoa&#160;de-<br/>segonkorra</P>
+<P style="position:absolute;top:331px;left:217px;white-space:nowrap" class="ft114">dela.&#160;Bestela,&#160;borobiltze-errorea&#160;kontrolatzen&#160;bada,&#160;esango&#160;dugu&#160;algo-</P>
+<P style="position:absolute;top:352px;left:129px;white-space:nowrap" class="ft114">ritmoa&#160;egonkorra&#160;dela.</P>
+<P style="position:absolute;top:374px;left:156px;white-space:nowrap" class="ft114">Bestalde,&#160;baliteke&#160;algoritmo&#160;bat&#160;oso&#160;“sentibera”&#160;izatea&#160;honako&#160;sentzu&#160;hone-</P>
+<P style="position:absolute;top:396px;left:129px;white-space:nowrap" class="ft119">tan:&#160;hasierako&#160;baldintzetako&#160;aldaketa&#160;txikiek&#160;eragin&#160;handia&#160;badaukate&#160;bukaerako<br/>emaitzetan,&#160;esango&#160;dugu&#160;algoritmoa&#160;edo&#160;problema&#160;txarto&#160;baldintzatuta&#160;dagoela.</P>
+<P style="position:absolute;top:450px;left:129px;white-space:nowrap" class="ft114">1.10&#160;Adibidea.</P>
+<P style="position:absolute;top:482px;left:194px;white-space:nowrap" class="ft114">2x</P>
+<P style="position:absolute;top:482px;left:276px;white-space:nowrap" class="ft114">+6y&#160;=8</P>
+<P style="position:absolute;top:508px;left:194px;white-space:nowrap" class="ft114">2x&#160;+6.00001y&#160;=8.00001</P>
+<P style="position:absolute;top:495px;left:405px;white-space:nowrap" class="ft114">sistemaren&#160;ebazpen&#160;zehatza</P>
+<P style="position:absolute;top:482px;left:643px;white-space:nowrap" class="ft114">x&#160;=&#160;1</P>
+<P style="position:absolute;top:508px;left:644px;white-space:nowrap" class="ft114">y&#160;=&#160;1</P>
+<P style="position:absolute;top:495px;left:696px;white-space:nowrap" class="ft114">da.</P>
+<P style="position:absolute;top:550px;left:187px;white-space:nowrap" class="ft114">2x</P>
+<P style="position:absolute;top:550px;left:269px;white-space:nowrap" class="ft114">+6y&#160;=8</P>
+<P style="position:absolute;top:576px;left:187px;white-space:nowrap" class="ft114">2x&#160;+5.99999y&#160;=8.00002</P>
+<P style="position:absolute;top:563px;left:398px;white-space:nowrap" class="ft114">sistemaren&#160;ebazpen&#160;zehatza</P>
+<P style="position:absolute;top:550px;left:636px;white-space:nowrap" class="ft114">x&#160;=&#160;10</P>
+<P style="position:absolute;top:576px;left:637px;white-space:nowrap" class="ft114">y&#160;=&#160;−2</P>
+<P style="position:absolute;top:563px;left:703px;white-space:nowrap" class="ft114">da.</P>
+<P style="position:absolute;top:609px;left:129px;white-space:nowrap" class="ft119">Hastapen&#160;baldintzen&#160;bariazioa&#160;10−5&#160;ordenakoa&#160;izan&#160;da,&#160;baina&#160;emaitzaren&#160;bariazioa,<br/>aldiz,&#160;101&#160;ordenakoa.&#160;Sistema&#160;hori&#160;txarto&#160;baldintzatuta&#160;dago.</P>
+<P style="position:absolute;top:663px;left:129px;white-space:nowrap" class="ft114">1.11&#160;Adibidea</P>
+<P style="position:absolute;top:662px;left:258px;white-space:nowrap" class="ft114">(Wilkinson,&#160;1959).</P>
+<P style="position:absolute;top:713px;left:266px;white-space:nowrap" class="ft114">p(x)&#160;=</P>
+<P style="position:absolute;top:695px;left:327px;white-space:nowrap" class="ft116">20</P>
+<P style="position:absolute;top:739px;left:323px;white-space:nowrap" class="ft116">i</P>
+<P style="position:absolute;top:738px;left:327px;white-space:nowrap" class="ft116">=1</P>
+<P style="position:absolute;top:713px;left:344px;white-space:nowrap" class="ft114">(x&#160;−&#160;i)&#160;=&#160;(x&#160;−&#160;1)&#160;·&#160;(x&#160;−&#160;2)&#160;.&#160;.&#160;.&#160;(x&#160;−&#160;20)</P>
+<P style="position:absolute;top:757px;left:303px;white-space:nowrap" class="ft114">=&#160;x20&#160;−&#160;210x</P>
+<P style="position:absolute;top:754px;left:403px;white-space:nowrap" class="ft116">19&#160;+&#160;2065x18&#160;−&#160;·&#160;·&#160;·&#160;+&#160;20!</P>
+<P style="position:absolute;top:783px;left:303px;white-space:nowrap" class="ft114">=&#160;a0x</P>
+<P style="position:absolute;top:780px;left:348px;white-space:nowrap" class="ft116">20&#160;+&#160;a1x19&#160;+&#160;·&#160;·&#160;·&#160;+&#160;a20.</P>
+<P style="position:absolute;top:817px;left:129px;white-space:nowrap" class="ft119">polinomioaren&#160;erroak&#160;1,&#160;2,&#160;.&#160;.&#160;.&#160;,&#160;20&#160;dira.&#160;Sortuko&#160;dugu&#160;q(x)&#160;polinomio&#160;berri&#160;bat&#160;p(x)-<br/>ren&#160;koeﬁziente&#160;bat&#160;pixkat&#160;aldatuz&#160;honela:</P>
+<P style="position:absolute;top:873px;left:252px;white-space:nowrap" class="ft114">q(x)&#160;=&#160;a0x</P>
+<P style="position:absolute;top:870px;left:334px;white-space:nowrap" class="ft116">20&#160;−&#160;(210&#160;+&#160;10−7)x19&#160;+&#160;a2x18&#160;+&#160;·&#160;·&#160;·&#160;+&#160;a20.</P>
+<P style="position:absolute;top:907px;left:129px;white-space:nowrap" class="ft114">Polinomio&#160;berri&#160;horren&#160;erroak&#160;honako&#160;hauek&#160;dira:</P>
+<P style="position:absolute;top:937px;left:157px;white-space:nowrap" class="ft114">1,&#160;2,&#160;3,&#160;4,&#160;4.999999939,&#160;6.000005825,&#160;6.999745979,&#160;.&#160;.&#160;.</P>
+<P style="position:absolute;top:963px;left:168px;white-space:nowrap" class="ft114">.&#160;.&#160;.&#160;,&#160;16.72503985&#160;±&#160;2.731576697i,&#160;19.45963983&#160;±&#160;1.87435706i,&#160;20.788880562.</P>
+<P style="position:absolute;top:996px;left:129px;white-space:nowrap" class="ft119">Esate&#160;baterako,&#160;polinomio&#160;baten&#160;erroak&#160;kalkulatzea&#160;bere&#160;koeﬁzienteekiko&#160;txarto<br/>baldintzatua&#160;dago.&#160;Ondorioz,&#160;zenbakizko&#160;ikuspuntutik&#160;matrize&#160;baten&#160;autobalioak<br/>polinomio&#160;karakteristikoaren&#160;bidez&#160;kalkulatzeko&#160;metodoa&#160;txarto&#160;baldintzatua&#160;da-<br/>go,&#160;eta&#160;beraz,&#160;beste&#160;metodoak&#160;erabiliko&#160;ditugu.</P>
+</DIV>
+<!-- Page 12 -->
+<a name="12"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft1215{font-size:9px;line-height:26px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page12-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:155px;left:129px;white-space:nowrap" class="ft124">14</P>
+<P style="position:absolute;top:156px;left:379px;white-space:nowrap" class="ft124">1.&#160;Kapitulua&#160;Errorea&#160;eta&#160;algoritmoen&#160;ezaugarriak</P>
+<P style="position:absolute;top:209px;left:129px;white-space:nowrap" class="ft125">1.5.3</P>
+<P style="position:absolute;top:209px;left:203px;white-space:nowrap" class="ft125">Eragiketa-kostua</P>
+<P style="position:absolute;top:245px;left:129px;white-space:nowrap" class="ft129">Komenigarria&#160;da&#160;ahalik&#160;eta&#160;eragiketa&#160;gutxien&#160;egitea,&#160;ekonomia,&#160;denbora&#160;eta&#160;zehaz-<br/>tasunagatik.&#160;Algoritmo&#160;bakoitzean&#160;aztertuko&#160;dugu,&#160;ba,&#160;eragiketa-kostua.&#160;Orokor-<br/>rean,&#160;eragiketa&#160;kostuak&#160;kalkulatzeko,&#160;batuketak&#160;ez&#160;dira&#160;kontuan&#160;hartzen,&#160;biderketa<br/>batekin&#160;konparatuz&#160;batuketa&#160;bat&#160;egiteko&#160;denbora&#160;mesprezugarritzat&#160;hartzen&#160;baita.</P>
+<P style="position:absolute;top:362px;left:129px;white-space:nowrap" class="ft124">H¨</P>
+<P style="position:absolute;top:362px;left:145px;white-space:nowrap" class="ft124">orner&#160;algoritmoa</P>
+<P style="position:absolute;top:395px;left:129px;white-space:nowrap" class="ft129">Metodo&#160;bikaina&#160;da&#160;polinomio&#160;bat&#160;eta&#160;bere&#160;deribatuak&#160;puntu&#160;jakin&#160;batean&#160;balioz-<br/>tatzeko,&#160;eragiketa&#160;kostua&#160;ikuspuntutik.&#160;Honako&#160;berridazketa&#160;honetan&#160;dago&#160;oinar-<br/>rituta:</P>
+<P style="position:absolute;top:475px;left:240px;white-space:nowrap" class="ft124">p(x)&#160;=&#160;a0x</P>
+<P style="position:absolute;top:473px;left:322px;white-space:nowrap" class="ft126">n&#160;+&#160;a1xn−1&#160;+&#160;·&#160;·&#160;·&#160;+&#160;an</P>
+<P style="position:absolute;top:484px;left:484px;white-space:nowrap" class="ft126">−</P>
+<P style="position:absolute;top:482px;left:494px;white-space:nowrap" class="ft126">1x&#160;+&#160;an</P>
+<P style="position:absolute;top:501px;left:277px;white-space:nowrap" class="ft124">=&#160;((.&#160;.&#160;.&#160;((a0x&#160;+&#160;a1)x&#160;+&#160;a2)x&#160;+&#160;.&#160;.&#160;.&#160;)x&#160;+&#160;an−1)x&#160;+&#160;an</P>
+<P style="position:absolute;top:543px;left:129px;white-space:nowrap" class="ft124">Ohiko&#160;adierazpenaz,&#160;p(x)&#160;ebaluatzeko,&#160;n&#160;+&#160;(n&#160;−&#160;1)&#160;+&#160;·&#160;·&#160;·&#160;+&#160;2&#160;+&#160;1&#160;≃&#160;n</P>
+<P style="position:absolute;top:541px;left:637px;white-space:nowrap" class="ft126">2/2&#160;biderketa&#160;eta</P>
+<P style="position:absolute;top:565px;left:129px;white-space:nowrap" class="ft129">n&#160;batuketa&#160;egin&#160;behar&#160;dira.&#160;Bestalde,&#160;bigarren&#160;adierazpenaz,&#160;bakarrik&#160;n&#160;biderketa<br/>eta&#160;n&#160;batuketa&#160;dira&#160;beharrezkoak.<br/>H¨orner&#160;algoritmoaren&#160;deskribapena&#160;zera&#160;da:&#160;Demagun&#160;p(x)&#160;polinomioa&#160;r&#160;puntuan<br/>ebaluatu&#160;nahi&#160;dugula.&#160;Orduan,&#160;a0,&#160;.&#160;.&#160;.&#160;,&#160;an&#160;koeﬁzienteekin&#160;honako&#160;segida&#160;hau&#160;sor<br/>daiteke:</P>
+<P style="position:absolute;top:671px;left:385px;white-space:nowrap" class="ft1215">b0&#160;=&#160;a0<br/>b1&#160;=&#160;b0&#160;·&#160;r&#160;+&#160;a1<br/>b2&#160;=&#160;b0&#160;·&#160;r&#160;+&#160;a2</P>
+<P style="position:absolute;top:749px;left:402px;white-space:nowrap" class="ft124">.&#160;.&#160;.</P>
+<P style="position:absolute;top:775px;left:384px;white-space:nowrap" class="ft124">bk&#160;=&#160;bk</P>
+<P style="position:absolute;top:785px;left:437px;white-space:nowrap" class="ft126">−</P>
+<P style="position:absolute;top:782px;left:447px;white-space:nowrap" class="ft126">1</P>
+<P style="position:absolute;top:775px;left:458px;white-space:nowrap" class="ft124">·&#160;r&#160;+&#160;ak</P>
+<P style="position:absolute;top:801px;left:402px;white-space:nowrap" class="ft124">.&#160;.&#160;.</P>
+<P style="position:absolute;top:828px;left:383px;white-space:nowrap" class="ft124">bn&#160;=&#160;bn</P>
+<P style="position:absolute;top:837px;left:438px;white-space:nowrap" class="ft126">−</P>
+<P style="position:absolute;top:835px;left:448px;white-space:nowrap" class="ft126">1</P>
+<P style="position:absolute;top:828px;left:459px;white-space:nowrap" class="ft124">·&#160;r&#160;+&#160;an</P>
+<P style="position:absolute;top:861px;left:129px;white-space:nowrap" class="ft124">Ondorioz,&#160;p(r)&#160;=&#160;bn.&#160;Algoritmoa&#160;deskriba&#160;daiteke&#160;honako&#160;era&#160;trinko&#160;honetan:</P>
+<P style="position:absolute;top:905px;left:318px;white-space:nowrap" class="ft124">b0&#160;=&#160;a0</P>
+<P style="position:absolute;top:931px;left:319px;white-space:nowrap" class="ft124">bi&#160;=&#160;bi</P>
+<P style="position:absolute;top:940px;left:367px;white-space:nowrap" class="ft126">−</P>
+<P style="position:absolute;top:938px;left:377px;white-space:nowrap" class="ft126">1</P>
+<P style="position:absolute;top:931px;left:388px;white-space:nowrap" class="ft124">·&#160;r&#160;+&#160;ai,</P>
+<P style="position:absolute;top:931px;left:485px;white-space:nowrap" class="ft124">i&#160;=&#160;1,&#160;2,&#160;.&#160;.&#160;.&#160;,&#160;n.</P>
+<P style="position:absolute;top:975px;left:129px;white-space:nowrap" class="ft129">Sorturiko&#160;b0,&#160;.&#160;.&#160;.&#160;,&#160;bn−1&#160;koeﬁzienteak&#160;erabiliko&#160;ditugu&#160;p′(r)&#160;kalkulatzeko.&#160;Horretarako,<br/>honako&#160;eragiketa&#160;aljebraiko&#160;honetaz&#160;baliatuko&#160;gara:&#160;p(x)&#160;polinomioa&#160;x−r&#160;polinomi-<br/>otik&#160;zatituz,&#160;qn</P>
+<P style="position:absolute;top:1028px;left:244px;white-space:nowrap" class="ft126">−</P>
+<P style="position:absolute;top:1026px;left:254px;white-space:nowrap" class="ft126">1(x)&#160;zatidura&#160;eta&#160;R0</P>
+<P style="position:absolute;top:1018px;left:414px;white-space:nowrap" class="ft124">∈&#160;R&#160;hondarra&#160;lortzen&#160;dira,&#160;hau&#160;da</P>
+<P style="position:absolute;top:1060px;left:335px;white-space:nowrap" class="ft124">p(x)&#160;=&#160;(x&#160;−&#160;r)&#160;·&#160;qn−1(x)&#160;+&#160;R0.</P>
+</DIV>
+<!-- Page 13 -->
+<a name="13"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page13-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:156px;left:135px;white-space:nowrap" class="ft134">1.5.&#160;Algoritmoen&#160;propietateak</P>
+<P style="position:absolute;top:155px;left:750px;white-space:nowrap" class="ft134">15</P>
+<P style="position:absolute;top:212px;left:129px;white-space:nowrap" class="ft134">1.2&#160;Lema.</P>
+<P style="position:absolute;top:211px;left:223px;white-space:nowrap" class="ft134">Aurreko&#160;baldintzetan,</P>
+<P style="position:absolute;top:211px;left:392px;white-space:nowrap" class="ft134">R0&#160;=&#160;bn&#160;eta</P>
+<P style="position:absolute;top:240px;left:300px;white-space:nowrap" class="ft134">qn</P>
+<P style="position:absolute;top:250px;left:316px;white-space:nowrap" class="ft136">−</P>
+<P style="position:absolute;top:248px;left:325px;white-space:nowrap" class="ft136">1(x)&#160;=&#160;b0x</P>
+<P style="position:absolute;top:238px;left:404px;white-space:nowrap" class="ft136">n−</P>
+<P style="position:absolute;top:237px;left:422px;white-space:nowrap" class="ft136">1&#160;+&#160;b1xn−2&#160;+&#160;·&#160;·&#160;·&#160;+&#160;bn</P>
+<P style="position:absolute;top:250px;left:579px;white-space:nowrap" class="ft136">−</P>
+<P style="position:absolute;top:248px;left:589px;white-space:nowrap" class="ft136">1</P>
+<P style="position:absolute;top:240px;left:731px;white-space:nowrap" class="ft134">(1.2)</P>
+<P style="position:absolute;top:271px;left:129px;white-space:nowrap" class="ft134">Frogapena.</P>
+<P style="position:absolute;top:298px;left:132px;white-space:nowrap" class="ft134">(x&#160;−&#160;r)&#160;·&#160;(b0x</P>
+<P style="position:absolute;top:296px;left:230px;white-space:nowrap" class="ft136">n−</P>
+<P style="position:absolute;top:295px;left:248px;white-space:nowrap" class="ft136">1&#160;+&#160;b1xn−2&#160;+&#160;·&#160;·&#160;·&#160;+&#160;bn</P>
+<P style="position:absolute;top:307px;left:405px;white-space:nowrap" class="ft136">−</P>
+<P style="position:absolute;top:305px;left:415px;white-space:nowrap" class="ft136">1)&#160;+&#160;bn</P>
+<P style="position:absolute;top:324px;left:137px;white-space:nowrap" class="ft134">=&#160;b0x</P>
+<P style="position:absolute;top:322px;left:180px;white-space:nowrap" class="ft136">n&#160;+&#160;(b1&#160;−&#160;r&#160;·&#160;b0)xn−</P>
+<P style="position:absolute;top:321px;left:324px;white-space:nowrap" class="ft136">1&#160;+&#160;(b2&#160;−&#160;r&#160;·&#160;b1)xn−2&#160;+&#160;·&#160;·&#160;·&#160;+&#160;(bn</P>
+<P style="position:absolute;top:333px;left:560px;white-space:nowrap" class="ft136">−</P>
+<P style="position:absolute;top:331px;left:570px;white-space:nowrap" class="ft136">1</P>
+<P style="position:absolute;top:324px;left:581px;white-space:nowrap" class="ft134">−&#160;r&#160;·&#160;bn−2)x&#160;+&#160;(bn&#160;−&#160;r&#160;·&#160;bn−1)</P>
+<P style="position:absolute;top:350px;left:137px;white-space:nowrap" class="ft134">=&#160;a0x</P>
+<P style="position:absolute;top:348px;left:182px;white-space:nowrap" class="ft136">n&#160;+&#160;a1xn−1&#160;+&#160;·&#160;·&#160;·&#160;+&#160;an</P>
+<P style="position:absolute;top:360px;left:344px;white-space:nowrap" class="ft136">−</P>
+<P style="position:absolute;top:357px;left:354px;white-space:nowrap" class="ft136">1x&#160;+&#160;an</P>
+<P style="position:absolute;top:376px;left:137px;white-space:nowrap" class="ft134">=&#160;p(x)</P>
+<P style="position:absolute;top:405px;left:753px;white-space:nowrap" class="ft134">♣</P>
+<P style="position:absolute;top:437px;left:156px;white-space:nowrap" class="ft134">Orain,&#160;(1.2)&#160;deribatuz,</P>
+<P style="position:absolute;top:467px;left:235px;white-space:nowrap" class="ft134">p</P>
+<P style="position:absolute;top:466px;left:244px;white-space:nowrap" class="ft136">′(x)&#160;=&#160;(x&#160;−&#160;r)&#160;·&#160;q′n</P>
+<P style="position:absolute;top:478px;left:377px;white-space:nowrap" class="ft136">−</P>
+<P style="position:absolute;top:475px;left:387px;white-space:nowrap" class="ft136">1(x)&#160;+&#160;qn−1(x)</P>
+<P style="position:absolute;top:471px;left:535px;white-space:nowrap" class="ft1313">+</P>
+<P style="position:absolute;top:475px;left:535px;white-space:nowrap" class="ft1313">3</P>
+<P style="position:absolute;top:467px;left:543px;white-space:nowrap" class="ft134">p</P>
+<P style="position:absolute;top:466px;left:552px;white-space:nowrap" class="ft136">′(r)&#160;=&#160;qn</P>
+<P style="position:absolute;top:476px;left:618px;white-space:nowrap" class="ft136">−</P>
+<P style="position:absolute;top:474px;left:627px;white-space:nowrap" class="ft136">1(r),</P>
+<P style="position:absolute;top:496px;left:129px;white-space:nowrap" class="ft134">eta&#160;erabiliko&#160;dugu&#160;H¨orner&#160;metodoa&#160;qn</P>
+<P style="position:absolute;top:506px;left:420px;white-space:nowrap" class="ft136">−</P>
+<P style="position:absolute;top:503px;left:430px;white-space:nowrap" class="ft136">1(r)&#160;kalkulatzeko:</P>
+<P style="position:absolute;top:525px;left:317px;white-space:nowrap" class="ft1315">c0&#160;=&#160;b0<br/>c1&#160;=&#160;c0&#160;·&#160;r&#160;+&#160;b1<br/>c2&#160;=&#160;c0&#160;·&#160;r&#160;+&#160;b2</P>
+<P style="position:absolute;top:604px;left:335px;white-space:nowrap" class="ft134">.&#160;.&#160;.</P>
+<P style="position:absolute;top:630px;left:317px;white-space:nowrap" class="ft134">ck&#160;=&#160;ck</P>
+<P style="position:absolute;top:639px;left:370px;white-space:nowrap" class="ft136">−</P>
+<P style="position:absolute;top:637px;left:380px;white-space:nowrap" class="ft136">1</P>
+<P style="position:absolute;top:630px;left:391px;white-space:nowrap" class="ft134">·&#160;r&#160;+&#160;bk</P>
+<P style="position:absolute;top:656px;left:335px;white-space:nowrap" class="ft134">.&#160;.&#160;.</P>
+<P style="position:absolute;top:682px;left:300px;white-space:nowrap" class="ft134">cn</P>
+<P style="position:absolute;top:691px;left:315px;white-space:nowrap" class="ft136">−</P>
+<P style="position:absolute;top:689px;left:325px;white-space:nowrap" class="ft136">1&#160;=&#160;cn−2</P>
+<P style="position:absolute;top:682px;left:392px;white-space:nowrap" class="ft134">·&#160;r&#160;+&#160;bn−1&#160;=&#160;qn−1(r)&#160;=&#160;p</P>
+<P style="position:absolute;top:681px;left:573px;white-space:nowrap" class="ft136">′(r)</P>
+<P style="position:absolute;top:711px;left:129px;white-space:nowrap" class="ft139">Are&#160;gehiago,&#160;p′′(r)&#160;kalkulatzeko,&#160;aurreko&#160;lema&#160;eta&#160;emaitzak&#160;erabil&#160;ditzakegu.&#160;Hasteko,<br/>zatitu&#160;dezakegu&#160;qn</P>
+<P style="position:absolute;top:742px;left:271px;white-space:nowrap" class="ft136">−</P>
+<P style="position:absolute;top:740px;left:280px;white-space:nowrap" class="ft136">1(x)&#160;polinomioa&#160;(x</P>
+<P style="position:absolute;top:733px;left:428px;white-space:nowrap" class="ft134">−&#160;r)-tik,&#160;honako&#160;hau&#160;lortuz:</P>
+<P style="position:absolute;top:763px;left:323px;white-space:nowrap" class="ft134">qn</P>
+<P style="position:absolute;top:772px;left:339px;white-space:nowrap" class="ft136">−</P>
+<P style="position:absolute;top:770px;left:349px;white-space:nowrap" class="ft136">1(x)&#160;=&#160;(x</P>
+<P style="position:absolute;top:763px;left:424px;white-space:nowrap" class="ft134">−&#160;r)&#160;·&#160;qn−2(x)&#160;+&#160;R1,</P>
+<P style="position:absolute;top:763px;left:731px;white-space:nowrap" class="ft134">(1.3)</P>
+<P style="position:absolute;top:792px;left:129px;white-space:nowrap" class="ft134">non&#160;R1&#160;∈&#160;R&#160;eta&#160;qn−2(x)&#160;=&#160;c0x</P>
+<P style="position:absolute;top:791px;left:371px;white-space:nowrap" class="ft136">n−</P>
+<P style="position:absolute;top:790px;left:388px;white-space:nowrap" class="ft136">2&#160;+&#160;c1xn−3&#160;+&#160;·&#160;·&#160;·&#160;cn</P>
+<P style="position:absolute;top:802px;left:531px;white-space:nowrap" class="ft136">−</P>
+<P style="position:absolute;top:799px;left:541px;white-space:nowrap" class="ft136">3x&#160;+&#160;cn−2.&#160;Orduan,&#160;(1.2)&#160;eta</P>
+<P style="position:absolute;top:814px;left:129px;white-space:nowrap" class="ft134">(1.3)&#160;erabiliz,</P>
+<P style="position:absolute;top:843px;left:276px;white-space:nowrap" class="ft134">p(x)&#160;=&#160;(x&#160;−&#160;r)</P>
+<P style="position:absolute;top:840px;left:386px;white-space:nowrap" class="ft136">2q</P>
+<P style="position:absolute;top:851px;left:401px;white-space:nowrap" class="ft136">n−</P>
+<P style="position:absolute;top:850px;left:419px;white-space:nowrap" class="ft136">2(x)&#160;+&#160;R1(x</P>
+<P style="position:absolute;top:843px;left:512px;white-space:nowrap" class="ft134">−&#160;r)&#160;+&#160;R0</P>
+<P style="position:absolute;top:869px;left:272px;white-space:nowrap" class="ft134">p</P>
+<P style="position:absolute;top:868px;left:281px;white-space:nowrap" class="ft136">′&#160;(x)&#160;=&#160;2(x&#160;−&#160;r)qn−2(x)&#160;+&#160;(x&#160;−&#160;r)</P>
+<P style="position:absolute;top:866px;left:527px;white-space:nowrap" class="ft136">2q′</P>
+<P style="position:absolute;top:878px;left:542px;white-space:nowrap" class="ft136">n−</P>
+<P style="position:absolute;top:878px;left:559px;white-space:nowrap" class="ft136">2(x)&#160;+&#160;R1</P>
+<P style="position:absolute;top:895px;left:269px;white-space:nowrap" class="ft134">p</P>
+<P style="position:absolute;top:895px;left:278px;white-space:nowrap" class="ft136">′′&#160;(x)&#160;=&#160;2qn</P>
+<P style="position:absolute;top:905px;left:357px;white-space:nowrap" class="ft136">−</P>
+<P style="position:absolute;top:902px;left:367px;white-space:nowrap" class="ft136">2(x)&#160;+&#160;4(x</P>
+<P style="position:absolute;top:895px;left:449px;white-space:nowrap" class="ft134">−&#160;r)q</P>
+<P style="position:absolute;top:895px;left:490px;white-space:nowrap" class="ft136">′</P>
+<P style="position:absolute;top:905px;left:490px;white-space:nowrap" class="ft136">n−</P>
+<P style="position:absolute;top:904px;left:507px;white-space:nowrap" class="ft136">2(x)&#160;+&#160;(x&#160;−&#160;r)</P>
+<P style="position:absolute;top:892px;left:613px;white-space:nowrap" class="ft136">2q′′</P>
+<P style="position:absolute;top:905px;left:628px;white-space:nowrap" class="ft136">n−</P>
+<P style="position:absolute;top:904px;left:646px;white-space:nowrap" class="ft136">2(x)</P>
+<P style="position:absolute;top:926px;left:262px;white-space:nowrap" class="ft1313">+</P>
+<P style="position:absolute;top:930px;left:262px;white-space:nowrap" class="ft1313">3</P>
+<P style="position:absolute;top:921px;left:270px;white-space:nowrap" class="ft134">p</P>
+<P style="position:absolute;top:921px;left:279px;white-space:nowrap" class="ft136">′′(r)&#160;=&#160;2&#160;·&#160;qn−2(r).</P>
+<P style="position:absolute;top:951px;left:129px;white-space:nowrap" class="ft134">Jakina,&#160;qn</P>
+<P style="position:absolute;top:960px;left:208px;white-space:nowrap" class="ft136">−</P>
+<P style="position:absolute;top:958px;left:218px;white-space:nowrap" class="ft136">2(r)&#160;kalkulatzeko,&#160;H¨</P>
+<P style="position:absolute;top:951px;left:375px;white-space:nowrap" class="ft134">orner&#160;algoritmoa&#160;erabiliko&#160;genuke,&#160;ci&#160;koeﬁzienteak</P>
+<P style="position:absolute;top:972px;left:129px;white-space:nowrap" class="ft139">erabiliz.&#160;Orokorrean,&#160;goiko&#160;ordenako&#160;deribatuak&#160;ebaluatzeko,&#160;prozesua&#160;k&#160;aldiz&#160;erre-<br/>pikatuz,&#160;badaukagu</P>
+<P style="position:absolute;top:1016px;left:380px;white-space:nowrap" class="ft134">p</P>
+<P style="position:absolute;top:1013px;left:389px;white-space:nowrap" class="ft136">k</P>
+<P style="position:absolute;top:1013px;left:396px;white-space:nowrap" class="ft136">)(r)&#160;=&#160;k!q</P>
+<P style="position:absolute;top:1024px;left:469px;white-space:nowrap" class="ft136">n−k(r)</P>
+<P style="position:absolute;top:1043px;left:129px;white-space:nowrap" class="ft134">Komenigarria&#160;da&#160;kalkuluak&#160;antolatzea&#160;Ruﬃni&#160;ebaluaketa&#160;moduan.</P>
+<P style="position:absolute;top:1064px;left:156px;white-space:nowrap" class="ft134">ADIBIDEA</P>
+</DIV>
+<!-- Page 14 -->
+<a name="14"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page14-div" style="position:relative;width:892px;height:1263px;">
+<P style="position:absolute;top:155px;left:129px;white-space:nowrap" class="ft144">16</P>
+<P style="position:absolute;top:156px;left:379px;white-space:nowrap" class="ft144">1.&#160;Kapitulua&#160;Errorea&#160;eta&#160;algoritmoen&#160;ezaugarriak</P>
+<P style="position:absolute;top:209px;left:129px;white-space:nowrap" class="ft145">1.5.4</P>
+<P style="position:absolute;top:209px;left:203px;white-space:nowrap" class="ft145">Memoriaren&#160;erabilera</P>
+<P style="position:absolute;top:244px;left:129px;white-space:nowrap" class="ft149">Komenigarria&#160;da&#160;ahalik&#160;eta&#160;memoria&#160;gutxien&#160;erabiltzea&#160;algoritmo&#160;bat&#160;burutzeko.<br/>Egoera&#160;optimoan,&#160;INPUT&#160;gordetzeko&#160;memoria&#160;espazioa&#160;besterik&#160;ez&#160;da&#160;erabiltzen<br/>OUTPUT&#160;lortu&#160;eta&#160;biltegiratzeko.</P>
+<P style="position:absolute;top:287px;left:422px;white-space:nowrap" class="ft144">Horretarako,&#160;urrezko&#160;lege&#160;orokor&#160;bat&#160;dago:</P>
+<P style="position:absolute;top:309px;left:129px;white-space:nowrap" class="ft149">prozesu&#160;baten&#160;zehar,&#160;datu&#160;bat&#160;beharrezkoa&#160;baldin&#160;ez&#160;bada,&#160;orduan&#160;ezaba&#160;deza-<br/>kegu&#160;eta&#160;hutsik&#160;uzten&#160;duen&#160;lekua&#160;aprobetxa&#160;dezakegu&#160;behar&#160;izango&#160;dugun&#160;beste<br/>datu&#160;bat&#160;biltegiratzeko.&#160;Adibidez,&#160;ikusiriko&#160;H¨orner&#160;algoritmoaz&#160;kalkula&#160;eta&#160;biltegira<br/>daitezke&#160;p(r),&#160;p′(r),&#160;.&#160;.&#160;.&#160;,&#160;pn)(r)&#160;balioak&#160;a0,&#160;.&#160;.&#160;.&#160;,&#160;an&#160;koeﬁzienteak&#160;biltegiratzeko&#160;behar<br/>dugun&#160;n&#160;+&#160;1&#160;luzerako&#160;bektore&#160;bat&#160;erabiliz.&#160;(ADIBIDEA)</P>
+<P style="position:absolute;top:446px;left:129px;white-space:nowrap" class="ft145">1.5.5</P>
+<P style="position:absolute;top:446px;left:203px;white-space:nowrap" class="ft145">Metodo&#160;motak</P>
+<P style="position:absolute;top:481px;left:155px;white-space:nowrap" class="ft144">•&#160;Metodo&#160;zuzenak</P>
+<P style="position:absolute;top:518px;left:194px;white-space:nowrap" class="ft148">•&#160;Teoriaz,&#160;ebazpen&#160;zehatza&#160;lortzen&#160;da.<br/>•&#160;Borobilduz&#160;errorea&#160;heda&#160;daiteke.</P>
+<P style="position:absolute;top:583px;left:155px;white-space:nowrap" class="ft144">•&#160;Iteraziozko&#160;meodoak</P>
+<P style="position:absolute;top:624px;left:194px;white-space:nowrap" class="ft148">•&#160;Hurbilpenak&#160;lortzen&#160;dira&#160;etapa&#160;bakoitzean&#160;{un}n∈N&#160;−→&#160;u<br/>•&#160;borobiltze-errorea&#160;ez&#160;da&#160;hain&#160;inportante.&#160;Konbergentzia&#160;nahitaezkoa&#160;da.</P>
+</DIV>
+</BODY>
+</HTML>

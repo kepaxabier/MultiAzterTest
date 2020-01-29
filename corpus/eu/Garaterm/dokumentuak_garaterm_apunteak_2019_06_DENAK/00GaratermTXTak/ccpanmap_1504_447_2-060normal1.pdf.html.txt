@@ -1,0 +1,916 @@
+
+
+
+Probabilitate ereduak (II): banakuntza
+normala
+Josemari Sarasola Ledesma
+2007ko azaroa
+Figure 1:
+ En las sociedades deterministas el azar se interpretaba como la volun-
+tad de los dioses. El I-
+Ching o libro de los cambios, las distintas conﬁguraciones
+de una serie de varillas lanzadas al azar, se interpretaban como la voluntad del
+TAO.
+
+Contents
+1
+Banakuntza normala: sarrera
+3
+2
+Trinkotasun funtzioa eta parametroak
+4
+3
+Banakuntza normal estandarra
+5
+4
+Estandarketa
+10
+5
+Banakuntza normalaren propietateak
+11
+5.1
+Aldagai aldaketa lineala . . . . . . . . . . . . . . . . . . . . . . .
+11
+5.2
+Banakuntza normalen batura: ugalkortasuna
+. . . . . . . . . . .
+11
+6
+Banakuntza normala: ebazkizunak
+13
+7
+Hurbilketa normalak
+18
+7.1
+Banakuntza binomiala hurbilduz . . . . . . . . . . . . . . . . . .
+18
+7.2
+Poisson-en banakuntza hurbilduz . . . . . . . . . . . . . . . . . .
+19
+7.3
+Hurbilketa normalak: ebazkizunak . . . . . . . . . . . . . . . . .
+19
+8
+Dimentsio anitzeko banakuntza normala
+22
+9
+Limitearen teorema zentralak
+23
+9.1
+Limitearen teorema zentral klasikoa
+. . . . . . . . . . . . . . . .
+23
+9.2
+Lyapunov-en teorema eta Lindeberg-en teorema . . . . . . . . . .
+24
+9.3
+Ebazkizunak
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+25
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+1
+Banakuntza normala: sarrera
+Praktikan gehien erabiltzen den banakuntza da:
+• Banakuntza normala kanpai itxurakoa eta simetrikoa da eta hain zuzen
+hauexek dira datu multzo askoren ezaugarriak: esaterako, pertsonen ezau-
+garri morfologikoak (altuera, pisua, ...), ezaugarri soziologikoak (azterketa
+bateko notak, prodktu baten kontsumoa urtean zehar, ...), ezaugarri ﬁsi-
+ologikoak (erreakzio maila dosi jakin baten eraginez, ...), neurtzeko roduan
+izaten diren erroreak jasotzen baditugu, datuen histograma banakuntza
+normalaren kanpai itxura eta simetria erakutsiko dituzte.
+• Gainera, teorian ere garrantzi handikoa da. Adibidez, banakuntza nor-
+mala hainbat banakuntzaren limitea da, binomialaren limitea n para-
+metroa inﬁniturantz doanean esaterako. Inferentzi estatistikan ere maiz
+azaltzen da: batezbesteko muestrala banakuntza normalaren araberakoa
+izaten da.
+Abraham de Moivre-k azaldu zuen lehenengo aldiz banakuntza normala 1734.
+urtean banakuntza binomialen limitea aztertzeko lanetan. Laplace-k eta Gauss-
+ek bere erabilera zabaldu zuten XIX. mende hasieran, behaketa ﬁsiko eta as-
+tronomikoetan erroreen banakuntza aztertuz.
+Gauss-en omenez, banakuntza gaussiarra ere deritzo.
+Figure 2: Gauss eta banakuntza normala Alemaniako dirupaper batean.
+Banakuntza normala deitzen bazaio ere, horrek ez du esan nahi beste ba-
+nakuntza baten araberako fenomenoak normalak ez direnik. Askotan agertzen
+delako bakarrik deitzen zaio normala.
+3
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+2
+Trinkotasun funtzioa eta parametroak
+• Banakuntza normalaren trinkotasun funtzioa ondokoa da:
+fX (x) =
+1
+√
+2πσ
+· e
+−(x−µ)2
+2σ2
+;
+−∞ < x < ∞
+• Ikusten den bezala, bi parametroen menpe dago: µ eta σ.
+• Labur, honela izendatzen da banakuntza bat:
+X ∼ N (µ, σ)
+• Ondoren, banakuntza normal batzuk azaltzen dira:
+Figure 3: Banakuntza normal jakin batzuk.
+• Banakuntza normala simetrikoa da: propietate hau probabilitateak kalkukatzeko
+erabiliko dugu.
+• Itxaropena eta bariantza hauek dira:
+E[X] = µ
+;
+var[X] = σ
+2
+• Simetrikoa denez, itxaropena gailur puntuan aurkitzen dugu.
+• µ eta σ parametroek esanahi argia dute: itxaropena eta desbidazio es-
+tandarra dira hurrenez hurren.
+4
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+3
+Banakuntza normal estandarra
+• Banakuntza normal estandarra µ = 0 eta σ = 1 parametroak dituen
+banakuntza normala da. Honela izendatzen da:
+Z ∼ N (µ = 0, σ = 1)
+• Banakuntza hau oso garrantzitsua da, beste banakuntza normaletako prob-
+abilitateak kalkulatzeko oinarri gisa erabiltzen baita.
+• Banakuntza estandar honi buruzko probabilitateak kalkulatzeko trinkota-
+sun funtzioan integratuz eman beharko genituzke probabilitateak eta hau
+ez da batere erraza. Horregatik taulak erabiltzen dira. Har ezazu taula.
+• Ondoren hainbat probabilitate kalkulatuko ditugu adibide gisa. Hozkailu
+batean une batean dagoen tenperatura banakuntza normalaren araber-
+akoa dela pentsatzen da, batezbestekoa 0 eta desbidazio standarra 1 dire-
+larik. Hau da, banakuntza normal standarraren arabera banatzen da.
+Zenbatekoa da une batean tenperatura +0,56 baino txikiagoa izateko
+probabilitatea?
+Probabilitate hau irudiko azalera ilunarekin dator bat eta tauletako ba-
+naketa funtzioan zuzenean kalkulatzen da:
+P (Z < 0.56) = 0.7123
+Figure 4: Itzalean, P (Z < 0.56).
+5
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+• Zenbatekoa da tenperatura 0,42 baino handiagoa izateko probabilitatea?
+P (Z > 0.42) = 1 − 0.6628 = 0.3372
+Figure 5: Itzalean, P (Z > 0.42).
+• Zenbatekoa da tenperatura -0,3 baino txikiagoa izateko probabilitatea?
+Taulan ez dira azaltzen z balio negatiboak, balio horietarako banakuntza
+normalaren simetria erabiltzen baita.
+P (Z < −0.3) = P (Z > 0, 3) = 1−P (Z < 0, 3) = 1−0, 617911 = 0, 382089
+Figure 6: Itzalean, P (Z < −0.3).
+6
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+• Zenbatekoa da tenperatura -0,2 baino handiagoa izateko probabilitatea?
+P (Z > −0, 2) = P (Z < 0, 2) = 0, 579260
+Figure 7: Itzalean, P (Z > −0.2).
+• Zenbatekoa da tenperatura 1etik 2ra bitartekoa izateko probabilitatea?
+P (1 < Z < 2) = P (Z < 2)−P (Z < 1) = 0, 977250−0, 841345 = 0, 135905
+Figure 8: Itzalean, P (1 < Z < 2).
+7
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+• Zenbatekoa da tenperatura -1,5etik -0,5era bitartekoa izateko probabili-
+tatea?
+P (−1, 5 < Z < −0, 5) = P (0, 5 < Z < 1, 5)
+= P (Z < 1, 5) − P (Z < 0, 5) = 0, 933193 − 0, 691463 = 0, 24173
+Figure 9: Itzalean, P (−1.5 < Z < −0.5).
+8
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+• Zenbatekoa da tenperatura -0,5etik 0,2ra bitartekoa izateko probabili-
+tatea?
+P (−0, 5 < Z < 0, 2) = P (Z < 0, 2)−P (Z < −0, 5) = P (Z < 0, 2)−P (Z > 0, 5) =
+P (Z < 0, 2) − [1 − P (Z < 0, 5)] = 0, 579260 − (1 − 0, 691463) = 0, 270723
+Figure 10: Itzalean, P (−0.5 < Z < 0.2).
+9
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+4
+Estandarketa
+Arestian kalkulatu ditugun probabilitateak banakuntza normal estandarrari bu-
+ruzkoak ziren. Nola kalkulatzen dira probabilitateak zorizko aldagaiak beste
+banakuntza normal bateb arabera denean?
+Estandarrak ez diren banakuntza normalei buruzko probabilitateak emateko
+estandarketa 1 delako prozesua burutuko dugu: probabilitatea kalkulatu nahi
+diogun balioari batezbestekoa kendu eta desbidazioaz zatitzen da, eta honela
+suertatzen den balio berria Z banakuntza normal estandarraren arabera izango
+da.
+Adibidez, tomate mota baten pisuak banakuntza normalaren araberakoa
+dela esan daiteke, batezbestekoa 100 gramukoa eta desbidazio estandarra 10
+gramukoa direlarik. Zenbatekoa da tomate bat zoriz aukeraturik, 115 gramutik
+beherakoa izateko probabilitatea?
+P [X < 115] =
+{ezin da tauletan bilatu, X estandarra ez delako. Beraz, estandartu egiten dut} =
+P [Z <
+115 − 100
+10
+] = P [Z < 1.5] =
+{Z normal estandarra da eta beraz taula erabiltzen dut} = 0.93319
+Estandarketa nola egiten den ikasi duzula, banakuntza normalaren propi-
+etate jakingarri bat ulertu eta frogatzeko prest zaude:
+Banakuntza normal batean batezbestekotik desbidazio bateko distantziara
+probabilitatearen %68 dugu beti. Batezbestekotik 2σ-
+ko distantzia batera berriz,
+probabilitatearen %99 dugu. Eta hau banakuntza normal guztietarako.
+Figure 11: Desbidazio bateko distantzia batera, %68ko probabilitatea
+1Gazteleraz, tipiﬁcaci´on.
+10
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+5
+Banakuntza normalaren propietateak
+5.1
+Aldagai aldaketa lineala
+X zorizko aldagaiak N (µ, σ) banakuntzaren araberakoa bada, Y = aX + b
+zorizko aldagaia N (aµ + b, |a|σ) banakuntzaren araberakoa izango da.
+Adibidez, langile batek urtean sartzen duen X aparteko ordu kopurua N(42
+ordu, 2 ordu) banakuntzaren araberakoa dela uste da. Y ordaindu beharrekoa
+eurotan honela kalkukatzen da: Y = 4X + 10. Zenbatekoa da 102 euro baino
+gutxiago ordaintzeko probabilitatea?
+Y ordaindu beharrekoa ere banakuntza normalaren araberakoa izango da,
+aldaketa lineala baita X eta Y artean: Y ∼ N (µ = 2 × 42 + 10 = 94, σ =
+4 × 2 = 8).
+Eskatutako probabilitatea aurretik estandartuz kalkulatuko dugu:
+P [Y < 102] = {estandartuz} = P [Z <
+102 − 94
+8
+] = P [Z < 1] = 0.8413
+Aipatu behar da azkenik, estandarketa prozesua propietate honi esker buru
+daitekeela.
+5.2
+Banakuntza normalen batura: ugalkortasuna
+Elkarrekiko independenteak diren banakuntza hauek izanik:
+X1 ∼ N (µ1, σ1)
+X2 ∼ N (µ2, σ2)
+..
+.
+Xn ∼ N (µ1, σ1)
+Guztien batura egiten badugu, X = X1 + X2 + . . . + Xn, orduan
+X ∼ N µ1 + µ2 + . . . + µn, σX =
+σ2
+1 + σ
+2
+2 + . . . + σ
+2
+3
+Hitz bitan, banakuntza normalen batura ere normal banatzen da. Honen-
+gatik esaten da, banakuntza normala ugalkorra2 dela.
+2Gazteleraz, reproductiva.
+11
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+Ikus dezagun adibide bat. Enpresa batek bi denda ditu. A dendako eguneko
+salmentak, XA, eurotan N(100,20) banatzen direla uste da. B dendako salmen-
+tak, XB, berriz, N(50, 10) banatzen dira. Zenbatekoa da egun bateko fakturazio
+osoa 180 baino txikiagoa izateko probabilitatea?
+Eguneko fakturazio bi dendetako salmenten batura da. Fakturazio hau, F ,
+ugalkortasun propietatea erabiliz, honela banatuko da:
+F = XA + XB ∼ N (µ = 100 + 50 = 150, σ =
+202 + 102 = 22.36)
+Probabilitatea kalkulatuko dugu orain:
+P [Y < 180] = {estandartuz} = P [Z <
+180 − 150
+22.36
+] = P [Z < 1.34] = 0.90988
+Adi! Bariantzen batuketa egiten da, ez desbidazioena! Ez baitira berdinak
+20 + 10 eta
+√
+202 + 102.
+Eta nola banatzen da banakuntza normalen batuketa-kenketa segida bat?
+Batuketan itxaropenak batu egiten dira, eta kenketan kendu egiten dira. Baina,
+batuketa edo kenketa izanda, bariantzak beti batu egiten dira. 3.
+Adibidez, denda bateko eguneko salmentak N (µ = 100, σ = 10) banatzen
+dira. Eguneko lapurreten bolumena N (µ = 20, σ = 4) banatzen dela uste da.
+Nola banaten dira salmenta garbiak?
+Salmenta garbiak guztirako salmentari lapurreten bolumena kenduz kalku-
+latzen da. Beraz, honela banatzen dira: N (µ = 100 − 20 = 80, σ =
+√
+102 + 42 =
+10.77). Ikusten duzun bezala, bariantzak beti gehitu egiten dira, kenketa egin
+arren.
+3Kenketaren kasuan ere, bariantzak batzearen arrazoia aldagai aldaketa linealaren propi-
+etatean du oinarri
+12
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+6
+Banakuntza normala: ebazkizunak
+I Aldagai bat banakuntza normal estandarraren araberakoa da. Probabili-
+tate hauek eman itzazu:
+• P (Z ≥ 0.97)
+• P (Z ≤ −0.34)
+• P (Z ≥ −0.14)
+• P (0.16 ≤ Z ≤ 0.37)
+• P (−0.16 ≤ Z ≤ 0.37)
+II Osagai baten x iraupena ordutan banakuntza normalaren araberakoa dela
+uste da, batezbestekoa 100 eta desbidazioa 10 izanik. Probabilitate hauek
+kalkula itzazu:
+• P (X ≤ 131)
+• P (X ≥ 124)
+• P (X ≤ 80)
+• P (X ≥ 95)
+• P (114 ≤ X ≤ 122)
+• P (86 ≤ X ≤ 98)
+• P (78 ≤ X ≤ 111)
+III Aldagai bat banakuntza normal estandarraren araberakoa da. k balioak
+negatiboak edo positiboak izango diren arrazoitu eta ondoren zehatz eman
+itzazu:
+• P (Z ≤ k) = 0.98
+• P (Z ≥ k) = 0.24
+• P (Z ≤ k) = 0.14
+• P (Z ≥ k) = 0.87
+• P (0.2 ≤ Z ≤ k) = 0.15
+• P (−0.4 ≤ Z ≤ k) = 0.57
+• Eman ezazu batezbestekoa ardatz bezala hartuta, %99ko probabili-
+tatea biltzen duen tarte simetriko bat. Idem %90eko probabilitateaz.
+IV Aldagai bat banakuntza normalaren araberakoa da, batezbestekoa 10 eta
+desbidazioa 2 izanik. k balioak eman itzazu:
+• P (X ≤ k) = 0.96
+• P (X ≥ k) = 0.29
+• P (X ≤ k) = 0.17
+13
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+• P (X ≥ k) = 0.89
+• P (0.2 ≤ X ≤ k) = 0.14
+• P (−0.4 ≤ X ≤ k) = 0.47
+• Eman ezazu batezbestekoa ardatz bezala hartuta, %98ko probabil-
+itatea biltzen duen tarte bat. Idem %95eko probabilitatea biltzen
+duen tartea.
+V Akzio baten kotizazioa urte amaierako N(10 euro, 2 euro) banatzen dela
+uste da. Zenbatekoa da kotizazioa batezbestekotik desbidazio estandar bat
+baino gutxiago desbideratzeko probabilitatea? Eta bi desbidazio estandar
+baino gutxiago desbideratzekoa? Galdera berdinak erantzun itzazu N(15
+euro, 4 euro) banatzen den akzio baten kotizazioaren kasuan.
+VI Datorren urteko estatistikako kaliﬁkazioek eredu normalaren araberakoak
+direla uste da. Batezbestekoa 6 eta desbidazio estandarra 2 da. Zen-
+batekoa da 4 baino gutxiago ateratzeko probabilitatea? Eta 8 baino gehi-
+ago? Eta, ehuneko zenbat ikaslek lortuko dute 4,5etik 4,9ra biak barne?
+Zenbatek izango dute 5? Zehaztasuna 0.1 dela hartu ezazu kontutan.
+VII Ikasgai bateko kaliﬁkazioa eredu normalaren araberakoa dela uste da.
+Batezbestez 6 puntu lortzen dute ikasleek. Desbidazio estandarra 2 pun-
+tukoa da. Zenbateko kaliﬁkazioa ezarri behar da aprobatzeko, aprobatzeko
+probabilitatea 0,8 izatea nahi bada? Ikasleen %90 batezbestekoaren ingu-
+ruko zein tartetan izango dira?
+VIII Pieza baten luzerak (zm.tan) N(10, 2 zm.) banakuntzari darraio. Luzera
+estandarra edo egokia 10 zm.koa da, baina %10eko desbidazioak (9 zm.-11
+zm.) onartzen dira. Zenbatekoa da torloju bat ezegokia izateko probabil-
+itatea?
+IX Denda batean astelehenetako salmentak normalki banatzen direla uste da.
+Batezbestez 100.000 pezeta saltzen da. 150.000 pezetatik gora saltzeko
+probabilitatea 0,2 dela uste da. Zenbatekoa da 30.000 pezetatik behera
+saltzeko probabilitatea?
+X Lantegi batean erregai kontsumoari buruz hau dakigu:
+• kontsumoa banakuntza normalaren araberakoa da
+• egun guztietatik %10etan 1000 litro baino gutxiago kontsumitzen da
+• egun guztietatik %20etan 2000 litro baino gehiago kontsumitzen da
+Kontsumoa 1400-1800 tartean izateko probabilitatea eman ezazu.
+XI Eskualde batean maiatzeko batezbesteko hozberoak N(15 gradu, 2 gradu)
+banakuntzari darraiola uste da. Garirako hozbero egokiak (14 gradu, 18
+gradu) tartekoak dira, baina (16,17) hozbero tartean zomorro kaltegarri
+bat garatzen da gari soroetan.
+Zenbatekoa da hozbero egokia izateko
+probabilitatea, zomorroaren arriskua izan gabe?
+14
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+XII Eguneko salmentak denda batean N(1000 euro, 100 euro) banatzen direla
+uste da. Gastuak eguneko N(400 euro, 100 euro) banatzen dira. Zen-
+batekoa da etekina egun batean 500 pezeta baino handiagoa izateko prob-
+abilitatea?
+XIII Denda bateko eguneko salmentak honela banatzen direla uste da: N(1000
+euro, 100 euro). Eguneko gastuak honela banatzen direla uste da: N(200
+euro, 10 euro). Zergak 10 egunero ordaintzen dira. Oinarri zergagarria
+honela kalkulatzen dira: 10 egunetako salmentak ken 10 egunetako gastuak
+ken 3000 euro. Emaitza honen gain %10eko zerga ezartzen da. Zenbatekoa
+da 500 euroko zerga baino gehiago ordaintzeko probabilitatea?
+XIV Gipuzkoako urteko famili errentak N(1.000.000 euro, 200.000 euro) ba-
+nakuntzari darraiotela uste da.
+• Gehien irabazten duten familien %10ari zerga berezia ezarri nahi
+bazaie, zenbateko errentatik aurrera jarriko dugu zerga?
+• Gutxien irabatzen duten familien %5ari dirulaguntzak eman nahi
+bazaizkio, zein errentatik behera eman beharko da dirulaguntza?
+XV Eguneko ekoizpenak N(120 pieza, 40 pieza) banakuntzari darraio. Zen-
+batekoa da ekoizpena negatiboa izateko probabilitatea? Emaitza lojikoa
+al da?
+XVI Eguneko txanpu ekoizpena lantegi batean honela banatzen da: N(4 litro,
+1 litro). Zenbatekoa da 10 egunetako ekoizpena 35 litrokoa baino hand-
+iagoa izateko probabilitatea? Zenbatekoa da 10 egunetako batezbesteko
+ekoizpena 5 litro baino handiagoa izateko probabilitatea?
+XVII Produktu bateko eguneko salmentak denda batean honela banatzen dira:
+N(1000 unitate, 100 unitate). Unitateko etekina 10 eurokoa da, baina 1000
+euroko kostu ﬁnkoak ere deskontatu behar dira. Zenbatekoa da etekina
+7000 eurokoa baino handiagoa izateko probabilitatea?
+XVIII Lantegi bateko eguneko ekoizpena honela banatzen da: N(14 kilo, 4 kilo).
+Zenbat egunetarako epea eman behar da 100 kilo ekoizteko, epea ez betet-
+zeko probabilitatea 0.001 izatea nahi bada? 6 egunetarako epea emanda,
+zenbateko pedidoak egiten dira garaiz 0.99ko probabilitateaz?
+XIX Pieza baten iraupenak banakuntza normalari darraiola uste da, batezbestekoa
+2000 ordukoa eta desbidazio estandarraa 200 ordukoa direlarik. 8 pieza
+aukeraturik, zenbatekoa da horietarik 2k 2300tik gora orduko iraupen-
+aldia izateko probabilitatea?
+XX Enpresa batek iturri batetik jasotzen duen ura bere ekoizpen prozesuan
+erabiltzen du. Iturriak egun batean ematen duen ur kopurua N(90 litro,
+10 litro) banatzen da. Egunero jasotzen duen ur kopurua tratamendu-
+deposito batean biltzen da. Depositoak 100 litroko edukiera du: ur gehiago
+jasotzen bada, isuri egiten da ondoko errekara. Enpresak egunero behar
+15
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+duen ura honela banatzen da: N(80 litro, 10 litro). Zenbatekoa da egun
+batean urik gabe geratzeko probabilitatea? Egunaren hasieran depositoan
+hutsik dagoela pentsatu behar da.
+XXI Enpresa batek negutegi bat dauka. Jasotako datuen arabera, metro kar-
+ratuko errendimenduak (kilotan) N(20, 5 kilo) banakuntzari darraio. Teknika
+berri bat sartu da eta batezbesteko errendimendua 32 izan da. Teknika
+berriak errendimendua gehitu duela esan al daiteke?
+XXII Tolosatik Donostia aldera zortziretako trenaz joaten diren bidaiari-
+kopurua
+N(50,4) banaketaren arabera banatzen da. Trenak geldialdi bat egiten du
+Hernanin, non trenetik jeisten den bidaiariak N(20,2) banaketaren arabera
+banatzen bait dira. Hernanin igotzen direnak, berriz, N(60,4) banaketaren
+arabera banatzen dira. Jarraitasun zuzenketa eginez eman ezazu Donos-
+tiara egun batean 80tik behera bidaiari heltzeko probabilitatea.
+XXIII Ekoizpen prozesu batean torlojuak eta arandelak ekoizten dira. Torlo-
+juen diametroak, mm.tan, N(2,0.01) lege normalaren arabera banatzen
+direla pentsatzen da. Bestalde, arandelen diametroa N(2.04, 0.01) leg-
+earen arabera banatzen dela uste da.Torlojua egoki sartzen da arandelan
+baldin eta arandelaren diametroa handiagoa izanik, diametroen aldea 0.08
+mm.koa baino handiagoa ez denean. Zenbatekoa da torloju bat eta aran-
+dela bat egoki doitzeko probabilitatea?
+XXIV Tomate mota jakin baten kalibrea N(60 mm.,3 mm.)
+banakuntzaren
+arabera banatzen dela pentsatzen da. Baserri batean 10000 tomate es-
+pero da. Zenbat tomatek batezbestez izango du 62 mm.tik gorako kali-
+brea? Tomateen pisuak N(100 gr., 20 gr.) banakuntzari darraio. To-
+mateak 40 unitateko kaxetan sartzen dira. Zenbatekoa da kaxa batek 5
+kilotik gora izateko probabilitatea? 50 mm.tik gorako tomateak bakar-
+rik biltzen badira, zenbatekoa kaxa batetik ateratako tomatea 55 mm.tik
+gorakoa izateko probabilitatea?
+XXV Biltegi batean eguneko sarrerak egunaren hasieran gertatzen dira eta honela
+banatzen dira: N(200 kilo, 20 kilo). Irteerak egunean zehar gertatzen dira
+eta honela banatzen dira: N(180, 20). Zenbatekoa da hurrengo bi egune-
+tan zehar biltegia noizbait hutsik izateko probabilitatea? Eta bigarren
+egunean hutsik geratzeko probabilitatea?
+XXVI Denda batean astelehenetik ostiralera bitarteko salmentek N(1000 pezeta,
+200 pezeta) ereduari darraiotela uste da. Larunbateko salmentek N(2000
+pezeta, 400 pezeta) ereduari darraiotela uste da. Zenbatekoa da aste osoko
+salmentak 8000 pezetatik beherakoak izateko probabilitatea? Batezbestez
+zenbat igo beharko lirateke astelehenetik ostiralera bitarteko salmentak,
+desbidazioa berdina izanik, %99an ziur izateko salmentak aste osoan 9000
+baino handiagoak izango direla?
+16
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+XXVII Sagarrondo mota batek urtero ematen duen sagar kopuruak N(50 kilo, 20
+kilo) banakuntzari darraiola uste da. Sagarrondoa kutsatuta badago, kop-
+urua 30 kilotik beherakoa izango dela ziurta daiteke. Zenbatekoa zuhaitz
+kutsatu batek 20 kilotik behera emateko probabilitatea?
+XXVIII Adin bereko pinus insignis espezieko baso batean zuhaitz kutsatuak eta
+kutsatu gabeak daude. Kutsatu gabeak %75ak direla uste da. Kutsatu
+gabeen altuera N(17 m., 1 m.)
+banakuntzaren arabera banatzen dela
+pentsatzen da. Kutsatuen altuera berriz, N(15 m., 2. m.) banakuntzaren
+arabera banatzen dela pentsatzen da. Zuhaitz baten altuera 16 m.17m.
+tarteko altuera duela uste da. Informazio honekin, zein taldetakoa den
+erabaki ezazu.
+XXIX Enpresa bateko eguneko ekoizpenak banakuntza normalari darraiola uste
+da, batezbestekoa 100 unitatekoa eta desbidazio estandarra 10 unitatekoa
+direlarik. Eguneko jasotzen pedido kopurua ere zorizko aldagaitzat hartu
+da eta batezbestekoa 80 unitatekoa eta desbidazio estandarra 6 unitatekoa
+dituen banakuntza normal bati darraiola uste da. 7 eguneko pedido kop-
+urua 5 egunetan ekoizteko probabilitatea eman ezazu.
+Zenbat ekoiztu
+beharko litzateke eguneko batezbestez, 7 eguneko pedidoa 5 egunetan
+betetzeko probabilitatea 0.99 izateko, eguneko ekoizpenaren desbidazioa
+batezbestekoaren %10 dela pentsatzen bada?
+XXX Esnea saltzen duen enpresa handi batek kontrol hau ezartzen die baserri-
+tarrei: hiru behi aukeratzen da baserri bakoitzeko, behi bakoitzeko litro
+bat esne lagin bat hartzen da eta koipe kopurua neurtzen da, aukeratutako
+hiru behien koipe kopuruen batezbesteko aritmetikoa kalkulatu ondoren,
+10 mm./litroko gainditzen badu, baserritarrarekiko kontratua eten egiten
+da. Zenbatekoa da kontratu bat eteteko probabilitatea, jakinda litroko
+koipe kopuruak banakuntza normalari darraiola jakinda, batezbestekoa 8
+gr.koa eta desbidazio estandarra 2 gr.koa direlarik?
+XXXI Eguneko ekoizpena enpresa batean banakuntza normalaren araberakoa
+dela uste da, batezbestekoa 100+2k eta desbidazioa 10+0.5k izanik hur-
+renez hurren, k izanik enpresan lanean ari den langile kopurua. Zenbat
+langile behar dira gutxienez ekoizpena 200 baino handiagoa izateko prob-
+abilitatea 0.999 izan dadin?
+17
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+7
+Hurbilketa normalak
+Banakuntza normala beste banakuntza batzuren limitea da:
+• Banakuntza binomial batean n oso handia denean, banakuntza normala
+erabil daiteke hurbilketa bezala.
+• Poisson-en banakuntza bat banakuntza normal batera hurbiltzen da λ
+parametroa handia denean.
+7.1
+Banakuntza binomiala hurbilduz
+De Moivre-Laplace-ren teorema: Banakuntza binomial batean n para-
+metroa aski handia bada (n > 30, zehatzago) eta p 0 edo 1etik oso gertu
+ez badago (zehatzago, np eta nq biak 5 baino handiagoak badira), orduan
+B(n, p) banakuntza binomiala honelako banakuntza normal baten bitartez or-
+dezka daiteke: N (µ = np, σ =
+√
+npq).
+Probabilitateak kalkulatzeko, jarraitasun-zuzenketa bat burutu behar da.
+Adibidez, 40 emakumezko eta 60 gizonezko dituen multzo batetik, 70 lagun
+aukeratzen da. Zenbatekoa da 20 emakumezko gehienez suertatzeko probabili-
+tatea?
+• X: emakumezko kopurua
+• X ∼ B(n = 70, p = 40
+100 = 0.4)
+• n > 30, np = 28 > 5, nq = 42 > 5
+• B(n = 70, P = 0.4) → N (µ = 70 × 0.4 = 28, σ =
+√
+70 × 0.4 × 0.6 = 4.1)
+• Probabilitatea kalkulatzeko, jarraitasun zuzenketa burutu behar da:
+P [X ≤ 20] = P [X < 20.5] = P [Z <
+20.5 − 28
+4.1
+= P [Z < −1.83] = 0.0336
+Hurbilketaren posibilidadea aztertzeko orduan, np edo nq 5 baino txikiagoak
+badira, binomialetik Poisson-en banakuntzarako hurbilketa erabiliko genuke.
+18
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+7.2
+Poisson-en banakuntza hurbilduz
+Poisson-en banakuntza batean λ parametroa aski handia bada (λ > 30, ze-
+hatzago), orduan P (λ) banakuntza honelako banakuntza normal baten bitartez
+ordezka daiteke: N (µ = λ, σ = λ).
+Probabilitateak kalkulatzeko, jarraitasun-zuzenketa bat burutu behar da.
+Adibidez, Makina batean eguneko geldialdi kopuruak Poisson-en legeari dar-
+raio, eguneko batezbestez 2 matxura izaten dela. Zenbatekoa da 40 egunetan
+zehar 100 matxura baino gutxiago izateko probabilitatea?
+• X: geldialdi kopurua
+• X ∼ P(λ40egun = 40 × 2 = 80)
+• λ > 30 dugunez, P (λ = 80) → N (µ = 80, σ =
+√
+80 = 8.94)
+• Probabilitatea kalkulatzeko, jarraitasun zuzenketa burutu behar da:
+P [X < 100] = P [X < 99.5] = P Z <
+99.5 − 80
+8.94
+= P [Z < 2.18] = 0.985
+7.3
+Hurbilketa normalak: ebazkizunak
+I Enpresa batek ekoizten dituen unitateen %5ak akastunak dira. Enpresak
+1000 unitateko loteak egiten ditu. Akastunen kopurua gehienera 100 bada,
+lotea ontzat jotzen da. Kalkulatu lote bat ontzat jotzeko probabilitatea.
+II Txanpon bat 2000 aldiz botatzen da. Batezbestez, zenbat aldiz aterako da
+gurutzeko? Zenbatekoa da batezbestekoa gertatzeko probabilitatea? Eta
+batezbestekotik %10 gehienez desbideratzeko probabilitatea? 100 aldiz
+botatzen bada, zenbatekoa da batezbestekotik %10 desbideratzeko prob-
+abilitatea?
+III Enekok eta Laurak hainbat aldiz jokatu behar dute. Jokaldi batean Enekok
+irabazteko probabilitatea 0,6 da. Aldez aurretik jokatu beharreko jokaldi
+kopuru bat ﬁnkatu ondoren, jokaldi gehien irabazten dituenak irabaziko
+du. Zenbat aldiz jokatzea interesatzen zaio Laurari?
+IV Hegazkin batean 200 lagunentzako lekua dago.
+Zenbat errserba onar
+daitezke aurretik overbooking gertatzeko probabilitatea gehienez 0.01 iza-
+tea nahi badugu? Eta gehienez 0.05 izatea nahi badugu?
+V Test erako azterketa bat egia ala faltsua eskatzen duten 100 galderak os-
+atzen dute. Ikasle batek zoriz erantzuten ditu galdera guztiak.
+• Zenbatekoa da gutxienez 40 galdera ongi erantzuteko probabilitatea?
+19
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+• Gutxienez 70 galdera ongi erantzuteko probabilitatea eman ezazu,
+jakinda 25 galderaren erantzun zuzenak ezagutzen dituela eta beste
+75 galderak zoriz erantzuten dituela.
+• Zenbatekoa da 50 galdera zuzen erantzuteko probabilitatea?
+• Gutxienez zenbateko nota ezarri behar da azterketa gainditu ahal iza-
+teko zoriz egiten dutenek azterketa gainditzeko 0,1eko probabilitatea
+izan dezaten?
+• Zenbateko nota eskatu behar zaie 30 galdera besterik ez dakitenei
+(gainerakoak zoriz erantzuten dituztela pentsatuz) azterketa gain-
+ditzeko probabilitatea 0,1 izan dezaten.
+VI 100.000 biztanleko herri batean gaisotasun baten aurkako kanpaina bat
+planiﬁkatzen ari zara. Gaisoei botika bana eman behar zaie. Gaisoa iza-
+teko probabilitatea %1 dela zenbatetsi bada, zenbat dosi prestatu beharko
+dira gaiso guztiek beren dosia izan dezaten %98ko probabilitateaz?
+VII Pieza mota baten iraupenak (ordutan) banakuntza normalari darraiola
+uste da, batezbestekoa 100 eta bariantza 144 delarik. Piezak 200 unitateko
+lotetan saltzen dira. Lote batean 88 ordutik beherako iraupena duten
+piezak 15 baino gehiago direnean, lotea itzuli egiten da. Zenbatekoa da
+lotea itzultzeko probabilitatea?
+VIII Zozketa batean 30.000 sari banatzen da zoriz aukeratutako 250 zenbakiren
+artean. Zenbaki bakoitzari beraz, sari bat baino gehiago egoki dakioke.
+250 zenbakiak 250 lagunen artean banatzen dira. Zenbatekoa da lagun
+bati 250 sari gutxienez tokatzeko probabilitatea? Zenbat laguni egokituko
+zaizkie 100 sari gutxienez?
+IX Bezero batek erosten dizkigun 2000 piezako lote bakoitzetik 100 pieza
+erauzi eta aztertzen ditu. 20tik gora akastun hatzematen badira, 2000
+piezako lotea itzultzen dugu. Zenbateko hainbatekoz ekoiztu beharko di-
+tugu akastunak lotea itzultzeko probabilitatea %10 baino txikiagoa izan
+dadin?
+X Bateria bereziak ekoizten dituen enpresa baten ustez, pedidoen tamainua
+Poisson-en banakuntzaren arabera banatzen da, batezbestez 100 bateri-
+ako pedidoak egiten direlarik. Baterien iraupenak banakuntza normalari
+darraiola uste da, batezbestekoa 10 ordukoa eta desbidazio estandarra 2
+ordukoa direlarik. Enpresa honen marketing politikaren arabera, pedido
+bakoitzeko baterien %10ek 9 ordutik beherako iraupena (iraupen txikia,
+alegia) badute, pedidoan hatzematen diren iraupen txikiko bateria guztiak
+dohainik ordezkatu zaizkio bezeroari. Bezero batek 120 bateriako pedidoa
+egin baldin badigu, zenbatekoa da bezero horri 30 bateria baino gehiago
+dohainik eman behar izateko probabilitatea?
+XI Ekoizpen-prozesu batean unitate-akastun bat ekoizteko probabilitatea 0,08
+dela zenbatetsi da. 900 unitate ekoitzeko agindua jaso da. Zenbatekoa da
+20
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+agindua bete ahal izateko 980 unitate baino gehiago ekoiztu behar izateko
+probabilitatea?
+XII Denda bateko kaxan lan egiten duen pertsona batek batezbestez 200 la-
+gun atenditzen ditu eguneko, lagun hauek zoriz etortzen zaizkiola. Egun
+batean 210 lagun baino gehiago atenditzen baditu, egunean lan gehiegi
+egin duela pentsatzen da.Lan gehiegizko 40 egun, segidan edo ez, pasatzen
+direnean, langileari 50 eguneko oporraldi gehigarria ematen zaio. Langilea
+horrelako opor baten bueltan etorri berria da eta hurrengoan Afrikara
+joateko asmoa du oporrak hartu eta berehala, baina horretarako malar-
+iaren aurkako txertoa hartu behar du bitarteko egun batean. Gehienez
+zenbat egunetara egin behar du zita medikuarekin, txertoa jarri gabe joan
+behar izateko probabilitatea 0.001 izatea nahi bada?
+XIII Saltzaile batek baldintza hauek bete behar ditu: urteko 200 lanegunetan
+2600 unitate saldu behar ditu. Batezbestez zenbat unitate saldu behar
+du egunean urteko helburua 0.95eko probabilitateaz bete nahi badu? Eta
+0.99ko probabilitateaz saldu nahi badu? Eguneko salmentak Poisson-en
+ereduaren araberakoak dira.
+21
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+8
+Dimentsio anitzeko banakuntza normala
+Orain arte dimentsio bakarreko zorizko aldagaiak aztertu ditugu. Zoriz ger-
+tatzen den zenbakizko magnitude baten aldean, zorizko bi magnitude edo gehi-
+ago batera aztertu behar izaten da: dimentsio anitzeko zorizko aldgaiak dira.
+Bada aldagai anitzeko banakuntza normalren bertsioa. Irudian, bi aldagaiko
+banakuntza normal baten trinkotasun funtzioa azaltzen zaizu. Kasu honetan,
+probabilitatea ez da kalkulatzen triknotasun funtzio azpiko azaleraz, baizik eta
+trinkotasun funtzio azpiko bolumenaz, hau da, integral bikoitz baten bitartez.
+Figure 12: Bi aldagaiko banakuntza normalaren trinkotasun funtzioa
+22
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+9
+Limitearen teorema zentralak
+Limitearen teorema zentralak izenpean zorizko aldagaien baturaren banakuntza
+banakuntza normaleruntz doala dioten teoremak biltzen dira, baldintza ezberdi-
+nen pean.
+Bi bertsio hauek bereiziko ditugu:
+• Limitearen teorema zentral klasikoa
+• Lyapunov-en teorema eta Lindeberg-en teorema
+9.1
+Limitearen teorema zentral klasikoa
+X1, X2, . . . , Xn zorizko aldagaien segida izanik, denak banakuntza berdina
+dutelarik,
+• elkarrekiko independenteak badira,
+• eta itxaropen (µ)eta bariantza (σ) ﬁnitoak badituzte,
+• eta n aski handia bada (n > 30)
+orduan, X = X1 + X2 + . . . + Xn batura honelako banakuntza normalera hur-
+biltzen da:
+X ∼ N (µX = nµ, σX =
+√
+nσ2)
+Teoreman aipatu bezala, hurbilketa n > 30 egoeretarako oso zehatza dela
+esan daiteke. Kasu gehienetan ordea, n batugai gutxiagoetarako ere oso zehatza
+da: moda edo gailur bakarreko banakuntza jarraietarako, esaterako, nahikoa da
+teorema aplikatzeko n > 10 izatea.
+Ikus dezagun hurbilketa adibide bat. Egun bateko ekoizpena tonatan honela
+banatzen dela uste da: fX (x) = 2x ; 0 < x < 1. Nola banatzen da 40 eguneko
+ekoizpena, egun ezberdinetako ekoizpenak elkarrekiko indpendenteak badira?
+Egun bateko ekoizpenaren itxaropena eta bariantzak kalkulatzen baditugu:
+µ = 0.66 tona ;
+σ
+2 = 0.25
+Limitearen teorema zentrala aplikatzeko baldintzak betetzen dira: batugai
+kopuru handia (n = 40), independentzia eta itxaropen eta bariantza ﬁnitoak.
+Beraz, X 40 eguneko ekoizpena honela banatuko da:
+X ∼ N (µ = 40 × 0.66 = 26.66 tona; σ =
+√
+40 × 0.25 = 3.16)
+23
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+Aipatu behar da De Moivre teorema (binomialaren hurbilketa normala, ale-
+gia) eta Poisson-
+en banakuntzaren hurbilketa normala teorema honen kasu bereziak
+besterik ez direla.
+Limitearen teorema zentralaren ilustrazio jakingarri bat azken orrian duzu.
+9.2
+Lyapunov-en teorema eta Lindeberg-en teorema
+Teoremaren bertsio hauek EZ dute eskatzen banakuntza normalerako hurbilketa
+edo konberjentziarako batugai diren banakuntza guztiak berdinak izatea, baina or-
+dez beste baldintza bat eskatzen da banakuntzen hirugarren mailako momentuei
+buruz Lyapunov-en kasuan, orohar bete egiten dena, eta baldintza bigunago bat
+Lindeberg-en kasuan, baita ere bete egiten dena orohar. Honela dio teoremak:
+Bitez X1, X2, . . . , Xn zorizko aldagaiak, batezbestekoak eta desbidazioak
+izanik hurrenez hurren µ1, µ2, . . . , µn eta σ1, σ2, . . . , σn, X zorizko aldagaien
+batura honela banatuko da, zorizko aldagaiak elkarrekiko independenteak badira,
+eta n batugai kopurua aski handia bada (n > 30):
+X ∼ N (µX = µ1 + µ2 + . . . + µn, σX =
+σ2
+1 + σ
+2
+2 + . . . + σ
+2
+n)
+Adibide bat eman dezagun.
+Portu bateko antxoa eguneko harrapaketak
+hurrengo 40 egunetako denboraldian banakuntza jakin baten arabera banatzen
+direla uste da, baina parametro ezberdinekin. Ondorioz itxaropenak eta bariantzak
+egun ezberdinetarako ezberdinak izango dira. Zehatzago, itxaropenak (tonatan)
+1, 2, . . . , 40 izango direla uste da. Desbidazioak 0.1, 0.2, . . . , 4 dira. Nola ba-
+natzen da denboraldi osoko antxoa harrapaketa, egun ezberdinetako harrapake-
+tak independenteak badira?
+Batuko ditugun banakuntzen kopurua aski handia denez (n = 40), eta
+eguneko harrapaketak elkarrekiko independenteak direnez, Lyapunov-Lindeberg-
+en bertsioa erabil dezakegu. Beraz, 40 egunetako harrapaketa normal banatuko
+da, batezbestekoa batezbestekoen batura eta bariantza bariantzen batura dela:
+X ∼ N (µX = 1 + 2 + . . . + 40 = 820, σX =
+0.12 + 0.22 + . . . + 42)
+24
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+9.3
+Ebazkizunak
+• Fabrika batek egunero saltzen dituen autoak 20tik 40ra bitartekoak dira,
+uniformeki banatzen direlarik. 182 egun pasa eta gero, zenbatekoa da
+5530tik gora auto saldu izateko probabilitatea? Eguneroko salmentak in-
+dependenteak direla suposatu.
+• Produktu baten eguneroko eskaera batezbestez 50 unitatekoa da, des-
+bidazio tipikoa 5 unitatekoa delarik. Zenbat egun pasa behar dira eskaera
+guztira 1000 baino handiagoa izateko probabilitatea 0,999 izan dadin?
+• Denda bateko eguneko salmenta 20 eurotik 40 eurora bitartean uniformeki
+banatzen dela uste da. Zenbatekoa da 10 egun pasata 180.000 pezeta baino
+gehiago saldu izateko probabilitatea?
+• Hegazkin bateko bidaiarien batezbesteko pisua 75 kilokoa da, desbidazio
+tipikoa 7.5 kilokoa delarik. Zenbat bidaiari hartu behar ditu karga 3.000
+kilotik gorakoa izateko probabilitatea 0.05ekoa izan dadin?
+• Mendizale-elkarte batek ﬁbrazko sokak erosi nahi dizkio fabrika bati es-
+pedizio bat egiteko. Segurtasuna ahalik eta handiena izan dadin, sokek
+gutxienez 1.000 kiloko erresistentzia eduki dezatela exigitzen zaio fab-
+rikatzaileari. Fibra bakoitzak 5 kiloko erresistentzia du batezbestez eta
+100 gramoko desbidazio tipikoa. Zenbat ﬁbrak osatu beharko dute soka
+mendizaleen nahia 0.99 probabilitateaz bete dadin?
+• Joku batean irabazteko probabilitatea 0.5ekoa da. Irabazten den bakoitzean
+5 pzta. irabazten da eta galtzen den bakoitzean 5 pzta. galtzen da. 400
+jokaldi egiten dira. Zenbat diru eraman beharko da galerei aurre egin ahal
+izateko probabilitatea 0.95ekoa izan dadin?
+• Banku eragiketa bat egiteko behar batezbesteko denbora 5 minutukoa da,
+desbidazio estandarra 4 minutukoa delarik. Bankuaren ordutegia 9etatik
+14etara bitartekoa bada, zenbatekoa da goiz batean 56 eragiketa gutxienez
+egiteko probabilitatea? Eragiketa bat egiteko inprimaki bat behar da.
+Zenbat inprimaki prestatu behar dira aldez aurretik inprimikarik gabe
+geratzeko probabilitatea 0,01 izan dadin?
+• Makina txanponjale batek 500 konbinazio ditu. 25 konbinaziotan itzuli
+egiten du txanpona. 20 konbinaziotan 2 txanponeko saia ematen du. 5
+konbinaziotan 8 txanpon ematen ditu. 2 konbinaziok 20 txanponeko saria
+ematen dute. 100 aldiz jokatzen baduzu, zenbatekoa da txanpon bat gutx-
+ienez ateratzeko probabilitatea?
+• Heladeria batean hiru tamainuko izozkiak saltzen dira 100, 200 eta 500
+pezetatan. Tamainuko bakoitzeko eskariaren probabilitateak 3/6, 2/6 eta
+1/6 dira hurrenez hurren. Izozkiak ematen dituen neskak kaxan lapurtu
+egiten duela uste du jabeak. Goiz batean 256 izozki saldu badira eta kaxa
+40000 pezetakoa izan bada, neskarekin ez ﬁdatzeko arrazoirik al dago?
+25
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+30 behi garraitu behar dira. Garraiorako 1000 kiloko zama jasan deza-
+keen ibilgailua dugu eskura. 60 behiak garraiatzeko gauza izango den
+ibilgailua aukeratuko da garraiorako. Behien pisuak [50,100] banakuntza
+uniformeari darraiola uste da.Zenbatekoa da behi guztiak garraiatu ahal
+izateko probabilitatea?
+• Argindarra ekoziten duen enpresa batek bere bezeroen kontsumoa era
+honetan banatzen dela pentsatzen du:
+– 1500 pezetatik beherako errenta dutenen argindar kontsumoa U(25,50)
+banakuntzaren arabera banatzen da.
+– 1500 pezetatik 4000 pezetara bitarteko errenta dutenen argindar kontsumoa
+U(60,90) banakuntzaren arabera banatzen da.
+– 4000 pezetatik gorako errenta dutenen argindar kontsumoa U(120,300)
+banakuntzaren arabera banatzen da.
+Lehenego taldean 2500 abonatu daude. Bigarren taldean 3000 abonatu
+daude. Hirugarren taldean 2850 abonatu daude. Zenbatekoa izango fak-
+turazioa 2.000.000 pezetatik gorakoa izateko probabilitatea?
+• 30 behiri elikagai-dosi jakin bat ematen zaie egunero. Dosiak 50 gramukoa
+behar du izan eta 100 pezeta balio du. Dosi egokia emateko 5 gramuko
+zehaztasuna duen pisu elektroniko bat erabiltzen da.
+– Zenbatekoa da urtean zehar behi multzoari behar baino 2 kilotik gora
+eman izateko probabilitatea?
+– Zenbatekoa da urtean zehar elikagai horretan behar baino 1000 pezeta
+baino gehiago gastatu izateko probabilitatea?
+– Zenbatekoa da eguneko behi batek batezbestez gutxiegizko dosia ja-
+sotzeko probabilitatea?
+• AZTERKETA 1994. Ordenadore bat konpontzeko ordu kopuruak 0, 1, 2
+edo 3 izan daitezke, 0.15, 0.5, 0.25 eta 0.1eko probabilitateaz hurrenez hur-
+ren. 500 ordenadore konpontzeko, langile batzuk kontratatu behar dira.
+Langileei erabateko askatasuna ematen zaie lan ordutegian. Bakoitzak
+egunean 6, 7 edo 8 ordu sartzen duela jakin dugu, 0.2, 0.6 eta 0.2ko
+probabilitateaz hurrenez hurren.100 langile hartuta, egun bakar batean
+ordenadore guztiak konpontzeko probabilitatea zenbatekoa da?
+• Egia/faltsua erantzunak eskatzen dituen test erako azterketa bat egin be-
+har da. Azterketak 100 galdera ditu. Zenbat puntu kendu behar zaie
+azterketa osoa zoriz erantzuten dutenei galdera oker bakoitzeko haue-
+tako batek azterketa gainditzeko probabilitatea 0,1 baino txikiagoa izan
+dadin?Zenbat puntu kendu behar zaie oker bakoitzeko 10 galderen er-
+antzun zuzenak badakizkite?Eta 20 galderen erantzun zuzenak badak-
+izkite?
+26
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+• AZTERKETA 1994. Urrutiko baserri batean bizi zara eta 100 egunetan
+behin gertueneko herrira jeisten zara erosi beharrekoak erostera. Besteak
+beste, gasolina erosi behar duzu. Egunero kontsumitzen duzun gasolina
+[1,2] tartean (litrotan) uniformeki banatzen dela pentsatzen duzu. Zenbat
+litro gasolina erosi behar duzu gasolinarik gabe geratzeko probabilitatea
+0,1 izan dadin?
+• AZTERKETA 1995. Etxeko oiloei egunero ematen diedan gari ale kop-
+urua zorizko aldagaitzat hartu dut, gari zakuan eskua sartu eta neurri
+zehatza eman gabe hiru eskukada ematen diedalako. Emandako gari kopu-
+rua (gramutan) [80,120] tartean uniformeki banatzen dela uste dut. Eredu
+uniforme hori hartuta, 10 kilo gari ale erosita, zenbatekoa da gutxienez
+105 egunetarako garia edukitzeko probabilitatea?
+• AZTERKETA 1995. Denda batean ordenagailuen salmentak Poisson-en
+arabera gertatzen direla uste da, batezbestez 4 ordenagailu saltzen delarik
+eguneko. Dendak pedidoa 30 egunero egiten duela eta aurreko hilabetetik
+ordenagailurik geratzen ez dela jakinda, zenbat ordenagailu eskatu behar
+dira hilabete hasieran ordenagailurik gabe geratzeko probabilitatea 0,05
+izan dadin?
+• Donostiatik Tarifaraino bidea egin behar du lagun batek autopistaz.Autopistak
+1400 kilometro ditu eta 30 kilometroro gasolindegi bat dago (abiapuntutik
+hasita). Bere ibilgailuak kilometro bakoitzeko kontsumitzen duen gasolina
+kopurua 0.1 litro- 0.3 litro tartean uniformeki banatzen dela uste da. De-
+positoak 50 litroko edukiera du. Abiapuntuan 20 litro dauzka. Zeintzu
+gasolindegietan hartu behar du gasolina erregairik gabe ez dela geratuko
+ziurtatu nahi badu? Zeintzu gasolindegietan hartu behar du gasolina er-
+regairik gabe geratzeko %10ko arriskua onartzen badu?
+• AZTERKETA 1996 Frutero batek durotan kobratzen die bezeorei. Kon-
+tua durotan ateratzen ez bada, bezeroaren alde kobratzen du beti. Adibidez,
+648 pezetakoa bada kontua, 645 pezeta kobratuko dio. Egunean zehar 400
+bezero pasa dira frtueriatik. Zenbatekoa da borobilketaren ondorioz 1000
+pezeta baino gehiago galtzeko probabilitatea?
+• Denda batean bezero bakoitzak aldi batez gastatzen duen dirua uniformeki
+banatzen da [150,1000] tartean (pezetatan).
+Lehendabiziko 500 beze-
+roentzat zenbat txanpon eduki beharko da bueltak eman ahal izateko
+probabilitatea 0,99 izan dadin txanpon bakoitzarekin (pezeta, duro, 5
+duro, 10 duro, 20 duro eta 100 duroko txanponak)?
+Pentsatu ezazu
+kasurik okerrenean: bezero guztiek 1000 pezetako paperarekin pagatzen
+dute. Bueltak ahalik eta txanpon gutxienekin egiten direla ere pentsatu
+ezazu.
+• Test erako azterketa bat n galderak osatzen dute. Galdera bakoitzak k
+aukera ditu. Ikasle baten kaliﬁkazioa honela kalkulatzen da: X = z −
+o
+k−1 , z eta o erantzun zuzen eta okerren kopuruak direla hurrenez hurren.
+27
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+Erantzuten ez diren galderek 0 puntu ematen dute. Ikasle batek azterketa
+gainditzeko bi aukera aztertzen ari da:
+I Galdera bakoitzeko txanpon bat botatzen du. Aurpegikoa ateratzen
+bada, ez du galdera erantzuten. Gurutzekoa ateratzen bada, k auk-
+eretan edozein erantzuten du.
+II Galdera guztiak erantzuten ditu eta k aukeretan edozein aukeratzen
+du. Azterketa p puntu lortuz gainditzen bada, zein da bi aukeretan
+hoberena?
+28
+
+Banakuntza normala
+Josemari Sarasola Ledesma
+Figure 13:
+Banakuntza normalerako hurbilketa, jatorrizko banakuntzaren
+araberako batugaiak gehitu ahala. Ohartu, esaterako, n = 8 kasurako, bat-
+uraren balio posible maximoa 8 dela, jatorrizkoan maximoa 1 baita.
+29

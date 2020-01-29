@@ -1,0 +1,1320 @@
+
+
+
+1 Gaia
+Gretl eta Ekonometria
+Aurkibidea
+1.1
+Sarrera . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2
+1.2
+Zer da Ekonometria? . . . . . . . . . . . . . . . . . . . . . . . .
+2
+1.3
+Ikerketa ekonometriko bat . . . . . . . . . . . . . . . . . . . . .
+6
+1.4
+Datuak eta bere erabilera . . . . . . . . . . . . . . . . . . . . . .
+7
+1.4.1
+Datuen jatorriak . . . . . . . . . . . . . . . . . . . . . . . . . .
+8
+1.4.2
+Software ekonometrikoa . . . . . . . . . . . . . . . . . . . . . .
+9
+1.5
+Gretlerako sarrera . . . . . . . . . . . . . . . . . . . . . . . . . .
+10
+1.5.1
+Aldagai baten analisi deskribatzailea . . . . . . . . . . . . . . . 15
+1.5.2
+Aldagaien arteko erlazioak . . . . . . . . . . . . . . . . . . . . 20
+
+2
+1.Gaia: Gretl eta Ekonometria
+1.1
+Sarrera
+Kurtso hau errealitate ekonomikoari buruzko informazio estatistikoa interpretatu eta ikasi
+nahi dutenentzat zuzenduta dago. Erabiliko den oinarrizko erreminta eredu ekonometrikoa
+izango da, ekonomiaren eskema teorikoak eta datuen analisirako teknika estatistikoak bat egi-
+ten baititu. Eredu baten egitura oso konplexua izan daiteke baina kurtso honetan oinarrizko
+ereduetan zentratuko gara, hau da erregresio eredu lineal orokorretan.
+Bestalde, kurtso honen izaera guztiz aplikatua denez, adibide praktikoen bitartez, estatistika
+eta ekonometriako oinarrizko kontzeptuak aztertuko ditugu. Horrela, ikasleak kasu prakti-
+koak burutuko ditu software ekonometrikoarekin eta lortutako emaitzak interpretatzen ika-
+siko du. Erabiliko dugun pakete ekonometrikoa Gretl izango da, erraza, erabilera askekoa
+eta ikerketa ekonometrikoaren sarrerako liburu askok aztertzen dituzten datu-
+base anitzerako
+sarbidea duena.
+Lehen gai hau horrela egituraturik dago:
+ bigarren atalean ekonometriaren sarrera aurkitzen
+da eta hirugarrenak ikerketa ekonometriko baten adibide bat jasotzen du, eredu ekonometriko
+baten elementu nagusiak aztertuz. Laugarrenean datu ekonomikoen ezaugarriak, jatorriak
+eta datu hauek bildu eta prozesatzeko programa informatikoak laburbiltzen dira. Bostgarren
+atalean, erabiliko dugun Gretl softwarearen sarrera egingo dugu eta saio praktiko baten bi-
+tartez bere erabilpeneko lehen urratsak emango ditugu.
+1.2
+Zer da Ekonometria?
+Orokorrean, ekonomia izaerako erabakiak hartzerakoan, onuragarria izaten da informazioa
+datu kuantitatibo eran eskuhar izatea. Horrela, unibertsitate ikasketak aukeratzerakoan adi-
+bidez, bakoitzaren lehentasun pertsonalen arabera egin dezakegu edota aukeratutako adarreko
+itxarondako soldatagatik edo lanpostu bat bilatzeko izango dugun erraztasunagatik. Etxebi-
+zitza baten salerosketa baldin bada ordea, etxe-
+merkatuaren egoera nolakoa den interesatzen
+zaigu. Horretarako etxebizitzen prezioei buruzko datuak bildu daitezke eta baita prezio horie-
+tan eragin dezaketen zenbait ezaugarriei buruzkoa ere, adibidez, tamaina, erreforma beharra
+duen, erabilitako etxebizitza den, etab..
+Suposa dezagun tokiko egunkari bateko iragarkien atalean salmentan dauden hiriguneko 50
+etxebizitzeri buruzko datuak azaltzen direla:
+• Etxebizitzaren prezioa mila eurotan.
+• Etxebizitzaren bizigarritasun azalera metro karratutan.
+• Etxebizitzaren egoera: erreforma beharra izatea edo sartzeko prest egotea.
+Datu hauek 1 Taulan agertzen dira, jarraian dagoen graﬁkoan etxebizitza bakoitzaren prezioa
+eta tamaina agertzen direlarik. Informazio hau kontuan izanik, erreformatutako 100 m2-
+tako
+etxebizitza bat 525000 eurotan eskeiniz gero, garestia deritzogula esango genuke, bere prezioa
+ezaugarri hauetako etxebizitza baten batezbesteko prezioa baino handiagoa baita.
+402, 6 + 360, 607 + 570 + 480, 809
+4
+= 453, 504 mila euro
+
+Gretl-en bidezko erregresio analisia
+3
+1.1 Taula: Etxebizitzaren prezioen datuak
+Adierazlea
+Tamaina
+Prezioa
+Erreformatzeke
+Adierazlea
+Tamaina
+Prezioa
+Erreformatzeke
+1
+55
+210,354
+ez
+26
+110
+476,600
+ez
+2
+59
+309,520
+ez
+27
+110
+456,769
+ez
+3
+60
+366,617
+ez
+28
+115
+500,643
+ez
+4
+60
+299,304
+bai
+29
+125
+619,000
+ez
+5
+60
+369,650
+ez
+30
+135
+645,253
+ez
+6
+65
+273,460
+bai
+31
+135
+625,000
+ez
+7
+65
+155,000
+bai
+32
+140
+522,800
+bai
+8
+70
+228,384
+ez
+33
+150
+390,660
+ez
+9
+70
+246,415
+ez
+34
+150
+504,850
+bai
+10
+70
+255,000
+bai
+35
+150
+715,204
+ez
+11
+75
+150,253
+bai
+36
+150
+570,000
+bai
+12
+77
+352,800
+ez
+37
+160
+751,265
+ez
+13
+80
+366,000
+bai
+38
+180
+583,000
+bai
+14
+80
+298,000
+bai
+39
+180
+738,000
+ez
+15
+80
+312,530
+ez
+40
+180
+552,931
+bai
+16
+83
+240,400
+ez
+41
+190
+691,200
+ez
+17
+85
+278,569
+bai
+42
+195
+811,400
+ez
+18
+91
+390,658
+ez
+43
+200
+691,000
+bai
+19
+92
+216,364
+bai
+44
+200
+1110,000
+ez
+20
+100
+402,600
+ez
+45
+230
+961,620
+ez
+21
+100
+272,300
+bai
+46
+230
+661,000
+ez
+22
+100
+360,607
+ez
+47
+240
+841,417
+ez
+23
+100
+570,000
+ez
+48
+240
+588,992
+bai
+24
+100
+480,809
+ez
+49
+245
+841,400
+bai
+25
+100
+186,314
+bai
+50
+250
+1051,000
+ez
+1.1 Irudia: Sakabanatze diagrama
+ 100
+ 200
+ 300
+ 400
+ 500
+ 600
+ 700
+ 800
+ 900
+ 1000
+ 1100
+ 1200
+ 50
+ 100
+ 150
+ 200
+ 250
+Prezioa (mila eurotan)
+Tamaina (m2)
+
+4
+1.Gaia: Gretl eta Ekonometria
+Hala ere, zer esan dezakegu erreformatu beharreko 90 m2-
+tako etxebizitza izango balitz?
+Edo erreformatutako 50 m2-
+takoa izango balitz? Ekonometra batek galdera hauei erantzu-
+ten lagundu diezaguke. Datuen adierazpen graﬁkoan oinarrituz etxebizitza baten tamaina eta
+prezioaren arteko erlazio edo funtzio egonkor bat ikusi daiteke. Erlazio hau eredu baliagarri
+batean gauzatu daiteke planteatutako galderei erantzunez. Eredu bat eta datu batzuekin,
+teknika ekonometrikoek etxebizitzaren tamaina edo egoerak bere prezioarengain duten era-
+gina neurtu ditzakete. Erantzuna honakoa izan daiteke adibidez:
+ erreformatu beharreko 90
+m2-
+tako etxebizitza baten batezbesteko prezioaren estimazioa 297350 euro da, nahiz eta prezioa
+152711 eta 441989 euro bitartean egotea posible izan daiteken %90eko konﬁdantza mailare-
+kin. Gainera, erreformatutako etxebizitza izango balitz, batezbesteko prezioa 100000 eurotan
+handituko litzateke, zenbatekoa 398580 izanik eta 210521 eta 556639 euro bitarteko prezioak
+eginkorrak izanik.
+Ekonometria, aldagai ekonomikoen arteko erlazioak neurtu eta kuantiﬁkatzeko estatistika
+erabiltzen duen Ekonomiaren adar bat da. Ekonomia Teoria, matematika, estatistika eta
+konputu metodoak erabiltzen dituen disziplina anizkoitzeko materia da. Ramanathan 
+(2002)
+esaten duen bezala:
+“En t´erminos sencillos, la econometr´ıa se ocupa de la aplicaci´on de m´etodos es-
+tad´ısticos a la econom´ıa. A diferencia de la estad´ıstica econ´omica, que es princi-
+palmente datos estad´ısticos, la econometr´ıa se distingue por la uniﬁcaci´on de teor´ıa
+econ´omica, instrumentos matem´aticos y metodolog´ıa estad´ıstica. En t´erminos m´as
+generales, la econometr´ıa se ocupa de (1) estimar relaciones econ´omicas, 
+(2) con-
+frontar la teor´ıa econ´omica con los datos y contrastar hip´otesis relativas al compor-
+tamiento econ´omico, y 
+(3) predecir el comportamiento de variables econ´omicas.”
+Zertarako balio du Ekonometriak?
+Ikerketa ekonometriko baten helburua fenomeno ekonomikoak hobeto ulertzea da eta ondo-
+rioz, interesatzen zaigun fenomenoaren etorkizuneko garapena aurresatea. Oinarrizko erra-
+minta eredua da, aldagai ekonomikoen arteko erlazioak ulertzeko lagungarria da, zenbait
+neurri edo ekonomia politiken eraginak ebaluatzeko erabilgarria baita. Ekonometriaren era-
+bilgarritasunaren zenbait adibide honakoak dira:
+• Aktiboen merkatuko analista edo ikertzaile batek aktibo baten prezioa eta aktibo hori
+eskaintzen duen enpresaren ezaugarri desberdinen arteko erlazioa ikertu eta kuantiﬁkatu
+nahi du ekonomiaren egoera orokorrarekin batera.
+• Iberdrolaren burugoak elektrizitate eskaeran zeintzu faktorek eragiten duten ikertu nahi
+izango du.
+• Eroski taldeak bere salmentetan eta mozkinetan publizitate maila desberdinek duten
+eragina kuantiﬁkatu nahi izango du.
+• Enpresa batek bere salmentetan publizitate kanpaina batek duen eragina estimatu nahi
+izango du eta erabilitako komunikabidearen arabera desberdintasun nabariak dauden
+
+Gretl-en bidezko erregresio analisia
+5
+edo ez argitu. Aurreko kanpainen emaitzen ikerketa galdera horiei erantzuteko balia-
+garria da eta bide batez, etorkizuneko kanpainaren plangintzarako lagungarria.
+• Ekonomia Ministeritzako Ikaskuntza Sailak eta Espainiako Bankuak edo Europako Ban-
+ku Zentralak moneta eta ﬁskal politikek langabezian, inﬂazioan, esportazio eta inpor-
+tazioan, interes tipoan, ... duten eragina aztertu nahi izango dute.
+• Erakunde batek sexuarekiko soldata bereizketa zuzentzeko politikak ezarri nahi baditu,
+arazoan eragiten duten faktoreak ezagutu beharko ditu lehendabizi eta ondoren, ezarri
+daitezken neurriak ikertu, neurri horien ondorioak zeintzuk diren aztertuz.
+• Herrialde-
+Gobernu bati populazioaren garapena aurrikustea interesatzen zaio gizarte
+zerbitzuen beharra eta ondorioztatzen den ﬁnantzaketa planiﬁkatzeko. Bere ﬁnantza-
+keta gaitasunaren informazio zehatza eduki behar izango du eta hortaz, zerga biltzearen
+aurresanak ere izan beharko ditu.
+• Pertsona batek prestamu bat kontratatu nahi badu, interes tipoen garapena zein den
+interesatzen zaio.
+Azken urteetan metodo ekonometrikoen hedapena eta erabilpena handiagoa izan da, besteak
+beste, datuen gertutasun handiago eta kalitate hobeagoagatik eta konputu metodoen garape-
+nagatik. Ekonometriaren erabilera ez da ekonomia alorrera bakarrik murrizten, orokorrean,
+Giza-
+Zientzietan aplikagarriak diren datuen ikerketa prozedurak eskeintzen ditu. Adibidez:
+• Zigorren gogortzeak 
+(heriotz zigorraren ezarpena adibidez) kriminaltasun tasa mu-
+rrizten duen edo ez analizatzeko.
+• Bide segurtasun neurrien eraginkortasuna 
+(segurtasun gerrikoa jantzi beharra adibidez)
+traﬁko istripuetako hilkortasun tasa murrizten duen ala ez ikertzeko.
+• Kirol lehiaketen emaitzak aurresateko, Ingalaterrako selekzioak sartuko dituen gol ko-
+purua munduko futbol txapelketan adibidez.
+• Neurri konkretu batek bozemailetan izango duen eragina aztertzeko, adibidez, leku pu-
+blikoetan erretzearen debekuak, sexu berdineko pertsonen arteko ezkontzak, etab.
+• Botuetan leku-hauteskundeak, herrialde-hauteskundeak edo europar-
+hauteskundeak iza-
+tean diferentziarik izango den aztertzea.
+• Tabako eta alkohol kontsumoaren publizitatean neurri murriztaileek produktu horien
+kontsumoa urritzen duen aztertzea.
+Ekonometriaren hasiera XX. mendeko hirugarren hamarkadan jarri daiteke, Depresio Han-
+diarekin bat izatea kasuala ez delarik; honen ondorioz, garai hartako ekonomilariek ikusten
+zituzten ziklo ekonomikoak aurresan eta ekidin nahi zuten. Ekonomilari horien artean, krisi
+horiek arintzeko, ekonomia ihardueretan gobernuaren partehartzearen defendatzaile bezala
+Keynes nabarmentzen da. Horrela, lehen ekonometrak arazo makroekonomikoei erantzun
+nahian ibili ziren, gobernuei ekonomia politiken ezarpenean aholkatzeko asmoz.
+
+6
+1.Gaia: Gretl eta Ekonometria
+Hasiera batean, jada zientzia naturaletan erabilitako metodo estatistikoak aplikatu ziren datu
+ekonomikoetan. Hala ere, metodo hauek ezin zuten mimetikoki berregin esparru ekonomi-
+koa eta aldagai sozioekonomikoek zituzten ezaugarri bereziei egokitu behar ziren. Guzti hau
+dela eta, ekonometrian bi arlo hazi ziren:
+ ekonometria teorikoa eta ekonometria aplikatua.
+Lehenaren helburua datuen ikerketa eta bilakatze metodoak garatzea eta bere propietateak
+zehaztea da. Ekonometria aplikatua berriz, metodo hauek aplikatzean datza, praktikan inte-
+resgarriak diren arazoei erantzuteko.
+Kurtso honen helburuetariko bat, amaieran proiektu aplikatu bat egiteko gai izatea denez,
+ezinbestekoa da oinarrizko metodo eta erraminten ezagueran denbora dedikatzea, aplikazio
+praktiko egoki bat egiteko aldez aurreko betebeharra baita.
+1.3
+Ikerketa ekonometriko bat
+Gaur egun, etxean ordenagailu bat duen pertsona batek proiektu ekonometriko txiki bat
+egiteko gai da, ikerketa ekonometriko bateko ondorengo etapak burutuz 
+(Heij, De Boer,
+Franses, Kloek eta van Dijk (2004)):
+• Analisiaren helburua. Interesatzen zaiguna zehaztean datza eta horretarako erantzun
+nahi ditugun galderak zehazki planteatu behar dira. Adibidez, herri bateko etxe-
+merkatuaren egoera ikertu nahi bada, hurrengo galdera egin dezakegu:
+ zein da herrialde
+horretako etxebizitzen prezioa eta zeintzu faktorek eragiten dute prezioan? Ekonomia
+Teoria lagungarria da arazoa fokatzeko, zein aldagai tartekatzen diren eta zein den
+beraien arteko erlazioa zehazteko.
+• Ikerketarako nabariak diren datu estatistikoen bilketa. Aurreko adibidean erraza da e-
+txebizitzen prezioa, bere tamaina eta prezioan eragiten duten beste ezaugarrien datuak
+jasotzea 
+(ikusi 1 Taula). Ikerketaren emaitzak datuen kalitatearen arabera egongo dira.
+Hala ere, analisirako aipagarriak diren datuak lortzea ez da beti erraza izaten eta noski,
+arazoak izan ditzakegu:
+ datu baten egoneza, aldagai baten deﬁnizio aldaketa, datu
+nahikorik ez izatea edo aldagai baten informazioa ez izatea.
+• Ereduaren zehazpena eta estimazioa. Ekonomia Teorian eta lehen etapan planteatutako
+galderen loturatik eredu ekonometriko bat lortzen da. Adibide gisa, etxebizitza ba-
+ten batezbesteko prezioa (Y ) bere tamainaren 
+(X) menpean dagoela pentsa dezakegu.
+Teoria hau jasotzen duen eredu ekonometriko posible bat, hurrengo erlazio lineala izan
+daiteke:
+Y ∼ N (α + βX, σ2).
+Hau da, tamaina konkretu bat izanik 
+(100 m2 adibidez), etxebizitzen prezioa bere
+batezbestekoaren (α + β100) inguruan banatzen da σ2 bariantzako banaketa normal
+baten arabera. Eredua zehazterakoan aldagaien arteko erlazioaren funtzioa aukeratu
+dugu eta baita aldagai azalduaren 
+(Y ) izaera estokastikoa ere. Helburua, gure galderei
+erantzuteko gai den eredu nabari eta erabilgarri bat lortzea da.
+Hurrengo pausua analisirako interesgarriak diren banaketako parametro ezezagunak es-
+timatzea da, hau da, α eta β. Estimazioa, nabaria den informazio guztia eta datuak
+
+Gretl-en bidezko erregresio analisia
+7
+erabiltzean datza benetako parametro ezezagunen informazioa lortzeko. Estimazioko
+emaitzen interpretazioan garrantzi handikoa da parametroen balioak ez ditugula eza-
+gutzen kontuan izatea eta ondorio bezala “%95eko konﬁdantzarekin, erregaien gaineko
+zergen igoerak gasolina kontsumoan ez du eragiten”motako baieztapenak bakarrik egin
+ahal izango ditugula.
+Estimazio metodo asko daude. Bata edo bestearen hautaketa, aukeratutako eredu
+ekonometrikoaren propietateen arabera dago. Eredu oker baten hautapenak estima-
+zioen baliozkotasunean eragiten du. Kurtso honetan, praktikan erabili daitezken ba-
+liabide sinple eta errezenak erabiliko ditugu:
+ erregresio linealeko eredua eta Karratu
+Txikienen Arruntetako estimazio metodoa.
+• Ereduaren analisia. Aukeratutako eredua datuen portaera jasotzeko egokia den ikustea
+da. Adibidez, etxebizitzaren tamainak bere prezioan eragiten duela jasotzeko egokia
+den, bi aldagaien arteko erlazioa lineala zuzena den, etab. Eredua zuzen zehaztuta
+dagoen baloratzeko, hau da, egindako balizkoak baliodunak diren jakiteko, kontrastee-
+tan oinarrituko gara. Horrela, kontrasteetan lortutako emaitzetan oinarrituz, baliteke
+eredua aldatu beharra izatea.
+• Ereduaren aplikazioa. Eredu zuzena lortu ondoren, interesgarriak diren galderak eran-
+tzuteko erabiltzen da.
+Proiektu ekonometriko bat burutzeko ezinbestekoa da datuak lortzea eta analisi ekonome-
+trikorako software zehatz bat maneiatzea. Horregatik, jarraian, bi atal hauek sakonduko
+ditugu.
+1.4
+Datuak eta bere erabilera
+Nola lortzen dira datu ekonomikoak? Datu ekonomikoak ez dira kontrolatutako saiakun-
+tzetatik eratortzen. Ekonomilariek, Giza-
+Zientzia esparruko beste ikertzaile askok bezala,
+errealitateko behaketetatik lortzen dituzte datuak. Kontrolatutako saiakuntza batean ordea,
+ikertzaileak ikerketaren baldintza guztiak kontrolatzen ditu. Ongarrien eragina ikertzeko adi-
+bidez, kantitate desberdinak aplika ditzakegu lursailetan, hezetasuna edota landare bakoitzak
+jasotzen duen argi kopurua ere kontrolatuz. Gainera, saiakuntza hau nahi adina errepikatu
+daiteke baldintza berdinak mantenduz edo batzuk aldatuz, besteak beste, hezetasuna eta
+argi kopurua. Jakina denez, aukeratutako kantitate kopurua berdina izan arren, saiakuntza
+desberdinetan ez dugu emaitza berdina espero 
+(adibidez landareen hazkuntza), erabilitako
+hazia desberdina delako edo neurketa erroreak ematen direlako. Esperimentu hauen arteko
+diferentzia natural hauek, lagineko aldaketak bezala ezagutzen dira.
+Kontrolatutako saiakuntzetatik lortutako datuak 
+(laborategietan adibidez) Natur Zientzietan
+ohikoak izaten dira eta datu esperimental bezala ezagutzen dira. Gizartean emandako pro-
+zedura baten ondorioz lortutako datuak berriz, ez daude pertsona bat edo askogatik kontro-
+latuak eta datu ez esperimentalak bezala ezagutzen dira. Ezaugarri hau faktore garrantzitsu
+bat da ekonometriako tekniken garapenerako eta kontuan izan beharko da emaitzen interpre-
+tazioa egiterakoan.
+
+8
+1.Gaia: Gretl eta Ekonometria
+Datu ekonomikoak mota desberdinetakoak izan daitezke eta burutuko dugun analisian era-
+gina izango du. Lehen sailkapen batek aldagai koantitatibo eta koalitatiboen datuak bereizten
+ditu. Lehenengoek zenbakizko balioak hartzen dituzte, adibidez, etxebizitza baten prezioa
+eta tamaina. Bigarrengoak ordea, kategoria edo atributoetan agertzen dira, adibidez, genero,
+lanbidea edo etxebizitzaren egoera. Kurtso honetako lehen sei gaietan datu kuantitatiboe-
+tan oinarrituko gara eta zazpigarren gaian, faktore azaltzaileetariko bat kualitatiboa delaren
+kasua sakonduko dugu.
+Bigarren sailkapen bat denbora serietako datuak eta gurutzatutako datuak izango da. Le-
+henak, jarraikako denbora momentuetan jasotako behaketak dira 
+(normalean erregularrak),
+urteak, hiruhilabetealdiak, hilabeteak, etab.. Adibidez, Nazio-
+Kontabilitateko hiruhilabe-
+teko Barne Produktu Gordina 
+(BPG), Gizarte Segurantzako hileroko kidetza kopurua edo
+IBEX35-
+aren eguneroko balioa. Bigarrenak ordea, banako desberdinek denbora momentu
+batean hartzen dituzten behaketak dira, adibidez, Europar Elkarteko 
+(EE) herri bakoitzaren
+2004 urteko langabezia, populazioa, industria sektore bakoitzaren batezbesteko soldata 2005
+urtean edo iazko irailean familia multzo batek egindako gastua testu liburuetan. Posible da
+ere denbora serieko eta gurutzatutako datuen konbinazio bat izatea, adibidez, 2003-
+04 eta
+2004-
+05 ikasturteetan ekonometriako ikasleek lortutako kaliﬁkazioa. Denboran zehar inkesta
+egin duten banakoak berdinak direnean, adibidez langabezia tasa eta BPG 1990tik 2004 arte
+EEko 25 herrialdeetan, taula-
+datuak edo datu longitudinalak bezala ezagutzen dira.
+Kurtso honetan erabiliko ditugun teknikak, gurutzatutako datuak aztertzeko balio dute eta
+denborazko serieko datuetan ere aplikatu daitezke. Hala ere, askotan azken datu hauen
+ezaugarriak direla eta, teknika konplexuagoak erabili behar dira. Goi mailako teknika hauek
+kurtso honetatik kanpo gelditzen dira, oinarrizko tekniken erabilpenean oinarrituko garelako.
+Hirugarren sailkapen bat bateratzearen mailaren funtzioan ezartzen da. Horrela, datu mi-
+kroekonomikoak edo mikrodatuak izango ditugu. Hauek, banakoak, familia edo enpresa beza-
+lako agente ekonomikoen portaera jasotzen dute, adibidez, INEk prestatutako Populazio Akti-
+boko Inkesta http://www.ine.es/prodyser/
+micro epa.htm. Bestalde, datu makroekonomikoak
+edo makrodatuak ditugu. Hauek, banakako agenteen baterakuntzaren ondorioz sortutako
+herri, eskualde edo nazioei buruzko datuak dira, adibidez, Nazio-
+Kontabilitateko emaitzak.
+1.4.1
+Datuen jatorriak
+Askotan datuak bilatu eta biltzea ez da erraza izaten, batzuetan egoerari egokitzen diren
+datuak lortzea eta maneiatzea lan handia izaten baita. Hala ere, azken urteetan datuen
+bilketa asko hobetu da, batez ere erakunde askok bere datu-
+baseetan sartzen uzten dutelako
+World Wide Web 
+(WWW) orrian. Datu makroekonomikoak argitaratzen dituzten zenbait
+erakunde honakoak dira:
+• Euskal Estatistika Erakundea (EUSTAT): http://www.eustat.es.
+• Espainiako Bankoa: http://
+www.bde.es → Estad´ısticas. Besteak beste Bolet´ın es-
+tad´ıstico mensual eta Bolet´ın de coyuntura mensual.
+• Nazio Estatistika Erakundea (INE): http://www.ine.es → Inebase edo Banco tem-
+pus. Eskuragarri daude adibidez, Biztanleria Aktiboaren Inkestako emaitzak, Nazio
+
+Gretl-en bidezko erregresio analisia
+9
+Kontabilitatekoak eta Hileroko Aldizkarikoak. Gainera, estekaturik estatistika zerbi-
+tzuko beste web orri batzuk aurkitzen dira.
+• EUROSTAT. Europako Batzordeko Estatistika-
+bulegoa da eta estatu kideek jasotako
+datuak analizatzeaz eta baieztatzeaz arduratzen da. Eurost-
+aren betebeharra datuak
+bateratzea eta metodologia homogeneo bat erabiliz konparagarriak direla ziurtatzea da.
+Taula estatistikoak, estatistika-aldizkariak, informazio-aldizkariak, lan-
+paperak etab.,
+ondorengo helbidean lortu daitezke:
+http://europa.eu.int/comm/eurostat.
+• Ekonomia Lankidetza eta Garapenerako Antolakundea (ELGA): Bertan Nazioarte-
+ko Merkataritza argitalpeneneko zenbait serie eskuragarri daude.
+Bere web orria:
+http://www.oecd.org.
+• Nazioarteko Moneta Funtsa, NMF (Fondo Monetario Internacional, FMI):
+http://
+www.imf.org. Herrialde askotako datuak lortzeko bere Nazioarteko Finantza
+Estatistikak (hilekoa eta urtekoa) argitalpena kontsultatu daiteke.
+Ekonometriarako eskuliburu askok, argibide moduan testuan sakontzen diren datu-
+base bate-
+ko CD bat barneratzen dute. Kurtso honetan Ramanathan 
+(2002) liburuko datuak erabiliko
+ditugu gehienbat.
+1.4.2
+Software ekonometrikoa
+Ordenagailuen garapenak datu kopuru handi bat gordetzeko aukera eskeintzen du eta aldi
+berean, bere maneiua errazten du. Gaur egun, analisi ekonometriko bat burutzeko pake-
+te asko daude, jarraibide erraz batzuk erabiliz eragiketa konplexuak egitea posible izanik.
+Datuak papelean bakarrik eskuragarriak badira, datuak sartzeko, prestatzeko eta eragiketa
+errazak egiteko kalkulu-orriak 
+(adibidez EXCEL) erabili daitezke. Hala ere, orokorrean, pro-
+grama ekonometriko zehatzak erabiltzea komenigarri izaten da. Ekonometriako kurtsoetan
+ohikoenak honakoak dira:
+• Gretl. Allin Cottrellek 
+(Wake Forest Unibertsitatea) garatua. Software askea da eta
+erabiltzeko erraza: http :
+ \\gretl.sourcef orge.net orritik deskargatu daiteken gaztela-
+niako bertsio bat du. Orri honetan ere, Ekonometriako zenbait testu barneratzen dituen
+datu-base zabal bat dago erabilgarri, besteak beste, Ramanathan 
+(2002), Wooldridge
+(2003) eta Greene 
+(2003) eta Espainiako Bankua bezalako erakunde publiko batzuen
+datuak ere barneratzen ditu.
+• EViews. Quantitative Micro Softwareak garatuak. Analisi ekonometrikoko teknika as-
+ko
+biltzen
+ditu.
+Programaren
+informazioa
+jasotzeko
+web
+orria:
+http : \\www.eviews.com.
+• SHAZAM. British of Columbia Unibertsitateak 
+(Canada) garatua eta eredu ekonome-
+triko asko estimatzeko teknikak biltzen ditu. Informazio gehiago hurrengo web orrian
+lortu daiteke: http : \\shazam.econ.ubc.ca\.
+
+10
+1.Gaia: Gretl eta Ekonometria
+• RATS, Regression Analysis of Time Series-
+ren akronimoa da. Analisi ekonometriako-
+rako teknika ugari biltzen ditu, denborazko serieko ikerketan arduraldi berezia izanik.
+Bere web orria honakoa da: http : //www.estima.com
+• R, estatistikako eragiketa eta graﬁkoak egiteko software askea da. Lengoaia bat hau
+da exekuzio inguru bat, bertan komandaok idatzi eta exekutatzeko aukera ematen du.
+Bere web orria honakoa da: http : //www.r − project.org
+Kurtso honen helburuetariko bat, ikaslea programa ekonometrikoekin ohitzea da. Bere ba-
+kuntasuna eta ailegaerraztasuna kontuan izanik, kurtso honetan ikasleari Gretl erabiltzeko
+gomendatuko zaio. Horrela, ikasgai bakoitzean proposaturiko praktikak Gretlekin askatu be-
+harko ditu. Horretarako Gretl Web orrian PC batean instalatzeko argibideak ikusi daitezke:
+gretl−install.exe jaitsi eta exekutatu behar da. Ondoren, euskarazko bertsioa instalatzeko
+B Eranskinean dituzuen pausuak jarraitu.
+Beste datu-base batzuk http :
+ \\gretl.sourcef orge.net\gretl−data.html web orrian eskuratu
+daitezke. Bestalde, textbook datasets aukeran, jarraian azaltzen ditugun testuliburuetako
+aplikazioetan erabilitako datuak agertzen dira: Davidson eta Mackinnon 
+(2004), Gujarati
+(1997), Stock eta Watson (2003), Verbeek (2004) eta Wooldridge (2006).
+1.5
+Gretlerako sarrera
+Atal honetan, Gretl programarekin lehen hurbilketa izango dugu. Bertan, 1 Taulako datuak
+barneratuz datu-
+ﬁtxategi bat osatuko dugu eta analisi deskribatzaile bat egingo dugu.
+Fitxategiaren prestakuntza. Gretl exekutatzean hurrengo leihatila azaltzen da:
+1.2 Irudia: Gretl-eko pantaila nagusia
+Oraindik ez dugunez ﬁtxategirik kargatu, menu nagusiko aukera batzuk gris argi batean ager-
+tzen dira, erabilgarri ez baitaude. Praktika honetan analizatuko ditugun datuak ez daude
+
+Gretl-en bidezko erregresio analisia
+11
+Gretleko datu-basean sartuta eta beraz, ondorengo aukerara joango gara,
+Fitxategia → Datu-ﬁtxategi berria
+Programak eskatzen duen informazioa osatzen joango gara:
+• Behaketen kopurua, 1 taulan azaldu dugunez, 50 etxebizitza ditugu.
+• Nolako datuak ditugun. Gure adibidekoak gurutzatutakoak dira.
+• Aurreko pausua zuzen egin bada, datu multzoaren egitura baieztatuko dugu Aurrera
+eta Ados klikatuz. Nolako datuak diren azaltzen den lehiatila berreskuratu nahi bada,
+Atzera klikatu behar da, baina aukera honek ez du behaketa kopuruan izan den akatsa
+zuzentzen uzten.
+• Azken lehiatilan Bai klikatuko dugu datuak barneratzen hasi nahi badugu.
+• Ondorengo lehiatilan lehenengo aldagaiari ezarriko diogun izena jarriko dugu, adibidez,
+m2. Kontuz, ezin baitaiteke ˜
+n hizkia, tilde edota 15 karaktere baino gehiago erabili.
+Jarraian Ados klikatu eta kalkulu-
+orri bat irekiko da, pantailan honakoa azalduz:
+1.3 Irudia: Datuen edizioa
+m2 aldagaiaren datuak sartzeko, saguarekin dagokion gelaxkara joan 
+(adibidez lehenengora)
+eta saguko eskubiko teklari eman; 55 zifra tekleatu ondoren, intro zapalduko dugu. Datu
+bat sartzerakoan akats bat egiten badugu, adibidez bigarren behaketa 
+(59 m2) ez badugu
+sartu, ondorengo errenkadan jarri 
+(gure adibidean 60 m2) eta Behaketak →Erantsi behaketak
+klikatuz, errenkada txuri berri bat irekiko da aurrekoaren gainean. Gogoratu, lan saioko
+aldaketak gordetzeko Aplikatu klikatu behar dela.
+
+12
+1.Gaia: Gretl eta Ekonometria
+Aldagai gehiago erantsi ditzakegu kalkulu-
+orriko menuko Aldagaia →Gehitu aukerarekin.
+Adibidez, Erreforma izeneko aldagai berri bat sortuko dugu. Aldagai hau kualitatiboa denez,
+erreformatzeke = bai egoerari 0 balioa elkartuko diogu eta erreformatzeke = ez egoerari 1
+balioa. Datu guztiak sartu ondoren, Aplikatu klikatu eta kalkulu-
+orria itxiko dugu. Azken
+aldaketak ez baldin baditugu gorde, kalkulu-
+orria ixterakoan koadro berri bat azalduko da
+aldaketen berrespena eskatuz. Osatutako serieak pantailan horrela azalduko dira:
+1.4 Irudia: Datuen informazioa
+Komenigarria izaten da artxibo edo ﬁtxategi batean jadanik sartutako datuak gordetzea,
+menu nagusiko Fitxategia →Gorde datuak erabiliz. Hurrengo koadroan direktorioa erantsiko
+diogu eta datuen ﬁtxategiaren izena, adibidez, etxebizitzak. Datuak gdt luzapenarekin gorde-
+ko ditu eta hurrengo saio batean ﬁtxategia irekitzeko, ireki Gretl programa 
+(euskarazkoa) eta
+Ireki datuak aukeratu ondoren Erabiltzaile ﬁtxategia... hautatu eta nahi den datu-
+ﬁtxategia
+ireki1.
+Askotan, datuak EXCEL bezalako beste kalkulu-
+orri batean egoten dira gordeta. Adibidez,
+etxebizitzak.xls artxiboan, 1 Taulako m2 eta prezioa aldagaiak azaltzen dira. Horrela, Prezio
+aldagaiaren datuak Gretleko artxibora eranstea oso erraza da.
+• Konprobatu Gretleko kalkulu-orria beste datu batzuekin irekita ez dagoela.
+• Menu nagusiko Fitxategia →Erantsi datuak →Excel... erabiliz.
+• Eman etxebizitzak.xls EXCEL artxiboaren izena eta kokapena.
+• Datuak inportatu behar diren hasierako gelaxka zehaztu. Kasu honetan, prezioa alda-
+gaia B1 gelaxkan (izena dagoena) hasten da eta zutabea 2, errenkada 1 -
+tik inportatuko
+1Oharra: datu-
+ﬁtxategia bi aldiz klikatzen baduzue, orduan gaztelaniazko Gretl programa irekiko zaizue.
+
+Gretl-en bidezko erregresio analisia
+13
+ditugu datuak. Bestalde, m2 eta Prezioa aldagaiak eransteko, zutabea 1, errenkada 1-
+n
+hasiko ginateke. Ondoren datuak gurutzatutakoak direla jarri, aurrera egin eta Ados
+klikatu.
+Azkenik, datuen inportazioa ondo burutu den konprobatzeko, Datuak →Aukeratu guztia
+atalera joan eta kalkulu-
+orria aktibatuko dugu Datuak →Editatu balioak aukerarekin edota
+datuak pantailan agertuko dira Datuak →Erakutsi balioak, egin daiteke. Gure adibidean,
+ondorengo leihatila agertuko da:
+1.5 Irudia: Datuen erakuspena
+Azalpen oharrak. Datuak hurrengo batean erabiltzeko ﬁtxategi batean gordetzen direnean,
+egindako lanaren azalpen oharrak eranstea komenigarri izaten da. Gretlen informazio gehi-
+garria jartzeko posibilitatea dago. Informazio orokorra jartzeko:
+Datuak →Editatu informazioa aukeran, azalpen testua eransteko gelaxka bat irekitzen da eta
+bertan nahi dena idatzi dezakegu, adibidez: “Etxebizitzen prezioen analisia”.
+Informazio zehatzari dagokionez, aldagai bakoitzaren deskribapen labur bat jarri dezakegu
+aldagaiaren izenarekin batera, Etiketa deskribatzaile bezala agertuz. Adibide gisa, Erre-
+forma aldagaiaren informazio ohar bat jarriko dugu. Saguarekin aldagaia markatuko dugu
+eta Aldagaia →Editatu ezaugarriak aukera klikatu eta Deskribapena ataleko hurrengo gelax-
+kan 0 balioa etxebizitzak erreforma beharra du idatziko dugu. Azkenik, Ados klikatu
+ondorengo leihatilan agertzen den bezala.
+
+14
+1.Gaia: Gretl eta Ekonometria
+1.6 Irudia: Datuen ezaugarriak editatzen
+Etiketa deskribatzaileak erabilgarriak dira datuen jatorria ezagutzeko edo dagokien neurri
+unitateak jakiteko. Adibidez, Prezioa eta m2 aldagaiei ondorengo etiketak ezarriko dizkiegu:
+Ald. izena
+Deskribapena
+Graﬁkoan biztaratzeko izena
+Prezioa
+Etxebizitzen prezioa mila eurotan
+Prezioa (mila euro)
+m2
+Etxebizitzen tamaina metro karratutan
+Azalera (m2)
+Prozedura ongi egin bada, pantailan ondorengoa agertuko litzateke:
+1.7 Irudia: Datu-ﬁtxategiaren erakuspena
+Azkenik, Datuak →Irakurri informazioa aukerarekin datu multzoaren egituraren informazioa
+ikusi daiteke erantsitako aldagai azaltzaileekin batera.
+
+Gretl-en bidezko erregresio analisia
+15
+1.5.1
+Aldagai baten analisi deskribatzailea
+Ikerketa ekonometrikoek datu-
+base zabalak behar izaten dituzte. Lehen etapa batean, da-
+tuen ikuspegi orokor bat egin behar da, analisi deskribatzaile baten helburua datu multzoa
+laburtzea delarik, ikerketarako ezaugarri eta informazio nabariena ateratzeko. Lehendabizi
+aldagai bakoitzaren informazioa laburbilduko dugu eta ondoren, aldagaien arteko erlazioen
+irudiak jasoko ditugu. Horretarako, graﬁkoak eta estatistiko deskribatzaileak erabiltzen dira
+(ikusi Pe˜
+na eta Romo (1997)).
+Gretlen, aldagai baten analisi deskribatzailerako elementu nagusiak menu laguntzailean ager-
+tzen dira, aldagaiaren gainean saguko eskubiko tekla klikatuz edo menu nagusiko Aldagaia
+aukera klikatuz.
+Aldagai ekonomiko baten gurutzatutako datuak laburbiltzeko gehien erabiltzen den graﬁkoa
+histograma da, menu laguntzailean Maiztasun graﬁkoa aukeran agertzen delarik. Barra
+diagrama bat da, ardatz horizontalean aldagaien balioak tarteka banatuak agertzen direlarik.
+Prezioa aldagaiaren gainean saguko eskubiko tekla klikatuz eta Maiztasun graﬁkoa klikatuz,
+ondorengoa lortzen da:
+1.8 Irudia: Maiztasun erlatiboko histograma
+ 0
+ 0.05
+ 0.1
+ 0.15
+ 0.2
+ 0.25
+ 0.3
+ 0
+ 200
+ 400
+ 600
+ 800
+ 1000
+ 1200
+Maiztasun eralatiboa
+Prezioa
+Graﬁkoan klikatuz, menu laguntzaile batek irteten da eta aldaketak egitea posible da 
+(Edi-
+tatu) edo formato desberdinetan gordetzea 
+(postcript, pdf, etab.). Gretleko saioan zehar,
+Gorde ikono bezala saioan aukerarekin graﬁkoa gordetzen dugu eta honela, berriro berresku-
+ratu daiteke behean eskubialdean dagoen laugarren sinboloan 
+(saioaren ikono ikuspegia) eta
+gero Graﬁkoa 1 -ean klikatuz.
+
+16
+1.Gaia: Gretl eta Ekonometria
+1.9 Irudia: Ikonoen ikuspegia
+Histograman adierazitako maiztasun banaketak ikusteko, dagokion aldagaia markatu eta Al-
+dagaia →Maiztasunen graﬁkoa aukerara zuzenduko gara. Gure adibideko Prezioa aldagaiaren
+maiztasun banaketari dagokiona honakoa litzateke:
+1.2 Taula: Etxebizitzen prezioaren maiztasunak
+Prezioa -ren maiztasun banaketa, behaketa 1-50 tarte kopurua = 7,
+batezbestekoa = 489,858, D.T. = 237,416
+tartea
+erdiko pt
+maiztasuna
+erl.
+met.
+<
+230,23
+150,25
+6
+12,00%
+12,00% ****
+230,23 - 390,19
+310,21
+15
+30,00%
+42,00% **********
+390,19 - 550,15
+470,17
+9
+18,00%
+60,00% ******
+550,15 - 710,11
+630,13
+11
+22,00%
+82,00% *******
+710,11 - 870,06
+790,08
+6
+12,00%
+94,00% ****
+870,06 - 1030,0
+950,04
+1
+2,00%
+96,00%
+>= 1030,0
+1110,0
+2
+4,00%
+100,00% *
+Banaketa normala izatearen hipotesi hutsaren kontrastea:
+Chi-karratua(2) = 6,825 p-balioarekin 0,03296
+
+Gretl-en bidezko erregresio analisia
+17
+Lehen zutabean Prezioa aldagaiaren balioen tarteak agertzen dira eta bigarrenean, tartea-
+ren erdiko puntua edo tartearen marka. Hirugarren zutabean maiztasunak agertzen dira.
+Hauek tarte baten maiztasun absolutuak dira, hau da, tarte horretako prezioa duten
+etxebizitzen kopurua. Adibidez, 1 Taulan 230,23 eta 390,190 euro tarteko prezioa duten
+etxebizitzak 15 dira. Laugarren zutabean 
+(erl.) tarte bakoitzaren maiztasun erlatiboak
+agertzen dira, hau da, tarte bakoitzaren zatikia. Maiztasun hauekin osatu da aurreko his-
+tograma. Adibidez, 
+[230, 23 ; 390, 190) tarteko 15 etxebizitzek, etxebizitza guztien %30a
+osatzen dutenez eta tarte guztien zabalera berdina denez, histogramaren bigarren zutabearen
+altuera 0,3 izango da. Tarte baten maiztasun erlatiboari, aurreko tarteena gehitzen badiogu,
+tarte horretarainoko bateratutako maiztasun metatua lortuko genuke, balio hauek bost-
+garren zutabean agertzen direlarik 
+(met.). Horrela, ikertzen ari garen adibideko etxebizitza
+multzoan, %42 etxebizitzek 390190 euro baino prezio baxuagoa dute.
+Aldagai baten zenbakizko deskribapenari dagokionez, aldagaian ezarriz saguko eskubiko bo-
+toia klikatuz Estatistiko deskribatzaileak aukera agertzen da edo menu nagusiko Aldagaia
+→Estatistikoen laburpena aukeran. Prezioa aldagaiari dagokiona hurrengo taulan agertzen
+da:
+1.3 Taula: Prezio aldagaiaren estatistiko nagusiak
+Estatistikoen laburpena, 1 - 50 behaketak erabiliz
+’Prezioa’ aldagaiarentzat (50 behaketa baliagarraiak)
+Batezbestekoa
+489,86
+Mediana
+466,68
+Minimoa
+150,25
+Maximoa
+1110,0
+Desbideratze tipikoa
+237,42
+Aldakuntza Koefizientea (A.K.)
+0,48466
+Asimetria
+0,68052
+Kurtosis soberakina
+-0,19251
+Leihatila honek menu berri bat du. Kopiatu aukerarekin taula hau, RTF 
+(MS Word), LateX
+edo pantailan agertzen den bezala (Testu arrunta) inportatu daiteke.
+Histograman jasotzen diren banaketen ezaugarri batzuk, estatistiko deskribatzaile hauetan
+laburbiltzen dira. Batezbestekoa eta mediana lekuzko neurriak dira, desbideratze tipikoa
+eta aldakuntza koeﬁzientea sakabanatze neurriak dira, eta azkenik, asimetria eta kurtosis
+soberakina formaren neurriak dira.
+Lekuzko neurriek puntu multzoen erdigunearen ideia ematen dute. Batezbestekoa, datu
+guztien batura eta behaketa kopuruaren 
+(laginaren tamaina) zatidura da. Aldagai batek N
+behaketa baldin baditu 
+(x1, x2, . . . , xN ), batezbestekoa edo lehen ordenako lagin momentua,
+
+18
+1.Gaia: Gretl eta Ekonometria
+horrela deﬁnitzen da:
+¯
+x =
+x1 + x2 + . . . + xN
+N
+=
+1
+N
+N
+i=1
+xi
+(1.1)
+Batezbestekoa muturreko balioekin oso aldakorra da, hau da, behaketa anomaloek edo ezohi-
+koek eragin handia dute batezbestekoak hartuko duen balioaren gain. Adibidez, azken etxebi-
+zitzak prezio oso handia izango balu, 1051 mila euro izan beharrean 1350 mila euro adibidez,
+orduan batezbesteko prezioa ia 6000 eurotan handituko litzateke, 495,84 mila eurotan koka-
+tuz.
+Orokorrean, behaketa gutxiren aldakuntzekin 
+(nahiz eta hauek oso handiak izan) asko alda-
+tzen ez diren estatistikoak interesatzen zaizkigu. Propietate hau betetzen duen erdiguneko
+balioa mediana da. Datuak txikitik handira ordenatu ondoren erdiko posizioan gelditzen den
+balioa mediana da. Adibidean
+M ediana = 466, 6845 mila euro
+Lekuzko neurriak datu multzoaren balio adierazgarriak dira baina dagokien errore-
+neurri
+batekin osatu behar izaten dira. Balio bakar honen adierazgarritasuna baloratzeko sa-
+kabanatze edo dispertsio neurriak erabiltzen dira, datuak batezbestekoarekiko hurbil
+edo urrun dauden adieraziko baitigute. Neurri sinple bat ibilbidea da, hau da, datuek har-
+tzen duten balio maximo eta minimoaren arteko diferentzia.
+Ibilbidea = Maximoa - Minimoa
+Gure adibidean, prezioen ibilbidea 1110-
+150,25 = 959,75 mila eurokoa da. Neurri honek,
+muturreko balioak bakarrik hartzen ditu kontuan. Ondorengo neurriak aldiz, datu guztiekin
+kalkulatzen dira. Hasteko, desbideratze tipikoa dugu, bariantzaren erro positiboa delarik.
+Datu multzo baten bariantza, S∗2
+x , datuek batezbestekoarekiko duten desbideratzeen karra-
+tuen batezbestekoa da:
+S∗2
+x =
+(x1 − ¯x)2 + (x2 − ¯x)2 + . . . + (xN − ¯x)2
+N − 1
+=
+1
+N − 1
+N
+i=1
+(xi − ¯x)2
+(1.2)
+Beraz, desbideratze tipikoa, S∗x, horrela deﬁnituko genuke:
+S∗x = +
+1
+N − 1
+N
+i=1
+(xi − ¯x)2
+(1.3)
+Bariantza eta desbideratze tipikoa, batezbestekoarekiko sakabanatzearen neurriak dira. Bere
+balio minimoa zero da eta sakabanatzea minimo hau lortzen denean behaketa guztiek ba-
+lio berdina hartzen dutelako izaten da. Desbideratze tipikoaren abantaila, bariantzarekin
+konparatuz, hasierako aldagaiaren neurri unitate berdina izango duela da.
+Orokorrean, S∗x zerotik gero eta hurbilago badago, datuak batezbestekotik hurbilago edo
+kontzentratuago egongo dira eta beraz, batezbestekoa, behaketa multzoaren adierazgarriagoa
+izango da. Hala ere, neurri unitateen menpean dagoenez, ez da erraza izaten bi datu multzoen
+adierazgarritasunak konparatzea. Horregatik, Aldakuntza Koeﬁzientea 
+(A.K.) kalkulatzea
+
+Gretl-en bidezko erregresio analisia
+19
+komenigarri izaten da. Koeﬁziente hau sakabanatzearen neurri bat da eta ez dago neurri
+unitateen menpean. Desbideratze tipikoa eta batezbestekoaren 
+(balio absolutuetan) arteko
+zatiketa bezala deﬁnitzen da. Hau da,
+A.K. =
+S∗x
+|¯
+x|
+¯
+x = 0 bada.
+Gure adibidean, prezioen aldakuntza koeﬁzientea A.K. = 0, 485 < 1 denez, batezbestekoa
+datu multzoaren adierazgarri dela esango genuke.
+Batezbestekoa eta desbideratze tipikoa estatistiko ezagunenak dira, baina normalean forma-
+ren neurriekin batera azaltzen dira, hauek histogramaren beste ezaugarri batzuk jasotzen
+baitituzte. Banaketa baten asimetriak, datuak batezbestekoaren inguruan simetrikoki azal-
+tzen diren edo ez neurtzen du. Asimetria koeﬁzientea 
+(ASIM) horrela deﬁnitzen da:
+Asimetria koeﬁzientea =
+1
+N
+N
+i=1
+xi − ¯x
+Sx
+3
+=
+1
+N
+N
+i=1(xi − ¯
+x)3
+S3x
+(1.4)
+1.10 Irudia: Asimetria motak
+ 0
+ 0.05
+ 0.1
+ 0.15
+ 0.2
+ 0.25
+ 0
+ 5
+ 10
+ 15
+ 20
+ 25
+Asimetra positiva
+ 0
+ 0.02
+ 0.04
+ 0.06
+ 0.08
+ 0.1
+ 0.12
+ 0.14
+ 0.16
+ 0.18
+ 0.2
+-2
+-1
+ 0
+ 1
+ 2
+ 3
+Asimetra negativa 
+non Sx =
+(N − 1)/N S∗x =
+1
+N
+N
+i=1(xi − ¯
+x)2 den. Asimetria koeﬁzientea zero izango da
+datuak batezbestekoaren inguruan simetrikoki banatzen badira, positiboa eskubiko buztana
+(batezbestekoa baino handiagoak diren behaketei dagokiona) ezkerrekoa baino luzeagoa bada
+eta negatiboa bestelako kasuan. Etxebizitzen prezioen adibidean, asimetria positiboa denez,
+batezbestekoa mediana baino handiagoa irteten da, hau da, ¯
+x > M ediana(X)
+Kurtosis koeﬁzienteak banaketaren zorroztasuna jasotzen du eta horrela deﬁnitzen da:
+Kurtosis =
+1
+N
+N
+i=1
+xi − ¯x
+Sx
+4
+=
+1
+N
+N
+i=1(xi − ¯
+x)4
+S4x
+Koeﬁziente honek buztanetako behaketa kopurua neurtzen du batezbestekoaren inguruan
+direnekin konparatuz. Erreferentzia neurria hiru da, berau banaketa normal baten kurtosis
+koeﬁzientearen balioa baita. Hortaz soberakina honakoa da:
+Kurtosis soberakina =
+1/N
+N
+i=1(xi − ¯
+x)4
+Sx
+− 3
+(1.5)
+Soberakin positibo batek, buztanetan banaketa normal batek baino behaketa gehiago edo pisu
+gehiago duela esan nahi du eta balio negatibo batek berriz, behaketa gutxiago buztanetan.
+Aldagai multzo bat dugunean berriz, aldagai guztien estatistiko deskribatzaileak jasotzen
+dituen taula lortu daiteke Gretlekin. Hau egiteko bi era daude:
+
+20
+1.Gaia: Gretl eta Ekonometria
+1. Aldagaiak aukeratu saguaren ezkerreko botoia eta Control tekla batera klikatuz.
+2. Ikusi →Estatistikoen laburpena aukerara joan edo aukeratutako aldagaietan saguaren
+eskubiko botoia klikatuz agertzen den menu laguntzaileko Estatistiko deskribatzaileak
+klikatu.
+Horrela, 1 Taulako aldagaien datuekin, ondorengo estatistiko deskribatzaileak lortzen dira:
+1.4 Taula: Aldagaien estatistiko nagusiak
+Estatistikoen laburpena, 1 - 50 behaketak erabiliz
+Aldagaia
+BATEZ.
+MEDIANA
+MIN
+MAX
+m2
+127,34
+105,00
+55,000
+250,00
+Errefor
+0,62000
+1,0000
+0,00000
+1,0000
+Prezioa
+489,86
+466,68
+150,25
+1110,0
+Aldagaia
+D.T.
+A.K.
+ASIM
+KURT.SOB
+m2
+59,048
+0,46370
+0,67091
+-0,77954
+Errefor
+0,49031
+0,79083
+-0,49445
+-1,7555
+Prezioa
+237,42
+0,48466
+0,68052
+-0,19251
+non BATEZ. batezbestekoa den, D.T. desbideratze tipikoa den, MIN aldagaiak hartzen duen
+balio minimoa, MAX, berriz maximoa eta KURT.SOB kurtosis soberakina den. Emaitza
+hauek interpretatzerakoan Errefor aldagaia kuantitatibo jarraia ez dela kontuan hartu behar
+da, izatez aldagai koalitatiboa baita zeren 1 edo 0 balioak bakarrik hartzen baititu.
+1.5.2
+Aldagaien arteko erlazioak
+Aztertzen ditugun aldagaietatik bi kuantitatiboak baldin badira, beraien arteko erlazioa ana-
+lizatzea komeni da. Orokorrean, bi 
+(edo gehiago) aldagai ikertzerakoan, bien arteko kau-
+salitate erlazioa aztertu daiteke. Etxebizitza baten prezioa bere tamainaren ondorioa dela
+pentsatu dezakegu, baina ez da kontrakoa ematen. Eragina sortarazten duen aldagaiari 
+(x),
+azaltzailea edo exogenoa deituko diogu eta eragina jasotzen duenari berriz 
+(y) azaldua edo
+endogenoa. Bi aldagai hauen arteko erlazioa graﬁkoen bitartez aztertu daiteke edo zenbakien
+bitartez, koerlazio koeﬁzientea edo erregresio zuzena kalkulatuz. Aldagai multzo baten analisi
+deskribatzailerako elementu guzti hauek Gretleko Ikusi aukeran agertzen dira.
+Adierazpen graﬁkoa. Bi aldagaien arteko erlazioaren ideia bat sakabanatze diagramak scat-
+terplot-ak eman diezaguke, planoan 
+(xi, yi), i = 1, . . . N puntu guztiak adieraziz: aldagai bat
+
+Gretl-en bidezko erregresio analisia
+21
+1.11 Irudia: X-Y graﬁkoa
+ 100
+ 200
+ 300
+ 400
+ 500
+ 600
+ 700
+ 800
+ 900
+ 1000
+ 1100
+ 1200
+ 50
+ 100
+ 150
+ 200
+ 250
+Prezioa
+m2
+Prezioa versus m2 (karratu txikienen doikuntzarekin)
+Y = 44,9 + 3,49X
+(x) ardatz horizontalean adierazten da eta beste aldagaia 
+(y) ordea, jatorri ardatzean. Adi-
+bidez, Gretl erabiliz bigarren orrialdeko diagrama lortzeko 
+(prezioa vs tamaina), jarraitu
+beharreko pausuak honakoak dira:
+• Ikusi →Graﬁkoak →X-
+Y graﬁkoa eta deﬁnitu graﬁkoa lehiatilan ondorengoa markatu:
+X-ardatzaren aldagaiak
+Aukeratu −> m2
+Y-ardatzaren aldagaia
+Gehitu −> Prezioa
+• Beste aukera bat Prezioa eta m2 aldagaiak aukeratzea da eta saguko eskubiko tekla
+klikatuz, zehazki X-Y graﬁkoa. Hurrengo kaxan X-
+ardatzaren aldagaia aukeratzen da,
+hau da m2.
+Klikatzean ondorengo graﬁkoa agertzen da:
+Graﬁko honetan, puntu hodeiaz gain, erlazioa laburbiltzen duen zuzena ageri da. Gure
+adibidean garbi ikusten da prezioa eta tamainaren arteko erlazio lineal zuzena.
+Graﬁkoan klikatuz gero, menu laguntzaile bat agertzen da eta ondorengoa egiteko erabili
+daiteke:
+• Graﬁkoa esportatu 
+(formato desberdinetara egiteko aukera egonik), Gorde Windows
+metaﬁtxategia (EMF) bezala . . . , PNG, postcript (EPS) . . . eginez.
+• Gorde arbelan aukeran, graﬁkoa memorian gordetzen da ondoren beste ﬁtxategi batera
+esportatzeko.
+• Gretleko saioan ﬁtxategia gorde, Gorde ikono bezala saioan eginda.
+• Fitxategian aldaketak egin daitezke Editatu erabiliz. Graﬁkoaren izenburua aldatze-
+ko Nagusia aukeratu. Bestelako aldaketen artean letra mota eta tamaina, zuzena edo
+
+22
+1.Gaia: Gretl eta Ekonometria
+puntuen kolorea, adierazitako aldagaien testu azalgarria edo egindako erregresio zu-
+zena kentzea daude. Ardatzen eskala eta azalpena X-ardatza eta Y-ardatza-
+n aldatu
+daitezke. Datuen adierazpena Lerroak aukeran kontrolatzen da 
+(zuzen edo puntu des-
+berdinak) eta baita bere eskala eta aldagaien azalpenak. Etiketak aukerarekin, graﬁ-
+koan testua erantsi daiteke eta Irteera ﬁtxategia aukeran, graﬁkoa gordetzeko formato
+desberdinak agertzen dira.
+1.12 Irudia: Sakabanatze diagrama
+Sakabanatze graﬁkoak, aldagaien artean izan daiteken erlazioa 
+(lineala edo ez) nolakoa den
+bereizten uzten digu. Bi aldagaien artean erlazio lineal zuzena edo positiboa dagoela
+esango dugu, x handitzean y-ren batezbesteko balioa ere handitzen denean 
+(1.12 irudiko
+b graﬁkoa). Bi aldagaien artean alderantzizko erlazio lineala edo negatiboa dagoela
+esango dugu, x handitzean y-ren batezbesteko balioa murrizten denean 
+(c graﬁkoa).
+Kobariantza eta koerlazioa. Kobariantza bi aldagaien arteko erlazio linealaren neurri bat
+da. Sxy-gatik adierazten da eta horrela kalkulatzen:
+Sxy = kob(x, y) =
+1
+N
+N
+i=1
+(xi − ¯x)(yi − ¯y)
+non ¯
+x eta ¯
+y, aldagaien batezbesteko aritmetikoak diren. Kobariantza aldagaien neurri uni-
+tateen menpean dagoenez, neurri unitate desberdinetan adierazitako aldagai bikoteen arteko
+erlazioak ezin dira konparatu. Kasu hauetan, x eta y aldagaien arteko koerlazio koeﬁziente
+lineala kalkulatzen da:
+
+Gretl-en bidezko erregresio analisia
+23
+rxy = koer(x, y) =
+Sxy
+S∗x S∗y
+=
+N
+i=1(xi − ¯
+x)(yi − ¯y)
+N
+i=1(xi − ¯
+x)2
+N
+i=1(yi − ¯
+y)2
+Koerlazio koeﬁzienteak eta kobariantzak ikur berdina dute:
+ positiboak dira aldagaien arteko
+erlazioa zuzena bada 
+(1.12 irudiko b graﬁkoa), negatiboa alderantzizko erlazioa bada (1.12
+irudiko c graﬁkoa) eta zero izango da x eta y independenteak badira 
+(a graﬁkoa) edo erlazioa
+izanik, lineala ez bada 
+(d graﬁkoa). Hartzen duten balioa ez dago aldagaien ordenaren arabe-
+ra, hau da, Sxy = Syx eta rxy = ryx, ezta ere neurri unitateen menpean zeren 
+(−1 ≤ rxy ≤ 1)
+ematen baita. Koerlazio koeﬁzientea balio absolutuan bat bada, aldagaiak linealki zehazki
+erlazionatzen dira eta datuak lerro baten gainean egongo dira.
+Gretlen interesatzen zaizkigun aldagaiak markatu eta Ikusi →Koerlazio matrizea aukerak
+taula edo matrizea eskeintzen du, ﬁtxategiko aldagaiak bikoteka duten koerlazio koeﬁzienteak
+adieraziz. Etxebizitzen datuekin lortutako emaitzak hauek dira:
+1.5 Taula: Aldagaien koerlazio matrizea
+Koerlazio Koefizienteak, 1 - 50 behaketak erabiliz
+%5eko esanguratasuna (alde bikoa) = 0,2787
+n = 50 -rentzat
+m2
+Errefor
+Prezioa
+1,0000
+0,0440
+0,8690
+m2
+1,0000
+0,2983
+Errefor
+1,0000
+Prezioa
+Prezioak beste aldagaiekin duen koerlazio koeﬁzientea lehenengo errenkadan eta hirugarren
+zutabean agertzen da. Honela prezioa tamaina aldagaien arteko koerlazioa rPrezioa,m2 =
+0, 869 da, aldagaien arteko erlazio lineala zuzena eta sakona dela adieraziz. Koeﬁziente hau
+aldagai kuantitatiboen artean bakarrik deﬁnitzen denez, ez dugu Erreforma aldagaiarekin
+duen koerlazioa interpretatuko.
+
+24
+1.Gaia: Gretl eta Ekonometria
+Bibliograﬁa
+Davidson, D. eta J. Mackinnon 
+(2004), Econometric Theory and Methods, Oxford Uni-
+versity Press, New York.
+Greene, W. (2008), Econometric Analysis, 6, ed., Prentice-Hall, New Jersey.
+Gujarati, D. (1997), Econometr´ıa b´asica, 4. ed., McGraw-Hill, M´exico.
+Heij, C., de Boer, P., Frances, P., Kloek, T. eta H. Van Dijk 
+(2004), Econometric
+Methods with Applications in Business and Economics, Oxford University Press, Oxford.
+Pe˜
+na, D. eta J. Romo 
+(1997), Introducci´on a la Estad´ıstica para las Ciencias Sociales,
+McGraw-Hill, Madrid.
+Ramanathan, R. 
+(2002), Introductory Econometrics with Applications, 5. ed., South-
+Western, Ohio.
+Stock, J. eta M. Watson (2003), Introduction to Econometrics, Addison-
+Wesley, Boston.
+Verbeek, M. 
+(2004), A Guide to Modern Econometrics, 2. ed., John Wiley, England.
+Wooldridge, J. M. 
+(2003), Introductory Econometrics. A Modern Approach, 2. ed., South-
+Western, Ohio.

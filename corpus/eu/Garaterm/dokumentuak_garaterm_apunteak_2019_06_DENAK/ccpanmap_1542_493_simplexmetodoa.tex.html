@@ -1,0 +1,860 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>Original file was 1542_493_simplexmetodoa.tex.tmp4.tex</TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 3.4  (Unix)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="0;0">
+	<META NAME="DESCRIPTION" CONTENT="Created using latex2rtf 2.3.1 r1217 (released Oct 04 2012) on Fri Jul  5 11:37:08 2013">
+	<META NAME="SDENDNOTE" CONTENT="ARABIC">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.53in 11.04in; margin-right: 1.28in; margin-top: 1.33in; margin-bottom: 0.79in }
+		P { margin-bottom: 0.08in; font-family: "Times New Roman", serif; font-size: 10pt; text-align: justify }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="" DIR="LTR" STYLE="border: none; padding: 0in">
+<P ALIGN=CENTER STYLE="margin-top: 0.33in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">2<B>Simplex
+metodoa</B> </SPAN></SPAN></FONT></FONT></FONT>
+</P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Programazio
+linealeko problemak ebazteko prozedura edo metodo algebraikoa.</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Demagun
+hurrengo problema: </SPAN></SPAN></FONT></FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Grafikoki
+ebatziz:</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">dtbpF3.8156in3.5743in0ptFigurelanguage
+&quot;Scientific Word&quot;;type &quot;GRAPHIC&quot;;maintain-aspect-ratio
+TRUE;display &quot;USEDEF&quot;;valid\s\do5(<FONT SIZE=1 STYLE="font-size: 8pt">f</FONT>)ile
+&quot;T&quot;;width 3.8156in;height 3.5743in;depth 0pt;original-width
+6.314in;original-height 5.9119in;cropleft &quot;0&quot;;croptop
+&quot;1&quot;;cropright &quot;1&quot;;cropbottom &quot;0&quot;;tempfilename
+’IOXAK802.wmf’;tempfile-properties &quot;XPR&quot;;</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Soluzio
+hoberena: (3,2)</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Balio
+hoberena: 28</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Orain
+simplex metodoarekin hasteko modu estandarrean idatziko dugu:</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">1.3<B>Era
+estandarra</B></SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Problema
+modu estandarrean idazten dugu bertako murrizketa guztiak, aldagaien
+ez negatibotasuna ezik, berdintza bihurtzen ditugunean. Hau lortzeko
+<I>lasaiera aldagaiak</I> erabiltzen ditugu.</SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Ikus
+dezagun grafikoki honen esanahia:</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">dtbpF3.8052in3.3658in0ptFigurelanguage
+&quot;Scientific Word&quot;;type &quot;GRAPHIC&quot;;maintain-aspect-ratio
+TRUE;display &quot;USEDEF&quot;;valid\s\do5(<FONT SIZE=1 STYLE="font-size: 8pt">f</FONT>)ile
+&quot;T&quot;;width 3.8052in;height 3.3658in;depth 0pt;original-width
+6.2967in;original-height 5.5625in;cropleft &quot;0&quot;;croptop
+&quot;1&quot;;cropright &quot;1&quot;;cropbottom &quot;0&quot;;tempfilename
+’IOYO5M02.wmf’;tempfile-properties &quot;XPR&quot;;</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">1.3<B>Oinarrizko
+soluzio egingarriak</B></SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.17in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Ikusten
+dugunez, bertan ekuazio linealetako sistema agertzen zaigu.</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Sistema
+hau matrizialki idatz dezakegu:</SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">	</SPAN></SPAN></FONT></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Laburrago,
+lehenengo matrizeari <I>A</I> deituta eta eskumako terminoak jasotzen
+duenari <B>b, </B><I>A</I><B>x=b </B>idatz dezakegu. Horrela,
+programazio linealeko problemaren soluzio egingarriak <I>A</I><B>x=b
+</B>ekuazio linealetako sistemaren soluzio izan behar dute. Adibidez
+(0,0) problema linealaren soluzio egingarria sitemaren hurrengo
+soluzioa izango da: (0,0,8,5,8).</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Baina
+kontuz, ekuazio linealetako sistemaren soluzio guztiak ez dira
+soluzio egingarri. Adibidez (0,8,−8,−3,0) <I>A</I><B>x=b
+</B>sistemaren soluzio izanik<B> </B>ez da programazio linealeko
+problemaren soluzio egingarria (ohartu aldagai guztiak ez negatiboak
+izan behar dutela).</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Goazen
+orain sistema arretaz aztertzea. Ikusten dugunez <I>A</I><B>x=b
+</B>sistema bateragarria da, heina(<I>A</I>)= murrizketa kopurua =
+heina(<I>A</I>:<B>b</B>)=3 betetzen baita. Gainera, aldagai kopurua
+(5) heina edo murrizketa kopurua (3) baino handiagoa denez, sistema
+bateragarri indeterminatua dugu. Horregatik edozein bi aldagaiei zero
+balioa ematen badiegu beste hiruren balioa erabakita dago.</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Hau
+guztia matrizialki idaztera goaz.</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Hasierako
+<I>A</I><B>x</B>=<B>b </B>sistema hurrengoa da:</SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">eta
+ zutabe matrizeak hartuta (ohartu  matrizeak  aldagaiaren
+koefizienteak ekuazio linealetako sisteman jasotzen dituela) hurrengo
+modura ere idatz daiteke:</SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Bi
+aldagaiei zero balioa ematen badiegu sistema beste modura idazten
+dugu. Adibidez,  eta  zero egiten baditugu aurreko sistema horrela
+idatz daiteke:</SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">edo
+</SPAN></SPAN></FONT></FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Ohartu
+bi aldagai zero egiterakoan hauei dagozkien zutabe bektoreak <I>A</I>-tik
+kentzen ditugula eta besteekin -ko oinarri bat osatzen dugula. Hain
+zuzen horregatik zero balioa hartzen duten aldagaiak <I>ez oinarrizko
+aldagaiak</I> deitzen ditugu eta sistema betetzeko balioa hartuko
+dutenei <I>oinarrizko aldagaiak, </I>hauei elkartutako koefizienteen
+bektore zutabeek -ko oinarri bat osatzen baitute.</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Testuinguru
+honetan, modu honetan (bi aldagai zero eginez) lortutako <I>A</I><B>x=b
+</B>ekuazio linealetako sistemaren soluzioa, oinarrizko soluzioa
+deitzen dugu eta aldagai guztiak ez negatiboak badira <B>oinarrizko
+soluzio egingarria</B>. Orain gure problemaren oinarrizko soluzio
+egingarri guztiak lortuko ditugu:</SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.04in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">	</SPAN></SPAN></FONT></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">hau
+da, oinarrizko soluzio egingarria <FONT FACE="STIXGeneral">⟺</FONT><I>X</I>-en,
+soluzio egingarrien multzoaren, erpin.</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Aurretik
+ikusitakoaren arabera, programazio linealeko problemak soluzioa badu,
+hauetako bat gutxienez erpin bat izango da, hau da oraingo hitzetan,
+berari elkartutako oinarrizko soluzio egingarria. Simplex metodoa
+oinarrizko soluzio egingarri hau bilatzeko prozedura bat da.
+Horretarako oinarrizko soluzio egingarri batetik abiatuta helburu
+funtzioa hobetuko duen beste batera mugitzen da eta hobetezerik ez
+duenean bilaketa prozesua amaitu egiten da, soluzio hoberena lortu
+baitu. Hau da, erpin batetik bestera mugitzen da soluzio bila.</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Hau
+lortzeko taulak erabiliko ditu. Oinarrizko soluzio egingarri batetik
+bestera joateko taula batetik beste batera pasako da. Hau nola egiten
+den ikusiko dugu orain:</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-top: 0.04in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><I>A</I><B>x=b
+</B>ekuazio linealetako sistemaren oinarrizko soluzio egingarri
+batetik abiatuko gara. Adibidez . Orain berari elkartutako taula
+osatuko dugu. Oinarrizko soluzio honi elkartutako -ko oinarria  da.
+Ohartu oinarri hau hain zuzen kanonikoa dela. Simplex metodoan
+erabiltzen diren taulak bektore zutabeen oinarriarekoko koordenatuak
+jasotzen ditu, hauekin informazio gehigarria lortzeko. Goazen hortaz
+zutabe bektoreen koordenatuak  oinarri kanonikoarekiko lortzea:<FONT SIZE=3>			</FONT></SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>			</FONT></SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>			</FONT></SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>			</FONT></SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>			</FONT></SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">hau
+da</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<BR>
+</P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Eta
+horrela  eta  hain zuzen oinarri kanonikoa hartu dugunez
+koefizienteak horiexek dira. -ren koefizienteak oinarri
+kanonikoarekiko  eta </SPAN></SPAN></FONT></FONT>
+</P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Modu
+berdinean <B>b</B> bektorea ere hauen konbinazio lineal moduan idatz
+daiteke</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><B>b=</B>
+eta oinarri kanonikoarekiko koefizienteak:</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">
+<FONT SIZE=2>eta </SPAN></SPAN></FONT></FONT>
+</P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Koefiziente
+hauekin taula bat osatuko dugu:</SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Taula
+hau  oinarrizko soluzio egingarriari elkartutakoa da. Beste batzuetan
+horrela agertzen da</SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Orain
+prozedurak hurrengo galdera egiten du:  oinarrizko soluzio
+egingarriak helburu funtzioan ematen digun balioa hobe daiteke?  Guk
+garbi ikusten dugu hori, 0 lortzen baitugu. Orduan beste oinarrizko
+soluzio egingarri (erpin) batera joan beharko dugu, baina zein
+bestera?  nola aztertuko dugu hau? </SPAN></SPAN></FONT></FONT>
+</P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Beste
+modu batera galdetzen ari garena hurrengoa da: zein aldagai bihurtuko
+da oinarrizko (oinarrian sartu) eta zein ez oinarrizko (oinarritik
+irten)? </SPAN></SPAN></FONT></FONT>
+</P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Goazen
+hastera zein bihurtuko den oinarrizko galderari erantzuten.  edo 
+izango da. Ohartu, soluzio horretan aldagai ez oinarrizkoak (zero
+balioa hartzen dutenak)  eta  direla eta oinarrizkoak   eta </SPAN></SPAN></FONT></FONT>
+</P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-top: 0.04in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">
+<FONT SIZE=2>hartzen badugu bere ekarpena helburu funtzioan 6-koa da.
+Hau  idatziko dugu. Baina -etik unitate bat sartzea -n bat galtzea
+da, -n beste bat eta -n bi. Honi, oinarrizko aldagai bakoitzaren
+ekarpena kontuan hartuta,  sartzearen kostua unitateko dei
+diezaiokegu eta  adierazi. Hain zuzenHorrela  sartzen badugu bere
+ekarpen garbia unitateko  izango da (0−6=−6)Informazio hau taula
+prestatzen bada zuzenenean lan eginda lor dezakegu:<FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><B>b</B>-ri
+dagokion laukitxo hori aztertzen ari garen oinarrizko soluzio
+egingarriak helburu funtzioan ematen duen balioa jasotzeko erabiltzen
+dugu.</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Horrela
+ekarpen garbi txikiena duenari emango diogu sarrera eta  adieraziko
+dugu ( <I>j</I> ez oinarrizko aldagaien indizea).</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><B><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">oharrak:</SPAN></SPAN></B></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">1.
+ (<I>j</I> ez oinarrizko indize guztietako) bada orduan programazio
+linealeko problemaren soluzio hoberena lortu dugu eta ez dugu aurrera
+jarraitu beharrik, ezin baitugu helburu funtzioa hobetu.</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">2.
+<I>i</I> oinarrizko aldagai guztientzako </SPAN></SPAN></FONT></FONT>
+</P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Gure
+adibidean,  oinarrizko aldagai bihurtuko bada, hau da  oinarrian
+sartu, zein irtetzen da eta ez oinarrizko bihurtu, zero balioa hartu?
+</SPAN></SPAN></FONT></FONT>
+</P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Aukeran
+  eta  ditugu. Gure komeni zaiguna ahalik eta  handiena izatea
+ekuazioak kontuan hartuta, hau da, aldagaien ez negatibotasuna
+errespetatuz.</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Azter
+dezagun lehenengo ekuazioa . Esan dugunez  ez oinarrizkoa da, orduan
+ekuazioa  da. -etik unitate bat sartzeko -tik unitate bat kendu behar
+da. Ez negatibotasuna errespatetzeko -etik gehienez 8 sar ditzakegu,
+hau da,  zero egin harte (ez oinarrizko bihurtu arte).</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Orduan
+begiratu behar duguna hurrengoa da: irteera aldagaiak zero
+bihurtzerakoan zer balio ematen dion sarrera aldagaiari  irtetzeko
+aztertzen ari garen aldagaiak soluzioan hartzen duen balioa, <B>b</B>-ren<B>
+</B>koefizientea oinarriaren <I>i</I> bektorearekiko).</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Balio
+hauek gure irteera aldagaientzako hurrengoak dira:</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">
+<FONT SIZE=2>aldagairentzako, ikusi dugunez: Hortik aurrera -ek
+balioak hartzen baditu  aldagaiak balio negatiboak hartu behar ditu.</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">
+<FONT SIZE=2>aldagairentzako:  Hortik aurrera -ek balioak hartzen
+baditu  aldagaiak balio negatiboak hartu behar ditu.</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Eta
+ aldagairentzako:  Hortik aurrera -ek balioak hartzen baditu 
+aldagaiak balio negatiboak hartu behar ditu.</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Hau
+guztia taulan erraz sar dezakegu Θ zutabea erantsiz eta honen
+elementuak hurrengo moduan lortuz: <B>b </B>zutabeko elementuak
+sarrera aldagaiaren zutabeko koefizienteekin zatituz. Ikus dezagun:</SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Kalkuluak
+eginda, zein izango da irteten dena?  Aurreko balioetatik positiboen
+artean minimoa ematen didana. Hau hartuko ez bagenu, ez
+negatibotasuna ez genuke errespetatuko eta ez genuke oinarrizko
+soluzio egingarririk lortuko. Hau da  orduan minimo ematen duena, 
+aterako da.</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Ideia
+guzti hau grafikoki erraz ikus dezakegu: (0,0) erpinetik mugitzea
+erabaki dugu. Gainera  aldagaia sartuko bada, aldagai hau balioak
+hartzen hasiko da. Baina noraino?  (4,0) erpineraino, ezin du
+hurrunago joan. Oinarrizko soluzio egingarrien hitzetan,
+(0,0,8,5,8)-tik abiatuta  aldagaiak balioak hartuko ditu eta beste
+bat zero egingo da, hau da, murrizketa berdintasunez bete. Ikus
+daitekenez lehen aldagaia zero balioa hartzen  ((3) murrizketa
+dagokiona). Bertan  eta  eta  Gelditu ordez aurrera jarraituko bagenu
+ aldagaia balio negatiboak hartu beharko lituzke eta hori ez da
+oinarrizko soluzio egingarri.</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><B>Oharra:
+</B>sartzen den aldagaia  idazten badugu eta oinarriko <I>i</I>
+bektoarekiko koefizientea  bada, orduan <I>i</I> bektorea ez da
+oinarritik irtetzeko hautagai.</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Aurrekoan
+oinarrituta hurrengo emaitza dugu: <I>j</I> indize baterako  bada eta
+ (<I>i</I> oinarrizko indize guztientzako) betetzen bada, problemak
+ez du soluzio hoberenik.</SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Orduan
+orain oinarri berri bat dugu . Horrela, taula osatzeko bektore
+guztien koefizienteak oinarri berri honekiko lortu behar ditugu. </SPAN></SPAN></FONT></FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>			</FONT></SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>			</FONT></SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>			</FONT></SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>			</FONT></SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>			</FONT></SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>			</FONT></SPAN></SPAN></FONT></FONT></P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">
+<FONT SIZE=2>eta hurrengo koefizienteak ditugu:</SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<BR><BR>
+</P>
+<TABLE WIDTH=460 CELLPADDING=2 CELLSPACING=0 STYLE="page-break-before: auto; page-break-after: auto">
+	<COL WIDTH=454>
+	<TR>
+		<TD WIDTH=454 VALIGN=TOP STYLE="; border: 1px solid #000000; padding: 0in 0.02in">
+			<P ALIGN=LEFT STYLE="background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+			<FONT COLOR="#000000"><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">
+			</SPAN></SPAN></FONT><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=454 VALIGN=TOP STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0in 0.02in">
+			<P ALIGN=LEFT STYLE="background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+			<BR>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">
+</SPAN></SPAN></FONT><BR>
+</P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">eta
+hurrengo koefizienteak ditugu:</SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<BR><BR>
+</P>
+<TABLE WIDTH=460 CELLPADDING=2 CELLSPACING=0 STYLE="page-break-before: auto; page-break-after: auto">
+	<COL WIDTH=454>
+	<TR>
+		<TD WIDTH=454 VALIGN=TOP STYLE="; border: 1px solid #000000; padding: 0in 0.02in">
+			<P ALIGN=LEFT STYLE="background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+			<FONT COLOR="#000000"><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">
+			 <FONT FACE="Times New Roman, serif"><FONT SIZE=3>eta </SPAN></SPAN></FONT></FONT></FONT>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=454 VALIGN=TOP STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0in 0.02in">
+			<P ALIGN=LEFT STYLE="background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+			<BR>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">
+</SPAN></SPAN></FONT><BR>
+</P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><B>b</B>eta
+hurrengo koefizienteak ditugu:</SPAN></SPAN></FONT></FONT></P>
+<P ALIGN=CENTER STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<BR><BR>
+</P>
+<TABLE WIDTH=460 CELLPADDING=2 CELLSPACING=0 STYLE="page-break-before: auto; page-break-after: auto">
+	<COL WIDTH=454>
+	<TR>
+		<TD WIDTH=454 VALIGN=TOP STYLE="; border: 1px solid #000000; padding: 0in 0.02in">
+			<P ALIGN=LEFT STYLE="background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+			<FONT COLOR="#000000"><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">
+			 <FONT FACE="Times New Roman, serif"><FONT SIZE=3>eta </SPAN></SPAN></FONT></FONT></FONT>
+			</P>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH=454 VALIGN=TOP STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0in 0.02in">
+			<P ALIGN=LEFT STYLE="background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+			<BR>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">
+</SPAN></SPAN></FONT><BR>
+</P>
+<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; line-height: 150%; page-break-inside: auto; text-decoration: none; page-break-before: auto; page-break-after: auto">
+<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Horrela,
+taula osatzen dugu:</SPAN></SPAN></FONT></FONT></P>
+<TABLE WIDTH=460 CELLPADDING=2 CELLSPACING=0 STYLE="page-break-before: auto; page-break-after: auto">
+	<COL WIDTH=454>
+	<TR>
+		<TD WIDTH=454 VALIGN=TOP STYLE="; border-top: 1px solid #000000; border-bottom: none; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0in 0.02in">
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-before: auto; page-break-after: auto">
+			<BR><BR>
+			</P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Ikus
+			dezakegunez oinarrizko soluzio egingarri berria <B>x</B> da.
+			Grafikoki ikus dezakegunez, taula batetik bestera pasatzerakoan
+			oinarrizko soluzioegingarri batetik bestera pasa gara  edo
+			jatorrizko formulazioan erpin batetik bestera ((0,0)<FONT FACE="STIXGeneral">⟶</FONT>(4,0)).</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">dtbpF3.8052in3.3658in0ptFigurelanguage
+			&quot;Scientific Word&quot;;type &quot;GRAPHIC&quot;;maintain-aspect-ratio
+			TRUE;display &quot;USEDEF&quot;;valid\s\do5(<FONT SIZE=1 STYLE="font-size: 8pt">f</FONT>)ile
+			&quot;T&quot;;width 3.8052in;height 3.3658in;depth
+			0pt;original-width 6.2967in;original-height 5.5625in;cropleft
+			&quot;0&quot;;croptop &quot;1&quot;;cropright &quot;1&quot;;cropbottom
+			&quot;0&quot;;tempfilename ’IOYODF04.wmf’;tempfile-properties
+			&quot;XPR&quot;;</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Soluzio
+			hoberena lortu al dugu?  Ez,  da eta  (<I>i</I> oinarrizko
+			indize).</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Hain
+			zuzen sartzen den aldagaia  izango da. Eta irtetzen dena? 
+			horretarako Θ zutabea osatzen dugu</SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Eta
+			irtetzen den aldagaia </SPAN></SPAN></FONT></FONT>
+			</P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Oraingo
+			oinarri berria . Oinarri honekiko koefiziente berriak lortzeko
+			beste modu bat emango dugu. Hain zuzen taulan bertan lan eginteko
+			prestatzen dira simplex metodoan taulan.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=4><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Taulen
+			arteko bihurketa formulak</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.17in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Guk
+			genuen adibidea (5 aldagai eta 3 murrizketa) abiapuntu hartuta
+			taula batetik bestera, hau da, oinarrizko soluzio egingarri
+			batetik bestera pasatzerakoan elementuen artean dagoen erlazioa
+			aztertuko dugu. Horrela bihurketa formulak lortuko ditugu. Gero
+			hauek aplikatzea nahikoa izango da.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Orokortzeko
+			asmoz, hurrengo notazioa erabiliko dugu:  elementua  bektorearen
+			koefizienteak  bektorearekiko lehenengo oinarriarekin eta 
+			elementua  bektorearen koefizienteak  bektorearekiko oinarri
+			berriarekin. Ohartu oinarri batetik bestera pasatzerakoan soilik
+			bektore bat aldatzen dugula, horregatik errenkada berezi honen
+			elementuak <I>s</I> indizearekin adierazten ditugu. Modu berdinean
+			sartzen den aldagaiaren koefizienteak jasotzen dituen zutabearen
+			indizea <I>e</I> adieraziko dugu. Azkenik  errenkada jasotzeko 0
+			indizea erabiliko dugu, baita <B>b </B>zutabea adierazteko.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Orduan
+			hurrengo bidaia egin nahi dugu:</SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">taulatik</SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">taulara
+			pasatzeko formulak.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Ikusten
+			dugunez hasierako oinarrizko soluzio egingarriari dagokion
+			oinarritik  irtetzen da eta  sartu.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<BR>
+			</P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.04in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">
+			<FONT SIZE=2>hasierako  oinarriarekiko:Orain, adibidez,  zutabeari
+			dagozkion  eta  erlazionatuko ditugu. Beste zutabeekin berdin
+			berdin egingo genuke. koefizienteak oinarri bakoitzean hurrengoak
+			dira: oinarriarekiko  eta oinarrekiko  ordezkatuz:Orain
+			koefizienteak berdinduz:<FONT SIZE=3>			</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>			</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>			</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">azkenekotik
+			 eta hau beste bietan ordezkatuz:</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">
+			<FONT SIZE=2>eta </SPAN></SPAN></FONT></FONT>
+			</P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Ikusten
+			dugunez  (irteera errenkadako eta sarrera zutabeko) elementuak
+			paper garrantzitsua jokatzen du bihurketa formuletan, guztietan
+			agertzen baita. Horregatik <I>pibot</I> izenarekin ezagutzen da
+			eta bera agertzen den errenkadari <I>pibot errenkada</I> eta, modu
+			berdinean, agertzen den zutabea <I>pibot zutabea</I>.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Esan
+			dugunez beste zutabeekin berdin berdin egin dezakegu. Formulak
+			orokortu aurretik  errenkadako elementuekin zer gertatzen den
+			ikusi behar dugu, hau da, 0 indizea duten taulako elementuekin.
+			Orain ere 2 zutabekoa lortuko dugu. Besteekin modu berdinean
+			egingo genuke:</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<BR>
+			</P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Aurreko
+			bihurketa formulak erabiliz:</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">
+			</SPAN></SPAN></FONT><BR>
+			</P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<BR>
+			</P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<BR>
+			</P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<BR>
+			</P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">hau
+			da, </SPAN></SPAN></FONT></FONT>
+			</P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Falta
+			zaiguna helburu funtzioak lortzen duen balioa bi tauletan
+			erlazionatzea: eta </SPAN></SPAN></FONT></FONT>
+			</P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">
+			<FONT SIZE=2>Hauek ordezkatuz:</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<BR>
+			</P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<BR>
+			</P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<BR>
+			</P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Lortutako
+			emaitzak orokortuz: </SPAN></SPAN></FONT></FONT>
+			</P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Errazteko
+			hurrengo moduan ikus dezakegu  (<I>i</I>≠<I>s</I>) berria
+			lortzeko -tik abiatuta errektangelu bat eraikitzen dugu elementu
+			hau pibot errenkadara eta pibot zutabere proiektatuz. Elementuari
+			kenduko dioguna hurrengoa da: errektangeluko kontrako erpinen
+			biderkaketa zati pibota.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">dtbpF2.1248in1.6241in0ptFigurelanguage
+			&quot;Scientific Word&quot;;type &quot;GRAPHIC&quot;;maintain-aspect-ratio
+			TRUE;display &quot;USEDEF&quot;;valid\s\do5(<FONT SIZE=1 STYLE="font-size: 8pt">f</FONT>)ile
+			&quot;T&quot;;width 2.1248in;height 1.6241in;depth
+			0pt;original-width 4.1926in;original-height 3.1929in;cropleft
+			&quot;0&quot;;croptop &quot;1&quot;;cropright &quot;1&quot;;cropbottom
+			&quot;0&quot;;tempfilename ’IOYO8P03.wmf’;tempfile-properties
+			&quot;XPR&quot;;</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<BR>
+			</P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Goazen
+			orain gure probleman hauek lortzea. Genuen azkeneko taula 
+			oinarrizko soluzio egingarriari elkartutakoa zen. Hain zuzen:</SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Eta
+			ikusten dugunez pibota   da. honekin formulak aplikatuz hurrengo
+			taula lortzen dugu.</SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">
+			<FONT SIZE=2>oinarrizko soluzio egingarriari elkartutako taula.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Hurrengo
+			aldaketa iegin dugu taula batetik bestera pasatzerakoan:</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<BR>
+			</P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Grafikoki:</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">dtbpF3.8052in3.3658in0ptFigurelanguage
+			&quot;Scientific Word&quot;;type &quot;GRAPHIC&quot;;maintain-aspect-ratio
+			TRUE;display &quot;USEDEF&quot;;valid\s\do5(<FONT SIZE=1 STYLE="font-size: 8pt">f</FONT>)ile
+			&quot;T&quot;;width 3.8052in;height 3.3658in;depth
+			0pt;original-width 6.2967in;original-height 5.5625in;cropleft
+			&quot;0&quot;;croptop &quot;1&quot;;cropright &quot;1&quot;;cropbottom
+			&quot;0&quot;;tempfilename ’IOYOKB05.wmf’;tempfile-properties
+			&quot;XPR&quot;;</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Soluzio
+			hoberena lortu al dugu?  Bai,  (<I>i</I>=1,...,5) baita. Orduan
+			soluzio hoberena  eta  Balio hoberena 28.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.08in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Laburtuz
+			simplex metodoaren prozedura <I>m</I> murrizketa eta <I>n</I>
+			aldagai ditugunean hurrengoa da:</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><B>1.
+			pausoa</B>. Aurkitu <B>x</B> hasierako oinarrizko soluzio
+			egingarria.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><B>2.
+			pausoa</B>. Kalkulatu oinarrizko soluzioari dagokion taula.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in">
+			<B>3. pausoa</B>. Aztertu  zenbakiak. Hiru kasu ager daitezke:</P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in">      a) <I>j</I>=1,
+			...,<I>n</I> indize guztietarako  da. Orduan <B>x</B> soluzio
+			hoberena da. Eta bukatu da.</P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in">      b)
+			Existitzen da <I>j</I> indizea non  den eta gainera  <FONT FACE="STIXGeneral">∀</FONT><I>i</I>=1,
+			..., <I>m</I> den. Kasu honetan maximizazio problemak ez du
+			hoberenik. Bukatu da.</P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; page-break-inside: auto; page-break-after: auto">
+			      <FONT COLOR="#000000"><SPAN STYLE="text-decoration: none"><FONT SIZE=2><SPAN LANG=""><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal"><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">c)
+			Ez da ez a) ezta b) egiaztatzen. Orduan jarraitu oinarri berri
+			baten bilaketa.</SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><B>4.
+			pausoa</B>. Sarrera irizpidea: oinarri berrian sartuko den  zutabe
+			bektorea aukeratuko da, hurrengo irizpidearen bitartez: <I>e</I>
+			indizerako (1≤<I>e</I>≤<I>n</I>):</SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">bete
+			beharko da.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><B>5.
+			pausoa</B>. Irteera irizpidea: oinarritik irtengo den  zutabe
+			bektorea aukeratuko da hurrengo irizpidearen bidez:  indizerako
+			(1≤<I>s</I>≤<I>m</I>)</SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">bete
+			beharko da</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Kalkulua
+			errazteko <I>e</I>-garren zutabeko  koefiziente positiboei
+			dagozkien  puntuaren  oinarrizko aldagaiak  koefiziente hauetaz
+			zati daitezke eta emaitza hauek taularen zutabe berri batean ipin
+			daitezke. Honela, zutabe honen zatidura txikienak, oinarritik
+			irtengo den  bektorea emango digu.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><B>6.
+			pausoa</B>. Aukeratu oinarri berriari elkartutako oinarrizko
+			soluzio egingarria, hurrengo berdintzak erabiliz: </SPAN></SPAN></FONT></FONT>
+			</P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>			</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>			</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">eta
+			2. pausora itzuli.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<BR>
+			</P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.17in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=4><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Soluzio
+			hoberenen aniztasuna</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.17in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Simplex
+			algoritmoa aplikatuz, suposa dezagun  ≥0 (<FONT FACE="STIXGeneral">∀</FONT><I>j</I>=1,
+			..., <I>m</I>) gertatzen dela, hau da, soluzio hoberena lortu
+			dugula. Edozein taulan oinarrizko aldagaie dagozkien  balioak zero
+			direnez, azken errenkadak gutxienez <I>m</I> zero ditu. <I>m</I>
+			zero baino gehiago dituenean soluzio anizkoitzaren posibilitatea
+			adierazten du.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Oinarrizko
+			soluzio egingarri hoberen posible hauek aurkitu nahi baditugu,
+			algoritmoaren 4. pausora joan eta sobera dagoen zero bati dagokion
+			zutabe bektorea oinarrian sartu. Beste zeroekin berdin egingo
+			dugu. Honela, lortutako oinarrizko soluzio egingarri hoberenen
+			konbinazio ganbilak ere soluzio hoberenak izango dira.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Adibidez:</SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=4><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Zigorren
+			metodoa</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Metodo
+			honekin hasierako oinarrizko soluzio egingarriak lortzen ditugu.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Demagun
+			hurrengo problema:</SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><B>1.
+			pausoa. </B>Modu estandarrean idatzi,</SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Ohartu
+			jatorrizko problemak eta modu estandarrean idatzitakoak
+			baliokideak direla. hau da, estandarreko oinarrizko soluzio
+			egingarria jatorrizkoaren soluzio egingarrien multzoko erpin
+			izango da.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><B>2.
+			pausoa. </B>Eskuinaldea negatiboa duten murrizketak bider -1 egin:</SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><B>3.
+			pausoa. </B><I>A</I> osatu eta <I>m</I> (murrizketa kopurua)
+			ordenako unitate azpimatrizea ez badugu, aldagai artifizialak
+			erantsi, berdintza murrizketa bakoitzeko gehienez bat.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Pauso
+			honen helburua <I>B</I> identitate azpimatrizea lortzea da.
+			Horrela <I>B</I>-ko zutabe bektoreak -ko oinarri kanonikoa osatzen
+			dute eta oinarri hau hartuz lehenengo taula erraz bete dezakegu.</SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Ikus
+			dezakegunez gure adibidean ez dugu 2 ordenako identitate
+			azpimatrizea. Horregatik aldagi artifizialak erantsi beharko
+			ditugu:</SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">orain
+			 eta bertan <I>B</I>=  2 ordenako identitate matrizea dugu. Orduan
+			 oinarri kanonikoa hartuz lehenengo taula erraz bete dezakegu.
+			Hasierak oinarrizko soluzio egingarria <B>x=(</B>0,0,0,0,1,1)</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Ohartu
+			jatorrizko problema eta artifiziala ez direla baliokideak, baina
+			oinarrizko soluzio egingarriaren aldagai artifizialak ez
+			oinarrizkoak badira (nuluak), orduan osagai artifizialak kenduz
+			estandarreko oinarrizko soluzio egingarria lortzen dugu.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Aurrekoa
+			helburu funtzioarekin lotuz, aldagai artifizialak soluziotik kendu
+			nahi baditugu, gure helburu funtzioan kaltegarri izatea nahi dugu.
+			Horrela, maximoko probleman kantitate negatibo oso handia ematea
+			nahi dugu. Gure helburu funtzio berria:</SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">non
+			<I>M</I> zenbaki positibo oso handia den. Horrexegatik ezagutzen
+			da <B>zigorren metodoa</B> izenarekin.</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><B>Ebazpena:</B></SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">eta
+			<B>x=(</B>0,0,0,0,1,1) hasierako oinarrizko soluzio egingarriari
+			dagokion taula:</SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Hurrengo
+			taula:</SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-top: 0.04in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">eta
+			hurrengoa:</SPAN></SPAN></FONT></FONT></P>
+			<P ALIGN=LEFT STYLE="margin-top: 0.08in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: avoid; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none"><FONT SIZE=3>	</FONT></SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Soluzio
+			hoberena:</SPAN></SPAN></FONT></FONT></P>
+			<P STYLE="text-indent: 0.21in; margin-bottom: 0in; background: transparent; border: none; padding: 0in; font-style: normal; font-weight: normal; page-break-inside: auto; text-decoration: none; page-break-after: auto">
+			<FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="background: transparent"><SPAN STYLE="text-decoration: none">Balio
+			hoberena: −5 maximoko probleman. Jatorrizko minimoko probleman
+			5.</SPAN></SPAN></FONT></FONT></P>
+			<P><BR>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0in">	</P>
+</BODY>
+</HTML>

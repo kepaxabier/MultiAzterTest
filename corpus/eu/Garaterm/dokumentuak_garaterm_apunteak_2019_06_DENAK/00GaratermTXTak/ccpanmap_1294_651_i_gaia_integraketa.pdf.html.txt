@@ -1,0 +1,3275 @@
+
+
+
+Gaien Aurkibidea
+1 Integraketa
+2
+1.1
+Jatorrizko Funtzioa. Konzeptua . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2
+1.2
+Integral Mugagabea:
+ Konzeptua eta Propietateak . . . . . . . . . . . . . . . . . .
+3
+1.3
+Integraketa Metodoak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+1.3.1
+Berehalako Integralen Taula . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+1.3.2
+Integral Mugagabearen Zenbait Propietate . . . . . . . . . . . . . . . . . .
+5
+1.3.3
+Zatikako Integraketa . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5
+1.3.4
+Aldagai Aldaketa edo Ordezkapenaren Bidezko Metodoa . . . . . . . . . .
+6
+1.3.5
+Funtzio Razionalen Integraketa. . . . . . . . . . . . . . . . . . . . . . . . .
+7
+1.3.6
+Ostrogradskii-ren metodoa
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+12
+1.3.7
+Funtzio Trigonometrikoen Integraketa . . . . . . . . . . . . . . . . . . . .
+14
+1.3.8
+Funtzio Irrazional Batzuren Integraketa . . . . . . . . . . . . . . . . . . .
+16
+1.3.9
+Funtzio Jarrai Guztiak Integratu Al Ditzakegu? . . . . . . . . . . . . . . .
+18
+1.4
+Integral Mugatua. Konzeptua. Propietateak . . . . . . . . . . . . . . . . . . . . .
+19
+1.5
+Kalkuluaren Teorema Fundamentala . . . . . . . . . . . . . . . . . . . . . . . . .
+23
+1.6
+Barrow-
+en Araua . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+24
+1.7
+Integral Inpropioak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+26
+1.7.1
+Konzeptua eta Motak . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+26
+1.7.2
+Integral Inpropioen Ebazpena . . . . . . . . . . . . . . . . . . . . . . . . .
+26
+1.7.3
+Integral Inpropioen Azterketaren Gidalerroak . . . . . . . . . . . . . . . .
+30
+1
+
+1. Kapitulua
+Integraketa
+1.1
+Jatorrizko Funtzioa. Konzeptua
+Badakigu zer den funtzio baten deribatu funtzioa: F 
+(x) funtzioaren deribatua f (x) bada, orduan
+hau betetzen da F
+′ (x) = f (x). Orokorrean deribatu funtzioa kalkulatzea ez da zaila. Orain
+arduratuko gara alderantzizkoa aztertzen: f 
+(x) funtzioa ezagututa zein izango den, nola lor
+daitekeen F (x) funtzio bat, f -
+ren jatorrizko funtzioa deitzen duguna, bere deribatua gure f
+funtzio ezaguna izanik.
+definizioa
+1.1. [a, b] tarteko puntu guztietan F
+′ (x) = f (x) ekuazioa betetzen bada, tarte horre-
+tan F (x) funtzioari f (x) funtzioaren jatorrizko deitzen zaio.
+adibidea
+1.1. Aurkitu f (x) = x2 funtzioaren jatorrizko bat.
+Ebazpena:
+Erraz ikusten da kasu honetan deribatu eta x2 lortzeko jatorrizko funtzioak x3 erakoa behar
+duela, konstante bat salbu. Izan ere F (x) = x3/
+3 da emandakoaren jatorrizko bat.
+Erraz ikusten da ere F (x) ez dela bakarra, ze F (x) = x3/
+3 + C, C edozein konstante izanik,
+deribatu eta funtzio bera lortzen baita: (d/dx)(x3/3 + C) = (d/dx)(x3/3) = x2.
+Ez hori bakarrik, hurrengo teoremak esaten digu zein erakoa den jatorrizko funzioen taldea.
+teorema
+1.1. [a, b] tartean F1(x) eta F2(x) funtzioak f 
+(x) funtzioaren jatorrizko bi funtzio
+baldin badira, beraien arteko aldea konstante bat da.
+Frogapena:
+Jatorrizko funtzio direnez,
+F
+′
+1(x) = f (x),
+eta
+F
+′
+2(x) = f (x),
+[a, b] tarteko x puntu orotan. Demagun F1 eta F2-
+ren arteko aldea konstante bat baino gehiago
+dela,
+F1(x) − F2(x) = ϕ(x)
+Bestaldetik, aurreko berdintzengatik,
+F
+′
+1(x) − F
+′
+2(x) = f (x) − f (x) = 0
+Beraz ϕ
+′ (x) ere nulu izan behar da,
+ϕ
+′ (x) = F ′1(x) − F ′2(x) = 0
+[a, b] tarteko x orotan.
+2
+
+1.2
+Integral Mugagabea: Konzeptua eta Propietateak
+3
+Tarte osoan ϕ
+′ (x) = 0 izanik ϕ(x) balioak tarteko a muturretik hasi eta ez dira aldatuko.
+Lagrange-ren teorema hori esaten du ere:
+ a muturrean hasi eta x muturrean amaitutako tartean,
+ϕ(x) − ϕ(a) = (x − a)ϕ
+′ (χ),
+nun a < χ < x. Baina ϕ
+′ (χ) = 0 izanik ϕ(x) = ϕ(a). Horrela [a, b] tarteko puntu guztietan ϕ
+funtzioaren balioa ϕ(a) da. Balio horri C deituta,
+F1(x) − F2(x) = C
+lortzen dugu.
+q.e.d.
+Frogatu dugun teoremak esaten du behin F 
+(x) jatorrizko funtzio bat aurkitu beste guztiak
+F (x) + C erakoak direla.
+1.2
+Integral Mugagabea: Konzeptua eta Propietateak
+definizioa
+1.2. f (x) funtzioaren jatorrizko funtzio bat F (x) baldin bada F 
+(x) + C adierazpenari
+f -ren integral mugagabe deitzen zaio eta
+f (x) dx ikurraz adierazten da.
+Beraz,
+F
+′ (x) = f (x)
+baldin bada,
+f (x) dx = F (x) + C
+betetzen da.
+f (x) funtzioari integrakizun deitzen zaio, f (x) dx adierazpenari integrazio-
+elementu eta
+ikurrari integrazio-ikur.
+Ikusten dugu ere F 
+(x) + C integral mugagabea, izan ere, funtzio famili bat dela. Bere graﬁkoa
+funtzio bat hartu eta y ardatzaren norabidean desplazatuz lortzen da, kurba-
+multzoa da beraz.
+Funtzio baten jatorrizkoaren bila hasi eta berehala bururatzen zaigu, f 
+(x) funtzio orok al du
+jatorrizkorik? Erantzuna ezezkoa da. Frogatu gabe hau esango dugu: 
+[a, b] tartean jarrai den
+funtzio orok jatorrizko funtzioa (eta beraz integral mugagabea) duela.
+Ikasgai honetan zenbait funtzio elementalen jatorrizko funtzioak aurkitzeko metodoak aztertu-
+ko ditugu. Metodo hoien bidez jatorrizko funtzioaren bilaketa neurri batean prozedura sistema-
+tiko bat bihurtzen da, eta funtzioaren integraketa edo funtzioaren integrazioa deitzen zaio.
+Integral mugagabearen deﬁnizioa dela eta, propietate hauek betetzen dira,
+1) Integral mugagabearen deribatua eginez,
+f (x) dx
+′
+= (F (x) + C)
+′ = f (x)
+Beraz, integral mugatuaren deribatua integrakizunaren berdina da.
+2) Integral mugagabearen diferentziala integrazio-elemetuaren berdina da,
+d
+f (x) dx
+=
+f (x) dx
+′
+dx = f (x) dx
+3) Funtzio baten diferentzialaren integral mugagabea funtzio horren eta konstante baten ba-
+tura da,
+dF (x) =
+F
+′ (x) dx =
+f (x) dx = F (x) + C
+
+4
+1
+Integraketa
+1.3
+Integraketa Metodoak
+1.3.1
+Berehalako Integralen Taula
+Funtzio elemental batzuren deribaketa arauak ikasi dugunez badugu buruan deribaketaren bidez
+lotuta dauden zenbait funtzio bikoteak. Ondorioz hurrengo zerrendako jatorrizko funtzio asko
+ezagunak egingo zaizkigu,
+1. a = −1 izanik,
+xa dx =
+xa+1
+a + 1
++ C.
+2.
+dx
+x
+= ln |x| + C.
+3.
+sin x dx = − cos x + C.
+4.
+cos x dx = sin x + C.
+5.
+dx
+cos2 x
+= tan x + C.
+6.
+dx
+sin2 x
+= − cot x + C.
+7.
+tan x dx = − ln | cos x| + C.
+8.
+cot x dx = ln | sin x| + C.
+9.
+ex dx = ex + C.
+10.
+ax dx =
+ax
+ln a
++ C.
+11.
+dx
+1 + x2
+= arctan x + C.
+12.
+dx
+a2 + x2
+=
+1
+a
+arctan
+x
+a
++ C.
+13.
+dx
+a2 − x2
+=
+1
+2a
+ln
+a + x
+a − x
++ C.
+14.
+dx
+√
+1 − x2
+= arcsin x + C.
+15.
+dx
+√
+a2 − x2
+= arcsin
+x
+a
++ C.
+16.
+dx
+√
+x2 ± a2
+= ln x +
+x2 ± a2 + C.
+Gehienak buruz ikasi daitezke. 12. eta 15. x = at eginez lortzen da berehalako integral
+zuzen-zuzena. 13. eta 16. honela egiaztatzen dira,
+1
+2a
+ln
+a + x
+a − x
+′
+=
+1
+2a
+[ln |a + x| − ln |a − x|]
+′ =
+1
+2a
+1
+a + x
++
+1
+a − x
+=
+1
+a2 − x2
+ln x +
+x2 ± a2
+′
+=
+1
+x +
+√
+x2 ± a2
+1 +
+x
+√
+x2 ± a2
+=
+1
+√
+x2 ± a2
+
+1.3
+Integraketa Metodoak
+5
+1.3.2
+Integral Mugagabearen Zenbait Propietate
+Bi propietate xinpleak azalduko dugu,
+1. Integrakizuna batuketa bat bada,
+[f1(x) + f2(x)] dx =
+f1(x) dx +
+f2(x) dx
+2. Integrakizun osoa biderkatzen konstante bat badugu,
+c f (x) dx = c
+f (x) dx
+Erreza litzake propietate hoiek frogatzea. f1 eta f2 bakoitzak bere jatorrizkoa badu,
+f1(x) dx = F1(x) + C1,
+f2(x) dx = F2(x) + C2
+baina deribatuen propietate bat da,
+(F1(x) + C1 + F2(x) + C2)
+′ = F ′
+1(x) + C1
+′
++ F
+′
+2(x) + C2
+′
+= f1(x) + f2(x)
+Beraz hasierako parentesia f1 + f2 funtzioaren jatorrizkoa da,
+[f1(x) + f2(x)] dx = F1(x) + C1 + F2(x) + C2 =
+f1(x) dx +
+f2(x) dx
+Bigarrena frogatzea erreza litzake ere.
+1.3.3
+Zatikako Integraketa
+Metodo honek hurrengo propietatea erabiltzen du:
+ bedi u eta v funtzioen biderkadura-funtzioa
+uv. Horren diferentziala besteen diferentzialekin jar daiteke,
+d(uv) = (uv)
+′ dx = (u′v + uv′) dx = (u′ dx)v + u(v′ dx) = (du)v + udv = u dv + v du
+Azken adierazpena integratuz,
+uv =
+u dv +
+v du
+edo
+u dv = uv −
+v du.
+Formula hori da Zatikako Integraketa metodoan erabiltzen dena. Batzuetan eskatutako
+u dv
+kalkulatzea zaila izan daiteke eta, aldiz,
+v du errazagoa. Metodoak u eta v-ren rolak elkarrekin
+aldatzen ditu.
+adibidea
+1.2. Askatu
+x sin x dx.
+Ebazpena:
+Integral hau egokia da metodo hau erabiltzeko. Integrakizuna bi modutan interpretatu daiteke:
+1) u = x eta dv = sin x dx, edo 2) u = sin x eta dv = x dx. Kasu honetan 1) interpretazioa
+da egokiagoa, sinua integratzerakoan − cos x ateratzen da, eta funtzio hori ez da sinua bera
+baino konplikatuagoa. Aldiz, x deribatuz konstante huts bat ateratzen da. 2) aukeran sinua
+
+6
+1
+Integraketa
+ez da erraztuko deribatzeagatik eta x integratuz funtzio konplikatuagoa lortzen da. Beraz 1)
+aukerarekin,
+du = u
+′ dx = 1 · dx,
+v =
+dv =
+sin x dx = − cos x
+→
+u dv = uv −
+v du →
+x(sin x dx) = x · (− cos x) −
+(− cos x) dx = −x cos x + sin x + C
+adibidea
+1.3. Aurkitu integral mugagabe hau,
+arctan x dx.
+Ebazpena:
+Aukera bakarra u = arctan x, dv = dx da. Beraz,
+u = arctan x → du =
+dx
+1+x2
+dv = dx → v = x
+→
+arctan x dx = x arctan x −
+x
+dx
+1 + x2
+= x arctan x −
+1
+2
+ln(1 + x2) + C.
+Beste adibideak eta beren emaitzak hauek dira,
+x2ex dx = ex(x2 − 2x + 2) + C
+(x2 + 7x − 5) cos 2x dx = (x
+2 + 7x − 5)
+sin 2x
+2
++ (2x + 7)
+cos 2x
+4
+−
+sin 2x
+4
++ C.
+eax cos bx dx =
+eax(b sin bx + a cos bx)
+a2 + b2
++ C.
+1.3.4
+Aldagai Aldaketa edo Ordezkapenaren Bidezko Metodoa
+Emandako
+f (x) dx integrala errazteko beste metodoa aldagai-aldaketarena da.
+Honetan
+x = ϕ(t) aldagai-
+aldaketa egokia eginez lortzen den integrakizun berria errazagoa izango da
+integratzeko.
+x = ϕ(t) → dx = ϕ
+′ (t)dt
+izango dugu alde batetik. Bestetik f (x) = f (ϕ
+(t)), eta integrala honela geldituko da,
+f (x) dx =
+f [ϕ(t)]ϕ
+′ (t) dt
+Lortu dugun formula t-rekiko integrala da.
+Batzuetan komeni izaten da aldagai berria honela sartzea t = ψ
+(x). Adibidez, nahiko maiz
+aurkitzen dugun hurrengo erako integralean,
+ψ
+′ (x)
+ψ(x)
+dx
+egoki da ψ(x) = t egitea. Orduan ψ
+′ (x) dx = dt dugu, eta integrala
+ψ
+′ (x)
+ψ(x)
+dx =
+dt
+t
+= ln |t| + C = ln |ψ(x)| + C.
+
+1.3
+Integraketa Metodoak
+7
+adibidea
+1.4. Aurkitu hurrengo integral mugagabea
+√
+sin x cos x dx.
+Ebazpena:
+Hor gauza nabari bat dugu:
+ sinuaren diferentziala cos x dx da, eta integralean dago. Integrala
+errazteko aldagai-aldaketa egokia sin x = t da. Integrala honela aldatzen da,
+√
+sin x cos x dx =
+t1/2 dt =
+2
+3
+t3/2 + C
+Gelditzen dena x aldagaia berreskuratzea da. Integrala I deituz,
+I =
+2
+3
+sin3/2 x + C.
+adibidea
+1.5. Aurkitu integral mugagabe hau
+x dx
+1 + x2
+.
+Ebazpena:
+Bigarren kasuaren moduko integrala dugu orain:
+ zatitzailearen deribatua zatikizunean dugu
+(konstante bat salbu), alde batetik 1+x2, eta bestetik x. Beraz aldagai-
+aldaketa egokia t = 1+x2
+da.
+x dx
+1 + x2
+=
+1
+2
+dt
+t
+=
+1
+2
+ln |t| + C =
+1
+2
+ln(1 + x2) + C.
+Berehalako integralen taulako 12.a eta 15.a aldagai-
+aldaketa xinple baten bidez ateratzen dira.
+Beste adibide pare bat beren emaitzekin hauek dira,
+(ln x)3
+dx
+x
+=
+1
+4
+(ln x)4 + C
+x dx
+1 + x4
+=
+1
+2
+arctan x2 + C
+1.3.5
+Funtzio Razionalen Integraketa.
+Dakigunez funtzio razionalak bi polinomioen arteko zatiketak dira. Hoien integrala era honeta-
+koa izango da,
+P (x)
+Q(x)
+dx
+nun P eta Q polinomioak diren. Integratzeko beren graduak zenbatekoak diren begiratuko
+dugu eta P -ren gradua Q-
+rena baino handiagoa edo berdin bada elkarrekin zatituko ditugu.
+Emaitza honela geldituko da,
+P (x)
+Q(x)
+dx =
+S(x) +
+R(x)
+Q(x)
+dx
+Integrakizuneko S, R eta Q hirurak dira polinomio, orain grad(R) < grad
+(Q) izango delarik.
+Horregatik R/
+Q zatiketa funtzio razional propioa deitzen dugu. Batzuetan integral erraz bat
+lortzeko hori da egin behar den guztia, hurrengo adibidean bezala,
+adibidea
+1.6. Integratu
+x3 + x
+x − 1
+dx
+
+8
+1
+Integraketa
+Ebazpena:
+x3 + x
+x − 1
+dx =
+x2 + x + 2 +
+2
+x − 1
+dx =
+x3
+3
++
+x2
+2
++ 2x + 2 ln |x − 1| + C
+Funtzio razional propioa ez bada erraz integratzeko, teknika da Q
+(x) zatitzailea bere polinomio
+biderkatzaile xinpletan banatzea. Hori beti egin daiteke:
+ edozein polinomio ax + b erako edo
+ax2 + bx + c erako biderkatzailetan banatu daiteke. Bigarrenean b2 − 4ac < 0 edukiko dugu eta
+ezingo dugu bera gehiago banatu. Biderkatzaile mota xinple hoiek behin baino gehiagotan egon
+daitezke biderkatzen Q(x)-en garapenean.
+Adibidez Q(x) = x4 − 16 polinomioaren banaketa hau da,
+Q(x) = (x2 − 4)(x
+2 + 4) = (x − 2)(x + 2)(x2 + 4)
+Behin Q(x) banatuta R(x)/Q
+(x) funtzio razional propioa honelako zatiketa partzialen kon-
+binaketa lineal moduan jar daiteke, ondoren hoiek banan-banan integratzeko,
+A
+(ax + b)i
+edota
+Ax + B
+(ax2 + bx + c)j
+nun A, B konstanteak diren eta i, j berretzaileak laister zehaztuko ditugun.
+Kasuistika zabala da eta era honetako sailkapena egin daiteke,
+I. Q
+(x) zatitzailea biderkatzaile lineal ezberdinetan banatzen da. Hau edukiko dugu,
+Q(x) = (a1x + b1)(a2x + b2) . . . (akx + bk)
+nun monomio guztiak ezberdinak eta ez proportzionalak diren. Banaketa hau egin daiteke,
+R(x)
+Q(x)
+=
+A1
+a1x + b1
++
+A2
+a2x + b2
++ · · · +
+Ak
+akx + bk
+A1, A2, . . . , Ak konstanteak dira, eta berdintza egia izateko beren balioak aurkitu behar
+dira. Horretarako zilegi da ere x-ren balio partikularrak erabiltzea.
+adibidea
+1.7. Integratu
+x2 + 2x − 1
+2x3 + 3x2 − 2x
+dx
+Ebazpena:
+Integrakizuna funtzio razional propioa da. Honela banatu daiteke,
+2x3 + 3x2 − 2x = x(2x
+2 + 3x − 2) = 2x(x2 +
+3
+2
+x − 1) = 2x(x −
+1
+2
+)(x + 2)
+Beraz funtzioa razionalaren banaketa hau proposatuko dugu,
+x2 + 2x − 1
+2x3 + 3x2 − 2x
+=
+1
+2
+A
+x
++
+B
+x −
+1
+2
++
+C
+x + 2
+Bigarren zatian operatuz,
+x2 + 2x − 1
+2x3 + 3x2 − 2x
+=
+(A + B + C)x2 + [(3/2)A + 2B − (1/2)C]x − A
+2x3 + 3x2 − 2x
+Beraz sistema lineal hau dugu,
+
+
+
+
+
+A + B + C
+= 1
+(3/2)A + 2B − (1/2)C = 2
+A
+= 1
+→
+B + C
+= 0
+2B − (1/2)C = 1/2
+→
+(5/2)B
+= 1/2 → B = 1/5
+C = −1/5
+
+1.3
+Integraketa Metodoak
+9
+Beraz,
+x2 + 2x − 1
+2x3 + 3x2 − 2x
+dx =
+1
+2
+ln |x| +
+1
+5
+ln |x −
+1
+2
+| −
+1
+5
+ln |x + 2| + C
+II. Q(x) biderkatzaile linealetan banatzen da, baina batzuk errepikatuta.
+Demagun a1x + b1 biderkatzailea r bider errepikatuta ateratzen dela Q(x)-
+en banaketan.
+Orduan funtzio razional propioaren banaketan A1/(a1x + b1)-
+ren ordez guzti hauek jarriko
+ditugu,
+A1
+a1x + b1
++
+A2
+(a1x + b1)2
++ · · · +
+Ar
+(a1x + b1)r
+adibidea
+1.8. Integratu
+x4 − 2x
+2 + 4x + 1
+x3 − x2 − x + 1
+dx
+Ebazpena:
+Ez dugu funtzio razional propioa, beraz lehenengo zatiketa egingo dugu,
+x4 − 2x
+2 + 4x + 1
+x3 − x2 − x + 1
+= x + 1 +
+4x
+x3 − x2 − x + 1
+Laster konturatzen gara x = 1 zatitzailearen erro dela, eta
+x3 − x
+2 − x + 1 = (x − 1)(x2 − 1) = (x − 1)2(x + 1)
+Beraz 
+(x − 1) biderkatzailea bi bider ateratzen da. Funtzio razional propioarentzako hau
+proposatuko dugu,
+4x
+x3 − x2 − x + 1
+=
+A
+x − 1
++
+B
+(x − 1)2
++
+C
+x + 1
+=
+(A + C)x2 + (B − 2C)x + (−A + B + C)
+x3 − x2 − x + 1
+Beraz sistema hau dugu,
+
+
+
+
+
+A + C
+= 0
+B − 2C
+= 4
+−A + B + C = 0
+→
+B + 2C
+= 0
+B − 2C = 4
+→ B = 2 → C = −1 → A = 1
+Beraz,
+x4 − 2x
+2 + 4x + 1
+x3 − x2 − x + 1
+dx =
+x2
+2
++ x + ln |x − 1| − 2
+1
+x − 1
+− ln |x + 1| + C
+III. Q(x)-k biderkatzaile koadratikoak ditu, baina errepikatu gabe.
+Orain Q(x)-
+en banaketan ax2 + bx + c erako biderkatzaileak egon daitezke, nun b2 − 4ac <
+0 den. Biderkatzaile hoiek ez dira errepikatzen. Holako biderkatzailearentzako funtzio
+razional propioaren banaketan beste batugai hau jarriko dugu,
+Ax + B
+ax2 + bx + c
+nun A eta B aurkitu beharreko konstante egokiak diren.
+Adibidez f (x) = x/[(x − 2)(x
+2 + 1)(x2 + 4)] funtzio razional propioa honela banatuko
+genuke,
+x
+(x − 2)(x2 + 1)(x2 + 4)
+=
+A
+x − 2
++
+Bx + C
+x2 + 1
++
+Dx + E
+x2 + 4
+
+10
+1
+Integraketa
+adibidea
+1.9. Integratu
+4x2 − 3x + 2
+4x2 − 4x + 3
+dx.
+Ebazpena:
+Lehehengo zatiketa eginez,
+4x2 − 3x + 2
+4x2 − 4x + 3
+= 1 +
+x − 1
+4x2 − 4x + 3
+eta zatitzailearen diskriminantea negatibo denez 
+(b2 − 4ac = −32) ezin dugu banatu.
+Funtzio razional propio hori integratzeko honela jar dezakegu,
+x − 1
+4x2 − 4x + 3
+=
+1
+8
+8x − 4 − 4
+4x2 − 4x + 3
+=
+1
+8
+8x − 4
+4x2 − 4x + 3
+−
+4
+4x2 − 4x + 3
+Lehenengoaren integrala berehalakoa da, eta bigarrena honela jar daiteke,
+4
+4x2 − 4x + 3
+=
+1
+x2 − x + (3/4)
+=
+1
+(x −
+1
+2 )
+2 + 1
+2
+eta horren integrala (aldagai aldaketa txiki bat eginez) arku tangentea da.
+4x2 − 3x + 2
+4x2 − 4x + 3
+dx = x +
+1
+8
+ln |4x
+2 − 4x + 3| −
+√
+2 arctan
+√
+2(x − 1/2) + C
+IV. Q(x) biderkatzaile koadratiko bat du, errepikatuta.
+Q(x)-k (ax2 + bx + c)r biderkatzailea badu, nun b2 − 4ac < 0 den, orduan 
+(Ax + B)/(ax
+2 +
+bx + c)-ren ordez, funtzio razional propioaren banaketan hauek sartuko ditugu,
+A1x + B1
+ax2 + bx + c
++
+A2x + B2
+(ax + bx + c)2
++ · · · +
+Arx + Br
+(ax2 + bx + c)r
+adibidea
+1.10. Integratu
+x4 + 4x3 + 11x2 + 12x + 8
+(x2 + 2x + 3)2(x + 1)
+dx
+Ebazpena:
+Integrakizuna funtzio razional propioa da, eta zatitzailea ahal den gehien banatuta dugu
+iadanik. Biderkatzaile koadratikoaren diskriminantea b2 − 4ac = −8 da. Biderkatzaile
+koadratikoa errepikatuta dagoenez funtzio razionala honela banatuko dugu,
+x4 + 4x3 + 11x2 + 12x + 8
+(x2 + 2x + 3)2(x + 1)
+=
+A
+x + 1
++
+Bx + C
+x2 + 2x + 3
++
+Dx + E
+(x2 + 2x + 3)2
+Hori garatuz sistema hau bete beharko da,
+A(x2 + 2x+ 3)2 + (Bx+ C)(x+ 1)(x2 + 2x+ 3)+ (Dx+ E)
+(x+ 1) = x4 + 4x3 + 11x2 + 12x+ 8
+Beraz sistema hau,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A + B
+= 1
+4A + 3B + C
+= 4
+10A + 5B + 3C + D
+= 11
+12A + 3B + 5C + D + E
+= 12
+9A + 3C + E
+= 8
+→ A = 1, B = C = 0, D = 1, E = −1
+
+1.3
+Integraketa Metodoak
+11
+Beraz,
+I = ln |x + 1| +
+x − 1
+(x2 + 2x + 3)2
+dx
+Gelditzen den integrala askatzea korapilotsua da,
+x − 1
+(x2 + 2x + 3)2
+dx =
+1
+2
+2x + 2
+(x2 + 2x + 3)2
+dx − 2
+dx
+(x2 + 2x + 3)2
+Horko lehenengo integrala berehalakoa da,
+1
+2
+2x + 2
+(x2 + 2x + 3)2
+dx = −
+1
+2
+1
+x2 + 2x + 3
+baina bigarrenean holakoak egin behar dira,
+dx
+(x2 + 2x + 3)2
+dx =
+dx
+[(x + 1)2 + 2]2
+=
+dt
+(t2 + 2)2
+nun t = x + 1
+eta horrekin segituz,
+dt
+(t2 + 2)2
+=
+1
+2
+t2 + 2
+(t2 + 2)2
+dt −
+1
+2
+t2
+(t2 + 2)2
+dt =
+1
+2
+dt
+t2 + 2
+−
+1
+2
+t ·
+tdt
+(t2 + 2)2
+Lehenengoa arcu tangentearen erakoa da,
+1
+2
+dt
+t2 + 2
+=
+1
+4
+dt
+1 + (t/
+√
+2)2
+=
+1
+4
+√
+2 arctan
+x + 1
+√
+2
+Bigarrena zatika eginez,
+u = t → du = dt
+dv =
+tdt
+(t2+2)2 → v = −
+1
+2
+1
+t2+2
+−
+1
+2
+t2dt
+(t2 + 2)2
+=
+1
+4
+t
+t2 + 2
+−
+1
+4
+dt
+t2 + 2
+=
+1
+4
+x + 1
+x2 + 2x + 3
+−
+1
+8
+√
+2 arctan
+x + 1
+√
+2
+Beraz,
+dx
+(x2 + 2x + 3)2
+dx =
+1
+4
+x + 1
+x2 + 2x + 3
++
+1
+8
+√
+2 arctan
+x + 1
+√
+2
+Beraz integral osoa zera da,
+I = ln |x + 1| −
+1
+2
+1
+x2 + 2x + 3
+−
+1
+2
+x + 1
+x2 + 2x + 3
+−
+√
+2
+4
+arctan
+x + 1
+√
+2
++ C
+= ln |x + 1| −
+1
+2
+x + 2
+x2 + 2x + 3
+−
+√
+2
+4
+arctan
+x + 1
+√
+2
++ C
+
+12
+1
+Integraketa
+1.3.6
+Ostrogradskii-ren metodoa
+Metodo hau Q(x)-
+k biderkatzaile errepikatutak dituenerako da, linealak edota koadratikoak,
+Q(x) = (a1x+b1)
+m1 (a2x+b2)m2 . . . (alx+bl)ml(c1x2+d1+e1)n1(c2x2+d2x+e2)n2 . . . 
+(cpx2+dpx+ep)np
+Kasu orokorrean l erro erreal eta p erro konplexu bikoteak jarri ditugu, berretzaileak erroen
+anizkoitasunak izanik. Horrekin batera integral hau dugu ebazteko,
+P (x)
+Q(x)
+dx
+nun grad P (x) < grad Q
+(x) dugun, hau da, integragaian funtzio razional propio bat.
+Ostrogradskii-ren metodoak hau proposatzen du,
+P (x)
+Q(x)
+dx =
+X(x)
+S(x)
++
+Y (x)
+T (x)
+dx
+nun X, S, Y, T lau polinomio diren, ezaugarri hauekin:
+S(x) = (a1x + b1)
+m1−1(a2x + b2)m2−1 . . . (alx + bl)ml−1
+(c1x
+2 + d1 + e1)n1−1(c2x2 + d2x + e2)n2−1 . . . (cpx2 + dpx + ep)np−1
+T (x) = (a1x + b1)(a2x + b2) . . . (alx + bl)(c1x
+2 + d1 + e1)(c2x2 + d2x + e2) . . . (cpx2 + dpx + ep)
+grad X(x) = grad S(x) − 1
+grad Y (x) = grad T (x) − 1
+Ikusten dugunez integral berriaren funtzio arrazionalak errezagoa beharko luke.
+Oostrogradskii-ren metodoan X(x) eta Y 
+(x) polinomioen koeﬁzienteak dira ezezagunak eta
+hoiek aurkitzeko metodoak eskatzen du ekuazioaren berdintza betetzea, hobeto esanda, alde
+bien deribatuak berdinak izatea,
+P (x)
+Q(x)
+=
+d
+dx
+X(x)
+S(x)
++
+Y (x)
+T (x)
+adibidea
+1.11.
+1
+(x3 − 1)2
+dx
+Ebazpena:
+Ikusten dugunez funtzio razional baten integrala dugu, goiko polinomioaren gradua 0 eta behe-
+koarena 6. Erraz egiaztatu daiteke zatitzailea honela banatu daitekeela,
+(x − 1)
+2 = (x − 1)(x2 + x + 1)
+2
+= (x − 1)
+2(x2 + x + 1)2
+Beraz biderkatzaile lineal bat eta biderkatzaile koadratiko bat 
+(horren diskriminantea 1−4 = −3
+da), biak anizkoitzak, anizkoitasuna 2.
+Hauek dira Ostrogradskii-ren metodoko polinomioak:
+S(x) = (x − 1)
+2−1(x2 + x + 1)2−1 = (x − 1)(x2 + x + 1) = x3 − 1
+T (x) = (x − 1)(x
+2 + x + 1) = x3 − 1
+X(x) = Ax2 + Bx + C
+Y (x) = Dx2 + Ex + F
+
+1.3
+Integraketa Metodoak
+13
+Beraz Ostrogradskii-k proposatutako formula honela gelditzen da,
+1
+(x3 − 1)2
+dx =
+Ax2 + Bx + C
+x3 − 1
++
+Dx2 + Ex + F
+x3 − 1
+dx
+eta horren deribatua eginez,
+1
+(x3 − 1)2
+=
+(2Ax + B)(x3 − 1) − 3x
+2(Ax2 + Bx + C)
+(x3 − 1)2
++
+Dx2 + Ex + F
+x3 − 1
+eta operatuz eta berdintzaren alde biak berdinduz sistema hau lortzen da,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+x4 :
+−A + E
+= 0
+x3 :
+−2B + F
+= 0
+x2 :
+−3C − D = 0
+x1 :
+−2A − E
+= 0
+x0 :
+−B − F
+= 0
+eta soluzioa hau da: A = C = E = 0, B = −1/3, F = −2/3
+Beraz hau gelditzen da,
+1
+(x3 − 1)2
+dx =
+−1/3
+x3 − 1
++
+−2/3
+x3 − 1
+dx
+Gelditu den integrala funtzio razional batena da baina zatitzailearen erroak xinpleak dira, eta
+integrala hasierakoa baino errazagoa/laburragoa. Integral hori orain eginez,
+1
+x3 − 1
+dx =
+A
+x − 1
++
+Bx + C
+x2 + x + 1
+dx
+eta koeﬁzienteek berdintza hau bete behar dute,
+1 = A(x2 + x + 1) + (Bx + C)(x − 1)
+Beraz sistema hau dugu,
+
+
+
+
+
+x2 :
+A + B
+= 0
+x1 :
+A − B + C = 0
+x0 :
+A − C
+= 1
+eta horren soluzioa hau da: A = 1/3, B = −1/3, C = −2/3. Beraz,
+1
+x3 − 1
+dx =
+1
+3
+ln |x − 1| −
+1
+3
+x + 2
+x2 + x + 1
+dx =
+1
+3
+ln |x − 1| −
+1
+6
+ln |x
+2 + x + 1|
+−
+1
+6
+3
+x2 + x + 1
+dx =
+1
+3
+ln |x − 1| −
+1
+6
+ln |x
+2 + x + 1| −
+1
+2
+dx
+(x + 1/2)2 + 3/4
+1
+3
+ln |x − 1| −
+1
+6
+ln |x
+2 + x + 1| −
+1
+√
+3
+arctan
+2
+√
+3
+(x +
+1
+2
+)
+Beraz eskatutako integral mugatua hau da,
+1
+(x3 − 1)2
+dx = −
+1
+3
+1
+x3 − 1
+−
+2
+9
+ln |x − 1| +
+1
+9
+ln |x
+2 + x + 1| +
+2
+√
+3
+9
+arctan
+2
+√
+3
+(x +
+1
+2
+) + C
+
+14
+1
+Integraketa
+1.3.7
+Funtzio Trigonometrikoen Integraketa
+Integral hauetako integrakizunetan funtzio trigonometrikoen konbinaketak edukiko ditugu,
+R(sin x, cos x) dx
+Gai˜
+nera R hizkiarekin eragiketa razionalaren kasua bakarrik aztertuko dugula esan nahi dugu.
+Asko erabiltzen den ordezkapen bat hau da,
+tan
+x
+2
+= t
+Orduan sinua eta cosinua honela jar daitezke,
+sin x =
+sin 2(x/2)
+1
+=
+2 sin(x/2) cos(x/2)
+cos2(x/2) + sin2(x/2)
+=
+2 tan(x/2)
+1 + tan2(x/2)
+=
+2t
+1 + t2
+cos x =
+cos 2(x/2)
+1
+=
+cos2(x/2) − sin
+2(x/2)
+cos2(x/2) + sin2(x/2)
+=
+1 − tan
+2(x/2)
+1 + tan2(x/2)
+=
+1 − t
+2
+1 + t2
+Integralaren aldagai-aldaketa burutzeko hauek ere behar ditugu,
+x = 2 arctan t → dx = 2
+dt
+1 + t2
+Beraz integral trigonometrikoak itxura hau hartuko du,
+R(sin x, cos x) dx =
+R
+2t
+1 + t2
+,
+1 − t
+2
+1 + t2
+2dt
+1 + t2
+adibidea
+1.12. Integratu
+dx
+sin x
+Ebazpena:
+Aipatu aldagai-aldaketa eginez,
+dx
+sin x
+=
+2dt
+1+t2
+2t
+1+t2
+=
+dt
+t
+= ln |t| + C = ln tan
+x
+2
++ C
+Hala ere aldagai-
+aldaketa horrez gain badaude beste aldaketa egokiak, integral partikularraren
+araberakoak. Kasu hauek dira garrantzitsu,
+1.
+R
+(sin x) cos x dx itxurakoan saiatuko genukeen lehenengo aldaketa sin x = t litzateke.
+Orduan dt = cos x dx izanik gure integrala
+R(t) dt eran geldituko da.
+2. Aurrekoaren analogoa
+R(cos x) sin x dx erakoa da. Horretan cos x = t eginez sin x dx =
+−dt dugu eta integrala
+R(t) dt eran geldituko da berriro.
+3. R
+(sin x, cos x) integrakizuna sinua eta kosinua konbinatuz tangentearekin bakarrik jarri
+badaiteke, orduan tan x = t aldaketa lagungarria da. Integrala honelakoa izanik,
+R(tan x) dx
+tan x = t aldaketarekin x = arctan t → dx = dt/(1 + t
+2), eta,
+R(tan x) dx =
+R(t)
+dt
+1 + t2
+
+1.3
+Integraketa Metodoak
+15
+adibidea
+1.13. Integratu
+dx
+2 − sin
+2 x
+Ebazpena:
+Sinua tangentearekin ordezkatuz
+sin2 x =
+tan2 x
+1 + tan2 x
+→ 2 − sin
+2 x =
+2 + tan2 x
+1 + tan2 x
+→
+dx
+2 − sin
+2 x
+=
+1 + tan2 x
+2 + tan2 x
+dx
+eta tan x = t aldaketarekin,
+I =
+1 + t2
+2 + t2
+dt
+1 + t2
+=
+dt
+2 + t2
+=
+1
+√
+2
+arctan
+t
+√
+2
++ C =
+1
+√
+2
+arctan
+tan x
+√
+2
++ C
+4.
+sinm x cosn x dx integraletan nun m eta n zenbaki osoak diren hiru kasu bereiztu
+daitezke,
+(a) Berretzaileren bat bakoiti denean zera egin dezakegu:
+• n bakoitia bada, n = 2k +1, gorde kosinu biderkatzaile bat eta besteekin cos
+2 x =
+1 − sin
+2 x egin, guzti hoiek sinuarekin bakarrik adierazteko. Orduan,
+sinm x cosn x dx =
+sinm x(cos2 x)k cos x dx =
+sinm x(1 − sin
+2 x)k cos x dx
+eta orain u = sin x aldaketa egin.
+• Sinuaren berretzailea bakoiti bada, orduan gorde sinu biderkatzaile bat eta bes-
+teekin egin sin2 x = 1 − cos
+2 x. Horrela,
+sinm x cosn x dx =
+(sin2 x)k cosn x sin x dx =
+(1 − cos
+2 x)k cosn x sin x dx
+eta orain u = cos x egin.
+• Berretzaile biak bakoitiak direnean bata edo bestea erabili daiteke.
+(b) m eta n positibo eta biak bikoiti direnean berdintza hauek lagungarri dira,
+sin2 x =
+1
+2
+(1 − cos 2x)
+cos2 x =
+1
+2
+(1 + cos 2x)
+Batzuetan hau ere lagungarri da,
+sin x cos x =
+1
+2
+sin 2x
+(c) m eta n berretzaileak bikoitiak bai baina bat negatibo denean aldaketa hau erabiliko
+dugu tan x = t edo cot x = t.
+5.
+sin mx cos nx dx, b)
+sin mx sin nx dx, c)
+cos mx cos nx dx
+Integral hauek askatzeko, hurrenez hurren, berdintza hauek erabiliko ditugu:
+(a) sin A cos B = 1
+2 [sin(A − B) + sin(A + B)]
+(b) sin A sin B = 1
+2 [cos(A − B) − cos(A + B)]
+(c) cos A cos B = 1
+2 [cos(A − B) + cos(A + B)]
+
+16
+1
+Integraketa
+1.3.8
+Funtzio Irrazional Batzuren Integraketa
+Funtzio irazional baten integrala ezin da beti funtzio elementalen bidez adierazi. Orain ikusiko
+ditugunak, ordezkapen egokiak eginez, funtzio razionalen integraletara bihurtu daitezke.
+1. Bedi
+R(x, x
+m
+n
+, . . . , x
+r
+s
+) dx integrala, nun R eragiketa razionala adierazten duen. Dema-
+gun
+m
+n
+, . . . ,
+r
+s
+zatiketen izendatzaile komuna k dela. Ordezkapen hau egingo dugu,
+x = tk, → dx = kt
+k−1dt
+Horrela x-ren berretzaile zatikiar guztiak t-
+ren berretzaile osoak bihurtuko dira eta inte-
+grakizuna t-ren funtzio razional moduan geldituko da.
+adibidea
+1.14. Integratu
+x1/2
+x3/4 + 1
+dx
+Ebazpena:
+1/2 eta 3/4-
+ren izendatzaile komuna 4 da. Beraz, metodo honen arabera x = t4 egingo
+dugu, hortik dx = 4t3dt dugularik. Integralean,
+x1/2
+x3/4 + 1
+dx = 4
+t2
+t3 + 1
+t3dt = 4
+t5
+t3 + 1
+dt
+= 4
+t2 −
+t2
+t3 + 1
+dt = 4
+t3
+3
+−
+4
+3
+ln t3 + 1 + C
+=
+4
+3
+x
+3
+4
+− ln x
+3
+4
++ 1
++ C
+2. Bedi hurrengo erako integrala,
+R x,
+ax + b
+cx + d
+m
+n
+, . . . ,
+ax + b
+cx + d
+r
+s
+dx
+Demagun k dela berretzailen izendatzaile komuna. Ordekapen honekin,
+ax + b
+cx + d
+= tk
+funtzio razional baten integrala lortuko dugu.
+adibidea
+1.15. Integratu
+√
+x + 4
+x
+dx.
+Ebazpena:
+Kasu honetan erroa x + 4 = t2 ordezkapenarekin kendu daiteke. Izendatzaile komuna 2 da
+ere. Integrakizun osoa funtzio razionala bihurtuko da,
+√
+x + 4
+x
+dx =
+t
+t2 − 4
+2t dt = 2
+1 +
+4
+t2 − 4
+dt
+= 2t + 2
+1
+t − 2
+−
+1
+t + 2
+dt = 2t + 2 ln
+t − 2
+t + 2
++ C
+= 2
+√
+x + 4 + ln
+√
+x + 4 − 2
+√
+x + 4 + 2
+2
++ C
+
+1.3
+Integraketa Metodoak
+17
+3. Bedi era honetako integrala
+R(x,
+ax2 + bx + c) dx
+Integral hoiek ordezkapen trigonometrikoaz baliatuz ebaztuko ditugu. Era honetakoak
+bihurtuko dira,
+R(sin z, cos z) dz
+nun R eragiketa razional bat den.
+Lehenengo funtzio koadratikoa honela jarriko dugu,
+ax2 + bx + c = a x +
+b
+2a
+2
++ c −
+b2
+4a
+eta x +
+b
+2a
+= t aldagai-aldaketarekin, beraz dx = dt, integrala honela gelditzen da,
+R t,
+at2 + c − b2/(4a) dt
+Aurrera segitzeko errokizunaren barruko parametroen zeinuak aztertu behar ditugu,
+(a) Bitez a > 0 eta c − b
+2/(4a) > 0. Orduan beren balioak horrela jarriko ditugu,
+a = m2,
+c −
+b2
+4a
+= n2
+eta honelako integrala dugu,
+R t,
+m2t2 + n2 dt
+(b) Bitez a > 0 eta c − b
+2/(4a) < 0. Orduan beren balioak horrela jarriko ditugu,
+a = m2,
+c −
+b2
+4a
+= −n
+2
+eta honelako integrala dugu,
+R t,
+m2t2 − n2 , dt
+(c) Bitez a < 0 eta c − b
+2/(4a) > 0. Orduan beren balioak horrela jarriko ditugu,
+a = −m
+2,
+c −
+b2
+4a
+= n2
+eta honelako integrala dugu,
+R t,
+−m2t2 + n2 dt
+(d) a < 0 eta c − b
+2/(4a) < 0 biak negatibo direnean
+√
+ax2 + bx + c zenbaki konplexua
+da edozein x balioarentzako, eta kasu hori funtzio errealen multzotik kanpo gelditzen
+da.
+Laburbilduz, holako integralak lortu ditugu,
+(a)
+R t,
+√
+m2t2 + n2 dt
+
+18
+1
+Integraketa
+(b)
+R t,
+√
+m2t2 − n2 dt
+(c)
+R t,
+√
+n2 − m2t2 dt
+Integral hoiek integral trigonometrikoetara bihurtu ditzakegu, hurrenez hurren, aldagai-
+aldaketa hauekin,
+(a) t =
+n
+m
+tan z → m
+2t2 + n2 = n2(1 + tan2 z) =
+n2
+cos2 z
+(b) t =
+n
+m
+1
+cos z
+→ m
+2t2 − n2 =
+n2
+cos2 z
+− n
+2 = n2
+sin2 z
+cos2 z
+.
+(c) t =
+n
+m
+sin z → n
+2 − m2t2 = n2(1 − sin2 z) = n2 cos2 z.
+adibidea
+1.16. Integratu
+dx
+(a2 − x2)3
+Ebazpena:
+Integral hori honela jar dezakegu ere,
+dx
+(a2 − x2)3
+=
+1
+√
+−x2 + a2
+3 dx
+Beraz atal honetan azaldutako erakoa da. Orain x2-
+ren koeﬁzientea negatibo da eta biga-
+rren koeﬁzientea positibo da, beraz c) kasuan gaude. Gure n eta m hauek dira,
+m = 1,
+n = a
+eta egingo dugun aldagai-aldaketa x = a sin z da. Orduan,
+dx
+(a2 − x2)3
+=
+a cos z dz
+(a2 − a2 sin
+2 z)3
+=
+1
+a2
+cos z dz
+cos3 z
+=
+1
+a2
+dz
+cos2 z
+=
+1
+a2
+tan z + C
+eta sin z = x/a izanik,
+tan z =
+sin z
+cos z
+=
+x/a
+1 − (x/a)2
+=
+x
+√
+a2 − x2
+→ I =
+1
+a2
+x
+√
+a2 − x2
++ C
+1.3.9
+Funtzio Jarrai Guztiak Integratu Al Ditzakegu?
+Ba al dago araurik edozein funtzio jarraiaren integral mugagabearen formula lortu ahal izateko?
+Adibidez, ba al dago araurik analitikoki
+ex
+2
+dx lortzeko? Erantzuna ezetz da, ez behintzat
+funtzio arruntekin.
+Guk bakarrik funtzio elementalekin ari gara, hau da, polinomioak, funtzio razionalak,
+berreketa funtzioak, funtzio exponentzialak, funtzio logaritmikoak, trigonometrikoak eta be-
+ren alderantzizkoak, hiperbolikoak eta hiperbolikoen alderantzizkoak, eta hoiek konbinatuz lor
+daitezkeenak, batuketa, kenketa, biderkaketa, zatiketa, eta funtzioen konposaketa erabiliz. Adi-
+bidez, funtzio hau
+f (x) =
+x2 − 1
+x3 + 2x − 1
++ ln(arctan x) − xe
+sin 2x
+funtzio elemental bat da.
+
+1.4
+Integral Mugatua. Konzeptua. Propietateak
+19
+f elementala bada, orduan f
+′ elementala da, baina
+f (x) dx ez da nahitaez elementala. Bedi
+f (x) = ex
+2
+. f jarraia denez badago bere integrala, eta F funtzioa honela deﬁnituz,
+F (x) =
+x
+0
+et
+2
+dt
+badakigu hori ex
+2
+-ren jatorrizko dela,
+F
+′ (x) = ex
+2
+Arazoa da frogatua izan dela F hori ez dela funtzio elemental bat. Horrek esan nahi du,
+nahiz eta guk gogo handiz saiatu, ezingo dugula adierazi
+ex
+2
+dx gure funtzio ezagunekin (kasu
+honetan mugagabeko funtzio serie baten bidez adierazi daiteke.) Berdina esan daiteke hurrengo
+integralei buruz,
+ex
+x
+dx
+sin(x2), dx
+cos(ex), dx
+x3 + 1 dx
+1
+ln x
+dx
+sin x
+x
+dx
+Izan ere funtzio elemental gehienek ez dute jatorrizko elementala. Noski, kurtso honetan
+eskatutako integralak guztiak elementalak dira.
+1.4
+Integral Mugatua. Konzeptua. Propietateak
+Integral mugatuaren konzeptua azaleren kalkuluarekin garatu zen. Azalera lau baten mugak
+lerro zuzenak direnean azalera erraz kalkulatu daiteke, integratu gabe:
+ laukizuzena dugunean
+azalera oinarria bider garaiera da, hirukia dugunean oinarria bider garaiera zati bi, alde zuzen
+gehiagoko muga denean azalera hirukitan banatu daiteke eta hiruki guztien azalerak batu.
+Demagun lerro kurbatu jarrai baten azpiko azalera kalkulatu nahi dugula. Irudian ikusten den
+moduan horretarako 
+[a, b] tartea zatitu egin dezakegu, tarteak luzera berdinekoak edo ezberdine-
+koak izanik. Tarte bakoitzaren erdialdean 
+(edo izkinetan) puntu bat aukeratu, x = x
+∗
+i , eta horko
+funtzioaren balioa har dezakegu. Tartearen zabalera eta funtzioaren balioarekin laukizuzen bat
+osotu dezakegu. Laukizuzen baten azalera hau izango da,
+∆ai = (xi − xi−1)f(x
+∗
+i )
+nun xi − xi−1 laukiaren oinarria da, eta f(x
+∗
+i ) garaiera.
+Azalera hori kurbaren azpiko eta 
+[xi−1, xi] tarteari dagokion benetazko azaleraren hurbilketa
+bat da. Lauki guztien azaleren batura,
+Rn =
+n
+i=1
+∆ai =
+n
+i=1
+f (x
+∗
+i )(xi − xi−1)
+benetazko azalera osoaren hurbilketa da eta Riemann batuketa deitzen dugu.
+[a, b] tartea gero eta gehiago zatitzen badugu, zatiak gero eta gehiago eginez eta zati bakoitzari
+gero eta txikiagoa izatea eskatuz, zatiketa bakoitzarekin Riemann batura bat edukiko dugu eta
+Riemann batuketen segidaren limitea benetazko azaleratzat hartzen dugu,
+A = lim
+n→∞
+n
+i=1
+f (x
+∗
+i )(xi − xi−1)
+
+20
+1
+Integraketa
+a
+b
+x1
+x2
+x3
+xi
+−1
+xi
+xn
+−1
+x∗
+i
+x∗
+1
+x∗
+3
+x∗
+2
+x∗
+n
+0
+x
+y
+f
+(x∗
+i )
+∆x
+Hori da ere funtzio jarrai baten integral mugatuaren konzeptua.
+definizioa
+1.3. Bedi a ≤ x ≤ b tartean deﬁnitutako f funtzio jarrai bat. Bedi 
+[a, b] tartearen
+partiketa bat, puntu hauekin eginda: x0(= a), x1, x2, . . . , xn(= b). Bitez x
+∗
+1, x
+∗
+2, . . . , x
+∗
+i , . . . , x
+∗
+n
+puntuak, nun x
+∗
+i ∈ [xi−1, xi]. Orduan a-tik b-ra tarteko f -ren integral mugatua hau da,
+b
+a
+f (x) dx = lim
+n→∞
+n
+i=1
+f (x
+∗
+i )(xi − xi−1)
+Oharrak:
+1. a tarteko hasiera puntuari integral mugatuaren behe-
+muga esaten diogu, eta b muturrari
+goi-muga.
+2. ∆xi = xi − xi−1 luzera ezberdineko tarteak hartuz, idazkeraren aldetik zihurtatzeko parti-
+ketaren ∆xi guztiak zerorantz joango direla, integral mugatuaren deﬁnizioa honela idatziko
+genuke,
+b
+a
+f (x) dx =
+lim
+max∆x→0
+n
+i=1
+f (x
+∗
+i )∆xi
+3. Nahiz eta orain ere integral hitza erabili integral mugatua eta lehenago deﬁnitu dugun
+integral mugagabea zeharo gauza ezberdinak dira. Integral mugagabea funtzio famili bat
+da eta integral mugatua zenbaki huts bat.
+4. Izan ere integral mugatuaren barruko aldagai independentearen hizkia aldagai mutua da,
+han barruan bakarrik dagoena eta beste edozein hizkiarekin erabili daiteke. Hurrengoak
+denak dira berdinak,
+b
+a
+f (x) dx =
+b
+a
+f (t) dt =
+b
+a
+f (r) dr
+5. Riemann batuketen segida egiten dugunean segida ezberdinak egin daitezke:
+ puntu kopuru
+berdineko bi partiketa ezberdinak izango dira x1, x2, . . . , xn−1 tarteetako mugen aukeraketa
+ezberdinekin. Partiketa berdinarekin ere tarte bakoitzeko erdiko puntuak, x
+∗
+i , ezberdinak
+aukeratu daitezke. Integral mugatuaren emaitza zentzurik edukitzeko edozein partiketekin
+eta erdiko puntuen aukereketekin Riemann batuketen segidek, gero eta puntu gehiagorekin
+osotutakoek, limite berdina eduki beharko lukete.
+adibidea
+1.17. Kalkulatu integral mugatu hau,
+b
+a
+ex dx
+
+1.4
+Integral Mugatua. Konzeptua. Propietateak
+21
+Ebazpena:
+[a, b] tartea n zati berdinetan zatituko dugu, guztiak ∆x = (b − a)/
+n luzerakoak. e
+x funtzioaren
+balioa tarte bakoitzaren eskuineko muturrean hartuko dugu. Mutur hoien posizioak honela
+idatzi daitezke,
+a + ∆x, a + 2∆x, a + 3∆x, . . . , a + n∆x = b
+Riemann batuketa hau dugu,
+Rn = e
+a+∆x∆x + ea+2∆x∆x + ea+3∆x∆x + . . . , ea+n∆x∆x
+eta operatuz,
+Rn = e
+a+∆x(1 + e∆x + e2∆x + · · · + e(n−1)∆x)∆x
+Parentesien barrukoa progresio geometrikoa da, arrazoia e∆x. Beraz bere batura ezaguna da
+eta gure formulan jarriz,
+Rn = e
+a+∆x e
+n∆x − 1
+e∆x − 1
+∆x = ea+∆x(en∆x − 1)
+∆x
+e∆x − 1
+Eta gure integral mugatua horren limitea da,
+b
+a
+ex dx = lim
+∆x→0
+ea+∆x(eb
+−
+a − 1)
+∆x
+e∆x − 1
+= ea(eb
+−
+a − 1) lim
+∆x→0
+∆x
+e∆x − 1
+Azken limitea indeterminatua da, baina l’Hopital erabiliz,
+lim
+∆x→0
+∆x
+e∆x − 1
+= lim
+∆x→0
+1
+e∆x
+= 1
+Beraz,
+b
+a
+ex dx = ea(eb
+−
+a − 1) = eb − ea
+adibidea
+1.18. Kalkulatu integral mugatu hau,
+b
+a
+kx dx
+Ebazpena:
+Zatitu dezagun [a, b] tartea n zati berdinetan, bakoitzaren luzera ∆x,
+∆x =
+b − a
+n
+, edo b − a = n ∆x
+Har dezagun kx funtzioaren balioak zatitxoen eskuin muturretan, a + ∆x, a + 2∆x, . . . , a + 
+(n −
+1)∆x, a + n∆x. Riemann batuketa hau dugu,
+Rn = k(a + ∆x)∆x + k(a + 2∆x)∆x + · · · + k[a + (n − 1)∆x]∆x + k(a + n∆x)∆x
+edo,
+Rn = k∆x[a+∆x+a+2∆x+· · ·+a+(n−1)∆x+a+n∆x] = k∆x[na+∆x(1+2+· · ·+n−1+n)]
+Barruko parentesian duguna progresio aritmetiko baten batura da eta honela kalkulatzen da,
+1 + 2 + · · · + n − 1 + n =
+n(n − 1)
+2
+
+22
+1
+Integraketa
+eta Riemann batuketa honela gelditzen da,
+Rn = k∆x[na + ∆x
+n(n − 1)
+2
+] = kn∆x[a + ∆x
+n − 1
+2
+] = k(b − a)[a +
+b − a − ∆x
+2
+]
+eta eskatutako integral mugatua horren limitea da,
+b
+a
+kx dx = lim
+∆x→0
+Rn = lim
+∆x→0
+k(b − a)[a +
+b − a − ∆x
+2
+] = k(b − a) a +
+b − a
+2
+= k(b − a)
+b + a
+2
+=
+k
+2
+(b2 − a
+2)
+Integral mugatuaren propietate hauek aipatu daitezke,
+1.
+b
+a f (x) dx = −
+a
+b f (x) dx, Riemann batuketa guztien tarteen luzerak zeinua aldatuko
+dutelako.
+2.
+a
+a f (x) dx = 0, Riemann batuketa guztiak zero izango direlako.
+3.
+b
+a c dx = c(b − a), Riemann batuketa guztiak balio horretakoak direlako.
+4.
+b
+a (f (x) ± g(x)) dx =
+b
+a f (x) dx ±
+b
+a g(x) dx.
+5.
+b
+a (cf )(x) dx = c
+b
+a f (x) dx, Riemann batuketa guztiak c konstante berdinarekin biderka-
+tuta gelditzen direlako.
+6.
+c
+a f (x) dx +
+b
+c f (x) dx =
+b
+a f (x) dx. [a, b] integrazio-tartea bi (edo nahi den kopuru mu-
+gatuko) zatietan banatu daiteke.
+7. [a, b] tartean f (x) ≥ 0 bada, orduan
+b
+a f (x) dx ≥ 0.
+8. [a, b] tartean f (x) ≥ g(x) bada, orduan
+b
+a f (x) dx ≥
+b
+a f (x) dx.
+9. [a, b] tartean m ≤ f(x) ≤ M bada, orduan m(b − a) ≤
+b
+a f (x) dx ≤ M (b − a).
+Frogapena:
+m ≤ f(x) ≤ M bada edozein Riemann batuketako f(x
+∗
+i ) balioak ezberdintza hoiek beteko
+ditu eta Rn-ren balioa honela akotatu daiteke,
+Rn =
+n
+i=1
+f (x
+∗
+i )(xi − xi−1) ≤
+n
+i=1
+M (xi − xi−1) = M
+n
+i=1
+(xi − xi−1) = M(b − a)
+eta berdin-berdin,
+Rn =
+n
+i=1
+f (x
+∗
+i )(xi − xi−1) ≥
+n
+i=1
+m(xi − xi−1) = m
+n
+i=1
+(xi − xi−1) = m(b − a)
+eta limiteak hartzerakoan,
+lim
+n→∞
+Rn ≤ M(b − a) →
+b
+a
+f (x) dx ≤ M(b − a)
+lim
+n→∞
+Rn ≥ m(b − a) →
+b
+a
+f (x) dx ≥ m(b − a)
+q.e.d.
+
+1.5
+Kalkuluaren Teorema Fundamentala
+23
+10. (Batazbestekoaren Teorema.) [a, b] tartean f jarraia bada, badago ξ ∈ 
+[a, b] nun
+b
+a
+f (x) dx = (b − a)f(ξ).
+Frogapena:
+Funtzio jarraiak funtzio akotatuak dira, bai goitik bai behetik. Beraz 
+[a, b] tartean f funtzio
+jarraiak baditu kotak, gainera balio maximo absolutua M , eta balio minimo absolutua, m,
+ere bai. Hoiekin hau beteko du,
+m ≤ f(x) ≤ M,
+m minimoa, M maximoa
+Orduan aurreko propietateagatik,
+m(b − a) ≤
+b
+a
+f (x) dx ≤ M(b − a) → m ≤
+1
+b − a
+b
+a
+f (x) dx ≤ M
+Baina f jarraia denez m minimoaren eta M maximoaren arteko balio guztiak hartuko ditu
+eta holako bat ezberdintzen artekoaren gaiaren berdina izango da. Balio hori ξ ∈ 
+[a, b]
+puntuan gertatzen bada,
+f (ξ) =
+1
+b − a
+b
+a
+f (x) dx
+edo
+b
+a
+f (x) dx = (b − a)f(ξ)
+q.e.d.
+1.5
+Kalkuluaren Teorema Fundamentala
+Teorema honek izena merezita du ze Kalkulu Diferentziala eta Kalkulu Integrala elkarrekin
+lotzen ditu. Matematikaren garapenean Kalkulu Diferentziala kurba baten lerro ikutzailearen
+azterketaren ondorio izan zen. Kalkulu Integrala azaleren kalkuluaz arduratzen zen, eta loturarik
+gabeko bi teoria edo metodoak ziren. Isaac Barrow (1630-1677), Newton-
+en irakasle, ohartu zen
+diferentziazioa eta integrazioa elkarren aurkako prozedurak zirela. Newton eta Leibniz izan
+ziren harreman horretaz baliatu eta kalkulua (calculus-
+a) metodo sistematiko bat izatea lortu
+zutenak. Beste gauzen artean Teorema Fundamentalaren bidez azalerak kalkulatzeko ez zen
+gehiago Riemann batuketen segiden limitea kalkulatu behar.
+teorema
+1.2. Kalkuluaren Teorema Fundamentala. [a, b] tartean f funtzioa jarraia bada,
+orduan g funtzioa,
+g(x) =
+x
+a
+f (t) dt,
+x ∈ [a, b]
+[a, b] tartean jarraia da, (a, b)-n deribagarri, eta hor g
+′ (x) = f (x)
+Frogapena:
+Egiaztatu dezagun g
+′ (x) = f (x) dela,
+g
+′ (x) = lim
+h→0
+g(x + h) − g(x)
+h
+= lim
+h→0
+1
+h
+x+h
+a
+f (t) dt −
+x
+a
+f (t) dt
+= lim
+h→0
+1
+h
+x
+a
+f (t) dt +
+x+h
+x
+f (t) dt −
+x
+a
+f (t) dt = lim
+h→0
+1
+h
+x+h
+x
+f (t) dt
+
+24
+1
+Integraketa
+f futnzioa 
+[a, b] tartean jarraia denez Batazbestekoaren Teorema aplikatu dezakegu 
+[x, x + h]
+tartean. Egongo da ξ ∈ [x, x + h] nun,
+x+h
+x
+f (t) dt = (x + h − x)f(ξ) = h f (ξ)
+eta,
+g
+′ (x) = lim
+h→0
+f (ξ) = f (x)
+Limitearen kalkuluaren prozesuan h → 0-ra joanda ξ → x-
+ra doa ere, eta f jarraia denez
+f (ξ) → f(x). Beraz nahi genuena egiaztatu dugu.
+q.e.d.
+Ikusten dugunez teorema honetan integral mugatuaren bidez 
+(zenbaki hutsa dena) funtzio be-
+rri bat osotu daiteke, integraleko goi-
+mugaren menpekoa. Hain era bitxian deﬁnitutako funtzioa,
+gainera, hasierako funtzioaren, f -ren, jatorrizko da. Noski, f -
+ren integral mugagabea oraingo
+g(x) + C litzateke.
+Beraz Teorema Fundamentalak integral mugatua erabiliz f -
+ren integral mugagabea ematen
+du. Edo behintzat integral mugagabea lortzeko bide bat. Gauzak borobiltzeko Barrow-
+en araua
+dugu.
+1.6
+Barrow-en Araua
+teorema
+1.3. Barrow-en Araua. [a, b] tartean f jarraia bada, orduan
+b
+a
+f (x) dx = F (b) − F (a)
+nun F funtzioa f -ren jatorrizko den.
+Horrek integral mugatuak kalkulatzeko bide berri bat ematen du. Integral mugatuaren balioa
+oso erraz kalkulatuko dugu f funtzioaren integral mugagabea ezagutu ondoren.
+Frogapena:
+Teorema Fundamentala frogatutzat hartuta erraz frogatzen da Barrow-
+en Araua. Esan dugunez
+hango g(x) jatorrizko funtzio bat da, g
+′ (x) = f (x). F (x) ere jatorrizko bada, bien arteko aldea
+C konstante hutsa da,
+F (x) = g(x) + C
+Horren muturretako balioekin operatuz,
+F (b) − F (a) = [g(b) + C] − [g(a) + C] = g(b) − g(a)
+Baina,
+g(b) =
+b
+a
+f (x) dx,
+eta
+g(a) =
+a
+a
+f (x) dx = 0
+Beraz,
+F (b) − F (a) = g(b) − g(a) =
+b
+a
+f (x) dx
+eta hori da Barrow-en Araua.
+q.e.d.
+Ikusten dugunez orain integral mugagabeen kalkuluak aplikazio handia eduki dezake:
+ azalerak
+kalkulatzeko, lerroen luzerak kalkulatzeko, lerro baten gainean egindako lan mekanikoa kalkula-
+tzeko, etabar, problema hoiek denak integral mugatu baten kalkulua bihurtu daitezkeelako.
+Idazkeraren aldetik F -ren aldaketa honela idazten da ere,
+F (b) − F (a) = F (x)]
+b
+a = F (x)|
+b
+a = [F (x)]
+b
+a
+
+1.6
+Barrow-en Araua
+25
+eta Barrow-en Araua, adibidez, era honetan
+b
+a
+f (x) dx = F (x)]
+b
+a ,
+nun F
+′ = f.
+adibidea
+1.19. Aurkitu kosinuaren azpiko azalera [0, b] tartean, nun b ∈ [0, π/
+2] tartean dagoen.
+Ebazpena:
+Riemann batuketen bidez sekulako problema izan daitekeena Barrow-
+en arauarekin oso erreza
+gelditzen da, kosinuaren jatorrizko funtzioa ezagutzen dugulako iadanik,
+A =
+b
+0
+cos x dx = sin x|
+b
+0 = sin b − sin 0 = sin b
+b = π/2 balio partikularra hartuz A = sin(π/
+2) = 1. Beraz kosinuaren azpiko azalera,
+periodoaren lehenengo laurdenean 1 da.
+adibidea
+1.20. Kalkulatu
+r
+o
+r2 − x2 dx
+nun r zirkunferentzi baten erradioa den.
+Ebazpena:
+Aldagai-aldaketa hau eginez,
+x = r sin t → dx = r cos t dt
+integral mugatu berriaren mugak t aldagaiarenak dira eta x = 0 denean 0 = r sin t da, beraz
+t = 0 da ere, eta x = r denean r = r sin t da, beraz t = π/
+2. Aldagai berriarekin integral
+mugatua honela gelditzen da,
+π/2
+0
+r2 − r2 sin
+2 t r cos t dt = r2
+π/2
+0
+cos2 t dt = r2
+π/2
+0
+1
+2
+(1 − cos 2t) dt =
+r2
+2
+t −
+1
+2
+sin 2t
+π/2
+0
+=
+πr2
+4
+(r erradio zirkuluaren laurdenaren azalera)
+Laburbilduz, aurreko bi teoremen emaitzak honela idatzi daitezke,
+1. g(x) =
+x
+a
+f (t) dt bada, orduan g
+′ (x) = f (x).
+2.
+b
+a
+f (x) dx = F (b) − F (a), nun F funtzioa f-
+ren edozein jatorrizkoa den, hau da, F
+′ = f .
+Teorema Fundamentalaren emaitza honela idatzi dezakegu ere,
+d
+dx
+x
+a
+f (t) dt = f (x)
+‘f integratuz lortutako funtzioa deribatu egiten badugu jatorrizko f funtzioa lortuko dugu.’
+Barrow-en Araua honela idatzi dezakegu ere. F
+′ = f izanik,
+b
+a
+F
+′ (x) dx = F (b) − F (a)
+‘F funtzioa lehenengo deribatu eta ondoren integratzen badugu emaitza berriro F funtzioa
+da, baina F (b) − F (a) eran.’
+Zentzu hoietan dira elkarren aurkakoak deribaketa eta integraketa. Batek egindakoa besteak
+desegin egiten du.
+
+26
+1
+Integraketa
+1.7
+Integral Inpropioak
+b
+a f (x) dx Riemann integralaren teorian bi hipotesi hauek egiten dira: f 
+(x) funtzioa [a, b] tarte
+itxi eta luzera mugatuko batean deﬁnituta dago, eta tarte horretan f (x)-
+ren balioak mugatuak
+dira. Hipotesi hoietako bat beteko ez denean integral impropioa dugu.
+1.7.1
+Konzeptua eta Motak
+Esan moduan integral inpropioak bi mota hautakoak dira:
+1. Integrazio tarte bukaezineko integral mugatua, ezmugatutasuna alde batetik bakarrik edo
+bietatik,
+∞
+a
+f (x) dx,
+b
+−∞
+f (x) dx,
+∞
+−∞
+f (x) dx
+Integral mugatuaren azaleraren esanahi geometrikoa erabiliz laster konturatzen gara f -
+ren
+azpiko azalera (integral mugatua) zenbaki mugatu bat izateko f (x)-
+en balioak zerorantz
+joan beharko direla x ardatzaren muturretan, Gainera, ikusiko dugunez, x ardatzaren
+luzera inﬁnituruntz doan baino abiadura handiagoarekin txikitu beharko da f 
+(x). f (x)-k
+inﬁnitesimo behar du, 1/x-a baino ordena handiagokoa, x → ∞-
+ra doanean, edo x → −∞-
+ra doanean, edo inﬁnitura alde bietatik doanean, integral inpropioaren arabera.
+2. Integrazio tarte mugatuan f (x)-
+ek ezjarraitasun inﬁnitua dueneko integrala. Adibidez
+b
+a
+f (x) dx integralaren 
+[a, b] integrazio tarteak c puntu bat gorde dezake nun lim
+x→c
+f (x) =
+±∞, c-ren eskuinetik, ezkerretik, edo bietatik.
+1.7.2
+Integral Inpropioen Ebazpena
+1. integrazio-tarte infinitua,
+(a) [a, ∞) integrazio tartea. Integral inpropioaren balioa honela deﬁnizen da,
+∞
+a
+f (x) dx = lim
+t→∞
+t
+a
+f (x) dx
+Ikusten dugunez limite baten balioa da. Limiterik dagoenean 
+(zenbaki mugatu bat)
+integral inpropia konbergente da, eta limitea ±∞ denean integral inpropioa diber-
+gente da.
+(b) 
+(−∞, b] integrazio tartea. Integral inpropioaren balioa honela deﬁnitzen da,
+b
+−∞
+f (x) dx = lim
+t→−∞
+b
+t
+f (x) dx
+Berriro ere integral inpropio konbergente edo integral inpropio dibergente eduki de-
+zakegu.
+(c) (−∞, ∞) integrazio tartea. Integrazio tartea bi zatitan banatuz,
+∞
+−∞
+f (x) dx =
+a
+−∞
+f (x) dx +
+∞
+a
+f (x) dx
+Integrala konbergente izango da eskuineko integral biak konbergente badira. a edozein
+balioa izan daiteke.
+
+1.7
+Integral Inpropioak
+27
+adibidea
+1.21. Kalkulatu integral inpropio hauek,
+∞
+1
+dx
+x2
+,
+∞
+1
+dx
+x
+Ebazpena:
+•
+∞
+1
+dx
+x2
+= lim
+t→∞
+t
+1
+dx
+x2
+= lim
+t→∞
+−
+1
+x
+t
+1
+= lim
+t→∞
+1 −
+1
+t
+= 1
+•
+∞
+1
+dx
+x
+= lim
+t→∞
+t
+1
+dx
+x
+= lim
+t→∞
+[ln x]
+t
+1 = lim
+t→∞
+(ln t − 0) = ∞
+Lehenengoa konbergente da eta bigarrena dibergente. 1/
+x funtzioa ez da azkar nahiko
+anulatzen bere azpiko azalera balio mugatu bat hartzeko. 1/
+x2 funtzioa, aldiz, bai.
+Behin deﬁnizioa ondo ikasita idazketa aldetik integral impropioaren kalkulua pixka bat
+erosogoa idatzi daiteke. Adibidez,
+∞
+0
+e
+−
+x dx = − e−x
+∞
+0 = e
+0 − e−∞ = 1
+Orokorrean integrakizuna
+1
+xp
+erakoa bada
+∞
+1
+1
+xp
+dx integrala conbergente izango da p > 1
+bada, eta dibergente p ≤ 1 bada. Arau horrek esaten digu zein ordenako inﬁnitesimo izan
+behar da integrakizuna integral inpropio mota hauek konbergente izateko. Emaitza hori
+honela aterako dugu,
+∞
+1
+1
+xp
+dx =
+∞
+1
+x
+−
+p dx =
+x1
+−
+p
+1 − p
+∞
+1
+=
+dibergente p < 1
+(berretzailea > 1)
+1/(p − 1)
+p > 1
+eta goiko adibidean ikusi dugunez p = 1 denean ere integrala dibergentea da.
+adibidea
+1.22. Kalkulatu,
+∞
+−∞
+dx
+1 + x2
+Ebazpena:
+Integrakizuna funtzio bikoitia da eta hori lagungarri integrala bi zati hauetan banatuko
+dugu,
+∞
+−∞
+dx
+1 + x2
+=
+0
+−∞
+dx
+1 + x2
++
+∞
+0
+dx
+1 + x2
+Integrakizuna funtzio bikoiti delako eta integral bien integrazio tartea luzera berekoa delako
+integral biek berdinak izan behar dute 
+(adar bien azpiko azalerak berdinak). Beraz,
+∞
+−∞
+dx
+1 + x2
+= 2
+∞
+0
+dx
+1 + x2
+= 2 [arctan x]
+∞
+0 = 2(
+π
+2
+− 0) = π
+Integrazio tartea alde bietatik inﬁnitu denean oker litzateke integralaren kalkulua honela
+deﬁnitzea,
+∞
+−∞
+f (x) dx = lim
+t→∞
+t
+−
+t
+f (x) dx
+
+28
+1
+Integraketa
+Hori ikusteko demagun integral errez hau,
+∞
+−∞
+(x + 1) dx = lim
+t→∞
+x2
+2
++ x
+t
+−
+t
+= lim
+t→∞
+(2t) = ∞
+Baina integral bera aldagai-aldaketa txiki honekin eginez: z = x + 1,
+∞
+−∞
+z dz = lim
+t→∞
+t
+−
+t
+z dz = lim
+t→∞
+z2
+2
+t
+−
+t
+= lim
+t→∞
+0 = 0
+Bide luzetik eginda,
+∞
+−∞
+(x + 1) dx =
+0
+−∞
+(x + 1) dx +
+∞
+0
+(x + 1) dx
+=
+x2
+2
++ x
+0
+−∞
++
+x2
+2
++ x
+∞
+0
+= lim
+t→−∞
+−
+t2
+2
+− t + lim
+t→∞
+t2
+2
++ t
+= lim
+t→−∞
+−
+t2
+2
++ lim
+t→∞
+t2
+2
+= lim
+t→∞
+−
+t2
+2
++ lim
+t→∞
+t2
+2
+= −∞ + ∞
+Beraz integral impropio mota honen deﬁnizioa aplikatuz ez dugu lortzen integralaren ba-
+lioa. Deﬁnizioak bi integral impropio kalkulatzea eskatzen du eta hoiek biak konbergente
+izan behar dira integral osoaren balioa lortzeko 
+(bi limite elkarrekin batu daitezke biak
+existitzen direnean bakarrik). Integral impropio biak dibergente dira integragaieko x + 1
+ez delako txikitzen x → ∞ edo x → −∞ egiten denean, izan ere muga hoietan nahi den
+beste handia egiten da, eta integrala ezin da konbergente izan. Eskatutako integral impro-
+pioa dibergente da.
+Beraz deﬁnizioa ez da nahikoa adibide honetako integrala kalkulatzeko. Eztabaidarekin se-
+gitzeko integral mugatuaren deﬁniziora eta bere esanahi geometrikora jo beharko genduke.
+x + 1-en azpiko azalera zati positibo bat (eskuinean) eta zati negatibo bat 
+(ezkerrean du).
+Izan ere zati biak neurri berekoak dira, x + 1 funtzioa bakoitia baita x = −1 puntuarekiko,
+bi erdi berdinak ditu puntu horrekiko 
+(x + 1 = z aldaketak agerian uzten duen moduan),
+beraz esanahi geometrikoak
+∞
+−∞
+(x+ 1) dx = 0 izango dela esaten du, eman dugun integral
+impropioaren deﬁnizioak ematen ez duena.
+2. integrakizunaren ezjarraitasun infinituak.
+Integrakizuna bere deﬁnizio-
+eremuko puntu batzuetan ezjarrai denean arazoak egon daitez-
+ke integrazio tartea puntu hoiek hartzen dituenean. Ezjarraitasun ekidigarria dugunean
+edo jauzi-
+ezjarraitasuna dugunean ez dago arazorik integratzeko, gehienera integrazio-
+funtzioa ez da deribagarri izango puntu hoietan. Arazoa funtzioa integrazio tarteko puntu
+batzuetan ez mugatu denean dugu, ezjarraitasun inﬁnituko puntuetan..
+Adibidez a puntu batean ezjarraitasun inﬁnitua badugu, bai x → a
++-ra joanda integra-
+kizuna ±∞ egiten delako, bai x → a
+− -ra joanda integrakizuna ±∞ egiten delako, edo
+x → a
++ eta x → a− bietatik joanda ere ±∞ egiten delako, orduan,
+(a) [a, b) tartean f jarraia bada, baina b puntuan ezmugatua
+b
+a
+f (x) dx = lim
+t→b−
+t
+a
+f (x) dx
+(b) (a, b] tartean f jarraia bada, baina a puntuan ezmugatua
+b
+a
+f (x) dx = lim
+t→a+
+b
+t
+f (x) dx
+Integral hoiek konbergenteak edo dibergenteak izan daitezke.
+
+1.7
+Integral Inpropioak
+29
+(c) c puntuan f ezjarraia bada, nun a < c < b, eta biak
+c
+a f (x) dx eta
+b
+c f (x) dx kon-
+bergente badira, orduan
+b
+a
+f (x) dx =
+c
+a
+f (x) dx +
+b
+c
+f (x) dx
+adibidea
+1.23. Kalkulatu,
+1
+0
+dx
+√
+1 − x
+Ebazpena:
+Ikusten dugunez goiko integrazio-
+mugan, x = 1, integrakizunak ezjarraitasun inﬁnitua
+dauka, limitea inﬁnitu da, integrakizuna ere ez dago deﬁnituta. Beraz,
+1
+0
+dx
+√
+1 − x
+= lim
+t→1−
+t
+0
+dx
+√
+1 − x
+= −2 lim
+t→1−
+√
+1 − x
+t
+0 = −2 lim
+t→1−
+(
+√
+1 − t − 1) = 2
+adibidea
+1.24. Kalkulatu,
+1
+−
+1
+dx
+x2
+Ebazpena:
+Funtzioa bikoiti da eta integrazio-tartea guztiz simetrikoa da, beraz
+1
+−
+1
+dx
+x2
+= 2
+1
+0
+dx
+x2
+Noski, x = 0 puntuan ezjarraitasun inﬁnitua dugu,
+1
+0
+dx
+x2
+= lim
+t→0+
+1
+t
+dx
+x2
+= lim
+t→0+
+−
+1
+x
+1
+t
+= lim
+t→0+
+1
+t
+− 1 = ∞
+Beraz eskatutako integrala dibergentea da.
+Ezjarraitasuna kontuan hartu gabe emandako integrala itsu-
+itsuan egin izan bagenu,
+1
+−
+1
+dx
+x2
+= −
+1
+x
+1
+−
+1
+= −
+1
+1
+−
+1
+−1
+= −2
+baino hori oker dago.
+Azter dezagun adibide orokorrago hau: bedi x
+−
+p funtzioa (0, 1] tartean deﬁnitua. Ikusten
+dugunez p > 0 denean funtzioa ezmugatua da ezkerreko muturrean. Integralarekin zera
+dugu,
+1
+0
+dx
+xp
+dx = lim
+t→0+
+1
+t
+dx
+xp
+dx = lim
+t→0+
+x1
+−
+p
+1 − p
+1
+t
+=
+dibergente p > 1
+1/(1 − p)
+p < 1
+eta emaitzak balio du ere p < 0 denean.
+p = 1 denean integrala dibergente da,
+1
+0
+dx
+x
+= ln x|
+1
+0 = 0 − ln 0 = ∞
+
+30
+1
+Integraketa
+x
+−
+1 funtzioa 
+(0, ∞) tartean hartuta bi integral inﬁnitu ditugu, bat adibidez 0 < x ≤ 1
+tartekoa eta bestea 1 ≤ x < ∞ tartekoa.
+∞
+0
+1
+x
+dx =
+1
+0
+1
+x
+dx +
+∞
+1
+1
+x
+dx
+Orain arteko gure emaitzek esaten dute p < 1 eginez ezkerreko integrala mugatua bihurtzen
+dela, eta p > 1 eginez eskuineko integrala egiten dela mugatua.
+adibidea
+1.25. Azter dezagun integral impropio honen konbergentzia,
+1
+0
+sin x
+xp
+dx
+Ebazpena:
+1
+0
+sin x
+xp
+dx =
+1
+0
+sin x
+x
+·
+1
+xp−1
+dx
+Integragaia ezmugatua da x = 0 puntuan baina ez ezkerreko sin x/
+x zatiagatik, horren
+limitea x → 0-
+ra doanean 1 izanik. Integral impropioaren konbergentziak beste zatiaren
+menpekoa da, eta konbergentea bakarrik p − 1 < 1 denean izango da, beraz p < 2 izan
+behar da sin x/xp funtzioaren integrala konbergente izateko.
+1.7.3
+Integral Inpropioen Azterketaren Gidalerroak
+Integral impropioaren kalkuluak aurretik integral mugatu normal bat ebaztea eskatzen du, on-
+doren lortutakoaren limitea kalkulatzeko, baina batzuetan aurreko integrala kalkulatzea ez da
+erreza izango. Zorionez batzuetan integrala egin gabe batzuetan integral impropioaren kon-
+bergentzia aztertu daiteke. Beste batzuetan integral inpropioen azterketan nahikoa izaten da
+jakitea konbergentea edo dibergentea den, konbergente denean ere integralaren balioa zehazki
+kalkulatu gabe. Azterketan laguntzeko teorema hauek ditugu,
+teorema
+1.4. Bedi f : [a, ∞) → R funtzio integragarria [a, b] tarte orotan,
+a) x ≥ a guztientzako |f(x)| ≤ g(x) bada eta
+∞
+a
+g(x) dx konbergente bada, orduan
+∞
+a
+f (x) dx
+ere konbergente da.
+b) x ≥ a guztientzako 0 ≤ g(x) ≤ f(x) bada eta
+∞
+a
+g(x) dx dibergente bada, orduan
+∞
+a
+f (x) dx
+ere dibergente da.
+Ez dugu teorema frogatuko. Lehenengo zatiak funtzio baten balio absolutuak beste funtzio
+baten balioekin alderatzen ditu 
+(ondorioz bigarren funtzioaren balioak positiboak behar dutela-
+rik.) Teoremak lehenengo funtzioaren konbergentzia zihurtatzen du. g
+(x) funtzioa bezala |f(x)|
+funtzioa hartuta |f(x)| = |f(x)| denez, teoremak esaten du
+∞
+a
+|f(x)| dx konbergente denean
+∞
+a
+f (x) dx ere konbergente dela. Orduan esaten dugu f -
+ren integrala absolutuki konbergente
+dela.
+adibidea
+1.26. Aztertu integral honen konbergentzia,
+∞
+1
+dx
+x2(1 + ex)
+Ebazpena:
+Zatitzailean biderkatzen dagoen (1 + ex) > 1 da, beraz
+1
+x2(1 + ex)
+<
+1
+x2
+→
+∞
+1
+dx
+x2(1 + ex)
+<
+∞
+1
+dx
+x2
+= · · · = 1
+eta eskatutako integral inpropioa konbergente da, eta bere balioa 1 baino txikiagoa da.
+
+1.7
+Integral Inpropioak
+31
+adibidea
+1.27. Aztertu integralaren konbergentzia,
+∞
+1
+x + 1
+√
+x3
+dx
+Ebazpena:
+x + 1 > x denez,
+x + 1
+√
+x3
+>
+x
+x3/2
+=
+1
+√
+x
+→
+∞
+1
+x + 1
+√
+x3
+>
+∞
+1
+1
+√
+x
+dx = 2
+√
+x
+∞
+1 = ∞
+Beraz eskatutako integral inpropioa dibergente da.
+adibidea
+1.28. Aztertu integral hau,
+∞
+1
+sin x
+x3
+dx
+Ebazpena:
+Integrakizunean dugun sinu funtzioagatik x handitu ahala integrakizunaren zeinua txandaka
+plus-minus egiten ari da. Ikusten dugu x3-
+rekin zatituta dagoela eta sinuaren balio handiena
+1 denez badirudi integrakizuna nahiko azkar txikitzen ari dela integrala konbergente izateko.
+Aztertu dezagun konbergentzia balio absolutua hartuta,
+sin x
+x3
+<
+1
+x3
+→
+∞
+1
+sin x
+x3
+dx <
+∞
+1
+1
+x3
+dx = −
+1
+2x2
+∞
+1
+=
+1
+2
+Beraz integral absolutuki konbergente dugu. Emandakoa konbergente da, eta bere balio ab-
+solutua 1/2 baino txikiagoa.
+Tarte inﬁnituko integral inpropioen azterketa hau beste taldeko integral impropioetara zabal-
+du daiteke.
+x = c puntuan f (x) ezmugatua bada, f -
+ren integralarekin alderatzeko asko erabiltzen den
+integrala
+1
+(c − x)p
+funtzioarena da. Hori ere inﬁnitua egiten da x = c puntuan eta dakigunez
+p < 1 denean integrala konbergente da, eta p ≥ 1 denean dibergente da.
+adibidea
+1.29. Aztertu integralaren konbergentzia,
+1
+0
+1
+√
+x + 4x3
+dx
+Ebazpena:
+Ikusten dugunez x → 0
++-ra doanean integrakizunaren limitea inﬁnitu egiten da. Bestaldetik
+integrala konbergente edo dibergente den jakitea bakarrik nahi badugu akotatu egingo dugu,
+1
+√
+x + 4x3
+<
+1
+√
+x
+→
+1
+0
+1
+√
+x + 4x3
+dx <
+1
+0
+dx
+√
+x
+= lim
+t→0+
+1
+t
+dx
+√
+x
+= · · · = 2
+Beraz eskatutako integrala konbergentea da, eta bere balioa 2 baino txikiagoa.

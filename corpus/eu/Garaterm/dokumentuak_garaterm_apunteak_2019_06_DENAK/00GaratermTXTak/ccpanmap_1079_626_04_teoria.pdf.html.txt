@@ -1,0 +1,782 @@
+
+
+
+4
+Multzo aljebraiko proiektiboak
+4.1. Espazio proiektiboa
+4.1. Deﬁnizioa. Izan bitez K gorputza eta n ∈ N. Orduan, n dimentsioko espazio
+proiektiboa A
+n+1-en zuzen bektorialen multzoa da. Hau adierazteko Pn(K) idazten
+dugu, edo P
+n soilik, ez badago zalantzarik gorputza zein den.
+Zuzen bektorial bat zehazteko, nahikoa da zuzenaren norabidea ematen duen
+bektore bat ematea.
+Ohartu bektore hori ezin dela nulua izan.
+Beraz, P
+n-ko
+puntuak adierazteko A
+n+1-eko bektore ez-nuluak erabil ditzakegu. Idatz dezagun
+(a0 : a1 : · · · : an) ikurraren bitartez (a0, a1, . . . , an) bektore ez-
+nuluak
+∗ determina-
+tzen duen zuzen bektoriala. Orduan,
+P
+n = {(a
+0 : a1 : · · · : an) | ai ∈ K ez denak 0}
+dugu. Beraz (0 : · · · : 0) ez da P
+n-ko puntua. Gainera,
+(a0 : a1 : · · · : an) = (b0 : b1 : · · · : bn)
+⇐⇒ (a0, a1, . . . , an) eta (b0, b1, . . . , bn) proportzionalak.
+Ondorioz, (a0 : · · · :
+ an) puntu proiektibo bat idazteko, ditugun aukera guztiak
+(λa0 : · · · : λan) dira, λ ∈ K
+× izanik. Ohartu Pn-ko puntuak adierazteko n + 1
+osagai behar ditugula.
+4.2. Adibideak. 1) (2 : −1 : 0) = (−2 : 1 : 0) = (1 : −1/2 : 0) = (16 : −8 : 0)
+dugu P
+2(R)-n.
+2) (2 : i : 0 : −i) = (1 : i/2 : 0 : −i/2) = (−2i : 1 : 0 : −1) = (2i : −1 :
+ 0 : 1)
+dugu P
+3(C)-n.
+3) Oro har, demagun P = (a0 : a1 : · · · : an) P
+n-ko puntu bat dela. Orduan:
+(i) ai = 0 bada, P = (b0 : b1 : · · · :
+ bn) idatz dezakegu, bi = 1 izanik. Horreta-
+rako, hartu bj = aj/ai, 0 ≤ j ≤ n guztietarako.
+∗Hemendik aurrera, An+1 espazio aﬁna Pn espazio proiektiboarekin lotuta agertzen denean,
+A
+n+1-eko puntuak 
+(a0, . . . , an) moduan idatziko ditugu, orain arte ohikoa izan den 
+(a1, . . . , an+1)
+notazioaren ordez. Koherentziagatik, osagai horiei dagozkien indeterminatuak X0, . . . , Xn izen-
+datuko ditugu, eta polinomioak K
+[X0, . . . , Xn] aljebraren barruan hartuko ditugu, A
+n+1-eko pun-
+tuak zein polinomiotarako anulatzen diren aztertu behar dugunean.
+116
+
+4.1. ESPAZIO PROIEKTIBOA
+117
+(ii) ai = 0 bada, orduan P = (b0 : b1 : · · · : bn) adierazpen guztietan bi = 0
+dugu.
+P
+n espazio proiektiboa An+1 espazio aﬁnean oinarrituz deﬁnitu dugu, eta An+1
+!
+espazio bektoriala da bereziki. Hala ere, P
+n ez da espazio bektoriala eragiketa
+naturalekin, batuketa ez baitago ondo deﬁniturik. Adibidez, (1 : 0) = (2 :
+ 0) dugu,
+baina
+(1 : 0) + (0 : 1) = (1 : 1) = (2 : 0) + (0 : 1) = (2 : 1).
+Zer gertatzen da eskalarrezko biderketarekin?
+Finka dezagun 0 ≤ i ≤ n indize bat. Orduan,
+ϕi
+:
+A
+n
+−→
+P
+n
+(x1, . . . , xn)
+−→
+(x1 : · · · : xi : 1 : xi+1 : · · · : xn)
+aplikazioa injektiboa da. Beraz, A
+n eta Ui = ϕi(An) bijekzioan daude. Orduan, Ui
+multzoari P
+n-ren zati aﬁn deritzogu. Ohartu Ui honela ere idatz dezakegula:
+Ui = {(a0 : · · · : ai−1 : 1 : ai+1 : · · · : an) | aj ∈ K}
+= {(a0 : · · · : ai−1 : ai : ai+1 : · · · : an) | aj ∈ K, ai = 0}.
+Ondorioz, P
+n = Ui
+·
+∪ Hi (bildura disjuntua) dugu,
+Hi = {(a0 : · · · : ai−1 : 0 : ai+1 : · · · : an) | aj ∈ K ez denak 0}
+izanik. Azken multzo honi inﬁnituko hiperplano eta bere puntuei inﬁnituko puntu
+deitzen zaie.
+Garrantzitsua da azpimarratzea P
+n-ren zati aﬁna eta inﬁnituko hiperplanoa
+i-ren aukeraren araberakoak direla.
+Orain espazio proiektiboaren deﬁnizioa orokortuko dugu.
+4.3. Deﬁnizioa. Izan bedi V espazio bektorial ez-nulua. Orduan, V -ren espazio
+proiektiboa, PV , V -ren zuzen bektorialen multzoa da. Gainera, dim V = m bada,
+PV -ren dimentsioa m − 1 dela esango dugu.
+Beraz, P
+n = PKn+1 dugu eta Pn-ren dimentsioa n da. Esan dugunez, espa-
+zio proiektibo bat ez da espazio bektoriala. Beraz, kasu honetan, dimentsioa hitz
+egiteko modu bat baino ez da, ez du zerikusirik oinarriekin.
+4.4.
+Deﬁnizioa. Izan bitez V espazio bektoriala eta W V -ren azpiespazio ez-
+nulua. Orduan, PW PV -ren azpiespazio proiektibo bat dela diogu.
+4.5. Adibideak. 1) PV -ko puntuak azpiespazio proiektiboak dira, 0 dimentsio-
+koak. Izan ere, V -ren zuzen bektorialetatik datoz.
+2) Bat dimentsioko azpiespazio proiektiboei zuzen deritze. Hauek V -ren plano
+bektorialetatik datoz.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+4.2. POLINOMIO HOMOGENEOAK ETA IDEAL HOMOGENEOAK
+118
+3) Izan bedi H V -ren hiperplano bektoriala. Orduan, PH PV -ren hiperplano
+proiektibo bat dela diogu. Ohartu dim PH = dim PV − 1 dela.
+4) Izan bedi Hi P
+n-ren inﬁnituko hiperplano bat, 0 ≤ i ≤ n izanik. Izan bedi
+Ji, Xi = 0 ekuazioaren bidez deﬁniturik dagoen A
+n+1-en hiperplano bektoriala.
+Orduan, Hi = PJi dugu eta Hi aurreko deﬁnizioaren arabera ere hiperplanoa da.
+4.2. Polinomio homogeneoak eta ideal homogeneoak
+Izan bitez (a0 : · · · : an) ∈ P
+n eta f ∈ K[X0, . . . , Xn]. Nola deﬁni daiteke
+f (a0 : · · · : an) balioa? Aukerarik naturalena dirudi
+f (a0 : · · · : an) = f (a0, . . . , an)
+jartzeak. Adibidez, f 
+(X, Y ) = X − Y 2 bada, orduan aurreko erregelari jarraiturik
+f (1 : 1) = 0 eta f (2 : 2) = −2 dugu. Orain, P
+1 zuzen proiektiboan (1 : 1) = (2 : 2)
+denez, honek esan nahi du f (1 :
+ 1) balioa ez dagoela ondo deﬁniturik. Ondorioz,
+ikusten dugu ezin dela polinomio baten balioari buruz hitz egin espazio proiektiboko
+puntu baten gainean. Hori dela eta, ez dugu erabiliko f (a0 : · · · :
+ an) bezalako
+adierazpenik, bakarrik idatz dezakegu f (a0, . . . , an).
+Aurreko adibidean f (1, 1) = 0 eta f (2, 2) = 0 genuen. Beraz, (1 :
+ 1) puntua f -
+ren zeroa den edo ez den esateak ere ez du zentzurik. Azter dezagun orain g
+(X, Y ) =
+X2 − Y 2 polinomioa. Kasu horretan, g(1, 1) = 0 eta g(2, 2) = 0 dugu. Gainera,
+(1 : 1) puntua idazteko aukera guztiak hartzen baditugu, hau da, (λ : λ) non
+λ ∈ K×, orduan g(λ, λ) = 0 ere badugu. Beraz, (1 : 1) g-
+ren zero proiektiboa dela
+esan daiteke. Are gehiago, P = (a : b) ∈ P
+1 edozein izanik, λ ∈ K× guztietarako
+g(λa, λb) = λ
+2g(a, b)
+dugu eta, ondorioz, P idazteko aukera guztietarako, g-
+ren balioa beti 0ren berdina
+edo beti 0ren desberdina aterako da. Horrela, zentzua du P g-
+ren zeroa den edo ez
+den esateak. Zein diferentzia dago f eta g polinomioen artean, zeroei dagokienez
+hain jokaera desberdina izateko?
+4.6. Deﬁnizioa. Polinomio bat homogeneoa dela esaten dugu hori osatzen duten
+monomio guztiek maila oso bera badute.
+Adibidez, f (X, Y, Z) = X3+XY Z+XY 2+Y Z2 homogeneoa da eta g(X, Y, Z) =
+X2 − XY + XY Z ez da homogeneoa.
+Har dezagun f edozein polinomio. Orduan, f modu bakar batean deskonposa
+daiteke
+f =
+i≥0 fi
+(4.1)
+gisa, fi bakoitza i mailako polinomio homogeneoa izanik. (Hemendik aurrera, ez
+badugu kontrakoa esaten, polinomio baten mailaz hitz egiten dugunean, maila osoa
+esan nahi dugu.) Horretarako, hartu fi modura f -n agertzen diren i mailako gai
+guztien batura. Ohartu fi = 0 dela i > deg f bada eta, beraz, (4.1)-eko batura
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+4.2. POLINOMIO HOMOGENEOAK ETA IDEAL HOMOGENEOAK
+119
+ﬁnitua dela, i ≥ 0 guztietara hedatzen bada ere. Polinomio homogeneo horiei f -
+ren
+osagai homogeneo deitzen zaie. Adibidez,
+f (X, Y ) = X
+3 + X2Y + XY + Y 2 + Y + 1
+bada, orduan f3 = X
+3 + X2Y , f2 = XY + Y 2, f1 = Y eta f0 = 1 dugu.
+4.7. Teorema. Izan bedi f ∈ K[X0, . . . , Xn] polinomio homogeneoa, d mailakoa.
+Orduan,
+f (λa0, . . . , λan) = λ
+df(a
+0, . . . , an),
+λ ∈ K guztietarako.
+Froga. Nahikoa da emaitza d mailako monomioetarako betetzen dela ikustea.
+Izan bedi g(X0, . . . , Xn) = X
+i0
+0 . . . X
+in
+n
+monomioa, i0 + · · · + in = d izanik. Orduan,
+g(λa0, . . . , λan) = (λa0)
+i0 . . . (λa
+n)
+in = λi0+···+inai0
+0 . . . a
+in
+n
+= λ
+dg(a
+0, . . . , an),
+nahi bezala.
+Azken teorema honen ondorioz, f polinomio homogeneoa bada, zentzua du
+(a0 : · · · : an) ∈ P
+n puntua f -ren zeroa den edo ez den esateak. Beraz, kasu
+honetan, f (a0 : · · · : an) = 0 edo f (a0 : · · · :
+ an) = 0 idatz dezakegu, baina inola ere
+ez f (a0 : · · · :
+ an) balioa solte! Laster ikusiko dugunez, K aljebraikoki itxia bada,
+alderantzizkoa ere betetzen da: f -
+ren zero proiektiboei buruz hitz egin badaiteke,
+orduan f homogeneoa da.
+Ikus ditzagun polinomio homogeneoen beste propietate batzuk. Froga begi-
+bistakoa da eta, horregatik, ez dugu emango.
+4.8. Teorema. Izan bitez f eta g polinomioak. Orduan:
+(i) f eta g homogeneoak badira, f = 0 eta g = 0 izanik, orduan f +g homogeneoa
+da baldin eta soilik baldin deg f = deg g bada.
+(ii) f eta g homogeneoak badira, orduan f g ere homogeneoa da. Alderantziz, f g
+homogeneoa bada, f = 0 eta g = 0 izanik, orduan bai f bai g homogeneoak
+dira.
+Gr¨
+obnerren oinarrien teorian ideal monomialak, hau da, monomioen bidez sor
+daitezkeen idealak, garrantzi handikoak ziren. Jarraian ideal mota orokorrago bat
+deﬁnitzen dugu.
+4.9. Deﬁnizioa. Izan bedi a polinomioen ideala. Orduan, a ideal homogeneoa
+dela esaten dugu polinomio homogeneoen bidez sor badaiteke.
+Izan bedi a ideal homogeneoa. Baldin badakigu a = 
+(f1, . . . , fr) dela, ezin dugu
+!
+oro har baieztatu f1, . . . , fr polinomioak homogeneoak direnik. Hala ere, a = 
+(f )
+ideal nagusia bada, orduan egia da f -k homogeneoa izan behar duela, ondorengo
+proposizioan ikusten dugun bezala.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+4.2. POLINOMIO HOMOGENEOAK ETA IDEAL HOMOGENEOAK
+120
+4.10. Proposizioa. Izan bedi a = (f ) polinomioen ideal homogeneoa. Orduan, f
+homogeneoa da.
+Froga. Jakina, f = 0 dela pentsa dezakegu, hau da, a = {0} dela. Ideal homoge-
+neoaren deﬁnizioaren arabera, a = 
+(f1, . . . , fr) idatz dezakegu, f1, . . . , fr polinomio
+guztiak homogeneoak izanik. Ohartu polinomio horietariko bat, adibidez f1, ez
+dela 0 izango. Orain, f1 ∈ a = 
+(f ) izateagatik, f1 = q1f dugu q1 polinomio batera-
+ko. Beraz, 4.8 teoremaren 
+(ii) atala aplikatuz, f homogeneoa dela ondorioztatzen
+dugu.
+Hurrengo teorema ideal monomialek betetzen duten emaitza baten antzekoa
+da.
+4.11. Teorema. Izan bedi a polinomioen ideala. Orduan, baliokideak dira:
+(i) a ideal homogeneoa da.
+(ii) f ∈ a dugu baldin eta soilik baldin f -ren osagai homogeneo guztiak a-
+n ba-
+daude.
+Froga. (i)⇒(ii). Izan bedi a ideal homogeneoa. Alde batetik, f -ren osagai ho-
+mogeneo guztiak a-n badaude, orduan garbi dago f , horien batura izateagatik,
+a
+-n ere egongo dela.
+Demagun orain f ∈ a dela.
+Idatzi a = (g1, . . . , gs), gi
+guztiak homogeneoak izanik. Orduan, existitzen dira q1, . . . , qs polinomioak, non
+f = q1g1 + · · · + qsgs baita. Azter dezagun azken konbinazio horren osagai homo-
+geneoak nolakoak diren. Horretarako, deskonposatu qi =
+j≥0 qi,j osagai homo-
+geneotan i = 1, . . . , s guztietarako. Orduan,
+f = q1g1 + · · · + qsgs =
+s
+i=1 j≥0
+qi,jgi
+(4.2)
+dugu eta, qi,j eta gi homogeneoak izateagatik, qi,jgi batugai guztiak ere homoge-
+neoak dira. Beraz, (4.2) berdintza ikusita, f -
+ren osagai homogeneo bakoitza qi,jgi
+horietariko batzuen batura da eta, bereziki, a idealean dago. Horrela, 
+(ii) frogaturik
+gelditzen da.
+(ii)⇒(i). Izan bedi a = 
+(h1, . . . , hs). Deskonposa dezagun hi polinomio bakoi-
+tza osagai homogeneotan:
+hi =
+j≥0
+hi,j.
+Izan bedi b = (hi,j | 1 ≤ i ≤ s, j ≥ 0). Ikusten badugu a = b dela, frogaturik
+geldituko da a ideal homogeneoa dela. Alde batetik, nabaria da hi ∈ b dela i =
+1, . . . , s guztietarako eta, hortaz, a ⊆ b lortzen dugu. Bestetik, hi ∈ a dugu eta, 
+(ii)
+propietatea betetzen denez, hi,j osagai homogeneo bakoitza ere a-n dago. Horrek
+alderantzizko partekotasuna frogatzen du.
+Ideal homogeneoek portaera berezia dute idealen arteko eragiketei dagokienez.
+4.12. Teorema.
+(i) Ideal homogeneoen batura, biderkadura eta ebakidura ho-
+mogeneoak dira.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+4.2. POLINOMIO HOMOGENEOAK ETA IDEAL HOMOGENEOAK
+121
+(ii) a ideal homogeneoa bada, orduan rad a ere homogeneoa da.
+(iii) a ideal homogeneoa bada, orduan a ideal erradikala dela frogatzeko, nahikoa
+da ondorengo propietatea egiaztatzea:
+f
+r ∈ a
+f homogeneoa
+=⇒ f ∈ a.
+(iv) p ideal homogeneo propioa bada, orduan p ideal lehena dela frogatzeko, nahi-
+koa da ondorengo propietatea egiaztatzea:
+f g ∈ p
+f eta g homogeneoak
+=⇒ f ∈ p edo g ∈ p.
+Froga. (i) Izan bitez a = (f1, . . . , fr) eta b = 
+(g1, . . . , gs) ideal homogeneoak,
+agertzen diren sortzaileak homogeneoak izanik. Orduan,
+a
++ b = (f1, . . . , fr, g1, . . . , gs)
+eta
+ab
+= (figj | i = 1, . . . , r; j = 1, . . . , s)
+polinomio homogeneoen bidez sor daitezke eta, beraz, ideal homogeneoak dira.
+Ebakiduraren kasuan, aurreko teoreman oinarrituko gara. Izan bedi f ∈ a ∩ b eta
+idatz dezagun f =
+i≥0 fi, osagai homogeneotan deskonposaturik. Orduan, f ∈ a
+denez eta a ideal homogeneoa denez, fi ∈ a dugu i guztietarako. Gauza bera b
+idealarekin egin dezakegunez, azkenean fi ∈ a ∩ b dugu i guztietarako. Horrela,
+a
+∩ b ideal homogeneoa dela frogaturik gelditzen da.
+(ii) Honetarako ere aurreko teorema erabiliko dugu: f ∈ rad a edozein izanik,
+bere osagai homogeneoak ere rad a-n daudela ikusiko dugu. Jakina, f = 0 har
+dezakegu. Deskonposatu f = fk + fk+1 + · · · + f osagai homogeneotan, fk = 0
+izanik. 
+(Horrek esan nahi du f0, . . . , fk−1 osagaiak nuluak direla.) Lortzen badugu
+frogatzea fk ∈ rad a dela, orduan f −fk ∈ rad a dugu eta kendura horretan f -
+n baino
+osagai homogeneo ez-nulu gutxiago ditugu. Horrela, osagai ez-nuluen kopuruaren
+gaineko indukzioaren bidez, f -ren osagai homogeneo guztiak rad a-
+n daudela lortuko
+dugu.
+Ikus dezagun, bada, fk ∈ rad a dela. Hipotesia f ∈ rad a da. Beraz, existitzen
+da r ≥ 1, non f r ∈ a baita. Orain,
+f
+r = (f
+k + fk+1 + · · · + f )
+r = fr
+k + g
+idatz dezakegu, f r
+k berretura kr mailako homogeneoa izanik eta g polinomioaren
+osagai homogeneo guztien maila kr baino handiagoa izanik. Horrek esan nahi du f r
+k
+f r-ren osagai homogeneo bat dela. Kontuan izanik a homogeneoa dela eta f r ∈ a
+dela, f r
+k ∈ a ondorioztatzen dugu. Beraz, fk ∈ rad a dugu, nahi bezala.
+(iii) Frogatzeko p ideal lehena dela, har dezagun f, g ∈ p bi edozein polinomio
+eta ikus dezagun f ∈ p edo g ∈ p dela. Idatzi f = fk + fk+1 + · · · + f eta
+g = gr + gr+1 + · · · + gs osagai homogeneotan deskonposaturik, fk = 0 eta gr = 0
+izanik. Emaitza frogatzeko, deskonposizio horietan agertzen diren osagai ez-
+nuluen
+kopuruaren gaineko indukzioa erabiliko dugu.
+Indukzioaren oinarria da f -k eta g-k osagai bakar bana dutenean. Kasu horre-
+tan, zuzenean lortzen dugu f ∈ p edo g ∈ p dela, hipotesia aplikatuz.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+4.2. POLINOMIO HOMOGENEOAK ETA IDEAL HOMOGENEOAK
+122
+Azter dezagun orain kasu orokorra. Biderkatzen baditugu f -ren eta g-ren osagai
+homogeneoetako adierazpenak, orduan
+f g = (fk + fk+1 + · · · + f )(gr + gr+1 + · · · + gs) = fkgr + h
+lortzen dugu, fkgr biderkadura k + r mailako homogeneoa izanik eta h polinomioa-
+ren osagai homogeneo guztien maila k +r baino handiagoa izanik. Horrek esan nahi
+du fkgr f g-ren osagai homogeneo bat dela. Kontuan izanik p homogeneoa dela eta
+f g ∈ p dela, fkgr ∈ p ondorioztatzen dugu. Hipotesiaren arabera, hemendik fk ∈ p
+edo gr ∈ p lortzen dugu. Orokortasuna galdu gabe, fk ∈ p dela pentsa dezakegu,
+f -ren eta g-ren rol simetrikoagatik. Orduan,
+(f − fk)g = f g − fkg ∈ p
+dugu eta (f −fk)g-ko faktoreek f g-koek baino osagai homogeneo ez-
+nulu bat gutxia-
+go dute. Indukzio-
+hipotesia aplikatuz, f − fk ∈ p edo g ∈ p lortzen dugu. Bigarren
+kasua izanez gero, bukatu dugu froga. Lehenengo kasuan, f = (f − fk) + fk ∈ p
+dugu, eta horrela ere bilatzen genuen emaitza lortzen dugu.
+Atal honekin bukatzeko, ikus dezagun zero proiektiboei buruz hitz egin ahal
+izatea polinomio homogeneoen berezko propietatea dela, gorputza aljebraikoki itxia
+den kasuan.
+4.13. Teorema. Izan bedi K aljebraikoki itxia, eta demagun zentzua duela f ∈
+K
+[X0, . . . , Xn] polinomioaren zero proiektiboei buruz hitz egiteak. Orduan, f homo-
+geneoa da.
+Froga. Deskonposatu f osagai homogeneotan: f = f0 + · · · + f . Lehenengo eta
+behin, honako baliokidetasun hau betetzen dela frogatuko dugu:
+f (a0, . . . , an) = 0 ⇐⇒ f0(a0, . . . , an) = · · · = f (a0, . . . , an) = 0.
+(4.3)
+Nabaria da bakarrik ikusi behar dugula eskuinalderako inplikazioa. Horretarako,
+bi kasu bereiziko ditugu.
+(i) (a0, . . . , an) = (0, . . . , 0).
+Orduan, f 
+(0, . . . , 0) = 0 baldintzapean lan egiten ari gara. Horrek esan nahi
+du f0 osagai homogeneoa 0 dela. Bereziki, f0(0, . . . , 0) = 0 dugu. Beste alde
+batetik, f -ren gainontzeko osagai homogeneoek ez dute gai askerik eta, hortaz,
+f1(0, . . . , 0) = · · · = f (0, . . . , 0) = 0.
+(ii) (a0, . . . , an) = (0, . . . , 0).
+Orduan, (a0 : · · · : an) puntua har dezakegu P
+n espazio proiektiboan. Orain,
+f (a0, . . . , an) = 0 denez eta zentzua duenez f -
+ren zero proiektiboei buruz hitz
+egiteak, f polinomioa 
+(λa0, . . . , λan) motako puntu guztietan ere anulatuko da,
+λ ∈ K× izanik. Ondorioz,
+0 = f (λa0, . . . , λan) = f0(λa0, . . . , λan)+f1(λa0, . . . , λan)+· · ·+f 
+(λa0, . . . , λan)
+= f0(a0, . . . , an) + λ f1(a0, . . . , an) + · · · + λ f (a0, . . . , an)
+(4.4)
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+4.3. MULTZO ALJEBRAIKO PROIEKTIBOAK. NULLSTELLENSATZ PROIEKTIBOA
+123
+dugu λ ∈ K× guztietarako, 4.7 teorema erabiliz. Orain, deﬁni dezagun ondorengo
+polinomioa T indeterminatu berriarekiko:
+g(T ) = f0(a0, . . . , an) + f1(a0, . . . , an) T + · · · + f 
+(a0, . . . , an) T .
+Ohartu, (4.4) berdintzaren arabera, g polinomioa K× osoaren gainean anulatzen
+dela. Orduan, 2.5 ariketaren (ii) atala erabiliz, g
+(T ) = 0 ondorioztatzen dugu, K
+inﬁnitua dela kontuan izanik. Beraz, g-ren koeﬁziente guztiak 0 dira, hau da,
+f0(a0, . . . , an) = f1(a0, . . . , an) = · · · = f (a0, . . . , an) = 0,
+nahi bezala.
+Horrenbestez, (4.3) baliokidetasuna frogaturik gelditzen da. Ohartu beste mo-
+du honetan jar daitekeela, V eragilea erabiliz: V (f ) = V 
+(f0, . . . , f ). Orain, I
+aplikatuz eta Nullstellensatza erabiliz 
+(hemen K aljebraikoki itxia izatea behar du-
+gu), rad(f ) = rad
+(f0, . . . , f ) dugu. Azken ideala homogeneoa da 4.12 teoremaren
+arabera eta, beraz, rad(f ) ere homogeneoa da.
+Beste alde batetik, f = p
+m1
+1
+. . . pmr
+r
+idazten badugu, pi guztiak irreduzibleak
+eta desberdinak izanik, orduan badakigu rad(f ) = (p1 . . . pr) dela. 
+(Gogoan izan
+1.1 ariketaren 
+(iii) atala.) Ideal hori homogeneoa eta nagusia denez, p1 . . . pr bi-
+derkadura polinomio homogeneoa dela ondorioztatzen dugu, 4.10 proposizioaren
+arabera. Orain, 4.8 teorema erabiliz, p1, . . . , pr polinomioak homogeneoak dira eta,
+hortik, f = p
+m1
+1
+. . . pmr
+r
+ere homogeneoa da, nahi bezala.
+K ez bada aljebraikoki itxia, teorema hori ez da egiazkoa. Adibidez, K = R bada,
+!
+orduan zentzua du f 
+(X, Y ) = X2 + Y 2 + 1 polinomioaren zero proiektiboei buruz
+hitz egiteak (P
+1 zuzen proiektiboan), f -ren balio guztiak 0ren desberdinak baitira.
+Hala ere, f ez da homogeneoa.
+4.3. Multzo aljebraiko proiektiboak eta Nullstellensatz
+proiektiboa
+Atal honetan, multzo aljebraiko proiektiboen teoria garatzen dugu, 2. gaian
+kasu aﬁnean egin genuen modura.
+Ikusiko dugunez, P
+n-ko multzo aljebraikoen
+propietateak frogatzeak ez du hainbeste lanik eskatuko. Izan ere, P
+n-k An+1-ekin
+duen lotura erabiliko dugu horretarako, A
+n+1-en dagoeneko lortu ditugun emai-
+tzez baliatuz. Has gaitezen multzo aljebraikoaren deﬁnizioarekin. Dakigunez, zero
+proiektiboei buruz hitz egiteko, polinomio homogeneoak baino ezin ditugu erabili.
+Hori da deﬁnizio honetan egiten dugun murrizketaren arrazoia.
+4.14. Deﬁnizioa. Izan bedi S ⊆ K[X0, . . . , Xn]. Orduan, S-
+ren zero proiektiboen
+multzoa honela deﬁnitzen dugu,
+V+(S) = {P ∈ P
+n | f(P ) = 0, f ∈ S homogeneo guztietarako},
+eta multzo aljebraiko proiektibo bat dela diogu.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+4.3. MULTZO ALJEBRAIKO PROIEKTIBOAK. NULLSTELLENSATZ PROIEKTIBOA
+124
+4.15. Notazioa. Izan bedi S ⊆ K[X0, . . . , Xn]. Orduan, S-
+ko polinomioen zeroei
+begiratzerakoan bi aukera daude: A
+n+1-eko zero aﬁnak edo Pn-ko zero proiektiboak.
+Ohartu nola desberdintzen ditugun bi multzo horiek notazioaren bidez: V (S) S-
+ren
+zero aﬁnak dira eta V+(S), berriz, S-ren zero proiektiboak.
+Erraz frogatzen da honako propietate hau.
+4.16. Teorema. Izan bedi S ⊆ K[X0, . . . , Xn]. Orduan, V+(S) = V+(a) dugu,
+a
+= (f ∈ S | f homogeneoa) izanik. (Bereziki, a ideal homogeneoa da.)
+Horregatik, normalean V+ ideal homogeneoei aplikaturik agertuko da. Hurren-
+go pausoa I eragilearen ordezkoa sartzea da.
+4.17. Deﬁnizioa. Izan bedi Y ⊆ P
+n. Orduan, Y -ren ideala honela deﬁnitzen
+dugu:
+I+(Y ) = (f ∈ K[X0, . . . , Xn] | f homogeneoa eta f 
+(P ) = 0, P ∈ Y guztietarako).
+Ohartu propietate hau betetzen dela: f ∈ K[X0, . . . , Xn] polinomio homoge-
+neoa bada, orduan f ∈ I+(Y ) dugu baldin eta soilik baldin f Y -
+ko puntu guztietan
+anulatzen bada. (Berehala ondorioztatzen da I+(Y )-ren deﬁniziotik.)
+Kasu aﬁnean bezala, ondorengo emaitza hau dugu.
+4.18. Teorema. Izan bedi Y ⊆ P
+n. Orduan, I+(Y ) ideal erradikal homogeneoa
+da.
+Froga. Izan bedi a = I+(Y ). Deﬁnizioari begiratuz, garbi dago a ideal homoge-
+neoa dela. Ideal hau erradikala dela frogatzeko, 4.12 teoremaren arabera, nahikoa
+da inplikazio hau ikustea:
+ f r ∈ a bada, f homogeneoa izanik, orduan f ∈ a dela.
+Aurretik egindako oharragatik, f r polinomio homogeneoa a-n badago, orduan f r
+Y -ko puntu guztietan anulatzen da. Beraz, f ere Y -
+ren gainean anulatzen da eta
+f ∈ a dugu, nahi bezala.
+Ondoren zerrendatzen ditugun emaitzak kasu aﬁnean ikusitakoen antzekoak
+dira eta modu bertsuan frogatzen dira. Hori dela eta, frogarik gabe emango ditugu.
+4.19. Teorema. V+ eta I+ eragileek honako propietate hauek dituzte:
+(i) Partekotasunak aldatzen dituzte.
+(ii) S ⊆ K[X0, . . . , Xn] bada, orduan V+(I+(V+(S))) = V+(S) dugu.
+(iii) Y ⊆ P
+n bada, orduan I+(V+(I+(Y ))) = I+(Y ) dugu.
+4.20. Teorema. Multzo aljebraiko proiektiboen bildura ﬁnituak eta ebakidura oro-
+korrak aljebraikoak dira berriro ere.
+Multzo hutsa eta P
+n espazio osoa ere multzo aljebraikoak direnez, Zariskiren
+topologia espazio proiektiboan ere deﬁni dezakegu.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+4.3. MULTZO ALJEBRAIKO PROIEKTIBOAK. NULLSTELLENSATZ PROIEKTIBOA
+125
+4.21. Teorema. Izan bedi Y ⊆ P
+n. Orduan, V+(I+(Y )) = Y dugu eta, bereziki,
+Y aljebraikoa bada, V+(I+(Y )) = Y .
+Kasu aﬁnarekin dagoen paralelismoa ikusita, logikoa dirudi galdera hau egiteak:
+K gorputza aljebraikoki itxia bada eta a ideal erradikal homogeneoa bada, betetzen
+da I+(V+
+(a)) = a? Bestela esanda, onartzen du Nullstellensatzak “itzulpen” zuzen
+bat testuinguru proiektibora? Jarri dugun bezala, galdera horrek ezezko erantzuna
+du. Izan ere, hartu a = (X0, . . . , Xn) ideal erradikal homogeneoa. Orduan, V+
+(a) =
+∅ dugu, (0 : · · · : 0) puntua ez baita existitzen espazio proiektiboan.
+Hortaz,
+I+(V+(a)) = I+(∅) = K[X0, . . . , Xn] = a dugu. Hala ere, ikusiko dugunez, hori
+da eman daitekeen kontradibide bakarra eta, horregatik, erraz konponduko dugu
+Nullstellensatz proiektiboaren enuntziatua.
+Nullstellensatz proiektiboa frogatzeko bertsio aﬁnean oinarrituko gara. Gakoa
+da V+ eragile proiektiboa V eragile aﬁnarekin lotzea eta, era berean, I+ I-
+rekin.
+Hemen, kasu aﬁna A
+n+1 espazioarekin egingo dugu, azken batean Pn-ren deﬁnizioa
+A
+n+1 espazioan oinarrituta baitago. Nahi dugun lotura hori lortzeko, funtsezkoa
+da jarraian deﬁnitzen dugun kontzeptua.
+4.22. Deﬁnizioa. Izan bedi Y ⊆ P
+n, hau da, An+1-eko zuzen bektorialen multzo
+bat. Orduan, Y -ren konoa, C(Y ) ikurraz adierazten duguna, A
+n+1-en azpimultzo
+bat da, honela deﬁniturik:
+(i) Y = ∅ bada, orduan C(Y ) konoa Y osatzen duten zuzen bektorialen bildura
+da.
+(ii) Y = ∅ bada, orduan C(Y ) = {(0, . . . , 0)}.
+Beraz, edozein kasutan, C(Y ) konoko puntuak honela gelditzen dira karakteri-
+zaturik:
+(a0, . . . , an) ∈ C(Y ) ⇐⇒ (a0, . . . , an) = (0, . . . , 0) edo (a0 : · · · :
+ an) ∈ Y.
+4.23. Lema. Izan bedi a K[X0, . . . , Xn]-ren ideal homogeneo propioa. Orduan,
+a
+⊆ (X0, . . . , Xn) dugu.
+Bereziki, K[X0, . . . , Xn]-ren ideal maximalen artean,
+(X0, . . . , Xn) da homogeneoa den bakarra.
+Froga. Absurdora eramanez, demagun a ez dagoela (X0, . . . , Xn) idealaren ba-
+rruan. Kontuan izanik 
+(X0, . . . , Xn) gai askerik gabeko polinomioek osatzen dute-
+la, ondorioztatzen dugu f ∈ a polinomioren batek gai aske ez-
+nulua duela. Beraz,
+f = f0 + · · · + f osagai homogeneotan deskonposatzen badugu, f0 = 0 dugu.
+Orain, 4.11 teoremaren arabera, a ideal homogeneoa izateagatik, f ∈ a polinomioa-
+ren osagai homogeneo guztiak a-n daude. Bereziki, f0 = 0 konstantea a-
+n dago eta,
+ondorioz, a = K[X0, . . . , Xn] kontraesana lortzen dugu.
+Lehenengo eta behin, V -ren eta V+-en arteko lotura argituko dugu. Aurretik
+esan dugun bezala, a K[X0, . . . , Xn]-ren ideala bada, orduan V (a) a-
+ren zeroak
+dira A
+n+1 espazio aﬁnean eta V+(a), berriz, a-ren zeroak Pn espazio proiektiboan.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+4.3. MULTZO ALJEBRAIKO PROIEKTIBOAK. NULLSTELLENSATZ PROIEKTIBOA
+126
+Hurrengo teoremaren arabera, a ideal homogeneo propioa bada, zero aﬁnak zero
+proiektiboen konoa baino ez dira.
+4.24. Teorema. Izan bedi a K[X0, . . . , Xn]-
+ren ideal homogeneo propioa. Orduan,
+V (a) = C(V+(a)) dugu.
+Froga. Baliokidetasun hau frogatu behar dugu:
+(a0, . . . , an) ∈ V (a) ⇐⇒ (a0, . . . , an) ∈ C(V+(a)).
+(4.5)
+Bi kasu hauek bereiziko ditugu:
+(i) (a0, . . . , an) = (0, . . . , 0).
+Orduan, konoaren deﬁnizioaren arabera, (0, . . . , 0) ∈ C(V+(a)) dugu. Beste
+alde batetik, a ideal homogeneo propioa izateagatik, a ⊆ 
+(X0, . . . , Xn) dugu au-
+rreko lemaren arabera. Ondorioz, V (X0, . . . , Xn) ⊆ V 
+(a) lortzen dugu, hau da,
+(0, . . . , 0) ∈ V (a). Beraz, kasu honetan 
+(4.5) baliokidetasuna bete egiten da.
+(ii) (a0, . . . , an) = (0, . . . , 0).
+Alde batetik, (a0, . . . , an) ∈ V (a) dugu baldin eta soilik baldin f 
+(a0, . . . , an) =
+0 bada f ∈ a guztietarako. Beste alde batetik, (a0, . . . , an) = 
+(0, . . . , 0) izateagatik,
+(a0, . . . , an) ∈ C(V+(a)) dugu baldin eta soilik baldin (a0 : · · · :
+ an) ∈ V+(a) bada
+eta, V+ eragilearen deﬁnizioagatik, horren esanahia da f 
+(a0, . . . , an) = 0 dela f ∈ a
+homogeneo guztietarako.
+Beraz, (4.5) baliokidetasuna egiaztatzeko, honako baldintza hau ziurtatu behar
+dugu: a-ko polinomio homogeneoak puntu aﬁn batean anulatzen badira, orduan
+a
+-ko polinomio guztiak anulatzen direla puntu horretan. Hori garbi dago, zeren
+eta a ideal homogeneoa izateagatik, a-
+ko polinomio guztiak sortzaile homogeneoen
+multiploen baturak baitira.
+Aurreko teorema ez da egia a ideala ez bada propioa. Izan ere, V (K
+[X0, . . . , Xn]) =
+!
+∅ eta C(V+(K[X0, . . . , Xn])) = C(∅) = {(0, . . . , 0)} desberdinak dira.
+Bigarrenik, I-ren eta I+-en arteko erlazioa zehazten dugu.
+4.25. Teorema. Izan bedi K gorputz inﬁnitua eta demagun Y ⊆ P
+n ez-hutsa dela.
+Orduan I+(Y ) = I(C(Y )).
+Froga. ⊆) Har dezagun I+(Y )-ren deﬁnizioan agertzen diren sortzaileetako bat,
+hau da, Y -ko puntu guztien gainean anulatzen den f ∈ K
+[X0, . . . , Xn] polinomio
+homogeneo bat. Frogatzen badugu f ∈ I(C(Y )) dela, orduan nahi dugun parte-
+kotasuna ondorioztatuko dugu. Beraz, f polinomioa (a0, . . . , an) ∈ C
+(Y ) puntu
+guztien gainean anulatzen dela ikusi behar dugu. Bi kasu bereiziko ditugu:
+(i) (a0, . . . , an) = (0, . . . , 0).
+Ohartu f ez dela konstante ez-nulua, Y -ko puntu guztien gainean anulatzen
+baita eta Y = ∅ baita. Orduan, f homogeneoa denez, f -k ez duela gai askerik
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+4.3. MULTZO ALJEBRAIKO PROIEKTIBOAK. NULLSTELLENSATZ PROIEKTIBOA
+127
+ondorioztatzen dugu. Beraz, f polinomioa 
+(0, . . . , 0) puntuan anulatzen da, nahi
+bezala.
+(ii) (a0, . . . , an) = (0, . . . , 0).
+Orduan, (a0 : · · · : an) ∈ Y dugu eta, f ∈ I+(Y ) denez, f 
+(a0, . . . , an) = 0
+ondorioztatzen dugu.
+⊇) Izan bedi g ∈ I(C(Y )). Ikusteko g ∈ I+(Y ) dela, nahikoa da g-ren osagai
+homogeneoak, dei diezaiegun g0, . . . , g , I+(Y )-
+n daudela frogatzea. Horretarako,
+polinomio horiek homogeneoak direnez,
+g0(a0, . . . , an) = · · · = g (a0, . . . , an) = 0
+(4.6)
+dela ziurtatu behar dugu (a0 : · · · : an) ∈ Y guztietarako. Kontuan izan, g ∈
+I(C(Y )) izateagatik, g
+(a0, . . . , an) = 0 betetzen dela. Baldintza horretatik (4.6)
+ondorioztatzeko, nahikoa da 4.13 teoremaren frogan bezala argudiatzea, 
+(4.3) balio-
+kidetasuna lortu nahian genbiltzanean. Puntu horretan, funtsezkoa da K gorputza
+inﬁnitua izateko hipotesia.
+Ohartu teorema hori ez dela betetzen Y = ∅ bada. Izan ere, I+(∅) = K
+[X0, . . . , Xn]
+!
+eta I(C(∅)) = I({(0, . . . , 0)}) = (X0, . . . , Xn) desberdinak dira.
+4.26.
+Teorema (Nullstellensatz proiektiboa). Izan bedi K gorputz aljebraiko-
+ki itxia eta demagun a K[X0, . . . , Xn]-
+ren ideal erradikal homogeneoa dela, a =
+(X0, . . . , Xn) izanik. Orduan, I+(V+(a)) = a dugu.
+Froga. Lehenengo eta behin, ohartu
+I+(V+(K[X0, . . . , Xn])) = I+(∅) = K[X0, . . . , Xn]
+dela. Demagun orain a ideal propioa dela. Hasteko, ikus dezagun V+(a) = ∅
+dela.
+Bestela balitz, orduan C(V+(a)) = {(0, . . . , 0)} dugu eta, 4.24 teorema
+erabiliz, V (a) = {
+(0, . . . , 0)} ere bai. Orain, Nullstellensatz aﬁna aplikatuz, a =
+I({(0, . . . , 0)}) = (X0, . . . , Xn) lortzen dugu, kontraesan bat dena.
+Orain, V+(a) = ∅ denez, 4.25 teorema aplikatzeko moduan gaude eta, beraz,
+I+(V+(a)) = I(C(V+(a))) = I(V (a)) = rad a = a
+lortzen dugu, nahi bezala, berriro ere Nullstellensatz aﬁna kontuan hartuz.
+4.27. Korolarioa. Izan bitez K gorputz aljebraikoki itxia eta a K
+[X0, . . . , Xn]-ren
+ideal homogeneoa. Orduan, rad a = (X0, . . . , Xn) bada,
+I+(V+(a)) = rad a
+dugu.
+Froga. Ideal erradikalaren deﬁnizioan oinarrituz, erraz ikusten da V+(rad a) =
+V+(a) dugula. Bestalde, a homogeneoa izateagatik, rad a ere homogeneoa da. Or-
+duan, Nullstellensatz proiektiboa aplikatuz,
+I+(V+(a)) = I+(V+(rad a)) = rad a.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+4.3. MULTZO ALJEBRAIKO PROIEKTIBOAK. NULLSTELLENSATZ PROIEKTIBOA
+128
+Zein dira aurreko korolariotik kanpo gelditzen diren ideal homogeneoak? Hau
+da, zein dira rad a = 
+(X0, . . . , Xn) betetzen duten ideal homogeneoak? Alde ba-
+tetik, a ⊆ 
+(X0, . . . , Xn) izan behar dugu. Bestetik, i = 0, . . . , n bakoitzeko, ri
+berretzaileren baterako X
+ri
+i
+∈ a izan behar dugu eta, hortaz, (X
+r0
+0 , . . . , X
+rn
+n ) ⊆ a
+bete behar da. Alderantziz, a idealak (X
+r0
+0 , . . . , X
+rn
+n ) ⊆ a ⊆ (X0, . . . , Xn) betetzen
+badu, orduan rad a = 
+(X0, . . . , Xn) izango dugu. Horrela, zehazturik gelditzen dira
+nahi genituen idealak.
+4.28.
+Teorema (I+ − V+ korrespondentzia). Izan bedi K gorputz aljebraikoki
+itxia. Orduan, I+ eta V+ eragileek bijekzio bat eratzen dute P
+n-ren multzo aljebrai-
+koen eta K[X0, . . . , Xn]-ren ideal erradikal homogeneoen artean, behin 
+(X0, . . . , Xn)
+baztertuta. Ideal horri ideal baztergarri deitzen zaio.
+Froga. Aurretik ikusi dugu V+(I+(Y )) = Y dela Y ⊆ P
+n multzo aljebraikoa
+bada. Bestetik, Nullstellensatz proiektiboaren arabera, I+(V+(a)) = a dugu a =
+(X0, . . . , Xn) ideal erradikal homogeneoa bada. Beraz, V+ eta I+ elkarren alderan-
+tzizkoak dira teoremaren enuntziatuan aipatzen diren multzoen artean, eta bijekzio
+bat eratzen dute.
+Bukatzeko, ikus dezagun, I − V korrespondentzia aﬁnarekin bezala, I+ − V+
+korrespondentziaren bitartez ideal lehenak barietateekin elkartuta daudela. Horren
+arrazoia hurrengo teorema da, kasu aﬁnean bezala froga daitekeena. Lehenengo,
+barietatearen deﬁnizioa emango dugu.
+4.29. Deﬁnizioa. Izan bedi V multzo aljebraiko proiektibo ez-hutsa. Orduan,
+V barietatea dela diogu ezin bada deskonposatu bi multzo aljebraiko proiektibo
+txikiagoren bildura gisa.
+4.30. Teorema. Izan bedi V multzo aljebraiko proiektiboa. Orduan, V barietatea
+da baldin eta soilik baldin I+(V ) ideal lehena bada.
+Froga. Alde batetik, I+
+(V ) ideal lehena bada, V barietatea dela ikusteko hitzez
+hitz kopia dezakegu kasu aﬁneko froga. Alderantzizko inplikaziorako, demagun V
+barietatea dela. Orduan, I+(V ) ideal homogeneoa denez, lehena dela frogatzeko
+nahikoa da hau betetzen dela ikustea, 4.12 teoremaren arabera:
+f g ∈ I+(V )
+f eta g homogeneoak
+=⇒ f ∈ I+(V ) edo g ∈ I+(V ).
+Horren froga kasu aﬁnean bezala argudiatuz lor daiteke.
+4.31. Korolarioa. I+ − V+ korrespondentziaren bitartez, barietateak ideal lehen
+homogeneoekin elkartuta daude.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU
+
+4.3. MULTZO ALJEBRAIKO PROIEKTIBOAK. NULLSTELLENSATZ PROIEKTIBOA
+129
+Ez da egia I+ − V+ korrespondentziaren bitartez puntuak ideal maximal homoge-
+!
+neoekin lotuta daudenik. Izan ere, 4.23 teoremaren arabera, ideal maximal homoge-
+neo bakarra 
+(X0, . . . , Xn) ideal baztergarria da. Beraz, I+ − V+ korrespondentzian
+ez du ideal maximal bakar batek ere parte hartzen.
+Kasu aﬁnean bezala, multzo aljebraiko proiektibo baten osagai irreduzibleei
+buruz hitz egin dezakegu eta, erredundantziarik ez badago, osagai horiek bakarrak
+dira, ordena salbu.
+Geometria Aljebraikoa. Gustavo A. Fern´
+andez Alcober. UPV/EHU

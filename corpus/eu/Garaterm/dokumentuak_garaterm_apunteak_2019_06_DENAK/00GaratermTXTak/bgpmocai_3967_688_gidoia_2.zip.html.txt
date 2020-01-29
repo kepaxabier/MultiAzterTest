@@ -1,0 +1,332 @@
+
+
+
+
+Kurbak eta Gainazalak
+                             Kurbak eta Gainazalak
+                         Javier Gutiérrez, Josu Arroyo
+                                   02/05/15
+2 Gainazal Erregularrak
+2.1 Sarrera: -ren egitura topologikoa
+Espazio metrikoak
+          [Sorry. Ignored \begin{definizioab} ... \end{definizioab}]
+Adibidea. -ren gainean definitutako distantzia euklidearra
+metrika baten hiru propietateak betetzen ditu. Beraz espazio metrikoa da.
+          [Sorry. Ignored \begin{definizioab} ... \end{definizioab}]
+          [Sorry. Ignored \begin{definizioab} ... \end{definizioab}]
+          [Sorry. Ignored \begin{definizioab} ... \end{definizioab}]
+          [Sorry. Ignored \begin{definizioab} ... \end{definizioab}]
+Jarraitutasuna
+Izan bitez eta p∈A. f p-n jarraitua da baldin eta
+∀ε>0, ∃δ>0nond(p,q)<δbada,orduand(f(p),f(q))<ε,
+hau da,
+∀ε>0, ∃δ>0nonf(B(p,δ))⊆B(f(p),ε).
+Beste modu batean esanda, f p-n jarraitua da baldin eta -ren ireki guztietarako
+V non f(p)∈V den, S-ren azpimultzo ireki bat U existitzen bada non p∈U eta f
+(U)⊆V diren.
+jarraitua da baldin eta S-ren puntu guztietan jarraitua bada. Bestalde, f
+jarraitua da baldin eta soilik baldin -ren edozein irekiren aurreirudia A-
+n irekia bada.
+Propietateak. Izan bitez eta aplikazio jarraituak.
+[(1)]
+1. f(A)⊆B bada, orduan ere jarraitua da.
+2. B⊆A bada, orduan ere jarraitua da.
+3. A konexua bada, orduan f(A) ere konexua da.
+          [Sorry. Ignored \begin{definizioab} ... \end{definizioab}]
+Diferentziagarritasuna
+Hemendik aurrera U eta V beti izango dira -ren azpimultzo irekiak. Bestalde
+diferentziagarria (edo ) dela esaten dugunean f-ren ordena guztietako deribatu
+partzial guztiak existitzen direla eta jarraituak direla ulertuko dugu.
+          [Sorry. Ignored \begin{definizioab} ... \end{definizioab}]
+          [Sorry. Ignored \begin{definizioab} ... \end{definizioab}]
+          [Sorry. Ignored \begin{definizioab} ... \end{definizioab}]
+2.2 Gainazal parametriko erregularra
+2.2.1 Mapa. Atlasa. Gainazal parametrikoa
+Izan bedi azpimultzoa.
+Definizioa 1 (Mapa) Izan bitez eta irekiak eta homeomorfismo diferentziagarria.
+bikotea S-ren ( zatiaren)mapaedoparametrizazioadela esango dugu.
+Definizioa 2 (Gainazala) Sgainazal parametrikoadela esango dugu baldin p∈S
+guztietarako gutxienez mapa bat existitzen bada non den.
+Definizioa 3 (Atlas) S gainazala bada eta mapen bilduma non den, S-
+renatlasadela esango dugu.
+Definizioa 4 (Gainazal erregularra) Izan bedi gainazal parametrikoa.
+Serregularradela esango dugu baldin eta mapa guztietarako eta (u,v)∈U
+guztietarako x-ren Jakobiarraren heina 2 bada.
+Oharrak 5 (1) x-ren Jakobiarra
+)
+= \b ( \a \ac \co2 ( \F(∂x\s\do5(1),∂u)(u,v), \F(∂x\s\do5(1),∂v)(u,v) ,, \F
+(∂x\s\do5(2),∂u)(u,v), \F(∂x\s\do5(2),∂v)(u,v) ,, \F(∂x\s\do5(3),∂u)(u,v), \F
+(∂x\s\do5(3),∂v)(u,v) ,) )
+denez, S erregularra da baldin eta soilik baldin guztietarako eta bektoreak
+askeak badira.
+(2) Beste modu batean esanda, erregularra da baldin eta soilik baldin (u,v)∈U
+guztietan bada.
+(3) bada puntuasingularradela esango dugu.
+Adibideak 6 (1) Izan bitez puntua, bektore askeak eta planoa. Π gainazal
+erregularra da eta atlas bat dauka mapa bakar batekin:
+Jakobiarra denez, heina 2 izango da (⃗u eta⃗v linealki independeak direlako).
+(2) esfera unitarioa gainazal erregularra da. Adibidez
+-ren atlasa da.
+Bestalde x-ren deribatu partzialak eta dira. Beraz
+eta .
+Bigarren kasuan deribatu partzialak eta dira. Beraz
+eta .
+Oharrak 7 (1) Badaude beste aukera batzuk esferaren atlas bat zehazteko
+(proiekzio estereografikoa erabiliz, adibidez). Baina ezinezkoa da atlas bat
+aurkitzea mapa bakar batekin.
+(2) konu bikoitza ez da gainazal erregularra.
+ 2.2.2 Gainazalen adibideak: Grafoak
+Proposizioa 8Izan bitez irekia eta diferentziagarria. Orduan f-ren grafoa
+gainazal erregularra da.
+                 [Sorry. Ignored\begin{proof} ... \end{proof}]
+Adibideak 9-ren azpimultzo hauek gainazal erregularrak dira:
+(1) Paraboloide eliptikoa: (a,b>0) .
+(2) Paraboloide hiperbolikoa: (a,b>0) .
+2.2.3 Gainazalen adibideak: modu inplizituan
+Definizioa 10 (Balio kritikoak eta erregularrak)Izan bedi aplikazio
+diferentziagarria eta a∈R. a f aplikazioaren baliokritikoadela esango dugu
+baldin eta existitzen bada non gradientea
+den.
+a f aplikazioaren balioerregularradela esango dugu baldin eta kritikoa ez bada,
+hau da, bada guztietarako.
+Proposizioa 11Izan bitez irekia, diferentziagarria eta F aplikazioaren balio
+erregularra. Orduan gainazal erregularra da.
+                 [Sorry. Ignored\begin{proof} ... \end{proof}]
+Adibideak 12-ren azpimultzo hauek gainazal erregularrak dira:
+(1) Elipsoidea: (a,b,c>0) .
+(2) Zilindro eliptikoa: (a,b,c>0) .
+(3) Orri bateko hiperboloidea: .
+(4) Bi orritako hiperboloidea: .
+(5) Konua (jatorria kenduta): .
+(4) Torua: (a>r>0)
+.
+
+ 2.2.4 Difeomorfismoak. Parametro aldaketak
+Definizioa 13Izan bitez irekiak. f: U⟶Vdifeomorfismoada baldin eta bijektiboa
+bada eta biak f eta ere diferentziagarriak badira.
+Proposizioa 14Izan bitez S gainazal erregularra, (U,x) S-ren mapa, irekia eta
+φ: V⟶φ(V)=U difeomorfismoa. Orduan (V,̃x=x∘φ) ere S-ren mapa da.
+Izan bitez S gainazal erregularra, p∈S eta (U,x) eta (V,y) S-ren mapak non
+p∈W=x(U)∩y(V) den.
+x eta y homeomorfismoak direnez, eta irekiak dira. Beraz ere homeomorfismoa
+izango da eta y-tik x-rako parametro aldaketa aplikazioa dela esango dugu.
+Proposizioa 15 Izan bitez S gainazal erregularra p∈S eta (U,x) eta (V,y) S-ren
+mapak non p∈W=x(U)∩y(V)≠∅ den. Orduan parametro aldaketa aplikazioa
+difeomorfismoa da; hots, bijektiboa da eta biak φ eta diferentziagarriak.
+                [Sorry. Ignored \begin{proof} ... \end{proof}]
+Proposizioa 16 Izan bitez irekiak, gainazal erregularra non S⊂U den, eta f: U→f
+(U)=V difeomorfismoa. Orduan S-ren irudia f(S) ere gainazal erregularra da.
+ 2.3 Bektore ukitzaileak. Kurba koordenatuak
+Izan bitez gainazal erregularra, S-ren mapa eta kurba parametrikoa non den.
+Orduan ̃α kurba diferentziagarri berria agertzen da,
+idatz daitekeena.
+Bestalde, u,v: I⊂R⟶R diferentziagarriak badira, (u(t),v(t))∈U izanik t∈I
+guztietarako, orduan
+α=x∘(u,v): I⊂R⟶S
+kurba diferentziagarria izango da S gainazalean.
+Beraz, hemendik aurrera α S-n definitutako kurba parametrikoa dela esaten
+dugunean era honetako kurba bat dela ulertuko dugu, hau da,
+non den S-ren mapa izanik.
+Adibidea 17 Izan bitez zilindroa eta non den (r,h>0 izanik). Argi dago α(I)⊂S
+dela.
+Izan bedi (U,x) S-ren mapa, eta guztietarako izanik. Orduan
+planoaren zuzena da.
+Izan bedi orain (V,y) S-ren beste mapa bat, eta guztietarako izanik. Orduan
+kiribil logaritmikoa da.
+Definizioa 18 Izan bitez gainazal erregularra eta p∈S. S-renbektore ukitzaileap
+puntuan dela esango dugu baldin eta kurba parametrikoa existitzen bada non ,
+eta diren.
+S-ren p puntuan bektore ukitzaileen multzoabektore espazioadela esango dugu eta
+idatziko dugu.
+Definizioa 19 Izan bitez gainazal erregularra, p∈S eta S-ren mapa non den. x-
+ren aldagai bat finkatuz eta bestea aske utziz sortzen dira kurbak:
+maparen puntutik igarotzen diren bikurba koordenatuakdira.
+Kurba hauek guztiak diferentziagarriak dira. Bestalde, , eta . Beraz
+izango dira.
+Adibidea 20 Izan bitez eta non den. ...
+Proposizioa 21 Izan bitez gainazal erregularra, p∈S eta S-ren mapa non den.
+Orduan bektore espazioa eta bektoreek sortutako plano bektoriala da.
+                [Sorry. Ignored \begin{proof} ... \end{proof}]
+Definizioa 22 Aurreko proposizioaren ondorioz, bektore espazioa -ren plano
+bektoriala da. S-renplano ukitzaileap puntuan dela esango dugu.
+Oharra 23 plano ukitzailearen definizioa zein den gogoan izanda, argi dago ez
+dela aldatzen p-ren mapa aldatu arren; hots, demagun p-ren beste mapa bat dela
+non den. Orduan 2.2.4 Proposizioaren ondorioz difeomorfismoa izango da
+( bikotearen ingurune batean). Beraz x∘φ=y eta ondorioz
+hau da,
+Beraz eta bektoreak eta bektoreen konbinazio linealak dira. Modu berean
+kontrakoa ere frogatu ahal izango genuke.
+2.4 Bektore normala
+(Aipamen labur bat, kurbaduren atalean sakonago egin beharko delako.)
+Aurreko atalean S-ren p puntu guztietan plano ukitzailea definitu eta gero S
+gainazalaren norabide normala p puntuan zer den esan dezakegu.
+Definizioa 24 Izan bitez gainazal erregularra, p∈S eta plano ukitzailea p
+puntuan. -ren bektore normal unitarioa S-renbektore normalap puntuan dela
+esango dugu.
+Argi denez, bi aukera daude bektore normala aukeratzeko.
+S-ren mapa finkatzen badugu non den, orduan
+bektore normalaren aukera bat izango da.bektore normal estandarrap puntuan dela
+esango dugu.
+Oharra 25 Kasu honetan, bektore normal estandarra alda daiteke mapa aldatzen
+denean. Izan ere, demagun p-ren beste mapa bat dela non den. Orduan 2.3
+oharrean ikusi genuen moduan, difeomorfismoa izango da ( bikotearen ingurune
+batean) eta
+)
+izango dugu. Beraz
+eta
+Adibideak 26 (1) Izan bedi esfera eta non den. Orduan
+(2) Izan bitez irekia, diferentziagarria, F aplikazioaren balio erregularra eta
+gainazal erregularra. Demagun (U,x) S-ren mapa dela non p∈x(U)⊂S. Orduan
+(u,v)∈U guztietarako F(x(u,v))=a izango dugu. Beraz
+(u,v)∈U guztietarako, hau da,
+Ondorioz, x(u,v)=p∈S bada, orduan , eta
+Adibidez, esferaren kasuan, bada, eta
+2.5 Lehen forma nagusia
+Atal honetan ikusiko dugu nola kalkulatu distantzian, angeluak eta azalerak
+gainazal baten barruan. Lehenengo adibidea izango litzateke gainazal baten bi
+punturen arteko distantzia kalkulatzeko prozedura. Argi denez distantzia hori
+ez da izango beti -ren distantziaren berdina. Kasu honetan irudian agertzen den
+kurbaren luzera izango litzateke. Baina nola kalkulatu distantzia hori?
+Aurreko atalean ikusi dugu S gainazal erregularra eta p∈S izanik nola definitu
+plano ukitzaile bektoriala (bektore ukitzaileen planoa). Bestalde, -ren
+azpiespazio bektoriala denez, -ren biderkaketa eskalarraren murrizketak plano
+ukitzailean biderkaketa eskalar bat definitzen du.
+Definizioa 27 (Lehen forma nagusia) Izan bitez S gainazal erregularra eta
+p∈S.Lehen forma nagusiamodu honetan definitutako forma bilineal simetrikoa da:
+2.5.1 Lehen forma nagusia parametrizazioetan
+Izan bitez S gainazal erregularra, S-ren mapa eta .
+Oharra 28 Hemendik aurrera, notazioa errazteko x-ren deribatu partzialak
+adierazteko eta idatzi beharrean eta idatziko dugu.
+Badakigunez bektoreek -ren oinarria osatzen dute. Honela, bektoreak emanda,
+izango genuke eta orduan
+Beste modu batean idatzita:
+) \b ( \a \ac \co1 ( w\s\do5(1),w\s\do5(2)))
+Adierazpen hau ikusita, ondoko aplikazioak defini ditzakegu (i,j=1,2 izanik):
+g\s\do5(12) \b (u,v) =g \b (x\s\do5(u) \b (u,v),x\s\do5(v) \b (u,v))=x\s\do5(u)
+\b (u,v)⋅x\s\do5(v) \b (u,v)
+g\s\do5(22) \b (u,v) =g \b (x\s\do5(v) \b (u,v),x\s\do5(v) \b (u,v))=x\s\do5(v)
+\b (u,v)⋅x\s\do5(v) \b (u,v)
+Aplikazio hauek lehen forma nagusiko koefizienteak parametrizazioan izango dira
+eta lehen forma nagusiari elkartutako matrizea:
+non diren, biderkaketaren simetria dela eta.
+Adibideak 29 (1) [Planoa] Izan bitez planoa (⃗u eta⃗v unitarioak eta
+ortogonalak izanik) eta non . Orduan , eta , hau da,
+(2) [Zilindroa] Izan bitez eta non
+Orduan , eta , hau da,
+(3) [Esfera] Izan bitez eta non
+eta izanik, eta eta non
+esferaren parametrizazioak.
+Lehenengo kasuan , eta , hau da,
+eta bigarrenean , , , hau da,
+Koordenatu aldaketa aplikazioa hauxe da:
+(3) [Konua] Izan bitez eta non
+Orduan , eta , hau da,
+2.5.2 Kurben luzera
+Izan bedi α S-ren gainean definitutako kurba. Demagun mapa baten irudian
+dagoela. Badakigu α=x∘α dela non kurba diferentziagarria den U irekian. Orduan
+eta
+Beraz -tik -rako kurbaren luzera S-n modu honetan lortuko genuke:
+Adibideak 30(1) [Zilindroa] . Izan bitez p=(1,0,0) eta q=(0,1,1) puntuak.
+Zehaztu p eta q puntuen arteko ibilbide bat eta kalkulatu horren luzera.
+           [Sorry. Ignored\begin{tikzpicture} ... \end{tikzpicture}]
+eta direnez, defini dezagun eta puntuak lotzen dituen -ren bidea: non den.
+Orduan α: [0,1]⟶S izango dugu non den eta
+(2) [Esfera] Izan bitez esferaren parametrizazioa. Kalkulatu meridiano eta
+paralelo baten luzerak.
+Paralelo:Izan bedi non den. Orduan izango dugu eta
+Meridiano:Izan bedi non den. Orduan izango dugu eta
+2.5.3 Angeluak
+Izan bitez eta bektoreak puntuko plano ukitzailean; orduan bien arteko angelua
+Θ bada,
+beteko da.
+Bestalde, eta S-ren gainean definitutako bi kurbak badira non den, orduan bi
+kurben arteko angelua eta bektoreen arteko angelua izango da. Beraz, eta badira
+orduan
+Bereziki, kurba koordenatuen kasuan, eta direnean, orduan
+Adibidea 31(1) Esferaren meridianoak eta paraleloak ortogonal direla. (Ohiko
+mapa erabili)
+(2) Proiekzio estereografikoa. Izan bedi non
+
+
+
+
+
+
+
+2.5.4 Azalerak
+Izan bedi D⊂U eremua. Orduan -ren azalera gainazalean honela lor daiteke U-
+n lan eginez:
+Baina
+= \b \lc\∥\rc\∥ ( x\s\do5(u) \b (u,v))\s\up14(2) \b \lc\∥\rc\∥ ( x\s\do5(v) \b
+(u,v))\s\up14(2)- \b \lc\∥\rc\∥ ( x\s\do5(u) \b (u,v))\s\up14(2) \b \lc\∥\rc\∥
+( x\s\do5(v) \b (u,v))\s\up14(2)cos\s\up5(2)Θ
+=g\s\do5(11) \b (u,v)g\s\do5(22) \b (u,v)-g\s\do5(12) \b (u,v)\s\up14(2)
+=det \b (G \b (u,v)).
+Beraz
+Adibidea 32(1) esferaren ziri baten azalera:
+(2) toruaren azalera: 0<r<.
+x(u,v)=((R+rcosv)cosu,(R+rcosv)sinu,rsinv)
+, ;
+, , .
+= 2πr \i (-π,π, )(R+rcosv) dv
+=4π\s\up5(2)r R.
+2.5.5 Mapa isometrikoak, konformeak eta isoarealak
+Definizioa 33Izan bitez S gainazal erregularra, S-ren mapa eta
+x-ren lehen forma nagusia.
+xisometrikoada baldin eta eta badira (u,v)∈U guztietarako.
+xkonformeada baldin eta eta badira (u,v)∈U guztietarako, non funtzioa den.
+xisoarealada baldin eta bada (u,v)∈U guztietarako.
+Oharrak 34(1) x isometrikoa bada, orduan -tik -rako kurbaren luzera hau izango
+da:
+(2) x konformea bada, orduan eta kurben arteko angelua hau izango da:
+= \F(u\s\do5(1)’(t\s\do5(1))u\s\do5(2)’(t\s\do5(2))+ v\s\do5(1)’(t\s\do5
+(1))v\s\do5(2)’(t\s\do5(2)), \R(, u\s\do5(1)’(t\s\do5(1))\s\up5(2)+ v\s\do5(1)’
+(t\s\do5(1))\s\up5(2)) \R(, u\s\do5(2)’(t\s\do5(2))\s\up5(2)+ v\s\do5(2)’
+(t\s\do5(2))\s\up5(2)))
+=cos\b (α\s\do5(1)(t\s\do5(1)),α\s\do5(2)(t\s\do5(2))).
+(3) x isoareala bada, orduan -ren azalera hau izango da:
+Proposizioa 35x isometrikoa da baldin eta soilik baldin konformea eta isoareala
+bada.
+                 [Sorry. Ignored\begin{proof} ... \end{proof}]
+Adibideak 36(1) Zilindroaren mapa isometrikoa da.
+(2) Esferaren projekzio estereografikoren alderantzizkoa konformea da.
+(3) Esferaren Lamberten alderantzizkoa, isoareala da.
+2.5.6 Gainazalen arteko difeomorfismoak, isometriak eta aplikazio konformeak
+eta isoarealak
+Definizioa 37Izan bitez S gainazal erregularra, W⊆S irekia, q∈W eta f: W⊆S⟶R
+aplikazio jarraitua. Izan bedi S-ren mapa non q∈x(U) den. f aplikazioa q
+puntuandiferentziagarriadela esango dugu baldin eta
+diferentziagarria bada puntuan. W-ko puntu guztietan diferentziagarria bada W-
+n diferentziagarria dela esango dugu.
+Oharra 38Mapa aldaketak ez du eraginik definizioan, hau da, (V,y) puntu
+berberaren beste mapa bat bada, orduan difeomorfismoa denez, f∘x
+diferentziagarria baldin eta soilik baldin f∘y diferentziagarria bada.
+Adibideak 39(1) Izan bitez S gainazal erregularra eta irekia non S⊂W den.
+Demagun f: W⟶R aplikazio diferentziagarria dela; orduan diferentziagarria da S-
+n.
+(2) Izan bitez S gainazal erregularra eta . Orduan f: S⟶R, f(p)=p⋅⃗v aplikazio
+diferentziagarria da.
+(3) Izan bitez S gainazal erregularra eta . Orduan f: S⟶R, aplikazio
+diferentziagarria da.
+Definizioa 40Izan bitez eta gainazal erregularrak eta aplikazioa. F
+aplikazioadiferentziagarriadela esango dugu baldin eta -en mapa eta -ren mapa
+guztietarako
+diferentziagarria bada.
+Fdifeomorfismoadela esango dugu baldin eta bijektiboa bada eta biak F eta ere
+diferentziagarriak badira.
+Definizioa 41Izan bitez eta gainazal erregularrak eta difeomorfismoa.
+Fisometriada baldin eta -en mapa guztietarako -en lehen forma nagusiko
+koefizienteak eta -enak berdinak badira.
+Fkonformeada baldin eta -en mapa guztietarako -en lehen forma nagusiko
+koefizienteak eta -enak proportzionalak badira, hau da, badira (u,v)∈U
+guztietarako, non funtzioa den.
+Fisoarealada baldin eta -en mapa guztietarako -en lehen forma nagusiko
+matrizearen determinantea eta -ena berdinak badira.
+Proposizioa 42F isometrikoa da baldin eta soilik baldin konformea eta isoareala
+bada.
+Adibideak 43(1) Izan bitez , eta non F(0,y,z)=(cosy,siny,z). F isometria da.
+(2) Proiekzio estereografikoa konformea da, baina isometria ez.
+(3) Arkimedesen proiekzioa isoareala da, baina isometria ez. (Izan bitez , eta
+non F(cosϕcosΘ,cosϕsinΘ,sinϕ)=(cosΘ,sinΘ,sinϕ). F isoareala, baina isometria
+ez.)
+2014-15 ikasturtea

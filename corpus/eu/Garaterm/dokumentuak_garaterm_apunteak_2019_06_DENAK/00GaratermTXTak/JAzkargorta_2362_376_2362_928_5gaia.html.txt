@@ -1,0 +1,819 @@
+
+
+
+
+
+112
+                      5._GAIA:_INDUKZIO_ELEKTROMAGNETIKOA
+
+1.- SARRERA.
+2.- INDUKZIORAKO FARADAY-REN LEGEA
+3.- INDUKZIO FENOMENOAK.
+3.1- Transformadore indar elektroeragilea (B aldakorra)
+3.2.- Higidura indar elektroeragilea (translazioa)
+3.3.- Faraday-ren generadorea (errotazioa)
+3.4.- Motor elektrikoak
+4.- INDUKZIO KOEFIZIENTEAK.
+5.- ENERGIA MAGNETIKOA.
+6.- DESPLAZAMENDU-KORRONTEA ETA MAXWELL-EN EKUAZIOAK
+
+
+
+1.-SARRERA
+
+Aurreko gaietan eremu magnetikoa eta eremu elektrikoa aztertu dira, biak aparte
+eta denboran konstanteak. Honako gai honetan, berriz,
+[2362_928_5gaia_html_599b871c.gif] eremu magnetikoa aztertuko dugu baina
+aldakorra denean, eta ondorioak ikusi. Azken atalean, laburki bada ere, eremu
+elektrikoa ere denboran zehar aldatzen aztertuko dugu. Ikasgaiaren amaieran, bi
+eremuek deskribatzen dituzten ekuazioak laburbilduko ditugu. Ekuazio horiek
+elektromagnetismoaren oinarrizko ekuazioak dira eta “Maxwellen ekuazio”
+deritze, zientzialari horixe izan baitzen forma definitiboan aurkeztu zituen
+lehena.
+
+Hori baino lehenago, Faraday eta Lenz-ek Eremu magnetiko aldakorren efektuak
+aztertu zituzten hainbat esperimenturen ondorioz, eta honako ondoriora iritsi
+ziren: eremu magnetiko aldakor batek eremu elektriko bat sortzen du.
+
+Esperimentuen oinarria 1 Irudian adierazten da: zirkuitu itxi bat badugu
+(espira edo beste edozein harilketa itxi), eta bertan amperemetro bat
+intentsitatea neurtzeko. Zirkuitu horren inguruetan iman bat mugitzen denean
+(zenbat eta bizkorrago hobe) amperemetroak intentsitate elektriko bat
+zirkulatzen ari dela detektatzen du. Azpimarratzekoa da intentsitateak
+zirkulatzen duela imana mugitzen ari denean soilik, eta ez geldirik dagoenean,
+imana zirkuitutik hurbilago edo urrunago egon arren. Bestalde, intentsitatearen
+noranzkoa alderantzizkoa da imana hurbiltzen edo urruntzen ari denean.
+Intentsitatearen balioa hainbat eta handiagoa da imana bizkorrago mugitzean edo
+harilketak espira gehiago dituenean.
+
+                      [2362_928_5gaia_html_m49e10c4f.png]
+1 Irudia 2 Irudia
+
+Imanaren ordez beste zirkuitu bat ere ipini daiteke, sorgailu bat daukana, eta
+efektu bera agertzen da (2 Irudia): amperemetroak intentsitate elektriko bat
+detektatzen du, eskumako zirkuituaren etengailua ixten eta irekitzen den
+guztietan, eta ez eskumako zirkuituaren intentsitatea konstantea denean, eta
+beraz berak sorturiko eremu magnetikoa ere konstantea denean.
+
+2.- INDUKZIORAKO FARADAY-REN LEGEA
+
+Aurreko esperimentuetan, 1 eta 2 Irudietan, ezkerreko zirkuituan indar
+elektroeragile (i.e.e.) bat sortarazi edo "induzitu" da zirkuituaren inguruko
+eremu magnetikoa aldatzen ari denean, baina ez konstantea denean.
+
+Induzitutako indar elektroeragilearen noranzkoa inguruko eremu magnetikoaren
+aldaketei dagokio eta ez eremu magnetikoari berari. Izan ere, induzitutako
+intentsitatea eremu magnetikoaren aldaketaren aurkakoa da, eta ez eremuaren
+beraren aurkakoa. Hortaz, 3 Irudiko espiran induzitutako indar elektroeragileak
+erlojuaren orratzen aldeko noranzkoa du B gutxitzen denean, baina erlojuaren
+orratzen aurkakoa B handitzen denean. B-ren aldaketaren aurkakotasun horri
+Lenz-en lege deritzo, eta "inertzia" elektromagnetiko bat bezalakoa da.
+
+
+Aipatutako esperimentuen emaitzak, eta
+beste esperimentu guztienak ere,        [2362_928_5gaia_html_2f68c244.gif]
+matematikoki oso era laburrean adieraz
+daitezke, Faradayren legea deritzona
+
+
+[2362_928_5gaia_html_m43a5d6e5.gif] (1)
+                                                     3 Irudia
+
+hemen  indar elektroeragilea da (Volt) eta , zirkuituan zeharreko eremu
+magnetikoaren fluxua ([2362_928_5gaia_html_157230d9.gif], Tm2 = Wb). Minus
+zeinuak B-ren aldaketaren aurkakotasuna adierazten du, Lenz-en legea hain
+zuzen.
+
+Aipagarria da fluxu magnetiko aldakorrak modu ezberdinetan lor daitezkeela:
+1) batetik, [2362_928_5gaia_html_74e060da.gif] eremua aldakorra izanda
+(transformadorea), baina [2362_928_5gaia_html_3fcd7458.gif] konstante izanda
+ere, 2) zirkuitua mugitzen ari bada (translazioa edo biraketa) edota 3)
+zirkuituaren azalera aldakorra bada, alegia, zirkuitua deformatzen ari bada.
+
+Hain zuzen ere,  indar elektroeragile hori existitzen da, halabeharrez,
+indukzioak Eremu Elektriko bat induzitzen duelako, izan ere, ez kontserbakorra
+dena
+[2362_928_5gaia_html_54c7d128.gif][2362_928_5gaia_html_33748d4f.gif]beraz:
+[2362_928_5gaia_html_5fb57858.gif]
+
+Indukzioari dagokion Eremu Elektrikoaren zirkulazioa (kurba itxi batean zehar)
+ez da nulua eta beraz [2362_928_5gaia_html_1e3e0da8.gif] hori ez da
+kontserbakorra (eremu elektrostatikoan ez-bezala).  eta  ordezkatuz, Faraday-
+ren legearen adierazpen integrala lortzen da
+
+[2362_928_5gaia_html_34f2272a.gif] (2)
+
+Hemen S integratze-gainazala C zirkuituak inguratutako edozein gainazal izan
+daiteke. Zirkuitua mugitzen ez denean, C eta S ez dira denborarekin aldatzen
+eta deribatua integralaren barruan sar daiteke
+
+[2362_928_5gaia_html_m2cb469a0.gif]
+(3)
+
+Adierazpen horretan nabarmen ikusten da eremu magnetikoa denborarekiko
+aldakorra denean ([2362_928_5gaia_html_45438383.gif]) orduan eremu Elektriko ez
+kontserbakor bat induzitzen duela ([2362_928_5gaia_html_m75e2e500.gif]), hau
+da, egoera ez-iraunkorretan eremu elektrikoa orokorrean ez da kontserbakorra.
+
+Azkenik, azpimarra dezagun eremu elektriko induzitua berdin induzitzen dela
+zirkuitu elektrikoa egon edo ez egon, alegia, eremu magnetiko aldakor batek ez
+badu karga elektrikorik aurkitzen eta, beraz, fluxu magnetikoaren aldaketak
+hutsean gertatzen badira, (3) ekuazioak egiazkoa izaten segitzen du, baina
+espazioan har daitekeen edozein kurba itxitan. Izan ere, kurba itxi horretan
+zirkuitu bat eraikitzen badugu, orduan jarriko da agerian karga elektrikoek
+zirkulatzen dutela, eta eremu elektrikoaren zirkulazioa (
+[2362_928_5gaia_html_m6cfcd016.gif]) zirkuituan induzitutako indar
+elektroeragilea izango da.
+
+3.- INDUKZIO FENOMENOAK
+
+Atal honetan, induzitutako indar elektroeragileen adibide batzuk zehazkiago
+azalduko dira:
+
+3.1- Transformadore I.E.E. ([2362_928_5gaia_html_599b871c.gif] aldakorra)
+
+Aztertuko dugun adibidea 4 Irudian adierazten da. S sekziodun solenoide baten
+espiretan zehar intentsitate bat zirkulatzen ari da. Intentsitate horrek B
+eremu magnetikoa sortzen du eta, aldatzen ari da, esaterako hazten.
+Solenoidearen inguruan espira bat ipini da.
+4. gaian ikusi genuen bezala, solenoide ideal batek sortzen duen eremu
+magnetikoa, kanpoaldean, nulua da, eta solenoidearen barruan, berriz, bere     [2362_928_5gaia_html_6c32ba9a.gif]
+arda-tzaren norabidea du eta modulua B =onI (I solenoidetik zirkulatzen ari
+den intentsitatea da eta n solenoidearen espira-kopurua luzera unitateko). I
+denboran zehar aldakorra bada, orduan kanpoko espiran i.e.e induzituko da
+
+
+
+
+                                                                                            4 Irudia
+
+[2362_928_5gaia_html_12253c6c.gif] (4)
+
+minus zeinuak i.e.e-aren noranzkoa besterik ez du adierazten, alegia, Lenz-en
+legea: [2362_928_5gaia_html_599b871c.gif]-k irudiko noranzkoa badu,
+ezkerrerantz, eta gorakorra bada, orduan i.e.e.-aren noranzkoa irudian
+adierazitakoa da, erlojuaren orratzen aurka.
+
+Harrigarria dirudi: kasu honetan, [2362_928_5gaia_html_599b871c.gif] eremu
+magnetikoa solenoidearen barruan dago soilik, eta kanpoko espira ez du ukitu
+ere egiten; hala ere, eremu elektriko induzitua badago eta indar
+elektroeragilea sortzen du; gainera, berdin dio espiraren tamainak edo formak.
+3.2.-Higidura I.E.E. (translazioa).
+
+Orain ikusiko dugunez, eremu magnetikoa konstante mantendu arren, zirkuitua
+translazioz mugitzen ari bada, zirkuituan indar elektroeragile bat induzi
+daiteke.
+
+5. Irudiak erakusten duen bezala, espira laukizuzen bat sartzen ari da (v         [2362_928_5gaia_html_7a369db2.gif]
+abiaduraz eta ezkerrerantz), eremurik gabeko eskualde batetik (
+[2362_928_5gaia_html_3fcd7458.gif]=0), eremu uniformea duen eskualde batera (
+[2362_928_5gaia_html_3fcd7458.gif]0), [2362_928_5gaia_html_m59b1657b.gif]eremu
+magnetikoa espiraren planoaren perpendikularra da. Beraz, espiran induzitutako
+i.e.e.
+
+                                                                                               5 Irudia
+[2362_928_5gaia_html_19f4ee1d.gif] (5)
+
+Fluxua beherantz doa eta hazi egiten da; beraz, induzitutako i.e.e erlojuaren
+orratzen aurkakoa izango da, 5 irudiak erakusten duen bezala. Soilik espira
+[2362_928_5gaia_html_m59b1657b.gif] eremuan sartzen edo irteten ari denean,
+i.e.e-a induzitzen da. Horren ondorioz, espira eroalea bada, korronte
+elektrikoak zirkulatu egingo du
+
+[2362_928_5gaia_html_198e1482.gif] (6)
+
+Hemen intentsitatearen zeinua ezabatu egin dugu, bere noranzkoa 5 irudian
+adierazi delako. Behin espiratik intentsitate bat zirkulatzen hasita, eremu
+magnetikoan murgildutako zatiak indar bat jasango du, indar magnetikoa, 4.
+gaian ikusi genuen bezala. Deduzituz, indarra abiaduraren aurkakoa da, eta
+moduluz
+
+[2362_928_5gaia_html_291a3d56.gif] (7)
+
+Espira ezkerrerantz bultzatu beharrean eskumarantz bultzatzen badugu ere,
+kalkulu guztiak errepikatu eta indar hori ezkerrerantz ateratzen da, alegia,
+beti abiaduraren aurkakoa, erresistentzia magnetiko bat balitz bezala, eta
+honelako kasuetan beti agertzen da. Beraz, espiraren higidura mantentzeko (v
+konstante), kanpo-indarrak indar magnetikoa berdindu beharra dauka,
+[2362_928_5gaia_html_62902f7a.gif], eta horretarako behar duen potentzia hauxe
+da
+
+[2362_928_5gaia_html_m1a31ae5f.gif] (8)
+
+bestalde, erresistentzia elektrikoan Joule-efektuaz barreiatutako potentzia
+elektrikoa honakoa da (3. gaia)
+
+[2362_928_5gaia_html_7223741.gif] (9)
+
+Bi adierazpenak berdinak ateratzen dira, beraz, espiraren higidura mantentzeko,
+indar magnetikoa gaindituz aplikatu behar zaion energia mekanikoa, zirkuitu
+elektrikoan energia elektriko bilakatzen da eta berotan barreiatzen da.
+
+3.3.- Faraday-ren generadorea (errotazioa)
+
+Gaur egun, mundu osoan energia elektrikoa ekoizten duten sorgailu gehienek
+energia mekanikoa energia elektriko bihurtzen dute, eta Faradayren generadorea
+dute oinarri.
+
+Espira laukizuzen bat, eremu magnetiko batean murgilduta, biraka ari da 
+abiadura angeluarraz. Eremu magnetikoa uniformea da, konstantea eta espiraren
+biraketa ardatzaren perpendikularra, 6. irudian erakusten den bezala.
+
+
+                      [2362_928_5gaia_html_564575c6.png]
+                                   6 Irudia
+Nolanahiko posizio batean, espiran zehar pasatzen ari den fluxu magnetikoa
+honakoa da
+
+[2362_928_5gaia_html_m4f178e91.gif] (10)
+
+hemen  angelua da, [2362_928_5gaia_html_599b871c.gif] eremu magnetikoak eta
+espiraren planoaren [2362_928_5gaia_html_3099cf4b.gif] normalak osatzen dutena.
+Induzitutako i.e.e. alternoa da
+
+[2362_928_5gaia_html_988cb17.gif] (11)
+
+Espiraren zirkuituak R erresistentzia elektrikoa badu, bertan zirkulatuko duen
+intentsitatea honakoa izango da
+
+[2362_928_5gaia_html_m6e570f6f.gif] (12)
+
+eta beraz, berotan kontsumitzen ari den potentzia elektrikoa
+
+[2362_928_5gaia_html_59fe451.gif] (13)
+
+Bestalde, espirak jasaten dituen indar magnetikoak aztertzen baditugu, korronte
+batek jasaten duen indar magnetikoa hau da:
+[2362_928_5gaia_html_m5d8eb29a.gif].
+
+Alde horizontaletan indar horiek bertikalak dira: F = IbB cos, goikoan
+gorantz eta behekoan beherantz, eta modulu bera dute,6. irudian adierazten den
+bezala, beraz, bien batura nulua da, eta gainera, euren momentua biraketa
+ardatzarekiko ere nulua da. Hortaz, bi indar horiek ez dute eraginik espiraren
+dinamikan, espira deformatzean besterik ez.
+
+Bi alde bertikaletan, ordea, indarrak horizontalak dira, F ' = IaB, elkarren
+aurkakoak. Bi indarren batura nulua da, baina euren momentua biraketa
+ardatzarekiko ez da nulua. Momentuak kalkulatzeko alde bertikaletako bat
+hartzen bada, berak jasaten duen indarrak ez du momenturik eragiten, eta beste
+indarrak eragindako momentua honakoa da: M = IabB sin, eta espiraren
+biraketaren aurka doa, 6 Irudian adierazten den bezala.
+
+Momentu hori erresistentzia magnetiko bat bezalakoa da eta honelako kasuetan
+beti agertzen da. Espiraren abiadura angeluarra konstante mantentzeko, kanpo
+indarrak indar magnetikoaren momentu hori berdindu beharra dauka, eta
+horretarako eman behar duen potentzia honakoa da: Pmek=M·=IabBsint.
+Potentzia mekaniko hori eta kontsumituriko potentzia elektrikoa, Pelek=I2R,
+berdinak dira, aurreko kasuan bezala
+
+[2362_928_5gaia_html_1093d0bc.gif] (14)
+
+Faradayren generadore batez sortutako korrontea jaso eta erabili ahal izateko,
+espira birakorraren ertz biak eraztun eroale banatan soldatu egiten dira eta
+berarekin batera biratzen dute. Eraztunekin kontaktu elektrikoa eskobila
+irristakor batzuen bitartez egiten da, ondoko irudiak adierazten duen bezala
+
+[2362_928_5gaia_html_m31e615f8.gif]
+
+
+
+
+
+
+
+
+
+                                   7 Irudia
+
+****** Lehenago aipatu dugunez zirkuitutik zirkulatuko duen korrontea alternoa
+izango da, eta honelako tresnari korronte alternoko generadore edo sorgailu
+deritzo, edo baita ere alternadore. ******
+
+Eskobilen bitartez zirkuitura bidalitako korrontea, alternoa izan beharrean,
+jarraitua izatea nahi bada (hau da, noranzko bakarrekoa), ondoko aldaketa egin
+dakioke. Eraztun bi erabili beharrean, bakarra erabiltzen da baina bitan
+zatitua. Zatietako bakoitzari delga deritzo. Delga bakoitzak espiraren ertz
+banarekin du kontaktua.
+[2362_928_5gaia_html_m4de5bbb3.gif]
+
+
+
+
+                                   8 Irudia
+
+Espirak 180 biratzen duen bakoitzean (justu espira eremu magnetikoaren
+perpendikular dagoenean) eskobilen eta delgen arteko kontaktua trukatu edo
+kommutatu egiten da eta, ondorioz, intentsitateak noranzko bakarrean
+zirkulatzen du, bere modulua denboran aldakorra den arren. Horrelako tresnari
+korronte jarraituko generadore (sorgailu) deritzo edo baita ere dinamo.
+
+[2362_928_5gaia_html_1ebf6cad.gif]
+
+
+
+
+
+
+                                   9 Irudia
+
+3.4.-Motor elektrikoak
+
+Aurreko atalean ikusitako generadoreak alderantziz ere ibil daitezke, hau da,
+espira eremu magnetiko batean murgilduta dagoelarik, birarazi beharrean,
+beragandik korronte bat zirkularazten badiogu (pila batez adibidez) espirak
+berez biratuko du motor elektriko bilakatuz. Hain zuzen, espiratik korronte bat
+zirkulatzen ari bada, bere aldeek indarra jasango dute, 10 Irudian adierazten
+den bezala
+
+
+[2362_928_5gaia_html_m5e3a0eca.gif]
+
+
+
+[2362_928_5gaia_html_m56e440a0.gif]
+
+
+
+
+
+
+
+
+10 Irudia
+                                    11 Irudia
+
+Indar horiek espira bultzatzen dute, eremuaren perpendikular kokatzen duten
+arte, eta horixe izango da bere oreka-posizioa. Baina, delga biko kommutadoreko
+konexioa erabiltzen bada (11 Irudia) espira oreka-posiziora iristean eta,
+inertziagatik, posizio hori gainditzen duenean, intentsitatea kommutatu egingo
+da eta beraz indarrek ere noranzkoa alderantzikatuko dute; beraz espirak beste
+180º biratuko ditu, eta horrela behin eta berriz, etengabe. Tresna hori da
+korronte jarraituko motorra, energia elektrikoa kontsumitu eta energia
+mekanikoa sortzen duena. Beste motor-mota konplikatuagoek ere oinarri hauxe
+dute. Motor elektrikoen adibideak oso ugariak dira: piladun jostailuak,
+garbigailuak, ile-lehorgailuak, aspiragailuak, josteko edo bizarra kentzeko
+makinak, igogailuak, trenak…, ia makina elektriko birakor guztiak.
+
+Motor elektrikoetan indukzio
+elektromagnetikoaren efektuak ere agertzen [2362_928_5gaia_html_6a3a6ae.gif]
+dira, eta aurka egiten diote bateriak
+aplikatu-riko korronte elektrikoari. 12
+Irudiak motor sinple bat erakusten du,
+translazio linealekoa, kalkulu
+matematikoak erraza-go burutzeko (motor
+arruntenak errotazi-ozkoak izaten dira,
+baina funtsean efektu bera jasaten dute).
+                                                       12 Irudia
+
+Zirkuituak haga eroale mugikor bat du, eremu magnetiko batean murgilduta, eta
+bateria elektriko batez elikatuta dago. Bateriak tentsioa ematen du eta
+zirkuituan I intentsitateko korrontea eragiten du, 12 Irudiak erakusten duen
+noranzkoan, zirkuituaren erresistentzia elektrikoa R bada. Hagatxoa eskumarantz
+mugituko da indar magnetikoaren eraginez: [2362_928_5gaia_html_54823b44.gif].
+Hona hemen indar horren modulua
+
+[2362_928_5gaia_html_m3534d3e4.gif](15)
+
+b da hagatxo eroale mugikorraren luzera. Bestalde, hagatxoa mugitzen ari bada,
+[2362_928_5gaia_html_m2eac1c1a.gif] abiaduraz, zirkuitua zeharkatzen ari den
+fluxua aldakorra da, eta honako indar elektroeragilea induzituko da,
+bateriarenaz gain eta bere aurka:
+
+[2362_928_5gaia_html_5ce8e47c.gif](16)
+
+Hau da, boltaia bat induzitzen da bateriarenaren aurka eta, normalean,
+bateriarena baino txikiagoa. Motorretan boltaia horri indar kontra-
+elektroeragile deritzo (i.k.e.) zirkuituaren korrontea gutxiarazteko joera
+daukalako. Zirkuitu osoari Ohm-en legea aplikatzen badiogu
+
+[2362_928_5gaia_html_4d27a46d.gif](17)
+
+eta konbinatzen baditugu (15-17) ekuazioak
+
+[2362_928_5gaia_html_73b9ef41.gif](18)
+
+Horixe da motor lineal baten ekuazioa. Motorren funtzioa zerbait mugiaraztea
+izaten da, alegia, energia mekanikoa ematea. Horrek esan nahi du, kanpoko indar
+bat badagoela indar magnetikoaren aurka (motorraren karga deritzo). Har dezagun
+kasurik sinpleena, alegia, motorra egoera egonkorrean jarduten duenean,
+motorraren abiadura konstantea da, eta Newton-en bigarren legearen arabera,
+indar magnetikoa eta kanpo-indarra berdinak dira, beraz indar magnetikoa da
+zuzenean indar traktorea edo motorraren karga.
+
+Motor errealak errotaziozkoak izaten dira, eta bere ekuazioa (18) ekuazioaren
+antzekoa da, baina motorraren F indarraren ordez, M momentua erabiltzen da
+(parea ere baderitzo), eta v abiadura linealaren ordez,  abiadura angeluarra.
+[2362_928_5gaia_html_m3802eae8.gif](19)
+
+Ekuazio hori lortzeko dimentsio-analisia besterik ez da behar, eta indarraren M
+momentua indarra bider luzera denez, eta v abiadura lineala abiadura angeluarra
+bider luzera, orduan,  magnitudeak fluxu magnetikoaren dimentsioak ditu.
+magnitude horri motorraren fluxu-konstantea deritzo eta motorrarekin
+akoplatzen den fluxu magnetikoa adierazten du. Indar kontra-elektroeragilea,
+berriz,  da. Motor linealean bezalaxe, funtzionamendu-abiadura, edo 
+errotazio-abiadura M kargaren araberakoa da, zenbat eta karga handiagoa,
+errotazio-abiadura txikiagoa;  = 0 limitean, motorrak eman dezakeen indar-
+momentu (motor-parea) maximoa lortuko dugu  [2362_928_5gaia_html_23824e06.gif].
+Beste aldean, kargarik gabeko egoeran (M= 0), motorraren abiadura maximoa
+izango da (max = /) eta kontsumitzen duen I intentsitatea minimoa.
+
+Energiaren balantzea egiteko, biderka dezagun (17) ekuazioa korrontearen I
+intentsitateagatik, eta ondoren (15) eta (16) ekuazioak erabiliz, honakoa
+lortzen da
+
+[2362_928_5gaia_html_m6b61e8de.gif](20)
+
+Ikus daitekeenez, bateriak ematen duen potentzia elektrikoa,
+[2362_928_5gaia_html_1fc07b1c.gif], bi terminotan banatzen da, batetik,
+motorrean bertan Joule efektuaz barreiatzen den potentzia, RI2, eta, bestetik,
+motorrak emandako potentzia mekanikoa, Fmag v (M errotaziozkoetan).
+
+Aurreko adierazpenetik ikus daiteke baita ere, motorraren abiadura zenbat eta
+txikiagoa izan, orduan, Joule efektuaz barreiatutako potentzia-proportzioa
+handitzen doala. Horregatik, motor elektrikoak abiadura maila batetik behera
+jarduten badute (alegia, indar handiegia egitea eskatzen zaienean) asko berotu
+ohi dira, eta bero horrek erre ere egin ditzake.
+
+4.- INDUKZIO KOEFIZIENTEAK
+
+Demagun espazioan zehar N zirkuitu        [2362_928_5gaia_html_1917cb93.gif]
+elektriko ditugula, Ci deituak, eta
+zirkuitu horietako bakoitzak Ii                       13 Irudia
+intentsitatea duela. Iiintentsitate
+bakoitzaren ondorioz eremu magnetiko
+bat sortuko da bere inguruetan,
+[2362_928_5gaia_html_6a7a1d5.gif], eta
+eremu magnetiko horietako bakoitzak
+gainontzeko zirkuituetan, Cjdeituetan,
+eragina izango du. Hortaz, Ci
+zirkuituak, Cjzirkuituan zehar fluxu
+magnetikoa eragingo du (13. irudia):
+[2362_928_5gaia_html_418816eb.gif] (21)
+
+4. ikasgaian ikusi genuen bezala, edozein zirkuituk sortutako B eremu
+magnetikoa beti da zirkuitu horretan zirkulatzen ari den I intentsitatearen
+proportzionala, beraz fluxua honela berridatz daiteke:
+
+[2362_928_5gaia_html_m1763a16b.gif] (22)
+
+Aurreko integral bikoitz horrek soilik dauka i eta j zirkuituen parametro
+geometrikoen menpekotasuna, hala nola, formak, tamainak, distantziak eta
+orientazioak, eta, [2362_928_5gaia_html_40025181.gif] deritzo, Ci eta
+Cjzirkuituen arteko elkar-indukzio koefizientea; beraz, fluxua laburrago
+berridatz daiteke
+
+[2362_928_5gaia_html_7600768.gif] (23)
+
+Elkar-indukzio koefizienteak adierazten du bi zirkuituren artean “magnetikoki
+akoplatzeko duten gaitasuna", edo zirkuitu batak besteari fluxu magnetikoa
+eragiteko daukan erraztasuna. Bere unitatea Henry da (H=Wb/A). Erraz froga
+daitekeenez, Elkar-Indukzio Koefizienteak simetrikoak dira, alegia, Mij = Mji.
+
+Bestalde, idatz dezagun orain Cjzirkuituak jasaten duen fluxu totala, alegia,
+bere inguruko zirkuitu guztien ekarmen edo kontribuzioen batura:
+
+[2362_928_5gaia_html_1afde54c.gif] (24)
+
+Zirkuituak estatikoak eta zurrunak direnean (
+Mij= kte), orduan, induzitutako indar elektroeragilea errazago adieraz daiteke:
+
+[2362_928_5gaia_html_m2c848b77.gif] (25)
+
+Mjj batugaia ere kontutan hartu behar da, hau da, zirkuitu batek eragindako
+fluxua, zirkuituarekin berarekin ere akoplatzen da. Termino horri auto-indukzio
+koefizientederitzo, Lj , izan ere, zirkuitua bakarrik dagoenean, horixe da
+kontutan hartu beharreko bakarra eta orduan, = L I eta
+[2362_928_5gaia_html_m353e9406.gif].
+
+5.- ENERGIA MAGNETIKOA
+
+Energia magnetikoa honela definitzen da: zirkuitu estatiko batean intentsitate
+bat ezartzeko beharrezkoa den lana(edo zirkuitu estatiko multzo batean
+intentsitate-multzo bat). Lan horretan ez da kontutan hartzen Joule efektuaz
+galdutakoa edo beste efektu disipatiborik, baizik eta indukzio magnetikoa
+gainditzeko lana soilik.
+
+Lehenik, zirkuitu bakar baten kasua aztertuko dugu. Zirkuitu horrek hasiera
+batean ez du korronte elektrikorik eta I intentsitatea ezarri nahi diogu, baina
+zirkuituak L autoindukzio-koefizientea dauka eta korrontearen intentsitatea
+handitzen diogunean i.e.e. bat induzitzen da, aldaketaren aurkakoa:
+
+[2362_928_5gaia_html_63f1fdf8.gif] (26)
+
+Induzitutako i.e.e.-aren noranzkoa intentsitatearen aurkakoa da, hain zuzen,
+eta beraz, horixe gainditu beharko dugu kanpoko i.e.e. bat aplikatuz, hau da,
+intentsitate bat ezartzea lan bat kostatuko zaigu. Beharrezko den energia
+elektriko horri Um deituko diogu:
+
+[2362_928_5gaia_html_m6d754d97.gif] (27)
+
+Energia hori zirkuituan "metatuta" dagoela kontsidera daiteke, edo zirkuituaren
+inguruko eremu magnetikoan, I intentsitatea zirkulatzen ari den bitartean.
+
+Lortutako adierazpen horrekin kasu konkretu baten energia magnetikoa kalkula-
+tuko dugu: solenoide ideal bat N espiraduna,
+[2362_928_5gaia_html_mb152696.gif]luzeraduna, S sekzioduna eta I
+intentsitateduna. Bere eremu magnetikoa hau da:
+
+[2362_928_5gaia_html_mb2b3abc.gif]  [2362_928_5gaia_html_mdacf5d6.gif] (28)
+
+Bestalde, fluxua  [2362_928_5gaia_html_m6a01b270.gif] denez, energia magnetikoa
+honakoa da:
+
+[2362_928_5gaia_html_3ca937da.gif] (29)
+
+Hemen S[2362_928_5gaia_html_m556c6bf5.gif] solenoidearen bolumena da, beraz
+gainerako kantitatea, [2362_928_5gaia_html_d82190e.gif], logikaz “energia
+magnetikoaren dentsitatea" izango da, bolumen unitateko. Emaitza hori,
+solenoidearen kasu konkreturako lortu dugun arren, erabat orokorra da, hau da,
+orokorrean, espazioan eremu magnetiko bat dugunean, bertan gordeta dugun
+energia magnetikoaren dentsitatea honakoa da:
+
+[2362_928_5gaia_html_m23ed4b83.gif] (30)
+
+Zirkuitu bakarra izan beharrean N zirkuitu badira, energia magnetiko totala
+honela idazten da:
+
+[2362_928_5gaia_html_7a7af3e.gif] (31)
+
+Esate baterako, bi zirkuituren kasurako, I1 eta I2 intentsitateak, L1,L2
+autoindukzio koefizienteak, eta M elkar-indukzio koefizientea badira:
+
+[2362_928_5gaia_html_m3fd5aef7.gif] (32)
+
+Adierazpen horretan daude zirkuitu bakoitzaren energia propioa eta bien arteko
+elkar-indukzio energia ere bai. Zirkuitu-kopurua edozein izanda ere emaitza
+hori orokorra da, soilik da indukzio-koefizienteen eta intentsitateen amaierako
+balioen menpekoa eta, bistan denez, berdin dio intentsitateak zein ordenatan
+ezartzen diren.
+
+
+6.- DESPLAZAMENDU KORRONTEA ETA MAXWELLEN EKUAZIOAK
+
+
+Ampère-ren legeak ([2362_928_5gaia_html_m5f7c7fc6.gif]) erlazionatzen ditu
+eremu magnetikoaren zirkulazioa C ibilbide itxi batean zehar eta ibilbide
+horrek mugatzen duen edozein gainazalean zehar pasatzen ari den korronte
+elektrikoaren I intentsitatea.
+Maxwell konturatu zen lege hori ez dela baliagarria korronte elektrikoak
+aldakorrak direnean, alegia, espazioko toki bateko karga elektriko totala
+denboran zehar aldatzen ari denean. Maxwellek, Ampereren legearen orokortasun
+falta frogatu ez ezik, erakutsi zuen nola aldatu behar zen lege hori egoera
+aldakorrak ere kontuan hartzeko: ekuazio horretan I intentsitatearen ordez, I
+gehi beste termino bat, Id, idatzi behar da, “Maxwellen desplazamendu-korronte"
+deritzona eta honela definitzen dena:
+
+[2362_928_5gaia_html_59f0d747.gif] (33)
+
+S da C kurbak inguratutako edozein gainazal. Hala, Id korronteak intentsitate
+baten dimentsioak dituen arren, ez dagokio karga-garraio bati, eremu
+elektrikoaren aldaketei baizik. Beraz, Ampère-ren legearen adierazpen orokorra,
+edozein egoeratarako, hauxe da:
+
+[2362_928_5gaia_html_2e37dde6.gif] (Ampère-Maxwellen legea) (34)
+
+Lege horrek are estuago erlazionatzen ditu eremu elektrikoa eta eremu
+magnetikoa eta bien arteko simetria osatzen du: eremu magnetiko aldakorrek
+eremu elektrikoak induzitzen dituzte (Faradayren legea) baina eremu elektriko
+aldakorrek ere eremu magnetikoak induzitzen dituzte (Ampère-Maxwellen legea).
+Aurreko eta honako ikasgaiotan azaldutakoaren arabera, eremu elektrikoaren eta
+eremu magnetikoaren portaera deskribatzen duten oinarrizko ekuazioak (egoera
+aldakorrean edo ez) honakoak dira hutsean:
+
+[2362_928_5gaia_html_m5c1aca12.gif](Gaussen legea
+[2362_928_5gaia_html_23a627c9.gif]-rentzat) (35)
+[2362_928_5gaia_html_m3e41574b.gif](Gaussen legea
+[2362_928_5gaia_html_m5ee961e7.gif]-rentzat) (36)
+[2362_928_5gaia_html_79f9403c.gif](Faradayren legea, indukzioa) (37)
+[2362_928_5gaia_html_60e50859.gif] (Ampère-Maxwellne legea) (38)
+
+Ekuazio multzo horrek Maxwellen ekuazio multzo izena du, James Clerk Maxwell
+(1831-1879) izan baitzen forma horretan aurkeztu zituen lehena 1861ean.
+Maxwellen ekuaziook eremu elektrikoa eta magnetikoa erlazionatzen dituzte haien
+iturriekin: eremu elektrikoaren iturriak dira karga elektrikoak (Gaussen legea)
+eta eremu magnetiko aldakorrak (Faradayren legea). Eremu magnetikoaren
+iturriak, berriz, korronte elektrikoak eta eremu elektriko aldakorrak (Ampère-
+Maxwellen legea). Bi eremuak oso estu erlazionatuta daude (bietako batek
+aldaketaren bat baldin badu, bestea agertzen da) eta eremu bakartzat har
+daitezke “eremu elektromagnetikoa". Maxwellen lau ekuazioak, beraz, eremu
+elektromagnetikoaren oinarrizko ekuazioak dira.
+
+Hurrengo ikasgaian ikusiko denez, Maxwellen ekuaziook elektromagnetismo osoa
+laburbildu ez ezik, beraietatik abiatuta, teorikoki froga daiteke uhin
+elektromagnetikoak existitzen direla, eta argiaren abiadurarekin hedatzen
+direla.
+
+                                   ARIKETAK
+
+1.-Metalezko habe batek bi karril
+metalikotik irrist egiten du,               [2362_928_5gaia_html_7fa8dac4.gif]
+marruskadurarik gabe, irudian erakusten den
+bezala. Karril biak elkarri konektatuta
+daude R erresistentziaren bitartez, eta
+euren arteko distantzia lda. Espazio guzti
+horretan B eremu magnetikoa dago,
+homogeneoa, konstantea, eta irudiaren
+planoaren perpendikularra.
+a) Habea eskuinerantz mugitzen bada, v abiaduraz, zein izango da zirkuituan
+induzituko den korrontearen intentsitatea eta noranzkoa? b) Zenbat balio du
+habeak jasango duen indar magnetikoak eta norantz izango da? c) Habea vo
+abiaduraz askatzen bada (t=0 aldiunean) zein abiadura izango du t aldiunean? d)
+Froga ezazu habearen energia mekanikoaren aldaketa, eta erresistentzian
+barreiatutako energia, denbora-tarte berean, berdinak direla.
+Emaitza:a)[2362_928_5gaia_html_m56ee2aad.gif] erl. orr. aurka. b)
+[2362_928_5gaia_html_31a428d6.gif]c) [2362_928_5gaia_html_48511940.gif]
+
+2[2362_928_5gaia_html_40b30cef.gif].- Habe eroale batek, karril bertikal biren
+gainetik irrist egin dezake marruskadurarik gabe. Karril biak, irudian
+erakusten den bezala, R erresistentziaren bitartez daude konektatuta eta multzo
+osoa B eremu magnetiko horizontal batean murgilduta dago. Habea erortzen uzten
+bada, grabitatearen eraginez, abiadura handitzen hasiko da, baina limite bat
+izango du. Zein da abiadura limite hori?
+Emaitza: [2362_928_5gaia_html_1b9bbb29.gif]
+3.- Irudiko hari bertikalean I            [2362_928_5gaia_html_m342d1a68.gif]
+intentsitateak zirkulatzen du eta
+ondoko espira laukizuzenak R
+erresistentzia du. Idatz ezazu zein
+indar egin beharko den, espira haritik
+v abiadura konstanteaz urruntzeko.
+Kalkula ezazu hariaren eta espiraren
+arteko elkar-indukzio koefizientea.
+Emaitza:
+[2362_928_5gaia_html_ba797df.gif]
+[2362_928_5gaia_html_m59bc1cb0.gif]
+
+4.-a) Kalkula ezazu solenoide ideal baten L autoindukzio koefizientea.
+Solenoidearen sekzioa S, luzera l, eta espira-kopurua luzera unitateko n.
+b) Kalkula ezazu bi solenoide ideal eta ardazkideren arteko elkar-indukzio
+koefizientea. Solenoideen espira-kopurua luzera unitateko n1 eta n2, sekzioak
+S1 eta S2, luzera biak berdinak l , eta lehenengoa bigarrenaren barruan
+dago.c)Solenoide 1-ek honako korronte intentsitate aldakor hau
+[2362_928_5gaia_html_m45934e1a.gif] garraiatzen badu, eman itzazu korronte
+horrek induzitutako i.e.e.-en anplitudeak bi solenoideetan eta bien arteko
+zatiketa.
+Emaitza:a)L =on2lSb)
+M =on1n2lS1[2362_928_5gaia_html_m60d0654.gif]
+5.- Irudiko espira laukizuzena B eremu magnetiko uniforme baten inguruetan
+mugitzen ari da baina eskualdearen kanpoaldean ez dago eremu magnetikorik.
+Espiraren neurriak, a eta 2a dira, v abiadura konstantez mugitzen ari da eta R
+erresistentzia elektrikoa du. Dei diezaiogun t = 0 espiraren ertza eremu
+magnetikoan sartzen hasten den aldiuneari, kalkula ezazu, espira eremuan
+sartzen ari denean, barruan dagoenean, irteten ari denean eta kanpoan
+dagoenean:
+a) Espiran induzitutako indar elektroeragilea eta intentsitate elektrikoa.
+b) Espirari aplikatu behar zaion indarra (modulua, norabidea eta noranzkoa)
+bere higidura horrela mantentzeko bidaia osoan.
+                       [2362_928_5gaia_html_5e480dd3.gif]
+Emaitza:
+[2362_928_5gaia_html_4d8e9e4.gif]
+[2362_928_5gaia_html_42145471.gif]
+[2362_928_5gaia_html_m6ab9f6fb.gif]
+[2362_928_5gaia_html_51093103.gif]
+[2362_928_5gaia_html_m7767540d.gif]
+[2362_928_5gaia_html_m74ae0551.gif]
+[2362_928_5gaia_html_5ab1f8ba.gif]
+[2362_928_5gaia_html_259b82da.gif]
+[2362_928_5gaia_html_73603a15.gif]
+[2362_928_5gaia_html_5cf8ee7a.gif]
+[2362_928_5gaia_html_m6ab9f6fb.gif]
+[2362_928_5gaia_html_64b21a36.gif]
+[2362_928_5gaia_html_m575aff51.gif]
+[2362_928_5gaia_html_m74ae0551.gif]
+[2362_928_5gaia_html_5ab1f8ba.gif]
+[2362_928_5gaia_html_259b82da.gif]
+
+6.- Espira laukizuzen bat eremu             [2362_928_5gaia_html_m1020c4ca.gif]
+magnetiko batean mugitzen ari da.
+Eremua ez da uniformea, honakoa baizik:
+[2362_928_5gaia_html_75f9085.gif] (T)
+Hasieran, irudiko posiziotik eta
+pausagu-netik abiatzen bada, OY
+ardatzaren norabi-dean eta 2 ms-2-ko
+azelerazioaz, idatz ezazu espiran
+induzituko den indar elektroeragilea
+denboraren menpe.
+Emaitza: [2362_928_5gaia_html_1a337de1.gif] e. o. aurka.
+
+7.-Espira laukizuzen batek m masa eta R erresistentzia elektrikoa ditu.
+[2362_928_5gaia_html_m21f615d5.gif] eremu magnetiko konstante batean sartzen da
+[2362_928_5gaia_html_m57a81377.gif] azelerazio konstanteaz (ikusi irudia).
+Sartzen hasten den aldiunean abiadura nulua du. Kalkula ezazu denboraren mende
+eta espira eremu magnetikoan sartzen ari den bitartean: a) espiran induzitutako
+indar elektroeragilea. b) bertatik zirkulatuko duen intentsitatea. c) Eremu
+magnetikoak espirari egiten dion indarra. d) Kanpoko eragile batek egin behar
+duen indarra espiraren higidura hori eragiteko.
+[2362_928_5gaia_html_3c30b895.gif]
+
+
+
+
+Emaitza: a)ind=BAat b)[2362_928_5gaia_html_m5171203e.gif] e. o. alde;
+c)[2362_928_5gaia_html_602f8da.gif] esp. abiad. aurka; d)
+[2362_928_5gaia_html_5580f616.gif] esp. abiad. alde.
+
+
+
+8.- Irudiko zirkuituan hagatxo mugikorrak l luzera dauka, erresistentzia
+arbuiagarria eta mugitzen ari da v abiaduraz eskumarantz, alegia R2-rantz.
+Zirkuitu osoa eremu magnetiko batean dago murgilduta, planoarekiko
+perpendikularra eta barrurantz. Kalkula ezazu:
+a[2362_928_5gaia_html_m48c7c544.gif]) Hagatxotik zirkulatzen duen
+intentsitatea.
+b) Zirkuitu osoan Joule efektuaz barreiatutako
+potentzia.
+Emaitza: [2362_928_5gaia_html_m7234cdce.gif],
+[2362_928_5gaia_html_69d96298.gif]
+
+9.-                                          [2362_928_5gaia_html_13db12f9.gif]
+Solenoide luze eta horizontal bat X
+ardatzaren norabidean kokatuta dago, n
+espira ditu luzera unitateko, r erradioa eta
+beragandik I intentsitatea zirkulatzen ari
+da. Bere inguruan espira bat ipintzen da, 5r
+erradioduna eta R erresistentziaduna, YZ
+planoan eta ardazkide, alboko irudiak
+erakusten duen bezala.
+Kalkula ezazu inguruko espiran induzi-tuko
+den i.e.e. ondoko egoeretan:
+a) espirak biratu egiten du X ardatzaren inguruan,  abiadura angeluar
+konstanteaz.
+b) espiraren planoak oszilatu egiten du Z ardatzaren inguruan ondoko ekuazioaz:
+[2362_928_5gaia_html_5fc702ae.gif](rad). Hemen  espiraren planoak eta YZ
+planoak osatzen duten angelua da. c) espira desplazatu egiten da X ardatzean
+zehar v(t) = 3t, abiaduraz eta YZ planoaren paralelo mantenduz, d) espira
+desplazatu egiten da X ardatzean zehar v(t) = 3t, abiaduraz eta gainera, aldi
+berean, solenoidearen I intentsitatea aldatu egiten da, honela:
+[2362_928_5gaia_html_7c132723.gif]
+Emaitza: a) ind.= 0 b) ind.= 0 c) ind.= 0 d) ind.=
+[2362_928_5gaia_html_m7ae6279e.gif].
+
+10.-Bobina batek sekzio laukizuzena dauka (a=5cm, b=15 cm) eta 300 espira.
+Bobina hori korronte-integratzaile batera konektatzen da (karga totala neurtzen
+duen aparatu bat [2362_928_5gaia_html_173c7405.gif])eta zirkuitu osoaren
+erresistentzia 20-koa ateratzen da. Bobinaren planoa Lurraren eremu
+magnetikoarekiko perpendikularki kokatzen da eta ondoren 90º biratzen da.
+Biraketa horretan, integratzaileak 9.4C karga pasatu dela neurtu du. Kalkula
+ezazu Lurraren eremu magnetikoa toki horretan.
+Emaitza: B = 0.835 gauss
+
+11.-Aurreko ariketaren prozedura bera erabiliz, lehenik, bobina kokatzen dugu
+batere eremu magnetikorik akoplatzen ez zaion moduan eta, ondoren, elektroiman
+bat akoplatzen diogu, 1 Teslakoa, uniformea eta bobinarekiko perpendikularra.
+Zenbat karga neurtuko du oraingoan korronte-integratzaileak?
+Emaitza:0.11 C
+
+12.-Ingeniaria batek bobina luze bat ekoizten du metalezko hari bat, 2 cm
+erradioko zilindro batean kiribilduz. Prozesuan gaizki kontatzen ditu birak eta
+honako prozedura hau asmatzen du informazio hori lortzeko: Bobina eremu
+magnetiko uniforme batean jartzen du, bere norabidea zilindroaren ardatzaren
+paralelo, eremuaren balioa abiadura konstantez handitzen da 250 mT-tik, 430 mT-
+ra arte 3 s-tan. Prozesuan, bobinan 130 mV-eko i.e.e.-a induzitzen da. Datu
+hauetatik, eman ezazu bira kopurua.
+Emaitza:N= 1720
+
+                                            [2362_928_5gaia_html_m431ce2e9.gif]
+12.-Habe eroale batek R erresistentzia
+elektrikoa du, L luzera eta abiadura
+konstanteaz mugitzen ari da irudiak
+erakusten duen bezala:
+[2362_928_5gaia_html_m25475cde.gif].
+Mugitzen den bitartean, habeak bi errail
+eroalerekin egiten du kontaktu
+marruskadurarik gabe.
+Eremu magnetikoa geldikorra da, baina ez
+uniformea, eta honela adierazten da:
+[2362_928_5gaia_html_13ec7550.gif] (Tesla,
+[y]= metro). Hasierako aldiunean, habea y=0
+posizioan badago, kalkula ezazu:
+a) Zirkuituan zirkulatuko duen intentsitatea denboraren menpe. Esan ezazu
+norantz. Badago aldiuneren bat, korronterik zirkulatzen ez duena? Hala bada,
+kalkula ezazu habearen posizioa aldiune horretan. b) Kalkula ezazu zein indar
+egin behar duen kanpo-eragileren batek, habea abiadura konstantez mugitzen
+mantentzeko. Posible al da kanpo-eragileak egiten duen indarra, aldiuneren
+batean, habearen abiaduraren aurkakoa izatea?
+Datuak: vo= 5 cm/s; L= 10 cm; R= 25 .
+
+Emaitza:a) [2362_928_5gaia_html_7d6b2fc4.gif](Ampere); t<200s: e.o. alde;
+t>200s: e.o aurka.
+t =200 s aldiunean habearen posizioa yb=10 metro, eta ez dabil korronterik
+zirkuituan.
+b)  [2362_928_5gaia_html_m65226043.gif] Newton. Beti du abiaduraren noranzko
+bera.
+
+13.-Motor elektriko baten lan-tentsioa 240 V da eta bere biraketa-maiztasun
+maximoa 50 bira/s. Kalkula ezazu motorraren fluxu-konstantea. Bere barne-
+erresistentzia elektrikoa 2 bada, kalkula ezazu ematen duen indar-momentua
+edo motor-parea eta potentzia mekanikoa, bere abiadura 45 bira/s denean.
+
+Emaitza: = 0.76 Weber, M = 9.1 Nm, P = 2.58 kW
+
+14.- Har dezagun aurreko ariketako motorra eta elika dezagun tentsio berarekin.
+Kalkula itzazu honako abiadura guztietan (50, 45, 25 eta 0 bira/s) indar
+kontra-elektroeragilea, korrontearen intentsitatea, motor-parea, emandako
+potentzia mekanikoa eta energia-etekina (etekina: emandako potentzia mekanikoa
+zati iturri elektrikotik jasotzen duen potentzia).
+Emaitza:
+50 bira/s.: ind=240 V, I= 0, M = 0, P = 0, = 100%
+45 bira/s.: ind=216 V, I = 12 A, M = 9.1 Nm, P = 2.58 kW, = 90%
+25 bira/s.: ind=120 V, I = 60 A, M = 46 Nm, P = 7.16 kW, = 50%
+0 bira/s.: ind= 0 V, I = 120 A, M = 91 Nm, P = 0, = 0%

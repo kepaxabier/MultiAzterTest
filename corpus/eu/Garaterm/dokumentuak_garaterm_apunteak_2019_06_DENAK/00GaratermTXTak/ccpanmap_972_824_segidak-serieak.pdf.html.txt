@@ -1,0 +1,1380 @@
+
+
+
+2.
+K a p itu lu a
+Segidak
+25
+
+26
+2.
+K A P IT U L U A
+S E G ID A K
+UEP D o n o stia
+M ate m atik a A p lik atu a S aila
+
+2.1.
+AR AZ O R AR EN
+AUR KEZ PEN A
+27
+2.1
+A ra z o ra re n a u rk e z p e n a
+D e m a g un fe n om e n o ﬁ sik o ja k in ba t a z te rtz e a in te re sa tz e n z a ig ula :
+ m a k in a e le k trik oa , e re m u
+m a g n e tik oa , m a tra z ba te a n e m a n d a ite z k e e n e rre a k z io k im ik oa k , g a ld a ra ba te n ba rn e k a ld e a ,
+lik id o ba te n g a in a z a la , e tb. Tre sn e ria e g ok ia re k in in te re sa tz e n z a ig un m a g n itud e ﬁ sik oa n e ur
+d e z a k e g u (ik us (2.1 ) irud ia ). Ad ibid e z :
+• Te n tsioa
+• Korron te a re n in te n tsita te a
+• E re m u ba te n in te n tsita te a
+• Te n p e ra tura
+• P re sioa
+• L ik id o ba te n m a ila re n a ltue ra
+..
+.
+2.1 Irud ia : a ra z oa re n a urk e z p e n a
+Ask ota n be h a rre z k oa d a a z te rtuta k o m a g n itud e ﬁ sik oa diskre tizatzea, be re ba lioe n la g in
+ba t h a rtuz , a d ibid e z , ord e n a g a ilua n ja sotz e k o/
+ ord e n a tz e k o.
+y
+= f (x) ⇒ y1, y2, y3, · · ·
+yi
+= f (xi)
+O rd e n a g a ilua k m e m oria d a uk a , ﬁ n itua , e ta e z in d itu g ord e f 
+(x) ba lio g uz tia k x ∈ [a , b]
+ba k oitz e ra k o, ba in a ba i h a r d e z a k e g ula y1 = f (x1), y2 = f 
+(x2), · · · , yn = f (xn) la g in ba t
+(ik us (2.2) irud ia ).
+Ik us d itz a g un a d ibid e ba tz uk :
+Matematika Aplikatua Saila
+UEP Donostia
+
+28
+2.
+KAPITULUA SEGIDAK
+2.2 Irudia: funtzio batek har ditzakeen balioak
+2.1. Ad ib id ea
+1. B arra metaliko bat berotzen dugu. Demagun t momentu bakoitzerako, x puntu zehatz
+bateko tenperaturaren banaketa aztertu nahi dugula; horretarako T tenperatura nuer-
+tzen da ∆t denbora tarte bakoitzean, t1, t2, · · · sekuentzia lortuz.
+2.3 Irudia: x puntuko tenperaturak
+2. Ibilgailu baten abiadura nuertzen da t1, t2, t3, · · · momentutan, balio hauek lortzen
+direlarik: v1, v2, v3, · · ·
+3 . M agnitude ﬁsikoaren aldaketa ez da beti denborarekiko neurtzen. Adibidez, habe
+baten deﬂ ex ioa aztertzen badugu masa ezberdinak kokatzean:
+Kasu bakoitzean ∆m Kg handitzen da, eta d1, d2, d3, · · · segida aztertzen da, hau da,
+balio errealen multzo zenbakitua.
+Kontzeptu hau modu orokorrean deﬁnituko dugu:
+2.1. Deﬁ niz ioa
+Seg ida bat balio errealen m u ltzo zen bakitu a da. H au da:
+{x1, x2, x3, x4, x5, · · · } = {xn}n∈ N
+UEP Donostia
+Matematika Aplikatua Saila
+
+2.1.
+ARAZORAREN AURKEZPENA
+29
+2.4 Irudia: momentu bakoitzeko abiadurak
+2.5 Irudia: habearen deﬂexioa
+J arraian, hurrengo arazoa planteatzen da: {xn}-
+ren propietateak aztertzea, n ∈ N indi-
+zea handitzen doan heinean.
+{xn}-
+ren portaera zehaztuz, fenomeno ﬁsikoaren portaeraren informazioa lortuko dugu.
+H ala ere, kontu izan behar da lagina aukeratzerako orduan, aukeraketa desegoki batekin
+emaitza okerrak lor baitaitezke.
+Adibidez, demagun A(t) seinale baten anplitudea neurtu nahi dugula.
+2.6 Irudia: seinale baten anplitudea
+Matematika Aplikatua Saila
+UEP Donostia
+
+30
+2.
+KAPITULUA SEGIDAK
+Demagun
+t1 =
+π
+2
+, t2 =
+π
+2
++ 2π, · · · , tn =
+π
+2
++ 2πn
+momentuetan balioztatu nahi dugula.S einalea A
+(t) = K sin t balitz, lortutako balioak hu-
+rrengoak izango liratezke:
+A
+(t1) = A(t2) = · · · = A(tn) = K
+Ondorioz A
+(t) = K edozein t momenturako, eta hori ez da zuzena. Horregatik laginketako
+aldia oso garrantzitsua da.
+Ez gara hortan sartuko, baina badago hainbat emaitza matematiko, f 
+(t) seinale baten
+lagin hautaketa nola egiten den erakusten dutenak 
+(S einaleen Prozesaketa Digitala); horrela,
+hautatutako segidaren (f (t1), f(t2), f(t3), · · · ) portaera f(t)-
+naren antzekoa izatea lortzen
+da.
+G uk, zuzenean suposatuko dugu 
+{xn} aztertu nahi dugun fenomenorako adierazgarria
+dela. Aurretik esan dugun bezala, gure arazoa ondorengoa da: {xn}-
+ren propietateak azter-
+tzea.
+2.2
+S eg id aren d eﬁ nizioa
+• Z enbakizko balioetatik hasita, adibidez laborategiko neurketak izan daitezke:
+{xn} = {x1 = 2.5, x2 = 2.51, x3 = 2.513, x4 = 2.5132, · · · }
+• Gai orokorretik hasita, hau da, n
+∈ N bakoitzerako xn nola kalkulatu esaten diguna.
+Adibidez:
+xn
+=
+1
+n
+, yn
+=
+ln n
+√
+π
+, ym
+=
+m2
+m bikoitia bada
+1
+m
+m bakoitia bada
+• Errekurrentziaz: yn.gaia yn−1-etik (aurreko gaitik) lortzen da.
+Adibidez, demagun poltsa batetara kanikak jaurtitzen hasten garela. Jaurtiketa bakoi-
+tzean bi kanika botatzen ditugu. G aldera ondorengoa da:
+ zenbat kanika egongo dira poltsan
+momentu bakoitzean? yn n momentuko kanika kopurua bada, orduan:
+yn
+= y(n − 1) + 2, n = 2, 3, · · ·
+UEP Donostia
+Matematika Aplikatua Saila
+
+2.3.
+SEGIDEN PROPIETATE INTERESGARRIAK
+31
+y2 = y1 + 2
+⇒ y3 = y1 + 4 ⇒ y4 = y1 + 6 ⇒ · · ·
+Hala ere, hasieran poltsan zegoen kanika kopurua zein den zehaztu beharko da, hau da, y1
+balioa. Behin y1 ezagututa, segidako beste gai guztiak lor ditzakegu:
+y1
+⇒ y2 = y1 + 2 ⇒ y3 = y2 + 2 ⇒ etb.
+2.7 Irudia: y1 = 1 balioari dagokion segida
+Orokorrean, segida errekurrenteak yn = F 
+(yn−1), n = 2, 3, · · · itxura izango du, y1 balio
+ezaguna izanik.
+2.3
+Segiden propietate interesgarriak
+Segiden adibide batzuk portaera mota ezberdinak aztertzeko balioko digute. Ikus ditzagun
+bada, adibide batzuk: {xn} = 
+{3, 3.1, 3.14, 3.141, 3.1415, 3.14159 , 3.14159 2, · · · }
+2.1. Ariketa
+Azaldu, zure hitzekin, segida batek izan ditzakeen propietateak. Pentsatu propietate ba-
+koitza deskribatzeko balioko digun hitzen bat. Pentsatu, baita ere, zein modutan adierazi
+ahalko zenituzkeen bere balioak.
+Adibidez: {yn} = −1 +
+1
+n
+n
+≥ 1
+{yn} = 0, −1 +
+1
+2
+,
+−1 +
+1
+3
+,
+−1 +
+1
+4
+,
+· · ·
+n
+≥ N = 0, −1 +
+1
+2
+,
+−1 +
+1
+3
+,
+−1 +
+1
+4
++ · · ·
+Erraz froga daiteke {yn} segida gorakorra eta bornatua dela.
+Matematika Aplikatua Saila
+UEP Donostia
+
+32
+2.
+KAPITULUA SEGIDAK
+2.8 Irudia: {yn} segida
+Formalki modu honetan adierazten dira propietateak:
+Gorakorra: yn+1 > yn ∀n ∈ N
+Beherakorra: yn+1 < yn ∀n ∈ N
+Bornatua: ∃p, q ∈ R | p ≤ yn ≤ q ∀n ∈ N (p eta q zenbakiak ez dira bakarrak)
+Adibideko {yn}-rentzat:
+n < n
++ 1 ⇒
+1
+n
+>
+1
+n
++ 1
+⇒ −1 +
+1
+n
+>
+−1 +
+1
+n
++ 1
+⇒ yn+1 < yn (beherakorra)
+∀n ∈ N
+− 1 ≤ yn ≤ 0 p = −1, q = 0goitik eta behetik bornatua
+2.2. Ariketa
+Aztertu, hurrengo segida bakoitzerako, ikusitako hiru propietateren bat betetzen duten:
+zk
+= (−1)
+k 1
+k
+un
+= n2 eta vn = −2n + 1
+2.3 . Ariketa
+Aztertu hurrengo segidak:
+• wx =
+
+
+
+x
+x
+bikoitia denean
+1
+x
+x
+bakoitia denean
+x
+∈ N izanik
+• yn = a
+n
+a
+∈ R
+UEP Donostia
+Matematika Aplikatua Saila
+
+2.4.
+SEGIDEN KONB ERGENTZIA
+33
+2.4. Ariketa
+Arrazoitu hurrengo baieztapenak:
+{xn} gorakorra/beherakorra ⇒ {a · xn}a∈R gorakorra/beherakorra
+{xn} bornatua ⇒ {a · xn}a∈R bornatua
+2.4
+Segiden konbergentzia
+Ondorengo segidak aztertuko ditugu:
+un
+=
+1
+n
+yn
+=
+2n
+n
++ 1
+zn
+=
+n2
+2n2 + 3n + 1
+Ikus dezakegu hirurek portaera komun bat dutela; hau da, segida bakoitzak balio ka-
+rakteristiko
+bat du, l: n handitzen doan heinean, segidako gai maximoaren eta l-ren arteko
+distantzia geroz eta txikiagoa da.
+2.9 Irudia: {un} segida
+Hau da, beste hitzetan, l-
+tik hartutako distantzia d nahi bezain txikia izan arren, iris-
+ten da momentu bat non segidako gai guztiak l-tik 
+(aurre zehaztutako d balio hori baino)
+oraindik eta hurbilago dauden.
+Adibidez: un =
+1
+n
+d
+= 0.4 hartzen dugu: n = 3-tik aurrera, hurrengo gai guztiak 0-
+tik hurbilago daude 0.4
+baino.
+2.10 Irudia: u3, u4, . . . gaiak 0tik hurbilago daude 0.4 baino
+Matematika Aplikatua Saila
+UEP Donostia
+
+34
+2.
+KAPITULUA SEGIDAK
+d
+-ren balioa aldatuz, adibidez d = 0.05 hartuz:
+1
+n
+<
+0.05 ⇔ n >
+1
+0.05
+= 20.
+Beraz, 20. gaitik aurrerako gai guztiak 0-tik hurbilago daude d = 0.05 baino.
+Ikus dezagun beste adibide bat: {xn} = {(−1)
+n 1
+n
+} = −1,
+1
+2
+,
+−
+1
+3
+,
+1
+4
+,
+−
+1
+5
+,
+· · ·
+2.11 Irudia: {xn} segida
+{xn}-ko gaiak l = 0-ren bi aldetara daude, baina guztiek portaera bera dute:”l-
+tik nahi
+bezain d distantzia txikia ezarri arren, iristen da momentu bat non segidako hurrengo gai
+guztiak d baino distantzia txikiagora dauden.”
+Azter dezagun baldintza hori ym =
+2m
+m
++ 1
+segidan, hurrengo distantziak hartuta: d =
+0.5, 0.05, 0.01, 0.001.
+d >
+0 hartuta,
+2m
+m
++ 1
+>
+2 − d beteko duen m balioa aurkitu behar da.
+2.12 Irudia: zein m baliok beteko du hau?
+m
+m
++ 1
+<
+1 ⇒ ym < 2 ∀m ∈ N
+2 − d <
+2m
+m
++ 1
+⇔ 2m + 2 − dm − d < 2m ⇔ 2 − d < dm
+d >
+0
+⇔ m >
+2 − d
+d
+=
+2
+d
+− 1
+d
+= 0.5 denean: m >
+2
+0.5
+− 1 = 3
+d
+= 0.001 denean: m >
+2
+0.001
+− 1 = 1999
+UEP Donostia
+Matematika Aplikatua Saila
+
+2.4.
+SEGIDEN KONBERGENTZIA
+35
+Idatz dezagun formalki xn segidaren l-rako konbergentzia:
+∀ε > 0
+∃n0 ∈ N | ∀n ∈ N ⇒
+xn
+∈ (l − ε, l + ε)
+A
+B
+D
+E
+Bloke bakoitza modu honetan irakur dezakegu:
+A: l-tik hartutako distantzia nahi bezain txiki izan arren . . .
+B: iristen da momentu bat, hau da, existitzen da segidako gai bat non . . .
+D: segidako hurrengo gai guztiak . . .
+E: l-tik ε baino distantzia txikiagora dauden, hau da, 
+(l−ε, l+ε) tartearen barrura erortzen
+dira.
+2.13 Irudia: {xn} segidaren konbergentzia
+2.5. Ariketa
+Zein izen eman diezaiokegu l-ri?
+2.6 . Ariketa
+yr
+=
+r2
+r2
++ 1
+segida emanda, aztertu:
+• Gorakortasuna
+• Bornaketa
+• l balio baterako konbergentzia.
+Matematika Aplikatua Saila
+UEP Donostia
+
+36
+2.
+KAPITULUA SEGIDAK
+2.7. Ariketa
+Aztertu deﬁnitu ditugun propietate guztiak hurrengo segidetan. Graﬁkoki
+marraztu.
+1. xn =
+
+
+
+1
+n bikoitia denean
+1
+n
+n bakoitia denean
+2. yn =
+
+
+
+3
+n
+≤ 10
+6 denean
+1
+n
+n >
+10
+6 denean
+3 . z
+n
+=
+
+
+
+n
+2
+n
+≤ 10
+6 denean
+1 +
+1
+n
+n >
+10
+6 denean
+4 . u
+n
+= rn
+r
+∈ R
+2.8. A rik e ta
+Idatz i form alki l
+{x
+n
+} seg idaren lim itea ez iz atearen b aldintz a.
+2.5
+S e g id a ko n be rg e n te e n p ro p ie ta te a k
+2.5.1
+L im ite a r e n b a k a r ta su n a
+Posib le al da b i lim ite ez b erdin ex istitz ea? H au da:
+lim
+n→∞
+x
+n
+= l1,
+lim
+n→∞
+x
+n
+= l2,
+l1
+= l2?
+2 .1 4 Iru dia:
+{x
+n
+} seg idak b i lim ite edu ki ditz ake?
+O kerra dela frog atz eko, ab su rdu ra eram anez , ondoko estrateg ia erab iliko du g u :
+• ε tx iki b at h artu ko du g u , (l1 − ε, l1 + ε) eta 
+(l2 − ε, l2 + ε) tarteek p u ntu kom u nik ez
+iz ateko m odu koa.
+• A u rkitu n0 ∈ N, non ∀n ≥ n0, xn ∈ (l1 − ε, l1 + ε) eta xn ∈ 
+(l2 − ε, l2 + ε), eta h au
+ab su rdu a da. A riketa m odu an, frog atu ex istitz en direla ε eta n0 b alio h oriek.
+U E P D o n o stia
+M ate m atik a A p lik atu a S aila
+
+2.5.
+S E G ID A K O N B E R G E N T E E N
+P R O P IE T AT E AK
+37
+2.5.2
+S eg id en arteko erag iketen konberg entz ia
+Izan bitez {x
+n
+} → l1, {y
+n
+} → l2. B adirudi ondorengoak beteko direla:
+1. lim
+n→∞
+{x
+n
++ y
+n
+} = l1 + l2
+2. lim
+n→∞
+{x
+n
+· y
+n
+} = l1 · l2
+3. lim
+n→∞
+{kx
+n
+} = k · l1
+4. lim
+n→∞
+x
+n
+y
+n
+=
+l1
+l2
+y
+n
+= 0 izanik , ∀n ∈ N, l2 = 0
+L au propietateak zuzenak dira. 1 eta 3 kasuak frogatuko ditugu:
+1) ε > 0 hartuta, n0 ∈ N bilatzen dugu non:
+x
+n
++ y
+n
+∈ (l1 + l2 − ε, l1 + l2 + ε)
+⇔
+l1
++ l2 − ε < x
+n
++ y
+n
+< l1
++ l2 + ε
+(2.1)
+2.15 Irudia: Z ein n0 baliorako beteko da hau?
+d >
+0 hartuta:
+∃n1 ∈ N | ∀n > n1
+l1
+− d < x
+n
+< l1
++ d
+∃n2 ∈ N | ∀n > n2
+l2
+− d < x
+n
+< l2
++ d
+n0
+= ma x {n1, n2} aukeratuz eta bi inekuazioak batuz:
+∀n > n0
+l1
++ l2 − 2d < x
+n
+< l1
++ l2 + 2d
+eta horrela 2.1 lortzen da d =
+ε
+2
+hartuz.
+3) ε > 0 hartuta,n0 ∈ N bilatzen dugu non ∀n > n0 baliotarako:
+k l1
+− ε < k x
+n
+< k l1
++ ε
+(2.2)
+d >
+0 hartuta:
+∃n0 ∈ N | ∀n > n1
+l1
+− d < x
+n
+< l1
++ d
+(2.3)
+2.3 baldintza 2.2-ean bihurtu behar dugu:
+Matematika Aplikatua Saila
+UEP Donostia
+
+38
+2.
+KAPITU L U A SEGIDAK
+• k > 0 bada, k l1 − k d < k xn < k l1 + k d
+eta 2.2 lortzen da d =
+ε
+k
+hartuta.
+• k < 0 bada, k l1 − k d > k xn > k l1 + k d ⇔ k l1 + k d < k xn < k l1 − k d
+eta 2.2 lortzen da d = −
+ε
+k
+>
+0 hartuz.
+(ikus (2.16 ) irudia)
+2.16 Irudia: 3. propietatearen graﬁ koa
+2.9. Ariketa
+w
+n
+= {x
+n
++ y
+n
+}, z
+n
+= {x
+n
+y
+n
+}, u
+n
+= {kx
+n
+} konbergenteak badira, {x
+n
+} eta {y
+n
+} ere bai?
+2.5.3
+B ornaketa
+Azter dezagun orain zein erlazio dagoen ”bornaketa” eta ”konbergentziaren” artean. Zehazki:
+1. x
+n
+segida bornatua bada, segida konbergentea al da beti?
+2. x
+n
+segida konbergentea bada, segida bornatua al da beti?
+2.1 0 . Ariketa
+Aztertu bi propietateak x
+n
+= (−1)n, n ∈ N segidan. Zein ondorio atera daitezke?
+Frogatu (2) propietatea beti zuzena dela hurrengo estrategia erabiliz:
+1. Bornatu 
+(l − ε, l + ε) tarteko ”ia gai guztiak”, hau da, bornatu gai guztiak kopuru ﬁ nitu
+bat kenduta.
+2. Bornatu beste gai guztiak, kopuru ﬁ nitua dela jakinik.
+2.1 1 . Ariketa
+Oraintxe frogatu dugu: {x
+n
+} konbergentea ⇒ {x
+n
+} bornatua.
+Baina zer ziurtatu dezakegu {x
+n
+} bornatua E Z bada?
+Orokorrean, P ⇒ Q moduko inplikazio bat frogatzen bada, zer gertatzen da Q betetzen ez
+den adibideren bat agertzen bazaigu?
+UEP Donostia
+Matematika Aplikatua Saila
+
+2.6.
+SEGIDA KONBERGENTE BATEN LIM ITEAREN ESTIM AZ IOA
+39
+2.6
+Segida konbergente baten lim itearen estim az ioa
+Baina kontuz, xn − xn
+−
+1
+→ 0 betetzeak ez du ziurtatzen{xn}-ren konbergentzia.
+2.2. Ad ib id ea
+{xn} = 1 +
+1
+2
++
+1
+3
++ · · · +
+1
+n
+dibergentea eta xn − xn
+−
+1
+→ 0.
+Ikus dezagun {xn} segida +∞-ra dibergentea dela:
+xn = 1 +
+1
+2
+>1/2
++
+1
+3
++
+1
+4
+>1/2
++
+1
+5
++
+1
+6
++
+1
+7
+>1/2
++ · · · → ∞
+∀k ∈ N, ∃r ∈ non
+1
+k
++
+1
+k
++ 1
++ · · · +
+1
+k
++ r
+>
+1
+2
+?
+2.7
+Konbergentz ia m onotonoaren teorem a
+D emagun 
+{zn} segida gorakorra dela. Hau ez da baldintza beharrezkoa ezta nahikoa ere
+konbergentzia ziurtatzeko. N ola frogatu hori zuzena dela?
+• Propietate bat orokorrean zuzena dela frogatzeko, ezin dira propietate hori betetzen
+duten adibideak erabili; orokorrean egin behar da, edozein segida hartuta.
+• Propietate bat zuzena ez dela frogatzeko, nahikoa da zuzena ez dela betetzen duen
+kasu bat aurkitzea: kontradibide bat ematea, hain zuzen.
+Hauek dira orokorrean zuzenak ez direla frogatu nahi ditugun propietateak:
+P1: {xn} konbergentea izan dadin, beharrezkoa da {xn} gorakorra izatea.
+P2: {xn} gorakorra bada, orduan konbergentea da.
+2.12. Ariketa
+Aurkitu kontradibideak.
+P1: {xn} = (−1)n
+1
+n
+konbergentea da eta ez da gorakorra/ beherakorra.
+P2: {xn} = {n} gorakorra eta ez da konbergentea.
+Matematika Aplikatua Saila
+UEP Donostia
+
+40
+2.
+KAPITULUA SEGIDAK
+Beraz, xn gorakorra dela soilik badakigu ezin dugu ezer ziurtatu bere konbergentziaz.
+Eztabaida: Zein baldintza gehitu beharko da konbergentzia ziurtatzeko?
+Kontradibide batzuk aztertuz, ondorioztatu gehitu beharreko baldintza goitik bornatua iza-
+tea dela.
+2.3. Adibidea
+xn = 1 −
+1
+n
+gorakorra eta konbergentea da.
+yn = 2n + 1 gorakorra da baina ez da konbergentea.
+Zein da bien arteko ezberdintasuna? {xn} goitik bornatuta dago eta {yn} ez.
+Badirudi gorakorra eta bornatua izateak konbergentzia ziurtatzen duela, baina zein da
+limitea?
+2.17 Irudia: limitea, goi-muga guztietatik txikiena
+Ondorioztatu limitea goi-muga guztietatik txikiena dela (gorena).
+2.4 . Adibidea
+xn = 1 −
+1
+n
+2.18 Irudia: {xn} segida
+Limitea 1 da eta gainera goi-muga guztietatik txikiena ere bai 
+(gorena). Beste edozein
+UEP Donostia
+Matematika Aplikatua Saila
+
+2.7.
+KONBERGENTZIA MONOTONOAREN TEOREMA
+41
+zenbaki, 1 − ε, ezin da goi-
+muga izan, xn gorakorra izanik, momentu bat iristen delako
+xn > 1 − ε betetzen dena, hau da, muga ”gainditzen” duena.
+Dagoeneko konbergentzia monotonoaren Teorema enuntziatu dezakegu:
+2.1. Teorema
+{xn} gorakorra eta goitik born atu a bad a, ord u an {xn} kon bergen tea d a.
+2.13. Ariketa
+Enuntziatu teorema segida beherakorretarako. Aurkitu adibideak.
+2.5 . Adibidea
+limn
+→∞
+1 +
+1
+n
+n
+?
+x1 = 2, x2 = 2.25, x3 = 2.37, x10 = 2.59 , x100 = 2.704, x1000 = 2.717 . . . oso mantso doa!
+Froga daiteke segida gorakorra eta bornatua dela, eta beraz, konbergentea dela. Kalkula
+dezagun bere limitea:
+l = lim
+n→∞
+1 +
+1
+n
+n
+⇒ ln l = lim
+n→∞
+n·ln
+1 +
+1
+n
+= lim
+n→∞
+ln
+1 +
+1
+n
+1/ n
+L’H
+=
+lim
+n→∞
+1
+1 +
+1
+n
+−1
+n
+2
+−1/ n
+2
+= 1
+Eta beraz:
+ln l = 1 ⇒ l = e
+1 = e ← goi-muga guztietatik txikiena = gorena.
+2.7.1
+Segida baten dibergentzia ±∞-ra
+Hurrengo segiden portaerak aztertu:
+xn = n,
+yn = n
+2,
+zn = e
+n, wn = n!, pn = ln n
+Eta jarraian, alderatu ondorengo segidaren portaerarekin:
+qn =
+
+
+
+n
+3
+n bikoitia bada
+1
+n
+n bakoitia bada
+• xn, · · · , pn segidetarako: ∀M ∈ R, ∃n0 ∈ N | ∀n > n0 ⇒ xn > M
+Matematika Aplikatua Saila
+UEP Donostia
+
+42
+2.
+KAPITULUA SEGIDAK
+• qn segidarako :
+ baldintza hori okerra da; bornatua EZ dela bakarrik ziurta dezakegu
+(beraz, ez da konbergentea)
+2.2. Deﬁ niz ioa
+lim
+n→∞
+yn = ∞ ⇔ ∀M > 0 ∧ M ∈ R, ∃n0 ∈ N | ∀n ≥ n0 ⇒ yn > M
+(ikus (2.19) irudia)
+2.19 Irudia: 2.2 deﬁnizioaren irudia
+Eta modu berean deﬁnitzen da:
+2.3. Deﬁ niz ioa
+lim
+n→∞
+yn = −∞ ⇔ ∀M < 0 ∧ M ∈ R, ∃n0 ∈ N | ∀n ≥ n0 ⇒ yn < M
+2.20 Irudia: 2.3 deﬁnizioaren irudia
+2.14. Ariketa
+Aztertu hurrengo adibidearen limitea:
+xn =
+1
+n bikoitia bada
+n
+2
+n bakoitia bada
+(ez da existitzen limitea, ez ﬁnitua ez inﬁnitua)
+UEP Donostia
+Matematika Aplikatua Saila
+
+2.7.
+KONBERGENTZIA MONOTONOAREN TEOREMA
+43
+2.7.2
+∞
+-ranzko abiadura h azkuntzaren alderaketa
+Ikusi ditugu limitea inﬁnitua duten segiden adibideak:
+xn = n, yn = n
+2 + 1, un = en, vn = n3.
+Zertan bereizten dira xn eta yn? Eta un eta vn?
+n balio handi baterako: yn >> xn, un >> vn.
+Nola konparatu ditzakegu bi segiden ∞-
+ranzko hazkuntzaren ordenak? Ikus dezagun:
+lim
+n→∞
+xn
+yn
+=
+
+
+
+
+
+∞
+⇒ {xn}-k ordena handiagoa
+0
+⇒ {yn}-k ordena handiagoa
+k = 0 ⇒ biak ordena berekoak
+2.15. Ariketa
+Konparatu hurrengo segiden ∞-ranzko hazkuntza ordenak:
+np (p ∈ R), ln(n), en, n!, nn
+2.7.3
+Z erbait geh iago segida errekurrenteei buruz
+G ogoratu, 2.2 atalean ikusi genuenez, segida errekurrente bat deﬁnituta gelditzen dela lehe-
+nengo gaia x1 ezagututa eta xn-
+tik xn+ 1 gaia lortzea posible den adierazpena ezagututa.
+Hau da:
+xn+ 1 = f(xn), n ≥ 1, x1 ∈ R
+Demagun f (x) funtzioa jarraia dela eta limn
+→∞
+xn = l dela. Orduan:
+xn+ 1 = f(xn) ⇒ lim
+n→∞
+xn+ 1 = lim
+n→∞
+f (xn) = f
+lim
+n→∞
+xn+ 1
+⇒ l = f (l)
+Beraz, l-ren balioa y = x eta y = f (x) funtzioen arteko ebaki-
+puntua da. Ikusi hurrengo
+irudian nola lortzen diren xn segida konbergenteko (l-ra hurbiltzen da) gaiak:
+2.6 . Adibidea
+Izan bedi an+ 1 = 3 · a
+2
+n segida errekurrentea, a1 > 0 izanik.
+Kasu honetan, f (x) = 3x
+2, eta beraz, an konbergentea bada, bere limiteak, l-k, hurrengo
+ekuazioa bete behar du:
+x = 3x
+2 ⇔ x = 0 edo x =
+1
+3
+Matematika Aplikatua Saila
+UEP Donostia
+
+44
+2.
+KAPITULUA SEGIDAK
+2.21 Irudia: segida errekurrenteen limitea
+Adibidez, a1 = 1/5 bada, orduan:
+a2 = 0.12 ⇒ a3 = 0.0432 ⇒ a4 = 0.0056 . . . 0-rantz konbergentea da.
+Aldiz, a1 = 1/2 bada:
+a2 = 0.75 ⇒ a3 = 1.69 ⇒ a4 = 8.54 . . . dibergentea da ∞-rantz.
+Baina zergatik a1-
+en balio baterako segida konbergentea da eta beste baterako ez? Aztertu
+ondorengo graﬁkoa:
+Erabili graﬁkoa an segida konbergentea dela frogatzeko a1 ∈ [0, 1/
+3] denean, baina di-
+bergentea dela a1 > 1/3 denean.
+a1-
+en balio ezberdinetarako segidaren konbergentzia aldatzeko arrazoia 4.gaian aztertuko
+dugun teorema batek ematen digu; puntu ﬁnkoaren teoremak, hain zuzen. Teorema ho-
+rrek an-ren konbergentzia ziurtatzeko baldintza nahikoak 
+(baina ez beharrezkoak) ematen
+dizkigu:
+2.2. Teorema
+f (x) funtzio jarraitua bada [a, b] tartean eta f (x) ∈ [0, 1/3] betetzen bada,
+orduan ex istitzen da
+l ∈ [a, b] p untu bat non l = f (l) den.
+Gure kasuan, f (x) = 3x
+2, x ∈ [0, 1/3], f(x) ∈ [0, 1/3] eta beraz, existitzen da puntu
+ﬁnkoren bat [0, 1/
+3] tartean. Eta beraz, an segida beti da konbergentea. Limitea 0 edo 1/3
+izan daiteke, baina kasu honetan, segida beti da konbergentea 0-runtz.
+UEP Donostia
+Matematika Aplikatua Saila
+
+2.7.
+KONBERGENTZIA MONOTONOAREN TEOREMA
+45
+2.22 Irudia: y = 3x
+2 eta y = x funtzioen graﬁkoak
+2.7.4
+Zenbakizko serieak
+Arazoaren aurkezpena:
+Badago hainbat egoera A magnitude jakin bat gai kopuru inﬁnitu baten batura moduan
+idatz daitekeena:
+A = a1 + a2 + a3 + · · ·
+1.go gaian 
+(zenbaki konplexuak) serie inﬁnituetan oinarritutako emaitza batzuk erabili ge-
+nituen:
+c o s x = 1 −
+x
+2
+2!
++
+x
+4
+4!
+−
+x
+6
+6!
++
+x
+8
+8!
+−
+x
+10
+10!
++ · · ·
+∀x ∈ R
+sin x
+= x −
+x
+3
+3!
++
+x
+5
+5!
+−
+x
+7
+7!
++
+x
+9
+9!
+−
+x
+11
+11!
++ · · ·
+∀x ∈ R
+ex
+= 1 +
+x
+1!
++
+x
+2
+2!
++
+x
+3
+3!
++
+x
+4
+4!
++
+x
+5
+5!
++ · · ·
+∀x ∈ R
+eta ondorioz:
+e = 2 +
+1
+2
++
+1
+3!
++
+1
+4!
++
+1
+5!
++ · · ·
+2.16. Ariketa
+Erabili aurreko adierazpenak hurrengo funtzioen serieak lortzeko:
+ex
+2
+,
+cos 2x, sin 3x, x · ex,
+sin x
+x
+(x = 0 ), sin (−x), cos(−x)
+Matematika A p likatu a S aila
+U E P D o n o stia
+
+46
+2.
+K A P IT U L U A
+S E G ID A K
+B e ste e m a itz a ba t: π
+= 4 1 −
+1
+3
++
+1
+5
+−
+1
+7
++
+1
+9
++ · · ·
+B a tu g a i kop u ru ﬁ n itu a ha rtz e n ba d u g u , hu rbilke ta ba t lortu ko d u g u . H u rbilke ta hori ba lio
+e rre a le ra g e roz e ta g e hia g o hu rbild u ko d a ba tu g a i kop u ru a ha n d itz e n g oa z e n he in e a n .
+2.17. Ariketa
+π e ta
+e-
+re n g a ra p e n a k e ra biliz , ka lku la tu hu rre n g o hu rbilke ta k e ≈ 2.718 28 e ta π ≈ 3.14159
+lortu a rte .
+ba tu g a i kop u ru a
+e-re n hu rbilke ta
+π-re n hu rbilke ta
+1
+2
+5
+10
+..
+.
+B a d a kig u z e r e sa n n a hi d u e n se rie a ”m oz tu ” e ta ba tu g a i kop u ru ﬁ n itu ba te kin ba ka rrik
+g e ra tz e a :
+A
+= a1 + a2 + a3 + · · ·
+⇒
+A ≈ a1
++ a2 + a3
+B a in a z e r e sa n n a hi d u se rie g u z tia ba tz e a k? N ola e g ite n d a ? H a u x e d a a ra z oa .
+Ara z oa kon p on tz e a k be re z a ilta su n a k d itu , a d ibid e z :
+A
+= −1 + 1 − 1 + 1 − 1 + 1 − · · · ba d a , z e n ba t ba lio d u A-k?
+A
+=
+
+
+
+
+
+(−1 + 1) + (−1 + 1) + (−1 + 1) + · · · = 0
+−
+1 + (1 − 1) + (1 − 1) + (−1 + 1) + · · · = −1
+kon tra e sa n a !!
+Ad ibid e hon e kin iku ste n d a , ba tu ra ﬁ n itu e kin e ra bilita ko p rop ie ta te a k be ti e z d ire la ba lioz -
+koa k; ka su hon e ta n , p rop ie ta te e lka rkorra d a be te tz e n e z d e n a :
+(a1 + a2) + a3 = a1 + (a2 + a3)
+B a in a
+(a1 + a2) + (a3 + a4) + (a5 + a6) + · · ·
+e ta
+a1
++ (a2 + a3) + (a4 + a5) + · · ·
+UEP Donostia
+Matematika Aplikatua Saila
+
+2.7.
+KO N B ER GEN TZ IA M O N O TO N O AR EN
+TEO R EM A
+47
+balio ezberdinak har ditzakete.
+Nola deﬁnitu daiteke a1
++ a2 + a3 + a4 + · · · ?
+D eﬁni dezagun batura partzialen segida:
+S1
+=a1
+S2
+=a1 + a2
+S3
+=a1 + a2 + a3
+..
+.
+Sn
+=
+n
+i= 1
+ai
+= a1 + a2 + · · · + an
+..
+.
+Sn segida bat denez, bere konbergentzia azter dezakegu:
+S
+= lim
+n→∞
+n
+k= 1
+ak
+Notazioa
+=
+∞
+k= 1
+ak
+2.7. Ad ib id ea
+Har dezagun hurrengo serie geometrikoa:
+∞
+n= 0
+r
+n = 1 + r + r2 + r3 + · · ·
+Bi serie hauen arteko kenketa egingo dugu:
+Sn
+= 1 + r + r
+2 + . . . + r
+n
+rSn
+= r + r
+2 + r3 + . . . + r
+n+ 1
+Sn
+(1 − r) = 1 − r
+n+ 1
+⇒ Sn =
+1 − r
+n+ 1
+1 − r
+Beraz, seriearen limitea:
+lim
+n→∞
+Sn
+=
+1
+1 − r
+,
+|r| < 1 denean
+Matematika Aplikatua Saila
+UEP Donostia
+
+48
+2.
+KAPITULUA SEGIDAK
+E ta ondorioz:
+∞
+n=0
+r
+n =
+
+
+
+1
+1 − r
+|r| < 1 denean
+dibergentea |r| ≥ 1 denean
+2.18. Ariketa
+Aztertu hurrengo kasuak: r = 1, r > 1 eta r < 1.
+2.8. Adibidea
+Z enbat balio du 0.9999999 . . . zenbakiak?
+0.999999999 · · · =0.9 + 0.09 + 0.009 + 0.0009 + · · · = 9
+1
+10
++
+1
+102
++
+1
+103
++
+1
+104
++ · · ·
+=
+=9
+∞
+n=1
+1
+10
+n geometrikoa
+=
+9
+1
+1 − 1/10
+− 1
+= 1 ⇒ 0.99999 . . . = 1
+2.19 . Ariketa
+K alkulatu:
+∞
+k=1
+k · r
+k ,
+∞
+k=1
+k
+2 · r
+k
+(L aguntza:
+∞
+k=0
+r
+k =
+1
+1 − r
+deribatu)
+2.20 . Ariketa
+Aztertu hurrengo seriearen konbergentzia:
+1 − 1 + 1 − 1 + 1 − 1 + 1 − 1 + 1 − . . . =
+∞
+n=1
+(−1)
+n
+2.9 . Adibidea
+Idatzi hurrengo funtzioen serieak batukarien notazioa erabiliz:
+e
+x, cos x, sin x, ex
+2
+, sin 2x
+E bazpena:
+e
+x =
+∞
+n=0
+x
+n
+n!
+,
+cos x =
+∞
+n=0
+(−1)
+n x
+2n
+(2n)!
+,
+sin x =
+∞
+n=0
+(−1)
+n
+x
+2n+1
+(2n + 1)!
+e
+x2 =
+∞
+n=0
+x
+2n
+n!
+,
+sin 2x =
+∞
+n=0
+(−1)
+n 22n+1
+x
+2n+1
+(2n + 1)!
+UEP Donostia
+Matematika Aplikatua Saila

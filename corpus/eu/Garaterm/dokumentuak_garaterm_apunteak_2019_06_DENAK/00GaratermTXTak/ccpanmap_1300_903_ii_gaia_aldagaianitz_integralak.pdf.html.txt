@@ -1,0 +1,3022 @@
+
+
+
+Gaien Aurkibidea
+1
+Aldagai Anitzeko Funtzioak. Integraketa
+2
+1.1
+Integral Bikoitzak . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2
+1.1.1
+Deﬁnizioa eta Propietateak . . . . . . . . . . . . . . . . . .
+2
+1.1.2
+Integral Bikoitzen Kalkulua . . . . . . . . . . . . . . . . . .
+5
+1.1.3
+Azalera eta Bolumenen Kalkulua Integral Bikoitzarekin . . 10
+1.1.4
+Aldagai Aldaketa Integral Bikoitzetan . . . . . . . . . . . . 14
+1.1.5
+Bestelako Aplikazioak . . . . . . . . . . . . . . . . . . . . . 20
+1.2
+Integral Hirukoitzak . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+1.2.1
+Deﬁnizioa eta Propietateak . . . . . . . . . . . . . . . . . . 24
+1.2.2
+Integral Hirukoitzen Kalkulua . . . . . . . . . . . . . . . . . 27
+1.2.3
+Aldagai Aldaketa Integral Hirukoitzetan . . . . . . . . . . . 32
+1
+
+Kapitulua 1
+Aldagai Anitzeko Funtzioak.
+Integraketa
+1.1
+Integral Bikoitzak
+1.1.1
+Deﬁnizioa eta Propietateak
+Integral bikoitza bi aldagai z = f 
+(x, y) funtzioen integralak dira. Ulertzen da ere
+integral mugatuak direla. D deﬁnizio eremu itxi batean deﬁnitutako eta jarraiak
+diren funtzioekin arituko gara.
+Integral bikoitzaren deﬁnizioa Riemann batuketen segida baten bidez ematen
+da. Irudiak erakusten du funtzioaren D deﬁnizio-eremu itxia eta nola hasi garen
+zatitzen azalera txikiko zatietan,
+∆s1, ∆s2, . . . , ∆sn
+D
+x
+O
+y
+∆si
+P
+i
+Zatietan (beren erdian edo mugan) puntu bana aukeratzen dugu,
+P1, P2, . . . , Pn
+orokorrean i-garrenean Pi. Puntu hoietako funtzioaren balioekin f (P1), f 
+(P2), . . . , f (Pn)
+horrenbesteko zutabe zuzenen bolumenak kalkulatu eta denak batu egiten dugu,
+Vn = f (P1)∆s1 + f (P2)∆s2 + · · · + f(Pn)∆sn
+Lortzen duguna Riemann batuketa bat da, D eremuan oinarritutako zutabe
+multzo baten bolumena. Hori z = f (x, y) gainazalaren azpiko zilindro itxurako
+gorputzaren bolumen zehatzaren hurbilketa bat da (suposatzen ari gara f 
+(x, y) >
+0 dela, D-ren puntu guztietan.)
+2
+
+1.1.
+INTEGRAL BIKOITZAK
+3
+D
+x
+O
+z
+Pi
+y
+f
+(Pi)
+Gero eta D-ren zatiketa meheagoak egiten dira, zatiak gero eta txikiagoak
+hartuz beraz gero eta zati txikien kopuru handiagoekin. Zatiketa bakoitzean
+Riemann batura egiten da Reimann batuketen segida bat osotuz,
+Vn
+1 , V
+n2 , . . . , Vnk , . . .
+nun n1 < n2 < · · · < nk. Demagun ∆si zatien/elementuen diametrorik handie-
+nak zerora jotzen duela nk → ∞ denean. Orduan (frogatuko ez dugun) hurrengo
+teorema betetzen da,
+teorema
+1.1. D eremu itxian z = f (x, y) funtzioa jarraia bada, eta D-ren zati-
+ketako ∆si elementuen diametro handiena zerorantz jotzen badu n → ∞ denean,
+orduan Riemann batuketen segidak badu limiterik. Limitea ez da zatiketa eraren
+menpekoa, ez eta ∆si elementuetan hartutako Pi puntuen aukeraketaren menpe-
+koa ere.
+Limite hori D eremuan zabaldutako f (x, y) funtzioaren integral bikoitza dei-
+tzen dugu eta
+D
+f (P ) ds
+edo
+D
+f (x, y) dx dy
+idazten da. Hau dugu,
+lim
+diam
+∆si→0
+n
+i=1
+f (Pi)∆si =
+D
+f (x, y) dx dy
+eta integraleko D eremua integrazio-eremua deitzen dugu ere.
+D integrazio-eremuan f (x, y) > 0 bada, horko integral bikoitza hiru gainazal
+hauek mugatutako gorputzaren bolumena da: z = (x, y) gainazala, z = 0 pla-
+noa, eta D-ren mugaren gainetik doan lerro bertikal batek sortutako gainazal
+zilindrikoa. Gainazal zilindrikoa sortzeko erabiltzen den lerro bertikala azal zi-
+lindrikoaren sortzailea deitzen dugu, eta D-ren muga-lerroa azal zilindrikoaren
+zuzentzailea.
+
+4
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. INTEGRAKETA
+Integral Bikoitzaren Propietateak
+1. Bi funtzioen baturaren integral bikoitza batugai funtzioen integral bikoitzen
+batura da,
+D
+[f (x, y) + g(x, y)] dxdy =
+D
+f (x, y) dxdy +
+D
+g(x, y) dxdy
+2. Konstante bat bider funtzio baten integral bikoitza konstantea bider fun-
+tzioaren integral bikoitza da,
+D
+a f (x, y) dxdy = a
+D
+f (x, y) dxdy
+Lehenengo bi propietate hoiengatik integral bikoitza eragiketa lineala dela
+esaten dugu.
+3. D integrazio eremuan f (x, y) ≥ g(x, y) bada, orduan
+D
+f (x, y) dxdy ≥
+D
+g(x, y) dxdy
+4. D integrazio eremua barne-puntu komunik gabeko D1 eta D2 eremu par-
+tzialez osatuta badago, integral bikoitza bitan banatu daiteke,
+D
+f (x, y) dxdy =
+D1
+f (x, y) dxdy +
+D2
+f (x, y) dxdy
+D1
+D2
+D
+x
+O
+y
+5. D integrazio-eremuan f (x, y) = 1 funtzio konstantea integratuz D eremuko
+azalera lortuko dugu,
+D
+1 dx dy = A(D)
+6. D eremuko puntu guztietan m ≤ f(x, y) ≤ M betetzen bada, orduan
+m A(D) ≤
+D
+f (x, y) dx dy ≤ M A(D)
+nun m eta M funtzioaren balio minimoa eta balio maximoa diren, eta A(D)
+eremuaren azalera.
+7. D eremuko f funtzio jarraiaren integral bikoitza era honetan jar daiteke,
+D
+f (x, y) dxdy = f (P )A(D)
+nun P , D eremuko puntu partikular bat den (batazbestekoaren teore-
+ma
+).
+
+1.1.
+INTEGRAL BIKOITZAK
+5
+1.1.2
+Integral Bikoitzen Kalkulua
+Integral bikoitzaren kalkulua, neurri batean, D deﬁnizio-eremuko formaren men-
+pekoa da. Hurrengo irudikoak integrazio-
+eremu erregularrak edo I motako integrazio-
+eremuak deitzen dira,
+a
+b
+y
+0
+x
+y
+0
+x
+y
+0
+x
+D
+y
+= g2(x)
+y
+= g1(x)
+D
+y
+= g2(x)
+y
+= g1(x)
+a
+b
+D
+a
+b
+y
+= g2(x)
+y
+= g1(x)
+D eremu erregularra x-ren bi funtzio jarraien kurben artean gelditzen da, eta
+honela adierazi daiteke,
+D = {(x, y)|a ≤ x ≤ b, g1(x) ≤ y ≤ g2(x)}
+I motako eremu batean f (x, y) funtzio jarrai baten integral bikoitza kalkula-
+tzeko hurrengo erako integralarekin aritzen gara 
+(integral berritua edo integral
+iteratua.
+ID =
+b
+a
+g2(x)
+g1(x)
+f (x, y) dy
+dx
+Ikusten dugunez integral berritua egitea aldagai bakarreko bi integral egitea da,
+bata bestearen atzetik, lehenengoa parentesiaren barrukoa, y-
+rekiko, eta bigarre-
+na x-rekikoa. Lehenengo integrala x konstantetzat hartuz egiten da eta hortik
+ateratzen dena x-ren funtzio jarrai bat da 
+(ez dugu jarraitasun hori frogatuko),
+Φ(x) =
+g2(x)
+g1(x)
+f (x, y) dx
+Kanpoko integralaren mugak konstanteak dira, eta
+ID =
+b
+a
+Φ(x) dx
+integral berrituaren emaitza zenbaki huts bat da
+adibidea
+1.1. Kalkulatu,
+ID =
+1
+0
+x
+2
+0
+(x2 + y2) dy
+dx
+Ebazpena:
+Bigarren ordenako integral berritua dugu, eta oso mekanikoki kalkulatu dezakegu.
+Lehenengo barruko integrala,
+Φ(x) =
+x
+2
+0
+(x2 + y2) dy = x2y +
+y3
+3
+x
+2
+0
+= x2x2 +
+(x2)3
+3
+= x4 +
+x6
+3
+
+6
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. INTEGRAKETA
+Orain kanpoko integrala egingo dugu,
+1
+0
+Φ(x) dx =
+1
+0
+x4 +
+x6
+3
+dx =
+x5
+5
++
+x7
+3 · 7
+1
+0
+=
+1
+5
++
+1
+21
+=
+26
+105
+Emaitza zenbaki huts bat da. Integralaren mugak aztertuz aurkitu daiteke zein
+D integrazio-eremua erabili dugun: x konstante zenean mugak y = 0 eta y = x2
+ziren, horrek esan nahi duela y koordenatua x ardatza eta y = x2 parabolaren
+artean aldatzen zela. Gero D-ren zabalera x = 0 eta x = 1-en artekoa izan da.
+Beraz D forma honetakoa izan da.
+O
+1
+x
+y
+y
+=
+x
+2
+D
+Integral berritua kalkulatzen jakitea beharrezkoa da hori baita praktikan inte-
+gral bikoitza kalkulatzeko metodo praktikoa (ez dira Riemann batuketen segiden
+limiteak kalkulatzen). Badago teorema bat berdintasun hori zihurtatzen duena,
+teorema
+1.2. I erako D eremuan, hau da,
+D = (x, y)|a ≤ x ≤ b, g1(x) ≤ y ≤ g2(x)
+f funtzioa jarraia bada, orduan
+D
+f (x, y) dxdy =
+b
+a
+g2(x)
+g1(x)
+f (x, y) dy
+dx
+Askotan integral berrituaren barruko integrala ez da jartzen parentesien artean.
+Gero, integral bikoitzeko dx dy-
+a lauki baten azaleraren formula partikularra da
+(sistema cartesiarrarena), horren ordez dA jarriz, teoremaren emaitza honela ida-
+tzi daiteke ere,
+D
+f (x, y) dA =
+b
+a
+g2(x)
+g1(x)
+f (x, y) dy dx
+Integrazio-eremu erregularrean aldaketa txikiak egon daitezke, bat irudikoa da,
+y = g2(x)
+g
+1
+(x)
+=
+h(x
+)
+g1(x) =
+k(x)
+y
+x
+O
+a
+b
+c
+
+1.1.
+INTEGRAL BIKOITZAK
+7
+y-rekiko integralaren beheko muga g1(x) funtzioa funtzio ezberdina da [a, c]
+tartean eta [c, b] tartean. Horrek x-
+rekiko integrala bi zatitan banatzea eskatzen
+du, zati bakoitzean barruko integralaren beheko muga funtzio ezberdina delarik,
+b
+a
+g2(x)
+g1(x)
+f (x, y) dy dx =
+c
+a
+g2(x)
+h(x)
+f (x, y) dy dx +
+b
+c
+g2(x)
+k(x)
+f (x, y) dy dx
+adibidea
+1.2. Ebaluatu
+D(x + 2y) dA, nun D parabola hauek mugatutako ere-
+mua den: y = 2x2 eta y = 1 + x2.
+Ebazpena:
+Parabolek bat egiten dute hau betetzen denean: 2x2 = 1 + x2, eta hortik x =
+±1. Irudiak erakutsi moduan D eremua I motako eremua da eta honela adierazi
+daiteke,
+D = {(x, y)| − 1 ≤ x ≤ 1, 2x
+2 ≤ y ≤ 1 + x2}.
+−1
+1
+(1, 2)
+(−1, 2)
+D
+y
+= 2x2
+y
+= 1 + x2
+0
+y
+x
+Beheko muga 2x2 eta giko muga 1 + x2 direnez I motako eremuentzako dugun
+ekuazioak zera esaten du,
+D
+(x + 2y) dA =
+1
+−1
+1+x
+2
+2x
+2
+(x + 2y) dy dx
+=
+1
+−1
+xy + y2
+y=1+x
+2
+y=2x
+2
+dx
+=
+1
+−1
+x(1 + x2) + (1 + x2)2 − x(2x
+2) − (2x2)2 dx
+=
+1
+−1
+(−3x
+4 − x3 + 2x2 + x + 1) dx
+= −3
+x5
+5
+−
+x4
+4
++
+2x3
+3
++
+x2
+2
++ x
+1
+−1
+= −
+6
+5
++
+4
+3
++ 2 =
+32
+15
+Irudian egin den moduan lerro gezidun bat marraztea lagungarri da, y-rekiko
+integralaren mugak zeintzuk diren diren argitzen baitu.
+Badaude 2 motako integrazio-eremuak ere, irudikoak holakoak dira,
+
+8
+KAPITULUA 1.
+ALDAGAI ANITZEKO FUNTZIOAK. INTEGRAKETA
+y
+0
+x
+D
+x
+= h1(y)
+x
+= h2(y)
+c
+d
+D
+x
+= h2(y)
+x
+= h1(y)
+d
+c
+0
+y
+x
+Honela adierazi daitezke,
+D = {(x, y)|c ≤ y ≤ d, h1(y) ≤ x ≤ h2(y)}
+2 motako eremuetan egindako integral bikoitza integral berritu honekin kalku-
+latzen da,
+D
+f (x, y) dA =
+d
+c
+h2(y)
+h1(y)
+f (x, y) dx dy
+nun barruko integrala (egiteko lehenengoa) x-rekikoa den eta kanpokoa y-
+rekikoa.
+Ikusten dugunez irudiko eskuineko eremurako (bi zatitan banatu eta gero)
+lehengo integral berritua erabil dezakegu ere. Horretarako h1 eta h2 funtzioen
+alderantzizkoak beharko genituzke,
+D
+f (x, y) dA =
+f
+e
+d
+h−
+1
+1
+(x)
+f (x, y) dydx +
+g
+f
+d
+h−
+1
+2
+(x)
+f (x, y) dydx
+adibidea
+1.3. Ebaluatu
+D xy dA nun D y = x − 1 lerroak eta y
+2 = 2x + 6
+parabolak mugatutako eremua den.
+Ebazpena:
+Hurrengo irudiek erakusten dute zein den D eremua, orain I motakotzat edo II
+motakotzat har daitekeela.
+(−1, −2)
+−3
+y
+= x − 1
+y
+=
+√2x + 6
+y
+= −
+√2x + 6
+0
+y
+x
+(5, 4)
+x
+= y + 1
+x
+=
+y
+2
+2 −
+3
+(−1, −2)
+−2
+0
+y
+x
+(5, 4)
+I motako
+eremua
+II motako
+eremua
+
+1.1.
+INTEGRAL BIKOITZAK
+9
+Hala ere, irudian ikusten dugun moduan I motako eremuaren adierazpena zai-
+lagoa da: x-rekiko integrala bi zatitan egin bahrko genuke ze y-
+ren beheko limitea
+aldatu egiten da x = −1 denean. Beraz, II motako eremuaren adierazpena erre-
+zagoa denez, bakarra denez, hortik segituko dugu,
+D = {(x, y)| − 2 ≤ y ≤ 4,
+y2
+2
+− 3 ≤ x ≤ y + 1}
+eta integral bikoitza hau izango da,
+D
+xy dA =
+4
+−2
+y+1
+y
+2
+2 −3
+xy dx dy =
+4
+−2
+x2
+2
+y
+x=y+1
+x=
+y
+2
+2 −3
+dy
+=
+4
+−2
+(y + 1)2
+2
+y −
+(
+y
+2
+2 − 3)
+2
+2
+y
+dy
+=
+1
+2
+4
+−2
+−
+y5
+4
++ 4y3 + 2y2 − 8y dy
+=
+1
+2
+−
+y6
+24
++ y4 + 2
+y3
+3
+− 4y
+2
+4
+−2
+=
+1
+2
+−
+45
+6
++ 44 +
+44
+6
+− 4
+3 +
+42
+6
+− 4
+2 +
+42
+3
++ 42
+=
+4
+3
+(−64 + 96 + 16 − 24 + 1 + 2) =
+4
+3
+(115 − 88) = 36
+D eremua I motako eremutzat hartuta integrala honela hasi beharko genuke,
+D
+xy dA =
+−1
+−3
+√
+2x+6
+−
+√
+2x+6
+xy dy dx +
+5
+−1
+√
+2x+6
+x−1
+xy dy dx
+eta bide horrek erabili duguna baino lan gehiago eskatzen du.
+adibidea
+1.4. Ebaluatu integral iteratu hau
+1
+0
+1
+x sin(y
+2) dy dx
+Ebazpena:
+Emandako integral iteratua integral bikoitza batekin lotu daiteke,
+1
+0
+1
+x
+sin(y2) dy dx =
+D
+sin(y2) dA
+eta emandako integrazio limitekin asmatu daiteke zein den integrazio eremua
+(ikus irudiak). Eremua bai I motakotzat baita II motakotzat ere har daiteke.
+
+10 KAPITULUA 1. ALDAGAI ANITZEKO FUNTZIOAK. INTEGRAKETA
+y
+0
+x
+D
+y = 1
+y = x
+1
+y
+0
+x
+D
+x = y
+x = 0
+I motako eremua
+II motako eremua
+1
+I motakoa izanda,
+D = {(x, y)|0 ≤ x ≤ 1, x ≤ y ≤ 1}
+Hala ere integral iteratua emandako ordenean egin nahi badugu (I motako
+eremua) integratzeko dugun sin(y2)-ren integrala ez da integral elementala eta
+emaitzak ez da formula borobilekoa. Integrazio ordena aldatzen saiatuko gara,
+hau da, eremua II motakotzat hartuta.
+Irudiak erakusten duenez orain
+D = {(x, y)|0 ≤ y ≤ 1, 0 ≤ x ≤ y}
+Orain integrala honela egingo dugu,
+1
+0
+y
+0
+sin(y2) dx dy =
+1
+0
+x sin(y2)
+x=y
+x=0
+=
+1
+0
+y sin(y2) dy = −
+cos(y2)
+2
+1
+0
+=
+1
+2
+(1 − cos 1)
+1.1.3
+Azalera eta Bolumenen Kalkulua Integral Bikoitzarekin
+Lehen esan dugunez D eremuan f funtzioa positibo denean integral bikoitzak,
+D
+f (P ) dA
+z = f (x, y) gainazalaren azpiko zilindro baten bolumena ematen du, zilindroa-
+ren lerro zuzentzailea D eremuaren mugalerroa izanik.
+Esan dugun ere xy planuko azal zati lau baten azalera honela kalkulatu daite-
+keela,
+A =
+D
+dA
+Ikus ditzagun adibide batzuk,
+
+1.1.
+INTEGRAL BIKOITZAK
+11
+adibidea
+1.5. Aurkitu z = x2 + y2 paraboloidearen azpian eta xy planuko D
+eremu honen gainean gelditzen den solidoaren bolumena: D-ren mugak y = 2x
+lerro zuzena eta y = x2 parabola dira.
+Ebazpena:
+Muga lerroak bat egiten dute 2x = x2 denean hau da x = 0 eta x = 2. D
+eremuaren adierazpena, I motako eremutzat hartuz, hau da:
+D = {(x, y)|0 ≤ x ≤ 2, x
+2 ≤ y ≤ 2x}
+eta irudian dugu marraztuta (ezkeraldean).
+4
+4
+0
+x
+y
+y
+= 2x
+y
+= x2
+x
+= √y
+x
+= 1
+2
+y
+(2, 4)
+(2, 4)
+0
+x
+y
+D
+D
+1
+2
+1
+2
+I motako
+eremua
+II motako
+eremua
+Eskatuako bolumena honela kalkulatuko dugu,
+V =
+D
+(x2 + y2) dA =
+2
+0
+2x
+x
+2
+(x2 + y2) dy dx
+=
+2
+0
+x2y +
+y3
+3
+y=2x
+y=x
+2
+dx
+=
+2
+0
+x2(2x) +
+(2x)3
+3
+− x
+2(x2) −
+(x2)3
+3
+dx
+=
+2
+0
+−
+x6
+3
+− x
+4 +
+14
+3
+x3
+dx
+= −
+x7
+21
+−
+x5
+5
++
+7
+6
+x4
+2
+0
+= 24 −
+8
+21
+−
+2
+5
++
+7
+6
+=
+16
+210
+(−80 − 84 + 245)
+= −
+16
+210
+· 81 =
+216
+35
+Baina emandako eremua II motako eremua ere bada. x-rekiko mugak ezkerre-
+koa x = y/2 da eta eskuinekoa x = √y (erro positiboa). y-rekiko integralaren
+mugak, aldiz, 0 eta 4 dira, irudiak erakutsi moduan (eskuin aldean). D eremu
+bera honela adierazi daiteke,
+D = {(x, y)|0 ≤ y ≤ 4, y/2 ≤ x ≤
+√
+y}
+
+12 KAPITULUA 1. ALDAGAI ANITZEKO FUNTZIOAK. INTEGRAKETA
+Bolumena honela kalkulatu daiteke ere,
+V =
+D
+(x2 + y2) dA =
+4
+0
+√y
+1
+2 y
+(x2 + y2) dx dy
+=
+4
+0
+x3
+3
++ y2x
+x=√y
+x=
+1
+2 y
+dy =
+4
+0
+y3/2
+3
++ y5/2 −
+y3
+24
+−
+y3
+2
+dy
+=
+2
+15
+y5/2 +
+2
+7
+y7/2 −
+13
+96
+y4
+4
+0
+=
+26
+15
++
+28
+7
+−
+13 · 2
+8
+96
+= 26
+1
+15
++
+4
+7
+−
+13
+24
+=
+26
+840
+(56 + 480 − 455) =
+16 · 81
+210
+=
+216
+35
+adibidea
+1.6. Aurkitu x+2y+z = 2, x = 2y, x = 0, eta z = 0 planuek mugatutako
+tetraedroaren bolumena
+Ebazpena:
+Holako ariketetan komenigarri da bi graﬁkoak marraztea, bat hiru dimentsio
+solidoa eta bestea solidoari XY planuan dagokion D eremuarena. Gure kasuan
+hemn ditugu biak,
+0
+y
+x
+z
+(1, 1
+2
+,
+0)
+(0, 1, 0)
+T
+x
++ 2y + z = 2
+x
+= 2y
+(0, 0, 2)
+0
+x
+y
+D
+1
+y
+= x
+2
+1
+x
++ 2y = 2
+(edo y = 1 − x
+2
+)
+(1, 1
+2
+)
+Ikusten dugu D zein hirudikoa den, bere mugak y = 0 lerroa, x = 2y lerroa eta
+x+2y = 2 lerroa diren, azken hau x+2y +z = 2 planoak XY planoarekin (z = 0)
+duen ebakidura lerroa izanik. Ikusten dugu ere D-ren gainean dagoen gainazala
+x + 2y + z = 2 dela eta ez besterik ze beste planu guztiak tente baitaude. D
+eremua honela adierazi daiteke,
+D = {(x, y)|0 ≤ x ≤ 1, x/2 ≤ y ≤ 1 − x/2}
+
+1.1.
+INTEGRAL BIKOITZAK
+13
+Kontuan hartuta x + 2y + z = 2 honela ere jar daitekeela: z = 2 − x − 2y,
+V =
+D
+(2 − x − 2y) dA =
+1
+0
+1−x/2
+x/2
+(2 − x − 2y) dy dx
+=
+1
+0
+2y − xy − y
+2 y=1−x/2
+y=x/2
+dx
+=
+1
+0
+2 − x − x 1 −
+x
+2
+− 1 −
+x
+2
+2
+− x +
+x2
+2
++
+x2
+4
+dx
+=
+1
+0
+(x2 − 2x + 1) dx =
+x3
+3
+− x
+2 + x
+1
+0
+=
+1
+3
+adibidea
+1.7. xy planuko elipse zentratu baten ekuazioa hau da,
+x2
+a2
++
+y2
+b2
+= 1
+nun a eta b elipsearen ardatz erdiak diren. Elipsearen barruko azalera kalkulatuko
+dugu.
+Ebazpena:
+y = b
+1
+−
+x2
+a2
+y = 0
+a
+O
+b
+y
+Gainazalak lau zati berdin ditu eta laurdenaren mugak x-rekiko x = 0 eta x = a
+dira, eta y = 0 eta y = b
+1 − x2/a2 y-rekikoak. Beraz,
+A =
+D
+dA = 4
+a
+0
+b
+√
+1−x
+2 /a2
+0
+dy dx = 4
+a
+0
+dx [y]
+b
+√
+1−x
+2 /a2
+0
+= 4b
+a
+0
+1 −
+x2
+a2
+dx
+= 4b
+π/2
+0
+1 − sin
+2 t a cos t dt = 4ab
+π/2
+0
+cos2 t dt =
+4ab
+2
+π/2
+0
+(1 + cos 2t) dt
+= 2ab t +
+1
+2
+sin 2t
+π/2
+0
+= 2ab ·
+π
+2
+= π ab
+Noski, horren kasu partikularra zirkuluaren azalera da. Orduan a = b eta A =
+π a2.
+
+14 KAPITULUA 1. ALDAGAI ANITZEKO FUNTZIOAK. INTEGRAKETA
+1.1.4
+Aldagai Aldaketa Integral Bikoitzetan
+Integral bikoitzaren deﬁnizioan esan dugu bere balioa ez dela D eremuko zatiketa
+motaren menpekoa izango, zehazki ∆ai elementuen forma edozein izan daiteke.
+Integral bikoitza integral iteratuarekin kalkulatu dugu eta hori x-
+rekiko eta y-
+rekiko bi integral xinple egitea zen. Integral iteratuaren prozedura geometrikoki
+interpretatu daiteke, bi urratsetan egindako D eremuaren osaketa izanik. D ere-
+mua dx dy azaleko laukizuzenetan zatitu eta osaketa lehenengo zutabeka (edo
+zintaka) hasiz egiten da. Gero zutabe multzoak (edo zinta multzoak) D osoa
+ematen du. Prozedura hori lotuta dago integral bikoitzaren D-ren zatiketarako
+koordenatu cartesiarrak erabiltzearekin.
+Koordentau cartesiarrak erabiliz batzuetan, D-k aginduta, integral iteratuaren
+mugak formula errazekoak dira, beste batzuetan ez. Orduan egokiagoa izan dai-
+teke beste koordenatu-
+ sistema erabiltzea. Integratu nahi dugun funtzioa, koorde-
+natu berrietan adierazita, ez bada larregi zailtzen integralaren kalkulua errazagoa
+izan daiteke. Cartesiarraz gain beste koordenatu-sistema arrunta koordenatu po-
+larrena da.
+Koordenatu polarrak
+xy planuko puntuak ﬁnkatzeko beste sistema bat da
+(ikus irudia.)
+0
+y
+x
+r
+ϑ
+P
+(r, ϑ) = P (x, y)
+x
+y
+r2
+= x2 + y2
+x
+= r cos ϑ
+y
+= r sin ϑ
+Demagun
+D f (x, y) dA integrala nahi dugula egin, nun D hurrengo irudiko
+bat den,
+x
+y
+x2 + y2 = 1
+D
+O
+D
+= {(x, y)| − 1 ≤ x ≤ 1, −
+p
+1 − x2 ≤ y ≤
+p
+1 − x2}
+D
+= {(ρ, ϕ)|0 ≤ ρ ≤ 1, 0 ≤ ϕ ≤ 2π}
+y
+x
+x2 + y2 = 4
+x2 + y2 = 1
+D
+= {(x, y)|y ≥ 0, 1 ≤ x2 + y2 ≤ 4}
+D
+= {(ρ, ϕ)|1 ≤ ρ ≤ 2, 0 ≤ ϕ ≤ π}
+D
+Eremu hoien adierazpen cartesiarrak nahiko korapilotsuak dira, bigarren ka-
+suan eremua ezpieremuetan zatitzen hasi beharko genuke integratzen hasi au-
+rretik, baina koordenatu polarretan oso errazak dira. Integrazio-eremu hoietan
+
+1.1.
+INTEGRAL BIKOITZAK
+15
+integral bikoitza honela hasitako integral iteratuarekin egingo genuke,
+1
+0
+2π
+0
+. . .
+2
+1
+π
+0
+. . .
+beraz muga xinpletako integralak.
+Holako eremuak lauki polarrak deitzen dira eta lauki polar orokorra irudikoa
+da,
+α
+β
+D
+ϕ = α
+ϕ = β
+ρ = b
+ρ = a
+Lauki polar baten adierazpena hau da,
+D = {(ρ, ϕ)|a ≤ ρ ≤ b, α ≤ ϕ ≤ β}
+Koordenatu polarretan eremu baten zatiketa irudiko formako zatietan egiten
+da:
+ cartesiarretan bezala laukia da eta laukizuzena, aldeak perpendikularrak dira.
+Alde bi lerro zuzenak dira, erradio zatiak, beste biak kurbatuak, arku zatiak. Bere
+azalera da dA-n jarriko duguna dx dy-ren ordez, dA = ρ dρ dϕ.
+0
+dA
+dr
+rdϑ
+r
+dϑ
+Fubini teorema batek integral bikoitza honela kalkulatu daitekeela zihurtatzen
+du,
+D
+f (x, y) dA =
+ϕ=β
+ϕ=α
+ρ=b
+ρ=a
+f (ρ cos ϕ, ρ sin ϕ) ρ dρ dϕ
+
+16 KAPITULUA 1. ALDAGAI ANITZEKO FUNTZIOAK. INTEGRAKETA
+Ekuazio horretan x eta y koordenatuak erabat ordezkatuta daude ρ eta ϕ
+koordenatuekin. D eremua lauki polar bat da, eta integral iteratuan era honetan
+osotzen ari gara: lehenengo erradio bat osotuz ρ-rekiko integratuz, erradioaren
+luzera b − a da, ondoren erradioen bidez D osoa betetzen ari gara, ϕ-rekiko
+integratuz, laukizuzenaren zabalera angeluarra β − α izanik. Integral iteratua
+beste ordenean kalkulatuz,
+D
+f (x, y) dA =
+ρ=b
+ρ=a
+ϕ=β
+ϕ=α
+f (ρ cos ϕ, ρ sin ϕ) dϕ ρ dρ
+D laukizuzena betetzeko lehenengo zirkunferentzia arku bat osotuko genuke eta
+gero arkuen bidez D bete.
+adibidea
+1.8. Kalkulatu
+D(3x + 4y
+2) dA nun D XY planuko goierdiko zati bat
+den, x2 + y2 = 1 eta x2 + y2 = 4 zirkuluen artekoa
+Ebazpena:
+Eskatutako eremua honela adierazten da,
+D = {(x, y)|y ≥ 0, 1 ≤ x
+2 + y2 ≤ 4}
+eta hasieran irudikatu dugu. Koordenatu polarretan 1 ≤ ρ ≤ 2, 0 ≤ ϕ ≤ π
+mugetakoa da. Beraz goian emandako formularekin,
+D
+(3x + 4y2) dA =
+π
+0
+2
+1
+(3ρ cos ϕ + 4ρ2 sin2 ϕ)ρdρdϕ
+=
+π
+0
+2
+1
+(3ρ2 cos ϕ + 4ρ3 sin2 ϕ)dρdϕ
+=
+π
+0
+ρ3 cos ϕ + ρ4 sin2 ϕ
+ρ=2
+ρ=1 dϕ =
+π
+o
+(7 cos ϕ + 15 sin2 ϕ)dϕ
+=
+π
+0
+7 cos ϕ +
+15
+2
+(1 − cos 2ϕ) dϕ
+= 7 sin ϕ +
+15ϕ
+2
+−
+15
+4
+sin 2ϕ
+π
+0
+=
+15π
+2
+adibidea
+1.9. Aurkitu z = 0 planoak eta z = 1−x
+2 −y2 paraboloideak mugatutako
+solidoaren bolumena.
+Ebazpena:
+Paraboloidearen ekuazioan z = 0 jartzen badugu x2 + y2 = 1 lortzen dugu. Ho-
+rrek esan nahi du paraboloidearen eta XY planoaren arteko ebakidura 1 erradio
+eta jatorri puntuan zentratutako zirkunferentzia dela. Beraz gure solidoa para-
+boloidearen azpikoa eta zirkulu horren gaineko solidoa da.
+Gure integrazio eremua koordenatu polarretan D = {(ρ, ϕ)|0 ≤ ρ ≤ 1, 0 ≤ ϕ ≤
+2π} da. Bestaldetik z = 1 − x
+2 − y2 = 1 − ρ2 dugu ere. Beraz gure bolumena
+
+1.1.
+INTEGRAL BIKOITZAK
+17
+koordenatu polarrekin kalkulatuko dugu,
+V =
+D
+(1 − x
+2 − y2) dA =
+2π
+0
+1
+0
+(1 − ρ
+2)ρ dρ dϕ
+=
+2π
+0
+dϕ
+1
+0
+(ρ − ρ
+3) dρ = 2π
+ρ2
+2
+−
+ρ4
+4
+1
+0
+=
+π
+2
+Bolumenaren kalkulua koordenatu kartsiarrekin saiatu izan bagina, orduan hau
+edukiko gendukeen,
+V =
+D
+(1 − x
+2 − y2) dA =
+1
+x=−1
+√
+1−x
+2
+y=−
+√
+1−x
+2
+(1 − x
+2 − y2) dy dx
+eta hori ez zen ebazteko erreza izango ze, une batean,
+(1 − x
+2)3/2 dx ebaztea
+eskatzen du, kalkulua luzatuz.
+Orain arteko adibidetan eremu polarrak egitura xinplekoak ziren, baina kon-
+plexuagoak ere izan daitezke, adibidez hurrengo irudikoa.
+D
+x
+O
+ρ
+= h1(ϕ)
+ρ
+= h2(ϕ)
+ϕ
+= β
+ϕ
+= α
+Era honetako eremu polarrean,
+D = {(ρ, ϕ)|α ≤ ϕ ≤ β, h1(ϕ) ≤ ρ ≤ h2(ϕ)}
+hau da, gure asmoa lehenengo erradio bat osatzea eta gero, erradioen bidez,
+D osatzea da. D horrekin ez zen zentzuzkoa izango lehenengo arku bat osatzea
+eta gero arkuen bidez D osatzea 
+(zergatik?). Integral bikoitza honela kalkulatuko
+genuke,
+D
+f (x, y) dA =
+β
+ϕ=α
+h2(ϕ)
+ρ=h1(ϕ)
+f (ρ cos ϕ, ρ sin ϕ)ρ dρ dϕ
+Beste D eremu honekin ere koordenatu polarrak erabiltzea egokia litzateke,
+
+18 KAPITULUA 1. ALDAGAI ANITZEKO FUNTZIOAK. INTEGRAKETA
+D
+x
+O
+ρ
+= a
+ρ
+= b
+ϕ
+= g1(ρ)
+ϕ
+= g2(ρ)
+eta integral bikoitz bat D horren gainean honela egingo genuke,
+D
+f (x, y) dA =
+b
+ρ=a
+g2(ρ)
+ϕ=g1(ρ)
+f (ρ cos ϕ, ρ sin ϕ) dϕ ρ dρ
+D
+x
+O
+ρ
+= h(ϕ)
+ϕ
+= β
+ϕ
+= α
+Kasu berezi honetan: f (x, y) = 1, h1(ϕ) = 0, eta h2(ϕ) = h(ϕ), bolumenaren
+formularen bidez azalera baten balioa lortzen dugu: ϕ = α, ϕ = β, eta ρ = h(ϕ)
+mugetako D eremuarena,
+A(D) =
+D
+1 dA =
+β
+ϕα
+h(ϕ)
+ρ=0
+ρ dρ dϕ
+=
+β
+α
+ρ2
+2
+h(ϕ)
+0
+dϕ =
+β
+α
+1
+2
+[h(ϕ)]2dϕ
+egokia izanik eremu polar anitzen azalerak kalkulatzeko.
+adibidea
+1.10. Integral bikoitz baten bidez aurkitu hosto baten azalera, lau hos-
+toko hirustarena, ekuazioa ρ = cos 2ϕ.
+Ebazpena:
+
+1.1.
+INTEGRAL BIKOITZAK
+19
+θ = π/4
+θ = −π/4
+Irudiak erakutsi moduan eskatutako hosto baten mugaren ekuazioa hau litzake,
+D = {(ρ, ϕ)| − π/4 ≤ ϕ ≤ π/4, 0 ≤ ρ ≤ cos 2ϕ}
+eta bere azalera, goiko ekuazio teorikoarekin,
+A(D) =
+D
+dA =
+π/4
+ϕ=−π/4
+cos 2ϕ
+ρ=0
+ρ dρ dϕ
+=
+π/4
+−π/4
+1
+2
+ρ2
+cos 2ϕ
+0
+dϕ =
+1
+2
+π/4
+−π/4
+cos2 2ϕ
+=
+1
+4
+π/4
+−π/4
+(1 + cos 4ϕ)dϕ =
+1
+4
+ϕ +
+1
+4
+sin 4ϕ
+π/4
+−π/4
+=
+π
+8
+adibidea
+1.11. Aurkitu z = x2 + y2 paraboloidearen azpiko, XY planuaren goial-
+deko, eta x2 + y2 = 2x zilindroaren barruko solidoaren bolumena
+Ebazpena:
+Irudian ikusi leike zein solidoaz hitz egiten ari garen,
+z
+x
+y
+0
+1
+2
+x
+y
+D
+(x − 1)2 + y2 = 1
+(edo r = 2 cos θ)
+D eremua zilindroaren ekuazioak emandako x2 + y2 = 2x ekuaziokoa da, edo
+(x − 1)
+2 + y2 = 1
+
+20 KAPITULUA 1. ALDAGAI ANITZEKO FUNTZIOAK. INTEGRAKETA
+Zentrua (1, 0) puntuan eta erradioa 1 duen zirkulua izanik. Koordenatu po-
+larretan zirkunferentzi horren ekuazioa hau ateratzen da: ρ2 = 2ρ cos ϕ edo
+ρ = 2 cos ϕ. Beraz,
+D = {(ρ, ϕ)| − π/2 ≤ ϕ ≤ π/2, 0 ≤ ρ ≤ 2 cos ϕ}
+eta eskatutako solidoa paraboloidearen azpian dagoenez (oso osorik),
+V =
+D
+(x2 + y2) dA =
+π/2
+ϕ=−π/2
+2 cos ϕ
+ρ=0
+ρ2 ρ dρdϕ
+=
+π/2
+−π/2
+ρ4
+4
+2 cos ϕ
+0
+dϕ = 4
+π/2
+−π/2
+cos4 ϕdϕ
+= 8
+π/2
+0
+cos4 dϕ = 8
+π/2
+0
+1 + cos 2ϕ
+2
+2
+dϕ
+= 2
+π/2
+0
+1 + 2 cos 2ϕ +
+1
+2
+(1 + cos 4ϕ) dϕ
+= 2
+3
+2
+ϕ + sin 2ϕ +
+1
+8
+sin 4ϕ
+π/2
+0
+= 2 ·
+3
+2
+·
+π
+2
+=
+3π
+2
+1.1.5
+Bestelako Aplikazioak
+Integral bikoitzak Fisikako eta Ingenieritzako problema askotan aurkitzen ditugu.
+Magnitude batzuren kalkuluek integral bikoitzak egitea eskatzen dituzte. Adibide
+batzuen laburpena egingo dugu:
+1. Integral bikoitzarekin bi aldagai funtzioen integralak egin ditzakegu, deﬁnizio-
+eremua inguru lau bat izanik. Horrek esan nahi du Fisikako edo Ingenie-
+ritzako egoera idealizatu xamarretan erabili daitekeela bakarrik, adibidez,
+txapa mehe zatiekin lotutako magnitudeak kalkulatzeko, masa dela, karga
+elektrikoa dela, etabar.
+D eremu lau bateko dentsitate masikoa ezagutuz ρ(x, y) bere m masa honela
+kalkulatu dezakegu,
+m =
+D
+ρ(x, y) dA
+Kasu honetan dentsitatearen deﬁnizioa hau litzateke,
+ρ ≡ lim
+∆a→0
+∆m
+∆a
+nun ∆m masa ∆a azalerako zatiaren masa da, zatia gero eta txikiagoa
+hartuz. Dentsitatea ρ(x, y) = ρ0 konstantea izango balitz,
+m =
+D
+ρ(x, y) dA =
+D
+ρ0 dA = ρ0
+D
+dA = ρ0 A(D)
+
+1.1.
+INTEGRAL BIKOITZAK
+21
+nun A(D) D-ren azalera den.
+Kasu berdina da karga elektrikoaren kalkulua behin bere σ(x, y) dentsitatea
+ezagutuz. Dentsitate hori azalera– dentsitatea da,
+σ(x, y) ≡ lim
+∆a→0
+∆Q
+∆a
+nun ∆Q karga ∆a zatiak gordetakoa den, zatia gero eta txikiagoa izanik.
+Karga totalaren balioa honela kalkulatuko dugu,
+Q =
+D
+σ(x.y) dA
+adibidea
+1.12. Karga elektrikoa irudiko hirukian banatuta dugu, zeinen
+(x, y) puntuko karga dentsitatea σ(x, y) = xy ekuaziokoa den (unitatea cou-
+lomb zati metro karratu da, C/m2). Aurkitu banaketaren karga totala.
+D
+(1, 1)
+y
+= 1 − x
+y
+= 1
+1
+y
+0
+x
+Ebazpena:
+Q =
+D
+σ(x, y) dA =
+1
+0
+1
+1−x
+xydxdy
+=
+1
+0
+x
+y2
+2
+y=x
+y=1−x
+dx =
+1
+0
+x
+2
+[12 − (1 − x)
+2]dx
+=
+1
+2
+1
+0
+(2x2 − x
+3)dx =
+1
+2
+2x3
+3
+−
+x4
+4
+1
+0
+=
+5
+24
+Beraz karga totala
+5
+24
+C da.
+2. Integral bikoitzarekin xaﬂa baten grabitate–zentrua, G, nun dagoen kalku-
+latu daiteke ere. Grabitate-zentruaren (xG, yG) koordenatuak honela kal-
+kulatzen dira,
+
+22 KAPITULUA 1. ALDAGAI ANITZEKO FUNTZIOAK. INTEGRAKETA
+xG =
+1
+m
+G
+xρ(x, y) dA
+yG =
+1
+m
+G
+yρ(x, y) dA
+(¯
+x,
+¯
+y
+)
+D
+Irudian xG, yG-ren ordez ¯
+x, ¯
+y idatzita daude.
+Formula hoiek egiten dutena xaﬂaren x eta y koordenatuen batazbesteko
+balioak kalkulatzea da. x eta y bakoitza zatiaren masa erlatiborekin daude
+pisatuta (ρ dA)/m. Pisu edo probabilitate guztien batura 1 da,
+D
+ρ(x, y)
+m
+dA =
+1
+m
+D
+ρ(x, y) dA =
+m
+m
+= 1
+adibidea
+1.13. Zirkulu erdi xaﬂa baten puntuen dentsitatea zirkuluaren
+erdiraino dagoen distantziaren proportzionala da. Aurkitu xaﬂaren masa
+zentrua.
+Ebazpena:
+0
+,
+3
+a
+2
+π
+x2 + y2 = a2
+y
+a
+D
+−a
+0
+a
+x
+Demagun xaﬂa x2 + y2 = a2 ekuazioko zirkuluaren goi erdia dela (ikus
+irudia). (x, y) puntutik zirkuluaren erdira doan distantzia
+x2 + y2 da.
+Beraz, dentsitate funtzioa era honetakoa da,
+ρ(x, y) = K
+x2 + y2
+nun K konstante bat den. Bai dentsitate funtzioagatik bai xaﬂaren forma-
+gatik komeni zaigu koordenatu polarrak erabiltzea. Orduan
+x2 + y2 = r
+
+1.1.
+INTEGRAL BIKOITZAK
+23
+da, eta D integrazio eremua 0 ≤ r ≤ a, 0 ≤ ϕ ≤ π ezberdintzek ematen
+dute. ρ koordenatu polarraren izenaren ordez r erabilko dugu ρ dentsita-
+tearekin ez nahasteko.
+Xaﬂaren masa kalkulatuz,
+m =
+D
+ρ(x, y)dA =
+D
+K
+x2 + y2dA
+=
+π
+0
+a
+0
+(Kr)rdrdϕ = K
+π
+0
+dϕ
+a
+0
+r2dr
+= Kπ
+r3
+3
+a
+0
+=
+Kπa3
+3
+Biak, xaﬂa bera eta bere dentsitate funtzioa Y ardatzarekiko simetrikoak
+dira, eta horrek esan nahi du masa zentruak Y ardatzaren gainean egon
+behar duela, hau da, xG = 0. Bere y-koordenatua hau izango da,
+yG =
+1
+m
+D
+yρ(x, y)dA =
+3
+Kπa3
+π
+0
+a
+o
+r sin ϕ(Kr)rdrdϕ
+=
+3
+πa3
+π
+0
+sin ϕdϕ
+a
+0
+r3dr =
+3
+πa3
+[− cos ϕ]
+π
+0
+r4
+4
+a
+0
+=
+3
+πa3
+2a4
+4
+=
+3a
+2π
+Beraz, masa-zentrua (0, 3a/(2π)) puntuan dago.
+Inertzia Momentuak
+m masako partikula baten inertzia momentua (batzuetan bigarren momen-
+tua
+deituta) ardatz batekiko mr2 da deﬁnizioz, nun r partikualren eta ardatzaren
+arteko distantzia den. Kontzeptu hori xaﬂa baterako erabiltzen dugu, xaﬂa D
+eremura zabaldu eta ρ(x, y) dentsitatekoa denean. Bidea azaldu dugun masa
+momentua kalkulatzekoa da. D eremua lauki txikitan zatitu ondoren, azpilau-
+ki bakoitzaren X ardatzarekiko inertzi momentuaren hurbilketa erabiltzen dugu,
+ondoren zati guztien momentuen baturaren limitea kalkulatuz, azpilaukien ko-
+purua gero eta handiagoa egiten delarik. Emaitza xaﬂaren X ardatzarekiko
+inertzi momentua
+da,
+Ix = lim
+m,n→∞
+m
+i=1
+n
+j=1
+(y∗ij)
+2ρ(x∗
+ij , yij∗ )∆A =
+D
+y2ρ(x, y)dA
+Era berean, inertzi momentua Y ardatzarekiko beste hau da,
+Iy = lim
+m,n→∞
+m
+i=1
+n
+j=1
+(x∗ij)
+2ρ(x∗
+ij , y
+∗
+ij )∆A =
+D
+x2ρ(x, y)dA
+
+24 KAPITULUA 1. ALDAGAI ANITZEKO FUNTZIOAK. INTEGRAKETA
+Oso interesgarria da ere jatorriarekiko inertzia momentua, batzuetan iner-
+tzi momentu polarra
+deituta ere,
+I0 = lim
+m,n→∞
+m
+i=1
+n
+j=1
+[(x∗ij)
+2 + (y∗
+ij )
+2]ρ(x∗
+ij , y
+∗
+ij )∆A =
+D
+(x2 + y2)ρ(x, y)dA
+Konturatu I0 = Ix + Iy dela.
+adibidea
+1.14. Kalkulatu a erradio D diska homogeneo baten Ix, Iy, eta I0 inertzi
+momentuak. Dentsitate funtzioa ρ(x, y) = ρ da.
+Ebazpena:
+Zirkuluaren ekuazioa x2+y2 = a2 da, eta koordenatu polarretan muga hauetakoa:
+0 ≤ ϕ ≤ 2π, 0 ≤ r ≤ a. Kalkulatu dezagun lehenengo I0,
+I0 =
+D
+(x2 + y2)ρdA = ρ
+2π
+0
+a
+0
+r2rdrdϕ
+= ρ
+2π
+0
+dϕ
+a
+0
+r3dr = 2πρ
+r4
+4
+a
+0
+=
+πρa4
+2
+Ix eta Iy zuzenean kalkulatu beharrean, Ix + Iy = I0 dela eta zirkuluaren
+simetriagatik Ix = Iy dela erabiliko ditugu. Propietate hoien ondorio hau dugu,
+Ix = Iy =
+I0
+2
+=
+πρa4
+4
+Konturatu azken ariketako zirkuluan masa hau dela,
+m = dentsitatea × azalera = ρ(πa
+2)
+beraz jatorriarekiko inertzi momentua honela jar daiteke,
+I0 =
+1
+2
+ma2
+Ondorioz, diskaren erradioa handitzen hasten bagara inertzi momentua ere
+handitzen hasiko da. Orokorrean, inertzi momentuak higidura linealean objek-
+tuen masaren papera jokatzen du, baina orain biraketetan. Gurpil baten inertzi
+momentua da gurpila biraka hasteko edo gurpila gelditzeko lanen erantzule, ko-
+txe baten masa kotxea abian jartzeko edo bera gelditzeko lanen erantzule den
+moduan.
+1.2
+Integral Hirukoitzak
+1.2.1
+Deﬁnizioa eta Propietateak
+Integral hirukoitzak u = f 
+(x, y, z) hiru aldagai funtzioen integralak dira. Inte-
+gral mugatuak dira eta aurreko integral xinple mugatuaren eta integral bikoi-
+tzaren antzera deﬁnitzen da. Berriro ere Riemann batuketen segidaren limitea
+da. Suposatuko dugu u = f (x, y, z) funtzioa jarraia dela V deﬁnizio-eremu itxi
+batean.
+
+1.2.
+INTEGRAL HIRUKOITZAK
+25
+Pi
+Vi
+Rn
+=
+n
+i
+=1 f (P
+i
+) ∆Vi
+Rn Riemann batuketa bat da, n batugaietakoa, eta ∆Vi n elementuekin V
+osoa betetzen da. Elementuen forma edozein da eta elementu bakoitzean (ba-
+rruan edo mugan) Pi puntu bat aukeratzen da. Puntu horretan ebaluatzen da
+funtzioa f (Pi) eta Riemann batuketa f (Pi) ∆VI gaien batura da. Riemann batu-
+keten segida bat lortzeko V -
+ren zatiketa gero eta zati txikiagoekin egiten da, gero
+eta zatitxo kopuru handiagoarekin (zati guztien bolumena zerorantz eramanez).
+Holako segida bat edukiko dugu,
+Rn
+1 , R
+n2 , . . . Rnk , . . .
+nun n1 < n2 < . . . nk < . . .
+f jarraia bada holako edozein segidak badu limiterik eta beti limite berdina lortu-
+ko da (edozein formako zatitxoekin eta Pi-
+ren edozein aukeraketekin). Limitearen
+balioa f -ren integral hirukoitza V integrazio- eremuan deitzen dugu idaz-
+keta honekin,
+V
+f (x, y, z) dV =
+lim
+diam Vi→0
+f (Pi) ∆Vi
+Honela ere idatz dezakegu,
+V
+f (x, y, z) dV =
+V
+f (P ) dV =
+V
+f (x, y, z) dx dy dz
+Integral hirukoitzak funtzio bat hartu eta zenbaki bat ematen du, integral hiru-
+koitza zenbaki hutsa da, beste integral mugatuak bezala.
+Integral Hirukoitzaren Propietateak
+1. Integral hirukoitza eragiketa lineala da. Linealtasunaren lehenengo ezauga-
+rria hau da,
+V
+[f (x, y, z) + g(x, y, z)] dV =
+V
+f (x, y, z) dV +
+V
+g(x, y, z) dV
+2. Eta linealtasunaren bigarren ezaugarria,
+V
+c f (x, y, z) dV = c
+V
+f (x, y, z) dV
+
+26 KAPITULUA 1. ALDAGAI ANITZEKO FUNTZIOAK. INTEGRAKETA
+3. V eremuan f (x, y, z) ≥ g(x, y, z) bada, orduan
+V
+f (x, y, z) dV ≥
+V
+g(x, y, z) dV
+4. S gainazal baten bidez V integrazio-eremua barne-puntu komunik gabeko
+V1 eta V2 eremuetan zatitzen bada, orduan
+V
+1
+V
+2
+S
+V
+f (x, y, z) dV =
+V1
+f (x, y, z) dV +
+V2
+f (x, y, z) dV
+5. V integrazio-eremuan f 
+(x, y, z) = 1 funtzioa integratuz integral hirukoitzak
+V -ren bolumena ematen du,
+V
+1 dV = V (bolumena)
+Beraz, hiru dimentsio zatien bolumena kalkulatzeko bigarren bide bat da
+(lehenengoan integral bikoitzak erabiltzen dira).
+6. V eremuko puntu guztietan m ≤ f(x, y, z) ≤ M bada, orduan
+m V ≤
+V
+f (x, y, z) dV ≤ M V
+nun m eta M, V integrazio-eremuan f -ren balio minimoa eta maximoa
+diren.
+7. Batazbestekoaren Teorema. f funtzio jarrai baten integral hirukoitza
+honela kalkulatu daiteke,
+V
+f (x, y, z) dV = f (P ) V
+nun P puntua V eremuko puntu zehatz bat den. f (P ) balioa funtzioaren
+batazbesteko balioa deitzen dugu, zeren
+f (P ) =
+1
+V
+V
+f (x, y, z) dV
+berdintzaren eskuinekoa f (x, y, z) funtzioaren batazbesteko balioaren kal-
+kulua dela.
+
+1.2.
+INTEGRAL HIRUKOITZAK
+27
+1.2.2
+Integral Hirukoitzen Kalkulua
+Integral hirukoitza, praktikan, ez dugu kalkulatzen bere deﬁnizioari jarraituz eta
+integral bikoitzarekin bezala integral berritua 
+(iteratua) erabiltzen dugu, hori hi-
+ru integral sinple, bata bestearen atzetik, egitea delarik.
+Integral hirukoitz iteratuak bikoitzarenak baino adierazpen gehiago ditu. Adie-
+razpen xinpleena (koordenatu kartesiarretan) irudiko kaxari dagokio,
+z
+x
+y
+z = r
+z = s
+y
+=
+c
+y
+=
+d
+x
+=
+a
+x
+=
+b
+dx
+dz
+dy
+Fubini izeneko teorema batek esaten du kaxa laukizuzen horretan egindako inte-
+gral hirukoitza integral iteratu honekin kalkulatu daitekeela,
+V
+f (x, y, z) dV =
+s
+r
+d
+c
+b
+a
+f (x, y, z) dx dy dz
+Integral xinpleak bata bestearen atzetik egin behar dira. Goiko formularen arabe-
+ra lehenengo x-
+rekiko integrala egingo genuke, emaitzan ez zen gehiago x aldagaia
+izango, aldiz y eta z egon daitezke orokorrean. Bigarren integrala iritsi den fun-
+tzioaren y-rekiko integrala litzateke, emaitza z-
+ren funtzio bat, eta hirugarren
+integralak, z-
+rekikoak zenbaki huts bat emango luke. Integral iteratua egiten ari
+garan bitartean V bolumena osatzen ari gara ere, x-
+rekiko integralarekin ziri bat
+osotzen dugu, x ardatzaren norabidekoa eta b − a luzerakoa. Bigarren integrala-
+rekin xaﬂa bat xy planoarekiko paraleloa eta (b −a)×(d−c) azalerakoa. Azkenik
+hirugarren integralak V emango du, aurreko xaﬂen multzo baten bidez.
+Integral berrituaren ordena aldatu daiteke eta kaxa horrekin orden-aldaketa
+besterik gabe egin daiteke, adibidez,
+V
+f (x, y, z) dV =
+d
+c
+s
+r
+b
+a
+f (x, y, z) dydzdx
+Hurrengo irudiak erakusten du orden horrekin nola osatzen den V .
+x
+-rekiko integratuz
+y
+-rekiko integratuz
+z
+-rekiko integratuz
+
+28 KAPITULUA 1. ALDAGAI ANITZEKO FUNTZIOAK. INTEGRAKETA
+Batzuetan ordena garrantzitsua da ze hartuko dugun ordenaren arabera integral
+iteratua errezagoa edo zailagoa izan daiteke.
+adibidea
+1.15. Ebaluatu
+V xyz
+2 dV integral hirukoitza, nun V kaxa angelu-
+zuzen hau den,
+V = {(x, y, z)|0leqx ≤ 1, −1 ≤ y ≤ 2, 0 ≤ z ≤ 3}
+Ebazpena:
+Kasu honetan integral iteratiboaren ordena bat edo bestea erabiltzeak ez du
+integralaren ebazpenaren zailtasuna aldatzen. Honela egingo dugu,
+V
+xyz2 dV =
+3
+0
+2
+−1
+1
+0
+xyz2 dxdydz =
+3
+0
+2
+−1
+x2yz2
+2
+x=1
+x=0
+dydz
+=
+3
+0
+2
+−1
+yz2
+2
+dydz =
+2
+0
+y2z2
+4
+y=2
+y=−1
+dz =
+3
+0
+3z2
+4
+dz
+=
+z3
+4
+3
+0
+=
+27
+4
+Integrazio-eremuaren gainazalak kurbatuak direnean V -ren osaketa zenbait
+modutan egin daiteke. Irudiak erakusten du eremu erregular bat. Eremu
+erregularretan barneko puntu batetik pasatako lerro paralelo batek (x ardatza-
+rekiko, y ardatzarekiko edo z ardatzarekiko) V -ren muga bakarrik bi puntutan
+ebakiko du. Hori gertatzen ez denean (adibidez integral hirukoitzaren deﬁni-
+zioaren irudian) eremu irregularra dugu eta integratu aurretik zihur asko V zati
+erregularretan banatu beharko dugu.
+x
+y
+z
+V
+DI
+DII
+DIII
+z
+= u1(x, y)
+z
+= u2(x, y)
+V -ren osaketa hiru era ezberdinetan egin daiteke, hoiek V -ren puntuetako mul-
+tzoaren hiru adierazpen eta integral iteratiboaren hiru ordenekin lotuta daudela,
+I era. V eremua xy planoan proiektatzen dugu proiekzioa xy planuko DI eremu
+itxia izanik. V eremuko puntu guztien x eta y koordenatuetako (x, y) pun-
+tuak DI eremuan daude. V -ren puntuetako multzoaren adierazpena hau
+
+1.2.
+INTEGRAL HIRUKOITZAK
+29
+da,
+V = {(x, y, z)|(x, y) ∈ DI, u1(x, y) ≤ z ≤ u2(x, y)}
+DI eremuaren mugalerroa V -ren gerriko lerro baten (azken hau ez da planu
+batean sartuta egon behar) proiekzioa da eta V -ren gainazala bi erditan
+banatzen du, goiko tapa (ekuazioa z = u2(x, y)) eta beheko tapa (ekuazioa
+z = u1(x, y)).
+Integral iteratua honela hasiko genuke,
+V
+f (x, y, z) dV =
+DI
+z=u2(x,y)
+z=u1(x,y)
+f (x, y, z) dz dA
+hau da, lehenengo zutabe bat osotuz, ondoren zutabeen bidez V osotuz
+II era. Era honetan yz planoan proiektatzen hasiko ginateke, yz planuko DII ere-
+mu itxia lortuz. Proiekzioaren mugalerroa V -ren gerriko beste lerro baten
+proiekzioa da, horrek V -ren gainazala aurreko tapan eta atzeko tapan ba-
+natzen duela. V -ren adierazpena eta integral iteratiboaren hasiera hauek
+lirateke,
+V = {(x, y, z)|(y, z) ∈ DII, u1(y, z) ≤ x ≤ u2(y, z)}
+V
+f (x, y, z) dV =
+DII
+x=u2(y,z)
+x=u1(y,z)
+f (x, y, z) dx dA
+III era. Era honetan xz planuan proiektatzen hasten gara DIII eremua lortuz. V -
+ren adierazpena eta integral iteratiboaren hasiera hauek dira,
+V = {(x, y, z)|(x, z) ∈ DIII, u1(x, z) ≤ y ≤ u2(x, z)}
+V
+f (x, y, z) dV =
+DIII
+y=u2(x,z)
+y=u1(x,z)
+f (x, y, z) dy dA
+Ikusten dugunez edozein eratan hasi garela eta lehenengo integrala egiten dugu-
+nean integral bikoitz bat gelditzen zaigu egiteko, hori egiteko integrazio-
+eremu
+laua bi era ezberdinetan osatu daitekeela. Beraz guztira hiru integraletako inte-
+gral iteratiboa sei era ezberdinetan burutu daiteke. Integral bikoitza egin behar
+dugunean koordenatu polarretara pasa gaitezke ere. Aipatu dugun sei integrale-
+tatik batzuk izan daitezke besteak baino zailagoak edo errezagoak.
+adibidea
+1.16. Ebaluatu
+V z dV , nun V tetraedro bat den, mugak x = 0, y =
+0, z = 0, eta x + y + z = 1 planoak diren.
+Ebazpena:
+Irudiak erakusten du V integrazio-
+eremua eta bere proiekzioa xy planoan. I erako
+integral iteratua egingo dugu, eta DI integral bikoitzeko integrazio-
+ eremua ere I
+erako moduan beteko dugu.
+
+30 KAPITULUA 1. ALDAGAI ANITZEKO FUNTZIOAK. INTEGRAKETA
+x
+(1, 0, 0)
+(0, 1, 0)
+(0, 0, 1)
+y
+z
+O
+x
+y
+y
+= 0
+y
+= 1 − x
+z
+= 1 − x − y
+z
+= 0
+DI
+1
+1
+Hau dugu V -ren adierazpena,
+V = {(x, y, z)|0 ≤ x ≤ 1, 0 ≤ y ≤ 1 − x, 0 ≤ z ≤ 1 − x − y}
+eta integralaren kalkulua,
+v
+z dV =
+1
+0
+1−x
+0
+1−x−y
+0
+z dzdydx =
+1
+0
+1−x
+0
+z2
+2
+z=1−x−y
+z=0
+=
+1
+2
+1
+0
+1−x
+0
+(1 − x − y)
+2 dydx =
+1
+2
+1
+0
+−
+(1 − x − y)
+3
+3
+y=1−x
+y=0
+dx
+=
+1
+6
+1
+0
+(1 − x)
+3 dx =
+1
+6
+−
+(1 − x)
+4
+4
+1
+0
+=
+1
+24
+adibidea
+1.17. Ebaluatu
+V
+√
+x2 + z2 dV , nun V eremua y = x2 + z2 parabo-
+loideak eta y = 4 planoak mugatutako eremua den.
+Ebazpena:
+Irudiak erakusten digu V integrazio eremua eta bere proiekzioa xy planoan. Ha-
+sierako asmoa I eran integratzea litzateke.
+x
+z
+y
+4
+y = x2 + z2
+DI
+O
+x
+y
+y = 4
+y = x2
+DI
+V -ren adierazpena hau da,
+V = {(x, y, z)| − 2 ≤ x ≤ 2, x
+2 ≤ y ≤ 4, − y − x2 ≤ z ≤ y − x2}
+eta integral iteratua,
+V
+x2 + z2 dV =
+2
+−2
+4
+x
+2
+√
+y−x
+2
+−
+√
+y−x
+2
+x2 + z2 dzdydx
+
+1.2.
+INTEGRAL HIRUKOITZAK
+31
+Barruko integrala egiteko bi aldagai aldaketekin hasiko giateke, integral hauek
+lortuz,
+x2 + z2 dz =
+x2
+dt
+cos3 t
+= x2
+2
+(1 + u2)2
+(1 − u2)3
+du
+t aldagaia z = x tan t aldaketarekin eta u
+aldagaia tan(t/
+2) = u aldaketarekin lortu dira. Azken integrala funtzio razional
+baten integrala da, eta luzea izan daiteke.
+Beste era batean hasiko dugu integrala, II era I eraren berdina da, yz pla-
+nuarekiko proiekzioa berdina delako. Beraz, III era saiatuko dugu: xz planuan
+proiektatuz zirkulu bat lortzen dugu,
+D
+III
+−2
+2
+x
+z
+x2 + z2 = 4
+O
+Orain V -ren adierazpena hau da,
+V = {(x, y, z)|(x, z) ∈ DIII, x
+2 + z2 ≤ y ≤ 4}
+eta eskatutako integrala,
+V
+x2 + z2 dV =
+DIII
+4
+x
+2 +z2
+x2 + z2 dy dA
+=
+DIII
+x2 + z2 y
+y=4
+y=x
+2 +z2
+dA
+=
+DIII
+(4 − x
+2 − z2) x2 + z2 dA
+eta orain egiteko duguna integral bikoitza da, integrazio- eremua xz planuko
+diska bat dela. Integral bikoitz hori egiteko koordenatu polarrak erabiliko ditugu.
+Diskaren adierazpena hau izango da,
+DIII = {(ρ, ϕ)|0 ≤ ρ ≤ 2, 0 ≤ ϕ ≤ 2π}
+eta integragaia koordenatu polarretara bihurtzeko aldaketa hau egingo dugu: x =
+ρ cos ϕ eta z = ρ sin ϕ. Integrala hau izango da,
+V
+x2 + z2 dV =
+DIII
+(4 − x
+2 − z2) x2 + z2 dA =
+2π
+0
+2
+0
+(4 − ρ
+2)ρ ρdρdϕ
+=
+2π
+0
+4
+3
+ρ3 −
+1
+5
+ρ5
+2
+0
+dϕ = 32
+1
+3
+−
+1
+5
+2π
+0
+dϕ =
+64
+15
+2π
+=
+128π
+15
+
+32 KAPITULUA 1. ALDAGAI ANITZEKO FUNTZIOAK. INTEGRAKETA
+1.2.3
+Aldagai Aldaketa Integral Hirukoitzetan
+Integral hirukoitz batzu, integral bikoitzetan gertatzen den moduan, errezago kal-
+kulatzen dira cartesiarra ez den beste koordenatu-sistemetan:
+ sistema zilindrikoa
+eta sistema esferikoa.
+Koordenatu zilindrikoak
+Espazioko puntu baten koordenatu zilindrikoak (ρ, ϕ, z) hirukote dira, luzera
+bi eta angelu bat. Irudiak erakusten du nola deﬁnitzen diren: ρ puntutik z
+ardatzaraioko distantzia da, ϕ angelua puntua dagoen planu erradialaren angelua
+xz planuarekiko, z puntuaren garaiera xy planuarekiko.
+ρ
+z
+ϕ
+y
+x
+Koordenatu zilindrikoak honela aldatu behar dira espazio osoa betetzeko,
+ρ ∈ [0, ∞), ϕ ∈ [0, 2π), z ∈ (−∞, ∞)
+Puntu baten koordenatu zilindrikoak eta cartesaiarrak honela daude lotuta,
+x = ρ cos ϕ
+ρ =
+x2 + y2
+y = ρ sin ϕ
+ϕ = arctan y/x
+z = z
+z = z
+Hurrengo irudiak erakusten du zein erako zati txikiak erabiltzen diren sistema
+zilindrikoan V integrazio eremua zatitzerakoan,
+ρ
+dρ
+dz
+dϕ
+ρ dϕ
+z
+
+1.2.
+INTEGRAL HIRUKOITZAK
+33
+Ezkerreko eta eskuineko aurpegiak kurbatuak dira, zilindro zatitxoak dira, ez-
+kerrekoa ρ erradioko zilindroarena eta eskuinekoa ρ + dρ erradiokoarena. Goiko
+tapa eta beheko tapa zati lau horizontalak dira, behekoa z garaieran eta goikoa
+z + dz garaieran. Aurreko eta atzeko aurpegiak lauak dira ere planu erradialen
+(z ardatzatik pasatzen dira) zatitxoak, aurrekoa ϕ angelura eta atzekoa ϕ + dϕ
+angelura. Zatien bolumenaren formula hau da,
+dV = dρ · dz · ρdϕ = ρ dρ dϕ dz
+Zatitxoen forma bera duen eremua kaxa zilindrikoa deitu dezakegu eta irudikoa
+da,
+ϕ = α
+ϕ = β
+z = d
+z = c
+ρ = b
+ρ = a
+Bere adierazpena hau da,
+V = {(ρ, ϕ, z)|a ≤ ρ ≤ b, α ≤ ϕ ≤ β, c ≤ z ≤ d}
+Kaxa horretan egindako f 
+(x, y, z) funtzioaren integral hirukoitza integral iteratu
+honekin egingo genuke,
+V
+f (x, y, z) dV =
+β
+ϕ=α
+b
+ρ=a
+d
+z=c
+f (ρ cos ϕ, ρ sin ϕ, z) dz ρdρ dz
+Integralaren orden horrekin lehenengo zutabe bat osotuko dugu, gero plnu erra-
+dial zati bat, eta bukatzeko planu erradial zatien multzo batekin V osoa. Fun-
+tzioaren formulan ere kordenatu kartesiarrak koordenatu zilindrikoekin ordezkatu
+ditugu.
+Koordenatu zilindrikoak erabiltzeko kasuistika zabala da ere. Adibidez goiko
+eta beheko tapa gainazal kurbatuak balira, V -ren adierazpena hau litzateke,
+V = {(ρ, ϕ, z)|α ≤ ϕ ≤ β, a ≤ ρ ≤ b, u1(ρ, ϕ) ≤ z ≤ u2(ρ, ϕ)}
+nun u1(ρ, ϕ) beheko taparen ekuazio zilindrikoa eta u2
+(ρ, ϕ) goiko taparen ekuazio
+zilindrikoa liratekeen. Integralaren ekuazioa,
+V
+f (x, y, z) dV =
+β
+ϕ=α
+b
+ρ=a
+u2(ρ,ϕ)
+z=u1(ρ,ϕ)
+f (ρ cos ϕ, ρ sin ϕ, z) dz ρdρ dz
+
+34 KAPITULUA 1. ALDAGAI ANITZEKO FUNTZIOAK. INTEGRAKETA
+Egin ditzagun bi adibide,
+adibidea
+1.18. V gorputz bat dugu x2 + y2 = 1 zilindroaren barruan, z = 4
+planoaren azpian eta z = 1 − x
+2 − y2 paraboloidearen gainean. Gorputzaren
+puntuen dentsitatea puntutik z ardatzaraino doan distantziaren proportzionala da.
+Kalkulatu V -ren masa.
+Ebazpena:
+Adierazitako gorputza irudian ikus daiteke,
+(0, 0, 4)
+z
+= 4
+z
+x
+y
+(0, 0, 1)
+z
+= 1 − ρ2
+(1, 0, 0)
+Zilindro bat da, bere goiko tapa laua eta behekoa paraboloidea. V -ren adieraz-
+pena hau da,
+V = {(ρ, ϕ, z)|1 − ρ
+2 ≤ z ≤ 4, 0 ≤ ρ ≤ 1, 0 ≤ ϕ ≤ 2φ}
+Masa lortzeko integratu behar dugun funtzioa dentsitatea da, eta dentsitatea ρ
+koordenaturen proportzionala da d = Kρ. Beraz integral hirukoitz hau dugu,
+V
+Kρ dV =
+2π
+ϕ=0
+1
+ρ=0
+4
+z=1−ρ
+2
+Kρ dz ρdρ dϕ =
+2π
+ϕ=0
+1
+ρ=0
+Kρ[z]4
+z=1−ρ
+2
+ρdρdϕ
+=
+2π
+ϕ=0
+1
+ρ=0
+Kρ2(3 + ρ2)dρdϕ =
+2π
+ϕ=0
+K ρ3 +
+ρ5
+5
+1
+ρ=0
+dϕ
+= K 1 +
+1
+5
+2π
+ϕ=0
+dϕ =
+6K
+5
+[ϕ]2π
+ϕ=0 =
+6K
+5
+· 2π =
+12π
+5
+K
+adibidea
+1.19. Kalkulatu hurrengo integral iteratua
+2
+−2
+√
+4−x
+2
+−
+√
+4−x
+2
+2
+√
+x
+2 +y2
+(x2 + y2) dzdydx
+Ebazpena:
+
+1.2.
+INTEGRAL HIRUKOITZAK
+35
+Emandako integral iteratua integral hirukoitz bat kalkulatzeko da. V integrazio-
+eremuaren adierazpena hau da,
+V = {(x, y, z)| x2 + y2 ≤ z ≤ 2, − 4 − x2 ≤ y ≤
+4 − x2, −2 ≤ x ≤ 2}
+Gorputz hori betetzerakoan lehenengo zutabe bat osotuko da integral iteratuan,
+zutabea z =
+x2 + y2 gainazalean hasten da (kono bat) eta planu batean amai-
+tzen da z = 2. Gelditzen den integral bikoitzaren integrazio-eremua xy planuko
+eremu bat da (V -ren proiekzioa xy planoan). x eta y-ren mugak direla eta las-
+ter konturatzen gara proiekzioa zirkulu zentratu bat dela, erradioa 2. Irudiak
+erakusten du gure ideien emaitza,
+z
+2
+2
+2
+x
+y
+Nabari da koordenatu zilindrikoak erabiltzea askoz egokiagoa dela V -ren forma-
+ren aldetik. Gainera kasu honetako integratzeko funtzioa ere errezagoa gelditzen
+da koordenatu zilindrikoetan,
+x2 + y2 = ρ2 cos2 ϕ + ρ2 sin2 ϕ = ρ2
+Bestaldetik konoaren formula zilindrikoa hau da,
+z =
+x2 + y2 → z = ρ
+Integral hirukoitza honela kalkulatuko dugu,
+V
+(x2 + y2) dV =
+2π
+ϕ=0
+2
+ρ=0
+2
+z=ρ
+ρ2 dz ρdρ dϕ =
+2π
+ϕ=0
+2
+ρ=0
+ρ3[z]2z=ρdρdϕ
+=
+2π
+ϕ=0
+2
+ρ=0
+ρ3(2 − ρ)dρ dϕ =
+2π
+ϕ=0
+ρ4
+2
+−
+ρ5
+5
+2
+ρ=0
+dϕ
+=
+25
+4
+−
+25
+5
+2π
+ϕ=0
+dϕ = 25
+1
+4
+−
+1
+5
+[ϕ]2π
+ϕ=0
+=
+32
+20
+· 2π =
+16π
+5
+Koordenatu esferikoak
+Espazioko puntu baten koordenatu esferikoak (r, θ, ϕ) hirukote da, luzera bat
+eta angelu bi. Irudiak erakusten du nola deﬁnitzen diren: r puntutik espazioko
+
+36 KAPITULUA 1. ALDAGAI ANITZEKO FUNTZIOAK. INTEGRAKETA
+O jatorriraino doan distantzia da, θ angelua puntuaren erradioa eta z ardatz
+positiboal mugatutako angelua, ϕ angelua puntuaren planu erradial erdiinﬁnitua
+eta xz planuaren arteko angelua,
+P
+(r, θ, ϕ)
+r
+x
+y
+z
+θ
+ϕ
+Hiru dimentsio espazio osoa betetzeko koordenatu esferikoak honela aldatu behar-
+ko ditugu,
+r ∈ [0, ∞), θ ∈ [0, π], ϕ ∈ [0, 2π)
+Koordenatu cartesiarren eta esferikoen artean aldatzeko ekuazio hauek ditugu.
+x = r sin θ cos ϕ
+r =
+x2 + y2 + z2
+y = r sin θ sin ϕ
+θ = arctan
+x2 + y2
+z
+z = r cos θ
+ϕ = arctan
+y
+x2 + y2
+Hurrengo irudiak erakusten du zein formako zati txikiak erabiltzen diren eremuak
+zatitzeko koordenatu esferikoetan,
+r sin θ dϕ
+rdθ
+dr
+dϕ
+dθ
+θ
+r
+Zatiaren gai˜
+neko eta azpiko tapak esfera zatiak dira, azalera rdθ · r sin θ dθ. Beste
+bi aurpegi kono zatiak dira, azalera dr · r sin θ dϕ eta beste biak planu erradial
+zatiak dira, azalera dr · rdθ. Zatiaren bolumena zera da,
+dV = dr · rdθ · r sin θdϕ = r
+2 sin θdrdθdϕ
+Integrazio-
+eremuaren forma aldetik koordenatu esferikoak erabiltzeko egokia kaxa
+esferikoa da, hurrengo irudikoa,
+
+1.2.
+INTEGRAL HIRUKOITZAK
+37
+θ1
+θ2
+ϕ1
+ϕ2
+r1
+r2
+bere adierazpena hau dela,
+V = {(r, θ, ϕ)|r1 < r < r2, θ1 < θ < θ2, ϕ1 < ϕ < ϕ2}
+Integratzeko funtzioa f 
+(x, y, z) formula cartesiarrekoa balitz koordenatu esferi-
+koak lortzeko aldaketa formulak erabili beharko ditugu. Integral hirukoitza, kaxa
+esferikoan, formula honetako integral iteratu hau litzateke,
+V
+f (x, y, z) dV
+=
+ϕ2
+ϕ=ϕ1
+θ2
+θ=θ1
+r2
+r=r1
+f (r sin θ cos ϕ, r sin θ sin ϕ, r cos θ) r2dr sin θdθ dϕ
+Kaxa esferikoaren aldaketa xinplea izango litzateke gaieko eta azpiko esfera zatiak
+beste formako gainazalak balira. Orduan r-ren mugak θ-ren eta ϕ-ren funtzioak
+lirateke. Bolumenaren adierazpena hau litzateke,
+V = {(r, θ, ϕ)|u1(θ, ϕ) < r < u2(θ, ϕ), θ1 < θ < θ2, ϕ1 < ϕ < ϕ2}
+eta, noski, integral iteratua honelakoa litzateke,
+ϕ2
+ϕ=ϕ1
+θ2
+θ=θ1
+u2(θ,ϕ)
+r=u1(θ,ϕ)
+f (r sin θ cos ϕ, r sin θ sin ϕ, r cos θ) r2dr sin θdθ dϕ
+Noski, aldaerak asko daude.
+adibidea
+1.20. Kalkulatu integral hirukoitz hau,
+V
+e(x
+2 +y2+z2)3/2 dV
+nun integrazio-eremua 1 erradioko bola bat den.
+Ebazpena:
+Integrazio-eremua bola bat denez (kaxa esferikoen kasu partikularra) koordenatu
+esferikoak egokiak dira. Gainera integratzeko funtzioa ere xinpliﬁkatzen da eta
+integral iteratu errez bat gelditzen da. V -ren adierazpena hau da,
+V = {(r, θ, ϕ)|0 < r < 1, 0 < θ < π, 0 < ϕ < 2π}
+
+38 KAPITULUA 1. ALDAGAI ANITZEKO FUNTZIOAK. INTEGRAKETA
+eta integratzeko funtzioa honela geldizten da koordenatu esferikoetan,
+e(x
+2 +y2+z2)3/2 = e(r
+2 )3/2 = er
+3
+V
+e(x
+2 +y2+z2)3/2 dV =
+2π
+ϕ=0
+π
+θ=0
+1
+r=0
+er
+3
+r2dr sin θdθ dϕ
+=
+2π
+ϕ=0
+π
+θ=0
+er
+3
+3
+1
+r=0
+sin θdθdϕ =
+1
+3
+(e − 1)
+2π
+ϕ=0
+[− cos θ]
+π
+θ=0 dϕ
+=
+2
+3
+(e − 1)
+2π
+ϕ=0
+dϕ =
+2
+3
+(e − 1)[ϕ]
+2π
+ϕ=0 =
+4π
+3
+(e − 1)
+Koordenatu cartesiarretan hau integratu beharko genuke,
+1
+x=−1
+√
+1−x
+2
+y=−
+√
+1−x
+2
+√
+1−x
+2
+−y
+2
+z=−
+√
+1−x
+2
+−y
+2
+e(x
+2 +y+z2)3/2 dzdydx
+adibidea
+1.21. Koordenatu esferikoak erabiliz kalkulatu z =
+x2 + y2 konoaren
+gainean eta x2 + y2 + z2 = z esferaren barruan dagoen gorputzaren bolumena
+Ebazpena:
+Esferaren ekuazio modu honetan aldatuz,
+x2 + y2 + z2 = z → x
+2 + y2 + z2 − z = 0 → x2 + y2 + z −
+1
+2
+2
+=
+1
+4
+konturatzen gara esferaren erradioa 1/2 dela eta bere zentrua (0, 0, 1/
+2) puntuan
+dagoela.
+Bestaldetik konoa simetrikoa da z ardatzarekiko, formula ez da aldatzen (x, y)
+(−x, −y)-rekin ordezkatuz, z ardatza da konoaren ardatza. Konoaren erpina
+(0, 0, 0) puntua da, eta z-ren balioak positiboak dira. Konoaren maila-
+lerroak, z
+konstanteko lerroak, zirkunferentzi zentratuak dira,
+x2 + y2 = k2
+gero eta erradio handiagokoak. Eskatutako bolumena irudiko gorputzarena da,
+
+1.2.
+INTEGRAL HIRUKOITZAK
+39
+x
+y
+z
+O
+1/2
+Bere adierazpen esferikoa jartzeko esferaren eta konoaren adierazpen esferikoak
+behar ditugu,
+(esfera)
+r2 = r cos θ −→ r = cos θ
+(konoa)
+r cos θ = r sin θ → tan θ = 1 −→ θ = π/4 (45 gradu)
+eta integrazio-eremuko adierazpena honela gelditzen da,
+V = {(r, θ, ϕ)|0 < r < cos θ, 0 < θ < π/4, 0 < ϕ < 2π}
+eta bolumenaren kalkulua zera izango da,
+V =
+v
+dV =
+2π
+ϕ=0
+π/4
+θ=0
+cos θ
+r=0
+r2dr sin θdθ dϕ =
+2π
+ϕ=0
+2π
+θ=0
+r3
+3
+cos θ
+r=0
+sin θdθdϕ
+=
+1
+3
+2π
+ϕ=0
+2π
+θ=0
+cos3 θ sin θdθdϕ =
+1
+3
+2π
+ϕ=0
+−
+cos4 θ
+4
+π/4
+θ=0
+dϕ
+= −
+1
+12
+1
+4
+− 1
+2π
+ϕ=0
+dϕ =
+1
+16
+[ϕ]
+2π
+ϕ=0 =
+π
+8
+Hurrengo irudiak erakusten du zein urratsetan osotu dugun eskatutako bolumena,
+x
+y
+z
+x
+y
+z
+x
+y
+z

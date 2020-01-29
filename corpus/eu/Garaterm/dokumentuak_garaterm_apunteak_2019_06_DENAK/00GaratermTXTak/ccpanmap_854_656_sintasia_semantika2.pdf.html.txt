@@ -1,0 +1,946 @@
+
+
+
+
+
+
+Logika elementala. QL hizkuntza formala: alfabetoa, terminoen multzoa, 
+adierazpen  ongi  formatuen  multzoa.  Azpi-hizkuntzak:  murrizpenak, 
+hedapenak.  Predikatu  soilen  logikaren  hizkuntza  formala:  QLS.  Lehen 
+maila, n. maila. 
+ 
+ 
+Sarrera 
+ 
+Orain  arte  egin  dugun  logikaz,  hau  da,  proposizioen  logikaz  baliatuz,  matematikan  eta, 
+hedapenez,  beste  zenbait  hizkuntzetan  gertatzen  diren  arrazonamenduak  ezin  ditzakegu 
+adieraz. Dioguna ulertzeko kontsidera dezagun ondoko arrazonamendu hau: 
+ 
+ 
+Premisak:   
+.- zenbaki bikoiti guztiak 2-ren multiploak dira. 
+ 
+ 
+ 
+.- 14 bikoitia da. 
+ 
+Ondorioa: 
+.- 14  2-ren multiploa da. 
+ 
+Proposizioen  logikan  bi  premisa  hauek  ‘p’  eta  ‘q’  sinboloen  bidez  adieraziko 
+genituzke,  eta  ondorioa  ‘r’  proposizio  sinboloaren  bidez.  Beraz,  proposizioen  logikan 
+aipatutako  arrazonamendua  ‘p,q  |-
+  r’  deribazioaren  bidez  adieraziko  genuke.  Dakigunaren 
+arabera,  p  eta  q  sinboloetatik  r  ondorioztatzea  onartzen  digun  prozedurarik  ez  dago, 
+honengatik,  matematikan  eta  beste  hizkuntzetan  arruntak  izaten  diren  arrazonamenduak 
+adierazteko  beste  logika  maila  batetara  jo  beharko  dugu,  hain  zuzen  ere  logika 
+elementalera, batzuetan ere predikatuen logika deitua izan dena. 
+Proposizioen  logika halako arrazonamendu  adierazteko gauza ez izatearen arrazoia 
+ondoko  hau  da:
+  proposizioen  logikan  proposizioak  ez  dira  barnetik  aztertzen.  Logika 
+elementalean  aldiz,  proposizioak  barnetik  aztertuko  ditugu  beraien  osagaiak  ikusiz,  eta 
+hizkuntza  logiko  espresiboago  hau  tresna  baliagarria  bihurtuko  zaigu  aipatutako 
+arrazonamenduak finkatzeko. 
+ 
+ 
+ 
+ 
+QL 
+HIZKUNTZA 
+FORMALA: 
+ALFABETOA, 
+TERMINOEN 
+MULTZOA, ADIERAZPEN ONGI FORMATUEN MULTZOA. 
+ 
+ 
+Alfabetoa 
+ 
+{ }
+{ }
+{ }
+{ }
+{
+} { }
+{ })
+(,
+,
+,
+,
+∪
+∀
+∪
+→
+¬
+∪
+∪
+∪
+∪
+=
++
++
+∈
+∈
+∈
+∈
+∈
+∈
+N
+n
+K
+i
+n
+i
+N
+n
+J
+i
+n
+i
+I
+i
+i
+N
+n
+n
+QL
+F
+f
+a
+x
+A
+ 
+ 
+ 
+ 
+ 
+ 
+
+AQL alfabetoan ondoko azpimultzo hauek bereizten ditugu: 
+ 
+ 
+A1=  
+{xn}n∈ .  Aldagai  indibidualen  multzoa  da.  QL  hizkuntzan,  multzo  honen 
+kardinala 
+ℵ
+o da. 
+ 
+A2=
+{ai}i∈I. Konstante indibidualen multzoa da. Kasurik normalenean multzo honen 
+kardinala  gehienez 
+ℵ
+o  da,  hau  da,  zenbaki  arrunten  multzoaren  kardinala.  Multzo 
+hutsa ere izan daiteke. 
+ 
+A3=  {
+n
+i
+f
+}i∈J,  n∈ +  .  Funtzio  sinboloen  multzoa  da.  Kasurik  arruntenean  multzo 
+honen  kardinala  gehienez 
+ℵ
+o  da.  A3  multzo  hutsa  izan  daiteke  ere. 
+n
+i
+f
+QL-ren 
+funtzio  sinbolo  bat  bada,  azpi-indizeak  (i-k)  funtzio  sinboloen  arteko 
+desberdintasuna adierazten du, eta goi-indizeak (n-
+k) sinbolo bakoitzaren adizitatea 
+(zenbat  terminoei  aplikatzen  zaie)  adierazten  du.  Funtzio  sinbolo  baten  adizitatea 
+aplikazio  bat  da  funtzio  sinboloen  multzotik  zenbaki  arrunt  positiboen  multzora 
+doana. 
+ 
+A4=  {
+n
+i
+F
+}i∈K,  n∈ +    Predikatu  sinboloen  azpimultzoa  da.  A4-ren  kardinala, 
+normalean, 
+ℵ
+o  baino  txikiagoa  edo  berdina  da.  Multzo  honek  ezin  du  hutsa  izan. 
+n
+i
+F
+QL-ko  predikatu  sinbolo  bat  bada,  azpi-indizeak  (i-
+k)  predikatu  sinboloen 
+arteko  desberdintasuna  adierazten  du,  eta  goi-indizeak  (n-
+k)  sinbolo  bakoitzaren 
+adizitatea.  Adizitatea,  lehen  bezala,  predikatu  sinboloen  multzotik  zenbaki  arrunt 
+positiboen multzora doan aplikazio bat da. 
+ 
+A5= {
+¬, →} konektatzaileen multzoa 
+ 
+A6= {
+∀} zenbatzaile unibertsalaz osatutako multzoa da. 
+ 
+A7= { (, ) } bereizle grafikoen multzoa da. 
+ 
+ 
+Ikusi  dugunaren  arabera  QL  hizkuntzaren  alfabetoa  infinitua  da  eta  predikatuen 
+logikarako edozein hizkuntzatan A2 eta A4 multzoek agertu behar dute. 
+ 
+ 
+OHARRAK 
+ 
+1.  QL hizkuntzaren alfabetoa definitu ondoren, hizkuntza logiko ezberdinak kontsidera 
+ditzakegu  horretarako  alfabetoan  azaltzen  diren  konstante  sinbolo,  funtzio  sinbolo 
+eta predikatu sinboloen azpimultzoak zehaztuz. Hori egiten dugunean, hizkuntzaren 
+tipoa  definitzen  dugu.  Tipoa  definitzen  diguten  sinboloak  hizkuntzaren  konstante 
+ez-logikoak deituak izan dira. 
+τ QL hizkuntzarako tipo bat bada, τ-k mugatzen duen 
+QL-ren azpi-hizkuntzari QL(
+τ) deituko diogu. 
+2.  QL  alfabetoan 
+¬,  →,  ∀  sinbolo  logikoak  ditugu.  Aipatutako  bi  konektatzaileak 
+hartuz,  beste  konektatzaile  guztiak  definitzen  badakigu  PL  hizkuntzan  bezala. 
+∀ 
+
+kuantifikatzaile  unibertsala  erabiliz,  beste  kuantifikatzaile  bat, 
+∃,  definitzen  da 
+honako era honetan: 
+ϕ
+ϕ
+¬
+¬∀
+≡
+∃
+i
+i
+x
+x
+, non 
+ϕ hizkuntzaren formula bat adierazteko 
+meta-sinbolo bat baita.  
+∃ kuantifikatzaile existentziala deitzen da. 
+ 
+ 
+ 
+Formulen multzoa 
+ 
+QL  hizkuntzaren  aof-
+en  multzoa  mugatu  aurretik  beharrezkoa  dugu  terminoen  multzoa 
+definitzea. 
+ 
+ 
+Terminoen multzoa 
+ 
+ 
+Multzo hau era errekurtsibo batez adierazten da honako erregela hauek emanez: 
+ 
+1.  i guztientzat ai termino bat da. 
+2.  i guztientzat xi termino bat da. 
+3.  t1,  t2,...,tn  terminoak  badira  (n  finitua  izanik),  orduan, 
+n
+...t
+.
+t
+t
+n
+i
+f
+2
+1
+  terminoa  da  i 
+guztientzat. 
+4.  Itxidura  erregela:
+  ez  da  beste  terminorik  aurreko  hiru  erregela  hauen  erabilpen 
+finitutik sortuak direnetatik at. 
+ 
+ 
+Adierazpen ongi formatuen  edo formulen multzoa 
+ 
+ 
+Defini dezagun aldez aurretik zer den adierazpen ongi formatu 
+(aof) atomiko bat: t1, 
+t2,...,tn terminoak badira (n finitua izanik) eta 
+n
+i
+F
+ predikatu sinbolo n-tar bat bada, orduan, 
+n
+...t
+t
+t
+n
+i
+F
+2
+1
+ aof atomikoa da. 
+ 
+Ikus ditzagun aof-en multzoa mugatzen duten formazio erregelak: 
+1.  Aof atomikoak aof-ak da. 
+2.  ϕ aof bada, orduan ¬ϕ aof-a da. 
+3.  ϕ eta ψ aof-ak badira, orduan (ϕ → ψ) aof bat da. 
+4.  ϕ aof-a bada eta x
+i aldagai indibidual sinbolo bat bada, orduan 
+∀x
+i
+ ϕ aof bat da. 
+5.  Ez da beste aof-
+rik aurreko lau erregela hauen erabilpen finitutik sortuak direnetatik 
+kanpo. 
+ 
+ 
+ 
+
+Adibideak 
+ 
+1. 
+1
+1
+2
+3
+1
+x
+a
+x
+f
+,  
+3
+a
+f
+x
+f
+a
+x
+f
+1
+1
+1
+2
+2
+1
+2
+3
+1
+ eta x5 terminoak dira. 
+2. 
+1
+1
+2
+3
+1
+1
+1
+x
+a
+x
+f
+F
+ eta 
+2
+1
+2
+1
+x
+x
+F
+ aof atomikoak dira. 
+3. 
+(
+)
+(
+2
+0
+2
+1
+0
+1
+2
+1
+1
+1
+1
+0
+x
+x
+F
+a
+F
+x
+F
+x
+x
+→
+¬
+→
+∀
+∃
+1 aof bat da. 
+ 
+ 
+Azpiformula 
+ 
+ 
+Izan bedi 
+ϕ nahi bezala emandako aof bat. ϕ-ren azpi-formula bat, definizioz, hauxe da: 
+formula bat osatzen duen eta 
+ϕ-n dagoen sinboloren segida kontsekutibo bat. 
+ 
+ 
+Definizioak 
+ 
+1.  t  terminoa  itxia  da  baldin  eta  bakarrik  baldin  t-
+n  aldagairik  azaltzen  ez  bada. 
+Adibidez, 
+1
+a
+a
+a
+f
+4
+3
+3
+1
+. 
+ 
+2.  Kuantifikatzaile baten eragina. 
+Izan bedi 
+ϕ nahi bezala emandako aof bat. ϕ-ren azaltzen den kuantifikatzaile baten 
+eragina, kuantifikatzaile honetan hasi eta 
+ϕ-ren barruan dagoen lehendabiziko azpi-
+formula izango da. 
+ 
+3.  Aldagai baten azalpen aske eta lotua.  
+Izan  bitez 
+ϕ nahi bezala emandako aof bat eta x
+i 
+ϕ-n azaltzen den aldagai bat. x
+i 
+aldagaiak 
+ϕ-n  azalpen  lotua  duela  diogu  baldin  eta  bakarrik  baldin  x
+i  zenbatzaile 
+baten  ondotik  badator  edo  zenbatzaile  baten  eraginpean  badago.  xi  aldagaiak 
+ϕ-n 
+azalpen  askea  duela  diogu  baldin  eta  bakarrik  baldin  badu  azalpenen  bat  lotua  ez 
+dena. 
+ 
+4.  Izan  bitez 
+ϕ nahi bezala emandako aof bat eta x
+i 
+ϕ-n azaltzen den aldagai bat. x
+i 
+aldagaia askea da 
+ϕ-n baldin eta bakarrik baldin x
+i-k gutxienez azalpen askeren bat 
+badu 
+ϕ-n.  x
+i  aldagaia  lotua  da 
+ϕ-n  baldin  eta  bakarrik  baldin  x
+i-k,  gutxienez, 
+azalpen loturen bat badu 
+ϕ-n. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                 
+1 Hemen suposatzen dugu 
+∃ sinboloa ∀ sinboloaren bitartez definituta dagoela esandako eran. 
+
+PREDIKATU SOILEN HIZKUNTZA FORMALA: QLS. 
+ 
+QLS hizkuntza QL hizkuntzaren azpi-
+hizkuntza bat da. QLs hizkuntzaren alfabetoa QL-ren 
+alfabetoko sinbolo guztiek, funtzio sinboloek izan ezik osatzen dute. 
+Horrela, QLs hizkuntzari dagokion termino multzoa definitzea errazten da:  
+ 
+ 
+1.  ai termino bat da i guztientzat. 
+2.  xi termino bat da i guztientzat.  
+3.  ez  da  beste  terminorik  aurreko  bi  erregela  hauen  erabilpen  finiturik 
+sortuak direnetatik kanpo. 
+ 
+Esandakoa  kontutan  hartuz,  bistan  dago  QLs  hizkuntzaren  aof  atomiko  batean  agertzen 
+diren terminoek konstanteak nahiz aldagai sinboloak izan behar dutela 
+ 
+ 
+MAILAKETA HIZKUNTZA LOGIKOETAN 
+ 
+ 
+Hizkuntza logiko bat lehen mailakoa dela diogu baldin eta bakarrik baldin beraren aof-
+en  multzoa  definitzerakoan,  kuantifikatzaileak  aldagai  indibidual  sinboloak  bakarrik 
+kuantifika baditzake. 
+Definizioa  kontuan  hartuz,  QL  eta  QLs  hizkuntzak  lehen  mailakoak  direla  esan 
+dezakegu. 
+ 
+ 
+Hizkuntza  logiko  bat 2. mailakoa dela diogu baldin eta bakarrik baldin  beraren aof-
+en 
+multzoa  definitzerakoan  zenbatzaileak  aldagai  indibidual  nahiz  predikatu  sinboloak 
+kuantifika baditzake. 
+ 
+ 
+Hizkuntza  logiko  bat 3. mailakoa dela diogu baldin eta bakarrik baldin  beraren aof-
+en 
+multzoa  definitzerakoan  zenbatzaileak  aldagai  indibidual,  predikatu  sinboloak  eta 
+predikatuen predikatu sinboloak kuantifika baditzake. 
+ 
+ 
+ 
+ 
+ 
+
+Semantika: 
+interpretazio 
+kontzeptua 
+(QL-(erlazio)-egitura). 
+Asegarritasuna,  egia,  eredua,  baliozkotasun  logikoa,  k-baliozkotasuna, 
+adierazpen ongi formatu batentzat eta adierazpen ongi formatuen multzo 
+batentzat.  Ondoriotasun  semantikoa.  Adierazpen ongi  formatuen  arteko 
+baliokidetza semantikoa. 
+ 
+ 
+SEMANTIKA: INTERPRETAZIO KONTZEPTUA.  (ERLAZIO)-EGITURA. 
+ 
+Orain  arte  logika  elementalari  dagokionez,  QL  hizkuntza  formala  eta  sintaxi 
+kontzeptu batzuk ikusi  ditugu. Oraingoan QL hizkuntzaren semantika zehaztuko dugu QL 
+hizkuntzarentzat interpretazio kontzeptua definituz. 
+ 
+Izan bedi 
+τ QL hizkuntzarako tipo bat, eta demagun tipo honek mugatzen digun sinbolo ez-
+logikoen  multzoa 
+{ }
+{ }
+{ }
+"
+'
+,
+'
+'
+N
+n
+K',
+i
+n
+i
+N
+n
+J
+i
+n
+i
+I
+i
+i
+F
+f
+a
+∈
+∈
+∈
+∈
+∈
+∪
+∪
+ 
+  dela,  non  I’
+⊆ I, J’⊆ J, 
+K’
+⊆ K, N’⊆ N+ eta N”⊆N+ baitira. QL
+(τ) hizkuntzarentzako I interpretazioa era honetan 
+definitzen da: 
+ 
+I bikote ordenatu bat da, I= (D, J), non :  
+ 
+ 
+D multzo bat baita, interpretazioaren unibertso ez hutsa, D 
+≠ ∅. 
+ 
+J interpretazio funtzio baita. 
+ 
+ 
+J  funtzioaren  domeinua  hizkuntzaren  sinbolo  ez-
+logikoen  multzoa  da,  hau  da: 
+{ }
+{ }
+{ }
+"
+'
+,
+'
+'
+N
+n
+K',
+i
+n
+i
+N
+n
+J
+i
+n
+i
+I
+i
+i
+F
+f
+a
+∈
+∈
+∈
+∈
+∈
+∪
+∪
+ 
+. Irudi multzoa honela mugatzen dugu: 
+ 
+ 
+Alfabetoko  konstante  indibidual  bakoitzaren  irudia  unibertsoko  elementu  bereizi  bat 
+izango da, beraren erreferentzia edo denotazioa deitutakoa. Hau da, i guztientzat, J
+(ai) = 
+i
+a
+∈ D. 
+ 
+QL(
+τ)  hizkuntzako  funtzio  sinbolo  bakoitzaren  irudia  J-ren  bidez  
+(edo  beraren 
+denotazioa  edo  erreferentzia)  aplikazio  bat  izango  da  era  honetan  mugatuta:
+ 
+D
+n
+ : D
+n
+i
+f
+ 
+)
+n
+i
+J(f
+→
+=
+.  Hau  da,  funtzio  sinbolo  n-tar  baten  irudia  D
+n-tik  D-ra  doan 
+aplikazio bat izango da. 
+ 
+QL(
+τ) hizkuntzako predikatu sinbolo bakoitzaren irudia J-ren bidez 
+(beraren denotazioa 
+edo  erreferentzia)  erlazio  bat  izango  da  era  honetan  mugatuta: 
+n
+ D
+ 
+n
+i
+F
+ 
+)
+n
+i
+J(F
+⊆
+=
+. 
+Hau da, predikatu sinbolo n-tar baten irudia D
+n-ren azpimultzo bat izango da, edo beste 
+era batera esanda D-n definitutako erlazio n-tarra. 
+ 
+ 
+
+Interpretazioaren ideia ere erlazio egiturak deitutakoen bidez adierazi ohi da. Horrela 
+QL(
+τ) hizkuntza interpretatzeko ondoko erlazio egitura hauek hartzen dira:  
+A  =
+{ }
+{ }
+{ }
+ 
+ 
+  
+"
+,
+,
+'
+,
+'
+,
+'
+,
+N
+n
+K
+i
+n
+i
+F
+N
+n
+J
+i
+n
+i
+f
+I
+i
+i
+a
+D
+∈
+∈
+∈
+∈
+∈
+. 
+ 
+Bertan  azaltzen  diren  elementuek  goian  emandako  definizio  bera  dute,  hau  da,  D 
+interpretazio  domeinua  da  eta beste guztiak hizkuntzaren sinbolo ez-
+logikoen denotazioak 
+dira.  
+ 
+ 
+ 
+Asegarritasuna,  egia,  eredua,  baliozkotasun  logikoa,  k-baliozkotasuna 
+adierazpen  ongi  formatu  batentzat  eta  adierazpen  ongi  formatu  multzo 
+batentzat. 
+ 
+ 
+ASEGARRITASUNA 
+ 
+Izan  bedi  A    =
+{ }
+{ }
+{ }
+ 
+ 
+  
+"
+,
+,
+'
+,
+'
+,
+'
+,
+N
+n
+K
+i
+n
+i
+N
+n
+J
+i
+n
+i
+I
+i
+i
+F
+f
+a
+D
+∈
+∈
+∈
+∈
+∈
+  QL(
+τ) hizkuntzarako egitura 
+bat.  Har  dezagun  D-
+ren  domeinuko  elementuez  osatutako  segida  bat  s  =  <b0,  b1, 
+b2,.....,bi,....>.  Defini  dezagun  s*  aplikazioaren  bidez  QL(
+τ)-ren  terminoen  balioa  s 
+segidarentzat honako era honetan: 
+ 
+s*: 
+{Term} → D,  
+non 
+{Term} QL(τ)-ren terminoen multzoa baita: 
+ 
+i) 
+t = xi bada, s*(t) = s*(xi) = bi 
+∈ D, hau da, segidaren i. tokian dagoen elementua.  
+ 
+ii) 
+t = ai bada, s*(t) = s*(ai) = J(ai) = 
+i
+a
+ 
+∈ D, hau da a
+i konstantearen denotazioa. 
+ 
+iii) 
+t = 
+n
+t
+t
+n
+i
+f
+L
+1
+ bada, s*(t) = s*(
+n
+t
+t
+n
+i
+f
+L
+1
+) = 
+n
+i
+f
+(s*(t1),...,s*(tn)) 
+∈ D, non  n
+i
+f
+,  
+n
+i
+f
+  funtzio  sinboloaren  interpretazioa  baita.  Hau  da,  t-
+ren  balioa  t1,  t2,...,  tn 
+terminoen balioen irudia 
+n
+i
+f
+ aplikazioaren bidez da. 
+ 
+ 
+Aurreko definizioa kontutan hartuz, izan bitez egitura bat, A , egitura honen unibertsoko 
+elementuez osatutako segida bat, s, eta QL(
+τ)-ren aof bat, ϕ. s-k ϕ formula asetzen du A  
+egituran baldin eta bakarrik baldin honako baldintza hauetako bat betetzen bada:
+ 
+ 
+i) 
+ϕ aof atomikoa bada, hau da ϕ = 
+n
+t
+t
+n
+i
+F
+L
+1
+ bada,  orduan s segidak 
+ϕ asetzen 
+du baldin eta bakarrik baldin 
+n
+i
+F
+(s*(t1),...,s*(tn)) betetzen bada, hau da, baldin eta 
+
+bakarrik  baldin  <s*(t1),...,s*(tn)> 
+∈ n
+i
+F
+  edo  beste  hitzetan  esanda,  t1,  t2,...,  tn 
+terminoen balioak 
+n
+i
+F
+ erlazioan baldin badaude. 
+ 
+ii) 
+ ϕ = ¬χ bada, orduan s segidak ϕ asetzen du A -n baldin eta bakarrik baldin s-
+k 
+ez badu 
+χ asetzen A  -n.  
+ 
+iii) 
+ ϕ = χ→ψ bada, orduan s segidak ϕ asetzen du A -n baldin eta bakarrik baldin s-
+k 
+χ asetzen ez badu A -n edo s-k ψ asetzen badu A  egituran. 
+ 
+iv) 
+ ϕ = ∀x
+i
+ψ bada, orduan s segidak ϕ asetzen du A -n baldin eta bakarrik baldin s 
+segidatik gehienez i. elementuan bereizten diren segida guztiek 
+ψ asetzen badute A  
+egituran. 
+ 
+s segidak 
+ϕ formula asetzen badu A  egituran A  |= ϕ[s] idatziko dugu. 
+ 
+Izan bitez QL-ren aof bat, 
+ϕ, eta QL-ren aof multzo bat Γ. ϕ asegarria da baldin eta 
+bakarrik  baldin  badaude  gutxienez  egitura  bat,  A    ,  eta  egitura  honen  unibertsoko 
+elementuez osatutako segida bat, s, non s-k 
+ϕ asetzen baitu. Γ multzoa asegarria dela diogu 
+baldin  eta  bakarrik  baldin  badaude  egitura  bat,  A  ,  eta  egitura  honen  unibertsoko 
+elementuez osatutako segida bat, s, non s-k 
+Γ-ko aof guztiak batera asetzen baititu.  
+ 
+Izan bitez QL-ren aof bat, 
+ϕ, eta QL(τ) hizkuntzarako egitura bat, A . ϕ A  egituran 
+egiazkoa  dela  diogu  baldin  eta  bakarrik  baldin 
+A  -ren  unibertsoko  elementuez  osatutako 
+segida  guztiek 
+ϕ asetzen  badute.  Bestalde,  ϕ  egiazkoa  bada  A  -n,  A    ϕ-
+ren  eredua  dela 
+esango dugu. Sinboloetan A  |= 
+ϕ idatziko dugu. ϕ A  egituran faltsua dela diogu baldin eta 
+bakarrik  baldin  A  -
+ren  unibertsoko  elementuez  osatutako  segida  batek  ere  ez  badu 
+ϕ asetzen2.  Sinboloetan A  |≠ ϕ  idatziko dugu. 
+Γ  multzoa  A    egituran  egiazkoa  dela  diogu  baldin  eta  bakarrik  baldin  A  -
+ren 
+unibertsoko  elementuez  osatutako  segida  guztiek 
+Γ  multzoko  formula  guztiak  batera 
+asetzen  badituzte. 
+Γ egiazkoa  bada  A  -n,  A      Γ-ren  eredua  dela  esango  dugu  eta  era 
+horretan idatziko dugu A  |= 
+Γ. Γ multzoa A  egituran faltsua dela diogu baldin eta bakarrik 
+baldin  A  -
+ren  unibertsoko  elementuez  osatutako  segida  bakar  batek  ere  ez  baditu 
+Γ 
+multzoko formula guztiak batera asetzen. 
+ 
+Izan  bedi  QL-ren  aof  bat, 
+ϕ. ϕ  logikoki  baliozkoa  dela  diogu  baldin  eta  bakarrik 
+baldin  QL  hizkuntzaren  egitura  guztiak 
+ϕ-ren ereduak badira. ϕ logikoki baliozkoa izatea 
+sinbolikoki |= 
+ϕ adieraziko dugu.  
+ 
+ϕ k-
+baliozkoa dela diogu eta era honetan idatzi, |=kϕ, baldin eta bakarrik baldin, k 
+kardinaleko unibertsoa duten egitura guztiak 
+ϕ-ren ereduak badira. 
+                                                 
+2  Definizio  honen  arabera  gerta  daiteke 
+ϕ  formula  ez  egiazkoa  ez  eta  faltsua  ere  izatea.  Hau  da,  faltsua 
+izatearen ukazioa ez da egiazkoa izatea emandako definizioaren arabera. 
+
+ 
+ 
+ 
+ONDORIOTASUN SEMANTIKOA 
+ 
+Izan bitez 
+ϕ eta χ QL-
+ren bi aof. χ ϕren ondorio semantikoa dela diogu baldin eta bakarrik 
+baldin A  egitura guztientzat, 
+ϕ formula asetzen duten segida guztiek χ ere asetzen badute. 
+χ ϕ-ren ondorio semantikoa bada, horrela idatziko dugu ϕ |= χ. 
+Era berean, 
+Γ QL-ren aof multzo bat bada, ϕ Γ-ren ondorio semantikoa dela esango dugu, 
+Γ |=  ϕ  baldin  eta  bakarrik  baldin  egitura  guztientzat  Γ-
+ren  formulak  aldi  berean  asetzen 
+dituzten segida guztiek 
+ϕ ere asetzen badute. 
+ 
+ 
+BALIOKIDETZA SEMANTIKOA 
+ 
+ϕ eta χ formulak baliokide semantikoak direla diogu, ϕ ≡ χ, baldin eta bakarrik baldin ϕ 
+ |= χ eta χ |= ϕ badira, hau da, χ ϕ-ren ondorio semantikoa eta ϕ χ-
+ren ondorio semantikoa 
+gertatzen bada. 

@@ -1,0 +1,527 @@
+
+
+
+
+
+
+
+
+5. gaia Hipotesi-kontrastea.Lagin bakar baten azterketa
+
+****** 5.HIPOTESI-KONTRASTEA. LAGIN BAKAR BATEN AZTERKETA ******
+Ikertzailea sarritan, aurre-esperientzia edo bere intuizioa direla kausa,
+esperientzi plangintza diseinatzerakoan zenbait hipotesi formulatzen ausartzen
+da. Hipotesi hauek, gehien baten, populazioaren parametro batetarako zenbakizko
+balioak finkatzean datza.
+Estatistika induktiboak hasierako hipotesia - beti termino probabilistikoetan -
+onartu edo errefusatzeko metodo zientifiko egokiak eskeintzen dizkigu,
+honetarako, populazioaren adierazgarria den laginean baturiko informazioan
+oinarriturik.
+Hipotesi-kontrastearen arazoaren formulazio orokorra azaldu baino lehen, kasu
+konkretu eta ohikoa aztertuko dugu.
+***** 5.1LEHENDABIZIKO ADIBIDEA: HIPOTESI-KONTRASTEAREN KONTZEPTU INTUIKORRAK
+*****
+DemagunXezaguneko populazio normala dela. Hau da,X:N(,).
+Supoza dezagun, H0:=0hipotesi “nulua”, H1:0hipotesi “alternatiboaren”
+aurka kontrastatu nahi dugula. Honetarako,ntamainuko lagina populaziotik
+ateratzen da: .
+
+Arrazonamendu_intuikorra:
+H0hipotesia egiazkoa izango balitz,=0beteko litzateke, eta beraz, :N(0,2/
+n). Hau dela eta, “gehienetan” -ren balioak0-rekiko “hurbil” (gehiegitzaz zein
+gutxiegitzaz) egongo direla eta “gutxitan”0-tik asko aldenduko direla espero
+izango dugu.
+
+Orduan, ondokojokabide-arau_induktiboajar genezake:
+Esperimentalki,ntamainuko lagina aukeraturik, bere -k0-rekiko balio “urruna”
+hartzen badu,=0hipotesia errefusatzen da; lorturiko -ren balioa, ordea,0-tik
+“hurbil” badago,=0hipotesia ezin izango da errefusatu.
+0-rekiko “hurbil” dagoela esango dugu: (onarpen eskualdea) betetzen baldin
+bada.
+0-rekiko “urrun” dagoela esango dugu: , alegia, (eskualde kritikoa) betetzen
+baldin bada.
+Aurreko arauan oinarriturik, lau egoera izan daitezke:
+
+                                                   Egia
+                                   H0                               H1
+         H0ez da           H0egiazkoa da, eta               H1egiazkoa da,
+         errefusatzen      ez da errefusatzen.              baina H0ez da
+                                                            errefusatzen.
+Erabakia
+         H0errefusatzen da H0egiazkoa da,                   H1egiazkoa da, eta
+                           baina errefusatu                 H0errefusatzen da.
+                           egiten da.
+
+Era honetara,bi_errore-motajauki ditzakegu:
+I motako errorea: H0egia denean errefusatzea.
+II motako errorea: H0egia ez denean ez errefusatzea.
+***** 5.2PLANTEAMENDU OROKORRA *****
+5.1. definizioa:Hipotesi nulua,H0-ren bidez adierazten da, egiaztatu nahi den
+hipotesia da.Hipotesi alternatiboa,H1-en bidez adierazten da, H0-ren kontrako
+hipotesia da.
+
+5.2. definizioa: I motako errorearenprobabilitatea, hipotesi nulua egiazkoa
+denean, hau errefusatzearen probabilitatea da.
+
+5.3. definizioa: II motako errorearenprobabilitatea, hipotesi nulua egia ez
+denean, hau ez errefusatzeko probabilitatea da. Probabilitate hau,
+parametroaren balioaren menpean dago.
+
+5.4. definizioa:I motako errorearen probabilitatea, hipotesi-
+kontrastearenadierazgarritasun-mailadeitzen da, etaadierazten da.
+
+5.5. definizioa:II motako errorearen probabilitateaadierazten da, eta ez du
+izen berezirik.
+
+5.6. definizioa:Hipotesi-kontrastearenahalmenaondoko erara definitzen da: (1)
+= 1P(II motako errorea)
+
+Hipotesi-kontrastearen helburu orokorra,etaahalik eta txikienak izanik, test
+estatistikoak erabiltzea da. Helmuga honek konponbide bat eskatzen du, zeren
+etatxikitzeak hipotesi nulua gutxiagotan errefusatzera, etatxikitzeak ordea,
+hipotesi nulua gutxiagotan ez errefusatzera baitaramate. Ekintza hauek
+kontrakoak dira; alegia,handitzen denean,txikitu beharko da, etatxikitzen
+denean, ordea,handitu beharko da. Estrategia orokorramaila-espezifikoan
+(esate baterako , 0.10, 0.05, 0.01, …) finkatzea, etaminimizatzen duen, edo
+baliokidea denahalmena maximizatzen duen, testa erabiltzea izango da.
+
+5.7. definizioa: Onarpen eskualdea,S0, H0errefusatzen ez den estatistikoaren
+balioen heinak osotzen du.
+
+5.8. definizioa: Eskualde kritikoa,S1,H0errefusatzen den estatistikoaren
+balioen heinak osotzen du.
+
+5.9. definizioa:H0egia dela suposatzen bada, laginean behaturikoaren beste
+arraroa edo arraroagoa den emaitza zoriz lortzeko probabilitateap-balioadeitzen
+da.
+
+Hodges eta Lehman-ek “hipotesi nuluaren aldekoa den pertsona batean,
+esperimentuak eragingo luken ustekabe-mailaren neurketa” bezala deskribatzen
+dutep-balioa.
+***** 5.3HIPOTESI-KONTRASTEA EGITEKO URRATSAK *****
+   1. Hipotesia formulatu. Hipotesi-kontraste mota bi daude:
+i)Aldebikoa: H0:=0
+H1:0
+ii)Aldebatekoa: a)Ezkerretikoa: H0:0
+H1:<0
+ b)
+Eskuinetikoa: H0:0
+H1:>0
+   1. Estatistikoa aukeratu.
+   2. p-balioa kalkulatu. Eskuinerantz isatsa duen kontrastean, estatistikoaren
+      baliotik eskuinerantz dentsitate kurbaren peko azalera dap-balioa;
+      ezkerrerantz isatsa duen kontrastean, ordea, estatistikoaren baliotik
+      ezkerrerantz dentsitate kurbaren peko azalera dap-balioa.Aldebiko (edo
+      isats biko) kontrasteetan,p-balioa aldebateko kontrastearenp-balioaren
+      bikoitza da.
+   3. p-balioaadierazgarritasun-mailarekin konparatu.balioa, H0egia denean
+      errefusatzeko probabilitatea, ikertzaileak aurrefinkaturik dago, eta
+      gehienetan 0.1, 0.05 edo 0.01 izaten da. Orduan:
+    * pH0errefusatu
+    * p>H0ez errefusatu (H0onartu)
+H0egia izango balitz, lortutakop-balioa zoriz agertua izateko txikiegia dela
+uste dugunean, H0errefusatu egiten da eta adierazgarritasuna dagoela esaten
+dugu.
+ balioa aurrefinkaturik ez dagoenean, ondoko jokabide araua jarraitzen da:
+    * Baldin etap-balioa > 0.05 bada, emaitzak ez dira adierazgarriak, hau da,
+      ezberdintasunak zoriz agertuak izan ditzake, eta ez dago H0errefusatzeko
+      nabaritasunik.
+    * Baldin eta 0.01 <p-balioa0.05 bada, emaitzakadierazgarriakdirela esaten
+      da.
+    * Baldin eta 0.001 <p-balioa0.01 bada, emaitzakoso adierazgarriakdirela
+      esaten da
+    * Baldin etap-balioa0.001 bada, emaitzakguztiz adierazgarriakdirela esaten
+      da
+Batzutan, 0.05 <p-balioa < 0.10 denean, adierazgarritasun-estatistikorantz
+nolabaiteko joera dagoela pentsa dezakegu.
+***** 5.4BARIANTZA EZAGUNEKO POPULAZIOAREN BATEZBESTEKORAKO HIPOTESI-KONTRASTEA
+*****
+Demagun populazioa normala dela, edo bestela, laginaren tamainua Limitearen
+Teorema Zentrala betetzen dela ziurtatzeko aski handia dela, hau dan30. Kasu
+honetan hipotesi-kontrastea egiteko erabiltzen den estatistikoa da, beronen
+banaketaN(0, 1) delarik (Xnormala denean banaketa zehatza eta, normala ez
+izanik,n30 denean asintotikoa).
+**** 5.4.1Aldebateko kontrasteak ****
+*** 5.4.1.1Ezkerretikoa ***
+H0:0
+H1:<0
+H0egiazkoa dela suposatuz, estatistikoaren balioa kalkulatzen da:
+Kasu honetanp-balioa ondokoa da:p=P(Z<zp).
+
+5.1. adibidea:Bihotzekoaren tamainua txikitzeko asmoz drogen erabilpena, zenbat
+eta interes gehiagoko alorra da klinikan. Tratatu gabeko gaixoetan,
+bihotzekoaren tamainua 25 eta 10ck-g-EQ/m2-ko batezbestekoa eta desbiderapen
+estandarra, hurrenez hurren, dituen banaketa normalari darraio. Beste aldetik,
+drogarekin tratatuko 8 gaixorengan, bihotzekoaren batezbesteko tamainua 16ck-g-
+EQ/m2-koa izan da. Droga hau eraginkorra al da bihotzekoaren batezbesteko
+tamainua txikitzeko?
+Emaitza:
+Hipotesiak ondokoak dira, H0:25 (droga ez da eraginkorra) eta H1:< 25 (droga
+eraginkorra da),= 10 delarik.
+Estatistikoaren balioa da, etap-balioap=P(Z<2.55) =P(Z> 2.55) = 0.005 da.
+Balio hau, hipotesi nulua egia izanik, zoriz aukeraturiko 8 gaixoren
+bihotzekoaren batezbesteko tamainua 16 baino handiagoa ez izatearen
+probabilitatea bezala uler daiteke.p-balioa oso adierazgarria da (0.01 baino
+txikiagoa), honek hipotesi nulua egia dela ezin onartzera, eta beraz, %1eko
+adierazgarritasun-mailaz, droga eraginkorra dela onartzera garamatza.
+*** 5.4.1.2Eskuinetikoa ***
+H0:0
+H1:>0
+H0egiazkoa dela suposatuz, estatistikoaren balioa kalkulatzen da: .
+Kasu honetanp-balioa ondokoa da:p=P(Z>zp).
+
+5.2. adibidea:Umeen kolesterol-mailan familiaren eragina aztertu nahi dugu.
+Ume-populazioaren kolesterol-maila 175 mg/dL-ko batezbestekoa eta 50 mg/dL-ko
+desbiderapen estandarra dituen banaketa normalari darraio. Bihotzekoren bat
+pairatu duten 10 gizonen hainbeste ume zoriz aukeratzen dira, 200 mg/dL-ko
+batezbesteko kolesterol-maila lortzen delarik. Kontrasta ezazu, %5eko
+adierazgarritasun-mailaz, bihotzeko gaixotasuna pairatzen duten gurasoen umeen
+batezbesteko kolesterol-maila, ume-populazio orokorrarena baino handiagoa
+deneko hipotesia.
+Emaitza:
+H0:175 hipotesi nulua, H1:> 175 alternatiboaren aurka kontrastatzen dugu.
+Lorturiko laginerako estatistikoaren balioa da.
+p-balioa ondokoa da:p=P(Z> 1.58) = 0.057 > 0.05.
+Beraz, ezin dugu hipotesi nulua errefusatu eta bihotzeko gaixotasuna pairatzen
+duten gurasoen umeen batezbesteko kolesterol-maila, ume-populazio orokorrarena
+baino altuagoa dela ez da baieztatzen.
+**** 5.4.2Aldebiko kontrasteak ****
+Kontrastatzeko hipotesiak ondokoak dira: H0:= 0
+H1:0
+H0egiazkoa dela suposatuz, estatistikoaren balioa kalkulatzen da: .
+Kasu honetanp-balioa ondokoa da:p= 2P(Z> |zp|).
+
+5.3. adibidea:Afrikatik Euskal Herrira emigraturiko pertsonen kolesterol-maila
+Euskal Herriko populazioarenarekin konparatu nahi dugu. Demagun, Euskal Herriko
+populaziaren kolesterol-mailak 190 mg/dL-ko batezbestekoa eta 40 mg/dL-ko
+desbiderapen estandarra dauzkala, Afrikatik Euskal Herrira emigraturikoenak,
+batezbesteko ezezaguna,eta desbiderapen estandar berdina izanik. Zoriz
+aukeraturiko 100 emigratzaileen batezbesteko kolesterol-maila 181.52 mg/dL-koa
+da. Kolesterol-mailen arteko ezberdintasuna adierazgarria dela esan dezakegu?
+Emaitza:
+%5eko adierazgarritasun-maila aukeratzen dugu (= 0.05).
+Kontrastatzeko hipotesia, H0:= 190 da, H1:190 hipotesiaren aurka.
+Estatistikoaren balioa da.
+p-balioa ondokoa da:p= 2P(Z>|2.12|) = 20.017 = 0.034 < 0.05. Beraz, hipotesi
+nulua errefusatzen dugu, eta batezbesteko kolesterol-maila Afrikatik
+emigraturikoetan eta euskaldunetan ezberdina dela ondorioztatzen dugu.
+
+5.1. oharra:Gogora ezazu kontraste hauek populazioa normala denean, edo
+bestela, laginaren tamainua 30 edo handiagoa denean, direla baliozkoak.
+***** 5.5TESTAREN AHALMENA *****
+Hau, hipotesi nulua faltsua denean errefusatzearen probabilitatea da. Alegia:
+1= 1P(II motako errorea) = 1P(H0ez errefusatu| H0faltsua) =P(H0errefusatu|
+H0faltsua)
+**** 5.5.1Ezkerretiko aldebateko kontrastea ****
+Kontrastatzeko hipotesi nulua H0:0da, H1:=1<0alternatiboaren aurka.
+p-balioa, aurrefinkaturiko adierazgarritasun-maila, baino txikiagoa denean
+H0errefusatuko dugu. Hau da,p=P(Z<zp)denean. Beste era batetara esanda,
+estatistikoaka, konstantea, baino balio txikiagoa edo berdina hartzen duenean.
+Konstante honen balioaadierazgarritasun-mailan oinarriturik kalkula daiteke.
+Alegia,=P(H0errefusatu|H0egia) =P=P(Za) =P(Z>a).
+Beraz,a=z, eskualde kritikoa S1= (,z] izanik.
+Ahalmena ondokoa izango da: 1=P(z|=1) =P.
+H0hipotesiaren baldintza pean, estatistikoaZ:N(0,1) banaketari darraiola
+dakigu. Baina H1baldintza pean hau ez da egia izango. H1hipotesia denean egia,
+:N(1,), hau da, =Z:N(0,1).
+Ondorioz:
+Orduan, testaren ahalmena1balioaren menpekoa da, eta grafikoki 5.1. irudian
+agertzen den bezala adieraz daiteke.
+
+5.4. adibidea:5.1. adibidean egindako kontrastearen ahalmena kalkula ezazu,
+%1eko adierazgarritasun-maila eta bihotzekoaren batezbesteko tamainu
+alternatiboa 10ck-g-EQ/m2-koa izanik.
+Emaitza:
+Hipotesi nulua, H0:25 (= 25) da, H1:< 25 (= 10) alternatiboaren aurka,=
+10 izanik.
+H0baztertzeko, estatistikoaren balioa aurrefinkaturikoabalioa baino txikiagoa
+edo berdina izan beharko da. Hau da, S1= (,a].
+Adierazgarritasun-maila,= 0.01 erabilirik,a-ren balioa kalkulatuko dugu:
+0.01 =P(H0errefusatu|H0egia) =P=P(Za) =P(Z >a).
+Beraz ,a=z0.01=2.3267.
+Beraz, kontrastearen ahalmena ondokoa da:
+1
+=P(H0errefusatu|H0faltsua) =P
+
+5.1. irudia: Bariantza ezaguneko banaketaren batezbestekorako ezkerretiko
+aldebateko kontrastearen (1< 0) ahalmenaren adierazpen grafikoa.
+
+**** 5.5.2Eskuinetiko aldebateko kontrastea ****
+Kontrastatzeko hipotesi nulua H0:0da, H1:=1>0alternatiboaren aurka.
+p-balioa, aurrefinkaturiko adierazgarritasun-maila, baino txikiagoa denean
+H0errefusatuko dugu. Kasu honetan,p=P(Z>zp)denean. Beste era batetara esanda,
+estatistikoakb, konstantea, baino balio handiagoa edo berdina hartzen duenean.
+Berriro,bkonstantearen balioaadierazgarritasun-mailan oinarriturik kalkula
+daiteke.
+ =P(H0errefusatu|H0egia) = =P(Zb). Orduan,b=z, eskualde kritikoa S1= [z,
++) izanik. Ondorioz,
+1=P(z|=1) ==
+=
+Kasu honetan, kontrastearen ahalmenaren adierazpen grafikoa 5.2. irudian
+agertzen da.
+
+5.2. irudia: Bariantza ezaguneko banaketaren batezbestekorako eskuinetiko
+aldebateko kontrastearen (1> 0) ahalmenaren adierazpen grafikoa.
+
+5.5. adibidea:5.2. adibidean egindako kontrastearen ahalmena kalkula ezazu,
+%5eko adierazgarritasun-maila eta batezbesteko kolesterol-maila alternatiboa
+195 mg/dL -koa izanik.
+Emaitza:
+Hipotesi nulua, H0:175 (= 175) da, H1:> 175 (= 195) alternatiboaren
+aurka,= 50 izanik.
+H0baztertzeko, estatistikoaren balioa aurrefinkaturikobbalioa baino handiagoa
+edo berdina izan beharko da. Hau da, S1= [b, +).b-ren balioa
+adierazgarritasun-maila,= 0.05 erabilirik kalkulatuko dugu:
+0.05 =P(H0errefusatu|H0egia) = =P(Zb). Beraz,b=z0.05= 1.645.
+Kontrastearen ahalmena ondoko da:
+1=P(H0errefusatu|H0faltsua) ==
+
+5.2. oharra:Aldebateko kontraste bietarako baliogarria den ahalmenaren
+adierazpena ondokoa da:
+**** 5.5.3Aldebiko kontrastea ****
+Kontrastatzeko hipotesi nulua H0:=0da, H1:=1alternatiboaren aurka.
+Kasu honetan, ahalmenaren zenbakizko adierazpena ondokoa da:
+
+5.6. adibidea5.3. adibidean egindako kontrastearen ahalmena kalkula ezazu,
+%5eko adierazgarritasun-mailaz, eta euskaldun eta emigratzaileen populazioen
+batezbesteko kolesterol-mailen arteko diferentzia 5 mg/dL -koa (edozein
+norantzatan) izanik.
+Emaitza:
+Hipotesi nulua, H0:= 190 da, H1:190 alternatiboaren aurka,= 40 izanik.
+ = 0.05 adierazgarritasun-mailari,z/2= 1.96 dagokio. Beraz, kontrastearen
+ahalmena ondokoa da:
+
+5.3. oharra:Kontrastearen ahalmenean eragina duten faktoreakondokoak dira:
+   1. Adierazgarritasun-maila,txikitzen denean,zhanditu egiten da, eta
+      orduan, ahalmena txikitu egiten da.
+   2. Batezbesteko alternatiboa, nulutik urruntzen baldin bada, alegia |01|
+      handitzen baldin bada, ahalmena txikitu egingo da.
+   3. Laginaren tamainua,nhanditzen denean, ahalmena ere handitu egiten da.
+
+***** 5.6LAGIN-TAMAINUAREN KALKULUA *****
+Laginaren tamainu egokia aukeratzerakoan ondoko faktoreak izan behar ditugu
+kontuan:
+   1. Adierazgarritasun-maila,.
+   2. Garrantzizkoa aurkituko dugun0eta1arteko diferentziaren tamainua.
+   3. Laginketako populazioaren bariantza.
+   4. Kontrastearen ahalmena.
+Arazoa ondoko erara plantea daiteke: Kontrastearen adierazgarritasun-mailaeta
+itxarotako batezbesteko alternatiboa1direnez, zein da erabili behar dugun
+laginaren tamainua, 1probabilitatearekin desberdintasun adierazgarria
+aurkitzeko?
+**** 5.6.1Aldebateko aukerak ****
+Ondoko adierazpena betetzen dela ikusi dugu, . Alegia, .
+Beraz, , etanisolatuz, ondokoa lortzen dugu: .
+
+   1. adibidea:5.2. adibideko datuetan oinarriturik, demagun batezbesteko nulua
+      175 mg/dL, alternatiboa 195 mg/dL eta desbiderapen estandarra 50 mg/dL
+      direla. %5eko adierazgarritasun-maila eta %90eko ahalmena dauzkan
+      hipotesi-kontrastea egin nahi dugu. Zein da aukeratu behar den laginaren
+      tamainua?
+Emaitza:
+ = 0.05z=z0.05= 1.645
+1= 0.90= 0.1z=z0.10= 1.28
+Beraz:
+Hau da, bihotzekoren bat pairatu duten gurasoen 54 haurrek osoturiko lagina
+aztertu beharko genuke.
+**** 5.6.2Aldebiko aukera ****
+Kasu honetan, froga daiteke dela.
+
+   1. adibidea:5.3. adibideko datuetan oinarrituko gara. Euskaldun eta
+      Afrikatik emigraturikoen populazioen batezbesteko kolesterol-mailen
+      arteko diferentzia (edozein norantzatan) 5 mg/dL-koa dela kontrastatu
+      nahi dugu, %5eko adierazgarritasun-mailaz eta %90ko ahalmenaz. Zenbat
+      emigratzaileren kolesterol-maila aztertu behar dugu?
+Emaitza:
+ = 0.05z/2=z0.025= 1.96
+1= 0.90= 0.1z=z0.10= 1.28
+Hau da, Euskal Herrian dauden Afrikako 672 emaigratzaileren kolesterol-maila
+aztertu beharko dugu.
+
+5.4. oharra:Laginaren tamainuan eragina duten faktoreak adierazgarritasun-
+maila, ahalmena eta batezbesteko nulu eta alternatiboaren arteko distantzia
+dira:
+   1.  txikitzen denean, laginaren tamainua handitu egiten da.
+   2. Ahalmena handitzen denean, laginaren tamainua ere handitu egiten da.
+   3. Batezbesteko alternatiboa, nulutik urruntzen baldin bada, alegia |01|
+      handitzen baldin bada, laginaren tamainua txikitu egiten da.
+***** 5.7KONFIANTZA-TARTE ETA HIPOTESI-KONTRASTEAREN ARTEKO ERLAZIOA *****
+Konfiantza-tarteen teknika eta hipotesi-kontrastearena, populaziotik ateratako
+laginak emandako datuetan oinarrituriko populazioari buruzko ondorioak
+ateratzeko bi era dira. Populazioaren parametroa estimatzeko, bi erak dira
+aplikagarriak, elkar osagarriak direlarik.
+
+Demagun, H0:=0hipotesia, H1:=1aukeraren aurka dugula.adierazgarritasun-
+maila erabilirik, H0errefusatuko dugu baldin eta soilik baldin,-rako %100
+(1) konfiantza-mailako konfiantza-tarteak0bere_barne_ez_badauka; eta ez dugu
+H0errefusatuko, baldin eta soilik baldin, konfiantza-tarte honek0bere_barne
+badauka.
+Erlazio hau 5.4. irudian adierazten da bi konfiantza-tarte ezberdin adibide
+giza aukeratuz. Lehenengo konfiantza-tartean oinarrituz, estimazioa erabiliz
+kalkulatzen denean,=0hipotesia errefusatu egingo genuke, balio hori tartetik
+kanpo dagoelako. Ordea, bigarren konfiantza-tartean oinarrituz, estimazioa
+erabiliz kalkulatzen denean,=0hipotesia ez genuke errefusatuko, balio hori
+tartearen barruan baitago. Kasu bietan, konfiantza-tartearen konfiantza-maila
+%100(1) bada, hipotesi-kontrastearen adierazgarritasun-mailaizango da.
+
+   1. adibidea:5.3. adibideko datuetan oinarriturik, Euskal Herrian dauden
+      Afrikako emigratzaileen batezbesteko kolesterol-mailarako %95eko
+      konfiantza-tartea ondoko adierazpenaren bidez kalkulatzen da:
+0= 190 balioa konfiantza-tarte honen barne ez egoteak, %5eko
+adierazgarritasun-mailaz H0:= 190 hipotesi nulua errefusatzera garamatza.
+
+ 5.4. irudia: Aldebiko hipotesi-kontrastearen eta konfiantza-tartearen arteko
+                                   erlazioa.
+
+5.5. oharra:Gogora dezagun, hipotesi-kontraste hau, populazioa normala denean,
+edo, normala ez izanik, laginaren tamainuan30 denean dela baliozkoa.
+***** 5.8BARIANTZA EZEZAGUNEKO POPULAZIO NORMALAREN BATEZBESTEKORAKO HIPOTESI-
+KONTRASTEA *****
+Populazioaren bariantza,2, ezezaguna baldin bada sailkapen berri bat egingo
+dugu,n30 edon< 30 denaren arabera.
+5.8.1Lagin-tamainu handia:n  30
+Kasu honetan hipotesi-kontrastea egiteko erabiltzen den estatistikoa da, honen
+banaketa gutxi gora beheraN(0, 1) delarik. Beraz, hipotesi-kontrastea 5. 4.
+atalean azaldutako era berean egiten da,-ren ordezs(laginaren
+kuasibariantzaren erro karratua) erabili behar dugula kontuan izanik.
+**** 5.8.2Lagin-tamainu txikia: n < 30 ****
+Demagun populazioa normala dela,X:N(,). Kasu honetan hipotesi-kontrastea
+egiteko erabiltzen den estatistikoa da, beronen banaketan1 askatasun gradutako
+Student-ent,tn-1, delarik.
+*** 5.8.2.1Aldebateko aukerak ***
+   1. Ezkerretikoa
+H0:0
+H1:<0
+H0egiazkoa dela suposatuz, estatistikoaren balioa kalkulatzen da:
+Kasu honetanp-balioa ondokoa da:p=P()
+
+   1. adibidea:Orain dela gutxi egindako hostogalkor basoko ekosistemaren
+      ikerketan, baso naturalean, nitrogenotik nitratorako aldakuntzaren
+      banaketa normala dela egiaztatu zen, bere batezbestekoa 2 kg hektarea eta
+      urteko izanik. Sasitzaren garbiketak, balio honen murrizketara eramango
+      lukela uste dute mendi-injineruek. Hipotesi hau kontrastatzeko asmoaz,
+      baso esperimentaleko 15 ha-ko sasitza moztu zuten. Urte bat pasa ondoren,
+      nitrogenotik nitratorako aldakuntza kalkulatzeko, euri-ura 15 basoko
+      puntutan aztertu zen ondoko emaitza lortuz: (ha-ko 3 kg-ko batezbesteko
+      galera) etas= 7.5 kg ha-ko.
+%5eko adierazgarritasun-mailaz, egiaztatzen al dute datu hauek basoko
+sasitzaren mozketak ha eta urteko nitrogenotik nitratorako batezbesteko
+aldakuntzaren murrizketa eragiten duela?
+Emaitza:
+H0:2 hipotesi nulua, H1:< 2 alternatiboaren aurka kontrastatzen da.
+H0egiazkoa dela suposatuz, estatistikoaren balioa ondokoa da: .
+Eta,p-balioa ondokoa da:p=P(t14< -2.58) =P(t14> 2.58).
+Student-entbanaketaren taulan, 0.01 <p< 0.025 aurkitzen dugu. Beraz,p< 0.05,
+eta honek hipotesi nulua baztertzera garamatza. Hau da, %5eko
+adierazgarritasun-mailaz, datuek sasitzaren mozketak ha eta urteko nitrogenotik
+nitratorako batezbesteko aldakuntzaren murrizketa eragiten duela egiaztatzen
+dute.
+
+   1. Eskuinetikoa
+H0:0
+H1:>0
+H0egiazkoa dela suposatuz, estatistikoaren balioa kalkulatzen da: .
+Kasu honetanp-balioa ondokoa da:p=P()
+
+   1. adibidea:Osasun-Sailak, muxilak batzen diren uretan aurki daiteken ur
+      cm3-ko batezbesteko bakterio-kopuruaren onargarri maximoa 70-n jarri du.
+      Hemendik gorako balioa arriskutsua izan daiteke, zeren eta honelako
+      uretan batutako muxilak jateak hepatitisa eragin baitezake. Uraren
+      azterketaz arduratzen diren langileek 9 tamainuko lagina aukeratu
+      ondoren, ur cm3-ko ondoko bakterio-kopuruak aurkitu zituzten: 69; 74; 75;
+      70; 72; 73; 71; 73; 68.
+Ur cm3-ko dauden bakterio-kopurua banaketa normalari darraiola jakinik, ur
+hauek muxilak batzeko egokiak direla baiezta dezakegu, %5eko adierazgarritasun-
+mailaz?
+Emaitza:
+Ondoko hipotesiak kontrastatu behar ditugu:
+H0:70 (Muxilak batzeko ur egokiak)
+H1:> 70 (Muxilak batzeko ur desegokiak).
+Lorturiko lagineko balioentzako,etas= 2.3 kalkulatzen ditugu.H0egiazkoa dela
+suposatuz, estatistikoaren balioa ondokoa da: .
+p-balioa ondokoa da:p=P(t8> 2.22). Student-entbanaketaren taulan probabilitate
+hau bilatuz, 0.025 <p< 0.05 betetzen dela aurkitzen dugu, hipotesi nulua
+errefusatzera garamatzanp-balioa, eta beraz, ur hauek muxilak batzeko egokiak
+direla ez onartzera.
+*** 5.8.2.2Aldebiko aukera ***
+Kontrastatzeko hipotesiak ondokoak dira: H0:=0
+H1:0
+H0egiazkoa dela suposatuz, estatistikoaren balioa kalkulatzen da: .
+Kasu honetanp-balioa ondokoa da:p= 2P(tn-1> |tp|)
+
+   1. adibidea:Gaixotasun berezi bat pairatzen duten gaixoen proteina-maila
+      osoa aztertu nahi dugu. Honetarako 8 gaixori, odol-analisiak egiten
+      dizkiegu. Pertsona heldu osasuntsuen odoleko proteina-maila 7.25 gr
+      dezilitroko batezbesteko banaketa normalari darraiola ezagutzen da.
+      Aztertutako gaixoen analisiak ondoko proteina-mailak eman dituzte: 7.23;
+      7.25; 7.28; 7.29; 7.32; 7.26; 7.27; 7.24. Emaitza hauetan oinarriturik,
+      honelako gaixotasuna pairatzen dutenen odoleko batezbesteko proteina-
+      maila pertsona heldu osasuntsuenaren parekoa dela onar daiteke, %5eko
+      adierazgarritasun-mailaz?
+Emaitza:
+Ondoko hipotesiak kontrastatu behar ditugu:
+H0:= 7.25 (pertsona osasuntsuak)
+H1:7.25 (pertsona gaixoak).
+Lorturiko lagineko balioentzako, etas= 0.029 ditugu. H0egiazkoa dela suposatuz,
+estatistikoaren balioa ondokoa da: .
+p-balioa ondokoa da:p= 2P(t7> 1.756). Student-entbanaketaren taulan begiratuz,
+0.05 <P(t7 > 1.756) < 0.10, eta beraz, 0.10 <p< 0.20 betetzen dela aurkitzen
+dugu. Alegia,p-balioa ez da adierazgarria eta ezin dugu hipotesi nulua
+errefusatu. Datu haun behaketak ez digu baimentzen %5eko adierazgarriatsun-
+mailaz, gaixotasuna pairatzen dutenen batezbesteko proteina-maila pertsona
+heldu osasuntsuenaren desberdina dela ondorioztatzea
+
+5.6. oharra:Laginaren tamainua handia baldin bada,n30 hain zuzen ere,
+estatistikoaren banaketa normala izatearen arrazoiataldagaia normal
+tipifikatura (N(0,1)) hurbiltzen dela da. Kontura zaitez, Student -
+entbanaketaren taulann=agertzen den errenkadan aldagai normal tipifikatuari
+dagozkion balioak agertzen direla.
+***** 5.9BANAKETA NORMALAREN BARIANTZARAKO HIPOTESI-KONTRASTEA *****
+Kontrastatzeko hipotesiak ondokoak dira: H0:2=
+ H
+1:2
+Honetarako ondoko estatistikoa erabiliko dugu: , non, H0egiazkoa dela
+baldintzapean, , (n1) askatasun-graduko ji karratu banaketari darraion. Lagin
+batean beronen balioa adieraziko dugu.
+Estatistikoari dagokionp-balioa ondoko erara kalkulatzen da:
+Baldin etas2bada,p= 2P(< )
+Baldin etas2> bada,p= 2P(>)
+Aurrefinkaturiko, adierazgarritasun-maila, bainop-balio txikiagoa ateratzen
+denean, H0hipotesi nulua errefusatu egingo dugu, eta2onartu daitekela esango
+dugu.
+
+                   s2  bada, p-balioa = 2· Azalera marraztua
+
+                   s2 > bada, p-balioa = 2· Azalera marraztua
+    5.5. irudia:Banaketa normalaren bariantzarako aldebiko kontrastearen p-
+                        balioaren adierazpen grafikoa.
+
+   1. adibidea:4.12. adibideko datuetan oinarriturik, Gernikako ibaiko
+      landareen kobre-edukinaren desbiderapen estandarra miloiko 20 partekoa
+      dela esan dezakegu %5eko adierazgarritasun-mailaz?
+Emaitza:
+Ondoko hipotesiak kontrastatzen ditugu: H0:= 202= 400
+ H
+1:202400.
+
+Hipotesi-kontrastea bariantzarekiko edo desbiderapen estandarrarekiko egitea
+baliokidea da.
+Lorturiko laginaren kuasibariantzas2= 377.30 zen, orduan estatistikoaren balioa
+da.
+Kasu honetanp-balioap= 2P( < 14.15) = 2[1P( > 14.15)] da.
+Ji karratu banaketaren taulan, 0.10 <P( > 14.15) < 0.90 aurkitzen dugu, orduan
+0.10 <P( < 14.15) < 0.90 beteko da, eta berazp> 0.20 ez adierazgarria. Emaitza
+honek, Gernikako ibaiko landareen kobre-edukinaren bariantza miloiko 400
+parte2-koa delako hipotesi nulua ez errefusatzera garamatza.
+
+5.7. oharra:Aldebateko kontrasteak ere eraiki ditzakegu, nahiz eta nekezago
+erabiliak izan:
+   1. Ezkerretiko aldebateko kontrastea: H0:2
+H1:2<
+Estatistikoa da, eta dagokionp-balioa,p=P(< )
+   1. Eskuinetiko aldebateko kontrastea: H0:2
+H1:2>
+Estatistikoa da, eta dagokionp-balioa,p=P(>)
+
+90
+I. Arostegui, A. Urkaregi

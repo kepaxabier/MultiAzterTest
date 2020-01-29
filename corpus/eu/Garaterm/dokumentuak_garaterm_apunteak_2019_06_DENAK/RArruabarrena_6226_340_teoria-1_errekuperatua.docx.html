@@ -1,0 +1,1066 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+	<title></title>
+	<meta name="generator" content="LibreOffice 4.2.8.2 (Linux)">
+	<meta name="author" content="Instalaciones">
+	<meta name="created" content="20170215;103100000000000">
+	<meta name="changedby" content="Instalaciones">
+	<meta name="changed" content="20170215;103100000000000">
+	<meta name="AppVersion" content="12.0000">
+	<meta name="DocSecurity" content="0">
+	<meta name="HyperlinksChanged" content="false">
+	<meta name="LinksUpToDate" content="false">
+	<meta name="ScaleCrop" content="false">
+	<meta name="ShareDoc" content="false">
+	<meta name="sdendnote" content="ARABIC;65535">
+	
+</head>
+<body lang="es-ES" dir="ltr">
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">OINARRIZKO
+KONTZEPTUAK</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">1	ERAGINKORTASUN
+ALGORITMIKOA.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">1.1	ZENBAIT
+KONTZEPTU ETA AZALPEN.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&iuml;
+Problema bat ebatzi behar dugunean, bi kasu desberdinen aurrean egon
+gaitezke:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+problema aztertu ondoren, hura ebatziko duen algoritmoa idatzi behar
+da: algoritmo baten edo bestearen eraikuntza gure irizpideek eta
+helburuek mugatzen dute.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+problema ebazten duten zenbait algoritmo ezagutzen dugu: algoritmo
+desberdinak aztertu eta hoberena aukeratu behar dugu. Baina, zein da
+hoberena?</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Kasu
+bietan maiz kontrajar daitezkeen jarraiko helburu hauek topa
+ditzakegu:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+algoritmoa ulerterraza, azkar kodegarria eta zuzengarria izataeren
+nahia: </span></font>
+</p>
+<p class="western" >  
+<font face="Courier New, serif"><span lang="es-ES">metodologiak.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+algoritmoa eraginkorra izatearen nahia: baliabideen erabilera egokia.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Bestalde,
+ondokoa ere kontuan eduki beharko da:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+Zenbat aldiz erabiliko da algoritmoa?</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+Sarreren tamaina nolakoa izango da gehienetan ?</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Ondorioz,
+ondorengo galdera hauek bururatzen zaizkigu: </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+Eraginkortasunaren hobekuntzan saiatzea merezi al du?</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+Noiz inbertitu behar da programazio-kostuan?</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+Programazio-kostuaren eta exekuzio-kostuaren arteko oreka
+interesatzen zaigu?</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Eraginkortasunean
+inbertitu nahi denean programazio-kostuan inbertituko dugu, hau da,
+baliabideen eskasian gaudenean edota haien erabilera egokiak
+ezinbesteko garrantzia duenean.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&iuml;
+Algoritmo bat edo beste aukeratzean ez dugu ahaztu behar:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+algoritmoa inplementatzen duen programa zenbat aldiz erabiliko den,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+zer tamainako sarrerekin erabiliko den, </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+algoritmoa eraginkorra izanik, ulergaitza den,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+algoritmoa azkarra izanik, memoria-espazio handia behar duen (eta
+alderantziz).</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&iuml;
+Merkatura ateratzen diren konputagailuak geroztik gerora azkarragoak
+badira, zergatik aztertzen dira algoritmoak eta ez da datorren
+konputagailu belaunaldira itxaron beharrean?</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Adibidez:
+Demagun algoritmo baten inplementazio batek 10-8 2n s. hartzen
+dituela:</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Sarrerako
+parametroen</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">tamainaSarrera
+tamaina horrek beharko</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">exekuzio-denboran=10</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">n=20</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">n=30</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">n=3810-8
+210=  0.1 s.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">10
+min</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&gt;1
+egun</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&Aring;1
+urteEta algoritmoa sarrera handiagoak ebazteko beharko bagenu?
+Ondorengo belaunaldira itxaronez gero, demagun 100 aldiz azkarragoa
+den konputagailu bat lortuko genuela; kasu horretan, gure
+algoritmoaren inplementazioak 10-6 2n s. hartuko lituzke. Eta horrek
+ez luke aurrerakuntza handirik suposatuko: urtebete osoz egikaritzen
+utziz n=45 tamainako instantziak besterik ez baitziren ebatziko.
+Soluzio bakarra: Algoritmo azkarragoren bat bilatzea (edo asmatzea).</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&iuml;
+Eraginkortasuna behar duten zenbait algoritmok:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;
+Bilaketa,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;
+Sailkapena, Ordenazioa (fitxategiak, taulak, egiturak)</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;
+Denbora-errealeko sistemak (uholde, trafiko, zentral elektrikoak,
+lurrikaren </span></font>
+</p>
+<p class="western" >  
+<font face="Courier New, serif"><span lang="es-ES">kudeaketan,...)</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;
+DBen atzipena (galderen optimizazioan, galdera-lengoaiak,...) </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;
+Sistema Eragileak (Baliabideen kudeaketa,...)</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;
+Lehentasun dinamikoko sistemak (ilaren kudeaketa, prozesuen
+kudeaketa,...)</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;
+Lengoaia interpretatuak</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;
+...</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">1.2	ALGORITMOEN
+ERAGINKORTASUNA MUGATZEKO ZENBAIT ESTRATEGIA.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Algoritmoen
+konplexutasuna aztertzeko hiru estrategia desberdin jarrai ditzakegu:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Enpirikoa
+(a posteriori): Makina konkretu batean inplementatu ondoren, probak
+eginez lortzen diren emaitzak aztertuko ditu.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Teorikoa
+(a priori): Sarreraren tamaina kontutan hartuz beharko diren
+baliabideak matematikoki kalkulatzen ditu aldez aurretik.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Hibridoa</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&iuml;
+Estrategia teorikoak abantaila handiak dakartza:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">1-
+ez dago konputagailu, programazio-lengoaia ez eta programatzailearen
+	trebetasunaren menpe.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">2-
+ algoritmo ez-eraginkorren programazio- eta exekuzio-denbora
+aurrezten du.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">3-
+eraginkortasuna edozein tamainatako instantzientzat azter dezake .</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">1.3	ALGORITMOEK
+DARABILTZATEN BALIABIDEAK.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Algoritmo
+baten eraginkortasuna aztertzeko, algoritmoak behar duen zenbait
+baliabide aztertu behar da:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+espazioa: memoria gehitzeak exekuzio-denbora jaistea suposatzen du.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+sarreraren tamaina: Hau handitzeak exekuzio-denbora gehitzea dakar.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+exekuzio-denbora: faktore desberdinen menpe dago:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;
+algoritmoaren sarrera,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;
+algoritmoaren konplexutasuna denborarekiko,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;
+programak erabiltzen duen espazioa,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;
+konpilatzaileak sortutako kodearen kalitatea,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;
+erabilitako makinaren aginduen izaera eta abiadura.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Eraginkortasuna
+aztertzeko garaian, eta kalkuluak gehiago ez zailtzearren, lehenengo
+bi faktoreak  bakarrik izango ditugu kontutan (hala ere, zenbait kasu
+konkretutan hirugarrena ere hartuko da). </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&iuml;
+Sarreraren tamaina:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Parametro
+errealen tamaina. Problema desberdinetan parametroen tamainatzat
+gauza desberdinak hartzen dira: </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+zerrendekin, fitxategiekin: instantziaren osagai kopurua, </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+zenbaki handiekin: instantziak adierazteko behar diren biten kopurua,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+...</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Exekuzio-denbora
+sarreraren tamainaren funtzio bezala neurtuko da.</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">1.4	INBARIANTZAREN
+PRINTZIPIOA. ERAGINKORTASUNAREN UNITATEA.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Inbariantzaren
+printzipioa:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&quot;Algoritmo
+baten bi inplementazio desberdinen eraginkortasunen arteko
+diferentzia konstante biderkatzaile batean datza.&quot;</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">T1(n)
+&sup2;  k &aacute; T2(n) 		n handia denean</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Printzipio
+honek ondorio garrantzitsu batzuk dakartza:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+edozein konputagailu eta programatzaileren trebetasunetarako balio
+du.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+eraginkortasunaren hobekuntza algoritmoaren aldaketa batekin bakarrik
+lortuko da.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+algoritmoen eraginkortasun teorikoak EZ du UNITATERIK, konstante
+biderkatzaile</span></font></p>
+<p class="western" >  
+<font face="Courier New, serif"><span lang="es-ES">baten funtziopean
+ematen baita. </span></font>
+</p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">1.5	ALGORITMO
+BATEN ORDENA (HURBILKETA INFORMALA).</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">T(n)-ren
+bidez, sarrera n tamainakoa duen algoritmo baten exekuzio-denbora
+adieraziko da. Algoritmoak hartzen duen denbora f(n)-ren ordenakoa
+dela esango da baldin eta soilik baldin existitzen bada k konstantea,
+non instantzia bakoitzeko problema  k * f(n)  segundotan
+(msegundotan, minututan,...) gehienez ebazten baita. k konstanteari
+konstante biderkatzaile deritzo.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Segundotan
+dela esatea erabat arbitrarioa da konstantearen balioa aldatzea
+besterik ez baita beharko unitatea beste bat izateko. Bestalde, gaur
+egun makina estandarrik ez dagoenez, ezingo da bat eredutzat hartu
+(ik. RAM). Honen guztiaren ondorioz, eraginkortasunak unitaterik ez
+duela esan dezakegu.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&iuml;
+Maiz agertzen diren ordenak:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	n
+-ren ordenakoa  &reg; algoritmoa 	lineala 		da</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	n
+2  	koadratikoa </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	n
+3 	kubikoa </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	nk
+	polinomikoa </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	an	esponentziala</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">non
+aurreko k  eta a  konstante egokiak diren.</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">[1.1]
+irudia</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">[1.1]
+irudiko T1 eta T2 funtzioak koadratikoak dira, T3 eta T4 linealak eta
+T5, berriz, logaritmikoa.</span></font></p>
+<p lang="fr-FR" class="western" >
+<br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">&iuml;
+Konstante biderkatzaileak:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">Demagun
+problema bera ebazten duten bi algoritmok n2 egun eta n3 s. behar
+dituztela n tamaina duten sarrerak ebazteko. n tamaina duten
+instantzientarako teoriak lehenengo algoritmoa bigarrena baino
+azkarragoa, hobea, eraginkorragoa dela adierazten du:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">Algoritmo
+koadratikoa kubikoa baino ASINTOTIKOKI ERAGINKORRAGOA da.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">Teoriak
+hori badio ere, koadratikoa:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">20
+miloi urte baino denbora gehiago beharko luketen sarrerentzat</span></font></p>
+<p class="western" >
+<font face="Courier New, serif"><span lang="fr-FR">izango litzateke
+eraginkorragoa soilik!</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">Zenbait
+kasutan konstante biderkatzailea kontutan ez hartzeak bere arriskua
+du.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">Halere,
+ez dira kontutan izango irakasgai honetan, konstanteak mugatzeko
+inplementazio bakoitzaren xehetasun espezifikoetan sartu beharko
+genukeelako. </span></font><font face="Courier New, serif"><span lang="es-ES">Hortaz,
+sarrerako instantzien tamainak behar bezain handiak izango direla
+suposatuko dugu.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">HELBURUA:
+algoritmo jakin baten ordena kalkulatzea beste algoritmo batzuen
+ordenekin konparatu ahal izateko non beste algoritmo hauek ere
+problema bera ebazten duten. Honela eraginkorrena zein den muga
+dezakegu (azkarrena, memoria kudeaketan hoberena mugatu).</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">1.6	RAM
+KONPUTAGAILU EREDUA ETA OINARRIZKO ERAGIKETA.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">&iuml;
+RAM (Randon Access Machine) eredua:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">Gure
+algoritmoen denbora-ordena, eta oro har ordena, kalkulatzeko haien
+inplementazioak zein makina motatan egikarituko liratekeen kontutan
+hartu beharko litzateke. Konputagailu estandarrik ez dagoenez, haiek
+helburu orokorreko prozesadore bakarra duen makina batean egikarituko
+liratekeela suposatuko dugu irakasgai honetan. Konputagailua RAM
+eredua izango da. Eredu honetan aginduak bata bestearen jarraian
+egikarituko dira, eta ez da eragiketa konkurrenterik kontsideratuko.</span></font></p>
+<p lang="en-US" class="western" >
+<br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">&iuml;
+Oinarrizko eragiketa:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">Oinarrizko
+eragiketa bere exekuzio-denbora konstante batez mugaturik dagoen
+eragiketa da, non konstante hori inplementazio konkretu baten menpe
+dagoen.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">Oinarrizko
+eragiketak izango dira:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">-
+ osokoen gaineko eragiketak:  batuketa, kenketa, zatiketa,
+biderkaketa,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">-
+ koma higikorrezko zenbakien gainekoak,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">-
+ konparaketak, asignazioak.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Kontuz!
+Oso handiak diren osokoen maneiua, adibidez, ezin da oinarrizko
+eragiketa kontsideratu. Ondorioz, eragiketa bat oinarrizkoa den ala
+ez mugatzeko sen ona erabili beharko dugu: eragigaien tamaina
+arrazoizkoa den bitartean eragiketa oinarrizkoa kontsidera daiteke.</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">2	NEURRI
+ASINTOTIKOAK, HAZKUNTZA-TASAK ETA PROPIETATE BATZUK.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">2.1	T(n)-A.
+Tb(n) ETA Tt(n).</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&iuml;
+ T(n). Zer da?</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">T(n)
+ n tamaina duen sarrera batentzat algoritmoak hartzen duen
+exekuzio-&quot;denboraren&quot; neurketa da.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">HOTS:
+</span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">&yen;
+Unitateak zehaztu gabe daude.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">&yen;
+Neurketa funtzio bat da. Zehazki mintzatuz, konputagailu ideal batek,
+RAM-ek, exekuzio garaian egindako lana neurtuko du.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">T(n)-ren
+kalkulua ondorengo bi puntu hauetan oinarritzen da:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">		a)
+oinarrizko eragiketa bakoitza exekutatzen den aldi kopuruan
+(maiztasuna).</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">		b)
+oinarrizko eragiketa bakoitzak hartzen duen denboran (konstantea
+definizioz).</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Aurreko
+a eta b bi informazioen biderkaketak behar den exekuzio-denbora osoa
+ematen du. </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Halere,
+T(n) neurketa funtzioa dela eta, zenbait kasutan exekuzio-denbora
+neurtu ordez beste baliabideen kontsumoa kontrolatzea interesatzen
+zaigu.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;
+n tamaina duen sarrera batentzat egin ohi diren beste neurketa tipiko
+batzuk honako hauek dira:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	
+   - exekutatu beharko dituen oinarrizko eragiketen zenbaketa:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	
+   - sarrerako osagaien artean egiten diren alderaketen kopuruaren
+zenbaketa,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	
+   - egiten diren dei errekurtsiboen zenbaketa,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	
+   - ...</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Analisi
+kasu bakoitzean interesaturik gauden horren neurketa egingo dugu.
+Gauza desberdinak neurtzeko erabiliko denez, kasu bakoitzean zer
+neurtzen ari garen esan behar da.</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Adibidez,
+demagun ondorengo programen zatiak ditugula:</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">X:=
+X+Y;		for I in 1.. N loop	for I in 1 .. N  loop</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">Y:=
+3*Y+8;		X:= X+Y;		   for J in 1 .. N loop</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">				end
+loop;			       X:= X+Y;</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">							
+  end loop;</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">						end
+loop;</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">1)
+T(n) = zein da denbora-ordena? = ( Zenbat aldiz egikaritzen da
+oinarrizko E eragiketa bakoitza ) * ( Zenbat denbora hartzen duen E
+oinarrizko eragiketak)</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">T(n)=
+k1 + k2 = k3	T(n)= k1 * n	T(n)=  k1 * n2</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">1en
+ordenakoa	ordena lineala	ordena koadratikoa</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">(ordena
+konstantea)</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">2)
+T(n)= zenbat batuketa egikaritzen da?</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">T(n)=
+2	T(n)= 1 * n	T(n)=  1 * n2</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">1en
+ordenakoa	ordena lineala	ordena koadratikoa</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Ordenen
+interpretazioa zuzen egin behar da. </span></font><font face="Courier New, serif"><span lang="en-US">Beti
+zer neurtzen ari garen argi eduki behar dugu.</span></font></p>
+<p lang="en-US" class="western" >
+<br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&iuml;
+ Batezbesteko kasua eta kasu txarrenaren analisia:  Tb(n) eta Tt(n).</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Normalki,
+algoritmo batek tamaina desberdineko sarrerentzat hartzen dituen
+exekuzio-denborak desberdinak izatea gertatzen bada, tamaina bereko
+bi instantzia desberdinentzat ere gauza bera gerta ohi da. Kasu
+hauetan, algoritmoa sarreraren egoerarekiko sentikorra dela esaten
+da.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Algoritmo
+berdin baten eraginkortasuna hainbat kasu desberdinetan azter
+dezakegu: (T(n) neurketa funtzioak exekuzio-denbora neurtzen duela
+suposatzen dugunean)</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Kasu
+txarrenak denbora gehiena hartzen duen tamaina bateko instantziak
+bakarrik aztertuko ditu. Noiz erabiliko dugu analisi hau?
+Erantzun-denborak garrantzi handia duenean erabiltzea interesgarria
+litzateke. Idazkera: Tt(n) eta zalantzarik ez badago T(n).</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Batezbesteko
+kasua: Algoritmoak oso instantzia desberdinekin erabiltzen bada beste
+analisi hau interesgarria gerta litzaiguke.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	Tb(n):
+n tamaina duten sarrera guztien batezbesteko exekuzio-denbora
+adieraziko du. </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Normalki
+batezbesteko kasua kalkulatzea zaila gertatzen da sarreren banaketa
+zein den  aldez aurretik jakin behar baita eta sarrera guztien
+probabilitateek ez baitute zertan berdinak izan behar.</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">2.2	O(n),
+W(n) ETA Q(n) HURBILPEN ASINTOTIKOAK.</span></font></p>
+<p class="western" > <font face="Courier New, serif"><span lang="es-ES">f:
+N &reg; R* emanik:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">O
+larria</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">O(f(n))
+= { t: N &reg; R* | $k $n0 ( (k &Icirc; R+) &Ugrave; (n0&Icirc;N) &Ugrave;
+&quot;n (n &sup3; n0 &THORN;  T(n) &sup2; k f(n)) )  }</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">O(f(n))
+- &quot;f(n) ordena&quot; - n balio handietarako f(n) funtzioen
+multiplo erreal batek goitik mugatutako T(n) funtzio-multzoa da; hau
+da, atalase-balio batetik aurrera.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Oro
+har, gure helburua f(n) funtzio guztietatik goi-bornerik txikiena
+lortzea izango da, non  T(n) &Icirc; O(f(n)).</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Omega
+larria:  W</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">W(f(n))
+= { t: N &reg; R* | $k $n0 ( (k &Icirc; R+) &Ugrave; (n0&Icirc;N) &Ugrave;
+&quot;n (n &sup3; n0 &THORN;  T(n) &sup3; k f(n)) )  }</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">W
+(f(n)) - &quot;f(n) Omega&quot; -  n balio handietarako f(n)
+funtzioen multiplo erreal batek behetik mugatutako T(n)
+funtzio-multzoa da; hau da, atalase-balio batetik aurrera.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Oro
+har, gure helburua f(n) funtzio guztietatik behe-bornerik handiena
+lortzea izango da, non  T(n) &Icirc; W (f(n)).</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Teta
+larria: Q</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Q(f(n))=
+{t: N &reg; R* | $k $d $n0 ( (k &Icirc; R+) &Ugrave; (d &Icirc; R+) &Ugrave;
+(n0&Icirc;N) &Ugrave; </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">							
+  </span></font><font face="Courier New, serif"><span lang="fr-FR">&quot;n
+(n &sup3; n0 &THORN; k f(n) &sup2; T(n) &sup2; d f(n) ) }</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Ordena
+zehatza ere honela defini daiteke:</span></font></p>
+<p class="western" >
+<font face="Courier New, serif"><span lang="es-ES">f(n) &Icirc;
+Q(g(n))   &Ucirc;   f(n) &Icirc; W(g(n))  y   f(n) &Icirc; O (g(n)),</span></font></p>
+<p class="western" >
+<font face="Courier New, serif"><span lang="es-ES">Q(f(n))  =  O
+(f(n))   &Ccedil;  W(f(n))</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">2.3	HAZKUNTZA-TASAK.
+L'HOPITALEN ERREGELA.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Maizen
+agertzen diren bornatze funtzioak konplexutasun ordena gorakorrean: </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">O(1)
+&Igrave; O(lg n) &Igrave; O(n) &Igrave; O (n lgn) &Igrave; O (n2 ) &Igrave;
+O (n3) &Igrave; ...  &Igrave;</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">O
+(nk) &Igrave; O (an) &Igrave; O (n! ) &Igrave; O (nn)</span></font></p>
+<p class="western" > <font face="Courier New, serif"><span lang="es-ES">y
+  O( k f(n)) =  O (f(n))</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">HOTS:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">n
+guztientzat, a eta b konstanteentzat eta a&gt;1 betetzen denean
+funtzio esponentzialen hazkuntza-tasa polinomialarena baino handiagoa
+da; hau da,   (edo beste modu batean nb&Icirc; o(an) ).</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&iuml;
+Algoritmo desberdinen artean algoritmo eraginkorrenaren muga:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Zenbaitetan,
+algoritmo desberdinen exekuzio-denboren funtzioak konparatzea
+komenigarria izaten da, alderatzen diren guztietatik eraginkorrena
+zein den mugatzearren. Alderaketa egin ahal izateko bai L'Hopital-en
+Erregela bai limiteak erabili ditzakegu:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">f,g:
+N &reg; R*  suposatuz:</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">3)
+  L'Hopitalen Erregela:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	
+   Baldin  </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	
+   a)	, edo</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">		
+   betetzen bada,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	
+   b)	n &Icirc; [ n0, &deg;)			&reg;	x &Icirc; [ n0, &deg;)</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">		f(n),
+g(n)				f*(x), g*(x)</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">		zenbaki
+arruntetatik			zenbaki errealetara heda badaiteke,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	
+   c)	f*'(x) eta g*'(x) tarte berri honetan existitzen badira</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">		(f*(x)
+eta g*(x) deribagarriak [n0, &deg;) tartean), eta</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	
+   </span></font>
+</p>
+<p class="western" > 
+<font face="Courier New, serif"><span lang="es-ES">orduan</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">		</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">3	ALGORITMO
+ITERATIBOEN ANALISIA. </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Agindu
+baten edo agindu multzo baten exekuzio-denborak sarreraren tamainaren
+eta aldagai batzuren menpe badago ere, sarreraren tamaina bakarrik
+izango dugu kontuan.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&iuml;
+Algoritmo baten eraginkortasunaren analisia aztertzeko faseak.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">1)	Algoritmoak
+behar dituen datu-multzoak finkatu,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">2)	Erabiltzen
+diren oinarrizko eragiketak finkatu,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">	</span></font><font face="Courier New, serif"><span lang="es-ES">(oinarrizko
+eragiketa bakoitzaren exekuzio-denbora konstantea da)</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">3)	Oinarrizko
+eragiketa bakoitza exekutatzen den aldi kopurua finkatu,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">4)	Beste
+eragiketak eta beraien kostua finkatu,  eta</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">5)	Aurreko
+emaitzak erabiliz algoritmo osoaren kostua mugatu.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Eragiketen
+kostua nola mugatzen da?.</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&iuml;
+Erregela orokorrak </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">1	Parametroek
+sarreraren tamaina ematen dute,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">2
+	Asignazioa, alderaketa eta sarrera/irteera eragiketen denbora 1en
+ordenakoak dira; oro har, oinarrizko eragiketak.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	Salbuespenak:
+array-en tamaina sarrerako tamainaren funtziopean daudenean,...</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">3
+	Agindu-sekuentzia baten denbora baturaren erregelaren bidez lortuko
+da,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">4
+	IF-THEN aginduaren exekuzio-denbora: </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">	</span></font><font face="Courier New, serif"><span lang="es-ES">THENen
+ataleko aginduen denbora + baldintzaren denbora (1en ordenakoa,
+normalki)</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	</span></font><font face="Courier New, serif"><span lang="en-US">IF-THEN-ELSE
+aginduen exekuzio-denbora:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">	</span></font><font face="Courier New, serif"><span lang="es-ES">Baldintzaren
+denbora + max {	THENen ataleko aginduen denbora, </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">		ELSEren
+ataleko aginduen denbora  }</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">5	Iterazio
+baten exekuzio-denbora:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	(Tgorputza
++ Tkonparaketa) * iterazio-kopurua</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">6	Azpiprograma-deiak(ez-errekurtsiboak):
+azpiprogramaren exekuzio-denbora + parametro pasatzeak hartzen duen
+denbora.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Algoritmo
+errekurtsiboen exekuzio-denbora eta ordenaren kalkulua ez da horrela
+kalkulatzen.</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&iuml;
+Bi erregela berezi </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	
+   Baturaren erregela</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;
+T1(n) eta T2(n) P1 eta P2 bi programa-atalen exekuzio-denborak
+direlarik hurrenez hurren, eta</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;
+T1(n) &Icirc;  O(f(n)),  T2(n) &Icirc;  O(g(n)) emanik,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">P2
+programa P1ren jarraean jartzean lortzen den programaren
+exekuzio-denbora, T1(n)+T2(n),  max{ f(n), g(n) }en ordenakoa izango
+da. </span></font><font face="Courier New, serif"><span lang="fr-FR">Hau
+da,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">T1(n)
+&Icirc; O(f(n))  &Ugrave;  T2(n) &Icirc; O(g(n)) &THORN; T1(n) +
+T2(n) &Icirc; O(max(f(n),g(n)))</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">O(f(n)+g(n))
+= O(max(f(n),g(n)))</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Q(f(n)+g(n))
+= Q(max(f(n),g(n)))</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">W(f(n)+g(n))
+= W(max(f(n),g(n)))</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	
+   Biderkaketaren erregela</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;
+T1(n) eta T2(n) P1 eta P2 bi programa-atalen exekuzio-denborak
+direlarik hurrenez hurren, eta</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;
+T1(n) &Icirc;  O(f(n)),  T2(n) &Icirc;  O(g(n)) emanik,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">P2
+programa P1tik T1(n) aldiz dei egiten bazaio programa osoak hartzen
+duen denbora T1(n)*T2(n) da eta exekuzio-ordena aldiz O((f(n)&yen;g(n))).
+</span></font><font face="Courier New, serif"><span lang="fr-FR">Hau
+da,</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">T1(n)
+&Icirc; O(f(n))  &Ugrave;  T2(n) &Icirc; O(g(n)) &THORN; T1(n) *
+T2(n) &Icirc; O((f(n)&yen;g(n)))</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">O(f(n)*g(n))
+= O((f(n)&yen;g(n)))</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">4
+	ALGORITMO ERREKURTSIBOEN ANALISIA.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Ondorengo
+pausuak eman behar dira:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">1)
+Algoritmoaren konplexutasuna errekurtsio-ekuazio baten bidez
+adierazi.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">2)
+ Errekurtsio-ekuazioa metodoren bat aplikatuz ebatzi.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	
+ Bi metodo ikusiko dira: errekurtsibitatearen hedapen metodoa eta
+ekuazio </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	
+ karakteristikoaren metodoa. Funtzio-sortzaileen metodoa ez dugu
+hemen aztertuko.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Exekuzio-denbora
+errekurtsiboa den ekuazio baten bidez adierazten da:
+errekurtsio-ekuazioa. Metodo hauen helburua errekurtsio-ekuazioaren
+beste ekuazio baliokide bat, errekurtsiboa ez dena, bilatzean
+oinarritzen da. Ondoren, ekuazio berri honi aurretik ikusi diren
+erregelak aplikatuko zaizkio algoritmo errekurtsiboaren ordena
+lortuz.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Oharra:
+Algoritmoaren dei errekurtsiboek egindako lana lortu nahi da: zenbat
+dei egiten den, edo zenbat aldiz egikaritzen den eragiketa jakin bat,
+edo ...</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">4.1
+ERREKURTSIBITATEAREN HEDAPEN METODOA.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Kasu
+orokorreko ekuazioan agertzen diren tn-ak hedatzen dira kasu nabarira
+iritsi arte. Kasu nabaria garatu ondoren, ekuazio berritik algoritmo
+errekurtsiboaren ordena lortuko da.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">Adibidea:
+ T(n) = 2 T(n-1)+ 2  a	 n&gt;1   ( kasu nabaria  T(0) = b)</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">	T(n)	=
+ 2 T(n-1)+ 2  a =</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">		</span></font><font face="Courier New, serif"><span lang="en-US">=
+2 (2 T(n-2)+ 2 a) + 2 a= 22 T(n-2)+ 22a + 2 a = ...	indukzio bidez</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">		=
+2i T(n-i)+ 2ia + ...+22a + 2 a =				n - i = 0 </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">		</span></font><font face="Courier New, serif"><span lang="es-ES">=
+2n T(0)+ a = (b + 2 a) 2n - 2 a  &Icirc;  O(2n)</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&iuml;
+Aldagai aldaketaren metodoa:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Aurrekoaren
+kasu berezia da. Zenbaitetan errekurtsio-ekuazioaren hedapenak
+aldagai aldaketa bat egitea eskatzen du kasu nabarira iritsi ahal
+izateko.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Adibidea:
+ T(n) = 4 T(n/2) + n	 n&gt;1   emanik, metodoa aplikatuz:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">T(n)
+= 4 T(n/2) + n = 4 ( 4 T(n/22) + n/2) + n = 42 T(n/22) + 3 n	n&gt;2</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">	
+     = 42 (4 T(n/23) + n/22 ) + 3 n = 43 T(n/23) + 7 n 			n&gt;3</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">	
+     = 43 (4 T(n/24) + n/23 ) + 7 n = 44 T(n/24) + 15 n			n&gt;4</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">	
+     </span></font><font face="Courier New, serif"><span lang="en-US">=
+... 							    indukzio bidez</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">	
+     = 4i T(n/2i) + (2i-1) n 							n&gt;i</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">Aldagaiaren
+aldaketa bat eginaz: n=2k eta i=k, gero k=log2 n, kasu nabariraino
+iristea lortzen da:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">T(n)
+=  4k T(n/2k) + (2k-1) n =  22k T(n/2k) + (2k-1) n = n2 T(1) +</span></font></p>
+<p class="western" >    
+        <font face="Courier New, serif"><span lang="fr-FR">(n-1) n =
+d n2 + n2 - n = (d+1) n2 - n	&THORN;   T(n) &Icirc; O(n2)</span></font></p>
+<p lang="fr-FR" class="western" >
+<br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">4.2	EKUAZIO
+KARAKTERISTIKOAREN METODOA.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">Ondorengo
+kasuak aztertuko ditugu:</span></font></p>
+<p class="western" >  <font face="Courier New, serif"><span lang="fr-FR">a)
+Errekurtsio homogeneoak, honen barne beste bi kasu dauzkagu:</span></font></p>
+<p class="western" >    
+ <font face="Courier New, serif"><span lang="fr-FR">- erro guztiak
+desberdinak		- zenbait erro berdinak</span></font></p>
+<p class="western" >  <font face="Courier New, serif"><span lang="fr-FR">b)
+Errekurtsio ez homogeneoak, berriz ere aurreko bi kasuak:</span></font></p>
+<p class="western" >    
+ <font face="Courier New, serif"><span lang="fr-FR">- erro guztiak
+desberdinak		- zenbait erro berdinak</span></font></p>
+<p lang="fr-FR" class="western" >
+<br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">a)
+Errekurtsio homogeneoak.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">Errekurtsio-ekuazioak
+jarraiko itxura dauka: </span></font>
+</p>
+<p class="western" >    
+   <font face="Courier New, serif"><span lang="fr-FR">a0 tn + a1 tn-1
++ ... + ak tn-k = 0</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">Non
+	ti: bilatu nahi diren balioak diren, eta	a0,a1,...,ak: konstanteak.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">(Beste
+izen batez ere ezaguna da aurreko ekuazioa: diferentzietan lineala
+den ekuazioa.)</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">tn
+= Xn ordezkapena eginaz, (non X konstante bat den):</span></font></p>
+<p class="western" >    
+   <font face="Courier New, serif"><span lang="es-ES">a0 Xn + a1 Xn-1
++ ... + ak Xn-k = 0</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Ondoren,
+n=k  eginaz:</span></font></p>
+<p class="western" >    
+   <font face="Courier New, serif"><span lang="en-US">a0 Xk + a1 Xk-1
++ ... + ak = 0    EKUAZIO KARAKTERISTIKOA</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">Ekuazio
+hau ebazteko, bere erroak besterik ez dira bilatu behar: r1, r2,...,
+rk</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+Erro desberdinak:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Exekuzio-denboraren
+ekuazio berria:	</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+Zenbait erro berdina da:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Exekuzio-denboraren
+ekuazio berria:	</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">non</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">		r1,r2,...,rd:
+ erro desberdinak diren, eta </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">		</span></font><font face="Courier New, serif"><span lang="es-ES">mi:
+ ri erroaren anizkoiztasuna izango den (errepikatzen den aldi
+kopurua)</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">b)
+Errekurtsio ez homogeneoak.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Errekurtsio-ekuazioak
+ondorengo itxura dauka:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">		</span></font><font face="Courier New, serif"><span lang="en-US">a0
+tn + a1 tn-1 + ... + ak tn-k = (b1)n p1(n) +(b2)n p2(n) + ...</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">non	bi:
+konstanteak diren, eta</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">		pi(n):
+gi mailako polinomioak berriz.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Kasu
+honetan ebatzi behar dugun ekuazio karakteristikoa ondorengo hau da</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">		</span></font><font face="Courier New, serif"><span lang="en-US">(a0
+Xk + a1 Xk-1 + ... + ak) (X - b1)g1+1 (X - b2)g2+1 ... = 0</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">								EKUAZIO
+KARAKTERISTIKOA</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">Ekuazio
+honen erro guztiak bilatu ondoren, errekurtsio homogeneotan bezala
+jokatu behar da (erro guztiak desberdinak badira formula mota bat
+erabiliko da, eta erroren bat behin baino gehiagotan agertzen bada
+beste formula bat erabiliko da).</span></font></p>
+<p lang="en-US" class="western" >
+<br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">&iuml;
+Konstanteen muga</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">Demagun
+algoritmo errekurtsibo batetik honako ekuazio hau lortu dugula</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Ekuazio
+karakteristikoaren metodoa aplikatu ondoren t(n)= k1 +k2 n lortuko
+dugu. Ondoren, konstanteak mugatu beharko ditugu. Horretarako
+jarraitu beharko dugun prozesua ondokoa izango da:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+Definizio errekurtsiboa zenbat gai errekurtsiboen funtziopean
+definitzen den ikusi: ak gai balitu, ak kasu nabari beharko
+genituzke. Gure adibideak bakarra duenez, kasu nabari batekin nahiko
+litzateke, nahiz bi eduki (n=0 eta n=1).</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+Ekuazio karakteristikoan daagoen konstante kopurua ikusi: bk balitu,
+bk ekuazioz osatutako sistema lineala ebatzi beharko litzateke; hots,
+ekuazio bat, konstante-inkognita bakoitzeko. Gure adibidean, t(n)= k1
++ k2 n,  bi ditugunez 2 ekuazio beharko ditugu.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">-
+Ekuazioak idazteko: </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;	Errekurtsio-ekuazioa
+n-ren zein kasutarako definitzen ikusiz (demagun n&sup3;c dela),
+errazena n-ren balio horretatik hastea da. Gure kasuan, definizio
+errekurtsiboa n&sup3;2rentzat definituta dagoenez eta 2 ekuazio behar
+ditugunez (k1 eta k2 bi inkognitak ditugu eta), n=2 eta n=3 balioak
+erabiliko ditugu.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;	Errekurtsio-ekuazioan
+n-ren ordez aurreko puntuan erabakitako balioak ordezkatuz kalkulatu
+behar den konstante-ikognita haina balio lortuko dugu. </span></font><font face="Courier New, serif"><span lang="fr-FR">Balio
+hauei oinarrizko kasuak deritzaie. Gure kasuan:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">	t(2)=
+1+ t(1)= 1+0=1</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">	t(3)=
+1+ t(2)= 1+1=2</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">	Oinarrizko
+kasuak kalkulatzeko t(n)ren kasu nabariak erabili behar dira maiz.
+</span></font><font face="Courier New, serif"><span lang="es-ES">Gure
+adibideko kasu nabariak n=0 eta n=1 dira, baina n=1 behar dugu.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	Bestalde,
+posiblea eta zuzena litzateke hain n-ren balio hain txikiak hautatu
+beharrean beste batzuk hartzea, adibidez gure adibidean n=5 eta n=8.
+Baina, t(4) eta t(7) balioak ezagunak izatea eskatuko digute t(5) eta
+t(8)ren ekuazioek, hurrenez hurren; honek lan gehiago suposatuko
+duelarik.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;	Ondoren,
+oinarrizko kasuetako balioak eta ekuazio karakteristikoko metodoan
+lortutako ekuazioan n-ren balio egokiak ordezkatu ondoren lortzen
+diren ekuzaioak berdindu behar dira. Adibidearekin jarraituz</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">		n=2
+(1)	1= k1 + 2 k2</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">		n=3
+(2)	2= k1 + 3 k2</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">&yen;	Bukatzeko,
+ekuazio-sistema ebatzi behar da metodo ezagunen bat erabiliz. Hala
+nola, matrize bidezko ebazpena, aldagai ordezkapena, aldagai
+berdinketa edo sinplifikazioa metodoa erabil dezakegu. Lortzen diren
+balioak soluzioan ordezkatu behar dira ondoren</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">		k1
+= -1	k2= 1</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Kontu
+handiz egin behar da prozesu hau. Oinarrizko kasuak ezin dute edozein
+izan. Hemen irakurleari txikienak kalkulatzea gomendatzen zaio,
+kalkulatzeko errazenak dira eta. Hala eta guztiz ere, oinarrizko
+kasuetan erabiltzen diren kasu nabariak ere oinarrizko kasu
+onargarriak dira. Honela, adibidean, n=1 eta ondorioz t(1) erabil
+genezakeen. Horrela egin izan bagenu emaitza bera lortuko genuke:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">		</span></font><font face="Courier New, serif"><span lang="fr-FR">n=1
+(1)	t(1)=0= k1 + k2 			k1 = -1	t(n)= n-1</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">		n=2
+(2)	t(2)=1= k1 + 2 k2 		k2 = 1</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">Berriz
+ere, kontuz! n=0 kasu nabaria oinarrizko kasutzat hartu izan bagenu,
+emaitza okerrak lortuko genituzke eta:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">		n=0
+(1)	t(0)=0= k1 			k1= 0		t(n)= k1 + k2 n=0!!!</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">		n=1
+(2)	t(1)=0= k1 + k2 			k2= 0</span></font></p>
+<p lang="fr-FR" class="western" >
+<br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="fr-FR">5	OINARRIZKOA
+DEN ZENBAIT KONTZEPTU MATEMATIKOREN ZERRENDA.</span></font></p>
+<p class="western" >
+<font face="Courier New, serif"><span lang="fr-FR">Esponentzialak
+(a&sup1;0)</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">a0
+= 1</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">a1
+= a</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">a-1
+= 1/a</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">(am)n
+= a mn</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">(am)n
+= (a n)m</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">a
+m an = a m+n</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Logaritmoak
+(&quot;a,b&gt;0)</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">1
+- logb funtzioa zuzenki gorakorra da</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	(baldin
+X1&gt;X2 orduan logb X1 &gt; logb X2)</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">2
+- logb 1 =0</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">3
+- logb ba = a</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">4
+- logbk n = ( logb n)k</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">5
+- logb (X1*X2) = logb X1 +  logb X2</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">6
+- logb (X1/X2) = logb X1 -  logb X2</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">7
+-  logb (Xa) = a  logb X</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">8
+-  X1logb X2 = X2logb X1</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">9
+-  logb1X = ( logb2X) /  logb2 b1</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">10
+- logb (1/n) =- logb n</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">11
+- Guretzat eta idazkera sinplifikatzearren:  	   log2 X1 =  lg2 X</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">10.-
+lg e = 1.44, ln 2 = 0.7 eta lg10 = 3.32</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Stirling-en
+hurbilketa</span></font></p>
+<p class="western" > 
+</p>
+<p class="western" ><br>
+</p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Probabilitatea
+</span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Demagun
+egoera batean ekintza edo esperimentu batek s1,s2,...,sk irteeren
+arteko edozein eman dezakeela. si irteera bakoitzari zenbaki erreal
+bat erlazionatzen diogu p(si), non honi si--ren probabilitatea
+deritzogun eta ondorengo hau betetzen duen:</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">1.-
+&quot;i(1&sup2;i&sup2;k &THORN; 0&sup2;p(si)&sup2;1)</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">2.-
+p(s1)+...+p(sk)=1</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">Batuketa-formulak
+</span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">1.-
+Jarraiko zenbaki osokoen batuketa</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="en-US">	</span></font><font face="Courier New, serif"><span lang="es-ES">
+   </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">2.-
+Karratuen batura</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">3.-
+2-ren potentziak</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">4.-
+Batuketa geometrikoak (progresio geometrikoak)</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">		</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">5.-
+Nahasketak</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	</span></font></p>
+<p class="western" ><br>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">Batuketak
+integralak erabiliz </span></font>
+</p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">1.-
+Demagun f funtzioa jarraia eta beherakorra eta a eta b zenbaki
+osokoak. Orduan</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">2.-
+Demagun f funtzioa jarraia eta gorakorra eta a eta b zenbaki osokoak.
+Orduan</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	</span></font></p>
+<p class="western" >
+<font face="Courier New, serif"><span lang="es-ES">6	APLIKAZIO
+PRAKTIKOA: ELEMENTU BATEN BILAKETA TAULA BATEAN.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">1)
+	Suposa dezagun N luzera duen taula bat dugula (taula ez dago
+sailkaturik).X balioa emanik, algoritmo batek X balio hori dagoen
+taulako posizioaren indizea itzultzen du, eta X taulan ez badago,
+berriz, 0 itzultzen du.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	Algoritmo
+honek zenbat alderaketa egingo du X balioarekin ?</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	a
+-	kasu txarrenean, eta</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	b
+-	batezbesteko kasuan.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">2)	Suposa
+dezagun N luzera duen eta sailkaturik dagoen taula bat dugula. X
+balioa emanik, algoritmo batek X balio hori dagoen taulako
+posizioaren indizea itzultzen du, eta X taulan ez badago berriz 0
+itzultzen du.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	Algoritmo
+honek zenbat alderaketa egingo du X balioarekin?</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	a
+-	kasu txarrenean, eta</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	b
+-	batezbesteko kasuan.</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">3)	Aurreko
+bi ariketetan taulako osagaien arteko alderaketen kopurua zenbatzen
+da, agindu balkoitza behar duen denbora batu ordez. Hori egitea
+algoritmoak egindako lanaren erakusle ona al da? Zer esanahi du
+honek?</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">4)	Bilaketa
+Dikotomikoa metodoak aurreko arazo bera ebazten du. Alderaketen
+kopurua kaxkarragoa dela badakigu, baina zein da zehazki kopuru hori?</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	a
+-	kasu txarrenean, eta</span></font></p>
+<p class="western" ><font face="Courier New, serif"><span lang="es-ES">	b
+-	batezbesteko kasuan.</span></font></p>
+<p class="western" ><br>
+</p>
+</body>
+</html>

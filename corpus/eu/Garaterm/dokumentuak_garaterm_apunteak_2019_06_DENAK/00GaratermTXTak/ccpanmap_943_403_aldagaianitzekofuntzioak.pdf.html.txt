@@ -1,0 +1,2201 @@
+
+
+
+6.
+K a p itu lu a
+Aldagai an itz e k o fu n tz io e rre alak
+1
+
+2
+6.
+K AP IT U L U A AL D AG AI AN IT Z E K O
+F U N T Z IO
+E R R E AL AK
+6.1
+A ra z o a re n a u rk e z p e n a
+O ra in a rte, y a ld a g a i ba t n ola a ld a tz en d en x beste a ld a g a i ba tekiko a z tertz eko ba lio d u en
+tresn eria ma tema tikoa g a ra tu d u g u . Ad ibid ez , on d oren g oa k ika si d itu g u :
+• x a ld a g a ia k h a rtz en d itu en ba lioen a ra bera , x = a ba lio ja kin ba tetik g ertu d a g oen ea n ,
+y a ld a g a ia ren joka era n ola a ld a tz en d en a z tertu d u g u 
+(h a u d a , y(x)-en limitea eta
+ja rra ita su n a x = a p u n tu a n ).
+• Ald a g a ia ren ba lioa k ea 
+[m , M ] ta rte ja kin ba ten ba rru a n ma n ten tz en d iren a z tertu
+d u g u (y-ren born a p en a ).
+• y a ld a g a ia x-
+ekiko z ein a bia d u ra n a ld a tz en d en ika si d u g u (y-
+ren d eriba tu a x-ekiko).
+• y-ren ba tez besteko ba lioa x-ekiko 
+[a, b] ta rte ba tea n a z tertu d u g u (y(x)-en in teg ra la
+[a, b]-en ).
+• y a ld a g a ia ri (x-
+ekiko) lotu ta d a u d en p a ra metroa k ka lku la tz en ika si d u g u (y
+(x) fu n -
+tz ioa ren bid ez d eﬁ n itu ta ko ku rba z a tia ema n ik, bera k mu g a tu ta ko a z a lera ren ka lku lu a ,
+lu z era , bira keta -g orp u tz a ren bolu men a )
+B a in a Z ien tz ia n eta In g en ia ritz a n in teresa tz en z a iz kig u n fen omen o errea leta n , a ld a g a i ba t
+ba in o g eh ia g oren men p e d a u d en M ma g n itu d ea k ere a g er d a itez ke. Ald a g a i h a u eta riko
+ba koitz a k bere esa n a h ia eta bere d eﬁ n iz io eremu a iz a n g o d u . M a ld a g a ia , a d ibid ez u , v, w
+a ld a g a ien men p ekoa d ela a d iera z teko, M 
+(u , v, w) id a tz iko d u g u . Iku s d itz a g u n a d ibid e erra z
+ba tz u k:
+1) Az a lera eta bolu men a .
+H a in ba t p a ra metroren men p e 
+(lu z era , a ltu era , erra d ioa ,...) ema n d a d a toz en la u kiz u z e-
+n en , tria n g elu en , esferen , kon oen , eta b. bez a la ko iru d ien a z a lera ed o bolu men a . B era z ,
+a z a lera eta bolu men a p a ra metro h orien men p eko fu n tz ioa k d ira .
+x eta y a ld eko la u kiz u z en ba ten a z a lera : A(x, y) = xy.
+b oin a rriko eta h a ltu era ko tria n g elu ba ten a z a lera : A(b, h) = bh/
+ 2.
+r erra d ioko eta h a ltu era ko kon o ba ten bolu men a : V (r, h) = πr2h/ 3.
+b oin a rriko, a z a ba lera ko eta h a ltu era ko p risma a n g elu z u z en ba ten bolu men a :
+ V (b, a, h) =
+bha.
+2) y(x)-en in teg ra z ioa mu tu r a ld a korrekin .
+UEP D o n o stia
+M ate m atik a A p lik atu a S aila
+
+6.1.
+ARAZOAREN AURKEZPENA
+3
+D akigunez, y(x) ≥ 0 bada [a, b] tartean, orduan
+A =
+b
+a
+y(x)d x
+balioa (ex istitzekotan) y
+(x) funtzioaren graﬁkoak eta OX ardatzak mugatzen duten azalera-
+ren berdina da, edozein x ∈ 
+[a, b] balioetarako. Hala ere, a eta b muturrak aldakorrak direla
+suposatuz, A balioa a eta b-ren menpe idatz dezakegu:
+A(a, b) =
+b
+a
+y(x)d x
+Adibidez, y(x) = e
+x bada:
+A(a, b) =
+b
+a
+e
+xd x = eb − ea ⇒ A(a, b) = eb − ea
+(1)
+(1) adierazpenarekin, zuzenean A azalera kalkula dezakegu a eta b parametroen balioak eza-
+gututa. Hau da, adibidez, A(0, 1) = e − 1 eta A(2, 4 ) = e4 − e2.
+3) J aurtigaien jaurtiketa.
+Kontsidera dezagun kanoi bat, lurretik jaurtigaiak jaurtitzen dituena, θ angelu jakin
+batekin eta v abiadurarekin (ikus 1 irudia).
+6 .1 Irudia: jaurtigaiaren ibilbidea
+Kasu honetan, jaurtigaiaren x posizioa eta bere y altuera 
+(t une bakoitzean) kalkulatzeko
+eredu bat, hurrengo funtzioen bidez emanda dator:
+x(t, v, θ) = tv c o s θ
+y(t, v, θ) = tv sin θ −
+gt2
+2
+(2)
+Matematika Aplikatua Saila
+UEP Donostia
+
+4
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+x eta y funtzioak t denboraren, v hasierako abiaduraren eta θ jaurtiketa angeluaren menpe-
+koak dira. (2) ekuazioetatik, y posizio bertikala kalkula daiteke, x, v eta θ-
+ren menpean:
+y(x, v, θ) = x ta n θ −
+gx2
+2v2 cos2 θ
+Ikusi 2 irudia. (a)-n v-ren balio ezberdinak hartuz y-
+ren graﬁkoak marraztu ditugu (x-en
+menpean); guztietan θ balioa konstantetzat hartu dugu. (b) irudian, berriz, θ-
+ren balio
+ezberdinekin y-ren graﬁkoak marraztu ditugu (x-
+en menpean); kasu honetan, v konstante
+mantendu dugu.
+6.2 Irudia: y-ren graﬁkoak θ (a irudia) eta v (b irudia) konstantetzat hartuz
+4) Barra bateko beroaren banaketa.
+Demagun L luzerako barra metaliko baten T tenperaturaren aldaketa aztertu nahi dugu-
+la. Barraren puntu bateko T tenperaturaren balioa bi aldagaien menpekoa da:
+ x posizioa eta
+tenperatura neurtzen den t momentua; beraz, T 
+(x, t). Ikusi 3a irudia; t momentu ezberdi-
+netan T -ren banaketaren eboluzio posible bat marraztu dugu. Hau da, T (x, t)-
+ren graﬁkoak
+daude t balio zehatz jakin batzuetarako. T 
+(x, 0), barrako hasierako tenperaturaren banaketa
+da, noski.
+3b irudian, aldiz, barraren puntu jakin batzuetarako T -
+ren graﬁko posibleak marraztu
+ditugu. Hau da, irudian T (x, t)-ren graﬁkoak daude, x-
+en balio ezberdinekin. Kasu honetan,
+T (0, t) eta T 
+(L, t) funtzioek, barraren muturretan, tenperatura nola aldatzen den (denbora-
+rekiko) adierazten dute.
+Aurreko graﬁkoak aldagaietariko bati balio ﬁnko bat emanda marraztu ditugu. Baina
+posible da T tenperaturaren eboluzioaren graﬁkoa marraztea x eta t aldagaien menpe; ho-
+rretarako espazioan marraztutako graﬁkoa behar dugu. x-
+en balio zehatz batzuk hartu eta
+dagozkion T (x, t) kurbak marraztu behar dira (ikus 4a irudia). Ondoren, t-
+ren balio ﬁnko
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.1.
+ARAZOAREN AURKEZPENA
+5
+6.3 Irudia: T (x, t)-ren graﬁkoak t-ren (a) eta x-en (b) balio ezberdinetarako
+batzuk hartuz, dagozkion T (x, t) kurbak marrazten dira (ikus 4b irudia).
+6.4 Irudia: T (x, t)-ren graﬁkoak espazioan
+Bi kurba familiak graﬁko berean marrazten baditugu, T -
+ren eboluzioaren graﬁkoa lortuko
+dugu (x-en eta t-ren menpean aldi berean) (ikus 5 irudia).
+Ondorioz, (x, t) puntu bakoitzerako T (x, t)-
+ren balioa kokatu dugu OZ ardatzean; emai-
+tza 3 dimentsioko gainazal bat izan da. G ainazal hori x = K planoarekin ebakitzen badugu,
+kurba bat lortzen da; kurba horrek, barraren x balio horretan tenperatura nola aldatzen den
+adierazten du, denbora aurrera doan heinean. Aldiz, gainazala t = K planoarekin ebakiz,
+lortzen dugun kurbak, momentu zehatz horretan barraren x puntu bakoitzeko tenperatu-
+raren balioa ematen digu. G ainazal horiek marrazteko, posible da, noski, kurba horien
+loditasuna aldatzea, 6 irudian agertzen den bezala.
+Matematika Aplikatua Saila
+UEP Donostia
+
+6
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.5 Irudia: Aurreko bi kurba familiak graﬁko berean
+6.6 Irudia: Aurreko gainazalaren graﬁkoak loditasun ezberdinekin
+6.1. Ariketa
+Aplikazio praktikoetan agertzen diren aldagai anitzeko funtzioen beste adibi-
+deak hurrengoak dira: xaﬂ a metaliko plano baten (x, y) puntu bakoitzeko T 
+(x, y) tenpera-
+tura; labe baten (x, y, z) puntu bakoitzeko T (x, y, z) tenperatura; K
+(x, y, z) kontaminazio-
+kontzentrazio maila, 
+(x, y, z) puntu bakoitzean. Aurreko ideiak jarraituz, adibide hauetariko
+bakoitzarekin, marraztu aldagai bakoitzaren banaketen graﬁko posibleak.
+Ikusi dugunez, aplikazio praktiko interesgarrietan aldagai anitzeko funtzio errealak ager-
+tzen dira. Deﬁni dezagun kontzeptua modu formalean.
+6.1. Deﬁ niz ioa
+Izan bed i
+D p lano k o erem u bat. D-n d eﬁ nitu ta d ag o en bi ald ag ai erreale-
+tak o fu ntzio erreal bat,
+(x, y) ∈ D p u ntu bak o itza, f (x, y) zenbak i erreal bak ar batek in lo tzen
+d u en elk arbid ea d a.
+M o d u berean d eﬁ nitzen d ira h iru , lau ed o ald ag ai g eh iag o k o fu ntzio errealak .
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.2.
+Z = F (X, Y ) FUNTZIOEN ADIERAZPEN GRAFIKOA. M AILA-LERROAK
+7
+6.2. Ariketa
+Hurrengo funtzio errealen deﬁnizio eremua lortu eta ondoren, graﬁkoa ma-
+rraztu.
+a) f (u, v) =
+1
+u + v
+b) f (x, y) =
+x2 − y2
+d) f (x, y) = ln(x2 − xy)
+e) f (x, y, z) =
+√
+xyz
+f ) f (x, y, z) =
+x + y + z − 1
+Orain, planteatzen dugun lana, aldagai bakarreko funtzioekin egindakoaren berbera da;
+hau da, tresneria matematikoa garatu nahi dugu; horrekin, M aldagaia nola aldatzen doan
+aztertu ahal izango dugu, menpeko x, y, z... aldagaien balioak aldatzen doazen heinean.
+Zentzua izango al du M (x, y) edo M 
+(x, y, z) funtzioen limiteaz eta jarraitasunaz hitz egi-
+teak? Deribatu ahal izango dira? E ta integratu? Zer adieraziko dute, kasu honetan, deriba-
+tzeak eta integratzeak? Zer erabilpen izango dituzte kontzeptu horiek? Galdera guzti hauek
+erantzungo ditugu gai honetan, eta baita hurrenagokoetan ere.
+6.2
+z
+= f (x , y) funtzioen ad ierazpen g raﬁ koa. M aila-lerroak
+Azter dezagun zehatzago bi aldagaitako z = f 
+(x, y) funtzioen adierazpen graﬁkoak egiteko
+modua. Ohartu aldagai bateko y(x) funtzio erreal baten 
+(non x ∈ D ⊂ R) adierazpen
+graﬁkoa egiteko, planoan (x, y(x)) 
+(non x ∈ D) puntuak marrazten ditugula. Aurreko
+atalean ikusi dugun bezala, z = f 
+(x, y) funtzioa D ⊂ R2 eremuan marrazteko ere ideia
+berbera erabiltzen da; hau da, espazioan (x, y, f (x, y) moduko puntuak (non 
+(x, y) ∈ D)
+marraztu behar ditugu. P untu hauek guztiak gainazal bat osatuko dute.
+z = f (x, y), 
+(x, y) ∈ D funtzioaren gutxi gora beherako graﬁkoa marrazteko hurrengo
+pausuak jarraitu beharko ditugu:
+- y = k planoan z = f (x, k) kurba marraztu, k-
+ren balio ezberdinetarako. Hau da, gainazala
+OY ardatzari elkarzutak diren planoekin ebaki behar dugu, eta ondoren, lortutako ebakidu-
+rako kurbak marraztu behar dira.
+- x = k planoan z = f (k, y) kurba marraztu, k-
+ren balio ezberdinetarako. Hau da, gainazala
+OX ardatzari elkarzutak diren planoekin ebaki behar dugu, eta ondoren, lortutako ebakidu-
+rako kurbak marraztu behar dira.
+7a irudian, z1 = 2.6 + (x − 0.4)
+(y − 0.4) funtzioa modu horretan marraztuta agertzen da,
+Matematika Aplikatua Saila
+UEP Donostia
+
+8
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.7 Irudia: z1-en (a) eta z2-ren (b) graﬁkoak
+D = [0.4, 1.4]x[0.4, 1.4] eremuan. 7b irudia, berriz, z2 =
+−5
+1+ e (x
+2+y2) funtzioaren graﬁkoa da,
+D = [−4, 4] × [−4, 4] eremuan.
+z = f 
+(x, y) funtzioaren graﬁkoaren informazio gehiago lor daiteke gainazala, OZ arda-
+tzari elkarzuta den plano batekin ebakiz, hau da, z = k itxurako plano batekin. Ikusi 8
+irudia. (a) irudian, z = 40 − 4x
+2 − y2 gainazala marraztu dugu. (b) irudian, z = 33 planoa,
+eta bi funtzioen arteko ebakidura kurba. Eta 
+(c ) irudian berriz, gainazala eta z = k moduko
+plano batekin ebakitzean lortutako ebakidurako hainbat kurba marraztu ditugu.
+6.8 Irudia: z = 40 − 4x
+2 − y2 gainazalaren eta z = k planoen arteko ebakidurak
+Ikus dezagun zein kurba lortzen dugun z = 40−4x
+2 −y2 funtzioaz deﬁnitutako gainazala
+eta z = k planoa ebakitzean:
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.2.
+Z = F (X, Y ) FUNTZIOEN ADIERAZPEN GRAFIKOA. MAILA-LERROAK
+9
+z = 40 − 4x
+2 − y2 eta z = k
+Ordezkatuz:
+k = 40 − 4x
+2 − y2 ⇒
+x
+2
+40
+−
+k
+4
++
+y
+2
+40 − k
+= 1 ⇒
+x
+2
+40
+−
+k
+4
+2 +
+y
+2
+√
+40 − k
+2 = 1
+(4)
+Beraz, ebakidura, z = k planoan kokatuta dagoen elipse bat da, zentroa 
+(0, 0, k) puntuan
+eta ondorengo ardatzerdiak dituena:
+a =
+40
+−
+k
+4
+eta b =
+√
+40 − k (non k < 40)
+(5 )
+Gainera, elipse hauek espazioan marraztu beharrean XY planoan marraz ditzakegu, maila-
+lerroak deitutakoak lortuz.
+6.2. Deﬁnizioa
+Izan bitez
+D planoko eremu bat eta z = f (x, y) D-n deﬁnituta dagoen
+bi aldagaitako funtzio bat.
+k = f (x, y) moduko kurba guztiei maila-lerroak deitzen zaie, k
+konstante bat izanik.
+9 irudian ikus daitekeen bezala, maila-lerroak z = f 
+(x, y) gainazala eta z = k planoak
+ebakitzean lortzen diren kurben XY planoko proiekzioak dira.
+6.9 Irudia: maila-lerroak
+Ohartu maila-lerro bat z-k balio berberak hartzen dituen 
+(x, y) puntuetaz osaturik da-
+goela. Adibidez, z = 40 − 4x
+2 − y2 funtzioak txapa metaliko baten (x, y) puntuan duen
+tenperatura adierazten badu, orduan, k-ren balio bakoitzerako, 
+(9 irudiko) dagokion elip-
+seak k tenperatura duten (x, y) puntuak bilduko ditu. k-
+ren balioa handitzen doan heinean
+Matematika Aplikatua Saila
+UEP Donostia
+
+10
+6.
+K AP IT U L U A AL D AG AI AN IT Z E K O
+F U N T Z IO
+E R R E AL AK
+(tenpera tura h a nd ia g oa ), elipsea ren a rd a tz erd ien ba lioa k tx ikia g otz en d oa z 
+((5 ) ekua z ioa ).
+Tenpera tura m a x im oa k = 40 d a , 
+(0, 0) puntua n lortz en d ena . K a su h orreta n, ez d a m a ila -
+lerrorik ex istitz en, g a ina z a la eta z = 40 pla noa ren a rteko eba kid ura 
+(0, 0, 40) puntua ba ita .
+M a ila -
+lerroen d ia g ra m a ba tea n, ond oz ond oko bi kurben a rteko ta rte-
+luz era k a z ter-
+tuz , inform a z io g a rra ntz itsua lor d ez a keg u. f (x, y) = k m a ila -
+lerroa k k pa ra m etroa ren
+g eh ikuntz a konsta nteen bid ez m a rra z ten d ira . Ad ibid ez , 9 irud iko h a m a r m a ila -
+lerroa k,
+k
+= 3 0, 3 1, 3 2, . . . , 3 9 ba lioa k h a rtuz m a rra z tu d ira . O h a rtu, 
+(irud i berea n) m a ila -lerroa k
+(0, 0) puntutik urruntz en d oa z en h einea n, g eroz eta g ertua g o d a ud ela elka rreng a nd ik. H o-
+rrek esa n na h i d u, (0, 0)-tik urrun d a g oen (a, b) puntu ba tea n, 
+(a, b)-tik (a + h, b + h)-ra ko
+d espla z a m end u tx iki ba tek funtz ioa ren ba lioeta n ez berd inta sun h a nd ia eg otea era g in d ez a -
+keela . H a u d a , f (a, b) eta f (a + h, b + h) (f -
+ren g eh ikuntz a ) a rteko d iferentz ia h a nd ia g otz en
+d a , (a, b), (0, 0) puntutik urruntz en d oa n h einea n.
+6.3. A rik e ta
+Iz a n bed i f (x, y) = 40 − 4x2 − y2 funtz ioa . K a lkula tu funtz ioa k 
+(a, b)-tik
+(a + h, b + k) puntura pa sa tz eko ja sa ten d uen g eh ikuntz a (0, 0), 
+(1, 1) eta (10, 10) puntueta n,
+g eh ikuntz a tx iki ba t h a rtuz 
+(a d ibid ez h = 0.1, k = 0.2). Interpreta tu lortuta ko em a itz a .
+Ikusi d ug unez , f (x, y) = 40 − 4x2 − y2 funtz iora ko, f(a, b) eta f
+(a + h, b + h) (f-ren g eh i-
+kuntz a ) a rteko d iferentz ia h a nd ia g otz en d oa , (a, b) puntua (0, 0)-
+tik urruntz en d oa n h einea n.
+O rokorrea n, z = f (x, y) funtz io ba tera ko, (a, b)-tik 
+(a+h, b+k) puntura d espla z a tz ea n (h eta
+k
+g eh ikuntz a tx ikiekin), (a, b) puntua m a ila -
+lerroa k elka rreng a nd ik oso g ertu d a ud en erem u
+ba tea n koka tuta ba d a g o, ord ua n, z ba lioa k g eh ikuntz a h a nd i ba t ja sa n d ez a ke. E ta 
+(a, b)
+puntua m a ila -
+lerroa k elka rreng a nd ik urrun d a ud en erem ua n ba d a g o, berriz , z-
+k g eh ikuntz a
+tx ikia g oa ja sa ng o d u. H a u d a , beste m od u ba tera esa nd a , z a ld a g a ia a ld a tz en d en a bia d ura
+h a nd ia g oa d a m a ila -
+lerroa k g ertu d a ud en erem ueta n, urrun d a ud en erem ueta n ba ino. Ikus
+d ez a kez unez , pix ka na ka , y = f 
+(x) a ld a g a i ba ka rreko funtz ioeta n ika si g enuen kontz eptu ba ti
+form a em a ten a ri g a ra ora in ere:
+ d eriba tua ; ba ina , ka su h oneta n, bi a ld a g a iko z = f (x, y)
+funtz ioekin.
+6.3
+M a ila -le rro e n a p lik a z io a k
+Ikus d itz a g un z = f (x, y) funtz io ba ten m a ila -
+lerroeta tik inform a z io g a rra ntz itsua lor d a i-
+tez keen eg oera pra ktikoen a d ibid e ba tz uk.
+1 ) Isoba ra k.
+M eteorolog ia n oso m a g nitud e g a rra ntz itsua d a , itsa sm a ila n, erem u g eog ra ﬁ ko ba teko 
+(x, y)
+puntu ba koitz eko presioa ren P ba lioa . H orrela , funtz io errea l ba t d eﬁ nitz en d a , P = F 
+(x, y),
+m iliba reta n em a nd a d a torrena . P resio a tm osferikoa ren ba lioa k, m om entu berea n lurrea n eta
+U E P D o n o stia
+M ate m atik a A p lik atu a S aila
+
+6.3.
+M AILA-LERROEN APLIKAZIOAK
+11
+itsas gaineko buiatan kokatutako hainbat estazio meteorologikotatik hartzen dira. Presio
+atmosferiko berbera duten mapako puntuak marren bidez lotuz 
+(konbenio bidez, lau miliba-
+retako tarteekin), meteorologoek lurreko gainazaleko eremuaren presioaren egoera orokorra
+zein izan daitekeen ondoriozta dezakete. Marra horiei, Meteorologian, isobarak deitzen zaie,
+baina presio funtzioaren marra-lerroak besterik ez dira, hau da, F 
+(x, y) = k kurbak, non
+adibidez, k= 996 , k= 10 0 0 , k= 10 0 4 , etab.
+10 irudian ohiko isobara mapa bat dago, 2 0 0 4 -
+ko U rriak 2 0 egunekoa. Ikusi eremu geo-
+graﬁko batzuetan 
+(Iberiar Penintsularen erdialdean, adibidez) isobarak nahiko gertu daudela
+elkarrengandik, eta askoz urrunago beste eremu batzuetan 
+(Mediterraneo inguruan, adibi-
+dez). Isobarak hurbil dauden eremuetan, gertu dauden bi puntuetan P presio atmosferikoan
+ezberdintasuna handia izango da. Beste modu batera esanda, P -
+ren aldaketaren abiadura
+handiagoa da isobarak gertu dauden eremuetan. Eta zer adierazten du horrek Meteorolo-
+gian? Haize gogorrak. Isobarak oso gertu dauden lekuetan haize gogorra ibiliko da. Isobarak
+urrun dauden lekuetan, berriz, haizea ahulago ibiliko da. Adibidez, 10 irudiko mapan, Euskal
+Herrian kokatuta dauden isobarak nahiko gertu daude, eta egun hartan, C errojako 
+(Bizkaia)
+estazio meteorologikoan 14 3 Km/ h-ko abiadurako haize bortitza neurtu zen.
+6 .10 Irudia: isobara mapa
+2 ) Mapa topograﬁkoak.
+Mapa topograﬁkoetan, maila-lerroen bidez, (x, y) puntu bakoitzeko H = H
+(x, y) altueran
+lurraren mailen arteko ezberdintasuna adierazten da. Maila-
+lerroak, itsasmailarekiko altuera
+berean dauden puntuak lotzen ditu (ikus 11 irudia). Maila-
+lerroei hisohipsak deitzen zaie
+itsasmailatik gora baldin badaude, eta behera daudenean, berriz, isobatas.
+Aztertu 12 irudia. Eremu geograﬁko bateko 6 0 Km2-
+ko mapa topograﬁko bat da, 10 0
+metro bakoitzeko altuerak agertzen direlarik. G ero, A eta B puntuak emanda, bi puntuen
+Matematika Aplikatua Saila
+UEP Donostia
+
+12
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.11 Irudia: maila-lerroak altuera bereko puntuez osatzen dira
+arteko ibilbidearen gutxi gora beherako proﬁla marraztu dugu. Itxura honetako proﬁlak,
+adibidez, mendiko liburuetan eta txirrindulari biratako etapetan agertzen dira. Isohipsak
+gertuago dauden eremuetan, aldapa handiagoak daudela esan nahi du; isohipsak aldenduago
+dauden lekuetan berriz, aldapa txikiagoak dauden seinale izango da, hau da, lurra lauagoa
+izango da. Beste modu batera esanda, H altueraren aldaketa abiadura handiagoa izango da
+isohipsak gertuago dauden eremuetan.
+6.4. Ariketa
+12 irudiari buruzkoa:
+a) C eta D puntuak ibilbide zuzen batekin lotuz, marraztu bi puntuen arteko ibilbidearen
+proﬁla.
+b) Kalkulatu gutxi gora beherako bi puntuen arteko distantzia.
+d) Demagun bizikletaz egiten dugula ibilbidea, eta aldapa gogorrenak saihestu nahi ditugula.
+Aukeratu C eta D arteko ibilbide laburrena.
+6.4
+G ainazal klasiko b atzu k
+Ikusi dugunez, z = f 
+(x, y) funtzio batek deﬁnitutako gainazalaren zirriborroa marrazteko,
+gainazala x = k, y = k, z = k planoez ebakitzean lortutako kurbetaz baliatzen gara. Z ehazki
+z
+= 40 − 4x2 − y2 funtziorako, gainazalaren eta z = k planoaren arteko ebakidura elipse
+bat dela ikusi genuen. Erraz egiaztatu daiteke gainazalaren eta x = k-
+ren arteko ebakidura
+parabola bat dela, eta baita y = k-rekin ebakiz 
+(ikusi 8 irudian parabola horiek). Horregatik,
+z
+= 40 − 4x2 − y2 funtzioaz deﬁnitutako gainazalari paraboloide eliptikoa deitzen zaio.
+6.5 . Ariketa
+13 irudian aplikazio praktikoetan maiz agertzen diren gainazal batzuk daude.
+Beraien ekuazioak ondorengoak dira, baina, lotu al dezakezu gainazal bakoitza bere ekua-
+zioarekin?
+a
+)
+x2
+a2
++
+y2
+b2
+= 1 +
+z2
+c2
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.4.
+GAINAZAL KLAS IKO B ATZUK
+13
+6.12 Irudia: mapa topograﬁkoa eta A-tik B-rako ibilbidearen proﬁla
+b
+) z =
+x2
+a2
++
+y2
+b2
+d
+)
+x2
+a2
++
+y2
+b2
+=
+z2
+c2
+− 1
+e
+)
+x2
+a2
++
+y2
+b2
+=
+z2
+c2
+f
+)
+y2
+b2
+−
+x2
+a2
+= cz
+Matematika Aplikatua Saila
+UEP Donostia
+
+14
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.13 Irudia: (6) funtzioen graﬁko batzuk
+6.5
+Gainazal zilind rikoak
+Aztertu 14a irudia. y = x2 + 1 parabola marraztu dugu X Y planoan. Hau da, hurrengo bi
+baldintza analitikoak betetzen dituzten puntuen multzoa marraztu dugu espazioan:
+y
+= x2 + 1
+z
+= 0
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.5.
+GAINAZAL ZILINDRIKOAK
+15
+Baina, zer gertatzen da z = 0 bigarren baldintza kentzen dugunean?. y = x2 + 1 bal-
+dintzak espazioko zer puntuak adierazten ditu?. y = x2+1 baldintzak ondorengoa adierazten
+du: z aldagia murrizketarik ez duela; hau da: z ∈ 
+(−∞, ∞). y = x2 + 1 ekuazioa betetzen
+duten (x, y, z) puntuek honako gainazala mugatzen dute:
+ OZ ardatzarekiko paraleloak diren,
+eta 
+(x, y) puntutik pasatzen diren zuzenak mugatutzen dutena, hai zuzen ere. 6.14
+(b,c ,d)
+irudiek, gainazal honen zati bat adierazten dute; zati hau espazioko ikuspuntu desberdine-
+tatik ikusita lortzen delarik. Era honetan deﬁnitutako gainazalari gainazal zilindrikoa edo
+zilindroa deritzo. Gainazal zilindrikoa deﬁnitzen duen y = f 
+(x) kurbari zuzentzailea deritzo.
+Zilindroa sortzen duten OZ ardatzarekiko paraleloak diren zuzenak sortzaileak dira.
+6.14 Irudia: Gainazal zilindrikoak.
+Matematika Aplikatua Saila
+UEP Donostia
+
+16
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.15 irudiak, zilindroaren beste zati bat erakusten du. Zilindoaren zuzentzailea elipse bat
+da. Orokorrean, zilindroaren zuzentzailea kurba ireki bat izan daiteke. Horrez gain, zuzen-
+tzailea, XZ edo Y Z koordenatu planoetan egon daiteke. Zilindroa OZ ardatzarekiko parale-
+loa bada, gainazal zilindrikoa F 
+(x, y) = 0 itxurako ekuazioaren bidez ematen da, F (x, z) = 0
+ekuazioa erabiliko dugu, zilindroa OY ardatzarekiko paraleloa denean, eta F 
+(y, z) = 0 ekua-
+zioak adierazten du OX ardatzarekiko paraleloa den zilindro bat. Zuzentzailearen ekuazioan
+ez dagoen aldagaia hartzen badugu, zilindroa ardatz horrekiko paraleloa izango da.
+6.15 Irudia: Zilindro eliptikoa.
+6.6. Ariketa
+6.16 irudian, ondorengo zuzentzaileek deﬁnitzen duten gainazal zilindrikoen
+zati batzuk, agertzen dira:
+ z = 1 + sin x, x = 1 + sin z, y = 1 + sin z. Badakizu zuzentzaile
+bakoitzari dagokion graﬁkoa aukeratzen?
+6.7 . Ariketa
+Ondorengo gainazalak marraztu.
+1. x =
+y
+2
+a
+2 +
+z
+2
+b
+2
+2.
+(x − x0)
+2
+a
+2
++
+(z − z0)
+2
+b
+2
+=
+(y − y0)
+2
+c
+2
+3. x =
+1
+y
+2
+4. y
+2 + z2 = R2
+5. y = z
+2 + 2
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.6.
+GAINAZAL BATEN BIDEZ DEFINITUTAKO SOLIDOAK.
+17
+6.16 Irudia: 6.6 adibidearen gainazalak.
+6.6
+Gainazal baten bidez deﬁ nitutako solidoak.
+Askotan interesatzen zaigu espazioko gorputz baten bolumena, bere gainazalaren azalera,
+masa, grabitate-
+zentroaren koordenatuak, etb. kalkulatzea. Has gaitezen ikusten, batzue-
+tan, S gorputza adieraz daitekela bere muga osatzen duten gainazalaren bidez.
+6.8. Ariketa
+6.17 irudian hiru gorputz desberdinak agertzen dira. Ondorengo baldintzek
+gorputz horiek deﬁnitzen dituzte. S aia zaitez baldintzak eta solidoak erlazionatzen.
+1.
+x
+2 + y2 = z
+z
+= 1
+2.
+z
+=
+x
+2 + y2
+z
+= 1 −
+x
+2 + y2
+3.
+
+
+
+
+
+x
+2 + y2 = 4
+x
+2 + y2 + (z − 2)2 = 4 2 ≤ z ≤ 4
+z
+= 0
+Matematika Aplikatua Saila
+UEP Donostia
+
+18
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.17 Irudia: 6.8 ariketako gorputzak
+6.7
+w = f(x ,y ,z) itx urako funtzioen adierazpen g raﬁkoa. Maila
+kurbak
+Ikusi dugunez, garrantzitsua den maginitude ﬁsiko bat 
+(tenperatura, masaren konzentra-
+zioa, presioa, altuera etb.), planoko D ⊂ R
+2 eremuan deﬁnitutako f(x, y) funtzioaren bidez
+adieraz daiteke. Era berean, espazioko D ⊂ R
+3 eremuan deﬁnitutako f(x, y, z) funtzioak
+ere, 
+(x, y, z) ∈ D puntu bakoitzean, magnitude ﬁsikoren bat adieraz dezake. Adibidez, D
+labe baten barrualdea izan daiteke eta T = f (x, y, z) funtzioa, 
+(x, y, z) puntu bakoitzeko
+tenperatura.
+Gogora ezazu, y = f (x) R
+2-n marrazten dela eta z = f(x, y) funtzioa R3-n marrazten
+dela. Era berean, w = f (x, y, z) R
+4-n marraztu beharko genuke, azkeneko hau ezinezkoa
+izanik.
+w
+= f (x, y, z) funtzioaren " mailak" marrazten dira. Hau da:
+ k konstanteari balioak ema-
+nez, f (x, y, z) = k berdintza betetzen duten espazioko 
+(x, y, z) puntuak marrazten ditugu.
+Maila hauek, geometrikoki, R
+3-ko gainazalak dira. Gainazal hauei maila kurbak deritze.
+6.3. Deﬁ niz ioa
+Izan bed i w
+= f (x, y, z), esp azio k o D erem u an d eﬁ nitu tak o 3 ald ag ai
+errealek o fu ntzio erreala. k
+= f (x, y, z) itx u rak o ed o zein g ainazali fu ntzio aren m aila k u rba
+d eritzo ; k k o nstante bat d a.
+6.1 . Ad ib id ea
+Demagun espazioko gorputz baten P (x, y, z) puntu bakoitzeko masaren
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.7. W = F(X ,Y ,Z) ITX URAKO FUNTZIOEN ADIERAZPEN GRAFIKOA. MAILA KURBAK 19
+konzentrazioa, P puntutik gorputzaren erpin baterainoko ditantziaren proportzionala de-
+la. Beraz, P (x, y, z) puntu bakoitzeko masa puntuala, C(x, y, z) = M
+2
+x
+2 + y2 + z2
+ekuazioaren bidez adierazten da. Maila kurbak hauxek dira: C(x, y, z) = k
+2, hau da,
+k
+M
+2
+2
+= x
+2 + y2 + z2, (0, 0, 0) zentroko eta k/M erradioko esferak. k-
+ren balio bakoitza-
+rako, masaren konzentrazioa berdina duten P 
+(x, y, z) puntuek, maila kurba osatzen dute.
+6.18 irudian itxura honetanko kurba batzuk azaltzen dira.
+6.18 Irudia: 6.1 adibideko maila kurbak.
+6.2. Adibidea
+M masak, bere inguruan grabitazio-eremu bat deﬁnitzen du. M puntutik
+distantzi berara kokatuta dauden puntuentzat eremuaren balioa berdina da. Orduan, maila
+kurbak 
+(gainazal ekipotentzialak) M zentroko esferak dira. 6.19 irudian hauetako gainazal
+batzuk azaltzen dira non suposatu den masa koordenatu jatorrian kokaturik dagoela.
+Matematika Aplikatua Saila
+UEP Donostia
+
+20
+6. KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.19 Irudia: 6.2 adibideko gainazalak.
+6.3. Adibidea
+Karga elektriko bat eroale batetik ibiltzen denean, bere inguruan eremu
+magnetiko bat sortzen du. Eremu magnetikoaren V balioa berdina izango da, eroaletik
+distantzi berberara kokaturiko 
+(x, y, z) puntuentzat. 6.20 irudiak, bi maila kurba eta kable
+espira batzuk osatutako eroalea adierazten du.
+6.8
+z
+= f (x , y) funtzioaren lim itea eta jarraitasuna.
+Ikus dezagun zein den z = f (x, y) funtzioaren portaera 
+(a, b) puntuaren inguruan. Ikus 6.21
+irudia. Irudi honetan, D = [0, 2] × 
+[0, 1]eremuan deﬁnitutako ondorengo funtzioa agertzen
+da:
+z =
+2x
+2 + 1
+0 ≤ x ≤ 1 bada
+2 − x
+1 ≤ x ≤ 2 bada
+(6.1)
+Argi dago, f (x, y) funtzioaren portaera P (1, 0. 5) eta Q
+(1. 5, 0. 5) puntuetan oso desber-
+dina dela. Graﬁkoaren arabera, esan dezakegu f (x, y) funtzioa "jarraia"dela Q
+(1. 5, 0. 5)
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.8.
+Z = F (X, Y ) FUNTZIOAREN LIMITEA ETA J ARRAITASUNA.
+21
+6.20 Irudia: 6.3 abidideko gainazalak.
+puntuan eta P (1, 0. 5) puntuan berriz, ez-
+jarraitua dela. Are gehiago, esan dezakegu f (x, y)
+funtzioa, eremuan dauden (1, y) itxurako puntu guztietan ez-
+jarraitua dela. Batzuetan, ez
+da nahikoa izango f 
+(x, y) funtzioaren graﬁkoa erabiltzea, funtzioaren portaera (a, b) pun-
+tuaren inguruan deskribatzeko. Ikus 6.22 irudian azlatzen den graﬁkoa. 
+(0, 0) puntuaren
+ingurune batean ondorengo funtzioaren bi bista desberdin marraztu ditugu.
+z =
+x
+2 − y2
+x
+2 + y2
+(6.2)
+(0, 0) puntuan jarraia al da?. Funtzio hau ez dago deﬁniturik 
+(0, 0) puntuan, beraz, zaila
+Matematika Aplikatua Saila
+UEP Donostia
+
+22
+6. KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.21 Irudia: L ímite y continuidad
+da puntu honen inguruan bere portaera aztertzea, graﬁkoa besterik erabilitzen ez badugu.
+Aldagai bakarreko funtzioen kasuan bezala, jarraitasunaren adierazpen analitikoa idatzi
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.8.
+Z = F (X, Y ) FUNTZIOAREN LIMITEA ETA JARRAITASUNA.
+23
+6.22 Irudia: z =
+x2−y
+2
+x2+y2
+funtzioa
+beharko dugu. Hasteko, prozedura gogoratuko dugu, aldagai bakarreko kasurako. Ikus 6.23
+irudian azaltzen den y(x) funtzioaren marrazkia.
+Ikus dezagun y(x)-ren portaera eremuaren puntu batzuetan:
+•
+x = 1 puntuan funtzioa ez dago deﬁniturik baina L = 1. 8 41 limitea onartzen du;
+alboko limiteak existitzen dira eta balio honen berdinak dira.
+•
+x = 1. 5 puntuan funtzioa deﬁnituta dago jarraia izanik; alboko limiteak existitzen
+dira eta y(1) = 2. 5-ren berdinak dira.
+•
+x = 2 puntuan funtzioa deﬁnituta dago eta L = 2. 8 19 limitea lortzen da; kasu honetan
+ez da jarraia L, y(2) = 3. 5-ren desberdina delako.
+•
+x = 3 puntuan funtzioa deﬁnituta dago baina eskuin-limitea (2. 5) eta ezker-
+limitea
+(1. 423) desberdinak direnez ez dago limiterik.
+y
+(x) funtzioaren L limitearen existentzia x = a puntuan aztertzeko, forgatu behar da
+alboko limiteak eta L berdinak direla. Funtzioa, x = a puntuan jarraia izango da, L = y
+(a)
+betetzen bada. Prozedura hau bi aldagia errealeko funtzioen kasuan erabili nahi dugunean,
+Matematika Aplikatua Saila
+UEP Donostia
+
+24
+6. KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.23 Irudia: Aldagi bakarreko funtzioa.
+ondorengo problema sortzen da. Ikus 6.24(a) irudia. D ⊂ R
+2 eremua eta (a, b) ∈ D marraztu
+ditugu. Hau da nahi duguna: (x, y) ∈ D puntua (a, b)-
+rantz joatea. Baina zer gertatzen da?.
+Orain ez dugula, ez (a, b) puntuaren ezkerra ezta (a, b) puntuaren eskuina. 
+(a, b) puntura
+hurbiltzeko y = c(x) kurba edo bideak jarraitu dezakegu non
+lim
+x→a
+c(x) = b
+betetzen den.
+6.24(b) irudian horietako bide batzuk agertzen dira.
+z = f 
+(x, y) funtzioaren limitearen existentzia eta jarraitasuna aztertzeko ondorengo ideia
+erabiliko dugu:
+“L zenbaki erreala, z = f (x, y), funtzioaren limitea da (x, y) → 
+(a, b) doanean, on-
+dorengoa betetzen bada: edozein biderako, (x, y) ∈ D puntua 
+(a, b) punturantz doanean,
+z = f (x, y)-ren balioak L balio berberantz jotzen du. Horrez gain, L = f 
+(a, b) betetzen
+bada orduan, f (x, y) jarraia da (a, b) puntuan ”.
+Idatz ditzagun idei hauek formalki:
+6.4. Deﬁnizioa
+Izan bitez
+z = f (x, y), D ⊂ R
+2 eremuan deﬁnitutako funtzioa eta L
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.8.
+Z = F (X, Y ) FUNTZIOAREN LIMITEA ETA JARRAITASUNA.
+25
+6.24 Irudia: Bideak.
+zenbaki erreal bat.
+L, f (x, y)-ren limitea da (x, y) → (a, b) doanean ondorengo baldintza
+betetzen denean:
+D eremuan dagoen eta
+lim
+x→a
+c(x) = b
+baldintza betetzen duen h autazko
+y = c(x) kurbarako
+lim
+x→a
+f (x, c(x)) = L
+betetzen da.
+Eta ondorengo eran adieraziko dugu:
+lim
+(x,y)→(a,b )
+f (x, y) = L
+6.5. Deﬁnizioa
+Izan bed i z
+= f (x , y) , D ⊂ R2 erem u an d eﬁ nitu tako fu ntzioa, no n
+(a , b) ∈ D d en. Au rrek o fu ntzio a (a , b) p u ntu an jarraia d a, 
+(a , b) p u ntu an lim itea o nartzen
+bad u eta lim ite h o ri f
+(a , b)-
+ren berd ina bad a. B ald intza h au o nd o reng o eran ad ierazik o d a:
+lim
+(x,y)→(a ,b )
+f
+(x , y) = f (a , b)
+M atem atik a A p lik atu a S aila
+U E P Donostia
+
+26
+6.
+K AP IT U L U A AL D AG AI AN IT Z E K O
+F U N T Z IO
+E R R E AL AK
+Ald a g a i ba ka rreko ka su a n bez a la , 
+(a, b) p u n tu a n L limitea ex istitz eko ez d a beh a rrez koa
+(a, b) p u n tu a f (x, y)-
+ren D d eﬁ n iz io eremu a n eg otea , h a u d a , g erta d a iteke f 
+(a, b) ez eg otea .
+f
+(x, y) fu n tz ioa 
+(a, b) p u n tu a n ja rra ia iz a teko beh a rrez koa d a f 
+(a, b) ex istitz ea . Ad ibid ez ,
+(6.2) fu n tz ioa ez d a g o d eﬁ n itu rik (a, b) = 
+(0, 0) p u n tu a n . B era z , fu n tz ioa ez d a ja rra ia
+iz a n g o. H a la ere, z = f 
+(x, y) fu n tz ioa ren limitea p u n tu h orreta n a z ter d ez a keg u .
+Iku s 6.25 iru d ia . z = f 
+(x, y) fu n tz io ba ten D eremu a ren mu g a p u n tu en bid ez a d iera z i
+d u g u ; mod u h on eta n z era a d iera z ten d u g u : z = f 
+(x, y) fu n tz ioa D-ren ba rru ko p u n tu eta n
+ba ka rrik d eﬁ n itu rik d a g oela . 
+(a, b) p u n tu a ez d a g o D eremu a n , bera z ez d a g o z = f (x, y)
+fu n tz ioa ren ja rra ita su n a 
+(a, b) p u n tu a n a z tertz erik. H a la ere, z = f 
+(x, y) fu n tz ioa ren li-
+mitea (x, y) → (a, b) d en ea n a z tertu d a iteke; D-
+ren ba rn ea n d a u d en ku rba k era bil d itz a keg u
+(x, y) → (a, b) lortz eko. K a su h on eta n ez d u z en tz u rik z = f 
+(x, y) fu n tz ioa ren limitea
+a z tertz ea (x, y) → (c, d) d en ea n ; ez d a g o 
+(c, d) p u n tu ra iristerik D-ren ba rn ea n d a u d en
+ku rba k era biltz en ba d itu g u .
+6.25 Iru d ia : K a n p o-p u n tu a eta mu g a -p u n tu a
+6.9. Ariketa
+Iz a n bed i D ⊂ R2 eremu a . D eﬁ n i itz a z u on d oren g o kon tz ep tu a k forma lki:
+D
+-ren ba rn e-p u n tu a , mu g a -p u n tu a eta ka n p o-
+p u n tu a . Ad ibid ea k ema n . Az a ld u z ein tz u k
+d iren (a, b) p u n tu a k bete beh a r d itu en ba ld in tz a k, z = f (x, y)-
+ren limitea k (x, y) → (a, b)
+d en ea n ex istitz eko.
+6.4 . Ad ib id ea
+H a r d ez a g u n berriro 
+(6.1 ) fu n tz ioa eta a z ter d ez a g u n limitea ren ex isten tz ia
+P
+(1 , 0. 5) eta Q
+(1 . 5, 0. 5) p u n tu eta n . Iku s 6.26 iru d ia . H a r d ez a g u n P 
+(1 , 0. 5) p u n tu a : a u kitu
+d itu g u P p u n tu ra n tz jotz en d u ten C 1 eta C 2 ku rba k; d a g oz kien iru d i ku rbek, L 1 eta L 2,
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.8.
+Z
+= F (X, Y ) FUNTZIOAREN LIM ITEA ETA J ARRAITAS UNA.
+27
+(1, 0. 5, 3 ) eta (1, 0. 5, 1) puntuetarantz jotzen dute hurrenez-
+hurren. Beraz, z = f (x, y)-
+ren limitea (x, y) → (1, 0. 5) denean 
+(x, y) puntuaren ibilbidearen menpe dagoenez, (1, 0. 5)
+puntuan ez dago limiterik.
+Izan bedi C3 , Q
+(1. 5, 0. 5) punturantz jotzen duen hautazko kurba; L3 gainazalan lortzen
+den irudiaren limitea berbera da beti eta 
+(1. 5, 0. 5, 0. 5) puntuaren berdina da. Beraz, limitea
+existitzen da eta 0. 5 balio du. f (1. 5, 0. 5) = 0. 5 denez, funtzioa Q
+(1. 5, 0. 5) puntuan jarraia
+da.
+6.26 Irudia: z =
+x2−y2
+x2
++y2 funtzioa
+6.5. Adibidea
+Azter dezagun z =
+xy
+x2
++y2 funtzioaren limitea (0, 0) puntuan.
+•
+(x, y) puntua 
+(0, 0) punturantz hurbiltzeko ardatz koordenatuekiko paraleloak diren
+ibilbideak erabiliko ditugu. Hau da:
+E gin dezagun y = 0, x → 0, orduan:
+lim
+x → 0
+y = 0
+xy
+x2
++ y2
+= lim
+x→0
+0
+x2
+= 0
+Matematika Aplikatua Saila
+UEP Donostia
+
+28
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+x
+= 0, y → 0, eginez:
+lim
+y → 0
+x = 0
+xy
+x2
++ y2
+= lim
+y→0
+0
+y2
+= 0
+Emaitza honekin ez dugu ezer frogatzen, zergatik? . Bi limite hauei limite iteratuak
+deritze. Limite hauek desberdinak direnean limiterik ez dagoela frogatzeko, erabil
+daitezke. Limite iteratuak berdinak badira ez dago ezer zehazterik.
+•
+Demagun (x, y) puntua (0, 0)-
+rantz hurbiltzen dela y = mx kurbak jarraituz, non m
+hautazko konstante erreala den. O rduan:
+lim
+x → 0
+y = m x
+xy
+x2
++ y2
+= lim
+y→0
+mx2
+x2
++ m2x2
+=
+m
+1 + m2
+Beraz, z = f (x, y)-ren limitea (x, y) → 
+(0, 0) puntuaren ibilbidearen menpe dago.
+Beraz, ez dago limiterik (0, 0) puntuan. Emaitza bera lortzen da (x, y) puntua 
+(0, 0)
+punturantz doanean, y = mx2 parabolak erabitzen baditugu. 6.27
+(a) irudian famili
+honetako kurba batzuk eta dagozkien irudu kurbak azaltzen dira. O hartu zaitez irudi
+kurben limiteak desberdinak direla, hau da, z = f (x, y)-ren limitea, (x, y) → 
+(0, 0)
+puntuaren ibilbidearen menpe dago. 6.27(b) irudian z = f 
+(x, y) gainazala agertzen
+da.
+6.10. Ariketa
+Frogatu z =
+xy
+x
++ y
+ez duela limiterik onartzen (0, 0) puntuan. LAG U N T Z A:
+limite iteratuak eta y = x3 − x, y = x2 − x kurbak erabili.
+6.11. Ariketa
+Frogatu z =
+x2y
+x2
++ y2
+funtzioak limitea onatzen duela (0, 0) puntuan. LA-
+G U N T Z A:
+ Hasteko frogatu limitea existitzekotan 0 izan behar duela. O ndoren, y → 0
+x →
+0 betetzen duen hautazko y
+(x) funtzioa hartu eta aztertu zer ordenarekin izendatzailea
+eta zenbakitzailearen limitea 0 den.
+6.12 . Ariketa
+6.28 irudian agertzen den z = 3+
+1
+x2
++ y2
+funtzioaren limitea (0, 0) puntuan
+aztertu. Adibide hau erabiliz, z = f 
+(x, y) funtzioaren limite inﬁnituaren kontzeptua (a, b)
+puntuan formalki deﬁnitu.
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.8.
+Z
+= F (X, Y ) FUNTZIOAREN LIMITEA ETA JARRAITASUNA.
+29
+6.27 Irudia: Bideak eta irudiak
+6.28 Irudia: z = 3 +
+1
+x2
++ y2
+funtzioa
+Matematika Aplikatua Saila
+UEP Donostia
+
+30
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.9
+z
+= F (x , y) g a in a z a l b a te n p la n o u k itz a ile a :
+ d e rib a tu p a r-
+tz ia la k
+Gogoratu, aldagai erreal bateko y
+(x) funtzio baten hurbilketa lortzeko, x = a puntuaren
+ingurune batetan, x = a puntuan zuzen ukitzailearen ekuazioa erabil daitekeela. Zuzen
+ukitzailea lortzeko prozesua (6.29) irudian azaltzen da.
+6.29 Irudia: Zuzen ukitzailearen hurbilketa
+P rozesu hori horrelakoa zen:
+1. (a, y(a)) eta (a + h, y
+(a + h)) puntuetatik pasatzen den zuzen ebakitzailea marraztu.
+Zuzen honen malda m da:
+m
+=
+y
+(a + h) − y(a)
+h
+2. h → 0 egiten badugu, zuzen ebakitzaileak zuzen ukitzailerantz jotzen du. Zuzen
+ukitzailearen malda m, ondorengo limitea izango da, existitzen bada. Limite honi
+y
+(x) funtzioaren deribatua x = a puntuan deitzen diogu:
+y
+(a) = lim
+h→0
+y
+(a + h) − y(a)
+h
+3. y(x) funtzioaren x = a puntuan zuzen ukitzalearen ekuazioa hau izango da:
+y
+= y(a) + y (a)(x − a)
+4 . y(x) funtzioaren diferentziala x = a puntuan dy(h) = hy
+(a) adierazpena da. Diferen-
+tziala y(a + h)-ren balion hurbildua lortzeko erabiltzen da:
+y
+(a + h)
+y
+(a) + hy (a) = y(a) + dy(h)
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.9.
+Z
+= F (X, Y ) GAINAZAL B ATEN PLANO UKITZAILEA: DERIB ATU PARTZIALAK 31
+Orain, ideia berdinak bi aldagaietako funtzioetan aplikatzen saiatuko dugu. S uposa dezagun
+z
+= F (x, y) funtzioa D ⊂ R2 eremuan deﬁniturik dagoela eta har dezagun (a, b) D-
+ren puntu
+bat. Ikusi (6.30) irudia. Kasu (a, b, F 
+(a, b)) puntutik pasatzen den zuzen ukitzailea ez da
+bakarra, inﬁnitu zuzen ukitzaile daude. oraingo asmoa zuzen ukitzaile guztiak dituen plano
+ukitzailea lortzea da (Ikusi (6.30)(b) irudia).
+6.30 Irudia: Plano ukitzailea
+J arraitzen dugun prozesua aldagai bateko funtzioekin erabilitakoa da:
+ gainazalaren zu-
+zen ebakitzailea marrazten dugu eta, ondoren, plano ebakitzaile hori plano ukitzailerantz
+hurbiltzen dugu. Zehaztasun handiagoarekin:
+1. Plano ebakitzailearen ekuazioa lortzeko, (a, b, F (a, b)), (a + h, b, F 
+(a + h, b)) eta (a, b +
+k, F
+(a, b + k)) puntuak erabiliko ditugu, non h eta k aldagaien gehikuntza txikiak dira
+(Ikusi (6.31)(a) irudia).
+2. Plano ebakitzailea kalkulatzen dugu (Ikusi (6.31)(b) irudia).
+3. (h, k) → (0, 0) aldatzen dugu (Ikusi (6.31)(c ) irudia).
+4. (a + h, b, F (a + h, b)) eta (a, b + k, F (a, b + k)) puntuak (a, b, F 
+(a, b)) puntuarekin
+nahasten direnean, lortzen den planoa 
+(limitea existitzen bada) gainazalaren plano
+ukitzailea da (Ikusi 6.31 (d) irudia).
+Egingo behar dugunaren esanahia garbi dugu. Has dezagun.
+Hiru puntuak:
+A
+(a, b, F (a, b)), B(a, b + k, F (a, b + k)) eta C(a + h, b, F (a + h, b))
+Matematika Aplikatua Saila
+UEP Donostia
+
+32
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.31 Irudia: Plano ukitzailearen hurbilketa
+Planoaren bektore zuzentzaileak:
+AB
+(0, k, F (a, b + k) − F (a, b))
+AC
+(h, 0, F (a + h, b) − F (a, b))
+Planoarekiko bektore perpendikularra 
+(AB × AC biderkaketa bektoriala) hau izango da:
+AB × AC
+=
+i
+j
+w
+0 k F (a, b + k) − F (a, b)
+h
+0 F (a + h, b) − F (a, b)
+=
+= (k(F (a + h, b) − F (a, b)), h(F (a + k, b) − F (a, b)), −hk)
+Orain, lortutako bektorea zati hk kalkulatzen, bilatzen genuen V bektorea lortzen da:
+V
+F
+(a + h, b) − F (a, b)
+h
+,
+F
+(a, b + k) − F (a, b)
+k
+, −
+1
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.9. Z
+= F (X, Y ) GAINAZAL B AT E N PLANO U K IT ZAILE A:
+ D E R IB AT U PAR T ZIALAK 33
+O rd u a n , V -re n osa g a ia k h a u e k d ira :
+Vx(h) =
+F
+(a + h, b) − F (a, b)
+h
+Vy(k) =
+F
+(a, b + d k) − F (a, b)
+k
+Vz = −1
+Iku s d e z a ke z u n e z , 
+(a, b) pu n tu ﬁ n ko ba koitz a re n tz a t, Vx soilik h-
+re n fu n tz ioa d a , Vy
+k
+-re n fu n tz ioa e ta Vz kon sta n te a d a . 
+(6 .32 ) iru d ia n V pla n o e ba kitz a ile a re kiko be ktore pe r-
+pe n d iku la rra e ta V T pla n o u kitz a ile a re kiko be ktore pe rpe n d iku la rra a z a ltz e n d ira . L im ite a
+(h, k) → (0 , 0 ) d e n e a n e x istitz e n ba d a , V → V T lortz e n d a .
+6 .32 Iru d ia : V be ktore a k V T -ra n tz jotz e n d u
+Iz e n d a tz e n ba d u g u :
+V T
+= (Fx(a, b), Fy(a, b), −1)
+O rd u a n , lim ite a ka lku la tz e n :
+Fx(a, b) = lim
+h→0
+F
+(a + h, b) − F (a, b)
+h
+(6 .3)
+Fy(a, b) = lim
+k→0
+F
+(a, b + k) − F (a, b)
+k
+(6 .4 )
+Matematika A p likatu a S aila
+U E P D o n o stia
+
+34
+6.
+KAPITULUA ALDAGAI ANITZEKO F UNTZIO ERREALAK
+V T
+bektore ukitzailea kalkulatzeko erabiltzen ditugun (6.3) eta 
+(6.4) erlazioak eta alda-
+gai bateko funtzio baten deribatuaren deﬁnizioa oso antzekoak dira. Ikus dezagun zein den
+(6.3) erlazioaren esanahia:
+1 . F 
+(x, y) funtzioan y koordenatua konstantea egiten dugu, y = b. G eometrikoki, C
+kurba, z = F (x, y) eta y = b planoaren arteko ebakigunea lortu dugu (Ikusi 
+(6.33)(a,b)
+irudiak).
+6.33 Irudia: x-rekiko deribatu partziala
+2. Fx(a, b) eta F (x, b) funtzioaren x-
+rekiko deribatua berdinak dira. G eometrikoki, Fx(a, b)
+C
+kurbaren (a, b, F (a, b)) puntuan zuzen ukitzailearen malda da (Ikusi (6.33 
+(c ) iru-
+dia). (t, b, F 
+(t, b)) adierazpena C kurbaren parametrizazio bat da eta puntu bakoitzean
+bektore ukitzailea (1, 0, Fx(t, b)) izango da.
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.9. Z
+= F (X, Y ) GAINAZAL BATEN PLANO UKITZAILEA: DERIBATU PARTZIALAK 35
+3. Gogoratuko duzunez, y
+(x) funtzio baten deribatua x = a puntuan, puntu horretan y
+aldagaiaren x-
+rekiko aldatzeko aldiuneko abiadura bezela interpretatzen da. E ra be-
+rean, Fx(a, b) deribatuaren esanahia honela interpreta daiteke: Fx
+(a, b) deribatuaren
+balioa z = F (x, y) aldagaiaren x-rekiko aldatzeko abiadura da y = b denean. Fx
+(a, b)
+kalkulatzeko aldagai bateko funtzioen deribatuak kalkulatzeko ezagutzen ditugun erre-
+gelak aplika ditzakegu.
+6.13. Ariketa
+Izan bedi z = F (x, y) = x
+2 + y2 funtzioak deﬁnituriko gainazala.
+a) K alkulatu Fx(a, b).
+b) K alkulatu gaianzala eta y = b planoaren arteko ebakigunea.
+c) K alkulatu y = b planoan dagoen gainazalaren zuzen ukitzailea.
+d) A urreko elementu guztiak graﬁkoki adierazi.
+Ikus dezagun orain zein den (6.4) deribatuaren esanahia, (ikusi 6.34 irudia).
+6.34 Irudia: y-rekiko deribatu partziala
+1. F 
+(x, y) funtzioan x koordenatua konstantea egiten dugu, x = a. Geometrikoki, C
+kurba, z = F (x, y) eta x = a planoaren arteko ebakigunea lortu dugu.
+Matematika Aplikatua Saila
+UEP Donostia
+
+36
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+2. Fy(a, b) eta F (a, y) funtzioaren y -
+rekiko deribatua berdinak dira. Geometrikoki, Fy(a, b)
+C
+kurbaren (a, b, F (a, b)) puntuan zuzen ukitzailearen malda da. (a, t, F 
+(a, t)) adie-
+razpena C kurbaren parametrizazio bat da eta puntu bakoitzean bektore ukitzailea
+(0, 1, Fy(a, t)) izango da.
+3. H emen ere, Fy(a, b) deribatuaren esanahia honela interpreta daiteke: Fy
+(a, b) deriba-
+tuaren balioa z = F (x, y) aldagaiaren y-
+rekiko aldatzeko abiadura da x = a denean.
+Eta Fy
+(a, b) kalkulatzeko aldagai bateko funtzioen deribatuak kalkulatzeko erregelak
+aplika ditzakegu.
+6.14. Ariketa
+Izan bedi z = F (x, y) = x
+2 + y2 funtzioak deﬁnituriko gainazala.
+a) Kalkulatu Fy(a, b).
+b) Kalkulatu gaianzala eta x = a planoaren arteko ebakigunea.
+c) Kalkulatu x = a planoan dagoen gainazalaren zuzen ukitzailea.
+d) Kalkulatu gainazalaren plano ukitzailea (a, b) puntuan.
+e) Aurreko elementu guztiak graﬁkoki adierazi.
+Orduan, ikusi dugunez, z = F 
+(x, y) funtzioaren deribatuak x eta y aldagaiekiko oso
+baliagarriak dira funtzioaren portaera aztertzeko. Orain kontzeptu hori deﬁnituko dugu eta
+izen bat jarriko diogu.
+6.6. Deﬁ niz ioa
+Ondore ng o lim itea ri, e x istitze n ba da , z
+= F (x, y) fu ntzioa re n x-re k ik o de -
+riba tu pa rtzia la
+(a, b) pu ntu a n de itze n diog u :
+Fx(a, b) = lim
+h→0
+F
+(a + h, b) − F (a, b)
+h
+6.7 . Deﬁ niz ioa
+Ondore ng o lim itea ri, e x istitze n ba da , z
+= F (x, y) fu ntzioa re n y-re k ik o de -
+riba tu pa rtzia la
+(a, b) pu ntu a n de itze n diog u :
+Fy(a, b) = lim
+k→0
+F
+(a, b + k) − F (a, b)
+k
+N abaritu Fx(x, y) eta Fy
+(x, y) funtzio deribatu partzialak deﬁni ditzakegula, eta hauek
+ere bi aldagaietako funtzioak izango dira. Fx
+(x, y) kalkulatzeko y konstantea kontsideratuko
+dugu eta x-rekiko deribatu; Fy(x, y) kalkulatzen da x ﬁnkatu ondoren y-
+rekiko deribatzen.
+Funtzio deribatu partzialak erabiltzen, kalkula ditzakegu 
+(a, b) puntu bakoitzean deriba-
+tu partzialen balioak. Kontzeptu hau eta y(x) aldagai bateko funtzio baten y 
+(x) funtzio
+deribatuarena parekoak dira.
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.9. Z
+= F (X, Y ) GAINAZAL BATEN PLANO UKITZAILEA: DERIBATU PARTZIALAK 37
+6.15. Ariketa
+Frogatu Fx(a, b) eta Fy(a, b) deribatu partzialen existentziak ez duela in-
+plikatzen F (x, y) funtzioaren jarraitasuna (a, b) puntuan. Frogatu F 
+(x, y) funtzioaren (a, b)
+puntuan jarraitasunak ez duela inplikatzen Fx(a, b) eta Fy
+(a, b) deribatu partzialen existen-
+tzia.
+LAGU NT Z A: Lehengo zatian ondorengo funtzioa erabili:
+F
+(x, y) =
+
+
+
+xy
+x
++ y
+(x, y) = (0, 0) bada
+0
+(x, y) = (0, 0) bada
+(6.6) eta (6.7) deﬁnizioak aplikatzen, frogatu Fx(0, 0) = Fy
+(0, 0) = 0 betetzen dela. B aina,
+ikusi genuenez, F (x, y) funtzioaren limitea (0.0) puntuan ez da existitzen.
+B igarren zatia frogatzeko, erabili ondorengo funtzioak:
+G
+(x, y) = |x|
+H
+(x, y) = |y|
+P
+(x, y) = |x| + |y|
+Frogatu hiru funtzioak jarraituak direla, eta frogatu ere Gy
+(0, 0) existitzen dela, ez dela
+existitzen Gx(0, 0), Hx(0, 0) existitzen dela, ez dela existitzen Hy
+(0, 0) eta ez dela existitzen
+Px(0, 0) ezta Py(0, 0) ere. (6.35) irudian G(x, y), H(x, y) eta P 
+(x, y) funtzioen graﬁkoak
+azaltzen dira, esan dezakezu zein den bakoitzarena?
+6.35 Irudia: G(x, y), H(x, y) eta P (x, y)
+Aldagai bateko y
+(x) funtzio baten graﬁkoak x = a puntuan “angelu” bat duenean, hau da
+x
+= a puntuan eskerretik eta eskuinetik maldaren balioak desberinak direnean, y
+(x) puntu
+horretan ez da deribagarria (Ikusi adibide bat 
+(6.36) irudian ). B i aldagaietako funtzioekin
+antzeko zerbait gertatzen da: bere graﬁkoetan ere “angelu” bat agertzen da.
+Matematika Aplikatua Saila
+UEP Donostia
+
+38
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.36 Irudia: Funtzio jarraitua eta ez deribagarria
+Ikusi dugunaren arabera, z = F 
+(x, y) gainazal baten plano ukitzailearen ekuazioa honako
+hau da:
+z
+= (x − a)Fx(a, b) + (y − b)Fy(a, b) + F (a, b)
+(6.5)
+6.10
+z
+= F (x , y)-re n hu rb ilk e ta d ife re n tz ia la re n b id e z
+z
+= F (x, y) gainazal baten (a, b, F 
+(a, b)) puntuan plano ukitzailearen ekuazioa ikusi ondoren
+((6.5) ekuazioa), plano hori erabiliko dugu funtzioaren hurbilketak 
+(a, b) puntuaren ingurune
+batean kalkulatzeko. (a, b) puntutik, aldagaien desplazamendu txiki bat 
+(h, k) hartzen dugu,
+(a + h, b + k) pù ntua lortzen. z = F (x, y) funtzioaren balio zehatza 
+(a + h, b + k) puntuan
+F
+(a + h, b + k) da. (6.5) ekuazioa erabiliz lortzen den z = F (x, y)-
+ren balio hurbildua
+z
+= hF x(a, b) + kF (h, k) + F (a, b) izango da. Beraz, F (a + h, b + k)-
+ren balio hurbildua
+kalkulatzeko erlazioa lortu dugu:
+F
+(a + h, b + k)
+F
+(a, b) + hFx(a, b) + kFy(a, b)
+(6.6)
+(6.9 ) atalako hasieran gogoratu genuen y
+(x) aldagai bateko funtzio baten x = a pun-
+tuan diferentzialaren adierazpena dy(h) = hy (a) zela, eta y(a + h)-
+ren balio hurbildua
+kalkulatzeko ondorengo adierazpena erabiltzen genuela:
+y
+(a + h)
+y
+(a) + hy (a) = y(a) + dy(h)
+Gauza bera gertatzen da bi aldagaietako funtzioekin. Kasu honetan diferentziala dF 
+(h, k) =
+hF x
+(a, b) + kF y(a, b) izango da eta, beraz, (6.6) honela transformatzen da:
+F
+(a + h, b + k)
+F
+(a, b) + dF (h, k)
+(6.7)
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.11.
+FUNTZIO KONPOS ATUAREN DERIBATUA: KATEAREN ERREGELA
+39
+6.16. Ariketa
+Kontsidera dezagun z = F (x, y) = x
+2 + y2 adierazpenaz deﬁnituriko gaina-
+zala eta (1, 2) puntua. () diferentziala erabiliz, F (1 + h, 2 + k)-
+ren balio hurbildua kalkulatu
+(h, k) = (0.5, 0.6 ) eta (h, k) = 
+(0.01, 0.005) deneko kasuetan. Bi kasuetan kalkulatu ere
+funtzioaren balio zehatza, lortutako zehaztasuna konparatu eta interpretatu emaitzak.
+6.11
+Funtzio ko np o satuaren deribatua: katearen erreg ela
+S uposa dezagun interesatzen zaigun magnitude ﬁsiko bat z = F 
+(x, y) funtzioaren bidez
+adierazten dela. Adibidez, z izan daiteke:
+• X aﬂ a metaliko baten tenperatura (x, y) puntu bakoitzean.
+• Zirkuitu batetik zirkulatzen den korronteko intentsitatea, non x eta y zirkuituaren
+parametroak diren (tentsioa, erresistentzia, induktantzia, kapazitatea, e.a.).
+Ikusi dugunez, puntu bakoitzean Fx(a, b) eta Fy(a, b) deribatu partzialek z-
+ren adatz koorde-
+natuen norabideekiko aldaketa-
+abiadura azaltzen dute. Batzuetan, x eta y aldagaiak beste
+aldagaiekiko dependenteak izan daitezke. Adibidez:
+• z = F (x, y) xaﬂ a metaliko baten tenperatura 
+(a, b) puntuan bada eta aztertu nahi
+badugu nola aldatzen den tenperatura denborarekiko (x(t), y
+(t)) ibilbidea jarraituz
+mugitzen garenean. Kasu honetan, lortzen den funtzio konposatua z(t) = F (x
+(t), y(t))
+da, eta z-ren aldaketa-abiadura denborarekiko ezagutu nahi dugu, hau da, z (t).
+• z = F 
+(x, y) zirkuitu batetik zirkulatzen den korronteko intentsitatea bada, non x eta
+y
+zirkuituaren parametroak diren 
+(tentsioa, erresistentzia, induktantzia, kapazitatea,
+e.a.). Parametroak beste parametroekiko dependenteak izan daitezke, zirkuituan ko-
+nektaturiko karga (c), temperatura 
+(s), e.a. Orduan, agian lortzen den funtzio konpo-
+satua horrelakoa da z(c, s) = F (x(c, s), y
+(c, s)). Kasu honetan, interesatzen zaizkigun
+z
+-ren aldaketa-abiadurak c eta s-rekikoak dira, hau da, Fc et Fs.
+Gogoratu nola kalkulatzen genuen aldagai bateko funtzioen konposaketaren deribatua. y
+aldagai x-rekiko dependentea bada (y = y(x)), eta x u-rekiko dependentea (x = x
+(u)),
+funtzio konposatuak y = y(x(u)) itxura du eta
+dy
+du
+beharko dugu. Orduan, y-ren u-rekiko
+aldaketa-abiadura konposaketako bi etapeko aldaketa-
+abiaduren biderkadura izango da:
+Matematika Aplikatua Saila
+UEP Donostia
+
+40
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+Ba, horrelako zerbait gertatzen da bi aldagaietako z = F 
+(x, y) funtzioekin. x eta y aldagaiak
+beste u eta v bi aldagaiekiko dependenteak badira, F u eta F v deribatu partzialak horrela
+kalkulatzen dira:
+x
+eta y aldagaiak u aldagaiarekiko dependenteak badira, lortutako funtzioa z
+(u) = F (x(u), y(u))
+horrela deribatzen da u-rekiko:
+6.12
+N orabide deribatua
+Ikusi dugunez, z = F 
+(x, y) funtzio baten deribatu partzialek abiadura adierazten dute.
+Fx(a, b) z = F (x, y) aldagaiaren aldaketa-abiadura da (x, y) puntua 
+(a, b) puntutik mugitzen
+denean OX ardatzaren norabidea jarraituz (norantza gorakorran). Era berean, Fy
+(a, b)
+z
+= F (x, y) aldagaiaren aldaketa-abiadura da (x, y) puntua 
+(a, b) puntutik mugitzen denean
+Oy
+ardatzaren norabidea jarraituz (norantza gorakorran).
+Orain, jakin nahi dugu zein izango den z = F (x, y) aldagaiaren aldaketa-
+abiadura (x, y)
+puntua 
+(a, b) puntutik V edozein norabide jarraituz mugitzen denean . Adibidez, F 
+(x, y)
+funtzioak xaﬂa metaliko baten tenperatura 
+(x, y) puntuan adierazten badu, jakin nahi dugu
+zein abiadurarekin aldatzen den tenperatura hori hartzen dugun V norabidearen arabera.
+Ikusi (6.37) irudia. Norabide bat v
+(c o s θ, sin θ) bektore unitario batek ﬁnkatuta dago.
+Orain, norabide hori jarraituz, (a, b) puntutik (a, b) + t(c o s θ, sin θ) = 
+(a + t c o s θ, b + t sin θ)
+puntura mugitzen gara.
+z
+= F (x, y) funtzioaren gehikuntza, (a, b) puntutik 
+(a + t c o s θ, b + t sin θ) puntura pasa-
+tzerakoan, F (a + t c o s θ, b + t sin θ) − F 
+(a, b) izango da. Ondorioz, z = F (x, y)-ren abiadura
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.12.
+NORABIDE DERIBATUA
+41
+(
+)
+è
+t
+è , b
+t
+a
+s i n
+c o s
++
++
+(
+)
+a , b
+è
+c o s
+è
+s i n
+è
+L
+L
+,
+6.37 Irudia: Norabide batekiko desplazamendua
+(a, b) puntuan eta v(cos θ, sin θ) norabidean hau izango da:
+Fv(a, b) = lim
+t→0
+F
+(a + t cos θ, b + t sin θ) − F (a, b)
+t
+(6.8)
+Lortu dugun kontzeptu berria deﬁnituko dugu.
+6.8. Deﬁnizioa
+(6.8) adierazpenan agertzen den limitea, existitzen bada, z = F (x, y)
+funtzioaren norabide deribatua (a, b) puntuan, v
+(cos θ, sin θ) norabidea jarraituz, deitzen da.
+Ikus dezagun nola kalkulatzen den norabide deribatua. Begiratu (6.38) irudia.
+1. z = F (x, y) gainazala eta (x − a) sin θ = 
+(y − b) cos θ planoaren arteko ebakigunea, C
+kurba, lortzen dugu.
+2. FV (a, b) norabide deribatua C kurbaren (a, b, F 
+(a, b)) puntuan zuzen ukitzailearen
+malda da
+Baina (6.9) adierazpenaren erabilpena FV 
+(a, b) norabide deribatua kalkulatzeko zaila da.
+Saiatuko dugu errezagoa den beste adierazpen bat lortzen. Horretarako, 
+(6.16) diferentziala-
+ren bidezko hurbilketa erabiliko dugu 
+(6.9) erlazioaren zenbakitzailearen kalkulua errezagoa
+egiteko. (6.16) adierazpena 
+(h, k) edozein gehikuntzekin betetzen denez, guk erbiliko dugu-
+na h = t cos θ eta k = t sin θ izango da. 
+(6.16) adierazpenan ordezkatuz honako hau lortzen
+da:
+F
+(a + t cos θ, b + t sin θ) − F (a, b)
+t
+cos θFx(a, b) + t sin θFy(a, b)
+(6.9)
+Matematika Aplikatua Saila
+UEP Donostia
+
+42
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.38 Irudia: Norabide batekiko deribatua kurbaren malda da
+Orain (6.8) erlazioaren zenbakitzailea (6.9) adierazpenaz ordezkatzen:
+FV (a, b) = lim
+t→0
+t cos θFx(a, b) + t sin θFy(a, b)
+t
+= cos θFx(a, b) + sin θFy(a, b)
+(6.10)
+Orduan, aplikatzeko errezagoa den norabide deribatua kalkulatzeko beste adierazpen bat
+lortu dugu.
+6.17. Ariketa
+(6.10) erlazioan, kontsideratu θ = 0, θ = π/2, θ = π eta θ = 3π/2. Zer
+emaitzak lortzen dira? Nola interpreta ditzakezu?
+OHAR R A. Norabide deribatuaren (6.10) adierazpena lortzeko, suposatu dugu 
+(6.8) limi-
+tea ez dela aldatzen zenbakitzailean 
+(6.9) erlazioa ordezkatzen badugu. Baina, orokorrean,
+limite batetan horrelako ordezkapenak egiten baditugu, limitea aldatu egingo da. Adibi-
+dez, h(t) = t
+2/t funtzioaren limitea t → 0 doanean 0 da. Baina t2 gaia t adierazpenaz
+ordezkatuz, lortuko den g(t) = t/
+t funtzioaren limitea t → 0 doanean 1 izango da. Limitea-
+ren balioa aldatu egin da. Orduan, zergatik suposa dezakegu ondorengo limiteak berdinak
+izango direla?
+lim
+t→0
+t cos θFx(a, b) + t sin θFy(a, b)
+t
+?
+= lim
+t→0
+F
+(a + t c o s θ, b + t sin θ) − F (a, b)
+t
+UEP D o n o stia
+M ate m atik a A p lik atu a S aila
+
+6.13.
+G R A D IE N T E B E K T O R E A
+43
+B erd in keta ez d a kasu g u z tietan betetz en , beraz z = F 
+(x, y) fu n tz io baten (a, b) p u n tu an
+n orabid e d eribatu a kalku latz eko ez in d a beti ap likatu 
+(6 .1 0 ) ad ieraz p en a. B erri on a d a bai
+ap lika d aitekeela p raktikan ag ertz en d iren z = F 
+(x, y) fu n tz io askorekin . E g in d aiteke
+z
+= F (x, y) fu n tz ioa 
+(a, b) p u n tu an jarraitu a eta d eribag arria d en ean eta bere d eribatu
+p artz ialak, Fx(x, y) eta Fy(x, y) ere 
+(a, b) p u n tu an jarraitu ak d iren ean .
+6.18. Ariketa
+z
+= x
+2y fu n tz ioaren n orabid e d eribatu a kalku latu P 
+(1.2, 2.4) p u n tu an eta
+v
+(−1.4, 3.6 ) n orabid ea jarraitu z .
+L A G U N T Z A : (cos θ, sin θ) n orabid earekiko F fu n tz ioaren d eribatu a
+Fv(a, b) = cos θFx(a, b) + sin θFy(a, b)
+kalku la d aiteke an g elu a lortu g abe. H asteko v bektorea n ormaliz atu eg iten d u g u 
+(h au d a,
+bere osag aiak mod u lu az z atitz en d itu g u ), eta u = 
+(Ux, Uy) bektore u n itario bat lortz en d a.
+O rd u an , cos θ = Ux, sin θ = Uy, eta beraz
+Fv(a, b) = UxFx(a, b) + UyFy(a, b)
+6.13
+G r a d ie n te be k to r e a
+Iku si d u g u n ez , z = F (x, y) fu n tz ioaren n orabid e-d eribatu a, Fv
+(a, b) , (a, b) p u n tu an , V (cos(θ), sin(θ))
+n orabid eari jarraitu z , z ald ag aiaren ald aketaren abiad u ra n eu rtz eko bid e bat d a, 
+(x, y) p u n -
+tu a 
+(a, b) p u n tu tik abiatu z eta V n orabid ean mu g itz en d en ean . G ain era, z = F 
+(x, y) fu n -
+tz ioa (a, b)-
+n jarraitu a, d iferen tz iag arria eta d eribatu p artz ialak, Fx(x, y), Fy
+(x, y), (a, b)-n
+jarraitu ak bad ira, Fv(a, b) balioa erraz lor d ez akeg u h on en bid ez :
+Fv(a, b) = cos θFx(a, b) + sin θFy(a, b)
+B atz u tan , 
+(a, b) p u n tu tik abiatu z g eh iku n tz a h ori max imoa ed o min imoa z er n olako n orabi-
+d e, v
+(cos θ, sin θ), h artu z lortz en d u g u n jakitea in teresatz en z aig u .
+(6 .3) atalean , z = F (x, y) fu n tz ioaren maila-
+lerroak aip atu g en itu en ean , az tertu g en u en
+bi ad ibid e g og oratu ko d itu g u . (iku s (6 .39 iru d ia) 
+(a, b) p u n tu a, map aren maila-lerroak oso
+g ertu d au d en in g u ru n e baten kokatu ta bald in bad ag o p u n tu h orretatik g u tx i mu g itu z , z-
+n
+ald aketa h an d iak lor d aitez ke. M ap a top og raﬁ koak d iren ean altitu d e ald aketa h an d iak ed o
+isobara map ak d iren ean p resio ald aketa h an d iak 
+(h aiz e bolad a h an d iak sortz en d ira) d itu g u
+g ertu d au d en bi p u n tu ren artean .
+M aila-
+lerroak az tertu z lor d ez akeg u n in formaz ioaren ap likaz ioak h au ek iz an d aitez ke.
+M ap a kartog raﬁ akoak az tertu z men d iz ale batek
+Matematika Aplikatua Saila
+UEP Donostia
+
+44
+6.
+KAP ITU L U A AL DAGAI ANITZ EKO F U NTZ IO ERREAL AK
+6.39 Irudia: Mapa topograﬁkoa eta isobara-mapa
+Maila-
+lerroak aztertuz lortzen dugun informazioa oso erabilgarria da. Adibidez, mapa
+topograﬁkoa aztertuz bide baten maldak aukera ditzakegu, handienak edo txikienak aukera-
+tuz. Isobara mapa aztertuz hegazkin baten pilotuak haize bolada handiak saihestu ditzake.
+Orokorrean, z = F (x, y) funtzioa eta 
+(a, b) puntua harturik, zein v norabideekin lortzen
+dugu (a, b)-tik abiatuz z-ren gehikuntza handiena edo txikiena?
+Azter dezagun beste adibide bat. Mendi baten 3 dimentsiotako mapa dugu eta 
+(6.40)
+irudian ikuspuntu ezberdinetik adierazita dugu. Aztertu azkenengoan ditugun dimentsioak
+eta ardatzen kokapena.
+(6.41) irudian, 2 dimentsiotako mapa topograﬁko arrunta dugu, maila kurbak adierazita
+ditugu eta lur-kota eta ardatz koordenatuak gehitu ditugu. Maila-
+lerroak altueran 5 0-naka
+aldatzen doaz z = −60 .an hasita eta z = 790 -raino helduz. 
+(3 dimentsiotako adierazpenean
+z
+= −6-tik z = 7.9-raino)
+Azter dezagun (6.41) irudia, R
+(2, 0 ) puntua 190 unitateko altitudean dagoena ﬁnkatzen
+dugu. OX ardatzean eskumarantz mugitzen garenean maila kurbak elkar bananduak daude
+baina ezkerrerantz mugitzen bagara maila-
+lerroak bata bestearekiko hurbil daude. Horrek
+zera adierazten dugu ezkerrerantz mugitzen garenean eskumarantz joaten garenean baino
+maldak handiagoak direla. Hori 3 dimentsiotako irudian ere ikus dezakegu, mendian go-
+rantz goazenean malda oinean baino handiagoak dira. Adibidez x aldagaia handizen den
+norantzean K m bat mugitzen garenean mendi-kota 190-tik 40-
+ra pasatzen da, hau da -15 0ko
+gehikuntza dugu. Bestalde, Q puntutik x txikiagotzen den norantzean mugitzen garenean
+mendiaren kota 190-tik 5 90-ren pasatzen da, hau da, 400-ko gehikuntza. R
+(2, 0 ) puntutik
+OY
+ardatzaren paraleloa den norabidea hartzen badugu mendi-
+kota oso gutxi aldatzen da
+maila-lerro berdinean gaudelako.
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.13.
+GRADIENTE BEKTOREA
+45
+6.40 Irudia: Mendiaren adierazpenak
+Matematika Aplikatua Saila
+UEP Donostia
+
+46
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.41 Irudia: Mendiaren mapa topograﬁkoa
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.13.
+GRADIENTE BEKTOREA
+47
+6.42 Irudia: Mendiaren maila-lerroak eta malda handieneko bidea
+Matematika Aplikatua Saila
+UEP Donostia
+
+48
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.43 Irudia: Mendiaren adierazpena: maila handiko ibilbidea
+(6.42) irudian mendiaren oinean dagoen P puntutik mendi tontorrean dagoen Q puntura
+doan malda handieneko ibilbidea adierazita dugu. Maila-
+lerroak elkar gertuen daudenak
+aukeratuz mugitzen gara, hau da, malda handienena bilatuz. D irudienez, maila-
+kurbekin
+elkarzut dagoen norabidea aukeratu behar dugu norabide-
+deribatu maximoa lortzeko. (6.43)
+irudian bide hori adierazita dugu mendiaren adierazpenean. Eski-
+pista batentzat bide egokia
+da malda handiena duelako.
+Beraz, badirudi gehikuntza maximoa 
+(norabide deribatu maximoa) lortzeko jarraitu
+behar den ibilbidea maila-kubekin elkarzut dagoela. Ideia horri jarraituz 
+(6.44) irudian
+(a, b) puntu bakoitzetik abiatuz norabide.deribatu maximoa lortzeko hartu behar den nora-
+bide ey a norantzak adierazi ditugu. Bektoreen norantzen zergatia uler al dezakezu?
+Eragiketak egiteko z = F (x, y) funtzio erraz batez egiaztatuko dugu.
+Har dezagun z = x
+2 + y2 funtzioa. (6.45) irudian funtzioa eta maila-lerrok adierazita
+ditugu. Maila-lerroak x
+2 + y2 = k erakoak dira. P (a, b) puntutik abiatuz, nabaria da
+z handitzen dela koordenatu jatorritik urruntzen garenean Maila-
+lerroaren malda lortzeko
+deribatua lortzen dugu,
+2x + 2yy = 0 ⇒ y = −x/ y
+(6.11)
+(6.11) ekuazioa maila-lerroen ekuazio diferentziala da. Maila-
+lerroekin elkarzut dauden
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.13.
+GRADIENTE BEKTOREA
+49
+6.44 Irudia: Maila-lerroak eta norabide-deribatuen maximoen norabideak
+Matematika Aplikatua Saila
+UEP Donostia
+
+50
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.45 Irudia: Paraboloidea eta maila kurbak
+kurben malda hau izango da:
+y (x) = y/x
+(6.12)
+y(x) lortzeko (6.12) ebazten dugu:
+dy
+dx
+=
+y
+x
+⇒
+dy
+dx
+y
+=
+1
+x
+⇒
+d
+dx
+(ln y) =
+d
+dx
+(ln x) ⇒ ln y = ln x + k
+⇒
+y = xe
+k
+k ﬁnkatu gabeko konstantea denez, ek = K egiten dugu, eta 
+(6.12) ekuazioaren soluzioa
+honako hau izango da:
+y = Kx
+(6.13)
+Lehen aurkitutako emaitza egiaztatu dugu. z = x
+2 +y2 aldagaiaren gehikuntza maximoa
+lortzeko ibilbidea, (a, b) puntutik eta koordenatu jatorritik pasatzen den 
+(6.13) zuzena da.
+(6.46) irudian maila-lerroak eta lerro horiek adierazita ditugu.
+Emaitza hori edozein funtzioentzak egiaztatuko dugu. Horretarako Fv
+(θ) norabide- deri-
+batuaren maximoa aurkituko dugu eta z = F (x, y)-ren gehikuntza maximoa maila-
+lerrorekin
+elkarzut dagoen norabidean lortzen dugula egiaztatuko dugu.
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.13.
+GRADIENTE BEKTOREA
+51
+6.46 Irudia: Maila-lerrok eta ibilbideak
+Matematika Aplikatua Saila
+UEP Donostia
+
+52
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.47 Irudia: Norabide-deribatua: biderketa-eskalarra
+Fv(θ) = cos θFx(a, b) + sin θFy(a, b)
+(6.14)
+Lehendabizi, 
+(6.14) ekuazioa planoko bi bektoreen biderketa eskalar bezala adierazten
+dugu:
+Fv(θ) = (Fx(a, b), Fy(a, b))(cos θ, sin θ)
+(6.15)
+Fv(θ) u = (Fx(a, b), Fy(a, b)) eta v = 
+(co s θ, sin θ). bektoreen biderkaketa eskalarra da. u
+bektoreen koordenatuak funtzioaren 
+(a, b) puntuan deribatu partzialen balioak dira. (Ikus
+(6.47) irudia) v-
+ren moludula 1 da, u · v biderketa eskalarra era honetan adieraz dezakegu
+Fv(θ) = u · v = u v cos β = (Fx(a, b), Fy(a, b)) cos β
+(6.16)
+β, u eta v-k eratzen duten angelua da.
+Fv(θ)-ren maximoa lortzeko, (6.14) ekuazioa deribatzen dugu θ-rekiko,
+dFv
+dθ
+= − sin θFx(a, b) + cos θFy(a, b)
+= (Fx(a, b), Fy(a, b)) · (− sin θ, cos θ) =
+= (Fx(a, b), Fy(a, b)) · w
+w = (− sin θ, cos θ) bektorea v-rekin elkarzut dagoen bektora da. (Ikus 
+(6.47) irudia)
+Deribatua zero izango da u eta w elkarzut daudenean. (biderketa eskalarra 0):
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.13.
+GRADIENTE BEKTOREA
+53
+dFv
+dθ
+= 0 ⇒ (Fx(a, b), Fy(a, b))⊥w
+hau bete dadin β = 0 edo i β = π izan behar da. Bigarren deribatua lortuko dugu
+maximoa ala minimoa den jakiteko.
+d
+2Fv
+dθ
+2
+= − cos θFx(a, b) − sin θFy(a, b)
+= −(Fx(a, b), Fy(a, b)) · (− cos θ, sin θ) =
+= − (Fx(a, b), Fy(a, b)) cos β
+β = 0 ⇒
+d
+2Fv
+dθ
+2
+= − (Fx(a, b), Fy(a, b)) < 0
+β = π ⇒
+d
+2Fv
+dθ
+2
+= (Fx(a, b), Fy(a, b)) > 0
+Beraz, jarraitu behar den v norabidea, (a, b) puntutik abiatuz, Fv
+(θ) maximoa lortze-
+ko, osagaiak F (x, y)-ren deribatu partzialen balioak 
+(a, b) puntuan dituen bektorea da.
+v = (Fx(a, b), Fy(a, b)), norantzan (a, b)-n norabide-
+deribatu handiena lortzen dugu −v =
+(−Fx(a, b), −Fy(a, b)) norantzan txikiena.
+Lor ditzagun Fv(θ)-ren balio maximo eta minimo horiek. 
+(6.16) adierazpena hartzen
+dugu:
+β = 0 ⇒ u · v = u v cos β = (Fx(a, b), Fy(a, b))
+β = π ⇒ u · v = u v cos β = − (Fx(a, b), Fy(a, b))
+Hau da, norabide-deribatuaren balio maximoa (Fx(a, b), Fy
+(a, b)) bektorearen modulua
+da, eta balio minimoa horren aurkakoa.
+Beraz, v = (Fx(a, b), Fy(a, b)) bektoreak z = F 
+(x, y) funtzioaren gehikuntza aztertzeko
+garrantzi handiko norabidea adierazten du.
+6.9. Deﬁ niz ioa
+z = F (x, y) funtzioak (a, b) puntuan d eribatu partzialak onartzen bad itu,
+F (x, y)-ren g rad iente-bek torea (a, b) puntuan h onak o bek tore h au d a
+g ra d F (a, b) = (Fx(a, b), Fy(a, b))
+Matematika Aplikatua Saila
+UEP Donostia
+
+54
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.48 Irudia: Paraboliodearen maila-lerroak eta gradienteak
+6.1. Teorema
+z = F (x, y) funtzioa jarraitua (a, b) puntuan baldin bada eta Fx(x, y),
+Fy(x, y) deribatu partzialak jarraituak baldin badira (a, b) puntuan, orduan
+1 .
+Fv(θ) norabide deribaruaten balio m axim oa (a, b) puntuan, grad F 
+(a, b) bektorearen
+norabidean eta norantzan lortzen da eta balio hori gradientearen m odulua da.
+grad F (a, b) =
+Fx(a, b)
+2 + Fy(a, b)2
+2 .
+Fv(θ) norabide deribaruaten balio m axim oa (a, b) puntuan, grad F 
+(a, b) bektorearen
+norabidean eta aurkako norantzan lortzen da eta balio hori gradientearen m oduluaren
+aurkakoa da.
+− grad F (a, b) = −
+Fx(a, b)
+2 + Fy(a, b)2
+(6.48) irudian z = x
+2 + y2 paraboloidearen maila-lerrok adierazita daude. Maila-lerro
+horiei zuzenki ukitzaile batzuk eta P (1.7, 1.7) eta Q
+(0.2, 0.2) puntuei dagozkien gradiente
+bektoreak. Gradiente bektoreak eta maila-
+ kurbak elkarzut daudela ikudi daiteke. P pun-
+tuaren ingurunean maila-
+lerrok Q puntuaren ingurunean baino gertuago daude, horregatik
+grad F (P ) bektorearen modulua grad F (Q)-
+rena baino handiagoa da. Lortu modulu horien
+balioak ariketa bezala.
+Ikus dezagun (a, b) puntuaren gradiente-bektorea y = y
+(x) puntua barne duen maila-
+lerroarekin elkarzut dagoela
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.14. ORDENA H ANDIAGOKO DERIBATU PARTZIALAK. S C H W ARTZ-EN TEOREM A
+55
+Demagun (a, b) puntua F (x, y(x)) = k. maila-
+lerroan dagoela. Puntu horretan gradiente-
+bektorea grad F (a, b) = (Fx(a, b), Fy(a, b)) denez, norabidearen malda m = Fy
+(a, b)/Fx(a, b))
+izango da. elkarzut dagoen norabidearen malda era honetan lortzen dugu,
+1/m = −F x(a, b)/F y(a, b))
+Beraz (6.17) betetzen dela ikusi behar dugu.
+y (a) = −
+Fx(a, b)
+Fy(a, b)
+(6.17)
+F (x, y(x)) = k x-rekiko deribatuz, dy/dx lortuko dugu.
+(6.11) atalean ikusitako katearen
+erregela aplikatuz,
+dF
+dx
+= Fx
+dx
+dx
++ Fy
+dy
+dx
+= Fx + Fy
+dy
+dx
+= 0
+dy/dx bakanduz eta x = a, y = b, ordezkatuz (6.17) lortzen dugu.
+6.19. Ariketa
+(6.49) irudia aztertu. P (a, b) puntuan (c -i) norabideak adierazita daude,
+eta dagozkien (1-7) z = F 
+(x, y) gainazaleko kurbak.Adierazitako bektore horietatik bat
+grad F (a, b) da. Zein? Zergatik?
+6.14
+O rdena handiag oko deribatu p artz ialak. S c hwartz -en teo-
+rem a
+Aldagai erreal bakarreko funtzioak aztertzeraskoan bigarren, hirugarren, . . . ordenako deri-
+batuak deﬁnitu genituen eta haien erabilpenak. Adibidez, funtzioen muturrak, ahurtasun
+tarteak bilatzeko, polinomioen bidez hurbiltzeko eta abar, erabili genituen. Bi aldagai errea-
+leko z = F 
+(x, y) funtzioentzak ere ordena handiagoko deribatu partzialak deﬁnituko dugu.
+z = F (x, y) funtzioa baldin baditu funtzio horiek Fxx(x, y), Fyx(x, y), Fxyx
+(x, y), . . . eran
+adieraziko ditugu
+Ordena handiagoko deribatu partzial lortzerakoan egindako deribatuen ordena emaitza
+aldatzen ez badu, hau da, Fxy(x, y) = Fyx(x, y) edo Fyyx(x, y) = Fyxy
+(x, y) eta antzera-
+koak berdinak baldin badira lana errazten zaigu. S chaw rt-
+en teoremak ordenaren arabera
+deribatua aldatzen den ala ez jakiteko erizpidea ematen digu.
+6.2 . Teorema
+Schwartz
+z = F (x, y) funtzio jarraitua izanik, bigarren ordenako deribatu
+partzialak jarraituak baldin badira,
+Fxy(x, y)) = Fyx(x, y) betetzen da.
+Matematika Aplikatua Saila
+UEP Donostia
+
+56
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.49 Irudia: Norabideak eta dagozkien kurbak
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.15.
+HIRU ALDAGAI ERRELEKO FUNTZIOAK
+57
+6.20. Ariketa
+Schwartz-en teorema erabiliz, frogatu F (x, y) funtzioa jarraitua baldin bada
+eta bigarren eta hirugarren odenako deribatu partzialak jarraituak baldin badira orduan e
+Fxxy(x, y) = Fxyx(x, y) = Fyxx(x, y), eta abar betetzen dela.
+6.15
+H iru aldagai erreleko funtzioak
+D ⊂ R
+2 eremuan deﬁnitutako z = F (x, y) funtzioentzat lortutako emaitzen antzerakoak
+betetzen dira hiru aldagietako D ⊂ R
+3 eremuan deﬁnitutako w = F (x, y, z) funtzioentzak.
+Limitea eta jarraitu tasu n a
+w = F (x, y, z) funtzioak P (a, b, c) puntua L limitea du, 
+(x, y, z) ∈ D puntua (a, b, c) jotzen
+duenean edozein ibilbide erabiliz, w = F (x, y, z) balioa L-
+ra jotzen duenean. L = F (a, b, c)
+denean, F (x, y, z) funtzioa jarraitua da (a, b, c) puntuan. (6.50(a)) irudian 
+(x, y, z) →
+(a, b, c) jotzen du ibilbide ezsberdinak erabiliz.
+6.21. Ariketa
+w = (x + y + z)/(x + y − z) funtzioak (0, 0, 0) puntuak limiterik ez duela
+egiaztatu.
+6 .1 5 .1
+D erib atu p artz ialak
+Fx(x, y, z), Fy(x, y, z), Fz(x, y, z) deribatu partzialak w = F 
+(x, y, z) funtzioaren aldake-
+ta abiadurak neurtzen dituzte OX, OY , OZ ardatz koordenaruen norabidetan. 
+(6.50(b))
+irudian ditugu hiru norabide horiek adierazita.
+G rad ien tea
+Era berdinean deﬁnitzen da, grad F (a, b, c) = (Fx(a, b, c), Fy(a, b, c), Fz
+(a, b, c)). (6.50(c))
+irudian adierazita dago.
+N o rab id e d erib atu a
+w = F (x, y, z) aldagaiaren aldaketaren abiadura neurtzen du 
+(a, b, c) puntuan eta V =
+(Vx, Vy, Vz) modulu bateko bektoreak ﬁnkatzen duen norabideari jarraituz. Era honetan
+kalkulatuko dugu
+Fv(a, b, c) = Fx(a, b, c)Vx + Fy(a, b, c)Vy + Fz(a, b, c)Vz
+Gradientearen propietateak honako jauek dira:
+Matematika Aplikatua Saila
+UEP Donostia
+
+58
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.50 Irudia: Hiru aldagiako funtzioa, norabideak eta gradientea
+1. Gradiente bektorearen norabide eta norantzan (a, b, c) puntuko norabide-
+deribatu han-
+diena lortzen da.
+grad F (a, b, c) = (Fx(a, b, c), Fy(a, b, z), Fz(a, b, c))
+Balio maximo hori grad F (a, b, c)-ren modulua da.
+2. Gradientearen norabidean bain aurkako norantzan (a, b, c) puntuko norabide-
+deribatu
+txikiena lortzen da.
+− grad F (a, b, c) = (−Fx(a, b, c), −Fy(a, b, z), −Fz(a, b, c))
+Balio maximo hori grad F (a, b, c)-ren modulua zeinuz aldatuta da.
+3. grad F (a, b, c) bektorea maila gainazalekin, F 
+(x, y, z) = k, elkarzut dago.
+6.22. Ariketa
+(6.1) adibideko w = C(x, y, z) funtzioaren gradientea lortu (x, y, z) puntue-
+tan. Esanahia adierazi.
+UEP Donostia
+Matematika Aplikatua Saila
+
+6.16.
+BESTE PROPIETATE
+59
+Deribatuen ordenarekiko independentzia
+Schwartz-en teorema antzerako bidean enuntziatzen da. w = F 
+(x, y, z) jarraitua baldin
+bada eta bigarren ordenako deribatu partzialak baldin baditu, orduan
+Fxy(x, y, z) = Fyx(x, y, z), Fxz(x, y, z) = Fzx(x, y, z), Fyz(x, y, z) = Fzy
+(x, y, z).
+betetzen dira.
+6.16
+B este propietate
+Aldagai bateko funtzioak aztertzerakoan beste propietate ikusi genituen, adibidez bornatua
+izatea, anulatzen den ala ez, maximo edo minimo absolutuak dituen ala ez. En el siguien-
+te ejercicio te proponemos q ue investigues acerca de estas cuestiones. Hurrengo ariketan
+propieate hauek aztertzea eskatzen da.
+6.23. Ariketa
+y(x) [a, b] tartean funtzio jarraituen propietate hauek aztertu genituen
+1. Bornatze propietatea: y(x) funtzioa bornatua dago [a, b] tartean (6.51)
+(a) irudia).
+2. Weierstrass teorema: y(x) funtzioak 
+[a, b] tartean balio maximoa M eta minimoa m
+ditu. (6.51)(b) irudia)
+3. Tarteko balioak: m ≤ R ≤ M izanik, orduan, bada z ∈ [a, b] non y
+(z) = R betetzen
+den (6.51)(c) irudia).
+4. Bolzano-ren teorema: y(a)y(b) < 0 betetzen baldin bada, orduan bada z ∈ 
+(a, b) non
+y(z) = 0 betetzen den. (6.51)(d) irudia)
+Emaitza guzti hauen antzerakoak z = F 
+(x, y) funtzioak betetzen ditu. Emaitza hauen
+esanahi geometrikoak aztertu eta formalki enuntziatu. [a, b] tartea R-
+n deﬁnituta zegoena
+aldagai bakarreko funtzioentzak ordezkatu egin behar da z = F 
+(x, y) funtzioarentzat eta
+D ⊂ R
+2 nolakoa den erabaki behar duzu. (? ? ) irudia eta 
+(? ? ) ariketak lagungarriak dira.
+Matematika Aplikatua Saila
+UEP Donostia
+
+60
+6.
+KAPITULUA ALDAGAI ANITZEKO FUNTZIO ERREALAK
+6.51 Irudia: (6.23) ariketaren irudia
+UEP Donostia
+Matematika Aplikatua Saila

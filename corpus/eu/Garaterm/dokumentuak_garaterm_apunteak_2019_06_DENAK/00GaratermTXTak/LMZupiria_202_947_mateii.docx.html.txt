@@ -1,0 +1,1538 @@
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                  MATEMATIKA II
+                                                                       APUNTEAK
+
+ 1 Kalkulu diferentziala
+
+ 1.1 Oinarrizko kontzeptuak
+
+ 1.1.1 Multzoaketaespazioetan
+
+Multzoaren kontzeptua Matematika I irakasgaian ikusi dugu.
+Multzo bat objektuen bilduma da. Multzoaren objektuei elementuak deituko diegu.
+Multzo bat definitzeko haren elementuak giltzen artean zehaztuko ditugu.
+Adibidez, lehen hamar zenbaki arrunten multzoa honela idatziko dugu:
+Edo multzoaren elementuek betetzen dituzten propietateak edo baldintzak emango
+ditugu; adibidez, aurreko multzoa honela idatz dezakegu:
+Ikusiko ditugun multzo gehienak edo -ko elementuez osatuak daude. Orokorrean,
+eta ko multzoak irudikatzea lagungarria da.
+
+1.1 adibidea: Irudikatu multzo hauek:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 1.1.2 Bola irekiak
+
+Bola irekiak erabiliko ditugu puntu baten ondo-ondoan dauden puntuei buruz hitz
+egin nahi dugunean. puntuan zentratua dagoen eta erradioa r duen -ko bola
+irekia puntutik r baino distantzia txikiagoan dauden puntu guztiez osatua dago
+eta idatziko dugu:
+non eta -ren arteko distantzia den.
+-ren kasuan, bola irekiak puntuan zentratutako tarte irekiak dira. Adibidez,
+-ren kasuan, bola irekiak puntuan zentratutako eta erradioa r duten zirkulu
+irekiak dira. Adibidez,
+Multzo hori puntuan zentratua dagoen eta erradioa 2 duen zirkulua da. multzoan
+bolak esferak dira.
+
+1.2 adibidea:Irudikatu bola espazioan eta eta -n.
+.
+
+
+
+, hau da, zentroa puntuan duen eta erradioa duen zirkulu irekia.
+
+
+
+
+
+
+
+
+
+
+, hau da, zentroa puntuan duen eta erradioa duen zirkulu irekia.
+
+
+
+
+
+
+
+
+ 1.1.3 Muga-puntuak eta barne-puntuak
+
+-ko A multzoko muga-puntu batek hau betetzen du: puntu horretan zentratutako
+bola ireki guztietan A multzoko puntuak eta A multzoko ez diren puntuak daude.
+A multzoko muga, multzo horren muga-puntu guztien multzoa da eta idatziko dugu.
+A multzoko muga-puntuak multzoko puntuak izan daitezke ala ez.
+-ko A multzoko barne-puntua muga-puntua ez den multzoko puntua da. Barne-puntu
+guztien multzoa barnealdea da eta idatziko dugu.
+
+1.3 adibidea:Esan hurrengo puntuak dagokien multzoan muga-puntuak diren:
+0, 2, 4 eta 1 puntuak multzoan.
+, eta puntuak multzoan.
+, eta puntuak multzoan.
+, eta puntuak multzoan.
+, eta puntuak multzoan.
+
+ 1.1.4 Multzo itxiak, irekiak, bornatuak eta trinkoak
+
+Multzo irekien eta itxien kontzeptuak zuzen errealeko tarte irekien eta itxien
+nozioen orokorpenak dira. -ko A multzoa itxia dela esango dugu haren muga-puntu
+guztiak multzoko puntuak badira. -ko A multzoa irekia dela esango dugu haren
+muga-puntu bat ere ez bada multzoko puntua. Konturatu zuzen errealaren tarte
+itxi (ireki) bat multzo itxia dela (irekia). Multzo bat ez da halabeharrez
+irekia edo itxia izan behar; badaude irekiak edo itxiak ez diren multzoak.
+-ko A multzoa bornatua dela esango dugu ardatz-jatorrian zentratutako bola
+ireki batean sartzen bada. Multzo bornatu batek ez du irekia edo itxia izan
+behar. Multzo bat bornatua eta itxia bada, multzo trinkoa dela esango dugu.
+
+1.4 adibidea:Esan 1.1 adibidearen multzoak irekiak, itxiak, bornatuak edo
+trinkoak diren.
+
+ 1.1.5 Multzo ganbilak
+
+Multzo ganbilak eredu ekonomikoetan askotan agertzen dira. Multzo ganbilen
+ideia hau da: bi aukera egingarriak (eskuragarriak) badira, orduan, bien
+bitarteko edozein aukerak ere eskuragarri izan behar du. Adibidez, enpresa
+baten bi produkzio-maila eskuragarriak badira, orduan, bitarteko produkzio-
+mailak ere eskuragarriak izango dira; edo kontsumitzaile batek bi kontsumo-
+aukera baditu, bitarteko kontsumoak ere aukeran ditu.
+Multzo baten bi punturen arteko konbinazio lineal ganbila bi puntu horiek
+lotzen dituen segmentuko edozein puntu da. Hau da, zenbaki erreala existitzen
+bada non den, orduan, z puntua x eta y-ren konbinazio lineal ganbila da.
+
+1.5 adibidea: eta badira, puntua puntu horien konbinazio ganbila da betetzen
+baita. Ordea, ez da x eta y-ren konbinazio lineal ganbila.
+
+-ko A multzoa ganbila dela esango dugu multzoko edozein bi punturen arteko
+konbinazio ganbil guztiak multzoan badaude. Hau da, multzoko bi puntu lotzen
+dituen segmentua inoiz ez da multzotik irteten.
+
+1.6 adibidea: multzoa espazioan ganbila da (U multzoko edozein bi puntu
+segmentu batekin lotzen baditugu, segmentu osoa U multzokoa da), baina multzoa
+ez da ganbila.
+
+
+
+
+
+ 1.2 Aldagai bat baino gehiagoko funtzioak
+
+ 1.2.1 Aldagai bat baino gehiagoko funtzioak
+
+x eta y aldagaietako funtzio erreala -ko E multzoko elementu bakoitzari z
+zenbaki erreala esleitzen dion metodoa da. z aldagaia x eta y aldagai
+independenteen menpe dago eta idatziko dugu, edo besterik gabe. Hiru aldagaiko
+edo gehiagoko funtzioak modu berean defini ditzakegu.
+
+1.7 adibidea:Merkatuan bi enpresa lehiatzen dira antzeko bi produkturekin
+(baina ez dira erabat berdinak). Enpresa baten eskaria bere produktuaren
+prezioaren eta bere lehiakidearen produktuaren prezioren menpe dago. Adibidez,
+enpresen eskariak hauek izan daitezke:
+non eta 1 eta 2 enpresei eskatzen dieten kantitateak, hurrenez hurren, diren
+eta eta 1 eta 2 enpresek finkatzen duten prezioak, hurrenez hurren, diren.
+Konturatu 1 enpresak prezioa igotzen badu, orduan, bere produktuaren eskaria
+jaisten dela. Eta bere lehiakidearen produktuaren prezioa igotzen bada, orduan,
+bere eskaria ere igoko da.
+
+1.8 adibidea:Eredu ekonomikoetan askotan agertzen da Cobb-Douglas-en funtzioa:
+non x eta y aldagaiak diren, eta A, eta konstante positiboak diren.
+Funtzio horien propietateak direla eta, oso egokiak dira ekoizpen-funtzioak
+adierazteko. x eta y aldagaiak ekoizpenean erabili ditugun ondasun kopuruak
+dira eta ekoiztutako kopurua. Adibidez,
+Cobb-Douglas-en ekoizpen-funtzioa da, eta funtzio horrek, kapitalaren K unitate
+eta lanaren L unitate sartzen direnean, ondasunaren produkzioa ematen du.
+
+ 1.2.2 Existentzi eremua
+
+Aldagai bat baino gehiagoko funtzio baten existentzi eremua, izate-eremua edo
+definizio-eremua funtzioa definitua dagoen puntuen multzoa da. f funtzioaren
+existentzi eremua E bada, idatziko dugu. Adibidez, f bi aldagaiko funtzioa bada
+eta x eta y aldagai independenteak ez negatiboak diren prezioak badira, f-ren
+existentzi eremua -ko lehen koadrantea da, non diren. Kasu horretan, idatziko
+dugu.
+Orokorrean, eta kontrakoa ez bada esaten, funtzio baten existentzi eremua
+definitua dagoen multzo handiena da, eta idatziko dugu.
+Funtzioa bi aldagaikoa bada, existentzi eremua multzo laua da eta gomendagarria
+da irudikapena egitea.
+Emango dugu funtzio batzuen existentzi eremua:
+Demagun funtzioak direla:
+f funtzioa polinomikoa bada, haren existentzi eremua osoa da.
+funtzioaren existentzi eremua da.
+funtzioaren existentzi eremua da.
+funtzioaren existentzi eremua da.
+
+1.9 adibidea: funtzioaren existentzi eremua hau da:
+                                       .
+
+ 1.2.3 Adierazpen grafikoa. Sestra-kurbak
+
+aldagai bateko funtzioaren irudikapena planoko kurba bat da. bi aldagaiko
+funtzioaren irudia hiru dimentsioko espazioko azalera bat da eta irudikapena ez
+da oso eraginkorra. Baina bi aldagaiko funtzioak adierazteko ordezko metodo hau
+dugu: sestra-kurben erabilera. Funtzio baten sestra-kurbak honela lortzen dira:
+funtzioaren grafikoa plano horizontalekin mozten dugu eta sortzen dena XY
+planoan proiektatzen dugu.
+funtzioaren sestra-kurba balioa hartzen duten existentzi eremuko puntu guztien
+multzoa da:
+Funtzioak bi aldagai baino gehiago baditu, sestra-azaleraz edo sestra-multzoaz
+hitz egingo dugu.
+
+1.10 adibidea:Demagun funtzioa dela. Funtzio horren sestra-kurba multzoa da,
+hau da, puntuan zentratua dagoen eta erradioa duen zirkunferentzia da.
+
+
+
+
+
+
+1.11 adibidea:Demagun Cobb-Douglas-en funtzioa dela. Funtzio horren sestra-
+kurba multzoa da, kurba horiek parabolen antzeko kurbak dira eta irudikatzeko
+beharrezkoa da ordenagailua erabiltzea.
+
+ 1.2.4 Eragiketak aldagai bat baino gehiagoko funtzioekin
+
+Eragiketa aljebraikoak:
+f eta g -tik -rako bi funtzio badira, eragiketa hauek definituko ditugu:
+,
+,
+,
+( denean).
+
+Funtzioen arteko konposaketa:
+f -tik -rako eta g -tik -rako funtzioak badira, , funtzio horien arteko
+konposaketa, -tik -rako funtzioa da honela definitua:
+
+1.12 adibidea:Demagun eta funtzioak direla. Orduan,
+,
+,
+,
+(konturatu dela).
+
+1.13 adibidea:Demagun eta funtzioak direla. Orduan,
+Konturatu konposaketak, kasu honetan, ez duela zentzurik.
+
+ 1.3 Limiteak eta jarraitutasuna
+
+ 1.3.1 Aldagai bat baino gehiagoko funtzioen limitea
+
+funtzioaren limitea puntuan zenbakia dela esango dugu, puntuaren gero eta
+hurbilago dauden puntuak hartzen baditugu, puntu horietan funtzioak hartzen
+dituen balioak zenbakira badoaz.
+
+1.14 adibidea:Demagun funtzioa dela. puntura hurbiltzen diren puntuen sorta bat
+aukeratzen badugu eta puntu horietan funtzioak hartzen dituen balioak
+kalkulatzen baditugu, taula hau lortzen dugu:
+
+        (2,5)            (1’5,4’5)   (1’05,4’05)  (1’00005,4’00005)
+          9                6’75          5’1525           5’0000025
+
+Berehala konturatzen gara puntuak puntura hurbiltzen den heinean, funtzioak
+hartzen dituen balioak 5era hurbiltzen direla.
+Aldagai bateko funtzioetan, puntu batera hurbiltzeko bi aukera besterik ez
+dago: eskerretik eta eskuinetik. Aldagai bat baino gehiagoko funtzioetan, puntu
+batera hurbiltzeko infinitu aukeradugu. Hurrengo taulan, puntura hurbiltzeko
+beste aukera bat dugu:
+
+         (2,3)            (1’5,3’5)   (1’05,3’95)(1’000005,3’999995)
+           7                5’75          5’0525           5’00005
+
+Bigarren taula horretan ere, badirudi funtzioaren balioak ere 5erantz
+hurbiltzen direla. Froga daiteke (baina ez da irakasgai honen helburua) puntura
+hurbiltzeko bide guztiak hartzen baditugu, funtzioaren balioak 5era hurbiltzen
+direla beti. Kasu horretan, puntuan f funtzioaren limitea existitzen dela
+esango dugu eta honela idatziko dugu:
+
+1.15 adibidea: Limitea aztertuko dugu funtzioa zatitan definitua dagoenean.
+Adibidez, kontsideratuko dugu funtzio hau:
+Aztertuko dugu zer gertatzen den puntuan. Horretarako, lehen moduko taulak
+egingo ditugu:
+
+           (5,6)            (5,5’5)      (5,5’0005)     (5,5’0000005)
+            16                 18            19’98           19’9998
+
+Taula horren arabera, badirudi limitea 20 dela. Hala ere, taula hau hartuko
+dugu:
+
+        (5,4)                (5,4’5)         (5,4’995)    (5,4’999995)
+          0                     0                  0                0
+
+Taula horretan, puntuak era hurbiltzen direnean, funtzioaren balioak 0 dira.
+Hau da, funtzioaren balioak hurbiltzen diren zenbaki erreala era hurbiltzeko
+aukeratzen dugun bidearen menpe dago. Kasu horretan, ez dela limitea existitzen
+esango dugu.
+
+funtzioaren limitea puntuan dela esango dugu, eta
+idatziko dugu (baldin 0ra badoa, orduan, 0ra doa).
+Kasu orokorrean, definizio hori ez da eraginkorra praktikan. Izan ere, funtzio
+baten limitea kalkulatzeko propietate hauek erabilgarriak dira (eragiketak
+limiteekin):
+eta badira, orduan:
+•,
+•,
+•,
+•, denean,
+•, n edozein zenbaki arrunt izanik.
+
+Honaino, bi aldagaiko funtzioak soilik aztertu ditugu, baina limitearen
+kontzeptua eta haren propietateak, inolako zailtasunik gabe, aldagai gehiagoko
+funtzioetara zabaldu daitezke.
+
+ 1.3.2 Aldagai bat baino gehiagoko funtzioen jarraitutasuna
+
+Aldagai bat baino gehiagoko funtzioen jarraitutasunaren nozioa aldagai bateko
+funtzioentzako erabili dugun kontzeptu beraren hedadura da. funtzioa puntuan
+jarraitua da puntu horretara hurbiltzen garenean funtzioaren balioetan ez
+badaude “jauziak” edo “zatidurak”. Hau da, puntutik gero eta hurbilago dauden
+puntuetan funtzioak hartzen dituen balioak baliora hurbiltzen dira. Horregatik
+jarraitutasuna eta limitearen kontzeptua elkarrekin doaz.
+funtzioa existentzi eremuko puntuan jarraitua dela esango dugu
+betetzen badu. Funtzio bat ez bada jarraitua puntu batean, puntu horretan etena
+dela esango dugu.
+Funtzio bat multzo bateko puntu guztietan jarraitua bada, funtzioa multzo
+horretan jarraitua dela esango dugu.
+Emaitza hauetan funtzio baten jarraitutasuna aztertzeko erregela erabilgarri
+batzuk ikusiko ditugu:
+Demagun funtzioak puntuak jarraituak direla. Orduan,
+funtzioa puntuan jarraitua da.
+funtzioa puntuan jarraitua da.
+funtzioa puntuan jarraitua da.
+funtzioa puntuan jarraitua da ( denean).
+bada, funtzioa puntuan jarraitua da.
+
+Bira, jarraitua puntuan eta , jarraitua puntuan. Orduan funtzioa jarraitua da
+puntuan.
+
+Hona hemen jarraituak diren funtzioen zerrenda:
+Funtzio konstantea: , k izanik, jarraitua da -n.
+Lehen edo bigarren osagaiarekiko proiekzioa: edo jarraituak dira -n.
+Funtzio lineala: , a,b izanik, jarraitua da -n.
+Funtzio polinomikoa: jarraitua da -n.
+Funtzio arrazionala: , P(x,y) eta Q(x,y) polinomioak izanik, jarraitua da
+multzoan.
+
+Eta aldagai bateko funtzio hauek ere jarraituak dira:
+Balio absolutu funtzioa: jarraitua da -n.
+Errokari funtzioa: jarraitua da multzoan.
+Funtzio esponentziala: jarraitua da -n.
+Funtzio logaritmikoa: jarraitua da multzoan.
+Funtzio trigonometrikoak: ,jarraituak dira -n.
+
+1.17 adibidea: funtzioa diren puntuetan jarraitua da, funtzio jarraituen batura
+eta konposizioa delako.
+funtzioa ez da jarraitua izendatzailea zero egiten den puntuetan, hau da,
+betetzen duten puntuetan; puntu horietan funtzioa ez dago definitua.
+
+1.18 adibidea:1.15 adibidearen funtzioa puntuetan ez da jarraitua, puntu
+horietan limitea existitzen ez delako.
+
+ 1.4 Kalkulu diferentziala
+
+Atal honetan ikusiko ditugun kontzeptu eta emaitza guztiak bi aldagaiko
+funtzioetarako emango ditugu, baina inolako zailtasunik gabe, n aldagaiko
+funtzioetara heda daitezke.
+
+ 1.4.1 Deribatu partzialak
+
+Demagun funtzioa eta puntua direla. puntuan f funtzioaren deribatu partziala x
+aldagaiarekiko, eta deituko dugu, y aldagaia balioan konstante mantenduz
+sortzen den aldagai bateko funtzioaren deribatua da, existitzen bada.
+Hau da,
+limite hori existitzen bada.
+Modu berean, puntuan f funtzioaren deribatu partziala y aldagaiarekiko, eta
+deituko dugu, x aldagaia balioan konstante mantenduz sortzen den aldagai bateko
+funtzioaren deribatua da, existitzen bada. Hau da,
+limite hori existitzen bada.
+puntuan f funtzioa deribagarria dela esango dugu funtzio horren bi deribatu
+partzialak puntuan existitzen badira.
+Deribatu partzialetarako beste idazkera hauek dira:
+Lehen aldagaiarekiko deribatuak:
+Bigarren aldagaiarekiko deribatua:
+
+1.4.2 Interpretazio geometrikoa
+
+deribatu partziala, existitzen bada, OX ardatz norabidean funtzioaren grafikoak
+onartzen duen zuzen ukitzailearen malda da. Hau da, deribatu partzialak
+erakusten du nola aldatzen den funtzioa puntutik eta OX ardatzaren norabidean
+mugitzen bagara.
+deribatu partziala, existitzen bada, OY ardatz norabidean funtzioaren grafikoak
+onartzen duen zuzen ukitzailearen malda da. Hau da, deribatu partzialak
+erakusten du nola aldatzen den funtzioa puntutik eta OYardatzaren norabidean
+mugitzen bagara.
+
+
+
+
+
+
+
+
+
+ 1.4.3 Goi ordenako deribatu partzialak.klaseko funtzioak
+
+funtzioaren bigarren ordenako deribatu partzialak funtzioaren deribatu
+partzialen deribatuak dira.
+Adibidez, egin nahi badugu, lehenengoz x-rekiko deribatua egingo dugu, eta
+gero, yrekiko deribatua. Idazkera desberdinak daude deribatu hauek adierazteko:
+Deribatua x aldagaiarekiko bi aldiz:
+Deribatua x aldagaiarekiko eta gero y-rekiko:
+Deribatua y aldagaiarekiko eta gero x-rekiko:
+Deribatua y aldagaiarekiko bi aldiz:
+
+k ordenako deribatuak definitzeko modu berean egingo dugu, hau da, bata
+bestearen atzetik k deribatu partzial egin beharko ditugu. Adibidez, kalkulatu
+nahi badugu, lehenengoz deribatuko dugu f funtzioa bigarren aldagaiarekiko,
+gero lehen aldagaiarekiko eta bukatzeko berriro bigarren aldagaiarekiko.
+
+E multzoan k klaseko () funtzioa dela esango dugu, eta idatziko dugu, E-ko
+puntu guztietan k ordenarainoko deribatu partzial guztiak existitzen eta
+jarraituak badira.
+Definiziotik zuzenean ondorio hau dugu: bada, da, eta bada, orduan, da.
+
+1.1 emaitza(Schwarz-en teorema): bada, haren deribatu partzial gurutzatuak
+deribatu bera da, hau da,
+
+ 1.4.4 Funtzio konposatuen deribazioa (katearen erregela)
+
+Atal honetan agertuko diren funtzio guztiak klasekoa izango dira.
+Demagun funtzioa dela, eta izanik. Orduan,
+Demagun funtzioa dela, izanik. Orduan,
+Demagun funtzioa dela, eta izanik. Orduan,
+Formula horiek aldagai gehiagoko funtzioetara, zailtasunik gabe, egokitzen
+dira.
+
+ 1.4.5 Deribatu partziala aldakuntza-tasa moduan
+
+Deribatu partzialaren definizioan h oso txikia denean, limitearen barruan
+dagoena limitearen oso hurbil egongo dela ondorioztatzen dugu; hau da, 0tik oso
+hurbil dauden h balioetarako ondokoa betetzen da:
+                                      (1)
+Horregatik esango dugu deribatu partzialak, gutxi gorabehera, lehen aldagaiaren
+aldaketa txikientzat f funtzioaren aldaketa-tasa ematen digula.
+Testuliburuetan, askotan, (1) adierazpena honela aurkituko dugu:
+                                      (2)
+Modu berean, deribatu partzialak, gutxi gorabehera, bigarren aldagaiaren
+aldaketa txikientzat f funtzioaren aldaketa-tasa ematen digula (aurreko
+adierazpenean erabiliko dugu).
+
+1.19 adibidea:Kontsumitzaile baten lehentasunak hauek dira: 1 ondasunaren bi
+unitate eta 2 ondasunaren 3 unitate ordezkagarriak.
+i) Eman kontsumitzailearen lehentasunak adierazten dituen baliagarritasun-
+funtzio lineala.
+ii) Kalkulatu baliagarritasun-funtzioaren deribatu partzialak.
+iii) Frogatu, baliagarritasun-funtzio lineala den kasu honetan, ondasunaren
+unitateko baliagarritasunaren aldaketa zehatz-mehatz deribatu partziala dela.
+i) 1 ondasunaren ekoiztutako kantitatea x bada eta 2 ondasunaren ekoiztutakoa y
+bada, eta baliagarritasun-funtzioa (lineala) bada:
+Kalkulatuko dugu (2,0) eta (0,3) puntuetatik pasatzen den B-ren sestra-kurba:
+
+
+
+
+
+
+ etabadira, bi puntu horietatik pasatzen den zuzena:
+                                       .
+Orduan, zuzena da.
+Beraz, baliagarritasun-funtzioa da.
+ii) eta dira.
+iii) . Eta denean:
+                                       .
+. Eta denean:
+                                       .
+
+1.20 adibidea: Cobb-Douglas-en ekoizpen-funtzioa da, non L-k lana, K-
+k kapitala, eta Q-k produzitutako kantitatea adierazten duen.
+i) Kalkulatu Q funtzioaren deribatu partzialak.
+ii) Frogatu deribatu partzialak ez dira zehatz-mehatz lana edo kapitalaren
+unitate bat sartzeagatik funtzioak jasaten duen aldaketa.
+
+i) eta dira deribatu partzialak.
+ii) eta bada,
+.
+eta bada,
+.
+
+ 1.4.6 Deribatu partziala eta funtzioaren aldakuntza
+
+Funtzio baten deribatu partzialak lagungarriak dira puntu baten ingurunean
+funtzio horren jokaera asmatzeko.
+(1) adierazpena, 0tik oso hurbil dauden h balioetarako, modu honetan ere idatz
+daiteke:
+Edo idazten badugu,
+Beraz:
+bada, orduan,
+                bada:                             ,
+                bada:                             .
+Hots, bada, lehen aldagaiaren balioa handitzen badugu, funtzioaren balioa ere
+handitzen da eta lehen aldagaiaren balioa gutxitzen badugu, funtzioaren balioa
+ere gutxitzen da.
+
+bada, orduan,
+                bada:                             ,
+                bada:                             .
+Hots, bada, lehen aldagaiaren balioa handitzen badugu, funtzioaren balioa
+gutxitzen da eta lehen aldagaiaren balioa gutxitzen badugu, funtzioaren balioa
+handitzen da.
+bada, orduan, ezin dugu ezer ondorioztatu funtzioaren aldaketaz.
+
+Bigarren aldagaiarekiko deribatuarekin antzeko emaitzak lortuko ditugu.
+
+Laburbilduz, aldagai baten handitze edo gutxitze txiki baten aurrean (beste
+aldagaia konstante mantentzen da), aldagai horrekiko deribatu partzialaren
+zeinuak eta balioak funtzioaren hazkundeari (handitzea edo gutxitzea) eta
+aldaketaren tamainari buruzko informazioa ematen dute.
+ 1.4.7 Deribatu direkzionala. Gradientea
+
+Atal honetan deribatu partzialaren kontzeptua zabaltzen duen nozioa azalduko
+dugu. puntutik norabidean mugitzen bagara (nabaria da izan behar dela), nozio
+berri horrek funtzioaren jokaera ematen du.
+Demagun funtzioa eta puntua direla. puntuan eta norabidean f funtzioaren
+deribatu direkzionala ( deituko dugu) limite honen balioa da, existitzen
+denean:
+                                       .
+
+Deribatu partzialak deribatu direkzionalen kasu partikularra dira:
+Deribatu direkzionala positiboa bada eta norabidean eta noranzkoan mugitzen
+bagara, funtzioaren balioak handitzen dira eta norabidean baina kontrako
+noranzkoan mugitzen bagara, funtzioaren balioak gutxitzen dira. Kasu horretan,
+norabidea puntuan f funtzioaren handitze-norabidea dela esango dugu. Aldiz,
+deribatu direkzionala negatiboa bada, eta norabidean eta noranzkoan mugitzen
+bagara, funtzioaren balioak gutxitzen dira eta norabidean baina kontrako
+noranzkoan mugitzen bagara, funtzioaren balioak handitzen dira. Kasu horretan,
+norabidea puntuan f funtzioaren gutxitze-norabidea dela esango dugu. Deribatu
+direkzionala zero bada, ezin izango dugu inolako ondoriorik atera.
+Deribatu direkzionalaren definizioa ez da batere eraginkorra. Baina
+kontsideratzen dugun funtzioa 1 klasekoa bada (), kalkuluak asko errazten dira.
+Horregatik, hemendik aurrera kontsideratuko ditugun funtzio guztiak 1 klaseko
+funtzioak izango dira. Jarraitu baino lehen, baliagarria den bektore bat
+definituko dugu:
+puntuan f funtzioaren gradientea, deituko dugu, deribatu partzialez osatutako
+bektorea da:
+
+1.2 emaitza: puntuan eta bektore normalizatuaren norabidean f funtzioaren
+deribatu direkzionala gradientea eta norabidearen arteko biderkadura da. Hau
+da, bada, orduan,
+                                       .
+
+Azpimarratu behar dugu norabidean funtzioaren deribatua kalkulatu nahi badugu,
+bektorea normalizatu beharko dugula.
+
+1.3 emaitza: puntuan eta norabidean f funtzioaren deribatu direkzionalak
+ondokoa betetzen du:
+• Norabide batek gradientearekin 90º baino txikiagoa den angelua osatzen badu
+(bien arteko barne-biderkadura positiboa da), orduan, puntuan f funtzioaren
+handitze-norabidea da.
+• Norabide batek gradientearekin 90º baino handiagoa den angelua osatzen badu
+(bien arteko barne-biderkadura negatiboa da), orduan, puntuan f funtzioaren
+gutxitze-norabidea da.
+• Norabide batek gradientearekin 90º-ko angelua osatzen badu (bien arteko
+barne-biderkadura zero da), orduan, ezin dugu ezer ondorioztatu.
+• Gradientea nulua bada, ezin izango dugu ezer ondorioztatu.
+
+
+
+
+
+
+
+
+1.4 emaitza:
+ bada, orduan puntuan sestra-kurbaren zuzen ukitzailearen malda da.
+ Gradientea ez bada nulua, orduan puntuan sestra-kurbaren ukitzailea den
+zuzena eta gradientea perpendikularrak dira.
+
+1.20 adibidea:Demagun ekoizpen-funtzioa dela.
+i) Kalkulatu gradientea puntuan.
+.
+ii) Irudikatu (2,1) puntuaren ingurunean dauden sestra-kurbak.
+
+
+
+
+
+
+
+
+
+iii) Irudikatu eta kalkulatu norabideak non deribatu direkzionala (2,1) puntuan
+positiboa den (handitze-norabideak).
+handitze-norabidea da positiboa bada:
+                                       .
+
+
+
+
+
+
+
+iv) Kalkulatu 200 sestra-kurbaren zuzen ukitzailearen malda (2,1) puntuan
+(ekonomi teorian ordezpen-erlazio marjinala deitzen da).
+                                       .
+v) Egiaztatu gradientea eta 200 sestra-kurbaren zuzen ukitzailea (2,1) puntuan
+perpendikularrak direla.
+Zein da 200 sestra-kurbaren zuzen ukitzailea (2,1) puntuan? Argi dago (2,1)
+puntutik pasatzen dela eta malda dela, beraz,
+zuzena bada non m malda eta den: .
+(2,1) puntuan 200 sestra-kurbaren zuzen ukitzailea: .
+Eta aldagaien koefizienteez osatutako bektorea [(1,2)] zuzen horrekin
+perpendikularra da. Eta argi dago (1,2) bektorea eta , funtzioaren gradientea
+(1,2) puntuan, paraleloak direla.
+
+ 1.5 Funtzio berezi batzuk
+
+ 1.5.1 Funtzio linealak
+
+Aldagai bat baino gehiagoko funtzio lineala itxura honen funtzioa da:
+                                       .
+Hau da, 1 mailako polinomioa. Funtzio lineal baten deribatu partzialak
+konstanteak dira. Funtzio lineal afina funtzio lineal baten eta konstante baten
+batura da, Adibidez,
+funtzio lineala da.
+funtzio lineal afina da.
+Konturatu dela.
+
+ 1.5.2 Forma koadratikoak
+
+Aldagai bat baino gehiagoko forma koadratikoa hau da:
+                                       .
+Adibidez, forma koadratikoa da.
+Konturatu dela.
+
+ 1.5.3 Funtzio homogeneoak
+
+funtzioa  graduko funtzio homogeneoa dela esango dugu edozein baliotarako
+ondoko betetzen bada:
+                                       .
+Konturatu funtzio linealak 1 graduko homogeneoak direla eta forma koadratikoak
+2 gradukoak.
+funtzioa  graduko homogeneoa bada, orduan, funtzio horren deribatuak,
+existitzen badira, graduko funtzio homogeneoak dira.
+
+1.6 emaitza(Euler-en teorema): funtzioa  graduko homogeneoa izateko
+ betetzea beharrezko eta nahikoa da.
+ 2 Aldagai askoko optimizazioa
+
+ 2.1 Kontzeptu eta emaitza orokorrak
+
+ 2.1.1 Aldagai askoko optimizazioko problemen planteamendu orokorra
+
+Optimizazioko problemak era matematiko honetan azal daitezke: funtzioa eta
+multzoa (f funtzioa X multzoan definituta dago) hartuz, aurkitu X multzoan
+funtzioak har dezakeen balio handiena eta txikiena, hala nola balio horiek
+hartzen dituzten puntuak. funtzioa helburu funtzioa deituko dugu, X multzoa
+multzo egingarria eta puntua soluzio egingarria.
+Optimizazioko problema desberdinak ditugu X soluzio egingarrien multzoaren
+arabera: X funtzioaren existentzi eremu osoa bada, murrizketarik gabeko
+optimizazioa izango dugu; X berdintasun ekuazioen bitartez definitua badago,
+optimizazioa berdintasun-murrizketekin, eta X multzoa berdintza edo/eta
+desberdintza-murrizketekin definitua badago, optimizazioa multzoetan, modu
+orokorrean, izango dugu. Azken bi kasu horietan, X multzoa definitzen duten
+ekuazioak murrizketak izango dira. Azkenik, helburu funtzioa eta murrizketa
+guztiak linealak badira, programazio linealeko problema izango dugu.
+
+ 2.1.2 Mutur lokalak eta globalak
+
+Demagun funtzioa eta multzoa direla. Funtzioari balio maximoa edo minimoa
+ematen dion puntua maximo edo minimo globala deituko dugu eta funtzioaren balio
+maximoa edo minimoa
+                                       .
+Orokorrean, maximo eta minimo globalak mutur globalak deituko ditugu. Globala
+hitza erabiliko dugu ahulagoa den lokala hitzetik bereizteko; dena den, mutur
+lokalak oso baliagarriak dira mutur globalak aurkitzeko. Ikus ditzagun
+definizioak:
+puntua X multzoan f-ren maximo globala dela esango dugu, edozein puntutarako
+betetzen bada.
+puntua X multzoan f-ren minimo globala dela esango dugu, edozein puntutarako
+betetzen bada.
+puntua X multzoan f-ren maximo lokala dela esango dugu, , puntuko ingurunea,
+existitzen bada non edozein puntutarako betetzen den.
+puntua X multzoan f-ren minimo lokala dela esango dugu, , puntuko ingurunea,
+existitzen bada non edozein puntutarako betetzen den.
+
+Edo berezituko ditugu hertsiak eta ez hertsiak direnean:
+puntua X multzoan f-ren maximo global hertsia da edozein puntutarako bada.
+puntua X multzoan f-ren minimo global hertsia da edozein puntutarako bada.
+puntua X multzoan f-ren maximo lokal hertsia da , puntuko ingurunea, existitzen
+bada non edozein puntutarako betetzen den.
+puntua X multzoan f-ren minimo lokal hertsia da , puntuko ingurunea, existitzen
+bada non edozein puntutarako betetzen den.
+
+ 2.1.3 Mutur globalen existentzia. Weierstrass-en teorema
+
+X multzo trinkoan f funtzioa jarraitua bada, orduan, existitzen dira f-ren
+maximoa eta minimoa X multzoan.
+
+ 2.1.4 Funtzio ganbilak eta ahurrak. Programazio ganbilaren oinarrizko teorema
+
+Funtzio ganbilen eta funtzioa ahurren definizioa
+
+Demagun multzo ganbila eta funtzioa direla.
+X multzoan f ganbila dela esango dugu
+betetzen bada.
+
+X multzoan f ahurra dela esango dugu
+betetzen bada.
+
+Ganbiltasunerako eta ahurtasunerako testa: bi aldagaiko kasua
+
+Demagun multzo irekia eta , klaseko funtzioa direla. f-ren hessiarra puntuan
+determinante hau da:
+                                       .
+
+Hartuko dugu , X ganbila eta U irekia izanik, eta demagun , klaseko funtzioa
+dela. Hau betetzen da:
+i) Edozein puntutarako , eta badira, orduan f funtzioa ganbila da X multzoan.
+ii) Edozein puntutarako , eta badira, orduan f funtzioa ahurra da X multzoan.
+iii) X irekia bada, i) eta ii)-ren alderantzizkoak ere zuzenak dira.
+
+Programazio ganbilaren oinarrizko teorema
+
+Demagun multzo ganbila eta funtzioa direla. Hau betetzen da:
+i) X multzoan f funtzioa ganbila bada, X multzoko f-ren minimo lokal oro,
+globala da.
+ii) X multzoan f funtzioa ahurra bada, X multzoko f-ren maximo lokal oro,
+globala da.
+
+ 2.1.5 Helburu funtzioaren sestra-kurben bitartezko ebazpen grafikoa
+
+Helburu funtzioaren sestra-kurbak aztertzen, optimizazioko problema errazak
+grafikoki ebatziko ditugu.
+
+2.1 adibidea:Kalkulatu funtzioaren mutur lokalak eta globalak multzoan.
+
+Azterketa grafikoa egin ondoren, minimo global hertsia eta maximo global
+hertsia direla ondorioztatzen dugu. Puntu horiek problemaren simetriagatik
+lortuko ditugu edo, bestela, tangentziaren baldintza erabiliz; baldintza hori
+honela lortzen da: grafikoan argi geratzen denez, soluzio hoberenean,
+zirkunferentziaren zuzen ukitzaileak, helburu funtzioaren sestra-kurben malda
+bera du. Helburu funtzioaren sestra-kurben ( malda 1 da eta zirkunferentziaren
+zuzen ukitzailearena, ekuazio hau deribatuz lortuko dugu:
+                                       .
+Beraz, tangentziaren baldintza da.
+
+
+
+
+
+
+
+
+
+2.2 adibidea: Kalkulatu funtzioaren mutur lokalak eta globalak multzoan.
+
+Grafikoan ikusten dugu minimo global hertsia dela eta eta lotzen dituen
+segmentuko puntu guztiak maximo global ez hertsiak direla.
+
+
+
+
+
+
+
+
+
+
+2.3 adibidea: Kalkulatu funtzioaren mutur lokalak eta globalak X multzoan, X ,
+eta erpineko triangelua izanik.
+
+minimo global hertsia dela eta eta puntuak maximo global ez hertsiak direla
+ondorioztatzen dugu.
+
+
+
+
+
+
+
+
+
+2.4 adibidea: Kalkulatu funtzioaren mutur lokalak eta globalak multzoan.
+
+
+
+
+
+
+
+
+
+Grafikoan minimo global hertsia dela eta ez dela maximo globalik existitzen
+ondorioztatzen dugu.
+
+2.5 adibidea: Kalkulatu funtzioaren mutur lokalak eta globalak multzoan.
+
+
+
+
+
+
+
+
+Grafikoki minimo global hertsia dela lortzen dugu eta maximo global hertsia
+dela. Gainera, azpimultzoko puntu guztiak maximo lokalak (ez globalak) dira eta
+azpimultzoko puntu guztiak minimo lokalak (ez globalak) dira.
+
+2.6 adibidea: Kalkulatu funtzioaren mutur lokalak eta globalak multzoan.
+
+
+
+
+
+
+
+
+
+Grafikoan puntu guztiak maximo lokalak (ez globalak) direla ikusten dugu eta
+puntu guztiak, minimo lokalak (ez globalak). Ez daude mutur globalik.
+
+ 2.2 Murrizketarik gabeko optimizazioa
+
+Atal honetan, murrizketarik gabeko optimizazioko problemak, hau da, funtzio
+baten maximoa eta minimoa haren existentzi eremu osoan aztertuko ditugu.
+
+ 2.2.1 Mutur lokalerako lehen ordenako baldintza beharrezkoak
+
+klaseko funtzioa da eta E-ren barruko puntua. f funtzioak puntuan maximo edo
+minimo lokala lortzeko
+betetzea beharrezkoa da. Baldintza beharrezko hau betetzen duten puntuak f-ren
+puntu kritikoakdeituko ditugu.
+
+ 2.2.2 Mutur lokalerako bigarren ordenako baldintza nahikoak
+
+, klaseko funtzioa da eta f-ren puntu kritikoa.
+i) betetzen bada, orduan puntua f-ren maximo lokal hertsia da.
+ii) betetzen bada, orduan puntua f-ren minimo lokal hertsia da.
+iii) betetzen bada, orduan puntua ez da f-ren muturra.
+
+bada, zalantzako kasua da, hau da, puntua muturra izan daiteke ala ez. Jakiteko
+muturra den ala ez, beste tresna erabili beharko genuke (funtzioaren sestra-
+kurben azterketa, besteak beste).
+
+2.7 adibidea: Kalkulatu funtzioaren mutur lokalak. da eta baldintza beharrezkoa
+aplikatuko dugu puntu kritikoak aurkitzeko (existitzen badira):
+Beraz, , eta f-ren puntu kritikoak dira. Azter ditzagun orain baldintza
+nahikoak puntu horietan:
+                                       .
+eta denez, minimo lokal hertsia da.
+denez, ez da muturra.
+denez, ez da muturra.
+Orduan, puntua f-ren minimo lokal bakarra da eta ez dago maximorik.
+
+ 2.2.3 Mutur globalerako baldintza nahikoak
+
+klaseko funtzioa da, E ganbila izanik, eta E multzoaren barruko puntua da. f-
+ren puntu kritikoa bada, orduan:
+i) E-n f funtzioa ganbila bada, f funtzioak puntuan minimo globala lortzen du.
+ii) E-n f funtzioa ahurra bada, f funtzioak puntuan maximo globala lortzen du.
+
+2.8 adibidea:Kalkulatu funtzioaren mutur globalak.
+funtzioaren puntu kritikoak aurkituko ditugu:
+Beraz, puntua f-ren puntu kritiko bakarra da. Azter ditzagun baldintza
+nahikoak:
+                                       .
+Edozein puntutarako , eta direnez, f ganbila da osoan eta ondorioz, puntu
+kritikoa minimo globala da.
+
+ 2.3 Optimizazioa berdintasun-murrizketekin
+
+Orain arte, mutur globalak funtzioaren existentzi eremu osoan aztertu ditugu.
+Atal honetan, azterketa berdintasun-murrizketa betetzen duten puntuetara
+murriztuko dugu, eta honela geratzen da problema:
+
+2.9 adibidea:
+
+
+
+
+
+Adibide honetan, problemaren mamia hauxe da: aurkitu funtzioak multzoan lortzen
+duen baliorik txikiena eta balio hori lortzen den puntuak.
+
+ 2.3.1 Ebazpen-metodoa aldagai-aldaketaren bidez
+
+Problema ebazteko emango dugun lehen metodoa, aldagai aldaketarena da eta
+honetan datza: murrizketaren aldagai bat beste aldagaien funtzio moduan askatu
+eta helburu funtzioan ordezkatu ondoren, geratzen dena ebatzi, murrizketarik
+gabeko optimizazioko problema baita.
+
+2.10 adibidea: Ebatzi problema hau:
+murrizketan y aldagaia askatuko dugu, lortuz.
+Helburu funtzioan ordezkatuko dugu:
+                                       .
+Modu horretan, murrizketarik gabeko aldagai bateko problema geratzen da. Beraz,
+minimizatu behar dugun funtzioa hauxe da:
+                                       .
+da eta maximoa edo minimoa izateko hautagaiak (puntu kritikoak) berdintzaren
+soluzioak dira, hau da, .
+puntu guztietarako denez, h funtzioa osoan ganbila da, eta beraz, puntuan
+minimo globala lortzen du. Orduan, f funtzioak puntuan murrizketak
+baldintzatutako minimo globala lortzen du, zeren eta bada, baita.
+
+2.11 adibidea:Ebatzi problema hau:
+murrizketan z aldagaia askatuko dugu, lortuz.
+Helburu funtzioan ordezkatuko dugu:
+                                       .
+Horrela, murrizketarik gabeko bi aldagaiko problema geratzen zaigu,
+minimizatzeko funtzioa
+izanik. Kalkulatuko ditugu h funtzioaren deribatuak (), zerora berdinduko
+ditugu eta sistemaren soluzioak puntu kritikoak izango dira:
+Sistemaren soluzio bakarra da.
+Kalkulatuko dugu h funtzioaren hessiarra baldintza nahikoa aplikatzeko:
+                                       .
+puntu guztietarako , eta direnez, h funtzioa osoan ganbila da. Ondorioz, h
+funtzioak minimoa puntuan lortzen du, hau da, f funtzioak puntuan murrizketari
+baldintzatutako minimo globala lortzen du, eta badira, baita.
+
+Metodo hori erabilgarria izan daiteke problemak aurreko adibideak bezain
+errazak direnean, baina, beste kasu askotan, edo ezinezkoa da modu esplizituan
+aldagai bat askatzea, edo, nahiz eta posible izan murrizketan aldagai bat
+askatzea, sortzen den funtzioa oso korapilatsua izan daiteke.
+Beste metodo bat dago, Lagrangeren biderkatzaileen metodoa. Normalean, sortzen
+diren kalkuluak ez dira zailak eta gainera, geroago ikusiko ditugun aplikazio
+batzuetan interpretazio ekonomikoa ere emango du.
+
+ 2.3.2 Mutur lokalerako lehen ordenako baldintza beharrezkoak
+
+Murrizketarik gabeko problemetan lortu ditugun baldintza beharrezkoen antzekoak
+lortu nahi ditugu. Demagun bi aldagaiko eta murrizketa bateko problema hau
+dugula:
+f eta g funtzioak klasekoak izanik. Suposatuko dugu E-ko barne-puntua den
+puntuan murrizketari baldintzatutako f-ren mutur lokala lortzen duela. bada,
+ekuazioak puntuaren ingurunean funtzioa inplizituki definitzen du, eta gainera,
+hau betetzen da:
+                                       .
+ordezkatuko dugu f funtzioan, eta horrela, murrizketarik gabeko eta aldagai
+bakarreko problema geratzen da, non optimizatu behar dugun funtzioa hauxe da:
+                                       .
+h funtzioak puntuan mutur lokala lortzen duenez, puntua kritikoa da, eta beraz,
+lehen ordenako baldintza beharrezkoa bete egin behar ditu:
+denean da, eta honela idatziko dugu:
+Orduan,
+                                       ,
+hau da,
+                                       .
+Eta baldintza beharrezko honek interpretazio geometriko oso argia du: bada, f-
+ren sestra-kurbaren eta kurbaren arteko ukitze-baldintza da:
+                                       .
+Eta
+izendatzen badugu, orduan, lehenago lortu dugun baldintza modu honetan idatz
+dezakegu:
+Ondorioz, puntuak baldintza hauek bete egin behar ditu:
+Baldintza beharrezko horiek aplikatzeko, baliagarria izan daiteke hiru
+aldagaiko funtzio hau:
+                                       .
+Funtzio hori funtzio lagrangearra da, eta  aldagai laguntzailea Lagrangeren
+biderkatzailea da. Laburbilduko ditugu emaitza guztiak:
+Demagun
+problema dela, non eta funtzioak klasekoak diren eta E-ko barne-puntua den
+puntuan edo den. f funtzioak puntuan murrizketari baldintzatutako mutur lokala
+lortzeko ondokoa beharrezkoa da:
+existitu behar da non:
+Baldintza beharrezko horiek betetzen dituzten puntuak f-ren puntu kritikoak
+dira.
+
+2.12 adibidea:Problema hau kontsideratuko dugu:
+Kalkulatu problemari elkartutako funtzio lagrangearraren puntu kritikoak.
+Funtzio lagrangearra osatuko dugu: .
+Eta deribatuak zerora berdindu ondoren, ebatziko dugu sortzen den sistema:
+                                     eta .
+Ondorioz, -ren puntu kritiko bakarra da.
+
+ 2.3.3 Mutur lokalerako bigarren ordenako baldintza nahikoak
+
+Demagun problema hau dugula:
+non eta funtzioak klasekoak diren eta puntua -ren puntu kritikoa den.
+i) Ondokoa betetzen bada:
+                                       ,
+f
+ funtzioak puntuan murrizketari baldintzatutako maximo lokala lortzen du.
+ii) Ondokoa betetzen bada:
+                                       ,
+f
+ funtzioak puntuan murrizketari baldintzatutako minimo lokala lortzen du.
+
+2.13 adibidea:Kalkulatu funtzioaren murrizketari baldintzatutako mutur lokalak.
+Problemari elkartutako funtzio lagrangearraren puntu kritiko bakarra lehen
+lortu dugun puntua da.
+                                       .
+                                       .
+Beraz, f funtzioak puntuan murrizketari baldintzatutako minimo lokala lortzen
+du.
+
+ 2.4 Optimizazioa multzoetan
+
+ 2.4.1 Ebazpen grafikoa eta analitikoa
+
+Atal honetan, kasu orokorreko problemak ebatziko ditugu eta hori egiteko, X,
+problemaren soluzio egingarrien multzoa, grafikoki irudikatuko dugu.
+Helburu funtzioari dagokionez, hasiko gara sestra-kurbak zuzenak,
+zirkunferentziak, parabolak edo hiperbolak direnean, eta gerorako utziko dugu
+sestra-kurben irudikapena ezinezkoa edo behintzat, oso zaila den problemak.
+Adibide honetan azaltzen da sestra-kurben laguntzarekin problema baten ebazpen
+grafikoa nola egiten den.
+
+2.14 adibidea:Aurkitu funtzioaren mutur globalak multzoan.
+
+
+
+
+
+
+
+
+
+Azterketa grafikoa egingo dugu: X multzoa eta f funtzioaren sestra-kurbak
+irudikatu ondoren, problemaren minimo globala murrizketaren eta funtzioaren
+sestra-kurben arteko ukitze-puntuan dagoela ondorioztatzen dugu. Puntu hori
+kalkulatzeko, ekuazioari baldintzatutako mutur lokalerako baldintza
+beharrezkoak erabiliko ditugu.
+Beraz, bilatzen dugun minimo globala da.
+Grafikoan ikusten dugu eta puntuak maximo lokalak direla. eta direla kontuan
+hartzen badugu, puntua problemaren maximo globala dela ondorioztatzen dugu.
+
+Orokorrean, ondoko jarraibidea emango dugu:
+1. urratsa: X, soluzio egingarrien multzoa, irudikatuko dugu. Aztertuko dugu ea
+itxia eta bornatua den, mutur globalen existentzia ziurtatzeko.
+2. urratsa: Helburu funtzioaren sestra-kurbak irudikatuko ditugu eta handitze-
+norabidea zehaztuko dugu.
+3. urratsa: Sestra-kurben laguntzarekin, X multzoan f funtzioaren mutur
+globalak kokatuko ditugu.
+4. urratsa: Aurreko urratsean lortutako puntuak kalkulatuko ditugu, mutur
+lokalerako baldintza beharrezkoak erabiliz (murrizketa bati baldintzatuak edo
+baldintzatu gabeak, kasuaren arabera).
+5. urratsa: Bukatzeko, mutur lokalen artean zein edo zeintzuk diren mutur
+globalak bereiztea zaila denean, hautagai guztiak funtzioan ordezkatuko ditugu
+eta balio handiena lortzen duena maximo globala izango da, eta balio txikiena
+lortzen duena, minimo globala.
+
+Baina funtzio baten sestra-kurbak irudikatzea oso zaila edo ezinezkoa denean
+eta soluzio egingarrien multzoa trinkoa denean, azterketa analitikoa erabiliko
+dugu. Orokorrean, ondoko jarraibidea emango dugu:
+1. urratsa: X, soluzio egingarrien multzoa, irudikatuko dugu.
+2. urratsa: Weierstrassen teorema aplikatuko dugu X multzoan mutur globalen
+existentzia ziurtatzeko.
+3. urratsa: Aurkituko ditugu ez baldintzatutako mutur lokalerako baldintza
+beharrezkoak betetzen dituzten puntu guztiak eta multzoan daudenekin geratuko
+gara.
+4. urratsa: Aurkituko ditugu murrizketa bati baldintzatutako mutur lokalerako
+baldintza beharrezkoak betetzen dituzten puntu guztiak eta multzoan dauden
+baina ebaki-puntuak ez diren puntuekin geratuko gara.
+5. urratsa: 3. eta 4. urratsetan lortutako puntuak eta murrizketen arteko
+ebaki-puntuak funtzioan ordezkatuko ditugu eta balio handiena duena maximo
+globala izango da eta balio txikiena duena, minimo globala.
+
+2.15 adibidea: Aurkitu multzoan funtzioaren mutur globalak.
+
+
+
+
+
+
+
+
+Erantzungo dugu problema sestra-kurbak egin gabe (zeintzuk dira f funtzioaren
+sestra-kurbak?). X trinkoan (itxia eta bornatua) f funtzioa jarraitua denez, X
+multzoan f funtzioaren maximo eta minimo globalak existituko dira. Puntu horiek
+kalkulatzeko, (ez baldintzatutako eta murrizketa bati baldintzatutako) mutur
+lokalerako baldintza beharrezkoak erabiliko ditugu:
+
+ int(X): ez baldintzatutako mutur lokalerako baldintza beharrezkoak:
+Sistema horrek soluzio bakarra du baina ez dago X multzoan; beraz, X-ren
+barnealdean ez dago muturrik.
+
+ fr(X): murrizketari baldintzatutako mutur lokalerako baldintza beharrezkoak:
+Funtzio lagrangearra da eta
+Beraz, sistema horren soluzio bakarra da.
+
+ fr(X): murrizketari baldintzatutako mutur lokalerako baldintza beharrezkoak:
+Funtzio lagrangearra da eta
+Eta sistema horrek ez du soluziorik.
+
+puntua eta eta murrizketen arteko ebaki-puntuak f funtzioan ordezkatzen ditugu:
+                                    , eta .
+Orduan, funtzioak puntuan minimo globala lortzen du eta puntuan maximo globala.
+
+ 2.4.2 Aplikazioak
+
+1.- Enpresa batek A eta B bi ondasun mota ekoizten ditu. A motako x unitate eta
+B motako y unitate fabrikatzeko eguneroko kostua funtzioak ematen du:
+                                       .
+Enpresak ekoizten duen guztia saltzen du, A motako unitate bakoitza 15 eurotan
+eta B motako unitate bakoitza 9 eurotan. Aurkitu enpresaren produkzioa sarrera
+maximizatu nahi badu.
+
+Mozkin funtzioa da, hau da, eta klasekoa da.
+-ren puntu kritikoak bilatuko ditugu:
+Eta sistema horren soluzioa da. Azter dezagun funtzioaren hessiarra:
+                                       .
+
+, eta direnez puntu guztietarako, orduan, -n ahurra da eta beraz, puntua maximo
+globala da eta mozkin handiena da.
+
+2.- Demagun funtzioa ekoizpen-funtzioa dela, K kapitala eta L lana izanik. p
+outputaren unitateko prezioa, r kapitalaren unitateko kostua eta w lanaren
+unitateko prezioa dira; zenbaki horiek guztiak positiboak dira. Y unitate
+ekoiztea eta saltzeagatik lortutako mozkina hau da:
+                                       .
+Eta kontsidera dezagun lehenago egindako adibidea: , , eta dira. Aurkitu mozkin
+handiena.
+Mozkin funtzioa da. Kalkulatuko ditugu mozkin funtzioaren puntu kritikoak :
+Eta sistema horren soluzioa eta da. Orain, baldintza nahikoak aztertuko ditugu:
+                                       .
+eta guztietarako , eta direnez,  ahurra da espazioko multzo ganbil eta
+irekian, beraz, puntu kritikoa maximo globala da, eta mozkin handiena € da.
+
+3.- Demagun enpresa baten ekoizpen-funtzioa dela, K kapitala eta L lana izanik.
+Lanaren prezio unitarioa eta kapitalaren prezio unitarioa dira. Enpresaren
+helburua kostu txikienarekin produkzio handiena lortzea bada, kapitalaren eta
+lanaren zenbat unitate behar ditu 2 unitate ekoizteko?
+Problema hauxe da:
+
+
+
+
+
+
+
+
+
+Soluzioa sestra-kurba eta murrizketari dagokion kurben arteko ukitze-puntua da.
+Puntu hori kalkulatzeko, ekuazioari baldintzatutako mutur lokalerako baldintza
+beharrezkoak erabiliko ditugu:
+Hau da, enpresak kapitalaren unitate 1 eta lanaren 4 unitate erabili beharko
+ditu.
+
+4.- Kontsumitzaile batek 1 eta 2 ondasunak eros ditzake. Bere baliagarritasun-
+funtzioa da eta ondasunen prezio unitarioak dira. Baldin badakigu
+kontsumitzailearen errenta 4€ dela, kalkulatu erosi behar dituen ondasun
+bakoitzaren eta kopuruak bere baliagarritasuna maximizatu nahi badu. Zein
+izango litzateke erantzuna kontsumitzailearen errenta 1€ izango balitz?
+Problema hau da:
+
+
+
+
+
+
+
+
+
+multzo trinkoan B funtzioa jarraitua denez, problemak soluzioa du. Bestalde,
+sestra-kurbak aztertu ondoren, soluzioak murrizketan egon behar duela
+ondorioztatzen dugu. Soluzioa kalkulatzeko, murrizketari baldintzatutako mutur
+lokalerako baldintza beharrezkoak erabiliko ditugu:
+Orduan, kontsumitzaileak bere baliagarritasuna maximizatuko du 1 ondasunaren 3
+unitate eta 2 ondasunaren unitate 1 kontsumitzen baditu.
+Eta errenta 1 € bada, problema honela geratzen da:
+Eta baldintza beharrezkoa aplikatuko dugu:
+Baina puntu hori ez da egingarria (bigarren aldagaiaren balioa negatiboa da). B
+funtzioan eta ebaki puntuak ordezkatu ditugu, eta direla lortuz.
+Beraz, kontsumitzaileak 1 ondasunaren unitate 1 eta 2 ondasunaren bat ere ez
+kontsumitzen duenean baliagarritasuna maximizatuko du.
+
+5.- Okindegi batek 1 eta 2 motako ogiak egiten ditu. x eta y dira ekoizten
+diren 1 eta 2 motako ogi tonak, hurrenez hurren. Mozkin funtzioa, eurotan, da.
+x eta y ekoizpenek betetzen dute; murrizketa horretan irinaren
+erabilgarritasuna kontuan hartzen dugu.
+i) Okindegiak mozkina maximizatu nahi badu, zein da ogi bakoitzaren ekoizpena?
+ii) Interesatuko litzaioke okindegiari irinaren kantitate handiagoa eskuratzea?
+Hala bada, zein preziotan?
+
+i) Problema honela geratzen da:
+
+
+
+
+
+
+
+X multzo trinkoan f funtzioa jarraitua denez, problemak soluzioa du. Soluzio
+hori kalkulatzeko, mutur lokalerako baldintza beharrezkoak (baldintzatuak eta
+ez baldintzatuak) erabiliko ditugu:
+
+ int(X): mutur lokal ez baldintzatuen baldintza beharrezkoak:
+                                       .
+
+ fr(X): murrizketari baldintzatutako mutur lokalen baldintza beharrezkoak:
+Sistema honen soluzioa puntua da.
+ fr(X): murrizketari baldintzatutako mutur lokalen baldintza beharrezkoak:
+Eta sistema horrek ez du soluziorik.
+ fr(X): murrizketari baldintzatutako mutur lokalen baldintza beharrezkoak:
+Eta sistema horrek ez du soluziorik.
+
+f funtzioa puntuan eta , eta murrizketen arteko ebaki-puntuetan ordezkatzen
+dugu:
+                                   , , eta .
+Ondorioz, mozkin handiena puntuan lortzen da, hau da, okindegiak 120 tona irin
+eskura duenean, mozkin handiena lortzen du 30 tona 1 motako ogi eta 15 tona 2
+motako ogi ekoizten dituenean. Mozkin maximo hori 1120€ da.
+
+ii) Aztertu nahi duguna zera da: ekoizpen hoberenean, irinaren
+erabilgarritasuna aldatzea: irinaren erabilgarritasuna a bada, murrizketa
+honela geratzen da: .
+Funtzio lagrangearra:. Eta puntu kritikoak:
+                                       .
+Sortzen den puntu kritikoa a-ren menpe dago, hau da, soluzio hoberena a-rekin
+aldatuko da. f funtzioaren balioa puntu kritiko horretan hau da:
+                                       .
+Horrela, baliabidearen (irinaren) erabilgarritasuna handituko dute mozkin
+funtzioaren balioa handitzen bada, hots, deribatua positiboa denean: .
+Gure kasuan, da eta baliabidearen erabilgarritasunean gehikuntza txikiekin
+mozkin hoberena horrela aldatzen da: .
+Beraz, okindegiari interesatzen zaio irin gehiago lortzea, tona bat irin
+gehiago lortzen duenean, mozkin funtzioak 16 eurotan handitzen delako.
+Tona bat irin gehiago lortzeko okindegiak, gehienez, 16 euro ordainduko du,
+azken finean, tona bat irin gehiagorekin irabazten duena.
+Konturatu balio hori problemaren hoberenaren Lagrangeren biderkatzailea dela.
+
+Sentikortasun-analisia. Lagrangeren biderkatzailearen interpretazioa
+
+Demagun problema hau dugula:
+eta 2 klaseko funtzioak () izanik.
+Suposatuko dugu, denean, puntua mutur lokala eta elkartutako biderkatzailea
+direla. Mutur lokala murrizketaren gai independentearen () aldaketekin
+aldatzen da, eta baita ere helburu funtzioak mutur horretan hartzen duen
+balioa. Are gehiago, -ren balioak murrizketaren gai independentearen aldaketen
+aurrean helburu funtzioak jasotzen dituen aldaketak biltzen ditu. Hau da,
+Horrela, bada, murrizketaren gai independentearen handitze nahiko txikiaren
+eragina hauxe da: puntuan helburu funtzioak lortzen duen balioa handitzen dela
+eta bada, gai independentearen handitze nahiko txikiak funtzioaren gutxitzea
+dakar.
+parametroak, murrizketaren gai independentea aldatzen dugunean, helburu
+funtzioaren aldaketak neurtzen ditu eta horregatik, murrizketa horren kopuru
+gehiagogatik ordaintzeko prest dagoen kantitatea da. Hori dela eta, ,
+Lagrangeren biderkatzailea, itzal prezioa ere deitzen da.
+
+ 2.5 Programazio linealerako sarrera
+
+ 2.5.1 Programazio linealeko problemen planteamendua eta formulazioa
+
+Programazio linealeko problema berdintza edo desberdintza murrizketak dituen
+optimizazioko problema da non helburu funtzioa eta murrizketak adierazten
+dituzten funtzio guztiak linealak diren.
+Demagun , n aldagai direla eta , balioen multzoa dela. Programazio linealeko
+problema bat, modu orokorrean, honela formalizatuko dugu:
+eta , multzoko balioak eta ikurra berdin- edo desberdin-zeinua (, , ) izanik.
+Programazio linealeko problemetan definizio hauek topatuko ditugu:
+Erabaki-aldagaiak: kontrolatzen ditugun aldagaiak dira: .
+Murrizketak: n erabaki-aldagaietan dauden limiteak m baliabideen mugen
+ondorioz. Berdintza edo desberdintza moduan idazten dira, , i baliabidearen
+kontsumitutako kopurua j jardueraren unitateko, eta , i baliabidearen
+erabilgarritasuna ( ), parametroen arabera. Badaude baita ere, ez-negatibotasun
+murrizketak.
+Helburu funtzioa: Optimizatu nahi den funtzio lineala. erabaki-aldagaien menpe
+da, non jarduera unitate batean handitzen badugu, helburu funtzioak jasotzen
+den eragina den.
+Aurreko ataletan egin dugun bezala, soluzio egingarria murrizketa guztiak
+batera betetzen dituen puntu oro da eta X soluzio egingarrien multzoa da.
+Eta soluzio egingarrien artean helburu funtzioari balio hoberena ematen dion
+puntuak soluzio hoberenak dira.
+
+2.16 adibidea:Enpresa batek A eta B motako tortsio-malgukiak egiten ditu.
+Mozkin garbia A motako malguki kilo bat saltzeagatik 60 € da eta B motako
+malguki kilo bat saltzeagatik, 45 €. A motako kilo bat malguki egiteko makinak
+bi ordu hartzen du eta B motako kilo bat malguki egiteko ordu bat. Makinen
+produkzio-ahalmena eguneko 1.000 ordu da.
+Enpresak duen altzairua nahikoa da eguneko 800 kg malguki egiteko. Bukatzeko,
+eskariaren arazoak direla eta, enpresak ez du nahi eguneko A motako 400 kg
+baino gehiago ekoiztu. Mota bakoitzeko zenbat malguki produzitu behar du
+egunero enpresak mozkin garbia maximizatu nahi badu?
+
+Programazio linealeko problema planteatuko dugu:
+: eguneko produzitutako A motako malguki (kg)
+: eguneko produzitutako B motako malguki (kg)
+
+ 2.5.2 Ebazpen grafikoa
+
+Atal honetan programazio linealeko problemak metodo grafikoaren bitartez
+ebatziko ditugu. X, soluzio egingarrien multzoa, irudikatuko dugu (argi dago
+ebazpen metodo hori bi aldagaiko problementzako soilik erabiliko dugula).
+Helburu funtzioaren sestra-kurbak erabiliz, funtzioaren balio handiena puntuan
+lortzen dela eta 39.000 euroko balioa lortzen duela ondorioztatzen dugu.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 2.5.3 Programazio linealeko oinarrizko teoremak
+
+ X, programazio linealeko problema baten soluzio egingarrien multzoa, ganbila
+da.
+ Programazio linealeko problema baten soluzio hoberenen multzoa ganbila da.
+ Programazio linealeko problema baten soluzio hoberena existitzen bada,
+horietako bat, gutxienez, problemaren soluzio egingarrien multzoko erpina da.
+
+Aurreko emaitzak soluzioa duen (X itxia eta bornatua delako) programazio
+linealeko problemaren ebazpena ahalbidetzen du, X multzoko erpin guztiak
+helburu funtzioan ordezkatuz.
+Programazio linealeko problemek ez dute beti soluzioa. Hiru aukera daude:
+1. bada, orduan ez da existitzen soluzio hoberena.
+2. da baina helburu funtzioa X multzoan ez dago goi-bornatua (maximoko problema
+bada) edo behe-bornatua (minimoko problema bada). Orduan, problemak ez du
+soluziorik.
+3. Existitzen da problemaren soluzio hoberena (bat bakarrik edo infinitu
+soluzio izan daiteke).
+
+ 2.5.4 Sentikortasun analisia
+
+Helburu funtzioaren koefizienteen aldaketak
+Helburu funtzioaren koefizienteen aldaketek funtzioaren sestra-kurben maldan
+eragina dute, eta agian, soluzio hoberenaren aldaketan ere.
+Azter dezagun 2.16 adibidea: lehen murrizketaren malda da, bigarren
+murrizketarena eta hirugarren murrizketarena. Bestalde, helburu funtzioaren
+sestra-kurben malda eta 0ren artean dago (konturatu malda prezio positiboen
+arteko zatidura negatiboa dela). desberdinetarako (hots, prezioren bat aldatzen
+bada), zein izango da soluzio hoberena? bada, soluzio hoberena (0,800) da;
+bada, soluzio hoberena (0,800) eta (200,600) arteko segmentua da; bada, soluzio
+hoberena (200,600) da; bada, soluzio hoberena (200,600) eta (400,200) arteko
+segmentua da; eta bada, soluzio hoberena (400,200) da.
+
+
+Aldaketak baliabideen erabilgarritasunetan. Itzal prezioak
+Sentikortasun analisian egiten ohi den galdera hauxe da: murrizketa baten gai
+independentearen aldaketa marjinalak duen eragina helburu funtzioaren balio
+hoberenean.
+Murrizketa baten baliabidearen aldaketaren unitateko balio hoberenaren aldaketa
+murrizketa horri elkartutako itzal prezioa da.
+Soluzio egingarri baterako murrizketa berdintzarekin betetzen bada, murrizketa
+asea dela esango dugu, eta desberdintzarekin betetzen bada, asegabea dela
+esango dugu.
+Baliabide bat soluzio hoberenean urria bada, dagokion murrizketa asea da eta
+hau planteatuko dugu: baliabide urri horren erabilgarritasuna handituko dugu
+soluzio hoberena hobetzeko.
+Itzal prezioa baliabidearen unitate gehiago bakoitzetik ordainduko genukeen
+prezioa da (enpresak duen aukera-kostua baliabidearen erabilgarritasuna
+handitzen ez badu).
+Murrizketa asegabe baten itzal prezioa soluzio hoberenean zero da, baliabide
+hori oparoa delako.
+
+2.17 adibidea: Kontsideratuko dugu 2.16 adibidea. Taula honetan soluzio
+hoberenean murrizketa bakoitzaren egoera (asea edo asegabea) zein den azaltzen
+da.
+
+                                    Murrizketa                  egoera
+          Orduen murrizketa                                      Asea
+    Altzairuaren murrizketa                                      Asea
+                A motako kg                                    Asegabea
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lehen eta bigarren baliabideak (eguneko orduak eta altzairuaren
+erabilgarritasuna) soluzio hoberenean erabat kontsumitzen dira eta horregatik,
+pentsa dezakegu baliabide horien kantitate gehiago eskuratzen bada, agian,
+helburu funtzioaren balioa handitzen dela. Bestalde, hirugarren baliabidea (A
+motako kilogramoak) oparoa da, dugun guztia ez dugu erabiltzen, beraz, haren
+itzal prezioa da.
+
+Hoberenenondoko analisia
+
+Suposatuko dugu ekoizteko 1.000 ordu izan ordez, () dugula. Planteatzen dugun
+problema hau da: soluzioaren balioa handitzen den bitartean, noraino hazi
+daiteke  balioa?
+Grafikoki ikusten dugu zuzena (M1, lehen murrizketa) lekuz alda dezakegula
+soluzio egingarrien multzoan aldatzen uzten duen arte, hau da, (400,400)
+punturaino (M1).
+–ren balio handiena lortzeko ordezkatuko dugu (400,400) puntua murrizketan eta
+hau lortzen dugu: eta (400,400) puntuan helburu funtzioak hartzen duen balioa
+42.000 dela. Hau da, ekoizteko egunero erabiltzen duten orduak 1000tik 1200era
+handitzen dugunean, mozkina izatetik izatera pasatzen da. Horrela, lehen
+murrizketaren gai independentearekiko balio hoberenaren hazkunde-tasa (beste
+baldintza guztiak mantentzen diren bitartean) lor dezakegu:
+                                       .
+lehen murrizketaren itzal prezioa da. Hau da, enpresak, gehienez, 200 ordu
+gehiago kontratatuko luke eta, gehienez, 15 euro ordainduko luke ordu
+bakoitzeko.
+
+Bigarren murrizketaren kasuan, aurreko pausuak jarraituz, mozkina hazten dela
+45.000 € izan arte eta lortzen da (0,1.000) puntuan, orduan,
+M2: .
+Soluzioa hoberena: (200,600)  (0,1.000).
+Baliabidearen hazkundea: .
+Balio hoberena: 39.000 €  45.000 €.
+
+                                       .
+Enpresak, gehienez, 200 kg altzairu gehiago eskuratuko luke eta, gehienez, 30
+euro ordainduko luke kilogramo bakoitzeko.
+ 3 Aldagai askoko kalkulu integrala
+
+ 3.1 Integral bikoitzaren kontzeptua barruti bornatuetan
+
+3.1.1 Riemannen integrala
+
+Matematika I irakasgaian integrala definitu genuen aldagai bateko funtzioa eta
+tartea genuenean. Kontzeptu hori, espazioko R barruti itxi eta bornatuan
+(trinkoan) definitu eta bornatua den bi aldagaiko funtzioentzako orokortu
+dezakegu.
+Integral bikoitza honela egiten da:
+R barrutia x eta y ardatzekiko paraleloak diren zuzenen bitartez barruti
+txikiagoetan zatitzen dugu. Barruti txiki horietatik R multzoan daudenak eta
+errektangeluak direnak soilik hartuko ditugu, eta 1etik n-ra etiketatuko
+ditugu.
+Gero, i-garren errektangeluaren azalera ai deituko dugu eta errektangelu
+bakoitzean puntu arbitrarioa aukeratuko dugu.
+Bukatzeko, ondoko batura osatuko dugu (Riemann-en batura deitzen da):
+Prozedura hori R barrutiko beste zatiketekin egiten badugu non errektangelu
+bakoitzaren azalera zerorantz hurbiltzen diren, eta batura hori limitea badu
+(kasu honetan ), orduan, R barrutian f funtzioa integragarria dela esango dugu.
+Limite hori deituko dugu, hau da,
+                                       .
+Integral bikoitzak modu hauetan ere izendatuko ditugu:
+                                       .
+Ikasturte honen helburuetatik kanpo egon arren, aipatu behar dugu limite hori
+existitzen denean, ez dagoela i-garren errektangeluaren puntuaren hautaketaren
+menpe.
+
+3.1 emaitza:-ko R barruti trinkoanfuntzioa jarraitua bada integragarria da R
+barrutian, hau da,existitzen da.
+
+3.1.2 Integral bikoitzaren interpretazioa
+
+Konturatu f jarraitua bada eta R-ko puntu guztietan bada, orduan,
+baturak adierazten du, gutxi gora-behera, sabaia eta oinarria R barrutia duen
+figuraren bolumena.
+
+Bereziki, bada, integrala R barrutiaren azalera da.
+
+ 3.2 Integral bikoitzaren propietateak
+
+Integral bikoitzek propietate hauek dituzte:
+Positibotasuna: f funtzioa R barrutian integragarria bada eta bada, orduan,
+Linealtasuna: f eta g funtzioak R barrutian integragarriak badira eta eta bi
+zenbaki erreal badira, orduan,
+                                       .
+Batukortasuna barrutian: f funtzioa R barrutian integragarria bada, eta eta R-
+ko bi zati badira (), orduan ffuntzioa eta multzoetan ere integragarria da eta
+hau betetzen da:
+Guk erabiliko ez ditugun beste propietateak hauek dira:
+f funtzioa R barrutian integragarria bada, orduan:
+                                       .
+f funtzioa R barrutian integragarria bada eta R multzoan f funtzioak lortzen
+dituen maximoa eta minimoa, hurrenez hurren, M eta m badira, orduan:
+                                       .
+f funtzioa R multzoan jarraitua bada, orduan:
+                                       .
+R-ko punturen baterako.
+
+Hemendik aurrera kontsideratuko ditugun funtzio guztiak jarraituak izango dira,
+baina emango ditugun emaitzak baliagarriak dira funtzioak bornatuak eta R-ko
+puntu gehienetan jarraituak direnean.
+
+ 3.3 Integral bikoitzaren kalkulua barruti bornatuetan. Fubiniren teorema
+
+Integral bikoitzen kalkulua Fubiniren teoremarekin egingo dugu. Teorema horrek
+integral bikoitzen kalkulua aldagai bateko bi integralen kalkuluaren bidez
+ahalbideratzen du.
+
+ 3.3.1 Integral bikoitzen kalkulua errektangeluetan
+
+funtzioa errektangeluan jarraitua bada:
+                                       .
+R errektangelu trinkoan funtzio jarraitu baten integrala kalkulatzeko ez du
+inporta zer ordenatan egiten den (dxdy edo dydx).
+
+3.1 adibidea:Kalkulatu integrala, izanik.
+.
+.
+
+ 3.3.2 Integral bikoitzen kalkulua barruti bornatuetan
+
+
+
+
+
+
+
+
+Barrutia desberdintza hauen bitartez definitua badago:
+                                       ,
+non eta funtzioak segmentuan jarraituak diren, orduan, integral bikoitza modu
+honetan kalkula daiteke:
+                                       .
+
+
+
+
+
+
+
+
+Eta barrutia desberdintza hauen bitartez definitua badago:
+                                       ,
+non eta funtzioak tartean jarraituak diren, honela kalkulatuko dugu integral
+bikoitza:
+                                       .
+
+Orokorragoak diren barrutietan ere baliagarria da metodo hau: barrutia lehen
+aipatutako moduko eskualdetan zatitu ondoren, batukortasun-propietatea
+aplikatuko dugu barrutian.
+
+3.2 adibidea:Erabili Fubiniren teorema integral honenborneak aldatzeko:
+                                       .
+
+3.3 adibidea:Kalkulatu integral hau:
+R barrutia erpinak dituen triangelua izanik.
+
+ 3.4 Integral bikoitzen kalkulua barruti ez bornatuetan
+
+Integral bikoitzaren kontzeptua barruti ez bornatuetara zabal dezakegu. R
+barruti ez bornatuan integrala honela kalkulatuko dugu: i gero eta handiagoa
+denean R barrutira doan Ri eskualde bornatuan integralaren limitea da, limite
+hau existitzen denean eta Ri aukeraketaren menpe ez dagoenean; hau da,
+                                       .
+Limite hori existitzen bada, integrala konbergentea dela esango dugu; eta ez
+bada existitzen, dibergentea dela esango dugu.
+Adibidez,
+
+3.4 adibidea:Kalkulatu integral hau:
+                                       ,
+izanik.
+

@@ -1,0 +1,305 @@
+
+
+
+
+
+
+Donostiako Enpresa-ikasketen Unibertsitate-
+Eskola                          ENPRESARAKO MATEMATIKAK I 
+VIII.- MATRIZEEN DIAGONALIZAZIOA 
+ 
+1.- Matrize karratu baten autobalioak eta autobektoreak 
+n
+n
+A ×  matrize karratu bat emanda, 
+x
+x
+A
+⋅
+=
+⋅
+λ  ekuazioa egiaztatzen duen  λ  zenbakia, matrizearen 
+autobalioa dela esaten da, eta  x  bektorea, autobalio horri lotutako autobektorea. 
+Teorema: 
+i
+λ   eta 
+j
+λ   A  matrizearen  bi  autobalio  desberdin  badira,  haiei  lotutako 
+i
+x
+  eta 
+j
+x
+ 
+autobektoreak elkarren artean linealki askeak dira. 
+ 
+2.- Autobalio eta autobektoreen kalkulua 
+x
+x
+A
+⋅
+=
+⋅
+λ  ekuaziotik: 
+0
+=
+⋅
+−
+⋅
+x
+x
+A
+λ
+, eta 
+0
+)
+(
+=
+⋅
+⋅
+−
+x
+I
+A
+λ
+ 
+n
+I
+A
+r
+=
+⋅
+−
+)
+(
+λ
+  bada,  aurreko  sistema  homogeneoak  soilik  soluzio  nabaria  du, 
+0
+=
+x
+,  eta  hau  ez 
+da autobektoretzat hartzen. 
+Beraz, autobektoreak egon daitezen, 
+n
+I
+A
+r
+<
+⋅
+−
+)
+(
+λ
+ izan beharko da, hau da: 
+0
+=
+⋅
+−
+I
+A
+λ
+ 
+0
+=
+⋅
+−
+I
+A
+λ
+  ekuazioa  ebatziz, 
+λ   erroak  lortuko  dira  (A-ren  autobalioak),  eta  haiei  lotuta,  
+sistema homogeneoa betetzen duten  soluzioak (
+λ -ri lotutako autobektoreak). 
+ 
+3.- Matrizeen diagonalizazioa 
+A matrize karratu bat diagonalizatzeak, 
+P
+A
+P
+D
+⋅
+⋅
+= −1
+ ekuazioa betetzen duten D eta P matrizeak 
+aurkitzean datza, non D matrizeak diagonala izan behar duen. 
+Ekuazio  hori 
+D
+P
+P
+A
+⋅
+=
+⋅
+  ekuazioaren  baliokidea  denez,  nahikoa  da  D  matrizea  autobalioez 
+osatzea, eta P matrizea, autobalio horiei lotutako autobektore askeez osatzea. 
+(
+) (
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+⋅
+=
+⋅
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+n
+n
+n
+nn
+n
+n
+n
+n
+x
+x
+x
+x
+x
+x
+a
+a
+a
+a
+a
+a
+a
+a
+a
+λ
+λ
+λ
+⋯
+⋯
+⋯
+⋯
+⋯
+⋯
+⋯
+…
+…
+⋯
+⋯
+⋯
+⋯
+⋯
+⋯
+⋯
+0
+0
+0
+0
+0
+0
+2
+1
+2
+1
+2
+1
+2
+1
+2
+22
+21
+1
+12
+11
+ 
+0
+=
+⋅
+−
+I
+A
+λ
+  ekuazioa  ebatziz  n  autobalio  desberdin  topatzen  badira,  haiek  osatzen  dute  D 
+matrizea,  eta  haiei  lotutako 
+}
+,
+,
+,
+,
+{
+3
+2
+1
+n
+x
+x
+x
+x
+…
+  autobektoreak,  elkarren  artean  askeak  izanik,  P 
+matrizea osatzen dute. 
+Bestela, 
+0
+=
+⋅
+−
+I
+A
+λ
+ ekuazioa ebatziz, n baino autobalio desberdin  gutxiago badaude, horietako 
+bat 
+(edo gehiago) errepikatu egingo da. A matrizea diagonalizagarria izan dadin, ondoko baldintza 
+
+Donostiako Enpresa-ikasketen Unibertsitate-
+Eskola                          ENPRESARAKO MATEMATIKAK I 
+bete  behar  da: 
+i
+λ   autobalioa 
+i
+α   aldiz  errepikatzen  bada,  orduan 
+0
+)
+(
+=
+⋅
+⋅
+−
+x
+I
+A
+i
+λ
+  ekuazio 
+sistemak 
+i
+α  askatasun gradu beharko ditu, 
+i
+α  autobektore linealki aske eduki ahal izateko, hau da: 
+(
+)
+i
+i
+n r A
+I
+λ
+α
+−
+− ⋅ =  bete behar da, autobalio desberdin bakoitzerako. 
+ 

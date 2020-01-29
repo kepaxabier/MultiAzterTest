@@ -1,0 +1,631 @@
+
+
+
+
+
+
+
+
+
+
+
+15
+
+                                   XIV. GAIA
+
+                        AMORTIZAZIO-TERMINO KONSTANTEAK
+
+         1. Sistema frantsesa.
+               1. Amortizazio-egitasmoa.
+               2. Ulerkuntza grafikoa.
+               3. Amortizazio-laukia.
+               4. Maileguaren iraupenaren kalkulua.
+               5. Maileguan gabetasun osoa eta partziala.
+         2. Sistema alemaniarra edo aurrez ordaintzeko interesduna.
+         3. Sistema amerikarra (Sinking Fund).
+         4. Kasu praktikoak.
+
+         1. Sistema frantsesa.
+
+               1. Amortizazio-egitasmoa.
+
+
+M = konstantea
+i = konstantea
+
+    * Amortizazio-terminoaren egitura:
+
+
+
+
+
+
+P M M. . . . . . . M . . . . . . . M M
+. . . . . .
+0 1 2 t n-1 n
+
+****** I.- Amortizazio-terminoa.- ******
+
+Finantza-baliokidetasuna, eragiketaren hasieran:
+
+                                 P = M . ani
+Non :
+
+1(1+i)n
+ani=
+i
+
+    * Amortizazio-termino konstantea:
+
+
+
+
+****** II.- Zorra t unean.- ******
+
+(t uneko terminoa ordainduz gero).
+
+Kalkulatzeko, bost era ditugu:
+
+(Kontuan hartuz: D0 = P eta Dn = 0 direla.)
+
+   1. Aurreikuspen-bidetik,
+
+Dt = M . anti=P . a1ni.anti
+
+   1. Atzeranzko bidetik,
+
+Dt = P . (1+i)t  M . Sti
+
+   1. Errepikapen-bidetik,
+
+Dt = Dt1 . (1+i)  M
+
+   1. Beste errepikapen-lege bat,
+
+Dt = Dt1  At
+
+   1. Beste era bat,
+
+j=n
+Dt =  Aj
+j= t+1
+
+******
+ ******
+****** III.- t urteko Interes-kuota.- ******
+
+Hona hemen bere adierazpena ateratzeko bi era:
+
+It = Dt1 . i= ( M . ant+1i) . i = P . a1ni.ant+1i . i =
+= P . i . ant+1i . a1ni
+
+   1. Zorraren menpeko errepikapen-legea erabiliz,
+
+It = Dt1 . i= (Dt2  At1 ) . i = Dt2 . i  At1 . i =
+= It1 At1 . i
+
+
+
+
+
+****** IV.- t urteko Amortizazio-kuota.- ******
+
+Hona hemen bere adierazpena ateratzeko hiru era:
+
+   1. Amortizazio-terminoaren egituratik,
+
+M = It + At  At = M  It
+
+   1. Errepikapen-legea:
+
+Har ditzagun elkarren segidako bi urte:
+
+t  M = It + At = Dt1 . i + At
+t1  M = It1 + At1 = Dt2 . i + At1
+
+0 = (Dt1  Dt2 ) . i + At  At1 
+0 =  At1 . i + At  At1 
+
+At = At1 . (1+ i) =
+= A1 . (1+ i)t1 =
+= P . S1ni . (1+ i)t1
+
+non A1 ateratzeko, bi era ditugun:
+
+    * A1 = M  I1 = M  P . i
+
+    * P = A1 + A2 + A3 + ... + An =
+= A1 [ 1 + (1+i) + (1+i)2 + ....+ (1+i)n1 ] = A1 . Sni 
+
+nondik,
+A1 = P . S1ni
+
+   1. Errepikapen-formula ateratzeko beste era bat:
+
+Har ditzagun elkarren segidako bi urte:
+
+t  Dt = Dt1 . (1+ i)  M
+t1  Dt1 = Dt2 . (1+ i)  M
+
+(Dt  Dt-1) = (Dt1  Dt2 ) . (1+i) 
+At = At1 . (1+ i) = A1 . (1+ i)t1 =  P . S1ni . (1+ i)t1
+******
+ ******
+
+
+
+
+
+
+****** V.- Amortizatutako osoa t unea arte.- ******
+
+Kalkulatzeko, lau era ditugu:
+
+1.)
+j=t
+Tt =  Aj
+j=1
+
+2.) Tt = A1 . Sti=P . S1ni . Sti
+
+Kontuan hartuz,
+
+Tt = A1 + A2 + A3 + ... + At =
+= A1 [ 1 + (1+i) + (1+i)2 + ....+ (1+i)t1 ] = A1 . Sti
+
+
+3.) Tt = P  Dt
+
+4.) Tt = Tt1 + At
+
+
+Oharra:
+
+ j=n
+                                    Dt =  Aj
+                                     j= t+1
+
+Honako hau betetzen denean:
+
+            ****** P = D0  D1  D2  . . .  Dn1  Dn = 0  ******
+                                     ******
+                                      ******
+                   ******  At  0 ; t = 1, 2, ..., n  ******
+
+amortizazioan erregulartasuna dagoela omen da (esaten ohi da).
+
+
+
+               1. Ulerkuntza grafikoa.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               1. Amortizazio-laukia.
+
+
+
+Urtea Amortizazio-  Interes-kuota Amortizazio-kuota  Amortizatutako osoa    Zorra
+        terminoa
+  t         M            It               At                 Tt               Dt
+  0      -------       -------         -------             -------          D0= P
+  1   M = P .a1n�I1=P . i      A1= MI1         T1= A1              D1= P – T1
+
+                                  = P .S1ni
+  2   M = P .a1n�I2= D1. i     A2= M – I2       T2= T1+ A2=         D2= P – T2
+                                  = A1. (1+i)        = A1.S2i
+  .   .                   .       .                           .          .
+  .   .                   .       .                           .          .
+ t1M = P .a1n�It1= Dt2At-1= M – It1 Tt1= Tt2+ At�Dt1= P –
+                                  = At-2. (1+i)      = A1.St1i     Tt1
+                                  = A1. (1+i)t2
+  t   M = P .a1n�It= Dt1. i At= MIt         Tt= Tt1+ At=     Dt= P – Tt
+                                  = At1. (1+i)    = A1.Sti
+                                  = A1. (1+i)t1
+ t+1  M = P .a1n�It+1= Dt. i   At+1= MIt+1     Tt+1= Tt+ At+1=     Dt+1= P –
+                                  = At. (1+i)        = A1.St+1i       Tt+1
+                                  = A1. (1+i)t
+  .   .                   .       .                           .          .
+  .   .                   .       .                           .          .
+ n1M = P .a1n�In1= Dn2An1= M – InTn1= Tn2+ An= Dn1= P –
+                                  = An2. (1+i)    = A1.Sn1i     Tn1
+                                  = A1. (1+i)n2
+  n   M = P .a1n� In= Dn1. iAn= M – In       Tn= Tn1+ An=     Dn= P – Tn
+                                  = An1. (1+i)    = A1.Sni
+                                  = A1. (1+i)n1
+
+
+
+
+               1. Maileguaren iraupenaren kalkulua
+
+P
+P = M . aniani = = zifra ezaguna
+M
+
+1(1+i)nP P.i P.i
+ani= =1  Vn =1  (1+i)n = 
+iM M M
+
+P.i M P.i M
+ (1+i)n = 1  =(1+i)n = logaritmoak hartuz:
+M M M P.i
+
+log Mlog (MP.i)
+n . log (1+i) = log M  log (M P.i)n =
+log (1+i)
+
+
+Baina iraupena, n , ez osoa denean,
+
+Hots, n = n0 +  denean; non 0 <  < 1
+
+Hau da, n0 < n < n0 + 1.
+
+Orduan, zenbait ebazpen praktiko ditugu:
+
+    * Edo n0 iraupen laburragoa hartu,  M1 = P . a1n0i M1 > M
+    * Edo n0 + 1 iraupen luzeagoa hartu,  M2 = P . a1n0+1i M2 < M
+
+
+    * Edo n0an termino osagarria ordainduz,
+
+
+P M M. . . . . . . . . . . . . . M + M´
+. . . .
+0 1 2 n0
+
+Orduan, termino osagarria M´ kalkulatu beharko dugu; honela, n0 unean dugun
+zorra izango da, atzeranzko bidetik kalkulatuta:
+
+                      M´= Dn0 = P . (1+i) n0  M . Sn0 i
+
+
+
+
+
+
+
+    * Edo termino osagarria (n0+) unean ordainduz, hau da n ez osoan,
+
+
+
+P M M. . . . . . . . . . . . . . M H
+. . . . .
+0 1 2 n0 n0+
+
+Orduan, H termino osagarria kalkulatu behar da; honela, n0 unean dugun zorra 
+azpialdi horretan kapitalizatuta:
+
+H = Dn0 . (1+i)= P . (1+i)n0+  M . Sn0 i . (1+i)=
+= (M . ani) . (1+i)n0+  M . Sn0 i . (1+i)=
+
+eta kontuan hartuz n = n0+ dela,
+
+
+1  (1+i)n0+(1+i)n0  1
+= M . . (1+i)n0+  (1+i).
+i i
+
+
+(1+i)n0+  1  (1+i)n0+ +  (1+i)(1+i) 1
+= M . = M . = M . Si
+i i
+Erabileran, honelakoak ere ikusten dira  H = M . Si M . 
+
+
+               1. Maileguan gabetasun osoa eta partziala.
+
+Sistema frantsesean.-
+
+
+P M M ............... M
+. . . ............... .
+0 1 2 ............... n
+
+Finantza-baliokidetasuna t = 0an  P = M . ani
+
+Baina, batzuetan, aldi zehatz batean, interesak bakarrik ordaintzen dira; eta
+beste batzuetan, ez da ezer ordaintzen. Arazo hau ikusteagatik, hona hemen
+adibide batzuk:
+
+1. a.- Lehen urtean ez du ezer ordainduko.-
+
+
+P  M M ........... M
+. . . . ........... .
+0 1 2 3 ........... n
+
+Finantza-baliokidetasuna t = 1ean egiten da, honela:  P . (1+i) = D1 = M .
+an1i
+
+Non, t = 1 -ean:
+
+
+
+1. b.- Lehen bi urteetan ez du ezer ordainduko.-
+
+P   M M ... M
+. . . . . ... .
+0 1 2 3 4 ... n
+
+Finantza-baliokidetasuna t = 2an egiten da, honela:  P . (1+i)2 = D2 = M .
+an2i
+
+Non:
+
+
+
+2. a.- Lehen urtean interesak bakarrik ordainduko ditu.-
+
+
+P P.i = I1 M M M ... M
+. . . . . ... .
+0 1 2 3 4 ... n
+
+t = 1ean  interesak bakarrik ordainduko dituenez  A1 = 0 da.  ondorioz,
+
+
+Finantza-baliokidetasuna t = 1ean  D1 = P = M . an1i
+
+Non, t = 1 -ean:
+
+
+
+
+2. b.- Lehen bi urteetan interesak bakarrik ordainduko ditu.-
+
+
+P P.i P.i M M ... M
+. . . . . ... .
+0 1 2 3 4 ... n
+
+t = 1ean, eta t = 2an  interesak bakarrik ordainduko dituenez  A1= A2= 0 
+ondorioz,
+
+Finantza-baliokidetasuna t = 2an  D2 = P = M . an2i
+
+
+
+
+
+
+
+
+
+
+
+
+3.- Lehen urtean interesak bakarrik ordainduko ditu; eta, ordea, bigarrenean ez
+du ezer ordainduko.-
+
+
+P P.i  M M ... M
+. . . . . ... .
+0 1 2 3 4 ... n
+
+t = 1ean  interesak bakarrik ordainduko dituenez  A1= 0 da ;
+baina, t=2an, ez du ezer ordainduko  A2 < 0
+
+ondorioz,
+
+Finantza-baliokidetasuna t = 2an  D2 = P . (1+i) = M . an2i
+
+
+
+Orokorrean, kasu hauei honela izendatzen diegu:
+
+
+AMORTIZAZIOA GABETASUNALDIEKIN.-
+
+Gabetasuna izan daiteke:
+
+   1. Gabetasun osoa.- Amortizazio-termino osoaren gabetasuna da; hau da, ez
+      denean amortizazioterminorik ordaintzen lehen t aldietan.
+   2. Amortizaziokuoten gabetasuna. Lehen aldietako amortizazio-kuotak nuluak
+      direnean; hau da, ez da ezer amortizatzen; baina, aldi horietako
+      interesak bai ordaintzen dira.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.- AMORTIZAZIOTERMINOEN GABETASUN OSOA.
+
+
+Lehen t urteetan ez du ezer ordainduko.-
+
+
+P   Mt+1 ................ Mn
+. . . . ... .
+0 1 ....... t t+1 ................ n
+
+
+Orokorrean, edozein sisteman:
+
+Finantza-baliokidetasuna t an egiten dugu.
+
+
+
+Sistema frantsesean (M konstantea da):
+
+Finantza-baliokidetasuna t an  P . (1+i)t = Dt = M . anti
+
+
+2.- AMORTIZAZIOKUOTEN GABETASUNA.
+
+Lehen t urteetan interesak bakarrik ordainduko ditu; ondorioz, amortizazio-
+kuotak nuluak izango dira.-
+
+
+P P.i P.i Mt+1 ................ Mn
+. . . . ... .
+0 1 ....... t t+1 ................ n
+
+t aldi igaro ondoren, interesak aldiz aldi ordaintzen direnez: Dt = P
+
+
+Orokorrean, edozein sisteman:
+
+Finantza-baliokidetasuna t unean egiten dugu.
+
+
+
+Sistema frantsesean (M konstantea da):
+
+Finantza-baliokidetasuna t unean egiten dugu  Dt = P = M . anti
+14.3. Sistema amerikarra (Sinking Fund).
+
+Mailegu-eragiketa batean, kontratu berean, ditugu: alde batetik, mailegua dugu
+i interes-hainbestekoan; eta bestetik, eraketa-eragiketa i1 interes-
+hainbestekoan.
+
+Eragiketa berean:
+
+Mailegua : ( i interestasan)
+
+P P.i P.i P.i . . . . . P.i P.i . . . . . . . P.i P.i + P
+. . . . . . . .
+0 1 2 3......................t-1 t.....................n-1 n
+
+****** Eraketa-eragiketa: ( i1 interestasan) ******
+
+
+¢ = P
+ M
+
+
+Cn In
+
+Fn-1
+.
+.
+.
+Ft
+ M
+
+Ct
+ It
+Ft-1
+.
+.
+.
+F3
+M
+C3
+
+F2 I3
+M
+C2
+I2
+F1
+C1 M
+
+0 1 2 3......................t-1 t.....................n-1 n
+
+I1 = 0
+At = 0 ; t = 1, 2, ..., n1 denean
+    * Maileguan
+An = P ; t = n denean
+
+
+    * Mailegu-eragiketan, osotara,  M ´ = P . i + M 
+    * Non eraketan  M = P . S1ni1 den
+
+Beraz, mailegu-eragiketan, amortizazio-terminoa osotara,
+
+ M ´ = P . i + M = P . i + P . S1ni1
+
+   i. Eraketa-eragiketan, t uneko fondoa:
+
+                      Ft = M . Sti1= P . Sti1 . S1ni1
+
+   i. Mailegu-eragiketan, osotara, t uneko zorra:
+
+                   Dt = P – Ft = P . [ 1  Sti1 . S1ni1 ]
+
+Kasu berezia:
+
+Ordea, ohikoa ez den kasu berezia izango dugu: i = i1 denean. Orduan:
+
+    * Mailegu-eragiketan, osotara,  M ´ = P . i + M 
+    * Baina eraketan  M = P . S1ni1 = i izango da
+
+Eta orduan, mailegu-eragiketan, amortizazio-terminoa osotara:
+
+i
+M´ = P . i + M = P . i + P . S1ni = P . i + =
+(1+i)n  1
+(1+i)n . i  i + i i
+= P. = P . = P . a1ni
+(1+i)n  1 1  (1+i)n
+
+Adierazpide grafikoa:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Amortizazio-laukia:
+
+
+Urtea Amortizazio- Maileguaren   Eraketa-      Fondoaren         Eraketa-fondoa          Zorra
+        terminoa    Interes-     terminoa    Interes-kuota
+      (Bateratua)     kuota
+  t        M´      It= P . i       M             It´                 Ft                 Dt
+  0     -------      -------     -------        -------              -------             D0= P
+  1   M´= I + M   I =P . i    M = P        I1´= 0          F1= M                   D1= P – F1
+                               .S1ni1
+  2   M´= I + M   I = P . i        “     I2´= F1. i1     F2= F1. (1+i1)+ M =     D2= P – F2
+                                                             = M .S2i1
+  .                     .           .                                   .            .
+  .                     .           .                                   .            .
+ t-1  M´= I + M   I = P . i        “     It1´ = Ft2Ft1= Ft2. (1+i1)+ Dt1= P –
+                                                             = M .St1i1        Ft1
+  t   M´= I + M   I = P . i        “     It´= Ft1. i1 Ft= Ft1. (1+i1)+ M = Dt= P – Ft
+                                                             = M .Sti1
+ t+1  M´= I + M   I = P . i        “     It+1´= Ft. i1   Ft+1= Ft. (1+i1)+ M =   Dt+1= P –
+                                                             = M .St+1i1          Ft+1
+  .                     .           .                                   .            .
+  .                     .           .                                   .            .
+ n-1  M´= I + M   I = P . i        “     In1´ = Fn2Fn1= Fn2. (1+i1)+ Dn1= P –
+                                                             = M .Sn1i1        Fn1
+  n   M´= I + M   I = P . i        “     In´= Fn1. i1 Fn= Fn1. (1+i1)+ M = Dn= P – Fn= 0
+                                                             = M .Sni1= P
+
+
+
+

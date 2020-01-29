@@ -1,0 +1,284 @@
+
+
+
+
+                 784\s\do5(3)93\s\do5(0)7teoria\s\do5(t)t.tex
+                                   mtpfealg
+                                   13/05/28
+ Chapter 1
+Biderkadura zuzenak eta erdizuzenak
+ 1.1 Barruko biderkadura zuzenak
+Dakigunez, H eta N bi edozein talde emanda, beren biderkadura zuzena H×N eraiki
+dezakegu: elementuak (h,n) bikoteak dira eta eragiketa osagaiz osagai egiten
+da. Oso erraza da H×N-ren barruan H eta N-ren kopia bana aurkitzea:
+multzoak H×N-ren azpitaldeak dira eta garbi dago eta betetzen dela, (h,1)↦h eta
+(1,n)↦n aplikazioen bitartez. Bestela esanda, H eta N taldeak H×N-n murgiltzen
+dira.
+Bestalde, laugarren gaiko ariketetan ikusi bezala, KH eta LN bada, orduan
+K×LH×N dugu. Hortik eta H×N-ren azpitalde normalak dira. Gainera, garbi dago
+azpitalde tribiala dela eta dela. Honek guztiak ondorengo definizioa
+iradokitzen du.
+                  [Sorry. Ignored \begin{dfn} ... \end{dfn}]
+Kontzeptuak ez nahasteko, orain artean biderkadura zuzena deitu diogun
+eraikuntzari, hau da, biderkadura cartesiarrari, kanpoko biderkadura zuzena
+esango diogu. Hala ere, segidan ikusiko dugun bezala, biderkadura zuzenaren bi
+aldaerak, kanpokoa eta barrukoa, elkarrekin identifikatu ahal dira eta,
+horregatik, biderkadura zuzenekin lan egiterakoan ez dugu normalean zehaztuko
+zein motatakoa den. Identifikazio honen justifikazioa hurrengo bi teoremek
+ematen digute. Lehenengoan atalaren hasieran egindako oharra terminologia
+berrira egokitzea baino ez dugu egiten.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+Bigarren teoremak alderantzizko bidea egiten du.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Talde teoriaren ohiko problema bat da, G talde bat emanda, talde hori talde
+ezagun batekin identifikatzen saiatzea. Aurreko teoremak helburu hori lortzeko
+modu bat ematen digu: G-ren barruan bi azpitalde normal aurkitzen baditugu, H
+eta N, non G=HN eta H∩N={1} den, orduan G≅H×N dela baieztatu ahal dugu.
+Gertatzen bada H eta N azpitaldeen egitura ezaguna dela, orduan G
+identifikaturik geldituko da.
+Praktikan, biderkadura zuzenaren bi aldaeren identifikazioa jarraiko moduan
+moldatzen da. Alde batetik, G taldea H eta N azpitaldeen barruko biderkadura
+zuzena bada, orduan abusu txiki bat eginez, G=H×N idatziko dugu, egokiagoa den
+G≅H×N-ren ordez. Beste alde batetik, askotan, kanpoko biderkadura zuzenaren
+notazioa sinplifikatuko dugu, elementuen idazkeran parentesiak eta komak
+ezabatuz. Hau da, (h,n) bikotea adierazteko hn idatziko dugu soilik. Honen
+esanahia da, hain zuzen ere, eta azpitaldeak H-rekin eta N-rekin
+identifikatzea. Orduan, kanpoko biderkaduraren eragiketa osagaiz osagai egiten
+dela honela islatzen da notazio berriarekin:
+barruko biderkadura zuzenean bezala (gogoratu azkeneko teoremaren (ii) atala).
+Hala ere, kontuz ibili behar da notazio aldaketa hau egiterakoan, eta kasu
+batzuetan ez da batere gomendagarria. Adibidez, suposatu H×H kanpoko
+biderkadura zuzen bat dugula, talde bat eta bere buruaren artekoa. Orduan, h≠1
+elementu bat hartzen badugu H-n eta (h,h) bikotea adierazteko hh idazten
+badugu, oso handia da elementu hau bezala jartzeko arriskua, eta orduan pentsa
+genezake elementu honek edo bikoteetako bat adierazten duela, biak
+hasierakoaren desberdinak. Honengatik guztiagatik, bi taldek elementu komun bat
+dutenean, hobe da beren kanpoko biderkadura zuzena egiterakoan notazioa ez
+aldatzea eta elementuak bikote moduan idazten jarraitzea.
+Honenbestez bi azpitalderen barruko biderkadura zuzenaren kontzeptua sartu
+dugu, aurretik ezagutzen genuen kanpoko biderkadura zuzenaren (edo biderkadura
+cartesiarraren) kontzeptuaren baliokidea dena. Hala eta guztiz ere, biderkadura
+cartesiarra bi talde baino gehiagorekin eraiki daiteke. Orduan, naturala da
+galdetzea: zein da bi azpitalde baino gehiagoren barruko biderkadura zuzena
+definitzeko modu egokia?
+                  [Sorry. Ignored \begin{dfn} ... \end{dfn}]
+Aurreko definizioko (iii) baldintza beste honen baliokidea da, praktikan
+errazago egiaztatzen dena:
+(iii') , i=2,…,n guztietarako.
+Alde batetik, garbi dago (iii)-k (iii') inplikatzen duela. Bestalde, (iii)
+betetzen ez bada (iii') ere ez da betetzen. Izan ere, (iii) baldintzak huts
+egiten badu, existitzen dira non
+den. Aukeratu j indizerik handiena betetzen dutenen artean. Orduan, goiko
+berdintzan bakanduz, elementu hori azpitaldeetako elementuen biderkadura gisa
+adierazita gelditzen da. Beraz, eta (iii') ez da betetzen.
+Ohartu, beste alde batetik, (iii) baldintza hurrengoaren baliokidea dela baita
+ere:
+(iii'') badugu, izanik i=1,…,n guztietarako, orduan .
+Definizio hau emanda, erraz egiaztatu ahal da 1.1 eta Errorea: ez da
+erreferentziaren iturburua aurkitu teoremetako emaitzak biderkadura zuzen
+orokorragoetara hedatzen direla, faktoreen kopurua finitua den kasura alegia.
+Beraz, kanpoko eta barruko biderkadura zuzenak berriro ere identifikatu ahal
+ditugu, faktoreen edozein kopuru finitutarako.
+Atal hau bukatzeko, frogatzen dugu biderkadura zuzen baten aurkezpen bat
+lortzeko nahikoa dela faktoreen aurkezpenak batera jartzea eta talde
+desberdinetako sortzaileak elkarrekin trukatu behar dutela adieraztea.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Adibidez, talde zikliko finitu bat aurkezpenaren bitartez eman daitekeenez,
+azkeneko teoremaren arabera biderkadura zuzenak honako aurkezpen hau du: .
+ 1.2 Talde abeldar finituen egitura
+Atal honetan talde abeldar finituen egitura aztertzen dugu, talde ziklikoen
+biderkadura gisa jar daitezkeela lortuz. Zeregin honetan oso paper
+garrantzitsua jokatzen dute ordena maximoko elementuek. Dakigunez, Errorea: ez
+da erreferentziaren iturburua aurkitu lemaren arabera, g eta h elementuak
+elkarrekin trukatzen badira eta beren ordenak elkarrekiko lehenak badira,
+orduan o(gh)=o(g)o(h) dugu. Propietate honetan oinarrituz, hurrengo lema eman
+dezakegu.
+                  [Sorry. Ignored \begin{lem} ... \end{lem}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Aurreko leman, taldea abeldarra izateko baldintza ezinbestekoa da: taldean,
+elementuen ordenen maximoa 3 da, baina 2 ordenako elementuak daude.
+                  [Sorry. Ignored \begin{lem} ... \end{lem}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+                  [Sorry. Ignored \begin{fro} ... \end{fro}]
+Ohartu azkeneko teoremaren enuntziatuko zenbakien biderkadura G-ren ordena
+dela. Izan ere, izateagatik,
+dugu.
+Bestalde, inolako baldintzarik ezarri gabe, zenbakiak ez dira bakarrak.
+Adibidez, badugu, orduan beste isomorfismo hauek ere betetzen dira (gogoratu
+dugula (m,n)=1 denean):
+Hala ere, hemen frogapena emango ez badugu ere, lan pixka bat gehiago eginez
+ikus daiteke zenbakiak bakarrak direla baldintza eskatzen denean. Hau da,
+badugu, eta izanik, orduan derrigorrean t=s eta . Beraz, aurreko teoremak talde
+abeldar finituen sailkapena ematen digu: badugu prozedura bat talde hauek
+guztiak errepikapenik gabe zerrendatzeko, talde isomorfoak identifikatuz gero.
+Hain zuzen ere, n∈N behin finkatuta, n ordenako talde abeldar guztiak emateko,
+nahikoa da faktorizazio guztiak aurkitzea non den, eta orduan taldeak dira n
+ordenako talde abeldar guztiak. Adibidez, n=100 bada, mota horretako
+faktorizazioak 100, 50⋅2, 20⋅5 eta 10⋅10 dira eta, beraz, 100 ordenako lau
+talde ez-isomorfo dago:
+Era berean, p lehena bada, bakarrik daude ordenako bi talde abeldar: eta .
+Baina, laugarren gaiko problema batean frogatu genuen bezala, ordenako taldeak
+abeldarrak dira beti. Beraz, ondorengo korolarioa eman dezakegu.
+                  [Sorry. Ignored \begin{kor} ... \end{kor}]
+Antzera, ordenako 3 talde abeldar daude, , eta alegia, eta ordenako 5 talde
+abeldar: , , , eta .
+Talde abeldar finituei buruzko atal hau bukatzeko, esan dezagun Errorea: ez da
+erreferentziaren iturburua aurkitu teoremak “barruko" ikuspegitik ere uler
+daitekeela. Zehazkiago, G talde abeldar finituarentzat isomorfismoa badugu,
+orduan G bere t azpitalde ziklikoren barruko biderkadura zuzena izango da.
+Gainera, azpitalde hauen ordenak izango dira. Azter dezagun, adibidez, (Z/8Z)-
+ren kasua. Badugu |(Z/8Z)|=4 dela, beraz edo izango da. Kontuan hartuz (Z/8Z)-
+ko elementu guztiak bi ordenakoak direla, ondorioztatzen dugu. Beraz, (Z/8Z)
+bere bi azpitalderen barruko biderkadura zuzena da, biak bi ordenakoak izanik.
+Erraz egiaztatzen da, adibidez, dela. Hala ere, deskonposizio hau ez da
+bakarra, ere jar dezakegulako. Adibide honek argi utzi behar digu segidan
+ematen dugun oharra. Egia da G talde abeldar finitu bat talde ziklikoetako
+biderkadura zuzen gisa jar daitekeela eta talde zikliko horien ordenak bakarrak
+direla goiko zatigarritasun propietatea eskatuz gero. Hala ere, bakartasun hori
+faktoreen ordenei baino ez dagokie: faktorizazio hori G-ren barruan egiten
+badugu, taldea bere azpitalde batzuen barruko biderkadura zuzen gisa adieraziz,
+ez da orokorki egia deskonposizio horretako azpitaldeak bakarrak direnik.
+ 1.3 Biderkadura erdizuzenak
+Gai honetako lehenengo atalean barruko biderkadura zuzenaren kontzeptua
+definitu dugu. Gogoratu G taldea H eta N bere azpitaldeen barruko biderkadura
+zuzena izateko, ondorengo baldintzak eskatzen genituela:
+1. HG, NG.
+2. G=HN.
+3. H∩N={1}.
+Propietate hauetan oinarrituz, Errorea: ez da erreferentziaren iturburua
+aurkitu teoreman, G-ko elementuak hn moduan idazten direla frogatzen genuen,
+era bakar batean gainera, eta H-ko elementuak N-koekin trukatzen direla.
+Informazio honetatik G≅H×N isomorfismoa ondorioztatzen genuen eta, beraz, G-ren
+egitura ezaguna izango da H-rena eta N-rena ezagutuz gero. Aipatu teoremaren
+frogapena aztertzen badugu, konturatuko gara G-ko elementuen idazkera bakar
+hori lortzeko nahikoa dela (ii) eta (iii) aplikatzea, eta ez dugula (i)
+baldintzaren beharrik. Beste alde batetik, (i) beharrezkoa zen H-ko elementuak
+N-koekin trukatzen direla ikusteko.
+Barruko biderkadura zuzenaren kasuak bultzatuta, G talde bat eta H eta N bere
+bi azpitalde izanda, pentsatu ahal dugu zein baldintza ezarriz lortuko dugun G-
+ren egitura zehaztea H eta N azpitaldeen funtzioan. “Egitura zehaztea" esaten
+dugunean, bi gauza nahi ditugu: alde batetik, G-ko elementuak deskribatzea
+anbiguotasunik gabe eta, bestetik, elementu horien arteko eragiketa nolakoa den
+jakitea. Goian esan bezala, G=HN eta H∩N={1} baldintzak nahikoak dira G=
+{hn|h∈H, n∈N} dela ziurtatzeko, errepikapenik gabe. Era horretako eta bi
+elementuren biderkadura berriro ere hn moduan idaztea lortzen badugu, orduan
+eragiketa deskribaturik geldituko da. Honi dagokionez, ohartu
+
+(1.1)
+dela. Azkeneko adierazpen honetan dugu. Horrela, ziurtatzen duen baldintzaren
+bat inposatzen badugu, ere izango dugu, eta orduan eta elementuen biderkadura
+nahi genuen moduan adierazirik dago. Baina badago lortzeko oso modu erraza: N
+G-n normala izatea. Laburbilduz, konturatzen gara barruko biderkadura zuzenaren
+definiziotik baldintza bat kendu ahal dugula, H-ren normaltasuna hain zuzen
+ere, eta oraindik ere G taldea guztiz deskribatzeko gai izango garela. Hau
+ikusirik, ondorengo definizioa ematen dugu.
+                  [Sorry. Ignored \begin{dfn} ... \end{dfn}]
+Ohartu, G=H⋉N denean, G-ren ordena H-ren eta N-ren ordenen biderkadura dela:
+                  [Sorry. Ignored\begin{adik} ... \end{adik}]
+Definizio hau eman eta gero, atal honen hasieran esandakoa honela enuntziatu
+ahal da.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+Biderkadura zuzenen kasuan, bi aldaera genituen: barrukoa eta kanpokoa. Kanpoko
+biderkadura zuzenean, multzoa H×N biderkadura cartesiarra zen, eta eragiketa
+osagaiz osagai egiten genuen: . Barruko biderkadura zuzenean biderkadurak
+egiteko formula “berdina" dela esan dezakegu, diferentzia bakarra parantesietan
+eta kometan aurkitzen dugu: . Hau zen, hain zuzen ere, kanpoko eta barruko
+biderkadura zuzenak identifikatu ahal izateko arrazoia. Orain, biderkadura
+erdizuzenak barruko ikuspegitik baino ez ditugu definitu, eta logikoa da
+galdetzea: bi talde H eta N izanda, eman dezakegu talde berri baten eraikuntza,
+H eta N-ren “kanpoko biderkadura erdizuzena", gero barruko biderkadura
+erdizuzenaren baliokidea izango dena? Erantzuna baiezkoa da, eta ideia oso
+erraza da: konturatzen bagara biderkadura zuzenen kasuan bi modalitateetan
+eragiketaren formula “berdina" dela, kanpoko biderkadura erdizuzena
+definitzeko, har dezagun barrukoaren eragiketa ematen digun formula, eta kopia
+dezagun adierazpen hori (h,n) moduko bikoteen arteko biderketa definitzeko.
+Beraz, H eta N-ren kanpoko biderkadura erdizuzena definitzeko, taldearen
+multzoa berriro ere H eta N-ren biderkadura cartesiarra izango da, hau da,
+(h,n) bikoteak, eta biderketa honelakoa litzateke:
+Baina, formula hau ikusita, problema bat agertzen zaigu: H eta N taldeek ez
+badute bata bestarekin zerikusirik, zein da konjugatuaren esanahia? Honek
+zentzua zuen barruko biderkaduraren kasuan, H eta N G-ren barruan daudelako,
+baina ezin diezaiokegu zentzurik eman beste testuinguru honetan. Hala ere,
+honek ez du eragozten kanpoko biderkadura erdizuzenaren eraikuntza, segidan
+ikusten dugun bezala. Horretarako, azter dezagun berriro ere zer gertatzen den
+barruko biderkaduraren kasuan eta ikus dezagun nola ulertu ahal dugun
+konjugazioa “kanpoko" ikuspegi batetik. Ohartu, G=H⋉N barruko biderkadura
+erdizuzena izanda, h∈H bakoitzak G-ren barruko automorfismoa definitzen duela
+eta, N G-n normala izateagatik, N-ra murrizten badugu orduan N-ren automorfismo
+bat lortzen dugula. Murriztutako automorfismoa idazten jarraitzen dugu. Orduan,
+erraz egiaztatzen da
+aplikazioa talde homomorfismoa dela. Gainera, homomorfismo hau erabilita,
+konjugatua beste era honetan adieraz dezakegu:
+Honek ematen digu gure problema askatzeko modua: H eta N bi edozein talderen
+kanpoko biderkadura erdizuzena eraikitzeko, hartu homomorfismo bat eta definitu
+ondorengo eragiketa H eta N-ren biderkadura cartesiarraren gainean:
+
+(1.2)
+Egia esan, ez genuke esan behar hau H-ren eta N-ren kanpoko biderkadura
+erdizuzena denik, bere definizioa aukeratutako Θ homomorfismoaren menpekoa
+delako. Izan ere, homomorfismo desberdinak aukeratzen baditugu, biderketa
+desberdinak lortuko ditugu (beharbada talde isomorfoak ematen dizkigutenak,
+baina edozein kasutan talde desberdinak). Beraz, H-ren eta N-ren kanpoko
+biderkadura erdizuzena eraiki dugula esatea baino hobe da kanpoko biderkadura
+erdizuzen bat egin dugula esatea. Dena den, oraindik ez dugu frogatu (1.2)
+formulak talde bat definitzen duenik. Hauxe da hurrengo teoremaren helburua.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+Teoremaren frogapena egiaztapen hutsa da, beraz ez dugu hemen azalduko.
+                  [Sorry. Ignored \begin{dfn} ... \end{dfn}]
+Lehenago esan bezala, lortzen dugun taldea Θ ekintzaren menpekoa da. Beraz,
+anbiguoa da H-ren eta N-ren kanpoko biderkadura erdizuzenaz hitz egitea eta
+notazioan Θ azpindizea garrantzitsua da. Hala ere, batzuetan, testuinguruagatik
+ez badago zalantzarik Θ ekintza zein den, H⋉N idatziko dugu besterik gabe.
+Ohartu notazio hau barruko biderkadura erdizuzenaren kasuko berdina dela.
+Berehala geldituko da justifikaturik honek zergatik ez duen problemarik
+suposatzen: arrazoia da, biderkadura zuzenekin bezala, kanpoko eta barruko
+biderkadura zuzenak identifikatu ahal direla.
+Eman dugun (1.2) formularen arabera, nabaria da H eta N taldeen kanpoko
+biderkadura zuzena bereziki kanpoko biderkadura erdizuzen bat dela: nahikoa da
+H-tik N-ra homomorfismo tribiala hartzea. Orokorki, kanpoko biderkadura
+erdizuzen baten eragiketa kanpoko biderkadura zuzenaren eragiketaren desberdina
+da baina, hala ere, formula batzuk berdinak dira bi kasuetan. Adibidez, formula
+hauek kanpoko biderkadura erdizuzen guztietan betetzen dira:
+               [Sorry. Ignored \begin{gather} ... \end{gather}]
+Baina, kontuz! , oro har (1,n)(h,1)≠(h,n) dugu, (1,n)(h,1)=(h,[Θ(h)](n)) da
+eta.
+Ondorengo teorema aurreko formulen ondorio berehalakoa da.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+Adibidez, eta azpitaldeak direla (Errorea: ez da erreferentziaren iturburua
+aurkitu) eta (Errorea: ez da erreferentziaren iturburua aurkitu) formulen
+ondorioa da, eta (Errorea: ez da erreferentziaren iturburua aurkitu) erlazioak
+dela frogatzen du.
+Beraz, H eta N bi edozein talderen kanpoko biderkadura erdizuzen bat beti ikus
+daiteke talde horien isomorfoak diren bi azpitalderen barruko biderkadura
+erdizuzen gisa. Biderkadura zuzenekin gertatzen den bezala, alderantzizkoa ere
+betetzen da. Egia esan, 1.3 teoremaren aurretik esandakoa nahikoa da
+alderantzizko hori ziurtatzeko. Eman dezagun enuntziatua.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+Azkeneko bi teoremak ikusita, biderkadura zuzenekin egin genuen bezala, barruko
+eta kanpoko biderkadura erdizuzenak identifikatu ahal ditugu, eta biderkadura
+erdizuzenez hitz egingo dugu besterik gabe. Horren ondorioz, kanpoko
+biderkadura erdizuzenetan, elementuen idazkera sinplifikatuko dugu, parentesiak
+eta komak ezabatuz: (h,n) bikotea hn idatziko dugu. Hau egiterakoan eta
+azpitaldeak H-rekin eta N-rekin identifikatzen ari gara, hurrenez hurren.
+Orduan, H eta N taldearen azpitalde bezala ikusten ditugu eta, beraz,
+konjugatuak zentzua hartzen du. Gainera, notazio berri honekin, kanpoko
+biderkadura erdizuzen horren eragiketak barrukoaren antzera funtzionatzen du,
+hau da, eta bi elementuren biderkadura (1.1) formulak ematen du. Formula horren
+arabera, biderkadura hori kalkulatzeko, H eta N taldeen eragiketez gain, N-ko
+elementuak H-koekin nola konjugatu jakin behar dugu. Informazio hau Θ ekintzak
+ematen digu. Izan ere,
+dugu. Bestela esanda, n h-rekin konjugatzeko, h-ri dagokion automorfismoa n-ri
+aplikatu behar diogu. Gehienetan, honela egingo dugu lan biderkadura
+erdizuzenetan.
+Biderkadura zuzenarekin egindako argudioa errepikatuz, hurrengo teorema frogatu
+ahal da, biderkadura erdizuzen baten aurkezpen bat ematen diguna: H⋉N-ren
+aurkezpena lortzeko, H-ren eta N-ren sortzaileak jarri behar ditugu eta, H-ren
+eta N-ren aurkezpenen erlazioez gain, N-ren sortzaileak H-ren sortzaileekin
+nola konjugatzen diren esan behar dugu.
+                  [Sorry. Ignored \begin{teo} ... \end{teo}]
+Bukatzeko, eman dezagun kanpoko biderkadura erdizuzen baten adibidea, eta
+horrela ikusiko dugu eraikuntza honen erabilgarritasuna talde berriak lortzeko.
+                  [Sorry. Ignored \begin{adi} ... \end{adi}]

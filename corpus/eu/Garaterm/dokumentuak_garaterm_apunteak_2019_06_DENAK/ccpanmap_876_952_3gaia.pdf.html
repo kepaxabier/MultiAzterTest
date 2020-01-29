@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<HTML xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<HEAD>
+<TITLE>3.GAIA.doc</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<META name="generator" content="pdftohtml 0.36"/>
+<META name="author" content="maite"/>
+<META name="date" content="2003-06-10T10:45:47+00:00"/>
+</HEAD>
+<BODY bgcolor="#A0A0A0" vlink="blue" link="blue">
+<!-- Page 1 -->
+<a name="1"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft10{font-size:12px;font-family:Times;color:#000000;}
+	.ft11{font-size:19px;font-family:Times;color:#000000;}
+	.ft12{font-size:16px;font-family:Times;color:#000000;}
+	.ft13{font-size:16px;font-family:Helvetica;color:#000000;}
+-->
+</STYLE>
+<DIV id="page1-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:443px;white-space:nowrap" class="ft10">1</P>
+<P style="position:absolute;top:110px;left:127px;white-space:nowrap" class="ft11"><b>3.GAIA. EKUAZIO LINEALETAKO SISTEMAK</b></P>
+<P style="position:absolute;top:145px;left:180px;white-space:nowrap" class="ft12"><b>1.&#160;&#160;Definizioak</b></P>
+<P style="position:absolute;top:176px;left:180px;white-space:nowrap" class="ft12"><b>2.&#160;&#160;Sistema baliokideak</b></P>
+<P style="position:absolute;top:207px;left:180px;white-space:nowrap" class="ft12"><b>3.&#160;&#160;Ekuazio linealetako sistema baten sailkapena.&#160;Rouché-Frobenius-en</b></P>
+<P style="position:absolute;top:238px;left:207px;white-space:nowrap" class="ft12"><b>teorema</b></P>
+<P style="position:absolute;top:270px;left:180px;white-space:nowrap" class="ft12"><b>4.&#160;&#160;Ekuazio linealetako sistemen ebazpena</b></P>
+<P style="position:absolute;top:300px;left:207px;white-space:nowrap" class="ft12"><b>4.1&#160;Ebazpen&#160;&#160;matriziala</b></P>
+<P style="position:absolute;top:332px;left:207px;white-space:nowrap" class="ft12"><b>4.2&#160;Cramer-en erregela</b></P>
+<P style="position:absolute;top:362px;left:207px;white-space:nowrap" class="ft12"><b>4.3&#160;Gauss-en ebazpen-metodoa</b></P>
+<P style="position:absolute;top:393px;left:207px;white-space:nowrap" class="ft12"><b>4.4&#160;Gauss-Jordan-en &#160;metodoa</b></P>
+<P style="position:absolute;top:425px;left:207px;white-space:nowrap" class="ft12"><b>4.5&#160;Biribiltze erroreak.&#160;Pibotaia teknikak</b></P>
+<P style="position:absolute;top:455px;left:207px;white-space:nowrap" class="ft12"><b>4.6&#160;Ebazpen trinko metodoak</b></P>
+</DIV>
+<!-- Page 2 -->
+<a name="2"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft24{font-size:16px;font-family:Times;color:#000000;}
+	.ft25{font-size:10px;font-family:Times;color:#000000;}
+	.ft26{font-size:16px;font-family:Symbol;color:#000000;}
+	.ft27{font-size:8px;font-family:Times;color:#000000;}
+	.ft28{font-size:16px;font-family:Times;color:#000000;}
+	.ft29{font-size:16px;line-height:24px;font-family:Symbol;color:#000000;}
+-->
+</STYLE>
+<DIV id="page2-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:443px;white-space:nowrap" class="ft20">2</P>
+<P style="position:absolute;top:140px;left:217px;white-space:nowrap" class="ft21"><b>3.GAIA. EKUAZIO LINEALETAKO SISTEMAK</b></P>
+<P style="position:absolute;top:207px;left:180px;white-space:nowrap" class="ft24">Ikasgai honetan, ikusiriko matrize eta determinante kontzeptuez baliaturik,</P>
+<P style="position:absolute;top:238px;left:127px;white-space:nowrap" class="ft24">ekuazio linealetako sistemen ebazpidea aztertuko dugu. Jakina da, fisika, kimika,</P>
+<P style="position:absolute;top:270px;left:127px;white-space:nowrap" class="ft24">ingeniaritza eta beste arlo askotako problema ugari ekuazio linealetako sistemen bidez</P>
+<P style="position:absolute;top:300px;left:127px;white-space:nowrap" class="ft24">ebazten direla. Ikus dezagun adibide bat:</P>
+<P style="position:absolute;top:332px;left:180px;white-space:nowrap" class="ft24">Altzari-enpresa batean aulkiak eta mahaiak egiten dira. Horretarako bi zur-mota</P>
+<P style="position:absolute;top:362px;left:127px;white-space:nowrap" class="ft24">erabiltzen dira: A eta B. Aulki bat egiteko zur-mota bakoitzeko unitate bat behar da.</P>
+<P style="position:absolute;top:393px;left:127px;white-space:nowrap" class="ft24">Bestalde, &#160;mahai batek A motako zur unitate bat eta B motako bi zur unitate behar ditu.</P>
+<P style="position:absolute;top:425px;left:127px;white-space:nowrap" class="ft24">Astero A motako 14 zur unitate eta B motako 16 zur unitate badaude, kalkulatu astero</P>
+<P style="position:absolute;top:455px;left:127px;white-space:nowrap" class="ft24">egin daitezkeen aulkien eta mahaien kopuruak.</P>
+<P style="position:absolute;top:487px;left:180px;white-space:nowrap" class="ft24">x1&#160;= astero egiten den aulki-kopurua eta x2&#160;= astero egiten den mahai-kopurua</P>
+<P style="position:absolute;top:517px;left:127px;white-space:nowrap" class="ft24">kontsideratzen baditugu, problema ondoko bi ezezaguneko eta bi ekuazio linealetako</P>
+<P style="position:absolute;top:549px;left:127px;white-space:nowrap" class="ft24">sistema bezala plantea dezakegu:</P>
+<P style="position:absolute;top:609px;left:392px;white-space:nowrap" class="ft26"></P>
+<P style="position:absolute;top:593px;left:392px;white-space:nowrap" class="ft26"></P>
+<P style="position:absolute;top:579px;left:392px;white-space:nowrap" class="ft26"></P>
+<P style="position:absolute;top:605px;left:468px;white-space:nowrap" class="ft26">=</P>
+<P style="position:absolute;top:605px;left:422px;white-space:nowrap" class="ft26">+</P>
+<P style="position:absolute;top:578px;left:464px;white-space:nowrap" class="ft26">=</P>
+<P style="position:absolute;top:578px;left:426px;white-space:nowrap" class="ft26">+</P>
+<P style="position:absolute;top:611px;left:482px;white-space:nowrap" class="ft24">16</P>
+<P style="position:absolute;top:611px;left:446px;white-space:nowrap" class="ft24">x</P>
+<P style="position:absolute;top:611px;left:435px;white-space:nowrap" class="ft24">2</P>
+<P style="position:absolute;top:611px;left:402px;white-space:nowrap" class="ft24">x</P>
+<P style="position:absolute;top:584px;left:476px;white-space:nowrap" class="ft24">14</P>
+<P style="position:absolute;top:584px;left:440px;white-space:nowrap" class="ft24">x</P>
+<P style="position:absolute;top:584px;left:406px;white-space:nowrap" class="ft24">x</P>
+<P style="position:absolute;top:620px;left:456px;white-space:nowrap" class="ft27">2</P>
+<P style="position:absolute;top:620px;left:412px;white-space:nowrap" class="ft27">1</P>
+<P style="position:absolute;top:593px;left:451px;white-space:nowrap" class="ft27">2</P>
+<P style="position:absolute;top:593px;left:416px;white-space:nowrap" class="ft27">1</P>
+<P style="position:absolute;top:647px;left:180px;white-space:nowrap" class="ft24">Ekuazio linealetako sistemetan agertzen diren elementuak edozein K gorputz</P>
+<P style="position:absolute;top:678px;left:127px;white-space:nowrap" class="ft24">trukakorren elementuak izan daitezke. Baina guk kontsideratuko ditugun elementuak</P>
+<P style="position:absolute;top:710px;left:127px;white-space:nowrap" class="ft24">zenbaki errealak izango dira.</P>
+<P style="position:absolute;top:771px;left:127px;white-space:nowrap" class="ft22"><b>1.&#160;&#160;DEFINIZIOAK</b></P>
+<P style="position:absolute;top:833px;left:127px;white-space:nowrap" class="ft24">Definizioa. Ondoko adierazpenari n ezezaguneko&#160;<i>ekuazio lineal</i>&#160;esaten zaio:</P>
+<P style="position:absolute;top:865px;left:343px;white-space:nowrap" class="ft24">a1x1&#160;+ a2x2&#160;+ ....... +&#160;anxn&#160;= b</P>
+<P style="position:absolute;top:895px;left:127px;white-space:nowrap" class="ft24">non&#160;aij&#160;koefizienteak, i = 1,...,n &#160;eta &#160;b zenbaki errealak diren.</P>
+<P style="position:absolute;top:927px;left:127px;white-space:nowrap" class="ft24">Definizioa. Ondoko erako adierazpenari n ezezaguneko m ekuazio linealetako sistema</P>
+<P style="position:absolute;top:957px;left:127px;white-space:nowrap" class="ft24">esaten zaio:</P>
+<P style="position:absolute;top:1064px;left:308px;white-space:nowrap" class="ft26"></P>
+<P style="position:absolute;top:1047px;left:308px;white-space:nowrap" class="ft29"><br/></P>
+<P style="position:absolute;top:1015px;left:308px;white-space:nowrap" class="ft26"></P>
+<P style="position:absolute;top:1029px;left:308px;white-space:nowrap" class="ft26"></P>
+<P style="position:absolute;top:987px;left:308px;white-space:nowrap" class="ft26"></P>
+<P style="position:absolute;top:1067px;left:548px;white-space:nowrap" class="ft26">=</P>
+<P style="position:absolute;top:1067px;left:485px;white-space:nowrap" class="ft26">+</P>
+<P style="position:absolute;top:1067px;left:424px;white-space:nowrap" class="ft26">+</P>
+<P style="position:absolute;top:1067px;left:362px;white-space:nowrap" class="ft26">+</P>
+<P style="position:absolute;top:1013px;left:545px;white-space:nowrap" class="ft26">=</P>
+<P style="position:absolute;top:1013px;left:484px;white-space:nowrap" class="ft26">+</P>
+<P style="position:absolute;top:1013px;left:423px;white-space:nowrap" class="ft26">+</P>
+<P style="position:absolute;top:1013px;left:366px;white-space:nowrap" class="ft26">+</P>
+<P style="position:absolute;top:986px;left:543px;white-space:nowrap" class="ft26">=</P>
+<P style="position:absolute;top:986px;left:485px;white-space:nowrap" class="ft26">+</P>
+<P style="position:absolute;top:986px;left:424px;white-space:nowrap" class="ft26">+</P>
+<P style="position:absolute;top:986px;left:367px;white-space:nowrap" class="ft26">+</P>
+<P style="position:absolute;top:1083px;left:573px;white-space:nowrap" class="ft27">m</P>
+<P style="position:absolute;top:1083px;left:534px;white-space:nowrap" class="ft27">n</P>
+<P style="position:absolute;top:1083px;left:509px;white-space:nowrap" class="ft27">mn</P>
+<P style="position:absolute;top:1083px;left:413px;white-space:nowrap" class="ft27">2</P>
+<P style="position:absolute;top:1083px;left:395px;white-space:nowrap" class="ft27">2</P>
+<P style="position:absolute;top:1083px;left:386px;white-space:nowrap" class="ft27">m</P>
+<P style="position:absolute;top:1083px;left:352px;white-space:nowrap" class="ft27">1</P>
+<P style="position:absolute;top:1083px;left:335px;white-space:nowrap" class="ft27">1</P>
+<P style="position:absolute;top:1083px;left:327px;white-space:nowrap" class="ft27">m</P>
+<P style="position:absolute;top:1029px;left:570px;white-space:nowrap" class="ft27">2</P>
+<P style="position:absolute;top:1029px;left:532px;white-space:nowrap" class="ft27">n</P>
+<P style="position:absolute;top:1029px;left:513px;white-space:nowrap" class="ft27">n</P>
+<P style="position:absolute;top:1029px;left:507px;white-space:nowrap" class="ft27">2</P>
+<P style="position:absolute;top:1029px;left:413px;white-space:nowrap" class="ft27">2</P>
+<P style="position:absolute;top:1029px;left:389px;white-space:nowrap" class="ft27">22</P>
+<P style="position:absolute;top:1029px;left:354px;white-space:nowrap" class="ft27">1</P>
+<P style="position:absolute;top:1029px;left:334px;white-space:nowrap" class="ft27">21</P>
+<P style="position:absolute;top:1002px;left:568px;white-space:nowrap" class="ft27">1</P>
+<P style="position:absolute;top:1002px;left:531px;white-space:nowrap" class="ft27">n</P>
+<P style="position:absolute;top:1002px;left:512px;white-space:nowrap" class="ft27">n</P>
+<P style="position:absolute;top:1002px;left:507px;white-space:nowrap" class="ft27">1</P>
+<P style="position:absolute;top:1002px;left:413px;white-space:nowrap" class="ft27">2</P>
+<P style="position:absolute;top:1002px;left:390px;white-space:nowrap" class="ft27">12</P>
+<P style="position:absolute;top:1002px;left:357px;white-space:nowrap" class="ft27">1</P>
+<P style="position:absolute;top:1002px;left:335px;white-space:nowrap" class="ft27">11</P>
+<P style="position:absolute;top:1073px;left:563px;white-space:nowrap" class="ft24">b</P>
+<P style="position:absolute;top:1073px;left:523px;white-space:nowrap" class="ft24">x</P>
+<P style="position:absolute;top:1073px;left:498px;white-space:nowrap" class="ft24">a</P>
+<P style="position:absolute;top:1073px;left:437px;white-space:nowrap" class="ft24">..........</P>
+<P style="position:absolute;top:1073px;left:402px;white-space:nowrap" class="ft24">x</P>
+<P style="position:absolute;top:1073px;left:376px;white-space:nowrap" class="ft24">a</P>
+<P style="position:absolute;top:1073px;left:342px;white-space:nowrap" class="ft24">x</P>
+<P style="position:absolute;top:1073px;left:317px;white-space:nowrap" class="ft24">a</P>
+<P style="position:absolute;top:1046px;left:554px;white-space:nowrap" class="ft24">....</P>
+<P style="position:absolute;top:1046px;left:509px;white-space:nowrap" class="ft24">..........</P>
+<P style="position:absolute;top:1046px;left:464px;white-space:nowrap" class="ft24">..........</P>
+<P style="position:absolute;top:1046px;left:419px;white-space:nowrap" class="ft24">..........</P>
+<P style="position:absolute;top:1046px;left:375px;white-space:nowrap" class="ft24">..........</P>
+<P style="position:absolute;top:1046px;left:330px;white-space:nowrap" class="ft24">..........</P>
+<P style="position:absolute;top:1019px;left:559px;white-space:nowrap" class="ft24">b</P>
+<P style="position:absolute;top:1019px;left:521px;white-space:nowrap" class="ft24">x</P>
+<P style="position:absolute;top:1019px;left:497px;white-space:nowrap" class="ft24">a</P>
+<P style="position:absolute;top:1019px;left:437px;white-space:nowrap" class="ft24">..........</P>
+<P style="position:absolute;top:1019px;left:402px;white-space:nowrap" class="ft24">x</P>
+<P style="position:absolute;top:1019px;left:379px;white-space:nowrap" class="ft24">a</P>
+<P style="position:absolute;top:1019px;left:345px;white-space:nowrap" class="ft24">x</P>
+<P style="position:absolute;top:1019px;left:323px;white-space:nowrap" class="ft24">a</P>
+<P style="position:absolute;top:992px;left:558px;white-space:nowrap" class="ft24">b</P>
+<P style="position:absolute;top:992px;left:520px;white-space:nowrap" class="ft24">x</P>
+<P style="position:absolute;top:992px;left:498px;white-space:nowrap" class="ft24">a</P>
+<P style="position:absolute;top:992px;left:437px;white-space:nowrap" class="ft24">..........</P>
+<P style="position:absolute;top:992px;left:402px;white-space:nowrap" class="ft24">x</P>
+<P style="position:absolute;top:992px;left:380px;white-space:nowrap" class="ft24">a</P>
+<P style="position:absolute;top:992px;left:347px;white-space:nowrap" class="ft24">x</P>
+<P style="position:absolute;top:992px;left:326px;white-space:nowrap" class="ft24">a</P>
+</DIV>
+<!-- Page 3 -->
+<a name="3"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft310{font-size:16px;font-family:Helvetica;color:#000000;}
+	.ft311{font-size:16px;line-height:32px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page3-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:443px;white-space:nowrap" class="ft30">3</P>
+<P style="position:absolute;top:109px;left:180px;white-space:nowrap" class="ft34">aij&#160;(i = 1,...,m; j = 1,...,n) sistemaren koefizienteak dira; bi&#160;(i = 1,...,m) &#160;gai askeak</P>
+<P style="position:absolute;top:140px;left:127px;white-space:nowrap" class="ft34">eta&#160;xi&#160; ( i = 1,...,n) ezezagunak.</P>
+<P style="position:absolute;top:171px;left:180px;white-space:nowrap" class="ft34">Aurreko sistema&#160;matrizialki modu honetan adieraz dezakegu:</P>
+<P style="position:absolute;top:274px;left:593px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:247px;left:593px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:229px;left:593px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:212px;left:593px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:285px;left:593px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:201px;left:593px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:274px;left:560px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:247px;left:560px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:229px;left:560px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:212px;left:560px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:285px;left:560px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:201px;left:560px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:240px;left:547px;white-space:nowrap" class="ft36">=</P>
+<P style="position:absolute;top:274px;left:536px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:247px;left:536px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:229px;left:536px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:212px;left:536px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:285px;left:536px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:201px;left:536px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:274px;left:505px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:247px;left:505px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:229px;left:505px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:212px;left:505px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:285px;left:505px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:201px;left:505px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:274px;left:495px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:247px;left:495px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:229px;left:495px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:212px;left:495px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:285px;left:495px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:201px;left:495px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:274px;left:344px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:247px;left:344px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:229px;left:344px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:212px;left:344px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:285px;left:344px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:201px;left:344px;white-space:nowrap" class="ft36"></P>
+<P style="position:absolute;top:296px;left:581px;white-space:nowrap" class="ft37">m</P>
+<P style="position:absolute;top:242px;left:582px;white-space:nowrap" class="ft37">2</P>
+<P style="position:absolute;top:215px;left:582px;white-space:nowrap" class="ft37">1</P>
+<P style="position:absolute;top:296px;left:525px;white-space:nowrap" class="ft37">n</P>
+<P style="position:absolute;top:242px;left:525px;white-space:nowrap" class="ft37">2</P>
+<P style="position:absolute;top:215px;left:525px;white-space:nowrap" class="ft37">1</P>
+<P style="position:absolute;top:296px;left:477px;white-space:nowrap" class="ft37">mn</P>
+<P style="position:absolute;top:296px;left:414px;white-space:nowrap" class="ft37">2</P>
+<P style="position:absolute;top:296px;left:405px;white-space:nowrap" class="ft37">m</P>
+<P style="position:absolute;top:296px;left:371px;white-space:nowrap" class="ft37">1</P>
+<P style="position:absolute;top:296px;left:363px;white-space:nowrap" class="ft37">m</P>
+<P style="position:absolute;top:242px;left:485px;white-space:nowrap" class="ft37">n</P>
+<P style="position:absolute;top:242px;left:478px;white-space:nowrap" class="ft37">2</P>
+<P style="position:absolute;top:242px;left:407px;white-space:nowrap" class="ft37">22</P>
+<P style="position:absolute;top:242px;left:365px;white-space:nowrap" class="ft37">21</P>
+<P style="position:absolute;top:215px;left:484px;white-space:nowrap" class="ft37">n</P>
+<P style="position:absolute;top:215px;left:478px;white-space:nowrap" class="ft37">1</P>
+<P style="position:absolute;top:215px;left:406px;white-space:nowrap" class="ft37">12</P>
+<P style="position:absolute;top:215px;left:363px;white-space:nowrap" class="ft37">11</P>
+<P style="position:absolute;top:287px;left:569px;white-space:nowrap" class="ft34">b</P>
+<P style="position:absolute;top:260px;left:576px;white-space:nowrap" class="ft34">..</P>
+<P style="position:absolute;top:233px;left:572px;white-space:nowrap" class="ft34">b</P>
+<P style="position:absolute;top:206px;left:573px;white-space:nowrap" class="ft34">b</P>
+<P style="position:absolute;top:287px;left:514px;white-space:nowrap" class="ft34">x</P>
+<P style="position:absolute;top:260px;left:519px;white-space:nowrap" class="ft34">..</P>
+<P style="position:absolute;top:233px;left:514px;white-space:nowrap" class="ft34">x</P>
+<P style="position:absolute;top:206px;left:515px;white-space:nowrap" class="ft34">x</P>
+<P style="position:absolute;top:246px;left:502px;white-space:nowrap" class="ft34">.</P>
+<P style="position:absolute;top:287px;left:467px;white-space:nowrap" class="ft34">a</P>
+<P style="position:absolute;top:287px;left:438px;white-space:nowrap" class="ft34">...</P>
+<P style="position:absolute;top:287px;left:395px;white-space:nowrap" class="ft34">a</P>
+<P style="position:absolute;top:287px;left:353px;white-space:nowrap" class="ft34">a</P>
+<P style="position:absolute;top:260px;left:474px;white-space:nowrap" class="ft34">...</P>
+<P style="position:absolute;top:260px;left:438px;white-space:nowrap" class="ft34">...</P>
+<P style="position:absolute;top:260px;left:402px;white-space:nowrap" class="ft34">...</P>
+<P style="position:absolute;top:260px;left:359px;white-space:nowrap" class="ft34">...</P>
+<P style="position:absolute;top:233px;left:468px;white-space:nowrap" class="ft34">a</P>
+<P style="position:absolute;top:233px;left:438px;white-space:nowrap" class="ft34">...</P>
+<P style="position:absolute;top:233px;left:397px;white-space:nowrap" class="ft34">a</P>
+<P style="position:absolute;top:233px;left:354px;white-space:nowrap" class="ft34">a</P>
+<P style="position:absolute;top:206px;left:469px;white-space:nowrap" class="ft34">a</P>
+<P style="position:absolute;top:206px;left:438px;white-space:nowrap" class="ft34">...</P>
+<P style="position:absolute;top:206px;left:397px;white-space:nowrap" class="ft34">a</P>
+<P style="position:absolute;top:206px;left:354px;white-space:nowrap" class="ft34">a</P>
+<P style="position:absolute;top:324px;left:180px;white-space:nowrap" class="ft34">Hau da,&#160;&#160;A.X = B, non A sistemaren koefizienteen matrizea eta B gai askeen</P>
+<P style="position:absolute;top:354px;left:127px;white-space:nowrap" class="ft34">zutabe-matrizea diren.</P>
+<P style="position:absolute;top:386px;left:127px;white-space:nowrap" class="ft34">Definizioa.&#160;&#160;&#160;&#160;&#160;c1,&#160;c2, ...,&#160;&#160;cn&#160;</P>
+<P style="position:absolute;top:380px;left:324px;white-space:nowrap" class="ft36">∈&#160;&#160;<b>K</b>&#160;eskalarrek ekuazio linealetako sistemaren&#160;&#160;<i>soluzio</i>&#160;bat</P>
+<P style="position:absolute;top:417px;left:127px;white-space:nowrap" class="ft34">eratzen dute, baldin eta&#160;x1&#160;= c1,&#160;&#160;x2&#160;= c2&#160;, ...,&#160;&#160;xn&#160;=&#160;&#160;cn&#160;kontsideratuz, sistemaren&#160;m</P>
+<P style="position:absolute;top:447px;left:127px;white-space:nowrap" class="ft34">ekuazioak betetzen badira.</P>
+<P style="position:absolute;top:479px;left:127px;white-space:nowrap" class="ft34">Definizioa. Ekuazio linealetako sistemaren soluzio guztiak lortzea, sistema&#160;<i>ebaztea</i>&#160;da.</P>
+<P style="position:absolute;top:509px;left:127px;white-space:nowrap" class="ft34">Definizioa. Bi ekuazio linealetako sistema, soluzio berberak dituztenean,&#160;&#160;<i>baliokideak</i></P>
+<P style="position:absolute;top:541px;left:127px;white-space:nowrap" class="ft34">direla esango dugu.</P>
+<P style="position:absolute;top:572px;left:127px;white-space:nowrap" class="ft34">Definizioa. Ekuazio linealetako sistema baten gai aske guztiak nuluak direnean, B = (0),</P>
+<P style="position:absolute;top:603px;left:127px;white-space:nowrap" class="ft34">sistema&#160;<i>homogeneoa&#160;</i>dela esaten da.</P>
+<P style="position:absolute;top:634px;left:180px;white-space:nowrap" class="ft34">Ekuazio linealetako sistemek soluziorik dutenaren arabera ondoko sailkapena</P>
+<P style="position:absolute;top:665px;left:127px;white-space:nowrap" class="ft34">egin dezakegu:</P>
+<P style="position:absolute;top:691px;left:127px;white-space:nowrap" class="ft36">•&#160;&#160;<i>Sistema Bateragarria</i>. Sistemak gutxienez soluzio bat du. Eta, honen barruan:</P>
+<P style="position:absolute;top:724px;left:154px;white-space:nowrap" class="ft311">•&#160;&#160;<i>Sistema Bateragarri Determinatua</i>. Soluzio bakarra duenean.<br/>•&#160;&#160;<i>Sistema Bateragarri&#160;Indeterminatua</i>. Soluzio bat baino gehiago duenean.</P>
+<P style="position:absolute;top:788px;left:127px;white-space:nowrap" class="ft36">•&#160;&#160;<i>Sistema Bateraezina</i>. Sistemak ez du soluziorik.</P>
+<P style="position:absolute;top:825px;left:154px;white-space:nowrap" class="ft34">Sistema homogeneoek beti dute soluzio nulua, beraz sistema hauek beti dira</P>
+<P style="position:absolute;top:856px;left:127px;white-space:nowrap" class="ft34">bateragarriak.</P>
+<P style="position:absolute;top:919px;left:127px;white-space:nowrap" class="ft32"><b>2. &#160;SISTEMA BALIOKIDEAK</b></P>
+<P style="position:absolute;top:981px;left:180px;white-space:nowrap" class="ft34">Sistema baten ekuazioetan hasierako sistema&#160;&#160;sistema baliokide (soluzio</P>
+<P style="position:absolute;top:1011px;left:127px;white-space:nowrap" class="ft34">berberak) batean transformatzen duten eragiketak egin daitezke. Transformazio hauei</P>
+<P style="position:absolute;top:1043px;left:127px;white-space:nowrap" class="ft38"><i>oinarrizko eragiketak&#160;</i>&#160;esaten zaie eta ondoko hauek dira:</P>
+<P style="position:absolute;top:1074px;left:180px;white-space:nowrap" class="ft34">a)&#160;&#160;Ekuazio bat zenbaki erreal ez-nulu batez biderkatu.</P>
+<P style="position:absolute;top:1104px;left:180px;white-space:nowrap" class="ft34">b)&#160;&#160;Bi ekuazio lekuz elkar aldatu.</P>
+<P style="position:absolute;top:1136px;left:180px;white-space:nowrap" class="ft34">c)&#160;&#160;Ekuazio bati beste ekuazio baten multiplo bat gehitu edo kendu.</P>
+</DIV>
+<!-- Page 4 -->
+<a name="4"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page4-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:443px;white-space:nowrap" class="ft40">4</P>
+<P style="position:absolute;top:109px;left:127px;white-space:nowrap" class="ft42"><b>3.&#160;&#160;EKUAZIO LINEALETAKO SISTEMA BATEN SAILKAPENA.</b></P>
+<P style="position:absolute;top:140px;left:154px;white-space:nowrap" class="ft42"><b>ROUCHÉ-FROBENIUS-EN TEOREMA</b></P>
+<P style="position:absolute;top:202px;left:180px;white-space:nowrap" class="ft44">Izan bedi S ondoko ekuazio linealetako sistema:</P>
+<P style="position:absolute;top:308px;left:630px;white-space:nowrap" class="ft44">B</P>
+<P style="position:absolute;top:308px;left:585px;white-space:nowrap" class="ft44">AX</P>
+<P style="position:absolute;top:348px;left:527px;white-space:nowrap" class="ft44">b</P>
+<P style="position:absolute;top:321px;left:533px;white-space:nowrap" class="ft44">..</P>
+<P style="position:absolute;top:294px;left:529px;white-space:nowrap" class="ft44">b</P>
+<P style="position:absolute;top:267px;left:530px;white-space:nowrap" class="ft44">b</P>
+<P style="position:absolute;top:348px;left:471px;white-space:nowrap" class="ft44">x</P>
+<P style="position:absolute;top:321px;left:476px;white-space:nowrap" class="ft44">..</P>
+<P style="position:absolute;top:294px;left:471px;white-space:nowrap" class="ft44">x</P>
+<P style="position:absolute;top:267px;left:473px;white-space:nowrap" class="ft44">x</P>
+<P style="position:absolute;top:308px;left:459px;white-space:nowrap" class="ft44">.</P>
+<P style="position:absolute;top:348px;left:424px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:348px;left:395px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:348px;left:352px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:348px;left:311px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:321px;left:431px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:321px;left:395px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:321px;left:359px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:321px;left:316px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:294px;left:425px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:294px;left:395px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:294px;left:354px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:294px;left:312px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:267px;left:426px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:267px;left:395px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:267px;left:354px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:267px;left:312px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:358px;left:538px;white-space:nowrap" class="ft47">m</P>
+<P style="position:absolute;top:304px;left:539px;white-space:nowrap" class="ft47">2</P>
+<P style="position:absolute;top:277px;left:539px;white-space:nowrap" class="ft47">1</P>
+<P style="position:absolute;top:358px;left:483px;white-space:nowrap" class="ft47">n</P>
+<P style="position:absolute;top:304px;left:483px;white-space:nowrap" class="ft47">2</P>
+<P style="position:absolute;top:277px;left:483px;white-space:nowrap" class="ft47">1</P>
+<P style="position:absolute;top:358px;left:434px;white-space:nowrap" class="ft47">mn</P>
+<P style="position:absolute;top:358px;left:371px;white-space:nowrap" class="ft47">2</P>
+<P style="position:absolute;top:358px;left:362px;white-space:nowrap" class="ft47">m</P>
+<P style="position:absolute;top:358px;left:329px;white-space:nowrap" class="ft47">1</P>
+<P style="position:absolute;top:358px;left:321px;white-space:nowrap" class="ft47">m</P>
+<P style="position:absolute;top:304px;left:442px;white-space:nowrap" class="ft47">n</P>
+<P style="position:absolute;top:304px;left:435px;white-space:nowrap" class="ft47">2</P>
+<P style="position:absolute;top:304px;left:365px;white-space:nowrap" class="ft47">22</P>
+<P style="position:absolute;top:304px;left:322px;white-space:nowrap" class="ft47">21</P>
+<P style="position:absolute;top:277px;left:441px;white-space:nowrap" class="ft47">n</P>
+<P style="position:absolute;top:277px;left:435px;white-space:nowrap" class="ft47">1</P>
+<P style="position:absolute;top:277px;left:363px;white-space:nowrap" class="ft47">12</P>
+<P style="position:absolute;top:277px;left:321px;white-space:nowrap" class="ft47">11</P>
+<P style="position:absolute;top:302px;left:615px;white-space:nowrap" class="ft46">=</P>
+<P style="position:absolute;top:302px;left:561px;white-space:nowrap" class="ft46">⇔</P>
+<P style="position:absolute;top:336px;left:550px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:309px;left:550px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:291px;left:550px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:274px;left:550px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:347px;left:550px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:263px;left:550px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:336px;left:518px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:309px;left:518px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:291px;left:518px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:274px;left:518px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:347px;left:518px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:263px;left:518px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:302px;left:504px;white-space:nowrap" class="ft46">=</P>
+<P style="position:absolute;top:336px;left:492px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:309px;left:492px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:291px;left:492px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:274px;left:492px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:347px;left:492px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:263px;left:492px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:336px;left:462px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:309px;left:462px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:291px;left:462px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:274px;left:462px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:347px;left:462px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:263px;left:462px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:336px;left:452px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:309px;left:452px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:291px;left:452px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:274px;left:452px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:347px;left:452px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:263px;left:452px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:336px;left:302px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:309px;left:302px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:291px;left:302px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:274px;left:302px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:347px;left:302px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:263px;left:302px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:461px;left:127px;white-space:nowrap" class="ft44">[A,B] =&#160;</P>
+<P style="position:absolute;top:489px;left:390px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:462px;left:390px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:444px;left:390px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:427px;left:390px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:500px;left:390px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:416px;left:390px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:489px;left:201px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:462px;left:201px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:444px;left:201px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:427px;left:201px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:500px;left:201px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:416px;left:201px;white-space:nowrap" class="ft46"></P>
+<P style="position:absolute;top:511px;left:378px;white-space:nowrap" class="ft47">m</P>
+<P style="position:absolute;top:511px;left:334px;white-space:nowrap" class="ft47">mn</P>
+<P style="position:absolute;top:511px;left:271px;white-space:nowrap" class="ft47">2</P>
+<P style="position:absolute;top:511px;left:262px;white-space:nowrap" class="ft47">m</P>
+<P style="position:absolute;top:511px;left:228px;white-space:nowrap" class="ft47">1</P>
+<P style="position:absolute;top:511px;left:221px;white-space:nowrap" class="ft47">m</P>
+<P style="position:absolute;top:457px;left:380px;white-space:nowrap" class="ft47">2</P>
+<P style="position:absolute;top:457px;left:342px;white-space:nowrap" class="ft47">n</P>
+<P style="position:absolute;top:457px;left:335px;white-space:nowrap" class="ft47">2</P>
+<P style="position:absolute;top:457px;left:264px;white-space:nowrap" class="ft47">22</P>
+<P style="position:absolute;top:457px;left:222px;white-space:nowrap" class="ft47">21</P>
+<P style="position:absolute;top:430px;left:380px;white-space:nowrap" class="ft47">1</P>
+<P style="position:absolute;top:430px;left:341px;white-space:nowrap" class="ft47">n</P>
+<P style="position:absolute;top:430px;left:335px;white-space:nowrap" class="ft47">1</P>
+<P style="position:absolute;top:430px;left:263px;white-space:nowrap" class="ft47">12</P>
+<P style="position:absolute;top:430px;left:221px;white-space:nowrap" class="ft47">11</P>
+<P style="position:absolute;top:501px;left:368px;white-space:nowrap" class="ft44">b</P>
+<P style="position:absolute;top:501px;left:324px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:501px;left:295px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:501px;left:252px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:501px;left:210px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:474px;left:371px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:474px;left:331px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:474px;left:295px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:474px;left:259px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:474px;left:216px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:447px;left:369px;white-space:nowrap" class="ft44">b</P>
+<P style="position:absolute;top:447px;left:325px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:447px;left:295px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:447px;left:254px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:447px;left:212px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:420px;left:370px;white-space:nowrap" class="ft44">b</P>
+<P style="position:absolute;top:420px;left:326px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:420px;left:295px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:420px;left:254px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:420px;left:212px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:461px;left:401px;white-space:nowrap" class="ft44">&#160; matrizeari,&#160;&#160;<i>matrize zabaldua</i>&#160;esaten zaio eta</P>
+<P style="position:absolute;top:537px;left:127px;white-space:nowrap" class="ft44">sistemaren A matrizeari gai askeen zutabea gehituz lortzen da.</P>
+<P style="position:absolute;top:600px;left:127px;white-space:nowrap" class="ft44">Teorema. n ezezaguneko m ekuazio linealetako S sistema bateragarria da, baldin eta</P>
+<P style="position:absolute;top:631px;left:127px;white-space:nowrap" class="ft44">soilik baldin koefizienteen matrizearen heina eta matrize zabalduaren heina berdinak</P>
+<P style="position:absolute;top:662px;left:127px;white-space:nowrap" class="ft44">badira ( &#160;r(A) &#160;= &#160;r[A,B] ), eta gainera:</P>
+<P style="position:absolute;top:693px;left:127px;white-space:nowrap" class="ft44">a)&#160;&#160;&#160;r(A) &#160;= &#160;r[A,B] = n (ezezagun-kopurua) denean, sistema bateragarria eta</P>
+<P style="position:absolute;top:724px;left:154px;white-space:nowrap" class="ft44">determinatua da.</P>
+<P style="position:absolute;top:756px;left:127px;white-space:nowrap" class="ft44">b)&#160;&#160;r(A) = r[A,B] &lt; n (ezezagun-kopurua) denean, sistema bateragarria eta</P>
+<P style="position:absolute;top:786px;left:154px;white-space:nowrap" class="ft44">indeterminatua da.</P>
+<P style="position:absolute;top:848px;left:127px;white-space:nowrap" class="ft44">Proposizioa. Baldin S sistema homogeneoa bada, r(A) &#160;= &#160;r[A,B] betetzen da eta edozein</P>
+<P style="position:absolute;top:879px;left:127px;white-space:nowrap" class="ft44">sistema homogeneo bateragarria da. Partikularki, m = n denean:</P>
+<P style="position:absolute;top:914px;left:127px;white-space:nowrap" class="ft44">a)&#160;&#160;Baldin&#160;</P>
+<P style="position:absolute;top:908px;left:234px;white-space:nowrap" class="ft46">≠</P>
+<P style="position:absolute;top:914px;left:214px;white-space:nowrap" class="ft44">A</P>
+<P style="position:absolute;top:914px;left:248px;white-space:nowrap" class="ft44">0 bada, orduan sistema bateragarria eta determinatua da ( bere soluzio</P>
+<P style="position:absolute;top:950px;left:154px;white-space:nowrap" class="ft44">bakarra soluzio nabaria da: x1&#160;= 0, &#160;x2&#160;= 0 , ...,&#160;xn&#160;= 0 ).</P>
+<P style="position:absolute;top:985px;left:127px;white-space:nowrap" class="ft44">b)&#160;&#160;Baldin &#160;&#160;A&#160;&#160;= 0 bada, orduan sistema bateragarria eta&#160;indeterminatua da.</P>
+</DIV>
+<!-- Page 5 -->
+<a name="5"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft512{font-size:8px;font-family:Symbol;color:#000000;}
+-->
+</STYLE>
+<DIV id="page5-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:443px;white-space:nowrap" class="ft50">5</P>
+<P style="position:absolute;top:140px;left:127px;white-space:nowrap" class="ft52"><b>4.&#160;&#160;</b>&#160;<b>EKUAZIO LINEALETAKO SISTEMEN EBAZPENA</b></P>
+<P style="position:absolute;top:202px;left:127px;white-space:nowrap" class="ft52"><b>4.1&#160;&#160;&#160;Ebazpen&#160;&#160;matriziala.</b></P>
+<P style="position:absolute;top:267px;left:180px;white-space:nowrap" class="ft54">Izan bedi&#160;&#160;A.X =B sistema bateragarri determinatua, non A&#160;</P>
+<P style="position:absolute;top:262px;left:667px;white-space:nowrap" class="ft56">∈&#160;&#160;M</P>
+<P style="position:absolute;top:274px;left:708px;white-space:nowrap" class="ft55">n(&#160;&#160;<b>R</b>&#160;&#160;)</P>
+<P style="position:absolute;top:300px;left:127px;white-space:nowrap" class="ft54">erregularra den. A erregularra denez, A</P>
+<P style="position:absolute;top:296px;left:410px;white-space:nowrap" class="ft55">-1&#160; A-ren alderantzizko matrizea existitzen da eta</P>
+<P style="position:absolute;top:332px;left:127px;white-space:nowrap" class="ft54">matrizeen propietateak erabiliz honako hau ondoriozta dezakegu: &#160;X &#160;= A</P>
+<P style="position:absolute;top:328px;left:655px;white-space:nowrap" class="ft55">-1.B.</P>
+<P style="position:absolute;top:362px;left:180px;white-space:nowrap" class="ft54">Metodo hau, n handia denean, oso nekeza gertatzen da egin behar den eragiketen</P>
+<P style="position:absolute;top:393px;left:127px;white-space:nowrap" class="ft54">kopurua oso handia delako.</P>
+<P style="position:absolute;top:425px;left:180px;white-space:nowrap" class="ft54">Kostu operatiboa &#160;&#160;</P>
+<P style="position:absolute;top:419px;left:320px;white-space:nowrap" class="ft56">≅&#160;&#160; n!.n2&#160;biderketa-zatiketa</P>
+<P style="position:absolute;top:458px;left:180px;white-space:nowrap" class="ft54">n &#160;= &#160;3 &#160; &#160;&#160;</P>
+<P style="position:absolute;top:452px;left:251px;white-space:nowrap" class="ft56">⇒&#160;&#160; &#160; &#160;K.O. &#160;&#160;≅&#160;&#160; &#160;54 &#160;biderketa/zatiketa</P>
+<P style="position:absolute;top:489px;left:180px;white-space:nowrap" class="ft54">n &#160;= &#160;4 &#160; &#160;&#160;</P>
+<P style="position:absolute;top:483px;left:251px;white-space:nowrap" class="ft56">⇒&#160;&#160; &#160; &#160;K.O. &#160;&#160;≅&#160;&#160; &#160;384 &#160;biderketa/zatiketa</P>
+<P style="position:absolute;top:519px;left:180px;white-space:nowrap" class="ft54">.......................................................</P>
+<P style="position:absolute;top:552px;left:180px;white-space:nowrap" class="ft54">n &#160;= &#160;10 &#160; &#160;&#160;</P>
+<P style="position:absolute;top:546px;left:260px;white-space:nowrap" class="ft56">⇒&#160;&#160; &#160; &#160;K.O. &#160; &gt; &#160; 300 000&#160;000 &#160;biderketa/zatiketa</P>
+<P style="position:absolute;top:613px;left:127px;white-space:nowrap" class="ft52"><b>4.2&#160;&#160;&#160;Cramer-en erregela.</b></P>
+<P style="position:absolute;top:678px;left:180px;white-space:nowrap" class="ft54">Izan bedi&#160;&#160;A.X =B sistema bateragarri determinatua, non A&#160;</P>
+<P style="position:absolute;top:672px;left:608px;white-space:nowrap" class="ft56">∈&#160;M</P>
+<P style="position:absolute;top:684px;left:642px;white-space:nowrap" class="ft55">n(<b>R</b>&#160;) erregularra</P>
+<P style="position:absolute;top:711px;left:127px;white-space:nowrap" class="ft54">den. Ezezagun bakoitza bi determinanteren zatidura bezala lor daiteke. Zenbakitzailea,</P>
+<P style="position:absolute;top:742px;left:127px;white-space:nowrap" class="ft54">A koefizienteen matrizean ezezagunaren zutabea gai askeen zutabeaz ordezkatuz lortzen</P>
+<P style="position:absolute;top:773px;left:127px;white-space:nowrap" class="ft54">den matrizearen determinantea da, eta izendatzailea koefizienteen matrizearen</P>
+<P style="position:absolute;top:804px;left:127px;white-space:nowrap" class="ft54">determinantea da. Hots:</P>
+<P style="position:absolute;top:977px;left:397px;white-space:nowrap" class="ft54">A</P>
+<P style="position:absolute;top:950px;left:506px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:950px;left:477px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:950px;left:430px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:950px;left:394px;white-space:nowrap" class="ft54">b</P>
+<P style="position:absolute;top:950px;left:345px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:950px;left:316px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:950px;left:278px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:923px;left:512px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:923px;left:477px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:923px;left:439px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:923px;left:396px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:923px;left:354px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:923px;left:316px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:923px;left:282px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:896px;left:506px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:896px;left:477px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:896px;left:429px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:896px;left:394px;white-space:nowrap" class="ft54">b</P>
+<P style="position:absolute;top:896px;left:345px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:896px;left:316px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:896px;left:278px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:869px;left:507px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:869px;left:477px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:869px;left:430px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:869px;left:395px;white-space:nowrap" class="ft54">b</P>
+<P style="position:absolute;top:869px;left:347px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:869px;left:316px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:869px;left:278px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:964px;left:239px;white-space:nowrap" class="ft54">x</P>
+<P style="position:absolute;top:960px;left:516px;white-space:nowrap" class="ft57">nn</P>
+<P style="position:absolute;top:960px;left:453px;white-space:nowrap" class="ft57">1</P>
+<P style="position:absolute;top:960px;left:440px;white-space:nowrap" class="ft57">ni</P>
+<P style="position:absolute;top:960px;left:404px;white-space:nowrap" class="ft57">n</P>
+<P style="position:absolute;top:960px;left:369px;white-space:nowrap" class="ft57">1</P>
+<P style="position:absolute;top:960px;left:356px;white-space:nowrap" class="ft57">ni</P>
+<P style="position:absolute;top:960px;left:293px;white-space:nowrap" class="ft57">1</P>
+<P style="position:absolute;top:960px;left:288px;white-space:nowrap" class="ft57">n</P>
+<P style="position:absolute;top:906px;left:522px;white-space:nowrap" class="ft57">n</P>
+<P style="position:absolute;top:906px;left:516px;white-space:nowrap" class="ft57">2</P>
+<P style="position:absolute;top:906px;left:455px;white-space:nowrap" class="ft57">1</P>
+<P style="position:absolute;top:906px;left:446px;white-space:nowrap" class="ft57">i</P>
+<P style="position:absolute;top:906px;left:439px;white-space:nowrap" class="ft57">2</P>
+<P style="position:absolute;top:906px;left:404px;white-space:nowrap" class="ft57">2</P>
+<P style="position:absolute;top:906px;left:370px;white-space:nowrap" class="ft57">1</P>
+<P style="position:absolute;top:906px;left:361px;white-space:nowrap" class="ft57">i</P>
+<P style="position:absolute;top:906px;left:356px;white-space:nowrap" class="ft57">2</P>
+<P style="position:absolute;top:906px;left:288px;white-space:nowrap" class="ft57">21</P>
+<P style="position:absolute;top:879px;left:521px;white-space:nowrap" class="ft57">n</P>
+<P style="position:absolute;top:879px;left:516px;white-space:nowrap" class="ft57">1</P>
+<P style="position:absolute;top:879px;left:453px;white-space:nowrap" class="ft57">1</P>
+<P style="position:absolute;top:879px;left:444px;white-space:nowrap" class="ft57">i</P>
+<P style="position:absolute;top:879px;left:439px;white-space:nowrap" class="ft57">1</P>
+<P style="position:absolute;top:879px;left:404px;white-space:nowrap" class="ft57">1</P>
+<P style="position:absolute;top:879px;left:369px;white-space:nowrap" class="ft57">1</P>
+<P style="position:absolute;top:879px;left:360px;white-space:nowrap" class="ft57">i</P>
+<P style="position:absolute;top:879px;left:356px;white-space:nowrap" class="ft57">1</P>
+<P style="position:absolute;top:879px;left:287px;white-space:nowrap" class="ft57">11</P>
+<P style="position:absolute;top:974px;left:249px;white-space:nowrap" class="ft57">i</P>
+<P style="position:absolute;top:957px;left:449px;white-space:nowrap" class="ft512">+</P>
+<P style="position:absolute;top:957px;left:365px;white-space:nowrap" class="ft512">−</P>
+<P style="position:absolute;top:903px;left:449px;white-space:nowrap" class="ft512">+</P>
+<P style="position:absolute;top:903px;left:365px;white-space:nowrap" class="ft512">−</P>
+<P style="position:absolute;top:876px;left:448px;white-space:nowrap" class="ft512">+</P>
+<P style="position:absolute;top:876px;left:363px;white-space:nowrap" class="ft512">−</P>
+<P style="position:absolute;top:958px;left:259px;white-space:nowrap" class="ft56">=</P>
+<P style="position:absolute;top:964px;left:538px;white-space:nowrap" class="ft54">&#160; &#160; &#160; i = 1, 2, ..., n</P>
+<P style="position:absolute;top:1046px;left:127px;white-space:nowrap" class="ft54">Eragiketen kopurua kontuan hartzen badugu, metodo hau aurrekoa bezain nekeza da eta</P>
+<P style="position:absolute;top:1076px;left:127px;white-space:nowrap" class="ft54">ekuazio linealetako sistemen dimentsioak handiak direnean metodo hauek ez dira</P>
+<P style="position:absolute;top:1108px;left:127px;white-space:nowrap" class="ft54">erabiltzen.</P>
+</DIV>
+<!-- Page 6 -->
+<a name="6"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft613{font-size:21px;font-family:Symbol;color:#000000;}
+	.ft614{font-size:16px;font-family:Helvetica;color:#000000;}
+	.ft615{font-size:25px;font-family:Symbol;color:#000000;}
+-->
+</STYLE>
+<DIV id="page6-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:443px;white-space:nowrap" class="ft60">6</P>
+<P style="position:absolute;top:171px;left:127px;white-space:nowrap" class="ft62"><b>4.3&#160;&#160;Gauss-en ezabapen-metodoa.</b></P>
+<P style="position:absolute;top:233px;left:180px;white-space:nowrap" class="ft64">Ondoren, ekuazio linealetako sistemak ebazteko beste metodo bat ikusiko dugu.</P>
+<P style="position:absolute;top:264px;left:127px;white-space:nowrap" class="ft64">Ekuazioen eragiketa elementalak erabiliko ditugu hasierako sistemak koefiziente nulu</P>
+<P style="position:absolute;top:296px;left:127px;white-space:nowrap" class="ft64">gehiago dituzten sistema baliokidetan transformatzeko, beraien ebazpenak errazagoak</P>
+<P style="position:absolute;top:326px;left:127px;white-space:nowrap" class="ft64">bihurtuz.</P>
+<P style="position:absolute;top:357px;left:127px;white-space:nowrap" class="ft64">Sistema errazenak diagonalak dira:</P>
+<P style="position:absolute;top:464px;left:376px;white-space:nowrap" class="ft66"></P>
+<P style="position:absolute;top:447px;left:376px;white-space:nowrap" class="ft69"><br/></P>
+<P style="position:absolute;top:416px;left:376px;white-space:nowrap" class="ft66"></P>
+<P style="position:absolute;top:429px;left:376px;white-space:nowrap" class="ft66"></P>
+<P style="position:absolute;top:388px;left:376px;white-space:nowrap" class="ft66"></P>
+<P style="position:absolute;top:467px;left:330px;white-space:nowrap" class="ft66">=</P>
+<P style="position:absolute;top:413px;left:330px;white-space:nowrap" class="ft66">=</P>
+<P style="position:absolute;top:386px;left:330px;white-space:nowrap" class="ft66">=</P>
+<P style="position:absolute;top:483px;left:368px;white-space:nowrap" class="ft67">n</P>
+<P style="position:absolute;top:483px;left:305px;white-space:nowrap" class="ft67">n</P>
+<P style="position:absolute;top:483px;left:280px;white-space:nowrap" class="ft67">nn</P>
+<P style="position:absolute;top:429px;left:368px;white-space:nowrap" class="ft67">2</P>
+<P style="position:absolute;top:429px;left:217px;white-space:nowrap" class="ft67">2</P>
+<P style="position:absolute;top:429px;left:194px;white-space:nowrap" class="ft67">22</P>
+<P style="position:absolute;top:402px;left:368px;white-space:nowrap" class="ft67">1</P>
+<P style="position:absolute;top:402px;left:160px;white-space:nowrap" class="ft67">1</P>
+<P style="position:absolute;top:402px;left:138px;white-space:nowrap" class="ft67">11</P>
+<P style="position:absolute;top:473px;left:357px;white-space:nowrap" class="ft64">b</P>
+<P style="position:absolute;top:473px;left:294px;white-space:nowrap" class="ft64">x</P>
+<P style="position:absolute;top:473px;left:270px;white-space:nowrap" class="ft64">a</P>
+<P style="position:absolute;top:446px;left:359px;white-space:nowrap" class="ft64">...</P>
+<P style="position:absolute;top:446px;left:241px;white-space:nowrap" class="ft64">...</P>
+<P style="position:absolute;top:419px;left:357px;white-space:nowrap" class="ft64">b</P>
+<P style="position:absolute;top:419px;left:206px;white-space:nowrap" class="ft64">x</P>
+<P style="position:absolute;top:419px;left:183px;white-space:nowrap" class="ft64">a</P>
+<P style="position:absolute;top:392px;left:358px;white-space:nowrap" class="ft64">b</P>
+<P style="position:absolute;top:392px;left:150px;white-space:nowrap" class="ft64">x</P>
+<P style="position:absolute;top:392px;left:129px;white-space:nowrap" class="ft64">a</P>
+<P style="position:absolute;top:433px;left:387px;white-space:nowrap" class="ft64">&#160; &#160;</P>
+<P style="position:absolute;top:427px;left:403px;white-space:nowrap" class="ft66">⇒&#160;&#160; &#160;</P>
+<P style="position:absolute;top:456px;left:486px;white-space:nowrap" class="ft67">ii</P>
+<P style="position:absolute;top:430px;left:488px;white-space:nowrap" class="ft67">i</P>
+<P style="position:absolute;top:443px;left:450px;white-space:nowrap" class="ft67">i</P>
+<P style="position:absolute;top:446px;left:476px;white-space:nowrap" class="ft64">a</P>
+<P style="position:absolute;top:420px;left:478px;white-space:nowrap" class="ft64">b</P>
+<P style="position:absolute;top:433px;left:440px;white-space:nowrap" class="ft64">x</P>
+<P style="position:absolute;top:427px;left:460px;white-space:nowrap" class="ft66">=</P>
+<P style="position:absolute;top:433px;left:500px;white-space:nowrap" class="ft64">&#160; &#160; &#160;i = 1, 2, ..., n &#160; &#160;(</P>
+<P style="position:absolute;top:427px;left:664px;white-space:nowrap" class="ft66">≠</P>
+<P style="position:absolute;top:443px;left:650px;white-space:nowrap" class="ft67">ii</P>
+<P style="position:absolute;top:433px;left:640px;white-space:nowrap" class="ft64">a</P>
+<P style="position:absolute;top:433px;left:677px;white-space:nowrap" class="ft64">0)</P>
+<P style="position:absolute;top:509px;left:127px;white-space:nowrap" class="ft64">Gero, sistema&#160;goi-triangeluarrak aurkitzen dira:</P>
+<P style="position:absolute;top:616px;left:458px;white-space:nowrap" class="ft66"></P>
+<P style="position:absolute;top:599px;left:458px;white-space:nowrap" class="ft69"><br/></P>
+<P style="position:absolute;top:568px;left:458px;white-space:nowrap" class="ft66"></P>
+<P style="position:absolute;top:581px;left:458px;white-space:nowrap" class="ft66"></P>
+<P style="position:absolute;top:539px;left:458px;white-space:nowrap" class="ft66"></P>
+<P style="position:absolute;top:619px;left:412px;white-space:nowrap" class="ft66">=</P>
+<P style="position:absolute;top:565px;left:412px;white-space:nowrap" class="ft66">=</P>
+<P style="position:absolute;top:565px;left:325px;white-space:nowrap" class="ft66">+</P>
+<P style="position:absolute;top:565px;left:269px;white-space:nowrap" class="ft66">+</P>
+<P style="position:absolute;top:538px;left:412px;white-space:nowrap" class="ft66">=</P>
+<P style="position:absolute;top:538px;left:325px;white-space:nowrap" class="ft66">+</P>
+<P style="position:absolute;top:538px;left:269px;white-space:nowrap" class="ft66">+</P>
+<P style="position:absolute;top:538px;left:185px;white-space:nowrap" class="ft66">+</P>
+<P style="position:absolute;top:635px;left:450px;white-space:nowrap" class="ft67">n</P>
+<P style="position:absolute;top:635px;left:387px;white-space:nowrap" class="ft67">n</P>
+<P style="position:absolute;top:635px;left:362px;white-space:nowrap" class="ft67">nn</P>
+<P style="position:absolute;top:581px;left:450px;white-space:nowrap" class="ft67">2</P>
+<P style="position:absolute;top:581px;left:387px;white-space:nowrap" class="ft67">n</P>
+<P style="position:absolute;top:581px;left:368px;white-space:nowrap" class="ft67">n</P>
+<P style="position:absolute;top:581px;left:362px;white-space:nowrap" class="ft67">2</P>
+<P style="position:absolute;top:581px;left:244px;white-space:nowrap" class="ft67">2</P>
+<P style="position:absolute;top:581px;left:222px;white-space:nowrap" class="ft67">22</P>
+<P style="position:absolute;top:554px;left:450px;white-space:nowrap" class="ft67">1</P>
+<P style="position:absolute;top:554px;left:386px;white-space:nowrap" class="ft67">n</P>
+<P style="position:absolute;top:554px;left:367px;white-space:nowrap" class="ft67">n</P>
+<P style="position:absolute;top:554px;left:362px;white-space:nowrap" class="ft67">1</P>
+<P style="position:absolute;top:554px;left:244px;white-space:nowrap" class="ft67">2</P>
+<P style="position:absolute;top:554px;left:221px;white-space:nowrap" class="ft67">12</P>
+<P style="position:absolute;top:554px;left:160px;white-space:nowrap" class="ft67">1</P>
+<P style="position:absolute;top:554px;left:138px;white-space:nowrap" class="ft67">11</P>
+<P style="position:absolute;top:625px;left:439px;white-space:nowrap" class="ft64">b</P>
+<P style="position:absolute;top:625px;left:376px;white-space:nowrap" class="ft64">x</P>
+<P style="position:absolute;top:625px;left:352px;white-space:nowrap" class="ft64">a</P>
+<P style="position:absolute;top:598px;left:442px;white-space:nowrap" class="ft64">...</P>
+<P style="position:absolute;top:598px;left:367px;white-space:nowrap" class="ft64">...</P>
+<P style="position:absolute;top:598px;left:296px;white-space:nowrap" class="ft64">...</P>
+<P style="position:absolute;top:571px;left:439px;white-space:nowrap" class="ft64">b</P>
+<P style="position:absolute;top:571px;left:376px;white-space:nowrap" class="ft64">x</P>
+<P style="position:absolute;top:571px;left:352px;white-space:nowrap" class="ft64">a</P>
+<P style="position:absolute;top:571px;left:296px;white-space:nowrap" class="ft64">...</P>
+<P style="position:absolute;top:571px;left:234px;white-space:nowrap" class="ft64">x</P>
+<P style="position:absolute;top:571px;left:212px;white-space:nowrap" class="ft64">a</P>
+<P style="position:absolute;top:544px;left:440px;white-space:nowrap" class="ft64">b</P>
+<P style="position:absolute;top:544px;left:375px;white-space:nowrap" class="ft64">x</P>
+<P style="position:absolute;top:544px;left:353px;white-space:nowrap" class="ft64">a</P>
+<P style="position:absolute;top:544px;left:296px;white-space:nowrap" class="ft64">...</P>
+<P style="position:absolute;top:544px;left:233px;white-space:nowrap" class="ft64">x</P>
+<P style="position:absolute;top:544px;left:212px;white-space:nowrap" class="ft64">a</P>
+<P style="position:absolute;top:544px;left:150px;white-space:nowrap" class="ft64">x</P>
+<P style="position:absolute;top:544px;left:129px;white-space:nowrap" class="ft64">a</P>
+<P style="position:absolute;top:585px;left:469px;white-space:nowrap" class="ft64">&#160;(1) &#160; &#160; &#160;&#160;</P>
+<P style="position:absolute;top:573px;left:529px;white-space:nowrap" class="ft613">(</P>
+<P style="position:absolute;top:573px;left:690px;white-space:nowrap" class="ft613">)</P>
+<P style="position:absolute;top:585px;left:680px;white-space:nowrap" class="ft64">n</P>
+<P style="position:absolute;top:585px;left:655px;white-space:nowrap" class="ft64">,...,</P>
+<P style="position:absolute;top:585px;left:646px;white-space:nowrap" class="ft64">2</P>
+<P style="position:absolute;top:585px;left:641px;white-space:nowrap" class="ft64">,</P>
+<P style="position:absolute;top:585px;left:635px;white-space:nowrap" class="ft64">1</P>
+<P style="position:absolute;top:585px;left:612px;white-space:nowrap" class="ft64">i</P>
+<P style="position:absolute;top:585px;left:572px;white-space:nowrap" class="ft64">0</P>
+<P style="position:absolute;top:585px;left:534px;white-space:nowrap" class="ft64">a</P>
+<P style="position:absolute;top:595px;left:545px;white-space:nowrap" class="ft67">ii</P>
+<P style="position:absolute;top:579px;left:621px;white-space:nowrap" class="ft66">=</P>
+<P style="position:absolute;top:579px;left:597px;white-space:nowrap" class="ft66">∀</P>
+<P style="position:absolute;top:579px;left:557px;white-space:nowrap" class="ft66">≠</P>
+<P style="position:absolute;top:662px;left:180px;white-space:nowrap" class="ft64">Sistema hauen soluzioak&#160;&#160;<i>ordezkapen erregresiboa</i>&#160;erabiliz lortuko ditugu, hau</P>
+<P style="position:absolute;top:693px;left:127px;white-space:nowrap" class="ft64">da, ondorengo pausuak jarraituz:</P>
+<P style="position:absolute;top:724px;left:127px;white-space:nowrap" class="ft64">1.&#160;&#160;Azkeneko ekuazioan&#160;&#160;xn&#160;kalkulatzen dugu.</P>
+<P style="position:absolute;top:756px;left:127px;white-space:nowrap" class="ft68"><i>2.&#160;&#160;</i>Azken aurreko ekuazioan&#160;&#160;xn&#160;ordezkatuz, xn-1&#160;lortuko dugu.</P>
+<P style="position:absolute;top:786px;left:127px;white-space:nowrap" class="ft68"><i>3.&#160;&#160;</i>Azken-heren ekuazioan&#160;&#160;xn&#160;eta xn-1&#160;ordezkatuz, xn-2&#160; lortuko dugu.</P>
+<P style="position:absolute;top:818px;left:127px;white-space:nowrap" class="ft68"><i>4.&#160;&#160;</i>Prozesu honi jarraituko diogu x1&#160;kalkulatu arte.</P>
+<P style="position:absolute;top:848px;left:180px;white-space:nowrap" class="ft64">Pauso hauek, modu laburrean, honela adieraz ditzakegu:</P>
+<P style="position:absolute;top:898px;left:456px;white-space:nowrap" class="ft66"></P>
+<P style="position:absolute;top:877px;left:456px;white-space:nowrap" class="ft66"></P>
+<P style="position:absolute;top:898px;left:356px;white-space:nowrap" class="ft66"></P>
+<P style="position:absolute;top:877px;left:356px;white-space:nowrap" class="ft66"></P>
+<P style="position:absolute;top:890px;left:384px;white-space:nowrap" class="ft66">−</P>
+<P style="position:absolute;top:890px;left:317px;white-space:nowrap" class="ft66">=</P>
+<P style="position:absolute;top:885px;left:399px;white-space:nowrap" class="ft615">∑</P>
+<P style="position:absolute;top:915px;left:411px;white-space:nowrap" class="ft612">+</P>
+<P style="position:absolute;top:915px;left:401px;white-space:nowrap" class="ft612">=</P>
+<P style="position:absolute;top:883px;left:406px;white-space:nowrap" class="ft67">n</P>
+<P style="position:absolute;top:919px;left:416px;white-space:nowrap" class="ft67">1</P>
+<P style="position:absolute;top:919px;left:407px;white-space:nowrap" class="ft67">i</P>
+<P style="position:absolute;top:919px;left:398px;white-space:nowrap" class="ft67">j</P>
+<P style="position:absolute;top:906px;left:449px;white-space:nowrap" class="ft67">j</P>
+<P style="position:absolute;top:906px;left:430px;white-space:nowrap" class="ft67">ij</P>
+<P style="position:absolute;top:906px;left:375px;white-space:nowrap" class="ft67">i</P>
+<P style="position:absolute;top:920px;left:343px;white-space:nowrap" class="ft67">ii</P>
+<P style="position:absolute;top:906px;left:307px;white-space:nowrap" class="ft67">i</P>
+<P style="position:absolute;top:896px;left:438px;white-space:nowrap" class="ft64">x</P>
+<P style="position:absolute;top:896px;left:421px;white-space:nowrap" class="ft64">a</P>
+<P style="position:absolute;top:896px;left:365px;white-space:nowrap" class="ft64">b</P>
+<P style="position:absolute;top:910px;left:333px;white-space:nowrap" class="ft64">a</P>
+<P style="position:absolute;top:884px;left:338px;white-space:nowrap" class="ft64">1</P>
+<P style="position:absolute;top:896px;left:297px;white-space:nowrap" class="ft64">x</P>
+<P style="position:absolute;top:896px;left:466px;white-space:nowrap" class="ft64">&#160; &#160; &#160; i = n, n-1, ..., 1</P>
+<P style="position:absolute;top:947px;left:180px;white-space:nowrap" class="ft64">Hasierako sistema&#160;&#160;behe-triangeluarra baldin bada, soluzioa&#160;&#160;<i>ordezkapen</i></P>
+<P style="position:absolute;top:977px;left:127px;white-space:nowrap" class="ft68"><i>progresiboa</i>&#160;erabiliz lortuko dugu. Kasu honetan,&#160;x1&#160;kalkulatuz hasiko gara eta</P>
+<P style="position:absolute;top:1009px;left:127px;white-space:nowrap" class="ft64">aurrekoaren prozesu analogoa jarraituko dugu, ekuazioz ekuazio, gainerako ezezagunak</P>
+<P style="position:absolute;top:1040px;left:127px;white-space:nowrap" class="ft64">lortu arte.</P>
+<P style="position:absolute;top:1071px;left:127px;white-space:nowrap" class="ft64">&#160;&#160;</P>
+<P style="position:absolute;top:1071px;left:180px;white-space:nowrap" class="ft64">Gauss-en ezabapen-metodoa&#160;&#160;A.X = B ekuazio linealetako sistema,&#160;&#160;goi-</P>
+<P style="position:absolute;top:1102px;left:127px;white-space:nowrap" class="ft64">triangeluarra den sistema baliokide batean transformatzean datza. Ondoren, ordezkapen</P>
+<P style="position:absolute;top:1133px;left:127px;white-space:nowrap" class="ft64">erregresiboa erabiliz sistemaren soluzioa lortzen da.</P>
+</DIV>
+<!-- Page 7 -->
+<a name="7"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft716{font-size:8px;line-height:12px;font-family:Times;color:#000000;}
+	.ft717{font-size:8px;line-height:13px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page7-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:443px;white-space:nowrap" class="ft70">7</P>
+<P style="position:absolute;top:140px;left:127px;white-space:nowrap" class="ft74">Lehenengo pausoa: Baldin&#160;a11&#160;</P>
+<P style="position:absolute;top:134px;left:381px;white-space:nowrap" class="ft76">≠&#160;0 bada, lehenengo ekuazioa erabiltzen da&#160;x</P>
+<P style="position:absolute;top:146px;left:758px;white-space:nowrap" class="ft75">1</P>
+<P style="position:absolute;top:171px;left:127px;white-space:nowrap" class="ft74">ezezagunaren koefizienteak gainerako ekuazioetan ezabatzeko:</P>
+<P style="position:absolute;top:226px;left:372px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:239px;left:344px;white-space:nowrap" class="ft77">11</P>
+<P style="position:absolute;top:213px;left:345px;white-space:nowrap" class="ft77">21</P>
+<P style="position:absolute;top:226px;left:309px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:216px;left:361px;white-space:nowrap" class="ft74">E</P>
+<P style="position:absolute;top:229px;left:335px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:203px;left:335px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:216px;left:296px;white-space:nowrap" class="ft74">E</P>
+<P style="position:absolute;top:210px;left:321px;white-space:nowrap" class="ft76">−</P>
+<P style="position:absolute;top:216px;left:380px;white-space:nowrap" class="ft74">,&#160;</P>
+<P style="position:absolute;top:226px;left:468px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:239px;left:440px;white-space:nowrap" class="ft77">11</P>
+<P style="position:absolute;top:213px;left:440px;white-space:nowrap" class="ft77">31</P>
+<P style="position:absolute;top:226px;left:405px;white-space:nowrap" class="ft77">3</P>
+<P style="position:absolute;top:216px;left:456px;white-space:nowrap" class="ft74">E</P>
+<P style="position:absolute;top:229px;left:431px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:203px;left:430px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:216px;left:392px;white-space:nowrap" class="ft74">E</P>
+<P style="position:absolute;top:210px;left:415px;white-space:nowrap" class="ft76">−</P>
+<P style="position:absolute;top:216px;left:475px;white-space:nowrap" class="ft74">, ... ,&#160;</P>
+<P style="position:absolute;top:226px;left:591px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:239px;left:563px;white-space:nowrap" class="ft77">11</P>
+<P style="position:absolute;top:213px;left:568px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:213px;left:563px;white-space:nowrap" class="ft77">n</P>
+<P style="position:absolute;top:226px;left:527px;white-space:nowrap" class="ft77">n</P>
+<P style="position:absolute;top:216px;left:578px;white-space:nowrap" class="ft74">E</P>
+<P style="position:absolute;top:229px;left:554px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:203px;left:552px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:216px;left:513px;white-space:nowrap" class="ft74">E</P>
+<P style="position:absolute;top:210px;left:538px;white-space:nowrap" class="ft76">−</P>
+<P style="position:absolute;top:283px;left:207px;white-space:nowrap" class="ft74">k garren ekuazioa &#160;+&#160;</P>
+<P style="position:absolute;top:284px;left:411px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:264px;left:411px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:284px;left:361px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:264px;left:361px;white-space:nowrap" class="ft76">&#160;−</P>
+<P style="position:absolute;top:307px;left:388px;white-space:nowrap" class="ft77">11</P>
+<P style="position:absolute;top:281px;left:401px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:281px;left:395px;white-space:nowrap" class="ft77">k</P>
+<P style="position:absolute;top:297px;left:379px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:271px;left:385px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:283px;left:421px;white-space:nowrap" class="ft74">. lehen ekuazioa &#160; &#160; &#160; &#160;</P>
+<P style="position:absolute;top:277px;left:573px;white-space:nowrap" class="ft76">∀&#160;k = 2,...,n</P>
+<P style="position:absolute;top:333px;left:127px;white-space:nowrap" class="ft74">Eta era honetako sistema baliokide berria lortuko dugu:</P>
+<P style="position:absolute;top:439px;left:273px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:422px;left:273px;white-space:nowrap" class="ft79"><br/></P>
+<P style="position:absolute;top:391px;left:273px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:404px;left:273px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:363px;left:273px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:443px;left:567px;white-space:nowrap" class="ft76">=</P>
+<P style="position:absolute;top:443px;left:479px;white-space:nowrap" class="ft76">+</P>
+<P style="position:absolute;top:443px;left:424px;white-space:nowrap" class="ft76">+</P>
+<P style="position:absolute;top:389px;left:567px;white-space:nowrap" class="ft76">=</P>
+<P style="position:absolute;top:389px;left:479px;white-space:nowrap" class="ft76">+</P>
+<P style="position:absolute;top:389px;left:424px;white-space:nowrap" class="ft76">+</P>
+<P style="position:absolute;top:362px;left:567px;white-space:nowrap" class="ft76">=</P>
+<P style="position:absolute;top:362px;left:479px;white-space:nowrap" class="ft76">+</P>
+<P style="position:absolute;top:362px;left:424px;white-space:nowrap" class="ft76">+</P>
+<P style="position:absolute;top:362px;left:338px;white-space:nowrap" class="ft76">+</P>
+<P style="position:absolute;top:446px;left:612px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:446px;left:608px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:446px;left:604px;white-space:nowrap" class="ft716">(<br/>n</P>
+<P style="position:absolute;top:458px;left:541px;white-space:nowrap" class="ft77">n</P>
+<P style="position:absolute;top:446px;left:525px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:446px;left:520px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:446px;left:516px;white-space:nowrap" class="ft716">(<br/>nn</P>
+<P style="position:absolute;top:458px;left:399px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:446px;left:383px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:446px;left:377px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:446px;left:375px;white-space:nowrap" class="ft77">(</P>
+<P style="position:absolute;top:458px;left:381px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:458px;left:375px;white-space:nowrap" class="ft77">n</P>
+<P style="position:absolute;top:391px;left:612px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:391px;left:608px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:391px;left:604px;white-space:nowrap" class="ft717">(<br/>2</P>
+<P style="position:absolute;top:404px;left:541px;white-space:nowrap" class="ft77">n</P>
+<P style="position:absolute;top:391px;left:524px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:391px;left:520px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:391px;left:516px;white-space:nowrap" class="ft77">(</P>
+<P style="position:absolute;top:404px;left:523px;white-space:nowrap" class="ft77">n</P>
+<P style="position:absolute;top:404px;left:516px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:404px;left:399px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:391px;left:383px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:391px;left:377px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:391px;left:375px;white-space:nowrap" class="ft717">(<br/>22</P>
+<P style="position:absolute;top:377px;left:608px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:377px;left:540px;white-space:nowrap" class="ft77">n</P>
+<P style="position:absolute;top:377px;left:522px;white-space:nowrap" class="ft77">n</P>
+<P style="position:absolute;top:377px;left:516px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:377px;left:398px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:377px;left:375px;white-space:nowrap" class="ft77">12</P>
+<P style="position:absolute;top:377px;left:313px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:377px;left:291px;white-space:nowrap" class="ft77">11</P>
+<P style="position:absolute;top:449px;left:594px;white-space:nowrap" class="ft74">b</P>
+<P style="position:absolute;top:449px;left:530px;white-space:nowrap" class="ft74">x</P>
+<P style="position:absolute;top:449px;left:506px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:449px;left:450px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:449px;left:388px;white-space:nowrap" class="ft74">x</P>
+<P style="position:absolute;top:449px;left:365px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:422px;left:600px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:422px;left:521px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:422px;left:450px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:422px;left:379px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:395px;left:594px;white-space:nowrap" class="ft74">b</P>
+<P style="position:absolute;top:395px;left:530px;white-space:nowrap" class="ft74">x</P>
+<P style="position:absolute;top:395px;left:506px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:395px;left:450px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:395px;left:388px;white-space:nowrap" class="ft74">x</P>
+<P style="position:absolute;top:395px;left:365px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:368px;left:597px;white-space:nowrap" class="ft74">b</P>
+<P style="position:absolute;top:368px;left:529px;white-space:nowrap" class="ft74">x</P>
+<P style="position:absolute;top:368px;left:507px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:368px;left:450px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:368px;left:387px;white-space:nowrap" class="ft74">x</P>
+<P style="position:absolute;top:368px;left:366px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:368px;left:303px;white-space:nowrap" class="ft74">x</P>
+<P style="position:absolute;top:368px;left:282px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:482px;left:127px;white-space:nowrap" class="ft75">(1)&#160;goi-indizeek lehenengo pauso honetan aldatu diren koefizienteak adierazten</P>
+<P style="position:absolute;top:516px;left:127px;white-space:nowrap" class="ft74">dizkigute. Baldin a11&#160;= 0 bada, ekuazioen ordena aldatuko dugu a11&#160;berria ez-nulua izan</P>
+<P style="position:absolute;top:548px;left:127px;white-space:nowrap" class="ft74">dadin.</P>
+<P style="position:absolute;top:582px;left:127px;white-space:nowrap" class="ft74">Bigarren pausoa: Baldin&#160;</P>
+<P style="position:absolute;top:582px;left:380px;white-space:nowrap" class="ft74">0</P>
+<P style="position:absolute;top:582px;left:336px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:580px;left:354px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:580px;left:350px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:580px;left:347px;white-space:nowrap" class="ft716">(<br/>22&#160;≠</P>
+<P style="position:absolute;top:582px;left:393px;white-space:nowrap" class="ft74">&#160; bada, bigarren &#160;ekuazioa erabiltzen da&#160;x2</P>
+<P style="position:absolute;top:616px;left:127px;white-space:nowrap" class="ft74">ezezagunaren koefizienteak 3,4,..., n &#160;ekuazioetan ezabatzeko</P>
+<P style="position:absolute;top:673px;left:369px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:676px;left:345px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:676px;left:341px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:676px;left:338px;white-space:nowrap" class="ft716">(<br/>22</P>
+<P style="position:absolute;top:649px;left:345px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:649px;left:341px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:649px;left:338px;white-space:nowrap" class="ft716">(<br/>32</P>
+<P style="position:absolute;top:673px;left:302px;white-space:nowrap" class="ft77">3</P>
+<P style="position:absolute;top:663px;left:356px;white-space:nowrap" class="ft74">E</P>
+<P style="position:absolute;top:678px;left:327px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:651px;left:327px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:663px;left:289px;white-space:nowrap" class="ft74">E</P>
+<P style="position:absolute;top:658px;left:313px;white-space:nowrap" class="ft76">−</P>
+<P style="position:absolute;top:663px;left:377px;white-space:nowrap" class="ft74">,&#160;</P>
+<P style="position:absolute;top:673px;left:468px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:676px;left:446px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:676px;left:440px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:676px;left:438px;white-space:nowrap" class="ft716">(<br/>22</P>
+<P style="position:absolute;top:649px;left:446px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:649px;left:440px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:649px;left:438px;white-space:nowrap" class="ft717">(<br/>42</P>
+<P style="position:absolute;top:673px;left:402px;white-space:nowrap" class="ft77">4</P>
+<P style="position:absolute;top:663px;left:456px;white-space:nowrap" class="ft74">E</P>
+<P style="position:absolute;top:678px;left:428px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:652px;left:428px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:663px;left:388px;white-space:nowrap" class="ft74">E</P>
+<P style="position:absolute;top:658px;left:413px;white-space:nowrap" class="ft76">−</P>
+<P style="position:absolute;top:663px;left:477px;white-space:nowrap" class="ft74">, ... ,&#160;</P>
+<P style="position:absolute;top:673px;left:595px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:676px;left:573px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:676px;left:568px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:676px;left:565px;white-space:nowrap" class="ft716">(<br/>22</P>
+<P style="position:absolute;top:649px;left:573px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:649px;left:568px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:649px;left:565px;white-space:nowrap" class="ft77">(</P>
+<P style="position:absolute;top:662px;left:572px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:662px;left:565px;white-space:nowrap" class="ft77">n</P>
+<P style="position:absolute;top:673px;left:529px;white-space:nowrap" class="ft77">n</P>
+<P style="position:absolute;top:663px;left:583px;white-space:nowrap" class="ft74">E</P>
+<P style="position:absolute;top:678px;left:555px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:652px;left:555px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:663px;left:515px;white-space:nowrap" class="ft74">E</P>
+<P style="position:absolute;top:658px;left:540px;white-space:nowrap" class="ft76">−</P>
+<P style="position:absolute;top:729px;left:209px;white-space:nowrap" class="ft74">k garren ekuazioa &#160;+&#160;</P>
+<P style="position:absolute;top:730px;left:414px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:742px;left:414px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:709px;left:414px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:730px;left:363px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:742px;left:363px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:709px;left:363px;white-space:nowrap" class="ft76">&#160;−</P>
+<P style="position:absolute;top:740px;left:398px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:740px;left:394px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:740px;left:390px;white-space:nowrap" class="ft716">(<br/>22</P>
+<P style="position:absolute;top:714px;left:405px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:714px;left:401px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:714px;left:397px;white-space:nowrap" class="ft77">(</P>
+<P style="position:absolute;top:726px;left:404px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:726px;left:397px;white-space:nowrap" class="ft77">k</P>
+<P style="position:absolute;top:742px;left:380px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:716px;left:387px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:729px;left:424px;white-space:nowrap" class="ft74">. bigarren ekuazioa &#160; &#160; &#160; &#160;</P>
+<P style="position:absolute;top:723px;left:596px;white-space:nowrap" class="ft76">∀&#160;k = 3,...,n</P>
+<P style="position:absolute;top:779px;left:127px;white-space:nowrap" class="ft74">Eta era honetako sistema baliokide berria lortuko dugu:</P>
+<P style="position:absolute;top:915px;left:227px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:899px;left:227px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:883px;left:227px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:921px;left:227px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:851px;left:227px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:826px;left:227px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:865px;left:227px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:809px;left:227px;white-space:nowrap" class="ft76"></P>
+<P style="position:absolute;top:916px;left:610px;white-space:nowrap" class="ft76">=</P>
+<P style="position:absolute;top:916px;left:521px;white-space:nowrap" class="ft76">+</P>
+<P style="position:absolute;top:916px;left:465px;white-space:nowrap" class="ft76">+</P>
+<P style="position:absolute;top:862px;left:610px;white-space:nowrap" class="ft76">=</P>
+<P style="position:absolute;top:862px;left:521px;white-space:nowrap" class="ft76">+</P>
+<P style="position:absolute;top:862px;left:465px;white-space:nowrap" class="ft76">+</P>
+<P style="position:absolute;top:835px;left:610px;white-space:nowrap" class="ft76">=</P>
+<P style="position:absolute;top:835px;left:521px;white-space:nowrap" class="ft76">+</P>
+<P style="position:absolute;top:835px;left:465px;white-space:nowrap" class="ft76">+</P>
+<P style="position:absolute;top:835px;left:377px;white-space:nowrap" class="ft76">+</P>
+<P style="position:absolute;top:807px;left:610px;white-space:nowrap" class="ft76">=</P>
+<P style="position:absolute;top:807px;left:521px;white-space:nowrap" class="ft76">+</P>
+<P style="position:absolute;top:807px;left:465px;white-space:nowrap" class="ft76">+</P>
+<P style="position:absolute;top:807px;left:377px;white-space:nowrap" class="ft76">+</P>
+<P style="position:absolute;top:807px;left:291px;white-space:nowrap" class="ft76">+</P>
+<P style="position:absolute;top:920px;left:657px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:920px;left:651px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:920px;left:647px;white-space:nowrap" class="ft716">(<br/>n</P>
+<P style="position:absolute;top:932px;left:584px;white-space:nowrap" class="ft77">n</P>
+<P style="position:absolute;top:920px;left:568px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:920px;left:563px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:920px;left:558px;white-space:nowrap" class="ft716">(<br/>nn</P>
+<P style="position:absolute;top:932px;left:441px;white-space:nowrap" class="ft77">3</P>
+<P style="position:absolute;top:920px;left:424px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:920px;left:419px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:920px;left:414px;white-space:nowrap" class="ft77">(</P>
+<P style="position:absolute;top:932px;left:421px;white-space:nowrap" class="ft77">3</P>
+<P style="position:absolute;top:932px;left:414px;white-space:nowrap" class="ft77">n</P>
+<P style="position:absolute;top:865px;left:657px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:865px;left:651px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:865px;left:647px;white-space:nowrap" class="ft717">(<br/>3</P>
+<P style="position:absolute;top:878px;left:584px;white-space:nowrap" class="ft77">n</P>
+<P style="position:absolute;top:865px;left:568px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:865px;left:563px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:865px;left:558px;white-space:nowrap" class="ft77">(</P>
+<P style="position:absolute;top:878px;left:564px;white-space:nowrap" class="ft77">n</P>
+<P style="position:absolute;top:878px;left:558px;white-space:nowrap" class="ft77">3</P>
+<P style="position:absolute;top:878px;left:441px;white-space:nowrap" class="ft77">3</P>
+<P style="position:absolute;top:865px;left:424px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:865px;left:419px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:865px;left:414px;white-space:nowrap" class="ft717">(<br/>33</P>
+<P style="position:absolute;top:838px;left:656px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:838px;left:651px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:838px;left:648px;white-space:nowrap" class="ft717">(<br/>2</P>
+<P style="position:absolute;top:851px;left:584px;white-space:nowrap" class="ft77">n</P>
+<P style="position:absolute;top:838px;left:567px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:838px;left:561px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:838px;left:559px;white-space:nowrap" class="ft77">(</P>
+<P style="position:absolute;top:851px;left:565px;white-space:nowrap" class="ft77">n</P>
+<P style="position:absolute;top:851px;left:559px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:851px;left:440px;white-space:nowrap" class="ft77">3</P>
+<P style="position:absolute;top:838px;left:423px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:838px;left:419px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:838px;left:415px;white-space:nowrap" class="ft717">(<br/>23</P>
+<P style="position:absolute;top:851px;left:352px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:838px;left:336px;white-space:nowrap" class="ft77">)</P>
+<P style="position:absolute;top:838px;left:331px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:838px;left:327px;white-space:nowrap" class="ft77">(</P>
+<P style="position:absolute;top:851px;left:329px;white-space:nowrap" class="ft77">22</P>
+<P style="position:absolute;top:823px;left:651px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:823px;left:583px;white-space:nowrap" class="ft77">n</P>
+<P style="position:absolute;top:823px;left:564px;white-space:nowrap" class="ft77">n</P>
+<P style="position:absolute;top:823px;left:559px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:823px;left:439px;white-space:nowrap" class="ft77">3</P>
+<P style="position:absolute;top:823px;left:415px;white-space:nowrap" class="ft77">13</P>
+<P style="position:absolute;top:823px;left:351px;white-space:nowrap" class="ft77">2</P>
+<P style="position:absolute;top:823px;left:329px;white-space:nowrap" class="ft77">12</P>
+<P style="position:absolute;top:823px;left:267px;white-space:nowrap" class="ft77">1</P>
+<P style="position:absolute;top:823px;left:245px;white-space:nowrap" class="ft77">11</P>
+<P style="position:absolute;top:922px;left:637px;white-space:nowrap" class="ft74">b</P>
+<P style="position:absolute;top:922px;left:574px;white-space:nowrap" class="ft74">x</P>
+<P style="position:absolute;top:922px;left:548px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:922px;left:492px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:922px;left:430px;white-space:nowrap" class="ft74">x</P>
+<P style="position:absolute;top:922px;left:404px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:895px;left:644px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:895px;left:564px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:895px;left:492px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:895px;left:420px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:868px;left:637px;white-space:nowrap" class="ft74">b</P>
+<P style="position:absolute;top:868px;left:574px;white-space:nowrap" class="ft74">x</P>
+<P style="position:absolute;top:868px;left:548px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:868px;left:492px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:868px;left:430px;white-space:nowrap" class="ft74">x</P>
+<P style="position:absolute;top:868px;left:404px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:841px;left:638px;white-space:nowrap" class="ft74">b</P>
+<P style="position:absolute;top:841px;left:573px;white-space:nowrap" class="ft74">x</P>
+<P style="position:absolute;top:841px;left:549px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:841px;left:492px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:841px;left:429px;white-space:nowrap" class="ft74">x</P>
+<P style="position:absolute;top:841px;left:405px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:841px;left:342px;white-space:nowrap" class="ft74">x</P>
+<P style="position:absolute;top:841px;left:318px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:813px;left:641px;white-space:nowrap" class="ft74">b</P>
+<P style="position:absolute;top:813px;left:572px;white-space:nowrap" class="ft74">x</P>
+<P style="position:absolute;top:813px;left:550px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:813px;left:492px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:813px;left:428px;white-space:nowrap" class="ft74">x</P>
+<P style="position:absolute;top:813px;left:406px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:813px;left:341px;white-space:nowrap" class="ft74">x</P>
+<P style="position:absolute;top:813px;left:320px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:813px;left:257px;white-space:nowrap" class="ft74">x</P>
+<P style="position:absolute;top:813px;left:236px;white-space:nowrap" class="ft74">a</P>
+<P style="position:absolute;top:958px;left:180px;white-space:nowrap" class="ft74">Modu honetan, n-1 pausoan &#160;(1) erako sistema triangeluar bat lortuko dugu eta</P>
+<P style="position:absolute;top:990px;left:127px;white-space:nowrap" class="ft74">bere ebazpena ordezkapen erregresiboa erabiliz egin daiteke. Eragiketa hauek</P>
+<P style="position:absolute;top:1021px;left:127px;white-space:nowrap" class="ft74">ekuazioetan egin beharrean [A,B] matrize zabalduan egin daitezke.</P>
+</DIV>
+<!-- Page 8 -->
+<a name="8"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page8-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:443px;white-space:nowrap" class="ft80">8</P>
+<P style="position:absolute;top:109px;left:180px;white-space:nowrap" class="ft84">Hasierako sistema bateragarri determinatua ez bada,&#160;&#160;Gauss-en metodoa aplikatu</P>
+<P style="position:absolute;top:140px;left:127px;white-space:nowrap" class="ft84">ondoren ez dugu (1) erako sistema bat lortuko. Kasu honetan, ondoko posibilitateen</P>
+<P style="position:absolute;top:171px;left:127px;white-space:nowrap" class="ft84">arteko batera helduko gara:</P>
+<P style="position:absolute;top:202px;left:180px;white-space:nowrap" class="ft84">I ) Baldin &#160;m&lt;n &#160;bada</P>
+<P style="position:absolute;top:368px;left:227px;white-space:nowrap" class="ft86"></P>
+<P style="position:absolute;top:353px;left:227px;white-space:nowrap" class="ft86"></P>
+<P style="position:absolute;top:336px;left:227px;white-space:nowrap" class="ft86"></P>
+<P style="position:absolute;top:374px;left:227px;white-space:nowrap" class="ft86"></P>
+<P style="position:absolute;top:304px;left:227px;white-space:nowrap" class="ft86"></P>
+<P style="position:absolute;top:280px;left:227px;white-space:nowrap" class="ft86"></P>
+<P style="position:absolute;top:318px;left:227px;white-space:nowrap" class="ft86"></P>
+<P style="position:absolute;top:263px;left:227px;white-space:nowrap" class="ft86"></P>
+<P style="position:absolute;top:370px;left:617px;white-space:nowrap" class="ft86">=</P>
+<P style="position:absolute;top:370px;left:527px;white-space:nowrap" class="ft86">+</P>
+<P style="position:absolute;top:370px;left:471px;white-space:nowrap" class="ft86">+</P>
+<P style="position:absolute;top:289px;left:617px;white-space:nowrap" class="ft86">=</P>
+<P style="position:absolute;top:289px;left:527px;white-space:nowrap" class="ft86">+</P>
+<P style="position:absolute;top:289px;left:376px;white-space:nowrap" class="ft86">+</P>
+<P style="position:absolute;top:262px;left:617px;white-space:nowrap" class="ft86">=</P>
+<P style="position:absolute;top:262px;left:527px;white-space:nowrap" class="ft86">+</P>
+<P style="position:absolute;top:262px;left:376px;white-space:nowrap" class="ft86">+</P>
+<P style="position:absolute;top:262px;left:290px;white-space:nowrap" class="ft86">+</P>
+<P style="position:absolute;top:385px;left:654px;white-space:nowrap" class="ft87">m</P>
+<P style="position:absolute;top:385px;left:591px;white-space:nowrap" class="ft87">n</P>
+<P style="position:absolute;top:385px;left:565px;white-space:nowrap" class="ft87">mn</P>
+<P style="position:absolute;top:385px;left:442px;white-space:nowrap" class="ft87">m</P>
+<P style="position:absolute;top:385px;left:413px;white-space:nowrap" class="ft87">mm</P>
+<P style="position:absolute;top:304px;left:655px;white-space:nowrap" class="ft87">2</P>
+<P style="position:absolute;top:304px;left:590px;white-space:nowrap" class="ft87">n</P>
+<P style="position:absolute;top:304px;left:572px;white-space:nowrap" class="ft87">n</P>
+<P style="position:absolute;top:304px;left:565px;white-space:nowrap" class="ft87">2</P>
+<P style="position:absolute;top:304px;left:351px;white-space:nowrap" class="ft87">2</P>
+<P style="position:absolute;top:304px;left:329px;white-space:nowrap" class="ft87">22</P>
+<P style="position:absolute;top:276px;left:655px;white-space:nowrap" class="ft87">1</P>
+<P style="position:absolute;top:276px;left:588px;white-space:nowrap" class="ft87">n</P>
+<P style="position:absolute;top:276px;left:570px;white-space:nowrap" class="ft87">n</P>
+<P style="position:absolute;top:276px;left:565px;white-space:nowrap" class="ft87">1</P>
+<P style="position:absolute;top:276px;left:351px;white-space:nowrap" class="ft87">2</P>
+<P style="position:absolute;top:276px;left:327px;white-space:nowrap" class="ft87">12</P>
+<P style="position:absolute;top:276px;left:267px;white-space:nowrap" class="ft87">1</P>
+<P style="position:absolute;top:276px;left:245px;white-space:nowrap" class="ft87">11</P>
+<P style="position:absolute;top:375px;left:644px;white-space:nowrap" class="ft84">b</P>
+<P style="position:absolute;top:375px;left:579px;white-space:nowrap" class="ft84">x</P>
+<P style="position:absolute;top:375px;left:554px;white-space:nowrap" class="ft84">a</P>
+<P style="position:absolute;top:375px;left:497px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:375px;left:431px;white-space:nowrap" class="ft84">x</P>
+<P style="position:absolute;top:375px;left:403px;white-space:nowrap" class="ft84">a</P>
+<P style="position:absolute;top:348px;left:647px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:348px;left:570px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:348px;left:497px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:348px;left:469px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:321px;left:647px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:321px;left:570px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:321px;left:497px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:321px;left:469px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:294px;left:645px;white-space:nowrap" class="ft84">b</P>
+<P style="position:absolute;top:294px;left:578px;white-space:nowrap" class="ft84">x</P>
+<P style="position:absolute;top:294px;left:555px;white-space:nowrap" class="ft84">a</P>
+<P style="position:absolute;top:294px;left:497px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:294px;left:469px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:294px;left:340px;white-space:nowrap" class="ft84">x</P>
+<P style="position:absolute;top:294px;left:317px;white-space:nowrap" class="ft84">a</P>
+<P style="position:absolute;top:267px;left:646px;white-space:nowrap" class="ft84">b</P>
+<P style="position:absolute;top:267px;left:578px;white-space:nowrap" class="ft84">x</P>
+<P style="position:absolute;top:267px;left:556px;white-space:nowrap" class="ft84">a</P>
+<P style="position:absolute;top:267px;left:497px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:267px;left:469px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:267px;left:340px;white-space:nowrap" class="ft84">x</P>
+<P style="position:absolute;top:267px;left:318px;white-space:nowrap" class="ft84">a</P>
+<P style="position:absolute;top:267px;left:257px;white-space:nowrap" class="ft84">x</P>
+<P style="position:absolute;top:267px;left:236px;white-space:nowrap" class="ft84">a</P>
+<P style="position:absolute;top:413px;left:180px;white-space:nowrap" class="ft84">Azken ekuazioak n-(m-1) ezezagun erlazionatzen ditu.&#160;&#160;xm+1, ...,&#160;&#160;xn&#160;&#160;&#160;ezezagunei</P>
+<P style="position:absolute;top:444px;left:127px;white-space:nowrap" class="ft84">dagozkien gaiak bigarren atalera pasatuz, ekuazio linealetako sistema berri bat lortuko</P>
+<P style="position:absolute;top:474px;left:127px;white-space:nowrap" class="ft84">dugu, non x1, ...,&#160;&#160;xm&#160;ezezagunak&#160;&#160;xm+1, ...,&#160;&#160;xn&#160;ezezagunen funtzioan adierazita dauden.</P>
+<P style="position:absolute;top:506px;left:127px;white-space:nowrap" class="ft84">Hau da, sistema bateragarri&#160;&#160;indeterminatua da.</P>
+<P style="position:absolute;top:568px;left:180px;white-space:nowrap" class="ft84">II ) Baldin m &gt;n bada</P>
+<P style="position:absolute;top:780px;left:272px;white-space:nowrap" class="ft86"></P>
+<P style="position:absolute;top:762px;left:272px;white-space:nowrap" class="ft86"></P>
+<P style="position:absolute;top:745px;left:272px;white-space:nowrap" class="ft86"></P>
+<P style="position:absolute;top:728px;left:272px;white-space:nowrap" class="ft86"></P>
+<P style="position:absolute;top:794px;left:272px;white-space:nowrap" class="ft86"></P>
+<P style="position:absolute;top:697px;left:272px;white-space:nowrap" class="ft86"></P>
+<P style="position:absolute;top:680px;left:272px;white-space:nowrap" class="ft86"></P>
+<P style="position:absolute;top:662px;left:272px;white-space:nowrap" class="ft86"></P>
+<P style="position:absolute;top:645px;left:272px;white-space:nowrap" class="ft86"></P>
+<P style="position:absolute;top:710px;left:272px;white-space:nowrap" class="ft86"></P>
+<P style="position:absolute;top:628px;left:272px;white-space:nowrap" class="ft86"></P>
+<P style="position:absolute;top:789px;left:564px;white-space:nowrap" class="ft86">=</P>
+<P style="position:absolute;top:735px;left:564px;white-space:nowrap" class="ft86">=</P>
+<P style="position:absolute;top:708px;left:564px;white-space:nowrap" class="ft86">=</P>
+<P style="position:absolute;top:654px;left:564px;white-space:nowrap" class="ft86">=</P>
+<P style="position:absolute;top:654px;left:477px;white-space:nowrap" class="ft86">+</P>
+<P style="position:absolute;top:654px;left:421px;white-space:nowrap" class="ft86">+</P>
+<P style="position:absolute;top:627px;left:564px;white-space:nowrap" class="ft86">=</P>
+<P style="position:absolute;top:627px;left:477px;white-space:nowrap" class="ft86">+</P>
+<P style="position:absolute;top:627px;left:421px;white-space:nowrap" class="ft86">+</P>
+<P style="position:absolute;top:627px;left:335px;white-space:nowrap" class="ft86">+</P>
+<P style="position:absolute;top:748px;left:608px;white-space:nowrap" class="ft812">+</P>
+<P style="position:absolute;top:805px;left:605px;white-space:nowrap" class="ft87">m</P>
+<P style="position:absolute;top:805px;left:531px;white-space:nowrap" class="ft87">n</P>
+<P style="position:absolute;top:751px;left:613px;white-space:nowrap" class="ft87">1</P>
+<P style="position:absolute;top:751px;left:601px;white-space:nowrap" class="ft87">n</P>
+<P style="position:absolute;top:751px;left:531px;white-space:nowrap" class="ft87">n</P>
+<P style="position:absolute;top:724px;left:606px;white-space:nowrap" class="ft87">n</P>
+<P style="position:absolute;top:724px;left:538px;white-space:nowrap" class="ft87">n</P>
+<P style="position:absolute;top:724px;left:514px;white-space:nowrap" class="ft87">nn</P>
+<P style="position:absolute;top:670px;left:606px;white-space:nowrap" class="ft87">2</P>
+<P style="position:absolute;top:670px;left:539px;white-space:nowrap" class="ft87">n</P>
+<P style="position:absolute;top:670px;left:520px;white-space:nowrap" class="ft87">n</P>
+<P style="position:absolute;top:670px;left:514px;white-space:nowrap" class="ft87">2</P>
+<P style="position:absolute;top:670px;left:396px;white-space:nowrap" class="ft87">2</P>
+<P style="position:absolute;top:670px;left:374px;white-space:nowrap" class="ft87">22</P>
+<P style="position:absolute;top:643px;left:606px;white-space:nowrap" class="ft87">1</P>
+<P style="position:absolute;top:643px;left:538px;white-space:nowrap" class="ft87">n</P>
+<P style="position:absolute;top:643px;left:519px;white-space:nowrap" class="ft87">n</P>
+<P style="position:absolute;top:643px;left:514px;white-space:nowrap" class="ft87">1</P>
+<P style="position:absolute;top:643px;left:396px;white-space:nowrap" class="ft87">2</P>
+<P style="position:absolute;top:643px;left:372px;white-space:nowrap" class="ft87">12</P>
+<P style="position:absolute;top:643px;left:312px;white-space:nowrap" class="ft87">1</P>
+<P style="position:absolute;top:643px;left:290px;white-space:nowrap" class="ft87">11</P>
+<P style="position:absolute;top:795px;left:594px;white-space:nowrap" class="ft84">b</P>
+<P style="position:absolute;top:795px;left:520px;white-space:nowrap" class="ft84">x</P>
+<P style="position:absolute;top:795px;left:511px;white-space:nowrap" class="ft84">0</P>
+<P style="position:absolute;top:768px;left:599px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:768px;left:519px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:741px;left:591px;white-space:nowrap" class="ft84">b</P>
+<P style="position:absolute;top:741px;left:520px;white-space:nowrap" class="ft84">x</P>
+<P style="position:absolute;top:741px;left:511px;white-space:nowrap" class="ft84">0</P>
+<P style="position:absolute;top:714px;left:596px;white-space:nowrap" class="ft84">b</P>
+<P style="position:absolute;top:714px;left:527px;white-space:nowrap" class="ft84">x</P>
+<P style="position:absolute;top:714px;left:504px;white-space:nowrap" class="ft84">a</P>
+<P style="position:absolute;top:687px;left:599px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:687px;left:519px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:687px;left:447px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:660px;left:596px;white-space:nowrap" class="ft84">b</P>
+<P style="position:absolute;top:660px;left:528px;white-space:nowrap" class="ft84">x</P>
+<P style="position:absolute;top:660px;left:504px;white-space:nowrap" class="ft84">a</P>
+<P style="position:absolute;top:660px;left:447px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:660px;left:385px;white-space:nowrap" class="ft84">x</P>
+<P style="position:absolute;top:660px;left:362px;white-space:nowrap" class="ft84">a</P>
+<P style="position:absolute;top:633px;left:597px;white-space:nowrap" class="ft84">b</P>
+<P style="position:absolute;top:633px;left:527px;white-space:nowrap" class="ft84">x</P>
+<P style="position:absolute;top:633px;left:504px;white-space:nowrap" class="ft84">a</P>
+<P style="position:absolute;top:633px;left:447px;white-space:nowrap" class="ft84">...</P>
+<P style="position:absolute;top:633px;left:385px;white-space:nowrap" class="ft84">x</P>
+<P style="position:absolute;top:633px;left:363px;white-space:nowrap" class="ft84">a</P>
+<P style="position:absolute;top:633px;left:302px;white-space:nowrap" class="ft84">x</P>
+<P style="position:absolute;top:633px;left:281px;white-space:nowrap" class="ft84">a</P>
+<P style="position:absolute;top:832px;left:180px;white-space:nowrap" class="ft84">bn+1, ...,&#160;&#160;bm&#160;balioen artean nulua ez den gutxienez bat existitzen bada, sistema</P>
+<P style="position:absolute;top:864px;left:127px;white-space:nowrap" class="ft84">bateraezina izango da. (&#160;bn+1, ...,&#160;bm&#160;balio guztiak nuluak badira, lortu dugun sistema (1)</P>
+<P style="position:absolute;top:894px;left:127px;white-space:nowrap" class="ft84">erako sistema bat da eta bateragarri determinatua izango da).</P>
+<P style="position:absolute;top:956px;left:180px;white-space:nowrap" class="ft84">Prozedura hau erabil daiteke ere matrize baten heinaren kalkulurako.</P>
+<P style="position:absolute;top:1019px;left:180px;white-space:nowrap" class="ft84">n ezezaguneko n ekuazio linealetako sistema baten ebazpenerako&#160;&#160;Gauss-en</P>
+<P style="position:absolute;top:1058px;left:127px;white-space:nowrap" class="ft84">metodoaren kostua gutxi gorabehera&#160;</P>
+<P style="position:absolute;top:1067px;left:416px;white-space:nowrap" class="ft84">3</P>
+<P style="position:absolute;top:1054px;left:396px;white-space:nowrap" class="ft84">n</P>
+<P style="position:absolute;top:1051px;left:407px;white-space:nowrap" class="ft87">3</P>
+<P style="position:absolute;top:1058px;left:431px;white-space:nowrap" class="ft84">&#160; biderketa-zatiketa ingurukoa da.</P>
+<P style="position:absolute;top:1098px;left:180px;white-space:nowrap" class="ft84">Cramer-en metodoaren kostua&#160;&#160;Gauss-en metodoaren kostua baino askoz</P>
+<P style="position:absolute;top:1128px;left:127px;white-space:nowrap" class="ft84">handiagoa dela ohartzea komenigarria da. Honela, adibidez, n=10 denean kostuak gutxi</P>
+</DIV>
+<!-- Page 9 -->
+<a name="9"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page9-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:443px;white-space:nowrap" class="ft90">9</P>
+<P style="position:absolute;top:109px;left:127px;white-space:nowrap" class="ft94">gorabehera 333 biderketa/zatiketa eta 300 milioi biderketa/zatiketa ingurukoak direla,</P>
+<P style="position:absolute;top:140px;left:127px;white-space:nowrap" class="ft94">hurrenez hurren, izango dugu.</P>
+<P style="position:absolute;top:202px;left:127px;white-space:nowrap" class="ft92"><b>4.4.&#160;Gauss-Jordan-en metodoa.</b></P>
+<P style="position:absolute;top:264px;left:180px;white-space:nowrap" class="ft94">Gauss-en metodoaren antzeko bat&#160;Gauss-Jordan-&#160;en metodoa da. Metodo honetan</P>
+<P style="position:absolute;top:296px;left:127px;white-space:nowrap" class="ft94">hasierako&#160;&#160;A.X = B sistema, sistema triangeluar batean transformatu beharrean, sistema</P>
+<P style="position:absolute;top:326px;left:127px;white-space:nowrap" class="ft94">diagonal batean transformatzen da.&#160;&#160;Gauss-en metodoarekiko desberdintasuna , etapa</P>
+<P style="position:absolute;top:357px;left:127px;white-space:nowrap" class="ft94">bakoitzean ekuazio bat diagonal nagusiaren azpitik eta gainetik zeroak lortzeko</P>
+<P style="position:absolute;top:388px;left:127px;white-space:nowrap" class="ft94">erabiltzen dela datza.</P>
+<P style="position:absolute;top:451px;left:127px;white-space:nowrap" class="ft94">Lehenengo pausoa: Baldin&#160;a11&#160;</P>
+<P style="position:absolute;top:445px;left:381px;white-space:nowrap" class="ft96">≠&#160;0 bada, lehenengo ekuazioa erabiltzen da&#160;x</P>
+<P style="position:absolute;top:457px;left:758px;white-space:nowrap" class="ft95">1</P>
+<P style="position:absolute;top:481px;left:127px;white-space:nowrap" class="ft94">ezezagunaren koefizienteak gainerako ekuazioetan ezabatzeko:</P>
+<P style="position:absolute;top:536px;left:372px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:550px;left:344px;white-space:nowrap" class="ft97">11</P>
+<P style="position:absolute;top:524px;left:345px;white-space:nowrap" class="ft97">21</P>
+<P style="position:absolute;top:536px;left:309px;white-space:nowrap" class="ft97">2</P>
+<P style="position:absolute;top:526px;left:361px;white-space:nowrap" class="ft94">E</P>
+<P style="position:absolute;top:540px;left:335px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:514px;left:335px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:526px;left:296px;white-space:nowrap" class="ft94">E</P>
+<P style="position:absolute;top:520px;left:321px;white-space:nowrap" class="ft96">−</P>
+<P style="position:absolute;top:526px;left:380px;white-space:nowrap" class="ft94">,&#160;</P>
+<P style="position:absolute;top:536px;left:468px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:550px;left:440px;white-space:nowrap" class="ft97">11</P>
+<P style="position:absolute;top:524px;left:440px;white-space:nowrap" class="ft97">31</P>
+<P style="position:absolute;top:536px;left:405px;white-space:nowrap" class="ft97">3</P>
+<P style="position:absolute;top:526px;left:456px;white-space:nowrap" class="ft94">E</P>
+<P style="position:absolute;top:540px;left:431px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:514px;left:430px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:526px;left:392px;white-space:nowrap" class="ft94">E</P>
+<P style="position:absolute;top:520px;left:415px;white-space:nowrap" class="ft96">−</P>
+<P style="position:absolute;top:526px;left:475px;white-space:nowrap" class="ft94">, ... ,&#160;</P>
+<P style="position:absolute;top:536px;left:591px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:550px;left:563px;white-space:nowrap" class="ft97">11</P>
+<P style="position:absolute;top:524px;left:568px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:524px;left:563px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:536px;left:527px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:526px;left:578px;white-space:nowrap" class="ft94">E</P>
+<P style="position:absolute;top:540px;left:554px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:514px;left:552px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:526px;left:513px;white-space:nowrap" class="ft94">E</P>
+<P style="position:absolute;top:520px;left:538px;white-space:nowrap" class="ft96">−</P>
+<P style="position:absolute;top:594px;left:207px;white-space:nowrap" class="ft94">k garren ekuazioa &#160;+&#160;</P>
+<P style="position:absolute;top:595px;left:411px;white-space:nowrap" class="ft96"></P>
+<P style="position:absolute;top:574px;left:411px;white-space:nowrap" class="ft96"></P>
+<P style="position:absolute;top:595px;left:361px;white-space:nowrap" class="ft96"></P>
+<P style="position:absolute;top:574px;left:361px;white-space:nowrap" class="ft96">&#160;−</P>
+<P style="position:absolute;top:617px;left:388px;white-space:nowrap" class="ft97">11</P>
+<P style="position:absolute;top:591px;left:401px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:591px;left:395px;white-space:nowrap" class="ft97">k</P>
+<P style="position:absolute;top:607px;left:379px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:581px;left:385px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:594px;left:421px;white-space:nowrap" class="ft94">. lehen ekuazioa &#160; &#160; &#160; &#160;</P>
+<P style="position:absolute;top:588px;left:573px;white-space:nowrap" class="ft96">∀&#160;k = 2,...,n</P>
+<P style="position:absolute;top:643px;left:180px;white-space:nowrap" class="ft94">Baldin a11&#160;= 0 bada, ekuazioen ordena aldatuko dugu a11&#160;berria ez-nulua izan</P>
+<P style="position:absolute;top:675px;left:127px;white-space:nowrap" class="ft94">dadin. Lehenengo pauso hau eta&#160;Gauss-en metodoaren lehenengoa berdinak dira.</P>
+<P style="position:absolute;top:741px;left:127px;white-space:nowrap" class="ft94">Bigarren pausoa: Baldin&#160;</P>
+<P style="position:absolute;top:741px;left:357px;white-space:nowrap" class="ft94">0</P>
+<P style="position:absolute;top:741px;left:313px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:739px;left:331px;white-space:nowrap" class="ft97">)</P>
+<P style="position:absolute;top:739px;left:326px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:739px;left:323px;white-space:nowrap" class="ft916">(<br/>22&#160;≠</P>
+<P style="position:absolute;top:741px;left:369px;white-space:nowrap" class="ft94">bada, bigarren ekuazioa erabiltzen da x2&#160;ezezagunaren</P>
+<P style="position:absolute;top:774px;left:127px;white-space:nowrap" class="ft94">koefizienteak gainerako ekuazioetan ezabatzeko:</P>
+<P style="position:absolute;top:831px;left:369px;white-space:nowrap" class="ft97">2</P>
+<P style="position:absolute;top:832px;left:347px;white-space:nowrap" class="ft97">)</P>
+<P style="position:absolute;top:832px;left:341px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:832px;left:338px;white-space:nowrap" class="ft917">(<br/>22</P>
+<P style="position:absolute;top:818px;left:338px;white-space:nowrap" class="ft97">12</P>
+<P style="position:absolute;top:831px;left:303px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:821px;left:356px;white-space:nowrap" class="ft94">E</P>
+<P style="position:absolute;top:836px;left:327px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:809px;left:329px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:821px;left:290px;white-space:nowrap" class="ft94">E</P>
+<P style="position:absolute;top:815px;left:313px;white-space:nowrap" class="ft96">−</P>
+<P style="position:absolute;top:821px;left:377px;white-space:nowrap" class="ft94">,&#160;</P>
+<P style="position:absolute;top:831px;left:468px;white-space:nowrap" class="ft97">2</P>
+<P style="position:absolute;top:833px;left:446px;white-space:nowrap" class="ft97">)</P>
+<P style="position:absolute;top:833px;left:440px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:833px;left:437px;white-space:nowrap" class="ft916">(<br/>22</P>
+<P style="position:absolute;top:806px;left:446px;white-space:nowrap" class="ft97">)</P>
+<P style="position:absolute;top:806px;left:440px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:806px;left:437px;white-space:nowrap" class="ft916">(<br/>32</P>
+<P style="position:absolute;top:831px;left:402px;white-space:nowrap" class="ft97">3</P>
+<P style="position:absolute;top:821px;left:455px;white-space:nowrap" class="ft94">E</P>
+<P style="position:absolute;top:836px;left:426px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:809px;left:426px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:821px;left:388px;white-space:nowrap" class="ft94">E</P>
+<P style="position:absolute;top:815px;left:412px;white-space:nowrap" class="ft96">−</P>
+<P style="position:absolute;top:821px;left:476px;white-space:nowrap" class="ft94">, ... ,&#160;</P>
+<P style="position:absolute;top:831px;left:595px;white-space:nowrap" class="ft97">2</P>
+<P style="position:absolute;top:833px;left:572px;white-space:nowrap" class="ft97">)</P>
+<P style="position:absolute;top:833px;left:567px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:833px;left:564px;white-space:nowrap" class="ft916">(<br/>22</P>
+<P style="position:absolute;top:806px;left:572px;white-space:nowrap" class="ft97">)</P>
+<P style="position:absolute;top:806px;left:567px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:806px;left:564px;white-space:nowrap" class="ft97">(</P>
+<P style="position:absolute;top:820px;left:570px;white-space:nowrap" class="ft97">2</P>
+<P style="position:absolute;top:820px;left:564px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:831px;left:528px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:821px;left:582px;white-space:nowrap" class="ft94">E</P>
+<P style="position:absolute;top:836px;left:554px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:810px;left:554px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:821px;left:514px;white-space:nowrap" class="ft94">E</P>
+<P style="position:absolute;top:815px;left:539px;white-space:nowrap" class="ft96">−</P>
+<P style="position:absolute;top:887px;left:180px;white-space:nowrap" class="ft94">k garren ekuazioa &#160;+&#160;</P>
+<P style="position:absolute;top:888px;left:385px;white-space:nowrap" class="ft96"></P>
+<P style="position:absolute;top:868px;left:385px;white-space:nowrap" class="ft96"></P>
+<P style="position:absolute;top:888px;left:334px;white-space:nowrap" class="ft96"></P>
+<P style="position:absolute;top:868px;left:334px;white-space:nowrap" class="ft96">&#160;−</P>
+<P style="position:absolute;top:898px;left:369px;white-space:nowrap" class="ft97">)</P>
+<P style="position:absolute;top:898px;left:365px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:898px;left:361px;white-space:nowrap" class="ft916">(<br/>22</P>
+<P style="position:absolute;top:872px;left:376px;white-space:nowrap" class="ft97">)</P>
+<P style="position:absolute;top:872px;left:371px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:872px;left:368px;white-space:nowrap" class="ft97">(</P>
+<P style="position:absolute;top:885px;left:375px;white-space:nowrap" class="ft97">2</P>
+<P style="position:absolute;top:885px;left:368px;white-space:nowrap" class="ft97">k</P>
+<P style="position:absolute;top:901px;left:351px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:875px;left:358px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:887px;left:395px;white-space:nowrap" class="ft94">. bigarren ekuazioa &#160; &#160; &#160; &#160;</P>
+<P style="position:absolute;top:881px;left:567px;white-space:nowrap" class="ft96">∀&#160;k = 1, 3, ...,n</P>
+<P style="position:absolute;top:973px;left:127px;white-space:nowrap" class="ft94">n-garren pausoa: Demagun&#160;</P>
+<P style="position:absolute;top:973px;left:388px;white-space:nowrap" class="ft94">0</P>
+<P style="position:absolute;top:973px;left:332px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:970px;left:363px;white-space:nowrap" class="ft97">)</P>
+<P style="position:absolute;top:970px;left:358px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:970px;left:347px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:970px;left:342px;white-space:nowrap" class="ft916">(<br/>nn</P>
+<P style="position:absolute;top:967px;left:374px;white-space:nowrap" class="ft96">≠</P>
+<P style="position:absolute;top:967px;left:353px;white-space:nowrap" class="ft912">−</P>
+<P style="position:absolute;top:973px;left:401px;white-space:nowrap" class="ft94">dela, elementu hau erabiltzen da&#160;&#160;xn&#160;ezezagunaren</P>
+<P style="position:absolute;top:1005px;left:127px;white-space:nowrap" class="ft94">koefizienteak gainerako ekuazioetan ezabatzeko:</P>
+<P style="position:absolute;top:1063px;left:357px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:1065px;left:334px;white-space:nowrap" class="ft97">)</P>
+<P style="position:absolute;top:1065px;left:329px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:1065px;left:317px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:1065px;left:313px;white-space:nowrap" class="ft916">(<br/>nn</P>
+<P style="position:absolute;top:1038px;left:334px;white-space:nowrap" class="ft97">)</P>
+<P style="position:absolute;top:1038px;left:329px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:1038px;left:317px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:1038px;left:313px;white-space:nowrap" class="ft97">(</P>
+<P style="position:absolute;top:1051px;left:317px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:1051px;left:312px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:1063px;left:278px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:1053px;left:344px;white-space:nowrap" class="ft94">E</P>
+<P style="position:absolute;top:1067px;left:303px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:1041px;left:303px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:1053px;left:266px;white-space:nowrap" class="ft94">E</P>
+<P style="position:absolute;top:1062px;left:324px;white-space:nowrap" class="ft912">−</P>
+<P style="position:absolute;top:1035px;left:324px;white-space:nowrap" class="ft912">−</P>
+<P style="position:absolute;top:1047px;left:288px;white-space:nowrap" class="ft96">−</P>
+<P style="position:absolute;top:1053px;left:366px;white-space:nowrap" class="ft94">,&#160;</P>
+<P style="position:absolute;top:1063px;left:470px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:1065px;left:447px;white-space:nowrap" class="ft97">)</P>
+<P style="position:absolute;top:1065px;left:442px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:1065px;left:431px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:1065px;left:426px;white-space:nowrap" class="ft916">(<br/>nn</P>
+<P style="position:absolute;top:1038px;left:447px;white-space:nowrap" class="ft97">)</P>
+<P style="position:absolute;top:1038px;left:442px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:1038px;left:431px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:1038px;left:426px;white-space:nowrap" class="ft97">(</P>
+<P style="position:absolute;top:1051px;left:432px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:1051px;left:426px;white-space:nowrap" class="ft97">2</P>
+<P style="position:absolute;top:1063px;left:390px;white-space:nowrap" class="ft97">2</P>
+<P style="position:absolute;top:1053px;left:457px;white-space:nowrap" class="ft94">E</P>
+<P style="position:absolute;top:1067px;left:416px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:1041px;left:416px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:1053px;left:377px;white-space:nowrap" class="ft94">E</P>
+<P style="position:absolute;top:1062px;left:437px;white-space:nowrap" class="ft912">−</P>
+<P style="position:absolute;top:1035px;left:437px;white-space:nowrap" class="ft912">−</P>
+<P style="position:absolute;top:1047px;left:402px;white-space:nowrap" class="ft96">−</P>
+<P style="position:absolute;top:1053px;left:478px;white-space:nowrap" class="ft94">, ... ,&#160;</P>
+<P style="position:absolute;top:1063px;left:620px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:1065px;left:597px;white-space:nowrap" class="ft97">)</P>
+<P style="position:absolute;top:1065px;left:592px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:1065px;left:581px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:1065px;left:576px;white-space:nowrap" class="ft916">(<br/>nn</P>
+<P style="position:absolute;top:1038px;left:597px;white-space:nowrap" class="ft97">)</P>
+<P style="position:absolute;top:1038px;left:592px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:1038px;left:581px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:1038px;left:576px;white-space:nowrap" class="ft97">(</P>
+<P style="position:absolute;top:1051px;left:593px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:1051px;left:587px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:1051px;left:576px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:1063px;left:541px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:1063px;left:530px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:1053px;left:606px;white-space:nowrap" class="ft94">E</P>
+<P style="position:absolute;top:1067px;left:566px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:1041px;left:566px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:1053px;left:516px;white-space:nowrap" class="ft94">E</P>
+<P style="position:absolute;top:1062px;left:586px;white-space:nowrap" class="ft912">−</P>
+<P style="position:absolute;top:1035px;left:586px;white-space:nowrap" class="ft912">−</P>
+<P style="position:absolute;top:1048px;left:583px;white-space:nowrap" class="ft912">−</P>
+<P style="position:absolute;top:1059px;left:536px;white-space:nowrap" class="ft912">−&#160;−</P>
+<P style="position:absolute;top:1119px;left:180px;white-space:nowrap" class="ft94">k garren ekuazioa &#160;+&#160;</P>
+<P style="position:absolute;top:1120px;left:398px;white-space:nowrap" class="ft96"></P>
+<P style="position:absolute;top:1100px;left:398px;white-space:nowrap" class="ft96"></P>
+<P style="position:absolute;top:1120px;left:334px;white-space:nowrap" class="ft96"></P>
+<P style="position:absolute;top:1100px;left:334px;white-space:nowrap" class="ft96">&#160;−</P>
+<P style="position:absolute;top:1127px;left:371px;white-space:nowrap" class="ft912">−</P>
+<P style="position:absolute;top:1101px;left:378px;white-space:nowrap" class="ft912">−</P>
+<P style="position:absolute;top:1130px;left:381px;white-space:nowrap" class="ft97">)</P>
+<P style="position:absolute;top:1130px;left:377px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:1130px;left:366px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:1130px;left:361px;white-space:nowrap" class="ft916">(<br/>nn</P>
+<P style="position:absolute;top:1104px;left:388px;white-space:nowrap" class="ft97">)</P>
+<P style="position:absolute;top:1104px;left:384px;white-space:nowrap" class="ft97">1</P>
+<P style="position:absolute;top:1104px;left:372px;white-space:nowrap" class="ft97">n</P>
+<P style="position:absolute;top:1104px;left:368px;white-space:nowrap" class="ft916">(<br/>kn</P>
+<P style="position:absolute;top:1133px;left:351px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:1107px;left:358px;white-space:nowrap" class="ft94">a</P>
+<P style="position:absolute;top:1119px;left:408px;white-space:nowrap" class="ft94">. &#160;n-garren ekuazioa &#160; &#160; &#160; &#160;</P>
+<P style="position:absolute;top:1113px;left:586px;white-space:nowrap" class="ft96">∀&#160;k = 1, 2, ...,n-1</P>
+</DIV>
+<!-- Page 10 -->
+<a name="10"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page10-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:439px;white-space:nowrap" class="ft100">10</P>
+<P style="position:absolute;top:140px;left:180px;white-space:nowrap" class="ft104">n pauso hauek egin ondoren, sistema diagonal bat lortzen da:</P>
+<P style="position:absolute;top:247px;left:565px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:230px;left:565px;white-space:nowrap" class="ft109"><br/></P>
+<P style="position:absolute;top:199px;left:565px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:212px;left:565px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:170px;left:565px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:250px;left:519px;white-space:nowrap" class="ft106">=</P>
+<P style="position:absolute;top:196px;left:519px;white-space:nowrap" class="ft106">=</P>
+<P style="position:absolute;top:169px;left:519px;white-space:nowrap" class="ft106">=</P>
+<P style="position:absolute;top:266px;left:557px;white-space:nowrap" class="ft107">n</P>
+<P style="position:absolute;top:266px;left:494px;white-space:nowrap" class="ft107">n</P>
+<P style="position:absolute;top:266px;left:469px;white-space:nowrap" class="ft107">nn</P>
+<P style="position:absolute;top:212px;left:557px;white-space:nowrap" class="ft107">2</P>
+<P style="position:absolute;top:212px;left:406px;white-space:nowrap" class="ft107">2</P>
+<P style="position:absolute;top:212px;left:383px;white-space:nowrap" class="ft107">22</P>
+<P style="position:absolute;top:185px;left:557px;white-space:nowrap" class="ft107">1</P>
+<P style="position:absolute;top:185px;left:349px;white-space:nowrap" class="ft107">1</P>
+<P style="position:absolute;top:185px;left:327px;white-space:nowrap" class="ft107">11</P>
+<P style="position:absolute;top:256px;left:546px;white-space:nowrap" class="ft104">b</P>
+<P style="position:absolute;top:256px;left:483px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:256px;left:459px;white-space:nowrap" class="ft104">a</P>
+<P style="position:absolute;top:229px;left:548px;white-space:nowrap" class="ft104">...</P>
+<P style="position:absolute;top:229px;left:430px;white-space:nowrap" class="ft104">...</P>
+<P style="position:absolute;top:202px;left:546px;white-space:nowrap" class="ft104">b</P>
+<P style="position:absolute;top:202px;left:395px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:202px;left:372px;white-space:nowrap" class="ft104">a</P>
+<P style="position:absolute;top:175px;left:547px;white-space:nowrap" class="ft104">b</P>
+<P style="position:absolute;top:175px;left:339px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:175px;left:318px;white-space:nowrap" class="ft104">a</P>
+<P style="position:absolute;top:292px;left:127px;white-space:nowrap" class="ft104">Eta honen soluzioa lortzea nabaria da.</P>
+<P style="position:absolute;top:363px;left:180px;white-space:nowrap" class="ft104">Metodo honen kostua gutxi gorabehera&#160;</P>
+<P style="position:absolute;top:372px;left:502px;white-space:nowrap" class="ft104">2</P>
+<P style="position:absolute;top:359px;left:480px;white-space:nowrap" class="ft104">n</P>
+<P style="position:absolute;top:356px;left:492px;white-space:nowrap" class="ft107">3</P>
+<P style="position:absolute;top:363px;left:515px;white-space:nowrap" class="ft104">&#160; biderketa-zatiketa ingurukoa da,</P>
+<P style="position:absolute;top:402px;left:127px;white-space:nowrap" class="ft104">beraz&#160;&#160;Gauss-en metodoa baino apur bat neketsuagoa da, baina ikusi ditugun gainerako</P>
+<P style="position:absolute;top:433px;left:127px;white-space:nowrap" class="ft104">metodoekin konparatzen badugu, honen kostu operatiboa txikiagoa da.</P>
+<P style="position:absolute;top:496px;left:127px;white-space:nowrap" class="ft102"><b>Matrize erregular baten alderantzizko matrizearen kalkulurako aplikazioa.</b></P>
+<P style="position:absolute;top:575px;left:180px;white-space:nowrap" class="ft104">Izan bedi A =&#160;</P>
+<P style="position:absolute;top:575px;left:332px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:556px;left:332px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:575px;left:288px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:556px;left:288px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:588px;left:322px;white-space:nowrap" class="ft104">3</P>
+<P style="position:absolute;top:588px;left:297px;white-space:nowrap" class="ft104">4</P>
+<P style="position:absolute;top:561px;left:322px;white-space:nowrap" class="ft104">1</P>
+<P style="position:absolute;top:561px;left:297px;white-space:nowrap" class="ft104">2</P>
+<P style="position:absolute;top:575px;left:341px;white-space:nowrap" class="ft104">&#160;matrize erregularra. A-ren A</P>
+<P style="position:absolute;top:571px;left:555px;white-space:nowrap" class="ft105">-1&#160;=&#160;</P>
+<P style="position:absolute;top:575px;left:655px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:556px;left:655px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:575px;left:590px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:556px;left:590px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:598px;left:646px;white-space:nowrap" class="ft107">4</P>
+<P style="position:absolute;top:598px;left:610px;white-space:nowrap" class="ft107">3</P>
+<P style="position:absolute;top:571px;left:646px;white-space:nowrap" class="ft107">2</P>
+<P style="position:absolute;top:571px;left:610px;white-space:nowrap" class="ft107">1</P>
+<P style="position:absolute;top:588px;left:635px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:588px;left:599px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:561px;left:635px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:561px;left:600px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:575px;left:664px;white-space:nowrap" class="ft104">&#160;alderantzizko</P>
+<P style="position:absolute;top:625px;left:127px;white-space:nowrap" class="ft104">matrizea kalkulatu nahi dugu. Badakigu A.A</P>
+<P style="position:absolute;top:621px;left:449px;white-space:nowrap" class="ft105">-1&#160;= I</P>
+<P style="position:absolute;top:631px;left:485px;white-space:nowrap" class="ft105">2&#160;betetzen dela, hau da:</P>
+<P style="position:absolute;top:704px;left:686px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:716px;left:686px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:686px;left:686px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:704px;left:641px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:716px;left:641px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:686px;left:641px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:698px;left:628px;white-space:nowrap" class="ft106">=</P>
+<P style="position:absolute;top:705px;left:617px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:686px;left:617px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:705px;left:446px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:686px;left:446px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:712px;left:574px;white-space:nowrap" class="ft106">+</P>
+<P style="position:absolute;top:712px;left:485px;white-space:nowrap" class="ft106">+</P>
+<P style="position:absolute;top:685px;left:578px;white-space:nowrap" class="ft106">+</P>
+<P style="position:absolute;top:685px;left:488px;white-space:nowrap" class="ft106">+</P>
+<P style="position:absolute;top:698px;left:410px;white-space:nowrap" class="ft106">⇔</P>
+<P style="position:absolute;top:704px;left:386px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:716px;left:386px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:686px;left:386px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:704px;left:341px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:716px;left:341px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:686px;left:341px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:698px;left:327px;white-space:nowrap" class="ft106">=</P>
+<P style="position:absolute;top:705px;left:316px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:686px;left:316px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:705px;left:251px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:686px;left:251px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:704px;left:242px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:716px;left:242px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:686px;left:242px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:704px;left:198px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:716px;left:198px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:686px;left:198px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:717px;left:676px;white-space:nowrap" class="ft104">1</P>
+<P style="position:absolute;top:717px;left:650px;white-space:nowrap" class="ft104">0</P>
+<P style="position:absolute;top:690px;left:676px;white-space:nowrap" class="ft104">0</P>
+<P style="position:absolute;top:690px;left:650px;white-space:nowrap" class="ft104">1</P>
+<P style="position:absolute;top:717px;left:596px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:717px;left:587px;white-space:nowrap" class="ft104">3</P>
+<P style="position:absolute;top:717px;left:551px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:717px;left:542px;white-space:nowrap" class="ft104">4</P>
+<P style="position:absolute;top:717px;left:506px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:717px;left:497px;white-space:nowrap" class="ft104">3</P>
+<P style="position:absolute;top:717px;left:465px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:717px;left:455px;white-space:nowrap" class="ft104">4</P>
+<P style="position:absolute;top:690px;left:592px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:690px;left:556px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:690px;left:546px;white-space:nowrap" class="ft104">2</P>
+<P style="position:absolute;top:690px;left:503px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:690px;left:468px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:690px;left:459px;white-space:nowrap" class="ft104">2</P>
+<P style="position:absolute;top:717px;left:376px;white-space:nowrap" class="ft104">1</P>
+<P style="position:absolute;top:717px;left:350px;white-space:nowrap" class="ft104">0</P>
+<P style="position:absolute;top:690px;left:376px;white-space:nowrap" class="ft104">0</P>
+<P style="position:absolute;top:690px;left:350px;white-space:nowrap" class="ft104">1</P>
+<P style="position:absolute;top:717px;left:296px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:717px;left:260px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:690px;left:296px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:690px;left:261px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:717px;left:232px;white-space:nowrap" class="ft104">3</P>
+<P style="position:absolute;top:717px;left:207px;white-space:nowrap" class="ft104">4</P>
+<P style="position:absolute;top:690px;left:232px;white-space:nowrap" class="ft104">1</P>
+<P style="position:absolute;top:690px;left:207px;white-space:nowrap" class="ft104">2</P>
+<P style="position:absolute;top:727px;left:608px;white-space:nowrap" class="ft107">4</P>
+<P style="position:absolute;top:727px;left:563px;white-space:nowrap" class="ft107">2</P>
+<P style="position:absolute;top:727px;left:518px;white-space:nowrap" class="ft107">3</P>
+<P style="position:absolute;top:727px;left:474px;white-space:nowrap" class="ft107">1</P>
+<P style="position:absolute;top:700px;left:603px;white-space:nowrap" class="ft107">4</P>
+<P style="position:absolute;top:700px;left:567px;white-space:nowrap" class="ft107">2</P>
+<P style="position:absolute;top:700px;left:513px;white-space:nowrap" class="ft107">3</P>
+<P style="position:absolute;top:700px;left:478px;white-space:nowrap" class="ft107">1</P>
+<P style="position:absolute;top:727px;left:306px;white-space:nowrap" class="ft107">4</P>
+<P style="position:absolute;top:727px;left:271px;white-space:nowrap" class="ft107">3</P>
+<P style="position:absolute;top:700px;left:306px;white-space:nowrap" class="ft107">2</P>
+<P style="position:absolute;top:700px;left:271px;white-space:nowrap" class="ft107">1</P>
+<P style="position:absolute;top:785px;left:180px;white-space:nowrap" class="ft104">Bi matrizeen elementuak berdinduz, ondoko bi ezezagun bi ekuazio linealetako</P>
+<P style="position:absolute;top:816px;left:127px;white-space:nowrap" class="ft104">sistemak lortzen dira:</P>
+<P style="position:absolute;top:877px;left:507px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:861px;left:507px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:847px;left:507px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:872px;left:594px;white-space:nowrap" class="ft106">=</P>
+<P style="position:absolute;top:872px;left:548px;white-space:nowrap" class="ft106">+</P>
+<P style="position:absolute;top:845px;left:588px;white-space:nowrap" class="ft106">=</P>
+<P style="position:absolute;top:845px;left:550px;white-space:nowrap" class="ft106">+</P>
+<P style="position:absolute;top:877px;left:300px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:861px;left:300px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:847px;left:300px;white-space:nowrap" class="ft106"></P>
+<P style="position:absolute;top:872px;left:385px;white-space:nowrap" class="ft106">=</P>
+<P style="position:absolute;top:872px;left:340px;white-space:nowrap" class="ft106">+</P>
+<P style="position:absolute;top:845px;left:381px;white-space:nowrap" class="ft106">=</P>
+<P style="position:absolute;top:845px;left:345px;white-space:nowrap" class="ft106">+</P>
+<P style="position:absolute;top:878px;left:606px;white-space:nowrap" class="ft104">1</P>
+<P style="position:absolute;top:878px;left:570px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:878px;left:561px;white-space:nowrap" class="ft104">3</P>
+<P style="position:absolute;top:878px;left:525px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:878px;left:516px;white-space:nowrap" class="ft104">4</P>
+<P style="position:absolute;top:851px;left:602px;white-space:nowrap" class="ft104">0</P>
+<P style="position:absolute;top:851px;left:565px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:851px;left:529px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:851px;left:519px;white-space:nowrap" class="ft104">2</P>
+<P style="position:absolute;top:865px;left:496px;white-space:nowrap" class="ft104">)</P>
+<P style="position:absolute;top:865px;left:485px;white-space:nowrap" class="ft104">II</P>
+<P style="position:absolute;top:865px;left:478px;white-space:nowrap" class="ft104">(</P>
+<P style="position:absolute;top:878px;left:398px;white-space:nowrap" class="ft104">0</P>
+<P style="position:absolute;top:878px;left:361px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:878px;left:352px;white-space:nowrap" class="ft104">3</P>
+<P style="position:absolute;top:878px;left:318px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:878px;left:309px;white-space:nowrap" class="ft104">4</P>
+<P style="position:absolute;top:851px;left:395px;white-space:nowrap" class="ft104">1</P>
+<P style="position:absolute;top:851px;left:359px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:851px;left:324px;white-space:nowrap" class="ft104">x</P>
+<P style="position:absolute;top:851px;left:315px;white-space:nowrap" class="ft104">2</P>
+<P style="position:absolute;top:865px;left:289px;white-space:nowrap" class="ft104">)</P>
+<P style="position:absolute;top:865px;left:284px;white-space:nowrap" class="ft104">I</P>
+<P style="position:absolute;top:865px;left:277px;white-space:nowrap" class="ft104">(</P>
+<P style="position:absolute;top:888px;left:582px;white-space:nowrap" class="ft107">4</P>
+<P style="position:absolute;top:888px;left:537px;white-space:nowrap" class="ft107">2</P>
+<P style="position:absolute;top:861px;left:576px;white-space:nowrap" class="ft107">4</P>
+<P style="position:absolute;top:861px;left:539px;white-space:nowrap" class="ft107">2</P>
+<P style="position:absolute;top:888px;left:372px;white-space:nowrap" class="ft107">3</P>
+<P style="position:absolute;top:888px;left:329px;white-space:nowrap" class="ft107">1</P>
+<P style="position:absolute;top:861px;left:370px;white-space:nowrap" class="ft107">3</P>
+<P style="position:absolute;top:861px;left:334px;white-space:nowrap" class="ft107">1</P>
+<P style="position:absolute;top:946px;left:180px;white-space:nowrap" class="ft104">Gauss-Jordan-&#160;en metodoa erabiliz, (I) sistemaren ebazpenak&#160;A</P>
+<P style="position:absolute;top:942px;left:659px;white-space:nowrap" class="ft105">-1&#160;matrizearen</P>
+<P style="position:absolute;top:977px;left:127px;white-space:nowrap" class="ft104">lehenengo zutabea emango digu eta (II) sistemaren ebazpenak A</P>
+<P style="position:absolute;top:973px;left:595px;white-space:nowrap" class="ft105">-1-ren bigarren zutabea.</P>
+<P style="position:absolute;top:1008px;left:127px;white-space:nowrap" class="ft104">Bestalde, bi sistemek koefizienteen matrize bera dute, A, eta ebazteko egin behar diren</P>
+<P style="position:absolute;top:1039px;left:127px;white-space:nowrap" class="ft104">eragiketa elementalak berberak dira. Hau guztia kontuan hartuz, A matrizearen</P>
+<P style="position:absolute;top:1074px;left:127px;white-space:nowrap" class="ft104">alderantzizko matrizearen kalkulua egiteko, 2x4 ordenako&#160;</P>
+<P style="position:absolute;top:1058px;left:586px;white-space:nowrap" class="ft1015">(&#160;)</P>
+<P style="position:absolute;top:1084px;left:615px;white-space:nowrap" class="ft107">2</P>
+<P style="position:absolute;top:1074px;left:608px;white-space:nowrap" class="ft104">I</P>
+<P style="position:absolute;top:1074px;left:592px;white-space:nowrap" class="ft104">A</P>
+<P style="position:absolute;top:1074px;left:630px;white-space:nowrap" class="ft104">erako matrize bat</P>
+<P style="position:absolute;top:1110px;left:127px;white-space:nowrap" class="ft104">kontsideratuko dugu:</P>
+</DIV>
+<!-- Page 11 -->
+<a name="11"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft1118{font-size:29px;font-family:Symbol;color:#000000;}
+-->
+</STYLE>
+<DIV id="page11-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:439px;white-space:nowrap" class="ft110">11</P>
+<P style="position:absolute;top:127px;left:556px;white-space:nowrap" class="ft116"></P>
+<P style="position:absolute;top:107px;left:556px;white-space:nowrap" class="ft116"></P>
+<P style="position:absolute;top:127px;left:437px;white-space:nowrap" class="ft116"></P>
+<P style="position:absolute;top:107px;left:437px;white-space:nowrap" class="ft116"></P>
+<P style="position:absolute;top:139px;left:546px;white-space:nowrap" class="ft114">1</P>
+<P style="position:absolute;top:139px;left:521px;white-space:nowrap" class="ft114">0</P>
+<P style="position:absolute;top:139px;left:470px;white-space:nowrap" class="ft114">3</P>
+<P style="position:absolute;top:139px;left:446px;white-space:nowrap" class="ft114">4</P>
+<P style="position:absolute;top:112px;left:546px;white-space:nowrap" class="ft114">0</P>
+<P style="position:absolute;top:112px;left:520px;white-space:nowrap" class="ft114">1</P>
+<P style="position:absolute;top:112px;left:470px;white-space:nowrap" class="ft114">1</P>
+<P style="position:absolute;top:112px;left:446px;white-space:nowrap" class="ft114">2</P>
+<P style="position:absolute;top:190px;left:180px;white-space:nowrap" class="ft114">Oinarrizko transformazioak eginez,&#160;</P>
+<P style="position:absolute;top:191px;left:614px;white-space:nowrap" class="ft116"></P>
+<P style="position:absolute;top:172px;left:614px;white-space:nowrap" class="ft116"></P>
+<P style="position:absolute;top:191px;left:452px;white-space:nowrap" class="ft116"></P>
+<P style="position:absolute;top:172px;left:452px;white-space:nowrap" class="ft116"></P>
+<P style="position:absolute;top:197px;left:538px;white-space:nowrap" class="ft116">−</P>
+<P style="position:absolute;top:170px;left:578px;white-space:nowrap" class="ft116">−</P>
+<P style="position:absolute;top:203px;left:591px;white-space:nowrap" class="ft114">1</P>
+<P style="position:absolute;top:203px;left:551px;white-space:nowrap" class="ft114">2</P>
+<P style="position:absolute;top:203px;left:486px;white-space:nowrap" class="ft114">1</P>
+<P style="position:absolute;top:203px;left:461px;white-space:nowrap" class="ft114">0</P>
+<P style="position:absolute;top:176px;left:604px;white-space:nowrap" class="ft114">2</P>
+<P style="position:absolute;top:176px;left:590px;white-space:nowrap" class="ft114">1</P>
+<P style="position:absolute;top:176px;left:552px;white-space:nowrap" class="ft114">2</P>
+<P style="position:absolute;top:176px;left:537px;white-space:nowrap" class="ft114">3</P>
+<P style="position:absolute;top:176px;left:486px;white-space:nowrap" class="ft114">0</P>
+<P style="position:absolute;top:176px;left:461px;white-space:nowrap" class="ft114">1</P>
+<P style="position:absolute;top:190px;left:624px;white-space:nowrap" class="ft114">&#160;matrizera helduko</P>
+<P style="position:absolute;top:242px;left:127px;white-space:nowrap" class="ft114">gara, hau da,&#160;</P>
+<P style="position:absolute;top:222px;left:226px;white-space:nowrap" class="ft1118">(</P>
+<P style="position:absolute;top:222px;left:277px;white-space:nowrap" class="ft1118">)1</P>
+<P style="position:absolute;top:251px;left:239px;white-space:nowrap" class="ft117">2&#160;A</P>
+<P style="position:absolute;top:242px;left:231px;white-space:nowrap" class="ft114">I</P>
+<P style="position:absolute;top:236px;left:263px;white-space:nowrap" class="ft1112">−</P>
+<P style="position:absolute;top:242px;left:284px;white-space:nowrap" class="ft114">.</P>
+<P style="position:absolute;top:281px;left:180px;white-space:nowrap" class="ft118"><i>Beraz, n ordenako A matrize karratuaren alderantzizko matrizea lortzeko</i></P>
+<P style="position:absolute;top:301px;left:129px;white-space:nowrap" class="ft1115">(&#160;)</P>
+<P style="position:absolute;top:327px;left:159px;white-space:nowrap" class="ft117">n</P>
+<P style="position:absolute;top:317px;left:151px;white-space:nowrap" class="ft114">I</P>
+<P style="position:absolute;top:317px;left:135px;white-space:nowrap" class="ft114">A</P>
+<P style="position:absolute;top:317px;left:176px;white-space:nowrap" class="ft118"><i>&#160;matrizetik &#160;</i></P>
+<P style="position:absolute;top:297px;left:284px;white-space:nowrap" class="ft1118">(</P>
+<P style="position:absolute;top:297px;left:334px;white-space:nowrap" class="ft1118">)1</P>
+<P style="position:absolute;top:327px;left:296px;white-space:nowrap" class="ft117">n&#160;A</P>
+<P style="position:absolute;top:317px;left:288px;white-space:nowrap" class="ft114">I</P>
+<P style="position:absolute;top:311px;left:322px;white-space:nowrap" class="ft1112">−</P>
+<P style="position:absolute;top:317px;left:341px;white-space:nowrap" class="ft118"><i>&#160;matrizera pasatuko gara oinarrizko transformazioak</i></P>
+<P style="position:absolute;top:355px;left:127px;white-space:nowrap" class="ft118"><i>erabiliz.</i></P>
+<P style="position:absolute;top:417px;left:180px;white-space:nowrap" class="ft114">Prozesu honen eragiketen kostua gutxi gorabehera&#160;n</P>
+<P style="position:absolute;top:413px;left:615px;white-space:nowrap" class="ft115">3&#160;biderketa-zatiketa</P>
+<P style="position:absolute;top:449px;left:127px;white-space:nowrap" class="ft114">ingurukoa da. Beraz, A</P>
+<P style="position:absolute;top:445px;left:300px;white-space:nowrap" class="ft115">-1&#160;kalkulatzeko determinanteak erabiltzearen kostua oinarrizko</P>
+<P style="position:absolute;top:480px;left:127px;white-space:nowrap" class="ft114">transformazioak &#160;erabiltzearen kostua baino askoz handiagoa da.</P>
+<P style="position:absolute;top:542px;left:127px;white-space:nowrap" class="ft112"><b>4.5.&#160;Biribiltze-erroreak.&#160;Pibotaia teknikak.</b></P>
+<P style="position:absolute;top:608px;left:180px;white-space:nowrap" class="ft114">Gauss eta&#160;&#160;Gauss-Jordan ezabapen-metodoak erabiltzen ditugunean,&#160;</P>
+<P style="position:absolute;top:606px;left:728px;white-space:nowrap" class="ft117">)</P>
+<P style="position:absolute;top:606px;left:721px;white-space:nowrap" class="ft117">k</P>
+<P style="position:absolute;top:606px;left:717px;white-space:nowrap" class="ft1116">(<br/>ii</P>
+<P style="position:absolute;top:608px;left:707px;white-space:nowrap" class="ft114">a</P>
+<P style="position:absolute;top:608px;left:735px;white-space:nowrap" class="ft114">=&#160;0</P>
+<P style="position:absolute;top:641px;left:127px;white-space:nowrap" class="ft114">elementu bat irteten bada, prozedurarekin jarraitzeko ekuazioak trukatzea beharrezkoa</P>
+<P style="position:absolute;top:676px;left:127px;white-space:nowrap" class="ft114">izango da.&#160;</P>
+<P style="position:absolute;top:673px;left:230px;white-space:nowrap" class="ft117">)</P>
+<P style="position:absolute;top:673px;left:223px;white-space:nowrap" class="ft117">k</P>
+<P style="position:absolute;top:673px;left:218px;white-space:nowrap" class="ft1116">(<br/>ii</P>
+<P style="position:absolute;top:676px;left:208px;white-space:nowrap" class="ft114">a</P>
+<P style="position:absolute;top:676px;left:236px;white-space:nowrap" class="ft114">&#160;motako elementuei,&#160;<i>pibotak</i>&#160;esaten zaie.</P>
+<P style="position:absolute;top:714px;left:180px;white-space:nowrap" class="ft114">Praktikan, ekuazioak trukatzea beharrezkoa izango da ez bakarrik&#160;</P>
+<P style="position:absolute;top:712px;left:739px;white-space:nowrap" class="ft117">)</P>
+<P style="position:absolute;top:712px;left:732px;white-space:nowrap" class="ft117">k</P>
+<P style="position:absolute;top:712px;left:728px;white-space:nowrap" class="ft1116">(<br/>ii</P>
+<P style="position:absolute;top:714px;left:718px;white-space:nowrap" class="ft114">a</P>
+<P style="position:absolute;top:714px;left:746px;white-space:nowrap" class="ft114">=0</P>
+<P style="position:absolute;top:747px;left:127px;white-space:nowrap" class="ft114">denean, baizik eta beste kasu askotan ere, zeinetan biribiltze-errore asko egiten diren,</P>
+<P style="position:absolute;top:778px;left:127px;white-space:nowrap" class="ft114">erabiltzen diren digituen kopurua mugatua delako.</P>
+<P style="position:absolute;top:809px;left:180px;white-space:nowrap" class="ft114">Praktikan, beste kasu askotan ere ekuazioak trukatzea beharrezkoa izango da.</P>
+<P style="position:absolute;top:840px;left:127px;white-space:nowrap" class="ft114">Adibidez, erabiltzen diren digituen kopurua mugatua denean biribiltze-errore asko</P>
+<P style="position:absolute;top:875px;left:127px;white-space:nowrap" class="ft114">egiteko arriskua handia da. Hau gertatzen da&#160;</P>
+<P style="position:absolute;top:872px;left:476px;white-space:nowrap" class="ft117">)</P>
+<P style="position:absolute;top:872px;left:469px;white-space:nowrap" class="ft117">k</P>
+<P style="position:absolute;top:872px;left:465px;white-space:nowrap" class="ft1116">(<br/>ii</P>
+<P style="position:absolute;top:875px;left:455px;white-space:nowrap" class="ft114">a</P>
+<P style="position:absolute;top:875px;left:483px;white-space:nowrap" class="ft114">balioak oso txikiak direnean.</P>
+<P style="position:absolute;top:909px;left:180px;white-space:nowrap" class="ft114">Estrategia bat ondokoa da: elementu pibota bezala zutabean eta diagonalaren</P>
+<P style="position:absolute;top:939px;left:127px;white-space:nowrap" class="ft114">azpian dagoen balio absolutu handiena duen elementua aukeratuko dugu, eta zutabeak</P>
+<P style="position:absolute;top:971px;left:127px;white-space:nowrap" class="ft114">trukatuko ditugu (beharrezkoa baldin bada) &#160;transformazioak egin aurretik. Teknika hau</P>
+<P style="position:absolute;top:1001px;left:127px;white-space:nowrap" class="ft118"><i>pibotaia partziala&#160;</i>bezala ezagutzen da.</P>
+<P style="position:absolute;top:1032px;left:180px;white-space:nowrap" class="ft114">Pibotaia partzialaren teknika kasu gehienetan nahikoa da, baina kasu batzuetan</P>
+<P style="position:absolute;top:1064px;left:127px;white-space:nowrap" class="ft114">ez da guztiz egokia. Kasu hauetan,&#160;<i>pibotaia osoaren edo maximoaren</i>&#160;teknika erabiltzen</P>
+<P style="position:absolute;top:1094px;left:127px;white-space:nowrap" class="ft114">da eta pibota bezala balio absolutu maximoa duen elementua aukeratuko dugu, eta bai</P>
+<P style="position:absolute;top:1126px;left:127px;white-space:nowrap" class="ft114">ekuazioak eta bai ezezagunak trukatuko dira, beharrezkoa deneko kasuetan.</P>
+</DIV>
+<!-- Page 12 -->
+<a name="12"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page12-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:439px;white-space:nowrap" class="ft120">12</P>
+<P style="position:absolute;top:202px;left:127px;white-space:nowrap" class="ft122"><b>4.6.&#160;&#160;Ezabapen trinko metodoak.</b></P>
+<P style="position:absolute;top:264px;left:180px;white-space:nowrap" class="ft124">Izan bedi A matrize karratu bat.&#160;&#160;Gauss-en metodoan, matrize karratu batean</P>
+<P style="position:absolute;top:296px;left:127px;white-space:nowrap" class="ft124">transformazioak eginez matrize&#160;goi-triangeluar bat lor daitekeela ikusi dugu.</P>
+<P style="position:absolute;top:326px;left:180px;white-space:nowrap" class="ft124">Atal honetan ikusiko ditugun metodoetan, A matrizea bi matrize triangeluarren</P>
+<P style="position:absolute;top:357px;left:127px;white-space:nowrap" class="ft124">biderkadura bezala adierazten saiatuko gara, A=&#160;&#160;L.U, non L&#160;&#160;behe-triangeluarra eta U</P>
+<P style="position:absolute;top:388px;left:127px;white-space:nowrap" class="ft124">goi-triangeluarra diren.</P>
+<P style="position:absolute;top:419px;left:180px;white-space:nowrap" class="ft124">Modu honetan&#160;&#160;A.X =B sistemaren ebazpena lortzeko bi sistema triangeluarren</P>
+<P style="position:absolute;top:451px;left:127px;white-space:nowrap" class="ft124">ebazpenak egingo ditugu. &#160;&#160;A.X = B sistema ,&#160;A.X =&#160;&#160;L.U.X = B izango da eta Y =&#160;U.X</P>
+<P style="position:absolute;top:481px;left:127px;white-space:nowrap" class="ft124">eginez , ondoko bi sistema ditugu:</P>
+<P style="position:absolute;top:513px;left:180px;white-space:nowrap" class="ft122"><b>L.Y =&#160;B</b>&#160;sistema&#160;&#160;behe-triangeluarra eta ordezkapen progresiboa erabiliz&#160;Y</P>
+<P style="position:absolute;top:543px;left:127px;white-space:nowrap" class="ft124">lortuko dugu.</P>
+<P style="position:absolute;top:575px;left:180px;white-space:nowrap" class="ft124">Ondoren,&#160;&#160;<b>U.X = Y</b>&#160;sistema&#160;&#160;goi-triangeluarrean ordezkapen erregresiboa erabiliz</P>
+<P style="position:absolute;top:606px;left:127px;white-space:nowrap" class="ft124">hasierako sistemaren X soluzioa lortuko dugu.</P>
+<P style="position:absolute;top:636px;left:180px;white-space:nowrap" class="ft124">A =&#160;L.U deskonposizioa ez da beti posible izaten. Ondorengo emaitzetan ikusiko</P>
+<P style="position:absolute;top:668px;left:127px;white-space:nowrap" class="ft124">ditugu bete behar diren baldintzak.</P>
+<P style="position:absolute;top:730px;left:127px;white-space:nowrap" class="ft124">Teorema. A matrize batean&#160;&#160;Gauss-en ezabapen-metodoa errenkaden aldaketarik egin</P>
+<P style="position:absolute;top:761px;left:127px;white-space:nowrap" class="ft124">gabe aplikatu badaiteke, orduan aipaturiko matrizea A=&#160;L.U eran deskonposa daiteke, L</P>
+<P style="position:absolute;top:792px;left:127px;white-space:nowrap" class="ft124">goi-triangeluarra eta U&#160;behe-triangeluarra izanik.</P>
+<P style="position:absolute;top:823px;left:127px;white-space:nowrap" class="ft124">Definizioa. A matrize karratua&#160;<i>hertsiki diagonal nagusia(menperatzaile)</i>&#160;dela esaten da,</P>
+<P style="position:absolute;top:868px;left:127px;white-space:nowrap" class="ft124">ondoko baldintza betetzen denean:&#160;</P>
+<P style="position:absolute;top:869px;left:570px;white-space:nowrap" class="ft124">n</P>
+<P style="position:absolute;top:869px;left:546px;white-space:nowrap" class="ft124">,...,</P>
+<P style="position:absolute;top:869px;left:537px;white-space:nowrap" class="ft124">2</P>
+<P style="position:absolute;top:869px;left:532px;white-space:nowrap" class="ft124">,</P>
+<P style="position:absolute;top:869px;left:524px;white-space:nowrap" class="ft124">1</P>
+<P style="position:absolute;top:869px;left:502px;white-space:nowrap" class="ft124">i</P>
+<P style="position:absolute;top:869px;left:450px;white-space:nowrap" class="ft124">a</P>
+<P style="position:absolute;top:869px;left:386px;white-space:nowrap" class="ft124">a</P>
+<P style="position:absolute;top:856px;left:433px;white-space:nowrap" class="ft127">n</P>
+<P style="position:absolute;top:902px;left:440px;white-space:nowrap" class="ft127">i</P>
+<P style="position:absolute;top:902px;left:431px;white-space:nowrap" class="ft127">j</P>
+<P style="position:absolute;top:892px;left:439px;white-space:nowrap" class="ft127">1</P>
+<P style="position:absolute;top:892px;left:431px;white-space:nowrap" class="ft127">j</P>
+<P style="position:absolute;top:878px;left:460px;white-space:nowrap" class="ft127">ij</P>
+<P style="position:absolute;top:878px;left:396px;white-space:nowrap" class="ft127">ii</P>
+<P style="position:absolute;top:863px;left:512px;white-space:nowrap" class="ft126">=</P>
+<P style="position:absolute;top:863px;left:487px;white-space:nowrap" class="ft126">∀</P>
+<P style="position:absolute;top:863px;left:412px;white-space:nowrap" class="ft126">&gt;</P>
+<P style="position:absolute;top:858px;left:426px;white-space:nowrap" class="ft1215">∑</P>
+<P style="position:absolute;top:898px;left:433px;white-space:nowrap" class="ft1212">≠</P>
+<P style="position:absolute;top:888px;left:433px;white-space:nowrap" class="ft1212">=</P>
+<P style="position:absolute;top:868px;left:583px;white-space:nowrap" class="ft124">.</P>
+<P style="position:absolute;top:929px;left:127px;white-space:nowrap" class="ft124">Teorema. A matrize karratua&#160;&#160;<i>hertsiki diagonal nagusia(menperatzaile)</i>&#160;baldin bada,</P>
+<P style="position:absolute;top:959px;left:127px;white-space:nowrap" class="ft124">orduan erregularra da eta&#160;&#160;A.X =B erako edozein sistema linealetan soluzioa lortzeko</P>
+<P style="position:absolute;top:991px;left:127px;white-space:nowrap" class="ft124">Gauss-en ezabapen-metodoa errenkaden aldaketarik egin gabe erabili dezakegu,eta</P>
+<P style="position:absolute;top:1022px;left:127px;white-space:nowrap" class="ft124">kalkuluak egonkorrak dira biribilketa-erroreekiko.</P>
+</DIV>
+<!-- Page 13 -->
+<a name="13"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page13-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:439px;white-space:nowrap" class="ft130">13</P>
+<P style="position:absolute;top:109px;left:127px;white-space:nowrap" class="ft134">Bestalde, A matrizea A =&#160;&#160;L.U eran deskonposa badaiteke ( L&#160;&#160;behe-triangeluarra eta U</P>
+<P style="position:absolute;top:140px;left:127px;white-space:nowrap" class="ft134">goi-triangeluarra izanik ), faktorizazio hau ez da bakarra . Horrela, kontsidera dezagun</P>
+<P style="position:absolute;top:171px;left:127px;white-space:nowrap" class="ft134">ondoko sistema:</P>
+<P style="position:absolute;top:233px;left:230px;white-space:nowrap" class="ft134">A =&#160;</P>
+<P style="position:absolute;top:247px;left:377px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:229px;left:377px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:212px;left:377px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:258px;left:377px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:201px;left:377px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:247px;left:264px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:229px;left:264px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:212px;left:264px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:258px;left:264px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:201px;left:264px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:269px;left:362px;white-space:nowrap" class="ft137">33</P>
+<P style="position:absolute;top:269px;left:323px;white-space:nowrap" class="ft137">32</P>
+<P style="position:absolute;top:269px;left:284px;white-space:nowrap" class="ft137">31</P>
+<P style="position:absolute;top:242px;left:362px;white-space:nowrap" class="ft137">23</P>
+<P style="position:absolute;top:242px;left:323px;white-space:nowrap" class="ft137">22</P>
+<P style="position:absolute;top:242px;left:284px;white-space:nowrap" class="ft137">21</P>
+<P style="position:absolute;top:214px;left:362px;white-space:nowrap" class="ft137">13</P>
+<P style="position:absolute;top:214px;left:322px;white-space:nowrap" class="ft137">12</P>
+<P style="position:absolute;top:214px;left:282px;white-space:nowrap" class="ft137">11</P>
+<P style="position:absolute;top:260px;left:352px;white-space:nowrap" class="ft134">a</P>
+<P style="position:absolute;top:260px;left:313px;white-space:nowrap" class="ft134">a</P>
+<P style="position:absolute;top:260px;left:273px;white-space:nowrap" class="ft134">a</P>
+<P style="position:absolute;top:231px;left:352px;white-space:nowrap" class="ft134">a</P>
+<P style="position:absolute;top:231px;left:313px;white-space:nowrap" class="ft134">a</P>
+<P style="position:absolute;top:231px;left:273px;white-space:nowrap" class="ft134">a</P>
+<P style="position:absolute;top:204px;left:353px;white-space:nowrap" class="ft134">a</P>
+<P style="position:absolute;top:204px;left:313px;white-space:nowrap" class="ft134">a</P>
+<P style="position:absolute;top:204px;left:273px;white-space:nowrap" class="ft134">a</P>
+<P style="position:absolute;top:233px;left:387px;white-space:nowrap" class="ft134">&#160;= &#160;&#160;</P>
+<P style="position:absolute;top:247px;left:518px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:229px;left:518px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:212px;left:518px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:258px;left:518px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:201px;left:518px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:247px;left:417px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:229px;left:417px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:212px;left:417px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:258px;left:417px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:201px;left:417px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:269px;left:503px;white-space:nowrap" class="ft137">33</P>
+<P style="position:absolute;top:269px;left:467px;white-space:nowrap" class="ft137">32</P>
+<P style="position:absolute;top:269px;left:432px;white-space:nowrap" class="ft137">31</P>
+<P style="position:absolute;top:242px;left:468px;white-space:nowrap" class="ft137">22</P>
+<P style="position:absolute;top:242px;left:432px;white-space:nowrap" class="ft137">21</P>
+<P style="position:absolute;top:214px;left:432px;white-space:nowrap" class="ft137">11</P>
+<P style="position:absolute;top:260px;left:497px;white-space:nowrap" class="ft134">l</P>
+<P style="position:absolute;top:260px;left:461px;white-space:nowrap" class="ft134">l</P>
+<P style="position:absolute;top:260px;left:426px;white-space:nowrap" class="ft134">l</P>
+<P style="position:absolute;top:231px;left:502px;white-space:nowrap" class="ft134">0</P>
+<P style="position:absolute;top:231px;left:461px;white-space:nowrap" class="ft134">l</P>
+<P style="position:absolute;top:231px;left:426px;white-space:nowrap" class="ft134">l</P>
+<P style="position:absolute;top:204px;left:502px;white-space:nowrap" class="ft134">0</P>
+<P style="position:absolute;top:204px;left:467px;white-space:nowrap" class="ft134">0</P>
+<P style="position:absolute;top:204px;left:426px;white-space:nowrap" class="ft134">l</P>
+<P style="position:absolute;top:233px;left:528px;white-space:nowrap" class="ft134">.&#160;</P>
+<P style="position:absolute;top:247px;left:654px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:229px;left:654px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:212px;left:654px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:258px;left:654px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:201px;left:654px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:247px;left:539px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:229px;left:539px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:212px;left:539px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:258px;left:539px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:201px;left:539px;white-space:nowrap" class="ft136"></P>
+<P style="position:absolute;top:269px;left:639px;white-space:nowrap" class="ft137">33</P>
+<P style="position:absolute;top:242px;left:639px;white-space:nowrap" class="ft137">23</P>
+<P style="position:absolute;top:242px;left:599px;white-space:nowrap" class="ft137">22</P>
+<P style="position:absolute;top:214px;left:639px;white-space:nowrap" class="ft137">13</P>
+<P style="position:absolute;top:214px;left:597px;white-space:nowrap" class="ft137">12</P>
+<P style="position:absolute;top:214px;left:558px;white-space:nowrap" class="ft137">11</P>
+<P style="position:absolute;top:260px;left:628px;white-space:nowrap" class="ft134">u</P>
+<P style="position:absolute;top:260px;left:594px;white-space:nowrap" class="ft134">0</P>
+<P style="position:absolute;top:260px;left:555px;white-space:nowrap" class="ft134">0</P>
+<P style="position:absolute;top:231px;left:628px;white-space:nowrap" class="ft134">u</P>
+<P style="position:absolute;top:231px;left:587px;white-space:nowrap" class="ft134">u</P>
+<P style="position:absolute;top:231px;left:555px;white-space:nowrap" class="ft134">0</P>
+<P style="position:absolute;top:204px;left:629px;white-space:nowrap" class="ft134">u</P>
+<P style="position:absolute;top:204px;left:587px;white-space:nowrap" class="ft134">u</P>
+<P style="position:absolute;top:204px;left:548px;white-space:nowrap" class="ft134">u</P>
+<P style="position:absolute;top:327px;left:180px;white-space:nowrap" class="ft134">Non&#160;&#160;aij&#160;datuak, eta&#160;&#160;lij&#160;eta&#160;&#160;uij&#160;determinatu behar diren ezezagunak diren. 12</P>
+<P style="position:absolute;top:359px;left:127px;white-space:nowrap" class="ft134">ezezaguneko 9 ekuazio linealetako sistema lortzen dugu eta planteatutako sistema</P>
+<P style="position:absolute;top:390px;left:127px;white-space:nowrap" class="ft134">soluzio bakarra izan dezan 3 ezezagun finkatu behar dugu.</P>
+<P style="position:absolute;top:420px;left:127px;white-space:nowrap" class="ft134">&#160;</P>
+<P style="position:absolute;top:452px;left:127px;white-space:nowrap" class="ft134">Orokorrean, n ordenako matrize baterako, determinatu behar dugun ezezagunen</P>
+<P style="position:absolute;top:482px;left:127px;white-space:nowrap" class="ft134">kopurua&#160;n</P>
+<P style="position:absolute;top:478px;left:201px;white-space:nowrap" class="ft135">2&#160;izango da eta finkatzen ditugun ezezagunen arabera metodo desberdinak</P>
+<P style="position:absolute;top:514px;left:127px;white-space:nowrap" class="ft134">sortuko dira:</P>
+<P style="position:absolute;top:546px;left:180px;white-space:nowrap" class="ft134">* Baldin&#160;lii&#160;= 1 bada, i = 1,2,...,n &#160;&#160;</P>
+<P style="position:absolute;top:541px;left:428px;white-space:nowrap" class="ft136">⇒&#160;&#160; &#160;<b>Doolittle-ren Metodoa.</b></P>
+<P style="position:absolute;top:578px;left:180px;white-space:nowrap" class="ft134">* Baldin&#160;uii&#160;= 1 bada, i = 1,2,...,n &#160;&#160;</P>
+<P style="position:absolute;top:572px;left:431px;white-space:nowrap" class="ft136">⇒&#160;&#160; &#160;<b>Crout-en Metodoa.</b></P>
+<P style="position:absolute;top:639px;left:180px;white-space:nowrap" class="ft134">Doolittle-ren kalkuluaren prozesuan&#160;&#160;uii&#160;erako elementuren bat nulua baldin bada</P>
+<P style="position:absolute;top:670px;left:127px;white-space:nowrap" class="ft134">(berdin&#160;&#160;Crout-en metodoan&#160;&#160;lii&#160;erako elementuekin), A matrizea ezingo da&#160;&#160;L.U moduan</P>
+<P style="position:absolute;top:702px;left:127px;white-space:nowrap" class="ft134">deskonposatu (lehen enuntziatutako teoremen baldintzak ez dira beteko).</P>
+<P style="position:absolute;top:764px;left:180px;white-space:nowrap" class="ft134">Sistema bat ebazteko&#160;&#160;Crout eta&#160;&#160;Doolittle metodoen koste operatiboa gutxi</P>
+<P style="position:absolute;top:803px;left:127px;white-space:nowrap" class="ft134">gorabehera&#160;</P>
+<P style="position:absolute;top:812px;left:239px;white-space:nowrap" class="ft134">3</P>
+<P style="position:absolute;top:798px;left:218px;white-space:nowrap" class="ft134">n</P>
+<P style="position:absolute;top:796px;left:230px;white-space:nowrap" class="ft137">3</P>
+<P style="position:absolute;top:803px;left:253px;white-space:nowrap" class="ft134">&#160;biderketa eta zatiketa ingurukoa da. Metodo hauek alderantzizko</P>
+<P style="position:absolute;top:842px;left:127px;white-space:nowrap" class="ft134">matrizearen kalkulurako ere aplika daitezke, koste operatiboa n</P>
+<P style="position:absolute;top:838px;left:582px;white-space:nowrap" class="ft135">3&#160;b/z ingurukoa izanik.</P>
+<P style="position:absolute;top:904px;left:127px;white-space:nowrap" class="ft132"><b>Cholesky-ren metodoa matrize simetriko definitu positibotarako.</b></P>
+<P style="position:absolute;top:966px;left:127px;white-space:nowrap" class="ft134">Definizioa. n ordenako A matrize karratu simetrikoa&#160;&#160;<i>definitu positiboa</i>&#160;dela esaten da,</P>
+<P style="position:absolute;top:1000px;left:127px;white-space:nowrap" class="ft134">ondoko baldintza betetzen denean: &#160;&#160;</P>
+<P style="position:absolute;top:1000px;left:435px;white-space:nowrap" class="ft134">x</P>
+<P style="position:absolute;top:1000px;left:423px;white-space:nowrap" class="ft134">A</P>
+<P style="position:absolute;top:1000px;left:407px;white-space:nowrap" class="ft134">x</P>
+<P style="position:absolute;top:997px;left:419px;white-space:nowrap" class="ft137">t</P>
+<P style="position:absolute;top:1000px;left:449px;white-space:nowrap" class="ft134">&#160;&gt; 0 &#160; &#160; &#160;</P>
+<P style="position:absolute;top:994px;left:536px;white-space:nowrap" class="ft136">∈</P>
+<P style="position:absolute;top:994px;left:506px;white-space:nowrap" class="ft136">∀&#160;x&#160;<b>R</b>n, &#160;</P>
+<P style="position:absolute;top:1000px;left:618px;white-space:nowrap" class="ft134">0</P>
+<P style="position:absolute;top:1000px;left:588px;white-space:nowrap" class="ft134">x</P>
+<P style="position:absolute;top:994px;left:603px;white-space:nowrap" class="ft136">≠</P>
+<P style="position:absolute;top:1037px;left:180px;white-space:nowrap" class="ft134">Matrize bat&#160;definitu positiboa den ala ez jakiteko definizioa erabili gabe, ondoko</P>
+<P style="position:absolute;top:1067px;left:127px;white-space:nowrap" class="ft134">karakterizazioa emango dugu:</P>
+<P style="position:absolute;top:1099px;left:180px;white-space:nowrap" class="ft134">A matrize simetrikoa, definitu positiboa da baldin eta soilik baldin bere&#160;&#160;minore</P>
+<P style="position:absolute;top:1129px;left:127px;white-space:nowrap" class="ft134">printzipal edo nagusi guztiak positiboak badira, hau da:</P>
+</DIV>
+<!-- Page 14 -->
+<a name="14"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page14-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:439px;white-space:nowrap" class="ft140">14</P>
+<P style="position:absolute;top:126px;left:572px;white-space:nowrap" class="ft144">0</P>
+<P style="position:absolute;top:126px;left:537px;white-space:nowrap" class="ft144">A</P>
+<P style="position:absolute;top:126px;left:491px;white-space:nowrap" class="ft144">.....,</P>
+<P style="position:absolute;top:126px;left:483px;white-space:nowrap" class="ft144">,</P>
+<P style="position:absolute;top:126px;left:474px;white-space:nowrap" class="ft144">0</P>
+<P style="position:absolute;top:139px;left:429px;white-space:nowrap" class="ft144">a</P>
+<P style="position:absolute;top:139px;left:389px;white-space:nowrap" class="ft144">a</P>
+<P style="position:absolute;top:112px;left:430px;white-space:nowrap" class="ft144">a</P>
+<P style="position:absolute;top:112px;left:390px;white-space:nowrap" class="ft144">a</P>
+<P style="position:absolute;top:126px;left:366px;white-space:nowrap" class="ft144">,</P>
+<P style="position:absolute;top:126px;left:357px;white-space:nowrap" class="ft144">0</P>
+<P style="position:absolute;top:126px;left:314px;white-space:nowrap" class="ft144">a</P>
+<P style="position:absolute;top:149px;left:439px;white-space:nowrap" class="ft147">22</P>
+<P style="position:absolute;top:149px;left:399px;white-space:nowrap" class="ft147">21</P>
+<P style="position:absolute;top:122px;left:439px;white-space:nowrap" class="ft147">12</P>
+<P style="position:absolute;top:122px;left:399px;white-space:nowrap" class="ft147">11</P>
+<P style="position:absolute;top:136px;left:324px;white-space:nowrap" class="ft147">11</P>
+<P style="position:absolute;top:120px;left:557px;white-space:nowrap" class="ft146">&gt;</P>
+<P style="position:absolute;top:120px;left:459px;white-space:nowrap" class="ft146">&gt;</P>
+<P style="position:absolute;top:120px;left:343px;white-space:nowrap" class="ft146">&gt;</P>
+<P style="position:absolute;top:176px;left:180px;white-space:nowrap" class="ft144">L eta U matrizeetan, diagonal nagusiko elementuak 1 egin beharrean,&#160;&#160;Doolittle</P>
+<P style="position:absolute;top:208px;left:127px;white-space:nowrap" class="ft144">eta&#160;Crout metodoetan bezala,&#160;lii&#160;=&#160;uii&#160;egiten badugu, i = 1,2,...,n,&#160;<b>Cholesky-ren metodoa</b></P>
+<P style="position:absolute;top:238px;left:127px;white-space:nowrap" class="ft144">izango dugu.</P>
+<P style="position:absolute;top:270px;left:180px;white-space:nowrap" class="ft144">Cholesky-ren metodoa A matrize simetriko definitu positiboetan aplikatzen</P>
+<P style="position:absolute;top:300px;left:127px;white-space:nowrap" class="ft144">denean, bereziki interesgarria da. Kasu hauetan, A matrizea A =&#160;&#160;L.L</P>
+<P style="position:absolute;top:296px;left:691px;white-space:nowrap" class="ft145">t&#160;moduan</P>
+<P style="position:absolute;top:341px;left:127px;white-space:nowrap" class="ft144">deskonposa daiteke eta determinatu behar izango dugun ezagunen kopurua&#160;</P>
+<P style="position:absolute;top:350px;left:749px;white-space:nowrap" class="ft144">2</P>
+<P style="position:absolute;top:332px;left:740px;white-space:nowrap" class="ft144">)</P>
+<P style="position:absolute;top:332px;left:734px;white-space:nowrap" class="ft144">1</P>
+<P style="position:absolute;top:332px;left:708px;white-space:nowrap" class="ft144">n</P>
+<P style="position:absolute;top:332px;left:696px;white-space:nowrap" class="ft144">.(</P>
+<P style="position:absolute;top:332px;left:687px;white-space:nowrap" class="ft144">n</P>
+<P style="position:absolute;top:326px;left:721px;white-space:nowrap" class="ft146">+</P>
+<P style="position:absolute;top:382px;left:127px;white-space:nowrap" class="ft144">da, beste faktorizazio-metodoetan kopuru hau n</P>
+<P style="position:absolute;top:378px;left:469px;white-space:nowrap" class="ft145">2&#160;izanik.</P>
+<P style="position:absolute;top:426px;left:180px;white-space:nowrap" class="ft144">Cholesky-ren metodoaren kostu operatiboa gutxi gorabehera&#160;</P>
+<P style="position:absolute;top:435px;left:668px;white-space:nowrap" class="ft144">6</P>
+<P style="position:absolute;top:422px;left:648px;white-space:nowrap" class="ft144">n</P>
+<P style="position:absolute;top:419px;left:659px;white-space:nowrap" class="ft147">3</P>
+<P style="position:absolute;top:426px;left:683px;white-space:nowrap" class="ft144">&#160;biderketa-</P>
+<P style="position:absolute;top:464px;left:127px;white-space:nowrap" class="ft144">zatiketa eta n erro ingurukoa da. Gainera, metodo honek beste abantaila handia du: ez da</P>
+<P style="position:absolute;top:496px;left:127px;white-space:nowrap" class="ft144">oso sentikor biribiltze-erroreekiko. Biribiltze-erroreek ez dute eragin handia metodo</P>
+<P style="position:absolute;top:526px;left:127px;white-space:nowrap" class="ft144">honetan.</P>
+<P style="position:absolute;top:558px;left:180px;white-space:nowrap" class="ft144">Cholesky-ren metodoak erabilera asko ditu: ekuazio linealetako sistemen</P>
+<P style="position:absolute;top:589px;left:127px;white-space:nowrap" class="ft144">ebazpenean, &#160;A matrize simetriko bat definitu positiboa den ala ez jakiteko eta, azkenik,</P>
+<P style="position:absolute;top:620px;left:127px;white-space:nowrap" class="ft144">matrize simetriko definitu positiboen determinantea kalkulatzeko ere baliagarria da, hau</P>
+<P style="position:absolute;top:665px;left:127px;white-space:nowrap" class="ft144">da &#160; &#160;&#160;</P>
+<P style="position:absolute;top:659px;left:298px;white-space:nowrap" class="ft146">=</P>
+<P style="position:absolute;top:659px;left:253px;white-space:nowrap" class="ft146">=</P>
+<P style="position:absolute;top:659px;left:192px;white-space:nowrap" class="ft146">=</P>
+<P style="position:absolute;top:659px;left:286px;white-space:nowrap" class="ft147">2</P>
+<P style="position:absolute;top:662px;left:241px;white-space:nowrap" class="ft147">t</P>
+<P style="position:absolute;top:665px;left:271px;white-space:nowrap" class="ft144">L</P>
+<P style="position:absolute;top:665px;left:231px;white-space:nowrap" class="ft144">L</P>
+<P style="position:absolute;top:665px;left:209px;white-space:nowrap" class="ft144">L</P>
+<P style="position:absolute;top:665px;left:172px;white-space:nowrap" class="ft144">A</P>
+<P style="position:absolute;top:654px;left:314px;white-space:nowrap" class="ft1415">∏</P>
+<P style="position:absolute;top:685px;left:322px;white-space:nowrap" class="ft1412">=</P>
+<P style="position:absolute;top:652px;left:323px;white-space:nowrap" class="ft147">n</P>
+<P style="position:absolute;top:688px;left:327px;white-space:nowrap" class="ft147">1</P>
+<P style="position:absolute;top:688px;left:318px;white-space:nowrap" class="ft147">i</P>
+<P style="position:absolute;top:662px;left:344px;white-space:nowrap" class="ft1416">2<br/>ii</P>
+<P style="position:absolute;top:665px;left:339px;white-space:nowrap" class="ft144">l</P>
+</DIV>
+</BODY>
+</HTML>

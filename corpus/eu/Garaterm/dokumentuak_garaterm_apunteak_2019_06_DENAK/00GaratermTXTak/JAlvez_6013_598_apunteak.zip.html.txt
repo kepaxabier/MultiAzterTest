@@ -1,0 +1,2719 @@
+
+
+
+
+
+    programaname=programa,description= baldintzaname=baldintza,description=
+    aldagainame=aldagai,description= inbariantename=inbariante,description=
+   propietatename=propietate,description= iterazioname=iterazio,description=
+        formulaname=formula,description= egoeraname=egoera,description=
+   frogapenname=frogapen,description= adierazpenname=adierazpen,description=
+ (espresio) terminoname=termino,description= funtzioname=funtzio,description=
+               funtzio-sinboloname=funtzio-sinbolo,description=
+  programazioname=programazio,description= asertzioname=asertzio,description=
+       aurrebaldintzaname=aurrebaldintza,description=(aurreko baldintza)
+      postbaldintzaname=postbaldintza,description=(ondoko baldintza) kasu
+         induktiboname=kasu induktibo,description=(kasu errekurtsibo)
+bektorename=bektore,description=(array) egiaztapenname=egiaztapen,description=
+     kasu nabariname=kasu nabari,description= borne-adierazpenname=borne-
+        adierazpen,description= axiomaname=axioma,description= sistema
+   formalname=sistema formal,description= inferentzi erregelaname=inferentzi
+  erregela,description= konputazio-egoeraname=konputazio-egoera,description=
+    programazio-lengoaianame=programazio-lengoaia,description= baldintzazko
+    aginduname=baldintzazko agindu,description= pilaname=pila,description=
+        predikatuname=predikatu,description= zuhaitz bitarname=zuhaitz
+        bitar,description=(zuhaitz) zuzentasun partzialname=zuzentasun
+     partzial,description= aldagai atxikiname=aldagai atxiki,description=
+    errekurrentzia-erlazioname=errekurrentzia-erlazio,description= tarteko
+     asertzioname=tarteko asertzio,description= aldagai librename=aldagai
+  libre,description= bukaera-baldintzaname=bukaera-baldintza,description= dei
+           errekurtsiboname=dei errekurtsibo,description= programen
+    zuzentasunname=programen zuzentasun,description= destolesketa/tolesketa
+ metodoname=destolesketa/tolesketa metodo,description=(destolesketa/tolesketa
+ urrats, destolesketa/tolesketa teknika) esleipenaren axiomaname=esleipenaren
+ axioma,description= aldibereko esleipenname=aldibereko esleipen,description=
+aldibereko ordezkapenname=aldibereko ordezkapen,description= Hoare-ren sistema
+ formalname=Hoare-ren sistema formal,description=(Hoare-ren kalkulu) lengoaia
+   formalname=lengoaia formal,description= datu-mota abstraktuname=datu-mota
+ abstraktu,description= errore-ekuazioname=errore-ekuazio,description= formula
+   ahulname=formula ahul,description= baldintzaren erregelaname=baldintzaren
+     erregela,description= dedukzioname=dedukzio,description= ondorioaren
+         erregelaname=ondorioaren erregela,description= konposaketaren
+          erregelaname=konposaketaren erregela,description= indukzio-
+      hipotesiname=indukzio-hipotesi,description= eragiketa eraikitzaile
+              aratzname=eragiketa eraikitzaile aratz,description=
+       begiztaname=begizta,description= egiaztapen formalname=egiaztapen
+           formal,description= algoritmo errekurtsiboname=algoritmo
+        errekurtsibo,description= eragiketa eraikitzailename=eragiketa
+   eraikitzaile,description= eragile logikoname=eragile logiko,description=
+indukzioaren balidazioname=indukzioaren balidazio,description= indukzio bidezko
+   frogapenname=indukzio bidezko frogapen,description= egia-taulaname=egia-
+       taula,description= formalismoname=formalismo,description= formula
+      gogorname=formula gogor,description= esleipen-aginduname=esleipen-
+    agindu,description= programen eratorpen formalname=programen eratorpen
+   formal,description=(programen eratorpen) programen bukaeraname=programen
+     bukaera,description= programa errekurtsiboen egiaztapenname=programa
+  errekurtsiboen egiaztapen,description= programen dokumentazioname=programen
+         dokumentazio,description= programa errekurtsiboname=programa
+    errekurtsibo,description= iterazioen zuzentasun partzialname=iterazioen
+   zuzentasun partzial,description= aurre-ondoetako espezifikazioname=aurre-
+  ondoetako espezifikazio,description=(aurre-ondoetako zehaztapen) while-aren
+      erregelaname=while-aren erregela,description= programen egiaztapen
+   formalname=programen egiaztapen formal,description=(programen egiaztapen)
+        predikatu-sinboloname=predikatu-sinbolo,description= predikatu-
+kalkuluname=predikatu-kalkulu,description= probaname=proba,description= proba-
+   kasuname=proba-kasu,description= proba-bankuname=proba-banku,description=
+      (proba-joko) ondorioztatuname=ondorioztatu,description= inplikazio
+                   logikoname=inplikazio logiko,description=
+
+
+Eranskina B
+****** Sarrera ******
+ Kapitulu honetan liburuaren edukiak deskribatuko dira, Software Ingeniaritzan
+ duten garrantzia nabarmenduz. Software Ingeniaritzaren arloari eman zaizkion
+        definizio ugariren artean, IEEE erakundearena1 da honako hau:
+  Softwarearen garapena eta mantentzea ikuspegi sistematiko, diziplinatu eta
+  kuantifikagarri batez egitea, eta ikuspegi horren aplikazioaren azterketa
+                     [Error: Reference source not found].
+  Horretarako, A atalean softwarearen garapenerako metodo formalen bilakaeran
+   erabakigarriak izan diren faktoreak historikoki kokatuko ditugu. Ikuspegi
+historiko hori baliagarria zaigu liburu honetan lantzen diren gaiak aurkezteko,
+  eta, bidenabar, gai horien eragina nabarmentzeko. A atala [Error: Reference
+source not found]-n oinarrituta dago partzialki. B atalean, liburuaren egitura
+ eta edukiak era zehatzagoan deskribatuko dira. Eskerrak emateko ataltxoarekin
+                            bukatuko da kapitulua.
+ A [
+    Softwarearen garapenerako metodo formalak]Softwarearen     garapenerako
+                                 metodo formalak
+    Aurrez planteatutako zeregin edo problema baten ebazpena da, funtsean,
+programaprograma informatikoa. Askotan, jatorrizko zeregin hori emaitza batzuk
+   kalkulatzera edo zerbitzuren bat ematera orientatuta egoten da. Programa
+           informatikoak eraikitzeko jarduera aztertzen duen arloari
+  programazioprogramazio esaten zaio. Hain zuzen ere, programazio-eredu baten
+oinarriak deskribatzera zuzendua dago liburu hau. Eredu horri hainbat izendapen
+ eta kalifikatzaile jarri izan zaizkio: programazio metodikoa edo programazio
+zientifikoa izan dira zabalduenak. Berrikiago kontratu bidezko programazioa ere
+  erabili izan da. Esan daiteke ikuspegi honen bilakaera 60ko hamarkadan hasi
+ zela, programazio egituratua deitutakoaren eta ALGOL [Error: Reference source
+    not found] eta Pascal [Error: Reference source not found] programazio-
+ lengoaiaprogramazio-lengoaien sorrerarekin batera. Programazio egituratuaren
+oinarrizko ideiak oso ondo daude bilduta Dijkstra-ren [Error: Reference source
+  not found] maisu-lanean. Ikuspegi egituratu horren funtsezko ideietako bat
+    diseinatutako programen zuzentasunprogramen zuzentasuna era sendoan eta
+ sinesgarrian ziurtatu ahal izateko bidea erraztea zen. Horren haritik iritzi-
+  korronte berria sortu zen, programazioa ordura arte aurreikusten zena baino
+ jarduera zientifikoagoa (artisau kutsu gutxiagokoa) zela ulertzearen aldekoa
+                                  hain zuzen.
+   programaPrograma bat zuzena dela esango dugu, haren diseinua eragin zuen
+    problema ondo ebazten badu, beti (edozein direla ere datuak) esperotako
+  emaitzak lortuz eta inolako errorerik edo ustekabeko ondoriorik sortu gabe.
+Definizioz, programen ezinbesteko propietatea zuzentasuna da, izaki bizidunena
+ bizia den bezalaxe. Jakina, badira programa guztietan desiragarriak diren eta
+ programak ondo diseinatuta daudela edo ez daudela esatera garamatzaten beste
+ propietate batzuk ere. Propietate horietatik, besteak beste, eraginkortasuna,
+     argitasuna, erabilgarritasuna, moldagarritasuna, sendotasuna eta ondo
+                  dokumentatuta egotea azpimarra ditzakegu.
+ Programa zuzen bat diseinatzea, oro har, zailtasunetatik libre ez dagoen lan
+  neketsua da. Programaren zuzentasuna argi erakutsiko duen dokumentazio edo
+   argudiaketa on bat osatzea ere ez da samurra, batez ere balizko irakurlea
+  konbentzitu nahi bada, eta zuzentasuna bermatzen duten propietateak agerian
+utzi nahi badira. Azken batean, zuzentasuna argumentatzea zenbat eta errazagoa
+izan, orduan eta aukera gehiago egongo dira programa aise ulertua izateko, eta,
+  era berean, aise dokumentatua, optimizatua, egokitua edo mantendua izateko.
+  Horiek horrela izanda ere, programazioaren historia labur samarrean ugariak
+   dira  pertsonei  nahiz  ondasunei  kalte  konponezinak  eragin  dizkieten
+  software-erroreen adibideak. Hondamendi horietako batzuk oso ezagunak dira,
+esate baterako, Ariane 5 suziriarena, eta, beste batzuk ez horrenbeste, Therac-
+ 25 erradioterapia-makinarena aipa daiteke kasurako. Lehenengoa 1996an gertatu
+zen, Ariane 5 suziri europarrak abiatu eta minutu-erdira eztanda egin zuenean.
+64 bit-eko zenbakiak 16 bit-eko zenbaki bihurtzean egindako akatsak eragin zuen
+   leherketa, zehazki, bihurketa egiten zuen programari onar zezakeena baino
+  zenbaki handiagoa iritsi zitzaionean. Bigarren hondamendia izatez lehenago
+ gertatu zen Kanadan, 1985 eta 1987 artean, Therac-25 erradioterapia-makinan.
+   Makina horrek 4 pertsonaren heriotza eragin zuen, eta beste batzuei lesio
+larriak eragin zizkien. Ezbeharraren kausa race condition izeneko programazio-
+ akats bat izan zen; errore hori gertatzen da programa kanpo-gertaeren ordena
+    jakin baterako diseinatzen denean, baina gertaeren benetako sekuentzia
+  bestelakoa denean. Aski ezagunak dira, halaber, programazio-errore sinpleen
+   eraginez hondatu izan diren NASAren suziriak. Horien artean aipagarria da
+1962an espazioan galdu zen Mariner 1 izenekoa. Artizarrera bidalitako lehenengo
+ espazio-zunda zen. Galera hori ibilbidea kontrolatzen zuen programan, formula
+edo espresioren baten transkripzioan, eginiko errore sinpleren batek eragin ote
+ zuen espekulatu izan da. Errakuntza posibleen artean, apostrofo bat (’) koma
+batekin (,) nahastu izana ere aipatu izan da. Beste errore sinple batek eragin
+    zuen 1999an Mars Climate Orbiter zundaren suntsiketa, Marte planetaren
+atmosferarekin izandako marruskaduraren ondorioz. Berez, zunda horrek ez zukeen
+ inoiz Marteren atmosfera ukitu behar, baina nabigazio-programaren akats batek
+   ibilbidea aldarazi zion; hain zuzen ere, ibilbidea kalkulatzeko, neurriak
+  sistema metriko hamartarrean jasotzea espero zuen programak, baina lurreko
+kontrol-sistemak eredu anglosaxoiaren araberako neurriak bidali zizkion, hots,
+                           miliak, hazbeteak, etab.
+  Era askotako arrazoiak daude programatzean erroreak egiteko arrisku handia
+  dagoela baieztatzeko. Gainera, akats horiek, itxuraz sinpleak eta hutsalak
+ iruditu arren, ondorio lazgarriak eragin ditzakete. Aurreko adibideetan ikusi
+   den bezala, sistema metriko baten ordez beste bat erabiltzeak, eragiketa
+aritmetiko bat beste batekin nahasteak, edo objektu baten tamainari muga maximo
+txikiegia jartzeak, zeharo alda dezakete programaren portaera. Hala, programak
+ egin beharko ez zukeen zerbait egingo du, edo ez du ondo egingo egin beharko
+   zukeena, eta zenbaitetan kalte larriak eragin. Ikusitako adibideak egoera
+orokor baten isla dira. Programa akastunen ugaritasuna eta errore horiek kodean
+aurkitzeko zailtasuna dira programazioaren arloari oinarri matematikoa emateko
+              interesa eta ekimena piztu zuten arrazoi nagusiak.
+   Azken hamarkadetan bi teknika mota sortu dira programazio-erroreei aurrea
+ hartzeko. Alde batetik programak arazteko (alegia, erroreak detektatzeko eta
+    zuzentzeko) teknikak eta tresnak garatu dira. Tresna horiek zenbaitetan
+automatikoak badira ere, arazte-lan hutsak ezin du errorerik eza bermatu2; nork
+ziurta dezake ez dagoela detektatu gabeko errorerik? Erabat ziur egoteko erarik
+   ez digu ematen arazketak, programaren fidagarritasunean dugun konfiantza
+  areagotzeko balio du bakarrik. Hala ere, nork eta nola arazten duen, horren
+   araberakoa da konfiantza, eta, hori, bistan denez, ez da oso zientifikoa.
+Programazioari izaera zientifikoagoa emateko asmoz, teknika matematikoagoak edo
+ teknika formalak sortu ziren. Programak diseinatzeko eta analizatzeko dauden
+     teknika formal gehienak matematika diskretuan, eta, bereziki, logika
+matematikoan oinarritzen dira. Matematika diskretua da software-ingeniaritzaren
+  euskarri matematiko/zientifikoa, bestelako ingeniaritzen euskarria kalkulu
+  infinitesimala, estatistika edo zenbakizko analisia diren bezalaxe. Edozein
+     ingeniaritzak darabiltza metodo aurredefinituak eta estandarrak bere
+    jardueraren funtsezko parte gisa, eta horietako askok osagai matematiko
+                                nabarmena dute.
+ Programatzaileei (software-ingeniaritzako espezialistei) metodo erabilgarriak
+ eta sendoak eskaintzeko beharrak proposamen ugari sorrarazi ditu, eta horren
+ isla da azken berrogeita hamar urteetako literatura. Programa zuzenen diseinu
+sistematikorako metodo eta teknika horiek, funtsean, bi fasetan bereizten dute
+programen diseinua. Lehenengoan, ebatzi beharreko problema era zehatz, doi eta
+osatu batean espezifikatu behar da. Programak espezifikatzean egoki jaso behar
+dira egoera onargarri guztiak, eta adierazi behar da, halaber, nolako jokabidea
+     izango den egoera horietan guztietan. Fase horretan egindako akatsak
+  hurrengora, programazio-fasera, igarotzen dira, eta horrek zaildu egiten du
+  programatu beharrekoaren ulerkuntza eta erroreen detekzioa, nahastu egiten
+             baitira modelatze-erroreak eta programazio-erroreak.
+   60ko hamarkadaren erdialdera arte programek ez zuten hainbesteko pisurik
+ gizartean, eta diseinatzen igarotzen zen denborari edo lortutako produktuaren
+    kalitateari ez zitzaion hainbesteko garrantzirik ematen. Garai horretan
+    nabarmendu zen programa, izatez, esanahi zehatza eta doia duen objektu
+matematikoa dela. Horrela izanda, programa zehaztasun matematikoz aztertua eta
+landua izan daiteke haren portaerari buruzko propietateak frogatzeko, bereziki,
+ zuzentasuna frogatzeko. Ildo horretan, 60ko hamarkadaren bukaerarako zenbait
+ metodo eta teknika sortuz programazioari izaera zientifikoagoa emateko xedea
+ zuen ikerlerro garrantzitsu bat bazen (E. W. Dijkstra, R. Floyd eta C. A. R.
+         Hoare ikerlerro horretan zeuden). Berehala jaio zen programen
+  egiaztapenegiaztapena: programa batek bere espezifikazioak dioena betetzen
+   duela egiaztatzeko balio duen frogapen matematikoa (logikoa). Bide horren
+   hastapeneko lantzat har daiteke A. Turing-en [Error: Reference source not
+  found], baina programen egiaztapen formalprogramen egiaztapenaren benetako
+ernamuinak R. Floyden [Error: Reference source not found] eta C. A. R. Hoareren
+ [Error: Reference source not found] dira. Ordutik hona, programazioko metodo
+ formalen arloa etengabeko bilakaeran aritu da. Teknika eta metodo ugari sortu
+   dira, eta programaziorako oinarri matematiko sendoak landu dira. Egindako
+   aurrerapenek, bai programazioan bai erlazionatutako beste arlo batzuetan
+     (bereziki, software-ingeniaritzarako duen aplikazioan eta arrazoibide
+ matematikoan), formalismoformalismo berri erabilgarriagoak sorrarazi dituzte,
+eta beste aplikazio-eremuetarako aukerak zabaldu dituzte. Softwarearen garapen
+ formalerako prozesuaren zenbait atal automatizatzea ere ekarpen garrantzitsua
+                            da arloaren bilakaeran.
+   Metodo formalek programatzaileari laguntzeko helburua dute, eta programa
+    zuzenen diseinua errazteko tresna baliagarri izan nahi dute. Programen
+ diseinurako erabil daitekeen metodologia bakoitzaren egokitasuna, egoera eta
+  testuinguru desberdinen araberakoa da. Programa zuzenak diseinatzean, zein
+aspekturi aurre egin nahi diogun, horren araberako teknikak erabili behar dira.
+Horretarako beharrezkoa da programatzaileak metodo horien ezagutza izatea, eta
+  gai izatea egokiro aplikatzeko, esate baterako, problemak espezifikatzean,
+    parte hartzen duten datu-egiturak espezifikatzean, ebazpen algoritmikoa
+asmatzean eta formalizatzean, exekutagarria lortzean, planteatutako ebazpenaren
+    zuzentasuna justifikatzean edota diseinatutako programa dokumentatzean.
+  Tekniken eta tresnen ezagutza ezak problemen ebazpen egokia eragozten duela
+    adierazteko, karikatura adierazgarria egin zuen A. H. Maslow-ek [Error:
+Reference source not found]-n, horretarako atsotitz ezaguna erabiliz3: «Mailua
+        baizik ez baduzu, den-dena iltzea balitz bezala landuko duzu».
+     Programatzaileari tresna hobeak eskaintzeko asmoz, azken hamarkadetan
+   aurrerapen nabarmena gertatu da teknika formalei dagokienez, eta emaitza
+              praktiko batzuk harrigarri samarrak ere izan dira.
+ Jakina da softwarea garatzeko metodo formalen erabilera eztabaidagarria izan
+ dela, baina badirudi gero eta onartuago dagoela. Aldekoek beti esan izan dute
+      formalismoformalismoa onuragarria dela, eta industriak garapen modu
+    zorrotzagoak eta laguntza-tresna egokiak bereganatu beharko lituzkeela.
+Aurkakoek zailtasun serioak eta intrintsekoak ikusten dizkiete metodo formalei,
+   tamaina handiko proiektu industrialetan erabiliak izateko. Jarrera horren
+inguruko zenbait mito [Error: Reference source not found] sortu eta puztu dira,
+    baina mito horiek indarra galdu dute arloak heldutasuna lortu ahala eta
+   industria egokitu ahala. Gaur egun ekarpenak askotarikoak dira, metodoak
+  aplikazio-eremuetara egokitzen ari dira, eta bilakaera sendoa da beste arlo
+  batzuekin lankidetzan. Azken urteotan bereziki nabarmendu dira programazio
+  formalerako laguntza-tresna automatikoak (edo erdi-automatikoak), eta esan
+  daiteke arlo horretan oso ekimen aktiboa eta emankorra nabari dela. Metodo
+ formalak eguneroko lanean benetan erabilgarriak izan daitezen, beharrezkoa da
+  garatzaileek prestakuntza espezializatua jasotzea. Eta, noski, prestakuntza
+  behar horrek zaildu egiten du metodo horiek esparru industrialean ezartzea.
+   Zailtasun hori eta beste zenbait oztopo identifikatu eta landu dira mundu
+akademikoaren eta industrialaren arteko lankidetza estuan. Industriak gero eta
+ interes handiagoa erakutsi du metodo formaletan, eta horretan zerikusi handia
+ izan du aplikazio informatikoak gero eta garrantzitsuagoak eta konplexuagoak
+  izateak4. Egun, softwarea garatzeko prozesuetan tresna sendoak integratzea
+   lortu da dagoeneko, eta tresna horiek erabilerrazagoak dira. Testuinguru
+horretan tamaina handiko aplikazio industrial ugarik atera diote etekina metodo
+                             formalen erabilerari.
+    Metodo formalen erabilera arrakastatsuaren adibide deigarria da Parisko
+    garraioaren automatizazioa. 1989an jarri zen martxan SACEM sistema, eta
+geroztik sistema horrek kontrolatu du A (RER) lineako tren guztien abiadura. A
+(RER) sistema Módula-2n idatzita dago eta 21.000 kode-lerro ditu. Kode horren %
+63 (segurtasunaren ikuspegitik kritikotzat hartzen dena) automatikoki lortu zen
+   espezifikazio formal batetik, eta, ondoren, egiaztatu egin zen modu erdi-
+  automatikoan. Hau da, softwarea garatzeko teknika formal osagarriak erabili
+    ziren sistemaren segurtasuna bermatzeko. Izatez, Parisko garraioan bada
+  formalki garatutako software kritiko gehiago ere. Horrela, aipagarriak dira
+ honako bi sistema automatiko hauek: batetik, metroaren 14. linean ezarritako
+ sistema, eta, bestetik, París-Roissy lineako gidaririk gabeko autobusa. Lehen
+      sistema arazorik gabe martxan dago 1998tik, eta bigarrena 2007tik.
+Oro har, 90eko hamarkadaz gero, metodo formalak erabiliz garatu diren aplikazio
+     industrial ugari eman dira ezagutzera. Gainera, garapen formal horiek
+    dokumentatu egin dira, eta agerian geratu dira metodoen eta erabilitako
+laguntza-tresnen abantailak. Esate baterako, aipatu ditugun bi aplikazioetarako
+ (Parisko metroa eta autobusa) formalki garatu den softwarea [Error: Reference
+ source not found]-n eta [Error: Reference source not found]-n deskribatu da.
+Horrela garatutako aplikazio industrialetatik anitz garraiorako (nabigaziorako)
+     kontrol-sistemak dira, hala lurreko nola aireko, ureko edota garraio
+ espazialerako. Maiz samar aplikazio horiek erakunde akademikoekin elkarlanean
+   garatu dira. Adibidez, Nieuwe Waterweg-eko (Rotterdam-etik gertu) marea-
+barreraren kontrolerako sistema [Error: Reference source not found] CMG Public
+  Sector B.V., Division Advanced Technology erakundeak garatu zuen, Twenteko
+      Unibertsitateko Formal Methods and Tools taldearen sostenguarekin.
+  Metodo formalak erabiliz garatu izan diren tamaina handiko sistemen artean
+     aipagarriak dira, halaber, sistema eragileak. Adibidez, L4.verified 5
+proiektukoak nabarmentzekoak dira. Bereziki, seL4 [Error: Reference source not
+ found] mundu errealeko software kritikoa da, formalki egiaztatu dena frogapen
+formaletarako sistema automatiko baten laguntzaz. 8.700 kode-lerro ditu seL4-k,
+   eta horiez gain baditu behe-mailako lengoaia batean idatzitako beste atal
+ batzuk ere. seL4 izan zen osorik eta formalki egiaztatu zen lehenengo sistema
+  eragilea. Era berean, badira formalki eta osorik egiaztatu diren bestelako
+  aplikazioak ere, hala nola konpiladoreak, komunikazio-protokoloak eta abar.
+ Frogapen automatikorako tresnen nukleoak (kernel) ere formalki egiaztatu izan
+                                    dira.
+ Metodo formalek industrian lortutako arrakastan eragin handia izan du zenbait
+    enpresa handik softwarearen garapen formalerako tresnak sortzearen alde
+    egindako apustuak. Tresna horiek erabiliz lortu da aplikazio industrial
+fidagarriagoak garatzea. Enpresa horien artean, adibide gisa, honako hauek aipa
+  daitezke: Intel, IBM, Sony, Siemens edo Microsoft. Horietako enpresa batzuk
+beren software-produktuetan erroreak ez egiteagatik murgildu dira arlo honetan.
+  Nolanahi ere, badira metodo formalen ikerkuntzan ahalegin handia egiten ari
+ diren enpresa garrantzitsuak, eta softwarea zorrotz garatzeko tresna praktiko
+  oso erabilgarriak ere sortu dituzte. Nabarmentzekoa da software development
+   arloaren barnean metodo formalei buruzko proiektu ugari dituen Microsoft
+Research dibisioa. Proiektu horiek aurrera eramateko, Microsoftek ospe handiko
+  profesionalak kontratatu ditu, besteak beste, aitzindari izandako C. A. R.
+    Hoare zientzialaria. Proiektu horien bidez softwarea formalki garatzeko
+prozesuan lagungarri izango diren tresnen multzo bat sortzen ari da Microsoft.
+   Frogatzaile automatikoak ere sortu dituzte, eta frogatzaile horiek tresna
+orokorragoen azpisistema gisa erabiltzen dira propietate jakin batzuk betetzen
+  al diren frogatu behar denean. Microsoftek sortutako tresnen artean Dafny6
+ izeneko lengoaia eta egiaztatzailea nabarmenduko dugu, liburu honen edukiekin
+  lotura estua du eta. Dafny banaketa askekoa da, eta web nabigatzaile baten
+ bidez ere erabil daiteke. Dafnyren webguneak aukera ematen du sistema online
+  atzitzeko, sistemaren instalatzekoak deskargatzeko, eta dokumentazio nahiz
+                          laguntza egokiak jasotzeko.
+ Programen egiaztapenegiaztapen automatikorako (edo automatizaturako) tresnak
+  ugariak dira, eta softwarearen industrian ohikoak diren hainbat lengoaiatan
+ erabil daitezke. Egiaztatzaile ezagunenen eta erabilienen artean daude Spark,
+    Key, ACL2, Isabelle, Jack, KIV, Spec#, eta egiaztatzaile horiek hainbat
+ lengoaiatan idatzitako programak onartzen dituzte, adibidez, Java, Java Card,
+  C, C++, C#, Ada, Occam eta ML. Egiaztapenaren osagarri gisa, sistema horiek
+      bestelako tresnak ere integratzen dituzte, esate baterako, erroreen
+    arazketarako erabiltzen diren proba-kasuproba-kasuen edo kontra-ereduen
+sortzaileak, edo baita kode-sortzaileak ere. Dafnyk, adibidez, C# kodea sortzen
+   du. Sistema horiek erabiliz garatu diren aplikazio industrial konplexuen
+  erreferentzia anitz topa daiteke literaturan. [Error: Reference source not
+  found]-n autoreek metodo formalen aplikazio industriala zertan den sakonki
+  aztertu dute. Artikulu horretan erabilgarri dauden tresnak nahiz garatutako
+ aplikazio industrialak aztertu dira, baita aplikazio horien kodearen tamaina,
+  arloko jarduera zientifikoa konferentzietan, aldizkarietan, biltegietan eta
+   abar ere. [Error: Reference source not found]-n deskribatutako aplikazio
+ industrialen artean daude hegaldien kontrolerako, finantza elektronikoetarako
+             edo segurtasunerako sistemak, eta mikroprozesadoreak.
+   Azken urteotan nabarmen aurreratu da arrazoibide logikoa automatizatzeko
+ zereginean, eta horrek ekarpen handia egin die metodo formalen euskarri gisa
+ erabiltzen diren tresna praktikoei. Honela dio C. A. R. Hoarek 2006ko [Error:
+                   Reference source not found] artikuluan:
+     Azken 10 urte hauetan, frogak eraikitzeaz arduratzen den softwarearen
+  eraginkortasuna 1.000ko faktoreaz hobetu da. Hori, hardwarearen abiaduran,
+ ahalmenean eta eskuragarritasunean gertatutako hobekuntzetan lortutako 100eko
+faktoreari gehitu behar zaio. Bai softwareak bai hardwareak hobetzen jarraitzen
+    dute, horrela datozen 10 urteetan programen egiaztapen formalprogramen
+                   egiaztapenari bidezkoa den aukera emanez.
+    Azpimarratzekoa da, era berean, lau urte lehenago (2002) Bill Gates-ek
+  programen egiaztapenak gero eta garrantzi handiagoa duela aitortu izana7:
+ Hamarkada askotan zehar, egiaztapen formala konputazio-zientzien Grial Santua
+ izan da, baina orain oso garrantzitsuak diren arlo batzuetan —esate baterako,
+    kontrolatzaileen egiaztapenean— softwarearen fidagarritasuna bermatzea
+                ahalbidetzen duten tresnak eraikitzen ari gara.
+ Frogapen automatikoan egiten ari diren aurrerapenak hainbat eratan aplikatzen
+  ari dira programen analisian eta garapenean. Izatez, bi arloen arteko elkar
+                    hartzea oso emankorra gertatzen ari da.
+ Berriki, 2012an, DO-178C dokumentua argitaratu da Software Considerations in
+   Airborne Systems and Equipment Certification gaiari buruz. Dokumentu hori
+ argitaratu izanak erakusten du aurrera egin dela metodo formalen gaian, eta,
+  bereziki, softwarearen egiaztapenean. DO-178C dokumentuak ezartzen du zein
+  oinarri bete behar dituzten hegazkinetarako software komertzialek, erakunde
+  ziurtatzaileek (Estatu Batuetako Federal Aviation Administration (FAA) eta
+  European Aviation Safety Agency (EASA) esaterako) onar ditzaten. Dokumentu
+ horrek metodo formalei buruzko gehigarria du, eta bertan metodo formalak eta
+             softwarearen egiaztapena honela azpimarratzen dira:
+Metodo formalak sistema digitalen softwarearen espezifikaziorako, garapenerako
+   eta egiaztapenerako erabiltzen diren eta matematikatan oinarrituta dauden
+ teknikak dira. Metodo formalen oinarri matematikoa logika formala, matematika
+ diskretua eta ordenagailuak irakur ditzakeen lengoaiak dira. Ingeniaritzaren
+     beste alorretan bezala, analisi matematiko egokiak egiteak diseinuen
+zuzentasuna eta sendotasuna bermatzen lagundu dezakeela uste izateak eragin du
+                          metodo formalak erabiltzea.
+   Horrenbestez, badirudi metodo formalak gero eta gehiago erabiliko direla
+softwarearen garapenean, eta tresna automatiko sendoagoak eta erabilerrazagoak
+   eskainiko direla. Arlo honetan, azkarrago aurreratzeko eta emaitza hobeak
+lortzeko, ezinbestekoa da software-ingeniaritzako prestakuntzan metodo formalen
+     oinarriak lantzea, bai eta tresna eta aplikazio interesgarrienak ere.
+
+ Irudia 1: Aholkatutako irakurtze-ordena.
+ B Liburuaren deskribapena
+   Liburu honen helburua programazioaren metodologia eta teknologiaren arloan
+ funtsezkoak diren oinarrizko metodo formalez osatutako bilduma bat aurkeztea
+   da, adibide eta ariketen bidez. Liburu honetan, programen eta datu-moten
+   espezifikazioa, programa iteratibo eta errekurtsibo errazen egiaztapena,
+  espezifikazio (edota programa) errekurtsiboak programa iteratibo bihurtzea,
+eta, aurre-ondoetako espezifikazioetatik abiatuz, bai programa iteratiboen bai
+                    errekurtsiboen eratorpena lantzen dira.
+ Liburu honetako edukiek, ebatzitako eta proposatutako ariketak barne, Euskal
+  Herriko Unibertsitatean hainbat hamarkadatan zehar eman den Programazioaren
+    Metodologia izeneko irakasgaian dute jatorria. Gaur egun irakasgai hori
+   Informatika Ingeniaritzako Graduan lehenengo mailako bigarren lauhilekoan
+  ematen da. Gradu horretako lehenengo lauhilekoan, programazioko oinarrizko
+  kontzeptuak azaltzen dituen beste irakasgai bat dute ikasleek. Liburu hau,
+  Programazioaren Metodologia irakasgaiko testu-liburu bezala erabil daiteke.
+Urteetan zehar irakasgaia pixka bat aldatuz joan den arren, muinari eutsi egin
+zaio. Egun, irakasgaia muin horretara mugatuta dago, eta hori da hain zuzen ere
+   liburu honetan era xehatuan aurkezten eta lantzen dena. Hala eta guztiz,
+denbora-urritasuna eta zailtasuna direla eta, liburu honetako alderdi edo atal
+           batzuk ez dira aurkezten aipatutako irakasgai horretan.
+Liburuko kapitulu bakoitzean, guztiz garatutako adibideak egoteaz gain, ebatzi
+gabe dauden ariketez osatutako hainbat atal ere badaude. Ebatzi gabeko ariketa
+ horiek beren aurretik garatu diren adibideen zailtasun-maila bera dute gutxi
+      gorabehera. Gainera, kapitulu bakoitzaren bukaeran kapituluan zehar
+aurkeztutakoa lantzeko aukera ematen duen ariketa-bilduma ere badago. Bestalde,
+kapitulu bakoitzak interesgarriak diren aipamen historikoak eta erreferentziak
+jasotzen dituen bibliografia-oharrei buruzko atala ere badu. Sarrerako kapitulu
+ honetan egindako baieztapen batzuk era zehatzagoan dokumentatzeko balio dute
+                      kapitulu bakoitzeko erreferentziek.
+ Liburua irakurtzeko aholkatzen den ordena 1 irudian eskematizatu da. Horrela,
+  C, D eta Error: Reference source not found kapituluek programa agintzaileen
+—bai iteratiboen bai errekurtsiboen— espezifikazioari eta egiaztapenari buruzko
+   funtsezko muina osatzen dute. Bestalde, Error: Reference source not found
+     kapituluan datu-motak espezifikatzeko teknika formal bat jaso da. Hor
+   azaldutakoa Error: Reference source not found kapituluan abiapuntu bezala
+   erabiliko da, datu-moten gaineko eragiketen espezifikazioetatik abiatuz,
+ eragiketa horiek inplementatzen dituzten programak transformazioen bidez nola
+lor daitezkeen azalduko baita. Bere aldetik, Error: Reference source not found
+  kapitulua C eta D kapituluetan oinarrituta dago; izan ere, programa bat eta
+haren zuzentasunaren frogapena era sistematikoan eta zorrotzean (matematikoan)
+     eraikitzen dituen diseinu-metodoaren oinarriak finkatzeko, programen
+  zuzentasuna frogatzeko balio duen metodoa erabiltzen da. Bukatzeko, Error:
+  Reference source not found kapitulua batez ere Error: Reference source not
+  found kapituluan oinarrituta dago, baina Error: Reference source not found
+  kapituluan aurkeztutako ekuazio bidezko espezifikazioak ere erabiltzen dira
+                                    bertan.
+ C Esker onak
+ Liburu honi sorrera eman dion irakasgaia ematen unean-unean aritu diren Euskal
+   Herriko Unibertsitateko Lengoaia eta Sistema Informatikoak Saileko kideei
+benetako esker ona adierazi nahi diegu. 80ko hamarkadaren hasieratik, ikasketa-
+ plan desberdinak tarteko, irakasgaia bilakatuz eta aldatuz joan da, eta haren
+edukiak landuz eta hobetuz joan dira. Hainbeste urteetako ibilbidean, asko izan
+  dira beren ekarria utzi duten pertsonak. Eskerrik asko horiei guztiei beren
+ekarpenengatik. Ikasleen parte-hartzea ere eskertzen dugu; izan ere, haien gogo
+   biziarekin, galderekin eta iruzkin eta iradokizunekin, liburuaren sorrera
+bultzatzeaz gain, haren edukiak aberasten ere lagundu dute, bereziki adibideei
+                           eta ariketei dagokienez.
+
+
+ Eranskina C
+****** Programen espezifikazio formala ******
+    Programak egiten duenaren azalpen edo deskribapen xehea da programaren
+espezifikazioa. Deskribapen hori sarrerako datuen eta irteerako emaitzen arteko
+                         erlazioa adieraziz ematen da.
+     Onura ugari ditu programak garatzean eta mantentzean espezifikazioak
+erabiltzeak, besteak beste, lantaldeen arteko komunikazioa errazten delako eta
+   programak aztertzeko eta egiaztatzeko egokiak diren deskribapen zehatzak
+      lortzen direlako (esate baterako, programen testak edo probaprobak
+ diseinatzeko). Espezifikazioak idaztean lengoaia informalak edo erdiformalak
+ erabiliz gero, espezifikazioen erabilgarritasuna mugatu egiten da; izan ere,
+     anbiguotasunak eta doitasun ezak errazago agertzen dira azalpenak edo
+  deskribapenak hain era zehatzean adierazi beharrik ez dagoenean. Aitzitik,
+  propietateak eta ondorioak inferitzean deskribapen zehatzak eta arrazoibide
+   zorrotzak ahalbidetzen dituzten lengoaia matematikoetan oinarritzen dira
+  espezifikazio formalak. Espezifikazioen izaera formal hori ezinbestekoa da
+ zenbait prozesu matematiko gauzatu nahi badira, hala nola zuzentasun-frogapen
+   formalak, espezifikazioetatik abiatutako programen eratorpen formalak eta
+    semantikari eutsiz egindako programen transformazioak. aurre-ondoetako
+espezifikazioAurre-ondoetako espezifikazio formalek bi formulaformula dituzte:
+aurreko baldintza eta ondoko baldintza.Aurreko baldintzak programaren hasieran
+onargarriak diren konputazio-egoeraegoera guztiak errepresentatzen ditu; ondoko
+   baldintzak, aldiz, programaren bukaeran onargarriak diren egoera guztiak
+  errepresentatzen ditu. Konputazio-egoera batean edo, soilago esanda, egoera
+    batean, aldagaialdagaiei balioak atxikitzen zaizkie, hau da, aldagaien
+balioespena egiten da. Formula batek formula hori egiazkoa egiten duten egoeren
+ multzoa errepresentatzen du. Hori horrela, programa baten punturen batean (ez
+    derrigor hasieran edo bukaeran) gerta daitezkeen egoera guztien multzoa
+       formulen bidez adierazteko gaitasuna oso baliagarria da programak
+  dokumentatzeko, eta are ezinbestekoa zuzentasunari buruz edo beste zenbait
+                   propietate nabarmenei buruz arrazoitzeko.
+  Kapitulu honetan, hasteko, espezifikazioaren kontzeptua (A atala) eta lehen
+  mailako logika —egoera multzoak errepresentatzeko duen erabilgarritasunaren
+ikuspegitik— aurkeztuko ditugu (B atala). Programei buruz arrazoitzeko bereziki
+ erabilgarriak diren lehen mailako logikaren alderdiak zehatz-mehatz aztertuko
+     dira. Adibidez, aldagai libreen (programarenak) eta aldagai atxikien
+   (laguntzaileak) arteko aldea ezartzen duten kuantifikatzaileak. Jarraian,
+programa desberdinetan gerta daitezkeen konputazio-egoerei buruzko baieztapenak
+ adierazten dituzten asertzioak/formulak idaztea eskatzen duten ariketa batzuk
+     datoz (Error: Reference source not found atala). C atalean aldagaiak
+ terminoekin ordezkatzen dituen eragiketa aztertuko da. Erakutsiko den bezala,
+ eragiketa horrek programazioko esleipenarekin eta, horrenbestez, konputazio-
+   egoeren oinarrizko aldaketarekin zerikusi estua du. D atalean, formulen
+ (bereziki aurreko baldintzen, ondoko baldintzen eta inbarianteen) ahultze eta
+    gogortzearekin erlazionatuta dagoen inplikazio logikoinplikazio logikoa
+   aztertuko da. E atalean, lehen mailako logika tresnatzat hartuta, aurre-
+    ondoetako espezifikazioaurre-ondoetako espezifikazio formalaren teknika
+   aurkeztuko dugu. Espezifikazio-teknika hori ebatzi beharreko problemaren
+deskribapen matematikoa egiteko egokia dela erakutsiko dugu, horretarako, batez
+ere, adibideak eta ariketak erabiliz. Gainera, teknika hori ondo erabiliz gero,
+  espezifikazioetako deskribapenak zehatzak, argiak eta trinkoak izango dira,
+ behar adinako murrizketak ezarriz (eta, horrela, onartezinak diren programak
+ saihestuz), baina beharrezkoak ez diren baldintzabaldintzak ezarri gabe; hau
+   da, murriztearen eta orokortzearen arteko orekari behar bezala eutsi ahal
+    izango zaio. Bukatzeko, Error: Reference source not found, F eta Error:
+ Reference source not found ataletan aurre-ondoetako espezifikazioari buruzko
+     ariketak, erreferentzia bibliografiko batzuk eta kapitulu osoan zehar
+   ikusitakoa laburbiltzen duten ariketak proposatuko dira hurrenez hurren.
+ A Espezifikazioaren kontzeptua
+ Hiztegiek diotenez, espezifikazioa egin beharreko lanaren deskribapen zehatza
+  da. Definizio horren haritik, programen espezifikazioa diogunean, programen
+  egitekoaren deskribapen zehatzaz ari gara. Bi osagai izan ohi ditu programa
+    baten espezifikazioak: batetik, datuek bete behar dituzten propietateak
+   adierazten dira; bestetik, emaitzen ezaugarriak deskribatzen dira (datuen
+    arabera). Bi alderdi horiek elkarren osagarri dira, eta bien elkarketak
+osotasuna ematen dio deskribapenari. Programa baten datuen eta emaitzen arteko
+ erlazioa funtziofuntzio matematiko baten gisara uler daiteke: datuak lirateke
+funtzioaren sarrera, eta emaitzak, berriz, funtzioaren irteera. Espezifikazioa
+  funtzioaren deskribapen zehatza da, horretara. Programa, ordea, funtzioaren
+inplementazioa da, hau da, datuetatik abiatuta emaitzak lortzeko era jakin bat.
+    Eta, noski, espezifikazio bat emanda, espezifikazio hori betetzen duten
+                programa bat baino gehiago inplementa daiteke.
+  Espezifikazioak informatikako hainbat alorretan erabiltzen dira. Programen
+diseinuan berebiziko garrantzia du espezifikazioak. Izan ere, edozein programa
+ diseinatzerakoan premiazkoa da ebatzi beharreko problemaren ezagutza zehatza
+(anbiguotasunik gabea). Ezagutza hori diseinuari ekin aurretik eduki behar da,
+diseinatu ahala problemaren deskribapenaz jabetzea akats-iturri larria delako.
+   Problema espezifikatzeak ideiak egituratzera behartzen gaitu eta alderdi
+ garrantzitsuak agerian uztera, bidenabar. Alderdi horiek, espezifikazioan ez
+ bada, diseinuan agertuko dira edo, are okerrago, ez dira agertuko, eta orduan
+programa ez da egokia izango, ez baitu nahi dugun problema ebatziko. Programak
+     eta aplikazio informatikoak talde-lanean egin ohi dira. Hori horrela,
+espezifikazioa komunikaziorako ezinbesteko bitartekoa da. Sistema bat modulutan
+  egituratzeko, sistemaren eginbeharrak zehatz-mehatz ezagutu behar dira, eta
+ modulu bakoitzaren diseinatzaileak inolako anbiguotasunik gabe ezagutu behar
+  ditu bai problema orokorra eta baita beste moduluekiko elkarrekintzak ere.
+Programen testak diseinatzeko ere ezinbestekoak dira espezifikazioak: programak
+ezin dira testeatu beren eginkizuna zehaztasunez ezagutzen ez bada. Kutxa beltz
+deritzen testek espezifikazioa dute abiapuntu. Bestalde, ez dugu ahantzi behar
+ programak behin egin eta askotan irakurtzen direla. Programa bat mantentzeko
+ beharrezkoa da programen dokumentaziodokumentazio egokia erabiltzea, edonork
+ programa horrek zer egiten duen zehazki uler dezan aparteko ahaleginik gabe.
+    Gerora ere, aldaketaren bat egin beharko denean, ezinbestekoa izango da
+ dokumentazioa. Kontuan hartu behar da, gainera, aldaketak egiten dituena eta
+        hasierako diseinua egin zuena ez direla pertsona bera izan ohi.
+  Liburu honetan, espezifikazioa programen egiaztapenaren, eratorpenaren eta
+   transformazioaren abiapuntu bezala erabiliko da. Egiaztapenaren helburua
+ programek beren espezifikazioa betetzen dutela formalki frogatzea da, hau da,
+     egin beharrekoa egiazki egiten dutela frogatzea. Beraz, egiaztapenean
+  oinarritzen diren diseinu-metodologien oinarria ere badira espezifikazioak.
+   Programen eratorpena, transformazioa eta sintesi automatikoa egiten duten
+  metodoek ere espezifikazioetan dute oinarria. Arlo honetan, exekutagarriak
+diren espezifikazio-lengoaiak ere badira, hau da, programazio-lengoaia bilakatu
+diren espezifikazio-lengoaiak. Programazio-lengoaia horiek deklaratiboak direla
+ esan ohi da, nolabait problemaren deskribapenean oinarrituz egiten baitituzte
+    kalkuluak, problema ebazteko balio duen algoritmo bati jarraitu ordez.
+ Laburbilduz, espezifikazioak bereziki baliagarriak eta beharrezkoak dira bai
+     programen diseinuan, mantentze-lanetan, egiaztapenean, eratorpenean,
+transformazioan eta sintesian, baita programen proben diseinurako ere, bai eta
+   softwarea garatzen diharduten taldeetako kideen arteko komunikazio egokia
+                                bermatzeko ere.
+ Espezifikazioak benetan erabilgarriak izan daitezen, badira zaindu beharreko
+  zenbait ezaugarri. Oro har, espezifikazioek, egokiak izango badira, honako
+                     propietate hauek bete behar dituzte:
+•Argitasuna: ulerterrazak.
+•
+Laburtasuna: erredundantziarik gabeak.
+•
+Doitasuna: anbiguotasunik eza.
+•
+Murriztasunaren eta orokortasunaren arteko oreka: alferrikako xehetasunik
+gabeak, baina xehetasun garrantzitsu guztiak dituztenak.
+ Programen espezifikazioak idazteko formatu (edo egitura) eta lengoaia askoren
+  artean aukera daiteke. Bi taldetan banatu ohi dira espezifikazio-lengoaiak:
+ formalak eta informalak. Lengoaia bat formaltzat hartuko dugu haren sintaxia
+  eta semantika formalki (zehaztasun matematikoz) definituta baldin badaude.
+ Espezifikazio informalerako teknikek, aldiz, deskribatu beharreko ezaugarriak
+   edo alderdiak hitz esanguratsu baten bidez nabarmendutako klausulen bidez
+   adierazteko formatua edo egitura finkatzen dute. Beraz, formalak ez diren
+  espezifikazio-tekniketan egiturazko moldea ezartzen da, baina ez klausulak
+ adierazteko lengoaiek nolakoak izan behar duten. Espezifikatzen duenaren esku
+    geratzen da, hortaz, notazio matematiko/teknikoa edo lengoaia naturala
+  aukeratzea klausula bakoitza egoki idazteko. Ohikoak dira, esate baterako,
+    datuak, esperotako emaitzak eta portaera, aldatuko diren datuak, edota
+           salbuespenezko portaerak deskribatzen dituzten klausulak.
+ Espezifikazio bat idaztean beharrezkoa den formaltasun-maila espezifikazioari
+   emango zaion erabilerak baldintzatuko du: taldeen arteko komunikaziorako,
+       programen testen diseinurako edo programen dokumentazioprogramen
+   dokumentaziorako lengoaia informala nahikoa izan daiteke; baina programen
+egiaztapenerako eta eratorpenerako (hain zuzen ere liburu honetan lantzen diren
+   gaiak), sintesirako eta transformazio automatikorako, edo espezifikazioen
+  exekuziorako, ezinbestekoa da espezifikazioak automatikoki prozesatzeko eta
+matematikoki analizatzeko aukera ematen duen lengoaia formallengoaia formal bat
+   erabiltzea. Gainera, espezifikazio-teknika formalen erabileran trebatzeak
+abstrakzio- eta formalizazio-gaitasunak lantzea dakar, eta gaitasun horiek oso
+   mesedegarriak dira bestelako teknika informalekin lan egitean ere. Liburu
+honetan lehen mailako logikan oinarritzen den espezifikazio-teknika formal bat
+                                erabiliko dugu.
+ B Lehen mailako asertzioak: egoerak adierazteko formulak
+    Aurreko asertzioegoeraformulaatalean esan dugun bezala, programa baten
+ espezifikazioak sarrerako datuen eta lortu beharreko emaitzen arteko erlazioa
+adierazten du: azken batean, datuetatik abiatuz programak zer ebazten duen edo
+   zer lortzen duen zehazten du. Baina espezifikazioak ez du adierazten nola
+       iritsi datuen eta emaitzen arteko erlazio hori betetzera; hau da,
+   espezifikazioak ez du argitzen nola kalkulatzen diren emaitzak sarrerako
+      datuetatik abiatuz. Kontuan hartuta, gainera, espezifikazio bat era
+   desberdinetan inplementa daitekeela, garbi dago espezifikazioak ez duela
+ deskribatzen programak zein eratan ebazten duen problema. Aginduzko programek
+   aldagaialdagaien balioak aldatzen dituzten agindu-sekuentziak egikaritzen
+     dituzte. Hori dela-eta, emaitzetara iristeko egin behar den aldagaien
+   transformazio-prozesua esplizituki errepresenta daiteke aldagaien edozein
+   hasierako baliotarako. Programa bat hartuta, une jakin batean programako
+   aldagaiek duten balioa deskribatzen duen (aldagaia,balioa) erako bikoteez
+  osatutako multzoari konputazio-egoerakonputazio-egoera (edo besterik gabe,
+  egoera) esaten zaio, eta une jakin batean programako aldagaiek duten balioa
+   deskribatzen du. Nabarmentzekoa da exekuzioaren une batera iritsitakoan,
+oraindik baliorik ez duten aldagaiak egon daitezkeela. Hori horrela denean, une
+hori baino lehenagoko egoeretan aldagai horiek ez dute baliorik egokitzen dien
+(aldagaia,balioa) erako bikoterik izango. Aginduek, aldagaien balioak aldatuz,
+egoerak aldarazten dituzte. Adibidez, har dezagun datu bezala negatiboa ez den
+ x zenbaki osoa eta positiboa den y zenbaki osoa jasotzen dituen, eta emaitza
+bezala x eta y zenbakien arteko z zatidura osoa eta zatiketa osoaren h hondarra
+                  kalkultatzen dituen honako P programa hau:
+     (1)
+      z := 0;
+ (2)
+      h := x;
+ (3)
+      whileh >= yloop
+       z := z+1;
+    (4)
+       h := h-y;
+    (5)
+    end_loop;
+ (6)
+            Demagun hasierako egoera, (1) puntuan, honako hau dela
+(1) {(x,31),(y,7)}
+ Programako gainerako aldagaiak (z eta h) hasierako egoeran ez dira agertzen,
+      oraindik ez baitzaie baliorik esleitu. Lehenengo agindua (z := 0;)
+ exekutatutakoan, z aldagaiak 0 balioa hartuko du. Beraz, bigarren egoera, (2)
+                        puntuan, honako hau izango da:
+(2) {(x,31),(y,7),(z,0)}
+Era berean, bigarren agindua (h := x;) exekutatutakoan, programaren exekuzioari
+                     dagokion egoera honela geratuko da:
+(3) {(x,31),(y,7),(z,0),(h,31)}
+ Ondoren, while aginduaren exekuzioa hasiko da. Iterazioak aurrera egin ahala,
+  honako taula honetan erakusten diren balioak hartuz joango dira aldagaiak:
+
+
+
+
+   Iterazioa       Egoera         x          y         z         h
+      2*1            (4)          31         7         1         31
+                     (5)          31         7         1         24
+      2*2            (4)          31         7         2         24
+                     (5)          31         7         2         17
+      2*3            (4)          31         7         3         17
+                     (5)          31         7         3         10
+      2*4            (4)          31         7         4         10
+                     (5)          31         7         4         3
+ Azkenean, while aginduaren exekuzioa bukatu ondoren, honako egoera hau izango
+                                    dugu:
+(6) {(x,31),(y,7),(z,4),(h,3)}
+         Horrenbestez, P programak hasierako egoera honetatik abiatuz
+(1) {(x,31),(y,7)}
+                       bukaerako egoera hau lortuko du:
+(6) {(x,31),(y,7),(z,4),(h,3)}
+     Transformazio hori sarrerako datu zehatz batzuetatik abiatuz egindako
+ konputazio zehatz bat da. Programa batek burutu ditzakeen konputazio guztiak
+ esperotako emaitzetara iristen badira, orduan programa hori zuzena izango da.
+ Baina, oro har, programa batek buru ditzakeen konputazioen kopurua infinitua
+ izango da, edo, bestela esanda, programaren abiapuntu izan daitezkeen egoeren
+    edo sarrerako datuen kopurua infinitua da. Hori horrela izanda, egoerak
+  erabiltzea ez da nahikoa izaten programa bat espezifikatzeko. Gabezia horri
+ aurre egin eta orokorragoa den adierazpide bat edukitzeko, asertzioasertzioak
+   erabiltzen dira. Asertzioak programetako puntu desberdinetan iruzkin gisa
+  ipintzen diren adierazpenespresio logikoak dira. Asertzio bakoitzak berari
+   dagokion puntuan aldagaiek zein propietate beteko dituzten adierazten du.
+  Horrela izanda, programaren edozein konputazio asertzio bat dagoen puntura
+  iristen denean, programaren egoera osatzen duten aldagaien balioek asertzio
+horrek dioena beteko dute. Beraz, asertzio bakoitzak programan dagokion puntuan
+gerta daitezkeen (eta infinitua izan ohi den) egoeren multzoa errepresentatzen
+  du. Beste era batera ipinita, asertzioaren bidez, asertzioak dioena egiazko
+  egiten duten (edo betetzen duten) egoerak errepresentatzen dira. Asertzioen
+ sintaxia eta semantika datozen ataletan definituko badira ere, asertzioak zer
+   diren ulertzen lagun dezakeen adibidea dator jarraian. Har dezagun honako
+                                asertzio hau:
+                                 {ϕ≡x=y*z+h}
+           Asertzio horri buruz honako baieztapenok egin ditzakegu:
+•
+{(
+x,31),(y,7),(z,4),(h,3)} egoeranegiazkoada
+•
+{(
+x,31),(y,7),(z,4),(h,0)} egoeranfaltsuada
+•
+{(
+x,31),(y,7)} egoeranindefinituada
+ Asertzioen bidez, programen konputazioak eta, aldi berean, programak zuzenak
+     izateko aldagaien artean bete beharreko erlazioak deskriba daitezke.
+ Horregatik, asertzioak programen dokumentazioprogramak dokumentatzeko erabil
+    daitezke. Esate baterako, zatidura osoa eta hondarra kalkulatzen dituen
+              programa berriro hartuz, honela dokumenta daiteke:
+     {x≥0∧y>0}
+      z := 0;
+      h := x;
+      whileh >= yloop {x=y*z+h∧y>0∧x≥h≥0∧z≥0}
+       z := z+1;
+       h := h-y;
+    end_loop;
+ {x=y*z+h∧y>h≥0∧z≥0}
+        Honako beste adibide honetan hutsa ez den A(1..n) array-ko (edo
+  bektorebektoreko)8 elementuen batura x aldagaian kalkulatzen duen programa
+                                   daukagu:
+     {n≥1}
+      i := 0;
+      x := 0;
+      whilei < nloop
+       i := i+1;
+       x := x+A(i);
+    end_loop;
+
+  asertzioAsertzioak adierazteko lengoaia formallengoaia formal bat erabiliko
+  dugu: lehen mailako logika, hain zuzen ere. Hau da, asertzio bakoitza lehen
+mailako logikan idatzitako formulaformula bat izango da. Lehen mailako logika
+  (predikatu-logika eta predikatu-kalkulupredikatu-kalkulua ere esaten zaio)
+   lehen mailako lengoaietan idatzitako propietateen inferentzia aztertzeko
+ sistema formal bat da. Lehen mailako lengoaiak lengoaia formalak izaten dira
+eta honako osagai hauek erabiltzen dituzte: i) aldagaialdagai indibidualak, ii)
+   (lehen mailako) terminoterminoei aplikatzen zaizkien funtziofuntzioak eta
+      predikatupredikatuak, iii) eragile logikoeragile logikoak (ukapena,
+ konjuntzioa, disjuntzioa, inplikazioa, inplikazio bikoitza), eta iv) aldagai
+ indibidualen gaineko kuantifikatzaileak. Gure programetan aldagai indibidual
+  gehienak zenbaki osoen motakoak izango dira. Hau da, formulek zenbaki osoen
+ propietateak eta erlazioak adieraziko dituzte, edo zenbaki osozko arrayenak9.
+          Batzuetan boolearrak eta karaktereak ere erabiliko ditugu.
+ B.1 Lehen mailako asertzioen sintaxia
+ lengoaia formalLengoaia formal guztiek matematikoki definitutako sintaxi eta
+  semantika zehatzak izaten dituzte. asertzioAsertzioen idazkerako sintaxiari
+    dagokionez, lehen mailako logikaren lengoaia erabiliko dugu, oinarrizko
+   alfabeto bezala lengoaia matematikoan ohikoak diren sinbolo denak bai eta
+   ezagunenak diren agindu bidezko programazio-lengoaietan (adibidez, ADAn)
+   erabiltzen diren sinboloak ere hartuz. Gainera, batzuetan sinbolo horiek
+euskarara itzuliko ditugu (esate baterako, bikoitia erabiliko dugu ingelesezko
+  even erabili ordez). Hona hemen erabiliko ditugun sinboloak nolakoak izango
+                    diren erakusten duten adibide batzuk:
+•
+aldagaiAldagai-sinboloak:x,y,z,…
+•
+Konstante-sinboloak: 0,
+1,…,'a','b','c',…
+•
+funtzio-sinboloFuntzio-sinboloak: +,
+−,*,…,%10,abs,…
+•
+predikatu-sinboloPredikatu-sinboloak: <,=,≥,≠,…,bikoitia,bakoitia,…
+      Aldagai-, konstante-11 eta funtzio-sinbolofuntzio-sinboloak unitate
+ indibidualak adierazteko erabiltzen dira; horiek konbinatuta terminoterminoak
+  osatzen dira. Predikatuak (eragileekin eta kuantifikatzaileekin konbinatuz)
+  formulak osatzeko erabiltzen dira. Hau da, terminoek elementu indibidualak
+adierazten dituzte, eta formulek elementu horien gaineko propietateak. Funtzio-
+  eta predikatu-sinbolo orok bere aritatea du. Sinbolo baten aritatea sinbolo
+horrek zenbat argumentu behar dituen adierazten duen zenbaki arrunta da. Esate
+   baterako, bikoitia predikatuaren aritatea 1 da (beraz, bakuna da), eta <
+sinboloaren aritatea 2 da (beraz, bitarra da). Sinbolo baten «aritatea n dela»
+              esateko, sinbolo hori n-tarra dela ere esango dugu.
+Era errekurtsiboa erabiliz, (lehen mailako) terminoak honela defini daitezke:
+•Termino sinpleak: aldagaiak eta konstanteak termino sinpleak dira.
+•
+Termino konposatuak:
+n>0 izanda,ffuntzion-tarra baldin bada eta terminoak baldin badira, orduan
+termino konposatua da.
+•
+Termino oro sinplea edo konposatua izango da.
+    Lehenago (konstanteen eta aldagaien sinboloak ikusi ditugunean) termino
+  sinpleen adibideak eman ditugu. Honako hauek termino konposatuen adibideak
+                                    dira:
+x+1,x%2,(5−A(i))*(−z),abs(z−3) eta  A(i) / A(j)
+Kontuan izan funtzio aritmetiko gehienak (batuketa, biderketa, etab.) infixuak
+             direla, hots, bi argumentuen artean idazten direla.
+      Error: Reference source not found kapituluan azalduko dugun bezala,
+ bektorearrayen osagaiak (hau da, A(i) erako elementuak) ezin daitezke aldagai
+   indibidualtzat hartu programen egiaztapena egiterakoan. Arrayen osagaiei
+eginiko esleipenak egoki tratatzeko teknika kapitulu horretan aurkeztuko dugu.
+  Bien bitartean, C kapitulutik Error: Reference source not foundera, arrayen
+   osagaiei eginiko esleipenak (adibidez, A(i):=x;) saihestu egingo ditugu.
+    Terminoaren kontzeptua oinarritzat hartuta, (lehen mailako) formularen
+               kontzeptua errekurtsiboki honela definitzen da:
+•
+formulaFormula sinpleak (formula atomiko edo atomo ere esaten zaie):
+n≥0 izanda,ppredikatun-tarra baldin bada eta terminoak baldin badira, formula
+sinplea da.TrueetaFalseere formula sinpleak dira12.
+•
+Formula konposatuak: formula sinpleak edo konposatuak oinarritzat hartuz beste
+formula konposatuak lortzeko ≠ (ezeztapena, ukapena),∧(konjuntzioa, eta),∨
+(disjuntzioa, edo), → (inplikazioa) eta (baliokidetza, inplikazio bikoitza)
+eragile logikoeragile logikoak, eta∀kuantifikatzaile unibertsala
+eta∃kuantifikatzaile existentziala erabiltzen dira. Ezeztapena eragile bakuna
+da (formula bakar bati aplikatzen zaio), eta beste guztiak bitarrak dira (bi
+formula behar dituzte) eta, gainera, infixuak dira (formula bien artean idazten
+dira). Kuantifikatzaileekxaldagai (indibidual) bat eta ϕ formula bat behar
+dituzte, eta∀xϕ edo∃xϕ egitura duten formulak lortzen dira.
+•
+Formula oro sinplea edo konposatua izango da.
+Honako bost espresio hauek atomoak dira: x<y,z=2,A(i)>(A(j)+1),bakoitia(x) eta
+     bikoitia(2). Beste hauek, berriz, formula konposatuen adibideak dira:
+ ∀xϕ eta ∃xϕ erako formuletan, ϕ formula ∀x eta ∃x kuantifikatzaileen esparrua
+ dela esaten da. Formula konposatuetan, x algagai baten agerpena atxikia dela
+ esaten da, ∀x edo ∃x kuantifikatzaileen esparruan agertzen bada. Atxikiak ez
+ diren agerpenei libre deritze. Adibidez, lerro batzuk lehenago ikusi ditugun
+formula konposatuetatik azkenekoa hartzen badugu, x aldagaiaren agerpena librea
+   da, baina z eta v aldagaien agerpen guztiak atxikiak dira. Aldagai batek
+  gutxienez agerpen libre bat baldin badu formula batean, orduan aldagai hori
+formula horretan libre dago eta formula horretako aldagai librealdagai libreen
+ multzoan egongo da. ϕ formulan libre agertzen diren aldagaiez osatutako AL(ϕ)
+                        multzoa honela defini daiteke:
+•
+.
+  Hor ald(t) espresioak t terminoan agertzen diren aldagai guztiez eratutako
+                            multzoa adierazten du.
+•AL(True)=AL(False)=∅.
+•AL(≠ϕ)=AL(ϕ).
+•
+.
+•AL(∀xϕ)=AL(∃xϕ)=AL(ϕ)∖{x}.
+   Hor ∖ eragileak multzoen arteko diferentzia (edo kenketa) adierazten du.
+**** B.2 Lehen mailako asertzioen semantika ****
+   asertzioAsertzio batek konputazio-egoeraegoera batean balioa izan dezan
+   (egiazkoa/faltsua), egoera horrek aldagaialdagai libre guztiei balio bana
+  egokitu beharko die. Baldintza hori betez gero, egoera horretan asertzioak
+interpretazio semantikoa izango du eta, interpretazio horren arabera, asertzio
+      hori egoera horretan egiazkoa ala faltsua den jakin ahal izango da.
+Aurrerantzean, formulaformula bat egiazkoa dela adierazteko T balioa erabiliko
+    dugu eta faltsua dela adierazteko F balioa erabiliko dugu. Asertzio bat
+   programako puntu batean idatzita dagoenean, asertzio hori puntu horretan
+       egiazko (T) egiten duten egoeren multzoa errepresentatzen ari da.
+  Lehenbizi terminoterminoei semantika eman behar diegu, hau da, interpretatu
+ egin behar ditugu egoeretan. Terminoek balioak errepresentatzen dituzte; izan
+  ere, termino batek mota egokiko balio bat hartzen du interpretatzen denean.
+ Alde batetik, egoera bakoitzean egoera horretan dagokien balioa hartzen dute
+   aldagaiek. Beste aldetik, konstanteek eta funtziofuntzioek beren esanahi
+ estandarra dute erabilitako programazio-lengoaian edo lengoaia matematikoan.
+Horrenbestez, egoera bakoitzean termino bakoitzak duen balioa funtzioen esanahi
+ estandarra aldagaien balioei eta konstanteei aplikatuz lortzen da. Adibidez,
+   egoeran interpretatuta (x+y)/2 terminoaren balioa 19 zenbaki osoa da, eta
+     egoeran interpretatuta haren balioa 12 da. Ohartzekoa da termino hori
+  ebaluatzeko z aldagaiaren balioa ez dela behar, baina horrek ez du inolako
+arazorik sortzen. Alderantzizko kasua, ordea, problematikoa da: zein da (x+y)/
+  2 terminoaren balioa egoeran? Arazo hori dela-eta, s egoera batean termino
+   baten aldagai guztiek balioa baldin badute, termino hori egoera horretan
+definituta dagoela esango dugu. Berriro adibidera joz, (x+y)/2 terminoa egoeran
+           indefinituta (edo definitu gabe) dagoela esango genuke.
+Era berean, formulek ere T (egiazkoa) edo F (faltsua) balioa izango dute egoera
+ batean interpretatzen direnean. Edozein egoeratan True atomoa T da eta False
+  atomoa F da. Asertzioetan erabiliko diren predikatupredikatu-sinboloek ere
+    esanahi estandarra dute eta gainerako formula atomikoak interpretatzean
+predikatuen esanahi hori hartu beharko da kontuan. Horrela, adibidez, egoeran (
+  (x+y)/2)>z formulari T balioa dagokio, baina egoeran F balioa dagokio, eta
+  egoeran definitu gabe dago. ϕ formula s egoeran definituta egongo da, haren
+  aldagai librealdagai libre guztiek balio bat baldin badute egoera horretan.
+  Aitzitik, s egoeran ϕ formulako aldagai libreren batek baliorik ez badu, ϕ
+ formula egoera horretan ez dagoela definituta esango dugu. Egoera bakoitzean
+   egoera horretan definituta dauden formulak bakarrik interpreta daitezke.
+ Formula konposatuak interpretatzeko eragile logikoeragile logikoen semantika
+ estandarra erabiliko dugu. Semantika hori honako egia-taulaegia-taula hauetan
+                                 jasotzen da:
+
+
+    ϕ        ψ        ≠ϕ     ϕ∧ψ    ϕ∨ψ    ϕ→ψ
+    F         F         T          F          F          T          T
+    F         T         T          F          T          T          F
+    T         F         F          F          T          F          F
+    T         T         F          T          T          T          T
+  Kuantifikatzaileak nola interpretatzen diren definitzeko, egoerak aldatzen
+dituen eragiketa bat behar dugu. Beraz, x aldagaia, x-ren mota bereko v balioa
+eta s egoera emanda, s[xv] bezala adieraziko dugun egoeran x aldagaiak v balioa
+du eta beste edozein aldagaik s-n daukan balio berbera izango du. Hori horrela,
+  x aldagaiak s egoeran balioa izan ala ez, s[xv] egoeran duen balioa beti v
+izango da. Kuantifikatzaile unibertsalaren semantika definitzeko, s egoeran ∀xϕ
+  formula T dela esango dugu, baldin eta soilik baldin x-ren motako edozein v
+baliorentzat (hau da, x-ren motako v balio guztientzat) s[xv] egoeran ϕ formula
+   T bada. Kuantifikatzaile existentzialaren kasuan, s egoeran ∃xϕ formula T
+izango da, baldin eta soilik baldin v balioren batentzat (hau da, gutxienez x-
+       ren motako v balio baten kasuan) s[xv] egoeran ϕ formula T bada.
+  Asertzioak idaztean, oso ohikoa da aldagai kuantifikatu batek har ditzakeen
+   balioak mota bereko azpimultzo batera murriztu behar izatea (gehienetan Z
+ multzora). Azpimultzo hori errepresentatzen duen formulari kuantifikazioaren
+   definizio-eremu esaten zaio, eta D(x) notazioaz adierazten da. Hona hemen
+               ohikoak diren definizio-eremuen adibide batzuk:
+Asertzioetan, definizio-eremua finkatzeaz gain, definizio-eremuko balioek bete
+  behar duten propietatea beste formula baten bidez definitzen da. Propietate
+ deritzo formula horri, eta P(x) notazioaz adierazten da. D definizio-eremuko
+elementu guztiek P propietatea betetzen dutela esateko erabili ohi den formula
+                                honako hau da:
+∀x(D(x)→P(x))
+    D definizio-eremuan P propietatea betetzen duen elementuren bat badela
+                 baieztatzen duen formula, berriz, hauxe da:
+∃x(D(x)∧P(x))
+D definizio-eremuak murrizketarik ezartzen ez duenean (beraz, definizio-eremua
+  kuantifikatutako aldagaiaren motako balio guztiez osatutako multzoa bezala
+ definituz), hau da, D(x) True-ren baliokidea denean, bi formula horiek honela
+sinplifikatzen dira hurrenez hurren: ∀xP(x) eta ∃xP(x). Era berean, D(x) False-
+ren baliokidea denean (hau da, definizio-eremua hutsa denean), honako hau dugu:
+    Kasu horietan, kuantifikatzaile unibertsalari (∀) dagokion formula True
+formularekin ordezka daiteke, eta kuantifikatzaile existentzialari (∃) dagokion
+                  formula False formularekin ordezka daiteke.
+     Errepikatzen den eragiketa baten ikuspuntua hartuta ere azal daiteke
+    kuantifikatzaileen semantika. Unibertsalki kuantifikatutako formula bat
+konjuntzioz osatutako segida gisa ikus daiteke. Segida hori batzuetan infinitua
+    ere izan daiteke. Bestalde, existentzialki kuantifikatutako formula bat
+                disjuntzioen segidatzat har daiteke. Adibidez,
+∀x(1≤x<4→A(x)<8)
+       formula konjuntzioz eratutako honako segida honen baliokidea da:
+A(1)<8∧A(2)<8∧A(3)<8
+                                     eta
+∃y(2<y≤5∧B(y)≥1)
+    formula disjuntzioz eratutako honako beste segida honen baliokidea da:
+B(3)≥1∨B(4)≥1∨B(5)≥1
+ Konjuntzioz edo disjuntzioz osatutako segiden bidez adierazteko aukera eduki
+  arren, propietate asko era laburragoan adieraz daitezke kuantifikatzaileak
+           erabiliz. Horren erakusgarri dira honako adibide hauek:
+•«A(1..10) zenbaki positiboz eratutako bektorea da»:
+∀i(1≤i≤10→A(i)>0)
+•«A(1..10) bektoreak badu gutxienez zenbaki negatibo bat»:
+∃i(1≤i≤10∧A(i)<0)
+•«A(1..10) bektoreak negatiboa den zenbaki bakar bat du»:
+∃i(1≤i≤10∧A(i)<0∧∀j((1≤j≤10∧i≠j)→A(j)≥0))
+    Kuantifikatzaileak konjuntzioz edo disjuntzioz osatutako segiden bidez
+  ulertzeko ikuspegi horretatik, kuantifikatutako formularen D(x) definizio-
+  eremua hutsa denean, ∀x(D(x)→P(x)) kuantifikazio unibertsala konjuntzioaren
+ neutrotzat har daiteke: True. Era berean, False, disjuntzioaren neutroa, ∃x(D
+   (x)∧P(x)) kuantifikazio existentzialaren baliokidea da D(x) hutsa denean.
+ Aurreko adibideetan kuantifikatzaileak ez dira guztiz beharrezkoak; izan ere,
+konjuntzioz edo disjuntzioz eratutako segida baliokideen bidez idatz daitezke.
+Hala ere, badira konjuntzioz edo disjuntzioz eratutako segida infinituen bidez
+ bakarrik adierazi ahal izango liratekeen propietateak ere. Propietate horiek
+             denek definizio-eremu (D) infinitua dute. Adibidez:
+•«Bada 5 zenbakiaz zatigarria den zenbaki positiboa»:
+∃x(x≥1∧x%5=0)
+•«2 baino handiagoa eta bikoitia den edozein zenbaki ez da zenbaki lehena»:
+∀x((x>2∧x%2=0)→∃i(1<i<x∧x%i=0))
+edo 
+∀x((x>2∧x%2=0)→≠∀i(1<i<x→x%i≠0))
+ Formulak idazteko kuantifikatzaileak erabiltzen diren bezala, aldagai atxikia
+ duten eragileak ere erabil daitezke terminoterminoak idazteko. Aldagai atxiki
+  horiek definizio-eremu baten barruko balioak hartuko dituzte. Batuketen eta
+  biderketen segidak laburtzeko erabiltzen diren eragileak dira ezagunenak:
+      Batuketa (+) eta biderketa (*) hurrenez hurren disjuntzioarekin eta
+  konjuntzioarekin parekatuz gero, batukaria —alegia, funtzio batean aldagai
+ baten balioa aldatuz lortzen diren espresioen batuketez eratutako segida— eta
+ biderkaria —antzeko segida biderketekin— kuantifikatzaile existentzialarekin
+eta unibertsalarekin pareka daitezke, hurrenez hurren. espresioan agertzen den
+x aldagaia, laburdura adierazteko erabiltzen da, baina ez da agertzen batukari
+    hori garatuz lortzen den f(i)+f(i+1)+…+f(j−1)+f(j) espresioan. Beraz, x
+ aldagaia kuantifikatzaileetako aldagai atxikiaren parekoa da. eta sinboloak x
+  aldagai atxikiaren definizio-eremuko informazioarekin hornitzen dira, eta,
+   horren ondoren, x darabilen funtzioa definitzen duen terminoa idazten da.
+     Definizio-eremua hutsa denean (ikusi ditugun adibideetan i>j denean),
+     batukariaren emaitza 0 balioa da (batuketaren elementu neutroa), eta
+          biderkariaren emaitza 1 da (biderketaren elementu neutroa).
+Aurrekoen antzeko eragiketa, programak espezifikatzean arras erabilgarria dena,
+   N kontaketa-eragiketa da. NxP(x) terminoak P propietatea zenbat elementuk
+     betetzen duten adierazten du. Esanahi hori adierazteko, x aldagai bat
+erabiltzen da, eta aldagai hori P propietatea adierazten duen formulan agertuko
+    da libre. Alabaina, N eragilearen eraginpean jarrita, P(x) formulako x
+      aldagaiaren agerpen guztiak atxikiak izango dira. Kuantifikatzaile
+existentzialarekin gertatzen den bezala, maiz D(x)∧P'(x) egitura erabiltzen da
+                         P(x) adierazteko. Adibidez,
+Nx(1≤x≤7∧x%2=0)
+              ondo eratutako terminoa da, eta haren balioa 3 da.
+Jarraian erakutsiko den bezala, orain arte eman dugun N kontaketa-eragiketaren
+definizioa ez da espezifikazio formalean erabiltzeko behar bezain zehatza eta,
+                    ondorioz, formalki birdefinituko dugu.
+Esate baterako, demagun s egoeran A(1..3) arrayak (4,2,4) balioa duela. Orduan
+                               garbi ikusten da
+Nx(1≤x≤3∧A(x)≥4)
+                 terminoak 2 balioa duela, honako propietatea
+1≤x≤3∧A(x)=4
+betetzen duten elementuen multzoa {1,3} delako. Baina, agian ez dago hain garbi
+                             beste termino honek
+Nx(∃i(1≤i≤3∧x=A(i)∧x≥4))
+                         2 edo 1 balio duen, izan ere
+∃i(1≤i≤3∧x=A(i)∧x≥4)
+ propietatea betetzen duten elementuek {4,4} multimultzoa edo {4} multzoa osa
+baitezakete. Definizio zehatz batek anbiguotasun hori argitu egin beharko luke.
+    Hona hemen definizio zehatz hori: NxP(x) terminoaren semantika {x|P(x)}
+    multzoaren kardinalitatea (elementuen kopurua) dela esango dugu. Horren
+                                   arabera,
+Nx(∃i(1≤i≤3∧x=A(i)∧x≥4))
+        terminoaren balioa s={(A(1),4),(A(2),2),(A(3),4)} egoeran 1 da.
+s egoeran P(x) faltsua baldin bada edozein x-tarako, orduan NxP(x) terminoaren
+   balioa 0 izango da, {x|P(x)} multzoa hutsa baita eta, horrenbestez, haren
+                         kardinalitatea 0. Adibidez,
+Nx(1≤x<i∧P(x))
+   terminoa hartuz, i aldagaiari 1 baino txikiagoa edo berdina den balio bat
+  egokitzen dion edozein egoeratan termino horren balioa 0 izango da, edozein
+                            dela ere P propietatea.
+ Hona hemen aipatutako azken eragileen bidez adierazitako zenbait propietate:
+•«A(1..n) bektoreko elementu guztien batura bere lehenengo k≥1 elementuen
+biderkadura baino handiagoa da»:
+•«A(1..10) bektoreko lehenengo k elementuen biderkadura x da»:
+•«x balioa y aldiz agertzen da A(1..n) bektorean»:
+Ni(1≤i≤n∧A(i)=x)=y
+     Har dezagun orain, x eta y aldagai osoei eta n tamaina konstanteko A
+ bektorebektoreari balioak egokitzen dizkien s egoera bat. Zehazki, izan bedi
+                               hurrengo egoera:
+s={(x,3),(y,4),(n,6),(A(1..n),(2,5,3,6,1,8))}
+                 Honako formula hauen balioa s egoeran F da:
+•x≥y
+•
+•∀i(1≤i≤n→A(i)≤x+y)
+•∃i(1≤i≤n∧x=A(i))∧∃j(1≤j≤6∧y=A(j))
+  Aldiz, beste formula hauek T balioa hartzen dute s egoeran interpretatuta:
+•x+1=y∧y>2
+•∃z(z>0∧z+x=y)
+•∀z(z>1→z+x>y)
+•∃i(1≤i≤n∧(x=A(i)∨y=A(i)))
+•∃i(1≤i≤n∧∀j(i<j≤6→A(i)>A(j))) 13
+ Formula batean libre agertzen den aldagairen bati aurreko s egoeran ez bazaio
+ baliorik egokitzen (esate baterako, z edo B(1..m) aldagaiak agertuko balira),
+orduan formula hori, edozein dela ere, indefinituta dago s egoeran, hau da, ez
+dauka interpretaziorik s-n. Adibidez, honako formula hau s egoeran indefinituta
+                                    dago:
+∃i(1≤i≤n∧B(i)>z)
+    Komeni da nabarmentzea, ordea, ∃z(z>0∧z+x=y) formula egiazkoa dela s-n.
+ Asertzioetako aldagai librealdagai libreen eta atxikien erabilera programako
+ aldagaien araberakoa da. Asertzioek idatzita dauden puntuan gerta daitezkeen
+     konputazio-egoerakonputazio-egoerak errepresentatzen dituzte. Egoerek
+ programako aldagai guztiei edo batzuei balioak egokitzen dizkiete. Adibidez,
+      bektore bateko elementuen batuketa egiten duen programara eta haren
+                            asertzioetara itzuliz:
+     {n≥1}
+      i := 0;
+      x := 0;
+      whilei < nloop
+       i := i+1;
+       x := x+A(i);
+    end_loop;
+
+  asertzioetan erabiltzen diren aldagai libreak (A(1..n), n, i, x) programako
+   aldagaiak dira. Aitzitik, asertzioetako aldagai atxikiak, batukariaren j
+   aldagai atxikia kasurako, ez dira programakoak. Izatez, ez luke zentzurik
+  batukariaren aldagai atxikitzat programako aldagairen bat, demagun i edo x,
+    aukeratzeak. Izan ere, edo asertzioak idatzi izan balira, bistakoa da
+ (gutxienez) nahasgarriak liratekeela. Programan agertzen ez den beste edozein
+   aldagai (j, esate baterako), arazorik gabe erabil daiteke aldagai atxiki
+ moduan. Bestalde, asertzio batek programan agertzen ez diren aldagai libreak
+    baldin baditu, indefinituta dago programaren konputazio-egoeretan, eta,
+      ondorioz, errepresentatzen dituen egoerak ez datoz bat programaren
+   konputazioekin. Horrenbestez, programa baten asertzioetan agertzen diren
+aldagai libre guztiek programako aldagaiak izan behar dute. Gainera, programako
+aldagai bat asertzio batean agertuko bada, aldagai horrek balio bat izan behar
+du asertzio horri dagokion programako puntuan (edozein konputaziotan). Aurreko
+ adibideko programan, zentzugabea litzateke {n≥1∧i=0∧x=0} jartzea programaren
+   hasierako asertziotzat, i eta x aldagaiak hasieratu gabe daudelako puntu
+  horretan. Hiru enuntziatu hauetan laburbilduko dugu asertzioetako aldagaiei
+                               buruz esandakoa:
+•
+Programa bateko asertzioasertzioetan agertzen diren aldagai librealdagai libre
+guztiek programako aldagaiak izan behar dute.
+•
+Asertzioetako aldagai atxiki guztiek aldagai berriak izan behar dute, hau da,
+ez dute agertu behar ez asertzioetako aldagai libre gisa ez programako aldagai
+gisa.
+•
+Programako puntu bati egokitzen zaion asertzioan agertzen diren aldagai libre
+guztiek balio bat izan behar dute puntu horretako edozein konputazio-egoeratan.
+  Aurrerantzean s(ϕ) notazioa erabiliko dugu s egoeran ϕ formulak duen balioa
+  izendatzeko. Adibidez, s(∃z(z>0∧z+x=y))=T idatziko genuke s egoera {(x,3),
+                 (y,4),(n,6),(A(1..n),(2,5,3,6,1,8))} balitz.
+ C Aldibereko ordezkapena
+   Programako aldagaien balioak, alegia, egoeraegoerak, sarrerako datuetatik
+  abiatu eta programak egindako konputazioetan zehar eginiko esleipenen bidez
+aldatzen dira. Egoera-aldaketa horiek asertzioasertzioen bidez adierazten dira:
+   asertzio batek esleipenaren aurreko egoera errepresentatzen du, eta beste
+  asertzio batek esleipenaren ondorengo egoera. Esleipenek eragindako egoera-
+   aldaketei dagokien eragiketa aldibereko ordezkapenaldibereko ordezkapena
+                                   deritzo.
+ Formula bateko aldagai bat termino batekin ordezkatzen duen eragiketa honako
+  era honetan definitzen da formalki: izan bitez ϕ formula, x aldagaia eta t
+   terminoa, ϕ formulan x-ren agerpen libre guztien ordez t terminoa jarriz
+            lortzen den formula bezala adieraziko dugu. Adibidez,
+kalkulatzean, t terminoan agertzen den aldagairen bat ϕ-ren kuantifikatzaileren
+   batean ere agertzen bada eta, gainera, x aldagaia kuantifikatzaile horren
+  esparruan baldin badago, orduan izen-atzematea edo izen-talka gertatzen da.
+   Talka horren eraginez ezin da baieztatu ϕ formulak x-ri buruz dioena eta
+   formulak t terminoari buruz dioena baliokideak direnik. Esate baterako,
+  ordezkapenean, ∀i kuantifikatzaileak i−1 terminoko i aldagaia atzematen du.
+ Atzemate edo talka hori dela-eta, ordezkapenaren emaitza den formula honetan
+∀i(1≤i≤n→A(i)=i−1)
+    i−1 terminoari buruz esaten denak ez du zerikusirik hasierako formulak
+∀i(1≤i≤n→A(i)=x)
+x-ri buruz esaten duenarekin. Oro har, izenaren atzemateak eragiten duen arazoa
+      saihesteko, nahikoa da ordezkapena egin aurretik hasierako formulan
+  kuantifikatzailearen aldagaia berrizendatzearekin, azken batean, horrek ez
+baitu formularen semantika aldatuko. Berriro adibidera joz, i aldagai atxikiari
+    k izena jarriz gero, egin beharreko ordezkapena honako hau izango da:
+         Ordezkapena egindakoan honako formula hau lortuko litzateke:
+∀k(1≤k≤n→A(k)=i−1)
+  eta, orain bai, formula horrek i−1 terminoari buruz baieztatzen duena, eta
+                                 beste honek
+∀k(1≤k≤n→A(k)=x)
+                   x aldagaiari buruz dioena, berdinak dira.
+   Asertzio batean x aldagaia t terminoaren ordez jartzeak x := t aginduaren
+  egiaztapenarekin lotura estua duenez, t terminoan agertzen diren aldagaiak
+ programako aldagaiak dira. Beraz, asertzioasertzioek aurreko atalean emandako
+jarraibideak betetzen badituzte, bereziki aldagai atxikiak ez badira programan
+agertzen, programaren egiaztapenean ez da gertatuko izenaren atzemate arazorik.
+     Hori dela-eta, atal honen bukaeran n aldagaietarako (n≥1) aldibereko
+     ordezkapena definitzean, terminoen aldagaiak eta kuantifikatzaileenak
+                      disjuntuak direla suposatuko dugu.
+ Hona hemen aldagaiak terminoekin nola ordezkatzen diren erakusten duten beste
+                               adibide batzuk:
+•
+•
+•
+Ordezkapena, aldi berean n aldagai n terminorekin ordezkatzen dituen eragiketa
+bezala ere defini daiteke oro har. Definizio formalak atzematerik ez gertatzea
+                         eskatzen du baldintza bezala:
+ Izan bitez ϕ formula, n≥1, binaka desberdinak diren aldagaiak eta ϕ formulan
+  kuantifikatuta ez dauden aldagaiak bakarrik izan ditzaketen terminoak. Hori
+horrela izanda, aldi berean i∈{1,…,n} balio bakoitzeko ϕ formulan -ren agerpen
+libre guztien ordez terminoa jarriz lortzen den formula bezala adieraziko dugu.
+ n=1 deneko kasu partikularrean, definizio horrek aurretik emandakoa hobetzen
+du, izen-atzematearen arazoa saihesten duen baldintza gehituz. Liburuan zehar,
+    ordezkapenak erabiltzen direnean atzematerik ez dagoela suposatuko da.
+ Honako adibide honek aldibereko ordezkapenaldibereko ordezkapen bat erakusten
+                                     du:
+     Ordezkapenak sekuentzialki egingo balira, honako hau izango genuke:
+ D Baliozko inplikazioak
+Programak egiaztatzean sortzen diren egitekoen artean, emandako inplikazio bat
+ edozein egoeratan egiazkoa dela frogatzea da nabarmenenetakoa. Inplikazio bat
+    egiazkoa baldin bada, baliozkoa dela esaten da. Beraz, ϕ→ψ inplikazioa
+baliozkoa da, baldin eta soilik baldin s(ϕ→ψ)=T bada edozein s egoeratan. Atal
+    honetan, inplikazio bat edozein egoeratan betetzen al den erabakitzeko
+erabiliko dugun irizpidea aurkeztuko dugu. Inplikazioaren egia-taulaegia-taulak
+                      erabiliz honako hau froga daiteke:
+              s(ϕ→ψ)=T edozein s-tarako baldin eta soilik baldin
+{s|s(ϕ)=T}⊆{s|s(ψ)=T}
+ {s|s(ϕ)=T}⊆{s|s(ψ)=T} betetzen denean ϕ formula ψ formula gogorformula baino
+gogorragoa dela esango dugu, edo ψ formula ϕ formula ahulformula baino ahulagoa
+  dela. Intuitiboki, formula batek egoerek bete beharrekoa zenbat eta gehiago
+murrizten duen, orduan eta gogorragoa izango da formula hori. Adibidez, lehena
+                (x)∧x>3 formula ≠(x%3=0) baino gogorragoa da:
+{{x=5},{x=7},…}⊆{{x=1},{x=2},{x=4},{x=5},{x=7},…}
+ Azken buruan, ϕ→ψ baliozkoa da, baldin eta soilik baldin ϕ gogorragoa bada ψ
+                                    baino.
+Muturreko kasuei erreparatuta, True da formula ahulformularik ahulena (edozein
+  s egoeratan egiazkoa baita) eta False da formula gogorformularik gogorrena
+(faltsua da edozein dela ere s egoera). Ondorioz, ϕ→True eta False→ϕ baliozkoak
+      dira edozein ϕ formulatarako, hau da, lege logikoak dira. Programen
+  egiaztapenean eta arrazoiketa logikoa eskatzen duten bestelako arloetan oso
+erabilgarriak diren beste lege logiko asko ere baliozko inplikazioak dira, eta
+era horretan froga daitezke. Hona hemen adibide batzuk: ϕ→(ϕ∨ψ), (ϕ∧ψ)→ϕ, , eta
+. Programen egiaztapenean sarritan erabiltzen diren erako baliozko inplikazioak
+                       dira honako beste adibide hauek:
+•x>0→x≥0
+•
+•k=0→∀j(1≤j≤k→A(j)=0)
+•
+(
+k=1∧A(1)=0)→∀j(1≤j≤k→A(j)=0)
+•lehena(2)→∃x(lehena(x))
+•
+(
+5≤n∧A(5)>0)→∃j(1≤j≤n∧A(j)>0)
+•
+(
+1≤i≤n∧A(i)>0)→∃j(1≤j≤n∧A(j)>0)
+•∀i(1≤i≤n→bikoitia(A(i)))→(7≤n→bikoitia(A(7)))
+•∀j(1≤j≤n→A(j)>0)→(1≤i≤n→A(i)>0)
+ E Programen aurre-ondoetako espezifikazio formala
+       Liburu honetan, aurre-ondoetako formatua erabiliko dugu programak
+espezifikatzeko. P programa baten aurre-ondoetako espezifikazioaurre-ondoetako
+ espezifikazioa ϕ eta ψ izendatuko ditugun bi asertzioasertzioren bidez ematen
+ da. ϕ asertzioari aurreko baldintza (edo aurrebaldintzaaurrebaldintza) esaten
+  zaio, eta ψ asertzioari ondoko baldintza (edo postbaldintzapostbaldintza).
+Programa programazio-lengoaia batean idatzita egongo da, eta asertzioak, aldiz,
+lehen mailako logikan idatzita egongo dira. Hoare-ren hirukote bezala ezagutzen
+                                     den
+                                  {ϕ} P {ψ}
+erako baieztapenak P programa ϕ betetzen den egoera batean hasten bada, orduan,
+ bukatzen bada, ψ betetzen den egoera batean bukatuko dela dio. P programaren
+abiapuntu izan daitezkeela onartzen dugun egoera guztiak errepresentatzen ditu
+  aurrebaldintzak. Beraz, ahal den formula ahulformularik ahulena definitzea
+komeni da, hau da, programaren edozein konputazio zuzena izan dadin datuek bete
+   beharreko gutxieneko baldintza. Aldiz, postbaldintzak datuen eta emaitzen
+ arteko erlazioa adierazten du eta emaitza onargarri guztiak errepresentatzen
+  dituen ahalik eta formula gogorformula gogorrena definitu behar da, betiere
+   sarrerako datuek aurrebaldintza bete behar dutela kontuan hartuta. Esate
+   baterako, bi zenbaki arrunten (zenbaki negatiboak ez dira onartuko beraz)
+  zatidura osoa eta hondarra kalkulatzen dituen programa baten espezifikazioa
+                            honela defini daiteke:
+     {y>0∧x≥0}
+     begin
+      z := 0;
+      h := x;
+      whileh >= yloop
+       z := z+1;
+       h := h-y;
+    end_loop;
+ end;
+ {x=z*y+h∧y>h≥0∧z≥0}
+  Aurreko baldintza aski ahula da datu onargarri guztiak onartzeko; bakarrik
+zatitzailea zero izatea eragozten du. Postbaldintza aski gogorra da onartezinak
+ liratekeen emaitzak baztertzeko. Aurrebaldintza bezala (y>1∧x≥0) erabili izan
+  bagenu, gogorregia izango litzateke, programak edozein zenbaki arrunt eta 1
+      zenbakiaren arteko zatiketa osoa ere kalkulatzen duelako. Bestetik,
+    aurrebaldintza bezala (≠(y=0)∧x≥0) erabili izan bagenu, ahulegia izango
+  litzateke, aurrebaldintzak zatitzaile negatiboak onartu arren, programak ez
+ baitu ondo kalkulatzen zatitzailea zenbaki negatiboa denean. Postbaldintzari
+    dagokionez, (x=z*y+h) formula ahulegia izango litzateke; oso erraza da
+     postbaldintza betetzen duen baina sarrerako datuen zatidura osoa ondo
+ adierazten ez duen egoera bat aurkitzea. Esate baterako, {(x,31),(y,7),(c,3),
+(r,10)} egoera. Azkenik, (x=z*y+h∧h=y−1) asertzioa gogorregia izango litzateke;
+  programak sortuko lituzkeen egoera batzuek (adibidez, {(x,31),(y,7),(c,4),
+                 (r,3)}) ez lukete postbaldintza hori beteko.
+ F Bibliografia-oharrak
+  Konputazio-egoeren multzoak formula logikoen bidez, hots, asertzioen bidez,
+errepresentatzeko ideia konputazio-zientzien hastapenetatik dator. Asertzioak
+  (bereziki, aurreko eta ondoko baldintzak) erabiltzea programen zuzentasunaz
+ arrazoitzeko beharrarekin estuki lotuta dago. Erreferentziarik goiztiarrenak
+ [Error: Reference source not found, Error: Reference source not found] 1940ko
+hamarkadaren bukaeran agertu ziren. Geroztik, 60ko hamarkadaren hondarrean, R.
+    W. Floyd [Error: Reference source not found] eta C. A. R. Hoare [Error:
+    Reference source not found] autore ezagunen lanak argitaratu zirelarik,
+   programen zuzentasunaz formalki arrazoitzeko euskarri gisa lehen mailako
+logikan idatziriko asertzioen erabilerak benetako indarra eta zabalkundea hartu
+  zuen. [Error: Reference source not found] lanean asertzioen jatorriari eta
+         bilakaerari buruzko narrazio historiko bikaina aurki daiteke.
+  Programen egiaztapena lantzen duen edozein liburuk eskaintzen dio atal bat
+     lehen mailako logikaren aurkezpenari eta programen konputazio-egoerak
+       errepresentatzeko duen erabilerari. Liburu horien artean, adibide
+interesgarriak dituzten honako irakurgai osagarri hauek nabarmenduko genituzke,
+    besteak beste: [Error: Reference source not found, 2.2. atala], [Error:
+Reference source not found, 1. eta 2. kapituluak], [Error: Reference source not
+   found, I. kapitulua], [Error: Reference source not found, 2. kapitulua],
+  [Error: Reference source not found, 1., 2., 3. eta 4. kapituluak], [Error:
+  Reference source not found, 2. kapitulua] eta [Error: Reference source not
+                             found, 1. kapitulua].
+  Eiffel programazio-lengoaia diseinatu zuenean B. Meyer-ek [Error: Reference
+source not found, Error: Reference source not found] kontratu deitu zien aurre-
+   ondoetako espezifikazioaurre-ondoetako espezifikazioei. Eiffel, objektuei
+orientatutako lengoaia, aitzindaria izan zen asertzioen erabileran. Gaur egun,
+     programazio-lengoaia askok (adibidez, Euclid, Gypsy, Alphard, etab.)
+      berenganatu dituzte asertzioak, eta, programen exekuzioan zehar edo
+arrazoitzaile automatikoen bidez, estatikoki, asertzioak betetzen direla froga
+   daiteke. Halaber, fidagarriagoak diren programak idazteko helburuarekin,
+       asertzioen era bateko edo besteko tratamendua ahalbidetzen duten
+ aurreprozesadore gero eta sendoagoz hornitzen dituzte lengoaiarik erabilienak
+          ere (adibidez, Basic, Ada, C, C++, C♯, Java, TCL eta abar).
+
+
+ Eranskina D
+****** Programa iteratiboen egiaztapena ******
+   Softwarea programen egiaztapen formalgaratzeko erabiltzen diren metodoen
+   helburu garrantzitsuenetakoa da bermatzea sortzen diren programaprogramek
+aurretik ezarritako helburuak betetzen dituztela, hau da, programak zuzenak edo
+errorerik gabekoak direla. Zuzentasuna da programek bete behar duten ezaugarri
+   nagusia, funtsezkoa baita ezaugarri hori. Programazio-erroreak aurkitzeko
+hainbat teknika daude. Teknika horiek bi taldetan sailka daitezke: alde batetik
+   probaprobatan oinarritzen diren teknikak; beste aldetik, frogapenfrogapen
+formaletan (matematikoetan) oinarritzen diren teknikak. Probatan oinarritutako
+     teknikek datuen kasuistika zabala erabiltzen dute programen portaera
+ aztertzeko. egiaztapenEgiaztapenaren kalitatea erabilitako proba-bankuproba-
+     bankuaren estalduraren araberakoa izango da. Programa bat zuzena dela
+ bermatzeko, sarrerako parametroek har ditzaketen balio guztiak eduki beharko
+ lituzke proba-bankuak, baina hori ezinezkoa da balio horiez osatutako multzoa
+ infinitua baldin bada, gehienetan gertatzen den bezala. Horregatik, aztertzen
+ari garen programak erroreak badituela froga daiteke metodo hauek erabiliz; ez,
+   ordea, programa hori errorerik gabea denik. Aldiz, frogapen formal batek
+ programa zuzena dela ziurtatzen du (esperotako portaeraren deskribapen formal
+      batekiko). Onura horren truke, programa baten zuzentasun-frogapena
+ formalizatzeko erabili behar diren garapen matematikoak nahiko neketsuak izan
+  ohi dira oro har, eta, gainera, erroreak ere sor daitezke. Zailtasun horiek
+arintzeko, egindako frogapen formalen zuzentasuna automatikoki aztertzen duten
+   software-tresna ugari sortu dira (ikusi Error: Reference source not found
+                                   atala).
+Kapitulu honetan egiaztapen formalegiaztapen formalerako teknika batean sakonki
+ barneratuko gara adibide ugari emanez: Hoare-ren sistema formala. Hain zuzen
+    ere, sekuentziala den edozein programazio-lengoaia agintzaileren muina
+   formalizatzen duen axioma eta erregelen multzoa landuko dugu. Hasteko, A
+  atalean, programen zuzentasunari buruzko kontzeptu eta notazioak finkatuko
+ dira. Ondoren, B atalean, sistema formalaren kontzeptua orokorrean aurkeztuko
+   da lehenengo, eta gero Hoareren sistema formalaren erabilgarritasuna eta
+helburuak zehaztuko dira. Hurrengo ataletan programazio-lengoaia agintzaile eta
+sekuentzialen oinarrizko aginduen zuzentasuna landuko da: esleipena (C atala),
+    konposaketa sekuentziala (D atala), baldintzazko aginduak (E atala) eta
+    iterazioak (F atala). Lau atal horietako bakoitzaren ondoren landutako
+ aginduari buruzko ariketez osatutako atala dator (Error: Reference source not
+found, Error: Reference source not found, Error: Reference source not found eta
+Error: Reference source not found atalak hain zuzen ere). Adibideetan Hoareren
+  sistema formala erabiliz eskuz egindako zuzentasun-frogen garapen zehatzak
+aurkeztuko dira (ariketetan egiteko eskatuko da). Horrelako frogak eskuz egitea
+  oso neketsua eta astuna izan daiteke, baita kapitulu honetan lantzen diren
+       bezalako programa laburretarako ere. Hala eta guztiz, programazio
+  agintzailearen oinarriak sendotzeko balio du, baita programa bati buruz era
+matematikoan arrazoitzeko gaitasuna garatzeko ere. Gero, G eta Error: Reference
+ source not found ataletan, asertzioen bidez programak dokumentatzeko teknika
+     aurkeztuko da eta ariketa batzuk proposatuko dira. Iterazioen bukaera
+  frogatzeko metodoa Error: Reference source not found atalean landuko da eta
+    metodo horri buruzko ariketak Error: Reference source not found atalean
+    planteatuko dira. Egiaztapen formala sakonago aztertzeko, arlo honetako
+    historiari eta azken aurrerapenei buruzko erreferentziak eta irakurgai
+ osagarriak ematen dira Error: Reference source not found atalean. Bukatzeko,
+   ariketa orokor batzuk proposatzen dira Error: Reference source not found
+                                   atalean.
+ A Programen zuzentasuna
+  programaPrograma baten programen zuzentasunzuzentasuna programaren ustezko
+ portaera ezartzen duen deskribapen (formal) batekiko erabaki ohi da. Hortaz,
+     programa bat espezifikazio batekiko zuzena izan daiteke, baina beste
+  espezifikazio batekiko ez. Bi alderdi bereizi behar dira: zein den programa
+  exekutatuz lortu nahi den emaitza eta zein den benetan lortzen den emaitza.
+Programa zuzena izateko emaitza horiek bat etorri beharko dute. Liburu honetan,
+   aurreko kapituluan ikusitako aurre-ondoetako espezifikazioaurre-ondoetako
+espezifikazioen bidez adieraziko da programa exekutatuz lortu nahi den emaitza.
+  Gainera, bi zuzentasun mota bereiziko ditugu: zuzentasun partzialzuzentasun
+                        partziala eta zuzentasun osoa.
+     Izan bitez P programa (edo agindu-segida) eta (ϕ,ψ) espezifikazioa, ϕ
+    aurrebaldintzaaurrebaldintza eta ψ postbaldintzapostbaldintza izanda. P
+  programa (ϕ,ψ) espezifikazioarekiko partzialki zuzena izango da, baldin eta
+ soilik baldin ϕ betetzen duen egoera batean hasiz gero ψ betetzen duen egoera
+batean bukatzen bada, betiere P-ren konputazioa bukatzen bada. P programa (ϕ,ψ)
+  espezifikazioarekiko partzialki zuzena dela adierazteko honako hau idatziko
+                                    dugu:
+                                  {ϕ} P {ψ}
+ Zuzentasun partziala erabakitzerakoan ez da aztertuko aurrebaldintza betetzen
+  duen edozein egoeratatik hasita programa bukatzen den ala ez. Bukaera duten
+konputazioak postbaldintza betetzen duen egoera batean bukatuko direla baino ez
+   du adierazten zuzentasun partzialak. Zuzentasun partzialak aurrebaldintza
+ betetzen duen egoera batetik hasi eta bukatzen ez diren konputazioei buruz ez
+du ezer esaten. Gerta daiteke P-ren konputazio batzuk bukatzea eta beste batzuk
+ez, betiere hasierako egoeraren arabera. Beraz, ϕ aurrebaldintza funtsezkoa da
+   P bukatzen den ala ez erabakitzeko. ϕ aurrebaldintza betetzen duen egoera
+  batetik hasten den P-ren edozein konputazio urrats kopuru finituan bukatzen
+bada, orduan P programa ϕ aurrebaldintzarekiko bukatu egiten dela esango dugu.
+Zuzentasun partzialak gehi programaren bukaerak programa baten zuzentasun osoa
+  bermatzen dute. Hau da, P programa (ϕ,ψ) espezifikazioarekiko guztiz zuzena
+  izango da (ϕ,ψ)-rekiko partzialki zuzena baldin bada eta ϕ-rekiko bukatzen
+ bada. P programaren zuzentasun osoa edo, beste era batean esanda, P programa
+                   guztiz zuzena dela honela adieraziko da:
+                                {ϕ} [ P ] {ψ}
+   Beraz, P programa guztiz zuzena baldin bada (ϕ,ψ) espezifikazioarekiko, ϕ
+betetzen duen egoera batean hasten den P-ren edozein konputazio ψ betetzen den
+  egoera batean bukatuko da. Beraz, P programa bat (ϕ,ψ) espezifikazioarekiko
+guztiz zuzena izango da, espezifikazio horrekiko partzialki zuzena baldin bada,
+   eta, gainera, ϕ aurrebaldintzarekiko bukatzen bada. Beste hitz batzuekin
+ esanda, zuzentasun osoari buruzko {ϕ} [ P ] {ψ} baieztapena frogatzeko, alde
+ batetik zuzentasun partzialari buruzko {ϕ} P {ψ} baieztapena frogatu beharko
+  dugu, eta, bestetik, P programa ϕ-rekiko bukatu egiten dela frogatu beharko
+                                    dugu.
+ B Hoare-ren sistema formala
+Atal honetan, hasteko, sistema formalsistema formalen kontzeptua azalduko dugu
+   eta, ondoren, Hoareren sistema formala aurkeztuko dugu. Hoare-ren sistema
+    formalHoareren sistema formalaren helburua programei buruzko zuzentasun
+ partzialzuzentasun partzialeko baieztapenak frogatzea da. Hurrengo ataletan,
+               Hoareren sistema formala sakonki deskribatuko da.
+         Sistema formal batek honako bi eratako osagaiak izango ditu:
+•axiomaAxiomak: egiazkotzat jotzen diren oinarrizko propietatepropietateak.
+•inferentzi_erregelaInferentzi_erregelak: aurretik ditugun propietateetatik
+propietate berriak ondorioztatzea ahalbidetzen dute. Erregelak era jakin batean
+adierazten dira. Esate baterako,Ppropietatea propietateetatik ondorioztatzen
+dela honela adierazten da:
+       Marraren gainean dauden propietatepropietateak premisak dira, eta
+    ondorioztatzen den P propietatea azpian agertzen da. Beraz, inferentzi
+  erregelak honela ulertu behar dira: propietateak ondorioztatu (edo frogatu)
+       baldin badaitezke, orduan P propietatea ere ondoriozta daiteke.
+Sistema formal batean, frogapenfrogapenak propietateen segidak dira. Izan bedi
+                        hurrengo propietateen segida:
+ Segida horretan frogatu nahi dugun propietatea da eta (1≤i≤k) bakoitza honako
+                         bi eratako elementu bat da:
+•
+axiomaaxioma bat, edo
+•
+inferentzi erregela baten bitartez aurreko propietateetatik ondorioztatzen den
+propietatea.
+Hoare-ren sistema formalHoareren sistema formalak zuzentasun partzialzuzentasun
+ partzialari buruzko baieztapenak frogatzeko balio du. Hau da, {ϕ} P {ψ} erako
+adierazpenadierazpenak frogatzeko balio du. Baieztapen horiei Hoareren hirukote
+ ere deitzen zaie. Era horretako hirukote bakoitzak egiazkoa edo faltsua izan
+ daitekeen zuzentasun partzialeko baieztapen edo propietate bat adierazten du
+ (aurreko atalean ikusi den bezala). Adibidez, argi dago {x=2} x := x+1; {x=3}
+ baieztapena edo propietatea egiazkoa dela, eta {x=2} x := x+1; {x=1} faltsua
+  dela. Hau da, {x=2} baldintza betetzen duen egoera batean hasten diren x :
+  = x+1; programaren konputazio guztiak {x=3} baldintza betetzen duen egoera
+batean bukatuko dira, baina ez dira {x=1} baldintza betetzen duen egoera batean
+bukatuko. Hoareren sistema formala axioma eta erregelez osatutako multzo bat da
+ eta sistema hori erabiliz egiazkoak diren hirukote edo zuzentasun partzialeko
+   baieztapenen frogak eraiki daitezke. Baieztapen faltsuak, ordea, ez dira
+frogagarriak. Adibidez, Hoareren sistema formala erabiliz honako baieztapen hau
+                                froga daiteke:
+  {x=a∧y=b}
+   lag := x;
+   x := y;
+   y := lag;
+ {x=b∧y=a}
+                 Baina beste baieztapen hau ezin da frogatu:
+  {True}
+   lag := x;
+   x := y;
+   y := lag;
+ {x=y}
+ Azken adibide horretan oinarrituko gara argibide garrantzitsu batzuk emateko.
+Hirukote bat faltsua dela frogatzeko kontraadibide bat ematearekin nahikoa da.
+Kontraadibidea aurrebaldintzaaurrebaldintza betetzen den egoera batean hasi eta
+     postbaldintzapostbaldintza betetzen ez den egoera batean bukatzen den
+ konputazio bat izango da. Azken hirukotearen kontraadibide bat {(x,2),(y,7)}
+  egoeran hasten den konputazioa da. Egoera horretan True aurrebaldintza bete
+ egiten da (edozein egoerak True formula betetzen baitu). Konputazioa hurrengo
+                           egoeretatik igaroko da:
+
+
+{(x,2),(y,7),(lag,2)}
+{(x,7),(y,7),(lag,2)}
+{(x,7),(y,2),(lag,2)}
+   Argi dago azken egoerak x=y postbaldintza ez duela betetzen. Bestalde, ez
+  konputazio horrek ezta konputazio multzo finitu batek ere ezin dute frogatu
+                     honako hirukote hau egiazkoa denik:
+  {x=a∧y=b}
+   lag := x;
+   x := y;
+   y := lag;
+ {x=b∧y=a}
+ Izan ere, onargarriak diren hasierako egoerez osatutako multzoa infinitua da.
+  Azken hirukote horretan x eta y aldagaien hasierako balio onargarri guztiak
+  adierazteko a eta b erabiltzen dira. Konputazio-egoeren segidekin arrazoitu
+     behar denean, asertzioen bidez aldagai baten lehengo balioari buruzko
+ propietateak formalizatu behar izatea espezifikazio-arazo ezaguna da. Adibide
+honetan, azken konputazio-egoeran x aldagaiak y-ren hasierako balioa duela, eta
+  y aldagaiak x-ren hasierako balioa duela adierazi behar du aurre-ondoetako
+   espezifikazioak. Kontuan izan x=y postbaldintza erabiltzen badugu, azken
+  egoeran x eta y aldagaiek balio bera dutela adierazten ari garela. Hainbat
+    teknika proposatu izan dira espezifikazio-arazo hori ekiditeko. Aurreko
+    adibidean a eta b-rekin egin dugun bezalaxe, liburu honetan programetan
+ agertzen ez diren izen berriak erabiltzeko teknikari jarraituko diogu. Beraz,
+   postbaldintzan erabiliko diren hasierako balioei izen bat esleituko zaie
+ aurrebaldintzan, eta, horrela, postbaldintzan hasierako eta bukaerako balioak
+   bereizi ahal izango ditugu. Aurreko hirukoteak adierazten duen zuzentasun
+                    partzialeko baieztapena honako hau da:
+    «Hasierako egoeran x-k a balioa (edozein) baldin badu eta y-k b balioa
+(edozein) baldin badu, orduan bukaerako egoeran x-k b balioa izango du, eta y-
+                            k a balioa izango du».
+       Aurreko hiru aginduez osatutako programaren portaera era horretan
+                     espezifikatzea nahiko zentzuzkoa da.
+ Espezifikazio-arazo horren deskribapena eta soluzioa ilustratzeko, sinpleagoa
+            den adibide bat erabiliko dugu. Honako baieztapen hau
+  {True}
+   x := x+1;
+ {x=x+1}
+  faltsua da, x=x+1 ekuazioa ezin baita inola ere bete. Zer gertatzen da kasu
+  honetan? Arazoa esleipenaren bi aldeetan x aldagai bera erabiltzetik dator:
+   ezkerreko aldean helburu-aldagai bezala eta eskuineko aldean azpitermino
+  bezala. Hala ere, nahiz eta aldagai bera izan, asertzioan x aldagaiaren bi
+  balio desberdin aipatu nahi dira: lehenengoa, edo ezkerrekoa, esleipenaren
+     bidez x-k hartzen duen balioa da (x-ren balio berria), eta bigarrena,
+  eskuinekoa, esleipena exekutatu aurretik x-k zuen balioa da (x-ren lehengo
+ balioa). Beraz, asertzioan x-ren bi balio horiek bereizi behar dira. Aurreko
+ adibidean egin dugun bezala, aurrebaldintzan x-ren hasierako balioari a izena
+egokituko diogu, gero postbaldintzan x-ren balio berria eta lehengo balioa (edo
+                   hasierako balioa) erabili ahal izateko:
+  {x=a}
+   x := x+1;
+ {x=a+1}
+Programa batean aldagairen bat sarrerako datu gisa eta emaitza gisa erabiltzen
+   denean, teknika hori erabiliko dugu beti programari buruzko propietateak
+                                 adierazteko.
+ C Esleipena
+Edozein programazio-lengoaia agintzailetako agindu mota oinarrizkoena esleipena
+da. Paradigma agintzailean, aldagaien balio-aldaketa esleipenen bidez gauzatzen
+da. Oro har, esleipen-aginduesleipen-agindu batek termino baten balioa aldagai
+bati esleitzen dio, aurretik aldagaiak zuen balioa ezabatuz. Esleipenak honako
+                        era honetan adieraziko ditugu:
+                                   x := t;
+Hor x aldagaia izango da eta t terminoa izango da. B.1 azpiatalean ikusi dugun
+  bezala, terminoak sinpleak edo konposatuak izan daitezke. Beraz, t terminoa
+  aldagai bat, konstante bat, edo eragileak eta (terminoak diren) eragigaiak
+            erabiliz osatutako adierazpenespresio bat izan daiteke.
+Hoare-ren sistema formalHoareren  sistema  formalean  esleipenarekin  lotutako
+   propietateak  edo baieztapenak frogatzeko esleipenaren axiomaEsleipenaren
+ Axioma erabili behar dugu. Formalki, esleipenaren axiomaren definizioa honako
+                                   hau da:
+                               (EA) x := t; {ϕ}
+ Izan bedi x := t; agindua, t terminoa definituta baldin badago, betetzen duen
+   egoera batean hasten den edozein konputazio ϕ betetzen duen egoera batean
+bukatuko dela adierazten du esleipenaren axiomak. Beste hitz batzuekin esanda:
+  aurrebaldintzak t definituta dagoela ziurtatzen badu (def(t)), t terminoak
+    aurrebaldintzan betetzen dituen propietateak () beteko ditu x aldagaiak
+                              postbaldintzan (ϕ).
+Oro har, terminoak eta formulak ondo definituta egotea ezinbesteko baldintza da
+programen konputazio-egoerei buruzko propietateak adierazi ahal izateko. Horrek
+ esan nahi du beraien ebaluazioak errorerik ez duela sortu behar, C kapituluan
+azaltzen den bezala. Hemendik aurrera, def(t) adierazpenak zera adieraziko du:
+t terminoa ondo definituta egoteko, hau da, t terminoaren ebaluazioak errorerik
+      ez sortzeko bete beharreko baldintza betetzen duten egoera guztiak
+   errepresentatzen dituen formula. Kasu berezia da True formulak adierazten
+duena, def(t) espresioak t edozein konputazio-egoeratan ondo definituta dagoela
+adieraziz. Liburu honetan kontuan hartuko ditugun bi errore mota nagusiak zeroz
+   zatitzea eta bektoreetako eremuz kanpoko indizeak dira14. Zehazki, zeroz
+zatitzeak (s/0) eta zeroz zatitzearen hondarrak (s%0) errorea sortuko dute eta,
+A(1..n) bektorea emanda, A(i) erako adierazpenek errorea sortuko dute i balioa
+ A bektorearen eremutik kanpo baldin badago, hau da, i<1 edo i>n baldin bada.
+Jakina, termino sinple guztiak (aldagaiak eta konstanteak) beti ondo definituta
+    egongo dira. Gainera, erroreak barreiatu egiten dira. Hau da, t termino
+ konposatuaren azpitermino batek errorea sortzen badu, orduan t terminoak ere
+    errorea sortuko du. Adibidez, 10 terminoa ondo definituta dago edozein
+  konputazio-egoeratan, 10/x eta 10%x terminoak ondo definituta egongo dira x
+zero ez bada, eta (2*x)+(10%(y+z)) terminoa ondo definituta egongo da y+z zero
+                                   ez bada:
+
+
+                               def(10)          ≡        True
+                             def(10/x)          ≡        x≠0
+                             def(10%x)          ≡        x≠0
+                 def((2*x)+(10%(y+z)))          ≡        y+z≠0
+                     Era berean, A(1..n) bektorea emanda:
+
+
+                             def(A(1))          ≡        True
+                             def(A(i))          ≡        1≤i≤n
+                           def(A(i+j))          ≡        1≤i+j≤n
+                           def(A(i/j))          ≡        j≠0∧1≤i/j≤n
+                       def(x%y+A(i/j))          ≡        y≠0∧j≠0∧1≤i/j≤n
+esleipenaren axiomaEsleipenaren axiomaren formulazioa eskema orokor bat da. Hau
+     da, edozein x aldagai, t termino eta ϕ formula hartuz, eskema horren
+    instantziak edo formulazio konkretuak egin daitezke. Horrela osatutako
+  adierazpen konkretuak dira, izatez, esleipenaren axiomak, hau da, Hoare-ren
+      sistema formalHoareren sistema formalean egiazkoak diren oinarrizko
+                           baieztapenak. Adibidez,
+  {x+1=3}
+   x := x+1;
+ {x=3}
+ hirukotea esleipenaren axioma bat da; izan ere, x+1 ondo definituta dago (def
+   (x+1)≡True) eta ordezkapenak x+1=3 adierazten du15. Jakina, x+1=3 eta x=2
+ formulek konputazio-egoeren multzo bera adierazten dute, aurrebaldintza bera
+                         adierazten dute-eta. Beraz,
+  {x=2}
+   x := x+1;
+ {x=3}
+ hirukotea ere esleipenaren axioma bat da, eta, ondorioz, baieztapena egiazkoa
+            dela ziurtatzen duen urrats bakarreko frogapen formala.
+     Hurrengo baieztapena ere esleipenaren axiomaren bidez froga daiteke:
+  {1≤i≤n∧A(i)>0}
+   x := A(i);
+ {x>0}
+     Baieztapen horretan ϕ≡(x>0), eta def(A(i))≡ (1≤i≤n) izango lirateke.
+ Esleipenaren axiomak esleipen-aginduesleipen-aginduei buruz eta agindu horien
+  eraginei buruz arrazoitzeko aukera ematen digu. Hala ere, esleipenei buruz
+   egindako baieztapen zuzen guztiak ezin dira esleipenaren axioma bakarrik
+             erabiliz frogatu. Esate baterako, honako baieztapena
+  {z≠0∧y/z≠1}
+   x := y/z;
+ {x≠1}
+ esleipenaren axioma bakarrik erabiliz frogagarria da. Baina beste baieztapen
+                             hau hartzen badugu:
+  {z≠0∧y=0}
+   x := y/z;
+ {x≠1}
+baieztapen hori frogatzeko esleipenaren axioma erabiltzea ez da nahikoa, nahiz
+   eta baieztapena zuzena izan. Horregatik, Hoare-ren sistema formalHoareren
+      sistema formalak aurreko adibideko baieztapena bezalakoak frogatzea
+ahalbidetzen duten eta, beraz, esleipenaren axiomaren gabeziak osatzen dituzten
+  inferentzi erregelak ditu. Aurreko adibide horretan, z≠0∧y=0 baieztapenaren
+ aurrebaldintza eta esleipenaren axioma erabiliz lortzen den z≠0∧y/z≠1 formula
+  baliokideak ez izateak eragiten du arazoa. Hor aurrebaldintza esleipenaren
+    axioma erabiliz lortzen den formula baino gogorragoa da. Jarraian, (EA)
+ esleipenaren axiomaesleipenaren axiomaz gain oraintxe aurkeztuko dugun (ODE)
+     erregela ere erabiltzen duen frogapen bat emango da aurreko hirukote
+    horrentzat. Frogapen hori eman baino lehen, aipa dezagun beste hirukote
+  batzuetan postbaldintzapostbaldintza behar baino ahulagoa izatea ere gerta
+  daitekeela. Aurrebaldintza gogorregia edo/eta postbaldintza ahulegia duten
+        propietateak frogatzeko, Hoareren sistema formaleko ondorioaren
+ erregelaOndorioaren Erregela erabil daiteke. Erregela hori honela definituko
+                               genuke formalki:
+                                    (ODE)
+                   , P ,
+                 {ϕ} P {ψ}
+   Erregela honek baditu oso erabiliak diren bi aldaera edo kasu partikular.
+      Aldaera horietan eta ψ formulak edo eta ϕ formulak berdinak dira:
+                  , P {ψ}
+                 {ϕ} P {ψ}
+                  {ϕ} P ,
+                 {ϕ} P {ψ}
+ ondorioaren erregelaOndorioaren erregelari esker, hirukote bat frogatzerakoan
+ baieztapen horretako ϕ aurrebaldintza baino ahulagoa den beste aurrebaldintza
+bat erabil daiteke eta ψ postbaldintza baino gogorragoa den beste postbaldintza
+                            bat ere erabil daiteke.
+   esleipenaren axiomaEsleipenaren axioma eta ondorioaren erregela erabiliz,
+  urrats bat baino gehiago dituzten frogapenfrogapenak lortuko dira. Oro har,
+    frogapen bat axiomaaxiomen eta inferentzi erregelainferentzi erregelen
+    aplikazioetatik lortzen den propietate-segida bat da, propietate horiek
+  Hoareren hirukoteak edo α→β erako inplikazio logikoinplikazio logikoak izan
+    daitezkeelarik. Segidako azken propietatea frogatu nahi dugun Hoareren
+                             hirukotea izango da.
+Ondoren, {z≠0∧y=0} x := y/z; {x≠1} hirukotearen frogapen formala emango dugu:
+  1.  (z≠0∧y=0)→(z≠0∧y/z≠1)
+  2.  {z≠0∧y/z≠1}
+     x := y/z; (EA)
+    {x≠1}
+ 3. {z≠0∧y=0}
+     x := y/z; 1, 2 eta (ODE)
+    {x≠1}
+ Inferentzi erregela bateko premisen agerpen-ordenak ez du garrantzirik. Hori
+ dela-eta, aurreko adibideko 1. eta 2. propietateak alderantzizko ordenan ipin
+                                   daitezke.
+     Atal honetako gainerakoan, esleipenaren axiomaesleipenaren axioma eta
+ondorioaren erregelaondorioaren erregelaren erabilera erakusteko helburuarekin,
+        egiazkoak diren hirukote batzuen frogapenak aurkeztuko ditugu.
+  Izan bitez zenbaki osozko A(1..n) taula eta positiboa izeneko predikatua:
+positiboa(A(1..n))≡∀i(1≤i≤n→A(i)>0)
+                            Honako baieztapen hau
+  {1≤j≤n∧positiboa(A(1..n))}
+   x := A(j);
+ {x>0}
+                      zuzena dela honela froga daiteke:
+  1.  {1≤j≤n∧A(j)>0}
+     x := A(j); (EA)
+    {x>0}
+ 2. (1≤j≤n∧positiboa(A(1..n)))→(1≤j≤n∧A(j)>0)
+ 
+ 3. {1≤j≤n∧positiboa(A(1..n))}
+     x := A(j); 1, 2 eta (ODE)
+    {x>0}
+Frogapen horretan esleipenaren axiomaren aplikaziotik lortutako aurrebaldintza
+ hasierako aurrebaldintza baino ahulagoa da. Horregatik, ondorioaren erregela
+                             erabili beharra dago.
+          Beste baieztapen hau ere aurrekoen antzera froga daiteke:
+  {1≤i<n}
+   i := i+1;
+ {1≤i≤n}
+                    Hona hemen haren zuzentasunaren froga:
+  1.  {1≤i+1≤n}
+     i := i+1; (EA)
+    {1≤i≤n}
+ 2. (1≤i<n)→(1≤i+1≤n)
+ 3. {1≤i<n}
+     i := i+1; 1, 2 eta (ODE)
+    {1≤i≤n}
+ Kasu honetan, bigarren urratseko inplikazio logikoa betetzen denez, lehenengo
+  urratseko hirukoteko (1≤i+1≤n) aurrebaldintza frogatu nahi den hirukoteko
+     (1≤i<n) aurrebaldintzaz ordezka daiteke, eta hori da, hain zuzen ere,
+ ondorioaren erregela erabiliz hirugarren urratsean egin dena. Kontuan hartu
+   (1≤i+1≤n) eta (1≤i<n) formulak ez direla baliokideak; izan ere, (1≤i+1≤n)
+                   formula (0≤i<n) formularen baliokidea da.
+         Honako baieztapen honen frogapena ere aurrekoen antzekoa da:
+  {z=1∧x>0}
+   y := 0;
+
+                            Hona hemen frogapena:
+  1.  ≡
+     y := 0; (EA)
+
+ 2.
+ 3. {z=1∧x>0}
+     y := 0; 1, 2 eta (ODE)
+
+
+
+    Ondoren aztertuko dugun frogapenean, aurrekoetan ez bezala, ondorioaren
+   erregelaondorioaren erregelaren kasu orokorra erabiliko da (eta ez haren
+               aldaerak). Honako baieztapen hau frogatuko dugu:
+  {b∧positiboa(A(1..i))∧1≤i<n∧A(i+1)<0}
+   b := false;
+
+  Baieztapen horretan b aldagai boolearra da eta positiboa lehenago definitu
+                              dugun predikatua:
+  1.  (b∧positiboa(A(1..i))∧1≤i<n∧A(i+1)<0)
+      → (1≤i<n∧A(i+1)<0)→(≠positiboa(A(1..i+1)))
+      → (≠False∧≠positiboa(A(1..i+1)))
+  2.  {≠False∧≠positiboa(A(1..i+1))}
+     b := false; (EA)
+    {≠b∧≠positiboa(A(1..i+1))}
+ 3.
+
+ 4. {b∧positiboa(A(1..i))∧1≤i<n∧A(i+1)<0}
+     b := false; 1, 2, 3 eta (ODE)
+
+   Frogapen horretako lehenengo urratsa hiru inplikazio kateatzen dituen eta
+ egitura duen espresioa da, baina ondorioaren erregelan formula erabiltzen da.
+Hor α eta β tarteko formulak inplikazioa argitzeko ipini dira. Gauza bera egin
+  da hirugarren urratseko inplikazio logikoinplikazio logikoarekin ere, baina
+                      tarteko formula bakar bat erabiliz.
+ Aurreko hirukote bera ondorioaren erregelaren lehenengo aldaera erabiliz ere
+                                froga daiteke:
+  1.  (b∧positiboa(A(1..i))∧1≤i<n∧A(i+1)<0)
+      → (1≤i<n∧A(i+1)<0)
+      → (≠positiboa(A(1..i+1)))
+
+  2.
+     b := false; (EA)
+
+ 3. {b∧positiboa(A(1..i))∧1≤i<n∧A(i+1)<0}
+     b := false; 1, 2 eta (ODE)
+
+
+
+
+
+ D Konposaketa sekuentziala
+  Orain arte, frogatu ahal izan ditugun baieztapenak esleipen-aginduesleipen-
+ agindu bakarrekoak ziren. Atal honetan, agindu batez baino gehiagoz osatutako
+  agindu-segidei buruzko propietateak frogatzea ahalbidetzen duen inferentzi
+   erregela aurkeztuko dugu: konposaketaren erregelakonposaketaren erregela.
+ Formulaziorik  orokorrenean,  n  (n>=2  izanda)  programaz  osatutako segida
+      bat hartuta, konposaketaren erregelaren definizioa honako hau da:
+                                    (KPE)
+             {ϕ} P1 , P2 , … , Pn {ψ}
+                {ϕ} P1 P2 … Pn {ψ}
+Erregela horrek badu eta programez edo aginduez osatutako segidarako formulazio
+                               sinpleagoa ere:
+                {ϕ} P1 , P2 {ψ}
+                 {ϕ} P1 P2 {ψ}
+      Bi programa edo bi aginduko segidarako formulazioan, konposaketaren
+erregelakonposaketaren erregelak adierazten du {ϕ} P1 P2 {ψ} erako baieztapenak
+ frogatu ahal izateko tarteko asertzioasertzio bat erabili behar dela. tarteko
+  asertzioTarteko asertzio hori erabiliz, hasierako propietatetik propietate
+horretako bi programa edo agindu horietako bakoitzarentzat propietate berri bat
+  osatuko da. Lehenengo propietatea {ϕ} P1 izango da eta propietate horretan
+      postbaldintza izango da eta aurrebaldintza hasierako propietatearen
+aurrebaldintza bera. Bigarren baieztapena edo propietatea P2 {ψ} izango da, eta
+    bigarren propietate horretan aurrebaldintza izango da eta postbaldintza
+   hasierako propietatearen postbaldintza izango da. Beraz, bi programen edo
+  aginduen arteko zubi-lana egiten du tarteko asertzioak. Kontuan hartu edota
+programak konposatuak izan daitezkeela. Beraz, konposaketaren erregela erabiliz
+  (edota ) programari buruzko baieztapena frogatzeko bi baieztapen berri osa
+   daitezke, eta horrela jarrai daiteke deskonposaketa-prozesuarekin agindu
+     bakarreko programak lortu arte eta, ondorioz, konposaketaren erregela
+ orokorrarekin urrats bakar batean egin daitekeenaren baliokidea dena eginez.
+Konposaketaren erregelaren formulazio orokorrean, n agindu edo programa dituen
+   hasierako propietatea frogatzeko n propietate frogatzen dira n−1 tarteko
+                              asertzio erabiliz.
+   Honako propietate hau frogatzeko konposaketaren erregela erabiliko dugu:
+  {x=a∧y=b}
+   x := x+y;
+   y := x-y;
+   x := x-y;
+ {x=b∧y=a}
+Propietatean hiru agindu agertzen direnez, bi tarteko asertziotarteko asertzio
+  beharko ditugu. Tarteko asertzio horiek lortzeko, behetik gorako edo goitik
+     beherako estrategiak erabil daitezke. Tarteko asertzioak aukeratutako
+                    estrategiaren araberakoak izango dira:
+
+
+                                   Tarteko asertzioak
+            Goitik beherako estrategia          Behetik gorako estrategia
+{x=a∧y=b}
+x := x+y;
+y := x-y;
+x := x-y;
+{x=b∧y=a}
+     Goitik beherako estrategiari jarraituz eta estrategia horri dagozkion
+     asertzioak erabiliz, propietatearen honako frogapen hau lor daiteke:
+  1.  (x=a∧y=b)→(x+y=a+b∧y=b)
+  2.  {x+y=a+b∧y=b}
+     x := x+y; (EA)
+
+ 3.
+ 4. {x=a∧y=b}
+     x := x+y; 1, 2, 3 eta (ODE)
+    {x=a+b∧x−y=a}
+ 5. {x=a+b∧x−y=a}
+     y := x-y; (EA)
+
+ 6.
+ 7. {x−y=b∧y=a}
+     x := x-y; (EA)
+    {x=b∧y=a}
+ 8.
+     y := x-y; 6, 7 eta (ODE)
+    {x=b∧y=a}
+ 9. {x=a∧y=b}
+     x := x+y;
+     y := x-y;
+     x := x-y; 4, 5, 8 eta (KPE)
+    {x=b∧y=a}
+Baina behetik gorako estrategia erabiltzen bada, lau urratseko honako frogapen
+                               hau osa daiteke:
+  1.
+     x := x-y; (EA)
+    {x=b∧y=a}
+ 2. {x−(x−y)=b∧x−y=a} ≡
+     y := x-y; (EA)
+
+ 3. {y=b∧x+y−y=a} ≡ {y=b∧x=a} ≡ {x=a∧y=b}
+     x := x+y; (EA)
+
+ 4. {x=a∧y=b}
+     x := x+y;
+     y := x-y;
+     x := x-y; 1, 2, 3 eta (KPE)
+    {x=b∧y=a}
+
+
+Bigarren frogapen horretan, tarteko asertzioak diseinatzeko esleipenaren axioma
+              erabili da, eta, ondorioz, frogapena laburragoa da.
+
+
+ E Baldintzazko aginduak
+  Atal honetan, baldintzazko agindubaldintzazko aginduei buruzko baieztapenen
+                        frogapenfrogapena aztertuko da.
+   Baldintzazko if-then-else erako aginduen egitura honako hau izan ohi da:
+  ifBthen
+   P1
+ else
+   P2
+ end_if;
+   Eta era horretako aginduen semantika operazionala honela defini daiteke:
+  hasteko B baldintza ebaluatuko da, eta ebaluazio horren emaitzaren arabera
+    (then blokea) edo (else blokea) agindu-segida exekutatuko da. Hau da, B
+baldintza egiazkoa baldin bada, orduan exekutatuko da, eta B baldintza faltsua
+                         baldin bada, exekutatuko da.
+                         Beraz, honako hirukote honek
+     {ϕ}
+      ifBthen
+       P1
+    else
+       P2
+    end_if;
+ {ψ}
+ ϕ betetzen den egoera batean hasten den edozein konputazio (bukatzen bada) ψ
+  betetzen den egoera batean bukatuko dela adierazten du, bidean edo agindu-
+  segida exekutatuz. Beraz, gerta daitezkeen bi aukerak hartu beharko ditugu
+kontuan, hau da, B betetzea edo ez betetzea. B baldintza betetzen bada, orduan
+agindu-segida exekutatuko da, eta, beraz, frogatu behar den propietatea honako
+                                hau izango da:
+                                 {ϕ∧B} P1 {ψ}
+    Bestela, B baldintza ez bada betetzen, orduan exekutatuko da, eta beste
+                      baieztapen hau frogatu beharko da:
+                                {ϕ∧≠B} P2 {ψ}
+Gainera, B baldintzaren ebaluazioa egokia dela bermatu behar da. Hau da, B-ren
+ ebaluazioak errorerik ez duela sortzen. Horretarako, def(B) ere betetzen dela
+frogatu beharko da. esleipenaren axiomaEsleipenaren axiomaren formulazioan def
+     funtzioa terminoekin erabili dugu, baina oraingo honetan def funtzioa
+formulekin erabiltzen da. Hori horrela izanda, def funtzioaren definizio berria
+aurretik genuen definizioaren orokortzetzat har daiteke. Izan ere, B baldintza
+   (edo formula) definituta egongo da, baldin eta soilik baldin B baldintzan
+              agertzen diren termino guztiak definituta badaude.
+    Edonola ere, B baldintzaren eta def(B) formularen ebaluazioak loturarik
+ gabekoak direla azpimarratu behar da. Hortaz, bi kontzeptuak ez dira nahastu
+  behar: gauza bat da baldintza ondo definituta egotea (kasu horretan def(B)
+ espresioa True formula izango da), eta beste gauza bat baldintza egiazkoa edo
+faltsua izatea. Are gehiago, B baldintzak ez dauka egoera guztietan definituta
+ egon beharrik; izan ere, ϕ betetzen den egoera batetik hasitako baldintzazko
+aginduaren edozein konputaziori buruzko propietate bat frogatu nahi da. Beraz,
+    ϕ formula betetzen den edozein egoeratan B baldintza definituta dagoela
+frogatzearekin nahikoa da, eta, horretarako, ϕ→def(B) formula frogatu behar da.
+   Aurrekoa kontuan hartuz, if-then-else egitura duten baldintzazko aginduei
+ buruzko baieztapenak frogatzeko inferentzi erregela berri bat defini daiteke.
+ Erregela hori baldintzaren erregelabaldintzaren erregela izendatuko dugu eta
+                          honela formaliza daiteke:
+                                    (BDE)
+          ϕ→def(B), {ϕ∧B} P1 {ψ}, {ϕ∧≠B} P2 {ψ}
+              {ϕ} ifBthenP1elseP2end_if; {ψ}
+    Adibidez, hurrengo baieztapena betetzen dela froga daiteke baldintzaren
+                              erregela erabiliz:
+     {True}
+      ifx >= ythen
+       z := x-y;
+    else
+       z := y-x;
+    end_if;
+ {z=|x−y|}
+Ondoren, aurreko baieztapenaren frogapen formal eta zehatz bat proposatzen da:
+    1.
+    2.         (True∧x≥y)→(x−y=|x−y|)
+    3.         {x−y=|x−y|}
+     z := x-y;  (EA)
+    {z=|x−y|}
+ 4. {True∧x≥y} ≡ {x≥y}
+     z := x-y;  2, 3 eta (ODE)
+    {z=|x−y|}
+ 5. (True∧x<y)→(y−x=|x−y|)
+ 6. {y−x=|x−y|}
+     z := y-x;  (EA)
+    {z=|x−y|}
+ 7. {True∧x<y} ≡ {x<y}
+     z := y-x;  5, 6 eta (ODE)
+    {z=|x−y|}
+ 8. {True}
+     ifx >= ythen
+               z := x-y;
+     else
+               z := y-x;
+     end_if;    1, 4, 7 eta (BDE)
+    {z=|x−y|}
+
+
+ baldintzazko aginduBaldintzazko agindu batzuek else kasurik ez dute, eta if-
+                        then egitura dutela esaten da:
+  ifBthen
+   P
+ end_if;
+Egitura hori duten baldintzazko aginduen semantika operazionala honako hau da:
+B baldintza betetzen bada, orduan P programa edo agindu-segida exekutatuko da.
+    Baina B betetzen ez bada, baldintzazko agindua agindurik exekutatu gabe
+ bukatuko da eta baldintzazko agindu horren ondoren dagoen aginduan jarraituko
+da. Beraz, if-then egitura duten baldintzazko aginduei buruzko baieztapenetan
+     {ϕ}
+      ifBthen
+       P
+    end_if;
+ {ψ}
+ϕ formula betetzen duten baina B baldintza betetzen ez duten egoera guztietan,
+ ψ formulak egiazkoa izan beharko du, hau da, honako inplikazio honek egiazkoa
+                               izan beharko du:
+(ϕ∧≠B)→ψ
+  Formula horrek then blokeko agindu-segida exekutatzen ez duten konputazioak
+   errepresentatzen ditu, bestela esanda, else kasutik jarraituko luketenak.
+Aurreko formula hori erabiliz, if-then egitura duten baldintzazko aginduetarako
+       baldintzaren erregelabaldintzaren erregela honela definitzen da:
+                                    (BDE)
+            ϕ→def(B), {ϕ∧B} P {ψ}, (ϕ∧≠B)→ψ
+                {ϕ} ifBthenPend_if; {ψ}
+ baldintzaren erregelaBaldintzaren erregelaren formulazio berri horrek honako
+                  propietate hau frogatzea ahalbidetzen du:
+     {x=a}
+      ifx < 0then
+       x := -x;
+    end_if;
+ {x=|a|}
+                                  Frogapena:
+    1.
+    2.        (x=a∧x<0)→(−x=|a|)
+    3.        {−x=|a|}
+     x := -x;  (EA)
+    {x=|a|}
+ 4. {x=a∧x<0}
+     x := -x;  1, 2 eta (ODE)
+    {x=|a|}
+ 5. (x=a∧x≥0)→(x=|a|)
+ 6. {x=a}
+     ifx < 0then
+              x := -x;
+     end_if;   1, 4, 5 eta (BDE)
+    {x=|a|}
+
+
+    if-then-else eta if-then egiturez gain, baldintzazko agindubaldintzazko
+aginduek beste egitura batzuk ere izan ditzakete, gainera egitura horiek ikusi
+ditugunak baino konplexuagoak ere izan daitezke. Adibidez, adarkatze anizkoitza
+                 izan dezakete, honako agindu honetan bezala:
+  ifB1then
+   P1
+ elsifB2then
+   P2
+ else
+   P3
+ end_if;
+ Agindu horren kasuan, betetzen bada, exekutatuko da, baina betetzen ez bada,
+   orduan baldintza ebaluatu, eta egiazkoa bada, exekutatuko da. Aldiz, eta
+ betetzen ez badira, exekutatuko da. Kontuan izan betetzen bada, baldintza ez
+     dela ebaluatuko. Aurreko egitura duten baldintzazko aginduei buruzko
+   baieztapenak frogatzeko honako baldintzazko erregela hau erabil daiteke:
+                          , P1 {ψ},
+                          , P2 {ψ},
+                           P3 {ψ}
+        {ϕ} ifB1thenP1elsifB2thenP2elseP3end_if; {ψ}
+ Orain arte atal honetan aztertutako aginduek erakutsi digutenez, baldintzazko
+     aginduei buruzko propietateak frogatzea ahalbidetzen duten erregelen
+  formulazioak baldintzazko agindu horien egiturara egokituta daude. Hau da,
+  aginduen egitura aztertuz erabaki behar dugu zein propietate frogatu behar
+    diren, baldintzazko agindu osoari dagokion propietatea frogatzeko. Esan
+     daiteke, hortaz, ez dagoela baldintzazko erregela bakarra, baizik eta
+ baldintzazko aginduaren egiturak ezartzen duela inferentzi erregelak nolakoa
+   izan behar duen, esleipenaren axiomaesleipenaren axioma eta esleipenekin
+ gertatzen den bezalaxe. Baina, bestalde, badira edozein baldintzazko aginduri
+   buruzko propietateak frogatzean beti egiaztatu behar diren bi propietate:
+lehenengoa, edozein adar edo bidetatik joanda ere bukaeran postbaldintza beteko
+ dela, eta, bigarrena, ebaluatuko diren baldintza guztiak definituta daudela.
+       Atal honi bukaera emateko, honako baieztapen hau frogatuko dugu:
+     {True}
+       ify <= zthen
+        ifx <= ythen
+         m := x;
+      else
+         m := y;
+      end_if;
+    elsifx <= zthen
+      m := x;
+    else
+      m := z;
+    end_if;
+ {m=txikiena(x,y,z)}
+     Frogapen honetan, def(B) eta def(t) formulei buruzko urratsak ez dira
+               adieraziko, formula horiek guztiak True baitira.
+            1.                 (x≤y≤z)→(x=txikiena(x,y,z))
+            2.                 {x=txikiena(x,y,z)}
+              m := x;             (EA)
+          {m=txikiena(x,y,z)}
+      3.  {x≤y≤z}
+              m := x;             1, 2 eta (ODE)
+          {m=txikiena(x,y,z)}
+      4.  (y≤z∧y<x)→(y=txikiena(x,y,z))
+      5.  {y=txikiena(x,y,z)}
+              m := y;             (EA)
+          {m=txikiena(x,y,z)}
+      6.  {y≤z∧y<x}
+              m := y;             4, 5 eta (ODE)
+          {m=txikiena(x,y,z)}
+      7.  (x≤z<y)→(x=txikiena(x,y,z))
+ 
+      8.  {x=txikiena(x,y,z)}
+              m := x;             (EA)
+          {m=txikiena(x,y,z)}
+      9.  {x≤z<y}
+              m := x;             7, 8 eta (ODE)
+          {m=txikiena(x,y,z)}
+      10.    (y>z∧x>z)→(z=txikiena(x,y,z))
+[4pt] 11.    {z=txikiena(x,y,z)}
+                      m := z;     (EA)
+             {m=txikiena(x,y,z)}
+      12.    {y>z∧x>z}
+                      m := z;     10, 11 eta (ODE)
+             {m=txikiena(x,y,z)}
+      13.    {True}
+               ify <= zthen
+                       ifx <= ythen
+                                m := x;
+                       else
+                                m := y;
+                       end_if;
+               elsifx <= zthen
+                       m := x;
+               else
+                       m := z;
+                      end_if;     3, 6, 9, 12 eta (BDE)
+             {m=txikiena(x,y,z)}
+
+
+ G atalean, frogapen hau erabiliko dugu programen dokumentazioa ilustratzeko.
+
+
+ F Inbarianteak eta iterazioen zuzentasun partziala
+  Orain iterazioinbariantearte frogatu ditugun zuzentasun partzialzuzentasun
+   partzialeko propietateak behin bakarrik exekutatzen diren agindu-segidei
+buruzkoak izan dira. Hala ere, agindu iteratiboak ere badaudenez, oso ohikoa da
+ agindu-segida batzuk behin baino gehiagotan exekutatzea. Atal honetan, while
+     iterazioen zuzentasun partzialaginduei buruzko zuzentasun partzialeko
+propietateak landuko ditugu. Oro har, while aginduek honako egitura hau dute:
+  whileBloop
+   P
+ end_loop;
+   Era horretako aginduen semantika operazionala honako hau da: B baldintza
+   betetzen bada, orduan P agindu-segida exekutatuko da, eta P-ren exekuzioa
+bukatu ondoren B baldintza berriro aztertuko da. Eta, horrela, behin eta berriz
+    errepikatuko da prozesua B baldintza betetzen den bitartean, hau da, B
+                         baldintza faltsua izan arte.
+  Era horretan, iterazioa osatzen duten agindu-segida errepikatuz burutzen du
+    agindu iteratiboak bere egitekoa. Iterazioa zentzuzkoa bada, aldaketak
+ aldaketa, bada egindakoa islatzen duen eta prozesuan zehar kontserbatzen den
+propietate bat. Adibidez, honako baieztapen honek x aldagaian x eta y aldagaien
+                    batura kalkulatuko dela adierazten du:
+     {x=a∧y=b≥0}
+      whiley /= 0loop
+       x := x+1;
+       y := y-1;
+    end_loop;
+ {x=a+b}
+Batuketa urratsez urrats egiten da: iterazio bakoitzean bat gehitzen zaio x-ri
+eta bat kentzen zaio y-ri. Hori horrela, begiztabegizta bakoitzean exekutatzen
+          den agindu-segidak honako propietate hau kontserbatzen du:
+x+y=a+b∧b≥y≥0
+                           Beste baieztapen honetan
+     {x≥1∧y=1}
+      while2*y <= xloop
+       y := 2*y;
+    end_loop;
+ {y=handiena{k|ber2(k)∧k≤x}}
+x baino txikiagoa edo berdina den 2ren berretura handiena y aldagaian itzuliko
+   dela adierazten da. Postbaldintzari dagokionez, ber2 predikatuaren balioa
+egiazkoa izango da berari argumentu gisa emandako balioa 2ren berretura denean.
+Hasieran, y aldagaia 1 balioarekin hasieratu da, eta iterazio bakoitzean haren
+  balioa bikoiztu egiten da. Beraz, iterazioak kontserbatzen duen propietatea
+                                honako hau da:
+ber2(y)∧y≤x
+                          Hirugarren adibide honetan
+     {n≥1∧i=0∧b=0}
+      whilei /= nloop
+       i := i+1;
+       b := b+A(i);
+    end_loop;
+
+   iterazioak zenbaki osozko A(1..n) bektoreko elementuen batura b aldagaian
+  kalkulatuko duela adierazten da. Horretarako, iterazio bakoitzean bektoreko
+   elementu bat batzen zaio b aldagaiari. Portaera hori adierazten duen eta
+           iterazioak kontserbatzen duen propietatea honako hau da:
+ Ikusi ditugun hiru adibide horietan, iterazioaren gorputzeko P agindu-segidak
+   aldagai batzuk aldatzen ditu, baina balio berriek kontserbatu egiten dute
+    aurrekoek betetako propietatea. Hau da, iterazioz iterazio propietatea
+ kontserbatu egiten da. while aginduko gorputzak kontserbatzen duen propietate
+horri inbariante esaten zaio. Garbi utzi behar da inbarianteinbariantea ez dela
+ P-k kontserbatzen duen edozein propietate, baizik eta iterazioaren semantika
+ adierazten duena, hain zuzen ere. Azkeneko adibidera itzuliz, hau da, A(1..n)
+   taulako elementuen batuketa kalkulatzen duen iteraziora itzuliz, (0≤i≤n)
+      propietatea ere kontserbatzen da. Hala ere, azken propietate horrek
+    iterazioaren eginkizunari buruz ezer askorik adierazten ez duenez, ezin
+dezakegu eman inbariantetzat, iterazioak A(1..n) bektoreko elementuen batuketa
+                          itzultzen duela frogatzeko.
+   zuzentasun partzialZuzentasun partzialeko propietateak frogatzeko orduan,
+ inbariantea while bateko B baldintza ebaluatu aurretik betetzen den asertzioa
+                                     da:
+     {ϕ}
+      while {INB}
+      B
+      loop
+       P
+    end_loop;
+ {ψ}
+Hau da, inbariantea da iterazio bakoitza exekutatzen hasi aurretik betetzen den
+   asertzioa, besteak beste bai konputazioa lehenengo aldiz puntu horretatik
+igarotzen denean (P-ko agindurik oraindik exekutatu ez denean) eta bai azkeneko
+aldiz igarotzen denean ere (B baldintzaren ebaluazioak faltsua dela adierazten
+    duenean, eta, ondorioz, while aginduaren exekuzioa bukatzen denean). B
+  baldintza betetzen denean P-ren exekuzioak inbariantea betearazten duenez,
+   inbariantea kontserbatu egiten da. Eta horrela izango da while aginduaren
+   exekuzioa bukatu arte. Hau da, B baldintzak egiazkoa izateari utzi arte.
+ Laburbilduz, inbariantea iterazioko gorputzean aldatutako aldagaiak erabiliz
+ iterazioaren semantika adierazten duen eta iterazioko gorputzak kontserbatzen
+                             duen formula bat da.
+               [data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA/
+    4AAAKCCAIAAADnaZWUAAAACXBIWXMAAAfQAAAH0AG5i+efAAAvMklEQVR4nO3dfbzX8+H/
+                    cedC5whd8C1dKJmLVMzYjCEZodiIyDAbupA1P/
+      WVwjLD5HK2L777Mqw1a5VkpitCpRiWq5pOUZghhUiXR3XO+X2+p9383Gy/zjmf83m/
+                            X+dzXvf7H0e3er8+5/npg/
+P41OecU1xVVbVdTE444YSZM2eGXgEA2919992DBg0KvQKISHHoAWEUFBSEnpCS2J7abeXxbdw8vo1bJI9vnA8uEFyk6f/
+         YY48dd9xxoVekoaSkZNOmTaFXpK28vLxJkyahVyRuwYIFX/va10KvSNvhhx/
+          +zDPPhF6RhosvvvjOO+8MvSJtV1xxxejRo0OvSMPgwYPvvvvu0CuA6ESa/
+                 gAAEBvpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+                 gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+                 gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+                 gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+                 gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+                 gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+                 gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+                 gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+                 gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+                 gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+                 gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+                 gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+gAAEAXpDwAAUZD+AAAQBekPAABRKF61atXatWtDz0jPmjVrMm9ffvnlHXbYIfSWNFRWVoaeEMAzzzyz/
+  fbbh16RuKVLl4aeEMDHH3/89NNPh16RhnfeeSf0hADefPPNSB7fFStWZN6Wl5eHHgLEpfjKK6/
+   8zW9+E3pG2kaOHBl6Agk65phjQk8gKUuWLOnevXvoFSRlYrXQK9Izf/780BOAuPzzBT//8R//
+            sfPOO4edko633347wj8I33333WP4U/B169Z9+OGHoVcE0KFDh+Lixv/
+ivTVr1qxatSr0irTtuOOOrVu3Dr0iDStWrNi4cWPoFWkrLS0NPQGIyz9zYfTo0QMHDgw7JR2ZJzkR1sOsWbP22Wef0CsSN3bs2PPOOy/
+  0igCef/75tm3bhl6RuHvuuWfQoEGhV6TtlFNOGTduXOgVaejVq9djjz0WekXaDjnkkNATgLg0/
+                   j8pBAAAtpP+AAAQCekPAABRkP4AABAF6Q8AAFGQ/
+                 gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8A0FC88cYbmzdvDr0iVQUFBZ07d07zPVZUVCxdujTN99gQlJaWdurUSfoDADQUxx577Ntvvx16Raoy6V9ZWZnme1yzZk2XLl3SfI8NwUEHHfTSSy9JfwCAhmXvvffefvvtQ69IXFVV1ZIlS0K996Kion333TfUe09TeXn5W2+9tfXH0h8AoGF58sknO3bsGHpF4jLpX1hYGOq9N2vWrKysLNR7T9Mrr7xy0EEHbf2x9AcAgChIfwAAiIL0BwCgXiorKwO+dIfak/
+ 4AAGRj6dKlM2bMmDNnzqxZs9asWdO6detWrVp17Nhx4MCBJ598sicDDZD0BwCgbtavXz9q1Kjbb7/
+           9i1+Xc2W1V199dfr06W3atLn22msHDBhQUFAQcCdfIv0BAKiDZ599tl+/
+  fu++++42rlmxYsWgQYNmzpz5hz/8oaSkJLVtbJv0BwCgthYsWNCzZ88NGzbU5uIHH3xw9erVf/
+           rTn3baaaekh1Eb0h8AgFrJdHzfvn1r2f1bPfHEEz/84Q8nT56c3CpqT/
+                      oDAFArF1xwwRtvvFHXUw899NBf/vKXww8/
+      PIlJ1In0BwCgZm+99dbDDz+c3dmRI0fOmzcvt3vIgvQHAKBmEydOrKqqyu7s008/7Q/
+      +GwLpDwBAzSZMmFCf46+88or0D076AwBQg82bNy9YsKA+t7Bo0aJcjSFr0h8AgBpk/
+  VKfzzVp0iQnS6gP6Q8AQOKWLVsWegLSHwCAmhQWFhYUFNTnz/732WefHO4hO9IfAIAaFBcXd+/
+                      efe7cuVnfQrdu3XK4h+xIfwAAanbmmWfWJ/
+2PPPLIHI4hO9IfAICanX766ZdccsmWLVuyOHvaaad17tw555OoK+kPAEDNWrdufdFFF91xxx11PVhcXDx69OgkJlFX0h8AgFq59dZbX3jhhWeffbZOp4YMGeKP/
+BsI6Q8AQK00adJk0qRJBx988AcffFDLI4MHD77tttsSXUXtSX8AAGqrffv2zz333IABA2bNmlXjxaNGjbruuutSWEUtSX8AAOpgzz33fOKJJ+69997LLrvs008/
+               /dcLCgoKevfuPWLEiB49eqQ/j22Q/gAA1E0m7gcOHHjuuec+/
+ fTTc+bMyTwTWL9+fatqu+++eyb6d9ttt9Ab+TekPwBA1CorK8vKytq3b9+yZcs6HSwtLe1Z7ec//
+                   3lC28gt6Q8AEKOFCxdOnjx59uzZzz333ObNm7er/
+    rP8Tp06nXrqqcOGDdt9991DDyT3pD8AQFw2btx49dVX33bbbRUVFV/8+aqqqrfeeivz87/
+                     61a8yTwBuueWWPffcM9RIkiD9AQAi8vLLL3/
+nO99Zvnz5Nq6prKycPHnys88+++ijjx5wwAGpbSNp0h8AIBbvvfder169avlV+TNPD3r06DFlypQjjjgi6WGkQ/
+                       oDAERh06ZNZ5xxRu2/G1fGJ598cvLJJ7/
+  xxhstWrRIbhipkf4AAFG4+uqrn3322bqe+vjjj2+slsQkUib9AQAav82bN997773Znb399tt//
+    OMf+5o/jYD0BwBo/J588smPPvoou7MbN2687777rr766txOIn3SHwCg8ZswYUJ9jv/tb3/
+             L1RICkv4AAI3f4sWL63O8rKwsV0sISPoDAFCD119/fcuWLcXF0jG/
+efwAAKhBs2bNdH8j4CEEAGj8SkpK6nO8a9euuVpCQNIfAKDx69Wr17x587I+3q1btxyOIRTpDwDQ+J155pmjRo2qqqrK7vhRRx2V2z0EIf0BABq/
+                          vfba65BDDvnrX/+axdn999//e9/
+ 7Xs4nkT7pDwAQhZtvvrlnz55btmyp68EbbrihqKgoiUmkTPoDAEShR48eo0ePHjFiRJ1OHX/88d/
+    5zncSmkTKpD8AQCyGDx8+d+7cqVOn1vL6fv363X///YlOIk3SHwAgFgUFBQ8//PAvf/nLn/
+                             70pxs3btz2xRdeeOGvf/
+3rwsLCdLaRAukPABCRoqKi4cOHn3HGGRdccMGsWbP+7QWnnHLK0KFDu3fvnv48EiX9AQCis8ceezz55JNr1qx54oknZs+e/
+         dprr7Vr165Vq1aZt/3792/WrFnogSRC+gMA5KuKioqXXnqpXbWCgoK6Hs8k/
+                    mnVkthGAyT9AQDyTCb3H3jggTlz5rzwwguZ+t/
+   6k23atPnud7976aWXdu7cOew8GizpDwCQNzZs2DBq1Kjbb7/98+L/3IoVK+6pdvzxx//yl7/
+                               s2rVrkIU0ZNIfACA/
+        vPTSSyeeeOLKlSu3fdnMmTO7d+8+derUb33rW+kMI19IfwCAPLB8+fLadP9WH3/
+                  8cc+ePR966KETTjgh6WHkEekPANDQbd68uV+/frXs/
+         q02bNhw+umnL126tE2bNskNI79IfwCAhu6aa6555pln6npq3bp111577a9//
+eskJpGPpD8AQINWUVFx3333ZXf23nvvHTp06L777pvbSeSp4k8//TTzjyeffHL9+vWhx6Qhkrv5JZn/
+     7Nu2bRt6ReLmz58fekIYmcd35513Dr0icfPmzQs9IYBXXnnlV7/6VegVaVi2bFnoCQFs/
+     RAMNXrqqadWrFiR3dnNmzffc889t9xyS24nkaeKFy5cmPnHxGqhx5CUm2++OfQEEvTTn/
+                            409ASSUlZWNmzYsNArSMo//
+vGP0BPIDxMmTKjP8VdffTVXS8h3xc2bNw+9IYADDzywZcuWoVek4amnnqqqqgq9Im09evTI4jsa5p1169a98MILoVekLfO/
+        rIMOOij0ijQsXbr0vffeC70ibXvssceee+4ZekUaXn/99eXLlx9wwAGhh5AfMv/
+                               C1Od4WVlZrpaQ74q/
++tWvPvfcc6FnpO2WW2457rjjQq9IQ0lJyaZNm0KvSNvMmTObNGkSekXiFixY8LWvfS30irR169Zt9uzZoVek4eKLL77zzjtDr0jb2WefPXr06NAr0jB48OC777479ApisWLFioqKiqKiotBDCM+n+QIANGbbb799DH8ZTm1IfwCABm2HHXaoz/
+   H99tuvsLAwV2PIa9IfAKBBO/HEEx999NGsj3fr1i2HY8hr0h8AoEE7/fTThw0bVlFRkd3xb3/
+                   727ndQ/6S/gAADVrbtm179Ogxa9asLM526dLl+9//
+                 fs4nkaekPwBAQ3fTTTd17969vLy8rgdHjx5dXKz3+Cf/
+    KgAANHTf+MY37rjjjoEDB9bp1PHHH9+nT5+EJpGPpD8AQB4YMGDArFmzxo8fX8vr+/Xrd//
+         99yc6ibwj/QEA8sO4ceO+/e1vX3bZZZ9++um2rxw4cOBdd93la3ryJdIfACA/
+            FBQUZJr+lFNOGTBgwNSpU6uqqr50QXFxcd++fYcOHXrYYYcFWUgDJ/
+0BAPJJ69atH3nkkfLy8qeeemr27NmLFy9u27Ztq1at2rVrd+655+60006hB9JwSX8AgPxTWlp6QrXQQ8gn0h8AAKIg/
+QEAIArSHwAAoiD9AQAgCtIfAKChKC8vz7y98847W7RoEXpL4v71i5OmY/PmzdtV/1aPHj06yICUvf/
+      ++5m369ev3076AwA0HKtWrcq8veWWW0IPSU/6TwC2RvDGjRt/8pOfpPyuA3rnnXe2k/
+     4AAA1HaWnpunXrjj766MwPQm9Jw6OPPpr+O91+++3Tf6fB7bjjjttJfwCAhmPXXXfNpP/
+YsWM7duwYekviqqqqCgsLCwoKUn6/WyM4Nh06dNhO+gMAQCSkPwAAREH6AwBQL5988snatWs7dOiQ/
+qt3qBPpDwBANqZNmzZr1qzZs2cvWLCgsrIy8zM77bRTp06d+vfvP2DAgMyPQw/ky6Q/AAB18/777//
+oRz96+OGHv/Tz69ate/XVV4cNG3bFFVdcfvnlP/nJT4qL1WYD4sEAAKAO/vznP3//+9/PVP42rikvL/
+                                       /
+Zz372xBNPTJkyJYZvT5YvpD8AALU1a9asvn37VlRU1Obip59+ukePHo8++mjbtm2THkZtSH8AAGrl3XffPeuss2rZ/
+                  VstXLjwzDPPnDt3bnKrqD3pDwBArZxzzjkffPBBXU/
+   Nmzdv2rRpJ510UhKTqBPpDwBAzRYtWpT1H95fccUVvXr1Kioqyu0k6kr6AwBQswkTJmR99m9/
++9ucOXOOPfbYHO4hC9IfAICa1Sf9t6uuf+kfnPQHAKAGmzZtWrZsWX1uoaysLFdjyJr0BwAgcYsXLw49AekPAEDyfGOvhkD6AwBQg8JqlZWVWd9C165dc7iH7Eh/
+       AABqUFxcfMIJJ8yYMSPrW+jWrVsO95Ad6Q8AQM3OPPPMrNO/sLCwR48eud1DFqQ/
+             AAA169OnT2lpaXl5eRZnzz///D322CPnk6gr6Q8AQM2aN29+1VVX/
+eQnP6nrwaZNm15zzTVJTKKupD8AALVyxRVXPP/884888kidTmWeMLRv3z6hSdSJ9AcAoFYKCgruv//
++gw466M0336zl9aNHj7788suTHkYtSX8AAGqrWbNmL7zwwvDhw8eMGVNVVbWNK4uKiu66664BAwakto0aSX8AAOqgZcuW99133/
+                          nnn3/eeee98cYb/3rBjjvu+IMf/
+OCSSy7p3Llz+vPYBukPAECdHXnkkcuqzZkz57HHHisvL29VrV27dhdeeGFpaWnogfwb0h8AgCztXc2revKF9AcAgChIfwAAiIL0BwCAKEh/
+                 AACIgvQHAIAoSH8AAIiC9AcAgChIfwAAiIL0BwCAKEh/
+                 AACIgvQHAIAoSH8AAIiC9AcAgChIfwAAiIL0BwCAKEh/
+                 AACIgvQHAIAoSH8AAIiC9AcAgChIfwAAiIL0BwCAKEh/
+       AACIgvQHAMhXZdXatWvXqlWr9u3bN23aNPQiGjTpDwCQZ+67777HH398+vTpa9eu/
+    fwnCwoKevbsOXTo0N69e2d+HHAeDZb0BwDIGytWrBgyZMhDDz30r79UVVX1eLUWLVr86U9/
+                Ovroo1NfR0Mn/QEA8sPMmTP79OmzcePGbV+2evXq3r17//
+               GPfzz11FPTGUa+kP4AAHlgyZIlp59+eo3dv1V5efkZZ5zxhz/
+                 84Xvf+17Sw8gj0h8AoKFbt27daaed9sVX9teooqLihz/
+          84SGHHLLXXnslN4z8Iv0BABq6kSNHLl68uK6nNm3aNGrUqPHjxycxiXwk/
+ QEAGrRMwWed7xMnThw+fPjXv/713E4iTxWvXLky9IYAbrjhhkmTJoVekYYtW7aEnhDA4MGDi4sb/
+9PaVatWhZ4QQFlZ2aBBg0KvSMOcOXNCTwhg8uTJH330UegVaZg3b17mbZwfgsnCY4899sknn2R3tqqq6ve/
+                /730Z6vi119/PfSGAGZXC72CpIwZMyb0BJKyevXqe+65J/
+      QKkvJ6tdAr0hPVnaU+HnjggfocX7RoUa6WkO+Kd9ttt8WLFx9++OH77rtv6DFpGD9+/
+           GeffRZ6RdpOO+20Zs2ahV6RuGXLlj399NOhVwRw5pln7rDDDqFXJG7+/
+                          PkRfvT6yle+ctRRR4VekYbHH3/
+    8vffeC70ibW3atAk9gfzwzjvv1Od4WVlZrpaQ74ozxT9nzpzzzjtv4MCBocekYcqUKRGm/
+4033rjPPvuEXpG4sWPHxpn+v/zlL9u2bRt6ReIuvfTSCNP/sMMOi+RvsXr16hVh+sfwf2Yagvfff3/
+                        Dhg1NmzYNPYTwGv/roQEAYta8efMY/
+nKY2pD+AAANWj1ftdu1a9eCgoJcjSGvSX8AgAatT58+U6ZMyfp4Jv1zOIa8Jv0BABq0U0899aKLLtq0aVN2x0888cTc7iF/
+SX8AgAatZcuWvXr1euSRR7I4e+ihh2aeOeR8EnlK+gMANHS33Xbb3LlzV69eXdeDN910kxf68znpDwDQ0O21116/
+                  //3vTznllKqqqtqfGjRoUI8ePZJbRd6R/gAAeeC73/
+           3ujTfeOHLkyFpeP3z48JtvvjnRSeQd6Q8AkB9GjBhx0EEHDRo06O9///
+               s2LisoKLj88stHjx6d1i7yhvQHAMgbxx133OLFi4cNG/a73/
+             2uvLz8S7+6yy67DBw4cMiQIR06dAgyjwZO+gMA5JPS0tL/qfbaa6/
+            Nnj0780ygbdu2rVq1ateu3fHHH19UVBR6IA2X9AcAyEudq4VeQT6R/
+          gAAEAXpDwAAUZD+AAAQBekPAABRkP4AAA3LuHHjdtlll9ArElen70xMTkh/
+                       AICG5corrww9gcZJ+gMANBTnnHPOxx9/
+         HHpFqgoKClJ+jyUlJYMHD075nQa39bu8SX8AgIbi+uuvDz2h8WvatOn//M//
+                 hF4RhvQHAIAoSH8AAIiC9AcAgChIfwAAiIL0BwCAKEh/
+                 AACIgvQHAIAoSH8AAIiC9AcAgChIfwAAiIL0BwCAKEh/
+                 AACIgvQHAIAoSH8AAIiC9AcAgChIfwAAiIL0BwCAKEh/
+                 AACIgvQHAIAoSH8AAIiC9AcAgChIfwAAiIL0BwCAKEh/
+                 AACIgvQHAIAoSH8AAIiC9AcAgChIfwAAiIL0BwCAKEh/
+                 AACIgvQHAIAoSH8AAIiC9AcAgChIfwAAiIL0BwCAKEh/
+                 AACIgvQHAIAoSH8AAIiC9AcAgChIfwAAiIL0BwCAKEh/
+                 AACIgvQHAIAoSH8AAIiC9AcAgChIfwAAiIL0BwCAKEh/
+    AACIgvQHAIAoSH8AAIiC9AcAgChIfwAAiIL0BwCAKEh/AACIgvQHAIAoSH8AAIhC8T/+8Y/
+MP37xi1+MHz8+9Jg0rF69OvSEAM4666xmzZqFXpG4FStWhJ4Qxumnn15SUhJ6ReJee+210BMCmD59+jHHHBN6RRpefPHF0BMC2PohGCA1xW+/
+                           /fZ21R9T4/ywGok4P6bG4y9/
++UvoCSRl9erVs2fPDr2CpGz9EAyQmuKOHTsuXrw49Iy0nXvuuXvttVfoFWm47rrrKioqQq9I21VXXVVUVBR6ReJWrFhx1113hV6Rtg4dOvTv3z/
+       0ijRMnz79r3/9a+gVaevevfuxxx4bekUapkyZ8uKLL+6xxx6hhwBxKY7z/zuZ9D/
+  uuONCr0jD6NGjI0z/UaNGNWnSJPSKxC1YsCDO9L/66qtDr0jDRx99FGH6H3nkkZE8vu+//34m/
+                     Tt27Bh6CBAXn+YLAABRkP4AABAF6Q8AAFGQ/
+                 gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+         gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/gAAEAXpDwDQGFx//
+fXr1q0LvSIllZWVc+fOLSoq6t69e+gt6WnduvWwYcPqcwvSHwCgMbjjjjtWrlwZekXannnmmdAT0tOlSxfpDwDAP40aNWqnnXYKvSJxGzZsuPbaa7fffvvrrrsu9JY0fPDBB7fddlv9b0f6AwA0HhdffHHr1q1Dr0jcxx9/
+                       nEn/4uLikSNHht6ShiVLlkh/AACgtqQ/
+AABEQfoDABBGeXn5xIkTCwsLW1Xr1KnTrrvuGnpUgjZs2DBhwoTS0tKt93fPPfds3rx5mgOkPwAAqcoU/
+       7XXXjtjxowFCxZUVVV9/vNFRUV9+vQZOnTokUceGXBezq1ZsyZzf6dNm7ZkyZIv/
+nzmOcBZZ511ySWXHHjggekskf4AAKRnypQpF1100Xvvvfevv1RRUTG52iGHHDJ16tRG8PnKmSc2Y8aMGT58+CeffPKvv5p5CjSm2hlnnHHfffftvPPOSe+R/
+                    gAApCHTwUOHDr399ttrvHL+/PkHHXTQY489tv/
+++6cwLCFbtmw56aSTZs6cWeOVkyZNWrRoUeb+7r777olOkv4AAKThpptuqk33b7V8+fIjjjhizpw5mecAia5KzsUXX1yb7t+qrKzskEMO+ctf/
+                rLnnnsmN0n6AwCQuFmzZo0aNapOR9asWXPOOecsXLiwuDj/
+knXs2LF33XVXnY6sWLHiwgsvrP2zhSzk3+8jAAD5paKi4uyzz868revBxYsXjxkzZuDAgUmsSs6HH37Yv3/
+                                       /
+LA4+Xu24447L+aStpD8AAMmaOXPmypUrszt79dVXn3POOU2bNs3tpEQ9+OCDWTzP2WrEiBEvvvhiYWFhbidtJf0BAEjWhAkTsj77/
+vvvz507t1evXjnck7SJEydmffaVV155/fXX99tvvxzu+Zz0BwAgQVu2bJk8eXJ9bqGsrCyP0v/DDz/
+     MPFepzy0sWrRI+gMAkH82bNiwfv36+txCJoVzNSYFK1as+OL3KctC5qlO3759c7Xni6Q/
+AAANWvv27UNPSNUuu+yS0C1LfwAAGrS333479IRUffDBBwndsvQHACBBpaWlJSUln332Wda30K1btxzuSVqrVq3qeQvJ3V/
+      pDwBAgpo0adKnT5/6fNGbrl275nBP0tq0aXPooYc+//zzWd9CcvdX+gMAkKwzzzwz6/
+Rv2bLlUUcdlds9Scvc36zTf6+99urSpUtu93xO+gMAkKyTTjqpRYsWq1evzuLsVVdd1axZs5xPSlS/
+         fv0uvfTS7L7Ozy233FJUVJTzSVtJfwAAktWkSZPf/va3ffv2rWsNd+rU6Uc/
+       +lFCq5LTvn372267bdiwYXU9+K1vfatPnz5JTNpK+gMAkLhTTz31sssuu/nmm2t/
+                    pKSk5P7778+8TW5VcoYOHfrcc8/V6WVOzZo1u/
+          feewsKCpJbJf0BAEjDDTfcsGDBgscee6w2F7ds2XLKlClHHHFE0quS87vf/
+     e6NN9544YUXanNxx44dM78zCX0T389JfwAA0lBYWDhjxozf/va3w4cP3/br/r/yla88/
+     vjjmbepbUtCaWnps88+e+utt15zzTXl5eXbuPLAAw+cOXNm69atk54k/QEASElBQUH//
+             v379u07YsSIcePGbdiw4UsXdO/efejQoaecckpyn+qapuLi4ssvv/
+                  y8887LvJ0wYcKXvrlB5rlQ7969L7nkkp49eyb6Op//
+          tyeF9wEAAJ9r0aLFb6q99tprU6dO3a7622Bl7LXXXvvuu2/odbnXpk2b3/
+3ud2PGjFm4cOGjjz7apEmT1q1bZ+5v5s526tQpzSXSHwCAbCxbtmz27NlLly5t3759JmTbtm179NFH1+lPrztXS25hg5L5nTmwWsAN0h8AgDrYuHHjpZdeOnbs2H99uU7mOcCQIUMGDRq06667BtnGtkl/
+                AABqa8aMGYMHD/7HP/7xb3/1vffeu/LKK0eNGnXvvfeef/
+                      75KW+jRtIfAIBa+fnPf37VVVfVeFllZWX//
+   v1XrVo1fPjwFFZRe9IfAICaTZw4sTbdv1VVVdVll11WUlJy8cUXJ7qKOpH+AADUoKysrH///
+            nU9NWzYsG9/+9v7779/EpPIgvQHAKAGQ4YMWb9+fV1PVVRUXH755Vu/
+   fCcNgfQHAGBb3nvvvblz52Z3dtq0aX/961+/+c1v5nYS2ZH+AABsywMPPFBZWZn18cmTJ0v/
+                                 BkL6AwCwLQ8//
+  HB9ji9atChXS6gn6Q8AwLasXr26PsfLyspytYR6kv4AACSoWbNmoSfwT9IfAIAEffbZZ6En8E/
+             SHwCAbWnfvv3ChQuzPt6tW7ccjqE+pD8AANtyxhlnzJgxI+vj0r/
+hkP4AAGzLqaeeetFFF2X3up3i4uLvfe97OZ9EdqQ/AADb0qJFi5NPPnnSpElZnD3//PO7dOmS80lkR/
+                  oDAFCDO++889lnn3333XfrdKpp06Y/+9nPkllENqQ/
+       AAA1aN269aRJk3r06LFp06ZaHikuLh43bly7du0SHUadSH8AAGp22GGH3X///d///
+                    vc3b95c48VNmzbNPFU48cQTUxhG7Ul/AABqpV+/
+ fgcffPDAgQPnzJmzjcuaN28+bdq0I444Iq1d1Jb0BwCgtvbee+9Zs2bdcccdM2fOfPLJJ8vLyz//
+              pYKCgp49ew4dOrR3796ZHwccyf+P9AcAoA4yWf9/qlVVVc2fP3/
+p0qXt27dv1apV5m2LFi1Cr2NbpD8AQFwyyV5WVjZnzpwlS5a0a9cuU+2ZtyeccEJRUVGdbifzHOCb1RLamSuVlZUvv/
+          xy5v7+/e9/33333Vu3bt2mTZtevXpF+FcT0h8AIBYbNmy45JJL7r///n/9/
+ly77rrroEGDhgwZ0r59+yDbkvDJJ59cfPHFDzzwwL9+anLmOUDmzmbu8i677BJkWxDSHwAgClOnTr3ooov+f1+bf9WqVTfccMONN974i1/
+  8YtiwYSlvy7mqqqqxY8f+53/+Z6b+/+0Fmd+HK6644rrrrps8eXKvXr1SnheK9AcAaPwyjfvTn/
+                    60xssyxZzJ5Q8//PD666/P39fDZO7Fqaee+uc//
+ 7nGKzds2HDSSSfdeeedmSdFKQwLTvoDADRykyZNuvrqq2t//Q033LBu3brbb789uUmJuvXWW2vT/
+                                  VtVVlb+6Ec/
+   KikpueCCCxJd1RBIfwCAxmzx4sWZqK2qqqrTqTvvvPPss88+7LDDElqVnDlz5lx55ZV1PZWp/
+2OPPXaPPfZIYlLDIf0BABqzSy65ZN26dXU9lXmqMHLkyKeeeiqJSYnq37//li1b6nrqs88+u+qqq37/
+                         +98nManhiDT9b7311vHjx4dekYYs/
+       tUHABqNlStXzpo1K7uzc+fOnTZt2kknnZTbSYl68cUX33zzzezOjhs37sorr9xvv/
+                  1yO6lBKX799ddDbwhg5syZoSeQoK5du+bvZybV3he/
+ gWI85s+fv88++4RekYYVK1aEnhDAHXfcMWnSpNAr0vDhhx9m3sb5IZiUPfjggxUVFVkfnzFjRn6l/
+   4QJE7I+W1lZOXXq1Eae/pnngqE3QI698cYboSeQlM2bNy9btiz0CpKybt26qB5fH4JJQe0/2/
+               XfWrRoUa6WpCO2+1tXxfvuu+/ixYvPO++8o48+OvSYNPz4xz/
+           O4uVu+e7GG29s06ZN6BWJe+aZZ+65557QK9LWokWLX/3qV6FXpOG///u/
+58+fH3pF2g477LDBgweHXpGGqVOnPvjgg6FXpK1z586hJ9D4rVmzpj7Hy8rKcrUkHbHd37oq3m233TL/
+      OPzww3/4wx+GHpOGSy+9NML0P+200yJ5jUSE6d+0adNI/uOdNm1ahOn/la98JZLHd/
+ny5RGmf+vWrUNPgBp8+umnVVVVMbyMdqsDDjgg9IRkRfppvgAA1Khdu3bxdH9G1p8inC+kPwBAo9WhQ4fnn38+6+Ndu3bN4ZgUdOzYsT6fRZN397eupD8AQKPVr1+/
+   +ryarlu3bjkck4LM/a3Pq0Pz7v7WlfQHAGi0vvOd7+y8885r167N4mxRUdG5556b80mJyqT/
+           iBEj6vqti7fK/Eb17ds355MaFOkPANBo7bDDDpkavu+++7I4+4Mf/GD//
+ffP+aREdezY8ZhjjnnyySezOHvppZc2+k++l/4AAI3ZL37xi7lz5y5durROpzLPGa655pqEJiXqt7/
+                97de//vWPPvqoTqd22223TPonNKnhkP4AAI1Z8+bNJ0+e/
+                K1vfWv9+vW1PFJcXDxu3LgOHTokOiwhHTt2/OMf/9i7d+/
+afxvjHXfc8cEHH9xpp50SHdYQSH8AgEbugAMOmDRpUt++fTdu3FjjxU2bNs1cfOKJJ6YwLCHHHXfcmDFjLrjggi1bttR4catWraZPn/
+    6Nb3wjhWHBSX8AgMavd+/ey5Ytu+iiix555JFtXLbLLrtMmTLl8MMPT21YQs4999xvfvOb/
+       fv3f+aZZ7ZxWb9+/W6//fat3+I2BtIfACAK7dq1+/Of/3zvvfc+8cQT06dP/+KX/
+         SkoKMg8Nxg6dGjPnj0bzffw6ty587x58379618//vjjM2fO/OLfeGy//fZ9+/
+bN3N9DDz004ML0SX8AgIgMqJb5QVlZ2ZIlSzLPB1q1atW+ffvS0tLQ03Iv8zRmSLWqqqqXX37573//
+e4cOHTL3t23btiUlJaHXBSD9AQBi1LVa6BUpyTwHOLha6CGBSX8AAIiC9AcAgChIfwAAiIL0BwCAKEh/
+                 AIDG48ILL2yUX6vnSzZt2rT17VlnnRV6SxrWrFmTk9uR/
+           gAAjcfDDz8cekJ6KioqJkyYEHpFPpH+AACNwd13311eXh56RUoqKyuff/
+      75wsLCqL4nV7Nmzep5C9IfAKAxOOWUU0JPSFUkL/XJLekPAABRkP4AABAF6Q8AAFGQ/
+                 gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+                 gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+                 gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+                 gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+                 gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+   gAAEAXpDwAAUZD+AAAQBekPANAYnH322Z988knoFSmprKx86aWXCgsLDz744NBbUtKhQ4ff/
+                 OY39bwR6Q8A0BjMmjVr5cqVoVek7dFHHw09ISVdunSp/
+41IfwCAxmP8+PEtW7YMvSJxa9euPeOMM0KvyD/SHwCg8TjmmGNat24dekXiPv7449AT8pL0BwCAKEh/
+                 AACIgvQHAIAoSH8AAIiC9AcAgChIfwAAiIL0BwCAKEh/
+          AACIgvQHAIAoSH8AAIiC9AcAgChIfwAAiIL0BwCAKEh/AACIgvQHAIAoSH/
+          Ib6tWrTrmmGNCr0jDq6++GnoCAOS34oULF2b+MXTo0BEjRoQek7iqqqpPP/
+     009IoADj744OLixv80b+PGjaEnBPDZZ5/Nnj079AqSMnHixOnTp4dekYa1a9eGnhDA3/
+72t9ATgLgUb03hDdVCjyEp69atCz0ByEZFRcXq1atDryApHlwgZcUHHHDA4sWLQ89IVZs2bcaPHx96RRpeeeWVYcOGhV6Rtl69eo0cOTL0ijQsW7Zs4MCBoVek7fLLLz/
+              hhBNCr0jDHXfc8dBDD4VekbYJEybstttuoVek4bbbbpsyZcpXv/
+rV0EOAuBS3aNEi9Ia07bDDDkcffXToFSQl89Qukse3ZcuWoScEsN9++0Xy+E6ePDn0hAAOPfTQTp06hV6RhsyTnMzb5s2bhx4CxKXxv/
+                4bAADYTvoDAEAkpD8AAERB+gMAQBSkPwAAREH6AwBAFKQ/
+                 AABEQfoDAEAUpD8AAERB+gMAQBSkPwAAREH6AwBAFKQ/
+                 AABEQfoDAEAUpD8AAERB+gMAQBSkPwAAREH6AwBAFKQ/
+                 AABEQfoDAEAUpD8AAERB+gMAQBSkPwAAREH6AwBAFKQ/
+                 AABEQfoDAEAUpD8AAERB+gMAQBSkPwAAREH6AwBAFKQ/
+                 AABEQfoDAEAUpD8AAERB+gMAQBSkPwAAREH6AwBAFKQ/
+                 AABEQfoDAEAUpD8AAERB+gMAQBSkPwAAREH6AwBAFKQ/
+                 AABEQfoDAEAUpD8AAERB+gMAQBSkPwAAREH6AwBAFKQ/
+   AABEQfoDAEAUpD8AAERB+gMAQBSkPwAAREH6AwBAFKQ/AABEQfoDAEAUpD8AQONx5JFHFhc3/
+                                sCrqKgIPSEvNf5/
+MwAA4rF06dLQE2i4pD8AQGPw9NNPb9myJfSKlFRVVb311luFhYWdOnUKvSUlJSUl9b8R6Q8A0BjsvffeoSekqkuXLqEn5B/
+                    pDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+                 gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABAF6Q8AAFGQ/
+ gAAEAXpDwAAUZD+AAAQBekPAABRkP4AABCF4vHjx4fekLa33nqrsFpBQUHoLcmqrKwMPSGAsWPH/
+uEPfwi9Ig1VVVWhJwRwwQUXDBgwIPSKNFRUVISeEMARRxxRUlISekUaPvroo9ATgBgVr127NvSGADLNFOeH1RhkHtwtW7aEXkFSKquFXkFSli9fHnoCQGP2vy/
+4KSgoePPNN0MvScO7777bvXv30CvSdthhh0XydztXXHHFhAkTQq9I22677fbcc8+FXpGG00477eWXXw69Im0nn3zyf/
+3Xf4VekYajjjrqnXfemTdv3u677x56S3p23XXX0BOAuPzztf6dOnUKOoMElZaWRvL47rzzzqEnBFBUVBTJ4xvJ60C+ZKeddork8S0u/
+ t+PR5nuj+T+AgTh03wBACAK0h8AAKIg/QEAIArSHwAAoiD9AQAgCtIfAACiIP0BACAK0h8AAKIg/
+                 QEAIArSHwAAoiD9AQAgCtIfAACiIP0BACAK0h8AAKIg/
+                 QEAIArSHwAAoiD9AQAgCtIfAACiIP0BACAK0h8AAKIg/
+                 QEAIArSHwAAoiD9AQAgCtIfAACiIP0BACAK0h8AAKIg/
+                 QEAIArSHwAAoiD9AQAgCtIfAACiIP0BACAK0h8AAKIg/
+                 QEAIArSHwAAoiD9AQAgCtIfAACiIP0BACAK0h8AAKIg/
+                 QEAIArSHwAAoiD9AQAgCtIfAACiIP0BACAK0h8AAKIg/
+                 QEAIArSHwAAoiD9AQAgCtIfAACiIP0BACAK0h8AAKIg/
+                 QEAIArSHwAAoiD9AQAgCtIfAACiIP0BACAK0h8AAKIg/
+                 QEAIArSHwAAoiD9AQAgCtIfAACiIP0BACAK0h8AAKIg/
+                 QEAIArSHwAAoiD9AQAgCtIfAACiIP0BACAK0h8AAKIg/
+          QEAIArSHwAAoiD9AQAgCtIfAACiIP0BACAK0h8AAKIg/QEAIArSHwAAovC/
+    6V9VVVVYWBh6CUmZM2dOJI9v5t/k0BMCWL58uce3EfvjH/84fvz40CvSEOfjC5Cyf/6pv//
+        nNm4e38bN49u4eXwByJViH1QAACAG/xfIZWHHquGGsQAAAABJRU5ErkJggg==]
+ Irudia 1: Dominoaren adibidea.
+Inbariantearen kontzeptua hobeto ulertzeko eta prozesu iteratiboez arrazoitzeko
+duen erabilgarritasuna erakusteko asmoz joko bat erabiliko dugu adibide bezala.
+  Eman dezagun xakeko taula bati ezkerreko ertzeko goiko laukia eta eskuineko
+  ertzeko beheko laukia kendu zaizkiola (ikusi 1 irudia). Hona hemen erantzun
+  beharreko galdera: dominoko fitxek bi laukitxo estaltzen badituzte eta modu
+ horizontalean nahiz bertikalean jar badaitezke taulan, taula guztiz estali al
+daiteke dominoko fitxekin? Galdera honi erantzuteko problemak soluziorik ba al
+      duen ala ez pentsatu behar dugu. Azter dezagun egoera: xakeko taula
+ estandarretan 32 laukitxo beltz eta 32 laukitxo zuri daude. Adibide honetako
+               taulan, ordea, 30 laukitxo beltz baino ez daude:
+zenbatzuri=32
+zenbatbeltz=30
+  Hau da, laukitxo zuriak laukitxo beltzak baino bi gehiago dira. Guztira, 62
+  laukitxo daude, eta, beraz, 31 dominoko fitxa beharko lirateke xakeko taula
+   guztia estaltzeko. Gainera, dominoko fitxa bat jartzen dugun bakoitzean,
+ laukitxo zuri bat eta laukitxo beltz bat estaltzen dira, fitxak ezin direlako
+  diagonalean jarri. Hortaz, lehenengo fitxa jarri ondoren, estali gabeko 31
+             laukitxo zuri eta 29 laukitxo beltz geldituko dira:
+zenbatzuri=32−1=31
+zenbatbeltz=30−1=29
+   Horrek esan nahi du oraindik estali gabeko laukitxo zuriak estali gabeko
+ laukitxo beltzak baino bi gehiago direla. Hurrengo fitxa jartzen dugunean ere
+erlazio hori mantendu egingo da: estali gabeko 31 laukitxo zuri eta 29 laukitxo
+ beltz. Eta gauza bera gertatuko da hurrengo urratsetan ere. Fitxa beltzen eta
+zurien kopuruen arteko erlazio hori mantendu egiten da fitxak jarri ahala, eta,
+          horrenbestez, gure problemaren inbariantetzat har daiteke:
+                       INB ≡ (zenbatzuri−2=zenbatbeltz)
+ Dominoko 30 fitxa jarri ondoren, laukitxo beltz guztiak estalita daude, eta,
+             beraz, bi laukitxo zuri estali gabe geldituko dira:
+zenbatzuri=2
+zenbatbeltz=0
+Ezinezkoa denez dominoko fitxa bat bi laukitxo zuritan jartzea, oso erraz ikus
+  daiteke problema honek soluziorik ez duela. Ondorioz, hasierako galderaren
+                             erantzuna ezezkoa da.
+Xakeko taularen adibidea erabiliz, jarraitu beharreko prozesu errepikakorraren
+ inbariantea zehazteak galdera baten erantzun justifikatua aurkitzea errazten
+   duela ikusi dugu. Fitxa beltzen eta zurien kopuruen arteko erlazioak ondo
+ deskribatu du prozesu horretan zer gertatzen zen, eta bidea eman dio erantzun
+ argi bati: hasieran laukitxo zuriak beltzak baino bi gehiago dira, fitxa bat
+ jartzen den bakoitzean bi kopuru horien arteko aldeari eutsi egiten zaio, eta
+    fitxa gehiago ezin denean jarri estali gabeko bi laukitxo zuri eta zero
+   laukitxo beltz gelditzen dira. Beraz, ezin dira laukitxo guztiak estali.
+  Adibide horretako ideiari jarraituz, iterazioei buruzko propietateak froga
+   daitezke, partikularki while motako aginduak. Helburu horrekin while-aren
+              erregelawhile-aren erregela honela definitzen da:
+                                    (WHE)
+                 ϕ→INB, INB→def(B),
+             {INB∧B} P {INB}, (INB∧≠B)→ψ
+            {ϕ} whileBloopPend_loop; {ψ}
+Erregela horrek while aginduei buruzko iterazioen zuzentasun partzialzuzentasun
+   partzialeko propietateak frogatzeko honako lau propietate hauek frogatzea
+                                 eskatzen du:
+•
+inbarianteInbarianteak ϕ aurrebaldintzaren ondorioa izan behar du. Beste era
+batean esanda, konputazioa lehenengo aldiz iteraziora iristen denean
+inbarianteak egiazkoa izan behar du.
+•
+Inbariantea betetzen denean
+Bbaldintza definituta dago.
+•Bbaldintza betetzen duen egoera batetik hasten denPagindu-segidaren exekuzioak
+inbariantea kontserbatzen du.
+•
+Inbariantea betetzen bada eta
+Bbaldintza betetzen ez bada, orduan ψ postbaldintza beteko da.
+    Lehenengo hiru puntuei esker, iterazio bakoitzaren hasieran B baldintza
+             definituta egongo da eta inbariantea bete egingo da.
+   Kontuan izan erregela horren bidez zuzentasun partzialeko baieztapen bat
+ frogatzen dela. Hau da, ez dugu frogatzen B-ren ebaluazioak noizbait faltsua
+itzuliko duenik, iterazioaren exekuzioa bukaraziz. Laugarren premisaren kasuan,
+agindu iteratiboa bukatzen bada ψ postbaldintza beteko dela frogatzen da, baina
+ez da frogatzen agindu iteratiboa bukatuko den ala ez. Error: Reference source
+ not found atalean iterazioen bukaeraren problema landuko dugu, eta, horrela,
+ iterazioei buruzko zuzentasun osoko propietateak frogatu ahal izango ditugu.
+        Ikus dezagun orain iterazio bati buruzko iterazioen zuzentasun
+      partzialzuzentasun partzialeko propietate bat frogatzeko while-aren
+erregelawhile-aren erregela nola erabiltzen den. Horretarako, x eta y aldagaien
+hasierako balioen batuketa x aldagaian itzultzen duen adibidea erabiliko dugu.
+  Egiaztapena bideratzeko lehen urratsa inbariante bat definitzea da (xakeko
+                    taularen probleman egin dugun bezala):
+     {ϕ≡x=a∧y=b≥0}
+      while {INB≡x+y=a+b∧0≤y≤b}
+      y /= 0
+      loop
+       x := x+1;
+       y := y-1;
+    end_loop;
+ {ψ≡x=a+b}
+   Proposatutako inbariantean oinarrituta eta while-aren erregelawhile-aren
+           erregela ardatz hartuta, frogapena honela egin daiteke:
+    1.
+    2.
+    3.
+               → ((x+1)+(y−1)=a+b∧0≤y−1≤b)
+    4.         {(x+1)+(y−1)=a+b∧0≤y−1≤b}
+     x := x+1;  (EA)
+    {x+(y−1)=a+b∧0≤y−1≤b}
+ 5. {x+(y−1)=a+b∧0≤y−1≤b}
+     y := y-1;  (EA)
+    {x+y=a+b∧0≤y≤b}
+ 6. {(x+1)+(y−1)=a+b∧0≤y−1≤b}
+     x := x+1;
+     y := y-1;  4, 5 eta (KPE)
+    {x+y=a+b∧0≤y≤b}
+ 7.
+     x := x+1;
+     y := y-1;  3, 6 eta (ODE)
+
+ 8.
+ 9. {x=a∧y=b≥0}
+     while {x+y=a+b∧0≤y≤b}
+     y /= 0
+     loop
+               x := x+1;
+               y := y-1;
+     end_loop;  1, 2, 7, 8 eta (WHE)
+    {x=a+b}
+
+
+ Jarraian, x baino txikiagoa edo berdina den 2ren berretura handiena itzultzen
+duen programari buruzko zuzentasun partzialeko hurrengo propietatea era berean
+                      froga daitekeela erakutsiko dugu:
+     {ϕ≡x≥1∧y=1}
+      while {INB≡ber2(y)∧1≤y≤x}
+      2*y <= x
+      loop
+       y := 2*y;
+    end_loop;
+ {ψ≡y=handiena{k|ber2(k)∧k≤x}}
+                       Frogapen formala honako hau da:
+    1.
+    2.
+    3.
+    4.         {ber2(2*y)∧1≤2*y≤x}
+     y := 2*y;  (EA)
+
+ 5.
+     y := 2*y;  3, 4 eta (ODE)
+
+ 6.
+
+ 7. {x≥1∧y=1}
+     while2*y <= xloop
+               y := 2*y;
+     end_loop;  1, 2, 5, 6 eta (WHE)
+    {y=handiena{k|ber2(k)∧k≤x}}
+
+
+
+
+ G Asertzioak eta programen dokumentazioa
+    programen zuzentasunProgramen zuzentasuna frogatzeko ez ezik, programak
+ programen dokumentaziodokumentatzeko ere erabil daitezke asertzioasertzioak,
+   programen exekuzioaren propietate nagusiak adierazten baitituzte: hau da,
+ programek egin beharreko lana nola egiten duten eta beraien helburua zergatik
+     betetzen duten erakusten duen arrazoibide logikoaren oinarriak dira.
+  Programazio-lengoaia batzuek ez dituzte asertzioak prozesatzen, baina kasu
+   horietan ere asertzioak idaztea oso onuragarria da; izan ere, asertzioak
+   programen mantentze-fasean oso lagungarriak eta zehatzak izan daitezkeen
+    iruzkintzat har daitezke. Hala ere, askoz komenigarriagoa da asertzioak
+   programazio-lengoaiaren barruko adierazpenadierazpen gisa erabiltzea eta
+ sistemak automatikoki egiaztatzea. Programazio-lengoaia batzuetan asertzioak
+     programa exekutatzean egiaztatzen dira (adibidez, Eiffel), eta, beste
+    batzuetan, programa konpilatzean (adibidez, Dafny). Asertzioen bidezko
+  programen dokumentazioa zuzentasun-frogaren eskematzat edo laburpentzat har
+    daiteke. Hain zuzen ere, frogapenfrogapenaren urratsak programatzaileek
+idatzitako asertzioetatik abiatuta egiaztatzen dira Dafny bezalako lengoaietan.
+  Programen dimentsio eta konplexutasuna handitzen diren heinean, eskema edo
+   laburpen horiek erabiltzea beharrezkoagoa egiten da, baina betiere eskema
+horiek justifikatzeko automatikoki edo eskuz egindako frogapen formal bat behar
+                             dela kontuan hartuz.
+    Adibidez, asertzioak erabiltzen dira hurrengo programa dokumentatzeko:
+     {True}
+       ify <= zthen
+        ifx <= ythen
+         {x≤y≤z}
+         m := x;
+      else
+         {y≤z∧y<x}
+         m := y;
+      end_if;
+    elsifx <= zthen
+      {x≤z<y}
+      m := x;
+    else
+      {y>z∧x>z}
+      m := z;
+    end_if;
+ {m=txikiena(x,y,z)}
+   Asertzio horiek programaren zuzentasunaren adierazle oso egokiak dira. E
+atalaren bukaeran baieztapen horren zuzentasun partzialaren frogapena agertzen
+                                      da.
+   Ondoren, beste bi adibide aztertuko ditugu. Adibide horietan bi programa
+iteratibo dokumentatuko dira asertzioak erabiliz, inbarianteak barne. Programa
+  horien zuzentasun partzialeko propietateen edo baieztapenen frogapenak ere
+      proposatzen dira, asertzioak frogapenetatik atera direla erakutsiz.
+Lehenengo adibidean, programak A(1..n) bektorean agertzen diren zeroen kopurua
+                         kalkulatzen du zk aldagaian:
+     {n≥1}
+      i := 0;
+      zk := 0;
+     while {INB≡zk=Nj(1≤j≤i∧A(j)=0)∧0≤i≤n}
+    i < n
+    loop
+           i := i+1;
+           ifA(i) = 0then
+           zk := zk+1;
+           end_if;
+    end_loop;
+ {zk=Nj(1≤j≤n∧A(j)=0)}
+     Hasteko, programaren aurre-ondoetako espezifikazioa eta iterazioaren
+inbariantea adierazten dira. Erraz ikus daitekeenez, lehenengo bi aginduetan i
+   eta zk aldagaiak zerorekin hasieratu ondoren inbariantea bete egiten da.
+      Gainera, i aldagaiaren balioa n baino handiagoa edo berdina denean
+  postbaldintza beteko dela bermatzen du inbarianteak. Aurreko bi propietate
+  hauen frogapen zehatza jakin-mina duten irakurleentzat uzten da. Ondoren, i
+     aldagaia n baino txikiagoa denean iterazioaren gorputzak inbariantea
+kontserbatu egiten duela frogatuko dugu. Hau da, hurrengo baieztapena frogatuko
+                                     da:
+     {zk=Nj(1≤j≤i∧A(j)=0)∧0≤i<n}
+      i := i+1;
+      ifA(i) = 0then
+       zk := zk+1;
+    end_if;
+ {zk=Nj(1≤j≤i∧A(j)=0)∧0≤i≤n}
+Iterazioaren gorputza bi aginduz osatuta dago: lehenengoa, esleipen bat da eta,
+bigarrena, baldintzazko agindu bat. Beraz, baieztapen hori frogatzeko, batetik,
+esleipenaren axioma (beharrezkoa baldin bada ondorioaren erregelarekin batera)
+eta baldintzaren erregela erabili beharko ditugu, eta, ondoren, konposaketaren
+       erregela. Esleipena exekutatu ondoren ateratzen den postbaldintza
+  konposaketaren erregelak erabiltzen duen tarteko asertzioa izango da, baita
+baldintzazko aginduaren aurrebaldintza ere. Gainera, baldintzazko aginduak if-
+then egitura duenez, hurrengo bi propietate frogatu beharko dira: baldintzazko
+aginduaren baldintza egiazkoa bada, then atala exekutatu ondoren postbaldintza
+   betetzen dela; bestela, baldintzaren ukapenaren eta tarteko asertzioaren
+ konjuntzioak postbaldintza inplikatzen duela. Laburbilduz, aurreko zuzentasun
+partzialeko propietatearen frogapena hurrengo hiru asertzioen bidez adierazten
+                       diren hiru propietateetan datza:
+1. Tarteko asertzioa.
+2.thenatalaren aurrebaldintza (baldintzazko aginduaren baldintza egiazkoa den
+kasua).
+3. Baldintzazko aginduaren baldintza faltsua denean betetzen den inplikazio
+logikoinplikazio logikoa.
+Eta aurreko asertzio horiek erabiliz, iterazioaren gorputza dokumenta daiteke:
+     {zk=Nj(1≤j≤i∧A(j)=0)∧0≤i<n}
+      i := i+1;
+      {zk=Nj(1≤j≤i−1∧A(j)=0)∧1≤i≤n}
+      ifA(i) = 0then
+       {zk+1=Nk(1≤j≤i∧A(j)=0)∧0≤i≤n}
+       zk := zk+1;
+    //else(ez dago)
+       {(zk=Nj(1≤j≤i−1∧A(j)=0)∧1≤i≤n∧A(i)≠0)
+    → (zk=Nj(1≤j≤i∧A(j)=0)∧0≤i≤n)}
+    end_if;
+ {zk=Nj(1≤j≤i∧A(j)=0)∧0≤i≤n}
+Eskema horrek frogapenaren baieztapen garrantzitsuenetariko bat adierazten du,
+     hau da, iterazioaren baldintza betetzen denean iterazioaren gorputzak
+   inbariantea kontserbatu egiten duela. Hala ere, asertzioak ez dira ausaz
+     asmatu, baizik eta Hoare-ren sistema formalHoareren sistema formalean
+                              oinarritzen dira:
+ 
+ 
+      1.            (zk=Nj(1≤j≤i∧A(j)=0)∧0≤i<n)
+                    → (zk=Nj(1≤j≤i+1−1∧A(j)=0)∧
+                    1≤i+1≤n)
+      2.            {zk=Nj(1≤j≤i+1−1∧A(j)=0)∧1≤i+1≤n}
+       i := i+1;            (EA)
+     {zk=Nj(1≤j≤i−1∧A(j)=0)∧1≤i≤n}
+ 3.  {zk=Nj(1≤j≤i∧A(j)=0)∧0≤i<n}
+       i := i+1;            1, 2 eta (ODE)
+     {zk=Nj(1≤j≤i−1∧A(j)=0)∧1≤i≤n}
+ 4.  (zk=Nj(1≤j≤i−1∧A(j)=0)∧1≤i≤n)
+     → (1≤i≤n)≡def(A(i)=0)
+ 5.  (zk=Nj(1≤j≤i−1∧A(j)=0)∧1≤i≤n∧A(i)=0)
+     → (zk+1=Nj(1≤j≤i∧A(j)=0)∧0≤i≤n)
+ 6.  {zk+1=Nj(1≤j≤i∧A(j)=0)∧0≤i≤n}
+       zk := zk+1;          (EA)
+     {zk=Nj(1≤j≤i∧A(j)=0)∧0≤i≤n}
+ 7.  {zk=Nj(1≤j≤i−1∧A(j)=0)∧1≤i≤n∧A(i)=0}
+       zk := zk+1;          5, 6 eta (ODE)
+     {zk=Nj(1≤j≤i∧A(j)=0)∧1≤i≤n}
+ 8.  (zk=Nj(1≤j≤i−1∧A(j)=0)∧1≤i≤n∧A(i)≠0)
+     → (zk=Nj(1≤j≤i∧A(j)=0)∧0≤i≤n)
+ 9.  {zk=Nj(1≤j≤i−1∧A(j)=0)∧1≤i≤n}
+       ifA(i) = 0then
+                   zk := zk+1;
+       end_if;              4, 7, 8 eta (BDE)
+     {zk=Nj(1≤j≤i∧A(j)=0)∧0≤i≤n}
+ 10.   {zk=Nj(1≤j≤i∧A(j)=0)∧0≤i<n}
+                   i := i+1then
+                   ifA(i) = 0then
+                           zk := zk+1;
+                   end_if;  3, 9 eta (KPE)
+       {zk=Nj(1≤j≤i∧A(j)=0)∧0≤i≤n}
+            Azkenik, programa osoaren dokumentazioa honako hau da:
+     {n≥1}
+       i := 0;
+       zk := 0;
+       while {INB≡zk=Nj(1≤j≤i∧A(j)=0)∧0≤i≤n}
+       i < n
+       loop
+        i := i+1;
+        {zk=Nj(1≤j≤i−1∧A(j)=0)∧1≤i≤n}
+        ifA(i) = 0then
+         {zk+1=Nj(1≤j≤i∧A(j)=0)∧0≤i≤n}
+         zk := zk+1;
+      //else(ez dago)
+         {(zk=Nj(1≤j≤i−1∧A(j)=0)∧1≤i≤n∧A(i)≠0)
+         → (zk=Nj(1≤j≤i∧A(j)=0)∧0≤i≤n)}
+      end_if;
+    end_loop;
+ {zk=Nj(1≤j≤n∧A(j)=0)}
+
+
+
+
+Bigarren adibidean, zuzentasun partzialeko baieztapena frogatzeko esleipenaren
+axioma eta orain arte aurkeztu ditugun lau inferentzi erregelak (ondorioarena,
+     konposaketarena, baldintzarena eta while-arena) erabili behar dira:
+     {ϕ≡x≥1}
+       i := 1;
+       b := 0;
+       while
+       i <= x/2
+       loop
+        ifx % i = 0then
+         b := b+i;
+      end_if;
+      i := i+1;
+    end_loop;
+    q := (x=b);
+
+k  }x  %  k = 0
+
+1Institute of Electrical and Electronics Engineers.
+2Ederki azaldu zuen hori E. Dijkstra-k [Error: Reference source not found]-n:
+«Programa-arazketa akatsak badaudela erakusteko erabil daiteke, baina inoiz ez
+akatsik ez dagoela erakusteko».
+3«I suppose it is tempting, if the only tool you have is a hammer, to treat
+everything as if it were a nail».
+4Nahiz eta esan behar den hardwarearen industriak urteetako aldea atera diola
+softwarearenari bilakaera honetan.
+5http://ertos.nicta.com.au/research/l4.verified/
+6http://research.microsoft.com/en-us/projects/dafny/
+7Windows Hardware Engineering Conference (WinHEC 2002) konferentziako sarrerako
+hitzaldian.
+8arrayetabektoreizendapenetatik edozein erabiliko dugu dimentsio bakarreko
+egitura indexatuak aipatzeko.
+9Liburu honetan zenbaki errealak ez dira erabiliko, hortaz, zenbakia aipatzen
+dugunean defektuz zenbaki osoez arituko gara
+10% sinboloaren bidez zatiketa osoaren hondarra kalkulatzen duen eragiketa
+adieraziko dugu.
+11Konstanteak 0 argumentuko funtzio gisa ikus daitezke, baina hemen nahiago
+dugu beste sinbolo mota bat bezala ikusi.
+12TrueetaFalseformula atomikoak ez dira nahastu beharTetaFbezala adieraziko
+ditugun mota boolearreko bi balioekin.
+13i=6 denean betetzen da.
+14Aldiz, zenbaki osoak inplementatzen dituen datu-motaren eremuz kanpoko
+balioek eragindako erroreak ez ditugu kontuan hartuko, beraz batuketa, kenketa
+eta biderketa eragiketek ez dute inoiz errorerik eragingo.
+15Kontuan hartux+1=3 formulaTrue∧x+1=3 formularen sinplifikazioa dela.

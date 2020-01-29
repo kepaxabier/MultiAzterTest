@@ -1,0 +1,1468 @@
+
+
+
+
+1
+10. GAIA. ALDAGAI ERREALEKO FUNTZIO ERREALEN
+AZTERKETA LOKALA
+1.  Funtzio deribagarriei buruzko teoremak
+2.  Taylor-en Formula
+3.  Gorakortasuna eta beherakortasuna. Muturrak
+4.  Kurbadura. Inflexio-puntuak
+5.  Era esplizituan emandako funtzioen adierazpen grafikoa
+6.  Ekuazio linealetako ebazpena
+6.1. Bisekzio metodoa
+6.2. Newton-Rapson-en metodoa
+
+2
+10. GAIA.   ALDAGAI ERREALEKO FUNTZIO ERREALEN
+AZTERKETA LOKALA
+1.  FUNTZIO DERIBAGARRIEI BURUZKO TEOREMAK. BATEZBESTEKO
+BALIOAREN TEOREMAK
+Rolle-ren teorema. Deribatuaren erroei buruzko teorema.
+Izan bedi [a,b] tartean jarraitua eta (a,b) tartean deribagarria den f
+funtzioa. f(a)=f(b)
+betetzen bada, orduan 
+)
+b
+,
+a
+(
+c
+∈
+ punturen bat existitzen da non  f´(c)=0 den.
+Cauchy-ren teorema. Bi funtzioren gehikuntzen arteko zatidurari buruzko
+teorema.
+Izan bitez f eta g bi funtzio erreal [a,b] tartean jarraituak eta (a,b) tartean
+deribagarriak,
+orduan 
+)
+b
+,
+a
+(
+c
+∈
+ punturen bat existitzen da non
+[f(b)-f(a)] g'(c) = [g(b)-g(a)] f´(c)
+betetzen den.
+Lagrange-ren teorema edo gehikuntza finituen teorema.  f  [a,b] tartean funtzio
+jarraitua
+bada eta (a,b) tartean deribagarria, orduan gutxienez 
+)
+b
+,
+a
+(
+c
+∈
+ punturen bat existitzen da
+non,
+f(b)-f(a) = f´(c) (b-a)
+den.
+Ondorioak:
+1.  f funtzioa [a,b] tartean jarraitua eta (a,b) tartean deribagarria bada,
+orduan
+)
+b
+,
+a
+(
+x
+0
+)
+x
+(
+'
+f
+∈
+∀
+=
+ baldin eta soilik baldin f konstantea bada [a,b] tartean.
+2.  f eta g funtzioek (a,b) tarteko puntu guztietan deribatu berdina badute,
+orduan
+beraien arteko kendura konstante bat da [a,b] tartean.
+3.  L´Hôpital-en erregela. Izan bitez  f eta g funtzioak a puntuko ingurune
+laburtu
+batean deribagarriak.  Eman dezagun  g'(x)
+≠ 0 dela eta
+0
+)
+x
+(
+g
+lim
+)
+x
+(
+f
+lim
+a
+x
+a
+x
+=
+=
+ betetzen dela. Orduan
+)
+x
+(
+'
+g
+)
+x
+(
+'
+f
+lim
+a
+x
+ existitzen bada
+(finitu edo infinitua),  
+)
+x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+ limitea ere existitzen da  eta ondokoa betetzen
+da:
+=
+)
+x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+)
+x
+(
+'
+g
+)
+x
+(
+'
+f
+lim
+a
+x
+
+3
+•  Emaitza hau baliagarria da 
+±∞
+=
+)
+x
+(
+f
+lim
+a
+x
+ eta 
+±∞
+=
+)
+x
+(
+g
+lim
+a
+x
+badira.
+•  ∞
+.
+0
+ indeterminazioentzat ondokoa jar daiteke:
+[
+])
+x
+(
+g
+/
+1
+/
+)
+x
+(
+f
+lim
+)
+x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+a
+x
+=
+ eta horrela 0/0 edo 
+∞
+∞ /  bihurtzen
+da.
+• 
+Gainontzeko indeterminazioak  
+∞
+∞
+1
+eta
+,
+0
+0
+0
+ aurrekoren bat bihur
+daitezke, logaritmoak harturik.
+OHARRAK
+•  Gerta daiteke  
+)
+x
+(
+'
+g
+)
+x
+(
+'
+f
+lim
+a
+x
+ limitea ez existitzea eta hala ere 
+)
+x
+(
+g
+)
+x
+(
+f
+lim
+a
+x
+limitea existitzea. Adibidea: 
+x
+sin
+x
+1
+sin
+x
+lim
+2
+0
+x
+ .
+•  Gerta daiteke limite baten soluzioa ezinezkoa izatea bakarrik L'Hôpital-en
+erregela erabiliz. Adibidea: 
+x
+cos
+e
+x
+sin
+e
+lim
+x
+x
+x
++
++
+∞
+2.  TAYLOR-EN FORMULA
+Funtzioen hurbilketak Matematiketan oso garrantzitsuak dira eta oso
+erabilgarriak. Funtzioa beste batez ordezkatzen da, bigarren hau errazagoa
+izanik edo
+bere propietateak ezagunagoak direlarik. Kasu hauetan, hurbiltzeko erabiltzen
+diren
+funtzioen hautaketa oso inportantea da eta ere bai hurbilketa egiterakoan
+sortzen den
+errorearen azterketa.
+Polinomioen  ezaugarriak kontuan izanik,  Taylor-en formula ikusiko dugu.
+Formula honen bidez puntu baten ingurune batean  funtzioaren hurbilketa bat
+lortzen da,
+funtzioaren azterketa erraztuz.
+ Polinomio bat aurkitu nahi dugu non puntu batean f (x) funtzioa eta polinomio
+hori  eta  beren zenbait deribatu berdinak diren.
+Izan bedi  n mailako P(x) polinomioa.P(x) polinomioa (x-a) berreturetan
+idatziko
+dugu:
+P(x)= c0 + c1 (x-a) + c2 (x-a)
+2 + … + c
+n (x-a)
+n           [1]
+
+4
+Teorema. Izan bedi a puntuan n aldiz deribagarria den f funtzioa. Orduan
+P(a)=f(a) , P'(a)=f'(a) , … , P
+n)(a)=fn)(a)
+baldintzak betetzen dituen n baino txikiagoko edo maila berdinekoa den P(x)
+polinomio
+bakar bat existitzen da.
+[1] kontuan izanik, polinomioa behekoa da:
+n
+)
+n
+2
+)
+a
+x
+(
+!
+n
+)
+a
+(
+f
+...
+)
+a
+x
+(
+!
+2
+)
+a
+(
+'
+'
+f
+)
+a
+x
+(
+)
+a
+(
+'
+f
+)
+a
+(
+f
+)
+x
+(
+P
+−
++
++
+−
++
+−
++
+=
+Polinomio honi a puntuan f-ren n ordenako Taylor-en polinomio deritzo.
+(f(x)-P(x)) kendurari, a puntuan f-ren n mailako  hondarra edo gai
+osagarria deitzen
+zaio eta Rn(f,a)(x) edo Rn (x) adierazten da. Beraz f(x)-P(x)=Rn(x) izango da.
+Gainera, f(x)  a puntuaren ingurune batean n+1 aldiz deribagarria bada,
+hondarraren  adierazpena ondokoa da:
+)
+a
+,
+x
+(
+c
+edo
+)
+x
+,
+a
+(
+c
+,
+)
+a
+x
+(
+)!
+1
+n
+(
+)
+c
+(
+f
+)
+x
+(
+R
+1
+n
+)
+1
+n
+n
+∈
+∈
+−
++
+=
++
++
+Beraz, f(x) funtzioa jar daiteke:
+1
+n
+)
+1
+n
+n
+)
+n
+2
+)
+a
+x
+(
+)!
+1
+n
+(
+)
+c
+(
+f
+)
+a
+x
+(
+!
+n
+)
+a
+(
+f
+...
+)
+a
+x
+(
+!
+2
+)
+a
+(
+''
+f
+)
+a
+x
+(
+)
+a
+(
+'
+f
+)
+a
+(
+f
+)
+x
+(
+f
++
++
+−
++
++
+−
++
++
+−
++
+−
++
+=
+)
+a
+,
+x
+(
+c
+edo
+)
+x
+,
+a
+(
+c
+∈
+∈
+Aurreko formulari   n ordenako Taylor-en formula deituko diogu.
+n baino txikiagoko edo maila berdinekoak diren polinomioen artean, n mailako
+Taylor-en polinomioa, a puntuaren ingurune batean f-ren hurbilketa onena da.
+Hurbilketa hau, lokala da.
+a=0 puntuan garatutako  Taylor-en formulari  McLaurin-en formula  deitzen
+zaio, hots:
+)
+0
+,
+x
+(
+c
+edo
+)
+x
+,
+0
+(
+c
+,
+x
+)!
+1
+n
+(
+)
+c
+(
+f
+x
+!
+n
+)
+0
+(
+f
+...
+x
+!
+2
+)
+0
+(
+''
+f
+x
+)
+0
+(
+'
+f
+)
+0
+(
+f
+)
+x
+(
+f
+1
+n
+)
+1
+n
+n
+)
+n
+2
+∈
+∈
++
++
++
++
++
++
+=
++
++
+e
+x , sin x, cos x, ln(1+x) funtzioen McLaurin-en garapenak lortzea oso erraza
+ da
+eta asko erabiltzen dira funtzio hauen balioak kalkulatzeko, limiteen
+kalkuluetarako, …
+
+5
+3. GORAKORTASUNA ETA BEHERAKORTASUNA. MUTURRAK
+Batezbestekoaren teoremen ondorio zuzenak, funtzio baten gorakortasuna eta
+beherakortasunaren analisian laguntzen du, funtzioa deribagarria bada.
+Teorema. Izan bedi I tartean deribagarria den f funtzioa. Orduan:
+i)  I tartean f gorakorra da baldin eta soilik baldin 
+I
+x
+0
+)
+x
+(
+'
+f
+∈
+∀
+≥
+ bada.
+ii)  I tartean f beherakorra da baldin eta soilik baldin 
+I
+x
+0
+)
+x
+(
+'
+f
+∈
+∀
+≤
+ bada.
+iii) 
+I
+x
+0
+)
+x
+(
+'
+f
+∈
+∀
+>
+ betetzen bada, orduan f hertsiki gorakorra da I tartean.
+iv) 
+I
+x
+0
+)
+x
+(
+'
+f
+∈
+∀
+<
+ betetzen bada, orduan f hertsiki beherakorra da I tartean.
+Azken bi adierazpenen alderantzizkoak ez dira egiazkoak. y=x
+3 funtzioa adibidez,
+hertsiki gorakorra da R osoan eta bere deribatua 0 puntuan nulua da.
+Definizioa. Mutur erlatiboak. (Propietate lokala)
+f funtzioak a puntuan  maximo erlatibo bat dauka baldin eta soilik baldin 
+0
+>
+δ
+existitzen bada non 
+)
+a
+,
+a
+(
+x
+den
+)
+a
+(
+f
+)
+x
+(
+f
+δ
++
+δ
+−
+∈
+∀
+≤
+.
+f funtzioak a puntuan  minimo erlatibo bat dauka baldin eta soilik baldin 
+0
+>
+δ
+existitzen bada non 
+)
+a
+,
+a
+(
+x
+den
+)
+a
+(
+f
+)
+x
+(
+f
+δ
++
+δ
+−
+∈
+∀
+≥
+.
+Definizioa. Mutur absolutuak. (Propietate globala)
+f funtzioak a puntuan  maximo absolutu bat dauka baldin eta 
+)
+a
+(
+f
+)
+x
+(
+f
+≤
+betetzen bada edozein x-rentzat bere existentzi eremuan.
+f funtzioak a puntuan  minimo absolutu bat dauka baldin eta 
+)
+a
+(
+f
+)
+x
+(
+f
+≥
+betetzen bada edozein x-rentzat bere existentzi eremuan.
+•  MUTUR ERLATIBOAK
+Deribatuen erabilpenak, muturren existentziarako baldintza beharrezko bat
+ematen
+digu:
+Proposizioa. Baldintza beharrezkoa
+Izan bedi a puntuan deribagarria den f funtzioa. a puntuan f-ren mutur erlatibo
+bat badago, orduan f'(a)=0. a puntua puntu kritikoa deitzen da.
+
+6
+Alderantzizkoa orokorrean ez da bete behar, existitzen baitira puntu batean
+(a=0)
+deribatu nulua duten funtzioak (y=x
+3) eta ez dute ez maximorik ez minimorik a puntuan.
+Teorema. Mutur erlatiboen existentziarako baldintza nahikoak.
+Izan bedi a puntuan jarraitua den f(x) funtzioa. Orduan:
+i) 
+0
+>
+δ
+ existitzen bada non 
+
+
+
+δ
++
+∈
+∀
+<
+δ
+−
+∈
+∀
+>
+)
+a
+,
+a
+(
+x
+0
+)
+x
+(
+'
+f
+)
+a
+,
+a
+(
+x
+0
+)
+x
+(
+'
+f
+ den, orduan a puntuan f-k
+maximo erlatibo bat dauka (gorakorra izatetik beherakorra izatera pasatzen du
+funtzioak).
+ii) 
+0
+>
+δ
+ existitzen bada non 
+
+
+
+δ
++
+∈
+∀
+>
+δ
+−
+∈
+∀
+<
+)
+a
+,
+a
+(
+x
+0
+)
+x
+(
+'
+f
+)
+a
+,
+a
+(
+x
+0
+)
+x
+(
+'
+f
+ den, orduan a puntuan f-k
+minimo erlatibo bat dauka (beherakorra izatetik gorakorra izatera pasatzen da
+funtzioa).
+Teorema. Mutur erlatiboen existentziarako baldintza nahikoak.
+f funtzioa a puntuan  n aldiz deribagarria bada, deribatuak jarraituak izanik
+eta
+0
+)
+a
+(
+f
+,
+0
+)
+a
+(
+f
+...
+)
+a
+(
+'
+f
+)
+n
+)
+1
+n
+≠
+=
+=
+=
+−
+betetzen bada, orduan
+i)  n bikoitia bada eta
+
+
+
+−
+⇒
+<
+−
+⇒
+>
+dauka
+erlatiboa
+maximo
+puntuan
+a
+k
+f
+0
+)
+a
+(
+f
+dauka
+erlatiboa
+minimo
+puntuan
+a
+k
+f
+0
+)
+a
+(
+f
+)
+n
+)
+n
+ii)  n bakoitia bada, f-k ez du muturrik a puntuan.
+•  MUTUR ABSOLUTUAK
+Muturren kalkulua tarte itxietan.
+[ ]β
+α,  tartean f jarraitua bada, f-k bere mutur absolutuak hartzen ditu tarte
+honetan (Weierstrass-en teorema); f funtzioak muturrak hartzen dituen puntuak
+aurkitzeko, ondoko kasuak aztertu behar dira:
+i)  puntuak non f ez den deribagarria edo jarraitua.
+ii) 
+)
+,
+(
+x
+i
+β
+α
+∈
+puntuak non 
+0
+)
+x
+(
+'
+f
+i
+= den (puntu kritikoak)
+iii) tartearen muturrak x=
+α, x=β
+
+7
+4. KURBADURA. INFLEXIO-PUNTUAK
+Definizioa. Izan bedi a puntuan deribagarria den f funtzioa. f-ren grafikoa a
+puntuan
+ahurra da edo bere kurbadura positiboa dela esaten da baldin eta (y=f(a)+f'(a)
+(x-a))
+zuzen ukitzailea (a,f(a)) puntuan a puntuaren ingurune batean funtzioaren
+balioen
+azpitik baldin badago.
+Definizioa. Izan bedi a puntuan deribagarria den f funtzioa. f-ren grafikoa a
+puntuan
+ganbila da edo bere kurbadura negatiboa dela esaten da baldin eta (y=f(a)+f'(a)
+(x-a))
+zuzen ukitzailea (a,f(a)) puntuan a puntuaren ingurune batean funtzioaren
+balioen
+gainetik baldin badago.
+Definizioa. Puntuak non f-ren grafikoak ganbila izatetik ahurra izatera edo
+alderantziz
+pasatzen duen, hots kurbadura-aldaketa dagoen puntuak, inflexio-puntuak deitzen
+dira.
+Teorema. Izan bedi f funtzioa a puntuan n aldiz deribagarria. Bere deribatuak
+jarraituak
+badira eta
+0
+)
+a
+(
+f
+,
+0
+)
+a
+(
+f
+...
+)
+a
+(
+'
+'
+f
+,
+balio
+edozein
+)
+a
+(
+'
+f
+)
+n
+)
+1
+n
+≠
+=
+=
+=
+−
+betetzen badu, orduan:
+i) 
+n bakoitia bada (n>1), a puntua inflexio-puntua da.
+ii)  n bikoitia bada eta f
+n)(a)>0, a puntuan kurbadura positiboa da.
+iii)  n bikoitia bada eta f
+n)(a)<0, a puntuan kurbatua negatiboa da .
+5. ERA ESPLIZITUAN EMANDAKO FUNTZIOEN ADIERAZPEN GRAFIKOA
+f(x) funtzioa emanda, bere grafikoa egiteko, ondoko pausoak jarraitu behar
+dira:
+1.  Existentzi eremua. Eten-puntuak.
+2.  Simetriak. f(x)=f(-x) bada, f bikoitia da eta orduan Y ardatzarekiko
+simetrikoa da.
+f(-x)=-f(x) bada, f bakoitia da eta (0,0) jatorriarekiko simetrikoa da.
+3.  Periodikotasuna.  f(x+T)=f(x)  
+)
+f
+(
+Dom
+x
+∈
+∀
+ , T>0 periodoa izanik.
+4.  Ardatzekiko  ebaki-puntuak.
+5.  Asintotak.
+Definizioa. r zuzena C kurbaren asintota dela esaten da baldin eta kurbako P
+puntuaren
+eta r zuzenaren arteko distantziak zerorantz jotzen badu P puntua 
+∞ -rantz doanean; hau
+da P-ren koordenaturen bat infiniturantz doanean.
+
+8
+Eman dezagun y=f(x) kurba:
+i) 
+Asintota horizontala.
+b
+)
+x
+(
+f
+lim
+x
+=
+∞
+±
+ bada,  y=b zuzena asintota horizontala da.
+ii) 
+Asintota bertikala.
+±∞
+=
+)
+x
+(
+f
+lim
+a
+x
+ bada, x=a zuzena asintota bertikala da.
+iii) 
+Asintota zeiharra
+±∞
+=
+∞
+±
+)
+x
+(
+f
+lim
+x
+ bada, kurbak asintota zeiharra izan dezake. Existitzen bada
+bere ekuazioa y= mx+b izango da, m,n
+∈R izanik. Balio hauek kalkulatzeko
+ondoko limiteen bidez egingo dugu:
+x
+)
+x
+(
+f
+lim
+m
+x
+∞
+=
+  eta 
+[
+]
+mx
+)
+x
+(
+f
+lim
+b
+x
+−
+=
+∞
+±
+Aurreko limiteren bat ez bada existitzen, kurbak ez du asintota zeiharrik.
+6.  Gorakortasuna eta beherakortasuna. Muturrak.
+7.   Kurbadura.  Inflexio-puntuak.
+8.  Balioen taula. Lortutako emaitzen laburpena.
+6. EKUAZIO LINEALETAKO EBAZPENA
+Matematikako aplikazioen artean, maiz f(x)=0 itxurako ekuazioen soluzioak
+lortzea agertzen dira. Kasu gehienetan ez dago formularik horiek ebazteko,
+adibidez f(x)
+5. mailako polinomioa bada edo f(x)=x-cos x  edo f(x)=x-tan x  itxurakoa bada.
+Jarraian zenbait metodo emango ditugu mota  honetako ekuazioen erroen balio
+hurbilak lortzeko. Metodo hauekin erroaren balio hurbilak lor daitezke, hau da
+x0,x1, x2,
+…, xn, ..segida, bere limitea c puntua izanik,  non f(c)=0 den.
+f funtzioa jarraitua bada,  Bolzano-ren teoremaren bidez zehaztu dezakegu [a,b]
+erroen tartea, hau da existitzen da c
+∈(a,b) non f(c)=0 den. Gainera f(x)  (a,b) tartean
+deribagarria bada eta  f´(x) (a,b) tartean ez bada zero egiten,  Rolle-ren
+teoremak
+ziurtatzen du c erroaren bakartasuna [a,b] tartean.
+
+9
+Beraz, ekuazioen erroen kalkulu hurbila ebazteko, 
+[ ]→
+b
+,
+a
+:
+f
+R jarraitua den
+funtzio batetik abiatzen da, f(a).f(b)<0 izanik, hau da, existitzen da 
+)
+b
+,
+a
+(
+c
+∈
+ non f(c)=0
+den eta c f-ren erro bakarra dela [a,b] tartean suposatuz.
+6.1 Bisekzio metodoa.
+Aurrean jarritako baldintzekin, metodo honek ondoko prozesua jarraitzen du:
+[a,b] tartearen erdigunean f-ren balioa kalkulatzen da,
+• 
+0
+2
+b
+a
+f
+=
+
+
+
+
+
+ +
+ bada, orduan 
+2
+b
+a
+c
++
+=
+• 
+0
+2
+b
+a
+f
+≠
+
+
+
+
+
+ +
+ bada, 
+
+
+
+ +
+
+
+
+
++
+b
+,
+2
+b
+a
+edo
+2
+b
+a
+,
+a
+  azpitarte bat aukeratzen dugu
+non  azpitartearen muturretan f-k aurkako zeinuko balioak hartzen duen.
+[a1,b1] izendatzen diogu eta bere luzera [a,b] tartearen erdia izango da, hots
+(b-a)/2.
+Gero [a1,b1] tartetik abiaturik prozesu berdina jarraitzen da eta horrela
+[a2,b2] tartea
+lortzen dugu. Prozesua errepikatuz, edo erro zuzena lortzen da edo tarte segida
+bat
+[ ] [
+] [
+]
+[
+] ...
+b
+,
+a
+...
+b
+,
+a
+b
+,
+a
+b
+,
+a
+n
+n
+2
+2
+1
+1
+⊃
+⊃
+⊃
+⊃
+⊃
+non tarte bakoitzean erroaren  hurbilketa bat dagoen.
+c puntuak zera betetzen du: 
+n
+n
+n
+n
+b
+lim
+a
+lim
+c
+∞
+∞
+=
+=
+ eta f(c)=0 eta  an c-ren
+hurbilketa bat da ondoko errorearekin:
+)
+a
+b
+(
+2
+1
+a
+c
+n
+n
+−
+<
+−
+Erroa lortzeko algoritmoa, prozesua errepikatzean datza c lortu arte edo errore
+finko bat baino luzera txikiagoa duen tarte bat lortu arte.
+6.2 Newton-Raphson-en  metodoa.
+Metodo hau erroen balio hurbilak lortzeko metodo ezagunenetariko bat da eta
+oso eraginkorra. Kurba puntu batean zuzen ukitzailearen bidez puntu horretan
+hurbiltzeaz  oinarritzen da.
+Teorema. Newton-en  metodoa aplikatzeko baldintzak.
+Izan bedi f funtzioa jarraitua eta [a,b] tartean bi aldiz deribagarria. Eman
+dezagun
+i)  f(a).f(b)<0
+
+10
+eta
+ii)  f ''(x)-ren zeinua [a,b] tartean konstantea
+betetzen dela,  
+∈
+0
+x
+[a,b] puntu bat baldin bada non 
+0
+)
+x
+(
+'
+'
+f
+)
+x
+(
+f
+0
+0
+> den, orduan
+)
+x
+(
+'
+f
+)
+x
+(
+f
+x
+x
+1
+n
+1
+n
+1
+n
+n
+−
+−
+− −
+=
+xn segida c punturantz konbergentea da eta f(c)=0 da.
+Esanahi  geometrikoa. Izan bedi Newton-en metodoan eskatutako baldintzak
+betetzen
+dituen f(x) funtzioa. [a,b] tarte osoan kurbadura berdina izango du eta erro
+bat.
+y=f(x) kurbarekiko zuzen ukitzailea
+x0=b puntuan egiten bada, zuzenak
+OX ardatza x1 puntuan  mozten du;
+orain x=x1 puntuan kurbarekiko
+ukitzailea egiten da, OX
+ardatzarekiko ebaki-puntua x2 izanik.
+Horrela jarraituz xn segida lortzen da,
+eta c errorantz  konbergentea da.
+Errorearen bornapenak.
+Teoremaren baldintzapetan, m eta M konstanteak existitzen badira  non
+)
+x
+(
+'
+f
+m
+≤
+ eta 
+[ ]b
+,
+a
+x
+M
+)
+x
+(
+'
+'
+f
+∈
+∀
+≤
+diren eta xn Newton-en bidez lortutako segidaren n-garren gaia bada, ondokoa
+betetzen
+da:
+a) 
+m
+)
+x
+(
+f
+c
+x
+n
+n
+≤
+−
+b) 
+2
+1
+n
+n
+n
+)
+x
+x
+(
+m
+2
+M
+c
+x
+−
+−
+≤
+−
+f(a)
+a
+b
+x1
+c
+f(b)
+x2
+
+11
+sin(x) funtzioaren hurbilketak Taylor-en maila
+desberdineko polinomioak erabiliz
+sin(x) = X - 
+3
+3
+x
+!
+ +  
+5
+5
+x
+!
+ - 
+7
+7
+x
+!
+ + 
+9
+9
+x
+!
+ + . . .
+              sin(x)  eta  X                                                 
+  sin(x)  eta   
+X- 
+3
+3
+x
+!
+sin(x)  eta  
+X- 
+3
+3
+x
+!
+ + 
+5
+5
+x
+!
+
+12
+sin(x)  eta   
+X- 
+3
+3
+x
+!
+ + 
+5
+5
+x
+!
+ - 
+7
+7
+x
+!
+sin(x)  eta   
+X- 
+3
+3
+x
+!
+ + 
+5
+5
+x
+!
+ - 
+7
+7
+x
+!
+ + 
+9
+9
+x
+!

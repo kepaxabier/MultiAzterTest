@@ -209,6 +209,16 @@ cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/en
 #menu:  1: Anadir label de clase a train y test dataset : output:dataset_aztertest_full/train_aztertest.csv y test_aztertest.csv
 python3 /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/en/aztertest_dataset.py
 }
+
+function obtenerdatosestadisticos()
+{
+  #entrada Ele-txt
+  dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/en" #/[Test|Train]/[Adv-Txt|Ele-Txt|Int-Txt]/*.txt "
+  less $dir/Test/Ele-Txt/results/full_results_aztertest.csv
+  less $dir/Train/Ele-Txt/results/full_results_aztertest.csv
+  #
+  
+}
 function wekarekinprobatu()
 {
 #Vete al menu 6 Weka y convierte  dataset_aztertest_full/train_aztertest.csv y test_aztertest.csv a arff-s
@@ -252,7 +262,7 @@ function fin()
 ### Main ###
 modelo=$1
 opcionmenuppal=0
-while test $opcionmenuppal -ne 8
+while test $opcionmenuppal -ne 0
 do
 	#Muestra el menu
        	echo -e "1 Obtener datos cohmetrix \n"
@@ -262,7 +272,7 @@ do
 	echo -e "5 Python: Realizar 10-Fold CV con feature selection y busqueda del mejor algoritmo y sus meta-parametros, finalmente guardar el mejor modelo y el mejor selector de características \n"
 	echo -e "6 Python cargar el mejor modelo y selector de características, para probar con el test final\n"
         echo -e "7 Obtener datos multiaztertest y mostrar predicción del modelo \n"
-        echo -e "8 Exit \n"
+        echo -e "0 Exit \n"
 	read -p "Elige una opcion:" opcionmenuppal
 	case $opcionmenuppal in
                        	1) obtenerdatoscohmetrix;;
@@ -272,7 +282,8 @@ do
 			5) generarmodelopython;;
 			6) testearmodelopython;;
 			7) weka;;
-			8) fin;;
+                        8) obtenerdatosestadisticos;;
+			0) fin;;
 			*) ;;
 
 	esac 

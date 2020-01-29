@@ -1,0 +1,373 @@
+
+
+
+Atala II
+Problema inhomogeneoak eta
+Green-en funtzioak
+5
+Problema inhomogeneoak eta Fredholm-en hautabi-
+dea
+Problema inhomogeneoak
+Ly = f ,
+Mugalde baldintzak
+Adibidea:
+y
+′′ = x ,
+y(0) = y(π) = 0 .
+Soluzioa: ekuazioaren soluzio orokorra:
+x3/6 + αx + β; mugalde baldintza 0 puntuan,
+β = 0; mugalde baldintza π puntuan, π3/6 + απ = 0, i.e. α = −π
+2/6.
+y(x) =
+x
+6
+x2 − π
+2
+.
+Soluzio bakarra.
+Bigarren adibidea: soluzio barik
+y
+′′ + y = x ,
+y(−π) = y(π) = 0 .
+Ekuazioaren soluzio orokorra:
+y(x) = x + α sin x + β cos x.
+Mugalde baldintzak:
+−π − β = 0 ,
+π − β = 0 .
+Ez dago soluziorik.
+Hirugarren adibidea: inﬁnitu soluzio
+y
+′′ + y = x2 ,
+y(−π) = y(π) = 0 .
+Ekuazioaren soluzio orokorra:
+y(x) = x2 − 2 + α sin x + β cos x.
+Mugalde baldintzak:
+π2 − 2 − β = 0 ,
+π2 − 2 − β = 0 .
+Problemaren soluzioak:
+y(x) = x2 − 2 + α sin x + (π
+2 − 2) cos x .
+20
+
+Fredholm-en hautabidea
+Biz
+L SL eragile simetrikoa (MBk barne), eta {yn}
+∞
+n
+=1 bere oinarri propioa, λn
+balio propioekin. Garatu oinarri honetan
+Ly = f problema inhomogeneoan agertzen
+diren funtzio guztiak, eta kalkulatu:
+∞
+n
+=1
+λncnyn =
+∞
+n
+=1
+fnyn ⇒ cn =
+fn
+λn
+0 balio propioa ez bada. Beraz, soluzioa existitzen da eta bakarra da.
+0 balio propioa bada, dagokion funtzio propioa
+y0
+• f funtzioaren osagaia azpiespazio propio horretan 
+( y0, f ρ) ezberdin 0 bada, ez
+dago soluziorik.
+• f funtzioaren osagaia nulua bada, ∞ soluzio.
+6
+Green-en funtzioa
+Green-en funtzioa
+Ly = f problemaren soluzioaren bila gabiltz 
+(L SL eragile simetrikoa, ρ haztape-
+narekin) ondoko forman:
+y(x) =
+b
+a
+dξ G(x, ξ)f (ξ) .
+Hau gertatuko litzateke baldin eta
+LxG(x, ξ) = δ(x − ξ)
+bada (ordezkapen zuzena).
+Green-en funtzioak: kalkulua I
+Erabil ditzagun
+L-ren funtzio propioak
+y(x) →
+αnyn(x) ,
+f (ξ) →
+fnyn(ξ) .
+Formalki, jakin badakigu (
+L SL eragile simetrikoa, ρ haztapenarekin)
+y(x) =
+n
+1
+λn
+yn, f ρyn(x) =
+b
+a
+dξ
+n
+1
+λn
+yn(x)yn(ξ)ρ(ξ)f (ξ) .
+Beraz,
+G(x, ξ) =
+n
+1
+λn
+yn(x)ρ(ξ)yn(ξ) .
+21
+
+Green-en funtzioak: kalkulua II
+Zuzenean
+LG = δ(x − ξ) adierazpenatik. L bigarren ordenakoa.
+δ ⇒ Jauzia: x = ξ puntuan (tartean dago) jauzia lehenengo deribatuan.
+Bitez
+y1 eta y2 soluzioak, linealki independenteak; ekuazioarenak (tarte osoan!).
+Idatz ditzagun ondoko bi gainezarmenak,
+y>(x, ξ) eta y<(x, ξ), non ξ parametroa
+den:
+y<(x, ξ) = A(ξ)y1(x) + B(ξ)y2(x) , y>(x, ξ) = C(ξ)y1(x) + D(ξ)y2(x) ,
+eta
+A, B, C eta D koeﬁzienteak (funtzioak, ξ-ren funtzioak) ﬁnkatu ondokoarekin:
+1.
+G(x, ξ) = θ(ξ − x)y<(x, ξ) + θ(x − ξ)y>(x, ξ) jarraitua ∀x tartean.
+2.
+G funtzioak mugalde baldintzak betetzen ditu;
+3.
+LG = δ(x − ξ).
+Green-en funtzioak: kalkulua II
+lim
+ǫ→
+0
+ξ
++ǫ
+ξ−ǫ
+dx LxG(x, ξ) = lim
+ǫ→
+0
+ξ
++ǫ
+ξ−ǫ
+dx δ(x − ξ) = 1 .
+Beste aldetik,
+ξ
++ǫ
+ξ−ǫ
+dx LxG(x, ξ) =
+ξ
++ǫ
+ξ−ǫ
+dx a0∂
+2
+xG + a1∂xG + a2G
+=
+ξ
++ǫ
+ξ−ǫ
+dx {∂x [a0(x)∂xG(x, ξ)
++ (a1(x) − a
+′
+0(x)) G(x, ξ)]
++ (a2(x) − a
+′
+1(x) + a
+′′
+0 (x)) G(x, ξ)} .
+Green-en funtzioak: kalkulua II
+Ondorioz:
+a0(ξ) [∂xG(x, ξ)]
+x
+=ξ+ − [∂xG(x, ξ)]x=ξ−
+= 1
+or
+a0(ξ) [∂xy>(x, ξ) − ∂xy<(x, ξ)]x=ξ = 1 .
+Dena dela,
+A, B, C eta D koeﬁzienteek lau ekuazio lineal aljebraiko bete behar dituz-
+te.
+22
+
+Green-en funtzioak: kalkulua II
+y
+′
+1(ξ)A + y
+′
+2(ξ)B − y
+′
+1(ξ)C − y
+′
+2(ξ)D
+=
+−1
+a0(ξ)
+y1(ξ)A + y2(ξ)B − y1(ξ)C − y2(ξ)D = 0
+eta mugalde baldintzak.
+Lau ekuazio lineal hauek osatutatko sistema inhomogeneoak soluzio bakarra iza-
+teko, dagokion determinantea ezberdin zero izan behar da. Hain zuzen ere, hori da
+0
+balio propioa ez izateko baldintza!.
+Adibidea: Green-en funtzioaren kalkulua
+Ly = y
+′′ ,
+y(0) = y(π) = 0 .
+y1(x) = 1, y2(x) = x
+0 · A + 1 · B − 0 · C − 1 · D = −1
+1 · A + ξ · B − 1 · C − ξ · D = 0
+1 · A + 0 · B
+= 0
+1 · C + π · D = 0
+Adibidea jarr.
+Determinantea:
+0
+1
+0
+−1
+1
+ξ
+−1 −ξ
+1
+0
+0
+0
+0
+0
+1
+π
+= −π
+. Soluzio bakarra:
+A = 0, B = (ξ − π)/π, C = −ξ, D = ξ/π
+G(x, ξ) =
+(ξ−π)x
+π
+0 ≤ x ≤ ξ
+(x−π)ξ
+π
+ξ ≤ x ≤ π
+Adibidea jarr.
+Beste adierazpen bat:
+G(x, ξ) = θ(ξ − x)
+(ξ − π)x
+π
++ θ(x − ξ)
+(x − π)ξ
+π
+.
+(Erabilgarria egiaztatzeko,
+θ
+′ (ξ − x) = −δ(x − ξ) erabiliz.)
+23
+
+y
+′′ = x, y(0) = y(π) = 0 baldintzekin:
+y(x) =
+π
+0
+dξ G(x, ξ)ξ
+=
+x
+0
+dξ
+(x − π)ξ
+π
+ξ +
+π
+x
+dξ
+(ξ − π)x
+π
+ξ
+=
+1
+6
+x x2 − π
+2
+Adibidea, orokortuz
+y
+′′ + λ2y = x ,
+y(0) = y(π) = 0 .
+(λ = 0)
+y1(x) = sin λx ,
+y2(x) = cos λx .
+Mugalde baldintzak:
+B = 0 ,
+C sin λπ + D cos λπ = 0 .
+Jarraitasuna eta jauzia
+A sin λξ − C sin λξ − D cos λξ = 0 .
+λ [C cos λξ − D sin λξ − A cos λξ] = 1 .
+Determinantea
+λ sin λπ: soluzio bakarra, baldin eta λ = 1, 2 . . . bada.
+Adibidea, orokortuz
+G(x, ξ) =
+−1
+λ sin λπ
+[θ(ξ − x) sin λx sin λ(π − ξ)+
+θ(x − ξ) sin λξ sin λ(π − x)] .
+π
+0
+dξ G(x, ξ)ξ =
+x
+λ2
+−
+π sin λx
+λ2 sin λπ
+.
+Green-en funtzio orokortuak and funtzio propioak
+Biz
+Gλ L − λ alderantzizkoa. Hau da
+• Gλ funtzioak λ aldagaiarekiko menpekotasuna du, eta horri dagokionez, λn sin-
+gularitateak (poloak)
+L eragilearen balio propioak dira.
+• limλ→λ
+n (λ
+n
+− λ)Gλ = A(ξ)yn(x), non yn funtzio propioa den
+• ρ(ξ) ∼ A(ξ)/yn(ξ)
+24
+
+Adibidea
+Ly = −y
+′′ , y(0) = y(π) = 0 ;
+(L − λ)G(x, ξ; λ) = δ(x − ξ)
+Ekuazio diferentzialaren soluzio partikularra:
+− sin
+√
+λ(x − ξ) θ(x − ξ)/
+√
+λ.
+G(x, ξ; λ) = −
+sin
+√
+λ(x − ξ)
+√
+λ
+θ(x − ξ) +
+sin
+√
+λx sin
+√
+λ(π − ξ)
+√
+λ sin
+√
+λπ
+.
+Adibidea jarr.
+Singularitateak: Itxurazko singularitatea
+λ = 0
+lim
+λ→
+0
+G(x, ξ; λ) = −(x − ξ)θ(x − ξ) +
+x(π − ξ)
+π
+.
+Benetakoak:
+λ → λn = n
+2 zenbaki naturala
+lim
+λ−>λ
+n
+(λn − λ)G(x, ξ; λ) =
+2
+π
+sin(nx) sin(nξ) .
+25

@@ -1,0 +1,415 @@
+
+
+
+
+                              P1.IRRATIZUNDAKETAK
+
+
+Irratizundaketa atmosferaren neurketa bertikalaren prozesu bat da, eta
+atmosferaren egoera termodinamikoa ezagutzeko erabiltzen da. Prozesu horretan,
+aske eta ia abiadura konstantean igotzen diren globoak jaurtitzen dira, zeinek
+zunda bat eramaten duten zenbait neurgailurekin: barometro bat presioa
+neurtzeko, termometro bat tenperatura neurtzeko, higrometro bat hezetasuna
+neurtzeko eta GPS bat haizearen abiadura kalkulatzeko globoaren kokapena
+ezagututa (estazio polarretan ozono neurgailuak ere eramaten dute). Tresna
+horiek datuak irratiren bidez bidaltzen dituzte neurketa-estaziora, non
+ordenagailu batean biltzen diren. Ia presiorik ez dagoen altitudera iristean
+(normalean estratosferan), globoak eztanda egiten du eta zunda jausten da.
+Horregatik identifikadore bat eramaten dute zundak berreskuratu ahal izateko.
+
+Zundaketa-estazio bakoitzean egunean gutxienez bi globo jaurtitzen dira, bat
+UTC 00an eta beste bat UTC 12etan (UTC = ordu unibertsala, Greenwich-eko
+eguzki-denbora ia baliokidea eta batzuetan Z batez adierazten da,zulu ordua
+terminoagatik). Zundaketa-estazio guztiek atmosferaren behaketarako mundu-sare
+bat osatzen dute, une beran planeta osorako atmosferaren deskribapen bat
+izanik. Horrelaxe, bildutako datuak estazio guztien artean partekatzen dira
+Interneten bidez. Herrialde bakoitzeko meteorologia-zerbitzu publikoek datu
+horiek eguraldiaren iragarpenak egiteko erabiltzen dituzte (adibidez,
+hegazkintzarako).
+                   [1630_945_p1_zuzenduta_html_4789d160.png]
+
+P1.1 irudia. Irratizundaketa baten irudikapena SKEW-T motako diagrama batean
+(Iturria: begiratu testua).
+
+Zundaketen bidez lortutako datuak diagrama berezietan irudikatzen dira,
+emagramak deritzenak, SKEW-T motakoa erabiliena izanik. Diagrama horiek
+atmosferaren prozesu eta ezaugarriak zenbatespen erdikuantitatiboak egiteko
+erabil daitezke. Irudian (P1.1) adibide bat ageri da (irudia hemendik lor
+daiteke: http://weather.uwyo.edu > Upper Air Observations > Soundings > Type of
+Plot  GIF: Skew-T, eta bertan estazioa aukeratuz).
+
+Diagrama horietan, P1.1 irudikoan bezala, hainbat argibide aurkitzen dugu:
+
+- Lerro horizontal urdinak: grafikoaren isobarak (presio konstanteko lerroak).
+Ardatz bertikalean presio atmosferikoaren balioak daude (eskala logaritmikoa),
+hPa-etan adierazita, eta batzuen ondoan, zundak presioaren balio horiek neurtu
+dituen altitudea (metrotan) adierazi da.
+
+-Lerro (zuzen) urdinak eskuinerantz makurtuta: grafikoaren isotermak
+(tenperatura konstanteko lerroak). Edozein puntuko tenperatura ezagutzeko,
+lerro hauen paraleloan jaitsi behar da ardatz horizontaleraino, bertan baitaude
+tenperaturaren balioak (gradu zentigradutan).
+
+-Eskuinaldeko lerro beltza: globoko sentsoreak neurtu duten altitudearen
+araberako giro-tenperatura (ºC). Altitude edo maila jakin bateko tenperaturaren
+balioa lerro isotermak jarraituz lortzen da. Esate baterako, goiko
+irratizundaketan, 600 hPa-eko mailan, giro-tenperatura -8ºC ingurukoa da.
+
+-Ezkerraldeko lerro beltza: zundak neurtu duen altitudearen araberako ihintz-
+tenperatura (ºC), hots, maila bakoitzeko airearen ur-lurruna kondentsatzeko
+behar den giro-tenperatura. Ihintz-tenperatura eta giro-tenperatura berdinak
+badira, ur-lurruna kondentsatu egin da eta eskualde hori hodeitsu dago, % 100
+hezetasunarekin. Ihintz-tenperatura, noski, ezin da giro-tenperatura baino
+handiagoa izan inoiz.
+
+-Lerro moreak:altitudearen araberako ihintz-tenperatura, ur-lurrun edukia
+konstantea izanik lerroan zehar. Ur-lurrun edukia g/kg-tan adierazita dago:
+zenbat gramo ur dagoen kilogramo bat aire lehorreko. Altitude bateko hezetasun
+absolutuaren balioa g/kg-tan aurkitzeko (nahaste-erlazio edo mixing ratio),
+ihintz-tenperaturaren baliotik lerro moreen paraleloan jaitsi behar da, eta ur-
+lurrun edukiaren eskalatik (zenbaki moreak, eskala logaritmikoa ere bai)
+hezetasuna kalkulatu.
+
+-Lerro (kurba) berdeekairearen prozesu termodinamiko adiabatiko1 lehorrak
+irudikatzen dituzte. Aire-burbuila bat atmosferan igo edo jaitsi egiten bada,
+hoztu edo berotuko da haren bolumena hedatu edo konprimitzean. Lerro hauek
+deskribatzen dute aire-burbuilaren tenperatura nola aldatuko den prozesu
+horretan, baldin eta haren barneko ur-lurruna kondentsatzen ez bada.
+
+-Lerro (kurba) urdinak ezkerralderantz makurtuta: airearen prozesu
+termodinamiko adiabatiko hezeak irudikatzen dituzte. Aurreko prozesu bera da
+baina aireko ur-lurrunaren kondentsazioa gertatu denean. Kasu honetan ur-
+lurrunaren kondentsazioak burbuilari lurruntze-bero sorra itzuli eta berotzen
+du, airearen hoztea aurreko kasuan baino txikiagoa izanez.
+
+                   [1630_945_p1_zuzenduta_html_1adedcb2.gif]
+Haizearen modulua.
+Marratxo bakoitzak
+10 korapilo = 1 milia/ordu balio du
+Marratxo erdi batek 5 korapilo balio du
+
+Lerro honek haizea nondik datorren adierazten du, kasu honetan Ekialdetik (E)
+
+haizea = 30E
+     P1.2 irudia. Irratizundaketetan haizeko ikurren erabileraren eskema.
+
+-Grafikoaren eskuinaldeko irudiak: altitudearen araberako haizearen modulua
+(abiadura), norabidea eta noranzkoa adierazten duten bektoreak dira. Lerro
+luzeak norabidea adierazten du eta haizea marra txiki perpendikularrak dauden
+aldetik dator, haize-arrosaren norabideen arabera (P1.2 irudia). Marra txikiek
+berek abiadura adierazten dute, marratxo oso bakoitzak 10 korapiloko balioa
+izanik eta erdi-marratxoak 5 korapilokoa (1 korapilo = 1 knot (kt) = 1 milia/
+h = 1,85 km/h = 0,51 m/s).
+
+- Eskuinaldeko zenbakiak eta letrak: metodo desberdinen bidez kalkulatutako
+atmosfera-zutabe horren ezegonkortasun osoa adierazten dute
+
+Diagrama hauetatik atmosferari eta bere egoerari buruz hainbat ondorio eta datu
+gehiago ere atera dezakegu. Bereziki azpimarragarriak hauek dira:
+
+- Lehenik, haien artean 12 orduko diferentzia duten bi irratizundaketa
+alderatzean, atmosfera-zutabearen egoera ia ez da aldatzen. Egoera horri oreka
+geostrofikoa esaten zaio.
+
+- Irratizundaketetan ikus daiteke batzuetan aire-zutabean haizeek norabide
+desberdinak dituztela. Horrek adierazten digu atmosfera geruzatuta dagoela,
+nahaste bertikalik ez dagoela. Hala ere, ezegonkortasun-maila handia dagoenean,
+halako nahaste bertikala gertatuko da.
+
+- Bestalde, giro-tenperaturari erreparatzen badiogu, altitudearekiko jaitsi
+egiten dela ikus daiteke, estratosferako inbertsioan izan ezik, 200 hPa-eko
+inguruan, estratosferako ozono-geruzaren hasierako puntuan hain zuzen ere.
+
+Tenperatura altitudearekin jaitsi egin beharrean igo egiten denean,
+tenperatura-inbertsio bat daukagula esango dugu. Era berean, troposfera barnean
+tenperatura-inbertsioren bat aurkituz gero, horrek antizikloi bat dagoela
+adieraziko digu. Inbertsioa oso behean badago, subsidentzia2-antizikloi baxua
+izango da. Kutsadurari dagokionez, egoera hori kaltegarria da, nahaste
+bertikala ez baita egongo eta kutsatzaileak behealdean metatuko dira (P1.3
+irudia).
+
+                   [1630_945_p1_zuzenduta_html_m6b5beee.gif]
+estratosferako inbertsioa
+
+inbertsioa troposferan, antizikloi bat dagoela adierazten duena
+  P1.3 irudia.Antizikloi baten ondoriozko tenperatura-inbertsioaren adibidea.
+IRRATIZUNDAKETENERABILERA PRAKTIKOAK (I)
+
+Airearenhezetasuna altitude edo maila batean
+
+- Hezetasun_absolutua aurkitzeko ihintz-tenperatura erabiliko da. Altitude
+horretan duen baliotik lerro moreekiko zuzen paralelo baten zehar jaitsi eta
+ur-lurrun kopuruaren eskalaren bidez kalkulatuko da. Aurkeztutako lehenengo
+zundaketaren adibidean, 600 hPa-ean  1g/kg.
+
+- Hezetasun_erlatiboa: aireak duen ur-lurrunaren kantitatea eta presio eta
+tenperatura berean ase egonez gero izango lukeenaren arteko zatidura,
+ehunekotan adierazia. Honela kalkulatuko da:
+
+Hezetasun erlatiboa = (hezetasun absolutua / asetasun-hezetasuna)  100.
+
+Asetasun-hezetasuna giro-tenperaturaren datua erabiliz kalkulatuko da, altitude
+horretan duen baliotik lerro moreen paraleloan ere jaitsiz. Adibidez, P1.3
+irudiko diagraman, asetasun-hezetasuna (600 hPa)  3,5 g/kg. Hortaz, hezetasun
+erlatiboa (600 hPa)  (1g/kg / 3,5g/kg)  100 = % 29.
+
+Konbekzioa abiarazteko tenperatura
+
+Egunean zehar eguzki-erradiazioak Lurraren azala berotzen du, eta berotze
+horrek azalarekin kontaktuan dagoen airearen tenperatura igoarazten du. Prozesu
+horretan aire-burbuilek dentsitatea galtzen dute eta igotzen hasten dira.
+Beraz, konbekzioa abiarazteko tenperatura da azaletik gertu dagoen aire-
+burbuila batek aske igotzeko behar duen gutxieneko tenperatura. Airea igo
+ahala, bere barneko ur-lurruna kondentsa daiteke, hodeiak sortuz.
+
+                   [1630_945_p1_zuzenduta_html_26473ae1.gif]
+P1.4 irudia. Konbekzioa abiarazteko tenperatura kalkulatzeko eskema. Ihintz-
+tenperaturaren neurketaren maila baxuenetik igotzen da (L1) ur-lurrun eduki
+konstanteko lerro batetik (lerro moreak), giro-tenperaturaraino iritsi arte.
+Puntu horretatik prozesu adiabatiko lehor batetik (lerro berdeak) zundaketaren
+maila baxuraino jaisten da (L2).
+
+Tenperatura hori kalkulatzeko metodoa hurrengoa da (P1.4 irudia): azaleko
+airearen ihintz-tenperaturatik, lerro morearekiko paraleloan igo behar dugu
+giro-tenperaturako lerroa ebaki arte; gero, puntu horretatik lerro adiabatiko
+lehorrarekiko paraleloan jaitsiko gara berriro azaleraino. Azaleko puntu horren
+tenperatura izango da konbekzioa abiarazteko gutxieneko tenperatura. Adibidea:
+hurrengo irratizundaketako konbekzioa abiarazteko tenperatura da T = 30ºC.
+
+Aszendentziazko kondentsazio-maila
+
+Haizeak mendi-hesi batekin topo egiten duenean, aire-burbuilak hesi horretatik
+igo egingo dira (konbekzio behartua edo bortxatua) eta, gora egiten direnean
+hozten direnez, beren barneko ur-lurruna kondentsa daiteke. Hortaz, guri
+interesatzen zaigu burbuilako ur-lurruna zer mailatan kondentsatuko den.
+
+Maila hori kalkulatzeko metodoa hurrengoa da (P1.5 irudia): azaleko aire-
+burbuilaren tenperatura aldatuko da lerro adiabatiko lehor bat jarraituz;
+bestetik, burbuila horren beraren ihintz-tenperatura aldatuko da hezetasun
+eduki konstanteko lerro bat jarraituz. Bien arteko ebaki-puntuaren altitudea
+aszendentziazko kondentsazio maila da. Adibidea: hurrengo zundaketan, Lurraren
+azaletik gora egitera behartua izan den aire-burbuila bat kondentsatuko den
+altitudea h = 1450 m.
+
+                   [1630_945_p1_zuzenduta_html_70751057.gif]
+                                             aszendentziazko kondentsazio-maila
+ [1630_945_p1_zuzenduta_html_3284a47.gif]
+P1.5 irudia. Aszendentziazko kondentsazio-maila aurkitzeko eskema. Neurketaren
+maila baxuenetik, aldi berean ur-lurrun eduki konstanteko lerro batetik (lerro
+moreak) eta prozesu adiabatiko lehorreko lerro batetik (lerro berdeak) igotzen
+da, L1 eta L2, hurrenez hurren, biek elkar ebaki arte. Ebaki-puntua
+aszendentziazko kondentsazio maila da.
+
+IRRATIZUNDAKETEN ERABILERA PRAKTIKOAK (II)
+
+Atmosferaren ezegonkortasuna
+
+Emagramen bidez atmosferaren egonkortasun edo ezegonkortasun bertikalari
+buruzko informazioa ere lor dezakegu. Ezaugarri hori oso garrantzitsua da,
+euria egiteko arriskua adierazten duelako: atmosferaren egoera ezegonkorra
+bada, airearen igoera askeko prozesuak gertatu eta, beraz, hodeiak eta euria
+sor daitezke.
+
+Atmosfera beti egoera turbulentuan dago, hau da, aire-burbuilen ezaugarri
+mekaniko edota termodinamikoak beti fluktuatzen ari dira. Hortaz,
+turbulentziagatik aire-burbuila bat gorantz mugitu bada, burbuila hedatuko da
+presioaren jaitsieraren ondorioz. Espantzio horretan, burbuilako aireak bere
+inguruko airearen aurka lana egiten du. Airea bero-isolatzailea denez,
+burbuilak ez du energia-trukaketarik bere ingurunearekin, eta lan hori egiteko
+bere barne-energia erabiliko du eta hoztu egingo da. Hots, hedapen-prozesua
+adiabatikoa izango da, hasiera batean ur-lurruna likido bihurtu gabe. Aire-
+burbuila jaitsi egin bada, ordea, konprimitu eta berotuko da.
+
+Aireak gora egiten duenean bere barneko ur-lurruna kondentsatu bada, aldiz, ez
+da hoztuko era berdinean, kondentsazio horrek lurruntze-bero sorraren askapena
+baitakar. Airea jaitsi egiten denean ere ura lurrundu edo kondentsatu bada, ez
+da berotuko era berdinean, energia xurgatu edo askatu behar baita.
+
+Horregatik, prozesu adiabatiko lehorretarako lerro batzuk daude eta beste
+batzuk hezeetarako. Lerro adiabatiko hezea lerro adiabatiko lehorra baino
+astiroago berotu edo hoztuko da. Lerro horiei esker, airea igo edo jaitsi
+egiten denean, haren tenperatura-aldaketa jakin dezakegu.
+
+Prozesu horiek aztertzen baditugu, hiru egoera ezberdin aurki ditzakegu:
+
+-Atmosfera ezegonkorra: aire-burbuila bat igotzen denean, haren altitude
+araberako tenperatura-aldaketak transformazio adiabatiko lehor eta hezeetako
+lerroek adierazten dituzte. Inguruko giro-tenperatura aire-burbuilarena baino
+txikiagoa den maila batera iritsi bada, inguruneko airearen dentsitatea
+handiagoa izango da eta burbuilak inguru horretan flotatzeko joera izango du.
+Beraz, igotzen jarraituko du, giro-tenperatura eta burbuilarena berdinak izan
+arte. Egoera horri ezegonkorra esaten zaio, turbulentziak sortutako
+desplazamendu bertikaleko efektupean aire-burbuilek aske igotzeko joera izango
+dutelako. Ezegonkortasuna aurkitzen dugunean, aire-zutabean nahaste bertikala
+eta euri-arrisku handia daude. Dena den, ezegonkortasuna nahiko arraroa da,
+atmosfera oro har egonkorra baita eta haren geruzak ez dira nahasten. Aurkako
+arrazoibidea erabiltzen da turbulentziagatik jaitsi egiten diren burbuilen
+kasuan.
+
+Egoera hau irudikadezakegu burbuila kaiku baten gainean jarrita balego bezala,
+halako moldez non, bere posizioa Z ardatzean aldatzen bada, desplazamendu hori
+zabaldu eta itzulezina izango den (P1.6 irudia).
+
+                   [1630_945_p1_zuzenduta_html_787692a1.gif]
+             P1.6 irudia. Egoera ezegonkorrerako irudi mekanikoa.
+
+-Atmosfera egonkorra: turbulentziaren ondorioz aire-burbuila bat tenperatura
+handiagoko maila bateraino igo bada, haren dentsitatea ingurukoa baino
+handiagoa izango da eta, hortaz, burbuila berriz jaitsi egingo da bere
+hasierako posiziorantz. Horregatik Troposfera ez da nahasten Estratosferarekin,
+troposferako burbuilen tenperatura estratosferarena baino txikiagoa izango
+bailitzateke, eta flotagarritasun negatiboak jaitsaraziko lituzke.
+Estratosferako burbuilak jaitsi egingo balira, kontrako efektua gertatuko
+litzateke. Egoera horietako irudi mekanikoa P1.7 irudian ageri da: aire-
+burbuila kaiku baten hondoan balego bezala, non edozein desplazamenduk alde
+batera edo bestera oszilarazten du hasierako posizio beran gelditu arte.
+
+                   [1630_945_p1_zuzenduta_html_m361081d.gif]
+              P1.7 irudia. Egoera egonkorrerako irudi mekanikoa.
+
+-Atmosfera neutroa: aire-burbuila bat igo edo jaitsi egin bada maila batera,
+non hari dagokion prozesuagatik iritsi den tenperatura eta ingurukoa berdinak
+baitira, maila horretan geratuko da (P1.8 irudia).
+
+                   [1630_945_p1_zuzenduta_html_ce4038d.gif]
+                P1.8 irudia. Egoera neutrorako irudi mekanikoa.
+
+Adibide praktikoa
+
+Adibide praktiko gisa, egonkortasuna aztertuko dugu Santanderren 2009ko
+urriaren 14ean 00Z-an egindako zundaketan (P1.9 irudia).
+
+                   [1630_945_p1_zuzenduta_html_m24e478f.gif]
+aszendentziazko kondentsazio-maila
+
+                                                       konbekzioa abiarazteko T
+
+                                                      igoera adiabatiko lehorra
+
+igoera adiabatiko hezea
+                                 P1.9 irudia.
+
+Hori baino lehen, egun horretako atmosferarenbeste ezaugarri batzuk berrikusiko
+ditugu:
+
+- Troposfera 13000 m-raino iristen da, non tropopausaren tenperatura-inbertsioa
+baitago. 1000-1200 m bitartean (900 mb) tenperaturaren beste inbertsio bat
+dago, subsidentzia-antizikloi baten seinale.
+
+- Haizea 450 mb-ean ipar-mendebaldekoa (NW) da eta 10 korapilokoa baina, oro
+har, zundaketa honetan airea ekialdetik dator (SE-ko, E-ko eta NE-ko haizeak).
+
+- 500 mb-ean hezetasun erlatiboa 0,3/4 da, hots, % 7,5 ingurukoa. Atmosferaren
+goialdeko airea lehorra da eta 900 mb-eko tenperatura-inbertsiotik behera,
+aldiz, hezeagoa: 4 g/kg inguruko ur-lurrun edukia du, eta 4/10, hau da, % 40
+inguruko hezetasun erlatiboa. Beraz, ondo berezitutako bi geruza ikus daitezke.
+
+- Ez dago hodeirik atmosfera-zutabean, ihintz-tenperaturak ez baitu inon bat
+egiten giro-tenperaturarekin. Beraz zerua oskarbi egongo da eta, horren
+ondorioz, tokia eta urtaroa direla eta, eguerdian tenperaturaren igoerak eta
+gau freskoak.
+
+- Konbekzioa abiarazteko tenperatura lortzeko, ihintz-tenperaturaren lehenengo
+neurketatik (irratizundaketak neurtutako lehenengo aire-burbuila), ur-lurrun
+eduki konstanteko lerrotik (lerro moreekiko paraleloa den lerro batetik) igo
+behar da, zundaketak neurtutako giro-tenperaturako lerroa ebaki arte. Ebaki-
+puntutik (kasu honetan, 650 mb-ean dago) transformazio adiabatiko lehor batetik
+jaitsiko gara (lerro berdeekiko paraleloan) zundaketaren mailarik baxueneraino,
+eta bertan dagokion tenperatura begiratuko dugu. Gure kasuan, 40ºC ingurukoa da
+(P1.9 irudian deskribatutako prozesu osoa lerro gorriz irudikatu da). Beraz,
+eskualde horretako azaleko giro-tenperatura 40ºC-raino igoko balitz, azaletik
+gertu dauden aire-burbuilak 650 mb inguruko mailaraino aske igo eta
+kondentsatuko lirateke, hodeiak sortuz. Zundaketa egindako lekua eta urtaroa
+direla, egunean zehar tenperatura horretaraino iristeko aukera oso txikia
+izango litzateke.
+
+- Aire-burbuila bat, haizeak bultzatuta, mendi hurbil bat igotzera behartua
+izango balitz, zundaketaren lehenengo neurketa erabiliko dugu aszendentziazko
+kondentsazio-maila kalkulatzeko. Neurketa horretatik igoko gara hezetasun
+edukia mantenduz (ihintz-tenperaturatik lerro moreekiko paraleloan) eta, aldi
+berean, burbuila hoztuz transformazio adiabatiko lehor baten bidez (giro-
+tenperaturatik lerro berdeekiko paraleloan). Aszendentziazko kondentsazio-maila
+900 mb-ean edo 1000 mb-etik gertu dago, aire-burbuilaren ur-lurruna bertan
+kondentsatuko bailitzateke, lerro gorria eta berdea elkartzen diren altitudean.
+
+Egonkortasuna/ezegonkortasuna_550_mb-ean
+
+Mailahonetako egonkortasun/ezegonkortasun mota ezagutzeko, diagraman altitude
+horretan kokatzen gara eta bi lerro marrazten ditugu gorantz (gure kasuan
+urdina eta lila), transformazio adiabatiko lehorretako lerro berdeekiko eta
+transformazio adiabatiko aseetako (edo hezeetako) lerro urdinekiko paraleloak
+direnak. Bi lerro horiek irudikatzen dute 550 mb-eko mailatik turbulentziak
+mugitutako airearen tenperatura-aldaketa.
+
+Bi lerro horien bidez mugitutako aire-burbuilak hartzen duen tenperatura eta
+iristen den inguruko airearena (giro-tenperatura, eskuinaldeko lerro beltza)
+aldera ditzakegu. Adibide honetan, transformazio adiabatiko lehorrek beti
+utziko dute burbuila girokoa baino txikiagoa den tenperaturarekin. Horren
+ondorioz, burbuila igotzen denean ingurua baino hotzagoa da eta, hortaz,
+dentsitate handiagokoa. Beraz, prozesu mota horietarako egoera egonkorra dela
+esan dezakegu.Burbuila ase ez dagoenez(zundaketa osoan hodeirik ez dago), hau
+izango da burbuilak naturalki jarraitutako prozesua. Horrexegatik maila
+honetanegonkortasun absolutuadagoela esango dugu.
+
+Lerro urdinekiko (transformazio adiabatiko aseko edo hezeko prozesuak)
+paraleloa den lerroak adierazten du, berriz, aire-burbuila ase balego, igotzean
+iritsiko litzatekeen tenperatura inguruko airearena baino beroagoa izango
+litzatekeela. Hortaz, dentsitate txikiago izango luke, eta igotzen jarraituko
+luke. Kasu horretan ezegonkortasuna dago, bainabaldintzazko
+ezegonkortasunaesaten zaion motakoa (baldin eta burbuila prozesu baten bidez
+ase bada). P1.9 irudian zundaketako maila bateko egonkortasuna aztertzeko
+prozesua laburbildu da.
+
+                  [1630_945_p1_zuzenduta_html_m181b1668.gif]
+                               Erabat Egonkorra
+
+                              Erabat Ezegonkorra
+
+                           Baldintzazko Ezegonkorra
+
+–––igoera adiabatiko lehorra
+–––igoera adiabatiko asea
+––– giro-tenperatura
+  P1.9 irudia. ZundaketakoZ0mailaren egonkortasun- edo ezegonkortasun-egoera
+                               aztertzeko eskema
+
+Mailabateko aireak egonkortasun absolutua badauka, eta baldintzazko
+ezegonkortasunik ez badago, maila horretanerabateko egonkortasunadagoela esango
+dugu. Kontrako kasua, hots, ezegonkortasun absolutukoa, aldi berean
+baldintzazko ezegonkortasuna ere dauka eta, beraz,erabateko ezegonkortasuna.
+
+Burbuila bere jatorrizko mailan ase dagoenean, ezegonkortasuna ezin da
+baldintzazkoa izan, eta ezegonkortasun absoluturik dagoen aztertzen da prozesu
+adiabatiko aseak erabiliz.
+
+Azkenik, aztertzen ari garen kasuan, zundaketako tokian atmosferan gerta
+daitezkeen ezegonkortasun bertikaleko prozesuei dagokienez, lau eskualde
+desberdin daudela azpimarratu behar dugu.
+
+Lehenengoa tenperatura-inbertsio azpian (900 mb azpian) dagoen atmosfera-
+geruzari dagokion tartea da. Eskualde horretan atmosferak baldintzazko
+ezegonkortasuna dauka baina, ezegonkortasuna gertatuz gero, 900 mb-eraino
+mugatuta egongo da. Inbertsioagatik, aire-burbuilen igoera askeko prozesuak
+bertan geldituko dira. Beraz, ezegonkortasuna ez litzateke oso sakona izango,
+ezta hodei oso lodiak sortzeko gai ere.
+
+Bigarren tartea 900 eta 800 mb-en artean dago, non atmosfera erabat egonkorra
+den.
+
+Hirugarren tartean, 800 eta 550 mb-en artean, berriro baldintzazko
+ezegonkortasuna agertzen da, baina aire-burbuilak 550 mb-eko mailaraino
+bakarrik aske igoko lirateke. Lehen bezala, sakonera txikiko ezegonkortasuna.
+
+550 mb-etik aurrera, airea tropopausako mugaraino (13000 m inguruan) igoko
+litzateke.
+
+Baldintza horietan, espero dugun eguneko eguraldia oro har eguzkitsua izango
+da, ia euri-arriskurik gabe (ezegonkortasunak ez dira oso sakonak atmosferaren
+behealdean) eta hodei baxu eta ertainak sor litezke konbekzio bortxatutako
+prozesuengatik.
+
+1 Prozesuez mintzatuz, beroa galdu edo irabazi gabe gertatzen dena,
+ingurunearekin bero-trukerik izan gabe gertatzen dena. Airea bero-eroale txarra
+denez, airearen hedapena eta konpresioa prozesu adiabatikotzat har ditzakegu.
+2 Atmosferako airearen beherakako mugimendua, bereziki eskualde zabal bati
+eragiten dionean.

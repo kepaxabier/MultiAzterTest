@@ -1,0 +1,511 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Aurreprodukzioa 3
+2. Produkzioa: errodajea 3
+2.1.Grabaketa: soinuaren erregistroa 3
+2.2.Errodaje parteak (laguntza izugarria izango dira gero muntaketa egin behar
+duenarentzat). 4
+3. Post-produkzioa (Pro Tools) 4
+3.1.Soinu-estudioan / sailean lana jasoko dugu 4
+3.2.Pro Tools-ekin lanean hasi 5
+3.2.1. Sesioaren ezaugarriak 5
+3.2.2. Ezarpenak 6
+4. Sesio berri bat: Session Setup 11
+3.1. Sesio berria: File Menua 11
+5.AUDIOAK GRABATU 12
+4.1. Iturria aukera: 12
+4.2. Track berri bat egin 13
+4.3. Pistan (track berrian) REC botoia aukeratu 13
+4.4.Grabaketa hasi: 13
+6.AUDIOAK INPORTATU pista ezberdinetan 14
+7.EDIZIOA 15
+7.1.Edizio-menua: 15
+6.2. Track menu: 16
+6.3. Audiosuit menu: 17
+8. NAHASKETA: MIX 17
+9.MASTERIZAZIOA 20
+                                    ******
+
+                                     ******
+
+1. Aurreprodukzioa
+
+Gidoiatik kontuan hartu beharko ditugu eszena eta sekuentzia bakoitzaren
+soinuak. Horretaz gainera, soinu-teknikariekin eta zuzendari artistikoarekin
+batera eszenatokietako soinuak aztertuko dira, baita onenak –audioaren aldetik-
+aukeratu ere.
+
+Ez da gauza bera barruan edo kanpoan errodatzea, zoruek ere soinuak era
+ezberdinez islatzen dituzte; eguneko orduaren arabera soinuak aldatzen dira;
+autopista bat hurbil badugu horko hotsak sar daitezke gure eszenan... Faktore
+horiek guztiak kontuan hartzekoak dira.
+2. Produkzioa: errodajea
+
+         1. Grabaketa: soinuaren erregistroa
+
+Grabaketan oso garrantzitsua da ahotsa ondo ateratzea; horretarako kontu handiz
+ibiliko gara “kolatu” daitezkeen soinuak (soinekoen hotsak, haizea...);
+beharrezkoa bada “fieltroak” edo hotsak murrizteko beste materialak erabiliko
+ditugu (esaterako, zapatetan).
+
+Grabatu soinu ezberdinak pista bakoitzean (Kamaran, eta ahal bada beste
+euskarri batean ere)
+
+Elkarrizketak
+Korbataren mikroa
+Pertiga mikroa
+Grabaketa egin ahal dugu monoan, multitoman, estereoan edo multikanal.
+
+Wildtrackgrabatuko dugu: eszenaren grabaketa elkarrizketarik gabe. Horrela
+jarraitutasuna lortuko dugu (giroen jarraitutasuna).
+
+Giroak
+    * eszena bakoitza
+    * espazio bakoitza
+
+
+Lokalizazioak: giro-soinua ere kontuan hartu beharko da.
+
+
+
+         1. Errodaje parteak (laguntza izugarria izango dira gero muntaketa
+            egin behar duenarentzat).
+
+
+
+
+3. Post-produkzioa (Pro Tools)
+
+         1. Soinu-estudioan / sailean lana jasoko dugu
+
+1. Soinu-estudioak jaso beharko luke:
+    * Sinkronismoaren beep
+    * Erreferentzia soinua
+    * OMF (Open Media Framework) edo OMFI (Open Media Framework Interchange).
+      Zeinetan dugu:
+          o Irudiaren edizioan erabilitako pistak (audioa)
+          o Korteak (hau da, lehenengo edizioan audioane egindako korteak eta
+            trim deiturikoak)
+          o Soinu-nibelak (bolumenak) eta panoramikoak.
+          o Urtzeak edo fundidoak (Crossfadeak)
+
+
+2. Soinu-estudioan sortuko diren pistak (track-ak) (egokia da, lana
+antolatzeko, izen bereko karpetak egitea, audio guztiak antolatuta izateko).
+Karpeta horiek “Gordinak” izeneko karpeta baten barruan gorde ahal ditugu.
+
+
+DIALOG. (Elkarrizketa guztiak) :
+BOOM 1, 2, 3... (pertigatik grabaturiko elkarrizketak)
+RF 1,2,3... (korbata-mikroetatik grabaturiko elkarrizketak)
+ADR 1,2,3... (bikoizketak)
+FX (Hotsak eta efektuak):
+AMB 1, 2, 3... (giro-hotsak, mikrofonoetatik grabaturikoak)
+Folley 1, 2, 3... (estudioan “eraikitako” soinu-efektuak)
+FX 1, 2, 3... (Soinu-efektuak libreriatik).
+MUSIC 1, 2, 3... (erabilitako musika-artxiboak)
+
+Horretaz gainera,
+
+MASTER pista: soinu-nibelak kontrolatzekoSesio berri bat: Session Setup
+
+         1. Pro Tools-ekin lanean hasi
+
+3.2.1. Sesioaren ezaugarriak
+
+
+Time Code mantendu
+Time Off set: nahi dugun tokian jartzen dugu.
+Apply SRC: hobeto ez jartzea ezer.
+Nahasketa-formatua
+Film-speed (abiadura): 25 FP/S (frame kopurua segundoko) –pelikularen abiadura
+errespetatzen ez bada gorriz agertuko zaigu-. (1000ml/25: 40mls/frame)
+Grabaketaren bereizmena: 48/24
+Fte. Erlojua: SYNC
+Bideoa: PAL
+Nahasketa-formatua: estereoa, dolby, sourround, 5.1 eta multikanal
+Arranke-pruntua: 01:00:00:00
+
+
+
+3.2.2. Ezarpenak
+
+    * Pro Tools erabili ahal izateko, lehen ezkerrean dagoen makina (ESTUDIO 2-
+      4) edo COMMAND mahaia (ESTUDIO 1) piztu behar dugu, eta ondoren
+      ordenagailua bestela ez du topatuko protools kontrolatzen duen makina eta
+      errorea emango digu.
+    * 2, 3, eta 4. ESTUDIOetan dauden protools 003 makinarekin lan egiten dute.
+      Deskonfiguratzen bazaigu, Setup menuan Play back Engine: 003 aukeratu
+      behar dugu (ez Pro Tools edo built-microph...)
+
+
+    * Era berean, I/0 (input/output) menuan honako konfigurazioa izan behar
+      dugu; deskonfiguratzen bada, Default klikatu eta berriz ere honako menua
+      agertuko zaigu:
+
+
+
+OHARRAK:
+    * Konprobatu Pro Tools makinan HOST botoia piztuta dagoela (bestela ezin
+      izango dugu ezer grabatu).
+    * Pro Tools programarekin hasterakoan, makina topatzen ez duela esaten
+      duenean N tekla sakatu segundu batzuetan.
+
+
+
+   1. URRATSA: OMF inportatu
+
+OMF (Open Media Framework) edo OMFI (Open Media Framework Interchange).
+Zeinetan dugu:
+          o Irudiaren edizioan erabilitako pistak (bideoa + audioa)
+          o Korteak (hau da, lehenengo edizioan audioane egindako korteak eta
+            trim deiturikoak)
+          o Soinu-nibelak (bolumenak) eta panoramikoak.
+          o Urtzeak edo fundidoak (Crossfadeak)
+
+
+Importmenuan topatzen dugu:
+   a. Audioa:
+   b. Bideoa: bideoa inportatzen dugunean, audioa ere jaso ahal dugu. Audio
+      hori erreferentzia moduan erabiliko dugu.
+   c. Session data: OMF /OMFI
+
+
+   1. URRATSA: beep bat egin
+
+Irudiaren edizio-arduradunek sinkronismoaren beep-a ekarri behar duten arren,
+akotan ez da heltzen. Beraz, pelikulak ez badu, gero sinkronismoa ondo egin
+ahal izateko beep bat sortu behar dugu.
+00:59:50:00 –n jarriko dugu erlojua
+Mantendu TimeCode (denbora kodea); 10 segundu aurretik jartzen gaitu beep bat
+sortu ahal izateko
+00:59:58:00 –n zuri bat sartuko dugu eta gure erreferentzia Frame 1 (40 mls.)
+izango da.
+
+Erabil daiteke aurretik atzerako kontua eta 2an beep sinkronizatu: SYNC POINT
+(Region). Horretarako erabil dezakegu SPOT edizio-era.
+Audiosuit. Seinalea sortu: signal generator: beep
+
+
+   1. URRATSA: MASTER pista egin
+
+Gainerako pista guztien gehiketa izango da eta irteerara joango dena erakusten
+du (nibelak...)
+
+
+   1. URRATSA: AUDIOAK INPORTATU pista ezberdinetan
+
+         a. Elkarrizketak
+               i. Pertigatik garbatutakoak (BOOM 1, 2...)
+              ii. Mikrotik grabatutakoak (RF1, 2...)
+         b. Musikak (MUSIC 1, 2...)
+         c. Giroak (AMB 1, 2...)
+         d. Wildtrack (giro-soinua isiltasunean, gero baliagarria izango zaigu
+            giroetako jarraitutasuna edo racord mantentzeko)
+
+Horiei, gero beste audio track batzuk gehitu ahal dizkiegu; hala nola, Folley,
+soinu-efektuak, estudioan grabaturiko elkarrizketak edo narrazioak... (ADR...)
+Horretarako, AUDIO pista edo track berria sortuko dugu, MONO (ahotsen edo
+efektuen kasuan, esaterako) edo ESTEREO (musika, giroak...).
+
+
+
+DIALOG. (Elkarrizketa guztiak) :
+BOOM 1, 2, 3... (pertigatik grabaturiko elkarrizketak)
+RF 1,2,3... (korbata-mikroetatik grabaturiko elkarrizketak)
+ADR 1,2,3... (bikoizketak)
+FX (Hotsak eta efektuak):
+AMB 1, 2, 3... (giro-hotsak, mikrofonoetatik grabaturikoak)
+Folley 1, 2, 3... (estudioan “eraikitako” soinu-efektuak)
+FX 1, 2, 3... (Soinu-efektuak libreratik).
+MUSIC 1, 2, 3... (erabilitako musika-artxiboak).
+
+   1. URRATSA: EDIZIOA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*** Lan esparrua: Edit menu ***
+
+*** Transport menua: ***
+*** Edizio-tresna nagusiak ***
+
+Track edo erregioa mugitzeko (ezkerretik eskuinera edo goitik behera).
+Track edo erregioaren sekzioa handitzeko edo txikitzeko.
+Track edo erregioaren sekzioa aukeratzeko
+
+
+
+
+*** Editatzeko erak ***
+
+Shuffle: modu honetan erregioak mugi ditzakezu eta automatikoki ajustatuko dira
+haien arteko espaziorik utzi gabe. Hau erabiltzen da sesio baten ondoko tarteak
+antolatzeko.
+Spot: modu honetan, erregioak mugitu edo jarri ahal da zehaztutako leku batean
+zenbaki-balioak erabilita..
+Slip: editatzeko modurik libreena da. Aukera ematen du track eta erregioak
+mugitzeko besteetan eraginik izan gabe.
+Grid: erregioak edo mugitzen dira denbora-eskalaren arabera.
+Absolute grid
+Relative grid
+*** Pista (track) bati butuzko informazio nagusia ***
+   1.  Sesio berri bat: Session Setup
+
+3.1. Sesio berria: File Menua
+
+
+New session: sesio berria:
+Open session: aurretik dugun sesioa irekitzeko (open recent: aukera ematen digu
+itxi berria irekitzeko)
+
+
+Sesioaren ezaugarriak (setup/lehentasunak): Grabaketaren bereizmena: 48 kHz.
++24 bit/s (Audiorako nahiko izango zen 44,1 kHz eta 16 bit, baina Pro Tools
+hauek audio post-produkzioan erabiliko ditugunez, parametro berdinak erabiliko
+ditugu. Printzipioz ez ditugu konfiguratu behar sesio bat irekitzen dugun
+guztietan, baina arazoak izan ahal ditugu parametro ezberdineko sesioak irekiz
+gero.
+
+   1. AUDIOAK GRABATU
+
+4.1. Iturria aukera:
+Soinu-mahaian nahi dugun iturria ireki (ON AIR ). Probatu soinu-nibelak ondo
+daudela irteeran (0 dbtan.).
+
+4.2. Track berri bat egin
+Track menuan aukeratu: berria eta gero horren ezaugarriak jarri: audio track
+mono/estereoa...
+
+4.3. Pistan (track berrian) REC botoia aukeratu
+Oso inportantea da Input menuan ondo aukeratuta izan sarrera-bidea (irrati-
+estudioetako Pro Tools-etan Analog. 5, Analog. 6, Analog. 7 eta Analog. 8; 1.
+Estudioko horretan, berriz, Analog. 1 eta 2. Absalon-etik pasa diren
+mikrofonoetarako –normalean 1 eta 2- eta 3tik 8ra beste guztietarako).
+
+
+
+         1. Grabaketa hasi:
+Nibelak konprobatu eta gero (kontuan hartu saturatutako soinuak ezin direla
+konpondu), Transport tresnan REC + Play sakatuko dugu eta grabatuko dugu
+
+
+
+
+
+   1. AUDIOAK INPORTATU pista ezberdinetan
+Askotan aurretik grabaturiko soinu-artxiboak erabiliko ditugu editatzeko
+orduan. (mp3, aif eta wav artxiboak erabil ditzakegu, baina batzuetan
+konpatibilitate arazoak izan ahal ditugu).
+
+
+File menuan Import Audio aukeratuko dugu.
+
+
+Ordenagailuan nahi dugun audio artxiboa aurkitu eta gero, honelako menu batean
+aukeratuko ditugu eta “convert” emango dugu jatorrizkoa eta destinoaren
+ezaugarriak berdinak ez badira (esaterako, honako honetan 44,1 kHzko artxiboak
+ditugu; guk, aldiz 48 kHzkoak erabiliko ditugu (beraz 44,1etik 48ra pasatu
+behar ditugu).
+Ezkerreko zutabean nahi ditugun artxiboak izan eta gero, “done” botoia sakatuko
+dugu.
+
+Importatzeko orduan galdetuko dit ea track edo pista berri batean jarri nahi
+dudan (pista estereo edo mono izango da inportaturiko audio-artxiboaren
+arabera) edo erregio-zerrenda (beste audio artxiboekin batera). Azkenengoa
+aukeratzen badut, artxiboa arrastatu ahalko dut nahi dudan track edo pistara
+(berria edo dagoen bat).
+
+
+
+
+
+
+   1. EDIZIOA
+         1. Edizio-menua:
+
+
+Funtzio erabilienak:
+Cut: aukeratutako erregioa moztu (gainerako erregioak mugitzen dira)
+Copy: aukeratutako erregioa kopiatu
+Paste: aukeratutako erregioa pegatu
+Clear: aukeratutako erregioa moztu betiko
+Duplicate: aukeratutako erregioa bikoiztu
+Repeat: aukeratutako erregioa ... biderkatu
+Shift: mugitu trackaren materiala (aukeratutakoa) aurretik edo atzetik baina
+zehaztutako denbra batean
+Insert Silence: isiltasun tarte bat sartu.
+Trim Region: aukeratutako tartea ez ezik, gainerako erregio-zatiak moztu.
+Separate Region: erregio bat bitan zatitzen du
+Consolidate Region: audioa “audiofile” bihurtu
+Mute Regions: aukeraturiko erregioa isiltzen du.
+Copy Selection to:
+Strip Silence: aukerautako track edo erregioen isiltasun tarte guztiak mozten
+ditu
+Automation:
+Fades: Fade in/Fade out aukera ezberdinak egin (crossfade)
+
+6.2. Track menu:
+
+
+Hauek dira erabiliko ditugun funtzio ohikoenak:
+
+Group: pistak batu eta elkartuta lan egin.
+Duplicate: pista bikoiztu.
+Remove: sesiotik ateratzea.
+Delete: guztiz ezabatu.
+
+
+6.3. Audiosuit menu:
+
+
+
+Honako honetan efektu berezi ezberdinak sartu ahal ditugu gure pistan (insert-
+en bidez) edo soinu-artxiboan. Azken aukera honetan, efektua sartuz gero, ezin
+izango genuke gero kendu (horregatik, komenigarria izaten da efekturik gabeko
+soinu-artxiboa gorde). Efektu ohikoenak hauxek dira:
+    * Ekualizazioa (soinuaren parametroak –tonua, anplitudea, indarra...-
+      aldatu.
+    * Dinamikoak: soinu-atariak aldatzea.
+    * Reverb edo erreberberazioak.
+    * Delay edo oihartzunak.
+    * Doppler (mugimendua, esaterako hurbiltzen eta urruntzen den autoa).
+    * Reverse (audioa alderantziz...).
+
+Honelako pluging edo efektuak preset batzuekin etor daitezke, hau da, efektu
+zehatz batzuekin.
+
+ 8. NAHASKETA: MIX
+
+
+Jaso ditugun eta post-produkzioan sartu ditugun soinuen edizioa amaituta (edo
+bitartean), nahasketa antolatzen joango gara. Akzen helburua audio-artxibo
+bakarra filmaren SOINU-BANDA izango dena egiteko.
+
+Nahasketa-fasean pista ezberdinekin lan egingo dugu:
+
+         a. MIX (AUX pista nahasketa osoa jasoko duena, eta guk jarritako
+            irteera bidaliko duena: Analog1 eta Analog2 gure kasuan)
+         b. 3 STEM (AUX pistak eta soinu-iturrien arabera bilduko ditugu
+            audioak STEM horietan) :
+               i. Elkarrizketak (zuzenekoak + bikoizketak ...) : Dialog STEM
+                  (horretara bideratuko ditugu RF, BOOM, ADR eta dagozkion AMB/
+                  Wild pistak ere)
+              ii. Efektuak: FX&AMB STEM(horretara bideratuko ditugu FX, AMB eta
+                  Foley pistak)
+             iii. Musikak: MUSIC STEM(horretara MUSIK pista guztiak bideratuko
+                  ditugu)
+
+STEM bakoitzari bidaliko dizkiogu (bus baten bidez) dagozkion audi pista edo
+track guztiak zein auxiliarrak (reverb edo beste efektuak jasotzen dituztenak)
+ere.
+
+Honako adibide honetan, badugu elkarrizketen STEM (dialog STEM); horretara
+bidaliko ditugu mikroetatik grabaturiko ahotsak (RF01 eta RF02), pertigatik
+grabaturikoak (Boom01 eta Boom02); Wildtrack eta giroak (AMB) (ahotsekin
+zerikusia dutenak) eta Dialog STEM-ean jasoko dira (BUS-en 123/124 sarreratik
+adibidez, libre dugulako).
+
+Era berean, nahasketa-fase honetan, efektuak sar ditzakegu (adibidez, reverb)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dialog STEM-etik pasatzen den audioa MIX pistara bidaliko dugu, eta hortik
+soinu-irteerara (Analog.1/2).
+
+
+
+
+Prozesua buru dadin I –imput- piztuta egon behar du, audioak STEM /MIX pistan
+sar daitezen) .
+
+Horrela egingo dugu hiru STEM-ekin.
+
+
+
+   1. MASTERIZAZIOA
+
+Esanbezala, hiru STEM azken nahasketa jasoko duen MIX pistara bidaltzen dugu
+(gure masterra dugu hori) eta prozesuaren azken faera heldu gara:
+masterizaziora hain zuzen ere.
+
+Era berean, banatuta ditugunez, produktu ezberdinak sartu ahal ditugu:
+a) Pelikula osoaren soinu banda egin.
+b) Efektu eta Musikaren STEM-ak nazioarteko banda osatzeko erabil dezakegu
+(elkarrizketarik gabe)
+c) Elkarrizketen STEM horiek hizkuntzaren arabera moldatu baditugu (STEM bat
+gaztelaniaz, beste bat euskaraz eta azken bat ingelesez, adibidez), pelikula
+baten bertsio ezberdinak atera ditzakegu...
+
+Masterizazio honetan ere dinamikoak eta konpresoreak aplikatzen dira, prosuktua
+zinemara edo telebistara bideratuko dugun kontuan hartuta.
+
+Bakarrik falta zaigu soinu-banda jasoko duen audio-artxiboa sortzea. Ikus-
+entzunezko produktuaren kasuan, ondoren bideo post-produkzioan erabailtzeko
+artxiboa sortuko dugu (WAV edo AIF) edo zuzenean QuickTime pelikula bat (kontua
+hartuta bideo-pista aurretik editatuta dugula).
+
+*****
+ *****
+Post-produkzioa oso osoa egin eta gero, heltzen da nahi ditugun pista guztiak
+nahastuko dituen gure soinu-artxiboa egiteko unea (aktiboak izango ditugunak
+soilik grabatuko dira azken artxibo horretan).
+
+File menuan, bounce to disk aukeratuko dugu (beste kasu batzuetan, beharbada
+export aukeratu beharko genuke). Hori egin eta gero aukeratuko dugu:
+    * Quick-time edo audio artxiboa egin nahi dugun
+    * Audio-artxiboaren ezaugarriak: wav, aif...
+    * Formatua: artxibo estereo nahi izanez geroInterleaved aukeratuko genuke.
+    * Zein audioa da erabili nahi duguna (irteerak aukeratuko dugu: Analog. 1
+      eta 2 gure kasuan) . Horrek esan nahi du, irteera horietara bideratuko
+      audio pista akatibo guztiak graabtuko direla sortutako soinu-artxiboan.
+      Beste aukera bat litzateje grabatu nahi ditugun pista guztiak pista
+      master batean kopiatu.
+

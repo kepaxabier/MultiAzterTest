@@ -1,0 +1,1411 @@
+
+
+
+
+
+
+
+
+
+
+
+
+                              2.ZORIZKOALDAGAIAK
+
+2.1. SARRERA
+
+Zorizkoaldagaia:Zorizkoesperimentuarenemaitzaposibleenunibertso
+edoosotasunparteetandefiniturikofuntzioerreala.
+IntuikorkiX:Ω→R
+                              w→X(w)[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAANCAYAAAAdWrhRAAAACXBIWXMAAA7YAAAOogHSmADaAAAAdUlEQVR4nOXS0QrAIAhAUYX+/
+5cdPQThurARbWb3UfLBQ0VETLrMTOXAij9cVW30MDtQ8QM6ODvQDYLKDvQYgsoCNA1B7Qa0DIKKCvQ5BPU3UBgIagVQ3fXvwkNQs0AeY1sI6g1Qm9WddBBUAyKQYyBG9b/
+                  nAp0EWyDb2ph7AAAAAElFTkSuQmCC][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAARCAYAAACmYE5yAAAACXBIWXMAAA7RAAAOcAFGmfaPAAAAh0lEQVR4nNXS0QqAIAyF4Qa+/
+                           yuvFgxOtliauvVfRXjxcbQw8/
+aXiIhLNMJLkPp9jEtpwQoVJP5PBa7XtM6Eg98gsTDw05V7LQW3rmk1HTwCiU0Bj0ZiQ8G977Klz+CZa1p1gVcjsSbwiiv3uoEFhaDINa0uYMVlQ2InGIFaNqhWLKxUP40s7YzmSkgwd1UVAAAAAElFTkSuQmCC]
+
+
+esperimentuarenAldagaiarenbehaturiko emaitza balioa
+
+
+Aldagaimotak:Kualitatiboak
+Kuantitatiboak(*)
+
+2.2. ZORIZKOALDAGAIAK
+
+2.2.1.DEFINIZIOA
+Demagun (Ω,F,P) probabilitate-espazioa dela.Ondoko aplikazioa
+zorizkoaldagaia(z.a.)dabaldineta:
+                                X:(Ω,F,P)→(R,B)
+non∀B∈Β:X-1(B)∈F
+Demagun(Ω,F,P)probabilitate-espazioadelaetaX:Ω→Rzorizko
+aldagaiadirela.Orduan,X-rielkarturikogertaerakondokoakdira: (X∈B)∀B∈B
+
+Teorema:Demagun(Ω,F,P)probabilitate-espazioadelaetaX:Ω→R[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAXYAAABLCAYAAABkzayiAAAACXBIWXMAAA7HAAAOrAG+m50aAAABLklEQVR4nO3UsQnAQBADwTN8/
+y2fcQ+Gh2UmUKxoz8zsAJBxvtnd5/YRAP5xbh8A4F/
+CDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADEvJbgFKuIL1koAAAAASUVORK5CYII=]
+zorizkoaldagaiadirela.Orduanondokobaieztapenakbaliokideakdira:
+
+i)Xzorizkoaldagaiada. ii)∀x∈R:(X≤x)∈Fiii)
+∀x∈R:(X>x)∈F
+
+
+
+
+2.2.2.PROBABILITATE-BANAKETA
+DemagunX:(Ω,F,P)→(R,B)zorizkoaldagaiadela.Orduan:
+                                     ∀B∈B:
+X-1(B)=(X∈B)∈F
+X-renprobabilitate-banaketaondokoeraradefinitzenda:
+PX:B→[0,1]
+                           B→PX(B)=P(X∈B)=P(X-1(B))
+X-ekB-nbalioakhartzekoprobabilitateaneurtzendu.
+
+Teorema:DemagunX:(Ω,F,P)→(R,B,PX)zorizkoaldagaiadela.OrduanPXprobabilitate-
+banaketa (R,B)espazioandefinituriko probabilitate-neurriada.[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAXYAAAAuCAYAAAA89DJLAAAACXBIWXMAAA7HAAAO7QFX+eNeAAAAyUlEQVR4nO3UsQnAQBADwTN8/
+y2fcQ+Gh2UmUKxoz8zsAJBxvtnd5/YRAP5xbh8A4F/
+CDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhDzAlG1BLZdLqKZAAAAAElFTkSuQmCC]
+
+
+Oharra:XetaYzorizkoaldagaiakprobabilitate-banaketaberdinaeduki
+dezakete,nahizetaprobabilitate-espazioezberdinetandefiniturikegon.
+
+
+DemagunX:(Ω,F,P)→(R,B,PX)etaY:(Ω*,F*,P*)→(R,B,PY) probabilitate-espazio
+ezberdinetandefiniturikozorizkoaldagaiakdirela.OrduanXetaYberdinkibanatutadaudelaesangodugu,ondokoa
+betetzenbaldinbada:
+                                     ∀B∈B:
+PX(B)=PY(B)
+
+
+
+Gehienetan,Bboreldarguztiakezdirenezezagutzen,probabilitate-
+banaketaezindaerabilipraktikoki.Horrexegaitikprobabilitate-banaketa
+zehaztenduenfuntzioadefinituko dugu,bainaboreldarbatzuentzako soilik.
+
+2.2.3.BANAKETA-FUNTZIOA
+DemagunX:(Ω,F,P)→(R,B,PX)zorizkoaldagaiadela.Orduan,FX
+ondokofuntzioaX-enbanaketa-funtzioadeitzenda:
+FX:R→[0,1]
+x→FX(x)=PX(-∞,x]=P(X≤x)
+
+Teorema:DemagunX:(Ω,F,P)→(R,B,PX)zorizkoaldagaiaetaFX[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAXYAAABfCAYAAAD8iuwvAAAACXBIWXMAAA7HAAAOtAE8gAVDAAABdElEQVR4nO3UsQnAQBADwTN8/
+y2fcQ+Gh2UmUKxoz8zsAJBxvtnd5/YRAP5xbh8A4F/
+CDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxL25JBXqXXa9zAAAAAElFTkSuQmCC]
+berebanaketa-funtzioadirela.Orduan,ondokopropietateakbetetzendira:
+
+a)FXezbeherakorrada.
+b)eta[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAOCAYAAACyyTV4AAAACXBIWXMAAA6uAAAPRwEtKIOYAAAAtElEQVR4nL1VAQrAIAgs8P9fdjQwDlEz2zoYze2026GNWmvcAjBzj97/
+gd47j31lJRExHtwW4wEFjpj0i0pRLHjCEZ7OISRUXcUP1DWq7SI1xzVFnrqI4jC2+JEwXAWhkxkXdp2qOEtrig+rz3TTa3ErJy0e6c1Op1zyvUHZHZ5XJBaNEvT06808XiQ4C6okWw3u3Vtxtv4UmUmQowDjm3+ircHxjoi/
+sSXytoOCpcivh6CCB6sVxiIkeXttAAAAAElFTkSuQmCC][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAJCAYAAADtj3ZXAAAACXBIWXMAAA9CAAAPjgHw4T/
+SAAAAK0lEQVR4nGP5//8/
+AzJgZGREFcADWMjVCNdMqia4ZnI1wm0e1UwcAKYPRgCdXwoogPqBfAAAAABJRU5ErkJggg==][data:
+image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAECAYAAABREWWJAAAACXBIWXMAAA8QAAANtQGOka14AAAALElEQVR4nGNhYGD4z4AE/
+v//z8hAJGDBJ8nIyPgfnzxezdhcgWwgXs2EDAQAsQUMDuFCAVcAAAAASUVORK5CYII=][data:
+image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAADCAYAAABF//
+VLAAAACXBIWXMAAA9nAAANKwF3dDeVAAAAFUlEQVR4nGNhYGD4z0AkYCFWIcmKAYc8AQwNNVJKAAAAAElFTkSuQmCC]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAOCAYAAACsAAXLAAAACXBIWXMAAA68AAAPRwFjNiAIAAAAqElEQVR4nL1VWw7AIAiThPtfmQUTFkOkKj76NR2F0qHjUooUABEh9P4GiEi0Lltx3XgtAkH1sC1UZFagdbob48HtIuui57WN7ozFL+6EazOiUB3Pgc5lu0afcCUnj0OwiF7xaD/
+iRFw2wqlTa/
+zIvVnn6lXSJkPFfFftnKE4JBShXiWZufLC0HNvPZNbMZw5c8I78+LPsXQgeo7dxJK4V44ZhuJODHcWH+vKqipn4gdyAAAAAElFTkSuQmCC]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAJCAYAAADtj3ZXAAAACXBIWXMAAA9CAAAPjgHw4T/
+SAAAAMElEQVR4nGP5//8/
+AzJgZGREFcADWMjVCNdMqia4ZnI1wm0eQZqBUcxIlmaQRhANAGjkDSbrZfMEAAAAAElFTkSuQmCC]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAECAYAAABREWWJAAAACXBIWXMAAA8GAAANtQFbHkz+AAAALElEQVR4nGNhYGD4z4AE/
+v//z8hAJGDBJ8nIyPgfnzxezdhcgWwgXs2EDAQAsQUMDuFCAVcAAAAASUVORK5CYII=][data:
+image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAADCAYAAACwAX77AAAACXBIWXMAABAOAAANKwHJGYUgAAAAFUlEQVR4nGNhYGD4z4AFsGATxCsBAElcAQyxObCJAAAAAElFTkSuQmCC]
+
+
+c)xbakoitzarentzat,FX(x)eskuinetikjarraikiada.
+
+Oharrak:
+1.DemagunF:R→Raurrekoteoremakohirupropietateakbetetzen
+dituenfuntzioadela.Orduan,(Ω,F,P)probabilitate-espaziorenbatean
+definiturikoXzorizkoaldagaiaesistitzenda,berebanaketa-funtzioaF
+delarik.
+2.Banaketa-funtzioakprobabilitate-banaketaguztizzehaztendu.Hots,FX
+=FY⇒PX=PY
+3.Banaketa-funtzioarenadierazpengrafikoakojibaitxuradauka(etenak
+egondaitezke).[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAXYAAACJCAYAAAA47RMdAAAACXBIWXMAAA7HAAAOwAF307mxAAACB0lEQVR4nO3UsQnAQBADwTN8/
+y2fcQ+Gh2UmUKxoz8zsAJBxvtnd5/YRAP5xbh8A4F/
+CDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxL1EVBiJYyiFrAAAAAElFTkSuQmCC]
+
+Teorema:Banaketa-funtzioarenbidezprobabilitateenkalkulua:
+a)P(X>x)=1–FX(x)∀x∈R
+b)P(X<x)=FX(x-)∀x∈R
+c)P(X≥x)=1–FX(x-)∀x∈R
+d)P(a<X≤b)=FX(b)–FX(a)∀a,b∈Retaa≤b
+e)P(a<X<b)=FX(b-)–FX(a)∀a,b∈Retaa≤b
+f)P(a≤X<b)=FX(b-)–FX(a-)∀a,b∈Retaa≤b
+g)P(a≤X≤b)=FX(b)–FX(a-)∀a,b∈Retaa≤b
+h)P(X=x)=FX(x)–FX(x-)∀x∈R
+(FX-enjauziax-en)
+
+
+Propietatea:P(X=x)=0⇔FXjarraikiax-en[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAXYAAAARCAYAAADJ2IczAAAACXBIWXMAAA7HAAAOqQHD7GlfAAAAY0lEQVR4nO3UsQnAQBADwTN8/
+y2fcQ+Gh2UmUKxoz8zsAJBxvtnd5/YRAP5xbh8A4F/
+CDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxL1m5BEJ3NscFAAAAAElFTkSuQmCC]
+
+
+2.3. ZORIZKOALDAGAIDISKRETUAK
+X:(Ω,F,P)→Rzorizkoaldagaidiskretuaizangoda,hartzendituen
+balio-kopuruafinituaedoinfinituzenbakigarriabaldinbada.Hots,Irudi(X)
+={x1,x2,…,xn,…}.Orduan,(X=x1), (X=x2),…,(X=xn),…∈FetaΩ-
+renpartiketasortzendute.
+
+DemagunXzorizkoaldagaidiskretuadela.Orduan,X-enprobabilitate- legeaondokof
+(x)funtzioada:
+f:R→[0,1]
+x→f(x)=P(X=x)
+Propietateak:
+
+•
+Xzorizkoaldagaidiskretuarenprobabilitate-legeakondokobi
+propietateakbetetzenditu:
+1.0≤f(x)≤1
+2.=1[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAWCAYAAAAinad/
+AAAACXBIWXMAAA6GAAAO5QFbJLCfAAAAh0lEQVR4nL2UUQ7AIAhDR+L9r+y2jyaEsVocWX+MRp4FgmPOeUSZ2fMw6IqzeDbeLt5AH6A8kMI8IHNQhsEdgNhvO1MAMswDlXSXMAhA5lSC+fq1OPvcgKokWFsDlMLLsJYJgCsVRGFVEIVV0lvCoOiQNYOmid9Cdpa97NeK/
+p+AFlhWaJb+CQ6FYFhl8cBCAAAAAElFTkSuQmCC][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAALCAYAAAB7/H1+AAAACXBIWXMAAA7/AAAOtwH/
+hNNAAAAAVklEQVR4nN2SMQ4AIAgDIfH/X65hIOkgIIbJWxyQE7VLRCAJADSrR6yXpghVhQ8yKjapy5/
+E1nyScv1KzFes8KlHn4L5VNzNcisV/IHZQe24cUarfbZug3w3IHf9J5EAAAAASUVORK5CYII=]
+
+
+•
+DemagunS={si/i∈I}zenbakierrealdesberdinakosoturikomultzo zenbakigarriaeta{πi/
+i∈I} ondokopropietatebi hauekbetetzendituen
+zenbakifamiliadirela:
+1.πi≥0∀i∈I
+2.=1[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAWCAYAAAAfD8YZAAAACXBIWXMAAA7MAAAO5QH155mVAAAAgklEQVR4nMWTbQuAMAiEE/
+z/f9nyg2B2vmwEOxhU7jm3tmMRuaKI6Psx6OGIs4IZ6DMy1HcIewMdZhCVwsggdi/hTi3suy/
+D3mALRgbpUU11Bi4vCZr8W+cW7gKSwpNklcEYwSg5sbOvW41RTnVi1xnesMlyX8ve1TLs/
+w+E0TGh7dyLJldelK+fxAAAAABJRU5ErkJggg==][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAALCAYAAACtWacbAAAACXBIWXMAAA6HAAAOxAEc53bZAAAAL0lEQVR4nGNhYGD4z4AF/
+P//nxHGZsGmAB3QWxHIgUCA1fEwcbBJyD6hsZuopggAbvYMKoGhxjAAAAAASUVORK5CYII=]
+
+Orduan,(Ω,F,P)probabilitate-espazioa
+etabertandefiniturikoXzorizkoaldagaidiskretua esistitzendira,X-enprobabilitate-
+legea ondokoaizanik:
+f(si)=πi∀i∈I
+f(s)=0∀s∉S
+Oharrak:
+
+1.X-enprobabilitate-legeaezagutuz,X-enprobabilitate-banaketa,PXeta banaketa-
+funtzioa,FXezagutzendira.
+
+2.FX(x)funtzioak{x1,x2,…,xn,…}puntuetan,etaberaietansoilik,etenak
+aurkeztenditu,jauziak{f(x1),f(x2),…,f(xn)…izanez,hurrenez
+hurren.Grafikoki,funtziohonekeskaileraitxuradu.
+
+
+2.4. ZORIZKOALDAGAIJARRAIKIAK
+
+X:(Ω,F,P)→Rzorizkoaldagaijarraikiaizangoda,baldinetaondoko
+propietatebiakbetetzendituenf:R→Rfuntzioaesistitzenbada:
+1.f(x)≥0
+
+2.FX(x)=P(X≤x)=∀x∈R[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAPCAYAAACMa21tAAAACXBIWXMAAA6iAAAOrwHNj1AwAAAAm0lEQVR4nM2V0Q6AIAhFY/
+P/
+f9nygcYY4EVxdd8qhMNVsvXeL09E5H989KwlGSufI0V526woWsCCyUC+QGPBDpRVlN9xbu1kCFTh0EwZp1p1Id2g3AGk+S2gag34bSDpEjuQPcgy1xGHVqaLtQykXUFijwLpreIxj+IQMBdo9n+SRZA4VKFDaLLV82LpV2M/
+ZF4dlR2ngb4q7OkGaz58NJkzGLEAAAAASUVORK5CYII=][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAADCAYAAACnI+4yAAAACXBIWXMAAA54AAANKwEjg4xvAAAAIklEQVR4nGP5/
+/8/Ay7AyMiIIcmCUzUOwILNFKCtjLg0AACoqggMuflp+wAAAABJRU5ErkJggg==][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAA3zAAAOVgH+y8sLAAAAFUlEQVR4nGNhYGD4z4AEWBjQAGEBAEKsARC77Y+BAAAAAElFTkSuQmCC]
+
+
+Orduan,f(x)funtzioaX-endentsitate-funtzioadeitzenda.
+
+Propietatea:
+
+•
+Xzorizko aldagai jarraikiaren dentsitate-funtzioa ondoko bi
+propietateakbetetzenditu:
+1.f(x)≥0[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAYAAABbNsX4AAAACXBIWXMAAA14AAANKwESa5byAAAAFUlEQVR4nGNhYGD4z4AGWNAFcAoCADz8AQwyBgVMAAAAAElFTkSuQmCC]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAECAYAAACk7+45AAAACXBIWXMAAAw1AAANtQHoGCNgAAAAFUlEQVR4nGNhYGD4D8QMLAxQgMkAACFsARBQ6x8mAAAAAElFTkSuQmCC]
+
+2. =1[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAPCAYAAACMa21tAAAACXBIWXMAAA6eAAAOuQGiryIxAAAAjUlEQVR4nM2VSw7AIAhES8L9r0x1QWIMyNe0s5TIPFAUiejRBAB6cGjshVM8kxctU6+BBKetn4RzQwVKMuU1zr3GLa+WDlmKdAq7jfYC1xPwFF8CuqFWIO5AdvqmrnQoM12sNBAbeswjcGkgCcR6izxg5Q5Jb40FmQbyJqtc4l3/
+G3vt6+isOgT0helJL7pZbjCTfLr2AAAAAElFTkSuQmCC][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAADCAYAAACnI+4yAAAACXBIWXMAAA54AAANKwEjg4xvAAAAIUlEQVR4nGP5/
+/8/Az7AyMiIooCFFMVgDdgEgbYy4jIEAOcsCQ4fa7MTAAAAAElFTkSuQmCC]
+
+
+•
+Aurrekobipropietateakzorizkoaldagaijarraikiarendentsitate-funtzioa
+karakterizatendute.
+
+Oharra:Banaketa-etadentsitate-funtzioenartekoerlazioahauxeda:
+•
+fezagutuz:FX(x)=P(X≤x)=∀x∈R(Fjarraikiada)[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAPCAYAAACMa21tAAAACXBIWXMAAA6eAAAOrwG+N5fmAAAAm0lEQVR4nM2V0Q6AIAhFY/
+P/
+f9nygcYY4EVxdd8qhMNVsvXeL09E5H989KwlGSufI0V526woWsCCyUC+QGPBDpRVlN9xbu1kCFTh0EwZp1p1Id2g3AGk+S2gag34bSDpEjuQPcgy1xGHVqaLtQykXUFijwLpreIxj+IQMBdo9n+SRZA4VKFDaLLV82LpV2M/
+ZF4dlR2ngb4q7OkGaz58NJkzGLEAAAAASUVORK5CYII=][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAADCAYAAACnI+4yAAAACXBIWXMAAA54AAANKwEjg4xvAAAAIklEQVR4nGP5/
+/8/Ay7AyMiIIcmCUzUOwILNFKCtjLg0AACoqggMuflp+wAAAABJRU5ErkJggg==][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAA3zAAAOVgH+y8sLAAAAFUlEQVR4nGNhYGD4z4AEWBjQAGEBAEKsARC77Y+BAAAAAElFTkSuQmCC]
+
+
+•
+Fezagutuz:f(x)=
+
+
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAANCAYAAAAKeCiYAAAACXBIWXMAAA7HAAAOggG1nJQ2AAADyUlEQVR4nO1VXUhUQRROEbfdwlI3CyH3QUNrTVE01FZBUwsEQyMRRIUUzA01VDBpgwQXFR8yf0JJIUUptdbwxUTDQHGVAnVFy8gU/
+4htXWR11zRZO+dhZLzde/
+WavvW93DNzzpz55ptz5tptb28f+w9u2NGDrKysd9XV1deZQZGRkV96enouom2xWCTz8/Punp6e4/
++6eV9f362IiIjXcEk2ZM7Hx2dJp9O5HiRfR0eHMj4+voY539TUpEpOTlaTsdlsPgEwc+UxmUwOABPauwSqqqq6AQJt04SZkEgklsMQBxEeHv6GOYfipKamDjQ2NiqE5ouLi3sGnxou/
+isrK46QPzQsLKyTLw+Ko1Kp2oqLixPs+AKZsLGx4RWPDVtbW3aALTbf+vq6mG0exent7U2Eyn0lZK+94OjoaNwvf7VafRsE2l1B7e3t90dHR0PQnpmZuSCTyaZtbW2tOMayZCYxGAxnAHrcVCqVmpeXlyVMAnDYx2lpaSo2EliNGxsbotjY2LHBwUGPxcVFJ5FItIG+qKiol5BLsEChoaHT+EUeeKF8scAXaEt/
+YmxlZeXTnJycbMJfo9HcAz5uuwRKSEh4QgKUSuXbrq4uOfEVFBRomBtg8vHx8UAoyV/
+Qt8eFHgZRVFTU0tnZ6RsUFDRLxDko3NzcVubm5k6jPTIyctXf33+A+PAys7Ozu+h4Z2dnA55XLpf/
+mJiYOAf+HOKLiYmph3zLnC3m7e39jR5rtdpLHHGfVldXRcx5+vbS09Mf4jc6Ovpzd3f3Th6xWPwbSxnt4eFhGRcXvkqgKxZ+HqeIDZdmpONmZ2flXHkmJyfPMufs7e03jUajeEeg0tLSBiRMxuXl5TfpBVBRL+Cgf7UK16aEeENDQzFbi+EfDAg4oD01NXWZ3psrFx+wVemxh4fHJD0OCAj4AB3ypqKiYte6zMzMHrZ8CwsLspKSkuc7AhUWFt6BF/
+4KFwE45CNaoLKysnpou3Qkn5GR8X6vAzBB/969vLx0IJaz0Bw0/
+Pz85iDnV74YeFediD00NBQF1a+FCk6sra01LC0tnXd1dZ0n/
+tbW1ge5ubnKHYH2c0sKheI7sVEcYtfV1V3jWsP1QNP7Mfe2Wq22m5ub9nvxocHWJnyAN49Uzhrb2fPz8+/
+m5eVlCvrN9/f3u4PKJlDbQcg6oUhJSRlobm4OOey8KISLi8uaXq8/
+yRcHrfiRiCZIIASKk5SUpG1paQk+KFE+jI2NBR+FOAQoDgrQ1tYWyObHVqN9ggVCHJU4CF9fX+1R5SbgEgdBv0OIPwUpviI5YnzNAAAAAElFTkSuQmCC]∀x∈R/
+Fderibagarria[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAaCAYAAAAjZdWPAAAACXBIWXMAAA7pAAAOogEdvtTSAAADlElEQVR4nGP5/
+/8/w1ADLLgknjx5Ii8rK/
+sA6CnGsLCw06tXrzZBVwOSg7GfPXsmIyUl9QSXeV++fOEBgi+UOxmPo2VkZB6mpaXtA7FXrVplysjI+B/
+ZkcggPj7+yMKFC23wWQRy8LZt2xJdXFyWsrGx/aKJo0+cOOE6Y8YMFxB7+/bt8fgMWbRokTXQ0QQt8/
+Lymo/P88QCFEdnZGTsmTx5suerV68kLS0td8EMB1q24OHDh0og9unTpx1NTU33w/TcuHFDb/
+PmzSnI5vz584eFlZX1N0g/
+yJEgMUoditXRly5dMgc5GGSZtLT0I3SFfHx8H969eydsZma2D9kBPT09k2bOnOmMYigLy5/
+m5ubFjY2NS9EdKyws/I0qjgaFjL6+/gmYBaDQAVmIrFBAQOA9iG5ra5uPLD537lz7OXPm/
+EU3uKamJm7ixImT0cWBMXj3zZs3oiIiIq8pcjQw9B6sWLGiFFmirq4uBkRv2LAh8/
+z589Yw8crKyiRkdUFBQec+fPggCPMUDKipqb2+ffu2SH5+fi6y+NWrV6UpcTDc0cA0zJudnd2oqqp6kpeX9x1ILDg4+OzatWuNAwMDp+FLjyA1LS0tC4EhC86sCQkJh/
+n5+T/
+funVLFBRjv379YkMuLe7fvy9EiYPhjgaWyfxAixcZGRkdBvE7OzvnlJWVpT569EgJmAGVQbScnNw9XIbU1tbGwRxtbm5+MjMzswTEBhaVhaA8QqkjsToaBEBpEMYGORhE43MoMvj58yf78ePH3YHpdSfMwSAQGho6AVkdMAl9p0YpgrOcJgWAoh+YL/
+bgUwNM39rAtM+JTQ49c8NAVVVVIjZxqjgaBJiZmTFKEGQAzC9XccnhchwuQDVHUwJgFRA6wJWUKHL0379/
+mYENqaKIiIhuSswhNZ1T5GhgDToRWFGIUWIGOYAiRxcWFmZTs01BLBgUaZpUQJKjz5w5Yw9s7Kv7+fnNArY5WlauXFkMEgc2YbtOnjxpAWwBqvb19ZW4ubktJWQWJYAkR9vZ2e3+9u0bG4i9Zs2aQGA7WxvEBjZpy4CVCsXtZGIB0Y5GbryDSo0dO3Zo0c5ZuN0AoslK01lZWbuQ+cDkcpEajiIWkORoUF8Q2HqTBiaFeffu3ZMCVt9/
+cnNzt23atEkfFAv29va3Dxw4oIarsqAEIJtJtKPR02tcXFwzuqEHDx5Updx5hMGQKPLQY25IOBodAABqsYfB4ECXmwAAAABJRU5ErkJggg==]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAJCAYAAAD6reaeAAAACXBIWXMAAA3BAAAPjgH/
+WkiNAAAALElEQVR4nGP5//8/
+AwwwMjKCOSwMWAALuir8KpFV4VaJroqw7SAAdDMjiAYAJzQKKIAfQKMAAAAASUVORK5CYII=][data:
+image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAJCAYAAADtj3ZXAAAACXBIWXMAAA9CAAAPjgHw4T/
+SAAAALElEQVR4nGP5//8/AzJgZGREFcADWMjVCNdMqia4ZnI1wm0eQZqBUcxIkc0AU/
+QKKM8rHB8AAAAASUVORK5CYII=][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAGCAYAAADzG6+8AAAACXBIWXMAAA5bAAAONAFtp0swAAAAPklEQVR4nGP5/
+/8/
+A7GAkZERrBioh5GFaF1ogGiNMNtgbLwaQQpAzoLxQWyYAVg1IpuOrImgU9EVoRsIkgcAusMcGLqSnsgAAAAASUVORK5CYII=]
+                        fhautazkoagaineratikopuntuetan
+
+
+Probabilitateenkalkulua:DemagunXzorizkoaldagaiadelaetaf(x)bere dentsitate-
+funtzioa.Orduan:
+•
+P(X=x)=0∀x∈R
+•
+P(a<X<b)=P(a<X≤b)=P(a≤X<b)=P(a≤X≤b)=[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAPCAYAAACMa21tAAAACXBIWXMAAA6TAAAOuQEeMTHvAAAAmElEQVR4nMWVSw6AMAhEJen9r4ztAkMM306Ns7MW5kEtDma+PBGR/
+3JqxpLeq58jRXlHZlo1sGA6kA/QCkCgLFNZk9zvToZAJzqUqdOpgRpla/
+oEKsVDQGKI5tC5YCB9HNKBXcgVDwN5iXehIKDqDe3AbQNZQzGbRRUwF6hTfbSvPRgzs0qSkzftk48akfnrOFlxG+gvY083vHt4NBdBf8AAAAAASUVORK5CYII=]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAGCAYAAADkOT91AAAACXBIWXMAAA8rAAAN3gFmJeh6AAAAIElEQVR4nGP5/
+/8/AwgwMjKCGSwMaIAFWRa7CmRZrCoA5lcGHKqTXJMAAAAASUVORK5CYII=][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAA3UAAAOmgGDLWbHAAAAHUlEQVR4nGP5/
+/8/AyMj438GKGBB5oAFGNAAhgAANBcFEo/HUGgAAAAASUVORK5CYII=]
+
+
+∀a,b∈Retaa≤b
+•
+P(X>a)=P(X≥a)=∀a∈R[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAPCAYAAACMa21tAAAACXBIWXMAAA6eAAAOuQGiryIxAAAAlElEQVR4nM2USw6AMAhEJen9r1x1gSENvykYnZ3adh5jYcw5D0tEZH+8dO0luVY+e/
+LOHZFp1kCDQSAfoHtDBUoz5Xd89pqkC9SRUCQkqdFttBYo/
+0Cm+BLQGyoDyZQ4AfQitwJp2ukuVgko26EI3DaQNhSjWZQBM4GQ6r118GCMzDKHVC7xqv+1vRZ5Z8Uw0FfGlk6RbXQ0Cn6hSQAAAABJRU5ErkJggg==]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAYAAABbNsX4AAAACXBIWXMAAA14AAANKwESa5byAAAAFUlEQVR4nGNhYGD4z4AGWNAFcAoCADz8AQwyBgVMAAAAAElFTkSuQmCC]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAECAYAAACk7+45AAAACXBIWXMAAAw1AAANtQHoGCNgAAAAFUlEQVR4nGNhYGD4D8QMLAxQgMkAACFsARBQ6x8mAAAAAElFTkSuQmCC]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAA3UAAAOmgGDLWbHAAAAHUlEQVR4nGP5/
+/8/AyMj438GKGBB5oAFGNAAhgAANBcFEo/HUGgAAAAASUVORK5CYII=]
+
+2.5. ZORIZKOALDAGAIDISKRETUENADIBIDEAK
+1.Banaketakonstantea,X=k∀x∈R
+                                k∈R[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAMCAYAAACTB8Z2AAAACXBIWXMAAA6CAAAPHwEvJJGJAAAAYElEQVR4nNWTMQ4AIAgDJeH/
+X0Yd2ISWiIOdmztRVDMbtxGRhTFBPd3FrMBAdocRKgJ5GBjq0DIk8umyDiXzE59gzDWXZNVEEz6RRflfFr1jSZYtA9pEKHM4u3Ftn7ojE/
+                    UTOiQ27izlAAAAAElFTkSuQmCC][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAcCAYAAABYvS47AAAACXBIWXMAAA6+AAAOyAGTJ2+wAAAAcklEQVR4nMWTUQoAIQhEV/
+D+V7YNVrFydiCC5qeQ55hlamZPloiMgU86A2+iVAkBOoA0OP7BWgWrcy4gbYbpLNibXEDU+aUzBsheJUAGwdJVBTgU89jRZtxg/
+   3pySd/3dd8xO+UYdISfi7lCR3jhTOfBBlH1RHAIeBrfAAAAAElFTkSuQmCC][data:image/
+    png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAFCAYAAABmWJ3mAAAACXBIWXMAAA/
+  yAAAN8wFzPv9yAAAAFUlEQVR4nGNhYGD4z4AFsGATpLIEAH7gART5m+1UAAAAAElFTkSuQmCC]
+                                 [data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAJCAYAAAACTR1pAAAACXBIWXMAAA7cAAAPjgFx+kNVAAAAQ0lEQVR4nGP5/
+                                      /8/
+Az7AyMiIVQELXl1AADSYEZsBBDXiAkRrBNmMbCvRGjGcisvzML9h00SUjThDFdlkUgBZoQqyDAAKBhkmV1W9SgAAAABJRU5ErkJggg==]
+                                 [data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAJCAYAAAARml2dAAAACXBIWXMAAA9SAAAPjgHzNz1JAAAALElEQVR4nGNhYGD4z4AFsPz/
+ /58RxGBkZERRwIJNNWEJdGPAEtgEKbADGwAA03oHKJuKF/YAAAAASUVORK5CYII=][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAACXBIWXMAAA+GAAAQDgFWYR92AAAAFUlEQVR4nGNhYGD4z4AFsGATpJcEAJo4ARi3LwWjAAAAAElFTkSuQmCC]
+                                 [data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAACXBIWXMAAA+GAAAQDgFWYR92AAAAFUlEQVR4nGNhYGD4z4AFsGATpJcEAJo4ARi3LwWjAAAAAElFTkSuQmCC]
+
+
+2.npuntutanbanaketauniformea,X:U(x1,x2,…,xn)
+Irudi(X)={x1,x2,…,xn}
+
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAAAPCAYAAABOWynpAAAACXBIWXMAAA7aAAAOeAHkh4xEAAADt0lEQVR4nGP5/
+/8/wyggHrCQo+nnz5/sQPCT2o4ZCoDoAHvx4oXUu3fvxN+/
+fy9pY2Ozdc+ePeEgcWdn51UgGphSGXfv3h3p5ua2jFaOHUjw798/JiD4R1SAMTIy/
+l+3bl22rq7uAXFx8ftOTk635OXlLyOrARkGCjTaOHfgATMz81+Q/
+wgGGCiwkAMCnY8MXr16JSEmJvaCmg4dbAAlwECBcfnyZVNNTc3zoBQD4gNT1JeJEydOjo2NbRASEnrr5+d3EZtBwNT3/
+MePH1zo5v39+5f5zZs3oiC2qKjoK0IOgkXI3bt3NU6cOBEYHR3dTpkXcQNtbe0XV69elejp6ZmprKx8MTAwcBoutdLS0p9ANEYKk5KSug9KfjB+VlbWxo8fPwpOmTJlIsgjxsbGV5qampbA5Ovq6mJANBcX1y85Obl7yGYBHXB+7dq1eaGhoROI9URtbe1KGRmZj0+ePOEHeoJmgQUCwAhRBbr5w6NHjwQIqQUmomcgGiXAioqKNvPz839AFhMUFHyTm5tbAGLjy44TJkxIQxcrLy8ve/
+v2rSwpnkhJSalqbm4OJ0UPuYCXl/
+fz48eP+YlRO3Xq1FCMMqyvr8+XjY1tVXt7ezBMLC8vLx8WYKBsh8vA7OzsuWfOnJEDBSpMzMLCYjeIBlo0n1hPACuTu8SqpRQgu5UQANb+hx48eCDEAtMIajaAQhDEPn369A1gs0EDJAcSa21tXVBTUxOPzRJYijt37pwMsDww1tHROQNSs2PHjliYeSIiIl+B5Rg3sEL4AqwYeJAdDCw/
+ZhQXF2eC2KDsAc32j2FZBVimmunp6Z0EqQeVh6CyFaa3sbFxKahIQE75IPbNmzd11dTUrqCLw9wLYqurq7+Gsf39/
+S9s3LjRAF+APXz4UBBEsyB7Gp0NA9XV1QnAALTav3+/
+Gj5DQYGFzzzkwILJrVy5shhd3dmzZ+HZGJiqTyF7GsYG0QsWLGjAZx86G5h7/
+hDjX3yA6IYrocAC1WqgFIBcYRACbW1t86uqqhKJVQ9sC+bA2JmZmbunT5/uSqzeoKCgc79+/
+cLr32XLllXExMS0ff/
++nZODg+MHcmBu3rw5FUST1TXCBpSUlG6C6C9fvvAAwRdi9JASWOjZhpTAAgFgYBsRUhMVFdWhoKBwEVu3z8fHZw6IplqAwQCxgUUKuHjxogWhMoYa4NSpU85WVlbbQWxghHRjU0P1AMMHgA1bDlBSJ0UPMMbfwQpcEKBl98vc3HwPyPxbt27pcHJyYo14AM9P1I8X926QAAAAAElFTkSuQmCC]
+[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAAAOCAYAAACFB/
+pMAAAACXBIWXMAAA7aAAAOUQGgwROvAAADOElEQVR4nGP5//8/
+wyggHrBQ0zAODo7fP378YKWmmYMBPHr0SImfn/8tEH8kKsAYGRn/
+Hz161NPU1HQvExPTP2Q5ZmbmvzA1QMBICwcPNJCTk7sH8x/BACMlIB48eKCioKBwh3InDl4AD7CnT5/
+KycjIPAQFDjAlPeru7s53cHBYf+DAgUBiDIqKijoBVBudkJDQCBODBTYfH98PQUHB7w8fPhQkZA5Iz79/
+/
+5hgKZmWqRbmPhBNrF3wAJOWln4Eoj98+CB4+vRpOZj4zZs3LUAYlwFpaWkVIBqoR2Xp0qWNyHJz585trqmpWfnp0ycOYj1x+fJlU05Ozl/
+0yN4nT5504eHh+UmMXU+ePJEH0ShZcvXq1QUCAgLvkcWUlJQuuLi4rMBn2KFDh/
+xv3bolii6elJRUt3LlymLinA8BOjo6Z37+/EnVyggXMDMz2/v161c2YtSCElR7e/
+s8FIeFhoZOSE5ODpgzZ44jTMzV1XU5MAbwBpidnd3GysrKtbm5uflSUlJPYOKwpB4eHt5LrCdgeugBSLELpdAHcd6+fSsCy8/
+A8uzK9u3bdUByILE1a9bkgwITm0Gw5NzR0REEjLF9gYGBU0FmzJ49uw1mHjAQPz179oxPS0vr5bVr18SRHSEqKvr11atXPCC2s7PzTZh9enp6zy5duiT1/
+ft3Ti4urm/IdsH0XrhwwVJfX/
+8EiP348WMFUBmMXEmB2IsXL66OiYlpA7GVlZXf3rlzRwTEtrW1vQtSt2jRolp0d+EDLOgOwZafQ0JCJgLFJxIyDBRY+MxDdxSuAhdkHwiD2DNmzOiByVVXV69ubW0Nhanfu3dvGJB5Apd96GxsdsXFxTWDMCG/
+wQDVygpgWcANTCniYmJiL4nVAyrfCBW4hYWF2TB2fX19NIzt7e19eevWrbrE2gVMaTWE7AKpAQUeMDfIgIoWbOqpFmCgbAPCoKwtLCz8hhg9pJZtyB4gJbBAIDY2toUYNcDa3lpSUvIpuhzMbqrXRsQGFimgqKhoMz2aGaDyzsbGZjc+NXSpvpEBsK8J7HJy/
+CBWPbAdt6q/
+v98HiIluXJILgNmxBWT+rl27oq9evWqETQ0AycK5D1VbDrsAAAAASUVORK5CYII=]x1,x2,…,xn∈R
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAMCAYAAACTB8Z2AAAACXBIWXMAAA6CAAAPEwGDkd6FAAAAZ0lEQVR4nNWSMQ7AMAgDi5T/
+f5mUSmwFH6oy1GssHxAvd7++yszuGDflW2HsDCSEeB4YMYXU9Dl058EwpYCoKyFYbvUWRk+IYVNVGx6BVfo/
+rPrHEYxUv1MLy/BsomqeesebTSpeaQPydDok6B22BgAAAABJRU5ErkJggg==][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAkCAYAAACAGLraAAAACXBIWXMAAA79AAAOmgGSZiikAAAAv0lEQVR4nK2VSw7AIAhEa+L9r2zrQoN2BvnIxqQyDxSwtbX2ICulzI3Pp0Cnz+ouGs59lRAWZAFokZC4+9ezq24UoKUvj+rOQIopgEXfxQtg3xxVGN+QmGYgS6kfyHgHLLoJgMTyjlSAFvkIYOK9Qq4+QOWlfWCdix9AE5v6wDORE+BJGQKi4gnI2P0qSEhfzZ2odZ75VY4YbKS+ymc9Nc7uDNAPJXQH7iqwLE4gmkG6kax2D5Aa5ysZpAHRV+kFWxyYiIkV6GsAAAAASUVORK5CYII=]
+
+
+3.Banaketabinomiala,X:Bin(n,p)
+nprobaburutzendira,ondokobaldintzenpean:
+a)Probabakoitzean,elkarukitzaileakdirenbiemaitzaposibleetarikobatlortzen
+da.Emaitzaposibleenbatiarrakastaetabesteariporrotaderitzegu.
+b)Arrakastarenprobabilitateapadieraztenda(0<p<1)etaprobazproba
+konstantedirau.Porrotarenprobabilitateariq=1–pderitzogu.
+c)Probakaskeakdira;hots,edozeinprobarenemaitzakez du eraginikbeste
+edozeinprobarenemaitzan.
+OrduanX=nprobetanzeharlortutakoarrakasta-kopurua.
+Irudi(X)={0,1,…,n}
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAANCAYAAAAdWrhRAAAACXBIWXMAAA6sAAAPNAFk8gimAAADm0lEQVR4nGP5/
+/8/wyhgYGAhRxMjIyMw/
+P4zUtsxAwnICggLC4sH6GLbtm1L8PLyWgDjCwkJfaupqVlQVFSUha722rVrRtra2mexBSYokEG0vr7+swsXLkiT4z5iwa9fv9iA4BeITTAgHj9+rODo6Hjm8OHD+pKSkk8fPHigcvz4cUV0dZ2dndWwgEBOMdhSj5aW1jlsduXm5u5A1kfrlMfOzv4TZj7BgJCTk7uP7BhFRcXb2Bx36NAhFWz6bWxs7hHrsMmTJ3vA2BcvXrQApooTxOqlFMADQkdH5/
+nVq1clQJ4ExcStW7d0VFVVrz58+FAJWQM3N/
+cvfAbu2rUrCpnv6+u7F5iafG1tbTeT4rAPHz5INDQ0LCNFDzZQVla2obu72x/
+kL2CqnVNRUZGMLSLhAXHlyhVJUACcPXvWDlmhvLw8RozC8jGyutu3b2uBaGDW0UNWKygo+ObHjx88pHrA3t5+AzWyRVdXVwAwIP5XV1evbm1tDQUFBEzOw8PjGoyNkjVycnJ2GhsbH0IWQ3YMrjy7e/
+fuSFdX1+UgtpGR0XYgVQ6TA6YoFW9v7+mkOP7Ro0dK1C4bQIGALrZ9+3ZtUMENKrNQAmLKlCnuzs7OmQEBAXCHI3sel+NAgQCMwdsHDx5UNTExOYjugJaWljBiHdze3j6vsrIyiVj1hACw3JkAjJwnIPbUqVP7CgoKtsLkkP0GDoi7d+9qaGpqXoGVD5cuXTqjq6t7GiR37949dSUlpbcGBgYP161bZ4TLQuTCcubMmZ3o8oWFhVt+/
+/7NCgpsZHGQnUxMTP9A9J8/
+f1hERUWfz507twUkBUzS6Tdu3BADuenLly88wPLpK3qN9PPnT3ZQFYirpsrLy8uHsYEpvhBXZIIDQkVF5TqyAlgggACwlrgFDAxhkOG9vb3TgeqY/
+v37B8bI+Q0ZpKWlVaSkpOy/
+fv26PDzEWVj+zp492xUYEOBYb2trmw+iQWYAHQvKTgxAj89CNic+Pn4LjM3Dw/
+MFZBYnJ+dvZDWsrKwofBg4f/
+68taGh4VGQPcjiX79+5QYFKNaAQA4EbCG2cOHCOljIY7MUBJycnG4h8+fMmeOIzAeV3Pz8/
+AtBbPSkD2yrSGATR3bT379/
+mUHsb9++sWFzKzIbFEmwAh3ZTHzlDlEtS2DMNBFSk5+f3wfLWtjkz5w54wBsacaji79//
+14IX5YDAZC5zMzMf4lxKwjgcgM6AGVVGBsAA5TZnKuFhQIAAAAASUVORK5CYII=][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAAMCAYAAADWBmv0AAAACXBIWXMAAA6sAAAPEwG+N7rDAAADhklEQVR4nGP5/
+/8/wyhgYGChpmGxsbFHFy9ebA1iHzhwIAgIlly7dk1FQkLiGbraFStWlEZERHRjM4eJiekfMIIYf/
+78yc7GxvaLmm5EBuvXr8/y9/
+efAbKPqIBgZGT8X1FRsdba2noHsrioqOgDc3PzPTA1IMeD2FevXjW2s7Pb8O7dOy6gZdmBgYFT0c2MjIzswhYQDx8+VP737x8TyCxYgJDnTcIA6K5pMHcTDAhkDxILdHR0zsD0gAIhPj7+yMKFC22I0SsvL38XZi8pdlIK4AGxYMGC+sTExAaQB0COWLZsWTko1jZu3JhBqSWLFi2yBgYEpcaQDYDZtSYuLq4Z5DcjI6Mn58+fl0aPXHhAJCQkNIICwsXF5QayIlAeAlIzsFkAyi7t7e0htPJATk7OTmqYAyy7WkABoaCg8O7BgwdCyKmNm5sbXAahZA1grNWBNCCLHTx4MACY3zfis8jR0fEWtfPy7Nmz2yZPnuxBLfOAqfskMJVbgNjMzMz/
+YOJfvnxhz8jI2IMSEMC83MTJyfk5NDR0AkzM3t5+AyFP7t+/X42FheXvnz9/
+mLHJA1POOlIcDUq+586dkyFFDz6wdu3avPT09A4QG5gtrJ8/fy4Jk/
+P09Lyyfft2HXBA7Ny5M8bX13cBrHy4cePGXnV19csgOZjY7t27I/
+n5+V9ycHB84eHh+QikvwoICLwDBtx3kLq/f/
+8ywQwH6SkuLt7U29vrByz83gNrAkGQOK6CFyQOqypB7Nzc3B35+fnbvn//
+zuHn57fUx8dnLrJebGxgDSUMBG9A7K9fv3ID3fgFpiYkJGQijA0M5CPHjx93B9Z4u0D8HTt2aINocEAAU8CcX79+gdm8vLw/
+YYGA7LFLly6ZX7lyxQFZXFpa+iYoxWCLBWD+LlFTU3sNCwQQKC0t3bhp06Z0YHIUWLp0aQWoQI6KiuoEyQGr0hNdXV0xIHFkc0CBAKKBZdE8mJicnNwHdPuEhITewthcXFzfpk2b1vvt2zcuEBvZTHFx8S8WFha70PWDPf/
+p0ycOmAAyGxno6emdBGFsctiAoqLiLSAQRXcsMIZnoqtFTiUqKirXsJl38+ZNVRgbOXCR9SKnkjlz5oRnZmaWgPiwwAaBFy9e8GIzn2otS5AjgNVUNbCEbsWlBlhWJJNj9u/
+fv1nnz59vR6x6YBkgffbsWVli1L1//14IxAYA3ACzZdzdZCkAAAAASUVORK5CYII=][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAFcAAAAvCAYAAACWuVbAAAAACXBIWXMAAA7VAAAOqgGm35kMAAAHT0lEQVR4nO2bC0wURxjHCxwnUrQ8BVSQIloFATUI0gKmKIpwQWLAQHMIAvW0CGeIlBI9m9BqChJCaz0EaUFqHxiipUCCULDIU6wgDxFJkYdYHzwrz/
+Ls95EuWY67Y4GTXYn/hOzM7De33/5mdna+mYU1Pj7+1hu9GrHodgDF4/
+Fy4+LidtLth6zFCLiiYLlcbvGVK1fep8sfWYl2uP39/
+cqgfnJZVFSUG5Guq6sz27hxYyUMX3KbN29+UllZuRLTeC4zM9PX2dn5+4X2mapohyuq6upqS1NT0zIiv2HDhqr09PSPq6qqrO7du7dKTk5u8iXR0dGxih4vqYlxcM3MzG4TPRP1DUgoFHpAD16RnZ390bp169qJcwcPHvyisLCQY2Njk0GPt9LFOLjJyckCcp7P5wcSsPfs2fMjGTzK1tY2XbSMKWIU3OjoaGEQSJpNREREQmhoqD+RJw8TTBOj4AI4r+Dg4E/
+IZeReKa6HQm+uXQjf5iLa4T569Mh406ZNf2J6YGBAcbb1tbS0uqnawiwk7sSJEzxNTc2+9vb2t6XZ3rhxg+vo6PhDYGBg1vnz5x2pDD05OTmeMIzFlJWVrV22bFkP7XDZbPYgkR4bG5v12MlisUap2iJYa2vrxpnAokZHR1m5ubnu9vb2qQB3cuiJiYn5lmzn4+MjUFVV7cK0g4PDzw8ePPhJRUWlFxuDdrhkGRkZtc9sNVVbtmypmI19aWmpARU7mD8nIiBocHkIciKI8uPHjx+TVs/
+KyqqZSDMKrqyELzmBQJASHh7ugWmEhD0WhoUANTW1gQsXLkQHBAQEE/bQ0/
+7t7e1dcvjw4bwDBw7E79q16xc9Pb1/8JyCgsIovmhnuua1a9eOwe90YuNt27at5c6dO/
+qLEi4KwZLzJSUl7+Kxs7NTmVxOwMf0w4cP9RAspltaWlTxSHWat3///
+snhAsHicdHB3bt3bw1VIBUVFR+0tbWtIPK3bt0ykqUviw5uVlaWCZEOCQlJKy4udpRk6+rqmtHc3KyG6a1bt7bK2hepcOPj47+CcegzIg9TjJ2Wlpa5kuzl5eXH8AUgSwfnKnj8NSIjI12lBRkwrz5rYmLy7PHjx6rGxsbPCgoKOLL0QSJcXHFCsE1NTUYGBgZ/
+YQwPc7cOaT+GYFNTU/lubm5fy9JJqlq+fPng06dPJxZz1NXVpfqK8vDwOId/
+mMZGsLGxyZSlP2Lh+vv730xISPgQ0wgWj1RjeHd39xiwowVuT0/PEh0dnb/
+puLY4TYPr6+ubn5iYaOfl5eW6Y8eOX8VVgl7srK+vXwt/jZcuXToLc81sCwuLP/Ac9oCMjAw/
+DofzHRUHhoaGlOZ1B/
+8rNjb2nFAojMLj0aNHQ6jWy8vLc4NZghXWrampsSCiRVloGtwjR46EJycnZ4uChZ7bQKTx8UGIIyMjrEOHDp2GsHUpcQ4ilgKYK8b29/
+dTgisrzQYoWRiB4Z+s/UFNgwsRxu/
+Qm9jkMggFFeBx6xK1xTFWUVFxGONooszQ0LAJYNthHWik06J1oDE+l+TM4OCg2LWFM2fOJKWkpOz29PTMun79+k54sa4hzvX19alIvj16JXbMRWDkPEYp9fX1K0Xt4IZDuFzuWXIZAFqqra09EVvn5+fbi9YRhQtDSz2Rbm1tfUecPydPnvQ5derUeFVVlW9YWNiUc3V1de+Jq8METYMLNyt2lQn3rog0gktLS+Pt27cvThQu9DL38vJyGxaLNZKUlGQr7eLd3d2q0EBhPB4vFPNKSkojs72Bly9fzrgIQ5emwMV9qoaGBi1pFXCsLSoqcnJxcYmHbBzE0g7bt2/
+PIdvAC66I0sWhASBC0iHyMLwMirN7/
+vy5rqTfgJfRtCeKKZoC19zcvFTSdKurq0sdg4qZFq8h4jGkenFcmuPz+ZOrTI2NjRrQWLuhsbIxD+GoS29vrwbE+xPbOxhxgY+3yU9LbW2tNtXrLbQm4F68eDESZgmf3r17V+JjjGuWL168kNiDUORFEKrC8Zyc9/
+PzS75///5Eb7azs/sNxuE1bDZ7CPO4S6Grq/
+uEbI8rULO53kJqAq6Tk1MsHiG+LpRmDC8Vb2nnZbFRCPF+ATm/
+evXqyfVRUbAdHR2a5JkD0zQBF4MBuhwgb/
+Og8IVIta6mpmYbU3d+UbSvipG3eQgpKysPQRDCFmdPFpPBomiHK05UwOJnTvg1zkL4M1cxEi4VMR0s6rWF+zroDdxXKEbCxZ3Uvr4+VS8vry/
+p9mU+YhxcciAyl6CESWIU3KtXrwaLlpWXl9tCcFMgzp7pYhRcLpcbqaGhMeUrc4FAIMzMzDSly6f5iHa45G2e4eFhBWtr6wbyeXl5ecZ+IjqTaIdLFofDqS4pKVlLLnNwcLhJlz/
+zFaPgpqenm4l+ZxAUFMSny5/5ilFwUebm5pNb47jZSacv8xXj4OJ/
+7BBp3OKn05f5inFwF5PewH2Foh3u+vXrGb+6NVfRDhf3x7y9vQsvX75sQ7cvstZ/
+PoL2rzD4V4cAAAAASUVORK5CYII=] n∈Netap∈(0,1)Kasuberezia:Bernouilli-
+renbanaketa,X:Ber(p)=Bin(1,p)
+Oharra:X:Bin(n,p)⇒n−X:Bin(n,1−p)
+4.Banaketageometrikoa,X:G(p)
+Ondokobaldintzenpeanprobakopuruzenbakigarriaburutzenda:
+a)Probabakoitzean,elkarukitzaileakdirenbiemaitzaposibleetarikobatlortzen
+da.Emaitzaposibleenbatiarrakastaetabesteariporrotaderitzegu.
+b)Arrakastarenprobabilitateapadieraztenda(0<p<1)etaprobazproba
+konstantedirau.Porrotarenprobabilitateariq=1–pderitzogu.
+c)Probakaskeakdira;hots,edozeinprobarenemaitzakez du eraginikbeste
+                           edozeinprobarenemaitzan.
+Orduan,X=Lehenengoarrakastalortuarteegindakoproba-kopurua.Irudi(X)={1,2,3,…}
+
+                                 [data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAAAbCAYAAAAnFzLpAAAACXBIWXMAAA7dAAAO0AGfXIodAAAD2UlEQVR4nGP5/
+                                      /8/
+wyiAAJaBdgAMXLt2zZCdnf27srLyDXrb3d7ePq+ysjJp0ASGtrb2OWAqZRwIu0EBAaIHTWBQCwA9trajoyMIFLBA8J+UAB52gQFM8sEqKirNIDZyQDx58kQeWZ2wsPArTk7O78hiwy4wQEBdXf0kutidO3eMkPlsbGzHSAoMd3f3aytWrLARFBR8B+KDQldGRuYhPj3/
+                                   /v1jAoJ/
+xDsdPwAl9ZiYmGOTJk3yFRISeguLbUdHx1s7d+7UuXfvnoampuZFmPiHDx8EbWxstvT29s6wtrZeZ2FhsQsk7uDgsJ6QXTgDIzs7exfQMi2godOLi4szQWJycnL3QZ7FZyAzM/
+                        NfaheEixcvtkbmf/v2jau/vz8BGLu/
+ NDQ0LiHLCQgIvAfRBQUF2SC3kGIP1sAwMzN7eOrUKXAegwUEsYURKLCkpKQ+PXv2jI8Uh2ADwLz/
+ Bpud3NzcX2HiIHdt3749Hl0NqQEBAhiBce7cOZvTp0/LEdJ46NAhPzs7u00gNjAFxQKz1GKY454/
+                    f85LqkOwgbt37wrD2BMnTpy8dOnSyvfv3wuhq/
+             Pw8FhEDfswAuPz588iwILlNyGN9vb2G0GpAOR5WEBQE/z+/ZsVme/
+v7z9RQUHhDkz86dOncq9fv5ahpp0YgQEqaC5dumROSOOMGTO6QAUloawDCix0sU+fPvHx8vJ+xqcvKCjoLCj1LViwoCEuLq4JFBAgcVZW1t/
+AQr1UQkLiqbS09KNFixbVEHIrsQBrmaGrq3uKkEagZ95TyxHYwJYtW3Q3A4Gtre1mdLnw8PAeKH1q5cqVZtSyk+x2RnR0dDuMDUq6oBjDpo7YmuXt27cipLph1apVpsDAIFUbToASGMAaxBlX1QksncFtB1CyT05OPgjyZF5e3vb4+PgjCxcutIGpu3/
+                                       /
+vmpqaup+UhwBLLRtjYyMDiOLAQvlmLlz57YAW5QZwAYT1oCidhWOEhjm5uZ7cFnw588fZvSqDtgQ8kRXp6SkdItUR4ICwtTU9BFyLQYsk4rXrVtnlJSUVOvp6XkFWH3qkGImOQAcGMAe44srV65IAqtEaXyKccUQDIC64eTG1pkzZ2RhbFCgw+wCpcQdO3Zok2MmqQAcGDo6Oo/
+                                      +/
+v3LDCyhn1FimJaW1nlqOAq5fUFPAA4MapbIQxkMy14ruWBQBsby5cvLgAU2CxD8oae9gzIwIiIiumEdw1evXkk0NzdTpe9BCAzKwAABUEAAq1pHYJW7v6amBqNXSgswaAMDBEABQU/
+ 7BnVg0BuMBgYSGDSBcfz4cXdgq1ML2Pq8NlBuAABTWJpaLUv61wAAAABJRU5ErkJggg==][data:
+                                    image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAAXCAYAAABaiVzAAAAACXBIWXMAAA7HAAAO5gG0DTqVAAAGD0lEQVR4nOVXaUxdVRAuS8sSLKRGGgpKSdmRx5agNQpWqShbCdgqULYHsoZSKZWlCIKN7BQLDbuAJbYJYCirkSUgDSC0ZZNNIEBCC20aAkhkkcWZlx5y3+29cN+Tf07ycs87M2fOfDNz5syR3tnZOfR/
+                                IOmDVmhlZTVaX1/
+PO3LkyMbo6KiRrq5uP5OcpaXluLW19f3o6GhvJn5cXNyd8vLyD3p7e9+QkZFZF8cWLy+v9pKSkvdwzBmohITEjqqq6vLZs2eFDC8uLrYg44SEhNtNTU265L+enl4fZIwEXRc4gNfW1qZVXV3th3rpMvr6+k+Hh4ePx8fHH2LicyUESdZzAsp1M4jCxdjYWPf95CDKA/
+h1cHDIh08enY8gudglCu0ChWiUgaFuCMjU1HQWUkYVx8bGxo+5ejQ9PT3nII3b3t6WPChdu0AhEhczMzOd4Fx8+ejRIzUy39/
+                    ffwIjyqaA6gQdHZ0Homy+tLSkWFZWFs3Ey8/PT/
+     T3948URd9eJJS6z549OzowMHCaLsQlouKcpc7OznNubm6JTDw/P78o/EFh805LS8sLDw/
+3F0U3IbQpICCgSQjohQsXujs6OrTm5+dfIXMQ0bdra2t97OzsivZTCBFozsvL+5CLAcrKyivgWIX95GxsbIrl5eUXuehkoptAubm5VgKgeA0MDQ1ZVlZWmklKSm5TBXk83u+zs7P6ly9frktOTnbaq9Rra2v/
+            ycbDiCcmJv4QGRnpc+zYsb/BIdcqKipCl5eXXz1//nyqnJzc6uHDh/
+        9Bh0G1jIOrIR7X2draDtbV1Rk2Nja6XLlyJR0y7sTExIS+lpbWEMkg1LewsCC/
+trYmi3qomRUaGhpyCUgAlHoNwGZbMzMzp9TV1SeJMHoV7rwfb926dWNsbEyXCgDmPiJjSK8AMCYQx8HBwb8GBQU14pfIREVF8RUVFRdcXFzut7a2fkLW8fn8v1ZWVhQAsOCM+/
+r6xnp7e38DwfgeQeIcZNkpKJKTL2wUcrasrOwmfulBopIAKNUDGxsbjFeOlJTUFnqGTRESRCmJyQFkj7CwsJrAwMCrTGsVFBRWyN6bm5tSdL67u/
+               v1iIiIr3CMQaDa/OTJk6P4xSaFrU6I3RkxFR8sHpD+l5ydnW/
+S5dfX12UyMjLs2fSNjIwYV1VVmbDxS0tLYwkgrrS1tSWFNQbHYgOdnJzUZZqfmpoyIGNIgAZIP0GKUs/
+                                2+Pi4AZznP1JTU/
+NJNcXjQ9WDjsRjRKLs6emZIKqN5ubm0w8fPnwdxyK1gEzz1KhCezgCRUMPx1BRj2dlZX0MQF9a09PTY4frUCcUJ196qkIKbiIfeD/
+                                       /
+lxYQQXJuATFyJiYmQj0r2+bUPheuj6dM+qDHdXR1dU3GMQFLlyFRTEpKcoJKfyDPq12g2OqhJ7u7u9WxUsIlG2NoaNitqak5QgWFV1FLS8un4m4Ir5YqrrLYAhYUFHwn7l5U2gXa19enit7FZxY1MkhcW0BRCZ9RbOuhBUyCBiQCx3DdXBN3D0JCqQvdz2BNTQ2PLkQ1Bi99vA/
+pMjgvKmgnJ6cyNh5U8Ej87eVkLoQ2wV3MFwIKrZ6gA4GicofMQfrOQfdyFGgZnPAFE0gknBelcISEhPyCxWo/
+     OXhgvMtFHxu9VIzwtQDpexrOaicwdoFiy0WE8f0I3wJxNoQn4E/wkHbFsb29/QA9c1A/
+7PWWkZFRF3UeXlU5KDs4OGhuYGDwALufubk5VeiklLANRJnV1VU5bP2geku3t7efO3PmTCV9f2kqajYjkTc9Pa0JhpbhxY3/
+            4SeJxcLHx+drpjVFRUXfFhYWXscvysB71wV/OOfo6HgP54ks8pubmz/
+                      Lycm5iv02NvygWwKuBx5xCPTatzU0NOZg/
+fuQdXxoHk5i37y4uKgEDrK0sLC4B83BOykpKfGsQKkg2QDDJuOinEG6A3AtROcum2OgCN6NiYkRtJBMrxpwhI6amtoSjj08PHadpKSktIggcWxmZvZbQ0PDm0z6OTcMXECiDKaViorKYyY+RPRztrWQcvZdXV0n2fjPnz9/
+           DV5RipyMfUHZ2dk3iN3/AreBQKrOSkxoAAAAAElFTkSuQmCC]p∈(0,1)
+
+
+5.Banaketabinomialnegatiboa,X:BN(n,p)
+Ondokobaldintzenpeanprobakopuruzenbakigarriaburutzenda:
+
+a)Probabakoitzean,elkarukitzaileakdirenbiemaitzaposibleetarikobatlortzen
+da.Emaitzaposibleenbatiarrakastaetabesteariporrotaderitzegu.
+b)Arrakastarenprobabilitateapadieraztenda(0<p<1)etaprobazproba
+konstantedirau.Porrotarenprobabilitateariq=1–pderitzogu.
+c)Probakaskeakdira;hots,edozeinprobarenemaitzakez du eraginikbeste
+edozeinprobarenemaitzan.
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAGEAAAAxCAYAAADKiMdUAAAACXBIWXMAAA6xAAAO3AFM3wowAAAHQ0lEQVR4nO2aDUwURxTH5Rv5sCCE0AIlmihGwAYhauRD8ZSKCChCjZFT0hKEYiGAVSpoiuEAFeVSoApUPgo2QUAQQSkICSAJKSBCCAk1NQoGikUFinrHR+l7JGuW5b6W424X8J9cbnbmzdzL/
+HZn5r1b9enp6RUfxazUmXYAFR0dfTspKcmHaT+YEuMQuru77RQBYHh42AA0vNDjKkKMQ3j69Kn9xo0b28l1qqqq/
+4FU5Rn38ePHu3bu3HlbPu+UI8YhiBJdACoqKtORkZF3r1y54oVlkAoCePTokfPmzZsbFeXnQol1EFJSUtIjIiJCZbUH24qysrIQb2/
+v63htaGj4nmizt7dvQCCK8HMhxToI1dXVO2BiP1xXVlZ+TbXZunXrXWNj43+wzOfzPfz8/NKwHB8f/
++vr1691CLuJiQkNhIBPhxJcn7dYBwEm9Qj52sPDI1tan+3bt1fh97lz57ixsbHHiHp1dfVJBEOuY6NYBYFYz2W1R9vW1tYdkmyoYNgoxiHAEXXL/
+v37f5lPX4SG6z5xzcb1f2Rk5BPQiCQbxiHARjrEtA+ELC0t35w/
+fz49PDz8+7GxMS2iXp59BQE0Nzfv2bZtWw25/sKFC/
+nwW9yenh5bxiGwRW1tbS43btwI3r17d2FgYGAMuQ3jFnmeMgSwevXqd+RDAwIICAhozM3NdV6WEGpra7/
+icDi3YAJ+PH78eBze5Q4ODvU40a9evTIuLy8PImyxbWBgwIzO+KWlpaGenp4ZfX19a9esWfMn1kHso9Le3u5oZ2fXhNeYqsnLy3MCH5hfjpgQ3PV7bG1t648ePcqj3uVWVlbPL168mEK2NzU17Zd1bOJw8fbtW10Yq3t8fHxmjnNycqIgcHyIbbCP9YEPFlevXp2sqKj4ZtlBiImJKcITk7a2toBcT4AYGhrSldS/
+sbHRk1pnbm7eg3c8+XQHAWSYUCjUIGwcHR0xhZKOZQSA3wSgZQchISHBl8fj+WEZ1mgjuv0jIyPTqXWwtCQjBEydEHX+/
+v4J8KQlEtc6Ojpj4sZcdhDIMjIyGqK74ba0tHwuqh72gW8xd4Vl2IifUdubmpoOiBtTIoTMzMykoKCgaOJ606ZN/
+Z2dnZ+Jsz958uTvaWlpX0oak0mlpqby9+3b14Xlmzdv/
+iArgOHhYUMDA4M3kmy8vLwycDk6fPjwH9nZ2QednJyayO0QMCaUlJR8J6qvWAiwkcQhACIT2dvbu1YSABQCcHd377p/
+/76NJDumFBYWFk5MPHmpkCQiRpAGTE1NbYqwEWUPkb2Fj49Pmqi+IiFAIFEA51h/LBOpYAhk/
+pLlzqmqqrKWZrPYhCcdefpD4Kcnae7mQDh9+nTp5cuXDzg7O5e6urqWiOoEx6pAeDwH4JGrrK+vP+Di4nKHiCgTExOlJtzI6urq+oKO/
+XyFKXI4Ev5MN1WOgk31nSx2ONF8Pj+N+jt6enpiN2XUHAiwBJ1FCOIAoDDXg5NeXFwcDo9YKjmkhzPwAwx2YI3MlMVxZYnuxM9HOA/
+z+Z05ENatW9c9ODhoKkvnQ4cO/
+UStMzExeVZXV+cPH9+Ojg5XavtCTAbcKHUZGRkcvONOnToVzMbEHR2J3BNgIgeldYSIc0BUPQQg2uvXr28TCAT6EPiYSBuHw+Hcke7mbMGpbdeJEydqEURUVFQI3f5s0xwIsmQLcU+A5eZhaGhodXp6uhu5raioKOzSpUsHsQzHwZyFc3W2EARAUNTwStUsCP39/
+RaYwJLUASHB3a5J7AurVq0qhs3Yl2jH/QQgyPTjOA5s8H/
+Tdfrly5cyLZeLRbMgmJmZ9YpbX4VC4Ux+ndxOtZ2amlJLTk6+LuuPa2pqjgN0C3J//
+OCZW5R9Q0OD94YNG5p1dXX/
+DQ4OfgBxSQoEiBGibAlZW1vThqxszUC4d+9eACwdueQULlU4YdKCFi0trfHJyUk1Og5oaGgIiTJmNCH0vw7rfLAoWzg2lxPL5bVr1/
+Zgalja+GVlZRw6/
+jChGQhwDh7Fb09PzyxJxtJOIXQBiBKPxzsmDgJ1vyJy8+KEKYTCwsIt8vqkaM1AYPJNtZqamoPk/
+5jJ/z7JK4j2OxdqLEWK8SyqjY1NB7UuJCSkBpcbecbFp/
+bMmTOB8oyhLDEOQZQgCPOSd4yCgoKzXC6XtxD+KFqshLBy5cr30q0ka7EAQLESwnLTRwgs0EcILBDrIAwODn4KQdtUS0uLhyJzT2wS6yDgOz54vEQAdF8QXqxiFQRfX99WOBlNkOtevHhhaW5u/
+pwpn5QhVkEoKSmxx9cDyXVZWVlJcXFxR8T1WQpiHAL1P2bqXa+lpSVYscTFOASqnjx5YkW+dnBwqBFnu1TEKggCgUAb3xHl8/
+kf6tzc3H5j0CWliFUQYOkR6uvrf/h/IT8/P0aS/VIRqyCgRkdHtYkyvlTLpC/
+KEusgLEd9hMACMQ5h7969t5j2gWkxDsHd3T0PNuBYLpcbz7QvTOl/
+tfAFE6nfn3sAAAAASUVORK5CYII=]Orduan,X=n.arrakastalortuartelortutakoporrot-
+kopurua.Irudi(X)={0,1,2,…}[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAeCAYAAABqpJ3BAAAACXBIWXMAAA7bAAAOigEJUdzeAAAAvklEQVR4nO2Y3QqAMAhGG/
+j+r7wyCEIy5+bUC89tZR4+t36g936s0lq7i1y12nIxJWBdEGU8RcwFvFOAJ/
+7oRmYxTwDxHCNRgEsI4ZpMtQakZjhBrxSWRwib9N553oDFjS1qjD5LaOJbFrEnKQT+NgqJ7QLSLiY1/
+z7+NV7hCWjXDz0/
+XIBjdKzSClC4pMIErJ4bKRPQ7EopBTSECFi+dmwXmGlWc02NUDQlEE0JcKT5qJ8h1V+J7JQAxfsPxQme22NmmZ8n8gAAAABJRU5ErkJggg==]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAeCAYAAADzXER0AAAACXBIWXMAAA6dAAAOzAF2c90sAAAAXklEQVR4nO3UQQsAEAwFYCv/
+/
+y8Ph63F2HBQ2jst+jw5yIiYWgCgjghpI5mGXch41trW+4NpjfFJK2MtsmGKtSt7oNrshSqWsd5iwBaQ+8tmK4EDB/
+4In367983PcAFfwSlypcEQ0wAAAABJRU5ErkJggg==]
+
+                                                                   [data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAAMCAYAAADYrxWbAAAACXBIWXMAAA6oAAAPEwElpvjVAAADP0lEQVR4nGP5/
+                                                                            /8/
+w3AHLLQy2NPT84q1tfXZmpqaeGzyjIyMwPD9z4gu3tXVNbu8vDwFxMYmTyyQk5P78OjRIwEQmyhP8vDw/
+Pz69Suburr6a2TxGzduiGFztISExOd79+6Jc3FxfcPlGWxgz5494WlpaaVlZWWpMjIyH0EeBrGJ9xoCXLt2TWb79u3xwMBeSNCTpDgSBl6+fMkD8iCIraqq+qa3t3dGcXFxBiF9Li4uK2HsJ0+e8IPsJteTwACa09zcHA50O8KTGhoar27evCkK8hDI8Dt37mgqKyvfAEa5IjmWwEBERMTekpKSdGI8iQ4mTJgwhVx7QR7csmVLMogN9yQo6YE8d+bMGXvkmAOm7fu4DEJWp6Wl9RKbGmFh4dfYxAkBAQGB7x8+fOAkRy/
+MbcuWLasAsVGSa1ZW1m4TE5OD6IoJGXjw4MGAq1evSmCTu3v3rgqpDgSmKN0XL14IkqoPHURFRXVkZ2fvQvHktGnTXIuKijRAyRQmBswnN4AFggY+w+zt7TeAkjtyQQQDkydP9li3bl02KY7j5OT8wsHB8YMUPdgAKCanTp3qBvbk/
+                                          fv31TQ1Na/C8uOlS5fMdHV1T4PkgA40A4k9f/
+     5cGmj5Vz4+vk8gPrqBoPwMYwMLmukbN27M8Pf3nwHiBwYGTsvIyNgzc+ZMZ/SU8e/fPyZmZua/
+                                      IPGfP3+yAwN5s7Gx8QmQHcB8lQMspYVB7IKCgq39/
+f0+k4AAGPDzgdnjvJ6e3rOLFy9Kg+RB+PTp0w6wlAjio+RJJSWlm8iWwzwIAiBPgeRWr15dcOvWLQNkB1ZXVydgC0GgQ7OAFqQA68l7MHNBNLAA2gRit7a2LmhpaVkIoisrK5NggdbT0zNTSkrqGTBA5UD85OTkzTAzP3/
+                                                 +zAOigansAjCfvwCxdXR0HsH0srOz/
+xEVFX0CU19XV7fCx8dnLtDeeSwwB8AkceXB0NDQCdjEcQGgBXNAGMYHxaKRkdETbIHz7t07IWziyG5qa2ubD2J7e3vPg4kDk6MFjP3jxw9WZD2lpaWpwNg+A2JTrcUDcggsuWOTByYry3PnzsmgiwMLGClg4+EZIbOrqqoSSXGPnZ3dDZh9AF/
+                                                  UjWe9m2liAAAAAElFTkSuQmCC]n∈N
+eta[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/
+qH1jAAAACXBIWXMAAA4UAAAQRwGBA1fGAAAAE0lEQVR4nGNhYGD4z4AEWBjQAAAe0AEI5XOREgAAAABJRU5ErkJggg==]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAACXBIWXMAAA+GAAAQDgFWYR92AAAAFUlEQVR4nGNhYGD4z4AFsGATpJcEAJo4ARi3LwWjAAAAAElFTkSuQmCC]
+
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAANCAYAAAAT88Y+AAAACXBIWXMAAA7QAAAPBgH1YpFtAAADRklEQVR4nGP5/
+/8/
+w3AHLORoCg8PP7Vy5UozajuGVoAsT65atcoU6EkM8ZycnJ1TpkxxB7GBKYSRiYnpH4jGZsacOXNaU1JSqrHJMTIy/
+peXl3//
+4MEDIXLcBwJdXV2zy8rKUkFsojwJstTZ2fmmh4fHQRC7p6dnZm9v7wwXF5cF+vr6J2BqYB6aO3duC9CDf0F8GRmZj48ePRIEeRjZzNTU1Cpsnly8eHENSB8II5tJKgB5EKafoCdBCn/
+8+MHBzs7+E8RvaWlZVFNTE4dPD8jxMMdt27bNjZmZ+S8xjn358qVkbGxsC8xe4rxDGMA9WVFRsa6zszMQFoI7d+6MdnNzW3b48GEfmAdBoLa2NpaQJ5GBnp7eSWLViouLPyfe6cQDuCc7OjqCgJ787+joeAs51G1tbbega4KF8vbt2+OBSXgRiC0tLf2J2o57/
+vy5NCX6gSkInEVQkmt/f//UgoKCHHSLJCQknoHYrq6u13fv3q2JblhwcPDZJ0+e8FPiIHTg7+9/
+YePGjQaUmPHnzx/
+mjIyMPSieLCwszAYmr4NOTk6rYWKSkpJPYTG7Z88eDWyGrV271hhXIQFM7r6kOg5Usj58+FCQVH3oIDs7e9eMGTNcwJ48ceKEq52d3XZYfrx+/
+bqBhobGRZDc79+/WUFira2tC4AhQ1Rp/
+OvXLzaYp4HmbgLRoBQhJSX1BFtAgNQ+ffpUFiQPYjc2Ni4BFXDAKkROVVX1joKCwo2IiIhumF7kAIWxP378yC8gIPAB2fxp06a5Tp06FZJcLS0tdyFLwjwIAiwsLH9gngc64uG/
+f/
++YgHwmEG1tbb1GS0vrHLqjWVlZf4MCB+i4dzBz+fj4PoBiCMSeNWtW+8yZMztAdFpaWiVIDJinH4PEQBhmjpiY2FOQ/
+NGjR72Sk5MPwMSBBeEfGBtYZtyFmo+zTAB7EtmDuIr6CxcuWAHrxOO4DBIVFf2KYjAwcJArc25u7q+7du2yA7FhHkO2E5RKQHqwmQ0MzG3A1AZP9sAqjRXGPnTokAqIxlenEt3iwedBEHj16hXPnTt3NFVUVK5jk79586auurr6ZWxy4AobhwdB4MiRI97FxcWZxLoVBN69eycMqndBbAA02prYeCGTnAAAAABJRU5ErkJggg==]
+p∈(0,1)
+6.Poisson-enbanaketa,X:P(λ)
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAAqCAYAAAAH843fAAAACXBIWXMAAA7GAAAOqQEIsLr6AAAFG0lEQVR4nO2aeyyrZxzHUU7di5mILmQyG9uM/
+sESE3HbMf6wLEZFiGvGgjjTSNyWWGI0zBy3zMyCCJGwLYgjdjaXP0bCHxhLY8kclw05FEUNa2fPTzwnr3q13r499SzpN2ne5375vM/
+ze55fW9Pz83Mjg4yMTO96ACBzc/N/
+Tk5OzPTVn62t7cnh4SEXLQJjnEYECH1CAB0cHJgrlUoONY0IEHQyNja+2LPUt1ZeXt6xuLjo2dPT8zbkU/
+OYytTUVEHciqAT3SRLS0uTAUBXVxeHDQRoY2Vl5RVqGrEgsORyuRWSHMd9fHw2OByOUl2d3t7eB2i7WU1MTLx7enpqFhsb2xEdHd2C8z08PHbc3Nz+oNYhGgS8uf7+/
+iw0ia/
+Pzs7uIZ3Nzc3xQ0JCfh8bG3sVl6upqflKJBJ9nJaWNpGamvoFmvhDSE9KSvqcrk28miIjI38LDAycKSkpSSEWREtLSyU8p6am7gMIgIDz0NYIxWGxWPxtenp6EYTb2tqCWltbQ9S1S91Sw8PDb+AwsSAyMzMLYdDwBisrK6/
+kubi4/InDRUVFaQkJCeVZWVk/
+sTKeLMb63ASTl0gkPrcpm5eX98jV1fVJc3NzOJs+iQPh6Oh4YRg9PT1/hSea5D6A2d/
+ft+PxeDLV8nV1dVG1tbXGyDiaw4qwtLQ81qZf4kDs7OxYUeOrq6v26srj7WBhYfE3m36JA3FXYgxidHQ0NjQ0tFc1HRs23QxL/
+7oRBLLG3yFrHVNQUNBfXV39PqSpu9ZCnomJyb9IJtoOZnZ29h1Un6O5pO5FC0Imk/
+EqKio+hDCG4OTkdKTpeAIIbHwAgUDwizb1dCFaEHZ2dvuqk9ne3raiK0ui0InzdGlp6UUmL+QaiM7OzhJ4jo+PfxAcHPwDXSV0I0uOiopqx3bh6OjIGvsDaAW1wFGGdKLtRNiKz+fvAQgmda6BWF5efj0/
+P39QFYKXl9dTHEZ39A70aK+qqvpGlbq7u/
+vC0NDQRzExMfVwB1Btf35+3t3e3n6XySCZSigUfo+MeiGTOtdAlJWVJdAtqa2tLRtqPCAg4Im/v/
+8j1XLW1ta7SqXy4ouWtbU1OyaD0VZ+fn5rMzMzrsgnmR8cHHxrc3OTv7u768SkjVsfn3t7exbU+OTk5Mvh4eF9CoXiipVfX1/
+3io+PF0OY7jiVSqWODg4OUhzHXiWTQasKIDQ2NtYODAw8u5YHBQX1MWnjGgjkwX2mrsLCwoIfco1zsH1ob28vS0lJKcP5GRkZpcgb/
+BTCmoxVd3d3IXKYxEwGfJNyc3Mf5OTkfILjaMUOM6l/BQRa6qvT09NudAWRN/
+gzvD1vb+8Z9EmGNDbeHggg6GJFoBWmlX9B1RUQsMRuKgjenaY7gq+v719M4bCBkJ2d/
+SM6vXqQPbBE7SjgNANDjuzUqVwuv8f4+ESWXpqYmPhYU0V1+ZAH3x7dfhrs1dTUdB+H0cp69lLRcc5l2tZFZXRkvsB2UP9nPwNk8D4vZQBxKQOISxEJwtnZ+fD4+NgMfprTV5/
+EgaAe0Wx/
+1mMi4kCAD4PDPB5Pbx4sUSAaGhoeikSiL3G8uLi4c2RkJCkiIqLzefdNFIiNjY2XBALBYxy3sbGRcTgcVtfv24ooEGFhYX0IxmsoOARxiUTyplAo1IlTpklEgUBufQ8YyLi4uIvtgbbKe/
+X19VJN9XQhokCoisvlKvTVF3EgqMelPv9SRByIu5IBxKUMIC5FBAh9/
+8+STv8BBGom7KovFRgAAAAASUVORK5CYII=][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAAMCAYAAADYrxWbAAAACXBIWXMAAA6oAAAPEwElpvjVAAADHElEQVR4nGP5/
+/8/w3AHLNQ0LDEx8dD8+fPtQOx9+/aFeHh4rHj58qWYoKDgO3S1y5Ytq4iKiurAZg4jIyM45P/
+9+8cEY5MK1qxZkx8cHDwJpJ8oT4IUlpSUbLK2tt6BLC4lJXXLzMxsL0wNEDCC2GfPnrVzdHRc++vXL5ZFixbVxsXFNaObGR0d3Y7Nk8+ePZMBmfP7929WJiamfzAzSQUhISETYW4i6ElkxxMLTExMDsL0gDxYXFy8qbe3148YvcCAewKiWVlZf5NiJz4A9+TcuXNbUlJSqkGOA3lsxYoVJeHh4b2bN29OodSSvr4+X6AnKTWGbAD3ZHJycg3Iky4uLjeQY87X13cOkJqDTXNzc/
+PimpqaOFo4DOQGoPmLKDGDm5v7F4hGSa7AQqMxISGhAVnsyJEj3sC8uA2fYXZ2dnfIzTu4ALDgKAAGYDwlZnz58oU9IyNjD4ongaVjPR8f35ugoKApMDEbG5uthDxw6NAhFS4url/
+fvn1jwybf3t4+jxTHKSkpvb13754wKXqwAT8/
+v4ubNm3SB3ty9+7dkd7e3oth+fHGjRsH1dXVL4PkYGJ79+4NAwbAK05Ozi/AZPAR6Kkv/
+Pz879nZ2X+C1H3//
+p0VZjhIT0tLyyJQUhYREfn65s0bbpA4rkIMJP73719mUGkKYufn528rLCzc8vXrVy5gyuqaMmVKw/
+Lly81hemHmgKoYZmbmvyD2/
+fv31YCBcxPZfGB5ogeiwZ4MDAxcACruQWxQOoZ5ENnRFy9etLxy5YoDsricnNwVW1vbzdhCEViE96qoqLyBeRAEqqurV4Hqz+fPn6suWbKkaunSpZWgqgQkV1BQsDU1NbUeJI5sjpWV1Y67d++aAKuqMzAxfX39ZyAaFCgwMQUFhdtAD/
+9jwALAHgOlXZgAMhsZAA0+DsLY5LABDQ2Ni3fu3BFBFgPGFouTk9MadLXIoa+rq3sKXT42NrbF09PzKjAgwPwLFy5Io+sFxe6fP3+YsbmFai0ekGWgVgaoEsalBpg3g8kx+/
+z589bbt2/XJkXPixcvpN69ewfO1wCgsXDb3u0WxAAAAABJRU5ErkJggg==]Irudi(X)={0,1,2,…}
+
+
+
+
+
+
+
+
+λ∈R+
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAANCAYAAAD4xH09AAAACXBIWXMAAA7UAAAPBgFu89N7AAADvElEQVR4nGP5/
+/8/
+w0gALORoWrlyZbGXl9csXl7ez9R2EK0AWR6NiIjoAaaEXnTxTZs2pfv5+c0Esc+dO2dz4cIFt46Ojsxbt26JoqutqKhY9+/
+fP8aurq5AdDlGRkZwMjM0NHwKNEeGHDeCAB8f349Pnz5xgNhEeRRk8dGjR72srKy2g/
+j79+8PRlcjIiLy9c2bN9wg9owZM7q+ffvGU1RUlJWUlFQHDIA0YADMQlb/
+4sULUTExsTfo5vT3908FBiIjzN7r168baGpqXiDdmwwMHz9+5ASZBTKHoEdBimAWgwDIww4ODuvQ1b19+5YLxs7MzCxF1uPv7z8TyEfxqLCw8Hts9hUWFmbD2OfPn7d+8uSJJrkenTx58oSAgICJcnJy9+AeraysXANMZsGwEACJITsWBmxsbLZiE8/
+Pz99GjmPwgQ8fPki4urouJ1c/MFsk5OXl5YPYcI+2t7eHAD3639nZ+Sa6R2AeR+fr6+s/A+ZDaRD7/
+v370mS4BSPAkIGjo+NabIFKLACmBn4YGyXp5uTk7LSzs9uJLObj43N58+bNeiA2ExMTsPz4x4RuIAsLy98/
+f/
+4wk+sgbEBBQeEdJZ6EAZB7vb29L6F4dMqUKe4gDLSgHya2ZcsWXRg7KirqBDbDQJ5cvHhxdWxsbCtM7M6dO1oqKirXQGxWVta/
+pDiupaVl4YMHD4RI0YMNXLt2zVBLS+v89u3bdcAevXv3rgawhBKF5c/
+Lly+b6urqngbJwcTOnj1rt2TJEitchp4+fdoG6FEGZD0gGpik1X79+gW2ByT28+dPdjY2tl/
+AwGEBJQ+QeFNT05KbN28qL1261BLIXiwlJfVo7ty5LSC5lJSUaph5X79+5ebi4vqGXECC2L9//
+2YFpqo/6AWnm5vbAVjyBTsAGPLXYQosLCwewDwJAyA5Dg6O362trXNAZv/9+5cZJMbDw/
+MpOzu7CKQGWMJ5TJo0Ca4HlGRAFgOrESmYGDMz8z8JCYkPpaWlK4D0C5AYMOZUgFni7969e3VAfGDs/
+379+rUkTA8wgG1hbKBdO+bPn2/
+Hzs7+B9l9QHPBKQZYkn9DFgcWsHNB5gOzwR0WmEdgksePH1fEFmNAxe+Li4szscmBQF9f3zRkPnroggDQA6ICAgLv0Qu3mpqaeGCKEoA6Lgmb+V++fOEBBvYPEPvHjx+sMHFkO2D1OAzAIgEEiG4Z3bhxQwyfPKj+AzYNS8LDw3twqREUFHyHTfzYsWMe3d3d/
+vjM5+bm/kqcSxEAVKDB8joAeerAKYvLrQ8AAAAASUVORK5CYII=]
+
+Teorema:Ondokohirubaldintzakbetetzenbadira:
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAdCAYAAADl208VAAAACXBIWXMAAA7DAAAOhgFKYRMkAAAEWklEQVR4nN1Xa0iTURj2shSVUkJNk3RZPwSdgrcUNAv7YYSp6LzAoNAQQVBciAgWmRcQL5gX9IcQJIGKSbIpCDIpEi9T03lhUdp0KpH+SFPRidr7nvjG1/
+rcvm+6GT0wznsu7/me55z3nPeMd3R0ZPE/gUevbG5uXgBs6nPY398/
+B9g3LS3joRUUHh7+dWho6CpVt7S0hM07sgwNDV1MS0uTZmdn59nY2GhaW1ufpKenPz0buoahFUQXQ6GxsbFmdHTUy9fX91teXl42tv3LYhBEUHd3d1ZcXFyzbifsihjLubm5S/
+T22NhYhUQi8TcPRW4gguLj45sgvLSC+vr6RCqV6jraExMTkXBmDuhOUqlUYF6a7MFjaoyJiWnF84N2UFDQ+5GRkWh6f35+/
+tvp6ekQgUAgNwdJLmAURInRtSmAyA97e3v2piRmLBgFGQLcdrtwxbuwHY83ZkBAwKpGo+HpnkemsTDOpri4+HVpaWky2/
+lx4fHyIoIgxGbZkkO4ubl9gXO1x3Y8nsHJyUkPNmNLSkpeYZ4rKysTgiAtYd1x9MiZmpoKg4UKnJ2ddSOC/
+Pz85tmSQ9jZ2f20trZmnVxbWlqK2Y6FtFCk28YU9nRUA8bHx6/
+NzMy4E0FVVVX3Kysr2X7TYm1tzcvW1naH3oariKtbVFT0AG2FQnFjYGBABDfm7Z6eHkFYWJhqeHiYTx+PRPFnZWV1iGVKSspoe3t7KPZnZGS8Y8PF399/
+Fb51mdpFIkgsFktYqwG4uLgsMu0QiqFsCEtVzm+QOpMYtMvLy19mZmbK0KbEIGBXb7HhgmKwpOYjgpRK5V+vBH04PDy0AkHaMKirq3tRX19fSx8Dor+zmQsXAefj8n19IIJ6e3v9uDhtbW1dxJuOqufm5uZQK4QJWV/
+Md3Z25lKJurCw8A2WTIfeWBBBwcHBai5ODg4OP3g8nka3HQ7mzfn5+WA+n19znG9SUtILoVBYS4WdXC5Xcqd9PIigsbGxK1ycMKkCGW2YwA4/
+xBJfFfgz5E/tYEdHh7i/
+v9+HE2MDMCqx7uzsOB4cHJxDu6KioqWgoOCRMfPArVadnJx87G4aAyIoKyurn4uTs7OzGm+5lZUVT5FI9BxLDw+PJS5zoM/
+y8rKXMb76QAQ1NzffaWpq+qMDw2JwcPBeRESEFOt4E2G+QHt9ff0K5qGTPE5PUwQdx4YcHtrIyEgJCpHJZEIgoPTx8VFg3+7u7nlTkDkNEEFRUVGfmTohvuX4UIyOju6gt9vb2/
+9wcnL6Zg6CXEEELSwsuDJ1QpZ/BjHO9/b2/
+kRv39jYcIXEaZKQOSmIILVa7cjUCeenB0vdRAkhGOvu7s64q2cNxjNEfziijfmCfr02NDTEwFPnrvlosgcRBI/
+Cx/RGQ/9YExISPpqemnEggrgmt66urkDT0Dk5tCEXEhKyBO8qT0MObW1t+ampqez/
+PJkZWkEoZnt7G96dDtv6HBITE2v19Z81fgGNfdqhjRcwlgAAAABJRU5ErkJggg==]i.n→∞[data:
+image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAACXBIWXMAAA8yAAAPWgEelzIIAAAAVUlEQVR4nKWROw4AIAhDS9L7XxlhwBgSwc9bdKi1FAJQQ+yEiCgKQpdhXDqDCvaSQ5OfFP6WPuetievXflgZ7IrMzE5OE60pQv+8ndC74XY71Sj5wwH5+yksPr6kBwAAAABJRU5ErkJggg==]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAGCAYAAAD37n+BAAAACXBIWXMAAA9eAAANyQE4SfCeAAAAMUlEQVR4nGP5/
+/8/
+Ay7AyMgIlP7PCKJhYiw4VeMABDUgm06eDegmwADI7Vg14JLABQDwhBAYx9UEdQAAAABJRU5ErkJggg==]
+ii.p→0⇒[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAKCAYAAABMtYURAAAACXBIWXMAAA7AAAAPFQGXW9JkAAAAQklEQVR4nGNhYGD4zzBAgOX/
+//+MA2Y5tQxiZGQEhyApnqGa5aRaTJblMB/
+ikhswn5MKRi2nCqB5gsNlKb6EiAsAACYCFyRXEO7SAAAAAElFTkSuQmCC][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAYAAACuyE5IAAAACXBIWXMAAA7iAAAPOAH9FSy2AAAAHUlEQVR4nGP5/
+/8/Az7AwsjIiFcFC9AERlySIM0AwbEIDFxPWg8AAAAASUVORK5CYII=]
+iii.np→λ(finitua)
+
+Oharra:Aurreko teoremakbanaketabinomiala Poisson-en
+banaketarenbidezhurbiltzeabaimentzendu.Hurbilketahaupraktikan
+n≥50etap<0.1direneanerabilikodugu,kasuhonetanX:Bin(n,p)≈
+P(np).
+Denbora, luzera edo espazio tarte jarraikian gertaera-kopurua
+adieraztendu.PraktikanPoisson-en eredu probabilistikoa egokia
+izatekohurrengohirubaldintzakbetebehardira:
+a)GERAKORTASUNA:Gertaerarenprobabilitateaezdaaldatzendenboraldi osoan.
+b)ARRAROTASUNA:gertaera“arraroa”izanbeharda.Hots,
+i.Denboraune“txiki”bateangertaerarenprobabilitatea“txikia”da.
+ii.Denboraune“txiki”bateangertaerabehinbainogehiagotanizateko
+probabilitateazeroda.
+c)INDEPENDENTZIA:Unebateangertaeraizateakezdueraginikhurrengo
+uneangertaeraizatean.
+
+2.6. ZORIZKOALDAGAIJARRAIKIENADIBIDEAK
+
+
+1.(a,b)tarteanbanaketauniformea,X:U(a,b)
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAAzCAYAAADGtBvgAAAACXBIWXMAAA6xAAAO1QGdHbF5AAAEqElEQVR4nO2Ze0hkVRzH08ZZm0hJTFLXsRG39fGHlgrmg3KQNANLhmxXRgRfqJSClVKJoCiljv8E64D4YneUrXT8IyhlGEdhUFQW/
+ygpRFNH52ErgYuPwWjs9wuO3HHvPM5MW3du84XhnnP8nXN+n3tev3MVXFxcPPV/kOC/
+doBIqVQq6uvrP/
+akbkBAAIzXRUBgYKANFMhmwwlQ4qgndWUy2QNS12KxRIEemUymkKt2nAD1Rmq1+lWSjoiIsJjN5ufY7Hwe1F35QfkmnweVSqUbJL2/
+vx8bFBT0J5udz4NqtdqbZNdOSEjYOD8/
+Z2XyeVAUOV6Oj4+vObLhBag78oPyTX5QvskPyjdxFnRxcfGtrKysHzDd2dl5r729vZy2jdnZ2fKCgoJ7er3+bWpQZ3fH9fX1tOTk5Ae0bbIJIbGvpaWlN2kh4QKv6enpkSFkb2/
+vYHFx8R07UHJLhzveB5i3Wq3PlpWV9RCwjIwMg7MLMkJ6c4lmU2ZmpoaZHxgY6N/Z2Ynr6+t7F/
+PwEu7DiN9i9gkRkigkJOQRpicnJwtaWlpq7UDRSYlE8ntJSckdUoajRNLZ2dk/
+unLMaDSK29ravu7q6nrfczzHamho+AifMFKXZR0dHbdJ+uqLXl1dFePTDvQr0PLyciKzjDg8Pz9folAo3nHlSFRU1F53d3ept6DgYB5MvyFMb25uJsbHx/
+9M2wapj7IDbWpq+hDWhnp3dzcJpqmO+Wby8vLUzLzZbI6G0bsB6+FuVVXV/
+bq6uhbPkB4XGRX0gXYpwNRWYB2DwSAJCwv7jZQ/
+thmlp6fP47OiokLvrMHIyEgjjN6+MyewQ7ZyV44z/0673uHFf4I/
+TNfU1HyGP0xfglZXV+tSUlJMJD82NpZL0wGbRkdHO9yxKyoq+snbvlzpEnR4ePiNo6OjUEeG+fn5vzDzcM4Vumo8NDT0oTtOTE9Pp7m28k52U5dsyWzSaDSJeABbLBbJwcFBDGzZNTMzM+Uikej89PRUSOxwqpHPGczdm01wfAU3NjZ+Pzg4KPUWxJUuQd1ZC4WFhXeZdnAgqwBSxbTJycnZcvQ546qCg4OtCAm/
+L2praz+lcZxWVJERQsLuu6HT6V52ZKPVapNonYAdu5UNtLKycmFkZOR12vbYRB0COoPEYCE6OtpA2ybbbIKzMwn3Ddq2HOkfDeo9gXQk2Pz0EOqFzc3NvSeVSr/
+1tj3O3l4gaHn+8PDwhe3t7RQ4j7+hOU9NJtP1oaGhLyEOlufm5m4tLCzc4Cxoc3Pzd+Hh4Q8h6mqDM/
+5zUg4RTxw+YccWCYVCq81me1ogEPwhFot/
+JTYw7dMQEtNwRYvDiwpnQfv7+4vxeXUkY2Njt9jsiZ2jkJGToBiMt7a2VmMaR8PTkFAuly+WlpauYpqToCsrK6/
+gc29v7yVP7rYQ2MhlMtnwycmJEIKbF7GMk6BTU1N/h4QxMTE7tHUZ/56wC2Q4Cfok5Af1JeGmMz4+/
+pqz9cwLUJVKlTUxMWFzZsMLUHfkB+Wb/
+KB8Ey9AMTbGoyU1NdW4trZ2ne0zKy9A8QJALgGOxAtQd+QH/TelVCr7zs7OngGdPak+/
+gIfoQuBY2v7owAAAABJRU5ErkJggg==]Irudi(X)=R[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAGCAYAAADzG6+8AAAACXBIWXMAAA8RAAAPhgGyIs+DAAAAIklEQVR4nGNhYGD4z4AF/
+P//nxFEMzIyYpVnwSZIDBgJGgFLAgUYKAcbgQAAAABJRU5ErkJggg==][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAFCAYAAABmWJ3mAAAACXBIWXMAAA+GAAANqQGj2QV7AAAAH0lEQVR4nGP5/
+/8/AyMj438GNMCCLgCXwKYavw5cEgAzigUWZQ9P2QAAAABJRU5ErkJggg==]
+
+                                                              a,b∈R[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAMCAYAAACTB8Z2AAAACXBIWXMAAA6CAAAPHwEvJJGJAAAAY0lEQVR4nNWTQQ7AIAgEJeH/
+X6b1QGKaIkPUg3sVdxYIamaNSkTechP84SPtBrOC0XwGIkGUpiJmWQ2GZaD+nk0JwTzxn1llh7iziqIOj8Ai3Q+L9liCrRx0CnNzCtl21Dv0AJ/
+                                         nOSLDhcAXAAAAAElFTkSuQmCC][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAKCAYAAACwoK7bAAAACXBIWXMAAA6RAAAOzAEBsR1XAAAAPUlEQVR4nGNhYGD4z0ADwPL/
+                                                                              /
+39GGIeRkRFuCbI4WQZTonlgDUYOBqoaTG1AW4OpHQxwg2kBUAymNO0iAwA0mQ0o0gZdbwAAAABJRU5ErkJggg==]
+                                                                   [data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAnCAYAAADdN2JWAAAACXBIWXMAAA4CAAAOygHMGd48AAAAc0lEQVR4nM2T4QrAIAiEJ/
+T+r+x2ghDOeVDMrV9BX3ea11DVg61BCYdE5BJU2Vf6K1R1aBAOATXW1AhVnb1gh0XzVAEGsVQa5HNrjC+zXLebxwT1FIpJpUrYP9Y0q92iksVmrTu3oYXHS2me4st/
+                              8aVYMk83JUmWidFREQAAAABJRU5ErkJggg==][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAMCAYAAADhyKTAAAAACXBIWXMAAA7wAAAO+gFLBVDdAAAAhElEQVR4nL1UQQ7AIAgbCf/
+                                                                              /
+stNDPRhgAs16BUqtVR1jPB5ExC9OzFmJ6l0ok2wdpiIYJpyzNHFdYRYPRVxVmIXFAz71ctVZdnJ6XFGmV63t3I1rWWfhHvVBQAir75fMVSNCd84CxGevty0OS796KrzK+gLgyi1f1Le/
+                          kirB2XcT8KzwF5KLciQAtLN+AAAAAElFTkSuQmCC][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAALCAYAAAD8zZR4AAAACXBIWXMAAA7wAAAOxAEKwEugAAAAiUlEQVR4nK2UOw7AMAhDi8T9r0zbwVEUhT9MHeDZMU1YRJ6pIqIPJ5Sdwfc5y1XQCasY0zTAcc3tzZp41dh5WGiAx7eG3ciEaJVhJqcZ30UjqWWTBddda+cH7/
+                      alLoQlZB2ielFMc9G1eQVGltVeK0Q7DG2GJ96mv5BKlGf1radkwlgkPc/
+                                 Qre8FLCyJFi6L+awAAAAASUVORK5CYII=][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAFCAYAAAB1j90SAAAACXBIWXMAAA7cAAANqQGouyVeAAAAMElEQVR4nGP5/
+                                                                            /8/
+  AyHAyMiIogioh5GFoC4cBrGgm4ZuMi45FnySMNOxaiTegagAAKBDEBQQyVrNAAAAAElFTkSuQmCC]
+                                                                   [data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAICAYAAAA870V8AAAACXBIWXMAAA3zAAAOeAH1zMInAAAAJUlEQVR4nGP5/
+     /8/AyMjI5D6z8jCAAUgATgHBIjlgDRiyICMBgAhiQwgT+dNZgAAAABJRU5ErkJggg==][data:
+   image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAFCAYAAABmWJ3mAAAACXBIWXMAAA/
+     WAAAN2gGrRSe5AAAAFUlEQVR4nGNhYGD4z4AFsGATpLIEAH7gART5m+1UAAAAAElFTkSuQmCC]
+              [data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAALCAYAAAATD/
+                    9GAAAACXBIWXMAAA6rAAAO0QFbPFWAAAAAhUlEQVR4nMWUwQ7AIAhDR8L//
+7Ibhy6EMUFxrhdj1PbRg9xaO74QEQ0ZXxyk91wJ0mZybs1HpT1CMFzuhVqo0bYg8YAXv5kgqNrCjISp21g0uZ4w+yYSPLtgf7QFhY3tgPMywsZ2wHkZDzB7IYJaAe1l8grj2Va9N/
+                    d3UYVCQOa/y3rJegKu5XoQxGywxwAAAABJRU5ErkJggg==][data:image/
+         png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAJCAYAAAD6reaeAAAACXBIWXMAAA/
+                                              AAAAPjgGjmYoBAAAAK0lEQVR4nGP5//8/
+AwwwMjKCOSzoAiiCyIAFXRVuleiq8JuJUxDoXkYYGwByqgoowo26KgAAAABJRU5ErkJggg==][data:
+                                                                         image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAACXBIWXMAAA+GAAAQDgFWYR92AAAAFUlEQVR4nGNhYGD4z4AFsGATpJcEAJo4ARi3LwWjAAAAAElFTkSuQmCC]
+
+
+
+
+2.Banaketaesponentziala,X:E(λ)[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAMCAYAAACTB8Z2AAAACXBIWXMAAA6CAAAPHwEvJJGJAAAAYElEQVR4nNWTMQ4AIAgDJeH/
+X0Yd2ISWiIOdmztRVDMbtxGRhTFBPd3FrMBAdocRKgJ5GBjq0DIk8umyDiXzE59gzDWXZNVEEz6RRflfFr1jSZYtA9pEKHM4u3Ftn7ojE/
+UTOiQ27izlAAAAAElFTkSuQmCC][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAeCAYAAAAl+Z4RAAAACXBIWXMAAA8GAAAOpgE4t7M1AAAAoUlEQVR4nO2U0QrAIAhFJ/
+T/v9xm5BAzu9bDXnZhMCyPd80stdbLioha8FmjYdGoeEFOZAg/
+K4gLEAfyHkFcgHaxgrwA2aSrIxoceJCtT0CdhH9hVT10gPRACED1AzoAuTRTwElyA5wkN4ANWEe6pb1iw220sLSDTPIUgCbzPmgepB1kBM1EkT5oWds6RD1s3D6IHNlJ5R7irHLYSLv6HnADHwFvfl5a1FgAAAAASUVORK5CYII=]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAGCAYAAADzG6+8AAAACXBIWXMAAA8RAAAPhgGyIs+DAAAAIklEQVR4nGNhYGD4z4AF/
+P//nxFEMzIyYpVnwSZIDBgJGgFLAgUYKAcbgQAAAABJRU5ErkJggg==][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAICAYAAAAx8TU7AAAACXBIWXMAAA5cAAAONAFwonuIAAAANUlEQVR4nGWLQQoAQAgCE/
+r/l90SBGm9TA3aJAvAgDC7Jin2l1yRlMy2pI9MXyHpWS6+5pYe+ukhImkugFcAAAAASUVORK5CYII=]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAALCAYAAABs3u23AAAACXBIWXMAAA6uAAAOIgE0YHZNAAAAcUlEQVR4nK1T0QoAIQhL2P/
+/
+steLIJo56fYWbk5HQlXXHxCR3Uql48ELTgSmifEYU0RBRWQ36HioChGMWTd0MrSmJvLvWJsOkwzZyFhUm6ZIu0heATNh8p+gSqs8Cy9gvzwD3KY54cZlEhqdBbNlV/
+8AvuFeIIeOV6AAAAAASUVORK5CYII=][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAeCAYAAAAVdY8wAAAACXBIWXMAAA+AAAAOpgHwXkTwAAAAdElEQVR4nM2SbQvAIAiEJ/
+T//7JbgeEOvWQLNj8VPZ3nS1PVIwoRuZ5U7N5CKoBDsAN4ThW7kv8wQfSEQT2WQJ82Bb0/
+WrUH9nn8I8imMsDV6CZozV0qVtLePKLq3g2nqR+BuIvvFK2AUtWWmladNf/
+DfTwBo7xOdHE57HgAAAAASUVORK5CYII=][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAGCAYAAADzG6+8AAAACXBIWXMAAA8RAAAPhgGyIs+DAAAAIklEQVR4nGNhYGD4z4AF/
+P//nxFEMzIyYpVnwSZIDBgJGgFLAgUYKAcbgQAAAABJRU5ErkJggg==][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAICAYAAAAx8TU7AAAACXBIWXMAAA5cAAAONAFwonuIAAAANUlEQVR4nGWMQQoAQAgCE/
+r/l90KioH1Yk1a2g5JZdZ6Romg94EN6AOZHrgDdUkek7Uvyd8PECIhIgj4TH0AAAAASUVORK5CYII=]
+
+
+λ∈R+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAFCAYAAABmWJ3mAAAACXBIWXMAABAOAAAOQgF/
+YOuXAAAAKUlEQVR4nGP5//8/AzbAwsjICJcBKmKES8A4IAXIiliwqQYpwGoUiAYA/
+qAXEj9tiRcAAAAASUVORK5CYII=][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAACXBIWXMAAA+GAAAQDgFWYR92AAAAFUlEQVR4nGNhYGD4z4AFsGATpJcEAJo4ARi3LwWjAAAAAElFTkSuQmCC]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAFCAYAAABmWJ3mAAAACXBIWXMAABAOAAAOQgF/
+YOuXAAAAKUlEQVR4nGP5//8/AzbAwsjICJcBKmKES8A4IAXIiliwqQYpwGoUiAYA/
+qAXEj9tiRcAAAAASUVORK5CYII=][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAGCAYAAAAYLBS/
+AAAACXBIWXMAAA7ZAAAQDgENzq7gAAAAN0lEQVR4nGP5//8/
+A7GAkZERrJiFaB1AALSAEaSRJE1wm2AMfCaDaGRxFnQBQraA1BPlPHTXAAAN1Rka+xwxuQAAAABJRU5ErkJggg==]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAACXBIWXMAAA+GAAAQDgFWYR92AAAAFUlEQVR4nGNhYGD4z4AFsGATpJcEAJo4ARi3LwWjAAAAAElFTkSuQmCC]
+
+Gertaerabatenjazoeraarteiragandakodenboraneurtzendu.[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAGCAYAAAAc2cSCAAAACXBIWXMAAA6KAAANtQGUG5PpAAAAQUlEQVR4nGP5/
+/8/
+AzbAyMgIlPrPCKJhYiA+shoWrDqJBHg1I9uKjY9TM8zJ6E5H0YxNAtlvuDSCNaMHAjGaYAAAxH0eHPi5O0kAAAAASUVORK5CYII=]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAICAYAAAAx8TU7AAAACXBIWXMAAA5cAAAONAFwonuIAAAANUlEQVR4nGWNUQoAMAhCE7z/
+lV2NCY78sR6KlFQA2gQ7q2VQTxcmmJt+Ms1MffUFXVtDqQkdaN4eJEgmT3wAAAAASUVORK5CYII=]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAGCAYAAAAc2cSCAAAACXBIWXMAAA6TAAANtQGwwsC6AAAAP0lEQVR4nGP5/
+/8/
+AzbAyMgIlPrPCKJhYiA+shoWrDqJBHg1I9uKjY9TM8zJ6E5H0YxNAtlvuDSCNaMHAikAAKM1HRrEpv6nAAAAAElFTkSuQmCC]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAICAYAAAAx8TU7AAAACXBIWXMAAA5cAAAONAFwonuIAAAANUlEQVR4nGWNUQoAMAhCE7z/
+lV2NCY78sR6KlFQA2gQ7q2VQTxcmmJt+Ms1MffUFXVtDqQkdaN4eJEgmT3wAAAAASUVORK5CYII=]
+
+
+Teorema:DemagunXλparametrokozorizkoaldagaiesponentziala
+dela.Orduan∀x,t>0ondokohaubetezenda:
+P(X>t+x|X>t)=P(X>x).
+(Banaketaesponentzialakezdaukaoroipenik)
+
+3.Banaketanormala,X:N(µ,σ)[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAAAmCAYAAABXn8xMAAAACXBIWXMAAA7TAAAOpwHFKARcAAABVElEQVR4nO2Z0Q7DIAhFZ9L/
+/
++VuNGExRFpEqiielyVd282zC1p3nOf52ehJKV0Cj9FfZBW2yEZ+FZ3gdYtsZJe2EcsnEpKCg8TUIHj86Xp6LL8uvz+wrMjehBZZSh0gSSwltEiNMI4QIi2FcYQQ2YMtkqE2xe5FcssQbqLA9++ub6Uk2b1ILhnSxPToj4B7kbOwRRoxvci8B/
+Yq4xLTi/
+TC9CK5jYneTC8SoBJHSHUlkm59PfU8yTm9cCUSqUmUZsH+Bm5EatI1Mo30s92ItJ403pRc+tGP0bMd4qXXSSg+a2sHYJkcuJeXhbWW5tK2GPSM4ijmPRKTtYKcGkxFeum3I3Aza8/
+OJVK623xH6R64THj6s30FTBNZWgtGKfcqkdzTR0RxFJHIfCbmZNaU6mplDYhEavpktGReImt2S7hzo4mj/
+BPZUm4rlmotqln7rldG5QvLoc2K4P8V3wAAAABJRU5ErkJggg==][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAGCAYAAADpJ08yAAAACXBIWXMAAAyaAAAOeAF8QJcBAAAAI0lEQVR4nGP5/
+/8/AwiwgAhGRsb/YAZcBMwACYMZQMWMIAYA5vAIGCAHa5QAAAAASUVORK5CYII=]
+
+f(x)=∀x∈Rµ∈R,σ∈R+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAICAYAAAA870V8AAAACXBIWXMAAA3zAAAOeAH1zMInAAAAJ0lEQVR4nGP5/
+/8/AyMjI5D6z8jCAAUgATgHBIjlgDTCOSAjYUYDAEeBECA2iaKBAAAAAElFTkSuQmCC][data:
+image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAACXBIWXMAAA9SAAANPgEUdkefAAAAI0lEQVR4nGNhYGD4z4AFsPz/
+/58RCDAkWbAJgiVABLouEB8A/0UNECd5Q5YAAAAASUVORK5CYII=]
+
+
+
+Propietateak:
+a)x=µardatzarekikosimetrikoada,f(µ-k)=f(µ+k)∀k∈R
+b)[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAICAYAAAAiJnXPAAAACXBIWXMAAA5OAAAONAE+vNgYAAAARElEQVR4nGP5/
+/8/
+AyHAyMgIVPafEUazENQBBMgaQHyCmkCK0dlE2YRsG1gTsknICvAZQLRNKJoImQpzFrKLSLYJZAgAIkknHp765IcAAAAASUVORK5CYII=]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAECAYAAABY+sXzAAAACXBIWXMAAA9nAAANeAHm4jkCAAAAFklEQVR4nGNhYGD4z0AkYCFWIW0VAwC3DAEQpxacOwAAAABJRU5ErkJggg==]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAECAYAAABREWWJAAAACXBIWXMAAA8QAAANtQGOka14AAAALElEQVR4nGNhYGD4z4AE/
+v//z8hAJGDBJ8nIyPgfnzxezdhcgWwgXs2EDAQAsQUMDuFCAVcAAAAASUVORK5CYII=][data:
+image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAADCAYAAABF//
+VLAAAACXBIWXMAAA9nAAANKwF3dDeVAAAAFUlEQVR4nGNhYGD4z0AkYCFWIcmKAYc8AQwNNVJKAAAAAElFTkSuQmCC]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAECAYAAABREWWJAAAACXBIWXMAAA8QAAANtQGOka14AAAALElEQVR4nGNhYGD4z4AE/
+v//z8hAJGDBJ8nIyPgfnzxezdhcgWwgXs2EDAQAsQUMDuFCAVcAAAAASUVORK5CYII=][data:
+image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAALCAYAAAByF90EAAAACXBIWXMAAA6+AAAOtwE7gAqJAAAAH0lEQVR4nGNhYGD4z0AFwEINQ0YNGjVoUBn0/
+/9/RgBzcQQqL3hAhQAAAABJRU5ErkJggg==][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAJCAYAAADtj3ZXAAAACXBIWXMAAA9CAAAPjgHw4T/
+SAAAALElEQVR4nGP5//8/
+AwwwMjIiOEQAFnI1gjWTownD5lHNhAEwihnJ0gzSCKIBCBMMJNRP0HkAAAAASUVORK5CYII=][data:
+image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAALCAYAAACK9ybzAAAACXBIWXMAAA59AAAOtwGs/
+GaTAAAAHUlEQVR4nGNhYGD4z0BjwEJrC0YtGbVk1JJBZAkAu2gBLCzSGJYAAAAASUVORK5CYII=]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAJCAYAAADtj3ZXAAAACXBIWXMAAA9CAAAPjgHw4T/
+SAAAAK0lEQVR4nGP5//8/
+AzJgZGREFcADWMjVCNdMqia4ZnI1wm0e1UwcAKYPRgCdXwoogPqBfAAAAABJRU5ErkJggg==]
+
+c)x=µpuntuanmaximoahartzenduetaf(µ)=[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAARCAYAAADKZhx3AAAACXBIWXMAAA6KAAAOeAHoCYSzAAAAlElEQVR4nL2UUQ7AIAhDZ8L9r8zmhwmagnWo/
+TFZwEcBJ6r6sCqlfOFa6IRAwl6+EwrBtwTBo7vdbl1wVMQ18ClBcHN4yi0E/
+4XW+BQ4K7ZYaqtXZd1799A/kN3qwOj9oqTs7Gt+OOMaEC0N6k77Zk+UK2OCdwnjhCm2A6/
+MtcV5z85CowKmrbbnSmEzSXaL2daOegEI9YU+RdiFSwAAAABJRU5ErkJggg==]
+d)(µ−σ)eta(µ+σ)inflexio-puntuakdira. e)Kanpaiitxuradu.
+
+
+Kasuberezia:Banaketanormal estandarizatuaedoGauss-en kanpaiaX:N(0,1)
+
+
+Teorema:X:N(µ,σ)⇒:N(0,1)[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAJCAYAAADO1CeCAAAACXBIWXMAAA8BAAAOPAGuHOEdAAAAMklEQVR4nGP5/
+/8/
+A7UBIyMjTkOB9jGyUN1GIgBdLQX5ku6WwsDwtxSUwEYTEtUMxwUABw8UHHcNBsAAAAAASUVORK5CYII=]
+[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/
+7AAAACXBIWXMAAA8+AAAO1QHUjBzAAAAAL0lEQVR4nGNhYGD4z4AHsPz//
+58RCHAqYsEnCVYAInCZAhJnQeZgUwR3A4jGZgUApWsYFp6dgfcAAAAASUVORK5CYII=][data:
+image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAICAYAAAD0g6+qAAAACXBIWXMAAA62AAAOvgEGETOtAAAASElEQVR4nJWPMQ4AIAgDIeH/
+X646aBwoBdbCcQ0A5u4wMXvPqzyygw5YgjKIsnkgZXGycbXf4sLbRswigzBzCmImzC6qL5NqCzJiLhzE6ijpAAAAAElFTkSuQmCC]
+4.Gammabanaketa,X:Γ(a,k)
+
+
+
+                              a,k∈R+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAGYAAAAyCAYAAACuwK6DAAAACXBIWXMAAA7TAAAO3QEQ+JUgAAAHXElEQVR4nO2bfUwTZxzHBxTHi2CZo9AhkAXMMsYSCCVuMt+QgJUMySBhsGWwuXS4AQoKiXGEIDJNBv6BGpVQs+I0U2GbEARixalYN9wcZgKDwFQCoS8C5aUMaYE9P7JbjnJtr9eXe3B+kuaeu3ue5373fJ+X3/
+                M8V878/PwLz8EPDtsGEPB4vEmlUrkSwg4ODqi+zDtwudy/
+1Wq1K9u2sQEWwvj6+k7oiwJhqVQq1Ol0HISOXQvtDxbCFBQUnKW6LhAIfgLR5HK5h71togtUJKrrROUyFId8nwoshHF1dZ0ydE+hUKy0py24gIUwiOceiB64CGMQf3/
+                                       /
+MbZtYAMshDHUT7e2tsZ3dXX52dseHMBCGDIwKIJQc3NzjhkZGZLe3t6X2bbJUkwN9FRgIcz09LQb+Zx4keUgCpNCpwMWwuTm5n6xZ8+eLLbtwAkshHnOUrAQJjAwcJRtG3ADC2EeP37sxbYNuIGFMJGRkf1s24AbWAgTERHRw7YNuIGFMKdOnYo5efIko7Q3btxIPHLkSGljY+MbVjaLVcwWBo0HQWiw7rOFMUzYtGnTj5s3b/
+   6BbTusjUFhNm7c2Hvz5s3g5OTkX2tqagRwjbxXQsXQ0JAfn88fNNeItLS0n81NQyCXy1+5d+/
+eO0zT44pBYSQSiRCOhChlZWWnJyYmjO6LgCimxKMCdUch5sQnIxAIugYGBlbt3bu3rry8PIFpPrhBKQxV4ebn54v27dv3GZ1MJycnVyIm6RoxODjoSTcuVVomlQF3lghDrPQmJSX9VltbG0GVyNHRcS4uLq4LBlwOhzPr4uKiQ2K8CPdKSkqqo6OjO9ra2gLpGhEQEKBm+gINDQ0fo8H/
+  S6bpcWWJMHl5efVQ24uLi9PI18mFByu/IGB2dnaTTqdzIsdDcxJpYWHhRxCmWs5/9OhRsL7z0N/
+         fz2ViPIxp27dv/wZ+YWFhg+3t7c/MFsESYY4ePfouVbeg0WhWkM+dnZ1nd+/
+     enasfD7WeCSJs7e4FWipUiqysrGbklJxG3tj3xL1nSRSAtrs8PDy8aGleq9U6rV27tlO/
+                  8FHtDyVaCp0WAw4FfAlj6vkbNmzoA1EgfOLEidjjx4/
+                  H0bWdLjAVmJmZcUHv1UE3DSoHVEedtda2ZUmBpKam/
+mIqkVKp9IFCghqMXmQFYoa4V1pamiOVSlMgbKrFoEnl12gecj4kJOR3Y/HS09Nbb926FWTKLkvx9/d/
+CO9EN35dXZ1o3bp19T4+PkPWtmWRMEVFRecRb1FFdHJyWjBYJBK1VFZWRkP40KFDErIoQHd3tzca/C/
+ RefiuXbvykYjvmxKmuro6CrnvC2E3N7cZY3EtAb2LVn/MNEZCQkKlQqHgM3mWoe10gkXCHDx4MFV/
+0CcAgz09PafHx8ddiGsHDhzI0I9naq6jT0xMzHfI+8tBXmCFqbj79++vCQ8PH0Bue5k5z6DL7OzsQlcpk8m2rV+/
+vskWz6DLgjCgXk5OTqOprocsChXNzc0fIjf6W3ONUKvV3sbuE3YdPnw42dy86TIyMrK6vr7+U2gBZFFMfaxnrMzofAxoCA7diHRgIgqAWhlr+zFjY2OrEGNIjK6KiorcxMRE2Z07d14l7jMpG+KzXkvKFYvVZTb2/
+FEX+iePx1NXVVUtjJcwNsbGxp6DyiUWi0t27txZaCqPzs7O8CtXrmQSKyJowp0uFAolIIqlqxFYCMMG165de42qSzKnMMFpQb/
+       /lql27NghRl6qBPK4fPmy0eWrZfHtMupKpuEILjjy/mZt8Qxbr6VBC4FVE6IbA4/
+NkvywEAb18wtOBcwh7LEYCRNJcP+h60Fd11lz5i7GIK9uq1Qqnre3t5JpXlgIs3Xr1m57PGd0dPQlPz8/
+             +dTU1Apw//8dByTWyPv27dtCyI/P509kZ2fXINf+E0vyw0IY1E8/
+tMdzvLy8RkAU4tyarRNcbGvmh4Uwx44d24ZcVYvygNYABW8lk1gHC2HIaDQad+QMjMMsHLUkhYeHxzRyChzu3r0bQK6R+kKg/
+lxFXk4BVzY4OLhDf8louYCFMMjNbCfC7u7umidPnqxGhT7a0dHhS1wniwKbc2QRWlpakrVa7aJ3AVdWJpMJURfTaGv7bQEWwjQ1NYWaikMsb6xZs2YMCbfoXwDIebhE1b+DKPHx8X80NDS8aT1r7QMWwjx9+pS2HbDHz+VyKb91ptoORzNzk6LjCBbCBAUFDTNNe/
+                                      /+/
+bdR9zeTkpLSZugbheUIFsL09fWtZpo2LCxMBseLFy9GXrhwwXpGsQwWwlgK8fdAtu2wJlgIExUV9Rf5/
+                                    MyZM1/
+BkU6BwyoxHGGbOjQ0dOjBgweMdhRxAwthVCrVol3PvLy8z+FHFVehUPgWFxefKyoq+gDOr169+jocMzMzC+CnHx/
+2W2xhs63BQpienh6jO5hkeDyeQiQSLRGACuL7a+aWsQcWwpgLfCNNbEoZinP9+vWk5SoKgIUw5eXlZv85xpgowJYtW2qZW8Q+WAgjFovfMzSm/
+                 F/5B8BkLacHj/AOAAAAAElFTkSuQmCC][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAFCAYAAABmWJ3mAAAACXBIWXMAABAOAAAOQgF/
+       YOuXAAAAKUlEQVR4nGP5//8/AzbAwsjICJcBKmKES8A4IAXIiliwqQYpwGoUiAYA/
+                   qAXEj9tiRcAAAAASUVORK5CYII=][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAACXBIWXMAAA+GAAAQDgFWYR92AAAAFUlEQVR4nGNhYGD4z4AFsGATpJcEAJo4ARi3LwWjAAAAAElFTkSuQmCC]
+                                 [data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAICAYAAAAx8TU7AAAACXBIWXMAAA5cAAAONAFwonuIAAAANUlEQVR4nGWNUQoAMAhCE7z/
+ lV2NCY78sR6KlFQA2gQ7q2VQTxcmmJt+Ms1MffUFXVtDqQkdaN4eJEgmT3wAAAAASUVORK5CYII=]
+                                 [data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAICAYAAAAx8TU7AAAACXBIWXMAAA5cAAAONAFwonuIAAAANUlEQVR4nGWLQQoAQAgCE/
+r/l90SBGm9TA3aJAvAgDC7Jin2l1yRlMy2pI9MXyHpWS6+5pYe+ukhImkugFcAAAAASUVORK5CYII=]
+
+
+
+Definizioa:Gammafuntzioaondokoeraradefinitzendenaldagai
+errealekofuntzioerrealada:
+Γ(k)=∀k∈R+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAZCAYAAABU+vysAAAACXBIWXMAAA61AAAO3QHOVXlnAAAAtElEQVR4nM2W4Q6AIAiEY/
+P9X9nSjaYWlKd53c8K/
+ICjCjHGrVcicgk68kh3okIBCUqH3sEsB0Fh0vNW54KXzGt3GTc6lgyCVtZz780ZbkcQH1jdsa7rGbBZkTgrV4KBzTqq1rgUkBICHs3MsShEyknpSLlFWpgLMrP6p9wmyJcQd6JtTav/
+gHzxJYVA2ACqDLLamCbIH3SCtC8YGoia1vuLWgLC3pzKI8xVrkCYXblsDcusOzekcV5St85MAAAAAElFTkSuQmCC]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAADCAYAAACwAX77AAAACXBIWXMAABAOAAANKwHJGYUgAAAAFUlEQVR4nGNhYGD4z4AFsGATxCsBAElcAQyxObCJAAAAAElFTkSuQmCC]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAJCAYAAADZ9rdLAAAACXBIWXMAAA7gAAAPfQE90zb9AAAAOklEQVR4nGP5/
+/8/
+Ay7AyMiIIglUy4guhg+wEKuQHMCCyyUgV1JsODUMwWk4rQwmaDilvho4lw9qwwHg8xIgZwv7YQAAAABJRU5ErkJggg==]
+
+Propietateak:
+a)Γ(k)≥0∀k>0
+b)Γ(k+1)=k·Γ(k)
+∀k>0
+c)Γ(n+1) =n!∀n∈N[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAANCAYAAACgu+4kAAAACXBIWXMAAA79AAAO5AEj2nzcAAAAWElEQVR4nK2SUQoAIAhDE7z/
+lS0DQURsZX7KemwzFpHRGc6WRARTU4DNckctQNvBF4D2oVGyXnQPOahKLQHINdiLkNajlv0jy4tCNuBGfATEtp8+kkHQKBP33y0uFnc5MAAAAABJRU5ErkJggg==]
+d)Γ(1/2)=
+
+
+                Kasuberezia:Banaketaesponentziala,X:Γ(a,1)=E(a)
+Jikarratubanaketa,X:Γ(1/2,n/2)=[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAPCAYAAADUFP50AAAACXBIWXMAAA78AAAOSwHBGQ9fAAAAXElEQVR4nLWRQQoAIAgEE/
+b/X7YUhJA2NMijNc6iUNXRKRFxAC9QG7RaCcUGlEH7bFDACH1MYpbcKxvzYESD2Zi5vZz/4GkxJXA/
+w7NxPx1u22Qx3Xh7zKZWVFYTmBE6OEcaQLwAAAAASUVORK5CYII=]
+(n∈NAskatasun-graduak)
+
+
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAIoAAAAuCAYAAAD3CoGcAAAACXBIWXMAAA7NAAAOqAF7bHt4AAAI2UlEQVR4nO2bC0wURxjH5WE9Hj1i8JFWKmoRUETqeSCKAaot2FYtktaiFR+gKGow1qJARLSliCVqOLVg1EtASnwkIlUQSkVAFBFQrFZFpUIV9QqGolIBQft9mCHDcbd3pwc7lv0nl3ns7Ox3e7+b+b6ZXeMXL170ESRIk4z5NoCotLTUUyqV5r1uP+PHj79TVlb2nh5MEkSJCVAMDAxgYHthoI++Lly4YKWPfgR1FhOgbNy4MZVvGwRxiwlQBg8eXMO3DYK4xQQovUn6nGZ7QrGxsfvWrVu3mAlQ8ObxbUNPacWKFb/
+ybYMuCgsLC0SwBVBeQ1u2bNl78+ZNm+bm5r45OTljHzx48DbfNmkS2NqvqqrKVqFQjHB3d0/
+X9jwmQHlThUNya2urMaiVhh3gcWhqajLDf+Ljx48tTU1NG8aNG3dGXT8tLS1vgVowT/rRx/SUn5/
+vgzCQPtPT05d5eHgcsLOzu2xvb/87uUZ1dfX78BnTv3//+8+fPzcCe0TOzs6nSD/
+MjChA97v66qsn538XF5fq8+fPW2M+Pj5eRupHjhz5h7Z9AFCi1atXH0tISPgYy2i/vkZYgOKoj4/
+PxaNHj47DMuQToP/Ey5cvuyxcuPA0aWdtbV2JH66+mABlw4YN/pGRkfP5tkOdbt++PXL48OE3MX/
+u3DkvV1fXdj+jpKRkKKahoaHpcXFxn2vTF4DRjy6bmJg81TfcYOPHYGMO5tPS0iSlpaUeUqk0nxwvLy/
+3ksvlHtr29/TpUxMmQJFIJHf5toFL4H8EBgUFhV26dMmVQII/
+7oEDB77FvLaQoPbu3evZTWb2EYvFTW5ubpUnTpxwIHU4OsE0kof2EiDnz5//vb+/f7S2/
+ZqZmTUyAQp8kQq+beASQjJgwIDGuro6M1Ln5+dXfPDgQZeeuD5MFc6QGJibm9djCg6piUgkahw2bNgtuh34Q/
+1oSNQJfvgWXW1gApTdu3dPTUxMZCr6UZ4OHj58aEqXewoSlI2NzRVMaUfX0NDw+av29+TJk36aW3UWE6AQsboQRQOsT2dTW6Efo6nN9evXnSCyqtmzZ0/
+MrFmztsMIWKtPG5gAJTAwMF9zq54XAoH7UAgH7kp316oqhKSGZITAKAVTnG4cHR1LtLUT7cINUcwvWbIkghx79uxZ32vXrn3wujaqBeX+/
+ftDCgoK/
+MDbvwhhYC7WTZ06teLkyZN26s5Zs2bNL1u3bp2pqxH79u3zACdP19O6XTQU3fXoAhmhyLVIKKtrH6ryKFyf0QfcakHJzs5eDLH2JrhB7liGENE2JCRkO1dnCMmqVasy4+PjP31dw3qTumvKBd9vi776VgmKsbFxW2trqxHmYcgtwHTEiBEV2lxUJpN9AqDoZISdnV2n+VR5dRLLc+bMKU5NTXUlbWbPnl1y6NAhZ50upEH0FPB/
+0NKlS9fpq68uoERFRaW2tbUZFhUVeU+cODFb1UngOI2FuU8Ec+j5vLw836amJvNp06Yl47GVK1dmh4WFHYmNjfXV1oiKioqBXMfJ8AygtJe7y1cwMjJqY9Wh5ltdQBk9evQFZ2dnN2VIBg4c2EjyuE+APxY4SU6enp5H6Hbgx6SD1/
+0TgNLn9OnTM5T7l0gkubiAQ9cNHTr0Hy4jjx8/HkiXJ0+e/
+KeqdikpKRHz5s2LWbBgQaGrq2tRcHBwqLo+5XL5d35+frFXrlyZCD7YSayDvFQkEj0D8Pty2dMb1QUUuHlxdXV1Xf7hMCR3CQnxH6hcZ2Fh8TfJnzlzxkf5+KhRo84pg2JlZVWvyjgc1QC2LyIiIgJwWsA6cLBnQiQSrqq9v7/
+/
+D1VVVfZJSUmTEWR1oJibmzfjWsLVq1clEyZM+I2MIg4ODmXNzc1MRIKsSeVNsbS0rFOuUygU5sp1M2bMOAXT0CC6rr6+vmODLzw8PED5nLlz5/
+4ASSefBKKeLkChcFTDj7e3txx9B/
+xB169fvy03N9deVftFixYVwHHOPSN62goNDU1KTEz8kau9oJfqAsry5ctzNJ1UWVlpT/
+yGhoYGGEQsGsgxiIyiCwsLP8O8pvkeN9PgsxSnMq52Tk5ORZjeunVrFIxGzbjbPGTIkL/
+oNjY2NnVwfABXP2DXdBgFO5zVzMzMMRkZGY5c5wh6qU6g4PMKu3bt8uI6AeEg0wBKLBY/oo/
+X1NSI3dzcMrW5OG6m2dra1t64cYPTmcXnNTAFGK7FxMQElZeXfwSgyOk2AK8lyePUogrSrKwsf7K9HhAQwOQiH6vqBAp5XkFVQ7K/
+wLW4g8KVQF0MQEggzP0Gwt1tWKZ/
+QBImp6WlLSfXwgeAwCEuhHIHKOSaycnJkbj2Q4NMh9rR0dFfYdnd3T0St9nBH/
+uatuXw4cOr8ak1XezvLWoHBW/evXv3rOgbrErkn61OuM396NEjka5GNDY2WpA8/
+oDw4WyvvPvp6+tbBk7vdIiGMnALnT6mvDdDgNu0adPPUVFRnUBBWIXwWLXaQdH25uAjf1zHXwUSVG1trU5PuGHEsnnzZjlxliF8djx27FiGqrbg3B5S9f0gcppLgwIO8pcCJOrFRCiIz56uXbt2iS7nICQAphimLklJScmH6l5JhelmtnIdtsVzMDzGdSOsmzJlyuFX/
+gK9QEyAomnBTZ3QkX6V95X18Y5zbxMToIBzeZVvGwRxiwlQUlJSJu3fv59vMwRxiAlQIFJR+86LIDbEBCjgazyhy+iz3L17V6wpXBfUc2IClJ07d3rv2LGjPU/
+vxbxpL3T/
+n8UEKOqEDwvLZLL4kJCQVXzb0tvFBCiTJk26jWlSUtIGuj44ODg5KCgoXACFfzEBytmzZ4djWl1dbUvXm5qaPubHIkHKYgIUS0vLfzH18vJKppfVKysrR/
+NnlSBaTIBC3sIj7/USATTzFArFO/
+xYJYgWE6DQysrK6nhCDaOeQYMGPeDTHkEvxQQoUqn0Dsl7e3t3LNEK6yjsiAlQ6McTBbEpJkApLi625tsGQdxiApSEhIQ4vm0QxC0mQJHJZAuWLVu2lm87BKnXf5Pd5lMqWIEEAAAAAElFTkSuQmCC]5.Betabanaketa,X:
+B(p,q)[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAALCAYAAAD1JjQCAAAACXBIWXMAAA63AAAOxAEYnXF0AAAAjElEQVR4nK2TUQ6AMAhDJeH+V55igiEGStH1Z8vcygNB11rHTonIbXj5iu1tze5k5zoNEhUNPYBDVAERWAsTgzCGERoBveFt1Sxjk5sw2THJMPdgZSpQV9UXWZUYHwjztypTtZWZAnmWyPMTDBrPCZxDRB96tLtHCJjps+pcd/
+fFF79ntHcBdL+T+XYC0i+iEL/Jq+0AAAAASUVORK5CYII=]
+
+
+
+p,q∈R+
+
+
+Definizioa:Betafuntzioaondokoeraradefinitzendenbialdagai
+errealekofuntzioerrealada:[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAMCAYAAADoIwS6AAAACXBIWXMAAA63AAAO+gFZWGoJAAAAlUlEQVR4nK2TUQ7AIAhDR8L9r6zzA9MYqYDys2Sk5dENba19mRKRKfi1khIfSl+aWQ3gAWpPr38Fw1LBAQyEgVEYG34yRUMEZkDWQ3BFMdZuc6/
+naYcmk1DoM63AmFh0GCvzoTC76F9fENbxn8kOty2ZZwlmNa6kgumi/vq0vWHeNTG43Xtl21ZSqaQ3T/
+uFceSqIr0OocupGmTWdoMAAAAASUVORK5CYII=]
+B(p,q)=∀p,q∈R+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAFcAAAAhCAYAAACsszewAAAACXBIWXMAAA7AAAAOuwGmHSk0AAAElUlEQVR4nGP5/
+/8/
+AwwwMjICuf8ZGUYBVQDLQDtgOAOMwB1NvdQDoymXhmA0cGkIMAJ3tEigHkAJ3NGApS4YLRZoCOgeuLdv39besmVLVmFhYTa97SYHTJ8+vfvAgQP2K1euNCNVL90DV1VV9Sq97aQEZGZmlgID9xQ5eikOXFC7+Pfv36xA8HuolNm7du2KfvXqlXx0dHQ7yP3UMBPkd3SzcAaujo7O8wsXLsiysLD8IWQwSA16wH779o0Lmc/
+FxfUN2SHoZhgZGT05d+6cDBsb2x9gZDFTI6L+/fvHdPHiRUtDQ8OjMDF3d/
+drO3fu1KqsrFyDHBikuhcZ/Pz5k/3Bgwdq6urql5HFMQL3169fbAICAl++f/
+9OVGqcP39+I4hesGBBQ0JCQgNMfN++fVHI6nx8fObgMgO5Vwi0n4VaqYmJienf4cOHw2CBi2xPR0dHcHt7O1wtKe5FB97e3hf37NmjgS6OEbjs7Ow/
+8QXo169fuYHgK4gNijFYgPr6+k4h1nF//
+vxhReb39PTMJOgDIsCbN29ERUREXiNn0by8vHwlJaW39+7dEwbxQXLAVKaanZ29i1j3Av3Jik3806dPfEDwae/
+everocnfv3tUguswFOXbbtm0Jnp6eC2FiHBwcP2ARISws/
+IZYs8rKylJh7PDw8FPk1MTYgKio6CtQAKO75f79+0IgGubWmpqahUuXLrUk1tyNGzcaIPPv3LmjqaysfAMUsI6OjrdkZWU/
+wuRmzJjRBcwVKdeuXZMhqUJzcXFZRop6YsCqVatMgYFLFbMqKirWAQNSGxi4B/
+GpW7ZsmQUwcMm2B9jiuQaLKGBLQhVYOYrD5ECtC5gcSYH7/
+PlzGTk5ufswPr1aB5cvXzbFJq6rq3samQ+sFI8AKzAXExMTvIFLibuxjRqCcgw2tUQHLj8//4/
+Y2NhdBw8eVCXXYdhAYGDgeUJq0AMRFwgLC+sD0cnJybWUuosYACrLOTk5f8P4wNxQCaLfv38vBKyXvhAcWwDF1N+/
+f5k/
+fPjACWMDwV9qOXDdunVGLS0tC4HlYDyIf+bMGQcQDbQP2GgR+ECMGSB3PX36VBZWkT18+FBZXl7+LkxeUFDwO7XcC7MP2Gy0AVWSoAAG9jhTgBX6bJD9wDpplpCQ0FsQGyVw3759K4JuEHKA06oYqK2tjYMFLjBLHyDVHnxufPz4scK7d++4MHWRB9DNR2qFgFsbsIAFsVEC9+XLl3LUcgQpAOQYCQmJzy9evOCltrnAFK0GrM0fUNNcYgFK4N66dcscmJ3eD4RDqB2wIADKvhYWFrsIq6QNQAncs2fPOnR2drYNlGOGGwAHLqzX1draGgrMSmED7ajhAsCBy8PD8wU0yDHQjhluABy4sNptqAwZDhUwOs1DQ4ASuCIiIl+fPXsmeOzYMW8HB4f1A+Wo4QLggTtlypT+K1euqLKxsf1ydHRcN1pEUA7ggZubm1uQk5NTCGIDe0mPB85JwwdgLXM5ODh+YxMfBaQBeOC2tbXN/
+/HjBwdoAPzIkSNKA+mo4QLggVtZWZkEG6tctWpV0UA6argAALI1F8FIp3X5AAAAAElFTkSuQmCC]
+
+Propietateak:
+a)B(p,q)=B(q,p)∀p,q>0
+b)B(p,q)= [data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAaCAYAAAAjZdWPAAAACXBIWXMAAA6gAAAPBgH+QJysAAAEqElEQVR4nNVXfUhkVRQvnUZFV8WZTAwKXTQ/
+WKEZNxOhDL9m/vATjFCcBkRRWUltC0tD05kaCCGMnGr8Skkzv9ABFVdX/8ivpDVwRxRRiTI/
+ciQcEHd0snMWzvJ6vnkzb2Jh+8HMvfec8879vXfPPfdc0eXl5VP/N4jwT6PRdNkzqK2tVVF/
+cnIyPzU19Ts+h/
+Hx8TsLCwshNHbWd2dnZ71ara7nsoMP+zTg0dcV0cMkRANSoowcY5+pswck7Obm9jfAjXz7+Pg8gJ91f3/
+/Gpfv7u7uGnuEyXZ0dLQ4PT3dgH0RHwEi6SxhAhLW6/
+WflZaWvofjoKAgi1gstjFtzs7OPIX4zsjI+IZseUnzYW1tTQaOJufm5m4AqT+8vLzOT09PxaQvKyu7TaS54OHh8cCe7ujo6NmGhoYuWAl1eXm5sa+v7xWU19TU/
+ICty6SjoqLubW1tSXZ3d69TzB0eHj4XGBh44KyPtrY2DVtGX7O5uVmZnJy8PjU1FUG6ioqKW/
+n5+QsOSeNSR0dH79vTy2SyH6nPJryzsxMWEhKyae/Z8fFxBVuGpKg/PT39ElMnlUr/
+7OnpedUhadxUJpMpiC1fXV29abPZ3GnM3N0EPsKIiIiILWjkTB8U31yrgPOpVKo5l8MjJibmJ5qgrq6uh7KFEEDMvq3Vat/
+k0sEesRQXF99lyiBU8t4FPCQNObKuo6OjnvqQfj52ZtLQ0FBzYmLi/
+fb29tfZuqSkpA3yB+S+4PLt6el5xnyG9ga2ECY6dlZRKBRdj7KHI5KYnoxGYxHmSRzv7e097+3tbd3e3pZw2S8uLqbSBnLkm02ML/
+3BB3oYbk6FB6YnJGy1WiHdiq3BwcG/WyyWa1y2sFGq8/
+LydM74JRwfH0uQrEQiOcIxzpOTk3OPaQP7Sj4zMxPuNGkCEsaW72sIJYwICAgws+cZHByUM2WQwX6mvohr1z/
+pEAk5np8UXAkPnU7XxmXo7+9vLikpeR/
+7+KITExMqpVL57eMkNzw8XJadnd3Cll8hXV1dXYghU1VVZWxqasogOcqINPYfN2EEEjYYDJ8UFRV9yEvaHjY2Nm5gK7Ti+6+AA+YDl0mHh4ffh3o4mEs3MjJSkpWVpYfK7+WVlRUFHAyfcr0Y3wvPzs7myOXyO5WVlaNwhCeS3djYmJr9nKCU19jY2Mklz8zM/
+AoafWRk5C/4Q9JC/GKBv76+fhMOjyEsByAMp0iXlpbWDc2/5hVEuqWlJQVK0iulJ5x+b52fnz/
+D9czm5mY0rhKNuW5I8NJf0xjKideYOizY2D4FkY6Li/
+t1aWnpRbY8JSWlFyb6HvtInpn7w8LCTI5uQENDQ7eE8LBL+uDgQMqWwS3lukgkuuBzCBdfk5CK7+TkxLe3t1cNmeLLi4sLEaxmE1M/
+MDDwDtY5vKRhEzS2trZqqF9YWPgR6dzd3W1se0RsbOxvuIyQnrRUH3CB/DLh6+t70t/fHzs/
+P6+Em5AMrmi3mfrc3NzPmXU7J2kmSS7g8prNZikVN1j9LS8vv8D3jCPfFDIJCQljBQUFWqYOfL/
+BjmuXLgFAOsjPz+8vDBW8JcOkBlf8OALW61zl7z9ZvFJcVh+mRwAAAABJRU5ErkJggg==]∀p,q>0
+Kasuberezia:Banaketauniformea,X:B(1,1)=U(0,1)
+
+
+6.Student-entbanaketa,X:tn
+f(x) =∀x∈R[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAAANCAYAAACEomHkAAAACXBIWXMAAA7EAAAOzgFvxOaRAAABAklEQVR4nO1XQQ7DIAwDif9/
+mYkDWxSlJoGwaQEfqrYg09o4QEkp1XRxFEqtNf/
+6I76BnLN6ckfXpLSLJAj6cdqf92tt0rsRJwLitPJGN1QC17/
+0B9rQ7p+Ebu9of+2AnpA4pe+9kFFQIxVSI+oO4a+Z/
+oCmr8KScm25fuLs1cc6QWaXiX+GaDov31xM66bIu8TT6uPJGxGSRm5JH02MmfSi5K5uDtG40SGajsTYnfKRiRqTZ0p21NIu/
+ddU0rXrp7RE8FOCZVztrp1XHHTcOxFv06kwSMR+PxJWkxxuvAenFVETjqBOOkr2inA7ODmPZX9xAtSme5rgwcMxmpT3vP/
+BC5srBi39UPEBAAAAAElFTkSuQmCC][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAICAYAAAA870V8AAAACXBIWXMAAA3zAAAOeAH1zMInAAAAJUlEQVR4nGP5/
+/8/AyMjI5D6z8jCAAUgATgHBIjlgDRiyICMBgAhiQwgT+dNZgAAAABJRU5ErkJggg==][data:
+image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAICAYAAAA870V8AAAACXBIWXMAAA3zAAAOeAH1zMInAAAAJ0lEQVR4nGP5/
+/8/AyMjI5D6z8jCAAUgATgHBIjlgDTCOSAjYUYDAEeBECA2iaKBAAAAAElFTkSuQmCC][data:
+image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAECAYAAABcDxXOAAAACXBIWXMAAA84AAANWwGlk/
+RBAAAAKUlEQVR4nGP5//8/
+AwgwMjKCGUA+IwMUwMRYGIgALDDVeBUhc5CtQgYAyUIMENfdb4YAAAAASUVORK5CYII=]
+n∈NAskatasun-graduak[data:][data:][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAGCAYAAADkOT91AAAACXBIWXMAAA8GAAAOYQG8DPK8AAAAJUlEQVR4nGP5/
+/8/AwgwMjKCGSzIHLgAMmAByQIBI24VIFlkMwDFRg0aDmtM4QAAAABJRU5ErkJggg==][data:
+image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAMCAYAAABbayygAAAACXBIWXMAAA4aAAAPKwFlO/
+ZQAAAAN0lEQVR4nGP5//8/
+Ay7AyMgIl2TBqQoNUEch0FmMBBWC3AdSCKPxmojiGWQOspXI1hJ041BTCAANQhcu6y+G7AAAAABJRU5ErkJggg==]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAICAYAAAArzdW1AAAACXBIWXMAAA9aAAAOeAFcQJMoAAAALElEQVR4nGP5/
+/8/AyMjI5D6z8iAA7DgksCqCN00EJ88kyhXhGw3QZPwBQEAnC4QIKyy6Q4AAAAASUVORK5CYII=]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAjCAYAAABRhLCJAAAACXBIWXMAABBHAAAOzAHyNwX2AAAAMElEQVR4nGP5/
+/8/AwywMCABUjmMjIz/
+SdUDtJyRIksHM4ecAMHNwQwqkPkgURAHAP0hD4qna2h5AAAAAElFTkSuQmCC][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAjCAYAAABRhLCJAAAACXBIWXMAABBHAAAOzAHyNwX2AAAAMUlEQVR4nGP5/
+/8/AwywwBiMjIz/
+4RygCkY4B0UZmANSC1KCKTPKIY8DC00i9YAiAAD8Qg+KI8rSYAAAAABJRU5ErkJggg==][data:
+image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAGCAYAAAAL+1RLAAAACXBIWXMAAA2pAAAQDgE3BLm8AAAAKElEQVR4nGP5/
+/8/AwwwMjKCOSzoAiiCyIAFXRVYEF0AQzvQUkYQDQC5ZAocSAjA/AAAAABJRU5ErkJggg==]
+
+
+
+
+
+
+Propietateak:
+a)x=0ardatzarekikosimetrikoada,f(x)=f(-x)∀x∈R
+b)[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAICAYAAAAiJnXPAAAACXBIWXMAAA5OAAAONAE+vNgYAAAARElEQVR4nGP5/
+/8/
+AyHAyMgIVPafEUazENQBBMgaQHyCmkCK0dlE2YRsG1gTsknICvAZQLRNKJoImQpzFrKLSLYJZAgAIkknHp765IcAAAAASUVORK5CYII=]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAECAYAAABY+sXzAAAACXBIWXMAAA9nAAANeAHm4jkCAAAAFklEQVR4nGNhYGD4z0AkYCFWIW0VAwC3DAEQpxacOwAAAABJRU5ErkJggg==]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAECAYAAABREWWJAAAACXBIWXMAAA8QAAANtQGOka14AAAALElEQVR4nGNhYGD4z4AE/
+v//z8hAJGDBJ8nIyPgfnzxezdhcgWwgXs2EDAQAsQUMDuFCAVcAAAAASUVORK5CYII=][data:
+image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAADCAYAAABF//
+VLAAAACXBIWXMAAA9nAAANKwF3dDeVAAAAFUlEQVR4nGNhYGD4z0AkYCFWIcmKAYc8AQwNNVJKAAAAAElFTkSuQmCC]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAECAYAAABREWWJAAAACXBIWXMAAA8QAAANtQGOka14AAAALElEQVR4nGNhYGD4z4AE/
+v//z8hAJGDBJ8nIyPgfnzxezdhcgWwgXs2EDAQAsQUMDuFCAVcAAAAASUVORK5CYII=][data:
+image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAALCAYAAAByF90EAAAACXBIWXMAAA6+AAAOtwE7gAqJAAAAH0lEQVR4nGNhYGD4z0AFwEINQ0YNGjVoUBn0/
+/9/RgBzcQQqL3hAhQAAAABJRU5ErkJggg==][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAJCAYAAADtj3ZXAAAACXBIWXMAAA9CAAAPjgHw4T/
+SAAAALElEQVR4nGP5//8/
+AwwwMjIiOEQAFnI1gjWTownD5lHNhAEwihnJ0gzSCKIBCBMMJNRP0HkAAAAASUVORK5CYII=][data:
+image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAALCAYAAACK9ybzAAAACXBIWXMAAA59AAAOtwGs/
+GaTAAAAHUlEQVR4nGNhYGD4z0BjwEJrC0YtGbVk1JJBZAkAu2gBLCzSGJYAAAAASUVORK5CYII=]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAJCAYAAADtj3ZXAAAACXBIWXMAAA9CAAAPjgHw4T/
+SAAAAK0lEQVR4nGP5//8/
+AzJgZGREFcADWMjVCNdMqia4ZnI1wm0e1UwcAKYPRgCdXwoogPqBfAAAAABJRU5ErkJggg==]
+
+c)Kanpaiitxuradu.
+d)Zbanaketarekinkonparatuz,erdialdeanbaxuagoaetamuturretan altuagoada.
+e)n→∞⇒tn→Z
+
+
+Kasuberezia:Cauchy-renbanaketa,X:t1
+
+
+
+
+
+
+
+7.(Fisher-Snedeccor)-enbanaketa,X:[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAPCAYAAAARZmTlAAAACXBIWXMAAA76AAAOXAESw2jUAAAAeElEQVR4nLWT4QrAIAiEJ/
+j+r+zmRqCj7EK9X4JyX13GInKpiOgrJnpmaNVDxNYoApVAOuUgIxZ7o2xUDqLGFYYhpFMvxN6i4/
+FdXP9mVXxcaRZCEKGLMRKxsxAk+04h5MQ8moXjsts3q1ezW8jJQqxgCkp9RvQQNzPySTa+SwEqAAAAAElFTkSuQmCC]
+
+
+
+                                                            n1,n2∈N[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAABfCAYAAADF5MgYAAAACXBIWXMAAA7GAAAOxgHq1c2SAAAKDElEQVR4nO2dCVAU2RmAl10W0aAGN7BZoNQgh6ipFIyiKM4YZVYtyVBCghgljIxnrDWl7GqhBAKIri5oAZGsyRogHkAKPIiUcog6ohIVMypyS6kgCeiCWB6gInk/
+                                               qU61Q89M9xx9TL+vaqp7el6/96a/fle/
+nh7bwcHBDzDiwpbrDJBRKBS3iouLf8Z1Pqwd3ki3sbFBlc6gDdf5sHbgOPNGOoY9sHQrgG4tSYTD0gUOiKQbjjgxsHSBQlc2EZZcE2DpVgAhlG41j6ULFLojHaoTAUu3YnSVfCzdiiAL1lfVY+ksAAefSceLitjY2KLdu3eHGbMvkTbuvbPI2bNnf7N48eJcU+IA4TU1NVKJRKI2FJZcyqlONiydBUwVTqBSqfI0Go2rvjDa1TqVfCzdwphzToGpcPJ7PE5nkfT09AxzxldcXLxOoVAcpBMWd+RIsDWjN2fOnNbLly+7U31WV1fnd+DAga/
+                                                R6/PXr1/bjRgxop9OnkJCQr5F4YZJ1/
+WdyNW6KDty7969+xDxjq30rly58hNdn02ZMuVmVlaWHLX3qxctWpRjSjr6TmLRj9PZFG6IyZMnd5WVlf1aLpfnmRoX01pLVNL5RGNjo5NMJiuC9fz8/
+                            K9evHjxA7bSxtI5xM7O7jUsly9fvheV1m/YShdL54CmpqZpz58/
+                                          d6D6TK1WK6RSabEl08fSOcDLy6uW/J48lkZV/
+ilLjyywdB5h6vV5uohOekVFxbLy8vIIWAYFBRVwnR8uEJ10sYomIzrpGCydV0AHLj4+Pj8lJSVnx44dSkulg6XzCOjIJSYmLrd0Oli6CMHSRQiWLkIEL33atGn/
+       rq2t/YzrfFRWVv5y/vz5hVzngw6Cln7r1q0AKuHE/HJ1dfXnAQEBpUwva5aUlETPnTu3MD8/
+P1alUsXZ2tq+NRSHr69vJdP8c4WgpUskkqq3b99+pL394MGDX2dkZKRv2rTpd8bEGxwcfKimpqZ57dq1sXfv3pXQ2cfR0bH78ePHzk5OTl3GpMkmgpZOJdzDw+NJTExMNghvaGgw+qkWfn5+l2CJmo8bcMcNnX2cnZ07hfBgBcFKh/
+vKiPloMvfu3ftkw4YNX8G6j4+PBjUBs5jEe+PGDZn2NroTIcnJyYfphMvNzY1XKpWJQ78Vt7UdQHzI5skiWOlUNxL29PSM0w63f/
+               /+b7Kzs6V0450xY8YFcrxSqbQF7mpBvDC07/bt25Wurq69jx49GqsvXFRUVJJGo/
+GPiIj4J9RWbM2uEQhWOhXQrlLd6F9VVbUECUlXq9UehuLQPpEuXrzoCctr167NRwub9vZ2n7CwsEyqkgn34HV0dIwxlMaqVavUsD/
+                qKM5k8zYpAt5K37t375/J7ydMmNAUHh6eZkypCAwMLFmzZo2vKflBtYjLwoULj/
+                                                      j7+59DbzNNiSsnJ2cucdKgjl/
+PqVOn1pkSH1P0Sj9x4sRv0dmoLCgo8Ce2LViwoPHcuXPeuvYx1z3lW7duXasdV0JCQl5SUlIEF50lEE6sjxw58o254n316tXHzc3NfuaKjw46pUMHA9qb0NDQA0j60LbIyMjL+oQD0NPt7+8fAW2umfP6AUxGgHRzx8uELVu2/
+                  OPly5d2psRB1QQBcXFxf09JSfmV9nZzQykdEjx58uQ6cuJPnz51PHLkyOzDh/
+                          V3UKF02tvb91ki0xA3GjezWirIVFdXy/ft2/cLS8W/c+fOcPQaWu/
+                     q6voUhoCWSIdSOnRItKVBJ0lX29PS0jIFjY/ryNtaW1u93d3dG03NIGrb/
+wLLbdu2rYYlDMOMiefJkycmXapFtV0M6m2nEu8tWRKfPXs2xlLCAUYdOYVC8V7nCkrepEmTvkdtkhN5O2xDrwYzte1ryEtIE9U6P2Qaz+bNmzeako9ly5alwYvJPvD9UYn9MRL4Hyb7ZWZmZui6iQIVvldM4qJimPSbN28GMokAlfIfaW+bOnVqO1wkgXWq3ra3t/
+                           fjhoYGZybpkKmvr59p7L5ss2LFivPl5eU+DMJfPXr0aICuz2tra/
+               X2qegwTLpEIrmERFJmku5jNFBVOgbEMslIUFBQg6Ew0LkcPXp0/6xZs8qYxK0PS/
++C1dfX1+D3IucFlseOHRvMyspKJa4sEkAN5+Li0mZqniird6iaqbZfv37952icOjSbBMMnV1fXZ1AzeHl5aRwcHJ4T4eDXmqdPn1bBOp0D+ubNm4+1S8OhQ4eS4YXGtH+AaMaPH3+X6lq7qURFRVWlpaX9KSYmZoO54wZQn2Qp3bCGjhWq2nvMcYIOkw4HgSogDMOgVy6TyVouXLjgCYmjIZTOkrJkyZK/
+                                                      0s3EnTt3Zvr5+b2Xrkql+j3d/
+U1h9uzZVTCbZsk00An79OHDh4z7IWRQIVptrhrpPelQOuFqEVVAmNyARM+fP+9F3k6VkTNnzkQxyQQIRyWtGJU4BZP9DAEXl7q7uz/
+TdwLREY7y9W1kZGSCsT1qU4UDwcHB35kaB8GQdGhPKyoqJhcWFiphLllXYBDs5ubW297ernNCYdy4cS/
+                                                                     RgR7FNCMw/
+kUHl+luOtF+whK0h2PHju1lEgdqToaODzoh1xPDWCFMnRpi6EuNGjWqH7XDi3WVcjL6hAPGCLcE2nJQp6gUdZAYTbOGhIT8q6Sk5KewDlca2Z4NsxRD0q39LzRQCe9LSkqKZrofIdza4O0smznp7e21175iyBQ0do7l8hKwObF66Uql8pI52uF58+YdRUPUh+bIE9cIVjqd9jUvL28rnX6KISZOnNh9/
+                                                    /79YXflUAGjEFPTszSClX779m1/
+fZ9nIGQy2bHm5uapqOc9sHLlyjNXr17V+YgvXRQUFHyJ2nY5ku7R0dHhgcb1Z3WFPX78+BepqakhTNNgG8FKh7tUdX0GQ63169d/
+      Sd6mVqu9dIXXBdx8uXTp0v8/8dHFxUVv9R4WFpaBmhKT7qphA8FKBzZu3FgGT1zU3g4/TjBH/
+                                        FR32+qjqKjoC3Oka2kELR2VQp0XktgGaoXQ0NA/
+                                cp0POghaOjxKRC6X1zOZurQUnp6enQ8ePHDkOh90ELR0gA/
+CAaEIBwQvHcMcLF2EYOkiBEsXIVi6CMHSRQiWLkKwdBGCpYsQLF2EYOkiBEsXIVi6CMHSRQiWLkKwdBGCpYsQLF2EYOkiBEsXIbyWvmvXrmypVFoUGBh4muu8WBO8lU48VABe8CNEc/
+                                                     wmDfM/eCk9Ozs7sa6ubugBviA/
+Nzc3EEnnOFfWAy+lR0dHx6MSnkDeNjAw8BFigKs8WRO8lK7N9OnT2yorK8Plcnke13mxBgQhva2tzdHNza2e63xYC7yUnpyc/
+                                                                 Le+vj57eG4dvO/
+         s7HQw9kHAmOHwUnpcXFyUu7v7962trZ9wnRdrhJfSgaampk+h575nz57vrOHZbXyCt9Lp/
+ Oshxjh4Kx1jObB0EcIb6RqNZnZpaelK8r8iYSzDfwGDW1eAPs/+cQAAAABJRU5ErkJggg==][data:
+                                                                         image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAYAAADam2dgAAAACXBIWXMAAA8GAAAN8wH9PaR9AAAANUlEQVR4nGP5/
+                                                                            /8/
+AwwwMjKCOUAxRgYkwIKuABtgIaQAxSQYgFkF0ghjs2BzA0GTSFKEbDoADCsWGLCenT8AAAAASUVORK5CYII=]
+                                                                   [data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAYAAAARx7TFAAAACXBIWXMAAA5pAAAOeAF42e2fAAAALklEQVR4nGP5/
+                                                                            /8/
+  Ay7AyMgIlP7PyIJTBZJCgopAgDhFIOOwSYDcAleEzMGlGABu7xIU2YziLQAAAABJRU5ErkJggg==]
+                                                                   [data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAFCAYAAABmWJ3mAAAACXBIWXMAAA9SAAAOQgGVus88AAAAKUlEQVR4nGP5/
+ /8/AzbAwsjICJcBKmKES8A4IAXIiliwqQYpwGoUiAYA/qAXEj9tiRcAAAAASUVORK5CYII=][data:
+                                                                         image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAACXBIWXMAAA7VAAAQDgF6DG6bAAAAFUlEQVR4nGNhYGD4z4AFsGATpJcEAJo4ARi3LwWjAAAAAElFTkSuQmCC]
+                                                                   [data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAACXBIWXMAAA7VAAAQDgF6DG6bAAAAFUlEQVR4nGNhYGD4z4AFsGATpJcEAJo4ARi3LwWjAAAAAElFTkSuQmCC]
+                                                                   [data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAICAYAAAAx8TU7AAAACXBIWXMAAA2pAAAONAEEFem/
+                                                   AAAAN0lEQVR4nGWLUQoAIAxCE7z/
+lS1HgpQfU96UkhaAY8K6oo9BPwYatDOTtAcmtPiCgZn14mu6tAGgwx0iSXkLSwAAAABJRU5ErkJggg==]
+                                                                   [data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAGCAYAAADkOT91AAAACXBIWXMAAA5WAAAOeAGN9VjnAAAAJUlEQVR4nGP5/
+           /8/AwgwMjKCGSzIHLgAMmAByQIBI24VIFlkMwDFRg0aDmtM4QAAAABJRU5ErkJggg==]
+                                                                  zenbakitzaile
+eta[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAICAYAAADnVO9eAAAACXBIWXMAAA6zAAAPtAGt8SCjAAAAUklEQVR4nGP5/
+/8/
+AwwwMjKCOUAxRgYyAD79LOQYSA6AWwRzDbmAkH4WXIpAYsQGIS79IBpmBgsyh1yASz+yOM3iCGQJcqjQPzFgcxGlhiObAQBYFy0aYDO/
+CwAAAABJRU5ErkJggg==][data:][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAECAYAAABLLYUHAAAACXBIWXMAABF+AAANtQGLjiTBAAAAFUlEQVR4nGNhYGD4zwAFLAxIADcHADIMARC1ysRQAAAAAElFTkSuQmCC]
+izendatzailearen askatasun-graduak, hurrenezhurren.[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAANCAYAAACkTj4ZAAAACXBIWXMAAA8GAAAPTAGd5MJkAAAAQklEQVR4nGP5/
+/8/
+AyMj438GEgBQDyO6GAspBuADowZBAHIggyIImc+CroAuLkIHyK4a4oFNdYNgWQoj1kgF2GIZAGKxHCz8ONg7AAAAAElFTkSuQmCC]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAmCAYAAAABSSE6AAAACXBIWXMAAA+gAAAO0AGOl5+2AAAAMElEQVR4nGP5/
+/8/AwywMCABUjmMjIz/SdUDtJyRIkuHAYeccMPOAZkED1EQA0MZAGGPD5a/
+D0AcAAAAAElFTkSuQmCC][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAmCAYAAAABSSE6AAAACXBIWXMAAA9rAAAOzQEK1B3dAAAAMklEQVR4nGP5/
+/8/AwywwBiMjIz/
+WWAMIGCEy8CVgUTBHJgSFANGObTnwAKdSD2geAIAqDsTloIijQEAAAAASUVORK5CYII=][data:
+image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAGCAYAAADzG6+8AAAACXBIWXMAAA5kAAAPhgFPulhFAAAAIklEQVR4nGNhYGD4z4AF/
+P//nxFEMzIyYpVnwSZIDBgJGgFLAgUYKAcbgQAAAABJRU5ErkJggg==][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAICAYAAAArzdW1AAAACXBIWXMAAA6mAAAOeAGYZ0H+AAAALElEQVR4nGP5/
+/8/AyMjI5D6z8iAA7DgksCqCN00EJ88kyhXhGw3QZPwBQEAnC4QIKyy6Q4AAAAASUVORK5CYII=]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAALCAYAAABGbhwYAAAACXBIWXMAAA54AAAOawHRvH0zAAAASklEQVR4nJWQQQoAIAgEXej/
+X7Y8rCxhknuJbHSk5e7GAMjLqcMkyz6ToE4rwQq4tTN11a2hsZ2oa7UgbdHwBOORYJzzf6y0uuMGb9EgLPAbsY4AAAAASUVORK5CYII=]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAICAYAAAAx8TU7AAAACXBIWXMAAA2pAAAONAEEFem/
+AAAAN0lEQVR4nGWLUQoAIAxCE7z/
+lS1HgpQfU96UkhaAY8K6oo9BPwYatDOTtAcmtPiCgZn14mu6tAGgwx0iSXkLSwAAAABJRU5ErkJggg==]
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAGCAYAAADkOT91AAAACXBIWXMAAA5WAAAOeAGN9VjnAAAALElEQVR4nGP5/
+/8/AwgwMjKCGSzIHLgAUBUjTIIFRMAEQDQLAxpgAYkimwEAIggUGGT9GJIAAAAASUVORK5CYII=]
+
+
+
+
+
+
+Propietatea:P( <A)=P( >1/A)[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAPCAYAAAARZmTlAAAACXBIWXMAAA76AAAOXAESw2jUAAAAeklEQVR4nLWUUQrAMAhDJ3j/
+K7u5MVBpg0XNV0Hx2WjLInKpiOg7LPTk0C6WEdtCCNQCmYQ5yMqWqlUOot13FISQSb0Qe4uJ4Tu7YrDLPu4sBiEZZRfjd8TmpiDVOUHISXGUm7bLbl/
+cxGhjjEPIyULsfgsFlR5jtokbsYVMNGkzQsEAAAAASUVORK5CYII=][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAPCAYAAAARZmTlAAAACXBIWXMAAA76AAAOXAESw2jUAAAAfElEQVR4nLWTUQrAMAhDJ3j/
+K7u1Q1CxolTzVabLo9EiET1LAPAfHH09cKplhNIoArVAJqUgHIu80W1UCrKMOwxDyKQ2RN5iYvgqLlvsig87zUJIRpXF4FS4PwW5nVMIqZqf+tNxyajsNnoxynoI8X6OZnP6Xn6M1iizDC8YsUw0WUR2VwAAAABJRU5ErkJggg==]
+
+
+2.7. ZORIZKOALDAGAIARENFUNTZIOAK[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAXYAAAAhCAYAAADNooCeAAAACXBIWXMAAA7HAAAO+QF5VzQLAAAAm0lEQVR4nO3UsQnAQBADwTN8/
+y2fcQ+Gh2UmUKxoz8zsAJBxvtnd5/YRAP5xbh8A4F/
+CDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADHCDhAj7AAxwg4QI+wAMcIOECPsADEvPg4EgqGpbdYAAAAASUVORK5CYII=]
+Demagung: (Rk,Bk)→(Rl,Bl) aplikazioa daukagula,gfuntzio neurgarriadabaldineta:
+∀B∈Bl⇒g-1(B)∈Bk
+Lema:g:(Rk,Bk)→(Rl,Bl)aplikazioaneurgarriadabaldinetasoilik
+baldin∀A⊆Rlirekia⇒g-1(A)∈Bk
+Korolarioa:gfuntziojarraikia⇒gfuntzioneurgarria.
+Teorema:Demagunondokoegoeradaukagula:
+                              X:(Ω,F,P)→(R,B,PX)
+                                 g[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAARCAYAAAD+H91rAAAACXBIWXMAAA7uAAAPDwEa0Ez5AAAAOUlEQVR4nGP5/
+   /8/AwwwMjICuf8ZQWwWBhxg+EuAggFZAMZnAYUNuiROo0CKWWAMdF0YOjCCHV0XABW7G0I3/
+                       D0yAAAAAElFTkSuQmCC][data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAcCAYAAADIrlf0AAAACXBIWXMAAA6xAAAPAQF5i9tVAAAAtklEQVR4nNXTyw6AIBBDUUzm/
+                 39Z7aIJIfhAmaFzFya68gRqpZT9bCuJMwDOdrxkxRge/
+PmsGKtfsmKs97HGZIB0ESzLXm4RKMMVe0QwZcxrBFPcyzCCKe3lMwKpXLFfCLYaMwXBVmGmIlj0+F0QLGr8rggUccXcEcwTE4ZgHnsJR7CZe1mGQLOu2FIE+4uRQLCve5FCsNG9SCLQ3RVrT0oWwVpML3kEazH1aaRBoPY0CEmFuOoA05a6Qv5A0IMAAAAASUVORK5CYII=]
+                                     g(X)
+                                       R
+Non,Xzorizkoaldagaiaetagfuntzioneurgarriadiren.Orduan,g(X)
+zorizkoaldagaiada.
+Orainarazoag(X)=Y-renprobabilitate-banaketakalkulatzeaizangoda.
+X:(Ω,F,P)→(R,B,PX)[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAbCAYAAABfhP4NAAAACXBIWXMAAA7uAAAO8AGINtu8AAAAO0lEQVR4nGP5/
+/8/
+AwwwMjICuf8ZQWwWBhxgVGL4SoASALIAjM8CShXokjiNAilmgTHQdWHowEhw6LoAQhQbaifpySkAAAAASUVORK5CYII=]
+                                                                  g[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAbCAYAAADVq2dMAAAACXBIWXMAAA6xAAAOggFo53rqAAAArUlEQVR4nNXUSwqAMAxF0QrZ/
+                              5bVDC6UIGLt7+UOhHbkoSFWSjnvjpI4c8Dd6YesGPMPP58VY/
+UhK8aeLrNhHhGUBfOKoBqjCPmEINVN1oTwFEesGUFKmN8IUsB0I2gnZhiCdmyy4QhaucmmIbxVIzYVQbMxSxA0C7MUQaMxWxA0apNtRVDvJpNAeD0jJoOgPxg5BLVgZBEUMfHek0dQxNQbLQ3Ci69BqRAxXuMCJQCyPuMSdP8AAAAASUVORK5CYII=]
+Y=g(X)
+                                                                       (R,B,PY)
+PX(B)=P(X-1(B))=P(X∈B)∀B∈B
+PY(B)=P(Y∈B)=P(g(X)∈B)=
+=P(X∈g-1(B))=PX(g-1(B))∀B∈B
+
+2.7.1.ZORIZKOALDAGAIDISKRETUAK FY(y)=P(Y≤y)=P(g(X)≤y)=[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAZCAYAAACYY8ZHAAAACXBIWXMAAA6zAAAPAAEtWEsfAAAE10lEQVR4nNVXeUijRxSvJsa1RtGIbjyiUlcosYoHUdg2CjZe4H8iW7X4h3iDulKr0FoQ6tJNi7DeBwqyq5HF1SIiHmhBe2ArHmC1hZpqYrFeVZsEk009+l5hwvhtzt1v/
++iDj2/mzZuZ93vz5r033Ovr6zf+78RlYxEnJ6f/
+LJGYmLil1+t5S0tLwfQ4GMrJ2nyhUKg9ODjg03Ld3d3ykpKSOktzVlZWpLGxsd9imxUQhObn58PpPgFnjRQKRd3+/
+r5HZ2fnV4SnVCrftgYACQE0Nze3VlVVVbACAi2ICuNHW5Pwrc3Ny8t7mJubKy8rK/
+sY+8fHx75yubyjp6cn2da+ycnJj/HP2kkQhYODg8/UarUX4c/NzWWbk+/t7X1QVFT0SWZm5jrN9/
+X1Pby4uDDphe2+vr4HBQUF9S4uLv8kJSX9Bqf3fmBgoDoyMnIJ+6y609TUVH56evrjo6MjP1QGeWCtZ+ZkCwsLP0UQ4+PjUcwxDodzSdpcLvcCXQsNlJCQoFpcXAylZRcWFu6wCiItLe2Jm5tbn5+f34Gty/
+wyxARAiFUQSOfn5zxz94NJOAYR6KEja8/
+MzOSmpqYqmHzWQSCpVKq3QkJCfrcmU1FRMdXW1pZmz3oQTt9bX1+X4B3Y3t7+KTQ0dIsefy0gqqurnw0PD9+3JtPe3p4KIF7ge3t76zHEhoWF/
+Yp9PFGDwXDL1dX1Ofb9/f13afmGhgYF6yBmZ2c/6OrqyiAX2xLV1dV9bY5/
+cnLyJu2KzJBNy0okEjUmVlZBHB4e3k5JSRmydBfQLWJiYr6Pj49XMbM6TTjfVo7BCDgxMSHBNqsgysvLJ5gAMM47Oztf4QdZ9judTse3BoCQrSRJnzRrICxFI0xQNJ/
+P5+vY2pMQqwWgPbXS66BXBiEQCM6ZPHd3d2NQUNDfIpHor9HR0fhX3cMW3QCB/
+urocWM0sTa+t7cn8vDw0Dqq2PLycmJcXNyCPbImEJeXl5yX9VeM40AGc2MBAQG7a2trd6Ojo39wZE0E0NLS0lxZWVllS9YEgi66HCUo5r4ZGBi4a2l8Y2MjyVEQSF5eXsf2yJlA0NYqLS2dhYQly8rKWh4ZGYmjIw8UdzrIB3xyiZHPBIBjWHoAbUGI5cCb4Qt6jdPTU0F4ePguhN1rXAt5mOGhpBDX1tYWE1nQ47P8/
+PzP7QKBiYO2FAIYGhqqRQBEUfyjf5NNCX9zczNGLBavMheGi61CAEw+KggnEwuPH3ean52d/
+cjT09OAIKDI+wV5WEzaAmACwSwR0MehYszMycn5kuajf0ulUqWPj4+GAANFX9gIXma9YJjbQH8yx8i8pqamrpqamhI6h2i1WteOjo6m6elpMfbhvQ6VvZveLhBIq6ur72JJYDQaeWdnZ4L+/
+n5pREREN25Eu8Lg4KAMXm/bZF5UVNSPIO8N/ntKLjhYsygjI+PnycnJd4gcZOs/8I/
+WJjyIWs+ZCkHW/
+4i0oRjUwJoudoNAAPjn8XhGoVC4Z67wam1tfQQl9P2rqytnDASED5udYJuOUDSA+vr6pxAyRdjWaDS3LCkD7nMjXI+NjRXYAnADBBzhh/
+AyG7AmDHciCP9YB2F9T4OE6vWeTCZ7am5eY2PjPWvr4knv7OzcgTeIkuYXFxe3QIB4YgvEv8HgYRUyxXExAAAAAElFTkSuQmCC]
+
+Teorema:DemagunXzorizkoaldagaidiskretuaetafbereprobabilitate-legea.Y=g
+(X)zorizkoaldagaiadefinitzenda,gtransformaziobiunibokoaizanik(x=s(y)). OrduanY-
+renprobabilitate-legeafY(y)=fY(s(y))da.
+
+2.7.2.ZORIZKOALDAGAIJARRAIKIAK:
+FY(y)=P(Y≤y)=P(g(X)≤y)=[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAAARCAYAAABO4PtZAAAACXBIWXMAAA7KAAAOWAFy1ap9AAAE90lEQVR4nO1XeyykVxTf6upMauoRxjtNxGOKiZnQsH9sqJkpUWqFErF/
+SDqsLJYyIR5t/FGvRolHZUho41GV2GIQ2YhH6aaZNikr9ZyhsmRb0WGRaTJs0XM2uZvP55tZs8uWpL/
+ky3fuufec79zfPffc+109Ojq68j9eHleZlEDuayYmJodEfrUhXU4wEokkIoGAS5uuiYmJ91taWq7jHKjJcHh4aEKShAkpKSkjjY2NYkO+JyYmbgQGBiqouhNE+vn5rRH5Mmfj2NgYH9/
+UOdBJZQKSmJ2d3V9VVfUhU39mZuZgTU3NB3T9CSInJyedeTzeX8aHfnHA5/P/
+XF1dtaTqkETMxtPYt7a2imQy2dtOTk6r9L7a2towIPKEDePWjouLGz1lzBcSs7Oz9kx6eqnq7u6+U1JSkru4uGjb1dV1KywsrAX1o6OjImdn54eYvfgsLCwIPD09H3h7e68TW61Wy4Et/
+lFzc/MdsLvHSKSdnd0fZzmxi4ro6Oi6mJiYWvp29/
+Hx+ZnI5LxAeW5uzm56evoayhwORxseHv4N6WMk0sHBYeX8wj9fCIXCR01NTSVn4YupplJJpoKRSHt7e/
+VZBPJfADLGUSqVfnqasUhUVlbWAMoqlYrv4eExgzKUBj/
+62KKiou8CAgIeknZCQoKSxWL9g3ZqtdpfX0b+TuSBgYGkiIiIJmMnRDA/Py/
+E+kLXQ036JDY2ttpYf0lJST9Axr33ovEQ5OXldZNsCwoKUg8ODgpJX11d3Rf19fVVaWlp2RKJZEEgEKgqKysjra2ta4aGhm5CzfTv6Oi4BgfzdTiYf0M/
+jES6uLio8H2a68LzwEQiAknEoEJCQr41xh+SqC+u3d1dc33xot7NzU2ztLRkg+3y8vJo0jc+Pu5OHYtXIBgvSU1NlVH1GRkZmfgmMfv6+t43WCOZIBaLFx0dHTX5+fnpcHpNuru7a8Bxe3p6ehb2w+lVDCvkD8GqYbuksdnsJzqdzpTYm5ub62CibFhZOVwtbqMuNDS0HQI5RiT4+TwnJ0e2tbX1JtizoSatwfbhdnZ25sCi/
+AjZoaTHZmtrq93Y2ODA4fHL8PDwO/
+rmgCTu7e3BjmTt6RsD31a8SPIYJNLMzGyfyCMjIzzMhLa2tin6h0iGQG26Avc3F9RBwMd8I4k9PT1phEQELs729rbl1NSUWCQS3S0oKLgL15FY8PMZ9sNi6JBElOPj4ytWVlY8mOKEusjDumaIRAJDJCIqKipuPM8HE45N9uDg4HVqu7q6+ktqG65FWiYnrq6um/
+i2sbH5W6PRmOn7GGTMV0B4PWlDVq/t7++zg4ODvyf/
+96WlpUege8PU1PQJ1bawsLALSUa5t7f3NrUPavojfAxP9XzxlEiSUZGRkQ+o2ZacnFwAxb1wZ2fHAupGxfr6+lukDyeGtQIKde/
+y8rI16qgkAhEHRIYaFKVQKKQoQwZaWVpaPka5oaFBIpfL1+G70/39/
+T5kPCzYDm5t0sZtTUhEREVFySHOhrMm42XwLCORTDhktpgGWVhY7OTm5t6i6oqLi+PQBrfm5uamDRTvZqifH5OFgK39rD56eXn9hITD/
++sxv6R09PX1CQwFidva6Jm9YjwlUl9xhQzj6jMkv1tWVlaP0R6uE1Koee3U/
+rKysq+RXC6Xu0G3VyqV78NvFstQcDMzM+/CwfYr/
+deO1OGLhH8B2fdPgS2cI8YAAAAASUVORK5CYII=]
+Teorema:DemagunXzorizkoaldagaijarraikiaetafberedentsitate-funtzioa.Y=
+[data:image/
+png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAaCAYAAABLlle3AAAACXBIWXMAAA73AAAOkgH7JIHKAAAC6UlEQVR4nGOJiYk5unjxYmsGOgKWd+/
+e8eGS/PHjB8fy5csrExMT68m14P///4xA8B/
+FUnwaODg4fiQlJdXhsjQlJeXAnDlzHPCZAbLwypUrJoqKite5ubm/
+ErSUELCzs9tLjDodHZ0zIMtBvsZp6YIFCxrS0tJqCgoKNq9ataoIJObs7HyTjY3tT11dXZGlpeVOAQGB7x8+fOBE1nfhwgUrNze3Xa9eveIB8YEh9RsYRawg9vHjx92B6gWB+t5jWMrCwvL3z58/
+zAkJCQ1Q1wWuXLmyBAjaPD09F8Jc/PHjRw50vQYGBsdev37NDeP/+vWLGca2sLDYJS8v//
+7hw4eCKJYiBwEyCA8P74HKLcQmjwts3749Hpn/
+6NEjAbDHkAW9vLyuIPv43LlzNjA+LBUSa2lra+uC6urqBGxyKJZ6e3vvAtGVlZVrgSlzv6Gh4VFsSR4f8Pf3v/
+D9+3dObBZmZGTswbA0Ozu7CJhQMt68ecMtIyPzESRWX1+/HJiwPOzt7a/++/ePCab2/
+PnzWAsUYFQs5+Tk/I4u3tTUtGT69OmuGJYiB92TJ0/
+4oYojgBjDcFCiASaOBydOnFBAFr906ZJZZGQkhnqg46OBHorBsJRUALIwICDg/
+KxZszzFxcWfv3jxQqq9vT0EXR0w2i4je4giS0Fgw4YNhiAamD3YWFlZf2NTs3XrVl1kPtxSUhILpQBuKSn5j2qWkgpAjmRiYvpHjmPJtpSS6KAoIQUFBZ2juaW7du2KAhaPv5ycnNbAisSrV68ag6ouWDATU1SSZOnRo0d9Ghsbo5DFtLW1zyLzS0tLNxIyh2hLkX2wY8eOOGxqgLWIYldXVwBVLP306RNKO+rIkSPe69aty0FXJycnd58Y84iyFNa2efz4sUJhYeGatWvXGj9/
+/
+rwQWQ0wXp8D20KSVLOUmZn5Lyxo16xZY4IuD6qyYDUI1SzFB4CFvispFlJk6c+fP9k7OzvnAKurWFL1AgDblVFLRR8dwAAAAABJRU5ErkJggg==]g
+(X)zorizkoaldagaiadefinitzenda,gtransformaziobiunibokoaizanik(x=s(y)). OrduanY-
+rendentsitate-funtzioafY(y)=fY(s(y))·da.
+

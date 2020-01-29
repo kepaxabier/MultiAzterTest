@@ -1,0 +1,342 @@
+
+
+
+
+
+
+
+
+
+
+
+7
+
+                                  XIII. GAIA
+
+****** MAILEGU-ERAGIKETEN TEORIA ******
+
+         1. Sarrera.
+         2. Oharpenak.
+         3. Kapital eta interesen amortizazio bakarra.
+         4. Interesen abonu aldizkakoa eta kapitalaren amortizazio bakarra.
+         5. Azaldutako mailegueragiketen kitapena.
+         6. Amortizazio partziala, hitzarmena amaitu baino lehen.
+         7. Kasu praktikoak.
+
+         1. SARRERA.
+
+Mailegu-eragiketan pertsona, fisiko zein juridiko, bi daude: mailegu-emailea
+eta mailegaria. Alde batetik mailegu-emaileak (P; X0) mailegua ematen dio
+mailegariari, eta bestaldetik mailegariak (M1; X1), (M2; X2), ..., (Mn; Xn)
+itzultzen dizkio mailegu-emaileari kontratuaren arabera. Kontratuan  bederen 
+hauek agertuko dira:
+    * hasierako datuak: P, n eta i;
+    * ordaintzeko era; eta,
+    * amortizatzeko era.
+
+Sailkapena:
+
+   1. Amortizazioa_abonu_bakarraren_bitartez.
+
+Normalean epe laburrerako eragiketa da.
+P P+I
+. .
+0 n
+
+   1. Amortizazio_bakarra_eta_interesen_abonu_aldizkakoa.
+
+
+P P.i P.i . . . . . . . P.i . . . . . . . P.i P.i + P
+. . . . . .
+0 1 2 t n-1 n
+
+   1. Amortizazio_aldizkakoa_eta_interesen_abonu_aldizkakoa.
+
+
+P M1 M2. . . . . . . Mt . . . . . . . Mn-1 Mn
+. . . . . .
+0 1 2 t n-1 n
+
+Mt = aldakorra
+M = konstantea
+
+non :
+         1. OHARPENAK.
+
+P = maileguaren nominala.
+Hasierako datuak: n = iraupena.
+ i = urteko intereshainbestekoa
+
+Eta hauek guztiak, t urteari aipatuz:
+
+Mt = t urteko amortizazio-terminoa.
+It = t urteko intereskuota.
+At = t urteko amortizaziokuota.
+Tt= t urteko amortizatutako osoa.
+Dt = t urteko zorra..
+
+         1. KAPITAL ETA INTERESEN AMORTIZAZIO BAKARRA.
+
+               1. Epe laburrera.
+
+   a. Interesen ordainketa aurrez ordaintzekoa.
+
+
+P  I = P (1ni) P
+. .
+0 n
+
+Non eragiketaren interesa, kapitalizazio bakunean kalkulatuta, aldez aurretik
+ordainduko da:
+                                 I = P . n . i
+
+   a. Interesen ordainketa postordaingarria.
+
+P P + I = P ( 1 + n i)
+. .
+0 n
+Non eragiketaren interesa, kapitalizazio bakunean kalkulatuta, era
+postordaingarrian ordainduko da:
+
+                                 I = P . n . i
+
+               1. Epe luzera.
+
+n > 1 denez,  kapitalizazio konposatuan.
+
+P P + I = P (1+i)n
+. .
+0 n
+Non eragiketaren interesa, kapitalizazio koonposatuan kalkulatuta, era
+postordaingarrian ordainduko da:
+ I = P [(1+i)n  1]
+         1. INTERESEN ABONU ALDIZKAKOA ETA KAPITALAREN AMORTIZAZIO BAKARRA.
+
+
+P P.i P.i . . . . . . . P.i . . . . . . . P.i P.i + P
+. . . . . .
+0 1 2 t n-1 n
+
+Finantzabaliokidetasuna 0 unean, honela izango zen:
+
+                         P = P. i . ani+ P . (1+i)n
+
+Baina, kasu honetan, ez da honela kalkulatzen; honela baizik:
+
+Ezaugarriak:
+
+Mt = P . i
+It = P . i
+At = 0 t = 1, 2, ....., n  1 denean.
+Tt= 0
+Dt = P
+
+
+Mn = P . i + P = P . ( 1+i)
+In = P . i
+An = P t = n denean.
+Tn= P
+Dn = 0
+
+
+Oharra: interesak urtekoak, seihilabeterokoak, e.a., izan daitezke;
+postordaingarriak ala aurrez ordaintzekoak.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         1. AZALDUTAKO MAILEGUERAGIKETEN KITAPENA (kitapen osoa).
+
+Kitapen osoari kitapen aurreratua ere deitzen zaio. Analisia mailegu-emailearen
+ikuspegitik egiten da. Mailegu-emailea ados egongo da, t unean, kontratuko Dt-
+ren ordez mailegariak t unean H kapitala ematen badio nolabait mailegu-
+emailearen egoera zaharra eta egoera berria berdinak izango badira n unean.
+
+               1. Kapital eta interesen amortizazio bakarra.
+
+P P (1+i)n
+. .
+0 n
+
+P Dt =P (1+i)t
+. .
+0 t
+
+Dt = kontratuko zorra t unean.
+
+Demagun_mailegariak_t_uneko_zorra_kitatzeko_eskatzen_diola;_mailegu-emaileak_t
+unean_kitapen_osoa_onartzeko,_merkatuaren_egoera_hartuko_du_kontuan.
+
+i = kontratuko interes-tipoa.
+i1 = merkatuko interes-tipoa.
+
+Interes-tipo_bi_hauek_erkatuz,_hiru_egoera_daude.
+
+   a. i1= i.Biak ados egongo dira. Ondorioz, kitapenaren zenbatekoa Dt=P (1+i)t
+      izango da.
+
+   a. i1> i.Mailegariari ez zaio interesatuko. Ondorioz, ez du kitapen
+      aurreratua eskatuko ere.
+
+   a. i1< i.Mailegariak zorra kitatzea (kentzea) nahi izango du. Eta mailegu-
+      emaileak kitapen osoa onartzeko, egoera zaharra eta egoera berria
+      erkatuko du. Ados egongo da, Egoera zaharra = Egoera berria bada.
+
+
+P Dt =P (1+i)t P (1+i)n
+Egoera zaharra: . . .
+0 t i n
+
+
+H H (1+i1)n-t
+Egoera berria: . .
+t i1 n
+
+Beraz, galtze hauek izango ditu:
+
+Ondorioz, mailegu-emailea ados egongo da, t unean, kontratuko Dt-ren ordez
+mailegariak t unean H kapitala ematen badio nolabait mailegu-emailearen egoera
+zaharra eta egoera berria berdinak izango badira n unean. Honela:
+
+
+Laburbilduz, mailegariak mailegu-emaileari t unean emango dion zenbatasuna hau
+da:
+
+
+Oharra: goiko egoeran ez dira kontuan hartu praktikan ematen diren
+penalizazioak, gastu, komisio eta beste kontzeptu batzuk.
+
+
+               1. Kapitalaren amortizazio bakarra eta interesen abonu
+                  aldizkakoa.
+
+
+P P.i P.i . . . . . . . P.i . . . . . . . P.i P.i + P
+. . . . . .
+0 1 2 t n-1 n
+
+
+Zordunak (mailegariak) t urteari dagozkion interesak abonatuz gero, t unean
+zorra kitatzea (kentzea) erabaki du.
+
+Kontratuko_i_eta_merkatuko_i1erkatuz,_hiru_egoera_daude.
+
+   a. i1= i.Biak ados egongo dira. Mailegu-emaileak ez dio oztoporik ipiniko
+      eta itzultzeko zenbatasuna kontratuko zorra da: Dt=P izango da.
+
+   a. i1> i.Mailegariak ez du zorra kentzerik (kitatzerik) eskatuko.
+
+   a. i1< i.Mailegu-emaileak galtzeak izango ditu:urtean behin.
+
+…..
+Galtzeak: . . .
+t t+1 n
+
+Beraz, mailegu-emaileak_onartuko_du_,_t_unean_H_hartzen_badu:
+
+
+Hau da, mailegu-emaileak t unean maileguaren nominala gehi galtze eguneratuak
+hartuko ditu.
+         1. AMORTIZAZIO PARTZIALA, HITZARMENA AMAITU BAINO LEHEN (kitapen
+            partziala).
+
+Analisia mailegu-emailearen ikuspegitik egiten da.
+
+               1. Kapital eta interesen amortizazio bakarra.
+
+
+P P (1+i)n
+. .
+0 n
+
+P Dt =P (1+i)t
+. .
+0 t
+
+t_unean_F_abonatzen_badu:
+
+P P (1+i)t -F
+. .
+0 t
+
+
+Zein da t unean F abonatu ostean mailegariak kontratuan izango duen zorra?
+
+Mailegu-emaileak zorraren gutximena ontzat hartzeko kontratuko_i_eta_merkatuko
+i1erkatuko_ditu._Hiru_egoera_daude.
+
+   a. i1= i. Mailegu-emaileak ez du oztoporik jarriko. Ondorioz, t uneko zorra
+      F abonatu ostean da: D´t=P (1+i)t– F.
+
+   a. i1> i.Mailegariak ez du eskatuko.
+
+   a. i1< i.Mailegariak zorra kitatzea (kentzea) nahi izango du. Eta mailegu-
+      emaileak kitapen osoa onartzeko, egoera zaharra eta egoera berria
+      erkatuko du. Ados egongo da, n unean egoera zaharra = n unean Egoera
+      berriabada.
+
+
+P (1+i)n
+Egoera zaharra: . . .
+0 t i n
+
+
+F F (1+i1)n-t
+Egoera berria: . .
+t i1 n
+
+
+F abonatu ostean mailegariak kontratuan t unean izango duen zorra hau da:
+
+
+Oharra: goiko egoeran ez dira kontuan hartu praktikan ematen diren gastu,
+komisio eta beste kontzeptu batzuk.
+
+               1. Kapitalaren amortizazio bakarra eta interesen abonu
+                  aldizkakoa.
+
+
+P P.i P.i . . . . . . . P.i . . . . . . . P.i P.i + P
+. . . . . .
+0 1 2 t n-1 n
+
+
+Demagun mailegariak mailegu-emaileari t unean ( t < n ), t urteari dagozkion
+inetersak ordainduz gero, F zenbatasuna abonatu nahi diola. Bakarrik ikusiko
+dugui1< i den kasua. Eta kasu honetan, bi aukera ikusiko ditugu mailegu-
+emaileak F hartzerakoan inbertitzeko duen aukeraren arabera.
+
+   i. Mailegu-emaileak F hartzen badu, merkatuanlortuko du.
+
+          o t urtetik aurrera:
+
+
+F abonatu ostean mailegariak kontratuan t unean izango duen zorra hau da:
+
+   i. Mailegu-emaileak F hartzen badu, eta merkatuan inbertituz, F
+      inbertsioaren interesak urtean behin kobratzen baditu.
+
+F abonatu ostean mailegariak kontratuan t unean izango duen zorra hau da:
+
+
+
+Oharra: goiko egoeran ez dira kontuan hartu praktikan ematen diren
+penalizazioak, gastu, komisio eta beste kontzeptu batzuk.
+
+
+         1. KASU PRAKTIKOAK.
+

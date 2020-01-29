@@ -1,0 +1,418 @@
+
+
+
+
+1
+ERANSKINA : ZENBAKI  KONPLEXUAK
+1. SARRERA : Zenbakien zabalpena.
+Zenbaki arruntak : N= { 0,1,2,.....} , 
+N
+* = N-{0}
+Barne eragiketak      *  batuketa : 
+∀a b
+,
+∈N, a b
++ ∈N
+             
+* biderketa: 
+∀a b
+,
+∈N,  a b
+.   ∈N
+Zenbaki osoak : Z = { ....,-2,-1,0,1,2, .....} , Z
+* = Z -{0}
+Barne eragiketak       *  batuketa : 
+∀a b
+,
+∈Z , a b
++ ∈Z
+*  kenketa : 
+∀a b
+,
+∈Z , a b
+− ∈Z
+*  biderketa: 
+∀a b
+,
+∈Z  ,  a b
+.   ∈Z
+N
+⊂ Z
+Zenbaki  arrazionalak : Q = {m/n   / m,n 
+∈Z , n≠ 0} , Q* = Q-{0}
+Barne eragiketak       * batuketa : 
+∀p q
+,
+∈Q , p q
++ ∈Q
+* kenketa : 
+∀p q
+,
+∈Q , p q
+− ∈Q
+            * biderketa: 
+∀p q
+,
+∈Q ,   p.q
+  ∈Q
+            * zatiketa : 
+∀p q
+,
+∈Q,  p q
+/
+   ∈Q
+N
+⊂ Z⊂ Q
+Zenbaki irrazionalak : I    Ad: e,
+π  , 2  , n n
+,  karratu ez betea izanik......
+* Zenbaki arrazionalek adierazpen hamartarra periodikoa ametitzen dute.
+* Zenbaki irrazionalek bakarrik adierazpen hamartarrak ez periodikoak.
+
+2
+I  I Q = 
+∅
+Zenbaki errealen multzoa :  R   ,  R
+*= R-{0}. Multzo honetan batuketa, biderketa, zatiketa,
+berreketa, logaritmoak., erroketa .... defini daitezke.
+
+
+
+⊂
+⊂
+⊂
+⊂
+R
+I
+        
+          
+R
+ 
+Q
+ 
+Z
+ 
+N
+  I  U Q = R
+OHARRA : oREN  ARTEKO ZATIKETA EZINEZKOA DA
+R multzoan oraindik zenbait eragiketa ezin dira egin, esate baterako  (-3)
+1/2,
+(-5) π ,  ln(-2) , x
+2+1=0 ....... Eragiketa eta ekuazio hauek askatzeko, beste zenbakizko
+multzoa sortzen da: Zenbaki konplexuen multzoa C.
+2. ZENBAKI KONPLEXUEN MULTZOA
+2.1 Definizioak.
+z
+∈C zenbaki konplexua, z=a+bi itxurako zenbakia da non a,b∈R  diren.
+Geometrikoki:
+     C          
+↔
+   R
+2
+z=a+bi   
+↔   
+P(a,b) konplexuaren afixua
+ a lehenengo osagaiari, z-ren zati erreala deitzen da, a=Re(z) eta b bigarren
+osagaiari
+z-ren zati irudikaria deitzen da, b= Im(z)
+* b=0 bada 
+⇒  z=a ∈R eta bere afixua (a,0) da.  R ⊂ C  esan daiteke.
+* a=0 bada 
+⇒  z=bi  eta  zenbaki irudikari hutsa edo purua deitzen da eta  bere
+afixua (0,b) da. Partikularki b=1
+⇒  z=i zenbakiari unitate irudikaria deitzen zaio eta  bere
+afixua (0,1) da.
+z=a+bi forma z konplexua adierazteko, forma  binomikoa deitzen da.
+x
+y
+z=a+bi
+a
+b
+
+3
+2.2 Zenbaki konplexuaren modulua eta argumentua.
+Izan bedi P(a,b) afixua duen  z=a+bi zenbaki konplexua.
+Definizioa. (0,0) puntua eta P(a,b) afixua elkartzen duen zuzenkiaren luzera
+ρ =OP  , hots  ρ =  a
+b
+2
+2
++
+, z-ren modulua da eta  z
+= ρ adierazten da.
+Definizioa.  OP  zuzenkiak OX  ardatz positiboarekiko osatzen duen  angelua
+θ, z-ren
+argumentua da, arg(z) = 
+ϑ, beti radianetan neurtuta.
+tg
+ϑ = b/a  ⇒ ϑ    = arctg b/a
+Argumentu nagusia : 
+θ angeluaren balioak beti  (- π,π] tartean kontsideratzen dira, hau da
+-
+π < arg(z) = ϑ   ≤ π .
+Adierazpen geometrikoa kontuan harturik, zera dugu:
+a=Re(z) = 
+ρ cosϑ   , b= Im(z) =  ρ sinϑ
+2.3 Beste adierazpenak.
+Izan bedi z=a+bi  zenbaki konplexua non bere modulua  
+ρ  eta argumentua
+ϑ diren, orduan  z= ρϑ  eran adieraz daiteke. Adierazpen hau
+forma polarra deitzen da.
+Aurreko erlazioak erabiltzen badira ondokoak idatz daitezke:
+ z= a+bi = 
+ρ cosϑ  + i  ρ sinϑ   =  ρ (cosϑ  + i  sinϑ )
+azken forma hau forma trigonometrikoa  deitzen da.
+Onar dezagun ondoko formula:
+  e
+i
+ϑ  = cos
+ϑ   + i sin ϑ     , ϑ  ∈ R  (Euler-ren formula )
+orduan z = 
+ρ eiϑ  jar daiteke, forma hau forma esponentziala deitzen da.
+2.4 Definizioak.
+* z = a+bi = 
+ρ
+ϑ , z’=a’+i b’ =  ρ ϑ
+'
+'    bi zenbaki konplexu berdinak dira  baldin eta
+ z= z’ 
+⇔   a=a’ eta b=b’   ⇔   ρ = ρ’ eta ϑ =ϑ ’+2kπ (argumentuen arteko kendura 2π -
+ren anizkoitza da) .
+x
+y
+z=a+bi
+b
+a
+ρ
+θ
+
+4
+* z = a+bi = 
+ρ
+ϑ  zenbakiaren konplexu konjokatua beste konplexua da , z  adierazten dena
+non,  z  = a-bi =
+ρ ϑ
+−  den, hots modulu berdina eta argumentu kontrakoa.
+* z = a+bi = 
+ρϑ zenbakiaren , konplexu aurkakoa -z beste zenbakia da  non,
+-z= -a-bi = 
+ρ
+ϑ π
++   den.
+2.5 Zenbaki konplexuen arteko eragiketak.
+Izan bitez  z = a+bi = 
+ρϑ =  ρ (cosϑ + i  sinϑ) =  ρ eiϑ  eta
+z’=a’+i b’ = 
+ρ
+ϑ
+'
+'    =  ρ ’ (cosϑ  ’ + i  sinϑ  ’ ) = ρ ’  e
+i
+ϑ '  bi zenbaki konplexu
+* Batuketa : z+z’ = (a+bi)+(a’+b’i) = (a+a’) + i(b+b’)
+* Biderketa: z.z’ = (
+ρ
+ϑ )( ρ ϑ
+    
+'
+'
+) = 
+ϑ ϑ
+ρ ρ
++ '
+    ')
+(
+Bi zenbaki konplexuen arteko biderkaduraren modulua, moduluen arteko
+biderkadura da eta
+argumentua, argumentuen arteko batura. Hau kontuan harturik ondokoa froga
+daiteke: i-ren
+berredurak launaka errepikatzen dira, hots    i, i
+2=-1, i3=-i , i4=1
+Forma binomikoan:
+z.z’ = (a+bi).(a’+b’i) = aa’+bb’i
+2+(ab’+ba’)i = (aa’-bb’) + i(ab’+a’b)
+* Zatiketa : z’
+≠ 0 izanik,   
+z
+z'
+'
+'
+=
+ρϑ
+ρ ϑ
+=
+ϑ ϑ
+ρ
+ρ
+−
+
+
+
+
+'
+' 
+ 
+Zenbaki konplexuen arteko zatiduraren modulua, moduluen arteko zatidura da eta
+bere argumentua, argumentuen arteko kendura.
+Forma binomikoan:
+z
+-z
+z
+θ
+-
+θ
+θ+π
+ρ
+
+5
+z
+z
+a
+bi
+a b i
+a
+bi a b i
+a b i a b i
+aa bb
+ba ab i
+a
+b
+'
+'
+'
+(
+)( '
+' )
+( '
+' )( '
+' )
+(
+'
+')
+(
+'
+')
+( '
+' )
+= +
++
+=
++
+−
++
+−
+=
++
++
+−
++
+2
+2
+* Berredura: z 
+n = (
+ρ
+ϑ )
+n = 
+ρ
+ϑ
+   
+n
+n
+ , hau da
+(
+ρ (cosϑ  + i  sinϑ ))n =  ρn (cosnϑ+ i  sinnϑ)     Moivre-ren formula
+* Erroketa : 
+z
+k
+n
+n
+n
+n
+k
+n
+=
+=
+=
+−
++
+ρ
+ρ
+ϑ
+ϑ
+π
+(
+)
+, , ,...,
+2
+0 1 2
+1
+  ,   
+ . Hau da, z zenbaki konplexu
+baten n-garren erroak n soluzio ditu, denak 
+ρ
+n
+n
+z
+=
+ modulu berdina dute eta argumentuak
+ϑ
+π
+π
++
+=
++
+2
+2
+k
+n
+z
+k
+n
+arg( )
+,  k=0,1,2,...,n-1 dira hurrenez hurren. Erro guztiek 
+ρ
+n
+n
+z
+=
+erradiodun  eta (0,0) zentrodun zirkunferentzia batean kokatuta daude.
+* Logaritmoa : ln z = ln z  + i ( arg(z) +2k
+π), k∈Z
+Zenbaki konplexu baten logaritmoak infinitu balio ditu, denak a= ln z  zati
+erreal berdinarekin
+eta b=( arg(z) +2k
+π), k∈Z  zati irudikariak desberdinak  hain zuzen. Beren afixuak x= ln z
+zuzen bertikalean egongo dira.
+k=0 hartzen bada,  ln z = ln z  + i  arg(z)  lortzen da eta hau  logaritmoaren
+balio
+nagusia deitzen da.
+Zenbaki errealen ezagutzen dugun logaritmoa, zenbaki konplexu balitz bezala
+logaritmo
+konplexuaren balio nagusia da.
+Beste edozein oinarritan: logw(z) = 
+ln
+ln
+z
+w
+  definitzen da.
+* Berredura konplexua: Izan bitez z1, z2 
+∈C , orduan 
+( )
+z
+z
+1
+2 = 
+e
+z
+z
+2
+1
+ln
+. ln z1 zenbakiak
+infinitu balio dituenez, 
+( )
+z
+z
+1
+2  berredura konplexuak ere, infinitu balio izango ditu, eta
+orokorrean ln z1 zenbakiari dagokion balio nagusia kontsideratuko dugu.

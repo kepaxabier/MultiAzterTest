@@ -1,0 +1,1856 @@
+
+
+DATUAK MIATZEN,
+INFORMAZIO BILA
+(apunteak)
+Yosu Yurramendi Mendizabal
+Konputazio Zientziak eta Adimen Artiﬁziala Saila
+Euskal Herriko Unibertsitatea
+2003ko irailan
+
+Edukiak
+I
+Sarrera orokorra
+3
+1
+Estatistika eta Probabilitatea zertan diren
+4
+1.1
+Bi gai ezberdin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+1.1.1
+Historian barrena . . . . . . . . . . . . . . . . . . . . . . . . .
+5
+1.1.2
+Deﬁnizioak
+. . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7
+1.1.3
+Datuen analisia eta Probabilitate Teoria . . . . . . . . . . . .
+9
+1.2
+Bi gai elkar osagarri . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9
+1.2.1
+Inferentzia estatistikoa . . . . . . . . . . . . . . . . . . . . . .
+10
+1.2.2
+Simulazioa . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+11
+1.3
+Bi gai beharrezko . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+13
+1.3.1
+Bi gaiak eta Informatika . . . . . . . . . . . . . . . . . . . . .
+15
+2
+Problemak ebazteko azterbide bat: Saioak egin eta datuak bildu
+20
+2.1
+Problema baten ebazpena
+. . . . . . . . . . . . . . . . . . . . . . . .
+20
+2.2
+Datuak bururatu . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+23
+2.2.1
+Populazio motak . . . . . . . . . . . . . . . . . . . . . . . . .
+24
+2.2.2
+Behaketa espazioak . . . . . . . . . . . . . . . . . . . . . . . .
+25
+2.2.3
+Aldagaiak . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+28
+2.3
+Datuak bildu
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+31
+2.4
+Datuak aztertu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+32
+2.4.1
+Maiztasunak . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+33
+2.4.2
+Taulak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+33
+2.4.3
+Graﬁkoak . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+34
+2.4.4
+Estatistikoak
+. . . . . . . . . . . . . . . . . . . . . . . . . . .
+35
+2.4.5
+Ereduak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+35
+2.4.6
+Eraldaketak edo transformazioak . . . . . . . . . . . . . . . .
+36
+2.5
+Datuak aurkeztu
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+40
+II
+Gertaerak, maiztasunak eta probabilitateak
+41
+3
+Gertaerak, maiztasunak eta probabilitateak
+42
+3.1
+Gertaerak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+43
+3.2
+Zenbatze-prozesuaren sistematizazioa . . . . . . . . . . . . . . . . . .
+45
+3.2.1
+Batuketaren legea . . . . . . . . . . . . . . . . . . . . . . . . .
+46
+3.2.2
+Biderketaren legea
+. . . . . . . . . . . . . . . . . . . . . . . .
+53
+3.2.3
+Ariketak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+53
+3.3
+Maiztasun erlatiboa . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+55
+3.3.1
+Axiomak eta teoremak . . . . . . . . . . . . . . . . . . . . . .
+56
+3.3.2
+Ariketak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+57
+3.4
+Probabilitatea . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+58
+1
+
+3.4.1
+Probabilitateak egokitu . . . . . . . . . . . . . . . . . . . . . .
+59
+3.4.2
+Ariketak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+61
+3.5
+Baldintzapeko gertaerak . . . . . . . . . . . . . . . . . . . . . . . . .
+65
+3.5.1
+Ondorioak. Biderketaren legea . . . . . . . . . . . . . . . . . .
+67
+3.5.2
+Gertaera independenteak . . . . . . . . . . . . . . . . . . . . .
+68
+3.5.3
+Bayesen formula
+. . . . . . . . . . . . . . . . . . . . . . . . .
+70
+3.5.4
+Ariketak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+71
+3.6
+Zenbaki handien legea
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+76
+3.7
+Aplikazioak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+79
+3.7.1
+Jokoak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+79
+3.7.2
+Informatika ingurukoak . . . . . . . . . . . . . . . . . . . . . .
+90
+3.7.3
+Bestelakoak . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+96
+III
+Aldagai bakar baten azterketa
+105
+4
+Azterketa deskribatzailea: Estatistika
+106
+4.1
+Oinarrizko datuak eta maiztasunak . . . . . . . . . . . . . . . . . . . 106
+4.1.1
+Oinarrizko datuak . . . . . . . . . . . . . . . . . . . . . . . . . 107
+4.1.2
+Maiztasunak . . . . . . . . . . . . . . . . . . . . . . . . . . . . 110
+4.2
+Aldagai kuantitatiboa
+. . . . . . . . . . . . . . . . . . . . . . . . . . 116
+4.2.1
+Banaketa funtzioa . . . . . . . . . . . . . . . . . . . . . . . . . 116
+4.2.2
+Estatistikoak
+. . . . . . . . . . . . . . . . . . . . . . . . . . . 117
+4.2.3
+Eredu teoriko baten egokitzapena . . . . . . . . . . . . . . . . 124
+4.2.4
+Eraldaketak . . . . . . . . . . . . . . . . . . . . . . . . . . . . 125
+4.3
+Aldagai kualitatiboa . . . . . . . . . . . . . . . . . . . . . . . . . . . 128
+4.3.1
+Estatistikoak
+. . . . . . . . . . . . . . . . . . . . . . . . . . . 128
+4.3.2
+Eraldaketak . . . . . . . . . . . . . . . . . . . . . . . . . . . . 129
+4.4
+Ariketak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 132
+5
+Probabilitate-ereduak:
+Zorizko aldagaiak
+142
+5.1
+Zorizko aldagaiak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 143
+5.1.1
+Zorizko aldagai diskretuak . . . . . . . . . . . . . . . . . . . . 145
+5.1.2
+Zorizko aldagai jarraituak . . . . . . . . . . . . . . . . . . . . 146
+5.1.3
+Ariketak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 147
+5.2
+Zenbait zorizko aldagai berezi . . . . . . . . . . . . . . . . . . . . . . 151
+5.2.1
+Diskretuak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 151
+5.2.2
+Jarraituak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 172
+5.2.3
+Zorizko aldagai berezien arteko lotura . . . . . . . . . . . . . . 181
+5.2.4
+Laburpena . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 183
+5.2.5
+Ariketak . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 184
+2
+
+I Zatia
+Sarrera orokorra
+3
+
+1.
+Kapitulua
+Estatistika eta Probabilitatea
+zertan diren
+Estatistika eta Probabilitatea hitzek arruntak dirudite gaur egun, edozein ezagutza-
+arloan erabiltzen baitira informazioa aztertu eta erabakiak hartzeko garaian.
+Pentsa daiteke mundua determinista dela, hau da, edozein gertaera aldez aurreko ar-
+razoiren baten edo batzuren mendean dagoela, eta haien bila ibiltzen garela etengabe.
+Pentsamendu determinista hori izan ala ez, guztiok dakiguna zera da, edozein ezagutza-
+arloko informazioa dagoela bustita ez-ﬁnkotasun, ez-jakintasun, ez-
+ziurtasun edota
+ez-
+zehaztasun tantez. Eta tanta hauen ondorioak menperatzeko burututako ahalegi-
+nak historian zehar, Estatistika eta Probabilitatea hitzen inguruan mamitu dira.
+Biak dira ezberdinak jatorriz eta izatez, eta biek izan dute eta badute bere kabuz
+ibiltzeko eta bilakatzeko bidea. Bestalde, askotan gai bakar baten gisa landuak izan
+dira, eta beren elkarrosagarritasuna bazterezina da. Bien beste ezaugarri bat infor-
+mazioa zentzuz erabiltzerakoan, lehen esan bezala, zera da, bi gaiak beharrezkoak
+direla.
+Bi gaien beharrezkotasun hau Informatikako ikasketetan 
+(derrigorrezkoak, legez) hiru
+mailatan nabarmendu liteke:
+ kultura orokorra deritzanaren espresiobidearen funtsean
+daudelako, beste edozein ezagutza-
+arloko lankideekin erabili ohi direlako, eta azkenik,
+informatikako gaietan beraietan txertatuta daudelako.
+1.1
+Bi gai ezberdin
+Bi gaiak askotan nahastuta etortzen dira, eta zenbaiten ustetan, estatistikari asko
+tartean, gai bakar bat osatzen dute. Ikuspuntu matematiko batetik begiratuta be-
+hintzat, ezin da ukatu biak bat izan daitezkeenik, eta beste atal batean izango da
+parada hau erakusteko.
+Ataltxo honetan, beraz, baieztatuko da biak ezberdinak
+direla, jakina, matematikoak ez diren bi irizpideri jarraituz:
+• Jatorri historikoa. Hiru korronte nagusi izan dira Estatistika eta Probabili-
+tateareren iturburuan:
+– Erroldak edo datu bilketak.
+– Zorizko jokoak.
+– Jakintza induktiboa, ezagutza partzialetik abiatuta orokortasunen bat bi-
+latzen duena, ondorioen esparrua zabaltzen.
+• Deﬁnizio praktikoa. Bi gaien eginkizuna ez da berbera.
+4
+
+1.1.1
+Historian barrena
+Bi gaien jatorri historikoak erabat ezberdinak dira:
+• Estatistika giza-erakunde handiek gizartea antolatzearren edukitzen zituzten
+beharrei erantzuteko burutu zen.
+• Probabilitate Kalkulua 
+(eta ondorioz Teoria), zorizko jokoetan gertatzen ziren
+emaitzei arrazoibideak bilatzeko ahaleginetan gauzatu zen.
+Bien garapena ere berezkoa da, nahiz zenbaitetan elkar lotuta ibili:
+• XIX. mendearen inguruan biak uztartzen hasi ziren, eta Estatistika, alde prak-
+tikotik begiratuta bietatik garrantzi handiena zuena, indarberritu egin zen. In-
+ferentzia estatistikoa izena duen arloan mamitu ziren biak, eta oraindik testu
+asko dira bereiztu gabe lantzen dituztenak.
+• XX. mendearen buruan, konputagailuen etorrerarekin, bi gaiek izan dute berezko
+eboluzioa. Datuen tratamendua (Estatistika) erraztu eta indartu egin zen, eta
+azterketarako ez ziren ordura arte bezain beharrezkoak gertatu probabilitate
+ereduak. Probabilitate ereduen baliagarritasuna, bestalde, areagotu egin zen
+simulazioei esker, problemen ordura arteko konplexotasuna nolabait bideragar-
+ria bihurtu zelako.
+• XXI. mendearen hasieran bien esparruak bereizteko joerak zabaldu egiten ari
+dira, baina ukaezina bien elkarrosagarritasuna: ereduak bururatzeko eta balioz-
+tatzeko benetako datuak ezinbestekoak dira, eta datuak informazio bihurtzeko
+aldezinezkoa da eredu bat osatzea.
+Antzinako Estatistikaren historia
+Aspaldidanik estatu, erresuma edo halako erakundeko buruzagi, errege eta jauntxoen nahia izaten zen jakitea edo
+zehaztea nolakoak ziren beren ondasunak, gudarako ahalmen eta indarrak, eta mendekoek ekoiztutakoak, nonbait
+bere ingurunea kontrolatu eta botereari eusteko, eta horretarako erroldak eta antzekoak eskuratzen saiatu ziren.
+• Aintzinako historian:
+– Sumeriarrek (5000-
+2000 K.a), esate baterako, gizon eta ondasunen erroldak egin omen zituzten.
+– Txinan ere garai horretan halakoak egiten zituzten.
+– Egiptiarrak 
+(3000 K.a.) izan omen ziren sistematikoki halakoak egin zituzten aurrenak, baita errolda
+instituzionalizatu zuten lehendabizikoak (2700-
+2500 K.a.), deklarazioa biztanleei behartuz (hil zigorra
+bestela):
+ nilometroa deitzen zaio egiptiarrek asmatu zuten prozedurari, zergak ﬁnkatzeko erabiltzen zuten Nilo iba-
+iaren ur sakontasun neurriari
+.
+– Beste zibilizazio indartsuetan ere 
+(Japonia, Erroma, Inka, India) antzekoak egin zituzten.
+5
+
+• XIII. mendetik aurrera, gero eta maizago ikusten da, estatu edo delakoaren interesak medio, datuak biltzearen
+komenigarritasuna.
+• XVII. mendearen erdialdean aurrerapen handia ematen da estatistikaren arloan. Ekonomia eta demograﬁ-
+aren gorabeherak aztertu nahian, kuantiﬁkatze lana eta konstanteen azterketari ekiten diote Inglaterrako
+aritmetika politikoko eskolakoek (fundatzaileak John Graunt (1620-
+1674) eta William Petty (1623-1687) izan
+ziren), estimazioak eta aurreikusteak eginez 
+(haur kopurua emakume bakoitzeko, ama baten bi haur jaiotzeren
+arteko denbora, hilen proportzioak, etxe bakoitzeko bizilagunak, . . . ) deritzan metodo biderkatzailea erabiliz.
+Honela, errolda osoak egin baino, datu biltze partzialak egiten hasi ziren, gero estrapolatuak izateko eragiketa
+matematiko batzuren bitartez:
+– Colbert eta Vauban, Frantzia, 1664:
+ laginen erabilgarritasuna goraipatzen dute.
+– W.Petty, Londres, 1686: 88000 etxe, Dublin eta Bristol-
+en zenbat subazter etxe bakoitzeko, 105000
+subazter (oﬁzialki, 105315), 6 bizilagun subazter bakoitzeko, etxeen
+– Jean-Joseph d’Expilly: Frantzia, 1778: herritar-
+hiritarrak geruzatu egin zituen eta biderkatze ezberdi-
+nak egin (4.5-5 bizilagun subazter bakoitzeko).
+• XIX. mendean errolda osoak egiten jarraitzen dute, nahiz probabiltate teoria garatzen hasi eta laginen teoria
+berarekin lotzen. Gaur egun, oraindik, erroldak antolatzen dira, aldizkakotasun baten barruan bada ere,
+estatutik estatura ezberdina izan daitekeena:
+ bost, zazpi, edo hamar urtetik behin.
+• XIX. mendearen bukaeran eta XX. mendearen hasieran Estatistika institutuak sortzen hasi ziren. 1885ko
+ekainaren 24an, Londresen, ISI 
+(International Statistical Institute) erakundea sortu zen. Guregandik gertue-
+nak: EUSTAT (Elkarte Autonomoa), INE (Espainia), INSEE 
+(Frantzia), eta EUROSTAT (Europako Elkarte
+Ekonomikoa) dira.
+Giza-
+gai mordo baten ardura hartzen dute datuak ekoizterakoan, errolda eta laginen
+bitartez.
+Probabilitate teoriaren jatorria
+Historia labur bat 
+(teoriaren bilakabidean izen ezagunenak bakarrik oraingoz), XVIII. mendera arte jokoarekin zeharo
+lotuta dagoena:
+• Mesopotamiarren garaikoa da aurkitu den dadurik zaharrena: Kurkuluxak
+• dadoak (Egipto).
+• Carneade (II k.a.). Ziurtasunik gabeko iritziak neurtzeko zeozer baten bila:
+ ez da iritzi baten egiatasuna,
+berekiko ziurtasuna baizik. Probabilitatea jakintza eta ezjakintzaren arteko mailaketa bat da. Kalkulurik ez
+oraindik.
+• Luca Paccioli (1445-
+1514). Summa de arithmetica, geometria, proportioni et proportionalita (1494).
+• Tartaglia (1500-1557).
+• Cardano (1501-1576). Liber de ludo aleae (1663), Sulla scoperta dei dadi 
+(1656).
+• Kepler (1571-1630). Izar berri bat ba ote zegoen inguruko burutazioak (1606).
+• Galileo (1564-1642).
+• Pascal (1623-1662). La g´
+eometrie du hasard (1654), Le trait´
+e du triangle arithm´
+etique (1654). Korrespon-
+dentzia Fermat-ekin (1679).
+• Fermat (1601-1655).
+• Huygens (1629-1695). De ratiociniis in ludo aleae (1657).
+• Jacques Bernoulli (1654-1705). Ars conjectandi 
+(1713). Zenbaki haundien legea azaldu zuen.
+• Montmort (1678-1719). Essai sur les jeux de hasard (1708).
+• Leibniz (1646-1716).
+Probabilitate kalkulua demograﬁa eta beste giza arlotan erabilgarria izan zitekeela
+iruditu zitzaion lehendabizikoa.
+• De Moivre (1667-1754). Doctrine des chances. Limitearen teorema nagusia.
+• Euler (1707-1783).
+• D’Alembert (1717-1783).
+• Laplace (1749-1827). M´
+ecanique c´
+eleste (1784).Th´
+eorie analytique des probabilits (1812).
+• Quetelet (1796-
+1874). ‘Probabilitate Kalkulua’ ‘Estatistika’ren oinarria zela ikusi zuen lehena.
+6
+
+1.1.2
+Deﬁnizioak
+Bi gai hauen deﬁnizioak Diccionario de Estad´ıstica 
+(M.G.Kendall y W.R.Buckland,
+Edt. Pir´
+amide, Madrid, 1980), hiztegi nahiko ezagunaren arabera honelakoak dira:
+•
+Estatistika:
+Indibiduo multzo bati buruzko zenbakizko datuak; izen hau dagokio
+ere datu horiek bildu, aztertu eta ulertzeko burutu den zientziari.
+Zehaztu beharko litzateke zenbakizko datu horien izaera maiztasunean oinar-
+ritzen dela: indibiduo multzo bati zerbait behatzen zaionean, horrelakoak eta
+halakoak aurkitzen dira, kopuru ezberdinean (maiztasun edo frekuentzia ezber-
+dinak). Behatutakoen edo gertatutakoen maiztasunak, beraz, zenbatze prozesu
+baten ondorioz etortzen dira.
+•
+Probabilitatea:
+Oinarrizkoa eta oso zehatza ez den kontzeptu bat, nolabaiteko ‘sines-
+men maila’tzat har litekeena, edo zorizko segida batean maiztasunaren
+limitetzat. Kontzeptuari emandako bi ikuspuntuek dituzte beren oz-
+topo eta zailtasunak, eta axiomatikarik egokiena zein den norberaren
+aukera da. Zorionez, bi ikuspuntuek probabilitate kalkulu berbere-
+tara eramaten gaituzte gehienetan.
+Deﬁnizio honetan isladatzen da probabilitatearen izaeraren inguruan gertatu-
+takoa: eztabaida asko eta asko egon da eta dago.
+Emandako bi deﬁnizioak ez daude parekatuak, nolabait esateko, eta ematen du Esta-
+tistika eta Probabilitatea gaiak aski ezberdinak direla. Aipatutako parekotasun hor-
+ren bila joanez gero, aldiz, esan liteke Estatistika gertatutako edo izan diren gertaeren
+azterketarako dela burutua, eta Probabilitatea gertakizunen edo izan litezkeen ger-
+taerenarako; iragana eta geroaren artekoan datza beraz, ezberdintasunaren gakoa.
+‘Gerta’ erroa bi atzizkirekin konbinatu dugunez ezberdintasuna egiteko, hona hemen hiztegietan aurkitutakoa, argibide
+gisa:
+• Diccionario Vasco-Espa˜
+nol-Franc´
+es, R.M. de Azkue, Edt. La Gran Enciclopedia Vasca, Bilbao, 1969:
+– Gertaera. Gertakari. 1.- suceso (´
+ev´
+enement). 2.- caos fortuito (cas fortuit).
+– Gertakizun. suceso (´
+ev´
+enement).
+– Gertaldi. ocasi´
+on (occasion).
+– Gertamen. suceso (´
+ev´
+enement).
+– -Kizun atzizkiari buruz. Tomo I, 490.orr.:
+-Kizun 
+(AN,B,BN,G,L), suﬁjo de verbo inﬁnitivo, que forma nombres derivados y signiﬁca
+objeto de acci´
+on futura.
+Algunos, tal vez, amoldando su lengua a alguna extra˜
+na, lo traducen por ‘todo objeto’.
+Damukizun (materia de arrepentimiento). Errankizun (m´
+axima, sentencia). Ori ikuskizun
+dago (eso est´
+a por verse). Algunos lo han extendido a signiﬁcar el suﬁjo -bilis latino 
+(Duv.,
+Ax.).
+Atzizki honen inguruan buelta bat emanez, ez du ematen harritzekoa izango denik esperimentazioan
+edo saiaketan oinarritzen diren zientziek baliagarritzat hartzea Estatistika eta Probabilitatea gaien
+uztardurak (aurreraxeago adieraziko direnak).
+• Lur Hiztegi Entziklopedikoa, Josu Zabaleta (zuz.), Lur Argitaletxea, 1994.
+– Gertaera. Gertatu den gauza, gizonarentzat gorabeheraren bat duena. ik. gertaldi, gertakizun, ger-
+takari.
+– Gertakari. Gertaera, gertaria. Izadian gertatzen den zernahi gauza; giz oharmenari agertzen zaion
+zernahi gauza.ik. fenomeno. Telepatia delako gertakaria.
+– Gertakizun. Gertaera. Kontakizun bateko haria. Gertakizun da (edo dago):
+ gerta, jazo daiteke.
+– Gertaldi. Gertaera. Gauza bera gertatzen den aldietako bakoitza. ik. Agerraldia.
+7
+
+Bi gaien arteko aldea adibide baten inguruan azaltzeko, esan daiteke ondorengoak
+ez direla gauza bera:
+• Dado bat 100 aldiz bota eta taula batean jasotzea aurpegi bakoitza zenbatetan
+gertatu den.
+• Dado baten aurpegi bakoitzak gertatzeko duen probabilitatea, esateko,
+1
+6 dela
+adieraztea.
+Lehenengoa Estatistikari dagokio eta bigarrena Probabilitatearen nozioari. Honen bi
+ikuspuntuak hauek izan litezke:
+• Dadoa jatortzat edo orekatutzat hartzea, hau da, dadoaren aurpegi jakin baten
+alde apusturik egin ezean, sei aldeek gertatzeko duten sinesgarritasun maila
+berdina izatea.
+• Dadoa askotan botaz gero maiztasun antzekoan gertatuko direla uste izatea.
+Gero eta gehiagotan bota, orduan eta berdinagoak proportzionalki.
+Estatistika
+Probabilitatea
+1
+12
+(%12.00)
+1
+6
+(%16.66)
+2
+20
+(%20.00)
+1
+6
+(%16.66)
+3
+15
+(%15.00)
+1
+6
+(%16.66)
+4
+19
+(%19.00)
+1
+6
+(%16.66)
+5
+10
+(%10.00)
+1
+6
+(%16.66)
+6
+24
+(%24.00)
+1
+6
+(%16.66)
+8
+
+1.1.3
+Datuen analisia eta Probabilitate Teoria
+XIX. eta XX. mendeetan Estatistika eta Probabilitate Teoria eskutik joan ziren, elka-
+rrekin, beren bilakaeran, beste atal batean erakutsiko den legez. Ikuspegi matem-
+atiko batetik lehenengoa bigarrenaren kasu berezitzat har liteke, maiztasun erlati-
+boa matematikoki probabilitatearen kasu berezitzat jota. Hauxe izan liteke, hain
+zuzen, Estatistika eta Probabilitatearen alorrak Estatistika Matematikoa hitzekin
+izendatzeko arrazoi nagusia.
+XX. mendearen azken laurdenean berriz, konputagailuen garapen eta hedapena direla-
+eta, bi gaiak ondo bereizteko joera nabarmendu da. Estatistikak probabilitate-
+eredu
+batez ezinbestez janzteko garaia igaro da nonbait, zenbait problemetan onuragarria
+gertatzen bada ere.
+Datuen analisia izena duen arloan garatzen diren teknikak, probabilitatearen kontzep-
+tua alde batera uzten saiatzen dira. Hona hemen jakintz-
+arlo honetako bi suspertzaile
+ezagunek idatzitakoak.
+• L’Analyse des Donn´
+ees (1973) idazlanean J.P.Benz´
+ecri irakasleak gai honen
+hastapenak azaltzen ditu:
+1. Estatistika ez da probabilitatea. Estatistika Matematikoaren izenpean,
+egile batzuk (. . . ) arlo handi-mandi bat eraiki dute, praktikan sekulan
+betetzen ez diren hipotesitan oinarrituta. (. . . ).
+2. Ereduak datuei jarraitu behar die, eta ez alderantziz. 
+(. . . ). Behar duguna,
+halabaina, zera da, datuetatik egiturak ateratzen dituen metodo zorrotz
+bat.
+3. Komenigarri da aldiberean lantzea ahalik eta dimentsio kopuru handiena
+duen informazioa.
+4. Konputagailua ezinbestekoa da gertaera konplexuak aztertzeko, giza-gertaerak
+batez ere. (. . . ).
+5. Konputagailua erabiltzeak dakarrena zera da, kalkulu automatikoaren etor-
+rera baino lehen burutu ziren teknika guztiak baztertzea. Eta teknika diot,
+ez zientzia (. . . ).
+• The Future of Data Analysis 
+(1962) artikuluan J.Tukey irakasleak bereak azaltzen
+ditu lehenengo bi hastapenen zentzu berean, Probabilitate Teoria berak aipatzen
+duen Matematika hutsaren alor baten gisa hartzen bada behintzat:
+Estatistika Matematikoaren zati batzuk Datuen Analisiaren prak-
+tikarako emaitzik ekartzen ez duten heinean, bide luze eta bihurri-
+etatik saiatzen badira ere, matematika hutsetako elementu gisa hartu
+behar dira, eta horren arabera neurtu. Estatistika Matematikoaren
+atalek bietako batean bilatu behar dute beren zergatia, Datuen Anal-
+isian ala Matematika hutsean.
+1.2
+Bi gai elkar osagarri
+Estatistika eta probabilitatearen arteko lotura bi motakoa izan daiteke, labur-
+labur
+esanda:
+9
+
+• Inferentzia estatistikoa, gertatu direnak abiapuntutzat hartuta, gertakizunen
+azterketa.
+• Simulazioa, gertakizunak abiapuntutzat hartuta, gertaeren azterketa.
+1.2.1
+Inferentzia estatistikoa
+Aurreko atalean azaldutako adibideari jarraituaz, dado baten 100 botalditan ger-
+tatutakoa jasota, ondorioz pentsa liteke 
+(indukzioz) dadoa jatorra dela, hau da, au-
+rpegi guztiek probabilitate berdina dutela gertatzeko (
+1
+6 ), gertatutako maiztasunen
+ezberdintasunak 
+(nabarmenena 5ekoa eta 6koaren artekoa, 10 eta 24 aldiz hurrenez
+hurren) ez direlako nahiko adierazgarriak horrela ez dela uste izateko. Noski, sei
+aurpegi horien probabilitateak ondorengoak direla badago ere uste izaterik 
+(induk-
+tiboki pentsatzerik); izan ere, pentsa daiteke dadoa ez dela jatorra, eta bere karga
+ez dagoela kuboan uniformeki banatuta, probabilitate hauek burutzen dituen modu
+berezi batean baizik:
+Estatistika
+Probabilitatea
+1
+12
+(%12.00)
+1
+9
+(%11.11)
+2
+20
+(%20.00)
+2
+9
+(%22.22)
+3
+15
+(%15.00)
+1
+9
+(%11.11)
+4
+19
+(%19.00)
+2
+9
+(%22.22)
+5
+10
+(%10.00)
+1
+9
+(%11.11)
+6
+24
+(%24.00)
+2
+9
+(%22.22)
+Eta beste zenbait probabilitate eredu pentsatzerik ere badago. Batzuk onargarriak
+izango dira eta beste batzuk, aldiz, baztergarriak.
+Adibidez, gertatutakoari er-
+reparatuta 
+(‘Estatistika’) zaila izango da ondorengo probabilitate eredua onartuko
+duen inor topatzea (ustez, dadoaren karga beste modu batean banatuta):
+Estatistika
+Probabilitatea
+1
+12
+(%12.00)
+1
+4
+(%25.00)
+2
+20
+(%20.00)
+1
+8
+(%12.50)
+3
+15
+(%15.00)
+1
+8
+(%12.50)
+4
+19
+(%19.00)
+1
+8
+(%12.50)
+5
+10
+(%10.00)
+1
+4
+(%25.00)
+6
+24
+(%24.00)
+1
+8
+(%12.50)
+10
+
+Saioen kopuruak badu zerikusirik induktiboki ondorioztatzeko garaian 
+(probabili-
+tate eredu bat onartzeko ala ez). Nolabait esateko, oso zaila ematen du 100 botalditan
+gertatu dena gertatzeak, aurkeztutako azkeneko eredua egiazkoa baldin bada, eta be-
+raz, ez da erraz onartzen eredu hori. Horixe bera pentsa liteke probabilitate eredu
+orekatuaz (lehenengoa, aurpegi guztiak
+1
+6 probabilitatea) proportzio horiek 100 bo-
+talditan gertatu beharrean 10000 botalditan gertatu balira. Behatutako proportzioei
+eutsiz, bigarren eredua baztertzeko, berriz, saio kopurua ikaragarri handia izan be-
+harko litzateke, oso sendoa baitirudi ereduak.
+Jokoetan erabiltzen diren dadoak jatortzat ematen dira aurpegi edo alde baterako jo-
+era nabarmenik behatzen ez den bitartean. Jokabide berari jarraitzen zaio txanpon,
+erruleta eta beste edozein zorizko tramankuluen kasutan.
+Probabilitate eredu bati, onargarria denean, argibide bat bilatu behar izaten zaio uste
+hori ﬁnkatzeko. Dadoaren kasuan, probabilitate ezberdinak tartean badira, argibide
+ﬁsiko bat.
+Edozein kasuan, esan beharra dago, ezinbestekoa dela gertatu direnak nolabaiteko
+zozketa baten ondoriotzat hartzea, hau da, gutxieneko probabilitate eredu batena,
+bestela bere adierazgarritasuna kolokan egongo litzateke eta ezingo litzateke gertak-
+izunei hatzeman.
+Inferentzia estatistikoaren historia
+• Pierre-Simon Laplace (1783):
+ estimatzaileren ezjakintasun, errore edo akatsa probabilitate kalkuluaren bitartez.
+• Antoine Lavoisier, 1802: laginketa.
+• Estatistika eta probabilitate teoria uztartuz Estatistika matematikoa esaten zaiona osatzen hasi ziren izen
+aipagarri batzuk hauek izan ziren: Laplace (1749-1827), Gauss (1777-
+1853), Quetelet (1796-1894), Galton
+(1822-1911), K.Pearson (1857-1936).
+• Beste gauza bat da ondorio baliogarriak lortzea ziurgabetasunezko egoeretan, beraienganako konﬁantzaren
+neurri zientiﬁko bat emanez: Bayes (1702-1761), K.Pearson (1857-1936), Fisher 
+(1890-1962), Wald (1902-
+1950), Neyman (1894-
+1981), izan dira inferentzia eta erabakitze estatistikoaren bultzatzaileak.
+• 1824, Ameriketako Estatu Batuetako lehendakaritza aurrikusteko lehen sondaketak egin ziren.
+• 1864, Errusian laginketak egiten hasten dira nekazaritzaren egoera aztertzearren.
+• 1885ko ekainaren 24an, Londresen, ISI 
+(International Statistical Institute) erakundea sortzen da. Lehenen-
+gotako gai nagusi bat emaitza baten adierazgarritasunarena izan zen.
+• XX. mendearen hasieran Estatistika eta Probabilitate Kalkulua ekonomia, biologia 
+(genetika bereziki), ﬁsika,
+eta beste jakintza-arlotara aplikatuak izaten hasten dira era zabaldu batean.
+• 1935, Inglaterra eta Frantzian lehen Iritzien Ikerketarako Institutuak sortu ziren.
+• Gaur egun, komunikabide gehienek erabiltzen dituzte teknika hauek jendearen edozein gaiari buruzko iritziaren
+inguruko beren iritzia azaltzeko.
+1.2.2
+Simulazioa
+Simulazioaren bidea Inferentzia Estatistikoaren alderantzizkoa da, nolabait esateko,
+eta konputagailuen bilakaerarekin batera zabaldu da.
+Probabilitate eredu bat gertaera multzo edo prozesu baten nolabaiteko kopia bat da;
+probabilitate eredu bat sinpleagoa eta erabilgarriagoa da berarekin islatu nahi den
+errealitatea baino, eta bien jokabideak antzekoak dira. Horrela ez bada, eredua ez da
+egokia.
+Zertan datzan azaltzeko eta dadoaren adibideari jarraituz, lehendabizi konputagailuan
+dado jator bat (aurpegi guztiek
+1
+6 probabilitatea dutena) diseinatu edo deﬁnitu egin
+beharko litzateke, eta gero, sasi-
+zorizko zenbakiak sortzeko algoritmo bat erabiliz,
+dadoaren 100 botaldiena egin, hots, simulatu. Bukatzeko, botaldien emaitzen esta-
+tistika egin.
+11
+
+Probabilitatea
+Estatistika-100
+Estatistika-10000
+1
+1
+6
+(%16.66)
+15
+(%15.00)
+1708
+(%17.08)
+2
+1
+6
+(%16.66)
+18
+(%18.00)
+1581
+(%15.81)
+3
+1
+6
+(%16.66)
+8
+(%8.00)
+1725
+(%17.25)
+4
+1
+6
+(%16.66)
+23
+(%23.00)
+1625
+(%16.25)
+5
+1
+6
+(%16.66)
+16
+(%16.00)
+1646
+(%16.46)
+6
+1
+6
+(%16.66)
+20
+(%20.00)
+1715
+(%17.15)
+1
+(%100.00)
+100
+(%100.00)
+10000
+(%100.00)
+10000 botaldiena simulatuz gero, estatistikak erakutsiko luke sei aurpegiak 
+(gutxi
+gorabehera) proportzio berdinean gertatuko liratekeela 
+(hauxe da zenbaki handien
+legeak agintzen duena), aipatutako algoritmoa ona edo egokia balitz, jakina, baina
+hau beste gai bat da.
+Hiru dado jatorren 10000 botatzearena eginez gero 
+(simulazioa), puntuen batura 10
+izango da gehiagotan 9 baino, nahiz 9a 10a bezainbestetan osa daitekeen hiru batu-
+gaitan.
+Zenbaki handien legeak dioenez 10 puntu lortzea probableagoa da 9 lortzea baino,
+eta halaxe egiaztatzen da probabilitateen kalkuluaren oinarrizko kontzeptuak erabiliz
+gero (9 puntu lortzeko probabilitatea
+25
+216 da eta 10 lortzekoa
+27
+216 ).
+9
+10
+11
+6
+2
+1
+6
+6
+3
+1
+6
+6
+4
+1
+6
+5
+3
+1
+6
+6
+2
+2
+3
+6
+3
+2
+6
+5
+2
+2
+3
+5
+4
+1
+6
+5
+5
+1
+3
+4
+4
+1
+3
+5
+3
+2
+6
+5
+4
+2
+6
+4
+3
+2
+6
+4
+4
+2
+3
+5
+3
+3
+3
+3
+3
+3
+1
+4
+3
+3
+3
+4
+4
+3
+3
+25
+27
+27
+Hiru dadoren batura baino problema konplexuago bati aurre eginez gero, probabil-
+itateen kalkulua oso zaila izan daiteke, baina simulazioa eta zenbaki handien legeari
+12
+
+esker probleman gerta daitezkeenen probabilitateak zenbatekoak izango diren jo ahal
+izango da.
+Simulazioaren indarra itzela dela agerian badago ere, bere bidea ez dago oraindik
+guztiz jorratua.
+1.3
+Bi gai beharrezko
+Bizitza eta munduari buruzko informazioa ematen duten bitartekariek 
+(prentsa, ir-
+ratia, telebista, internet, . . . ) egunero azaltzen dituzte estatistikak eta aurreikusiak
+informazio mota arrunt baten gisa, informazio estatistikoa esaten zaiona.
+Are gehiago, uler liteke norberaren eguneroko solasaldi, gogoeta eta bizipenak bi gai
+hauek kutsatuta daudela:
+ izan den eta izango den eguraldia, elikagaien kostua, gob-
+ernuaren aurrekontuak, iritzi-
+azterketak, hauteskundeetako emaitzak, istripuak, epi-
+demiak, sendagilearen diagnostikoa, odol pixka baten azterketa, pisuaren gorabeherak,
+kirolak, burtsa, karta-partidak, loteriak, ardo-
+dastaketa, leku jakin batetara iristeko
+gutxi gorabeherako denbora-kalkulua eta behar izaten dena, . . . .
+Norberaren maila alde batera utzita, esan liteke kultura edo ezagutza orokorra halako
+informazioetan blai eginda dagoela. Gaur egungo gizartean estatistikak nonahi 
+(eta
+nolanahi) erabiltzen baldin badira, gizaki arrunt guztiek ulertzeko gai izango beharko
+lirateke.
+Informazio estatistikoaren aurrean askok ondorengo bi jarreretako bat azaltzen dute:
+bere mesﬁdantza sistematikoa 
+(umoretsuenak txisteak egiten dituzte), ala zenbakien
+13
+
+lotura miresgarriekiko fede hutsa 
+(zenbakien unibertsoa arrotza eta eskuraezina suer-
+tatzen zaielako, agian).
+Halako bi muturretan, besterik gabe, ez erortzeko, zer hobeago informazio estatistikoa
+zertan datza jakitea baino. Informazio estatistikoa, informazio landu bat da, Esta-
+tistika eta Probabilitatea gaiek eskeintzen dituzten teoria eta tekniken bitartez
+landutakoa. Eta informazioa komunitzatzeko balio duenez, ekoizlea eta jasotzailea
+behar dira.
+Informazio estatistikoa jasotzen duenak eite guztietako informazioa aurki dezake:
+egiazkoa eta gezurrezkoa, sinesgarria eta sinesgaitza, ﬁdagarria eta ﬁdagaitza. Nor-
+berak kokatu behar izaten du bere burua kasu bakoitzean bi mutur horien artean,
+ustez edo dakienaren arabera. Gainera, informazio estatistiko baten ulerbidea ez da
+bakarra izaten gehienetan, eta edonork uste du, bere ahalbide eta mugekin, berea
+hartzeko eskubide osoa duela. Gogoeta hau urria dela pentsa liteke, epelkeria, baina
+orohar ezin da askoz zehatzago izan.
+Informazio estatistikoa ekoizten duenaren ikuspegitik, berriz, jantzi estatistikoz apain
+daitezke egiak, erdiegiak eta gezurrak, eta beraz, informazioaren aipatutako eite
+horiek, ez zaizkio teoria eta teknika estatistikoei zor, ekoizlearen lan egoki edo eze-
+gokiei baizik. Izan ere, egiazkoak ez badira, batzutan izan daiteke ekoizleak teoria
+eta teknikak ondo menderatzen ez dituelako, baina beste batzutan izan daiteke ere,
+ondo menderatzeagatik, intentzio maltzurrez erabiltzen dituelako.
+Aipatutako epelkeriatan ez erortzeko, egiak gezurretik bereizten saiatzeko, infor-
+mazio estatistikoa behar bezala antolatzeko eta azaltzeko, Estatistika eta Probabili-
+tatea gaiak zertan datzaten ezagutzea beharrezkoa bihurtu da. Horiek ezagutuz gero
+14
+
+informazio-
+iturriaren gardentasuna besterik ez da behar. Baina hau beste kontu bat
+da, problema bakoitzak berezkoa duena.
+Laburbilduz bada, esan bezala, gaur egun Estatistika eta Probabilitatea ez dira gai
+bereziak, edonori dagozkionak baizik.
+1.3.1
+Bi gaiak eta Informatika
+Informatikari batek, teknikari bat den heinean, problematika jakin bati buruzko es-
+tatistikak antolatzen jakin beharko luke, gertakizunen probabilitateak balioztatzen,
+eta guzti horien atzean dagoen arrazoitzeko modua menperatzen.
+Bi gaiak ezagutzea beharrezkoagoa egiten zaio informatikari bati, alde batera uzten
+direnean egunerokotasunaren gurpilean harrapatutako itxura estatistikoa duten so-
+lasaldiak, baita komunikabide arruntek ixurtzen dituztenak ere. Informatikari batek
+bere lanean dihardula, ziur aski beste arloko profesionalekin egiten du topo 
+(ekonomi-
+laria, sendagilea, administraria, soziologoa, . . . ), ezagutza-
+arlo gehienak jota baitaude
+teknologia informatikoarekin. Informazio estatistikoak problema askori aurre egiteko
+baliotsuak suertatu direnez gero, Estatistika eta Probabilitatea garrantzi handikoak
+dira gaur egun ezagutza-arlo gehienetan 
+(horixe da behintzat beren bilakapen eta
+historiak erakusten dutena). Maiz, ordea, beste arloetako espezialista horiek ez dute
+behar haina jakiten datu multzo handi bati etekin on bat ateratzen 
+(datubaseak, esta-
+tistika, eredu matematikoak eta abar), eta informazio estatistikoa eskuratzeko gara-
+ian, aplikazio estatistiko-
+informatiko bat nolanahi erabiltzea baino, aproposagoa izan
+daiteke estatistikaz eta probabilitatez jantzita dagoen informatikari baten lankidetza
+15
+
+16
+
+gogoan hartzea.
+Informatikariari, beraz, lanbiderako ere baliosoa suertatzen zaio
+ezagutzea zertan datzaten Estatistika eta Probabilitatea.
+Zenbait kasutan ezagutza hau goi mailakoa izatea komenigarria da, gogoan hartuta
+horietako ezagutza-arlo asko giza-
+inguruan gertatu, gertatzen eta gertatuko direnak
+ulertzeko bide bat eraikitzen ari direla. Bidea egituratuta dagoen informazioz osatuta
+dago. Bide horrek egiazkoa izatea bilatzen du 
+(edo egia mota batetakoa bederen), eta
+zientzia deritzaio. Aurretik esandakoari jarraituz, asmo handiko bide hau eraikitzeko
+eta ibiltzeko, lehenik informazio-
+iturria gardena behar du izan, eta gero Estatistika
+eta Probabilitatearen teoria eta teknikak txukun eta zuzen erabili behar dira, ekoizten
+den informazioa jasotzailerentzat guztiz ﬁdagarria eta ezbairik gabe ulergarria izan
+dadin.
+Estatistika eta Probabilitatea gaiei buruzko goi mailako ezagutza horren komenigarri-
+tasuna ez da hor agortzen. Teknologia, giza-
+inguru hori menderatzeko asmatzen diren
+tresneriek eta beren oinarri teorikoek osatzen duten ezagutza-
+arloa da, eta gertutik
+lotuta doakio zientziari 
+(edo alderantziz), egia bilatzeko aipatutako bideari. Infor-
+matika teknologia mota bat da, eta bi gaiak ere beharrezkoak (ia ezinbestekoak)
+suertatzen zaizkio halako ezagutza-arloan murgildu nahi duenari.
+Saiakuntzatan
+oinarritzen diren eginkizunetarako lagun paregabeak dira bi gaiak, eta horrexegatik
+17
+
+informatikari batek ezinbestez ezagutu beharko lituzke zertan dautza, eta beren gutx-
+ieneko erabilpena.
+Hona hemen bi gai hauen aplikazioak informatikako eremuan: algoritmoen azter-
+keta, datubaseen azterketa eta ustiaketa, adimen artiﬁziala 
+(jakintzen adierazbideak,
+arrazoitze, ikaste eta erabakitze automatikoak), robotika 
+(formen ezagutza, kon-
+trola), hizkuntz teknologiak, webeko informazio bilaketak, sistema informatikoen
+errendimenduaren azterketa 
+(optimizazioa, ﬁdagarritasuna), prozesatzaile ez bitar-
+rak, konputagailu sareen simulazioa, konputagailu zentruen kudeaketa, segurtasun
+informatikoa, software ingenieritzan erabiltzen diren metrika eta ereduak, proiektu
+informatikoen garapena 
+(estimazioak, ebaluazioak, eta abar), ekoizpenen marketinga
+(erabiltzaile motak, ekoizpen motak, baliabideak, lehia).
+18
+
+19
+
+2.
+Kapitulua
+Problemak ebazteko azterbide bat:
+Saioak egin eta datuak bildu
+Munduari so egiten zaionean, bere joan-
+etorrien zergatiak bilatzeko gogoa edo nahia
+sortzen da askotan gizakiaren baitan, eta aldi berean arazoak edo kezkak. Sarritan
+joan-
+etorri horietan parte hartu nahi izaten da era zuzenago batean arazo horiek
+kontrolatzeko asmoz. Edonola, kasu hauetan esaten da problema bat sortzen dela.
+Problemeei aurre egiteko, edo problema ebazteko, bide bat formalizazioarena da, eta
+formalizatuz gero, datu bilketa baldin bada soluziobidea, orduan kontzeptu eta tresna
+berezkoak behar dira bertatik eroso ibiltzeko, tresna estatistikoak esaten zaienak.
+Hauek ondo ulertu eta erabiliz gero, lagungarriak gertatzen dira erabakiak hartzeko
+garaian, hau da, problema ebazten saiatzean.
+2.1
+Problema baten ebazpena
+Problema bati aurre egiten zaionean soluzio bat bilatzeko asmotan, bere alde ezber-
+dinak begiratzen zaizkio, halanola beraien arteko loturak. Honela sistema bat os-
+atzen da, hau da, problemaren elementuen arteko erlazio multzo bat, kontzeptuak
+deritzanak.
+Soluzio bilatze horretan ematen den hurrengo urratsa sistemaren analisi edo azter-
+keta da: sistema horren kontzeptuak (ﬁsikoak, biologikoak, . . . )
+objektu eta er-
+lazio matematikotan bihurtzen dira, eta horrela lortutako sistema matematikoa er-
+abili egiten da zenbait prozedura matematiko aplikatuz.
+Sistema matematikoari eredua deitzen zaio eta problemaren adierazpen abstraktu
+eta ez-
+perfektu bat da. Ereduak probleman gertatzen diren fenomenoen antza ematen
+du, beraien formulazioa bat da. Ereduaren egitura, esan dugunez, problema ezagutarazten
+duten elementuak eta beren arteko erlazioak osatzen dute. Adibidez, erabakitze eredu
+batek litezkeen ekintzak eta efektuak erlazionatzen edo lotzen ditu besteak beste.
+Problemari eredu bat egokitzearen prozedurari formalizazioa deritzaio. Aurrerago ar-
+gitu eta azpimaratuko da formalizazio lana ez dela alperrikakoa eta baduela etekinik.
+Ereduak hizkuntz matematikoan adierazten direnez gero, problemak zehatz-mehatz
+geratzen dira deskribatuta; beren objektu eta erlazioen ahalmenak eta ahalbideak
+ezbairik gabe deﬁnituta, nolabait esateko. Problemari egokitutako objektuak eta er-
+lazioak ondo ala gaizki deﬁnituta egotea beste hariko ezpala da, hemen aipatu besterik
+egingo ez dena.
+Soluzioa bilatzeko eman behar den hurrengo urratsa eredua aztertzea da. Horre-
+tarako, ereduaren gainean zenbait prozedura aplikatzen dira, problemaren izaeraren
+20
+
+arabera, eta emaitzak ondoriotan bihurtu daitezke. Prozeduren aplikagarritasuna
+konplexua izan daiteke, eta sarritan konputagailu batean programatu behar izaten
+dira. Orduan, eredua ere konputagailuratu behar izaten da. (Esan dezagun bada,
+bide batez, problema bat konputagailuz ebazteko ezinbestekoa dela formalizazioa).
+Problemaren izaeraren arabera, azterbidean bilatzen diren ondorioak mota batekoak
+ala bestekoak izan daitezke. Ondorio matematiko bat izan daiteke kontzeptu edo
+erlazio batzuren deskribatze huts bat, kontzeptu ﬁnko batzuren arteko bereizte arau
+bat ala jokabidearen aurreikuste edo aurresate bat. Deskribapenak, arauak eta au-
+rreikusiak onak ala txarrak izango dira eraikitako eredua ona ala txarra izatearen
+arabera, lehen aipatu den bezala, eta, jakina, aztertzeko bidearen arabera.
+Ondorio matematikoak aurkituz gero, problema praktiko edo enpirikoan duten zere-
+sana adierazi behar da, eta bere egoera eta inguruarekin alderatu. Bidezkoa ez baldin
+bada, formalizazio lana zuzentzeari ekin beharko zaio, behin eta berriz, soluzio egoki
+bat aurkitu arte. Orduan esango da problema ebatzita dagoela.
+Laburbilduz, problema baten ebazpidea honako hau litzateke:
+1. Problema enpirikoa identiﬁkatu, bere alderdi garrantzitsuak bereiztuz.
+2. Soluzio bat bilatzeko beharrezkoak diren kontzeptuak deﬁnitu eta elkar lotu.
+3. Kontzeptuak sistema edo eredu batean formalizatu.
+4. Sistema formalizatu edo matematikoaren azterketa egin.
+5. Ondorio formalizatu bat bilatu.
+6. Ondorio formalizatuari dagokion soluzio enpirikoa proposatu.
+7. Soluzio enpirikoa problemarekin alderatu eta bere baliogarritasuna egiaztatu.
+Kontzeptuak formalizatu eta osatzen duten sistema aztertzea, sarritan, estatis-
+tikaren bitartez egiten da, metodologia edo azterbide estatistikoa erabiliz alegia.
+Estatistika hitza, hemen, bere zentzu zabalenean hartzen ari gara, probabilitate teo-
+riaren kontzeptuak eta guzti.
+Azterbide honen muina, problemaren eremuan bildu, landu eta ondorioztatutako in-
+formazio motan datza. Informazioa, probleman isladatutako elementuen arteko er-
+lazioek osatzen dute. Hauetako batzuk emanak dira, eta beste batzuk aldiz izkutuan
+egoten dira, azterketa baten ondorioz agertu bitartean. Azterbide estatistikoan er-
+abiltzen den informazioaren ezaugarri nagusia aldagarritasuna da, determinatua,
+mugatua edo zehatza izatearen alderantzizkoa.
+Azterbide estatistikoaren bitartekoak erlazio horiek atzemateko izan dira burutuak.
+Alde batetik, emanak diren erlazio formalizatuak 
+(datuak), ahal den neurrian, mamitzeko
+eta behatzaileari begibistakoak egiteko, eta bestetik, aipatutako erlazio izkutu horiek
+ondorioz agertarazteko.
+Ez da ahaztu behar jarritako problemari soluzio bat bi-
+latzearen gakoa, problemaren isla den sistema osoaren ezagutza sakona dela.
+Guzti hau egiteko bide edo prozedura asko dago. Adibidez, bildutako datuak bir-
+rantolatu edo birrordenatzearena izan daiteke halako prozedura bat; agian xinpleena
+da, ‘datuak’ baino ez baitira ia erabiltzen, baina eraginkorra izan daiteke, ‘datuak’
+txukun azaltzeak baduelako bere balio erantsia.
+‘Datu’ hitzaren esanahia zabalagoa da esanahi etimologiko hutsa baino, informazioa ez baitago berez hain ‘emana’.
+Azpimarratu behar da ‘datu’ bat ez dela zenbaki bat soilik, informazioren bat ematen duen zenbaki bat baizik. Lur
+Hiztegi Entziklopedikoa, Josu Zabaleta (zuz.), Lur Argitaletxea, 1994:
+Datu bat informazio 
+(gertaera, nozio, eragiketa agindu) baten komentziozko adierazkera bat da,
+automatikoki lantzeko eran egina. Eragiketa baten enuntziatuan ezaguna, emana, jakina dena, eta
+ezezaguna dena aurkitzeko balio duena. Ezaguna edo onartua dena, eta arrazoinketa baten oinar-
+ritzat, bilaketa baten abiapuntutzat, hartzen dena.
+21
+
+‘Datu’ bat, beraz, ondorioren bat eskaini dezakeen zeozer bat da.
+Datuen inguruko azterbide estatistikoan hasi baino lehen, funtsezkoa dirudi ‘zergatik
+bildu datuak?’ galderari erantzuteak. Problema bati aurre ekiteko azterketa edo
+ikerketa bat ez da besterik gabe bururatzen; ziur aski ikertzailearen gogoan egon
+badaude dantzan soluzioari buruzko aldez aurreko uste edo aieruren batzuk. Halako
+azterbidetik jotzeko, datuak biltzearen beharra eta ahalbidea garbi egon behar dira.
+Datuen azterbide estatistikoa, nolabait deskribatzekotan, hauxe izango litzateke:
+1. Datuak bururatu. Urrats hau guztiz orokorra da, aipatu dugun formalizazio
+prozedura bera baita. Maila batetan gaiari berari dagokio, ez baitago arau
+ﬁnkorik problema bakoitzean zein datuak bildu behar diren agintzen duena,
+lehen esan bezala, eta beste maila batean azterbide estatistikoari, abiapuntua
+baita.
+2. Datuak bildu. Estatistika eta beste zenbait jakintz arloei 
+(teknologia, psikolo-
+gia, soziologia, geograﬁa eta abar), kasuan kasu, dagokie urrats hau
+3. Datuak antolatu eta konputagailuan ezarri. Gaur egun, zeregin hauek infor-
+matikako datu-base sistemen arloari dagozkio.
+4. Datuak administratu. Aurreko urratsa bezala, datu-
+base sistemetan oinarritzen
+da eginkizun hau.
+5. Datuak aztertu. Estatistikaren muina da urrats hau.
+22
+
+6. Emaitzak ulertu eta adierazi txosten batean. Azterbidearen azken urrats
+hauek estatistika eta aztergaiaren ezagutzan datzate.
+2.2
+Datuak bururatu
+Datuak biltzearen zergatia funtsezkoa baldin bada azterbide estatistikoan, zeresanik
+ez berekin lotuta doakion nolako datu mota biltzearena.
+Azterbide horretan aurrera egin baino lehen, bildu behar diren datuen izaera eta eza-
+ugarrietaz jabetzea nahi izaten da:
+ azterketa edo ikerketaren helburuak hortaz, ondo
+zehaztu behar dira.
+Datu multzo bat estatistikoki aztergarria izan dadin, hau da, datuak elkar kon-
+paragarriak gerta daitezen, irizpide batzuri jarraitu behar zaie:
+ homogenotasuna eta
+ahikortasuna edo exhaustibitatea. Adibidez, pixua bada problema baten objektuen
+ezaugarri bat, erabaki beharko da gramutan ala kilotan ematea (homogenotasuna),
+objektu denak unitate berdinarekin neurtu beharko dira alegia. Unitate egoki baten
+aukera problemaren arabera dago, hau da, problema bakoitzak bere zehaztasun maila
+eskatzen du.
+Datuak bururatzekoan, azterketarako baliagarriak izan daitezen, bi kontzeptu nagusi
+ﬁnkatu behar dira:
+• Problemaren objektuen multzoa, populazioa deritzana tradizioz, eta Ω ikur-
+raz izendatzen dena hemen. Multzo honen elementuei indibiduoak (tradizioz),
+objektuak, edo unitate estatistikoak deritzaie.
+23
+
+•
+Behaketa espazioa edo multzoa, IM ikurraz izendatzen dena. Multzo honek
+objektuen errepresentazioa egiteko balio du.
+Esateko, objektuak ezaugarri
+bati buruz behatuak izaten direnean, IM, aurki daitezkeen balioen multzoa
+da. Multzo honen elementuak, dagokion ezaugarriaren agertzeko moduak edo
+modalitateak dira.
+Bi kontzeptu hauen gainean gauzatzen da informazioa: populazioaren elementuen
+arteko erlazioak, behaketa espazio bakar baten elementuen artekoena, espazio ezberdi-
+nen elementuen artekoena, eta populazioaren eta espazioen elementuen artekoena.
+Batzuk emanak dira 
+(datuak), eta beste batzuk bilatu behar dira, gehienetan azter-
+bide estatistiskoa erabiliz.
+2.2.1
+Populazio motak
+Prozedura estatistiko bat edo beste erabili aurretik jakin beharra dago nolakoak diren
+esku artean dauden elementuak. Populazio guztiak ez dira tankera berberekoak, eta
+hortaz, sailkapen batzuk egiteak argibidea emango du gerorako.
+• Objektuen izaeraren arabera:
+– Errolda. Problemaren objektu guztiak azterbide estatistiskoan jartzen
+dira.
+– Lagina: Problemaren objektuak ondo ﬁnkatuta badaude ere, batzuk bakar-
+rik aztertzen dira. Populazioaren azpimultzo hau gehienetan zoriz auker-
+atzen da, bere ezaugarriak populazio osora hedatzeko asmoz edo.
+– Erregistroak: Azterbidean jartzen diren elementuak nolahala lortutakoak
+dira, problemaren izaerak berak ematen dituenak, aztertzaileak horre-
+tan zuzenean eragin gabe: lortutakoak osatzen dute populazioa.
+Hal-
+abaina, aurreikuste problema bat baldin bada tartean, multzo hau popu-
+lazio hipotetiko eta ezezagun zabalago baten lagintzat hartu izan ohi da.
+– Saioak. Saio edo esperimentu bat behin eta berriz eginda unitate esta-
+tistikoak sortzen dira. Lehengo kasuan bezala, lortutako multzo honen
+azterketa estatistikoaren ondorioak orokorragoak egin nahi izaten dire-
+nean, populazio hipotetiko baten zorizko lagintzat hartzen da. Emaitzen
+hedapen hau ahalik eta modu egokienean egin ahal izateko, esperimentu-
+aren diseinua, hau da, objektu edo unitateen oinarrizko ezaugarrien kon-
+trola, ezinbestekoa da.
+• Populazioaren kardinala edo tamainaren arabera:
+– Diskretua, Ωko objektuen kopurua zenbakigarria denean.
+∗ Finitua: N ∈ IN.
+∗ Inﬁnitua.
+– Jarraitua.
+Praktikan ﬁnituak izaten dira beti, baina komenigarri izaten da inﬁnituak kon-
+tutan hartzea ﬁnitutasun hori handia izaten denerako, asko errazten baitira
+teoriatik ondorioztatzen diren formulak eta beren ulerbideak.
+Ωko elementuen artean erlazioak egon litezke deﬁnituta, prozedura estatistikoak
+erabiltzeko garaian kontutan hartu beharrekoak. Eta erlazioek egiturak deﬁnitzen
+dituzte:
+24
+
+R ⊂ Ω × Ω
+Adibidez:
+• Erlaziorik ez.
+• Sekuentziala: R = {(ωi, ωj) ∈ Ω × Ω | (i, j) ∈ IN
+2, i < j}.
+• Lineala: Ω ⊂ IR. R = {(ω, ω ) ∈ IR2 | ω < ω }.
+• Topologikoa (Mapa).
+• Planua: Ω ⊂ IR2.
+2.2.2
+Behaketa espazioak
+Populazio bat behatzen denean funtsezkoa izaten da erabakitzea nola izango diren
+adieraziak behaketak, honek ere badu eta garrantzirik prozedura estatistiko batzuk
+ala besteak erabili ahal izateko garaian.
+Behaketa espazio (IM) bateko elementuei moduak edo modalitateak (m ∈ IM) der-
+itzaie.
+Behaketa espazio bat, IM, irizpide bat baino gehiagoren arabera izan daiteke sailkatuta.
+• IMko modalitateen izaeraren arabera. Prozedura estatistikoei begira, hauxe da
+sailkaketa nagusia:
+25
+
+– kuantitatiboa.
+– kualitatiboa.
+• IMren kardinal edo tamaina potentzialaren arabera:
+– Diskretua. IMko modalitate kopurua zenbagarria denean.
+∗ Finitua.
+Behaketa espazio bat kualitatiboa baldin bada, orduan ﬁnitua da.
+Kasu honetan aipagarria da bi elementuz osatutako behaketa espazioa,
+bitarra deritzaiona (‘kualitate bat izan ala ez izan’), eta behaketa
+mota guztien oinarria dena. Kasu honetan notazio hau erabil daiteke:
+IM = {0, 1}, bi ikur horiek, oraingoz, zenbakien zentzurik ez dutela.
+∗ Inﬁnitua.
+Behaketa espazio bat inﬁnitua baldin bada, orduan kuantitatiboa da.
+– Jarraitua. Neurtzeko tresnaren muga ﬁsikoak direla eta, halako espaziorik
+ez dago praktikan, baina teorian edo potentzialki egon izan daiteke, eta
+batzutan, emaitzak ulertzerakoan, komenigarri izaten da hau kontutan
+hartzea, populazio inﬁnituen kasuan bezalaxe.
+Behaketa espazio bat jarraitua baldin bada, orduan inﬁnitua da, eta kuantitatiboa beraz.
+• IMren egituraren arabera. Multzo baten gainean deﬁni litezkeen egiturak asko
+dira, baina orain bitartean azterketa estatistikotan gehienbat erabili ohi direnak
+ondoren datozenak dira, neurtzeko eskalak deritzanak:
+– Izenezkoa edo nominala. IMko edozein bi modalitate ezin dira batera
+behatu. Nolabait esateko, eta datozen esaldiekin lotzeko:
+IM = {m1, m2, . . . , mp} izanik,
+mi ∈ IM baldin bada, orduan ez da mj ∈ IM.
+Bateraezintasunaz gain, modalitateen artean ez dago beste erlaziorik, baina
+aurreko behaketa espazioen sailkepenekin lotu nahi izanez gero, hauxe
+dago:
+Behaketa espazio bat izenezkoa baldin bada, orduan kualitatiboa da eta ﬁnitua beraz.
+– Ordenazkoa edo ordinala. IMko modalitateen artean erabateko ordenazko
+erlazio bat dago:
+Edozein m, m ∈ IM bi modalitate ezberdinentzako, m < m ala m < m.
+– Zenbakizkoa edo neurgarria. IMko modalitateen artean ordenaz gain,
+neurtzeko unitate bat dago deﬁnituta.
+Behaketa espazio bat zenbakizkoa baldin bada, orduan kuantitatiboa da.
+Zenbakizko espazioen artean badago bereizketa gehiago egiterik, nahiz
+orain artean burutu diren prozedura estatistikoei begira, ea garrantzirik
+ez izan:
+∗ Ez dago mugarik modalitateentzat.
+∗ Behemuga (goimuga) bat dago.
+Aipatzeko kasua da zero absolutu
+bat duten behaketa espazioak, zenbatzerakoan eta handitasun ﬁsikoak
+neurtzerakoan gertatzen den bezala.
+∗ Mugatua dago goitik eta behetik. Oraingoan, aipatzekoa [0, 1] tartea
+da, edo bere baliokide izan daitekeen [0, 100]. Azken honetan deﬁnitzen
+dira, esate baterako, hain ezagunak diren ehunekoak edo portzenta-
+jeak.
+26
+
+Aipatutako irizpideak eta zerikusiak kontutan hartuta, laburbilduz, zera gehitu daiteke:
+• IM kualitatiboa baldin bada, orduan egiturarik ez du, edo gehienez ordenazkoa
+da.
+• IM kuantitatiboa baldin bada aldiz, zenbakizkoa da edo ordenazkoa (zenbaki
+tarteak kasu).
+Prozedura estatistikoei begira, kuantitatibo-
+kualitatibo sailkapena da funtsezkoena,
+baina badira bakar batzuk bereziki zuzenduak ordenazko espazioei, bai eta bitarrei
+ere.
+Problema baten aurrean bestalde, ia beti, behaketa espazio bat baino gehiago deﬁnitzen
+da:
+ IM1, IM2, . . . , IMs. Behaketa espazio baten egitura deﬁnitzen duten modalitateen
+arteko erlazioez gain, izan litezke ere bi espazio edo gehiagoren artekoak aldez aurretik
+deﬁnituta (datuak beraz), adibidez:
+S ⊂ IM1 × IM2
+Halako erlazioen aurrean ikertzailearen aukeran dago erabakitzea ea IM1 eta IM2
+bi espazioak bakarka hartzen diren gogoan, ala IM1 × IM2 espazio bakarra, bien
+biderkaketa kartesiarra alegia.
+Biderkaketa kartesiarraren esanahia zera da, bi modalitate batera behatzearena:
+ bata
+eta bestea. Behaketa espazio hau beste bi espazioak bakarka hartuta baino ﬁnagoa
+edo zehatzagoa da beraz, espazio honetako elementu bat baino gehiago erantzuten
+baitio bakarkako modalitate bati.
+Aipatutako aukera hau ez da erreza izaten. Adibidez, IM1 = {m11, m12, m13} eta
+IM2 = 
+{m21, m22} baldin badira, problemaren informazio edo datu bat izan liteke bi
+espazioen arteko erlazio hau:
+m11 ∈ IM1 baldin bada, orduan m22 ∈ IM2 da.
+Espazioak bakarka aukeratzen baldin badira, eta informazio guztiaz baliatu nahi
+bada, halako informazioa sartu egin beharko litzateke prozedura estatistikoetan,
+baina tamalez oraingoz halako prozedura estatistikorik ez dago, ikerketa mailan ez
+bada.
+Aurreko erlazioa kontuan hartzeko bide bat, esan bezala, biderkaketa kartesiarrarena
+da. Adibidean, bost modalitate dituen behaketa espazio bakar bat deﬁni liteke:
+IM1 × IM2 = {(m11, m22), (m12, m21), (m12, m22), (m13, m21), (m13, m22)}
+IM1 eta IM2 espazioen arteko erlazio hori jasota dago horrela, baina ezkutuan ger-
+atzen dira bost modalitate horien arteko erlazioak, hau da, (m12, m21) eta 
+(m13, m21)
+modalitateek badutela zeozer elkarren artean, eta ez (m12, m21) eta 
+(m13, m22) modal-
+itateek aldiz.
+Hausnarketa hauek korapilotsuagoak egiten dira behaketa espazioen arteko erlazioak
+konplexuagoak direnean. Adibidez:
+Baldin m11 ∈ M1 eta m21 ∈ M2, orduan m32 ∈ M3
+Datuak ez ezik, behaketa espazio bat baino gehiago dagoenean, halako erlazio ezku-
+tuak izaten dira prozedura estatistiko asko bilatzen saiatzen direnak. Esaterako,
+estatistikan hain ohikoa den korrelazio hitza guztiz honen atzean dago.
+Sarritan baina, aurkitutako erlazioak hain ‘garbiak’ izan baino, ‘ziurgabetasun’ edo
+‘ez-zehaztasun’ neurriren bat eramaten dute atxekituta. Adibidez:
+27
+
+m11 ∈ IM1 baldin bada, orduan m22 ∈ IM2 da, %80etan.
+Bilatzen diren erlazioak ez dira logikoak bakarrik 
+(kualitatiboak), aurrekoa beza-
+lakoak (nahiz zenbaki tanta batez ikutua izan), baizik eta zenbakizkoak 
+(kuantitati-
+boak), tartean dauden espazioak zenbakizkoak baldin badira behintzat.
+Adibidez, erlazio lineal bat bilatzekotan IM1 ≡ IR eta IM2 ≡ IR espazioen artean 
+(hau
+da, IR2n), a, b ∈ IR bi konstante bilatzen dira, ahalik eta ‘hein handienean’ erlazio
+hau ematen dutenak:
+m2 = a · m1 + b,
+m1 ∈ IM1 m1 ∈ IM2
+Dena dela, erlazio logiko horiek edo konstante horiek bilatzeko, populazioan behatu-
+takoak erabiltzen dira, noski, eta horretarako beste kontzeptu baten premia dago,
+aldagaiarena.
+2.2.3
+Aldagaiak
+Esan bezala, datuak problemaren elementuen arteko erlazioak dira. Orain bitartean
+aipatu izan direnak, populazioek eta behaketa espazioek beren baitan izan ditza-
+ketenak dira.
+Bi multzo horien artean ere badira erlazioak (datuak), aldagaiak
+deritzanak, estatistikaren beraren izena eta izanaren zergatiaosatzen dutenak.
+X aldagai bat Ωtik IMrako aplikazio bat da:
+X : Ω −→ IM
+28
+
+Ωko ω objektu bakoitzari (∀ω ∈ Ω) IMko m modalitate bat (m ∈ IM) dagokio Xren
+bitartez: X(ω) = m. Erlazioa beraz, hauxe da:
+{ (ω, X(ω)) | ω ∈ Ω, X(ω) ∈ IM } ⊂ Ω × IM
+Aplikazio honek behaketa prozesua bera adierazten du, eta bere eraginez aldagar-
+ritasun bat agertzen da behaketa espazioaren modalitateen artean. Aldagarritasun
+hori aztertzea da estatistikaren helburua.
+Aldagaiak IM espazio motaren arabera sailkatzen dira. Prozedura estatistikoetan
+kontutan hartzen diren aldagai motak beraz, kuantitatiboak (zenbakizkoak edo
+ordenazkoak) eta kualitatiboak (izenezkoak 
+(tartean bitarrak), ordenazkoak) dira,
+batez ere.
+Aldagaien beste sailkaketa batzuk problemaren izaeraren arabera egin litezke:
+• Dependentea/Independentea. X2 aldagai baten (edo batzuren) aldagarritasuna,
+X1, beste aldagai baten (edo gehiagoren) bitartez adierazi behar denean (eredu
+matematiko ﬁnko baten bat tartean dagoelarik: m2 = a · m1 + b adibidez), bati
+(X2) dependentea deritzaio eta independentea besteari (X1).
+• Kontrolatua/Askea. Zenbait problemetan aldez aurretik erabakitzen da zein
+den behaketa espazio baten aldagarritasuna, eta murrizpen horretan besteak
+behatzen dira. Lehenengo motakoak kontrolatuak direla esaten da, eta besteak
+askeak.
+• Aktiboa/Pasiboa. Problema baten azterketan, prozedura estatistikoetan zuze-
+nean parte hartzen duen aldagaiei aktiboak deritzaie, eta pasiboak parte hartzen
+29
+
+ez dutenei. Aldagai pasibo batek osagarri edo argigarri gisa balio izan dezake
+prozedura estatistiko bat aplikatu ondoren.
+Aldagai pasibo berezi bat Ωren elementuen identiﬁkatzailea da. Aldagai gisa har
+liteke (horrela egiten dute aplikazio informatiko-
+estatistiko gehienek), behaketa
+espazioa populazioaren objektuen izenez osatu eta objektua-izena korrespon-
+dentzia biunibokoa eginez gero. Garbi dago ‘aldagai’ hau pasiboa izaten dela
+prozedura estatistiko guztietan.
+• Jatorrizkoa/Eraikitakoa. Behaketaren bitartez deﬁnitzen direnak dira jator-
+rizkoak, eta hauek eraldatuz edo transformatuz (atal berezi bat dago gero honi
+buruz), eraikitakoak. Aldagai bat eraldatzea ikertzailearen esku egon daiteke,
+edo ikertzaileak erabiltzen duen teknika estatistiko baten ondorioz lor daiteke.
+Aldagai batek, IMri dagokion egitura horri esker, nolabaiteko erlazioa deﬁnitzen du
+Ωn, eta erlazio hori da, hain zuzen, gero prozedura estatistikoek lantzen dutena.
+Erlazioen jiteek erabakitzen dute zein prozedura estatistikoak diren aplikagarriak eta
+zeintzuk ez:
+• X, aldagai kualitatibo bat baldin bada, Ωn eragiten duen egitura partiketa bat
+da, hau da, baliokidetasun erlazio bat deﬁnitu egiten da:
+ωR≡ω baldin eta soilik baldin X(ω) = X(ω ).
+• X kualitatiboa izanik, IMn erabateko ordena edo ordena total bat deﬁnituta
+baldin badago, orduan Xek Ωn, partiketa bat ez ezik, aurreorden erlazio bat
+eragiten du (berdinketak eman baitezke):
+ωR ω baldin eta soilik baldin X(ω) ≥ X(ω ).
+• IM kuantitatiboa baldin bada, zenbaki multzo bat beraz, batuketa 
+(eta kenketa)
+deﬁnituta dago (baita biderkaketa ere). Unitate bat izateak Ωn sortzen dituen
+erlazioak bigarren mailakoak dira (Ω × Ωn deﬁnitutakoak):
+(ω1, ω2)R−(ω3, ω4) baldin eta soilik baldin X(ω1) − X(ω2) = X(ω3) − X(ω4).
+Problema baten aurrean, ia beti, behaketa espazio bat baino gehiago deﬁnitzen
+da: IM1, IM2, . . . , IMs, eta ondorioz aldagai bat baino gehiago:
+ X1, X2, . . . , Xs. Be-
+haketaren emaitza oso hau modu bektorial batean adierazi liteke ere:
+(X1, X2, . . . , Xs) : Ω −→ IM1 × IM2 × . . . × IMs
+s = 2
+(X1, X2) : Ω −→ IM1 × IM2
+Aldagai bakarrak aldagai bektorialaren proiekzioak dira dagokion behaketa espazioan.
+Aurrerantzean, lehendabizi aldagai bakar baten azterketari ekingo zaio, eta gero bi di-
+mentsioko aldagai bektorial batenari, bi osagaien arteko erlazioa zein den erakusteko.
+Bi dimentsio baino gehiagokoek ez dute oraingoz tokirik idatzi honetan.
+30
+
+2.3
+Datuak bildu
+Datuak bururatuz gero, bildu egin behar dira. Kontutan hartuta azterketa estatistis-
+tikoaren baliogarritasuna hein haundi batean informazioaren kalitatean oinarritzen
+dela, eta kalitatea guztiz lotuta dagoela bilketarekin, eginkizun honen inguruan zen-
+bait arazo sor litezke. Neurgailuak zehatzak izan behar dira, eta neurtzaileek trebe-
+tasunez erabili behar dituzte tresna horiek, bestela jasotako informazioa baliogabea
+edo desitxuratua izan baitaiteke.
+Adibidez, giza zientzietako alorretan datuak jasotzeko bide aski ezaguna den galdeketaren kasua dago:
+ galderak
+neurtzeko tresnak dira eta galdegilea neurtzailea.
+Problema baten aurrean zein galderak egin, nola enuntziatu eta zein erantzunak izan behar diren kontutan, ikertza-
+ilearen ikuspegia isladatzen dute, eta guzti hauek datuak nola bururatzen diren erakusten dute. Galderak 
+(neur-
+gailuak) eta aldagaiak guztiz lotuta daude elkar, zuzenean edo zeharka, galdera batetik aldagai bat edo gehiago sor
+baiteteke galdera motaren arabera:
+• Itxia/
+Irekia. Galdera bati eman dakizkiokeen erantzunak aldez aurretik baldin badira ezagunak, itxia dela
+esaten da, bestela irekia. Azken galdera mota honek, aldagaiak zehazte arren, erantzunen azterketa semantiko
+berezi bat eskatzen du bilketaren ondoren.
+• Erantzun Bakarrekoa/
+Anizkoitza. Ezin bada erantzun bakar bat baino eman, erantzun bakarrekoa, bestela
+anizkoitza. Lehenengoaren kasuan aldagaia zuzenean deﬁni daiteke, baina bigarrenarenean galdera deskon-
+posatu beharra dago, aldagaiak deﬁnitzeko.
+• Kuantitatiboa/Kualitatiboa.
+• Objetiboa/Subjetiboa.
+Galdeketa batek, informazio iturri eta neurgailu gisa, galdera motaz gain baditu beste ezaugarri batzuk, erabiltzer-
+akoan, kontutan hartu beharrekoak direnak halakoak izan litezke besteak-beste:
+• Galdeketaren helburu eta deﬁnizioak ematea erantzuleari.
+• Galdeketa problemaren garaian edo gaurkotasunean kokatzea.
+• Galdeketaren aurkezpena estetikoki atsegina izatea erantzulearentzat.
+• Galderen ordena zaintzea.
+• Galdeketaren tamaina neurtzea.
+• Galdera zehatzak egitea.
+• Erantzunen aukeraketa zaila ez izatea.
+• Hizkera ondo zaintzea.
+Galdeketaren aurkezteko bideak ere badu bere garrantzia bilduko den informazioaren kalitatean. Bideak bat baino
+gehiago izan daitezke 
+(pertsonalki, telefonoz, postaz, aldizkarien bitartez, . . . ), eta ikertzailearen aukera da proble-
+marako egokiena aukeratzea. Neurgailua erabiltzeko bidea galdegile ﬁsiko batena bada, oso gogoan hartu beharrekoak
+dira:
+• Erantzulearengan izango duen eragina.
+• Galdegilearen lana latza ez bihurtzea.
+Azkenik, esan behar da ere datu bilketa eta informazioaren kalitatearen arteko katean,
+badagoela beste maila bat neurgailuak eta neurtzaileez gain:
+ neurtutakoa datubase
+batean jasotzearena akatsik egin gabe. Problema eta behaketa moten arabera, maila
+honi ekiditeko burutu izan dira zenbait tresna, bitartekorik gabe zuzenean infor-
+mazioa datu-base batean jartzeko.
+31
+
+2.4
+Datuak aztertu
+Datuak bildu eta gero, datu-baseak sistema informatiko erosoak dira datuak an-
+tolatzeko eta galdera zehatzei erantzuteko.
+Alabaina, ez dute, berez, dagoen in-
+formazioaren ikuspegi orokortuago bat ematen: azterketa baten beharra dute ez-
+inbesteko osagarri gisa.
+Azterketa hori estatistikoa izaten da, eta horren bidez aldagaien ezaugarri nagu-
+siak ematen dira, hala nola aldagaien arteko erlazioenak. Ezaugarri nagusi horiek
+bildutako informazioaren muintzat har litezke, eta azterbideak beraz, analisi eta sin-
+tesi prozedurak bateratzen ditu. Azterketa estatistikoa egiteko burutu izan diren
+teknikak aldagai kopuruaren arabera sailka daitezke 
+(aldagai bakar bat, bi aldagai,
+aldagai asko), baita erabiliak izateko menperatu behar diren sakoneko kontzeptuen
+zailtasunaren arabera ere (errezenetik hasita konplexuenetara).
+Sarrera honetan azterketa estatistikoan erabili izan ohi diren sei tresna mota au-
+rkezten dira, gerorako azterketen azalpenen ardatz bihurtzen direnak:
+ maiztasunak,
+taulak, graﬁkoak, estatistikoak, ereduak eta eraldaketak.
+Gaur egun badago plazaratuta software mordo bat azterketa estatistikoari halako
+tresnen bitartez maila ezberdinetan ekiteko, baita dohain banatzen dena ere Internet
+sarean.
+32
+
+2.4.1
+Maiztasunak
+Aldagai batek 
+(aldagai bikote batek, aldagai multzo batek) Ω populazioari baliokide-
+tasun erlazio bat eragiten dioenez, Ωren elementu baliokideak taldekatu egiten dira
+IMren modalitateen arabera: informazioa mamitu egiten da.
+Taldekatzearekin egiten den mamitze lana burututa gelditzen da zenbatu egiten de-
+nean modalitate bakoitzak atxekituta duen elementu edo objektu kopurua: Hauxe
+da modalitate bakoitzaren maiztasuna edo frekuentzia. Zenbatzearena beraz, oinar-
+rizko prozedura estatistisko bat da.
+Maiztasunaren kontzeptuak, edo atzean duen zenbatze prozedurak, estatistikan duen
+garrantzia nabarmena da, eta beraz, kapitulu berezi bat eman izan zaio idazlan hone-
+tan.
+Ohartzekoa da, modalitateei maiztasunak atxekitzean aplikazio berri bat deﬁnitzen
+dela, IMtik INra doana, eta objektuen identiﬁkatzaileak ezkutuan edo bigarren mailan
+geratzen direla:
+ informazioaren egituraketan maila bat eraiki dela esan daiteke ere.
+Maila berri honetan modalitateek objektuen papera jokatzen dute (Ωren ordez IM)
+eta maiztasunek zenbakizko aldagai batena (IMren ordez IN).
+Datu maila batetik bestera igarotzeko bidea, hau da, jatorrizko datuetik modalitateen
+maiztasunei dagozkien datuetara doana, zenbatze prozedura estatistikoaren bitartez
+eraiki izan da.
+2.4.2
+Taulak
+Azterketa estatistiko arrunt bati hasiera emateko taula bat izaten da abiapuntua:
+datubase batetik taula bat osatzen da gero estatistikoki landua izan dadin.
+Halako datu-taula bat osatzen da planu batean objektuak lerrotan, behaketa-
+espazioak
+zutabetan eta aldagaien balioak gurutzagunetan kokatuaz, matrize angeluzuzen baten
+gisa.
+Azterketa estatistikoaren abiapuntua ez ezik, taula bat datubasearen azterketa es-
+tatistiko baten ondorengo informazioaren ikuspegi orokor baten islada izaten da ere:
+aldagai baten jokabidea erakusteko edo aldagai bat baino gehiagoen arteko lotura
+agerian uzteko.
+Esate baterako, aurreko atalean aipatutako zenbatze prozedura
+(maiztasuna deﬁnitzen duena) jatorrizko taulatik maiztasun taulara doan bidearen
+eraikitze prozedura da.
+Halako taula baten dimentsioak haundiak badira ordea, tarteko urrats bat besterik
+ez da izaten, beste nolabait adierazi behar izaten baita daukan informazioa atzemana
+izan dadin era ulergarriago batean.
+33
+
+Honela bada, azterketa estatistiko bati ekiterakoan, taula, hasierakoa, tartekoa ala
+bukaerakoa izan, mota askotakoa izan liteke bertako balioen esanahiari begiratuaz:
+• Kontinjentziak.
+• Maiztasunak.
+• Bitarrak.
+• Logikoak.
+• Lehentasunak.
+• Modalitateak.
+• Neurriak.
+• Antzekotasunak.
+• Tartezkoak.
+• Heterogenoak.
+• . . .
+eta ondorioz, zera esan liteke:
+‘Azterketa estatistiko bat taula segida batean datza’.
+Dena dela, azterketa estatistiko bat ez da taula segida bat soilik, aztertzailearen
+zolitasunaz gain, taula ezberdinen arteko ibilbidea eraikitzeko bestelako tresna esta-
+tistikoak behar izaten dira eta.
+2.4.3
+Graﬁkoak
+Aldagai batek ematen duen informazioa edota aldagaien arteko erlazioak ematen
+duena, taula baten bitartez txukun azal liteke, baina esaera zaharrak dioen bezala:
+‘Irudi batek hamaika hitzek beste balio du’.
+Ahalegina beraz, informazioa irudi edo graﬁkoren bitartez atzematea da.
+Irudia eta informazioaren komunikazioaz jardutean artea dago bitartean, baina lengoaia
+graﬁko bat eraikitzeak badu interesik. Izan badira graﬁko batzuk estandarizatuak
+eta maiz erabiltzen direnak datuen izaeraren arabera. Horiexek dira gero aurkeztuak
+izango direnak.
+Honetaz gain, irudiegileak graﬁko on ala txar bat egin dezake aipatutako lengoaia hori
+ongi ala gaizki erabiltzean. Behin baino gehiagotan gertatu izan da ere, irudiaren in-
+darra gogoan izanda, informazioaren komunikatzaileak, bere komenentziaz, nahita
+irudi oker bat eman izatea. Hurrengo ataletan graﬁkoen bidezkotasuna argitzeko
+saioa egingo da.
+34
+
+2.4.4
+Estatistikoak
+Estatistiko bat datu multzoaren balioen adierazle edo indize bat da. Orokorrean esan
+liteke estatistiko bat datu multzoaren funtzio bat dela, modalitateen maiztasunean,
+ordenan, edo zenbakizko izaeran oinarritzen dena. Noski, estatistiko bat datu mult-
+zoan bertan oinarritzen denez, bere balioek zentzuren batean datuak nolakoak diren
+islatzen dute.
+Datu multzo batek gehienetan estatistiko bat baino gehiago behar izaten du aski
+adierazita izateko, hau da, aldagai baten aldagarritasuna edo aldagaien arteko er-
+lazioak nahiko ondo adierazteko.
+Estatistikoak deﬁnitzerakoan bi izaten dira helburua nagusiak:
+• Alde batetik, halako zenbaki batzuren bitartez datuen aldagarritasuna edo datu
+multzoak duen informazio garrantzitsuena azaltzea.
+• Bestetik, estatistikoen bitartez datu multzoa berreraikitzeko ahalmena iza-
+tea.
+2.4.5
+Ereduak
+Azterketa estatististiko batean sarritan bilatzen den erlazioa, datu multzoari eredu
+bat egokitzea da. Eredu bat aldez aurretik deﬁnitzen den ekuazio baten antzekoa da,
+eta datu multzoa ondo janzten bada aukeratutako eredu horrekin informazioa hobeto
+ulertzea lortzen da.
+Eredua aldez aurretik aukeratzeko, problemaren textuinguruak, sortutako maizta-
+sunek, estatistikoek eta bestelako tresneriek laguntza haundia ematen dute. Hala da,
+gehienetan eredua aldez aurretik deﬁnitu baino eredu famili edo multzo bat aurre-
+deﬁnitzen da, hau da, eredua deﬁnitzen da ezezagunak diren zenbaki batzuk ezik,
+parametroak deritzanak. Gero, datuen arabera, parametro horien balioak ezartzen
+dira, eta azkenik, eredu horren egokitzapen maila neurtzen da datuekin alderatuz.
+Eredua ondo egokitzen baldin bada, esaterako, datu multzoa eredu teorikoaz ondo
+badago jantzita, lortutakoak emaitza oparoak ditu:
+• Problemari buruz egin daitezkeen galderen erantzunak (kalkuluak: interpo-
+lazioak, extrapolazioak eta abar) erraztu egiten dira.
+• Informazioa laburtuta geratzen da eredu horretan eta bere parametroetan.
+• Erraztu egiten da beste informaziorekin alderatzeko lana.
+• Ereduak aberastu egin dezake informazioa, eredu teorikoak baldintza teoriko
+batzuren ondorioz eraikitzen baitira, eta baldintza horiek beraz, datu mult-
+zoaren atzean soma litezke.
+Eredu bat erabiltzeak, dena dela, baditu bere arriskuak:
+ ereduak ez badu oso ondo
+janzten datu multzoa, aurrerantzean erabiliko den informazioa ez da jasotakoa izango,
+jasotakoaren antzekoa baizik, eta honek arazo bat baino gehiago ekar diezaioke prob-
+lemaren ebazpenari.
+35
+
+2.4.6
+Eraldaketak edo transformazioak
+Datuek berez duten informazioa landu eta aztertzeko ohiko prozedura bat izaten da
+aldagai bat beste aldagai batean edo batzutan bihurtzea, eraldatzea alegia.
+Halako prozedura bat komenigarri gerta daiteke arrazoi bat baino gehaiagorengatik.
+Batzutan aldagai baten edo aldagai batzuren arteko erlazioaren informazio-mamia
+agerian uzteko izaten da, bestetan teknika estatistiko berezi bat aplikatu ahal iza-
+teko.
+Azken honi begira esan daiteke, aldagai anitzezko azterketen garaian, prozedura
+estatistiko askok, batez ere, ahalduenak, behaketa espazio asko batera lantzen di-
+tuztenak, homogenotasuna eskatzen dutela landutako espazioetan, hau da, mota
+berdinekoak izatea. Problema batean, gehienetan denetatik egonda, mota xumeena
+duen espazioan lortzen da eskatutako homogenotasun hori. Horretarako, noski, infor-
+mazioren bat baztertu behar izaten da, agian, azterketa estatistikoaren azken urrats
+batean baliagarri gerta edo berreskura litekeena, baina prozedura estatistikoan parte
+hartzen ez duena.
+Zergatiak medio, orohar, eraldaketak hirutan sailkatzen dira hemen:
+ berkodeketak,
+konposaketak eta deskonposaketak. Hiru hauek zertan datzaten azaltzeko, hur-
+rengo lerroetan gogoan hartzen da behaketa espazioen atalean egindako ‘zenbakizko-
+ordenazko-izenezko-bitar’ mailaketa.
+• Aldagai baten berkodeketa.
+Berkodetze prozedura honela deﬁni liteke:
+f : O −→ O , X : Ω −→ O , X = f ◦ X.
+O eta O multzoen egituraren arabera halakoak bereiz litezke:
+– Zenbakizko aldagai bat beste zenbakizko aldagai batean bihurtu, matem-
+atikan erabili ohi diren funtzioen bitartez: linealki, logaritmoki, espo-
+nentzialki, . . . .
+– Zenbakizko aldagai bat ordenazko batean bihurtu. Horretarako unitatea
+eta eragiketa aritmetikoen zeregina ‘ahaztu’ besterik ez da egin behar:
+zenbaki bakoitzari ordenaren maila egokitzean bi bide dago, goitik behera
+eta behetik gora, zenbakien handitasunaren arabera (berdinketetan mailak
+hainbana litezke).
+Beste bide bat ordenazkoa bihurtzeko (O eraikitzeko), zakarragoa agian,
+baina beharrezkoa batzutan, On balio-tarte bateraezinak deﬁnitzean datza.
+– Zenbakizko aldagai bat izenezko batean bihurtu. Aurrekoa bezalakoa da,
+baina kasu honetan ordenazko egitura baztertu egiten da ere.
+O n bi modalitate besterik ez direnean (zenbaki jakin bat edo txikiagoa
+izan, ala zenbaki hori baino handiagoa izan), aldagaia bitartu edo diko-
+tomizatu egiten dela esaten da.
+– Ordenazko aldagai bat beste ordenazko batean bihurtu, O ondoz-ondoko
+modalitateak elkartuz O eraikitzerakoan.
+– Ordenazko aldagai bat izenezko batean bihurtu, Oren gainean deﬁnitutako
+ordenazko erlazioa alde batera utziz. Bide batez Oko modalitate batzuk
+elkartu egin daitezke ere, eta muturrera eramanda elkartze prozedura hau,
+bitarra bihurtu.
+Eraikitako aldagai berriaren ulergarritasunarako, komenigarria izaten da
+gehienetan elkartze prozeduran ondoz-ondoko modalitateen erlazioa erre-
+spetatzea.
+36
+
+– Izenezko aldagai bat beste izenezko batean bihurtu, bere modalitateak
+elkartuz.
+Muturreko prozedura bat da modalitate guztiak, bat ezik, elkartzearena,
+dikotomizatu edo bitarreratzearena alegia.
+Berkodeketak bestalde badu bere garrantzia aldagaien izaera sailkatzeko gara-
+ian, eta hurrengo azpiatal batean erakutsia izango da.
+• Aldagairen konbinaketa edo konposaketa.
+– Zenbakizko aldagaien arteko eragiketa aritmetikoa.
+Hau egin ahal izateko eragiketaren ondorengo aldagaiak (batuketa, ken-
+keta, biderkaketa, zatiketa, . . . ) zein zentzua duen ezagutzea nahitaezkoa
+da, eraldaketa aztertze-tresnatzat erabili nahi baldin bada behintzat.
+– Aldagairen biderkaketa kartesiarra.
+Bi behaketa espazioren (O1, O2) biderkaketa kartesiarrak behaketa espazio
+berri bat deﬁnitzen du (O1×O2), eta ondorioz aldagai berri bat (X ), beste
+bien konbinatua edo konposatua dena:
+X : Ω −→ O1 × O2,
+X (ω) = (X1(ω), X2(ω))
+Aldagai konposatuak Ωn eragiten duen partiketa ﬁnagoa da bera osatzen
+duten aldagai bakoitzak eragiten duena baino.
+Bi espazioren biderkaketa egin daitekeen bezala, espazio gehiagoena ere
+egin daiteke.
+• Aldagai baten deskonposaketa.
+Aldagai baten bitarreratze edo dikotomizatze prozedura modalitate bat baino
+gehiagorekin egiten denean, aldagaiaren deskonposatze prozedura bat egiten da.
+Zentzu honetan berkodetze prozedura anitz bat egiten da. Hona hemen kasu
+aipagarri batzuk:
+– Izenezko aldagai bati dagokion behaketa espazioko modalitate bakoitzetik
+aldagai bitar bat sor daitekeenez (modalitatea izan ala ez-izan), ez da
+informaziorik galtzen guztietatik eragitean (ezta ugaltzen ere).
+X : Ω −→ M
+M = {m1, m2, . . . , mp},
+X1 : Ω −→ M1 X2 : Ω −→ M2
+. . . ,
+Xp : Ω −→ Mp Mi =
+{mi, mi}, i = 1, 2, . . . , p,
+Xi(ω) = mi baldin eta soilik baldin X(ω) = mi i = 1, 2, . . . , p
+Ohartzekoa da, aldagai berriak lotuta edo erlazionatuta daudela elkarren
+artean jatorrizko aldagaiaren legez:
+Baldin Xi(ω) = mi, orduan Xj(ω) = mj, i, j = 1, 2, . . . , p i = j
+Aurreko atalean esan bezala, kodeketarik erosoena, eta arruntena beraz,
+hauxe da:
+Mi = {0, 1}, i = 1, 2, . . . , p eta Xi(ω) = 1 baldin eta soilik baldin
+X(ω) = mi i = 1, 2, . . . , p
+Azken ﬁnean, berkodeketa konbinatu bat egiten da:
+X ≡ (X1, X2, . . . , Xp) : Ω −→ (M1 × M2 × . . . Mp
+(X1, X2, . . . , Xp)(ω) = (X1(ω), X2(ω), . . . , Xp(ω)) Xi(ω) = 1 baldin eta
+soilik baldin X(ω) = mi i = 1, 2, . . . , p
+37
+
+– Ordenazko aldagai baten bitarreratze prozedura batean, arestian esan bezala,
+modalitateen ordenaz baliatzerik badago: modalitate jakin bat edo gutx-
+iago izan, ala gehiago (edo, gutxiago izan ala hori edo gehiago izan). IM
+espazioko modalitate guztiekin eraginez gero, ez da informazioarik galtzen
+(ezta ugaltzen ere). Lehen bezala, {0, 1} behaketa espazio bitar erosoa
+erabiliz:
+X : Ω −→ M
+M = {m1, m2, . . . , mp},
+X1 : Ω −→ {0, 1} X2 : Ω −→ {0, 1}
+. . . ,
+Xp : Ω −→ {0, 1} i =
+1, 2, . . . , p,
+Xi(ω) = 1 baldin eta soilik baldin X(ω) ≤ mi i = 1, 2, . . . , p
+Ohartzekoa da, alde batetik ≤ren ordez ≥ erabil daitekeela berkodeketa
+osoan, eta bestetik, aldagai berriak lotuta edo erlazionatuta daudela elka-
+rren artean jatorrizko aldagaiaren legez:
+Baldin Xi(ω) = 1, orduan Xj(ω) = 1,
+i, j = 1, 2, . . . , p i ≤ j bada (≥
+bigarren kasuan).
+Eskala moten ezaugarri matematikoak eraldaketen bitartez
+Aurreko atalean aipatutako berkodetze prozedurak balio du ere eskala motak matem-
+atikoki ezagutzeko.
+Aldagai bat f transformazio batekiko egonkorra edo aldaezina dela esaten da, baldin
+eta X eta X = f ◦ X aldagaiek objektuengan eragiten dituzten erlazioak berberak
+badira.
+Prozedura estatistikoak objektuek agertzen dituzten modalitateen gain aplikatzen
+dira. Modalitate hauen izaera funtsezkoa da prozedura estatistiko bat aplikatu ahal
+izateko, ez baita zilegi, esate baterako, batuketa aplikatu zenbakiak ez diren modalita-
+teeen gain. Halako bat aplikatuz gero 
+(uste baino gehiagotan ikusten dira halakoak),
+zentzugabekeria bat egiten da, eta egindakoaren esanahia hutsala da, besteak-
+beste
+objektuen arteko erlazioei erlazio gehiago eransten zaielako 
+(ez dagoen informazio
+bat gehitzen zaie, ﬁkziozkoa edo gezurrezkoa dena).
+Aldagai bat deﬁnitzerakoan beraz, garrantzi handikoa da zein eskala mota aukeratzen
+den, azken ﬁnean problemaren objektuen arteko erlazioak transkribatu edo itzuli be-
+har baitira era matematiko batean, gero ondorio batzuk ateratze arren.
+Eskala motak, esan bezala, bi behaketa espazioen arteko eraldaketa edo berkodeketa
+egonkorren bitartez bereiz daitezke. Hau ezartzerakoan garbi geratuko da nolako
+prozedura aplika daitezke eskala motaren arabera.
+Berkodeketen ezaugarri batzuk, hala eskala moten karakterizazio batzuk, hauexek
+izan daitezke:
+• f bijektiboa: (f (m) = f (m ) baldin eta soilik baldin m = m eta . . . ).
+Izenezko aldagaien ezaugarri nagusia berkodeketen ezaugarri honekin dago lo-
+tuta. Hau da, X izenezko aldagai batek Ωn eragiten duen partiketa egitura ez
+da aldatzen halako berkodeketa bat egin ondoren:
+X (ω) = X (ω ) baldin eta soilik baldin X(ω) = X(ω )
+• f monotonoa: (f (m) > f (m ) baldin eta soilik baldin m > m eta . . . ).
+Ikusten denez, aurreko ezaugarria baino estuagoa da hau.
+38
+
+Ordenazko aldagaien ezaugarri nagusia monotonotasunarekin dago lotuta. Ze-
+hazkiago esateko, Ωko objektuen aurreorden erlazioa ez da aldatzen berkodeketa
+monotono baten bitartez:
+X (ω) > X (ω ) baldin eta soilik baldin X(ω) > X(ω ), eta
+X (ω) = X (ω ) baldin eta soilik baldin X(ω) = X(ω ).
+• f lineal positiboa: (f (m) = a · m + b, a > 0).
+Are estuagoa aurrekoa baino, monotonotasuna baino gehiago eskatzen baita.
+Zenbakizko aldagaien ezaugarri nagusiarekin dator bat halako berkodeketa. Ωko
+objektuen arteko kokapen erlatiboa ez da aldatzen, berkodeketa lineal eta positibo
+baten bitartez, neurtzeko unitatea eta erreferentzigunea ezik:
+X (ω1) − X (ω2) = X (ω3) − X (ω4)
+baldin eta soilik baldin
+X(ω1) − X(ω2) = X(ω3) − X(ω4) (?).
+Hau egiaztatzeko berkodeketaren deﬁnizioa besterik ez da aplikatu behar: (X 
+(ω) =
+a · X(ω) + b, a > 0). Baina ez da bakarrik zenbakizko aldagaien berezitasuna.
+Aldagai bitarrek ere badute ere berezitasun hau, baldin eta bi modalitateak
+edozein bi zenbaki ezberdin bezala ulertzen badira.
+f (m1) = a · m1 + b, f (m2) = a · m2 + b, a =
+f (m2)−f (m1)
+m2−m1
+, b = f (m1) − a · m1, . . .
+Adibidez, IM = {2, 5},
+IM = {4, 9},
+f (2) = 4, f (5) = 9. Kasu honetan
+berkodeketa lineal positibo hau dago: a =
+5
+3 ,
+b =
+2
+3 .
+Aldagai bitarren kodeketa arruntena IM = {0, 1} da (Bernoulli-ren kodeketaren
+izena duena). Halako kode batekin, uler daiteke (eta horrela ulertzen da) 1
+modalitatea egokituta duten objektuek ezaugarri jakin baten jabe direla eta 0
+dutenak ez direla horren jabe.
+Gainera, izenezko aldagai izateagatik zentzurik ez duen batuketak, izan badu
+zentzurik oraingoan:
+ 1 kodea duen modalitatea zenbatetan gertatu den, batuketaren
+bitartez adierazi daiteke (adibidez, X(ω1)+X(ω1)+. . .+X(ωN ) = 0+1+. . .+1),
+0 duenarena N rekiko osagarria izanda.
+Aldagai bitarren ezaugarri honen ondorioz zera esan daiteke, prozedura estatis-
+tiko bat egonkorra baldin bada transformazio linealen menpean, orduan aplik-
+agarria dela aldagai bitarren kasuan.
+Berezitasun honek, aldagai kuantitatiboen eremurako soilik burutu izan diren
+zenbait teknika edo prozedura estatistiko 
+(korrelazio lineala, erregresio lineala,
+analisi diskriminatzailea, analisi faktoriala, . . . ) zabaldu egiten ditu aldagai
+bitarren eremura, eta luzatuz (aldagai kualitatibo baten deskonposaketa zertan
+datzan ikusi eta gero) aldagai kualitatibo guztien eremura.
+• f homotezia positiboa: (X (ω) = c · X(ω), c > 0).
+Aurrekoaren kasu berezi bat da, eta estuagoa beraz.
+Halako berkodeketa batek zenbakizko aldagai berezi batzuren ezaugarria deﬁnitzen
+du, zero absolutu bat dutenena, handitasun edo magnitude bat adierazten dute-
+nena. Ωko objektuen arteko kokapen erlatiboa ez da aldatzen eta erreferentzi-
+gunea ere ez; neurtzeko unitatea besterik ez da aldatzen.
+X (ω1)
+X (ω2)
+=
+X(ω1)
+X(ω
+2 )
+39
+
+2.5
+Datuak aurkeztu
+Azterbide estatistikoa datu moten arabera aplikatzen diren teknikez josita dago, hur-
+rengo kapituluetan azaltzen den legez.
+Problematika baten barruan datuek badute beren esanahia, teknikak aplikatuz besterik
+gabe ematen ez dutena. Datuak aztertu eta gero beraz, emaitzak ulertu egin behar
+dira, eta ia beti beste gizalagunaren bati, irakurleari edo, adierazi behar izaten za-
+izkio txosten batean.
+Funtsezkoa bezain begibistakoa dirudi jakiteak nori adierazi behar zaio informazioa.
+Honen miatze eta galbahatze prozesu baten ondorioz, informazioaren muina eta alde
+bitxiak era dotorean aurkeztu eta erakutsi beharko dizkio aztertzaileak irakurle horri.
+Aipatutako sei tresnak dira eginbehar horretarako balio dutenak ere, baina tentuz er-
+abili behar dira. Esate baterako, maila arruntenari begira, maiztasun taula landu
+eta adierazgarriak, eta dagozkien graﬁkoak izaten dira gehienbat erabiltzen diren
+tresnak. Maila gorago batekoak izaten dira estatistiko aukeratuak eta ereduak, bi
+hauek lotuta daudelarik informazioa adierazteko garaian.
+40

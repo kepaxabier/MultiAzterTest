@@ -1,0 +1,822 @@
+
+
+
+Ekuazio Diferentzialak
+2008/2009 ikasturtea
+1
+Sarrera
+Adibidea 1 : Gorputz baten jaurtiketa/erorketa
+Demagun altuera batetik, m masako gorputz bat, v0 abiaduraz jaurtitzen dela
+( v0 > 0 bada) edo erortzen uzten dela ( v0 = 0 bada).
+t une bakoitzean
+gorputzak daraman abiadura, v(t) funtzioa, kalkulatu nahi da, grabitatearen
+indarrak eragiteaz gain, airearen erresistentzi indarrak ere, gorputza eragiten
+badu. Azken hau, gehienetan abiadurarekiko proportzionala dena, k v(t) dela
+suposatuko dugu.
+Orduan Newtonen 2. legearen arabera,
+F = m a ⇐⇒ m g − k v(t) = m a(t) = m v (t)
+Adibide honetan, t eta v(t) funtzioaren arteko erlazio edo ekuazio bat lortu
+ordez, t, v(t) eta v (t) funtzioen arteko mg − k v(t) = m a(t) = m v (t)
+ekuazioa lortzen da, ekuazio diferentziala deitzen dena.
+Orokorrean gauza bera gertatzen da egoera askotan: fenomeno bat kuanti-
+tatiboki adierazten duen y = f 
+(t) funtzioa bilatzen dugunean, sarritan, fenomenoa
+aztertzerakoan, t, y eta t -rekiko y -ren deribatu batzuen 
+( y , y , . . .) arteko
+erlazioa lortzen da, hau da, ekuazio diferentziala. Helburua, lorturiko ekuazi-
+otik y = f 
+(t) funtzioa aurkitzea da, esan ohi den bezala, ekuazio diferentziala
+integratzea
+Aurreko adibidera itzuliz, lorturiko ekuazio diferentziala nola ebazten den
+oraingoz ez dugu esango baina, konproba daiteke ondoko funtzio guztiak soluzioak
+direla:
+v(t) = C e
+− k
+m t
++
+mg
+k
+; C ∈ R edozein izanda
+2
+Lehen Ordenako Ekuazio Diferentzial Linealak
+x (t) = a(t) x(t) + b(t)
+ekuazioei, non a(t) eta b(t), 
+(α, β) tarte batean, funtzio jarraituak direla eta
+x(t), (α, β) tartean bilatzen dugun funtzioa dela suposatzen dugun, lehen or-
+denako ekuazio diferentzial linealak deitzen zaie. Ekuazio diferentziala, funtzio
+ezezagunaren deribatua agertzen delako; lehen ordenakoa, bakarrik lehen de-
+ribatua agertzen delako (2. deribatua agertuko balitz, 2. ordenakoa esango
+genioke); lineala, x1(t) agertzen delako ( x2
+(t) agertuko balitz, koadratikoa edo
+2. mailakoa esango genioke)
+1
+
+Horrez gain, b(t) = 0 , hau da, gai askea funtzio nulua denean, ekuazioa, homo-
+geneoa dela esaten da eta b(t) = 0 denean, ekuazio osoa.
+2.1
+Ekuazio Homogeneoaren Soluzioa
+Demagun, lehen ordenako ekuazio diferentzial lineal eta homogeneoa:
+x (t) = a(t) x(t);
+a(t) jarraitua (α, β) tartean
+Teorema 1 Orduan, t0 ∈ (α, β) bada, ekuazio homogeneoaren soluzio guztiak
+ondoko funtzioak dira:
+x(t) = K e
+t
+t0
+a(s) ds
+; t ∈ (α, β) eta K ∈ R
+Frogapena:
+Lehen, konproba dezagun x(t) = K e
+t
+t0
+a(s) ds
+funtzioek, ekuazio diferentzial
+homogeneoa betetzen dutela:
+x (t) = K [e
+t
+t0
+a(s) ds
+] = K [
+t
+t0
+a(s) ds] e
+t
+t0
+a(s) ds
+=
+= K a(t) e
+t
+t0
+a(s) ds
+eta,
+a(t) x(t) = a(t) K e
+t
+t0
+a(s) ds
+Bukatzeko, ikus dezagun ekuazio homogeneoaren x(t) edozein soluziok aipa-
+turiko itxura daukala:
+x(t) = K e
+t
+t0
+a(s) ds ⇐⇒
+x(t)
+e
+t
+t0
+a(s) ds
+= K ⇐⇒ [
+x(t)
+e
+t
+t0
+a(s) ds
+] = 0
+Konproba dezagun azken hau,
+[
+x(t)
+e
+t
+t0
+a(s) ds
+] =
+x (t) e
+t
+t0
+a(s) ds − x(t) [e
+t
+t0
+a(s) ds
+]
+[e
+t
+t0
+a(s) ds
+]2
+=
+=
+x (t) e
+t
+t0
+a(s) ds − x(t) a(t) e
+t
+t0
+a(s) ds
+e
+2
+t
+t0
+a(s) ds
+=
+=
+x (t) − x(t) a(t)
+e
+t
+t0
+a(s) ds
+= 0
+Beraz, x (t) = a(t) x(t) ekuazio homogeneoaren soluzio guztiak, x(t) = K e
+t
+t0
+a(s) ds
+funtzioak direla frogaturik geratzen da.
+2.2
+Ekuazio Osoaren Soluzioa
+x (t) = a(t) x(t) + b(t) ekuazio osoaren soluzioak, t -
+rekiko bi funtzioren arteko
+biderkaduren artean, hau da, x(t) = u(t) v
+(t) funtzioen artean, bilatuko ditugu.
+Baina, x(t) = u(t) v(t) soluzio bat izango da ⇐⇒
+2
+
+[u(t) v(t)] = a(t) [u(t) v(t)] + b(t) ⇐⇒
+u (t) v(t) + u(t) v (t) = a(t) u(t) v(t) + b(t) ⇐⇒
+u (t) v(t) + u(t) [v (t) − a(t) v(t)] = b(t)
+(1)
+Kortxeteen artean dagoena 0 izango da ⇐⇒ v(t) funtzioa, ekuazio homo-
+geneoaren soluzio bat bada, hau da, v(t) = K e
+t
+t0
+a(s) ds
+; t0 ∈ (α, β), bada.
+Orduan, K = 1 eginez, v(t) = e
+t
+t0
+a(s) ds
+hartzen badugu, (1) ekuazioa horrela
+geratuko zaigu,
+u (t) e
+t
+t0
+a(s) ds
+= b(t) ⇐⇒ u (t) = b(t) e
+−
+t
+t0
+a(s) ds
+Egindakoa laburbilduz, x(t) = u(t) v(t) = u(t) e
+−
+t
+t0
+a(s) ds
+ekuazio osoaren
+soluzio bat izango da ⇐⇒ u (t) = b(t) e
+−
+t
+t0
+a(s) ds
+Bestalde, kalkulu integraleko oinarrizko lehen teorema aplikatuz,
+t
+t0
+b(s) e
+−
+s
+t0
+a(r) dr
+ds , funtzioak ere, t -rekiko lehen deribatu berbera dauka,
+[
+t
+t0
+b(s) e
+−
+s
+t0
+a(r) dr
+ds] = b(t) e
+−
+t
+t0
+a(r) dr
+eta beraz, lehen deribatu berbera daukaten bi funtzio hauek, konstante batez,
+soilik, desberdinduko dira, esate baterako,
+u(t) =
+t
+t0
+b(s) e
+−
+s
+t0
+a(r) dr
+ds + C;
+C ∈ R
+Izan ere, ondoko funtzio guztiak, ekuazio osoaren soluzioak dira,
+x(t) = u(t) v(t) = [
+t
+t0
+b(s) e
+−
+s
+t0
+a(r) dr
+ds + C] e
+t
+t0
+a(s) ds
+;
+C ∈ R
+Hala ere, askotan, x(t0) = x0 betetzen duten edo (t0, x0) puntutik pasatzen
+diren soluzioak interesatzen zaizkigu baina,
+x(t0) = x0 ⇐⇒ [
+t0
+t0
+b(s) e
+−
+s
+t0
+a(r) dr
+ds
+0
++ C] e
+t0
+t0
+a(s) ds
+1
+= x0 ⇐⇒ C = x0
+eta beraz, x(t0) = x0 betetzen duen edo (t0, x0) puntutik pasatzen den
+soluzio bat, hauxe da,
+x(t) = [
+t
+t0
+b(s) e
+−
+s
+t0
+a(r) dr
+ds + x0] e
+t
+t0
+a(s) ds
+Oharra 1 x(t) = [
+t
+t0
+b(s) e
+−
+s
+t0
+a(r) dr
+ds + x0] e
+t
+t0
+a(s) ds
+soluzioa, x(t0) = x0
+betetzen duen edo (t0, x0) puntutik pasatzen den soluzio bakarra da.
+3
+
+Konprobaketa:
+x1(t) eta x2(t) soluzioak, baldintza hori beteko balute,
+x
+1(t) = a(t) x1(t) + b(t) non x1(t0) = x0 eta
+x
+2(t) = a(t) x2(t) + b(t) non x2(t0) = x0
+kenketa eginez,
+x
+1(t) − x2(t) = a(t) (x1(t) − x2(t)
+y(t)
+) ⇐⇒ y (t) = a(t) y(t)
+Azken ekuazio honen soluzioak, y(t) = K e
+t
+t0
+a(s) ds
+dira baina,
+y(t0) =
+K e
+t0
+t0
+a(s) ds = K
+x1(t0) − x2(t0) = x0 − x0 = 0
+⇐⇒ K = 0 ⇐⇒ y(t) = 0 ⇐⇒ x1(t) = x2(t)
+Oharra 2 x(t) = [
+t
+t0
+b(s) e
+−
+s
+t0
+a(r) dr
+ds + C] e
+t
+t0
+a(s) ds
+; C ∈ R funtzioak dira
+ekuazio osoaren soluzio guztiak.
+Konprobaketa:
+ϕ(t)
+ekuazio osoaren soluzio bat bada eta, esate baterako, ϕ(t0) = ϕ0
+bada, badakigu (t0, ϕ0) puntutik pasatzen den soluzio bakarra hauxe dela:
+ϕ(t) = [
+t
+t0
+b(s) e
+−
+s
+t0
+a(r) dr
+ds + ϕ0] e
+t
+t0
+a(s) ds
+Adibidea 2 : Gorputz baten erorketa
+Erorketa bada, v(0) = v0 = 0 eta t -rekiko gorputzak daraman abiadura
+neurtzen duen funtzioa, v(t), ondoko ekuazioa betetzen zuen:
+m g − k v(t) = m v (t); t ≥ 0 ⇐⇒ v (t) = −
+k
+m
+a(t)
+v(t) + g
+b(t)
+; t ≥ 0
+Orduan, t0 = 0 hartuz, (0, 0) puntutik pasatzen den soluzio bakarra,
+v(t) = [
+t
+0
+g e
+−
+s
+0
+− k
+m dr
+ds + 0] e
+t
+0
+− k
+m ds
+= [
+t
+0
+g e
+k
+m s
+ds ] e
+− k
+m t
+=
+gm
+k
+[e
+k
+m t
+− 1] e−
+k
+m t
+=
+gm
+k
+[1 − e
+− k
+m t
+]
+3
+Ur-biltegiei Buruzko Problemak
+Problema 1 Demagun, hasiera batean, V litroko kapazitatea duen ur-biltegi
+batek, x0 gramo gatz duten v0 litro ur gazi daukala. Bat-batean, hodi batetik,
+denbora unitateko k1 gatz-kontzentrazioa (g/l-koa) duen a litro ur gazi sartzen
+hasten dira, aldi berean, ur-
+biltegiaren behealdeko isurbide batetik, denbora uni-
+tateko b litro nahastura ateratzen direlarik. Denbora pasa ahala, gatz kanti-
+tatearen bilakaera aztertu nahi da.
+4
+
+Suposatuko dugu nahastura beti homogeneoa dela, hau da, gatza regularki
+sakabanatzen dela; behar izanez gero, ur-biltegiak eragile edo nahasle batzuk
+dituela suposa daiteke, edukia ongi nahasteko. Ohartu, bestalde, ur-biltegiak
+giza gorputzaren atal bat (bihotza, urdaila, giltzurruna..) errepresenta deza-
+keela; urak, odola eta gatzak, medikamentu bat, esate baterako.
+Edozein kasutan, denbora adierazteko t aldagaia aukeratuz, izan bitez,
+x(t), t unean, ur-biltegiak daukan, gramotan, gatz kantitatea neurtzen duen
+funtzioa,
+v(t), t unean, ur-biltegiak daukan, litrotan, ur gaziaren kantitatea neurtzen
+duen funtzioa. Jakina, v(t) = v0 + (a − b)t eta
+k(t), t unean, ur-biltegiko nahasturaren gatz kontzentrazioa neurtzen duena.
+Orduan,
+k(t) =
+x(t)
+v(t)
+non, x(0) = x0, v(0) = v0 eta k(0) =
+x0
+v0
+diren.
+x (t) = lim
+h→0
+x(t + h) − x(t)
+h
+; kontuan harturik, kalkula dezagun, h > 0
+izanda, [t, t + h] tartean gertaturiko gatzaren gehikuntza ala urripena ( ∆ x),
+∆ x = x(t + h) − x(t) =
+[t, t + h] denbora tartean
+sartu den gatz kantitatea
+−
+[t, t + h] denbora tartean
+atera den gatz kantitatea
+= a k1h − b
+t+h
+t
+k(s) ds = a k1h − b
+t+h
+t
+x(s)
+v(s)
+ds
+Integralen batezbesteko balioaren teorema-ren arabera, t1 = t + θ h; 
+(0 ≤ θ ≤ 1)
+puntu bat existitzen da non,
+t+h
+t
+x(s)
+v(s)
+ds =
+x(t + θ h)
+v(t + θ h)
+h; Orduan,
+∆ x = a k1h − b
+x(t + θ h)
+v(t + θ h)
+h =⇒
+∆ x
+h
+= a k1 − b
+x(t + θ h)
+v(t + θ h)
+eta
+lim
+h→0
+∆ x
+h
+= x (t) = a k1 − b
+x(t)
+v(t)
+Problema hauetan, aurreko ekuazio diferentzialera ailegatzen da ondoko print-
+zipioari jarraituz:
+Oinarrizko Printzipioa: Denborarekiko gatz kantitatearen bilakaera neurtzen
+duen funtzioa, x (t), ‘denbora unitateko, sartzen den gatza’ − ‘denbora uni-
+tateko, ateratzen den gatza’ kenketaren bidez lortzen da, non gogoratu,
+v(t) = v0 + (a − b) t eta x(0) = x0 diren
+Ekuazio diferentziala ebatziz, x(t)
+funtzioa, hau da, t unean, ur-biltegian
+dagoen gatz kantitatea kalkulatuko da eta ur-biltegiaren egoerari buruzko egin
+daitezkeen hainbat galdera erantzungarriak izango dira.
+Adibidea 3 Demagun 120 litroko bolumena duen ur-biltegi bat, erdiraino ur
+garbiz beteta dagoela. Bat-batean, hodi batetik, 24 g/l-ko gatz-kontzentrazioa
+duen 8.5 litro ur gazi sartzen hasten da minutuko, aldi berean, ur-biltegiaren
+behealdeko isurbide batetik, minutuko 6.5 litro nahastura ateratzen direlarik.
+5
+
+Ur-biltegia betetzen denean, ur-biltegira sartutako eta ur-
+biltegitik ateratako gatz
+kantitateak kalkulatu nahi dira.
+ur-biltegian dagoen gatz kantitatearen bilakaera aztertzerakoan, hau da,
+lehen aipaturiko oinarrizko printzipioari jarraituz, lortzen dugun ekuazio difer-
+entziala, hauxe da;
+x (t) = 204 −
+6.5
+60 + 2t
+x(t)
+Beraz, a(t) = −
+6.5
+60+2t ,
+b(t) = 2.04, t0 = 0 har dezakegu eta hasierako ura
+gatzik gabekoa zenez, x(t0) = x(0) = 0 dugu.
+Hau guztia kontutan hartuz, ekuazio diferentzialaren soluzioa, hauxe izango da;
+x(t) = [
+t
+0
+204 e
+−
+s
+0
+− 6.5
+60+2r dr
+ds] e
+t
+0
+−6.5
+60+2s ds
+non
+s
+0
+6.5
+60 + 2r
+dr =
+6.5
+2
+(ln(30 + s) − ln 30) = ln(1 +
+s
+30
+)
+13/4
+eta
+t
+0
+−6.5
+60 + 2s
+ds = −
+6.5
+2
+(ln(30 + t) − ln 30) = ln(1 +
+t
+30
+)
+−13/4
+eln a = a, ∀a, denez, soluzioa horrela geratuko da;
+x(t) = [
+t
+0
+204 (1 +
+s
+30
+)
+13/4 ds] (1 +
+t
+30
+)
+−13/4
+Bukatzeko, egin dezagun azken integrala;
+t
+0
+(1+
+s
+30
+)
+13/4 ds =
+30
+17/4
+[(1+
+t
+30
+)
+17/4 −1] =
+120
+17
+[(1+
+t
+30
+)
+17/4 −1] eta orduan,
+x(t) =
+204 × 120
+17
+[(1 +
+t
+30
+)
+17/4 − 1][(1 +
+t
+30
+)
+−13/4] =
+= 1440[(1 +
+t
+30
+) − (1 +
+t
+30
+)
+−13/4] =
+= 1440(1 +
+t
+30
+)[1 − (1 +
+t
+30
+)
+−17/4]
+v(t) = 60 + 2t = 120 ⇐⇒ t = 30 eta orduan, ur-biltegia betetzen denean,
+x(30) = 2880 − 90 × 2
+3/4
+2728.64 gramo gatz daude
+Beraz, ordu erdi bat pasa ondoren (t = 30), ur-biltegira sartutako gatza, 8.5 ×
+24 × 30 = 6120 gramo izango da eta ateratakoa, 6120 − x(30)
+3391 gramo.
+6
+
+4
+Lehen ordenako aldagai bananduetako ekuazio
+diferentzialak
+4.1
+Sarrera
+Atal honetan, ekuazio diferentzial baten funtzio ezezaguna eta dagokion lehen
+deribatua x(t) eta x (t) ikurrez adierazteaz gain, bakarrik x eta x ikurrez
+ere, adieraziko ditugu baina, t aldagaiarekiko funtzioak direla ahaztu barik.
+Horrez gain, sarritan, deribatuak beste era honetara adierazten dira:
+x (t) ≡ x =
+dx
+dt
+; x (t) ≡ x =
+d2x
+dt2
+; · · ·
+Orduan, hurrengo espresioek ekuazio diferentzial berbera adierazten dute:
+(t x(t)−1) x (t) = x(t)−3 t
+2 ⇒
+
+
+
+
+
+
+
+
+
+x =
+x−3 t
+2
+t x−1
+dx
+dt =
+x−3 t
+2
+t x−1
+era normala
+(t x − 1) dx = (x − 3 t2) dt
+era diferentziala
+Deﬁnizioa 1 Lehen ordenako ekuazio diferentzial bat, aldagai bananduetakoa
+dela esaten da, baldin eta, era honetara idatz badaiteke:
+dx
+dt
+=
+f (t)
+g(x)
+⇐⇒ g(x) dx = f (t) dt
+Adibidea 4 x =
+4 x
+t (x − 3)
+; (t = 0) ekuazioa, beste era honetara idatz daiteke,
+x − 3
+x
+dx =
+4
+t
+dt ⇐⇒
+dx
+dt
+=
+4
+t
+x−3
+x
+; (x = x(t) = 0)
+eta beraz, aldagai bananduetakoa izango da.
+4.2
+Aldagai bananduetako ekuazioen ebazpena
+Aldagai bananduetako ekuazioa g(x) dx = f (t) dt bada, izan bitez G(x) eta
+F (t) funtzioak, hurrenez-hurren, g(x) eta f 
+(t) funtzioen jatorrizko bi funtzio,
+hau da, G (x) = g(x) eta F (t) = f (t) betetzen duten edo gazua bera dena,
+G(x) =
+g(x) dx eta F (t) =
+f (t) dt betetzen duten bi funtzio.
+Orduan, ekuazio diferentziala horrela idatz daiteke.
+g(x) dx = f (t) dt ⇐⇒ G (x) dx = F (t) dt ⇐⇒ G (x)
+dx
+dt
+= F (t)
+Une honetan, deribazioaren katearen erregela gogoratuko dugu, funtzio kon-
+posatuak deribatzeko baliogarria dena:
+y , t -rekiko funtzioa bada eta z , y -
+rekiko funtzioa, katearen erregelak ondokoa dio:
+dz
+dt
+=
+dz
+dy
+dy
+dt
+1
+7
+
+Gure kasuan, interpreta dezakegu,
+G (x)
+dx
+dt
+=
+dG
+dx
+dx
+dt
+=
+dG
+dt
+dela eta orduan,
+G (x)
+dx
+dt
+= F (t) ⇐⇒
+dG
+dt
+=
+dF
+dt
+⇐⇒ G = F + C ; C ∈ R
+G funtzioaren aldagaia, t aldagaiarekiko x funtzioa dela eta G , t aldaga-
+iarekiko funtzioa dela kontuan harturik, G = F + C berdintza, beste era hone-
+tara idatz dezakegu,
+G = F + C ⇐⇒ G(x(t)) = F (t) + C ; C ∈ R
+eta berdintza honetatik, nahiz eta inplizitua izan, ekuazio diferentzialaren x
+(t)
+soluziorako erlazio bat lortuko da.
+Adibidea 5 Har dezagun, aurreko adibidearen x =
+4 x
+t (x − 3)
+; (t = 0) ekuazio
+berbera
+x =
+4 x
+t (x − 3)
+⇐⇒
+x − 3
+x
+g(x)
+dx =
+4
+t
+f (t)
+dt ; (x = 0)2
+G(x) =
+x − 3
+x
+dx = x − 3 ln(|x|) ,
+F (t) =
+4
+t
+dt = 4 ln(|t|)
+G = F + C ⇐⇒ x − 3 ln(|x|) = 4 ln(|t|) + C ; C ∈ R eta t = 0
+Berdintza honetatik t aldagaiarekiko x funtzioa lortzea, badirudi zailegia dela
+baina badaukagu ekuazio diferentzialaren 0 ez den edozein soluziok bete behar
+duen erlazioa. Izan ere, x = x(t) = 0 funtzioak, aurreko berdintza betez gero,
+x(t)−3 ln(|x(t)|) = 4 ln(|t|) + C =⇒ x (t) − 3
+x (t)
+x(t)
+= 4
+1
+t
+⇐⇒x (t)(1 −
+3
+x(t)
+) = 4
+1
+t
+⇐⇒ x (t)
+x(t) − 3
+x(t)
+) =
+4
+t
+⇐⇒x (t) =
+4 x(t)
+t (x(t) − 3)
+hau da, ekuazio diferentziala betetzen du.
+1y = t2 eta z = cos y badira orduan, z = cos(t2) ,
+dz
+dt
+= (2t)(− sin(t
+2)) ,
+dz
+dy
+= − sin y eta
+dy
+dt
+= 2t
+2Berdintzak zentzurik izateko, t = 0 (hau badakigu) eta x = x
+(t) = 0 izan behar dira.
+Hala ere, konproba daiteke x = x
+(t) = 0 funtzio konstantea, ekuazio diferentzialaren soluzioa
+dela.
+8

@@ -1,0 +1,2559 @@
+
+
+
+A. Eranskina
+Aljebra lineala eta multzo ganbilak
+Ikerkuntza Operatiboaren gaien garapenean beharrezkoak diren aljebra lineala-
+ren eta multzo ganbilen kontzeptuak gogoratuko ditugu eranskin honetan. Eredu
+linealak ebazteko erabiltzen den simplex algoritmoa prozedura aljebraikoa den
+arren, programazio linealaren geometria aztertzea garrantzitsua da. Hasteko, ere-
+du linealaren soluzio optimoa non aurkitzen den ikusten lagunduko diguten oi-
+narrizko ideia geometriko batzuk aztertuko ditugu. Ondoren, mutzo ganbil baten
+mutur-
+puntuen eta eredu linealaren oinarriko soluzioen arteko erlazioa aztertuko
+dugu.
+A.1
+Matrizeak eta bektoreak
+Har dezagun
+R gorputza. R -ko elementuei eskalar deitzen zaie. m errenkadako
+eta n zutabeko eskalarren taulari matrize esaten zaio.
+A
+=
+
+
+
+
+
+
+
+
+a11
+a12
+· · ·
+a1n
+a21
+a22
+· · ·
+a2n
+..
+.
+..
+.
+. ..
+..
+.
+am1 am2 · · · amn
+
+
+
+
+
+
+
+
+Matrizea m
+× n tamainakoa edo dimentsiokoa dela esaten da. A = (aij)
+notazioa ere erabil dezakegu.
+Zutabe bakarra duen matrizea, hau da, m
+× 1 tamainakoa, zutabe-bektoretzat
+227
+
+228
+A. Aljebra lineala eta multzo ganbilak
+har daiteke.
+a
+=
+
+
+
+
+
+
+
+
+a11
+a21
+..
+.
+am1
+
+
+
+
+
+
+
+
+Adibidea.
+1. Eskalarren taula hau
+3 × 4 tamainako matrizea da.
+A
+=
+
+
+
+
+
+3 −2
+2
+5
+1
+0
+7
+2
+1
+2
+1
+0
+1 1
+
+
+
+
+
+2. Eskalarren taula hau
+3 dimentsioko bektorea da.
+a
+=
+
+
+
+
+
+3
+0
+1
+
+
+
+
+
+2
+A.1.1
+Matrize-eragiketak
+Batuketa
+m
+× n tamainako bi matrize izanik, A = (aij) ∈ R
+m×n, B = (bij) ∈ R m×n, A-
+ko eta B-ko elementuak elementuz elementu batuz lortzen den m
+× n tamainako
+C
+= (cij) ∈ R
+m×n matrizeari A eta B matrizeen arteko batura esaten zaio eta
+A
++ B moduan adierazten da.
+cij = aij + bij,
+i
+= 1, . . . , m, j = 1, . . . , n.
+Bi matrizeren arteko batuketa kalkulatu ahal izateko bi matrizeek tamaina be-
+rekoak izan behar dute, eta batuketa egin ondoren lortutako beste matrizea ere
+tamaina berekoa izango da.
+OpenCourseWare, UPV/EHU
+
+A.1. Matrizeak eta bektoreak
+229
+Matrizeen arteko batuketa deﬁnitzen den modu berean deﬁnitzen da bekto-
+reen arteko batuketa; bektore bat zutabe bakarreko matrize bat dela besterik ez da
+kontuan izan behar.
+Adibidea.
+1. a eta b bektoreen batuketa kalkulatuko dugu.
+a
+=
+
+
+1
+3
+
+
+,
+b
+=
+
+
+1
+4
+
+
+,
+a
++ b =
+
+
+1
+3
+
+
++
+
+
+1
+4
+
+
+=
+
+
+2
+7
+
+
+2. A eta B matrizeen batuketa kalkulatuko dugu.
+A
+=
+
+
+
+
+
+1 0
+1
+1
+0 1 −1
+0
+2 0
+1 −3
+
+
+
+
+
+,
+B
+=
+
+
+
+
+
+1 4
+2
+0
+0 0 −1
+0
+1 1
+2 −1
+
+
+
+
+
+A
++B =
+
+
+
+
+
+1 0
+1
+1
+0 1 −1
+0
+2 0
+1 −3
+
+
+
+
+
++
+
+
+
+
+
+1 4
+2
+0
+0 0 −1
+0
+1 1
+2 −1
+
+
+
+
+
+=
+
+
+
+
+
+2 4
+3
+1
+0 1 −2
+0
+3 1
+3 −4
+
+
+
+
+
+2
+Propietateak
+1. Matrizeen arteko batuketa barne-eragiketa bat da
+R
+m×n espazioan.
+A
+, B
+∈ R
+m×n ⇒ A + B ∈ R m×n.
+2. Matrizeen arteko batuketa trukakorra da.
+(∀A, B ∈ R
+m×n) A + B = B + A.
+3. Matrizeen arteko batuketa elkarkorra da.
+(∀A, B, C ∈ R
+m×n) (A + B) + C = A + (B + C).
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+230
+A. Aljebra lineala eta multzo ganbilak
+4. Matrizeen arteko batuketak elementu neutroa dauka, 0
+∈ R
+m×n.
+(∀A ∈ R
+m×n) A + 0 = 0 + A = A.
+5. A
+∈ R
+m×n matrize orok badu aurkakoa: −A ∈ R m×n.
+A
++ (−A) = (−A) + A = 0.
+Bektoreen arteko batuketak matrizeen arteko batuketak betetzen dituen pro-
+pietate berberak betetzen ditu.
+Matrizeen eta eskalarren arteko biderketa
+Izan bitez α
+∈ R eskalarra eta A = (aij) ∈ R
+m×n matrizea. α eta A arteko
+biderketa A matrizearen elementu guztiak α eskalarraz biderkatuz kalkulatzen
+da. Biderketa α
+· A notazioaz adierazten da eta biderketaren emaitza B = (bij) ∈
+R
+m×n matrizea da.
+bij = α · aij,
+i
+= 1, . . . , m, j = 1, . . . , n.
+Matrizeen eta eskalarren arteko biderketaren emaitza tamaina bereko beste matri-
+ze bat da.
+Adibidea.
+1. A matrizearen eta α eskalarraren arteko biderketa kalkulatuko dugu.
+A
+=
+
+
+
+
+
+0 −2
+1
+2
+1
+1
+
+
+
+
+
+, α
+= −2,
+α
+· A = −2 ·
+
+
+
+
+
+0 −2
+1
+2
+1
+1
+
+
+
+
+
+=
+
+
+
+
+
+0
+4
+−2 −4
+−2 −2
+
+
+
+
+
+2. a bektorearen eta α eskalarraren arteko biderketa kalkulatuko dugu.
+a
+=
+
+
+
+
+
+1
+3
+−5
+
+
+
+
+
+,
+α
+=
+1
+2
+,
+α
+· a =
+1
+2
+·
+
+
+
+
+
+1
+3
+−5
+
+
+
+
+
+=
+
+
+
+
+
+1
+2
+3
+2
+−
+5
+2
+
+
+
+
+
+2
+OpenCourseWare, UPV/EHU
+
+A.1. Matrizeak eta bektoreak
+231
+Bektoreen biderkaketa eskalarra
+aT errenkada-bektorearen eta b zutabe-bektorearen arteko biderkadura eskalarra
+aT bektoreko elementu bakoitza b bektorean dagokion elementuarekin biderka-
+tuz eta emaitzak batuz kalkulatzen da. Biderkadura eskalarra aT
+· b notazioaz
+adierazten da eta emaitza eskalar bat da.
+aT
+= (a1 · · · an) ∈ R
+1×
+n,
+b
+=
+
+
+
+
+
+b1
+..
+.
+bn
+
+
+
+
+
+∈ R
+n.
+aT
+· b = (a1 · · · an) ·
+
+
+
+
+
+b1
+..
+.
+bn
+
+
+
+
+
+=
+n
+i=1
+ai · bi.
+Errenkada-bektore baten eta zutabe-bektore baten arteko biderkadura eskalarra
+kalkulatu ahal izateko, beharrezkoa da biak dimentsio berekoak izatea. Biderka-
+duraren emaitza eskalarra da.
+a
+∈ R
+n, b ∈ R n ⇒ aT · b ∈ R .
+Adibidea. a
+∈ R
+3 eta b ∈ R3 bektoreen arteko biderkadura eskalarra kalku-
+latuko dugu.
+a
+=
+
+
+
+
+
+4
+2
+7
+
+
+
+
+
+,
+b
+=
+
+
+
+
+
+−1
+2
+1
+
+
+
+
+
+,
+aT
+· b = (4 2 7) ·
+
+
+
+
+
+−1
+2
+1
+
+
+
+
+
+= 7 ∈ R .
+2
+Matrizeen arteko biderketa
+A
+∈ R
+m×n eta B ∈ R n×p matrizeak izanik, A eta B matrizeen arteko biderka-
+dura C
+= A · B ∈ R
+m×p matrizea da.
+C
+= A · B matrizeko 
+(i, j) elementua, i = 1, . . . , m, j = 1, . . . , p, A matri-
+zeko i. errenkadaren eta B matrizeko j. zutabearen arteko biderkadura da 
+(erren-
+kada bider zutabe).
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+232
+A. Aljebra lineala eta multzo ganbilak
+Adibidea. A
+∈ R
+3×2 eta B ∈ R 2×4 matrizeen biderkadura kalkulatuko dugu.
+A
+=
+
+
+
+
+
+4 −3
+1
+0
+1
+1
+
+
+
+
+
+,
+B
+=
+
+
+1 1 0 1
+1 2 7 4
+
+
+C
+= A · B =
+
+
+
+
+
+1 −2 −21 −8
+1
+1
+0
+1
+2
+3
+7
+5
+
+
+
+
+
+∈ R
+3×4.
+2
+Propietateak
+1. Matrizeen arteko biderketa elkarkorra da.
+(∀A ∈ R
+m×n) (∀B ∈ R n×p) (∀C ∈ R p×q) (A · B) · C = A · (B · C).
+2. Matrizeen arteko biderketa banakorra da batuketarekiko.
+(∀A, B ∈ R
+m×n) (∀C ∈ R n×p) (A + B) · C = A · C + B · C.
+(∀A ∈ R
+m×n) (∀B, C ∈ R n×p) A · (B + C) = A · B + A · C.
+3.
+(∀A ∈ R
+m×n) A · 0n
+×
+p = 0m×p,
+0
+q×m · A = 0q×n.
+4.
+(∀A ∈ R
+m×n) Im · A = A · In = A.
+5.
+(∀α ∈ R ) (∀A ∈ R
+m×n) (∀B ∈ R n×p) α · (A · B) = (α · A) · B =
+A
+· (α · B).
+A.1.2
+Matrize baten heina
+A
+∈ R
+m×n matrizea izanik, errenkaden arteko oinarrizko eragiketen bidez A
+matrizea U matrize mailakatuan eralda daiteke Gaussen ezabapena erabiliz. U
+matrizean pibotik ez duten errenkadak nuluak direnez, matrizeak duen pibot ko-
+purua errenkada ez-nulu kopurua da.
+OpenCourseWare, UPV/EHU
+
+A.1. Matrizeak eta bektoreak
+233
+Adibidea. Har dezagun matrize hau:
+A
+=
+
+
+
+
+
+
+
+
+1 2
+3 −4 1
+1 2
+2
+5 4
+3 2 −5
+2 4
+2 0 −6
+9 7
+
+
+
+
+
+
+
+
+Gaussen ezabapena erabiliz, U matrize mailakatua lortuko da.
+A
+=
+
+
+
+
+
+
+
+
+1 2
+3 −4 1
+1 2
+2
+5 4
+3 2 −5
+2 4
+2 0 −6
+9 7
+
+
+
+
+
+
+
+
+→
+
+
+
+
+
+
+
+
+1
+2
+3 −4 1
+0
+0
+−1
+9 3
+0 −4 −14
+14 1
+0 −4 −12
+17 5
+
+
+
+
+
+
+
+
+→
+
+
+
+
+
+
+
+
+1
+2
+3 −4 1
+0 −4 −14
+14 1
+0
+0
+−1
+9 3
+0 −4 −12
+17 5
+
+
+
+
+
+
+
+
+→
+
+
+
+
+
+
+
+
+1
+2
+3 −4 1
+0 −4 −14
+14 1
+0
+0
+−1
+9 3
+0
+0
+2
+3 4
+
+
+
+
+
+
+
+
+→
+
+
+
+
+
+
+
+
+1
+2
+3 −4
+1
+0 −4 −14
+14
+1
+0
+0
+−1
+9
+3
+0
+0
+0
+21 10
+
+
+
+
+
+
+
+
+= U
+2
+A.1.1 Deﬁnizioa. Izan bitez A
+∈ R
+m×n matrizea, eta Gaussen ezabapena era-
+biliz lortutako U matrize mailakatua. U matrizearen pibot kopurua (errenkada
+ez-nuluen kopurua) A matrizearen heina dela esango dugu, eta rang A notazioaz
+adieraziko dugu.
+Aurreko adibideko A matrizearen heina 4 da, U matrizearen pibot kopuruaren
+edo errenkada ez-nuluen kopuruaren berdina.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+234
+A. Aljebra lineala eta multzo ganbilak
+A.2
+Ekuazio linealen sistemen ebazpena
+Izan bedi m ekuazio eta n ezezagun dituen
+Ax
+= b
+ekuazio-sistema, non A
+∈ R
+m×n, rang A = r eta b ∈ R m baitira. Gaussen
+ezabapena erabiliko dugu sistema ebazteko. Kasu hauek gerta daitezke:
+* rang A
+= rang (A b) bada, sistemak ez du soluziorik; bateraezina da.
+* rang A
+= rang (A b) = r bada, sistemak badu soluziorik.
+* r
+= ezezagun kopurua bada, sistemak soluzio bakarra dauka.
+* r < ezezagun kopurua bada, sistemak inﬁnitu soluzio ditu.
+Adibidea. Har dezagun ekuazio linealen sistema hau:
+2x1 − x2 + 3x3 = 2
+x1
++ x2 − x3 = 4
+3x1
++ 2x3 = 5
+Sistemak soluziorik duen edo ez erabakitzeko, A eta
+(A b) matrizeen heinak
+kalkulatu behar dira.
+A
+=
+
+
+
+
+
+2 −1
+3
+1
+1 −1
+3
+0
+2
+
+
+
+
+
+(A b) =
+
+
+
+
+
+2 −1
+3 2
+1
+1 −1 4
+3
+0
+2 5
+
+
+
+
+
+Gaussen ezabapena eginez,
+
+
+
+
+
+2 −1
+3 2
+1
+1 −1 4
+3
+0
+2 5
+
+
+
+
+
+→
+
+
+
+
+
+2 −1
+3 2
+0
+3
+2
+−
+5
+2
+3
+0
+3
+2
+−
+5
+2
+2
+
+
+
+
+
+→
+
+
+
+
+
+2 −1
+3
+2
+0
+3
+2
+−
+5
+2
+3
+0
+0
+0 −1
+
+
+
+
+
+rang A
+= 2 < 3 = rang (A b) betetzen denez, sistemak ez du soluziorik.
+2
+OpenCourseWare, UPV/EHU
+
+A.2. Ekuazio linealen sistemen ebazpena
+235
+Adibidea. Har dezagun ekuazio linealen sistema hau:
+2x1 + x2 = 3
+x1
++ x2 = 4
+Gaussen ezabapena eginez,
+
+
+2 1 3
+1 1 4
+
+
+→
+
+
+2 1 3
+0
+1
+2
+5
+2
+
+
+rang A
+= rang (A b) = 2 = ezezagun kopurua betetzen denez, sistemak soluzio
+bakarra dauka: x1
+= −1, x2 = 5.
+2
+Adibidea. Har dezagun ekuazio linealen sistema hau:
+2x1 − x2 + 3x3 = 2
+x1
++ x2 − x3 = 4
+3x1
++ 2x3 = 6
+Gaussen ezabapena eginez,
+
+
+
+
+
+2 −1
+3 2
+1
+1 −1 4
+3
+0
+2 6
+
+
+
+
+
+→
+
+
+
+
+
+2 −1
+3 2
+0
+3
+2
+−
+5
+2
+3
+0
+3
+2
+−
+5
+2
+3
+
+
+
+
+
+→
+
+
+
+
+
+2 −1
+3 2
+0
+3
+2
+−
+5
+2
+3
+0
+0
+0 0
+
+
+
+
+
+rang A
+= rang (A b) = 2 < ezezagun kopurua betetzen denez, sistemak
+inﬁnitu soluzio ditu.
+Oinarriko ezezaguntzat x1 eta x2 hartzen baditugu, ekuazio-sistema horrela
+idatz daiteke,
+2x1 − x2 = 2 − 3x3
+3
+2
+x2
+= 3 +
+5
+2
+x3
+eta sistemaren inﬁnitu soluzioak x1
+= 2 −
+2
+3 x3 eta x2 = 2 +
+5
+3 x3 dira, x3 ∈ R
+ezezagun askearen mende.
+2
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+236
+A. Aljebra lineala eta multzo ganbilak
+A.2.1
+Oinarriko soluzioak
+Har dezagun Ax
+= b ekuazio-sistema, non A ∈ R
+m×n den, m < n izanik, eta
+rang A
+= rang (A b) = m betetzen den. Zutabe guztiak linealki independenteak
+dituen m
+× m tamainako B azpimatrize bat aukeratzen badugu eta A matrizearen
+gainerako zutabeek osatzen duten azpimatrizeari N deitzen badiogu, Ax
+= b
+ekuazio-sistema honela idatz dezakegu:
+(B N)
+
+
+x
+B
+x
+N
+
+
+= b,
+edo baita honela ere:
+Bx
+B + NxN = b.
+Aurreko formulan askatuz, B matrizeari dagozkion aldagaiak (oinarriko alda-
+gaiak) N matrizeari dagozkion aldagaien (aldagai askeen) mende adieraztea lor-
+tzen da:
+Bx
+B = b − NxN .
+x
+N bektoreko aldagai askeen balioen arabera, inﬁnitu soluzio existitzen dira. Al-
+dagai aske guztiei zero balioa emanez, hau da, xN = 0 eginez, soluzio bakarra
+duen sistema hau lortzen da:
+Bx
+B = b.
+Soluzio horri oinarriko soluzio deitzen zaio.
+Adibidea. Har dezagun ekuazio linealen sistema hau:
+2x1 − x2 + 3x3 = 2
+x1
++ x2 − x3 = 4
+3x1
++ 2x3 = 6
+235. orrialdeko adibidean ekuazio-sistema hori Gaussen ezabapena erabiliz beste
+ekuazio-sistema bat bihurtu dugu:
+2x1 − x2 = 2 − 3x3
+3
+2
+x2
+= 3 +
+5
+2
+x3
+Ikusi dugun bezala, sistemak inﬁnitu soluzio ditu x3 aldagai askearen funtzioan:
+x1
+= 2 −
+2
+3 x3 eta x2 = 2 +
+5
+3 x3 . Horien artetik oinarriko soluzioa kalkulatzeko,
+x3
+= 0 egin behar da: x1 = 2, x2 = 2.
+OpenCourseWare, UPV/EHU
+
+A.3. Bektore-espazioak
+237
+A matrizean B oinarri-azpimatrize desberdinak aukera daitezke, eta horieta-
+ko bakoitzerako oinarriko soluzio bat kalkulatu, oinarriari ez dagokion aldagai
+askeari zero balioa emanez. Egon daitekeen oinarri kopuru maximoa hau da:
+
+
+n
+m
+
+
+=
+n
+!
+m
+! (n − m)!
+236. orrialdeko adibiderako, sistemak duen oinarriko soluzio kopuru maximoa
+hau da:
+
+
+3
+2
+
+
+=
+3!
+2! (3 − 2)!
+= 3
+2
+A.3
+Bektore-espazioak
+Bektore-espazioetako kontzeptu batzuk gogoratzeko,
+R
+m bektore-espazioa hartu-
+ko dugu.
+A.3.1 Deﬁnizioa. (Konbinazio lineala) Izan bitez
+R
+m bektore-espazioko v1, v2,
+. . . , vn bektoreak eta α1, . . . , αn ∈
+R eskalarrak.
+α1v1
++ α2v2 + · · · + αnvn
+moduko adierazpenari bektoreen arteko konbinazio lineala esaten zaio.
+Adibidea. Har ditzagun bi bektore hauek:
+v
+1
+=
+
+
+1
+0
+
+
+, v2
+=
+
+
+1
+−1
+
+
+1. Adierazpen hau v1 eta v2 bektoreen arteko konbinazio lineal bat da:
+2
+
+
+1
+0
+
+
++ 5
+
+
+1
+−1
+
+
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+238
+A. Aljebra lineala eta multzo ganbilak
+2. Adierazpen honek v1 eta v2 bektoreen arteko konbinazio lineal guztiak
+ematen dizkigu, α1, α2
+∈ R izanik:
+α1
+
+
+1
+0
+
+
++ α2
+
+
+1
+−1
+
+
+2
+A.3.1
+Mendekotasun eta independentzia lineala
+A.3.2 Deﬁnizioa. v1, . . . , vn ∈
+R
+m bektoreak linealki independenteak dira bal-
+din α1v1
++ · · ·+ αnvn = 0 konbinazio lineala bete dadin, aukera bakarra eskalar
+guztiak zero izatea bada, α1
+= · · · = αn = 0.
+A.3.3 Deﬁnizioa. v1, . . . , vn ∈
+R
+m bektoreak linealki mendekoak direla esaten
+da baldin α1v1
++ · · · + αnvn = 0 konbinazio lineala aurki badaiteke, gutxienez
+αi eskalar bat zeroren desberdina izanik.
+Adibidea.
+1. Har ditzagun v1, v2 bektore hauek:
+v
+1
+=
+
+
+1
+−1
+
+
+,
+v
+2
+=
+
+
+4
+−4
+
+
+Bi bektoreen konbinazio lineala zero egiten duten α1, α2 eskalarrak exis-
+titzen direnez, guztiak batera zero ez izanik, v1 eta v2 bektoreak linealki
+mendekoak dira.
+4
+
+
+1
+−1
+
+
++ (−1)
+
+
+4
+−4
+
+
+=
+
+
+0
+0
+
+
+2. Har ditzagun v1, v2, v3 bektore hauek:
+v
+1
+=
+
+
+
+
+
+1
+−1
+2
+
+
+
+
+
+, v2
+=
+
+
+
+
+
+3
+0
+−1
+
+
+
+
+
+, v3
+=
+
+
+
+
+
+9
+−3
+5
+
+
+
+
+
+OpenCourseWare, UPV/EHU
+
+A.3. Bektore-espazioak
+239
+Azter dezagun hiru bektoreen konbinazio lineala zero izateko zein balio har
+ditzaketen α1, α2 eta α3 eskalarrek.
+α1
+
+
+
+
+
+1
+−1
+2
+
+
+
+
+
++ α2
+
+
+
+
+
+3
+0
+−1
+
+
+
+
+
++ α3
+
+
+
+
+
+9
+−3
+5
+
+
+
+
+
+=
+
+
+
+
+
+0
+0
+0
+
+
+
+
+
+Gaussen ezabapena aplikatuz,
+
+
+
+
+
+1
+3
+9
+−1
+0 −3
+2 −1
+5
+
+
+
+
+
+→
+
+
+
+
+
+1
+3
+9
+0
+3
+6
+0 −7 −13
+
+
+
+
+
+→
+
+
+
+
+
+1 3 9
+0 3 6
+0 0 1
+
+
+
+
+
+Matrize horrek hiru pibot dituenez, α1
+= α2 = α3 = 0 da ekuazio-
+sistemaren soluzio bakarra. Ondorioz, v1, v2 eta v3 bektoreak linealki in-
+dependenteak dira.
+2
+A.3.2
+Oinarria eta dimentsioa
+A.3.4 Deﬁnizioa. S
+= {v1, . . . , vp} ⊆ R
+m bektore-multzoa R m espazioaren
+multzo sortzailea dela esaten da baldin v
+∈ R
+m bektore oro S multzoko bektoreen
+konbinazio lineal moduan idatz badaiteke, hau da, α1, . . . , αp ∈
+R eskalarrak
+existitzen badira, non v
+= α1v1 + · · · + αpvp beteko den.
+Adibidea. Har ditzagun
+R
+3 espazioko v1, v2, v3 eta v4 bektoreek osatzen
+duten S multzoa eta
+R
+3 espazioko edozein v bektore.
+S
+= {v1, v2, v3, v4} =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1
+−1
+1
+
+
+
+
+
+,
+
+
+
+
+
+3
+1
+0
+
+
+
+
+
+,
+
+
+
+
+
+2
+1
+1
+
+
+
+
+
+
+
+
+
+
+2
+−2
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+, v
+=
+
+
+
+
+
+v1
+v2
+v3
+
+
+
+
+
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+240
+A. Aljebra lineala eta multzo ganbilak
+Azter dezagun α1v1
++ α2v2 + α3v3 + α4v4 = v ekuazio-sistema eta ikus dezagun
+sistema betetzen duten α1, α2, α3, α4
+∈ R eskalarrak existitzen direla.
+α1
+
+
+
+
+
+1
+−1
+1
+
+
+
+
+
++ α2
+
+
+
+
+
+3
+1
+0
+
+
+
+
+
++ α3
+
+
+
+
+
+2
+1
+1
+
+
+
+
+
++ α4
+
+
+
+
+
+2
+−2
+2
+
+
+
+
+
+=
+
+
+
+
+
+v1
+v2
+v3
+
+
+
+
+
+Gaussen ezabapena erabiliz,
+
+
+
+
+
+1 3 2
+2 v1
+−1 1 1 −2 v2
+1 0 1
+2 v3
+
+
+
+
+
+→
+
+
+
+
+
+1
+3
+2 2
+v1
+0
+4
+3 0 v2 + v1
+0 −3 −1 0 v3 − v1
+
+
+
+
+
+→
+→
+
+
+
+
+
+1 3 2 2
+v1
+0 4 3 0
+v2
++ v1
+0 0
+5
+4
+0 v3 −
+1
+4 v1 +
+3
+4 v2
+
+
+
+
+
+rang A
+= rang (A b) = 3 betetzen denez, sistemak badu soluziorik, eta beraz, S
+multzo sortzailea da.
+2
+A.3.5 Deﬁnizioa. Izan bedi B
+= {v1, . . . , vm} ⊆ R
+m bektore-multzoa. R m
+bektore-espazioan B oinarria dela esaten da baldin:
+• B multzoko bektoreak linealki independenteak badira, eta
+• B multzoa R
+m espazioaren multzo sortzailea bada.
+Bektore-espazio batean oinarri desberdinak kalkula daitezke; baina, oinarri
+guztiek bektore kopuru berbera dute. Gogora dezagun bektore-espazio baten di-
+mentsioa oinarri batean dagoen bektore kopurua dela.
+Adibidea. B bektore-multzo hau
+R
+3 espazioan oinarria dela egiaztatuko du-
+gu.
+B
+= {v1, v2, v3} =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1
+2
+0
+
+
+
+
+
+,
+
+
+
+
+
+0
+1
+0
+
+
+
+
+
+,
+
+
+
+
+
+1
+1
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OpenCourseWare, UPV/EHU
+
+A.3. Bektore-espazioak
+241
+Hasteko, bektoreak linealki independenteak direla egiaztatuko dugu, hau da, α1v1
++
+α2v2
++ α3v3 = 0 ekuazio-sistemaren soluzio bakarra α1 = α2 = α3 = 0 dela.
+α1
+
+
+
+
+
+1
+2
+0
+
+
+
+
+
++ α2
+
+
+
+
+
+0
+1
+0
+
+
+
+
+
++ α3
+
+
+
+
+
+1
+1
+2
+
+
+
+
+
+=
+
+
+
+
+
+0
+0
+0
+
+
+
+
+
+Gaussen ezabapena erabiliz,
+
+
+
+
+
+1 0 1
+2 1 1
+0 0 2
+
+
+
+
+
+→
+
+
+
+
+
+1 0
+1
+0 1 −1
+0 0
+2
+
+
+
+
+
+Matrize horrek hiru pibot dituenez, α1
+= α2 = α3 = 0 soluzioa ekuazio-
+sistemaren soluzio bakarra da.
+B-ko bektoreek R
+3 espazioan multzo sortzailea osatzen dutela egiaztatzeko,
+honako sistema ebatzi behar da:
+α1
+
+
+
+
+
+1
+2
+0
+
+
+
+
+
++ α2
+
+
+
+
+
+0
+1
+0
+
+
+
+
+
++ α3
+
+
+
+
+
+1
+1
+2
+
+
+
+
+
+=
+
+
+
+
+
+v1
+v2
+v3
+
+
+
+
+
+Sistema bateragarria denez, B multzo sortzailea da. Hortaz,
+R
+3 espazioko oinarria
+da.
+2
+A.3.1 Teorema. Izan bedi
+R
+m espazioko B = {v1, . . . , vm} oinarria. Edozein
+v
+∈ R
+m bektore idatz daiteke v1, . . . , vm bektoreen konbinazio lineal moduan,
+eta konbinazio lineal horren koeﬁzienteak bakarrak dira.
+Teoreman aipatzen den konbinazio lineal bakar horren koeﬁzienteak v bekto-
+rearen koordenatuak dira B oinarrian.
+A.3.2 Teorema.
+R
+m bektore-espazioko B oinarri bat eta v ∈ R m bektore bat
+izanik, v
+∈ B eta v = 0, beti lor daiteke beste oinarri bat B-ko bektoreren bat v
+bektoreaz ordezkatuz.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+242
+A. Aljebra lineala eta multzo ganbilak
+Emaitza hori garrantzia handikoa da programazio linealaren garapenean. Hain
+zuzen ere, simplex algoritmoa oinarriko soluzio bideragarri batetik abiatzen da eta
+beste hobea batera mugituko da, aurreko teoreman dioen bezala oinarriko bektore
+bat aldatuz. Ikus dezagun adibide baten bidez zein baldintza bete behar duen B
+oinarrian ordezkatua izango den bektoreak.
+Adibidea. Har ditzagun 240. orrialdeko adibideko B oinarria eta v bektore
+bat:
+B
+= {v1, v2, v3} =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1
+2
+0
+
+
+
+
+
+,
+
+
+
+
+
+0
+1
+0
+
+
+
+
+
+,
+
+
+
+
+
+1
+1
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+,
+v
+=
+
+
+
+
+
+3
+1
+0
+
+
+
+
+
+v
+= α1v1 + α2v2 + α3v3 ekuazio-sistema ebatziz,
+
+
+
+
+
+3
+1
+0
+
+
+
+
+
+= α1
+
+
+
+
+
+1
+2
+0
+
+
+
+
+
++ α2
+
+
+
+
+
+0
+1
+0
+
+
+
+
+
++ α3
+
+
+
+
+
+1
+1
+2
+
+
+
+
+
+v bektorearen koordenatuak lortuko dira B oinarrian: α1
+= 3, α2 = −5,
+α3
+= 0. α1 = 0 eta α2 = 0 direnez, v1 eta v2 bektoreak v bektoreaz ordezkatuak
+izan daitezke bi oinarri hauek lortzeko:
+B
+′ = {v, v2, v3} , B′′ = {v1, v, v3}
+Egiazta daiteke B oinarrian v3 bektorea v bektoreaz ordezkatuz osatzen den bektore-
+multzoan mendekotasun lineala dagoela. Hori hala gertatzen da α3
+= 0 delako.
+v
+3
+bektorea ezin da ordezkatua izan oinarrian.
+2
+Hortaz, oinarri berriak lortzeko, v-ren koordenatu ez-nuluei dagozkien B oi-
+narriko bektoreak izan daitezke ordezkatuak v bektoreaz.
+A.4
+Multzo ganbilak
+Plano euklidestarra zenbaki errealen bikote ordenatuen multzoa da.
+R
+2 =
+
+
+
+
+
+x1
+x2
+
+
+,
+x1 eta x2 zenbaki errealak dira
+
+
+
+OpenCourseWare, UPV/EHU
+
+A.4. Multzo ganbilak
+243
+x1
+x2
+(3, −2)
+A.1. Irudia: Espazio euklidestarra
+R
+2 espazioa A.1. Irudian ikusten den moduan adierazten da geometrikoki.
+Irudian adierazitako puntua
+
+
+3
+−2
+
+
+bikoteari dagokio.
+a1x1
++ a2x2 = c ekuazioak, a1, a2 eta c konstanteak izanik, zuzen bat adieraz-
+ten du
+R
+2 espazioan. Adibidez, 2x1 + 3x2 = 6 ekuazioa A.2. Irudian ikus daiteke
+graﬁkoki adierazia.
+x1
+x2
+2x1 + 3x2 = 6
+2
+3
+A.2. Irudia: Zuzena planoan
+a1x1
++ a2x2 ≤ c moduko inekuazioa a1x1 + a2x2 = c zuzenean dauden pun-
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+244
+A. Aljebra lineala eta multzo ganbilak
+tuek eta zuzenaren alde batean dauden puntuek osatutako multzoa da. Adibidez,
+2x1 + 3x2 = 6 zuzenaren alde bateko puntuek 2x1 + 3x2 < 6 desberdintza be-
+tetzen dute, eta beste aldean dauden puntuek
+2x1 + 3x2 > 6 desberdintza. A.3.
+Irudian margotuta adierazten da
+2x1 + 3x2 ≤ 6 inekuazioak adierazitako puntuen
+multzoa.
+x1
+x2
+2x1 + 3x2 ≤ 6
+A.3. Irudia: Inekuazioa planoan
+a1x1
++ a2x2 ≤ c edo a1x1 + a2x2 ≥ c moduko desberdintzak betetzen
+dituzten puntuen multzoari
+R
+2 espazioko planoerdi itxia esaten zaio, a1 edo a2
+konstanteetako bat gutxienez zeroren desberdina izanik.
+Hiru dimentsioko espazio euklidestarra hirukote ordenatuen multzoa da.
+R
+3 =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+x1
+x2
+x3
+
+
+
+
+
+,
+x1, x2 eta x3 zenbaki errealak izanik
+
+
+
+
+
+
+
+
+
+R
+3 espazioan a1x1 + a2x2 + a3x3 = c ekuazioak, non a1, a2, a3 eta c kons-
+tanteak diren, plano bat adierazten du. Adibidez,
+3x1 − x2 + 4x3 = 6 ekuazioa
+plano bat da.
+a1x1
++ a2x2 + a3x3 ≤ c edo a1x1 + a2x2 + a3x3 ≥ c moduko desberdintzak
+betetzen dituzten puntuen multzoek
+R
+3 espazioan espazioerdi itxia osatzen dute.
+OpenCourseWare, UPV/EHU
+
+A.4. Multzo ganbilak
+245
+Ideia hauek n dimentsioko espazio euklidestarrera orokor daitezke.
+R
+n =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+x1
+x2
+..
+.
+xn
+
+
+
+
+
+
+
+
+,
+x1, x2, . . . xn zenbaki errealak izanik
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R
+n espazioan a1, . . . , an eta c konstanteak dituen a1x1 +a2x2 +· · ·+anxn = c
+ekuazioak hiperplano bat adierazten du.
+R
+n espazioan a1x1 + a2x2 + · · · + anxn ≤ c desberdintza betetzen duten
+puntuen multzoa edo a1x1
++a2x2 +· · ·+anxn ≥ c desberdintza betetzen dutenena
+espazioerdi itxiak dira.
+A.4.1 Deﬁnizioa.
+R
+n espazioko C azpimultzoa multzo ganbila da baldin multzo
+hutsa bada, multzoak puntu bakarra badu edo multzoko edozein bi puntutarako bi
+puntuak lotzen dituen segmentua multzoaren barnean badago.
+A.4. Irudian ikus daiteke
+(a), (b) eta (c) multzo ganbilak direla, baina (d) multzoa
+ez.
+(a)
+(b)
+(c)
+(d)
+A.4. Irudia: Multzo ganbilak
+(a), (b), (c). Ez-ganbila (d)
+Ondoko emaitzak froga daitezke:
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+246
+A. Aljebra lineala eta multzo ganbilak
+• Hiperplanoa multzo ganbila da.
+• Espazioerdi itxia multzo ganbila da.
+• Multzo ganbilen kopuru ﬁnituaren arteko ebakidura multzo ganbila da.
+Eredu linealen azterketan agertzen diren soluzio-multzoak hiperplanoak, espa-
+zioerdi itxiak eta beraien arteko ebaki-
+multzoak dira; ikusitako ondorioen arabera,
+guztiak dira multzo ganbilak.
+A.5
+Mutur-puntuak eta oinarriko soluzio bideraga-
+rriak
+Inekuazio linealen multzo bat ekuazio linealen multzo bihur daiteke inekuazioe-
+tan aldagaiak gehituz. Inekuazio-sistema bat ekuazio-
+sistema bihurtuz, inekuazio-
+sistemaren mutur-puntuen eta ekuazio-sistemaren oinarriko soluzioen artean da-
+goen erlazioa ikusiko dugu adibide baten bidez, beti ere aldagaiak zero baino han-
+diagoak edo berdinak diren balioak hartzera murriztuta badaude.
+Har dezagun inekuazio linealen sistema hau, x1
+≥ 0 eta x2 ≥ 0 izanik:
+−x1 + 4x2 ≤ 4
+x1
+− x2 ≤ 3
+O
+A
+B
+C
+x1
+x2
+−x1 + 4x2 = 4
+x1
+− x2 = 3
+A.5. Irudia: Multzo ganbila eta mutur-puntuak
+OpenCourseWare, UPV/EHU
+
+A.5. Mutur-puntuak eta oinarriko soluzio bideragarriak
+247
+A.5. Irudian adierazten dira bi inekuazioak betetzen dituzten x1
+≥ 0 eta x2 ≥
+0 aldagaietarako balioak. Ikus daiteke lau espazioerdi itxi horien arteko ebakidura
+multzo ganbil itxia dela, poligono bat kasu honetan. Poligonoak erpin kopuru
+ﬁnitua du; multzoaren mutur-puntuak dira.
+O puntua koordenatu-ardatzen jatorria da. A puntua
+−x1 +4x2 = 4 zuzenaren
+eta ordenatu-ardatzaren arteko ebaki-puntua da.
+−x1 + 4x2 = 4 zuzenaren eta
+x1
+−x2 = 3 zuzenaren arteko ebaki-puntua B da. C puntua x1 −x2 = 3 zuzenaren
+eta abzisa-ardatzaren arteko ebaki-puntua da.
+O
+=
+
+
+0
+0
+
+
+,
+A
+=
+
+
+0
+1
+
+
+,
+B
+=
+
+
+16
+3
+7
+3
+
+
+,
+C
+=
+
+
+3
+0
+
+
+Adibidean bi dimentsioko espazio euklidestarrean gertatu den moduan, hiru
+dimentsioko espazio euklidestarrean ere espazioerdi itxien kopuru ﬁnituaren arte-
+ko ebaki-
+multzoa multzo ganbila da, hau da, edo multzo hutsa da, edo puntu baka-
+rra duen multzoa da edo mutur-puntu kopuru ﬁnitua duen poliedroa da. Oro har,
+plano euklidestarrean espazioerdi itxien kopuru ﬁnituaren arteko ebaki-multzoa
+multzo ganbila da, hau da, edo multzo hutsa da, edo puntu bakarra duen multzoa
+da edo mutur-puntu kopuru ﬁnitua duen politopoa da.
+Bi inekuazioak ekuazio bihurtuko ditugu x3 eta x4 aldagai ez-negatiboak gehi-
+tuz. Honako sistema lortuko da, x1, x2, x3, x4
+≥ 0 izanik:
+−x1 + 4x2 + x3
+= 4
+x1
+− x2
++ x4 = 3
+Ekuazio-sistema horrek inﬁnitu soluzio ditu, inekuazio-sistemak dituen soluzio
+berberak. Oinarriko soluzioak kalkula ditzakegu, eta soluzioen artean osagaiak
+zero baino handiagoak edo berdinak dituztenak aukeratu. Ikusiko dugunez, horiek
+dira A.5. Irudiko soluzioen poligonoaren mutur-puntuak.
+1. Ekuazio-sistemaren matrizearen lehenengo eta bigarren zutabeak aukeratu-
+ko ditugu. Zutabe horiek linealki independenteak dira. x3
+= x4 = 0 egin
+eta honako sistema lortuko dugu:
+−x1 + 4x2 = 4
+x1
+− x2 = 3
+Sistemaren soluzioa x1
+=
+16
+3
+eta x2
+=
+7
+3 da, eta graﬁkoko B mutur-puntuari
+dagokio (ikus A.5. Irudia).
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala
+
+248
+A. Aljebra lineala eta multzo ganbilak
+2. Ekuazio-sistemaren matrizearen lehenengo eta hirugarren zutabeak aukera-
+tuko ditugu. Zutabe horiek linealki independenteak dira. x2
+= x4 = 0 egin
+eta honako sistema lortuko dugu:
+−x1 + x3 = 4
+x1
+= 3
+Sistemaren soluzioa x1
+= 3 eta x3 = 7 da, eta graﬁkoko C mutur-puntuari
+dagokio (ikus A.5. Irudia).
+3. Ekuazio-sistemaren matrizearen lehenengo eta laugarren zutabeak aukera-
+tuko ditugu. Zutabe horiek linealki independenteak dira. x2
+= x3 = 0 egin
+eta honako sistema lortuko dugu:
+−x1
+= 4
+x1
++ x4 = 3
+Sistemaren soluzioa x1
+= −4 eta x4 = 7 da, eta ez dagokio soluzioen
+poligonoaren mutur-puntu bati, soluzioak osagai negatibo bat duelako.
+4. Ekuazio-sistemaren matrizearen bigarren eta hirugarren zutabeak aukeratu-
+ko ditugu. Zutabe horiek linealki independenteak dira. x1
+= x4 = 0 egin
+eta honako sistema lortuko dugu:
+4x2 + x3 = 4
+−x2
+= 3
+Sistemaren soluzioa x2
+= −3 eta x3 = 16 da, eta ez dagokio soluzioen
+poligonoaren mutur-puntu bati, soluzioak osagai negatibo bat duelako.
+5. Ekuazio-sistemaren matrizearen bigarren eta laugarren zutabeak aukeratuko
+ditugu. Zutabe horiek linealki independenteak dira. x1
+= x3 = 0 egin eta
+honako sistema lortuko dugu:
+4x2
+= 4
+−x2 + x4 = 3
+OpenCourseWare, UPV/EHU
+
+A.5. Mutur-puntuak eta oinarriko soluzio bideragarriak
+249
+Sistemaren soluzioa x2
+= 1 eta x4 = 4 da, eta graﬁkoko A mutur-puntuari
+dagokio (ikus A.5. Irudia).
+6. Ekuazio-sistemaren matrizearen hirugarren eta laugarren zutabeak aukera-
+tuko ditugu. Zutabe horiek linealki independenteak dira. x1
+= x2 = 0 egin
+eta honako sistema lortuko dugu:
+x3
+= 4
+x4
+= 3
+Sistemaren soluzioa x3
+= 4 eta x4 = 3 da, eta graﬁkoko O mutur-puntuari
+dagokio (ikus A.5. Irudia).
+2
+Aldagaiak zero baino handiagoak edo berdinak dituzten espazioerdi itxien ar-
+teko ebakidura den multzo ganbilaren mutur-puntuen kalkulua orokor daiteke di-
+mentsioa bi baino handiagoa duten espazioetara. Horrela mutur-puntuak kalkulatu
+ahal izango dira espazioerdiak graﬁkoki irudikatu gabe.
+Ikastaroa: Ikerkuntza Operatiboa. Programazio Lineala

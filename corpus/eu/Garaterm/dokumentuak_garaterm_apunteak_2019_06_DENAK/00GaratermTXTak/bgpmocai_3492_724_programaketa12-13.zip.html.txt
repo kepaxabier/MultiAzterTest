@@ -1,0 +1,341 @@
+
+
+
+
+Kurbak eta Gainazalak
+                             Kurbak eta Gainazalak
+                         Javier Gutiérrez, Josu Arroyo
+                                   02/05/15
+Gaien Aurkibidea
+
+1 Kurbak espazio euklidearrean
+1.1 Kurba parametriko erregularrak
+Definizioa 1 (Kurba parametrikoa)Izan bitez I⊆R tarte irekia eta apli­kazioa.
+i∈{1,…,n} guztietarako idatziko dugu. Ondorioz, t∈I guztietarako:
+(I tarte irekia bornatua zein ez-bornatua izan daiteke).
+α -n definitutakokurba pa­ra­me­tri­koadela esango dugu baldin eta bere
+deribatu guztiak (α', α'', α''', …) existitzen badira.
+azpimultzoarikurbaren aztarnaedokurba geo­me­trikoaderitzo.
+Oharrak 2(1) I tarte irekian a=−∞ edota b=+∞ ere izan daitezke.
+(2) Kurba geometriko batek parametrizazio bat baino gehiago izan ditzake.
+Kurba pa­ra­me­tri­koa partikula baten mugimendua bezala pentsatzen dugu­nean
+guztiz logikoa da partikularen abiaduran pentsatzea. Beraz defini­zio hau
+izango genuke:
+Definizioa 3 (Abiadura) Izan bedi kurba pa­ra­me­tri­koa non t∈I bakoi­tzeko
+den. Orduan aplikazioa non den α kurbarenabiadura aplikazioada.
+bektorea α kurbarenabiadura bektoreadela esango dugu. Batzuetan idatziko dugu.
+Modu berean bektorearen luzera, , α kurbarenabiaduraizango da.
+          [Sorry. Ignored \begin{tikzpicture} ... \end{tikzpicture}]
+Definizioa 4 (Kurba erregularra) Izan bedi kurba parametrikoa. α(t) kurbaren
+puntuaerregularradela esango dugu baldin eta abiadura bektorea ez nulua bada,
+hau da, bada. Bestela puntusingularradela esango dugu.
+Kurbaerre­gu­larradela esango dugu baldin eta bere puntu guztiak erregularrak
+badira. Argi denez kurba erre­gu­larra da baldin eta soilik baldin t∈I
+guztietarako abiadura ez nulua bada, hau da, |α'(t)|≠0 bada.
+α kurba erregularra bada eta t∈I guztietarako |α'(t)|=1 bada, orduan
+kurbaabiadura unitariodunadela esango dugu.
+Oharra 5 Gerta daiteke kurba geometriko baten parametrizazioen artean ba­tzuk
+erregularrak izatea eta beste batzuk ez. Adibidez goian aipatutako adibidean:
+α'(t)={1,1}≠0 denez, t∈R guztietarako, α kurba erregularra da, baina γ'(0)=
+{0,0}=0 eta ondorioz γ ez da erregularra.
+Notazioa. 6 Kurba parametrikoa abiadura unitarioduna denean, parametroa
+a­die­razteko t-ren ordez s idatziko dugu.
+Definizioa 7 (Bektore eta zuzen ukitzaileak) Izan bitez kurba parametrikoa eta
+non puntu erregularra den. bektore unitarioaribektore uki­tzai­leaderitzo.
+α-renzuzen ukitzaileadeneko puntuan puntutik igarotzen den bektorearen
+norabidea duen zuzena da, hau da:
+          [Sorry. Ignored \begin{tikzpicture} ... \end{tikzpicture}]
+ 1.2 Berparametrizazioak
+Definizioa 8 (Difeomorfismoa)Izan bitez I,J⊆R tarteak eta h: J⟶I aplikazioa. h
+bijektiboa bada eta biak h eta dife­ren­tziagarriak badira,difeomor­fismoadela
+esango dugu. (Batzuetanparametroaren aldaketaere erabiliko dugu).
+Proposizioa 9Izan bedi h: J⟶I aplikazio bijektiboa dife­ren­tziagarria. h
+difeomorfismoa da baldin eta soilik baldin r∈J guztietarako h'(r)>0 edo h'(r)<0
+bada.
+                 [Sorry. Ignored\begin{proof} ... \end{proof}]
+Definizioa 10 (Berparametrizazioa)Izan bitez kurba para­me­trikoa eta h: J⟶I
+difeomorfismoa. Orduan α-renber­pa­ra­me­tri­za­zioadela esango dugu.
+r∈J guztietarako h'(r)>0 bada, orduan ber­pa­ra­me­tri­za­zioapositiboadela
+esango dugu, bestelanegatiboaizango da.
+Oharrak 11(1) Argi dago h difeomorfismoa bada, orduan ere difeomorfismoa dela.
+Beraz β α-ren berparametriza­zioa da baldin eta soilik baldin α β-ren
+berparametriza­zioa bada. Are gehiago, β α-ren berparametriza­zio positiboa
+(negatiboa) da baldin eta soilik baldin α β-ren berparametriza­zioa positiboa
+(negatiboa) bada
+(2) β α-ren berparametriza­zioa bada, orduan bi kurba parametrikoen kurba
+geometrikoa berdina da (β(J)=α(h(J))=α(I) delako).
+          [Sorry. Ignored \begin{tikzpicture} ... \end{tikzpicture}]
+Hurrengo pausua bi kurben abiaduren arteko erlazioa aztertzea izango da.
+Horretarako R-tik R-rako aplikazioen konposaketaren katearen erregela erabiliko
+dugu ondoko emaitza frogatzeko:
+Proposizioa 12 (Katearen erregela kurbetarako) Izan bitez kurba erregularra eta
+α-ren berparametriza­zioa. Or­duan β'(r)=α'(h(r))⋅h'(r), r∈J guztietarako.
+Ondorioak 13 β α-ren berparametriza­zioa bada, orduan:
+(1)α erregularra bada, β ere erregularra izango da.
+(2)Bi kurben abiadura bektoreak proportzionalak dira; ber­pa­ra­me­tri­za­zioa
+po­si­ti­boa bada zentzu berekoak dira, eta negatiboa bada, zentzu kontrakoak.
+Honen interpretazio geometrikoa zera da: kurba bakoitzak partikula baten
+mugimendua adierazten du eta beraien mugimenduak zentzu berekoak edo kontrakoak
+dira zeinuaren ber­pa­ra­me­tri­za­zioaren arabera.
+(3)α erregularra bada eta ber­pa­ra­me­tri­za­zioa posi­ti­boa bada, orduan bi
+kurben bektore u­ki­tzaileak berdinak dira. Berparametrizazioa nega­ti­boa
+bada, or­duan biga­rren kurbaren bektore u­ki­tzailea lehenengoaren kontrakoa
+da.
+( eta badira, orduan:
+(4)Aurrekoaren ondorioz, argi dago α erregularra bada eta β bere
+berpa­ra­me­tri­zazioa, orduan bi kurben zuzen u­ki­tzaileak berdinak dira.
+Definizioa 14 Kurba geometriko baten ezaugarri bat parametrizazio ezberdinekin
+aldatzen ez deneaninbariante geometrikoadela esango dugu.
+Kurba erregular baten abia­dura bektorea parame­tri­zazioaren menpekoa da baina
+zuzen ukitzailea aldiz ez. Beraz zuzen ukitzailea inbariante geometrikoa da.
+1.2.1 Kurba baten luzera eta arku-luzera parametroa
+Definizioa 15 (Kurba-segmentua)Izan bitez kurba pa­ra­me­triko erregularra eta
+[a,b]⊆I. murrizketa α-renkurba-segmentua(edoarkua) dela esango dugu.
+Definizioa 16 (Kurba-segmentu baten luzera)Izan bitez kurba pa­ra­me­triko
+erregularra eta [a,b]⊆I. kurba-segmentuarenluzeraondoko mo­duan definitzen da:
+Izan bitez kurba erregularra eta . Defini dezagun g aplikazioa I tartean ondoko
+moduan:
+g jarraikia denez (diferentziagarria delako), I tartearen irudia beste tarte
+ireki bat izango da. Beraz g: I⟶J moduko aplikazioa izango dugu non eta diren.
+Definizioa 17 Izan bitez kurba erregularra eta . α-renarku-luzera aplikazioa(-
+n hasita) g: I⟶R ondoko moduan definitzen da:
+s=g(t) α-renarku-luzera parametroadela esango dugu.
+Proposizioa 18 Arku-luzera aplikazioa, g: I⟶J=g(I), difeomorfismoa da.
+                [Sorry. Ignored \begin{proof} ... \end{proof}]
+g α-ren arku-luzera aplikazioa bada, aurreko proposizioaren ondorioz, α-ren
+berparametrizazio bat definitu ahal izango dugu: β=α∘h ( izanik). Hau egiten
+dugunean kurba arku-luzeraren bitartez parametrizatuta dagoela esango dugu.
+Batzuetan, β ber­pa­ra­me­tri­za­zioa α-ren berparametrizazio naturala dela
+esaten da.
+Aurreko moduan definitutako β berpa­ra­me­tri­za­zioa abiadura unitarioduna da,
+hau da, puntu guztietan abiadura bektorea unitarioa da eta ondorioz abia­dura
+bektorea eta bektore u­ki­tzailea bat datoz.
+Izan ere, β=α∘h bada non eta diren t∈I guztietarako, orduan:
+Beraz β'(s) bektore unitarioa da.
+Aurrekoan frogatutako emaitzak ondoko teoreman enuntziatu ahal izango ditugu:
+Teorema 1.19 Izan bitez kurba erregularra, , , g: I⟶g(I)=J eta . Orduan:
+[(1)]
+1. β=α∘h α-ren berparametrizazio abiadura unitarioduna da.
+2. g'(t)=|α'(t)|>0, ∀t∈I.
+3. .
+4. .
+Hemendik aurrera, behar izatekotan, badakigu edozein kurba erregular arku-
+luzera parametroaren bitartez parametrizatuta erabil dezakegula.
+Normalean, kurbaren parametroa adierazteko s ikurra erabiliko dugu bakarrik
+arku-luzera parametroa denean, bestela t erabiliko dugu.
+Egia esateko, nahiz eta teorian arku-luzera parametroaren bitarteko
+para­me­tri­zazioa beti existitzen den, kalkulatzea praktikan oso zaila izan
+daiteke.
+Lehenengo arazoa integrala kalkulatzerakoan agertuko zaigu. Ger­ta daiteke
+jatorrizkoa oinarrizko funtzioen bitartez idaztea ezinezkoa izatea.
+Adibidea 20 Izan bedi α(t)=(2cost,sint) elipsea. Orduan:
+Baina integral eliptikoa da.
+Bigarren arazoa integrala kalkulatzeko kapazak bagara ere, arku-luzera
+fun­tzioa­ren alderantzizkoa kalkulatzea ezinezkoa gerta daiteke.
+Adibidea 21 Izan bedi parabola. Orduan:
+               [Sorry. Ignored\begin{gather*} ... \end{gather*}]
+Baina ekuazio honetatik t=g(s) alderantzizko funtzioa kalkulatzea ezinezkoa
+(edo izugarri zaila) da.
+Oharra 22 Arku-luzeraren bidezko ber­pa­ra­me­tri­za­zioa ez da bakarra, -ren
+menpekoa delako. Beraz, guztiz zehatzak izateko , , eta idatzi beharko genuke.
+Hala ere, era honetako berparametrizazio guztiak hertsiki erlazionatuta daude.
+Izan ere, bada, orduan
+Beraz t∈I guztietarako izango genuke K∈R konstantea izanik. Ondorioz eta β(s)=α
+(s−K), guztietarako.
+1.3 Kurbak -n
+1.3.1 Birpasaketa: Biderkaketa bektoriala eta mistoa
+Biderkaketa bektoriala. Izan bitez
+                                     60110
+                                   .8 30 60
+           [Sorry. Ignored\begin{tikzpicture} ... \end{tikzpicture}]
+Propietateak. Izan bitez eta .
+[(1)]
+1. ⃗i×⃗j=⃗k, ⃗j×⃗k=⃗i eta ⃗k×⃗i=⃗j.
+2. . Ondorioz ⃗u×⃗u=⃗0.
+3. .
+4. ⃗u×⃗v=⃗0 baldin eta soilik baldin ⃗u∥⃗v bada.
+5. eta .
+6. ⃗u eta ⃗v perpendikularrak badira, orduan |⃗u×⃗v|=|⃗u||⃗v|.
+Biderkaketa mistoa. Izan bitez
+          [Sorry. Ignored \begin{tikzpicture} ... \end{tikzpicture}]
+Propietateak:
+[(1)]
+1. [⃗u,⃗v,⃗w]=[⃗w,⃗u,⃗v]=[⃗v,⃗u,⃗w];
+2. [⃗u,⃗v,⃗w]=0 baldin eta soilik baldin ⃗u, ⃗v eta ⃗w linealki dependenteak
+badira.
+Proposizioa 23 Izan bitez difierentziagarriak, f⋅g: I⟶R eta non (f⋅g)(t)=f(t)⋅g
+(t) eta (f×g)(t)=f(t)×g(t) diren t∈I guztietarako. Orduan f⋅g eta f×g ere
+diferentziarriak dira eta
+(f⋅g)'(t)=f'(t)⋅g(t)+f(t)⋅g'(t) eta (f×g)'(t)=f'(t)×g(t)+f(t)×g'(t)
+t∈I guztietarako.
+ 1.3.2 Kurba abiadura unitariodunen Frenet-en triedroa. Kurbadura eta
+bihurdura.
+Oharra 24Atal honetan kurba abiadura unitarioduna eta dela suposatuko dugu.
+Definizioa 25Izan bedi kurba abiadura unitarioduna. α kurbarenkurba­du­raondoko
+moduan definituko dugu:
+Frenet-en triedroa.
+s∈I guztietarako α'(s)⋅α'(s)=1 denez, α'(s)⋅α''(s)=0 dela izango dugu. Beraz, κ
+(s)=|α''(s)| ezberdin 0 bada, orduan α'(s) eta α''(s) perpendikularrak dira eta
+α kurbaren bektore normala α(s) puntan modu honetan defini dezakegu:
+Argi denez, bektorea unitarioa da eta bektorearekin perpendikularra da.
+Bestalde, κ(s) ezberdin 0 bada,
+bektorea ere unitarioa da eta eta bektoreekin perpendikularra da. bektore
+unitarioari bektore binormala deritzo.
+hirukotea espazio bektorialaren oinarri ortonormala. Hirukote honi Frenet-en
+triedroa deritzo.
+Oinarriaren orientazioa positiboa da (oinarri kanonikoaren berdina), hau da
+Bestalde, s∈I bakoitzeko α(s) puntutik igarotzen diren hiru zuzen eta plano
+izango ditugu:
+•Zuzen ukitzailea: α(s) puntuak eta bektoreak zehaztutakoa.
+•Zuzen normal nagusia. α(s) puntuak eta bektoreak zehaztutakoa.
+•Zuzen binormala. α(s) puntuak eta bektoreak zehaztutakoa.
+•Plano oskulatzailea (edo ukitzailea). α(s) puntuak eta eta bektoreek
+zehaztutakoa.
+•Plano normala. α(s) puntuak eta eta bektoreek zehaztutakoa.
+•Plano errektifikatzailea. α(s) puntuak eta eta bektoreek zehaztutakoa.
+Bihurdura.
+Demagun κ(s)≠0 dela s∈I guztietarako. diferentziagarria denez,
+izango dugu. Beraz . Bestalde, denez, eta ondorioz dela ondoriozta dezakegu,
+hau da, .
+Definizioa 26 Izan bedi kurba abiadura unitarioduna non den s∈I guztietarako. α
+kurbarenbihurduraondoko moduan definituko dugu:
+Beraz , s∈I guztietarako.
+Proposizioa 27 Izan bedi kurba abiadura unitarioduna. Orduan α zuzen baten
+arkua da baldin eta soilik baldin bada s∈I guztietarako.
+                [Sorry. Ignored \begin{proof} ... \end{proof}]
+Proposizioa 28 Izan bedi kurba abiadura unitarioduna non den s∈I guztietarako.
+Orduan
+Proposizioa 29 Izan bedi kurba abiadura unitarioduna non den s∈I guztietarako.
+α kurba laua da (plano baten parte da) baldin eta soilik baldin bada s∈I
+guztietarako.
+                [Sorry. Ignored \begin{proof} ... \end{proof}]
+Adibidea 30 (Helize zirkularra) Izan bitez r>0, h∈R eta kurba parametrikoa non
+den.
+           [Sorry. Ignored\begin{tikzpicture} ... \end{tikzpicture}]
+Orduan
+Frenet-en formulak.
+Aurreko kalkuluen ondorioz, baditugu bi formula hauek:
+Bestalde ere diferentziagarria denez,
+Laburbilduz,
+Teorema 1.31 (Frenet-en formulak) Izan bedi kurba abiadura unitarioduna non den
+s∈I guztietarako, orduan
+)= \b ( \a \ac \co3 ( 0,κ\s\do5(
+α)(s),0,
+-κ\s\do5(α)(s),0,τ\s\do5(α)(s),
+0,-τ\s\do5(α)(s),0 )) \b ( \a \ac \co3 (T\s\do5(α)(s),
+N\s\do5(α)(s),
+B\s\do5(α)(s) ))∀s∈I.
+                    )’= \b ( \a \ac \co3 ( 0,κ\s\do5(α),0,
+                           -κ\s\do5(α),0,τ\s\do5(α),
+               0,-τ\s\do5(α),0 )) \b ( \a \ac \co3 (T\s\do5(α),
+                                  N\s\do5(α),
+                                 B\s\do5(α)))
+1.3.3 Kurba erregularren Frenet-en triedroa. Kurbadura eta bihurdura.
+Kasu orokorrean, kurba erregularra denean, badakigu beti berparametrizatu ahal
+izango dugula arku-luzeraren bidez eta ber­pa­ra­me­tri­za­zioa abiadura
+unitarioduna dela. Izan bitez kurba erregularra, , , g: I⟶g(I)=J, eta β=α∘h α-
+ren berparametrizazio naturala. Berparametrizazioa positiboa denez, izango dugu
+t∈I guztietarako. Bestalde:
+Definizioa 32 Izan bitez kurba erregularra, g: I⟶g(I)=J, eta α-ren
+berparametrizazio naturala. α kurbarenkurba­du­raondoko moduan definituko dugu:
+t∈I guztietarako.
+Bestalde, bada t∈I guztietarako kurbarenbektore normala,bektore
+binormalaetabihurduraondoko moduan definituko ditugu:
+t∈I guztietarako.
+Definizioaren ondorioz, Frenet-en formulen orokorpena berehalakoa da, izan ere,
+Teorema 1.33 (Frenet-en formulak)Izan bedi kurba erregularra non den t∈I
+guztietarako, orduan
+)=—α’(t)— \b ( \a \ac \co3 ( 0,κ\s\do5(
+α)(t),0,
+-κ\s\do5(α)(t),0,τ\s\do5(α)(t),
+0,-τ\s\do5(α)(t),0 )) \b ( \a \ac \co3 (T\s\do5(α)(t),
+N\s\do5(α)(t),
+B\s\do5(α)(t) ))∀t∈I.
+                  )’=—α’— \b ( \a \ac \co3 ( 0,κ\s\do5(α),0,
+                           -κ\s\do5(α),0,τ\s\do5(α),
+               0,-τ\s\do5(α),0 )) \b ( \a \ac \co3 (T\s\do5(α),
+                                  N\s\do5(α),
+                                 B\s\do5(α)))
+Aurreko definizioaren arazoa zera da, nahiz eta berparametrizazio naturala beti
+existitzen den, askotan ezin izango dugu kalkulatu. Horrexegatik praktikan
+beste modu honetan erabiliko dugu:
+Proposizioa 34 Izan bedi kurba erregularra. Orduan:
+[(1)]
+1.
+2.
+Bestalde, bada t∈I guztietarako
+[(3)]
+(3)
+(4)
+(5)
+                [Sorry. Ignored \begin{proof} ... \end{proof}]
+
+
+height 0.5cm depth 0.25cmα abiadura unitariodunaα erregularra
+height 1cm height 0.75cm
+height 1.0cm depth 0.75cm
+height 0.5cm depth 0.25cm denean:                denean:
+height 1.0cm height 0.75cm                        
+height 1.0cm height 0.75cm
+height 1.0cm depth 0.75cm
+
+1.4 Espazioko kurben Teorema Nagusia
+1.4.1 Birpasaketa: Mugimendu zurrunak
+Definizioa 35 (Aplikazio afina)Izan bedi aplikazioa.Maplikazio afinada baldin
+eta
+M(p)=Ap+b
+bada guztietarako.
+(Isometria).Izan bedi aplikazio afina.Misometria afinada baldin eta
+bada guztietarako.Misometria bada orduan A matrize ortogonala da () etadetA=±1.
+(Espazioko mugimendu zurruna).Izan bedi isometria afina.M-renmugimendu
+zurrunadela diogu baldin etadetA=1 bada.
+Oharra 36mugimendu zurruna da baldin eta soilik baldin translazio bat eta
+jatorriaren inguruko biraketa baten konposaketa bada, hau da, etaO={⃗u,⃗v,⃗w}
+oinarri ortonormala positiboki orientatuta existitzen badira non den ( biraketa
+oinarri kanonikoaren bektoreakOoinarriaren bektoreetara eramaten dituena
+izanik). Matrizialki,
+p+b.
+          [Sorry. Ignored \begin{tikzpicture} ... \end{tikzpicture}]
+          [Sorry. Ignored \begin{tikzpicture} ... \end{tikzpicture}]
+ 1.4.2 Teorema Nagusia
+Lema 37Izan bitez isometria afina, kurba abiadura unitarioduna, eta . DemagunM
+(p)=Ap+b dela, eta A matrize ortogonala izanik. Orduan
+Beraz,Mmugimendu zurruna bada, orduan
+Teorema 1.38 (Espazioko kurben Teorema Nagusia)Existentzia:
+Izan bitez f,g: I→R funtzio jarraikiak non f(s)>0 den s∈I guztietarako. Orduan
+kurba abiadura unitarioduna existitzen da non
+diren s∈I guztietarako.
+Bakartasuna:
+Demagun beste kurba abiadura unitarioduna dela non eta diren s∈I guztietarako.
+Orduan mugimendu zurruna existitzen da non
+̃α(s)=M∘α(s)
+den s∈I guztietarako.
+                 [Sorry. Ignored\begin{proof} ... \end{proof}]
+Korolarioa 39Izan bitez f,g: I→R funtzio jarraikiak non f(s)>0 den s∈I
+guztietarako, eta -ren oinarria positiboki orientatuta. Orduan kurba abiadura
+unitariodun bakar bat existitzen da non
+diren s∈I guztietarako eta , eta izanik.
+Korolarioa 40Izan bedi kurba abiadura unitarioduna non eta konstanteak diren
+s∈I guztietarako. Orduan
+[(1)]
+1. bada, orduan α zirkunferentzia baten arkua da.
+2. bada, orduan α helize zirkular baten arkua da.
+1.5 Helize orokortuak
+Definizioa 41Izan bedi kurba abiadura unitarioduna. αhelize orokortuadela
+esango dugu baldin eta⃗u bektore unitarioa existitzen bada kurbaren zuzen
+normal guztiekin ortogonala dena.⃗u bektorea helizearenardatzadela esango dugu.
+Adibideak 42(1) Kurba lauak helize orokortuak dira. (⃗n planoaren bektore
+normal unitarioa bada orduan konstantea da, beraz helizearen ardatza planoaren
+bektore normal unitarioa da.
+(2) Helize zirkularrak helize orokortuak dira.
+bada, orduan izango da. Beraz .
+          [Sorry. Ignored \begin{tikzpicture} ... \end{tikzpicture}]
+Teorema 1.43 (Lancret) Izan bedi kurba abiadura unitarioduna non den s∈I
+guztietarako. Orduan α helize orokortua da baldin eta soilik baldin konstantea
+bada.
+                [Sorry. Ignored \begin{proof} ... \end{proof}]
+Adibidea 44 Izan bedi ekuazioetako kurba geometrikoa.Frogatu kurbaren
+ukitzaileek angelu konstantea osatzen dutela norabide finko batekin. Aurkitu
+angelu eta norabide horiek.Parametrizazioa:
+, beraz eta .
+2014-15 ikasturtea

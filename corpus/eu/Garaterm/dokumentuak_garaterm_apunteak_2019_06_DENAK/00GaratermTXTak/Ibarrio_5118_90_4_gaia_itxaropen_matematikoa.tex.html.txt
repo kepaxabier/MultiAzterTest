@@ -1,0 +1,131 @@
+
+
+
+
+Kapitulua
+****** 4. Gaia: Itxaropen Matematikoa ******
+***** 4.1 Definizioa *****
+Probabilitate legeak, zorizko aldagaiaren jokabidea zeharo determinatzen du.
+Baina aplikazioetan, balio guztien probabilitatea ezagutzea ezinezkoa edo zaila
+gerta daiteke. Beraz, zorizko aldagaia zenbait parametroen bidez
+karakterizatzea baliagarria da. Hauetariko parametro bat aldagaiaren
+zentralizazio neurria edo grabitate zentroa adierazten duena da.
+**** Definizioa ****
+Demagun X zorizko aldagai diskretua dela non . Orduan, X-ren batezbestekoa edo
+itxaropen matematikoaren definizioa hauxe da:
+Serie hau finitua izateko ondoko baldintzetako bat bete behar du:
+•
+•
+Seriea absolutuki konbergentea da. Hots,
+**** Oharra ****
+X aldagaiaren itxaropena, beraren n baliotako laginaren batezbestekoaren
+limitetzat, n-k ∞-rantz jotzen duenean har daiteke.
+**** Definizioa ****
+Biz X f dentsitate funtzioa duen zorizko aldagai jarraikia. Orduan, X-ren
+batezbestekoa edo itxaropen matematikoa ondokoa da:
+suposatuz dela.
+***** 4.2 Itxaropenaren Adibideak (Zorizko Aldagai Diskretua) *****
+1.X≡k(Konstantea)
+2.X:Bin(1,p)pparametroko Bernoulliren banaketa
+3.X:Bin(n,p)
+4. (n puntutan uniformea)
+5.X:pparametroko banaketa geometrikoa
+6.X:BN(n,p)p∈(0,1) (Ariketa)
+
+
+7.X:℘(λ) non λ>0 (Ariketa)
+EX=λ
+***** 4.3 Itxaropenaren Adibideak (Zorizko Aldagai Jarraitua) *****
+1.X:U(a,b)
+2.X:ε(λ)
+3.X:N(0,1)
+h(x) funtzio bakoitia da baldin eta h(−x)=−h(x) bada. Funtzio bakoiti bat
+dugunean betetzen da.
+4.X:N(a,b)
+EX=a
+5.X:Γ(a,k)a,k>0 Ariketa
+6.X:β(p,q)p,q>0 Ariketa
+7.
+8.
+Integrala ez da konbergentea beraz EX ez da existitzen.
+9.
+n>1 denean EX=0
+10.
+***** 4.4 Zorizko aldagaiaren funtzioaren itxaropena *****
+Demagun X (Ω,F,p) probabilitate espazioan definituriko zorizko aldagai
+diskretua, non den eta funtzio neurgarria direla. Orduan g(X)-ren batezbestekoa
+edo itxaropen matematikoa hauxe da:
+dela suposatuz.
+Demagun X (Ω,F,p) probabilitate espazioan definituriko zorizko aldagai
+jarraitua, f bere dentsitate funtzioa eta funtzio neurgarria direla. Orduan g
+(X)-ren batezbestekoa edo itxaropen matematikoa hauxe da:
+baldin eta dela suposatuz.
+***** 4.5 Funtzioen itxaropenaren adibideak *****
+Ikusi beste apunteak
+***** 4.6 Hainbat zorizko aldagaien funtzioaren itxaropena *****
+Demagun (X,Y) (Ω,F,p) probabilitate espazioan definituriko zorizko bektore
+diskretua, non den eta funtzio neurgarria direla. Orduan g(X,Y)-ren
+batezbestekoa edo itxaropen matematikoa hauxe da:
+baldin eta dela suposatuz.
+Demagun (X,Y) (Ω,F,p) probabilitate espazioan definituriko zorizko bektore
+jarraitua, f bere dentsitate funtzioa eta funtzio neurgarria direla. Orduan g
+(X,Y)-ren batezbestekoa edo itxaropen matematikoa hauxe da:
+baldin eta dela suposatuz.
+**** Adibideak ****
+1.E(X+Y) kalkulatzeko:
+(X+Y) diskretua bada:
+(X+Y) jarraitua bada:
+Edozein kasutan, E(X+Y)=EX+EY aterako zaigu.
+2.E(XY) kalkulatzeko:
+(XY) diskretua bada:
+(XY) jarraitua bada:
+X eta Y askeak badira, E(XY)=EXEY aterako zaigu.
+***** 4.7 Itxaropenaren propietateak *****
+Frogapenak zorizko aldagai diskreturako egingo ditugu.
+1.Xzorizko aldagaia nonP(X≥0)=1. Orduan
+•EX≥0
+•EX=0⇔X=0
+2.Xzorizko aldagaia nonEX<+∞. Orduan |EX|⩽E|X|
+Frogapena
+3.Xzorizko aldagaia etak∈ℜ. OrduanE(kX)=kEX
+Frogapena
+4. (Chebyshev-Markov)-en desberdintza:Xzorizko aldagaia non . Orduan
+Frogapena
+)(X=x))= \i \su(—x— ≥ε,, )P(X=x)
+
+
+
+
+
+
+
+
+
+
+
+
+Orokorrean: Markov-en desberdintza. X zorizko aldagaia non eta α>0. Orduan,
+
+
+5. DemagunXetaYzorizko aldagaiak direla nonEX<∞ etaEY<∞ diren. OrduanE(X+Y)<∞
+etaE(X+Y)=E(X)+E(Y).
+Frogapena
+6. DemagunXetaYzorizko aldagai askeak direla nonEX<∞ etaEY<∞ diren. OrduanE
+(XY)<∞ etaE(XY)=E(X)E(Y).
+Frogapena
+7. (Cauchy- Schwartz)en desberdintza. DemagunXetaYzorizko aldagai askeak direla
+nonEX<∞ etaEY<∞ diren. Orduan edo .
+Frogapena
+Demagun t∈ℜ
+Beraz
+**** Adibideak ****
+1. Txanponarennjaurtiketa nonP(A)=p.X≡AurpegikopuruaBin(n,p)⇒EX=np
+
+∀i=1, …, n
+∀i=1,…,n
+2. Dado biren jaurtiketa askeak
+Z≡Lorturikobiemaitzenbiderkadura
+X≡Lehenengojaurtiketanlorturikoemaitza
+Y≡Bigarrenjaurtiketanlorturikoemaitza X eta Y askeak
+
+I. Barrio 5

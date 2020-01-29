@@ -1,0 +1,234 @@
+
+
+
+
+19
+
+ Kapitulua 2
+Uhin-optika
+startsectionsection10cm1.50.7
+Sarrera startsectionsubsection20cm0.0+0.3Argiaren eredua Argia: espazioan
+hedatzen den perturbazio eskalarra (V(⃗r,t)). Uhin moduan hedatzen da eta bere
+jatorri fisikoa ezezaguna izan daiteke.
+                                Uhin-ekuazioa:
+   Uhin-ekuazioa lineala denez, gainezarpen-printzipioa betetzen da. Hau da,
+aldiune jakin batean eta espazioko puntu batetik zenbait uhin igarotzen badira,
+                    perturbazio osoa uhin guztien batura da
+ startsectionsubsection20cm0.0+0.3Intentsitatea Energia-dentsitatea: w(⃗r,t)
+                          (Bolumen unitateko energia)
+          Fluxu-dentsitatea: Φ(⃗r,t) (Energia-dentsitatea × abiadura)
+      Uhin mekanikoetan bezala energia-dentsitatea eta fluxu-dentsitatea
+              anplitudearen karratuaren proportzionalak dira: ()
+ Baina argiaren maiztasuna hain da altua ezen perturbazioaren aldiuneko balioa
+ezin baita neurtu eta erabiltzen den magnitudea intentsitatea (erradiazioa) da:
+                                       .
+  startsectionsubsection20cm0.0+0.3Uhin monokromatikoak: adierazpen konplexua
+        Uhin monokromatikoak (harmonikoak) : V(⃗r,t)=a(⃗r)cos(ωt−φ(⃗r))
+                             Adierazpen konplexua:
+                                   non den.
+                             Anplitude konplexua:
+               Uhin-frontea: fase bereko gainazalak (φ(⃗r)=kte)
+                      Uhinaren hedapen-norabidea: ∇φ(⃗r)
+                                Intentsitatea:
+ startsectionsubsection20cm0.0+0.3Uhin monokromatiko lauak eta esferikoak Uhin
+                                    lauak:
+                   Uhin-bektorea: ⃗k Uhin-frontea: ⃗k⃗r=kte
+                                 • maiztasuna:
+                            • maiztasun espaziala:
+                    • uhin-zenbakia: • hedapen-bektorea: ŝ
+                         • uhin-luzera: • periodoa: T
+                             Adierazpen konplexua:
+                             Anplitude konplexua:
+                             Gure_irizpidearekin:
+
+
+                               Uhin_esferikoak:
+                                  n≠0 denean
+                         startsectionsection10cm1.50.7
+                                Interferentziak
+    startsectionsubsection20cm0.0+0.3Maiztasun bereko uhin monokromatikoen
+               gainezarpena Gainezarpen printzipioaren arabera:
+                                 Erradiazioa:
+
+
+                        Interferentzia-gaia: , non den.
+                  Zerrenda ikusgaitasuna (kontrastea): 0⩽V⩽1
+                                     bada
+                               Orduan, , eta V=1
+ startsectionsubsection20cm0.0+0.3Argiaren monokromatikotasuna Benetako uhinak
+ ez dira idealak eta fasearen zorizko fluktuazioak gertatzen dira. Batez beste
+ horrelako fluktuazioak gertatzeko behar den denbora-tartea koherentzia-luzera
+                                    da ().
+     Uhinaren periodoa T bada, argia kuasimonokromatikoa izango da denean.
+Hargailuak behar duen integrazio-denbora da beti. Beraz denbora-tartean ezin da
+                         cosΔφ neurtu 〈cosΔφ〉 baizik.
+                 Interferentziak behatu ahal izateko balditzak
+ • Uhin-igorle bakarra erabili behar da. Hau da, gainezarri nahi diren uhinak
+         uhin bakar batetik sortu behar dira jatorrizko uhina zatituz.
+• Zatiketaren eta gainezarpenaren artean bi uhinek egindako ibilbideen luzeren
+                  arteko aldea baino txikiagoa izan behar da.
+ startsectionsubsection20cm0.0+0.3Interferentzia-dispositiboak Igorle bakarrak
+  sortzen duen uhinatik zenbait osagai atera behar dira, gero osagaien artean
+          desfasea sortu eta azkenean osagaiak gainezarri behar dira.
+                             Interferometro motak
+  • Frontearen zatiketa bi uhinetan: Young-en zirrikitu bikoitza, Fresnel-en
+        ispilua eta biprisma, Lloyd-en ispilua eta Billet-en bilentea.
+            • Frontearen zatiketa uhin anitzetan: Difrakzio-sareak
+ • Anplitudearen zatiketa bi uhinetan: Michelson, Twyman-Green, Match-Zehnder
+  eta Jamin-en interferometroak. • Anplitudearen uhin anitzetan: Fabry-Perot,
+                   Lummer eta Gehrcker-en interferometroak.
+        • Inklinazio (Haidinger) eta lodiera (Fizeau) bereko zerrendak
+                            Zerrenden lokalizazioa
+                      • Igorle puntuala: ez lokalizatuak
+
+
+                                • Igorle zabala
+                         startsectionsection10cm1.50.7
+ Difrakzioa startsectionsubsection20cm0.0+0.3Huygens eta Fresnelen printzipioa
+             Huygens-en printzipioa uhin sekundarioak (uhintxoak)
+                                       +
+                 Fresnel-en printzipioa (Zeihartasun-faktorea)
+                Σ gainazal esferikoan eremuaren anplitudea da.
+       Q puntutik igortzen den uhintxoak anplitudea ematen du P puntuan.
+              f(χ): zeihartasun-faktorea (π/2<χ<π denean f(χ)=0 )
+Guztira, uhin sekundario guztien ekarpenak batuz, hauxe da P puntuko anplitude
+                                     osoa:
+                                       ;
+
+
+                        Fresnelen_zona_erdiperiodikoak:
+                                    , , …,
+                                  eta badira
+ Hau da, zona erdiperiodiko bakoitzean zeihartasun-faktorea konstantetzat joko
+                                     dugu.
+                        Demagunnbakoitia_dela. Orduan,
+                     adierazpena bi modutan idatz daiteke:
+a)
+
+
+b)
+
+
+                                     bada:
+                                    a)-tik
+                                    b)-tik
+                                   eta bada
+              bada adierazpen bera lortzen da a) eta b) trukatuz.
+                                    Beraz,
+
+
+                                   Guztira:
+                          uhin_askearen_kasuan: , eta
+                 Beste aldetik, uhin askearen adierazpena da.
+startsectionsubsection20cm0.0+0.3Aplikazioa: irekidura eta oztopo zirkularrak P
+                   puntutik honako distantzia hauek hartuz:
+ Lehenengo zona erdiperiodikoa N azpizonatan banatzen da, eta ondoz ondoko bi
+                         azpizonen arteko desfasea da.
+               Zona guztietarako eta eginez espiral bihurtzen da
+                        Zona erdiperiodikoen erradioak
+
+
+         eta uhin lauaren kasuan: Adibidea: He-Ne laserra (λ=632.8nm)
+
+
+
+
+
+         1m              0.8mm         1.1mm             1.4mm
+         2m              1.1mm         1.6mm             1.9mm
+
+
+                                 Lente zonala
+         Lehenengo n zona bikoitiak (edo bakoitiak) estaltzen badira:
+
+
+
+
+   Eta lente mehe baten distantzia fokala bada, lentearen ekuazioa hauxe da:
+  startsectionsubsection20cm0.0+0.3Kirchhoff-en teorema T bolumenean ez dago
+                                argi-iturririk.
+            Bi uhin eskalar monokromatiko () eta Green-en teorema:
+                 V eta V' uhinek uhin-ekuazioa betetzen dute:
+                                    Orduan,
+                    Lehenengo integrala bi zatitan banatuz:
+         Demagun V' uhina P puntuan erdiratutako uhin esferikoa dela:
+                   gainazalean s=ε eta , eta (1) ekuaziotik:
+                              ε→0 limitea hartuz,
+                     Eta hauxe da Kirchhoff-en integrala:
+startsectionsubsection20cm0.0+0.3Fresnel eta Kirchhoff-en difrakzioa Demagun V
+              uhina ere puntuan erdiratutako uhin esferikoa dela
+
+
+                              Eta (2) ekuaziotik:
+                Σ gainazaletik oso hurbil ez bagaude, dugu eta
+                Fresnel eta Kirchhoff-en integrala lortzen da:
+                             Zona_erdiperiodikoak
+                              Hasieratik eginez,
+                              ̂r=̂n⇒cos(̂n,̂r)=1
+                                cos(̂n,ŝ)=cosχ
+                     Eta gainazala infiniturantz eramanez:
+          Zona erdiperiodikoen bidez lortutako formulekin alderatuz,
+                         Kirchhhoff-en_muga-baldintzak
+                                 Hurbilketak:
+                                • A: uhin askea
+                         • B eta C: eremu arbuiagarria
+                         • Irekiduraren dimentsioa >>λ
+                    • P eta puntuetatik irekiduraraino >>λ
+     startsectionsubsection20cm0.0+0.3Babinet-en teorema A eta D pantailak
+                               osagarriak dira.
+
+
+                                    Orduan,
+                                   Ondorioak
+                                  I) , beraz
+                                  II) , beraz
+     Uhin_askearen_intentsitatea_nulua_den_tokietan_bi_pantaila_osagarrik
+                      difrakzio-irudi_bera_sortzen_dute.
+     startsectionsubsection20cm0.0+0.3Fraunhofer eta Fresnel-en difrakzioa
+                            P≡(x,y,z) eta Q≡(ξ,η,0)
+               Kirchhoff-en integralaren gaia kalkulatu behar da
+
+
+                          aurreko ekuaziora eramanez:
+
+
+               eta irekidura txikia bada r'-rekin alderatuz ():
+                   bektorearen kosinu zuzentzaileak sartuz:
+ Modu berean , eta -ren kosinu zuzentzaileak (l=x/s',m=y/s',n) erabiliz hauxe
+                                 lor daiteke:
+                                  eta guztira
+                           Fraunhofer-en difrakzioa
+                    eta 1/rs≈1/r's'. Uhin lauak ditugu eta
+                                  eta eginez:
+                             Fresnel-en difrakzioa
+                  Ordena altuagoko gaiak ezin dira arbuiatu.
+                     Fraunhofer-en difrakzioa: baldintzak
+
+
+                                 I) r'=∞,s'=∞
+                                    II) eta
+
+
+        Esaterako, irekidura zirkularraren kasuan eta nahikoa izaten da
+                    Uhin lau batez argiztatuz (r'=∞) eta .
+              III) Tresna optikoetan (sarrerako niniaren eragina)
+                  eta aurkeratuz bi sistemak baliokideak dira
+           startsectionsubsection20cm0.0+0.3Fraunhofer-en difrakzioa
+  startsectionsubsection20cm0.0+0.3Zirrikitua eta irekidura errektangeluarra
+                                      aa
+             startsectionsubsection20cm0.0+0.3Irekidura zirkularra
+                                      aa
+   startsectionsubsection20cm0.0+0.3Irekidura berdinek sortutako difrakzioa
+               startsectionsubsection20cm0.0+0.3Difrakzio-sareak
+                                      aa
+                                      aa
+                                      aa
+                       aa startsectionsection10cm1.50.7
+    Tresna optikoen bereizmena startsectionsubsection20cm0.0+0.3Rayleigh-en
+            irizpidea startsectionsubsection20cm0.0+0.3Objektiboak
+                  startsectionsubsection20cm0.0+0.3Hargailuak
+                 startsectionsubsection20cm0.0+0.3Teleskopioak
+                startsectionsubsection20cm0.0+0.3Mikroskopioak
+Gaien Aurkibidea
+
+

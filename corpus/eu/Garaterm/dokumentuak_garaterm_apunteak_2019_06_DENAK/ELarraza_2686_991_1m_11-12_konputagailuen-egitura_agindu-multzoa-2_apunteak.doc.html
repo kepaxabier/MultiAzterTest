@@ -1,0 +1,1533 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>1</TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 3.4  (Unix)">
+	<META NAME="AUTHOR" CONTENT="Agustin Arruabarrena">
+	<META NAME="CREATED" CONTENT="20030917;12230000">
+	<META NAME="CHANGED" CONTENT="20111007;13352500">
+	<META NAME="Info 1" CONTENT="">
+	<META NAME="Info 2" CONTENT="">
+	<META NAME="Info 3" CONTENT="">
+	<META NAME="Info 4" CONTENT="">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.27in 11.69in; margin-right: 0.93in; margin-top: 1.19in; margin-bottom: 0.91in }
+		@page:first { }
+		P { margin-bottom: 0.08in; direction: ltr; color: #000000; text-align: justify; widows: 2; orphans: 2 }
+		P.western { font-family: "Times New Roman", serif; font-size: 11pt; so-language: eu }
+		P.cjk { font-family: "Times New Roman", serif; font-size: 11pt; so-language: zh-CN }
+		P.ctl { font-family: "Times New Roman", serif; font-size: 12pt; so-language: ar-SA }
+		H1 { margin-left: 0.78in; text-indent: -0.78in; margin-top: 0.22in; margin-bottom: 0in; direction: ltr; color: #000000; text-align: justify; widows: 0; orphans: 0 }
+		H1.western { font-family: "Palatino", serif; font-size: 18pt; so-language: es-ES }
+		H1.cjk { font-family: "Times New Roman", serif; font-size: 18pt; so-language: zh-CN }
+		H1.ctl { font-family: "Palatino", serif; font-size: 10pt; so-language: ar-SA; font-weight: normal }
+		H1.rdib-western { margin-top: 0.17in; margin-bottom: 0.07in; font-family: "Times New Roman", serif; font-size: 9pt; so-language: eu; font-weight: normal; text-align: center }
+		H1.rdib-cjk { margin-top: 0.17in; margin-bottom: 0.07in; font-family: "Times New Roman", serif; font-size: 9pt; so-language: zh-CN; font-weight: normal; text-align: center }
+		H1.rdib-ctl { margin-top: 0.17in; margin-bottom: 0.07in; font-family: "Times New Roman", serif; font-size: 10pt; so-language: ar-SA; text-align: center }
+		H1.rpie-western { margin-left: 0.89in; margin-right: 0.18in; text-indent: -0.69in; margin-top: 0.17in; margin-bottom: 0.21in; font-family: "Times New Roman", serif; font-size: 9pt; so-language: eu; font-weight: normal; page-break-after: auto }
+		H1.rpie-cjk { margin-left: 0.89in; margin-right: 0.18in; text-indent: -0.69in; margin-top: 0.17in; margin-bottom: 0.21in; font-family: "Times New Roman", serif; font-size: 9pt; so-language: zh-CN; font-weight: normal; page-break-after: auto }
+		H1.rpie-ctl { margin-left: 0.89in; margin-right: 0.18in; text-indent: -0.69in; margin-top: 0.17in; margin-bottom: 0.21in; font-family: "Times New Roman", serif; font-size: 10pt; so-language: ar-SA; page-break-after: auto }
+		A:link { so-language: zxx }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000" DIR="LTR">
+<P LANG="eu" ALIGN=CENTER STYLE="margin-left: 0.39in; text-indent: -0.39in; margin-bottom: 0.21in">
+<FONT FACE="Arial, sans-serif"><FONT SIZE=4><B><U>2.2	BEKTOREAK</U><U>
+</U><U>ETA</U><U> </U><U>JAUZIAK</U></B></FONT></FONT></P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Lehenengo kapituluan esan den bezala, beraren makina-hizkuntza da
+konputagailu batek interpreta dezakeen hizkuntza bakarra.
+Makina-hizkuntzako aginduak konputagailuaren arkitektura-ezaugarrien
+mende daude, eta zerokoen eta batekoen segiden bidez adierazten dira
+(kodeketa bitarra). Lehenengo konputagailuetarako idatzi ziren
+programak, makina-hizkuntzaz idatzi ziren.</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Hala ere, oso astuna da zerokoen eta batekoen segiden bidez programak
+idaztea; akats asko egiten dira, eta oso zaila da programa zuzenak
+sortzea. Arazo horiek gainditzeko asmoz, ahalmen semantiko handiagoko
+hizkuntza sinbolikoak sortu ziren. Hizkuntza horien artean,
+mihiztadura-hizkuntza da makina-hizkuntzatik hurbilen dagoena;
+edukiera semantiko gutxienekoa, alegia. Beste muturrean, goi-mailako
+hizkuntzak ditugu. Hizkuntza sinbolikoak erabiliz, programak errazago
+idazten dira, baina erabiltzen diren aginduak ezin dira zuzenean
+konputagailuan exekutatu. Izan ere, programa horiek itzuli egin behar
+dira konputagailuak ulertzen duen hizkuntza bakarrera, eta, itzulpen
+horretarako, programa bereziak erabili behar dira: mihiztatzaileak
+(mihiztadura-hizkuntzetarako) eta konpiladoreak (goi-mailako
+hizkuntzetarako).</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Goi<B>-</B>mailako hizkuntzak dira programatzaileek gehien erabiltzen
+dituztenak (ADA, Cobol, Fortran, C, Lisp, Java, ...). Hizkuntza
+horietan programatzeko ez da konputagailuaren arkitektura ezagutu
+behar, hizkuntzen sintaxia makinaren baliabideen guztiz independentea
+baita. Aipatu dugun moduan, goi-mailako hizkuntzen aginduen edukiera
+semantikoa makina-hizkuntzako aginduena baino askoz altuagoa da. Hori
+dela eta, agindu bakar batekin, makina-hizkuntzako <I>n</I> agindu
+ordezkatzen dira (1:<I>n</I> korrespondentzia dago). Beraz,
+makina-hizkuntzako aginduekin erkatuta, goi-mailako aginduek lan
+gehiago egiten dute (eta, ondorioz, haien exekuzio-denbora altuagoa
+da).</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Lehen aipatu bezala, mihiztadura-hizkuntza da makina-hizkuntzatik
+hurbilen dagoen hizkuntza sinbolikoa. Aginduak mnemoteknikoen bidez
+idazten dira; izan ere, mihiztadura-hizkuntzaz idatzi dira aurreko
+kapituluetako programak. Mihiztadura-hizkuntzako agindu batek
+makina-hizkuntzako agindu bat ordezkatzen du, hau da, erlazioa 1:1
+da. Horregatik, mihiztadura-hizkuntza zuzenki erlazionatuta dago
+konputagailuaren ezaugarriekin. Mihiztadura-hizkuntzako aginduek
+konputagailuaren baliabideak &mdash;erregistroak, memoria, edo
+sarrera/irteerako gailuak&mdash; erabiltzen dituzte zuzenean. Beraz,
+prozesadore bakoitzak mihiztadura-hizkuntza desberdina, berea,
+erabiltzen du. 
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Kapitulu honetan, TXORI mihiztadura-hizkuntza nola erabili behar den
+azalduko da, batik bat datu-egiturak (bektoreak eta matrizeak)
+maneiatzeko eta agindu-fluxuaren kontrol-egiturak gauzatzeko; hori
+guztia hainbat adibideren bidez egingo da.</P>
+<P LANG="eu" STYLE="margin-left: 0.5in; text-indent: -0.51in; margin-top: 0.28in; margin-bottom: 0.21in">
+<FONT FACE="Arial, sans-serif"><FONT SIZE=4><B>2.2.1	NOLA ERABILI
+BEKTOREAK TXORI HIZKUNTZAN</B></FONT></FONT></P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Bektoreak nola erabiltzen diren ikusteko, zenbaki osozko bektoreekin
+hasiko gara. Gogoratu: bektore bat datu-zerrenda bat besterik ez da,
+ondoz ondoko memoria-posizioetan gordeta. Bi gai landu beharko
+ditugu. Batetik, bektoreak nola erazagutu sasiaginduen bidez. Eta,
+bestetik, bektoreen osagaiak nola atzitu modu egokienean. 
+</P>
+<P LANG="eu" STYLE="margin-left: 0.6in; text-indent: -0.59in; margin-top: 0.28in; margin-bottom: 0.21in; line-height: 110%">
+<FONT FACE="Arial, sans-serif"><FONT SIZE=4><B>2.2.1.1 Bektoreak
+erazagutzea</B></FONT></FONT></P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Bi sasiagindu erabili ditugu jadanik aldagaiak erazagutzeko: <FONT FACE="Courier New, monospace">.word</FONT>
+eta <FONT FACE="Courier New, monospace">.value</FONT>. Lehenengoak,
+tokia erreserbatzen du memorian aldagai baterako. Bigarrenak, tokia
+erreserbatzeaz gain, hasiera-balio jakin bat esleitzen dio
+aldagaiari. Izan ere, bi sasiagindu horiek erabili behar dira
+bektoreak ere erazagutzeko. 
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Bektore-osagaiak ez badira hasieratu behar, nahikoa da <FONT FACE="Courier New, monospace">.word</FONT><I>
+</I>sasi-agindua erabiltzea. Argumentu bakarra onartzen du: memorian
+erreserbatu behar den posizio kopurua (balio positiboa, noski). 3.1
+irudian, honako adibide hau ageri da:</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<FONT FACE="Courier New, monospace">	</FONT><FONT FACE="Courier New, monospace">C:	.word</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">4;</FONT><I> </I>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT FACE="Courier New, monospace">C</FONT>
+bektorerako, memoriako ondoz ondoko lau posizio erreserbatzen dira,
+besterik gabe.</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Bektore-osagaiei hasierako balioak emateko, aldiz, <FONT FACE="Courier New, monospace">.value</FONT>
+sasiagindua erabili behar da. Hasiera-balioak komen bidez bereizi
+behar dira; lehenengo balioa lehenengo osagaiari dagokio, bigarrena
+bigarrenari, eta abar. 3.1 irudian, honako adibide hau ageri da: 
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<FONT FACE="Courier New, monospace">	</FONT><FONT FACE="Courier New, monospace">A:	.value</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">6,7,</FONT><FONT FACE="Courier New, monospace">&ndash;</FONT><FONT FACE="Courier New, monospace">5,3;</FONT></P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT FACE="Courier New, monospace">A</FONT>
+bektorerako, ondoz ondoko lau posizio erreserbatzen dira, eta 6, 7,
+&ndash;5 eta 3 balioekin hasieratzen dira, hurrenez hurren.</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Askotan, hasiera-balio bera esleitu behar zaio ondoz ondoko hainbat
+osagairi. Balio horiek guztiak errepikatu beharrean, balio bakar bat
+eta, parentesien artean, errepikapen kopurua adieraz daitezke. 3.1
+irudian, honako beste adibide hau ageri da:</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<FONT FACE="Courier New, monospace">	</FONT><FONT FACE="Courier New, monospace">B:	.value</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">1(4)</FONT><I>;</I> 
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT FACE="Courier New, monospace">B</FONT>
+aldagairako, ondoz ondoko lau memoria-posizio erreserbatzen dira, eta
+hasiera-balio bera hartzen dute guztiek, 1ekoa.</P>
+<P LANG="eu" STYLE="margin-left: 0.87in; text-indent: -0.87in; margin-top: 0.28in; margin-bottom: 0.21in; line-height: 110%">
+<FONT FACE="Arial, sans-serif"><FONT SIZE=4><B>2.2.1.2 Bektore baten
+osagaiak atzitzea:     helbideratze absolutua eta indexatua</B></FONT></FONT></P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Bektore baten osagaiak homogeneoak direnez, hots, denak luzera eta
+oinarrizko mota berekoak, osagaiaren memoria-helbidea, <I>h</I><SUB><I>i</I></SUB><I>,
+</I><SPAN STYLE="font-style: normal">kalkulatzeko, beharrezkoa dugu
+jakitea bektorearen hasierako helbidea, </SPAN><I>h</I><SUB><I>0</I></SUB><I>,
+</I><SPAN STYLE="font-style: normal">eta osagaiaren posizioa
+bektorean, </SPAN><I>i</I><SPAN STYLE="font-style: normal">.
+Informazio hori erabiliz, </SPAN><I>i</I><SPAN STYLE="font-style: normal">
+osagaiaren helbidea hau izango da: </SPAN><FONT FACE="Courier New, monospace"><I>h</I></FONT><SUB><FONT FACE="Courier New, monospace"><I>i</I></FONT></SUB><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><I>=h</I></FONT></FONT><SUB><FONT FACE="Courier New, monospace"><I>0</I></FONT></SUB><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><I>+i</I></FONT></FONT><FONT FACE="Andale Mono"><FONT SIZE=2 STYLE="font-size: 11pt"><I>x</I></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 11pt"><I>l</I></FONT></FONT><SUB><I>
+ </I></SUB>non <I>l</I> <SPAN STYLE="font-style: normal">balioak
+osagai bakoitzaren luzera adierazten duen, hots zenbat
+memoria-posizio okupatzen dituen. </SPAN>
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Helbide hori erabiliz, <FONT FACE="Courier New, monospace">ld</FONT>
+edo <FONT FACE="Courier New, monospace">st</FONT> aginduak erabil
+daitezke osagaia hori atzitzeko (helbideratze-modu absolutua). Hala
+ere, atzipen mota hori ez da erosoa, programatzaileak berak kalkulatu
+behar baitu osagai bakoitzaren helbidea. Egokia litzateke, beraz,
+helbideratze-modu eraginkorragoak izatea bektoreen osagaiak atzitu
+ahal izateko. 
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Goi-mailako hizkuntzetan, bektore baten osagai bat adierazteko,
+bektorearen izena eta, ondoren, osagaiaren indizea edo posizioa
+adierazi ohi da. Adibidez, ADA hizkuntzaz, <FONT FACE="Courier New, monospace">B</FONT>
+bektorearen <I>i</I> osagaia atzitzeko, <FONT FACE="Courier New, monospace">B(i)</FONT><FONT FACE="Courier New, monospace">
+</FONT>idatzi behar da (C hizkuntzaz, <FONT FACE="Courier New, monospace">B[i]</FONT>).
+TXORI hizkuntzak antzeko aukera bat eskaintzen du, baina, indizeak
+adierazteko, erregistro orokor bat erabili behar da. Adibidez,<FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">B</FONT> bektorearen 3
+osagaia atzitzeko, honako hau egin daiteke: 3koa kargatu r1
+erregistroan, eta, gero, <FONT FACE="Courier New, monospace">B[r1]</FONT><FONT FACE="Courier New, monospace">
+</FONT>erabili. Osagaiak atzitzeko indize-erregistro bat erabili
+behar denez, helbideratze-moduari <B>indexatua</B> deritzo. Hala
+egiten denean, beraz, prozesadoreak berak kalkulatuko du bektorearen
+osagaiaren helbidea, bektorearen hasiera-helbidea eta osagaiaren
+posizioa erabiliz (<FONT FACE="Courier New, monospace">B</FONT> eta
+r1). 
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Bektore baten osagaiak irakurtzeko eta idazteko, helbideratze
+indexatua erabiliz, mihiztadura-hizkuntzako bi agindu hauek ditugu:</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-left: 0.3in; text-indent: -0.2in; margin-bottom: 0.04in; line-height: 110%">
+&#9642; <FONT FACE="Courier New, monospace">ldx</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">rh,</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">A[ri]			rh</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">:=</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">M[A</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">+</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">ri]</FONT></P>
+<P LANG="eu" STYLE="margin-left: 0.3in; text-indent: -0.2in; margin-bottom: 0.04in; line-height: 110%">
+	<FONT FACE="Courier New, monospace">A</FONT> izeneko bektorearen
+osagai bat &mdash;ri erregistroak adierazten duena&mdash; memoriatik
+irakurtzen da, eta rh erregistroan kopiatzen da.</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-left: 0.3in; text-indent: -0.2in; margin-bottom: 0.04in; line-height: 110%">
+&#9642; <FONT FACE="Courier New, monospace">stx</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">rj,</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">A[ri]			M[A</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">+</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">ri]</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">:=</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">rj</FONT></P>
+<P LANG="eu" STYLE="margin-left: 0.3in; text-indent: -0.2in; margin-bottom: 0.04in; line-height: 110%">
+<FONT FACE="Courier New, monospace">	</FONT>rj erregistroaren edukia
+memorian idazten da, <FONT FACE="Courier New, monospace">A</FONT>
+bektorean; ri erregistroak adierazten duen osagaian, hain zuzen ere.</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+3.2.1 irudian, agindu horien adibideak ageri dira. Programatxoan, <FONT FACE="Courier New, monospace">A</FONT>
+eta <FONT FACE="Courier New, monospace">B</FONT> bektoreen lehen
+osagaiak (0 osagaiak) irakurtzen dira &mdash;<FONT FACE="Courier New, monospace">ldx</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">r1,</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">A[r0]</FONT> eta <FONT FACE="Courier New, monospace">ldx</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">r2,</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">B[r0]</FONT>&mdash;, eta,
+osagai horiek batu ondoren, batura <FONT FACE="Courier New, monospace">C</FONT>
+bektorearen lehen osagaian idazten da &mdash;<FONT FACE="Courier New, monospace">stx</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">r3,</FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2 STYLE="font-size: 9pt">
+</FONT></FONT><FONT FACE="Courier New, monospace">C[r0]</FONT>&mdash;.
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.title
+BEKTOREAK</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">A:	.value
+6, 7, -5, 3;</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">B:	.value
+1(4);</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">C:	.word
+4;</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.proc
+main</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	ldx
+r1, A[r0]	<FONT SIZE=1 STYLE="font-size: 6pt">{r0</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">=</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">0}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	ldx
+r2, B[r0]</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	add
+r3, r1, r2</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	stx
+r3, C[r0]</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	retm</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.endp
+main</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.end</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<H1 LANG="eu" CLASS="rpie-western" STYLE="margin-left: 0in; margin-right: 0in; text-indent: 0in">
+<B>3.2.1 irudia.</B> 	<FONT FACE="Courier New, monospace">C(0)</FONT>
+= <FONT FACE="Courier New, monospace">A(0)</FONT> + <FONT FACE="Courier New, monospace">B(0)</FONT>
+formularen kalkulua.</H1>
+<P LANG="eu" ALIGN=LEFT STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-top: 0.28in; margin-bottom: 0.21in">
+<FONT FACE="Arial, sans-serif"><FONT SIZE=4><B>2.2.2	AGINDUEN FLUXU
+SEKUENTZIALA  HAUSTEKO AGINDUAK: JAUZIAK</B></FONT></FONT></P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Lehen kapituluan aipatu den moduan, programa baten agindu-fluxua
+sekuentziala da eskuarki; hots, <I>i</I> aginduaren ondoren, <I>i</I>+1
+agindua exekutatzen da. Aginduen exekuzio-sekuentzia hautsi nahi
+bada, agindu bereziak erabili behar dira: <B>jauzi-aginduak</B>.
+Goi-mailako hizkuntzetan ohikoak diren <B>kontrol-egiturak</B> (<FONT FACE="Courier New, monospace">if</FONT>,
+<FONT FACE="Courier New, monospace">for</FONT>, <FONT FACE="Courier New, monospace">while</FONT>,
+...) jauzi-aginduen bidez gauzatzen dira behe-mailako hizkuntzetan. 
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Oro har, jauzi-agindu batek aukera ematen du programaren exekuzio
+sekuentzialarekin jarraitzeko, edo programaren beste puntu batera
+jauzi egiteko, han dagoen aginduaren exekuzioarekin jarraitzeko.
+Jauzi-aginduan bertan adierazten da zein litzatekeen exekutatu
+beharreko aginduaren helbidea jauzia beteko balitz; helbide hori
+etiketa baten bidez identifikatzen da. Etiketek, beraz, jauzien
+helburuak markatzen dituzte (nora joan behar den), eta karaktere
+alfanumerikoez osatzen dira (lehenengo karakterea, alfabetikoa, eta,
+azkena, &ldquo;:&rdquo; karakterea).</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Jauziak <B>baldintza gabekoak</B> edo <B>baldintzapekoak</B> izan
+daitezke. Baldintza gabeko jauzia beti betetzen da. Baldintzapeko
+jauzia, aldiz, bakarrik gauzatzen da baldintza jakin bat betetzen
+bada, eskuarki konparazio baten ondorioz. Baldintza betetzen ez bada,
+jauzia ez da gauzatuko, eta exekuzio sekuentzialarekin jarraituko da.</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+TXORI hizkuntzaren jauzi-aginduak hauek dira:</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-left: 0.3in; text-indent: -0.2in; margin-bottom: 0.04in; line-height: 110%">
+&#9642; <FONT FACE="Courier New, monospace">jmp</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">etiketa			PC</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">:=</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">@etiketa</FONT></P>
+<P LANG="eu" STYLE="margin-left: 0.3in; text-indent: -0.2in; margin-bottom: 0.04in; line-height: 110%">
+	Baldintza gabeko jauzia da (ingelesez,<I> </I><SPAN LANG="en-US"><I>jump</I></SPAN><I>,</I>
+jauzi). Agindua exekutatu ondoren, adierazitako etiketa duen
+aginduarekin jarraituko da (ez ondoz ondoko aginduarekin, eskuarki
+egiten den moduan).</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-left: 0.3in; text-indent: -0.2in; margin-bottom: 0.04in; line-height: 110%">
+&#9642; <FONT FACE="Courier New, monospace">beq</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">ri,</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">etiketa</FONT> 		<FONT FACE="Courier New, monospace">if</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">(ri</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">=</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">0)</FONT><FONT FACE="Courier New, monospace">
+</FONT>
+</P>
+<P LANG="eu" STYLE="margin-left: 0.3in; text-indent: -0.2in; margin-bottom: 0.04in; line-height: 110%">
+<FONT FACE="Courier New, monospace">			PC</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">:=</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">@etiketa</FONT></P>
+<P LANG="eu" STYLE="margin-left: 0.3in; text-indent: -0.2in; margin-bottom: 0.04in; line-height: 110%">
+	(edo <FONT FACE="Courier New, monospace">bne</FONT>, <FONT FACE="Courier New, monospace">bls</FONT>,
+<FONT FACE="Courier New, monospace">ble</FONT>, <FONT FACE="Courier New, monospace">bgt</FONT>,
+<FONT FACE="Courier New, monospace">bge</FONT>)</P>
+<P LANG="eu" STYLE="margin-left: 0.3in; text-indent: -0.2in; margin-bottom: 0.04in; line-height: 110%">
+	Baldintzapeko jauziak dira; hots, jauzia egiten da baldintza bat
+betetzen bada (ingelesez, <SPAN LANG="en-US"><I>branch</I></SPAN>,
+adarkatu). Konparazio sinple bat da baldintza: aginduan adierazten
+den erregistroaren edukia 0 konstantearekin konparatzen da. Sei
+konparazio erabil daitezke: eq (berdina, <SPAN LANG="en-US"><I>equal</I></SPAN>),
+ne (desberdina, <SPAN LANG="en-US"><I>not-equal</I></SPAN>), ls
+(txikiagoa, <SPAN LANG="en-US"><I>less than</I></SPAN>), le (txikiago
+edo berdina, <SPAN LANG="en-US"><I>less or equal</I></SPAN>), gt
+(handiagoa, <SPAN LANG="en-US"><I>greater than</I></SPAN>), eta ge
+(handiago edo berdina, <SPAN LANG="en-US"><I>greater or equal</I></SPAN>).</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Helburuak adierazteko etiketak erabiltzen badira ere, jauzi-helbidea
+jauzi-aginduaren helbidearekiko erlatiboa da; hots, jauzi-aginduaren
+helbideari desplazamendu bat gehitzen zaio helburu-helbidea lortzeko.</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Honako bost adibide hauetan, jauzi-aginduen erabilera batzuk lantzen
+dira. Goi-mailako algoritmoak Cz ematen dira.</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" ALIGN=LEFT STYLE="margin-left: -0.2in; margin-right: 3.37in; text-indent: 0.1in; margin-bottom: 0.04in; background: #ff9900; border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding-top: 0.01in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in; line-height: 110%">
+<FONT COLOR="#ffffff"><FONT SIZE=2><B>2.2.1 Adibidea</B></FONT></FONT></P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT SIZE=2><I>Bektore
+baten osagaien batura kalkulatzen duen programa bat idatzi behar da.
+Bektorearen hasiera-balioak hauek dira: 5,7,7,100 eta -20. Emaitza
+BATURA aldagaian utzi behar da. </I></FONT>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT SIZE=2>Eragiketa
+betetzeko, </FONT><FONT SIZE=2>goi-mailako hizkuntzetako </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>for</FONT></FONT><FONT SIZE=2>
+egitura programatu behar da. Egitura hori begizta honetan ageri da: </FONT>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<CENTER>
+	<TABLE WIDTH=430 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES>
+		<COL WIDTH=420>
+		<TR>
+			<TD WIDTH=420 VALIGN=TOP STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P LANG="zxx" STYLE="margin-left: 0.21in; margin-top: 0.01in; margin-bottom: 0.01in">
+				<BR><BR>
+				</P>
+				<P LANG="eu" STYLE="margin-left: 0.21in; margin-top: 0.01in; margin-bottom: 0.01in">
+				<FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">(</SPAN></FONT><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">C)</SPAN></FONT></P>
+				<P LANG="zxx" STYLE="margin-left: 0.21in; margin-top: 0.01in; margin-bottom: 0.01in">
+				<BR><BR>
+				</P>
+				<P LANG="zxx" STYLE="margin-left: 0.21in; margin-top: 0.01in; margin-bottom: 0.01in">
+				<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">BATURA
+				= 0;</FONT></FONT></P>
+				<P LANG="zxx" STYLE="margin-left: 0.21in; margin-top: 0.01in; margin-bottom: 0.01in">
+				<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">for
+				(i=0; i&lt;5; i++) </FONT></FONT>
+				</P>
+				<P LANG="eu" STYLE="margin-left: 0.21in; margin-top: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">	</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">BATURA</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">=</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">BATURA</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">+</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">BEKT[i];</SPAN></FONT></FONT></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT SIZE=2>Hainbat
+soluzio eman daitezke. Esaterako, hona hemen aukera bat, TXORI
+mihiztadura-hizkuntza erabiliz:</FONT></P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.title
+BATU2</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">BEKT:	.value
+5, 7(2), 100, -20;</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">BATURA:	.word
+1;</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.proc
+main</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	addi
+r10, r0, #0	<FONT SIZE=1 STYLE="font-size: 6pt">{hasieratu</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">r10,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">tarteko</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">baturak</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">gordeko</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">dituen</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">erregistroa}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	movi
+r1, #0	<FONT SIZE=1 STYLE="font-size: 6pt">{begiztaren</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bukaera</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">kontrolatzeko:</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">indizea</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">ez</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">da</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">inoiz</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">5</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">izango,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">0tik</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">4ra</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bitartean</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">egongo</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">delako}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">for:	sub
+r11, r1, #5	<FONT SIZE=1 STYLE="font-size: 6pt">{egiaztatu</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">begizta-iterazio</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">guztiak</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">egin</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">diren}</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT></FONT></FONT>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><FONT SIZE=1 STYLE="font-size: 6pt">	</FONT>beq
+r11, buk<FONT SIZE=1 STYLE="font-size: 6pt"> </FONT><FONT SIZE=1 STYLE="font-size: 6pt">	{indizea</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">5</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bada,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">hots,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">kenketaren</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">emaitza</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">0</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bada,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">orduan</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bektore-osagai</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">guztiak</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">prozesatu</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">dira:</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bukatu}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	ldx
+r3, BEKT[r1]	<FONT SIZE=1 STYLE="font-size: 6pt">{irakurri</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bektore-osagai</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bat}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	add
+r10, r10, r3	<FONT SIZE=1 STYLE="font-size: 6pt">{gehitu</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">tarteko</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">baturari}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	addi
+r1, r1, #1	<FONT SIZE=1 STYLE="font-size: 6pt">{eguneratu</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">indizea,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">hurrengo</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">osagaia</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">irakurtzeko}</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT></FONT></FONT>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	jmp
+for	<FONT SIZE=1 STYLE="font-size: 6pt">{atzera</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">egin,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">begiztaren</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">exekuzioa</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bukatu</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">den</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">egiaztatzeko}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">buk:	st
+r10, BATURA	<FONT SIZE=1 STYLE="font-size: 6pt">{azkenik,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">batuketa</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">guztien</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">emaitza</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">BATURA</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">aldagaian</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">idazten</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">da}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	retm</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.endp
+main</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.end</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"> 
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT SIZE=2>Batu
+behar den osagai kopurua programaren agindu kopuruaren independentea
+da. Gainera, edozein bektore-luzera prozesatu ahal izateko, nahikoa
+da aurreko programako </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>movi</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>
+</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>r1,#5</FONT></FONT><FONT SIZE=2>
+agindua </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>movi</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>
+</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>r1,</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>
+</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>#osag_kop</FONT></FONT><FONT SIZE=2>
+aginduarekin ordezkatzea, non </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>osag_kop</FONT></FONT><FONT SIZE=2>
+bektorearen osagai kopurua den.</FONT></P>
+<P LANG="eu" STYLE="margin-top: 0.17in; margin-bottom: 0.14in; line-height: 110%">
+<FONT SIZE=2>3.2.2 irudian ageri da nola exekutatzen den 3.3.1
+adibideko programa, aginduz agindu, BIRD konputagailuan
+(simuladorean). Ikus daitekeenez, aginduak sekuentzialki exekutatzen
+direnean, binaka handitzen da PCaren balioa; aldiz, jauzi bat
+exekutatzen denean, aurrera zein atzera, agindu-sekuentzia hautsi
+egiten da (esaterako, 16400 &rarr; 16390). Jakina, begizta osatzen
+duten aginduak errepikatzen direnean, PC erregistroaren balioak ere
+(agindu horien helbideak) errepikatzen dira.</FONT></P>
+<P LANG="eu" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx"><B>Agindua	Ri1	Ri2	Rh	</B></SPAN></FONT><FONT SIZE=1><SPAN LANG="zxx"><B>Memoria@</B></SPAN></FONT><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx"><B>	Edukia</B></SPAN></FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16384 	addi_r10,r0,#0			R10 [000000]</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16386 	movi_r1,#0			R01 [000000]</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16388for: subi_r11,r1,#5	R01 [000005]		R11 [-00005]</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16390 	beq_r11,buk	R11 [-00005]</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16392	ldx_r3,BEKT[r1]	R01 [000000]		R03 [000005]	@
+0	5</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16394	add_r10,r10,r3	R10 [000000]	R03 [000005]	R10
+[000005]</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16396 	addi_r1,r1,#1	R01 [000000]		R01 [000001]</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16398 	jmp_for</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16400 for: subi_r11,r1,#5	R01 [000001]		R11 [-00004]	</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16390 	beq_r11,buk	R11 [-00004]</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16392 	ldx_r3,BEKT[r1]	R01 [000001]		R03 [000007]	@
+1	7</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16394 	add_r10,r10,r3	R10 [000005]	R03 [000007]	R10
+[000012]</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16396 	addi_r1,r1,#1	R01 [000001]		R01[000002]</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16398 	jmp_for</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16400for:  subi_r11,r1,#5	R01[000002]		R11 [-00003] 	</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16390 	beq_r11,buk	R11 [-00003]</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16392 	ldx_r3,BEKT[r1]	R01 [000002]		R03 [000007]	@
+2	7</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16394 	add_r10,r10,r3	R10 [000012]	R03 [000007]	R10
+[000019]</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16396 	addi_r1,r1,#1	R01 [000002]		R01 [000003]</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16398 	jmp_for</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16400 for: subi_r11,r1,#5	R01 [000003]		R11 [-00002]	</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16390 	beq_r11,buk	R11 [-00002]</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16392 	ldx_r3,BEKT[r1]	R01[000003]		R03 [000100]	@
+3	100</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16394 	add_r10,r10,r3	R10 [000019]	R03 [000100]	R10
+[000119]</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16396 	addi_r1,r1,#1	R01 [000003]		R01 [000004]</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16398 	jmp_for</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16400 for: subi_r11,r1,#5	R01 [000004]		R11 [-00001]	</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16390 	beq_r11,buk	R11 [-00001]</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16392 	ldx_r3,BEKT[r1]	R01 [000004]		R03 [-00020] 	@
+4	-20</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16394 	add_r10,r10,r3	R10 [000119]	R03 [-00020]	R10
+[000099]</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16396 	addi_r1,r1,#1	R01 [000004]		R01 [000005]</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16398	jmp_for</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16400 for: subi_r11,r1,#5	R01 [000005]		R11 [000000]
+	</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16390 	beq_r11,buk	R11 [000000]</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16392 buk: st_r10,BATURA	R10 [000099]			@ 5	99</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<FONT SIZE=1>PC=16402 	retm_</FONT></P>
+<P LANG="zxx" STYLE="text-indent: 0.08in; margin-bottom: 0in; border: 1px solid #000000; padding: 0.01in 0in; line-height: 0.07in">
+<BR>
+</P>
+<H1 LANG="eu" CLASS="rpie-western" STYLE="margin-bottom: 0.14in"><B>3.2.2
+irudia.	</B>3.2 adibideko programaren exekuzioaren aztarna.</H1>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" ALIGN=LEFT STYLE="margin-left: 2.76in; margin-right: 0.02in; margin-bottom: 0.04in; background: #ff9900; border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding-top: 0in; padding-bottom: 0.01in; padding-left: 0in; padding-right: 0in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Ohikoa da bektore baten osagaiak pantailan ikusi nahi izatea;
+programaren funtzionamendu egokia egiaztatzeko, esaterako.
+Horretarako, <FONT FACE="Courier New, monospace">outm</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">#kop,</FONT><FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">aldag</FONT> agindua
+erabil daiteke. Agindu horrek bi argumentu behar ditu. Lehenengoa,
+<FONT FACE="Courier New, monospace">kop</FONT>, bistaratu nahi den
+osagai kopurua da, zenbaki positibo bat 0 eta 511 artean (10 bit,
+2rako osagarrian); bigarrenak, <FONT FACE="Courier New, monospace">aldag</FONT>,
+memoria-helbide bat da, eta adierazten du zein helbidetatik aurrera
+dauden osagai horiek memorian. Helbide hori adierazteko, bi aukera
+daude: (a) helbide absolutu bat ('@' ikurra eta zenbaki arrunt bat);
+edo (b) programan erazagututako aldagai baten izena (gogora ezazu
+aldagai baten izenak bere memoriako helbidea adierazten duela).
+Agindu horren erabileraren adibide bat 3.2.2 adibidean ageri da.</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" ALIGN=LEFT STYLE="margin-left: -0.2in; margin-right: 3.37in; text-indent: 0.1in; margin-bottom: 0.04in; background: #ff9900; border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding-top: 0.01in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in; line-height: 110%">
+<FONT COLOR="#ffffff"><FONT SIZE=2><B>2.2.2 Adibidea</B></FONT></FONT></P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT SIZE=2><I>Idatz
+ezazu programa bat, </I></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2><I>V1</I></FONT></FONT><FONT SIZE=2><I>
+eta </I></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2><I>V2</I></FONT></FONT><FONT SIZE=2><I>
+bektoreak batu eta emaitza </I></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2><I>BATURA</I></FONT></FONT><FONT SIZE=2><I>
+bektorean uzten duena</I></FONT><FONT SIZE=2><I>. Honako hauek dira
+</I></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2><I>V1</I></FONT></FONT><FONT SIZE=2><I>
+eta </I></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2><I>V2</I></FONT></FONT><FONT SIZE=2><I>
+bektoreak:</I></FONT></P>
+<P LANG="eu" STYLE="margin-left: 0.3in; margin-bottom: 0.04in; line-height: 110%">
+<FONT FACE="Courier New, monospace"><FONT SIZE=2><I>V1</I></FONT></FONT><FONT SIZE=2><I>
+= (5, 7, 7, 100, &ndash;20, 5, 5, 5, 5, 5) </I></FONT>
+</P>
+<P LANG="eu" STYLE="margin-left: 0.3in; margin-bottom: 0.04in; line-height: 110%">
+<FONT FACE="Courier New, monospace"><FONT SIZE=2><I>V2</I></FONT></FONT><FONT SIZE=2><I>
+= (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)</I></FONT></P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT SIZE=2>Eragiketa
+hori betetzeko, algoritmo hau erabil daiteke:</FONT></P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<CENTER>
+	<TABLE WIDTH=431 CELLPADDING=5 CELLSPACING=0>
+		<COL WIDTH=420>
+		<TR>
+			<TD WIDTH=420 VALIGN=TOP STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px dashed #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.05in; padding-right: 0in">
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><BR><BR>
+				</P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">(</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">C)</FONT></FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><BR><BR>
+				</P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">for
+				(i=0; i&lt;10; i++) </FONT></FONT>
+				</P>
+				<P LANG="eu" STYLE="margin-top: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">BATURA[i]</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">=</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">V1[i]</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">+</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">V2[i];</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT SIZE=2>Honela
+idatz daiteke algoritmo hori TXORI hizkuntzaz:</FONT></P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.title
+BEKBATU</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">V1:	.value
+5, 7(2), 100, -20, 5(5);</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">V2:	.value
+1(10);</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">BATURA:	.word
+10;	<FONT SIZE=1 STYLE="font-size: 6pt">{BATURA,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">hasieratu</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">gabeko</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">10</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">osagaiko</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bektorea}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.proc
+main</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	mov
+r1, r0	<FONT SIZE=1 STYLE="font-size: 6pt">{hasieratu</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">r1</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">erregistroa,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">indize</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">gisa</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">erabiltzeko}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	movi
+r2, #10	<FONT SIZE=1 STYLE="font-size: 6pt">{10eko</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bat</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">kargatu,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">iterazio</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">kopurua</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">kontrolatzeko}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">for:	sub
+r3, r2, r1</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	beq
+r3, buk	<FONT SIZE=1 STYLE="font-size: 6pt">{egiaztatu</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">for</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">begiztaren</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bukaera}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	ldx
+r4, V1[r1]</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	ldx
+r5, V2[r1]</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	add
+r6, r4, r5</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	stx
+r6, BATURA[r1] <FONT SIZE=1 STYLE="font-size: 6pt">{BATURA[i]</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">=</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">V1[i]</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">V2[i]}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	addi
+r1, r1, #1	<FONT SIZE=1 STYLE="font-size: 6pt">{eguneratu</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">indizea,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">hurrengo</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">osagaiak</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">prozesatzeko}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	jmp
+for	<FONT SIZE=1 STYLE="font-size: 6pt">{atzera</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">joan,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">for</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">begiztaren</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bukaera</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">egiaztatzeko}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">buk:	retm</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.endp
+main</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.end</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT SIZE=2>Aldaketatxo
+bat egin daiteke programan, </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>BATURA</FONT></FONT><FONT SIZE=2>
+bektorearen osagaiak pantailan ikustarazteko, </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>outm</FONT></FONT><FONT SIZE=2>
+agindua erabiliz: </FONT>
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	...</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">buk:	outm
+#10, BATURA	{<FONT SIZE=1 STYLE="font-size: 6pt">edo</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">outm</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">#10,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">@20,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">BATURA</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">aldagaiaren</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">hasierako</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">helbidea</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">20</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">baldin</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bada,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">datu-bloketik</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">abiatuta}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	retm</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	...</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" ALIGN=LEFT STYLE="margin-left: 2.76in; margin-right: 0.02in; margin-bottom: 0.04in; background: #ff9900; border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding-top: 0in; padding-bottom: 0.01in; padding-left: 0in; padding-right: 0in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+Goi-mailako hizkuntzetan, ohikoak dira egitura batzuk aginduen fluxu
+sekuentziala hausteko &mdash;<FONT FACE="Courier New, monospace">if</FONT>
+... <FONT FACE="Courier New, monospace">then</FONT> ... <FONT FACE="Courier New, monospace">else</FONT>
+...&mdash; eta begiztak antolatzeko, hau da, kode zati bat <I>n</I>
+aldiz errepikatzeko &mdash;<FONT FACE="Courier New, monospace">for</FONT>,<FONT FACE="Courier New, monospace">
+</FONT><FONT FACE="Courier New, monospace">while</FONT>, <FONT FACE="Courier New, monospace">do</FONT>,
+...&mdash;. Aurreko adibideetan erabili dugu <FONT FACE="Courier New, monospace">for</FONT>
+egitura, eta, hurrengo hiru adibideetan, gainerako egiturak nola
+itzultzen diren mihiztadura-hizkuntzara azalduko dugu.</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" ALIGN=LEFT STYLE="margin-left: -0.2in; margin-right: 3.37in; text-indent: 0.1in; margin-bottom: 0.04in; background: #ff9900; border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding-top: 0.01in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in; line-height: 110%">
+<FONT COLOR="#ffffff"><FONT SIZE=2><B>2.2.3 Adibidea</B></FONT></FONT></P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT FACE="Courier New, monospace"><FONT SIZE=2><I>If</I></FONT></FONT><FONT SIZE=2><I>
+</I></FONT><FONT SIZE=2><I>... </I></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2><I>then</I></FONT></FONT><FONT SIZE=2><I>
+</I></FONT><FONT SIZE=2><I>... </I></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2><I>else</I></FONT></FONT><FONT SIZE=2><I>
+</I></FONT><FONT SIZE=2><I>... egitura erabiltzeko, honako algoritmo
+hau programatuko dugu:</I></FONT></P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<CENTER>
+	<TABLE WIDTH=416 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES RULES=NONE>
+		<COL WIDTH=198>
+		<COL WIDTH=198>
+		<TR VALIGN=TOP>
+			<TD WIDTH=198 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><BR><BR>
+				</P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT SIZE=1 STYLE="font-size: 8pt">(ADA)</FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><BR><BR>
+				</P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">if
+				X &gt;= Y then</FONT></FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in">
+				<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	HANDIENA</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">:=</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">X;</FONT></FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">else</FONT></FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">HANDIENA</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">:=</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">Y;</FONT></FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">end
+				if;</FONT></FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=198 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><BR><BR>
+				</P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT SIZE=1 STYLE="font-size: 8pt">(C)</FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><BR><BR>
+				</P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">if
+				(X &gt;= Y) </FONT></FONT>
+				</P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">HANDIENA</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">=</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">X;</FONT></FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">else</FONT></FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">HANDIENA</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">=</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">Y;</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT SIZE=2><I>non
+bi zenbaki, </I></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2><I>X</I></FONT></FONT><FONT SIZE=2><I>
+eta </I></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2><I>Y</I></FONT></FONT><FONT SIZE=2><I>,
+konparatzen baitira, eta handiena </I></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2><I>HANDIENA</I></FONT></FONT><FONT SIZE=2><I>
+aldagaian uzten baita.</I></FONT></P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT SIZE=2>Honela
+itzul daiteke algoritmo hori TXORI mihiztadura-hizkuntzara:</FONT></P>
+<P LANG="zxx" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.title
+IF</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">X:	.value
+15;</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">Y:	.value
+16;</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">HANDIENA:.word
+1;</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.proc
+main</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	ld
+r1, X</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	ld
+r2, Y</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	sub
+r3, r1, r2	<FONT SIZE=1 STYLE="font-size: 6pt">{konparatu</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">X</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">eta</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">Y,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">kenketa</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bat</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">eginez</FONT>}</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	bls
+r3, else	<FONT SIZE=1 STYLE="font-size: 6pt">{r3</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">negatiboa</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bada,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">orduan</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">Y&gt;X}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	mov
+r10, r1	<FONT SIZE=1 STYLE="font-size: 6pt">{handiena,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">X,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">r10</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">erregistroan</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">uzten</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">da}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	jmp
+buk</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">else:	mov
+r10, r2	<FONT SIZE=1 STYLE="font-size: 6pt">{handiena,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">Y,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">r10</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">erregistroan</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">uzten</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">da}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">buk:	st
+r10, HANDIENA	<FONT SIZE=1 STYLE="font-size: 6pt">{gorde</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">handiena,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">r10,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">HANDIENA</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">aldagaian}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	retm</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.endp
+main</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.end</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" ALIGN=LEFT STYLE="margin-left: 2.76in; margin-right: 0.02in; margin-bottom: 0.04in; background: #ff9900; border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding-top: 0in; padding-bottom: 0.01in; padding-left: 0in; padding-right: 0in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" ALIGN=LEFT STYLE="margin-left: -0.2in; margin-right: 3.37in; text-indent: 0.1in; margin-bottom: 0.04in; background: #ff9900; border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding-top: 0.01in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in; line-height: 110%">
+<FONT COLOR="#ffffff"><FONT SIZE=2><B>2.2.4 Adibidea</B></FONT></FONT></P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT FACE="Courier New, monospace"><FONT SIZE=2><I>X</I></FONT></FONT><FONT SIZE=2><I>
+eta </I></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2><I>Y</I></FONT></FONT><FONT SIZE=2><I>
+zenbakien zatitzaile komunetan handiena kalkulatzen duen programa
+idatz behar da (X, Y &gt; 0). Adibidea egokia da </I></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2><I>while</I></FONT></FONT><FONT SIZE=2><I>
+kontrol-egitura aztertzeko.</I></FONT></P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT FACE="Courier New, monospace"><FONT SIZE=2>While</FONT></FONT><FONT SIZE=2>
+eta </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>for</FONT></FONT><FONT SIZE=2>
+kontrol-egiturak oso antzekoak dira. Biak begiztak dira, eta beraz,
+hainbat aldiz errepikatzen dute kode zati bat. Oro har, iterazio
+kopurua aurretik ezagutzen denean, </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>for</FONT></FONT><FONT SIZE=2>
+egitura erabiltzen da, eta, ezagutzen ez denean, berriz, </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>while</FONT></FONT><FONT SIZE=2>
+egitura. </FONT>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT SIZE=2>Adibideari
+ekiteko, hau da </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>X</FONT></FONT><FONT SIZE=2>
+eta </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>Y</FONT></FONT><FONT SIZE=2>
+zenbakien zatitzaile komunetan handiena kalkulatzeko algoritmo bat:</FONT></P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<CENTER>
+	<TABLE WIDTH=415 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES>
+		<COL WIDTH=405>
+		<TR>
+			<TD WIDTH=405 VALIGN=TOP STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P LANG="zxx" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><BR><BR>
+				</P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">(</SPAN></FONT><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">C)</SPAN></FONT></P>
+				<P LANG="zxx" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><BR><BR>
+				</P>
+				<P LANG="zxx" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">while
+				(X != Y)</FONT></FONT></P>
+				<P LANG="zxx" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">{</FONT></FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">	</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">if</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">(X</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">&gt;</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">Y)</SPAN></FONT></FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">		</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">X</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">=</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">X</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">-</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">Y;</SPAN></FONT></FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">	</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">else</SPAN></FONT></FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">		</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">Y</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">=</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">Y</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">-</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">X;</SPAN></FONT></FONT></P>
+				<P LANG="zxx" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=2>}</FONT></FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">ZKH</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">=</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="zxx">X;		</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 6pt"><SPAN LANG="zxx">/*ZKH</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 6pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 6pt"><SPAN LANG="zxx">=</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 6pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 6pt"><SPAN LANG="zxx">X</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 6pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 6pt"><SPAN LANG="zxx">=</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 6pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 6pt"><SPAN LANG="zxx">Y</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 6pt"><SPAN LANG="zxx">
+				</SPAN></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 6pt"><SPAN LANG="zxx">*/</SPAN></FONT></FONT></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT SIZE=2>Emaitza,
+zatitzaile komunetan handiena, </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>ZKH</FONT></FONT><FONT SIZE=2>
+aldagaian utziko da. </FONT>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.title
+WHILE</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">X:	.value
+12;</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">Y:	.value
+18;</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">ZKH:	.word
+1;</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.proc
+main</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	ld
+r1, X	<FONT SIZE=1 STYLE="font-size: 6pt">{r1-ek</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">X-ren</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">papera</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">betetzen</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">du}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	ld
+r2, Y	<FONT SIZE=1 STYLE="font-size: 6pt">{eta</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">r2-k,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">Y-rena}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">while:	sub
+r3, r1, r2	<FONT SIZE=1 STYLE="font-size: 6pt">{begiztatik</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">ateratzeko</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">baldintza</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">X-Y}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	beq
+r3, buk	<FONT SIZE=1 STYLE="font-size: 6pt">{r3=0</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bada,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">X=Y,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">kalkulua</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bukatu</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">da}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	bls
+r3, txiki	<FONT SIZE=1 STYLE="font-size: 6pt">{r3</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">negatiboa</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">da,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">beraz</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">X&lt;Y}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	sub
+r1, r1, r2	<FONT SIZE=1 STYLE="font-size: 6pt">{then</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">adarra:</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">X&gt;Y;</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">beraz,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">eguneratu</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">X}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	jmp
+while	<FONT SIZE=1 STYLE="font-size: 6pt">{jarraitu</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">begiztarekin}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">txiki:	sub
+r2, r2, r1	<FONT SIZE=1 STYLE="font-size: 6pt">{else</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">adarra:</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">X&lt;Y;</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">beraz,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">eguneratu</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">Y}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	jmp
+while	<FONT SIZE=1 STYLE="font-size: 6pt">{jarraitu</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">begiztarekin}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">buk:	st
+r2, ZKH	<FONT SIZE=1 STYLE="font-size: 6pt">{bukatu</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">da</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">kalkulua:</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">idatzi</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">emaitza</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">ZKH</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">aldagaian}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	retm	<FONT SIZE=1 STYLE="font-size: 6pt">{nahi</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">izanez</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">gero,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">aurreko</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">algoritmoarekin</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bat</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">etortzeko,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">X</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">eta</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">Y</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">aldagaiak</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">ere</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">egunera</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">daitezke}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.endp
+main</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.end</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" ALIGN=LEFT STYLE="margin-left: 2.76in; margin-right: 0.02in; margin-bottom: 0.04in; background: #ff9900; border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding-top: 0in; padding-bottom: 0.01in; padding-left: 0in; padding-right: 0in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" ALIGN=LEFT STYLE="margin-left: -0.2in; margin-right: 3.37in; text-indent: 0.1in; margin-bottom: 0.04in; background: #ff9900; border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding-top: 0.01in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in; line-height: 110%">
+<FONT COLOR="#ffffff"><FONT SIZE=2><B>2.2.5 Adibidea</B></FONT></FONT></P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT SIZE=2><I>Azken
+adibide honetan, </I></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2><I>do</I></FONT></FONT><FONT SIZE=2><I>
+(edo </I></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2><SPAN LANG="en-US"><I>loop</I></SPAN></FONT></FONT><FONT SIZE=2><I>
+edo </I></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2><SPAN LANG="en-US"><I>repeat</I></SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=2><I>,</I></FONT></FONT><FONT SIZE=2><I>
+hizkuntzaren arabera</I></FONT><FONT SIZE=2><I>)</I></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2><I>
+</I></FONT></FONT><FONT SIZE=2><I>izeneko kontrol-egitura erabiliko
+da. Adibide gisa, ondo sartu arte, pasahitza eskatzen duen programa
+idatziko da. </I></FONT>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT FACE="Courier New, monospace"><FONT SIZE=2>Do</FONT></FONT><FONT SIZE=2>
+kontrol-egitura ere </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>while</FONT></FONT><FONT SIZE=2>
+eta </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>for</FONT></FONT><FONT SIZE=2>
+egituren antzekoa da. Hau da desberdintasun bakarra: iterazio kopurua
+kontrolatzen duen aldagaia begiztaren bukaeran aztertzen da, ez
+hasieran. Ondorioz, gutxienez, behin exekutatzen da begiztaren
+gorputza, lehenengo egiaztatzea egin baino lehen. Beraz, adi egon
+behar da: </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>do</FONT></FONT><FONT SIZE=2>
+egitura eta </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>while/for</FONT></FONT><FONT SIZE=2>
+egiturak ez dira beti baliokideak.</FONT></P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT SIZE=2>Honako
+hau da </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>do</FONT></FONT><FONT SIZE=2>
+begiztaren egitura:</FONT></P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<CENTER>
+	<TABLE WIDTH=416 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES>
+		<COL WIDTH=406>
+		<TR>
+			<TD WIDTH=406 VALIGN=TOP STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><BR><BR>
+				</P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT SIZE=1 STYLE="font-size: 8pt">(C)</FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><BR><BR>
+				</P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">do
+				</FONT></FONT>
+				</P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">{</FONT></FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">begiztaren</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">gorputza;</FONT></FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">indizeak</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">eguneratu;</FONT></FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">}</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">while</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">(baldintza);</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT FACE="Courier New, monospace"><FONT SIZE=2>Do</FONT></FONT><FONT SIZE=2>
+begiztaren adibide praktiko bat ikustearren, honako eragiketa hau
+programatuko dugu: ondo sartu arte pasahitza eskatu behar da.</FONT></P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT SIZE=2>Hau
+izan daiteke algoritmoa:</FONT></P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<CENTER>
+	<TABLE WIDTH=413 CELLPADDING=5 CELLSPACING=0 FRAME=HSIDES>
+		<COL WIDTH=403>
+		<TR>
+			<TD WIDTH=403 VALIGN=TOP STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in">
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><BR><BR>
+				</P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT SIZE=1 STYLE="font-size: 8pt">(C)</FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><BR><BR>
+				</P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in"><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">do
+				{</FONT></FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in">  
+				   <FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">printf(</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">&ldquo;</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">Sartu</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">pasahitza:</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">\n</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">&rdquo;</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">);</FONT></FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in; margin-bottom: 0.01in">  
+				   <FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">scanf</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">(</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">&ldquo;</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">%d</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">&rdquo;</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">,</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">&amp;n);</FONT></FONT></P>
+				<P LANG="eu" STYLE="margin-top: 0.01in">      <FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">}while</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">
+				</FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">(n==clave);</FONT></FONT></P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT SIZE=2>Eta,
+mihiztadura-hizkuntzaz, honela idatz daiteke:</FONT></P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><BR><BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.title
+repeat</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">kodea:	.value
+12;</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.proc
+main</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	ld
+r2, kodea	<FONT SIZE=1 STYLE="font-size: 6pt">{kargatu,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">r1</FONT><FONT SIZE=1 STYLE="font-size: 4pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">erregistroan,</FONT><FONT SIZE=1 STYLE="font-size: 4pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">kodea</FONT><FONT SIZE=1 STYLE="font-size: 6pt">}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">do:	outm
+&ldquo;Sartu pasahitza&rdquo;	<FONT SIZE=1 STYLE="font-size: 6pt">{pantailaratu</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">pasahitza</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">eskatzen</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">duen</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">esaldia}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	in	<FONT SIZE=1 STYLE="font-size: 6pt">{sartutako</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">balioa</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">jaso,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">r1</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">erregistroan</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">jasotzen</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">da}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	sub
+r3, r1, r2	<FONT SIZE=1 STYLE="font-size: 6pt">{bi</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">balioen</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">arteko</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">kenketa</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">r3</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">erregistroan</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">jaso}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	bne
+r3, do	<FONT SIZE=1 STYLE="font-size: 6pt">{r3ren</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">balioa</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">0ren</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">desberdina</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">bada,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">zenbakiak</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">ez</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">dira</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">berdinak</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">eta</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">berriro</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">eskatu</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">beharko</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">da</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">pasahitza.</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">Horretarako,</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">do</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">etiketara</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">jauzi</FONT><FONT SIZE=1 STYLE="font-size: 6pt">
+</FONT><FONT SIZE=1 STYLE="font-size: 6pt">eginez}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">	retm	<FONT SIZE=1 STYLE="font-size: 6pt">{amaitu}</FONT></FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.endp
+main</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<FONT FACE="Courier New, monospace"><FONT SIZE=1 STYLE="font-size: 8pt">.end</FONT></FONT></P>
+<P LANG="zxx" STYLE="margin-left: 1.87in; text-indent: -1.87in; margin-bottom: 0in; background: #dddddd; line-height: 0.07in">
+<BR>
+</P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" STYLE="margin-bottom: 0.04in; line-height: 110%"><FONT SIZE=2>Adi:
+</FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>do</FONT></FONT><FONT SIZE=2>
+begizta </FONT><FONT SIZE=2><I>n</I></FONT><FONT SIZE=2> aldiz
+errepikatzen denean, </FONT><FONT SIZE=2><I>n</I></FONT><FONT SIZE=2>
+aldiz egiaztatzen da irteera-baldintza; ordea, </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>for</FONT></FONT><FONT SIZE=2>
+eta </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>while</FONT></FONT><FONT SIZE=2>
+begizten kasuan, </FONT><FONT SIZE=2><I>n</I></FONT><FONT SIZE=2>+1
+aldiz egiaztatu behar da baldintza hori. Halaber, </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>do</FONT></FONT><FONT SIZE=2>
+begiztetan ohikoa da agindu gutxiago erabili behar izatea, </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>for</FONT></FONT><FONT SIZE=2>
+eta </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>while</FONT></FONT><FONT SIZE=2>
+begiztekin alderatuta, lan bera egiteko. Hori guztia kontuan hartuta,
+azkarragoa ohi da </FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>do</FONT></FONT><FONT SIZE=2>
+egitura.</FONT></P>
+<P LANG="eu" STYLE="text-indent: 0.1in; margin-bottom: 0.04in; line-height: 110%">
+<BR><BR>
+</P>
+<P LANG="eu" ALIGN=LEFT STYLE="margin-left: 2.76in; margin-right: 0.02in; margin-bottom: 0.04in; background: #ff9900; border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding-top: 0in; padding-bottom: 0.01in; padding-left: 0in; padding-right: 0in; line-height: 110%">
+<BR><BR>
+</P>
+</BODY>
+</HTML>

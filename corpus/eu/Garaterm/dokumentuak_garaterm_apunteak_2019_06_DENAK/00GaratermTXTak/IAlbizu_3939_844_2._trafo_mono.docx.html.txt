@@ -1,0 +1,405 @@
+
+
+
+
+
+
+
+
+
+
+
+
+                Energia Berriztagarrietan Ingeniaritzako Gradua
+                              Makina Elektrikoak
+                                    2014/15
+
+                        2._Transformadore_monofasikoak
+
+2.1. Sarrera
+Transformadorea zirkuitu magnetiko bat eta bi harilez osaturiko makina
+elektriko estatikoa da
+*
+Ahalik eta potentzia elektriko gutxiena galduz, tentsioa eta intentsitatea
+transformatzea da bere funtzioa
+
+
+
+
+V2> V1bada, transformadorea jasotzailea da. Hau horrela denean, I2< I1
+V2< V1bada, transformadorea eraislea da. Hau horrela denean, I2> I1
+Energiaren garraioan energia galerak intentsitatearengatik ematen dira.
+Intentsitatea murriztuz, galerak murrizten dira. Horregatik, energia
+elektrikoaren sorgailuen irteeran tentsioa igo eta intentsitatea murrizten
+duten transformadoreak erabiltzen dira. Kontsumitzaileak, segurtasunagatik,
+behe-tentsioan kontsumitzen du. Horregatik, sare elektrikoa eta
+kontsumitzailearen artean, tentsioa murrizten duten transformadoreak kokatzen
+dira.
+Ezaugarri-plaka
+3300/220 V
+3,03/45,45 A
+10 kVA
+50 Hz
+εzl= % 5
+3300/220 V primarioko eta sekundarioko tentsio izendatuak dira:
+    * V1N=3300 V
+    * V2N=220 V
+Tentsio izendatua transformadorearen funtzionamendu egokia bermatuko duen
+tentsioa da.
+3,03/45,45 A primarioko eta sekundarioko intentsitate izendatuak dira:
+    * I1N=3,03 A
+    * I2N=45,45 A
+Intentsitate izendatua transformadoreak kaltetu gabe jasan dezakeen gehienezko
+intentsitatea da.
+10 kVA transformadorearen itxurazko potentzia izendatua da
+    * SN=10 kVA
+Transformadorean zehar, tentsioa izendatua dela suposatuz, transformadorea
+kaltetu gabe pasa daitekeen itxurazko potentzia irudikatzen du. Kasu honetan,
+ez da bereizten primarioko eta sekundarioko potentzia izendatua, bientzat
+berdina baita eta aipaturiko transformadorearen potentzia izendatua da:
+    * S1N= V1NI1N=3300 . 3,03=10 kVA
+    * S2N= V2NI2N=220 . 45,45=10 kVA
+Transformadoreak korrontea alternoan egiten du lan. Europan korronte
+alternoaren maiztasuna 50 Hz da.
+εzl= % 5, zirkuitulaburreko tentsioaren portzentajea da. Sekundarioa
+zirkuitulaburrean egonda, intentsitatea izendatua izan dadin, primarioko
+tentsioak izan behar duen balioa zehazten du. Adibide honetan, 3300 V-en %5a
+da, beraz 165 V.
+2.2. Transformadore errealaren funtzionamendua
+PrimarioaV1tentsio alternoaren bidez elikatzean, nukleo magnetikoanΦmfluxu
+alternoa agertuko da. Fluxu honek primarioanE1aurkako indar magnetoeragilea
+induzitzen du eta sekundarioanE2indar magnetoeragilea.
+Primarioan ekuazio hau betetzen da:
+V1=(R1+jX1)·I1+E1
+Sekundarioan berriz, honako hau:
+E2=(R2+jX2)·I2+V2
+Sekundarioak karga duenean,I2≠0, primarioak xurgatzen duenI1intentsitatea:
+I1=I10+I2/a
+I10: Hutseko intentsitatea (kargarik gabe)
+a: Transformazio-erlazioa (N1/N2)
+2.3. Oinarrizko ekuazioak
+Eman dezagun transformadore ideal bat dugula: galerarik ez dago nukleo
+magnetikoan eta harilak ez du ez erresistentziarik ezta induktantziarik ere.
+Primarioan v1tentsio alterno sinusoidala ezartzen bada, honen ondoriozfluxu
+magnetiko sinusoidala agertuko da nukleo magnetikoan:
+
+
+Fluxu honek primarioko N1espirako harilean e1aurkako indar elektroeragilea
+induzitzen du:
+
+
+Bere E1balio efikaza:
+
+
+Sekundarioan N2espirako harila badago, fluxuak e2indar elektroeragilea
+induzitzen du:
+
+
+Bere E2balio efikaza:
+
+
+
+
+Primario eta sekundarioko harilen tentsioen arteko erlazioa:
+
+
+a: transformazio-erlazioa
+Bektorialki adierazita:
+                                       *
+Transformadore erreal bat hutsean dagoenean, V1eta E1ez dira berdin-berdinak
+hutseko korrontea dela eta, baina hau oso txikia denez, elkarren artean asko
+hurbiltzen dira. Ondorioz, esan daiteke:
+
+
+V10>V20bada, transformadore eraislea da.
+V10<V20bada, transformadore jasotzailea da.
+V10=V20bada, transformadore isolatzailea da.
+Primarioko tentsio erorketa baztertuz:
+
+
+
+
+Ondorioz, fluxua konstante manten dadin, tentsio eta maiztasunaren arteko
+erlazioa konstante mantendu behar da.
+2.4. Hutseko korrontea
+Hutseko korrontea, primarioak xurgatzen duen korrontea da (I1=I10), sekundarioa
+hutsean dagoenean (I2=0).
+*
+Hutseko korronteak bi osagai dauzka:
+    * IFe: Burdineko galeren intentsitatea (E1tentsioarekin fasean)
+    * Im: Magnetizazio intentsitatea (E1tentsioarekiko perpendikularra)
+                                       *
+Transformadore monofasiko batean:
+
+
+
+
+
+
+
+
+2.5. Zirkuitu baliokidea
+Zirkuitu baliokideak transformadorearen portaera irudikatu nahi du (tentsio-
+jaitsiera, potentzia-galerak…). Transformadoreak bi zirkuitu elektriko banandu
+ditu (primariokoa eta sekundariokoa). Zirkuitu baliokideak praktikan
+erabiltzeko erraza izan dadin bi zirkuitu elektrikoak bakar batean eman beharko
+lituzke. Horretarako, haril batean (primarioan edo sekundarioan) magnitude
+elektrikoak aldatu egingo dira. Horrela, eman dezagun transformadorearen
+zirkuitu baliokidea primariotik begiratuta lortu nahi dela. Horretarako,
+primarioko magnitudeak dauden bezala utziko dira eta sekundariokoak aldatu
+egingo dira. Sekundarioko magnitudeak, transformatuta (komatxo batekin
+adieraziko da):
+                                    V’2=aV2
+                                    E’2=aE2
+                                   I’2=I2/a
+                                   Z’2= a2Z2
+Horrela, primarioko harilaren A-B muturretako E1tentsioa eta transformaturiko
+sekundarioko harilaren a-b muturretako E’2tentsioak balio berdina dute eta bi
+zirkuitu elektrikoak bakar batean jar daitezke.
+*
+Hutseko intentsitatea irudikatzeko, G0konduktantzia erabiliko da burdineko
+galerak irudikatzeko eta B0suszeptantzia magnetizazioa irudikatzeko.
+
+
+
+
+*
+Zirkuitu baliokidea sinplifikatu daiteke kontuan hartuz:
+
+
+
+
+Ondorioz, paraleloko adarra ezkerrera mugitu daiteke, zirkuitua sinplifikatuz
+eta kalkuluak erraztuz.
+*
+
+
+
+
+2.6. Saiakuntzak
+2.6.1. Hutseko saiakuntza
+Primarioa tentsio izendatuan elikatzen da eta sekundarioa hutsean uzten da:
+
+
+
+
+*
+Egiten diren neurketak:
+    * Tentsioa: V10
+    * Intentsitatea: I10
+    * Potentzia aktiboa: P0
+
+
+
+
+Transformadorea hutsean dagoenean, potentzia aktiboa burdinako galerei
+dagokiona da: P0= PFe. Ondorioz, G0parametroa kalkula daiteke:
+
+
+
+
+B0kalkulatzeko, Y0admitantziaren balioa kalkulatuko da lehenbizi:
+
+
+
+
+
+
+Intentsitateak:
+
+
+
+
+
+
+Parametroak kalkulatzeko, beste modu batera ere egin daiteke, lehenbizi
+intentsitateak kalkulatuz:
+
+
+
+
+
+
+
+
+
+
+Kalkulua ondo dagoela egiaztatzeko:
+
+
+2.6.2. Zirkuitulaburreko saiakuntza
+Sekundarioa zirkuitulaburrean jartzen da eta primarioa
+tentsiomurriztuanelikatzen da. Intentsitate izendatua izatea egiten duen
+tentsioaren balioa aukeratzen da:
+
+
+
+
+
+
+*
+Egiten diren neurketak:
+    * Tentsioa: V1zl
+    * Intentsitatea: I1zl
+    * Potentzia aktiboa: Pzl
+
+
+
+
+Tentsio murriztua dela eta, burdinako galerak oso txikiak dira, eta potentzia
+aktiboa harilen erresistentzian galdutakoari dagokiona da: Pzl= PJ1+PJ2.
+Ondorioz, Rbparametroa kalkula daiteke:
+
+
+
+
+Xbkalkulatzeko, Zbinpedantziaren balioa kalkulatuko da lehenbizi:
+
+
+
+
+
+
+Parametroak kalkulatzeko, beste modu batera ere egin daiteke, lehenbizi
+intentsitateak kalkulatuz:
+
+
+
+
+
+
+
+
+Kalkulua ondo dagoela egiaztatzeko:
+
+
+Sarreran aipatu den bezala,εzlzirkuitulaburreko tentsioaren portzentajea da.
+Sekundarioa zirkuitulaburrean egonda, intentsitatea izendatua izan dadin,
+primarioko tentsioak izan behar duen balioa zehazten du.
+
+
+
+
+
+
+
+
+2.7. Errendimendua
+Errendimenduak irudikatzen du primariotik sartzen den potentziatik zenbat
+irteten den sekundariotik. Beste modu batera esanda, irudikatzen du primariotik
+sartzen den potentziatik zenbat galtzen den bidean, transformadorearen galerak
+direla eta. Transformadoreko galerak burdinako galerak eta hariletako
+erresistentzietako Joule galerak dira.
+
+
+Errendimendua ez da balio finkoa, transformadoretik igarotzen den
+intentsitatearen araberakoa baita.
+Intentsitateak balio izendatuarekiko duen balio erlatiboa irudikatzeko i karga-
+indizea erabiltzen da:
+
+
+Adibidez, I1N=200 A bada, eta transformadorera sartzen den I1intentsitatea 86 A
+bada, i karga-indizea 0,43 da. Beraz, intentsitatea izendatua denean karga-
+indizea 1 da eta intentsitatea izendatuaren erdia denean 0,5.
+Karga-indizea, intentsitatearentzat ez ezik, S itxurazko potentziarentzat ere
+erabiltzen da esanahi berdinarekin. Hau horrela da, tentsioa balio izendatutik
+asko aldentzen ez delako normalean.
+
+
+Transformadorearen errendimendua i karga-indizearen eta cosφpotentzia-
+faktorearen arabera adierazi daiteke.
+Horretarako, lehenbizi P2sekundariotik irteten den potentzia aktiboa, i karga-
+indizearen eta cosφpotentzia-faktorearen arabera adieraziko da.
+
+
+Burdinako galerak tentsioaren mendekoak dira eta ondorioz ez dira asko
+aldatzen. Burdinako galerak tentsio izendatuan egiten den hutseko saiakuntzan
+lorturiko baliora hurbil daiteke.
+
+
+Joule galerak, i karga-indizea eta intentsitate izendatuarekin dauden galeren
+arabera adierazi daiteke. Intentsitate izendatuarekin dauden galerak
+zirkuitulaburreko saiakuntzan lortzen direnak dira.
+                                       =
+Horrela geratzen zaigu errendimenduaren adierazpena i karga-indizearen eta
+cosφpotentzia-faktorearen arabera:
+
+
+Potentzia-faktoreari dagokionez, bere balioa zenbat eta handiagoa izan, orduan
+eta handiagoa izango da errendimendua. Honen arrazoia da galera jakin
+batzuentzat, orduan eta P2potentzia aktibo gehiago igaroko dela sekundariora
+cosφzenbat eta handiagoa izan.Potentzia-faktorearen balio maximoa cosφ=1 denez,
+hau izango da errendimendu maximoa emango duen balioa.
+Karga-indizea igotzean,P2potentzia aktiboa modu proportzionalean igotzen da,
+baina Joule galerak karga-indizearen karratuarekiko proportzionalak dira.
+Beraz, karga-indizea handia izatea txarra da errendimenduarentzat Joule galeren
+eragina indartzen delako. Alderantziz, karga-indizea txikia denean, Joule
+galerak txikiak izango dira, baina sekundariora iristen den P2potentzia aktiboa
+ere bai eta ondorioz, finkoak diren burdinako galeren eragina indartu egingo
+da. Ondorioz, errendimendu maximoa izatea egingo duen karga-indizearen balioa
+Joule galeraren eta burdinako galeren balioak orekatzen dituena izango da.
+
+
+
+
+
+
+
+
+Karga-indize horrekin ematen diren Joule galerak kalkula daitezke eta ikusten
+da burdinako galeren balio berdina daukala.
+
+
+Ondorioz, errendimendu maximoa burdinako galeren arabera adieraz daiteke modu
+honetan:
+
+
+Beste alde batetik, kontuan izan behar da intentsitatea bere balio izendatua
+baino berdina edo txikiagoa izango dela. Hau da, karga-indizea 1 edo txikiagoa
+izan ohi da. Ondorioz, errendimendu maximoa ere tarte horretan egotea komeni
+da. Beraz, ondo diseinatutako transformadore batean burdinako galerak Joule
+galera izendatuak baino txikiagoak izan behar dira:
+
+
+2.8. Tentsio-erregulazioa
+Tentsio-erregulazioa bi eratara defini daiteke, tentsio konstantea primarioan
+edo sekundarioan dagoen arabera.
+Primarioan tentsio konstantea mantentzen bada, tentsio-erregulazioak
+sekundarioa hutsean egotetik kargan egotera aldatzean sekundarioan ematen den
+tentsio-jaitsieraren portzentajea irudikatzen du.
+
+
+Aldiz, tentsioa sekundarioan konstante dela suposatuz, tentsio-erregulazioak
+sekundarioa hutsean egotetik kargan egotera aldatzean primarioan eman behar den
+tentsio-igoeraren portzentajea irudikatzen du.
+
+
+Bi kasuetan, tentsio-erregulazioaren balioa berdina da karga jakin batentzat.
+Tentsio-erregulazioa adierazteko beste koefiziente bat u tentsioaren
+aldakuntza-koefizientea deritzona da:
+
+
+2.9. Burdinako galerak
+Histeresiak eragindako galerak
+Korronte alternoan, material ferromagnetiko batean, korrontearen i
+intentsitatearen balio jakin batentzat, B indukzio magnetikoaren balioa ez da
+berdina intentsitatea igotzen ari denean eta jaisten ari denean. Honi
+histeresi-zikloa esaten zaio.
+Potentzia galerak ematen dira eta hauek zikloaren barneko azalerarekiko
+proportzionalak dira
+                                       *
+Korronte parasitoak edo Foucault-en korronteak
+Fluxu aldakor bat dagoenez, Lenz-en legearen arabera, materialaren barnean
+indar elektroeragileak induzituko dira, zeinek, materiala metalikoa denez,
+korronte parasito edo Foucault-en korronte deritzenak eragingo baitituzte.
+Galerak minimizatzeko, pieza bakarreko nukleoa egin beharrean, elektrikoki bata
+bestetik isolaturiko xaflak pilatuz osatutako nukleo bat egiten da.
+                                       *
+
+
+
+
+*Irudiak liburu honetatik hartu dira: “Makina Elektrikoak. Oinarrizko
+kontzeptuak eta aplikazio-ariketak”, J. Mazon, J.F. Miñambres, M.A. Zorrozua,
+G. Buigues, V. Valverde, UPV/EHU, 2012.
+                                      15

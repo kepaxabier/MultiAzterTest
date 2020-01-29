@@ -1,0 +1,752 @@
+
+
+
+
+1 Espazio Topologikoak
+Aurreko ikasturtean ikusi duzuenez, espazio euklidearretan jarraitutasunari
+buruz hitz egin ahal izateko, nahikoa da bi espazioen irekiak zein diren
+jakitea. Gogoratu:
+erako aplikazio bat jarraitua da baldin eta soilik baldin bigarren espazioaren
+edozein irekiren aurreirudia lehenengo espazioan irekia bada.
+Hori dela eta, jarraitutasunari buruz hitz egiteko, zera pentsa dezakegu:
+ha­sie­rako testuingurua ez direla zertan espazio euklidearrak izan behar,
+baizik eta irekien familia zehaztuta duen edozein espazio.
+Gogora ditzagun espazio euklidearretako irekien propietate hauek:
+[-]
+1. Multzo hutsa eta irekiak dira.
+2. Irekien bildura (edozein! ) irekia da.
+3. Irekien ebakidura finitua irekia da.
+Orain demagun edozein multzo dugula eta bertan aurreko hiru propietateak
+betetzen dituen azpimultzoen familia bat daukagula. Familia hori irekien
+familiatzat hartuz, oraindik ere definitu ahal izango genituzke aurreko
+kurtsoan ikusitako hainbat nozio, jarraitutasuna, adibidez. Eta horixe da
+irakasgai honetan egingo duguna.
+Irekien familiak jarraitutasuna zehazten duenez eta ondorioz itxura ere bai,
+irekiek topologia (= itxuraren zientzia) bat osatzen duela esaten da. Guretzat,
+beraz, “Topologia"  irakasgaiaren izena izateaz gain, kurtsoan zehar erabiliko
+dugun oinarrizko nozioa da.
+Lehenengo gai honetan irakasgaiaren oinarrizkoa kontzeptuak aurkeztuko ditugu:
+topologia, irekiak, ireki-oinarriak, azpionarriak, inguruneak eta ingurune-
+oinarriak. Horrez gain, espazio topologiko berezi batzuk arretaz aztertuko
+ditugu: espazio metrikoak.
+ 1.1 Definizioa eta zenbait adibide
+Definizioa 1Izan bedi X multzoa eta τ⊆P(X). τ X-ren gainean
+definitutakotopologiadela esango dugu baldin eta ondoko hiru axiomak betetzen
+baditu:
+[]
+1. ∅,X∈τ.
+2. τ-ren elementuren edozein familiafiniturenebakidura τ-n dago.
+3. τ-ren elementuren edozein familiaren bildura τ-n dago.
+τ X-ren gainean definitutako topologia emanda, (X,τ) bikoteariespazio
+topologikoderitzo.
+Topologiaren elementuakazpimultzo irekiakizango dira.
+Adibideak 2
+[(i)]
+1. espazio euklidearrean azpimultzo irekien familia hartuz gero, -ren gainean
+definitutako topologia bat izango dugu. Topologia honi ohiko topologia deritzo
+eta idatziko dugu.
+2. Izan bedi X multzoa. topologia diskretua da.
+3. Izan bedi X multzoa. topologia indiskretua da.
+4. Izan bedi X={a,b}. Sierpinski-ren topologia da.
+5. Izan bedi X multzo infinitua.
+topologiari topologia kofinitua deritzo.
+
+6. Izan bedi X multzo ez-kontagarria.
+topologiari topologia kokontagarria deritzo.
+
+7. Izan bitez X multzoa eta A.
+topologiari topologia A-sartuta deritzo.
+
+8. Izan bitez X multzoa eta A.
+topologiari topologia A-baztertuta deritzo.
+
+9. topologiari Kolmogorov-en topologia deritzo. Kolmogorov-en zuzena izango da.
+10. topologiari Scattered topologia deritzo. Scattered zuzena izango da.
+Definizioa 3Izan bitez eta X-ren gainean definitutako bi topologia.baino
+finagoadela esango dugu bada.
+etakonparagarriakdirela esango dugu baldin eta edo baino finagoa bada.
+
+1.2 Multzo irekiak eta itxiak
+Definizioa 4Izan bitez (X,τ) espazio topologikoa. Fazpimultzo itxiadela esango
+dugu bere osagarria, X−F, irekia bada.
+(X,τ) espazio topologikoaren itxien familia normaleanCidatziko dugu, hau da
+C={F:X−F∈τ}.
+Hortaz, topologia bat azpimultzo itxien familiaren bidez ere zehaztu daiteke,
+horretarako osa­ga­rri­ak hartzea besterik ez baitago.
+Oharra 5 Oso errore tipikoa daC=P(X)−τ betetzen dela pentsatzea, hau da,
+azpimultzo bat itxia dela baldin eta irekia ez bada. Kontuz!
+Teorema 6 (X,τ) espazio topologikoan azpimultzo itxiek ondoko propietateak
+betetzen dituzte:
+∅ eta X itxiak dira.
+Azpimultzo itxien ebakidura azpimultzo itxia da.
+Azpimultzo itxien bildura
+finituaazpimultzo itxia da.
+Adibideak 7
+[(i)]
+1. bada, orduan .
+2. bada, orduan .
+3. bada, orduan .
+4. bada, orduan .
+5. bada, orduan .
+6. bada, orduan .
+7. bada, orduan .
+8. bada, orduan .
+9. bada, orduan .
+
+ 1.3 Ireki-oinarriak eta azpioinarriak
+Batzuetan zaila da topologia baten ireki guztiak deskribatu ahal izatea. Hori
+dela eta, ondoko kontzeptua oso lagungarria da:
+Definizioa 8 Izan bedi (X,τ) espazio topologikoa eta β⊆τ. β τ-renireki-
+oinarriadela esango dugu baldin eta τ-ren edozein ireki ez-huts β-ren
+elementuren bildura bada.
+β-ren elementuakoinarriko irekiakizango dira.
+Oharra 9 β τ-ren ireki-oinarria bada eta β⊆β'⊆τ bada, orduan β' ere τ-ren
+ireki-oinarria da.
+ Proposizioa 10 β⊆τ azpifamilia τ-ren ireki-oinarria da baldin eta soilik
+baldin U∈τ eta x∈U guztietarako, existitzen bada non eta diren.
+Beste modu batean idatzita:
+Teorema 11Izan bitez X multzoa eta β⊆P(X). β X-ren gainean definitutako
+topologiaren baten ireki-oinarria izango da baldin eta hurrengo bi propietate
+hauek betetzen baditu:
+B
+∈β∪B=X,
+ eta badira, orduan existitzen da non eta den.
+β oinarriak sortutako topologia ondokoa izango da:
+Oharra 12Oso garrantzitsua da bereiztea noiz erabili behar den aurreko teorema
+eta noiz proposizioa.
+Proposizioaren kasuan τ topologiaaldez aurretik ezaguna daeta horren
+azpifamilia bat ireki-oinarria izateko zer bete behar duen aztertzen da.
+Bigarren kasuan beste kontu bat aztertzen da; azpimultzoen familia bat
+emandatopologiaren batenireki-oinarria izateko bete behar dituen baldintzak
+agertzen dira. Are gehiago, baldintzak betetzen direnean topologi zehazteko
+modua ematen digu.
+Adibideak 13
+[(i)]
+1. τ bera τ-ren ireki-oinarria da.
+2. -n hurrengo familiak ohiko topologiaren ireki-oinarriak dira:
+,
+,
+.
+3. β={{x}:x∈X} -ren ireki-oinarria da.
+4. β={X} -ren ireki-oinarria da.
+5. β={A∪{x}:x∈X} -ren ireki-oinarria da.
+6. β={{x}:x∉A}∪{X} -ren ireki-oinarria da.
+7. familia R-ren gainean definitutako topologia baten ireki-oinarria da. -
+k sortutako topologiari Sorgenfrey-ren topologia deritzo eta idatziko dugu.
+espazio topologikoa Sorgenfrey-ren zuzena izango da.
+
+
+Definizioa 14Izan bitez eta X-ren gainean definitutako ireki-oinarriak eta eta
+beraiek sortutako topologiak.baino finagoadela esango dugu bada.
+etabaliokideakdirela esango dugu badira.
+Teorema 15Izan bitez X multzoa eta eta X-ren gainean definitutako ireki-
+oinarriak. baino finagoa da baldin eta soilik baldin oinarriko ireki
+guztietarako eta guztietarako, existitzen bada non eta diren.
+Adibideak 16
+[(i)]
+1. baino finagoa da.
+2. eta baliokideak dira.
+
+Definizioa 17 Izan bitez (X,τ) espazio topologikoa eta σ⊆τ. σ τ-
+renazpioinarriadela esango dugu baldin eta σ-ren elementuen ebakidura finitu
+guztiek τ-ren ireki-oinarria osatzen badute, hau da:
+τ-ren ireki-oinarria bada.
+σ-ren elementuakazpioinarriko irekiakizango dira.
+Adibideak 18
+[(i)]
+1. σ={(−∞,a):a∈R}∪{(b,∞):b∈R} -ren azpioinarria da.
+2. σ={(−∞,a]:a∈R}∪{[b,∞):b∈R} -ren azpioinarria da.
+
+
+ 1.4 Inguruneak eta ingurune-oinarriak
+Atal honetan topologiak zehazteko beste modu bat ikusiko dugu. Zentzu batean
+hau da modurik naturalena topologiak deskribatzeko; espazioko puntu bakoitzaren
+inguruan hurbiltasuna zehaztea. Horrexegatik topologia bat inguruneen bidez
+zehazten dugunean, espazioaren deskribapen lokala ematen dugula esaten dugu.
+Definizioa 19 Izan bitez (X,τ) espazio topologikoa, x∈X eta N. N x-
+reninguruneadela esango dugu baldin eta U∈τ existitzen bada non x∈U den.
+idatziko dugu etaingurune-sistemaizango da.
+Adibideak 20
+[(i)]
+1. espazio euklidearrean, guztietarako.
+2. bada, orduan x∈X guztietarako.
+3. bada, orduan x∈X guztietarako.
+4. bada, orduan eta .
+5. bada, orduan x∈X guztietarako.
+6. bada, orduan x∈X guztietarako.
+7. bada, orduan x∈X guztietarako.
+8. bada, orduan , x∉A bada eta , x∈A bada.
+9. bada, orduan .
+10. bada, orduan x∈Q bada eta x∈I bada .
+11. bada, orduan x∈R guztietarako.
+Argi denez, ingurune guztiek ez dute zertan irekiak izan behar. Kontrakoa
+aldiz, egia da, hau da, irekiak bere puntu guztien inguruneak dira. Are
+gehiago, ondokoa ere izango dugu:
+Proposizioa 21 Izan bitez (X,τ) espazio topologikoa eta A. Orduan A irekia da
+baldin eta soilik baldin bere puntu guztien ingurunea bada.
+Ondoko teoreman azpimultzoen familia batek ingurune-sistema izateko bete behar
+dituen propietateak aztertuko ditugu. Praktikan ez dugu gehiegi erabiliko
+normalean oinarriko inguruneekin lan egingo dugulako.
+ Teorema 22 (X,τ) espazio topologikoaren ingurune-sistemak hurrengo
+propietateak betetzen ditu:
+[]
+1. eta bada, orduan x∈N;
+2. bada, orduan ;
+3. eta M⊇N bada, orduan ;
+4. bada, orduan (M⊆N) existitzen da non , y∈M guztietarako.
+Bestalde, , , eta propietateak betetzen dituen bilduma bat emanda, orduan:
+familia topologia bat izango da. Horrez gain, topologia honekin ingurune-
+sistema izango da hain zuzen ere.
+Inguruneen hirugarren propietatea dela eta, ez dauka zentzu gehiegirik ingurune
+guztiak zein diren zehazteak. Argi denez, nahikoa da ingurune “txikiak”
+zehaztearekin. Beraz guztiz logikoa da ondoko nozioarekin lan egitea.
+Definizioa 23 Izan bedi (X,τ) espazio topologikoa.ingurune-oinarriadela esango
+dugu baldin eta x∈X guztietarako bada eta guztietarako existitzen bada non B
+den. ezagutzen dugunean x-ren inguruneak hurrengoak izango dira:
+(X,τ)-ren ingurune-oinarri bat emanda, bere elementuakoinarriko
+inguruneakizango dira.
+Adibideak 24
+[(i)]
+1. -n .
+2. bada, orduan .
+3. bada, orduan .
+4. bada, orduan eta .
+5. bada, orduan .
+6. bada, orduan .
+7. bada, orduan .
+8. bada, orduan , x∉A bada eta , x∈A bada.
+9. bada, orduan .
+10. bada, orduan x∈Q bada eta x∈I bada .
+11. bada, orduan .
+
+Oinarriko inguruneak baino ez baditugu ezagutzen, lehengo 1.4 proposizioaren
+ordez ondokoa erabil dezakegu:
+Proposizioa 25 Izan bitez (X,τ) espazio topologikoa eta A. Orduan A irekia da
+baldin eta soilik baldin bere puntu guztien oinarriko ingurune bat partetzat
+badu.
+Inguruneen kasuan egin dugun moduan, orain ere azpimultzoen familia batek
+ingurune-oinarria izateko bete behar dituen propietateak aztertzea interesatzen
+zaigu. Hauxe izango da praktikan erabiliko duguna topologiak inguruneen bidez
+zehazterakoan.
+Teorema 26 Izan bitez (X,τ) espazio topologikoa eta ingurune-oinarria. Hurrengo
+propietateak betetzen dira:
+[()]
+1. bada, orduan x∈B.
+2. bada, orduan existitzen da non den.
+3. bada, orduan () existitzen da non guztietarako, existitzen den izanik.
+Alderantziz, , eta propietateak betetzen dituen bilduma bat emanda, orduan:
+topologia bat izango da. Horrez gain, τ-ren ingurune-oinarria izango da.
+Adibidea 27 (Moore-ren planoa)Izan bitez eta
+topologia baten ingurune-oinarria da. Sortutako topologia idatziko dugu.
+espazio topologikoariMoore-ren planoaderitzo.
+Lehen aipatu dugun moduan inguruneen kasuan, oinarriko inguruneek ere ez dute
+zertan irekiak izan behar. Hala ere normalean irekiak kontsideratuko ditugu.
+Izan ere, espazio topologiko bat emanda ingurune-oinarriak eraikitzeko modu
+natural bat hau da:
+Proposizioa 28 Izan bedi (X,τ) espazio topologikoa. x∈X guztietarako
+kontsideratzen badugu, orduan (X,τ)-ren ingurune-oinarria da.
+Topologiak inguruneen bidez zehazten ditugunean, topologien arteko konparaketa
+ere inguruneen bidez egin behar izango dugu. Horretarako ondoko emaitzak izango
+ditugu:
+Lema 29 Izan bitez eta X-ren gainean definitutako topologiak. baino finagoa da
+baldin eta soilik baldin x∈X guztietarako bada.
+Teorema 30 (Hausdorff-en irizpidea)Izan bitez eta X-ren gainean definitutako
+topologiak eta eta , hurrenez hurren, eta espazio topologikoen ingurune-
+oinarriak. baino finagoa da baldin eta soilik baldin x∈X guztietarako emanda,
+existitzen bada non den.
+Bukatzeko, ondoko teoremak ireki-oinarri eta ingurune-oinarri kontzeptuak
+hertsiki erlazionatuta daudela erakusten du:
+Teorema 31 Izan bedi (X,τ) espazio topologikoa eta β⊆τ. Orduan, β  τ
+topologiaren ireki-oinarria da baldin eta soilik baldin x∈X guztietarako, x
+puntuaren ingurune-oinarria bada.
+
+1.5 Distantziak. Espazio Metrikoak
+Definizioa 32Izan bedi X≠∅ multzoa. d: X×X⟶R erako edozein apli­kaziori X-ren
+gainekometrikaedodistantziaesaten zaio ondoko lau bal­din­tzak betetzen badira:
+[]
+1.∀x,y∈X, d(x,y)≥0.
+2. d(x,y)=0⟺x=y.
+3.∀x,y∈X, d(x,y)=d(y,x). (Simetria)
+4.∀x,y,z∈X, d(x,z)≤d(x,y)+d(y,z). (Desberdintza triangeluarra)
+(X,d) bikoteariespazio metrikoderitzo.
+Adibideak 33
+[(i)]
+1. espazio metrikoa, X edozein multzo ez-huts izanik eta
+Aurreko distantziametrika diskretuaizenez ezaguna da.
+2. espazio metrikoa, izanik. espazioari zuzen erreala deritzo eta metrikari
+distantzia euklidearra edo ohiko distantzia.
+3. espazio metrikoa,
+izanik guztietarako. Aurreko metrikari -ren distantzia euklidearra deritzo.
+4. -ren gainean ere ondoko bi metrika ezagun hauek ditugu:
+eta
+guztietarako.
+Multzo beraren gainean, beraz, metrika ezberdinak defini daitezke.
+
+1.6 Bola irekiak eta itxiak
+Definizioa 34Izan bitez (X,d) espazio metrikoa, x∈X eta r>0. X-ren ondoko
+azpimultzoak defini daitezke:xzentruko etarerradioko bola irekia:
+B(x,r)={y
+∈X: d(x,y)<r}.
+xzentruko etarerradioko bola itxia:
+xzentruko etarerradioko esfera:
+S(x,r)={y
+∈X: d(x,y)=r}.
+Adibideak 35
+[(i)]
+1. espazio metrikoan, B(x,r)=(x−r,x+r), eta S(x,r)={x−r,x+r}.
+2. espazio metrikoan, B(x,r)={x} da 0<r≤1 bada eta B(x,r)=X bestela.
+Propietateak 36(X,d) espazio metrikoa izanik:
+[(i)]
+1. x∈X eta r>0 guztietarako, baina gerta daiteke S(x,r) hutsa izatea.
+2. 0<r≤s bada, B(x,r)⊆B(x,s) eta . 0<r<s bada, eta S(x,r)∩S(x,s)=∅.
+3. r>0 guztietarako, , B(x,r)∩S(x,r)=∅, , eta .
+4. zentru bereko n bola ireki badira, orduan da izanik eta da izanik. Gauza
+bera bola itxietarako.
+Definizioa 37Izan bitez (X,d) espazio metrikoa eta A⊆X. Esaten da A
+azpimultzoabornatuadela espazio horretako bola itxiren baten parte bada, hau
+da, existitzen badira x∈X eta r>0 non .
+Teorema 38(Hausdorff-en propietatea)Izan bedi (X,d) espazio metrikoa. x,y∈X eta
+x≠y badira, orduan existitzen dira bi bola ireki disjuntu bata x puntuan
+zentratua eta bestea y puntuan, hau da,∃r,s>0 non B(x,r)∩B(y,s)=∅ diren.
+Proposizioa 39Izan bedi (X,d) espazio metrikoa eta x∈X bakoitzerako, har
+dezagun . Aurreko familiak topologiaren baten ingurune-oinarri izateko
+baldintzak betetzen ditu. Sortutako topologia hau da:
+Are gehiago, x∈X eta r>0 guztietarako, da.
+Definizioa 40Esaten da (X,τ) espazio topologikoametrizagarriadela exis­titzen
+bada X-ren gaineko d metrikaren bat non den.
+Adibideak 41eta topologiak metrizagarriak dira. topologia, ordea, ez.
+Definizioa 42Esaten da X multzoaren gaineko eta metrikaktopologikoki
+baliokideakdirela betetzen bada.
+Adibideak 43-n, , eta metrikak topologikoki baliokideak dira.
+
+2 [
+Azpimultzoak]Azpimultzoak espazio topologikoetan
+2.1 Multzo baten barrualdea
+Definizioa 1Izan bitez (X,τ) espazio topologikoa, A eta x∈X.
+x A-renbarruko puntuaizango da baldin eta A x-ren ingurunea bada.
+A-ren barruko puntuen multzoari A-renbarrualdederitzo eta idatziko dugu.
+Aurreko definizioan inguruneak eta irekiak erabili beharrean oinarriko
+inguruneak eta oinarriko irekiak erabil ditzakegu, hau da, β eta (X,τ) espazio
+topologikoaren ireki-oinarrria eta ingurune-oinarria badira, hurrenez hurren,
+orduan:
+Proposizioa 2Izan bitez (X,τ) espazio topologikoa eta A. Orduan:
+[(i)]
+1. A-ren parte diren azpimultzo ireki guztien bildura da, hau da,
+2. A-ren parte den azpimultzo irekirik handiena da, hau da,
+3. A irekia da baldin eta soilik baldin bada.
+Adibideak 3
+[(i)]
+1. bada, orduan A guztietarako .
+2. bada, orduan eta A≠X guztietarako .
+3. bada, orduan , eta .
+4. bada, orduan guztietarako .
+5. bada, orduan guztietarako .
+6. bada, orduan guztietarako .
+7. bada, orduan guztietarako .
+8. bada eta A⊆R goitik bornatua bada, orduan izango da.
+9. bada, orduan A⊆R guztietarako .
+Lema 4Izan bitez (X,τ) espazio topologikoa eta A. Orduan .
+Teorema 5 (Barrualde eragilea)Izan bitez (X,τ) espazio topologikoa eta A,B.
+Barrualde eragileak ondoko propietateak betetzen ditu:
+[]
+1. ;
+2. ;
+3.
+)= \F(∘,A)∩ \F(∘,B);
+4. .
+Bestalde, lau propietate hauek betetzen dituen ϕ:P(X)⟶P(X) aplikazio bat
+emanda, orduan:
+topologia bat izango da. Horrez gain, sortutako topologiarekin A⊆X guztietarako
+izango da.
+
+2.2 Multzo baten itxitura
+Definizioa 6Izan bitez (X,τ) espazio topologikoa, A eta x∈X.
+x A-renpuntu itsatsiadela esango dugu baldin eta x-ren edozein ingurunek A
+ebakitzen badu.
+A-ren puntu itsatsien multzoari A-renitxituraderitzo eta idatziko dugu.
+Aurreko definizioan inguruneak erabili beharrean oinarriko inguruneak erabil
+ditzakegu, hau da, (X,τ) espazio topologikoaren ingurune-oinarria bada, orduan:
+Proposizioa 7Izan bitez (X,τ) espazio topologikoa eta A. Orduan:
+[(i)]
+1. A partetzat duten azpimultzo itxi guztien ebakidura da, hau da,
+2. A partetzat duen azpimultzo itxirik txikiena da, hau da,
+3. A itxia da baldin eta soilik baldin bada.
+Adibideak 8
+[(i)]
+1. bada, orduan A guztietarako .
+2. bada, orduan eta A≠∅ guztietarako .
+3. bada, orduan eta .
+4. bada, orduan guztietarako .
+5. bada, orduan guztietarako .
+6. bada, orduan guztietarako .
+7. bada, orduan guztietarako .
+8. bada eta A⊆R goitik bornatua ez bada, orduan .
+9. bada, orduan A⊆R guztietarako .
+Lema 9Izan bitez (X,τ) espazio topologikoa eta A. Orduan .
+Teorema 10 (Itxitura eragilea)Izan bitez (X,τ) espazio topologikoa eta A,B.
+Itxitura eragileak ondoko propietateak betetzen ditu:
+;
+;
+;
+.
+Bestalde, lau propietate hauek betetzen dituen Φ:P(X)⟶P(X) aplikazio bat(hau
+da,Kuratowski-ren itxitura eragile bat)emanda, orduan:
+topologia bat izango da. Horrez gain, sortutako topologiarekin A⊆X guztietarako
+izango da.
+Proposizioa 11 Izan bitez (X,τ) espazio topologikoa eta A. Ondoko propietateak
+betetzen dira:
+[(i)]
+1. ;
+2.
+).Definizioa 12Izan bitez (X,τ) espazio topologikoa eta D⊆X. Esaten da D
+azpimultzoadentsoadela bere itxitura X osoa bada, hau da, .
+
+2.3 Metatze-puntuak eta puntu isolatuak
+Definizioa 13Izan bitez (X,τ) espazio topologikoa, A eta x∈X.
+x A-renmetatze puntuaizango da baldin eta x-ren edozein ingurunek A ebakitzen
+badu x bera ez den beste punturen batean.
+A-ren metatze puntuen multzoari A-renderibatuderitzo eta idatziko dugu.
+x∈A A-renpuntu isolatuaizango da baldin eta metatze puntua ez bada.
+A-ren puntu isolatuen multzoa Iso(A) idatziko dugu.
+x∈X X-ren puntu isolatua denean, xpuntu isolatua(besterik gabe) ere esango
+dugu.
+Aurreko definizioetan inguruneak erabili beharrean oinarriko inguruneak erabil
+ditzakegu, hau da, (X,τ) espazio topologikoaren ingurune-oinarria bada, orduan:
+eta
+Teorema 14Izan bitez (X,τ) espazio topologikoa eta A,B. Ondoko propietateak
+betetzen dira:
+[(i)]
+1. ;
+2. A bada, orduan ;
+3. ;
+4. ;
+5. A itxia da baldin eta soilik baldin bada.
+Adibideak 15
+[(i)]
+1. bada, orduan A guztietarako .
+2. bada, orduan eta |A|≥2 bada, .
+3. bada, orduan , , eta .
+4. bada, orduan A finitua bada eta A infinitua bada .
+5. bada, orduan A kontagarria bada eta A ez-kontagarria bada .
+
+2.4 Multzo baten muga
+Definizioa 16Izan bitez (X,τ) espazio topologikoa, A eta x∈X.
+x A-renmuga puntuaizango da baldin eta x-ren edozein ingurunek A eta X−A
+ebakitzen baditu.
+A-ren muga puntuen multzoari A-renmugaderitzo eta fr(A) idatziko dugu.
+Aurreko definizioan inguruneak erabili beharrean oinarriko inguruneak erabil
+ditzakegu, hau da, (X,τ) espazio topologikoaren ingurune-oinarria bada, orduan:
+Teorema 17Izan bitez (X,τ) espazio topologikoa eta A. Ondoko propietateak
+betetzen dira:
+[(i)]
+1. fr(A) itxia da;
+2. fr(A)=fr(X−A);
+3. fr(∅)=fr(X)=∅;
+4. ;
+5. ;
+6. ;
+7.
+);8.A∈τ∩ fr(A)=∅;
+9. A∈C⟺fr(A).
+Adibideak 18
+[(i)]
+1. bada, orduan A guztietarako fr(A)=∅.
+2. bada, orduan A≠∅,X guztietarako fr(A)=X.
+3. bada, orduan fr(∅)=fr(X)=∅ eta fr({b})=fr({a})={b}.
+4. bada, orduan bada, fr(A)=X, bada, fr(A)=A eta bada, fr(A)=X−A.
+5. bada, orduan bada, fr(A)=X, bada, fr(A)=A eta bada, fr(A)=X−A.
+6. bada, orduan bada, fr(B)=X, bada, fr(B)=B eta bada, fr(B)=X−B.
+
+3 [
+Jarraitutasuna]Jarraitutasuna
+Sarrera
+Izan bedi f: X⟶Y aplikazioa:
+(1) badira, orduan .
+Bereziki ;
+(2) badira, orduan .
+Orokorrean Y−f(A) eta f(X−A) ez daude erlazionaturik, baina f(X)−f(A)⊆f(X−A);
+(3) f suprajektiboa bada, orduan Y−f(A)⊆f(X−A), A⊆X guztietarako;
+(4) bada, orduan ;
+(5) bada, orduan ;
+(6) bada, orduan ;
+(7) bada, orduan ;
+(8) f injektiboa bada, orduan , ;
+(9) A⊆X bada, orduan ;
+(10) f injektiboa bada, orduan , A⊆X guztietarako;
+(11) B⊆Y bada, orduan ;
+(12) f suprajektiboa bada, orduan , B⊆Y guztietarako.
+3.1 Aplikazio jarraituak
+Definizioa 1Izan bitez eta bi espazio topologiko, aplikazioa eta a∈X. f
+apuntuan jarraituadela esango dugu baldin eta M f(a)-ren ingurune guztietarako,
+a-ren ingurune bat, N, existitzen bada non f(N) den.
+fjarraituadela esango dugu baldin eta X-ren puntu guztietan jarraitua bada.
+Proposizioa 2 Izan bitez aplikazioa, -ren ingurune-oinarria, -ren ireki-
+oinarria eta -ren azpioinarria, hurrengo baieztapenak baliokideak dira:
+[(i)]
+1. f jarraitua da;
+2. ∀x∈X eta , ;
+3. ∀x∈X eta , ;
+4. , ;
+5. , ;
+6. , ;
+7. , ;
+8. ∀A, ;
+9. ∀B, ;
+10.∀B,
+).Adibideak 3
+[(i)]
+1. motako aplikazio guztiak jarraituak dira.
+2. motako aplikazio guztiak jarraituak dira.
+3. aplikazioa konstantea bada, orduan jarraitua da.
+Proposizioa 4Izan bitez espazio topologikoak, f: X⟶Y eta g: Y⟶Z aplikazioak eta
+a∈X. a puntuan eta f(a) puntuan jarraituak badira, orduan aplikazioa a puntuan
+jarraitua da.
+Korolarioa 5Izan bitez eta aplikazio jarraituak. Orduan aplikazioa jarraitua
+da.
+Proposizioa 6 (Hausdorff-en irizpidea)Izan bitez eta X-ren gainean definitutako
+topologiak. Orduan baino finagoa da baldin eta soilik baldin jarraitua bada.
+Proposizioa 7Izan bitez aplikazio jarraitua eta eta . Orduan aplikazioa
+jarraitua da.
+
+3.2 Homeomorfismoak
+Definizioa 8Izan bedi aplikazioa. fhomeomorfismoadela esango dugu baldin eta
+bijektiboa eta jarraitua bada eta ere jarraitua bada. etahomeomorfoakdirela
+esango dugu.
+Proposizioa 9Izan bitez , eta espazio topologikoak.
+[(i)]
+1. eta homeomorfoak badira, eta ere bai;
+2. eta eta eta homeomorfoak badira, eta ere homeomorfoak dira.
+Korolarioa 10Espazio topologikoen familian definitutako hurrengo erlazioa: “”
+baliokidetasun-erlazioa da.
+Proposizioa 11 Izan bedi aplikazio bijektiboa. Hu­rren­go baieztapenak
+baliokideak dira:
+[(i)]
+1. f homeomorfismoa da;
+2. ∀U, ;
+3. ∀F, ;
+4. ∀A, ;
+5.∀A,
+);6.∀B, ;
+7.∀B,
+).Adibidea 12Izan bedi X=[0,2π) eta , x≠0 bada eta . (X,τ) eta homeomorfoak
+dira.
+3.3 Propietate topologikoak
+Definizioa 13Propietate battopologikoadela esango dugu baldin eta
+homeo­morfismoen bitartez mantentzen bada.
+Proposizioa 14eta propietateak eta metrizagarritasuna propietate topologikoak
+dira.
+3.4 Segidak espazio metrikoetan: konbergentzia eta segidazko jarraitutasuna
+Definizioa 15Izan bedi X≠∅. X multzoan definitutakosegida N mul­tzo­tik X
+multzorako edozein aplikaziori deritzo. Normalean, X multzoan definitutako a:
+N⟶X segida eran adierazten da ( izanik), hau da, segida bera aplikazio modura
+adierazi beharrean irudien zerrenda modura idazten da.
+Segida batek hartzen dituen balio ezberdin guztien multzoarimultzo
+euskarrideritzo.
+Baldin eta ϕ:N⟶N aplikazioa hertsiki gorakorra bada (hau da, injektiboa eta
+gorakorra), orduan segidari -renazpisegidaderitzo.
+Hona hemen segiden zenbait propietate garrantzitsu:
+Propietateak 16
+[(i)]
+1. Edozein segida bere buruaren azpisegida da.
+2. Segida baten edozein azpisegidaren azpisegida, hasierako segidaren
+azpisegida da.
+3. Segida bati lehenengo m gaiak kentzen bazaizkio, beronen azpisegida bat
+lortzen da.
+4. Segida baten multzo euskarria finitua bada, orduan segidak azpisegida
+kons­tante bat du.
+Definizioa 17 Izan bitez (X,d) espazio metrikoa eta X multzoan definitutako
+segida. Esaten da espazio metriko horretan segida x∈X punturantz
+konbergenteadela baldintza hau betetzen bada:
+edo baliokidea dena,
+Kasu honetan x puntuari segidarenlimitederitzo.
+Oharra 18 Konbergentziaren definizioan erabili dugun azken adierazpenak argi
+erakusten du zein den definizio hura espazio topologikoetara hedatzeko bidea:
+Esaten da (X,τ) espazioan x∈X puntua segidaren limitea dela baldintza hau
+betetzen bada:
+Espazio topologikoetan, ordea, segiden portaera ez da nahi bezain egokia. Hori
+dela eta, segiden propietateak soilik espazio metrikoetan aztertuko ditugu.
+Proposizioa 19 Espazio metriko batean konbergentea den edozein segidaren multzo
+euskarria bornatua da espazio metriko horretan.
+Teorema 20 Edozein espazio metrikotan, segida baten limitea, existitzekotan,
+bakarra da.
+Adibideak 21
+[(i)]
+1. Edozein espazio metrikotan, segida konstante eta erdikonstanteak
+erre­pikatzen deneko konstantera konbergenteak dira.
+2. espazio metrikoan segida konbergente bakarrak segida erdi­kons­tanteak dira.
+3. Segida oszilatzaileak ez dira konbergenteak inongo espazio metrikotan.
+
+Teorema 22 Edozein espazio metrikotan, segida bat konbergentea bada, orduan
+bere azpisegida guztiak ere konbergenteak dira eta limite bera dute.
+Aurreko gaian ikusitako zenbait kontzeptu topologiko segiden gaineko
+bal­din­tzen bidez ere deskriba daitezke.
+Teorema 23 Izan bitez (X,d) espazio metrikoa eta A,D⊆X. Ondoko baieztapenak
+betetzen dira:
+[(i)]
+1. x∈A' baldin eta soilik baldin existitzen bada gai guztiak desberdinak
+dituena eta x punturantz konbergentea dena.
+2. baldin eta soilik baldin existitzen bada x punturantz konbergentea dena.
+3. D dentsoa da baldin eta soilik baldin x∈X guztietarako, existitzen bada x
+punturantz konbergentea dena.
+4. x∈fr(A) baldin eta soilik baldin eta existitzen badira, bi segidak x
+punturantz konbergenteak izanik.
+5. A itxia da baldin eta soilik baldin A-n definitutako segida konbergente
+guztien limitea ere A multzoan badago.
+Proposizioa 24 Izan bitez eta espazio metrikoak eta aplikazioa. f aplikazioa
+ja­rrai­tua da baldin eta soilik baldin a∈X guztietarako, a punturantz
+konbergentea den edozein segidaren irudia f(a)∈Y punturantz konbergentea bada.
+Oharra 25 f aplikazioak aurreko proposizioan deskribatutako propietatea
+betetzen duenean, fsegidaz jarraituadela ere esaten da.
+
+4 [
+Espazio topologikoen eraikuntza]Espazio topologikoen eraikuntza
+Gai honetan espazio topologiko berriak eraikitzeko hiru bide ezberdin aztertuko
+ditugu: azpiespazioak, biderkadura-espazioak eta zatidura-espazioak.
+4.1 Azpiespazioak
+Definizioa 1Izan bitez espazio topologikoa eta A. A-ren gainean definitutako
+topologiaritopologia erlatiboaderitzo. Lortutako espazio topologikoa, , -
+renazpiespazioadela esango dugu.
+Proposizioa 2Izan bitez espazio topologikoa, A eta topologia erlatiboa. Orduan:
+[(i)]
+1. b.s.b. existitzen bada non U=V∩A den.
+2. b.s.b. existitzen bada non F=G∩A den.
+3. β -ren ireki-oinarria bada, orduan -ren ireki-oinarria da.
+4. b.s.b. existitzen bada non N=M∩A den.
+5. x-ren ingurune-oinarria bada espazio topologikoan, orduan x-ren ingurune-
+oinarria da -n.
+6. B bada, orduan eta .
+Adibideak 3
+[(i)]
+1. bada, orduan A guztietarako .
+2. bada, orduan A guztietarako .
+3. bada, B izanik, hau da, B-sartuta topologia bada, orduan: A∩B=∅ bada, .
+A∩B≠∅ bada, .
+4. bada, B izanik, hau da, B-baztertuta topologia bada, orduan: A∩B=∅ bada, .
+A∩B≠∅ bada, .
+5. (v) bada, orduan: A finitua bada, .
+A infinitua bada, .
+6. (vi) bada, orduan: A kontagarria bada, .
+A ez kontagarria bada, .
+7. (vii) . A⊆I bada, .
+A⊆Q bada, .
+A∩I≠∅≠A∩I bada, .
+Oharra 4Orokorrean eta berdintzakez dira zertan egia izan.
+Proposizioa 5Izan bitez -ren azpiespazioa eta B. Orduan, .
+Proposizioa 6Izan bitez , A eta partekotasun aplikazioa. A topologia
+erlatiboarekin kontsideratzen dugunean, jarraitua da, eta bestalde, τ A-ren
+gainean definitutako beste topologia bat bada non ja­rrai­tua egiten duen,
+orduan baino finagoa izan behar da.
+Proposizioa 7Izan bedi -ren azpiespazioa.
+[(i)]
+1. baldin eta soilik baldin irekia bada.
+2. baldin eta soilik baldin itxia bada.
+Beraz, bada eta B, orduan b.s.b. bada.
+Era berean, bada eta B, orduan b.s.b. bada.
+Definizioa 8Izan bitez f: X⟶Y eta A. apli­kazioari f-ren A-
+rakomurrizketaderitzo eta idatziko dugu.
+Proposizioa 9Aplikazio jarraitu baten murrizketa aplikazio jarraitua da.
+Proposizioa 10Izan bitez aplikazio jarraitua, A, B eta f(A). Orduan aplikazioa
+ere jarraitua da.
+
+4.1.1 Aplikazio konbinatuak eta murgilketak
+Definizioa 11Izan bedi X-ren azpimultzo familia. X-renestalkiadela esango dugu
+baldin eta bada.
+Definizioa 12Izan bitez X eta Y multzoak eta X-ren estalkia. Demagun i∈I
+guztietarako aplikazio bat daukagula, non i≠j badira den (hau da, guztietarako
+). Orduan, familiarenaplikazio konbinatuamodu honetan definitutako f: X⟶Y
+aplikazioari esaten zaio: ( izanik).
+Teorema 13Aurreko definizioaren egoeran hurrengoa betetzen da:
+[(i)]
+1. irekia eta jarraitua badira i∈I guztietarako, orduan aplikazio konbinatua
+ere jarraitua da.
+2. I finitua bada eta itxia eta jarraitua badira i∈I guztietarako, orduan
+aplikazio konbinatua ere jarraitua da.
+Definizioa 14Izan bitez eta espazio topologikoak eta aplikazioa.
+fmurgilketadela esango dugu baldin eta homeomorfismoa bada. Kasu horretan,
+espazioa espazioanmurgildutadagoela esango dugu.
+Oharra 15f murgilketa bada injektiboa eta jarraitua da.
+4.2 Biderkadura topologikoa
+Definizioa 16Izan bitez espazio topologikoen familia finitua eta multzoen
+biderkadura kartesiarra. X-ren gainean definitutako
+familiak topologiaren baten ireki-oinarria izateko baldintzak betetzen ditu.
+familiak sortutako topologiaribiderkadura topologiaedoTychonoff-en
+topologiaderitzo eta idatziko dugu.
+Lortutako espazio topologikoa, , espazio topologikoenbiderkadura
+topologikoadela esango dugu.
+i∈{1,…,n} guztietarako bada, orduan biderkadura kartesiarraripotentzia
+kartesiarraderitzo, eta idatziko dugu.
+Proposizioa 17Izan bitez espazio topologikoen familia finitua eta -ren ireki-
+oinarria i∈{1,…,n} guztietarako. Orduan ere topologiaren ireki-oinarria da.
+4.2.1 Proiekzioak
+Definizioa 18Izan bitez multzoak eta horien biderkadura kartesiarra. Jakina
+denez, i∈{1,…,n} guztietarako,
+aplikazioarii. proiekzio koordenatuderitzo.
+Oharra 19familia topologiaren azpioinarria da.
+Proposizioa 20Izan bitez espazio topologikoen familia finitua eta beraien
+biderkadura topologikoa. Orduan i∈{1,…,n} guztietarako proiekzioa jarraitua,
+irekia eta suprajektiboa da.
+Oharra 21Orokorrean proiekzioak ez dira itxiak.
+Teorema 22Izan bitez espazio topologikoen familia finitua, espazio topologikoa
+eta . Ordu­an f ja­rrai­tua da b.s.b. i∈{1,…,n} guztietarako, ja­rraitua bada.
+Proposizioa 23Izan bitez espazio topologikoen familia finitua, beraien
+biderkadura topologikoa eta i∈{1,…,n} guztietarako. Orduan:
+[(i)]
+1.
+)= \i \pr(i=1,n, ) \F(i∘ i,A\s\do5(i));
+2. .
+Korolarioa 24Izan bitez espazio topologikoen familia finitua, beraien
+biderkadura topologikoa eta , i∈{1,…,n} guztietarako. Orduan:
+[(i)]
+1. baldin eta soilik baldin bada;
+2. baldin eta soilik baldin bada;
+3. -n dentsoa da b.s.b. dentsoa bada ∀i∈{1,…,n}.
+4.3 Zatidura espazioak
+Definizioa 25Izan bitez espazio topologikoa,∼X-ren gainean definitutako
+baliokidetasun-erlazioa eta p: X⟶X/∼proiekzio naturala. X/∼-ren gainean
+definitutako ondoko familia
+topologia da. Topologia honizatidura topologiaderitzo. Lortutako espazio
+topologikoa, ,∼baliokidetasun-erlazioaren bitarteko X-ren zatiduraespazio
+topologikoadela esango dugu.
+4.3.1 Identifikazioak
+Definizioa 26Izan bedi aplikazioa. fidentifikazioadela esango dugu
+suprajektiboa bada eta ondokoa betetzen bada: baldin eta soilik baldin bada.
+Proposizioa 27Izan bitez espazio topologikoa eta∼X-ren gainean definitutako
+baliokidetasun-erlazioa. Orduan proiekzio naturala identifikazioa da.
+Proposizioa 28Identifikazioen konposaketa identifikazioa da.
+Proposizioa 29Izan bedi identifikazioa. Orduan:
+[(i)]
+1. f irekia da b.s.b. guztietarako bada;
+2. f itxia da b.s.b. guztietarako bada.
+Proposizioa 30Izan bitez identifikazioa eta aplikazioa. Orduan, g jarraitua da
+baldin eta soilik baldin jarraitua bada.
+Korolarioa 31Izan bitez eta espazio topologikoa ,∼X-ren gainean definitutako
+baliokidetasun-erlazioa eta aplikazioa. Orduan f jarraitua da b.s.b. jarraitua
+bada.
+Teorema 32Izan bedi identifikazioa. Orduan espazio topologikoa eta f
+aplikazioak zehaztutako baliokidetasun-erlazioaren bitarteko X-ren zatidura
+espazio topologikoa homeomorfoak dira, hau da, eta homeomorfoak dira.
+(f aplikazioak zehaztutako baliokidetasun-erlazioa hurrengo modu honetan
+definitzen da:
+ ).
+
+4.3.2 Adibideak.
+Azpimultzo baten puntu baterako uzkurdura.
+Izan bedi espazio topologikoa, A⊆X eta X-ren gainean definitutako ondoko
+baliokidetasun-erlazioa:
+x∼y baldin eta soilik baldin x=y edo x,y∈A bada.
+Lortutako zatidura espazio topologikoari A azpimultzoaren puntu baterako
+uzkurdura esaten zaio eta sarritan X/A eran adierazten da.
+Zilindroa, Moebius-en Banda, 2 dimentsioko Torua eta Klein-en Botila.
+Kontsidera dezagun [0,1]×[0,1] ohiko topologiarekin. [0,1]×[0,1]-n hurrengo
+hiru baliokidetasun-erlazioak definitzen ditugu:
+[(a)]
+1. (0,y)∼(1,y), y∈[0,1] bada.
+2. (0,y)∼(1,1−y), y∈[0,1] bada.
+3. (x,0)∼(x,1), x∈[0,1] bada eta (0,y)∼(1,y), y∈[0,1] bada.
+4. (x,0)∼(x,1), x∈[0,1] bada eta (0,y)∼(1,1−y), y∈[0,1] bada.
+Lortutako zatidura espazio topologikoak, hurrenez hurren, zilindroa, Moebius-en
+Banda, 2 dimentsioko Torua () eta Klein-en Botila () dira.
+Espazio Proiektiboa.
+n-dimentsiotako espazio proiektiboa, , espazio topologikoaren zatidura espazio
+topologiko bat da, baliokidetasun-erlazioa hurrengoa izanik:
+(eta direlarik).

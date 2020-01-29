@@ -1,0 +1,446 @@
+
+
+
+
+
+
+
+
+                         ****** 0 GAIA. SARRERA ******
+
+***** 0.1.- Zirkuitu elektrikoa *****
+
+Instalazio elektrikoen ikuspegitik, zirkuitua da instalazio baten zatirik
+oinarrizkoena; hauen barruan, beste hainbat osagai agertzen dira, hurrengo
+taldeetan bildu daitezkeenak:
+
+    * Sorgailuak edo energia-iturriak: osagai hauek elikadura-tentsioa
+      hornitzen diote instalazioari, eta orokorrean Energia Hornitzailea den
+      Konpainiari (E.S.E Empresa Suministradora de Energía) dagokio banaketa-
+      sare baten bidez instalazio bat elikatzeko.
+    * Hartzaileak edo kargak: zirkuituko osagai honek iturriek emandako energia
+      elektrikoa beste era bateko energia mota batean (argitasunezkoa,
+      mekanikoa…) eraldatzen dute, dagoen lekuan behar denaren arabera.
+    * Gobernu edo kontroleko gailuak: talde honetan zirkuitu elektriko baten
+      kontrola edo eta erregulazioa egiten duten osagaiak sartzen dira
+      (etengailu, argitasun-erreguladoreak…), bai eta babeserako erabiltzen
+      direnak (etengailu automatikoak, fusibleak, ea), energia elektrikoaren
+      erabilpen zuzen eta seguru baten mesedetan.
+    * Eroaleak: zirkuitu batean osagai desberdinak elkartzen dituztenak dira,
+      korronte elektrikoa batetik bestera pasa dadin; oso ondo landu eta
+      aztertu beharreko osagaiak dira dena den, instalazio baten diseinuan lan
+      gehien suposatzen duena da, beren parametroen kalkuluari dagokiona
+      bereziki (eroaten duten korronte elektrikoaren intentsitatea, beharreko
+      sekzioa, tentsio erorketak…). Parametro horien kalkuluek eta instalazio
+      bakoitzari dagokion araudiak erabakiko dute azkenik instalatuko diren
+      eroaleak.
+
+***** 0.2. Zirkuitu elektriko baten oinarrizko magnitudeak *****
+
+Jarraian datozen magnitude elektrikoak aldez aurretik ezagunak dira, eta hemen
+errepaso bat besterik ez da emango.
+
+    * Tentsioa (U): zirkuitu elektriko baten puntu desberdinetan dagoen
+      potentzial elektrikoen (V) desberdinen arteko diferentzia edo kendura da.
+      Kargaren mugimendua eragiten du, eta honekin batera, energia. Baliorik
+      inportanteena zirkuituaren hasieran dagoen elikadura-tentsioak izango
+      duen balio efikaza dugu alde batetik, eta bestetik, karga edo hartzaileen
+      gain egongo dena, instalazioaren bukaeran. Unitatea volta (V).
+    * Korronte elektrikoa eta bere intentsitatea (I): ibilbide itxia duen
+      zirkuituan sortzen den energia potentzialaren ondoriozko energia
+      zinetikoaren energia adierazten du, . Unitatea: amperea (A).
+    * Tentsio-erorketa (U): zirkuituan gertatzen den energia potentzialaren
+      galera adierazten du, zenbait osagaien inpedantziak direla eta. Unitatea:
+      volta (V).
+    * Potentzia elektrikoa (P): zirkuitu elektrikoak denbora unitateko
+      garraiatzen, xurgatzen edo ematen duen energia da. Unitatea: watt (W).
+KZ:
+KA: ; izanik U eta I magnitude sinusoidalen balio efikazak, eta hartzailearen
+lan egoerako potentzi-faktorea.
+
+
+***** 0.3. Ohm-en legea *****
+
+Gogora dezagun:
+
+
+→  Ohm-en legea
+
+
+***** 0.4. Eroale baten erresistentzia elektrikoa *****
+
+Material batek korronte elektrikoa eroateari ezartzen dion oztopoa da. Oso
+erresistentzia altua dutenak isolatzaileak dira, eta balio baxuzko
+erresistentziak dituztenak eroale elektrikoak; dena den, material orok
+aurkezten du erresistentzia bat, oso baldintza berezitan lan egiten duten
+supereroaleak kenduta.
+
+Erresistentzia elektrikoaren balioa inportantea da zirkuituak osatzen dituzten
+eroaleen kasuan eta instalazio elektrikoetan, orokorrean, honen ondorioz bi
+fenomeno gertatzen baitira:
+    * Beroketa termikoa
+    * Tentsio-erorketa
+
+Eroale baten erresistentzia kalkulatzeko, bere datu geometrikoak ezagutu behar
+dira (luzera eta sekzioa), bai eta  materialaren erresistibitatea.
+
+
+
+Zenbaitetan, erresistentzia eta erresistibitatearekin lan egin beharrean, beren
+alderantzizkoak diren konduktantzia eta eroankortasuna erabiltzen dira hurrenez
+hurren.
+    * Konduktantzia:
+    * Eroankortasunak materialak korronte elektrikoaren pasatzeari aurkezten
+      dion luzera unitate eta sekzioko erraztasuna adierazten du.
+
+eta -ren balioak materialaren araberakoak dira. Instalazio elektrikoetan gehien
+erabiltzen direnak kobrea eta aluminioak dira, eta hauentzako, T=20ºC-ko
+tenperatura suposatuaz:
+    * Kobrea:
+    * Aluminioa:
+
+**** 0.4.1 Tenperaturaren eragina ****
+
+Erresistibitatea eta ondorioz erresistentzia, eroalearen aldiuneko
+tenperaturaren araberakoa da. Aurreko atalean emandako zenbakiak T=20ºC-ko
+kasurako dira bakarrik baliozkoak. Beste tenperatura desberdin batean egongo
+dena honela bilatzen da:
+
+
+- bukaerako tenperaturako erresistibitatea
+- hasierako tenperaturako erresistibitatea
+- tenperatura-koefizientea
+- tenperatura-aldaketa
+
+Berdin, eroale baten tenperatura bateko erresistentzia ezaguna izanik, beste
+tenperatura batean izango duen balioa kalkulatzeko:
+
+
+***** 0.5. Joule-n legea *****
+
+Eroale batetik korronte elektrikoa pasatzean beroketa bat gertatzen da bertan.
+Beroketa honek bi ondorio ditu:
+    * energia galera eroale horietan
+    * eroalea inguratzen duen isolatzailearen hondamendia, tenperaturaren
+      handitzea handiegia bada
+
+Joule-n legeak eroale batean gertatzen den beroketa definitzen du:
+
+Non:
+
+Q: energia kantitatea (J)
+R: erresistentzia (Ω)
+I: intentsitatearen balio efikaza (A)
+t: denbora (s).
+
+***** 0.6. Kable elektrikoak. Oinarrizko ezaguerak. *****
+
+Goi Tentsioko (GT) banaketa-instalazioetan ohikoa da eroale biluziak
+erabiltzea, behe tentsioan (BT, 1000V-tik behera KA-n) aldiz, erabiltzen diren
+eroaleak isolatuak dira.
+
+Kable hauek energia elektrikoa hornitu behar dute behar den puntu horietan
+bertan, hau dela eta, lan egoera eta instalazio-sistema ezberdinak sortzen
+dira.
+Horregatik, eraketarik errazena eroale metalikoa eta bere isolamenduak osatzen
+badute, konfigurazio eta egoera desberdinak izan beharko dira kontuan aldiro.
+Hurrengo atalean kableak erabiltzen diren aukera eta ezaugarri desberdinak
+aztertuko dira.
+
+**** 0.6.1. Kable isolatuen eraketa ****
+
+
+Hiru osagai nagusik osatzen dute kablea:
+
+    * Eroalea
+    * Isolatzailea
+    * Babespenak
+I
+
+0.6.1.1. Eroaleak
+
+Kable elektriko bateko eroalea, korronte elektrikoak zeharkatu behar duen zati
+metalikoa da. Eroaleen ezaugarriak dira:
+    * Osatzen duen materiala: BT-an erabiltzen diren ohikoenak kobrea eta
+      aluminioa dira, eta batzuetan ALMELEC (Al-Mg-Si) izeneko aleazioa
+      erabiltzen da, aluminioaren propietate mekanikoak hobetzen dituenak
+      (trakziopeko esfortzuak bereziki), eta airezko sareetan erabiltzen
+      direnak. Jakin beharra dago beren erresistibitatea (edo eroankortasuna)
+      20ºC-tan, bai eta tenperatura-koefizientea:
+
+
+   materiala
+      Cu                 56              0,017             0,039
+      Al                 35              0,028             0,040
+    almelec              31              0,032             0,036
+
+    * Sekzio efektiboa: eroaleen sekzioa normalizatua dago; honek eroalearen
+      erresistentzia definitzen du, eta honekin batera lan-baldintzak izango
+      diren beste parametro batzuk, hala nola, eroalearen gehienezko korrontea,
+      tentsio-erorketa, ea. Era berean, kable motaren arabera sekzio efektiboa
+      hari bakar bat edo hari askoz osatuta egon ahal da, erresistentziaren
+      balioan edo eta malgutasunaren balioan eragina izango duena.
+
+    * Eroale kopurua: kableak eroale bakarra edo eroale anitz izan ditzake
+      barruan, polaritate bakarra edo anitz eroan behar duen arabera.
+
+    * Polo bakarreko kablea edo eroale isolatua (BTAE-aren arabera unipolar edo
+      aislado), eroale sekzio bakarra dute eta potentzial bakarra hedatzen
+      dute.
+
+    * Kable poloanitza edo multieroalea (mahukak, ohiko hiztegian); barruan
+      eroale sekzio anitz agertzen da, elkarren artean isolaturik material
+      gehigarriaren bidez, eta potentzial anitz (gehienera lau) hedatzen dute.
+
+
+0.6.1.2. Isolatzaileak
+
+Izenak dioen bezala, tentsiopean dauden alderdi elektriko aktiboak (eroaleak)
+elkarren artean isolatzen ditu, bai eta hauek eta instalazioa osatzen duten
+gainontzeko osagaiekin, eta instalatuta dauden aretoetako jendearengandik ere.
+
+Isolamendu elektrikoa den propietateaz gain, eroaleen isolatzaile gisa
+erabilitako hauetan beste parametro batzuk dira ere nabarmenak, adibidez
+malgutasuna, eta tenperaturaren eta suteen aurreko jokaera, besteak beste.
+Gaur egun erabiltzen diren isolatzaileen artean bi talde nagusi daude,
+termoplastikoak eta termoegonkorrak. Bien arteko diferentzia nagusia
+tenperaturarekiko duten jokabidea da: lehenengoek tenperatura-aldaketak
+okerrago onartzen dituzte (bigundu egiten dira tenperatura handitzean)
+bigarrenek baino.
+
+Hau inportantea da, korronte elektrikoak eroalea zeharkatzerakoan bero galera
+sortzen dituenez, eroalea berotu egiten da. Tenperaturaren gehiegizko
+handitzeak kablearen hondamendia dakar, eta honekin batera iraupen-biziaren
+murrizketa. Honela, bi isolatzaile mota hauentzat araututa dago onartzen duten
+gehieneko tenperaturak, bai lan-egoera iraunkorrean, bai zirkuitulaburrekoa
+egoera berezian.
+
+
+   Isolatzaile mota      Lan-tenperatura (ºC)  Zirkuitulaburreko tenperatura
+                                                            (ºC)
+    Termoplastikoa                70                         160
+    Termoegonkorra                90                         250
+
+Ondoriozta dezakegu beraz: sekzio bera, eroale mota bera, eta instalazio-
+baldintza bera dituen bi eroaleen kasuan, isolatzaile termoplastikoa duen
+eroaleak korronte txikiagoa onartuko du isolatzaile termoegonkorra duena baino,
+bere lan-egoerako gehieneko tenperatura txikiagoa delako.
+
+
+Bi talde hauen barruan, gehien erabiltzen diren materialak dira:
+
+    * Termoplastikoak: PVC (binil polikloruroa, policloruro de vinilo), PE
+      (polietileno termoplastikoa); Z1 (konposatu termoplastikoa
+      poliefinarekin).
+    * termoegonkorrak: XLPE (polietileno erretikulatua edo sareztatua), EPR
+      (etileno propilenoa).
+
+0.6.1.3. Babespenak
+
+Babespenen funtzioa, ezaugarri elektrikoez aparte, eroaleek bete behar dituzten
+beste zenbait ezaugarri ahalbidetzea da. Bereziki:
+
+    * Pantailak: sare edo xafla erako osagai metalikoak dira, eroalea kanpoko
+      eremu elektromagnetikoengandik isolatuko dituztenak (TV seinalea daraman
+      eroalean adibidez), edo eta, eroaleak berak sortzen duen eremuak inguruko
+      elementuei eraginik ez sortzea (GT-ko kableetan adibidez)
+
+    * Armadurak: eroalea biltzen duten espiral metalikoak dira, bere propietate
+      mekanikoak hobetzen dituena, trakzio-esfortzuei (adibidez, airean
+      tentatutako kableetan) nahiz ebakidura-esfortzuei aurre egiteko
+      (adibidez, zuzenean lurperatuta edo herri-lanetan airean erabilitako
+      kableetan).
+
+    * Estalkia: kablearen kanpoko atala da, normalean plastikozkoa. Bere
+      helburua kablea osatzen duten osagaiei sendotasuna eta trinkotasuna
+      ematea da, eta kanpoko eragileak izan daitezken hezetasuna eta
+      korrosioari aurre egitea da.
+
+*** 0.6.2. Suteen aurreko jokaera ***
+
+Instalazio batean erabili beharreko kableek izan behar duten oinarrizko
+baldintza bihurtu da suteen aurreko jokaera, 2002-ko BTAE-ak arautzen baitu
+instalazioaren zati ezberdinek nahitaez betebeharreko suteen aurreko
+baldintzak. Hauetako batzuk dira:
+
+    * Suteen ez-hedatzailea: baldintza hau betetzen duten kableek bere gaineko
+      sua itzaltzeko ahalmena dute, kaltetzen dituzten sugarrak itzaltzen
+      direnean. Era honetara suteen hedapena eragozten dute kanalizazio
+      elektrikoetan zehar.
+
+         Suteak hedatzen ez dituzten instalazioak, sugarrekin eta gabe
+
+    * Suarekiko erresistenteak: iraupen luzeko sute baten menpe egon badira
+      ere, lanean jarraitzeko ahalmena dute, nahiz eta kaltetuak gertatu.
+      Ezaugarri hau duten kableek UNE 50200 norman agertzen diren probak
+      gainditu izana adierazten du.
+
+    * Gasen jaulkipen edo isuri murritza: sute egoeran sortzen duten ke
+      kantitatea, ohiko kable arruntek sortuko lituzkeenak baino txikiagoak
+      dira.
+
+    * Keen opakotasun murritza: ezaugarri hau, aurrekoaren osagarri, sutearen
+      ondorioz kableek sortutako keek ikusmena gutxiago zailduko dutenaren
+      seinale da, aretoetako hustuketaerrazten delarik.
+
+                Keen jaulkipenen eta opakotasunaren ezaugarria
+
+***** 0.7. Kable elektrikoen izendapena *****
+
+Aurreko atalean ikusitakoaz gain, instalazio elektrikoetan erabilitako kableek
+beste zenbait berezitasun izan ditzakete, hala nola, malgutasuna, halogenoen
+edukiera, etab. Instalazio mota desberdin ugari dago beraz, eta honek kableen
+izendapena bultzatzen du. Arauek, dena den, ez dute argitasun handirik ematen.
+BT-an erabiltzen diren kableei buruz, bi talde nagusi daude:
+450/750 V-ko tentsiorainoko kableak: UNE-20434 arauaren arabera sailkatuta
+daude, eta CENELEC (Comité Europeo de Normalización Electrotécnica) izeneko
+harmonizazio dokumentu batean agertzen da. Izendapen honek kode baten erabilera
+du oinarri eta hiru zatitan banaturik hurrengo informazioa ematen du:
+
+   1. Orokortasunak
+   2. Kablea osatzen duten materialak
+   3. Eroale kopurua eta motak
+
+    H 0 7  R N - F  3 G 6
+      1      2        3
+
+0,6/1 kV-ko tentsio izendatuko kableak: beren izendapenak ez du aurreko araua
+jarraitzen, ez baitaude Europar Batasunean araututa. Estatua, UNE-21123 norma
+jarraitzen dute. Aurrekoaren antzera, kode honek kablearen eraketa azaltzen
+duten zenbait ezaugarri biltzen ditu, ordena zehatz bat jarraitzen duten
+bederatzi zifra izan dezaketelarik:
+
+   1. Material isolatzailea
+   2. Kablearen forma
+   3. Pantaila
+   4. Armadura mota
+   5. Estalkiaren materiala
+   6. Isolamenduaren tentsio izendatua
+   7. Eroaleen forma edo eta tratamendua
+   8. Eroale kopurua eta sekzioa
+   9. Material eroalea
+
+ 1    2       3         4         5        6         7         8         9
+ V    D       A         F         V      0,6/1       E      3×70/35    Al
+
+Ikusi ahal den bezala, bi izendapen sistemek antzekotasunak dituzte, baina
+baita kontraesanak ere, letra berak esanahi desberdinak izan baititzake batean
+ala bestean. Honekin batera, beste tentsiopeko kableen (tentsio-ertaineko edo
+goi tentsioko) izendapenak kontuan baldin baditugu, gauzak gehiago zailtzen
+dira.
+
+Kableen izendapenaren eranskinak kontsultatu ahal dira.
+
+**** 0.8. Eroaleen sekzioaren kalkulua ****
+
+Kablea osatzen duten osagaiak, materialak eta izendapenak aztertu ondoren,
+instalazio batean eroaleek izan behar dituzten parametroak aztertuko dira.
+Honakoak izan behar dira kontuan:
+    * Kablearen ahalmen termikoa
+    * Onartutako gehienezko tentsio-erorketa
+    * Zirkuitulaburren aurreko jokaera
+    * Jasan ditzakeen esfortzu mekanikoak
+    * Zirkuitulaburreko esfortzu elektromekaniko eta elektrodinamikoak
+
+Azken biak ez dira BT-an gehiegi lantzen, barne-instalazioetan bereziki, eta ez
+ditugu landuko beraz.
+
+**** 0.8.1 Eroale baten ahalmen termikoa ****
+
+Ikus bezala, eroale batean sortzen den beroa, denbora unitateko, da:
+
+
+Bestetik, beroaren zati bat kanporantz barreiatzen du eroalea eta inguruaren
+tenperaturaren diferentziaren arabera, zirkuitu termikoetan aplikatutako honako
+Ohm-en antzeko den legea betetzen delarik:
+, non RTerresistentzia termikoa den.
+
+Eroalearen tenperatura handitzen doa ingurukoarekiko, bi beroak (QS=QB )
+berdintzen diren arte; baina ezin da onartu gehiegi handitzea ere, eroalea
+inguratzen duen isolatzaileak tenperatura muga batzuk baititu (70ºC eta 90ºC,
+termoplastikoa edo termoegonkortua denaren arabera). Tenperatura muga horiek
+eroaleek eroan dezaketen korrontearen intentsitate muga batzuk definitzen
+dituzte. Araututa daude beraz lan-egoera, sekzioa, tenperatura eta erabilitako
+materialaren araberako kableek eroan ditzaketen gehieneko intentsitateak.
+
+**** 0.8.2. Eroaleen gehienez onartutako tentsio-erorketa ****
+
+Ikusi bezala, tentsio erorketak osagai pasiboetan gertatzen den energia
+potentzialaren galera adierazten du. Energiaren galeraz gain, tentsio-erorketak
+instalazioaren bukaeran kargak jasotzen duen benetako tentsioaren murrizketa
+dakar, gehiegizkoa izan ezkero hartzailearen okerreko funtzionamendua sor
+dezakeelarik.
+
+Tentsio-erorketak tarte baten barruan mantendu behar dira, horregatik enpresa
+hornitzaileek beren BT-ko banaketa-sareetan %5-eko gehieneko erorketa onartzen
+dute.
+
+Horrez gain, BTAE-ak bere 019 Jarraibide Tekniko Osagarrian (JTO-019: barne-
+instalazioak edo hartzaileak) argiztapenerako gehieneko %3-a arautzen du, eta
+erabilera orokorreko zirkuituentzat %5-a.
+
+Hurrengo taulan instalazioen zati ezberdinetan onartutako gehieneko tentsio-
+erorketak azaltzen dira, laburturik:
+
+
+    Instalazio zatia              Baldintzak         Onartutako gehieneko (%)
+                          Hartzaile bakar batentzat       Ez dago ELO-rik
+
+Elikadura-linea orokorra    Kontagailuen erabateko             % 0,5
+          (ELO)                 zentralizazioa
+                            Kontagailuen zatikako               % 1
+                                zentralizazioa
+                          Hartzaile bakar batentzat            % 1,5
+   Banakako deribazioa      Kontagailuen erabateko              % 1
+                                zentralizazioa
+                            Kontagailuen zatikako              % 0,5
+                                zentralizazioa
+                               Barne-zirkuituak                 % 3
+                                etxebizitzatan
+    Barne-zirkuituak      Argiztapenerako zirkuituak            % 3
+                            Indarrerako zirkuituak              % 5
+
+**** 0.8.3. Zirkuitulaburren aurreko jokaera ****
+
+Zirkuitulaburra ezusteko egoera da, baina gertagarria. Egoera honetan,
+korrontearen intentsitatea ohikoak diren lan-egoeran gertatutakoak baino askoz
+handiagoa da, nahiz eta bere iraupena mugatua da, babespenek lehen baino lehen
+jardun behar baitute.
+
+Zirkuitulabur batean gertatzen den kasuaren okerreko egoera bero guztia
+eroalearen tenperatura igotzeko erabiltzen dena litzateke, eta hipotesi
+honetan, lan egoera arrunteko gehieneko tenperaturatik hasiz (70º edo 90ºC
+isolatzailearen arabera) kableek erre gabe onartzen duten gehieneko tenperatura
+hartzeraino. Azken egoera honetan tenperaturak ezin du 160º C edo 250º C
+gainditu, (termoplastikoa eta termoegonkorra, hurrenez hurren). Kable baten
+tenperaturaren bilakaera hurrengo irudian agertzen da.
+
+
+UNE 21145 normak zirkuitulaburreko egoerarako hurrengo adierazpena azaltzen du:
+
+zirkuitulaburreko intentsitatea (A)
+zirkuitulaburraren iraupena (s)
+K= material eroalearen araberako konstantea
+S= eroalearen sekzioa (mm2)
+β = erresistentziaren aldaketaren tenperatura-koefizientearen alderantzizkoa
+(ºC)
+= zirkuitulaburraren hasiera eta bukaerako tenperaturak (ºC)
+Aurreko adierazpenetik abiatuta eta konstanteak diren balioak elkartuz,
+adierazpen errazagoa lortzen da eroaleak duen sekzioaren arabera, onar dezakeen
+zirkuitulaburreko gehieneko intentsitatea eta iraupena elkartzen dituenak:
+
+
+K konstantearen balioak material eroale eta isolatzailearen araberakoak dira,
+eta hurrengoak kontsideratzen dira:
+
+
+                                      Material isolatzailea
+  Material eroalea          termoplastikoa             Termoegonkorra
+       Kobrea                    115                        143
+      Aluminioa                   76                        94,5
+       almelec
+
+
+
+12
+

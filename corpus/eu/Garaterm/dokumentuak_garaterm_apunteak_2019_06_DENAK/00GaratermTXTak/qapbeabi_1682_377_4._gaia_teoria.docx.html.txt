@@ -1,0 +1,267 @@
+
+
+
+
+
+
+
+
+
+
+
+4. GAIA. ESPEKTROFLUORIMETRIA
+
+
+
+1. Luminiszentzia 1
+2. Etekin kuantikoa 3
+3. Fluoreszentzia eta kontzentrazioa 4
+4. Espektrofluorimetroa eta bere osagaiak 5
+5. Espektrofluorimetriaren ezaugarri analitikoak 6
+
+
+
+
+
+
+1. LUMINISZENTZIA
+
+Luminiszentziada molekula batek emititzen duen argia, bere edozein egoera
+eszitatutik abiatuta. Ulertzeko nola sortzen den, hartuko dugu adibidetzat
+molekula bat, hurrengo irudiko energia diagrama daukana. Diagraman, hiru egoera
+elektroniko agertzen dira: E0, oinarrizko egoera; E1eta E2, egoera eszitatuak.
+Egoera elektroniko bakoitzak bost maila bibrazional ditu, oinarrizko bat eta
+lau eszitatu.
+
+Irudian erakusten den bezala, molekulak erradiazio ultramorea edo ikuskorra
+xurgatzen badu, E
+1edo E2mailak beteko ditu, erradiazioaren energiaren arabera (a). Espezie
+eszitatu baten bizi iraupena motza da eta segituan askatuko du soberako
+energia. Bi modu daude desaktibazioa aurrera eramateko:
+(b)
+Erradiaziorik gabeko erlaxazioa. Soberako energia inguruko molekuletara
+transmititzen da, talken bitartez,bero_moduan. Hau bi modutan gertatzen da:
+– Erlaxazio bibrazionala. Maila bibrazionalen artean ematen da eta oso azkarra
+da, 10
+–15s-koa bataz beste.
+– Barneko konbertsioa. Maila elektronikoen artean gertatzen da eta motelagoa
+da, 10
+–6-10–9s-koa.
+(c)
+Luminiszentzia. Energiaerradiazio_elektromagnetiko_moduanaskatzen da.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Luminiszentzia barruan
+fluoreszentziaetafosforeszentziabereizten dira. Fluoreszentzian, emisioa ia
+berehalakoa da: 10–4-10–8s xurgapena gertatu ondoren. Fosforeszentzian emisioa
+atzeratu egiten da, zenbaitetan segundo batzuetan ere. Irudian, fluoreszentzia
+adierazi da soilik lehenengo egoera elektroniko eszitatutik abiatuta, ia beti
+hala izaten delako.
+
+Gai honetan fluoreszentzia ikusiko dugu bakarrik, hau bait da Kimika
+Analitikoan gehien erabiltzen den luminiszentzia prozesua.
+
+Konparatzen badira irudian absortzioko uhin luzerak, λ
+1-λ5, eta fluoreszentziakoak, ikusten da fluoreszentziako gehienak luzeagoak
+direla, energia jauzi txikiagoetatik sortu dira-eta. Lerratze hau, uhin luzera
+handiagoetara,Stokes desplazamenduadeitzen da. Hala ere, gertatu daiteke kasu
+batzuetan absortzioa eta fluoreszentzia uhin luzera berean ematea. Aurreko
+adibidean hori λ1-ean gertatzen da. Honierresonantziako fluoreszentziadeitzen
+zaio. Hurrengo irudian erakusten dira bi molekulen absortzio eta fluoreszentzia
+espektroak. Ongi ikusten da Stokes desplazamendua zeren fluoreszentzia
+espektroaren zati handiena uhin luzera handiagoetan agertzen da absortzio
+espektroa baino.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Azkeneko irudiak erakusten du fluoreszentzian bi motako espektroak daudela:
+    * Absortzio edo eszitazio espektroa: adierazten du zein uhin
+      luzeratanxurgatzenduen erradiazioa molekulak eta zenbat.
+    * Fluoreszentzia edo emisio espektroa: adierazten du zein uhin
+      luzeratanaskatzenduen erradiazioa eta zenbat.
+2. ETEKIN KUANTIKOA
+
+Espezie fluoreszentea izan liteke erradiazioa xurgatzen duen edozein molekula.
+Hala ere, gehienetan hau ez da horrela zeren, normalean, desaktibazioa
+azkarrago gertatzen da erradiaziorik gabeko prozesuen bitartez
+fluoreszentziarekin baino. Espezie baten gaitasuna fluoreszentzia emateko
+etekin kuantikoadelakoak (f) ematen digu:
+Ekuazio honen arabera, molekula bat oso fluoreszentea bada, bere etekin
+kuantikoaf ≈ 1 izango da. Fluoreszentziarik ez badu, ordea,f≈ 0 izango da.
+Badira zenbait faktore etekin kuantikoan eragiten dutenak:
+    * Molekularen egitura. Eraztun aromatikoen presentziak fluoreszentzia
+      bultzatzen du. Zenbat eta eraztun gehiago egon eta haien arteko
+      kondentsazio maila handiagoa izan, orduan eta handiagoa etekin kuantikoa.
+      Heteroziklo sinpleenak, piridina, furanoa, tiofenoa eta pirrola
+      bezalakoak, ez dira fluoreszenteak, baina eraztun hauek kondentsatuak
+      dituzten molekulak, askotan fluoreszenteak dira, adibidez, kinolina,
+      isokinolina eta indola:
+
+
+
+
+
+
+
+    * Egituraren zurruntasuna. Egitura zurruneko molekuletan talka bidezko
+      desaktibazioa zailagoa izango da eta ondorioz fluoreszentzia handiagoa.
+      Hau oso ongi ikusten da hurrengo bi molekulak konparatuz:
+
+
+
+
+
+    * Tenperatura. Tenperatura handiagotzean talka bidezko desaktibazioa
+      errazagoa izango da eta fluoreszentzia txikiagoa.
+    * Disolbatzailearen biskositatea. Biskositatea zenbat eta handiagoa izan,
+      orduan eta zailagoa talkak gertatzea, eta orduan eta handiagoa
+      fluoreszentzia.
+3. FLUORESZENTZIA ETA KONTZENTRAZIOA
+
+Fluoreszentziaren intentsitatea erlazionatuta dago espezie xurgatzailearen
+kontzentrazioarekin, hurrengo ekuazioaren bitartez:
+                            F = kfP0(1 – 10–ε b C)
+nonF: fluoreszentziaren intentsitatea: absortibitate molarra
+k: konstante instrumentala b: bide optikoa
+f: etekin kuantikoa C: espezie xurgatzailearen kontzentrazioa
+P
+0: sarrerako erradiazioaren potentzia (ε b C = A, Beer legea)
+Aurreko ekuazioa asko sinplifikatzen da kontzentrazio txikietan, disoluzioaren
+absorbantzia
+A< 0.05bada. Egoera horretan, horrela geratzen da:
+                               F= kfP02.3 ε b C
+edo, kfP02.3 ε b = K eginez:
+F= K C
+Beraz,kontzentrazio txikietan fluoreszentziaren intentsitatea zuzenki
+proportzionala da kontzentrazioarekiko. Formula hau oso garrantzitsua da, zeren
+honi esker egin daitezke F-C kalibrazio zuzenak eta determinazioak,
+absorbantziarekin ikusi dugun bezala.
+
+Kontzentrazioa igotzen bada A gutxi gora behera > 0.05 dela, F-C erlazioak
+galtzen du bere zuzentasuna eta F hasten da polikiago igotzen, maximo batera
+iritsi arte. Hortik aurrera, fluoreszentzia hasten da jaisten, izan ere,
+absortzioa azkarrago igotzen da emisioa baino. Fenomeno honi
+autoabsortzioaedobarne filtroaren efektuadeitzen zaio. Gertatzen da analito
+molekulek beraiek xurgatzen dutelako eszitazio erradiazioa edo beste analito
+molekulek sortutako fluoreszentzia. Efektu hau nabarmentzen da disoluzio
+kontzentratuetan. Hurrengo irudietan erakusten dira bi F-C irudikapenak, bat
+zuzena eta bestea autoabsortzio efektua daukana:
+
+
+
+
+
+
+
+
+
+4. ESPEKTROFLUORIMETROA ETA BERE OSAGAIAK
+
+Espektrofluorimetriaizeneko teknikan determinatzen da analitoaren
+kontzentrazioa bere fluoreszentzia intentsitatea neurtuz. Fluoreszentzia
+neurtzeko instrumentuaespektrofluorimetroadeitzen da, monokromadoreak baditu,
+edofluorimetroa, filtroak baditu.Hurrengo irudian ikusten da
+espektrofluorimetro baten eskema orokorra.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Espektrofotometroekin konparatu ezkero, ikusten da espektrofluorimetroak osagai
+berdinak dituela, baina modu desberdinean antolatuak. Bi dira aldaketa
+nagusiak: espektrofluorimetroakbi monokromadoredituela eta detektagailua
+ipintzen delalaginarekin 90º-ko angeluaosatuz. Lehenengo
+monokromadoreaeszitazio monokromadoreadeitzen da. Honek hautatzen du uhin
+luzera bat argi iturriak ematen dituen guztietatik:eszitazio uhin luzera, λex.
+Normalean absortzio maximoko uhin luzera hautatuko da. Erradiazio hori iristen
+da laginera eta honek fluoreszentzia emitituko du norabide guztietara.
+Fluoreszentzia neurtzen da 90º-tan ez nahasteko eszitazioko argiarekin.
+Emititutako argia bigarren monokromadorera iritsiko da. Hauemisio
+monokromadoreadeitzen da, eta honekin hautatuko da emititutako uhin luzera
+guztietatik bat,emisio uhin luzera, λem, normalean fluoreszentzia maximoa
+ematen duena. Azken hau da detektagailura iritsi eta neurtuko dena.
+
+Antolakuntza honekin espektroak egin ahal izango ditugu. Absortzio edo
+eszitazio espektroak egiteko, eszitazio monokromadorea mugituko dugu, emisiokoa
+finkoa utzita uhin luzera batean, λ
+em. Era berean, fluoreszentzia edo emisio espektroak egingo dira, emisio
+monokromadorea mugituz eta eszitaziokoa finkoa utzita uhin luzera batean, λex.
+Badago beste diferentzia bat espektrofotometro eta espektrofluorimetroen
+artean:
+argi iturria. Espektrofluorimetroetan intentsitate handiagoko argi iturriak
+erabiltzen dira. Honen zergatia ikusten da fluoreszentzia eta absorbantziaren
+formulak konparatuz:
+F= kfP02.3 ε b C
+Argi dago fluoreszentzia igoko dela argi iturriaren potentzia igotzen bada
+baina absorbantzia, ordea, ez dela aldatuko, bi potentzien arteko erlazioa
+delako.
+Espektrofluorimetroetan
+xenon lanparakerabiltzen dira normalean. Hauek funtzionatzen dute, gutxi gora
+behera, deuterio lanparek bezala: deskarga elektriko batekin eszitatzen da
+lanpara barruko gasa eta honek argia emititzen du bere oinarrizko egoerara
+itzultzerakoan. Barruko gasa xenona da kasu honetan. Lanpara hauek espektro
+jarraia emititzen dute, ultramore-ikuskorrean, oso intentsitate handikoa.
+Hurrengo irudian erakusten da xenon lanpara baten eskema:
+
+
+
+
+
+
+
+
+
+
+5. ESPEKTROFLUORIMETRIAREN EZAUGARRI ANALITIKOAK
+
+Espektrofluorimetriaren
+sentsibilitateada 10-1000 aldiz handiagoa espektrofotometriarena baino.
+Horren arrazoia da seinalea handitu daitekeela argi iturriaren potentzia, P0,
+igota edo detektagailuaren seinalea anplifikatuta. Ez batak ez besteak, ez dute
+eraginik absorbantzian, bi potentzien erlaziotik lortzen delako. P0igotzen
+badugu, P ere igoko da proportzio berean. Detektagailuaren seinalea
+anplifikatzen badugu, horrek berdin eragingo du P0-n eta P-n. Ondorioz, ez da
+absorbantzia handiagoa lortuko.
+Selektibitateaere handiagoa da espektrofluorimetrian espektrofotometrian baino.
+Alde batetik, asko dira absortzioa ematen duten molekulak eta gutxi
+fluoreszentzia ematen dutenak. Bestalde, neurketa egiteko garaian,
+espektrofluorimetrian bi parametro daude aukeran,λexetaλem. Nahikoa da bietako
+bat desberdina izatea, interferentziarik ez egoteko. Espektrofotometrianλ
+bakarra dugu aukeratzeko.
+

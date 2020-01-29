@@ -1,0 +1,4974 @@
+
+
+
+KAPITULU I.
+SISTEMA LINEALEEN EBAZPENERAKO
+METODOAK. HASTAPENAK
+1.
+EKUAZIO-SISTEMA LINEALAK
+Demagun ondoko ekuazio linealeen sorta,
+E1 : a11x1 + a12x2 + ... + a1nxn = b1,
+...
+...
+...
+...
+...
+...
+En : an1x1 + an2x2 + ... + annxn = bn.
+non aij eta bi ekuazioen koeﬁzienteak eta x1, ..., xn ezezagunak baitira.
+Zati honetan sistema linealak askatzeko teknikak aztertuko ditugu. Aurreko n ekuazioak betetzen
+dituzten x1, ..., xn balioak sistemaren oluzioa da. Bi motako metodoak ikusiko ditugu:
+1) Prozesu zehatzak edo teknika zuzenak:
+ Hau da, sistemaren soluzioa bilatzen dituzten
+algoritmo ﬁnituak 
+(Gauss, Cramer, ...). Askotan metodo hauek emaitza txarra ematen
+dute biribiltze errorearengatik.
+2) Iteraziozko prozesuak:
+ Hau da, hasierako estimazio batekin sistemaren soluzio hurbil-
+dua kalkulatzen dituzten metodo errepikari eta konbergenteak dira 
+(Jacobi, SOR, ...).
+Matrizekiko eragiketetan hiru transformazio onartuko dira:
+1) Edozein λ = 0 konstantea bider Ei , Ei ekuazioaren ordez aldatzea (λEi)−→ 
+(Ei).
+2) Edozein λ = 0 konstantea bider Ej gehi Ei , Ei ekuazioaren ordez aldatzea
+(λEj + Ei)−→ (Ei).
+3) Ej eta Ei ekuazioak elkarrekin ordeztea (Ei)−→ (Ej).
+Eragiketa hauei esker sistema bat soluzio berbera dituen beste sistema bihurtuko da.
+Sistemaren koeﬁzienteak konstanteak direnez, erosoagoa da matrize hedaturarekin lan egitea,
+A = (aij) =
+
+
+a11 · · · a1n
+· · ·
+· · ·
+· · ·
+an1 · · · ann
+
+ , b =
+
+
+b1
+..
+.
+bn
+
+ −→ Aa = [A, b] =
+
+
+
+a11 · · · a1n | b1
+..
+.
+. ..
+..
+.
+..
+.
+an1 · · · ann | bn
+
+
+
+2.
+ALGEBRA LINEALA ETA MATRIZEAK
+Atal honetan sistema linealak askatzeko interesgarriak diren algebrako emaitzak azalduko ditugu.
+Deﬁnizioa
+Demagun A = (aij) eta B = 
+(bij) m ∗ n matrizeak, berauen osagaien batura, dij = aij + bij,
+osagaitzat dituen D = 
+(dij) matrizeari D = A+B batura esaten zaio eta λ ∈ IR izanik (λaij) osagaidun
+matrizea λA adierazi ohi da. (−aij) osagaiak dituena −A adieraziko dugu.
+Teorema
+m ∗ n matrizeen multzoak espazio bektorialaren egitura dauka, λ , µ ∈ IR zenbaki eta A , B eta
+D m ∗ n matrizeentzat ondoko propietateak betetzen bait dira:
+a) A + B = B + A,
+e) λ(A + B) = λA + λB,
+b) (A + B) + D = A + (B + D),
+f) (λ + µ)A = λA + µA,
+c) A + 0 = 0 + A = A,
+g) λ(µA) = (λµ)A,
+d) A + (−A) = −A + A = 0,
+h) 1A = A.
+1
+
+Deﬁnizioa
+Bira A m ∗ n eta B n ∗ p matrizeak. Ondoko osagaidun matrizea hauen biderkadura matriziala da,
+E = AB = (eij)
+non
+eij =
+n
+k=1
+aikbkj ∀ i = 1, ..., m , j = 1, ..., p.
+Deﬁnizioa
+dij = 0 ∀ i = j , i, j = 1, ..., n osagaitzat dituen D = 
+(dij) n ∗ n matrizeari ”diagonala” da.
+I edo In = 
+(δij) non δii = 1, δij = 0, i = j baitira n ordeneko unitate matrizea da.
+Teorema
+λ ∈ IR zenbakia eta A
+n ∗ m , B
+m ∗ k , D
+k ∗ p eta E
+m ∗ k matrizetarako ondoko
+propietateak beteko dira:
+a) A(BD) = (AB)D
+b) A(B + E) = AB + AE
+c) ImB = B, BIk = B
+d) λ(AB) = (λA)B = A(λB)
+Deﬁnizioa (Determinantea)
+a) Baldin A = (a) 1 ∗ 1 matrizea bada orduan det(A) = a .
+b) Mij minorea A n ∗ n matrizearen (n − 1) ∗ 
+(n − 1) azpimatrizearen determinantea da non
+azpimatrizea eratzeko A matrizeari i. errenkada eta j. zutabea kendu baitdizkiogu.
+d) Mij-ri dagokion biderkagai elkartua Aij = (−1)i+jMij da.
+e) A n ∗ n (n < 1) matrizearen determinantea ondoko gisaz kalkulatzen da 
+(n! biderkaketa):
+det(A) =
+n
+j=1
+aijAij ∀ i = 1, 2, ..., n,
+edo
+det(A) =
+n
+i=1
+aijAij ∀ j = 1, 2, ..., n.
+Teorema
+a) Baldin edozein zutabe edo errenkadaren osagai guztiak 0 badira, orduan, det
+(A) = 0.
+b) Baldin A-ren bi errenkada berdinak badira, orduan, det(A) = 0.
+d) Baldin (Ei) ←→ (Ej), i = j errenkada aldaketaz, A matrizea A-
+tik lortzen bada, orduan
+det(A) = −det(A). Baldin A matrizea (λEi)−→ 
+(Ei) errenkada aldaketaz lortzen bada, orduan
+det(A) = λ · det(A).
+g) Baldin A eta B n ∗ n matrizeak badira, orduan det(AB) = det(A) · det(B).
+Deﬁnizioa
+Biz A n ∗ n matrizea, baldin ∃ B n ∗ n non AB = BA = I baita, orduan A matrize ”ez
+singularra” da eta B beronen alderantzizkoa, A−1 = B. Bestela A ”singularra” izango da.
+Teorema
+A n ∗ n matrizerako ondoko baiezpenak baliokideak dira:
+a) Ax = 0 ekuazio sistemak x = 0 soluzio bakarra du.
+b) Ax = b sistema linealak edozein b errenkada-
+bektorerako soluzio bakar bat du.
+c) A matrizea ez singularra da, hau da, A−1 existitzen da.
+d) det(A) = 0 .
+e) Ezabapen Gaussiarraren algoritmoa Ax = b sistemari aplika diezaioke.
+2
+
+3.
+MATRIZE MOTA BEREZIAK
+Deﬁnizioa
+Baldin U n ∗ n matrizearen osagaiek uij = 0 ∀ i = j + 1, ..., n betetzen badute U-
+ri matrize goi-
+triangeluarra esango diogu. Aldiz, baldin L n∗n matrizearen osagaiek lij = 0 ∀ i = 1, ..., j −1 betetzen
+badute L-ri matrize behe-
+triangeluarra esango diogu. Baldin D matrizea aldiberean goi-triangeluarra
+eta behe-triangeluarra bada, orduan D matrize diagonala izango da. Adibidez:
+L =
+
+
+l11
+0
+0
+l21 l22
+0
+l31 l32 l33
+
+
+,
+U =
+
+
+u11 u12 u13
+0
+u22 u23
+0
+0
+u33
+
+
+,
+D =
+
+
+d11
+0
+0
+0
+d22
+0
+0
+0
+d33
+
+
+Teorema
+Baldin A = (aij) n ∗ n matrize triangeluarra 
+(goikoa edo behekoa) edo diagonala bada orduan,
+detA =
+n
+i=1
+aii
+Teorema
+Baldin Ax = b n ∗ n sistemaren A matrizea ez singularra bada, orduan A matrizea L goi-
+triangeluarra bider U behe-
+triangeluarra biderkadura gisaz deskonposa daiteke, hau da:
+A = LU
+eta U = (uij) , L = (lij) .
+Deﬁnizioa
+Izan bedi A = (aij) n ∗ n matrizea, At = 
+(aji) n ∗ n matrizeari A matrizearen iraulia esango
+diogu. Baldin At = A bada, orduan A matrize simetrikoa da.
+Teorema
+Baldin A matrizearen iraulia existitzen bada ondoko propietateak beteko dira:
+1) (At)t = A
+2) (A + B)t = At + Bt
+3) (AB)t = BtAt
+4) Baldin A−1 existitzen bada orduan (A−1)t = (At)−1
+5) det(At) = det(A)
+Deﬁnizioa
+Izan bitez A matrizea eta p, q ∈ IN non 1 < p, q < n eta ∀ j ≥ i + p edo j ≤ i − q =⇒ aij = 0 ,
+orduan A-
+ri banda matrizea esaten zaio eta bere zabalera p + q + 1 da. Matrize hauen osagai ez nuluak
+diagonalaren inguruan daude. Kasu praktikoetan p = q = 1 
+(zabalera= 3) eta p = q = 2 (zabalera= 5)
+agertzen dira. p = q = 1 matrizeei tridiagonalak esaten zaie eta ondoko eran agertuko dira:
+A =
+
+
+
+
+
+
+
+
+a
+b
+0
+· · · 0
+d
+e
+f
+. .. ...
+0
+. .. ... ... 0
+..
+.
+. .. g h i
+0 · · ·
+0
+j
+k
+
+
+
+
+
+
+
+
+Deﬁnizioa
+Izan bedi A n ∗ n matrizea, baldin |aii| >
+n
+j=1,j=i |aij |
+∀ i = 1, ..., n betetzen bada, orduan
+A-ri hertsiki diagonalki menpekoa esaten zaio.
+3
+
+Deﬁnizioa
+Biz A n ∗ n matrizea, baldin
+xtAx > 0
+∀ x > 0
+(non x
+n dimentsioko bektorea baita)
+betetzen bada, A-ri matrize positibo deﬁnitua esango diogu.
+xtAx = (x1, ..., xn)
+
+
+a11 · · · a1n
+..
+.
+. ..
+..
+.
+an1 · · · ann
+
+
+
+
+x1
+..
+.
+xn
+
+ =
+n
+i=1
+n
+j=1
+aijxixj
+Teorema
+Baldin A n ∗ n matrize hertsiki diagonalki menpekoa bada edo positibo deﬁnitua bada, orduan A
+ez singularra da. Gainera Ax = b sistemari aplikatutako ezabapen Gaussiarrak biribiltze-
+errorearen
+hazkunde egonkorra dauka.
+4.
+MATRIZE ETA BEKTOREEN NORMAK
+Izan bedi IRn osagai errealekiko bektore-
+multzoa. Bektorearen normaren kontzeptua sartzeko
+IRn multzoan distantzia deﬁnitu beharko dugu.
+Deﬁnizioa
+IR multzoan deﬁnituriko norma bektoriala,
+·
+: IRn−→ IR+, motako funtzioa da eta ondoko
+propietateak bete behar ditu:
+1) x ≥ 0 ∀ x ∈ IRn
+2) x = 0 ⇐=⇒ x = (0, ..., 0)t ≡ 0
+3) λx = |λ| x
+∀ λ ∈ IR , x ∈ IRn
+4) x + y ≤ x + y
+∀ x, y ∈ IRn
+Deﬁnizioa
+Biz x = (x1, ..., xn)t bektorea, ondoko l1, l2, l∞ norma ohizkoenak dira:
+x 1 =
+n
+i=1
+|xi|
+,
+x 2 =
+n
+i=1
+x2
+i
+,
+x ∞ = max
+1≤i≤n
+|xi|
+Baldin IR , IR2 , IR3 kontsideratzen baditugu l2-
+ri norma euklidearra esaten zaio eta koordenatu
+jatorritik punturainoko distatzi erreala adierazten du.
+Deﬁnizioa
+Bi bektoreen arteko distantzia beraien kenduraren normatzat diﬁnitu ohi da.
+Beraz, baldin
+x = (x1, ..., xn)t , y = (y1, ..., yn)t ∈ IRn , orduan:
+x − y 1 =
+n
+i=1
+|xi − yi|
+,
+x − y 2 =
+n
+i=1
+(xi − yi)2
+,
+x ∞ = max
+1≤i≤n
+|xi − yi|
+Adibidea
+Izan bedi ondorengo ekuazio-sistema:
+E1 : 3.3330x1 + 15920x2
+− 10.333x3 = 15913
+E2 : 2.2220x1 + 16.710x2 + 9.6120x3 = 28.544
+E3 : 1.5611x1 + 5.1791x2 + 1.6852x3 = 8.4254
+4
+
+Sistema lineal honen soluzio zuzena x = (x1, x2, x3)t = 
+(1.0000, 1.0000, 1.0000)t da, baina sistema honi 5
+digitu esangarrietako ezabapen Gaussiarra aplikatu ondoren x = (x1, x2, x3)t = 
+(1.2001, 0.99991, 0.92538)t
+soluzio hurbildua agertu zaio.
+x − x 1 = |1.0000 − 1.2001| + |1.0000 − 0.99991| + |1.0000 − 0.92538| = 0.27481
+x − x 2 =
+|1.0000 − 1.2001|2 + |1.0000 − 0.99991|2 + |1.0000 − 0.92538|2 = 0.21352
+x − x ∞ = max
+{|1.0000 − 1.2001|, |1.0000 − 0.99991|, |1.0000 − 0.92538|} = 0.2001
+Nahiz eta x2 eta x3 hurbilketa nahiko onak izan x1 hurbilketa erabat txarra da eta x eta x-
+en
+arteko distantzia menperatu du.
+Distantziaren kontzeptuaren bidez IRn espazioaren bektore segideen limitea deﬁnituko dugu.
+Deﬁnizioa
+Baldin ondoko erlazioa betetzen bada IRn espazioaren {x(k)}n
+k=1 bektore segidak,
+·
+normaz,
+x bektorera konbergitzen duela esan ohi da.
+∀ > 0 ∃N ( ) non ∀ k ≥ N ( )
+x(k) − x <
+betetzen baita
+Teorema
+IRn espazioan {x(k)}n
+k=1
+bektore segidak x bektorera
+·
+normaz konbergitzen du baldin eta
+soilik baldin ∀ i = 1, ..., n
+limk→∞ x
+(k)
+i
+= xi
+IRn espazioan deﬁnituriko norma guztiak baliokideak dira, hau da, baldin
+·
+eta
+IRn-ko bi
+normak badira eta
+·
+normari dagokion {x(k)}n
+k=1 segidaren limitea x bada orduan
+normari
+dagokion {x(k)}n
+k=1
+segidaren limitea x da erebai.
+n ∗ n matrizeen arteko distantzia neurtzeko
+matrizeen normaren kontzeptua behar da. Adibidez ∀ x ∈ IRn
+x ∞ ≤ x 2 ≤
+√
+n x ∞.
+Deﬁnizioa
+Ondoko propietateak betetzen dituzten n ∗ n matrizeen multzoan deﬁnituriko
+·
+aplikazioari
+norma matriziala esaten zaio.
+1) A ≥ 0 ∀ A n ∗ n matrizea
+2) A = 0 ⇐=⇒ A = 0 ∀ A n ∗ n matrizea
+3) λA = |λ| A
+∀ λ ∈ IR , A n ∗ n matrizea
+4) A + B ≤ A + B
+∀ A , B n ∗ n matrizeak
+5) AB ≤ A B
+∀ A , B n ∗ n matrizeak
+Orain l1, l2, l∞ normak ondorioztatzen dituzten matrizeen normak kontsideratuko ditugu. Bira
+A eta B n ∗ n matrizeak,
+A − B
+beraien arteko distantziatzat hartuko dugu.
+Teorema
+Baldin
+·
+IRn-ko norma bektoriala bada, orduan,
+n ∗ n
+matrize errealeen multzoan
+A = max x =1 Ax
+adierazpenaz norma matriziala (”norma naturala”) deﬁnitu ohi da.
+l1 norma −→ A 1 = max
+x 1=1
+Ax 1
+l2 norma −→ A 2 = max
+x 2=1
+Ax 2
+l∞ norma −→ A ∞ = max
+x ∞=1
+Ax ∞
+5
+
+Teorema
+A = (aij) n ∗ n matrizerako, ondoko propietateak beteko dira:
+a) A ∞ = max1≤i≤n
+n
+j=1 |aij |
+b) A 1 = max1≤j≤n
+n
+i=1 |aij |
+**frog**
+Deﬁnizioa
+Biz A n∗n matrizea, P (λ) = det(A−λI) A-ren ”polinomio karakteristikoa” da. P 
+(λ) koeﬁziente
+errealekiko n. mailako polinomioa da, beraz, gehienez ”n” erro desberdin dauzka. Baldin λ
+P (λ)-ren
+erroa bada, ikusitako teorema baten bidez det(A − λI) = 0 denez
+(A − λI)x = 0 sistemak soluzio
+nuluaz gain beste soluzio ez nulua dauka.
+Deﬁnizioa
+Biz P (λ) A matrizearen polinomio karakteristikoa, P (λ)-ren erroei A-
+ren ”autobalioak” edo ”balio
+propioak” esango diegu. Baldin λ A-ren autobalioa bada eta x bektoreak 
+(A − λI)x = 0 betetzen
+badu, orduan x-i λ-ri dagokion A-ren autobektorea esango diogu.
+Adibidea
+A =
+
+
+1
+0 1
+2
+2 1
+−1 0 0
+
+
+A matrizearen autobalioak eta autobektore bat aurkitu.
+P (λ) = det(A − λI) = det
+
+
+1 − λ
+0
+1
+2
+2 − λ
+1
+−1
+0
+−λ
+
+ = (1 − λ)(2 − λ)(−λ) + (2 − λ)
+Beraz, autobalioak
+λ1 = 2 , λ2 = 1
+2 +
+√
+3
+2 i ,
+λ3 = 1
+2 −
+√
+3
+2 i
+dira.
+λ1-ri dagokion autobektoreak (A − λ1I)x = 0 bete behar du.
+
+
+−1 0
+1
+2
+0
+1
+−1 0 −2
+
+
+
+
+x1
+x2
+x3
+
+ =
+
+
+0
+0
+0
+
+ =⇒
+−x1 + x3 = 0
+2x1 + x3 = 0
+−x1 − 2x3 = 0
+Sistema honen soluzioa ondokoa da:
+x1 = x3 = 0 eta x2 hautazkoa. Adibidez, x = (0, 1, 0)t
+Deﬁnizioa
+Biz A n ∗ n matrizea eta λi bere autobalioak,
+ρ(A) = max{|λi|}
+balioari A-ren ”erradio
+espektrala” esaten zaio.
+Teorema
+Biz A = (aij) n ∗ n matrize erreala, orduan:
+a) [ρ(AtA)](1/2) = A 2
+b) ρ(A) ≤ A
+∀
+·
+norma matriziala.
+c) ∀ > 0 ∃
+·
+norma non
+A < ρ(A) +
+6
+
+Adibidea
+A =
+
+
+2 1 0
+1 1 1
+0 1 2
+
+
+A matrizearen erradio espektrala aurkitu.
+AAt = A2 =
+
+
+2 1 0
+1 1 1
+0 1 2
+
+
+
+
+2 1 0
+1 1 1
+0 1 2
+
+ =
+
+
+5 3 1
+3 3 3
+1 3 5
+
+
+0 = det(AAt−λI) = det
+
+
+5 − λ
+3
+1
+3
+3 − λ
+3
+1
+3
+5 − λ
+
+ = (5−λ)2(3−λ)+18−(3−λ)−18(5−λ) = −λ(λ−4)(λ−9)
+A-ren autobalioak 0 , 4 eta 9 dira.
+Beraz
+A 2 = [ρ(AtA)](1/2) =
+max{0, 4, 9} = 3
+Matrizeen iteraziozko prozesuetan, beraien osagaiek 0-
+ra konbergitzen duten matrizeak garrantsi
+hadikoak dira eta hauei matrize konbergenteak esango diegu.
+Deﬁnizioa
+Izan bedi A n ∗ n matrizea, baldin limk→∞
+(Ak)ij = 0 ∀ i, j = 1, ..., n betetzen bada, orduan
+A konbergentea da.
+Teorema
+A n ∗ n matrizerako, ondorengo baieztapenak baliokideak dira:
+i) A matrize konbergentea da.
+ii) limk→∞ Ak = 0 edozein
+·
+norma naturalerako.
+iii) ρ(A) ≤ 1
+iv) A ≤ 1
+v) limk→∞ Akx = 0 ∀ x ∈ IRn
+7
+
+KAPITULU II.
+EZABAPEN GAUSSIARRA ETA
+ATZERAKAKO ORDEZKAPENA
+1.
+SARRERA ETA METODOA
+Demagun ondoko sistema lineala eta matize hedatua:
+E1 : a11x1 + a12x2 + ... + a1nxn = b1
+...
+...
+...
+...
+...
+...
+En : an1x1 + an2x2 + ... + annxn = bn
+−→ Ah = [A, b] =
+
+
+
+a11 · · · a1n | a1n+1
+..
+.
+. ..
+..
+.
+..
+.
+an1 · · · ann | ann+1
+
+
+
+non ain+1 = bi, i = 1, ..., n baitira. Baldin a11 = 0, hurrenez hurren, ondoko aldaketak egin daitezke:
+Ej −
+aj1
+a11
+E1 −→ (Ej) ,
+j = 2, 3, ..., n
+beraz a11 osagaiaren azpian dauden beste aj1 , j = 2, ..., n osagai guztiak ezabatuko ditugu. Gero
+beste zutabetan prozesu bera errepikatuko dugu diagonal nagusiaren azpiko osagai guztiak 0 izan arte.
+Beraz aii = 0 denean:
+Ej − (
+aji
+aii
+)Ei −→ (Ej)
+j = i + 1, ..., n
+aldaketak sartuko ditugu sistema baliokidearen ondoko matrize berria izan arte:
+A
+(f )
+h
+= [A, b] =
+
+
+
+a11 a12 ... a1n | a1n+1,
+0
+a22 ... a2n | a2n+1,
+...
+...
+...
+...
+...
+0
+...
+0
+ann | ann+1.
+
+
+
+Matrize hau, triangeluarra denez, atzerakako ordezkapenaren bidez zuzenean ebatzi daiteke,
+a11x1 + a12x2 + ... + a1nxn = a1n+1,
+a12x2 + ... + a2nxn = a2n+1,
+...
+...
+...
+annxn = ann+1.
+xn =
+ann+1
+ann
+;
+xn−1 =
+(an−1n+1 − an−1nxn)
+an−1n−1
+eta jarraian:
+xi =
+ain+1 − ainxn − ain−1xn−1 − ... − aii+1xi+1
+aii
+=
+(ain+1 −
+n
+j=i+1 aij xj )
+aii
+∀i = n − 1, ..., 1
+Prozesu honen beste adierazpidea azal dezakegu. {A
+(i)
+h }
+n
+i=1
+matrizeen segida kontsideratuko dugu
+non A
+(k)
+h
+matrizea ezabapenaren k urratseko matrizea baita. Hau da:
+a
+(k)
+ij
+=
+
+
+
+
+
+a
+(k−1)
+ij
+i = 1, ..., k − 1 , j = 1, ..., n + 1
+0
+i = k, ..., n , j = 1, ..., k − 1
+a
+(k−1)
+ij
+−
+a
+(k−1)
+ik−1
+a
+(k−1)
+k−1k−1
+a
+(k−1)
+k−1j
+i = k, ..., n , j = k, ..., n + 1
+A
+(k)
+h
+=
+
+
+
+
+
+
+
+
+
+
+
+a
+(1)
+11
+a
+(1)
+12
+...
+a
+(1)
+1k−1
+a
+(1)
+1k
+...
+a
+(1)
+1n
+|
+a
+(1)
+1n+1
+0
+a
+(2)
+22
+...
+a
+(2)
+2k−2
+a
+(2)
+2k
+...
+a
+(2)
+2n
+|
+a
+(2)
+2n+1
+...
+...
+...
+...
+...
+...
+...
+...
+0
+...
+0
+a
+(k−1)
+k−1k−1
+a
+(k−1)
+k−1k
+... a
+(k−1)
+k−1n
+| a
+(k−1)
+k−1n+1
+0
+...
+...
+0
+a
+(k)
+kk
+...
+a
+(k)
+kn
+|
+a
+(k)
+kn+1
+...
+...
+...
+...
+...
+...
+...
+...
+0
+...
+...
+0
+a
+(k)
+nk
+...
+a
+(k)
+nn
+|
+a
+(k)
+nn+1
+
+
+
+
+
+
+
+
+
+
+
+8
+
+A
+(k)
+h
+matrizearen azken Ek, ..., En ekuazioetan xk−1 aldagaia ez da azaltzen xk, ..., xn aldagaien
+menpeko adierazpenaz ordezkatu delako. Hala ere A
+(k)
+h
+eta Ah baliokideak dira. Baldin a
+(1)
+11 , a
+(2)
+22 , ... edo
+a
+(n)
+nn
+berdin 0 bada orduan prozesua ezin da burutu
+Ei − (a
+(k)
+ik /a
+(k)
+kk )Ek
+−→ (Ei) ordezkapenaren
+zatikiaren izendatzailea 0 baita. Eragozpen hau gainditzeko prozesua aldatu beharko dugu, baldin
+∃ 1 ≤ k ≤ n − 1 non a
+(k)
+kk = 0 den, orduan, k zutabean a
+(k)
+kk osagaiaren azpian elementu bat = 0 bilatu
+beharko dugu, hauxe da, k − 1 ≤ p ≤ n non a
+(k)
+pk = 0 eta (Ek ←→ (Ep))
+aldaketa burutu. Baldin
+a
+(k)
+pk = 0 ∀ p = k, ...n, orduan sistemak soluzio bat baino gehiago dauka eta prozesua gelditu egingo da.
+Adibidea
+Ondorengo ekuazio-sistema ebatzi:
+
+
+
+
+
+E1 :
+x1
+−
+x2
++ 2x3 −
+x4
+=
+−8,
+E2 : 2x1 − 2x2 + 3x3 − 3x4 = −20,
+E3 :
+x1
++
+x2
++
+x3
+=
+−2,
+E4 :
+x1
+−
+x2
++ 4x3 + 3x4 =
+4.
+Sistemaren matrize hedatua ondokoa da:
+Ah = A
+(1)
+h
+=
+
+
+
+1 −1 2 −1 |
+−8
+2 −2 3 −3 | −20
+1
+1
+1
+0
+|
+−2
+1 −1 4
+3
+|
+4
+
+
+
+(E2 − 2E1)−→ (E2)
+(E3 − E1)−→ (E3)
+(E4 − E1)−→ (E4)
+
+
+
+−→ A
+(2)
+h
+=
+
+
+
+1 −1
+2
+−1 | −8
+0
+0
+−1 −1 | −4
+0
+2
+−1
+1
+|
+6
+0
+0
+2
+4
+|
+12
+
+
+
+a
+(2)
+22 = 0 denez errenkada-aldaketarik gabe prozesuak ezin du jarraitu, baina a
+(2)
+32 = 0 denez,
+(E2) ←→ (E3)−→ A
+(2)
+h
+=
+
+
+
+1 −1
+2
+−1 | −8
+0
+2
+−1
+1
+|
+6
+0
+0
+−1 −1 | −4
+0
+0
+2
+4
+|
+12
+
+
+
+x2 ezabatua dagoenez A
+(3)
+h
+= A
+(2)
+h
+eta A
+(4)
+h
+eraikiko dugu:
+(E4 + 2E3) ←→ (E4)−→ A
+(4)
+h
+=
+
+
+
+1 −1
+2
+−1 | −8
+0
+2
+−1
+1
+|
+6
+0
+0
+−1 −1 | −4
+0
+0
+0
+2
+|
+4
+
+
+ .
+Orain sistemaren soluzioa kalkulatzeko atzerakako ordezkapena dator:
+x4 = 4/2 = 2 ; x3 =
+[−4 + x4]
+−1
+= 2 , x2 =
+[6 − x4 + x3]
+2
+= 3 , x1 =
+[−8 + x4 − 2x3 + x2]
+1
+= −7
+2.
+ALGORITMOA ETA ADIBIDEAK
+Atzerakako ordezkapenarekiko ezabapen Gaussiarraren algoritmoa
+Ezabapen Gaussiarraren algoritmoak n ekuazio linealeen sistemaren soluzioa aurkitzen du:
+Sarreran: n sistemaren heina; Ah = 
+(aij), 1 ≤ i ≤ n, 1 ≤ j ≤ n + 1 matrize hedatua.
+Irteeran: (x1, ..., xn) soluzioa edo soluzio bat baino gehiago daudeneko mezua.
+9
+
+Urrats 1: i = 1, 2, ..., n − 1 den bitartean 2-4 urratsak jarraitu.
+Urrats 2: Izan bedi
+p
+i ≤ p ≤ n
+eta api = 0 betetzen duen zenbakirik txikiena.
+p hori existitzen ez bada, orduan IRTEERA 
+(soluzio bat baino gehiago daude); GELDITU.
+Urrats 3: Baldin p = i bada egin (Ep) ←→ (Ei) errenkadeen aldaketa.
+Urrats 4: j = i + 1, i + 2, ..., n den bitartean 5-6 urratsak jarraitu.
+Urrats 5: Hartu
+mji = aji/aii.
+Urrats 6: (Ej − mjiEi) ←→ (Ej)
+Urrats 7: Baldin ann = 0 bada, IRTEERA 
+(soluzio bat baino gehiago daude); GELDITU.
+Atzerakako
+Ordezkapena
+Urrats 8: Hartu
+xn = ann+1/ann
+Urrats 9: i = n − 1, n − 2, ..., 1
+den bitartean hartu
+xi = ain+1 −
+n
+j=i+1 aij xj
+/aii
+Urrats 10: IRTEERA (x1, ..., xn); (prozesu asebetegarria) GELDITU.
+Adibidea
+Ondoko bi sistema linealak ebatzi:
+x1
++
+x2
++
+x3
++
+x4
+=
+7
+x1
++
+x2
++ 2x4 =
+8
+2x1
++ 2x2 + 3x3
+= 10
+−x1 −
+x2
+− 2x3 + 2x4 =
+0
+x1
++
+x2
++
+x3
++
+x4
+=
+7
+x1
++
+x2
++ 2x4 =
+5
+2x1
++ 2x2 + 3x3
+= 10
+−x1 −
+x2
+− 2x3 + 2x4 =
+0
+Sistema hauen matrize hedatuak ondokoak dira:
+A
+(1)
+a(1) =
+
+
+
+1
+1
+1
+1 |
+7
+1
+1
+0
+2 |
+8
+2
+2
+3
+0 | 10
+−1 −1 −2 2 |
+0
+
+
+
+A
+(1)
+a(2) =
+
+
+
+1
+1
+1
+1 |
+7
+1
+1
+0
+2 |
+5
+2
+2
+3
+0 | 10
+−1 −1 −2 2 |
+0
+
+
+
+Bi kasuetan a11 = 1 = 0 denez E2 , E3 eta E4 errenkadetan x1-
+en koeﬁzientea ezaba dezakegu:
+mj1 =
+aj1
+a11
+=
+aj1
+1
+= aj1
+Orduan
+j = 2−→ m21 = 1 ; j = 3−→ m31 = 2 ; j = 4−→ m41 = −1
+eta ondoko eragiketak
+burutuko ditugu:
+(E2 − E1)−→ (E2) ; (E3 − 2E1)−→ (E3) ; (E4 + E1)−→ (E4)
+sistemak lehenengoan baino antza bakunagoa harturik:
+A
+(2)
+a(1) =
+
+
+
+1 1
+1
+1
+|
+7
+0 0 −1
+1
+|
+1
+0 0
+1
+−2 | −4
+0 0 −1
+3
+|
+7
+
+
+
+A
+(2)
+a(2) =
+
+
+
+1 1
+1
+1
+|
+7
+0 0 −1
+1
+| −2
+0 0
+1
+−2 | −4
+0 0 −1
+3
+|
+7
+
+
+
+a22 = a32 = a42 = 0
+direnez prozesua gelditu da, soluzio bat baino gehiago direlarik.
+Hala ere,
+(E4 + E3)−→ (E4)
+aldaketaren bitartez egoera argiago ikus dezakegu:
+A
+(4)
+a(1) =
+
+
+
+1 1
+1
+1
+|
+7
+0 0 −1
+1
+|
+1
+0 0
+1
+−2 | −4
+0 0
+0
+1
+|
+3
+
+
+
+A
+(4)
+a(2) =
+
+
+
+1 1
+1
+1
+|
+7
+0 0 −1
+1
+| −2
+0 0
+1
+−2 | −4
+0 0
+0
+1
+|
+3
+
+
+
+Matrize hauei dagozkien sistemak ondokoak dira:
+x1 + x2 + x3 +
+x4
+=
+7
+− x3 +
+x4
+=
+1
+x3 − 2x4 = −4
+x4
+=
+3
+=⇒
+
+
+
+
+
+x4 = 3
+x3 = −4 + 2x4 = 2
+x3 = x4 − 1 = 2
+x1 = 7 − x2 − 2 − 3 = 2 − x2
+10
+
+Beraz sistema honen soluzioak
+(2 − t, t, 2, 3)
+modukoak izango dira, non t parametro askea baita.
+Beste sistema, aldiz, ez dauka horrelako soluziorik:
+x1 + x2 + x3 +
+x4
+=
+7
+− x3 +
+x4
+= −2
+x3 − 2x4 = −4
+x4
+=
+3
+=⇒
+
+
+
+
+
+x4 = 3
+x3 = −4 + 2x4 = 2
+x3 = 2 + x4 = 5
+x1 = 2 − x2
+x3 = 2 , x3 = 5 =⇒ 2 = 5
+eta azken emaitza hau absurdua da, beraz, bigarren sistema honek ez
+dauka soluziorik.
+Soluzioaren existenziaz gain beste bi kontzeptuak aztertu behar ditugu. Lehenengoa biribiltze
+errorea da eta bestea eragiketa kopurua. Digito hamartarrekiko zenbakien arteko biderkadurek digito
+hamartarrekiko beste zenbakiak emango dituzte. Ordenagailuak digito kopuru mugatua gorde dezake,
+beraz, baldin koeﬁziente hurbilduekin lan egin behar badugu, biribiltze errorearen hazkuntza kontrolatu
+beharko dugu. Era berean, biderkadura edo zatidura bat prozesatzea batura edo kendura baino askoz
+denbora gehiago irauntzen da, horregatik eragiketa kopurua kontrolatu beharko da erebai. Adibidez,
+algoritmoaren 1 - 4 urratsetan ez daude eragiketarik baina 5. urratsean 
+(n − i) zatiketak egiten dira; 6.
+urratsean (Ej −mjiEi)−→ (Ej) aldaketetan (n−i)(n−i+1) biderkaketa eta (n−i)
+(n−i+1) kenketa
+egiten dira. Baldin i bakoitzerako eragiketa kopurua kontsideratzen badugu, algoritmoaren eragiketa
+kopuru osoa ondorengoa da:
+Biderkaketa/Zatiketa
+Batuketa/kenketa
+2n3+3n2−5n
+6
++ n
+2+n
+2
+= n
+3+3n2−n
+3
+n3−n
+3
++ n
+2−n
+2
+= 2n
+3+3n2−5n
+6
+Biderkaketa/Zatiketa eta Batuketa/Kenketa kopuruak n3/
+3 ordenekoak direnez, eragiketak eta
+konputazio-denbora proporzio honekin batera haziko dira.
+ARIKETAK
+1.
+Atzerakako ordezkapenarekiko ezabapen Gaussiarraren bidez, ekuazioak berrordenatu gabe eta
+bi digitoekiko aritmetikaz ondoko sistema linealak ebatzi. Soluzio zuzena:
+(x1 = 1, x2 = −1, x3 = 3) .
+a)
+4x1 +
+x2
+−
+x3
+=
+0
+2x1 + 5x2 + 2x3 =
+3
+x1
++ 2x2 + 4x3 = 11
+b)
+x1
++ 2x2 + 4x3 = 11
+4x1 +
+x2
+−
+x3
+=
+0
+2x1 + 5x2 + 2x3 =
+3
+c)
+4x1 +
+x2
++ 2x3 =
+9
+2x1 + 4x2 −
+x3
+= −5
+x1
++
+x2
+− 3x3 = −9
+d)
+2x1 + 4x2 −
+x3
+= −5
+x1
++
+x2
+− 3x3 = −9
+4x1 +
+x2
++ 2x3 =
+9
+2.
+Atzerakako ordezkapenarekiko ezabapen Gaussiarraren bidez eta aritmetika zehatzaz ondoko
+sistema linealak ebatzi. Baldin beharrezkoak badira errenkada-
+ordezkapenak herabili.
+a)
+x1
+−
+x2
++ 3x3 =
+2
+3x1 − 3x2 +
+x3
+= −1
+x1
++
+x2
+=
+3
+b)
+x2 + 4x3 =
+0
+x1 − x2 −
+x3
+= 0.375
+x1 − x2 + 2x3 =
+0
+c)
+2x1
+− 1.5x2 + 3x3 = 1
+−x1
++ 2x3 = 3
+4x1
+− 4.5x2 + 5x3 = 1
+d)
+2x1 −
+x2
++
+x3
+= −1
+3x1 + 3x2 + 9x3 =
+0
+3x1 + 3x2 + 5x3 =
+4
+11
+
+KAPITULU III.
+PIBOTEO ESTRATEGIAK
+1.
+SARRERA ETA METODOA
+Ezabapen Gaussiarraren garapenean k ≤ i ≤ p urratsean a
+(k)
+kk = 0
+bada eta a
+(k)
+pk = 0, orduan
+eragozpena gainditzeko (Ek) ←→ (Ep) errenkada-
+aldaketa egingo da. Hala ere nahiz eta diagonaleko
+osagaiak a
+(k)
+kk = 0
+izan, borobiltze errore nabaria bihurtu daiteke. Baldin diagonal nagusiaren azpian
+pibote osagaia baino askoz handiagoak diren osagaiak badaude, ordenagailuak errore handia eragin dezake
+ondoko adibidean ikus dezakegunez.
+Adibidea
+E1 : 0.003x1 + 59.14x2 = 59.17
+E2 : 5.291x1 − 6.130x2 = 46.78
+Sistema linealaren soluzio zehatza 
+(x1 = 10.00, x2 = 1.000) da. Baina lau digito esangarriekiko ezabapen
+Gaussiarra aplikatzen badiogu:
+a
+(1)
+11 = 0.003
+,
+m21 =
+5.291
+0.003
+= 1763.6 ≈ 1764
+(E2 − m21E1)−→ (E2) =⇒
+1764 · 59.14 = 104322 −→ 104300
+1764 · 59.17 = 104375 −→ 104400
+eta
+E1 : 0.003x1 +
+59.14x2
+=
+59.17
+E2 :
+− 104300x2 = −104400
+sistemaren soluzioa atzerakako ordezkapenaz kalkula daiteke
+x2 = 1.001 ,
+x1 =
+59.17 − 59.14 · 1.001
+0.003
+=
+59.17 − 59.20
+0.003
+= −
+0.030
+0.003
+= −10.00
+x2-ren errore txikiak eragin itzela izan du x1-
+en gainean, aldagai honen errorea 20.000 bider handitua
+izan baita.
+Adibide honek a
+(k)
+kk
+koeﬁzientea a
+(k)
+pk ,
+k + 1 ≤ p ≤ n baino askoz txikiago deneko kasuaren er-
+agozpenak erakusten ditu. Gehienetan, piboteo estrategiek k eta p errenkadeen arteko trukearen bidez
+a
+(k)
+pk osagai pibote berria eta egokia bilatzen dute. Piboteo estrategiarik bakunena diagonalaren azpian da-
+goen zutabe bakoitzaren osagairik handiena 
+(balio absolutuan) aurkitzean datza, |a
+(k)
+pk | = maxk≤i≤n |a
+(k)
+ik |,
+eta ondorioz (Ek) ←→ (Ep) .
+Adibidea
+E1 : 5.291x1 − 6.130x2 = 46.78
+E2 : 0.003x1 + 59.14x2 = 59.17
+Orain
+a
+(1)
+11 = 5.291−
+→ m21 =
+a
+(1)
+21
+a
+(1)
+11
+= 0.003
+5291
+(E2 − m21E1)−→ (E2) =⇒
+0.000567 · 6.13 = 0.003476
+0.000567 · 46.78 = 0.02652
+5.291x1 − 6.130x2 = 46.78
++ 59.14x2 = 59.14
+Atzerakako ordezkapenaz 
+(x1 = 10.00, x2 = 1.000) soluzio zehatza aterako zaigu. Metodo hau zutabe-
+piboteo maximotzat ezagutu ohi da.
+12
+
+2.
+ALGORITMOA ETA ADIBIDEAK
+Metodo honek eragiketa guztietan |mij| ≤ 1 izatea zihurtatzen du.
+Zutabe piboteo maximoarekiko ezabapen Gaussiarraren algoritmoa
+Algoritmoak ekuazio linealeen sistemaren soluzioa aurkitzen du:
+Sarreran: n ekuazio kopurua; Ah = (aij), 1 ≤ i ≤ n ,
+1 ≤ j ≤ n + 1 matrize hedatua.
+Irteeran: (x1, ..., xn) soluzioa edo soluzio bat baino gehiago daudeneko mezua.
+Ezabapen
+Gaussiarra
+Urrats 1: Hartu F (i) = i , i = 1, ...n
+Urrats 2: i = 1, 2, ..., n − 1 den bitartean 3-6 urratsak jarraitu.
+Urrats 3: |a(F (p), i)| = maxi≤j≤n |a(F (j), i)|
+adierazpena betetzen duen i ≤ p ≤ n
+zenbakirik txikiena hautatu.
+Urrats 4: Baldin |a(F (p), i)| = 0, IRTEERA 
+(soluzio bat baino gehiago daude); GELDITU.
+Urrats 5: Baldin F (i) = F (p) , orduan AU X = F (i) ; F (i) = F (p) ; F 
+(p) = AU X.
+Urrats 6: j = i + 1, ..., n den bitartean 7-8 urratsak jarraitu.
+Urrats 7: Hartu
+m(F (j), i) = a(F (j), i)/a(F (i), i)
+Urrats 8: (EF(j) − m(F (j), i)EF(i)) ←→ (EF(j)).
+Urrats 9: Baldin a(F (n), n) = 0 , IRTEERA 
+(soluzio bat baino gehiago daude); GELDITU.
+Atzerakako
+Ordezkapena
+Urrats 10: Hartu
+xn = a(F (n), n + 1)/a(F (n), n)
+Urrats 11: i = n−1, ..., 1 bitartean hartu xi = a(F (i), n + 1) −
+n
+j=i+1 a(F (i), j)xj
+/a(F (i), i)
+Urrats 12: IRTEERA (x1, ..., xn) ; (prozesu asebetegarria) GELDITU.
+Adibidea
+Nahiz eta metodo honek sistema gehienetan emaitza onak itzuli, batzuetan ez da nahikoa. Demagun
+lehenengo adibidearen sistemaren koeﬁzienteak bider 104 .
+E1 : 30.00x1 + 591400x2 = 591700
+E2 : 5.291x1 −
+6.130x2
+=
+46.78
+Orain sistemari zutabe piboteo maximoarekiko ezabapen Gaussiarra aplikatuko diogu 4 digito esangar-
+riekiko aritmetikaz,
+max
+1≤j≤2
+|aji| = 30.00 , m21 =
+5.291
+30.00
+= 0.1764
+(E2 − m21E1)−→ (E2) =⇒
+0.1764 · 591400 = 104322−→ 104300
+0.1764 · 591700 = 104375−→ 104400
+eta
+30.00x1 + 591400x2 =
+591700
+− 104300x2 = −104400
+sistema baliokide honen soluzioa (x1 = −10.00, x2 = 1.001) da.
+Gisa honetako sistemetarako teknika egokiena zutabe piboteo eskalatua izenekoa da. Prozesu berri
+honen lehenengo urratsa errenkada bakoitzerako eskala faktore bat deﬁnitzean datza.
+∀ l = 1, ..., n ,
+sl = max
+1≤j≤n
+|alj|
+Baldin sl = 0, 1 ≤ l ≤ n, orduan soluzio bat baino gehiago egon behar du eta prozesua gelditu egiten
+da. Bestela |ak1|/sk = max1≤j≤n |aj1|/
+sj betetzen duen 1 ≤ k ≤ n zenbakirik txikiena aukeratuko
+13
+
+dugu. Era berean ”i” urratsean |aki|/sk = maxi≤j≤n |aji|/
+sj betetzen duen i ≤ k ≤ n
+zenbakirik
+txikiena aukeratuko dugu eta (Ei) ←→ 
+(Ej) aldaketa egingo dugu ezabapen Gaussiarraren aurretik.
+Eskalaren eragina errenkada bakoitzaren osagairik handienaren magnitudea 1 izatean datza, beraz,
+eskala faktoreen arteko zatidurak ez du biribiltze errorerik sortzen.
+Adibidea
+Aurreko adibidearen biderkatzaileak ondokoak dira,
+s1 = max{|30.00|, |591400|} = 591400 , s2 = max{|5.291|, | − 6.130|} = 6.130
+|a11|
+s1
+=
+30.00
+591400
+= 0.5073 ∗ 10−4
+eta
+|a21|
+s2
+=
+5.291
+6.130
+= 0.8631
+Orain errenkada-aldaketa burutzen dugu ondoko sistema bihurtuz,
+5.291x1 −
+6.130x2
+=
+46.78
+30.00x1 + 591400x2 = 591700
+Sistema honi ezabapen Gaussiarra aplikatuko diogu m21 = 30.00/
+5.291 = 5.67 biderkatzailearekin,
+(E2 − m21E1)−→ (E2) =⇒
+5.67 · 6.13 = 34.76
+5.67 · 46.78 = 256.2
+etaorain
+5.291x1 −
+6.130x2
+=
+46.78,
+591400x2 = 591400,
+Orain atzerakako ordezkapenak ematen digun soluzioa 
+(x1 = 10.00, x2 = 1.000) da.
+Zutabe piboteo eskalatuarekiko ezabapen Gaussiarraren algoritmoa
+Algoritmoak ekuazio linealeen sistemaren soluzioa aurkitzen du:
+Sarreran: n ekuazio kopurua; Ah = (aij), 1 ≤ i ≤ n ,
+1 ≤ j ≤ n + 1 matrize hedatua.
+Irteeran: (x1, ..., xn) soluzioa edo soluzio bat baino gehiago daudeneko mezua.
+Ezabapen
+Gaussiarra
+Urrats 1: Hartu si = s(i) = max1≤j≤n |a(i, j)| i = 1, ...n
+Baldin i-rako si = 0 bada,
+orduan IRTEERA (soluzio bat baino gehiago daude); GELDITU.
+Bestela hartu f (i) = i
+Urrats 2: i = 1, 2, ..., n − 1 den bitartean 3-6 urratsak jarraitu.
+Urrats 3:
+|a(F (p),i)|
+s(F (p))
+= maxi≤j≤n
+|a(F (j),i)|
+s(F (j))
+adierazpena betetzen duen i ≤ p ≤
+n zenbakirik txikiena hautatu.
+Urrats 4: Baldin |a(F (p), i)| = 0, IRTEERA 
+(soluzio bat baino gehiago daude); GELDITU.
+Urrats 5: Baldin F (i) = F (p), orduan AU X = F (i) ; F (i) = F (p) ; F 
+(p) = AU X.
+Urrats 6: j = i + 1, ..., n den bitartean 7-8 urratsak jarraitu.
+Urrats 7: Hartu
+m(F (j), i) = a(F (j), i)/a(F (i), i)
+Urrats 8: (EF(j) − m(F (j), i)EF(i)) ←→ (EF(j)) egin.
+Urrats 9: Baldin a(F (n), n) = 0, IRTEERA 
+(soluzio bat baino gehiago daude); GELDITU.
+Atzerakako
+Ordezkapena
+Urrats 10: Hartu xn = a(F (n), n + 1)/a(F (n), n)
+Urrats 11: i = n−1, ..., 1 bitartean xi = a(F (i), n + 1) −
+n
+j=i+1 a(F (i), j)xj
+/a(F (i), i) hartu.
+Urrats 12: IRTEERA (x1, ..., xn) ; (prozesu asebetegarria) GELDITU.
+Algoritmo honek Ezabapen Gausiarra arruntarekin konparatuz ez du eragiketa askoz gehiagorik
+behar, beraz konputazionalki ez dio prozesuari denbora askorik gehitzen eta nabaritzen da emaitzak
+hobeagoak direla.
+14
+
+3.
+GAUSS-JORDANEN ALGORITMOA
+Demagun A matrize singularra. Cramer-
+en erregelak Ax = y sistemaren soluzioa aurkitzeko
+A−1 matrizea erabili ohi du, x = A−1y baita. Gauss-Jordan-
+en algoritmoak matrizearen alderantzizkoa
+lortzeko teknika sistematikoa ematen digu. Izan bitez x, y ∈ IRn eta Ax = y sistema lineala:
+E1 : a11x1 + a12x2 + · · · + a1nxn = y1,
+..
+.
+..
+.
+En : an1x1 + an2x2 + · · · + annxn = yn.
+Metodo hau ekuazio sistemak ebazteko betiko ezezagun-
+ordezkapenaren metodoa baino ez da. Metodo
+honen lehenengo urratsean x1 aldagaia 
+{x2, ..., xn, yr} moduko aldagaien funtziopekoan idatziko dugu.
+Doitasuna hobetzeko zutabe-
+piboteo maximoa sar dezakegu ere, |ar1| = max1≤i≤n |ai1| betetzen duen
+ar1 = 0 aukeratuz. Gero (E1) ←→ (Er) errenkada-
+aldaketa beteko dugu ondoko sistema berria lortuz,
+E1 : a11x1 + a12x2 + · · · + a1nxn = y1,
+..
+.
+..
+.
+En : an1x1 + an2x2 + · · · + annxn = yn.
+non a1i = ari eta y1 = yr baitira. Baldin a11 = 0 bada A singularra da eta sistemak soluzio bat
+baino gehiago ditu, bestela, E1-
+etik x1 askatu eta beronen adierazpena beste ekuazioetan ordezkatu.
+x1 =
+1
+a11
+[y1 − a12x2 − ... − a1nxn]
+Beraz
+a11 =
+1
+a11
+,
+a1k = −
+a1k
+a11
+,
+ai1 =
+ai1
+a11
+eta
+aik = aik − ai1
+a1k
+a11
+∀ i, k = 2, 3, ..., n.
+Transformazio hauen bidez ondoko sistema baliokidea dugu:
+E1 : a11y1 + a12x2 + · · · + a1nxn = x1
+..
+.
+..
+.
+En : an1y1 + an2x2 + · · · + annxn = yn
+Hurrengo urratsean bigarren ekuaziotik x2 askatu eta emaitza beste ekuazio guztietan ordezkatuko dugu
+modu berean. Prozesu hau ezezagun guztiak askatu arte errepikatuko dugu. Urrats bakoitzeko matrizeek
+A(0)−→ A(1)−→ ...−→ A
+(n) moduko segida osatuko dute. j. urratsari dagokiaon sistema ondokoa da:
+E1 :
+a
+(j)
+11 y1
++ · · · +
+a
+(j)
+1j yj
++
+a
+(j)
+1j+1xj+1
++ · · · +
+a
+(j)
+1n xn
+=
+x1
+..
+.
+..
+.
+Ej :
+a
+(j)
+j1 y1
++
+...
++
+a
+(j)
+jj yj
++
+a
+(j)
+jj+1xj+1
++ · · · +
+a
+(j)
+jn xn
+=
+xj
+Ej+1 : a
+(j)
+j+11y1
++ · · · + a
+(j)
+j+1j yj
++ a
+(j)
+j+1j+1xj+1
++
+...
++ a
+(j)
+j+1nxn
+= yj+1
+..
+.
+..
+.
+En :
+a
+(j)
+n1 y1
++
+...
++
+a
+(j)
+nj yj
++
+a
+(j)
+nj+1xj+1
++ · · · +
+a
+(j)
+nnxn
+=
+yn
+Zutabe piboteo maximoarekiko Gauss-Jordan-en algoritmorako erregelak
+a)
+|arj| = maxj≤i≤n |aij|
+betetzen duen
+j ≤ r ≤ n
+azpiindizerik txikiena hautatu.
+Baldin arj = 0, orduan matrizea singularra da eta ez dago soluziorik.
+b) A(j−1)-ren r eta j errenkadak elkarren artean aldatu eta emaitza A = (aik)-
+tzat idatzi.
+d) Ondoko formuleen bitartez i, k = j direnean A(j) = (a
+ik) kalkulatu:
+ajj =
+1
+ajj
+,
+ajk =
+−ajk
+ajj
+,
+aij =
+aij
+ajj
+,
+aik = aik − aij
+ajk
+ajj
+15
+
+Azken A(n)-k A(n)y = x beteko du non y = (y1, ..., yn)t bektorea (y1, ..., yn)-
+ren permutazioa den,
+y = P (y) =⇒ A(n)y = A(n)P (y) = x =⇒ A−1 = A(n)P
+Adibidea
+Izan bedi ondorengo matrizea. Bere alderantzizkoa aurkitu errenkada-
+ordezkapenik gabe.
+A =
+
+
+1 1 1
+1 2 3
+1 3 6
+
+
+,
+A(0) = A
+hartuko dugu
+A(1) =
+
+
+
+
+
+
+1
+a11
+−a12
+a11
+−a13
+a11
+a21
+a11
+a22 − a21
+a12
+a11
+a23 − a21
+a13
+a11
+a31
+a11
+a32 − a31
+a12
+a11
+a33 − a31
+a13
+a11
+
+
+
+
+
+
+=
+
+
+1 −1 −1
+1
+1
+2
+1
+2
+5
+
+
+A(2) =
+
+
+
+
+
+
+a11 − a12
+a21
+a22
+a12
+a22
+a13 − a12
+a23
+a22
+−a21
+a22
+1
+a22
+−a23
+a22
+a31 − a32
+a21
+a22
+a32
+a22
+a33 − a32
+a23
+a22
+
+
+
+
+
+
+=
+
+
+2
+−1
+1
+−1
+1
+−2
+−1
+2
+1
+
+
+A(3) =
+
+
+
+
+
+
+a11 − a13
+a31
+a33
+a12 − a13
+a32
+a33
+a13
+a33
+a21 − a23
+a31
+a33
+a22 − a23
+a32
+a33
+a23
+a33
+−a31
+a33
+−a32
+a33
+1
+a33
+
+
+
+
+
+
+=
+
+
+3
+−3
+1
+−3
+5
+−2
+1
+−2
+1
+
+ = A−1
+Adibidea
+Zutabe piboteo maximoarekiko Gauss-Jordan-
+en metodoaren bidez eta 5 digito esangarrietako arit-
+metikaz ondoko sistema ebatzi.
+E1 : 1.5611x1 + 5.1791x2 − 1.6852x3 = 8.4254
+E2 : 3.3330x1 + 15920x2
++ 10.333x3 = 15913
+E3 : 2.2220x1 + 16.710x2 − 9.6120x3 = 28.544
+A(0) =
+
+
+1.5611 5.1791 −1.6852
+3.3330
+15920
+10.333
+2.2220 16.710 −9.6120
+
+
+=⇒
+(E1) ←→ (E2)
+A =
+
+
+3.3330
+15920
+10.333
+1.5611 5.1791 −1.6852
+2.2220 16.710 −9.6120
+
+ , y =
+
+
+15913
+8.4254
+28.544
+
+
+A(1) =
+
+
+0.30003 −4776.5 −3.1002
+0.46838 −7451.4 −6.5250
+0.66667
+−10596
+−16.501
+
+
+=⇒
+(E2) ←→ (E3)
+A =
+
+
+0.30003 −4776.5 −3.1002
+0.66667
+−10596
+−16.501
+0.46838 −7451.4 −6.5250
+
+ , y =
+
+
+15913
+28.544
+8.4254
+
+
+A(2) =
+
+
+−0.49371 ∗ 10−3
+0.45078
+4.3382
+0.62917 ∗ 10−4
+−0.94375 ∗ 10−4
+−0.15573 ∗ 10−2
+−0.44077 ∗ 10−3
+0.70323
+5.0790
+
+ = A , y =
+
+
+15913
+28.544
+8.4254
+
+
+A(3) =
+
+
+−0.11723 ∗ 10−3
+−0.14988
+0.85414
+0.62782 ∗ 10−4
+0.12125 ∗ 10−3
+−0.30662 ∗ 10−3
+0.86783 ∗ 10−4
+−0.13846
+0.19689
+
+ , y =
+
+
+15913
+28.544
+8.4254
+
+
+x = A(3)y =⇒
+
+
+
+x1 = −0.11723e − 3 ∗ 15913 − 0.14988 ∗ 28.544 + 0.85414 ∗ 8.4254 = 1.0528
+x2 = 0.62782e − 4 ∗ 15913 + 0.12125e − 3 ∗ 28.544 − 0.30662e − 4 ∗ 8.4254 = 1.0023
+x3 = 0.86783e − 4 ∗ 15913 − 0.13846 ∗ 28.544 + 0.19689 ∗ 8.4254 = −0.91235
+16
+
+Orduan x∗ = (1.0528, 1.0023, −0.91235) Gauss-Jordan-
+en metodoaz lorturiko hurbilketa ez da oso
+zehatza x = (1.0, 1.0, −1.0)-rekin konparatuz.
+Kalkuluak eskuz egiterakoan A
+(k) matrizeak ez dira ikusitako formulen bidez eraikitzen, beste
+aldagaien menpeko ezezagun bakoitzaren adierazpena zuzenean beste ekuazioetan sartzen da baizik.
+Adibidea
+Ondoko sistema zutabe piboteo maximoarekiko Gauss-
+Jordanen metodoaren bidez ebatzi, eta egin
+eragiketak 3 digito esangarriekin.
+E1 :
+x1
++ 2x2 − x3 = 2
+E2 : 2x1
++
+x2
+= 3
+E3 : −x1 +
+x2
++ x3 = 4
+ARIKETAK
+1.
+Ondoko sistema linealak 2 digitoekiko biribiltze aritmetikaz eta metodo hauen bidez ebatzi:
+i) Atzerakako ordezkapenarekiko ezabapen Gaussiarra ; ii) Zutabe piboteo maximoarekiko ezabapen
+Gaussiarra ; iii) Zutabe piboteo eskalatuarekiko ezabapen Gaussiarra ; iv) Zutabe piboteo maximoarekiko
+Gauss-
+Jordan. Gero ebatzi sistemak aritmetika zehatzaz eta metodo berauetaz ere. Emaitzak konparatu:
+a)
+
+
+
+x1
++ 2x2 + 3x3 =
+1
+2x1 + 3x2 + 4x3 = −1
+3x1 + 4x2 + 6x3 =
+2
+b)
+
+
+
+0.1x1 + 0.2x2 + 0.4x3 = 1.1
+4x1
++
+x2
+−
+x3
+=
+6
+2x1
++
+5x2
++
+2x3
+=
+3
+2. Ondoko sistema linealak 3 digitoekiko biribiltze aritmetikaz eta lehenengo adibidearen metodoen
+bidez ebatzi:
+a)
+
+
+
+0.832x1 + 0.448x2 + 0.193x3 = 1.00
+0.784x1 + 0.421x2 − 0.207x3 = 0.00
+0.784x1 − 0.421x2 + 0.279x3 = 0.00
+b)
+0.03x1 + 058.9x2 = 59.2
+5.31x1 −
+6.10x2
+= 47.0
+d)
+58.9x1
++ 0.03x2 = 59.2
+−6.10x1 + 5.31x2 = 47.0
+e)
+
+
+
+
+
+πx1
+−
+ex2
++
+√
+2x3 −
+√
+3x4 =
+1
+π2x1
++
+ex2
+−
+e2x3
++ 3/7x4 = −1
+√
+5x1 −
+√
+6x2 +
+x3
+−
+1.1x4
+=
+3
+π3x1
++
+e2x2
+−
+√
+7x3 +
+x4
+=
+√
+2
+17
+
+KAPITULU IV.
+MATRIZE FAKTORIZAZIO ZUZENA
+1.
+SARRERA ETA METODOA
+Baldin Ax = b sistema errenkada-
+ordezkapenik gabe ezabapen Gaussiarraren bidez ebatzi badaiteke,
+orduan A matrizea L matrize goi-triangeluarra bider U behe-
+triangeluarraren moduan faktoriza daiteke,
+A = LU =⇒ b = Ax = LU x =⇒ z = U x
+hartuz
+Lz = b
+sistema dugu.
+L goi-
+triangeluarra denez zuzenean atzerakako ordezkapena aplika diezaiokegu z aurkitzeko. Gero
+U x = z sistemaren U matrizea triangeluarra denez erebai, beste aurrerakako ordezkapenaren bidez
+x soluzioa lortuko dugu. A-
+ren LU faktorizazioa beti berdina denez, behin deskonposatuta egon, gero
+b bektore aske ezberdinetarako Ax = b sistema askatuko genuke soilik bi ordezkapenak aplikatuz.
+Adibidea
+Demagun ondoko 4 ∗ 4 matrize diagonalki menpekoa eta kalkulatu bere LU faktorizazioa:
+A =
+
+
+
+6
+2
+1
+−1
+2
+4
+1
+0
+1
+1
+4
+−1
+−1 0 −1
+3
+
+
+
+L =
+
+
+
+l11
+0
+0
+0
+l21 l22
+0
+0
+l31 l32 l33
+0
+l41 l42 l43 l44
+
+
+
+U =
+
+
+
+u11 u12 u13 u14
+0
+u22 u23 u24
+0
+0
+u33 u34
+0
+0
+0
+u44
+
+
+
+L eta U -k 20 osagai ezezagunak dituzte baina A-
+k soilik 16 osagai dituenez L eta U matrizeen
+16 osagai baino ezin dugu ﬁnkatu eta falta diren 4 osagaiei edozein balioak emango dizkiegu. Adibidez,
+Dolittle-ren metodoak l11 = l22 = ... = 1 aukeratzen ditu, Crout-
+enak u11 = u22 = ... = 1 eta
+Cholesky-renak lii = uii. Adibide hau Dolittlenaren bitartez askatuko dugu:
+LU =
+
+
+
+1
+0
+0
+0
+l21
+1
+0
+0
+l31 l32
+1
+0
+l41 l42 l43 1
+
+
+
+
+
+
+u11 u12 u13 u14
+0
+u22 u23 u24
+0
+0
+u33 u34
+0
+0
+0
+u44
+
+
+ =
+
+
+
+a11 a12 a13 a14
+a21 a22 a23 a24
+a31 a32 a33 a34
+a41 a42 a43 a44
+
+
+ = A
+A-
+ren lehenengo errenkadak lau ekuazio hauek halabehartzen ditu, u11 = 6, u12 = 2, u13 = 1 eta
+u14 = −1, eta A-ren lehenengo zutabeak ondoko hirurak:
+l21u11 = 2 =⇒ l21 = 1/3, l31u11 = 1 =⇒ l31 = 1/6
+eta
+l41u11 = −1 =⇒ l41 = −1/6
+Jadanik L-ren lehenengo zutabea eta U -
+ren lehenengo errenkada kalkulatu ditugu:
+L =
+
+
+
+1
+0
+0
+0
+1/3
+1
+0
+0
+1/6
+l32
+1
+0
+−1/6 l42 l43 1
+
+
+
+eta
+U =
+
+
+
+6
+2
+1
+−1
+0 u22 u23 u24
+0
+0
+u33 u34
+0
+0
+0
+u44
+
+
+
+Orain A-
+ren bigarren errenkada eta bigarren zutabeak ondoko ekuazioak beteko dituzte:
+l21u12 + u22 = 2/3 + u22 = 4 =⇒ u22 = 10/3
+l21u13 + u23 = 1/3 + u23 = 1 =⇒ u23 = 2/3
+l21u14 + u24 = −1/3 + u24 = 0 =⇒ u24 = 1/3
+l31u12 + l32u22 = 2/6 + (10/3) · l32 = 4 =⇒ l32 = 1/5
+l41u12 + l42u22 = −2/6 + (10/3) · l42 = 4 =⇒ l42 = 1/10
+18
+
+Jarraian A-
+ren hirugarren errenkada eta hirugarren zutabeak ondoko ekuazioak beteko dituzte:
+l31u13 + l32u23 + u33 = 1/6 + 1/5 · 2/3 + u33 = 4 =⇒ u33 = 37/10
+l31u14 + l32u24 + u34 = −1/6 + 1/5 · 1/3 + u34 = −1 =⇒ u34 = −9/10
+l41u13 + l42u23 + l43u33 = −1/6 + 1/10 · 2/3 + (37/10) · l43 = −1 =⇒ l43 = −9/
+37
+Bukatzeko a44 halabehartzen du azken osagaiaren balioa:
+l41u14 + l42u24 + l43u34 + u44 = 1/6 + 1/10 · 1/3 + 9/37 · 9/
+10 + u44 = 3 =⇒ u44 = 191/74
+Datu guzti hauekin A-ren faktorizazioa ondokoa da,
+L =
+
+
+
+1
+0
+0
+0
+1/3
+1
+0
+0
+1/6
+1/5
+1
+0
+−1/6 1/10 −9/37 1
+
+
+
+U =
+
+
+
+6
+2
+1
+−1
+0 10/3
+2/3
+1/3
+0
+0
+37/10
+−9/10
+0
+0
+0
+191/74
+
+
+
+2.
+DOLITTLE ETA CROUTen ALGORITMOAK
+Dolittle edo Crouten faktorizazio zuzeneko algoritmoa
+Algoritmoak
+A = (aij)
+n ∗ n
+matrizea
+L = (lij)
+matrize goi-triangeluarra bider
+U = (uij) matrize behe-triangeluarraren moduan faktorizatzen du.
+Sarreran: Dimentsioa n; matrizea Ah = (aij); diagonala (lii)ni=1 
+(Dolittle) edo (uii)ni=1 (Crout).
+Irteeran: lij eta uij, i, j = 1, ..., n osagaiak edo porrot mezua.
+Urrats 1:
+ l11u11 = a11 betetzen duten l11 eta u11 aurkitu. Baldin l11u11 = 0 bada
+orduan, IRTEERA (faktorizazio ezinezkoa); GELDITU.
+Urrats 2: Hartu u1j = a1j/l11 , lj1 = aj1/u11 , j = 2, ..., n
+Urrats 3: i = 2, 3, ..., n − 1 den bitartean 4-5 urratsak jarraitu.
+Urrats 4: liiuii = aii −
+i−1
+k=1 likuki
+adierazpena betetzen duen lii eta uii aurkitu.
+Baldin liiuii = 0, orduan IRTEERA (faktorizazio ezinezkoa); GELDITU.
+Urrats 5: Hartu
+uij = aij −
+i−1
+k=1 likukj
+/lii ; lji = aji −
+i−1
+k=1 ljkuki
+/uii , j = i + 1, ..., n
+Urrats 6: lnnunn = ann −
+n−1
+k=1 lnkukn
+adierazpena betetzen duen lnn eta unn aurkitu.
+Baldin lnnunn = 0 bada orduan, A = LU baina A singularra da.
+Urrats 7: IRTEERA (lij eta uij i, j = 1, ..., n); 
+(prozesu asebetegarria) GELDITU.
+Piboteorik gabeko algoritmo honek erakar dezaken eragozpena biribiltze errorea da.
+Digito
+kopuru ﬁnitua erabili direnean biribiltze errorea itzela izan daitekela ikusi dugu. Beraz, mota hone-
+tako algoritmoek eragozpen hau gaindi dezaten mekanismoak erantsi behar zaizkie. Doolitle-
+ren ka-
+suan lji osagaiak kalkulatzeko zatitu behar da zati uii osagaia, beraz, errorea txikitzeko komeni-
+garria da ahal den uii pibote-osagairik handienak hautatzea. Horretarako
+api −
+i−1
+k=1 lpkuki
+=
+maxi≤j≤n aji −
+i−1
+k=1 ljkuki
+adierazpena betetzen duen 1 ≤ p ≤ n zenbakirik txikiena hautatuko
+dugu. Baldin p = i bada A matrizearen i. eta p. errenkadaren osagaiak elkarren artean ordeztuko
+ditugu eta L matrizearen orduan arte kalkulatutako bi errenkada horien osagaiak erebai.
+Ondorengo algoritmoan aurrekoari zutabe piboteo maximoa eta aurrerakako eta atzerakako
+ordezkapenak erantsi dizkiogu.
+19
+
+Zutabe piboteo maximoarekiko faktorizazio zuzeneko algoritmoa
+Algoritmoak A = LU faktorizatu eta Lz = b, Ux = z ebatzi ondoren Ax = b sistema
+askatzen du:
+Sarreran: Dimentsioa n; matrizea Ah = (aij); diagonala (lii)ni=1 
+(Dolittle) edo (uii)ni=1 (Crout).
+Irteeran: (x1, ..., xn) soluzioa edo soluzio bat baino gehiago daudeneko mezua.
+Urrats 1: |a(p, 1)| = max1≤j≤n |a
+(j, 1)| betetzen duen 1 ≤ p ≤ n zenbakirik txikiena auk-
+eratu. Baldin |a(p, 1)| = 0, orduan IRTEERA 
+(soluzio bat baino gehiago daude); GELDITU.
+Urrats 2: Baldin p = 1 bada (Ep) ←→ (E1) errenkada-aldaketa.
+Urrats 3: l11u11 = a11 betetzen duten l11 eta u11 aurkitu.
+Urrats 4: Hartu
+u1j = a1j/l11 , lj1 = aj1/u11 , j = 2, ..., n
+Urrats 5: i = 2, ..., n − 1 den bitartean 6-9 urratsak jarraitu.
+Urrats 6: Izan bedi p ondoko adierazpena betetzen duen zenbakirik txikiena:
+api −
+i−1
+k=1 lpkuki = maxi≤j≤n aji −
+i−1
+k=1 ljkuki
+Baldin maximo hori 0 bada, orduan IRTEERA 
+(soluzio bat baino gehiago daude); GELDITU.
+Urrats 7:
+Baldin p = i bada (Ep) ←→ (Ei) burutu eta L matrizearen i eta
+p errenkadeen osagaiak elkarren artean aldatu.
+Urrats 8: liiuii = aii −
+i−1
+k=1 likuki betetzen duten lii eta uii aurkitu.
+Urrats 9: Hartu
+uij = aij −
+i−1
+k=1 likukj
+/lii ; lji = aji −
+i−1
+k=1 ljkuki
+/uii , j = i + 1, ..., n
+Urrats 10:
+Hartu
+AU X = ann −
+n−1
+k=1 lnkukn
+. Baldin AU X = 0 bada, orduan
+IRTEERA (soluzio bat baino gehiago daude); GELDITU. Bestela lnnunn = ann−
+n−1
+k=1 lnkukn
+adierazpena betetzen duen lnn eta unn aurkitu.
+Lz = b
+Sistemaren
+ebazpena
+Urrats 11: Hartu
+z1 = a(1, n + 1)/l(1, 1)
+Urrats 12: Hartu
+zi = a(i, n + 1) −
+i−1
+j=1 lij zj
+/lii, i = 2, ..., n
+U x = z
+Sistemaren
+ebazpena
+Urrats 13: Hartu xn = zn/unn
+Urrats 14: Hartu
+xi = zi −
+n
+j=i+1 uij xj
+/uii, i = n − 1, ..., 1
+Urrats 15: IRTEERA (x1, ..., xn); (prozesu asebetegarria) GELDITU.
+Adibidea
+Ondoko sistema zutabe piboteo maximoarekiko faktorizazio zuzeneko algoritmoaren bidez 
+(Dolittle)
+askatu eta eragiketak 3 digito esangarriekin kalkulatu:
+1.00x1
++ 0.333x2 + 1.50x3 − 0.333x4 = 3.00
+−2.01x1 +
+1.45x2
++ 0.50x3 +
+2.95x4
+= 5.40
+4.32x1
+−
+1.95x2
++
+2.08x4
+= 0.13
+5.11x1
+−
+4.00x2
++ 3.33x3 −
+1.11x4
+= 3.77
+Algoritmoak ematen digun soluzioa
+(x1 = −0.329, x2 = 0.322, x3 = 2.37, x4 = 1.04). Ondoko
+taulan algoritmoen emaitzeen konparazioa egiten da:
+x1
+x2
+x3
+x4
+Soluzio zehatza
+−0.324
+0.321
+2.37
+1.04
+Piboteoarekiko fakt. −0.329
+0.322
+2.37
+1.04
+Piboteogabeko fakt. −0.370
+0.236
+2.42
+1.03
+20
+
+3.
+CHOLESKY-ren ALGORITMOA
+Baldin A matrize simetriko eta positibo deﬁnitua bada, orduan faktorizazio zuzenekoa baino
+eragiketa kopuru gutxiago behar duen A-ren faktorizazio egokia egin daiteke.
+Teorema
+Baldin A
+n ∗ n matrize simetriko eta positibo deﬁnitua bada, orduan
+A = LLt
+moduko
+faktorizazioa egin daiteke non L matrize behe-triangeluarra baita.
+Cholesky-ren algoritmoa
+Algoritmoak A = (aij)-ren LLt faktorizazioa lortzen du, non L = (lij) behe-
+triangeluarra den.
+Sarreran: Dimentsioa n; Ah = (aij) matrizea.
+Irteeran: lij, i, j = 1, ..., n osagaiak.
+Urrats 1: Hartu l11 =
+√
+a11.
+Urrats 2: Hartu lj1 = aj1/l11, j = 2, ..., n.
+Urrats 3: i = 2, 3, ..., n − 1 den bitartean 4-5 urratsak jarraitu.
+Urrats 4: Hartu lii =
+aii −
+i−1
+k=1 l
+2
+ik.
+Urrats 5: Hartu lji = aij −
+i−1
+k=1 ljklik
+/lii , j = i + 1, ..., n.
+Urrats 6: Hartu lnn =
+ann −
+n−1
+k=1 l
+2
+nk.
+Urrats 7: IRTEERA (lij, i, j = 1, ..., n); (prozesu asebetegarria) GELDITU.
+A
+n ∗ n matrizearen Cholesky-ren faktorizazioa ondoko eragiketa kopurua behar du:
+n erro
+karratu; (n3 + 9n2 + 2n)/6 biderkaketa/zatiketa; (n3 + 6n2 − 7n)/6 batuketa/
+kenketa. Eragiketa
+kopuru hau gutxi gora-behera Ezabapen Gaussiarrak behar duen kopuru erdia da.
+Adibidea
+Cholesky-ren metodoaren bidez A matrize positibo deﬁnitua faktorizatu:
+A =
+
+
+4
+−1
+1
+−1 4.25 2.75
+1
+2.75
+3.5
+
+
+4. SISTEMA TRIDIAGONALETARAKO CROUT-en ALGORITMOA
+Matrize bandaren leku simetrikoetan zero ugari daudenez algoritmo erreza eraiki dezakegu. Egoera
+honenpean Crout eta Dolittlen metodoek garapen berezia izango dute. Demagun A matrize tridiagonala,
+A =
+
+
+
+
+
+
+
+
+a11 a12
+0
+· · ·
+0
+a21 a22
+a23
+. ..
+..
+.
+0
+. ..
+. ..
+. ..
+0
+..
+.
+. .. a
+n−1n−2
+an−1n−1 an−1n
+0
+· · ·
+0
+ann−1
+ann
+
+
+
+
+
+
+
+
+Suposa dezagun A = LU faktorizazioa existitzen dela. A matrizeak soilik 
+(3n − 2) osagai (= 0)
+dituenez L eta U -ren osagaiak aurkitzeko 
+(3n − 2) baldintza baino ez dugu izango. Har dezagun
+L =
+
+
+
+
+
+
+
+
+l11
+0
+· · ·
+· · ·
+0
+l21 l22
+0
+. ..
+..
+.
+0
+. ..
+. ..
+. ..
+0
+..
+.
+. .. l
+n−1n−2
+ln−1n−1
+0
+0
+· · ·
+0
+lnn−1
+lnn
+
+
+
+
+
+
+
+
+eta U =
+
+
+
+
+
+
+
+
+1 u12
+0
+· · ·
+0
+0
+1
+u23
+. ..
+..
+.
+0
+. .. ... ...
+0
+..
+.
+. .. 0
+1
+un−1n
+0
+· · ·
+· · ·
+0
+1
+
+
+
+
+
+
+
+
+21
+
+non A = LU . L matrizeak 2n − 1 osagai ezezagun ditu eta U -
+k n − 1. Beraz, L eta U -ren osagaiak
+ﬁnkatzeko 
+(3n − 1) baldintza baino ez dugu behar eta dagozkien ekuazioak ondokoak dira:
+a11 = l11; aii−1 = lii−1, i = 2, ..., n; lii, i = 2, ..., n; aii+1 = liiuii+1 , i = 1, ..., n − 1.
+Sistema tridiagonaletarako Crout-en algoritmoa
+Algoritmoak sistema lineal tridiagonalaren soluzioa aurkitzen du:
+Sarreran: ”n” ekuazio kopurua; Ah = 
+(aij), 1 ≤ i ≤ n , 1 ≤ j ≤ n + 1 matrize hedatua.
+Irteeran: (x1, ..., xn) soluzioa.
+Urrats 1: Hartu l11 = a11 eta u12 = a12/l11
+Urrats 2: Hartu lii−1 = aii−1 ; lii = aii − lii−1ui−1i ; uii+1 = aii+1/
+lii , i = 2, ..., n − 1
+Urrats 3: Hartu lnn−1 = ann−1 ; lnn = ann − lnn−1un−1n
+Lz = b
+Sistemaren
+ebazpena
+Urrats 4: Hartu z1 = u1n+1/l11
+Urrats 5: Hartu zi = (ain+1 − lii−1zi−1)/lii , i = 2, ..., n
+U x = z
+Sistemaren
+ebazpena
+Urrats 6: Hartu xn = zn
+Urrats 7: Hartu xi = zi − uii+1xi+1 , i = n − 1, ..., 1
+Urrats 8: IRTEERA (x1, ..., xn) sistemaren soluzioa; GELDITU.
+Algoritmo honek soilik (5n − 4) biderkaketa/zatiketa eta (3n − 3) batuketa/
+kenketa behar ditu,
+beraz, baldin n handia bada abantaila izugarria ematen du.
+Adibidea
+Ondoko sistema tridiagonala Crout-en algoritmoaz askatu 
+(Soluzioa x1 = x2 = x3 = x4 = 1 da):
+
+
+
+2x1
+−
+x2
+= 1
+−x1 + 2x2 −
+x3
+= 0
+−
+x2
++ 2x3 −
+x4
+= 0
+−
+x3
++ 2x4 = 1
+
+
+
+Baldin A matrize tridiagonala eta positibo deﬁnitua bada edo hertsiki diagonalki menpekoa, orduan
+A = LU faktorizazioaren diagonaleko koeﬁzienteak lii =, i = 1, ..., n dira eta sistema tridiagonaletarako
+Crout-en algoritmoa aplika daiteke.
+ARIKETAK
+1.
+Ondoko matrizeak Dolittle-ren (lii = 1) eta piboteo maximoarekiko Doolittle-
+ren metodoaz
+faktorizatu eta sistemak askatu:
+a)
+
+
+2 −1 1 | −1
+3
+3
+9 |
+8
+3
+3
+5 |
+5
+
+ , b)
+
+
+2
+−1.5 3 | 2.5
+−1
+0
+3 | 1.5
+4
+−4.5 5 | −3
+
+ , d)
+
+
+1.012
+−2.132
+3.104
+|
+2.618
+−2.132
+4.096
+−7.013 | −6.339
+3.104
+−7.013
+0.014
+| −5.401
+
+
+3.
+Ondoko matrizeen A = LLt faktorizazioa Cholesky-
+ren algoritmoaren bidez kalkulatu:
+a)
+
+
+2
+−1
+0
+−1
+2
+−1
+0
+−1
+2
+
+ , b)
+
+
+
+4
+1
+1
+1
+1
+3
+−1 1
+1 −1
+2
+0
+1
+1
+0
+2
+
+
+ ,
+d)
+
+
+
+4
+1
+−1 0
+1
+3
+−1 0
+−1 −1
+5
+2
+0
+0
+2
+4
+
+
+
+4.
+Ondoko sistema tridiagonalak Crout-en algoritmoaren bidez askatu:
+a)
+
+
+
+x1
+−
+x2
+=
+0
+−2x1 + 4x2 − 2x3 = −1
+−
+x2
++ 2x3 = 1.5
+,
+b)
+
+
+
+0.5x1
++ 0.25x2
+= 0.35
+0.35x1 +
+0.8x2
++
+0.4x3
+= 0.72
+0.05x2 − 0.55x3 =
+1.6
+22
+
+KAPITULU V.
+SISTEMA LINEALAK EBAZTEKO
+ITERAZIOZKO TEKNIKAK
+1.
+SARRERA ETA METODOA
+Ax = b , n ∗ n sistema lineala ebazteko iterazozko teknika martxan jartzeko x soluzioaren
+x(0) hasierako hurbilketa beharko dugu eta hurrenez hurren x-
+ra konbergitzen duen {x(k)}∞
+x=0 bektore
+segida sortuko dugu. Jatorrizko sistema x = T x+d sistema baliokidea bihurtuko dugu, non T baldintza
+berezi batzuk betetzen dituen n ∗ n matrizea eta d ∈ IRn bektorea diren. Gero bektoretarako puntu
+ﬁnkoaren bezelako x(k) = T x(k−1) + d, k = 1, 2, 3, ..., segida eraikiko dugu.
+Dimentsio txikia duten sistemetarako metodo hauek ez dira egokiak, doitasun berbera lortzeko
+metodo zuzenak baino eragiketa gehiago egin behar direlako, aitzitik, baldin dimentsioa handia bada
+edo matrizeak zero asko baditu metodo hauek besteak baino askoz erabilgarriagoak dira.
+Adibidea
+Ondoko Ax = b sistema linealaren soluzio zehatza x = 
+(1, 2, −1, 1)t da. Sistema x = T x+d erako
+eskemaeren ordez ordeztuko dugu eta x(0) = 
+(0, 0, 0, 0) estimazioarenkin 10 iterazio burutu:
+10x1 −
+x2
++
+2x3
+=
+6
+−x1
++ 11x2 −
+x3
++ 3x4 =
+25
+2x1
+−
+x2
++ 10x3 −
+x4
+= −11
+3x2
+−
+x3
++ 8x4 =
+15
+i. ekuaziotik xi askatuz,
+
+
+
+
+
+x1 =
+1
+10 x2
+−
+1
+5 x3
++
+3
+5 ,
+x2 =
+1
+11 x1
++
+1
+11 x3
+−
+3
+11 x4
++
+25
+11 ,
+x3 = − 1
+5 x1
++
+1
+10 x2
++
+1
+10 x4
+−
+11
+10 ,
+x4 =
+−
+3
+8 x2
++
+1
+8 x3
++
+15
+8
+.
+Beraz T =
+
+
+
+0
+1
+10
+− 1
+5
+0
+1
+11
+0
+1
+11
+− 3
+11
+− 1
+5
+1
+10
+0
+1
+10
+0
+− 3
+8
+1
+8
+0
+
+
+
+d =
+
+
+
+3/5
+25/11
+−11/10
+15/8
+
+
+
+Lehenengo iterazioa ondokoa da:
+x
+(1)
+1
+=
+1
+10 x
+(0)
+2
+−
+1
+5 x
+(0)
+3
++
+3
+5
+=
+0.6000
+x
+(1)
+2
+= 1
+11 x
+(0)
+1
++
+1
+11 x
+(0)
+3
+−
+3
+11 x
+(0)
+4
++
+25
+11
+=
+2.2727
+x
+(1)
+3
+= − 1
+5 x
+(0)
+1
++
+1
+10 x
+(0)
+2
++
+1
+10 x
+(0)
+4
+−
+11
+10
+= −1.1000
+x
+(1)
+4
+=
+−
+3
+8 x
+(0)
+2
++
+1
+8 x
+(0)
+3
++
+15
+8
+=
+1.8750
+k
+x
+(k)
+1
+x
+(k)
+2
+x
+(k)
+3
+x
+(k)
+4
+0
+0.0000
+0.0000
+0.0000
+0.0000
+1
+0.6000
+2.2727
+−1.1000
+1.8750
+2
+1.0473
+1.7159
+−0.80523
+0.88524
+3
+0.93264
+2.0533
+−1.0493
+1.1309
+4
+1.0152
+1.9537
+−0.96811
+0.97385
+5
+0.98899
+2.0114
+−1.0103
+1.0213
+6
+1.0032
+1.9923
+−0.99453
+0.99444
+7
+0.99841
+2.0023
+−1.0020
+1.0036
+8
+1.0006
+1.9987
+−0.99904
+0.99889
+9
+0.99968
+2.0004
+−1.0004
+1.0006
+10
+1.0001
+1.9998
+−0.99984
+0.99980
+23
+
+Errorearen estimazioak ondokoak dira:
+x(10) − x(9) ∞
+x(10) ∞
+=
+8.0 ∗ 10−4
+1.9998
+< 10−3
+,
+x(10) − x ∞ = 0.0002
+Erabilitako teknika hau Jacobiren iteraziozko metodoa izenekoa da eta baldin aii = 0 bada, sis-
+temaren i. ekuaziotik xi aldagaia askatzean datza. Hauxek dira k. iterazioko formulak,
+x
+(k)
+i
+=
+1
+aii
+
+bi −
+n
+j=1,j=i
+(aijx
+(k−1)
+j
+)
+
+ ,
+i = 1, ..., n.
+Emaitza teorikoetan x(k) = T x
+(k−1) + d adierazpidearen A matrizea zati diagonala eta zati ez
+diagonalean banatuko dugu:
+A =
+
+
+
+a11 ... a1n
+a21 ... a2n
+...
+...
+...
+an1 ... ann
+
+
+ =
+
+
+
+a11
+0
+...
+0
+0
+a22 ...
+0
+...
+...
+...
+...
+0
+0
+... ann
+
+
+−
+
+
+
+0
+0
+...
+0
+−a21
+0
+...
+0
+...
+...
+...
+...
+−an1
+0
+−ann−1
+0
+
+
+−
+
+
+
+0
+−a12 ...
+−a1n
+...
+...
+...
+...
+0
+...
+0
+−an−1n
+0
+0
+...
+0
+
+
+
+Ax = b ⇐⇒ (D − L − U )x = b ⇐⇒ Dx = (L + U )x + b ⇐⇒ x = D−1(L + U )x + D−1b
+Ondorioz, Jacobiren iteraziozko teknikaren eraikuntza matriziala dugu, x
+(k) = D−1(L+U )x(k−1)+D−1b
+2.
+JACOBI-REN ETA GAUSS-SEIDEL-EN ALGORITMOAK
+Jacobi-ren iteraziozko algoritmoa
+Algoritmoak x
+(0) hasierako hurbilketa emanez Ax = b sistema lineala askatzen du.
+Sarreran: Dimentsioa n; Ah = 
+(aij), i, j = 1, ..., n, matrizea; bi, i = 1, ..., n, bektorea;
+x0i, i = 1, ..., n, hasierako hurbilketa; T OL toleranzia eta N0 iterazio kopuru maximoa.
+Irteeran: 
+(x1, ..., xn) soluzio hurbildua edo N0 iterazio kopuru maximoa gainditu deneko mezua.
+Urrats 1: Hartu k = 1.
+Urrats 2: k ≤ N0 den bitartean 3-5 urratsak jarraitu.
+Urrats 3: Hartu xi = bi −
+n
+j=1,j=i aij x0j /aii ,
+i = 1, ..., n.
+Urrats 4: Baldin
+x − x0 < T OL, IRTEERA → (x1, ..., xn); GELDITU.
+Urrats 5: Hartu x0i = xi, i = 1, ..., n eta k = k + 1.
+Urrats 6: IRTEERA 
+(N0 ’iterazio egin ondoren, metodoa porrot egin du’); GELDITU.
+Algoritmoaren 3. urratsean aii = 0, i = 1, ..., n, izan behar du, baldin matrizea ez singularra bada
+eta baldintza hau ez bada betetzen, orduan, ekuazioak berrordena daitezke.
+Geldi erizpidetzat algoritmoak
+x − x0 < T OL edo
+x(k) − x(k−1) / x(k) < ε har dezake.
+Algoritmo honek x
+(k)
+i
+kalkulatzeko x(k−1)-ren osagaiak darabiltza eta dagoeneko x
+(k)
+1 , ..., x
+(k)
+i−1-en
+balioak ezagunak dira. {x(k)} segida konbergentea bada suposa daiteke x
+(k)
+j
+, j = 1, .., i−1 hurbilketak
+hobeagoak direla x
+(k−1)
+j
+, j = 1, .., i − 1 baino eta noski, algoritmoa eraginkorragoa izango da baldin
+x
+(k)
+i
+-ren balioztapenean kalkulatutak dauden x(k)-
+ren osagaiak erabiltzen baditugu. Hobekuntza honek
+Gauss-Seidel-
+en iteraziozko algoritmoa izena du eta hauxek dira dagozkion formulak:
+xi =
+1
+aii
+−
+i−1
+j=1
+(aijx
+(k)
+j
+) −
+n
+j=i+1
+(aijx
+(k−1)
+j
+) + bi
+i = 1, ..., n
+24
+
+Matrizialki (D − L)x(k) = U x(k−1) + b ⇐⇒ x(k) = (D − L)−1U x(k−1) + 
+(D − L)−1b adierazi ohi da.
+Adibidea
+Ondoko Ax = b sistema lineala Gauss-Seidel-en bidez askatu. Hartu x(0) = 
+(0, 0, 0, 0).
+10x1 −
+x2
++
+2x3
+=
+6
+−x1
++ 11x2 −
+x3
++ 3x4 =
+25
+2x1
+−
+x2
++ 10x3 −
+x4
+= −11
+3x2
+−
+x3
++ 8x4 =
+15
+x
+(k)
+1
+=
+1
+10 x
+(k−1)
+2
+−
+1
+5 x
+(k−1)
+3
++
+3
+5
+x
+(k)
+2
+=
+1
+11 x
+(k)
+1
++
+1
+11 x
+(k−1)
+3
+−
+3
+11 x
+(k−1)
+4
++
+25
+11
+x
+(k)
+3
+= − 1
+5 x
+(k)
+1
++
+1
+10 x
+(k)
+2
++
+1
+10 x
+(k−1)
+4
+−
+11
+10
+x
+(k)
+4
+=
+−
+3
+8 x
+(k)
+2
++
+1
+8 x
+(k)
+3
++
+15
+8
+k
+x
+(k)
+1
+x
+(k)
+2
+x
+(k)
+3
+x
+(k)
+4
+0
+0.0000
+0.0000
+0.0000
+0.0000
+1
+0.6000
+2.3273
+−0.98727
+0.87885
+2
+1.00302
+2.0369
+−1.0145
+0.98435
+3
+1.0066
+2.0035
+−1.0025
+0.99838
+4
+1.0009
+2.0003
+−1.0003
+0.99985
+5
+1.0001
+2.0000
+−1.0000
+1.0000
+x(5) − x(4) ∞
+x(5) ∞
+=
+8.0 ∗ 10−4
+2.000
+= 4 ∗ 10−4
+Ikus dezakegunez lehenengo adibidean lortutako doitasuna beheragotzeko hemen iterazio kopuru
+erdia behar izan dugu.
+Gauss-Seidelen iteraziozko algoritmoa
+Algoritmoak x
+(0) hasierako hurbilketa emanez Ax = b sistema lineala askatzen du.
+Sarreran: n dimentsioa; Ah = (aij)
+i, j = 1, ..., n
+matrizea; bi
+i = 1, ..., n
+bektorea;
+x0i i = 1, ..., n
+hasierako hurbilketa; T OL toleranzia; N0 iterazio kopuru maximoa.
+Irteeran: 
+(x1, ..., xn) soluzio hurbildua edo N0 iterazio kopuru maximoa gainditu deneko mezua.
+Urrats 1: Hartu k = 1.
+Urrats 2: k ≤ N0 den bitartean 3-6 urratsak jarraitu.
+Urrats 3: Hartu xi = bi −
+i−1
+j=1 aij xj −
+n
+j=i+1 aij x0j /aii ,
+i = 1, ..., n.
+Urrats 4: Baldin
+x − x0 < T OL, IRTEERA → (x1, ..., xn); GELDITU.
+Urrats 5: Hartu x0i = xi, i = 1, ..., n eta k = k + 1.
+Urrats 6: IRTEERA 
+(N0 ’iterazio egin ondoren, metodoa porrot egin du’); GELDITU.
+Badaude adibideak non Gauss-Seidel-en metodoak konbergitzen baitu eta Jacobi-
+renak ez eta alde-
+rantziz erebai. Hala ere kasu gehienetan biek konbergituz geroz Gauss-Seidel-
+en metodoa Jacobi-rena
+baino azkarragoa da.
+3.
+ITERAZIOZKO PROZESUEN KONBERGENTZIA
+25
+
+Iteraziozko teknika orokorren konbergentzia aztertzeko x(k) = T x
+(k−1) + d , k = 1, 2, 3, ..., formula
+kontutan hartuko dugu, non x(0) hautazkoa den.
+Lema
+Baldin T -ren erradio espektrala, ρ(T ) < 1 edo
+T < 1 bada, orduan (I − T )−1 existitzen da
+eta (I − T )−1 = I + T + T 2 + ... da.
+Teorema
+∀ x(0) ∈ IRn , x(k) = T x(k−1) + d , k ≥ 1 , d = 0
+adierazpenak deﬁnituriko {x(k)}∞
+k=0
+segidak
+x = T x + d
+ekuazioaren soluziora konbergituko du baldin eta solik baldin
+ρ(T ) < 1.
+**frog**
+Teorema
+Baldin
+·
+norma matrizialerako
+T < 1 bada, orduan ∀ x(0) ∈ IRn, x(k) = T x(k−1) + d,
+k ≥ 1 , d = 0, adierazpenak deﬁnituriko {x(k)}∞
+k=0
+segidak x = T x + d soluzioorantz konbergituko
+du eta ondoko errore bornapenak beteko ditu:
+x − x(k) ≤ T k · x(0) − x
+eta
+x − x(k) ≤
+T k
+1 − T
+x(1) − x(0)
+**frog**
+Bereziki baldin x(0) = d hautatzen badugu, orduan:
+x(1) = T d + d =⇒ x(1) − x(0) = T d ≤ T · d =⇒ x − x(k) ≤
+T k+1
+1 − T
+d
+Adibidea
+Jacobiren iteraziozko prozesuaren bidez ondoko sistemaren konbergentzia frogatu eta zenbat iterazio
+behar diren 10−4 baino txikiago errorearekiko soluzio hurbildua lortzeko adierazi.
+10x1 −
+x2
++
+2x3
+−
+3x4
+=
+0
+x1
++ 10x2 −
+x3
++
+2x4
+=
+5
+2x1
++
+3x2
++ 20x3 −
+x4
+= −10
+3x1
++
+2x2
++
+x3
++ 20x4 =
+15
+x
+(k)
+1
+=
+0.1x
+(k−1)
+2
+− 0.2x
+(k−1)
+3
++
+0.3x
+(k−1)
+4
+x
+(k)
+2
+=
+−0.1x
+(k)
+1
++ 0.1x
+(k−1)
+3
+−
+0.2x
+(k−1)
+4
++
+0.5
+x
+(k)
+3
+= −0.1x
+(k−1)
+1
+−
+0.15x
+(k)
+2
++ 0.05x
+(k−1)
+4
+−
+0.5
+x
+(k)
+4
+=
+−0.15x
+(k)
+1
+−
+0.1x
+(k)
+2
+−
+0.05x
+(k)
+3
++ 0.75
+T =
+
+
+
+0
+0.1
+−0.2
+0.3
+−0.1
+0
+0.1
+−0.2
+−0.1
+−0.15
+0
+0.05
+−0.15
+−0.1
+−0.05
+0
+
+
+
+T -ren magnitudea balioztatzeko
+· 1 norma erabiliz,
+T 1 = max{0.35, 0.35, 0.35, 0.55} = 0.55 < 1.
+Beraz, Jacobiren prozesua sistema honetarako konbergentea da. Izan bedi
+x(0) = d = (0.0, 0.5, −0.5, 0.75)t =⇒ d 1 = 0.0 + 0.5 − 0.5 + 0.75 = 1.75
+26
+
+Azken teoremari esker ondorengo errorearen bornapena dugu:
+x − x(k) 1 ≤
+T k+1
+1
+1 − T 1
+d 1 =
+0.55k+1 ∗ 1.75
+0.45
+< 10−4 =⇒ 0.55k+1 <
+45
+175
+10−4
+Logaritmoak sartuz k ezezaguna askatuko dugu:
+(k + 1)log100.55 < log1045 − log10175 − 4 =⇒ 
+(k + 1)0.25964 < 1.65321 − 2.24304 − 4 =⇒ k ≥ 16.7
+k zenbaki osoa izan beharko da, beraz k = 17 aski da. Hala ere askoetan doitasun hori teoriak dioena
+baino lehenago beheragotuko da.
+Orain Jacobi eta Gauss-Seidelen era matrizialak idatziko ditugu:
+TJ = D−1(L + U) =⇒ x(k) = TJ x(k−1) + D−1b
+(Jacobi)
+TGS = (D − L)−1U =⇒ x(k) = TGSx(k−1) + (D − L)−1b
+(Gauss − Seidel)
+Badakigu eskema bakoitzaren matrizeen erradio espektralak < 1 badira, orduan, iterazioek soluzio-
+rantz konbergituko dutela. Orain, konbergentzia ziurtatzeko, beste baldintzak ikusiko ditugu.
+Teorema
+Baldin A matrizea hertsiki diagonalki menpekoa bada, orduan ∀ x
+(0) ∈ IRn Jacobi-ren eta
+Gauss-Seidel-en algoritmoen {x(k)}∞
+k=0 segidak Ax = b sistemaren soluziorantz konbergituko dute.
+T
+eta ρ(T ) orden berekoak direnez errore-
+bornapena eta erradio espektrala elkarren artean
+erlazionatzeko ondoko adierazpena idatz dezakegu:
+x(k) − x ≈ ρ(T )k x(0) − x
+Beraz, hainbat eta ρ
+(T ) txikiago izan, metodoak orduan eta azkarrago konbergituko du.
+Teorema
+Baldin aii > 0 i = 1, ..., n eta aij ≤ 0 ∀i = j badira orduan ondoko baieztapenetariko soilik
+bat beteko da.
+a) 0 < ρ(TGS) < ρ(TJ ) < 1
+b) 1 < ρ(TJ ) < (TGS)
+c) (TGS) = (TJ ) = 0
+d) (TJ ) = (TGS) = 1
+Kasu honetan baldin metodo bat konbergitzen badu Gauss-Seidel-
+en metodoak Jacobi-rena baino
+azkarrago konbergituko duela ikus daiteke.
+27
+
+4.
+LASAIKUNTZA METODOAK
+Prozesuaren konbergentzia-
+abiadura eta metodoari dagokion matrizearen erradio espektralaren tamainua
+elkar erlazionaturik daude. Erradio espektralarik txikiena duen matrizea hautatuz konbergentzi azkarra
+lortuko dugu. Prozesu hauek lasaikuntza metodoak izena dute. Izan bedi ondoko sistema lineala:
+E1 : a11x1 + a12x2 +
+...
++ a1nxn = e1
+..
+.
+..
+.
+· · ·
+· · ·
+· · ·
+..
+.
+En : an1x1 + an2x2 + · · · + annxn = en
+Orain b bektore askea berdintzaren eskubialdera pasatuz, Ei ekuazio bakoitza zati aii zatituz eta
+x(0) = (x
+(0)
+1 , ..., x
+(0)
+n ) hasierako estimazioa sistema sartuz, ondoko erlazioa dugu:
+R
+(0)
+1
+= d1 − x
+(0)
+1
++
+n
+j=2 b1j x
+(0)
+j
+= x
+(1)
+1
+− x
+(0)
+1
+..
+.
+..
+.
+..
+.
+..
+.
+R
+(0)
+k
+= dk − x
+(0)
+k
++
+n
+j=1,j=k bkj x
+(0)
+j
+= x
+(1)
+k
+− x
+(0)
+k
+..
+.
+..
+.
+..
+.
+..
+.
+R
+(0)
+n
+= dn − x
+(0)
+n
++
+n−1
+j=1 bnj x
+(0)
+j
+= x
+(1)
+n
+− x
+(0)
+n
+non bij = −aij/aii, (i = j) eta di = −ei/aii baitira. R
+(0)
+1
+”hondarrak” dira.
+Baldin x
+(0)
+s
+ezezagunari δx
+(0)
+s
+gehikuntza ematen badiogu, orduan beroni dagokion R
+(0)
+s
+hondarra
+lehenago baino δx
+(0)
+s
+txikiago izango da eta besteak, R
+(0)
+i
+(i = s), lehenago baino bis δx
+(0)
+s
+handiagoak.
+Beraz, R
+(1)
+s
+hondarra ezabatzeko aski da x
+(1)
+s -ri
+δx
+(1)
+s
+= R
+(0)
+s
+gehikuntza ematea, eta ondorioz beste
+hondarreen balio berriak hauxek dira,
+R(1)
+s
+= 0
+eta
+R
+(1)
+i
+= R
+(0)
+i
++ bisδx(0)
+s
+i = s
+Lasaikuntza metodorik bakunena hondarrarik handiena 0 egitean datza eta osagai egokiari gehikuntza
+berezia batuz. Hondarrak emandako tolerantzia baino txikiagoak direnean prozesua gelditu egingo da.
+Adibidea
+Bi digitoetako aritmetikaz eta lasaikuntza metodoaz ondoko Ax = b sistema askatu:
+E1 : 10x1 −
+2x2
+−
+2x3
+= 6
+E2 : −x1
++ 10x2 −
+2x3
+= 7
+E3 : −x1
+−
+x2
++ 10x3 = 8
+Lasaikuntza metodoa aplikatzeko sistema ondoko gisaz idatziko dugu:
+E1 :
+−x1
++ 0.2x2 + 0.2x3 + 0.6 = 0
+E2 : 0.1x1 −
+x2
++ 0.2x3 + 0.7 = 0
+E3 : 0.1x1 + 0.1x2 −
+x3
++ 0.8 = 0
+x
+(0)
+1
+= x
+(0)
+2
+= x
+(0)
+3
+= 0 hasierako hurbilketatzat hartu ondoren hondarrik handienak hautatuko ditugu:
+R
+(0)
+1
+= 0.60 ,
+R
+(0)
+2
+= 0.70 ,
+R
+(0)
+3
+= 0.80 (hondarrarik handiena)
+Orain δx
+(0)
+3
+= 0.80 hartuko dugu, beraz:
+R
+(1)
+1
+= R
+(0)
+1
++ 0.2 ∗ 0.8 = 0.60 + 0.16 = 0.76
+R
+(1)
+2
+= R
+(0)
+2
++ 0.2 ∗ 0.8 = 0.70 + 0.16 = 0.86 (hondarrarik handiena)
+R
+(1)
+3
+= R
+(0)
+3
+− 0.8 = 0.80 − 0.80 = 0.0
+28
+
+Orain
+δx
+(1)
+2
+= 0.86
+, etab. Aldagaiek ondoko bilakaera jarraituko dute:
+x1 = 0.0 + 0.93 + 0.062 + 0.007 = 0.999 −→ 1.0
+x2 = 0.0 + 0.86 + 0.13 + 0.016 = 1.006 −→ 1.0
+x3 = 0.0 + 0.80 + 0.18 + 0.019 = 0.999 −→ 1.0
+Eragiketak ondoko taulan ikus dezakegu:
+k
+x1
+R1
+x2
+R2
+x3
+R3
+0
+0.0
+0.60
+0.0
+0.70
+0.8
+0.80
+0.16
+0.16
+−0.80
+0.76
+0.86
+0.0
+1
+0.17
+0.86
+−0.86
+0.086
+0.93
+0.0
+0.086
+2
+0.93
+−0.93
+0.093
+0.093
+0.0
+0.093
+0.18
+3
+0.036
+0.036
+0.18
+−0.18
+0.036
+0.13
+0.0
+4
+0.026
+0.13
+−0.13
+0.013
+0.062
+0.0
+0.013
+5
+0.062
+−0.062
+0.012
+0.0062
+0.0
+0.012
+0.019
+6
+0.0038
+0.0038
+0.019
+−0.019
+0.0038
+0.016
+0.0
+7
+0.0032
+0.016
+−0.016
+0.0016
+0.007
+0.0
+0.0016
+8
+0.007
+−0.007
+0.0007
+0.0007
+0.0
+0.0007
+0.0023
+1.0
+1.0
+1.0
+Lasaikuntza metodoen doitasuna neurtzeko sistema linealaren soluzio zehatza eta beronen hur-
+bilketaren arteko aldea balioztatzen duen hondar-bektorea erabiliko dugu.
+Deﬁnizioa
+Baldin x ∈ IRn, Ax = b sistema linealaren soluzioaren hurbilketa bada, orduan sistema honekin
+elkartutako x-ren hondar-bektorea r = b − Ax da.
+Jacobi-ren eta Gauss-Seidel-en metodoetan soluzio-
+bektorearen osagai bakoitzaren hurbilketari hondar-
+bektore bat elkartzen zaio. Orobat, hondar-bektore elkartuek 0-
+ra konbergitzen duteneko hurbilketeen
+segida sortuko dute.
+r
+(k)
+i
+= (r
+(k)
+1i , r
+(k)
+2i , ..., r
+(k)
+ni )
+t.
+Izan bedi (x
+(k)
+1 , ..., x
+(k)
+i−1, x
+(k−1)
+i
+, ..., x
+(k−1)
+n
+)t Gauss-Seidel-en metodoaren soluzio-bektore hurbildua,
+beronen hondar-bektore elkartua eraikiko dugu:
+r
+(k)
+i
+-ren m. osagaia ondokoa da:
+r
+(k)
+mi = bm −
+i−1
+j=1
+amjx
+(k)
+j
+−
+n
+j=i
+amjx
+(k−1)
+j
+,
+m = 1, ..., n.
+29
+
+Bereziki r
+(k)
+i
+-ren i. osagaia ondokoa da:
+r
+(k)
+ii
+= bi −
+i−1
+j=1
+aijx
+(k)
+j
+−
+n
+j=i+1
+aijx
+(k−1)
+j
+− aiix
+(k−1)
+i
+eta Gauss-Seidel-en iterazioaren x
+(k)
+i
+-k bete behar duen baldintza honako hau da:
+x
+(k)
+i
+=
+1
+aii
+
+bi −
+i−1
+j=1
+aijx
+(k)
+j
+−
+n
+j=i+1
+aijx
+(k−1)
+j
+
+ = x(k−1)
+i
++
+r
+(k)
+ii
+aii
+.
+Demagun ere r
+(k)
+i+1-ren i. osagaia
+r
+(k)
+ii+1 = bi −
+i
+j=1
+aijx
+(k)
+j
+−
+n
+j=i+1
+aijx
+(k−1)
+j
+= bi −
+i−1
+j=1
+aijx
+(k)
+j
+−
+n
+j=i+1
+aijx
+(k−1)
+j
+− aiix
+(k)
+i
+,
+baina lehenengoan ikusi dugunez aiix
+(k)
+i
+= bi −
+i−1
+j=1 aij x
+(k)
+j
+−
+n
+j=i+1 aij x
+(k−1)
+j
+da. Beraz, r
+(k)
+ii+1 = 0 .
+Gauss-Seidelen metodoak r
+(k)
+i+1-ren
+i. osagaia 0 bihurtu du. Hala ere hau ez da r
+(k)
+i+1-ren norma
+laburtzeko modurik honena. Baldin Gauss-
+Seidelen teknika aldarazten badugu soluzio hurbilduaren os-
+agaiak
+x
+(k)
+i
+= x
+(k−1)
+i
++ w
+r
+(k)
+ii
+aii
+adierazpenaren moduan deﬁnitzeko 
+(non w hautazko konstante positiboa baita) lehenengoa baino
+emaitza obeagoa atera dezakegu. Era hauetako formulak erabiltzen dituzten teknikeei lasaikuntza
+metodoak esaten diegu. Baldin 0 < w < 1 bada, orduan azpilasaikuntza metodoak esaten zaie 
+(Gauss-
+Seidel), bestela, baldin w > 1 bada orduan lasaikuntzgaineko metodoak 
+(Sucessive Over Relaxation
+XOR). Azken hauek deribatu parzialetazko ekuazioen zenbakizko ebazpenerako oso erabilgarriak dira.
+x
+(k)
+i
+= x
+(k−1)
+i
++ w
+r
+(k)
+ii
+aii
+eta
+r
+(k)
+ii
+= bi −
+i−1
+j=1
+aijx
+(k)
+j
+−
+n
+j=i+1
+aijx
+(k−1)
+j
+− aiix
+(k−1)
+i
+ekuazioak konbinatuz ondoko formulazioa eraikiko dugu:
+x
+(k)
+i
+= (1 − w)x
+(k−1)
+i
++
+w
+aii
+bi −
+i−1
+j=1
+aijx
+(k)
+j
+−
+n
+j=i+1
+aijx
+(k−1)
+j
+SOR metodoaren era matriziala idazteko formula beronen beste adierazpidea behar dugu:
+aiix
+(k)
+i
++ w
+i−1
+j=1
+aijx
+(k)
+j
+= (1 − w)aiix
+(k−1)
+i
+− w
+n
+j=i+1
+aijx
+(k−1)
+j
++ wbi.
+Orain formulazio matriziala sar dezakegu:
+(D −wL)x(k) = [(1−w)D +wU ]x(k−1) +wb ⇐⇒ x(k) = (D −wL)−1[(1−w)D +wU ]x(k−1) +w
+(D −wL)−1b
+Sucessive Over Relaxation iteraziozko algoritmoa (SOR)
+Algoritmoak w parametroarekin eta x
+(0) estimazioarekin Ax = b sistema lineala askatzen du.
+Sarreran:
+n dimentsioa; Ah = 
+(aij), i, j = 1, ..., n, matrizea; bi, i = 1, ..., n, bektorea;
+x0i, i = 1, ..., n hasierako hurbilketa; T OL toleranzia; w parametroa; N0 iterazio kopuru maximoa.
+30
+
+Irteeran: 
+(x1, ..., xn) soluzio hurbildua edo N0 iterazio kopuru maximoa gainditu deneko mezua.
+Urrats 1: Hartu k = 1.
+Urrats 2: k ≤ N0 den bitartean 3-5 urratsak jarraitu.
+Urrats 3: Hartu
+xi = (1 − w)x0i + w
+aii bi −
+i−1
+j=1 aij xj −
+n
+j=i+1 aij x0j ,
+i = 1, ..., n.
+Urrats 4: Baldin
+x − x0 < T OL, IRTEERA (x1, ..., xn); GELDITU.
+Urrats 5: Hartu x0i = xi, i = 1, ..., n; hartu k = k + 1
+Urrats 6: IRTEERA 
+(N0 ’iterazio egin ondoren, metodoa porrot egin du’); GELDITU.
+Adibidea
+Ondoko Ax = b sistemaren soluzio zehatza
+x = (3, 4, −5)t
+da.
+x(0) = (1, 1, 1)t
+hasierako
+hurbilketa hartuz Gauss-Seidelen metodoaren bidez eta SOR-enaren bidez 
+(w = 1.25) ebatzi:
+E1 : 4x1 + 3x2
+=
+24
+E2 : 3x1 + 4x2 −
+x3
+=
+30
+E3 :
+−
+x2
++ 4x3 = −24
+Gauss-Seidelenari dagozkion ekuazioak ondokoak dira (k = 1, 2, ...):
+x
+(k)
+1
+= −0.75x
+(k−1)
+2
++ 6
+x
+(k)
+2
+= −0.75x
+(k)
+1
++ 0.25x
+(k−1)
+3
++ 7.5
+x
+(k)
+3
+= 0.25x
+(k)
+2
+− 6
+SOR metodoari dagozkion ekuazioak ondokoak dira (k = 1, 2, ...):
+x
+(k)
+1
+= −0.25x
+(k−1)
+1
+− 0.9375x
+(k−1)
+2
++ 7.5
+x
+(k)
+2
+= −0.9375x
+(k)
+1
+− 0.25x
+(k−1)
+2
++ 0.3125x
+(k−1)
+3
++ 0.9375
+x
+(k)
+3
+= 0.3125x
+(k)
+2
+− 0.25x
+(k−1)
+3
+− 7.5
+7 digito zehatzekiko doitasuna lortzeko Gauss-
+Seidelen metodoak 34 iterazio behar ditu eta SOR-enak
+(w = 1.25) 14 besterik ez. Lehenengo 7 iterazioen emaitzak ondoko taulan ikusten dira. x
+(k)
+1
+, x
+(k)
+2
+eta
+x
+(k)
+3
+Gauss-Seidelen metodoari dagozkio eta x1(k) , x2(k) eta x3(k) SOR 
+(w = 1.25) metodoari.
+k
+x
+(k)
+1
+x
+(k)
+1
+x
+(k)
+2
+x
+(k)
+2
+x
+(k)
+3
+x
+(k)
+3
+0
+1.0000000
+1.0000000
+1.0000000
+1.0000000
+1.0000000
+1.0000000
+1
+5.2500000
+6.3125000
+3.8125000
+3.5195313
+−5.0468750
+−6.6501465
+2
+3.1406250
+2.6223144
+3.8828125
+3.9585266
+−5.0292969
+−4.6004238
+3
+3.0878906
+3.1333027
+3.9267578
+4.0102646
+−5.0183105
+−5.0966864
+4
+3.0549317
+2.9570513
+3.9542236
+4.0074838
+−5.0114441
+−4.9734897
+5
+3.0343323
+3.0037211
+3.9713898
+4.0029250
+−5.0071526
+−5.0057135
+6
+3.0214577
+2.9963275
+3.9821186
+4.0009263
+−5.0044703
+−4.9982822
+7
+3.0134111
+3.0000498
+3.9888241
+4.0002586
+−5.0027940
+−5.0003486
+SOR metodoari dagokion funtsezko galdera bat ondorengoa da: Zein izango da w-
+rik egokiena?.
+Nahiz eta galdera honi erantzun zehatza ematea ezinezkoa izan, kasu berezi batzuetan ondorengo teore-
+mak erabil daitezke:
+Teorema(Kahan)
+31
+
+Baldin
+aii = 0
+i = 1, ..., n
+badira, orduan
+ρ(Tω) ≥ |ω − 1|
+. Azken emaitza honek
+ρ(Tω) < 1 =⇒ 0 < ω < 2
+esaten digu, non
+Tω = (D − ωL)−1[(1 − ω)D + ωU]
+SOR metodoaren
+matrizea baita.
+Teorema (Ostrowski-Reich)
+Baldin A matrize positibo deﬁnitua bada, orduan edozein x
+(0) hasierako hurbilketarekin SOR
+metodoak konbergitzeko, 0 < ω < 2 parametroa aukeratu behar dugu. Hala ere, hautaketa honek ez du
+metodoaren konbergentzia ziurtatzen.
+Teorema
+Baldin A matrize tridiagonala eta positibo deﬁnitua bada, orduan
+ρ(TGS) = [ρ(TJ )] < 1
+da
+eta SOR metodoaren ω-rik onena ondoko hau da:
+ω =
+2
+1 +
+1 − [ρ(TJ )]2
+eta ω-ren balio honekin
+ρ(Tω) = ω − 1
+da.
+Adibidea
+Ondoko A matrizearen SOR metodoaren ω-rik onena aurkitu:
+A =
+
+
+4
+3
+0
+3
+4
+−1
+0 −1
+4
+
+
+Matrize hau tridiagonala eta positibo deﬁnitua da, beraz, ikusitako azken teorema aplika dezakegu:
+TJ = D−1(L + U) =
+
+
+1/4
+0
+0
+0
+1/4
+0
+0
+0
+1/4
+
+
+
+
+0
+−3 0
+−3
+0
+1
+0
+1
+0
+
+ =
+
+
+0
+−0.75
+0
+−0.75
+0
+0.25
+0
+0.25
+0
+
+
+TJ − λI =
+
+
+−λ
+−0.75
+0
+−0.75
+−λ
+0.25
+0
+0.25
+−λ
+
+ =⇒ det(TJ − λI) = −λ(λ2 − 0.625)
+Beraz
+ρ(TJ ) =
+√
+0.625 ≈ 0.79057 =⇒ ω =
+2
+1+
+√
+1−[ρ(TJ )]2
+≈ 1.24
+ARIKETAK
+1.
+x(0) hasierako hurbilketarekin ondoko sistemeei Jacobi, Gauss-Seidel eta SOR 
+(ω = 1.2) meto-
+doen lehenengo bi iterazio aplikatu:
+a)
+
+
+
+2x1 −
+x2
++
+x3
+= −10
+3x1 + 3x2 + 9x3 =
+0
+3x1 + 3x2 + 5x3 =
+4
+b)
+
+
+
+2x2 + 4x3 =
+0
+x1 −
+x2
+−
+x3
+= 0.375
+x1 −
+x2
++ 2x3 =
+0
+d)
+
+
+
+10x1 −
+x2
+= 9
+−x1
++ 10x2 −
+2x3
+= 7
+−
+x2
++ 10x3 = 6
+e)
+
+
+
+
+
+2x1
+=
+3
+x1
++ 1.5x2
+= 4.5
+−
+3x2
++ 0.5x3
+= 4.5
+2x1 −
+2x2
++
+x3
++ x4 = 0.8
+f)
+
+
+
+
+
+10x1 −
+x2
++
+2x3
+=
+6
+−x1
++ 11x2 −
+x3
++ 3x4 =
+25
+2x1
+−
+x2
++ 10x3
+= −11
+3x2
+−
+x3
++ 8x4 = −11
+32

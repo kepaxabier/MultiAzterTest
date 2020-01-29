@@ -1,0 +1,2263 @@
+
+
+
+
+Industria Elektronikoaren eta Automatikaren 
+Ingenieritzarako Gradua 
+Irakaslea: Ainhoa Etxebarria 
+INDUSTRIA AUTOMATIZAZIOA 
+
+2 
+ 
+ 1. Gaia: Industria automatizazioaren hastapenak 
+ 
+ 2. Gaia: Prozesu-kontrol eta automatizazioa garatzeko hardware osagaiak: 
+sentsoreak, eragingailuak, AD/DA bihurgailuak, eta sarrera-irteera modulu. 
+ 
+ 3. Gaia: Goi-mailako inguruneak PAC-ak programatzeko. 
+ 
+ 4. Gaia: Kontroleko sistema automatikoen integrazioa 
+Industria Automatizazioa 
+GAI-ZERRENDA 
+
+3 
+ 
+1.- Industria automatizazioaren arkitektura 
+ 
+ 
+a) Zuzeneko automatizazioa 
+ 
+ 
+b) Prozesuaren automatizazioa 
+2.- Industria automatizazio-prozesuaren atalak aztertzen diren 
+irakasgaiak. 
+3.- Industria automatizaziorako kontroladoreak garatzeko diseinu-
+prozedura. 
+4.- Kontroladorearen inplementazio-, simulazio- eta diseinu-prozesurako 
+software garapen-ingurune. 
+5.- Kontroladoreak ezartzeko plataformak. 
+6.- Denbora errealeko sistema. 
+ 
+ 
+ 
+Gai-zerrenda: 1. Gaia. 
+Industria automatizazioaren hastapenak 
+
+4 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+Gure ingurunean dauden sistema automatikoak 
+http://www.mecanizadosvillarreal.com/71118_es/Ingenieria-industrial-
+electronica-robots-manipuladores
+/ 
+
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Prozesuaren automatizazioa
+ 
+5 
+http://www.mecanizadosvillarreal.com/71104_es/Sistemas-automaticos-de-
+manipulaci%C3%B3n-industrial/ 
+Sentsoreak 
+eta 
+eragingailuak 
+Prozesu industriala automatizatzeko nola integratzen dira automatismoak ? 
+
+6 
+Ijezteko makinarako arrabalak 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+Gure ingurunean dauden sistema automatikoak 
+
+7 
+http://www.youtube.com/watch?v=BpJQ6tAnuaQ 
+Tornua 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+Gure ingurunean dauden sistema automatikoak 
+
+8 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+Gure ingurunean dauden sistema automatikoak 
+Esku-tornua 
+
+9 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+Gure ingurunean dauden sistema automatikoak 
+
+10 
+http://www.easyveep.com/modules.php?akt_modul=6&akt_Lang=5 
+Ardoa botilatzeko 
+makinaren balbula 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+Gure ingurunean dauden sistema automatikoak 
+
+11 
+Automatizazioa da, prozesu industriala modu automatikoan funtziona dadin, hots,  giza esku-
+hartzerik gabe, makinak, 
+eta kontrol eta komunikazio-sistemen erabilpena. 
+Automatismoa da, prozesuaren funtzionamendua kontrolatzen duen gailua 
+(edo makina). Horrez gain, egoera 
+desberdinen aurrean erreakzio desberdinak eman ditzake. 
+Automatismoa 
+Sistema Digitala 
+Robot-besoa 
+Arrabol 
+Tornu 
+Balbula 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+
+12 
+http://www.infoplc.net/noticias/item/964-el-hombre-vs-la-m%C3%A1quina-el-
+dilema-de-eeuu 
+Gelako praktika. Eztabaida: Automatizazioa vs desenplegu? 
+ 
+http://www.infoplc.net/noticias/item/853-automatica-2012-muestra-la-
+interacci%C3%B3n-segura-entre-el-hombre-y-la-m%C3%A1quina 
+http://es.scribd.com/doc/99330911/Sesion-Plenaria-Dos 
+http://www.burbuja.info/inmobiliaria/burbuja-inmobiliaria/218206-
+automatizacion-industrial-origen-de-todos-males-13.html 
+http://campusvirtual.unex.es/cala/epistemowikia/
+index.php?title=La_%C3%A9tica_de_desarrollar_m%C3%A1quinas_inteligentes.#Las_per
+sonas_podr.C3.ADan_perder_sus_trabajos_por_la_automatizaci.C3.B3n. 
+http://es.scribd.com/doc/38202901/Codigo-de-Etica-Mecatronica 
+http://es.scribd.com/doc/124597731/38202901-Codigo-de-Etica-Mecatronica-2 
+“La  ética es tematización y fundamentación racional de la moral, hablar de
+una ética implica laemisión de valoraciones 
+morales. Yo personalmente no estoy nada de acuerdo con eso. El intento de
+formalizar una Moral universal va en contra 
+de la individualidad. La moral debe ser personal y
+no puede institucionalizarse y mucho menos ser normalizada.Pero este 
+no es un articulo sobre Ética , ni sobre la ética profesional de los ingenieros , sino mas bien de las implicaciones sociales 
+de la mecatrónica y los conflictos morales que se
+pueden presentar –por lo menos que a mi se me presentaron, y para 
+algunos compañeros de estudio de
+IngenieríaMecatrónica es algo que puede llegar a preocupa” 
+http://uroom.wordpress.com/2008/08/02/historia-de-la-mecatronica/ 
+
+13 
+Gelako praktika. Eztabaida: Automatizazioa vs desenplegu? 
+ 
+Industria automatizazioarekin lanpostuak galtzen dira? Eta berriak sortu? 
+Zein lankualifikazioa galtzen da eta zein sortu? 
+Edonon errentagarria da automatizazioa? 
+ 
+ 
+Gure ingurunea lehiakorra da “lehen munduan”? 
+Zein da arazoa? 
+ 
+Herrialde batek zer behar du lehiakorra izateko? 
+Atzerriko inbertsioa ona da ? 
+ 
+Gizarterako automatizazioa onuragarria izan dadin, zer proposatzen duzu? 
+
+Kontrol-
+legea 
+Sistema 
+14 
+Sistema Digitala 
+Robot-besoa 
+Arrabol 
+Tornua 
+Balbula 
+Instrukzio-
+programa 
+Nora 
+Nola 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+
+15 
+Sistema Eragilea 
+         Monitorea 
+ 
+Edizioa 
+Exekuzio 
+Programazio-
+lengoaia 
+Monitorizazioa 
+Komunikazioak 
+Sistema Digitala >> Instrukzio-programa: aplikazio 
+espezifikorako mikroprozesadorea 
+Kontroladorea 
+Non ezartzen da instrukzio-programa? 
+Instrukzio-
+programa 
+Konrol-
+legea 
+Sistema 
+Sistema Digitala 
+Nora 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+
+16 
+Sistema 
+Digitala 
+Roboterako µC  
+µC generikoa  
+tornurako µC 
+(CNC) 
+Logika 
+sekuentzialarako 
+µC (PLC) 
+Programazio-
+lengoaia 
+Adibideak 
+Lengoaia 
+grafikoak 
+CAD/CAM 
+Sistema Digitala >> Instrukzio-programa:
+ aplikazio espezifikorako mikroprozesadorea 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+Non ezartzen da instrukzio-programa? 
+
+17 
+Sistema 
+Digitala 
+Roboterako µC 
+µC generikoa 
+tornurako µC 
+(CNC) 
+Logika 
+sekuentzialarako 
+µC (PLC) 
+Programazio-
+lengoaia 
+RAPID 
+C 
+G&M 
+Ladder 
+Adibideak 
+Robot adibidea 
+ 
+Lengoaia 
+grafikoak 
+CAD/CAM 
+Nola deskribatzen da instrukzio-programa? 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+Sistema Digitala >> Instrukzio-programa:
+ aplikazio espezifikorako mikroprozesadorea 
+
+18 
+Adibidea: B pieza A piezan sostengatzen da eta A pieza mugitu nahi da eta
+D piezaren barne-zuloan jarri. 
+B kendu A-ren gainetik eta B C-ren gainean jarri; A D barruan jarri, etb… 
+B C-ren gainean jartzeko eragiketaren programazio-
+deskripzioa hau izango litzateke: 
+  
+Mover_a P1 via P2 
+ 
+; B piezaren edozein puntuan kokatu  
+Vel = 0.2 * VELMAX 
+ 
+; Abiadura moteldu 
+Pinza = ABRIR 
+ 
+; Martxanda zabaldu 
+Prec = ALTA  
+ 
+; Doitasuna handitu 
+Mover_recta_a P3 
+ 
+; Zuzen beharatu bertikalki 
+Pinza = CERRAR  
+ 
+; Martxanda itxi B peza hartzeko 
+Espera= 0.5  
+ 
+; Itxaron martxanda itxi dela bermatzeko 
+Mover_recta_a P1 
+ 
+; Zuzen igo bertikalki 
+Prec = MEDIA 
+ 
+; Doitasuna txikitu 
+Vel = VELMAX 
+ 
+; Abiadura handitu 
+mover_a P4 via P2 
+ 
+; C piezaren gainean kokatu 
+Prec = ALTA  
+ 
+; Doitasuna handitu 
+Vel = 0.2 * VELMAX  
+ 
+; Abiadura txikitu 
+Mover_recta_a P5 
+ 
+; Zuzen beheratu bertikalki 
+Pinza = ABRIR 
+ 
+; Martxanda zabaldu 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+Nola deskribatzen da instrukzio-programa? 
+
+19 
+Sistema 
+Digitala 
+Roboterako µC 
+µC generikoa 
+tornurako µC 
+(CNC) 
+Logika 
+sekuentzialarako 
+µC (PLC) 
+Programazio-
+lengoaia 
+RAPID 
+C 
+G&M 
+Ladder 
+Adibideak 
+Motore adibidea 
+ 
+Lengoaia 
+grafikoak 
+CAD/CAM 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+Nola deskribatzen da instrukzio-programa? 
+Sistema Digitala >> Instrukzio-programa:
+ aplikazio espezifikorako mikroprozesadorea 
+
+20 
+PAP12VMotore.c: 12Volt-eko polobakarreko PAP
+ motore a kontrolatu nahi da PIC16F628A  eta L293D erabiliz. Motorea 
+erloju-
+orratzen arabera eta aurka mugituko da. Etengailu batekin motorea piztu eta itzaliko da
+hurrengo baldintzen arabera: 0 
+maila dagoenean motorea itzaliko da
+eta 1 mailarekin piztuko da. Motoreak 645 pausu emengo ditu erloju-
+orrartzen arabera 
+eta 650 kontra. 
+//MotorPAP12V.c 
+//Microcontrolador: PIC16F628A 
+//Oscilador: Interno 4MHz 
+void pasosCW();             //Ocho pasos CW (horario). 
+void pasosCCW();            //Ocho pasos CCW 
+(antihorario). 
+#define PAUSA 5             //5 ms 
+char i; 
+void main(){ 
+PORTB=0x00;                 //Inicialización. 
+NOT_RBPU_bit=0;             //Habilitar las pull-up. 
+TRISB=0b10000000;           //RB<6:0> como salidas.  
+ 
+             RB7 como entrada.  
+ 
+while(1){ 
+ if (RB7_bit==0){ 
+  RB4_bit=0;                //Motor desconectado. 
+  RB5_bit=0;                //Motor desconectado. 
+ } 
+ if (RB7_bit==1){ 
+  //645 pasos CW 
+  for (i=1; i<=80;i++) 
+   pasosCW(); 
+  PORTB=0b00110110;         //Secuencia continua. 
+  Delay_ms(PAUSA); 
+  PORTB=0b00110111;         //Secuencia continua. 
+  Delay_ms(PAUSA); 
+  PORTB=0b00110101;         //Secuencia continua. 
+  Delay_ms(PAUSA); 
+  PORTB=0b00111101;         //Secuencia continua. 
+  Delay_ms(PAUSA); 
+PORTB=0b00111001;         //Secuencia continua. 
+  Delay_ms(PAUSA); 
+ 
+  //650 pasos CCW 
+  PORTB=0b00111101;         //Secuencia continua. 
+  Delay_ms(PAUSA); 
+  PORTB=0b00110101;         //Secuencia continua. 
+  Delay_ms(PAUSA); 
+  PORTB=0b00110111;         //Secuencia continua. 
+  Delay_ms(PAUSA); 
+  PORTB=0b00110110;         //Secuencia continua. 
+  Delay_ms(PAUSA); 
+  for (i=1; i<=80;i++) 
+   pasosCCW(); 
+  PORTB=0b00111110;         //Secuencia continua. 
+  Delay_ms(PAUSA); 
+  PORTB=0b00111010;         //Secuencia continua. 
+  Delay_ms(PAUSA); 
+  PORTB=0b00111011;         //Secuencia continua. 
+  Delay_ms(PAUSA); 
+  PORTB=0b00111001;         //Secuencia continua. 
+  Delay_ms(PAUSA); 
+  PORTB=0b00111101;         //Secuencia continua. 
+  Delay_ms(PAUSA); 
+  PORTB=0b00111111;         //Apagar el motor. 
+  Delay_ms(500);           //Esperar 5 segundos  
+ 
+            antes de repetir. 
+ } 
+} 
+} 
+//Definición de funciones. 
+void pasosCW(){ 
+ PORTB=0b00110110; 
+ Delay_ms(PAUSA); 
+ PORTB=0b00110111; 
+ Delay_ms(PAUSA); 
+ PORTB=0b00110101; 
+ Delay_ms(PAUSA); 
+ PORTB=0b00111101; 
+ Delay_ms(PAUSA); 
+ PORTB=0b00111001; 
+ Delay_ms(PAUSA); 
+ PORTB=0b00111011; 
+ Delay_ms(PAUSA); 
+ PORTB=0b00111010; 
+ Delay_ms(PAUSA); 
+ PORTB=0b00111110; 
+ Delay_ms(PAUSA); 
+} 
+ 
+ 
+ 
+void pasosCCW(){ 
+ PORTB=0b00111110; 
+ Delay_ms(PAUSA); 
+ PORTB=0b00111010; 
+ Delay_ms(PAUSA); 
+ PORTB=0b00111011; 
+ Delay_ms(PAUSA); 
+ PORTB=0b00111001; 
+ Delay_ms(PAUSA); 
+ PORTB=0b00111101; 
+ Delay_ms(PAUSA); 
+ PORTB=0b00110101; 
+ Delay_ms(PAUSA); 
+ PORTB=0b00110111; 
+ Delay_ms(PAUSA); 
+ PORTB=0b00110110; 
+ Delay_ms(PAUSA); 
+ 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+
+21 
+Sistema 
+Digitala 
+Roboterako µC 
+µC generikoa 
+tornurako µC 
+(CNC) 
+Logika 
+sekuentzialarako 
+µC (PLC) 
+Programazio-
+lengoaia 
+RAPID 
+C 
+G&M 
+Ladder 
+Adibideak 
+Torneaketa 
+adibidea 
+Lengoaia 
+grafikoak 
+CAD/CAM 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+Nola deskribatzen da instrukzio-programa? 
+Sistema Digitala >> Instrukzio-programa:
+ aplikazio espezifikorako mikroprozesadorea 
+
+22 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+
+23 
+Sistema 
+Digitala 
+Roboterako µC 
+µC generikoa 
+tornurako µC 
+(CNC) 
+Logika 
+sekuentzialarako 
+µC (PLC) 
+Programazio-
+lengoaia 
+RAPID 
+C 
+G&M 
+Ladder 
+Adibideak 
+Adibide 
+sekuentziala 
+ 
+Lengoaia 
+grafikoak 
+CAD/CAM 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+Nola deskribatzen da instrukzio-programa? 
+Sistema Digitala >> Instrukzio-programa:
+ aplikazio espezifikorako mikroprozesadorea 
+
+24 
+Botila bete egingo da zinta garraitzailaren bukaerara heltzean. 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+Nola deskribatzen da instrukzio-programa? 
+
+25 
+Sistema 
+Digitala 
+Roboterako µC 
+µC generikoa 
+tornurako µC 
+(CNC) 
+Logika 
+sekuentzialarako 
+µC (PLC) 
+Programazio-
+lengoaia 
+RAPID 
+C 
+G&M 
+Ladder 
+Adibideak 
+Robot adibidea 
+Motore adibidea  Torneaketa 
+adibidea 
+Adibide 
+sekuentziala 
+Legoaia 
+grafikoak 
+CAD/CAM 
+TECNOCIM 
+MatLab 
+AUTOCAD 
+CodeSys 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+Nola deskribatzen da instrukzio-programa? 
+Sistema Digitala >> Instrukzio-programa:
+ aplikazio espezifikorako mikroprozesadorea 
+
+Kontrol-
+legea 
+Sistema 
+26 
+Sistema Digitala 
+Robot-besoa 
+Arrabol 
+Tornua 
+Balbula 
+Instrukzio-
+programa 
+Nora 
+Nola 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+
+Ley de 
+control 
+Instrukzio-
+programa 
+Konrol-
+legea 
+Sistema 
+27 
+Sistema Digitala 
+Nola 
+Begizta zabalik 
+Begizta itxia = Erregulazioa 
+Nola 
+Sistemares deskripzio 
+zehatza, asalduak kontuan 
+izanda. 
+Asalduak ezabatuz 
+Pultsu
+-trena 
+Urratsez 
+urratseko 
+motorea 
+Lan-
+mahaia 
+Tornu-
+burua 
+Servo 
+motorea 
+Lan-
+mahaia 
+Tornu-
+burua 
+Nora 
+Sistema Digitala 
+Encoder 
+Nora 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+
+Kontrol
+-legea 
+28 
+Servo 
+motorea 
+Lan-
+mahaia 
+Tornu-
+burua 
+Nora 
+Sistema Digitala 
+Instrukzio-
+programa 
+Sistema 
+Encoder 
+Kontrol-
+legea 
+Servo 
+motorea 
+Lan-
+mahaia 
+Tornu-
+burua 
+Sistema Digitala 
+Sistema 
+Encoder 
+DAQ 
+DAC 
+DAQ 
+ADC 
+Drive 
+Erreferentzia 
+Sistema 
+y(t) 
+- 
+e 
+G
+kontrol 
+u(t) 
+Erreferentzia 
++ 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+
+Instrukzio-
+programa 
+Kontrol-
+legea 
+29 
+Sistema Digitalak 
+Berariazko aplikaziorako mikrokontroladoreak 
+Kontroladorea 
+Sistema Digitala >> Kontroladorea 
+Berariazko hardware gailua  
+Berariazko aplikazio-
+hardwarea 
+Hardware gailu bera 
+Sistema Digitala 
+Instrukzio-
+programa 
+Kontrol-
+legea 
+Sistema Eragilea 
+Edizioa 
+Exekuzioa 
+Programazio-lengoaia 
+Monitorizazioa 
+Komunikazioak 
+Kontroladorea 
+Instrukzio-programa 
+Non ezartzen dira kontrol-legearen instrukzioak? 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+
+30 
+Sistema Digitala >> Kontroladorea: Hardware gailu bera 
+Sistema Digitala 
+Instrukzio-
+programa 
+Kontrol-
+legea 
+PLC 
+CNC sistemak 
+Automatizazio Kontroladore 
+Programagarriak: PAC 
+PC Based Controller 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+Non ezartzen dira kontrol-legearen instrukzioak? 
+
+31 
+Mikrokontroladoreak 
+http://www.analog.com/en/processors-dsp/products/index.html 
+http://www.ti.com/lsds/ti/dsp/multicore/overview.page 
+ 
+Seinale-Prozesadore Digitalak 
+Gailu logiko programagarriak 
+        PAL >>FPGA 
+Automatizazio Kontroladore 
+Programagarriak: PAC 
+Sistema Digitala >> Kontroladorea: Berariazko hardware gailua  
+Instrukzio-
+programa 
+Kontrol-
+legea 
+Sistema Digitalak 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+Non ezartzen dira kontrol-legearen instrukzioak? 
+
+32 
+Mikrokontroladoreak 
+PLC 
+Automatizazio malgua 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+Non ezartzen dira kontrol-legearen instrukzioak? 
+Seinale-Prozesadore Digitalak 
+Gailu logiko programagarriak 
+        PAL >>FPGA 
+Automatizazio Kontroladore 
+Programagarriak: PAC 
+
+33 
+Sistema 
+Digitala 
+DSP/PAC 
+µC 
+orokorra/PAC  
+FPGA/PAC 
+µC errendimendu 
+baxua/PAC 
+Programazio-
+lengoaia 
+C 
+C 
+VHDL 
+C 
+Adibideak 
+Lengoaia 
+grafikoak 
+CAD 
+MatLab 
+MatLab 
+LabVIEW 
+MatLab 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+Nola deskribatzen dira kontrol-legearen instrukzioak? 
+Sistema Digitala >> Kontroladorea: Berariazko hardware gailua  
+
+34 
+Mikrokontroladoreak 
+Seinale- 
+prozesadore 
+digitala 
+Gailu logiko 
+programagarria 
+   PAL >>FPGA 
+Hardware in the loop>> algoritmoak 
+garatu eta ezarri>> kalkulu 
+konputazionalak >> hardwarea aukeratu 
+Berariazko PAC 
+PLC 
+PC-an simulazioa >> MatLab>>kontrol-algoritmoak 
+frogatu. 
+1 
+2 
+3 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+Nola aukeratzen da hardware gailua kontrol-legea ezartzeko? 
+
+35 
+PLC:  Logika programagarri-kontroladoreak 
+PAC: Automatizazio kontroladore programagarriak 
+CPU 
+I/O Moduluak 
+Data-busak 
+Sare-protokoloak: TCP/IP, 
+MOdbus, CAN, PRofibus 
+Anitz begizta itxiak 
+Datu-eskuratze 
+Analisi matematikoa. 
+…… 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Zuzeneko automatizazioa 
+ 
+
+36 
+http://www.mecanizadosvillarreal.com/71104_es/Sistemas-automaticos-de-
+manipulaci%C3%B3n-industrial/ 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Prozesuaren automatizazioa 
+ 
+Prozesu industriala automatizatzeko nola integratzen dira automatismoak ? 
+
+37 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Prozesuaren automatizazioa 
+ 
+Prozesu industriala automatizatzeko nola integratzen dira automatismoak ? 
+
+38 
+1. gaia. 1.
+atala. Industria automatizazioaren arkitektura. Prozesuaren automatizazioa 
+ 
+Prozesu industriala automatizatzeko nola integratzen dira automatismoak ? 
+Enpresa
+-gestioa 
+Planifikazioa 
+Planta-koordinazioa 
+Ikuskapen eta kontrola 
+Zuzeneko kontrola 
+
+39 
+ 
+1.- Industria automatizazioaren arkitektura 
+ 
+ 
+a) Zuzeneko automatizazioa 
+ 
+ 
+b) Prozesuaren automatizazioa 
+2.- Industria automatizazio-prozesuaren atalak aztertzen diren 
+irakasgaiak. 
+3.- Industria automatizaziorako kontroladoreak garatzeko diseinu-
+prozedura. 
+4.- Kontroladorearen inplementazio-, simulazio- eta diseinu-prozesurako 
+software garapen-ingurune. 
+5.- Kontroladoreak ezartzeko plataformak. 
+6.- Denbora errealeko sistema. 
+ 
+ 
+ 
+Gai-zerrenda: 1. Gaia. 
+Industria automatizazioaren hastapenak 
+
+40 
+Automatizazio-prozesuaren atala 
+Landutako irakasgaia 
+Kurtsoa 
+µC egitura eta C lengoaia 
+Informatikaren oinarriak 
+1 
+Makina-erreminta. CNC 
+Ekoizpen eta fabrikazio sistemak 
+2 
+Sentsoreak, eragingailuak eta PLC 
+Automatismoak eta kontrola 
+2 
+Kontroladoreen diseinua 
+Erregulazio automatikoa 
+3 
+Sistema sekuentzialen diseinua 
+Elektronika Digitala 
+3 
+Komunikazio-sistemak 
+Informatika industriala 
+3 
+µC eta PLD egitura eta programazioa 
+Sistema elektroniko digitalak 
+3 
+Beso-robotikoen egitura eta kontrol-
+algoritmoak 
+Robotika 
+3 
+1. gaia. 2. atala. Industria automatizazio-prozesuaren atalak
+aztertzen diren irakasgaiak. 
+ 
+Irakasgaia aurre egiteko landuak izan behar diren beste irakasgaiak 
+
+41 
+Industri kontrol-algoritmoak ezartzea PAC sistema digitaletan  
+Goi-mailako programazio inguruneak erabiltzea 
+(Mathworks adibidez) ordenaigailu bidezko kontrola eta 
+datu-eskuratze sistema diseinatzeko  
+Prozesuen monitorizazioa eta kontrola garatzeko gailu elektronikoak. 
+Aplikazioa: CC motore baten abiadura 
+kontrolatzeko kontroladorearen garapena. 
+Drive:H-zubia 
+Motorea+encoder 
+1. gaia. 2. atala. Industria automatizazio-prozesuaren atalak
+aztertzen diren irakasgaiak. 
+ 
+
+42 
+Adibidea. Industria automatizazio sistemen analisia 
+Vicinay: kateak lotzeko piezak egiten dituen sistema 
+Bideoa_1 
+Bideoa2 
+
+43 
+Adibidea. Industria automatizazio sistemen analisia 
+Vicinay: kateak lotzeko piezak egiten dituen sistema 
+
+44 
+Adibidea. Industria automatizazio sistemen analisia 
+Vicinay: kateak lotzeko piezak 
+egiten dituen sistema 
+
+45 
+Adibidea. Industria automatizazio sistemen analisia 
+Vicinay: kateak lotzeko piezak 
+egiten dituen sistema 
+
+Industria Elektronikoaren eta Automatikaren 
+Ingenieritzarako Gradua 
+Irakaslea: Ainhoa Etxebarria 
+INDUSTRIA AUTOMATIZAZIOA 
+
+Industria Elektronikoaren eta Automatikaren 
+Ingenieritzarako Gradua 
+Irakaslea: Ainhoa Etxebarria 
+INDUSTRIA AUTOMATIZAZIOA 
+
+2 
+ 
+ 1. Gaia: Industria automatizazioaren hastapenak 
+ 
+ 2. Gaia: Prozesu-kontrol eta automatizazioa garatzeko hardware osagaiak: 
+sentsoreak, eragingailuak, AD/DA bihurgailuak, eta sarrera-irteera modulu. 
+ 
+ 3. Gaia: Goi-mailako inguruneak PAC-ak programatzeko. 
+ 
+ 4. Gaia: Kontroleko sistema automatikoen integrazioa 
+Industria Automatizazioa 
+GAI-ZERRENDA 
+
+3 
+ 
+1.- Industria automatizazioaren arkitektura 
+ 
+ 
+a) Zuzeneko automatizazioa 
+ 
+ 
+b) Prozesuaren automatizazioa 
+2.- Industria automatizazio-prozesuaren atalak aztertzen diren 
+irakasgaiak. 
+3.- Industria automatizaziorako kontroladoreak garatzeko diseinu-
+prozedura. 
+4.- Kontroladorearen inplementazio-, simulazio- eta diseinu-prozesurako 
+software garapen-ingurune. 
+5.- Kontroladoreak ezartzeko plataformak. 
+6.- Denbora errealeko sistema. 
+7.- xPC Target 
+ 
+ 
+Gai-zerrenda: 1. Gaia. 
+Industria automatizazioaren hastapenak 
+
+TCP/IP 
+Instalazioa 
+Seinalea. 
+Target  
+Host PC 
+Garapenerako programa 
+Konpilatu 
+Deskargatu 
+Seinalea. 
+HW-SW eskema experimentala 
+Software 
+Sistema eragilea: xPCTarget 
+S/I gailuak 
+4 
+1. gaia
+. 4. atala. Kontroladorearen inplementazio-, simulazio- eta diseinu-
+prozesurako software garapen-ingurune
+  
+
+5 
+A. Zer da xPCTarget? 
+-
+Denbora errealeko sistemen prototipatzea, testa eta garapena egiteko 
+sistema da, PC estandarra erabiliz. PC bat Host-a da eta beste bat 
+Target-a 
+-
+“Target PC”-a izan daiteke desktop, PC industriala, PC/104, PC/104+ 
+edo CompactPCI. 
+B. Oinarrizko ezaugarriak 
+Erremintaren atalak dira: 
+-
+1. Real-Time Kernel. 
+-
+2. Real-Time Application 
+-
+3. Seinale-eskuratzea. 
+-
+4. Aldagaien doitzea. 
+1 gaia. 7. atala. xPC Target
+ 
+
+6 
+G. xPC Target-aren oinarrizko tutorialak. 
+ 
+1. Tutoriala : Basic Tutorial. 
+ 
+2. Tutoriala : Signal monitoring y signal tracing. 
+ 
+3. Tutoriala . Signal logging. 
+ 
+4.Tutoriala: Parametro-doitze. 
+ 
+ 
+1 gaia. 7. atala. xPC Target
+ 
+
+7 
+C. Hardware Ingurunea 
+ 
+- xPCTarget-aren hardware ingurunea osatuta dago: Host PC, Target PC 
+(mahai gaineko Pc-a, PC industriala, PC 104, CompactPCI edo SBC- 
+SingleBoard Computer), Host-Target konexioa (RS232 edo TCP-IP) eta 
+I/O driverrak (analogikoak, digitalak, CAN, GPIB, RS232, UDP, 
+kontadoreak eta seinale-atontze) 
+- Target PC moduan erabiltzen den PC-rako baldintzak dira IBM-
+bateragarri izatea eta RS232 portua edo xPCTarget-ak onartzen duen 
+Ethernet txartela eukitzea. 
+- Host-Target konexioa egin daiteke
+  
+- Serie konexioa:
+ RS232 null modem kablearekin 
+- Ethernet konexioarekin: LAN, Internet, edo zuzeneko konexioa 
+kable gurutzatua erabiliz. 
+ 
+1 gaia. 7. atala. xPC Target
+ 
+
+8 
+F. xPC Target-a martxan jarri 
+ 
+1.
+HostPC-an softwarea instalatu: MATLAB, Simulink, Stateflow, 
+RTW, xPCTarget, C konpiladorea (MS Visual C/C++, 
+OpenWatcom). 
+2. Host-Target konexioa: Serie (RS232) edo Ethernet (TCP/IP)  
+3. Target-aren boot diskoa sortu: ingurune grafikoa (xpcsetup), 
+komando-lerroa (xpcbootdisk) edo xpc explorer. 
+4. Instalazio test-a: Target-a abiatu boot diskoa erabiliz eta instalazioa 
+testeatu (“xpctest”). Test honekin frogatzen diren atalak dira: 
+Konexioa, ingurunea, aplikazioa sortu eta kargatu, RT-an 
+exekutatu, datuak eskuratu eta simulazioarekin konparatu. 
+1 gaia. 7. atala. xPC Target
+ 
+
+9 
+D. Software Ingurunea: host-target komunikazioa 
+- Ingurune honetan target
+ aplikazioa diseinatzen da eta denbora 
+errealean eta ez errealean testeatzen da. 
+ 
+- Host eta Target artean elkarri bidaltzen duten informazioa da: 
+- Target Aplikazioa: Host-ean sortu den aplikazioa Target-era 
+bidaltzen da. 
+- Kontrola: Propietateak aldatu eta RT aplikazioa kontrolatu, 
+hau da, aplikazioa martxan jarri eta gelditu, laginketa 
+periodoa aldatu eta aplikazioaren eta CPU-aren 
+errendimendu-informazioa jaso. 
+- Seinaleen datuak: Host PC-an seinaleak aztertzeko datuak. 
+- Parametroen balioak: parametroen balioak aldatu aplikazioa 
+martxan dagoenean elkarren segidako aplikazioen artean. 
+1 gaia. 7. atala. xPC Target
+ 
+
+10 
+B. 1. Real-Time Kernel 
+-
+Target PC-an ez da behar sistema eragilerik instalatuta izatea xPC Target-a 
+abiatzeko. Nahikoa da disketean RT kernel-a izatea.  
+-
+Kernel-a kargatu denean “application loader” –a aktibatzen da eta target-a 
+itxaroten gelditzen da host-ak RT programa bidali arte. Loader-ari kodea 
+heltzen zaionean,  atal ezberdinak kopiatzen ditu esleitutako zuzenbideetan eta 
+aplikazioa exekutatzeko prest uzten du. 
+-
+Besterik adierazi ezean, kernel-ak 3MB memoria erabiltzen du. Horietatik 
+1MB RT aplikazioari erreserbatzen zaio eta gainontzekoa  “signal logging” 
+prozesuetarako zuzentzen da.  Banaketa hori alda daiteke “xPC Target boot 
+disk” prozesuaren konfigurazioan. 
+B. 2. Real-Time Application 
+- Simulink modelotik abiatuz horri dagokion RT aplikazioa sortzeko erabiltzen 
+da RTW, Stateflow Coder, xPC Target eta C konpiladorea. 
+- RT aplikazioak  abiadura handiko atazak gara ditzake. Modeloaren tamaina, 
+konplexutasuna eta erabiltzen den hardwareak eragina izango dute exekuzio 
+denboran. 
+1 gaia. 7. atala. xPC Target
+ 
+
+11 
+B. 3. Seinale eskuratze 
+- RT aplikazioan parte hartzen duten seinaleen datuak RT kernel-ak gordetzen 
+ditu target PC-aren RAM memorian. Seinaleak hartzeko hiru modu daude: 
+- Signal monitoring:  Datuak eskuratzen dira denbora-informaziorik gabe. Ez da 
+denbora errealean egiten, hortaz, ez du suposatzen karga konputazionalik RT 
+aplikaziorako. 
+- Signal logging: Datuak eskuratzen dira denbora-informazioarekin eta Target 
+PC-an metatzen dira  exekuzioa dagoen bitartean. Hura bukatzean, Host PC-ra 
+bidaltzen dira bertan gordetzeko edo bistaratzeko. 
+- Signal tracing: Seinalea eskuratzen eta bistaratzen da aplikazioa exekutazen 
+dagoenean. Bistaratzea egin daiteke Host-ean edo Target-ean. 
+1 gaia. 7. atala. xPC Target
+ 
+
+12 
+B. 4. Parametroen doitze  
+-Simulink blokeen parametroak RT aplikazioa exekutatu aurretik edo 
+exekutatzen dagoenean alda daitezke.  Hori egiteko moduak dira: 
+-Interaktibo-modua: RT aplikazioa exekutatzen dagoenean parametroak 
+alda daitezke. Simulink eskeman egiten diren aldaketek berehala eragina 
+dute sistemaren irteeretan. 
+-Scriptak eta batch prozedura: xPCTarget-ak komandoak ditu exekuzioa 
+martxan dagoenean parametroak aldatzeko. Horretarako, Host PC-an 
+script bat idatzi eta exekutatu behar da.  
+1 gaia. 7. atala. xPC Target
+ 
+
+13 
+E. Erabiltzailearekin interakzioa 
+ 
+- xPCTarget-ak dituen baliabideak erabiltzaileak RT aplikazioarekin 
+interakzionatzeko dira:  
+- 1. xPC Target Explorer. 
+- 2. MATLAB komando-intefazea. 
+- 3. Simulik Kanpoko modu-interfazea 
+- 4. “xPCTarget Scopes” blokeak Simulink-en. 
+- 5. Target PC-aren komando-interfazea. 
+- 6. Web Browser interfazea. 
+- 7. Dials eta Gauges, Simulink-en. 
+- 8. GUI pertsonalizatua xPC Target API eta COM API-n oinarrituta. 
+1 gaia. 7. atala. xPC Target
+ 
+
+14 
+E. 1. xPC Target Explorer. 
+ 
+- “xpcexplr” komandoa Comand window-en idatzi behar da. Agertzen den GUI-
+arekin ingurunearen ezaugarriak, RT aplikazioaren kontrola eta datu-
+eskuratzea egin daiteke. 
+E. 2. MATLAB komando-interfazea. 
+- Host PC-aren komando-lehioan xPC Target komandoak idatzi daitezke 
+aplikazioa kontrolatzeko. Halaber, M script-ak idatzi daitezke batch moduan 
+prozesatzeko. Exekuzioa kontrolatzeko modurik zuzenena da. 
+ 
+E. 3. Simulink kanpoko modu-interfazea 
+- Simulik diagrama RT aplikazioarekin konektatzeko da. Diagrama honen bidez 
+parametroak alda daitezke Host PC-an baina datu-eskuratzea ezin da egin. 
+ 
+1 gaia. 7. atala. xPC Target
+ 
+
+15 
+E. 4. “xPC Target Scopes” blokeak 
+-
+ Bloke hauek Simulink eskeman gehitzen badira egin daiteke seinaleak ikusi eta 
+gorde Host PC-an edo Target-ean RT aplikazioa martxan dagoenean. 
+1 gaia. 7. atala. xPC Target
+ 
+E. 5. TargetPC-aren komando-interfazea. 
+- TargetPC-aren komando-lehioan komandoak idazten badira RT aplikazioarekin 
+elkarri eragin daiteke. Interfaze hau oso erabilgarria da Stand-
+alone aplikazioak 
+exekutatzen badira, hau da, Host PC-arekin konexiorik ez duten aplikazioak. 
+Modeloaren parametro eskalarrak soilik alda daitezke. 
+E. 6. Web Browser interfazea. 
+- HTTP nabigatzailea erabil daiteke RT aplikaizoarekin erakarri eragiteko. 
+Horretarako, Target PC-a TCP/IP sare batera konektatuta egon behar da. 
+- HTML formularioa erabiliz egin daitezkeen ekintzak dira: eskuratu diren 
+seinaleen “Pantaila- harrapaketa” ikusi, aplikazioa martxan jarri eta gelditu, 
+parametroen balioak aldatu. 
+
+16 
+E. 7. Dials & Gauges GUI. 
+- Dials & Gauges Toolbox-arekin RT aplikazioarekin konektatzeko GUI 
+pertsonalizatuak gara daitezke. Gauges-ak erabiltzen dira datuak 
+bistaratzeko eta Dials-ak, ordea, RT modeloaren parametroen balioak 
+aldatzeko. 
+E. 8. GUI pertsonalizatua xPC Target API . 
+- DLL bat linkatzeko gai den edozein software-ingurunea erabil daiteke GUI-ak 
+diseinatzeko. GUI hauek Host PC-an exekutatzen dira eta RT aplikazioarekin 
+komunikatzen dira RS232 edo TCP/IP bitartez. 
+- GUI-ak ere diseina daitezke Visual Basic-en edo COM objetuak dituen beste 
+edozein ingurunean. COM objetu hoiek lotzen dituzte elementu grafikoak 
+parametroekin eta seinaleen datuekin. 
+1 gaia. 7. atala. xPC Target
+ 
+
+2 
+ 
+ 1. Gaia: Industria automatizazioaren hastapenak 
+ 
+ 2. Gaia: Prozesu-kontrol eta automatizazioa garatzeko hardware osagaiak: 
+sentsoreak, eragingailuak, AD/DA bihurgailuak, eta sarrera-irteera modulu. 
+ 
+ 3. Gaia: Goi-mailako inguruneak PAC-ak programatzeko. 
+ 
+ 4. Gaia: Kontroleko sistema automatikoen integrazioa 
+Industria Automatizazioa 
+GAI-ZERRENDA 
+
+3 
+ 
+1.- Industria automatizazioaren arkitektura 
+ 
+ 
+a) Zuzeneko automatizazioa 
+ 
+ 
+b) Prozesuaren automatizazioa 
+2.- Industria automatizazio-prozesuaren atalak aztertzen diren 
+irakasgaiak. 
+3.- Industria automatizaziorako kontroladoreak garatzeko diseinu-
+prozedura. 
+4.- Kontroladorearen inplementazio-, simulazio- eta diseinu-prozesurako 
+software garapen-ingurune. 
+5.- Kontroladoreak ezartzeko plataformak. 
+6.- Denbora errealeko sistema. 
+7.- xPC Target 
+ 
+ 
+Gai-zerrenda: 1. Gaia. 
+Industria automatizazioaren hastapenak 
+
+Kontrol
+-legea 
+4 
+Servo 
+motorea 
+Lan-
+mahaia 
+Tornu-
+burua 
+Nora 
+Sistema Digitala 
+Sistema 
+Encoder 
+Helburua 
+Kontrol legea 
+diseinatzea eta 
+ezartzea 
+Kontro
+l-legea 
+Servo 
+motorea 
+Lan-
+mahaia 
+Tornu-
+burua 
+Sistema Digitala 
+Sistema 
+Encoder 
+DAQ 
+DAC 
+Drive 
+Errefer 
+DAQ 
+ADC 
+Ezarpena 
+y(t
+k) 
+y(t) 
+u(t) 
+u(t
+k) 
+1. gaia. 3. atala. Industria automatizaziorako
+kontroladoreak garatzeko diseinu-prozedura
+ 
+
+5 
+1. gaia. 3. atala. Industria automatizaziorako
+kontroladoreak garatzeko diseinu-prozedura
+ 
+A/D 
+Bihurgailua 
+kontroladorea 
+D/A 
+Bihurgailua 
+Prozesua: 
+eragingailuak+sistema+
+sentsoreak 
+e(t
+k) 
+u(t
+k) 
+y(t) 
+u(t) 
+r(t
+k) 
+y(t
+k) 
+Instalazioa 
+- 
+G
+kontrola 
+Erreferentzia 
++ 
+u(t
+k) 
+y(t
+k) 
+DAQ 
+DAC 
+DAQ 
+ADC 
+u(t) 
+y(t) 
+Kontrol-
+legea 
+Servo 
+motorea 
+Lan-
+mahaia 
+Tornu-
+burua 
+Sistema Digitala 
+Sistema 
+Encoder 
+DAQ 
+DAC 
+Drive 
+DAQ 
+ADC 
+y(t
+k) 
+y(t) 
+u(t) 
+u(t
+k) 
+e(t
+k) 
+
+6 
+Sistema 
+y 
+_ 
+e 
+r 
+G
+c 
+Kontroladorearen diseinua eta ezarketa 
+ Sistemaren modelaketa eta portaeraren azterketa 
+ Kontroladorearen diseinua 
+ Instalazioaren eta kontroladorearen simulazioa 
+ Kontroladorearen garapena eta hardware hautapena 
+Prozedura 
+1. gaia. 3. atala. Industria automatizaziorako
+kontroladoreak garatzeko diseinu-prozedura
+ 
+u 
+
+7 
+Denboraren eremua 
+Helburua 
+ 
+1
+s
+K
+G s
+e
+sT
+
+
+
+
+ 
+2
+0
+2
+2
+0
+0
+2
+s
+G s
+e
+s
+s
+
+
+
+
+
+
+
+
+ 
+2
+0
+0
+1
+1 2
+
+
+ 
+
+
+
+
+ 
+
+
+ 
+
+G jw
+j
+j
+
+
+
+
+
+ 
+1
+1
+
+
+G s
+jwT
+Maiztasunaren eremua 
+
+Instalazioaren modelaketa eta portaeraren azterketa 
+
+Kontroladorearen diseinua 
+
+Instalazioaren eta kontroladorearen simulazioa. 
+
+Kontroladorearen garapena eta hardware-hautapena 
+1. gaia. 3. atala. Industria automatizaziorako
+kontroladoreak garatzeko diseinu-prozedura
+ 
+Prozedura 
+Sistemari dagokion 
+Transferentzia-funtzioa 
+lortzea da helburua 
+G(s) orokorrak 
+Adierazpen hauen aldagaiak 
+zehaztu beahr dira 
+Aukera bat: grafikoak erabiliz 
+
+8 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+1
+1
+1
+0
+1
+...
+...
+
+
+
+ 
+
+
+
+
+ 
+
+n
+n
+m
+m
+n
+m
+y
+t
+a y
+t
+a y t
+b u
+t
+d
+b u
+t
+d
+b u t
+d
+ 
+1
+0
+1
+1
+1
+0
+1
+1
+.
+0
+...
+[
+]
+( )
+.
+.
+[
+]
+( )
+...
+m
+m
+sd
+m
+m
+n
+n
+n
+n
+c i
+b s
+b s
+b
+s b
+irteerak
+Y s
+F T
+G s
+e
+sarrerak
+X s
+a s
+a s
+a
+s
+a
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+Eskaloi edo pultsu sarrera 
+Maiztasun ezberdinak dituen sinu seinalea 
+Grafikoetatik 
+Erlazio fisikoetatik 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+2
+2
+Re
+Im
+Im
+arg
+arctan
+Re
+y
+Asen
+t
+u
+Bsen t
+A
+B G i
+B
+G i
+G i
+G i
+G i
+g
+G i
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+20log
+2
+
+
+
+A
+G i
+dB
+G i
+f
+
+
+
+
+
+Instalazioaren modelaketa eta portaeraren azterketa 
+
+Kontroladorearen diseinua 
+
+Instalazioaren eta kontroladorearen simulazioa. 
+
+Kontroladorearen garapena eta hardware-hautapena 
+1. gaia. 3. atala. Industria automatizaziorako
+kontroladoreak garatzeko diseinu-prozedura
+ 
+Prozedura 
+
+9 
+Prozedura 
+1. gaia. 3. atala. Industria automatizaziorako
+kontroladoreak garatzeko diseinu-prozedura
+ 
+
+Instalazioaren modelaketa eta portaeraren azterketa 
+
+Kontroladorearen diseinua 
+
+Instalazioaren eta kontroladorearen simulazioa. 
+
+Kontroladorearen garapena eta hardware-hautapena 
+Irakurri Artikulua 
+
+10 
+ 
+PID
+d
+i
+1
+Gc
+s
+K 1
+T s
+Ts
+
+
+
+
+
+
+
+
+
+- Sistemaren portaeraren analisia: erantzun irangankorra eta egonkorra 
+- Kontrol-sistemaren diseinua eta aldagaien doitzea:
+ Erroen kokapena, maiztasunaren eta denboraren 
+eremuan erantzun-metodoak. 
+ Aurretiko espezifikazioak. 
+ Kontroladoreak: aurreratze-konpentsatzailea, atzerapen-
+konpentsatzailea, PID kontroladoreak… 
+1. gaia. 3. atala. Industria automatizaziorako
+kontroladoreak garatzeko diseinu-prozedura
+ 
+
+Instalazioaren modelaketa eta portaeraren azterketa 
+
+Kontroladorearen diseinua 
+
+Instalazioaren eta kontroladorearen simulazioa. 
+
+Kontroladorearen garapena eta hardware-hautapena 
+Prozedura 
+G
+C 
+G
+p 
+u 
+e 
+y 
+Lortuta aurreko pausuan 
+Definitu behar 
+Adibidez 
+Aldagaiak zehaztu behar 
+
+11 
+Ordenadorea eta software egokia erabiliz instalazioaren eta 
+kontroladorearen simulazioa egin daiteke kontroladorearen 
+aldagaien balio “errealak” lortzeko. 
+Laginketa-aldia eta kalkulu-errutina (Euler, 
+Runge-Kutta…= ODE Solver) definitu ondoren 
+sistemaren portaera denboran zehar analiza 
+daiteke sistema digital batean.  
+Sistemaren portaereren analisia 
+denboran zehar . 
+1. gaia. 3. atala. Industria automatizaziorako
+kontroladoreak garatzeko diseinu-prozedura
+ 
+
+Instalazioaren modelaketa eta portaeraren azterketa 
+
+Kontroladorearen diseinua 
+
+Instalazioaren eta kontroladorearen simulazioa. 
+
+Kontroladorearen garapena eta hardware-hautapena 
+Prozedura 
+
+12 
+Sistema 
+Seinalea. 
+Hardware Arkitektura  
+(eta software) 
+Seinalea. 
+Mikrokontroladoreak 
+DSPak 
+FPGA 
+PLCak (S.O+Hard) 
+PCak (S.O+Hard) 
+PACak (S.O+Hard) 
+1. gaia. 3. atala. Industria automatizaziorako
+kontroladoreak garatzeko diseinu-prozedura
+ 
+Prozedura 
+
+Instalazioaren modelaketa eta portaeraren azterketa 
+
+Kontroladorearen diseinua 
+
+Instalazioaren eta kontroladorearen simulazioa. 
+
+Kontroladorearen garapena eta hardware-hautapena 
+Aurreko pausuan lortutako Gc Sistema Digitalean ezarri behar da 
+
+13 
+ 
+1.- Industria automatizazioaren arkitektura 
+ 
+ 
+a) Zuzeneko automatizazioa 
+ 
+ 
+b) Prozesuaren automatizazioa 
+2.- Industria automatizazio-prozesuaren atalak aztertzen diren 
+irakasgaiak. 
+3.- Industria automatizaziorako kontroladoreak garatzeko diseinu-
+prozedura. 
+4.- Kontroladorearen inplementazio-, simulazio- eta diseinu-prozesurako 
+software garapen-ingurune. 
+5.- Kontroladoreak ezartzeko plataformak. 
+6.- Denbora errealeko sistema. 
+7.- xPC Target 
+ 
+ 
+Gai-zerrenda: 1. Gaia. 
+Industria automatizazioaren hastapenak 
+
+TCP/IP 
+Instalazioa 
+Seinalea. 
+Target  
+Host PC 
+Garapenerako programa 
+Konpilatu 
+Deskargatu 
+Hardware arkitektura (eta 
+software): kontrol-
+aplikazioak ezartzeko 
+Seinalea. 
+Mikrokontroladoreak 
+DSPak 
+FPGA 
+PLCak (S.E +Hard) 
+PCak (S.E +Hard) 
+PACak (S.E +Hard) 
+HW-SW eskema experimentala 
+Software Host-ean 
+Sistema eragilea 
+Garapenerako programak
+: 
+LAbVIEW , Matlab... 
+Ezarpenerako programak 
+Software Target-ean 
+Sistema eragilea: xPC TArget 
+S/I gailuak 
+Ezarpenerako programak
+: 
+LabVIEW , Matlab... 
+14 
+1. gaia
+. 4. atala. Kontroladorearen inplementazio-, simulazio- eta diseinu-
+prozesurako software garapen-ingurune
+  
+MathWorks-ek ez dauka  
+berariazko hardwarea 
+Hardware a erabiltzeko 
+driverrak eskuragarri izan 
+behar dira. 
+
+15 
+Datuen analisia 
+ eta 
+Instalazioa modelatu 
+Kontroladorearen 
+diseinua 
+Simulazioa 
+Kontroladorearen 
+ezarpena 
+System 
+Identification 
+Toolbox 
+Control 
+System 
+Toolbox 
+Simulink 
+Real-Time 
+XPCTarget 
+Datu-eskuratze eta  
+datu-sortze 
+Real-Time 
+XPCTarget 
+DAQ 
+1. gaia
+. 4. atala. Kontroladorearen inplementazio-, simulazio- eta diseinu-
+prozesurako software garapen-ingurune
+  
+
+16 
+Datu-analisia, ikuskapen, aplikazio-
+garapenak, simulazioa, diseinua eta kode-
+sortzaile erremintak eskuragarri ditu 
+ingurune integratu batean. 
+MATLAB da MathWorks produktu 
+guztientzako oinarria. 
+Ordenadore bidez erabilgarri diren 
+hardware gailuak maneiatuz (serie ataka, 
+paralelo, datu-eskuratze txartela , Bus 
+VXI, GPIB, VME) seinaleen neurketak 
+eta kontrol-funtzioak gara ditzake. 
+1. gaia
+. 4. atala. Kontroladorearen inplementazio-, simulazio- eta diseinu-
+prozesurako software garapen-
+ingurune: MahtWorks: Matlab/Simulink  
+
+17 
+Simulink 
+Toolbox bat da 
+Sistema dinamikoen analisia, modelatua eta 
+simulazioa egiteko programazio-ingurunea da. 
+Matlab programazio-ingurunea da oinarria. 
+.mdl luzapena duten fitxategiak sortzen ditu. 
+http://www.mathworks.es/support/2010b/simulink/7.6/demos/sl_env_intro_web.html 
+1. gaia
+. 4. atala. Kontroladorearen inplementazio-, simulazio- eta diseinu-
+prozesurako software garapen 
+ingurune: MahtWorks: Matlab/Simulink  
+Prozedura 
+
+Instalazioaren modelaketa eta portaeraren azterketa 
+
+Kontroladorearen diseinua 
+
+Instalazioaren eta kontroladorearen simulazioa. 
+
+Kontroladorearen garapena eta hardware-hautapena 
+
+18 
+ 
+1.- Industria automatizazioaren arkitektura 
+ 
+ 
+a) Zuzeneko automatizazioa 
+ 
+ 
+b) Prozesuaren automatizazioa 
+2.- Industria automatizazio-prozesuaren atalak aztertzen diren 
+irakasgaiak. 
+3.- Industria automatizaziorako kontroladoreak garatzeko diseinu-
+prozedura. 
+4.- Kontroladorearen inplementazio-, simulazio- eta diseinu-prozesurako 
+software garapen-ingurune. 
+5.- Kontroladoreak ezartzeko plataformak. 
+6.- Denbora errealeko sistema. 
+7.- xPC Target 
+ 
+ 
+Gai-zerrenda: 1. Gaia. 
+Industria automatizazioaren hastapenak 
+
+19 
+Instalazioa 
+Seinalea. 
+Seinalea. 
+1. gaia. 5. atala. Industria automatizaziorako
+kontroladoreak garatzeko diseinu-prozedura
+ 
+
+Instalazioaren modelaketa eta portaeraren azterketa 
+
+Kontroladorearen diseinua 
+
+Instalazioaren eta kontroladorearen simulazioa. 
+
+Kontroladorearen garapena eta hardware-hautapena 
+Prozedura 
+Pcarekin frogak egin ondoren: 
+-  Zein hardwareak jasan dezake kalkulu 
+konputazionala?  
+-  Zein ingurnuean egongo da hardware hori? 
+-  S/I modulu egokiak dituen PAC-a aukeratu. 
+- Arreta ekonomikoak 
+Hardwarea aukeratu 
+Instalazioa 
+Seinalea. 
+Target  
+Hardware arkitektura (eta 
+software): kontrol-
+aplikazioak ezartzeko 
+Seinalea. 
+Mikrokontroladoreak 
+DSPak 
+FPGA 
+PLCak (S.E +Hard) 
+PCak (S.E +Hard) 
+PACak (S.E +Hard) 
+Nola aukeratu hauetariko bat? 
+
+20 
+ 
+1.- Industria automatizazioaren arkitektura 
+ 
+ 
+a) Zuzeneko automatizazioa 
+ 
+ 
+b) Prozesuaren automatizazioa 
+2.- Industria automatizazio-prozesuaren atalak aztertzen diren 
+irakasgaiak. 
+3.- Industria automatizaziorako kontroladoreak garatzeko diseinu-
+prozedura. 
+4.- Kontroladorearen inplementazio-, simulazio- eta diseinu-prozesurako 
+software garapen-ingurune. 
+5.- Kontroladoreak ezartzeko plataformak. 
+6.- Denbora errealeko sistema. 
+7.- xPC Target 
+ 
+ 
+Gai-zerrenda: 1. Gaia. 
+Industria automatizazioaren hastapenak 
+
+Definizioak. 
+Oxford Dictionary of Computing 
+Edozein sistema izango da
+zeinean irteera sortzen den momentua adierazlea den. Irteera hori mundu 
+errealean  gertatu den “mugimendu” baten ondorioa
+da. Sarrera eta irteeraren arteko atzerapen-denbora 
+aldez aurretik ezarritako denbora-
+tarte batekiko behar bezain txikia izan behar da.    
+Beste bat: 
+Denbora errealeko sistemak instalazioaren sarrerak irakurtzen ditu eta kontrol-
+seinaleak instalaziora 
+bidaltzen ditu aldez aurretik ezarritako denbora-tarte batean. Denbora-
+tarte hori instalazioaren 
+funtzionamendu-ezaugarrien arabera definitzen da. Denbora-
+tartea ezin da aukeratu sistema digitalaren 
+konputazio ahalmenarekin. 
+Beste bat: 
+Programa bat da zeinen funtzionamendu egokia den konputazioaren emaitz logikoen
+eta emaitz horiek 
+sortzen diren momentuaren menpekoa. 
+Nire sistema denbora errealeko sistema izan behar da?  
+21 
+1 gaia. 6. atala. Denbora errealeko sistema
+ 
+
+Momentua/denbora garrantsitzua da? 
+t 
+Erreferentzia 
+Denbora errealaren kontzeptua. 
+22 
+1 gaia. 6. atala. Denbora errealeko sistema
+ 
+
+23 
+1. aplikazioa: 
+Demagun eguzki-panel birakaria. Energi gehien
+biltzeko orientaziorik egokiena lortu nahi da. 
+Kontrol-algoritmoa cRIO sistema batean ezarri da. Aukerarik
+egokiena dela uste duzu? 
+Denbora errealeko sistema behar da? cRIOa beharrezkoa da?  
+2. aplikazioa: 
+Bideoa 
+Aukerarik egokiena dela uste duzu? 
+Denbora errealeko sistema behar da? cRIOa beharrezkoa da?  
+3. aplikazioa: 
+NI web zerbitzarian denbora errealaren beharra duen aplikazioa bila
+ezazu. Azter ezazu 
+aukeratu den hardwarea egokia den. 
+ 
+Gela Praktika. RT sistemen analisia 
+Denbora errealaren kontzeptua. 
+
+Denboraren aldagaiak garrantzia dauka nire sisteman? 
+Definizioa 
+Izaera generikoa duten 
+sistema eragileak 
+Denbora errealeko 
+sistema eragileak 
+Tenperatura-kontrola 
+Seinaleak sortu 
+Robotak 
+Airbag 
+Sistema eragilea aukeratu 
+24 
+1 gaia. 6. atala. Denbora errealeko sistema
+ 
+
+ Eskuratu diren datuak 
+gorde 
+ Offline analisia. 
+ Dauak erakutsi 
+ Begizta itxiko kontrola 
+ Denboralki kritikoak diren 
+erabakiak.  
+ Stand-alone prozesuak 
+ Fidegarritasun absolutua. 
+Windows XP 
+Linux 
+Mac OS 
+Venturcom 
+Linux RT  
+XPcTarget 
+SuseRT, RTAI,Comedi  
+25 
+1 gaia. 6. atala. Denbora errealeko sistema
+ 
+Sistema eragilea aukeratu 
+Izaera generikoa duten 
+sistema eragileak 
+Denbora errealeko 
+sistema eragileak 
+
+TCP/IP 
+Instalazioa 
+Target  
+26 
+1 gaia. 6. atala. Denbora errealeko sistema
+ 
+Host PC 
+Garapenerako programa 
+Konpilatu 
+Deskargatu 
+Software 
+Sistema eragilea 
+Garapenerako programak
+: 
+LAbVIEW , Matlab... 
+Ezarpenerako programak 
+HW-SW eskema experimentala 
+Mikrokontroladoreak 
+DSPak 
+FPGA 
+PLCak (S.E RT  +Hard) 
+PCak (S.E RT +Hard) 
+PACak (S.E RT +Hard) 
+Hardware arkitektura (eta 
+software): denbora errealeko 
+aplikazioak ezartzeko 
+Software 
+Sistema eragilea 
+S/I gailuak 
+Ezarpenerako programak
+: 
+LabVIEW , Matlab... 
+Seinalea. 
+Seinalea. 
+
+ Prozesadorearen denbora programen artean banatzen da. 
+ Bigarren planoan exekutatzen diren programak 
+ Eten-eskaerak garatzen dira: sagua, teklatua, Ethernet…. 
+ Determinismoa ezin da zihurtatu, hau da, sistema ez 
+deterministikoa da. 
+ Lehentasunezko atazaren exekuzioa bermatzen du. 
+ Erloju-denbora bermatzen du. 
+Izaera generikoa duten sistema eragileak 
+Denbora errealeko sistema eragileak 
+Zehaztutako aldiunetan 
+Garatzen ditu eragiketak 
+ 
+RT SEren ezaugarriak 
+27 
+1 gaia. 6. atala. Denbora errealeko sistema
+ 
+
+ Kontrola : erabiltzaileak sistemaren kontrol zabalagoa euki dezake. 
+- Prioritatea esleitu 
+- Erabiliko den memoria adierazi. 
+- Sistemarengan dituen eskubideak 
+   
+ Konfiantza: huts mekanikoen aurrean, sistemak funtzionatzen 
+jarraituko du 
+ Bat-bateko hutsegitearen aurrean (Fail soft operation), sistema 
+saiatzen da datu gehienak eta sistemaren ahalmen gehienak 
+mantentzen. 
+ Egonkorra: sistemak ezin baditu bete ataza guztien denbora-
+murrizketak, orduan, soilik ataza kritikoenak eta prioritate 
+nagusienak dituenarenak burutuko ditu. 
+28 
+1 gaia. 6. atala. Denbora errealeko sistema
+ 
+RT SEren ezaugarriak 
+
+ Denbora errealeko erantzuna da gertaera baten ondoren 
+modu fidagarri eta akatsik gabe erantzuteko gaitasuna, edo 
+aurresandako denbora-tartean eragiketa bat exekutatzeko 
+gaitasuna.  
+ Denbora-murrizketak ez badira betetzen, sistemaren 
+hutsegitea gertatu dela esaten da. 
+ Definitutako denbora-tartean portaera bermatzeko 
+sistema aurresangarria izan behar da 
+  Denbora erreala ez da arintasunaren sinonimoa. 
+Laburbilduz 
+29 
+1 gaia. 6. atala. Denbora errealeko sistema
+ 
+RT SEren ezaugarriak 
+
+Host ordenadorea 
+HW-SW arkitektura RT Sistemetan. 
+1.- Host exekutatzen da. 
+2.- Ataza ez deterministikoak 
+exekutatzen ditu.  
+• Target programarekin 
+komunikazioa 
+• Datuen biltegiratze 
+• Datuak bidali 
+• Datuen analisia 
+ 
+1.
+Prioritate gehien duten prozesuek 
+lehentasuna daukate prioritate baxuagoa 
+duten prozesuen aurrean. 
+2.
+Izaera deterministikoa duten prozesuek 
+denbora kritikoa duten prozesuak dira. 
+Gainontzeko prozesuek prioritate maila 
+baxuagoa izan behar dute. 
+ 
+ 
+30 
+1 gaia. 6. atala. Denbora errealeko sistema
+ 
+Target helburura 
+Garatu 
+Exekutatu 
+Deskargatu 
+
+Data 
+logging 
+User 
+inteface 
+Serial 
+UDP 
+TCP 
+Seinaleen 
+analisia 
+CAN 
+Buffered 
+DAQ 
+Prioritate kritikoa izaera 
+duten atazak 
+Prioritate normala duten 
+atazak 
+Host 
+Ariketa: lehentasun mailak esleitu 
+31 
+1 gaia. 6. atala. Denbora errealeko sistema
+ 
+
+Data 
+logging 
+User 
+inteface 
+Serial 
+UDP 
+TCP 
+Analisi 
+de señal 
+CAN 
+Buffered 
+DAQ 
+CAN 
+Buffered 
+DAQ 
+Data 
+logging 
+Serial 
+UDP 
+TCP 
+Seinaleen 
+analisisa 
+User 
+inteface 
+Host 
+32 
+1 gaia. 6. atala. Denbora errealeko sistema
+ 
+Prioritate kritikoa izaera 
+duten atazak 
+Prioritate normala duten 
+atazak 
+Ariketa: lehentasun mailak esleitu 

@@ -1,0 +1,557 @@
+
+
+
+
+
+
+
+
+
+
+
+OINARRIZKO KONTZEPTUAK
+
+1 ERAGINKORTASUN ALGORITMIKOA.
+1.1 ZENBAIT KONTZEPTU ETA AZALPEN.
+ï Problema bat ebatzi behar dugunean, bi kasu desberdinen aurrean egon
+gaitezke:
+- problema aztertu ondoren, hura ebatziko duen algoritmoa idatzi behar da:
+algoritmo baten edo bestearen eraikuntza gure irizpideek eta helburuek mugatzen
+dute.
+- problema ebazten duten zenbait algoritmo ezagutzen dugu: algoritmo
+desberdinak aztertu eta hoberena aukeratu behar dugu. Baina, zein da hoberena?
+Kasu bietan maiz kontrajar daitezkeen jarraiko helburu hauek topa ditzakegu:
+- algoritmoa ulerterraza, azkar kodegarria eta zuzengarria izataeren nahia:
+metodologiak.
+- algoritmoa eraginkorra izatearen nahia: baliabideen erabilera egokia.
+Bestalde, ondokoa ere kontuan eduki beharko da:
+- Zenbat aldiz erabiliko da algoritmoa?
+- Sarreren tamaina nolakoa izango da gehienetan ?
+Ondorioz, ondorengo galdera hauek bururatzen zaizkigu:
+- Eraginkortasunaren hobekuntzan saiatzea merezi al du?
+- Noiz inbertitu behar da programazio-kostuan?
+- Programazio-kostuaren eta exekuzio-kostuaren arteko oreka interesatzen zaigu?
+Eraginkortasunean inbertitu nahi denean programazio-kostuan inbertituko dugu,
+hau da, baliabideen eskasian gaudenean edota haien erabilera egokiak
+ezinbesteko garrantzia duenean.
+ï Algoritmo bat edo beste aukeratzean ez dugu ahaztu behar:
+- algoritmoa inplementatzen duen programa zenbat aldiz erabiliko den,
+- zer tamainako sarrerekin erabiliko den,
+- algoritmoa eraginkorra izanik, ulergaitza den,
+- algoritmoa azkarra izanik, memoria-espazio handia behar duen (eta
+alderantziz).
+ï Merkatura ateratzen diren konputagailuak geroztik gerora azkarragoak badira,
+zergatik aztertzen dira algoritmoak eta ez da datorren konputagailu
+belaunaldira itxaron beharrean?
+Adibidez: Demagun algoritmo baten inplementazio batek 10-8 2n s. hartzen
+dituela:
+
+Sarrerako parametroen
+tamainaSarrera tamaina horrek beharko
+exekuzio-denboran=10
+n=20
+n=30
+n=3810-8 210= 0.1 s.
+10 min
+>1 egun
+Å1 urteEta algoritmoa sarrera handiagoak ebazteko beharko bagenu? Ondorengo
+belaunaldira itxaronez gero, demagun 100 aldiz azkarragoa den konputagailu bat
+lortuko genuela; kasu horretan, gure algoritmoaren inplementazioak 10-6 2n s.
+hartuko lituzke. Eta horrek ez luke aurrerakuntza handirik suposatuko: urtebete
+osoz egikaritzen utziz n=45 tamainako instantziak besterik ez baitziren
+ebatziko. Soluzio bakarra: Algoritmo azkarragoren bat bilatzea (edo asmatzea).
+ï Eraginkortasuna behar duten zenbait algoritmok:
+¥ Bilaketa,
+¥ Sailkapena, Ordenazioa (fitxategiak, taulak, egiturak)
+¥ Denbora-errealeko sistemak (uholde, trafiko, zentral elektrikoak, lurrikaren
+kudeaketan,...)
+¥ DBen atzipena (galderen optimizazioan, galdera-lengoaiak,...)
+¥ Sistema Eragileak (Baliabideen kudeaketa,...)
+¥ Lehentasun dinamikoko sistemak (ilaren kudeaketa, prozesuen kudeaketa,...)
+¥ Lengoaia interpretatuak
+¥ ...
+
+1.2 ALGORITMOEN ERAGINKORTASUNA MUGATZEKO ZENBAIT ESTRATEGIA.
+Algoritmoen konplexutasuna aztertzeko hiru estrategia desberdin jarrai
+ditzakegu:
+Enpirikoa (a posteriori): Makina konkretu batean inplementatu ondoren, probak
+eginez lortzen diren emaitzak aztertuko ditu.
+Teorikoa (a priori): Sarreraren tamaina kontutan hartuz beharko diren
+baliabideak matematikoki kalkulatzen ditu aldez aurretik.
+Hibridoa
+ï Estrategia teorikoak abantaila handiak dakartza:
+1- ez dago konputagailu, programazio-lengoaia ez eta programatzailearen
+trebetasunaren menpe.
+2- algoritmo ez-eraginkorren programazio- eta exekuzio-denbora aurrezten du.
+3- eraginkortasuna edozein tamainatako instantzientzat azter dezake .
+
+1.3 ALGORITMOEK DARABILTZATEN BALIABIDEAK.
+Algoritmo baten eraginkortasuna aztertzeko, algoritmoak behar duen zenbait
+baliabide aztertu behar da:
+- espazioa: memoria gehitzeak exekuzio-denbora jaistea suposatzen du.
+- sarreraren tamaina: Hau handitzeak exekuzio-denbora gehitzea dakar.
+- exekuzio-denbora: faktore desberdinen menpe dago:
+¥ algoritmoaren sarrera,
+¥ algoritmoaren konplexutasuna denborarekiko,
+¥ programak erabiltzen duen espazioa,
+¥ konpilatzaileak sortutako kodearen kalitatea,
+¥ erabilitako makinaren aginduen izaera eta abiadura.
+Eraginkortasuna aztertzeko garaian, eta kalkuluak gehiago ez zailtzearren,
+lehenengo bi faktoreak bakarrik izango ditugu kontutan (hala ere, zenbait kasu
+konkretutan hirugarrena ere hartuko da).
+ï Sarreraren tamaina:
+Parametro errealen tamaina. Problema desberdinetan parametroen tamainatzat
+gauza desberdinak hartzen dira:
+- zerrendekin, fitxategiekin: instantziaren osagai kopurua,
+- zenbaki handiekin: instantziak adierazteko behar diren biten kopurua,
+- ...
+Exekuzio-denbora sarreraren tamainaren funtzio bezala neurtuko da.
+
+1.4 INBARIANTZAREN PRINTZIPIOA. ERAGINKORTASUNAREN UNITATEA.
+Inbariantzaren printzipioa:
+"Algoritmo baten bi inplementazio desberdinen eraginkortasunen arteko
+diferentzia konstante biderkatzaile batean datza."
+T1(n) ² k á T2(n) n handia denean
+Printzipio honek ondorio garrantzitsu batzuk dakartza:
+- edozein konputagailu eta programatzaileren trebetasunetarako balio du.
+- eraginkortasunaren hobekuntza algoritmoaren aldaketa batekin bakarrik lortuko
+da.
+- algoritmoen eraginkortasun teorikoak EZ du UNITATERIK, konstante
+biderkatzaile
+baten funtziopean ematen baita.
+
+1.5 ALGORITMO BATEN ORDENA (HURBILKETA INFORMALA).
+T(n)-ren bidez, sarrera n tamainakoa duen algoritmo baten exekuzio-denbora
+adieraziko da. Algoritmoak hartzen duen denbora f(n)-ren ordenakoa dela esango
+da baldin eta soilik baldin existitzen bada k konstantea, non instantzia
+bakoitzeko problema k * f(n) segundotan (msegundotan, minututan,...) gehienez
+ebazten baita. k konstanteari konstante biderkatzaile deritzo.
+Segundotan dela esatea erabat arbitrarioa da konstantearen balioa aldatzea
+besterik ez baita beharko unitatea beste bat izateko. Bestalde, gaur egun
+makina estandarrik ez dagoenez, ezingo da bat eredutzat hartu (ik. RAM). Honen
+guztiaren ondorioz, eraginkortasunak unitaterik ez duela esan dezakegu.
+ï Maiz agertzen diren ordenak:
+n -ren ordenakoa ® algoritmoa lineala da
+n 2 koadratikoa
+n 3 kubikoa
+nk polinomikoa
+an esponentziala
+non aurreko k eta a konstante egokiak diren.
+
+
+[1.1] irudia
+[1.1] irudiko T1 eta T2 funtzioak koadratikoak dira, T3 eta T4 linealak eta T5,
+berriz, logaritmikoa.
+
+ï Konstante biderkatzaileak:
+Demagun problema bera ebazten duten bi algoritmok n2 egun eta n3 s. behar
+dituztela n tamaina duten sarrerak ebazteko. n tamaina duten instantzientarako
+teoriak lehenengo algoritmoa bigarrena baino azkarragoa, hobea, eraginkorragoa
+dela adierazten du:
+Algoritmo koadratikoa kubikoa baino ASINTOTIKOKI ERAGINKORRAGOA da.
+Teoriak hori badio ere, koadratikoa:
+20 miloi urte baino denbora gehiago beharko luketen sarrerentzat
+izango litzateke eraginkorragoa soilik!
+Zenbait kasutan konstante biderkatzailea kontutan ez hartzeak bere arriskua du.
+Halere, ez dira kontutan izango irakasgai honetan, konstanteak mugatzeko
+inplementazio bakoitzaren xehetasun espezifikoetan sartu beharko
+genukeelako.Hortaz, sarrerako instantzien tamainak behar bezain handiak izango
+direla suposatuko dugu.
+HELBURUA: algoritmo jakin baten ordena kalkulatzea beste algoritmo batzuen
+ordenekin konparatu ahal izateko non beste algoritmo hauek ere problema bera
+ebazten duten. Honela eraginkorrena zein den muga dezakegu (azkarrena, memoria
+kudeaketan hoberena mugatu).
+
+1.6 RAM KONPUTAGAILU EREDUA ETA OINARRIZKO ERAGIKETA.
+ï RAM (Randon Access Machine) eredua:
+Gure algoritmoen denbora-ordena, eta oro har ordena, kalkulatzeko haien
+inplementazioak zein makina motatan egikarituko liratekeen kontutan hartu
+beharko litzateke. Konputagailu estandarrik ez dagoenez, haiek helburu
+orokorreko prozesadore bakarra duen makina batean egikarituko liratekeela
+suposatuko dugu irakasgai honetan. Konputagailua RAM eredua izango da. Eredu
+honetan aginduak bata bestearen jarraian egikarituko dira, eta ez da eragiketa
+konkurrenterik kontsideratuko.
+
+ï Oinarrizko eragiketa:
+Oinarrizko eragiketa bere exekuzio-denbora konstante batez mugaturik dagoen
+eragiketa da, non konstante hori inplementazio konkretu baten menpe dagoen.
+Oinarrizko eragiketak izango dira:
+- osokoen gaineko eragiketak: batuketa, kenketa, zatiketa, biderkaketa,
+- koma higikorrezko zenbakien gainekoak,
+- konparaketak, asignazioak.
+Kontuz! Oso handiak diren osokoen maneiua, adibidez, ezin da oinarrizko
+eragiketa kontsideratu. Ondorioz, eragiketa bat oinarrizkoa den ala ez
+mugatzeko sen ona erabili beharko dugu: eragigaien tamaina arrazoizkoa den
+bitartean eragiketa oinarrizkoa kontsidera daiteke.
+
+2 NEURRI ASINTOTIKOAK, HAZKUNTZA-TASAK ETA PROPIETATE BATZUK.
+2.1 T(n)-A. Tb(n) ETA Tt(n).
+ï T(n). Zer da?
+T(n) n tamaina duen sarrera batentzat algoritmoak hartzen duen exekuzio-
+"denboraren" neurketa da.
+HOTS:
+¥ Unitateak zehaztu gabe daude.
+¥ Neurketa funtzio bat da. Zehazki mintzatuz, konputagailu ideal batek, RAM-ek,
+exekuzio garaian egindako lana neurtuko du.
+T(n)-ren kalkulua ondorengo bi puntu hauetan oinarritzen da:
+a) oinarrizko eragiketa bakoitza exekutatzen den aldi kopuruan (maiztasuna).
+b) oinarrizko eragiketa bakoitzak hartzen duen denboran (konstantea
+definizioz).
+Aurreko a eta b bi informazioen biderkaketak behar den exekuzio-denbora osoa
+ematen du.
+Halere, T(n) neurketa funtzioa dela eta, zenbait kasutan exekuzio-denbora
+neurtu ordez beste baliabideen kontsumoa kontrolatzea interesatzen zaigu.
+¥ n tamaina duen sarrera batentzat egin ohi diren beste neurketa tipiko batzuk
+honako hauek dira:
+ - exekutatu beharko dituen oinarrizko eragiketen zenbaketa:
+ - sarrerako osagaien artean egiten diren alderaketen kopuruaren zenbaketa,
+ - egiten diren dei errekurtsiboen zenbaketa,
+ - ...
+Analisi kasu bakoitzean interesaturik gauden horren neurketa egingo dugu. Gauza
+desberdinak neurtzeko erabiliko denez, kasu bakoitzean zer neurtzen ari garen
+esan behar da.
+
+Adibidez, demagun ondorengo programen zatiak ditugula:
+
+X:= X+Y; for I in 1.. N loop for I in 1 .. N loop
+Y:= 3*Y+8; X:= X+Y; for J in 1 .. N loop
+end loop; X:= X+Y;
+ end loop;
+end loop;
+1) T(n) = zein da denbora-ordena? = ( Zenbat aldiz egikaritzen da oinarrizko E
+eragiketa bakoitza ) * ( Zenbat denbora hartzen duen E oinarrizko eragiketak)
+T(n)= k1 + k2 = k3 T(n)= k1 * n T(n)= k1 * n2
+1en ordenakoa ordena lineala ordena koadratikoa
+(ordena konstantea)
+2) T(n)= zenbat batuketa egikaritzen da?
+T(n)= 2 T(n)= 1 * n T(n)= 1 * n2
+1en ordenakoa ordena lineala ordena koadratikoa
+Ordenen interpretazioa zuzen egin behar da.Beti zer neurtzen ari garen argi
+eduki behar dugu.
+
+ï Batezbesteko kasua eta kasu txarrenaren analisia: Tb(n) eta Tt(n).
+Normalki, algoritmo batek tamaina desberdineko sarrerentzat hartzen dituen
+exekuzio-denborak desberdinak izatea gertatzen bada, tamaina bereko bi
+instantzia desberdinentzat ere gauza bera gerta ohi da. Kasu hauetan,
+algoritmoa sarreraren egoerarekiko sentikorra dela esaten da.
+Algoritmo berdin baten eraginkortasuna hainbat kasu desberdinetan azter
+dezakegu: (T(n) neurketa funtzioak exekuzio-denbora neurtzen duela suposatzen
+dugunean)
+Kasu txarrenak denbora gehiena hartzen duen tamaina bateko instantziak bakarrik
+aztertuko ditu. Noiz erabiliko dugu analisi hau? Erantzun-denborak garrantzi
+handia duenean erabiltzea interesgarria litzateke. Idazkera: Tt(n) eta
+zalantzarik ez badago T(n).
+Batezbesteko kasua: Algoritmoak oso instantzia desberdinekin erabiltzen bada
+beste analisi hau interesgarria gerta litzaiguke.
+Tb(n): n tamaina duten sarrera guztien batezbesteko exekuzio-denbora adieraziko
+du.
+Normalki batezbesteko kasua kalkulatzea zaila gertatzen da sarreren banaketa
+zein den aldez aurretik jakin behar baita eta sarrera guztien probabilitateek
+ez baitute zertan berdinak izan behar.
+
+2.2 O(n), W(n) ETA Q(n) HURBILPEN ASINTOTIKOAK.
+f: N ® R* emanik:
+O larria
+O(f(n)) = { t: N ® R* | $k $n0 ( (k Î R+) Ù (n0ÎN) Ù "n (n ³ n0 Þ T(n) ² k f
+(n)) ) }
+O(f(n)) - "f(n) ordena" - n balio handietarako f(n) funtzioen multiplo erreal
+batek goitik mugatutako T(n) funtzio-multzoa da; hau da, atalase-balio batetik
+aurrera.
+Oro har, gure helburua f(n) funtzio guztietatik goi-bornerik txikiena lortzea
+izango da, non T(n) Î O(f(n)).
+
+Omega larria: W
+W(f(n)) = { t: N ® R* | $k $n0 ( (k Î R+) Ù (n0ÎN) Ù "n (n ³ n0 Þ T(n) ³ k f
+(n)) ) }
+W (f(n)) - "f(n) Omega" - n balio handietarako f(n) funtzioen multiplo erreal
+batek behetik mugatutako T(n) funtzio-multzoa da; hau da, atalase-balio batetik
+aurrera.
+Oro har, gure helburua f(n) funtzio guztietatik behe-bornerik handiena lortzea
+izango da, non T(n) Î W (f(n)).
+
+Teta larria: Q
+Q(f(n))= {t: N ® R* | $k $d $n0 ( (k Î R+) Ù (d Î R+) Ù (n0ÎN) Ù
+"n (n ³ n0 Þ k f(n) ² T(n) ² d f(n) ) }
+Ordena zehatza ere honela defini daiteke:
+f(n) Î Q(g(n)) Û f(n) Î W(g(n)) y f(n) Î O (g(n)),
+Q(f(n)) = O (f(n)) Ç W(f(n))
+
+2.3 HAZKUNTZA-TASAK. L'HOPITALEN ERREGELA.
+Maizen agertzen diren bornatze funtzioak konplexutasun ordena gorakorrean:
+O(1) Ì O(lg n) Ì O(n) Ì O (n lgn) Ì O (n2 ) Ì O (n3) Ì ... Ì
+O (nk) Ì O (an) Ì O (n! ) Ì O (nn)
+y O( k f(n)) = O (f(n))
+HOTS:
+n guztientzat, a eta b konstanteentzat eta a>1 betetzen denean funtzio
+esponentzialen hazkuntza-tasa polinomialarena baino handiagoa da; hau da, (edo
+beste modu batean nbÎ o(an) ).
+
+ï Algoritmo desberdinen artean algoritmo eraginkorrenaren muga:
+Zenbaitetan, algoritmo desberdinen exekuzio-denboren funtzioak konparatzea
+komenigarria izaten da, alderatzen diren guztietatik eraginkorrena zein den
+mugatzearren. Alderaketa egin ahal izateko bai L'Hopital-en Erregela bai
+limiteak erabili ditzakegu:
+f,g: N ® R* suposatuz:
+
+
+3) L'Hopitalen Erregela:
+ Baldin
+ a) , edo
+ betetzen bada,
+ b) n Î [ n0, °) ® x Î [ n0, °)
+f(n), g(n) f*(x), g*(x)
+zenbaki arruntetatik zenbaki errealetara heda badaiteke,
+ c) f*'(x) eta g*'(x) tarte berri honetan existitzen badira
+(f*(x) eta g*(x) deribagarriak [n0, °) tartean), eta
+orduan
+
+3 ALGORITMO ITERATIBOEN ANALISIA.
+Agindu baten edo agindu multzo baten exekuzio-denborak sarreraren tamainaren
+eta aldagai batzuren menpe badago ere, sarreraren tamaina bakarrik izango dugu
+kontuan.
+ï Algoritmo baten eraginkortasunaren analisia aztertzeko faseak.
+1) Algoritmoak behar dituen datu-multzoak finkatu,
+2) Erabiltzen diren oinarrizko eragiketak finkatu,
+(oinarrizko eragiketa bakoitzaren exekuzio-denbora konstantea da)
+3) Oinarrizko eragiketa bakoitza exekutatzen den aldi kopurua finkatu,
+4) Beste eragiketak eta beraien kostua finkatu, eta
+5) Aurreko emaitzak erabiliz algoritmo osoaren kostua mugatu.
+Eragiketen kostua nola mugatzen da?.
+
+ï Erregela orokorrak
+1 Parametroek sarreraren tamaina ematen dute,
+2 Asignazioa, alderaketa eta sarrera/irteera eragiketen denbora 1en ordenakoak
+dira; oro har, oinarrizko eragiketak.
+Salbuespenak: array-en tamaina sarrerako tamainaren funtziopean daudenean,...
+3 Agindu-sekuentzia baten denbora baturaren erregelaren bidez lortuko da,
+4 IF-THEN aginduaren exekuzio-denbora:
+THENen ataleko aginduen denbora + baldintzaren denbora (1en ordenakoa,
+normalki)
+IF-THEN-ELSE aginduen exekuzio-denbora:
+Baldintzaren denbora + max { THENen ataleko aginduen denbora,
+ELSEren ataleko aginduen denbora }
+5 Iterazio baten exekuzio-denbora:
+(Tgorputza + Tkonparaketa) * iterazio-kopurua
+6 Azpiprograma-deiak(ez-errekurtsiboak): azpiprogramaren exekuzio-denbora +
+parametro pasatzeak hartzen duen denbora.
+Algoritmo errekurtsiboen exekuzio-denbora eta ordenaren kalkulua ez da horrela
+kalkulatzen.
+
+ï Bi erregela berezi
+ Baturaren erregela
+¥ T1(n) eta T2(n) P1 eta P2 bi programa-atalen exekuzio-denborak direlarik
+hurrenez hurren, eta
+¥ T1(n) Î O(f(n)), T2(n) Î O(g(n)) emanik,
+P2 programa P1ren jarraean jartzean lortzen den programaren exekuzio-denbora,
+T1(n)+T2(n), max{ f(n), g(n) }en ordenakoa izango da.Hau da,
+T1(n) Î O(f(n)) Ù T2(n) Î O(g(n)) Þ T1(n) + T2(n) Î O(max(f(n),g(n)))
+O(f(n)+g(n)) = O(max(f(n),g(n)))
+Q(f(n)+g(n)) = Q(max(f(n),g(n)))
+W(f(n)+g(n)) = W(max(f(n),g(n)))
+
+ Biderkaketaren erregela
+¥ T1(n) eta T2(n) P1 eta P2 bi programa-atalen exekuzio-denborak direlarik
+hurrenez hurren, eta
+¥ T1(n) Î O(f(n)), T2(n) Î O(g(n)) emanik,
+P2 programa P1tik T1(n) aldiz dei egiten bazaio programa osoak hartzen duen
+denbora T1(n)*T2(n) da eta exekuzio-ordena aldiz O((f(n)¥g(n))).Hau da,
+T1(n) Î O(f(n)) Ù T2(n) Î O(g(n)) Þ T1(n) * T2(n) Î O((f(n)¥g(n)))
+O(f(n)*g(n)) = O((f(n)¥g(n)))
+
+4 ALGORITMO ERREKURTSIBOEN ANALISIA.
+Ondorengo pausuak eman behar dira:
+1) Algoritmoaren konplexutasuna errekurtsio-ekuazio baten bidez adierazi.
+2) Errekurtsio-ekuazioa metodoren bat aplikatuz ebatzi.
+ Bi metodo ikusiko dira: errekurtsibitatearen hedapen metodoa eta ekuazio
+ karakteristikoaren metodoa. Funtzio-sortzaileen metodoa ez dugu hemen
+aztertuko.
+Exekuzio-denbora errekurtsiboa den ekuazio baten bidez adierazten da:
+errekurtsio-ekuazioa. Metodo hauen helburua errekurtsio-ekuazioaren beste
+ekuazio baliokide bat, errekurtsiboa ez dena, bilatzean oinarritzen da.
+Ondoren, ekuazio berri honi aurretik ikusi diren erregelak aplikatuko zaizkio
+algoritmo errekurtsiboaren ordena lortuz.
+Oharra: Algoritmoaren dei errekurtsiboek egindako lana lortu nahi da: zenbat
+dei egiten den, edo zenbat aldiz egikaritzen den eragiketa jakin bat, edo ...
+
+4.1 ERREKURTSIBITATEAREN HEDAPEN METODOA.
+Kasu orokorreko ekuazioan agertzen diren tn-ak hedatzen dira kasu nabarira
+iritsi arte. Kasu nabaria garatu ondoren, ekuazio berritik algoritmo
+errekurtsiboaren ordena lortuko da.
+Adibidea: T(n) = 2 T(n-1)+ 2 a n>1 ( kasu nabaria T(0) = b)
+T(n) = 2 T(n-1)+ 2 a =
+= 2 (2 T(n-2)+ 2 a) + 2 a= 22 T(n-2)+ 22a + 2 a = ... indukzio bidez
+= 2i T(n-i)+ 2ia + ...+22a + 2 a = n - i = 0
+= 2n T(0)+ a = (b + 2 a) 2n - 2 a Î O(2n)
+
+ï Aldagai aldaketaren metodoa:
+Aurrekoaren kasu berezia da. Zenbaitetan errekurtsio-ekuazioaren hedapenak
+aldagai aldaketa bat egitea eskatzen du kasu nabarira iritsi ahal izateko.
+Adibidea: T(n) = 4 T(n/2) + n n>1 emanik, metodoa aplikatuz:
+T(n) = 4 T(n/2) + n = 4 ( 4 T(n/22) + n/2) + n = 42 T(n/22) + 3 n n>2
+ = 42 (4 T(n/23) + n/22 ) + 3 n = 43 T(n/23) + 7 n n>3
+ = 43 (4 T(n/24) + n/23 ) + 7 n = 44 T(n/24) + 15 n n>4
+= ... indukzio bidez
+ = 4i T(n/2i) + (2i-1) n n>i
+Aldagaiaren aldaketa bat eginaz: n=2k eta i=k, gero k=log2 n, kasu nabariraino
+iristea lortzen da:
+T(n) = 4k T(n/2k) + (2k-1) n = 22k T(n/2k) + (2k-1) n = n2 T(1) +
+(n-1) n = d n2 + n2 - n = (d+1) n2 - n Þ T(n) Î O(n2)
+
+4.2 EKUAZIO KARAKTERISTIKOAREN METODOA.
+Ondorengo kasuak aztertuko ditugu:
+a) Errekurtsio homogeneoak, honen barne beste bi kasu dauzkagu:
+- erro guztiak desberdinak - zenbait erro berdinak
+b) Errekurtsio ez homogeneoak, berriz ere aurreko bi kasuak:
+- erro guztiak desberdinak - zenbait erro berdinak
+
+a) Errekurtsio homogeneoak.
+Errekurtsio-ekuazioak jarraiko itxura dauka:
+a0 tn + a1 tn-1 + ... + ak tn-k = 0
+Non ti: bilatu nahi diren balioak diren, eta a0,a1,...,ak: konstanteak.
+(Beste izen batez ere ezaguna da aurreko ekuazioa: diferentzietan lineala den
+ekuazioa.)
+tn = Xn ordezkapena eginaz, (non X konstante bat den):
+a0 Xn + a1 Xn-1 + ... + ak Xn-k = 0
+Ondoren, n=k eginaz:
+a0 Xk + a1 Xk-1 + ... + ak = 0 EKUAZIO KARAKTERISTIKOA
+Ekuazio hau ebazteko, bere erroak besterik ez dira bilatu behar: r1, r2,..., rk
+- Erro desberdinak:
+Exekuzio-denboraren ekuazio berria:
+
+- Zenbait erro berdina da:
+Exekuzio-denboraren ekuazio berria:
+non
+r1,r2,...,rd: erro desberdinak diren, eta
+mi: ri erroaren anizkoiztasuna izango den (errepikatzen den aldi kopurua)
+
+b) Errekurtsio ez homogeneoak.
+Errekurtsio-ekuazioak ondorengo itxura dauka:
+a0 tn + a1 tn-1 + ... + ak tn-k = (b1)n p1(n) +(b2)n p2(n) + ...
+non bi: konstanteak diren, eta
+pi(n): gi mailako polinomioak berriz.
+Kasu honetan ebatzi behar dugun ekuazio karakteristikoa ondorengo hau da
+(a0 Xk + a1 Xk-1 + ... + ak) (X - b1)g1+1 (X - b2)g2+1 ... = 0
+EKUAZIO KARAKTERISTIKOA
+Ekuazio honen erro guztiak bilatu ondoren, errekurtsio homogeneotan bezala
+jokatu behar da (erro guztiak desberdinak badira formula mota bat erabiliko da,
+eta erroren bat behin baino gehiagotan agertzen bada beste formula bat
+erabiliko da).
+
+ï Konstanteen muga
+Demagun algoritmo errekurtsibo batetik honako ekuazio hau lortu dugula
+
+Ekuazio karakteristikoaren metodoa aplikatu ondoren t(n)= k1 +k2 n lortuko
+dugu. Ondoren, konstanteak mugatu beharko ditugu. Horretarako jarraitu beharko
+dugun prozesua ondokoa izango da:
+- Definizio errekurtsiboa zenbat gai errekurtsiboen funtziopean definitzen den
+ikusi: ak gai balitu, ak kasu nabari beharko genituzke. Gure adibideak bakarra
+duenez, kasu nabari batekin nahiko litzateke, nahiz bi eduki (n=0 eta n=1).
+- Ekuazio karakteristikoan daagoen konstante kopurua ikusi: bk balitu, bk
+ekuazioz osatutako sistema lineala ebatzi beharko litzateke; hots, ekuazio bat,
+konstante-inkognita bakoitzeko. Gure adibidean, t(n)= k1 + k2 n, bi ditugunez 2
+ekuazio beharko ditugu.
+- Ekuazioak idazteko:
+¥ Errekurtsio-ekuazioa n-ren zein kasutarako definitzen ikusiz (demagun n³c
+dela), errazena n-ren balio horretatik hastea da. Gure kasuan, definizio
+errekurtsiboa n³2rentzat definituta dagoenez eta 2 ekuazio behar ditugunez (k1
+eta k2 bi inkognitak ditugu eta), n=2 eta n=3 balioak erabiliko ditugu.
+¥ Errekurtsio-ekuazioan n-ren ordez aurreko puntuan erabakitako balioak
+ordezkatuz kalkulatu behar den konstante-ikognita haina balio lortuko
+dugu.Balio hauei oinarrizko kasuak deritzaie. Gure kasuan:
+t(2)= 1+ t(1)= 1+0=1
+t(3)= 1+ t(2)= 1+1=2
+Oinarrizko kasuak kalkulatzeko t(n)ren kasu nabariak erabili behar dira maiz.
+Gure adibideko kasu nabariak n=0 eta n=1 dira, baina n=1 behar dugu.
+Bestalde, posiblea eta zuzena litzateke hain n-ren balio hain txikiak hautatu
+beharrean beste batzuk hartzea, adibidez gure adibidean n=5 eta n=8. Baina, t
+(4) eta t(7) balioak ezagunak izatea eskatuko digute t(5) eta t(8)ren
+ekuazioek, hurrenez hurren; honek lan gehiago suposatuko duelarik.
+¥ Ondoren, oinarrizko kasuetako balioak eta ekuazio karakteristikoko metodoan
+lortutako ekuazioan n-ren balio egokiak ordezkatu ondoren lortzen diren
+ekuzaioak berdindu behar dira. Adibidearekin jarraituz
+n=2 (1) 1= k1 + 2 k2
+n=3 (2) 2= k1 + 3 k2
+¥ Bukatzeko, ekuazio-sistema ebatzi behar da metodo ezagunen bat erabiliz. Hala
+nola, matrize bidezko ebazpena, aldagai ordezkapena, aldagai berdinketa edo
+sinplifikazioa metodoa erabil dezakegu. Lortzen diren balioak soluzioan
+ordezkatu behar dira ondoren
+k1 = -1 k2= 1
+Kontu handiz egin behar da prozesu hau. Oinarrizko kasuak ezin dute edozein
+izan. Hemen irakurleari txikienak kalkulatzea gomendatzen zaio, kalkulatzeko
+errazenak dira eta. Hala eta guztiz ere, oinarrizko kasuetan erabiltzen diren
+kasu nabariak ere oinarrizko kasu onargarriak dira. Honela, adibidean, n=1 eta
+ondorioz t(1) erabil genezakeen. Horrela egin izan bagenu emaitza bera lortuko
+genuke:
+n=1 (1) t(1)=0= k1 + k2 k1 = -1 t(n)= n-1
+n=2 (2) t(2)=1= k1 + 2 k2 k2 = 1
+Berriz ere, kontuz! n=0 kasu nabaria oinarrizko kasutzat hartu izan bagenu,
+emaitza okerrak lortuko genituzke eta:
+n=0 (1) t(0)=0= k1 k1= 0 t(n)= k1 + k2 n=0!!!
+n=1 (2) t(1)=0= k1 + k2 k2= 0
+
+5 OINARRIZKOA DEN ZENBAIT KONTZEPTU MATEMATIKOREN ZERRENDA.
+Esponentzialak (a¹0)
+a0 = 1
+a1 = a
+a-1 = 1/a
+(am)n = a mn
+(am)n = (a n)m
+a m an = a m+n
+Logaritmoak ("a,b>0)
+1 - logb funtzioa zuzenki gorakorra da
+(baldin X1>X2 orduan logb X1 > logb X2)
+2 - logb 1 =0
+3 - logb ba = a
+4 - logbk n = ( logb n)k
+5 - logb (X1*X2) = logb X1 + logb X2
+6 - logb (X1/X2) = logb X1 - logb X2
+7 - logb (Xa) = a logb X
+8 - X1logb X2 = X2logb X1
+9 - logb1X = ( logb2X) / logb2 b1
+10 - logb (1/n) =- logb n
+11 - Guretzat eta idazkera sinplifikatzearren: log2 X1 = lg2 X
+10.- lg e = 1.44, ln 2 = 0.7 eta lg10 = 3.32
+
+Stirling-en hurbilketa
+
+
+Probabilitatea
+Demagun egoera batean ekintza edo esperimentu batek s1,s2,...,sk irteeren
+arteko edozein eman dezakeela. si irteera bakoitzari zenbaki erreal bat
+erlazionatzen diogu p(si), non honi si--ren probabilitatea deritzogun eta
+ondorengo hau betetzen duen:
+1.- "i(1²i²k Þ 0²p(si)²1)
+2.- p(s1)+...+p(sk)=1
+Batuketa-formulak
+1.- Jarraiko zenbaki osokoen batuketa
+2.- Karratuen batura
+3.- 2-ren potentziak
+4.- Batuketa geometrikoak (progresio geometrikoak)
+5.- Nahasketak
+
+Batuketak integralak erabiliz
+1.- Demagun f funtzioa jarraia eta beherakorra eta a eta b zenbaki osokoak.
+Orduan
+2.- Demagun f funtzioa jarraia eta gorakorra eta a eta b zenbaki osokoak.
+Orduan
+6 APLIKAZIO PRAKTIKOA: ELEMENTU BATEN BILAKETA TAULA BATEAN.
+1) Suposa dezagun N luzera duen taula bat dugula (taula ez dago sailkaturik).X
+balioa emanik, algoritmo batek X balio hori dagoen taulako posizioaren indizea
+itzultzen du, eta X taulan ez badago, berriz, 0 itzultzen du.
+Algoritmo honek zenbat alderaketa egingo du X balioarekin ?
+a - kasu txarrenean, eta
+b - batezbesteko kasuan.
+2) Suposa dezagun N luzera duen eta sailkaturik dagoen taula bat dugula. X
+balioa emanik, algoritmo batek X balio hori dagoen taulako posizioaren indizea
+itzultzen du, eta X taulan ez badago berriz 0 itzultzen du.
+Algoritmo honek zenbat alderaketa egingo du X balioarekin?
+a - kasu txarrenean, eta
+b - batezbesteko kasuan.
+3) Aurreko bi ariketetan taulako osagaien arteko alderaketen kopurua zenbatzen
+da, agindu balkoitza behar duen denbora batu ordez. Hori egitea algoritmoak
+egindako lanaren erakusle ona al da? Zer esanahi du honek?
+4) Bilaketa Dikotomikoa metodoak aurreko arazo bera ebazten du. Alderaketen
+kopurua kaxkarragoa dela badakigu, baina zein da zehazki kopuru hori?
+a - kasu txarrenean, eta
+b - batezbesteko kasuan.
+

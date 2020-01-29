@@ -1,0 +1,2026 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>LaTeX4Web 1.4 OUTPUT</title>
+<style type="text/css">
+<!--
+ body {color: black;  background:"#FFCC99";  }
+ div.p { margin-top: 7pt;}
+ td div.comp { margin-top: -0.6ex; margin-bottom: -1ex;}
+ td div.comb { margin-top: -0.6ex; margin-bottom: -.6ex;}
+ td div.norm {line-height:normal;}
+ td div.hrcomp { line-height: 0.9; margin-top: -0.8ex; margin-bottom: -1ex;}
+ td.sqrt {border-top:2 solid black;
+          border-left:2 solid black;
+          border-bottom:none;
+          border-right:none;}
+ table.sqrt {border-top:2 solid black;
+             border-left:2 solid black;
+             border-bottom:none;
+             border-right:none;}
+-->
+</style>
+</head>
+<body>
+\chapterTaldeak: lehenengo propietateak eta adibideak
+<a name="refgai:taldeak">
+
+
+
+
+
+
+
+</a><p><a name="refgai:taldeak"></a><a name="toc.1"></a></p><h1><a name="toc.1">1&nbsp;Taldeen oinarrizko propietateak</a></h1><a name="toc.1">
+
+
+
+Has gaitezen taldearen definizioa gogoratzen.
+
+
+
+\begindfn
+Izan bitez G multzoa eta * G-ren gainean definitutako eragiketa.
+Orduan, (G,*) bikotea <i>taldea\/</i> dela esaten dugu hiru baldintza
+hauek betetzen badira:
+<ol>
+
+<li>
+* eragiketa elkarkorra da G-n, hau da, (g*h)*k=g*(h*k) betetzen
+da g,h,k <font face="symbol">Î</font>  G guztietarako.
+
+</li><li>
+*-k elementu neutroa du G-n: existitzen da e <font face="symbol">Î</font>  G non
+g*e=g=e*g den g <font face="symbol">Î</font>  G guztietarako.
+
+</li><li>
+G-ko elementu guztiek *-rekiko alderantzizkoa dute G-n:
+edozein g <font face="symbol">Î</font>  G harturik, existitzen da g<font face="symbol">¢</font> <font face="symbol">Î</font>  G non
+g*g<font face="symbol">¢</font>=e=g<font face="symbol">¢</font>*g den.
+</li></ol>
+Propietate hauetaz gain *-k propietate trukakorra betetzen badu, hau
+da, g*h=h*g betetzen bada g,h <font face="symbol">Î</font>  G guztietarako, orduan (G,*)
+<i>talde trukakorra\/</i> edo <i>abeldarra\/</i> dela esaten dugu.
+\enddfn
+
+
+
+Normalean, abusu txiki bat eginez, talde bati buruz hitz egiterakoan G
+mul\-tzoa baino ez dugu aipatuko, eragiketa esplizituki esan gabe.
+Segidan, taldeen oinarrizko propietate batzuk biltzen ditugu.
+
+
+
+\beginteo
+Izan bitez G taldea eta g<sub>1</sub>,<font face="symbol">¼</font>,g<sub>n</sub> <font face="symbol">Î</font>  G.
+Orduan, g<sub>1</sub>*·s *g<sub>n</sub> adierazpenak zentzua du, balio bakar bat
+baitagokio.
+Zehatzago esanda, adierazpen horretan parentesiak sartzen badira
+biderkadurak beti bi elementuren artean egiteko (hasiera batean, horrela
+dago definituta * eragiketa), orduan azkeneko emaitza ez da parentesiak
+sartzeko moduaren menpekoa.
+\endteo
+
+
+
+\beginfro
+Emaitza garbi dago n=3 denean, *-ren propietate elkarkorra baino ez
+delako.
+Honetan oinarrituta, problemarik gabe ikus daiteke, n gaineko
+indukzioaz, kasu orokorra ere egiazkoa dela.
+\endfro
+
+
+
+\beginteo
+Izan bedi G taldea.
+Orduan, elementu neutroa eta g <font face="symbol">Î</font>  G bakoitzaren alderantzizkoa
+bakarrak dira.
+\endteo
+
+
+
+\beginfro
+Demagun e<sub>1</sub> eta e<sub>2</sub> elementu neutroak direla.
+Orduan, e<sub>1</sub> neutroa izateagatik e<sub>1</sub>*e<sub>2</sub>=e<sub>2</sub> dugu eta, e<sub>2</sub> neutroa
+izateagatik, e<sub>1</sub>*e<sub>2</sub>=e<sub>1</sub>.
+Hortaz, e<sub>1</sub>=e<sub>2</sub> eta G-k elementu neutro bakarra du.
+
+Bestalde, g<sub>1</sub> eta g<sub>2</sub> g-ren alderantzizkoak badira, orduan alde
+batetik g<sub>1</sub>*g*g<sub>2</sub>=e*g<sub>2</sub>=g<sub>2</sub> eta, bestetik, g<sub>1</sub>*g*g<sub>2</sub>=g<sub>1</sub>*e=g<sub>1</sub>.
+Beraz, g<sub>1</sub>=g<sub>2</sub>.
+\endfro
+
+
+
+\beginteo
+</a><a name="refteo:sinplifikagarriak">
+
+Izan bedi G taldea.
+Orduan:
+<ol>
+
+<li>
+G-ko elementu guztiak sinplifikagarriak dira.
+Hau da, g*x=g*y zein x*g=y*g berdintzek x=y inplikatzen dute.
+
+</li><li>
+Berdintza batean, gai batean agertzen den g elementu bat beste aldera
+pasatu ahal da, bere alderantzizkoa g<font face="symbol">¢</font> agertuz: hau da, g*x=h
+bada orduan x=g<font face="symbol">¢</font>*h.
+
+</li><li>
+Baldin eta g <font face="symbol">Î</font>  G elementu finkoa bada, orduan x<font face="symbol">®</font> g*x eta
+x<font face="symbol">®</font> x*g erregelek definitzen dituzten G-tik G-rako
+aplikazioak bijektiboak dira.
+</li></ol>
+\endteo
+
+
+
+Aurreko teoremaren (i) atalean, g elementua sinplifikatu ahal izateko
+funtsezkoa da g berdintzaren bi gaietan alde berean agertzea: bietan
+eskuinaldean edo bietan ezkerraldean.
+Aitzitik, g*x=y*g moduko berdintza batetik ezin da eskuarki x=y
+denik ondorioztatu.
+
+
+
+Beste alde batetik, (iii) atalaren arabera, x aldagai bat G talde
+bateko elementu guztietan mugitzen denean, eta g <font face="symbol">Î</font>  G finkoa bada,
+orduan g*x zein x*g elementuek G-ko elementu guztiak ematen
+dizkigute, errepikapenik gabe.
+Emaitza hau oso erabilgarria izango da batzuetan.
+
+
+
+Hasiera honetan, talde orokor baten eragiketa adierazteko * ikurraz
+baliatu gara.
+Hala ere, eragiketa idazteko notaziorik ohikoenak · eta +
+dira, eta orduan eragiketari biderketa edo batuketa deitzen zaio,
+hurrenez hurren, eta notazio biderkakorra edo batukorra erabiltzen
+dugula esaten dugu.
+Gainera, taldeen teoria orokorra garatzerakoan, ohitura notazio
+biderkakorrarekin lan egitea da, eta notazio batukorra bakarrik
+erabiltzen da taldea abeldarra bada (eta kasu horretan, ez
+derrigorrean).
+Notazio biderkakorraren kasuan, idazkera erraztearren, bi elementuren
+biderkadura bata bestearen ondoan jarriz adieraziko dugu, tartean
+· ikurra jarri gabe: g· h-ren ordez gh idatziko dugu.
+
+
+
+Notazio biderkakorra eta batukorraren kasuan ondorengo notazio
+hitzarmenak gordetzen dira:
+
+
+
+\vspace3pt
+
+
+
+1)
+Taldeko elementu neutroa 1 ikurraz adierazten da notazio biderkakorra
+erabiltzean eta 0 ikurraz notazio batukorraren kasuan.
+
+
+
+\vspace3pt
+
+
+
+2)
+Baldin eta g <font face="symbol">Î</font>  G bada, bere alderantzizkoa g<sup><font face="symbol">-</font>1</sup>
+
+
+   idazten da
+notazio biderkakorrarekin eta <font face="symbol">-</font>g batukorrarekin.
+Notazio biderkakorra erabiltzen ari bagara, orduan zuzenean egiaztatzen
+da biderkadura baten alderantzizkoa ematen duen ondorengo formula:
+[
+(gh)<sup>-1</sup>
+
+
+  =h<sup>-1</sup>
+
+
+  g<sup>-1</sup>
+
+
+  .
+]
+Ohartu behar da (gh)<sup><font face="symbol">-</font>1</sup>
+
+
+  =g<sup><font face="symbol">-</font>1</sup>
+
+
+  h<sup><font face="symbol">-</font>1</sup>
+
+
+   erlazioa ez dela eskuarki
+baliozkoa, bai ordea g eta h elkarrekin trukatzen badira.
+Faktoreen kopurua handiagoa bada, aurreko formularen orokorpena hauxe
+dugu:
+[
+(g_1<font face="symbol">¼</font> g_n)<sup>-1</sup>
+
+
+  =g_n<sup>-1</sup>
+
+
+  <font face="symbol">¼</font> g_1<sup>-1</sup>
+
+
+  .
+]
+
+
+
+\vspace3pt
+
+
+
+3)
+Notazio biderkakorra erabiltzen denean, g <font face="symbol">Î</font>  G eta n <font face="symbol">Î</font> \Z
+guztietarako g<sup>n</sup> elementua honako modu honetan definitzen da:
+[
+g<sup>n</sup>
+=
+\begincases
+g &nbsp;  / setn<font face="symbol">¼</font><font face="symbol">¼</font>Ê&nbsp; g,
+&amp; \textn&gt;0 bada;
+<br>
+
+1,
+&amp; \textn=0 bada;
+<br>
+
+g<sup>-1</sup>
+
+
+    / set-n<font face="symbol">¼</font><font face="symbol">¼</font> &nbsp; g<sup>-1</sup>
+
+
+  ,
+&amp; \textn&lt;0 bada.
+\endcases
+]
+Orduan, g<sup>n</sup>g<sup>m</sup>=g<sup>n+m</sup>
+
+
+   eta (g<sup>n</sup>)<sup>m</sup>=g<sup>nm</sup>
+
+
+   identitateak betetzen
+dira.
+Hala ere, ez da beti beteko (gh)<sup>n</sup>=g<sup>n</sup>h<sup>n</sup> denik (hau dagoeneko
+aipatu dugu n=<font face="symbol">-</font>1 den kasuan), baina egiazkoa da g eta h
+elkarrekin trukatzen direnean. 
+
+
+
+\vspace3pt
+
+
+
+4)
+Notazio batukorra erabiltzen badugu, aurreko ataleko ideia egokituz,
+ng definitzen da n <font face="symbol">Î</font> \Z eta g <font face="symbol">Î</font>  G guztietarako:
+[
+ng
+=
+\begincases
+g +  / setn·s·sÊ+ g,
+&amp; \textn&gt;0 bada;
+<br>
+
+0,
+&amp; \textn=0 bada;
+<br>
+
+(-g) +  / set-n·s·s+ (-g),
+&amp; \textn&lt;0 bada.
+\endcases
+]
+Orduan, ng+mg=(n+m)g eta m(ng)=(mn)g identitateak betetzen dira.
+Gainera, + ikurraren erabilpenak inplizituki eragiketa trukakorra
+dela suposatzen duenez, kasu honetan n(g+h)=ng+nh ere beteko dela
+ziurtatu ahal dugu.
+
+
+
+\vspace3pt
+
+
+
+Gai honetako lehenengo atala bukatzeko, hurrengo bi definizioak ematen
+ditugu.
+
+
+
+\begindfn
+Izan bedi G taldea.
+Talde horren <i>ordena\/</i>, |G| idazten duguna, G multzoaren
+kardinala da.
+\enddfn
+
+
+
+\begindfn
+Izan bedi G={g<sub>1</sub>,<font face="symbol">¼</font>,g<sub>n</sub>} talde finitua.
+Orduan, G-ren <i>taula\/</i> n× n tamainako lauki bat da,
+(i,j) posizioan g<sub>i</sub>g<sub>j</sub> biderkaduraren balioa idatziz lortzen dena.
+\enddfn
+
+
+
+\begintable[h]
+<font face="symbol">Ç</font>tionTalde finitu baten taula.
+\begintabular
+!\vrule width 1.2ptM!\vrule width 1.2ptM|M|M|M|M|M
+!\vrule width 1.2pt
+\noalign\hrule height 1.2pt
+(G,·) &amp; g_1 &amp; g_2 &amp; <font face="symbol">¼</font> &amp; g_j &amp; <font face="symbol">¼</font> &amp; g_n
+<br>
+
+\noalign\hrule height 1.2pt
+g_1 &amp; g_1g_1 &amp; g_1g_2 &amp; <font face="symbol">¼</font> &amp; g_1g_j &amp; <font face="symbol">¼</font> &amp; g_1g_n
+<br>
+
+\hline
+g_2 &amp; g_2g_1 &amp; g_2g_2 &amp; <font face="symbol">¼</font> &amp; g_2g_j &amp; <font face="symbol">¼</font> &amp; g_2g_n
+<br>
+
+\hline
+: &amp; : &amp; : &amp; : &amp; : &amp; : &amp; :
+<br>
+
+\hline
+g_i &amp; g_ig_1 &amp; g_ig_2 &amp; <font face="symbol">¼</font> &amp; g_ig_j &amp; <font face="symbol">¼</font> &amp; g_ig_n
+<br>
+
+\hline
+: &amp; : &amp; : &amp; : &amp; : &amp; : &amp; :
+<br>
+
+\hline
+g_n &amp; g_ng_1 &amp; g_ng_2 &amp; <font face="symbol">¼</font> &amp; g_ng_j &amp; <font face="symbol">¼</font> &amp; g_ng_n
+<br>
+
+\noalign\hrule height 1.2pt
+\endtabular
+\endtable
+
+
+
+Garbi dago G-ren taulak guztiz zehazten duela taldeko eragiketa.
+
+
+
+
+
+
+</a><p><a name="refteo:sinplifikagarriak"></a><a name="toc.2"></a></p><h1><a name="toc.2">2&nbsp;Taldeen adibideak</a></h1><a name="toc.2">
+
+
+
+Edozein egitura aljebraiko ondo ulertzeko, funtsezkoa da adibide
+bilduma handi bat ezagutzea, ager daitezkeen posibilitateen
+aukera erakusten duena.
+Horregatik, hasieratik adibide asko ematen saiatuko gara eta
+ikastaroak aurrera egin ahala gero eta adibide esanguratsuagoak
+ezagutuko ditugu.
+
+
+
+\vspace3pt
+
+
+
+1)
+Alde batetik, <i>zenbaki taldeak\/</i> deitu ahal direnak ditugu:
+(\Z,+), (\Z/n\Z,+), (\Q,+), (\R,+), (\C,+).
+Argi eta garbi, hauek guztiak abeldarrak dira.
+
+
+
+\vspace3pt
+
+
+
+Aurreko multzoetan, batuketaz gain, biderketa eragiketa dugu.
+Hala ere, biderketarekiko ez digute talderik ematen, 0 elementua ez
+delako inongo kasutan alderanzgarria.
+Batzuetan, nahikoa da elementu hori kentzea talde bat lortzeko.
+
+
+
+\vspace3pt
+
+
+
+2)
+(\Q\setminus{0},·), (\R\setminus{0},·) eta
+(\C\setminus{0},·) talde abeldarrak dira.
+
+
+
+\vspace3pt
+
+
+
+Gogoratu, K gorputza izanez gero, K\setminus{0} multzoa
+adierazteko K<sup>*</sup> ikurra erabiltzen dela normalean.
+Orduan, aurreko ataletako adibide gehienak ondorengoaren kasu bereziak
+dira.
+
+
+
+\vspace3pt
+
+
+
+3)
+Baldin eta K gorputza bada, (K,+) eta (K<sup>*</sup>,·) talde
+abeldarrak dira.
+Talde hauei K gorputzaren <i>talde batukorra\/</i> eta
+<i>talde biderkakorra\/</i> deitzen zaie, hurrenez hurren.
+
+
+
+\vspace3pt
+
+
+
+Aitzitik, ez da nahikoa \Z-ri 0 elementua kentzea biderketarekiko
+talde bat lor\-tzeko: 2-ak ez du alderantzizkorik \Z-n.
+Oro har, honako emaitza hau dugu.
+
+
+
+
+\beginteo
+</a><a name="refteo:unitateak">
+
+Izan bedi A multzoa eta demagun A gainean · eragiketa bat
+dugula, elkarkorra dena eta elementu neutroa duena.
+Orduan,
+[
+\UU(A)
+=
+{ a <font face="symbol">Î</font>  A  |  \texta-k A-n alderantzizkoa du ·-ekiko }
+]
+multzoa taldea da · eragiketarekiko.
+Talde honi A-ren <i>unitateen taldea\/</i> esaten zaio.
+(Izen honen arrazoia da A-ko elementu alderanzgarriei
+<i>unitateak\/</i> ere deitzen zaiela.)
+\endteo
+
+
+
+\beginfro
+Lehenengo eta behin · \UU(A)-n eragiketa dela ikusi behar dugu,
+hau da, a,b <font face="symbol">Î</font> \UU(A) izanez gero, ab <font face="symbol">Î</font> \UU(A) dela.
+Baina hau garbi dago: a<font face="symbol">¢</font> eta b<font face="symbol">¢</font> badira a eta b-ren
+alderantzizkoak, orduan b<font face="symbol">¢</font>a<font face="symbol">¢</font> elementua ab-ren alderantzizkoa da.
+
+Orain, · elkarkorra da \UU(A)-n, A osoan izateagatik, eta
+nabaria da elementu neutroa \UU(A)-n dagoela.
+Bestalde, a <font face="symbol">Î</font> \UU(A) bada, a-k badu alderantzizko bat ·-ekiko,
+a<font face="symbol">¢</font> <font face="symbol">Î</font>  A.
+Frogapena bukatzeko, nahikoa da a<font face="symbol">¢</font> <font face="symbol">Î</font> \UU(A) dela ohartzea, a<font face="symbol">¢</font>-ek
+alderantzizkoa duelako, a hain zuzen ere.
+\endfro
+
+
+
+Teorema honetan oinarrituz, taldeen adibide gehiago eman dezakegu.
+
+
+
+\vspace3pt
+
+
+
+4)
+Biderketarekiko, \UU(\Z)={1,<font face="symbol">-</font>1} dugu eta, lehenengo gaiko
+</a><a href="#refteo:mod%20n%20alderanzgarriak">(%%teo:mod n alderanzgarriak@@)</a>
+ teoreman ikusi dugunez,
+\UU(\Z/n\Z)={ \ove /  a  |  (a,n)=1 }.
+Ohartu |\UU(\Z/n\Z)|=<font face="symbol">j</font>(n) dela.
+Talde hauek abeldarrak dira.
+
+
+
+\vspace3pt
+
+
+
+5)
+Izan bitez X edozein multzo eta
+[
+\FF = { f:X<font face="symbol">®</font> X  |  \textf aplikazioa },
+]
+X-tik X-ra doazen aplikazioen multzoa.
+Aplikazioen konposizioa eragiketa bat da \FF-n eta, ezaguna denez,
+konposizioa elkarkorra da eta 1<sub>X</sub> identitate aplikazioa elementu
+neutroa da.
+Beraz, <a href="#refteo:unitateak">(0)</a>
+ teoremaren arabera, \UU(\FF) multzoa
+taldea da konposizioarekiko.
+Talde honi X-ren <i>talde simetrikoa\/</i> deitzen zaio eta S<sub>X</sub>
+ikurraren bitartez adierazten da.
+
+Ohartu f:X<font face="symbol">®</font> X aplikazioa S<sub>X</sub> talde simetrikoan dagoela
+existitzen bada beste aplikazio bat, g, f-rekin edozein ordenatan
+konposatuta 1<sub>X</sub> identitatea ematen diguna.
+Horregatik,
+[
+S_X = {  f:X<font face="symbol">®</font> X  |  \textf bijektiboa }.
+]
+Ohikoa da S<sub>X</sub>-ko elementuei X-ren <i>permutazioak\/</i> deitzea.
+Problemetan ikusiko dugunez, S<sub>X</sub> taldea bakarrik izan daiteke
+abeldarra |X| <font face="symbol">£</font>  2 denean.
+
+Egin dezagun geldiune bat notazio hitzarmen garrantzitsu bati buruz
+hitz egiteko, hemendik aurrera erabiliko duguna.
+Bi aplikazio f eta g konposatzea lehenengo f eta gero g
+aplikatzea da, eta emaitza hori normalean g<font face="symbol">°</font> f-ren bidez
+adierazten da.
+Dena den, S<sub>X</sub> talde simetriko batean lan egiten gaudenean, konposizio
+hori fg idatziko dugu.
+Ohartu idazkera honek garbiago erakusten duela zein permutazio
+aplikatzen den lehenengo eta zein bigarren.
+Aukeratzen dugun notazioaren arabera eragiketa desberdinak ditugu
+S<sub>X</sub>-n, · eta <font face="symbol">°</font>, kontrakoak direnak hain zuzen ere,
+fg=g<font face="symbol">°</font> f delako. 
+Bi eragiketa hauekiko S<sub>X</sub> permutazioen multzoak talde egitura du, baina
+aukeraketa bat egin behar da, eta talde teorian erabiliena fg
+eragiketa da.
+Notazio honekin, koherenteagoa da f-ren bidezko x-ren irudia
+(x)f idaztea f(x)-ren ordez, eta horrela egingo dugu talde
+simetrikoetan.
+Hala eta guztiz ere, beste testuinguru batzuetan, nahiz eta konposizioa
+fg moduan idatzi, f(x) notazio tradizionala erabiliko dugu.
+<a name="reforr:aplikazioa eskuinean">
+
+
+
+
+\vspace3pt
+
+
+
+6)
+Aurreko adibidean X finitua bada, demagun n elementukoa, orduan
+|S<sub>X</sub>|=n! dugu.
+Hau gertatzen da, bereziki, X={1,2,<font face="symbol">¼</font>,n} hartuz gero.
+Kasu honetan lortzen dugun talde simetrikoari
+<i>n mailako talde simetrikoa\/</i> deritzo eta S<sub>n</sub> notazioa
+erabiltzen da hau idazteko.
+Zehaztu nahi badugu <font face="symbol">s</font> <font face="symbol">Î</font>  S<sub>n</sub> permutazio bat zein den, bi lerroko
+taula bat eman ohi da: goiko lerroan 1-etik n-rako zenbakiak
+idazten ditugu, ordenaturik, eta bigarrenean elementu bakoitzaren
+irudia <font face="symbol">s</font>-ren bitartez.
+Adibidez,
+\beginmultline*
+S_3
+=
+\Big {
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+1 &amp; 2 &amp; 3
+\endpmatrix,
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+2 &amp; 1 &amp; 3
+\endpmatrix,
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+3 &amp; 2 &amp; 1
+\endpmatrix,
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+1 &amp; 3 &amp; 2
+\endpmatrix,
+<br>
+
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+2 &amp; 3 &amp; 1
+\endpmatrix,
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+3 &amp; 1 &amp; 2
+\endpmatrix
+\Big }.
+\endmultline*
+
+
+
+7)
+Izan bitez V eta V<font face="symbol">¢</font> bi espazio bektorial, K gorputz beraren
+gainean.
+Orduan, V-tik V<font face="symbol">¢</font>-era doazen aplikazio linealen multzoa,
+\LL(V,V<font face="symbol">¢</font>), talde abeldarra da aplikazioen batuketarekiko.
+Bereziki, V-ren endomorfismoen multzoa, \End V, ere taldea da
+batuketarekiko.
+Baina \End V-n badugu bigarren eragiketa bat, konposizioa, elkarkorra
+dena eta 1<sub>V</sub> elementu neutroa duena.
+Kasu honetan lortzen dugun unitateen taldea V-tik V-rako aplikazio
+lineal bijektiboek osatzen dute.
+Talde hau GL(V)-ren bitartez adierazten da eta V-ren
+<i>talde lineal orokorra\/</i> dela esaten dugu.
+
+
+
+\vspace3pt
+
+
+
+8)
+Lehenengo mailan ikasitako aljebra linealaren ideia nagusietako bat
+aplikazio linealen eta matrizeen arteko korrespondentzia da, behin
+oinarriak finkatuz gero.
+Ildo honetatik, 7) puntuan aurkeztu ditugun taldeek badute itzulpen
+automatiko bat matrizeen testuingurura.
+Horrela, K gorputza bada, K gaineko n× m tamainako matrizeen
+multzoa, M<sub>n× m</sub>(K), talde abeldarra da batuketarekiko.
+Hau gertatzen da bereziki M<sub>n</sub>(K)-rekin, n× n matrize karratuen
+multzoa.
+Beste alde batetik, M<sub>n</sub>(K)-n matrizeen biderketa elkarkorra da eta
+elementu neutroa dago (I<sub>n</sub> identitate matrizea).
+Dagokion unitateen taldea biderketarekiko alderanzgarriak diren
+matrizeek osatzen dute, hau da, determinante ez-nulua duten matrizeek.
+Talde hau GL<sub>n</sub>(K)-ren bitartez adierazten da eta K gorputzaren
+gaineko <i>n mailako talde lineal orokorra\/</i> dela esaten dugu.
+
+
+
+
+
+
+</a><p><a name="reforr:aplikazioa eskuinean"></a><a name="toc.3"></a></p><h1><a name="toc.3">3&nbsp;Azpitaldeak</a></h1><a name="toc.3">
+
+
+
+Egitura aljebraiko bat definitzen den guztietan, ondorengo pausua
+dagokion azpiegitura definitzea izaten da.
+
+
+
+\begindfn
+Izan bitez G taldea eta H G-ren azpimultzo bat.
+Orduan, H G-ren <i>azpitaldea\/</i> dela esaten dugu, eta H <font face="symbol">£</font>  G
+idazten dugu, honako bi baldintza hauek betetzen badira:
+<ol>
+
+<li>
+G taldeko eragiketa, ·&nbsp;, H-n ere eragiketa da, hau da,
+xy <font face="symbol">Î</font>  H dugu x,y <font face="symbol">Î</font>  H guztietarako.
+
+</li><li>
+(H,·) taldea da.
+</li></ol>
+\enddfn
+
+
+
+Edozein talde G harturik, {1} multzoa G-ren azpitaldea da,
+<i>azpitalde tribiala\/</i> deitutakoa, eta G bera ere azpitaldea da.
+Bestalde, azpitalde bat, H, G-ren <i>azpitalde propioa\/</i> dela
+esaten dugu talde osoaren berdina ez bada.
+Hau azpimarratu nahi denean H&lt;G idazten dugu.
+
+
+
+\beginteo
+Demagun H <font face="symbol">£</font>  G dela.
+Orduan, H-ko elementu neutroa eta G-koa bat datoz eta, h <font face="symbol">Î</font>  H
+bada, h-ren alderantzizkoa elementu bera da H taldean zein
+G taldean hartuta.
+\endteo
+
+
+
+\beginfro
+Izan bitez 1<sub>H</sub> eta 1<sub>G</sub> H-ko eta G-ko elementu neutroak.
+Orduan, 1<sub>H</sub>1<sub>H</sub>=1<sub>H</sub>=1<sub>H</sub>1<sub>G</sub> dugu (pentsatu zein den berdintza
+bakoitzaren arrazoia) eta, G taldean elementu guztiak
+sinplifikagarriak direnez, 1<sub>H</sub>=1<sub>G</sub>.
+
+Bestalde, izan bitez h<font face="symbol">¢</font> h-ren alderantzizkoa H-n eta h<font face="symbol">¢</font><font face="symbol">¢</font> bere
+alderantzizkoa G-n.
+Frogatu berri dugun bezala, 1<sub>G</sub>=1<sub>H</sub> dugu eta, hortik, h<font face="symbol">¢</font> ere
+h-ren alderantzizkoa da G-n.
+Orain, alderantzizkoaren bakartasunak h<font face="symbol">¢</font>=h<font face="symbol">¢</font><font face="symbol">¢</font> ematen du.
+\endfro
+
+
+Aurreko teoremaren arabera, talde baten azpitaldeetan lan egiterakoan,
+ez dago anbiguotasunik 1 eta h<sup><font face="symbol">-</font>1</sup>
+
+
+   ikurrak erabiltzeagatik, beren
+esanahia talde osoan duten berdina delako.
+Beste alde batetik, 1 neutroa azpitalde guztietan dagoela
+ondorioztatzen da.
+
+
+
+Izan bedi G taldea.
+Bere azpimultzo bat, H, azpitaldea den edo ez ikusi nahi badugu,
+abantaila atera dezakegu G taldea dela jakitetik.
+Adibidez, G osoan propietate elkarkorra betetzen denez, nabaria da
+H-n ere beteko dela.
+Ideia honetan oinarriturik, hurrengo teoremak H azpitaldea den
+erabakitzeko metodo azkar bat ematen digu.
+
+
+
+\beginteo
+</a><a name="refteo:azpitaldeen karakterizazioa">
+
+Izan bitez G taldea eta H G-ren azpimultzo ez-hutsa.
+Orduan, baliokideak dira:
+<ol>
+
+<li>
+H G-ren azpitaldea da.
+
+</li><li>
+Baldin eta x,y <font face="symbol">Î</font>  H bada, orduan xy,y<sup><font face="symbol">-</font>1</sup>
+
+
+   <font face="symbol">Î</font>  H.
+
+</li><li>
+Baldin eta x,y <font face="symbol">Î</font>  H bada, orduan xy<sup><font face="symbol">-</font>1</sup>
+
+
+   <font face="symbol">Î</font>  H.
+</li></ol>
+\endteo
+
+
+
+\beginfro
+Garbi daude (i)<font face="symbol">Þ</font>(ii) eta (ii)<font face="symbol">Þ</font>(iii)
+inplikazioak.
+Ikus dezagun, bada, (iii)<font face="symbol">Þ</font>(i) betetzen dela.
+Lehenengo eta behin, x <font face="symbol">Î</font>  H hartzen badugu (hemen H hutsa ez
+izatea erabiltzen dugu), 1=xx<sup><font face="symbol">-</font>1</sup>
+
+
+   <font face="symbol">Î</font>  H lortzen dugu eta elementu
+neutroa H-n dago.
+Beraz, edozein h <font face="symbol">Î</font>  H harturik, h<sup><font face="symbol">-</font>1</sup>
+
+
+  =1· h<sup><font face="symbol">-</font>1</sup>
+
+
+   <font face="symbol">Î</font>  H dugu
+eta H-ko elementuen alderantzizkoak ere H-n daude.
+Orduan, frogatzen badugu · H-ren eragiketa dela, eta kontuan
+hartuz biderketaren elkarkortasuna tribialki betetzen dela H-n G
+osoan betetzeagatik, H azpitaldea dela frogaturik geldituko da.
+Horretarako, ohartu x,y <font face="symbol">Î</font>  H izanez gero orduan, dagoeneko
+ikusitakoagatik, x,y<sup><font face="symbol">-</font>1</sup>
+
+
+   <font face="symbol">Î</font>  H dugula eta (iii) aplikatuz, xy <font face="symbol">Î</font>  H
+dela.
+\endfro
+
+
+
+\beginkor
+</a><a name="refkor:azpitaldeen ebakidura">
+
+Izan bitez G taldea eta {H<sub>i</sub>}<sub>i <font face="symbol">Î</font>  I</sub> G-ren azpitaldeen
+familia bat.
+Orduan, <font face="symbol">Ç</font><sub>i <font face="symbol">Î</font>  I</sub> &nbsp; H<sub>i</sub> ere G-ren azpitaldea da.
+\endkor
+
+
+
+\beginfro
+Izan bitez x,y <font face="symbol">Î</font> <font face="symbol">Ç</font><sub>i <font face="symbol">Î</font>  I</sub> &nbsp; H<sub>i</sub>.
+Orduan, i <font face="symbol">Î</font>  I guztietarako, x,y <font face="symbol">Î</font>  H<sub>i</sub> dugu eta ondorioz
+xy<sup><font face="symbol">-</font>1</sup>
+
+
+   <font face="symbol">Î</font>  H<sub>i</sub>.
+Beraz, xy<sup><font face="symbol">-</font>1</sup>
+
+
+   <font face="symbol">Î</font> <font face="symbol">Ç</font><sub>i <font face="symbol">Î</font>  I</sub> &nbsp; H<sub>i</sub> eta,
+</a><a href="#refteo:azpitaldeen%20karakterizazioa">(0)</a>
+ teorema aplikatuz,
+<font face="symbol">Ç</font><sub>i <font face="symbol">Î</font>  I</sub> &nbsp; H<sub>i</sub> azpitaldea da.
+\endfro
+
+
+
+Antzera frogatzen da bigarren korolario hau.
+
+
+
+\beginkor
+Izan bedi G taldea.
+Orduan, G-ko elementu guztiekin truka\-tzen diren elementuen multzoa,
+[
+Z(G) = { g <font face="symbol">Î</font>  G  |  \textgx=xg, x <font face="symbol">Î</font>  G guztietarako }
+]
+G-ren azpitaldea da, G-ren <i>zentroa\/</i> deitutakoa.
+\endkor
+
+
+
+Garbi dago G abeldarra dela baldin eta soilik baldin Z(G)=G bada.
+
+
+
+\beginadik
+<a name="refadik:azpitaldeak">
+
+1)
+Batuketarekiko, azpitaldeen kate hau daukagu:
+\Z  <font face="symbol">£</font>  \Q  <font face="symbol">£</font>  \R  <font face="symbol">£</font>  \C.
+
+2)
+S<sub>3</sub> taldean,
+[
+H
+=
+\Big {
+1,
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+2 &amp; 1 &amp; 3
+\endpmatrix
+\Big }
+]
+azpitaldea da, baina ezin dugu gauza bera esan
+[
+K
+=
+\Big {
+1,
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+2 &amp; 3 &amp; 1
+\endpmatrix
+\Big }
+]
+multzoari buruz, bigarren permutazioa bere buruarekin biderkatzean
+ez dugulako K barruko elementu bat lortzen.
+
+3)
+Ondorengo multzoa,
+[
+{ 2<sup>m</sup> 3<sup>n</sup>  |  m,n <font face="symbol">Î</font> \Z },
+]
+(\Q<sup>*</sup>,·)-ren azpitaldea da.
+Oro har, <font face="symbol">p</font> zenbaki lehenetako edozein multzo izanda,
+orduan
+[
+H_<font face="symbol">p</font>
+=
+{ p_1<sup>n_1 <font face="symbol">¼</font> p_t<sup>n_t
+ | 
+p_1,<font face="symbol">¼</font>,p_t <font face="symbol">Î</font> <font face="symbol">p</font>, n_1,<font face="symbol">¼</font>,n_t <font face="symbol">Î</font> \Z, t <font face="symbol">Î</font> \N }
+]
+multzoa ere \Q<sup>*</sup>-ren azpitaldea da.
+
+4)
+Izan bedi V dimentsio finituko espazio bektoriala.
+Orduan, det f=1 bete\-tzen duten V-ren endomorfismoek GL(V)-ren
+azpitalde bat osatzen dute.
+Azpitalde honi V-ren <i>talde lineal berezia\/</i> esaten zaio, eta
+SL(V)-ren bitartez adierazten dugu.
+
+5)
+Era berean, K gorputza bada, idatz dezagun SL<sub>n</sub>(K), bat
+determinantea duten n× n matrizeen multzoa adierazteko.
+Orduan, SL<sub>n</sub>(K) GL<sub>n</sub>(K)-ren azpitaldea da, eta K gaineko
+<i>n mailako talde lineal berezia</i> esaten zaio.
+
+6)
+Gogoratu f:\R<sup>n</sup><font face="symbol">®</font>\R<sup>n</sup> aplikazio bat
+<i>isometria\/</i> deitzen dela distantziak gordetzen baditu:
+d(f(x),f(y))=d(x,y), x,y <font face="symbol">Î</font> \R<sup>n</sup> guztietarako.
+(Hemen, d \mbox\R<sup>n</sup>-ko ohiko distantzia da.)
+Froga daiteke edozein isometria bijektiboa dela eta traslazio
+baten eta isometria lineal baten konposizioa dela.
+Isometria linealek GL(\R<sup>n</sup>)-ren azpitalde bat osatzen dute,
+O(\R<sup>n</sup>)-ren bitartez adierazten dena.
+Azpitalde honi \R<sup>n</sup>-ren <i>talde ortogonala\/</i> esaten zaio.
+
+Adibidez, \R<sup>2</sup>-ren isometriak bi eratakoak dira:
+<ol>
+
+<li>
+Jatorriaren inguruko biraketak.
+
+</li><li>
+Jatorritik igarotzen den zuzen batekiko erreflexioak.
+</li></ol>
+
+Beste alde batetik, </sup></sup></a><a href="#refkor:azpitaldeen%20ebakidura">(0)</a>
+ korolarioa
+kontuan hartuz, O(\R<sup>n</sup>) eta SL(\R<sup>n</sup>)-ren ebakidura, hau da, bat
+determinantea duten isometria linealen multzoa, O(\R<sup>n</sup>)-ren
+azpitaldea da.
+Azpitalde honi \R<sup>n</sup>-ren <i>talde ortogonal berezia\/</i> deitzen zaio
+eta SO(\R<sup>n</sup>) ikurraz idazten dugu.
+
+7)
+Gogoratu P <font face="symbol">Î</font>  M<sub>n</sub>(\R) matrizea <i>ortogonala\/</i> dela
+alderanzgarria bada eta bere trasposatua eta bere alderantzizkoa bat
+badatoz.
+Aljebra Lineala II irakasgaian ikusten denez, \R<sup>n</sup>-ren oinarri
+ortonormal bat finkatzen dugunean, bijekzio bat lortzen dugu
+isometria lineal eta matrize ortogonalen artean.
+Matrize ortogonalek GL<sub>n</sub>(\R)-ren azpitalde bat osatzen dute, \R
+gaineko <i>n mailako talde ortogonala\/</i> deitzen dena eta
+O<sub>n</sub>(\R)-ren bitartez adierazten dena.
+
+Ebakitzen baditugu O<sub>n</sub>(\R) eta SL<sub>n</sub>(\R), hau da, bat determinanteko
+matrize ortogonalak hartzen baditugu, O<sub>n</sub>(\R)-ren azpitalde bat
+lortzen dugu.
+Honi \R gaineko <i>n mailako talde ortogonal berezia\/</i> deitzen
+zaio eta SO<sub>n</sub>(\R) idatziz adierazten da.
+
+8)
+Izan bedi <font face="symbol">D</font> \R<sup>n</sup>-ren azpimultzoa.
+Isometria bat, f <font face="symbol">Î</font>  O(\R<sup>n</sup>), <font face="symbol">D</font>-ren <i>simetria\/</i> dela
+esaten dugu f(<font face="symbol">D</font>)=<font face="symbol">D</font> betetzen bada.
+Orduan, <font face="symbol">D</font>-ren simetriek O(\R<sup>n</sup>)-ren azpitalde bat osatzen
+dute.
+
+Adibidez, <font face="symbol">D</font> <font face="symbol">Í</font>  \R<sup>2</sup> zirkulu bat bada, jatorrian
+zentratuta, orduan f biraketa guztiek f(<font face="symbol">D</font>)=<font face="symbol">D</font> betetzen
+dute, eta berdin gertatzen da erreflexioekin.
+Beraz, <font face="symbol">D</font>-ren simetrien taldea O<sub>2</sub>(\R) talde ortogonal osoa
+da.
+
+Beste alde batetik, <font face="symbol">D</font><font face="symbol">¢</font> <font face="symbol">D</font>-ren goiko zirkuluerdia bada,
+hau da, y <font face="symbol">³</font>  0 planoerdian dagoena, orduan <font face="symbol">D</font><font face="symbol">¢</font>-ek bi simetria
+baino ez ditu: bata, identitate aplikazioa, eta bestea, OY
+ardatzarekiko erreflexioa.
+
+9)
+Demagun n <font face="symbol">³</font>  3 dela, eta har dezagun planoan n aldeko poligono
+erregular bat, <font face="symbol">D</font><sub>n</sub>, jatorrian zentratuta.
+Alde batetik, biraketa bat <font face="symbol">D</font><sub>n</sub>-ren simetria izateko,
+biraketaren angeluak 2<font face="symbol">p</font>/n-ren multiploa izan behar du.
+Beraz, biraketen artean <font face="symbol">D</font><sub>n</sub>-ren n simetria lortzen dugu.
+Beste aldetik, erreflexioen artean beste n simetria topatzen
+ditugu, honako zuzen hauekiko hain zuzen ere:
+<ol>
+
+<li>
+Baldin eta n bakoitia bada, erpin bakoitza aurkako aldeko erdiko
+puntuarekin lotzen duten n zuzenak.
+
+</li><li>
+Baldin eta n bikoitia bada, aurkako erpinak lotzen dituzten n/2
+zuzenak, eta alde bakoitzeko erdiko puntua eta aurkako aldeko erdiko
+puntua lotzen dituzten beste n/2 zuzenak.
+</li></ol>
+Laburbilduz, <font face="symbol">D</font><sub>n</sub>-k 2n simetria ditu.
+Hauek osatzen duten taldea D<sub>2n</sub> ikurraren bitartez adierazten da
+eta 2n ordenako <i>talde dihedrikoa\/</i> esaten zaio.
+
+Ohartu D<sub>2n</sub>-ko n biraketek azpitalde bat osatzen dutela.
+Bestalde,  erreflexioek ez dute azpitalde bat osatzen:
+D<sub>2n</sub>-ko elementu neutroa, hau da, identitate aplikazioa, ez da
+erreflexioa.
+\endadik
+
+
+
+\begindfn
+<a name="refdfn:azpimultzoen biderkadura">
+
+Izan bitez G taldea eta X,Y <font face="symbol">Í</font>  G.
+Orduan, G-ren ondorengo azpimultzoak definitzen ditugu:
+<ol>
+
+<li>
+X-ren <i>alderantzizkoen multzoa\/</i>: \
+X<sup><font face="symbol">-</font>1</sup>
+
+
+   = { x<sup><font face="symbol">-</font>1</sup>
+
+
+    |  x <font face="symbol">Î</font>  X }.
+
+</li><li>
+X eta Y-ren <i>biderkadura\/</i>: \
+XY = { xy  |  x <font face="symbol">Î</font>  X, y <font face="symbol">Î</font>  Y }.
+</li></ol>
+\enddfn
+
+
+
+Garbi dago (X<sup><font face="symbol">-</font>1</sup>
+
+
+  )<sup><font face="symbol">-</font>1</sup>
+
+
+  =X eta (XY)<sup><font face="symbol">-</font>1</sup>
+
+
+  =Y<sup><font face="symbol">-</font>1</sup>
+
+
+  X<sup><font face="symbol">-</font>1</sup>
+
+
+   betetzen
+dela baina, kontuz ibili, XX<sup><font face="symbol">-</font>1</sup>
+
+
+  ={1} gezurrezkoa baita X-k
+elementu bat baino gehiago duenean (pentsatu zergatik).
+Elementuekin gertatzen den bezala, multzoen arteko biderketa
+elkarkorra da eta, horregatik, zentzua du X<sub>1</sub><font face="symbol">¼</font> X<sub>n</sub> moduko
+biderkadura bat parentesirik gabe idazteak.
+
+
+
+Bestalde, </a><a href="#refteo:azpitaldeen%20karakterizazioa">(0)</a>
+ teoremaren arabera,
+H\ne\varnothing G-ren azpitaldea da baldin eta soilik baldin
+HH <font face="symbol">Í</font>  H eta H<sup><font face="symbol">-</font>1</sup>
+
+
+   <font face="symbol">Í</font>  H bada edo, baliokideki,
+HH<sup><font face="symbol">-</font>1</sup>
+
+
+   <font face="symbol">Í</font>  H bada.
+Hala izanez gero, partekotasun hauek guztiak berdintzak dira.
+Adibidez, h=h· 1 denez h <font face="symbol">Î</font>  H guztietarako, H <font face="symbol">Í</font>  HH
+dugu eta hortik HH=H.
+Era berean, H eta K azpitaldeak badira orduan H <font face="symbol">Í</font>  HK eta
+K <font face="symbol">Í</font>  HK partekotasunak ditugu.
+Tamalez, azpitaldeen biderkadurak ez du zertan azpitaldea izan.
+Adibidez, S<sub>3</sub>-ren bi azpitalde hauek hartzen baditugu,
+[
+H
+=
+\Big {
+1,
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+2 &amp; 1 &amp; 3
+\endpmatrix
+\Big }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+\texteta
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+K
+=
+\Big {
+1,
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+3 &amp; 2 &amp; 1
+\endpmatrix
+\Big },
+]
+orduan beren biderkadura ez da
+azpitaldea.<a name="reforr:HK ez azpitaldea">
+
+Hau zuzenean egiaztatu ahal da, baina are errazago frogatuko da gaiaren
+amaieran, Lagrangeren teoreman oinarrituz.
+Jarraian, bi azpitalderen biderkadura noiz den azpitaldea
+karakterizatzen dugu.
+
+
+
+\beginteo
+Izan bitez G taldea eta H, K G-ren azpitaldeak.
+Orduan, HK azpitaldea da baldin eta soilik baldin HK=KH bada.
+\endteo
+
+
+
+\beginfro
+<font face="symbol">Þ</font>)
+Badakigu H eta K HK-ren barruan daudela.
+Orduan, HK azpitaldea bada, KH <font face="symbol">Í</font>  HK ondorioztatzen dugu.
+Partekotasun honetan alderan\-tzizkoak hartuz,
+(KH)<sup><font face="symbol">-</font>1</sup>
+
+
+   <font face="symbol">Í</font>  (HK)<sup><font face="symbol">-</font>1</sup>
+
+
+   dugu, hau da,
+H<sup><font face="symbol">-</font>1</sup>
+
+
+  K<sup><font face="symbol">-</font>1</sup>
+
+
+   <font face="symbol">Í</font>  K<sup><font face="symbol">-</font>1</sup>
+
+
+  H<sup><font face="symbol">-</font>1</sup>
+
+
+  .
+Beraz, H eta K azpitaldeak direla erabiliz, HK <font face="symbol">Í</font>  KH
+lortzen dugu.
+Bi partekotasunak ditugunez, HK=KH berdintza ondorioztatzen dugu.
+
+<font face="symbol">Ü</font>)
+Honako berdintza honen ondorioa da:
+[
+(HK)· (HK)<sup>-1</sup>
+
+
+   = (HK)· (K<sup>-1</sup>
+
+
+  H<sup>-1</sup>
+
+
+  )
+= (HK)· (KH) = HKH = HHK = HK,
+]
+H eta K azpitaldeak direla eta KH=HK berdintza erabiliz.
+\endfro
+
+
+
+\beginkor
+Talde abeldarretan, azpitaldeen biderkadura azpitaldea da.
+\endkor
+
+
+
+Hala ere, azpimarratu behar da HK=KH berdintzak ez duela esan nahi
+hk=kh denik h <font face="symbol">Î</font>  H eta k <font face="symbol">Î</font>  K guztietarako.
+(Baina, jakina, bigarren baldintzak lehenengoa inplikatzen du.)
+Egiatan, HK=KH-ren esanahia hauxe da: edozein h <font face="symbol">Î</font>  H eta
+k <font face="symbol">Î</font>  K harturik, hk biderkadura k<font face="symbol">¢</font>h<font face="symbol">¢</font> moduan idatz
+daitekeela, k<font face="symbol">¢</font> <font face="symbol">Î</font>  K eta h<font face="symbol">¢</font> <font face="symbol">Î</font>  H izanik, eta antzera gertatzen dela
+kh biderkadurarekin.
+
+
+
+
+
+
+</a><p><a name="reforr:HK ez azpitaldea"></a><a name="toc.4"></a></p><h1><a name="toc.4">4&nbsp;Azpimultzo batek sortutako azpitaldea</a></h1><a name="toc.4">
+
+
+
+Demagun G taldea dela.
+Orduan, X azpimultzo batek ez du zertan G-ren azpitaldea izan.
+Dena den, X barruan duten azpitalde guztien ebakidura azpitaldea da
+eta, argi eta garbi, hauxe da X barruan duen azpitalderik txikiena.
+Beraz, ondorengo definizioa zentzuduna da.
+
+
+
+\begindfn
+Izan bitez G taldea eta X <font face="symbol">Í</font>  G.
+Orduan, X barruan duen G-ren azpitalderik txikienari
+<i>X-k sortutako azpitaldea\/</i> esaten diogu eta
+<font face="symbol">á</font> X <font face="symbol">ñ</font> ikurraren bitartez adierazten dugu.
+\enddfn
+
+
+
+\beginadik
+1)
+Baldin eta H G-ren azpitaldea bada, nabaria da
+<font face="symbol">á</font> H <font face="symbol">ñ</font>=H dela.
+Bereziki, <font face="symbol">á</font> G <font face="symbol">ñ</font>=G.
+
+2)
+Beste alde batetik, <font face="symbol">á</font> \varnothing <font face="symbol">ñ</font>={1}.
+\endadik
+
+
+
+Garbi dago X azpimultzo batek sortutako azpitaldeak X-ko elementu
+guztiez gain, X<sup><font face="symbol">-</font>1</sup>
+
+
+  -ekoak ere eduki behar dituela, eta baita ere
+X eta X<sup><font face="symbol">-</font>1</sup>
+
+
+  -eko elementuen artean eratu ahal diren biderkadura
+guztiak, edozein luzeratakoak.
+Hurrengo teoremaren arabera, hauetxek dira <font face="symbol">á</font> X <font face="symbol">ñ</font>-ko
+elementu guztiak.
+Bere enuntziatuan ondorengo hitzarmena erabiltzen da: biderkadura
+batean faktoreen kopurua zero bada, biderkaduraren balioa 1 dela
+suposatzen da.
+
+
+
+\beginteo
+</a><a name="refteo:sortutako azpitaldea">
+
+Izan bitez G taldea eta X <font face="symbol">Í</font>  G.
+Orduan,
+[
+<font face="symbol">á</font> X <font face="symbol">ñ</font>
+=
+{ x_1<sup><font face="symbol">e</font>_1 <font face="symbol">¼</font> x_n<sup><font face="symbol">e</font>_n
+ | 
+\textx<sub>i</sub> <font face="symbol">Î</font>  X, <font face="symbol">e</font><sub>i</sub>=1 edo <font face="symbol">-</font>1, n <font face="symbol">Î</font> \N<font face="symbol">È</font>{0} }.
+]
+Azpitalde honetako elementuak emateko beste modu bat hauxe da:
+[
+x_1<sup>k_1<font face="symbol">¼</font> x_n<sup>k_n,
+]
+non n <font face="symbol">Î</font> \N&nbsp;<font face="symbol">È</font>{0}, x<sub>i</sub> <font face="symbol">Î</font>  X, x<sub>i</sub>\ne x<sub>i+1</sub> eta
+k<sub>i</sub> <font face="symbol">Î</font> \Z\setminus {0}.
+\endteo
+
+
+
+\beginfro
+Izan bedi
+[
+H
+=
+{ x_1<sup><font face="symbol">e</font>_1 <font face="symbol">¼</font> x_n<sup><font face="symbol">e</font>_n
+ | 
+\textx<sub>i</sub> <font face="symbol">Î</font>  X, <font face="symbol">e</font><sub>i</sub>=1 edo <font face="symbol">-</font>1, n <font face="symbol">Î</font> \N<font face="symbol">È</font>{0} }.
+]
+Orduan, teorema baino lehenago aipatu bezala,
+H <font face="symbol">Í</font>  <font face="symbol">á</font> X <font face="symbol">ñ</font> dugu.
+Bestalde, </sup></sup></sup></sup></sup></sup></a><a href="#refteo:azpitaldeen%20karakterizazioa">(0)</a>
+ teorema aplikatuz,
+erraz ikusten da H azpitaldea dela eta, X barruan duenez,
+<font face="symbol">á</font> X <font face="symbol">ñ</font>  <font face="symbol">Í</font>  H dugu <font face="symbol">á</font> X <font face="symbol">ñ</font>-ren
+definizioagatik.
+Horrela, <font face="symbol">á</font> X <font face="symbol">ñ</font>=H berdintza lortzen dugu.
+Bigarren zatia ikusteko, nahikoa da X-ko elementu bat edo
+bere alderantzizkoa elkarren ondoan errepikaturik agertzen direnean
+berredura batean biltzea.
+\endfro
+
+
+
+Bereziki, elementu bakar batek sortzen duen azpitaldearen deskribapena
+oso sinplea da.
+
+
+
+\beginkor
+<a name="refkor:g-k sortutakoa">
+
+Izan bitez G taldea eta g <font face="symbol">Î</font>  G.
+Orduan, <font face="symbol">á</font> g <font face="symbol">ñ</font> = { g<sup>i</sup>  |  i <font face="symbol">Î</font> \Z }.
+(Edo, notazio batukorra erabiltzen badugu,
+<font face="symbol">á</font> g <font face="symbol">ñ</font> = { ig  |  i <font face="symbol">Î</font> \Z }.)
+Bereziki, <font face="symbol">á</font> g <font face="symbol">ñ</font> talde abeldarra da.
+\endkor
+
+
+
+\beginadik
+</a><a name="refadik:sortutako azpitaldea">
+
+1)
+Aurreko korolarioaren arabera, (\Z,+) taldean n zenbaki osoak
+sortzen duen azpitaldea n-ren multiploek osatzen dute:
+<font face="symbol">á</font> n <font face="symbol">ñ</font>=n\Z.
+
+Bestalde, </a><a href="#refteo:sortutako%20azpitaldea">(0)</a>
+ teorema notazio batukorrera
+egokituz eta \Z talde abeldarra dela kontuan hartuz, m,n <font face="symbol">Î</font> \Z
+bi elementuk sortzen duten azpitaldea
+[
+<font face="symbol">á</font> m,n <font face="symbol">ñ</font> = { im+jn  |  i,j <font face="symbol">Î</font> \Z } = (m,n)\Z
+]
+da.
+(Azkeneko berdintza lehenengo gaiko emaitzetatik ondorioztatzen da.)
+
+2)
+S<sub>3</sub> talde simetrikoan,
+\begingather*
+\Big &lt;
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+2 &amp; 1 &amp; 3
+\endpmatrix
+\Big &gt;
+=
+\Big {
+1,
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+2 &amp; 1 &amp; 3
+\endpmatrix
+\Big }
+<br>
+
+<font face="symbol">ò</font>ertexteta
+\Big &lt;
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+2 &amp; 3 &amp; 1
+\endpmatrix
+\Big &gt;
+=
+\Big {
+1,
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+2 &amp; 3 &amp; 1
+\endpmatrix,
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+3 &amp; 1 &amp; 2
+\endpmatrix
+\Big }.
+\endgather*
+
+3)
+Aurreko <a href="#refadik:azpitaldeak">(0)</a>
+ adibideetako 3) atalean eman dugun
+\Q<sup>*</sup>-ren H<sub><font face="symbol">p</font></sub> azpitaldea, <font face="symbol">p</font> zenbaki lehenetako multzoak
+sortutako azpitaldea da hain zuzen ere.
+(Kontuan hartu \Q<sup>*</sup> abeldarra dela.)
+\endadik
+
+
+
+\begindfn
+Izan bitez G taldea eta X <font face="symbol">Í</font>  G.
+Baldin eta <font face="symbol">á</font> X <font face="symbol">ñ</font>=G bada, X G-ren
+<i>sistema sortzaile\/</i> bat dela esaten dugu.
+Taldea elementu kopuru finitu batez sortu ahal bada,
+<i>finituki sortua\/</i> dela esaten dugu.
+\enddfn
+
+
+
+Nabaria da talde finitu guztiak finituki sortuak direla.
+Hala ere, alderantzizkoa ez da betetzen, jarraiko 1) adibideak
+erakusten duen bezala.
+
+
+
+\beginadik
+1)
+Aurreko <a href="#refadik:sortutako%20azpitaldea">(0)</a>
+ adibideetako 1) atalaren
+arabera, \Z=<font face="symbol">á</font> 1 <font face="symbol">ñ</font>=<font face="symbol">á</font> <font face="symbol">-</font>1 <font face="symbol">ñ</font> dugu.
+Beraz, \Z finituki sortua da, nahiz eta infinitua izan.
+
+2)
+Ikusi dugunez, elementu batek sortzen duen azpitaldea abeldarra da
+beti.
+Beraz, S<sub>3</sub> taldea, abeldarra ez izateagatik, ezin da elementu bakar
+batez sortu.
+Hala ere, bi elementuz sor daiteke:
+[
+S_3
+=
+\Big &lt;
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+2 &amp; 1 &amp; 3
+\endpmatrix,
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+2 &amp; 3 &amp; 1
+\endpmatrix
+\Big &gt;.
+]
+Hau honela dela ikusteko, ohartu bi permutazio hauen artean
+biderkadurak eginez S<sub>3</sub>-ko elementu guztiak lortzen direla.
+
+3)
+\Q ez da finituki sortua.
+Absurdora eramanez, \Q=<font face="symbol">á</font> a<sub>1</sub>/b<sub>1</sub>,<font face="symbol">¼</font>,a<sub>r</sub>/b<sub>r</sub> <font face="symbol">ñ</font>
+balitz, a<sub>i</sub> eta b<sub>i</sub> guztiak osoak izanik, orduan \Q-ko edozein
+elementu
+[
+n_1 &nbsp; (a_1b_1 + ·s + n_r &nbsp; (a_rb_r
+]
+modukoa litzateke eta, beraz, zatiki laburtezinean idatzita, bere
+izendatzailea gehienez b<sub>1</sub><font face="symbol">¼</font> b<sub>r</sub> litzateke.
+Hau absurdoa da.
+\endadik
+
+
+
+
+
+
+<p><a name="toc.5"></a></p><h1><a name="toc.5">5&nbsp;Koklaseak eta Lagrange-ren teorema</a></h1><a name="toc.5">
+
+
+
+\begindfn
+Izan bitez H <font face="symbol">£</font>  G eta g <font face="symbol">Î</font>  G.
+<ol>
+
+<li>
+H-rekiko g-ren <i>ezker-koklasea\/</i> ondorengo multzoa da:
+[
+gH = { gh  |  h <font face="symbol">Î</font>  H }.
+]
+
+</li><li>
+H-rekiko g-ren <i>eskuin-koklasea\/</i> ondorengo multzoa da:
+[
+Hg = { hg  |  h <font face="symbol">Î</font>  H }.
+]
+</li></ol>
+\enddfn
+
+
+
+Bestela esanda, gH={g}H eta Hg=H{g} dugu,
+</a><a href="#refdfn:azpimultzoen%20biderkadura">(0)</a>
+ definizioaren zentzuan.
+Gogoratzen badugu g elementu finkoaz biderkatzea G taldearen
+bijekzioa dela (hau <a href="#refteo:sinplifikagarriak">(0)</a>
+ teoreman ikusi
+genuen), garbi dago |gH|=|Hg|=|H| betetzen dela g <font face="symbol">Î</font>  G
+guztietarako.
+
+
+
+\beginadik
+<a name="refadik:koklaseak">
+
+1)
+H azpitaldea bera koklase bat da, bai ezkerraldetik zein
+eskuinaldetik: nahikoa da g=1 aukeratzea.
+
+2)
+Izan bedi
+[
+H
+=
+\Big {
+1,
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+2 &amp; 1 &amp; 3
+\endpmatrix
+\Big },
+]
+S<sub>3</sub>-ren azpitaldea.
+Orduan, H-rekiko ezker-koklaseak hauetxek dira:
+\begingather*
+1 · H
+=
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+2 &amp; 1 &amp; 3
+\endpmatrix
+H
+=
+H,
+<br>
+
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+3 &amp; 2 &amp; 1
+\endpmatrix
+H
+=
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+3 &amp; 1 &amp; 2
+\endpmatrix
+H
+=
+\Big {
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+3 &amp; 2 &amp; 1
+\endpmatrix,
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+3 &amp; 1 &amp; 2
+\endpmatrix
+\Big }
+<br>
+
+<font face="symbol">ò</font>ertexteta
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+1 &amp; 3 &amp; 2
+\endpmatrix
+H
+=
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+2 &amp; 3 &amp; 1
+\endpmatrix
+H
+=
+\Big {
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+1 &amp; 3 &amp; 2
+\endpmatrix,
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+2 &amp; 3 &amp; 1
+\endpmatrix
+\Big }.
+\endgather*
+Bestalde, H-rekiko eskuin-koklaseak beste hauek dira:
+\begingather*
+H · 1
+=
+H
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+2 &amp; 1 &amp; 3
+\endpmatrix
+=
+H,
+<br>
+
+H
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+3 &amp; 2 &amp; 1
+\endpmatrix
+=
+H
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+2 &amp; 3 &amp; 1
+\endpmatrix
+=
+\Big {
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+3 &amp; 2 &amp; 1
+\endpmatrix,
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+2 &amp; 3 &amp; 1
+\endpmatrix
+\Big }
+<br>
+
+<font face="symbol">ò</font>ertexteta
+H
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+1 &amp; 3 &amp; 2
+\endpmatrix
+=
+H
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+3 &amp; 1 &amp; 2
+\endpmatrix
+=
+\Big {
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+1 &amp; 3 &amp; 2
+\endpmatrix,
+\beginpmatrix
+1 &amp; 2 &amp; 3 <br>
+
+3 &amp; 1 &amp; 2
+\endpmatrix
+\Big }.
+\endgather*
+Emaitza hauetan ondorengo propietateak ikusten dira:
+<ol>
+
+<li>
+Elementu baten ezker-koklasea elementu horren beraren
+eskuin-koklasearen desberdina izan daiteke, hau da, gH\ne Hg gerta
+daiteke.
+
+</li><li>
+Ezker-koklaseak disjuntuak edo berdinak dira, eta beren bildura
+S<sub>3</sub> da.
+Beraz, ezker-koklaseek S<sub>3</sub>-ren partiketa bat osatzen dute.
+Beste horrenbeste gertatzen da eskuin-koklaseekin. 
+
+</li><li>
+Ezker-koklase desberdinen kopurua eta eskuin-koklaseena bat datoz.
+</li></ol>
+Atal honetan zehar ikusiko dugu propietate hauek ez direla kasu
+honetako berezitasunak, baizik eta talde guztietan eta azpitalde
+guztiekin betetzen direla.
+\endadik
+
+
+
+\beginteo
+</a><a name="refteo:koklaseen erlazioak">
+
+Izan bedi H <font face="symbol">£</font>  G.
+Orduan:
+<ol>
+
+<li>
+Definitzen badugu G-ren gainean ondorengo  <font face="symbol">~</font>  erlazioa,
+[
+g_1  <font face="symbol">~</font>  g_2
+\Longleftrightarrow
+<font face="symbol">$</font> h <font face="symbol">Î</font>  H : g_2=g_1h
+\Longleftrightarrow
+g_1<sup>-1</sup>
+
+
+  g_2 <font face="symbol">Î</font>  H,
+]
+orduan  <font face="symbol">~</font>  baliokidetasun erlazioa da eta g <font face="symbol">Î</font>  G elementu baten
+baliokidetasun klasea gH ezker-koklasea da.
+
+</li><li>
+Definitzen badugu G-ren gainean ondorengo  <font face="symbol">»</font>  erlazioa,
+[
+g_1  <font face="symbol">»</font>  g_2
+\Longleftrightarrow
+<font face="symbol">$</font> h <font face="symbol">Î</font>  H : g_2=hg_1
+\Longleftrightarrow
+g_2g_1<sup>-1</sup>
+
+
+   <font face="symbol">Î</font>  H,
+]
+orduan  <font face="symbol">»</font>  baliokidetasun erlazioa da eta g <font face="symbol">Î</font>  G elementu baten
+baliokidetasun klasea Hg eskuin-koklasea da.
+</li></ol>
+\endteo
+
+
+
+\beginfro
+Lehenengo atala baino ez dugu frogatuko, bestearen frogapena guztiz
+antzekoa da eta.
+Ikus dezagun  <font face="symbol">~</font>  baliokidetasun erlazioa dela.
+Propietate erreflexiboa bete egiten da, g=g· 1 izateagatik.
+Baldin eta g<sub>1</sub> <font face="symbol">~</font>  g<sub>2</sub> bada, orduan g<sub>2</sub>=g<sub>1</sub>h non h <font face="symbol">Î</font>  H den.
+Orduan g<sub>1</sub>=g<sub>2</sub>h<sup><font face="symbol">-</font>1</sup>
+
+
+   eta, H azpitaldea dela kontuan hartuz,
+g<sub>2</sub> <font face="symbol">~</font>  g<sub>1</sub>.
+Bestalde, g<sub>1</sub> <font face="symbol">~</font>  g<sub>2</sub> eta g<sub>2</sub> <font face="symbol">~</font>  g<sub>3</sub> badugu, orduan g<sub>2</sub>=g<sub>1</sub>h
+eta g<sub>3</sub>=g<sub>2</sub>h<font face="symbol">¢</font>, h,h<font face="symbol">¢</font> <font face="symbol">Î</font>  H izanik.
+Orduan g<sub>3</sub>=g<sub>1</sub>hh<font face="symbol">¢</font> eta g<sub>1</sub> <font face="symbol">~</font>  g<sub>3</sub>.
+
+Azkenik, aurki dezagun g <font face="symbol">Î</font>  G-ren baliokidetasun klasea:
+\beginalign*
+\ove /  g
+&amp;=
+{ g_2 <font face="symbol">Î</font>  G  |  g <font face="symbol">~</font>  g_2 }
+=
+{ g_2 <font face="symbol">Î</font>  G  |  \textexistitzen da h <font face="symbol">Î</font>  H non g<sub>2</sub>=gh den }
+<br>
+
+&amp;=
+{ gh  |  h <font face="symbol">Î</font>  H }
+=
+gH.
+\endalign*
+\endfro
+
+
+
+\beginkor
+Izan bedi H <font face="symbol">£</font>  G.
+Orduan, H-rekiko ezker-koklaseek zein eskuin-koklaseek G taldearen
+partiketa bat osatzen dute.
+Bereziki, bi ezker-koklase (edo eskuin-koklase) disjuntuak edo
+berdinak dira.
+Gainera,
+\beginalign*
+g_1H=g_2H
+\Longleftrightarrow
+<font face="symbol">$</font> h <font face="symbol">Î</font>  H : g_2=g_1h
+\Longleftrightarrow
+g_1<sup>-1</sup>
+
+
+  g_2 <font face="symbol">Î</font>  H
+<font face="symbol">ò</font>ertexteta
+Hg_1=Hg_2
+\Longleftrightarrow
+<font face="symbol">$</font> h <font face="symbol">Î</font>  H : g_2=hg_1
+\Longleftrightarrow
+g_2g_1<sup>-1</sup>
+
+
+   <font face="symbol">Î</font>  H.
+\endalign*
+\endkor
+
+
+
+Aurreko korolarioaren arabera, g <font face="symbol">Î</font>  G elementuaren koklasea
+(eskuinaldetik edo ezkerraldetik, ez du ardurarik) H-ren berdina da
+baldin eta soilik baldin g <font face="symbol">Î</font>  H bada.
+
+
+
+\beginteo
+Izan bedi H <font face="symbol">£</font>  G.
+Orduan, H-rekiko ezker-koklase desberdinen eta eskuin-koklase
+desberdinen kopuruak bat datoz.
+Kardinal komun horri G-ko H-ren <i>indizea\/</i> esaten zaio, eta
+|G:H| ikurraren bitartez adierazten da.
+\endteo
+
+
+
+\beginfro
+Izan bitez A={gH |  g <font face="symbol">Î</font>  G} eta B={Hg |  g <font face="symbol">Î</font>  G}, eta
+definitu <font face="symbol">j</font>:A<font face="symbol">®</font> B aplikazioa <font face="symbol">j</font>(gH)=Hg<sup><font face="symbol">-</font>1</sup>
+
+
+  
+erregelaren bitartez.
+Lehenengo eta behin, ohartu g<sub>1</sub>H=g<sub>2</sub>H izan daitekeela g<sub>1</sub>\ne g<sub>2</sub>
+izanik eta, beraz, <font face="symbol">j</font> ondo definituta dagoen ikusi behar
+dugula.
+Baina, azkeneko korolarioaren arabera, g<sub>1</sub>H=g<sub>2</sub>H dugu baldin eta
+soilik baldin g<sub>1</sub><sup><font face="symbol">-</font>1</sup>
+
+
+  g<sub>2</sub> <font face="symbol">Î</font>  H, hau da, baldin eta soilik baldin
+Hg<sub>1</sub><sup><font face="symbol">-</font>1</sup>
+
+
+  =Hg<sub>2</sub><sup><font face="symbol">-</font>1</sup>
+
+
+   bada.
+Honek, ondo definituta dagoela frogatzeaz gain, <font face="symbol">j</font>-ren
+injektibotasuna ematen digu.
+Bestalde, Hg <font face="symbol">Î</font>  B bada orduan <font face="symbol">j</font>(g<sup><font face="symbol">-</font>1</sup>
+
+
+  H)=Hg eta <font face="symbol">j</font>
+suprajektiboa da.
+Beraz, <font face="symbol">j</font> bijektiboa da eta ondorioz |A|=|B|, nahi bezala.
+\endfro
+
+
+
+Zergatik ezin dugu erabili gH<font face="symbol">®</font> Hg aplikazio naturalagoa,
+ezker-koklaseen multzotik eskuin-koklaseen multzora bijekzio bat
+definitzeko?
+
+
+
+\beginadik
+1)
+Badugu |\Z:2\Z|=2 dela, bi koklase baino ez dugulako: 2\Z,
+zenbaki bikoitien multzoa, eta 1+2\Z, zenbaki bakoitien multzoa.
+Aurreko gaian ikusi bezala, n <font face="symbol">Î</font> \N izanik, a+n\Z koklase
+desberdinak a-ri 0,1,<font face="symbol">¼</font>,n<font face="symbol">-</font>1 balioak emanez lortzen dira eta,
+hortaz, |\Z:n\Z|=n dugu.
+
+2)
+Izan bedi H </a><a href="#refadik:koklaseak">(0)</a>
+ adibideetako 2) puntuan aztertu
+dugun S<sub>3</sub>-ren azpitaldea.
+Orduan, bertan emandako kalkuluen arabera, |S<sub>3</sub>:H|=3.
+
+3)
+Bi matrize A,B <font face="symbol">Î</font>  GL<sub>n</sub>(K) emanda, SL<sub>n</sub>(K)-rekiko ezker-koklase
+bera emango digute baldin eta soilik baldin A<sup><font face="symbol">-</font>1</sup>
+
+
+  B <font face="symbol">Î</font>  SL<sub>n</sub>(K) bada,
+hau da, det A=det B denean.
+Kontuan hartzen badugu GL<sub>n</sub>(K)-ko matrize baten determinantea
+K<sup>*</sup> talde biderkakorreko edozein elementu izan daitekeela,
+|GL<sub>n</sub>(K):SL<sub>n</sub>(K)|=|K<sup>*</sup>| ondorioztatzen dugu.
+Bereziki, |GL<sub>n</sub>(\Z/p\Z):SL<sub>n</sub>(\Z/p\Z)|=p<font face="symbol">-</font>1.
+
+4)
+Aurreko ataleko argudioa A,B <font face="symbol">Î</font>  O<sub>n</sub>(\R) matrizeetarako ere baliozkoa
+da, SO<sub>n</sub>(\R) azpitaldearekiko.
+Diferentzia bakarra da matrize ortogonal baten determinanteak 1 eta
+<font face="symbol">-</font>1 balioak baino ezin dituela hartu, eta ez \R<sup>*</sup>-ko elementu
+guztiak.
+Beraz, |O<sub>n</sub>(\R):SO<sub>n</sub>(\R)|=2.
+\endadik
+
+
+
+\beginteo[Lagrangeren teorema]
+Izan bedi H <font face="symbol">£</font>  G.
+Orduan:
+<ol>
+
+<li>
+|G|=|G:H||H|.
+
+</li><li>
+Baldin eta G finitua bada, orduan |G:H|=|G|/|H|.
+Bereziki, |H| |  |G|.
+</li></ol>
+\endteo
+
+
+
+\beginfro
+(i)
+G finitua denean baino ez dugu frogatuko, kasu orokorrean kardinal
+infinituen teoriaren oinarriak ezagutu behar dira eta.
+Orduan, |G:H|=n bada, H-rekiko n ezker-koklase desberdin dago,
+demagun g<sub>1</sub>H,<font face="symbol">¼</font>,g<sub>n</sub>H direla.
+Orain, G koklase hauen bildura disjuntua denez,
+[
+|G| = <font face="symbol">å</font>_i=1<sup>n</sup> &nbsp; |g_iH| = <font face="symbol">å</font>_i=1<sup>n</sup> &nbsp; |H| = n|H|
+= |G:H| &nbsp; |H|.
+]
+
+(ii)
+Hau aurreko atalaren ondorio berehalakoa da.
+\endfro
+
+
+
+\beginadi
+Izan bedi H biraketek osatzen duten azpitaldea D<sub>2n</sub>-ren barruan.
+Orduan, |D<sub>2n</sub>:H|=|D<sub>2n</sub>|/|H|=2.
+\endadi
+
+
+
+Lagrangeren teoremak dituen aplikazio garrantzitsuenetako bat
+azpitaldeen ordenen gainean ezartzen duen murrizketa da.
+Ikus dezagun adibide pare bat.
+
+
+
+\beginadik
+<a name="refadik:ordena lehena">
+
+1)
+Nola S<sub>3</sub>-k sei elementu dituen, bere azpitaldeen ordena 1, 2, 3
+edo 6 baino ezin da izan.
+Beraz, kalkulu bat ere egin gabe, 4 edo 5 elementu dituen
+azpimultzo bat ezin da inola ere S<sub>3</sub>-ren azpitaldea izan.
+
+2)
+Demagun G taldearen ordena zenbaki lehena dela.
+Orduan, G-k bi azpitalde baino ez ditu: {1} eta G.
+\endadik
+
+
+
+\beginteo[Indizearen propietate biderkakorra]
+Baldin eta K <font face="symbol">£</font>  H <font face="symbol">£</font>  G bada, orduan |G:K|=|G:H||H:K|.
+\endteo
+
+
+
+\beginfro
+Berriro ere, G finitua dela suposatuz frogatuko dugu:
+[
+|G:K| = (|G|)/(|K|) = (|G|)/(|H|) · (|H|)/(|K])
+= |G:H| &nbsp; |H:K|.
+]
+\endfro
+
+
+
+Koklaseak erabiliz, hurrengo teoreman H eta K bi azpitalderen
+biderkaduraren kardinala eman dezakegu H-ren, K-ren eta
+H<font face="symbol">Ç</font> K-ren ordenen funtzioan.
+Ohartu ez dugula behar HK azpitaldea izaterik.
+
+
+
+\beginlem
+Izan bitez H eta K talde baten azpitaldeak.
+Orduan,
+[
+|H:H<font face="symbol">Ç</font> K| = |{hK  |  h <font face="symbol">Î</font>  H }| = |{Kh  |  h <font face="symbol">Î</font>  H}|.
+]
+\endlem
+
+
+
+\beginfro
+Froga dezagun lehenengo berdintza, bigarrena antzera lortzen da eta.
+Orduan, h(H<font face="symbol">Ç</font> K) moduko koklase desberdinen kopurua eta
+hK modukoena berdinak direla ikusi behar dugu.
+Horretarako, nahikoa da h<sub>1</sub>(H<font face="symbol">Ç</font> K)=h<sub>2</sub>(H<font face="symbol">Ç</font> K) eta h<sub>1</sub>K=h<sub>2</sub>K
+berdintzak baliokideak direla frogatzea, h<sub>1</sub>,h<sub>2</sub> <font face="symbol">Î</font>  H izanez gero.
+Hau honela lortzen dugu:
+[
+h_1K=h_2K
+\Longleftrightarrow
+h_1<sup>-1</sup>
+
+
+  h_2 <font face="symbol">Î</font>  K
+\Longleftrightarrow
+h_1<sup>-1</sup>
+
+
+  h_2 <font face="symbol">Î</font>  H<font face="symbol">Ç</font> K
+\Longleftrightarrow
+h_1(H<font face="symbol">Ç</font> K)=h_2(H<font face="symbol">Ç</font> K).
+]
+\endfro
+
+
+
+\beginteo
+Izan bitez H eta K talde baten azpitaldeak.
+Orduan, |HK|=|K||H:H<font face="symbol">Ç</font> K|=|H||K:H<font face="symbol">Ç</font> K|.
+Bereziki, H eta K finituak badira,
+[
+|HK| = (|H||K|)/(|H<font face="symbol">Ç</font> K|).
+]
+\endteo
+
+
+
+\beginfro
+Azpitaldeak finituak direla suposatuko dugu.
+Orduan, aurreko lemaren arabera,
+[
+|HK| = \Big| <font face="symbol">È</font>_h <font face="symbol">Î</font>  H hK \Big|
+= |K| &nbsp; |H:H<font face="symbol">Ç</font> K|
+]
+lortzen dugu.
+Antzera arrazoitzen dugu |HK|=|H||K:H<font face="symbol">Ç</font> K| berdintza froga\-tzeko.
+\endfro
+
+
+
+Orain, oso erraz justifikatu ahal dugu
+\pagereforr:HK ez azpitaldea. orrialdeko H eta K azpitaldeen
+biderkadura ez dela S<sub>3</sub>-ren azpitaldea, kalkulu bat bera egin gabe.
+Izan ere, H<font face="symbol">Ç</font> K={1} denez, azkeneko teoremaren arabera |HK|=4
+dugu eta orduan, Lagrangeren teorema aplikatuz, HK ez da S<sub>3</sub>-ren
+azpitaldea, 4\nmid 6 izateagatik.
+
+<hr>
+<p></p><h1>Table Of Contents</h1>
+</a><p><a name="refadik:ordena lehena"></a><a href="#toc.1"></a></p><h1><a href="#toc.1">1&nbsp;Taldeen oinarrizko propietateak</a></h1>
+<p><a href="#toc.2"></a></p><h1><a href="#toc.2">2&nbsp;Taldeen adibideak</a></h1>
+<p><a href="#toc.3"></a></p><h1><a href="#toc.3">3&nbsp;Azpitaldeak</a></h1>
+<p><a href="#toc.4"></a></p><h1><a href="#toc.4">4&nbsp;Azpimultzo batek sortutako azpitaldea</a></h1>
+<p><a href="#toc.5"></a></p><h1><a href="#toc.5">5&nbsp;Koklaseak eta Lagrange-ren teorema</a></h1>
+
+
+</body></html>

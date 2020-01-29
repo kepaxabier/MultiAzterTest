@@ -1,0 +1,332 @@
+
+
+
+
+                               2Simplex metodoa
+Programazio linealeko problemak ebazteko prozedura edo metodo algebraikoa.
+Demagun hurrengo problema:
+Grafikoki ebatziz:
+dtbpF3.8156in3.5743in0ptFigurelanguage "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid\s\do5(f)ile
+"T";width 3.8156in;height 3.5743in;depth 0pt;original-width 6.314in;original-
+height 5.9119in;cropleft "0";croptop "1";cropright "1";cropbottom
+"0";tempfilename ’IOXAK802.wmf’;tempfile-properties "XPR";
+Soluzio hoberena: (3,2)
+Balio hoberena: 28
+Orain simplex metodoarekin hasteko modu estandarrean idatziko dugu:
+1.3Era estandarra
+Problema modu estandarrean idazten dugu bertako murrizketa guztiak, aldagaien
+ez negatibotasuna ezik, berdintza bihurtzen ditugunean. Hau lortzeko lasaiera
+aldagaiak erabiltzen ditugu.
+Ikus dezagun grafikoki honen esanahia:
+dtbpF3.8052in3.3658in0ptFigurelanguage "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid\s\do5(f)ile
+"T";width 3.8052in;height 3.3658in;depth 0pt;original-width 6.2967in;original-
+height 5.5625in;cropleft "0";croptop "1";cropright "1";cropbottom
+"0";tempfilename ’IOYO5M02.wmf’;tempfile-properties "XPR";
+1.3Oinarrizko soluzio egingarriak
+Ikusten dugunez, bertan ekuazio linealetako sistema agertzen zaigu.
+Sistema hau matrizialki idatz dezakegu:
+Laburrago, lehenengo matrizeari A deituta eta eskumako terminoak jasotzen
+duenari b,Ax=bidatz dezakegu. Horrela, programazio linealeko problemaren
+soluzio egingarriak Ax=bekuazio linealetako sistemaren soluzio izan behar dute.
+Adibidez (0,0) problema linealaren soluzio egingarria sitemaren hurrengo
+soluzioa izango da: (0,0,8,5,8).
+Baina kontuz, ekuazio linealetako sistemaren soluzio guztiak ez dira soluzio
+egingarri. Adibidez (0,8,−8,−3,0) Ax=bsistemaren soluzio izanikez da
+programazio linealeko problemaren soluzio egingarria (ohartu aldagai guztiak ez
+negatiboak izan behar dutela).
+Goazen orain sistema arretaz aztertzea. Ikusten dugunez Ax=bsistema
+bateragarria da, heina(A)= murrizketa kopurua = heina(A:b)=3 betetzen baita.
+Gainera, aldagai kopurua (5) heina edo murrizketa kopurua (3) baino handiagoa
+denez, sistema bateragarri indeterminatua dugu. Horregatik edozein bi aldagaiei
+zero balioa ematen badiegu beste hiruren balioa erabakita dago.
+Hau guztia matrizialki idaztera goaz.
+Hasierako Ax=bsistema hurrengoa da:
+eta zutabe matrizeak hartuta (ohartu matrizeak aldagaiaren koefizienteak
+ekuazio linealetako sisteman jasotzen dituela) hurrengo modura ere idatz
+daiteke:
+Bi aldagaiei zero balioa ematen badiegu sistema beste modura idazten dugu.
+Adibidez, eta zero egiten baditugu aurreko sistema horrela idatz daiteke:
+edo
+Ohartu bi aldagai zero egiterakoan hauei dagozkien zutabe bektoreak A-tik
+kentzen ditugula eta besteekin -ko oinarri bat osatzen dugula. Hain zuzen
+horregatik zero balioa hartzen duten aldagaiak ez oinarrizko aldagaiak deitzen
+ditugu eta sistema betetzeko balioa hartuko dutenei oinarrizko aldagaiak,hauei
+elkartutako koefizienteen bektore zutabeek -ko oinarri bat osatzen baitute.
+Testuinguru honetan, modu honetan (bi aldagai zero eginez) lortutako
+Ax=bekuazio linealetako sistemaren soluzioa, oinarrizko soluzioa deitzen dugu
+eta aldagai guztiak ez negatiboak badira oinarrizko soluzio egingarria. Orain
+gure problemaren oinarrizko soluzio egingarri guztiak lortuko ditugu:
+hau da, oinarrizko soluzio egingarria ⟺X-en, soluzio egingarrien multzoaren,
+erpin.
+Aurretik ikusitakoaren arabera, programazio linealeko problemak soluzioa badu,
+hauetako bat gutxienez erpin bat izango da, hau da oraingo hitzetan, berari
+elkartutako oinarrizko soluzio egingarria. Simplex metodoa oinarrizko soluzio
+egingarri hau bilatzeko prozedura bat da. Horretarako oinarrizko soluzio
+egingarri batetik abiatuta helburu funtzioa hobetuko duen beste batera mugitzen
+da eta hobetezerik ez duenean bilaketa prozesua amaitu egiten da, soluzio
+hoberena lortu baitu. Hau da, erpin batetik bestera mugitzen da soluzio bila.
+Hau lortzeko taulak erabiliko ditu. Oinarrizko soluzio egingarri batetik
+bestera joateko taula batetik beste batera pasako da. Hau nola egiten den
+ikusiko dugu orain:
+
+Ax=bekuazio linealetako sistemaren oinarrizko soluzio egingarri batetik
+abiatuko gara. Adibidez . Orain berari elkartutako taula osatuko dugu.
+Oinarrizko soluzio honi elkartutako -ko oinarria da. Ohartu oinarri hau hain
+zuzen kanonikoa dela. Simplex metodoan erabiltzen diren taulak bektore zutabeen
+oinarriarekoko koordenatuak jasotzen ditu, hauekin informazio gehigarria
+lortzeko. Goazen hortaz zutabe bektoreen koordenatuak oinarri kanonikoarekiko
+lortzea:
+hau da
+
+Eta horrela eta hain zuzen oinarri kanonikoa hartu dugunez koefizienteak
+horiexek dira. -ren koefizienteak oinarri kanonikoarekiko eta
+Modu berdinean b bektorea ere hauen konbinazio lineal moduan idatz daiteke
+b= eta oinarri kanonikoarekiko koefizienteak:
+eta
+Koefiziente hauekin taula bat osatuko dugu:
+Taula hau oinarrizko soluzio egingarriari elkartutakoa da. Beste batzuetan
+horrela agertzen da
+Orain prozedurak hurrengo galdera egiten du: oinarrizko soluzio egingarriak
+helburu funtzioan ematen digun balioa hobe daiteke? Guk garbi ikusten dugu
+hori, 0 lortzen baitugu. Orduan beste oinarrizko soluzio egingarri (erpin)
+batera joan beharko dugu, baina zein bestera? nola aztertuko dugu hau?
+Beste modu batera galdetzen ari garena hurrengoa da: zein aldagai bihurtuko da
+oinarrizko (oinarrian sartu) eta zein ez oinarrizko (oinarritik irten)?
+Goazen hastera zein bihurtuko den oinarrizko galderari erantzuten. edo izango
+da. Ohartu, soluzio horretan aldagai ez oinarrizkoak (zero balioa hartzen
+dutenak) eta direla eta oinarrizkoak eta
+
+hartzen badugu bere ekarpena helburu funtzioan 6-koa da. Hau idatziko dugu.
+Baina -etik unitate bat sartzea -n bat galtzea da, -n beste bat eta -n bi.
+Honi, oinarrizko aldagai bakoitzaren ekarpena kontuan hartuta, sartzearen
+kostua unitateko dei diezaiokegu eta adierazi. Hain zuzenHorrela sartzen badugu
+bere ekarpen garbia unitateko izango da (0−6=−6)Informazio hau taula prestatzen
+bada zuzenenean lan eginda lor dezakegu:
+b-ri dagokion laukitxo hori aztertzen ari garen oinarrizko soluzio egingarriak
+helburu funtzioan ematen duen balioa jasotzeko erabiltzen dugu.
+Horrela ekarpen garbi txikiena duenari emango diogu sarrera eta adieraziko dugu
+( j ez oinarrizko aldagaien indizea).
+oharrak:
+1. (j ez oinarrizko indize guztietako) bada orduan programazio linealeko
+problemaren soluzio hoberena lortu dugu eta ez dugu aurrera jarraitu beharrik,
+ezin baitugu helburu funtzioa hobetu.
+2. i oinarrizko aldagai guztientzako
+Gure adibidean, oinarrizko aldagai bihurtuko bada, hau da oinarrian sartu, zein
+irtetzen da eta ez oinarrizko bihurtu, zero balioa hartu?
+Aukeran eta ditugu. Gure komeni zaiguna ahalik eta handiena izatea ekuazioak
+kontuan hartuta, hau da, aldagaien ez negatibotasuna errespetatuz.
+Azter dezagun lehenengo ekuazioa . Esan dugunez ez oinarrizkoa da, orduan
+ekuazioa da. -etik unitate bat sartzeko -tik unitate bat kendu behar da. Ez
+negatibotasuna errespatetzeko -etik gehienez 8 sar ditzakegu, hau da, zero egin
+harte (ez oinarrizko bihurtu arte).
+Orduan begiratu behar duguna hurrengoa da: irteera aldagaiak zero
+bihurtzerakoan zer balio ematen dion sarrera aldagaiari irtetzeko aztertzen ari
+garen aldagaiak soluzioan hartzen duen balioa, b-renkoefizientea oinarriaren i
+bektorearekiko).
+Balio hauek gure irteera aldagaientzako hurrengoak dira:
+aldagairentzako, ikusi dugunez: Hortik aurrera -ek balioak hartzen baditu
+aldagaiak balio negatiboak hartu behar ditu.
+aldagairentzako: Hortik aurrera -ek balioak hartzen baditu aldagaiak balio
+negatiboak hartu behar ditu.
+Eta aldagairentzako: Hortik aurrera -ek balioak hartzen baditu aldagaiak balio
+negatiboak hartu behar ditu.
+Hau guztia taulan erraz sar dezakegu Θ zutabea erantsiz eta honen elementuak
+hurrengo moduan lortuz: bzutabeko elementuak sarrera aldagaiaren zutabeko
+koefizienteekin zatituz. Ikus dezagun:
+Kalkuluak eginda, zein izango da irteten dena? Aurreko balioetatik positiboen
+artean minimoa ematen didana. Hau hartuko ez bagenu, ez negatibotasuna ez
+genuke errespetatuko eta ez genuke oinarrizko soluzio egingarririk lortuko. Hau
+da orduan minimo ematen duena, aterako da.
+Ideia guzti hau grafikoki erraz ikus dezakegu: (0,0) erpinetik mugitzea erabaki
+dugu. Gainera aldagaia sartuko bada, aldagai hau balioak hartzen hasiko da.
+Baina noraino? (4,0) erpineraino, ezin du hurrunago joan. Oinarrizko soluzio
+egingarrien hitzetan, (0,0,8,5,8)-tik abiatuta aldagaiak balioak hartuko ditu
+eta beste bat zero egingo da, hau da, murrizketa berdintasunez bete. Ikus
+daitekenez lehen aldagaia zero balioa hartzen ((3) murrizketa dagokiona).
+Bertan eta eta Gelditu ordez aurrera jarraituko bagenu aldagaia balio
+negatiboak hartu beharko lituzke eta hori ez da oinarrizko soluzio egingarri.
+Oharra:sartzen den aldagaia idazten badugu eta oinarriko i bektoarekiko
+koefizientea bada, orduan i bektorea ez da oinarritik irtetzeko hautagai.
+Aurrekoan oinarrituta hurrengo emaitza dugu: j indize baterako bada eta (i
+oinarrizko indize guztientzako) betetzen bada, problemak ez du soluzio
+hoberenik.
+Orduan orain oinarri berri bat dugu . Horrela, taula osatzeko bektore guztien
+koefizienteak oinarri berri honekiko lortu behar ditugu.
+eta hurrengo koefizienteak ditugu:
+
+
+
+
+
+eta hurrengo koefizienteak ditugu:
+
+
+eta
+
+
+beta hurrengo koefizienteak ditugu:
+
+
+eta
+
+
+Horrela, taula osatzen dugu:
+
+
+Ikus dezakegunez oinarrizko soluzio egingarri berria x da. Grafikoki ikus
+dezakegunez, taula batetik bestera pasatzerakoan oinarrizko soluzioegingarri
+batetik bestera pasa gara edo jatorrizko formulazioan erpin batetik bestera (
+(0,0)⟶(4,0)).
+dtbpF3.8052in3.3658in0ptFigurelanguage "Scientific Word";type "GRAPHIC";maintain-
+aspect-ratio TRUE;display "USEDEF";valid\s\do5(f)ile "T";width 3.8052in;height
+3.3658in;depth 0pt;original-width 6.2967in;original-height 5.5625in;cropleft
+"0";croptop "1";cropright "1";cropbottom "0";tempfilename ’IOYODF04.wmf’;tempfile-
+properties "XPR";
+Soluzio hoberena lortu al dugu? Ez, da eta (i oinarrizko indize).
+Hain zuzen sartzen den aldagaia izango da. Eta irtetzen dena? horretarako Θ
+zutabea osatzen dugu
+Eta irtetzen den aldagaia
+Oraingo oinarri berria . Oinarri honekiko koefiziente berriak lortzeko beste modu
+bat emango dugu. Hain zuzen taulan bertan lan eginteko prestatzen dira simplex
+metodoan taulan.
+Taulen arteko bihurketa formulak
+Guk genuen adibidea (5 aldagai eta 3 murrizketa) abiapuntu hartuta taula batetik
+bestera, hau da, oinarrizko soluzio egingarri batetik bestera pasatzerakoan
+elementuen artean dagoen erlazioa aztertuko dugu. Horrela bihurketa formulak
+lortuko ditugu. Gero hauek aplikatzea nahikoa izango da.
+Orokortzeko asmoz, hurrengo notazioa erabiliko dugu: elementua bektorearen
+koefizienteak bektorearekiko lehenengo oinarriarekin eta elementua bektorearen
+koefizienteak bektorearekiko oinarri berriarekin. Ohartu oinarri batetik bestera
+pasatzerakoan soilik bektore bat aldatzen dugula, horregatik errenkada berezi
+honen elementuak s indizearekin adierazten ditugu. Modu berdinean sartzen den
+aldagaiaren koefizienteak jasotzen dituen zutabearen indizea e adieraziko dugu.
+Azkenik errenkada jasotzeko 0 indizea erabiliko dugu, baita bzutabea adierazteko.
+Orduan hurrengo bidaia egin nahi dugu:
+taulatik
+taulara pasatzeko formulak.
+Ikusten dugunez hasierako oinarrizko soluzio egingarriari dagokion oinarritik
+irtetzen da eta sartu.
+
+hasierako oinarriarekiko:Orain, adibidez, zutabeari dagozkion eta erlazionatuko
+ditugu. Beste zutabeekin berdin berdin egingo genuke. koefizienteak oinarri
+bakoitzean hurrengoak dira: oinarriarekiko eta oinarrekiko ordezkatuz:Orain
+koefizienteak berdinduz:
+azkenekotik eta hau beste bietan ordezkatuz:
+eta
+Ikusten dugunez (irteera errenkadako eta sarrera zutabeko) elementuak paper
+garrantzitsua jokatzen du bihurketa formuletan, guztietan agertzen baita.
+Horregatik pibot izenarekin ezagutzen da eta bera agertzen den errenkadari pibot
+errenkada eta, modu berdinean, agertzen den zutabea pibot zutabea.
+Esan dugunez beste zutabeekin berdin berdin egin dezakegu. Formulak orokortu
+aurretik errenkadako elementuekin zer gertatzen den ikusi behar dugu, hau da, 0
+indizea duten taulako elementuekin. Orain ere 2 zutabekoa lortuko dugu. Besteekin
+modu berdinean egingo genuke:
+
+Aurreko bihurketa formulak erabiliz:
+
+
+
+
+hau da,
+Falta zaiguna helburu funtzioak lortzen duen balioa bi tauletan erlazionatzea: eta
+Hauek ordezkatuz:
+
+
+
+Lortutako emaitzak orokortuz:
+Errazteko hurrengo moduan ikus dezakegu (i≠s) berria lortzeko -tik abiatuta
+errektangelu bat eraikitzen dugu elementu hau pibot errenkadara eta pibot zutabere
+proiektatuz. Elementuari kenduko dioguna hurrengoa da: errektangeluko kontrako
+erpinen biderkaketa zati pibota.
+dtbpF2.1248in1.6241in0ptFigurelanguage "Scientific Word";type "GRAPHIC";maintain-
+aspect-ratio TRUE;display "USEDEF";valid\s\do5(f)ile "T";width 2.1248in;height
+1.6241in;depth 0pt;original-width 4.1926in;original-height 3.1929in;cropleft
+"0";croptop "1";cropright "1";cropbottom "0";tempfilename ’IOYO8P03.wmf’;tempfile-
+properties "XPR";
+
+Goazen orain gure probleman hauek lortzea. Genuen azkeneko taula oinarrizko
+soluzio egingarriari elkartutakoa zen. Hain zuzen:
+Eta ikusten dugunez pibota da. honekin formulak aplikatuz hurrengo taula lortzen
+dugu.
+oinarrizko soluzio egingarriari elkartutako taula.
+Hurrengo aldaketa iegin dugu taula batetik bestera pasatzerakoan:
+
+Grafikoki:
+dtbpF3.8052in3.3658in0ptFigurelanguage "Scientific Word";type "GRAPHIC";maintain-
+aspect-ratio TRUE;display "USEDEF";valid\s\do5(f)ile "T";width 3.8052in;height
+3.3658in;depth 0pt;original-width 6.2967in;original-height 5.5625in;cropleft
+"0";croptop "1";cropright "1";cropbottom "0";tempfilename ’IOYOKB05.wmf’;tempfile-
+properties "XPR";
+Soluzio hoberena lortu al dugu? Bai, (i=1,...,5) baita. Orduan soluzio hoberena
+eta Balio hoberena 28.
+Laburtuz simplex metodoaren prozedura m murrizketa eta n aldagai ditugunean
+hurrengoa da:
+1. pausoa. Aurkitu x hasierako oinarrizko soluzio egingarria.
+2. pausoa. Kalkulatu oinarrizko soluzioari dagokion taula.
+3. pausoa. Aztertu zenbakiak. Hiru kasu ager daitezke:
+a) j=1, ...,n indize guztietarako da. Orduan x soluzio hoberena da. Eta bukatu da.
+b) Existitzen da j indizea non den eta gainera ∀i=1, ..., m den. Kasu honetan
+maximizazio problemak ez du hoberenik. Bukatu da.
+c) Ez da ez a) ezta b) egiaztatzen. Orduan jarraitu oinarri berri baten bilaketa.
+4. pausoa. Sarrera irizpidea: oinarri berrian sartuko den zutabe bektorea
+aukeratuko da, hurrengo irizpidearen bitartez: e indizerako (1≤e≤n):
+bete beharko da.
+5. pausoa. Irteera irizpidea: oinarritik irtengo den zutabe bektorea aukeratuko da
+hurrengo irizpidearen bidez: indizerako (1≤s≤m)
+bete beharko da
+Kalkulua errazteko e-garren zutabeko koefiziente positiboei dagozkien puntuaren
+oinarrizko aldagaiak koefiziente hauetaz zati daitezke eta emaitza hauek taularen
+zutabe berri batean ipin daitezke. Honela, zutabe honen zatidura txikienak,
+oinarritik irtengo den bektorea emango digu.
+6. pausoa. Aukeratu oinarri berriari elkartutako oinarrizko soluzio egingarria,
+hurrengo berdintzak erabiliz:
+eta 2. pausora itzuli.
+
+Soluzio hoberenen aniztasuna
+Simplex algoritmoa aplikatuz, suposa dezagun ≥0 (∀j=1, ..., m) gertatzen dela, hau
+da, soluzio hoberena lortu dugula. Edozein taulan oinarrizko aldagaie dagozkien
+balioak zero direnez, azken errenkadak gutxienez m zero ditu. m zero baino gehiago
+dituenean soluzio anizkoitzaren posibilitatea adierazten du.
+Oinarrizko soluzio egingarri hoberen posible hauek aurkitu nahi baditugu,
+algoritmoaren 4. pausora joan eta sobera dagoen zero bati dagokion zutabe bektorea
+oinarrian sartu. Beste zeroekin berdin egingo dugu. Honela, lortutako oinarrizko
+soluzio egingarri hoberenen konbinazio ganbilak ere soluzio hoberenak izango dira.
+Adibidez:
+Zigorren metodoa
+Metodo honekin hasierako oinarrizko soluzio egingarriak lortzen ditugu.
+Demagun hurrengo problema:
+1. pausoa.Modu estandarrean idatzi,
+Ohartu jatorrizko problemak eta modu estandarrean idatzitakoak baliokideak direla.
+hau da, estandarreko oinarrizko soluzio egingarria jatorrizkoaren soluzio
+egingarrien multzoko erpin izango da.
+2. pausoa.Eskuinaldea negatiboa duten murrizketak bider -1 egin:
+3. pausoa.A osatu eta m (murrizketa kopurua) ordenako unitate azpimatrizea ez
+badugu, aldagai artifizialak erantsi, berdintza murrizketa bakoitzeko gehienez
+bat.
+Pauso honen helburua B identitate azpimatrizea lortzea da. Horrela B-ko zutabe
+bektoreak -ko oinarri kanonikoa osatzen dute eta oinarri hau hartuz lehenengo
+taula erraz bete dezakegu.
+Ikus dezakegunez gure adibidean ez dugu 2 ordenako identitate azpimatrizea.
+Horregatik aldagi artifizialak erantsi beharko ditugu:
+orain eta bertan B= 2 ordenako identitate matrizea dugu. Orduan oinarri kanonikoa
+hartuz lehenengo taula erraz bete dezakegu. Hasierak oinarrizko soluzio egingarria
+x=(0,0,0,0,1,1)
+Ohartu jatorrizko problema eta artifiziala ez direla baliokideak, baina oinarrizko
+soluzio egingarriaren aldagai artifizialak ez oinarrizkoak badira (nuluak), orduan
+osagai artifizialak kenduz estandarreko oinarrizko soluzio egingarria lortzen
+dugu.
+Aurrekoa helburu funtzioarekin lotuz, aldagai artifizialak soluziotik kendu nahi
+baditugu, gure helburu funtzioan kaltegarri izatea nahi dugu. Horrela, maximoko
+probleman kantitate negatibo oso handia ematea nahi dugu. Gure helburu funtzio
+berria:
+non M zenbaki positibo oso handia den. Horrexegatik ezagutzen da zigorren metodoa
+izenarekin.
+Ebazpena:
+eta x=(0,0,0,0,1,1) hasierako oinarrizko soluzio egingarriari dagokion taula:
+Hurrengo taula:
+eta hurrengoa:
+Soluzio hoberena:
+Balio hoberena: −5 maximoko probleman. Jatorrizko minimoko probleman 5.
+

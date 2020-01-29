@@ -1,0 +1,2059 @@
+
+
+
+MATEMATIKA
+DISKRETUA ETA
+ALGEBRA
+Bigarren zatia
+F. Xabier Albizuri Irigoyen
+257 bulegoa, Tel : 943015038
+fx.albizuri@ehu.es
+www.sc.ehu.es/ccwalirx/docs/Materiala.htm
+1
+
+GAIAK
+1. EGITURA ALGEBRAIKOAK
+2. MATRIZEAK
+3. BEKTORE ESPAZIOAK
+4. AUTOBALIO ETA AUTOBEKTOREAK
+2
+
+1. gaia : EGITURA
+ALGEBRAIKOAK
+ERAGIKETA BITARRAK
+A multzoaren gaineko eragiketa (bitar itxia)
+deituko diogu A × A-tik A-rako edozein funt-
+ziori. Idazkera : a, b ∈ A emanik, f (a, b) = a
+b
+(edo dagokion ikurra).
+Adibideak
+(a) Z+ multzoan batuketa.
+(b) Z+ multzoan kenketa ez da eragiketa bitar
+itxia.
+A multzoko
+eragiketa elkarkorra da baldin
+edozein a, b, c ∈ A-rako :
+(a
+b)
+c = a
+(b
+c)
+Eta trukakorra da baldin :
+a
+b = b
+a
+3
+
+Idazkera : baldin a ∈ A eta B ⊆ A,
+a
+B = {a
+x | x ∈ B}
+Adibidez 3 Z =
+{. . . , −6, −3, 0, 3, 6, . . .}.
+Identitatea deituko diogu e ∈ A elementuari
+baldin edozein a ∈ A-rako :
+a
+e = e
+a = a
+Propietatea 1
+Identitatea, existizen bada, bakarra da.
+Frogatu
+Identitatea e delarik, a ∈ A elementuaren al-
+derantzizkoa deituko diogu a ∈ A elementuari
+baldin :
+a
+a = a
+a = e
+Baldin a-k alderantzikoa badu, esango dugu al-
+deranzkarria dela, eta bestalde, (a ) = a.
+Biderketa idazkera : a = a−1
+Batuketa idazkera : a = −a, a − b = a + (−b)
+4
+
+Propietatea 2
+Eragiketa elkarkorra delarik, elementu batek al-
+derantzizkoa badu, hau bakarra da.
+Frogatu
+Propietatea 3
+Eragiketa elkarkorra delarik, a eta b alderanz-
+karriak badira orduan :
+(a
+b) = b
+a
+Frogatu
+Esango dugu a ∈ A sinpliﬁkagarria dela baldin
+ezkerretik eta eskuinetik sinpliﬁkagarria bada,
+hau da, edozein x, y ∈ A-rako :
+a
+x = a
+y ⇒ x = y
+x
+a = y
+a ⇒ x = y
+Propietatea 4
+Eragiketa elkarkorra delarik, elementu bat al-
+deranzkarria bada orduan sinpliﬁkagarria da.
+Frogatu
+5
+
+ERAZTUNAK
+Izan bedi A multzoa, non + eta · eragiketak
+ditugun (ez dute zenbakien arteko ohiko eragi-
+ketak izan beharrik). (A, +, ·) egitura algebrai-
+koari eraztuna deituko diogu baldin :
+(1) Batuketa elkarkorra da : edozein a, b, c ∈ A-
+rako, (a + b) + c = a + (b + c)
+(2) Batuketa trukakorra da : a + b = b + c
+(3) Existitzen da zeroa, z ∈ A batuketako iden-
+titatea : edozein a ∈ A-rako, a + z = z + a = a
+(4) Edozein a ∈ A-rako existitzen da −a ∈ A
+batuketako alderantzizkoa : a − a = −a + a = z
+(5) Biderketa elkarkorra da : edozein a, b, c ∈ A-
+rako, (a · b) · c = a · (b · c)
+(6) Biderketa banakorra da batuketarako :
+a · (b + c) = a · b + a · c eta (a + b) · c = a · c + b · c
+Biderketa trukakorra bada esango dugu eraz-
+tuna trukakorra dela. Existitzen bada unitatea,
+u = z biderketako identitatea, esango dugu
+eraztuna unitateduna dela : a · u = u · a = a.
+6
+
+Eraztuneko a elementua zeroren zatitzailea de-
+la esango dugu baldin, a = z izanik, existitzen
+bada b = z elementua (agian berdina) betzen
+delarik ab = z edo ba = z.
+Eraztuna unitateduna izanik, a elementu bat
+biderketan alderanzkarria izan daiteke, a−1 bi-
+derketako alderantzizkoa luke, ala ez.
+Izan bedi A eraztun trukakor unitateduna :
+(a) Zeroren zatitzailerik ez badu, esango dugu
+A domeinu integrala dela.
+(b) Elementu guztiak (zeroa izan ezik) bider-
+ketan alderanzkarriak badira, esango dugu A
+eremua dela.
+Adibideak
+(a) Z, (b) R, C, (c) M2(R)
+Propietateak 5
+A eraztunean, edozein a, b ∈ A-rako :
+(1) a z = z a = z
+(2) a (−b) = (−a) b = −(a b)
+(3) (
+−a) (−b) = a b
+7
+
+Propietatea 6
+A eraztunean, elementu bat, a = z, biderketa-
+rekiko sinpliﬁkagarria da baldin eta soilik baldin
+ez bada zeroren zatitzailea.
+Frogatu
+Ondorioa
+Eraztun unitatedunean, a elementua biderke-
+tarekiko alderanzkarria bada orduan ez da ze-
+roren zatitzailea.
+Frogatu
+Ondorioa
+A eremua bada orduan domeinu integrala da.
+Propietatea 7
+A eraztun unitatedun ﬁnitua izanik, a elemen-
+tua biderketarekiko sinpliﬁkagarria bada ordu-
+an biderketarekiko alderanzkarria da.
+Frogatu
+Ondorioa
+A domeinu integral ﬁnitua bada, orduan ere-
+mua da.
+8
+
+MODULU FINITUKO OSOKOAK
+Izan bedi n moduluko kongruentziarekiko Z-ren
+partizioa :
+Zn = {[0], [1], [2], . . . , [n − 1]}
+Batuketa eta biderketa deﬁnituko ditugu :
+[a] + [b] = [a + b]
+[
+a] · [b]
+= [a · b]
+edozein a, b ∈ Z-rako.
+Adibidea
+Izan bedi Z5 multzoa, kalkulatu [3]+[4], [3]·[4],
+[2] + [4] + [3].
+Propietatea 8
+Batuketa eta biderketa ondo deﬁnituta daude
+Zn multzoan : klase bakoitzean edozein osoko
+hartuz emaitza bera dugu.
+Frogatu
+Zn eraztun trukakor unitateduna da. Zeroa [0]
+da, unitatea [1]. Bestalde
+−[r] = [−r] = [n − r].
+9
+
+Adibidea
+Kalkulatu Z4 eraztunaren batuketa eta bider-
+keta taulak. Lortu eraztuneko zeroren zatitzai-
+leak eta biderketarekiko alderanzkarriak.
+Propietatea 9
+Zn eraztunean [r] klasea, non 0 < r < n, bider-
+ketarekiko alderanzkarria da baldin eta soilik
+baldin r eta n erlatiboki lehenak badira, hau
+da, zkh(r, n) = 1.
+Frogatu
+Ondorioa
+Zn eremua da baldin eta soilik baldin n lehena
+bada.
+Adibidea
+Z72 eraztunean alderanzkarria da [25] ? Kalku-
+latu [25]−1.
+10
+
+TALDEAK
+Izan bedi G multzoa, non
+eragiketa dugun.
+(G, ) egitura algebraikoari taldea deituko dio-
+gu baldin :
+(1) Eragiketa elkarkorra da :
+(a
+b)
+c = a
+(b
+c)
+edozein a, b, c ∈ G-rako.
+(2) Existitzen da e ∈ G identitatea :
+a
+e = e
+a = a
+edozein a ∈ G-rako.
+(3) Edozein a ∈ G-rako existitzen da a alde-
+rantzizkoa :
+a
+a = a
+a = e
+Eragiketa trukakorra bada esango dugu taldea
+trukakorra (edo abeldarra) dela. Taldearen or-
+dena deituko diogu
+|G| taldeko elementuen ko-
+puruari.
+11
+
+Normalean biderketa idazkera erabiliko dugu G
+taldearen eragiketarako : a · b edo a b. Zehazki
+berreturak idatziko ditugu : a0 = e, a1 = a,
+an = a · a · (n) · a, a−n = (a−1)n = (an)−1. Oro
+har, m eta n edozein osoko izanik :
+am · an = am+n
+(am)n
+= am·n
+Adibideak
+(a) A eraztuna emanik, (A, +) talde trukakorra
+da. Zehazki (Z, +) eta (Zn, +) talde trukakor-
+rak ditugu.
+(b) A eraztun unitateduna emanik, (U, ·) tal-
+dea da, non U ⊆ A biderketarekiko alderanz-
+karriak diren elementuen azpimultzoa den. Ze-
+hazki Z8 eraztunean kalkulatu U8 talde truka-
+korraren taula.
+12
+
+Izan bedi (G, ·) taldea eta H ⊆ G azpimultzoa.
+Esango dugu G-ren azpitaldea dela H baldin :
+(1) Edozein a, b ∈ H-rako, a · b ∈ H
+(2) e ∈ H
+(3) Edozein a ∈ H-rako, a−1 ∈ H
+Beraz (H, ·) taldea da.
+Adibidea
+Izan bedi A = {1, 2, . . . , n} multzoa, eta har
+dezagun A-tik A-rako funtzio bijektiboen Sn
+multzoa, hau da, A-ko n elementuen n! per-
+mutazioen multzoa. Eragiketa hau deﬁnituko
+dugu : edozein α, β ∈ Sn-rako, α · β = β ◦ α
+(funtzio konposaketa). Honela Sn taldea da,
+ez trukakorra (baldin n > 2), talde simetrikoa
+deitzen zaio. Lortu S3-ren azpitalde bat.
+13
+
+ISOMORFISMOAK, TALDE ZIKLIKOAK
+(E,
+) eta (F, ⊥) egitura algebraikoak emanik,
+f : E → F funtzioari homomorﬁsmoa deituko
+diogu baldin, edozein a, b ∈ E-rako :
+f (a b) = f (a)⊥f (b)
+Homomorﬁsmo hori bijektiboa bada isomorﬁs-
+moa deitzen zaio, eta esaten da E eta F egi-
+turak isomorfoak direla. Bereziki, talde isomor-
+ﬁsmoa deitzen zaio bi talderen arteko isomor-
+ﬁsmoari.
+Adibidea
+Frogatu (R+, ·) eta (R, +) taldeak isomorfoak
+direla.
+G taldea ziklikoa dela esango dugu baldin exis-
+titzen bada a ∈ G elementua, x ∈ G bakoitza
+izanik x = ak erakoa, non k osokoren bat den.
+Honela bada G = < a > idatziko dugu eta esan-
+go dugu a elementuak G taldea sortzen duela.
+14
+
+Adibideak
+(a) (Zn, +)
+(b) (U9, ·)
+G taldea izanik, edozein talde, a ∈ G elemen-
+tuak sortutako azpimultzoa deﬁnituko dugu :
+< a > = {a
+k | k ∈ Z}
+G-ren azpitaldea da < a > (nabaria). Beraz
+< a > talde ziklikoa da. G taldeko a elementua-
+ren ordena deituko diogu < a > azpitaldearen
+ordenari,
+| < a > | kopuruari.
+Adibideak
+(a) (Z4, +) taldean kalkulatu < [2] >
+(b) (U9, ·) taldean kalkulatu < [4] >
+Propietatea 10
+Izan bedi G = < a > talde ziklikoa.
+(a) Baldin
+|G| = n, orduan f : (G, ·) → (Zn, +)
+isomorﬁsmoa dugu, non f (ak) = [k].
+(b) Baldin
+|G| = ∞, orduan f : (G, ·) → (Z, +)
+isomorﬁsmoa dugu, non f (ak) = k.
+15
+
+Ondorioak
+Izan bedi G = < a > talde ziklikoa, bere ordena
+n < ∞ izanik :
+(1) G = {e, a, a2, . . . , an−1}
+(2) an = e
+(3) ar · as = at, non r + s
+n zatiketaren hon-
+darra den t.
+(4) a−r = an−r
+Adibidea
+Aztertu (U9, ·) eta (Z6, +) taldeen arteko iso-
+morﬁsmoa.
+16
+
+2. gaia : MATRIZEAK
+EKUAZIO LINEALEKO SISTEMAK
+Abiatuko gara zutabe bektoreak gogoratuz :
+zutabe bektoreen batuketa eta eskalar (zen-
+baki erreal edo konplexu) batekiko biderketa.
+Adibidea
+Kalkulatu :
+
+
+
+2
+4
+−2
+
+
+
++
+
+
+
+1
+−6
+7
+
+
+
+eta
+− 2
+
+
+
+2
+4
+−2
+
+
+
+Ekuazio linealeko sistema bat adierazteko
+ekuazio bektoriala idatziko dugu :
+u ¯
+a1 + v ¯
+a2 + w ¯
+a3 = ¯
+b
+non u, v, w sistemako ezezagunak diren eta ¯
+a1,
+¯
+a2, ¯
+a3, ¯
+b zutabe bektoreak.
+17
+
+Bestalde, ¯
+a1, ¯
+a2, ¯
+a3 bektoreen konbinazio li-
+neala deituko diogu u ¯
+a1 + v ¯
+a2 + w ¯
+a3 erako
+edozein bektoreri, u, v, w izanik eskalar batzuk.
+Beraz aurreko ekuzaio bektorialak soluzioa du
+baldin existitzen bada ¯
+a1, ¯
+a2, ¯
+a3 bektoreen kon-
+binazio lineal bat ¯
+b bektorearen berdina.
+Adibidea
+Idatzi sistema honi dagokion ekuazio bektoriala
+eta lortu soluzio bat.
+2u + v + w
+=
+5
+4u − 6v
+=
+−2
+−2u + 7v + 2w =
+9
+Ekuazio linealeko sistema ez singularra dela
+esango dugu baldin soluzio bat, eta bakarra,
+badu. Sistema singularra da baldin hainbat so-
+luzio baditu, sistema indeterminatua, edo so-
+luziorik ez badu, sistema inkontsistentea.
+18
+
+GAUSS-EN EZABAPEN METODOA
+Bi ekuazio sistema baliokideak dira soluzio be-
+rak badituzte. Sistema baliokidea lortuko dugu
+ekuazio linealeko sistema batean eragiketa ele-
+mental hauek eginez :
+(1) Eskalar ez nulu batekin biderkatu ekuazioe-
+tako bat.
+(2) Ekuazio bati beste baten multiploa gehitu.
+(3) Ekuazioak elkarren artean trukatu.
+Gauss-en algoritmoa, n ekuazio lineal eta n
+ezezaguneko sistema ebazteko.
+Behin eta berriz i = 1, 2, . . . , n-rako :
+Hartu i. ekuazioan i. ezezagunaren pibota. Pi-
+bota ez nulua izan behar da eta hori lortzeko
+trukatu i. ekuazioa ondorengoekin behar iza-
+nez gero (3. eragiketa elementala). Ondorengo
+ekuazio guztietan i. ezezagunaren koeﬁzientea
+anulatu i. pibotaren bidez (2. eragiketa).
+Baldin n pibot lortu badira sistema ez singu-
+larra da eta soluzioa atzeraka ordezkatuz kal-
+kulatzen da. Pibot gutxiago lortu badira sis-
+tema singularra da.
+19
+
+Adibidea
+Aztertu sistema hauek :
+(a)
+
+
+
+
+
+6u + 3v + 3w
+=
+15
+4u − 6v
+=
+−2
+−2u + 7v + 2w =
+9
+(b)
+
+
+
+
+
+u + v + w
+= b1
+2u + 2v + 5w = b2
+4u + 6v + 8w = b3
+(c)
+
+
+
+
+
+5u + 5v + 5w = b1
+2u + 2v + 5w = b2
+4u + 4v + 8w = b3
+MATRIZEAK
+Ezagutzen ditugu matrizeak : matrizeen arteko
+batuketa eta eskalar batekiko biderketa.
+Adibidea
+Kalkulatu :
+
+
+
+2 1
+3 0
+0 4
+
+
+
++
+
+
+
+1 2
+−3 1
+1 2
+
+
+
+eta 2
+·
+
+
+
+2 1
+3 0
+0 4
+
+
+
+20
+
+Bestalde, zutabe bektoreak zutabe bakarreko
+matrizeak dira.
+Ekuazio linealeko sistema adierazteko matri-
+zeak erabiliko ditugu :
+A ¯
+x = ¯
+b
+Hemen A matrizearen osagaiak ezezagunen ko-
+eﬁzienteak dira, lerro bakoitza ekuazio bati da-
+gokio eta zutabe bakoitza ezezagun bati. Bes-
+talde ¯
+x ezezagunen bektorea da eta ¯
+b sistema-
+ren eskuinaldeko gaien bektorea.
+Idatzi dugun ekuazio matrizialaren arabera,
+matrize bat eta zutabe bektore baten arteko
+biderketa honela da : izan bedi A matrizea m×n
+tamainakoa, hau da, m lerro eta n zutabekoa,
+eta ¯
+x zutabe bektorea n osagaikoa, orduan A ¯
+x
+bektorea A-ko zutabeen konbinazio lineala da,
+¯
+x-en osagaiak izanik konbinazio lineal honen
+koeﬁzienteak.
+21
+
+Adibidea
+Idatzi sistema hau era matrizialean :
+2u + v + w
+=
+5
+4u − 6v
+=
+−2
+−2u + 7v + 2w =
+9
+Sistemaren soluzioa hartuz egiaztatu A ¯
+x = ¯
+b
+berdintza.
+Adibidea
+Lerro matrizea eta zutabe matrizea biderkatuz
+eskalar bat lortzen da :
+2 1 1
+
+
+
+1
+1
+2
+
+
+
+Matrize biderketa deﬁnituko dugu. Izan bedi A
+matrizea m×n tamainakoa eta B matrizea n×p
+tamainakoa, AB matrizea m × p tamainakoa
+izango da, bere osagai bakoitza izanik :
+(AB)ij =
+n
+k=1
+aik bkj
+22
+
+Deﬁnizio baliokideak :
+(1) j bakoitzerako : AB matrizearen j. zuta-
+bea, A matrizearen zutabeen konbinazio lineala
+da, zutabe hauek biderkatuz B matrizearen j.
+zutabeko osagaiekin.
+(2) i bakoitzerako : AB matrizearen i. lerroa, B
+matrizearen lerroen konbinazio lineala da, lerro
+hauek biderkatuz A matrizearen i. lerroko osa-
+gaiekin.
+Propietateak 1
+(1) Biderketa elkarkorra da :
+(AB) C = A (BC)
+(2) Biderketa banakorra da batuketarekiko :
+A (B + C) = AB + AC
+(B + C) D = BD + CD
+(3) Eskalar bat izanik c :
+c (AB) = (cA) B = A (cB)
+23
+
+Biderketa ez da trukakorra, AB = BA nor-
+malean. Bestalde, A = B berdintza emanik,
+ezkerretik edo eskuinetin biderka daiteke ta-
+maina egokiko matrizearekin, CA = CB edo
+AC = BC, baina oro har CA = BC, AC = CB.
+Identitate matrizea deituko diogu diagonalean
+batak eta gainerakoan zeroak dituen n × n ta-
+mainako I matrize koadroari. Baldin n = 3 :
+I =
+
+
+
+1 0 0
+0 1 0
+0 0 1
+
+
+
+A eta I izanik tamaina bereko matrizeak :
+A I = I A = A
+Esango dugu A matrize koadroa alderanzkarria
+dela baldin existitzen bada A−1 matrizea, bere
+alderantzizkoa, betetzen delarik :
+A A
+−1 = A−1 A = I
+A−1 matrizearen alderantzizkoa A da.
+24
+
+Matrizearen alderantzizkoa existitzen bada, ba-
+karra da. Bestalde, A eta B alderanzkarriak ba-
+dira :
+(AB)
+−1 = B−1A−1
+(Bi propietateak egitura algebraikoetan bezala
+dira.)
+Matrize koadro bat alderanzkarria bada esango
+dugu ez singularra dela eta ez badu alderant-
+zizkorik singularra dela.
+Adibidea
+Matrize diagonala deitzen zaio matrize koadro
+bati baldin diagonalekoak ez diren osagai guz-
+tiak nuluak badira. Noiz da D matrize diago-
+nala alderanzkarria ? Idatzi D−1
+Izan bedi m × n tamainako A matrizea, bere
+iraulia n × m tamainako AT matrizea da, non :
+(A
+T )
+ij = (A)ji
+Zutabeak lerrotzat hartzen dira (edo lerroak
+zutabetzat).
+25
+
+Bereziki, ¯
+x zutabe bektorea bada, ¯
+xT lerro ma-
+trizea da.
+Adibidea
+Idatzi AT baldin A =
+2 1 4
+0 0 3
+Propietateak 2
+(1) (AT )T = A
+(2) (A + B)T = AT + BT
+(3) (AB)T = BT AT
+(4) (cA)T = cAT
+(5) (A−1)T = (AT )−1
+A matrize koadroa simetrikoa dela esaten da
+baldin A = AT , hau da, (i, j) bakoitzerako
+(A)ij = (A)ji.
+Adibideak
+(a) Matrize diagonalak simetrikoak dira.
+(b) Idatzi matrize simetriko bat (ez diagonala).
+A matrize simetrikoa alderanzkarria bada A−1
+ere simetrikoa da, goiko propietatetik.
+26
+
+LU FAKTORIZAZIOA
+Matrize elementalak erabiliz eragiketa elemen-
+talak egin ditzakegu matrize baten lerro edo
+zutabeekin, ekuazio linealeko sistemetan deﬁ-
+nitu genituen eragiketen parekoak.
+E matrize elementalaren deﬁnizioa : (i, j) sar-
+rerako osagaia
+−l da, diagonalean batak ditu
+eta gainerakoak zeroak dira. EA biderkadura-
+ren emaitza hau da : A matrizean j. lerroa l
+eskalarrarekin biderkatu eta i. lerroari kenduta
+lortzen den matrizea.
+Adibidea
+Izan bedi A ¯
+x = ¯
+b ekuazio linealeko sistema :
+
+
+
+6
+3 3
+4
+−6 0
+−2
+7 2
+
+
+
+
+
+
+u
+v
+w
+
+
+
+=
+
+
+
+15
+−2
+9
+
+
+
+Idatzi Gauss-en algoritmoari jarraituz egindako
+eragiketei dagozkien E1, E2, E3 matrize ele-
+mentalak, eta egiaztatu E3E2E1A biderketaren
+emaitza.
+27
+
+E matrize elementala alderanzkarria da : E−1
+matrizea E bezalakoa da baina orain l bider-
+katzaileak ez du aurretik ikur negatiboa.
+Gauss-en algoritmoan pibot guztiak lortu ba-
+dira, A matrizetik abiatuz U matrizea lortzen
+dugu : hiru hurrats balira,
+E3E2E1A = U
+Matrize goi-triangularra da U , hau da, diagona-
+laren azpiko osagaiak nuluak dira. Bestalde, U
+matrizearen diagonalean algoritmoarekin lort-
+zen diren pibotak ditugu. Matrize elementalen
+alderantzizkoak hartuz :
+A = E
+−1
+1
+E
+−1
+2
+E
+−1
+3
+U
+Beraz A matrizearen LU faktorizazioa dugu :
+A = L U
+non L = E
+−1
+1
+E
+−1
+2
+E
+−1
+3
+. Matrize behe-triangu-
+larra da L, diagonalean batak ditu eta azpian
+eragiketa elementalen l biderkatzaileak, haue-
+tako bakoitza matrize elementalean zuen posi-
+zio berean (aurrean ikur negatiborik gabe). L
+alderanzkarria da.
+28
+
+Adibidea
+Aurreko adibidearekin jarraituz, idatzi A matri-
+zearen LU faktorizazioa. L = E
+−1
+1
+E
+−1
+2
+E
+−1
+3
+eta
+A = LU berdintzak egiaztatu.
+Izan bedi A¯
+x = ¯
+b ekuzaio linealeko sistema, n
+ekuazio eta ezezagun dituena. A = LU fak-
+torizazioa emanik, honela kalkulatuko genuke
+soluzioa :
+(1) Ebatzi L¯
+y = ¯
+b aurreraka ordezkatuz.
+(2) Ebatzi U ¯
+x = ¯
+y atzeraka ordezkatuz.
+Kontuan izan A¯
+x = LU ¯
+x = L¯
+y = ¯
+b dugula.
+Adibidea
+Egiaztatu metodo hau aurreko adibidean.
+Ekuazio linealeko sistemetan dugun beste mo-
+ta bateko eragiketa ekuazioak elkarren artean
+trukatzea da, matrizeetan honi dagokion era-
+giketa elementala lerroak trukatzea da.
+29
+
+Pij permutazio matrizearen deﬁnizioa : identi-
+tate matrizean trukatu i. eta j. lerroak. PijA
+biderketaren emaitza : A matrizean i. eta j.
+lerroak trukatzen dira. Pij permutazio matri-
+zearen alderantzizkoa bera da. Permutazio ma-
+trize batzuen biderkadura P permutazio matri-
+zea da : honek bi lerro edo gehiago elkarren
+artean trukatzen ditu. Hau ere identitate ma-
+trizetik antzera lortzen da. Oro har P −1 = P ,
+permutazioen arteko ordenak eragina du.
+Adibidea
+Idatzi P13, P23 permutazio matrizeak eta kal-
+kulatu P23P13A baldin :
+A =
+
+
+
+0
+a
+b
+0 0
+c
+d
+e f
+
+
+
+Idatzi P = P23P13 permutazio matrizea ere.
+Nola trukatzen ditu lerroak ?
+Gauss-en algoritmoan ekuazioak trukatu behar
+badira, faktorizazio hau lortzen dugu :
+P A = LU
+30
+
+Matrizeko lerroen permutazio denak hasieran
+egin behar ditugu eta ondoren P A matrizearen
+LU faktorizazioa lortu.
+Adibidea
+Faktorizatu :
+A =
+
+
+
+2 2 2
+1 1 3
+2 5 8
+
+
+
+ALDERANTZIZKO MATRIZEA
+Lehenik hirugarren mota bateko matrize ele-
+mentala deﬁnituko dugu : D matrize diago-
+nala, identitatearen berdina baina (i, i) sarre-
+rako osagaia 1/d izanik. Honek matrize baten
+i. lerroa d = 0 eskalarrarekin zatitzen du. D
+alderanzkarria da.
+31
+
+Gauss-Jordan-en metodoa, matrize koadro
+baten alderantzizkoa kalkulatzeko. A matrizea
+emanik, [A|I] matrizea osatuko dugu, eta ma-
+trize honen lerroekin Gauss-en algoritmoaren
+eragiketa elementalak eginez [U |F ] lortuko du-
+gu. Ondoren U matrizearen azken zutabetik
+abiatuz matrize diagonal batean transforma-
+tuko dugu, azkenik lerro bakoitza dagokion pi-
+botarekin zatituz identitatea lortzeko, honela
+[U |F ] matrizea [I|G] matrizean transformatuko
+da lerroekin eragiketa elementalak eginez. Or-
+duan A−1 = G da.
+Propietatea 3
+Matrize koadro bat, n × n tamainakoa, alde-
+ranzkarria (ez singularra) da baldin eta soilik
+baldin Gauss-en algoritmoan n pibot lortzen
+badira.
+32
+
+(Baldin n pibot baditugu, Gauss-Jordan-en me-
+todoa jarraituz eragiketa elementalen matri-
+zeak G matrizean biltzen dira, beraz hau alde-
+ranzkarria da, A−1 da. Baldin n pibot baino gu-
+txiago lortzen badira, eragiketa elemental ge-
+hiagorekin lor daiteke matrize bat alderanzkar-
+ria ez dena, zehazki lerro nulua duena, beraz
+A ez litzateke alderanzkarria.)
+Adibidea
+Kalkulatu aderantzizkoa :
+A =
+
+
+
+6
+3 3
+4
+−6 0
+−2
+7 2
+
+
+
+33
+
+34
+
+3. gaia : ESPAZIO
+BEKTORIALAK
+Espazio bektoriala honela deﬁnitzen den egi-
+tura algebraikoa da. V
+bektore multzoan bi
+eragiketa ditugu, bektore batuketa eta eska-
+lar batekiko biderketa, axioma hauek betetzen
+direlarik :
+(1) ¯
+x + ¯
+y = ¯
+y + ¯
+x
+(2) ¯
+x + (¯
+y + ¯
+z) = (¯
+x + ¯
+y) + ¯
+z
+(3) Existitzen da zero bektorea, ¯
+x + ¯
+0 = ¯
+x
+(4) Bektoreek aurkakoa dute, ¯
+x + (−¯
+x) = ¯
+0
+(5) 1 ¯
+x = ¯
+x
+(6) (c1c2) ¯
+x = c1 (c2 ¯
+x)
+(7) c (¯
+x + ¯
+y) = c ¯
+x + c ¯
+y
+(8) (c1 + c2) ¯
+x = c1 ¯
+x + c2 ¯
+x
+Axiometatik bi propietate hauek ditugu :
+(a) 0 ¯
+x = ¯
+0, c ¯
+0 = ¯
+0
+(b) (
+−1) ¯
+x = −¯
+x
+Bestalde, eskalarrak zenbaki errealak edo kon-
+plexuak izango dira.
+35
+
+Adibideak
+(a) Rn espazio bektorial (erreala), n osagai er-
+realeko zutabe bektoreen espazioa.
+(b) E2, geometriako planoko bektoreen espa-
+zioa. Ardatz kartesiarrak hartuz, isomorfoa da
+R2 espazio bektorialarekin.
+(c) R-ko tarte jakin batean deﬁnitutako f (x)
+funtzioak, batuketa eta eskalar (erreal) bate-
+kiko biderketarekin.
+Izan bedi V espazio bektoriala eta U honen
+azpimultzo bat (ez hutsa). Esango dugu V es-
+pazio bektorialaren azpiespazioa dela U baldin
+edozein bektore ¯
+x, ¯
+y ∈ U eta eskalar c-rako :
+(1) ¯
+x + ¯
+y ∈ U
+(2) c ¯
+x ∈ U
+Espazio bektoriala da U azpiespazioa. (V -ren
+azpiespazio ez-jatorrak dira
+{¯
+0
+} eta V bera.)
+Rn (edo agian Cn), E2 plano geometrikoa edo
+E3 espazio geometrikoa, eta hauen azpiespa-
+zioak izango dira guk lan egingo dugun espazio
+bektorial zehatzak. Oro har, V espazio bekto-
+rial abstraktoa kontsideratuko dugu.
+36
+
+A matrizearen zutabe espazioa deituko diogu
+A-ren zutabeen konbinazio lineal guztien mult-
+zoari,
+R(A) idatziz.
+A matrizearen espazio nulua deituko diogu
+A ¯
+x = ¯
+0 betetzen duten ¯
+x bektore guztien mult-
+zoari,
+N (A) idatziz.
+Propietatea 1
+Izan bedi A matrizea, m × n tamainakoa :
+(a)
+R(A) espazioa Rm-ren azpiespazioa da.
+(b)
+N (A) espazioa Rn-ren azpiespazioa da.
+Frogatu
+Ohartu honetaz : A ¯
+x = ¯
+b ekuazio linealeko sis-
+temak soluzioa izango du baldin eta soilik bal-
+din ¯
+b ∈ R(A).
+Oro har, V espazio bektorial bateko bektore
+batzuk emanik, ¯
+v1, ¯
+v2, . . . , ¯
+vn bektoreak, hauen
+konbinazio lineal guztien multzoa V -ren azpies-
+pazioa da.
+37
+
+EKUAZIO LINEALEKO SISTEMAK
+Izan bedi A ¯
+x = ¯
+b sistema, A izanik m × n ta-
+mainako matrizea. Gauss-en algoritmoa oro-
+kortuko dugu, A matrizearen lerroekin eragi-
+keta elementalak eginez tamaina berdineko U
+matrize mailakatua lortzeko, non :
+(1) Goiko aldean lerro ez nuluak daude, pi-
+bota izanik lerro bakoitzaren lehenengo osagai
+ez nulua ezkerretik.
+(2) Pibot bakoitzaren azpiko osagai denak nu-
+luak dira.
+(3) Pibot bakoitza, gaineko lerroen piboten es-
+kuinean dago.
+Adibidea
+Kalkulatu A = LU faktorizazioa :
+A =
+
+
+
+5
+15 15 10
+2
+6
+9
+5
+−1 −3
+3
+0
+
+
+
+38
+
+Izan bedi A matrize bat m × n tamainakoa,
+Gauss-en algoritmoarekin faktorizazio hau lor
+daiteke beti :
+P A = LU
+non P permutazio matrizea den, L matrize
+behe-triangularra, diagonalean batak dituena,
+bi matrizeak m×m tamainakoak, eta U matrize
+mailakatua, m × n tamainakoa.
+Sistema homogeneoa idatziko dugu :
+A ¯
+x = ¯
+0
+Sistema hau baliokidea da :
+U ¯
+x = ¯
+0
+Sistemaren ezezagun aldagaiak honela sailka-
+tuko ditugu :
+(a) oinarrizko aldagaiak, U matrize mailaka-
+tuan pibota duten zutabeei dagozkienak,
+(b) aldagai askeak, beste aldagiak.
+39
+
+A¯
+x = ¯
+0 sistema homogeneoaren soluzioa ho-
+nela aurkituko dugu :
+(1) Gauss-en algoritmoarekin lortu U ¯
+x = ¯
+0 eta
+identiﬁkatu oinarrizko aldagaiak eta askeak.
+(2) Aldagai aske bakoitzerako kalkulatu U ¯
+x =
+¯
+0 sistemaren soluzioa oinarrizko aldagaientzat
+(atzeraka ordezkatuz), aldagai aske horri 1 ba-
+lioa eta beste aldagai askeei 0 balioa emanez.
+(3) Bigarren urratsean kalkulatutako soluzioen
+konbinazio linealen azpiespazioak ematen digu
+N (A) espazio nulua, hau da, A¯
+x = ¯
+0 sistema-
+ren soluzioen multzoa.
+Adibidea
+Kalkulatu A¯
+x = ¯
+0 sistema homogeneoaren so-
+luzioak, aurreko adibidearekin jarraituz.
+40
+
+A¯
+x = ¯
+b ekuazio linealeko sistemaren soluzioen
+multzoa, sistemaren soluzio orokorra, honela
+kalkulatuko dugu :
+(1) Gauss-en algoritmoaren bidez, A¯
+x = ¯
+b sis-
+tematik U ¯
+x = ¯
+c sistema baliokidea lortu.
+(2) Sistema homogeneoaren ¯
+xh soluzioa kalku-
+latu lehen esan bezala.
+(3) Aldagai askeei 0 balioa emanez, kalkulatu
+dagokion ¯
+xp soluzio partikularra.
+Hau da A¯
+x = ¯
+b sistemaren soluzio orokorra :
+¯
+xg = ¯
+xp + ¯
+xh
+Adibidea
+Kalkulatu sistema honen soluzio orokorra :
+5u + 15v + 15w + 10t = 5
+2u + 6v + 9w + 5t
+= 5
+−u − 3v + 3w
+= 5
+41
+
+Izan bedi r pibot kopurua, r ≤ m eta r ≤ n :
+- Aldagai askeen kopurua n−r da. Baldin r = n
+ez dago aldagai askerik.
+- U matrize mailakatuko lerro nuluen kopurua
+m − r da. Baldin r = m ez du lerro nulurik.
+Propietatea 2
+Izan bedi A¯
+x = ¯
+b ekuazio linealeko sistema, m
+ekuazio eta n ezezagunekoa, eta r Gauss-en
+algoritmoarekin lortzen diren piboten kopurua.
+Baldin r = m sistemak beti du soluzioa, ¯
+b edo-
+zein delarik. Baldin r = n sistemak gehienez
+soluzio bat du. Sistema homogeneoaren solu-
+zioa ¯
+x = ¯
+0 da r = n denean, N (A) = {¯
+0
+}.
+Adibidea
+Aztertu sistema hau :
+5u + 15v + 15w + 10t = 5
+2u + 6v + 9w + 5t
+= 5
+−u − 3v + 3w
+= 0
+42
+
+OINARRIAK ETA DIMENTSIOA
+Esango dugu ¯
+v1, ¯
+v2, . . . , ¯
+vn bektoreak linealki in-
+dependenteak direla ondorengoa betetzen ba-
+da : bektore hauen konbinazio lineala zero da
+soilik baldin koeﬁziente guztiak nuluak badira.
+Hau da :
+c1¯
+v1 + c2¯
+v2 + . . . + cn¯
+vn = ¯
+0
+=
+⇒ c1 = c2 = . . . = cn = 0
+Bektore horiek linealki dependenteak dira exis-
+titzen badira c1, c2, . . . , cn balioak, ez denak nu-
+luak, c1¯
+v1 + c2¯
+v2 + . . . + cn¯
+vn = ¯
+0 izanik.
+Zutabe bektoreekin ari garenean, hauekin
+A = [¯
+v1|¯
+v2| . . . |¯
+vn] matrizea eraikiz, zutabeak li-
+nealki independenteak dira baldin
+N (A) = {¯
+0
+},
+hau da, A¯
+x = ¯
+0 sistemak soilik soluzio nulua
+badu.
+43
+
+Bektoreak linealki independenteak diren azter-
+tzeko A matrizetik U matrize mailakatua lor-
+tuko dugu, Gauss-en algoritmoaren bidez, eta
+r pibot baditugu :
+- r = n kasuan, A¯
+x = ¯
+0 sistemak soilik soluzio
+nulua du, beraz zutabe bektoreak linealki inde-
+pendeneak dira.
+- r < n kasuan, A¯
+x = ¯
+0 sistemak baditu ¯
+x = ¯
+0
+soluzioak, zutabe bektoreak linealki dependen-
+teak dira.
+Adibidea
+A = [¯
+v1|¯
+v2| . . . |¯
+vn] emanik, aztertu zutabe bek-
+toreak linealki independenteak diren :
+A =
+
+
+
+1
+3 3 2
+2
+6 9 5
+−1 −3 3 0
+
+
+
+Matrize mailakatu batean linealki independen-
+teak dira pibota duten r zutabeak, baita inde-
+pendenteak dira matrizearen r lerro ez nuluak.
+44
+
+Adibideak
+(a) Aztertu aurreko adibidean lortu den U ma-
+trize mailakatuaren zutabe eta lerroak.
+(b) Izan bedi A matrize koadroa. Triangularra
+bada eta diagonaleko osagai denak ez nuluak
+badira, matrizearen zutabeak linealki indepen-
+denteak dira, matrizearen lerroak ere bai.
+(c) I = [¯
+e1|¯
+e2| . . . |¯
+en] identitate matrizearen zu-
+tabeak independenteak dira, lerroak ere bai.
+Propietateak 3
+(a) Bektore batzuk emanik, hauetako bat nu-
+lua bada, orduan bektore horiek linealki depen-
+denteak dira.
+(b) Bektore batzuk emanik, hauek linealki de-
+pendenteak dira baldin eta soilik baldin ho-
+rietako bektore bat besteen konbinazio lineala
+bada.
+(c) Bektore batzuk emanik, linealki indepen-
+denteak direnak, bektore berri bat gehituz li-
+nealki dependenteak balira, orduan gehituriko
+bektorea hasierako bektoreen konbinazio line-
+ala litzateke.
+Frogatu
+45
+
+Izan bedi V espazio bektoriala, edo azpiespazio
+bat, eta ¯
+v1, ¯
+v2, . . . , ¯
+vn bektore batzuk, esango
+dugu bektore hauek V sortzen dutela baldin
+bektore hauen konbinazio linealen multzoa V
+bada. Honela bada, V -ko edozein bektore ¯
+v,
+bektore horien konbinazio lineala da :
+¯
+v = c1¯
+v1 + c2¯
+v2 + . . . + cn¯
+vn
+Eta honelako edozein bektore V -koa da. Kon-
+binazio linealaren koeﬁzienteek ez dute bakar-
+rak izan beharrik bektore bat emanik.
+Zutabe bektoreak baditugu, A = [¯
+v1|¯
+v2| . . . |¯
+vn]
+idatziz, bektoreek sortutako azpiespazioa
+R(A)
+da, A matrizearen zutabe espazioa. Dakigunez,
+¯
+b ∈ R(A) baldin eta soilik baldin A¯
+x = ¯
+b siste-
+mak soluzioa badu, ¯
+b bektoreari dagokion kon-
+binazio linealaren koeﬁzienteak ¯
+x soluzioaren
+osagaiak dira.
+Adibidea
+Identitate matrizearen zutabeek, ¯
+e1, ¯
+e2, . . . , ¯
+en
+bektoreek, Rn sortzen dute.
+46
+
+Oinarria deﬁnituko dugu : V espazio bektoria-
+laren oinarri bat da ¯
+v1, ¯
+v2, . . . , ¯
+vn bektore mult-
+zoa baldin bektore hauek (1) linealki indepen-
+denteak badira eta (2) V sortzen badute.
+V espazio bektoriala eta honen oinarri bat ema-
+nik, ¯
+v bektoreari dagokion konbinazio linealaren
+koeﬁzientei koordenatuak deitzen zaie.
+Propietatea 4
+Bektore baten koordenatuak bakarrak dira.
+Frogatu
+Adibideak
+(a) Egiaztatu ¯
+e1, ¯
+e2, . . . , ¯
+en bektoreek, unitate
+bektoreek, Rn espazio bektorialaren oinarri bat
+osatzen dutela. Zein dira ¯
+v ∈ Rn bektore baten
+koordenatuak oinarri honetan ?
+(b) E2 geometriako planoko bektoreen espa-
+zioan, adierazi ardatz kartesiarrei dagokien oi-
+narria.
+(c) Izan bedi A matrize bat, edozein, n × n
+tamainakoa eta ez singularra. Frogatu A-ren
+zutabeek Rn-ren oinarri bat osatzen dutela.
+47
+
+(d) Aztertu matrize honen zutabeek R2-ren oi-
+narria osatzen duten. Horrela bada, kalkulatu
+¯
+v = [2, 1]T bektorearen koordenatuak.
+A =
+1 1
+2 3
+Propietatea 5
+V espazio bektorial batean, ¯
+v1, ¯
+v2, . . . , ¯
+vm bek-
+toreek V sortzen badute eta ¯
+w1, ¯
+w2, . . . , ¯
+wn bek-
+toreak linealki independenteak badira, orduan
+m ≥ n.
+Frogatu
+Ondorioa
+Espazio bektorial bateko oinarri guztiek bek-
+tore kopuru bera dute, espazio bektorialaren
+dimentsioa deitzen diogun zenbakia.
+Frogatu
+Beraz, azken adibideen arabera, dim Rn = n.
+Bestalde dim
+{¯
+0
+} = 0 idatziko dugu.
+48
+
+Ondorioa
+Izan bedi V espazio bektoriala.
+Baldin ¯
+v1, ¯
+v2, . . . , ¯
+vm bektoreek V sortzen ba-
+dute orduan m ≥ dim V .
+Baldin ¯
+w1, ¯
+w2, . . . , ¯
+wn bektoreak linealki inde-
+pendenteak badira orduan n ≤ dim V .
+Ondorioa
+Izan bedi V espazio bektoriala eta U azpiespa-
+zioa : dim U ≤ dim V .
+Frogatu
+Propietatea 6
+V espazio bektorial batean, izan bedi bektore
+multzo bat V
+sortzen duena eta horien az-
+pimultzo bat bektore linealki independenteek
+osatua. Existitzen da V -ren oinarri bat azpi-
+multzo honi (sortzaile ez balitz) hasierako mul-
+tzoko bektore batzuk gehituz lortzen dena.
+Frogatu
+49
+
+AZPIESPAZIOEN OINARRIAK, MATRI-
+ZEAREN HEINA (RANK, RANGO)
+Izan bedi A matrizea m × n tamainakoa. De-
+ﬁnitu genuen
+R(A) zutabe espazioa, Rm-ren
+azpiespazioa dena. A matrizearen lerro espa-
+zioa deituko diogu A-ren lerroek sortzen duten
+Rn espazio bektorialaren azpiespazioari. Naba-
+ria denez, A-ren lerro espazioa R(AT ) da.
+Eman dezagun A matrizetik Gauss-en algorit-
+moaren bidez r pibot dituen U matrize maila-
+katua lortzen dugula.
+Propietatea 7
+(a) A eta U matrizeen lerro espazioak berdinak
+dira,
+R(AT ) = R(U T ), eta azpiespazio honen
+oinarria dugu U -ren r lerro ez nuluak hartuz.
+(b) A matrizearen zutabe espazioaren oinarri
+bat dugu pibotei dagozkien A-ko zutabeak (ez
+U -koak) hartuz. Oro har R(A) = R(U ).
+Frogatu
+50
+
+A matrizearen heina deituko diogu r pibot ko-
+puruari :
+rank(A) = r = dim R(A) = dim R(A
+T )
+N (A) espazio nuluari dagokionez, A¯
+x = ¯
+0 sis-
+tema homogeneoaren soluzioak kalkulatzeko
+eman zen algoritmoaren bidez lortzen da Rn-ko
+azpiespazio honen oinarri bat.
+Algebrako teorema nagusia
+Izan bedi A matrizea m × n tamainakoa :
+rank(A) + dim N (A) = n
+Frogatu
+Adibidea
+Gauss-en algoritmoari jarraituz, lortu rank(A).
+Aurkitu
+R(A), R(AT ) eta N (A) azpiespazioen
+oinarriak. Egiaztatu algebrako teorema nagu-
+sia.
+A =
+
+
+
+1
+3 3 2
+2
+6 9 5
+−1 −3 3 0
+
+
+
+51
+
+Izan bedi A¯
+x = ¯
+b ekuazio linealeko sistema,
+m ekuazio eta n ezezagunekoa. Lehendik daki-
+guna gogoratuz :
+- Baldin rank(A) = m, sistemak beti du solu-
+zioa ¯
+b edozein delarik (R(A) = Rm), eta
+dim
+N (A) = n − m ≥ 0.
+- Baldin rank(A) = n, sistemak gehienez solu-
+zio bat du, eta dim
+N (A) = 0 (sistema homo-
+geneoaren soluzioa ¯
+x = ¯
+0 da eta A-ren zuta-
+beak linealki independenteak dira).
+Azkenik, izan bedi A matrizea n × n tamaina-
+koa : alderanzkarria da baldin eta soilik baldin
+rank(A) = n badugu (A-ren zutabeek Rn-ren
+oinarri bat osatzen badute).
+52
+
+TRANSFORMAZIO LINEALAK,
+OINARRI ALDAKETAK
+Transformazio lineala deitzen zaio espazio bek-
+torial batetik beste espazio bektorial baterako
+¯
+w = T (¯
+v) funtzioari baldin :
+T (¯
+v1 + ¯
+v2) = T (¯
+v1) + T (¯
+v2)
+T (c ¯
+v) = c T (¯
+v)
+A matrizea emanik, m × n tamainakoa, ¯
+y = A¯
+x
+idatziz Rn-tik Rm-rako
+T transformazio lineala
+dugu nabaria denez. Argi dago unitate bekto-
+reei A-ren zutabeak egokitzen dizkiela T -k :
+A = [T (e1)|T (e2)| . . . |T (en)]
+Oinarri aldaketa batek transformazio lineal bat
+deﬁnitzen du, matrize alderanzkarri baten bi-
+dez. Izan bedi V espazio bektoriala eta honen
+bi oinarri : ¯
+v1, ¯
+v2, . . . , ¯
+vn eta ¯
+v
+1, ¯
+v
+2, . . . , ¯
+vn. Har
+dezagun ¯
+v ∈ V bektorea, honek lehenengo oi-
+narrian dituen koordenatuekin ¯
+x zutabe bekto-
+rea osatuko dugu eta bigarren oinarrian dituen
+koordenatuekin ¯
+x zutabe bektorea, ¯
+x, ¯
+x ∈ Rn.
+53
+
+Erlazio hau betetzen da :
+¯
+x = P ¯
+x
+P matrizearen zutabeak izanik bigarren oinar-
+riko bektoreen koordenatuak lehenengo oinar-
+rian.
+Frogatu P horrela deﬁnituz ¯
+x = P ¯
+x erlazioa
+lortzen dela. Idatzi ¯
+v =
+n
+i=1 xi¯
+vi =
+n
+j=1 xj¯
+v
+j.
+Adibidea
+E2 geometriako planoko bektoreen espazioan
+egiaztatu puntu batekiko θ angeluko biraketa
+T transformazio lineala dela. Ardatz kartesiar-
+rak hartuz kalkulatu
+T -ri dagokion A matrizea.
+Ohartu matrizea alderanzkarria dela. Ardatz
+kartesiarrak θ angelua biratuz frogatu oinarri
+aldaketari dagokion matrizea P = A dela.
+54
+
+4. gaia : AUTOBALIO ETA
+AUTOBEKTOREAK
+DETERMINANTEAK
+Matrize koadro baten determinantea deﬁnituko
+dugu errekurtsiboki.
+Izan bedi A matrize koadroa : (i, j) minorea
+deitzen zaio, Aij idatziz, A matrizetik i. lerroa
+eta j. zutabea kenduta geratzen den matrizea-
+ren determinanteari. A matrizearen kofaktorea
+deitzen zaio (
+−1)i+jAij zenbakiari.
+55
+
+Deﬁnizioa
+(a) Matrizea 1
+× 1 tamainakoa bada :
+det [a] = a
+(b) Matrizea n × n tamainakoa bada :
+det A =
+n
+j=1
+(A)1jA1j
+(lehenengo lerroko osagaiak dagozkien kofak-
+toreekin biderkatu eta guztia batu)
+Adibideak
+(a) Kalkulatu :
+det
+−4 −5
+2
+3
+, det
+
+
+
+2
+1
+3
+1
+2
+−1
+2
+−1
+3
+
+
+
+(b) Egiaztatu identitatearen determinantea 1
+dela.
+56
+
+Propietatea 1 (deﬁnizioaren orokortzea)
+Determinantea edozein lerro edo zutabe gara-
+tuz kalkula daiteke :
+det A =
+n
+j=1
+(A)rjArj =
+n
+i=1
+(A)isAis
+edozein r eta s-rako.
+Propietateak 2
+(a) det A = det AT
+(b) Baldin matrizearen lerro edo zutabe bat
+nulua bada det A = 0
+(c) Baldin matrizearen bi lerro (zutabe) berdi-
+nak badira det A = 0
+Propietateak 3 (eragiketa elementalak)
+(a) A matrizean bi lerro (zutabe) trukatuz A
+lortu bada : det A = −det A
+(b) A matrizean lerro (zutabe) bat c eskalarra-
+rekin biderkatuz A lortu bada : det A = c·det A
+(c) A matrizean lerro (zutabe) bati beste lerro
+(zutabe) baten multiploa gehituz A lortu ba-
+da : det A = det A
+57
+
+Propietateak 4
+(matrize singularrak, matrize biderkadura)
+(a) A matrizea singularra da baldin eta soilik
+baldin det A = 0
+(b) A matrizea ez singularra denean :
+det A−1 = 1/det A
+(b) det AB = (det A) · (det B)
+AUTOBALIO ETA AUTOBEKTOREAK
+Izan bedi A matrize koadro bat (osagai errealak
+dituena), n × n tamainakoa. Baldin :
+A ¯
+x = λ¯
+x
+non λ eskalar (erreal) bat den eta ¯
+x = 0 bek-
+tore bat, esango dugu λ matrizearen autobalio
+bat dela eta ¯
+x ∈ Rn matrizearen autobektore
+bat. Honela bada, λ autobalioari elkartutako
+autobektorea da ¯
+x, eta alderantziz. (Zenbaki
+konplexuekin ari bagara A matrizearen osagai-
+ak eta λ autobalioak C-koak dira eta ¯
+x auto-
+bektoreak Cn-koak.)
+58
+
+Propietatea 5
+A matrizearen autobalioa da λ baldin eta soilik
+baldin A − λI matrize singularra bada, hau da,
+baldin eta soilik baldin det (A − λI) = 0.
+Frogatu
+Matrizearen ekuazio karakteristikoa deitzen za-
+io det (A − λI) = 0 ekuazioari, eta polinomio
+karakteristikoa p(λ) = det (A − λI) polinomio-
+ari. Beraz autobalioak p(λ) polinomioaren er-
+roak dira.
+Adibideak
+Kalkulatu autobalioak eta hauei elkartutako
+autobektoreak :
+12
+−4
+−8
+8
+,
+
+
+
+8 2 1
+1 7 3
+1 1 6
+
+
+
+59
+
+Propietateak 6
+Izan bedi A osagai errealeko matrizea, n × n
+tamainakoa.
+(a) Gehienez n autobalio existitzen dira : A
+matrizearen polinomio karakteristikoaren erro
+erreal desberdinak λ1, λ2, . . ., λr badira eta
+hauen anizkoiztasunak m1, m2,. . .,mr badira
+hurrenez hurren, orduan m1+m2+. . .+mr ≤ n.
+Baldin r = n, erroak bakunak dira.
+(b) Izan bedi U autobalio bati elkartutako au-
+tobektore guztiek osatzen duten multzoa (¯
+0
+gehituta) : A matrizearen azpiespazioa da U .
+(c) Izan bedi Ui, λi autobalioari elkartutako au-
+tobektoreen azpiespazioa : 1
+≤ dim Ui ≤ mi.
+(d) Izan bitez U1, U2, . . . , Ur autobektore az-
+piespazioetako r bektore multzo : ¯
+v1
+i , ¯
+v2
+i , . . . ∈
+Ui bektoreak linealki independenteak. Bektore
+hauek guztiak
+{¯
+v
+j
+i | i = 1, 2, . . . , r; j = 1, 2, . . .}
+linealki independenteak dira.
+60
+
+(e) A matrizearen autobalioei elkartutako U1,
+U2,. . .,Ur autobektore azpiespazioen diment-
+sioen batura n denean (m1 + m2 + . . . + mr =
+n eta dim Ui = mi izan behar), azpiespazio
+hauetan oinarriak hartuz, hauen bildura Rn-
+ren oinarria da. Bereziki, baldin r = n autoba-
+lio desberdin baditu A matrizeak, λ1, λ2, . . .,
+λn, eta hauei elkartutako autobektoreak badira
+¯
+v1, ¯
+v2, . . . , ¯
+vn hurrenez hurren, orduan bektore
+hauek Rn-ren oinarria osatzen dute.
+Adibidea
+Kalkulatu matrizearen autobalioak eta hauei
+elkartutako autobektore azpiespazioak :
+A =
+
+
+
+
+
+
+
+
+7 0 0 0 0
+0 4 1 0 0
+0 0 4 0 0
+0 0 0 7 0
+0 0 0 0 4
+
+
+
+
+
+
+
+
+61
+
+MATRIZE DESKONPOSIZIOA,
+TRANSFORMAZIO LINEALAK
+Izan bedi n × n tamainako A matrizea, autoba-
+lioei elkartutako U1, U2, . . . , Ur autobektore az-
+piespazioen dimentsioen batura n izanik. Au-
+tobalioak λ1, λ2, . . ., λn izango dira, non erro
+bakoitza mi (anizkoiztasuna) aldiz errepikat-
+zen dugun. (Orain m1 + m2 + . . . + mr = n
+eta dim Ui = mi dira.) Azpiespazioetan oinar-
+riak hartuz,
+{¯
+v1, ¯
+v2, . . . , ¯
+vn} bildura Rn-ren oi-
+narria da eta zutabe bektore hauekin P ma-
+trizea eraikiko dugu. Bestalde autobalioekin Λ
+matrize diagonala eraikiko dugu. Kontuan iza-
+nik A ¯
+vi = λi¯
+vi dela, berdintza hau dugu (bider-
+ketak zutabeka eginez) :
+AP = P Λ
+Eta P alderanzkarria denez :
+A = P ΛP
+−1
+edo
+P
+−1AP = Λ
+62
+
+Alderantziz, baldin existitzen bada P matrize
+alderanzkarri bat P −1AP = Λ izanik, non Λ dia-
+gonala den, orduan, AP = P Λ idatzita ikusten
+denez, Λ matrizearen diagonaleko osagaiak A
+matrizearen autobalioak dira, eta P matrizea-
+ren zutabeak horiei elkartutako autobektoreak,
+hauek Rn-ren oinarria osatuz.
+Adibidea
+Lortu A = P ΛP −1 deskonposizioa :
+A =
+
+
+
+1 1 0
+0 2 1
+0 0 3
+
+
+
+Transformazio lineal baten adierazpide matri-
+ziala aztertuko dugu. Izan bedi V espazio bek-
+toriala B = {¯
+v1, ¯
+v2, . . . , ¯
+vn} bere oinarri bat iza-
+nik, W beste espazio bektoriala C = { ¯
+w1, ¯
+w2,
+. . . , ¯
+wm} bere oinarri bat izanik, eta T transfor-
+mazio lineala V -tik W -rakoa.
+63
+
+Har dezagun ¯
+v ∈ V bektorea eta honen irudia
+¯
+w = T (¯
+v) ∈ W . Baldin ¯
+v bektoreak B oinarrian
+dituen koordenatuekin ¯
+x ∈ Rn zutabe bektorea
+osatzen badugu eta ¯
+w bektoreak C oinarrian
+dituen bektoreekin ¯
+y ∈ Rm zutabe bektorea,
+erlazio hau lortzen dugu :
+¯
+y = A¯
+x
+non A matrizearen j. zutabea T (¯
+vj) bektoreak
+C oinarrian dituen koordenatuek osatzen du-
+ten, j bakoitzerako. Beraz T transformazio li-
+neala A matrizearen bidez adieraz dezakegu, V
+eta W espazio bektorialetan oinarriak ﬁnkatuz.
+A matrizea m × n tamainakoa da, dim V = n
+eta dim W = m izanik.
+Frogatu A matrizea horrela deﬁnituz ¯
+y = A¯
+x
+erlazioa lortzen dela. Idatzi ¯
+v =
+m
+j=1 xj¯
+vj eta
+¯
+w = T (¯
+v) =
+n
+i=1 yi ¯
+wi.
+64
+
+Izan bitez V eta W espazio bektorial bera, B =
+{¯
+v1, ¯
+v2, . . . , ¯
+vn} oinarri bat izanik. Eman deza-
+gun
+T transformazio lineala dugula eta honi
+dagokion martizea B oinarrian A matrize koa-
+droa dela. Baldin A = P ΛP −1 deskonposizioa
+badugu, P matrize alderanzkarria izanik eta
+Λ matrize diagonala, honela interpretatu ahal
+dugu deskonposizio hau : P matrizeak oinarri
+aldaketa deﬁnitzen du, hasierako B oinarritik
+B = {¯
+v
+1, ¯
+v
+2, . . . , ¯
+vn} oinarrirako aldaketa, eta
+T transformazio linealari dagokion matrizea B
+oinarrian Λ = P −1AP matrize diagonala da.
+Adibidea
+E2 geometriako planoko bektoreen espazioan
+a ardatzaren inguruko simetria transformazio
+lineala dela, erraz ikusten denez,
+T deituko
+diogu. Hartu x1, x2 ardatz kartesiarrak, eta izan
+bedi θ angelua x1-etik a-ra doana. Izan bedi
+B = {v1, v2} ardatz kartesiarren oinarria (1 lu-
+zerako bektore geometrikoak),
+T -ri dagokion
+A matrizea kalkulatu behar dugu. (Jarraitu.)
+65
+
+Horretarako x
+1, x2 ardatz kartesiarrak hartuko
+ditugu, hasierakoak θ angelua biratuz (x
+1 ar-
+datza a da), B = {v
+1, v2} izanik ardatz karte-
+siar berrien oinarria.
+(a) Idatzi B oinarrian T -ri dagokion Λ matri-
+zea. Diagonala da ?
+(b) Idatzi oinarri aldaketaren P matrize alde-
+ranzkarria.
+(c) Kalkulatu A = P ΛP −1 matrizea, T -ri B-n
+dagokiona.
+ORTOGONALTASUNA,
+MATRIZE SIMETRIKOAK
+Izan bitez ¯
+x, ¯
+y ∈ Rn zutabe bektoreak, hauen
+biderkadura eskalarra honela deﬁnituko dugu :
+(¯
+x, ¯
+y) = ¯
+x
+T ¯
+y
+Eta ¯
+x ∈ Rn bektorearen norma hau izango da :
+¯
+x = (¯
+x
+T ¯
+x)
+1/2
+66
+
+Esango dugu ¯
+x, ¯
+y ∈ Rn bektoreak ortogonalak
+direla baldin (¯
+x, ¯
+y) = ¯
+xT ¯
+y = 0. Bektore multzo
+bat ortogonala dela esaten da bektoreak el-
+karren artean ortogonalak direnean. Bektore
+ez nulu bat bat, ¯
+x ∈ Rn, normalizatuko dugu
+¯
+u = (1/
+¯
+x ) ¯
+x kalkulatuz, ondorioz
+¯
+u = 1.
+Bektore multzo bat ortonormala dela esaten
+da ortogonala izanik bektoreak normalizatuta
+badaude.
+Izan bedi P matrize koadroa, osagai errealak
+dituena, esango dugu P matrize unitarioa (edo
+ortogonala) dela baldin :
+P
+T P = I
+Honela bada, P alderanzkarria da (determinan-
+teak hartuz ikusten da), eta hau dugu :
+P
+−1 = P T
+ondorioz P P T = I ere beteko da. Beraz, P
+matrizea, n × n tamainakoa, unitarioa da bal-
+din bere zutabeek Rn-ko bektore multzo orto-
+normala osatzen badute, edo bere lerroek ere
+bektore multzo ortonormala osatzen badute.
+67
+
+V izanik n dimentsioko espazio bektoriala, B
+oinarritik B oinarrirako aldaketari dagokion P
+matrizea unitarioa bada, ondorengo propieta-
+tea dugu. V -ko bektore batek B eta B oinarrie-
+tan dituen koordenatuekin ¯
+x eta ¯
+x zutabe bek-
+toreak eraikiz, eta beste bektore baten koorde-
+natuekin ¯
+y eta ¯
+y zutabe bektoreak eraikiz :
+¯
+x
+T ¯
+y = (P ¯
+x )
+T P ¯
+y = (¯
+x )
+T ¯
+y
+Hau da, P unitarioa denean, oinarri aldaketak
+gorde egiten du biderkadura eskalarraren ba-
+lioa.
+Adibidea
+E2 plano geometrikoan, x1, x2 ardatz kartesiar-
+rak ﬁnkatuz, interpretatu bektore baten norma
+eta bektore baten normalizazioa. Ardatz horiek
+θ angelua biratuz ﬁnkatu x
+1, x2 ardatz karte-
+siar berriak eta idatzi oinarri aldaketaren P ma-
+trizea. Unitarioa da P matrizea ? Interpretatu
+bektoreen biderkadura eskalarra eta ortogonal-
+tasuna. (Jarraitu.)
+68
+
+Ohartu ardatz kartesiarren oinarriak bektore
+multzo ortonormalak direla E2 plano geome-
+trikoan eta E3 espazio geometrikoan ere.
+Propietatea 7
+Izan bedi A matrize simetrikoa, osagai errealak
+dituena, orduan existitzen da P matrize unita-
+rio bat :
+P
+−1AP = Λ
+matrize diagonala izanik. A-ren autobalioak Λ-
+ren diagonalean daude eta horiei elkartutako
+autobektoreak dira P -ren zutabeak.
+Alderantziz, matrize koadro batek A = P ΛP −1
+deskonposizioa onartzen badu, P unitarioa eta
+Λ diagonala izanik, orduan A simetrikoa da,
+erraz ikus daitekeenez.
+69
+
+Adibideak
+(a) E2 plano geometrikoan, ardatz kartesiarrak
+hartuz, a ardatzaren inguruko simetriari dago-
+kion A matrizea simetrikoa da eta A = P ΛP −1
+deskonposizioa onartzen du, P unitarioa eta Λ
+diagonala izanik, ikusi genuen bezala.
+(b) Lortu A = P ΛP −1, P unitarioa eta Λ dia-
+gonala izanik, matrize simetriko honetarako :
+A =
+
+
+
+1
+0 1
+0
+−1 0
+1
+0 1
+
+
+
+70

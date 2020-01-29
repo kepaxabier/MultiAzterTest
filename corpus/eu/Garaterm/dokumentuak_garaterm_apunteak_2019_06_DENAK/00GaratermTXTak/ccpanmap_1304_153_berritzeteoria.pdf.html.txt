@@ -1,0 +1,659 @@
+
+
+
+BERRITZE TEORIA ETA
+APLIKAZIOAK
+1
+Sarrera
+Berritze teoriak tresna ahaltsuak eskaintzen dizkigu behin eta berriz bir-
+sortzen diren prozesu estokastikoak analizatzeko. Markov kateen teoriarekin
+batera, funtsezkoa da konputagailu eta komunikazio sistemen eredu probabi-
+listikoak aztertzeko, sistema hauek analizatu eta errendimendua neurtzeko.
+Poisson etorrera prozesua dugu oinarrizko adibidea, etorrerarteko denborak
+esponentzialak izanik oroimengabetasun propietateak bideratzen du prozesu
+honen analisia. Berritze prozesu nagusia kola izango dugu, aipatutako siste-
+men eredu estokastikoetan erabiltzen dena. Lehenik, probabilitate teoriaren
+hastapenak berrikusiko ditugu laburki.
+2
+Probabilitateak eta aldagai aleatorioak
+Probabilitate teoriaren oinarrian dugun kontzeptua esperimentu aleato-
+rioa da : emaitza aurretik determinatu ezin den esperimentua. Lagin espazioa
+deituko diogu esperimentuaren emaitza posible guztien multzoari, Ω = {ω}
+idatziz. Gertaera bat lagin espazioko azpimultzoa da, A ⊆ Ω. Esperimentu
+batean A gertaera jazo dela esango dugu baldin emaitza A-koa bada, ω ∈ A.
+Adibidea 1 Kontsidera dezagun esperimentu hau : bidegurutze jakin batean
+izan diren auto istripuak asteburu konkretu batean. Zein da lagin espazioa ?
+Deﬁnitu gertaera bat.
+Gertaera bakoitzak bere probabilitatea1 du, zenbaki bat, A gertaerak P (A)
+probabilitatea. Probabilitatea gertaeraren maiztasuna bezala uler dezakegu
+1Formalki, izan bedi Ω lagin espazioa eta P gertaera bakoitzari zenbaki bat ematen
+dion funtzioa. Esango dugu P probabilitate neurria dela baldin : (i) 0 ≤ P 
+(A) ≤ 1,
+edozein gertaera A-rako, (ii) P (Ω) = 1, 
+(iii) A1, A2, . . .izanik binaka disjuntuak diren
+edozein gertaera, P (
+∞
+i=1 Ai) =
+∞
+i=1 P (Ai). Probabilitatea axiomatikoki sartu behar
+da espazio ez diskretuak aztertu ahal izateko. Oro har, ez da posible Ω-
+ren azpimultzo
+guztientzat axiomak betetzen dituen probabilitatea deﬁnitzea, horrela gertaera deituko
+diogu probabilitatea deﬁnitu ahal zaion azpimultzoari.
+1
+
+intuitiboki, hau da, esperimentua behin eta berriz eginez gero gertaera hori
+zenbat aldiz jazoko litzatekeen saio kopuru osoarekiko, baina maiztasun hau
+era ez determinista batean hartuta. Gertaera batzuen bildura eta ebakidura,
+gertaera disjuntuak (elementu komunik ez dutenak), gertaeraren osagarria
+etab. deﬁnituko ditugu multzoen teoria jarraituz, hauen probabilitateentzat
+jakineko erlazioak ditugularik2.
+Sarritan esperimentuaren emaitza baino interesgarriagoa da emaitzaren
+funtzio bat : X aldagai aleatorioa, ω emaitza bakoitzari X(ω) zenbaki erreala
+ematen dion funtzioa da. Aldagai aleatorioak hartzen dituen balioen mult-
+zoa ﬁnitua edo inﬁnitu zenbakigarria denean esango dugu aldagai aleatorio
+diskretua dela.
+Adibidea 2 Txanpona jaurtitzearen esperimentuan deﬁnitu aldagai aleato-
+rio bat.
+Normalean, probabilitateekin lan egiteko aldagai aleatorioetan oinarrit-
+zen gara. Aldagai aleatorioak har dezakeen balioari baldintza ezarriz gertae-
+rak3 ﬁnkatzen dira. Izan bedi X aldagai aleatorioa, b ∈ R emanik, gertaera
+hau kontsideratuko dugu :
+{ω : X(ω) ≤ b} = {X ≤ b}
+X aldagai aleatorioaren F (x) banaketa funtzioa honela deﬁnitzen da :
+F (x) = P {X ≤ x}
+edozein x ∈ R-rako. Banaketa funtzioa4 badugu, aldagai aleatorioari buruzko
+probabilitateak kalkula ditzakegu :
+P {a < X ≤ b} = F (b) − F (a)
+Orain izan bedi X aldagai aleatorio diskretua, probabilitate masaren funtzioa
+honela deﬁnitzen da :
+p(x) = P {X = x}
+2Axiometatik, multzo teoria erabiliz, deduzitzen diren propietate batzuk hauek dira :
+(a) P (∅) = 0, (b) A, B disjuntuak izanik, P (A ∪ B) = P (A) + P (B), (c) P 
+(A) + P (Ac) = 1,
+(d) A ⊆ B bada, orduan P (A) ≤ P 
+(B). Bestalde, baldin B1, B2,. . .gertaera disjuntuak
+badira,
+∞
+i=1 Bi = Ω izanik, orduan edozein gertaera A-rako P (A) =
+∞
+i=1 P (A ∩ Bi).
+3Idatziko ditugun azpimultzoak gertaera propioak direla suposatuko dugu.
+4Banaketa funtzioak propietate hauek ditu : ez-
+beherakorra da, eskuinetik jarraitua,
+limx→∞ F (x) = F (∞) = 1 eta limx→−∞ F (x) = F (−∞) = 0.
+2
+
+edozein balio x-erako5.
+Bestalde X ez-diskretua denean, F (x) banaketa funtzioa deribagarria
+bada orduan honen deribatuari, f (x) = F (x) funtzioari, probabilitate dent-
+sitatearen funtzioa deitzen zaio eta esaten da X jarraitua dela. (X jarraitua
+bada, P {X = a} = 0 edozein a-rako.)
+Adibidea 3 Txanpon jaurtiketaren esperimentuan, aurpegia ateratzeko pro-
+babilitatea 0.4 bada, lehen deﬁnitutako aldagai aleatorioaren banaketa funtzioa
+marraztu.
+Aldagai aleatorioen arteko independentzia kontzeptu garrantzitsua da.
+Izan bitez X eta Y lagin espazio batean6 deﬁnitutako bi aldagai aleatorio,
+independenteak direla esango dugu baldin
+P {X ∈ A, Y ∈ B} = P {X ∈ A} P {Y ∈ B}
+edozein A, B ⊆ R-rako7. Antzera deﬁnituko dugu bi aldagai aleatorio baino
+gehiagoren arteko independentzia.
+Sarritan probabilitate baldintzatuak erabiltzen dira. Izan bitez A eta B
+gertaerak, A-ren probabilitate baldintzatua B emanik8 hau da :
+P (A|B) =
+P (A ∩ B)
+P (B)
+Probabilitateak kalkulatzeko baliagarria den probabilitate totalaren teoremak
+hau dio : B1, B2, . . . gertaera disjuntuak badira,
+i Bi = Ω izanik, edozein
+gertaera A-rako
+P (A) =
+i
+P (A|Bi)P (Bi)
+Aldagai aleatorioen arteko independentzia interpretatuko dugu probabilitate
+baldintzatuaren bidez : X eta Y independenteak izango dira baldin
+P {X ∈ A|Y ∈ B} = P {X ∈ A}
+5Nabaria denez
+x p(x) = 1.
+6Baldin X eta Y aldagai aleatorioak Ω lagin espazioan deﬁnituta badaude, elkarrekiko
+banaketa funtzio hau hartzen da : F (x, y) = P 
+{X ≤ x, Y ≤ y}. Eta diskretuak direnean
+elkarrekiko probabilitate masa funtzioa : p(x, y) = P {X = x, Y = y}.
+7Baldintza baliokidea da P {X ≤ a, Y ≤ b} = P {X ≤ a} P {Y ≤ b} edozein a, b-
+rako,
+eta diskretuak direnean P {X = a, Y = b} = P {X = a} P {Y = b}.
+8B ﬁnkatzen badugu, P (B) > 0 delarik, P (A|B) probabilitate baldintzatuak, A-
+ren
+funtziotzat hartuz, probabilitate neurria deﬁnitzen du Ω lagin espazioan.
+3
+
+Adibidea 4 Pellori galdetuko diogu bere soldata zenbatekoa den, zer prezio-
+ko automobila duen, eta kilometroa lasterka zenbat denboran egiten duen. Ho-
+nela X, Y eta Z aldagai aleatorioak ditugu hurrenez hurren. Independenteak
+dira X eta Y ? Eta X eta Z ?
+3
+Itxarotako balioak
+Izan bedi X aldagai aleatorio diskretua, itxarotako balioa honela deﬁni-
+tuko dugu :
+E[X] =
+x
+x P {X = x}
+Aldagai aleatorioa jarraitua bada :
+E[X] =
+∞
+−∞
+x f (x) dx
+non f (x) probabilitate dentsitatearen funtzioa den9.
+Adibidea 5 Txanpona jaurtiko dugu aurpegia atera arte, X aldagai aleato-
+rioak adieraziko duelarik aurpegia zenbatgarrengo jaurtiketan atera den. (X
+aldagai aleatorio geometrikoa da.) Baldin p bada jaurtiketa batean aurpegia
+ateratzeko probabilitatea, kalkulatu X-en itxarotako balioa.
+Bestalde, X aldagai aleatorioa eta g funtzioa emanik, g(X) aldagai alea-
+torio berria dugu, ω emaitzerako g(X)(ω) = g(X(ω)) izanik. Bere itxarotako
+balioa10, X aldagaiaren banaketa funtzioa erabiliz kalkula dezakegu.
+Propietatea 1 X diskretua bada :
+E[g(X)] =
+x
+g(x)P {X = x}
+eta X jarraitua bada :
+E[g(X)] =
+∞
+−∞
+g(x) f (x) dx
+9Aldagaia diskretua ala jarraitua izan, beti idatz dezakegu Lebesgue-Stieltjes-
+en inte-
+grala : E[X] =
+∞
+−∞ x dF (x). Deﬁnizio hauetan konbergentzia absolutua behar da.
+10Adibidez, g(X) = Xn hartuz E[Xn] dugu, X-en n. momentua deitzen zaiona.
+4
+
+Bi aldagai aleatorioren funtzioarekin antzeko deﬁnizioa eta emaitza ditugu11.
+Itxarotako balioa lineala da (idatzitako integralen arabera) :
+(i) E[cX] = cE[X]
+(ii) E[X + Y ] = E[X] + E[Y ]
+Orain X aldagai aleatorioaren bariantza deﬁnituko dugu :
+Var(X) = E[(X − µ)
+2]
+non µ = E[X]. Erraz deduzituko dugu berdintza hau :
+Var(X) = E[X
+2] − (E[X])2
+X eta Y independenteak diren kasuan, propietate12 hau dugu :
+Var(X + Y ) = Var(X) + Var(Y )
+Antzera aldagai independente gehiagoren baturarako.
+Itxarotako balio baldintzatuak deﬁnituko ditugu probabilitate baldintza-
+tuak idatziz. Kontsidera ditzagun X eta Y aldagai aleatorio diskretuak, X-en
+itxarotako balio baldintzatua Y = y emanik13 hau da :
+E[X|Y = y] =
+x
+x P {X = x|Y = y}
+Itxarotako balio hau y-ren funtzioa da, E[X|Y = y] = g(y), beraz E[X|Y ] =
+g(Y ) aldagai aleatorioa dugu, Y aldagai aleatorioaren funtzioa.
+Izan bitez orain X eta Y aldagai aleatorio jarraituak. Har dezagun X-en
+banaketa funtzio baldintzatua Y = y emanik14 eta bere deribatua f (x|y).
+Honela deﬁnituko dugu itxarotako balio baldintzatua :
+E[X|Y = y] =
+∞
+−∞
+x f (x|y) dx
+Adibidea 6 Txanpona jaurtiko dugu aurpegia bi aldiz atera arte. X aldagai
+aleatorioak adieraziko digu aurpegia lehenengo aldiz noiz atera den eta Y -k
+aurpegia bigarrengo aldiz noiz atera den. Kalkulatu E[Y |X].
+11Hau betetzen da : E[g(X, Y )] =
+R2 g(x, y) dF (x, y).
+12X eta Y independenteak badira, E[g(X) h(Y )] = E[g(X)] E[h
+(Y )] berdintza dugu.
+13P {X = x|Y = y} = P {X = x, Y = y}/P {Y = y} probabilitate baldintzatua dugu.
+14Berez banaketa funtzio baldintzatua deﬁnitu gabe genuke, F (x|y) = P 
+{X ≤ x|Y =
+y} = P {X ≤ x, Y = y}/P {Y = y} = 0/0. Diferentzial hau hartuko dugu : dF 
+(x|y) =
+dF (x, y)/dF (y) = f (x, y)dxdy/f (y)dy = f (x, y)/f (y) · dx, hau da, f 
+(x|y) = f (x, y)/f (y).
+5
+
+Esan dugunez X-en itxarotako balio baldintzatua Y emanik, E[X|Y ], aldagai
+aleatorioa da, Y aldagai aleatorioaren funtzioa, beraz bere itxarotako balioa
+kalkula dezakegu15. Bestalde, A gertaera eta Y aldagai aleatorioa baditugu,
+P (A|Y = y) probabilitatea y-ren funtzioa da, hau da P (A|Y ) = g(Y ) aldagai
+aleatorioa dugu eta honek ere badu itxarotako balioa.
+Propietatea 2 Edozein aldagai aleatorio X eta Y emanik,
+E[E[X|Y ]] = E[X]
+Eta edozein gertaera A eta aldagai aleatorio Y emanik,
+E[P (A|Y )] = P (A)
+Adibidea 7 Aurreko adibidean kalkulatu E[Y ].
+4
+Banaketa esponentziala
+Berritze prozesuak estudiatzerakoan banaketa funtzio esponentziala oi-
+narrizkoa da. Kontsidera dezagun X aldagai aleatorioa, balioak [0, ∞) mult-
+zoan hartzen dituena. Esango dugu λ parametroko banaketa esponentziala
+dugula, λ > 0, baldin
+F (x) = 1 − e
+−λx
+Hemendik, deribatuz, probabilitate dentsitate hau dugu :
+f (x) = λe
+−λx
+Itxarotako balioa kalkulatuko dugu :
+E[X] =
+∞
+−∞
+x f (x) dx =
+∞
+0
+x λ e
+−λxdx =
+= −x e
+−λx
+∞
+0
++
+∞
+0
+e
+−λxdx = 0 −
+e−λx
+λ
+∞
+0
+=
+1
+λ
+Beraz,
+E[X] =
+1
+λ
+15Y -ren funtzioa izanik, E[E[X|Y ]] =
+∞
+−∞ E[X |Y = y] dF (y)
+6
+
+Bariantza lortzeko lehenik E[X2] = 2/λ2 kalkulatuko dugu antzera integra-
+tuz, eta honela Var(X) = E[X2] − (E[X])2 = 2/λ2 − 1/λ2. Hau da,
+Var(X) =
+1
+λ2
+Oro har, X aldagai aleatorioa oroimengabea dela esago dugu baldin edo-
+zein s, t ≥ 0 -rako
+P {X > s + t | X > s} = P {X > t}
+Honela interpreta dezakegu propietate hau. Eman dezagun X tresna baten
+bizidenbora dela (ordutan neurtua) eta X oroimengabea dela. Tresnak s ordu
+iraun ondoren funtzionatzen duela jakinik gutxienez beste t ordu irauteko
+probabilitatea, eta hasieran zuen probabilitatea gutxienez t ordu irauteko
+berdinak dira. Hau da, tresna ez bada hondatu s ordu iraun ondoren, ez da
+gogoratzen s ordutan erabilia izan dela eta geratzen zaion bizidenboraren
+banaketa hasieran zuen bizidenboraren banaketa da.
+X-ek banaketa esponentziala badu orduan oroimengabea dela frogatuko
+dugu. Horretarako lehenik oroimengabetasunaren deﬁnizioko berdintza ho-
+nela idatziko dugu : P {X > s + t, X > s} / P {X > s} = P {X > t}. Eta
+hemendik :
+P {X > s + t} = P {X > s} · P {X > t}
+Nabaria denez, berdintza hau betezen da X esponentziala bada :
+e
+−λ(s+t) = e−λs · e−λt
+Alderantzizkoa ere froga daiteke, X aldagai aleatorio jarraitua oroimengabea
+bada orduan esponentziala da.
+Adibidea 8 Izan bedi X telefono elkarrizketa baten iraupena. Eman deza-
+gun banaketa esponentziala duela eta itxarotako balioa 25 minutukoa dela.
+Kalkulatu P {X > 50 | X > 30}.
+Kontsidera ditzagun orain X1 eta X2 aldagai aleatorioak, aldagai berria
+deﬁnituko dugu :
+X = min(X1, X2)
+hau da, X(ω) = min{X1(ω), X2(ω)} esperimentuaren edozein emaitza ω-
+rako.
+7
+
+Propietatea 3 X1 eta X2 aldagai aleatorio esponentzialak badira, λ1 eta
+λ2 parametrokoak hurrenez hurren, eta independenteak badira, orduan X =
+min(X1, X2) aldagai aleatorioa esponentziala da, parametroa λ1 + λ2 izanik.
+Froga. X-en banaketa funtzioa kalkulatuko dugu, F (x) = P {X ≤ x} =
+1 − P {X > x}. Hau dugu :
+P {X > x} = P {X1 > x, X2 > x} = P {X1 > x} · P {X2 > x} =
+= e
+−λ1x · e−λ2x = e−(λ1+λ2)x
+Beraz
+F (x) = 1 − e
+−(λ1+λ2)x
+♦
+Emaitza honen arabera X-en itxarotako balioa ezagutzen dugu :
+E[X] =
+1
+λ1 + λ2
+Eta bariantza ere bai, Var(X) = 1/(λ1 + λ2)
+2.
+Propietatea 4 X1 eta X2 aldagai aleatorio esponentzialak badira, λ1 eta λ2
+parametrokoak hurrenez hurren, eta independenteak badira, orduan
+P {X1 < X2} =
+λ1
+λ1 + λ2
+Eta antzera, P {X2 < X1} = λ2/(λ1 + λ2)
+Froga. Kalkulatu behar dugun probabilitatea X2-ren gainean baldintzatuko
+dugu, honela Propietatea 2-ren arabera,
+P {X1 < X2} = E[P {X1 < X2 | X2}]
+Kalkula dezagun probabilitate baldintzatua, X1 eta X2 independenteak direla
+kontuan izanik :
+P {X1 < X2 | X2 = x} = P {X1 < x | X2 = x} = P {X1 < x} = 1 − e
+−λ1x
+8
+
+Probabilitate baldintzatu honen itxarotako balioa kalkulatuko dugu, kontuan
+izanik X2-ren funtzioa dela eta honen dentsitatea λ2e
+−λ2x dela :
+E[P {X1 < X2 | X2}] =
+∞
+0
+(1 − e
+−λ1x) λ
+2e
+−λ2x dx =
+=
+∞
+0
+λ2e
+−λ2x − λ
+2e
+−(λ1+λ2)x
+dx = −e
+−λ2x +
+λ2
+λ1 + λ2
+e
+−(λ1+λ2)x
+∞
+0
+=
+= 1 −
+λ2
+λ1 + λ2
+=
+λ1
+λ1 + λ2
+Hasierako berdintzan ordezkatuz lortu nahi genuen emaitza daukagu. ♦
+Adibidea 9 Makina batek bi pieza ditu, A eta B, bakoitzaren bizidenbora
+esponentziala delarik, eta itxarotako balioa 1000 ordukoa eta 500 ordukoa
+hurrenez hurren. Makinak funtzionatzeko bi piezen beharra du. Kalkulatu ma-
+kinaren bizidenboraren itxarotako balioa. Zer probabilitate dugu A piezak B
+piezak baino lehenago huts egiteko ?
+5
+Berritze prozesuak
+Berritze prozesua deituko diogu X1, X2, . . .aldagai aleatorio ez-negati-
+boen sekuentziari baldin aldagai hauek independenteak badira eta banaketa
+berdina badute. Itxarotako balio komuna, m = E[Xn], n ≥ 1, ﬁnitua eta ez
+nulua izango da.
+Aldagai hauek berritzearteko denborak adierazten dituzte, zehazki Xn al-
+dagaiak n−1. berritzea eta n. berritzea bitartean igarotako denbora, beraz
+berritze denborak deﬁnituko ditugu :
+Tn =
+n
+i=1
+Xi ,
+n ≥ 1
+honela Tn aldagai aleatorioak adierazten digu n. berritzea noiz gertatu den.
+Adibidea 10 Pelloren irratia pila batekin dabil eta hau izorratzen den ba-
+koitzean pila berria ipintzen dio. Pilaren bizidenbora (ordutan) uniformeki
+banatuta dago (30,60) tartean.
+N (t) aldagai aleatorioa deﬁnituko dugu, t ≥ 0 denbora ﬁnkaturik : hartuko
+duen balioa t denbora bitartean izan diren berritzeen kopurua da, zehazki
+N (t) = n baldin Tn ≤ t eta Tn+1 > t ; hasieran N (t) = 0, baldin T1 > t.
+9
+
+Propietatea 5 Berritze prozesuan16
+lim
+t→∞
+N (t)
+t
+=
+1
+m
+Berritze tasa deitzen zaio 1/m zenbakiari, berritzearteko denboraren itxaro-
+tako balioaren alderantzizkoak ematen baitigu N (t)/t tasaren limitea, ber-
+ritze kopurua denbora unitateko.
+Adibidea 11 Pelloren irratiarekin jarraituz, eman dezagun orain pila berria
+lortzeko denbora bat behar duela, (0,1) tartean uniformeki banatutakoa. Zer
+tasaren arabera aldatzen ditu Pellok pilak ?
+Hemendik aurrera prozesu estokastikoak aztertuko ditugu, lehenik Pois-
+son prozesuak eta ondoren prozesu birsortzaileak. Denbora jarraituko prozesu
+estokastikoa {X(t), t ≥ 0} aldagai aleatorioen bilduma da, non t indizeak,
+denbora parametroak, balio erreal ez-negatiboak hartzen dituen. Esango du-
+gu prozesua X(t) estatu edo egoeran dagoela t denboran. Antzera deﬁnituko
+dugu {Xn, n = 0, 1, . . .} denbora diskretuko prozesu estokastikoa, orain n
+indizeak, denbora parametroak, balio osoko ez-negatiboak izango dituelarik.
+Denbora jarraituko prozesu estokastikoen adibidea {N (t), t ≥ 0} kontatze
+prozesua da, non N (t) aldagaiak adierazten digun t denbora bitartean zenbat
+“gertaera” edo “etorrera” izan diren. Etorrerarteko denborak independenteak
+eta banaketa berdinekoak badira, berritze prozesua deﬁnitzen dute, eta or-
+duan gertaerak berritzeak lirateke. Kontatze prozesu bat berritze prozesua
+izan daiteke edo bestelako prozesu bat.
+Kontaketa prozesu batzuk ditugu N (t) honela deﬁnituz : (a) Denda batera
+etorri diren bezeroak. (b) Telefono batera izan diren deiak. (c) Herrialde
+bateko jaiotzak.
+Adibidea 12 Adierazi graﬁko baten bidez kontatze prozesuaren gauzatze bat.
+6
+Poisson prozesuak
+{N (t), t ≥ 0} kontatze prozesuari Poisson prozesua deitzen zaio baldin
+X1, X2, . . .etorrerarteko denborek berritze prozesua deﬁnitzen badute eta
+16Limite hau 1 probabilitatearekin existitzen da, berritze prozesuaren ω emaitza bakoit-
+zerako N (t)/t-ren limitea kontsideratuz.
+10
+
+gainera banaketa esponentziala badute. Hauen itxarotako balioa m = 1/λ
+izanik, berritze tasa λ da eta etorrera tasa deitzen zaio.
+Etorrerarteko denborak aldagai aleatorio esponentzialak izanik (gainera
+elkarren artean independienteak eta parametro berdinekoak) oroimengabeak
+dira, beraz Poisson prozesua oroimengabea da : edozein une hartuz, hur-
+rengo etorrera arte igaroko den denborak, jatorrizko etorrerarteko denbora-
+ren banaketa bera dauka, azken etorrera noiz izan den berdin delarik. Une
+batetik aurrerako etorrera denboretan ez du eraginik aurretik gertatu denak.
+Oroimengabetasun honetatik ondorengo propietateak ditugu Poisson proze-
+surako :
+(A) Gehikuntza independenteak : bi denbora tarte disjuntutan izandako
+etorreren kopuruak independenteak dira.
+(B) Gehikuntza gerakorrak : denbora tarte batean izango diren etorreren
+kopuruaren banaketa funtzioa tartearen luzeraren menpekoa da baina
+ez tartearen jatorriaren menpekoa.
+Adibidea 13 Har dezagun herrialde bat, jaiotza tasa jakina duena, N (t)
+izanik t denbora bitarteko jaiotzen kopurua. Beste informaziorik ezean Pois-
+son prozesutzat har dezakegu {N (t), t ≥ 0}. Baina :
+(a) Udaberrian udazkenean baino jaiotza gehiago izaten bada, Poisson pro-
+zesua litzateke ?
+(b) Gobernuak jaiokuntza kanpaina egiten badu jaiotzak gutxitzen direnean,
+jaiotza tasa mantentzeko, Poisson prozesua litzateke ?
+Propietatea 6 {N (t), t ≥ 0} Poisson prozesua bada, orduan
+P {N (s + t) − N (s) = k} = P {N (t) = k} =
+e−λt(λt)k
+k!
+,
+k = 0, 1, 2, . . .
+Probabilitate hauen bidez N (t)-ren itxarotako balioa kalkulatzen da,
+E[N (t)] = λt
+Ikusten dugu emaitza hau nolabait Propietatea 5-en antzekoa dela, baina
+orain denbora tarte ﬁnitua daukagu. Bestalde, hau da N (t)-ren bariantza :
+Var(N (t)) = λt
+Azkenik, N (s+t)−N (s)-ren itxarotako balioa eta bariantza N (t)-renak dira,
+Poisson prozesuan gehikuntza gerakorrak ditugunez.
+11
+
+Adibidea 14 Aurreko adibidean jaiotza tasa λ = 500 jaiotza/urteko bada :
+(a) Kalkulatu 3 hilabetean gehienez 150 jaiotza izateko probabilitatea.
+(b) Kalkulatu 3 hilabetean gehienez 150 jaiotza eta hurrengo 6 hilabetean
+gutxienez 100 jaiotza izateko probabilitatea.
+Esan dugunez Poisson prozesuan X1, X2, . . .etorrerarteko denborak alda-
+gai aleatorio independenteak dira eta λ parametroko banaketa esponentziala
+dute. Har ditzagun T1, T2, . . .etorrera denborak, hauek ez dira independen-
+teak eta ez dute banaketa esponentziala, baina erraza da hauen itxarotako
+balioa eta bariantza kalkulatzea n. etorrera denboraren deﬁnizioa berridazten
+badugu :
+Tn = X1 + X2 + . . . + Xn
+Honela, etorrerarteko denboren itxarotako balioa 1/λ denez,
+E[Tn] =
+n
+λ
+eta etorrerarteko denborak independenteak direnez, 1/λ2 bariantzakoak,
+Var(Tn) =
+n
+λ2
+Adibidea 15 Ekipamendu batek hiru pieza ditu, lehenengoak huts egitean
+bigarrengoa martxan jartzen delarik eta honek huts egitean hirugarrengoa.
+Pieza bakoitzaren bizidenbora esponentziala da, itxarotako balioa 5 000 or-
+dukoa izanik. Ekipamenduak inﬁnitu pieza ordezko balitu, Poisson prozesua
+genuke huts egiteak etorrerekin identiﬁkatuz. Zein da T3-ren itxarotako ba-
+lioa ? Zer probabilitate dugu lehenengo eta bigarrengo piezek gutxienez 5 000
+ordu irauteko bakoitzak ? Zer probabilitate hirugarren huts egitea gutxienez
+15 000 ordu iragandakoan izateko ?
+7
+Prozesu birsortzaileak
+Prozesu birsortzaileak nolabait orokortu egiten du berritze prozesuaren
+kontzeptua prozesu estokastikoetarako. {X(t), t ≥ 0} denbora jarraituko
+prozesu estokastikoa birsortzailea dela esango dugu baldin prozesu honentzat
+deﬁni badezakegu berritze prozesu bat non berritze bakoitza gertatzen de-
+nean prozesu estokastikoa hasieratik abiatuko balitz bezala jarraitzen duen,
+12
+
+hau da, probabilistikoki prozesu bera daukagu hasieratik eta berritze bakoit-
+zetik aurrera. Esango dugu prozesu birsortzailearen berritzea gertatzen den
+bakoitzean, T1, T2, . . .denboretan, ziklo bat osatu duela prozesuak. Estatuen
+multzoa zenbakigarria izango da.
+Adibidea 16 Eman dezagun sistema batera bezeroak etortzen direla, hemen
+zerbitzari bat edo gehiago daudela, eta bezero bakoitzak dagokion zerbitzua
+jasotzen duenean sistematik irteten dela. Sistema honi “kola” deituko diogu
+eta {X(t), t ≥ 0} denbora jarraituko prozesu estokastikoa deﬁnituko dugu,
+X(t) izanik t unean sisteman dauden bezeroen kopurua. Nola deﬁnituko ge-
+nuke berritze prozesu bat ? Zer baldintza bete beharko litzateke X(t) prozesu
+birsortzailea izateko ? Bezeroen etorrerek Poisson prozesua jarraitu beharko
+lukete ? Adierazi graﬁkoki prozesu birsortzailearen gauzatze bat.
+Kontsidera dezagun j, prozesu birsortzailearen estatuetako bat. Har de-
+zagun T denbora, eta izan bedi T (j), prozesua j estatuan egoten den denbora
+guztira, hasieratik T -ra bitartean. Beraz T (j)/T izango litzateke prozesua j
+estatuan egoten den denbora proportzioa. Jakin nahi genuke honen limitea
+existitzen den T → ∞ eramanaz. Bestalde limiteko probabilitateak ditugu,
+prozesua j estatuan edo beste batean izateko probabilitateak t-rako limitean,
+existituko balira,
+Pj = lim
+t→∞
+P {X(t) = j}
+Propietatea 7 Prozesu birsortzailea emanik, berritzearteko denborak alda-
+gai aleatorio jarraituak badira, orduan existitzen17 dira eta berdinak dira
+denbora proportzioen limiteak eta limiteko probabilitateak, limt→∞ P {X(t) =
+j} = limT →∞ T (j)/T edozein estatu j-rako.
+Estatuen limiteko probabilitateak kalkulatzeko balantza (edo oreka) ekua-
+zioak erabiltzen dira. Eman dezagun prozesu birsortzailearen estatua i dela
+denbora batez t unea arte eta une horretan j dela prozesuaren estatua, i = j,
+esango dugu prozesuak trantsizio bat egin duela i estatutik j estatura t
+unean. Konta dezagun T denbora bitartean zenbat trantsizio egin dituen
+i-tik j-ra eta zatitu kopuru hau T -rekin, T → ∞ eramanaz. Antzera, konta
+ditzagun prozesuak j estatura egindako bisitak, zenbat trantsizio beste esta-
+tuetatik j-ra, denbora unitateko.
+Balantza ekuazioak Edozein estatu j-rako :
+17T (j)/T -
+ren limitea 1 probabilitatearekin dugu, aurreragoko trantsizo tasarena bezala.
+13
+
+j estatuaren bisita tasa =
+=
+i
+i estatutik j estaturako trantsizioen tasa
+8
+Etorrerak dituen sistema birsortzailea
+Kola teorian funtsezkoak diren erlazioak deduzitzeko erabiliko dugun kos-
+tu ekuazioa aztertuz jarraituko dugu. Eman dezagun sistema batera bezeroak
+sartzen direla eta hemen denbora bat igaro ondoren sistematik irteten direla.
+Izan bedi {X(t), t ≥ 0} prozesu birsortzailea, X(t) delarik sisteman dauden
+bezeroen kopurua t unean. Prozesu honen berritzea gertatuko da sistema be-
+zeroz husten den bakoitzean. Izan bedi λ bezeroak sistemara etortzen18 diren
+tasa. Pentsa dezagun sistemara sartzen den bezero bakoitzak diru kopuru
+aleatorioa ordaintzen diola sistemari hemen dagoen bitartean. Sistemaren
+irabazi tasa daukagu T denborako sistemaren irabazia T -rekin zatituz eta
+T → ∞ eramanaz19.
+Kostu ekuazioa
+Sistemaren irabazi tasa = λ × bezeroak ordaintzen duen kopu-
+ruaren itxarotako balioa
+Froga heuristikoa. Har dezagun T denbora, ∞-ra eramango duguna. Gutxi
+gorabehera λ × T bezero iragango dira sistematik denbora honetan eta
+sistemaren irabazia ≈ λT × ordaintzen denaren itxarotako balioa
+T -rekin zatituz eta T → ∞ limitea hartuz lortzen dugu emaitza. ♦
+Kostu ekuazioan oinarrituz hainbat formula interesgarri ondoriozta daitezke.
+Horretarako bezeroak ordaintzen duen diru kopurua zehaztu behar da, on-
+doren kostu ekuazioko kopuruak interpretatuz.
+Eman dezagun bezero bakoitzak euro bat denbora unitateko ordaintzen
+duela sistema barruan dagoen bitartean. Kostu ekuaziotik Little-ren legea
+lortzen dugu :
+L = λ W
+18Etorrerrek berritze prozesu bat jarraitu behar dute, λ berritze tasarekin, ez nahitaez
+Poisson prozesua, baina X
+(t) prozesu birsortzailearen berritzearteko denborak jarraituak
+badira, Poisson prozesua segitu behar dute sistema hustean iraganaz ez oroitzeko.
+19Limitea 1 probabilitatearekin existitzen da eta kostu ekuazioan dugu. Irabazi tasaren
+arabera beste kopuru batzuk ere deﬁnituko ditugu eta denak denboran zeharreko batez
+bestekoen limiteak dira. Analisi operazionalean beste ikuspegi batetik aztertzen dira.
+14
+
+– W bezeroak sisteman igarotzen duen denboraren itxarotako balioa da.
+– L sisteman dauden bezeroen (denboran zeharreko) batez bestekoa da
+(limitea).
+Aurreko sistema guztiz orokorra da baina orain sistema berezia kontside-
+ratuko dugu : une bakoitzean gehienez bezero bat dago zerbitzua jasotzen eta
+sisteman dauden beste bezeroak itxaroten daude. (Zerbitzari bakarreko kola
+litzateke.) Eman dezagun bezeroak, zerbitzua jasotzen ari denean euro bat
+denbora unitateko ordaintzen duela. Kostu ekuaziotik erabilera legea dau-
+kagu :
+U = λ S
+– S bezero batek zerbitzua jasotzen igarotzen duen denboraren itxarotako
+balioa da.
+– U sistema zerbitzua eskaintzen ari den denbora proportzioa da (denbo-
+ran zeharreko batez bestekoaren limitea).
+Erabilera U da, eta 1 − U = P0 dugu, P0 = limt→∞ P {X(t) = 0}, baldin
+sistema hutsik ez dagoenean beti ari bada zerbitzua ematen (eta limitea
+deﬁnitua bada).
+Beste emaitza garrantzitsua etorrera teoremak (PASTA propietateak)
+ematen digu sistema batera kanpotik bezeroak iristen direnerako. Orain X(t)
+sistemaren estatua t unean izango da, ez du sistemako bezeroen kopurua izan
+beharrik. Alde batetik Pj = limt→∞ P {X(t) = j} limiteko probabilitateak
+genituzke. Izan bedi Aj bezero bat sistemara sartu aurreko une zehatzean
+sistemaren estatua j izateko probabilitatea.
+Propietatea 8 Bezeroak sistemara Poisson prozesuaren arabera etortzen ba-
+dira eta {X(t), t ≥ 0} prozesu birsortzailea bada, berritzearteko denborak
+jarraituak izanik, orduan Aj = Pj edozein estatu j-rako.
+M/M/1 kola
+Sistema konkretu bat aztertuko dugu, M/M/1 kola, hau da kola eredu
+arruntena. Idazkera honek adierazten digu bezeroak kolara Poisson proze-
+sua jarraituz datozela, etorrerarteko denborak oroimengabeak (M) izanik,
+zerbitzu denborak ere oroimengabeak (M) direla, eta zerbitzari bakarra (1)
+daukagula. Etorrera tasa λ izango da eta zerbitzu esponentzialaren parame-
+troa µ. Garbi dago λ < µ denean {X(t), t ≥ 0} prozesu birsortzailea dela,
+sistema hustuz behin eta berriz. (Kola luzera inﬁniturantz doa λ > µ ka-
+15
+
+suan.) Kolan t unean dauden bezeroen kopurua izango da X(t), itxaroten
+edo zerbitzua jasotzen daudenak.
+Erabilera legetik U = λS = λ/µ daukagu. Little-ren legea ere badugu,
+L = λW . Beste erlazio bat behar dugu L eta W kalkulatzeko. Bi aldagai
+aleatorio hartuko ditugu : X, bezeroa kolara iristeko unean kolan aurkitzen
+dituen bezeroen kopurua ; T bezeroak kolan egiten duen denbora, itxaroten
+eta zerbitzua jasotzen. Erlazio hau dugu (zerbitzua oroimengabea denez) :
+E[T |X] = (X + 1)
+1
+µ
+Eta Propietatea 2-ren arabera,
+E[T ] = E[E[T |X]] = (E[X] + 1)/µ
+Deﬁnizioz E[T ] = W . Etorrera teorematik (eta kontuan hartuta limiteko
+probabilitateak denbora proportzioen berdinak direla) E[X] = L. Beraz W =
+(L + 1)/µ, eta L = λW -rekin batera, M/M/1 kolaren oinarrizko erlazioak
+lortuko ditugu :
+W =
+1
+µ − λ
+,
+L =
+λ
+µ − λ
+,
+U =
+λ
+µ
+Hauek dira batez besteko balioen analisirako (MVA) formulak. Estatuen li-
+miteko probabilitateak ere kalkula daitezke prozesu birsotzaileari dagozkion
+balantza ekuazioetatik.
+Adibidea 17 Eman dezagun M/M/1 kolara bezeroak datozela, 1/12 minu-
+tuko tasarekin. Zerbitzu denboraren parametroa 1/8 da. Kalkulatu W , L,
+U . Etorrera tasa ehuneko 20an gehitzen bada, nola aldatzen dira parametro
+hauek ?
+16

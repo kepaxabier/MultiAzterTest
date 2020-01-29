@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<HTML xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<HEAD>
+<TITLE>7.GAIA.doc</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<META name="generator" content="pdftohtml 0.36"/>
+<META name="author" content="maite"/>
+<META name="date" content="2003-06-10T11:26:41+00:00"/>
+</HEAD>
+<BODY bgcolor="#A0A0A0" vlink="blue" link="blue">
+<!-- Page 1 -->
+<a name="1"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft10{font-size:12px;font-family:Times;color:#000000;}
+	.ft11{font-size:19px;font-family:Times;color:#000000;}
+	.ft12{font-size:16px;font-family:Times;color:#000000;}
+	.ft13{font-size:16px;font-family:Helvetica;color:#000000;}
+-->
+</STYLE>
+<DIV id="page1-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:443px;white-space:nowrap" class="ft10">1</P>
+<P style="position:absolute;top:146px;left:127px;white-space:nowrap" class="ft11"><b>7.GAIA. ENDOMORFISMOEN &#160;ETA &#160;MATRIZEEN</b></P>
+<P style="position:absolute;top:182px;left:127px;white-space:nowrap" class="ft11"><b>DIAGONALIZAZIOA</b></P>
+<P style="position:absolute;top:218px;left:180px;white-space:nowrap" class="ft12"><b>1.&#160;&#160;Endomorfismo baten&#160;autobalioak eta&#160;autobektoreak</b></P>
+<P style="position:absolute;top:248px;left:180px;white-space:nowrap" class="ft12"><b>2.&#160;&#160;Matrize karratu baten&#160;autobalioak eta&#160;autobektoreak</b></P>
+<P style="position:absolute;top:280px;left:180px;white-space:nowrap" class="ft12"><b>3.&#160;&#160;Autobalioen eta&#160;autobektoreen kalkulua. Polinomio karakteristikoa</b></P>
+<P style="position:absolute;top:310px;left:180px;white-space:nowrap" class="ft12"><b>4.&#160;&#160;Balio eta bektore propioen azterketa</b></P>
+<P style="position:absolute;top:342px;left:180px;white-space:nowrap" class="ft12"><b>5.&#160;&#160;Diagonalizazioa</b></P>
+<P style="position:absolute;top:373px;left:180px;white-space:nowrap" class="ft12"><b>6.&#160;&#160;Matrize simetrikoen&#160;&#160;diagonalizazioa</b></P>
+</DIV>
+<!-- Page 2 -->
+<a name="2"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft24{font-size:16px;font-family:Times;color:#000000;}
+	.ft25{font-size:16px;font-family:Symbol;color:#000000;}
+	.ft26{font-size:10px;font-family:Times;color:#000000;}
+	.ft27{font-size:16px;font-family:Times;color:#000000;}
+	.ft28{font-size:8px;font-family:Times;color:#000000;}
+	.ft29{font-size:8px;font-family:Symbol;color:#000000;}
+	.ft210{font-size:19px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page2-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:443px;white-space:nowrap" class="ft20">2</P>
+<P style="position:absolute;top:140px;left:208px;white-space:nowrap" class="ft21"><b>7.GAIA. ENDOMORFISMOEN ETA MATRIZEEN</b></P>
+<P style="position:absolute;top:176px;left:343px;white-space:nowrap" class="ft21"><b>DIAGONALIZAZIOA</b></P>
+<P style="position:absolute;top:244px;left:180px;white-space:nowrap" class="ft24">Gai honetan matrize karratu baten balio eta bektore propioak aztertuko ditugu,</P>
+<P style="position:absolute;top:274px;left:127px;white-space:nowrap" class="ft24">eta honen bidez matrize bat noiz den diagonalgarria eta noiz ez. Modu berdintsuan,</P>
+<P style="position:absolute;top:306px;left:127px;white-space:nowrap" class="ft24">endomorfismoen diagonalizazioa aztertuko dugu.</P>
+<P style="position:absolute;top:368px;left:127px;white-space:nowrap" class="ft24">Definizioa. Izan bitez A eta A´ “n” ordenako bi matrize karratu, hau da, A,&#160;A´</P>
+<P style="position:absolute;top:362px;left:694px;white-space:nowrap" class="ft25">∈&#160;M</P>
+<P style="position:absolute;top:374px;left:729px;white-space:nowrap" class="ft26">n(<b>K</b>).</P>
+<P style="position:absolute;top:401px;left:127px;white-space:nowrap" class="ft24">A eta A´&#160;<i>antzekoak&#160;</i>direla esango dugu, A´ =&#160;</P>
+<P style="position:absolute;top:399px;left:474px;white-space:nowrap" class="ft28">1</P>
+<P style="position:absolute;top:401px;left:456px;white-space:nowrap" class="ft24">P</P>
+<P style="position:absolute;top:396px;left:468px;white-space:nowrap" class="ft29">−&#160;A P berdintza betetzen duen P</P>
+<P style="position:absolute;top:395px;left:704px;white-space:nowrap" class="ft25">∈M</P>
+<P style="position:absolute;top:407px;left:734px;white-space:nowrap" class="ft26">n(<b>K</b>)</P>
+<P style="position:absolute;top:433px;left:127px;white-space:nowrap" class="ft24">matrize erregular bat existitzen denean.</P>
+<P style="position:absolute;top:463px;left:127px;white-space:nowrap" class="ft24">Antzekotasunaren teorema. Izan bedi&#160;&#160;<b>K</b>&#160;gorputzaren gainean definitutako V espazio</P>
+<P style="position:absolute;top:496px;left:127px;white-space:nowrap" class="ft24">bektoriala. &#160;Izan bitez f : V&#160;</P>
+<P style="position:absolute;top:490px;left:327px;white-space:nowrap" class="ft25">→&#160;&#160;V&#160;endomorfismo bat eta B eta B´, V-ren bi oinarri.</P>
+<P style="position:absolute;top:526px;left:127px;white-space:nowrap" class="ft24">Izan bitez A eta A´, f-ri elkartutako matrizeak B eta B´oinarrietan, hurrenez hurren.</P>
+<P style="position:absolute;top:560px;left:180px;white-space:nowrap" class="ft24">Orduan, A eta A´ antzekoak dira eta A´ =&#160;</P>
+<P style="position:absolute;top:557px;left:503px;white-space:nowrap" class="ft28">1</P>
+<P style="position:absolute;top:560px;left:485px;white-space:nowrap" class="ft24">P</P>
+<P style="position:absolute;top:554px;left:497px;white-space:nowrap" class="ft29">−&#160;A P betetzen da non P matrizea&#160;B´</P>
+<P style="position:absolute;top:591px;left:127px;white-space:nowrap" class="ft24">eta B oinarrien arteko oinarri-aldaketaren matrizea den.</P>
+<P style="position:absolute;top:653px;left:180px;white-space:nowrap" class="ft24">Gai honetan aztertu nahi dugun problema ondokoa da:</P>
+<P style="position:absolute;top:686px;left:180px;white-space:nowrap" class="ft24">Izan bitez f : V&#160;</P>
+<P style="position:absolute;top:680px;left:295px;white-space:nowrap" class="ft25">→&#160;&#160;V endomorfismo bat eta A &#160;f-ri elkartutako matrizea V-ren B</P>
+<P style="position:absolute;top:715px;left:127px;white-space:nowrap" class="ft24">oinarri batean. Orduan, existitzen da V-ren B´ oinarriren bat non f-ri elkartutako</P>
+<P style="position:absolute;top:747px;left:127px;white-space:nowrap" class="ft24">matrizea B´ oinarrian diagonala den? Eta triangeluarra? Hau da, existitzen da V-ren B´</P>
+<P style="position:absolute;top:780px;left:127px;white-space:nowrap" class="ft24">oinarriren bat non&#160;</P>
+<P style="position:absolute;top:778px;left:295px;white-space:nowrap" class="ft28">1</P>
+<P style="position:absolute;top:780px;left:277px;white-space:nowrap" class="ft24">P</P>
+<P style="position:absolute;top:775px;left:289px;white-space:nowrap" class="ft29">−&#160;A P matrizea diagonala edo gutxienez triangeluarra den,&#160;P</P>
+<P style="position:absolute;top:812px;left:127px;white-space:nowrap" class="ft24">matrizea B´eta B oinarrien arteko oinarri-aldaketaren matrizea izanik?</P>
+<P style="position:absolute;top:842px;left:180px;white-space:nowrap" class="ft24">Aurrekoa, modu matrizialean, honela adieraz dezakegu: A matrize karratu bat</P>
+<P style="position:absolute;top:874px;left:127px;white-space:nowrap" class="ft24">emanik, existitzen da A matrizearen antzekoa den matrize diagonal edo gutxienez</P>
+<P style="position:absolute;top:904px;left:127px;white-space:nowrap" class="ft24">triangeluar bat? Gai honen zehar, galderaren erantzuna baiezkoa izateko&#160;f</P>
+<P style="position:absolute;top:936px;left:127px;white-space:nowrap" class="ft24">endomorfismoak edo A matrizeak bete behar dituzten baldintzak ikusiko ditugu.</P>
+<P style="position:absolute;top:998px;left:127px;white-space:nowrap" class="ft22"><b>1.&#160;&#160;ENDOMORFISMO BATEN AUTOBALIOAK ETA AUTOBEKTOREAK</b></P>
+<P style="position:absolute;top:1062px;left:127px;white-space:nowrap" class="ft24">Definizioa. Izan bitez V &#160;&#160;<b>K</b></P>
+<P style="position:absolute;top:1059px;left:326px;white-space:nowrap" class="ft210">&#160;gainean espazio bektoriala eta f : V&#160;</P>
+<P style="position:absolute;top:1056px;left:594px;white-space:nowrap" class="ft25">→&#160;&#160;V endomorfismoa.</P>
+<P style="position:absolute;top:1090px;left:142px;white-space:nowrap" class="ft25">∈</P>
+<P style="position:absolute;top:1095px;left:131px;white-space:nowrap" class="ft24">v&#160;V,&#160;</P>
+<P style="position:absolute;top:1105px;left:221px;white-space:nowrap" class="ft28">V</P>
+<P style="position:absolute;top:1095px;left:210px;white-space:nowrap" class="ft24">0</P>
+<P style="position:absolute;top:1095px;left:181px;white-space:nowrap" class="ft24">v</P>
+<P style="position:absolute;top:1090px;left:195px;white-space:nowrap" class="ft25">≠</P>
+<P style="position:absolute;top:1095px;left:231px;white-space:nowrap" class="ft24">, bektore ez-nulu bat f endomorfismoaren&#160;<i>autobektore</i>&#160;edo&#160;<i>bektore propio</i></P>
+<P style="position:absolute;top:1130px;left:127px;white-space:nowrap" class="ft24">bat dela esango dugu, ondoko baldintza betetzen denean: &#160;</P>
+<P style="position:absolute;top:1124px;left:574px;white-space:nowrap" class="ft25">∈</P>
+<P style="position:absolute;top:1124px;left:561px;white-space:nowrap" class="ft25">λ</P>
+<P style="position:absolute;top:1124px;left:548px;white-space:nowrap" class="ft25">∃</P>
+<P style="position:absolute;top:1130px;left:587px;white-space:nowrap" class="ft22"><b>K</b>&#160; / &#160;f(&#160;v&#160;) =&#160;&#160;v</P>
+<P style="position:absolute;top:1124px;left:678px;white-space:nowrap" class="ft25">λ&#160;.</P>
+</DIV>
+<!-- Page 3 -->
+<a name="3"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft311{font-size:26px;font-family:Symbol;color:#000000;}
+	.ft312{font-size:21px;font-family:Symbol;color:#000000;}
+-->
+</STYLE>
+<DIV id="page3-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:443px;white-space:nowrap" class="ft30">3</P>
+<P style="position:absolute;top:105px;left:129px;white-space:nowrap" class="ft35">λ&#160;&#160;eskalarra &#160;f-ren&#160;<i>autobalio</i>&#160;edo&#160;<i>balio propio</i>&#160;bat dela esango dugu. Gainera:</P>
+<P style="position:absolute;top:143px;left:183px;white-space:nowrap" class="ft34">v&#160;:&#160;&#160;</P>
+<P style="position:absolute;top:137px;left:210px;white-space:nowrap" class="ft35">λ&#160;-ri elkartutako autobektore edo bektore propio bat da.</P>
+<P style="position:absolute;top:168px;left:182px;white-space:nowrap" class="ft35">λ&#160;:&#160;&#160;&#160;v-ri elkartutako autobalioa edo balio propioa da.</P>
+<P style="position:absolute;top:206px;left:127px;white-space:nowrap" class="ft34">Propietatea. f endomorfismo baten&#160;&#160;v&#160;&#160;bektore propio bati elkartutako balio propioa</P>
+<P style="position:absolute;top:236px;left:127px;white-space:nowrap" class="ft34">BAKARRA da.</P>
+<P style="position:absolute;top:269px;left:127px;white-space:nowrap" class="ft34">Definizioa. f &#160;endomorfismoaren&#160;</P>
+<P style="position:absolute;top:263px;left:377px;white-space:nowrap" class="ft35">λ&#160;&#160;balio propio bati elkartutako bektore propioek eta</P>
+<P style="position:absolute;top:311px;left:140px;white-space:nowrap" class="ft38">V</P>
+<P style="position:absolute;top:301px;left:131px;white-space:nowrap" class="ft34">0&#160;&#160;bektore nuluak osatzen duten azpiespazioari<i>,&#160;</i></P>
+<P style="position:absolute;top:295px;left:527px;white-space:nowrap" class="ft35">λ&#160;<i>&#160;balio propioari elkartutako</i></P>
+<P style="position:absolute;top:339px;left:127px;white-space:nowrap" class="ft37"><i>azpiespazio propioa&#160;</i>esaten zaio eta&#160;&#160;λ</P>
+<P style="position:absolute;top:339px;left:389px;white-space:nowrap" class="ft34">V&#160;(f) ikurraren bidez adieraziko dugu.</P>
+<P style="position:absolute;top:384px;left:305px;white-space:nowrap" class="ft39">λ</P>
+<P style="position:absolute;top:378px;left:293px;white-space:nowrap" class="ft34">V&#160;(f) = {</P>
+<P style="position:absolute;top:372px;left:375px;white-space:nowrap" class="ft35">∈</P>
+<P style="position:absolute;top:378px;left:363px;white-space:nowrap" class="ft34">v&#160;V &#160;/ &#160;f(&#160;v&#160;) =&#160;</P>
+<P style="position:absolute;top:378px;left:492px;white-space:nowrap" class="ft34">v</P>
+<P style="position:absolute;top:372px;left:478px;white-space:nowrap" class="ft35">λ&#160;} &#160; ( dim&#160;</P>
+<P style="position:absolute;top:384px;left:584px;white-space:nowrap" class="ft39">λ</P>
+<P style="position:absolute;top:378px;left:572px;white-space:nowrap" class="ft34">V&#160;(f) &#160;</P>
+<P style="position:absolute;top:372px;left:622px;white-space:nowrap" class="ft35">≥&#160;&#160;1)</P>
+<P style="position:absolute;top:415px;left:127px;white-space:nowrap" class="ft34">Gainera,&#160;&#160;λ</P>
+<P style="position:absolute;top:415px;left:196px;white-space:nowrap" class="ft34">V&#160;(f) = {</P>
+<P style="position:absolute;top:409px;left:277px;white-space:nowrap" class="ft35">∈</P>
+<P style="position:absolute;top:415px;left:266px;white-space:nowrap" class="ft34">v&#160;V &#160;/ &#160;f(&#160;v&#160;) =&#160;&#160;v</P>
+<P style="position:absolute;top:409px;left:380px;white-space:nowrap" class="ft35">λ&#160;} = &#160;{&#160;∈</P>
+<P style="position:absolute;top:415px;left:451px;white-space:nowrap" class="ft34">v&#160;V &#160;/ &#160;f(&#160;v&#160;) -&#160;&#160;v</P>
+<P style="position:absolute;top:409px;left:561px;white-space:nowrap" class="ft35">λ&#160;&#160;=&#160;</P>
+<P style="position:absolute;top:425px;left:619px;white-space:nowrap" class="ft38">V</P>
+<P style="position:absolute;top:415px;left:610px;white-space:nowrap" class="ft34">0&#160;&#160;} =</P>
+<P style="position:absolute;top:454px;left:127px;white-space:nowrap" class="ft34">&#160;= &#160;{</P>
+<P style="position:absolute;top:448px;left:174px;white-space:nowrap" class="ft35">∈</P>
+<P style="position:absolute;top:454px;left:163px;white-space:nowrap" class="ft34">v&#160;V &#160;/ &#160;( f -&#160;</P>
+<P style="position:absolute;top:448px;left:258px;white-space:nowrap" class="ft35">λ&#160;Id</P>
+<P style="position:absolute;top:460px;left:285px;white-space:nowrap" class="ft36">V&#160;)(&#160;v&#160;) =&#160;</P>
+<P style="position:absolute;top:464px;left:362px;white-space:nowrap" class="ft38">V</P>
+<P style="position:absolute;top:454px;left:353px;white-space:nowrap" class="ft34">0&#160;&#160;} = &#160;Ker ( f -&#160;</P>
+<P style="position:absolute;top:448px;left:476px;white-space:nowrap" class="ft35">λ&#160;Id</P>
+<P style="position:absolute;top:460px;left:503px;white-space:nowrap" class="ft36">V)</P>
+<P style="position:absolute;top:491px;left:180px;white-space:nowrap" class="ft34">Beraz,&#160;</P>
+<P style="position:absolute;top:485px;left:234px;white-space:nowrap" class="ft35">λ&#160;&#160;autobalioari elkartutako f-ren azpiespazio propioa, f -&#160;λ&#160;Id</P>
+<P style="position:absolute;top:497px;left:678px;white-space:nowrap" class="ft36">V&#160; aplikazio</P>
+<P style="position:absolute;top:521px;left:127px;white-space:nowrap" class="ft34">linealaren nukleoa da.</P>
+<P style="position:absolute;top:555px;left:127px;white-space:nowrap" class="ft34">Propietatea. Izan bedi f : V&#160;</P>
+<P style="position:absolute;top:550px;left:341px;white-space:nowrap" class="ft35">→&#160;&#160;V endomorfismo bat non Ker f&#160;</P>
+<P style="position:absolute;top:539px;left:628px;white-space:nowrap" class="ft311">{&#160;}</P>
+<P style="position:absolute;top:565px;left:644px;white-space:nowrap" class="ft38">V</P>
+<P style="position:absolute;top:555px;left:633px;white-space:nowrap" class="ft34">0</P>
+<P style="position:absolute;top:550px;left:613px;white-space:nowrap" class="ft35">≠</P>
+<P style="position:absolute;top:555px;left:662px;white-space:nowrap" class="ft34">&#160;den. Orduan,</P>
+<P style="position:absolute;top:591px;left:127px;white-space:nowrap" class="ft34">0</P>
+<P style="position:absolute;top:586px;left:137px;white-space:nowrap" class="ft35">∈<b>K</b>&#160;&#160; f-ren balio propio bat da eta alderantziz; hau da, &#160;0∈<b>K</b>&#160; &#160;f-ren balio &#160;propio &#160;bat</P>
+<P style="position:absolute;top:622px;left:127px;white-space:nowrap" class="ft34">da, &#160;baldin &#160;eta soilik baldin f &#160;bijektiboa ez bada.</P>
+<P style="position:absolute;top:684px;left:127px;white-space:nowrap" class="ft32"><b>2.&#160;&#160;MATRIZE KARRATU BATEN AUTOBALIOAK ETA AUTOBEKTOREAK</b></P>
+<P style="position:absolute;top:748px;left:127px;white-space:nowrap" class="ft34">Definizioa. Izan bedi A&#160;</P>
+<P style="position:absolute;top:742px;left:304px;white-space:nowrap" class="ft35">∈&#160;M</P>
+<P style="position:absolute;top:754px;left:339px;white-space:nowrap" class="ft36">n(<b>K</b>). &#160;X</P>
+<P style="position:absolute;top:742px;left:401px;white-space:nowrap" class="ft35">∈M</P>
+<P style="position:absolute;top:754px;left:430px;white-space:nowrap" class="ft36">nx1(<b>K</b>), X&#160;</P>
+<P style="position:absolute;top:736px;left:520px;white-space:nowrap" class="ft312">(&#160;)</P>
+<P style="position:absolute;top:748px;left:525px;white-space:nowrap" class="ft34">0</P>
+<P style="position:absolute;top:742px;left:505px;white-space:nowrap" class="ft35">≠</P>
+<P style="position:absolute;top:748px;left:543px;white-space:nowrap" class="ft34">, zutabe matrize ez-nulu bat A</P>
+<P style="position:absolute;top:782px;left:127px;white-space:nowrap" class="ft34">matrizearen&#160;&#160;<i>autobektore</i>&#160;edo&#160;&#160;<i>bektore propio&#160;&#160;</i>bat dela esango dugu, ondoko baldintza</P>
+<P style="position:absolute;top:813px;left:127px;white-space:nowrap" class="ft34">betetzen denean: &#160;</P>
+<P style="position:absolute;top:807px;left:285px;white-space:nowrap" class="ft35">∈</P>
+<P style="position:absolute;top:807px;left:272px;white-space:nowrap" class="ft35">λ</P>
+<P style="position:absolute;top:807px;left:259px;white-space:nowrap" class="ft35">∃</P>
+<P style="position:absolute;top:813px;left:298px;white-space:nowrap" class="ft32"><b>K</b>&#160; / &#160;A X &#160;= &#160;</P>
+<P style="position:absolute;top:807px;left:396px;white-space:nowrap" class="ft35">λ&#160;&#160;X.</P>
+<P style="position:absolute;top:843px;left:129px;white-space:nowrap" class="ft35">λ&#160;&#160;eskalarra &#160;A-ren&#160;<i>autobalio</i>&#160;edo&#160;<i>balio propio</i>&#160;bat dela esango dugu. Gainera:</P>
+<P style="position:absolute;top:882px;left:180px;white-space:nowrap" class="ft34">X: &#160;</P>
+<P style="position:absolute;top:876px;left:209px;white-space:nowrap" class="ft35">λ&#160;&#160;autobalioari elkartutako autobektore edo bektore propio bat da.</P>
+<P style="position:absolute;top:907px;left:182px;white-space:nowrap" class="ft35">λ&#160;: &#160;X autobektoreari elkartutako autobalioa edo balio propioa da.</P>
+<P style="position:absolute;top:942px;left:127px;white-space:nowrap" class="ft34">Propietatea. A matrize karratu baten X bektore propio bati elkartutako balio propioa</P>
+<P style="position:absolute;top:974px;left:127px;white-space:nowrap" class="ft34">BAKARRA da.</P>
+<P style="position:absolute;top:1007px;left:127px;white-space:nowrap" class="ft34">Definizioa. A matrize karratuaren&#160;</P>
+<P style="position:absolute;top:1001px;left:381px;white-space:nowrap" class="ft35">λ&#160;&#160;balio propio bati elkartutako bektore propioek eta</P>
+<P style="position:absolute;top:1038px;left:127px;white-space:nowrap" class="ft34">(0)</P>
+<P style="position:absolute;top:1032px;left:150px;white-space:nowrap" class="ft35">∈M</P>
+<P style="position:absolute;top:1044px;left:179px;white-space:nowrap" class="ft36">nx1(<b>K</b>) zutabe matrize nuluak osatzen duten azpiespazioari<i>,&#160;</i></P>
+<P style="position:absolute;top:1032px;left:631px;white-space:nowrap" class="ft35">λ&#160;<i>&#160;balio propioari</i></P>
+<P style="position:absolute;top:1071px;left:127px;white-space:nowrap" class="ft37"><i>elkartutako azpiespazio propioa&#160;</i>esaten zaio eta&#160;&#160;λ</P>
+<P style="position:absolute;top:1071px;left:476px;white-space:nowrap" class="ft34">V&#160;(A) ikurraren bidez adieraziko dugu.</P>
+<P style="position:absolute;top:1116px;left:268px;white-space:nowrap" class="ft39">λ</P>
+<P style="position:absolute;top:1109px;left:255px;white-space:nowrap" class="ft34">V&#160;(A) = { X</P>
+<P style="position:absolute;top:1103px;left:348px;white-space:nowrap" class="ft35">∈M</P>
+<P style="position:absolute;top:1115px;left:377px;white-space:nowrap" class="ft36">nx1(<b>K</b>) &#160;/ A X &#160;= &#160;</P>
+<P style="position:absolute;top:1103px;left:501px;white-space:nowrap" class="ft35">λ&#160;&#160;X } &#160; ( dim&#160;</P>
+<P style="position:absolute;top:1116px;left:615px;white-space:nowrap" class="ft39">λ</P>
+<P style="position:absolute;top:1109px;left:603px;white-space:nowrap" class="ft34">V&#160;(A) &#160;</P>
+<P style="position:absolute;top:1103px;left:660px;white-space:nowrap" class="ft35">≥&#160;&#160;1)</P>
+</DIV>
+<!-- Page 4 -->
+<a name="4"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page4-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:443px;white-space:nowrap" class="ft40">4</P>
+<P style="position:absolute;top:140px;left:127px;white-space:nowrap" class="ft42"><b>3.&#160;&#160;AUTOBALIOEN ETA AUTOBEKTOREEN KALKULUA. POLINOMIO</b></P>
+<P style="position:absolute;top:171px;left:154px;white-space:nowrap" class="ft42"><b>KARAKTERISTIKOA</b></P>
+<P style="position:absolute;top:235px;left:127px;white-space:nowrap" class="ft44">Izan bedi f : V&#160;</P>
+<P style="position:absolute;top:229px;left:237px;white-space:nowrap" class="ft45">→&#160;&#160;V endomorfismo bat &#160;non &#160;dim V = n den.</P>
+<P style="position:absolute;top:266px;left:127px;white-space:nowrap" class="ft44">Izan bedi B = {&#160;</P>
+<P style="position:absolute;top:276px;left:255px;white-space:nowrap" class="ft48">1</P>
+<P style="position:absolute;top:266px;left:246px;white-space:nowrap" class="ft44">v&#160;,&#160;</P>
+<P style="position:absolute;top:276px;left:285px;white-space:nowrap" class="ft48">2</P>
+<P style="position:absolute;top:266px;left:275px;white-space:nowrap" class="ft44">v&#160;, ...,&#160;</P>
+<P style="position:absolute;top:276px;left:339px;white-space:nowrap" class="ft48">n</P>
+<P style="position:absolute;top:266px;left:329px;white-space:nowrap" class="ft44">v&#160;} V-ren oinarri bat.</P>
+<P style="position:absolute;top:302px;left:127px;white-space:nowrap" class="ft44">Izan bedi A&#160;</P>
+<P style="position:absolute;top:296px;left:217px;white-space:nowrap" class="ft45">∈&#160;M</P>
+<P style="position:absolute;top:308px;left:251px;white-space:nowrap" class="ft46">n(<b>K</b>) &#160; f-ri elkartutako matrizea V-ren B = {&#160;</P>
+<P style="position:absolute;top:312px;left:579px;white-space:nowrap" class="ft48">1</P>
+<P style="position:absolute;top:302px;left:570px;white-space:nowrap" class="ft44">v&#160;,&#160;</P>
+<P style="position:absolute;top:312px;left:609px;white-space:nowrap" class="ft48">2</P>
+<P style="position:absolute;top:302px;left:599px;white-space:nowrap" class="ft44">v&#160;, ...,&#160;</P>
+<P style="position:absolute;top:312px;left:663px;white-space:nowrap" class="ft48">n</P>
+<P style="position:absolute;top:302px;left:653px;white-space:nowrap" class="ft44">v&#160;} oinarrian.</P>
+<P style="position:absolute;top:338px;left:180px;white-space:nowrap" class="ft44">A&#160;</P>
+<P style="position:absolute;top:332px;left:199px;white-space:nowrap" class="ft45">∈&#160;M</P>
+<P style="position:absolute;top:344px;left:233px;white-space:nowrap" class="ft46">n(<b>K</b>) &#160; f-ri elkartutako matrizea da, V-ren B = {&#160;</P>
+<P style="position:absolute;top:348px;left:587px;white-space:nowrap" class="ft48">1</P>
+<P style="position:absolute;top:338px;left:578px;white-space:nowrap" class="ft44">v&#160;,&#160;</P>
+<P style="position:absolute;top:348px;left:617px;white-space:nowrap" class="ft48">2</P>
+<P style="position:absolute;top:338px;left:606px;white-space:nowrap" class="ft44">v&#160;, ...,&#160;</P>
+<P style="position:absolute;top:348px;left:673px;white-space:nowrap" class="ft48">n</P>
+<P style="position:absolute;top:338px;left:663px;white-space:nowrap" class="ft44">v&#160;} oinarrian;</P>
+<P style="position:absolute;top:375px;left:127px;white-space:nowrap" class="ft44">beraz ondokoa betetzen da: &#160;&#160;</P>
+<P style="position:absolute;top:364px;left:354px;white-space:nowrap" class="ft412">(&#160;)</P>
+<P style="position:absolute;top:364px;left:340px;white-space:nowrap" class="ft412">(</P>
+<P style="position:absolute;top:385px;left:381px;white-space:nowrap" class="ft48">B</P>
+<P style="position:absolute;top:375px;left:360px;white-space:nowrap" class="ft44">v</P>
+<P style="position:absolute;top:375px;left:345px;white-space:nowrap" class="ft44">f</P>
+<P style="position:absolute;top:375px;left:392px;white-space:nowrap" class="ft44">&#160;= &#160;A.&#160;</P>
+<P style="position:absolute;top:364px;left:439px;white-space:nowrap" class="ft412">(&#160;)</P>
+<P style="position:absolute;top:385px;left:461px;white-space:nowrap" class="ft48">B</P>
+<P style="position:absolute;top:375px;left:446px;white-space:nowrap" class="ft44">v</P>
+<P style="position:absolute;top:375px;left:471px;white-space:nowrap" class="ft44">&#160; &#160; &#160;</P>
+<P style="position:absolute;top:370px;left:525px;white-space:nowrap" class="ft45">∈</P>
+<P style="position:absolute;top:370px;left:496px;white-space:nowrap" class="ft45">∀&#160;v&#160;V.</P>
+<P style="position:absolute;top:411px;left:180px;white-space:nowrap" class="ft44">Izan bedi&#160;</P>
+<P style="position:absolute;top:406px;left:272px;white-space:nowrap" class="ft45">∈</P>
+<P style="position:absolute;top:411px;left:260px;white-space:nowrap" class="ft44">v</P>
+<P style="position:absolute;top:411px;left:286px;white-space:nowrap" class="ft44">V. Orduan, &#160;</P>
+<P style="position:absolute;top:421px;left:569px;white-space:nowrap" class="ft48">n</P>
+<P style="position:absolute;top:421px;left:551px;white-space:nowrap" class="ft48">n</P>
+<P style="position:absolute;top:421px;left:486px;white-space:nowrap" class="ft48">2</P>
+<P style="position:absolute;top:421px;left:469px;white-space:nowrap" class="ft48">2</P>
+<P style="position:absolute;top:421px;left:433px;white-space:nowrap" class="ft48">1</P>
+<P style="position:absolute;top:421px;left:417px;white-space:nowrap" class="ft48">1</P>
+<P style="position:absolute;top:411px;left:559px;white-space:nowrap" class="ft44">v</P>
+<P style="position:absolute;top:411px;left:540px;white-space:nowrap" class="ft44">x</P>
+<P style="position:absolute;top:411px;left:511px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:411px;left:476px;white-space:nowrap" class="ft44">v</P>
+<P style="position:absolute;top:411px;left:458px;white-space:nowrap" class="ft44">x</P>
+<P style="position:absolute;top:411px;left:424px;white-space:nowrap" class="ft44">v</P>
+<P style="position:absolute;top:411px;left:407px;white-space:nowrap" class="ft44">x</P>
+<P style="position:absolute;top:411px;left:379px;white-space:nowrap" class="ft44">v</P>
+<P style="position:absolute;top:406px;left:527px;white-space:nowrap" class="ft45">+</P>
+<P style="position:absolute;top:406px;left:497px;white-space:nowrap" class="ft45">+</P>
+<P style="position:absolute;top:406px;left:443px;white-space:nowrap" class="ft45">+</P>
+<P style="position:absolute;top:406px;left:393px;white-space:nowrap" class="ft45">=</P>
+<P style="position:absolute;top:411px;left:578px;white-space:nowrap" class="ft44">.</P>
+<P style="position:absolute;top:490px;left:180px;white-space:nowrap" class="ft44">Izan bedi &#160;X =&#160;</P>
+<P style="position:absolute;top:479px;left:290px;white-space:nowrap" class="ft412">(&#160;)</P>
+<P style="position:absolute;top:500px;left:313px;white-space:nowrap" class="ft48">B</P>
+<P style="position:absolute;top:490px;left:297px;white-space:nowrap" class="ft44">v</P>
+<P style="position:absolute;top:490px;left:323px;white-space:nowrap" class="ft44">&#160;=&#160;</P>
+<P style="position:absolute;top:518px;left:374px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:491px;left:374px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:473px;left:374px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:456px;left:374px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:529px;left:374px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:445px;left:374px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:518px;left:344px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:491px;left:344px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:473px;left:344px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:456px;left:344px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:529px;left:344px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:445px;left:344px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:541px;left:365px;white-space:nowrap" class="ft48">n</P>
+<P style="position:absolute;top:487px;left:365px;white-space:nowrap" class="ft48">2</P>
+<P style="position:absolute;top:460px;left:365px;white-space:nowrap" class="ft48">1</P>
+<P style="position:absolute;top:531px;left:353px;white-space:nowrap" class="ft44">x</P>
+<P style="position:absolute;top:504px;left:358px;white-space:nowrap" class="ft44">..</P>
+<P style="position:absolute;top:477px;left:353px;white-space:nowrap" class="ft44">x</P>
+<P style="position:absolute;top:450px;left:354px;white-space:nowrap" class="ft44">x</P>
+<P style="position:absolute;top:490px;left:384px;white-space:nowrap" class="ft44">&#160;&#160;</P>
+<P style="position:absolute;top:484px;left:394px;white-space:nowrap" class="ft45">∈&#160; &#160;M</P>
+<P style="position:absolute;top:496px;left:437px;white-space:nowrap" class="ft46">nx1(<b>K</b>)</P>
+<P style="position:absolute;top:599px;left:127px;white-space:nowrap" class="ft42"><b>1.- &#160;</b></P>
+<P style="position:absolute;top:593px;left:171px;white-space:nowrap" class="ft45">∈</P>
+<P style="position:absolute;top:593px;left:158px;white-space:nowrap" class="ft45">λ&#160;<b>K&#160;&#160;f-ren&#160;autobalio bat da&#160;&#160;</b>⇔&#160;<b>&#160;&#160;</b>∈</P>
+<P style="position:absolute;top:593px;left:414px;white-space:nowrap" class="ft45">λ&#160;<b>K &#160;A-ren&#160;autobalio bat bada&#160;&#160;</b>⇔</P>
+<P style="position:absolute;top:633px;left:127px;white-space:nowrap" class="ft42"><b>&#160; &#160; &#160;&#160;</b></P>
+<P style="position:absolute;top:627px;left:156px;white-space:nowrap" class="ft45">⇔&#160;<b>&#160;&#160;</b>∈</P>
+<P style="position:absolute;top:627px;left:187px;white-space:nowrap" class="ft45">λ&#160;<b>K /&#160;</b></P>
+<P style="position:absolute;top:643px;left:298px;white-space:nowrap" class="ft48">n</P>
+<P style="position:absolute;top:633px;left:290px;white-space:nowrap" class="ft44">I</P>
+<P style="position:absolute;top:633px;left:249px;white-space:nowrap" class="ft44">A</P>
+<P style="position:absolute;top:627px;left:278px;white-space:nowrap" class="ft45">λ</P>
+<P style="position:absolute;top:627px;left:266px;white-space:nowrap" class="ft45">−</P>
+<P style="position:absolute;top:633px;left:312px;white-space:nowrap" class="ft42"><b>&#160;= 0.</b></P>
+<P style="position:absolute;top:668px;left:143px;white-space:nowrap" class="ft45">∈</P>
+<P style="position:absolute;top:668px;left:129px;white-space:nowrap" class="ft45">λ&#160;<b>K</b>&#160;&#160;f-ren&#160;autobalio bat da &#160;&#160;⇔&#160;&#160;&#160;</P>
+<P style="position:absolute;top:683px;left:485px;white-space:nowrap" class="ft48">V</P>
+<P style="position:absolute;top:674px;left:475px;white-space:nowrap" class="ft44">0</P>
+<P style="position:absolute;top:674px;left:446px;white-space:nowrap" class="ft44">v</P>
+<P style="position:absolute;top:674px;left:437px;white-space:nowrap" class="ft44">,</P>
+<P style="position:absolute;top:674px;left:423px;white-space:nowrap" class="ft44">V</P>
+<P style="position:absolute;top:674px;left:396px;white-space:nowrap" class="ft44">v</P>
+<P style="position:absolute;top:668px;left:460px;white-space:nowrap" class="ft45">≠</P>
+<P style="position:absolute;top:668px;left:407px;white-space:nowrap" class="ft45">∈</P>
+<P style="position:absolute;top:668px;left:381px;white-space:nowrap" class="ft45">∃</P>
+<P style="position:absolute;top:674px;left:496px;white-space:nowrap" class="ft44">&#160;/ &#160;f(&#160;v&#160;) =&#160;&#160;v</P>
+<P style="position:absolute;top:668px;left:569px;white-space:nowrap" class="ft45">λ&#160;&#160;&#160;⇔</P>
+<P style="position:absolute;top:705px;left:129px;white-space:nowrap" class="ft45">⇔&#160;∃&#160;X∈M</P>
+<P style="position:absolute;top:717px;left:212px;white-space:nowrap" class="ft46">nx1(<b>K</b>), &#160;X&#160;</P>
+<P style="position:absolute;top:705px;left:288px;white-space:nowrap" class="ft45">≠&#160;(0) &#160;/ &#160;A.X =&#160;&#160;λ&#160;.X &#160;⇔&#160;&#160;&#160;∈</P>
+<P style="position:absolute;top:705px;left:470px;white-space:nowrap" class="ft45">λ&#160;<b>K</b>&#160; A-ren&#160;autobalio bat da &#160;&#160;⇔</P>
+<P style="position:absolute;top:736px;left:129px;white-space:nowrap" class="ft45">⇔&#160;&#160;∃&#160;&#160; &#160;X&#160;&#160;∈&#160;M</P>
+<P style="position:absolute;top:748px;left:239px;white-space:nowrap" class="ft46">nx1(<b>K</b>), &#160;X&#160;</P>
+<P style="position:absolute;top:736px;left:315px;white-space:nowrap" class="ft45">≠&#160;(0) &#160;/ &#160;A.X -&#160;λ&#160;.X = (0)&#160;&#160;⇔</P>
+<P style="position:absolute;top:768px;left:129px;white-space:nowrap" class="ft45">⇔&#160;∃&#160;&#160; X&#160;&#160;∈&#160;M</P>
+<P style="position:absolute;top:780px;left:230px;white-space:nowrap" class="ft46">nx1(<b>K</b>), &#160;X&#160;</P>
+<P style="position:absolute;top:768px;left:306px;white-space:nowrap" class="ft45">≠&#160;(0) &#160;/ &#160;(A-&#160;λ&#160;.I</P>
+<P style="position:absolute;top:780px;left:415px;white-space:nowrap" class="ft46">n).X = (0)</P>
+<P style="position:absolute;top:805px;left:127px;white-space:nowrap" class="ft44">Beraz,&#160;</P>
+<P style="position:absolute;top:799px;left:197px;white-space:nowrap" class="ft45">∈</P>
+<P style="position:absolute;top:799px;left:183px;white-space:nowrap" class="ft45">λ&#160;<b>K</b>&#160; A-ren&#160;&#160;autobalio bat da (edo f-ren autobalio bat da) baldin, eta soilik</P>
+<P style="position:absolute;top:837px;left:127px;white-space:nowrap" class="ft44">baldin, n ezezaguneko eta n ekuazio linealetako (A-</P>
+<P style="position:absolute;top:831px;left:505px;white-space:nowrap" class="ft45">λ&#160;.I</P>
+<P style="position:absolute;top:843px;left:528px;white-space:nowrap" class="ft46">n).X = (0) sistema homogeneoak</P>
+<P style="position:absolute;top:867px;left:127px;white-space:nowrap" class="ft44">gutxienez soluzio ez-nulu bat badu; eta hau gertatzen da sistema homogeneoa</P>
+<P style="position:absolute;top:900px;left:127px;white-space:nowrap" class="ft44">bateragarri&#160;&#160;indeterminatua denean eta horretarako &#160;A-</P>
+<P style="position:absolute;top:894px;left:530px;white-space:nowrap" class="ft45">λ&#160;.I</P>
+<P style="position:absolute;top:906px;left:552px;white-space:nowrap" class="ft46">n&#160; matrizearen heina n baino</P>
+<P style="position:absolute;top:933px;left:127px;white-space:nowrap" class="ft44">txikiagoa izan behar da, hau da&#160;</P>
+<P style="position:absolute;top:943px;left:411px;white-space:nowrap" class="ft48">n</P>
+<P style="position:absolute;top:933px;left:403px;white-space:nowrap" class="ft44">I</P>
+<P style="position:absolute;top:933px;left:361px;white-space:nowrap" class="ft44">A</P>
+<P style="position:absolute;top:928px;left:390px;white-space:nowrap" class="ft45">λ</P>
+<P style="position:absolute;top:928px;left:378px;white-space:nowrap" class="ft45">−</P>
+<P style="position:absolute;top:933px;left:424px;white-space:nowrap" class="ft44">&#160;= 0.</P>
+<P style="position:absolute;top:1045px;left:180px;white-space:nowrap" class="ft44">(A-</P>
+<P style="position:absolute;top:1039px;left:207px;white-space:nowrap" class="ft45">λ&#160;.I</P>
+<P style="position:absolute;top:1051px;left:230px;white-space:nowrap" class="ft46">n).X = (0) &#160;</P>
+<P style="position:absolute;top:1039px;left:311px;white-space:nowrap" class="ft45">⇔&#160;&#160;&#160;</P>
+<P style="position:absolute;top:1072px;left:651px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1046px;left:651px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1029px;left:651px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1011px;left:651px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1084px;left:651px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1000px;left:651px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1072px;left:632px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1046px;left:632px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1029px;left:632px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1011px;left:632px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1084px;left:632px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1000px;left:632px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1039px;left:618px;white-space:nowrap" class="ft45">=</P>
+<P style="position:absolute;top:1073px;left:606px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1046px;left:606px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1028px;left:606px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1011px;left:606px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1084px;left:606px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1000px;left:606px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1073px;left:576px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1046px;left:576px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1028px;left:576px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1011px;left:576px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1084px;left:576px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1000px;left:576px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1073px;left:567px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1046px;left:567px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1028px;left:567px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1011px;left:567px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1084px;left:567px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1000px;left:567px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1073px;left:345px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1046px;left:345px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1028px;left:345px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1011px;left:345px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1084px;left:345px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1000px;left:345px;white-space:nowrap" class="ft45"></P>
+<P style="position:absolute;top:1079px;left:555px;white-space:nowrap" class="ft45">λ</P>
+<P style="position:absolute;top:1079px;left:542px;white-space:nowrap" class="ft45">−</P>
+<P style="position:absolute;top:1025px;left:459px;white-space:nowrap" class="ft45">λ</P>
+<P style="position:absolute;top:1025px;left:446px;white-space:nowrap" class="ft45">−</P>
+<P style="position:absolute;top:998px;left:392px;white-space:nowrap" class="ft45">λ</P>
+<P style="position:absolute;top:998px;left:379px;white-space:nowrap" class="ft45">−</P>
+<P style="position:absolute;top:1085px;left:641px;white-space:nowrap" class="ft44">0</P>
+<P style="position:absolute;top:1058px;left:641px;white-space:nowrap" class="ft44">..</P>
+<P style="position:absolute;top:1031px;left:641px;white-space:nowrap" class="ft44">0</P>
+<P style="position:absolute;top:1004px;left:641px;white-space:nowrap" class="ft44">0</P>
+<P style="position:absolute;top:1085px;left:586px;white-space:nowrap" class="ft44">x</P>
+<P style="position:absolute;top:1058px;left:591px;white-space:nowrap" class="ft44">..</P>
+<P style="position:absolute;top:1031px;left:586px;white-space:nowrap" class="ft44">x</P>
+<P style="position:absolute;top:1004px;left:587px;white-space:nowrap" class="ft44">x</P>
+<P style="position:absolute;top:1045px;left:573px;white-space:nowrap" class="ft44">.</P>
+<P style="position:absolute;top:1085px;left:514px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:1085px;left:485px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:1085px;left:432px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:1085px;left:367px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:1058px;left:533px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:1058px;left:485px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:1058px;left:438px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:1058px;left:371px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:1031px;left:528px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:1031px;left:485px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:1031px;left:419px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:1031px;left:367px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:1004px;left:529px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:1004px;left:485px;white-space:nowrap" class="ft44">...</P>
+<P style="position:absolute;top:1004px;left:433px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:1004px;left:354px;white-space:nowrap" class="ft44">a</P>
+<P style="position:absolute;top:1095px;left:597px;white-space:nowrap" class="ft48">n</P>
+<P style="position:absolute;top:1041px;left:597px;white-space:nowrap" class="ft48">2</P>
+<P style="position:absolute;top:1014px;left:597px;white-space:nowrap" class="ft48">1</P>
+<P style="position:absolute;top:1095px;left:524px;white-space:nowrap" class="ft48">nn</P>
+<P style="position:absolute;top:1095px;left:449px;white-space:nowrap" class="ft48">2</P>
+<P style="position:absolute;top:1095px;left:442px;white-space:nowrap" class="ft48">n</P>
+<P style="position:absolute;top:1095px;left:383px;white-space:nowrap" class="ft48">1</P>
+<P style="position:absolute;top:1095px;left:377px;white-space:nowrap" class="ft48">n</P>
+<P style="position:absolute;top:1041px;left:545px;white-space:nowrap" class="ft48">n</P>
+<P style="position:absolute;top:1041px;left:538px;white-space:nowrap" class="ft48">2</P>
+<P style="position:absolute;top:1041px;left:430px;white-space:nowrap" class="ft48">22</P>
+<P style="position:absolute;top:1041px;left:377px;white-space:nowrap" class="ft48">21</P>
+<P style="position:absolute;top:1014px;left:543px;white-space:nowrap" class="ft48">n</P>
+<P style="position:absolute;top:1014px;left:538px;white-space:nowrap" class="ft48">1</P>
+<P style="position:absolute;top:1014px;left:442px;white-space:nowrap" class="ft48">12</P>
+<P style="position:absolute;top:1014px;left:363px;white-space:nowrap" class="ft48">11</P>
+<P style="position:absolute;top:1045px;left:662px;white-space:nowrap" class="ft44">&#160; &#160; &#160;(1)</P>
+</DIV>
+<!-- Page 5 -->
+<a name="5"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft513{font-size:10px;font-family:Times;color:#000000;}
+-->
+</STYLE>
+<DIV id="page5-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:443px;white-space:nowrap" class="ft50">5</P>
+<P style="position:absolute;top:163px;left:235px;white-space:nowrap" class="ft58">n</P>
+<P style="position:absolute;top:153px;left:227px;white-space:nowrap" class="ft54">I</P>
+<P style="position:absolute;top:153px;left:186px;white-space:nowrap" class="ft54">A</P>
+<P style="position:absolute;top:147px;left:215px;white-space:nowrap" class="ft55">λ</P>
+<P style="position:absolute;top:147px;left:203px;white-space:nowrap" class="ft55">−</P>
+<P style="position:absolute;top:153px;left:249px;white-space:nowrap" class="ft54">= 0 &#160;</P>
+<P style="position:absolute;top:147px;left:284px;white-space:nowrap" class="ft55">⇔&#160;&#160; &#160;</P>
+<P style="position:absolute;top:187px;left:527px;white-space:nowrap" class="ft55">λ</P>
+<P style="position:absolute;top:187px;left:513px;white-space:nowrap" class="ft55">−</P>
+<P style="position:absolute;top:133px;left:431px;white-space:nowrap" class="ft55">λ</P>
+<P style="position:absolute;top:133px;left:417px;white-space:nowrap" class="ft55">−</P>
+<P style="position:absolute;top:106px;left:363px;white-space:nowrap" class="ft55">λ</P>
+<P style="position:absolute;top:106px;left:350px;white-space:nowrap" class="ft55">−</P>
+<P style="position:absolute;top:203px;left:496px;white-space:nowrap" class="ft58">nn</P>
+<P style="position:absolute;top:203px;left:420px;white-space:nowrap" class="ft58">2</P>
+<P style="position:absolute;top:203px;left:414px;white-space:nowrap" class="ft58">n</P>
+<P style="position:absolute;top:203px;left:354px;white-space:nowrap" class="ft58">1</P>
+<P style="position:absolute;top:203px;left:349px;white-space:nowrap" class="ft58">n</P>
+<P style="position:absolute;top:149px;left:515px;white-space:nowrap" class="ft58">n</P>
+<P style="position:absolute;top:149px;left:509px;white-space:nowrap" class="ft58">2</P>
+<P style="position:absolute;top:149px;left:401px;white-space:nowrap" class="ft58">22</P>
+<P style="position:absolute;top:149px;left:349px;white-space:nowrap" class="ft58">21</P>
+<P style="position:absolute;top:122px;left:514px;white-space:nowrap" class="ft58">n</P>
+<P style="position:absolute;top:122px;left:509px;white-space:nowrap" class="ft58">1</P>
+<P style="position:absolute;top:122px;left:414px;white-space:nowrap" class="ft58">12</P>
+<P style="position:absolute;top:122px;left:334px;white-space:nowrap" class="ft58">11</P>
+<P style="position:absolute;top:193px;left:486px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:193px;left:457px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:193px;left:404px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:193px;left:339px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:166px;left:504px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:166px;left:457px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:166px;left:408px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:166px;left:343px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:139px;left:498px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:139px;left:457px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:139px;left:390px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:139px;left:339px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:112px;left:500px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:112px;left:457px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:112px;left:405px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:112px;left:325px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:153px;left:542px;white-space:nowrap" class="ft54">&#160;= &#160;0 &#160; &#160; (2)</P>
+<P style="position:absolute;top:275px;left:235px;white-space:nowrap" class="ft58">n</P>
+<P style="position:absolute;top:265px;left:227px;white-space:nowrap" class="ft54">I</P>
+<P style="position:absolute;top:265px;left:186px;white-space:nowrap" class="ft54">A</P>
+<P style="position:absolute;top:259px;left:215px;white-space:nowrap" class="ft55">λ</P>
+<P style="position:absolute;top:259px;left:203px;white-space:nowrap" class="ft55">−</P>
+<P style="position:absolute;top:265px;left:249px;white-space:nowrap" class="ft54">= 0 ekuazioari, A matrizearen&#160;&#160;<i>ekuazio karakteristikoa&#160;&#160;</i>esaten zaio.</P>
+<P style="position:absolute;top:301px;left:127px;white-space:nowrap" class="ft54">Beraz, f endomorfismoaren (edo A matrizearen) balio propioak&#160;&#160;<b>K</b>-n dauden ekuazio</P>
+<P style="position:absolute;top:333px;left:127px;white-space:nowrap" class="ft54">honen erroak dira.&#160;<b>K</b>&#160;=&#160;&#160;<b>C</b></P>
+<P style="position:absolute;top:330px;left:313px;white-space:nowrap" class="ft510">&#160;denean, A-ren ekuazio karakteristikoak n erro konplexu ditu,</P>
+<P style="position:absolute;top:364px;left:127px;white-space:nowrap" class="ft54">erro bakoitza bere anizkoiztasunak adierazten duen adina aldiz zenbatuz.&#160;<b>K</b>&#160;=&#160;<b>R</b>&#160;denean,</P>
+<P style="position:absolute;top:395px;left:127px;white-space:nowrap" class="ft54">(2) ekuazioak n erro erreal dituela ezin dugu ziurtatu.</P>
+<P style="position:absolute;top:427px;left:180px;white-space:nowrap" class="ft54">(2) adierazpenean agertzen den determinantea garatuz eta&#160;</P>
+<P style="position:absolute;top:437px;left:707px;white-space:nowrap" class="ft58">n</P>
+<P style="position:absolute;top:437px;left:664px;white-space:nowrap" class="ft58">2</P>
+<P style="position:absolute;top:437px;left:639px;white-space:nowrap" class="ft58">1</P>
+<P style="position:absolute;top:427px;left:671px;white-space:nowrap" class="ft54">,...,</P>
+<P style="position:absolute;top:427px;left:646px;white-space:nowrap" class="ft54">,</P>
+<P style="position:absolute;top:421px;left:695px;white-space:nowrap" class="ft55">λ</P>
+<P style="position:absolute;top:421px;left:651px;white-space:nowrap" class="ft55">λ</P>
+<P style="position:absolute;top:421px;left:628px;white-space:nowrap" class="ft55">λ</P>
+<P style="position:absolute;top:427px;left:716px;white-space:nowrap" class="ft54">&#160;A-ren</P>
+<P style="position:absolute;top:462px;left:127px;white-space:nowrap" class="ft54">autobalioak baldin badira, ondoko propietateak betetzen direla egiazta dezakegu:</P>
+<P style="position:absolute;top:495px;left:180px;white-space:nowrap" class="ft54">i) &#160;</P>
+<P style="position:absolute;top:505px;left:313px;white-space:nowrap" class="ft58">n</P>
+<P style="position:absolute;top:505px;left:249px;white-space:nowrap" class="ft58">2</P>
+<P style="position:absolute;top:505px;left:213px;white-space:nowrap" class="ft58">1</P>
+<P style="position:absolute;top:495px;left:272px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:489px;left:302px;white-space:nowrap" class="ft55">λ</P>
+<P style="position:absolute;top:489px;left:288px;white-space:nowrap" class="ft55">+</P>
+<P style="position:absolute;top:489px;left:260px;white-space:nowrap" class="ft55">+</P>
+<P style="position:absolute;top:489px;left:237px;white-space:nowrap" class="ft55">λ</P>
+<P style="position:absolute;top:489px;left:224px;white-space:nowrap" class="ft55">+</P>
+<P style="position:absolute;top:489px;left:203px;white-space:nowrap" class="ft55">λ</P>
+<P style="position:absolute;top:495px;left:323px;white-space:nowrap" class="ft54">&#160;= &#160;</P>
+<P style="position:absolute;top:505px;left:467px;white-space:nowrap" class="ft58">nn</P>
+<P style="position:absolute;top:505px;left:397px;white-space:nowrap" class="ft58">22</P>
+<P style="position:absolute;top:505px;left:358px;white-space:nowrap" class="ft58">11</P>
+<P style="position:absolute;top:495px;left:457px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:495px;left:426px;white-space:nowrap" class="ft54">...</P>
+<P style="position:absolute;top:495px;left:387px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:495px;left:349px;white-space:nowrap" class="ft54">a</P>
+<P style="position:absolute;top:489px;left:443px;white-space:nowrap" class="ft55">+</P>
+<P style="position:absolute;top:489px;left:414px;white-space:nowrap" class="ft55">+</P>
+<P style="position:absolute;top:489px;left:374px;white-space:nowrap" class="ft55">+</P>
+<P style="position:absolute;top:495px;left:480px;white-space:nowrap" class="ft54">&#160; = &#160;tr(A) (A-ren aztarna)</P>
+<P style="position:absolute;top:532px;left:180px;white-space:nowrap" class="ft54">ii)&#160;</P>
+<P style="position:absolute;top:542px;left:296px;white-space:nowrap" class="ft58">n</P>
+<P style="position:absolute;top:542px;left:241px;white-space:nowrap" class="ft58">2</P>
+<P style="position:absolute;top:542px;left:213px;white-space:nowrap" class="ft58">1</P>
+<P style="position:absolute;top:532px;left:258px;white-space:nowrap" class="ft54">....</P>
+<P style="position:absolute;top:526px;left:285px;white-space:nowrap" class="ft55">λ</P>
+<P style="position:absolute;top:526px;left:278px;white-space:nowrap" class="ft55">⋅</P>
+<P style="position:absolute;top:526px;left:252px;white-space:nowrap" class="ft55">⋅</P>
+<P style="position:absolute;top:526px;left:230px;white-space:nowrap" class="ft55">λ</P>
+<P style="position:absolute;top:526px;left:223px;white-space:nowrap" class="ft55">⋅</P>
+<P style="position:absolute;top:526px;left:203px;white-space:nowrap" class="ft55">λ</P>
+<P style="position:absolute;top:532px;left:305px;white-space:nowrap" class="ft54">&#160; = &#160;&#160;A</P>
+<P style="position:absolute;top:569px;left:180px;white-space:nowrap" class="ft54">Bigarren propietate hau kontuan hartuz, A matrizea erregularra baldin bada, bere</P>
+<P style="position:absolute;top:602px;left:127px;white-space:nowrap" class="ft54">balio propioak (</P>
+<P style="position:absolute;top:611px;left:255px;white-space:nowrap" class="ft58">i</P>
+<P style="position:absolute;top:596px;left:244px;white-space:nowrap" class="ft55">λ&#160;) ezin dira nuluak izan.</P>
+<P style="position:absolute;top:635px;left:127px;white-space:nowrap" class="ft54">Definizioak. A matrizearen (edo f endomorfismoaren) autobalioen multzoari, A-ren</P>
+<P style="position:absolute;top:670px;left:127px;white-space:nowrap" class="ft54">(edo f-ren)&#160;&#160;<i>espektroa&#160;&#160;</i>esaten zaio. Eta &#160;p(</P>
+<P style="position:absolute;top:664px;left:438px;white-space:nowrap" class="ft55">λ&#160;) =&#160;</P>
+<P style="position:absolute;top:680px;left:536px;white-space:nowrap" class="ft58">n</P>
+<P style="position:absolute;top:670px;left:528px;white-space:nowrap" class="ft54">I</P>
+<P style="position:absolute;top:670px;left:486px;white-space:nowrap" class="ft54">A</P>
+<P style="position:absolute;top:664px;left:515px;white-space:nowrap" class="ft55">λ</P>
+<P style="position:absolute;top:664px;left:503px;white-space:nowrap" class="ft55">−</P>
+<P style="position:absolute;top:670px;left:549px;white-space:nowrap" class="ft54">&#160;polinomioari, A matrizearen</P>
+<P style="position:absolute;top:707px;left:127px;white-space:nowrap" class="ft54">(edo f endomorfismoaren)&#160;<i>polinomio karakteristikoa</i>&#160;esaten zaio.</P>
+<P style="position:absolute;top:771px;left:127px;white-space:nowrap" class="ft52"><b>2.- Izan bedi&#160;</b></P>
+<P style="position:absolute;top:766px;left:243px;white-space:nowrap" class="ft55">∈</P>
+<P style="position:absolute;top:766px;left:230px;white-space:nowrap" class="ft55">λ&#160;<b>K&#160;&#160;f-ren (edo A-ren) autobalio bat. orduan:</b></P>
+<P style="position:absolute;top:797px;left:195px;white-space:nowrap" class="ft55">∈</P>
+<P style="position:absolute;top:803px;left:183px;white-space:nowrap" class="ft54">v&#160;<b>&#160;V &#160;&#160;</b></P>
+<P style="position:absolute;top:797px;left:242px;white-space:nowrap" class="ft55">λ&#160;<b>-ri elkartutako f-ren autobektore bat da &#160;&#160;</b>⇔</P>
+<P style="position:absolute;top:829px;left:129px;white-space:nowrap" class="ft55">⇔&#160;<b>&#160;X</b>∈<b>M</b></P>
+<P style="position:absolute;top:841px;left:203px;white-space:nowrap" class="ft513"><b>nx1(K) &#160;</b></P>
+<P style="position:absolute;top:829px;left:258px;white-space:nowrap" class="ft55">λ&#160;<b>-ri elkartutako A-ren autobektore bat bada&#160;&#160;</b>⇔&#160;<b>&#160;(A-&#160;</b>λ&#160;<b>.I</b></P>
+<P style="position:absolute;top:841px;left:689px;white-space:nowrap" class="ft513"><b>n).X = (0)</b></P>
+<P style="position:absolute;top:896px;left:127px;white-space:nowrap" class="ft54">Hau da, &#160;(A-</P>
+<P style="position:absolute;top:890px;left:219px;white-space:nowrap" class="ft55">λ&#160;.I</P>
+<P style="position:absolute;top:902px;left:242px;white-space:nowrap" class="ft56">n).X = (0) sisteman&#160;</P>
+<P style="position:absolute;top:906px;left:399px;white-space:nowrap" class="ft58">i</P>
+<P style="position:absolute;top:890px;left:388px;white-space:nowrap" class="ft55">λ&#160;&#160;autobalio bakoitza ordezkatuz, (A-</P>
+<P style="position:absolute;top:906px;left:678px;white-space:nowrap" class="ft58">i</P>
+<P style="position:absolute;top:890px;left:667px;white-space:nowrap" class="ft55">λ&#160;.I</P>
+<P style="position:absolute;top:902px;left:694px;white-space:nowrap" class="ft56">n).X = (0)</P>
+<P style="position:absolute;top:932px;left:127px;white-space:nowrap" class="ft54">sistemaren soluzio ez-nuluak&#160;</P>
+<P style="position:absolute;top:942px;left:357px;white-space:nowrap" class="ft58">i</P>
+<P style="position:absolute;top:926px;left:345px;white-space:nowrap" class="ft55">λ&#160;&#160;autobalioari elkartutako autobektoreak izango dira, eta</P>
+<P style="position:absolute;top:969px;left:127px;white-space:nowrap" class="ft54">soluzio guztien multzoa&#160;</P>
+<P style="position:absolute;top:969px;left:348px;white-space:nowrap" class="ft54">)</P>
+<P style="position:absolute;top:969px;left:339px;white-space:nowrap" class="ft54">f</P>
+<P style="position:absolute;top:969px;left:332px;white-space:nowrap" class="ft54">(</P>
+<P style="position:absolute;top:969px;left:306px;white-space:nowrap" class="ft54">V</P>
+<P style="position:absolute;top:982px;left:325px;white-space:nowrap" class="ft58">i</P>
+<P style="position:absolute;top:976px;left:318px;white-space:nowrap" class="ft59">λ</P>
+<P style="position:absolute;top:969px;left:357px;white-space:nowrap" class="ft54">(edo&#160;</P>
+<P style="position:absolute;top:969px;left:441px;white-space:nowrap" class="ft54">)</P>
+<P style="position:absolute;top:969px;left:428px;white-space:nowrap" class="ft54">A</P>
+<P style="position:absolute;top:969px;left:421px;white-space:nowrap" class="ft54">(</P>
+<P style="position:absolute;top:969px;left:395px;white-space:nowrap" class="ft54">V</P>
+<P style="position:absolute;top:982px;left:414px;white-space:nowrap" class="ft58">i</P>
+<P style="position:absolute;top:976px;left:407px;white-space:nowrap" class="ft59">λ</P>
+<P style="position:absolute;top:969px;left:450px;white-space:nowrap" class="ft54">).</P>
+<P style="position:absolute;top:1008px;left:127px;white-space:nowrap" class="ft54">Gainera, dim&#160;</P>
+<P style="position:absolute;top:1008px;left:270px;white-space:nowrap" class="ft54">)</P>
+<P style="position:absolute;top:1008px;left:261px;white-space:nowrap" class="ft54">f</P>
+<P style="position:absolute;top:1008px;left:254px;white-space:nowrap" class="ft54">(</P>
+<P style="position:absolute;top:1008px;left:228px;white-space:nowrap" class="ft54">V</P>
+<P style="position:absolute;top:1020px;left:248px;white-space:nowrap" class="ft58">i</P>
+<P style="position:absolute;top:1014px;left:241px;white-space:nowrap" class="ft59">λ</P>
+<P style="position:absolute;top:1008px;left:279px;white-space:nowrap" class="ft54">&#160;= &#160;n- ( (A-</P>
+<P style="position:absolute;top:1002px;left:359px;white-space:nowrap" class="ft55">λ&#160;I</P>
+<P style="position:absolute;top:1014px;left:377px;white-space:nowrap" class="ft56">d)-ren heina), ondokoa betetzen baita:</P>
+<P style="position:absolute;top:1046px;left:127px;white-space:nowrap" class="ft54">Badakigu dim V = dim Ker (f -&#160;</P>
+<P style="position:absolute;top:1040px;left:368px;white-space:nowrap" class="ft55">λ&#160;I</P>
+<P style="position:absolute;top:1052px;left:386px;white-space:nowrap" class="ft56">d) +&#160;dim Im (f -&#160;</P>
+<P style="position:absolute;top:1040px;left:510px;white-space:nowrap" class="ft55">λ&#160;I</P>
+<P style="position:absolute;top:1052px;left:528px;white-space:nowrap" class="ft56">d) berdintza betetzen dela, beraz</P>
+<P style="position:absolute;top:1079px;left:127px;white-space:nowrap" class="ft54">dim&#160;</P>
+<P style="position:absolute;top:1079px;left:204px;white-space:nowrap" class="ft54">)</P>
+<P style="position:absolute;top:1079px;left:195px;white-space:nowrap" class="ft54">f</P>
+<P style="position:absolute;top:1079px;left:188px;white-space:nowrap" class="ft54">(</P>
+<P style="position:absolute;top:1079px;left:162px;white-space:nowrap" class="ft54">V</P>
+<P style="position:absolute;top:1091px;left:181px;white-space:nowrap" class="ft58">i</P>
+<P style="position:absolute;top:1085px;left:174px;white-space:nowrap" class="ft59">λ</P>
+<P style="position:absolute;top:1079px;left:213px;white-space:nowrap" class="ft54">&#160;=&#160;dim Ker (f -&#160;</P>
+<P style="position:absolute;top:1073px;left:325px;white-space:nowrap" class="ft55">λ&#160;I</P>
+<P style="position:absolute;top:1085px;left:343px;white-space:nowrap" class="ft56">d) = n - dim Im (f -&#160;</P>
+<P style="position:absolute;top:1073px;left:485px;white-space:nowrap" class="ft55">λ&#160;I</P>
+<P style="position:absolute;top:1085px;left:503px;white-space:nowrap" class="ft56">d)&#160;</P>
+<P style="position:absolute;top:1073px;left:522px;white-space:nowrap" class="ft55">⇒&#160;&#160;dim&#160;</P>
+<P style="position:absolute;top:1079px;left:623px;white-space:nowrap" class="ft54">)</P>
+<P style="position:absolute;top:1079px;left:614px;white-space:nowrap" class="ft54">f</P>
+<P style="position:absolute;top:1079px;left:608px;white-space:nowrap" class="ft54">(</P>
+<P style="position:absolute;top:1079px;left:582px;white-space:nowrap" class="ft54">V</P>
+<P style="position:absolute;top:1091px;left:601px;white-space:nowrap" class="ft58">i</P>
+<P style="position:absolute;top:1085px;left:594px;white-space:nowrap" class="ft59">λ</P>
+<P style="position:absolute;top:1079px;left:632px;white-space:nowrap" class="ft54">= n - r(A-</P>
+<P style="position:absolute;top:1073px;left:704px;white-space:nowrap" class="ft55">λ&#160;I</P>
+<P style="position:absolute;top:1085px;left:722px;white-space:nowrap" class="ft56">n)</P>
+</DIV>
+<!-- Page 6 -->
+<a name="6"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft614{font-size:16px;font-family:Helvetica;color:#000000;}
+-->
+</STYLE>
+<DIV id="page6-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:443px;white-space:nowrap" class="ft60">6</P>
+<P style="position:absolute;top:109px;left:127px;white-space:nowrap" class="ft64">Hamilton-Cayleyren teorema. Edozein matrize karratu, bere polinomio</P>
+<P style="position:absolute;top:140px;left:127px;white-space:nowrap" class="ft64">karakteristikoaren erroa da. Teorema honek garrantzi handia du matrize baten</P>
+<P style="position:absolute;top:171px;left:127px;white-space:nowrap" class="ft64">berreduren kalkuluan eta matrize erregularren alderantzizko matrizeen kalkuluan.</P>
+<P style="position:absolute;top:233px;left:127px;white-space:nowrap" class="ft62"><b>4.&#160;&#160;BALIO ETA BEKTORE PROPIOEN AZTERKETA</b></P>
+<P style="position:absolute;top:297px;left:127px;white-space:nowrap" class="ft64">Izan bedi f : V&#160;</P>
+<P style="position:absolute;top:291px;left:237px;white-space:nowrap" class="ft65">→&#160;&#160;V endomorfismo bat &#160;non &#160;dim V = n den.</P>
+<P style="position:absolute;top:328px;left:127px;white-space:nowrap" class="ft64">Izan bedi B = {&#160;</P>
+<P style="position:absolute;top:338px;left:255px;white-space:nowrap" class="ft68">1</P>
+<P style="position:absolute;top:328px;left:246px;white-space:nowrap" class="ft64">v&#160;,&#160;</P>
+<P style="position:absolute;top:338px;left:285px;white-space:nowrap" class="ft68">2</P>
+<P style="position:absolute;top:328px;left:275px;white-space:nowrap" class="ft64">v&#160;, ...,&#160;</P>
+<P style="position:absolute;top:338px;left:339px;white-space:nowrap" class="ft68">n</P>
+<P style="position:absolute;top:328px;left:329px;white-space:nowrap" class="ft64">v&#160;} V-ren oinarri bat.</P>
+<P style="position:absolute;top:364px;left:127px;white-space:nowrap" class="ft64">Izan bedi A&#160;</P>
+<P style="position:absolute;top:358px;left:217px;white-space:nowrap" class="ft65">∈&#160;M</P>
+<P style="position:absolute;top:370px;left:251px;white-space:nowrap" class="ft66">n(<b>K</b>) &#160; f-ri elkartutako matrizea V-ren B = {&#160;</P>
+<P style="position:absolute;top:374px;left:579px;white-space:nowrap" class="ft68">1</P>
+<P style="position:absolute;top:364px;left:570px;white-space:nowrap" class="ft64">v&#160;,&#160;</P>
+<P style="position:absolute;top:374px;left:609px;white-space:nowrap" class="ft68">2</P>
+<P style="position:absolute;top:364px;left:599px;white-space:nowrap" class="ft64">v&#160;, ...,&#160;</P>
+<P style="position:absolute;top:374px;left:663px;white-space:nowrap" class="ft68">n</P>
+<P style="position:absolute;top:364px;left:653px;white-space:nowrap" class="ft64">v&#160;} oinarrian.</P>
+<P style="position:absolute;top:429px;left:127px;white-space:nowrap" class="ft64">1.&#160;&#160;V espazio bektorialean oinarri aldaketa bat egiten badugu, f-ren (edo A-ren) balio</P>
+<P style="position:absolute;top:461px;left:154px;white-space:nowrap" class="ft64">eta bektore propioak ez dira aldatzen.</P>
+<P style="position:absolute;top:495px;left:127px;white-space:nowrap" class="ft64">2.&#160;</P>
+<P style="position:absolute;top:489px;left:170px;white-space:nowrap" class="ft65">∈</P>
+<P style="position:absolute;top:489px;left:156px;white-space:nowrap" class="ft65">λ&#160;<b>K</b>&#160; f-ren (edo A-ren) balio propio bat baldin bada,&#160;dim</P>
+<P style="position:absolute;top:501px;left:590px;white-space:nowrap" class="ft69">λ</P>
+<P style="position:absolute;top:495px;left:577px;white-space:nowrap" class="ft64">V&#160;(f) =&#160;dim V– r(A-</P>
+<P style="position:absolute;top:489px;left:730px;white-space:nowrap" class="ft65">λ&#160;I</P>
+<P style="position:absolute;top:501px;left:748px;white-space:nowrap" class="ft66">n).</P>
+<P style="position:absolute;top:532px;left:154px;white-space:nowrap" class="ft64">(dim&#160;λ</P>
+<P style="position:absolute;top:532px;left:190px;white-space:nowrap" class="ft64">V&#160;(A) = dim V– r(A-</P>
+<P style="position:absolute;top:526px;left:349px;white-space:nowrap" class="ft65">λ&#160;I</P>
+<P style="position:absolute;top:538px;left:367px;white-space:nowrap" class="ft66">n)).</P>
+<P style="position:absolute;top:567px;left:127px;white-space:nowrap" class="ft64">3.&#160;&#160;ERRO SINPLEEN (BAKUNEN) KASUA.</P>
+<P style="position:absolute;top:611px;left:209px;white-space:nowrap" class="ft68">n</P>
+<P style="position:absolute;top:602px;left:201px;white-space:nowrap" class="ft64">I</P>
+<P style="position:absolute;top:602px;left:160px;white-space:nowrap" class="ft64">A</P>
+<P style="position:absolute;top:596px;left:189px;white-space:nowrap" class="ft65">λ</P>
+<P style="position:absolute;top:596px;left:177px;white-space:nowrap" class="ft65">−</P>
+<P style="position:absolute;top:602px;left:223px;white-space:nowrap" class="ft64">&#160;= 0 ekuazio karakteristikoak n erro sinple baldin baditu, hau da,</P>
+<P style="position:absolute;top:649px;left:235px;white-space:nowrap" class="ft68">n</P>
+<P style="position:absolute;top:649px;left:192px;white-space:nowrap" class="ft68">2</P>
+<P style="position:absolute;top:649px;left:168px;white-space:nowrap" class="ft68">1</P>
+<P style="position:absolute;top:639px;left:199px;white-space:nowrap" class="ft64">,...,</P>
+<P style="position:absolute;top:639px;left:174px;white-space:nowrap" class="ft64">,</P>
+<P style="position:absolute;top:633px;left:224px;white-space:nowrap" class="ft65">λ</P>
+<P style="position:absolute;top:633px;left:180px;white-space:nowrap" class="ft65">λ</P>
+<P style="position:absolute;top:633px;left:156px;white-space:nowrap" class="ft65">λ</P>
+<P style="position:absolute;top:639px;left:244px;white-space:nowrap" class="ft64">&#160;desberdinak, orduan&#160;</P>
+<P style="position:absolute;top:649px;left:484px;white-space:nowrap" class="ft68">n</P>
+<P style="position:absolute;top:649px;left:441px;white-space:nowrap" class="ft68">2</P>
+<P style="position:absolute;top:649px;left:416px;white-space:nowrap" class="ft68">1</P>
+<P style="position:absolute;top:639px;left:448px;white-space:nowrap" class="ft64">,...,</P>
+<P style="position:absolute;top:639px;left:423px;white-space:nowrap" class="ft64">,</P>
+<P style="position:absolute;top:633px;left:473px;white-space:nowrap" class="ft65">λ</P>
+<P style="position:absolute;top:633px;left:429px;white-space:nowrap" class="ft65">λ</P>
+<P style="position:absolute;top:633px;left:405px;white-space:nowrap" class="ft65">λ</P>
+<P style="position:absolute;top:639px;left:493px;white-space:nowrap" class="ft64">&#160;autobalioei dagozkien autobektoreak</P>
+<P style="position:absolute;top:676px;left:154px;white-space:nowrap" class="ft64">linealki independenteak dira eta&#160;dim</P>
+<P style="position:absolute;top:688px;left:442px;white-space:nowrap" class="ft68">i</P>
+<P style="position:absolute;top:676px;left:423px;white-space:nowrap" class="ft64">Vλ&#160;(f) =&#160;dim</P>
+<P style="position:absolute;top:688px;left:538px;white-space:nowrap" class="ft68">i</P>
+<P style="position:absolute;top:676px;left:519px;white-space:nowrap" class="ft64">Vλ&#160;(A) = 1 &#160;&#160;∀&#160;i = 1,2,...,n. Beraz,</P>
+<P style="position:absolute;top:713px;left:154px;white-space:nowrap" class="ft64">autobektorez osatutako V-ren oinarri bat osa dezakegu.</P>
+<P style="position:absolute;top:743px;left:127px;white-space:nowrap" class="ft64">4.&#160;&#160;ERRO ANIZKOITZEN KASUA.</P>
+<P style="position:absolute;top:770px;left:156px;white-space:nowrap" class="ft65">λ&#160;&#160;autobalioa polinomio karakteristikoaren k anizkoiztasun ordenako erroa bada, k</P>
+<P style="position:absolute;top:810px;left:154px;white-space:nowrap" class="ft64">ordenakoa dela esango dugu eta 1&#160;</P>
+<P style="position:absolute;top:804px;left:411px;white-space:nowrap" class="ft65">≤&#160;&#160;dim</P>
+<P style="position:absolute;top:816px;left:471px;white-space:nowrap" class="ft69">λ</P>
+<P style="position:absolute;top:810px;left:459px;white-space:nowrap" class="ft64">V&#160;(f) =&#160;dim&#160;λ</P>
+<P style="position:absolute;top:810px;left:550px;white-space:nowrap" class="ft64">V&#160;(A)&#160;</P>
+<P style="position:absolute;top:804px;left:605px;white-space:nowrap" class="ft65">≤&#160;&#160;k betetzen da. Izan</P>
+<P style="position:absolute;top:845px;left:154px;white-space:nowrap" class="ft64">bitez&#160;</P>
+<P style="position:absolute;top:854px;left:281px;white-space:nowrap" class="ft68">r</P>
+<P style="position:absolute;top:854px;left:237px;white-space:nowrap" class="ft68">2</P>
+<P style="position:absolute;top:854px;left:213px;white-space:nowrap" class="ft68">1</P>
+<P style="position:absolute;top:845px;left:244px;white-space:nowrap" class="ft64">,...,</P>
+<P style="position:absolute;top:845px;left:219px;white-space:nowrap" class="ft64">,</P>
+<P style="position:absolute;top:839px;left:269px;white-space:nowrap" class="ft65">λ</P>
+<P style="position:absolute;top:839px;left:225px;white-space:nowrap" class="ft65">λ</P>
+<P style="position:absolute;top:839px;left:201px;white-space:nowrap" class="ft65">λ</P>
+<P style="position:absolute;top:845px;left:288px;white-space:nowrap" class="ft64">&#160;A-ren (edo f-ren)) autobalio desberdin guztiak eta&#160;“ki”&#160;</P>
+<P style="position:absolute;top:854px;left:759px;white-space:nowrap" class="ft68">i</P>
+<P style="position:absolute;top:839px;left:748px;white-space:nowrap" class="ft65">λ</P>
+<P style="position:absolute;top:879px;left:154px;white-space:nowrap" class="ft64">autobalio bakoitzari dagokion anizkoiztasun-ordena, i=1,2,...,r. Orduan, baldintza</P>
+<P style="position:absolute;top:911px;left:154px;white-space:nowrap" class="ft64">hauetan, autobektorez osotutako V-ren oinarri bat lor dezakegu ondorengo</P>
+<P style="position:absolute;top:941px;left:154px;white-space:nowrap" class="ft64">baldintzak betetzen direnean:</P>
+<P style="position:absolute;top:1003px;left:233px;white-space:nowrap" class="ft64">1.- &#160; &#160;k1&#160;+ k2&#160;+ ... + kr&#160;= n</P>
+<P style="position:absolute;top:1037px;left:233px;white-space:nowrap" class="ft64">2.- &#160; dim</P>
+<P style="position:absolute;top:1049px;left:314px;white-space:nowrap" class="ft68">1</P>
+<P style="position:absolute;top:1037px;left:296px;white-space:nowrap" class="ft64">Vλ&#160;(f) = k1;&#160;dim</P>
+<P style="position:absolute;top:1047px;left:434px;white-space:nowrap" class="ft68">2</P>
+<P style="position:absolute;top:1037px;left:414px;white-space:nowrap" class="ft64">Vλ&#160;(f) = k2, ..., dim</P>
+<P style="position:absolute;top:1047px;left:574px;white-space:nowrap" class="ft68">r</P>
+<P style="position:absolute;top:1037px;left:556px;white-space:nowrap" class="ft64">Vλ&#160;(f) =&#160;kr</P>
+</DIV>
+<!-- Page 7 -->
+<a name="7"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page7-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:443px;white-space:nowrap" class="ft70">7</P>
+<P style="position:absolute;top:109px;left:127px;white-space:nowrap" class="ft72"><b>5.&#160;&#160;DIAGONALIZAZIOA</b></P>
+<P style="position:absolute;top:173px;left:127px;white-space:nowrap" class="ft74">Definizioa. Izan bedi f : V&#160;</P>
+<P style="position:absolute;top:167px;left:330px;white-space:nowrap" class="ft75">→&#160;&#160;V endomorfismo bat, non V &#160;<b>K</b>&#160;gainean n dimentsioko</P>
+<P style="position:absolute;top:202px;left:127px;white-space:nowrap" class="ft74">espazio bektoriala den. f endomorfismoa&#160;&#160;<i>diagonalgarria</i>&#160;dela esaten da, V-ren oinarri</P>
+<P style="position:absolute;top:234px;left:127px;white-space:nowrap" class="ft74">bat existitzen bada non f-ri elkartutako matrizea oinarri horretan diagonala den.</P>
+<P style="position:absolute;top:296px;left:127px;white-space:nowrap" class="ft74">Definizioa. Izan bedi A</P>
+<P style="position:absolute;top:290px;left:300px;white-space:nowrap" class="ft75">∈M</P>
+<P style="position:absolute;top:302px;left:330px;white-space:nowrap" class="ft76">n(<b>K</b>). A matrizea&#160;<i>diagonalgarria</i>&#160;dela esaten da, P</P>
+<P style="position:absolute;top:290px;left:699px;white-space:nowrap" class="ft75">∈&#160;M</P>
+<P style="position:absolute;top:302px;left:734px;white-space:nowrap" class="ft76">n(<b>K</b>)</P>
+<P style="position:absolute;top:329px;left:127px;white-space:nowrap" class="ft74">matrize erregular bat existitzen bada non&#160;</P>
+<P style="position:absolute;top:327px;left:446px;white-space:nowrap" class="ft78">1</P>
+<P style="position:absolute;top:329px;left:428px;white-space:nowrap" class="ft74">P</P>
+<P style="position:absolute;top:324px;left:440px;white-space:nowrap" class="ft79">−&#160;A P matrizea diagonala den.</P>
+<P style="position:absolute;top:393px;left:127px;white-space:nowrap" class="ft74">Teorema. Izan bedi f : V&#160;</P>
+<P style="position:absolute;top:388px;left:311px;white-space:nowrap" class="ft75">→&#160;&#160;V endomorfismo bat &#160;non &#160;dim V = n den.</P>
+<P style="position:absolute;top:425px;left:127px;white-space:nowrap" class="ft74">Izan bedi B = {&#160;</P>
+<P style="position:absolute;top:435px;left:255px;white-space:nowrap" class="ft78">1</P>
+<P style="position:absolute;top:425px;left:246px;white-space:nowrap" class="ft74">v&#160;,&#160;</P>
+<P style="position:absolute;top:435px;left:285px;white-space:nowrap" class="ft78">2</P>
+<P style="position:absolute;top:425px;left:275px;white-space:nowrap" class="ft74">v&#160;, ...,&#160;</P>
+<P style="position:absolute;top:435px;left:339px;white-space:nowrap" class="ft78">n</P>
+<P style="position:absolute;top:425px;left:329px;white-space:nowrap" class="ft74">v&#160;} V-ren oinarri bat.</P>
+<P style="position:absolute;top:461px;left:127px;white-space:nowrap" class="ft74">Izan bedi A&#160;</P>
+<P style="position:absolute;top:455px;left:217px;white-space:nowrap" class="ft75">∈&#160;M</P>
+<P style="position:absolute;top:467px;left:251px;white-space:nowrap" class="ft76">n(<b>K</b>) &#160; f-ri elkartutako matrizea V-ren B = {&#160;</P>
+<P style="position:absolute;top:471px;left:579px;white-space:nowrap" class="ft78">1</P>
+<P style="position:absolute;top:461px;left:570px;white-space:nowrap" class="ft74">v&#160;,&#160;</P>
+<P style="position:absolute;top:471px;left:609px;white-space:nowrap" class="ft78">2</P>
+<P style="position:absolute;top:461px;left:599px;white-space:nowrap" class="ft74">v&#160;, ...,&#160;</P>
+<P style="position:absolute;top:471px;left:663px;white-space:nowrap" class="ft78">n</P>
+<P style="position:absolute;top:461px;left:653px;white-space:nowrap" class="ft74">v&#160;} oinarrian.</P>
+<P style="position:absolute;top:498px;left:127px;white-space:nowrap" class="ft74">f-ren adierazpen matriziala B oinarrian: &#160; &#160;</P>
+<P style="position:absolute;top:487px;left:447px;white-space:nowrap" class="ft712">(&#160;)</P>
+<P style="position:absolute;top:487px;left:432px;white-space:nowrap" class="ft712">(</P>
+<P style="position:absolute;top:508px;left:474px;white-space:nowrap" class="ft78">B</P>
+<P style="position:absolute;top:498px;left:452px;white-space:nowrap" class="ft74">v</P>
+<P style="position:absolute;top:498px;left:438px;white-space:nowrap" class="ft74">f</P>
+<P style="position:absolute;top:498px;left:484px;white-space:nowrap" class="ft74">&#160;= &#160;A.&#160;</P>
+<P style="position:absolute;top:487px;left:532px;white-space:nowrap" class="ft712">(&#160;)</P>
+<P style="position:absolute;top:508px;left:555px;white-space:nowrap" class="ft78">B</P>
+<P style="position:absolute;top:498px;left:539px;white-space:nowrap" class="ft74">v</P>
+<P style="position:absolute;top:498px;left:565px;white-space:nowrap" class="ft74">&#160; &#160; &#160;</P>
+<P style="position:absolute;top:492px;left:619px;white-space:nowrap" class="ft75">∈</P>
+<P style="position:absolute;top:492px;left:590px;white-space:nowrap" class="ft75">∀&#160;v&#160;V.</P>
+<P style="position:absolute;top:563px;left:127px;white-space:nowrap" class="ft74">Orduan, f endomorfismoa edo A matrizea&#160;<i>diagonalgarriak</i>&#160;dira baldin eta soilik baldin</P>
+<P style="position:absolute;top:595px;left:127px;white-space:nowrap" class="ft74">autobektorez osatutako V-ren oinarri bat existitzen bada. Oinarri horretan f-ri</P>
+<P style="position:absolute;top:625px;left:127px;white-space:nowrap" class="ft74">elkartutako matrizea diagonala izango da eta diagonal nagusiko elementuak balio</P>
+<P style="position:absolute;top:657px;left:127px;white-space:nowrap" class="ft74">propioak izango dira.</P>
+<P style="position:absolute;top:719px;left:127px;white-space:nowrap" class="ft74">Ondorioa:</P>
+<P style="position:absolute;top:752px;left:127px;white-space:nowrap" class="ft74">i) &#160; n balio propio desberdin&#160;</P>
+<P style="position:absolute;top:762px;left:421px;white-space:nowrap" class="ft78">n</P>
+<P style="position:absolute;top:762px;left:378px;white-space:nowrap" class="ft78">2</P>
+<P style="position:absolute;top:762px;left:353px;white-space:nowrap" class="ft78">1</P>
+<P style="position:absolute;top:752px;left:385px;white-space:nowrap" class="ft74">,...,</P>
+<P style="position:absolute;top:752px;left:360px;white-space:nowrap" class="ft74">,</P>
+<P style="position:absolute;top:746px;left:410px;white-space:nowrap" class="ft75">λ</P>
+<P style="position:absolute;top:746px;left:366px;white-space:nowrap" class="ft75">λ</P>
+<P style="position:absolute;top:746px;left:342px;white-space:nowrap" class="ft75">λ</P>
+<P style="position:absolute;top:752px;left:430px;white-space:nowrap" class="ft74">&#160;badaude, orduan f eta A diagonalgarriak dira</P>
+<P style="position:absolute;top:820px;left:127px;white-space:nowrap" class="ft74">eta &#160;D =&#160;</P>
+<P style="position:absolute;top:848px;left:320px;white-space:nowrap" class="ft75"></P>
+<P style="position:absolute;top:821px;left:320px;white-space:nowrap" class="ft75"></P>
+<P style="position:absolute;top:803px;left:320px;white-space:nowrap" class="ft75"></P>
+<P style="position:absolute;top:786px;left:320px;white-space:nowrap" class="ft75"></P>
+<P style="position:absolute;top:859px;left:320px;white-space:nowrap" class="ft75"></P>
+<P style="position:absolute;top:775px;left:320px;white-space:nowrap" class="ft75"></P>
+<P style="position:absolute;top:848px;left:191px;white-space:nowrap" class="ft75"></P>
+<P style="position:absolute;top:821px;left:191px;white-space:nowrap" class="ft75"></P>
+<P style="position:absolute;top:803px;left:191px;white-space:nowrap" class="ft75"></P>
+<P style="position:absolute;top:786px;left:191px;white-space:nowrap" class="ft75"></P>
+<P style="position:absolute;top:859px;left:191px;white-space:nowrap" class="ft75"></P>
+<P style="position:absolute;top:775px;left:191px;white-space:nowrap" class="ft75"></P>
+<P style="position:absolute;top:854px;left:298px;white-space:nowrap" class="ft75">λ</P>
+<P style="position:absolute;top:800px;left:234px;white-space:nowrap" class="ft75">λ</P>
+<P style="position:absolute;top:773px;left:200px;white-space:nowrap" class="ft75">λ</P>
+<P style="position:absolute;top:870px;left:309px;white-space:nowrap" class="ft78">n</P>
+<P style="position:absolute;top:816px;left:245px;white-space:nowrap" class="ft78">2</P>
+<P style="position:absolute;top:788px;left:210px;white-space:nowrap" class="ft78">1</P>
+<P style="position:absolute;top:860px;left:269px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:860px;left:240px;white-space:nowrap" class="ft74">0</P>
+<P style="position:absolute;top:860px;left:204px;white-space:nowrap" class="ft74">0</P>
+<P style="position:absolute;top:833px;left:302px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:833px;left:269px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:833px;left:237px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:833px;left:201px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:806px;left:304px;white-space:nowrap" class="ft74">0</P>
+<P style="position:absolute;top:806px;left:269px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:806px;left:204px;white-space:nowrap" class="ft74">0</P>
+<P style="position:absolute;top:779px;left:304px;white-space:nowrap" class="ft74">0</P>
+<P style="position:absolute;top:779px;left:269px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:779px;left:240px;white-space:nowrap" class="ft74">0</P>
+<P style="position:absolute;top:820px;left:330px;white-space:nowrap" class="ft74">.</P>
+<P style="position:absolute;top:888px;left:127px;white-space:nowrap" class="ft74">ii) Izan bitez&#160;</P>
+<P style="position:absolute;top:898px;left:321px;white-space:nowrap" class="ft78">r</P>
+<P style="position:absolute;top:898px;left:277px;white-space:nowrap" class="ft78">2</P>
+<P style="position:absolute;top:898px;left:252px;white-space:nowrap" class="ft78">1</P>
+<P style="position:absolute;top:888px;left:284px;white-space:nowrap" class="ft74">,...,</P>
+<P style="position:absolute;top:888px;left:259px;white-space:nowrap" class="ft74">,</P>
+<P style="position:absolute;top:883px;left:308px;white-space:nowrap" class="ft75">λ</P>
+<P style="position:absolute;top:883px;left:264px;white-space:nowrap" class="ft75">λ</P>
+<P style="position:absolute;top:883px;left:241px;white-space:nowrap" class="ft75">λ</P>
+<P style="position:absolute;top:888px;left:327px;white-space:nowrap" class="ft74">&#160;A-ren (edo f-ren) autobalio desberdin guztiak,&#160;“ki”&#160;</P>
+<P style="position:absolute;top:898px;left:759px;white-space:nowrap" class="ft78">i</P>
+<P style="position:absolute;top:883px;left:748px;white-space:nowrap" class="ft75">λ</P>
+<P style="position:absolute;top:914px;left:127px;white-space:nowrap" class="ft74">autobalio bakoitzari dagokion anizkoiztasun-ordena eta di =&#160;&#160;dim</P>
+<P style="position:absolute;top:926px;left:630px;white-space:nowrap" class="ft78">i</P>
+<P style="position:absolute;top:914px;left:611px;white-space:nowrap" class="ft74">Vλ&#160;(f) =&#160;&#160;dim</P>
+<P style="position:absolute;top:926px;left:730px;white-space:nowrap" class="ft78">i</P>
+<P style="position:absolute;top:914px;left:711px;white-space:nowrap" class="ft74">Vλ&#160;(A),</P>
+<P style="position:absolute;top:941px;left:127px;white-space:nowrap" class="ft74">i=1,2,...,r. Orduan:</P>
+<P style="position:absolute;top:978px;left:249px;white-space:nowrap" class="ft74">f (edo A) diagonalgarria da&#160;</P>
+<P style="position:absolute;top:991px;left:476px;white-space:nowrap" class="ft75"></P>
+<P style="position:absolute;top:975px;left:476px;white-space:nowrap" class="ft75"></P>
+<P style="position:absolute;top:960px;left:476px;white-space:nowrap" class="ft75"></P>
+<P style="position:absolute;top:986px;left:576px;white-space:nowrap" class="ft75">=</P>
+<P style="position:absolute;top:986px;left:552px;white-space:nowrap" class="ft75">∀</P>
+<P style="position:absolute;top:986px;left:505px;white-space:nowrap" class="ft75">=</P>
+<P style="position:absolute;top:959px;left:611px;white-space:nowrap" class="ft75">=</P>
+<P style="position:absolute;top:959px;left:575px;white-space:nowrap" class="ft75">+</P>
+<P style="position:absolute;top:959px;left:547px;white-space:nowrap" class="ft75">+</P>
+<P style="position:absolute;top:959px;left:511px;white-space:nowrap" class="ft75">+</P>
+<P style="position:absolute;top:973px;left:451px;white-space:nowrap" class="ft75">⇔</P>
+<P style="position:absolute;top:992px;left:635px;white-space:nowrap" class="ft74">r</P>
+<P style="position:absolute;top:992px;left:610px;white-space:nowrap" class="ft74">,...,</P>
+<P style="position:absolute;top:992px;left:601px;white-space:nowrap" class="ft74">2</P>
+<P style="position:absolute;top:992px;left:596px;white-space:nowrap" class="ft74">,</P>
+<P style="position:absolute;top:992px;left:590px;white-space:nowrap" class="ft74">1</P>
+<P style="position:absolute;top:992px;left:567px;white-space:nowrap" class="ft74">i</P>
+<P style="position:absolute;top:992px;left:520px;white-space:nowrap" class="ft74">k</P>
+<P style="position:absolute;top:992px;left:484px;white-space:nowrap" class="ft74">d</P>
+<P style="position:absolute;top:965px;left:626px;white-space:nowrap" class="ft74">n</P>
+<P style="position:absolute;top:965px;left:588px;white-space:nowrap" class="ft74">k</P>
+<P style="position:absolute;top:965px;left:559px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:965px;left:524px;white-space:nowrap" class="ft74">k</P>
+<P style="position:absolute;top:965px;left:491px;white-space:nowrap" class="ft74">k</P>
+<P style="position:absolute;top:1002px;left:530px;white-space:nowrap" class="ft78">i</P>
+<P style="position:absolute;top:1002px;left:495px;white-space:nowrap" class="ft78">i</P>
+<P style="position:absolute;top:975px;left:600px;white-space:nowrap" class="ft78">r</P>
+<P style="position:absolute;top:975px;left:536px;white-space:nowrap" class="ft78">2</P>
+<P style="position:absolute;top:975px;left:501px;white-space:nowrap" class="ft78">1</P>
+<P style="position:absolute;top:1018px;left:127px;white-space:nowrap" class="ft74">Kasu honetan, D matrizearen diagonal nagusiko elementuak ondokoak dira:</P>
+<P style="position:absolute;top:1073px;left:377px;white-space:nowrap" class="ft78">1</P>
+<P style="position:absolute;top:1051px;left:357px;white-space:nowrap" class="ft78">)</P>
+<P style="position:absolute;top:1054px;left:350px;white-space:nowrap" class="ft78">1</P>
+<P style="position:absolute;top:1051px;left:345px;white-space:nowrap" class="ft78">k</P>
+<P style="position:absolute;top:1073px;left:332px;white-space:nowrap" class="ft78">1</P>
+<P style="position:absolute;top:1063px;left:360px;white-space:nowrap" class="ft74">,</P>
+<P style="position:absolute;top:1063px;left:345px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:1063px;left:339px;white-space:nowrap" class="ft74">,</P>
+<P style="position:absolute;top:1057px;left:367px;white-space:nowrap" class="ft75">λ</P>
+<P style="position:absolute;top:1057px;left:321px;white-space:nowrap" class="ft75">λ</P>
+<P style="position:absolute;top:1063px;left:385px;white-space:nowrap" class="ft74">,</P>
+<P style="position:absolute;top:1073px;left:452px;white-space:nowrap" class="ft78">2</P>
+<P style="position:absolute;top:1051px;left:431px;white-space:nowrap" class="ft78">)</P>
+<P style="position:absolute;top:1054px;left:424px;white-space:nowrap" class="ft78">2</P>
+<P style="position:absolute;top:1051px;left:417px;white-space:nowrap" class="ft78">k</P>
+<P style="position:absolute;top:1073px;left:404px;white-space:nowrap" class="ft78">2</P>
+<P style="position:absolute;top:1063px;left:434px;white-space:nowrap" class="ft74">,</P>
+<P style="position:absolute;top:1063px;left:420px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:1063px;left:411px;white-space:nowrap" class="ft74">,</P>
+<P style="position:absolute;top:1057px;left:441px;white-space:nowrap" class="ft75">λ</P>
+<P style="position:absolute;top:1057px;left:392px;white-space:nowrap" class="ft75">λ</P>
+<P style="position:absolute;top:1063px;left:461px;white-space:nowrap" class="ft74">, ......,&#160;</P>
+<P style="position:absolute;top:1073px;left:565px;white-space:nowrap" class="ft78">r</P>
+<P style="position:absolute;top:1051px;left:543px;white-space:nowrap" class="ft78">)</P>
+<P style="position:absolute;top:1051px;left:533px;white-space:nowrap" class="ft78">kr</P>
+<P style="position:absolute;top:1073px;left:521px;white-space:nowrap" class="ft78">r</P>
+<P style="position:absolute;top:1063px;left:547px;white-space:nowrap" class="ft74">,</P>
+<P style="position:absolute;top:1063px;left:533px;white-space:nowrap" class="ft74">...</P>
+<P style="position:absolute;top:1063px;left:527px;white-space:nowrap" class="ft74">,</P>
+<P style="position:absolute;top:1057px;left:554px;white-space:nowrap" class="ft75">λ</P>
+<P style="position:absolute;top:1057px;left:509px;white-space:nowrap" class="ft75">λ</P>
+<P style="position:absolute;top:1107px;left:127px;white-space:nowrap" class="ft74">Endomorfismo bati edozein oinarritan elkartutako matrizearen eta autobektorez</P>
+<P style="position:absolute;top:1138px;left:127px;white-space:nowrap" class="ft74">osatutako oinarri baten elkartutako matrizearen arteko erlazioa.</P>
+</DIV>
+<!-- Page 8 -->
+<a name="8"></a>
+<STYLE type="text/css">
+<!--
+	p {margin: 0; padding: 0;}-->
+</STYLE>
+<DIV id="page8-div" style="position:relative;width:894px;height:1263px;">
+<P style="position:absolute;top:1196px;left:443px;white-space:nowrap" class="ft80">8</P>
+<P style="position:absolute;top:141px;left:127px;white-space:nowrap" class="ft84">Izan bedi f : V&#160;</P>
+<P style="position:absolute;top:136px;left:237px;white-space:nowrap" class="ft85">→&#160;&#160;V endomorfismo bat /dim V = n den. Izan bitez B = {</P>
+<P style="position:absolute;top:151px;left:662px;white-space:nowrap" class="ft88">1</P>
+<P style="position:absolute;top:141px;left:653px;white-space:nowrap" class="ft84">v&#160;,&#160;</P>
+<P style="position:absolute;top:151px;left:691px;white-space:nowrap" class="ft88">2</P>
+<P style="position:absolute;top:141px;left:681px;white-space:nowrap" class="ft84">v&#160;, ...,&#160;</P>
+<P style="position:absolute;top:151px;left:747px;white-space:nowrap" class="ft88">n</P>
+<P style="position:absolute;top:141px;left:737px;white-space:nowrap" class="ft84">v&#160;}</P>
+<P style="position:absolute;top:177px;left:127px;white-space:nowrap" class="ft84">V-ren oinarri bat eta B* = {&#160;</P>
+<P style="position:absolute;top:187px;left:372px;white-space:nowrap" class="ft88">1</P>
+<P style="position:absolute;top:177px;left:359px;white-space:nowrap" class="ft84">w&#160;,&#160;</P>
+<P style="position:absolute;top:187px;left:412px;white-space:nowrap" class="ft88">2</P>
+<P style="position:absolute;top:177px;left:397px;white-space:nowrap" class="ft84">w&#160;, ...,&#160;</P>
+<P style="position:absolute;top:187px;left:477px;white-space:nowrap" class="ft88">n</P>
+<P style="position:absolute;top:177px;left:462px;white-space:nowrap" class="ft84">w&#160;} f-ren autobektorez osatutako V-ren</P>
+<P style="position:absolute;top:211px;left:127px;white-space:nowrap" class="ft84">oinarri bat.</P>
+<P style="position:absolute;top:244px;left:127px;white-space:nowrap" class="ft84">Izan bedi A&#160;</P>
+<P style="position:absolute;top:238px;left:217px;white-space:nowrap" class="ft85">∈&#160;M</P>
+<P style="position:absolute;top:250px;left:251px;white-space:nowrap" class="ft86">n(<b>K</b>) &#160; f-ri elkartutako matrizea V-ren B = {&#160;</P>
+<P style="position:absolute;top:254px;left:579px;white-space:nowrap" class="ft88">1</P>
+<P style="position:absolute;top:244px;left:570px;white-space:nowrap" class="ft84">v&#160;,&#160;</P>
+<P style="position:absolute;top:254px;left:609px;white-space:nowrap" class="ft88">2</P>
+<P style="position:absolute;top:244px;left:599px;white-space:nowrap" class="ft84">v&#160;, ...,&#160;</P>
+<P style="position:absolute;top:254px;left:663px;white-space:nowrap" class="ft88">n</P>
+<P style="position:absolute;top:244px;left:653px;white-space:nowrap" class="ft84">v&#160;} oinarrian.</P>
+<P style="position:absolute;top:280px;left:127px;white-space:nowrap" class="ft84">Izan bedi D&#160;</P>
+<P style="position:absolute;top:274px;left:217px;white-space:nowrap" class="ft85">∈&#160;M</P>
+<P style="position:absolute;top:286px;left:251px;white-space:nowrap" class="ft86">n(<b>K</b>) &#160; f-ri elkartutako matrizea V-ren B* ={</P>
+<P style="position:absolute;top:290px;left:584px;white-space:nowrap" class="ft88">1</P>
+<P style="position:absolute;top:280px;left:570px;white-space:nowrap" class="ft84">w&#160;,</P>
+<P style="position:absolute;top:290px;left:615px;white-space:nowrap" class="ft88">2</P>
+<P style="position:absolute;top:280px;left:601px;white-space:nowrap" class="ft84">w&#160;, ...,</P>
+<P style="position:absolute;top:290px;left:669px;white-space:nowrap" class="ft88">n</P>
+<P style="position:absolute;top:280px;left:655px;white-space:nowrap" class="ft84">w&#160;} oinarrian.</P>
+<P style="position:absolute;top:315px;left:180px;white-space:nowrap" class="ft84">Orduan, A eta D matrizeak antzekoak dira eta P</P>
+<P style="position:absolute;top:309px;left:537px;white-space:nowrap" class="ft85">∈&#160;M</P>
+<P style="position:absolute;top:321px;left:573px;white-space:nowrap" class="ft86">n(<b>K</b>) matrize erregular bat</P>
+<P style="position:absolute;top:348px;left:127px;white-space:nowrap" class="ft84">existitzen da non D =&#160;</P>
+<P style="position:absolute;top:346px;left:317px;white-space:nowrap" class="ft88">1</P>
+<P style="position:absolute;top:348px;left:299px;white-space:nowrap" class="ft84">P</P>
+<P style="position:absolute;top:343px;left:312px;white-space:nowrap" class="ft89">−&#160;A P den. P matrizeari B* oinarritik B oinarrirako&#160;&#160;<i>iragan-</i></P>
+<P style="position:absolute;top:381px;left:127px;white-space:nowrap" class="ft87"><i>matrizea</i>&#160;esaten zaio eta bere i-garren zutabea&#160;</P>
+<P style="position:absolute;top:391px;left:507px;white-space:nowrap" class="ft88">i</P>
+<P style="position:absolute;top:381px;left:493px;white-space:nowrap" class="ft84">w&#160;&#160;autobektorearen koordenatuak&#160;B</P>
+<P style="position:absolute;top:415px;left:127px;white-space:nowrap" class="ft84">oinarrian dira ; i=1,2,...,n.</P>
+<P style="position:absolute;top:477px;left:127px;white-space:nowrap" class="ft82"><b>6. MATRIZE SIMETRIKOEN DIAGONALIZAZIOA</b></P>
+<P style="position:absolute;top:540px;left:127px;white-space:nowrap" class="ft84">Teorema. Matrize simetriko eta erreal baten autobalioak errealak dira eta&#160;&#160;autobalio</P>
+<P style="position:absolute;top:570px;left:127px;white-space:nowrap" class="ft84">desberdinei dagozkien&#160;&#160;autobektoreak elkarrekiko ortogonalak dira. (&#160;&#160;<b>R</b></P>
+<P style="position:absolute;top:566px;left:692px;white-space:nowrap" class="ft86">n&#160;espazio</P>
+<P style="position:absolute;top:602px;left:127px;white-space:nowrap" class="ft84">bektorialean biderketa eskalar kanonikoa kontsideratuz).</P>
+<P style="position:absolute;top:632px;left:127px;white-space:nowrap" class="ft84">Teorema.&#160;Matrize simetriko eta errealak diagonalgarriak dira. Gainera&#160;P</P>
+<P style="position:absolute;top:626px;left:693px;white-space:nowrap" class="ft85">∈&#160;&#160;M</P>
+<P style="position:absolute;top:638px;left:734px;white-space:nowrap" class="ft86">n(<b>K</b>)</P>
+<P style="position:absolute;top:663px;left:127px;white-space:nowrap" class="ft84">matrize ortogonal bat existitzen da non D=P</P>
+<P style="position:absolute;top:659px;left:444px;white-space:nowrap" class="ft86">-1AP den.</P>
+</DIV>
+</BODY>
+</HTML>
