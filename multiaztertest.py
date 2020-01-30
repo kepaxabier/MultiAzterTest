@@ -851,6 +851,10 @@ class Document:
                                     self.aux_lists['different_verbs'].append(w.text.lower())
                                 if w.lemma not in self.aux_lists['different_lemma_verbs']:
                                     self.aux_lists['different_lemma_verbs'].append(w.lemma)
+                                if w.is_passive():
+                                    i['num_pass'] += 1
+                                    if w.is_agentless(s):
+                                        i['num_agentless'] += 1
                                 if w.is_past():
                                     i['num_past'] += 1
                                     if w.is_irregular():
@@ -1007,6 +1011,8 @@ class Document:
         i['hypernymy_index'] = round(float(np.mean(self.aux_lists['noun_verb_abstraction_list'])), 4)
         i['hypernymy_verbs_index'] = round(float(np.mean(self.aux_lists['verb_abstraction_list'])), 4)
         i['hypernymy_nouns_index'] = round(float(np.mean(self.aux_lists['noun_abstraction_list'])), 4)
+        i['num_pass_mean'] = round((i['num_pass']) / i['num_words'], 4)
+        i['num_past_irregular_mean'] = round(((i['num_past_irregular']) / i['num_past']), 4) if i['num_past'] != 0 else 0
         i['sentences_length_no_stopwords_mean'] = round(
             float(np.mean(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_mean'] = round(float(np.mean(self.aux_lists['words_length_no_stopwords_list'])), 4)
@@ -1029,7 +1035,7 @@ class Document:
         i['sentences_length_no_stopwords_std'] = round(
             float(np.std(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_std'] = round(float(np.std(self.aux_lists['words_length_no_stopwords_list'])), 4)
-
+        i['num_past_irregular_incidence'] = self.get_incidence(i['num_past_irregular'], n)
     @staticmethod
     def get_incidence(indicador, num_words):
         return round(((1000 * indicador) / num_words), 4)
@@ -1056,6 +1062,8 @@ class Document:
         i['num_noun_incidence'] = self.get_incidence(i['num_noun'], n)
         i['num_adj_incidence'] = self.get_incidence(i['num_adj'], n)
         i['num_adv_incidence'] = self.get_incidence(i['num_adv'], n)
+        i['num_pass_incidence'] = self.get_incidence(i['num_pass'], n)
+        i['agentless_passive_density_incidence'] = self.get_incidence(i['num_agentless'], n)
         i['num_lexic_words_incidence'] = self.get_incidence(i['num_lexic_words'], n)
         i['all_connectives_incidence'] = self.get_incidence(i['all_connectives'], n)
         i['causal_connectives_incidence'] = self.get_incidence(i['causal_connectives'], n)
@@ -1384,42 +1392,66 @@ class Word:
         return max
 
     def syllables(self):
-        """
-        Calculate syllables of a word using a less accurate algorithm.
-        Parse through the sentence, using common syllabic identifiers to count
-        syllables.
-        ADAPTED FROM:
-        [http://stackoverflow.com/questions/14541303/count-the-number-of-syllables-in-a-word]
-        """
-        # initialize count
-        count = 0
-        # vowel list
-        vowels = 'aeiouy'
-        # take out punctuation
-        word = self.text.lower()  # word.lower().strip(".:;?!")
-        # various signifiers of syllabic up or down count
-        if word[0] in vowels:
-            count += 1
-        for index in range(1, len(word)):
-            if word[index] in vowels and word[index - 1] not in vowels:
+        if (Connectives.lang != "spanish"):
+            """
+            Calculate syllables of a word using a less accurate algorithm.
+            Parse through the sentence, using common syllabic identifiers to count
+            syllables.
+            ADAPTED FROM:
+            [http://stackoverflow.com/questions/14541303/count-the-number-of-syllables-in-a-word]
+            """
+            # initialize count
+            count = 0
+            # vowel list
+            vowels = 'aeiouy'
+            # take out punctuation
+            word = self.text.lower()  # word.lower().strip(".:;?!")
+            # various signifiers of syllabic up or down count
+            if word[0] in vowels:
                 count += 1
-        if word.endswith('e'):
-            count -= 1
-        if word.endswith('le') or word.endswith('a'):
-            count += 1
-        if count == 0:
-            count += 1
-        if "ooo" in word or "mm" in word:
-            count = 1
-        if word == 'll':
-            count = 0
-        if (word.startswith('x') and len(word) >= 2) and word[1].isdigit():
-            count = 0
-        if word == 'lmfao':
-            count = 5
-        if len(word) < 2 and word not in ['a', 'i', 'y', 'o']:
-            count = 0
-        return count
+            for index in range(1, len(word)):
+                if word[index] in vowels and word[index - 1] not in vowels:
+                    count += 1
+            if word.endswith('e'):
+                count -= 1
+            if word.endswith('le') or word.endswith('a'):
+                count += 1
+            if count == 0:
+                count += 1
+            if "ooo" in word or "mm" in word:
+                count = 1
+            if word == 'll':
+                count = 0
+            if (word.startswith('x') and len(word) >= 2) and word[1].isdigit():
+                count = 0
+            if word == 'lmfao':
+                count = 5
+            if len(word) < 2 and word not in ['a', 'i', 'y', 'o']:
+                count = 0
+            return count
+        else:
+            chars = char_line(re.sub(r'\W+', '', self.text))
+            return len(self.syllablesplit(chars))
+
+    def syllablesplit(self, chars):
+        rules = [('VV', 1), ('cccc', 2), ('xcc', 1), ('ccx', 2), ('csc', 2), ('xc', 1), ('cc', 1), ('vcc', 2),
+                 ('Vcc', 2), ('sc', 1), ('cs', 1), ('Vc', 1), ('vc', 1), ('Vs', 1), ('vs', 1)]
+        for split_rule, where in rules:
+            first, second = chars.split_by(split_rule, where)
+            if second:
+                if first.type_line in set(['c', 's', 'x', 'cs']) or second.type_line in set(['c', 's', 'x', 'cs']):
+                    # print 'skip1', first.word, second.word, split_rule, chars.type_line
+                    continue
+                if first.type_line[-1] == 'c' and second.word[0] in set(['l', 'r']):
+                    continue
+                if first.word[-1] == 'l' and second.word[-1] == 'l':
+                    continue
+                if first.word[-1] == 'r' and second.word[-1] == 'r':
+                    continue
+                if first.word[-1] == 'c' and second.word[-1] == 'h':
+                    continue
+                return self.syllablesplit(first) + self.syllablesplit(second)
+        return [chars]
 
     def allnum_syllables(self):
         try:
@@ -1567,6 +1599,19 @@ class Word:
     def has_more_than_three_syllables(self):
         return True if self.allnum_syllables() > 3 else False
 
+    def is_passive(self):
+        atributos = self.feats.split('|')
+        return True if 'Voice=Pass' in atributos else False
+
+
+    def is_agentless(self, frase):
+        # Si el siguiente indice esta dentro del rango de la lista
+        if int(self.index) < len(frase.word_list):
+            siguiente = frase.word_list[int(self.index) + 1].text.lower()
+            if siguiente == 'by' or siguiente == 'por':
+                return False
+            else:
+                return True
     def get_ambiguity_level(self, language):
         if language == "basque":
             lang = "eus"
@@ -1608,7 +1653,42 @@ class Word:
         else:
             abstraction_level = 1
         return abstraction_level
+class char_line():
+    def __init__(self, word):
+        self.word = word
+        self.char_line = [(char, self.char_type(char)) for char in word]
+        self.type_line = ''.join(chartype for char, chartype in self.char_line)
 
+    def char_type(self, char):
+        if char in set(['a', 'á', 'e', 'é', 'o', 'ó', 'í', 'ú']):
+            return 'V'  # strong vowel
+        if char in set(['i', 'u', 'ü']):
+            return 'v'  # week vowel
+        if char == 'x':
+            return 'x'
+        if char == 's':
+            return 's'
+        else:
+            return 'c'
+
+    def find(self, finder):
+        return self.type_line.find(finder)
+
+    def split(self, pos, where):
+        return char_line(self.word[0:pos + where]), char_line(self.word[pos + where:])
+
+    def split_by(self, finder, where):
+        split_point = self.find(finder)
+        if split_point != -1:
+            chl1, chl2 = self.split(split_point, where)
+            return chl1, chl2
+        return self, False
+
+    def __str__(self):
+        return self.word
+
+    def __repr__(self):
+        return repr(self.word)
 class Oxford():
     lang = ""
     a1 = defaultdict(dict)
@@ -1711,18 +1791,29 @@ class Connectives():
         f.close()
 
 
-class Irregularverbs:
+class Irregularverbs():
+
     irregular_verbs = []
+    def __init__(self, language):
+        self.lang = language
 
     def load(self):
-        f = open('data/en/IrregularVerbs/IrregularVerbs.txt', 'r')
-        lineas = f.readlines()
-        for linea in lineas:
-            if not linea.startswith("//"):
-                # carga el verbo en presente, dejando pasado y preterito
-                Irregularverbs.irregular_verbs.append(linea.split()[0])
-        f.close()
-
+        if self.lang.lower() == "spanish":
+            f = open('data/es/irregularverbs.txt', 'r')
+            lineas = f.readlines()
+            for linea in lineas:
+                if not linea.startswith("//"):
+                    # carga el verbo en presente, dejando pasado y preterito
+                    Irregularverbs.irregular_verbs.append(linea.rstrip('\n'))
+            f.close()
+        if self.lang.lower() == "english":
+            f = open('data/en/IrregularVerbs.txt', 'r')
+            lineas = f.readlines()
+            for linea in lineas:
+                if not linea.startswith("//"):
+                    #carga el verbo en presente, dejando pasado y preterito
+                    Irregularverbs.irregular_verbs.append(linea.split()[0])
+            f.close()
 
 class Printer:
 
@@ -1812,13 +1903,14 @@ class Printer:
         # MTLD
         print('Measure of Textual Lexical Diversity (MTLD): ' + str(i['mtld']))
 
-        # Flesch-Kincaid grade level =0.39 * (n.º de words/nº de frases) + 11.8 * (n.º de silabas/numero de words) – 15.59)
-        print("Flesch-Kincaid Grade level: " + str(i['flesch_kincaid']))
+
         # Flesch readability ease=206.835-1.015(n.º de words/nº de frases)-84.6(n.º de silabas/numero de words)
         print("Flesch readability ease: " + str(i['flesch']))
-
-        print("Dale-Chall readability formula: " + str(i['dale_chall']))
-        print("Simple Measure Of Gobbledygook (SMOG) grade: " + str(i['smog']))
+        if self.language == "english":
+            # Flesch-Kincaid grade level =0.39 * (n.º de words/nº de frases) + 11.8 * (n.º de silabas/numero de words) – 15.59)
+            print("Flesch-Kincaid Grade level: " + str(i['flesch_kincaid']))
+            print("Dale-Chall readability formula: " + str(i['dale_chall']))
+            print("Simple Measure Of Gobbledygook (SMOG) grade: " + str(i['smog']))
 
         print("Number of verbs in past tense: " + str(i['num_past']))
         print("Number of verbs in past tense (incidence per 1000 words): " + str(i['num_past_incidence']))
@@ -2102,10 +2194,11 @@ class Printer:
         estfile.write("\n%s" % 'Maas Lexical Density: ' + str(i['maas']))
         estfile.write("\n%s" % 'Measure of Textual Lexical Diversity (MTLD): ' + str(i['mtld']))
         estfile.write("\n%s" % 'Readability/Text Dimension/Grade Level')
-        estfile.write("\n%s" % 'Flesch-Kincaid Grade level: ' + str(i['flesch_kincaid']))
         estfile.write("\n%s" % 'Flesch readability ease: ' + str(i['flesch']))
-        estfile.write("\n%s" % 'Dale-Chall readability formula: ' + str(i['dale_chall']))
-        estfile.write("\n%s" % 'Simple Measure Of Gobbledygook (SMOG) grade: ' + str(i['smog']))
+        if self.language == "english":
+            estfile.write("\n%s" % 'Flesch-Kincaid Grade level: ' + str(i['flesch_kincaid']))
+            estfile.write("\n%s" % 'Dale-Chall readability formula: ' + str(i['dale_chall']))
+            estfile.write("\n%s" % 'Simple Measure Of Gobbledygook (SMOG) grade: ' + str(i['smog']))
         estfile.write("\n%s" % 'Morphological features')
         estfile.write("\n%s" % 'Number of verbs in past tense: ' + str(i['num_past']))
         estfile.write(
@@ -2284,17 +2377,45 @@ class Printer:
                 i['similarity_adjacent_par_std']))
         estfile.write("\n%s" % 'Connectives')
         estfile.write(
+            "\n%s" % 'Number of connectives: ' + str(i['all_connectives']))
+        estfile.write(
             "\n%s" % 'Number of connectives (incidence per 1000 words): ' + str(i['all_connectives_incidence']))
+        estfile.write(
+            "\n%s" % 'Causal connectives: ' + str(i['causal_connectives']))
         estfile.write(
             "\n%s" % 'Causal connectives (incidence per 1000 words): ' + str(i['causal_connectives_incidence']))
         estfile.write(
-            "\n%s" % 'Logical connectives (incidence per 1000 words):  ' + str(i['logical_connectives_incidence']))
-        estfile.write("\n%s" % 'Adversative/contrastive connectives (incidence per 1000 words): ' + str(
-            i['adversative_connectives_incidence']))
+            "\n%s" % 'Temporal connectives:  ' + str(i['temporal_connectives']))
         estfile.write(
             "\n%s" % 'Temporal connectives (incidence per 1000 words):  ' + str(i['temporal_connectives_incidence']))
+        estfile.write("\n%s" % 'Conditional connectives: ' + str(i['conditional_connectives']))
         estfile.write("\n%s" % 'Conditional connectives (incidence per 1000 words): ' + str(
             i['conditional_connectives_incidence']))
+        if self.language == "english" or self.language == "basque":
+            estfile.write("\n%s" % 'Logical connectives:  ' + str(i['logical_connectives']))
+            estfile.write("\n%s" % 'Logical connectives (incidence per 1000 words):  ' + str(i['logical_connectives_incidence']))
+            estfile.write("\n%s" % 'Adversative/contrastive connectives: ' + str(i['adversative_connectives']))
+            estfile.write("\n%s" % 'Adversative/contrastive connectives (incidence per 1000 words): ' + str(
+                i['adversative_connectives_incidence']))
+        if self.language == "spanish":
+
+            estfile.write("\n%s" % 'Adition connectives:  ' + str(i['addition_connectives']))
+            estfile.write("\n%s" % 'Adition connectives (incidence per 1000 words):  ' + str(i['addition_connectives_incidence']))
+            estfile.write("\n%s" % 'Consequence connectives: ' + str(i['consequence_connectives']))
+            estfile.write("\n%s" % 'Consequence connectives (incidence per 1000 words): ' + str(i['consequence_connectives_incidence']))
+            estfile.write("\n%s" % 'Purpose connectives:  ' + str(i['purpose_connectives']))
+            estfile.write("\n%s" % 'Purpose connectives (incidence per 1000 words):  ' + str(i['purpose_connectives_incidence']))
+            estfile.write("\n%s" % 'Illustration connectives: ' + str(i['illustration_connectives']))
+            estfile.write(
+                "\n%s" % 'Illustration connectives (incidence per 1000 words): ' + str(i['illustration_connectives_incidence']))
+            estfile.write("\n%s" % 'Opposition connectives:  ' + str(i['opposition_connectives']))
+            estfile.write("\n%s" % 'Opposition connectives (incidence per 1000 words):  ' + str(i['opposition_connectives_incidence']))
+            estfile.write("\n%s" % 'Order connectives: ' + str(i['order_connectives']))
+            estfile.write("\n%s" % 'Order connectives (incidence per 1000 words): ' + str(i['order_connectives_incidence']))
+            estfile.write("\n%s" % 'Reference connectives:  ' + str(i['reference_connectives']))
+            estfile.write("\n%s" % 'Reference connectives (incidence per 1000 words):  ' + str(i['reference_connectives_incidence']))
+            estfile.write("\n%s" % 'Summary connectives: ' + str(i['summary_connectives']))
+            estfile.write("\n%s" % 'Summary connectives (incidence per 1000 words): ' + str(i['summary_connectives_incidence']))
         estfile.close()
 
     # fichero csv para el aprendizaje automatico
@@ -2315,9 +2436,15 @@ class Printer:
         # Anade en estas listas las que no quieras mostrar para todos los casos
         ignore_list = []
         # ignore language specific features
-        ignore_list_eu = []
-        ignore_list_es = []
-        ignore_list_en = []
+        ignore_list_eu = ['flesch_kincaid','dale-chall','smog','addition_connectives','addition_connectives_incidence','consequence_connectives','consequence_connectives_incidence',
+        'purpose_connectives','purpose_connectives_incidence','illustration_connectives','illustration_connectives_incidence',
+        'opposition_connectives','opposition_connectives_incidence','order_connectives','order_connectives_incidence','reference_connectives',
+        'reference_connectives_incidence','summary_connectives','summary_connectives_incidence', 'num_past_irregular', 'num_past_irregular_incidence','num_past_irregular_mean']
+        ignore_list_en = ['flesch_kincaid','dale-chall','smog','addition_connectives','addition_connectives_incidence','consequence_connectives','consequence_connectives_incidence',
+        'purpose_connectives','purpose_connectives_incidence','illustration_connectives','illustration_connectives_incidence',
+        'opposition_connectives','opposition_connectives_incidence','order_connectives','order_connectives_incidence','reference_connectives',
+        'reference_connectives_incidence','summary_connectives','summary_connectives_incidence']
+        ignore_list_es = ['logical_connectives','logical_connectives_incidence','adversative_connectives','adversative_connectives_incidence']
         # ignore counters: only incidence, ratios, mean and std
         ignore_list_counters = ['prop', 'num_complex_words', 'num_words_more_3_syl', 'num_words', 'num_different_forms',
                                 'num_words_with_punct', 'num_paragraphs', 'num_sentences', 'num_past', 'num_pres',
@@ -2336,6 +2463,7 @@ class Printer:
                                 'num_pass_incidence', 'num_agentless', 'num_neg', 'num_ger', 'num_inf']
         similarity_list = ["similarity_adjacent_mean", "similarity_pairs_par_mean", "similarity_adjacent_par_mean",
                            "similarity_adjacent_std", "similarity_pairs_par_std", "similarity_adjacent_par_std"]
+
         if not (similarity):
             ignore_list.extend(similarity_list)
         if ratios:
@@ -2346,6 +2474,7 @@ class Printer:
             ignore_list.extend(ignore_list_es)
         if language == "basque":
             ignore_list.extend(ignore_list_eu)
+
 
         for key, value in i.items():
             if key not in ignore_list:
@@ -2367,7 +2496,6 @@ class Printer:
         if not os.path.exists(newPath):
             os.makedirs(newPath)
         return newPath
-
 
 class Maiztasuna:
     freq_list = {}
@@ -2717,6 +2845,9 @@ class Main(object):
         # Carga Niveles Oxford
         ox = Oxford(language)
         #ox.load()
+
+        irregular = Irregularverbs(language)
+        irregular.load()
 
         # Carga StopWords
         stopw = Stopwords(language)
