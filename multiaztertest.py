@@ -67,7 +67,7 @@ class ModelAdapter:
                             w.governor = word.governor
                             w.dependency_relation = word.dependency_relation
                             s.word_list.append(w)
-                            # print(str(w.index) + "\t" + w.text + "\t" + w.lemma + "\t" + w.upos + "\t" + w.xpos + "\t" + w.feats + "\t" + str(w.governor) + "\t" + str(w.dependency_relation) +"\t")
+                            print(str(w.index) + "\t" + w.text + "\t" + w.lemma + "\t" + w.upos + "\t" + w.xpos + "\t" + w.feats + "\t" + str(w.governor) + "\t" + str(w.dependency_relation) +"\t")
                         p.sentence_list.append(s)  # ->paragraph.append(s)
                     d.paragraph_list.append(p)  # ->data.append(paragraph)
 
@@ -202,6 +202,11 @@ class Document:
         if self.indicators['num_noun'] > 0:
             self.indicators['nttr'] = round(len(self.aux_lists['different_nouns']) / self.indicators['num_noun'], 4)
 
+    def calculate_pnttr(self):
+        if self.indicators['num_proper_noun'] > 0:
+            self.indicators['pnttr'] = round(self.indicators['num_proper_noun'] / self.indicators['num_noun'] +
+                                             self.indicators['num_proper_noun'], 4)
+
     def calculate_vttr(self):
         if self.indicators['num_verb'] > 0:
             self.indicators['vttr'] = round(len(self.aux_lists['different_verbs']) / self.indicators['num_verb'], 4)
@@ -224,6 +229,7 @@ class Document:
     def calculate_all_ttr(self):
         self.calculate_simple_ttr()
         self.calculate_nttr()
+        self.calculate_pnttr()
         self.calculate_vttr()
         self.calculate_adj_ttr()
         self.calculate_adv_ttr()
@@ -822,6 +828,8 @@ class Document:
                                     self.aux_lists['different_nouns'].append(w.text.lower())
                                 if w.lemma not in self.aux_lists['different_lemma_nouns']:
                                     self.aux_lists['different_lemma_nouns'].append(w.lemma)
+                            if w.is_proper_noun():
+                                i['num_proper_noun'] += 1
                             if w.is_adjective():
                                 i['num_adj'] += 1
                                 if w.text.lower() not in self.aux_lists['different_adjs']:
@@ -856,14 +864,16 @@ class Document:
                                     i['num_inf'] += 1
                                 if w.is_imperative():
                                     i['num_impera'] += 1
+                            # prueba pron. pers.
                             if w.is_personal_pronoun():
                                 i['num_personal_pronouns'] += 1
-                                if w.is_first_person_pronoun():
-                                    i['num_first_pers_pron'] += 1
-                                    if w.is_first_personal_pronoun_sing():
-                                        i['num_first_pers_sing_pron'] += 1
-                                if w.is_third_personal_pronoun():
-                                    i['num_third_pers_pron'] += 1
+                            if w.is_first_person_pronoun(self.language):
+                                i['num_first_pers_pron'] += 1
+                            if w.is_first_personal_pronoun_sing(self.language):
+                                i['num_first_pers_sing_pron'] += 1
+                            if w.is_third_personal_pronoun(self.language):
+                                i['num_third_pers_pron'] += 1
+                            # prueba pron. pers.
                             if w.is_negative(self.language):
                                 i['num_neg'] += 1
                             if w.text.lower() not in self.words_freq:
@@ -1043,6 +1053,7 @@ class Document:
         i['num_indic_incidence'] = self.get_incidence(i['num_indic'], n)
         i['num_verb_incidence'] = self.get_incidence(i['num_verb'], n)
         i['num_noun_incidence'] = self.get_incidence(i['num_noun'], n)
+        i['num_proper_noun_incidence'] = self.get_incidence(i['num_proper_noun'], n)
         i['num_adj_incidence'] = self.get_incidence(i['num_adj'], n)
         i['num_adv_incidence'] = self.get_incidence(i['num_adv'], n)
         i['num_lexic_words_incidence'] = self.get_incidence(i['num_lexic_words'], n)
@@ -1330,26 +1341,44 @@ class Word:
         else:
             return False
 
-    def is_first_person_pronoun(self):
+    def is_first_person_pronoun(self, language):
         atributos = self.feats.split('|')
-        if 'PronType=Prs' in atributos and 'Person=1' in atributos:
-            return True
+        if language == "basque":
+            if 'Person[erg]=1' in atributos:
+                return True
+            else:
+                return False
         else:
-            return False
+            if 'PronType=Prs' in atributos and 'Person=1' in atributos:
+                return True
+            else:
+                return False
 
-    def is_third_personal_pronoun(self):
+    def is_third_personal_pronoun(self, language):
         atributos = self.feats.split('|')
-        if 'PronType=Prs' in atributos and 'Person=3' in atributos:
-            return True
+        if language == "basque":
+            if 'Person[erg]=3' in atributos:
+                return True
+            else:
+                return False
         else:
-            return False
+            if 'PronType=Prs' in atributos and 'Person=3' in atributos:
+                return True
+            else:
+                return False
 
-    def is_first_personal_pronoun_sing(self):
+    def is_first_personal_pronoun_sing(self, language):
         atributos = self.feats.split('|')
-        if 'PronType=Prs' in atributos and 'Person=1' in atributos and 'Number=Sing' in atributos:
-            return True
+        if language == "basque":
+            if 'Person[erg]=1' in atributos and 'Number[erg]=Sing' in atributos:
+                return True
+            else:
+                return False
         else:
-            return False
+            if 'PronType=Prs' in atributos and 'Person=1' in atributos and 'Number=Sing' in atributos:
+                return True
+            else:
+                return False
 
     def num_syllables(self):
         list = []
@@ -1521,6 +1550,12 @@ class Word:
 
     def is_noun(self):
         if self.upos == 'NOUN':
+            return True
+        else:
+            return False
+
+    def is_proper_noun(self):
+        if self.upos == "PROPN":
             return True
         else:
             return False
@@ -1732,6 +1767,9 @@ class Printer:
         print('CTTR (Content Type-Token Ratio): ' + str(i['content_ttr']))
         # NTTR (Noun Type-Token Ratio)
         print('NTTR (Noun Type-Token Ratio): ' + str(i['nttr']))
+        #PNTTR Proper Noun Type-Token Ratio
+        print('PNTTR (Proper Noun Type-Token Ratio): ' + str(i['pnttr']))
+
         # VTTR (Verb Type-Token Ratio)(incidence per 1000 words)
         print('VTTR (Verb Type-Token Ratio): ' + str(i['vttr']))
 
@@ -1875,6 +1913,8 @@ class Printer:
         print('Number of content words (incidence per 1000 words): ' + str(i['num_lexic_words_incidence']))
         print("Number of nouns: " + str(i['num_noun']))
         print("Number of nouns (incidence per 1000 words): " + str(i['num_noun_incidence']))
+        print("Number of proper nouns: " + str(i['num_proper_noun']))
+        print("Number of proper nouns (incidence per 1000 words): " + str(i['num_proper_noun_incidence']))
         print("Number of adjectives: " + str(i['num_adj']))
         print("Number of adjectives (incidence per 1000 words): " + str(i['num_adj_incidence']))
         print("Number of adverbs: " + str(i['num_adv']))
