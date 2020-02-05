@@ -9,6 +9,7 @@ import sys
 from pathlib import Path
 import csv
 import stanfordnlp
+import textract
 from cube.api import Cube
 import numpy as np
 from collections import defaultdict
@@ -16,6 +17,10 @@ import re
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize, word_tokenize
+#wordnet
+nltk.download('wordnet')
+#Add multilingual wordnet
+nltk.download('omw')
 from nltk.corpus import wordnet as wn
 from nltk.corpus import cmudict
 from wordfreq import zipf_frequency
@@ -202,6 +207,10 @@ class Document:
         if self.indicators['num_noun'] > 0:
             self.indicators['nttr'] = round(len(self.aux_lists['different_nouns']) / self.indicators['num_noun'], 4)
 
+    def calculate_ratio_proper_nouns_per_nouns(self):
+        if self.indicators['num_proper_noun'] > 0:
+            self.indicators['ratio_proper_nouns_per_nouns'] = round(self.indicators['num_proper_noun'] / self.indicators['num_noun'] +
+                                             self.indicators['num_proper_noun'], 4)
     def calculate_vttr(self):
         if self.indicators['num_verb'] > 0:
             self.indicators['vttr'] = round(len(self.aux_lists['different_verbs']) / self.indicators['num_verb'], 4)
@@ -267,22 +276,7 @@ class Document:
         self.calculate_lemma_adv_ttr()
         self.calculate_lemma_content_ttr()
 
-    def get_ambiguity_level(self, word, FLAG):
-        if FLAG == 'NOUN':
-            ambiguity_level = len(wn.synsets(word, pos='n'))
-        elif FLAG == 'ADJ':
-            ambiguity_level = len(wn.synsets(word, pos='a'))
-        elif FLAG == 'ADV':
-            ambiguity_level = len(wn.synsets(word, pos='r'))
-        else:
-            ambiguity_level = len(wn.synsets(word, pos='v'))
-        return ambiguity_level
 
-    def get_abstraction_level(self, word, FLAG):
-        abstraction_level = 0
-        if len(wn.synsets(word, pos=FLAG)) > 0:
-            abstraction_level = len(wn.synsets(word, pos=FLAG)[0].hypernym_paths()[0])
-        return abstraction_level
 
     def calculate_mean_depth_per_sentence(self, depth_list):
         i = self.indicators
@@ -339,13 +333,19 @@ class Document:
 
     def calculate_honore(self):
         n = self.indicators['num_words']
-        v = len(self.aux_lists['different_forms'])
+        if (Connectives.lang != "spanish"):
+            v = len(self.aux_lists['different_forms'])
+        else:
+            v = len(self.aux_lists['different_lemmas'])
         v1 = self.get_num_hapax_legomena()
         self.indicators['honore'] = round(100 * ((np.log10(n)) / (1 - (v1 / v))), 4)
 
     def calculate_maas(self):
         n = self.indicators['num_words']
-        v = len(self.aux_lists['different_forms'])
+        if (Connectives.lang != "spanish"):
+            v = len(self.aux_lists['different_forms'])
+        else:
+            v = len(self.aux_lists['different_lemmas'])
         self.indicators['maas'] = round((np.log10(n) - np.log10(v)) / (np.log10(v) ** 2), 4)
 
     # Noun overlap measure is binary (there either is or is not any overlap between a pair of adjacent sentences in a text ).
@@ -612,7 +612,7 @@ class Document:
 
     def flesch(self):
         sentences = float(self.indicators['num_sentences'])
-        syllables = float(len(self.aux_lists['syllables_list']))
+        syllables = float(len(self.aux_lists['syllabes_list']))
         words = float(self.indicators['num_words'])
         # ranking scale of 0-100
         # For most business writing, a score of 65 is a good target, and scores between 60 and 80 should generally
@@ -627,7 +627,7 @@ class Document:
 
     def flesch_kincaid(self):
         sentences = float(self.indicators['num_sentences'])
-        syllables = float(len(self.aux_lists['syllables_list']))
+        syllables = float(len(self.aux_lists['syllabes_list']))
         words = float(self.indicators['num_words'])
         # Flesch-Kincaid grade level formula = 0.39 x (words/sentences) + 11.8 x (syllables/words) - 15.59.
         # Years:American School Grade:European School Grade
@@ -680,11 +680,9 @@ class Document:
 
     def calculate_readability(self):
         # self.get_syllable_list()
-        if self.language == "english":
-            self.calculate_dale_chall()
-            self.calculate_smog()
-            self.flesch_kincaid()
+        self.calculate_dale_chall()
         self.flesch()
+        self.flesch_kincaid()
 
     def calculate_connectives_for(self, sentence, connectives):
         i = self.indicators
@@ -803,38 +801,38 @@ class Document:
                                 num_words_in_sentences += 1
                                 if (w.is_lexic_word(s)):
                                     if wordfrequency <= 4.00:
-                                        i['num_rare_words_4'] += 1
+                                        i['num_rare_words'] += 1
                                         if w.is_noun():
-                                            i['num_rare_nouns_4'] += 1
+                                            i['num_rare_nouns'] += 1
                                         elif w.is_adjective():
-                                            i['num_rare_adj_4'] += 1
+                                            i['num_rare_adj'] += 1
                                         elif w.is_adverb():
-                                            i['num_rare_advb_4'] += 1
+                                            i['num_rare_advb'] += 1
                                         elif w.is_verb(s):
-                                            i['num_rare_verbs_4'] += 1
+                                            i['num_rare_verbs'] += 1
                                     if w.text.lower() not in self.aux_lists['different_lexic_words']:
                                         self.aux_lists['different_lexic_words'].append(w.text.lower())
                                         if wordfrequency <= 4:
-                                            i['num_dif_rare_words_4'] += 1
+                                            i['num_dif_rare_words'] += 1
                             elif self.language == "basque":
                                 if w.text in Maiztasuna.freq_list:
                                     wordfrequency = Maiztasuna.freq_list[w.text]
                                     wordfreq_list.append(int(wordfrequency))
                                     if w.is_lexic_word(s):
                                         if int(wordfrequency) <= 34:
-                                            i['num_rare_words_34'] += 1
+                                            i['num_rare_words'] += 1
                                             if w.is_noun():
-                                                i['num_rare_nouns_34'] += 1
+                                                i['num_rare_nouns'] += 1
                                             elif w.is_adjective():
-                                                i['num_rare_adj_34'] += 1
+                                                i['num_rare_adj'] += 1
                                             elif w.is_adverb():
-                                                i['num_rare_advb_34'] += 1
+                                                i['num_rare_advb'] += 1
                                             elif w.is_verb(s):
-                                                i['num_rare_verbs_34'] += 1
+                                                i['num_rare_verbs'] += 1
                                         if w.text.lower() not in self.aux_lists['different_lexic_words']:
                                             self.aux_lists['different_lexic_words'].append(w.text.lower())
                                             if int(wordfrequency) <= 34:
-                                                i['num_dif_rare_words_34'] += 1
+                                                i['num_dif_rare_words'] += 1
                             # words not in stopwords
                             if not w.is_stopword():
                                 num_words_in_sentence_without_stopwords += 1
@@ -845,6 +843,8 @@ class Document:
                                     self.aux_lists['different_nouns'].append(w.text.lower())
                                 if w.lemma not in self.aux_lists['different_lemma_nouns']:
                                     self.aux_lists['different_lemma_nouns'].append(w.lemma)
+                            if w.is_proper_noun():
+                                i['num_proper_noun'] += 1
                             if w.is_adjective():
                                 i['num_adj'] += 1
                                 if w.text.lower() not in self.aux_lists['different_adjs']:
@@ -912,16 +912,16 @@ class Document:
                                 if wn.synsets(w.text):
                                     if w.is_noun():
                                         self.aux_lists['noun_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'n'))
+                                            w.get_abstraction_level(self.language))
                                         self.aux_lists['noun_verb_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'n'))
+                                            w.get_abstraction_level(self.language))
                                     elif w.is_verb(s):
                                         self.aux_lists['verb_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'v'))
+                                            w.get_abstraction_level(self.language))
                                         self.aux_lists['noun_verb_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'v'))
+                                            w.get_abstraction_level(self.language))
                                     self.aux_lists['ambiguity_content_words_list'].append(
-                                        self.get_ambiguity_level(w.text, w.upos))
+                                        w.get_ambiguity_level(self.language))
                             if w.text.lower() not in self.aux_lists['different_forms']:
                                 self.aux_lists['different_forms'].append(w.text.lower())
                             if w.lemma not in self.aux_lists['different_lemmas']:
@@ -973,6 +973,7 @@ class Document:
         self.calculate_phrases(num_vp_list, num_np_list)
         self.calculate_mean_depth_per_sentence(depth_list)
         self.calculate_mtld()
+        self.calculate_smog()
         self.calculate_readability()
         self.calculate_connectives()
         i['min_wf_per_sentence'] = round(float(np.mean(min_wordfreq_list)), 4)
@@ -1024,19 +1025,12 @@ class Document:
         i['hypernymy_nouns_index'] = round(float(np.mean(self.aux_lists['noun_abstraction_list'])), 4)
         i['num_pass_mean'] = round((i['num_pass']) / i['num_words'], 4)
         i['num_past_irregular_mean'] = round(((i['num_past_irregular']) / i['num_past']), 4) if i['num_past'] != 0 else 0
-
-
         i['sentences_length_no_stopwords_mean'] = round(
             float(np.mean(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_mean'] = round(float(np.mean(self.aux_lists['words_length_no_stopwords_list'])), 4)
-        if self.language == "basque":
-            i['mean_rare_34'] = round(((100 * i['num_rare_words_34']) / i['num_lexic_words']), 4)
-            i['mean_distinct_rare_34'] = round(
-                (100 * i['num_dif_rare_words_34']) / len(self.aux_lists['different_lexic_words']), 4)
-        else:
-            i['mean_rare_4'] = round(((100 * i['num_rare_words_4']) / i['num_lexic_words']), 4)
-            i['mean_distinct_rare_4'] = round(
-                (100 * i['num_dif_rare_words_4']) / len(self.aux_lists['different_lexic_words']), 4)
+        i['mean_rare'] = round(((100 * i['num_rare_words']) / i['num_lexic_words']), 4)
+        i['mean_distinct_rare'] = round(
+            (100 * i['num_dif_rare_words']) / len(self.aux_lists['different_lexic_words']), 4)
 
     def calculate_all_std_deviations(self):
         i = self.indicators
@@ -1049,6 +1043,7 @@ class Document:
             float(np.std(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_std'] = round(float(np.std(self.aux_lists['words_length_no_stopwords_list'])), 4)
 
+
     @staticmethod
     def get_incidence(indicador, num_words):
         return round(((1000 * indicador) / num_words), 4)
@@ -1059,16 +1054,12 @@ class Document:
         i['num_sentences_incidence'] = self.get_incidence(i['num_sentences'], n)
         i['num_paragraphs_incidence'] = self.get_incidence(i['num_paragraphs'], n)
         i['num_impera_incidence'] = self.get_incidence(i['num_impera'], n)
-        i['num_past_irregular_incidence'] = self.get_incidence(i['num_past_irregular'], n)
         i['num_personal_pronouns_incidence'] = self.get_incidence(i['num_personal_pronouns'], n)
         i['num_first_pers_pron_incidence'] = self.get_incidence(i['num_first_pers_pron'], n)
         i['num_first_pers_sing_pron_incidence'] = self.get_incidence(i['num_first_pers_sing_pron'], n)
         i['num_third_pers_pron_incidence'] = self.get_incidence(i['num_third_pers_pron'], n)
-        i['agentless_passive_density_incidence'] = self.get_incidence(i['num_agentless'], n)
         i['gerund_density_incidence'] = self.get_incidence(i['num_ger'], n)
         i['infinitive_density_incidence'] = self.get_incidence(i['num_inf'], n)
-        i['num_pass_incidence'] = self.get_incidence(i['num_pass'], n)
-        i['agentless_passive_density_incidence'] = self.get_incidence(i['num_agentless'], n)
         i['num_subord_incidence'] = self.get_incidence(i['num_subord'], n)
         i['num_rel_subord_incidence'] = self.get_incidence(i['num_rel_subord'], n)
         i['num_past_incidence'] = self.get_incidence(i['num_past'], n)
@@ -1077,8 +1068,11 @@ class Document:
         i['num_indic_incidence'] = self.get_incidence(i['num_indic'], n)
         i['num_verb_incidence'] = self.get_incidence(i['num_verb'], n)
         i['num_noun_incidence'] = self.get_incidence(i['num_noun'], n)
+        i['num_proper_noun_incidence'] = self.get_incidence(i['num_proper_noun'], n)
         i['num_adj_incidence'] = self.get_incidence(i['num_adj'], n)
         i['num_adv_incidence'] = self.get_incidence(i['num_adv'], n)
+        i['num_pass_incidence'] = self.get_incidence(i['num_pass'], n)
+        i['agentless_passive_density_incidence'] = self.get_incidence(i['num_agentless'], n)
         i['num_lexic_words_incidence'] = self.get_incidence(i['num_lexic_words'], n)
         i['all_connectives_incidence'] = self.get_incidence(i['all_connectives'], n)
         i['causal_connectives_incidence'] = self.get_incidence(i['causal_connectives'], n)
@@ -1094,24 +1088,15 @@ class Document:
         i['order_connectives_incidence'] = self.get_incidence(i['order_connectives'], n)
         i['reference_connectives_incidence'] = self.get_incidence(i['reference_connectives'], n)
         i['summary_connectives_incidence'] = self.get_incidence(i['summary_connectives'], n)
-        if self.language == "basque":
-            i['num_rare_nouns_34_incidence'] = self.get_incidence(i['num_rare_nouns_34'], n)
-            i['num_rare_adj_34_incidence'] = self.get_incidence(i['num_rare_adj_34'], n)
-            i['num_rare_verbs_34_incidence'] = self.get_incidence(i['num_rare_verbs_34'], n)
-            i['num_rare_advb_34_incidence'] = self.get_incidence(i['num_rare_advb_34'], n)
-            i['num_rare_words_34_incidence'] = self.get_incidence(i['num_rare_words_34'], n)
-            i['num_dif_rare_words_34_incidence'] = self.get_incidence(i['num_dif_rare_words_34'], n)
-            i['mean_rare_34_incidence'] = self.get_incidence(i['mean_rare_34'], n)
-            i['mean_distinct_rare_34_incidence'] = self.get_incidence(i['mean_distinct_rare_34'], n)
-        else:
-            i['num_rare_nouns_4_incidence'] = self.get_incidence(i['num_rare_nouns_4'], n)
-            i['num_rare_adj_4_incidence'] = self.get_incidence(i['num_rare_adj_4'], n)
-            i['num_rare_verbs_4_incidence'] = self.get_incidence(i['num_rare_verbs_4'], n)
-            i['num_rare_advb_4_incidence'] = self.get_incidence(i['num_rare_advb_4'], n)
-            i['num_rare_words_4_incidence'] = self.get_incidence(i['num_rare_words_4'], n)
-            i['num_dif_rare_words_4_incidence'] = self.get_incidence(i['num_dif_rare_words_4'], n)
-            i['mean_rare_4_incidence'] = self.get_incidence(i['mean_rare_4'], n)
-            i['mean_distinct_rare_4_incidence'] = self.get_incidence(i['mean_distinct_rare_4'], n)
+        i['num_past_irregular_incidence'] = self.get_incidence(i['num_past_irregular'], n)
+        i['num_rare_nouns_incidence'] = self.get_incidence(i['num_rare_nouns'], n)
+        i['num_rare_adj_incidence'] = self.get_incidence(i['num_rare_adj'], n)
+        i['num_rare_verbs_incidence'] = self.get_incidence(i['num_rare_verbs'], n)
+        i['num_rare_advb_incidence'] = self.get_incidence(i['num_rare_advb'], n)
+        i['num_rare_words_incidence'] = self.get_incidence(i['num_rare_words'], n)
+        i['num_dif_rare_words_incidence'] = self.get_incidence(i['num_dif_rare_words'], n)
+        i['mean_rare_incidence'] = self.get_incidence(i['mean_rare'], n)
+        i['mean_distinct_rare_incidence'] = self.get_incidence(i['mean_distinct_rare'], n)
         i['num_a1_words_incidence'] = self.get_incidence(i['num_a1_words'], n)
         i['num_a2_words_incidence'] = self.get_incidence(i['num_a2_words'], n)
         i['num_b1_words_incidence'] = self.get_incidence(i['num_b1_words'], n)
@@ -1129,6 +1114,7 @@ class Document:
         i['negation_density_incidence'] = self.get_incidence(i['num_neg'], i['num_words'])
         self.calculate_all_ttr()
         self.calculate_all_lemma_ttr()
+        self.calculate_ratio_proper_nouns_per_nouns()
 
     def calculate_phrases(self, num_vp_list, num_np_list):
         i = self.indicators
@@ -1407,13 +1393,11 @@ class Word:
         return max
 
     def syllables(self):
-        """
-        Calculate syllables of a word using a less accurate algorithm.
-        Parse through the sentence, using common syllabic identifiers to count
-        syllables.
-        """
         if (Connectives.lang != "spanish"):
             """
+            Calculate syllables of a word using a less accurate algorithm.
+            Parse through the sentence, using common syllabic identifiers to count
+            syllables.
             ADAPTED FROM:
             [http://stackoverflow.com/questions/14541303/count-the-number-of-syllables-in-a-word]
             """
@@ -1451,22 +1435,23 @@ class Word:
             return len(self.syllablesplit(chars))
 
     def syllablesplit(self, chars):
-        rules  = [('VV',1), ('cccc',2), ('xcc',1), ('ccx',2), ('csc',2), ('xc',1), ('cc',1), ('vcc',2), ('Vcc',2), ('sc',1), ('cs',1),('Vc',1), ('vc',1), ('Vs',1), ('vs',1)]
+        rules = [('VV', 1), ('cccc', 2), ('xcc', 1), ('ccx', 2), ('csc', 2), ('xc', 1), ('cc', 1), ('vcc', 2),
+                 ('Vcc', 2), ('sc', 1), ('cs', 1), ('Vc', 1), ('vc', 1), ('Vs', 1), ('vs', 1)]
         for split_rule, where in rules:
-            first, second = chars.split_by(split_rule,where)
+            first, second = chars.split_by(split_rule, where)
             if second:
-                if first.type_line in set(['c','s','x','cs']) or second.type_line in set(['c','s','x','cs']):
-                    #print 'skip1', first.word, second.word, split_rule, chars.type_line
+                if first.type_line in set(['c', 's', 'x', 'cs']) or second.type_line in set(['c', 's', 'x', 'cs']):
+                    # print 'skip1', first.word, second.word, split_rule, chars.type_line
                     continue
-                if first.type_line[-1]=='c' and second.word[0] in set(['l','r']):
+                if first.type_line[-1] == 'c' and second.word[0] in set(['l', 'r']):
                     continue
-                if first.word[-1]=='l' and second.word[-1]=='l':
+                if first.word[-1] == 'l' and second.word[-1] == 'l':
                     continue
-                if first.word[-1]=='r' and second.word[-1]=='r':
+                if first.word[-1] == 'r' and second.word[-1] == 'r':
                     continue
-                if first.word[-1]=='c' and second.word[-1]=='h':
+                if first.word[-1] == 'c' and second.word[-1] == 'h':
                     continue
-                return self.syllablesplit(first)+self.syllablesplit(second)
+                return self.syllablesplit(first) + self.syllablesplit(second)
         return [chars]
 
     def allnum_syllables(self):
@@ -1506,19 +1491,6 @@ class Word:
             return True
         else:
             return False
-
-    def is_passive(self):
-        atributos = self.feats.split('|')
-        return True if 'Voice=Pass' in atributos else False
-
-    def is_agentless(self, frase):
-        # Si el siguiente indice esta dentro del rango de la lista
-        if int(self.index) < len(frase.word_list):
-            siguiente = frase.word_list[int(self.index)+1].text.lower()
-            if siguiente == 'by' or siguiente == 'por':
-                return False
-            else:
-                return True
 
     def is_np(self, list_np_indexes):
         if self.upos == 'NOUN' or self.upos == 'PRON' or self.upos == 'PROPN':
@@ -1566,6 +1538,7 @@ class Word:
 
     def is_subordinate_relative(self):
         subordinate_relative_labels = ['acl:relcl']
+
         return True if self.dependency_relation in subordinate_relative_labels else False
 
     def is_stopword(self):
@@ -1627,6 +1600,60 @@ class Word:
     def has_more_than_three_syllables(self):
         return True if self.allnum_syllables() > 3 else False
 
+    def is_passive(self):
+        atributos = self.feats.split('|')
+        return True if 'Voice=Pass' in atributos else False
+
+
+    def is_agentless(self, frase):
+        # Si el siguiente indice esta dentro del rango de la lista
+        if int(self.index) < len(frase.word_list):
+            siguiente = frase.word_list[int(self.index) + 1].text.lower()
+            if siguiente == 'by' or siguiente == 'por':
+                return False
+            else:
+                return True
+    def get_ambiguity_level(self, language):
+        if language == "basque":
+            lang = "eus"
+        if language == "spanish":
+            lang = "spa"
+        if language == "english":
+            lang = "eng"
+        if self.upos == 'NOUN':
+            ambiguity_level = len(wn.synsets(self.lemma, lang=lang, pos='n'))
+        elif self.upos == 'ADJ':
+            ambiguity_level = len(wn.synsets(self.lemma, lang=lang, pos='a'))
+        elif self.upos == 'ADV':
+            ambiguity_level = len(wn.synsets(self.lemma, lang=lang, pos='r'))
+        elif self.upos == 'VERB' or self.upos == 'AUX':
+            ambiguity_level = len(wn.synsets(self.lemma, lang=lang, pos='v'))
+        else:
+            ambiguity_level = 1
+        return ambiguity_level
+
+    def get_abstraction_level(self, language):
+        if language == "basque":
+            lang = "eus"
+        if language == "spanish":
+            lang = "spa"
+        if language == "english":
+            lang = "eng"
+        if self.upos == 'NOUN':
+            if len(wn.synsets(self.lemma, lang=lang, pos='n')) > 0:
+                abstraction_level = len(wn.synsets(self.lemma, lang=lang, pos='n')[0].hypernym_paths()[0])
+        elif self.upos == 'ADJ':
+            if len(wn.synsets(self.lemma, lang=lang, pos='a')) > 0:
+                abstraction_level = len(wn.synsets(self.lemma, lang=lang, pos='a')[0].hypernym_paths()[0])
+        elif self.upos == 'ADV':
+            if len(wn.synsets(self.lemma, lang=lang, pos='r')) > 0:
+                abstraction_level = len(wn.synsets(self.lemma, lang=lang, pos='r')[0].hypernym_paths()[0])
+        elif self.upos == 'VERB' or self.upos == 'AUX':
+            if len(wn.synsets(self.lemma, lang=lang, pos='v')) > 0:
+                abstraction_level = len(wn.synsets(self.lemma, lang=lang, pos='v')[0].hypernym_paths()[0])
+        else:
+            abstraction_level = 1
+        return abstraction_level
 class char_line():
     def __init__(self, word):
         self.word = word
@@ -1663,8 +1690,6 @@ class char_line():
 
     def __repr__(self):
         return repr(self.word)
-
-
 class Oxford():
     lang = ""
     a1 = defaultdict(dict)
@@ -1791,8 +1816,6 @@ class Irregularverbs():
                     Irregularverbs.irregular_verbs.append(linea.split()[0])
             f.close()
 
-
-
 class Printer:
 
     def __init__(self, indicators, language, similarity):
@@ -1846,7 +1869,8 @@ class Printer:
         print("Verb Density: " + str(i['verb_density']))
         print("Adjective Density: " + str(i['adj_density']))
         print("Adverb Density: " + str(i['adv_density']))
-
+        #calculate_ratio_proper_nouns_per_nouns
+        print("Ratio of proper nouns for all nouns (proper and common nouns): " + str(i['ratio_proper_nouns_per_nouns']))
         # Simple TTR (Type-Token Ratio)
         print('STTR (Simple Type-Token Ratio) : ' + str(i['simple_ttr']))
         # Content TTR (Content Type-Token Ratio)
@@ -1933,51 +1957,51 @@ class Printer:
 
         print('Minimum word frequency per sentence (mean): ' + str(i['min_wf_per_sentence']))
         if self.language == "basque":
-            print('Number of rare nouns (wordfrecuency<=34): ' + str(i['num_rare_nouns_34']))
+            print('Number of rare nouns (wordfrecuency<=34): ' + str(i['num_rare_nouns']))
             print('Number of rare nouns (wordfrecuency<=34) (incidence per 1000 words): ' + str(
-                i['num_rare_nouns_34_incidence']))
-            print('Number of rare adjectives (wordfrecuency<=34): ' + str(i['num_rare_adj_34']))
+                i['num_rare_nouns_incidence']))
+            print('Number of rare adjectives (wordfrecuency<=34): ' + str(i['num_rare_adj']))
             print('Number of rare adjectives (wordfrecuency<=34) (incidence per 1000 words): ' + str(
-                i['num_rare_adj_34_incidence']))
-            print('Number of rare verbs (wordfrecuency<=34): ' + str(i['num_rare_verbs_34']))
+                i['num_rare_adj_incidence']))
+            print('Number of rare verbs (wordfrecuency<=34): ' + str(i['num_rare_verbs']))
             print('Number of rare verbs (wordfrecuency<=34) (incidence per 1000 words): ' + str(
-                i['num_rare_verbs_34_incidence']))
-            print('Number of rare adverbs (wordfrecuency<=34): ' + str(i['num_rare_advb_34']))
+                i['num_rare_verbs_incidence']))
+            print('Number of rare adverbs (wordfrecuency<=34): ' + str(i['num_rare_advb']))
             print('Number of rare adverbs (wordfrecuency<=34) (incidence per 1000 words): ' + str(
-                i['num_rare_advb_34_incidence']))
-            print('Number of rare content words (wordfrecuency<=34): ' + str(i['num_rare_words_34']))
+                i['num_rare_advb_incidence']))
+            print('Number of rare content words (wordfrecuency<=34): ' + str(i['num_rare_words']))
             print('Number of rare content words (wordfrecuency<=34) (incidence per 1000 words): ' + str(
-                i['num_rare_words_34_incidence']))
-            print('Number of distinct rare content words (wordfrecuency<=34): ' + str(i['num_dif_rare_words_34']))
+                i['num_rare_words_incidence']))
+            print('Number of distinct rare content words (wordfrecuency<=34): ' + str(i['num_dif_rare_words']))
             print('Number of distinct rare content words (wordfrecuency<=34) (incidence per 1000 words): ' + str(
-                i['num_dif_rare_words_34_incidence']))
+                i['num_dif_rare_words_incidence']))
             # The average of rare lexical words (whose word frequency value is less than 4) with respect to the total of lexical words
-            print('Mean of rare lexical words (word frequency <= 34): ' + str(i['mean_rare_34']))
+            print('Mean of rare lexical words (word frequency <= 34): ' + str(i['mean_rare']))
             # The average of distinct rare lexical words (whose word frequency value is less than 4) with respect to the total of distinct lexical words
-            print('Mean of distinct rare lexical words (word frequency <= 34): ' + str(i['mean_distinct_rare_34']))
+            print('Mean of distinct rare lexical words (word frequency <= 34): ' + str(i['mean_distinct_rare']))
         else:
-            print('Number of rare nouns (wordfrecuency<=4): ' + str(i['num_rare_nouns_4']))
+            print('Number of rare nouns (wordfrecuency<=4): ' + str(i['num_rare_nouns']))
             print('Number of rare nouns (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-                i['num_rare_nouns_4_incidence']))
-            print('Number of rare adjectives (wordfrecuency<=4): ' + str(i['num_rare_adj_4']))
+                i['num_rare_nouns_incidence']))
+            print('Number of rare adjectives (wordfrecuency<=4): ' + str(i['num_rare_adj']))
             print('Number of rare adjectives (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-                i['num_rare_adj_4_incidence']))
-            print('Number of rare verbs (wordfrecuency<=4): ' + str(i['num_rare_verbs_4']))
+                i['num_rare_adj_incidence']))
+            print('Number of rare verbs (wordfrecuency<=4): ' + str(i['num_rare_verbs']))
             print('Number of rare verbs (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-                i['num_rare_verbs_4_incidence']))
-            print('Number of rare adverbs (wordfrecuency<=4): ' + str(i['num_rare_advb_4']))
+                i['num_rare_verbs_incidence']))
+            print('Number of rare adverbs (wordfrecuency<=4): ' + str(i['num_rare_advb']))
             print('Number of rare adverbs (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-                i['num_rare_advb_4_incidence']))
-            print('Number of rare content words (wordfrecuency<=4): ' + str(i['num_rare_words_4']))
+                i['num_rare_advb_incidence']))
+            print('Number of rare content words (wordfrecuency<=4): ' + str(i['num_rare_words']))
             print('Number of rare content words (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-                i['num_rare_words_4_incidence']))
-            print('Number of distinct rare content words (wordfrecuency<=4): ' + str(i['num_dif_rare_words_4']))
+                i['num_rare_words_incidence']))
+            print('Number of distinct rare content words (wordfrecuency<=4): ' + str(i['num_dif_rare_words']))
             print('Number of distinct rare content words (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-                i['num_dif_rare_words_4_incidence']))
+                i['num_dif_rare_words_incidence']))
             # The average of rare lexical words (whose word frequency value is less than 4) with respect to the total of lexical words
-            print('Mean of rare lexical words (word frequency <= 4): ' + str(i['mean_rare_4']))
+            print('Mean of rare lexical words (word frequency <= 4): ' + str(i['mean_rare']))
             # The average of distinct rare lexical words (whose word frequency value is less than 4) with respect to the total of distinct lexical words
-            print('Mean of distinct rare lexical words (word frequency <= 4): ' + str(i['mean_distinct_rare_4']))
+            print('Mean of distinct rare lexical words (word frequency <= 4): ' + str(i['mean_distinct_rare']))
 
         print('Number of A1 vocabulary in the text: ' + str(i['num_a1_words']))
         print('Incidence score of A1 vocabulary  (per 1000 words): ' + str(i['num_a1_words_incidence']))
@@ -1997,6 +2021,8 @@ class Printer:
         print('Number of content words (incidence per 1000 words): ' + str(i['num_lexic_words_incidence']))
         print("Number of nouns: " + str(i['num_noun']))
         print("Number of nouns (incidence per 1000 words): " + str(i['num_noun_incidence']))
+        print("Number of proper nouns: " + str(i['num_proper_noun']))
+        print("Number of proper nouns (incidence per 1000 words): " + str(i['num_proper_noun_incidence']))
         print("Number of adjectives: " + str(i['num_adj']))
         print("Number of adjectives (incidence per 1000 words): " + str(i['num_adj_incidence']))
         print("Number of adverbs: " + str(i['num_adv']))
@@ -2156,6 +2182,8 @@ class Printer:
         estfile.write("\n%s" % 'Verb Density: ' + str(i['verb_density']))
         estfile.write("\n%s" % 'Adjective Density: ' + str(i['adj_density']))
         estfile.write("\n%s" % 'Adverb Density: ' + str(i['adv_density']))
+        #ratio_proper_nouns_per_nouns
+        estfile.write("\n%s" % 'Ratio of proper nouns for all nouns (proper and common nouns): ' + str(i['ratio_proper_nouns_per_nouns']))
         estfile.write("\n%s" % 'STTR (Simple Type-Token Ratio): ' + str(i['simple_ttr']))
         estfile.write("\n%s" % 'CTTR (Content Type-Token Ratio): ' + str(i['content_ttr']))
         estfile.write("\n%s" % 'NTTR (Noun Type-Token Ratio): ' + str(i['nttr']))
@@ -2213,29 +2241,29 @@ class Printer:
             i['num_third_pers_pron_incidence']))
         estfile.write("\n%s" % 'Word Frequency')
         estfile.write("\n%s" % 'Minimum word frequency per sentence (mean): ' + str(i['min_wf_per_sentence']))
-        estfile.write("\n%s" % 'Number of rare nouns (wordfrecuency<=4): ' + str(i['num_rare_nouns_4']))
+        estfile.write("\n%s" % 'Number of rare nouns (wordfrecuency<=4): ' + str(i['num_rare_nouns']))
         estfile.write("\n%s" % 'Number of rare nouns (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-            i['num_rare_nouns_4_incidence']))
-        estfile.write("\n%s" % 'Number of rare adjectives (wordfrecuency<=4): ' + str(i['num_rare_adj_4']))
+            i['num_rare_nouns_incidence']))
+        estfile.write("\n%s" % 'Number of rare adjectives (wordfrecuency<=4): ' + str(i['num_rare_adj']))
         estfile.write("\n%s" % 'Number of rare adjectives (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-            i['num_rare_adj_4_incidence']))
-        estfile.write("\n%s" % 'Number of rare verbs (wordfrecuency<=4): ' + str(i['num_rare_verbs_4']))
+            i['num_rare_adj_incidence']))
+        estfile.write("\n%s" % 'Number of rare verbs (wordfrecuency<=4): ' + str(i['num_rare_verbs']))
         estfile.write("\n%s" % 'Number of rare verbs (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-            i['num_rare_verbs_4_incidence']))
-        estfile.write("\n%s" % 'Number of rare adverbs (wordfrecuency<=4): ' + str(i['num_rare_advb_4']))
+            i['num_rare_verbs_incidence']))
+        estfile.write("\n%s" % 'Number of rare adverbs (wordfrecuency<=4): ' + str(i['num_rare_advb']))
         estfile.write("\n%s" % 'Number of rare adverbs (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-            i['num_rare_advb_4_incidence']))
-        estfile.write("\n%s" % 'Number of rare content words (wordfrecuency<=4): ' + str(i['num_rare_words_4']))
+            i['num_rare_advb_incidence']))
+        estfile.write("\n%s" % 'Number of rare content words (wordfrecuency<=4): ' + str(i['num_rare_words']))
         estfile.write("\n%s" % 'Number of rare content words (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-            i['num_rare_words_4_incidence']))
+            i['num_rare_words_incidence']))
         estfile.write(
-            "\n%s" % 'Number of distinct rare content words (wordfrecuency<=4): ' + str(i['num_dif_rare_words_4']))
+            "\n%s" % 'Number of distinct rare content words (wordfrecuency<=4): ' + str(i['num_dif_rare_words']))
         estfile.write(
             "\n%s" % 'Number of distinct rare content words (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-                i['num_dif_rare_words_4_incidence']))
-        estfile.write("\n%s" % 'Mean of rare lexical words (word frequency <= 4): ' + str(i['mean_rare_4']))
+                i['num_dif_rare_words_incidence']))
+        estfile.write("\n%s" % 'Mean of rare lexical words (word frequency <= 4): ' + str(i['mean_rare']))
         estfile.write(
-            "\n%s" % 'Mean of distinct rare lexical words (word frequency <= 4): ' + str(i['mean_distinct_rare_4']))
+            "\n%s" % 'Mean of distinct rare lexical words (word frequency <= 4): ' + str(i['mean_distinct_rare']))
         estfile.write("\n%s" % 'Vocabulary Knowledge')
         estfile.write("\n%s" % 'Number of A1 vocabulary in the text: ' + str(i['num_a1_words']))
         estfile.write(
@@ -2262,6 +2290,8 @@ class Printer:
             "\n%s" % 'Number of content words (incidence per 1000 words): ' + str(i['num_lexic_words_incidence']))
         estfile.write("\n%s" % 'Number of nouns: ' + str(i['num_noun']))
         estfile.write("\n%s" % 'Number of nouns (incidence per 1000 words): ' + str(i['num_noun_incidence']))
+        estfile.write("\n%s" % 'Number of proper nouns: ' + str(i['num_proper_noun']))
+        estfile.write("\n%s" % 'Number of proper nouns (incidence per 1000 words): ' + str(i['num_proper_noun_incidence']))
         estfile.write("\n%s" % 'Number of adjectives: ' + str(i['num_adj']))
         estfile.write("\n%s" % 'Number of adjectives (incidence per 1000 words): ' + str(i['num_adj_incidence']))
         estfile.write("\n%s" % 'Number of adverbs: ' + str(i['num_adv']))
@@ -2429,10 +2459,10 @@ class Printer:
                                 'num_future',
                                 'num_indic', 'num_impera', 'num_past_irregular', 'num_past_irregular_incidence',
                                 'num_personal_pronouns', 'num_first_pers_pron', 'num_first_pers_sing_pron',
-                                'num_third_pers_pron', 'num_rare_nouns_4', 'num_rare_adj_4', 'num_rare_verbs_4',
-                                'num_rare_advb_4', 'num_rare_words_4', 'num_rare_words_4_incidence',
-                                'num_dif_rare_words_4',
-                                'num_dif_rare_words_4_incidence', 'num_a1_words', 'num_a2_words', 'num_b1_words',
+                                'num_third_pers_pron', 'num_rare_nouns', 'num_rare_adj', 'num_rare_verbs',
+                                'num_rare_advb', 'num_rare_words', 'num_rare_words_incidence',
+                                'num_dif_rare_words',
+                                'num_dif_rare_words_incidence', 'num_a1_words', 'num_a2_words', 'num_b1_words',
                                 'num_b2_words',
                                 'num_c1_words', 'num_content_words_not_a1_c1_words', 'num_lexic_words', 'num_noun',
                                 'num_adj',
@@ -2475,7 +2505,6 @@ class Printer:
             os.makedirs(newPath)
         return newPath
 
-
 class Maiztasuna:
     freq_list = {}
 
@@ -2504,12 +2533,13 @@ class Stopwords:
 
     def load(self):
         if self.lang == "english":
-            Stopwords.stop_words = stopwords.words('english')
+            #Stopwords.stop_words = stopwords.words('english')
+            Stopwords.stop_words = set(line.strip() for line in open('data/en/StopWords/stopwords.txt'))
         if self.lang == "spanish":
             #Stopwords.stop_words = stopwords.words('spanish')
-            Stopwords.stop_words = set(line.strip() for line in open('data/es/stopwords/stopwords.txt'))
+            Stopwords.stop_words = set(line.strip() for line in open('data/es/StopWords/stopwords.txt'))
         if self.lang == "basque":
-            Stopwords.stop_words = set(line.strip() for line in open('data/eu/stopwords/stopwords.txt'))
+            Stopwords.stop_words = set(line.strip() for line in open('data/eu/StopWords/stopwords.txt'))
 
 
 class Predictor:
@@ -2822,7 +2852,10 @@ class Main(object):
 
         # Carga Niveles Oxford
         ox = Oxford(language)
-        ox.load()
+        #ox.load()
+
+        irregular = Irregularverbs(language)
+        irregular.load()
 
         # Carga StopWords
         stopw = Stopwords(language)
@@ -2839,9 +2872,6 @@ class Main(object):
         cargador = NLPCharger(language, model, directory)
         cargador.download_model()
         cargador.load_model()
-
-        irregular = Irregularverbs(language)
-        irregular.load()
 
         # Predictor
         predictor = Predictor(language)
