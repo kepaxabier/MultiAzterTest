@@ -612,7 +612,7 @@ class Document:
 
     def flesch(self):
         sentences = float(self.indicators['num_sentences'])
-        syllables = float(len(self.aux_lists['syllabes_list']))
+        syllables = float(len(self.aux_lists['syllables_list']))
         words = float(self.indicators['num_words'])
         # ranking scale of 0-100
         # For most business writing, a score of 65 is a good target, and scores between 60 and 80 should generally
@@ -627,7 +627,7 @@ class Document:
 
     def flesch_kincaid(self):
         sentences = float(self.indicators['num_sentences'])
-        syllables = float(len(self.aux_lists['syllabes_list']))
+        syllables = float(len(self.aux_lists['syllables_list']))
         words = float(self.indicators['num_words'])
         # Flesch-Kincaid grade level formula = 0.39 x (words/sentences) + 11.8 x (syllables/words) - 15.59.
         # Years:American School Grade:European School Grade
@@ -680,9 +680,12 @@ class Document:
 
     def calculate_readability(self):
         # self.get_syllable_list()
-        self.calculate_dale_chall()
+        if self.language == "english":
+            self.calculate_dale_chall()
+            self.calculate_smog()
+            self.flesch_kincaid()
         self.flesch()
-        self.flesch_kincaid()
+
 
     def calculate_connectives_for(self, sentence, connectives):
         i = self.indicators
@@ -973,7 +976,6 @@ class Document:
         self.calculate_phrases(num_vp_list, num_np_list)
         self.calculate_mean_depth_per_sentence(depth_list)
         self.calculate_mtld()
-        self.calculate_smog()
         self.calculate_readability()
         self.calculate_connectives()
         i['min_wf_per_sentence'] = round(float(np.mean(min_wordfreq_list)), 4)
