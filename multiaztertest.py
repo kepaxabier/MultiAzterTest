@@ -206,6 +206,10 @@ class Document:
         if self.indicators['num_noun'] > 0:
             self.indicators['nttr'] = round(len(self.aux_lists['different_nouns']) / self.indicators['num_noun'], 4)
 
+    def calculate_ratio_proper_nouns_per_nouns(self):
+        if self.indicators['num_proper_noun'] > 0:
+            self.indicators['ratio_proper_nouns_per_nouns'] = round(self.indicators['num_proper_noun'] / self.indicators['num_noun'] +
+                                             self.indicators['num_proper_noun'], 4)
     def calculate_vttr(self):
         if self.indicators['num_verb'] > 0:
             self.indicators['vttr'] = round(len(self.aux_lists['different_verbs']) / self.indicators['num_verb'], 4)
@@ -792,7 +796,7 @@ class Document:
                                     if wordfrequency <= 4.00:
                                         i['num_rare_words_4'] += 1
                                         if w.is_noun():
-                                            print(w.text)
+                                            #print(w.text)
                                             i['num_rare_nouns_4'] += 1
                                         elif w.is_adjective():
                                             i['num_rare_adj_4'] += 1
@@ -833,6 +837,8 @@ class Document:
                                     self.aux_lists['different_nouns'].append(w.text.lower())
                                 if w.lemma not in self.aux_lists['different_lemma_nouns']:
                                     self.aux_lists['different_lemma_nouns'].append(w.lemma)
+                            if w.is_proper_noun():
+                                i['num_proper_noun'] += 1
                             if w.is_adjective():
                                 i['num_adj'] += 1
                                 if w.text.lower() not in self.aux_lists['different_adjs']:
@@ -1060,6 +1066,7 @@ class Document:
         i['num_indic_incidence'] = self.get_incidence(i['num_indic'], n)
         i['num_verb_incidence'] = self.get_incidence(i['num_verb'], n)
         i['num_noun_incidence'] = self.get_incidence(i['num_noun'], n)
+        i['num_proper_noun_incidence'] = self.get_incidence(i['num_proper_noun'], n)
         i['num_adj_incidence'] = self.get_incidence(i['num_adj'], n)
         i['num_adv_incidence'] = self.get_incidence(i['num_adv'], n)
         i['num_pass_incidence'] = self.get_incidence(i['num_pass'], n)
@@ -1114,6 +1121,7 @@ class Document:
         i['negation_density_incidence'] = self.get_incidence(i['num_neg'], i['num_words'])
         self.calculate_all_ttr()
         self.calculate_all_lemma_ttr()
+        self.calculate_ratio_proper_nouns_per_nouns()
 
     def calculate_phrases(self, num_vp_list, num_np_list):
         i = self.indicators
@@ -1568,6 +1576,12 @@ class Word:
         else:
             return False
 
+    def is_personal_pronoun(self):
+        if self.upos == "PROPN":
+            return True
+        else:
+            return False
+
     def is_adjective(self):
         if self.upos == 'ADJ':
             return True
@@ -1868,7 +1882,8 @@ class Printer:
         print("Verb Density: " + str(i['verb_density']))
         print("Adjective Density: " + str(i['adj_density']))
         print("Adverb Density: " + str(i['adv_density']))
-
+        #calculate_ratio_proper_nouns_per_nouns
+        print("Ratio of proper nouns for all nouns (proper and common nouns): " + str(i['ratio_proper_nouns_per_nouns']))
         # Simple TTR (Type-Token Ratio)
         print('STTR (Simple Type-Token Ratio) : ' + str(i['simple_ttr']))
         # Content TTR (Content Type-Token Ratio)
@@ -2019,6 +2034,8 @@ class Printer:
         print('Number of content words (incidence per 1000 words): ' + str(i['num_lexic_words_incidence']))
         print("Number of nouns: " + str(i['num_noun']))
         print("Number of nouns (incidence per 1000 words): " + str(i['num_noun_incidence']))
+        print("Number of proper nouns: " + str(i['num_proper_noun']))
+        print("Number of proper nouns (incidence per 1000 words): " + str(i['num_proper_noun_incidence']))
         print("Number of adjectives: " + str(i['num_adj']))
         print("Number of adjectives (incidence per 1000 words): " + str(i['num_adj_incidence']))
         print("Number of adverbs: " + str(i['num_adv']))
@@ -2178,6 +2195,8 @@ class Printer:
         estfile.write("\n%s" % 'Verb Density: ' + str(i['verb_density']))
         estfile.write("\n%s" % 'Adjective Density: ' + str(i['adj_density']))
         estfile.write("\n%s" % 'Adverb Density: ' + str(i['adv_density']))
+        #ratio_proper_nouns_per_nouns
+        estfile.write("\n%s" % 'Ratio of proper nouns for all nouns (proper and common nouns): ' + str(i['ratio_proper_nouns_per_nouns']))
         estfile.write("\n%s" % 'STTR (Simple Type-Token Ratio): ' + str(i['simple_ttr']))
         estfile.write("\n%s" % 'CTTR (Content Type-Token Ratio): ' + str(i['content_ttr']))
         estfile.write("\n%s" % 'NTTR (Noun Type-Token Ratio): ' + str(i['nttr']))
@@ -2284,6 +2303,8 @@ class Printer:
             "\n%s" % 'Number of content words (incidence per 1000 words): ' + str(i['num_lexic_words_incidence']))
         estfile.write("\n%s" % 'Number of nouns: ' + str(i['num_noun']))
         estfile.write("\n%s" % 'Number of nouns (incidence per 1000 words): ' + str(i['num_noun_incidence']))
+        estfile.write("\n%s" % 'Number of proper nouns: ' + str(i['num_proper_noun']))
+        estfile.write("\n%s" % 'Number of proper nouns (incidence per 1000 words): ' + str(i['num_proper_noun_incidence']))
         estfile.write("\n%s" % 'Number of adjectives: ' + str(i['num_adj']))
         estfile.write("\n%s" % 'Number of adjectives (incidence per 1000 words): ' + str(i['num_adj_incidence']))
         estfile.write("\n%s" % 'Number of adverbs: ' + str(i['num_adv']))
