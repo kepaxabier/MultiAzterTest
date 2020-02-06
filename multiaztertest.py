@@ -333,7 +333,7 @@ class Document:
 
     def calculate_honore(self):
         n = self.indicators['num_words']
-        if (Connectives.lang != "spanish"):
+        if (self.language != "spanish"):
             v = len(self.aux_lists['different_forms'])
         else:
             v = len(self.aux_lists['different_lemmas'])
@@ -342,7 +342,7 @@ class Document:
 
     def calculate_maas(self):
         n = self.indicators['num_words']
-        if (Connectives.lang != "spanish"):
+        if (self.language != "spanish"):
             v = len(self.aux_lists['different_forms'])
         else:
             v = len(self.aux_lists['different_lemmas'])
@@ -1009,7 +1009,7 @@ class Document:
         # Una vez cargado prondict, podemos realizar el proceso de obtener la lista de silabas
         list = []
         for word in text_without_punctuation:
-            list.append(word.allnum_syllables())
+            list.append(word.allnum_syllables(self.language))
         self.aux_lists['syllables_list'] = list
 
     def calculate_all_means(self):
@@ -1373,15 +1373,15 @@ class Word:
         else:
             return False
 
-    def num_syllables(self):
+    def num_syllables(self,lang):
         list = []
         max = 0
-        if Connectives.lang == "basque":
+        if lang == "basque":
             txt = self.text
         else:
             txt = self.text.lower()
         for x in Pronouncing.prondict[txt]:
-            if Connectives.lang == "basque":
+            if lang == "basque":
                 return int(x)
             tmp_list = []
             tmp_max = 0
@@ -1394,8 +1394,8 @@ class Word:
                 max = tmp_max
         return max
 
-    def syllables(self):
-        if (Connectives.lang != "spanish"):
+    def syllables(self,lang):
+        if (lang != "spanish"):
             """
             Calculate syllables of a word using a less accurate algorithm.
             Parse through the sentence, using common syllabic identifiers to count
@@ -1456,12 +1456,12 @@ class Word:
                 return self.syllablesplit(first) + self.syllablesplit(second)
         return [chars]
 
-    def allnum_syllables(self):
+    def allnum_syllables(self,lang):
         try:
-            return self.num_syllables()
+            return self.num_syllables(lang)
         except KeyError:
             # if word not found in cmudict
-            return self.syllables()
+            return self.syllables(lang)
 
     def is_lexic_word(self, sequence):
         return self.is_verb(sequence) or self.upos == 'NOUN' or self.upos == 'ADJ' or self.upos == 'ADV'
@@ -1567,6 +1567,12 @@ class Word:
 
     def is_noun(self):
         if self.upos == 'NOUN':
+            return True
+        else:
+            return False
+
+    def is_proper_noun(self):
+        if self.upos == "PROPN":
             return True
         else:
             return False
