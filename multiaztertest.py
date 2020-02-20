@@ -18,6 +18,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import wordnet as wn
 from nltk.corpus import cmudict
+from scipy import spatial
 from wordfreq import zipf_frequency
 #####Argumentos##################################
 from argparse import ArgumentParser
@@ -27,10 +28,15 @@ from sklearn.externals import joblib
 ####Google Universal Encoder utiliza Tensorflow
 ## Importar tensorflow
 import tensorflow.compat.v1 as tf
+
 tf.disable_v2_behavior()
 ## Desactivar mensajes de tensorflow
 import tensorflow_hub as hub
-#import tensorflow_text
+# import tensorflow_text
+import logging
+from gensim.models import FastText, KeyedVectors
+
+logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 
 class ModelAdapter:
@@ -67,7 +73,9 @@ class ModelAdapter:
                             w.governor = word.governor
                             w.dependency_relation = word.dependency_relation
                             s.word_list.append(w)
-                            print(str(w.index) + "\t" + w.text + "\t" + w.lemma + "\t" + w.upos + "\t" + w.xpos + "\t" + w.feats + "\t" + str(w.governor) + "\t" + str(w.dependency_relation) +"\t")
+                            # print(str(
+                            #     w.index) + "\t" + w.text + "\t" + w.lemma + "\t" + w.upos + "\t" + w.xpos + "\t" + w.feats + "\t" + str(
+                            #     w.governor) + "\t" + str(w.dependency_relation) + "\t")
                         p.sentence_list.append(s)  # ->paragraph.append(s)
                     d.paragraph_list.append(p)  # ->data.append(paragraph)
 
@@ -732,27 +740,35 @@ class Document:
         text_without_punctuation = []
         if similarity:
             print("similarity")
-            # Preparar Google Universal Sentence Encoder
-            module_url = "https://tfhub.dev/google/universal-sentence-encoder-multilingual/3"
-            embed = hub.load(module_url)  # Utilizar KerasLayer o Module para TF2
-            similarity_input_placeholder = tf.placeholder(tf.string, shape=(None))
-            similarity_sentences_encodings = embed(similarity_input_placeholder)
-            with tf.Session() as session:
-                session.run(tf.global_variables_initializer())
-                session.run(tf.tables_initializer())
-                for p in self.paragraph_list:
-                    for s in p.sentence_list:
-                        if not s.text == "":
-                            sentences_embeddings = session.run(similarity_sentences_encodings,
-                                                               feed_dict={
-                                                                   similarity_input_placeholder: sent_tokenize(s.text)})
-                            self.aux_lists['sentences_in_paragraph_token_list'].append(sentences_embeddings)
-                    self.aux_lists['paragraph_token_list'] = session.run(similarity_sentences_encodings, feed_dict={similarity_input_placeholder: sent_tokenize(p.text)})
+            # Fasttext embbeding
+            # fasttext erabili dut entrenatzeko eta Wikipedian entrenatuak
+            # izan dira. IDF kontaketak ere wikipediatik atera dira.
+            # @inproceedings{mikolov2018advances,
+            #  title={Advances in Pre-Training Distributed Word Representations},
+            #  author={Mikolov, Tomas and Grave, Edouard and Bojanowski, Piotr and Puhrsch, Christian and Joulin, Armand},
+            #  booktitle={Proceedings of the International Conference on Language Resources and Evaluation (LREC 2018)},
+            #  year={2018}
+            # }
+            self.num_features = 512
+            if self.language == "english":
+                self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig/en',
+                                                               binary=False)
+                self.index2word_set = set(self.model.wv.index2word)
+            elif self.language == "basque":
+                self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig/eu',
+                                                               binary=False)
+                self.index2word_set = set(self.model.wv.index2word)
+            elif self.language == "spanish":
+                self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig/es',
+                                                               binary=False)
+                self.index2word_set = set(self.model.wv.index2word)
+
         for p in self.paragraph_list:
             self.aux_lists['sentences_per_paragraph'].append(len(p.sentence_list))  # [1,2,1,...]
             for s in p.sentence_list:
                 num_words_in_sentences = 0
                 if not s.text == "":
+                    self.aux_lists['sentences_in_paragraph_token_list'].append(s)
                     num_words_in_sentence_without_stopwords = 0
                     i['num_sentences'] += 1
                     dependency_tree = defaultdict(list)
@@ -963,22 +979,41 @@ class Document:
         if similarity:
             self.calculate_similarity_adjacent_sentences()
 
+    def avg_feature_vector(self, sentence, model, num_features, index2word_set):
+        words = sentence.split()
+        n_words = 0
+        feature_vec = np.zeros((num_features,), dtype='float32')
+        for word in words:
+            if word in index2word_set:
+                n_words += 1
+                feature_vec = np.add(feature_vec, model[word])
+        if n_words > 0:
+            feature_vec = np.divide(feature_vec, n_words)
+        return feature_vec
+
     def calculate_similarity_adjacent_sentences(self):
         i = self.indicators
         adjacent_similarity_list = []
-        for sentence in self.aux_lists['sentences_in_paragraph_token_list']:
-            if len(sentence) > 1:
-                for x, y in zip(range(0, len(sentence) - 1), range(1, len(sentence))):
-                    adjacent_similarity_list.append(self.calculate_similarity(sentence[x], sentence[y]))
-            else:
-                adjacent_similarity_list.append(0)
+
+        sentences = self.aux_lists['sentences_in_paragraph_token_list']
+
+        for x, y in zip(range(0, len(sentences) - 1), range(1, len(sentences))):
+            s1_afv = self.avg_feature_vector(sentences[x].text, model=self.model,
+                                             num_features=self.num_features,
+                                             index2word_set=self.index2word_set)
+            s2_afv = self.avg_feature_vector(sentences[y].text, model=self.model,
+                                             num_features=self.num_features,
+                                             index2word_set=self.index2word_set)
+            sim = 1 - spatial.distance.cosine(s1_afv, s2_afv)
+            adjacent_similarity_list.append(sim)
+
         if len(adjacent_similarity_list) > 0:
             i['similarity_adjacent_mean'] = round(float(np.mean(adjacent_similarity_list)), 4)
             i['similarity_adjacent_std'] = round(float(np.std(adjacent_similarity_list)), 4)
 
-    # Este metodo devuelve la similitud calculada mediante Google Sentence Encoder
-    def calculate_similarity(self, sentence1, sentence2):
-        return np.inner(sentence1, sentence2)
+    # # Este metodo devuelve la similitud calculada mediante Google Sentence Encoder
+    # def calculate_similarity(self, sentence1, sentence2):
+    #     return np.inner(sentence1, sentence2)
 
     # List of syllables of each word. This will be used to calculate mean/std dev of syllables.
     def get_syllable_list(self, text_without_punctuation):
@@ -1767,7 +1802,7 @@ class Printer:
         print('CTTR (Content Type-Token Ratio): ' + str(i['content_ttr']))
         # NTTR (Noun Type-Token Ratio)
         print('NTTR (Noun Type-Token Ratio): ' + str(i['nttr']))
-        #PNTTR Proper Noun Type-Token Ratio
+        # PNTTR Proper Noun Type-Token Ratio
         print('PNTTR (Proper Noun Type-Token Ratio): ' + str(i['pnttr']))
 
         # VTTR (Verb Type-Token Ratio)(incidence per 1000 words)
@@ -2025,12 +2060,16 @@ class Printer:
             print('Summary connectives (incidence per 1000 words): ' + str(i['summary_connectives_incidence']))
         if self.similarity:
             print('Semantic Similarity between adjacent sentences (mean): ' + str(i['similarity_adjacent_mean']))
-            print('Semantic Similarity between all possible pairs of sentences in a paragraph (mean): ' + str(i['similarity_pairs_par_mean']))
+            print('Semantic Similarity between all possible pairs of sentences in a paragraph (mean): ' + str(
+                i['similarity_pairs_par_mean']))
             print('Semantic Similarity between adjacent paragraphs (mean): ' + str(i['similarity_adjacent_par_mean']))
-            print('Semantic Similarity between adjacent sentences (standard deviation): ' + str(i['similarity_adjacent_std']))
-            print('Semantic Similarity between all possible pairs of sentences in a paragraph (standard deviation): ' + str(i['similarity_pairs_par_std']))
-            print('Semantic Similarity between adjacent paragraphs (standard deviation): ' + str(i['similarity_adjacent_par_std']))
-
+            print('Semantic Similarity between adjacent sentences (standard deviation): ' + str(
+                i['similarity_adjacent_std']))
+            print(
+                'Semantic Similarity between all possible pairs of sentences in a paragraph (standard deviation): ' + str(
+                    i['similarity_pairs_par_std']))
+            print('Semantic Similarity between adjacent paragraphs (standard deviation): ' + str(
+                i['similarity_adjacent_par_std']))
 
     # genera el fichero X.out.csv, MERECE LA PENA POR IDIOMA
     def generate_csv(self, csv_path, input, similarity):  # , csv_path, prediction, similarity):
@@ -2617,8 +2656,8 @@ class Pronouncing:
                 for linea in f:
                     if not linea == '\n':
                         str = linea.rstrip('\n')
-                        palabra_sin_puntos_rep = str.replace('.', '')     #[txakurra txakurra, ... , ...]
-                        line = palabra_sin_puntos_rep.split('\t')    #[ [txakurra, txakurra], [..,..], ...]
+                        palabra_sin_puntos_rep = str.replace('.', '')  # [txakurra txakurra, ... , ...]
+                        line = palabra_sin_puntos_rep.split('\t')  # [ [txakurra, txakurra], [..,..], ...]
                         palabra = line[0]
                         num_sil = []  # se crea para utilizar la misma estructura que cmudict.dict()
                         num_sil.append(len(str.split('.')))
@@ -2673,16 +2712,16 @@ class Main(object):
         opts = p.parse_args()
 
         languagelist = opts.language
-        #language = languagelist[0]
+        # language = languagelist[0]
         language = "basque"
         print("language:", str(language))
         # language = "english"
         modellist = opts.model
-        #model = modellist[0]
+        # model = modellist[0]
         model = "stanford"
         print("model:", str(model))
-        #similarity = opts.similarity
-        similarity = False
+        # similarity = opts.similarity
+        similarity = True
         print("similarity:", str(similarity))
         csv = opts.csv
         print("csv:", str(csv))
@@ -2702,7 +2741,7 @@ class Main(object):
 
         # Carga Niveles Oxford
         ox = Oxford(language)
-        #ox.load()
+        # ox.load()
 
         # Carga StopWords
         stopw = Stopwords(language)
@@ -2720,8 +2759,8 @@ class Main(object):
         cargador.load_model()
 
         # Predictor
-        #predictor = Predictor(language)
-        #predictor.load()
+        # predictor = Predictor(language)
+        # predictor.load()
 
         files = opts.files
 
@@ -2730,7 +2769,7 @@ class Main(object):
         #    FileLoader.files = args
         #    print("Parametros: " + str(FileLoader.files))
 
-        files = ["euskaratestua.txt"] #euskaratestua Loterry-adv
+        files = ["euskaratestua.txt"]  # euskaratestua Loterry-adv
         print("Files:" + str(files))
         ### Files will be created in this folder
         path = Printer.create_directory(files[0])
