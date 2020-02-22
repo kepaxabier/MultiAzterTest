@@ -768,7 +768,8 @@ class Document:
             for s in p.sentence_list:
                 num_words_in_sentences = 0
                 if not s.text == "":
-                    self.aux_lists['sentences_in_paragraph_token_list'].append(s)
+                    self.aux_lists['sentences_in_text_token_list'].append(s)
+                    self.aux_lists['sentences_in_paragraph_list'].append(s)
                     num_words_in_sentence_without_stopwords = 0
                     i['num_sentences'] += 1
                     dependency_tree = defaultdict(list)
@@ -954,6 +955,8 @@ class Document:
                 self.aux_lists['sentences_length_mean'].append(sum_s)
                 self.aux_lists['sentences_length_no_stopwords_list'].append(num_words_in_sentence_without_stopwords)
                 depth_list.append(self.tree_depth(dependency_tree, root))
+                self.aux_lists['sentences_in_paragraph_token_list'].append(self.aux_lists['sentences_in_paragraph_list'])
+                self.aux_lists['sentences_in_paragraph_list'].clear()
         try:
             i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
         except ZeroDivisionError:
@@ -962,6 +965,7 @@ class Document:
             i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
         except ZeroDivisionError:
             i['num_decendents_noun_phrase'] = 0
+
         self.get_syllable_list(text_without_punctuation)
         i['num_different_forms'] = len(self.aux_lists['different_forms'])
         self.indicators['left_embeddedness'] = round(float(np.mean(self.aux_lists['left_embeddedness'])), 4)
@@ -978,6 +982,7 @@ class Document:
         i['min_wf_per_sentence'] = round(float(np.mean(min_wordfreq_list)), 4)
         if similarity:
             self.calculate_similarity_adjacent_sentences()
+            self.calculate_similarity_pairs_sentences()
 
     def avg_feature_vector(self, sentence, model, num_features, index2word_set):
         words = sentence.split()
@@ -995,7 +1000,7 @@ class Document:
         i = self.indicators
         adjacent_similarity_list = []
 
-        sentences = self.aux_lists['sentences_in_paragraph_token_list']
+        sentences = self.aux_lists['sentences_in_text_token_list']
 
         for x, y in zip(range(0, len(sentences) - 1), range(1, len(sentences))):
             s1_afv = self.avg_feature_vector(sentences[x].text, model=self.model,
@@ -1011,9 +1016,49 @@ class Document:
             i['similarity_adjacent_mean'] = round(float(np.mean(adjacent_similarity_list)), 4)
             i['similarity_adjacent_std'] = round(float(np.std(adjacent_similarity_list)), 4)
 
-    # # Este metodo devuelve la similitud calculada mediante Google Sentence Encoder
-    # def calculate_similarity(self, sentence1, sentence2):
-    #     return np.inner(sentence1, sentence2)
+    def calculate_similarity_pairs_sentences(self):
+        i = self.indicators
+        pairs_similarity_list = []
+
+        sentences = self.aux_lists['sentences_in_text_token_list']
+
+        for s1 in sentences:
+            for s2 in sentences:
+                if s1.text != s2.text:
+                    s1_afv = self.avg_feature_vector(s1.text, model=self.model,
+                                                     num_features=self.num_features,
+                                                     index2word_set=self.index2word_set)
+                    s2_afv = self.avg_feature_vector(s2.text, model=self.model,
+                                                     num_features=self.num_features,
+                                                     index2word_set=self.index2word_set)
+                    sim = 1 - spatial.distance.cosine(s1_afv, s2_afv)
+                    pairs_similarity_list.append(sim)
+
+        if len(pairs_similarity_list) > 0:
+            i['similarity_pairs_par_mean'] = round(float(np.mean(pairs_similarity_list)), 4)
+            i['similarity_pairs_par_std'] = round(float(np.std(pairs_similarity_list)), 4)
+
+    def calculate_similarity_adjacent_paragraphs(self):
+        i = self.indicators
+        adj_par_similarity_list = []
+
+        sentences = self.aux_lists['sentences_in_paragraph_token_list']
+
+        # for s1 in sentences:
+        #     for s2 in sentences:
+        #         if s1.text != s2.text:
+        #             s1_afv = self.avg_feature_vector(s1.text, model=self.model,
+        #                                              num_features=self.num_features,
+        #                                              index2word_set=self.index2word_set)
+        #             s2_afv = self.avg_feature_vector(s2.text, model=self.model,
+        #                                              num_features=self.num_features,
+        #                                              index2word_set=self.index2word_set)
+        #             sim = 1 - spatial.distance.cosine(s1_afv, s2_afv)
+        #             adj_par_similarity_list.append(sim)
+
+        if len(adj_par_similarity_list) > 0:
+            i['similarity_pairs_par_mean'] = round(float(np.mean(adj_par_similarity_list)), 4)
+            i['similarity_pairs_par_std'] = round(float(np.std(adj_par_similarity_list)), 4)
 
     # List of syllables of each word. This will be used to calculate mean/std dev of syllables.
     def get_syllable_list(self, text_without_punctuation):
