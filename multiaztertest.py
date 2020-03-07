@@ -1029,10 +1029,13 @@ class Document:
             i['similarity_pairs_par_std'] = round(float(np.std(pairs_similarity_list)), 4)
 
     def calculate_similarity_pairs_paragraphs(self, p1, p2, pairs_similarity_list):
+        pairs_similarity_list_mean = []
         for x in p1:
             for y in p2:
                 sim = self.calculate_similarity(x, y)
-                pairs_similarity_list.append(sim)
+                pairs_similarity_list_mean.append(sim)
+
+        pairs_similarity_list.append(round(float(np.mean(pairs_similarity_list_mean)), 4))
         return pairs_similarity_list
 
     def calculate_similarity_adjacent_paragraphs(self):
@@ -1685,11 +1688,11 @@ class Oxford():
 
     def load(self):
         if Oxford.lang.lower() == "spanish":
-            f = open('data/en/OxfordWordListByLevel.txt', 'r')
+            f = open('data/en/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
         if Oxford.lang.lower() == "english":
-            f = open('data/en/OxfordWordListByLevel.txt', 'r')
+            f = open('data/en/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
         if Oxford.lang.lower() == "basque":
-            f = open('data/eu/OxfordWordListByLevel.txt', 'r')
+            f = open('data/eu/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
 
         lineas = f.readlines()
         aux = Oxford.a1
@@ -1734,11 +1737,11 @@ class Connectives():
 
     def load(self):
         if Connectives.lang == "spanish":
-            f = open('data/es/conectores.txt', 'r')
+            f = open('data/es/conectores.txt', 'r', encoding='utf-8')
         if Connectives.lang == "english":
-            f = open('data/en/connectives.txt', 'r')
+            f = open('data/en/connectives.txt', 'r', encoding='utf-8')
         if Connectives.lang == "basque":
-            f = open('data/eu/connectives_eu.txt', 'r')
+            f = open('data/eu/connectives_eu.txt',  'r', encoding='utf-8')
         lineas = f.readlines()
         aux = Connectives.temporal
         for linea in lineas:
@@ -1778,7 +1781,7 @@ class Irregularverbs:
     irregular_verbs = []
 
     def load(self):
-        f = open('data/en/IrregularVerbs.txt', 'r')
+        f = open('data/en/IrregularVerbs.txt', 'r', encoding='utf-8')
         lineas = f.readlines()
         for linea in lineas:
             if not linea.startswith("//"):
@@ -2123,7 +2126,7 @@ class Printer:
         # estadisticos
         output = os.path.join(csv_path, os.path.basename(input) + ".out.csv")
         # Write all the information in the file
-        estfile = open(output, "w")
+        estfile = open(output, "w",encoding='utf-8')
         estfile.write("\n%s" % 'Shallow or descriptive measures')
         estfile.write("\n%s" % 'Number of words (total): ' + str(i['num_words']))
         estfile.write("\n%s" % 'Number of distinct words (total): ' + str(i['num_different_forms']))
@@ -2448,7 +2451,7 @@ class Maiztasuna:
         self.path = path
 
     def load(self):
-        with open(self.path) as csv_file:
+        with open(self.path, encoding='utf-8') as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
             for row in csv_reader:
                 Maiztasuna.freq_list[row[1].strip()] = row[0]
@@ -2473,7 +2476,7 @@ class Stopwords:
         if self.lang == "spanish":
             Stopwords.stop_words = stopwords.words('spanish')
         if self.lang == "basque":
-            Stopwords.stop_words = set(line.strip() for line in open('data/eu/stopwords_formaketakonektoreak.txt'))
+            Stopwords.stop_words = set(line.strip() for line in open('data/eu/stopwords_formaketakonektoreak.txt', encoding='utf-8'))
 
 
 class Predictor:
@@ -2486,7 +2489,7 @@ class Predictor:
         if self.lang == "english":
             # Para cargarlo, simplemente hacer lo siguiente:
             self.clf = joblib.load('./corpus/en/dataset_aztertest_full/classifier_aztertest_best.pkl')
-            with open("./corpus/en/dataset_aztertest_full/selectorAztertestFullBest.pickle", "rb") as f:
+            with open("./corpus/en/dataset_aztertest_full/selectorAztertestFullBest.pickle", "rb", encoding='utf-8') as f:
                 self.selector = pickle.load(f)
 
     def predict_dificulty(self, data):
@@ -2691,7 +2694,7 @@ class Pronouncing:
             # os.system(command_02)
 
             # Creamos un fichero con las palabras divididas en silabas por puntos
-            with open("docSilabas.txt", "w") as f:
+            with open("docSilabas.txt", "w", encoding="utf-8") as f:
                 for word in text_without_punctuation:
                     command = "echo " + word.text + " | flookup -ib silabaEus.fst"
                     subprocess.run(command, shell=True, stdout=f)
