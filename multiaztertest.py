@@ -252,6 +252,11 @@ class Document:
             self.indicators['lemma_nttr'] = round(
                 len(self.aux_lists['different_lemma_nouns']) / self.indicators['num_noun'], 4)
 
+    def calculate_pnttr(self):
+        if self.indicators['num_proper_noun'] > 0:
+            self.indicators['pnttr'] = round(self.indicators['num_proper_noun'] / self.indicators['num_noun'] +
+                                             self.indicators['num_proper_noun'], 4)
+
     def calculate_lemma_vttr(self):
         if self.indicators['num_verb'] > 0:
             self.indicators['lemma_vttr'] = round(
@@ -282,7 +287,22 @@ class Document:
         self.calculate_lemma_adv_ttr()
         self.calculate_lemma_content_ttr()
 
+    def get_ambiguity_level(self, word, FLAG):
+        if FLAG == 'NOUN':
+            ambiguity_level = len(wn.synsets(word, pos='n'))
+        elif FLAG == 'ADJ':
+            ambiguity_level = len(wn.synsets(word, pos='a'))
+        elif FLAG == 'ADV':
+            ambiguity_level = len(wn.synsets(word, pos='r'))
+        else:
+            ambiguity_level = len(wn.synsets(word, pos='v'))
+        return ambiguity_level
 
+    def get_abstraction_level(self, word, FLAG):
+        abstraction_level = 0
+        if len(wn.synsets(word, pos=FLAG)) > 0:
+            abstraction_level = len(wn.synsets(word, pos=FLAG)[0].hypernym_paths()[0])
+        return abstraction_level
 
     def calculate_mean_depth_per_sentence(self, depth_list):
         i = self.indicators
@@ -611,13 +631,14 @@ class Document:
         self.calculate_content_overlap_all()
 
     def flesch(self):
+        flesch = 0
         sentences = float(self.indicators['num_sentences'])
         syllables = float(len(self.aux_lists['syllabes_list']))
         words = float(self.indicators['num_words'])
         # ranking scale of 0-100
         # For most business writing, a score of 65 is a good target, and scores between 60 and 80 should generally
         # be understood by 12 to 15 year olds.
-        if self.language == "english":
+        if self.language == "english" or self.language == "basque":
             # formula= 206.835 - 1.015 x (words/sentences) - 84.6 x (syllables/words)
             flesch = 206.835 - 1.015 * (words / sentences) - 84.6 * (syllables / words)
         if self.language == "spanish":
@@ -875,6 +896,10 @@ class Document:
                                     self.aux_lists['different_verbs'].append(w.text.lower())
                                 if w.lemma not in self.aux_lists['different_lemma_verbs']:
                                     self.aux_lists['different_lemma_verbs'].append(w.lemma)
+                                if w.is_passive():
+                                    i['num_pass'] += 1
+                                    if w.is_agentless(s):
+                                        i['num_agentless'] += 1
                                 if w.is_past():
                                     i['num_past'] += 1
                                     if w.is_irregular():
@@ -922,16 +947,16 @@ class Document:
                                 if wn.synsets(w.text):
                                     if w.is_noun():
                                         self.aux_lists['noun_abstraction_list'].append(
-                                            w.get_abstraction_level(self.language))
+                                            self.get_abstraction_level(w.text, 'n'))
                                         self.aux_lists['noun_verb_abstraction_list'].append(
-                                            w.get_abstraction_level(self.language))
+                                            self.get_abstraction_level(w.text, 'n'))
                                     elif w.is_verb(s):
                                         self.aux_lists['verb_abstraction_list'].append(
-                                            w.get_abstraction_level(self.language))
+                                            self.get_abstraction_level(w.text, 'v'))
                                         self.aux_lists['noun_verb_abstraction_list'].append(
-                                            w.get_abstraction_level(self.language))
+                                            self.get_abstraction_level(w.text, 'v'))
                                     self.aux_lists['ambiguity_content_words_list'].append(
-                                        w.get_ambiguity_level(self.language))
+                                        self.get_ambiguity_level(w.text, w.upos))
                             if w.text.lower() not in self.aux_lists['different_forms']:
                                 self.aux_lists['different_forms'].append(w.text.lower())
                             if w.text.lower() not in self.aux_lists['different_forms']:
@@ -1123,7 +1148,7 @@ class Document:
         i['sentences_length_no_stopwords_std'] = round(
             float(np.std(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_std'] = round(float(np.std(self.aux_lists['words_length_no_stopwords_list'])), 4)
-        i['num_past_irregular_incidence'] = self.get_incidence(i['num_past_irregular'], n)
+        i['num_past_irregular_incidence'] = self.get_incidence(i['num_past_irregular'], 4)
     @staticmethod
     def get_incidence(indicador, num_words):
         return round(((1000 * indicador) / num_words), 4)
@@ -1713,6 +1738,18 @@ class Word:
     def has_more_than_three_syllables(self,lang):
         return True if self.allnum_syllables(lang) > 3 else False
 
+    def is_passive(self):
+        atributos = self.feats.split('|')
+        return True if 'Voice=Pass' in atributos else False
+
+    def is_agentless(self, frase):
+        # Si el siguiente indice esta dentro del rango de la lista
+        if int(self.index) < len(frase.word_list):
+            siguiente = frase.word_list[int(self.index) + 1].text.lower()
+            if siguiente == 'by' or siguiente == 'por':
+                return False
+            else:
+                return True
 
 
 class char_line():
@@ -1863,47 +1900,18 @@ class Irregularverbs:
                 return False
             else:
                 return True
-    def get_ambiguity_level(self, language):
-        if language == "basque":
-            lang = "eus"
-        if language == "spanish":
-            lang = "spa"
-        if language == "english":
-            lang = "eng"
-        if self.upos == 'NOUN':
-            ambiguity_level = len(wn.synsets(self.lemma, lang=lang, pos='n'))
-        elif self.upos == 'ADJ':
-            ambiguity_level = len(wn.synsets(self.lemma, lang=lang, pos='a'))
-        elif self.upos == 'ADV':
-            ambiguity_level = len(wn.synsets(self.lemma, lang=lang, pos='r'))
-        elif self.upos == 'VERB' or self.upos == 'AUX':
-            ambiguity_level = len(wn.synsets(self.lemma, lang=lang, pos='v'))
-        else:
-            ambiguity_level = 1
-        return ambiguity_level
+class Irregularverbs:
+    irregular_verbs = []
 
-    def get_abstraction_level(self, language):
-        if language == "basque":
-            lang = "eus"
-        if language == "spanish":
-            lang = "spa"
-        if language == "english":
-            lang = "eng"
-        if self.upos == 'NOUN':
-            if len(wn.synsets(self.lemma, lang=lang, pos='n')) > 0:
-                abstraction_level = len(wn.synsets(self.lemma, lang=lang, pos='n')[0].hypernym_paths()[0])
-        elif self.upos == 'ADJ':
-            if len(wn.synsets(self.lemma, lang=lang, pos='a')) > 0:
-                abstraction_level = len(wn.synsets(self.lemma, lang=lang, pos='a')[0].hypernym_paths()[0])
-        elif self.upos == 'ADV':
-            if len(wn.synsets(self.lemma, lang=lang, pos='r')) > 0:
-                abstraction_level = len(wn.synsets(self.lemma, lang=lang, pos='r')[0].hypernym_paths()[0])
-        elif self.upos == 'VERB' or self.upos == 'AUX':
-            if len(wn.synsets(self.lemma, lang=lang, pos='v')) > 0:
-                abstraction_level = len(wn.synsets(self.lemma, lang=lang, pos='v')[0].hypernym_paths()[0])
-        else:
-            abstraction_level = 1
-        return abstraction_level
+    def load(self):
+        f = open('data/en/IrregularVerbs.txt', 'r', encoding='utf-8')
+        lineas = f.readlines()
+        for linea in lineas:
+            if not linea.startswith("//"):
+                # carga el verbo en presente, dejando pasado y preterito
+                Irregularverbs.irregular_verbs.append(linea.split()[0])
+        f.close()
+
 class char_line():
     def __init__(self, word):
         self.word = word
@@ -2397,259 +2405,6 @@ class Printer:
                     i['similarity_pairs_par_std']))
             print('Semantic Similarity between adjacent paragraphs (standard deviation): ' + str(
                 i['similarity_adjacent_par_std']))
-
-    # genera el fichero X.out.csv, MERECE LA PENA POR IDIOMA
-    def generate_csv(self, csv_path, input, similarity):  # , csv_path, prediction, similarity):
-        i = self.indicators
-        # kk=prediction
-        # estadisticos
-        output = os.path.join(csv_path, os.path.basename(input) + ".out.csv")
-        # Write all the information in the file
-        estfile = open(output, "w",encoding='utf-8')
-        estfile.write("\n%s" % 'Shallow or descriptive measures')
-        estfile.write("\n%s" % 'Number of words (total): ' + str(i['num_words']))
-        estfile.write("\n%s" % 'Number of distinct words (total): ' + str(i['num_different_forms']))
-        estfile.write("\n%s" % 'Number of words with punctuation (total): ' + str(i['num_words_with_punct']))
-        estfile.write("\n%s" % 'Number of paragraphs (total): ' + str(i['num_paragraphs']))
-        estfile.write("\n%s" % 'Number of paragraphs (incidence per 1000 words): ' + str(i['num_paragraphs_incidence']))
-        estfile.write("\n%s" % 'Number of sentences (total): ' + str(i['num_sentences']))
-        estfile.write("\n%s" % 'Number of sentences (incidence per 1000 words): ' + str(i['num_sentences_incidence']))
-        estfile.write("\n%s" % 'Length of paragraphs (mean): ' + str(i['sentences_per_paragraph_mean']))
-        estfile.write("\n%s" % 'Standard deviation of length of paragraphs: ' + str(i['sentences_per_paragraph_std']))
-        estfile.write("\n%s" % 'Number of words (length) in sentences (mean): ' + str(i['sentences_length_mean']))
-        estfile.write(
-            "\n%s" % 'Number of words (length) in sentences (standard deviation): ' + str(i['sentences_length_std']))
-        estfile.write("\n%s" % 'Number of words (length) of sentences without stopwords (mean): ' + str(
-            i['sentences_length_no_stopwords_mean']))
-        estfile.write("\n%s" % 'Number of words (length) of sentences without stopwords (standard deviation): ' + str(
-            i['sentences_length_no_stopwords_std']))
-        estfile.write("\n%s" % 'Mean number of syllables (length) in words: ' + str(i['num_syllables_words_mean']))
-        estfile.write("\n%s" % 'Standard deviation of the mean number of syllables in words: ' + str(
-            i['num_syllables_words_std']))
-        estfile.write("\n%s" % 'Mean number of letters (length) in words: ' + str(i['words_length_mean']))
-        estfile.write("\n%s" % 'Standard deviation of number of letters in words: ' + str(i['words_length_std']))
-        estfile.write("\n%s" % 'Mean number of letters (length) in words without stopwords: ' + str(
-            i['words_length_no_stopwords_mean']))
-        estfile.write("\n%s" % 'Standard deviation of the mean number of letter in words without stopwords: ' + str(
-            i['words_length_no_stopwords_std']))
-        estfile.write("\n%s" % 'Mean number of letters (length) in lemmas: ' + str(i['lemmas_length_mean']))
-        estfile.write("\n%s" % 'Standard deviation of letters (length) in lemmas: ' + str(i['lemmas_length_std']))
-        estfile.write("\n%s" % 'Lexical Richness/Lexical Density')
-        estfile.write("\n%s" % 'Lexical Density: ' + str(i['lexical_density']))
-        estfile.write("\n%s" % 'Noun Density: ' + str(i['noun_density']))
-        estfile.write("\n%s" % 'Verb Density: ' + str(i['verb_density']))
-        estfile.write("\n%s" % 'Adjective Density: ' + str(i['adj_density']))
-        estfile.write("\n%s" % 'Adverb Density: ' + str(i['adv_density']))
-        estfile.write("\n%s" % 'STTR (Simple Type-Token Ratio): ' + str(i['simple_ttr']))
-        estfile.write("\n%s" % 'CTTR (Content Type-Token Ratio): ' + str(i['content_ttr']))
-        estfile.write("\n%s" % 'NTTR (Noun Type-Token Ratio): ' + str(i['nttr']))
-        estfile.write("\n%s" % 'VTTR (Verb Type-Token Ratio): ' + str(i['vttr']))
-        estfile.write("\n%s" % 'AdjTTR (Adj Type-Token Ratio): ' + str(i['adj_ttr']))
-        estfile.write("\n%s" % 'AdvTTR (Adv Type-Token Ratio): ' + str(i['adv_ttr']))
-        estfile.write("\n%s" % 'LSTTR (Lemma Simple Type-Token Ratio): ' + str(i['lemma_ttr']))
-        estfile.write("\n%s" % 'LCTTR (Lemma Content Type-Token Ratio): ' + str(i['lemma_content_ttr']))
-        estfile.write("\n%s" % 'LNTTR (Lemma Noun Type-Token Ratio): ' + str(i['lemma_nttr']))
-        estfile.write("\n%s" % 'LVTTR (Lemma Verb Type-Token Ratio): ' + str(i['lemma_vttr']))
-        estfile.write("\n%s" % 'LAdjTTR (Lemma Adj Type-Token Ratio): ' + str(i['lemma_adj_ttr']))
-        estfile.write("\n%s" % 'LAdvTTR (Lemma Adv Type-Token Ratio): ' + str(i['lemma_adv_ttr']))
-        estfile.write("\n%s" % 'Honore Lexical Density: ' + str(i['honore']))
-        estfile.write("\n%s" % 'Maas Lexical Density: ' + str(i['maas']))
-        estfile.write("\n%s" % 'Measure of Textual Lexical Diversity (MTLD): ' + str(i['mtld']))
-        estfile.write("\n%s" % 'Readability/Text Dimension/Grade Level')
-        estfile.write("\n%s" % 'Flesch-Kincaid Grade level: ' + str(i['flesch_kincaid']))
-        estfile.write("\n%s" % 'Flesch readability ease: ' + str(i['flesch']))
-        estfile.write("\n%s" % 'Dale-Chall readability formula: ' + str(i['dale_chall']))
-        estfile.write("\n%s" % 'Simple Measure Of Gobbledygook (SMOG) grade: ' + str(i['smog']))
-        estfile.write("\n%s" % 'Morphological features')
-        estfile.write("\n%s" % 'Number of verbs in past tense: ' + str(i['num_past']))
-        estfile.write(
-            "\n%s" % 'Number of verbs in past tense (incidence per 1000 words): ' + str(i['num_past_incidence']))
-        estfile.write("\n%s" % 'Number of verbs in present tense: ' + str(i['num_pres']))
-        estfile.write(
-            "\n%s" % 'Number of verbs in present tense (incidence per 1000 words): ' + str(i['num_pres_incidence']))
-        estfile.write("\n%s" % 'Number of verbs in future tense: ' + str(i['num_future']))
-        estfile.write(
-            "\n%s" % 'Number of verbs in future tense (incidence per 1000 words): ' + str(i['num_future_incidence']))
-        estfile.write("\n%s" % 'Number of verbs in indicative mood: ' + str(i['num_indic']))
-        estfile.write(
-            "\n%s" % 'Number of verbs in indicative mood (incidence per 1000 words): ' + str(i['num_indic_incidence']))
-        estfile.write("\n%s" % 'Number of verbs in imperative mood: ' + str(i['num_impera']))
-        estfile.write(
-            "\n%s" % 'Number of verbs in imperative mood (incidence per 1000 words): ' + str(i['num_impera_incidence']))
-        estfile.write("\n%s" % 'Number of irregular verbs in past tense: ' + str(i['num_past_irregular']))
-        estfile.write("\n%s" % 'Number of irregular verbs in past tense (incidence per 1000 words): ' + str(
-            i['num_past_irregular_incidence']))
-        estfile.write(
-            "\n%s" % 'Mean of irregular verbs in past tense in relation to the number of verbs in past tense: ' + str(
-                i['num_past_irregular_mean']))
-        estfile.write("\n%s" % 'Number of personal pronouns: ' + str(i['num_personal_pronouns']))
-        estfile.write(
-            "\n%s" % 'Incidence score of pronouns (per 1000 words): ' + str(i['num_personal_pronouns_incidence']))
-        estfile.write("\n%s" % 'Number of pronouns in first person: ' + str(i['num_first_pers_pron']))
-        estfile.write("\n%s" % 'Incidence score of pronouns in first person  (per 1000 words): ' + str(
-            i['num_first_pers_pron_incidence']))
-        estfile.write("\n%s" % 'Number of pronouns in first person singular: ' + str(i['num_first_pers_sing_pron']))
-        estfile.write("\n%s" % 'Incidence score of pronouns in first person singular (per 1000 words): ' + str(
-            i['num_first_pers_sing_pron_incidence']))
-        estfile.write("\n%s" % 'Number of pronouns in third person: ' + str(i['num_third_pers_pron']))
-        estfile.write("\n%s" % 'Incidence score of pronouns in third person (per 1000 words): ' + str(
-            i['num_third_pers_pron_incidence']))
-        estfile.write("\n%s" % 'Word Frequency')
-        estfile.write("\n%s" % 'Minimum word frequency per sentence (mean): ' + str(i['min_wf_per_sentence']))
-        estfile.write("\n%s" % 'Number of rare nouns (wordfrecuency<=4): ' + str(i['num_rare_nouns_4']))
-        estfile.write("\n%s" % 'Number of rare nouns (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-            i['num_rare_nouns_4_incidence']))
-        estfile.write("\n%s" % 'Number of rare adjectives (wordfrecuency<=4): ' + str(i['num_rare_adj_4']))
-        estfile.write("\n%s" % 'Number of rare adjectives (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-            i['num_rare_adj_4_incidence']))
-        estfile.write("\n%s" % 'Number of rare verbs (wordfrecuency<=4): ' + str(i['num_rare_verbs_4']))
-        estfile.write("\n%s" % 'Number of rare verbs (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-            i['num_rare_verbs_4_incidence']))
-        estfile.write("\n%s" % 'Number of rare adverbs (wordfrecuency<=4): ' + str(i['num_rare_advb_4']))
-        estfile.write("\n%s" % 'Number of rare adverbs (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-            i['num_rare_advb_4_incidence']))
-        estfile.write("\n%s" % 'Number of rare content words (wordfrecuency<=4): ' + str(i['num_rare_words_4']))
-        estfile.write("\n%s" % 'Number of rare content words (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-            i['num_rare_words_4_incidence']))
-        estfile.write(
-            "\n%s" % 'Number of distinct rare content words (wordfrecuency<=4): ' + str(i['num_dif_rare_words_4']))
-        estfile.write(
-            "\n%s" % 'Number of distinct rare content words (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-                i['num_dif_rare_words_4_incidence']))
-        estfile.write("\n%s" % 'Mean of rare lexical words (word frequency <= 4): ' + str(i['mean_rare_4']))
-        estfile.write(
-            "\n%s" % 'Mean of distinct rare lexical words (word frequency <= 4): ' + str(i['mean_distinct_rare_4']))
-        estfile.write("\n%s" % 'Vocabulary Knowledge')
-        estfile.write("\n%s" % 'Number of A1 vocabulary in the text: ' + str(i['num_a1_words']))
-        estfile.write(
-            "\n%s" % 'Incidence score of A1 vocabulary  (per 1000 words): ' + str(i['num_a1_words_incidence']))
-        estfile.write("\n%s" % 'Number of A2 vocabulary in the text: ' + str(i['num_a2_words']))
-        estfile.write(
-            "\n%s" % 'Incidence score of A2 vocabulary  (per 1000 words): ' + str(i['num_a2_words_incidence']))
-        estfile.write("\n%s" % 'Number of B1 vocabulary in the text: ' + str(i['num_b1_words']))
-        estfile.write(
-            "\n%s" % 'Incidence score of B1 vocabulary  (per 1000 words): ' + str(i['num_b1_words_incidence']))
-        estfile.write("\n%s" % 'Number of B2 vocabulary in the text: ' + str(i['num_b2_words']))
-        estfile.write(
-            "\n%s" % 'Incidence score of B2 vocabulary  (per 1000 words): ' + str(i['num_b2_words_incidence']))
-        estfile.write("\n%s" % 'Number of C1 vocabulary in the text: ' + str(i['num_c1_words']))
-        estfile.write(
-            "\n%s" % 'Incidence score of C1 vocabulary  (per 1000 words): ' + str(i['num_c1_words_incidence']))
-        estfile.write(
-            "\n%s" % 'Number of content words not in A1-C1 vocabulary: ' + str(i['num_content_words_not_a1_c1_words']))
-        estfile.write("\n%s" % 'Incidence score of content words not in A1-C1 vocabulary (per 1000 words): ' + str(
-            i['num_content_words_not_a1_c1_words_incidence']))
-        estfile.write("\n%s" % 'Syntactic Features / POS ratios')
-        estfile.write("\n%s" % 'Number of content words: ' + str(i['num_lexic_words']))
-        estfile.write(
-            "\n%s" % 'Number of content words (incidence per 1000 words): ' + str(i['num_lexic_words_incidence']))
-        estfile.write("\n%s" % 'Number of nouns: ' + str(i['num_noun']))
-        estfile.write("\n%s" % 'Number of nouns (incidence per 1000 words): ' + str(i['num_noun_incidence']))
-        estfile.write("\n%s" % 'Number of adjectives: ' + str(i['num_adj']))
-        estfile.write("\n%s" % 'Number of adjectives (incidence per 1000 words): ' + str(i['num_adj_incidence']))
-        estfile.write("\n%s" % 'Number of adverbs: ' + str(i['num_adv']))
-        estfile.write("\n%s" % 'Number of adverbs (incidence per 1000 words): ' + str(i['num_adv_incidence']))
-        estfile.write("\n%s" % 'Number of verbs: ' + str(i['num_verb']))
-        estfile.write("\n%s" % 'Number of verbs (incidence per 1000 words): ' + str(i['num_verb_incidence']))
-        estfile.write("\n%s" % 'Left embeddedness (Mean of number of words before the main verb) (SYNLE): ' + str(
-            i['left_embeddedness']))
-        estfile.write("\n%s" % 'Number of decendents per noun phrase (mean): ' + str(i['num_decendents_noun_phrase']))
-        estfile.write(
-            "\n%s" % 'Number of modifiers per noun phrase (mean) (SYNNP): ' + str(i['num_modifiers_noun_phrase']))
-        estfile.write(
-            "\n%s" % 'Mean of the number of levels of dependency tree (Depth): ' + str(i['mean_depth_per_sentence']))
-        estfile.write("\n%s" % 'Number of subordinate clauses: ' + str(i['num_subord']))
-        estfile.write(
-            "\n%s" % 'Number of subordinate clauses (incidence per 1000 words): ' + str(i['num_subord_incidence']))
-        estfile.write("\n%s" % 'Number of relative subordinate clauses: ' + str(i['num_rel_subord']))
-        estfile.write("\n%s" % 'Number of relative subordinate clauses (incidence per 1000 words): ' + str(
-            i['num_rel_subord_incidence']))
-        estfile.write("\n%s" % 'Punctuation marks per sentence (mean): ' + str(i['num_punct_marks_per_sentence']))
-        estfile.write("\n%s" % 'Number of propositions: ' + str(i['num_total_prop']))
-        estfile.write(
-            "\n%s" % 'Mean of the number of propositions per sentence: ' + str(i['mean_propositions_per_sentence']))
-        estfile.write("\n%s" % 'Mean of the number of VPs per sentence: ' + str(i['mean_vp_per_sentence']))
-        estfile.write("\n%s" % 'Mean of the number of NPs per sentence: ' + str(i['mean_np_per_sentence']))
-        estfile.write("\n%s" % 'Noun phrase density, incidence (DRNP): ' + str(i['noun_phrase_density_incidence']))
-        estfile.write("\n%s" % 'Verb phrase density, incidence (DRVP): ' + str(i['verb_phrase_density_incidence']))
-        estfile.write("\n%s" % "Number of passive voice verbs: " + str(i['num_pass']))
-        estfile.write(
-            "\n%s" % "Number of passive voice verbs (incidence per 1000 words): " + str(i['num_pass_incidence']))
-        estfile.write("\n%s" % "Mean of passive voice verbs: " + str(i['num_pass_mean']))
-        estfile.write("\n%s" % "Number of agentless passive voice verbs: " + str(i['num_agentless']))
-        estfile.write("\n%s" % 'Agentless passive voice density, incidence (DRPVAL): ' + str(
-            i['agentless_passive_density_incidence']))
-        estfile.write("\n%s" % "Number of negative words: " + str(i['num_neg']))
-        estfile.write("\n%s" % 'Negation density, incidence (DRNEG): ' + str(i['negation_density_incidence']))
-        estfile.write("\n%s" % "Number of verbs in gerund form: " + str(i['num_ger']))
-        estfile.write("\n%s" % 'Gerund density, incidence (DRGERUND): ' + str(i['gerund_density_incidence']))
-        estfile.write("\n%s" % "Number of verbs in infinitive form: " + str(i['num_inf']))
-        estfile.write("\n%s" % 'Infinitive density, incidence (DRINF): ' + str(i['infinitive_density_incidence']))
-        estfile.write("\n%s" % 'Semantics. Readability')
-        estfile.write("\n%s" % 'Mean values of polysemy in the WordNet lexicon: ' + str(i['polysemic_index']))
-        estfile.write(
-            "\n%s" % 'Mean hypernym values of verbs in the WordNet lexicon: ' + str(i['hypernymy_verbs_index']))
-        estfile.write(
-            "\n%s" % 'Mean hypernym values of nouns in the WordNet lexicon: ' + str(i['hypernymy_nouns_index']))
-        estfile.write(
-            "\n%s" % 'Mean hypernym values of nouns and verbs in the WordNet lexicon: ' + str(i['hypernymy_index']))
-        estfile.write("\n%s" % 'Referential cohesion')
-        estfile.write(
-            "\n%s" % 'Noun overlap, adjacent sentences, binary, mean (CRFNOl): ' + str(i['noun_overlap_adjacent']))
-        estfile.write(
-            "\n%s" % 'Noun overlap, all of the sentences in a paragraph or text, binary, mean (CRFNOa): ' + str(
-                i['noun_overlap_all']))
-        estfile.write("\n%s" % 'Argument overlap, adjacent sentences, binary, mean (CRFAOl): ' + str(
-            i['argument_overlap_adjacent']))
-        estfile.write(
-            "\n%s" % 'Argument overlap, all of the sentences in a paragraph or text, binary, mean (CRFAOa): ' + str(
-                i['argument_overlap_all']))
-        estfile.write(
-            "\n%s" % 'Stem overlap, adjacent sentences, binary, mean (CRFSOl): ' + str(i['stem_overlap_adjacent']))
-        estfile.write(
-            "\n%s" % 'Stem overlap, all of the sentences in a paragraph or text, binary, mean (CRFSOa): ' + str(
-                i['stem_overlap_all']))
-        estfile.write("\n%s" % 'Content word overlap, adjacent sentences, proportional, mean (CRFCWO1): ' + str(
-            i['content_overlap_adjacent_mean']))
-        estfile.write(
-            "\n%s" % 'Content word overlap, adjacent sentences, proportional, standard deviation (CRFCWO1d): ' + str(
-                i['content_overlap_adjacent_std']))
-        estfile.write(
-            "\n%s" % 'Content word overlap, all of the sentences in a paragraph or text, proportional, mean (CRFCWOa): ' + str(
-                i['content_overlap_all_mean']))
-        estfile.write(
-            "\n%s" % 'Content word overlap, all of the sentences in a paragraph or text, proportional, standard deviation (CRFCWOad): ' + str(
-                i['content_overlap_all_std']))
-        if similarity:
-            estfile.write("\n%s" % 'Semantic overlap')
-            estfile.write(
-                "\n%s" % 'Semantic Similarity between adjacent sentences (mean): ' + str(i['similarity_adjacent_mean']))
-            estfile.write(
-                "\n%s" % 'Semantic Similarity between all possible pairs of sentences in a paragraph (mean): ' + str(
-                    i['similarity_pairs_par_mean']))
-            estfile.write("\n%s" % 'Semantic Similarity between adjacent paragraphs (mean): ' + str(
-                i['similarity_adjacent_par_mean']))
-            estfile.write("\n%s" % 'Semantic Similarity between adjacent sentences (standard deviation): ' + str(
-                i['similarity_adjacent_std']))
-            estfile.write(
-                "\n%s" % 'Semantic Similarity between all possible pairs of sentences in a paragraph (standard deviation): ' + str(
-                    i['similarity_pairs_par_std']))
-            estfile.write("\n%s" % 'Semantic Similarity between adjacent paragraphs (standard deviation): ' + str(
-                i['similarity_adjacent_par_std']))
-        estfile.write("\n%s" % 'Connectives')
-        estfile.write(
-            "\n%s" % 'Number of connectives (incidence per 1000 words): ' + str(i['all_connectives_incidence']))
-        estfile.write(
-            "\n%s" % 'Causal connectives (incidence per 1000 words): ' + str(i['causal_connectives_incidence']))
-        estfile.write(
-            "\n%s" % 'Logical connectives (incidence per 1000 words):  ' + str(i['logical_connectives_incidence']))
-        estfile.write("\n%s" % 'Adversative/contrastive connectives (incidence per 1000 words): ' + str(
-            i['adversative_connectives_incidence']))
-        estfile.write(
-            "\n%s" % 'Temporal connectives (incidence per 1000 words):  ' + str(i['temporal_connectives_incidence']))
-        estfile.write("\n%s" % 'Conditional connectives (incidence per 1000 words): ' + str(
-            i['conditional_connectives_incidence']))
-        estfile.close()
 
     # genera el fichero X.out.csv, MERECE LA PENA POR IDIOMA
     def generate_csv(self, csv_path, input, similarity):  # , csv_path, prediction, similarity):
@@ -3333,7 +3088,7 @@ class Main(object):
 
         languagelist = opts.language
         # language = languagelist[0]
-        language = "spanish"
+        language = "english"
         print("language:", str(language))
         # language = "english"
         modellist = opts.model
@@ -3341,13 +3096,13 @@ class Main(object):
         model = "stanford"
         print("model:", str(model))
         # similarity = opts.similarity
-        similarity = True
+        similarity = False
         print("similarity:", str(similarity))
         csv = opts.csv
         print("csv:", str(csv))
         ratios = opts.ratios
         print("ratios:", str(ratios))
-        directory = "/home/ibon"
+        directory = "/home/edercarbajo"
         # directory = "J:\TextSimilarity"
 
         # Carga wordfrequency euskara
@@ -3371,8 +3126,7 @@ class Main(object):
 
         # Load Pronouncing Dictionary
         prondic = Pronouncing(language)
-        if not language == "english":
-            prondic.load("")
+        prondic.load("")
 
         # Carga del modelo Stanford/NLPCube
         cargador = NLPCharger(language, model, directory)
@@ -3390,7 +3144,7 @@ class Main(object):
         #    FileLoader.files = args
         #    print("Parametros: " + str(FileLoader.files))
 
-        #files = ["euskaratestua.txt"] #euskaratestua Loterry-adv
+        files = ["Loterry-adv.txt"] #euskaratestua Loterry-adv
         print("Files:" + str(files))
         ### Files will be created in this folder
         path = Printer.create_directory(files[0])
