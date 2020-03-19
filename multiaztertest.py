@@ -22,9 +22,9 @@ nltk.download('wordnet')
 nltk.download('omw')
 from nltk.corpus import wordnet as wn
 from nltk.corpus import cmudict
-from wordfreq import zipf_frequency
 from scipy import spatial
-from wordfreq import zipf_frequency#####Argumentos##################################
+from wordfreq import zipf_frequency
+#####Argumentos##################################
 from argparse import ArgumentParser
 import pandas as pd
 import pickle
@@ -32,10 +32,6 @@ from sklearn.externals import joblib
 ####Google Universal Encoder utiliza Tensorflow
 ## Importar tensorflow
 import tensorflow.compat.v1 as tf
-tf.disable_v2_behavior()
-## Desactivar mensajes de tensorflow
-import tensorflow_hub as hub
-#import tensorflow_text
 
 tf.disable_v2_behavior()
 ## Desactivar mensajes de tensorflow
@@ -772,7 +768,7 @@ class Document:
                 self.index2word_set = set(self.model.wv.index2word)
             elif self.language == "spanish":
                 self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig/es',
-                                                               binary=False, encoding="utf8", unicode_errors='ignore',limit=100000)
+                                                               binary=False)
                 self.index2word_set = set(self.model.wv.index2word)
 
         for p in self.paragraph_list:
@@ -936,6 +932,8 @@ class Document:
                                             w.get_abstraction_level(self.language))
                                     self.aux_lists['ambiguity_content_words_list'].append(
                                         w.get_ambiguity_level(self.language))
+                            if w.text.lower() not in self.aux_lists['different_forms']:
+                                self.aux_lists['different_forms'].append(w.text.lower())
                             if w.text.lower() not in self.aux_lists['different_forms']:
                                 self.aux_lists['different_forms'].append(w.text.lower())
                             if w.lemma not in self.aux_lists['different_lemmas']:
@@ -1857,7 +1855,6 @@ class Connectives():
 
 
 class Irregularverbs:
-
     def is_agentless(self, frase):
         # Si el siguiente indice esta dentro del rango de la lista
         if int(self.index) < len(frase.word_list):
