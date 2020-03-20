@@ -1102,7 +1102,7 @@ class Document:
     def get_syllable_list(self, text_without_punctuation):
         # Si tiene contenido, significara que el lenguaje utilizado sera el ingles, si no, euskera
         if len(Pronouncing.prondict) == 0:
-            prondic = Pronouncing("basque")
+            prondic = Pronouncing(self.language)
             prondic.load(text_without_punctuation)
 
         # Una vez cargado prondict, podemos realizar el proceso de obtener la lista de silabas
@@ -2855,7 +2855,7 @@ class NLPCharger:
             elif self.lang == "english":
                 print("-------------You are going to use English model-------------")
                 MODELS_DIR = self.dir + '/en'
-                print("-------------Downloading Stanford Basque model-------------")
+                print("-------------Downloading Stanford English model-------------")
                 stanfordnlp.download('en', MODELS_DIR)  # Download the English models
             elif self.lang == "spanish":
                 print("-------------You are going to use Spanish model-------------")
@@ -3088,7 +3088,7 @@ class Main(object):
 
         languagelist = opts.language
         # language = languagelist[0]
-        language = "english"
+        language = "spanish"
         print("language:", str(language))
         # language = "english"
         modellist = opts.model
@@ -3102,7 +3102,7 @@ class Main(object):
         print("csv:", str(csv))
         ratios = opts.ratios
         print("ratios:", str(ratios))
-        directory = "/home/edercarbajo"
+        directory = "/home/ibon"
         # directory = "J:\TextSimilarity"
 
         # Carga wordfrequency euskara
@@ -3144,7 +3144,7 @@ class Main(object):
         #    FileLoader.files = args
         #    print("Parametros: " + str(FileLoader.files))
 
-        files = ["Loterry-adv.txt"] #euskaratestua Loterry-adv
+        files = ["vlad.txt"] #euskaratestua Loterry-adv
         print("Files:" + str(files))
         ### Files will be created in this folder
         path = Printer.create_directory(files[0])
