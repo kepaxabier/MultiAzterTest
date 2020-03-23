@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11afe74d-90dd-4be5-a2fb-37d54421a58a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/multilingual.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/multilingual.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docSilabas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docSilabas.txt" afterDir="false" />
     </list>
@@ -196,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584965491792</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="menu_eu.sh">
+      <created>1584967618655</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1584967618655</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -226,13 +232,14 @@
     <MESSAGE value="Recursos data nuevos" />
     <MESSAGE value="Incluido lo Eder, Kepa e Ibon&#10;Para que funcione con parámetros" />
     <MESSAGE value="He cambiado los parámetros, he añadido work directory para que funcione para lo 3(kepa, ibon, eder): python3 ./multiaztertest.py -s -c -r -f  $dir/5/Texto_1.txt -l basque -m stanford -d &quot;/home/kepa&quot; y también  he cambiado los stopwords ya que los que tenemos nostros son mejores que los que están en nltk. Eder he añadido main_es.sh para el euskara para ir probando con simples y complejos" />
-    <option name="LAST_COMMIT_MESSAGE" value="He cambiado los parámetros, he añadido work directory para que funcione para lo 3(kepa, ibon, eder): python3 ./multiaztertest.py -s -c -r -f  $dir/5/Texto_1.txt -l basque -m stanford -d &quot;/home/kepa&quot; y también  he cambiado los stopwords ya que los que tenemos nostros son mejores que los que están en nltk. Eder he añadido main_es.sh para el euskara para ir probando con simples y complejos" />
+    <MESSAGE value="menu_eu.sh" />
+    <option name="LAST_COMMIT_MESSAGE" value="menu_eu.sh" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="201" y="27" width="1020" height="741" key="CommitChangelistDialog2" timestamp="1584965438462">
+    <state x="201" y="27" width="1020" height="741" key="CommitChangelistDialog2" timestamp="1584967618370">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="201" y="27" width="1020" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584965438462" />
+    <state x="201" y="27" width="1020" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1584967618370" />
     <state x="258" y="27" key="CommitChangelistDialog2/67.27.1853.1173@67.27.1853.1173" timestamp="1579091490251" />
     <state width="1807" height="219" key="GridCell.Tab.0.bottom" timestamp="1579712287040">
       <screen x="67" y="27" width="1853" height="1173" />
@@ -262,10 +269,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="421" y="114" width="580" height="564" key="MultipleFileMergeDialog/67.27.1299.741@67.27.1299.741" timestamp="1578054773587" />
-    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1584965503247">
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1584967632865">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1584965503247" />
+    <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1584967632865" />
     <state x="415" y="193" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1579091531398" />
     <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1584947293321">
       <screen x="67" y="27" width="1299" height="741" />
