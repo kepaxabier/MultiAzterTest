@@ -438,8 +438,8 @@ do
         echo -e "8 Exit \n"
 	read -p "Elige una opcion:" opcionmenuppal
 	case $opcionmenuppal in
-                       	1)      #obtenerdatossimple5en5;;
-                                #obtenerdatoscomplejo5en5;;
+                       	1)      obtenerdatossimple5en5;;
+                                obtenerdatoscomplejo5en5;;
 				obtenerdatosmultiaztertest_eu stanford;;
 			2) cross10banatu_es $modelo;;
                         3) crosswekasmodefault_es $modelo;;
