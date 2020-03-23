@@ -2797,13 +2797,63 @@ class Stopwords:
     def download(self):
         nltk.download('stopwords')
 
+    #def load(self):
+        #if self.lang == "english":
+            #Stopwords.stop_words = stopwords.words('english')
+        #if self.lang == "spanish":
+            #Stopwords.stop_words = stopwords.words('spanish')
+        #if self.lang == "basque":
+            #Stopwords.stop_words = set(line.strip() for line in open('data/eu/StopWords/stopwords.txt', encoding='utf-8'))
+
     def load(self):
         if self.lang == "english":
-            Stopwords.stop_words = stopwords.words('english')
+            # Stopwords.stop_words = stopwords.words('english')
+            # Open the file with read only permit
+            f = open('data/en/StopWords/stopwords.txt', encoding='utf-8')
+            # use readline() to read the first line
+            line = f.readline()
+            # use the read line to read further.
+            # If the file is not empty keep reading one line
+            # at a time, till the file is empty
+            while line:
+                # print(line)
+                Stopwords.stop_words.append(line.strip())
+                # use realine() to read next line
+                line = f.readline()
+            f.close()
+            # Stopwords.stop_words = set(line.strip() for line in open('/var/www/html/erraztest/en/stopwords.txt'))
         if self.lang == "spanish":
-            Stopwords.stop_words = stopwords.words('spanish')
+            # Stopwords.stop_words = stopwords.words('spanish')
+            # Open the file with read only permit
+            f = open('data/es/StopWords/stopwords.txt', encoding='utf-8')
+            # use readline() to read the first line
+            line = f.readline()
+            # use the read line to read further.
+            # If the file is not empty keep reading one line
+            # at a time, till the file is empty
+            while line:
+                # print(line)
+                Stopwords.stop_words.append(line.strip())
+                # use realine() to read next line
+                line = f.readline()
+            f.close()
+            # Stopwords.stop_words = set(line.strip() for line in open('/var/www/html/erraztest/es/stopwords.txt'))
         if self.lang == "basque":
-            Stopwords.stop_words = set(line.strip() for line in open('data/eu/stopwords_formaketakonektoreak.txt', encoding='utf-8'))
+            # Open the file with read only permit
+            f = open('data/eu/StopWords/stopwords.txt', encoding='utf-8')
+            # use readline() to read the first line
+            line = f.readline()
+            # use the read line to read further.
+            # If the file is not empty keep reading one line
+            # at a time, till the file is empty
+            while line:
+                # print(line)
+                Stopwords.stop_words.append(line.strip())
+                # use realine() to read next line
+                line = f.readline()
+            f.close()
+            # Stopwords.stop_words = set(line.strip() for line in open('/var/www/html/erraztest/eu/stopwords.txt'))
+            # line.decode('utf-8').strip()
 
 
 class Predictor:
@@ -3076,8 +3126,9 @@ class Main(object):
         required = p.add_argument_group('required arguments')
         required.add_argument('-f', '--files', nargs='+',
                               help='Files to analyze (in .txt, .odt, .doc or .docx format)')
-        required.add_argument('-l', '--language', nargs='+', help='Language to analyze (english, spanish, basque)')
-        required.add_argument('-m', '--model', nargs='+', help='Model selected to analyze (stanford, cube)')
+        required.add_argument('-l', '--language', help='Language to analyze (english, spanish, basque)')
+        required.add_argument('-m', '--model', help='Model selected to analyze (stanford, cube)')
+        required.add_argument('-d', '--directory', help='Work directory($HOME)')
         # Grupo de argumentos opcionales
         optional = p.add_argument_group('optional arguments')
         optional.add_argument('-c', '--csv', action='store_true', help="Generate a CSV file")
@@ -3086,24 +3137,24 @@ class Main(object):
         # Por último parsear los argumentos
         opts = p.parse_args()
 
-        languagelist = opts.language
-        # language = languagelist[0]
-        language = "spanish"
+        language = opts.language
+        #language = "spanish"
         print("language:", str(language))
         # language = "english"
-        modellist = opts.model
-        # model = modellist[0]
-        model = "stanford"
+        model = opts.model
+        #model = "stanford"
         print("model:", str(model))
-        # similarity = opts.similarity
-        similarity = False
+        directory = opts.directory
+        #directory=directorylist[0]
+        print("directory:",str(directory))
+        similarity = opts.similarity
+        #similarity = False
         print("similarity:", str(similarity))
         csv = opts.csv
         print("csv:", str(csv))
         ratios = opts.ratios
         print("ratios:", str(ratios))
-        directory = "/home/ibon"
-        # directory = "J:\TextSimilarity"
+
 
         # Carga wordfrequency euskara
         if language == "basque":
@@ -3144,7 +3195,7 @@ class Main(object):
         #    FileLoader.files = args
         #    print("Parametros: " + str(FileLoader.files))
 
-        files = ["vlad.txt"] #euskaratestua Loterry-adv
+        #files = ["vlad.txt"] #euskaratestua Loterry-adv
         print("Files:" + str(files))
         ### Files will be created in this folder
         path = Printer.create_directory(files[0])
