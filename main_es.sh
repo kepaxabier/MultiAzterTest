@@ -3,11 +3,8 @@
 #En /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/Cuentos/txt/Texto_51-100.txt (Complejo)
 
 #OBTENER MULTIAZTERTEST EN 5 EN 5
-function obtenerdatosmultiaztertest_es()
+function obtenerdatossimplecompuesto_es()
 {
-modelo=$1
-cd /media/datos/Dropbox/ikerkuntza/metrix-env
-source bin/activate
 mkdir -p /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo
 mkdir -p /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/simple
 mkdir -p /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/complejo
@@ -51,27 +48,34 @@ do
         has=$(echo "$has+5" | bc -l)
         buk=$(echo "$buk+5" | bc -l)
 done
+}
+
+function obtenerdatosmultiaztertest_es()
+{
+modelo=$1
+cd /media/datos/Dropbox/ikerkuntza/metrix-env
+source bin/activate
 #simple multiaztertest
 dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/simple"
 cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
 #ANALIZA SI PROCESA BIEN (Por ejemplo hay que separar "-" de las palabras con espacio)
 #python3 ./multiaztertest.py -s -c -r -f  $dir/5/Texto_1.txt -l spanish -m cube
-for i in `seq 5 5 50`
+for i in 5 #`seq 5 5 50`
 do
-     	python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l spanish -m $modelo
+     	python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l spanish -m $modelo -d "/home/kepa"
 done
 
 
 #complejo multiaztertest
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/complejo"
-cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
+#dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/complejo"
+#cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
 #test_cab.csv: ? agertzen da!!!!!!hypernymy_nouns_index zutabean cross1 3. konplexuan ez dauka baliorik
 #Mean hypernym values of nouns in the WordNet lexicon: nan
-#python3 ./multiaztertest.py -s -c -r -f  $dir/55/Texto_53.txt -l spanish -m stanford
-for i in `seq 55 5 100`
-do
-     	python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l spanish -m $modelo
-done
+#python3 ./multiaztertest.py -s -c -r -f  $dir/55/Texto_53.txt -l spanish -m stanford -d "/home/kepa"
+#for i in `seq 55 5 100`
+#do
+#     	python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l spanish -m $modelo
+#done
 
 }
 function cross10banatu_es()
@@ -424,26 +428,27 @@ function fin()
 }
 ### Main ###
 opcionmenuppal=0
-modelo=$1
+modelo=stanford
 while test $opcionmenuppal -ne 8
 do
 	#Muestra el menu
-       	echo -e "1 Obtener datos con multiaztertest para el español \n"
-	echo -e "2 Crear data-cross10"
-        echo -e "3 Aplicar cross10 con weka SMO default\n" #, para feature selection y seleccionar los parametros y el algoritmo \n"
-        echo -e "4 Aplicar weka feature selection y seleccionar los parametros y el algoritmo \n"
+       	echo -e "1 Obtener datos simple y compuesto de 5 en 5 \n"
+        echo -e "2 Obtener datos con multiaztertest para el español \n"
+	echo -e "3 Crear data cross10\n"
+        echo -e "4 Aplicar cross10 con weka SMO default\n" #, para feature selection y seleccionar los parametros y el algoritmo \n"
+        echo -e "5 Aplicar weka feature selection y seleccionar los parametros y el algoritmo \n"
 	echo -e "6 generar el mejor modelo con train y guardar \n"
 	echo -e "7 testear los datos de test\n"
         echo -e "X weka \n"
         echo -e "8 Exit \n"
 	read -p "Elige una opcion:" opcionmenuppal
 	case $opcionmenuppal in
-                       	1) obtenerdatosmultiaztertest_es $modelo;;
-			2) cross10banatu_es $modelo;;
-                        3) crosswekasmodefault_es $modelo;;
-			4) crosswekafs_es $modelo;;
-                        5) weka;;
-			6) weka;;
+                       	1) obtenerdatossimplecompuesto_es;;
+			2) obtenerdatosmultiaztertest_es $modelo;;
+			3) cross10banatu_es $modelo;;
+                        4) crosswekasmodefault_es $modelo;;
+			5) crosswekafs_es $modelo;;
+                        6) weka;;
 			7) weka;;
 			8) fin;;
 			*) ;;
