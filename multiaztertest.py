@@ -14,7 +14,6 @@ import numpy as np
 from collections import defaultdict
 import re
 import nltk
-from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize, word_tokenize
 #wordnet
 nltk.download('wordnet')
@@ -29,18 +28,9 @@ from argparse import ArgumentParser
 import pandas as pd
 import pickle
 from sklearn.externals import joblib
-####Google Universal Encoder utiliza Tensorflow
-## Importar tensorflow
-import tensorflow.compat.v1 as tf
-
-tf.disable_v2_behavior()
-## Desactivar mensajes de tensorflow
-import tensorflow_hub as hub
-# import tensorflow_text
-import logging
 from gensim.models import FastText, KeyedVectors
 
-logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
+#logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 
 class ModelAdapter:
@@ -780,15 +770,15 @@ class Document:
             # }
             self.num_features = 512
             if self.language == "english":
-                self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig/en',
+                self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/en',
                                                                binary=False)
                 self.index2word_set = set(self.model.wv.index2word)
             elif self.language == "basque":
-                self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig/eu',
+                self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/eu',
                                                                binary=False)
                 self.index2word_set = set(self.model.wv.index2word)
             elif self.language == "spanish":
-                self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig/es',
+                self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/es',
                                                                binary=False)
                 self.index2word_set = set(self.model.wv.index2word)
 
