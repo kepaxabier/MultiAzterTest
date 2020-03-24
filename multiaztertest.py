@@ -864,7 +864,7 @@ class Document:
                                 i['num_noun'] += 1
                                 if w.text.lower() not in self.aux_lists['different_nouns']:
                                     self.aux_lists['different_nouns'].append(w.text.lower())
-                                if w.lemma not in self.aux_lists['different_lemma_nouns']:
+                                if w.lemma not in self.aux_lists['different_lemma_nouns'] and w.lemma is not None:
                                     self.aux_lists['different_lemma_nouns'].append(w.lemma)
                             if w.is_proper_noun():
                                 i['num_proper_noun'] += 1
@@ -872,19 +872,19 @@ class Document:
                                 i['num_adj'] += 1
                                 if w.text.lower() not in self.aux_lists['different_adjs']:
                                     self.aux_lists['different_adjs'].append(w.text.lower())
-                                if w.lemma not in self.aux_lists['different_lemma_adjs']:
+                                if w.lemma not in self.aux_lists['different_lemma_adjs'] and w.lemma is not None:
                                     self.aux_lists['different_lemma_adjs'].append(w.lemma)
                             if w.is_adverb():
                                 i['num_adv'] += 1
                                 if w.text.lower() not in self.aux_lists['different_advs']:
                                     self.aux_lists['different_advs'].append(w.text.lower())
-                                if w.lemma not in self.aux_lists['different_lemma_advs']:
+                                if w.lemma not in self.aux_lists['different_lemma_advs'] and w.lemma is not None:
                                     self.aux_lists['different_lemma_advs'].append(w.lemma)
                             if w.is_verb(s):
                                 i['num_verb'] += 1
                                 if w.text.lower() not in self.aux_lists['different_verbs']:
                                     self.aux_lists['different_verbs'].append(w.text.lower())
-                                if w.lemma not in self.aux_lists['different_lemma_verbs']:
+                                if w.lemma not in self.aux_lists['different_lemma_verbs'] and w.lemma is not None:
                                     self.aux_lists['different_lemma_verbs'].append(w.lemma)
                                 if w.is_passive():
                                     i['num_pass'] += 1
@@ -951,10 +951,11 @@ class Document:
                                 self.aux_lists['different_forms'].append(w.text.lower())
                             if w.text.lower() not in self.aux_lists['different_forms']:
                                 self.aux_lists['different_forms'].append(w.text.lower())
-                            if w.lemma not in self.aux_lists['different_lemmas']:
+                            if w.lemma not in self.aux_lists['different_lemmas'] and w.lemma is not None:
                                 self.aux_lists['different_lemmas'].append(w.text.lower())
                             self.aux_lists['words_length_list'].append(len(w.text))
-                            self.aux_lists['lemmas_length_list'].append(len(w.lemma))
+                            if w.lemma is not None:
+                                self.aux_lists['lemmas_length_list'].append(len(w.lemma))
                         if w.text.lower() in Oxford.a1:
                             if w.upos in Oxford.a1[w.text.lower()]:
                                 i['num_a1_words'] += 1
