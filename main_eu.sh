@@ -59,7 +59,7 @@ cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
 #ANALIZA SI PROCESA BIEN (Por ejemplo hay que separar "-" de las palabras con espacio)
 #python3 ./multiaztertest.py -s -c -r -f  $dir/5/Texto_1.txt -l basque -m stanford -d "/home/kepa"
 dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/ErreXail/sinpleak"
-for i in `seq 5 5 200`
+for i in 5 #`seq 5 5 200`
 do
      	python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d "/home/kepa"
 done
@@ -67,11 +67,11 @@ done
 
 #complejo multiaztertest
 #python3 ./multiaztertest.py -s -c -r -f  $dir/55/Texto_53.txt -l basque -m stanford -d "/home/kepa"
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/ErreXail/konplexuak"
-for i in `seq 5 5 200`
-do
-     	python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d "/home/kepa"
-done
+#dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/ErreXail/konplexuak"
+#for i in `seq 5 5 200`
+#do
+#     	python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d "/home/kepa"
+#done
 }
 
 function cross10banatu_es()
@@ -424,30 +424,31 @@ function fin()
 }
 ### Main ###
 opcionmenuppal=0
-modelo=$1
-while test $opcionmenuppal -ne 8
+modelo=stanford
+while test $opcionmenuppal -ne 10
 do
 	#Muestra el menu
-       	echo -e "1 Obtener datos con multiaztertest \n"
-	echo -e "2 Crear data-cross10"
-        echo -e "3 Aplicar cross10 con weka SMO default\n" #, para feature selection y seleccionar los parametros y el algoritmo \n"
-        echo -e "4 Aplicar weka feature selection y seleccionar los parametros y el algoritmo \n"
-	echo -e "6 generar el mejor modelo con train y guardar \n"
-	echo -e "7 testear los datos de test\n"
-        echo -e "X weka \n"
-        echo -e "8 Exit \n"
+       	echo -e "1 obtenerdatossimple5en5 \n"
+        echo -e "2 obtenerdatoscomplejo5en5 \n"
+        echo -e "3 obtenerdatosmultiaztertest_eu stanford\n"
+	echo -e "4 Crear data-cross10"
+        echo -e "5 Aplicar cross10 con weka SMO default\n" #, para feature selection y seleccionar los parametros y el algoritmo \n"
+        echo -e "6 Aplicar weka feature selection y seleccionar los parametros y el algoritmo \n"
+	echo -e "7 generar el mejor modelo con train y guardar \n"
+	echo -e "8 testear los datos de test\n"
+        echo -e "9 weka \n"
+        echo -e "10 Exit \n"
 	read -p "Elige una opcion:" opcionmenuppal
 	case $opcionmenuppal in
-                       	1)      obtenerdatossimple5en5;;
-                                obtenerdatoscomplejo5en5;;
-				obtenerdatosmultiaztertest_eu stanford;;
-			2) cross10banatu_es $modelo;;
-                        3) crosswekasmodefault_es $modelo;;
-			4) crosswekafs_es $modelo;;
-                        5) weka;;
-			6) weka;;
-			7) weka;;
-			8) fin;;
+                       	1) obtenerdatossimple5en5;;
+                        2) obtenerdatoscomplejo5en5;;
+			3) obtenerdatosmultiaztertest_eu $modelo;;
+			4) cross10banatu_es $modelo;;
+                        5) crosswekasmodefault_es $modelo;;
+			6) crosswekafs_es $modelo;;
+                        7) weka;;
+			8) weka;;
+			10) fin;;
 			*) ;;
 
 	esac 
