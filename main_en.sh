@@ -50,11 +50,10 @@ function pruebaobtenerdatosmultiaztertest()
 cd /media/datos/Dropbox/ikerkuntza/metrix-env
 source bin/activate
 cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
-python3 multiaztertest.py -s -c -r -f  Loterry-adv.txt -l english -m stanford
+python3 multiaztertest.py -s -c -r -f  Loterry-adv.txt -l english -m stanford -d /home/kepa
 }
-function obtenerdatosmultiaztertest()
+function obtenerdatos3niveles()
 {
-modelo=$1
 dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/en" #/[Test|Train]/[Adv-Txt|Ele-Txt|Int-Txt]/*.txt "
 #LEE README.TXT DE corpus/en
 #Sarrera:corpus/en/cleaned_and_withoutfirstrow/[Test|Train]/*.txt -> contiene los ficheros cuyo nombre ha sido modificado, los blancos por guiones, y se ha eliminado la primera fila que indica el nivel 
@@ -149,21 +148,29 @@ do
     cp $fitx $j
     i=$(echo "$i+1" | bc -l)
 done
+}
+function obtenerdatosmultiaztertest()
+{
+modelo=$1
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/en" #/[Test|Train]/[Adv-Txt|Ele-Txt|Int-Txt]/*.txt "
 cd /media/datos/Dropbox/ikerkuntza/metrix-env
 source bin/activate
 cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
-for i in `seq 0 5 150`
+for i in 0 #`seq 0 5 150`
 do
-   python3 multiaztertest.py -s -c -r -f  $dir/Train/Adv-Txt/$i/*.txt -l english -m $modelo
-   python3 multiaztertest.py -s -c -r -f  $dir/Train/Int-Txt/$i/*.txt -l english -m $modelo
-   python3 multiaztertest.py -s -c -r -f  $dir/Train/Ele-Txt/$i/*.txt -l english -m $modelo	
+   python3 multiaztertest.py -s -c -r -f  $dir/Train/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   #python3 multiaztertest.py -s -c -r -f  $dir/Train/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   #python3 multiaztertest.py -s -c -r -f  $dir/Train/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa	
 done
-for i in `seq 0 5 35`
-do
-   python3 multiaztertest.py -s -c -r -f  $dir/Test/Adv-Txt/$i/*.txt -l english -m $modelo
-   python3 multiaztertest.py -s -c -r -f  $dir/Test/Int-Txt/$i/*.txt -l english -m $modelo
-   python3 multiaztertest.py -s -c -r -f  $dir/Test/Ele-Txt/$i/*.txt -l english -m $modelo	
-done
+#for i in `seq 0 5 35`
+#do
+#   python3 multiaztertest.py -s -c -r -f  $dir/Test/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+#   python3 multiaztertest.py -s -c -r -f  $dir/Test/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+#   python3 multiaztertest.py -s -c -r -f  $dir/Test/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa	
+#done
+}
+function recogerlosresultadosmultiaztertest()
+{
 #input:$dir/Train/[Adv-Txt|Ele-Txt|Int-Txt]/$i/results/full_results_aztertest.csv 
 #output:$dir/Train/[Adv-Txt|Ele-Txt|Int-Txt]/results/full_results_aztertest.csv
 #coge la primera fila, cabecera
@@ -260,30 +267,32 @@ function fin()
 		fi	
 }
 ### Main ###
-modelo=$1
+modelo=stanford
 opcionmenuppal=0
-while test $opcionmenuppal -ne 0
+while test $opcionmenuppal -ne 10
 do
 	#Muestra el menu
        	echo -e "1 Obtener datos cohmetrix \n"
-	echo -e "2 Obtener datos multiaztertest \n"
-        echo -e "3 pruebaobtenerdatosmultiaztertest \n"
-	echo -e "4 wekarekinprobatu \n"
-	echo -e "5 Python: Realizar 10-Fold CV con feature selection y busqueda del mejor algoritmo y sus meta-parametros, finalmente guardar el mejor modelo y el mejor selector de características \n"
-	echo -e "6 Python cargar el mejor modelo y selector de características, para probar con el test final\n"
-        echo -e "7 Obtener datos multiaztertest y mostrar predicción del modelo \n"
-        echo -e "0 Exit \n"
+        echo -e "2 Obtener datos 3 niveles \n"
+	echo -e "3 prueba obtener datos multiaztertest \n"
+        echo -e "4 Obtener datos multiaztertest \n"
+	echo -e "5 wekarekinprobatu \n"
+	echo -e "6 Python: Realizar 10-Fold CV con feature selection y busqueda del mejor algoritmo y sus meta-parametros, finalmente guardar el mejor modelo y el mejor selector de características \n"
+	echo -e "7 Python cargar el mejor modelo y selector de características, para probar con el test final\n"
+        echo -e "8 Obtener datos multiaztertest y mostrar predicción del modelo \n"
+        echo -e "10 Exit \n"
 	read -p "Elige una opcion:" opcionmenuppal
 	case $opcionmenuppal in
                        	1) obtenerdatoscohmetrix;;
-			2) obtenerdatosmultiaztertest $modelo;;
-                        3) pruebaobtenerdatosmultiaztertest;;
-			4) wekarekinprobatu;;
-			5) generarmodelopython;;
-			6) testearmodelopython;;
-			7) weka;;
-                        8) obtenerdatosestadisticos;;
-			0) fin;;
+			2) obtenerdatos3niveles;;
+			3) pruebaobtenerdatosmultiaztertest;;
+			4) obtenerdatosmultiaztertest $modelo;;
+			5) wekarekinprobatu;;
+			6) generarmodelopython;;
+			7) testearmodelopython;;
+			8) weka;;
+                        9) obtenerdatosestadisticos;;
+			10) fin;;
 			*) ;;
 
 	esac 

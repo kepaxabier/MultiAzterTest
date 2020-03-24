@@ -62,7 +62,10 @@ cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
 #python3 ./multiaztertest.py -s -c -r -f  $dir/5/Texto_1.txt -l spanish -m cube
 for i in 5 #`seq 5 5 50`
 do
-     	python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l spanish -m $modelo -d "/home/kepa"
+	#with similarity
+        #python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l spanish -m $modelo -d "/home/kepa"
+        #without similarity
+        python3 multiaztertest.py -c -r -f  $dir/$i/*.txt -l spanish -m $modelo -d "/home/kepa"
 done
 
 

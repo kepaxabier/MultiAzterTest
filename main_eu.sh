@@ -61,7 +61,10 @@ cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
 dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/ErreXail/sinpleak"
 for i in 5 #`seq 5 5 200`
 do
-     	python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d "/home/kepa"
+     	#with similarity
+        #python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d "/home/kepa"
+        #without similarity
+        python3 multiaztertest.py -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d "/home/kepa"
 done
 
 
