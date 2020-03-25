@@ -277,21 +277,21 @@ class Document:
         self.calculate_lemma_adv_ttr()
         self.calculate_lemma_content_ttr()
 
-    def get_ambiguity_level(self, word, FLAG):
+    def get_ambiguity_level(self, word, FLAG, wn_lang):
         if FLAG == 'NOUN':
-            ambiguity_level = len(wn.synsets(word, pos='n'))
+            ambiguity_level = len(wn.synsets(word, pos='n', lang=wn_lang))
         elif FLAG == 'ADJ':
-            ambiguity_level = len(wn.synsets(word, pos='a'))
+            ambiguity_level = len(wn.synsets(word, pos='a', lang=wn_lang))
         elif FLAG == 'ADV':
-            ambiguity_level = len(wn.synsets(word, pos='r'))
+            ambiguity_level = len(wn.synsets(word, pos='r', lang=wn_lang))
         else:
-            ambiguity_level = len(wn.synsets(word, pos='v'))
+            ambiguity_level = len(wn.synsets(word, pos='v', lang=wn_lang))
         return ambiguity_level
 
-    def get_abstraction_level(self, word, FLAG):
+    def get_abstraction_level(self, word, FLAG, wn_lang):
         abstraction_level = 0
-        if len(wn.synsets(word, pos=FLAG)) > 0:
-            abstraction_level = len(wn.synsets(word, pos=FLAG)[0].hypernym_paths()[0])
+        if len(wn.synsets(word, pos=FLAG, lang=wn_lang)) > 0:
+            abstraction_level = len(wn.synsets(word, pos=FLAG, lang=wn_lang)[0].hypernym_paths()[0])
         return abstraction_level
 
     def calculate_mean_depth_per_sentence(self, depth_list):
@@ -757,6 +757,13 @@ class Document:
         # subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
         decendents_total = 0
         text_without_punctuation = []
+        # Wordnet config lang
+        if self.language == "english":
+            self.wn_lang = "eng"
+        elif self.language == "basque":
+            self.wn_lang = "eus"
+        elif self.language == "spanish":
+            self.wn_lang = "spa"
         if similarity:
             print("similarity")
             # Fasttext embbeding
@@ -934,21 +941,19 @@ class Document:
                                 i['num_words_more_3_syl'] += 1
                             if (w.is_lexic_word(s)):
                                 i['num_lexic_words'] += 1
-                                if wn.synsets(w.text):
+                                if wn.synsets(w.text, lang=self.wn_lang):
                                     if w.is_noun():
                                         self.aux_lists['noun_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'n'))
+                                            self.get_abstraction_level(w.text, 'n', self.wn_lang))
                                         self.aux_lists['noun_verb_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'n'))
+                                            self.get_abstraction_level(w.text, 'n', self.wn_lang))
                                     elif w.is_verb(s):
                                         self.aux_lists['verb_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'v'))
+                                            self.get_abstraction_level(w.text, 'v', self.wn_lang))
                                         self.aux_lists['noun_verb_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'v'))
+                                            self.get_abstraction_level(w.text, 'v', self.wn_lang))
                                     self.aux_lists['ambiguity_content_words_list'].append(
-                                        self.get_ambiguity_level(w.text, w.upos))
-                            if w.text.lower() not in self.aux_lists['different_forms']:
-                                self.aux_lists['different_forms'].append(w.text.lower())
+                                        self.get_ambiguity_level(w.text, w.upos, self.wn_lang))
                             if w.text.lower() not in self.aux_lists['different_forms']:
                                 self.aux_lists['different_forms'].append(w.text.lower())
                             if w.lemma not in self.aux_lists['different_lemmas'] and w.lemma is not None:
@@ -1795,6 +1800,7 @@ class Connectives():
         Connectives.lang = language
 
     def load(self):
+        print(Connectives.lang)
         if Connectives.lang == "spanish":
             f = open('data/es/Connectives/connectives.txt', 'r', encoding='utf-8')
         if Connectives.lang == "english":
@@ -2480,45 +2486,45 @@ class Printer:
                 i['similarity_adjacent_par_std']))
         estfile.write("\n%s" % 'Connectives')
         estfile.write(
-            "\n%s" % 'Number of connectives: ' + str(i['all_connectives']))
+            "\n%s" % 'Number of connectives.txt: ' + str(i['all_connectives']))
         estfile.write(
-            "\n%s" % 'Number of connectives (incidence per 1000 words): ' + str(i['all_connectives_incidence']))
+            "\n%s" % 'Number of connectives.txt (incidence per 1000 words): ' + str(i['all_connectives_incidence']))
         estfile.write(
-            "\n%s" % 'Causal connectives: ' + str(i['causal_connectives']))
+            "\n%s" % 'Causal connectives.txt: ' + str(i['causal_connectives']))
         estfile.write(
-            "\n%s" % 'Causal connectives (incidence per 1000 words): ' + str(i['causal_connectives_incidence']))
+            "\n%s" % 'Causal connectives.txt (incidence per 1000 words): ' + str(i['causal_connectives_incidence']))
         estfile.write(
-            "\n%s" % 'Temporal connectives:  ' + str(i['temporal_connectives']))
+            "\n%s" % 'Temporal connectives.txt:  ' + str(i['temporal_connectives']))
         estfile.write(
-            "\n%s" % 'Temporal connectives (incidence per 1000 words):  ' + str(i['temporal_connectives_incidence']))
-        estfile.write("\n%s" % 'Conditional connectives: ' + str(i['conditional_connectives']))
-        estfile.write("\n%s" % 'Conditional connectives (incidence per 1000 words): ' + str(
+            "\n%s" % 'Temporal connectives.txt (incidence per 1000 words):  ' + str(i['temporal_connectives_incidence']))
+        estfile.write("\n%s" % 'Conditional connectives.txt: ' + str(i['conditional_connectives']))
+        estfile.write("\n%s" % 'Conditional connectives.txt (incidence per 1000 words): ' + str(
             i['conditional_connectives_incidence']))
         if self.language == "english" or self.language == "basque":
-            estfile.write("\n%s" % 'Logical connectives:  ' + str(i['logical_connectives']))
-            estfile.write("\n%s" % 'Logical connectives (incidence per 1000 words):  ' + str(i['logical_connectives_incidence']))
-            estfile.write("\n%s" % 'Adversative/contrastive connectives: ' + str(i['adversative_connectives']))
-            estfile.write("\n%s" % 'Adversative/contrastive connectives (incidence per 1000 words): ' + str(
+            estfile.write("\n%s" % 'Logical connectives.txt:  ' + str(i['logical_connectives']))
+            estfile.write("\n%s" % 'Logical connectives.txt (incidence per 1000 words):  ' + str(i['logical_connectives_incidence']))
+            estfile.write("\n%s" % 'Adversative/contrastive connectives.txt: ' + str(i['adversative_connectives']))
+            estfile.write("\n%s" % 'Adversative/contrastive connectives.txt (incidence per 1000 words): ' + str(
                 i['adversative_connectives_incidence']))
         if self.language == "spanish":
 
-            estfile.write("\n%s" % 'Adition connectives:  ' + str(i['addition_connectives']))
-            estfile.write("\n%s" % 'Adition connectives (incidence per 1000 words):  ' + str(i['addition_connectives_incidence']))
-            estfile.write("\n%s" % 'Consequence connectives: ' + str(i['consequence_connectives']))
-            estfile.write("\n%s" % 'Consequence connectives (incidence per 1000 words): ' + str(i['consequence_connectives_incidence']))
-            estfile.write("\n%s" % 'Purpose connectives:  ' + str(i['purpose_connectives']))
-            estfile.write("\n%s" % 'Purpose connectives (incidence per 1000 words):  ' + str(i['purpose_connectives_incidence']))
-            estfile.write("\n%s" % 'Illustration connectives: ' + str(i['illustration_connectives']))
+            estfile.write("\n%s" % 'Adition connectives.txt:  ' + str(i['addition_connectives']))
+            estfile.write("\n%s" % 'Adition connectives.txt (incidence per 1000 words):  ' + str(i['addition_connectives_incidence']))
+            estfile.write("\n%s" % 'Consequence connectives.txt: ' + str(i['consequence_connectives']))
+            estfile.write("\n%s" % 'Consequence connectives.txt (incidence per 1000 words): ' + str(i['consequence_connectives_incidence']))
+            estfile.write("\n%s" % 'Purpose connectives.txt:  ' + str(i['purpose_connectives']))
+            estfile.write("\n%s" % 'Purpose connectives.txt (incidence per 1000 words):  ' + str(i['purpose_connectives_incidence']))
+            estfile.write("\n%s" % 'Illustration connectives.txt: ' + str(i['illustration_connectives']))
             estfile.write(
-                "\n%s" % 'Illustration connectives (incidence per 1000 words): ' + str(i['illustration_connectives_incidence']))
-            estfile.write("\n%s" % 'Opposition connectives:  ' + str(i['opposition_connectives']))
-            estfile.write("\n%s" % 'Opposition connectives (incidence per 1000 words):  ' + str(i['opposition_connectives_incidence']))
-            estfile.write("\n%s" % 'Order connectives: ' + str(i['order_connectives']))
-            estfile.write("\n%s" % 'Order connectives (incidence per 1000 words): ' + str(i['order_connectives_incidence']))
-            estfile.write("\n%s" % 'Reference connectives:  ' + str(i['reference_connectives']))
-            estfile.write("\n%s" % 'Reference connectives (incidence per 1000 words):  ' + str(i['reference_connectives_incidence']))
-            estfile.write("\n%s" % 'Summary connectives: ' + str(i['summary_connectives']))
-            estfile.write("\n%s" % 'Summary connectives (incidence per 1000 words): ' + str(i['summary_connectives_incidence']))
+                "\n%s" % 'Illustration connectives.txt (incidence per 1000 words): ' + str(i['illustration_connectives_incidence']))
+            estfile.write("\n%s" % 'Opposition connectives.txt:  ' + str(i['opposition_connectives']))
+            estfile.write("\n%s" % 'Opposition connectives.txt (incidence per 1000 words):  ' + str(i['opposition_connectives_incidence']))
+            estfile.write("\n%s" % 'Order connectives.txt: ' + str(i['order_connectives']))
+            estfile.write("\n%s" % 'Order connectives.txt (incidence per 1000 words): ' + str(i['order_connectives_incidence']))
+            estfile.write("\n%s" % 'Reference connectives.txt:  ' + str(i['reference_connectives']))
+            estfile.write("\n%s" % 'Reference connectives.txt (incidence per 1000 words):  ' + str(i['reference_connectives_incidence']))
+            estfile.write("\n%s" % 'Summary connectives.txt: ' + str(i['summary_connectives']))
+            estfile.write("\n%s" % 'Summary connectives.txt (incidence per 1000 words): ' + str(i['summary_connectives_incidence']))
         estfile.close()
 
     # fichero csv para el aprendizaje automatico
