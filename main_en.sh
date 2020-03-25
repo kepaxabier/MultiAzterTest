@@ -158,7 +158,12 @@ source bin/activate
 cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
 for i in 0 #`seq 0 5 150`
 do
-   python3 multiaztertest.py -s -c -r -f  $dir/Train/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   #sin similitud
+   python3 multiaztertest.py -c -r -f  $dir/Train/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   #python3 multiaztertest.py -c -r -f  $dir/Train/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   #python3 multiaztertest.py -c -r -f  $dir/Train/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   #con similitud
+   #python3 multiaztertest.py -s -c -r -f  $dir/Train/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
    #python3 multiaztertest.py -s -c -r -f  $dir/Train/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
    #python3 multiaztertest.py -s -c -r -f  $dir/Train/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa	
 done

@@ -1882,26 +1882,6 @@ class Connectives():
         f.close()
 
 
-class Irregularverbs:
-    def is_agentless(self, frase):
-        # Si el siguiente indice esta dentro del rango de la lista
-        if int(self.index) < len(frase.word_list):
-            siguiente = frase.word_list[int(self.index) + 1].text.lower()
-            if siguiente == 'by' or siguiente == 'por':
-                return False
-            else:
-                return True
-class Irregularverbs:
-    irregular_verbs = []
-
-    def load(self):
-        f = open('data/en/IrregularVerbs.txt', 'r', encoding='utf-8')
-        lineas = f.readlines()
-        for linea in lineas:
-            if not linea.startswith("//"):
-                # carga el verbo en presente, dejando pasado y preterito
-                Irregularverbs.irregular_verbs.append(linea.split()[0])
-        f.close()
 
 class char_line():
     def __init__(self, word):
@@ -1940,28 +1920,18 @@ class char_line():
     def __repr__(self):
         return repr(self.word)
 class Oxford():
-    lang = ""
+
     a1 = defaultdict(dict)
     a2 = defaultdict(dict)
     b1 = defaultdict(dict)
     b2 = defaultdict(dict)
     c1 = defaultdict(dict)
 
-    def __init__(self, language):
-        Oxford.lang = language
-
     def load(self):
-        f = open('data/en/IrregularVerbs.txt', 'r', encoding='utf-8')
-        if Oxford.lang.lower() == "spanish":
-            f = open('data/en/OxfordWordListByLevel.txt', 'r')
-        if Oxford.lang.lower() == "english":
-            f = open('data/en/OxfordWordListByLevel.txt', 'r')
-        if Oxford.lang.lower() == "basque":
-            f = open('data/eu/OxfordWordListByLevel.txt', 'r')
-
-        lineas = f.readlines()
-        aux = Oxford.a1
-        for linea in lineas:
+       f = open('data/en/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
+       lineas = f.readlines()
+       aux = Oxford.a1
+       for linea in lineas:
             if linea.startswith("//A1"):
                 aux = Oxford.a1
             elif linea.startswith("//A2"):
@@ -1974,7 +1944,7 @@ class Oxford():
                 aux = Oxford.c1
             else:
                 aux[linea.split()[0]] = linea.split()[1].rstrip('\n')
-        f.close()
+       f.close()
 
 
 class Connectives():
@@ -2050,7 +2020,7 @@ class Irregularverbs():
 
     def load(self):
         if self.lang.lower() == "spanish":
-            f = open('data/es/irregularverbs.txt', 'r')
+            f = open('data/es/IrregularVerbs/irregularverbs.txt', 'r',encoding='utf-8')
             lineas = f.readlines()
             for linea in lineas:
                 if not linea.startswith("//"):
@@ -2058,7 +2028,7 @@ class Irregularverbs():
                     Irregularverbs.irregular_verbs.append(linea.rstrip('\n'))
             f.close()
         if self.lang.lower() == "english":
-            f = open('data/en/IrregularVerbs.txt', 'r')
+            f = open('data/en/IrregularVerbs/IrregularVerbs.txt', 'r',encoding='utf-8')
             lineas = f.readlines()
             for linea in lineas:
                 if not linea.startswith("//"):
@@ -2769,7 +2739,7 @@ class Maiztasuna:
         self.path = path
 
     def load(self):
-        with open(self.path) as csv_file:
+        with open(self.path, encoding='utf-8') as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
             for row in csv_reader:
                 Maiztasuna.freq_list[row[1].strip()] = row[0]
@@ -3149,16 +3119,21 @@ class Main(object):
 
         # Carga wordfrequency euskara
         if language == "basque":
-            maiztasuna = Maiztasuna("LB2014Maiztasunak_zenbakiakKenduta.csv")
+            maiztasuna = Maiztasuna("data/eu/Maiztasunak/LB2014Maiztasunak_zenbakiakKenduta.csv")
             maiztasuna.load()
 
         # Connectives
         conn = Connectives(language)
         conn.load()
 
+        # Carga Verbos Irregulares
+        if language == "english" or language == "spanish":
+            irrv= Irregularverbs(language)
+            irrv.load()
         # Carga Niveles Oxford
-        ox = Oxford(language)
-        # ox.load()
+        if language == "english":
+            ox = Oxford()
+            ox.load()
 
         # Carga StopWords
         stopw = Stopwords(language)
