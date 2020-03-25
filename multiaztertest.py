@@ -1743,43 +1743,6 @@ class Word:
                 return True
 
 
-class char_line():
-    def __init__(self, word):
-        self.word = word
-        self.char_line = [(char, self.char_type(char)) for char in word]
-        self.type_line = ''.join(chartype for char, chartype in self.char_line)
-
-    def char_type(self, char):
-        if char in set(['a', 'á', 'e', 'é', 'o', 'ó', 'í', 'ú']):
-            return 'V'  # strong vowel
-        if char in set(['i', 'u', 'ü']):
-            return 'v'  # week vowel
-        if char == 'x':
-            return 'x'
-        if char == 's':
-            return 's'
-        else:
-            return 'c'
-
-    def find(self, finder):
-        return self.type_line.find(finder)
-
-    def split(self, pos, where):
-        return char_line(self.word[0:pos + where]), char_line(self.word[pos + where:])
-
-    def split_by(self, finder, where):
-        split_point = self.find(finder)
-        if split_point != -1:
-            chl1, chl2 = self.split(split_point, where)
-            return chl1, chl2
-        return self, False
-
-    def __str__(self):
-        return self.word
-
-    def __repr__(self):
-        return repr(self.word)
-
 class Oxford():
     a1 = defaultdict(dict)
     a2 = defaultdict(dict)
