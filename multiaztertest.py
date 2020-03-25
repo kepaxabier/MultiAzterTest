@@ -1789,7 +1789,7 @@ class Oxford():
 
     def load(self):
 
-        f = open('data/en/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
+        f = open('data/en/Vocabularylevel/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
         lineas = f.readlines()
         aux = Oxford.a1
         for linea in lineas:
@@ -1909,31 +1909,7 @@ class char_line():
 
     def __repr__(self):
         return repr(self.word)
-class Oxford():
-    a1 = defaultdict(dict)
-    a2 = defaultdict(dict)
-    b1 = defaultdict(dict)
-    b2 = defaultdict(dict)
-    c1 = defaultdict(dict)
-
-    def load(self):
-        f = open('data/en/Vocabularylevel/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
-        lineas = f.readlines()
-        aux = Oxford.a1
-        for linea in lineas:
-            if linea.startswith("//A1"):
-                aux = Oxford.a1
-            elif linea.startswith("//A2"):
-                aux = Oxford.a2
-            elif linea.startswith("//B1"):
-                aux = Oxford.b1
-            elif linea.startswith("//B2"):
-                aux = Oxford.b2
-            elif linea.startswith("//C1"):
-                aux = Oxford.c1
-            else:
-                aux[linea.split()[0]] = linea.split()[1].rstrip('\n')
-        f.close()
+    
 
 class Irregularverbs():
 
