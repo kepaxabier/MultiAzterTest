@@ -1833,11 +1833,11 @@ class Connectives():
 
     def load(self):
         if Connectives.lang == "spanish":
-            f = open('data/es/conectores.txt', 'r', encoding='utf-8')
+            f = open('data/es/Connectives/connectives.txt', 'r', encoding='utf-8')
         if Connectives.lang == "english":
-            f = open('data/en/connectives.txt', 'r', encoding='utf-8')
+            f = open('data/en/Connectives/connectives.txt', 'r', encoding='utf-8')
         if Connectives.lang == "basque":
-            f = open('data/eu/connectives_eu.txt',  'r', encoding='utf-8')
+            f = open('data/eu/Connectives/connectives.txt',  'r', encoding='utf-8')
         lineas = f.readlines()
         aux = Connectives.temporal
         for linea in lineas:
@@ -1910,24 +1910,14 @@ class char_line():
     def __repr__(self):
         return repr(self.word)
 class Oxford():
-    lang = ""
     a1 = defaultdict(dict)
     a2 = defaultdict(dict)
     b1 = defaultdict(dict)
     b2 = defaultdict(dict)
     c1 = defaultdict(dict)
 
-    def __init__(self, language):
-        Oxford.lang = language
-
     def load(self):
-        if Oxford.lang.lower() == "spanish":
-            f = open('data/en/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
-        if Oxford.lang.lower() == "english":
-            f = open('data/en/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
-        if Oxford.lang.lower() == "basque":
-            f = open('data/eu/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
-
+        f = open('data/en/Vocabularylevel/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
         lineas = f.readlines()
         aux = Oxford.a1
         for linea in lineas:
@@ -2027,7 +2017,7 @@ class Irregularverbs():
                     Irregularverbs.irregular_verbs.append(linea.rstrip('\n'))
             f.close()
         if self.lang.lower() == "english":
-            f = open('data/en/IrregularVarbs/IrregularVerbs.txt', 'r', encoding='utf-8')
+            f = open('data/en/IrregularVerbs/IrregularVerbs.txt', 'r', encoding='utf-8')
             lineas = f.readlines()
             for linea in lineas:
                 if not linea.startswith("//"):
