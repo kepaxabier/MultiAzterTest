@@ -1800,7 +1800,6 @@ class Connectives():
         Connectives.lang = language
 
     def load(self):
-        print(Connectives.lang)
         if Connectives.lang == "spanish":
             f = open('data/es/Connectives/connectives.txt', 'r', encoding='utf-8')
         if Connectives.lang == "english":
