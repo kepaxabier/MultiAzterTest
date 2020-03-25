@@ -1642,8 +1642,6 @@ class Word:
 
     def is_imperative(self):
         atributos = self.feats.split('|')
-        print(self.text)
-        print(atributos)
         if 'Mood=Imp' in atributos:
             return True
         else:
@@ -1783,24 +1781,15 @@ class char_line():
         return repr(self.word)
 
 class Oxford():
-    lang = ""
     a1 = defaultdict(dict)
     a2 = defaultdict(dict)
     b1 = defaultdict(dict)
     b2 = defaultdict(dict)
     c1 = defaultdict(dict)
 
-    def __init__(self, language):
-        Oxford.lang = language
-
     def load(self):
-        if Oxford.lang.lower() == "spanish":
-            f = open('data/en/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
-        if Oxford.lang.lower() == "english":
-            f = open('data/en/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
-        if Oxford.lang.lower() == "basque":
-            f = open('data/eu/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
 
+        f = open('data/en/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
         lineas = f.readlines()
         aux = Oxford.a1
         for linea in lineas:
@@ -1882,17 +1871,6 @@ class Connectives():
                 aux.append(linea.rstrip('\n'))
                 Connectives.connectives.append(linea.rstrip('\n'))
         f.close()
-
-
-class Irregularverbs:
-    def is_agentless(self, frase):
-        # Si el siguiente indice esta dentro del rango de la lista
-        if int(self.index) < len(frase.word_list):
-            siguiente = frase.word_list[int(self.index) + 1].text.lower()
-            if siguiente == 'by' or siguiente == 'por':
-                return False
-            else:
-                return True
 
 
 class char_line():
@@ -2041,7 +2019,7 @@ class Irregularverbs():
 
     def load(self):
         if self.lang.lower() == "spanish":
-            f = open('data/es/irregularverbs.txt', 'r', encoding='utf-8')
+            f = open('data/es/IrregularVerbs/irregularverbs.txt', 'r', encoding='utf-8')
             lineas = f.readlines()
             for linea in lineas:
                 if not linea.startswith("//"):
@@ -2049,7 +2027,7 @@ class Irregularverbs():
                     Irregularverbs.irregular_verbs.append(linea.rstrip('\n'))
             f.close()
         if self.lang.lower() == "english":
-            f = open('data/en/IrregularVerbs.txt', 'r', encoding='utf-8')
+            f = open('data/en/IrregularVarbs/IrregularVerbs.txt', 'r', encoding='utf-8')
             lineas = f.readlines()
             for linea in lineas:
                 if not linea.startswith("//"):
@@ -3162,8 +3140,9 @@ class Main(object):
             ox.load()
 
         # Carga verbos irregulares
-        ir = Irregularverbs(language)
-        ir.load()
+        if language != "basque":
+            ir = Irregularverbs(language)
+            ir.load()
 
         # Carga StopWords
         stopw = Stopwords(language)
