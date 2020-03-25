@@ -701,7 +701,7 @@ class Document:
         list_b = []
         num_a = 0
         num_b = 0
-        text = sentence.text
+        text = sentence.text.lower()
         for x in connectives:
             if "*" in x:
                 list_a.append(x)
@@ -1160,7 +1160,7 @@ class Document:
         i['num_rel_subord_incidence'] = self.get_incidence(i['num_rel_subord'], n)
         i['num_past_incidence'] = self.get_incidence(i['num_past'], n)
         i['num_pres_incidence'] = self.get_incidence(i['num_pres'], n)
-        i['num_future_incidence'] = self.get_incidence(i['um_future'], n)
+        i['num_future_incidence'] = self.get_incidence(i['num_future'], n)
         i['num_indic_incidence'] = self.get_incidence(i['num_indic'], n)
         i['num_verb_incidence'] = self.get_incidence(i['num_verb'], n)
         i['num_noun_incidence'] = self.get_incidence(i['num_noun'], n)
@@ -1642,6 +1642,8 @@ class Word:
 
     def is_imperative(self):
         atributos = self.feats.split('|')
+        print(self.text)
+        print(atributos)
         if 'Mood=Imp' in atributos:
             return True
         else:
@@ -1850,7 +1852,7 @@ class Connectives():
         lineas = f.readlines()
         aux = Connectives.temporal
         for linea in lineas:
-            if linea.startswith("//adición"):
+            if linea.startswith("//addition"):
                 aux = Connectives.addition
             elif linea.startswith("//causal"):
                 aux = Connectives.causal
@@ -1860,9 +1862,9 @@ class Connectives():
                 aux = Connectives.consequence
             elif linea.startswith("//purpose"):
                 aux = Connectives.purpose
-            elif linea.startswith("//ilustración"):
+            elif linea.startswith("//illustration"):
                 aux = Connectives.illustration
-            elif linea.startswith("//oposición"):
+            elif linea.startswith("//opposition"):
                 aux = Connectives.opposition
             elif linea.startswith("//order"):
                 aux = Connectives.order
@@ -1881,6 +1883,16 @@ class Connectives():
                 Connectives.connectives.append(linea.rstrip('\n'))
         f.close()
 
+
+class Irregularverbs:
+    def is_agentless(self, frase):
+        # Si el siguiente indice esta dentro del rango de la lista
+        if int(self.index) < len(frase.word_list):
+            siguiente = frase.word_list[int(self.index) + 1].text.lower()
+            if siguiente == 'by' or siguiente == 'por':
+                return False
+            else:
+                return True
 
 
 class char_line():
@@ -1920,18 +1932,27 @@ class char_line():
     def __repr__(self):
         return repr(self.word)
 class Oxford():
-
+    lang = ""
     a1 = defaultdict(dict)
     a2 = defaultdict(dict)
     b1 = defaultdict(dict)
     b2 = defaultdict(dict)
     c1 = defaultdict(dict)
 
+    def __init__(self, language):
+        Oxford.lang = language
+
     def load(self):
-       f = open('data/en/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
-       lineas = f.readlines()
-       aux = Oxford.a1
-       for linea in lineas:
+        if Oxford.lang.lower() == "spanish":
+            f = open('data/en/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
+        if Oxford.lang.lower() == "english":
+            f = open('data/en/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
+        if Oxford.lang.lower() == "basque":
+            f = open('data/eu/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
+
+        lineas = f.readlines()
+        aux = Oxford.a1
+        for linea in lineas:
             if linea.startswith("//A1"):
                 aux = Oxford.a1
             elif linea.startswith("//A2"):
@@ -1944,7 +1965,7 @@ class Oxford():
                 aux = Oxford.c1
             else:
                 aux[linea.split()[0]] = linea.split()[1].rstrip('\n')
-       f.close()
+        f.close()
 
 
 class Connectives():
@@ -1972,15 +1993,15 @@ class Connectives():
 
     def load(self):
         if Connectives.lang == "spanish":
-            f = open('data/es/conectores.txt', 'r')
+            f = open('data/es/conectores.txt', 'r', encoding='utf-8')
         if Connectives.lang == "english":
-            f = open('data/en/connectives.txt', 'r')
+            f = open('data/en/connectives.txt', 'r', encoding='utf-8')
         if Connectives.lang == "basque":
-            f = open('data/eu/connectives_eu.txt', 'r')
+            f = open('data/eu/connectives_eu.txt', 'r', encoding='utf-8')
         lineas = f.readlines()
         aux = Connectives.temporal
         for linea in lineas:
-            if linea.startswith("//adición"):
+            if linea.startswith("//addition"):
                 aux = Connectives.addition
             elif linea.startswith("//causal"):
                 aux = Connectives.causal
@@ -1990,9 +2011,9 @@ class Connectives():
                 aux = Connectives.consequence
             elif linea.startswith("//purpose"):
                 aux = Connectives.purpose
-            elif linea.startswith("//ilustración"):
+            elif linea.startswith("//illustration"):
                 aux = Connectives.illustration
-            elif linea.startswith("//oposición"):
+            elif linea.startswith("//opposition"):
                 aux = Connectives.opposition
             elif linea.startswith("//order"):
                 aux = Connectives.order
@@ -2020,7 +2041,7 @@ class Irregularverbs():
 
     def load(self):
         if self.lang.lower() == "spanish":
-            f = open('data/es/IrregularVerbs/irregularverbs.txt', 'r',encoding='utf-8')
+            f = open('data/es/irregularverbs.txt', 'r', encoding='utf-8')
             lineas = f.readlines()
             for linea in lineas:
                 if not linea.startswith("//"):
@@ -2028,13 +2049,14 @@ class Irregularverbs():
                     Irregularverbs.irregular_verbs.append(linea.rstrip('\n'))
             f.close()
         if self.lang.lower() == "english":
-            f = open('data/en/IrregularVerbs/IrregularVerbs.txt', 'r',encoding='utf-8')
+            f = open('data/en/IrregularVerbs.txt', 'r', encoding='utf-8')
             lineas = f.readlines()
             for linea in lineas:
                 if not linea.startswith("//"):
                     #carga el verbo en presente, dejando pasado y preterito
                     Irregularverbs.irregular_verbs.append(linea.split()[0])
             f.close()
+
 
 class Printer:
 
@@ -2136,6 +2158,19 @@ class Printer:
             print("Flesch-Kincaid Grade level: " + str(i['flesch_kincaid']))
             print("Dale-Chall readability formula: " + str(i['dale_chall']))
             print("Simple Measure Of Gobbledygook (SMOG) grade: " + str(i['smog']))
+            print('Number of A1 vocabulary in the text: ' + str(i['num_a1_words']))
+            print('Incidence score of A1 vocabulary  (per 1000 words): ' + str(i['num_a1_words_incidence']))
+            print('Number of A2 vocabulary in the text: ' + str(i['num_a2_words']))
+            print('Incidence score of A2 vocabulary  (per 1000 words): ' + str(i['num_a2_words_incidence']))
+            print('Number of B1 vocabulary in the text: ' + str(i['num_b1_words']))
+            print('Incidence score of B1 vocabulary  (per 1000 words): ' + str(i['num_b1_words_incidence']))
+            print('Number of B2 vocabulary in the text: ' + str(i['num_b2_words']))
+            print('Incidence score of B2 vocabulary  (per 1000 words): ' + str(i['num_b2_words_incidence']))
+            print('Number of C1 vocabulary in the text: ' + str(i['num_c1_words']))
+            print('Incidence score of C1 vocabulary  (per 1000 words): ' + str(i['num_c1_words_incidence']))
+            print('Number of content words not in A1-C1 vocabulary: ' + str(i['num_content_words_not_a1_c1_words']))
+            print('Incidence score of content words not in A1-C1 vocabulary (per 1000 words): ' + str(
+                i['num_content_words_not_a1_c1_words_incidence']))
 
         print("Number of verbs in past tense: " + str(i['num_past']))
         print("Number of verbs in past tense (incidence per 1000 words): " + str(i['num_past_incidence']))
@@ -2226,19 +2261,6 @@ class Printer:
             # The average of distinct rare lexical words (whose word frequency value is less than 4) with respect to the total of distinct lexical words
             print('Mean of distinct rare lexical words (word frequency <= 4): ' + str(i['mean_distinct_rare_4']))
 
-        print('Number of A1 vocabulary in the text: ' + str(i['num_a1_words']))
-        print('Incidence score of A1 vocabulary  (per 1000 words): ' + str(i['num_a1_words_incidence']))
-        print('Number of A2 vocabulary in the text: ' + str(i['num_a2_words']))
-        print('Incidence score of A2 vocabulary  (per 1000 words): ' + str(i['num_a2_words_incidence']))
-        print('Number of B1 vocabulary in the text: ' + str(i['num_b1_words']))
-        print('Incidence score of B1 vocabulary  (per 1000 words): ' + str(i['num_b1_words_incidence']))
-        print('Number of B2 vocabulary in the text: ' + str(i['num_b2_words']))
-        print('Incidence score of B2 vocabulary  (per 1000 words): ' + str(i['num_b2_words_incidence']))
-        print('Number of C1 vocabulary in the text: ' + str(i['num_c1_words']))
-        print('Incidence score of C1 vocabulary  (per 1000 words): ' + str(i['num_c1_words_incidence']))
-        print('Number of content words not in A1-C1 vocabulary: ' + str(i['num_content_words_not_a1_c1_words']))
-        print('Incidence score of content words not in A1-C1 vocabulary (per 1000 words): ' + str(
-            i['num_content_words_not_a1_c1_words_incidence']))
 
         print('Number of content words: ' + str(i['num_lexic_words']))
         print('Number of content words (incidence per 1000 words): ' + str(i['num_lexic_words_incidence']))
@@ -2264,11 +2286,12 @@ class Printer:
         print("Number of subordinate clauses: " + str(i['num_subord']))
         # Numero de sentencias subordinadas (incidence per 1000 words)
         print("Number of subordinate clauses (incidence per 1000 words): " + str(i['num_subord_incidence']))
-        # Numero de sentencias subordinadas relativas
-        print("Number of relative subordinate clauses: " + str(i['num_rel_subord']))
-        # Numero de sentencias subordinadas relativas (incidence per 1000 words)
-        print(
-            "Number of relative subordinate clauses (incidence per 1000 words): " + str(i['num_rel_subord_incidence']))
+        if self.language == "english":
+            # Numero de sentencias subordinadas relativas
+            print("Number of relative subordinate clauses: " + str(i['num_rel_subord']))
+            # Numero de sentencias subordinadas relativas (incidence per 1000 words)
+            print(
+                "Number of relative subordinate clauses (incidence per 1000 words): " + str(i['num_rel_subord_incidence']))
         # Marcas de puntuacion por sentencia (media)
         print("Punctuation marks per sentence (mean): " + str(i['num_punct_marks_per_sentence']))
         print('Number of propositions: ' + str(i['num_total_prop']))
@@ -2279,15 +2302,16 @@ class Printer:
         print('Mean of the number of NPs per sentence: ' + str(i['mean_np_per_sentence']))
         print('Noun phrase density, incidence (DRNP): ' + str(i['noun_phrase_density_incidence']))
         print('Verb phrase density, incidence (DRVP): ' + str(i['verb_phrase_density_incidence']))
-        # Numero de verbos en pasiva (total)
-        print("Number of passive voice verbs: " + str(i['num_pass']))
-        # Numero de verbos en pasiva (incidence per 1000 words)
-        print("Number of passive voice verbs (incidence per 1000 words): " + str(i['num_pass_incidence']))
-        # Porcentaje de verbos en pasiva
-        print("Mean of passive voice verbs: " + str(i['num_pass_mean']))
-        # Numero de verbos en pasiva que no tienen agente
-        print("Number of agentless passive voice verbs: " + str(i['num_agentless']))
-        print('Agentless passive voice density, incidence (DRPVAL): ' + str(i['agentless_passive_density_incidence']))
+        if self.language == "english":
+            # Numero de verbos en pasiva (total)
+            print("Number of passive voice verbs: " + str(i['num_pass']))
+            # Numero de verbos en pasiva (incidence per 1000 words)
+            print("Number of passive voice verbs (incidence per 1000 words): " + str(i['num_pass_incidence']))
+            # Porcentaje de verbos en pasiva
+            print("Mean of passive voice verbs: " + str(i['num_pass_mean']))
+            # Numero de verbos en pasiva que no tienen agente
+            print("Number of agentless passive voice verbs: " + str(i['num_agentless']))
+            print('Agentless passive voice density, incidence (DRPVAL): ' + str(i['agentless_passive_density_incidence']))
         print("Number of negative words: " + str(i['num_neg']))
         print('Negation density, incidence (DRNEG): ' + str(i['negation_density_incidence']))
         print("Number of verbs in gerund form: " + str(i['num_ger']))
@@ -2491,26 +2515,27 @@ class Printer:
         estfile.write("\n%s" % 'Mean of rare lexical words (word frequency <= 4): ' + str(i['mean_rare_4']))
         estfile.write(
             "\n%s" % 'Mean of distinct rare lexical words (word frequency <= 4): ' + str(i['mean_distinct_rare_4']))
-        estfile.write("\n%s" % 'Vocabulary Knowledge')
-        estfile.write("\n%s" % 'Number of A1 vocabulary in the text: ' + str(i['num_a1_words']))
-        estfile.write(
-            "\n%s" % 'Incidence score of A1 vocabulary  (per 1000 words): ' + str(i['num_a1_words_incidence']))
-        estfile.write("\n%s" % 'Number of A2 vocabulary in the text: ' + str(i['num_a2_words']))
-        estfile.write(
-            "\n%s" % 'Incidence score of A2 vocabulary  (per 1000 words): ' + str(i['num_a2_words_incidence']))
-        estfile.write("\n%s" % 'Number of B1 vocabulary in the text: ' + str(i['num_b1_words']))
-        estfile.write(
-            "\n%s" % 'Incidence score of B1 vocabulary  (per 1000 words): ' + str(i['num_b1_words_incidence']))
-        estfile.write("\n%s" % 'Number of B2 vocabulary in the text: ' + str(i['num_b2_words']))
-        estfile.write(
-            "\n%s" % 'Incidence score of B2 vocabulary  (per 1000 words): ' + str(i['num_b2_words_incidence']))
-        estfile.write("\n%s" % 'Number of C1 vocabulary in the text: ' + str(i['num_c1_words']))
-        estfile.write(
-            "\n%s" % 'Incidence score of C1 vocabulary  (per 1000 words): ' + str(i['num_c1_words_incidence']))
-        estfile.write(
-            "\n%s" % 'Number of content words not in A1-C1 vocabulary: ' + str(i['num_content_words_not_a1_c1_words']))
-        estfile.write("\n%s" % 'Incidence score of content words not in A1-C1 vocabulary (per 1000 words): ' + str(
-            i['num_content_words_not_a1_c1_words_incidence']))
+        if self.language == "english":
+            estfile.write("\n%s" % 'Vocabulary Knowledge')
+            estfile.write("\n%s" % 'Number of A1 vocabulary in the text: ' + str(i['num_a1_words']))
+            estfile.write(
+                "\n%s" % 'Incidence score of A1 vocabulary  (per 1000 words): ' + str(i['num_a1_words_incidence']))
+            estfile.write("\n%s" % 'Number of A2 vocabulary in the text: ' + str(i['num_a2_words']))
+            estfile.write(
+                "\n%s" % 'Incidence score of A2 vocabulary  (per 1000 words): ' + str(i['num_a2_words_incidence']))
+            estfile.write("\n%s" % 'Number of B1 vocabulary in the text: ' + str(i['num_b1_words']))
+            estfile.write(
+                "\n%s" % 'Incidence score of B1 vocabulary  (per 1000 words): ' + str(i['num_b1_words_incidence']))
+            estfile.write("\n%s" % 'Number of B2 vocabulary in the text: ' + str(i['num_b2_words']))
+            estfile.write(
+                "\n%s" % 'Incidence score of B2 vocabulary  (per 1000 words): ' + str(i['num_b2_words_incidence']))
+            estfile.write("\n%s" % 'Number of C1 vocabulary in the text: ' + str(i['num_c1_words']))
+            estfile.write(
+                "\n%s" % 'Incidence score of C1 vocabulary  (per 1000 words): ' + str(i['num_c1_words_incidence']))
+            estfile.write(
+                "\n%s" % 'Number of content words not in A1-C1 vocabulary: ' + str(i['num_content_words_not_a1_c1_words']))
+            estfile.write("\n%s" % 'Incidence score of content words not in A1-C1 vocabulary (per 1000 words): ' + str(
+                i['num_content_words_not_a1_c1_words_incidence']))
         estfile.write("\n%s" % 'Syntactic Features / POS ratios')
         estfile.write("\n%s" % 'Number of content words: ' + str(i['num_lexic_words']))
         estfile.write(
@@ -2535,9 +2560,10 @@ class Printer:
         estfile.write("\n%s" % 'Number of subordinate clauses: ' + str(i['num_subord']))
         estfile.write(
             "\n%s" % 'Number of subordinate clauses (incidence per 1000 words): ' + str(i['num_subord_incidence']))
-        estfile.write("\n%s" % 'Number of relative subordinate clauses: ' + str(i['num_rel_subord']))
-        estfile.write("\n%s" % 'Number of relative subordinate clauses (incidence per 1000 words): ' + str(
-            i['num_rel_subord_incidence']))
+        if self.language == "english":
+            estfile.write("\n%s" % 'Number of relative subordinate clauses: ' + str(i['num_rel_subord']))
+            estfile.write("\n%s" % 'Number of relative subordinate clauses (incidence per 1000 words): ' + str(
+                i['num_rel_subord_incidence']))
         estfile.write("\n%s" % 'Punctuation marks per sentence (mean): ' + str(i['num_punct_marks_per_sentence']))
         estfile.write("\n%s" % 'Number of propositions: ' + str(i['num_total_prop']))
         estfile.write(
@@ -2546,13 +2572,14 @@ class Printer:
         estfile.write("\n%s" % 'Mean of the number of NPs per sentence: ' + str(i['mean_np_per_sentence']))
         estfile.write("\n%s" % 'Noun phrase density, incidence (DRNP): ' + str(i['noun_phrase_density_incidence']))
         estfile.write("\n%s" % 'Verb phrase density, incidence (DRVP): ' + str(i['verb_phrase_density_incidence']))
-        estfile.write("\n%s" % "Number of passive voice verbs: " + str(i['num_pass']))
-        estfile.write(
-            "\n%s" % "Number of passive voice verbs (incidence per 1000 words): " + str(i['num_pass_incidence']))
-        estfile.write("\n%s" % "Mean of passive voice verbs: " + str(i['num_pass_mean']))
-        estfile.write("\n%s" % "Number of agentless passive voice verbs: " + str(i['num_agentless']))
-        estfile.write("\n%s" % 'Agentless passive voice density, incidence (DRPVAL): ' + str(
-            i['agentless_passive_density_incidence']))
+        if self.language == "english":
+            estfile.write("\n%s" % "Number of passive voice verbs: " + str(i['num_pass']))
+            estfile.write(
+                "\n%s" % "Number of passive voice verbs (incidence per 1000 words): " + str(i['num_pass_incidence']))
+            estfile.write("\n%s" % "Mean of passive voice verbs: " + str(i['num_pass_mean']))
+            estfile.write("\n%s" % "Number of agentless passive voice verbs: " + str(i['num_agentless']))
+            estfile.write("\n%s" % 'Agentless passive voice density, incidence (DRPVAL): ' + str(
+                i['agentless_passive_density_incidence']))
         estfile.write("\n%s" % "Number of negative words: " + str(i['num_neg']))
         estfile.write("\n%s" % 'Negation density, incidence (DRNEG): ' + str(i['negation_density_incidence']))
         estfile.write("\n%s" % "Number of verbs in gerund form: " + str(i['num_ger']))
@@ -2671,15 +2698,18 @@ class Printer:
         # Anade en estas listas las que no quieras mostrar para todos los casos
         ignore_list = []
         # ignore language specific features
-        ignore_list_eu = ['flesch_kincaid','dale-chall','smog','addition_connectives','addition_connectives_incidence','consequence_connectives','consequence_connectives_incidence',
+        ignore_list_eu = ['num_rel_subord','num_rel_subord_incidence','num_pass','num_pass_incidence','num_mean','num_agentless','agentless_passive_density_incidence','flesch_kincaid','dale-chall','smog','addition_connectives','addition_connectives_incidence','consequence_connectives','consequence_connectives_incidence',
         'purpose_connectives','purpose_connectives_incidence','illustration_connectives','illustration_connectives_incidence',
         'opposition_connectives','opposition_connectives_incidence','order_connectives','order_connectives_incidence','reference_connectives',
-        'reference_connectives_incidence','summary_connectives','summary_connectives_incidence', 'num_past_irregular', 'num_past_irregular_incidence','num_past_irregular_mean']
+        'reference_connectives_incidence','summary_connectives','summary_connectives_incidence', 'num_past_irregular', 'num_past_irregular_incidence','num_past_irregular_mean',
+        'num_a1_words', 'num_a1_words_incidence', 'num_a2_words', 'num_a2_words_incidence','num_b1_words', 'num_b1_words_incidence', 'num_b2_words', 'num_b2_words_incidence',
+        'num_c1_words', 'num_c1_words_incidence', 'num_content_words_not_a1_c1_words','num_content_words_not_a1_c1_words_incidence']
         ignore_list_en = ['flesch_kincaid','dale-chall','smog','addition_connectives','addition_connectives_incidence','consequence_connectives','consequence_connectives_incidence',
         'purpose_connectives','purpose_connectives_incidence','illustration_connectives','illustration_connectives_incidence',
         'opposition_connectives','opposition_connectives_incidence','order_connectives','order_connectives_incidence','reference_connectives',
         'reference_connectives_incidence','summary_connectives','summary_connectives_incidence']
-        ignore_list_es = ['logical_connectives','logical_connectives_incidence','adversative_connectives','adversative_connectives_incidence']
+        ignore_list_es = ['num_rel_subord','num_rel_subord_incidence','num_pass','num_pass_incidence','num_mean','num_agentless','agentless_passive_density_incidence','logical_connectives','logical_connectives_incidence','adversative_connectives','adversative_connectives_incidence','dale-chall','smog',
+        'num_a1_words','num_a1_words_incidence','num_a2_words','num_a2_words_incidence','num_b1_words','num_b1_words_incidence','num_b2_words','num_b2_words_incidence','num_c1_words','num_c1_words_incidence','num_content_words_not_a1_c1_words','num_content_words_not_a1_c1_words_incidence']
         # ignore counters: only incidence, ratios, mean and std
         ignore_list_counters = ['prop', 'num_complex_words', 'num_words_more_3_syl', 'num_words', 'num_different_forms',
                                 'num_words_with_punct', 'num_paragraphs', 'num_sentences', 'num_past', 'num_pres',
@@ -3126,14 +3156,14 @@ class Main(object):
         conn = Connectives(language)
         conn.load()
 
-        # Carga Verbos Irregulares
-        if language == "english" or language == "spanish":
-            irrv= Irregularverbs(language)
-            irrv.load()
         # Carga Niveles Oxford
         if language == "english":
             ox = Oxford()
             ox.load()
+
+        # Carga verbos irregulares
+        ir = Irregularverbs(language)
+        ir.load()
 
         # Carga StopWords
         stopw = Stopwords(language)
