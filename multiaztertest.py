@@ -277,21 +277,21 @@ class Document:
         self.calculate_lemma_adv_ttr()
         self.calculate_lemma_content_ttr()
 
-    def get_ambiguity_level(self, word, FLAG):
+    def get_ambiguity_level(self, word, FLAG, wn_lang):
         if FLAG == 'NOUN':
-            ambiguity_level = len(wn.synsets(word, pos='n'))
+            ambiguity_level = len(wn.synsets(word, pos='n', lang=wn_lang))
         elif FLAG == 'ADJ':
-            ambiguity_level = len(wn.synsets(word, pos='a'))
+            ambiguity_level = len(wn.synsets(word, pos='a', lang=wn_lang))
         elif FLAG == 'ADV':
-            ambiguity_level = len(wn.synsets(word, pos='r'))
+            ambiguity_level = len(wn.synsets(word, pos='r', lang=wn_lang))
         else:
-            ambiguity_level = len(wn.synsets(word, pos='v'))
+            ambiguity_level = len(wn.synsets(word, pos='v', lang=wn_lang))
         return ambiguity_level
 
-    def get_abstraction_level(self, word, FLAG):
+    def get_abstraction_level(self, word, FLAG, wn_lang):
         abstraction_level = 0
-        if len(wn.synsets(word, pos=FLAG)) > 0:
-            abstraction_level = len(wn.synsets(word, pos=FLAG)[0].hypernym_paths()[0])
+        if len(wn.synsets(word, pos=FLAG, lang=wn_lang)) > 0:
+            abstraction_level = len(wn.synsets(word, pos=FLAG, lang=wn_lang)[0].hypernym_paths()[0])
         return abstraction_level
 
     def calculate_mean_depth_per_sentence(self, depth_list):
@@ -757,6 +757,13 @@ class Document:
         # subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
         decendents_total = 0
         text_without_punctuation = []
+        # Wordnet config lang
+        if self.language == "english":
+            self.wn_lang = "eng"
+        elif self.language == "basque":
+            self.wn_lang = "eus"
+        elif self.language == "spanish":
+            self.wn_lang = "spa"
         if similarity:
             print("similarity")
             # Fasttext embbeding
@@ -934,21 +941,19 @@ class Document:
                                 i['num_words_more_3_syl'] += 1
                             if (w.is_lexic_word(s)):
                                 i['num_lexic_words'] += 1
-                                if wn.synsets(w.text):
+                                if wn.synsets(w.text, lang=self.wn_lang):
                                     if w.is_noun():
                                         self.aux_lists['noun_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'n'))
+                                            self.get_abstraction_level(w.text, 'n', self.wn_lang))
                                         self.aux_lists['noun_verb_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'n'))
+                                            self.get_abstraction_level(w.text, 'n', self.wn_lang))
                                     elif w.is_verb(s):
                                         self.aux_lists['verb_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'v'))
+                                            self.get_abstraction_level(w.text, 'v', self.wn_lang))
                                         self.aux_lists['noun_verb_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'v'))
+                                            self.get_abstraction_level(w.text, 'v', self.wn_lang))
                                     self.aux_lists['ambiguity_content_words_list'].append(
-                                        self.get_ambiguity_level(w.text, w.upos))
-                            if w.text.lower() not in self.aux_lists['different_forms']:
-                                self.aux_lists['different_forms'].append(w.text.lower())
+                                        self.get_ambiguity_level(w.text, w.upos, self.wn_lang))
                             if w.text.lower() not in self.aux_lists['different_forms']:
                                 self.aux_lists['different_forms'].append(w.text.lower())
                             if w.lemma not in self.aux_lists['different_lemmas'] and w.lemma is not None:
@@ -1457,42 +1462,24 @@ class Word:
 
     def is_first_person_pronoun(self, language):
         atributos = self.feats.split('|')
-        if language == "basque":
-            if 'Person[erg]=1' in atributos:
-                return True
-            else:
-                return False
+        if 'PronType=Prs' in atributos and 'Person=1' in atributos:
+            return True
         else:
-            if 'PronType=Prs' in atributos and 'Person=1' in atributos:
-                return True
-            else:
-                return False
+            return False
 
     def is_third_personal_pronoun(self, language):
         atributos = self.feats.split('|')
-        if language == "basque":
-            if 'Person[erg]=3' in atributos:
-                return True
-            else:
-                return False
+        if 'PronType=Prs' in atributos and 'Person=3' in atributos:
+            return True
         else:
-            if 'PronType=Prs' in atributos and 'Person=3' in atributos:
-                return True
-            else:
-                return False
+            return False
 
     def is_first_personal_pronoun_sing(self, language):
         atributos = self.feats.split('|')
-        if language == "basque":
-            if 'Person[erg]=1' in atributos and 'Number[erg]=Sing' in atributos:
-                return True
-            else:
-                return False
+        if 'PronType=Prs' in atributos and 'Person=1' in atributos and 'Number=Sing' in atributos:
+            return True
         else:
-            if 'PronType=Prs' in atributos and 'Person=1' in atributos and 'Number=Sing' in atributos:
-                return True
-            else:
-                return False
+            return False
 
     def num_syllables(self,lang):
         list = []
@@ -2012,13 +1999,13 @@ class Printer:
             print('Number of content words not in A1-C1 vocabulary: ' + str(i['num_content_words_not_a1_c1_words']))
             print('Incidence score of content words not in A1-C1 vocabulary (per 1000 words): ' + str(
                 i['num_content_words_not_a1_c1_words_incidence']))
-
-        print("Number of verbs in past tense: " + str(i['num_past']))
-        print("Number of verbs in past tense (incidence per 1000 words): " + str(i['num_past_incidence']))
-        print("Number of verbs in present tense: " + str(i['num_pres']))
-        print("Number of verbs in present tense (incidence per 1000 words): " + str(i['num_pres_incidence']))
-        print("Number of verbs in future tense: " + str(i['num_future']))
-        print("Number of verbs in future tense (incidence per 1000 words): " + str(i['num_future_incidence']))
+        if self.language != "basque":
+            print("Number of verbs in past tense: " + str(i['num_past']))
+            print("Number of verbs in past tense (incidence per 1000 words): " + str(i['num_past_incidence']))
+            print("Number of verbs in present tense: " + str(i['num_pres']))
+            print("Number of verbs in present tense (incidence per 1000 words): " + str(i['num_pres_incidence']))
+            print("Number of verbs in future tense: " + str(i['num_future']))
+            print("Number of verbs in future tense (incidence per 1000 words): " + str(i['num_future_incidence']))
 
         # Numero de verbos en modo indicativo
         print("Number of verbs in indicative mood: " + str(i['num_indic']))
@@ -2026,14 +2013,15 @@ class Printer:
         # Numero de verbos en modo imperativo
         print("Number of verbs in imperative mood: " + str(i['num_impera']))
         print("Number of verbs in imperative mood (incidence per 1000 words): " + str(i['num_impera_incidence']))
-        # Numero de verbos en pasado que son irregulares (total)
-        print("Number of irregular verbs in past tense: " + str(i['num_past_irregular']))
-        # Numero de verbos en pasado que son irregulares (incidencia 1000 words)
-        print("Number of irregular verbs in past tense (incidence per 1000 words): " + str(
-            i['num_past_irregular_incidence']))
-        # Porcentaje de verbos en pasado que son irregulares sobre total de verbos en pasado
-        print("Mean of irregular verbs in past tense in relation to the number of verbs in past tense: " + str(
-            i['num_past_irregular_mean']))
+        # Numero de verbos en pasado que son irregulares
+        if self.language != "basque":
+            print("Number of irregular verbs in past tense: " + str(i['num_past_irregular']))
+            # Numero de verbos en pasado que son irregulares (incidencia 1000 words)
+            print("Number of irregular verbs in past tense (incidence per 1000 words): " + str(
+                i['num_past_irregular_incidence']))
+            # Porcentaje de verbos en pasado que son irregulares sobre total de verbos en pasado
+            print("Mean of irregular verbs in past tense in relation to the number of verbs in past tense: " + str(
+                i['num_past_irregular_mean']))
         # Number of personal pronouns
         print("Number of personal pronouns: " + str(i['num_personal_pronouns']))
         # Incidence score of pronouns (per 1000 words)
@@ -2155,8 +2143,9 @@ class Printer:
             print('Agentless passive voice density, incidence (DRPVAL): ' + str(i['agentless_passive_density_incidence']))
         print("Number of negative words: " + str(i['num_neg']))
         print('Negation density, incidence (DRNEG): ' + str(i['negation_density_incidence']))
-        print("Number of verbs in gerund form: " + str(i['num_ger']))
-        print('Gerund density, incidence (DRGERUND): ' + str(i['gerund_density_incidence']))
+        if self.language != "basque":
+            print("Number of verbs in gerund form: " + str(i['num_ger']))
+            print('Gerund density, incidence (DRGERUND): ' + str(i['gerund_density_incidence']))
         print("Number of verbs in infinitive form: " + str(i['num_inf']))
         print('Infinitive density, incidence (DRINF): ' + str(i['infinitive_density_incidence']))
 
@@ -2298,27 +2287,28 @@ class Printer:
             estfile.write("\n%s" % 'Dale-Chall readability formula: ' + str(i['dale_chall']))
             estfile.write("\n%s" % 'Simple Measure Of Gobbledygook (SMOG) grade: ' + str(i['smog']))
         estfile.write("\n%s" % 'Morphological features')
-        estfile.write("\n%s" % 'Number of verbs in past tense: ' + str(i['num_past']))
-        estfile.write(
-            "\n%s" % 'Number of verbs in past tense (incidence per 1000 words): ' + str(i['num_past_incidence']))
-        estfile.write("\n%s" % 'Number of verbs in present tense: ' + str(i['num_pres']))
-        estfile.write(
-            "\n%s" % 'Number of verbs in present tense (incidence per 1000 words): ' + str(i['num_pres_incidence']))
-        estfile.write("\n%s" % 'Number of verbs in future tense: ' + str(i['num_future']))
-        estfile.write(
-            "\n%s" % 'Number of verbs in future tense (incidence per 1000 words): ' + str(i['num_future_incidence']))
-        estfile.write("\n%s" % 'Number of verbs in indicative mood: ' + str(i['num_indic']))
-        estfile.write(
-            "\n%s" % 'Number of verbs in indicative mood (incidence per 1000 words): ' + str(i['num_indic_incidence']))
-        estfile.write("\n%s" % 'Number of verbs in imperative mood: ' + str(i['num_impera']))
-        estfile.write(
-            "\n%s" % 'Number of verbs in imperative mood (incidence per 1000 words): ' + str(i['num_impera_incidence']))
-        estfile.write("\n%s" % 'Number of irregular verbs in past tense: ' + str(i['num_past_irregular']))
-        estfile.write("\n%s" % 'Number of irregular verbs in past tense (incidence per 1000 words): ' + str(
-            i['num_past_irregular_incidence']))
-        estfile.write(
-            "\n%s" % 'Mean of irregular verbs in past tense in relation to the number of verbs in past tense: ' + str(
-                i['num_past_irregular_mean']))
+        if self.language != "basque":
+            estfile.write("\n%s" % 'Number of verbs in past tense: ' + str(i['num_past']))
+            estfile.write(
+                "\n%s" % 'Number of verbs in past tense (incidence per 1000 words): ' + str(i['num_past_incidence']))
+            estfile.write("\n%s" % 'Number of verbs in present tense: ' + str(i['num_pres']))
+            estfile.write(
+                "\n%s" % 'Number of verbs in present tense (incidence per 1000 words): ' + str(i['num_pres_incidence']))
+            estfile.write("\n%s" % 'Number of verbs in future tense: ' + str(i['num_future']))
+            estfile.write(
+                "\n%s" % 'Number of verbs in future tense (incidence per 1000 words): ' + str(i['num_future_incidence']))
+            estfile.write("\n%s" % 'Number of verbs in indicative mood: ' + str(i['num_indic']))
+            estfile.write(
+                "\n%s" % 'Number of verbs in indicative mood (incidence per 1000 words): ' + str(i['num_indic_incidence']))
+            estfile.write("\n%s" % 'Number of verbs in imperative mood: ' + str(i['num_impera']))
+            estfile.write(
+                "\n%s" % 'Number of verbs in imperative mood (incidence per 1000 words): ' + str(i['num_impera_incidence']))
+            estfile.write("\n%s" % 'Number of irregular verbs in past tense: ' + str(i['num_past_irregular']))
+            estfile.write("\n%s" % 'Number of irregular verbs in past tense (incidence per 1000 words): ' + str(
+                i['num_past_irregular_incidence']))
+            estfile.write(
+                "\n%s" % 'Mean of irregular verbs in past tense in relation to the number of verbs in past tense: ' + str(
+                    i['num_past_irregular_mean']))
         estfile.write("\n%s" % 'Number of personal pronouns: ' + str(i['num_personal_pronouns']))
         estfile.write(
             "\n%s" % 'Incidence score of pronouns (per 1000 words): ' + str(i['num_personal_pronouns_incidence']))
@@ -2423,8 +2413,9 @@ class Printer:
                 i['agentless_passive_density_incidence']))
         estfile.write("\n%s" % "Number of negative words: " + str(i['num_neg']))
         estfile.write("\n%s" % 'Negation density, incidence (DRNEG): ' + str(i['negation_density_incidence']))
-        estfile.write("\n%s" % "Number of verbs in gerund form: " + str(i['num_ger']))
-        estfile.write("\n%s" % 'Gerund density, incidence (DRGERUND): ' + str(i['gerund_density_incidence']))
+        if self.language != "basque":
+            estfile.write("\n%s" % "Number of verbs in gerund form: " + str(i['num_ger']))
+            estfile.write("\n%s" % 'Gerund density, incidence (DRGERUND): ' + str(i['gerund_density_incidence']))
         estfile.write("\n%s" % "Number of verbs in infinitive form: " + str(i['num_inf']))
         estfile.write("\n%s" % 'Infinitive density, incidence (DRINF): ' + str(i['infinitive_density_incidence']))
         estfile.write("\n%s" % 'Semantics. Readability')
@@ -2539,7 +2530,7 @@ class Printer:
         # Anade en estas listas las que no quieras mostrar para todos los casos
         ignore_list = []
         # ignore language specific features
-        ignore_list_eu = ['num_rel_subord','num_rel_subord_incidence','num_pass','num_pass_incidence','num_mean','num_agentless','agentless_passive_density_incidence','flesch_kincaid','dale-chall','smog','addition_connectives','addition_connectives_incidence','consequence_connectives','consequence_connectives_incidence',
+        ignore_list_eu = ['gerund_density_incidence','num_past','num_past_incidence', 'num_pres','num_pres_incidence','num_future','num_future_incidence','num_rel_subord','num_rel_subord_incidence','num_pass','num_pass_incidence','num_mean','num_agentless','agentless_passive_density_incidence','flesch_kincaid','dale-chall','smog','addition_connectives','addition_connectives_incidence','consequence_connectives','consequence_connectives_incidence',
         'purpose_connectives','purpose_connectives_incidence','illustration_connectives','illustration_connectives_incidence',
         'opposition_connectives','opposition_connectives_incidence','order_connectives','order_connectives_incidence','reference_connectives',
         'reference_connectives_incidence','summary_connectives','summary_connectives_incidence', 'num_past_irregular', 'num_past_irregular_incidence','num_past_irregular_mean',
