@@ -50,7 +50,7 @@ function pruebaobtenerdatosmultiaztertest()
 cd /media/datos/Dropbox/ikerkuntza/metrix-env
 source bin/activate
 cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
-python3 multiaztertest.py -s -c -r -f  Loterry-adv.txt -l english -m stanford -d /home/kepa
+python3 multiaztertest.py -c -r -f  Loterry-adv.txt -l english -m stanford -d /home/kepa
 }
 function obtenerdatos3niveles()
 {
