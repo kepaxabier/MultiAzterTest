@@ -1879,334 +1879,340 @@ class Printer:
         self.indicators = indicators
         self.language = language
         self.similarity = similarity
+        self.ind_sentences = {}
+
+    def load_ind_sentences(self):
+        self.ind_sentences['num_words'] = "Number of words (total): "
+        # The number of distints lower and alfabetic words
+        self.ind_sentences['num_different_forms'] = "Number of distinct words (total): "
+        self.ind_sentences['num_words_with_punct'] = "Number of words with punctuation (total): "
+        self.ind_sentences['num_paragraphs'] = "Number of paragraphs (total): "
+        self.ind_sentences['num_paragraphs_incidence'] = "Number of paragraphs (incidence per 1000 words): "
+        self.ind_sentences['num_sentences'] = "Number of sentences (total): "
+        self.ind_sentences['num_sentences_incidence'] = "Number of sentences (incidence per 1000 words): "
+        # Numero de frases en un parrafo (media)
+        self.ind_sentences['sentences_per_paragraph_mean'] = "Length of paragraphs (mean): "
+        # Numero de frases en un parrafo (desv. Tipica)
+        self.ind_sentences['sentences_per_paragraph_std'] = "Standard deviation of length of paragraphs: "
+        self.ind_sentences['sentences_length_mean'] = "Number of words (length) in sentences (mean): "
+        self.ind_sentences['sentences_length_std'] = "Number of words (length) in sentences (standard deviation): "
+        self.ind_sentences['sentences_length_no_stopwords_mean'] = "Number of words (length) of sentences without " \
+                                                                   "stopwords (mean): "
+        self.ind_sentences['sentences_length_no_stopwords_std'] = "Number of words (length) of sentences without " \
+                                                                  "stopwords (standard deviation): "
+        self.ind_sentences['num_syllables_words_mean'] = "Mean number of syllables (length) in words: "
+        self.ind_sentences['num_syllables_words_std'] = "Standard deviation of the mean number of syllables in words: "
+        self.ind_sentences['words_length_mean'] = "Mean number of letters (length) in words: "
+        self.ind_sentences['words_length_std'] = "Standard deviation of number of letters in words: "
+        self.ind_sentences['words_length_no_stopwords_mean'] = "Mean number of letters (length) in words without " \
+                                                               "stopwords: "
+        self.ind_sentences['words_length_no_stopwords_std'] = "Standard deviation of the mean number of letter in " \
+                                                              "words without stopwords: "
+        self.ind_sentences['lemmas_length_mean'] = "Mean number of letters (length) in lemmas: "
+        self.ind_sentences['lemmas_length_std'] = "Standard deviation of letters (length) in lemmas: "
+        self.ind_sentences['lexical_density'] = "Lexical Density: "
+        self.ind_sentences['noun_density'] = "Noun Density: "
+        self.ind_sentences['verb_density'] = "Verb Density: "
+        self.ind_sentences['adj_density'] = "Adjective Density: "
+        self.ind_sentences['adv_density'] = "Adverb Density: "
+        # calculate_ratio_proper_nouns_per_nouns
+        self.ind_sentences['ratio_proper_nouns_per_nouns'] = "Ratio of proper nouns for all nouns (proper and common nouns): "
+        # Simple TTR (Type-Token Ratio)
+        self.ind_sentences['simple_ttr'] = "STTR (Simple Type-Token Ratio) : "
+        # Content TTR (Content Type-Token Ratio)
+        self.ind_sentences['content_ttr'] = "CTTR (Content Type-Token Ratio): "
+        # NTTR (Noun Type-Token Ratio)
+        self.ind_sentences['nttr'] = "NTTR (Noun Type-Token Ratio): "
+        # PNTTR Proper Noun Type-Token Ratio
+        self.ind_sentences['pnttr'] = "PNTTR (Proper Noun Type-Token Ratio): "
+        # VTTR (Verb Type-Token Ratio)(incidence per 1000 words)
+        self.ind_sentences['vttr'] = "VTTR (Verb Type-Token Ratio): "
+        # AdjTTR (Adj Type-Token Ratio)
+        self.ind_sentences['adj_ttr'] = "AdjTTR (Adj Type-Token Ratio): "
+        # AdvTTR (Adv Type-Token Ratio)
+        self.ind_sentences['adv_ttr'] = "AdvTTR (Adv Type-Token Ratio): "
+        # Lemma Simple TTR (Type-Token Ratio)
+        self.ind_sentences['lemma_ttr'] = "LSTTR (Lemma Simple Type-Token Ratio): "
+        # Lemma Content TTR (Content Type-Token Ratio)
+        self.ind_sentences['lemma_content_ttr'] = "LCTTR (Lemma Content Type-Token Ratio): "
+        # LNTTR (Lemma Noun Type-Token Ratio)
+        self.ind_sentences['lemma_nttr'] = "LNTTR (Lemma Noun Type-Token Ratio) "
+        # LVTTR (Lemma Verb Type-Token Ratio)
+        self.ind_sentences['lemma_vttr'] = "LVTTR (Lemma Verb Type-Token Ratio): "
+        # Lemma AdjTTR (Lemma Adj Type-Token Ratio)
+        self.ind_sentences['lemma_adj_ttr'] = "LAdjTTR (Lemma Adj Type-Token Ratio): "
+        # Lemma AdvTTR (Lemma Adv Type-Token Ratio)
+        self.ind_sentences['lemma_adv_ttr'] = "LAdvTTR (Lemma Adv Type-Token Ratio): "
+        # Honore
+        self.ind_sentences['honore'] = "Honore Lexical Density: "
+        # Maas
+        self.ind_sentences['maas'] = "Maas Lexical Density: "
+        # MTLD
+        self.ind_sentences['mtld'] = "Measure of Textual Lexical Diversity (MTLD): "
+        # Flesch readability ease=206.835-1.015(n.º de words/nº de frases)-84.6(n.º de silabas/numero de words)
+        self.ind_sentences['flesch'] = "Flesch readability ease: "
+        # Flesch-Kincaid grade level =0.39 * (n.º de words/nº de frases) + 11.8 * (n.º de silabas/numero de words) – 15.59)
+        self.ind_sentences['flesch_kincaid'] = "Flesch-Kincaid Grade level: "
+        self.ind_sentences['dale_chall'] = "Dale-Chall readability formula: "
+        self.ind_sentences['smog'] = "Simple Measure Of Gobbledygook (SMOG) grade: "
+        self.ind_sentences['num_a1_words'] = "Number of A1 vocabulary in the text: "
+        self.ind_sentences['num_a1_words_incidence'] = "Incidence score of A1 vocabulary  (per 1000 words): "
+        self.ind_sentences['num_a2_words'] = "Number of A2 vocabulary in the text: "
+        self.ind_sentences['num_a2_words_incidence'] = "Incidence score of A2 vocabulary  (per 1000 words): "
+        self.ind_sentences['num_b1_words'] = "Number of B1 vocabulary in the text: "
+        self.ind_sentences['num_b1_words_incidence'] = "Incidence score of B1 vocabulary  (per 1000 words): "
+        self.ind_sentences['num_b2_words'] = "Number of B2 vocabulary in the text: "
+        self.ind_sentences['num_b2_words_incidence'] = "Incidence score of B2 vocabulary  (per 1000 words): "
+        self.ind_sentences['num_c1_words'] = "Number of C1 vocabulary in the text: "
+        self.ind_sentences['num_c1_words_incidence'] = "Incidence score of C1 vocabulary  (per 1000 words): "
+        self.ind_sentences['num_content_words_not_a1_c1_words'] = "Number of content words not in A1-C1 vocabulary: "
+        self.ind_sentences['num_content_words_not_a1_c1_words_incidence'] = "Incidence score of content words not in " \
+                                                                            "A1-C1 vocabulary (per 1000 words): "
+        self.ind_sentences['num_past'] = "Number of verbs in past tense: "
+        self.ind_sentences['num_past_incidence'] = "Number of verbs in past tense (incidence per 1000 words): "
+        self.ind_sentences['num_pres'] = "Number of verbs in present tense: "
+        self.ind_sentences['num_pres_incidence'] = "Number of verbs in present tense (incidence per 1000 words): "
+        self.ind_sentences['num_future'] = "Number of verbs in future tense: "
+        self.ind_sentences['num_future_incidence'] = "Number of verbs in future tense (incidence per 1000 words): "
+        # Numero de verbos en modo indicativo
+        self.ind_sentences['num_indic'] = "Number of verbs in indicative mood: "
+        self.ind_sentences['num_indic_incidence'] = "Number of verbs in indicative mood (incidence per 1000 words): "
+        # Numero de verbos en modo imperativo
+        self.ind_sentences['num_impera'] = "Number of verbs in imperative mood: "
+        self.ind_sentences['num_impera_incidence'] = "Number of verbs in imperative mood (incidence per 1000 words): "
+        # Numero de verbos en pasado que son irregulares
+        self.ind_sentences['num_past_irregular'] = "Number of irregular verbs in past tense: "
+        # Numero de verbos en pasado que son irregulares (incidencia 1000 words)
+        self.ind_sentences['num_past_irregular_incidence'] = "Number of irregular verbs in past tense (incidence per " \
+                                                             "1000 words): "
+        # Porcentaje de verbos en pasado que son irregulares sobre total de verbos en pasado
+        self.ind_sentences['num_past_irregular_mean'] = "Mean of irregular verbs in past tense in relation to the " \
+                                                        "number of verbs in past tense: "
+        # Number of personal pronouns
+        self.ind_sentences['num_personal_pronouns'] = "Number of personal pronouns: "
+        # Incidence score of pronouns (per 1000 words)
+        self.ind_sentences['num_personal_pronouns_incidence'] = "Incidence score of pronouns (per 1000 words): "
+        # Number of pronouns in first person
+        self.ind_sentences['num_first_pers_pron'] = "Number of pronouns in first person: "
+        # Incidence score of pronouns in first person  (per 1000 words)
+        self.ind_sentences['num_first_pers_pron_incidence'] = "Incidence score of pronouns in first person  (per 1000 " \
+                                                              "words): "
+        # Number of pronouns in first person singular
+        self.ind_sentences['num_first_pers_sing_pron'] = "Number of pronouns in first person singular: "
+        # Incidence score of pronouns in first person singular (per 1000 words)
+        self.ind_sentences['num_first_pers_sing_pron_incidence'] = "Incidence score of pronouns in first person " \
+                                                                   "singular (per 1000 words): "
+        # Number of pronouns in third person
+        self.ind_sentences['num_third_pers_pron'] = "Number of pronouns in third person: "
+        # Incidence score of pronouns in third person (per 1000 words)
+        self.ind_sentences['num_third_pers_pron_incidence'] = "Incidence score of pronouns in third person (per 1000 " \
+                                                              "words): "
+        self.ind_sentences['min_wf_per_sentence'] = "Minimum word frequency per sentence (mean): "
+        self.ind_sentences['num_rare_nouns'] = "Number of rare nouns: "
+        self.ind_sentences['num_rare_nouns_incidence'] = "Number of rare nouns (incidence per 1000 words): "
+        self.ind_sentences['num_rare_adj'] = "Number of rare adjectives: "
+        self.ind_sentences['num_rare_adj_incidence'] = "Number of rare adjectives (incidence per 1000 words): "
+        self.ind_sentences['num_rare_verbs'] = "Number of rare verbs: "
+        self.ind_sentences['num_rare_verbs_incidence'] = "Number of rare verbs (incidence per 1000 words): "
+        self.ind_sentences['num_rare_advb'] = "Number of rare adverbs: "
+        self.ind_sentences['num_rare_advb_incidence'] = "Number of rare adverbs (incidence per 1000 words): "
+        self.ind_sentences['num_rare_words'] = "Number of rare content words: "
+        self.ind_sentences['num_rare_words_incidence'] = "Number of rare content words (incidence per 1000 words): "
+        self.ind_sentences['num_dif_rare_words'] = "Number of distinct rare content words: "
+        self.ind_sentences['num_dif_rare_words_incidence'] = "Number of distinct rare content words (incidence per " \
+                                                             "1000 words): "
+        # The average of rare lexical words (whose word frequency value is less than 4) with respect to the total of lexical words
+        self.ind_sentences['mean_rare'] = "Mean of rare lexical words: "
+        # The average of distinct rare lexical words (whose word frequency value is less than 4) with respect to the total of distinct lexical words
+        self.ind_sentences['mean_distinct_rare'] = "Mean of distinct rare lexical words: "
+        self.ind_sentences['num_lexic_words'] = "Number of content words: "
+        self.ind_sentences['num_lexic_words_incidence'] = "Number of content words (incidence per 1000 words): "
+        self.ind_sentences['num_noun'] = "Number of nouns: "
+        self.ind_sentences['num_noun_incidence'] = "Number of nouns (incidence per 1000 words): "
+        self.ind_sentences['num_proper_noun'] = "Number of proper nouns: "
+        self.ind_sentences['num_proper_noun_incidence'] = "Number of proper nouns (incidence per 1000 words): "
+        self.ind_sentences['num_adj'] = "Number of adjectives: "
+        self.ind_sentences['num_adj_incidence'] = "Number of adjectives (incidence per 1000 words): "
+        self.ind_sentences['num_adv'] = "Number of adverbs: "
+        self.ind_sentences['num_adv_incidence'] = "Number of adverbs (incidence per 1000 words): "
+        self.ind_sentences['num_verb'] = "Number of verbs: "
+        self.ind_sentences['num_verb_incidence'] = "Number of verbs (incidence per 1000 words): "
+        # Left-Embeddedness
+        self.ind_sentences['left_embeddedness'] = "Left embeddedness (Mean of number of words before the main verb) (" \
+                                                  "SYNLE): "
+        self.ind_sentences['num_decendents_noun_phrase'] = "Number of decendents per noun phrase (mean): "
+        self.ind_sentences['num_modifiers_noun_phrase'] = "Number of modifiers per noun phrase (mean) (SYNNP): "
+        self.ind_sentences['mean_depth_per_sentence'] = "Mean of the number of levels of dependency tree (Depth): "
+        # Numero de sentencias subordinadas
+        self.ind_sentences['num_subord'] = "Number of subordinate clauses: "
+        # Numero de sentencias subordinadas (incidence per 1000 words)
+        self.ind_sentences['num_subord_incidence'] = "Number of subordinate clauses (incidence per 1000 words): "
+        # Numero de sentencias subordinadas relativas
+        self.ind_sentences['num_rel_subord'] = "Number of relative subordinate clauses: "
+        # Numero de sentencias subordinadas relativas (incidence per 1000 words)
+        self.ind_sentences['num_rel_subord_incidence'] = "Number of relative subordinate clauses (incidence per 1000 " \
+                                                         "words): "
+        # Marcas de puntuacion por sentencia (media)
+        self.ind_sentences['num_punct_marks_per_sentence'] = "Punctuation marks per sentence (mean): "
+        self.ind_sentences['num_total_prop'] = "Number of propositions: "
+        # Mean of the number of propositions per sentence
+        self.ind_sentences['mean_propositions_per_sentence'] = "Mean of the number of propositions per sentence: "
+        self.ind_sentences['mean_vp_per_sentence'] = "Mean of the number of VPs per sentence: "
+        self.ind_sentences['mean_np_per_sentence'] = "Mean of the number of NPs per sentence: "
+        self.ind_sentences['noun_phrase_density_incidence'] = "Noun phrase density, incidence (DRNP): "
+        self.ind_sentences['verb_phrase_density_incidence'] = "Verb phrase density, incidence (DRVP): "
+        # Numero de verbos en pasiva (total)
+        self.ind_sentences['num_pass'] = "Number of passive voice verbs: "
+        # Numero de verbos en pasiva (incidence per 1000 words)
+        self.ind_sentences['num_pass_incidence'] = "Number of passive voice verbs (incidence per 1000 words): "
+        # Porcentaje de verbos en pasiva
+        self.ind_sentences['num_pass_mean'] = "Mean of passive voice verbs: "
+        # Numero de verbos en pasiva que no tienen agente
+        self.ind_sentences['num_agentless'] = "Number of agentless passive voice verbs: "
+        self.ind_sentences['agentless_passive_density_incidence'] = "Agentless passive voice density, incidence (" \
+                                                                    "DRPVAL): "
+        self.ind_sentences['num_neg'] = "Number of negative words: "
+        self.ind_sentences['negation_density_incidence'] = "Negation density, incidence (DRNEG): "
+        self.ind_sentences['num_ger'] = "Number of verbs in gerund form: "
+        self.ind_sentences['gerund_density_incidence'] = "Gerund density, incidence (DRGERUND): "
+        self.ind_sentences['num_inf'] = "Number of verbs in infinitive form: "
+        self.ind_sentences['infinitive_density_incidence'] = "Infinitive density, incidence (DRINF): "
+        # Ambigüedad de una palabra (polysemy in WordNet)
+        self.ind_sentences['polysemic_index'] = "Mean values of polysemy in the WordNet lexicon: "
+        # Nivel de abstracción (hypernym in WordNet)
+        self.ind_sentences['hypernymy_verbs_index'] = "Mean hypernym values of verbs in the WordNet lexicon: "
+        self.ind_sentences['hypernymy_nouns_index'] = "Mean hypernym values of nouns in the WordNet lexicon: "
+        self.ind_sentences['hypernymy_index'] = "Mean hypernym values of nouns and verbs in the WordNet lexicon: "
+        # Textbase. Referential cohesion
+        self.ind_sentences['noun_overlap_adjacent'] = "Noun overlap, adjacent sentences, binary, mean (CRFNOl): "
+        self.ind_sentences['noun_overlap_all'] = "Noun overlap, all of the sentences in a paragraph or text, binary, " \
+                                                 "mean (CRFNOa): "
+        self.ind_sentences['argument_overlap_adjacent'] = "Argument overlap, adjacent sentences, binary, mean (" \
+                                                          "CRFAOl): "
+        self.ind_sentences['argument_overlap_all'] = "Argument overlap, all of the sentences in a paragraph or text, " \
+                                                     "binary, mean (CRFAOa): "
+        self.ind_sentences['stem_overlap_adjacent'] = "Stem overlap, adjacent sentences, binary, mean (CRFSOl): "
+        self.ind_sentences['stem_overlap_all'] = "Stem overlap, all of the sentences in a paragraph or text, binary, " \
+                                                 "mean (CRFSOa): "
+        self.ind_sentences['content_overlap_adjacent_mean'] = "Content word overlap, adjacent sentences, " \
+                                                              "proportional, mean (CRFCWO1): "
+        self.ind_sentences['content_overlap_adjacent_std'] = "Content word overlap, adjacent sentences, proportional, " \
+                                                             "standard deviation (CRFCWO1d): "
+        self.ind_sentences['content_overlap_all_mean'] = "Content word overlap, all of the sentences in a paragraph " \
+                                                         "or text, proportional, mean (CRFCWOa): "
+        self.ind_sentences['content_overlap_all_std'] = "Content word overlap, all of the sentences in a paragraph or " \
+                                                        "text, proportional, standard deviation (CRFCWOad): "
+        # Connectives
+        self.ind_sentences['all_connectives'] = "Number of connectives: "
+        self.ind_sentences['all_connectives_incidence'] = "Number of connectives (incidence per 1000 words): "
+        self.ind_sentences['causal_connectives'] = "Causal connectives: "
+        self.ind_sentences['causal_connectives_incidence'] = "Causal connectives (incidence per 1000 words): "
+        self.ind_sentences['temporal_connectives'] = "Temporal connectives:  "
+        self.ind_sentences['temporal_connectives_incidence'] = "Temporal connectives (incidence per 1000 words):  "
+        self.ind_sentences['conditional_connectives'] = "Conditional connectives: "
+        self.ind_sentences['conditional_connectives_incidence'] = "Conditional connectives (incidence per 1000 words): "
+        self.ind_sentences['logical_connectives'] = "Logical connectives:  "
+        self.ind_sentences['logical_connectives_incidence'] = "Logical connectives (incidence per 1000 words):  "
+        self.ind_sentences['adversative_connectives'] = "Adversative/contrastive connectives: "
+        self.ind_sentences['adversative_connectives_incidence'] = "Adversative/contrastive connectives (incidence per 1000 words): "
+        self.ind_sentences['addition_connectives'] = "Adition connectives:  "
+        self.ind_sentences['addition_connectives_incidence'] = "Adition connectives (incidence per 1000 words):  "
+        self.ind_sentences['consequence_connectives'] = "Consequence connectives: "
+        self.ind_sentences['consequence_connectives_incidence'] = "Consequence connectives (incidence per 1000 words): "
+        self.ind_sentences['purpose_connectives'] = "Purpose connectives:  "
+        self.ind_sentences['purpose_connectives_incidence'] = "Purpose connectives (incidence per 1000 words):  "
+        self.ind_sentences['illustration_connectives'] = "Illustration connectives: "
+        self.ind_sentences['illustration_connectives_incidence'] = "Illustration connectives (incidence per 1000 words): "
+        self.ind_sentences['opposition_connectives'] = "Opposition connectives:  "
+        self.ind_sentences['opposition_connectives_incidence'] = "Opposition connectives (incidence per 1000 words):  "
+        self.ind_sentences['order_connectives'] = "Order connectives: "
+        self.ind_sentences['order_connectives_incidence'] = "Order connectives (incidence per 1000 words): "
+        self.ind_sentences['reference_connectives'] = "Reference connectives:  "
+        self.ind_sentences['reference_connectives_incidence'] = "Reference connectives (incidence per 1000 words): "
+        self.ind_sentences['summary_connectives'] = "Summary connectives: "
+        self.ind_sentences['summary_connectives_incidence'] = "Summary connectives (incidence per 1000 words): "
+        self.ind_sentences['similarity_adjacent_mean'] = "Semantic Similarity between adjacent sentences (mean): "
+        self.ind_sentences['similarity_pairs_par_mean'] = "Semantic Similarity between all possible pairs of sentences in a paragraph (mean): "
+        self.ind_sentences['similarity_adjacent_par_mean'] = "Semantic Similarity between adjacent paragraphs (mean): "
+        self.ind_sentences['similarity_adjacent_std'] = "Semantic Similarity between adjacent sentences (standard deviation): "
+        self.ind_sentences['similarity_pairs_par_std'] = "Semantic Similarity between all possible pairs of sentences in a paragraph (standard deviation): "
+        self.ind_sentences['similarity_adjacent_par_std'] = "Semantic Similarity between adjacent paragraphs (standard deviation): "
+
+
+
 
     def print_info(self):
-        i = self.indicators
         print("------------------------------------------------------------------------------")
         # print('Level of difficulty: ' + prediction[0].title())
-        print("------------------------------------------------------------------------------")
-        print('Number of words (total): ' + str(i['num_words']))
-        # The number of distints lower and alfabetic words
-        print("Number of distinct words (total): " + str(i['num_different_forms']))
-        print('Number of words with punctuation (total): ' + str(i['num_words_with_punct']))
+        i = self.indicators
+        indicators_dict = {}
+        headers = []
+        # Anade en estas listas las que no quieras mostrar para todos los casos
+        ignore_list = []
+        # ignore language specific features
+        ignore_list_eu = ['gerund_density_incidence', 'num_past', 'num_past_incidence', 'num_pres',
+                          'num_pres_incidence', 'num_future', 'num_future_incidence', 'num_rel_subord',
+                          'num_rel_subord_incidence', 'num_pass', 'num_pass_incidence', 'num_mean', 'num_agentless',
+                          'agentless_passive_density_incidence', 'flesch_kincaid', 'dale-chall', 'smog',
+                          'addition_connectives', 'addition_connectives_incidence', 'consequence_connectives',
+                          'consequence_connectives_incidence',
+                          'purpose_connectives', 'purpose_connectives_incidence', 'illustration_connectives',
+                          'illustration_connectives_incidence',
+                          'opposition_connectives', 'opposition_connectives_incidence', 'order_connectives',
+                          'order_connectives_incidence', 'reference_connectives',
+                          'reference_connectives_incidence', 'summary_connectives', 'summary_connectives_incidence',
+                          'num_past_irregular', 'num_past_irregular_incidence', 'num_past_irregular_mean',
+                          'num_a1_words', 'num_a1_words_incidence', 'num_a2_words', 'num_a2_words_incidence',
+                          'num_b1_words', 'num_b1_words_incidence', 'num_b2_words', 'num_b2_words_incidence',
+                          'num_c1_words', 'num_c1_words_incidence', 'num_content_words_not_a1_c1_words',
+                          'num_content_words_not_a1_c1_words_incidence']
+        ignore_list_en = ['flesch_kincaid', 'dale-chall', 'smog', 'addition_connectives',
+                          'addition_connectives_incidence', 'consequence_connectives',
+                          'consequence_connectives_incidence',
+                          'purpose_connectives', 'purpose_connectives_incidence', 'illustration_connectives',
+                          'illustration_connectives_incidence',
+                          'opposition_connectives', 'opposition_connectives_incidence', 'order_connectives',
+                          'order_connectives_incidence', 'reference_connectives',
+                          'reference_connectives_incidence', 'summary_connectives', 'summary_connectives_incidence']
+        ignore_list_es = ['num_rel_subord', 'num_rel_subord_incidence', 'num_pass', 'num_pass_incidence', 'num_mean',
+                          'num_agentless', 'agentless_passive_density_incidence', 'logical_connectives',
+                          'logical_connectives_incidence', 'adversative_connectives',
+                          'adversative_connectives_incidence', 'flesch_kincaid', 'dale-chall', 'smog',
+                          'num_a1_words', 'num_a1_words_incidence', 'num_a2_words', 'num_a2_words_incidence',
+                          'num_b1_words', 'num_b1_words_incidence', 'num_b2_words', 'num_b2_words_incidence',
+                          'num_c1_words', 'num_c1_words_incidence', 'num_content_words_not_a1_c1_words',
+                          'num_content_words_not_a1_c1_words_incidence']
+        # ignore counters: only incidence, ratios, mean and std
+        ignore_list_counters = ['prop', 'num_complex_words', 'num_words_more_3_syl', 'num_words', 'num_different_forms',
+                                'num_words_with_punct', 'num_paragraphs', 'num_sentences', 'num_past', 'num_pres',
+                                'num_future',
+                                'num_indic', 'num_impera', 'num_past_irregular', 'num_past_irregular_incidence',
+                                'num_personal_pronouns', 'num_first_pers_pron', 'num_first_pers_sing_pron',
+                                'num_third_pers_pron', 'num_rare_nouns', 'num_rare_adj', 'num_rare_verbs',
+                                'num_rare_advb', 'num_rare_words', 'num_rare_words_incidence',
+                                'num_dif_rare_words',
+                                'num_dif_rare_words_incidence', 'num_a1_words', 'num_a2_words', 'num_b1_words',
+                                'num_b2_words',
+                                'num_c1_words', 'num_content_words_not_a1_c1_words', 'num_lexic_words', 'num_noun',
+                                'num_adj',
+                                'num_adv', 'num_verb', 'num_subord', 'num_rel_subord', 'num_total_prop',
+                                'noun_phrase_density_incidence', 'verb_phrase_density_incidence', 'num_pass',
+                                'num_pass_incidence', 'num_agentless', 'num_neg', 'num_ger', 'num_inf']
+        similarity_list = ["similarity_adjacent_mean", "similarity_pairs_par_mean", "similarity_adjacent_par_mean",
+                           "similarity_adjacent_std", "similarity_pairs_par_std", "similarity_adjacent_par_std"]
 
-        print("Number of paragraphs (total): " + str(i['num_paragraphs']))
-        print("Number of paragraphs (incidence per 1000 words): " + str(i['num_paragraphs_incidence']))
-        print('Number of sentences (total): ' + str(i['num_sentences']))
-        print('Number of sentences (incidence per 1000 words): ' + str(i['num_sentences_incidence']))
-
-        # Numero de frases en un parrafo (media)
-        print("Length of paragraphs (mean): " + str(i['sentences_per_paragraph_mean']))
-        # Numero de frases en un parrafo (desv. Tipica)
-        print("Standard deviation of length of paragraphs: " + str(i['sentences_per_paragraph_std']))
-
-        print("Number of words (length) in sentences (mean): " + str(i['sentences_length_mean']))
-        print("Number of words (length) in sentences (standard deviation): " + str(i['sentences_length_std']))
-
-        print("Number of words (length) of sentences without stopwords (mean): " + str(
-            i['sentences_length_no_stopwords_mean']))
-        print("Number of words (length) of sentences without stopwords (standard deviation): " + str(
-            i['sentences_length_no_stopwords_std']))
-
-        print('Mean number of syllables (length) in words: ' + str(i['num_syllables_words_mean']))
-        print('Standard deviation of the mean number of syllables in words: ' + str(i['num_syllables_words_std']))
-
-        print("Mean number of letters (length) in words: " + str(i['words_length_mean']))
-        print("Standard deviation of number of letters in words: " + str(i['words_length_std']))
-
-        print("Mean number of letters (length) in words without stopwords: " + str(i['words_length_no_stopwords_mean']))
-        print("Standard deviation of the mean number of letter in words without stopwords: " + str(
-            i['words_length_no_stopwords_std']))
-
-        print("Mean number of letters (length) in lemmas: " + str(i['lemmas_length_mean']))
-        print("Standard deviation of letters (length) in lemmas: " + str(i['lemmas_length_std']))
-
-        print('Lexical Density: ' + str(i['lexical_density']))
-        print("Noun Density: " + str(i['noun_density']))
-        print("Verb Density: " + str(i['verb_density']))
-        print("Adjective Density: " + str(i['adj_density']))
-        print("Adverb Density: " + str(i['adv_density']))
-        #calculate_ratio_proper_nouns_per_nouns
-        print("Ratio of proper nouns for all nouns (proper and common nouns): " + str(i['ratio_proper_nouns_per_nouns']))
-        # Simple TTR (Type-Token Ratio)
-        print('STTR (Simple Type-Token Ratio) : ' + str(i['simple_ttr']))
-        # Content TTR (Content Type-Token Ratio)
-        print('CTTR (Content Type-Token Ratio): ' + str(i['content_ttr']))
-        # NTTR (Noun Type-Token Ratio)
-        print('NTTR (Noun Type-Token Ratio): ' + str(i['nttr']))
-        # PNTTR Proper Noun Type-Token Ratio
-        print('PNTTR (Proper Noun Type-Token Ratio): ' + str(i['pnttr']))
-
-        # VTTR (Verb Type-Token Ratio)(incidence per 1000 words)
-        print('VTTR (Verb Type-Token Ratio): ' + str(i['vttr']))
-
-        # AdjTTR (Adj Type-Token Ratio)
-        print('AdjTTR (Adj Type-Token Ratio): ' + str(i['adj_ttr']))
-        # AdvTTR (Adv Type-Token Ratio)
-        print('AdvTTR (Adv Type-Token Ratio): ' + str(i['adv_ttr']))
-
-        # Lemma Simple TTR (Type-Token Ratio)
-        print('LSTTR (Lemma Simple Type-Token Ratio): ' + str(i['lemma_ttr']))
-        # Lemma Content TTR (Content Type-Token Ratio)
-        print('LCTTR (Lemma Content Type-Token Ratio): ' + str(i['lemma_content_ttr']))
-        # LNTTR (Lemma Noun Type-Token Ratio)
-        print('LNTTR (Lemma Noun Type-Token Ratio) ' + str(i['lemma_nttr']))
-        # LVTTR (Lemma Verb Type-Token Ratio)
-        print('LVTTR (Lemma Verb Type-Token Ratio): ' + str(i['lemma_vttr']))
-        # Lemma AdjTTR (Lemma Adj Type-Token Ratio)
-        print('LAdjTTR (Lemma Adj Type-Token Ratio): ' + str(i['lemma_adj_ttr']))
-        # Lemma AdvTTR (Lemma Adv Type-Token Ratio)
-        print('LAdvTTR (Lemma Adv Type-Token Ratio): ' + str(i['lemma_adv_ttr']))
-
-        # Honore
-        print('Honore Lexical Density: ' + str(i['honore']))
-        # Maas
-        print('Maas Lexical Density: ' + str(i['maas']))
-        # MTLD
-        print('Measure of Textual Lexical Diversity (MTLD): ' + str(i['mtld']))
-
-
-        # Flesch readability ease=206.835-1.015(n.º de words/nº de frases)-84.6(n.º de silabas/numero de words)
-        print("Flesch readability ease: " + str(i['flesch']))
+        if not self.similarity:
+            ignore_list.extend(similarity_list)
         if self.language == "english":
-            # Flesch-Kincaid grade level =0.39 * (n.º de words/nº de frases) + 11.8 * (n.º de silabas/numero de words) – 15.59)
-            print("Flesch-Kincaid Grade level: " + str(i['flesch_kincaid']))
-            print("Dale-Chall readability formula: " + str(i['dale_chall']))
-            print("Simple Measure Of Gobbledygook (SMOG) grade: " + str(i['smog']))
-            print('Number of A1 vocabulary in the text: ' + str(i['num_a1_words']))
-            print('Incidence score of A1 vocabulary  (per 1000 words): ' + str(i['num_a1_words_incidence']))
-            print('Number of A2 vocabulary in the text: ' + str(i['num_a2_words']))
-            print('Incidence score of A2 vocabulary  (per 1000 words): ' + str(i['num_a2_words_incidence']))
-            print('Number of B1 vocabulary in the text: ' + str(i['num_b1_words']))
-            print('Incidence score of B1 vocabulary  (per 1000 words): ' + str(i['num_b1_words_incidence']))
-            print('Number of B2 vocabulary in the text: ' + str(i['num_b2_words']))
-            print('Incidence score of B2 vocabulary  (per 1000 words): ' + str(i['num_b2_words_incidence']))
-            print('Number of C1 vocabulary in the text: ' + str(i['num_c1_words']))
-            print('Incidence score of C1 vocabulary  (per 1000 words): ' + str(i['num_c1_words_incidence']))
-            print('Number of content words not in A1-C1 vocabulary: ' + str(i['num_content_words_not_a1_c1_words']))
-            print('Incidence score of content words not in A1-C1 vocabulary (per 1000 words): ' + str(
-                i['num_content_words_not_a1_c1_words_incidence']))
-        if self.language != "basque":
-            print("Number of verbs in past tense: " + str(i['num_past']))
-            print("Number of verbs in past tense (incidence per 1000 words): " + str(i['num_past_incidence']))
-            print("Number of verbs in present tense: " + str(i['num_pres']))
-            print("Number of verbs in present tense (incidence per 1000 words): " + str(i['num_pres_incidence']))
-            print("Number of verbs in future tense: " + str(i['num_future']))
-            print("Number of verbs in future tense (incidence per 1000 words): " + str(i['num_future_incidence']))
-
-        # Numero de verbos en modo indicativo
-        print("Number of verbs in indicative mood: " + str(i['num_indic']))
-        print("Number of verbs in indicative mood (incidence per 1000 words): " + str(i['num_indic_incidence']))
-        # Numero de verbos en modo imperativo
-        print("Number of verbs in imperative mood: " + str(i['num_impera']))
-        print("Number of verbs in imperative mood (incidence per 1000 words): " + str(i['num_impera_incidence']))
-        # Numero de verbos en pasado que son irregulares
-        if self.language != "basque":
-            print("Number of irregular verbs in past tense: " + str(i['num_past_irregular']))
-            # Numero de verbos en pasado que son irregulares (incidencia 1000 words)
-            print("Number of irregular verbs in past tense (incidence per 1000 words): " + str(
-                i['num_past_irregular_incidence']))
-            # Porcentaje de verbos en pasado que son irregulares sobre total de verbos en pasado
-            print("Mean of irregular verbs in past tense in relation to the number of verbs in past tense: " + str(
-                i['num_past_irregular_mean']))
-        # Number of personal pronouns
-        print("Number of personal pronouns: " + str(i['num_personal_pronouns']))
-        # Incidence score of pronouns (per 1000 words)
-        print("Incidence score of pronouns (per 1000 words): " + str(i['num_personal_pronouns_incidence']))
-        # Number of pronouns in first person
-        print("Number of pronouns in first person: " + str(i['num_first_pers_pron']))
-        # Incidence score of pronouns in first person  (per 1000 words)
-        print(
-            "Incidence score of pronouns in first person  (per 1000 words): " + str(i['num_first_pers_pron_incidence']))
-        # Number of pronouns in first person singular
-        print("Number of pronouns in first person singular: " + str(i['num_first_pers_sing_pron']))
-        # Incidence score of pronouns in first person singular (per 1000 words)
-        print("Incidence score of pronouns in first person singular (per 1000 words): " + str(
-            i['num_first_pers_sing_pron_incidence']))
-        # Number of pronouns in third person
-        print("Number of pronouns in third person: " + str(i['num_third_pers_pron']))
-        # Incidence score of pronouns in third person (per 1000 words)
-        print(
-            "Incidence score of pronouns in third person (per 1000 words): " + str(i['num_third_pers_pron_incidence']))
-
-        print('Minimum word frequency per sentence (mean): ' + str(i['min_wf_per_sentence']))
-        if self.language == "basque":
-            print('Number of rare nouns (wordfrecuency<=34): ' + str(i['num_rare_nouns']))
-            print('Number of rare nouns (wordfrecuency<=34) (incidence per 1000 words): ' + str(
-                i['num_rare_nouns_incidence']))
-            print('Number of rare adjectives (wordfrecuency<=34): ' + str(i['num_rare_adj']))
-            print('Number of rare adjectives (wordfrecuency<=34) (incidence per 1000 words): ' + str(
-                i['num_rare_adj_incidence']))
-            print('Number of rare verbs (wordfrecuency<=34): ' + str(i['num_rare_verbs']))
-            print('Number of rare verbs (wordfrecuency<=34) (incidence per 1000 words): ' + str(
-                i['num_rare_verbs_incidence']))
-            print('Number of rare adverbs (wordfrecuency<=34): ' + str(i['num_rare_advb']))
-            print('Number of rare adverbs (wordfrecuency<=34) (incidence per 1000 words): ' + str(
-                i['num_rare_advb_incidence']))
-            print('Number of rare content words (wordfrecuency<=34): ' + str(i['num_rare_words']))
-            print('Number of rare content words (wordfrecuency<=34) (incidence per 1000 words): ' + str(
-                i['num_rare_words_incidence']))
-            print('Number of distinct rare content words (wordfrecuency<=34): ' + str(i['num_dif_rare_words']))
-            print('Number of distinct rare content words (wordfrecuency<=34) (incidence per 1000 words): ' + str(
-                i['num_dif_rare_words_incidence']))
-            # The average of rare lexical words (whose word frequency value is less than 4) with respect to the total of lexical words
-            print('Mean of rare lexical words (word frequency <= 34): ' + str(i['mean_rare']))
-            # The average of distinct rare lexical words (whose word frequency value is less than 4) with respect to the total of distinct lexical words
-            print('Mean of distinct rare lexical words (word frequency <= 34): ' + str(i['mean_distinct_rare']))
-        else:
-            print('Number of rare nouns (wordfrecuency<=4): ' + str(i['num_rare_nouns']))
-            print('Number of rare nouns (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-                i['num_rare_nouns_incidence']))
-            print('Number of rare adjectives (wordfrecuency<=4): ' + str(i['num_rare_adj']))
-            print('Number of rare adjectives (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-                i['num_rare_adj_incidence']))
-            print('Number of rare verbs (wordfrecuency<=4): ' + str(i['num_rare_verbs']))
-            print('Number of rare verbs (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-                i['num_rare_verbs_incidence']))
-            print('Number of rare adverbs (wordfrecuency<=4): ' + str(i['num_rare_advb']))
-            print('Number of rare adverbs (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-                i['num_rare_advb_incidence']))
-            print('Number of rare content words (wordfrecuency<=4): ' + str(i['num_rare_words']))
-            print('Number of rare content words (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-                i['num_rare_words_incidence']))
-            print('Number of distinct rare content words (wordfrecuency<=4): ' + str(i['num_dif_rare_words']))
-            print('Number of distinct rare content words (wordfrecuency<=4) (incidence per 1000 words): ' + str(
-                i['num_dif_rare_words_incidence']))
-            # The average of rare lexical words (whose word frequency value is less than 4) with respect to the total of lexical words
-            print('Mean of rare lexical words (word frequency <= 4): ' + str(i['mean_rare']))
-            # The average of distinct rare lexical words (whose word frequency value is less than 4) with respect to the total of distinct lexical words
-            print('Mean of distinct rare lexical words (word frequency <= 4): ' + str(i['mean_distinct_rare']))
-
-
-        print('Number of content words: ' + str(i['num_lexic_words']))
-        print('Number of content words (incidence per 1000 words): ' + str(i['num_lexic_words_incidence']))
-        print("Number of nouns: " + str(i['num_noun']))
-        print("Number of nouns (incidence per 1000 words): " + str(i['num_noun_incidence']))
-        print("Number of proper nouns: " + str(i['num_proper_noun']))
-        print("Number of proper nouns (incidence per 1000 words): " + str(i['num_proper_noun_incidence']))
-        print("Number of adjectives: " + str(i['num_adj']))
-        print("Number of adjectives (incidence per 1000 words): " + str(i['num_adj_incidence']))
-        print("Number of adverbs: " + str(i['num_adv']))
-        print("Number of adverbs (incidence per 1000 words): " + str(i['num_adv_incidence']))
-        print("Number of verbs: " + str(i['num_verb']))
-        print("Number of verbs (incidence per 1000 words): " + str(i['num_verb_incidence']))
-        # Left-Embeddedness
-        print(
-            "Left embeddedness (Mean of number of words before the main verb) (SYNLE): " + str(i['left_embeddedness']))
-
-        print("Number of decendents per noun phrase (mean): " + str(i['num_decendents_noun_phrase']))
-        print("Number of modifiers per noun phrase (mean) (SYNNP): " + str(i['num_modifiers_noun_phrase']))
-        print("Mean of the number of levels of dependency tree (Depth): " + str(i['mean_depth_per_sentence']))
-
-        # Numero de sentencias subordinadas
-        print("Number of subordinate clauses: " + str(i['num_subord']))
-        # Numero de sentencias subordinadas (incidence per 1000 words)
-        print("Number of subordinate clauses (incidence per 1000 words): " + str(i['num_subord_incidence']))
-        if self.language == "english":
-            # Numero de sentencias subordinadas relativas
-            print("Number of relative subordinate clauses: " + str(i['num_rel_subord']))
-            # Numero de sentencias subordinadas relativas (incidence per 1000 words)
-            print(
-                "Number of relative subordinate clauses (incidence per 1000 words): " + str(i['num_rel_subord_incidence']))
-        # Marcas de puntuacion por sentencia (media)
-        print("Punctuation marks per sentence (mean): " + str(i['num_punct_marks_per_sentence']))
-        print('Number of propositions: ' + str(i['num_total_prop']))
-        # Mean of the number of propositions per sentence
-        print('Mean of the number of propositions per sentence: ' + str(i['mean_propositions_per_sentence']))
-
-        print('Mean of the number of VPs per sentence: ' + str(i['mean_vp_per_sentence']))
-        print('Mean of the number of NPs per sentence: ' + str(i['mean_np_per_sentence']))
-        print('Noun phrase density, incidence (DRNP): ' + str(i['noun_phrase_density_incidence']))
-        print('Verb phrase density, incidence (DRVP): ' + str(i['verb_phrase_density_incidence']))
-        if self.language == "english":
-            # Numero de verbos en pasiva (total)
-            print("Number of passive voice verbs: " + str(i['num_pass']))
-            # Numero de verbos en pasiva (incidence per 1000 words)
-            print("Number of passive voice verbs (incidence per 1000 words): " + str(i['num_pass_incidence']))
-            # Porcentaje de verbos en pasiva
-            print("Mean of passive voice verbs: " + str(i['num_pass_mean']))
-            # Numero de verbos en pasiva que no tienen agente
-            print("Number of agentless passive voice verbs: " + str(i['num_agentless']))
-            print('Agentless passive voice density, incidence (DRPVAL): ' + str(i['agentless_passive_density_incidence']))
-        print("Number of negative words: " + str(i['num_neg']))
-        print('Negation density, incidence (DRNEG): ' + str(i['negation_density_incidence']))
-        if self.language != "basque":
-            print("Number of verbs in gerund form: " + str(i['num_ger']))
-            print('Gerund density, incidence (DRGERUND): ' + str(i['gerund_density_incidence']))
-        print("Number of verbs in infinitive form: " + str(i['num_inf']))
-        print('Infinitive density, incidence (DRINF): ' + str(i['infinitive_density_incidence']))
-
-        # Ambigüedad de una palabra (polysemy in WordNet)
-        print('Mean values of polysemy in the WordNet lexicon: ' + str(i['polysemic_index']))
-        # Nivel de abstracción (hypernym in WordNet)
-        print('Mean hypernym values of verbs in the WordNet lexicon: ' + str(i['hypernymy_verbs_index']))
-        print('Mean hypernym values of nouns in the WordNet lexicon: ' + str(i['hypernymy_nouns_index']))
-        print('Mean hypernym values of nouns and verbs in the WordNet lexicon: ' + str(i['hypernymy_index']))
-
-        # Textbase. Referential cohesion
-        print('Noun overlap, adjacent sentences, binary, mean (CRFNOl): ' + str(i['noun_overlap_adjacent']))
-        print('Noun overlap, all of the sentences in a paragraph or text, binary, mean (CRFNOa): ' + str(
-            i['noun_overlap_all']))
-        print('Argument overlap, adjacent sentences, binary, mean (CRFAOl): ' + str(i['argument_overlap_adjacent']))
-        print('Argument overlap, all of the sentences in a paragraph or text, binary, mean (CRFAOa): ' + str(
-            i['argument_overlap_all']))
-        print('Stem overlap, adjacent sentences, binary, mean (CRFSOl): ' + str(i['stem_overlap_adjacent']))
-        print('Stem overlap, all of the sentences in a paragraph or text, binary, mean (CRFSOa): ' + str(
-            i['stem_overlap_all']))
-        print('Content word overlap, adjacent sentences, proportional, mean (CRFCWO1): ' + str(
-            i['content_overlap_adjacent_mean']))
-        print('Content word overlap, adjacent sentences, proportional, standard deviation (CRFCWO1d): ' + str(
-            i['content_overlap_adjacent_std']))
-        print('Content word overlap, all of the sentences in a paragraph or text, proportional, mean (CRFCWOa): ' + str(
-            i['content_overlap_all_mean']))
-        print(
-            'Content word overlap, all of the sentences in a paragraph or text, proportional, standard deviation (CRFCWOad): ' + str(
-                i['content_overlap_all_std']))
-        # Connectives
-        print('Number of connectives: ' + str(i['all_connectives']))
-        print('Number of connectives (incidence per 1000 words): ' + str(i['all_connectives_incidence']))
-        print('Causal connectives: ' + str(i['causal_connectives']))
-        print('Causal connectives (incidence per 1000 words): ' + str(i['causal_connectives_incidence']))
-        print('Temporal connectives:  ' + str(i['temporal_connectives']))
-        print('Temporal connectives (incidence per 1000 words):  ' + str(i['temporal_connectives_incidence']))
-        print('Conditional connectives: ' + str(i['conditional_connectives']))
-        print('Conditional connectives (incidence per 1000 words): ' + str(i['conditional_connectives_incidence']))
-        if self.language == "english" or self.language == "basque":
-            print('Logical connectives:  ' + str(i['logical_connectives']))
-            print('Logical connectives (incidence per 1000 words):  ' + str(i['logical_connectives_incidence']))
-            print('Adversative/contrastive connectives: ' + str(i['adversative_connectives']))
-            print('Adversative/contrastive connectives (incidence per 1000 words): ' + str(
-                i['adversative_connectives_incidence']))
+            ignore_list.extend(ignore_list_en)
         if self.language == "spanish":
-            print('Adition connectives:  ' + str(i['addition_connectives']))
-            print('Adition connectives (incidence per 1000 words):  ' + str(i['addition_connectives_incidence']))
-            print('Consequence connectives: ' + str(i['consequence_connectives']))
-            print('Consequence connectives (incidence per 1000 words): ' + str(i['consequence_connectives_incidence']))
-            print('Purpose connectives:  ' + str(i['purpose_connectives']))
-            print('Purpose connectives (incidence per 1000 words):  ' + str(i['purpose_connectives_incidence']))
-            print('Illustration connectives: ' + str(i['illustration_connectives']))
-            print(
-                'Illustration connectives (incidence per 1000 words): ' + str(i['illustration_connectives_incidence']))
-            print('Opposition connectives:  ' + str(i['opposition_connectives']))
-            print('Opposition connectives (incidence per 1000 words):  ' + str(i['opposition_connectives_incidence']))
-            print('Order connectives: ' + str(i['order_connectives']))
-            print('Order connectives (incidence per 1000 words): ' + str(i['order_connectives_incidence']))
-            print('Reference connectives:  ' + str(i['reference_connectives']))
-            print('Reference connectives (incidence per 1000 words):  ' + str(i['reference_connectives_incidence']))
-            print('Summary connectives: ' + str(i['summary_connectives']))
-            print('Summary connectives (incidence per 1000 words): ' + str(i['summary_connectives_incidence']))
-        if self.similarity:
-            print('Semantic Similarity between adjacent sentences (mean): ' + str(i['similarity_adjacent_mean']))
-            print('Semantic Similarity between all possible pairs of sentences in a paragraph (mean): ' + str(
-                i['similarity_pairs_par_mean']))
-            print('Semantic Similarity between adjacent paragraphs (mean): ' + str(i['similarity_adjacent_par_mean']))
-            print('Semantic Similarity between adjacent sentences (standard deviation): ' + str(
-                i['similarity_adjacent_std']))
-            print(
-                'Semantic Similarity between all possible pairs of sentences in a paragraph (standard deviation): ' + str(
-                    i['similarity_pairs_par_std']))
-            print('Semantic Similarity between adjacent paragraphs (standard deviation): ' + str(
-                i['similarity_adjacent_par_std']))
+            ignore_list.extend(ignore_list_es)
+        if self.language == "basque":
+            ignore_list.extend(ignore_list_eu)
+
+        for key, value in self.ind_sentences.items():
+            if key not in ignore_list:
+                print(self.ind_sentences.get(key) + str(i.get(key)))
 
     # genera el fichero X.out.csv, MERECE LA PENA POR IDIOMA
     def generate_csv(self, csv_path, input, similarity):  # , csv_path, prediction, similarity):
@@ -3032,6 +3038,7 @@ class Main(object):
             document = cargador.get_estructure(text)
             indicators = document.get_indicators(similarity)
             printer = Printer(indicators, language, similarity)
+            printer.load_ind_sentences()
             printer.print_info()
             printer.generate_csv(path, input, similarity)  # path, prediction, opts.similarity)
             if csv:
