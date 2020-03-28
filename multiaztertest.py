@@ -124,6 +124,10 @@ class Document:
         # Indicadores
         self.indicators = defaultdict(float)
         self.aux_lists = defaultdict(list)
+        #Constantes
+        self.WORD_FREQ_EN = 4
+        self.WORD_FREQ_ES = 4
+        self.WORD_FREQ_EU = 34
 
     @property
     def text(self):
@@ -827,16 +831,24 @@ class Document:
                         if (not len(w.text) == 1 or w.text.isalpha()) and not w.is_num():
                             if self.language == "spanish" or self.language == "english":
                                 if self.language == "spanish":
+                                    wordfrequency_num = self.WORD_FREQ_ES
                                     wordfrequency = zipf_frequency(w.text, 'es')
                                 else:
+                                    wordfrequency_num = self.WORD_FREQ_EN
                                     wordfrequency = zipf_frequency(w.text, 'en')
-                                wordfreq_list.append(wordfrequency)
+                            elif self.language == "basque":
+                                if w.text in Maiztasuna.freq_list:
+                                    wordfrequency_num = self.WORD_FREQ_EU
+                                    wordfrequency = Maiztasuna.freq_list[w.text]
+                                else:
+                                    wordfrequency = None
+                            if wordfrequency is not None:
+                                wordfreq_list.append(int(wordfrequency))
                                 num_words_in_sentences += 1
-                                if (w.is_lexic_word(s)):
-                                    if wordfrequency <= 4.00:
+                                if w.is_lexic_word(s):
+                                    if int(wordfrequency) <= wordfrequency_num:
                                         i['num_rare_words'] += 1
                                         if w.is_noun():
-                                            print(w.text)
                                             i['num_rare_nouns'] += 1
                                         elif w.is_adjective():
                                             i['num_rare_adj'] += 1
@@ -846,27 +858,8 @@ class Document:
                                             i['num_rare_verbs'] += 1
                                     if w.text.lower() not in self.aux_lists['different_lexic_words']:
                                         self.aux_lists['different_lexic_words'].append(w.text.lower())
-                                        if wordfrequency <= 4:
+                                        if int(wordfrequency) <= wordfrequency_num:
                                             i['num_dif_rare_words'] += 1
-                            elif self.language == "basque":
-                                if w.text in Maiztasuna.freq_list:
-                                    wordfrequency = Maiztasuna.freq_list[w.text]
-                                    wordfreq_list.append(int(wordfrequency))
-                                    if w.is_lexic_word(s):
-                                        if int(wordfrequency) <= 34:
-                                            i['num_rare_words'] += 1
-                                            if w.is_noun():
-                                                i['num_rare_nouns'] += 1
-                                            elif w.is_adjective():
-                                                i['num_rare_adj'] += 1
-                                            elif w.is_adverb():
-                                                i['num_rare_advb'] += 1
-                                            elif w.is_verb(s):
-                                                i['num_rare_verbs'] += 1
-                                        if w.text.lower() not in self.aux_lists['different_lexic_words']:
-                                            self.aux_lists['different_lexic_words'].append(w.text.lower())
-                                            if int(wordfrequency) <= 34:
-                                                i['num_dif_rare_words'] += 1
                             # words not in stopwords
                             if not w.is_stopword():
                                 num_words_in_sentence_without_stopwords += 1
