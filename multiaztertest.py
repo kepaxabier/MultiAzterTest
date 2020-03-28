@@ -204,8 +204,10 @@ class Document:
 
     def calculate_ratio_proper_nouns_per_nouns(self):
         if self.indicators['num_proper_noun'] > 0:
-            self.indicators['ratio_proper_nouns_per_nouns'] = round(self.indicators['num_proper_noun'] / self.indicators['num_noun'] +
-                                             self.indicators['num_proper_noun'], 4)
+            self.indicators['ratio_proper_nouns_per_nouns'] = round(
+                self.indicators['num_proper_noun'] / (self.indicators['num_noun'] +
+                self.indicators['num_proper_noun']), 4)
+
     def calculate_vttr(self):
         if self.indicators['num_verb'] > 0:
             self.indicators['vttr'] = round(len(self.aux_lists['different_verbs']) / self.indicators['num_verb'], 4)
@@ -244,8 +246,8 @@ class Document:
 
     def calculate_pnttr(self):
         if self.indicators['num_proper_noun'] > 0:
-            self.indicators['pnttr'] = round(self.indicators['num_proper_noun'] / self.indicators['num_noun'] +
-                                             self.indicators['num_proper_noun'], 4)
+            self.indicators['pnttr'] = round(self.indicators['num_proper_noun'] / (self.indicators['num_noun'] +
+                                             self.indicators['num_proper_noun']), 4)
 
     def calculate_lemma_vttr(self):
         if self.indicators['num_verb'] > 0:
@@ -1773,7 +1775,7 @@ class Connectives():
         if Connectives.lang == "english":
             f = open('data/en/Connectives/connectives.txt', 'r', encoding='utf-8')
         if Connectives.lang == "basque":
-            f = open('data/eu/Connectives/connectives.txt',  'r', encoding='utf-8')
+            f = open('data/eu/Connectives/connectives.txt', 'r', encoding='utf-8')
         lineas = f.readlines()
         aux = Connectives.temporal
         for linea in lineas:
