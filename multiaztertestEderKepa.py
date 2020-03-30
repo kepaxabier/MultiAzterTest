@@ -2,7 +2,6 @@
 # coding: utf-8
 
 # In[29]:
-import math
 import os
 import subprocess
 import sys
@@ -14,25 +13,14 @@ import numpy as np
 from collections import defaultdict
 import re
 import nltk
+from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize, word_tokenize
-# genera CADENAS aleatorias
-import uuid
-#wordnet
-nltk.download('wordnet')
-#Add multilingual wordnet
-nltk.download('omw')
 from nltk.corpus import wordnet as wn
 from nltk.corpus import cmudict
-from scipy import spatial
 from wordfreq import zipf_frequency
 #####Argumentos##################################
 from argparse import ArgumentParser
 import pandas as pd
-import pickle
-from sklearn.externals import joblib
-from gensim.models import FastText, KeyedVectors
-
-#logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 
 class ModelAdapter:
@@ -43,19 +31,18 @@ class ModelAdapter:
         # model_name
         self.lib = lib
 
-    def model_analysis(self, text, language):
-        d = Document(text, language)  # ->data = []
+    def model_analysis(self, text,language):
+        d = Document(text,language)  # ->data = []
         if self.lib == "stanford":
             lines = text.split('@')
             for line in lines:  # paragraph
                 p = Paragraph()  # -> paragraph = []
-                p.text = line
                 if not line.strip() == '':
                     doc = self.model(line)
                     for sent in doc.sentences:
                         s = Sentence()
                         sequence = self.sent2sequenceStanford(sent)
-                        # print(sequence)
+                        #print(sequence)
                         s.text = sequence
                         for word in sent.words:
                             # Por cada palabra de cada sentencia, creamos un objeto Word que contendra los attrs
@@ -69,16 +56,15 @@ class ModelAdapter:
                             w.governor = word.governor
                             w.dependency_relation = word.dependency_relation
                             s.word_list.append(w)
-                            # print(str(w.index) + "\t" + w.text + "\t" + w.lemma + "\t" + w.upos + "\t" + w.xpos + "\t" + w.feats + "\t" + str(w.governor) + "\t" + str(w.dependency_relation) +"\t")
+                            #print(str(w.index) + "\t" + w.text + "\t" + w.lemma + "\t" + w.upos + "\t" + w.xpos + "\t" + w.feats + "\t" + str(w.governor) + "\t" + str(w.dependency_relation) +"\t")
                         p.sentence_list.append(s)  # ->paragraph.append(s)
                     d.paragraph_list.append(p)  # ->data.append(paragraph)
 
         elif self.lib == "cube":
-            d = Document(text, language)  # ->data = []
+            d = Document(text,language)  # ->data = []
             lines = text.split('@')
             for line in lines:
                 p = Paragraph()  # -> paragraph = []
-                p.text = line
                 if not line.strip() == '':
                     sequences = self.model(line)
                     for seq in sequences:
@@ -118,7 +104,7 @@ class ModelAdapter:
 
 
 class Document:
-    def __init__(self, text, language):
+    def __init__(self, text):
         self._text = text
         self.language = language
         self._paragraph_list = []
@@ -126,10 +112,6 @@ class Document:
         # Indicadores
         self.indicators = defaultdict(float)
         self.aux_lists = defaultdict(list)
-        #Constantes
-        self.WORD_FREQ_EN = 4
-        self.WORD_FREQ_ES = 4
-        self.WORD_FREQ_EU = 34
 
     @property
     def text(self):
@@ -151,23 +133,14 @@ class Document:
         """ Set the list of tokens for this document. """
         self._paragraph_list = value
 
-    def get_indicators(self, similarity):
-        self.calculate_all_numbers(similarity)
+    def get_indicators(self):
+        self.calculate_all_numbers()
         self.calculate_all_means()
         self.calculate_all_std_deviations()
         self.calculate_all_incidence()
         self.calculate_density()
         self.calculate_all_overlaps()
         return self.indicators
-
-    def create_dataframe(self):
-        i = self.indicators
-        indicators_dict = {}
-        headers = []
-        for key, value in i.items():
-            indicators_dict[key] = i.get(key)
-            headers.append(key)
-        return pd.DataFrame(indicators_dict, columns=headers, index=[0])
 
     # self.indicators['num_words'] = self.calculate_num_words()
     #     def calculate_num_words(self):
@@ -197,7 +170,6 @@ class Document:
     #                 num_sentences += 1
     #         return num_sentences
 
-
     def calculate_simple_ttr(self, p_diff_forms=None, p_num_words=None):
         if (p_diff_forms and p_num_words) is not None:
             return (len(p_diff_forms)) / p_num_words
@@ -208,12 +180,6 @@ class Document:
     def calculate_nttr(self):
         if self.indicators['num_noun'] > 0:
             self.indicators['nttr'] = round(len(self.aux_lists['different_nouns']) / self.indicators['num_noun'], 4)
-
-    def calculate_ratio_proper_nouns_per_nouns(self):
-        if self.indicators['num_proper_noun'] > 0:
-            self.indicators['ratio_proper_nouns_per_nouns'] = round(
-                self.indicators['num_proper_noun'] / (self.indicators['num_noun'] +
-                self.indicators['num_proper_noun']), 4)
 
     def calculate_vttr(self):
         if self.indicators['num_verb'] > 0:
@@ -237,7 +203,6 @@ class Document:
     def calculate_all_ttr(self):
         self.calculate_simple_ttr()
         self.calculate_nttr()
-        self.calculate_pnttr()
         self.calculate_vttr()
         self.calculate_adj_ttr()
         self.calculate_adv_ttr()
@@ -250,11 +215,6 @@ class Document:
         if self.indicators['num_noun'] > 0:
             self.indicators['lemma_nttr'] = round(
                 len(self.aux_lists['different_lemma_nouns']) / self.indicators['num_noun'], 4)
-
-    def calculate_pnttr(self):
-        if self.indicators['num_proper_noun'] > 0:
-            self.indicators['pnttr'] = round(self.indicators['num_proper_noun'] / (self.indicators['num_noun'] +
-                                             self.indicators['num_proper_noun']), 4)
 
     def calculate_lemma_vttr(self):
         if self.indicators['num_verb'] > 0:
@@ -286,21 +246,21 @@ class Document:
         self.calculate_lemma_adv_ttr()
         self.calculate_lemma_content_ttr()
 
-    def get_ambiguity_level(self, word, FLAG, wn_lang):
+    def get_ambiguity_level(self, word, FLAG):
         if FLAG == 'NOUN':
-            ambiguity_level = len(wn.synsets(word, pos='n', lang=wn_lang))
+            ambiguity_level = len(wn.synsets(word, pos='n'))
         elif FLAG == 'ADJ':
-            ambiguity_level = len(wn.synsets(word, pos='a', lang=wn_lang))
+            ambiguity_level = len(wn.synsets(word, pos='a'))
         elif FLAG == 'ADV':
-            ambiguity_level = len(wn.synsets(word, pos='r', lang=wn_lang))
+            ambiguity_level = len(wn.synsets(word, pos='r'))
         else:
-            ambiguity_level = len(wn.synsets(word, pos='v', lang=wn_lang))
+            ambiguity_level = len(wn.synsets(word, pos='v'))
         return ambiguity_level
 
-    def get_abstraction_level(self, word, FLAG, wn_lang):
+    def get_abstraction_level(self, word, FLAG):
         abstraction_level = 0
-        if len(wn.synsets(word, pos=FLAG, lang=wn_lang)) > 0:
-            abstraction_level = len(wn.synsets(word, pos=FLAG, lang=wn_lang)[0].hypernym_paths()[0])
+        if len(wn.synsets(word, pos=FLAG)) > 0:
+            abstraction_level = len(wn.synsets(word, pos=FLAG)[0].hypernym_paths()[0])
         return abstraction_level
 
     def calculate_mean_depth_per_sentence(self, depth_list):
@@ -311,43 +271,37 @@ class Document:
         if not tree[root]:
             return 1
 
-    def mtld(self, filtered_words):
-        ttr_threshold = 0.72
-        ttr = 1.0
-        word_count = 0
-        fragments = 0.0
-        dif_words = []
-        for i, word in enumerate(filtered_words):
-            word = word.lower()
-            word_count += 1
-            if word not in dif_words:
-                dif_words.append(word)
-            ttr = self.calculate_simple_ttr(dif_words, word_count)
-            if ttr <= ttr_threshold:
-                fragments += 1
-                word_count = 0
-                dif_words.clear()
-                ttr = 1.0
-            elif i == len(filtered_words) - 1:
-                residual = (1.0 - ttr) / (1.0 - ttr_threshold)
-                fragments += residual
-
-        if fragments != 0:
-            return len(filtered_words) / fragments
-        else:
-            return 0
-
-    def calculate_mtld(self):
-        not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
-        filtered_words = list(filter(not_punctuation, word_tokenize(self.text)))
-        self.indicators['mtld'] = round((self.mtld(filtered_words) + self.mtld(filtered_words[::-1])) / 2, 4)
-
-    # SMOG=1,0430*SQRT(30*totalcomplex/totalsentences)+3,1291 (total polysyllables --> con mas de 3 silabas)
-    def calculate_smog(self):
-        i = self.indicators
-        ts = i['num_sentences']
-        tps = i['num_words_more_3_syl']
-        self.indicators['smog'] = round(1.0430 * math.sqrt(30 * tps / ts) + 3.1291, 4)
+    # def mtld(self, filtered_words):
+    #     ttr_threshold = 0.72
+    #     ttr = 1.0
+    #     word_count = 0
+    #     fragments = 0.0
+    #     dif_words = []
+    #
+    #     for i, word in enumerate(filtered_words):
+    #         word = word.lower()
+    #         word_count += 1
+    #         if word not in dif_words:
+    #             dif_words.append(word)
+    #         ttr = self.calculate_simple_ttr(dif_words, word_count)
+    #         if ttr <= ttr_threshold:
+    #             fragments += 1
+    #             word_count = 0
+    #             dif_words.clear()
+    #             ttr = 1.0
+    #         elif i == len(filtered_words) - 1:
+    #             residual = (1.0 - ttr) / (1.0 - ttr_threshold)
+    #             fragments += residual
+    #
+    #     if fragments != 0:
+    #         return len(filtered_words) / fragments
+    #     else:
+    #         return 0
+    #
+    # def calculate_mtld(self):
+    #     not_punctuation = lambda w: not (len(w) == 1 and (not w.isalpha()))
+    #     filtered_words = list(filter(not_punctuation, word_tokenize(self.text)))
+    #     self.indicators['mtld'] = round((self.mtld(filtered_words) + self.mtld(filtered_words[::-1])) / 2, 4)
 
     def get_num_hapax_legomena(self):
         num_hapax_legonema = 0
@@ -399,11 +353,11 @@ class Document:
                     sentence1 = []
                     sentence2 = []
                     for entry1 in x[0].word_list:
-                        # values1 = entry1.split("\t")
+                        #values1 = entry1.split("\t")
                         if entry1.is_noun():
                             sentence1.append(entry1.text.lower())
                     for entry2 in x[1].word_list:
-                        # values2 = entry2.split("\t")
+                        #values2 = entry2.split("\t")
                         if entry2.is_noun():
                             sentence2.append(entry2.text.lower())
                     # nombres en comun entre sentence1 y sentence2
@@ -431,11 +385,11 @@ class Document:
                     sentence1 = []
                     sentence2 = []
                     for entry1 in x.word_list:
-                        # values1 = entry1.split("\t")
+                        #values1 = entry1.split("\t")
                         if entry1.is_noun():
                             sentence1.append(entry1.text.lower())
                     for entry2 in y.word_list:
-                        # values2 = entry2.split("\t")
+                        #values2 = entry2.split("\t")
                         if entry2.is_noun():
                             sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
@@ -445,6 +399,7 @@ class Document:
                         all_noun_overlap_list.append(0)
         if len(all_noun_overlap_list) > 0:
             i['noun_overlap_all'] = round(float(np.mean(all_noun_overlap_list)), 4)
+
 
     # Argument overlap measure is binary (there either is or is not any overlap between a pair of adjacent
     # sentences in a text ). Argument overlap measures the proportion of sentences in a text for which there are overlapping the
@@ -630,14 +585,13 @@ class Document:
         self.calculate_content_overlap_all()
 
     def flesch(self):
-        flesch = 0
         sentences = float(self.indicators['num_sentences'])
-        syllables = float(sum(self.aux_lists['syllables_list']))
+        syllables = float(len(self.aux_lists['syllabes_list']))
         words = float(self.indicators['num_words'])
         # ranking scale of 0-100
         # For most business writing, a score of 65 is a good target, and scores between 60 and 80 should generally
         # be understood by 12 to 15 year olds.
-        if self.language == "english" or self.language == "basque":
+        if self.language == "english":
             # formula= 206.835 - 1.015 x (words/sentences) - 84.6 x (syllables/words)
             flesch = 206.835 - 1.015 * (words / sentences) - 84.6 * (syllables / words)
         if self.language == "spanish":
@@ -645,9 +599,10 @@ class Document:
             flesch = 206.84 - 1.02 * (words / sentences) - 60 * (syllables / words)
         if flesch >= 0: self.indicators['flesch'] = round(flesch, 4)
 
+
     def flesch_kincaid(self):
         sentences = float(self.indicators['num_sentences'])
-        syllables = float(sum(self.aux_lists['syllabes_list']))
+        syllables = float(len(self.aux_lists['syllabes_list']))
         words = float(self.indicators['num_words'])
         # Flesch-Kincaid grade level formula = 0.39 x (words/sentences) + 11.8 x (syllables/words) - 15.59.
         # Years:American School Grade:European School Grade
@@ -664,18 +619,17 @@ class Document:
         # 16-17:11:bachiller1
         # 17-18:12:bachiller2
         fk = 0.39 * words / sentences + 11.8 * syllables / words - 15.59
-        if fk >= 0:
-            self.indicators['flesch_kincaid'] = round(fk, 4)
+        if fk >= 0: self.indicators['flesch_kincaid'] = round(fk, 4)
 
-    #def calculate_dale_chall(self):
-    #    sentences = self.indicators['num_sentences']
-    #    complex_words = self.indicators['num_complex_words']
-    #    words = self.indicators['num_words']
-    #    percentage = (complex_words / words) * 100
-    #    if percentage >= 5.0:
-    #        self.indicators['dale_chall'] = round(0.1579 * percentage + 0.0496 * (words / sentences) + 3.6365, 4)
-    #    else:
-    #        self.indicators['dale_chall'] = round(0.1579 * percentage + 0.0496 * (words / sentences), 4)
+    def calculate_dale_chall(self):
+        sentences = self.indicators['num_sentences']
+        complex_words = self.indicators['num_complex_words']
+        words = self.indicators['num_words']
+        percentage = (complex_words / words) * 100
+        if percentage >= 5.0:
+            self.indicators['dale_chall'] = round(0.1579 * percentage + 0.0496 * (words / sentences) + 3.6365, 4)
+        else:
+            self.indicators['dale_chall'] = round(0.1579 * percentage + 0.0496 * (words / sentences), 4)
 
     def calculate_connectives_for(self, sentence, connectives):
         i = self.indicators
@@ -699,14 +653,10 @@ class Document:
         return num_a + num_b
 
     def calculate_readability(self):
-        if self.language == "english":
-            #self.calculate_dale_chall()
-            self.flesch_kincaid()
-            self.calculate_smog()
-            self.flesch()
-        if self.language == "spanish":
-            self.flesch()
-
+        # self.get_syllable_list()
+        self.calculate_dale_chall()
+        self.flesch()
+        self.flesch_kincaid()
 
     def calculate_connectives_for(self, sentence, connectives):
         i = self.indicators
@@ -714,7 +664,7 @@ class Document:
         list_b = []
         num_a = 0
         num_b = 0
-        text = sentence.text.lower()
+        text = sentence.text
         for x in connectives:
             if "*" in x:
                 list_a.append(x)
@@ -736,10 +686,10 @@ class Document:
                 i['causal_connectives'] += self.calculate_connectives_for(s, Connectives.causal)
                 i['temporal_connectives'] += self.calculate_connectives_for(s, Connectives.temporal)
                 i['conditional_connectives'] += self.calculate_connectives_for(s, Connectives.conditional)
-                if self.language == "english" or self.language == 'basque':
+                if Connectives.lang == 'english' or Connectives.lang == 'basque':
                     i['logical_connectives'] += self.calculate_connectives_for(s, Connectives.logical)
                     i['adversative_connectives'] += self.calculate_connectives_for(s, Connectives.adversative)
-                if self.language == 'spanish':
+                if Connectives.lang == 'spanish':
                     i['addition_connectives'] += self.calculate_connectives_for(s, Connectives.addition)
                     i['consequence_connectives'] += self.calculate_connectives_for(s, Connectives.consequence)
                     i['purpose_connectives'] += self.calculate_connectives_for(s, Connectives.purpose)
@@ -748,69 +698,33 @@ class Document:
                     i['order_connectives'] += self.calculate_connectives_for(s, Connectives.order)
                     i['reference_connectives'] += self.calculate_connectives_for(s, Connectives.reference)
                     i['summary_connectives'] += self.calculate_connectives_for(s, Connectives.summary)
-        if self.language == 'spanish':
+        if Connectives.lang == 'spanish':
             i['all_connectives'] = i['causal_connectives'] + i['temporal_connectives'] + i['conditional_connectives'] + \
                                    i['addition_connectives'] + i['consequence_connectives'] + i['purpose_connectives'] + \
                                    i['illustration_connectives'] + i['opposition_connectives'] + i[
                                        'order_connectives'] + i['reference_connectives'] + i['summary_connectives']
-        if self.language == 'english' or self.language == 'basque':
+        if Connectives.lang == 'english' or Connectives.lang == 'basque':
             i['all_connectives'] = i['causal_connectives'] + i['temporal_connectives'] + i['conditional_connectives'] + \
                                    i['logical_connectives'] + i['adversative_connectives']
 
-    def calculate_all_numbers(self, similarity):
+    def calculate_all_numbers(self):
         i = self.indicators
         i['num_paragraphs'] = len(self._paragraph_list)
-        # i['num_words'] = 0
-        # i['num_sentences'] = 0
+        #i['num_words'] = 0
+        #i['num_sentences'] = 0
         num_np_list = []
         num_vp_list = []
         modifiers_per_np = []
         depth_list = []
         min_wordfreq_list = []
-        # subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
+        #subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp', 'advcl', 'acl', 'acl:relcl']
         decendents_total = 0
         text_without_punctuation = []
-        # Wordnet config lang
-        if self.language == "english":
-            self.wn_lang = "eng"
-        elif self.language == "basque":
-            self.wn_lang = "eus"
-        elif self.language == "spanish":
-            self.wn_lang = "spa"
-        if similarity:
-            print("similarity")
-            # Fasttext embbeding
-            # fasttext erabili dut entrenatzeko eta Wikipedian entrenatuak
-            # izan dira. IDF kontaketak ere wikipediatik atera dira.
-            # @inproceedings{mikolov2018advances,
-            #  title={Advances in Pre-Training Distributed Word Representations},
-            #  author={Mikolov, Tomas and Grave, Edouard and Bojanowski, Piotr and Puhrsch, Christian and Joulin, Armand},
-            #  booktitle={Proceedings of the International Conference on Language Resources and Evaluation (LREC 2018)},
-            #  year={2018}
-            # }
-            self.num_features = 512
-            if self.language == "english":
-                self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/en',
-                                                               binary=False)
-                self.index2word_set = set(self.model.wv.index2word)
-            elif self.language == "basque":
-                self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/eu',
-                                                               binary=False)
-                self.index2word_set = set(self.model.wv.index2word)
-            elif self.language == "spanish":
-                self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/es',
-                                                               binary=False)
-                self.index2word_set = set(self.model.wv.index2word)
-
         for p in self.paragraph_list:
             self.aux_lists['sentences_per_paragraph'].append(len(p.sentence_list))  # [1,2,1,...]
-            sentencesPerParag = []
             for s in p.sentence_list:
                 num_words_in_sentences = 0
                 if not s.text == "":
-                    self.aux_lists['sentences_in_text_token_list'].append(s)
-                    # self.aux_lists['sentences_in_paragraph_list'].append(s)
-                    sentencesPerParag.append(s)
                     num_words_in_sentence_without_stopwords = 0
                     i['num_sentences'] += 1
                     dependency_tree = defaultdict(list)
@@ -827,44 +741,55 @@ class Document:
                         if not w.is_punctuation():
                             i['num_words'] += 1
                             sum_s += 1
-                            # Obtenemos el numero de silabas de cada palabra
+                            #Obtenemos el numero de silabas de cada palabra
                             text_without_punctuation.append(w)
                         if w.governor == 0:
                             root = w.index
                         dependency_tree[w.governor].append(w.index)
-                        # word frequency
+                        #word frequency
                         if (not len(w.text) == 1 or w.text.isalpha()) and not w.is_num():
-                            if self.language == "spanish" or self.language == "english":
-                                if self.language == "spanish":
-                                    wordfrequency_num = self.WORD_FREQ_ES
+                            if Connectives.lang == "spanish" or Connectives.lang == "english":
+                                if Connectives.lang == "spanish":
                                     wordfrequency = zipf_frequency(w.text, 'es')
                                 else:
-                                    wordfrequency_num = self.WORD_FREQ_EN
                                     wordfrequency = zipf_frequency(w.text, 'en')
-                            elif self.language == "basque":
-                                if w.text in Maiztasuna.freq_list:
-                                    wordfrequency_num = self.WORD_FREQ_EU
-                                    wordfrequency = Maiztasuna.freq_list[w.text]
-                                else:
-                                    wordfrequency = None
-                            if wordfrequency is not None:
-                                wordfreq_list.append(int(wordfrequency))
+                                wordfreq_list.append(wordfrequency)
                                 num_words_in_sentences += 1
-                                if w.is_lexic_word(s):
-                                    if int(wordfrequency) <= wordfrequency_num:
-                                        i['num_rare_words'] += 1
+                                if (w.is_lexic_word(s)):
+                                    if wordfrequency <= 4.00:
+                                        i['num_rare_words_4'] += 1
                                         if w.is_noun():
-                                            i['num_rare_nouns'] += 1
+                                            print(w.text)
+                                            i['num_rare_nouns_4'] += 1
                                         elif w.is_adjective():
-                                            i['num_rare_adj'] += 1
+                                            i['num_rare_adj_4'] += 1
                                         elif w.is_adverb():
-                                            i['num_rare_advb'] += 1
+                                            i['num_rare_advb_4'] += 1
                                         elif w.is_verb(s):
-                                            i['num_rare_verbs'] += 1
+                                            i['num_rare_verbs_4'] += 1
                                     if w.text.lower() not in self.aux_lists['different_lexic_words']:
                                         self.aux_lists['different_lexic_words'].append(w.text.lower())
-                                        if int(wordfrequency) <= wordfrequency_num:
-                                            i['num_dif_rare_words'] += 1
+                                        if wordfrequency <= 4:
+                                            i['num_dif_rare_words_4'] += 1
+                            elif Connectives.lang == "basque":
+                                if w.text in Maiztasuna.freq_list:
+                                    wordfrequency = Maiztasuna.freq_list[w.text]
+                                    wordfreq_list.append(int(wordfrequency))
+                                    if w.is_lexic_word(s):
+                                        if int(wordfrequency) <= 34:
+                                            i['num_rare_words_34'] += 1
+                                            if w.is_noun():
+                                                i['num_rare_nouns_34'] += 1
+                                            elif w.is_adjective():
+                                                i['num_rare_adj_34'] += 1
+                                            elif w.is_adverb():
+                                                i['num_rare_advb_34'] += 1
+                                            elif w.is_verb(s):
+                                                i['num_rare_verbs_34'] += 1
+                                        if w.text.lower() not in self.aux_lists['different_lexic_words']:
+                                            self.aux_lists['different_lexic_words'].append(w.text.lower())
+                                            if int(wordfrequency) <= 34:
+                                                i['num_dif_rare_words_34'] += 1
                             # words not in stopwords
                             if not w.is_stopword():
                                 num_words_in_sentence_without_stopwords += 1
@@ -873,40 +798,32 @@ class Document:
                                 i['num_noun'] += 1
                                 if w.text.lower() not in self.aux_lists['different_nouns']:
                                     self.aux_lists['different_nouns'].append(w.text.lower())
-                                if w.lemma not in self.aux_lists['different_lemma_nouns'] and w.lemma is not None:
+                                if w.lemma not in self.aux_lists['different_lemma_nouns']:
                                     self.aux_lists['different_lemma_nouns'].append(w.lemma)
-                            if w.is_proper_noun():
-                                i['num_proper_noun'] += 1
                             if w.is_adjective():
                                 i['num_adj'] += 1
                                 if w.text.lower() not in self.aux_lists['different_adjs']:
                                     self.aux_lists['different_adjs'].append(w.text.lower())
-                                if w.lemma not in self.aux_lists['different_lemma_adjs'] and w.lemma is not None:
+                                if w.lemma not in self.aux_lists['different_lemma_adjs']:
                                     self.aux_lists['different_lemma_adjs'].append(w.lemma)
                             if w.is_adverb():
                                 i['num_adv'] += 1
                                 if w.text.lower() not in self.aux_lists['different_advs']:
                                     self.aux_lists['different_advs'].append(w.text.lower())
-                                if w.lemma not in self.aux_lists['different_lemma_advs'] and w.lemma is not None:
+                                if w.lemma not in self.aux_lists['different_lemma_advs']:
                                     self.aux_lists['different_lemma_advs'].append(w.lemma)
                             if w.is_verb(s):
                                 i['num_verb'] += 1
                                 if w.text.lower() not in self.aux_lists['different_verbs']:
                                     self.aux_lists['different_verbs'].append(w.text.lower())
-                                if w.lemma not in self.aux_lists['different_lemma_verbs'] and w.lemma is not None:
+                                if w.lemma not in self.aux_lists['different_lemma_verbs']:
                                     self.aux_lists['different_lemma_verbs'].append(w.lemma)
-                                if w.is_passive():
-                                    i['num_pass'] += 1
-                                    if w.is_agentless(s):
-                                        i['num_agentless'] += 1
                                 if w.is_past():
                                     i['num_past'] += 1
                                     if w.is_irregular():
                                         i['num_past_irregular'] += 1
                                 if w.is_present():
                                     i['num_pres'] += 1
-                                if w.is_future(s):
-                                    i['num_future'] += 1
                                 if w.is_indicative():
                                     i['num_indic'] += 1
                                 if w.is_gerund():
@@ -915,17 +832,15 @@ class Document:
                                     i['num_inf'] += 1
                                 if w.is_imperative():
                                     i['num_impera'] += 1
-                            # prueba pron. pers.
                             if w.is_personal_pronoun():
                                 i['num_personal_pronouns'] += 1
-                            if w.is_first_person_pronoun(self.language):
-                                i['num_first_pers_pron'] += 1
-                            if w.is_first_personal_pronoun_sing(self.language):
-                                i['num_first_pers_sing_pron'] += 1
-                            if w.is_third_personal_pronoun(self.language):
-                                i['num_third_pers_pron'] += 1
-                            # prueba pron. pers.
-                            if w.is_negative(self.language):
+                                if w.is_first_person_pronoun():
+                                    i['num_first_pers_pron'] += 1
+                                    if w.is_first_personal_pronoun_sing():
+                                        i['num_first_pers_sing_pron'] += 1
+                                if w.is_third_personal_pronoun():
+                                    i['num_third_pers_pron'] += 1
+                            if w.is_negative():
                                 i['num_neg'] += 1
                             if w.text.lower() not in self.words_freq:
                                 self.words_freq[w.text.lower()] = 1
@@ -938,32 +853,28 @@ class Document:
                                     i['num_rel_subord'] += 1
                             i['num_words_with_punct'] += 1
                             if w.is_proposition():
-                                i['prop'] += 1
-                            if self.language != "basque":
-                                if w.has_more_than_three_syllables(self.language):
-                                    i['num_words_more_3_syl'] += 1
+                               i['prop'] += 1
                             if (w.is_lexic_word(s)):
                                 i['num_lexic_words'] += 1
-                                if wn.synsets(w.text, lang=self.wn_lang):
+                                if wn.synsets(w.text):
                                     if w.is_noun():
                                         self.aux_lists['noun_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'n', self.wn_lang))
+                                            self.get_abstraction_level(w.text, 'n'))
                                         self.aux_lists['noun_verb_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'n', self.wn_lang))
+                                            self.get_abstraction_level(w.text, 'n'))
                                     elif w.is_verb(s):
                                         self.aux_lists['verb_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'v', self.wn_lang))
+                                            self.get_abstraction_level(w.text, 'v'))
                                         self.aux_lists['noun_verb_abstraction_list'].append(
-                                            self.get_abstraction_level(w.text, 'v', self.wn_lang))
+                                            self.get_abstraction_level(w.text, 'v'))
                                     self.aux_lists['ambiguity_content_words_list'].append(
-                                        self.get_ambiguity_level(w.text, w.upos, self.wn_lang))
+                                        self.get_ambiguity_level(w.text, w.upos))
                             if w.text.lower() not in self.aux_lists['different_forms']:
                                 self.aux_lists['different_forms'].append(w.text.lower())
-                            if w.lemma not in self.aux_lists['different_lemmas'] and w.lemma is not None:
+                            if w.lemma not in self.aux_lists['different_lemmas']:
                                 self.aux_lists['different_lemmas'].append(w.text.lower())
                             self.aux_lists['words_length_list'].append(len(w.text))
-                            if w.lemma is not None:
-                                self.aux_lists['lemmas_length_list'].append(len(w.lemma))
+                            self.aux_lists['lemmas_length_list'].append(len(w.lemma))
                         if w.text.lower() in Oxford.a1:
                             if w.upos in Oxford.a1[w.text.lower()]:
                                 i['num_a1_words'] += 1
@@ -991,7 +902,6 @@ class Document:
                 self.aux_lists['sentences_length_mean'].append(sum_s)
                 self.aux_lists['sentences_length_no_stopwords_list'].append(num_words_in_sentence_without_stopwords)
                 depth_list.append(self.tree_depth(dependency_tree, root))
-            self.aux_lists['sentences_in_paragraph_token_list'].append(sentencesPerParag)
         try:
             i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
         except ZeroDivisionError:
@@ -1000,8 +910,6 @@ class Document:
             i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
         except ZeroDivisionError:
             i['num_decendents_noun_phrase'] = 0
-        #Obtengo las sílabas del texto segun el idioma
-        self.aux_lists['syllables_list']=self.get_syllable_list(text_without_punctuation)
         i['num_different_forms'] = len(self.aux_lists['different_forms'])
         self.indicators['left_embeddedness'] = round(float(np.mean(self.aux_lists['left_embeddedness'])), 4)
         self.calculate_honore()
@@ -1010,138 +918,26 @@ class Document:
         i['num_modifiers_noun_phrase'] = round(float(np.mean(modifiers_per_np)), 4)
         self.calculate_phrases(num_vp_list, num_np_list)
         self.calculate_mean_depth_per_sentence(depth_list)
-        self.calculate_mtld()
+        #self.calculate_mtld()
         self.calculate_readability()
         self.calculate_connectives()
+        # self.get_syllable_list()
         i['min_wf_per_sentence'] = round(float(np.mean(min_wordfreq_list)), 4)
-        if similarity:
-            self.calculate_similarity_adjacent_sentences()
-            self.calculate_similarity_pairs_sentences()
-            self.calculate_similarity_adjacent_paragraphs()
 
-    def avg_feature_vector(self, sentence, model, num_features, index2word_set):
-        words = sentence.split()
-        n_words = 0
-        feature_vec = np.zeros((num_features,), dtype='float32')
-        for word in words:
-            if word in index2word_set:
-                n_words += 1
-                feature_vec = np.add(feature_vec, model[word])
-        if n_words > 0:
-            feature_vec = np.divide(feature_vec, n_words)
-        return feature_vec
+        #self.get_syllable_list(text_without_punctuation)
 
-    def calculate_similarity_adjacent_sentences(self):
-        i = self.indicators
-        adjacent_similarity_list = []
-
-        sentences = self.aux_lists['sentences_in_text_token_list']
-
-        for x, y in zip(range(0, len(sentences) - 1), range(1, len(sentences))):
-            sim = self.calculate_similarity(sentences[x], sentences[y])
-            adjacent_similarity_list.append(sim)
-
-        if len(adjacent_similarity_list) > 0:
-            i['similarity_adjacent_mean'] = round(float(np.mean(adjacent_similarity_list)), 4)
-            i['similarity_adjacent_std'] = round(float(np.std(adjacent_similarity_list)), 4)
-
-    def calculate_similarity_pairs_sentences(self):
-        i = self.indicators
-        pairs_similarity_list = []
-
-        sentences = self.aux_lists['sentences_in_text_token_list']
-
-        for s1 in sentences:
-            for s2 in sentences:
-                if s1.text != s2.text:
-                    sim = self.calculate_similarity(s1, s2)
-                    pairs_similarity_list.append(sim)
-
-        if len(pairs_similarity_list) > 0:
-            i['similarity_pairs_par_mean'] = round(float(np.mean(pairs_similarity_list)), 4)
-            i['similarity_pairs_par_std'] = round(float(np.std(pairs_similarity_list)), 4)
-
-    def calculate_similarity_pairs_paragraphs(self, p1, p2, pairs_similarity_list):
-        pairs_similarity_list_mean = []
-        for x in p1:
-            for y in p2:
-                sim = self.calculate_similarity(x, y)
-                pairs_similarity_list_mean.append(sim)
-
-        pairs_similarity_list.append(round(float(np.mean(pairs_similarity_list_mean)), 4))
-        return pairs_similarity_list
-
-    def calculate_similarity_adjacent_paragraphs(self):
-        i = self.indicators
-        pairs_similarity_list = []
-
-        if len(self.aux_lists['sentences_in_paragraph_token_list']) > 1:
-            for x, y in zip(range(0, len(self.aux_lists['sentences_in_paragraph_token_list']) - 1),
-                            range(1, len(self.aux_lists['sentences_in_paragraph_token_list']))):
-                pairs_similarity_list = self.calculate_similarity_pairs_paragraphs(
-                    self.aux_lists['sentences_in_paragraph_token_list'][x],
-                    self.aux_lists['sentences_in_paragraph_token_list'][y], pairs_similarity_list)
-
-        if len(pairs_similarity_list) > 0:
-            i['similarity_adjacent_par_mean'] = round(float(np.mean(pairs_similarity_list)), 4)
-            i['similarity_adjacent_par_std'] = round(float(np.std(pairs_similarity_list)), 4)
-
-    def calculate_similarity(self, s1, s2):
-        s1_afv = self.avg_feature_vector(s1.text, model=self.model,
-                                         num_features=self.num_features,
-                                         index2word_set=self.index2word_set)
-        s2_afv = self.avg_feature_vector(s2.text, model=self.model,
-                                         num_features=self.num_features,
-                                         index2word_set=self.index2word_set)
-        sim = 1 - spatial.distance.cosine(s1_afv, s2_afv)
-        return sim
-
-    # List of syllables of each word. This will be used to calculate mean/std dev of syllables.
+    #List of syllables of each word. This will be used to calculate mean/std dev of syllables.
     def get_syllable_list(self, text_without_punctuation):
-        if self.language=="basque":
-            # #accedemos a foma
-            # command_01 = "foma"
-            # os.system(command_01)
-            #
-            # #utilizamos el script silabaEus que contendra las reglas
-            # command_02 = "source silabaEus.script"
-            # os.system(command_02)
-            # Write all the information in the file
-            # genera CADENAS aleatorias
-            # import uuid
-            #convertir a word list en word.text list
-            sequence = []
-            for word in text_without_punctuation:
-                sequence.append(word.text)
-            texto = '\t'.join(sequence)
-            #longitud = len(text_without_punctuation)
-            #print(longitud)
-            id = uuid.uuid4()
-            #print(id)
-            silaba_name = str(id)
-            silaba_name = silaba_name + "_silaba.txt"
-            # Creamos un fichero con las palabras divididas en silabas por puntos
-            with open(silaba_name, "w", encoding="utf-8") as f:
-                command = "echo " + texto + " | flookup -ib data/eu/syllablesplitter/silabaEus.fst"
-                #print(command)
-                subprocess.run(command, shell=True, stdout=f)
-            with open(silaba_name, mode="r", encoding="utf-8") as f:
-                contenido = f.readlines()
-                values = contenido[0].split("\t")
-                # print(values[0])
-                # print(values[1])
-                cadena_palabras_con_puntos = values[1].split(" ")
-                num_sil = []
-                for palabra_con_puntos in cadena_palabras_con_puntos:
-                    num_sil.append(len(palabra_con_puntos.split('.')))
-                # print(num_sil)
-            os.system("rm " + str(silaba_name))
-            return num_sil
-        if self.language == "english" or self.language == "spanish":
-            num_sil = []
-            for word in text_without_punctuation:
-                num_sil.append(word.allnum_syllables(self.language))
-            return num_sil
+        #Si tiene contenido, significara que el lenguaje utilizado sera el ingles, si no, euskera
+        if len(Pronouncing.prondict) == 0:
+            prondic = Pronouncing("basque")
+            prondic.load(text_without_punctuation)
+
+        #Una vez cargado prondict, podemos realizar el proceso de obtener la lista de silabas
+        list = []
+        for word in text_without_punctuation:
+            list.append(word.allnum_syllables())
+        self.aux_lists['syllables_list'] = list
 
     def calculate_all_means(self):
         i = self.indicators
@@ -1149,21 +945,21 @@ class Document:
         i['sentences_length_mean'] = round(float(np.mean(self.aux_lists['sentences_length_mean'])), 4)
         i['words_length_mean'] = round(float(np.mean(self.aux_lists['words_length_list'])), 4)
         i['lemmas_length_mean'] = round(float(np.mean(self.aux_lists['lemmas_length_list'])), 4)
-        i['num_syllables_words_mean'] = round(float(np.mean(self.aux_lists['syllables_list'])), 4)
         i['mean_propositions_per_sentence'] = round(float(np.mean(self.aux_lists['prop_per_sentence'])), 4)
         i['num_punct_marks_per_sentence'] = round(float(np.mean(self.aux_lists['punct_per_sentence'])), 4)
         i['polysemic_index'] = round(float(np.mean(self.aux_lists['ambiguity_content_words_list'])), 4)
         i['hypernymy_index'] = round(float(np.mean(self.aux_lists['noun_verb_abstraction_list'])), 4)
         i['hypernymy_verbs_index'] = round(float(np.mean(self.aux_lists['verb_abstraction_list'])), 4)
         i['hypernymy_nouns_index'] = round(float(np.mean(self.aux_lists['noun_abstraction_list'])), 4)
-        i['num_pass_mean'] = round((i['num_pass']) / i['num_words'], 4)
-        i['num_past_irregular_mean'] = round(((i['num_past_irregular']) / i['num_past']), 4) if i['num_past'] != 0 else 0
         i['sentences_length_no_stopwords_mean'] = round(
             float(np.mean(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_mean'] = round(float(np.mean(self.aux_lists['words_length_no_stopwords_list'])), 4)
-        i['mean_rare'] = round(((100 * i['num_rare_words']) / i['num_lexic_words']), 4)
-        i['mean_distinct_rare'] = round(
-            (100 * i['num_dif_rare_words']) / len(self.aux_lists['different_lexic_words']), 4)
+        if Connectives.lang == "basque":
+            i['mean_rare_34'] = round(((100 * i['num_rare_words_34']) / i['num_lexic_words']), 4)
+            i['mean_distinct_rare_34'] = round((100 * i['num_dif_rare_words_34']) / len(self.aux_lists['different_lexic_words']), 4)
+        else:
+            i['mean_rare_4'] = round(((100 * i['num_rare_words_4']) / i['num_lexic_words']), 4)
+            i['mean_distinct_rare_4'] = round((100 * i['num_dif_rare_words_4']) / len(self.aux_lists['different_lexic_words']), 4)
 
     def calculate_all_std_deviations(self):
         i = self.indicators
@@ -1171,11 +967,10 @@ class Document:
         i['sentences_length_std'] = round(float(np.std(self.aux_lists['sentences_length_mean'])), 4)
         i['words_length_std'] = round(float(np.std(self.aux_lists['words_length_list'])), 4)
         i['lemmas_length_std'] = round(float(np.std(self.aux_lists['lemmas_length_list'])), 4)
-        i['num_syllables_words_std'] = round(float(np.std(self.aux_lists['syllables_list'])), 4)
         i['sentences_length_no_stopwords_std'] = round(
             float(np.std(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_std'] = round(float(np.std(self.aux_lists['words_length_no_stopwords_list'])), 4)
-        i['num_past_irregular_incidence'] = self.get_incidence(i['num_past_irregular'], 4)
+
     @staticmethod
     def get_incidence(indicador, num_words):
         return round(((1000 * indicador) / num_words), 4)
@@ -1196,15 +991,12 @@ class Document:
         i['num_rel_subord_incidence'] = self.get_incidence(i['num_rel_subord'], n)
         i['num_past_incidence'] = self.get_incidence(i['num_past'], n)
         i['num_pres_incidence'] = self.get_incidence(i['num_pres'], n)
-        i['num_future_incidence'] = self.get_incidence(i['num_future'], n)
+        i['num_future_incidence'] = self.get_incidence(i['um_future'], n)
         i['num_indic_incidence'] = self.get_incidence(i['num_indic'], n)
         i['num_verb_incidence'] = self.get_incidence(i['num_verb'], n)
         i['num_noun_incidence'] = self.get_incidence(i['num_noun'], n)
-        i['num_proper_noun_incidence'] = self.get_incidence(i['num_proper_noun'], n)
         i['num_adj_incidence'] = self.get_incidence(i['num_adj'], n)
         i['num_adv_incidence'] = self.get_incidence(i['num_adv'], n)
-        i['num_pass_incidence'] = self.get_incidence(i['num_pass'], n)
-        i['agentless_passive_density_incidence'] = self.get_incidence(i['num_agentless'], n)
         i['num_lexic_words_incidence'] = self.get_incidence(i['num_lexic_words'], n)
         i['all_connectives_incidence'] = self.get_incidence(i['all_connectives'], n)
         i['causal_connectives_incidence'] = self.get_incidence(i['causal_connectives'], n)
@@ -1220,14 +1012,24 @@ class Document:
         i['order_connectives_incidence'] = self.get_incidence(i['order_connectives'], n)
         i['reference_connectives_incidence'] = self.get_incidence(i['reference_connectives'], n)
         i['summary_connectives_incidence'] = self.get_incidence(i['summary_connectives'], n)
-        i['num_rare_nouns_incidence'] = self.get_incidence(i['num_rare_nouns'], n)
-        i['num_rare_adj_incidence'] = self.get_incidence(i['num_rare_adj'], n)
-        i['num_rare_verbs_incidence'] = self.get_incidence(i['num_rare_verbs'], n)
-        i['num_rare_advb_incidence'] = self.get_incidence(i['num_rare_advb'], n)
-        i['num_rare_words_incidence'] = self.get_incidence(i['num_rare_words'], n)
-        i['num_dif_rare_words_incidence'] = self.get_incidence(i['num_dif_rare_words'], n)
-        i['mean_rare_incidence'] = self.get_incidence(i['mean_rare'], n)
-        i['mean_distinct_rare_incidence'] = self.get_incidence(i['mean_distinct_rare'], n)
+        if self.language == "basque":
+            i['num_rare_nouns_34_incidence'] = self.get_incidence(i['num_rare_nouns_34'], n)
+            i['num_rare_adj_34_incidence'] = self.get_incidence(i['num_rare_adj_34'], n)
+            i['num_rare_verbs_34_incidence'] = self.get_incidence(i['num_rare_verbs_34'], n)
+            i['num_rare_advb_34_incidence'] = self.get_incidence(i['num_rare_advb_34'], n)
+            i['num_rare_words_34_incidence'] = self.get_incidence(i['num_rare_words_34'], n)
+            i['num_dif_rare_words_34_incidence'] = self.get_incidence(i['num_dif_rare_words_34'], n)
+            i['mean_rare_34_incidence'] = self.get_incidence(i['mean_rare_34'], n)
+            i['mean_distinct_rare_34_incidence'] = self.get_incidence(i['mean_distinct_rare_34'], n)
+        else:
+            i['num_rare_nouns_4_incidence'] = self.get_incidence(i['num_rare_nouns_4'], n)
+            i['num_rare_adj_4_incidence'] = self.get_incidence(i['num_rare_adj_4'], n)
+            i['num_rare_verbs_4_incidence'] = self.get_incidence(i['num_rare_verbs_4'], n)
+            i['num_rare_advb_4_incidence'] = self.get_incidence(i['num_rare_advb_4'], n)
+            i['num_rare_words_4_incidence'] = self.get_incidence(i['num_rare_words_4'], n)
+            i['num_dif_rare_words_4_incidence'] = self.get_incidence(i['num_dif_rare_words_4'], n)
+            i['mean_rare_4_incidence'] = self.get_incidence(i['mean_rare_4'], n)
+            i['mean_distinct_rare_4_incidence'] = self.get_incidence(i['mean_distinct_rare_4'], n)
         i['num_a1_words_incidence'] = self.get_incidence(i['num_a1_words'], n)
         i['num_a2_words_incidence'] = self.get_incidence(i['num_a2_words'], n)
         i['num_b1_words_incidence'] = self.get_incidence(i['num_b1_words'], n)
@@ -1245,7 +1047,6 @@ class Document:
         i['negation_density_incidence'] = self.get_incidence(i['num_neg'], i['num_words'])
         self.calculate_all_ttr()
         self.calculate_all_lemma_ttr()
-        self.calculate_ratio_proper_nouns_per_nouns()
 
     def calculate_phrases(self, num_vp_list, num_np_list):
         i = self.indicators
@@ -1259,7 +1060,6 @@ class Paragraph:
 
     def __init__(self):
         self._sentence_list = []
-        self.text = None
 
     @property
     def sentence_list(self):
@@ -1474,28 +1274,29 @@ class Word:
                                                     'det', 'clf',
                                                     'case'] else False
 
+
     def is_personal_pronoun(self):
-        atributos = self.feats.split('|')
+        atributos =self.feats.split('|')
         if "PronType=Prs" in atributos:
             return True
         else:
             return False
 
-    def is_first_person_pronoun(self, language):
+    def is_first_person_pronoun(self):
         atributos = self.feats.split('|')
         if 'PronType=Prs' in atributos and 'Person=1' in atributos:
             return True
         else:
             return False
 
-    def is_third_personal_pronoun(self, language):
+    def is_third_personal_pronoun(self):
         atributos = self.feats.split('|')
         if 'PronType=Prs' in atributos and 'Person=3' in atributos:
             return True
         else:
             return False
 
-    def is_first_personal_pronoun_sing(self, language):
+    def is_first_personal_pronoun_sing(self):
         atributos = self.feats.split('|')
         if 'PronType=Prs' in atributos and 'Person=1' in atributos and 'Number=Sing' in atributos:
             return True
@@ -1505,8 +1306,7 @@ class Word:
     def num_syllables(self):
         list = []
         max = 0
-        txt = self.text.lower()
-        for x in Pronouncing.prondict[txt]:
+        for x in Pronouncing.prondict[self.text.lower()]:
             tmp_list = []
             tmp_max = 0
             for y in x:
@@ -1518,15 +1318,14 @@ class Word:
                 max = tmp_max
         return max
 
-    def syllables_en(self):
+    def syllables(self):
         """
-                Calculate syllables of a word using a less accurate algorithm.
-                Parse through the sentence, using common syllabic identifiers to count
-                syllables.
-
-                ADAPTED FROM:
-                [http://stackoverflow.com/questions/14541303/count-the-number-of-syllables-in-a-word]
-                """
+        Calculate syllables of a word using a less accurate algorithm.
+        Parse through the sentence, using common syllabic identifiers to count
+        syllables.
+        ADAPTED FROM:
+        [http://stackoverflow.com/questions/14541303/count-the-number-of-syllables-in-a-word]
+        """
         # initialize count
         count = 0
         # vowel list
@@ -1557,39 +1356,12 @@ class Word:
             count = 0
         return count
 
-    def syllables_es(self):
-        chars = char_line(re.sub(r'\W+', '', self.text))
-        return len(self.syllablesplit(chars))
-
-    def syllablesplit(self, chars):
-        rules = [('VV', 1), ('cccc', 2), ('xcc', 1), ('ccx', 2), ('csc', 2), ('xc', 1), ('cc', 1), ('vcc', 2),
-                 ('Vcc', 2), ('sc', 1), ('cs', 1), ('Vc', 1), ('vc', 1), ('Vs', 1), ('vs', 1)]
-        for split_rule, where in rules:
-            first, second = chars.split_by(split_rule, where)
-            if second:
-                if first.type_line in set(['c', 's', 'x', 'cs']) or second.type_line in set(['c', 's', 'x', 'cs']):
-                    # print 'skip1', first.word, second.word, split_rule, chars.type_line
-                    continue
-                if first.type_line[-1] == 'c' and second.word[0] in set(['l', 'r']):
-                    continue
-                if first.word[-1] == 'l' and second.word[-1] == 'l':
-                    continue
-                if first.word[-1] == 'r' and second.word[-1] == 'r':
-                    continue
-                if first.word[-1] == 'c' and second.word[-1] == 'h':
-                    continue
-                return self.syllablesplit(first) + self.syllablesplit(second)
-        return [chars]
-
-    def allnum_syllables(self,lang):
-        if lang == "english":
-            try:
-                return self.num_syllables()
-            except KeyError:
-                # if word not found in cmudict
-                return self.syllables_en()
-        if lang == "spanish":
-            return self.syllables_es()
+    def allnum_syllables(self):
+        try:
+            return self.num_syllables()
+        except KeyError:
+            # if word not found in cmudict
+            return self.syllables()
 
     def is_lexic_word(self, sequence):
         return self.is_verb(sequence) or self.upos == 'NOUN' or self.upos == 'ADJ' or self.upos == 'ADV'
@@ -1607,6 +1379,7 @@ class Word:
             return True
         else:
             return False
+
 
     def is_present(self):
         atributos = self.feats.split('|')
@@ -1655,7 +1428,7 @@ class Word:
             return False
 
     def is_proposition(self):
-        if self.dependency_relation == 'conj' or self.dependency_relation == 'csubj' or self.dependency_relation == 'csubj:pass' or \
+        if self.dependency_relation == 'conj' or self.dependency_relation == 'csubj' or self.dependency_relation == 'csubj:pass' or\
                 self.dependency_relation == 'ccomp' or self.dependency_relation == 'xcomp' or self.dependency_relation == 'advcl' or self.dependency_relation == 'acl' or self.dependency_relation == 'acl:relcl':
             return True
         else:
@@ -1663,7 +1436,7 @@ class Word:
 
     def is_subordinate(self):
         subordinadas_labels = ['csubj', 'csubj:pass', 'ccomp', 'xcomp',
-                               'advcl', 'acl', 'acl:relcl']
+                                   'advcl', 'acl', 'acl:relcl']
         return True if self.dependency_relation in subordinadas_labels else False
 
     def is_subordinate_relative(self):
@@ -1675,7 +1448,7 @@ class Word:
         return True if self.text.lower() in Stopwords.stop_words else False
 
     def is_punctuation(self):
-        # Punctuation marks are non-alphabetical characters and character groups used in many languages to delimit linguistic units in printed text.
+    # Punctuation marks are non-alphabetical characters and character groups used in many languages to delimit linguistic units in printed text.
         if self.upos == 'PUNCT':
             return True
         else:
@@ -1692,15 +1465,9 @@ class Word:
             return True
         else:
             return False
-
+        
     def is_noun(self):
         if self.upos == 'NOUN':
-            return True
-        else:
-            return False
-
-    def is_proper_noun(self):
-        if self.upos == "PROPN":
             return True
         else:
             return False
@@ -1717,9 +1484,10 @@ class Word:
         else:
             return False
 
-    def is_negative(self, lang):
-        if lang == "english":
+    def is_negative(self):
+        if Connectives.lang == "english":
             if self.lemma == 'not':
+                print(self.text)
                 return True
             else:
                 return False
@@ -1733,62 +1501,60 @@ class Word:
     def is_irregular(self):
         return True if self.lemma in Irregularverbs.irregular_verbs else False
 
-    def has_more_than_three_syllables(self,lang):
-        return True if self.allnum_syllables(lang) > 3 else False
-
-    def is_passive(self):
-        atributos = self.feats.split('|')
-        return True if 'Voice=Pass' in atributos else False
-
-    def is_agentless(self, frase):
-        # Si el siguiente indice esta dentro del rango de la lista
-        if int(self.index) < len(frase.word_list):
-            siguiente = frase.word_list[int(self.index) + 1].text.lower()
-            if siguiente == 'by' or siguiente == 'por':
-                return False
-            else:
-                return True
+    def has_more_than_three_syllables(self):
+        return True if self.allnum_syllables() > 3 else False
 
 
 class Oxford():
+
+
     a1 = defaultdict(dict)
     a2 = defaultdict(dict)
     b1 = defaultdict(dict)
     b2 = defaultdict(dict)
     c1 = defaultdict(dict)
 
-    def load(self):
 
-        f = open('data/en/Vocabularylevel/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
+    def __init__(self, language):
+        self.lang = language
+
+    def load(self):
+        #if self.lang == "spanish":
+        #    f = open('data/es/OxfordWordListByLevel.txt', 'r')
+        #if self.lang == "english":
+        f = open('data/en/OxfordWordListByLevel.txt', 'r')
+        #if self.lang == "basque":
+        #f = open('data/eu/OxfordWordListByLevel.txt', 'r')
         lineas = f.readlines()
-        aux = Oxford.a1
+        aux = self.a1
         for linea in lineas:
             if linea.startswith("//A1"):
-                aux = Oxford.a1
+                aux = self.a1
             elif linea.startswith("//A2"):
-                aux = Oxford.a2
+                aux = self.a2
             elif linea.startswith("//B1"):
-                aux = Oxford.b1
+                aux = self.b1
             elif linea.startswith("//B2"):
-                aux = Oxford.b2
+                aux = self.b2
             elif linea.startswith("//C1"):
-                aux = Oxford.c1
+                aux = self.c1
             else:
                 aux[linea.split()[0]] = linea.split()[1].rstrip('\n')
         f.close()
 
 
 class Connectives():
+
     connectives = []
-    lang = ""
-    # en
+    #lang = ""
+    #en
     logical = []
     adversative = []
-    # both
+    #both
     temporal = []
     causal = []
     conditional = []
-    # es
+    #es
     addition = []
     consequence = []
     purpose = []
@@ -1798,585 +1564,693 @@ class Connectives():
     reference = []
     summary = []
 
+
     def __init__(self, language):
-        Connectives.lang = language
+        self.lang = language
 
     def load(self):
-        if Connectives.lang == "spanish":
-            f = open('data/es/Connectives/connectives.txt', 'r', encoding='utf-8')
-        if Connectives.lang == "english":
-            f = open('data/en/Connectives/connectives.txt', 'r', encoding='utf-8')
-        if Connectives.lang == "basque":
-            f = open('data/eu/Connectives/connectives.txt', 'r', encoding='utf-8')
+        #if Connectives.lang == "spanish":
+        #    f = open('data/es/conectores.txt', 'r')
+        #if Connectives.lang == "english":
+        f = open('data/en/connectives.txt', 'r')
+        #if Connectives.lang == "basque":
+        #    f = open('data/eu/connectives_eu.txt', 'r')
         lineas = f.readlines()
-        aux = Connectives.temporal
+        aux = self.temporal
         for linea in lineas:
-            if linea.startswith("//addition"):
-                aux = Connectives.addition
+            if linea.startswith("//adición"):
+                aux = self.addition
             elif linea.startswith("//causal"):
-                aux = Connectives.causal
+                aux = self.causal
             elif linea.startswith("//conditional"):
-                aux = Connectives.conditional
+                aux = self.conditional
             elif linea.startswith("//consequence"):
-                aux = Connectives.consequence
+                aux = self.consequence
             elif linea.startswith("//purpose"):
-                aux = Connectives.purpose
-            elif linea.startswith("//illustration"):
-                aux = Connectives.illustration
-            elif linea.startswith("//opposition"):
-                aux = Connectives.opposition
+                aux = self.purpose
+            elif linea.startswith("//ilustración"):
+                aux = self.illustration
+            elif linea.startswith("//oposición"):
+                aux = self.opposition
             elif linea.startswith("//order"):
-                aux = Connectives.order
+                aux = self.order
             elif linea.startswith("//reference"):
-                aux = Connectives.reference
+                aux = self.reference
             elif linea.startswith("//summary"):
-                aux = Connectives.summary
+                aux = self.summary
             elif linea.startswith("//temporal"):
-                aux = Connectives.temporal
+                aux = self.temporal
             elif linea.startswith("//logical"):
-                aux = Connectives.logical
+                aux = self.logical
             elif linea.startswith("//adversative"):
-                aux = Connectives.adversative
+                aux = self.adversative
             else:
                 aux.append(linea.rstrip('\n'))
                 Connectives.connectives.append(linea.rstrip('\n'))
         f.close()
 
 
-class char_line():
-    def __init__(self, word):
-        self.word = word
-        self.char_line = [(char, self.char_type(char)) for char in word]
-        self.type_line = ''.join(chartype for char, chartype in self.char_line)
-
-    def char_type(self, char):
-        if char in set(['a', 'á', 'e', 'é', 'o', 'ó', 'í', 'ú']):
-            return 'V'  # strong vowel
-        if char in set(['i', 'u', 'ü']):
-            return 'v'  # week vowel
-        if char == 'x':
-            return 'x'
-        if char == 's':
-            return 's'
-        else:
-            return 'c'
-
-    def find(self, finder):
-        return self.type_line.find(finder)
-
-    def split(self, pos, where):
-        return char_line(self.word[0:pos + where]), char_line(self.word[pos + where:])
-
-    def split_by(self, finder, where):
-        split_point = self.find(finder)
-        if split_point != -1:
-            chl1, chl2 = self.split(split_point, where)
-            return chl1, chl2
-        return self, False
-
-    def __str__(self):
-        return self.word
-
-    def __repr__(self):
-        return repr(self.word)
-
-
-class Irregularverbs():
+class Irregularverbs:
 
     irregular_verbs = []
-    def __init__(self, language):
-        self.lang = language
 
     def load(self):
-        if self.lang.lower() == "spanish":
-            f = open('data/es/IrregularVerbs/irregularverbs.txt', 'r', encoding='ISO-8859-1')
-            lineas = f.readlines()
-            for linea in lineas:
-                if not linea.startswith("//"):
-                    # carga el verbo en presente, dejando pasado y preterito
-                    Irregularverbs.irregular_verbs.append(linea.rstrip('\n'))
-            f.close()
-        if self.lang.lower() == "english":
-            f = open('data/en/IrregularVerbs/IrregularVerbs.txt', 'r', encoding='utf-8')
-            lineas = f.readlines()
-            for linea in lineas:
-                if not linea.startswith("//"):
-                    #carga el verbo en presente, dejando pasado y preterito
-                    Irregularverbs.irregular_verbs.append(linea.split()[0])
-            f.close()
+        f = open('data/en/IrregularVerbs.txt', 'r')
+        lineas = f.readlines()
+        for linea in lineas:
+            if not linea.startswith("//"):
+                #carga el verbo en presente, dejando pasado y preterito
+                Irregularverbs.irregular_verbs.append(linea.split()[0])
+        f.close()
 
 
 class Printer:
 
-    def __init__(self, indicators, language, similarity):
+    def __init__(self, indicators):
         self.indicators = indicators
-        self.language = language
-        self.similarity = similarity
-        self.ind_sentences = {}
-        # ignore list inicializados
-        self.ignore_list_en_ind = []
-        self.ignore_list_es_ind = []
-        self.ignore_list_eu_ind = []
-        self.ignore_list_counters = []
-        self.similarity_list = []
-
-    def load_ind_sentences(self):
-        self.ind_sentences['num_words'] = "Number of words (total): "
-        # The number of distints lower and alfabetic words
-        self.ind_sentences['num_different_forms'] = "Number of distinct words (total): "
-        self.ind_sentences['num_words_with_punct'] = "Number of words with punctuation (total): "
-        self.ind_sentences['num_paragraphs'] = "Number of paragraphs (total): "
-        self.ind_sentences['num_paragraphs_incidence'] = "Number of paragraphs (incidence per 1000 words): "
-        self.ind_sentences['num_sentences'] = "Number of sentences (total): "
-        self.ind_sentences['num_sentences_incidence'] = "Number of sentences (incidence per 1000 words): "
-        # Numero de frases en un parrafo (media)
-        self.ind_sentences['sentences_per_paragraph_mean'] = "Length of paragraphs (mean): "
-        # Numero de frases en un parrafo (desv. Tipica)
-        self.ind_sentences['sentences_per_paragraph_std'] = "Standard deviation of length of paragraphs: "
-        self.ind_sentences['sentences_length_mean'] = "Number of words (length) in sentences (mean): "
-        self.ind_sentences['sentences_length_std'] = "Number of words (length) in sentences (standard deviation): "
-        self.ind_sentences['sentences_length_no_stopwords_mean'] = "Number of words (length) of sentences without " \
-                                                                   "stopwords (mean): "
-        self.ind_sentences['sentences_length_no_stopwords_std'] = "Number of words (length) of sentences without " \
-                                                                  "stopwords (standard deviation): "
-        self.ind_sentences['num_syllables_words_mean'] = "Mean number of syllables (length) in words: "
-        self.ind_sentences['num_syllables_words_std'] = "Standard deviation of the mean number of syllables in words: "
-        self.ind_sentences['words_length_mean'] = "Mean number of letters (length) in words: "
-        self.ind_sentences['words_length_std'] = "Standard deviation of number of letters in words: "
-        self.ind_sentences['words_length_no_stopwords_mean'] = "Mean number of letters (length) in words without " \
-                                                               "stopwords: "
-        self.ind_sentences['words_length_no_stopwords_std'] = "Standard deviation of the mean number of letter in " \
-                                                              "words without stopwords: "
-        self.ind_sentences['lemmas_length_mean'] = "Mean number of letters (length) in lemmas: "
-        self.ind_sentences['lemmas_length_std'] = "Standard deviation of letters (length) in lemmas: "
-        self.ind_sentences['lexical_density'] = "Lexical Density: "
-        self.ind_sentences['noun_density'] = "Noun Density: "
-        self.ind_sentences['verb_density'] = "Verb Density: "
-        self.ind_sentences['adj_density'] = "Adjective Density: "
-        self.ind_sentences['adv_density'] = "Adverb Density: "
-        # calculate_ratio_proper_nouns_per_nouns
-        self.ind_sentences[
-            'ratio_proper_nouns_per_nouns'] = "Ratio of proper nouns for all nouns (proper and common nouns): "
-        # Simple TTR (Type-Token Ratio)
-        self.ind_sentences['simple_ttr'] = "STTR (Simple Type-Token Ratio) : "
-        # Content TTR (Content Type-Token Ratio)
-        self.ind_sentences['content_ttr'] = "CTTR (Content Type-Token Ratio): "
-        # NTTR (Noun Type-Token Ratio)
-        self.ind_sentences['nttr'] = "NTTR (Noun Type-Token Ratio): "
-        # PNTTR Proper Noun Type-Token Ratio
-        self.ind_sentences['pnttr'] = "PNTTR (Proper Noun Type-Token Ratio): "
-        # VTTR (Verb Type-Token Ratio)(incidence per 1000 words)
-        self.ind_sentences['vttr'] = "VTTR (Verb Type-Token Ratio): "
-        # AdjTTR (Adj Type-Token Ratio)
-        self.ind_sentences['adj_ttr'] = "AdjTTR (Adj Type-Token Ratio): "
-        # AdvTTR (Adv Type-Token Ratio)
-        self.ind_sentences['adv_ttr'] = "AdvTTR (Adv Type-Token Ratio): "
-        # Lemma Simple TTR (Type-Token Ratio)
-        self.ind_sentences['lemma_ttr'] = "LSTTR (Lemma Simple Type-Token Ratio): "
-        # Lemma Content TTR (Content Type-Token Ratio)
-        self.ind_sentences['lemma_content_ttr'] = "LCTTR (Lemma Content Type-Token Ratio): "
-        # LNTTR (Lemma Noun Type-Token Ratio)
-        self.ind_sentences['lemma_nttr'] = "LNTTR (Lemma Noun Type-Token Ratio) "
-        # LVTTR (Lemma Verb Type-Token Ratio)
-        self.ind_sentences['lemma_vttr'] = "LVTTR (Lemma Verb Type-Token Ratio): "
-        # Lemma AdjTTR (Lemma Adj Type-Token Ratio)
-        self.ind_sentences['lemma_adj_ttr'] = "LAdjTTR (Lemma Adj Type-Token Ratio): "
-        # Lemma AdvTTR (Lemma Adv Type-Token Ratio)
-        self.ind_sentences['lemma_adv_ttr'] = "LAdvTTR (Lemma Adv Type-Token Ratio): "
-        # Honore
-        self.ind_sentences['honore'] = "Honore Lexical Density: "
-        # Maas
-        self.ind_sentences['maas'] = "Maas Lexical Density: "
-        # MTLD
-        self.ind_sentences['mtld'] = "Measure of Textual Lexical Diversity (MTLD): "
-        # Flesch readability ease=206.835-1.015(n.º de words/nº de frases)-84.6(n.º de silabas/numero de words)
-        self.ind_sentences['flesch'] = "Flesch readability ease: "
-        # Flesch-Kincaid grade level =0.39 * (n.º de words/nº de frases) + 11.8 * (n.º de silabas/numero de words) – 15.59)
-        self.ind_sentences['flesch_kincaid'] = "Flesch-Kincaid Grade level: "
-        self.ind_sentences['dale_chall'] = "Dale-Chall readability formula: "
-        self.ind_sentences['smog'] = "Simple Measure Of Gobbledygook (SMOG) grade: "
-        self.ind_sentences['num_a1_words'] = "Number of A1 vocabulary in the text: "
-        self.ind_sentences['num_a1_words_incidence'] = "Incidence score of A1 vocabulary  (per 1000 words): "
-        self.ind_sentences['num_a2_words'] = "Number of A2 vocabulary in the text: "
-        self.ind_sentences['num_a2_words_incidence'] = "Incidence score of A2 vocabulary  (per 1000 words): "
-        self.ind_sentences['num_b1_words'] = "Number of B1 vocabulary in the text: "
-        self.ind_sentences['num_b1_words_incidence'] = "Incidence score of B1 vocabulary  (per 1000 words): "
-        self.ind_sentences['num_b2_words'] = "Number of B2 vocabulary in the text: "
-        self.ind_sentences['num_b2_words_incidence'] = "Incidence score of B2 vocabulary  (per 1000 words): "
-        self.ind_sentences['num_c1_words'] = "Number of C1 vocabulary in the text: "
-        self.ind_sentences['num_c1_words_incidence'] = "Incidence score of C1 vocabulary  (per 1000 words): "
-        self.ind_sentences['num_content_words_not_a1_c1_words'] = "Number of content words not in A1-C1 vocabulary: "
-        self.ind_sentences['num_content_words_not_a1_c1_words_incidence'] = "Incidence score of content words not in " \
-                                                                            "A1-C1 vocabulary (per 1000 words): "
-        self.ind_sentences['num_past'] = "Number of verbs in past tense: "
-        self.ind_sentences['num_past_incidence'] = "Number of verbs in past tense (incidence per 1000 words): "
-        self.ind_sentences['num_pres'] = "Number of verbs in present tense: "
-        self.ind_sentences['num_pres_incidence'] = "Number of verbs in present tense (incidence per 1000 words): "
-        self.ind_sentences['num_future'] = "Number of verbs in future tense: "
-        self.ind_sentences['num_future_incidence'] = "Number of verbs in future tense (incidence per 1000 words): "
-        # Numero de verbos en modo indicativo
-        self.ind_sentences['num_indic'] = "Number of verbs in indicative mood: "
-        self.ind_sentences['num_indic_incidence'] = "Number of verbs in indicative mood (incidence per 1000 words): "
-        # Numero de verbos en modo imperativo
-        self.ind_sentences['num_impera'] = "Number of verbs in imperative mood: "
-        self.ind_sentences['num_impera_incidence'] = "Number of verbs in imperative mood (incidence per 1000 words): "
-        # Numero de verbos en pasado que son irregulares
-        self.ind_sentences['num_past_irregular'] = "Number of irregular verbs in past tense: "
-        # Numero de verbos en pasado que son irregulares (incidencia 1000 words)
-        self.ind_sentences['num_past_irregular_incidence'] = "Number of irregular verbs in past tense (incidence per " \
-                                                             "1000 words): "
-        # Porcentaje de verbos en pasado que son irregulares sobre total de verbos en pasado
-        self.ind_sentences['num_past_irregular_mean'] = "Mean of irregular verbs in past tense in relation to the " \
-                                                        "number of verbs in past tense: "
-        # Number of personal pronouns
-        self.ind_sentences['num_personal_pronouns'] = "Number of personal pronouns: "
-        # Incidence score of pronouns (per 1000 words)
-        self.ind_sentences['num_personal_pronouns_incidence'] = "Incidence score of pronouns (per 1000 words): "
-        # Number of pronouns in first person
-        self.ind_sentences['num_first_pers_pron'] = "Number of pronouns in first person: "
-        # Incidence score of pronouns in first person  (per 1000 words)
-        self.ind_sentences['num_first_pers_pron_incidence'] = "Incidence score of pronouns in first person  (per 1000 " \
-                                                              "words): "
-        # Number of pronouns in first person singular
-        self.ind_sentences['num_first_pers_sing_pron'] = "Number of pronouns in first person singular: "
-        # Incidence score of pronouns in first person singular (per 1000 words)
-        self.ind_sentences['num_first_pers_sing_pron_incidence'] = "Incidence score of pronouns in first person " \
-                                                                   "singular (per 1000 words): "
-        # Number of pronouns in third person
-        self.ind_sentences['num_third_pers_pron'] = "Number of pronouns in third person: "
-        # Incidence score of pronouns in third person (per 1000 words)
-        self.ind_sentences['num_third_pers_pron_incidence'] = "Incidence score of pronouns in third person (per 1000 " \
-                                                              "words): "
-        self.ind_sentences['min_wf_per_sentence'] = "Minimum word frequency per sentence (mean): "
-        self.ind_sentences['num_rare_nouns'] = "Number of rare nouns: "
-        self.ind_sentences['num_rare_nouns_incidence'] = "Number of rare nouns (incidence per 1000 words): "
-        self.ind_sentences['num_rare_adj'] = "Number of rare adjectives: "
-        self.ind_sentences['num_rare_adj_incidence'] = "Number of rare adjectives (incidence per 1000 words): "
-        self.ind_sentences['num_rare_verbs'] = "Number of rare verbs: "
-        self.ind_sentences['num_rare_verbs_incidence'] = "Number of rare verbs (incidence per 1000 words): "
-        self.ind_sentences['num_rare_advb'] = "Number of rare adverbs: "
-        self.ind_sentences['num_rare_advb_incidence'] = "Number of rare adverbs (incidence per 1000 words): "
-        self.ind_sentences['num_rare_words'] = "Number of rare content words: "
-        self.ind_sentences['num_rare_words_incidence'] = "Number of rare content words (incidence per 1000 words): "
-        self.ind_sentences['num_dif_rare_words'] = "Number of distinct rare content words: "
-        self.ind_sentences['num_dif_rare_words_incidence'] = "Number of distinct rare content words (incidence per " \
-                                                             "1000 words): "
-        # The average of rare lexical words (whose word frequency value is less than 4) with respect to the total of lexical words
-        self.ind_sentences['mean_rare'] = "Mean of rare lexical words: "
-        # The average of distinct rare lexical words (whose word frequency value is less than 4) with respect to the total of distinct lexical words
-        self.ind_sentences['mean_distinct_rare'] = "Mean of distinct rare lexical words: "
-        self.ind_sentences['num_lexic_words'] = "Number of content words: "
-        self.ind_sentences['num_lexic_words_incidence'] = "Number of content words (incidence per 1000 words): "
-        self.ind_sentences['num_noun'] = "Number of nouns: "
-        self.ind_sentences['num_noun_incidence'] = "Number of nouns (incidence per 1000 words): "
-        self.ind_sentences['num_proper_noun'] = "Number of proper nouns: "
-        self.ind_sentences['num_proper_noun_incidence'] = "Number of proper nouns (incidence per 1000 words): "
-        self.ind_sentences['num_adj'] = "Number of adjectives: "
-        self.ind_sentences['num_adj_incidence'] = "Number of adjectives (incidence per 1000 words): "
-        self.ind_sentences['num_adv'] = "Number of adverbs: "
-        self.ind_sentences['num_adv_incidence'] = "Number of adverbs (incidence per 1000 words): "
-        self.ind_sentences['num_verb'] = "Number of verbs: "
-        self.ind_sentences['num_verb_incidence'] = "Number of verbs (incidence per 1000 words): "
-        # Left-Embeddedness
-        self.ind_sentences['left_embeddedness'] = "Left embeddedness (Mean of number of words before the main verb) (" \
-                                                  "SYNLE): "
-        self.ind_sentences['num_decendents_noun_phrase'] = "Number of decendents per noun phrase (mean): "
-        self.ind_sentences['num_modifiers_noun_phrase'] = "Number of modifiers per noun phrase (mean) (SYNNP): "
-        self.ind_sentences['mean_depth_per_sentence'] = "Mean of the number of levels of dependency tree (Depth): "
-        # Numero de sentencias subordinadas
-        self.ind_sentences['num_subord'] = "Number of subordinate clauses: "
-        # Numero de sentencias subordinadas (incidence per 1000 words)
-        self.ind_sentences['num_subord_incidence'] = "Number of subordinate clauses (incidence per 1000 words): "
-        # Numero de sentencias subordinadas relativas
-        self.ind_sentences['num_rel_subord'] = "Number of relative subordinate clauses: "
-        # Numero de sentencias subordinadas relativas (incidence per 1000 words)
-        self.ind_sentences['num_rel_subord_incidence'] = "Number of relative subordinate clauses (incidence per 1000 " \
-                                                         "words): "
-        # Marcas de puntuacion por sentencia (media)
-        self.ind_sentences['num_punct_marks_per_sentence'] = "Punctuation marks per sentence (mean): "
-        self.ind_sentences['num_total_prop'] = "Number of propositions: "
-        # Mean of the number of propositions per sentence
-        self.ind_sentences['mean_propositions_per_sentence'] = "Mean of the number of propositions per sentence: "
-        self.ind_sentences['mean_vp_per_sentence'] = "Mean of the number of VPs per sentence: "
-        self.ind_sentences['mean_np_per_sentence'] = "Mean of the number of NPs per sentence: "
-        self.ind_sentences['noun_phrase_density_incidence'] = "Noun phrase density, incidence (DRNP): "
-        self.ind_sentences['verb_phrase_density_incidence'] = "Verb phrase density, incidence (DRVP): "
-        # Numero de verbos en pasiva (total)
-        self.ind_sentences['num_pass'] = "Number of passive voice verbs: "
-        # Numero de verbos en pasiva (incidence per 1000 words)
-        self.ind_sentences['num_pass_incidence'] = "Number of passive voice verbs (incidence per 1000 words): "
-        # Porcentaje de verbos en pasiva
-        self.ind_sentences['num_pass_mean'] = "Mean of passive voice verbs: "
-        # Numero de verbos en pasiva que no tienen agente
-        self.ind_sentences['num_agentless'] = "Number of agentless passive voice verbs: "
-        self.ind_sentences['agentless_passive_density_incidence'] = "Agentless passive voice density, incidence (" \
-                                                                    "DRPVAL): "
-        self.ind_sentences['num_neg'] = "Number of negative words: "
-        self.ind_sentences['negation_density_incidence'] = "Negation density, incidence (DRNEG): "
-        self.ind_sentences['num_ger'] = "Number of verbs in gerund form: "
-        self.ind_sentences['gerund_density_incidence'] = "Gerund density, incidence (DRGERUND): "
-        self.ind_sentences['num_inf'] = "Number of verbs in infinitive form: "
-        self.ind_sentences['infinitive_density_incidence'] = "Infinitive density, incidence (DRINF): "
-        # Ambigüedad de una palabra (polysemy in WordNet)
-        self.ind_sentences['polysemic_index'] = "Mean values of polysemy in the WordNet lexicon: "
-        # Nivel de abstracción (hypernym in WordNet)
-        self.ind_sentences['hypernymy_verbs_index'] = "Mean hypernym values of verbs in the WordNet lexicon: "
-        self.ind_sentences['hypernymy_nouns_index'] = "Mean hypernym values of nouns in the WordNet lexicon: "
-        self.ind_sentences['hypernymy_index'] = "Mean hypernym values of nouns and verbs in the WordNet lexicon: "
-        # Textbase. Referential cohesion
-        self.ind_sentences['noun_overlap_adjacent'] = "Noun overlap, adjacent sentences, binary, mean (CRFNOl): "
-        self.ind_sentences['noun_overlap_all'] = "Noun overlap, all of the sentences in a paragraph or text, binary, " \
-                                                 "mean (CRFNOa): "
-        self.ind_sentences['argument_overlap_adjacent'] = "Argument overlap, adjacent sentences, binary, mean (" \
-                                                          "CRFAOl): "
-        self.ind_sentences['argument_overlap_all'] = "Argument overlap, all of the sentences in a paragraph or text, " \
-                                                     "binary, mean (CRFAOa): "
-        self.ind_sentences['stem_overlap_adjacent'] = "Stem overlap, adjacent sentences, binary, mean (CRFSOl): "
-        self.ind_sentences['stem_overlap_all'] = "Stem overlap, all of the sentences in a paragraph or text, binary, " \
-                                                 "mean (CRFSOa): "
-        self.ind_sentences['content_overlap_adjacent_mean'] = "Content word overlap, adjacent sentences, " \
-                                                              "proportional, mean (CRFCWO1): "
-        self.ind_sentences['content_overlap_adjacent_std'] = "Content word overlap, adjacent sentences, proportional, " \
-                                                             "standard deviation (CRFCWO1d): "
-        self.ind_sentences['content_overlap_all_mean'] = "Content word overlap, all of the sentences in a paragraph " \
-                                                         "or text, proportional, mean (CRFCWOa): "
-        self.ind_sentences['content_overlap_all_std'] = "Content word overlap, all of the sentences in a paragraph or " \
-                                                        "text, proportional, standard deviation (CRFCWOad): "
-        # Connectives
-        self.ind_sentences['all_connectives'] = "Number of connectives: "
-        self.ind_sentences['all_connectives_incidence'] = "Number of connectives (incidence per 1000 words): "
-        self.ind_sentences['causal_connectives'] = "Causal connectives: "
-        self.ind_sentences['causal_connectives_incidence'] = "Causal connectives (incidence per 1000 words): "
-        self.ind_sentences['temporal_connectives'] = "Temporal connectives:  "
-        self.ind_sentences['temporal_connectives_incidence'] = "Temporal connectives (incidence per 1000 words):  "
-        self.ind_sentences['conditional_connectives'] = "Conditional connectives: "
-        self.ind_sentences['conditional_connectives_incidence'] = "Conditional connectives (incidence per 1000 words): "
-        self.ind_sentences['logical_connectives'] = "Logical connectives:  "
-        self.ind_sentences['logical_connectives_incidence'] = "Logical connectives (incidence per 1000 words):  "
-        self.ind_sentences['adversative_connectives'] = "Adversative/contrastive connectives: "
-        self.ind_sentences[
-            'adversative_connectives_incidence'] = "Adversative/contrastive connectives (incidence per 1000 words): "
-        self.ind_sentences['addition_connectives'] = "Adition connectives:  "
-        self.ind_sentences['addition_connectives_incidence'] = "Adition connectives (incidence per 1000 words):  "
-        self.ind_sentences['consequence_connectives'] = "Consequence connectives: "
-        self.ind_sentences['consequence_connectives_incidence'] = "Consequence connectives (incidence per 1000 words): "
-        self.ind_sentences['purpose_connectives'] = "Purpose connectives:  "
-        self.ind_sentences['purpose_connectives_incidence'] = "Purpose connectives (incidence per 1000 words):  "
-        self.ind_sentences['illustration_connectives'] = "Illustration connectives: "
-        self.ind_sentences[
-            'illustration_connectives_incidence'] = "Illustration connectives (incidence per 1000 words): "
-        self.ind_sentences['opposition_connectives'] = "Opposition connectives:  "
-        self.ind_sentences['opposition_connectives_incidence'] = "Opposition connectives (incidence per 1000 words):  "
-        self.ind_sentences['order_connectives'] = "Order connectives: "
-        self.ind_sentences['order_connectives_incidence'] = "Order connectives (incidence per 1000 words): "
-        self.ind_sentences['reference_connectives'] = "Reference connectives:  "
-        self.ind_sentences['reference_connectives_incidence'] = "Reference connectives (incidence per 1000 words): "
-        self.ind_sentences['summary_connectives'] = "Summary connectives: "
-        self.ind_sentences['summary_connectives_incidence'] = "Summary connectives (incidence per 1000 words): "
-        self.ind_sentences['similarity_adjacent_mean'] = "Semantic Similarity between adjacent sentences (mean): "
-        self.ind_sentences[
-            'similarity_pairs_par_mean'] = "Semantic Similarity between all possible pairs of sentences in a " \
-                                           "paragraph (mean): "
-        self.ind_sentences['similarity_adjacent_par_mean'] = "Semantic Similarity between adjacent paragraphs (mean): "
-        self.ind_sentences[
-            'similarity_adjacent_std'] = "Semantic Similarity between adjacent sentences (standard deviation): "
-        self.ind_sentences[
-            'similarity_pairs_par_std'] = "Semantic Similarity between all possible pairs of sentences in a paragraph " \
-                                          "(standard deviation): "
-        self.ind_sentences[
-            'similarity_adjacent_par_std'] = "Semantic Similarity between adjacent paragraphs (standard deviation): "
-
-        self.load_ignore_list()
-
-    def load_ignore_list(self):
-        # ignore language specific features
-        self.ignore_list_eu_ind = ['flesch_kincaid', 'dale_chall', 'smog', 'num_past', 'num_past_incidence', 'num_pres',
-                                   'num_pres_incidence', 'num_future', 'num_future_incidence', 'num_past_irregular',
-                                   'num_past_irregular_incidence', 'num_past_irregular_mean', 'num_first_pers_pron',
-                                   'num_first_pers_pron_incidence', 'num_first_pers_sing_pron',
-                                   'num_first_pers_sing_pron_incidence'
-                                   'num_third_pers_pron', 'num_third_pers_pron_incidence', 'num_rel_subord',
-                                   'num_rel_subord_incidence',
-                                   'num_pass', 'num_pass_incidence', 'num_pass_mean', 'num_agentless',
-                                   'agentless_passive_density_incidence',
-                                   'num_ger', 'gerund_density_incidence', 'addition_connectives',
-                                   'addition_connectives_incidence', 'consequence_connectives',
-                                   'consequence_connectives_incidence', 'purpose_connectives',
-                                   'purpose_connectives_incidence', 'illustration_connectives',
-                                   'illustration_connectives_incidence', 'opposition_connectives',
-                                   'opposition_connectives_incidence', 'order_connectives',
-                                   'order_connectives_incidence', 'reference_connectives',
-                                   'reference_connectives_incidence',
-                                   'summary_connectives',
-                                   'summary_connectives_incidence', 'num_content_words_not_a1_c1_words_incidence',
-                                   # Se quitan hasta que esten validados
-                                   'num_a1_words', 'num_a1_words_incidence', 'num_a2_words', 'num_a2_words_incidence',
-                                   'num_b1_words', 'num_b1_words_incidence', 'num_b2_words', 'num_b2_words_incidence',
-                                   'num_c1_words', 'num_c1_words_incidence', 'num_content_words_not_a1_c1_words'
-                                   ]
-
-        self.ignore_list_en_ind = ['addition_connectives',
-                                   'addition_connectives_incidence', 'consequence_connectives',
-                                   'consequence_connectives_incidence',
-                                   'purpose_connectives', 'purpose_connectives_incidence', 'illustration_connectives',
-                                   'illustration_connectives_incidence',
-                                   'opposition_connectives', 'opposition_connectives_incidence', 'order_connectives',
-                                   'order_connectives_incidence', 'reference_connectives',
-                                   'reference_connectives_incidence', 'summary_connectives',
-                                   'summary_connectives_incidence']
-
-        self.ignore_list_es_ind = ['smog', 'num_rel_subord', 'num_rel_subord_incidence', 'num_pass',
-                                   'num_pass_incidence',
-                                   'num_pass_mean', 'num_agentless', 'agentless_passive_density_incidence',
-                                   'logical_connectives',
-                                   'logical_connectives_incidence',
-                                   'adversative_connectives', 'adversative_connectives_incidence'
-                                   # Se quitan hasta que esten validados
-                                                              'num_a1_words', 'num_a1_words_incidence', 'num_a2_words',
-                                   'num_a2_words_incidence',
-                                   'num_b1_words', 'num_b1_words_incidence', 'num_b2_words', 'num_b2_words_incidence',
-                                   'num_c1_words', 'num_c1_words_incidence', 'num_content_words_not_a1_c1_words'
-                                   ]
-
-        self.ignore_list_counters = ['prop', 'num_complex_words', 'num_words_more_3_syl', 'num_words',
-                                     'num_different_forms',
-                                     'num_words_with_punct', 'num_paragraphs', 'num_sentences', 'num_past', 'num_pres',
-                                     'num_future',
-                                     'num_indic', 'num_impera', 'num_past_irregular', 'num_past_irregular_incidence',
-                                     'num_personal_pronouns', 'num_first_pers_pron', 'num_first_pers_sing_pron',
-                                     'num_third_pers_pron', 'num_rare_nouns', 'num_rare_adj', 'num_rare_verbs',
-                                     'num_rare_advb', 'num_rare_words', 'num_rare_words_incidence',
-                                     'num_dif_rare_words',
-                                     'num_dif_rare_words_incidence', 'num_a1_words', 'num_a2_words', 'num_b1_words',
-                                     'num_b2_words',
-                                     'num_c1_words', 'num_content_words_not_a1_c1_words', 'num_lexic_words', 'num_noun',
-                                     'num_adj',
-                                     'num_adv', 'num_verb', 'num_subord', 'num_rel_subord', 'num_total_prop',
-                                     'noun_phrase_density_incidence', 'verb_phrase_density_incidence', 'num_pass',
-                                     'num_pass_incidence', 'num_agentless', 'num_neg', 'num_ger', 'num_inf']
-
-        self.similarity_list = ["similarity_adjacent_mean", "similarity_pairs_par_mean", "similarity_adjacent_par_mean",
-                                "similarity_adjacent_std", "similarity_pairs_par_std", "similarity_adjacent_par_std"]
 
     def print_info(self):
+        i = self.indicators
         print("------------------------------------------------------------------------------")
         # print('Level of difficulty: ' + prediction[0].title())
-        i = self.indicators
-        # Anade en estas listas las que no quieras mostrar para todos los casos
-        ignore_list = []
+        print("------------------------------------------------------------------------------")
+        print('Number of words (total): ' + str(i['num_words']))
+        # The number of distints lower and alfabetic words
+        print("Number of distinct words (total): " + str(i['num_different_forms']))
+        print('Number of words with punctuation (total): ' + str(i['num_words_with_punct']))
 
-        if not self.similarity:
-            ignore_list.extend(self.similarity_list)
-        if self.language == "english":
-            ignore_list.extend(self.ignore_list_en_ind)
-        if self.language == "spanish":
-            ignore_list.extend(self.ignore_list_es_ind)
+        print("Number of paragraphs (total): " + str(i['num_paragraphs']))
+        print("Number of paragraphs (incidence per 1000 words): " + str(i['num_paragraphs_incidence']))
+        print('Number of sentences (total): ' + str(i['num_sentences']))
+        print('Number of sentences (incidence per 1000 words): ' + str(i['num_sentences_incidence']))
+
+        # Numero de frases en un parrafo (media)
+        print("Length of paragraphs (mean): " + str(i['sentences_per_paragraph_mean']))
+        # Numero de frases en un parrafo (desv. Tipica)
+        print("Standard deviation of length of paragraphs: " + str(i['sentences_per_paragraph_std']))
+
+        print("Number of words (length) in sentences (mean): " + str(i['sentences_length_mean']))
+        print("Number of words (length) in sentences (standard deviation): " + str(i['sentences_length_std']))
+
+        print("Number of words (length) of sentences without stopwords (mean): " + str(
+            i['sentences_length_no_stopwords_mean']))
+        print("Number of words (length) of sentences without stopwords (standard deviation): " + str(
+            i['sentences_length_no_stopwords_std']))
+
+        print('Mean number of syllables (length) in words: ' + str(i['num_syllables_words_mean']))
+        print('Standard deviation of the mean number of syllables in words: ' + str(i['num_syllables_words_std']))
+
+        print("Mean number of letters (length) in words: " + str(i['words_length_mean']))
+        print("Standard deviation of number of letters in words: " + str(i['words_length_std']))
+
+        print("Mean number of letters (length) in words without stopwords: " + str(i['words_length_no_stopwords_mean']))
+        print("Standard deviation of the mean number of letter in words without stopwords: " + str(
+            i['words_length_no_stopwords_std']))
+
+        print("Mean number of letters (length) in lemmas: " + str(i['lemmas_length_mean']))
+        print("Standard deviation of letters (length) in lemmas: " + str(i['lemmas_length_std']))
+
+        print('Lexical Density: ' + str(i['lexical_density']))
+        print("Noun Density: " + str(i['noun_density']))
+        print("Verb Density: " + str(i['verb_density']))
+        print("Adjective Density: " + str(i['adj_density']))
+        print("Adverb Density: " + str(i['adv_density']))
+
+        # Simple TTR (Type-Token Ratio)
+        print('STTR (Simple Type-Token Ratio) : ' + str(i['simple_ttr']))
+        # Content TTR (Content Type-Token Ratio)
+        print('CTTR (Content Type-Token Ratio): ' + str(i['content_ttr']))
+        # NTTR (Noun Type-Token Ratio)
+        print('NTTR (Noun Type-Token Ratio): ' + str(i['nttr']))
+        # VTTR (Verb Type-Token Ratio)(incidence per 1000 words)
+        print('VTTR (Verb Type-Token Ratio): ' + str(i['vttr']))
+
+        # AdjTTR (Adj Type-Token Ratio)
+        print('AdjTTR (Adj Type-Token Ratio): ' + str(i['adj_ttr']))
+        # AdvTTR (Adv Type-Token Ratio)
+        print('AdvTTR (Adv Type-Token Ratio): ' + str(i['adv_ttr']))
+
+        # Lemma Simple TTR (Type-Token Ratio)
+        print('LSTTR (Lemma Simple Type-Token Ratio): ' + str(i['lemma_ttr']))
+        # Lemma Content TTR (Content Type-Token Ratio)
+        print('LCTTR (Lemma Content Type-Token Ratio): ' + str(i['lemma_content_ttr']))
+        # LNTTR (Lemma Noun Type-Token Ratio)
+        print('LNTTR (Lemma Noun Type-Token Ratio) ' + str(i['lemma_nttr']))
+        # LVTTR (Lemma Verb Type-Token Ratio)
+        print('LVTTR (Lemma Verb Type-Token Ratio): ' + str(i['lemma_vttr']))
+        # Lemma AdjTTR (Lemma Adj Type-Token Ratio)
+        print('LAdjTTR (Lemma Adj Type-Token Ratio): ' + str(i['lemma_adj_ttr']))
+        # Lemma AdvTTR (Lemma Adv Type-Token Ratio)
+        print('LAdvTTR (Lemma Adv Type-Token Ratio): ' + str(i['lemma_adv_ttr']))
+
+        # Honore
+        print('Honore Lexical Density: ' + str(i['honore']))
+        # Maas
+        print('Maas Lexical Density: ' + str(i['maas']))
+        # MTLD
+        print('Measure of Textual Lexical Diversity (MTLD): ' + str(i['mtld']))
+
+        # Flesch-Kincaid grade level =0.39 * (n.º de words/nº de frases) + 11.8 * (n.º de silabas/numero de words) – 15.59)
+        print("Flesch-Kincaid Grade level: " + str(i['flesch_kincaid']))
+        # Flesch readability ease=206.835-1.015(n.º de words/nº de frases)-84.6(n.º de silabas/numero de words)
+        print("Flesch readability ease: " + str(i['flesch']))
+
+        print("Dale-Chall readability formula: " + str(i['dale_chall']))
+        print("Simple Measure Of Gobbledygook (SMOG) grade: " + str(i['smog']))
+
+        print("Number of verbs in past tense: " + str(i['num_past']))
+        print("Number of verbs in past tense (incidence per 1000 words): " + str(i['num_past_incidence']))
+        print("Number of verbs in present tense: " + str(i['num_pres']))
+        print("Number of verbs in present tense (incidence per 1000 words): " + str(i['num_pres_incidence']))
+        print("Number of verbs in future tense: " + str(i['num_future']))
+        print("Number of verbs in future tense (incidence per 1000 words): " + str(i['num_future_incidence']))
+
+        # Numero de verbos en modo indicativo
+        print("Number of verbs in indicative mood: " + str(i['num_indic']))
+        print("Number of verbs in indicative mood (incidence per 1000 words): " + str(i['num_indic_incidence']))
+        # Numero de verbos en modo imperativo
+        print("Number of verbs in imperative mood: " + str(i['num_impera']))
+        print("Number of verbs in imperative mood (incidence per 1000 words): " + str(i['num_impera_incidence']))
+        # Numero de verbos en pasado que son irregulares (total)
+        print("Number of irregular verbs in past tense: " + str(i['num_past_irregular']))
+        # Numero de verbos en pasado que son irregulares (incidencia 1000 words)
+        print("Number of irregular verbs in past tense (incidence per 1000 words): " + str(
+            i['num_past_irregular_incidence']))
+        # Porcentaje de verbos en pasado que son irregulares sobre total de verbos en pasado
+        print("Mean of irregular verbs in past tense in relation to the number of verbs in past tense: " + str(
+            i['num_past_irregular_mean']))
+        # Number of personal pronouns
+        print("Number of personal pronouns: " + str(i['num_personal_pronouns']))
+        # Incidence score of pronouns (per 1000 words)
+        print("Incidence score of pronouns (per 1000 words): " + str(i['num_personal_pronouns_incidence']))
+        # Number of pronouns in first person
+        print("Number of pronouns in first person: " + str(i['num_first_pers_pron']))
+        # Incidence score of pronouns in first person  (per 1000 words)
+        print(
+            "Incidence score of pronouns in first person  (per 1000 words): " + str(i['num_first_pers_pron_incidence']))
+        # Number of pronouns in first person singular
+        print("Number of pronouns in first person singular: " + str(i['num_first_pers_sing_pron']))
+        # Incidence score of pronouns in first person singular (per 1000 words)
+        print("Incidence score of pronouns in first person singular (per 1000 words): " + str(
+            i['num_first_pers_sing_pron_incidence']))
+        # Number of pronouns in third person
+        print("Number of pronouns in third person: " + str(i['num_third_pers_pron']))
+        # Incidence score of pronouns in third person (per 1000 words)
+        print(
+            "Incidence score of pronouns in third person (per 1000 words): " + str(i['num_third_pers_pron_incidence']))
+
+        print('Minimum word frequency per sentence (mean): ' + str(i['min_wf_per_sentence']))
         if self.language == "basque":
-            ignore_list.extend(self.ignore_list_eu_ind)
+            print('Number of rare nouns (wordfrecuency<=34): ' + str(i['num_rare_nouns_34']))
+            print('Number of rare nouns (wordfrecuency<=34) (incidence per 1000 words): ' + str(
+                i['num_rare_nouns_34_incidence']))
+            print('Number of rare adjectives (wordfrecuency<=34): ' + str(i['num_rare_adj_34']))
+            print('Number of rare adjectives (wordfrecuency<=34) (incidence per 1000 words): ' + str(
+                i['num_rare_adj_34_incidence']))
+            print('Number of rare verbs (wordfrecuency<=34): ' + str(i['num_rare_verbs_34']))
+            print('Number of rare verbs (wordfrecuency<=34) (incidence per 1000 words): ' + str(
+                i['num_rare_verbs_34_incidence']))
+            print('Number of rare adverbs (wordfrecuency<=34): ' + str(i['num_rare_advb_34']))
+            print('Number of rare adverbs (wordfrecuency<=34) (incidence per 1000 words): ' + str(
+                i['num_rare_advb_34_incidence']))
+            print('Number of rare content words (wordfrecuency<=34): ' + str(i['num_rare_words_34']))
+            print('Number of rare content words (wordfrecuency<=34) (incidence per 1000 words): ' + str(
+                i['num_rare_words_34_incidence']))
+            print('Number of distinct rare content words (wordfrecuency<=34): ' + str(i['num_dif_rare_words_34']))
+            print('Number of distinct rare content words (wordfrecuency<=34) (incidence per 1000 words): ' + str(
+                i['num_dif_rare_words_34_incidence']))
+            # The average of rare lexical words (whose word frequency value is less than 4) with respect to the total of lexical words
+            print('Mean of rare lexical words (word frequency <= 34): ' + str(i['mean_rare_34']))
+            # The average of distinct rare lexical words (whose word frequency value is less than 4) with respect to the total of distinct lexical words
+            print('Mean of distinct rare lexical words (word frequency <= 34): ' + str(i['mean_distinct_rare_34']))
+        else:
+            print('Number of rare nouns (wordfrecuency<=4): ' + str(i['num_rare_nouns_4']))
+            print('Number of rare nouns (wordfrecuency<=4) (incidence per 1000 words): ' + str(
+                i['num_rare_nouns_4_incidence']))
+            print('Number of rare adjectives (wordfrecuency<=4): ' + str(i['num_rare_adj_4']))
+            print('Number of rare adjectives (wordfrecuency<=4) (incidence per 1000 words): ' + str(
+                i['num_rare_adj_4_incidence']))
+            print('Number of rare verbs (wordfrecuency<=4): ' + str(i['num_rare_verbs_4']))
+            print('Number of rare verbs (wordfrecuency<=4) (incidence per 1000 words): ' + str(
+                i['num_rare_verbs_4_incidence']))
+            print('Number of rare adverbs (wordfrecuency<=4): ' + str(i['num_rare_advb_4']))
+            print('Number of rare adverbs (wordfrecuency<=4) (incidence per 1000 words): ' + str(
+                i['num_rare_advb_4_incidence']))
+            print('Number of rare content words (wordfrecuency<=4): ' + str(i['num_rare_words_4']))
+            print('Number of rare content words (wordfrecuency<=4) (incidence per 1000 words): ' + str(
+                i['num_rare_words_4_incidence']))
+            print('Number of distinct rare content words (wordfrecuency<=4): ' + str(i['num_dif_rare_words_4']))
+            print('Number of distinct rare content words (wordfrecuency<=4) (incidence per 1000 words): ' + str(
+                i['num_dif_rare_words_4_incidence']))
+            # The average of rare lexical words (whose word frequency value is less than 4) with respect to the total of lexical words
+            print('Mean of rare lexical words (word frequency <= 4): ' + str(i['mean_rare_4']))
+            # The average of distinct rare lexical words (whose word frequency value is less than 4) with respect to the total of distinct lexical words
+            print('Mean of distinct rare lexical words (word frequency <= 4): ' + str(i['mean_distinct_rare_4']))
 
-        for key, value in self.ind_sentences.items():
-            if key not in ignore_list:
-                print(self.ind_sentences.get(key) + str(i.get(key)))
+        print('Number of A1 vocabulary in the text: ' + str(i['num_a1_words']))
+        print('Incidence score of A1 vocabulary  (per 1000 words): ' + str(i['num_a1_words_incidence']))
+        print('Number of A2 vocabulary in the text: ' + str(i['num_a2_words']))
+        print('Incidence score of A2 vocabulary  (per 1000 words): ' + str(i['num_a2_words_incidence']))
+        print('Number of B1 vocabulary in the text: ' + str(i['num_b1_words']))
+        print('Incidence score of B1 vocabulary  (per 1000 words): ' + str(i['num_b1_words_incidence']))
+        print('Number of B2 vocabulary in the text: ' + str(i['num_b2_words']))
+        print('Incidence score of B2 vocabulary  (per 1000 words): ' + str(i['num_b2_words_incidence']))
+        print('Number of C1 vocabulary in the text: ' + str(i['num_c1_words']))
+        print('Incidence score of C1 vocabulary  (per 1000 words): ' + str(i['num_c1_words_incidence']))
+        print('Number of content words not in A1-C1 vocabulary: ' + str(i['num_content_words_not_a1_c1_words']))
+        print('Incidence score of content words not in A1-C1 vocabulary (per 1000 words): ' + str(
+            i['num_content_words_not_a1_c1_words_incidence']))
 
-    # genera el fichero X.out.csv, MERECE LA PENA POR IDIOMA
-    def generate_csv(self, csv_path, input, similarity):  # , csv_path, prediction, similarity):
+        print('Number of content words: ' + str(i['num_lexic_words']))
+        print('Number of content words (incidence per 1000 words): ' + str(i['num_lexic_words_incidence']))
+        print("Number of nouns: " + str(i['num_noun']))
+        print("Number of nouns (incidence per 1000 words): " + str(i['num_noun_incidence']))
+        print("Number of adjectives: " + str(i['num_adj']))
+        print("Number of adjectives (incidence per 1000 words): " + str(i['num_adj_incidence']))
+        print("Number of adverbs: " + str(i['num_adv']))
+        print("Number of adverbs (incidence per 1000 words): " + str(i['num_adv_incidence']))
+        print("Number of verbs: " + str(i['num_verb']))
+        print("Number of verbs (incidence per 1000 words): " + str(i['num_verb_incidence']))
+        # Left-Embeddedness
+        print(
+            "Left embeddedness (Mean of number of words before the main verb) (SYNLE): " + str(i['left_embeddedness']))
+
+        print("Number of decendents per noun phrase (mean): " + str(i['num_decendents_noun_phrase']))
+        print("Number of modifiers per noun phrase (mean) (SYNNP): " + str(i['num_modifiers_noun_phrase']))
+        print("Mean of the number of levels of dependency tree (Depth): " + str(i['mean_depth_per_sentence']))
+
+        # Numero de sentencias subordinadas
+        print("Number of subordinate clauses: " + str(i['num_subord']))
+        # Numero de sentencias subordinadas (incidence per 1000 words)
+        print("Number of subordinate clauses (incidence per 1000 words): " + str(i['num_subord_incidence']))
+        # Numero de sentencias subordinadas relativas
+        print("Number of relative subordinate clauses: " + str(i['num_rel_subord']))
+        # Numero de sentencias subordinadas relativas (incidence per 1000 words)
+        print(
+            "Number of relative subordinate clauses (incidence per 1000 words): " + str(i['num_rel_subord_incidence']))
+        # Marcas de puntuacion por sentencia (media)
+        print("Punctuation marks per sentence (mean): " + str(i['num_punct_marks_per_sentence']))
+        print('Number of propositions: ' + str(i['num_total_prop']))
+        # Mean of the number of propositions per sentence
+        print('Mean of the number of propositions per sentence: ' + str(i['mean_propositions_per_sentence']))
+
+        print('Mean of the number of VPs per sentence: ' + str(i['mean_vp_per_sentence']))
+        print('Mean of the number of NPs per sentence: ' + str(i['mean_np_per_sentence']))
+        print('Noun phrase density, incidence (DRNP): ' + str(i['noun_phrase_density_incidence']))
+        print('Verb phrase density, incidence (DRVP): ' + str(i['verb_phrase_density_incidence']))
+        # Numero de verbos en pasiva (total)
+        print("Number of passive voice verbs: " + str(i['num_pass']))
+        # Numero de verbos en pasiva (incidence per 1000 words)
+        print("Number of passive voice verbs (incidence per 1000 words): " + str(i['num_pass_incidence']))
+        # Porcentaje de verbos en pasiva
+        print("Mean of passive voice verbs: " + str(i['num_pass_mean']))
+        # Numero de verbos en pasiva que no tienen agente
+        print("Number of agentless passive voice verbs: " + str(i['num_agentless']))
+        print('Agentless passive voice density, incidence (DRPVAL): ' + str(i['agentless_passive_density_incidence']))
+        print("Number of negative words: " + str(i['num_neg']))
+        print('Negation density, incidence (DRNEG): ' + str(i['negation_density_incidence']))
+        print("Number of verbs in gerund form: " + str(i['num_ger']))
+        print('Gerund density, incidence (DRGERUND): ' + str(i['gerund_density_incidence']))
+        print("Number of verbs in infinitive form: " + str(i['num_inf']))
+        print('Infinitive density, incidence (DRINF): ' + str(i['infinitive_density_incidence']))
+
+        # Ambigüedad de una palabra (polysemy in WordNet)
+        print('Mean values of polysemy in the WordNet lexicon: ' + str(i['polysemic_index']))
+        # Nivel de abstracción (hypernym in WordNet)
+        print('Mean hypernym values of verbs in the WordNet lexicon: ' + str(i['hypernymy_verbs_index']))
+        print('Mean hypernym values of nouns in the WordNet lexicon: ' + str(i['hypernymy_nouns_index']))
+        print('Mean hypernym values of nouns and verbs in the WordNet lexicon: ' + str(i['hypernymy_index']))
+
+        # Textbase. Referential cohesion
+        print('Noun overlap, adjacent sentences, binary, mean (CRFNOl): ' + str(i['noun_overlap_adjacent']))
+        print('Noun overlap, all of the sentences in a paragraph or text, binary, mean (CRFNOa): ' + str(
+            i['noun_overlap_all']))
+        print('Argument overlap, adjacent sentences, binary, mean (CRFAOl): ' + str(i['argument_overlap_adjacent']))
+        print('Argument overlap, all of the sentences in a paragraph or text, binary, mean (CRFAOa): ' + str(
+            i['argument_overlap_all']))
+        print('Stem overlap, adjacent sentences, binary, mean (CRFSOl): ' + str(i['stem_overlap_adjacent']))
+        print('Stem overlap, all of the sentences in a paragraph or text, binary, mean (CRFSOa): ' + str(
+            i['stem_overlap_all']))
+        print('Content word overlap, adjacent sentences, proportional, mean (CRFCWO1): ' + str(
+            i['content_overlap_adjacent_mean']))
+        print('Content word overlap, adjacent sentences, proportional, standard deviation (CRFCWO1d): ' + str(
+            i['content_overlap_adjacent_std']))
+        print('Content word overlap, all of the sentences in a paragraph or text, proportional, mean (CRFCWOa): ' + str(
+            i['content_overlap_all_mean']))
+        print(
+            'Content word overlap, all of the sentences in a paragraph or text, proportional, standard deviation (CRFCWOad): ' + str(
+                i['content_overlap_all_std']))
+        # Connectives
+        print('Number of connectives: ' + str(i['all_connectives']))
+        print('Number of connectives (incidence per 1000 words): ' + str(i['all_connectives_incidence']))
+        print('Causal connectives: ' + str(i['causal_connectives']))
+        print('Causal connectives (incidence per 1000 words): ' + str(i['causal_connectives_incidence']))
+        print('Temporal connectives:  ' + str(i['temporal_connectives']))
+        print('Temporal connectives (incidence per 1000 words):  ' + str(i['temporal_connectives_incidence']))
+        print('Conditional connectives: ' + str(i['conditional_connectives']))
+        print('Conditional connectives (incidence per 1000 words): ' + str(i['conditional_connectives_incidence']))
+        if self.language == "english" or self.language == "basque":
+            print('Logical connectives:  ' + str(i['logical_connectives']))
+            print('Logical connectives (incidence per 1000 words):  ' + str(i['logical_connectives_incidence']))
+            print('Adversative/contrastive connectives: ' + str(i['adversative_connectives']))
+            print('Adversative/contrastive connectives (incidence per 1000 words): ' + str(
+                i['adversative_connectives_incidence']))
+        if self.language == "spanish":
+            print('Adition connectives:  ' + str(i['addition_connectives']))
+            print('Adition connectives (incidence per 1000 words):  ' + str(i['addition_connectives_incidence']))
+            print('Consequence connectives: ' + str(i['consequence_connectives']))
+            print('Consequence connectives (incidence per 1000 words): ' + str(i['consequence_connectives_incidence']))
+            print('Purpose connectives:  ' + str(i['purpose_connectives']))
+            print('Purpose connectives (incidence per 1000 words):  ' + str(i['purpose_connectives_incidence']))
+            print('Illustration connectives: ' + str(i['illustration_connectives']))
+            print(
+                'Illustration connectives (incidence per 1000 words): ' + str(i['illustration_connectives_incidence']))
+            print('Opposition connectives:  ' + str(i['opposition_connectives']))
+            print('Opposition connectives (incidence per 1000 words):  ' + str(i['opposition_connectives_incidence']))
+            print('Order connectives: ' + str(i['order_connectives']))
+            print('Order connectives (incidence per 1000 words): ' + str(i['order_connectives_incidence']))
+            print('Reference connectives:  ' + str(i['reference_connectives']))
+            print('Reference connectives (incidence per 1000 words):  ' + str(i['reference_connectives_incidence']))
+            print('Summary connectives: ' + str(i['summary_connectives']))
+            print('Summary connectives (incidence per 1000 words): ' + str(i['summary_connectives_incidence']))
+
+# genera el fichero X.out.csv, MERECE LA PENA POR IDIOMA
+    def generate_csv(self,csv_path,input,similarity): #, csv_path, prediction, similarity):
         i = self.indicators
         # kk=prediction
         # estadisticos
         output = os.path.join(csv_path, os.path.basename(input) + ".out.csv")
         # Write all the information in the file
         estfile = open(output, "w")
-
-        ignore_list = []
-
-        if not self.similarity:
-            ignore_list.extend(self.similarity_list)
-        if self.language == "english":
-            ignore_list.extend(self.ignore_list_en_ind)
-        if self.language == "spanish":
-            ignore_list.extend(self.ignore_list_es_ind)
-        if self.language == "basque":
-            ignore_list.extend(self.ignore_list_eu_ind)
-
-        ref_per_features = ['num_words', 'lexical_density', 'flesch', 'num_personal_pronouns', 'num_past', 'min_wf_per_sentence '
-                            , 'num_lexic_words', 'similarity_adjacent_mean', 'all_connectives', 'noun_overlap_adjacent']
-        for key, value in self.ind_sentences.items():
-            if key not in ignore_list:
-                # Depende de la clave, habra que poner un texto u otro en referencia a los siguientes indicadores
-                if key in ref_per_features:
-                    self.print_feature_ref(estfile, key)
-                estfile.write("\n%s" % self.ind_sentences.get(key) + str(i.get(key)))
-        estfile.close()
-
-    def print_feature_ref(self, estfile, key):
-        if key == 'num_words':
-            estfile.write("\n%s" % 'Shallow or descriptive measures')
-        elif key == 'lexical_density':
-            estfile.write("\n%s" % 'Lexical Richness/Lexical Density')
-        elif key == 'flesch':
-            estfile.write("\n%s" % 'Readability/Text Dimension/Grade Level')
-        elif key == 'num_past' or key == 'num_past':
-            estfile.write("\n%s" % 'Morphological features')
-        elif key == 'min_wf_per_sentence':
-            estfile.write("\n%s" % 'Word Frequency')
-        elif key == 'num_lexic_words':
-            estfile.write("\n%s" % 'Syntactic Features / POS ratios')
-        elif key == 'similarity_adjacent_mean':
+        estfile.write("\n%s" % 'Shallow or descriptive measures')
+        estfile.write("\n%s" % 'Number of words (total): ' + str(i['num_words']))
+        estfile.write("\n%s" % 'Number of distinct words (total): ' + str(i['num_different_forms']))
+        estfile.write("\n%s" % 'Number of words with punctuation (total): ' + str(i['num_words_with_punct']))
+        estfile.write("\n%s" % 'Number of paragraphs (total): ' + str(i['num_paragraphs']))
+        estfile.write("\n%s" % 'Number of paragraphs (incidence per 1000 words): ' + str(i['num_paragraphs_incidence']))
+        estfile.write("\n%s" % 'Number of sentences (total): ' + str(i['num_sentences']))
+        estfile.write("\n%s" % 'Number of sentences (incidence per 1000 words): ' + str(i['num_sentences_incidence']))
+        estfile.write("\n%s" % 'Length of paragraphs (mean): ' + str(i['sentences_per_paragraph_mean']))
+        estfile.write("\n%s" % 'Standard deviation of length of paragraphs: ' + str(i['sentences_per_paragraph_std']))
+        estfile.write("\n%s" % 'Number of words (length) in sentences (mean): ' + str(i['sentences_length_mean']))
+        estfile.write(
+            "\n%s" % 'Number of words (length) in sentences (standard deviation): ' + str(i['sentences_length_std']))
+        estfile.write("\n%s" % 'Number of words (length) of sentences without stopwords (mean): ' + str(
+            i['sentences_length_no_stopwords_mean']))
+        estfile.write("\n%s" % 'Number of words (length) of sentences without stopwords (standard deviation): ' + str(
+            i['sentences_length_no_stopwords_std']))
+        estfile.write("\n%s" % 'Mean number of syllables (length) in words: ' + str(i['num_syllables_words_mean']))
+        estfile.write("\n%s" % 'Standard deviation of the mean number of syllables in words: ' + str(
+            i['num_syllables_words_std']))
+        estfile.write("\n%s" % 'Mean number of letters (length) in words: ' + str(i['words_length_mean']))
+        estfile.write("\n%s" % 'Standard deviation of number of letters in words: ' + str(i['words_length_std']))
+        estfile.write("\n%s" % 'Mean number of letters (length) in words without stopwords: ' + str(
+            i['words_length_no_stopwords_mean']))
+        estfile.write("\n%s" % 'Standard deviation of the mean number of letter in words without stopwords: ' + str(
+            i['words_length_no_stopwords_std']))
+        estfile.write("\n%s" % 'Mean number of letters (length) in lemmas: ' + str(i['lemmas_length_mean']))
+        estfile.write("\n%s" % 'Standard deviation of letters (length) in lemmas: ' + str(i['lemmas_length_std']))
+        estfile.write("\n%s" % 'Lexical Richness/Lexical Density')
+        estfile.write("\n%s" % 'Lexical Density: ' + str(i['lexical_density']))
+        estfile.write("\n%s" % 'Noun Density: ' + str(i['noun_density']))
+        estfile.write("\n%s" % 'Verb Density: ' + str(i['verb_density']))
+        estfile.write("\n%s" % 'Adjective Density: ' + str(i['adj_density']))
+        estfile.write("\n%s" % 'Adverb Density: ' + str(i['adv_density']))
+        estfile.write("\n%s" % 'STTR (Simple Type-Token Ratio): ' + str(i['simple_ttr']))
+        estfile.write("\n%s" % 'CTTR (Content Type-Token Ratio): ' + str(i['content_ttr']))
+        estfile.write("\n%s" % 'NTTR (Noun Type-Token Ratio): ' + str(i['nttr']))
+        estfile.write("\n%s" % 'VTTR (Verb Type-Token Ratio): ' + str(i['vttr']))
+        estfile.write("\n%s" % 'AdjTTR (Adj Type-Token Ratio): ' + str(i['adj_ttr']))
+        estfile.write("\n%s" % 'AdvTTR (Adv Type-Token Ratio): ' + str(i['adv_ttr']))
+        estfile.write("\n%s" % 'LSTTR (Lemma Simple Type-Token Ratio): ' + str(i['lemma_ttr']))
+        estfile.write("\n%s" % 'LCTTR (Lemma Content Type-Token Ratio): ' + str(i['lemma_content_ttr']))
+        estfile.write("\n%s" % 'LNTTR (Lemma Noun Type-Token Ratio): ' + str(i['lemma_nttr']))
+        estfile.write("\n%s" % 'LVTTR (Lemma Verb Type-Token Ratio): ' + str(i['lemma_vttr']))
+        estfile.write("\n%s" % 'LAdjTTR (Lemma Adj Type-Token Ratio): ' + str(i['lemma_adj_ttr']))
+        estfile.write("\n%s" % 'LAdvTTR (Lemma Adv Type-Token Ratio): ' + str(i['lemma_adv_ttr']))
+        estfile.write("\n%s" % 'Honore Lexical Density: ' + str(i['honore']))
+        estfile.write("\n%s" % 'Maas Lexical Density: ' + str(i['maas']))
+        estfile.write("\n%s" % 'Measure of Textual Lexical Diversity (MTLD): ' + str(i['mtld']))
+        estfile.write("\n%s" % 'Readability/Text Dimension/Grade Level')
+        estfile.write("\n%s" % 'Flesch-Kincaid Grade level: ' + str(i['flesch_kincaid']))
+        estfile.write("\n%s" % 'Flesch readability ease: ' + str(i['flesch']))
+        estfile.write("\n%s" % 'Dale-Chall readability formula: ' + str(i['dale_chall']))
+        estfile.write("\n%s" % 'Simple Measure Of Gobbledygook (SMOG) grade: ' + str(i['smog']))
+        estfile.write("\n%s" % 'Morphological features')
+        estfile.write("\n%s" % 'Number of verbs in past tense: ' + str(i['num_past']))
+        estfile.write(
+            "\n%s" % 'Number of verbs in past tense (incidence per 1000 words): ' + str(i['num_past_incidence']))
+        estfile.write("\n%s" % 'Number of verbs in present tense: ' + str(i['num_pres']))
+        estfile.write(
+            "\n%s" % 'Number of verbs in present tense (incidence per 1000 words): ' + str(i['num_pres_incidence']))
+        estfile.write("\n%s" % 'Number of verbs in future tense: ' + str(i['num_future']))
+        estfile.write(
+            "\n%s" % 'Number of verbs in future tense (incidence per 1000 words): ' + str(i['num_future_incidence']))
+        estfile.write("\n%s" % 'Number of verbs in indicative mood: ' + str(i['num_indic']))
+        estfile.write(
+            "\n%s" % 'Number of verbs in indicative mood (incidence per 1000 words): ' + str(i['num_indic_incidence']))
+        estfile.write("\n%s" % 'Number of verbs in imperative mood: ' + str(i['num_impera']))
+        estfile.write(
+            "\n%s" % 'Number of verbs in imperative mood (incidence per 1000 words): ' + str(i['num_impera_incidence']))
+        estfile.write("\n%s" % 'Number of irregular verbs in past tense: ' + str(i['num_past_irregular']))
+        estfile.write("\n%s" % 'Number of irregular verbs in past tense (incidence per 1000 words): ' + str(
+            i['num_past_irregular_incidence']))
+        estfile.write(
+            "\n%s" % 'Mean of irregular verbs in past tense in relation to the number of verbs in past tense: ' + str(
+                i['num_past_irregular_mean']))
+        estfile.write("\n%s" % 'Number of personal pronouns: ' + str(i['num_personal_pronouns']))
+        estfile.write(
+            "\n%s" % 'Incidence score of pronouns (per 1000 words): ' + str(i['num_personal_pronouns_incidence']))
+        estfile.write("\n%s" % 'Number of pronouns in first person: ' + str(i['num_first_pers_pron']))
+        estfile.write("\n%s" % 'Incidence score of pronouns in first person  (per 1000 words): ' + str(
+            i['num_first_pers_pron_incidence']))
+        estfile.write("\n%s" % 'Number of pronouns in first person singular: ' + str(i['num_first_pers_sing_pron']))
+        estfile.write("\n%s" % 'Incidence score of pronouns in first person singular (per 1000 words): ' + str(
+            i['num_first_pers_sing_pron_incidence']))
+        estfile.write("\n%s" % 'Number of pronouns in third person: ' + str(i['num_third_pers_pron']))
+        estfile.write("\n%s" % 'Incidence score of pronouns in third person (per 1000 words): ' + str(
+            i['num_third_pers_pron_incidence']))
+        estfile.write("\n%s" % 'Word Frequency')
+        estfile.write("\n%s" % 'Minimum word frequency per sentence (mean): ' + str(i['min_wf_per_sentence']))
+        estfile.write("\n%s" % 'Number of rare nouns (wordfrecuency<=4): ' + str(i['num_rare_nouns_4']))
+        estfile.write("\n%s" % 'Number of rare nouns (wordfrecuency<=4) (incidence per 1000 words): ' + str(
+            i['num_rare_nouns_4_incidence']))
+        estfile.write("\n%s" % 'Number of rare adjectives (wordfrecuency<=4): ' + str(i['num_rare_adj_4']))
+        estfile.write("\n%s" % 'Number of rare adjectives (wordfrecuency<=4) (incidence per 1000 words): ' + str(
+            i['num_rare_adj_4_incidence']))
+        estfile.write("\n%s" % 'Number of rare verbs (wordfrecuency<=4): ' + str(i['num_rare_verbs_4']))
+        estfile.write("\n%s" % 'Number of rare verbs (wordfrecuency<=4) (incidence per 1000 words): ' + str(
+            i['num_rare_verbs_4_incidence']))
+        estfile.write("\n%s" % 'Number of rare adverbs (wordfrecuency<=4): ' + str(i['num_rare_advb_4']))
+        estfile.write("\n%s" % 'Number of rare adverbs (wordfrecuency<=4) (incidence per 1000 words): ' + str(
+            i['num_rare_advb_4_incidence']))
+        estfile.write("\n%s" % 'Number of rare content words (wordfrecuency<=4): ' + str(i['num_rare_words_4']))
+        estfile.write("\n%s" % 'Number of rare content words (wordfrecuency<=4) (incidence per 1000 words): ' + str(
+            i['num_rare_words_4_incidence']))
+        estfile.write(
+            "\n%s" % 'Number of distinct rare content words (wordfrecuency<=4): ' + str(i['num_dif_rare_words_4']))
+        estfile.write(
+            "\n%s" % 'Number of distinct rare content words (wordfrecuency<=4) (incidence per 1000 words): ' + str(
+                i['num_dif_rare_words_4_incidence']))
+        estfile.write("\n%s" % 'Mean of rare lexical words (word frequency <= 4): ' + str(i['mean_rare_4']))
+        estfile.write(
+            "\n%s" % 'Mean of distinct rare lexical words (word frequency <= 4): ' + str(i['mean_distinct_rare_4']))
+        estfile.write("\n%s" % 'Vocabulary Knowledge')
+        estfile.write("\n%s" % 'Number of A1 vocabulary in the text: ' + str(i['num_a1_words']))
+        estfile.write(
+            "\n%s" % 'Incidence score of A1 vocabulary  (per 1000 words): ' + str(i['num_a1_words_incidence']))
+        estfile.write("\n%s" % 'Number of A2 vocabulary in the text: ' + str(i['num_a2_words']))
+        estfile.write(
+            "\n%s" % 'Incidence score of A2 vocabulary  (per 1000 words): ' + str(i['num_a2_words_incidence']))
+        estfile.write("\n%s" % 'Number of B1 vocabulary in the text: ' + str(i['num_b1_words']))
+        estfile.write(
+            "\n%s" % 'Incidence score of B1 vocabulary  (per 1000 words): ' + str(i['num_b1_words_incidence']))
+        estfile.write("\n%s" % 'Number of B2 vocabulary in the text: ' + str(i['num_b2_words']))
+        estfile.write(
+            "\n%s" % 'Incidence score of B2 vocabulary  (per 1000 words): ' + str(i['num_b2_words_incidence']))
+        estfile.write("\n%s" % 'Number of C1 vocabulary in the text: ' + str(i['num_c1_words']))
+        estfile.write(
+            "\n%s" % 'Incidence score of C1 vocabulary  (per 1000 words): ' + str(i['num_c1_words_incidence']))
+        estfile.write(
+            "\n%s" % 'Number of content words not in A1-C1 vocabulary: ' + str(i['num_content_words_not_a1_c1_words']))
+        estfile.write("\n%s" % 'Incidence score of content words not in A1-C1 vocabulary (per 1000 words): ' + str(
+            i['num_content_words_not_a1_c1_words_incidence']))
+        estfile.write("\n%s" % 'Syntactic Features / POS ratios')
+        estfile.write("\n%s" % 'Number of content words: ' + str(i['num_lexic_words']))
+        estfile.write(
+            "\n%s" % 'Number of content words (incidence per 1000 words): ' + str(i['num_lexic_words_incidence']))
+        estfile.write("\n%s" % 'Number of nouns: ' + str(i['num_noun']))
+        estfile.write("\n%s" % 'Number of nouns (incidence per 1000 words): ' + str(i['num_noun_incidence']))
+        estfile.write("\n%s" % 'Number of adjectives: ' + str(i['num_adj']))
+        estfile.write("\n%s" % 'Number of adjectives (incidence per 1000 words): ' + str(i['num_adj_incidence']))
+        estfile.write("\n%s" % 'Number of adverbs: ' + str(i['num_adv']))
+        estfile.write("\n%s" % 'Number of adverbs (incidence per 1000 words): ' + str(i['num_adv_incidence']))
+        estfile.write("\n%s" % 'Number of verbs: ' + str(i['num_verb']))
+        estfile.write("\n%s" % 'Number of verbs (incidence per 1000 words): ' + str(i['num_verb_incidence']))
+        estfile.write("\n%s" % 'Left embeddedness (Mean of number of words before the main verb) (SYNLE): ' + str(
+            i['left_embeddedness']))
+        estfile.write("\n%s" % 'Number of decendents per noun phrase (mean): ' + str(i['num_decendents_noun_phrase']))
+        estfile.write(
+            "\n%s" % 'Number of modifiers per noun phrase (mean) (SYNNP): ' + str(i['num_modifiers_noun_phrase']))
+        estfile.write(
+            "\n%s" % 'Mean of the number of levels of dependency tree (Depth): ' + str(i['mean_depth_per_sentence']))
+        estfile.write("\n%s" % 'Number of subordinate clauses: ' + str(i['num_subord']))
+        estfile.write(
+            "\n%s" % 'Number of subordinate clauses (incidence per 1000 words): ' + str(i['num_subord_incidence']))
+        estfile.write("\n%s" % 'Number of relative subordinate clauses: ' + str(i['num_rel_subord']))
+        estfile.write("\n%s" % 'Number of relative subordinate clauses (incidence per 1000 words): ' + str(
+            i['num_rel_subord_incidence']))
+        estfile.write("\n%s" % 'Punctuation marks per sentence (mean): ' + str(i['num_punct_marks_per_sentence']))
+        estfile.write("\n%s" % 'Number of propositions: ' + str(i['num_total_prop']))
+        estfile.write(
+            "\n%s" % 'Mean of the number of propositions per sentence: ' + str(i['mean_propositions_per_sentence']))
+        estfile.write("\n%s" % 'Mean of the number of VPs per sentence: ' + str(i['mean_vp_per_sentence']))
+        estfile.write("\n%s" % 'Mean of the number of NPs per sentence: ' + str(i['mean_np_per_sentence']))
+        estfile.write("\n%s" % 'Noun phrase density, incidence (DRNP): ' + str(i['noun_phrase_density_incidence']))
+        estfile.write("\n%s" % 'Verb phrase density, incidence (DRVP): ' + str(i['verb_phrase_density_incidence']))
+        estfile.write("\n%s" % "Number of passive voice verbs: " + str(i['num_pass']))
+        estfile.write(
+            "\n%s" % "Number of passive voice verbs (incidence per 1000 words): " + str(i['num_pass_incidence']))
+        estfile.write("\n%s" % "Mean of passive voice verbs: " + str(i['num_pass_mean']))
+        estfile.write("\n%s" % "Number of agentless passive voice verbs: " + str(i['num_agentless']))
+        estfile.write("\n%s" % 'Agentless passive voice density, incidence (DRPVAL): ' + str(
+            i['agentless_passive_density_incidence']))
+        estfile.write("\n%s" % "Number of negative words: " + str(i['num_neg']))
+        estfile.write("\n%s" % 'Negation density, incidence (DRNEG): ' + str(i['negation_density_incidence']))
+        estfile.write("\n%s" % "Number of verbs in gerund form: " + str(i['num_ger']))
+        estfile.write("\n%s" % 'Gerund density, incidence (DRGERUND): ' + str(i['gerund_density_incidence']))
+        estfile.write("\n%s" % "Number of verbs in infinitive form: " + str(i['num_inf']))
+        estfile.write("\n%s" % 'Infinitive density, incidence (DRINF): ' + str(i['infinitive_density_incidence']))
+        estfile.write("\n%s" % 'Semantics. Readability')
+        estfile.write("\n%s" % 'Mean values of polysemy in the WordNet lexicon: ' + str(i['polysemic_index']))
+        estfile.write(
+            "\n%s" % 'Mean hypernym values of verbs in the WordNet lexicon: ' + str(i['hypernymy_verbs_index']))
+        estfile.write(
+            "\n%s" % 'Mean hypernym values of nouns in the WordNet lexicon: ' + str(i['hypernymy_nouns_index']))
+        estfile.write(
+            "\n%s" % 'Mean hypernym values of nouns and verbs in the WordNet lexicon: ' + str(i['hypernymy_index']))
+        estfile.write("\n%s" % 'Referential cohesion')
+        estfile.write(
+            "\n%s" % 'Noun overlap, adjacent sentences, binary, mean (CRFNOl): ' + str(i['noun_overlap_adjacent']))
+        estfile.write(
+            "\n%s" % 'Noun overlap, all of the sentences in a paragraph or text, binary, mean (CRFNOa): ' + str(
+                i['noun_overlap_all']))
+        estfile.write("\n%s" % 'Argument overlap, adjacent sentences, binary, mean (CRFAOl): ' + str(
+            i['argument_overlap_adjacent']))
+        estfile.write(
+            "\n%s" % 'Argument overlap, all of the sentences in a paragraph or text, binary, mean (CRFAOa): ' + str(
+                i['argument_overlap_all']))
+        estfile.write(
+            "\n%s" % 'Stem overlap, adjacent sentences, binary, mean (CRFSOl): ' + str(i['stem_overlap_adjacent']))
+        estfile.write(
+            "\n%s" % 'Stem overlap, all of the sentences in a paragraph or text, binary, mean (CRFSOa): ' + str(
+                i['stem_overlap_all']))
+        estfile.write("\n%s" % 'Content word overlap, adjacent sentences, proportional, mean (CRFCWO1): ' + str(
+            i['content_overlap_adjacent_mean']))
+        estfile.write(
+            "\n%s" % 'Content word overlap, adjacent sentences, proportional, standard deviation (CRFCWO1d): ' + str(
+                i['content_overlap_adjacent_std']))
+        estfile.write(
+            "\n%s" % 'Content word overlap, all of the sentences in a paragraph or text, proportional, mean (CRFCWOa): ' + str(
+                i['content_overlap_all_mean']))
+        estfile.write(
+            "\n%s" % 'Content word overlap, all of the sentences in a paragraph or text, proportional, standard deviation (CRFCWOad): ' + str(
+                i['content_overlap_all_std']))
+        if similarity:
             estfile.write("\n%s" % 'Semantic overlap')
-        elif key == 'noun_overlap_adjacent':
-            estfile.write("\n%s" % 'Referential cohesion')
-        elif key == 'all_connectives':
-            estfile.write("\n%s" % 'Connectives')
+            estfile.write(
+                "\n%s" % 'Semantic Similarity between adjacent sentences (mean): ' + str(i['similarity_adjacent_mean']))
+            estfile.write(
+                "\n%s" % 'Semantic Similarity between all possible pairs of sentences in a paragraph (mean): ' + str(
+                    i['similarity_pairs_par_mean']))
+            estfile.write("\n%s" % 'Semantic Similarity between adjacent paragraphs (mean): ' + str(
+                i['similarity_adjacent_par_mean']))
+            estfile.write("\n%s" % 'Semantic Similarity between adjacent sentences (standard deviation): ' + str(
+                i['similarity_adjacent_std']))
+            estfile.write(
+                "\n%s" % 'Semantic Similarity between all possible pairs of sentences in a paragraph (standard deviation): ' + str(
+                    i['similarity_pairs_par_std']))
+            estfile.write("\n%s" % 'Semantic Similarity between adjacent paragraphs (standard deviation): ' + str(
+                i['similarity_adjacent_par_std']))
+        estfile.write("\n%s" % 'Connectives')
+        estfile.write(
+            "\n%s" % 'Number of connectives (incidence per 1000 words): ' + str(i['all_connectives_incidence']))
+        estfile.write(
+            "\n%s" % 'Causal connectives (incidence per 1000 words): ' + str(i['causal_connectives_incidence']))
+        estfile.write(
+            "\n%s" % 'Logical connectives (incidence per 1000 words):  ' + str(i['logical_connectives_incidence']))
+        estfile.write("\n%s" % 'Adversative/contrastive connectives (incidence per 1000 words): ' + str(
+            i['adversative_connectives_incidence']))
+        estfile.write(
+            "\n%s" % 'Temporal connectives (incidence per 1000 words):  ' + str(i['temporal_connectives_incidence']))
+        estfile.write("\n%s" % 'Conditional connectives (incidence per 1000 words): ' + str(
+            i['conditional_connectives_incidence']))
+        estfile.close()
 
     # fichero csv para el aprendizaje automatico
     # ignore_list dauden ezaugarriak ez dira kontuan hartzen
     # concatena df=df+dfnew
-    def write_in_full_csv(self, df, similarity, language, ratios):
-        # Dictionaries (or dict in Python) are a way of storing elements
+    def write_in_full_csv(self, df, similarity, language,ratios):
+        #Dictionaries (or dict in Python) are a way of storing elements
         # in a Python list using its index:my_list = ['p','r','o','b','e'] Output: 'p' using index my_list[0]
         # in a Python dict using a fixed key:a = {'apple': 'fruit', 'cake': 'dessert'}; a['doughnut'] = 'snack';print(a['apple'])
-        # Keys must be unique, immutable objects, and are typically strings. The values in a dictionary can be anything. For many applications the values are simple types such as integers and strings.
-        # the values in a dictionary are collections (lists, dicts, etc.) In this case, the value (an empty list or dict) must be initialized the first time a given key is used. While this is relatively easy to do manually, the defaultdict type automates and simplifies these kinds of operations.
-        # from collections import defaultdict
-        # self.indicators=defaultdict(float) ## default value of float is 0.0
-        # self.indicators.items() ->
+        #Keys must be unique, immutable objects, and are typically strings. The values in a dictionary can be anything. For many applications the values are simple types such as integers and strings.
+        #the values in a dictionary are collections (lists, dicts, etc.) In this case, the value (an empty list or dict) must be initialized the first time a given key is used. While this is relatively easy to do manually, the defaultdict type automates and simplifies these kinds of operations.
+        #from collections import defaultdict
+        #self.indicators=defaultdict(float) ## default value of float is 0.0
+        #self.indicators.items() ->
         i = self.indicators
         indicators_dict = {}
         headers = []
-        # Anade en estas listas las que no quieras mostrar para todos los casos
+        #Anade en estas listas las que no quieras mostrar para todos los casos
         ignore_list = []
-
-        if not similarity:
-            ignore_list.extend(self.similarity_list)
+        # ignore language specific features
+        ignore_list_eu = []
+        ignore_list_es = []
+        ignore_list_en = []
+        #ignore counters: only incidence, ratios, mean and std
+        ignore_list_counters = ['prop', 'num_complex_words', 'num_words_more_3_syl', 'num_words', 'num_different_forms',
+                       'num_words_with_punct', 'num_paragraphs', 'num_sentences', 'num_past', 'num_pres', 'num_future',
+                       'num_indic', 'num_impera', 'num_past_irregular', 'num_past_irregular_incidence',
+                       'num_personal_pronouns', 'num_first_pers_pron', 'num_first_pers_sing_pron',
+                       'num_third_pers_pron', 'num_rare_nouns_4', 'num_rare_adj_4', 'num_rare_verbs_4',
+                       'num_rare_advb_4', 'num_rare_words_4', 'num_rare_words_4_incidence', 'num_dif_rare_words_4',
+                       'num_dif_rare_words_4_incidence', 'num_a1_words', 'num_a2_words', 'num_b1_words', 'num_b2_words',
+                       'num_c1_words', 'num_content_words_not_a1_c1_words', 'num_lexic_words', 'num_noun', 'num_adj',
+                       'num_adv', 'num_verb', 'num_subord', 'num_rel_subord', 'num_total_prop',
+                       'noun_phrase_density_incidence', 'verb_phrase_density_incidence', 'num_pass',
+                       'num_pass_incidence', 'num_agentless', 'num_neg', 'num_ger', 'num_inf']
+        similarity_list = ["similarity_adjacent_mean", "similarity_pairs_par_mean", "similarity_adjacent_par_mean",
+                           "similarity_adjacent_std", "similarity_pairs_par_std", "similarity_adjacent_par_std"]
+        if not(similarity):
+            ignore_list.extend(similarity_list)
         if ratios:
-            ignore_list.extend(self.ignore_list_counters)
+            ignore_list.extend(ignore_list_counters)
         if language == "english":
-            ignore_list.extend(self.ignore_list_en_ind)
+            ignore_list.extend(ignore_list_en)
         if language == "spanish":
-            ignore_list.extend(self.ignore_list_es_ind)
+            ignore_list.extend(ignore_list_es)
         if language == "basque":
-            ignore_list.extend(self.ignore_list_eu_ind)
+            ignore_list.extend(ignore_list_eu)
 
         for key, value in i.items():
             if key not in ignore_list:
-                indicators_dict[key] = i.get(key)
-                headers.append(key)
-        # construct a new pandas dataframe from a dictionary: df = pd.DataFrame(data=[indicators_dict],columns=indicators_dict.keys()) columns: the column labels of the DataFrame.
+                 indicators_dict[key] = i.get(key)
+                 headers.append(key)
+        #construct a new pandas dataframe from a dictionary: df = pd.DataFrame(data=[indicators_dict],columns=indicators_dict.keys()) columns: the column labels of the DataFrame.
         df_new = pd.DataFrame([indicators_dict], columns=indicators_dict.keys())
-        # print(df_new)->  num_words  num_paragraphs  num_sentences
-        # 0        100             1            13
-        # Replace all NaN elements with 0s.
-        df_new.fillna(0)
-        # dataframe=dataframe+newdataframe
+        #print(df_new)->  num_words  num_paragraphs  num_sentences
+                   #0        100             1            13
+        #dataframe=dataframe+newdataframe
         df = pd.concat([df, df_new], sort=False)
         return df
-
     @staticmethod
     def create_directory(path):
         newPath = os.path.normpath(str(Path(path).parent.absolute()) + "/results")
         if not os.path.exists(newPath):
             os.makedirs(newPath)
         return newPath
+
 
 class Maiztasuna:
     freq_list = {}
@@ -2385,7 +2259,7 @@ class Maiztasuna:
         self.path = path
 
     def load(self):
-        with open(self.path, encoding='utf-8') as csv_file:
+        with open(self.path) as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
             for row in csv_reader:
                 Maiztasuna.freq_list[row[1].strip()] = row[0]
@@ -2404,79 +2278,26 @@ class Stopwords:
     def download(self):
         nltk.download('stopwords')
 
-    #def load(self):
-        #if self.lang == "english":
-            #Stopwords.stop_words = stopwords.words('english')
-        #if self.lang == "spanish":
-            #Stopwords.stop_words = stopwords.words('spanish')
-        #if self.lang == "basque":
-            #Stopwords.stop_words = set(line.strip() for line in open('data/eu/StopWords/stopwords.txt', encoding='utf-8'))
-
     def load(self):
         if self.lang == "english":
-            # Stopwords.stop_words = stopwords.words('english')
-            # Open the file with read only permit
-            f = open('data/en/StopWords/stopwords.txt', encoding='utf-8')
-            # use readline() to read the first line
-            line = f.readline()
-            # use the read line to read further.
-            # If the file is not empty keep reading one line
-            # at a time, till the file is empty
-            while line:
-                # print(line)
-                Stopwords.stop_words.append(line.strip())
-                # use realine() to read next line
-                line = f.readline()
-            f.close()
-            # Stopwords.stop_words = set(line.strip() for line in open('/var/www/html/erraztest/en/stopwords.txt'))
+            Stopwords.stop_words = stopwords.words('english')
         if self.lang == "spanish":
-            # Stopwords.stop_words = stopwords.words('spanish')
-            # Open the file with read only permit
-            f = open('data/es/StopWords/stopwords.txt', encoding='utf-8')
-            # use readline() to read the first line
-            line = f.readline()
-            # use the read line to read further.
-            # If the file is not empty keep reading one line
-            # at a time, till the file is empty
-            while line:
-                # print(line)
-                Stopwords.stop_words.append(line.strip())
-                # use realine() to read next line
-                line = f.readline()
-            f.close()
-            # Stopwords.stop_words = set(line.strip() for line in open('/var/www/html/erraztest/es/stopwords.txt'))
+            Stopwords.stop_words = stopwords.words('spanish')
         if self.lang == "basque":
-            # Open the file with read only permit
-            f = open('data/eu/StopWords/stopwords.txt', encoding='utf-8')
-            # use readline() to read the first line
-            line = f.readline()
-            # use the read line to read further.
-            # If the file is not empty keep reading one line
-            # at a time, till the file is empty
-            while line:
-                # print(line)
-                Stopwords.stop_words.append(line.strip())
-                # use realine() to read next line
-                line = f.readline()
-            f.close()
-            # Stopwords.stop_words = set(line.strip() for line in open('/var/www/html/erraztest/eu/stopwords.txt'))
-            # line.decode('utf-8').strip()
-
+            Stopwords.stop_words = set(line.strip() for line in open('data/eu/stopwords_formaketakonektoreak.txt'))
 
 class Predictor:
     def __init__(self, language):
         self.lang = language
         self.clf = None
         self.selector = None
-
     def load(self):
         if self.lang == "english":
             # Para cargarlo, simplemente hacer lo siguiente:
             self.clf = joblib.load('./corpus/en/dataset_aztertest_full/classifier_aztertest_best.pkl')
             with open("./corpus/en/dataset_aztertest_full/selectorAztertestFullBest.pickle", "rb") as f:
                 self.selector = pickle.load(f)
-
-    def predict_dificulty(self, data):
+    def predict_dificulty(self,data):
         feature_names = data.columns.tolist()
         X_test = data[feature_names]
         # Para cargarlo, simplemente hacer lo siguiente:
@@ -2484,7 +2305,6 @@ class Predictor:
         X_test_new = self.selector.transform(X_test)
         # y se realiza la predicción utilizando el método predict()
         return self.clf.predict(X_test_new)
-
 
 class NLPCharger:
 
@@ -2507,16 +2327,16 @@ class NLPCharger:
             print("-----------You are going to use Stanford library-----------")
             if self.lang == "basque":
                 print("-------------You are going to use Basque model-------------")
-                MODELS_DIR = self.dir + '/eu'
+                MODELS_DIR = self.dir+'/eu'
                 stanfordnlp.download('eu', MODELS_DIR)  # Download the Basque models
             elif self.lang == "english":
                 print("-------------You are going to use English model-------------")
-                MODELS_DIR = self.dir + '/en'
-                print("-------------Downloading Stanford English model-------------")
+                MODELS_DIR = self.dir+'/en'
+                print("-------------Downloading Stanford Basque model-------------")
                 stanfordnlp.download('en', MODELS_DIR)  # Download the English models
             elif self.lang == "spanish":
                 print("-------------You are going to use Spanish model-------------")
-                MODELS_DIR = self.dir + '/es'
+                MODELS_DIR = self.dir+'/es'
                 stanfordnlp.download('es', MODELS_DIR)  # Download the Spanish models
             else:
                 print("........You cannot use this language...........")
@@ -2534,8 +2354,8 @@ class NLPCharger:
             print("-----------You are going to use Stanford library-----------")
             if self.lang == "basque":
                 print("-------------You are going to use Basque model-------------")
-                # MODELS_DIR = 'J:\TextSimilarity\eu'
-                MODELS_DIR = self.dir + '/eu'
+                #MODELS_DIR = 'J:\TextSimilarity\eu'
+                MODELS_DIR = self.dir+'/eu'
                 #               config = {'processors': 'tokenize,pos,lemma,depparse',  # Comma-separated list of processors to use
                 #                           'lang': 'eu',  # Language code for the language to build the Pipeline in
                 #                           'tokenize_model_path': MODELS_DIR + '\eu_bdt_models\eu_bdt_tokenizer.pt',
@@ -2560,7 +2380,7 @@ class NLPCharger:
 
             elif self.lang == "english":
                 print("-------------You are going to use English model-------------")
-                MODELS_DIR = self.dir + '/en'
+                MODELS_DIR = self.dir+'/en'
                 config = {'processors': 'tokenize,mwt,pos,lemma,depparse',  # Comma-separated list of processors to use
                           'lang': 'en',  # Language code for the language to build the Pipeline in
                           'tokenize_model_path': MODELS_DIR + '/en_ewt_models/en_ewt_tokenizer.pt',
@@ -2573,7 +2393,7 @@ class NLPCharger:
                 self.parser = stanfordnlp.Pipeline(**config)
             elif self.lang == "spanish":
                 print("-------------You are going to use Spanish model-------------")
-                MODELS_DIR = self.dir + '/es'
+                MODELS_DIR = self.dir+'/es'
                 config = {'processors': 'tokenize,pos,lemma,depparse',  # Comma-separated list of processors to use
                           'lang': 'es',  # Language code for the language to build the Pipeline in
                           'tokenize_model_path': MODELS_DIR + '/es_ancora_models/es_ancora_tokenizer.pt',
@@ -2645,63 +2465,57 @@ class NLPCharger:
 
     def adapt_nlp_model(self):
         ma = ModelAdapter(self.parser, self.lib)
-        return ma.model_analysis(self.textwithparagraphs, self.lang)
+        return ma.model_analysis(self.textwithparagraphs,self.lang)
+
+
 
 
 class Pronouncing:
     # Pronunciador(the Carnegie Mellon Pronouncing Dictionary)- Utilizado para obtener silabas: pip install cmudict
-    # cmudict is a pronouncing dictionary for north american english words.
-    # it splits words into phonemes, which are shorter than syllables.
-    # (e.g. the word 'cat' is split into three phonemes: K - AE - T).
-    # but vowels also have a "stress marker":
-    # either 0, 1, or 2, depending on the pronunciation of the word (so AE in 'cat' becomes AE1).
-    # the code in the answer counts the stress markers and therefore the number of the vowels -
-    # which effectively gives the number of syllables (notice how in OP's examples each syllable has exactly one vowel)
-    # from nltk.corpus import cmudict
-    # pronunciation dictionary
-    # prondict = cmudict.dict()
+        # cmudict is a pronouncing dictionary for north american english words.
+        # it splits words into phonemes, which are shorter than syllables.
+        # (e.g. the word 'cat' is split into three phonemes: K - AE - T).
+        # but vowels also have a "stress marker":
+        # either 0, 1, or 2, depending on the pronunciation of the word (so AE in 'cat' becomes AE1).
+        # the code in the answer counts the stress markers and therefore the number of the vowels -
+        # which effectively gives the number of syllables (notice how in OP's examples each syllable has exactly one vowel)
+        #from nltk.corpus import cmudict
+        #pronunciation dictionary
+        #prondict = cmudict.dict()
     prondict = {}
 
-    #def __init__(self, language):
-    #    self.lang = language
+    def __init__(self, language):
+        self.lang = language
 
-    def load(self):
-        Pronouncing.prondict = cmudict.dict()
+    def load(self, text_without_punctuation):
+        if self.lang == "english":
+            Pronouncing.prondict = cmudict.dict()
+        elif self.lang == "basque":
+            # #accedemos a foma
+            # command_01 = "foma"
+            # os.system(command_01)
+            #
+            # #utilizamos el script silabaEus que contendra las reglas
+            # command_02 = "source silabaEus.script"
+            # os.system(command_02)
 
-    def euskara_text2syllables(self, textwithoutpuuntuation):
-        #elif self.lang == "basque":
-        # #accedemos a foma
-        # command_01 = "foma"
-        # os.system(command_01)
-        #
-        # #utilizamos el script silabaEus que contendra las reglas
-        # command_02 = "source silabaEus.script"
-        # os.system(command_02)
-        # Write all the information in the file
-        # genera CADENAS aleatorias
-        #import uuid
-        silaba_name = str(uuid.uuid4())
-        silaba_name = silaba_name+"_silaba.txt"
-        # Creamos un fichero con las palabras divididas en silabas por puntos
-        with open(silaba_name, "w", encoding="utf-8") as f:
-            for word in text_without_punctuation:
-                command = "echo " + word.text + " | flookup -ib data/eu/syllablesplitter/silabaEus.fst"
-                subprocess.run(command, shell=True, stdout=f)
-            # Tratamos el fichero y guardamos en un diccionario cada palabra
-        with open(silaba_name, mode="r", encoding="utf-8") as f:
-            for linea in f:
-                if not linea == '\n':
-                   str = linea.rstrip('\n')
-                   palabra_sin_puntos_rep = str.replace('.', '')  # [txakurra txakurra, ... , ...]
-                   line = palabra_sin_puntos_rep.split('\t')  # [ [txakurra, txakurra], [..,..], ...]
-                   palabra = line[0]
-                   num_sil = []  # se crea para utilizar la misma estructura que cmudict.dict()
-                   num_sil.append(len(str.split('.')))
-                   Pronouncing.prondict[palabra] = num_sil  # [txakurra] = 3
-        os.system("rm " + str(silaba_name))
-    def print(self):
-        for k, v in Pronouncing.prondict.items():
-            print(k, v)
+            #Creamos un fichero con las palabras divididas en silabas por puntos
+            with open("docSilabas.txt", "w") as f:
+                for word in text_without_punctuation:
+                    command = "echo " + word.text + " | flookup -ib silabaEus.fst"
+                    subprocess.run(command, shell=True, stdout=f)
+
+            #Tratamos el fichero y guardamos en un diccionario cada palabra
+            with open("docSilabas.txt", mode="r", encoding="utf-8") as f:
+                indice = 0
+                for linea in f:
+                    if not linea == "\n":
+                        s = linea.rstrip('\n')
+                        palabra_sin_puntos = s.replace('.','')
+                        num_sil = []    #se crea para utilizar la misma estructura que cmudict.dict()
+                        num_sil.append(len(s.split('.')))
+                        Pronouncing.prondict[palabra_sin_puntos] = num_sil #[txakurra] = 3
+                        indice += 1
 
 
 "This is a Singleton class which is going to start necessary classes and methods."
@@ -2739,11 +2553,9 @@ class Main(object):
         p = ArgumentParser(description="python3 ./main.py -f \"laginak/*.doc.txt\" ")
         # Grupo de argumentos requeridos
         required = p.add_argument_group('required arguments')
-        required.add_argument('-f', '--files', nargs='+',
-                              help='Files to analyze (in .txt, .odt, .doc or .docx format)')
-        required.add_argument('-l', '--language', help='Language to analyze (english, spanish, basque)')
-        required.add_argument('-m', '--model', help='Model selected to analyze (stanford, cube)')
-        required.add_argument('-d', '--directory', help='Work directory($HOME)')
+        required.add_argument('-f', '--files', nargs='+', help='Files to analyze (in .txt, .odt, .doc or .docx format)')
+        required.add_argument('-l', '--language', nargs='+', help='Language to analyze (english, spanish, basque)')
+        required.add_argument('-m', '--model', nargs='+', help='Model selected to analyze (stanford, cube)')
         # Grupo de argumentos opcionales
         optional = p.add_argument_group('optional arguments')
         optional.add_argument('-c', '--csv', action='store_true', help="Generate a CSV file")
@@ -2753,27 +2565,24 @@ class Main(object):
         opts = p.parse_args()
 
         language = opts.language
-        #language = "spanish"
+        #language = "basque"
         print("language:", str(language))
         # language = "english"
         model = opts.model
         #model = "stanford"
         print("model:", str(model))
-        directory = opts.directory
-        #directory=directorylist[0]
-        print("directory:",str(directory))
         similarity = opts.similarity
-        #similarity = False
         print("similarity:", str(similarity))
         csv = opts.csv
         print("csv:", str(csv))
         ratios = opts.ratios
         print("ratios:", str(ratios))
-
+        directory = "/home/kepa"
+        #directory = "J:\TextSimilarity"
 
         # Carga wordfrequency euskara
         if language == "basque":
-            maiztasuna = Maiztasuna("data/eu/Maiztasunak/LB2014Maiztasunak_zenbakiakKenduta.csv")
+            maiztasuna = Maiztasuna("LB2014Maiztasunak_zenbakiakKenduta.csv")
             maiztasuna.load()
 
         # Connectives
@@ -2781,14 +2590,8 @@ class Main(object):
         conn.load()
 
         # Carga Niveles Oxford
-        if language == "english":
-            ox = Oxford()
-            ox.load()
-
-        # Carga verbos irregulares
-        if language != "basque":
-            ir = Irregularverbs(language)
-            ir.load()
+        ox = Oxford(language)
+        ox.load()
 
         # Carga StopWords
         stopw = Stopwords(language)
@@ -2797,13 +2600,12 @@ class Main(object):
         # stopw.print()
 
         # Load Pronouncing Dictionary
-        if language == "english":
-            prondic = Pronouncing()
-            prondic.load()
-            #prondic.print()
+        prondic = Pronouncing(language)
+        if not language == "english":
+            prondic.load("")
 
         # Carga del modelo Stanford/NLPCube
-        cargador = NLPCharger(language, model, directory)
+        cargador = NLPCharger(language, model,directory)
         cargador.download_model()
         cargador.load_model()
 
@@ -2813,13 +2615,13 @@ class Main(object):
 
         files = opts.files
 
-        # @staticmethod
-        # def load_files(args):
+        #@staticmethod
+        #def load_files(args):
         #    FileLoader.files = args
         #    print("Parametros: " + str(FileLoader.files))
 
-        #files = ["vlad.txt"] #euskaratestua Loterry-adv
-        print("Files:" + str(files))
+        #files = ["euskaratestua.txt"] #euskaratestua
+        print("Files:"+str(files))
         ### Files will be created in this folder
         path = Printer.create_directory(files[0])
         print("Path:" + str(path))
@@ -2837,16 +2639,17 @@ class Main(object):
 
             # Get indicators
             document = cargador.get_estructure(text)
-            indicators = document.get_indicators(similarity)
-            printer = Printer(indicators, language, similarity)
-            printer.load_ind_sentences()
+            indicators = document.get_indicators()
+            printer = Printer(indicators)
             printer.print_info()
             printer.generate_csv(path, input, similarity)  # path, prediction, opts.similarity)
             if csv:
-                df_row = printer.write_in_full_csv(df_row, similarity, language, ratios)
+                 df_row = printer.write_in_full_csv(df_row, similarity, language, ratios)
         if csv:
             df_row.to_csv(os.path.join(path, "full_results_aztertest.csv"), encoding='utf-8', index=False)
 
 
 main = Main()
 main.start()
+
+# In[ ]:
