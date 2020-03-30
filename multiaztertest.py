@@ -736,25 +736,9 @@ class Document:
                 i['causal_connectives'] += self.calculate_connectives_for(s, Connectives.causal)
                 i['temporal_connectives'] += self.calculate_connectives_for(s, Connectives.temporal)
                 i['conditional_connectives'] += self.calculate_connectives_for(s, Connectives.conditional)
-                if self.language == "english" or self.language == 'basque':
-                    i['logical_connectives'] += self.calculate_connectives_for(s, Connectives.logical)
-                    i['adversative_connectives'] += self.calculate_connectives_for(s, Connectives.adversative)
-                if self.language == 'spanish':
-                    i['addition_connectives'] += self.calculate_connectives_for(s, Connectives.addition)
-                    i['consequence_connectives'] += self.calculate_connectives_for(s, Connectives.consequence)
-                    i['purpose_connectives'] += self.calculate_connectives_for(s, Connectives.purpose)
-                    i['illustration_connectives'] += self.calculate_connectives_for(s, Connectives.illustration)
-                    i['opposition_connectives'] += self.calculate_connectives_for(s, Connectives.opposition)
-                    i['order_connectives'] += self.calculate_connectives_for(s, Connectives.order)
-                    i['reference_connectives'] += self.calculate_connectives_for(s, Connectives.reference)
-                    i['summary_connectives'] += self.calculate_connectives_for(s, Connectives.summary)
-        if self.language == 'spanish':
-            i['all_connectives'] = i['causal_connectives'] + i['temporal_connectives'] + i['conditional_connectives'] + \
-                                   i['addition_connectives'] + i['consequence_connectives'] + i['purpose_connectives'] + \
-                                   i['illustration_connectives'] + i['opposition_connectives'] + i[
-                                       'order_connectives'] + i['reference_connectives'] + i['summary_connectives']
-        if self.language == 'english' or self.language == 'basque':
-            i['all_connectives'] = i['causal_connectives'] + i['temporal_connectives'] + i['conditional_connectives'] + \
+                i['logical_connectives'] += self.calculate_connectives_for(s, Connectives.logical)
+                i['adversative_connectives'] += self.calculate_connectives_for(s, Connectives.adversative)
+        i['all_connectives'] = i['causal_connectives'] + i['temporal_connectives'] + i['conditional_connectives'] + \
                                    i['logical_connectives'] + i['adversative_connectives']
 
     def calculate_all_numbers(self, similarity):
@@ -1212,14 +1196,6 @@ class Document:
         i['adversative_connectives_incidence'] = self.get_incidence(i['adversative_connectives'], n)
         i['temporal_connectives_incidence'] = self.get_incidence(i['temporal_connectives'], n)
         i['conditional_connectives_incidence'] = self.get_incidence(i['conditional_connectives'], n)
-        i['addition_connectives_incidence'] = self.get_incidence(i['addition_connectives'], n)
-        i['consequence_connectives_incidence'] = self.get_incidence(i['consequence_connectives'], n)
-        i['purpose_connectives_incidence'] = self.get_incidence(i['purpose_connectives'], n)
-        i['illustration_connectives_incidence'] = self.get_incidence(i['illustration_connectives'], n)
-        i['opposition_connectives_incidence'] = self.get_incidence(i['opposition_connectives'], n)
-        i['order_connectives_incidence'] = self.get_incidence(i['order_connectives'], n)
-        i['reference_connectives_incidence'] = self.get_incidence(i['reference_connectives'], n)
-        i['summary_connectives_incidence'] = self.get_incidence(i['summary_connectives'], n)
         i['num_rare_nouns_incidence'] = self.get_incidence(i['num_rare_nouns'], n)
         i['num_rare_adj_incidence'] = self.get_incidence(i['num_rare_adj'], n)
         i['num_rare_verbs_incidence'] = self.get_incidence(i['num_rare_verbs'], n)
@@ -1788,16 +1764,6 @@ class Connectives():
     temporal = []
     causal = []
     conditional = []
-    # es
-    addition = []
-    consequence = []
-    purpose = []
-    illustration = []
-    opposition = []
-    order = []
-    reference = []
-    summary = []
-
     def __init__(self, language):
         Connectives.lang = language
 
@@ -1811,26 +1777,10 @@ class Connectives():
         lineas = f.readlines()
         aux = Connectives.temporal
         for linea in lineas:
-            if linea.startswith("//addition"):
-                aux = Connectives.addition
-            elif linea.startswith("//causal"):
+            if linea.startswith("//causal"):
                 aux = Connectives.causal
             elif linea.startswith("//conditional"):
                 aux = Connectives.conditional
-            elif linea.startswith("//consequence"):
-                aux = Connectives.consequence
-            elif linea.startswith("//purpose"):
-                aux = Connectives.purpose
-            elif linea.startswith("//illustration"):
-                aux = Connectives.illustration
-            elif linea.startswith("//opposition"):
-                aux = Connectives.opposition
-            elif linea.startswith("//order"):
-                aux = Connectives.order
-            elif linea.startswith("//reference"):
-                aux = Connectives.reference
-            elif linea.startswith("//summary"):
-                aux = Connectives.summary
             elif linea.startswith("//temporal"):
                 aux = Connectives.temporal
             elif linea.startswith("//logical"):
@@ -2156,23 +2106,6 @@ class Printer:
         self.ind_sentences['adversative_connectives'] = "Adversative/contrastive connectives: "
         self.ind_sentences[
             'adversative_connectives_incidence'] = "Adversative/contrastive connectives (incidence per 1000 words): "
-        self.ind_sentences['addition_connectives'] = "Adition connectives:  "
-        self.ind_sentences['addition_connectives_incidence'] = "Adition connectives (incidence per 1000 words):  "
-        self.ind_sentences['consequence_connectives'] = "Consequence connectives: "
-        self.ind_sentences['consequence_connectives_incidence'] = "Consequence connectives (incidence per 1000 words): "
-        self.ind_sentences['purpose_connectives'] = "Purpose connectives:  "
-        self.ind_sentences['purpose_connectives_incidence'] = "Purpose connectives (incidence per 1000 words):  "
-        self.ind_sentences['illustration_connectives'] = "Illustration connectives: "
-        self.ind_sentences[
-            'illustration_connectives_incidence'] = "Illustration connectives (incidence per 1000 words): "
-        self.ind_sentences['opposition_connectives'] = "Opposition connectives:  "
-        self.ind_sentences['opposition_connectives_incidence'] = "Opposition connectives (incidence per 1000 words):  "
-        self.ind_sentences['order_connectives'] = "Order connectives: "
-        self.ind_sentences['order_connectives_incidence'] = "Order connectives (incidence per 1000 words): "
-        self.ind_sentences['reference_connectives'] = "Reference connectives:  "
-        self.ind_sentences['reference_connectives_incidence'] = "Reference connectives (incidence per 1000 words): "
-        self.ind_sentences['summary_connectives'] = "Summary connectives: "
-        self.ind_sentences['summary_connectives_incidence'] = "Summary connectives (incidence per 1000 words): "
         self.ind_sentences['similarity_adjacent_mean'] = "Semantic Similarity between adjacent sentences (mean): "
         self.ind_sentences[
             'similarity_pairs_par_mean'] = "Semantic Similarity between all possible pairs of sentences in a " \
