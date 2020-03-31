@@ -835,10 +835,11 @@ class Document:
                                 wordfreq_list.append(int(wordfrequency))
                                 num_words_in_sentences += 1
                                 if w.is_lexic_word(s):
-                                    if int(wordfrequency) <= wordfrequency_num:
+                                    if wordfrequency <= wordfrequency_num:
                                         i['num_rare_words'] += 1
                                         if w.is_noun():
                                             i['num_rare_nouns'] += 1
+                                            #print(w.text+":"+str(wordfrequency)+"<="+str(wordfrequency_num))
                                         elif w.is_adjective():
                                             i['num_rare_adj'] += 1
                                         elif w.is_adverb():
@@ -1159,7 +1160,6 @@ class Document:
         i['sentences_length_no_stopwords_std'] = round(
             float(np.std(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_std'] = round(float(np.std(self.aux_lists['words_length_no_stopwords_list'])), 4)
-        i['num_past_irregular_incidence'] = self.get_incidence(i['num_past_irregular'], 4)
     @staticmethod
     def get_incidence(indicador, num_words):
         return round(((1000 * indicador) / num_words), 4)
@@ -1188,6 +1188,7 @@ class Document:
         i['num_adj_incidence'] = self.get_incidence(i['num_adj'], n)
         i['num_adv_incidence'] = self.get_incidence(i['num_adv'], n)
         i['num_pass_incidence'] = self.get_incidence(i['num_pass'], n)
+        i['num_past_irregular_incidence'] = self.get_incidence(i['num_past_irregular'], n)
         i['agentless_passive_density_incidence'] = self.get_incidence(i['num_agentless'], n)
         i['num_lexic_words_incidence'] = self.get_incidence(i['num_lexic_words'], n)
         i['all_connectives_incidence'] = self.get_incidence(i['all_connectives'], n)
@@ -1734,7 +1735,6 @@ class Oxford():
     c1 = defaultdict(dict)
 
     def load(self):
-
         f = open('data/en/Vocabularylevel/OxfordWordListByLevel.txt', 'r', encoding='utf-8')
         lineas = f.readlines()
         aux = Oxford.a1
@@ -1766,7 +1766,6 @@ class Connectives():
     conditional = []
     def __init__(self, language):
         Connectives.lang = language
-
     def load(self):
         if Connectives.lang == "spanish":
             f = open('data/es/Connectives/connectives.txt', 'r', encoding='utf-8')
@@ -1926,7 +1925,7 @@ class Printer:
         # Lemma Content TTR (Content Type-Token Ratio)
         self.ind_sentences['lemma_content_ttr'] = "LCTTR (Lemma Content Type-Token Ratio): "
         # LNTTR (Lemma Noun Type-Token Ratio)
-        self.ind_sentences['lemma_nttr'] = "LNTTR (Lemma Noun Type-Token Ratio) "
+        self.ind_sentences['lemma_nttr'] = "LNTTR (Lemma Noun Type-Token Ratio): "
         # LVTTR (Lemma Verb Type-Token Ratio)
         self.ind_sentences['lemma_vttr'] = "LVTTR (Lemma Verb Type-Token Ratio): "
         # Lemma AdjTTR (Lemma Adj Type-Token Ratio)
@@ -2248,7 +2247,7 @@ class Printer:
             estfile.write("\n%s" % 'Lexical Richness/Lexical Density')
         elif key == 'flesch':
             estfile.write("\n%s" % 'Readability/Text Dimension/Grade Level')
-        elif key == 'num_past' or key == 'num_past':
+        elif key == 'num_past':
             estfile.write("\n%s" % 'Morphological features')
         elif key == 'min_wf_per_sentence':
             estfile.write("\n%s" % 'Word Frequency')

@@ -45,13 +45,38 @@ java -cp $CP -Xmx1024m weka.core.converters.CSVLoader $dirtest/results_cohmetrix
 #java -cp $CP -Xmx1024m weka.core.converters.CSVLoader $dirtrain/train_aztertestint.csv > $dirtrain/train_aztertestint.arff
 #java -cp $CP -Xmx1024m weka.core.converters.CSVLoader $dirtest/test_aztertest.csv > $dirtest/test_aztertest.arff
 }
-function pruebaobtenerdatosmultiaztertest()
+function pruebaobtenerdatosazterteststanford()
+{
+cd /media/datos/Dropbox/ikerkuntza/metrix-env
+source bin/activate
+cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/azterteststanford/text-evaluator-master
+python3 main.py -a -f  Loterry-adv.txt 
+#Emaitza: /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/azterteststanford/text-evaluator-master/results/Loterry-adv.txt.out.ods 
+}
+
+function pruebaobtenerdatosaztertestcube()
+{
+cd /media/datos/Dropbox/ikerkuntza/metrix-env
+source bin/activate
+cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
+python3 multiaztertest.py -c -r -f  Loterry-adv.txt -l english -m cube -d /home/kepa
+}
+function pruebaobtenerdatosmultiazterteststanford()
 {
 cd /media/datos/Dropbox/ikerkuntza/metrix-env
 source bin/activate
 cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
 python3 multiaztertest.py -c -r -f  Loterry-adv.txt -l english -m stanford -d /home/kepa
 }
+
+function pruebaobtenerdatosmultiaztertestcube()
+{
+cd /media/datos/Dropbox/ikerkuntza/metrix-env
+source bin/activate
+cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
+python3 multiaztertest.py -c -r -f  Loterry-adv.txt -l english -m cube -d /home/kepa
+}
+
 function obtenerdatos3niveles()
 {
 dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/en" #/[Test|Train]/[Adv-Txt|Ele-Txt|Int-Txt]/*.txt "
@@ -279,22 +304,28 @@ do
 	#Muestra el menu
        	echo -e "1 Obtener datos cohmetrix \n"
         echo -e "2 Obtener datos 3 niveles \n"
-	echo -e "3 prueba obtener datos multiaztertest \n"
-        echo -e "4 Obtener datos multiaztertest \n"
-	echo -e "5 wekarekinprobatu \n"
-	echo -e "6 Python: Realizar 10-Fold CV con feature selection y busqueda del mejor algoritmo y sus meta-parametros, finalmente guardar el mejor modelo y el mejor selector de características \n"
-	echo -e "7 Python cargar el mejor modelo y selector de características, para probar con el test final\n"
+        echo -e "3 prueba obtener datos aztertest stanford\n"
+	echo -e "4 prueba obtener datos multiaztertest stanford\n"
+        echo -e "5 prueba obtener datos aztertest cube\n"
+        echo -e "6 prueba obtener datos multiaztertest cube\n"
+        echo -e "7 Obtener datos multiaztertest \n"
+	echo -e "8 wekarekinprobatu \n"
+	echo -e "8 Python: Realizar 10-Fold CV con feature selection y busqueda del mejor algoritmo y sus meta-parametros, finalmente guardar el mejor modelo y el mejor selector de características \n"
+	echo -e "8 Python cargar el mejor modelo y selector de características, para probar con el test final\n"
         echo -e "8 Obtener datos multiaztertest y mostrar predicción del modelo \n"
         echo -e "10 Exit \n"
 	read -p "Elige una opcion:" opcionmenuppal
 	case $opcionmenuppal in
                        	1) obtenerdatoscohmetrix;;
 			2) obtenerdatos3niveles;;
-			3) pruebaobtenerdatosmultiaztertest;;
-			4) obtenerdatosmultiaztertest $modelo;;
-			5) wekarekinprobatu;;
-			6) generarmodelopython;;
-			7) testearmodelopython;;
+			3) pruebaobtenerdatosazterteststanford;;
+			4) pruebaobtenerdatosmultiazterteststanford;;
+			5) pruebaobtenerdatosaztertestcube;;
+			6) pruebaobtenerdatosmultiaztertestcube;;
+			7) obtenerdatosmultiaztertest $modelo;;
+			8) wekarekinprobatu;;
+			8) generarmodelopython;;
+			8) testearmodelopython;;
 			8) weka;;
                         9) obtenerdatosestadisticos;;
 			10) fin;;
