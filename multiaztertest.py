@@ -310,6 +310,8 @@ class Document:
     def tree_depth(self, tree, root):
         if not tree[root]:
             return 1
+        else:
+            return 1 + max(self.tree_depth(tree, int(x)) for x in tree[root])
 
     def mtld(self, filtered_words):
         ttr_threshold = 0.72
@@ -816,6 +818,7 @@ class Document:
                         if w.governor == 0:
                             root = w.index
                         dependency_tree[w.governor].append(w.index)
+                        i['num_words_with_punct'] += 1
                         # word frequency
                         if (not len(w.text) == 1 or w.text.isalpha()) and not w.is_num():
                             if self.language == "spanish" or self.language == "english":
@@ -921,7 +924,6 @@ class Document:
                                 # Numero de sentencias subordinadas relativas
                                 if w.is_subordinate_relative():
                                     i['num_rel_subord'] += 1
-                            i['num_words_with_punct'] += 1
                             if w.is_proposition():
                                 i['prop'] += 1
                             if self.language != "basque":
@@ -970,29 +972,28 @@ class Document:
                     min_wordfreq_list.append(min(wordfreq_list))
                 else:
                     min_wordfreq_list.append(0)
+
                 i['num_total_prop'] = i['num_total_prop'] + i['prop']
                 self.aux_lists['prop_per_sentence'].append(i['prop'])
                 self.aux_lists['punct_per_sentence'].append(i['num_words_with_punct'])
                 self.aux_lists['sentences_length_mean'].append(sum_s)
                 self.aux_lists['sentences_length_no_stopwords_list'].append(num_words_in_sentence_without_stopwords)
-                depth_list.append(self.tree_depth(dependency_tree, root))
+                depth_list.append(self.tree_depth(dependency_tree, int(root)))
             self.aux_lists['sentences_in_paragraph_token_list'].append(sentencesPerParag)
         try:
             i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
         except ZeroDivisionError:
             i['num_decendents_noun_phrase'] = 0
         try:
-            i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
+            i['num_modifiers_noun_phrase'] = round(float(np.mean(modifiers_per_np)), 4)
         except ZeroDivisionError:
-            i['num_decendents_noun_phrase'] = 0
+            i['num_modifiers_noun_phrase'] = 0
         #Obtengo las sílabas del texto segun el idioma
         self.aux_lists['syllables_list']=self.get_syllable_list(text_without_punctuation)
         i['num_different_forms'] = len(self.aux_lists['different_forms'])
         self.indicators['left_embeddedness'] = round(float(np.mean(self.aux_lists['left_embeddedness'])), 4)
         self.calculate_honore()
         self.calculate_maas()
-        i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
-        i['num_modifiers_noun_phrase'] = round(float(np.mean(modifiers_per_np)), 4)
         self.calculate_phrases(num_vp_list, num_np_list)
         self.calculate_mean_depth_per_sentence(depth_list)
         self.calculate_mtld()
