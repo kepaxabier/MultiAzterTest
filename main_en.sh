@@ -58,8 +58,8 @@ function pruebaobtenerdatosaztertestcube()
 {
 cd /media/datos/Dropbox/ikerkuntza/metrix-env
 source bin/activate
-cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
-python3 multiaztertest.py -c -r -f  Loterry-adv.txt -l english -m cube -d /home/kepa
+cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/aztertestnlpcube/text-evaluator-master
+python3 main.py -a -f  Loterry-adv.txt
 }
 function pruebaobtenerdatosmultiazterteststanford()
 {
