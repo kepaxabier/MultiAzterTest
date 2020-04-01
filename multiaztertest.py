@@ -976,6 +976,7 @@ class Document:
                     min_wordfreq_list.append(min(wordfreq_list))
                 else:
                     min_wordfreq_list.append(0)
+
                 i['num_total_prop'] = i['num_total_prop'] + i['prop']
                 self.aux_lists['prop_per_sentence'].append(i['prop'])
                 self.aux_lists['punct_per_sentence'].append(i['num_punct_in_sentence'])
