@@ -2167,23 +2167,23 @@ class Printer:
                                    'num_b1_words', 'num_b1_words_incidence', 'num_b2_words', 'num_b2_words_incidence',
                                    'num_c1_words', 'num_c1_words_incidence', 'num_content_words_not_a1_c1_words'
                                    ]
-
+        # ignore counters: only incidence, ratios, mean and std
         self.ignore_list_counters = ['prop', 'num_complex_words', 'num_words_more_3_syl', 'num_words',
                                      'num_different_forms',
                                      'num_words_with_punct', 'num_paragraphs', 'num_sentences', 'num_past', 'num_pres',
                                      'num_future',
-                                     'num_indic', 'num_impera', 'num_past_irregular', 'num_past_irregular_incidence',
+                                     'num_indic', 'num_impera', 'num_past_irregular',
                                      'num_personal_pronouns', 'num_first_pers_pron', 'num_first_pers_sing_pron',
                                      'num_third_pers_pron', 'num_rare_nouns', 'num_rare_adj', 'num_rare_verbs',
-                                     'num_rare_advb', 'num_rare_words', 'num_rare_words_incidence',
-                                     'num_dif_rare_words',
-                                     'num_dif_rare_words_incidence', 'num_a1_words', 'num_a2_words', 'num_b1_words',
+                                     'num_rare_advb', 'num_rare_words',
+                                     'num_dif_rare_words', 'num_a1_words', 'num_a2_words', 'num_b1_words',
                                      'num_b2_words',
                                      'num_c1_words', 'num_content_words_not_a1_c1_words', 'num_lexic_words', 'num_noun',
-                                     'num_adj',
+                                     'num_proper_noun', 'num_adj',
                                      'num_adv', 'num_verb', 'num_subord', 'num_rel_subord', 'num_total_prop',
-                                     'noun_phrase_density_incidence', 'verb_phrase_density_incidence', 'num_pass',
-                                     'num_pass_incidence', 'num_agentless', 'num_neg', 'num_ger', 'num_inf']
+                                     'num_pass', 'num_agentless', 'num_neg', 'num_ger', 'num_inf',
+                                     'all_connectives', 'causal_connectives', 'logical_connectives',
+                                     'adversative_connectives', 'temporal_connectives', 'conditional_connectives']
 
         self.similarity_list = ["similarity_adjacent_mean", "similarity_pairs_par_mean", "similarity_adjacent_par_mean",
                                 "similarity_adjacent_std", "similarity_pairs_par_std", "similarity_adjacent_par_std"]
