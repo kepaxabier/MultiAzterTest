@@ -32,7 +32,8 @@ import pickle
 from sklearn.externals import joblib
 from gensim.models import FastText, KeyedVectors
 
-#logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
+
+# logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 
 class ModelAdapter:
@@ -126,7 +127,7 @@ class Document:
         # Indicadores
         self.indicators = defaultdict(float)
         self.aux_lists = defaultdict(list)
-        #Constantes
+        # Constantes
         self.WORD_FREQ_EN = 4
         self.WORD_FREQ_ES = 4
         self.WORD_FREQ_EU = 34
@@ -197,7 +198,6 @@ class Document:
     #                 num_sentences += 1
     #         return num_sentences
 
-
     def calculate_simple_ttr(self, p_diff_forms=None, p_num_words=None):
         if (p_diff_forms and p_num_words) is not None:
             return (len(p_diff_forms)) / p_num_words
@@ -213,7 +213,7 @@ class Document:
         if self.indicators['num_proper_noun'] > 0:
             self.indicators['ratio_proper_nouns_per_nouns'] = round(
                 self.indicators['num_proper_noun'] / (self.indicators['num_noun'] +
-                self.indicators['num_proper_noun']), 4)
+                                                      self.indicators['num_proper_noun']), 4)
 
     def calculate_vttr(self):
         if self.indicators['num_verb'] > 0:
@@ -237,7 +237,6 @@ class Document:
     def calculate_all_ttr(self):
         self.calculate_simple_ttr()
         self.calculate_nttr()
-        self.calculate_pnttr()
         self.calculate_vttr()
         self.calculate_adj_ttr()
         self.calculate_adv_ttr()
@@ -250,11 +249,6 @@ class Document:
         if self.indicators['num_noun'] > 0:
             self.indicators['lemma_nttr'] = round(
                 len(self.aux_lists['different_lemma_nouns']) / self.indicators['num_noun'], 4)
-
-    def calculate_pnttr(self):
-        if self.indicators['num_proper_noun'] > 0:
-            self.indicators['pnttr'] = round(self.indicators['num_proper_noun'] / (self.indicators['num_noun'] +
-                                             self.indicators['num_proper_noun']), 4)
 
     def calculate_lemma_vttr(self):
         if self.indicators['num_verb'] > 0:
@@ -839,10 +833,10 @@ class Document:
                                 else:
                                     wordfrequency = None
                             if wordfrequency is not None:
-                                wordfreq_list.append(int(wordfrequency))
+                                wordfreq_list.append(float(wordfrequency))
                                 num_words_in_sentences += 1
                                 if w.is_lexic_word(s):
-                                    if wordfrequency <= wordfrequency_num:
+                                    if float(wordfrequency) <= wordfrequency_num:
                                         i['num_rare_words'] += 1
                                         if w.is_noun():
                                             i['num_rare_nouns'] += 1
@@ -855,7 +849,7 @@ class Document:
                                             i['num_rare_verbs'] += 1
                                     if w.text.lower() not in self.aux_lists['different_lexic_words']:
                                         self.aux_lists['different_lexic_words'].append(w.text.lower())
-                                        if int(wordfrequency) <= wordfrequency_num:
+                                        if float(wordfrequency) <= wordfrequency_num:
                                             i['num_dif_rare_words'] += 1
                             # words not in stopwords
                             if not w.is_stopword():
@@ -1113,7 +1107,7 @@ class Document:
             # Creamos un fichero con las palabras divididas en silabas por puntos
             with open(silaba_name, "w", encoding="utf-8") as f:
                 command = "echo " + texto + " | flookup -ib data/eu/syllablesplitter/silabaEus.fst"
-                #print(command)
+                # print(command)
                 subprocess.run(command, shell=True, stdout=f)
             with open(silaba_name, mode="r", encoding="utf-8") as f:
                 contenido = f.readlines()
@@ -1165,6 +1159,7 @@ class Document:
         i['sentences_length_no_stopwords_std'] = round(
             float(np.std(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_std'] = round(float(np.std(self.aux_lists['words_length_no_stopwords_list'])), 4)
+
     @staticmethod
     def get_incidence(indicador, num_words):
         return round(((1000 * indicador) / num_words), 4)
@@ -1917,8 +1912,6 @@ class Printer:
         self.ind_sentences['content_ttr'] = "CTTR (Content Type-Token Ratio): "
         # NTTR (Noun Type-Token Ratio)
         self.ind_sentences['nttr'] = "NTTR (Noun Type-Token Ratio): "
-        # PNTTR Proper Noun Type-Token Ratio
-        self.ind_sentences['pnttr'] = "PNTTR (Proper Noun Type-Token Ratio): "
         # VTTR (Verb Type-Token Ratio)(incidence per 1000 words)
         self.ind_sentences['vttr'] = "VTTR (Verb Type-Token Ratio): "
         # AdjTTR (Adj Type-Token Ratio)
