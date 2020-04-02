@@ -2150,8 +2150,7 @@ class Printer:
                                     'num_agentless', 'agentless_passive_density_incidence'
                                    ]
 
-        self.ignore_list_counters = ['prop', 'num_complex_words', 'num_words_more_3_syl',
-                                     # descriptive or shallow measures
+        self.ignore_list_counters = [# descriptive or shallow measures
                                      'num_words', 'num_different_forms', 'num_words_with_punct',
                                      'num_paragraphs', 'num_sentences',
                                      # morphological features
