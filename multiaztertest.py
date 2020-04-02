@@ -211,9 +211,7 @@ class Document:
 
     def calculate_ratio_proper_nouns_per_nouns(self):
         if self.indicators['num_proper_noun'] > 0:
-            self.indicators['ratio_proper_nouns_per_nouns'] = round(
-                self.indicators['num_proper_noun'] / (self.indicators['num_noun'] +
-                self.indicators['num_proper_noun']), 4)
+            self.indicators['ratio_proper_nouns_per_nouns'] = round(self.indicators['num_proper_noun'] / (self.indicators['num_noun'] + self.indicators['num_proper_noun']), 4)
 
     def calculate_vttr(self):
         if self.indicators['num_verb'] > 0:
@@ -237,7 +235,6 @@ class Document:
     def calculate_all_ttr(self):
         self.calculate_simple_ttr()
         self.calculate_nttr()
-        self.calculate_pnttr()
         self.calculate_vttr()
         self.calculate_adj_ttr()
         self.calculate_adv_ttr()
@@ -250,11 +247,6 @@ class Document:
         if self.indicators['num_noun'] > 0:
             self.indicators['lemma_nttr'] = round(
                 len(self.aux_lists['different_lemma_nouns']) / self.indicators['num_noun'], 4)
-
-    def calculate_pnttr(self):
-        if self.indicators['num_proper_noun'] > 0:
-            self.indicators['pnttr'] = round(self.indicators['num_proper_noun'] / (self.indicators['num_noun'] +
-                                             self.indicators['num_proper_noun']), 4)
 
     def calculate_lemma_vttr(self):
         if self.indicators['num_verb'] > 0:
@@ -454,23 +446,21 @@ class Document:
     def calculate_argument_overlap_adjacent(self):
         i = self.indicators
         adjacent_argument_overlap_list = []
-        for paragraph in self.paragraph_list:
-            if len(paragraph.sentence_list) > 1:
-                adjacents = list(map(list, zip(paragraph.sentence_list, paragraph.sentence_list[1:])))
-                for x in adjacents:
-                    sentence1 = []
-                    sentence2 = []
-                    for entry1 in x[0].word_list:
-                        if entry1.is_personal_pronoun or entry1.is_noun():
-                            sentence1.append(entry1.text.lower())
-                    for entry2 in x[1].word_list:
-                        if entry2.is_personal_pronoun or entry2.is_noun():
-                            sentence2.append(entry1.text.lower())
-                    in_common = list(set(sentence1).intersection(sentence2))
-                    if len(in_common) > 0:
-                        adjacent_argument_overlap_list.append(1)
-                    else:
-                        adjacent_argument_overlap_list.append(0)
+        sentences = self.aux_lists['sentences_in_text_token_list']
+        for x, y in zip(range(0, len(sentences) - 1), range(1, len(sentences))):
+            sentence1 = []
+            sentence2 = []
+            for entry1 in sentences[x].word_list:
+                if entry1.is_personal_pronoun() or entry1.is_noun():
+                    sentence1.append(entry1.text.lower())
+            for entry2 in sentences[y].word_list:
+                if entry2.is_personal_pronoun() or entry2.is_noun():
+                    sentence2.append(entry2.text.lower())
+            in_common = list(set(sentence1).intersection(sentence2))
+            if len(in_common) > 0:
+                adjacent_argument_overlap_list.append(1)
+            else:
+                adjacent_argument_overlap_list.append(0)
         if len(adjacent_argument_overlap_list) > 0:
             i['argument_overlap_adjacent'] = round(float(np.mean(adjacent_argument_overlap_list)), 4)
 
@@ -479,19 +469,19 @@ class Document:
     def calculate_argument_overlap_all(self):
         i = self.indicators
         all_argument_overlap_list = []
-        for paragraph in self.paragraph_list:
-            for index in range(len(paragraph.sentence_list)):
-                similarity_tmp = paragraph.sentence_list[index + 1:]
-                x = paragraph.sentence_list[index]
-                for index2 in range(len(similarity_tmp)):
-                    y = similarity_tmp[index2]
+        sentences = self.aux_lists['sentences_in_text_token_list']
+        for y in range(len(sentences) - 1):
+            s1 = sentences[y]
+            for x in range(1, len(sentences)):
+                if y <= x and y != x:
+                    s2 = sentences[x]
                     sentence1 = []
                     sentence2 = []
-                    for entry1 in x.word_list:
-                        if entry1.is_personal_pronoun or entry1.is_noun():
+                    for entry1 in s1.word_list:
+                        if entry1.is_personal_pronoun() or entry1.is_noun():
                             sentence1.append(entry1.text.lower())
-                    for entry2 in y.word_list:
-                        if entry2.is_personal_pronoun or entry2.is_noun():
+                    for entry2 in s2.word_list:
+                        if entry2.is_personal_pronoun() or entry2.is_noun():
                             sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
                     if len(in_common) > 0:
@@ -703,7 +693,7 @@ class Document:
     def calculate_readability(self):
         if self.language == "english":
             #self.calculate_dale_chall()
-            self.flesch_kincaid()
+            #self.flesch_kincaid()
             self.calculate_smog()
             self.flesch()
         if self.language == "spanish":
@@ -839,10 +829,10 @@ class Document:
                                 else:
                                     wordfrequency = None
                             if wordfrequency is not None:
-                                wordfreq_list.append(int(wordfrequency))
+                                wordfreq_list.append(float(wordfrequency))
                                 num_words_in_sentences += 1
                                 if w.is_lexic_word(s):
-                                    if wordfrequency <= wordfrequency_num:
+                                    if float(wordfrequency) <= wordfrequency_num:
                                         i['num_rare_words'] += 1
                                         if w.is_noun():
                                             i['num_rare_nouns'] += 1
@@ -855,7 +845,7 @@ class Document:
                                             i['num_rare_verbs'] += 1
                                     if w.text.lower() not in self.aux_lists['different_lexic_words']:
                                         self.aux_lists['different_lexic_words'].append(w.text.lower())
-                                        if int(wordfrequency) <= wordfrequency_num:
+                                        if float(wordfrequency) <= wordfrequency_num:
                                             i['num_dif_rare_words'] += 1
                             # words not in stopwords
                             if not w.is_stopword():
@@ -1917,8 +1907,6 @@ class Printer:
         self.ind_sentences['content_ttr'] = "CTTR (Content Type-Token Ratio): "
         # NTTR (Noun Type-Token Ratio)
         self.ind_sentences['nttr'] = "NTTR (Noun Type-Token Ratio): "
-        # PNTTR Proper Noun Type-Token Ratio
-        self.ind_sentences['pnttr'] = "PNTTR (Proper Noun Type-Token Ratio): "
         # VTTR (Verb Type-Token Ratio)(incidence per 1000 words)
         self.ind_sentences['vttr'] = "VTTR (Verb Type-Token Ratio): "
         # AdjTTR (Adj Type-Token Ratio)
@@ -1946,8 +1934,8 @@ class Printer:
         # Flesch readability ease=206.835-1.015(n.º de words/nº de frases)-84.6(n.º de silabas/numero de words)
         self.ind_sentences['flesch'] = "Flesch readability ease: "
         # Flesch-Kincaid grade level =0.39 * (n.º de words/nº de frases) + 11.8 * (n.º de silabas/numero de words) – 15.59)
-        self.ind_sentences['flesch_kincaid'] = "Flesch-Kincaid Grade level: "
-        self.ind_sentences['dale_chall'] = "Dale-Chall readability formula: "
+        #self.ind_sentences['flesch_kincaid'] = "Flesch-Kincaid Grade level: "
+        #self.ind_sentences['dale_chall'] = "Dale-Chall readability formula: "
         self.ind_sentences['smog'] = "Simple Measure Of Gobbledygook (SMOG) grade: "
         self.ind_sentences['num_a1_words'] = "Number of A1 vocabulary in the text: "
         self.ind_sentences['num_a1_words_incidence'] = "Incidence score of A1 vocabulary  (per 1000 words): "
@@ -2127,70 +2115,70 @@ class Printer:
 
     def load_ignore_list(self):
         # ignore language specific features
-        self.ignore_list_eu_ind = ['flesch_kincaid', 'dale_chall', 'smog', 'num_past', 'num_past_incidence', 'num_pres',
-                                   'num_pres_incidence', 'num_future', 'num_future_incidence', 'num_past_irregular',
-                                   'num_past_irregular_incidence', 'num_past_irregular_mean', 'num_first_pers_pron',
-                                   'num_first_pers_pron_incidence', 'num_first_pers_sing_pron',
-                                   'num_first_pers_sing_pron_incidence'
-                                   'num_third_pers_pron', 'num_third_pers_pron_incidence', 'num_rel_subord',
-                                   'num_rel_subord_incidence',
-                                   'num_pass', 'num_pass_incidence', 'num_pass_mean', 'num_agentless',
-                                   'agentless_passive_density_incidence',
-                                   'num_ger', 'gerund_density_incidence', 'addition_connectives',
-                                   'addition_connectives_incidence', 'consequence_connectives',
-                                   'consequence_connectives_incidence', 'purpose_connectives',
-                                   'purpose_connectives_incidence', 'illustration_connectives',
-                                   'illustration_connectives_incidence', 'opposition_connectives',
-                                   'opposition_connectives_incidence', 'order_connectives',
-                                   'order_connectives_incidence', 'reference_connectives',
-                                   'reference_connectives_incidence',
-                                   'summary_connectives',
-                                   'summary_connectives_incidence', 'num_content_words_not_a1_c1_words_incidence',
-                                   # Se quitan hasta que esten validados
-                                   'num_a1_words', 'num_a1_words_incidence', 'num_a2_words', 'num_a2_words_incidence',
-                                   'num_b1_words', 'num_b1_words_incidence', 'num_b2_words', 'num_b2_words_incidence',
-                                   'num_c1_words', 'num_c1_words_incidence', 'num_content_words_not_a1_c1_words'
+        self.ignore_list_eu_ind = [ #Readability
+                                    'smog','flesch',
+                                    #Morphological features
+                                    'num_past', 'num_past_incidence', 'num_pres', 'num_pres_incidence',
+                                    'num_future', 'num_future_incidence',
+                                    'num_past_irregular', 'num_past_irregular_incidence', 'num_past_irregular_mean',
+                                    'num_first_pers_pron', 'num_first_pers_pron_incidence', 'num_first_pers_sing_pron',
+                                    'num_first_pers_sing_pron_incidence', 'num_third_pers_pron',
+                                    'num_third_pers_pron_incidence',
+                                    #vocabulary
+                                    'num_a1_words', 'num_a1_words_incidence', 'num_a2_words', 'num_a2_words_incidence',
+                                    'num_b1_words', 'num_b1_words_incidence', 'num_b2_words', 'num_b2_words_incidence',
+                                    'num_c1_words', 'num_c1_words_incidence', 'num_content_words_not_a1_c1_words',
+                                    'num_content_words_not_a1_c1_words_incidence',
+                                    #Syntax
+                                    'num_rel_subord', 'num_rel_subord_incidence',
+                                    'num_pass', 'num_pass_incidence', 'num_pass_mean', 'num_agentless',
+                                    'agentless_passive_density_incidence',
+                                    'num_ger', 'gerund_density_incidence']
+
+        self.ignore_list_en_ind = []
+
+        self.ignore_list_es_ind = [ #Readability
+                                    'smog',
+                                    # vocabulary
+                                    'num_a1_words', 'num_a1_words_incidence', 'num_a2_words', 'num_a2_words_incidence',
+                                    'num_b1_words', 'num_b1_words_incidence', 'num_b2_words', 'num_b2_words_incidence',
+                                    'num_c1_words', 'num_c1_words_incidence', 'num_content_words_not_a1_c1_words',
+                                    'num_content_words_not_a1_c1_words_incidence',
+                                    #Syntax
+                                    'num_rel_subord', 'num_rel_subord_incidence',
+                                    'num_pass', 'num_pass_incidence', 'num_pass_mean',
+                                    'num_agentless', 'agentless_passive_density_incidence'
                                    ]
 
-        self.ignore_list_en_ind = ['addition_connectives',
-                                   'addition_connectives_incidence', 'consequence_connectives',
-                                   'consequence_connectives_incidence',
-                                   'purpose_connectives', 'purpose_connectives_incidence', 'illustration_connectives',
-                                   'illustration_connectives_incidence',
-                                   'opposition_connectives', 'opposition_connectives_incidence', 'order_connectives',
-                                   'order_connectives_incidence', 'reference_connectives',
-                                   'reference_connectives_incidence', 'summary_connectives',
-                                   'summary_connectives_incidence']
-
-        self.ignore_list_es_ind = ['smog', 'num_rel_subord', 'num_rel_subord_incidence', 'num_pass',
-                                   'num_pass_incidence',
-                                   'num_pass_mean', 'num_agentless', 'agentless_passive_density_incidence',
-                                   'logical_connectives',
-                                   'logical_connectives_incidence',
-                                   'adversative_connectives', 'adversative_connectives_incidence'
-                                   # Se quitan hasta que esten validados
-                                                              'num_a1_words', 'num_a1_words_incidence', 'num_a2_words',
-                                   'num_a2_words_incidence',
-                                   'num_b1_words', 'num_b1_words_incidence', 'num_b2_words', 'num_b2_words_incidence',
-                                   'num_c1_words', 'num_c1_words_incidence', 'num_content_words_not_a1_c1_words'
-                                   ]
-
-        self.ignore_list_counters = ['prop', 'num_complex_words', 'num_words_more_3_syl', 'num_words',
-                                     'num_different_forms',
-                                     'num_words_with_punct', 'num_paragraphs', 'num_sentences', 'num_past', 'num_pres',
-                                     'num_future',
-                                     'num_indic', 'num_impera', 'num_past_irregular', 'num_past_irregular_incidence',
+        self.ignore_list_counters = ['prop', 'num_complex_words', 'num_words_more_3_syl',
+                                     # descriptive or shallow measures
+                                     'num_words', 'num_different_forms', 'num_words_with_punct',
+                                     'num_paragraphs', 'num_sentences',
+                                     # morphological features
+                                     'num_past', 'num_pres', 'num_future',
+                                     'num_indic', 'num_impera',
+                                     'num_past_irregular',
                                      'num_personal_pronouns', 'num_first_pers_pron', 'num_first_pers_sing_pron',
-                                     'num_third_pers_pron', 'num_rare_nouns', 'num_rare_adj', 'num_rare_verbs',
-                                     'num_rare_advb', 'num_rare_words', 'num_rare_words_incidence',
-                                     'num_dif_rare_words',
-                                     'num_dif_rare_words_incidence', 'num_a1_words', 'num_a2_words', 'num_b1_words',
-                                     'num_b2_words',
-                                     'num_c1_words', 'num_content_words_not_a1_c1_words', 'num_lexic_words', 'num_noun',
-                                     'num_adj',
-                                     'num_adv', 'num_verb', 'num_subord', 'num_rel_subord', 'num_total_prop',
-                                     'noun_phrase_density_incidence', 'verb_phrase_density_incidence', 'num_pass',
-                                     'num_pass_incidence', 'num_agentless', 'num_neg', 'num_ger', 'num_inf']
+                                     'num_third_pers_pron',
+                                     # wordfrequency
+                                     'num_rare_nouns', 'num_rare_adj', 'num_rare_verbs',
+                                     'num_rare_advb', 'num_rare_words', 'num_dif_rare_words',
+                                     # vocabulary level
+                                     'num_a1_words', 'num_a2_words', 'num_b1_words',
+                                     'num_b2_words', 'num_c1_words', 'num_content_words_not_a1_c1_words',
+                                     # Word information
+                                     'num_lexic_words', 'num_noun',
+                                     'num_proper_noun', 'num_adj',
+                                     'num_adv', 'num_verb',
+                                     # Syntactic Complexity
+                                     'num_subord', 'num_rel_subord', 'num_total_prop',
+                                     'num_pass', 'num_agentless', 'num_neg', 'num_ger', 'num_inf',
+                                     # Semantics none
+                                     # Referential cohesion: None
+                                     # Similarity: None
+                                     # Discourse.Connectives
+                                     'all_connectives', 'causal_connectives', 'logical_connectives',
+                                     'adversative_connectives', 'temporal_connectives', 'conditional_connectives']
 
         self.similarity_list = ["similarity_adjacent_mean", "similarity_pairs_par_mean", "similarity_adjacent_par_mean",
                                 "similarity_adjacent_std", "similarity_pairs_par_std", "similarity_adjacent_par_std"]
