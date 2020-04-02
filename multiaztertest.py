@@ -813,6 +813,10 @@ class Document:
                             root = w.index
                         dependency_tree[w.governor].append(w.index)
                         i['num_words_with_punct'] += 1
+                        if (int(w.index) == 1):
+                            i['prop'] = 1
+                        if w.is_proposition():
+                            i['prop'] += 1
                         # word frequency
                         if (not len(w.text) == 1 or w.text.isalpha()) and not w.is_num():
                             if self.language == "spanish" or self.language == "english":
@@ -918,8 +922,6 @@ class Document:
                                 # Numero de sentencias subordinadas relativas
                                 if w.is_subordinate_relative():
                                     i['num_rel_subord'] += 1
-                            if w.is_proposition():
-                                i['prop'] += 1
                             if self.language != "basque":
                                 if w.has_more_than_three_syllables(self.language):
                                     i['num_words_more_3_syl'] += 1
@@ -1598,9 +1600,10 @@ class Word:
         if self.upos == 'NOUN' or self.upos == 'PRON' or self.upos == 'PROPN':
             if self.dependency_relation in ['fixed', 'flat', 'compound']:
                 if self.governor not in list_np_indexes:
-                    list_np_indexes.append(self.governor)
+                    ind = int(self.index)
+                    list_np_indexes.append(ind)
             else:
-                if self.index not in list_np_indexes:
+                if int(self.index) not in list_np_indexes:
                     ind = int(self.index)
                     list_np_indexes.append(ind)
         return list_np_indexes
