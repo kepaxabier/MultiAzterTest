@@ -790,11 +790,11 @@ class Document:
                     i['num_sentences'] += 1
                     dependency_tree = defaultdict(list)
                     np_indexes = s.count_np_in_sentence()
+                    modifiers_per_np += s.count_modifiers(np_indexes)
                     num_np_list.append(len(np_indexes))
                     vp_indexes = s.count_vp_in_sentence()
                     num_vp_list.append(vp_indexes)
                     decendents_total += s.count_decendents(np_indexes)
-                    modifiers_per_np += s.count_modifiers(np_indexes)
                     self.aux_lists['left_embeddedness'].append(s.calculate_left_embeddedness())
                     i['prop'] = 0
                     i['num_punct_in_sentence'] = 0
@@ -1312,8 +1312,8 @@ class Sentence:
         else:
             new_list_indexes = []
             for entry in self.word_list:
-                if entry.governor in list_np_indexes and entry.has_modifier():
-                    new_list_indexes.append(entry.index)
+                if int(entry.governor) in list_np_indexes and entry.has_modifier():
+                    new_list_indexes.append(int(entry.index))
                     num_modifiers += 1
             return num_modifiers + self.count_decendents(new_list_indexes)
 
@@ -1443,9 +1443,7 @@ class Word:
 
     def has_modifier(self):
         # nominal head may be associated with different types of modifiers and function words
-        return True if self.dependency_relation in ['nmod', 'nmod:poss', 'appos', 'amod', 'nummod', 'acl', 'acl:relcl',
-                                                    'det', 'clf',
-                                                    'case'] else False
+        return True if self.dependency_relation in ['nmod', 'nmod:poss', 'appos', 'amod', 'nummod', 'acl', 'acl:relcl', 'det', 'clf', 'case'] else False
 
     def is_personal_pronoun(self):
         atributos = self.feats.split('|')
@@ -1598,13 +1596,11 @@ class Word:
     def is_np(self, list_np_indexes):
         if self.upos == 'NOUN' or self.upos == 'PRON' or self.upos == 'PROPN':
             if self.dependency_relation in ['fixed', 'flat', 'compound']:
-                if self.governor not in list_np_indexes:
-                    ind = int(self.index)
-                    list_np_indexes.append(ind)
+                if int(self.governor) not in list_np_indexes:
+                    list_np_indexes.append(int(self.governor))
             else:
                 if int(self.index) not in list_np_indexes:
-                    ind = int(self.index)
-                    list_np_indexes.append(ind)
+                    list_np_indexes.append(int(self.index))
         return list_np_indexes
 
     def is_gerund(self):
