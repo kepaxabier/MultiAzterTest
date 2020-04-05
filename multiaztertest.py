@@ -498,23 +498,21 @@ class Document:
     def calculate_stem_overlap_adjacent(self):
         i = self.indicators
         adjacent_stem_overlap_list = []
-        for paragraph in self.paragraph_list:
-            if len(paragraph.sentence_list) > 1:
-                adjacents = list(map(list, zip(paragraph.sentence_list, paragraph.sentence_list[1:])))
-                for x in adjacents:
-                    sentence1 = []
-                    sentence2 = []
-                    for entry1 in x[0].word_list:
-                        if entry1.is_lexic_word(x[0]):
-                            sentence1.append(entry1.text.lower())
-                    for entry2 in x[1].word_list:
-                        if entry2.is_noun():
-                            sentence2.append(entry2.text.lower())
-                    in_common = list(set(sentence1).intersection(sentence2))
-                    if len(in_common) > 0:
-                        adjacent_stem_overlap_list.append(1)
-                    else:
-                        adjacent_stem_overlap_list.append(0)
+        sentences = self.aux_lists['sentences_in_text_token_list']
+        for x, y in zip(range(0, len(sentences) - 1), range(1, len(sentences))):
+            sentence1 = []
+            sentence2 = []
+            for entry1 in sentences[x].word_list:
+                if entry1.is_lexic_word(sentences[x]):
+                    sentence1.append(entry1.text.lower())
+            for entry2 in sentences[y].word_list:
+                if entry2.is_noun():
+                    sentence2.append(entry2.text.lower())
+            in_common = list(set(sentence1).intersection(sentence2))
+            if len(in_common) > 0:
+                adjacent_stem_overlap_list.append(1)
+            else:
+                adjacent_stem_overlap_list.append(0)
         if len(adjacent_stem_overlap_list) > 0:
             i['stem_overlap_adjacent'] = round(float(np.mean(adjacent_stem_overlap_list)), 4)
 
@@ -525,18 +523,18 @@ class Document:
     def calculate_stem_overlap_all(self):
         i = self.indicators
         all_stem_overlap_list = []
-        for paragraph in self.paragraph_list:
-            for index in range(len(paragraph.sentence_list)):
-                similarity_tmp = paragraph.sentence_list[index + 1:]
-                x = paragraph.sentence_list[index]
-                for index2 in range(len(similarity_tmp)):
-                    y = similarity_tmp[index2]
+        sentences = self.aux_lists['sentences_in_text_token_list']
+        for y in range(len(sentences) - 1):
+            s1 = sentences[y]
+            for x in range(1, len(sentences)):
+                if y <= x and y != x:
+                    s2 = sentences[x]
                     sentence1 = []
                     sentence2 = []
-                    for entry1 in x.word_list:
-                        if entry1.is_lexic_word(x):
+                    for entry1 in s1.word_list:
+                        if entry1.is_lexic_word(s1):
                             sentence1.append(entry1.text.lower())
-                    for entry2 in y.word_list:
+                    for entry2 in s2.word_list:
                         if entry2.is_noun():
                             sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
