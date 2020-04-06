@@ -60,7 +60,7 @@ dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecom
 cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
 #ANALIZA SI PROCESA BIEN (Por ejemplo hay que separar "-" de las palabras con espacio)
 #python3 ./multiaztertest.py -s -c -r -f  $dir/5/Texto_1.txt -l spanish -m cube
-for i in 5 #`seq 5 5 50`
+for i in `seq 5 5 50`
 do
 	#with similarity
         #python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l spanish -m $modelo -d "/home/kepa"
@@ -70,15 +70,18 @@ done
 
 
 #complejo multiaztertest
-#dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/complejo"
-#cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/complejo"
+cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
 #test_cab.csv: ? agertzen da!!!!!!hypernymy_nouns_index zutabean cross1 3. konplexuan ez dauka baliorik
 #Mean hypernym values of nouns in the WordNet lexicon: nan
 #python3 ./multiaztertest.py -s -c -r -f  $dir/55/Texto_53.txt -l spanish -m stanford -d "/home/kepa"
-#for i in `seq 55 5 100`
-#do
-#     	python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l spanish -m $modelo
-#done
+for i in `seq 55 5 100`
+do
+     	#with similarity
+        #python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l spanish -m $modelo -d "/home/kepa"
+        #without similarity
+        python3 multiaztertest.py -c -r -f  $dir/$i/*.txt -l spanish -m $modelo -d "/home/kepa"
+done
 
 }
 function cross10banatu_es()

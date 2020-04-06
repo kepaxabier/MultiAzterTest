@@ -59,7 +59,7 @@ cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
 #ANALIZA SI PROCESA BIEN (Por ejemplo hay que separar "-" de las palabras con espacio)
 #python3 ./multiaztertest.py -s -c -r -f  $dir/5/Texto_1.txt -l basque -m stanford -d "/home/kepa"
 dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/ErreXail/konplexuak"
-for i in 5 #`seq 5 5 200`
+for i in `seq 5 5 200`
 do
      	#with similarity
         #python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d "/home/kepa"
@@ -70,11 +70,14 @@ done
 
 #complejo multiaztertest
 #python3 ./multiaztertest.py -s -c -r -f  $dir/55/Texto_53.txt -l basque -m stanford -d "/home/kepa"
-#dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/ErreXail/sinpleak"
-#for i in `seq 5 5 200`
-#do
-#     	python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d "/home/kepa"
-#done
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/ErreXail/sinpleak"
+for i in `seq 5 5 200`
+do
+     	#with similarity
+        #python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d "/home/kepa"
+        #without similarity
+        python3 multiaztertest.py -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d "/home/kepa"
+done
 }
 
 function cross10banatu_es()

@@ -498,23 +498,21 @@ class Document:
     def calculate_stem_overlap_adjacent(self):
         i = self.indicators
         adjacent_stem_overlap_list = []
-        for paragraph in self.paragraph_list:
-            if len(paragraph.sentence_list) > 1:
-                adjacents = list(map(list, zip(paragraph.sentence_list, paragraph.sentence_list[1:])))
-                for x in adjacents:
-                    sentence1 = []
-                    sentence2 = []
-                    for entry1 in x[0].word_list:
-                        if entry1.is_lexic_word(x[0]):
-                            sentence1.append(entry1.text.lower())
-                    for entry2 in x[1].word_list:
-                        if entry2.is_noun():
-                            sentence2.append(entry2.text.lower())
-                    in_common = list(set(sentence1).intersection(sentence2))
-                    if len(in_common) > 0:
-                        adjacent_stem_overlap_list.append(1)
-                    else:
-                        adjacent_stem_overlap_list.append(0)
+        sentences = self.aux_lists['sentences_in_text_token_list']
+        for x, y in zip(range(0, len(sentences) - 1), range(1, len(sentences))):
+            sentence1 = []
+            sentence2 = []
+            for entry1 in sentences[x].word_list:
+                if entry1.is_lexic_word(sentences[x]):
+                    sentence1.append(entry1.text.lower())
+            for entry2 in sentences[y].word_list:
+                if entry2.is_noun():
+                    sentence2.append(entry2.text.lower())
+            in_common = list(set(sentence1).intersection(sentence2))
+            if len(in_common) > 0:
+                adjacent_stem_overlap_list.append(1)
+            else:
+                adjacent_stem_overlap_list.append(0)
         if len(adjacent_stem_overlap_list) > 0:
             i['stem_overlap_adjacent'] = round(float(np.mean(adjacent_stem_overlap_list)), 4)
 
@@ -525,18 +523,18 @@ class Document:
     def calculate_stem_overlap_all(self):
         i = self.indicators
         all_stem_overlap_list = []
-        for paragraph in self.paragraph_list:
-            for index in range(len(paragraph.sentence_list)):
-                similarity_tmp = paragraph.sentence_list[index + 1:]
-                x = paragraph.sentence_list[index]
-                for index2 in range(len(similarity_tmp)):
-                    y = similarity_tmp[index2]
+        sentences = self.aux_lists['sentences_in_text_token_list']
+        for y in range(len(sentences) - 1):
+            s1 = sentences[y]
+            for x in range(1, len(sentences)):
+                if y <= x and y != x:
+                    s2 = sentences[x]
                     sentence1 = []
                     sentence2 = []
-                    for entry1 in x.word_list:
-                        if entry1.is_lexic_word(x):
+                    for entry1 in s1.word_list:
+                        if entry1.is_lexic_word(s1):
                             sentence1.append(entry1.text.lower())
-                    for entry2 in y.word_list:
+                    for entry2 in s2.word_list:
                         if entry2.is_noun():
                             sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
@@ -555,25 +553,23 @@ class Document:
     def calculate_content_overlap_adjacent(self):
         i = self.indicators
         adjacent_content_overlap_list = []
-        for paragraph in self.paragraph_list:
-            if len(paragraph.sentence_list) > 1:
-                adjacents = list(map(list, zip(paragraph.sentence_list, paragraph.sentence_list[1:])))
-                for x in adjacents:
-                    sentence1 = []
-                    sentence2 = []
-                    for entry1 in x[0].word_list:
-                        if entry1.is_lexic_word(x[0]):
-                            sentence1.append(entry1.text.lower())
-                    for entry2 in x[1].word_list:
-                        if entry2.is_lexic_word(x[1]):
-                            sentence2.append(entry2.text.lower())
-                    in_common = list(set(sentence1).intersection(sentence2))
-                    n1 = x[0].count_content_words_in()
-                    n2 = x[1].count_content_words_in()
-                    if n1 + n2 > 0:
-                        adjacent_content_overlap_list.append(len(in_common) / (n1 + n2))
-                    else:
-                        adjacent_content_overlap_list.append(0)
+        sentences = self.aux_lists['sentences_in_text_token_list']
+        for x, y in zip(range(0, len(sentences) - 1), range(1, len(sentences))):
+            sentence1 = []
+            sentence2 = []
+            for entry1 in sentences[x].word_list:
+                if entry1.is_lexic_word(sentences[x]):
+                    sentence1.append(entry1.text.lower())
+            for entry2 in sentences[y].word_list:
+                if entry2.is_lexic_word(sentences[y]):
+                    sentence2.append(entry2.text.lower())
+            in_common = list(set(sentence1).intersection(sentence2))
+            n1 = sentences[x].count_content_words_in()
+            n2 = sentences[y].count_content_words_in()
+            if n1 + n2 > 0:
+                adjacent_content_overlap_list.append(len(in_common) / (n1 + n2))
+            else:
+                adjacent_content_overlap_list.append(0)
         if len(adjacent_content_overlap_list) > 0:
             i['content_overlap_adjacent_mean'] = round(float(np.mean(adjacent_content_overlap_list)), 4)
             i['content_overlap_adjacent_std'] = round(float(np.std(adjacent_content_overlap_list)), 4)
@@ -586,23 +582,23 @@ class Document:
     def calculate_content_overlap_all(self):
         i = self.indicators
         all_content_overlap_list = []
-        for paragraph in self.paragraph_list:
-            for index in range(len(paragraph.sentence_list)):
-                similarity_tmp = paragraph.sentence_list[index + 1:]
-                x = paragraph.sentence_list[index]
-                for index2 in range(len(similarity_tmp)):
-                    y = similarity_tmp[index2]
+        sentences = self.aux_lists['sentences_in_text_token_list']
+        for y in range(len(sentences) - 1):
+            s1 = sentences[y]
+            for x in range(1, len(sentences)):
+                if y <= x and y != x:
+                    s2 = sentences[x]
                     sentence1 = []
                     sentence2 = []
-                    for entry1 in x.word_list:
-                        if entry1.is_lexic_word(x):
+                    for entry1 in s1.word_list:
+                        if entry1.is_lexic_word(s1):
                             sentence1.append(entry1.text.lower())
-                    for entry2 in y.word_list:
-                        if entry2.is_lexic_word(y):
+                    for entry2 in s2.word_list:
+                        if entry2.is_lexic_word(s2):
                             sentence2.append(entry2.text.lower())
                     in_common = list(set(sentence1).intersection(sentence2))
-                    n1 = x.count_content_words_in()
-                    n2 = y.count_content_words_in()
+                    n1 = s1.count_content_words_in()
+                    n2 = s2.count_content_words_in()
                     if n1 + n2 > 0:
                         all_content_overlap_list.append(len(in_common) / (n1 + n2))
                     else:
@@ -791,11 +787,11 @@ class Document:
                     i['num_sentences'] += 1
                     dependency_tree = defaultdict(list)
                     np_indexes = s.count_np_in_sentence()
+                    modifiers_per_np += s.count_modifiers(np_indexes)
                     num_np_list.append(len(np_indexes))
                     vp_indexes = s.count_vp_in_sentence()
                     num_vp_list.append(vp_indexes)
                     decendents_total += s.count_decendents(np_indexes)
-                    modifiers_per_np += s.count_modifiers(np_indexes)
                     self.aux_lists['left_embeddedness'].append(s.calculate_left_embeddedness())
                     i['prop'] = 0
                     i['num_punct_in_sentence'] = 0
@@ -813,6 +809,10 @@ class Document:
                             root = w.index
                         dependency_tree[w.governor].append(w.index)
                         i['num_words_with_punct'] += 1
+                        if (int(w.index) == 1):
+                            i['prop'] = 1
+                        if w.is_proposition():
+                            i['prop'] += 1
                         # word frequency
                         if (not len(w.text) == 1 or w.text.isalpha()) and not w.is_num():
                             if self.language == "spanish" or self.language == "english":
@@ -918,8 +918,6 @@ class Document:
                                 # Numero de sentencias subordinadas relativas
                                 if w.is_subordinate_relative():
                                     i['num_rel_subord'] += 1
-                            if w.is_proposition():
-                                i['prop'] += 1
                             if self.language != "basque":
                                 if w.has_more_than_three_syllables(self.language):
                                     i['num_words_more_3_syl'] += 1
@@ -1169,8 +1167,8 @@ class Document:
         i['num_first_pers_pron_incidence'] = self.get_incidence(i['num_first_pers_pron'], n)
         i['num_first_pers_sing_pron_incidence'] = self.get_incidence(i['num_first_pers_sing_pron'], n)
         i['num_third_pers_pron_incidence'] = self.get_incidence(i['num_third_pers_pron'], n)
-        i['gerund_density_incidence'] = self.get_incidence(i['num_ger'], n)
-        i['infinitive_density_incidence'] = self.get_incidence(i['num_inf'], n)
+        i['gerund_incidence'] = self.get_incidence(i['num_ger'], n)
+        i['infinitive_incidence'] = self.get_incidence(i['num_inf'], n)
         i['num_subord_incidence'] = self.get_incidence(i['num_subord'], n)
         i['num_rel_subord_incidence'] = self.get_incidence(i['num_rel_subord'], n)
         i['num_past_incidence'] = self.get_incidence(i['num_past'], n)
@@ -1184,7 +1182,7 @@ class Document:
         i['num_adv_incidence'] = self.get_incidence(i['num_adv'], n)
         i['num_pass_incidence'] = self.get_incidence(i['num_pass'], n)
         i['num_past_irregular_incidence'] = self.get_incidence(i['num_past_irregular'], n)
-        i['agentless_passive_density_incidence'] = self.get_incidence(i['num_agentless'], n)
+        i['agentless_passive_incidence'] = self.get_incidence(i['num_agentless'], n)
         i['num_lexic_words_incidence'] = self.get_incidence(i['num_lexic_words'], n)
         i['all_connectives_incidence'] = self.get_incidence(i['all_connectives'], n)
         i['causal_connectives_incidence'] = self.get_incidence(i['causal_connectives'], n)
@@ -1214,7 +1212,7 @@ class Document:
         i['verb_density'] = round(i['num_verb'] / i['num_words'], 4)
         i['adj_density'] = round(i['num_adj'] / i['num_words'], 4)
         i['adv_density'] = round(i['num_adv'] / i['num_words'], 4)
-        i['negation_density_incidence'] = self.get_incidence(i['num_neg'], i['num_words'])
+        i['negation_incidence'] = self.get_incidence(i['num_neg'], i['num_words'])
         self.calculate_all_ttr()
         self.calculate_all_lemma_ttr()
         self.calculate_ratio_proper_nouns_per_nouns()
@@ -1311,8 +1309,8 @@ class Sentence:
         else:
             new_list_indexes = []
             for entry in self.word_list:
-                if entry.governor in list_np_indexes and entry.has_modifier():
-                    new_list_indexes.append(entry.index)
+                if int(entry.governor) in list_np_indexes and entry.has_modifier():
+                    new_list_indexes.append(int(entry.index))
                     num_modifiers += 1
             return num_modifiers + self.count_decendents(new_list_indexes)
 
@@ -1442,9 +1440,8 @@ class Word:
 
     def has_modifier(self):
         # nominal head may be associated with different types of modifiers and function words
-        return True if self.dependency_relation in ['nmod', 'nmod:poss', 'appos', 'amod', 'nummod', 'acl', 'acl:relcl',
-                                                    'det', 'clf',
-                                                    'case'] else False
+        return True if self.dependency_relation in ['nmod', 'nmod:poss', 'appos', 'amod', 'nummod', 'acl', 'acl:relcl', 'det', 'clf', 'case'] else False
+
 
     def is_personal_pronoun(self):
         atributos = self.feats.split('|')
@@ -1597,10 +1594,10 @@ class Word:
     def is_np(self, list_np_indexes):
         if self.upos == 'NOUN' or self.upos == 'PRON' or self.upos == 'PROPN':
             if self.dependency_relation in ['fixed', 'flat', 'compound']:
-                if self.governor not in list_np_indexes:
-                    list_np_indexes.append(self.governor)
+                if int(self.governor) not in list_np_indexes:
+                    list_np_indexes.append(int(self.governor))
             else:
-                if self.index not in list_np_indexes:
+                if int(self.index) not in list_np_indexes:
                     ind = int(self.index)
                     list_np_indexes.append(ind)
         return list_np_indexes
@@ -2051,14 +2048,14 @@ class Printer:
         self.ind_sentences['num_pass_mean'] = "Mean of passive voice verbs: "
         # Numero de verbos en pasiva que no tienen agente
         self.ind_sentences['num_agentless'] = "Number of agentless passive voice verbs: "
-        self.ind_sentences['agentless_passive_density_incidence'] = "Agentless passive voice density, incidence (" \
-                                                                    "DRPVAL): "
+        self.ind_sentences['agentless_passive_incidence'] = "Number of agentless passive voice verbs (incidence " \
+                                                            "per 1000 words): "
         self.ind_sentences['num_neg'] = "Number of negative words: "
-        self.ind_sentences['negation_density_incidence'] = "Negation density, incidence (DRNEG): "
+        self.ind_sentences['negation_incidence'] = "Number of negative words (incidence per 1000 words): "
         self.ind_sentences['num_ger'] = "Number of verbs in gerund form: "
-        self.ind_sentences['gerund_density_incidence'] = "Gerund density, incidence (DRGERUND): "
+        self.ind_sentences['gerund_incidence'] = "Number of verbs in gerund form (incidence per 1000 words): "
         self.ind_sentences['num_inf'] = "Number of verbs in infinitive form: "
-        self.ind_sentences['infinitive_density_incidence'] = "Infinitive density, incidence (DRINF): "
+        self.ind_sentences['infinitive_incidence'] = "Number of verbs in infinitive form (incidence per 1000 words): "
         # Ambigüedad de una palabra (polysemy in WordNet)
         self.ind_sentences['polysemic_index'] = "Mean values of polysemy in the WordNet lexicon: "
         # Nivel de abstracción (hypernym in WordNet)
@@ -2132,8 +2129,8 @@ class Printer:
                                     #Syntax
                                     'num_rel_subord', 'num_rel_subord_incidence',
                                     'num_pass', 'num_pass_incidence', 'num_pass_mean', 'num_agentless',
-                                    'agentless_passive_density_incidence',
-                                    'num_ger', 'gerund_density_incidence']
+                                    'agentless_passive_incidence',
+                                    'num_ger', 'gerund_incidence']
 
         self.ignore_list_en_ind = []
 
@@ -2146,8 +2143,8 @@ class Printer:
                                     'num_content_words_not_a1_c1_words_incidence',
                                     #Syntax
                                     'num_rel_subord', 'num_rel_subord_incidence',
-                                    'num_pass', 'num_pass_incidence', 'num_pass_mean',
-                                    'num_agentless', 'agentless_passive_density_incidence'
+                                    'num_pass', 'num_pass_incidence', 'num_pass_mean', 'num_agentless',
+                                    'agentless_passive_incidence'
                                    ]
 
         self.ignore_list_counters = [# descriptive or shallow measures
