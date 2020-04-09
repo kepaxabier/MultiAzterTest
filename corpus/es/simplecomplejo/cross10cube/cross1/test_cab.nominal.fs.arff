@@ -1,0 +1,32 @@
+@relation 'train_cab-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval -M -P 1 -E 1-Sweka.attributeSelection.BestFirst -D 1 -N 5'
+
+@attribute num_words_more_3_syl numeric
+@attribute mean_np_per_sentence numeric
+@attribute flesch numeric
+@attribute polysemic_index numeric
+@attribute mean_rare numeric
+@attribute mean_distinct_rare numeric
+@attribute words_length_no_stopwords_std numeric
+@attribute num_paragraphs_incidence numeric
+@attribute num_subord_incidence numeric
+@attribute num_proper_noun_incidence numeric
+@attribute adversative_connectives_incidence numeric
+@attribute num_rare_adj_incidence numeric
+@attribute simple_ttr numeric
+@attribute lemma_ttr numeric
+@attribute stem_overlap_all numeric
+@attribute content_overlap_all_mean numeric
+@attribute level {0,1}
+
+@data
+
+20,6.9412,70.8959,4.9375,26.4901,27.2727,3.1387,30.1205,75.3012,21.0843,15.0602,12.0482,0.5331,0.6416,0.1324,0.0135,0
+21,7.5833,68.8497,4.6533,20.2797,25,2.3249,13.3779,80.2676,26.7559,13.3779,23.4114,0.5385,0.5652,0.2879,0.0252,0
+32,7.6,64.6353,5.0941,22.7545,25.7353,3.1835,8.2645,88.1543,24.7934,11.0193,22.0386,0.5565,0.6171,0.1714,0.0144,0
+28,4.7857,72.7669,4.5676,18.0328,21.1538,2.5412,24.8963,95.4357,20.7469,4.1494,4.1494,0.5851,0.61,0.1429,0.0144,0
+21,4.3333,80.9758,3.7841,10.4575,15.625,2.5251,39.039,63.0631,39.039,24.024,3.003,0.4595,0.5916,0.1739,0.0293,0
+33,3.9259,74.1933,4.9605,31.0345,30.8824,2.4446,40.6977,81.3953,29.0698,0,43.6047,0.5233,0.625,0.0598,0.0095,1
+25,3,74.9073,4.5102,20.5882,22.7848,2.2184,53.3981,87.3786,4.8544,9.7087,9.7087,0.6214,0.6214,0.0994,0.0151,1
+14,3.4615,74.7808,5.2381,18.75,20,1.9301,55.9441,48.951,0,13.986,13.986,0.6713,0.7063,0.1538,0.0169,1
+30,2.5714,86.3312,6.3187,23.0366,30.303,2.5805,33.8028,87.3239,5.6338,5.6338,33.8028,0.5296,0.5803,0.036,0.0152,1
+37,4.1923,76.7588,6.325,26.3158,31.405,2.1312,42.9799,77.3639,20.0573,2.8653,14.3266,0.4814,0.5387,0.08,0.02,1
