@@ -14,98 +14,170 @@ BinarySMO
 
 Machine linear: showing attribute weights, not support vectors.
 
-         0.4341 * (normalized) num_decendents_noun_phrase
- +       0.245  * (normalized) left_embeddedness
- +       0.4341 * (normalized) num_modifiers_noun_phrase
- +      -0.6761 * (normalized) sentences_per_paragraph_mean
- +      -1.3409 * (normalized) sentences_length_mean
- +      -0.6842 * (normalized) words_length_mean
- +       0.7667 * (normalized) lemmas_length_mean
- +      -1.4099 * (normalized) mean_propositions_per_sentence
- +       1.9069 * (normalized) num_punct_marks_per_sentence
- +      -0.4158 * (normalized) polysemic_index
- +       0.7671 * (normalized) hypernymy_index
- +       0.4965 * (normalized) hypernymy_verbs_index
- +      -1.2226 * (normalized) hypernymy_nouns_index
- +      -1.1479 * (normalized) sentences_length_no_stopwords_mean
- +      -0.6842 * (normalized) words_length_no_stopwords_mean
- +       0.0088 * (normalized) sentences_per_paragraph_std
- +       1.5215 * (normalized) sentences_length_std
- +       1.0858 * (normalized) words_length_std
- +       1.2664 * (normalized) lemmas_length_std
- +       0.26   * (normalized) sentences_length_no_stopwords_std
- +       1.0858 * (normalized) words_length_no_stopwords_std
- +       0.0067 * (normalized) noun_overlap_adjacent
- +       0.4823 * (normalized) noun_overlap_all
- +      -0.4134 * (normalized) argument_overlap_all
- +      -0.16   * (normalized) stem_overlap_adjacent
- +       0.3674 * (normalized) stem_overlap_all
- +      -0.5616 * (normalized) content_overlap_adjacent_mean
- +      -0.2647 * (normalized) content_overlap_adjacent_std
- +       0.158  * (normalized) content_overlap_all_mean
- +       0.338  * (normalized) content_overlap_all_std
- -       0.9714
+        -0.3351 * (normalized) prop
+ +       0.2701 * (normalized) num_punct_in_sentence
+ +       0.9791 * (normalized) num_words_more_3_syl
+ +       0.0025 * (normalized) num_decendents_noun_phrase
+ +       0.2607 * (normalized) num_modifiers_noun_phrase
+ +      -0.4178 * (normalized) left_embeddedness
+ +      -0.0183 * (normalized) min_wf_per_sentence
+ +       0.3385 * (normalized) honore
+ +       0.3168 * (normalized) maas
+ +      -0.1887 * (normalized) mean_vp_per_sentence
+ +      -0.2248 * (normalized) mean_np_per_sentence
+ +      -0.3845 * (normalized) noun_phrase_density_incidence
+ +      -0.1501 * (normalized) verb_phrase_density_incidence
+ +      -0.1282 * (normalized) mean_depth_per_sentence
+ +      -0.4896 * (normalized) mtld
+ +       0.1163 * (normalized) flesch
+ +      -0.1285 * (normalized) sentences_per_paragraph_mean
+ +      -0.1316 * (normalized) sentences_length_mean
+ +      -0.161  * (normalized) words_length_mean
+ +       0.492  * (normalized) lemmas_length_mean
+ +      -0.016  * (normalized) num_syllables_words_mean
+ +      -0.0625 * (normalized) mean_propositions_per_sentence
+ +      -0.011  * (normalized) num_punct_marks_per_sentence
+ +      -0.2285 * (normalized) polysemic_index
+ +       0.708  * (normalized) hypernymy_index
+ +      -0.1115 * (normalized) hypernymy_verbs_index
+ +       0.1699 * (normalized) hypernymy_nouns_index
+ +      -0.0766 * (normalized) num_past_irregular_mean
+ +      -0.1351 * (normalized) sentences_length_no_stopwords_mean
+ +       0.2538 * (normalized) words_length_no_stopwords_mean
+ +       0.251  * (normalized) mean_rare
+ +       0.5446 * (normalized) mean_distinct_rare
+ +       0.0849 * (normalized) sentences_per_paragraph_std
+ +       0.145  * (normalized) sentences_length_std
+ +       0.2826 * (normalized) words_length_std
+ +       0.6288 * (normalized) lemmas_length_std
+ +       0.3109 * (normalized) num_syllables_words_std
+ +       0.3499 * (normalized) sentences_length_no_stopwords_std
+ +       0.1136 * (normalized) words_length_no_stopwords_std
+ +       0.435  * (normalized) num_sentences_incidence
+ +       0.9002 * (normalized) num_paragraphs_incidence
+ +       0.0291 * (normalized) num_impera_incidence
+ +      -0.3242 * (normalized) num_personal_pronouns_incidence
+ +      -0.0096 * (normalized) num_first_pers_pron_incidence
+ +       0.4728 * (normalized) num_first_pers_sing_pron_incidence
+ +      -0.2006 * (normalized) num_third_pers_pron_incidence
+ +      -0.3953 * (normalized) gerund_incidence
+ +      -0.0991 * (normalized) infinitive_incidence
+ +       0.043  * (normalized) num_subord_incidence
+ +       0.4692 * (normalized) num_past_incidence
+ +       0.4582 * (normalized) num_pres_incidence
+ +      -0.6563 * (normalized) num_indic_incidence
+ +      -0.159  * (normalized) num_verb_incidence
+ +       0.3935 * (normalized) num_noun_incidence
+ +      -0.4404 * (normalized) num_proper_noun_incidence
+ +      -0.0894 * (normalized) num_adj_incidence
+ +      -0.1279 * (normalized) num_adv_incidence
+ +       0.4261 * (normalized) num_past_irregular_incidence
+ +       0.1137 * (normalized) num_lexic_words_incidence
+ +      -0.0948 * (normalized) all_connectives_incidence
+ +      -0.2638 * (normalized) causal_connectives_incidence
+ +       0.4149 * (normalized) logical_connectives_incidence
+ +      -0.902  * (normalized) adversative_connectives_incidence
+ +       0.352  * (normalized) temporal_connectives_incidence
+ +       0.0848 * (normalized) conditional_connectives_incidence
+ +       0.1339 * (normalized) num_rare_nouns_incidence
+ +       0.2979 * (normalized) num_rare_adj_incidence
+ +       0.1031 * (normalized) num_rare_verbs_incidence
+ +       0.2806 * (normalized) num_rare_advb_incidence
+ +       0.2389 * (normalized) num_rare_words_incidence
+ +       0.2852 * (normalized) num_dif_rare_words_incidence
+ +      -0.222  * (normalized) mean_rare_incidence
+ +      -0.1477 * (normalized) mean_distinct_rare_incidence
+ +       0.1135 * (normalized) lexical_density
+ +       0.3935 * (normalized) noun_density
+ +      -0.1587 * (normalized) verb_density
+ +      -0.0898 * (normalized) adj_density
+ +      -0.1274 * (normalized) adv_density
+ +       0.0483 * (normalized) negation_incidence
+ +      -0.6821 * (normalized) simple_ttr
+ +      -0.2382 * (normalized) nttr
+ +      -0.2472 * (normalized) vttr
+ +      -0.4801 * (normalized) adj_ttr
+ +      -0.0094 * (normalized) adv_ttr
+ +      -0.2154 * (normalized) content_ttr
+ +      -0.6752 * (normalized) lemma_ttr
+ +      -0.0926 * (normalized) lemma_nttr
+ +       0.2117 * (normalized) lemma_vttr
+ +      -0.2008 * (normalized) lemma_adj_ttr
+ +       0.0821 * (normalized) lemma_adv_ttr
+ +       0.0284 * (normalized) lemma_content_ttr
+ +       0.3422 * (normalized) ratio_proper_nouns_per_nouns
+ +      -0.1825 * (normalized) noun_overlap_adjacent
+ +       0.2688 * (normalized) noun_overlap_all
+ +      -0.2574 * (normalized) argument_overlap_adjacent
+ +      -0.2841 * (normalized) argument_overlap_all
+ +      -0.2668 * (normalized) stem_overlap_adjacent
+ +      -0.9444 * (normalized) stem_overlap_all
+ +       0.0382 * (normalized) content_overlap_adjacent_mean
+ +      -0.7237 * (normalized) content_overlap_adjacent_std
+ +       0.4832 * (normalized) content_overlap_all_mean
+ +       0.8201 * (normalized) content_overlap_all_std
+ -       0.1352
 
-Number of kernel evaluations: 1664 (86.225% cached)
+Number of kernel evaluations: 2063 (95.495% cached)
 
 
 
-Time taken to build model: 0.3 seconds
+Time taken to build model: 0.35 seconds
 
-Time taken to test model on training data: 0.02 seconds
+Time taken to test model on training data: 0.03 seconds
 
 === Error on training data ===
+
+Correctly Classified Instances          90              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0     
+Root mean squared error                  0     
+Relative absolute error                  0      %
+Root relative squared error              0      %
+Total Number of Instances               90     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    0,000    1,000      1,000    1,000      1,000    1,000     1,000     0
+                 1,000    0,000    1,000      1,000    1,000      1,000    1,000     1,000     1
+Weighted Avg.    1,000    0,000    1,000      1,000    1,000      1,000    1,000     1,000     
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 45  0 |  a = 0
+  0 45 |  b = 1
+
+Time taken to perform cross-validation: 0.25 seconds
+
+
+=== Stratified cross-validation ===
 
 Correctly Classified Instances          84               93.3333 %
 Incorrectly Classified Instances         6                6.6667 %
 Kappa statistic                          0.8667
 Mean absolute error                      0.0667
 Root mean squared error                  0.2582
-Relative absolute error                 13.3333 %
-Root relative squared error             51.6398 %
+Relative absolute error                 13.3155 %
+Root relative squared error             51.5671 %
 Total Number of Instances               90     
 
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0,956    0,089    0,915      0,956    0,935      0,868    0,933     0,896     0
-                 0,911    0,044    0,953      0,911    0,932      0,868    0,933     0,913     1
-Weighted Avg.    0,933    0,067    0,934      0,933    0,933      0,868    0,933     0,905     
+                 0,933    0,067    0,933      0,933    0,933      0,867    0,933     0,904     0
+                 0,933    0,067    0,933      0,933    0,933      0,867    0,933     0,904     1
+Weighted Avg.    0,933    0,067    0,933      0,933    0,933      0,867    0,933     0,904     
 
 
 === Confusion Matrix ===
 
   a  b   <-- classified as
- 43  2 |  a = 0
-  4 41 |  b = 1
-
-Time taken to perform cross-validation: 0.19 seconds
-
-
-=== Stratified cross-validation ===
-
-Correctly Classified Instances          73               81.1111 %
-Incorrectly Classified Instances        17               18.8889 %
-Kappa statistic                          0.6222
-Mean absolute error                      0.1889
-Root mean squared error                  0.4346
-Relative absolute error                 37.7273 %
-Root relative squared error             86.8003 %
-Total Number of Instances               90     
-
-
-=== Detailed Accuracy By Class ===
-
-                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0,889    0,267    0,769      0,889    0,825      0,630    0,811     0,739     0
-                 0,733    0,111    0,868      0,733    0,795      0,630    0,811     0,770     1
-Weighted Avg.    0,811    0,189    0,819      0,811    0,810      0,630    0,811     0,755     
-
-
-=== Confusion Matrix ===
-
-  a  b   <-- classified as
- 40  5 |  a = 0
- 12 33 |  b = 1
+ 42  3 |  a = 0
+  3 42 |  b = 1
 
