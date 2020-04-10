@@ -181,19 +181,25 @@ dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/en" #/[Test|
 cd /media/datos/Dropbox/ikerkuntza/metrix-env
 source bin/activate
 cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
-for i in 0 #`seq 0 5 150`
-do
+python3 multiaztertest.py -c -r -f  $dir/Train/Adv-Txt/10/Organs-adv.txt -l english -m $modelo -d /home/kepa
+#for i in 0 `seq 0 5 150`
+#do
    #sin similitud
-   python3 multiaztertest.py -c -r -f  $dir/Train/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   #python3 multiaztertest.py -c -r -f  $dir/Train/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
    #python3 multiaztertest.py -c -r -f  $dir/Train/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
    #python3 multiaztertest.py -c -r -f  $dir/Train/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
    #con similitud
    #python3 multiaztertest.py -s -c -r -f  $dir/Train/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
    #python3 multiaztertest.py -s -c -r -f  $dir/Train/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
    #python3 multiaztertest.py -s -c -r -f  $dir/Train/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa	
-done
+#done
 #for i in `seq 0 5 35`
 #do
+# sin similitud
+   #python3 multiaztertest.py -c -r -f  $dir/Test/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   #python3 multiaztertest.py -c -r -f  $dir/Test/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   #python3 multiaztertest.py -c -r -f  $dir/Test/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+# con similitud
 #   python3 multiaztertest.py -s -c -r -f  $dir/Test/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
 #   python3 multiaztertest.py -s -c -r -f  $dir/Test/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
 #   python3 multiaztertest.py -s -c -r -f  $dir/Test/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa	
@@ -297,7 +303,6 @@ function fin()
 		fi	
 }
 ### Main ###
-modelo=stanford
 opcionmenuppal=0
 while test $opcionmenuppal -ne 10
 do
@@ -322,7 +327,9 @@ do
 			4) pruebaobtenerdatosmultiazterteststanford;;
 			5) pruebaobtenerdatosaztertestcube;;
 			6) pruebaobtenerdatosmultiaztertestcube;;
-			7) obtenerdatosmultiaztertest $modelo;;
+			7) read -p "Introduce el modelo stanford o cube:" modelo
+			   #echo "$modelo";;
+			   obtenerdatosmultiaztertest $modelo;;
 			8) wekarekinprobatu;;
 			8) generarmodelopython;;
 			8) testearmodelopython;;

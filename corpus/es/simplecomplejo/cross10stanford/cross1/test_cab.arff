@@ -1,26 +1,98 @@
 @relation test_cab
 
+@attribute prop numeric
+@attribute num_punct_in_sentence numeric
+@attribute num_words_more_3_syl numeric
 @attribute num_decendents_noun_phrase numeric
-@attribute left_embeddedness numeric
 @attribute num_modifiers_noun_phrase numeric
+@attribute left_embeddedness numeric
+@attribute min_wf_per_sentence numeric
+@attribute honore numeric
+@attribute maas numeric
+@attribute mean_vp_per_sentence numeric
+@attribute mean_np_per_sentence numeric
+@attribute noun_phrase_density_incidence numeric
+@attribute verb_phrase_density_incidence numeric
+@attribute mean_depth_per_sentence numeric
+@attribute mtld numeric
+@attribute flesch numeric
 @attribute sentences_per_paragraph_mean numeric
 @attribute sentences_length_mean numeric
 @attribute words_length_mean numeric
 @attribute lemmas_length_mean numeric
+@attribute num_syllables_words_mean numeric
 @attribute mean_propositions_per_sentence numeric
 @attribute num_punct_marks_per_sentence numeric
 @attribute polysemic_index numeric
 @attribute hypernymy_index numeric
 @attribute hypernymy_verbs_index numeric
 @attribute hypernymy_nouns_index numeric
+@attribute num_past_irregular_mean numeric
 @attribute sentences_length_no_stopwords_mean numeric
 @attribute words_length_no_stopwords_mean numeric
+@attribute mean_rare numeric
+@attribute mean_distinct_rare numeric
 @attribute sentences_per_paragraph_std numeric
 @attribute sentences_length_std numeric
 @attribute words_length_std numeric
 @attribute lemmas_length_std numeric
+@attribute num_syllables_words_std numeric
 @attribute sentences_length_no_stopwords_std numeric
 @attribute words_length_no_stopwords_std numeric
+@attribute num_sentences_incidence numeric
+@attribute num_paragraphs_incidence numeric
+@attribute num_impera_incidence numeric
+@attribute num_personal_pronouns_incidence numeric
+@attribute num_first_pers_pron_incidence numeric
+@attribute num_first_pers_sing_pron_incidence numeric
+@attribute num_third_pers_pron_incidence numeric
+@attribute gerund_incidence numeric
+@attribute infinitive_incidence numeric
+@attribute num_subord_incidence numeric
+@attribute num_past_incidence numeric
+@attribute num_pres_incidence numeric
+@attribute num_future_incidence numeric
+@attribute num_indic_incidence numeric
+@attribute num_verb_incidence numeric
+@attribute num_noun_incidence numeric
+@attribute num_proper_noun_incidence numeric
+@attribute num_adj_incidence numeric
+@attribute num_adv_incidence numeric
+@attribute num_past_irregular_incidence numeric
+@attribute num_lexic_words_incidence numeric
+@attribute all_connectives_incidence numeric
+@attribute causal_connectives_incidence numeric
+@attribute logical_connectives_incidence numeric
+@attribute adversative_connectives_incidence numeric
+@attribute temporal_connectives_incidence numeric
+@attribute conditional_connectives_incidence numeric
+@attribute num_rare_nouns_incidence numeric
+@attribute num_rare_adj_incidence numeric
+@attribute num_rare_verbs_incidence numeric
+@attribute num_rare_advb_incidence numeric
+@attribute num_rare_words_incidence numeric
+@attribute num_dif_rare_words_incidence numeric
+@attribute mean_rare_incidence numeric
+@attribute mean_distinct_rare_incidence numeric
+@attribute lexical_density numeric
+@attribute noun_density numeric
+@attribute verb_density numeric
+@attribute adj_density numeric
+@attribute adv_density numeric
+@attribute negation_incidence numeric
+@attribute simple_ttr numeric
+@attribute nttr numeric
+@attribute vttr numeric
+@attribute adj_ttr numeric
+@attribute adv_ttr numeric
+@attribute content_ttr numeric
+@attribute lemma_ttr numeric
+@attribute lemma_nttr numeric
+@attribute lemma_vttr numeric
+@attribute lemma_adj_ttr numeric
+@attribute lemma_adv_ttr numeric
+@attribute lemma_content_ttr numeric
+@attribute ratio_proper_nouns_per_nouns numeric
 @attribute noun_overlap_adjacent numeric
 @attribute noun_overlap_all numeric
 @attribute argument_overlap_adjacent numeric
@@ -31,95 +103,17 @@
 @attribute content_overlap_adjacent_std numeric
 @attribute content_overlap_all_mean numeric
 @attribute content_overlap_all_std numeric
-@attribute num_paragraphs_incidence numeric
-@attribute num_sentences_incidence numeric
-@attribute num_syllables_words_mean numeric
-@attribute num_syllables_words_std numeric
-@attribute lexical_density numeric
-@attribute noun_density numeric
-@attribute verb_density numeric
-@attribute adj_density numeric
-@attribute adv_density numeric
-@attribute simple_ttr numeric
-@attribute content_ttr numeric
-@attribute nttr numeric
-@attribute vttr numeric
-@attribute adj_ttr numeric
-@attribute adv_ttr numeric
-@attribute lemma_ttr numeric
-@attribute lemma_content_ttr numeric
-@attribute lemma_nttr numeric
-@attribute lemma_vttr numeric
-@attribute lemma_adj_ttr numeric
-@attribute lemma_adv_ttr numeric
-@attribute honore numeric
-@attribute maas numeric
-@attribute mtld numeric
-@attribute flesch_kincaid numeric
-@attribute flesch numeric
-@attribute dale_chall numeric
-@attribute smog numeric
-@attribute num_past_incidence numeric
-@attribute num_pres_incidence numeric
-@attribute num_future_incidence numeric
-@attribute num_indic_incidence numeric
-@attribute num_impera_incidence numeric
-@attribute num_past_irregular_mean numeric
-@attribute num_personal_pronouns_incidence numeric
-@attribute num_first_pers_pron_incidence numeric
-@attribute num_first_pers_sing_pron_incidence numeric
-@attribute num_third_pers_pron_incidence numeric
-@attribute min_wf_per_sentence numeric
-@attribute num_rare_nouns_4_incidence numeric
-@attribute num_rare_adj_4_incidence numeric
-@attribute num_rare_verbs_4_incidence numeric
-@attribute num_rare_advb_4_incidence numeric
-@attribute mean_rare_4 numeric
-@attribute mean_distinct_rare_4 numeric
-@attribute num_a1_words_incidence numeric
-@attribute num_a2_words_incidence numeric
-@attribute num_b1_words_incidence numeric
-@attribute num_b2_words_incidence numeric
-@attribute num_c1_words_incidence numeric
-@attribute num_content_words_not_a1_c1_words_incidence numeric
-@attribute num_lexic_words_incidence numeric
-@attribute num_noun_incidence numeric
-@attribute num_adj_incidence numeric
-@attribute num_adv_incidence numeric
-@attribute num_verb_incidence numeric
-@attribute mean_depth_per_sentence numeric
-@attribute num_subord_incidence numeric
-@attribute num_rel_subord_incidence numeric
-@attribute mean_vp_per_sentence numeric
-@attribute mean_np_per_sentence numeric
-@attribute num_pass_mean numeric
-@attribute agentless_passive_density_incidence numeric
-@attribute negation_density_incidence numeric
-@attribute gerund_density_incidence numeric
-@attribute infinitive_density_incidence numeric
-@attribute all_connectives_incidence numeric
-@attribute causal_connectives_incidence numeric
-@attribute logical_connectives_incidence numeric
-@attribute adversative_connectives_incidence numeric
-@attribute temporal_connectives_incidence numeric
-@attribute conditional_connectives_incidence numeric
-@attribute similarity_adjacent_mean numeric
-@attribute similarity_pairs_par_mean numeric
-@attribute similarity_adjacent_par_mean numeric
-@attribute similarity_adjacent_std numeric
-@attribute similarity_pairs_par_std numeric
-@attribute similarity_adjacent_par_std numeric
 @attribute level numeric
 
 @data
 
-1.008,4.6667,1.008,1.8,19.3333,4.389,4.0893,2.5,222.6667,1.5652,4.5,0.6667,7.375,21.6111,4.389,0.9798,79.7134,2.3745,2.2291,10.2964,2.3745,0.125,0.1667,1,1,0.125,0.1667,0.0182,0.0315,0.0265,0.0384,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-1.2391,4.4167,1.2391,3,25.1667,4.2508,4.01,3.6667,177.75,1.2308,4.3529,0,6.1667,27.75,4.2508,1.5811,83.4684,2.3832,2.1507,11.833,2.3832,0.25,0.4118,1,1,0.25,0.4118,0.032,0.0272,0.0387,0.0307,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-1.1901,5.9333,1.1901,5,25.1333,4.4562,4.2149,3.2667,231.4667,2.2174,6.0556,0,8.3846,27.6667,4.4562,0.8165,94.0403,2.5934,2.4493,16.1521,2.5934,0.25,0.1935,1,0.9677,0.25,0.1935,0.0303,0.0373,0.0224,0.0301,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0.942,4.3571,0.942,2.3333,17.5,4.4571,4.2653,2.5714,140.6429,1.5,4.7692,0,8.8571,20.0714,4.4571,1.7951,63.0971,2.7351,2.5792,5.2978,2.7351,0.25,0.1579,1,1,0.375,0.2105,0.0271,0.0372,0.0175,0.0306,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0.99,3.1667,0.99,1.8462,14.0417,4.2246,4.1138,1.7083,199.3333,1.3103,2.1176,0,7.2,15.75,4.2246,1.0263,67.3415,2.3549,2.2238,6.7593,2.3549,0.4545,0.2941,1,0.8235,0.4545,0.2941,0.0724,0.0953,0.0508,0.0834,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-1.0755,2.9333,1.0755,2.1429,11.9333,4.7907,4.6221,1.5,260.3667,1.3529,4.1739,0,7.3846,14.0333,4.7907,1.1249,64.263,2.9368,2.7549,9.803,2.9368,0.125,0.0769,1,0.7692,0.125,0.0769,0.0169,0.0395,0.0104,0.0321,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
-1.0645,1.3913,1.0645,2.0909,9.2609,4.7286,4.6571,1.087,115.3043,0.6667,3.95,0.8,7.1,10.8696,4.7286,1.0833,43.4373,2.7199,2.5591,9.2045,2.7199,0.0833,0.0526,1,0.7895,0.0833,0.0526,0.0064,0.0213,0.0071,0.021,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
-1.3111,3.9167,1.3111,1.5,12.0833,4.7083,4.7083,1,107.9167,0.5,0,0,0,13.8333,4.7083,0.7071,40.0759,2.5897,2.5573,7.2667,2.5897,0.25,0.2,1,1,0.25,0.2,0.0125,0.0217,0.01,0.02,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
-0.972,2.2857,0.972,3.5,8.7857,4.4121,4.3462,1.0952,225.9286,1.5455,3,0,9,10.6429,4.4121,1.7559,56.256,2.6809,2.5626,7.184,2.6809,0.0667,0.0282,1,0.7887,0.0667,0.0282,0.026,0.0601,0.0233,0.0573,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
-1.2547,3.7778,1.2547,1.8,12.963,4.7011,4.3534,1.4815,240.3333,1.0435,4.5833,0,6.875,15.8519,4.7011,0.7483,66.0984,2.7735,2.5015,8.5881,2.7735,0.0833,0.0667,1,1,0.0833,0.0667,0.0042,0.0138,0.0033,0.0125,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+5,2,15,1.416,1.008,4.6667,3.4778,822.5475,0.0575,3,6.9444,359.1954,155.1724,5.3333,77.1862,76.2579,1.8,19.3333,4.389,4.0893,1.8477,3.5,2.2778,4.988,6.0328,1.7333,7.4348,0.75,6.5556,6.6186,26.1438,26.6667,0.9798,10.2578,2.3745,2.2291,0.9017,4.3744,1.8637,51.7241,28.7356,0,68.9655,8.6207,5.7471,60.3448,5.7471,31.6092,74.7126,45.977,40.2299,0,106.3218,155.1724,201.1494,17.2414,40.2299,43.1034,34.4828,439.6552,114.9425,31.6092,51.7241,14.3678,17.2414,0,54.5977,14.3678,45.977,0,114.9425,91.954,75.1259,76.6284,0.4397,0.2011,0.1552,0.0402,0.0431,14.3678,0.5115,0.7429,0.8333,1,0.6,0.7941,0.6236,0.7286,0.6481,1,0.6,0.7442,0.0789,0.125,0.1667,0.2941,0.2222,0.1176,0.1307,0.0143,0.0268,0.0141,0.0299,0
+7,3,20,1.6739,1.2391,4.4167,2.7817,831.3525,0.0558,3.8333,7.6667,305.6478,152.8239,5.9167,88.3638,69.4278,3,25.0833,4.2508,4.01,1.8638,4.6667,2.6667,5.04,6.62,2.1,7.75,0.3684,9.0833,6.4404,20.1389,25,1.5811,11.4489,2.3832,2.1507,0.9212,4.0714,2.1393,39.8671,13.289,0,59.8007,6.6445,6.6445,49.8339,6.6445,23.2558,86.3787,63.1229,6.6445,0,106.3123,152.8239,196.0133,26.5781,69.7674,59.8007,23.2558,478.4053,106.3123,19.9336,63.1229,13.289,9.9668,0,23.2558,19.9336,53.1561,0,96.3455,93.0233,66.9066,83.0565,0.4784,0.196,0.1528,0.0698,0.0598,6.6445,0.5349,0.7288,0.8913,0.8095,0.6111,0.7602,0.5615,0.678,0.6957,0.7619,0.5556,0.6728,0.1194,0.25,0.4118,0.4545,0.3636,0.2727,0.2879,0.0289,0.0249,0.025,0.0311,0
+5,2,26,1.6281,1.1901,5.9333,2.886,895.1695,0.0495,3.9333,8.0667,320.9549,156.4987,6.2,99.621,67.8884,5,25.1333,4.4562,4.2149,1.8886,4.2667,2.5333,5.0556,6.1594,1.9474,7.76,0.4545,9.0667,6.7426,22.6744,25.1799,0.8165,14.6782,2.5934,2.4493,1.0057,5.4707,2.2719,39.7878,7.9576,0,66.313,18.5676,2.6525,47.7454,7.9576,37.1353,84.8806,29.1777,34.4828,0,87.5332,156.4987,196.2865,23.8727,53.0504,50.3979,13.2626,456.2334,92.8382,21.2202,42.4403,10.6101,15.9151,2.6525,39.7878,10.6101,47.7454,5.305,103.4483,92.8382,60.1443,66.7902,0.4562,0.1963,0.1565,0.0531,0.0504,5.305,0.5438,0.7973,0.8644,0.85,0.6316,0.7858,0.6021,0.7568,0.7119,0.75,0.6316,0.7126,0.1084,0.25,0.1935,0.2857,0.2381,0.2143,0.1714,0.0279,0.0354,0.015,0.0259,0
+3,6,25,1.058,0.942,4.3571,3.04,942.3933,0.0511,3.6429,4.9286,281.6327,208.1633,4.8571,88.9038,74.3778,2.3333,17.5,4.4571,4.2653,1.9102,3.5714,2.5714,4.6027,5.7455,2.0556,7.5405,0.4167,6.5714,6.8913,18.3333,21.5686,1.7951,4.9678,2.7351,2.5792,1.0767,1.8406,2.2958,57.1429,24.4898,0,85.7143,0,0,69.3878,16.3265,61.2245,97.9592,48.9796,40.8163,0,122.449,208.1633,183.6735,24.4898,28.5714,69.3878,20.4082,489.7959,89.7959,20.4082,36.7347,4.0816,28.5714,0,8.1633,4.0816,73.4694,4.0816,89.7959,89.7959,74.8298,88.0351,0.4898,0.1837,0.2082,0.0286,0.0694,8.1633,0.5796,0.7778,0.9608,0.7143,0.8235,0.8191,0.6122,0.7556,0.7843,0.7143,0.7647,0.7547,0.1176,0.25,0.1579,0.4615,0.2747,0.3077,0.1429,0.0285,0.0381,0.0147,0.0304,0
+2,1,20,1.18,0.99,3.1667,3.6075,640.3329,0.0726,2.5,4.1667,296.7359,178.0415,4.5833,74.1895,82.1317,1.8462,14.0417,4.2246,4.1138,1.8398,2.7083,1.7083,3.7841,5.7895,1.3333,7.8462,0.75,4.875,6.1709,11.5385,17.7083,1.0263,6.5985,2.3549,2.2238,0.9765,2.1854,2.1335,71.2166,38.5757,0,89.0208,8.9021,8.9021,59.3472,11.8694,23.7389,74.184,35.6083,41.543,0,112.7596,178.0415,160.2374,38.5757,47.4777,77.1513,26.7062,462.908,127.5964,32.6409,41.543,23.7389,29.6736,0,8.9021,2.9674,41.543,0,53.4125,50.4451,34.2389,52.5469,0.4629,0.1602,0.178,0.0475,0.0772,20.7715,0.451,0.5556,0.75,0.6875,0.4231,0.604,0.5905,0.5,0.6167,0.6875,0.4231,0.5568,0.194,0.4545,0.2941,0.4783,0.2609,0.3043,0.1812,0.0545,0.0815,0.0294,0.0516,0
+2,2,33,1.2453,1.0755,2.9333,1.734,821.3305,0.0567,2.0667,3.5333,307.2464,179.7101,4.2667,70.5289,75.6317,2.1429,11.5,4.7907,4.6221,1.9913,2.5,2.5333,4.9091,6.5,1.6667,8.0263,0.3913,4.5667,7.5036,31.25,29.8507,1.1249,8.8006,2.9368,2.7549,1.1125,3.2628,2.3865,86.9565,40.5797,0,34.7826,2.8986,2.8986,26.087,8.6957,28.9855,81.1594,66.6667,43.4783,0,136.2319,179.7101,185.5072,31.8841,75.3623,69.5652,26.087,510.1449,75.3623,2.8986,46.3768,0,26.087,0,57.971,43.4783,52.1739,5.7971,159.4203,115.942,90.5797,86.5238,0.5101,0.1855,0.1797,0.0754,0.0696,14.4928,0.5159,0.7344,0.8548,0.6923,0.6667,0.737,0.6319,0.6875,0.5806,0.7692,0.625,0.6656,0.1467,0.125,0.0769,0.069,0.0805,0.069,0.0667,0.0093,0.0305,0.01,0.0318,1
+3,3,25,1.2258,1.0645,1.3913,2.7535,786.9215,0.0466,1.8261,2.6957,298.0769,201.9231,3.7826,90.4974,77.0387,2.0909,9.0435,4.7286,4.6571,2.0096,2.087,1.8261,4.3846,6,1.2222,7.72,0.4,3.4783,7.275,24.0741,27.7108,1.0833,8.9125,2.7199,2.5591,1.1351,3.2285,2.302,110.5769,52.8846,0,62.5,33.6538,33.6538,24.0385,14.4231,43.2692,105.7692,24.0385,86.5385,0,120.1923,201.9231,182.6923,4.8077,67.3077,67.3077,9.6154,519.2308,81.7308,38.4615,9.6154,9.6154,19.2308,4.8077,57.6923,9.6154,57.6923,0,125,110.5769,115.7409,133.225,0.5192,0.1827,0.2019,0.0673,0.0673,0,0.6202,0.7368,0.8333,0.8571,0.7143,0.7854,0.6202,0.6842,0.6905,0.8571,0.7143,0.7365,0.0256,0.0833,0.0526,0.0909,0.0751,0.0909,0.0672,0.0085,0.0275,0.0102,0.0401,1
+2,1,14,1.5778,1.3111,3.9167,2.8842,862.1344,0.044,2,3.75,314.6853,167.8322,4,80.7148,73.8458,1.5,11.9167,4.7083,4.7083,2.014,2,1.9167,5.2439,6.625,1.4,7.5926,0.5,4.25,7.0784,18.75,20.3125,0.7071,7.0173,2.5897,2.5573,1.0241,2.1262,1.9387,83.9161,55.9441,0,55.9441,0,0,48.951,6.993,27.972,48.951,111.8881,13.986,0,118.8811,167.8322,258.7413,0,83.9161,48.951,55.9441,559.4406,97.9021,13.986,34.965,13.986,34.965,0,48.951,13.986,27.972,13.986,104.8951,90.9091,131.1189,142.0455,0.5594,0.2587,0.1678,0.0839,0.049,6.993,0.6713,0.7027,0.9167,0.8333,1,0.8632,0.7133,0.6757,0.8333,0.75,1,0.8147,?,0.25,0.2,0.4545,0.2424,0.3636,0.2121,0.0358,0.056,0.0223,0.0407,1
+1,1,30,1.2523,0.972,2.2857,2.8283,769.5502,0.0542,1.619,2.5476,300.5618,191.0112,3.4286,77.5239,86.1156,3.5,8.4762,4.4121,4.3462,1.868,2.0952,2.1667,6.4615,6.381,1.75,7.9574,0.3333,3.1429,6.7727,24.4681,32.3077,1.7559,6.2383,2.6809,2.5626,1.0233,2.3862,2.5423,117.9775,33.7079,2.809,61.7978,8.427,5.618,22.4719,2.809,36.5169,84.2697,25.2809,70.2247,0,129.2135,191.0112,188.2022,2.809,73.0337,75.8427,8.427,528.0899,87.0787,22.4719,36.5169,5.618,19.6629,2.809,44.9438,25.2809,58.9888,0,129.2135,117.9775,68.7306,90.752,0.5281,0.1882,0.191,0.073,0.0758,25.2809,0.5253,0.6716,0.7353,0.7692,0.5556,0.6829,0.573,0.6269,0.5735,0.6923,0.5556,0.6121,0.0147,0.0667,0.0282,0.0976,0.0569,0.0732,0.036,0.0324,0.0736,0.0139,0.0436,1
+1,1,37,1.6604,1.2547,3.7778,2.6556,908.9248,0.0641,2.1111,3.9259,303.7249,163.3238,4.4815,63.4563,77.2659,1.8,12.9259,4.7011,4.3534,1.9398,2.4815,2.9259,6.3049,6.4068,2.4667,7.75,0.5714,4.5926,7.6048,26.1628,31.1475,0.7483,7.63,2.7735,2.5015,1.0835,3.2002,2.1206,77.3639,42.9799,0,17.192,0,0,17.192,0,37.2493,80.2292,40.1146,14.3266,0,88.8252,163.3238,191.9771,17.192,74.4986,63.0372,22.9226,492.8367,65.9026,8.596,37.2493,2.8653,17.192,0,34.384,14.3266,80.2292,0,128.9398,108.8825,74.965,89.2479,0.4928,0.192,0.1633,0.0745,0.063,14.3266,0.4814,0.7463,0.7895,0.7692,0.4091,0.6785,0.5415,0.7164,0.614,0.6923,0.4091,0.6079,0.0822,0.0833,0.0667,0.0769,0.0684,0.0769,0.0712,0.0104,0.0258,0.0182,0.0409,1

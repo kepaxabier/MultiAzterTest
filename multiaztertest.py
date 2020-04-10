@@ -341,7 +341,10 @@ class Document:
         i = self.indicators
         ts = i['num_sentences']
         tps = i['num_words_more_3_syl']
-        self.indicators['smog'] = round(1.0430 * math.sqrt(30 * tps / ts) + 3.1291, 4)
+        try:
+            self.indicators['smog'] = round(1.0430 * math.sqrt(30 * tps / ts) + 3.1291, 4)
+        except ZeroDivisionError:
+            self.indicators['smog'] =0
 
     def get_num_hapax_legomena(self):
         num_hapax_legonema = 0
@@ -354,12 +357,18 @@ class Document:
         n = self.indicators['num_words']
         v = len(self.aux_lists['different_forms'])
         v1 = self.get_num_hapax_legomena()
-        self.indicators['honore'] = round(100 * ((np.log10(n)) / (1 - (v1 / v))), 4)
+        try:
+            self.indicators['honore'] = round(100 * ((np.log10(n)) / (1 - (v1 / v))), 4)
+        except ZeroDivisionError:
+            self.indicators['honore'] = 0
 
     def calculate_maas(self):
         n = self.indicators['num_words']
         v = len(self.aux_lists['different_forms'])
-        self.indicators['maas'] = round((np.log10(n) - np.log10(v)) / (np.log10(v) ** 2), 4)
+        try:
+            self.indicators['maas'] = round((np.log10(n) - np.log10(v)) / (np.log10(v) ** 2), 4)
+        except ZeroDivisionError:
+            self.indicators['maas'] = 0
 
     # Noun overlap measure is binary (there either is or is not any overlap between a pair of adjacent sentences in a text ).
     # Noun overlap measures the proportion of sentences in a text for which there are overlapping nouns,
@@ -1155,7 +1164,10 @@ class Document:
         i['words_length_no_stopwords_std'] = round(float(np.std(self.aux_lists['words_length_no_stopwords_list'])), 4)
     @staticmethod
     def get_incidence(indicador, num_words):
-        return round(((1000 * indicador) / num_words), 4)
+        try:
+            return round(((1000 * indicador) / num_words), 4)
+        except ZeroDivisionError:
+            return 0
 
     def calculate_all_incidence(self):
         i = self.indicators
@@ -1712,7 +1724,13 @@ class Word:
     def is_agentless(self, frase):
         # Si el siguiente indice esta dentro del rango de la lista
         if int(self.index) < len(frase.word_list):
-            siguiente = frase.word_list[int(self.index) + 1].text.lower()
+            #print(self.text)
+            #print(self.index)
+            #print(frase.word_list)
+            #print(str(len(frase.word_list)))
+            #print(frase.print())
+            #print(frase.word_list[int(self.index)].text) #.text.lower())
+            siguiente = frase.word_list[int(self.index)].text.lower()
             if siguiente == 'by' or siguiente == 'por':
                 return False
             else:
