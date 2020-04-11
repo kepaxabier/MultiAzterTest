@@ -1,0 +1,124 @@
+
+Shallow or descriptive measures
+Number of words (total): 110.0
+Number of distinct words (total): 83
+Number of words with punctuation (total): 134.0
+Number of paragraphs (total): 4
+Number of paragraphs (incidence per 1000 words): 36.3636
+Number of sentences (total): 10.0
+Number of sentences (incidence per 1000 words): 90.9091
+Length of paragraphs (mean): 2.5
+Standard deviation of length of paragraphs: 1.118
+Number of words (length) in sentences (mean): 11.0
+Number of words (length) in sentences (standard deviation): 5.4222
+Number of words (length) of sentences without stopwords (mean): 6.5
+Number of words (length) of sentences without stopwords (standard deviation): 3.7483
+Mean number of syllables (length) in words: 2.6818
+Standard deviation of the mean number of syllables in words: 1.2929
+Mean number of letters (length) in words: 6.27
+Standard deviation of number of letters in words: 2.8665
+Mean number of letters (length) in words without stopwords: 7.5846
+Standard deviation of the mean number of letter in words without stopwords: 2.6364
+Mean number of letters (length) in lemmas: 5.75
+Standard deviation of letters (length) in lemmas: 2.2907
+Lexical Richness/Lexical Density
+Lexical Density: 0.6545
+Noun Density: 0.3545
+Verb Density: 0.2
+Adjective Density: 0.0455
+Adverb Density: 0.0545
+Ratio of proper nouns for all nouns (proper and common nouns): 0.0714
+STTR (Simple Type-Token Ratio) : 0.7545
+CTTR (Content Type-Token Ratio): 0.8698
+NTTR (Noun Type-Token Ratio): 0.9487
+VTTR (Verb Type-Token Ratio): 0.8636
+AdjTTR (Adj Type-Token Ratio): 1.0
+AdvTTR (Adv Type-Token Ratio): 0.6667
+LSTTR (Lemma Simple Type-Token Ratio): 0.7
+LCTTR (Lemma Content Type-Token Ratio): 0.689
+LNTTR (Lemma Noun Type-Token Ratio): 0.7436
+LVTTR (Lemma Verb Type-Token Ratio): 0.5455
+LAdjTTR (Lemma Adj Type-Token Ratio): 0.8
+LAdvTTR (Lemma Adv Type-Token Ratio): 0.6667
+Honore Lexical Density: 1210.2542
+Maas Lexical Density: 0.0332
+Measure of Textual Lexical Diversity (MTLD): 181.44
+Number of verbs in indicative mood: 7.0
+Number of verbs in indicative mood (incidence per 1000 words): 63.6364
+Number of verbs in imperative mood: 0.0
+Number of verbs in imperative mood (incidence per 1000 words): 0.0
+Number of personal pronouns: 0.0
+Incidence score of pronouns (per 1000 words): 0.0
+Minimum word frequency per sentence (mean): 2728.1
+Number of rare nouns: 3.0
+Number of rare nouns (incidence per 1000 words): 27.2727
+Number of rare adjectives: 0.0
+Number of rare adjectives (incidence per 1000 words): 0.0
+Number of rare verbs: 2.0
+Number of rare verbs (incidence per 1000 words): 18.1818
+Number of rare adverbs: 2.0
+Number of rare adverbs (incidence per 1000 words): 18.1818
+Number of rare content words: 7.0
+Number of rare content words (incidence per 1000 words): 63.6364
+Number of distinct rare content words: 5.0
+Number of distinct rare content words (incidence per 1000 words): 45.4545
+Mean of rare lexical words: 9.7222
+Mean of distinct rare lexical words: 16.6667
+Syntactic Features / POS ratios
+Number of content words: 72.0
+Number of content words (incidence per 1000 words): 654.5455
+Number of nouns: 39.0
+Number of nouns (incidence per 1000 words): 354.5455
+Number of proper nouns: 3.0
+Number of proper nouns (incidence per 1000 words): 27.2727
+Number of adjectives: 5.0
+Number of adjectives (incidence per 1000 words): 45.4545
+Number of adverbs: 6.0
+Number of adverbs (incidence per 1000 words): 54.5455
+Number of verbs: 22.0
+Number of verbs (incidence per 1000 words): 200.0
+Left embeddedness (Mean of number of words before the main verb) (SYNLE): 4.0
+Number of decendents per noun phrase (mean): 0.8
+Number of modifiers per noun phrase (mean) (SYNNP): 0.675
+Mean of the number of levels of dependency tree (Depth): 4.2
+Number of subordinate clauses: 6.0
+Number of subordinate clauses (incidence per 1000 words): 54.5455
+Punctuation marks per sentence (mean): 2.4
+Number of propositions: 21.0
+Mean of the number of propositions per sentence: 2.1
+Mean of the number of VPs per sentence: 2.2
+Mean of the number of NPs per sentence: 4.0
+Noun phrase density, incidence (DRNP): 363.6364
+Verb phrase density, incidence (DRVP): 200.0
+Number of negative words: 2.0
+Number of negative words (incidence per 1000 words): 18.1818
+Number of verbs in infinitive form: 2.0
+Number of verbs in infinitive form (incidence per 1000 words): 18.1818
+Mean values of polysemy in the WordNet lexicon: 4.3939
+Mean hypernym values of verbs in the WordNet lexicon: 1.9091
+Mean hypernym values of nouns in the WordNet lexicon: 8.3125
+Mean hypernym values of nouns and verbs in the WordNet lexicon: 5.7037
+Referential cohesion
+Noun overlap, adjacent sentences, binary, mean (CRFNOl): 0.1667
+Noun overlap, all of the sentences in a paragraph or text, binary, mean (CRFNOa): 0.1
+Argument overlap, adjacent sentences, binary, mean (CRFAOl): 0.1111
+Argument overlap, all of the sentences in a paragraph or text, binary, mean (CRFAOa): 0.0222
+Stem overlap, adjacent sentences, binary, mean (CRFSOl): 0.1111
+Stem overlap, all of the sentences in a paragraph or text, binary, mean (CRFSOa): 0.0222
+Content word overlap, adjacent sentences, proportional, mean (CRFCWO1): 0.0588
+Content word overlap, adjacent sentences, proportional, standard deviation (CRFCWO1d): 0.0765
+Content word overlap, all of the sentences in a paragraph or text, proportional, mean (CRFCWOa): 0.0167
+Content word overlap, all of the sentences in a paragraph or text, proportional, standard deviation (CRFCWOad): 0.0444
+Connectives
+Number of connectives: 19.0
+Number of connectives (incidence per 1000 words): 172.7273
+Causal connectives: 1.0
+Causal connectives (incidence per 1000 words): 9.0909
+Temporal connectives:  7.0
+Temporal connectives (incidence per 1000 words):  63.6364
+Conditional connectives: 0.0
+Conditional connectives (incidence per 1000 words): 0.0
+Logical connectives:  9.0
+Logical connectives (incidence per 1000 words):  81.8182
+Adversative/contrastive connectives: 2.0
+Adversative/contrastive connectives (incidence per 1000 words): 18.1818

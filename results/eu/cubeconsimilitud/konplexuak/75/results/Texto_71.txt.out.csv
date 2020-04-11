@@ -1,0 +1,131 @@
+
+Shallow or descriptive measures
+Number of words (total): 123.0
+Number of distinct words (total): 93
+Number of words with punctuation (total): 148.0
+Number of paragraphs (total): 5
+Number of paragraphs (incidence per 1000 words): 40.6504
+Number of sentences (total): 11.0
+Number of sentences (incidence per 1000 words): 89.4309
+Length of paragraphs (mean): 2.2
+Standard deviation of length of paragraphs: 0.7483
+Number of words (length) in sentences (mean): 11.1818
+Number of words (length) in sentences (standard deviation): 5.7496
+Number of words (length) of sentences without stopwords (mean): 7.7273
+Number of words (length) of sentences without stopwords (standard deviation): 4.1141
+Mean number of syllables (length) in words: 2.9512
+Standard deviation of the mean number of syllables in words: 1.3546
+Mean number of letters (length) in words: 6.4274
+Standard deviation of number of letters in words: 2.8142
+Mean number of letters (length) in words without stopwords: 7.4353
+Standard deviation of the mean number of letter in words without stopwords: 2.5916
+Mean number of letters (length) in lemmas: 5.7863
+Standard deviation of letters (length) in lemmas: 2.1714
+Lexical Richness/Lexical Density
+Lexical Density: 0.6504
+Noun Density: 0.3333
+Verb Density: 0.1707
+Adjective Density: 0.0976
+Adverb Density: 0.0488
+Ratio of proper nouns for all nouns (proper and common nouns): 0.1087
+STTR (Simple Type-Token Ratio) : 0.7561
+CTTR (Content Type-Token Ratio): 0.9091
+NTTR (Noun Type-Token Ratio): 0.7317
+VTTR (Verb Type-Token Ratio): 0.9048
+AdjTTR (Adj Type-Token Ratio): 1.0
+AdvTTR (Adv Type-Token Ratio): 1.0
+LSTTR (Lemma Simple Type-Token Ratio): 0.878
+LCTTR (Lemma Content Type-Token Ratio): 0.8673
+LNTTR (Lemma Noun Type-Token Ratio): 0.7073
+LVTTR (Lemma Verb Type-Token Ratio): 0.7619
+LAdjTTR (Lemma Adj Type-Token Ratio): 1.0
+LAdvTTR (Lemma Adv Type-Token Ratio): 1.0
+Honore Lexical Density: 1388.2941
+Maas Lexical Density: 0.0313
+Measure of Textual Lexical Diversity (MTLD): 166.7008
+Number of verbs in indicative mood: 5.0
+Number of verbs in indicative mood (incidence per 1000 words): 40.6504
+Number of verbs in imperative mood: 0.0
+Number of verbs in imperative mood (incidence per 1000 words): 0.0
+Number of personal pronouns: 0.0
+Incidence score of pronouns (per 1000 words): 0.0
+Minimum word frequency per sentence (mean): 18.8182
+Number of rare nouns: 5.0
+Number of rare nouns (incidence per 1000 words): 40.6504
+Number of rare adjectives: 0.0
+Number of rare adjectives (incidence per 1000 words): 0.0
+Number of rare verbs: 4.0
+Number of rare verbs (incidence per 1000 words): 32.5203
+Number of rare adverbs: 1.0
+Number of rare adverbs (incidence per 1000 words): 8.1301
+Number of rare content words: 10.0
+Number of rare content words (incidence per 1000 words): 81.3008
+Number of distinct rare content words: 8.0
+Number of distinct rare content words (incidence per 1000 words): 65.0407
+Mean of rare lexical words: 12.5
+Mean of distinct rare lexical words: 21.6216
+Syntactic Features / POS ratios
+Number of content words: 80.0
+Number of content words (incidence per 1000 words): 650.4065
+Number of nouns: 41.0
+Number of nouns (incidence per 1000 words): 333.3333
+Number of proper nouns: 5.0
+Number of proper nouns (incidence per 1000 words): 40.6504
+Number of adjectives: 12.0
+Number of adjectives (incidence per 1000 words): 97.561
+Number of adverbs: 6.0
+Number of adverbs (incidence per 1000 words): 48.7805
+Number of verbs: 21.0
+Number of verbs (incidence per 1000 words): 170.7317
+Left embeddedness (Mean of number of words before the main verb) (SYNLE): 4.1818
+Number of decendents per noun phrase (mean): 0.8182
+Number of modifiers per noun phrase (mean) (SYNNP): 0.6591
+Mean of the number of levels of dependency tree (Depth): 4.5455
+Number of subordinate clauses: 7.0
+Number of subordinate clauses (incidence per 1000 words): 56.9106
+Punctuation marks per sentence (mean): 2.2727
+Number of propositions: 25.0
+Mean of the number of propositions per sentence: 2.2727
+Mean of the number of VPs per sentence: 1.9091
+Mean of the number of NPs per sentence: 4.0
+Noun phrase density, incidence (DRNP): 357.7236
+Verb phrase density, incidence (DRVP): 170.7317
+Number of negative words: 1.0
+Number of negative words (incidence per 1000 words): 8.1301
+Number of verbs in infinitive form: 2.0
+Number of verbs in infinitive form (incidence per 1000 words): 16.2602
+Mean values of polysemy in the WordNet lexicon: 6.9355
+Mean hypernym values of verbs in the WordNet lexicon: 2.2222
+Mean hypernym values of nouns in the WordNet lexicon: 6.9375
+Mean hypernym values of nouns and verbs in the WordNet lexicon: 5.24
+Referential cohesion
+Noun overlap, adjacent sentences, binary, mean (CRFNOl): 0.3333
+Noun overlap, all of the sentences in a paragraph or text, binary, mean (CRFNOa): 0.25
+Argument overlap, adjacent sentences, binary, mean (CRFAOl): 0.3
+Argument overlap, all of the sentences in a paragraph or text, binary, mean (CRFAOa): 0.2909
+Stem overlap, adjacent sentences, binary, mean (CRFSOl): 0.3
+Stem overlap, all of the sentences in a paragraph or text, binary, mean (CRFSOa): 0.2909
+Content word overlap, adjacent sentences, proportional, mean (CRFCWO1): 0.0403
+Content word overlap, adjacent sentences, proportional, standard deviation (CRFCWO1d): 0.0568
+Content word overlap, all of the sentences in a paragraph or text, proportional, mean (CRFCWOa): 0.0236
+Content word overlap, all of the sentences in a paragraph or text, proportional, standard deviation (CRFCWOad): 0.0394
+Connectives
+Number of connectives: 10.0
+Number of connectives (incidence per 1000 words): 81.3008
+Causal connectives: 1.0
+Causal connectives (incidence per 1000 words): 8.1301
+Temporal connectives:  0.0
+Temporal connectives (incidence per 1000 words):  0.0
+Conditional connectives: 0.0
+Conditional connectives (incidence per 1000 words): 0.0
+Logical connectives:  8.0
+Logical connectives (incidence per 1000 words):  65.0407
+Adversative/contrastive connectives: 1.0
+Adversative/contrastive connectives (incidence per 1000 words): 8.1301
+Semantic overlap
+Semantic Similarity between adjacent sentences (mean): 0.6042
+Semantic Similarity between all possible pairs of sentences in a paragraph (mean): 0.571
+Semantic Similarity between adjacent paragraphs (mean): 0.5957
+Semantic Similarity between adjacent sentences (standard deviation): 0.1203
+Semantic Similarity between all possible pairs of sentences in a paragraph (standard deviation): 0.1098
+Semantic Similarity between adjacent paragraphs (standard deviation): 0.0791
