@@ -176,35 +176,84 @@ done
 }
 function obtenerdatosmultiaztertest()
 {
+#obtenerdatosmultiaztertest stanford consimilitud concontadores
 modelo=$1
+consim=$2
+concont=$3
 dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/en" #/[Test|Train]/[Adv-Txt|Ele-Txt|Int-Txt]/*.txt "
 cd /media/datos/Dropbox/ikerkuntza/metrix-env
 source bin/activate
 cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
-python3 multiaztertest.py -c -r -f  $dir/Train/Adv-Txt/10/Organs-adv.txt -l english -m $modelo -d /home/kepa
-#for i in 0 `seq 0 5 150`
-#do
-   #sin similitud
-   #python3 multiaztertest.py -c -r -f  $dir/Train/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
-   #python3 multiaztertest.py -c -r -f  $dir/Train/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
-   #python3 multiaztertest.py -c -r -f  $dir/Train/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
-   #con similitud
-   #python3 multiaztertest.py -s -c -r -f  $dir/Train/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
-   #python3 multiaztertest.py -s -c -r -f  $dir/Train/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
-   #python3 multiaztertest.py -s -c -r -f  $dir/Train/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa	
-#done
-#for i in `seq 0 5 35`
-#do
-# sin similitud
-   #python3 multiaztertest.py -c -r -f  $dir/Test/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
-   #python3 multiaztertest.py -c -r -f  $dir/Test/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
-   #python3 multiaztertest.py -c -r -f  $dir/Test/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
-# con similitud
-#   python3 multiaztertest.py -s -c -r -f  $dir/Test/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
-#   python3 multiaztertest.py -s -c -r -f  $dir/Test/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
-#   python3 multiaztertest.py -s -c -r -f  $dir/Test/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa	
-#done
+#python3 multiaztertest.py -c -r -f  $dir/Train/Adv-Txt/10/Organs-adv.txt -l english -m $modelo -d /home/kepa
+for i in `seq 0 5 150`
+do
+   
+   if [[ "$consim" == "sinsimilitud" &&  "$concont" == "sincontadores" ]]
+	then
+	#sinsimilitud y sincontadores  
+   	python3 multiaztertest.py -c -r -f  $dir/Train/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -c -r -f  $dir/Train/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -c -r -f  $dir/Train/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   elif [[ "$consim" == "consimilitud" &&  "$concont" == "sincontadores" ]]
+	then
+   	#consimilitud y sincontadores
+   	python3 multiaztertest.py -s -c -r -f  $dir/Train/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -s -c -r -f  $dir/Train/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -s -c -r -f  $dir/Train/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   elif [[ "$consim" == "consimilitud" &&  "$concont" == "concontadores" ]]
+	then
+   	#consimilitud y concontadores
+   	python3 multiaztertest.py -s -c -f  $dir/Train/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -s -c -f  $dir/Train/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -s -c -f  $dir/Train/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   else
+	#sinsimilitud y concontadores
+   	python3 multiaztertest.py -c -f  $dir/Train/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -c -f  $dir/Train/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -c -f  $dir/Train/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   fi	
+   mkdir $dir/Train/Adv-Txt/$i/results/$modelo$consim$concont
+   mkdir $dir/Train/Int-Txt/$i/results/$modelo$consim$concont
+   mkdir $dir/Train/Ele-Txt/$i/results/$modelo$consim$concont
+   cp $dir/Train/Adv-Txt/$i/results/* $dir/Train/Adv-Txt/$i/results/$modelo$consim$concont
+   cp $dir/Train/Int-Txt/$i/results/* $dir/Train/Int-Txt/$i/results/$modelo$consim$concont
+   cp $dir/Train/Ele-Txt/$i/results/* $dir/Train/Ele-Txt/$i/results/$modelo$consim$concont
+done
+for i in `seq 0 5 35`
+do
+   if [[ "$consim" == "sinsimilitud" &&  "$concont" == "sincontadores" ]]
+	then
+	#sinsimilitud y sincontadores  
+   	python3 multiaztertest.py -c -r -f  $dir/Test/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -c -r -f  $dir/Test/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -c -r -f  $dir/Test/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   elif [[ "$consim" == "consimilitud" &&  "$concont" == "sincontadores" ]]
+	then
+   	#consimilitud y sincontadores
+   	python3 multiaztertest.py -s -c -r -f  $dir/Test/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -s -c -r -f  $dir/Test/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -s -c -r -f  $dir/Test/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   elif [[ "$consim" == "consimilitud" &&  "$concont" == "concontadores" ]]
+	then
+   	#consimilitud y concontadores
+   	python3 multiaztertest.py -s -c -f  $dir/Test/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -s -c -f  $dir/Test/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -s -c -f  $dir/Test/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   else
+	#sinsimilitud y concontadores
+   	python3 multiaztertest.py -c -f  $dir/Test/Adv-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -c -f  $dir/Test/Int-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -c -f  $dir/Test/Ele-Txt/$i/*.txt -l english -m $modelo -d /home/kepa
+   fi
+   mkdir $dir/Test/Adv-Txt/$i/results/$modelo$consim$concont
+   mkdir $dir/Test/Int-Txt/$i/results/$modelo$consim$concont
+   mkdir $dir/Test/Ele-Txt/$i/results/$modelo$consim$concont
+   cp $dir/Test/Adv-Txt/$i/results/* $dir/Test/Adv-Txt/$i/results/$modelo$consim$concont
+   cp $dir/Test/Int-Txt/$i/results/* $dir/Test/Int-Txt/$i/results/$modelo$consim$concont
+   cp $dir/Test/Ele-Txt/$i/results/* $dir/Test/Ele-Txt/$i/results/$modelo$consim$concont
+done
 }
+
 function recogerlosresultadosmultiaztertest()
 {
 #input:$dir/Train/[Adv-Txt|Ele-Txt|Int-Txt]/$i/results/full_results_aztertest.csv 
@@ -304,7 +353,7 @@ function fin()
 }
 ### Main ###
 opcionmenuppal=0
-while test $opcionmenuppal -ne 10
+while test $opcionmenuppal -ne 16
 do
 	#Muestra el menu
        	echo -e "1 Obtener datos cohmetrix \n"
@@ -313,12 +362,15 @@ do
 	echo -e "4 prueba obtener datos multiaztertest stanford\n"
         echo -e "5 prueba obtener datos aztertest cube\n"
         echo -e "6 prueba obtener datos multiaztertest cube\n"
-        echo -e "7 Obtener datos multiaztertest \n"
-	echo -e "8 wekarekinprobatu \n"
-	echo -e "8 Python: Realizar 10-Fold CV con feature selection y busqueda del mejor algoritmo y sus meta-parametros, finalmente guardar el mejor modelo y el mejor selector de características \n"
-	echo -e "8 Python cargar el mejor modelo y selector de características, para probar con el test final\n"
-        echo -e "8 Obtener datos multiaztertest y mostrar predicción del modelo \n"
-        echo -e "10 Exit \n"
+        echo -e "7 Obtener datos multiaztertest stanford sin similitud y sin contadores\n"
+        echo -e "8 Obtener datos multiaztertest cube sin similitud y sin contadores\n"
+        echo -e "9 Obtener datos multiaztertest stanford con similitud y con contadores\n"
+        echo -e "10 Obtener datos multiaztertest cube con similitud y con contadores\n"
+	echo -e "11 wekarekinprobatu \n"
+	echo -e "12 Python: Realizar 10-Fold CV con feature selection y busqueda del mejor algoritmo y sus meta-parametros, finalmente guardar el mejor modelo y el mejor selector de características \n"
+	echo -e "13 Python cargar el mejor modelo y selector de características, para probar con el test final\n"
+        echo -e "14 Obtener datos multiaztertest y mostrar predicción del modelo \n"
+        echo -e "16 Exit \n"
 	read -p "Elige una opcion:" opcionmenuppal
 	case $opcionmenuppal in
                        	1) obtenerdatoscohmetrix;;
@@ -327,15 +379,16 @@ do
 			4) pruebaobtenerdatosmultiazterteststanford;;
 			5) pruebaobtenerdatosaztertestcube;;
 			6) pruebaobtenerdatosmultiaztertestcube;;
-			7) read -p "Introduce el modelo stanford o cube:" modelo
-			   #echo "$modelo";;
-			   obtenerdatosmultiaztertest $modelo;;
-			8) wekarekinprobatu;;
-			8) generarmodelopython;;
-			8) testearmodelopython;;
-			8) weka;;
-                        9) obtenerdatosestadisticos;;
-			10) fin;;
+			7) obtenerdatosmultiaztertest stanford sinsimilitud sincontadores;;
+			8) obtenerdatosmultiaztertest cube sinsimilitud sincontadores;;
+			9) obtenerdatosmultiaztertest stanford consimilitud concontadores;;
+			10) obtenerdatosmultiaztertest cube consimilitud concontadores;;
+			11) wekarekinprobatu;;
+			12) generarmodelopython;;
+			13) testearmodelopython;;
+			14) weka;;
+                        15) obtenerdatosestadisticos;;
+			16) fin;;
 			*) ;;
 
 	esac 

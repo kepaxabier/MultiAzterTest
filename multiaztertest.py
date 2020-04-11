@@ -31,6 +31,7 @@ import pandas as pd
 import pickle
 from sklearn.externals import joblib
 from gensim.models import FastText, KeyedVectors
+import gensim
 
 #logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
@@ -771,17 +772,32 @@ class Document:
             # }
             self.num_features = 512
             if self.language == "english":
-                self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/en',
-                                                               binary=False)
+                # embedding_dict = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/en", binary=False)
+                # embedding_dict.save_word2vec_format("wordembeddings/orig2idf/en.bin", binary=True)
+                self.model = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/en.bin", binary=True)
+                # self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/en', binary=False)
                 self.index2word_set = set(self.model.wv.index2word)
             elif self.language == "basque":
-                self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/eu',
-                                                               binary=False)
+                # embedding_dict = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/eu", binary=False)
+                # embedding_dict.save_word2vec_format("wordembeddings/orig2idf/eu.bin", binary=True)
+                self.model = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/eu.bin", binary=True)
+                # self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/eu', binary=False)
                 self.index2word_set = set(self.model.wv.index2word)
             elif self.language == "spanish":
-                self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/es',
-                                                               binary=False)
+                # embedding_dict = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/es", binary=False)
+                # embedding_dict.save_word2vec_format("wordembeddings/orig2idf/es.bin", binary=True)
+                self.model = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/es.bin", binary=True)
+                # self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/es', binary=False)
                 self.index2word_set = set(self.model.wv.index2word)
+            #if self.language == "english":
+                #self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/en', binary=False)
+                #self.index2word_set = set(self.model.wv.index2word)
+            #elif self.language == "basque":
+                #self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/eu', binary=False)
+                #self.index2word_set = set(self.model.wv.index2word)
+            #elif self.language == "spanish":
+                #self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/es', binary=False)
+                #self.index2word_set = set(self.model.wv.index2word)
 
         for p in self.paragraph_list:
             self.aux_lists['sentences_per_paragraph'].append(len(p.sentence_list))  # [1,2,1,...]
