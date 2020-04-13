@@ -32,6 +32,8 @@ import pickle
 from sklearn.externals import joblib
 from gensim.models import FastText, KeyedVectors
 import gensim
+from numpy import dot
+from numpy.linalg import norm
 
 #logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
@@ -772,14 +774,14 @@ class Document:
             # }
             self.num_features = 512
             if self.language == "english":
-                # embedding_dict = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/en", binary=False)
-                # embedding_dict.save_word2vec_format("wordembeddings/orig2idf/en.bin", binary=True)
+                embedding_dict = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/en", binary=False)
+                embedding_dict.save_word2vec_format("wordembeddings/orig2idf/en.bin", binary=True)
                 self.model = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/en.bin", binary=True)
-                # self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/en', binary=False)
+                self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/en', binary=False)
                 self.index2word_set = set(self.model.wv.index2word)
             elif self.language == "basque":
-                # embedding_dict = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/eu", binary=False)
-                # embedding_dict.save_word2vec_format("wordembeddings/orig2idf/eu.bin", binary=True)
+                embedding_dict = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/eu", binary=False)
+                embedding_dict.save_word2vec_format("wordembeddings/orig2idf/eu.bin", binary=True)
                 self.model = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/eu.bin", binary=True)
                 # self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/eu', binary=False)
                 self.index2word_set = set(self.model.wv.index2word)
@@ -1096,8 +1098,13 @@ class Document:
         s2_afv = self.avg_feature_vector(s2.text, model=self.model,
                                          num_features=self.num_features,
                                          index2word_set=self.index2word_set)
-        sim = 1 - spatial.distance.cosine(s1_afv, s2_afv)
-        return sim
+
+        #sim = 1 - spatial.distance.cosine(s1_afv, s2_afv)
+        d1 = dot(s1_afv, s2_afv)
+        d2 = (norm(s1_afv) * norm(s2_afv))
+        if d1 == 0.0 or d2 == 0.0:
+            return 0.0
+        return float(d1 / d2)
 
     # List of syllables of each word. This will be used to calculate mean/std dev of syllables.
     def get_syllable_list(self, text_without_punctuation):
