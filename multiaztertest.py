@@ -761,36 +761,11 @@ class Document:
             self.wn_lang = "eus"
         elif self.language == "spanish":
             self.wn_lang = "spa"
-        if similarity:
-            #print("similarity")
-            # Fasttext embbeding
-            # fasttext erabili dut entrenatzeko eta Wikipedian entrenatuak
-            # izan dira. IDF kontaketak ere wikipediatik atera dira.
-            # @inproceedings{mikolov2018advances,
-            #  title={Advances in Pre-Training Distributed Word Representations},
-            #  author={Mikolov, Tomas and Grave, Edouard and Bojanowski, Piotr and Puhrsch, Christian and Joulin, Armand},
-            #  booktitle={Proceedings of the International Conference on Language Resources and Evaluation (LREC 2018)},
-            #  year={2018}
-            # }
+
+        if similarity is not None:
             self.num_features = 512
-            if self.language == "english":
-                # embedding_dict = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/en", binary=False)
-                # embedding_dict.save_word2vec_format("wordembeddings/orig2idf/en.bin", binary=True)
-                self.model = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/en.bin", binary=True)
-                # self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/en', binary=False)
-                self.index2word_set = set(self.model.wv.index2word)
-            elif self.language == "basque":
-                # embedding_dict = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/eu", binary=False)
-                # embedding_dict.save_word2vec_format("wordembeddings/orig2idf/eu.bin", binary=True)
-                self.model = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/eu.bin", binary=True)
-                # self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/eu', binary=False)
-                self.index2word_set = set(self.model.wv.index2word)
-            elif self.language == "spanish":
-                # embedding_dict = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/es", binary=False)
-                # embedding_dict.save_word2vec_format("wordembeddings/orig2idf/es.bin", binary=True)
-                self.model = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/es.bin", binary=True)
-                # self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/es', binary=False)
-                self.index2word_set = set(self.model.wv.index2word)
+            self.model = similarity[0]
+            self.index2word_set = similarity[1]
 
         for p in self.paragraph_list:
             self.aux_lists['sentences_per_paragraph'].append(len(p.sentence_list))  # [1,2,1,...]
@@ -1010,7 +985,7 @@ class Document:
         self.calculate_mtld()
         self.calculate_readability()
         self.calculate_connectives()
-        if similarity:
+        if similarity is not None:
             self.calculate_similarity_adjacent_sentences()
             self.calculate_similarity_pairs_sentences()
             self.calculate_similarity_adjacent_paragraphs()
@@ -2663,6 +2638,31 @@ class Pronouncing:
             print(k, v)
 
 
+class Similarity:
+    def __init__(self, language):
+        self.language = language
+
+    def load(self):
+        salida = []
+        model = None
+        index2word_set = None
+        if self.language == "english":
+            model = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/en.bin", binary=True)
+            index2word_set = set(model.wv.index2word)
+        elif self.language == "basque":
+            model = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/eu.bin", binary=True)
+            index2word_set = set(model.wv.index2word)
+        elif self.language == "spanish":
+            model = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/es.bin", binary=True)
+            index2word_set = set(model.wv.index2word)
+        salida.append(model)
+        salida.append(index2word_set)
+        return salida
+
+
+
+
+
 "This is a Singleton class which is going to start necessary classes and methods."
 
 
@@ -2770,6 +2770,12 @@ class Main(object):
         predictor = Predictor(language)
         predictor.load()
 
+        # Similarity
+        similaritymodel = None
+        if similarity:
+            sim = Similarity(language)
+            similaritymodel = sim.load()
+
         files = opts.files
 
         # @staticmethod
@@ -2796,7 +2802,7 @@ class Main(object):
 
             # Get indicators
             document = cargador.get_estructure(text)
-            indicators = document.get_indicators(similarity)
+            indicators = document.get_indicators(similaritymodel)
             printer = Printer(indicators, language, similarity)
             printer.load_ind_sentences()
             printer.print_info()
