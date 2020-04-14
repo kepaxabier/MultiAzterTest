@@ -13,8 +13,8 @@ Number of words (length) in sentences (mean): 20.4
 Number of words (length) in sentences (standard deviation): 15.7175
 Number of words (length) of sentences without stopwords (mean): 15.8
 Number of words (length) of sentences without stopwords (standard deviation): 13.0138
-Mean number of syllables (length) in words: 3.4314
-Standard deviation of the mean number of syllables in words: 1.6657
+Mean number of syllables (length) in words: 3.3981
+Standard deviation of the mean number of syllables in words: 1.6857
 Mean number of letters (length) in words: 7.8557
 Standard deviation of number of letters in words: 3.5869
 Mean number of letters (length) in words without stopwords: 8.7848
@@ -122,3 +122,10 @@ Logical connectives:  8.0
 Logical connectives (incidence per 1000 words):  78.4314
 Adversative/contrastive connectives: 0.0
 Adversative/contrastive connectives (incidence per 1000 words): 0.0
+Semantic overlap
+Semantic Similarity between adjacent sentences (mean): 0.6581
+Semantic Similarity between all possible pairs of sentences in a paragraph (mean): 0.5737
+Semantic Similarity between adjacent paragraphs (mean): 0.6341
+Semantic Similarity between adjacent sentences (standard deviation): 0.1929
+Semantic Similarity between all possible pairs of sentences in a paragraph (standard deviation): 0.2225
+Semantic Similarity between adjacent paragraphs (standard deviation): 0.199

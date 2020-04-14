@@ -215,6 +215,8 @@ class Document:
     def calculate_ratio_proper_nouns_per_nouns(self):
         if self.indicators['num_proper_noun'] > 0:
             self.indicators['ratio_proper_nouns_per_nouns'] = round(self.indicators['num_proper_noun'] / (self.indicators['num_noun'] + self.indicators['num_proper_noun']), 4)
+        else:
+            self.indicators['ratio_proper_nouns_per_nouns'] = 0
 
     def calculate_vttr(self):
         if self.indicators['num_verb'] > 0:
