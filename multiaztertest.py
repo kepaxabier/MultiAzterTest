@@ -11,6 +11,8 @@ import csv
 import stanfordnlp
 from cube.api import Cube
 import numpy as np
+from numpy import dot
+from numpy.linalg import norm
 from collections import defaultdict
 import re
 import nltk
@@ -760,7 +762,7 @@ class Document:
         elif self.language == "spanish":
             self.wn_lang = "spa"
         if similarity:
-            print("similarity")
+            #print("similarity")
             # Fasttext embbeding
             # fasttext erabili dut entrenatzeko eta Wikipedian entrenatuak
             # izan dira. IDF kontaketak ere wikipediatik atera dira.
@@ -789,15 +791,6 @@ class Document:
                 self.model = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/es.bin", binary=True)
                 # self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/es', binary=False)
                 self.index2word_set = set(self.model.wv.index2word)
-            #if self.language == "english":
-                #self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/en', binary=False)
-                #self.index2word_set = set(self.model.wv.index2word)
-            #elif self.language == "basque":
-                #self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/eu', binary=False)
-                #self.index2word_set = set(self.model.wv.index2word)
-            #elif self.language == "spanish":
-                #self.model = KeyedVectors.load_word2vec_format('wordembeddings/orig2idf/es', binary=False)
-                #self.index2word_set = set(self.model.wv.index2word)
 
         for p in self.paragraph_list:
             self.aux_lists['sentences_per_paragraph'].append(len(p.sentence_list))  # [1,2,1,...]
@@ -1096,8 +1089,12 @@ class Document:
         s2_afv = self.avg_feature_vector(s2.text, model=self.model,
                                          num_features=self.num_features,
                                          index2word_set=self.index2word_set)
-        sim = 1 - spatial.distance.cosine(s1_afv, s2_afv)
-        return sim
+        #sim = 1 - spatial.distance.cosine(s1_afv, s2_afv)
+        d1 = dot(s1_afv, s2_afv)
+        d2 = (norm(s1_afv) * norm(s2_afv))
+        if d1 == 0.0 or d2 == 0.0:
+            return 0.0
+        return float(d1 / d2)
 
     # List of syllables of each word. This will be used to calculate mean/std dev of syllables.
     def get_syllable_list(self, text_without_punctuation):
@@ -1113,10 +1110,16 @@ class Document:
             # genera CADENAS aleatorias
             # import uuid
             #convertir a word list en word.text list
+            #print(text_without_punctuation)
             sequence = []
             for word in text_without_punctuation:
-                sequence.append(word.text)
+                cleanword = ""
+                for character in list(word.text):
+                    if character.isalnum():
+                        cleanword += character
+                sequence.append(cleanword)
             texto = '\t'.join(sequence)
+            #print(texto)
             #longitud = len(text_without_punctuation)
             #print(longitud)
             id = uuid.uuid4()
@@ -1125,7 +1128,7 @@ class Document:
             silaba_name = silaba_name + "_silaba.txt"
             # Creamos un fichero con las palabras divididas en silabas por puntos
             with open(silaba_name, "w", encoding="utf-8") as f:
-                command = "echo " + texto + " | flookup -ib data/eu/syllablesplitter/silabaEus.fst"
+                command = "echo -e " + texto + " | flookup -ib data/eu/syllablesplitter/silabaEus.fst"
                 #print(command)
                 subprocess.run(command, shell=True, stdout=f)
             with open(silaba_name, mode="r", encoding="utf-8") as f:
@@ -1145,6 +1148,7 @@ class Document:
             for word in text_without_punctuation:
                 num_sil.append(word.allnum_syllables(self.language))
             return num_sil
+
 
     def calculate_all_means(self):
         i = self.indicators
@@ -2623,7 +2627,7 @@ class Pronouncing:
     def load(self):
         Pronouncing.prondict = cmudict.dict()
 
-    def euskara_text2syllables(self, textwithoutpuuntuation):
+    def euskara_text2syllables(self, text_without_punctuation):
         #elif self.lang == "basque":
         # #accedemos a foma
         # command_01 = "foma"
