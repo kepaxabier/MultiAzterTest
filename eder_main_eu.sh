@@ -53,30 +53,45 @@ done
 function obtenerdatosmultiaztertest_eu()
 {
 modelo=$1
-cd /media/datos/Dropbox/ikerkuntza/metrix-env
+cd PycharmProjects/multilanguageaztertest/
 source bin/activate
-cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
 #ANALIZA SI PROCESA BIEN (Por ejemplo hay que separar "-" de las palabras con espacio)
 #python3 ./multiaztertest.py -s -c -r -f  $dir/5/Texto_1.txt -l basque -m stanford -d "/home/kepa"
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/ErreXail/konplexuak"
-for i in `seq 5 5 200`
-do
+dir="/home/edercarbajo/PycharmProjects/multilanguageaztertest/corpus/eu/ErreXail/konplexuak"
+#for i in `seq 5 5 200`
+#do
      	#with similarity
         #python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d "/home/kepa"
         #without similarity
-        python3 multiaztertest.py -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d "/home/kepa"
-done
+        #python3 multiaztertest.py -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d "/home/kepa"
+#done
 
 
 #complejo multiaztertest
 #python3 ./multiaztertest.py -s -c -r -f  $dir/55/Texto_53.txt -l basque -m stanford -d "/home/kepa"
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/ErreXail/sinpleak"
+dir="/home/edercarbajo/PycharmProjects/multilanguageaztertest/corpus/eu/ErreXail/sinpleak"
 for i in `seq 5 5 200`
 do
      	#with similarity
         #python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d "/home/kepa"
         #without similarity
-        python3 multiaztertest.py -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d "/home/kepa"
+
+        #stanfordconsimilitudconcontadores
+        python3 ./multiaztertest.py -s -c -r -f $dir/$i/*.txt -l basque -m stanford -d "/home/edercarbajo"
+        cp $dir/$i/results/* /home/edercarbajo/PycharmProjects/multilanguageaztertest/corpus/eu/simplecomplejo/simple/$i/results/stanfordconsimilitudconcontadores
+
+        #stanfordsinsimilitudsincontadores
+        python3 ./multiaztertest.py -c -f $dir/$i/*.txt -l basque -m stanford -d "/home/edercarbajo"
+        cp $dir/$i/results/* /home/edercarbajo/PycharmProjects/multilanguageaztertest/corpus/eu/simplecomplejo/simple/$i/results/stanfordsinsimilitudsincontadores
+
+        #cubeconsimilitudconcontadores
+        python3 ./multiaztertest.py -s -c -r -f $dir/$i/*.txt -l basque -m cube -d "/home/edercarbajo"
+        cp $dir/$i/results/* /home/edercarbajo/PycharmProjects/multilanguageaztertest/corpus/eu/simplecomplejo/simple/$i/results/cubeconsimilitudconcontadores
+
+        #cubesinsimilitudsincontadores
+        python3 ./multiaztertest.py -c -f $dir/$i/*.txt -l basque -m cube -d "/home/edercarbajo"
+        cp $dir/$i/results/* /home/edercarbajo/PycharmProjects/multilanguageaztertest/corpus/eu/simplecomplejo/simple/$i/results/cubesinsimilitudsincontadores
+
 done
 }
 

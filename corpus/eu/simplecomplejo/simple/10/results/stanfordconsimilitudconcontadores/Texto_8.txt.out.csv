@@ -13,8 +13,8 @@ Number of words (length) in sentences (mean): 12.3333
 Number of words (length) in sentences (standard deviation): 5.5728
 Number of words (length) of sentences without stopwords (mean): 10.3333
 Number of words (length) of sentences without stopwords (standard deviation): 4.8016
-Mean number of syllables (length) in words: 3.0203
-Standard deviation of the mean number of syllables in words: 1.1594
+Mean number of syllables (length) in words: 3.0067
+Standard deviation of the mean number of syllables in words: 1.1672
 Mean number of letters (length) in words: 6.9315
 Standard deviation of number of letters in words: 2.4597
 Mean number of letters (length) in words without stopwords: 7.3871
@@ -27,7 +27,7 @@ Noun Density: 0.2838
 Verb Density: 0.277
 Adjective Density: 0.0811
 Adverb Density: 0.0676
-Ratio of proper nouns for all nouns (proper and common nouns): None
+Ratio of proper nouns for all nouns (proper and common nouns): 0
 STTR (Simple Type-Token Ratio) : 0.6419
 CTTR (Content Type-Token Ratio): 0.7271
 NTTR (Noun Type-Token Ratio): 0.619
@@ -123,9 +123,9 @@ Logical connectives (incidence per 1000 words):  81.0811
 Adversative/contrastive connectives: 1.0
 Adversative/contrastive connectives (incidence per 1000 words): 6.7568
 Semantic overlap
-Semantic Similarity between adjacent sentences (mean): nan
-Semantic Similarity between all possible pairs of sentences in a paragraph (mean): nan
-Semantic Similarity between adjacent paragraphs (mean): nan
-Semantic Similarity between adjacent sentences (standard deviation): nan
-Semantic Similarity between all possible pairs of sentences in a paragraph (standard deviation): nan
-Semantic Similarity between adjacent paragraphs (standard deviation): nan
+Semantic Similarity between adjacent sentences (mean): 0.67
+Semantic Similarity between all possible pairs of sentences in a paragraph (mean): 0.6127
+Semantic Similarity between adjacent paragraphs (mean): 0.5469
+Semantic Similarity between adjacent sentences (standard deviation): 0.2216
+Semantic Similarity between all possible pairs of sentences in a paragraph (standard deviation): 0.2799
+Semantic Similarity between adjacent paragraphs (standard deviation): 0.3173

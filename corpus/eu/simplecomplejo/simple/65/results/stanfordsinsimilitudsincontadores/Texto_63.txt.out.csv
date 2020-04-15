@@ -2,7 +2,7 @@
 Shallow or descriptive measures
 Number of words (total): 151.0
 Number of distinct words (total): 107
-Number of words with punctuation (total): 143.0
+Number of words with punctuation (total): 186.0
 Number of paragraphs (total): 6
 Number of paragraphs (incidence per 1000 words): 39.7351
 Number of sentences (total): 13.0
@@ -13,8 +13,8 @@ Number of words (length) in sentences (mean): 11.6154
 Number of words (length) in sentences (standard deviation): 5.3714
 Number of words (length) of sentences without stopwords (mean): 7.3846
 Number of words (length) of sentences without stopwords (standard deviation): 3.7322
-Mean number of syllables (length) in words: 2.7417
-Standard deviation of the mean number of syllables in words: 1.2041
+Mean number of syllables (length) in words: 2.6645
+Standard deviation of the mean number of syllables in words: 1.1918
 Mean number of letters (length) in words: 5.965
 Standard deviation of number of letters in words: 2.4017
 Mean number of letters (length) in words without stopwords: 7.0
@@ -27,8 +27,8 @@ Noun Density: 0.2649
 Verb Density: 0.1987
 Adjective Density: 0.0927
 Adverb Density: 0.0927
-Ratio of proper nouns for all nouns (proper and common nouns): 9.225
-STTR (Simple Type-Token Ratio): 0.7086
+Ratio of proper nouns for all nouns (proper and common nouns): 0.1837
+STTR (Simple Type-Token Ratio) : 0.7086
 CTTR (Content Type-Token Ratio): 0.8476
 NTTR (Noun Type-Token Ratio): 0.7
 VTTR (Verb Type-Token Ratio): 0.8333
@@ -43,59 +43,27 @@ LAdvTTR (Lemma Adv Type-Token Ratio): 0.8571
 Honore Lexical Density: 1295.2807
 Maas Lexical Density: 0.0363
 Measure of Textual Lexical Diversity (MTLD): 127.9744
-Readability/Text Dimension/Grade Level
-Flesch readability ease: 195.0454
-Morphological features
-Number of verbs in past tense: 0.0
-Number of verbs in past tense (incidence per 1000 words): 0.0
-Number of verbs in present tense: 0.0
-Number of verbs in present tense (incidence per 1000 words): 0.0
-Number of verbs in future tense: 0.0
-Number of verbs in future tense (incidence per 1000 words): 0.0
 Number of verbs in indicative mood: 9.0
 Number of verbs in indicative mood (incidence per 1000 words): 59.6026
 Number of verbs in imperative mood: 0.0
 Number of verbs in imperative mood (incidence per 1000 words): 0.0
-Number of irregular verbs in past tense: 0.0
-Number of irregular verbs in past tense (incidence per 1000 words): 0.0
-Mean of irregular verbs in past tense in relation to the number of verbs in past tense: 0
 Number of personal pronouns: 0.0
 Incidence score of pronouns (per 1000 words): 0.0
-Number of pronouns in first person: 0.0
-Incidence score of pronouns in first person  (per 1000 words): 0.0
-Number of pronouns in first person singular: 0.0
-Incidence score of pronouns in first person singular (per 1000 words): 0.0
-Number of pronouns in third person: 8.0
-Incidence score of pronouns in third person (per 1000 words): 52.9801
-Word Frequency
 Minimum word frequency per sentence (mean): 109.8462
-Number of rare nouns (wordfrecuency<=4): 0.0
-Number of rare nouns (wordfrecuency<=4) (incidence per 1000 words): 0.0
-Number of rare adjectives (wordfrecuency<=4): 0.0
-Number of rare adjectives (wordfrecuency<=4) (incidence per 1000 words): 0.0
-Number of rare verbs (wordfrecuency<=4): 0.0
-Number of rare verbs (wordfrecuency<=4) (incidence per 1000 words): 0.0
-Number of rare adverbs (wordfrecuency<=4): 0.0
-Number of rare adverbs (wordfrecuency<=4) (incidence per 1000 words): 0.0
-Number of rare content words (wordfrecuency<=4): 0.0
-Number of rare content words (wordfrecuency<=4) (incidence per 1000 words): 0.0
-Number of distinct rare content words (wordfrecuency<=4): 0.0
-Number of distinct rare content words (wordfrecuency<=4) (incidence per 1000 words): 0.0
-Mean of rare lexical words (word frequency <= 4): 0.0
-Mean of distinct rare lexical words (word frequency <= 4): 0.0
-Vocabulary Knowledge
-Number of A1 vocabulary in the text: 0.0
-Incidence score of A1 vocabulary  (per 1000 words): 0.0
-Number of A2 vocabulary in the text: 0.0
-Incidence score of A2 vocabulary  (per 1000 words): 0.0
-Number of B1 vocabulary in the text: 0.0
-Incidence score of B1 vocabulary  (per 1000 words): 0.0
-Number of B2 vocabulary in the text: 0.0
-Incidence score of B2 vocabulary  (per 1000 words): 0.0
-Number of C1 vocabulary in the text: 0.0
-Incidence score of C1 vocabulary  (per 1000 words): 0.0
-Number of content words not in A1-C1 vocabulary: 98.0
-Incidence score of content words not in A1-C1 vocabulary (per 1000 words): 649.0066
+Number of rare nouns: 3.0
+Number of rare nouns (incidence per 1000 words): 19.8675
+Number of rare adjectives: 1.0
+Number of rare adjectives (incidence per 1000 words): 6.6225
+Number of rare verbs: 4.0
+Number of rare verbs (incidence per 1000 words): 26.4901
+Number of rare adverbs: 0.0
+Number of rare adverbs (incidence per 1000 words): 0.0
+Number of rare content words: 8.0
+Number of rare content words (incidence per 1000 words): 52.9801
+Number of distinct rare content words: 8.0
+Number of distinct rare content words (incidence per 1000 words): 52.9801
+Mean of rare lexical words: 8.1633
+Mean of distinct rare lexical words: 19.0476
 Syntactic Features / POS ratios
 Number of content words: 98.0
 Number of content words (incidence per 1000 words): 649.0066
@@ -110,61 +78,44 @@ Number of adverbs (incidence per 1000 words): 92.7152
 Number of verbs: 30.0
 Number of verbs (incidence per 1000 words): 198.6755
 Left embeddedness (Mean of number of words before the main verb) (SYNLE): 4.8462
-Number of decendents per noun phrase (mean): 0.7292
+Number of decendents per noun phrase (mean): 0.875
 Number of modifiers per noun phrase (mean) (SYNNP): 0.7292
-Mean of the number of levels of dependency tree (Depth): 1.0
+Mean of the number of levels of dependency tree (Depth): 4.9231
 Number of subordinate clauses: 14.0
 Number of subordinate clauses (incidence per 1000 words): 92.7152
-Number of relative subordinate clauses: 0.0
-Number of relative subordinate clauses (incidence per 1000 words): 0.0
-Punctuation marks per sentence (mean): 68.0
-Number of propositions: 19.0
-Mean of the number of propositions per sentence: 1.4615
+Punctuation marks per sentence (mean): 2.6923
+Number of propositions: 32.0
+Mean of the number of propositions per sentence: 2.4615
 Mean of the number of VPs per sentence: 2.3077
 Mean of the number of NPs per sentence: 3.6923
 Noun phrase density, incidence (DRNP): 317.8808
 Verb phrase density, incidence (DRVP): 198.6755
-Number of passive voice verbs: 0.0
-Number of passive voice verbs (incidence per 1000 words): 0.0
-Mean of passive voice verbs: 0.0
-Number of agentless passive voice verbs: 0.0
-Agentless passive voice density, incidence (DRPVAL): 0.0
 Number of negative words: 3.0
-Negation density, incidence (DRNEG): 19.8675
-Number of verbs in gerund form: 0.0
-Gerund density, incidence (DRGERUND): 0.0
+Number of negative words (incidence per 1000 words): 19.8675
 Number of verbs in infinitive form: 7.0
-Infinitive density, incidence (DRINF): 46.3576
-Semantics. Readability
-Mean values of polysemy in the WordNet lexicon: 0.25
-Mean hypernym values of verbs in the WordNet lexicon: 0.0
-Mean hypernym values of nouns in the WordNet lexicon: 8.0
-Mean hypernym values of nouns and verbs in the WordNet lexicon: 2.6667
+Number of verbs in infinitive form (incidence per 1000 words): 46.3576
+Mean values of polysemy in the WordNet lexicon: 4.9792
+Mean hypernym values of verbs in the WordNet lexicon: 1.5455
+Mean hypernym values of nouns in the WordNet lexicon: 7.0769
+Mean hypernym values of nouns and verbs in the WordNet lexicon: 5.4324
 Referential cohesion
 Noun overlap, adjacent sentences, binary, mean (CRFNOl): 0.2857
 Noun overlap, all of the sentences in a paragraph or text, binary, mean (CRFNOa): 0.2
-Argument overlap, adjacent sentences, binary, mean (CRFAOl): 1.0
-Argument overlap, all of the sentences in a paragraph or text, binary, mean (CRFAOa): 0.9
-Stem overlap, adjacent sentences, binary, mean (CRFSOl): 0.2857
-Stem overlap, all of the sentences in a paragraph or text, binary, mean (CRFSOa): 0.2
-Content word overlap, adjacent sentences, proportional, mean (CRFCWO1): 0.0228
-Content word overlap, adjacent sentences, proportional, standard deviation (CRFCWO1d): 0.0272
-Content word overlap, all of the sentences in a paragraph or text, proportional, mean (CRFCWOa): 0.0159
-Content word overlap, all of the sentences in a paragraph or text, proportional, standard deviation (CRFCWOad): 0.0251
-Semantic overlap
-Semantic Similarity between adjacent sentences (mean): 0.7082
-Semantic Similarity between all possible pairs of sentences in a paragraph (mean): 0.6552
-Semantic Similarity between adjacent paragraphs (mean): 0.6837
-Semantic Similarity between adjacent sentences (standard deviation): 0.0838
-Semantic Similarity between all possible pairs of sentences in a paragraph (standard deviation): 0.0969
-Semantic Similarity between adjacent paragraphs (standard deviation): 0.0718
+Argument overlap, adjacent sentences, binary, mean (CRFAOl): 0.4167
+Argument overlap, all of the sentences in a paragraph or text, binary, mean (CRFAOa): 0.2692
+Stem overlap, adjacent sentences, binary, mean (CRFSOl): 0.4167
+Stem overlap, all of the sentences in a paragraph or text, binary, mean (CRFSOa): 0.2692
+Content word overlap, adjacent sentences, proportional, mean (CRFCWO1): 0.0459
+Content word overlap, adjacent sentences, proportional, standard deviation (CRFCWO1d): 0.0737
+Content word overlap, all of the sentences in a paragraph or text, proportional, mean (CRFCWOa): 0.0296
+Content word overlap, all of the sentences in a paragraph or text, proportional, standard deviation (CRFCWOad): 0.0478
 Connectives
-Number of connectives: 22.0
-Number of connectives (incidence per 1000 words): 145.6954
-Causal connectives: 7.0
-Causal connectives (incidence per 1000 words): 46.3576
-Temporal connectives:  0.0
-Temporal connectives (incidence per 1000 words):  0.0
+Number of connectives: 28.0
+Number of connectives (incidence per 1000 words): 185.4305
+Causal connectives: 12.0
+Causal connectives (incidence per 1000 words): 79.4702
+Temporal connectives:  1.0
+Temporal connectives (incidence per 1000 words):  6.6225
 Conditional connectives: 2.0
 Conditional connectives (incidence per 1000 words): 13.245
 Logical connectives:  10.0
