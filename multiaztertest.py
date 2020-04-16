@@ -2151,6 +2151,9 @@ class Printer:
 
         self.ignore_list_es_ind = [ #Readability
                                     'smog',
+                                    # Morphological features
+                                    'num_past', 'num_past_incidence', 'num_pres', 'num_pres_incidence',
+                                    'num_future', 'num_future_incidence',
                                     # vocabulary
                                     'num_a1_words', 'num_a1_words_incidence', 'num_a2_words', 'num_a2_words_incidence',
                                     'num_b1_words', 'num_b1_words_incidence', 'num_b2_words', 'num_b2_words_incidence',
@@ -2817,3 +2820,4 @@ class Main(object):
 
 main = Main()
 main.start()
+

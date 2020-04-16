@@ -1,27 +1,27 @@
 
-Time taken to test model on test data: 0.01 seconds
+Time taken to test model on test data: 0.02 seconds
 
 === Error on test data ===
 
-Correctly Classified Instances           9               90      %
-Incorrectly Classified Instances         1               10      %
-Kappa statistic                          0.8   
-Mean absolute error                      0.1   
-Root mean squared error                  0.3162
+Correctly Classified Instances           7               70      %
+Incorrectly Classified Instances         3               30      %
+Kappa statistic                          0.4   
+Mean absolute error                      0.3   
+Root mean squared error                  0.5477
 Total Number of Instances               10     
 
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0,800    0,000    1,000      0,800    0,889      0,816    0,900     0,900     0
-                 1,000    0,200    0,833      1,000    0,909      0,816    0,900     0,833     1
-Weighted Avg.    0,900    0,100    0,917      0,900    0,899      0,816    0,900     0,867     
+                 1,000    0,600    0,625      1,000    0,769      0,500    0,700     0,625     0
+                 0,400    0,000    1,000      0,400    0,571      0,500    0,700     0,700     1
+Weighted Avg.    0,700    0,300    0,813      0,700    0,670      0,500    0,700     0,663     
 
 
 === Confusion Matrix ===
 
  a b   <-- classified as
- 4 1 | a = 0
- 0 5 | b = 1
+ 5 0 | a = 0
+ 3 2 | b = 1
 
