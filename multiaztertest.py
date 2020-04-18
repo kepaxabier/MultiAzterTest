@@ -200,7 +200,6 @@ class Document:
     #                 num_sentences += 1
     #         return num_sentences
 
-
     def calculate_simple_ttr(self, p_diff_forms=None, p_num_words=None):
         if (p_diff_forms and p_num_words) is not None:
             return (len(p_diff_forms)) / p_num_words
@@ -423,6 +422,8 @@ class Document:
                         adjacent_noun_overlap_list.append(0)
         if len(adjacent_noun_overlap_list) > 0:
             i['noun_overlap_adjacent'] = round(float(np.mean(adjacent_noun_overlap_list)), 4)
+        else:
+            i['noun_overlap_adjacent'] = 0.0
 
     # Noun overlap measures which is the average overlap between all pairs of sentences in the text for which there are overlapping nouns,
     # With no deviation in the morphological forms (e.g., table/tables)
@@ -453,6 +454,8 @@ class Document:
                         all_noun_overlap_list.append(0)
         if len(all_noun_overlap_list) > 0:
             i['noun_overlap_all'] = round(float(np.mean(all_noun_overlap_list)), 4)
+        else:
+            i['noun_overlap_all'] = 0.0
 
     # Argument overlap measure is binary (there either is or is not any overlap between a pair of adjacent
     # sentences in a text ). Argument overlap measures the proportion of sentences in a text for which there are overlapping the
@@ -1126,7 +1129,6 @@ class Document:
                 num_sil.append(word.allnum_syllables(self.language))
             return num_sil
 
-
     def calculate_all_means(self):
         i = self.indicators
         i['sentences_per_paragraph_mean'] = round(float(np.mean(self.aux_lists['sentences_per_paragraph'])), 4)
@@ -1138,10 +1140,13 @@ class Document:
         i['num_punct_marks_per_sentence'] = round(float(np.mean(self.aux_lists['punct_per_sentence'])), 4)
         i['polysemic_index'] = round(float(np.mean(self.aux_lists['ambiguity_content_words_list'])), 4)
         i['hypernymy_index'] = round(float(np.mean(self.aux_lists['noun_verb_abstraction_list'])), 4)
-        i['hypernymy_verbs_index'] = round(float(np.mean(self.aux_lists['verb_abstraction_list'])), 4)
+        i['hypernymy_verbs_index'] = round(float(np.mean(self.aux_lists['verb_abstraction_list'])), 4) if (
+            self.aux_lists['verb_abstraction_list']) else 0.0
+
         i['hypernymy_nouns_index'] = round(float(np.mean(self.aux_lists['noun_abstraction_list'])), 4)
         i['num_pass_mean'] = round((i['num_pass']) / i['num_words'], 4)
-        i['num_past_irregular_mean'] = round(((i['num_past_irregular']) / i['num_past']), 4) if i['num_past'] != 0 else 0
+        i['num_past_irregular_mean'] = round(((i['num_past_irregular']) / i['num_past']), 4) if i[
+                                                                                                    'num_past'] != 0 else 0
         i['sentences_length_no_stopwords_mean'] = round(
             float(np.mean(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
         i['words_length_no_stopwords_mean'] = round(float(np.mean(self.aux_lists['words_length_no_stopwords_list'])), 4)

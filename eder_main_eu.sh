@@ -70,7 +70,9 @@ dir="/home/edercarbajo/PycharmProjects/multilanguageaztertest/corpus/eu/ErreXail
 #complejo multiaztertest
 #python3 ./multiaztertest.py -s -c -r -f  $dir/55/Texto_53.txt -l basque -m stanford -d "/home/kepa"
 dir="/home/edercarbajo/PycharmProjects/multilanguageaztertest/corpus/eu/ErreXail/sinpleak"
-for i in `seq 5 5 200`
+array=("85")
+for i in "${array[@]}"
+#for i in `seq 5 5 200`
 do
      	#with similarity
         #python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d "/home/kepa"
