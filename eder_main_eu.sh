@@ -4,12 +4,45 @@
 #Complejo:
 #En corpus/eu/ErreXail/konplexuak/*(200) (Complejo)
 #OBTENER MULTIAZTERTEST EN 5 EN 5
-function obtenerdatossimple5en5()
+function obtenerdatossimplecompuesto_eu()
+{
+mkdir -p /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo
+mkdir -p /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/simple
+mkdir -p /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/complejo
+for i in `seq 1 200`
+do
+cp /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/ErreXail/sinpleak/corp_zernola_$i.trc.txt /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/simple/Texto_$i.txt
+done
+for i in `seq 1 200`
+do
+ cp /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/ErreXail/konplexuak/Texto_$i.txt /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/complejo
+done
+#Bi fitxategi gaizki!!!!!!
+#144 y 17; 1 y 3 palabras
+cp /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/ErreXail/bestesimplebatzuk/corp_zernola_201.trc.txt /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/simple/Texto_17.txt
+cp /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/ErreXail/bestesimplebatzuk/corp_zernola_203.trc.txt /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/simple/Texto_144.txt
+#corregidos:
+#-----------COMPLEJO----------
+#67 : "--&gt;"
+#77: "--&gt;"
+#103: "&amp;"
+#107: "--&gt;"
+#140: "-- but can't share them"???
+#167: "--&gt;"
+}
+
+function obtenerdatos5en5()
 {
 #simple
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/ErreXail/sinpleak"
-#voy a dividir los ficheros en 5 en 5
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/simple"
 cd $dir
+#i=1
+#for text in `ls  $dir`
+#do
+#  mv $text Texto_$i.txt
+#  i=$(echo "$i+1" | bc -l)
+#done
+#voy a dividir los ficheros en 5 en 5
 has=1
 buk=5
 for j in `seq 1 40`
@@ -17,18 +50,14 @@ do
 	mkdir $buk
 	for i in `seq $has $buk`
 	do
-       		cp corp_zernola_$i.trc.txt $buk/Texto_$i.txt
+       		cp Texto_$i.txt $buk
 	done
         has=$(echo "$has+5" | bc -l)
         buk=$(echo "$buk+5" | bc -l)
 done
-}
-
-
-function obtenerdatoscomplejo5en5()
-{
+#voy a dividir los ficheros en 5 en 5
 #complejo
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/ErreXail/konplexuak"
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/complejo"
 cd $dir
 #i=1
 #for text in `ls  $dir`
@@ -53,88 +82,130 @@ done
 function obtenerdatosmultiaztertest_eu()
 {
 modelo=$1
-cd PycharmProjects/multilanguageaztertest/
-source bin/activate
+consim=$2
+concont=$3
+source activate /home/edercarbajo/anaconda3/envs/multilanguageaztertest/
+
+# shellcheck disable=SC2164
+
 #ANALIZA SI PROCESA BIEN (Por ejemplo hay que separar "-" de las palabras con espacio)
 #python3 ./multiaztertest.py -s -c -r -f  $dir/5/Texto_1.txt -l basque -m stanford -d "/home/kepa"
-dir="/home/edercarbajo/PycharmProjects/multilanguageaztertest/corpus/eu/ErreXail/konplexuak"
-#for i in `seq 5 5 200`
-#do
-     	#with similarity
-        #python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d "/home/kepa"
-        #without similarity
-        #python3 multiaztertest.py -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d "/home/kepa"
-#done
+# shellcheck disable=SC2088
+dir="/home/edercarbajo/PycharmProjects/multilanguageaztertest/corpus/eu/simplecomplejo/complejo"
+for i in `seq 5 5 200`
+do
+   if [[ "$consim" == "sinsimilitud" &&  "$concont" == "sincontadores" ]]
+	then
+	#sinsimilitud y sincontadores
+   	python3 multiaztertest.py -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d /home/edercarbajo
+   elif [[ "$consim" == "consimilitud" &&  "$concont" == "sincontadores" ]]
+	then
+   	#consimilitud y sincontadores
+   	python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d /home/edercarbajo
+   elif [[ "$consim" == "consimilitud" &&  "$concont" == "concontadores" ]]
+	then
+   	#consimilitud y concontadores
+   	python3 multiaztertest.py -s -c -f  $dir/$i/*.txt -l basque -m $modelo -d /home/edercarbajo
+   else
+	#sinsimilitud y concontadores
+   	python3 multiaztertest.py -c -f  $dir/$i/*.txt -l basque -m $modelo -d /home/edercarbajo
+   fi
+   mkdir $dir/$i/results/$modelo$consim$concont
+   cp $dir/$i/results/*.csv $dir/$i/results/$modelo$consim$concont
+done
 
 
 #complejo multiaztertest
 #python3 ./multiaztertest.py -s -c -r -f  $dir/55/Texto_53.txt -l basque -m stanford -d "/home/kepa"
-dir="/home/edercarbajo/PycharmProjects/multilanguageaztertest/corpus/eu/ErreXail/sinpleak"
-array=("85")
-for i in "${array[@]}"
-#for i in `seq 5 5 200`
+dir="/home/edercarbajo/PycharmProjects/multilanguageaztertest/corpus/eu/simplecomplejo/simple"
+# shellcheck disable=SC2164
+for i in `seq 5 5 200`
 do
-     	#with similarity
-        #python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d "/home/kepa"
-        #without similarity
+   if [[ "$consim" == "sinsimilitud" &&  "$concont" == "sincontadores" ]]
+	then
+	#sinsimilitud y sincontadores
+   	python3 multiaztertest.py -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d /home/edercarbajo
+   elif [[ "$consim" == "consimilitud" &&  "$concont" == "sincontadores" ]]
+	then
+   	#consimilitud y sincontadores
+   	python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d /home/edercarbajo
+   elif [[ "$consim" == "consimilitud" &&  "$concont" == "concontadores" ]]
+	then
+   	#consimilitud y concontadores
+   	python3 multiaztertest.py -s -c -f  $dir/$i/*.txt -l basque -m $modelo -d /home/edercarbajo
+   else
+	#sinsimilitud y concontadores
+   	python3 multiaztertest.py -c -f  $dir/$i/*.txt -l basque -m $modelo -d /home/edercarbajo
+   fi
+   mkdir $dir/$i/results/$modelo$consim$concont
+   cp $dir/$i/results/*.csv $dir/$i/results/$modelo$consim$concont
+done
 
-        #stanfordconsimilitudconcontadores
-        python3 ./multiaztertest.py -s -c -r -f $dir/$i/*.txt -l basque -m stanford -d "/home/edercarbajo"
-        cp $dir/$i/results/* /home/edercarbajo/PycharmProjects/multilanguageaztertest/corpus/eu/simplecomplejo/simple/$i/results/stanfordconsimilitudconcontadores
-
-        #stanfordsinsimilitudsincontadores
-        python3 ./multiaztertest.py -c -f $dir/$i/*.txt -l basque -m stanford -d "/home/edercarbajo"
-        cp $dir/$i/results/* /home/edercarbajo/PycharmProjects/multilanguageaztertest/corpus/eu/simplecomplejo/simple/$i/results/stanfordsinsimilitudsincontadores
-
-        #cubeconsimilitudconcontadores
-        python3 ./multiaztertest.py -s -c -r -f $dir/$i/*.txt -l basque -m cube -d "/home/edercarbajo"
-        cp $dir/$i/results/* /home/edercarbajo/PycharmProjects/multilanguageaztertest/corpus/eu/simplecomplejo/simple/$i/results/cubeconsimilitudconcontadores
-
-        #cubesinsimilitudsincontadores
-        python3 ./multiaztertest.py -c -f $dir/$i/*.txt -l basque -m cube -d "/home/edercarbajo"
-        cp $dir/$i/results/* /home/edercarbajo/PycharmProjects/multilanguageaztertest/corpus/eu/simplecomplejo/simple/$i/results/cubesinsimilitudsincontadores
-
+}
+function recogerlosresultadosmultiaztertest()
+{
+modelo=$1
+consim=$2
+concont=$3
+cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/complejo"
+for i in `seq 5 5 200`
+do
+   mkdir $dir/$i/results/$modelo$consim$concont
+   cp $dir/$i/results/*.csv $dir/$i/results/$modelo$consim$concont
+done
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/simple"
+cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
+for i in `seq 5 5 200`
+do
+   mkdir $dir/$i/results/$modelo$consim$concont
+   cp $dir/$i/results/*.csv $dir/$i/results/$modelo$consim$concont
 done
 }
 
-function cross10banatu_es()
+
+function cross10banatu_eu()
 {
 modelo=$1
-echo "Genera un train y un test balanceado simple-complejo test(05simple  y 55complejo el resto train"
-#output:/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/cross10$modelo/cross1/[train|test]
+consim=$2
+concont=$3
+modelo_sim_cont=$modelo$consim$concont
+echo "Genera un train y un test balanceado simple-complejo test(5 y 10 simple +  5 y 10 complejo para test y resto train"
+#output:/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/stanfordconsimilitudconcontadores/cross10$modelo/cross1/[train|test]
 #test:
-#input1: /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/simple/5/results/full_results_aztertest_withlevel.csv +
-#input2: /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/complejo/55/results/full_results_aztertest_withlevel.csv
+#input1: /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/simple/5/results/stanfordconsimilitudconcontadores/full_results_aztertest_withlevel.csv +
+#input2: /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/simple/10/results/stanfordconsimilitudconcontadores/full_results_aztertest_withlevel.csv
+#input3: /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/complejo/5/results/stanfordconsimilitudconcontadores/full_results_aztertest_withlevel.csv +
+#input4: /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/complejo/10/results/stanfordconsimilitudconcontadores/full_results_aztertest_withlevel.csv /full_results_aztertest_withlevel.csv
 
 #Añade el nivel
 #crea el fichero a concatenar
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/simple"
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/simple"
 echo -e "level\n0\n0\n0\n0\n0\n" > $dir/simplelevel.txt
-for i in `seq 5 5 50`
+for i in `seq 5 5 200`
 do
-	paste -d',' $dir/$i/results/full_results_aztertest.csv $dir/simplelevel.txt > $dir/$i/results/full_results_aztertest_withlevel.csv
-        head -n 6 $dir/$i/results/full_results_aztertest_withlevel.csv > $dir/$i/results/full_results_aztertest_withlevelgarbi.csv
-	tail -n +2 $dir/$i/results/full_results_aztertest_withlevelgarbi.csv > $dir/$i/results/full_results_aztertest_withlevelsincab.csv
+paste -d',' $dir/$i/results/$modelo$consim$concont/full_results_aztertest.csv $dir/simplelevel.txt > $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevel.csv
+head -n 6 $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevel.csv > $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevelgarbi.csv
+tail -n +2 $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevelgarbi.csv > $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevelsincab.csv
 done
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/complejo"
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/complejo"
 #crea el fichero a concatenar
 echo -e "level\n1\n1\n1\n1\n1\n" > $dir/complejolevel.txt
-for i in `seq 55 5 100`
+for i in `seq 5 5 200`
 do
-	paste -d',' $dir/$i/results/full_results_aztertest.csv $dir/complejolevel.txt > $dir/$i/results/full_results_aztertest_withlevel.csv
-        head -n 6 $dir/$i/results/full_results_aztertest_withlevel.csv > $dir/$i/results/full_results_aztertest_withlevelgarbi.csv
-	tail -n +2 $dir/$i/results/full_results_aztertest_withlevelgarbi.csv > $dir/$i/results/full_results_aztertest_withlevelsincab.csv
+paste -d',' $dir/$i/results/$modelo$consim$concont/full_results_aztertest.csv $dir/complejolevel.txt > $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevel.csv
+head -n 6 $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevel.csv > $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevelgarbi.csv
+tail -n +2 $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevelgarbi.csv > $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevelsincab.csv
 done
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo"
-
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo"
 for i in `seq 1 10`
 do
-        mkdir -p $dir/cross10$modelo/cross$i
-        j=`expr $i \* 5`
-        k=`expr $j + 50`
-        cat $dir/simple/$j/results/full_results_aztertest_withlevelsincab.csv $dir/complejo/$k/results/full_results_aztertest_withlevelsincab.csv > $dir/cross10$modelo/cross$i/test_sincab.csv
+mkdir -p $dir/$modelo$consim$concont/cross10/cross$i
+j=`expr $i \* 10`
+k=`expr $j - 5`
+cat $dir/simple/$k/results/$modelo$consim$concont/full_results_aztertest_withlevelsincab.csv $dir/simple/$j/results/$modelo$consim$concont/full_results_aztertest_withlevelsincab.csv $dir/complejo/$k/results/$modelo$consim$concont/full_results_aztertest_withlevelsincab.csv $dir/complejo/$j/results/$modelo$consim$concont/full_results_aztertest_withlevelsincab.csv > $dir/$modelo$consim$concont/cross10/cross$i/test_sincab.csv
 done
-cd $dir/cross10$modelo
+cd $dir/$modelo$consim$concont/cross10/
 cat cross1/test_sincab.csv cross2/test_sincab.csv cross3/test_sincab.csv cross4/test_sincab.csv cross5/test_sincab.csv cross6/test_sincab.csv cross7/test_sincab.csv cross8/test_sincab.csv cross9/test_sincab.csv > cross10/train_sincab.csv
 cat cross1/test_sincab.csv cross2/test_sincab.csv cross3/test_sincab.csv cross4/test_sincab.csv cross5/test_sincab.csv cross6/test_sincab.csv cross7/test_sincab.csv cross8/test_sincab.csv cross10/test_sincab.csv > cross9/train_sincab.csv
 cat cross1/test_sincab.csv cross2/test_sincab.csv cross3/test_sincab.csv cross4/test_sincab.csv cross5/test_sincab.csv cross6/test_sincab.csv cross7/test_sincab.csv cross9/test_sincab.csv cross10/test_sincab.csv > cross8/train_sincab.csv
@@ -147,41 +218,47 @@ cat cross1/test_sincab.csv cross3/test_sincab.csv cross4/test_sincab.csv cross5/
 cat cross2/test_sincab.csv cross3/test_sincab.csv cross4/test_sincab.csv cross5/test_sincab.csv cross6/test_sincab.csv cross7/test_sincab.csv cross8/test_sincab.csv cross9/test_sincab.csv cross10/test_sincab.csv > cross1/train_sincab.csv
 # #GEHITU BURUAK!!!!
 #Lortu burua
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo"
-head -n 1 $dir/simple/5/results/full_results_aztertest_withlevel.csv > $dir/burua.csv
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo"
+head -n 1 $dir/simple/5/results/$modelo$consim$concont/full_results_aztertest_withlevel.csv > $dir/burua.csv
 for i in `seq 1 10`
 do
-        cat $dir/burua.csv $dir/cross10$modelo/cross$i/train_sincab.csv > $dir/cross10$modelo/cross$i/train_cab.csv
-        cat $dir/burua.csv $dir/cross10$modelo/cross$i/test_sincab.csv > $dir/cross10$modelo/cross$i/test_cab.csv
+        cat $dir/burua.csv $dir/$modelo$consim$concont/cross10/cross$i/train_sincab.csv > $dir/$modelo$consim$concont/cross10/cross$i/train_cab.csv
+        cat $dir/burua.csv $dir/$modelo$consim$concont/cross10/cross$i/test_sincab.csv > $dir/$modelo$consim$concont/cross10/cross$i/test_cab.csv
 done
-# #Crear 10-fold cross-validation formando 10 carpetas (1 a 10 ) con 5 ficheros simples y 5 complejos (1 con 51(50+1), 2 con 52(50+2)) para que quede todo balanceado.
 
+}
+function cvs2arff()
+{
+modelo=$1
+consim=$2
+concont=$3
+modelo_sim_cont=$modelo$consim$concont
 WEKA_PATH=/home/kepa/weka-3-8-3
 export CLASSPATH=$CLASSPATH:/home/kepa/weka-3-8-3/weka.jar #:/usr/share/java/libsvm.jar:/usr/share/java
 CP="$CLASSPATH:/usr/share/java/"
 #arrancar weka online
 #java -cp $CP -Xmx1024m weka.gui.explorer.Explorer
 #convertir csv en arff
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo"
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo"
 for i in `seq 1 10`
 do
-	java -cp $CP -Xmx1024m --add-opens=java.base/java.lang=ALL-UNNAMED weka.core.converters.CSVLoader $dir/cross10$modelo/cross$i/train_cab.csv > $dir/cross10$modelo/cross$i/train_cab.arff
-	java -cp $CP -Xmx1024m --add-opens=java.base/java.lang=ALL-UNNAMED weka.core.converters.CSVLoader $dir/cross10$modelo/cross$i/test_cab.csv > $dir/cross10$modelo/cross$i/test_cab.arff
+	java -cp $CP -Xmx1024m --add-opens=java.base/java.lang=ALL-UNNAMED weka.core.converters.CSVLoader $dir/$modelo$consim$concont/cross10/cross$i/train_cab.csv > $dir/$modelo$consim$concont/cross10/cross$i/train_cab.arff
+	java -cp $CP -Xmx1024m --add-opens=java.base/java.lang=ALL-UNNAMED weka.core.converters.CSVLoader $dir/$modelo$consim$concont/cross10/cross$i/test_cab.csv > $dir/$modelo$consim$concont/cross10/cross$i/test_cab.arff
 done
 #convierte la clase en nominal para poder ejecutar smo
 for i in `seq 1 10`
 do
 # # # # Convert your class attribute(s) to nominal type. (Otherwise most classifiers will be disabled). If the class attribute is numeric, then click Filter choose filters->unsupervised->attribute->NumericToNominal.
-	java -cp $CP -Xmx1024m --add-opens=java.base/java.lang=ALL-UNNAMED weka.filters.unsupervised.attribute.NumericToNominal -R last -i $dir/cross10$modelo/cross$i/train_cab.arff  -o $dir/cross10$modelo/cross$i/train_cab.nominal.arff
-	java -cp $CP -Xmx1024m --add-opens=java.base/java.lang=ALL-UNNAMED weka.filters.unsupervised.attribute.NumericToNominal -R last -i $dir/cross10$modelo/cross$i/test_cab.arff -o $dir/cross10$modelo/cross$i/test_cab.nominal.arff
+	java -cp $CP -Xmx1024m --add-opens=java.base/java.lang=ALL-UNNAMED weka.filters.unsupervised.attribute.NumericToNominal -R last -i $dir/$modelo$consim$concont/cross10/cross$i/train_cab.arff  -o $dir/$modelo$consim$concont/cross10/cross$i/train_cab.nominal.arff
+	java -cp $CP -Xmx1024m --add-opens=java.base/java.lang=ALL-UNNAMED weka.filters.unsupervised.attribute.NumericToNominal -R last -i $dir/$modelo$consim$concont/cross10/cross$i/test_cab.arff -o $dir/$modelo$consim$concont/cross10/cross$i/test_cab.nominal.arff
 done
-
 }
+
 function crosswekafs_es()
 {
 modelo=$1
 ############################################################################
-##FEATURE SELECTION:## We have tested chi square using different set of attributes: 25, 50, 75 and 100. 
+##FEATURE SELECTION:## We have tested chi square using different set of attributes: 25, 50, 75 and 100.
 ########################################################################
 WEKA_PATH=/home/kepa/weka-3-8-3
 export CLASSPATH=$CLASSPATH:/home/kepa/weka-3-8-3/weka.jar #:/usr/share/java/libsvm.jar:/usr/share/java
@@ -259,7 +336,7 @@ modelo=$1
 #-r Only outputs cumulative margin distribution.
 #-xml filename | xml-string Retrieves the options from the XML-data instead of the command line.
 #-threshold-file <file> The file to save the threshold data to. The format is determined by the extensions, e.g., '.arff' for ARFF format or '.csv' for CSV.
-#-threshold-label <label> The class label to determine the threshold data for (default is the first label) 
+#-threshold-label <label> The class label to determine the threshold data for (default is the first label)
 #-no-predictions Turns off the collection of predictions in order to conserve memory.
 
 
@@ -270,13 +347,13 @@ modelo=$1
 #-N 	Whether to 0=normalize/1=standardize/2=neither. (default 0=normalize)
 #-L <double> The tolerance parameter. (default 1.0e-3)
 #-P <double> The epsilon for round-off error. (default 1.0e-12)
-#-M Fit calibration models to SVM outputs. 
+#-M Fit calibration models to SVM outputs.
 #-V <double>	The number of folds for the internal cross-validation. (default -1, use training data)
 #-W <double> The random number seed. (default 1)
 #-K <classname and parameters> 	The Kernel to use. (default: weka.classifiers.functions.supportVector.PolyKernel)
 #-calibrator <scheme specification> Full name of calibration model, followed by options.(default: "weka.classifiers.functions.Logistic")
 #-output-debug-info If set, classifier is run in debug mode and may output additional info to the console
-#-do-not-check-capabilities If set, classifier capabilities are not checked before classifier is built (use with caution). 
+#-do-not-check-capabilities If set, classifier capabilities are not checked before classifier is built (use with caution).
 #-num-decimal-places The number of decimal places for the output of numbers in the model (default 2).
 #-batch-size The desired batch size for batch prediction  (default 100).
 
@@ -411,7 +488,7 @@ g=0.4 #large gamma leads to high bias (underfit) and low variance models, and vi
 #weka cross 10 automatikoa parametrizatu ahal dut $c $g
 #java -cp $CP -Xmx1024m --add-opens=java.base/java.lang=ALL-UNNAMED weka.classifiers.functions.SMO -C $c -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.RBFKernel -C 250007 -G $g" -t $dirtrain/etrain.morfo.cab.nominaltextstringtowordvector$N.arff -d $dirtrain/etrain.model -x 10 -o -i -c $CLASE > $dirtrain/cross10results.txt
 
-#train default 
+#train default
 
 #test test
 #java -cp $CP -Xmx1024m --add-opens=java.base/java.lang=ALL-UNNAMED weka.classifiers.functions.SMO -c $CLASE -l $dirtrain/etrain.model -T $dirtest/etest.morfo.cab.nominaltextstringtowordvector$N.arff -o -i > $dirtest/testresults.txt
@@ -436,47 +513,70 @@ java -cp $CP -Xmx1024m weka.gui.explorer.Explorer
 }
 
 
+
 function fin()
 {
 	echo -e "¿Quieres salir del programa?(S/N)\n"
         read respuesta
-	if [ $respuesta == "N" ] 
+	if [ $respuesta == "N" ]
 		then
 			opcionmenuppal=0
-		fi	
+		fi
 }
 ### Main ###
 opcionmenuppal=0
 modelo=stanford
-while test $opcionmenuppal -ne 10
+while test $opcionmenuppal -ne 20
 do
 	#Muestra el menu
-       	echo -e "1 obtenerdatossimple5en5 \n"
-        echo -e "2 obtenerdatoscomplejo5en5 \n"
-        echo -e "3 obtenerdatosmultiaztertest_eu stanford\n"
-	echo -e "4 Crear data-cross10"
+        echo -e "1 obtenerdatossimplecompuesto_eu\n"
+       	echo -e "2 obtenerdatos5en5 \n"
+        echo -e "3 Recoger los resultados multiaztertest stanford consimilitud sincontadores\n"
+	echo -e "4 Recoger los resultados multiaztertest cube consimilitud sincontadores\n"
+	echo -e "5 Recoger los resultados multiaztertest stanford consimilitud concontadores\n"
+	echo -e "6 Recoger los resultados multiaztertest cube consimilitud concontadores\n"
+	echo -e "7 Crear data-cross 10 balanceado para stanford consimilitud concontadores\n"
+        echo -e "8 Crear data-cross 10 balanceado para stanford consimilitud sincontadores\n"
+        echo -e "9 Crear data-cross 10 balanceado para cube consimilitud concontadores\n"
+        echo -e "10 Crear data-cross 10 balanceado para cube consimilitud concontadores\n"
+        echo -e "11 cvs a arff stanford consimilitud concontadores\n"
         echo -e "5 Aplicar cross10 con weka SMO default\n" #, para feature selection y seleccionar los parametros y el algoritmo \n"
         echo -e "6 Aplicar weka feature selection y seleccionar los parametros y el algoritmo \n"
 	echo -e "7 generar el mejor modelo con train y guardar \n"
 	echo -e "8 testear los datos de test\n"
         echo -e "9 weka \n"
-        echo -e "10 Exit \n"
+        echo -e "20 Exit \n"
 	read -p "Elige una opcion:" opcionmenuppal
 	case $opcionmenuppal in
-                       	1) obtenerdatossimple5en5;;
-                        2) obtenerdatoscomplejo5en5;;
-			3) obtenerdatosmultiaztertest_eu $modelo;;
-			4) cross10banatu_es $modelo;;
-                        5) crosswekasmodefault_es $modelo;;
-			6) crosswekafs_es $modelo;;
-                        7) weka;;
-			8) weka;;
-			10) fin;;
+                        1) obtenerdatossimplecompuesto_eu;;
+                       	2) obtenerdatos5en5;;
+			3) obtenerdatosmultiaztertest_eu stanford consimilitud sincontadores;;
+			4) obtenerdatosmultiaztertest_eu cube consimilitud sincontadores;;
+			5) obtenerdatosmultiaztertest_eu stanford consimilitud concontadores;;
+			6) obtenerdatosmultiaztertest_eu cube consimilitud concontadores;;
+			7) cross10banatu_eu stanford consimilitud concontadores;;
+			8) cross10banatu_eu stanford consimilitud sincontadores;;
+			9) cross10banatu_eu cube consimilitud concontadores;;
+			10) cross10banatu_eu cube consimilitud concontadores;;
+			11) cvs2arff stanford consimilitud sincontadores;;
+                        19) crosswekasmodefault_es $modelo;;
+			19) crosswekafs_es $modelo;;
+                        19) weka;;
+			19) weka;;
+			19) recogerlosresultadosmultiaztertest stanford consimilitud sincontadores
+			    anadirlabeldeclaseatrainytest stanford consimilitud sincontadores;;
+			19) recogerlosresultadosmultiaztertest cube consimilitud sincontadores
+                            anadirlabeldeclaseatrainytest cube consimilitud sincontadores;;
+			19) recogerlosresultadosmultiaztertest stanford consimilitud concontadores
+                            anadirlabeldeclaseatrainytest stanford consimilitud concontadores;;
+			19) recogerlosresultadosmultiaztertest cube consimilitud concontadores
+                            anadirlabeldeclaseatrainytest cube consimilitud concontadores;;
+			20) fin;;
 			*) ;;
 
-	esac 
-done 
+	esac
+done
 
-echo "Fin del Programa" 
-exit 0 
+echo "Fin del Programa"
+exit 0
 
