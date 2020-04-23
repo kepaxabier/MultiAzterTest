@@ -2301,7 +2301,7 @@ class Printer:
         if language == "basque":
             ignore_list.extend(self.ignore_list_eu_ind)
 
-        for key, value in i.items():
+        for key, value in sorted(i.items()):
             if key not in ignore_list:
                 indicators_dict[key] = i.get(key)
                 headers.append(key)
