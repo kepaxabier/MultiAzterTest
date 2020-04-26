@@ -2223,7 +2223,7 @@ class Printer:
                 print(self.ind_sentences.get(key) + str(i.get(key)))
 
     # genera el fichero X.out.csv, MERECE LA PENA POR IDIOMA
-    def generate_csv(self, csv_path, input, similarity):  # , csv_path, prediction, similarity):
+    def generate_csv(self, csv_path, input):  # , csv_path, prediction, similarity):
         i = self.indicators
         # kk=prediction
         # estadisticos
@@ -2816,7 +2816,7 @@ class Main(object):
             printer = Printer(indicators, language, similarity)
             printer.load_ind_sentences()
             printer.print_info()
-            printer.generate_csv(path, input, similarity)  # path, prediction, opts.similarity)
+            printer.generate_csv(path, input)  # path, prediction, opts.similarity)
             if csv:
                 df_row = printer.write_in_full_csv(df_row, similarity, language, ratios)
         if csv:
