@@ -898,11 +898,11 @@ class Document:
                             # prueba pron. pers.
                             if w.is_personal_pronoun():
                                 i['num_personal_pronouns'] += 1
-                            if w.is_first_person_pronoun(self.language):
+                            if w.is_first_person_pronoun():
                                 i['num_first_pers_pron'] += 1
-                            if w.is_first_personal_pronoun_sing(self.language):
+                            if w.is_first_personal_pronoun_sing():
                                 i['num_first_pers_sing_pron'] += 1
-                            if w.is_third_personal_pronoun(self.language):
+                            if w.is_third_personal_pronoun():
                                 i['num_third_pers_pron'] += 1
                             # prueba pron. pers.
                             if w.is_negative(self.language):
@@ -1464,21 +1464,21 @@ class Word:
         else:
             return False
 
-    def is_first_person_pronoun(self, language):
+    def is_first_person_pronoun(self):
         atributos = self.feats.split('|')
         if 'PronType=Prs' in atributos and 'Person=1' in atributos:
             return True
         else:
             return False
 
-    def is_third_personal_pronoun(self, language):
+    def is_third_personal_pronoun(self):
         atributos = self.feats.split('|')
         if 'PronType=Prs' in atributos and 'Person=3' in atributos:
             return True
         else:
             return False
 
-    def is_first_personal_pronoun_sing(self, language):
+    def is_first_personal_pronoun_sing(self):
         atributos = self.feats.split('|')
         if 'PronType=Prs' in atributos and 'Person=1' in atributos and 'Number=Sing' in atributos:
             return True
