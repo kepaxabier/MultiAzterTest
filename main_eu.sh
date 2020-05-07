@@ -1,56 +1,36 @@
 #Pasos:
-#En /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/Cuentos/txt/Texto_1-50.txt (Simple)
-#En /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/Cuentos/txt/Texto_51-100.txt (Complejo)
-
+#Simple:
+#En corpus/eu/ErreXail/sinpleak/*(200) (Simple)
+#Complejo:
+#En corpus/eu/ErreXail/konplexuak/*(200) (Complejo)
 #OBTENER MULTIAZTERTEST EN 5 EN 5
-function obtenerdatossimplecompuesto_es()
+function obtenerdatossimplecompuesto_eu()
 {
-mkdir -p /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo
-mkdir -p /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/simple
-mkdir -p /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/complejo
-for i in `seq 1 50`
+mkdir -p /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo
+mkdir -p /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/simple
+mkdir -p /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/complejo
+for i in `seq 1 200`
 do
-cp /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/Cuentos/txt/Texto_$i.txt /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/simple
+cp /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/ErreXail/sinpleak/corp_zernola_$i.trc.txt /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/simple/Texto_$i.txt 
 done
-for i in `seq 51 100`
+for i in `seq 1 200`
 do
- cp /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/Cuentos/txt/Texto_$i.txt /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/complejo
+ cp /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/ErreXail/konplexuak/Texto_$i.txt /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/complejo
 done
-#simple
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/simple"
-#voy a dividir los ficheros en 5 en 5
-cd $dir
-has=1
-buk=5
-for j in `seq 1 10`
-do
-	mkdir $buk
-	for i in `seq $has $buk`
-	do
-       		cp Texto_$i.txt $buk
-	done
-        has=$(echo "$has+5" | bc -l)
-        buk=$(echo "$buk+5" | bc -l)
-done
-#complejo
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/complejo"
-#voy a dividir los ficheros en 5 en 5
-cd $dir
-has=51
-buk=55
-for j in `seq 1 10`
-do
-	mkdir $buk
-	for i in `seq $has $buk`
-	do
-       		cp Texto_$i.txt $buk
-	done
-        has=$(echo "$has+5" | bc -l)
-        buk=$(echo "$buk+5" | bc -l)
-done
+#Bi fitxategi gaizki!!!!!!
+#144 y 17; 1 y 3 palabras
+cp /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/ErreXail/bestesimplebatzuk/corp_zernola_201.trc.txt /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/simple/Texto_17.txt
+cp /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/ErreXail/bestesimplebatzuk/corp_zernola_203.trc.txt /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/simple/Texto_144.txt
+#corregidos:
+#-----------COMPLEJO----------
+#67 : "--&gt;"
+#77: "--&gt;"
+#103: "&amp;"
+#107: "--&gt;"
+#140: "-- but can't share them"???
+#167: "--&gt;"
 }
-
-function obtenerdatosmultiaztertest_es()
+function obtenerdatos5en5errexail()
 {
 modelo=$1
 consim=$2
@@ -58,105 +38,177 @@ concont=$3
 modelo_sim_cont=$modelo$consim$concont
 cd /media/datos/Dropbox/ikerkuntza/metrix-env
 source bin/activate
-#simple multiaztertest
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/simple"
 cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
 #ANALIZA SI PROCESA BIEN (Por ejemplo hay que separar "-" de las palabras con espacio)
-#python3 ./multiaztertest.py -s -c -r -f  $dir/5/Texto_1.txt -l spanish -m cube
-for i in `seq 5 5 50`
+#python3 ./multiaztertest.py -s -c -r -f  $dir/5/Texto_1.txt -l basque -m stanford -d "/home/kepa"
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo"
+for i in `seq 5 5 200`
 do
-   if [[ "$consim" == "sinsimilitud" &&  "$concont" == "sincontadores" ]]
-	then
-	#sinsimilitud y sincontadores  
-   	python3 multiaztertest.py -c -r -f  $dir/$i/*.txt -l spanish -m $modelo -d /home/kepa
-   elif [[ "$consim" == "consimilitud" &&  "$concont" == "sincontadores" ]]
-	then
-   	#consimilitud y sincontadores
-   	python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l spanish -m $modelo -d /home/kepa
-   elif [[ "$consim" == "consimilitud" &&  "$concont" == "concontadores" ]]
-	then
-   	#consimilitud y concontadores
-   	python3 multiaztertest.py -s -c -f  $dir/$i/*.txt -l spanish -m $modelo -d /home/kepa
-   else
-	#sinsimilitud y concontadores
-   	python3 multiaztertest.py -c -f  $dir/$i/*.txt -l spanish -m $modelo -d /home/kepa
-   fi	
-   mkdir $dir/$i/results/$modelo$consim$concont
-   cp $dir/$i/results/*.csv $dir/$i/results/$modelo$consim$concont
+ python3 dividirerrexail5en5.py $dir simple $i
+ mkdir $dir/simple/$i/results/$modelo$consim$concont
+ cp $dir/simple/$i/results/full_results_aztertest.csv $dir/simple/$i/results/$modelo$consim$concont	
 done
 
+for i in `seq 5 5 200`
+do
+ python3 dividirerrexail5en5.py $dir complejo $i
+ mkdir $dir/complejo/$i/results/$modelo$consim$concont
+ cp $dir/complejo/$i/results/full_results_aztertest.csv $dir/complejo/$i/results/$modelo$consim$concont
+done
+}
 
-#complejo multiaztertest
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/complejo"
+function obtenerdatos5en5()
+{
+#simple
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/simple"
+cd $dir
+#i=1
+#for text in `ls  $dir`
+#do
+#  mv $text Texto_$i.txt
+#  i=$(echo "$i+1" | bc -l)
+#done
+#voy a dividir los ficheros en 5 en 5
+has=1
+buk=5
+for j in `seq 1 40`
+do
+	mkdir $buk
+	for i in `seq $has $buk`
+	do
+       		cp Texto_$i.txt $buk
+	done
+        has=$(echo "$has+5" | bc -l)
+        buk=$(echo "$buk+5" | bc -l)
+done
+#voy a dividir los ficheros en 5 en 5
+#complejo
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/complejo"
+cd $dir
+#i=1
+#for text in `ls  $dir`
+#do
+#  mv $text Texto_$i.txt
+#  i=$(echo "$i+1" | bc -l)
+#done
+#voy a dividir los ficheros en 5 en 5
+has=1
+buk=5
+for j in `seq 1 40`
+do
+	mkdir $buk
+	for i in `seq $has $buk`
+	do
+       		cp Texto_$i.txt $buk
+	done
+        has=$(echo "$has+5" | bc -l)
+        buk=$(echo "$buk+5" | bc -l)
+done
+}
+function obtenerdatosmultiaztertest_eu()
+{
+modelo=$1
+consim=$2
+concont=$3
+cd /media/datos/Dropbox/ikerkuntza/metrix-env
+source bin/activate
 cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
-#test_cab.csv: ? agertzen da!!!!!!hypernymy_nouns_index zutabean cross1 3. konplexuan ez dauka baliorik
-#Mean hypernym values of nouns in the WordNet lexicon: nan
-#python3 ./multiaztertest.py -s -c -r -f  $dir/55/Texto_53.txt -l spanish -m stanford -d "/home/kepa"
-for i in `seq 55 5 100`
+#ANALIZA SI PROCESA BIEN (Por ejemplo hay que separar "-" de las palabras con espacio)
+#python3 ./multiaztertest.py -s -c -r -f  $dir/5/Texto_1.txt -l basque -m stanford -d "/home/kepa"
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/complejo"
+for i in `seq 5 5 200`
 do
    if [[ "$consim" == "sinsimilitud" &&  "$concont" == "sincontadores" ]]
 	then
 	#sinsimilitud y sincontadores  
-   	python3 multiaztertest.py -c -r -f  $dir/$i/*.txt -l spanish -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d /home/kepa
    elif [[ "$consim" == "consimilitud" &&  "$concont" == "sincontadores" ]]
 	then
    	#consimilitud y sincontadores
-   	python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l spanish -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d /home/kepa
    elif [[ "$consim" == "consimilitud" &&  "$concont" == "concontadores" ]]
 	then
    	#consimilitud y concontadores
-   	python3 multiaztertest.py -s -c -f  $dir/$i/*.txt -l spanish -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -s -c -f  $dir/$i/*.txt -l basque -m $modelo -d /home/kepa
    else
 	#sinsimilitud y concontadores
-   	python3 multiaztertest.py -c -f  $dir/$i/*.txt -l spanish -m $modelo -d /home/kepa
+   	python3 multiaztertest.py -c -f  $dir/$i/*.txt -l basque -m $modelo -d /home/kepa
    fi
    mkdir $dir/$i/results/$modelo$consim$concont
    cp $dir/$i/results/*.csv $dir/$i/results/$modelo$consim$concont	
 done
+
+
+#complejo multiaztertest
+#python3 ./multiaztertest.py -s -c -r -f  $dir/55/Texto_53.txt -l basque -m stanford -d "/home/kepa"
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/simple"
+cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual
+for i in `seq 5 5 200`
+do
+   if [[ "$consim" == "sinsimilitud" &&  "$concont" == "sincontadores" ]]
+	then
+	#sinsimilitud y sincontadores  
+   	python3 multiaztertest.py -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d /home/kepa
+   elif [[ "$consim" == "consimilitud" &&  "$concont" == "sincontadores" ]]
+	then
+   	#consimilitud y sincontadores
+   	python3 multiaztertest.py -s -c -r -f  $dir/$i/*.txt -l basque -m $modelo -d /home/kepa
+   elif [[ "$consim" == "consimilitud" &&  "$concont" == "concontadores" ]]
+	then
+   	#consimilitud y concontadores
+   	python3 multiaztertest.py -s -c -f  $dir/$i/*.txt -l basque -m $modelo -d /home/kepa
+   else
+	#sinsimilitud y concontadores
+   	python3 multiaztertest.py -c -f  $dir/$i/*.txt -l basque -m $modelo -d /home/kepa
+   fi
+   mkdir $dir/$i/results/$modelo$consim$concont
+   cp $dir/$i/results/*.csv $dir/$i/results/$modelo$consim$concont	
+done
+
 }
 
-function cross10banatu_es()
+function cross10banatu_eu()
 {
 modelo=$1
 consim=$2
 concont=$3
 modelo_sim_cont=$modelo$consim$concont
-echo "Genera un train y un test balanceado simple-complejo test(05simple  y 55complejo el resto train"
-#output:/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/cross10$modelo/cross1/[train|test]
+echo "Genera un train y un test balanceado simple-complejo test(5 y 10 simple +  5 y 10 complejo para test y resto train"
+#output:/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/stanfordconsimilitudconcontadores/cross10$modelo/cross1/[train|test]
 #test:
-#input1: /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/simple/5/results/full_results_aztertest_withlevel.csv +
-#input2: /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/complejo/55/results/full_results_aztertest_withlevel.csv
+#input1: /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/simple/5/results/stanfordconsimilitudconcontadores/full_results_aztertest_withlevel.csv +
+#input2: /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/simple/10/results/stanfordconsimilitudconcontadores/full_results_aztertest_withlevel.csv 
+#input3: /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/complejo/5/results/stanfordconsimilitudconcontadores/full_results_aztertest_withlevel.csv +
+#input4: /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/complejo/10/results/stanfordconsimilitudconcontadores/full_results_aztertest_withlevel.csv /full_results_aztertest_withlevel.csv
 
 #Añade el nivel
 #crea el fichero a concatenar
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/simple"
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/simple"
 echo -e "level\n0\n0\n0\n0\n0\n" > $dir/simplelevel.txt
-for i in `seq 5 5 50`
+for i in `seq 5 5 200`
 do
-paste -d',' $dir/$i/results/$modelo_sim_cont/full_results_aztertest.csv $dir/simplelevel.txt > $dir/$i/results/$modelo_sim_cont/full_results_aztertest_withlevel.csv
-head -n 6 $dir/$i/results/$modelo_sim_cont/full_results_aztertest_withlevel.csv > $dir/$i/results/$modelo_sim_cont/full_results_aztertest_withlevelgarbi.csv
-tail -n +2 $dir/$i/results/$modelo_sim_cont/full_results_aztertest_withlevelgarbi.csv > $dir/$i/results/$modelo_sim_cont/full_results_aztertest_withlevelsincab.csv
+paste -d',' $dir/$i/results/$modelo$consim$concont/full_results_aztertest.csv $dir/simplelevel.txt > $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevel.csv
+head -n 6 $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevel.csv > $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevelgarbi.csv
+tail -n +2 $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevelgarbi.csv > $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevelsincab.csv
 done
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo/complejo"
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo/complejo"
 #crea el fichero a concatenar
 echo -e "level\n1\n1\n1\n1\n1\n" > $dir/complejolevel.txt
-for i in `seq 55 5 100`
+for i in `seq 5 5 200`
 do
-paste -d',' $dir/$i/results/$modelo_sim_cont/full_results_aztertest.csv $dir/complejolevel.txt > $dir/$i/results/$modelo_sim_cont/full_results_aztertest_withlevel.csv
-head -n 6 $dir/$i/results/$modelo_sim_cont/full_results_aztertest_withlevel.csv > $dir/$i/results/$modelo_sim_cont/full_results_aztertest_withlevelgarbi.csv
-tail -n +2 $dir/$i/results/$modelo_sim_cont/full_results_aztertest_withlevelgarbi.csv > $dir/$i/results/$modelo_sim_cont/full_results_aztertest_withlevelsincab.csv
+paste -d',' $dir/$i/results/$modelo$consim$concont/full_results_aztertest.csv $dir/complejolevel.txt > $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevel.csv
+head -n 6 $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevel.csv > $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevelgarbi.csv
+tail -n +2 $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevelgarbi.csv > $dir/$i/results/$modelo$consim$concont/full_results_aztertest_withlevelsincab.csv
 done
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo"
-
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo"
 for i in `seq 1 10`
 do
-        mkdir -p $dir/$modelo_sim_cont/cross10/cross$i
-        j=`expr $i \* 5`
-        k=`expr $j + 50`
-        cat $dir/simple/$j/results/$modelo_sim_cont/full_results_aztertest_withlevelsincab.csv $dir/complejo/$k/results/$modelo_sim_cont/full_results_aztertest_withlevelsincab.csv > $dir/$modelo_sim_cont/cross10/cross$i/test_sincab.csv
+mkdir -p $dir/$modelo$consim$concont/cross10/cross$i
+j=`expr $i \* 10`
+k=`expr $j - 5`
+cat $dir/simple/$k/results/$modelo$consim$concont/full_results_aztertest_withlevelsincab.csv $dir/simple/$j/results/$modelo$consim$concont/full_results_aztertest_withlevelsincab.csv $dir/complejo/$k/results/$modelo$consim$concont/full_results_aztertest_withlevelsincab.csv $dir/complejo/$j/results/$modelo$consim$concont/full_results_aztertest_withlevelsincab.csv > $dir/$modelo$consim$concont/cross10/cross$i/test_sincab.csv
 done
-
-cd $dir/$modelo_sim_cont/cross10/
+cd $dir/$modelo$consim$concont/cross10/
 cat cross1/test_sincab.csv cross2/test_sincab.csv cross3/test_sincab.csv cross4/test_sincab.csv cross5/test_sincab.csv cross6/test_sincab.csv cross7/test_sincab.csv cross8/test_sincab.csv cross9/test_sincab.csv > cross10/train_sincab.csv
 cat cross1/test_sincab.csv cross2/test_sincab.csv cross3/test_sincab.csv cross4/test_sincab.csv cross5/test_sincab.csv cross6/test_sincab.csv cross7/test_sincab.csv cross8/test_sincab.csv cross10/test_sincab.csv > cross9/train_sincab.csv
 cat cross1/test_sincab.csv cross2/test_sincab.csv cross3/test_sincab.csv cross4/test_sincab.csv cross5/test_sincab.csv cross6/test_sincab.csv cross7/test_sincab.csv cross9/test_sincab.csv cross10/test_sincab.csv > cross8/train_sincab.csv
@@ -169,14 +221,14 @@ cat cross1/test_sincab.csv cross3/test_sincab.csv cross4/test_sincab.csv cross5/
 cat cross2/test_sincab.csv cross3/test_sincab.csv cross4/test_sincab.csv cross5/test_sincab.csv cross6/test_sincab.csv cross7/test_sincab.csv cross8/test_sincab.csv cross9/test_sincab.csv cross10/test_sincab.csv > cross1/train_sincab.csv
 # #GEHITU BURUAK!!!!
 #Lortu burua
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo"
-head -n 1 $dir/simple/5/results/$modelo_sim_cont/full_results_aztertest_withlevel.csv > $dir/burua.csv
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo"
+head -n 1 $dir/simple/5/results/$modelo$consim$concont/full_results_aztertest_withlevel.csv > $dir/burua.csv
 for i in `seq 1 10`
 do
-cat $dir/burua.csv $dir/$modelo_sim_cont/cross10/cross$i/train_sincab.csv > $dir/$modelo_sim_cont/cross10/cross$i/train_cab.csv
-cat $dir/burua.csv $dir/$modelo_sim_cont/cross10/cross$i/test_sincab.csv > $dir/$modelo_sim_cont/cross10/cross$i/test_cab.csv
+        cat $dir/burua.csv $dir/$modelo$consim$concont/cross10/cross$i/train_sincab.csv > $dir/$modelo$consim$concont/cross10/cross$i/train_cab.csv
+        cat $dir/burua.csv $dir/$modelo$consim$concont/cross10/cross$i/test_sincab.csv > $dir/$modelo$consim$concont/cross10/cross$i/test_cab.csv
 done
-# #Crear 10-fold cross-validation formando 10 carpetas (1 a 10 ) con 5 ficheros simples y 5 complejos (1 con 51(50+1), 2 con 52(50+2)) para que quede todo balanceado.
+
 }
 function cvs2arff()
 {
@@ -190,11 +242,11 @@ CP="$CLASSPATH:/usr/share/java/"
 #arrancar weka online
 #java -cp $CP -Xmx1024m weka.gui.explorer.Explorer
 #convertir csv en arff
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo"
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo"
 for i in `seq 1 10`
 do
-	java -cp $CP -Xmx1024m --add-opens=java.base/java.lang=ALL-UNNAMED weka.core.converters.CSVLoader $dir/$modelo_sim_cont/cross10/cross$i/train_cab.csv > $dir/$modelo_sim_cont/cross10/cross$i/train_cab.arff
-	java -cp $CP -Xmx1024m --add-opens=java.base/java.lang=ALL-UNNAMED weka.core.converters.CSVLoader $dir/$modelo_sim_cont/cross10/cross$i/test_cab.csv > $dir/$modelo$consim$concont/cross10/cross$i/test_cab.arff
+	java -cp $CP -Xmx1024m --add-opens=java.base/java.lang=ALL-UNNAMED weka.core.converters.CSVLoader $dir/$modelo$consim$concont/cross10/cross$i/train_cab.csv > $dir/$modelo$consim$concont/cross10/cross$i/train_cab.arff
+	java -cp $CP -Xmx1024m --add-opens=java.base/java.lang=ALL-UNNAMED weka.core.converters.CSVLoader $dir/$modelo$consim$concont/cross10/cross$i/test_cab.csv > $dir/$modelo$consim$concont/cross10/cross$i/test_cab.arff
 done
 #convierte la clase en nominal para poder ejecutar smo
 for i in `seq 1 10`
@@ -207,7 +259,7 @@ done
 
 
 
-function crosswekasmodefault_es()
+function crosswekasmodefault_eu()
 {
 modelo=$1
 consim=$2
@@ -288,7 +340,7 @@ modelo_sim_cont=$modelo$consim$concont
 WEKA_PATH=/home/kepa/weka-3-8-3
 export CLASSPATH=$CLASSPATH:/home/kepa/weka-3-8-3/weka.jar #:/usr/share/java/libsvm.jar:/usr/share/java
 CP="$CLASSPATH:/usr/share/java/"
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo"
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo"
 for i in `seq 1 10`
 do
 java --add-opens=java.base/java.lang=ALL-UNNAMED -cp $CP -Xmx1024m weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.02e-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0e-8 -M -1 -num-decimal-places 4" -t $dir/$modelo$consim$concont/cross10/cross$i/train_cab.nominal.arff -d $dir/$modelo$consim$concont/cross10/cross$i/etrain.model -c last > $dir/$modelo$consim$concont/cross10/cross$i/train_output.txt
@@ -438,11 +490,17 @@ do
  less $dir/cross$i/$file >> $dir/cross10$file
 done
 }
-function crosswekafs_es()
+function crosswekafs_eu()
 {
 modelo=$1
-consim=$2
-concont=$3
+if [[ "$modelo" == "errexail" ]]
+then
+	consim=""
+    concont=""
+else
+    consim=$2
+    concont=$3
+fi
 N=$4
 modelo_sim_cont=$modelo$consim$concont
 ############################################################################
@@ -451,7 +509,7 @@ modelo_sim_cont=$modelo$consim$concont
 WEKA_PATH=/home/kepa/weka-3-8-3
 export CLASSPATH=$CLASSPATH:/home/kepa/weka-3-8-3/weka.jar #:/usr/share/java/libsvm.jar:/usr/share/java
 CP="$CLASSPATH:/usr/share/java/"
-dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/es/simplecomplejo"
+dir="/media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo"
 
 #General options:-h 	Get help on available options.
 #-i <filename> The file containing first input instances.
@@ -551,9 +609,13 @@ function weka()
 WEKA_PATH=/home/kepa/weka-3-8-3
 export CLASSPATH=$CLASSPATH:/home/kepa/weka-3-8-3/weka.jar #:/usr/share/java/libsvm.jar:/usr/share/java
 CP="$CLASSPATH:/usr/share/java/"
-cd /media/datos/Dropbox/ikerkuntza/metrix-env/sepln2020/aztertestnlpcube/dataset_aztertest_full
+#arrancar weka online
+#java -cp :/home/kepa/weka-3-8-3/weka.jar:/usr/share/java/ -Xmx1024m weka.gui.explorer.Explorer
+cd /media/datos/Dropbox/ikerkuntza/metrix-env/multilingual/corpus/eu/simplecomplejo
 java -cp $CP -Xmx1024m weka.gui.explorer.Explorer
+
 }
+
 
 
 function fin()
@@ -567,72 +629,89 @@ function fin()
 }
 ### Main ###
 opcionmenuppal=0
+modelo=stanford
 while test $opcionmenuppal -ne 40
 do
 	#Muestra el menu
-       	echo -e "1 Obtener datos simple y compuesto de 5 en 5 \n"
-        echo -e "2 Recoger los resultados multiaztertest stanford consimilitud sincontadores\n"
-	echo -e "3 Recoger los resultados multiaztertest cube consimilitud sincontadores\n"
-	echo -e "4 Recoger los resultados multiaztertest stanford consimilitud concontadores\n"
-	echo -e "5 Recoger los resultados multiaztertest cube consimilitud concontadores\n"
-	echo -e "6 cross10banatu_es stanford consimilitud concontadores\n"
-	echo -e "7 cross10banatu_es stanford consimilitud sincontadores\n"
-	echo -e "8 cross10banatu_es cube consimilitud concontadores\n"
-	echo -e "9 cross10banatu_es cube consimilitud sincontadores\n"
-	echo -e "10 cvs2arff stanford consimilitud concontadores\n"
-	echo -e "11 cvs2arff stanford consimilitud sincontadores\n"
-	echo -e "12 cvs2arff cube consimilitud concontadores\n"
-        echo -e "13 cvs2arff cube consimilitud sincontadores\n"
-        echo -e "14 crosswekasmodefault_es stanford consimilitud concontadores\n"
-        echo -e "15 crosswekasmodefault_es stanford consimilitud sincontadores\n"
-	echo -e "16 crosswekasmodefault_es cube consimilitud concontadores\n"
-	echo -e "17 crosswekasmodefault_es cube consimilitud sincontadores\n"
-        echo -e "18 crosswekafs_es stanford consimilitud sincontadores 75\n"
-	echo -e "19 crosswekafs_es stanford consimilitud sincontadores 50\n"
-	echo -e "20 crosswekafs_es stanford consimilitud sincontadores 25\n"
-	echo -e "21 crosswekafs_es stanford consimilitud concontadores 75\n"
-	echo -e "22 crosswekafs_es stanford consimilitud concontadores 50\n"
-	echo -e "23 crosswekafs_es stanford consimilitud concontadores 25\n"
-	echo -e "24 crosswekafs_es cube consimilitud concontadores 75\n"
-	echo -e "25 crosswekafs_es cube consimilitud concontadores 50\n"
-	echo -e "26 crosswekafs_es cube consimilitud concontadores 25\n"
-	echo -e "27 crosswekafs_es cube consimilitud sincontadores 75\n"
-	echo -e "28 crosswekafs_es cube consimilitud sincontadores 50\n"
-	echo -e "29 crosswekafs_es cube consimilitud sincontadores 25\n"
-        echo -e "39 weka \n"
-        echo -e "40 Exit \n"
+        echo -e "1 obtenerdatossimplecompuesto_eu\n"
+       	echo -e "2 obtenerdatos5en5 \n"
+        echo -e "3 Recoger los resultados multiaztertest stanford consimilitud sincontadores\n"
+	echo -e "4 Recoger los resultados multiaztertest cube consimilitud sincontadores\n"
+	echo -e "5 Recoger los resultados multiaztertest stanford consimilitud concontadores\n"
+	echo -e "6 Recoger los resultados multiaztertest cube consimilitud concontadores\n"
+	echo -e "7 Crear data-cross 10 balanceado para stanford consimilitud concontadores\n"
+        echo -e "8 Crear data-cross 10 balanceado para stanford consimilitud sincontadores\n"
+        echo -e "9 Crear data-cross 10 balanceado para cube consimilitud concontadores\n"
+        echo -e "10 Crear data-cross 10 balanceado para cube consimilitud sincontadores\n"
+        echo -e "11 cvs a arff stanford consimilitud concontadores\n"
+        echo -e "12 cvs a arff stanford consimilitud sincontadores\n"
+	echo -e "13 cvs a arff cube consimilitud concontadores\n"
+	echo -e "14 cvs a arff cube consimilitud sincontadores\n"
+        echo -e "15 crosswekasmodefault_eu stanford consimilitud sincontadores\n"
+        echo -e "16 crosswekasmodefault_eu stanford consimilitud concontadores\n"
+	echo -e "17 crosswekasmodefault_eu cube consimilitud sincontadores\n"
+        echo -e "18 crosswekasmodefault_eu cube consimilitud concontadores\n"
+        echo -e "19 crosswekafs_eu stanford consimilitud sincontadores 75\n"
+	echo -e "20 crosswekafs_eu stanford consimilitud sincontadores 50\n"
+	echo -e "21 crosswekafs_eu stanford consimilitud sincontadores 25\n"
+	echo -e "22 crosswekafs_eu stanford consimilitud concontadores 75\n"
+	echo -e "23 crosswekafs_eu stanford consimilitud concontadores 50\n"
+	echo -e "24 crosswekafs_eu stanford consimilitud concontadores 25\n"
+	echo -e "25 crosswekafs_eu cube consimilitud concontadores 75\n"
+	echo -e "26 crosswekafs_eu cube consimilitud concontadores 50\n"
+	echo -e "27 crosswekafs_eu cube consimilitud concontadores 25\n"
+	echo -e "28 crosswekafs_eu cube consimilitud sincontadores 75\n"
+	echo -e "29 crosswekafs_eu cube consimilitud sincontadores 50\n"
+	echo -e "30 crosswekafs_eu cube consimilitud sincontadores 25\n"
+	echo -e "31 obtenerdatos5en5errexail errexail\n"
+	echo -e "32 cross10banatu_eu errexail\n"
+	echo -e "33 cvs2arff errexail\n"
+	echo -e "34 crosswekasmodefault_eu errexail\n"
+	echo -e "35 crosswekafs_eu errexail consimilitud concontadores 75\n"
+    echo -e "36 crosswekafs_eu errexail consimilitud concontadores 50\n"
+    echo -e "37 crosswekafs_eu errexail consimilitud concontadores 25\n"
+    echo -e "39 weka \n"
+    echo -e "40 Exit \n"
 	read -p "Elige una opcion:" opcionmenuppal
 	case $opcionmenuppal in
-                       	1) obtenerdatossimplecompuesto_es;;
-			2) obtenerdatosmultiaztertest_es stanford consimilitud sincontadores;;
-			3) obtenerdatosmultiaztertest_es cube consimilitud sincontadores;;
-			4) obtenerdatosmultiaztertest_es stanford consimilitud concontadores;;
-			5) obtenerdatosmultiaztertest_es cube consimilitud concontadores;;
-			6) cross10banatu_es stanford consimilitud concontadores;;
-			7) cross10banatu_es stanford consimilitud sincontadores;;
-			8) cross10banatu_es cube consimilitud concontadores;;
-			9) cross10banatu_es cube consimilitud sincontadores;;
-			10) cvs2arff stanford consimilitud concontadores;;
-			11) cvs2arff stanford consimilitud sincontadores;;
-			12) cvs2arff cube consimilitud concontadores;;
-			13) cvs2arff cube consimilitud sincontadores;;
-			14) crosswekasmodefault_es stanford consimilitud concontadores;;
-        		15) crosswekasmodefault_es stanford consimilitud sincontadores;;
-			16) crosswekasmodefault_es cube consimilitud concontadores;;
-        		17) crosswekasmodefault_es cube consimilitud sincontadores;;
-			18) crosswekafs_es stanford consimilitud sincontadores 75;;
-			19) crosswekafs_es stanford consimilitud sincontadores 50;;
-			20) crosswekafs_es stanford consimilitud sincontadores 25;;
-			21) crosswekafs_es stanford consimilitud concontadores 75;;
-			22) crosswekafs_es stanford consimilitud concontadores 50;;
-			23) crosswekafs_es stanford consimilitud concontadores 25;;
-			24) crosswekafs_es cube consimilitud concontadores 75;;
-			25) crosswekafs_es cube consimilitud concontadores 50;;
-			26) crosswekafs_es cube consimilitud concontadores 25;;
-			27) crosswekafs_es cube consimilitud sincontadores 75;;
-			28) crosswekafs_es cube consimilitud sincontadores 50;;
-			29) crosswekafs_es cube consimilitud sincontadores 25;;
-			39) weka;;
+                        1) obtenerdatossimplecompuesto_eu;;
+                       	2) obtenerdatos5en5;;
+			3) obtenerdatosmultiaztertest_eu stanford consimilitud sincontadores;;
+			4) obtenerdatosmultiaztertest_eu cube consimilitud sincontadores;;
+			5) obtenerdatosmultiaztertest_eu stanford consimilitud concontadores;;
+			6) obtenerdatosmultiaztertest_eu cube consimilitud concontadores;;
+			7) cross10banatu_eu stanford consimilitud concontadores;;
+			8) cross10banatu_eu stanford consimilitud sincontadores;;
+			9) cross10banatu_eu cube consimilitud concontadores;;
+			10) cross10banatu_eu cube consimilitud sincontadores;;
+			11) cvs2arff stanford consimilitud concontadores;;
+			12) cvs2arff stanford consimilitud sincontadores;;
+			13) cvs2arff cube consimilitud concontadores;;
+			14) cvs2arff cube consimilitud sincontadores;;
+                        15) crosswekasmodefault_eu stanford consimilitud sincontadores;;
+        		16) crosswekasmodefault_eu stanford consimilitud concontadores;;
+			17) crosswekasmodefault_eu cube consimilitud sincontadores;;
+        		18) crosswekasmodefault_eu cube consimilitud concontadores;;
+			19) crosswekafs_eu stanford consimilitud sincontadores 75;;
+			20) crosswekafs_eu stanford consimilitud sincontadores 50;;
+			21) crosswekafs_eu stanford consimilitud sincontadores 25;;
+			22) crosswekafs_eu stanford consimilitud concontadores 75;;
+			23) crosswekafs_eu stanford consimilitud concontadores 50;;
+			24) crosswekafs_eu stanford consimilitud concontadores 25;;
+			25) crosswekafs_eu cube consimilitud concontadores 75;;
+			26) crosswekafs_eu cube consimilitud concontadores 50;;
+			27) crosswekafs_eu cube consimilitud concontadores 25;;
+			28) crosswekafs_eu cube consimilitud sincontadores 75;;
+			29) crosswekafs_eu cube consimilitud sincontadores 50;;
+			30) crosswekafs_eu cube consimilitud sincontadores 25;;
+			31) obtenerdatos5en5errexail errexail;;
+			32) cross10banatu_eu errexail;;
+			33) cvs2arff errexail;;
+			34) crosswekasmodefault_eu errexail;;
+			35) crosswekafs_eu errexail consimilitud concontadores 75;;
+			36) crosswekafs_eu errexail consimilitud concontadores 50;;
+			37) crosswekafs_eu errexail consimilitud concontadores 25;;
+            39) weka;;
 			40) fin;;
 			*) ;;
 
