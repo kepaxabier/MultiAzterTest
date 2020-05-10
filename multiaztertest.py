@@ -1169,6 +1169,7 @@ class Document:
     def calculate_all_incidence(self):
         i = self.indicators
         n = i['num_words']
+        i['num_different_forms_incidence'] = self.get_incidence(i['num_different_forms'], n)
         i['num_sentences_incidence'] = self.get_incidence(i['num_sentences'], n)
         i['num_paragraphs_incidence'] = self.get_incidence(i['num_paragraphs'], n)
         i['num_impera_incidence'] = self.get_incidence(i['num_impera'], n)
@@ -1886,51 +1887,49 @@ class Printer:
         self.ind_sentences['num_words'] = "Number of words (total): "
         # 2
         self.ind_sentences['num_different_forms'] = "Number of distinct words (total): "
-        # 3  num_different_forms_mean !!!!!
-        self.ind_sentences['num_different_forms_mean'] = "Number of distinct words (mean): "
+        # 3
+        self.ind_sentences['num_different_forms_incidence'] = "Number of distinct words (incidence per 1000 words): "
         # 4
         self.ind_sentences['num_words_with_punct'] = "Number of words with punctuation (total): "
-        # 5 num_words_with_punct_mean!!!!!!!
-        self.ind_sentences['num_words_with_punct_mean'] = "Number of words with punctuation (mean): "
-        # 6
+        # 5
         self.ind_sentences['num_paragraphs'] = "Number of paragraphs (total): "
-        # 7
+        # 6
         self.ind_sentences['num_paragraphs_incidence'] = "Number of paragraphs (incidence per 1000 words): "
-        # 8
+        # 7
         self.ind_sentences['num_sentences'] = "Number of sentences (total): "
-        # 9
+        # 8
         self.ind_sentences['num_sentences_incidence'] = "Number of sentences (incidence per 1000 words): "
-        # 10
+        # 9
         self.ind_sentences['sentences_per_paragraph_mean'] = "Length of paragraphs (mean): "
-        # 11
+        # 10
         self.ind_sentences['sentences_per_paragraph_std'] = "Standard deviation of length of paragraphs: "
-        # 12
+        # 11
         self.ind_sentences['sentences_length_mean'] = "Number of words (length) in sentences (mean): "
-        # 13
+        # 12
         self.ind_sentences['sentences_length_std'] = "Number of words (length) in sentences (standard deviation): "
-        # 14
+        # 13
         self.ind_sentences['sentences_length_no_stopwords_mean'] = "Number of words (length) of sentences without " \
                                                                    "stopwords (mean): "
-        # 15
+        # 14
         self.ind_sentences['sentences_length_no_stopwords_std'] = "Number of words (length) of sentences without " \
                                                                   "stopwords (standard deviation): "
-        # 16
+        # 15
         self.ind_sentences['num_syllables_words_mean'] = "Mean number of syllables (length) in words: "
-        # 17
+        # 16
         self.ind_sentences['num_syllables_words_std'] = "Standard deviation of the mean number of syllables in words: "
-        # 18
+        # 17
         self.ind_sentences['words_length_mean'] = "Mean number of letters (length) in words: "
-        # 19
+        # 18
         self.ind_sentences['words_length_std'] = "Standard deviation of number of letters in words: "
-        # 20
+        # 19
         self.ind_sentences['words_length_no_stopwords_mean'] = "Mean number of letters (length) in words without " \
                                                                "stopwords: "
-        # 21
+        # 20
         self.ind_sentences['words_length_no_stopwords_std'] = "Standard deviation of the mean number of letter in " \
                                                               "words without stopwords: "
-        # 22
+        # 21
         self.ind_sentences['lemmas_length_mean'] = "Mean number of letters (length) in lemmas: "
-        # 23
+        # 22
         self.ind_sentences['lemmas_length_std'] = "Standard deviation of letters (length) in lemmas: "
         # 2.-Lexical Diversity
         # 1
@@ -2327,8 +2326,8 @@ class Printer:
         self.similarity_list = ["similarity_adjacent_mean", "similarity_pairs_par_mean", "similarity_adjacent_par_mean",
                                 "similarity_adjacent_std", "similarity_pairs_par_std", "similarity_adjacent_par_std"]
         # 1.-Descriptive
-        self.descriptive_list = ['num_words', 'num_different_forms', 'num_different_forms_mean', 'num_words_with_punct',
-                                 'num_words_with_punct_mean', 'num_paragraphs', 'num_paragraphs_incidence',
+        self.descriptive_list = ['num_words', 'num_different_forms', 'num_different_forms_incidence', 'num_words_with_punct',
+                                 'num_paragraphs', 'num_paragraphs_incidence',
                                  'num_sentences',
                                  'num_sentences_incidence', 'sentences_per_paragraph_mean',
                                  'sentences_per_paragraph_std',
