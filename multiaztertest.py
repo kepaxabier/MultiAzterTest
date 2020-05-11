@@ -2291,7 +2291,9 @@ class Printer:
             # Word information
             'num_future', 'num_future_incidence',
             # Syntax
-            'num_rel_subord', 'num_rel_subord_incidence'
+            'num_rel_subord', 'num_rel_subord_incidence',
+            'num_pass', 'num_pass_incidence', 'num_pass_mean', 'num_agentless',
+            'agentless_passive_incidence'
         ]
 
         self.ignore_list_counters = [  # descriptive or shallow measures
