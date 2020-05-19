@@ -5,7 +5,6 @@
 import math
 import os
 import subprocess
-import sys
 from pathlib import Path
 import csv
 import stanfordnlp
@@ -16,10 +15,14 @@ from numpy.linalg import norm
 from collections import defaultdict
 import re
 import nltk
-from nltk.tokenize import sent_tokenize, word_tokenize
+from nltk.tokenize import word_tokenize
 # genera CADENAS aleatorias
 import uuid
 
+# punkt
+nltk.download('punkt')
+# cmudcit
+nltk.download('cmudict')
 # wordnet
 nltk.download('wordnet')
 # Add multilingual wordnet
@@ -32,8 +35,8 @@ from wordfreq import zipf_frequency
 from argparse import ArgumentParser
 import pandas as pd
 import pickle
-from sklearn.externals import joblib
-from gensim.models import FastText, KeyedVectors
+import joblib
+from gensim.models import FastText
 import gensim
 
 
@@ -3103,8 +3106,8 @@ class Main(object):
         cargador.load_model()
 
         # Predictor
-        predictor = Predictor(language)
-        predictor.load()
+        # predictor = Predictor(language)
+        # predictor.load()
 
         # Similarity
         similaritymodel = None
