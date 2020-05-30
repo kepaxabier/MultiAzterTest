@@ -39,6 +39,12 @@ import joblib
 from gensim.models import FastText
 import gensim
 
+import weka.core.jvm as jvm
+from weka.core.converters import Loader
+from weka.filters import Filter
+import weka.core.serialization as serialization
+from weka.classifiers import Classifier
+
 
 # logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
@@ -2461,7 +2467,7 @@ class Printer:
                 print(self.ind_sentences.get(key) + str(i.get(key)))
 
     # genera el fichero X.out.csv, MERECE LA PENA POR IDIOMA
-    def generate_csv(self, csv_path, input, similarity):  # , csv_path, prediction, similarity):
+    def generate_csv(self, csv_path, input, prediction):  # , csv_path, prediction, similarity):
         i = self.indicators
         # kk=prediction
         # estadisticos
@@ -2524,6 +2530,10 @@ class Printer:
                             'num_lexic_words '
             , 'left_embeddedness', 'polysemic_index', 'noun_overlap_adjacent', 'similarity_adjacent_mean',
                             'all_connectives']
+
+        #The level is added as first item
+        estfile.write("\n%s" % "Level of the text: " + self.get_level(prediction))
+
         for key, value in self.ind_sentences.items():
             if key not in ignore_list:
                 # Depende de la clave, habra que poner un texto u otro en referencia a los siguientes indicadores
@@ -2640,6 +2650,37 @@ class Printer:
         df = pd.concat([df, df_new], sort=False)
         return df
 
+    def createdataframeforprediction(self, language):
+        i = self.indicators
+        indicators_dict = {}
+        headers = []
+        ignore_list = []
+
+        if language == "english":
+            ignore_list.extend(self.ignore_list_en_ind)
+        if language == "spanish":
+            ignore_list.extend(self.ignore_list_es_ind)
+        if language == "basque":
+            ignore_list.extend(self.ignore_list_eu_ind)
+
+        for key, value in sorted(self.ind_sentences.items()):
+            # Avoid including of level tag in the dataframe for predictions
+            if key not in ignore_list:
+                indicators_dict[key] = i.get(key)
+                headers.append(key)
+        return pd.DataFrame(indicators_dict, columns=headers, index=[0])
+
+    def get_level(self, prediction):
+        if int(prediction) == 0:
+            return "Elementary"
+        elif int(prediction) == 1:
+            if self.language == "english":
+                return "Intermediate"
+            else:
+                return "Advanced"
+        elif int(prediction) == 2:
+            return "Advanced"
+
     @staticmethod
     def create_directory(path):
         newPath = os.path.normpath(str(Path(path).parent.absolute()) + "/results")
@@ -2736,24 +2777,55 @@ class Stopwords:
 class Predictor:
     def __init__(self, language):
         self.lang = language
-        self.clf = None
-        self.selector = None
+        self.classifier = None
 
     def load(self):
-        if self.lang == "english":
-            # Para cargarlo, simplemente hacer lo siguiente:
-            self.clf = joblib.load('./corpus/en/dataset_aztertest_full/classifier_aztertest_best.pkl')
-            with open("./corpus/en/dataset_aztertest_full/selectorAztertestFullBest.pickle", "rb") as f:
-                self.selector = pickle.load(f)
+        try:
+            jvm.start(max_heap_size="1024m", system_cp=True, packages=True)
+            # Cargamos el modelo
+            if self.lang == "english":
+                objects = serialization.read_all("models/en/etrain_en.model")
+            elif self.lang == "basque":
+                objects = serialization.read_all("models/eu/etrain_eu.model")
+            elif self.lang == "spanish":
+                objects = serialization.read_all("models/es/etrain_es.model")
 
-    def predict_dificulty(self, data):
-        feature_names = data.columns.tolist()
-        X_test = data[feature_names]
-        # Para cargarlo, simplemente hacer lo siguiente:
-        # se aplica el selector de atributos a los datos mediante el método transform()
-        X_test_new = self.selector.transform(X_test)
-        # y se realiza la predicción utilizando el método predict()
-        return self.clf.predict(X_test_new)
+            self.classifier = Classifier(jobject=objects[0])
+        except Exception as e:
+            print(e.__str__())
+
+    def predict_dificulty(self, path):
+        pred = 0
+        try:
+            loader = Loader(classname="weka.core.converters.CSVLoader")
+            data = loader.load_file(path + "/dfforprediction.csv")
+            filterToAddLevel = None
+
+            # the level is added to data (arff) file
+            if self.lang == "english":
+                filterToAddLevel = Filter(classname="weka.filters.unsupervised.attribute.Add",
+                                          options=["-T", "NOM", "-N", "level", "-L", "0,1,2"])
+            elif self.lang == "basque" or self.lang == "spanish":
+                filterToAddLevel = Filter(classname="weka.filters.unsupervised.attribute.Add",
+                                          options=["-T", "NOM", "-N", "level", "-L", "0,1"])
+
+            if filterToAddLevel is None:
+                return 0
+            filterToAddLevel.inputformat(data)
+            data_with_level = filterToAddLevel.filter(data)
+            data_with_level.class_is_last()
+
+            for index, inst in enumerate(data_with_level):
+                pred = self.classifier.classify_instance(inst)
+                # dist = self.classifier.distribution_for_instance(inst)
+                # print(str(index + 1) + ": label index=" + str(pred) + ", class distribution=" + str(dist))
+
+        except Exception as e:
+            print(e.__str__())
+        finally:
+            jvm.stop()
+
+        return int(pred)
 
 
 class NLPCharger:
@@ -2984,13 +3056,13 @@ class Similarity:
         model = None
         index2word_set = None
         if self.language == "english":
-            model = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/en.bin", binary=True)
+            model = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/en/en.bin", binary=True)
             index2word_set = set(model.wv.index2word)
         elif self.language == "basque":
-            model = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/eu.bin", binary=True)
+            model = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/eu/eu.bin", binary=True)
             index2word_set = set(model.wv.index2word)
         elif self.language == "spanish":
-            model = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/orig2idf/es.bin", binary=True)
+            model = gensim.models.KeyedVectors.load_word2vec_format("wordembeddings/es/es.bin", binary=True)
             index2word_set = set(model.wv.index2word)
         salida.append(model)
         salida.append(index2word_set)
@@ -3106,8 +3178,8 @@ class Main(object):
         cargador.load_model()
 
         # Predictor
-        # predictor = Predictor(language)
-        # predictor.load()
+        predictor = Predictor(language)
+        predictor.load()
 
         # Similarity
         similaritymodel = None
@@ -3145,7 +3217,12 @@ class Main(object):
             printer = Printer(indicators, language, similarity, printids)
             printer.load_ind_sentences()
             printer.print_info()
-            printer.generate_csv(path, input, similarity)  # path, prediction, opts.similarity)
+
+            # Prediction
+            dfforprediction = printer.createdataframeforprediction(language)
+            dfforprediction.to_csv(os.path.join(path, "dfforprediction.csv"), encoding='utf-8', index=False)
+            prediction = predictor.predict_dificulty(path)
+            printer.generate_csv(path, input, prediction)  # path, prediction, opts.similarity)
             if csv:
                 df_row = printer.write_in_full_csv(df_row, similarity, language, ratios)
         if csv:
