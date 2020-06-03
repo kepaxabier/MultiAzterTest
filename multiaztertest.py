@@ -2838,11 +2838,13 @@ class Predictor:
         except Exception as e:
             print(e.__str__())
 
-    def predict_dificulty(self, path):
+    def predict_dificulty(self, path, id_dataframe):
         pred = 0
         try:
+            csv_path = path + "/" + id_dataframe + ".csv"
             loader = Loader(classname="weka.core.converters.CSVLoader")
-            data = loader.load_file(path + "/dfforprediction.csv")
+            data = loader.load_file(csv_path)
+            os.system("rm " + str(csv_path))
             filterToAddLevel = None
 
             # the level is added to data (arff) file
@@ -3264,8 +3266,9 @@ class Main(object):
 
             # Prediction
             dfforprediction = printer.createdataframeforprediction(language)
-            dfforprediction.to_csv(os.path.join(path, "dfforprediction.csv"), encoding='utf-8', index=False)
-            prediction = predictor.predict_dificulty(path)
+            id_dataframe = str(uuid.uuid4())
+            dfforprediction.to_csv(os.path.join(path, id_dataframe + ".csv"), encoding='utf-8', index=False)
+            prediction = predictor.predict_dificulty(path, id_dataframe)
             printer.generate_csv(path, input, prediction)  # path, prediction, opts.similarity)
             if csv:
                 df_row = printer.write_in_full_csv(df_row, similarity, language, ratios)
