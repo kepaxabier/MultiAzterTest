@@ -174,49 +174,15 @@ class Document:
         self.calculate_all_overlaps()
         return self.indicators
 
-    def create_dataframe(self):
-        i = self.indicators
-        indicators_dict = {}
-        headers = []
-        for key, value in i.items():
-            indicators_dict[key] = i.get(key)
-            headers.append(key)
-        return pd.DataFrame(indicators_dict, columns=headers, index=[0])
-
-    # self.indicators['num_words'] = self.calculate_num_words()
-    #     def calculate_num_words(self):
-    #         num_words = 0
-    #         not_punctuation = lambda w: not (len(w.text) == 1 and (not w.text.isalpha()))
-    #         for paragraph in self._paragraph_list:
-    #             self.aux_lists['sentences_per_paragraph'].append(len(paragraph.sentence_list))  # [1,2,1,...]
-    #             for sentence in paragraph.sentence_list:
-    #                 filterwords = filter(not_punctuation, sentence.word_list)
-    #                 sum = 0
-    #                 for word in filterwords:
-    #                     num_words += 1
-    #                     self.aux_lists['words_length_list'].append(len(word.text))
-    #                     self.aux_lists['lemmas_length_list'].append(len(word.lemma))
-    #                     sum += 1
-    #                 self.aux_lists['sentences_length_mean'].append(sum)
-    #         return num_words
-
-    #     def calculate_num_paragraphs(self):
-    #         return len(self._paragraph_list)
-    #    self.indicators['num_sentences'] = self.calculate_num_sentences()
-    #    self.indicators['num_paragraphs'] = self.calculate_num_paragraphs()
-    #     def calculate_num_sentences(self):
-    #         num_sentences = 0
-    #         for paragraph in self._paragraph_list:
-    #             for sentence in paragraph.sentence_list:
-    #                 num_sentences += 1
-    #         return num_sentences
-
     def calculate_simple_ttr(self, p_diff_forms=None, p_num_words=None):
         if (p_diff_forms and p_num_words) is not None:
             return (len(p_diff_forms)) / p_num_words
         else:
-            self.indicators['simple_ttr'] = round(self.indicators['num_different_forms'] / self.indicators['num_words'],
-                                                  4)
+            if self.indicators['num_words'] > 0:
+                self.indicators['simple_ttr'] = round(
+                    self.indicators['num_different_forms'] / self.indicators['num_words'], 4)
+            else:
+                self.indicators['simple_ttr'] = 0.0
 
     def calculate_nttr(self):
         if self.indicators['num_noun'] > 0:
@@ -227,6 +193,8 @@ class Document:
             self.indicators['ratio_proper_nouns_per_nouns'] = round(
                 self.indicators['num_proper_noun'] / (self.indicators['num_noun'] + self.indicators['num_proper_noun']),
                 4)
+        else:
+            self.indicators['ratio_proper_nouns_per_nouns'] = 0.0
 
     def calculate_vttr(self):
         if self.indicators['num_verb'] > 0:
@@ -256,7 +224,11 @@ class Document:
         self.calculate_content_ttr()
 
     def calculate_lemma_ttr(self):
-        self.indicators['lemma_ttr'] = round(len(self.aux_lists['different_lemmas']) / self.indicators['num_words'], 4)
+        if self.indicators['num_words'] > 0:
+            self.indicators['lemma_ttr'] = round(len(self.aux_lists['different_lemmas']) / self.indicators['num_words'],
+                                                 4)
+        else:
+            self.indicators['lemma_ttr'] = 0.0
 
     def calculate_lemma_nttr(self):
         if self.indicators['num_noun'] > 0:
@@ -313,6 +285,8 @@ class Document:
     def calculate_mean_depth_per_sentence(self, depth_list):
         i = self.indicators
         i['mean_depth_per_sentence'] = round(float(np.mean(depth_list)), 4)
+        if np.isnan(i['mean_depth_per_sentence']):
+            i['mean_depth_per_sentence'] = 0.0
 
     def tree_depth(self, tree, root):
         if not tree[root]:
@@ -374,6 +348,9 @@ class Document:
         v1 = self.get_num_hapax_legomena()
         try:
             self.indicators['honore'] = round(100 * ((np.log10(n)) / (1 - (v1 / v))), 4)
+            # if the value of honore es "infinite"
+            if not np.isfinite(self.indicators['honore']):
+                self.indicators['honore'] = 9999
         except ZeroDivisionError:
             self.indicators['honore'] = 0
 
@@ -382,6 +359,8 @@ class Document:
         v = len(self.aux_lists['different_forms'])
         try:
             self.indicators['maas'] = round((np.log10(n) - np.log10(v)) / (np.log10(v) ** 2), 4)
+            if np.isnan(self.indicators['maas']):
+                self.indicators['maas'] = 0.0
         except ZeroDivisionError:
             self.indicators['maas'] = 0
 
@@ -433,6 +412,8 @@ class Document:
                         adjacent_noun_overlap_list.append(0)
         if len(adjacent_noun_overlap_list) > 0:
             i['noun_overlap_adjacent'] = round(float(np.mean(adjacent_noun_overlap_list)), 4)
+        else:
+            i['noun_overlap_adjacent'] = 0.0
 
     # Noun overlap measures which is the average overlap between all pairs of sentences in the text for which there are overlapping nouns,
     # With no deviation in the morphological forms (e.g., table/tables)
@@ -463,6 +444,8 @@ class Document:
                         all_noun_overlap_list.append(0)
         if len(all_noun_overlap_list) > 0:
             i['noun_overlap_all'] = round(float(np.mean(all_noun_overlap_list)), 4)
+        else:
+            i['noun_overlap_all'] = 0.0
 
     # Argument overlap measure is binary (there either is or is not any overlap between a pair of adjacent
     # sentences in a text ). Argument overlap measures the proportion of sentences in a text for which there are overlapping the
@@ -487,6 +470,8 @@ class Document:
                 adjacent_argument_overlap_list.append(0)
         if len(adjacent_argument_overlap_list) > 0:
             i['argument_overlap_adjacent'] = round(float(np.mean(adjacent_argument_overlap_list)), 4)
+        else:
+            i['argument_overlap_adjacent'] = 0.0
 
     # Argument overlap measures which is the average overlap between all pairs of sentences in the
     # text for which there are overlapping stem nouns and personal pronouns.
@@ -514,6 +499,8 @@ class Document:
                         all_argument_overlap_list.append(0)
         if len(all_argument_overlap_list) > 0:
             i['argument_overlap_all'] = round(float(np.mean(all_argument_overlap_list)), 4)
+        else:
+            i['argument_overlap_all'] = 0.0
 
     # Stem overlap measure is binary (there either is or is not any overlap between a pair of adjacent sentences in a text ).
     # Stem overlap measures the proportion of sentences in a text for which there are overlapping between a noun in one
@@ -539,6 +526,8 @@ class Document:
                 adjacent_stem_overlap_list.append(0)
         if len(adjacent_stem_overlap_list) > 0:
             i['stem_overlap_adjacent'] = round(float(np.mean(adjacent_stem_overlap_list)), 4)
+        else:
+            i['stem_overlap_adjacent'] = 0.0
 
     # Global Stem overlap measures which is the average overlap between all pairs of sentences in
     # the text for which there are overlapping Between a noun in one sentence and a content word
@@ -568,6 +557,8 @@ class Document:
                         all_stem_overlap_list.append(0)
         if len(all_stem_overlap_list) > 0:
             i['stem_overlap_all'] = round(float(np.mean(all_stem_overlap_list)), 4)
+        else:
+            i['stem_overlap_all'] = 0.0
 
     # Content word overlap adjacent sentences proporcional mean refers to the proportion of content words
     # (nouns, verbs,adverbs,adjectives, pronouns) that shared Between pairs of sentences.For example, if
@@ -597,6 +588,9 @@ class Document:
         if len(adjacent_content_overlap_list) > 0:
             i['content_overlap_adjacent_mean'] = round(float(np.mean(adjacent_content_overlap_list)), 4)
             i['content_overlap_adjacent_std'] = round(float(np.std(adjacent_content_overlap_list)), 4)
+        else:
+            i['content_overlap_adjacent_mean'] = 0.0
+            i['content_overlap_adjacent_std'] = 0.0
 
     # Content word overlap adjacent sentences proporcional mean refers to the proportion of content words
     # (nouns, verbs,adverbs,adjectives, pronouns) that shared Between pairs of sentences.For example, if
@@ -630,6 +624,9 @@ class Document:
         if len(all_content_overlap_list) > 0:
             i['content_overlap_all_mean'] = round(float(np.mean(all_content_overlap_list)), 4)
             i['content_overlap_all_std'] = round(float(np.std(all_content_overlap_list)), 4)
+        else:
+            i['content_overlap_all_mean'] = 0.0
+            i['content_overlap_all_std'] = 0.0
 
     def calculate_all_overlaps(self):
         self.calculate_noun_overlap_adjacent()
@@ -977,17 +974,21 @@ class Document:
             self.aux_lists['sentences_in_paragraph_token_list'].append(sentencesPerParag)
         try:
             i['num_decendents_noun_phrase'] = round(decendents_total / sum(num_np_list), 4)
+            if np.isnan(i['num_decendents_noun_phrase']):
+                i['num_decendents_noun_phrase'] = 0.0
         except ZeroDivisionError:
             i['num_decendents_noun_phrase'] = 0
         try:
             i['num_modifiers_noun_phrase'] = round(float(np.mean(modifiers_per_np)), 4)
+            if np.isnan(i['num_modifiers_noun_phrase']):
+                i['num_modifiers_noun_phrase'] = 0.0
         except ZeroDivisionError:
             i['num_modifiers_noun_phrase'] = 0
         # Obtengo las sílabas del texto segun el idioma
         self.aux_lists['syllables_list'] = self.get_syllable_list(text_without_punctuation)
         i['num_different_forms'] = len(self.aux_lists['different_forms'])
-        i['left_embeddedness'] = round(float(np.mean(self.aux_lists['left_embeddedness'])), 4)
-        i['min_wf_per_sentence'] = round(float(np.mean(min_wordfreq_list)), 4)
+        i['left_embeddedness'] = round(float(np.mean(self.aux_lists['left_embeddedness'])), 4) if len(self.aux_lists['left_embeddedness']) != 0 else 0.0
+        i['min_wf_per_sentence'] = round(float(np.mean(min_wordfreq_list)), 4) if len(min_wordfreq_list) != 0 else 0.0
         self.calculate_honore()
         self.calculate_maas()
         self.calculate_phrases(num_vp_list, num_np_list)
@@ -1025,6 +1026,9 @@ class Document:
         if len(adjacent_similarity_list) > 0:
             i['similarity_adjacent_mean'] = round(float(np.mean(adjacent_similarity_list)), 4)
             i['similarity_adjacent_std'] = round(float(np.std(adjacent_similarity_list)), 4)
+        else:
+            i['similarity_adjacent_mean'] = 0.0
+            i['similarity_adjacent_std'] = 0.0
 
     def calculate_similarity_pairs_sentences(self):
         i = self.indicators
@@ -1041,6 +1045,9 @@ class Document:
         if len(pairs_similarity_list) > 0:
             i['similarity_pairs_par_mean'] = round(float(np.mean(pairs_similarity_list)), 4)
             i['similarity_pairs_par_std'] = round(float(np.std(pairs_similarity_list)), 4)
+        else:
+            i['similarity_pairs_par_mean'] = 0.0
+            i['similarity_pairs_par_std'] = 0.0
 
     def calculate_similarity_pairs_paragraphs(self, p1, p2, pairs_similarity_list):
         pairs_similarity_list_mean = []
@@ -1066,6 +1073,9 @@ class Document:
         if len(pairs_similarity_list) > 0:
             i['similarity_adjacent_par_mean'] = round(float(np.mean(pairs_similarity_list)), 4)
             i['similarity_adjacent_par_std'] = round(float(np.std(pairs_similarity_list)), 4)
+        else:
+            i['similarity_adjacent_par_mean'] = 0.0
+            i['similarity_adjacent_par_std'] = 0.0
 
     def calculate_similarity(self, s1, s2):
         s1_afv = self.avg_feature_vector(s1.text, model=self.model,
@@ -1136,37 +1146,61 @@ class Document:
 
     def calculate_all_means(self):
         i = self.indicators
-        i['sentences_per_paragraph_mean'] = round(float(np.mean(self.aux_lists['sentences_per_paragraph'])), 4)
-        i['sentences_length_mean'] = round(float(np.mean(self.aux_lists['sentences_length_mean'])), 4)
-        i['words_length_mean'] = round(float(np.mean(self.aux_lists['words_length_list'])), 4)
-        i['lemmas_length_mean'] = round(float(np.mean(self.aux_lists['lemmas_length_list'])), 4)
-        i['num_syllables_words_mean'] = round(float(np.mean(self.aux_lists['syllables_list'])), 4)
-        i['mean_propositions_per_sentence'] = round(float(np.mean(self.aux_lists['prop_per_sentence'])), 4)
-        i['num_punct_marks_per_sentence'] = round(float(np.mean(self.aux_lists['punct_per_sentence'])), 4)
-        i['polysemic_index'] = round(float(np.mean(self.aux_lists['ambiguity_content_words_list'])), 4)
-        i['hypernymy_index'] = round(float(np.mean(self.aux_lists['noun_verb_abstraction_list'])), 4)
-        i['hypernymy_verbs_index'] = round(float(np.mean(self.aux_lists['verb_abstraction_list'])), 4)
-        i['hypernymy_nouns_index'] = round(float(np.mean(self.aux_lists['noun_abstraction_list'])), 4)
-        i['num_pass_mean'] = round((i['num_pass']) / i['num_words'], 4)
+        aux = self.aux_lists
+        i['sentences_per_paragraph_mean'] = round(float(np.mean(aux['sentences_per_paragraph'])), 4) if len(
+            aux['sentences_per_paragraph']) != 0 else 0.0
+        i['sentences_length_mean'] = round(float(np.mean(aux['sentences_length_mean'])), 4) if len(
+            aux['sentences_length_mean']) != 0 else 0.0
+        i['words_length_mean'] = round(float(np.mean(aux['words_length_list'])), 4) if len(
+            aux['words_length_list']) != 0 else 0.0
+        i['lemmas_length_mean'] = round(float(np.mean(aux['lemmas_length_list'])), 4) if len(
+            aux['lemmas_length_list']) != 0 else 0.0
+        i['num_syllables_words_mean'] = round(float(np.mean(aux['syllables_list'])), 4) if len(
+            aux['syllables_list']) != 0 else 0.0
+        i['mean_propositions_per_sentence'] = round(float(np.mean(aux['prop_per_sentence'])), 4) if len(
+            aux['prop_per_sentence']) != 0 else 0.0
+        i['num_punct_marks_per_sentence'] = round(float(np.mean(aux['punct_per_sentence'])), 4) if len(
+            aux['punct_per_sentence']) != 0 else 0.0
+        i['polysemic_index'] = round(float(np.mean(aux['ambiguity_content_words_list'])), 4) if len(
+            aux['ambiguity_content_words_list']) != 0 else 0.0
+        i['hypernymy_index'] = round(float(np.mean(aux['noun_verb_abstraction_list'])), 4) if len(
+            aux['noun_verb_abstraction_list']) != 0 else 0.0
+        i['hypernymy_verbs_index'] = round(float(np.mean(aux['verb_abstraction_list'])), 4) if len(
+            aux['verb_abstraction_list']) != 0 else 0.0
+        i['hypernymy_nouns_index'] = round(float(np.mean(aux['noun_abstraction_list'])), 4) if len(
+            aux['noun_abstraction_list']) != 0 else 0.0
+        i['num_pass_mean'] = round((i['num_pass']) / i['num_words'], 4) if i['num_words'] != 0 else 0.0
         i['num_past_irregular_mean'] = round(((i['num_past_irregular']) / i['num_past']), 4) if i[
-                                                                                                    'num_past'] != 0 else 0
+                                                                                                    'num_past'] != 0 else 0.0
         i['sentences_length_no_stopwords_mean'] = round(
-            float(np.mean(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
-        i['words_length_no_stopwords_mean'] = round(float(np.mean(self.aux_lists['words_length_no_stopwords_list'])), 4)
-        i['mean_rare'] = round(((100 * i['num_rare_words']) / i['num_lexic_words']), 4)
+            float(np.mean(aux['sentences_length_no_stopwords_list'])), 4) if len(
+            aux['sentences_length_no_stopwords_list']) != 0 else 0.0
+        i['words_length_no_stopwords_mean'] = round(float(np.mean(aux['words_length_no_stopwords_list'])), 4) if len(
+            aux['words_length_no_stopwords_list']) != 0 else 0.0
+        i['mean_rare'] = round(((100 * i['num_rare_words']) / i['num_lexic_words']), 4) if i[
+                                                                                               'num_lexic_words'] != 0 else 0.0
         i['mean_distinct_rare'] = round(
-            (100 * i['num_dif_rare_words']) / len(self.aux_lists['different_lexic_words']), 4)
+            (100 * i['num_dif_rare_words']) / len(aux['different_lexic_words']), 4) if len(
+            aux['different_lexic_words']) != 0 else 0.0
 
     def calculate_all_std_deviations(self):
         i = self.indicators
-        i['sentences_per_paragraph_std'] = round(float(np.std(self.aux_lists['sentences_per_paragraph'])), 4)
-        i['sentences_length_std'] = round(float(np.std(self.aux_lists['sentences_length_mean'])), 4)
-        i['words_length_std'] = round(float(np.std(self.aux_lists['words_length_list'])), 4)
-        i['lemmas_length_std'] = round(float(np.std(self.aux_lists['lemmas_length_list'])), 4)
-        i['num_syllables_words_std'] = round(float(np.std(self.aux_lists['syllables_list'])), 4)
+        aux = self.aux_lists
+        i['sentences_per_paragraph_std'] = round(float(np.std(aux['sentences_per_paragraph'])), 4) if len(
+            aux['sentences_per_paragraph']) != 0 else 0.0
+        i['sentences_length_std'] = round(float(np.std(aux['sentences_length_mean'])), 4) if len(
+            aux['sentences_length_mean']) != 0 else 0.0
+        i['words_length_std'] = round(float(np.std(aux['words_length_list'])), 4) if len(
+            aux['words_length_list']) != 0 else 0.0
+        i['lemmas_length_std'] = round(float(np.std(aux['lemmas_length_list'])), 4) if len(
+            aux['lemmas_length_list']) != 0 else 0.0
+        i['num_syllables_words_std'] = round(float(np.std(aux['syllables_list'])), 4) if len(
+            aux['syllables_list']) != 0 else 0.0
         i['sentences_length_no_stopwords_std'] = round(
-            float(np.std(self.aux_lists['sentences_length_no_stopwords_list'])), 4)
-        i['words_length_no_stopwords_std'] = round(float(np.std(self.aux_lists['words_length_no_stopwords_list'])), 4)
+            float(np.std(aux['sentences_length_no_stopwords_list'])), 4) if len(
+            aux['sentences_length_no_stopwords_list']) != 0 else 0.0
+        i['words_length_no_stopwords_std'] = round(float(np.std(aux['words_length_no_stopwords_list'])), 4) if len(
+            aux['words_length_no_stopwords_list']) != 0 else 0.0
 
     @staticmethod
     def get_incidence(indicador, num_words):
@@ -1226,11 +1260,18 @@ class Document:
 
     def calculate_density(self):
         i = self.indicators
-        i['lexical_density'] = round(i['num_lexic_words'] / i['num_words'], 4)
-        i['noun_density'] = round(i['num_noun'] / i['num_words'], 4)
-        i['verb_density'] = round(i['num_verb'] / i['num_words'], 4)
-        i['adj_density'] = round(i['num_adj'] / i['num_words'], 4)
-        i['adv_density'] = round(i['num_adv'] / i['num_words'], 4)
+        if i['num_words'] == 0:
+            i['lexical_density'] = 0.0
+            i['noun_density'] = 0.0
+            i['verb_density'] = 0.0
+            i['adj_density'] = 0.0
+            i['adv_density'] = 0.0
+        else:
+            i['lexical_density'] = round(i['num_lexic_words'] / i['num_words'], 4)
+            i['noun_density'] = round(i['num_noun'] / i['num_words'], 4)
+            i['verb_density'] = round(i['num_verb'] / i['num_words'], 4)
+            i['adj_density'] = round(i['num_adj'] / i['num_words'], 4)
+            i['adv_density'] = round(i['num_adv'] / i['num_words'], 4)
         i['negation_incidence'] = self.get_incidence(i['num_neg'], i['num_words'])
         self.calculate_all_ttr()
         self.calculate_all_lemma_ttr()
@@ -1238,8 +1279,10 @@ class Document:
 
     def calculate_phrases(self, num_vp_list, num_np_list):
         i = self.indicators
-        i['mean_vp_per_sentence'] = round(float(np.mean(num_vp_list)), 4)
-        i['mean_np_per_sentence'] = round(float(np.mean(num_np_list)), 4)
+        i['mean_vp_per_sentence'] = round(float(np.mean(num_vp_list)), 4) if len(
+            num_vp_list) != 0 else 0.0
+        i['mean_np_per_sentence'] = round(float(np.mean(num_np_list)), 4) if len(
+            num_np_list) != 0 else 0.0
         i['noun_phrase_density_incidence'] = self.get_incidence(sum(num_np_list), i['num_words'])
         i['verb_phrase_density_incidence'] = self.get_incidence(sum(num_vp_list), i['num_words'])
 
@@ -2337,7 +2380,8 @@ class Printer:
         self.similarity_list = ["similarity_adjacent_mean", "similarity_pairs_par_mean", "similarity_adjacent_par_mean",
                                 "similarity_adjacent_std", "similarity_pairs_par_std", "similarity_adjacent_par_std"]
         # 1.-Descriptive
-        self.descriptive_list = ['num_words', 'num_different_forms', 'num_different_forms_incidence', 'num_words_with_punct',
+        self.descriptive_list = ['num_words', 'num_different_forms', 'num_different_forms_incidence',
+                                 'num_words_with_punct',
                                  'num_paragraphs', 'num_paragraphs_incidence',
                                  'num_sentences',
                                  'num_sentences_incidence', 'sentences_per_paragraph_mean',
@@ -2531,7 +2575,7 @@ class Printer:
             , 'left_embeddedness', 'polysemic_index', 'noun_overlap_adjacent', 'similarity_adjacent_mean',
                             'all_connectives']
 
-        #The level is added as first item
+        # The level is added as first item
         estfile.write("\n%s" % "Level of the text: " + self.get_level(prediction))
 
         for key, value in self.ind_sentences.items():
