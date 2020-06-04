@@ -1919,10 +1919,11 @@ class Irregularverbs():
 
 class Printer:
 
-    def __init__(self, indicators, language, similarity, printids):
+    def __init__(self, indicators, language, similarity, printids, ratios):
         self.indicators = indicators
         self.language = language
         self.similarity = similarity
+        self.ratios = ratios
         # printids=[1,2,3]
         self.printids = printids
         self.ind_sentences = {}
@@ -2499,6 +2500,8 @@ class Printer:
                 j += 1
         if not self.similarity:
             ignore_list.extend(self.similarity_list)
+        if self.ratios:
+            ignore_list.extend(self.ignore_list_counters)
         if self.language == "english":
             ignore_list.extend(self.ignore_list_en_ind)
         if self.language == "spanish":
@@ -2552,6 +2555,8 @@ class Printer:
                 j += 1
         if not self.similarity:
             ignore_list.extend(self.similarity_list)
+        if self.ratios:
+            ignore_list.extend(self.ignore_list_counters)
         if self.language == "english":
             ignore_list.extend(self.ignore_list_en_ind)
         if self.language == "spanish":
@@ -2570,10 +2575,10 @@ class Printer:
         # Semantic overlap 'similarity_adjacent_mean'
         # Discourse connectives 'all_connectives'
 
-        ref_per_features = ['num_words', 'lexical_density', 'flesch', 'min_wf_per_sentence', 'num_a1_words',
+        ref_per_features = ['num_words', 'num_different_forms_incidence', 'lexical_density', 'flesch', 'min_wf_per_sentence', 'num_a1_words',
                             'num_lexic_words '
             , 'left_embeddedness', 'polysemic_index', 'noun_overlap_adjacent', 'similarity_adjacent_mean',
-                            'all_connectives']
+                            'all_connectives', 'all_connectives_incidence']
 
         # The level is added as first item
         estfile.write("\n%s" % "Level of the text: " + self.get_level(prediction))
@@ -2598,7 +2603,9 @@ class Printer:
         # Referential cohesion 'noun_overlap_adjacent'
         # Semantic overlap 'similarity_adjacent_mean'
         # Discourse connectives 'all_connectives'
-        if key == 'num_words':
+        if key == 'num_words' and not self.ratios:
+            estfile.write("\n%s" % 'Descriptive')
+        if key == 'num_different_forms_incidence' and self.ratios:
             estfile.write("\n%s" % 'Descriptive')
         elif key == 'lexical_density':
             estfile.write("\n%s" % 'Lexical Diversity')
@@ -2618,7 +2625,9 @@ class Printer:
             estfile.write("\n%s" % 'Referential cohesion')
         elif key == 'similarity_adjacent_mean':
             estfile.write("\n%s" % 'Semantic overlap')
-        elif key == 'all_connectives':
+        elif key == 'all_connectives' and not self.ratios:
+            estfile.write("\n%s" % 'Discourse connectives')
+        elif key == 'all_connectives_incidence' and self.ratios:
             estfile.write("\n%s" % 'Discourse connectives')
 
     # fichero csv para el aprendizaje automatico
@@ -3260,7 +3269,7 @@ class Main(object):
             # Get indicators
             document = cargador.get_estructure(text)
             indicators = document.get_indicators(similaritymodel)
-            printer = Printer(indicators, language, similarity, printids)
+            printer = Printer(indicators, language, similarity, printids, ratios)
             printer.load_ind_sentences()
             printer.print_info()
 

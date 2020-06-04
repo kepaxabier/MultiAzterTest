@@ -166,7 +166,6 @@ Released   : 20140309
                     $language = $_POST['select'];
                     $id_selection = '';
 
-                    $specificFeatures = false;
                     if (isset($_POST['descriptive'])){
                         $id_selection = $id_selection . '-id 1';
                     }
@@ -200,18 +199,15 @@ Released   : 20140309
                     if (isset($_POST['connectives'])){
                         $id_selection = $id_selection . ' -id 11';
                     }
-
-                    if(!empty($id_selection)){
-                        $specificFeatures = true;
-                    }
-
+                    $ratios = '';
+                    # ¿Ratios selected?
                     if (isset($_POST['only-ratios'])) {
-                        $cmd = $binPath . " " . $uploadDir . "/* " . $zip . " " . $uploadDir . " '-r -f'" .  " " . $language;
-                    } else if ($specificFeatures){
-                        $cmd = $binPath . " " . $uploadDir . "/* " . $zip . " " . $uploadDir . " " . "'$id_selection -f'" .  " " . $language;
-                    } else{
-                        $cmd = $binPath . " " . $uploadDir . "/* " . $zip . " " . $uploadDir . " '-f'" .  " " . $language;
+                        $ratios = $ratios . '-r ';
                     }
+
+                    # $ratios e $id_selection podrian ir vacios
+                    $cmd = $binPath . " " . $uploadDir . "/* " . $zip . " " . $uploadDir . " " . "'$ratios $id_selection -f'" .  " " . $language;
+
                     exec($cmd . " 2>&1", $output, $return);
                     echo "<script>$('#mensajeResultados').html('<a href=" . $zip . ">Download results</a>');</script>";
                     $counter = 0;
