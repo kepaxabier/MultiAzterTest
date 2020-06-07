@@ -8,11 +8,12 @@ Multiaztertest is an upgrade to the Aztertest application meant to evaluate text
 
 1. Download `multiaztertest.py` and the `data`, `corpus` and `wordembeddings` folders into the same directory
 2. Use the following commnads to install the necessary operative system packages in Ubuntu 18.04:
->** sudo apt install build-essential **
 >
->** #dos2unix:to convert plain text files in DOS or Mac format to Unix format **
+>**sudo apt install build-essential**
 >
->**sudo apt install dos2unix **
+>**#dos2unix:to convert plain text files in DOS or Mac format to Unix format**
+>
+>**sudo apt install dos2unix**
 >
 >**#python-dev contains everything needed to compile python extension modules**
 >
