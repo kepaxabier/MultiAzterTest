@@ -7,7 +7,28 @@ Multiaztertest is an upgrade to the Aztertest application meant to evaluate text
 ## Install
 
 1. Download `multiaztertest.py` and the `data`, `corpus` and `wordembeddings` folders into the same directory
-2. Use the following commands to install the necessary python packages:
+2. Use the following commnads to install the necessary operative system packages in Ubuntu 18.04:
+>** sudo apt install build-essential
+>
+>** #dos2unix:to convert plain text files in DOS or Mac format to Unix format
+>
+>**sudo apt install dos2unix
+>
+>**#python-dev contains everything needed to compile python extension modules
+>
+>**sudo apt-get install python3-dev
+>
+>**#python3-pip: install pip3 for python3
+>
+>**sudo apt install python3-pip
+>
+>**#to install textract package in ubuntu 18.04 are necessary the following packages: libpulse-dev and swig
+>
+>**sudo apt-get install libpulse-dev
+>
+>**sudo apt-get install swig
+
+3. Use the following commands to install the necessary python packages:
 
 >**pip3 install stanfordnlp**
 >
