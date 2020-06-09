@@ -2847,6 +2847,9 @@ class Predictor:
         except Exception as e:
             print(e.__str__())
 
+    def stop_jvm(self):
+        jvm.stop()
+
     def predict_dificulty(self, path, id_dataframe):
         pred = 0
         try:
@@ -2877,8 +2880,6 @@ class Predictor:
 
         except Exception as e:
             print(e.__str__())
-        finally:
-            jvm.stop()
 
         return int(pred)
 
@@ -3283,6 +3284,8 @@ class Main(object):
                 df_row = printer.write_in_full_csv(df_row, similarity, language, ratios)
         if csv:
             df_row.to_csv(os.path.join(path, "full_results_aztertest.csv"), encoding='utf-8', index=False)
+        predictor.stop_jvm()
+
 
 
 main = Main()
