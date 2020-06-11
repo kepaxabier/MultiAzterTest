@@ -10,7 +10,7 @@ echo -e $1 "\n" $2 "\n" $3 "\n" $4 "\n" $5 "\n" > parametros.txt
 #python3 ./main.py $4 $1
 #
 #python3 ./multiaztertest.py -s -c -r -f /var/www/html/aztertest/aztertest-virtenv/textos/english.doc.txt -l english -m stanford -d /var/www/html/aztertest/aztertest-virtenv
-python3 ./multiaztertest.py -s -c $4 $1 -l $5 -m stanford -d /var/www/html/aztertest/aztertest-virtenv
+python3 ./multiaztertest.py -s -c $4 -f $1 -l $5 -m stanford -d /var/www/html/aztertest/aztertest-virtenv
 cd $3
 zip -q -x ./*.txt -r $2 ./*
 #Para salir

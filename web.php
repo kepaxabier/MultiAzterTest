@@ -200,7 +200,7 @@ Released   : 20140309
                     }
 
                     # $ratios e $id_selection podrian ir vacios
-                    $cmd = $binPath . " " . $uploadDir . "/* " . $zip . " " . $uploadDir . " " . "'$ratios $id_selection -f'" .  " " . $language;
+                    $cmd = $binPath . " " . "'$uploadDir/*'" . " " . $zip . " " . $uploadDir . " " . "'$ratios $id_selection'" .  " " . $language;
 
                     exec($cmd . " 2>&1", $output, $return);
                     echo "<script>$('#mensajeResultados').html('<a href=" . $zip . ">Download results</a>');</script>";
@@ -350,4 +350,3 @@ Released   : 20140309
 </div>
 </body>
 </html>
-
