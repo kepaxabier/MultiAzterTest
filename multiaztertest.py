@@ -19,6 +19,9 @@ from nltk.tokenize import word_tokenize
 # genera CADENAS aleatorias
 import uuid
 
+#extraccion de texto de diferentes tipos
+import textract
+
 # punkt
 nltk.download('punkt')
 # cmudcit
@@ -3143,9 +3146,14 @@ class Main(object):
         # Si el fichero de entrada no tiene extension .txt
         if ".txt" not in input:
             # textract extrae el texto de todo tipo de formatos (odt, docx, doc ..)
-            pre_text = textract.process(input)
-            # decode(encoding='UTF-8',errors='strict') convierte a utf8 y si no puede lanza un error
-            text = pre_text.decode()
+            try:
+                pre_text = textract.process(input)
+                # decode(encoding='UTF-8',errors='strict') convierte a utf8 y si no puede lanza un error
+                text = pre_text.decode()
+            except Exception:
+                # print("The type of the input file is not compatible")
+                return None
+
         else:
             # Si extensión .txt convierte texto a utf-8
             with open(input, encoding='utf-8') as f:
@@ -3266,22 +3274,23 @@ class Main(object):
             #     text = "ibon va ir a la playa. Yo soy ibon. \n"                 "Ibon tambien va a ir. El es Ibon."
             # texto directamente de fichero
             text = self.extract_text_from_file(input)
+            # if the type of the text is compatible...
+            if text is not None:
+                # Get indicators
+                document = cargador.get_estructure(text)
+                indicators = document.get_indicators(similaritymodel)
+                printer = Printer(indicators, language, similarity, printids, ratios)
+                printer.load_ind_sentences()
+                printer.print_info()
 
-            # Get indicators
-            document = cargador.get_estructure(text)
-            indicators = document.get_indicators(similaritymodel)
-            printer = Printer(indicators, language, similarity, printids, ratios)
-            printer.load_ind_sentences()
-            printer.print_info()
-
-            # Prediction
-            dfforprediction = printer.createdataframeforprediction(language)
-            id_dataframe = str(uuid.uuid4())
-            dfforprediction.to_csv(os.path.join(path, id_dataframe + ".csv"), encoding='utf-8', index=False)
-            prediction = predictor.predict_dificulty(path, id_dataframe)
-            printer.generate_csv(path, input, prediction)  # path, prediction, opts.similarity)
-            if csv:
-                df_row = printer.write_in_full_csv(df_row, similarity, language, ratios)
+                # Prediction
+                dfforprediction = printer.createdataframeforprediction(language)
+                id_dataframe = str(uuid.uuid4())
+                dfforprediction.to_csv(os.path.join(path, id_dataframe + ".csv"), encoding='utf-8', index=False)
+                prediction = predictor.predict_dificulty(path, id_dataframe)
+                printer.generate_csv(path, input, prediction)  # path, prediction, opts.similarity)
+                if csv:
+                    df_row = printer.write_in_full_csv(df_row, similarity, language, ratios)
         if csv:
             df_row.to_csv(os.path.join(path, "full_results_aztertest.csv"), encoding='utf-8', index=False)
         predictor.stop_jvm()
