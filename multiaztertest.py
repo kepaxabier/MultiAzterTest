@@ -3252,48 +3252,40 @@ class Main(object):
             similaritymodel = sim.load()
 
         files = opts.files
-
-        # @staticmethod
-        # def load_files(args):
-        #    FileLoader.files = args
-        #    print("Parametros: " + str(FileLoader.files))
-
-        # files = ["vlad.txt"] #euskaratestua Loterry-adv
         print("Files:" + str(files))
-        ### Files will be created in this folder
-        path = Printer.create_directory(files[0])
-        print("Path:" + str(path))
-        df_row = None
-        for input in files:
-            # # texto directamente de text
-            # if language == "basque":
-            #     text = "ibon hondartzan egon da. Eguraldi oso ona egin zuen.\nHurrengo astean mendira joango da. "                "\n\nBere lagunak saskibaloi partidu bat antolatu dute 18etan, baina berak ez du jolastuko. \n "                "Etor zaitez etxera.\n Nik egin beharko nuke lan hori. \n Gizonak liburua galdu du. \n Irten hortik!"                    "\n Emadazu ur botila! \n Zu beti adarra jotzen."
-            # if language == "english":
-            #     text = "ibon is going to the beach. I am ibon. \n"                 "Eder is going too. He is Eder."
-            # if language == "spanish":
-            #     text = "ibon va ir a la playa. Yo soy ibon. \n"                 "Ibon tambien va a ir. El es Ibon."
-            # texto directamente de fichero
-            text = self.extract_text_from_file(input)
-            # if the type of the text is compatible...
-            if text is not None:
-                # Get indicators
-                document = cargador.get_estructure(text)
-                indicators = document.get_indicators(similaritymodel)
-                printer = Printer(indicators, language, similarity, printids, ratios)
-                printer.load_ind_sentences()
-                printer.print_info()
 
-                # Prediction
-                dfforprediction = printer.createdataframeforprediction(language)
-                id_dataframe = str(uuid.uuid4())
-                dfforprediction.to_csv(os.path.join(path, id_dataframe + ".csv"), encoding='utf-8', index=False)
-                prediction = predictor.predict_dificulty(path, id_dataframe)
-                printer.generate_csv(path, input, prediction)  # path, prediction, opts.similarity)
-                if csv:
-                    df_row = printer.write_in_full_csv(df_row, similarity, language, ratios)
-        if csv:
-            df_row.to_csv(os.path.join(path, "full_results_aztertest.csv"), encoding='utf-8', index=False)
-        predictor.stop_jvm()
+        if files is None or len(files) == 0:
+             print("*WARNING* At least one input text is needed to execute the tool.")
+             predictor.stop_jvm()
+        else:
+            ### Files will be created in this folder
+            path = Printer.create_directory(files[0])
+            print("Path:" + str(path))
+            df_row = None
+
+            for input in files:
+                # texto directamente de fichero
+                text = self.extract_text_from_file(input)
+                # if the type of the text is compatible...
+                if text is not None:
+                    # Get indicators
+                    document = cargador.get_estructure(text)
+                    indicators = document.get_indicators(similaritymodel)
+                    printer = Printer(indicators, language, similarity, printids, ratios)
+                    printer.load_ind_sentences()
+                    printer.print_info()
+
+                    # Prediction
+                    dfforprediction = printer.createdataframeforprediction(language)
+                    id_dataframe = str(uuid.uuid4())
+                    dfforprediction.to_csv(os.path.join(path, id_dataframe + ".csv"), encoding='utf-8', index=False)
+                    prediction = predictor.predict_dificulty(path, id_dataframe)
+                    printer.generate_csv(path, input, prediction)  # path, prediction, opts.similarity)
+                    if csv:
+                        df_row = printer.write_in_full_csv(df_row, similarity, language, ratios)
+            if csv:
+                df_row.to_csv(os.path.join(path, "full_results_aztertest.csv"), encoding='utf-8', index=False)
+            predictor.stop_jvm()
 
 
 
