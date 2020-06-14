@@ -156,7 +156,7 @@ Released   : 20140309
                 if (is_dir_empty("./" . $uploadDir)) {
                     echo "An error has happened. Please, try again.";
                 } else {
-                    $zip = '/var/www/html/aztertest/downloads/Aztertest_' . $name . '.zip';
+                    $zip = '/var/www/html/aztertest/downloads/Multiaztertest_' . $name . '.zip';
                     $language = $_POST['select'];
                     $id_selection = '';
 
@@ -205,6 +205,9 @@ Released   : 20140309
                     exec($cmd . " 2>&1", $output, $return);
                     echo "<script>$('#mensajeResultados').html('<a href=" . $zip . ">Download results</a>');</script>";
                     $counter = 0;
+
+		    $cmd_remove = "rm -f " . $uploadDir . "/results/full_results_aztertest.csv";
+		    exec($cmd_remove . " 2>&1", $output_rm, $return_rm);
                     foreach (new DirectoryIterator($uploadDir . "/results") as $fileInfo) {
                         if ($fileInfo->isDot()) continue;
                         echo "<table>";
