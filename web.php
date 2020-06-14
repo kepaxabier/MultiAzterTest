@@ -80,7 +80,6 @@ Released   : 20140309
             <form id="upload" enctype="multipart/form-data" method="post" onsubmit="return checkextension(); ">
                 <li><input id="infile" name="infile[]" type="file" value='Seleccionar' multiple></li>
                 <li><input type="submit" id="submit" name="submit" value="ANALYZE" class="button"></li>
-                <!--<li><input type="checkbox" id="similarity" name="similarity" value="similarity">Check this checkbox if you want to include the results of Semantic Similarity in the analysis (MAXIMUM NUMBER OF FILES: 5)</li>-->
                 <br>
                 <li> Select the language of the text</li>
                 <select name="select" id="select">
@@ -91,25 +90,25 @@ Released   : 20140309
                 <br>
                 <br>
                 <!--<li> Check if you want to predict the complexity level of the text</li>-->
-                <li><input type="checkbox" id="prediction" name="prediction" value="prediction"> Check if you want to predict the complexity level of the text</li>
+                <div align="left" style="margin-left:700px"><input type="checkbox" id="prediction" name="prediction" value="prediction"> Check if you want to predict the complexity level of the text</div>
                 <br>
                 <!--<li> Check if you want only ratios</li>-->
-                <li><input type="checkbox" id="only-ratios" name="only-ratios" value="only-ratios"> Check if you want only ratios</li>
+                <div align="left" style="margin-left:700px"><input type="checkbox" id="only-ratios" name="only-ratios" value="only-ratios"> Check if you want only ratios</div>
                 <br>
                 <li> The information of every group is displayed by default. </li>
                 <li> In case you want to select some groups only, check them manually:</li>
                 <br>
-                <div align="left" style="margin-left:555px"><input type="checkbox" id="descriptive" name="descriptive" value="descriptive"> Descriptive</div>
-                <div align="left" style="margin-left:555px"><input type="checkbox" id="lexical-diversity" name="lexical-diversity" value="lexical-diversity"> Lexical Diversity</div>
-                <div align="left" style="margin-left:555px"><input type="checkbox" id="readability" name="readability" value="readability"> Readability ability</div>
-                <div align="left" style="margin-left:555px"><input type="checkbox" id="word-freq" name="word-freq" value="word-freq"> Word Frequency</div>
-                <div align="left" style="margin-left:555px"><input type="checkbox" id="vocabulary" name="vocabulary" value="vocabulary"> Vocabulary knowledge</div>
-                <div align="left" style="margin-left:555px"><input type="checkbox" id="word-info" name="word-info" value="word-info"> Word Information</div>
-                <div align="left" style="margin-left:555px"><input type="checkbox" id="syntactic" name="syntactic" value="syntactic"> Syntactic Complexity</div>
-                <div align="left" style="margin-left:555px"><input type="checkbox" id="semantic-info" name="semantic-info" value="semantic-info"> Semantic Information</div>
-                <div align="left" style="margin-left:555px"><input type="checkbox" id="cohesion" name="cohesion" value="cohesion"> Referential Cohesion</div>
-                <div align="left" style="margin-left:555px"><input type="checkbox" id="semantic-overlap" name="semantic-overlap" value="semantic-overlap"> Semantic Overlap</div>
-                <div align="left" style="margin-left:555px"><input type="checkbox" id="connectives" name="connectives" value="connectives"> Discourse Connectives</div>
+                <div align="left" style="margin-left:700px"><input type="checkbox" id="descriptive" name="descriptive" value="descriptive"> Descriptive</div>
+                <div align="left" style="margin-left:700px"><input type="checkbox" id="lexical-diversity" name="lexical-diversity" value="lexical-diversity"> Lexical Diversity</div>
+                <div align="left" style="margin-left:700px"><input type="checkbox" id="readability" name="readability" value="readability"> Readability ability</div>
+                <div align="left" style="margin-left:700px"><input type="checkbox" id="word-freq" name="word-freq" value="word-freq"> Word Frequency</div>
+                <div align="left" style="margin-left:700px"><input type="checkbox" id="vocabulary" name="vocabulary" value="vocabulary"> Vocabulary knowledge</div>
+                <div align="left" style="margin-left:700px"><input type="checkbox" id="word-info" name="word-info" value="word-info"> Word Information</div>
+                <div align="left" style="margin-left:700px"><input type="checkbox" id="syntactic" name="syntactic" value="syntactic"> Syntactic Complexity</div>
+                <div align="left" style="margin-left:700px"><input type="checkbox" id="semantic-info" name="semantic-info" value="semantic-info"> Semantic Information</div>
+                <div align="left" style="margin-left:700px"><input type="checkbox" id="cohesion" name="cohesion" value="cohesion"> Referential Cohesion</div>
+                <div align="left" style="margin-left:700px"><input type="checkbox" id="semantic-overlap" name="semantic-overlap" value="semantic-overlap"> Semantic Overlap</div>
+                <div align="left" style="margin-left:700px"><input type="checkbox" id="connectives" name="connectives" value="connectives"> Discourse Connectives</div>
             </form>
         </ul>
     </div>
@@ -156,7 +155,8 @@ Released   : 20140309
                 if (is_dir_empty("./" . $uploadDir)) {
                     echo "An error has happened. Please, try again.";
                 } else {
-                    $zip = '/var/www/html/aztertest/downloads/Multiaztertest_' . $name . '.zip';
+                    $zip_abs_path = $workdir . '/downloads/Multiaztertest_' . $name . '.zip';
+                    $zip = '/downloads/Multiaztertest_' . $name . '.zip';
                     $language = $_POST['select'];
                     $id_selection = '';
 
@@ -200,7 +200,7 @@ Released   : 20140309
                     }
 
                     # $ratios e $id_selection podrian ir vacios
-                    $cmd = $binPath . " " . "'$uploadDir/*'" . " " . $zip . " " . $uploadDir . " " . "'$ratios $id_selection'" .  " " . $language;
+                    $cmd = $binPath . " " . "'$uploadDir/*'" . " " . $zip_abs_path . " " . $uploadDir . " " . "'$ratios $id_selection'" .  " " . $language;
 
                     exec($cmd . " 2>&1", $output, $return);
                     echo "<script>$('#mensajeResultados').html('<a href=" . $zip . ">Download results</a>');</script>";
