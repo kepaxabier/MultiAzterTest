@@ -81,18 +81,15 @@ Released   : 20140309
                 <li><input id="infile" name="infile[]" type="file" value='Seleccionar' multiple></li>
                 <li><input type="submit" id="submit" name="submit" value="ANALYZE" class="button"></li>
                 <br>
-                <li> Select the language of the text</li>
                 <select name="select" id="select">
+	            <option selected disabled hidden>Choose here the language of the text</option>
                     <option id="basque" name="basque" value="basque">Basque</option>
-                    <option id="english" name="english" value="english" selected>English</option>
+                    <option id="english" name="english" value="english">English</option>
                     <option id="spanish" name="spanish" value="spanish">Spanish</option>
                 </select>
-                <br>
-                <br>
-                <!--<li> Check if you want to predict the complexity level of the text</li>-->
+		<br>
+		<br>
                 <div align="left" style="margin-left:700px"><input type="checkbox" id="prediction" name="prediction" value="prediction"> Check if you want to predict the complexity level of the text</div>
-                <br>
-                <!--<li> Check if you want only ratios</li>-->
                 <div align="left" style="margin-left:700px"><input type="checkbox" id="only-ratios" name="only-ratios" value="only-ratios"> Check if you want only ratios</div>
                 <br>
                 <li> The information of every group is displayed by default. </li>
