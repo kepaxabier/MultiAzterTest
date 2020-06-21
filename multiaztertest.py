@@ -2579,7 +2579,7 @@ class Printer:
         # Discourse connectives 'all_connectives'
 
         ref_per_features = ['num_words', 'num_different_forms_incidence', 'lexical_density', 'flesch', 'min_wf_per_sentence', 'num_a1_words',
-                            'num_lexic_words '
+                            'num_lexic_words'
             , 'left_embeddedness', 'polysemic_index', 'noun_overlap_adjacent', 'similarity_adjacent_mean',
                             'all_connectives', 'all_connectives_incidence']
 
