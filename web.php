@@ -89,7 +89,6 @@ Released   : 20140309
                 </select>
 		<br>
 		<br>
-                <div align="left" style="margin-left:700px"><input type="checkbox" id="prediction" name="prediction" value="prediction"> Check if you want to predict the complexity level of the text</div>
                 <div align="left" style="margin-left:700px"><input type="checkbox" id="only-ratios" name="only-ratios" value="only-ratios"> Check if you want only ratios</div>
                 <br>
                 <li> The information of every group is displayed by default. </li>
