@@ -89,6 +89,8 @@ Released   : 20140309
                 </select>
 		<br>
 		<br>
+		<br>
+                <!--<div align="left" style="margin-left:700px"><input type="checkbox" id="prediction" name="prediction" value="prediction"> Check if you want to predict the complexity level of the text</div>-->
                 <div align="left" style="margin-left:700px"><input type="checkbox" id="only-ratios" name="only-ratios" value="only-ratios"> Check if you want only ratios</div>
                 <br>
                 <li> The information of every group is displayed by default. </li>
@@ -134,6 +136,13 @@ Released   : 20140309
             $fileId = date('Y-m-d_His_');
             // Execute this code if the submit button is pressed.
             if (isset($_POST['submit'])) {
+		if(!isset($_POST['select'])){
+		    echo '<script type="text/javascript">',
+			 ' alert("Please, select a language.");',
+			 '</script>'
+	            ;
+		    return;
+		}
                 $name = md5(rand() * time());
                 $uploadDir = "/var/www/html/aztertest/uploads/" . $name;
                 if (!is_dir($uploadDir)) {
