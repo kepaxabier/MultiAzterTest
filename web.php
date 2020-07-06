@@ -89,24 +89,23 @@ Released   : 20140309
                 </select>
 		<br>
 		<br>
-		<br>
                 <!--<div align="left" style="margin-left:700px"><input type="checkbox" id="prediction" name="prediction" value="prediction"> Check if you want to predict the complexity level of the text</div>-->
-                <div align="left" style="margin-left:700px"><input type="checkbox" id="only-ratios" name="only-ratios" value="only-ratios"> Check if you want only ratios</div>
-                <br>
+                <li><input type="checkbox" id="only-ratios" name="only-ratios" value="only-ratios"> Check if you want only ratios</input></li>
+
                 <li> The information of every group is displayed by default. </li>
                 <li> In case you want to select some groups only, check them manually:</li>
-                <br>
-                <div align="left" style="margin-left:700px"><input type="checkbox" id="descriptive" name="descriptive" value="descriptive"> Descriptive</div>
-                <div align="left" style="margin-left:700px"><input type="checkbox" id="lexical-diversity" name="lexical-diversity" value="lexical-diversity"> Lexical Diversity</div>
-                <div align="left" style="margin-left:700px"><input type="checkbox" id="readability" name="readability" value="readability"> Readability ability</div>
-                <div align="left" style="margin-left:700px"><input type="checkbox" id="word-freq" name="word-freq" value="word-freq"> Word Frequency</div>
-                <div align="left" style="margin-left:700px"><input type="checkbox" id="vocabulary" name="vocabulary" value="vocabulary"> Vocabulary knowledge</div>
-                <div align="left" style="margin-left:700px"><input type="checkbox" id="word-info" name="word-info" value="word-info"> Word Information</div>
-                <div align="left" style="margin-left:700px"><input type="checkbox" id="syntactic" name="syntactic" value="syntactic"> Syntactic Complexity</div>
-                <div align="left" style="margin-left:700px"><input type="checkbox" id="semantic-info" name="semantic-info" value="semantic-info"> Semantic Information</div>
-                <div align="left" style="margin-left:700px"><input type="checkbox" id="cohesion" name="cohesion" value="cohesion"> Referential Cohesion</div>
-                <div align="left" style="margin-left:700px"><input type="checkbox" id="semantic-overlap" name="semantic-overlap" value="semantic-overlap"> Semantic Overlap</div>
-                <div align="left" style="margin-left:700px"><input type="checkbox" id="connectives" name="connectives" value="connectives"> Discourse Connectives</div>
+                
+                <li><input type="checkbox" id="descriptive" name="descriptive" value="descriptive"> Descriptive</input></li>
+                <li><input type="checkbox" id="lexical-diversity" name="lexical-diversity" value="lexical-diversity"> Lexical Diversity</input></li>
+                <li><input type="checkbox" id="readability" name="readability" value="readability"> Readability ability</input></li>
+                <li><input type="checkbox" id="word-freq" name="word-freq" value="word-freq"> Word Frequency</input></li>
+                <li><input type="checkbox" id="vocabulary" name="vocabulary" value="vocabulary"> Vocabulary knowledge</input></li>
+                <li><input type="checkbox" id="word-info" name="word-info" value="word-info"> Word Information</input></li>
+                <li><input type="checkbox" id="syntactic" name="syntactic" value="syntactic"> Syntactic Complexity</input></li>
+                <li><input type="checkbox" id="semantic-info" name="semantic-info" value="semantic-info"> Semantic Information</input></li>
+                <li><input type="checkbox" id="cohesion" name="cohesion" value="cohesion"> Referential Cohesion</input></li>
+                <li><input type="checkbox" id="semantic-overlap" name="semantic-overlap" value="semantic-overlap"> Semantic Overlap</input></li>
+                <li><input type="checkbox" id="connectives" name="connectives" value="connectives"> Discourse Connectives</input></li>
             </form>
         </ul>
     </div>
