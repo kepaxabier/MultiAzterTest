@@ -2,6 +2,8 @@
 
 # MultiAztertest
 
+You can test the online version of MultiAzterTest at the address http://ixa2.si.ehu.eus/aztertest
+
 Multiaztertest is an upgrade to the Aztertest application meant to evaluate texts in various languages by calculating multiple metrics and indicators of the texts' content and analyzing those results to determine the complexity level of those texts.
 
 ## Install
