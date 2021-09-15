@@ -6,6 +6,11 @@ You can test the online version of MultiAzterTest at the address http://ixa2.si.
 
 Multiaztertest is an upgrade to the Aztertest application meant to evaluate texts in various languages by calculating multiple metrics and indicators of the texts' content and analyzing those results to determine the complexity level of those texts.
 
+If you want more information about the metrics analyzed in MultiAzterTest you can read the preprint that we have uploaded to arxiv:
+
+https://arxiv.org/abs/2109.04870
+
+
 ## Install
 
 1. Download `multiaztertest.py` and the `data`, `corpus` and `wordembeddings` folders into the same directory
